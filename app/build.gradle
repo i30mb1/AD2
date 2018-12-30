@@ -1,0 +1,143 @@
+apply plugin: 'com.android.application'
+apply plugin: 'com.google.gms.google-services'
+
+android {
+    compileSdkVersion 28
+    defaultConfig {
+        vectorDrawables.useSupportLibrary = true
+        applicationId "n7.ad2"
+        minSdkVersion 18
+        targetSdkVersion 28
+        versionCode gitCommitCount()
+        versionName getGitVersionMessage()
+        buildConfigField "int", "BUILD_TIME", "${System.currentTimeSeconds()}"
+
+        javaCompileOptions {
+            annotationProcessorOptions {
+                arguments = ["room.schemaLocation": "$projectDir/schemas".toString()]
+            }
+        }
+
+        dataBinding {
+            enabled = true
+        }
+    }
+
+    signingConfigs {
+        release {
+            storeFile file("C:\\Users\\i30mb1\\AndroidProjects\\key111111.jks")
+            storePassword "111111"
+            keyAlias "key"
+            keyPassword "111111"
+        }
+    }
+
+    sourceSets {
+        debug {
+            assets.srcDirs = ['/src/main/assets']
+        }
+        release {
+            assets.srcDirs = ['/src/main/assets']
+        }
+        releaseAnim {
+            assets.srcDirs = ['/src/main/assets_Anim']
+        }
+
+    }
+
+    buildTypes {
+        debug {
+            resValue("string", "PORT_NUMBER", "8081")
+//            applicationIdSuffix ".debug"
+//            versionNameSuffix "30"
+//            resConfigs "en"
+            minifyEnabled false
+//            multiDexEnabled true
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+            signingConfig signingConfigs.release
+        }
+        release {
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+            signingConfig signingConfigs.release
+        }
+        releaseAnim {
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+            signingConfig signingConfigs.release
+        }
+    }
+}
+
+def gitCommitCount() {
+    try {
+        def stdout = new ByteArrayOutputStream()
+        exec {
+            commandLine 'git', 'rev-list', '--count', 'HEAD'
+            standardOutput = stdout
+        }
+        def commitCount = stdout.toString().trim().toInteger()
+        return commitCount + 190
+    }
+    catch (ignored) {
+        return 0
+    }
+}
+
+def getGitVersionMessage() {
+    try {
+        def stdout = new ByteArrayOutputStream()
+        exec {
+            commandLine 'git', 'log', '-1', '--pretty=%B'
+            standardOutput = stdout
+        }
+        def commitCount = stdout.toString().trim()
+        return commitCount
+    }
+    catch (ignored) {
+        return "1"
+    }
+}
+
+dependencies {
+    implementation fileTree(include: ['*.jar'], dir: 'libs')
+    // Animated TextView
+    implementation 'com.robinhood.ticker:ticker:1.2.2'
+    // Navigation
+    implementation 'com.yarolegovich:sliding-root-nav:1.1.0'
+    // cmd ipconfig основной шлюз + :8080 (как узнать страничку для браузера)
+    debugImplementation 'com.amitshekhar.android:debug-db:1.0.1'
+    // Parallax
+    implementation 'com.schibsted.spain:parallax-layer-layout:1.1.1'
+    // Lib
+    implementation files('libs/twirc-0.2.jar')
+    // Retrofit
+    implementation 'com.squareup.retrofit2:retrofit:2.4.0'
+    implementation 'com.squareup.retrofit2:converter-gson:2.3.0'
+    // WorkManager
+    implementation "android.arch.work:work-runtime:1.0.0-alpha06"
+    // Room components
+    implementation "android.arch.persistence.room:runtime:1.1.1"
+    annotationProcessor "android.arch.persistence.room:compiler:1.1.1"
+    // Lifecycle components
+    implementation "android.arch.lifecycle:extensions:1.1.1"
+    annotationProcessor "android.arch.lifecycle:compiler:1.1.1"
+    // Paging
+    implementation "android.arch.paging:runtime:1.0.1"
+    // Android
+    implementation "com.android.support:recyclerview-v7:28.0.0"
+    implementation 'com.android.support:appcompat-v7:28.0.0'
+    implementation 'com.android.support:design:28.0.0'
+    implementation 'com.android.support:support-v4:28.0.0'
+    implementation 'com.android.support:cardview-v7:28.0.0'
+    implementation 'com.android.support.constraint:constraint-layout:1.1.3'
+    // Picasso
+    implementation 'com.squareup.picasso:picasso:2.71828'
+    implementation 'jp.wasabeef:picasso-transformations:2.1.2'
+    implementation 'jp.co.cyberagent.android.gpuimage:gpuimage-library:1.4.1'
+    // Jsoup для разбора html
+    implementation 'org.jsoup:jsoup:1.11.2'
+    //поддержка jsoup для старых устройств
+    implementation 'com.google.android.gms:play-services-auth:16.0.1'
+    implementation 'com.google.firebase:firebase-core:16.0.5'
+    // banner с прокруткой
+    implementation 'com.bigkoo:ConvenientBanner:2.1.4'
+}

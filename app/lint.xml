@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<lint>
+    <issue id="GifUsage">
+        <ignore path="src/main/res/drawable/flag_default.gif" />
+    </issue>
+    <issue id="IconLocation">
+        <ignore path="src/main/res/drawable/all_image_hero_normal.webp" />
+        <ignore path="src/main/res/drawable/all_nothing_to_show.png" />
+        <ignore path="src/main/res/drawable/cooldown.webp" />
+        <ignore path="src/main/res/drawable/flag_default.gif" />
+        <ignore path="src/main/res/drawable/games.webp" />
+        <ignore path="src/main/res/drawable/games_personal_left_team.webp" />
+        <ignore path="src/main/res/drawable/games_personal_right_team.png" />
+        <ignore path="src/main/res/drawable/hero_personal_atos.webp" />
+        <ignore path="src/main/res/drawable/hero_personal_bkb.webp" />
+        <ignore path="src/main/res/drawable/hero_personal_bkb_off.webp" />
+        <ignore path="src/main/res/drawable/hero_personal_link.webp" />
+        <ignore path="src/main/res/drawable/hero_personal_link_off.webp" />
+        <ignore path="src/main/res/drawable/hero_personal_link_part.webp" />
+        <ignore path="src/main/res/drawable/hero_personal_manta.webp" />
+        <ignore path="src/main/res/drawable/hero_personal_manta_off.webp" />
+        <ignore path="src/main/res/drawable/hero_personal_silver.webp" />
+        <ignore path="src/main/res/drawable/hero_personal_silver_off.webp" />
+        <ignore path="src/main/res/drawable/hero_personal_silver_part.webp" />
+        <ignore path="src/main/res/drawable/hero_tallent.webp" />
+        <ignore path="src/main/res/drawable/loading_app_icon.webp" />
+        <ignore path="src/main/res/drawable/mana.webp" />
+        <ignore path="src/main/res/drawable/response_nothing.webp" />
+        <ignore path="src/main/res/drawable/stream_loading.webp" />
+        <ignore path="src/main/res/drawable/streams_viewers.png" />
+        <ignore path="src/main/res/drawable/vert.webp" />
+    </issue>
+</lint>

@@ -1,0 +1,65 @@
+package n7.ad2.db.items;
+
+import android.arch.persistence.db.SupportSQLiteDatabase;
+import android.arch.persistence.room.Database;
+import android.arch.persistence.room.Room;
+import android.arch.persistence.room.RoomDatabase;
+import android.content.Context;
+import android.support.annotation.NonNull;
+
+import org.json.JSONArray;
+import org.json.JSONException;
+import org.json.JSONObject;
+
+import n7.ad2.AppExecutors;
+import n7.ad2.R;
+import n7.ad2.utils.Utils;
+
+@Database(entities = Items.class, version = 2)
+public abstract class ItemsRoomDatabase extends RoomDatabase {
+
+    private static ItemsRoomDatabase INSTANCE;
+
+    public static ItemsRoomDatabase getDatabase(final Context context, final AppExecutors appExecutors) {
+        if (INSTANCE == null) {
+            synchronized (ItemsRoomDatabase.class) {
+                if (INSTANCE == null) {
+                    INSTANCE = Room
+                            .databaseBuilder(context.getApplicationContext(), ItemsRoomDatabase.class, "items2.db")
+                            .fallbackToDestructiveMigration()
+                            .addCallback(new Callback() {
+                                @Override
+                                public void onCreate(@NonNull SupportSQLiteDatabase db) {
+                                    super.onCreate(db);
+                                    appExecutors.diskIO().execute(new Runnable() {
+                                        @Override
+                                        public void run() {
+                                            switch (context.getResources().getString(R.string.language_resource)) {
+                                                default:
+                                                case "eng":
+                                                    try {
+                                                        JSONArray jsonHeroes = new JSONArray(new Utils().readJSONFromAsset(context, "items.json"));
+                                                        for (int i = 0; i < jsonHeroes.length(); i++) {
+                                                            JSONObject jsonObject = jsonHeroes.getJSONObject(i);
+                                                            Items item = new Items(jsonObject.getString("name"), jsonObject.getString("nameEng"));
+                                                            getDatabase(context, appExecutors).itemsDao().insert(item);
+                                                        }
+                                                    } catch (JSONException e) {
+                                                        e.printStackTrace();
+                                                    }
+                                                    break;
+                                            }
+                                        }
+                                    });
+                                }
+                            })
+                            .build();
+                }
+            }
+        }
+        return INSTANCE;
+    }
+
+    public abstract ItemsDao itemsDao();
+
+}

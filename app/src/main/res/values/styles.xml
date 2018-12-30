@@ -1,0 +1,114 @@
+<resources xmlns:tools="http://schemas.android.com/tools">
+
+    <!--Grey тема-->
+    <style name="AD2Theme" parent="Theme.AppCompat.NoActionBar">
+        <!--фон панели уведомления-->
+        <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
+        <!--фон панели приложения-->
+        <item name="colorPrimary">@color/colorPrimary</item>
+        <!--бэкграунд приложения-->
+        <item name="android:windowBackground">@drawable/background_hd</item>
+        <!--подсветка элементов-->
+        <item name="colorAccent">@color/colorAccent</item>
+        <!--цвет главного текста-->
+        <item name="android:textColorPrimary">@color/textColorPrimary</item>
+        <!--цвет под заголовков-->
+        <item name="android:textColorSecondary">@color/textColorSecondary</item>
+
+        <!--подсказка для строки поиска-->
+        <item name="queryHint">@string/toolbar_search_hint</item>
+        <!--устанавливаем тему для диалогового окна-->
+        <!--<item name="android:alertDialogTheme">@style/MyAlertDialogStyle</item>-->
+        <!--цвет меню текста-->
+        <item name="android:actionMenuTextColor">@color/textColorSecondary</item>
+    </style>
+
+    <!--Black тема-->
+    <style name="AD2Theme.Black" >
+        <!--фон панели уведомления-->
+        <item name="colorPrimaryDark">@color/colorPrimaryDark.Dark</item>
+        <!--фон панели приложения-->
+        <item name="colorPrimary">@color/colorPrimary.Dark</item>
+        <!--бэкграунд приложения-->
+        <item name="android:windowBackground">@drawable/background_hd_black</item>
+        <!--подсветка элементов-->
+        <item name="colorAccent">@color/colorAccent.Dark</item>
+        <!--цвет главного текста-->
+        <item name="android:textColorPrimary">@color/textColorPrimary.Dark</item>
+        <!--цвет под заголовков-->
+        <item name="android:textColorSecondary">@color/textColorSecondary.Dark</item>
+        <!--устанавливаем тему для диалогового окна-->
+        <!--<item name="android:alertDialogTheme">@style/MyAlertDialogStyle.Black</item>-->
+    </style>
+
+    <!--White тема-->
+    <style name="AD2Theme.White" >
+        <!--фон панели уведомления-->
+        <item name="colorPrimaryDark">@color/colorPrimaryDark.White</item>
+        <!--фон панели приложения-->
+        <item name="colorPrimary">@color/colorPrimary.White</item>
+        <!--бэкграунд приложения-->
+        <item name="android:windowBackground">@drawable/background_hd_white</item>
+        <!--подсветка элементов-->
+        <item name="colorAccent">@color/colorAccent.White</item>
+        <!--цвет главного текста-->
+        <item name="android:textColorPrimary">@color/textColorPrimary.White</item>
+        <!--цвет под заголовков-->
+        <item name="android:textColorSecondary">@color/textColorSecondary.White</item>
+        <!--цвет неактивных элементов-->
+        <item name="android:colorControlNormal" tools:targetApi="lollipop">@color/textColorSecondary.White</item>
+        <!--устанавливаем тему для диалогового окна-->
+        <!--<item name="android:alertDialogTheme">@style/MyAlertDialogStyle.White</item>-->
+
+        <!--тёмные иконки для светкой панели уведомления-->
+        <item name="android:windowLightStatusBar">true</item>
+
+        <item name="android:listDivider">@color/textColorSecondary</item>
+        <item name="android:divider">@color/textColorSecondary</item>
+        <item name="android:dividerHeight">1dp</item>
+        <item name="android:showDividers">middle</item>
+    </style>
+
+    <!--AlertDialog-->
+    <!--<style name="MyAlertDialogStyle" parent="Theme.AppCompat.Dialog.Alert">-->
+    <!--<item name="android:windowTitleStyle">@style/title</item>-->
+    <!--<item name="android:background">@color/colorPrimary</item>-->
+    <!--<item name="android:dialogCornerRadius">0dp</item>-->
+    <!--<item name="android:textSize">14sp</item>-->
+    <!--<item name="android:textColorPrimary">@color/textColorSecondary</item>-->
+    <!--<item name="android:textColorAlertDialogListItem">@color/textColorSecondary</item>-->
+    <!--<item name="colorAccent">@color/colorAccent</item>-->
+    <!--</style>-->
+    <!--<style name="title">-->
+    <!--<item name="android:textColor">@color/textColorPrimary</item>-->
+    <!--<item name="android:textSize">14sp</item>-->
+    <!--<item name="android:textStyle">bold</item>-->
+    <!--</style>-->
+
+    <!--<style name="MyAlertDialogStyle.Black">-->
+    <!--<item name="android:windowTitleStyle">@style/title.Black</item>-->
+    <!--<item name="android:background">@color/colorPrimary.Black</item>-->
+    <!--<item name="android:textSize">14sp</item>-->
+    <!--<item name="android:textColorPrimary">@color/textColorSecondary.Black</item>-->
+    <!--<item name="android:textColorAlertDialogListItem">@color/textColorSecondary.Black</item>-->
+    <!--<item name="colorAccent">@color/colorAccent.Black</item>-->
+    <!--</style>-->
+    <!--<style name="title.Black">-->
+    <!--<item name="android:textColor">@color/textColorPrimary.Black</item>-->
+    <!--</style>-->
+
+    <!--<style name="MyAlertDialogStyle.White"  parent="Theme.AppCompat.Light.Dialog.Alert">-->
+    <!--<item name="android:windowTitleStyle">@style/title.White</item>-->
+    <!--<item name="android:background">@color/colorPrimary.White</item>-->
+    <!--<item name="android:textSize">14sp</item>-->
+    <!--<item name="android:textColorPrimary">@color/textColorSecondary.White</item>-->
+    <!--<item name="android:textColorAlertDialogListItem">@color/textColorSecondary.White</item>-->
+    <!--<item name="colorAccent">@color/colorAccent.White</item>-->
+    <!--</style>-->
+    <!--<style name="title.White">-->
+    <!--<item name="android:textColor">@color/textColorPrimary.White</item>-->
+    <!--</style>-->
+
+<!--кастомный вид для активити в виде диалого-->
+
+</resources>

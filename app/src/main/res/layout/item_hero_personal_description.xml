@@ -1,0 +1,195 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.v7.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_margin="8dp"
+    app:cardBackgroundColor="?colorPrimary"
+    app:cardCornerRadius="0dp"
+    app:cardElevation="2dp"
+    app:cardUseCompatPadding="true">
+
+    <android.support.constraint.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <TextView
+            android:id="@+id/tv_item_name"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:background="?colorPrimaryDark"
+            android:padding="4dp"
+            android:textColor="?android:textColorSecondary"
+            android:textSize="14sp"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toEndOf="@+id/view8"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:text="Poison Touch" />
+
+        <ImageView
+            android:id="@+id/iv_mp"
+            android:layout_width="15dp"
+            android:layout_height="15dp"
+            android:layout_marginBottom="8dp"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="8dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/view8"
+            app:layout_constraintTop_toBottomOf="@+id/iv_cooldown"
+            app:srcCompat="@drawable/mana" />
+
+        <ImageView
+            android:id="@+id/iv_cooldown"
+            android:layout_width="15dp"
+            android:layout_height="15dp"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="8dp"
+            app:layout_constraintStart_toEndOf="@+id/view8"
+            app:layout_constraintTop_toBottomOf="@+id/ll_items_description"
+            app:srcCompat="@drawable/cooldown" />
+
+        <TextView
+            android:id="@+id/ll_item_description"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="4dp"
+            android:layout_marginStart="4dp"
+            android:layout_marginTop="8dp"
+            android:textColor="?android:textColorSecondary"
+            android:textSize="12sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/view8"
+            app:layout_constraintTop_toBottomOf="@+id/ll_item_effects"
+            tools:text="Выпускает конус отравляющей магии, поражающей нескольких врагов. Жертвы получают периодический урон и замедляются, но если их атаковать, время действия эффекта обновится" />
+
+        <LinearLayout
+            android:id="@+id/ll_items_description"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="4dp"
+            android:layout_marginStart="4dp"
+            android:layout_marginTop="4dp"
+            android:orientation="vertical"
+            android:textColor="?android:textColorSecondary"
+            android:textSize="12sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/ll_item_description" />
+
+
+        <TextView
+            android:id="@+id/tv_item_cooldown"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:textColor="?android:textColorSecondary"
+            android:textSize="12sp"
+            app:layout_constraintBottom_toBottomOf="@+id/iv_cooldown"
+            app:layout_constraintStart_toEndOf="@+id/iv_cooldown"
+            app:layout_constraintTop_toTopOf="@+id/iv_cooldown"
+            tools:text="90/100/120" />
+
+        <TextView
+            android:id="@+id/tv_item_mp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:textColor="?android:textColorSecondary"
+            android:textSize="12sp"
+            app:layout_constraintBottom_toBottomOf="@+id/iv_mp"
+            app:layout_constraintStart_toEndOf="@+id/iv_mp"
+            app:layout_constraintTop_toTopOf="@+id/iv_mp"
+            tools:text="300/600/900" />
+
+        <LinearLayout
+            android:id="@+id/ll_item_effects"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_margin="4dp"
+            android:layout_marginTop="8dp"
+            android:orientation="vertical"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/tv_item_name">
+
+            <TextView
+                android:id="@+id/tv_item_area"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:padding="4dp"
+                android:textAllCaps="true"
+                android:textColor="?android:textColorSecondary"
+                android:textSize="12sp"
+                android:textStyle="bold"
+                tools:text="Способность Направленная на область" />
+
+            <TextView
+                android:id="@+id/tv_item_uses"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:padding="4dp"
+                android:textAllCaps="true"
+                android:textColor="?android:textColorSecondary"
+                android:textSize="12sp"
+                android:textStyle="bold"
+                tools:text="Действует на Врагов" />
+
+            <TextView
+                android:id="@+id/tv_item_type"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:padding="4dp"
+                android:textAllCaps="true"
+                android:textColor="?android:textColorSecondary"
+                android:textSize="12sp"
+                android:textStyle="bold"
+                tools:text="Урон Физический" />
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/tv_hotkey"
+            android:layout_width="25dp"
+            android:layout_height="25dp"
+            android:layout_marginEnd="4dp"
+            android:background="?colorAccent"
+            android:gravity="center"
+            android:textSize="16sp"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toBottomOf="@+id/tv_item_name"
+            app:layout_constraintEnd_toStartOf="@+id/tv_oldhotkey"
+            app:layout_constraintTop_toTopOf="@+id/tv_item_name"
+            tools:text="T" />
+
+        <TextView
+            android:id="@+id/tv_oldhotkey"
+            android:layout_width="25dp"
+            android:layout_height="25dp"
+            android:layout_marginEnd="4dp"
+            android:background="?colorAccent"
+            android:gravity="center"
+            android:textSize="16sp"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toBottomOf="@+id/tv_item_name"
+            app:layout_constraintEnd_toEndOf="@+id/tv_item_name"
+            app:layout_constraintTop_toTopOf="@+id/tv_item_name"
+            tools:text="G" />
+
+        <View
+            android:id="@+id/view8"
+            android:layout_width="2dp"
+            android:layout_height="0dp"
+            android:background="?colorAccent"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+    </android.support.constraint.ConstraintLayout>
+</android.support.v7.widget.CardView>

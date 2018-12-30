@@ -1,0 +1,21 @@
+        StyleableToast.makeText(this, "Hello World!", Toast.LENGTH_SHORT, R.style.MyToast).show();
+
+        YoYo.with(Techniques.Tada).playOn(findViewById(R.id.button));
+
+        text:
+            <com.robinhood.ticker.TickerView
+                android:id="@+id/tickerView"
+                app:layout_constraintTop_toTopOf="parent"
+                android:layout_marginTop="8dp"
+                android:layout_marginLeft="8dp"
+                android:textSize="16sp"
+                android:gravity="center"
+                android:textColor="@color/colorPrimary"
+                app:ticker_animationDuration="500"
+                app:layout_constraintLeft_toLeftOf="parent"
+                android:layout_height="wrap_content"
+                android:layout_width="wrap_content" />
+                tickerView = (TickerView) findViewById(R.id.tickerView);
+                tickerView.setCharacterList(TickerUtils.getDefaultListForUSCurrency());
+
+                BETTER FASTER STRONGER LOUDER

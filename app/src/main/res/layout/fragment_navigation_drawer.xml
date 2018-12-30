@@ -1,0 +1,147 @@
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/root"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="?android:windowBackground">
+
+    <android.support.v7.widget.RecyclerView
+        android:id="@+id/rv_drawer"
+        android:layout_width="wrap_content"
+        android:layout_height="0dp"
+        android:transitionName="rv"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        tools:listitem="@layout/item_list_plain_text" />
+
+    <ImageView
+        android:id="@+id/iv_drawer_setting"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:layout_alignParentEnd="true"
+        android:layout_centerInParent="true"
+        android:layout_marginBottom="8dp"
+        android:layout_marginEnd="16dp"
+        android:background="?attr/selectableItemBackground"
+        android:clickable="true"
+        android:contentDescription="@android:string/ok"
+        android:focusable="true"
+        android:scaleType="center"
+        android:tint="?android:textColorPrimary"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:srcCompat="@drawable/drawer_ic_menu_item_setting" />
+
+    <ImageView
+        android:id="@+id/iv_drawer_check_update"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:layout_centerVertical="true"
+        android:layout_marginBottom="8dp"
+        android:layout_marginStart="16dp"
+        android:clickable="true"
+        android:contentDescription="@string/all_check_update"
+        android:focusable="true"
+        android:scaleType="center"
+        android:tint="?android:textColorPrimary"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:srcCompat="@drawable/drawer_ic_menu_item_update" />
+
+    <TextView
+        android:id="@+id/n7message"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="8dp"
+        android:layout_marginTop="8dp"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+    <!--android:textColor="?android:colorAccent"-->
+
+    <Button
+        android:id="@+id/b_fragment_drawer_login"
+        style="@style/Widget.MaterialComponents.Button.UnelevatedButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        android:text="@string/log_in"
+        android:textSize="14sp"
+        android:visibility="gone"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <com.schibsted.spain.parallaxlayerlayout.ParallaxLayerLayout
+        android:id="@+id/parallax"
+        android:layout_width="200dp"
+        android:layout_height="125dp"
+        android:layout_marginStart="8dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:parallaxOffsetIncrement="10dp"
+        app:parallaxScaleVertical="0.5">
+
+        <ImageView
+            android:id="@+id/iv_user_ava"
+            android:layout_width="75dp"
+            android:layout_height="75dp" />
+
+        <ImageView
+            android:id="@+id/iv_user_medal"
+            android:layout_width="75dp"
+            android:layout_height="75dp"
+            android:paddingEnd="0dp"
+            android:paddingStart="30dp"
+            android:paddingTop="30dp" />
+
+        <ImageView
+            android:id="@+id/iv_user_stars"
+            android:layout_width="75dp"
+            android:layout_height="75dp"
+            android:paddingEnd="0dp"
+            android:paddingStart="30dp"
+            android:paddingTop="30dp" />
+
+        <TextView
+            android:id="@+id/tv_user_nickname"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:gravity="top|center_horizontal"
+            android:paddingTop="10dp"
+            android:textColor="?android:textColorPrimary"
+            android:textSize="16sp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/tv_user_rang"
+            android:layout_width="75dp"
+            android:layout_height="75dp"
+            android:gravity="bottom|center_horizontal"
+            android:textColor="?android:textColorPrimary"
+            android:textSize="12sp"
+            android:textStyle="bold" />
+    </com.schibsted.spain.parallaxlayerlayout.ParallaxLayerLayout>
+
+    <Switch
+        android:id="@+id/switch_premium"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:text="Premium"
+        android:visibility="gone"
+        app:layout_constraintStart_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/n7message" />
+
+    <include
+        layout="@layout/fragment_drawer"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+</android.support.constraint.ConstraintLayout>

@@ -1,0 +1,136 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.v7.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_margin="4dp"
+    app:cardUseCompatPadding="false">
+
+    <android.support.constraint.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="#000"
+        tools:context=".fragment.SingleStreamFragment"
+        tools:layout_editor_absoluteY="25dp">
+
+        <n7.ad2.utilsTwitch.TappableSurfaceView
+            android:id="@+id/sv_fragment_single_stream"
+            android:layout_width="0dp"
+            android:layout_height="150dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@id/ll_fragment_single_stream_holder"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <android.support.v7.widget.RecyclerView
+            android:id="@+id/rv_fragment_single_stream_chat"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:visibility="visible"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@id/ll_fragment_single_stream_holder"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:itemCount="3"
+            tools:listitem="@layout/item_list_plain_multi_twitch_text" />
+
+        <android.support.v7.widget.RecyclerView
+            android:id="@+id/rv_fragment_single_stream"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="2dp"
+            android:visibility="visible"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="@+id/rv_fragment_single_stream_chat"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:itemCount="5"
+            tools:layoutManager="android.support.v7.widget.LinearLayoutManager"
+            tools:listitem="@layout/item_list_simple_stream"
+            tools:orientation="horizontal" />
+
+        <ProgressBar
+            android:id="@+id/pb_fragment_single_stream"
+            style="@style/Widget.AppCompat.ProgressBar.Horizontal"
+            android:layout_width="0dp"
+            android:layout_height="4dp"
+            android:indeterminate="true"
+            android:scaleY="5"
+            android:visibility="visible"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent" />
+
+        <LinearLayout
+            android:id="@+id/ll_fragment_single_stream_holder"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:gravity="center"
+            android:orientation="vertical"
+            android:visibility="visible"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <ImageView
+                android:id="@+id/iv_fragment_single_stream_sound"
+                android:layout_width="45dp"
+                android:layout_height="25dp"
+                android:paddingStart="4dp"
+                android:paddingEnd="4dp"
+                app:srcCompat="@drawable/ic_fragment_single_stream_sound_on" />
+
+            <ImageView
+                android:id="@+id/iv_fragment_single_stream"
+                android:layout_width="45dp"
+                android:layout_height="25dp"
+                android:paddingStart="4dp"
+                android:paddingEnd="4dp"
+                app:srcCompat="@drawable/ic_fragment_single_stream_on" />
+
+            <TextView
+                android:id="@+id/tv_fragment_single_quality"
+                android:layout_width="45dp"
+                android:layout_height="25dp"
+                android:gravity="center"
+                android:maxLines="1"
+                android:text="160"
+                android:textColor="?android:textColorSecondary"
+                android:textSize="12sp"
+                android:textStyle="bold" />
+
+            <ImageView
+                android:id="@+id/iv_fragment_single_stream_chat"
+                android:layout_width="45dp"
+                android:layout_height="25dp"
+                android:paddingStart="4dp"
+                android:paddingEnd="4dp"
+                app:srcCompat="@drawable/ic_fragment_single_stream_chat_on" />
+
+            <TextView
+                android:id="@+id/tv_fragment_single_alpha"
+                android:layout_width="45dp"
+                android:layout_height="25dp"
+                android:gravity="center"
+                android:maxLines="1"
+                android:paddingStart="4dp"
+                android:paddingEnd="4dp"
+                android:text="1.0"
+                android:textColor="?android:textColorSecondary"
+                android:textSize="12sp"
+                android:textStyle="bold" />
+
+            <ImageView
+                android:id="@+id/iv_fragment_single_stream_close"
+                android:layout_width="45dp"
+                android:layout_height="25dp"
+                android:visibility="visible"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:srcCompat="@drawable/ic_fragment_single_stream_close" />
+
+        </LinearLayout>
+
+    </android.support.constraint.ConstraintLayout>
+
+</android.support.v7.widget.CardView>

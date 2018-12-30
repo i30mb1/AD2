@@ -1,0 +1,159 @@
+<resources>
+    <string name="app_name" translatable="false">AD2</string>
+    <string name="toolbar_search_hint">Search by name&#8230;</string>
+    <string name="drawer_heroes">Heroes</string>
+    <string name="drawer_items">Items</string>
+    <string name="drawer_news">News</string>
+    <string name="drawer_games">Tournaments</string>
+    <string name="drawer_game">Games</string>
+    <string name="drawer_stream">Streams</string>
+
+    <!--preferenses-->
+    <string name="setting">Setting</string>
+    <string name="setting_category_setting">APP SETTING</string>
+    <string name="setting_account_key" translatable="false">setting_account_toggle_key</string>
+    <string name="setting_show_log_key" translatable="false">setting_show_log_key</string>
+    <string name="setting_news_with_image_key" translatable="false">setting_news_with_image_key</string>
+    <string name="setting_about_key" translatable="false">pref_about_key</string>
+    <string name="setting_account_title">Display your account</string>
+    <string name="setting_show_log">System information</string>
+    <string name="setting_show_log_summary">Part of main screen</string>
+    <string name="setting_account_summary">Show your friends</string>
+    <string name="setting_about_title" translatable="false">About Dota 2</string>
+    <string name="setting_high_quality_desc_on">On</string>
+    <string name="setting_high_quality_desc_off">Off</string>
+    <string name="setting_about_desc" translatable="false">v%1$s</string>
+    <string name="setting_donate_days_remains" translatable="false">premium %d days remains</string>
+    <string name="setting_contact_us">Contact us</string>
+    <string name="setting_contact_us_key" translatable="false">contact_us_key</string>
+    <string name="setting_contact_us_summary">Bugs? Errors? Contribution?</string>
+    <string name="setting_theme_title">Change theme</string>
+    <string name="setting_theme_key" translatable="false">setting_theme_key</string>
+    <string name="setting_category_about">ABOUT APP</string>
+    <string name="setting_tell_friend">Tell a friend</string>
+    <string name="setting_tell_friend_summary">do you have anyone?</string>
+    <string name="setting_tell_friend_key" translatable="false">tell_friend_key</string>
+    <string name="setting_tell_friend_message" translatable="false">https://goo.gl/au2HTE</string>
+    <string name="setting_theme_gray" translatable="false">Gray</string>
+    <string name="setting_theme_white" translatable="false">White</string>
+    <string name="setting_theme_dark" translatable="false">Dark</string>
+    <string name="dialog_response_download">Download</string>
+    <string name="dialog_response_set_ringtone">Set on ringtone</string>
+    <!--Лицензия-->
+    <string name="license_text1" translatable="false">This Freeware License is a binding legal agreement between the individual who downloads the software (You) and the Licensor.</string>
+    <string name="license_text10" translatable="false">6. Your license to use the software shall be revocable by the Licensor upon written notice to you. This license shall automatically terminate upon your violation of the terms hereof or upon your use of the software beyond the scope of the license provided herein.</string>
+    <string name="license_text11" translatable="false">7. Use within the scope of this license is free of charge and no royalty or licensing fees shall be payable by you. Use beyond the scope of this license shall constitute copyright infringement. This license shall be effective and bind you upon your downloading of the software.</string>
+    <string name="license_text12" translatable="false">8. You accept the software on an AS IS and with all faults basis. No representations and warranties are made to you regarding any aspect of the software.</string>
+    <string name="license_text13" translatable="false">9. THE LICENSOR HEREBY DISCLAIMS ANY AND ALL WARRANTIES, EXPRESS OR IMPLIED, RELATIVE TO THE SOFTWARE, INCLUDING BUT NOT LIMITED TO ANY WARRANTY OF FITNESS FOR A PARTICULAR PURPOSE OR MERCHANTIBILITY. LICENSOR SHALL NOT BE LIABLE OR RESPONSIBLE FOR ANY DAMAGES, INJURIES OR LIABILITIES CAUSED DIRECTLY OR INDIRECTLY FROM THE USE OF THE SOFTWARE, INCLUDING BUT NOT LIMITED TO INCIDENTAL, CONSEQUENTIAL OR SPECIAL DAMAGES.</string>
+    <string name="license_text14" translatable="false">10. This Freeware License shall be interpreted under the laws of Italy. You agree that all controversies pertaining to the software and/or this Freeware Agreement shall be brought in the courts of Rome. You hereby submit to the jurisdictions of such court.</string>
+    <string name="license_text15" translatable="false">11. Licensor\'s failure to enforce any rights here under or its copyright in the software shall not be construed as amending this agreement or waiving any of Licensor\'s rights hereunder or under any provision of state of national law.</string>
+    <string name="license_text16" translatable="false">12. Consent to Use of Data: You agree that Application Provider may collect and use technical data and related information, including but not limited to technical information about Your device, system and application software, and peripherals, that is gathered periodically to facilitate the provision of software updates,product support and other services to You (if any) related to the Licensed Application. Application Provider may use this information, as long as it is in a form that does not personally identify You, to improve its products or to provide services or technologies to You.</string>
+    <string name="license_text2" translatable="false">THIS SOFTWARE IS COPYRIGHTED AND THE OWNER OF THE COPYRIGHT CLAIMS ALL EXCLUSIVE RIGHTS TO SUCH SOFTWARE, EXCEPT AS LICENSED TO USERS HEREUNDER AND SUBJECT TO STRICT COMPLIANCE WITH THE TERMS OF THIS LICENSE</string>
+    <string name="license_text3" translatable="false">Even though a license fee is not paid for use of such Freeware, it does not mean that there are not conditions for using such Freeware. As a condition for granting you a license to use Freeware programs that are available through this site, you agree to all of the following terms and conditions. You are deemed to have read, understand, and have accepted all such terms and conditions upon executing a download of any Freeware program.\nIf you fail to abide by any of the terms and conditions set forth herein, your license to use such Freeware shall be immediately and automatically revoked, without any notice or other action by the Copyright Owner.</string>
+    <string name="license_text4" translatable="false">TERMS AND CONDITIONS</string>
+    <string name="license_text5" translatable="false">1. You are granted a non-exclusive license to use the Downloaded Software subject to your compliance with all of the terms and conditions of this Freeware License</string>
+    <string name="license_text6" translatable="false">2. You may only use the software on a device that you own, lease or control.</string>
+    <string name="license_text7" translatable="false">3. You are only granted a license for the machine-readable, object code portion of the software. You will not modify, enhance, reverse engineer or otherwise alter the software from its current state.</string>
+    <string name="license_text8" translatable="false">4. You may not distribute, copy, publish, assign, sell, bargain, convey, transfer, pledge, lease or grant any further rights to use the software.</string>
+    <string name="license_text9" translatable="false">5. You will not have any proprietary rights in and to the software. You acknowledge and agree that the Licensor retains all copyrights and other proprietary rights in and to the software.</string>
+    <string name="license_title" translatable="false">AD2 Freeware license terms and conditions</string>
+
+    <string name="all_new_version">new version</string>
+    <string name="all_check_update">check update</string>
+    <string name="all_error_internet">Can\'t loading without internet connection</string>
+    <string name="update_it_is_no_new_version">you have last version of app</string>
+    <string name="main_press_again_to_exit">press again to exit</string>
+    <string name="hero_info">info</string>
+    <string name="hero_sound">sounds</string>
+    <string name="hero_guide">guide</string>
+    <string name="hero_response_ringtone_set">Ringtone has been set! Probably!</string>
+    <string name="hero_personal_tip_manta_descr">it shows can be this ability used by illusions or not</string>
+    <string name="fragment_guide_starting_items">Starting items</string>
+    <string name="fragment_guide_best_versus">Best Versus</string>
+    <string name="fragment_guide_worst_versus">Worst Versus</string>
+    <string name="fragment_guide_current_winrate" translatable="false">%s</string>
+    <string name="fragment_guide_current_pickrate" translatable="false">%s</string>
+    <string name="setting_donate_key" translatable="false">pref_month_key</string>
+    <string name="compare_win_rate" translatable="false">Win Rate</string>
+    <string name="setting_month_desc">Ready to take the next step?</string>
+    <string name="setting_month_title">Subscription</string>
+    <string name="all_grand_permission">Please Grant Permissions</string>
+    <string name="all_enable">ENABLE</string>
+    <string name="log_in">Log In</string>
+    <string name="all_logout" translatable="false">logout complete</string>
+    <string name="heart" translatable="false">heart</string>
+    <string name="language_resource">eng</string>
+    <string name="item_hero_personal_description_notes">Notes</string>
+    <string name="item_hero_personal_description_talents">Talents</string>
+    <string name="item_hero_personal_description_bio">Bio</string>
+    <string name="item_hero_personal_description_facts">Trivia</string>
+    <string name="item_hero_personal_description_desc">Description</string>
+    <string name="item_hero_personal_description_tips">Tips</string>
+    <string name="open_file">Open</string>
+    <string name="hero_responses_fragment_download_first">You should download sound first</string>
+    <string name="hero_responses_sound_already_downloaded">Sound already downloaded</string>
+    <string name="hero_responses_open_folder_with" translatable="false">Open folder with</string>
+    <string name="all_something_went_wrong" translatable="false">Oops! Something went wrong.</string>
+    <string name="notification_game_title">Game Started</string>
+    <string name="notification_game_info" translatable="false">Game</string>
+    <string name="item_hero_personal_info_desc">Information</string>
+    <string name="item_hero_personal_trivia_desc">Trivia</string>
+    <string name="all_open_folder">Open</string>
+    <string name="hero_responses_fragment_sound_downloaded">Sound downloaded</string>
+    <string name="dialog_donate_annual">ANNUAL</string>
+    <string name="dialog_donate_month">ACTIVATE</string>
+    <string name="dialog_donate_subscription">SUBSCRIPTION</string>
+    <string name="dialog_rate_me_never">Never</string>
+    <string name="dialog_rate_me_later">LATER</string>
+    <string name="dialog_rate_me_text1">Rate me on Google Play, please!</string>
+    <string name="dialog_rate_me_text2">and take 5 days of Subscriptions for FREE!</string>
+    <string name="all_only_for_subscribers">Only for Subscribers!</string>
+    <string name="all_buy">Buy</string>
+    <string name="all_come_back_tomorrow">Come back tomorrow or buy Subscription</string>
+    <string name="game_fragment_earn_5_premium">You earn 5 days premium</string>
+    <string name="fragment_game_title_game1">how many cost this spell</string>
+    <string name="fragment_guide_lane" translatable="false">%s</string>
+    <string name="activity_twitch_game" translatable="false">Quality</string>
+    <string name="fragment_guide_further_items">Items</string>
+    <string name="fragment_guide_skill_builds">Skill builds</string>
+    <string name="games_schedule">REMIND</string>
+    <string name="we_have_new_version">we have new version!!</string>
+    <string name="do_you_really_desire_to_update">Update me, please!</string>
+    <string name="dialog_tip_do_not_show">do not show again</string>
+    <string name="game1_activity_tip">Please be careful because red square means abilities level!!!\nP.S. try to reach 50 points</string>
+    <string name="game1_activity_tip_key" translatable="false">game1_activity_tip</string>
+    <string name="multi_streams_fragment_tip_key" translatable="false">multi_streams_fragment_tip_key</string>
+    <string name="game1_hard_activity_tip">This mode gives to you x2 points!\nP.S.steel try to reach 50 points</string>
+    <string name="game1_hard_activity_tip_key" translatable="false">game1_hard_activity_tip_key</string>
+    <string name="setting_help_log_in_text">Now you can monitoring your Dota 2 progress on the main screen of this app</string>
+    <string name="multi_streams_fragment_tip">This is experimental additional, and if you are not premium user you can launch this activity only 7 time per day!</string>
+    <string name="setting_help_log_in_key" translatable="false">setting_fragment_monitoring_progress_key</string>
+    <string name="drawer_meta" translatable="false">Meta</string>
+    <string name="dialog_donate_1">- Disable all AD\'s</string>
+    <string name="dialog_donate_7">- Unlimited Mini Games</string>
+    <string name="dialog_donate_3">- 5 version builds guides for heroes</string>
+    <string name="dialog_donate_6">- Notification when a tournaments game starts</string>
+    <string name="dialog_donate_5">- Speed/Transparency control for the Twitch.tv chats</string>
+    <string name="dialog_donate_2">- Unlimited access to the responses/sounds</string>
+    <string name="dialog_donate_10">- Access to the multi-Twitch.tv</string>
+    <string name="dialog_donate_4">- Switcher for 3 languages Russian, English and China</string>
+    <string name="dialog_donate_8">- Quick opportunity to contact with developers via E-mail</string>
+    <string name="dialog_donate_9">- Possibility to add your Twitch.tv account on first position (only for 6 month subscribers)</string>
+    <string name="all_activated" translatable="false">ON</string>
+    <string name="all_not_activated" translatable="false">OFF</string>
+    <string name="all_deactivate">DEACTIVATE</string>
+    <string name="activity_game2_persons_equal" translatable="false">x 2 =</string>
+    <string name="setting_news_with_image_title">Mini-image for news</string>
+    <string name="setting_news_with_image_summary">Require a lot of resources</string>
+    <string name="commercial_1">FIVE BUILD VARIATIONS</string>
+    <string name="commercial_2">NO LIMITS FOR RESPONSES</string>
+    <string name="commercial_3">SPEED AND TRANSPARENCY CONTROL FOR TWITCH.TV CHAT</string>
+    <string name="commercial_4">REMOVE ADS</string>
+    <string name="commercial_5">SWITCH BETWEEN RUSSIAN AND ENGLISH LANGUAGES</string>
+    <string name="commercial_6">MULTI-TWITCH</string>
+    <string name="commercial_7">SET ALARM FOR UPCOMING GAMES</string>
+    <string name="commercial_8">INSPIRATION TO CONTINUE WORKING TOWARDS GOALS</string>
+    <string name="dialog_donate_me_text1">We spend a lot of time and effort supporting applications. Your every action is a traffic expense for our servers. Take a subscription and protect the application from unnecessary advertising.</string>
+    <string name="dialog_donate_me_text2">WE NEED YOU!</string>
+
+</resources>

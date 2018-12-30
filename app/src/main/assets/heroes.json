@@ -1,0 +1,470 @@
+[
+  {
+    "nameEng": "Riki",
+    "name": "riki"
+  },
+  {
+    "nameEng": "Enigma",
+    "name": "enigma"
+  },
+  {
+    "nameEng": "Tinker",
+    "name": "tinker"
+  },
+  {
+    "nameEng": "Vengeful Spirit",
+    "name": "vengeful_spirit"
+  },
+  {
+    "nameEng": "Windranger",
+    "name": "windranger"
+  },
+  {
+    "nameEng": "Kunkka",
+    "name": "kunkka"
+  },
+  {
+    "nameEng": "Lina",
+    "name": "lina"
+  },
+  {
+    "nameEng": "Lich",
+    "name": "lich"
+  },
+  {
+    "nameEng": "Lion",
+    "name": "lion"
+  },
+  {
+    "nameEng": "Shadow Shaman",
+    "name": "shadow_shaman"
+  },
+  {
+    "nameEng": "Slardar",
+    "name": "slardar"
+  },
+  {
+    "nameEng": "Tidehunter",
+    "name": "tidehunter"
+  },
+  {
+    "nameEng": "Shadow Fiend",
+    "name": "shadow_fiend"
+  },
+  {
+    "nameEng": "Morphling",
+    "name": "morphling"
+  },
+  {
+    "nameEng": "Phantom Lancer",
+    "name": "phantom_lancer"
+  },
+  {
+    "nameEng": "Puck",
+    "name": "puck"
+  },
+  {
+    "nameEng": "Pudge",
+    "name": "pudge"
+  },
+  {
+    "nameEng": "Razor",
+    "name": "razor"
+  },
+  {
+    "nameEng": "Sand King",
+    "name": "sand_king"
+  },
+  {
+    "nameEng": "Storm Spirit",
+    "name": "storm_spirit"
+  },
+  {
+    "nameEng": "Sven",
+    "name": "sven"
+  },
+  {
+    "nameEng": "Tiny",
+    "name": "tiny"
+  },
+  {
+    "nameEng": "Bane",
+    "name": "bane"
+  },
+  {
+    "nameEng": "Anti-Mage",
+    "name": "anti-mage"
+  },
+  {
+    "nameEng": "Axe",
+    "name": "axe"
+  },
+  {
+    "nameEng": "Bloodseeker",
+    "name": "bloodseeker"
+  },
+  {
+    "nameEng": "Crystal Maiden",
+    "name": "crystal_maiden"
+  },
+  {
+    "nameEng": "Drow Ranger",
+    "name": "drow_ranger"
+  },
+  {
+    "nameEng": "Earthshaker",
+    "name": "earthshaker"
+  },
+  {
+    "nameEng": "Juggernaut",
+    "name": "juggernaut"
+  },
+  {
+    "nameEng": "Mirana",
+    "name": "mirana"
+  },
+  {
+    "nameEng": "Faceless Void",
+    "name": "faceless_void"
+  },
+  {
+    "nameEng": "Wraith King",
+    "name": "wraith_king"
+  },
+  {
+    "nameEng": "Death Prophet",
+    "name": "death_prophet"
+  },
+  {
+    "nameEng": "Phantom Assassin",
+    "name": "phantom_assassin"
+  },
+  {
+    "nameEng": "Spirit Breaker",
+    "name": "spirit_breaker"
+  },
+  {
+    "nameEng": "Gyrocopter",
+    "name": "gyrocopter"
+  },
+  {
+    "nameEng": "Alchemist",
+    "name": "alchemist"
+  },
+  {
+    "nameEng": "Invoker",
+    "name": "invoker"
+  },
+  {
+    "nameEng": "Silencer",
+    "name": "silencer"
+  },
+  {
+    "nameEng": "Outworld Devourer",
+    "name": "outworld_devourer"
+  },
+  {
+    "nameEng": "Lycan",
+    "name": "lycan"
+  },
+  {
+    "nameEng": "Brewmaster",
+    "name": "brewmaster"
+  },
+  {
+    "nameEng": "Shadow Demon",
+    "name": "shadow_demon"
+  },
+  {
+    "nameEng": "Lone Druid",
+    "name": "lone_druid"
+  },
+  {
+    "nameEng": "Chaos Knight",
+    "name": "chaos_knight"
+  },
+  {
+    "nameEng": "Meepo",
+    "name": "meepo"
+  },
+  {
+    "nameEng": "Treant Protector",
+    "name": "treant_protector"
+  },
+  {
+    "nameEng": "Ogre Magi",
+    "name": "ogre_magi"
+  },
+  {
+    "nameEng": "Undying",
+    "name": "undying"
+  },
+  {
+    "nameEng": "Rubick",
+    "name": "rubick"
+  },
+  {
+    "nameEng": "Disruptor",
+    "name": "disruptor"
+  },
+  {
+    "nameEng": "Nyx Assassin",
+    "name": "nyx_assassin"
+  },
+  {
+    "nameEng": "Naga Siren",
+    "name": "naga_siren"
+  },
+  {
+    "nameEng": "Keeper of the Light",
+    "name": "keeper_of_the_light"
+  },
+  {
+    "nameEng": "Io",
+    "name": "io"
+  },
+  {
+    "nameEng": "Visage",
+    "name": "visage"
+  },
+  {
+    "nameEng": "Slark",
+    "name": "slark"
+  },
+  {
+    "nameEng": "Medusa",
+    "name": "medusa"
+  },
+  {
+    "nameEng": "Troll Warlord",
+    "name": "troll_warlord"
+  },
+  {
+    "nameEng": "Centaur Warrunner",
+    "name": "centaur_warrunner"
+  },
+  {
+    "nameEng": "Magnus",
+    "name": "magnus"
+  },
+  {
+    "nameEng": "Timbersaw",
+    "name": "timbersaw"
+  },
+  {
+    "nameEng": "Bristleback",
+    "name": "bristleback"
+  },
+  {
+    "nameEng": "Tusk",
+    "name": "tusk"
+  },
+  {
+    "nameEng": "Skywrath Mage",
+    "name": "skywrath_mage"
+  },
+  {
+    "nameEng": "Abaddon",
+    "name": "abaddon"
+  },
+  {
+    "nameEng": "Elder Titan",
+    "name": "elder_titan"
+  },
+  {
+    "nameEng": "Legion Commander",
+    "name": "legion_commander"
+  },
+  {
+    "nameEng": "Lifestealer",
+    "name": "lifestealer"
+  },
+  {
+    "nameEng": "Dark Seer",
+    "name": "dark_seer"
+  },
+  {
+    "nameEng": "Clinkz",
+    "name": "clinkz"
+  },
+  {
+    "nameEng": "Omniknight",
+    "name": "omniknight"
+  },
+  {
+    "nameEng": "Enchantress",
+    "name": "enchantress"
+  },
+  {
+    "nameEng": "Huskar",
+    "name": "huskar"
+  },
+  {
+    "nameEng": "Night Stalker",
+    "name": "night_stalker"
+  },
+  {
+    "nameEng": "Broodmother",
+    "name": "broodmother"
+  },
+  {
+    "nameEng": "Bounty Hunter",
+    "name": "bounty_hunter"
+  },
+  {
+    "nameEng": "Weaver",
+    "name": "weaver"
+  },
+  {
+    "nameEng": "Jakiro",
+    "name": "jakiro"
+  },
+  {
+    "nameEng": "Batrider",
+    "name": "batrider"
+  },
+  {
+    "nameEng": "Chen",
+    "name": "chen"
+  },
+  {
+    "nameEng": "Spectre",
+    "name": "spectre"
+  },
+  {
+    "nameEng": "Doom",
+    "name": "doom"
+  },
+  {
+    "nameEng": "Ancient Apparition",
+    "name": "ancient_apparition"
+  },
+  {
+    "nameEng": "Ursa",
+    "name": "ursa"
+  },
+  {
+    "nameEng": "Necrophos",
+    "name": "necrophos"
+  },
+  {
+    "nameEng": "Warlock",
+    "name": "warlock"
+  },
+  {
+    "nameEng": "Beastmaster",
+    "name": "beastmaster"
+  },
+  {
+    "nameEng": "Queen of Pain",
+    "name": "queen_of_pain"
+  },
+  {
+    "nameEng": "Venomancer",
+    "name": "venomancer"
+  },
+  {
+    "nameEng": "Zeus",
+    "name": "zeus"
+  },
+  {
+    "nameEng": "Sniper",
+    "name": "sniper"
+  },
+  {
+    "nameEng": "Witch Doctor",
+    "name": "witch_doctor"
+  },
+  {
+    "nameEng": "Pugna",
+    "name": "pugna"
+  },
+  {
+    "nameEng": "Templar Assassin",
+    "name": "templar_assassin"
+  },
+  {
+    "nameEng": "Viper",
+    "name": "viper"
+  },
+  {
+    "nameEng": "Luna",
+    "name": "luna"
+  },
+  {
+    "nameEng": "Dragon Knight",
+    "name": "dragon_knight"
+  },
+  {
+    "nameEng": "Dazzle",
+    "name": "dazzle"
+  },
+  {
+    "nameEng": "Clockwerk",
+    "name": "clockwerk"
+  },
+  {
+    "nameEng": "Leshrac",
+    "name": "leshrac"
+  },
+  {
+    "nameEng": "Nature's Prophet",
+    "name": "nature's_prophet"
+  },
+  {
+    "nameEng": "Ember Spirit",
+    "name": "ember_spirit"
+  },
+  {
+    "nameEng": "Earth Spirit",
+    "name": "earth_spirit"
+  },
+  {
+    "nameEng": "Terrorblade",
+    "name": "terrorblade"
+  },
+  {
+    "nameEng": "Phoenix",
+    "name": "phoenix"
+  },
+  {
+    "nameEng": "Oracle",
+    "name": "oracle"
+  },
+  {
+    "nameEng": "Techies",
+    "name": "techies"
+  },
+  {
+    "nameEng": "Winter Wyvern",
+    "name": "winter_wyvern"
+  },
+  {
+    "nameEng": "Arc Warden",
+    "name": "arc_warden"
+  },
+  {
+    "nameEng": "Underlord",
+    "name": "underlord"
+  },
+  {
+    "nameEng": "Monkey King",
+    "name": "monkey_king"
+  },
+  {
+    "nameEng": "Pangolier",
+    "name": "pangolier"
+  },
+  {
+    "nameEng": "Dark Willow",
+    "name": "dark_willow"
+  },
+  {
+    "nameEng": "Grimstroke",
+    "name": "grimstroke"
+  },
+  {
+    "nameEng": "Roshan",
+    "name": "roshan"
+  }
+]

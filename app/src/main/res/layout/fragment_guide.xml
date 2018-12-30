@@ -1,0 +1,281 @@
+<FrameLayout xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:background="?colorPrimary"
+    android:layout_height="match_parent"
+    app:layout_behavior="@string/appbar_scrolling_view_behavior"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+    <android.support.v4.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <android.support.constraint.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <TextView
+                android:id="@+id/tv_fragment_guide_current_time_title"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:layout_marginEnd="8dp"
+                android:background="?colorPrimaryDark"
+                android:elevation="2dp"
+                android:paddingStart="3dp"
+                android:paddingEnd="3dp"
+                android:text="Date"
+                android:textAllCaps="true"
+                android:textColor="?android:textColorSecondary"
+                android:textSize="14sp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/scrollView3" />
+
+            <TextView
+                android:id="@+id/tv_fragment_guide_time"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="8dp"
+                android:textColor="?android:textColorSecondary"
+                android:textSize="14sp"
+                app:layout_constraintEnd_toEndOf="@+id/tv_fragment_guide_current_time_title"
+                app:layout_constraintTop_toBottomOf="@+id/tv_fragment_guide_current_time_title"
+                tools:text="05.09.2018" />
+
+            <TextView
+                android:id="@+id/tv_fragment_guide_lane_title"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="8dp"
+                android:layout_marginTop="8dp"
+                android:layout_marginEnd="8dp"
+                android:background="?colorPrimaryDark"
+                android:elevation="2dp"
+                android:paddingStart="3dp"
+                android:paddingEnd="3dp"
+                android:text="lane"
+                android:textAllCaps="true"
+                android:textColor="?android:textColorSecondary"
+                android:textSize="14sp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/sv_fragment_guide_worst_versus" />
+
+            <com.robinhood.ticker.TickerView
+                android:id="@+id/tv_fragment_guide_lane"
+                android:layout_width="wrap_content"
+                android:layout_height="0dp"
+                android:gravity="end"
+                android:textAllCaps="true"
+                android:textColor="?android:textColorSecondary"
+                android:textSize="14sp"
+                app:layout_constraintEnd_toEndOf="@+id/tv_fragment_guide_lane_title"
+                app:layout_constraintStart_toStartOf="@+id/tv_fragment_guide_lane_title"
+                app:layout_constraintTop_toBottomOf="@+id/tv_fragment_guide_lane_title"
+                app:ticker_animationDuration="1000" />
+
+            <ScrollView
+                android:id="@+id/sv_fragment_guide_best_versus"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:background="?colorPrimaryDark"
+                android:elevation="2dp"
+                android:scrollbars="none"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/tv_fragment_guide_best_versus"
+                tools:layout_editor_absoluteY="72dp">
+
+                <HorizontalScrollView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:scrollbars="none"
+                    tools:layout_editor_absoluteX="0dp"
+                    tools:layout_editor_absoluteY="202dp">
+
+                    <LinearLayout
+                        android:id="@+id/ll_fragment_guide_best_versus"
+                        android:layout_width="wrap_content"
+                        android:layout_height="50dp"
+                        android:animateLayoutChanges="true"
+                        android:minHeight="20dp"
+                        android:orientation="horizontal" />
+                </HorizontalScrollView>
+            </ScrollView>
+
+            <ScrollView
+                android:id="@+id/sv_fragment_guide_worst_versus"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:background="?colorPrimaryDark"
+                android:elevation="2dp"
+                android:scrollbars="none"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/tv_fragment_guide_worst_versus">
+
+                <HorizontalScrollView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:scrollbars="none">
+
+                    <LinearLayout
+                        android:id="@+id/ll_fragment_guide_worst_versus"
+                        android:layout_width="wrap_content"
+                        android:layout_height="50dp"
+                        android:animateLayoutChanges="true"
+                        android:minHeight="20dp"
+                        android:orientation="horizontal" />
+                </HorizontalScrollView>
+            </ScrollView>
+
+
+            <TextView
+                android:id="@+id/tv_fragment_guide_starting_items"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="8dp"
+                android:layout_marginTop="8dp"
+                android:layout_marginEnd="8dp"
+                android:background="?colorPrimaryDark"
+                android:elevation="2dp"
+                android:paddingStart="5dp"
+                android:paddingEnd="5dp"
+                android:text="@string/fragment_guide_starting_items"
+                android:textAllCaps="true"
+                android:textColor="?android:textColorSecondary"
+                android:visibility="gone"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/sv_fragment_guide_worst_versus" />
+
+            <LinearLayout
+                android:id="@+id/ll_fragment_guide_starting_items"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:animateLayoutChanges="true"
+                android:background="?colorPrimaryDark"
+                android:elevation="2dp"
+                android:minWidth="100dp"
+                android:minHeight="40dp"
+                android:orientation="vertical"
+                android:visibility="gone"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/tv_fragment_guide_starting_items" />
+
+
+            <TextView
+                android:id="@+id/tv_fragment_guide_worst_versus"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="8dp"
+                android:layout_marginTop="8dp"
+                android:background="?colorPrimaryDark"
+                android:elevation="2dp"
+                android:paddingStart="5dp"
+                android:paddingEnd="5dp"
+                android:text="@string/fragment_guide_worst_versus"
+                android:textAllCaps="true"
+                android:textColor="?android:textColorSecondary"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/sv_fragment_guide_best_versus" />
+
+            <TextView
+                android:id="@+id/tv_fragment_guide_further_items"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="8dp"
+                android:layout_marginTop="8dp"
+                android:layout_marginEnd="8dp"
+                android:background="?colorPrimaryDark"
+                android:elevation="2dp"
+                android:paddingStart="5dp"
+                android:paddingEnd="5dp"
+                android:text="@string/fragment_guide_further_items"
+                android:textAllCaps="true"
+                android:textColor="?android:textColorSecondary"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/tv_fragment_guide_lane" />
+
+            <LinearLayout
+                android:id="@+id/ll_fragment_guide_further_items"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:animateLayoutChanges="true"
+                android:background="?colorPrimaryDark"
+                android:elevation="2dp"
+                android:gravity="center"
+                android:minWidth="100dp"
+                android:minHeight="40dp"
+                android:orientation="vertical"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/tv_fragment_guide_further_items">
+
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/tv_fragment_guide_skill_builds"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="8dp"
+                android:layout_marginTop="8dp"
+                android:layout_marginEnd="8dp"
+                android:background="?colorPrimaryDark"
+                android:elevation="2dp"
+                android:paddingStart="5dp"
+                android:paddingEnd="5dp"
+                android:text="@string/fragment_guide_skill_builds"
+                android:textAllCaps="true"
+                android:textColor="?android:textColorSecondary"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/ll_fragment_guide_further_items" />
+
+            <ScrollView
+                android:id="@+id/scrollView3"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:background="?colorPrimaryDark"
+                android:elevation="2dp"
+                android:scrollbars="none"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/tv_fragment_guide_skill_builds">
+
+                <HorizontalScrollView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:scrollbars="none">
+
+                    <LinearLayout
+                        android:id="@+id/ll_fragment_guide_skill_builds"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:animateLayoutChanges="true"
+                        android:minHeight="40dp"
+                        android:orientation="horizontal"
+                        tools:layout_editor_absoluteX="172dp"
+                        tools:layout_editor_absoluteY="224dp" />
+                </HorizontalScrollView>
+            </ScrollView>
+
+            <TextView
+                android:id="@+id/tv_fragment_guide_best_versus"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="8dp"
+                android:layout_marginTop="8dp"
+                android:background="?colorPrimaryDark"
+                android:elevation="2dp"
+                android:paddingStart="5dp"
+                android:paddingEnd="5dp"
+                android:text="@string/fragment_guide_best_versus"
+                android:textAllCaps="true"
+                android:textColor="?android:textColorSecondary"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+        </android.support.constraint.ConstraintLayout>
+    </android.support.v4.widget.NestedScrollView>
+
+</FrameLayout>
