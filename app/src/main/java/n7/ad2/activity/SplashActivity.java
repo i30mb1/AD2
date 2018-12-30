@@ -63,7 +63,7 @@ import n7.ad2.worker.SteamNewsWorker;
 
 import static n7.ad2.MySharedPreferences.ANIMATION_DURATION;
 import static n7.ad2.MySharedPreferences.PREMIUM;
-import static n7.ad2.SETTINGS.SettingActivity.ONCE_PER_MONTH_SUBSCRIPTION;
+import static n7.ad2.setting.SettingActivity.ONCE_PER_MONTH_SUBSCRIPTION;
 import static n7.ad2.worker.GamesWorker.PAGE;
 import static n7.ad2.worker.GamesWorker.UNIQUE_WORK;
 import static n7.ad2.worker.SteamNewsWorker.DELETE_TABLE;

@@ -64,9 +64,8 @@ public class Game1Activity extends BaseActivity implements View.OnClickListener 
             TextView tv_dialog_tip = dialog.findViewById(R.id.tv_dialog_info);
             if (tv_dialog_tip != null)
                 tv_dialog_tip.setText(R.string.game1_activity_tip);
-            Button b_dialog_tip = dialog.findViewById(R.id.b_dialog_info);
-            if (b_dialog_tip != null)
-                b_dialog_tip.setOnClickListener(new View.OnClickListener() {
+            if (tv_dialog_tip != null)
+                tv_dialog_tip.setOnClickListener(new View.OnClickListener() {
                     @Override
                     public void onClick(View v) {
                         MySharedPreferences.getSharedPreferences(Game1Activity.this).edit().putBoolean(getString(R.string.game1_activity_tip_key), false).apply();

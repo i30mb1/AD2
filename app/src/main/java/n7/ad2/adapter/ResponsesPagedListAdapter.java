@@ -41,7 +41,7 @@ import java.util.List;
 import n7.ad2.AppExecutors;
 import n7.ad2.MySharedPreferences;
 import n7.ad2.R;
-import n7.ad2.SETTINGS.SettingActivity;
+import n7.ad2.setting.SettingActivity;
 import n7.ad2.model.ResponseModel;
 import n7.ad2.utils.StickyHeaderDecorator;
 import n7.ad2.utils.Utils;

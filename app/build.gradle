@@ -10,13 +10,6 @@ android {
         targetSdkVersion 28
         versionCode gitCommitCount()
         versionName getGitVersionMessage()
-        buildConfigField "int", "BUILD_TIME", "${System.currentTimeSeconds()}"
-
-        javaCompileOptions {
-            annotationProcessorOptions {
-                arguments = ["room.schemaLocation": "$projectDir/schemas".toString()]
-            }
-        }
 
         dataBinding {
             enabled = true
@@ -32,35 +25,12 @@ android {
         }
     }
 
-    sourceSets {
-        debug {
-            assets.srcDirs = ['/src/main/assets']
-        }
-        release {
-            assets.srcDirs = ['/src/main/assets']
-        }
-        releaseAnim {
-            assets.srcDirs = ['/src/main/assets_Anim']
-        }
-
-    }
-
     buildTypes {
         debug {
             resValue("string", "PORT_NUMBER", "8081")
-//            applicationIdSuffix ".debug"
-//            versionNameSuffix "30"
-//            resConfigs "en"
             minifyEnabled false
-//            multiDexEnabled true
-            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
-            signingConfig signingConfigs.release
         }
         release {
-            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
-            signingConfig signingConfigs.release
-        }
-        releaseAnim {
             proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
             signingConfig signingConfigs.release
         }
@@ -75,7 +45,7 @@ def gitCommitCount() {
             standardOutput = stdout
         }
         def commitCount = stdout.toString().trim().toInteger()
-        return commitCount + 190
+        return commitCount + 300
     }
     catch (ignored) {
         return 0

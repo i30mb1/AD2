@@ -46,7 +46,7 @@ import java.util.List;
 import n7.ad2.AppExecutors;
 import n7.ad2.MySharedPreferences;
 import n7.ad2.R;
-import n7.ad2.SETTINGS.SettingActivity;
+import n7.ad2.setting.SettingActivity;
 import n7.ad2.utils.SmoothScrollableLinearLayoutManager;
 import n7.ad2.utilsTwitch.Element;
 import n7.ad2.utilsTwitch.Playlist;

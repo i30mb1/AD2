@@ -40,7 +40,7 @@
             android:screenOrientation="portrait"
             android:label="Open Source Licenses" />
         <activity
-            android:name=".SETTINGS.SettingActivity"
+            android:name=".setting.SettingActivity"
             android:screenOrientation="portrait" />
         <activity
             android:name=".activity.HeroFullActivity"
@@ -57,7 +57,9 @@
             android:name=".activity.GamesPersonalActivity"
             android:parentActivityName=".activity.MainActivity"
             android:screenOrientation="portrait" />
+
         <activity android:name=".activity.LogInActivity" />
+
         <activity android:name=".activity.DotabuffActivity" />
         <activity
             android:name=".activity.Game1Activity"

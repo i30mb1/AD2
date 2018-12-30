@@ -70,7 +70,7 @@ public class NewsFragment extends Fragment {
         recyclerView.setLayoutManager(gridLayoutManager);
         recyclerView.setHasFixedSize(true);
 
-        boolean withImage = MySharedPreferences.getSharedPreferences(getContext()).getBoolean(getString(R.string.setting_news_with_image_key), true);
+        boolean withImage = MySharedPreferences.getSharedPreferences(getContext()).getBoolean(getString(R.string.setting_news_key), true);
 
         final NewsPagedListAdapter newsPagedListAdapter = new NewsPagedListAdapter(getActivity(),withImage);
         recyclerView.setAdapter(newsPagedListAdapter);

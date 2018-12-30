@@ -7,8 +7,6 @@ import android.os.Bundle;
 import android.os.Handler;
 import android.support.v7.app.AlertDialog;
 import android.view.View;
-import android.widget.Button;
-import android.widget.CheckBox;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.ProgressBar;
@@ -74,17 +72,14 @@ public class Game1HardActivity extends BaseActivity implements View.OnClickListe
             builder.setView(R.layout.dialog_info);
             final AlertDialog dialog = builder.show();
             TextView tv_dialog_tip = dialog.findViewById(R.id.tv_dialog_info);
-            if (tv_dialog_tip != null)
-                tv_dialog_tip.setText(R.string.game1_hard_activity_tip);
-            Button b_dialog_tip = dialog.findViewById(R.id.b_dialog_info);
-            if (b_dialog_tip != null)
-                b_dialog_tip.setOnClickListener(new View.OnClickListener() {
-                    @Override
-                    public void onClick(View v) {
-                            MySharedPreferences.getSharedPreferences(Game1HardActivity.this).edit().putBoolean(getString(R.string.game1_hard_activity_tip_key), false).apply();
-                        dialog.dismiss();
-                    }
-                });
+            tv_dialog_tip.setText(R.string.game1_hard_activity_tip);
+            tv_dialog_tip.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View v) {
+                    MySharedPreferences.getSharedPreferences(Game1HardActivity.this).edit().putBoolean(getString(R.string.game1_hard_activity_tip_key), false).apply();
+                    dialog.dismiss();
+                }
+            });
         }
     }
 
@@ -167,8 +162,8 @@ public class Game1HardActivity extends BaseActivity implements View.OnClickListe
         appExecutors.mainThread().execute(new Runnable() {
             @Override
             public void run() {
-                if(right_hero_iv!=null)
-                right_hero_iv.setBackgroundColor(0);
+                if (right_hero_iv != null)
+                    right_hero_iv.setBackgroundColor(0);
                 ll_activity_game1_hard_spell_row2.animate().alpha(0.0f).setDuration(100L).withEndAction(new Runnable() {
                     @Override
                     public void run() {

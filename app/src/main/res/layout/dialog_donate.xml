@@ -5,151 +5,57 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="?colorPrimary"
-    android:gravity="center"
+    android:gravity="center_horizontal"
     android:orientation="vertical">
 
     <TextView
-        android:id="@+id/textView"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="8dp"
-        android:layout_marginTop="8dp"
-        android:layout_marginEnd="8dp"
+        android:layout_margin="4dp"
         android:text="@string/dialog_donate_subscription"
         android:textAllCaps="true"
         android:textColor="?android:textColorSecondary"
         android:textSize="18sp"
-        android:textStyle="bold"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        android:textStyle="bold" />
 
     <TextView
-        android:id="@+id/tv_dialog_donate_is_activated"
+        android:id="@+id/tv_is_activated"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="8dp"
-        android:layout_marginTop="8dp"
-        android:layout_marginEnd="8dp"
-        android:text="@string/all_activated"
+        android:layout_margin="4dp"
         android:textAllCaps="true"
         android:textColor="@android:color/holo_red_light"
         android:textStyle="bold"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView" />
+        tools:text="@string/all_activated" />
 
-    <com.bigkoo.convenientbanner.ConvenientBanner xmlns:app="http://schemas.android.com/apk/res-auto"
-        android:id="@+id/convenientBanner"
+
+    <FrameLayout
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:layout_marginTop="8dp"
-        android:layout_marginBottom="8dp"
-        android:layout_weight="1"
-        app:canLoop="true"
-        app:layout_constraintBottom_toTopOf="@+id/b_dialog_donate_month"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toEndOf="@+id/view7"
-        app:layout_constraintTop_toBottomOf="@+id/tv_dialog_donate_is_activated" />
+        android:layout_height="0dp"
+        android:layout_weight="1">
+
+        <android.support.v4.view.ViewPager
+            android:id="@+id/viewPager"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+
+        <LinearLayout
+            android:id="@+id/indicator"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="bottom"
+            android:layout_marginBottom="8dp"
+            android:gravity="center_horizontal"
+            android:orientation="horizontal"/>
+    </FrameLayout>
 
     <Button
-        android:id="@+id/b_dialog_donate_month"
+        android:id="@+id/b_subscription"
         style="@style/Widget.MaterialComponents.Button"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="8dp"
-        android:layout_marginEnd="8dp"
-        android:layout_marginBottom="8dp"
+        android:layout_margin="4dp"
         android:text="@string/dialog_donate_month"
-        android:textSize="14sp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent" />
-
-    <!--<LinearLayout-->
-    <!--android:layout_width="0dp"-->
-    <!--android:layout_height="wrap_content"-->
-    <!--android:layout_marginStart="8dp"-->
-    <!--android:layout_marginTop="8dp"-->
-    <!--android:layout_marginEnd="8dp"-->
-    <!--android:layout_marginBottom="8dp"-->
-    <!--android:orientation="vertical"-->
-    <!--app:layout_constraintBottom_toTopOf="@+id/b_dialog_donate_month"-->
-    <!--app:layout_constraintEnd_toEndOf="parent"-->
-    <!--app:layout_constraintStart_toStartOf="parent"-->
-    <!--app:layout_constraintTop_toBottomOf="@+id/tv_dialog_donate_is_activated">-->
-
-    <!--<TextView-->
-    <!--android:textColor="?android:textColorSecondary"-->
-    <!--android:layout_width="match_parent"-->
-    <!--android:layout_height="wrap_content"-->
-    <!--android:text="@string/dialog_donate_1"-->
-    <!--android:textSize="12sp" />-->
-
-    <!--<TextView-->
-    <!--android:textColor="?android:textColorSecondary"-->
-    <!--android:layout_width="match_parent"-->
-    <!--android:layout_height="wrap_content"-->
-    <!--android:text="@string/dialog_donate_7"-->
-    <!--android:textSize="12sp" />-->
-
-    <!--<TextView-->
-    <!--android:textColor="?android:textColorSecondary"-->
-    <!--android:layout_width="match_parent"-->
-    <!--android:layout_height="wrap_content"-->
-    <!--android:text="@string/dialog_donate_2"-->
-    <!--android:textSize="12sp" />-->
-
-    <!--<TextView-->
-    <!--android:textColor="?android:textColorSecondary"-->
-    <!--android:layout_width="match_parent"-->
-    <!--android:layout_height="wrap_content"-->
-    <!--android:text="@string/dialog_donate_10"-->
-    <!--android:textSize="12sp" />-->
-
-    <!--<TextView-->
-    <!--android:textColor="?android:textColorSecondary"-->
-    <!--android:layout_width="match_parent"-->
-    <!--android:layout_height="wrap_content"-->
-    <!--android:text="@string/dialog_donate_3"-->
-    <!--android:textSize="12sp" />-->
-
-    <!--<TextView-->
-    <!--android:textColor="?android:textColorSecondary"-->
-    <!--android:layout_width="match_parent"-->
-    <!--android:layout_height="wrap_content"-->
-    <!--android:text="@string/dialog_donate_4"-->
-    <!--android:textSize="12sp" />-->
-
-    <!--<TextView-->
-    <!--android:textColor="?android:textColorSecondary"-->
-    <!--android:layout_width="match_parent"-->
-    <!--android:layout_height="wrap_content"-->
-    <!--android:text="@string/dialog_donate_5"-->
-    <!--android:textSize="12sp" />-->
-
-    <!--<TextView-->
-    <!--android:textColor="?android:textColorSecondary"-->
-    <!--android:layout_width="match_parent"-->
-    <!--android:layout_height="wrap_content"-->
-    <!--android:text="@string/dialog_donate_6"-->
-    <!--android:textSize="12sp" />-->
-
-    <!--<TextView-->
-    <!--android:textColor="?android:textColorSecondary"-->
-    <!--android:layout_width="match_parent"-->
-    <!--android:layout_height="wrap_content"-->
-    <!--android:text="@string/dialog_donate_8"-->
-    <!--android:textSize="12sp" />-->
-
-    <!--<TextView-->
-    <!--android:textColor="?android:textColorSecondary"-->
-    <!--android:layout_width="match_parent"-->
-    <!--android:layout_height="wrap_content"-->
-    <!--android:text="@string/dialog_donate_9"-->
-    <!--android:textSize="12sp" />-->
-
-
-    <!--</LinearLayout>-->
+        android:textSize="14sp" />
 
 </LinearLayout>

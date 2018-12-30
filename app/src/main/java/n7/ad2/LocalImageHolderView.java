@@ -6,6 +6,7 @@ import android.widget.TextView;
 
 import com.bigkoo.convenientbanner.holder.Holder;
 
+
 public class LocalImageHolderView extends Holder<Commercial> {
 
     ImageView imageView;

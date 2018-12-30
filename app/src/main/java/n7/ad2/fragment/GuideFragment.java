@@ -41,7 +41,7 @@ import n7.ad2.AppExecutors;
 import n7.ad2.MySharedPreferences;
 import n7.ad2.R;
 import n7.ad2.activity.HeroFullActivity;
-import n7.ad2.SETTINGS.SettingActivity;
+import n7.ad2.setting.SettingActivity;
 import n7.ad2.db.heroes.Heroes;
 import n7.ad2.utils.Utils;
 import n7.ad2.viewModels.HeroesViewModel;

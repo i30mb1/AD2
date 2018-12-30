@@ -117,9 +117,7 @@ public class MultiStreamsFragment extends Fragment {
             TextView tv_dialog_tip = dialog.findViewById(R.id.tv_dialog_info);
             if (tv_dialog_tip != null)
                 tv_dialog_tip.setText(R.string.multi_streams_fragment_tip);
-            Button b_dialog_tip = dialog.findViewById(R.id.b_dialog_info);
-            if (b_dialog_tip != null)
-                b_dialog_tip.setOnClickListener(new View.OnClickListener() {
+            tv_dialog_tip.setOnClickListener(new View.OnClickListener() {
                     @Override
                     public void onClick(View v) {
                         MySharedPreferences.getSharedPreferences(getContext()).edit().putBoolean(getString(R.string.multi_streams_fragment_tip_key), false).apply();

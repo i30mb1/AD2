@@ -12,20 +12,20 @@
     <string name="setting">Setting</string>
     <string name="setting_category_setting">APP SETTING</string>
     <string name="setting_account_key" translatable="false">setting_account_toggle_key</string>
-    <string name="setting_show_log_key" translatable="false">setting_show_log_key</string>
-    <string name="setting_news_with_image_key" translatable="false">setting_news_with_image_key</string>
+    <string name="setting_log_key" translatable="false">setting_show_log_key</string>
+    <string name="setting_news_key" translatable="false">setting_news_with_image_key</string>
     <string name="setting_about_key" translatable="false">pref_about_key</string>
     <string name="setting_account_title">Display your account</string>
-    <string name="setting_show_log">System information</string>
-    <string name="setting_show_log_summary">Part of main screen</string>
+    <string name="setting_log_title">Random text</string>
+    <string name="setting_log_summary">on main screen</string>
     <string name="setting_account_summary">Show your friends</string>
     <string name="setting_about_title" translatable="false">About Dota 2</string>
     <string name="setting_high_quality_desc_on">On</string>
     <string name="setting_high_quality_desc_off">Off</string>
-    <string name="setting_about_desc" translatable="false">v%1$s</string>
+    <string name="setting_about_summary" translatable="false">v%1$s</string>
     <string name="setting_donate_days_remains" translatable="false">premium %d days remains</string>
     <string name="setting_contact_us">Contact us</string>
-    <string name="setting_contact_us_key" translatable="false">contact_us_key</string>
+    <string name="setting_contact_key" translatable="false">contact_us_key</string>
     <string name="setting_contact_us_summary">Bugs? Errors? Contribution?</string>
     <string name="setting_theme_title">Change theme</string>
     <string name="setting_theme_key" translatable="false">setting_theme_key</string>
@@ -73,10 +73,10 @@
     <string name="fragment_guide_worst_versus">Worst Versus</string>
     <string name="fragment_guide_current_winrate" translatable="false">%s</string>
     <string name="fragment_guide_current_pickrate" translatable="false">%s</string>
-    <string name="setting_donate_key" translatable="false">pref_month_key</string>
+    <string name="setting_subscription_key" translatable="false">pref_month_key</string>
     <string name="compare_win_rate" translatable="false">Win Rate</string>
-    <string name="setting_month_desc">Ready to take the next step?</string>
-    <string name="setting_month_title">Subscription</string>
+    <string name="setting_subscription_summary">Ready to take the next step?</string>
+    <string name="setting_subscription_title">Subscription</string>
     <string name="all_grand_permission">Please Grant Permissions</string>
     <string name="all_enable">ENABLE</string>
     <string name="log_in">Log In</string>
@@ -143,8 +143,8 @@
     <string name="all_not_activated" translatable="false">OFF</string>
     <string name="all_deactivate">DEACTIVATE</string>
     <string name="activity_game2_persons_equal" translatable="false">x 2 =</string>
-    <string name="setting_news_with_image_title">Mini-image for news</string>
-    <string name="setting_news_with_image_summary">Require a lot of resources</string>
+    <string name="setting_news_title">Image for news</string>
+    <string name="setting_news_summary" translatable="false">Wubalubadubdub!</string>
     <string name="commercial_1">FIVE BUILD VARIATIONS</string>
     <string name="commercial_2">NO LIMITS FOR RESPONSES</string>
     <string name="commercial_3">SPEED AND TRANSPARENCY CONTROL FOR TWITCH.TV CHAT</string>

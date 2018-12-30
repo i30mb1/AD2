@@ -76,7 +76,7 @@ import n7.ad2.AppExecutors;
 import n7.ad2.BuildConfig;
 import n7.ad2.MySharedPreferences;
 import n7.ad2.R;
-import n7.ad2.SETTINGS.SettingActivity;
+import n7.ad2.setting.SettingActivity;
 import n7.ad2.adapter.PlainTextAdapter;
 import n7.ad2.db.n7message.N7MessageRoomDatabase;
 import n7.ad2.fragment.GameFragment;
@@ -163,7 +163,6 @@ public class MainActivity extends BaseActivity implements View.OnClickListener {
                 log("internet_connection_lost");
         }
     };
-    private Switch switch_premium;
     private ProgressBar progressBar;
     private ImageView iv_legion;
     private TextView tv_legion;
@@ -217,7 +216,7 @@ public class MainActivity extends BaseActivity implements View.OnClickListener {
     }
 
     private void initSystemInformationRecycler() {
-        showLog = sp.getBoolean(getString(R.string.setting_show_log_key), true);
+        showLog = sp.getBoolean(getString(R.string.setting_log_key), true);
         if (showLog) {
             recyclerView = findViewById(R.id.rv_drawer);
             adapter = new PlainTextAdapter(this);
@@ -241,21 +240,6 @@ public class MainActivity extends BaseActivity implements View.OnClickListener {
     }
 
     private void initN7Message() {
-        switch_premium = findViewById(R.id.switch_premium);
-        switch_premium.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
-            @Override
-            public void onCheckedChanged(CompoundButton compoundButton, boolean b) {
-                if (b) {
-                    sp.edit().putBoolean(MySharedPreferences.PREMIUM, true).apply();
-                    Calendar calendar = Calendar.getInstance();
-                    calendar.add(Calendar.YEAR, 1);
-                    MySharedPreferences.getSharedPreferences(MainActivity.this).edit().putLong(MySharedPreferences.DATE_END_PREMIUM, calendar.getTimeInMillis()).apply();
-                } else {
-                    sp.edit().putBoolean(MySharedPreferences.PREMIUM, false).apply();
-                    MySharedPreferences.getSharedPreferences(MainActivity.this).edit().putLong(MySharedPreferences.DATE_END_PREMIUM, 0).apply();
-                }
-            }
-        });
         final TextView tv_n7message = findViewById(R.id.n7message);
         LiveData<String> data = N7MessageRoomDatabase.getDatabase(this).n7MessageDao().getMessage();
         data.observe(this, new Observer<String>() {
@@ -338,8 +322,6 @@ public class MainActivity extends BaseActivity implements View.OnClickListener {
                 Transition transition = new ChangeBounds().setInterpolator(new AccelerateDecelerateInterpolator()).setDuration(1000);
                 TransitionManager.beginDelayedTransition(constraintLayout, transition);
                 currentSet.applyTo(constraintLayout);
-                if (SHOW_PREMIUM_SWITCH) switch_premium.setVisibility(View.VISIBLE);
-                switch_premium.setChecked(sp.getBoolean(MySharedPreferences.PREMIUM, false));
                 if (currentSet == constraintSetNew) {
                     findViewById(R.id.dl_activity_main).animate().alpha(0.0f).setDuration(1000).start();
                     iv_drawer_setting.animate().alpha(0.0f).setDuration(1000).start();

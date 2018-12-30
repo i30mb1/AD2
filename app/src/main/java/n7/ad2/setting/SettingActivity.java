@@ -1,30 +1,32 @@
-package n7.ad2.SETTINGS;
+package n7.ad2.setting;
 
-import android.arch.lifecycle.ViewModelProviders;
 import android.content.BroadcastReceiver;
 import android.content.Intent;
 import android.content.IntentFilter;
+import android.databinding.DataBindingUtil;
 import android.os.Bundle;
+import android.support.design.widget.TabLayout;
+import android.support.v4.app.Fragment;
+import android.support.v4.view.ViewPager;
 import android.support.v7.app.AlertDialog;
-import android.support.v7.widget.Toolbar;
 import android.view.MenuItem;
 import android.view.View;
 import android.widget.Button;
+import android.widget.LinearLayout;
 import android.widget.TextView;
 
-import com.bigkoo.convenientbanner.ConvenientBanner;
-import com.bigkoo.convenientbanner.holder.CBViewHolderCreator;
-import com.bigkoo.convenientbanner.holder.Holder;
 import com.google.firebase.analytics.FirebaseAnalytics;
 
 import java.util.ArrayList;
 import java.util.Calendar;
+import java.util.LinkedList;
+import java.util.List;
 
 import n7.ad2.Commercial;
-import n7.ad2.LocalImageHolderView;
 import n7.ad2.MySharedPreferences;
 import n7.ad2.R;
 import n7.ad2.activity.BaseActivity;
+import n7.ad2.databinding.ActivitySettingBinding;
 import n7.ad2.purchaseUtils.IabBroadcastReceiver;
 import n7.ad2.purchaseUtils.IabHelper;
 import n7.ad2.purchaseUtils.IabResult;
@@ -35,10 +37,7 @@ import static n7.ad2.MySharedPreferences.PREMIUM;
 import static n7.ad2.activity.MainActivity.OPEN_SUBSCRIPTION;
 
 public class SettingActivity extends BaseActivity implements IabBroadcastReceiver.IabBroadcastListener {
-    //    adb shell pm clear com.android.vending
-//    private static final String ANNUAL_SUBSCRIPTION = "android.test.purchased";
-//    public static final String ANNUAL_SUBSCRIPTION = "annual_subscription";
-//    public static final String MONTHLY_SUBSCRIPTION = "monthly_subscription";
+
     public static final String ONCE_PER_MONTH_SUBSCRIPTION = "once_per_month_subscription";
     public static final String SAW_MY_REQUEST_OF_DONATION = "SAW_MY_REQUEST_OF_DONATION";
 
@@ -56,7 +55,9 @@ public class SettingActivity extends BaseActivity implements IabBroadcastReceive
 
         }
     };
+
     private ArrayList<Commercial> localImages = new ArrayList<>();
+    private ActivitySettingBinding binding;
 
     private void checkInventory() {
         try {
@@ -67,7 +68,7 @@ public class SettingActivity extends BaseActivity implements IabBroadcastReceive
                     if (inv.hasPurchase(ONCE_PER_MONTH_SUBSCRIPTION)) {
                         MySharedPreferences.getSharedPreferences(SettingActivity.this).edit().putBoolean(PREMIUM, true).apply();
                         if (dialog_donate != null) {
-                            TextView textView = dialog_donate.findViewById(R.id.tv_dialog_donate_is_activated);
+                            TextView textView = dialog_donate.findViewById(R.id.tv_is_activated);
                             if (textView != null) {
                                 textView.setTextColor(getResources().getColor(android.R.color.holo_green_light));
                                 textView.setText(R.string.all_activated);
@@ -109,32 +110,32 @@ public class SettingActivity extends BaseActivity implements IabBroadcastReceive
             super.onActivityResult(requestCode, resultCode, data);
     }
 
-    public void initDialogDonate() {
+    public void showDialogSubscription() {
         AlertDialog.Builder builder = new AlertDialog.Builder(this);
         dialog_donate = getLayoutInflater().inflate(R.layout.dialog_donate, null);
         builder.setView(dialog_donate);
         final AlertDialog dialog = builder.create();
 
-        ConvenientBanner convenientBanner = dialog_donate.findViewById(R.id.convenientBanner);
-        convenientBanner.setPages(new CBViewHolderCreator() {
-            @Override
-            public Holder createHolder(View itemView) {
-                return new LocalImageHolderView(itemView);
-            }
+        ViewPager viewPager = dialog_donate.findViewById(R.id.viewPager);
+        LinearLayout linearLayout = dialog_donate.findViewById(R.id.indicator);
+        List<Fragment> fragments = new LinkedList<>();
+        fragments.add(ContentFragment.newInstance(R.drawable.commercial_1));
+        fragments.add(ContentFragment.newInstance(R.drawable.commercial_2));
+        fragments.add(ContentFragment.newInstance(R.drawable.commercial_3));
+        fragments.add(ContentFragment.newInstance(R.drawable.commercial_4));
+        fragments.add(ContentFragment.newInstance(R.drawable.commercial_5));
 
-            @Override
-            public int getLayoutId() {
-                return R.layout.item_list_commercial;
-            }
-        }, localImages)
-                .setPageIndicator(new int[]{R.drawable.ic_page_indicator, R.drawable.ic_page_indicator_focused})
-                .setPageIndicatorAlign(ConvenientBanner.PageIndicatorAlign.CENTER_HORIZONTAL);
+        CustomPageAdapter adapter = new CustomPageAdapter(getSupportFragmentManager(),fragments);
+        viewPager.setAdapter(adapter);
+        MyPageIndicator indicator = new MyPageIndicator(SettingActivity.this, linearLayout, viewPager, R.drawable.indicator_selector);
+        indicator.setPageCount(fragments.size());
+        indicator.show();
 
-        Button b_dialog_donate_month = dialog_donate.findViewById(R.id.b_dialog_donate_month);
+        Button b_dialog_donate_month = dialog_donate.findViewById(R.id.b_subscription);
         if (MySharedPreferences.getSharedPreferences(SettingActivity.this).getBoolean(PREMIUM, false)) {
             b_dialog_donate_month.setText(R.string.all_deactivate);
         }
-        TextView textView = dialog_donate.findViewById(R.id.tv_dialog_donate_is_activated);
+        TextView textView = dialog_donate.findViewById(R.id.tv_is_activated);
         if (MySharedPreferences.getSharedPreferences(SettingActivity.this).getBoolean(PREMIUM, false)) {
             textView.setTextColor(getResources().getColor(android.R.color.holo_green_light));
         } else {
@@ -148,7 +149,7 @@ public class SettingActivity extends BaseActivity implements IabBroadcastReceive
         });
 
         FirebaseAnalytics firebaseAnalytics = FirebaseAnalytics.getInstance(this);
-        firebaseAnalytics.logEvent(SAW_MY_REQUEST_OF_DONATION,null);
+        firebaseAnalytics.logEvent(SAW_MY_REQUEST_OF_DONATION, null);
         dialog.show();
     }
 
@@ -175,19 +176,22 @@ public class SettingActivity extends BaseActivity implements IabBroadcastReceive
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_setting);
 
+        binding = DataBindingUtil.setContentView(this, R.layout.activity_setting);
 
-        initImagesForCommercial();
-        initPurchaseHelper();
+        if (savedInstanceState == null) {
+            getFragmentManager().beginTransaction().replace(R.id.container, new SettingsFragment()).commit();
+        }
+
         setToolbar();
-        getFragmentManager().beginTransaction().replace(R.id.container, new SettingsFragment()).commit();
+
+        initPurchaseHelper();
         checkIfNeedShowSubscription();
     }
 
     private void checkIfNeedShowSubscription() {
         if (getIntent().getBooleanExtra(OPEN_SUBSCRIPTION, false)) {
-            initDialogDonate();
+            showDialogSubscription();
         }
     }
 
@@ -196,11 +200,11 @@ public class SettingActivity extends BaseActivity implements IabBroadcastReceive
         commercial_1.image = R.drawable.commercial_1;
         commercial_1.description = getString(R.string.commercial_1);
         localImages.add(commercial_1);
-       Commercial commercial_2 = new Commercial();
+        Commercial commercial_2 = new Commercial();
         commercial_2.image = R.drawable.commercial_2;
         commercial_2.description = getString(R.string.commercial_2);
         localImages.add(commercial_2);
-       Commercial commercial_3 = new Commercial();
+        Commercial commercial_3 = new Commercial();
         commercial_3.image = R.drawable.commercial_3;
         commercial_3.description = getString(R.string.commercial_3);
         localImages.add(commercial_3);
@@ -220,7 +224,7 @@ public class SettingActivity extends BaseActivity implements IabBroadcastReceive
         commercial_7.image = R.drawable.commercial_7;
         commercial_7.description = getString(R.string.commercial_7);
         localImages.add(commercial_7);
-         Commercial commercial_8 = new Commercial();
+        Commercial commercial_8 = new Commercial();
         commercial_8.image = R.drawable.commercial_8;
         commercial_8.description = getString(R.string.commercial_8);
         localImages.add(commercial_8);
@@ -255,9 +259,8 @@ public class SettingActivity extends BaseActivity implements IabBroadcastReceive
     }
 
     private void setToolbar() {
-        Toolbar toolbar = findViewById(R.id.toolbar);
-        toolbar.setTitle(R.string.setting);
-        setSupportActionBar(toolbar);
+        setSupportActionBar(binding.toolbar);
+        binding.toolbar.setTitle(R.string.setting);
         if (getSupportActionBar() != null) {
             getSupportActionBar().setDisplayShowHomeEnabled(true);//включаем кнопку домой
             getSupportActionBar().setDisplayHomeAsUpEnabled(true);//ставим значок стрелочки на кнопку
@@ -273,6 +276,11 @@ public class SettingActivity extends BaseActivity implements IabBroadcastReceive
                 break;
         }
         return super.onOptionsItemSelected(item);
+    }
+
+    @Override
+    public void onBackPressed() {
+        super.onBackPressed();
     }
 
     @Override

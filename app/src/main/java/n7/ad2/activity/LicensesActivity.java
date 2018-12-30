@@ -2,47 +2,44 @@ package n7.ad2.activity;
 
 import android.animation.ArgbEvaluator;
 import android.animation.ValueAnimator;
+import android.databinding.DataBindingUtil;
 import android.media.MediaPlayer;
 import android.os.Bundle;
 import android.os.Handler;
+import android.preference.PreferenceManager;
 import android.support.design.widget.Snackbar;
 import android.view.View;
-import android.widget.ImageView;
 
 import java.util.Calendar;
 
 import n7.ad2.MySharedPreferences;
 import n7.ad2.R;
-
-import static n7.ad2.MySharedPreferences.PREMIUM;
-import static n7.ad2.MySharedPreferences.SHOW_PREMIUM_SWITCH;
-
+import n7.ad2.databinding.ActivityLicenseBinding;
 
 public class LicensesActivity extends BaseActivity {
 
     private Handler handler;
-    private ImageView iv_activity_open_source_licenses;
+    ActivityLicenseBinding binding;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_open_source_licenses);
-        iv_activity_open_source_licenses = findViewById(R.id.iv_activity_open_source_licenses);
-        iv_activity_open_source_licenses.setOnLongClickListener(new View.OnLongClickListener() {
+        binding = DataBindingUtil.setContentView(this, R.layout.activity_license);
+
+        binding.iv.setOnLongClickListener(new View.OnLongClickListener() {
             @Override
             public boolean onLongClick(View view) {
                 MediaPlayer.create(getApplicationContext(), R.raw.does_this_unit_have_a_soul).start();
-                final Snackbar snackbar = Snackbar.make(iv_activity_open_source_licenses, "?..", Snackbar.LENGTH_INDEFINITE);
+                final Snackbar snackbar = Snackbar.make(binding.getRoot(), "?..", Snackbar.LENGTH_INDEFINITE);
                 snackbar.setAction("Yes, it does", new View.OnClickListener() {
                     @Override
                     public void onClick(View view) {
-                        SHOW_PREMIUM_SWITCH = true;
-//                        MySharedPreferences.getSharedPreferences(LicensesActivity.this).edit().putBoolean(PREMIUM, true).apply();
-//                        Calendar calendar = Calendar.getInstance();
-//                        calendar.add(Calendar.YEAR, 1);
-//                        MySharedPreferences.getSharedPreferences(LicensesActivity.this).edit().putLong(MySharedPreferences.DATE_END_PREMIUM, calendar.getTimeInMillis()).apply();
+                        Calendar calendar = Calendar.getInstance();
+                        calendar.add(Calendar.YEAR, 1);
+                        MySharedPreferences.getSharedPreferences(getApplicationContext()).edit().putLong(MySharedPreferences.DATE_END_PREMIUM, calendar.getTimeInMillis()).apply();
+                        PreferenceManager.getDefaultSharedPreferences(getApplicationContext()).edit().putBoolean(MySharedPreferences.PREMIUM, true).apply();
                         MediaPlayer.create(getApplicationContext(), R.raw.yes_it_does).start();
-                        startBlinkBackground();
+                        startBlinking();
                         snackbar.dismiss();
                     }
                 });
@@ -52,7 +49,7 @@ public class LicensesActivity extends BaseActivity {
         });
     }
 
-    private void startBlinkBackground() {
+    private void startBlinking() {
         handler = new Handler();
         handler.post(new Runnable() {
             @Override
@@ -62,7 +59,7 @@ public class LicensesActivity extends BaseActivity {
                 colorAnimation.addUpdateListener(new ValueAnimator.AnimatorUpdateListener() {
                     @Override
                     public void onAnimationUpdate(ValueAnimator animator) {
-                        findViewById(R.id.root).setBackgroundColor((int) animator.getAnimatedValue());
+                        binding.getRoot().setBackgroundColor((int) animator.getAnimatedValue());
                     }
                 });
                 colorAnimation.start();

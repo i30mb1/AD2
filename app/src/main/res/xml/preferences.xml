@@ -18,31 +18,31 @@
             android:title="@string/setting_account_title" />
         <SwitchPreference
             android:defaultValue="true"
-            android:key="@string/setting_show_log_key"
-            android:summary="@string/setting_show_log_summary"
-            android:title="@string/setting_show_log" />
+            android:key="@string/setting_log_key"
+            android:summary="@string/setting_log_summary"
+            android:title="@string/setting_log_title" />
         <SwitchPreference
             android:defaultValue="true"
-            android:key="@string/setting_news_with_image_key"
-            android:summary="@string/setting_news_with_image_summary"
-            android:title="@string/setting_news_with_image_title" />
+            android:key="@string/setting_news_key"
+            android:summary="@string/setting_news_summary"
+            android:title="@string/setting_news_title" />
     </PreferenceCategory>
     <PreferenceCategory android:title="@string/setting_category_about">
         <Preference
             android:key="@string/setting_about_key"
-            android:summary="@string/setting_about_desc"
+            android:summary="@string/setting_about_summary"
             android:title="@string/setting_about_title" />
         <Preference
-            android:key="@string/setting_donate_key"
-            android:summary="@string/setting_month_desc"
-            android:title="@string/setting_month_title" />
-        <Preference
-            android:key="@string/setting_contact_us_key"
-            android:summary="@string/setting_contact_us_summary"
-            android:title="@string/setting_contact_us" />
+            android:key="@string/setting_subscription_key"
+            android:summary="@string/setting_subscription_summary"
+            android:title="@string/setting_subscription_title" />
         <Preference
             android:key="@string/setting_tell_friend_key"
             android:summary="@string/setting_tell_friend_summary"
             android:title="@string/setting_tell_friend" />
+        <Preference
+            android:key="@string/setting_contact_key"
+            android:summary="@string/setting_contact_us_summary"
+            android:title="@string/setting_contact_us" />
     </PreferenceCategory>
 </PreferenceScreen>

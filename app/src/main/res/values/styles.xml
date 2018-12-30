@@ -21,6 +21,7 @@
         <!--<item name="android:alertDialogTheme">@style/MyAlertDialogStyle</item>-->
         <!--цвет меню текста-->
         <item name="android:actionMenuTextColor">@color/textColorSecondary</item>
+
     </style>
 
     <!--Black тема-->
@@ -67,8 +68,13 @@
         <item name="android:divider">@color/textColorSecondary</item>
         <item name="android:dividerHeight">1dp</item>
         <item name="android:showDividers">middle</item>
+
     </style>
 
+    <style name="DialogTheme">
+        <item name="android:windowEnterAnimation">@anim/slide_from_left</item>
+        <item name="android:windowExitAnimation">@anim/slide_to_right</item>
+    </style>
     <!--AlertDialog-->
     <!--<style name="MyAlertDialogStyle" parent="Theme.AppCompat.Dialog.Alert">-->
     <!--<item name="android:windowTitleStyle">@style/title</item>-->
