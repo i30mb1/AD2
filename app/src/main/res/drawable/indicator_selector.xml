@@ -2,18 +2,20 @@
 <selector xmlns:android="http://schemas.android.com/apk/res/android">
 
     <item android:state_selected="true">
-        <shape android:innerRadius="0dp"
+        <shape
             android:shape="ring"
-            android:thickness="4dp"
+            android:innerRadius="0dp"
+            android:thickness="6dp"
             android:useLevel="false">
             <solid android:color="@color/colorAccent" />
         </shape>
     </item>
 
     <item>
-        <shape android:innerRadius="0dp"
+        <shape
             android:shape="ring"
-            android:thickness="4dp"
+            android:innerRadius="5dp"
+            android:thickness="1dp"
             android:useLevel="false">
             <solid android:color="@android:color/darker_gray" />
         </shape>

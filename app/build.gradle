@@ -108,6 +108,5 @@ dependencies {
     //поддержка jsoup для старых устройств
     implementation 'com.google.android.gms:play-services-auth:16.0.1'
     implementation 'com.google.firebase:firebase-core:16.0.5'
-    // banner с прокруткой
-    implementation 'com.bigkoo:ConvenientBanner:2.1.4'
+
 }

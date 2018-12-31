@@ -6,6 +6,7 @@ import android.support.annotation.NonNull;
 import android.support.annotation.Nullable;
 import android.support.design.widget.Snackbar;
 import android.support.v4.app.Fragment;
+import android.support.v4.view.AsyncLayoutInflater;
 import android.util.TypedValue;
 import android.view.LayoutInflater;
 import android.view.Menu;
@@ -98,8 +99,8 @@ public class HeroFragment extends Fragment {
     public void onCreateOptionsMenu(Menu menu, MenuInflater inflater) {
         super.onCreateOptionsMenu(menu, inflater);
 //        menu.clear();
-        if(isPremium)
-        inflater.inflate(R.menu.menu_activity_items_change_language, menu);
+        if (isPremium)
+            inflater.inflate(R.menu.menu_activity_items_change_language, menu);
     }
 
     public String switchLanguage() {
@@ -143,6 +144,13 @@ public class HeroFragment extends Fragment {
         appExecutors.diskIO().execute(new Runnable() {
             @Override
             public void run() {
+//                AsyncLayoutInflater inflater = new AsyncLayoutInflater(getActivity());
+//                inflater.inflate(R.layout.item_hero_personal_spell, ll_fragment_hero_personal_spells, new AsyncLayoutInflater.OnInflateFinishedListener() {
+//                    @Override
+//                    public void onInflateFinished(@NonNull View view, int i, @Nullable ViewGroup viewGroup) {
+//
+//                    }
+//                });
                 final View item_hero_personal_talent = getLayoutInflater().inflate(R.layout.item_hero_personal_spell, null);
                 final ImageView iv_item_talent = item_hero_personal_talent.findViewById(R.id.iv_item);
                 iv_item_talent.setImageResource(R.drawable.hero_talent);
