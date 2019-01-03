@@ -8,10 +8,10 @@ import org.jsoup.nodes.Element;
 import org.jsoup.select.Elements;
 
 import java.io.IOException;
+import java.util.concurrent.Executors;
 
 import androidx.work.Worker;
-import n7.ad2.AppExecutors;
-import n7.ad2.db.heroes.Heroes;
+import n7.ad2.db.heroes.HeroModel;
 import n7.ad2.db.heroes.HeroesDao;
 import n7.ad2.db.heroes.HeroesRoomDatabase;
 
@@ -25,8 +25,8 @@ public class GuideWorker extends Worker {
     public Result doWork() {
 
         String heroCodeName = getInputData().getString(HERO_CODE_NAME);
-        HeroesDao heroesDao = HeroesRoomDatabase.getDatabase(getApplicationContext(), new AppExecutors()).heroesDao();
-        Heroes heroes = heroesDao.getHeroByCodeNameObject(heroCodeName);
+        HeroesDao heroesDao = HeroesRoomDatabase.getDatabase(getApplicationContext(), Executors.newSingleThreadExecutor()).heroesDao();
+        HeroModel heroes = heroesDao.getHeroByCodeNameObject(heroCodeName);
 
         StringBuilder stringWinRate = new StringBuilder();
         StringBuilder stringPickRate = new StringBuilder();
@@ -108,10 +108,11 @@ public class GuideWorker extends Worker {
                             String itemName = item.child(0).child(0).child(0).attr("title").toLowerCase().trim().replace(" ", "_");
                             if (itemName.equals("gem_of_true_sight")) continue;
                             stringFurtherItems.append(itemName);
-                            if (i != 0) if (!findTime && elementsItemRows.get(i).getElementsByTag("small").size() > 0) {
-                                findTime = true;
-                                stringFurtherItems.append("^").append(elementsItemRows.get(i).getElementsByTag("small").get(0).text());
-                            }
+                            if (i != 0)
+                                if (!findTime && elementsItemRows.get(i).getElementsByTag("small").size() > 0) {
+                                    findTime = true;
+                                    stringFurtherItems.append("^").append(elementsItemRows.get(i).getElementsByTag("small").get(0).text());
+                                }
                         }
                         if (!stringFurtherItems.toString().endsWith("/"))
                             stringFurtherItems.append("/");

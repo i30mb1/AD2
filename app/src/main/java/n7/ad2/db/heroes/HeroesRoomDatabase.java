@@ -1,5 +1,6 @@
 package n7.ad2.db.heroes;
 
+import android.app.Application;
 import android.arch.persistence.db.SupportSQLiteDatabase;
 import android.arch.persistence.room.Database;
 import android.arch.persistence.room.Room;
@@ -11,18 +12,19 @@ import org.json.JSONArray;
 import org.json.JSONException;
 import org.json.JSONObject;
 
-import n7.ad2.AppExecutors;
+import java.util.concurrent.Executor;
+
 import n7.ad2.R;
 import n7.ad2.utils.Utils;
 
-@Database(entities = {Heroes.class}, version = 6)
+@Database(entities = {HeroModel.class}, version = 6)
 public abstract class HeroesRoomDatabase extends RoomDatabase {
 
     public abstract HeroesDao heroesDao();
 
     private static HeroesRoomDatabase INSTANCE;
 
-    public static HeroesRoomDatabase getDatabase(final Context context, final AppExecutors appExecutors) {
+    public static HeroesRoomDatabase getDatabase(final Context context, final Executor diskIO) {
         if (INSTANCE == null) {
             synchronized (HeroesRoomDatabase.class) {
                 if (INSTANCE == null) {
@@ -31,19 +33,21 @@ public abstract class HeroesRoomDatabase extends RoomDatabase {
                             .fallbackToDestructiveMigration()
                             .addCallback(new Callback() {
                                 @Override
+                                // вызывается только при создании новой базы данных
                                 public void onCreate(@NonNull SupportSQLiteDatabase db) {
                                     super.onCreate(db);
-                                    appExecutors.diskIO().execute(new Runnable() {
+                                    diskIO.execute(new Runnable() {
                                         @Override
                                         public void run() {
                                             switch (context.getResources().getString(R.string.language_resource)) {
                                                 default:
+                                                case "ru":
                                                 case "eng":
                                                     try {
                                                         JSONArray jsonHeroes = new JSONArray(new Utils().readJSONFromAsset(context, "heroes.json"));
                                                         for (int i = 0; i < jsonHeroes.length(); i++) {
                                                             JSONObject jsonObject = jsonHeroes.getJSONObject(i);
-                                                            Heroes heroes = new Heroes(jsonObject.getString("name"),jsonObject.getString("nameEng"));
+                                                            HeroModel heroes = new HeroModel(jsonObject.getString("name"),jsonObject.getString("nameEng"));
                                                             if (jsonObject.getString("name").equals("roshan")) {
                                                                 heroes.setSkillBuilds("Spell Block/Bash/Slam+Spell Block/Bash/Slam+Spell Block/Bash/Slam+Spell Block/Bash/Slam+Spell Block/Bash/Slam");
                                                                 heroes.setTime("fresh+fresh+fresh+fresh+fresh");
@@ -55,7 +59,7 @@ public abstract class HeroesRoomDatabase extends RoomDatabase {
                                                                 heroes.setStartingItems("aegis_of_the_immortal+aegis_of_the_immortal+aegis_of_the_immortal+aegis_of_the_immortal+aegis_of_the_immortal");
                                                                 heroes.setFurtherItems("refresher_shard+cheese/refresher_shard+cheese/refresher_shard+cheese/refresher_shard+cheese/refresher_shard+cheese/refresher_shard");
                                                             }
-                                                            getDatabase(context,appExecutors).heroesDao().insert(heroes);
+                                                            getDatabase(context,diskIO).heroesDao().insert(heroes);
                                                         }
                                                     } catch (JSONException e) {
                                                         e.printStackTrace();
@@ -66,7 +70,7 @@ public abstract class HeroesRoomDatabase extends RoomDatabase {
 //                                                        JSONArray jsonHeroes = new JSONArray(new Utils().readJSONFromAsset(context, "heroes.json"));
 //                                                        for (int i = 0; i < jsonHeroes.length(); i++) {
 //                                                            JSONObject jsonObject = jsonHeroes.getJSONObject(i);
-//                                                            Heroes heroes = new Heroes(jsonObject.getString("name"), jsonObject.getString("nameZh"));
+//                                                            HeroModel heroes = new HeroModel(jsonObject.getString("name"), jsonObject.getString("nameZh"));
 //                                                            if (jsonObject.getString("name").equals("roshan")) {
 //                                                                heroes.setSkillBuilds("Spell Block/Bash/Slam/Strength of the Immortal+Spell Block/Bash/Slam/Strength of the Immortal+Spell Block/Bash/Slam/Strength of the Immortal+Spell Block/Bash/Slam/Strength of the Immortal+Spell Block/Bash/Slam/Strength of the Immortal");
 //                                                                heroes.setTime("fresh+fresh+fresh+fresh+fresh");

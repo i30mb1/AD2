@@ -219,7 +219,7 @@ public class MainActivity extends BaseActivity implements View.OnClickListener {
         showLog = sp.getBoolean(getString(R.string.setting_log_key), true);
         if (showLog) {
             recyclerView = findViewById(R.id.rv_drawer);
-            adapter = new PlainTextAdapter(this);
+            adapter = new PlainTextAdapter();
             recyclerView.setAdapter(adapter);
             recyclerView.setLayoutManager(new UnscrollableLinearLayoutManager(this, LinearLayoutManager.VERTICAL, false));
         }

@@ -708,7 +708,7 @@ public class IabHelper {
 
         if (!itemInfo.mItemType.equals(ITEM_TYPE_INAPP)) {
             throw new IabException(IABHELPER_INVALID_CONSUMPTION,
-                    "Items of type '" + itemInfo.mItemType + "' can't be consumed.");
+                    "ItemModel of type '" + itemInfo.mItemType + "' can't be consumed.");
         }
 
         try {

@@ -8,7 +8,7 @@ import android.support.annotation.NonNull;
 
 import java.util.List;
 
-import n7.ad2.db.items.Items;
+import n7.ad2.db.items.ItemModel;
 import n7.ad2.repositories.ItemsRepository;
 
 public class ItemsViewModel extends AndroidViewModel {
@@ -20,11 +20,11 @@ public class ItemsViewModel extends AndroidViewModel {
         itemsRepository = new ItemsRepository(application);
     }
 
-    public LiveData<List<Items>> getItems() {
-        return itemsRepository.getItems();
-    }
+//    public LiveData<List<ItemModel>> getItems() {
+//        return itemsRepository.getItems();
+//    }
 
-    public LiveData<PagedList<Items>> getPagedListFilter(String s) {
+    public LiveData<PagedList<ItemModel>> getPagedListFilter(String s) {
         return itemsRepository.getPagedListItemsFilter(s);
     }
 

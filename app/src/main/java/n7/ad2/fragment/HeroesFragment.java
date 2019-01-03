@@ -20,14 +20,14 @@ import android.view.ViewGroup;
 import n7.ad2.MySharedPreferences;
 import n7.ad2.R;
 import n7.ad2.adapter.HeroesPagedListAdapter;
-import n7.ad2.db.heroes.Heroes;
-import n7.ad2.viewModels.HeroesViewModel;
+import n7.ad2.db.heroes.HeroModel;
+import n7.ad2.splash.SplashActivityViewModel;
 
 
 public class HeroesFragment extends Fragment implements SearchView.OnQueryTextListener {
 
     private View view;
-    private HeroesViewModel heroesViewModel;
+    private SplashActivityViewModel heroesViewModel;
     private HeroesPagedListAdapter heroesPagedListAdapter;
 
     public HeroesFragment() {
@@ -48,7 +48,7 @@ public class HeroesFragment extends Fragment implements SearchView.OnQueryTextLi
 
         setRetainInstance(true);//фрагмент не уничтожается а передаётся новому активити (пропускает методы onCreate&onDestroy)
         setHasOptionsMenu(true);//вызов метода onCreateOptionsMenu в фрагменте
-        heroesViewModel = ViewModelProviders.of(this).get(HeroesViewModel.class);
+        heroesViewModel = ViewModelProviders.of(this).get(SplashActivityViewModel.class);
 
         initPagedListAdapter();
         return view;
@@ -60,12 +60,12 @@ public class HeroesFragment extends Fragment implements SearchView.OnQueryTextLi
         recyclerView.setLayoutManager(new GridLayoutManager(view.getContext(), 3));
         heroesPagedListAdapter = new HeroesPagedListAdapter();//это RecyclerView.Adapter, заточенный под чтение данных из PagedList.
         recyclerView.setAdapter(heroesPagedListAdapter);
-        heroesViewModel.getPagedListHeroesFilter("").observe(this, new Observer<PagedList<Heroes>>() {
-            @Override
-            public void onChanged(@Nullable PagedList<Heroes> heroes) {
-                heroesPagedListAdapter.submitList(heroes);
-            }
-        });
+//        heroesViewModel.getPagedListHeroesFilter("").observe(this, new Observer<PagedList<HeroModel>>() {
+//            @Override
+//            public void onChanged(@Nullable PagedList<HeroModel> heroes) {
+//                heroesPagedListAdapter.submitList(heroes);
+//            }
+//        });
     }
 
     @Override
@@ -75,12 +75,12 @@ public class HeroesFragment extends Fragment implements SearchView.OnQueryTextLi
 
     @Override
     public boolean onQueryTextChange(String s) {
-        heroesViewModel.getPagedListHeroesFilter(s.trim()).observe(this, new Observer<PagedList<Heroes>>() {
-            @Override
-            public void onChanged(@Nullable PagedList<Heroes> heroes) {
-                heroesPagedListAdapter.submitList(heroes);
-            }
-        });
+//        heroesViewModel.getPagedListHeroesFilter(s.trim()).observe(this, new Observer<PagedList<HeroModel>>() {
+//            @Override
+//            public void onChanged(@Nullable PagedList<HeroModel> heroes) {
+//                heroesPagedListAdapter.submitList(heroes);
+//            }
+//        });
         return false;
     }
 }

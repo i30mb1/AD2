@@ -9,6 +9,7 @@
     default = значение выбранное по умолчанию
     <PreferenceCategory android:title="@string/setting_category_setting">
         <Preference
+            android:defaultValue="@string/setting_theme_default"
             android:key="@string/setting_theme_key"
             android:title="@string/setting_theme_title" />
         <SwitchPreference
@@ -42,7 +43,7 @@
             android:title="@string/setting_tell_friend" />
         <Preference
             android:key="@string/setting_contact_key"
-            android:summary="@string/setting_contact_us_summary"
-            android:title="@string/setting_contact_us" />
+            android:summary="@string/setting_contact_summary"
+            android:title="@string/setting_contact_title" />
     </PreferenceCategory>
 </PreferenceScreen>

@@ -18,21 +18,21 @@ import com.squareup.picasso.Picasso;
 
 import n7.ad2.R;
 import n7.ad2.activity.ItemFullActivity;
-import n7.ad2.db.items.Items;
+import n7.ad2.db.items.ItemModel;
 
 import static n7.ad2.activity.ItemFullActivity.ITEM_FOLDER;
 import static n7.ad2.activity.ItemFullActivity.ITEM_NAME;
 
-public class ItemsPagedListAdapter extends PagedListAdapter<Items, ItemsPagedListAdapter.ViewHolder> {
+public class ItemsPagedListAdapter extends PagedListAdapter<ItemModel, ItemsPagedListAdapter.ViewHolder> {
 
-    private static final DiffUtil.ItemCallback<Items> DIFF_CALLBACK = new DiffUtil.ItemCallback<Items>() {
+    private static final DiffUtil.ItemCallback<ItemModel> DIFF_CALLBACK = new DiffUtil.ItemCallback<ItemModel>() {
         @Override
-        public boolean areItemsTheSame(@NonNull Items items, @NonNull Items t1) {
+        public boolean areItemsTheSame(@NonNull ItemModel items, @NonNull ItemModel t1) {
             return items.getId() == t1.getId();
         }
 
         @Override
-        public boolean areContentsTheSame(@NonNull Items items, @NonNull Items t1) {
+        public boolean areContentsTheSame(@NonNull ItemModel items, @NonNull ItemModel t1) {
             return items.getCodeName().equals(t1.getCodeName());
         }
     };
@@ -50,7 +50,7 @@ public class ItemsPagedListAdapter extends PagedListAdapter<Items, ItemsPagedLis
 
     @Override
     public void onBindViewHolder(@NonNull ViewHolder viewHolder, int i) {
-        Items item = getItem(i);
+        ItemModel item = getItem(i);
         if (item != null) {
             viewHolder.bindTo(item);
         } else {
@@ -70,7 +70,7 @@ public class ItemsPagedListAdapter extends PagedListAdapter<Items, ItemsPagedLis
             cardView = itemView.findViewById(R.id.cv_item_list_item);
         }
 
-        private void bindTo(final Items items) {
+        private void bindTo(final ItemModel items) {
             textView.setText(items.getName().replace("%27", "'"));
             Picasso.get()
                     .load("file:///android_asset/items/" + items.getCodeName() + "/full.webp")

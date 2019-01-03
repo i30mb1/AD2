@@ -20,7 +20,7 @@ import android.view.ViewGroup;
 import n7.ad2.MySharedPreferences;
 import n7.ad2.R;
 import n7.ad2.adapter.ItemsPagedListAdapter;
-import n7.ad2.db.items.Items;
+import n7.ad2.db.items.ItemModel;
 import n7.ad2.viewModels.ItemsViewModel;
 
 public class ItemsFragment extends Fragment implements SearchView.OnQueryTextListener {
@@ -60,9 +60,9 @@ public class ItemsFragment extends Fragment implements SearchView.OnQueryTextLis
         recyclerView.setLayoutManager(new GridLayoutManager(view.getContext(), 4));
         itemsPagedListAdapter = new ItemsPagedListAdapter();
         recyclerView.setAdapter(itemsPagedListAdapter);
-        itemsViewModel.getPagedListFilter("").observe(this, new Observer<PagedList<Items>>() {
+        itemsViewModel.getPagedListFilter("").observe(this, new Observer<PagedList<ItemModel>>() {
             @Override
-            public void onChanged(@Nullable PagedList<Items> items) {
+            public void onChanged(@Nullable PagedList<ItemModel> items) {
                 itemsPagedListAdapter.submitList(items);
             }
         });
@@ -75,9 +75,9 @@ public class ItemsFragment extends Fragment implements SearchView.OnQueryTextLis
 
     @Override
     public boolean onQueryTextChange(String s) {
-        itemsViewModel.getPagedListFilter(s.trim()).observe(this, new Observer<PagedList<Items>>() {
+        itemsViewModel.getPagedListFilter(s.trim()).observe(this, new Observer<PagedList<ItemModel>>() {
             @Override
-            public void onChanged(@Nullable PagedList<Items> items) {
+            public void onChanged(@Nullable PagedList<ItemModel> items) {
                 itemsPagedListAdapter.submitList(items);
             }
         });

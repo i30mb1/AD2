@@ -9,8 +9,6 @@ import android.arch.persistence.room.Query;
 
 import java.util.List;
 
-import n7.ad2.db.heroes.Heroes;
-
 @Dao
 public interface SteamNewsDao {
 

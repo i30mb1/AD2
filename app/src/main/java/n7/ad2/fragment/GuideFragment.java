@@ -42,9 +42,9 @@ import n7.ad2.MySharedPreferences;
 import n7.ad2.R;
 import n7.ad2.activity.HeroFullActivity;
 import n7.ad2.setting.SettingActivity;
-import n7.ad2.db.heroes.Heroes;
+import n7.ad2.db.heroes.HeroModel;
 import n7.ad2.utils.Utils;
-import n7.ad2.viewModels.HeroesViewModel;
+import n7.ad2.splash.SplashActivityViewModel;
 import n7.ad2.worker.GuideWorker;
 
 import static n7.ad2.MySharedPreferences.PREMIUM;
@@ -69,7 +69,7 @@ public class GuideFragment extends Fragment {
     private int currentPage = 0;
     private int currentMenu = 1;
     private MenuItem previousMenu;
-    private Heroes hero;
+    private HeroModel hero;
     private boolean isPremium = false;
     private HashMap<String, String> hashMapSpells = new HashMap<>();
     private JSONObject jsonHeroDescription;
@@ -210,18 +210,18 @@ public class GuideFragment extends Fragment {
         startGuideWork();
         layoutInflater = getLayoutInflater();
 
-        HeroesViewModel heroesViewModel = ViewModelProviders.of(this).get(HeroesViewModel.class);
-        heroesViewModel.getHero(heroFolder).observe(this, new Observer<Heroes>() {
-            @Override
-            public void onChanged(@Nullable Heroes heroes) {
-                if (heroes != null) {
-                    hero = heroes;
-                    addBestVersusHeroes(hero.getBestVersus());
-                    addWorstVersusHeroes(hero.getWorstVersus());
-                    loadPaged();
-                }
-            }
-        });
+        SplashActivityViewModel heroesViewModel = ViewModelProviders.of(this).get(SplashActivityViewModel.class);
+//        heroesViewModel.getHero(heroFolder).observe(this, new Observer<HeroModel>() {
+//            @Override
+//            public void onChanged(@Nullable HeroModel heroes) {
+//                if (heroes != null) {
+//                    hero = heroes;
+//                    addBestVersusHeroes(hero.getBestVersus());
+//                    addWorstVersusHeroes(hero.getWorstVersus());
+//                    loadPaged();
+//                }
+//            }
+//        });
 
         return view;
     }

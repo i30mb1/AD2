@@ -5,7 +5,7 @@ import android.arch.persistence.room.PrimaryKey;
 import android.support.annotation.NonNull;
 
 @Entity
-public class Heroes {
+public class HeroModel {
 
     @PrimaryKey(autoGenerate = true)
     private int id;
@@ -24,7 +24,7 @@ public class Heroes {
     private String furtherItems = "-+-+-+-+-";
     private String skillBuilds = "-+-+-+-+-";
 
-    public Heroes(@NonNull String codeName, @NonNull String name) {
+    public HeroModel(@NonNull String codeName, @NonNull String name) {
         this.codeName = codeName;
         this.name = name;
     }

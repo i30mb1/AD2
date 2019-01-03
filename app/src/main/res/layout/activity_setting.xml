@@ -7,8 +7,9 @@
 
     </data>
 
-    <android.support.design.widget.CoordinatorLayout
+    <android.support.v7.widget.LinearLayoutCompat
         android:layout_width="match_parent"
+        android:orientation="vertical"
         android:layout_height="match_parent"
         android:background="?colorPrimary">
 
@@ -33,5 +34,5 @@
             android:visibility="visible"
             app:layout_behavior="@string/appbar_scrolling_view_behavior" />
 
-    </android.support.design.widget.CoordinatorLayout>
+    </android.support.v7.widget.LinearLayoutCompat>
 </layout>

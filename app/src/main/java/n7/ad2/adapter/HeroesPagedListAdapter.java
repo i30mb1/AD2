@@ -18,21 +18,21 @@ import com.squareup.picasso.Picasso;
 
 import n7.ad2.R;
 import n7.ad2.activity.HeroFullActivity;
-import n7.ad2.db.heroes.Heroes;
+import n7.ad2.db.heroes.HeroModel;
 
 import static n7.ad2.activity.HeroFullActivity.HERO_FOLDER;
 import static n7.ad2.activity.HeroFullActivity.HERO_NAME;
 
-public class HeroesPagedListAdapter extends PagedListAdapter<Heroes, HeroesPagedListAdapter.ViewHolder> {
+public class HeroesPagedListAdapter extends PagedListAdapter<HeroModel, HeroesPagedListAdapter.ViewHolder> {
 
-    private static final DiffUtil.ItemCallback<Heroes> DIFF_CALLBACK = new DiffUtil.ItemCallback<Heroes>() {
+    private static final DiffUtil.ItemCallback<HeroModel> DIFF_CALLBACK = new DiffUtil.ItemCallback<HeroModel>() {
         @Override
-        public boolean areItemsTheSame(@NonNull Heroes oldItem, @NonNull Heroes newItem) {
+        public boolean areItemsTheSame(@NonNull HeroModel oldItem, @NonNull HeroModel newItem) {
             return oldItem.getId() == newItem.getId();
         }
 
         @Override
-        public boolean areContentsTheSame(@NonNull Heroes oldItem, @NonNull Heroes newItem) {
+        public boolean areContentsTheSame(@NonNull HeroModel oldItem, @NonNull HeroModel newItem) {
             return oldItem.getCodeName().equals(newItem.getCodeName());
         }
     };
@@ -50,7 +50,7 @@ public class HeroesPagedListAdapter extends PagedListAdapter<Heroes, HeroesPaged
 
     @Override
     public void onBindViewHolder(@NonNull ViewHolder holder, int position) {
-        Heroes hero = getItem(position);
+        HeroModel hero = getItem(position);
         if (hero != null)
             holder.bindTo(hero);
         else
@@ -70,7 +70,7 @@ public class HeroesPagedListAdapter extends PagedListAdapter<Heroes, HeroesPaged
             cardView = itemView.findViewById(R.id.cv_item_list_hero);
         }
 
-        private void bindTo(final Heroes hero) {
+        private void bindTo(final HeroModel hero) {
             textView.setText(hero.getName());
             Picasso.get()
                     .load("file:///android_asset/heroes/" + hero.getCodeName() + "/full.webp")

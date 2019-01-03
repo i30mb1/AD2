@@ -20,7 +20,7 @@ public class CustomPageAdapter extends PagerAdapter {
     private List<Integer> images;
     private List<String> descriptions;
 
-    public CustomPageAdapter(Context context, List<Integer> images, List<String> descriptions) {
+    CustomPageAdapter(Context context, List<Integer> images, List<String> descriptions) {
         this.context = context;
         this.images = images;
         this.descriptions = descriptions;
@@ -36,6 +36,15 @@ public class CustomPageAdapter extends PagerAdapter {
         return view == object;
     }
 
+    @Override
+    public void destroyItem(@NonNull ViewGroup container, int position, @NonNull Object object) {
+        ViewPager viewPager = (ViewPager) container;
+        View view = (View) object;
+        viewPager.removeView(view);
+    }
+
+
+    @SuppressWarnings("ConstantConditions")
     @NonNull
     @Override
     public Object instantiateItem(@NonNull ViewGroup container, int position) {
@@ -53,12 +62,4 @@ public class CustomPageAdapter extends PagerAdapter {
 
         return view;
     }
-
-    @Override
-    public void destroyItem(@NonNull ViewGroup container, int position, @NonNull Object object) {
-        ViewPager viewPager = (ViewPager) container;
-        View view = (View) object;
-        viewPager.removeView(view);
-    }
-
 }

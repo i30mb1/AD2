@@ -11,16 +11,17 @@ import org.json.JSONArray;
 import org.json.JSONException;
 import org.json.JSONObject;
 
-import n7.ad2.AppExecutors;
+import java.util.concurrent.Executor;
+
 import n7.ad2.R;
 import n7.ad2.utils.Utils;
 
-@Database(entities = Items.class, version = 2)
+@Database(entities = ItemModel.class, version = 2)
 public abstract class ItemsRoomDatabase extends RoomDatabase {
 
     private static ItemsRoomDatabase INSTANCE;
 
-    public static ItemsRoomDatabase getDatabase(final Context context, final AppExecutors appExecutors) {
+    public static ItemsRoomDatabase getDatabase(final Context context, final Executor diskIO) {
         if (INSTANCE == null) {
             synchronized (ItemsRoomDatabase.class) {
                 if (INSTANCE == null) {
@@ -31,7 +32,7 @@ public abstract class ItemsRoomDatabase extends RoomDatabase {
                                 @Override
                                 public void onCreate(@NonNull SupportSQLiteDatabase db) {
                                     super.onCreate(db);
-                                    appExecutors.diskIO().execute(new Runnable() {
+                                    diskIO.execute(new Runnable() {
                                         @Override
                                         public void run() {
                                             switch (context.getResources().getString(R.string.language_resource)) {
@@ -41,8 +42,8 @@ public abstract class ItemsRoomDatabase extends RoomDatabase {
                                                         JSONArray jsonHeroes = new JSONArray(new Utils().readJSONFromAsset(context, "items.json"));
                                                         for (int i = 0; i < jsonHeroes.length(); i++) {
                                                             JSONObject jsonObject = jsonHeroes.getJSONObject(i);
-                                                            Items item = new Items(jsonObject.getString("name"), jsonObject.getString("nameEng"));
-                                                            getDatabase(context, appExecutors).itemsDao().insert(item);
+                                                            ItemModel item = new ItemModel(jsonObject.getString("name"), jsonObject.getString("nameEng"));
+                                                            getDatabase(context, diskIO).itemsDao().insert(item);
                                                         }
                                                     } catch (JSONException e) {
                                                         e.printStackTrace();

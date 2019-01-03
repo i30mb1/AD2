@@ -5,7 +5,7 @@ import android.arch.persistence.room.PrimaryKey;
 import android.support.annotation.NonNull;
 
 @Entity
-public class Items {
+public class ItemModel {
 
     @PrimaryKey(autoGenerate = true)
     private int id;
@@ -14,7 +14,7 @@ public class Items {
     @NonNull
     private String name;
 
-    public Items(@NonNull String codeName, @NonNull String name) {
+    public ItemModel(@NonNull String codeName, @NonNull String name) {
         this.codeName = codeName;
         this.name = name;
     }

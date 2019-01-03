@@ -16,7 +16,7 @@
     <string name="setting_news_key" translatable="false">setting_news_with_image_key</string>
     <string name="setting_about_key" translatable="false">pref_about_key</string>
     <string name="setting_account_title">Display your account</string>
-    <string name="setting_log_title">Random text</string>
+    <string name="setting_log_title">Fancy random text</string>
     <string name="setting_log_summary">on main screen</string>
     <string name="setting_account_summary">Show your friends</string>
     <string name="setting_about_title" translatable="false">About Dota 2</string>
@@ -24,11 +24,12 @@
     <string name="setting_high_quality_desc_off">Off</string>
     <string name="setting_about_summary" translatable="false">v%1$s</string>
     <string name="setting_donate_days_remains" translatable="false">premium %d days remains</string>
-    <string name="setting_contact_us">Contact us</string>
+    <string name="setting_contact_title">Contact us</string>
     <string name="setting_contact_key" translatable="false">contact_us_key</string>
-    <string name="setting_contact_us_summary">Bugs? Errors? Contribution?</string>
+    <string name="setting_contact_summary">Bugs? Errors? Contribution?</string>
     <string name="setting_theme_title">Change theme</string>
     <string name="setting_theme_key" translatable="false">setting_theme_key</string>
+    <string name="setting_theme_default" translatable="false">GRAY</string>
     <string name="setting_category_about">ABOUT APP</string>
     <string name="setting_tell_friend">Tell a friend</string>
     <string name="setting_tell_friend_summary">do you have anyone?</string>
@@ -139,8 +140,8 @@
     <string name="dialog_donate_4">- Switcher for 3 languages Russian, English and China</string>
     <string name="dialog_donate_8">- Quick opportunity to contact with developers via E-mail</string>
     <string name="dialog_donate_9">- Possibility to add your Twitch.tv account on first position (only for 6 month subscribers)</string>
-    <string name="all_activated" translatable="false">ON</string>
-    <string name="all_not_activated" translatable="false">OFF</string>
+    <string name="all_on" translatable="false">ON</string>
+    <string name="all_off" translatable="false">OFF</string>
     <string name="all_deactivate">DEACTIVATE</string>
     <string name="activity_game2_persons_equal" translatable="false">x 2 =</string>
     <string name="setting_news_title">Image for news</string>
