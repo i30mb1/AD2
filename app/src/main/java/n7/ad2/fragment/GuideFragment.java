@@ -48,9 +48,7 @@ import n7.ad2.splash.SplashActivityViewModel;
 import n7.ad2.worker.GuideWorker;
 
 import static n7.ad2.MySharedPreferences.PREMIUM;
-import static n7.ad2.activity.HeroFullActivity.HERO_FOLDER;
 import static n7.ad2.activity.HeroFullActivity.HERO_NAME;
-import static n7.ad2.worker.GuideWorker.HERO_CODE_NAME;
 
 public class GuideFragment extends Fragment {
 
@@ -305,8 +303,8 @@ public class GuideFragment extends Fragment {
                 int countSpell = 1;
                 for (final String spell : spells) {
                     final View item_list_hero = layoutInflater.inflate(R.layout.item_list_guide_hero, null);
-                    final ImageView iv_item_image = item_list_hero.findViewById(R.id.iv_item_image);
-                    final TextView tv_item_name = item_list_hero.findViewById(R.id.tv_item_name);
+                    final ImageView iv_item_image = item_list_hero.findViewById(R.id.iv);
+                    final TextView tv_item_name = item_list_hero.findViewById(R.id.tv);
                     tv_item_name.setGravity(Gravity.END);
                     if (countSpell == 17) countSpell = 18;
                     if (countSpell == 19) countSpell = 20;
@@ -345,8 +343,8 @@ public class GuideFragment extends Fragment {
                 int itemCount = 0;
                 for (final String item : items) {
                     final View item_list_hero = layoutInflater.inflate(R.layout.item_list_guide_hero, null);
-                    final ImageView iv_item_image = item_list_hero.findViewById(R.id.iv_item_image);
-                    final TextView tv_item_name = item_list_hero.findViewById(R.id.tv_item_name);
+                    final ImageView iv_item_image = item_list_hero.findViewById(R.id.iv);
+                    final TextView tv_item_name = item_list_hero.findViewById(R.id.tv);
                     tv_item_name.setVisibility(View.GONE);
                     if ((itemCount % maxItemsInRow) == 0) {
                         appExecutors.mainThread().execute(new Runnable() {
@@ -407,8 +405,8 @@ public class GuideFragment extends Fragment {
                 int itemCount = 0;
                 for (final String item : items) {
                     final View item_list_hero = layoutInflater.inflate(R.layout.item_list_guide_hero, null);
-                    final ImageView iv_item_image = item_list_hero.findViewById(R.id.iv_item_image);
-                    final TextView tv_item_name = item_list_hero.findViewById(R.id.tv_item_name);
+                    final ImageView iv_item_image = item_list_hero.findViewById(R.id.iv);
+                    final TextView tv_item_name = item_list_hero.findViewById(R.id.tv);
                     if (item.contains("^")) {
                         tv_item_name.setText(item.split("\\^")[1].trim());
                     } else {
@@ -459,10 +457,10 @@ public class GuideFragment extends Fragment {
                 String[] bestVersus = bestVersusHeroes.split("/");
                 for (final String hero : bestVersus) {
                     final View item_list_hero = layoutInflater.inflate(R.layout.item_list_hero, null);
-                    TextView tv_item_name = item_list_hero.findViewById(R.id.tv_item_name);
+                    TextView tv_item_name = item_list_hero.findViewById(R.id.tv);
                     tv_item_name.setText(hero.split("\\^")[1]);
                     tv_item_name.setTextColor(getResources().getColor(android.R.color.holo_green_light));
-                    final ImageView iv_item_image = item_list_hero.findViewById(R.id.iv_item_image);
+                    final ImageView iv_item_image = item_list_hero.findViewById(R.id.iv);
                     if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.LOLLIPOP) {
                         iv_item_image.setTransitionName("");
                     }
@@ -472,7 +470,7 @@ public class GuideFragment extends Fragment {
                         public void onClick(View v) {
                             Intent intent = new Intent(getContext(), HeroFullActivity.class);
                             intent.putExtra(HERO_NAME, hero.split("\\^")[0]);
-                            intent.putExtra(HERO_FOLDER, hero.split("\\^")[0]);
+                            intent.putExtra(HeroFullActivity.HERO_CODE_NAME, hero.split("\\^")[0]);
                             startActivity(intent);
                             getActivity().finish();
                         }
@@ -500,10 +498,10 @@ public class GuideFragment extends Fragment {
                     String[] bestVersus = worstVersusHeroes.split("/");
                     for (final String hero : bestVersus) {
                         final View item_list_hero = layoutInflater.inflate(R.layout.item_list_hero, null);
-                        TextView tv_item_name = item_list_hero.findViewById(R.id.tv_item_name);
+                        TextView tv_item_name = item_list_hero.findViewById(R.id.tv);
                         tv_item_name.setText(hero.split("\\^")[1]);
                         tv_item_name.setTextColor(getResources().getColor(android.R.color.holo_red_light));
-                        final ImageView iv_item_image = item_list_hero.findViewById(R.id.iv_item_image);
+                        final ImageView iv_item_image = item_list_hero.findViewById(R.id.iv);
                         if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.LOLLIPOP) {
                             iv_item_image.setTransitionName("");
                         }
@@ -513,7 +511,7 @@ public class GuideFragment extends Fragment {
                             public void onClick(View v) {
                                 Intent intent = new Intent(getContext(), HeroFullActivity.class);
                                 intent.putExtra(HERO_NAME, hero.split("\\^")[0]);
-                                intent.putExtra(HERO_FOLDER, hero.split("\\^")[0]);
+                                intent.putExtra(HeroFullActivity.HERO_CODE_NAME, hero.split("\\^")[0]);
                                 startActivity(intent);
                             }
                         });

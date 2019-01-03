@@ -1,51 +1,58 @@
 <?xml version="1.0" encoding="utf-8"?>
-<android.support.v7.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    xmlns:tools="http://schemas.android.com/tools"
-    android:id="@+id/cv_item_list_hero"
-    android:layout_width="match_parent"
-    android:layout_height="wrap_content"
-    android:clickable="true"
-    android:focusable="true"
-    android:foreground="?android:attr/selectableItemBackground"
-    app:cardCornerRadius="0dp"
-    app:cardElevation="2dp"
-    app:cardUseCompatPadding="true">
+    xmlns:tools="http://schemas.android.com/tools">
 
-    <android.support.constraint.ConstraintLayout
-        android:layout_width="match_parent"
-        android:layout_height="match_parent">
+    <data>
 
-        <ImageView
-            android:id="@+id/iv_item_image"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:adjustViewBounds="true"
-            android:background="?colorAccent"
-            android:paddingStart="2dp"
-            android:scaleType="centerCrop"
-            android:transitionName="iv"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent"
-            tools:src="@sample/images" />
+        <variable
+            name="hero"
+            type="n7.ad2.db.heroes.HeroModel" />
 
-        <TextView
-            android:id="@+id/tv_item_name"
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            android:layout_marginStart="2dp"
-            android:background="@drawable/gradient"
-            android:paddingStart="2dp"
-            android:textSize="10sp"
-            android:textStyle="bold"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.0"
-            app:layout_constraintStart_toStartOf="parent"
-            tools:text="@sample/heroes.json/data/name" />
+    </data>
+    <!--android:clickable="true"-->
+    <!--android:focusable="true"-->
+    <android.support.v7.widget.CardView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:foreground="?android:attr/selectableItemBackground"
+        app:cardCornerRadius="0dp"
+        app:cardElevation="2dp"
+        app:cardUseCompatPadding="true">
 
-    </android.support.constraint.ConstraintLayout>
+        <FrameLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
 
-</android.support.v7.widget.CardView>
+            <ImageView
+                android:id="@+id/iv"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:adjustViewBounds="true"
+                android:background="?colorAccent"
+                android:paddingStart="2dp"
+                android:paddingEnd="0dp"
+                android:scaleType="centerCrop"
+                android:transitionName="iv"
+                android:onClick="@{(view)->hero.startHeroFull(view,hero)}"
+                app:url="@{hero.codeName}"
+                tools:src="@drawable/hero_placeholder"
+                tools:ignore="UnusedAttribute"
+                android:contentDescription="@string/setting_tell_friend" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="2dp"
+                android:background="@drawable/gradient"
+                android:paddingStart="2dp"
+                android:paddingEnd="0dp"
+                android:textSize="12sp"
+                android:textStyle="bold"
+                android:text="@{hero.name}"
+                tools:text="@sample/heroes.json/data/name" />
+
+        </FrameLayout>
+
+    </android.support.v7.widget.CardView>
+</layout>

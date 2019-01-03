@@ -15,7 +15,7 @@
         android:layout_height="wrap_content">
 
         <TextView
-            android:id="@+id/tv_item_name"
+            android:id="@+id/tv"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:background="?colorPrimaryDark"
@@ -43,7 +43,7 @@
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toEndOf="@+id/view8"
-            app:layout_constraintTop_toBottomOf="@+id/tv_item_name"
+            app:layout_constraintTop_toBottomOf="@+id/tv"
             tools:text="Выпускает конус отравляющей магии, поражающей нескольких врагов. Жертвы получают периодический урон и замедляются, но если их атаковать, время действия эффекта обновится" />
 
         <View

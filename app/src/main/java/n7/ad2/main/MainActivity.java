@@ -5,6 +5,7 @@ import android.arch.lifecycle.Observer;
 import android.arch.lifecycle.ViewModelProviders;
 import android.content.BroadcastReceiver;
 import android.content.Context;
+import android.content.DialogInterface;
 import android.content.Intent;
 import android.content.IntentFilter;
 import android.databinding.DataBindingUtil;
@@ -15,6 +16,7 @@ import android.os.Environment;
 import android.os.Handler;
 import android.preference.PreferenceManager;
 import android.support.annotation.Nullable;
+import android.support.annotation.StringRes;
 import android.support.constraint.ConstraintLayout;
 import android.support.constraint.ConstraintSet;
 import android.support.design.widget.Snackbar;
@@ -22,63 +24,51 @@ import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentTransaction;
 import android.support.v7.app.AlertDialog;
 import android.support.v7.widget.LinearLayoutManager;
-import android.support.v7.widget.RecyclerView;
-import android.text.SpannableStringBuilder;
-import android.text.style.ForegroundColorSpan;
-import android.util.TypedValue;
 import android.view.Menu;
 import android.view.MenuItem;
-import android.view.View;
 import android.view.inputmethod.InputMethodManager;
-import android.widget.Button;
-import android.widget.ImageView;
-import android.widget.TextView;
 
 import com.yarolegovich.slidingrootnav.SlidingRootNav;
 import com.yarolegovich.slidingrootnav.SlidingRootNavBuilder;
 import com.yarolegovich.slidingrootnav.callback.DragStateListener;
 
-import androidx.work.Data;
-import androidx.work.OneTimeWorkRequest;
-import androidx.work.State;
-import androidx.work.WorkManager;
-import androidx.work.WorkStatus;
-import n7.ad2.BuildConfig;
 import n7.ad2.MySharedPreferences;
 import n7.ad2.R;
+import n7.ad2.SnackbarUtils;
 import n7.ad2.activity.BaseActivity;
 import n7.ad2.adapter.PlainTextAdapter;
 import n7.ad2.databinding.ActivityMainBinding;
+import n7.ad2.databinding.DialogRateBinding;
+import n7.ad2.databinding.DialogUpdateBinding;
 import n7.ad2.databinding.DrawerBinding;
 import n7.ad2.fragment.GameFragment;
-import n7.ad2.fragment.HeroesFragment;
+import n7.ad2.heroes.HeroesFragment;
 import n7.ad2.fragment.ItemsFragment;
 import n7.ad2.fragment.NewsFragment;
 import n7.ad2.fragment.StreamsFragment;
 import n7.ad2.fragment.TournamentsFragment;
-import n7.ad2.setting.SettingActivity;
 import n7.ad2.utils.UnscrollableLinearLayoutManager;
-import n7.ad2.utils.Utils;
-import n7.ad2.worker.UpdateAppWorker;
 
-import static n7.ad2.worker.UpdateAppWorker.VERSION_CODE_APP;
-import static n7.ad2.worker.UpdateAppWorker.VERSION_CODE_SERVER;
+import static n7.ad2.main.MainViewModel.LAST_DAY_WHEN_CHECK_UPDATE;
+import static n7.ad2.main.MainViewModel.SHOULD_UPDATE_FROM_MARKET;
+import static n7.ad2.splash.SplashActivityViewModel.CURRENT_DAY_IN_APP;
 
 public class MainActivity extends BaseActivity {
     public static final int COUNTER_DIALOG_RATE = 20;
     public static final int COUNTER_DIALOG_DONATE = 40;
     public static final String RATE_ME_DIALOG_SHOWN = "REQUEST_FOR_RATE_SAW";
     public static final String OPEN_SUBSCRIPTION = "OPEN_SUBSCRIPTION";
+    public static final String LAST_SELECTED_TAG = "LAST_SELECTED_TAG";
     public static final String DONATE_DIALOG_SHOWN = "DONATE_DIALOG_SHOWN";
     public static final String RATED_MY_APP = "RATED_MY_APP";
     public static final int MILLIS_FOR_EXIT = 2000;
-    final static String TV_DRAWER_HEROES_TAG = "FRAGMENT_HEROES";
-    final static String TV_DRAWER_ITEMS_TAG = "FRAGMENT_ITEMS";
-    final static String TV_DRAWER_NEWS_TAG = "FRAGMENT_NEWS";
-    final static String TV_DRAWER_TOURNAMENTS_TAG = "FRAGMENT_TOURNAMENTS";
-    final static String TV_DRAWER_STREAM_TAG = "FRAGMENT_STREAM";
-    final static String TV_DRAWER_MULTI_STREAM_TAG = "TV_DRAWER_MULTI_STREAM_TAG";
-    final static String TV_DRAWER_GAME_TAG = "FRAGMENT_GAME";
+    final static String TAG_HEROES = "TAG_HEROES";
+    final static String TAG_ITEMS = "TAG_ITEMS";
+    final static String TAG_NEWS = "TAG_NEWS";
+    final static String TAG_TOURNAMENTS = "TAG_TOURNAMENTS";
+    final static String TAG_STREAMS = "TAG_STREAMS";
+    final static String TAG_MULTI_TWITCH = "TAG_MULTI_TWITCH";
+    final static String TAG_GAMES = "TAG_GAMES";
     private final BroadcastReceiver connections = new BroadcastReceiver() {
         @Override
         public void onReceive(Context context, Intent intent) {
@@ -90,14 +80,8 @@ public class MainActivity extends BaseActivity {
         }
     };
     public ObservableInt selectedItemMenu = new ObservableInt(1);
-    TextView tv_user_nickname, tv_user_rang, tv_current_menu;
-    View v_current_menu;
-    ImageView iv_user_ava, iv_user_medal, iv_user_stars, iv_drawer_setting, iv_drawer_check_update;
-    Button b_fragment_drawer_login;
-    RecyclerView recyclerView;
     private int enterCounter = 0;
-    private int oldColorDrawerMenu, angleOfUpdate = 0;
-    private boolean doubleBackToExitPressedOnce = false, isUpdate = false;
+    private boolean doubleBackToExitPressedOnce = false;
     private ConstraintSet constraintSetNew = new ConstraintSet();
     private ConstraintSet constraintSetOrigin = new ConstraintSet();
     private ConstraintSet currentSet;
@@ -106,11 +90,13 @@ public class MainActivity extends BaseActivity {
     private PlainTextAdapter adapter;
     private ActivityMainBinding bindingActivity;
     private DrawerBinding bindingDrawer;
+    private boolean shouldUpdateFromMarket;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         log("on_Create");
         super.onCreate(savedInstanceState);
+        shouldUpdateFromMarket = PreferenceManager.getDefaultSharedPreferences(this).getBoolean(SHOULD_UPDATE_FROM_MARKET, true);
 
         MainViewModel viewModel = ViewModelProviders.of(this).get(MainViewModel.class);
 
@@ -128,14 +114,45 @@ public class MainActivity extends BaseActivity {
         setupRecyclerView();
 
 //        setLastFragment();
-        checkUpdate();
 
+        viewModel.snackbarMessage.observe(this, new Observer<Integer>() {
+            @Override
+            public void onChanged(@StringRes Integer redId) {
+                SnackbarUtils.showSnackbar(bindingActivity.getRoot(), getString(redId));
+            }
+        });
         viewModel.logEvent.observe(this, new Observer<String>() {
             @Override
             public void onChanged(@Nullable String s) {
                 log(s);
             }
         });
+        viewModel.showDialogUpdate.observe(this, new Observer<Void>() {
+            @Override
+            public void onChanged(@Nullable Void aVoid) {
+                showDialogUpdate();
+            }
+        });
+    }
+
+    private void showDialogUpdate() {
+        AlertDialog.Builder builder = new AlertDialog.Builder(this);
+
+        DialogUpdateBinding binding = DataBindingUtil.inflate(getLayoutInflater(), R.layout.dialog_update, null, false);
+        builder.setView(binding.getRoot());
+
+        AlertDialog dialog = builder.create();
+        dialog.getWindow().getAttributes().windowAnimations = R.style.DialogTheme;
+        dialog.show();
+
+        dialog.setOnCancelListener(new DialogInterface.OnCancelListener() {
+            @Override
+            public void onCancel(DialogInterface dialog) {
+                int currentDay = PreferenceManager.getDefaultSharedPreferences(MainActivity.this).getInt(CURRENT_DAY_IN_APP, 0);
+                PreferenceManager.getDefaultSharedPreferences(MainActivity.this).edit().putInt(LAST_DAY_WHEN_CHECK_UPDATE, currentDay).apply();
+            }
+        });
+
     }
 
     private void setupToolbar() {
@@ -148,17 +165,6 @@ public class MainActivity extends BaseActivity {
         super.onStart();
         log("on_Start");
     }
-
-//    private void initN7Message() {
-//        final TextView tv_n7message = findViewById(R.id.n7message);
-//        LiveData<String> data = N7MessageRoomDatabase.getDatabase(this).n7MessageDao().getMessage();
-//        data.observe(this, new Observer<String>() {
-//            @Override
-//            public void onChanged(@Nullable String s) {
-//                tv_n7message.setText(s);
-//            }
-//        });
-//    }
 
     private void setupRecyclerView() {
         boolean shouldDisplayLog = PreferenceManager.getDefaultSharedPreferences(this).getBoolean(getString(R.string.setting_log_key), true);
@@ -274,6 +280,14 @@ public class MainActivity extends BaseActivity {
 //        });
 //    }
 
+    public void loadNewVersion() {
+        if (shouldUpdateFromMarket) {
+            loadNewVersionFromMarket();
+        } else {
+            loadNewVersionFromGitHub();
+        }
+    }
+
     private void loadNewVersionFromMarket() {
         try {
             startActivity(new Intent(Intent.ACTION_VIEW, Uri.parse("market://details?id=" + getPackageName())));
@@ -295,13 +309,12 @@ public class MainActivity extends BaseActivity {
 
     private void incCountEnter() {
         enterCounter++;
-//        if (enterCounter > COUNTER_DIALOG_RATE) checkIfNeedShowDialogRate();
+        if (enterCounter > COUNTER_DIALOG_RATE) checkIfNeedShowDialogRate();
 //        if (enterCounter > COUNTER_DIALOG_DONATE) checkIfNeedShowDialogDonate();
     }
 
 //    private void checkIfNeedShowDialogDonate() {
-//        if (!sp.getBoolean(PREMIUM, false) &&
-//                !sp.getString(IS_DAY_FOR_DONATE, "0").equals(MySharedPreferences.getTodayDate())) {
+//        if (!sp.getBoolean(PREMIUM, false) && !sp.getString(IS_DAY_FOR_DONATE, "0").equals(MySharedPreferences.getTodayDate())) {
 //            sp.edit().putString(IS_DAY_FOR_DONATE, MySharedPreferences.getTodayDate()).apply();
 //
 //            final AlertDialog.Builder builder = new AlertDialog.Builder(this);
@@ -322,40 +335,20 @@ public class MainActivity extends BaseActivity {
 //        }
 //    }
 
-//    private void checkIfNeedShowDialogRate() {
-//        if (!sp.getString(IS_DAY_FOR_RATE, "0").equals(NEVER) &&
-//                !sp.getString(IS_DAY_FOR_RATE, "0").equals(MySharedPreferences.getTodayDate())) {
-//            final AlertDialog.Builder builder = new AlertDialog.Builder(this);
-//            builder.setView(R.layout.dialog_rate_me);
-//            final AlertDialog dialog = builder.show();
-//            dialog.findViewById(R.id.dialog_rate_me_later).setOnClickListener(new View.OnClickListener() {
+    private void checkIfNeedShowDialogRate() {
+        boolean showDialogRate = PreferenceManager.getDefaultSharedPreferences(this).getBoolean(getString(R.string.dialog_with_request_for_rate), true);
+        if (showDialogRate) {
+            final AlertDialog.Builder builder = new AlertDialog.Builder(this);
+            DialogRateBinding binding = DataBindingUtil.inflate(getLayoutInflater(), R.layout.dialog_rate, null, false);
+            builder.setView(binding.getRoot());
+            final AlertDialog dialog = builder.create();
+            dialog.getWindow().getAttributes().windowAnimations = R.style.DialogTheme;
+            dialog.show();
+
+//            dialog.findViewById(R.id.b).setOnClickListener(new View.OnClickListener() {
 //                @Override
 //                public void onClick(View v) {
 //                    dialog.dismiss();
-//                    sp.edit().putString(IS_DAY_FOR_RATE, MySharedPreferences.getTodayDate()).apply();
-//                }
-//            });
-//            dialog.findViewById(R.id.dialog_rate_me_never).setOnClickListener(new View.OnClickListener() {
-//                @Override
-//                public void onClick(View v) {
-//                    dialog.dismiss();
-//                    sp.edit().putString(IS_DAY_FOR_RATE, NEVER).apply();
-//                }
-//            });
-//            dialog.findViewById(R.id.dialog_rate_me_ok).setOnClickListener(new View.OnClickListener() {
-//                @Override
-//                public void onClick(View v) {
-//                    dialog.dismiss();
-//                    sp.edit().putString(IS_DAY_FOR_RATE, NEVER).apply();
-//                    Calendar calendar = Calendar.getInstance();
-//                    Long inMemoryTime = sp.getLong(MySharedPreferences.DATE_END_PREMIUM, calendar.getTimeInMillis());
-//                    Long currentTime = calendar.getTimeInMillis();
-//                    Long latestTime = (inMemoryTime > currentTime ? inMemoryTime : currentTime);
-//                    calendar.setTimeInMillis(latestTime);
-//                    calendar.add(Calendar.DATE, 5);
-//                    sp.edit().putLong(MySharedPreferences.DATE_END_PREMIUM, calendar.getTimeInMillis()).apply();
-//                    log("5_day_premium_granted");
-//                    checkIsPremium();
 //                    try {
 //                        startActivity(new Intent(Intent.ACTION_VIEW, Uri.parse("market://details?id=" + getPackageName())));
 //                    } catch (android.content.ActivityNotFoundException a) {
@@ -367,12 +360,7 @@ public class MainActivity extends BaseActivity {
 //            });
 //            FirebaseAnalytics firebaseAnalytics = FirebaseAnalytics.getInstance(this);
 //            firebaseAnalytics.logEvent(RATE_ME_DIALOG_SHOWN, null);
-//        }
-//    }
-
-    private void checkUpdate() {
-//        if (!sp.getString(IS_DAY_FOR_UPDATE_KEY, "0").equals(MySharedPreferences.getTodayDate())) {
-//        }
+        }
     }
 
     private void hideKeyboard() {
@@ -391,34 +379,34 @@ public class MainActivity extends BaseActivity {
 //            switch (id) {
 //                default:
 //                case R.id.tv_drawer_heroes:
-//                    if (!currentFragment.getTag().equals(TV_DRAWER_HEROES_TAG))
-//                        ft.replace(R.id.container, new HeroesFragment(), TV_DRAWER_HEROES_TAG).commit();
-//                    log("set_" + TV_DRAWER_HEROES_TAG);
+//                    if (!currentFragment.getTag().equals(TAG_HEROES))
+//                        ft.replace(R.id.container, new HeroesFragment(), TAG_HEROES).commit();
+//                    log("set_" + TAG_HEROES);
 //                    break;
 //                case R.id.tv_drawer_items:
-//                    if (!currentFragment.getTag().equals(TV_DRAWER_ITEMS_TAG))
-//                        ft.replace(R.id.container, new ItemsFragment(), TV_DRAWER_ITEMS_TAG).commit();
-//                    log("set_" + TV_DRAWER_ITEMS_TAG);
+//                    if (!currentFragment.getTag().equals(TAG_ITEMS))
+//                        ft.replace(R.id.container, new ItemsFragment(), TAG_ITEMS).commit();
+//                    log("set_" + TAG_ITEMS);
 //                    break;
 //                case R.id.tv_drawer_news:
-//                    if (!currentFragment.getTag().equals(TV_DRAWER_NEWS_TAG))
-//                        ft.replace(R.id.container, new NewsFragment(), TV_DRAWER_NEWS_TAG).commit();
-//                    log("set_" + TV_DRAWER_NEWS_TAG);
+//                    if (!currentFragment.getTag().equals(TAG_NEWS))
+//                        ft.replace(R.id.container, new NewsFragment(), TAG_NEWS).commit();
+//                    log("set_" + TAG_NEWS);
 //                    break;
 //                case R.id.tv_drawer_tournaments:
-//                    if (!currentFragment.getTag().equals(TV_DRAWER_TOURNAMENTS_TAG))
-//                        ft.replace(R.id.container, new TournamentsFragment(), TV_DRAWER_TOURNAMENTS_TAG).commit();
-//                    log("set_" + TV_DRAWER_TOURNAMENTS_TAG);
+//                    if (!currentFragment.getTag().equals(TAG_TOURNAMENTS))
+//                        ft.replace(R.id.container, new TournamentsFragment(), TAG_TOURNAMENTS).commit();
+//                    log("set_" + TAG_TOURNAMENTS);
 //                    break;
 //                case R.id.tv_drawer_game:
-//                    if (!currentFragment.getTag().equals(TV_DRAWER_GAME_TAG))
-//                        ft.replace(R.id.container, new GameFragment(), TV_DRAWER_GAME_TAG).commit();
-//                    log("set_" + TV_DRAWER_GAME_TAG);
+//                    if (!currentFragment.getTag().equals(TAG_GAMES))
+//                        ft.replace(R.id.container, new GameFragment(), TAG_GAMES).commit();
+//                    log("set_" + TAG_GAMES);
 //                    break;
 //                case R.id.tv_drawer_stream:
-//                    if (!currentFragment.getTag().equals(TV_DRAWER_STREAM_TAG))
-//                        ft.replace(R.id.container, new StreamsFragment(), TV_DRAWER_STREAM_TAG).commit();
-//                    log("set_" + TV_DRAWER_STREAM_TAG);
+//                    if (!currentFragment.getTag().equals(TAG_STREAMS))
+//                        ft.replace(R.id.container, new StreamsFragment(), TAG_STREAMS).commit();
+//                    log("set_" + TAG_STREAMS);
 //                    break;
 //            }
 //        }
@@ -457,30 +445,14 @@ public class MainActivity extends BaseActivity {
 //        iv_drawer_check_update.setOnClickListener(new View.OnClickListener() {
 //            @Override
 //            public void onClick(View view) {
-//                if (!isUpdate) {
-//                    isUpdate = true;
+//                if (!updating) {
+//                    updating = true;
 //                    startRotate();
 //                    startWorkUpdate(true);
 //                }
 //            }
 //        });
     }
-
-    private void startRotate() {
-        final Handler handler = new Handler();
-        handler.post(new Runnable() {
-            @Override
-            public void run() {
-                if (isUpdate) {
-                    angleOfUpdate += 2;
-                    iv_drawer_check_update.setRotation(angleOfUpdate * 2);
-                    handler.postDelayed(this, 10);
-                }
-            }
-        });
-    }
-
-
 
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
@@ -542,10 +514,10 @@ public class MainActivity extends BaseActivity {
 //                    fragmentManager = getSupportFragmentManager();
 //                    currentFragment = fragmentManager.findFragmentById(R.id.container);
 //                    FragmentTransaction ft = fragmentManager.beginTransaction();
-//                    if (currentFragment.getTag() != null && currentFragment.getTag().equals(TV_DRAWER_MULTI_STREAM_TAG)) {
-//                        ft.replace(R.id.container, new StreamsFragment(), TV_DRAWER_STREAM_TAG).commit();
+//                    if (currentFragment.getTag() != null && currentFragment.getTag().equals(TAG_MULTI_TWITCH)) {
+//                        ft.replace(R.id.container, new StreamsFragment(), TAG_STREAMS).commit();
 //                    } else {
-//                        ft.replace(R.id.container, new MultiStreamsFragment(), TV_DRAWER_MULTI_STREAM_TAG).commit();
+//                        ft.replace(R.id.container, new MultiStreamsFragment(), TAG_MULTI_TWITCH).commit();
 //                    }
 //                } else {
 //                    showSnackBarPremium();
@@ -556,27 +528,17 @@ public class MainActivity extends BaseActivity {
         return super.onOptionsItemSelected(item);
     }
 
-    private void showSnackBarPremium() {
-        Snackbar.make(recyclerView, R.string.all_only_for_subscribers, Snackbar.LENGTH_LONG).setAction(R.string.all_buy, new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                startActivity(new Intent(MainActivity.this, SettingActivity.class));
-            }
-        }).show();
-    }
-
     @Override
     protected void onPause() {
-        super.onPause();
-//        unregisterReceiver(connections);
-//        sensorTranslationUpdater.unregisterSensorManager();
-//        sp.edit().putInt(MySharedPreferences.LAST_FRAGMENT_SELECTED_KEY, MySharedPreferences.LAST_FRAGMENT_SELECTED).apply();
         log("on_Pause");
+        super.onPause();
     }
 
     @Override
     protected void onStop() {
         log("on_Stop");
+//        String lastSelectedTag = getSupportFragmentManager().findFragmentById(bindingActivity.container.getId()).getTag();
+//        PreferenceManager.getDefaultSharedPreferences(this).edit().putString(LAST_SELECTED_TAG, lastSelectedTag).apply();
         super.onStop();
     }
 
@@ -590,10 +552,7 @@ public class MainActivity extends BaseActivity {
     protected void onResume() {
         super.onResume();
         log("on_Resume");
-//        regReceiver();
-//        sensorTranslationUpdater.registerSensorManager();
-//        UpdateUserRank();
-//        incCountEnter();
+        incCountEnter();
     }
 
     private void regReceiver() {
@@ -602,22 +561,6 @@ public class MainActivity extends BaseActivity {
         registerReceiver(connections, filter);
         //можно затригерить ресивер этой командой
 //        getActivity().sendBroadcast(new Intent("setToolbarName"));
-    }
-
-    private void setToolbarName(int nameToolbar) {
-        if (Utils.isNetworkAvailable(getBaseContext())) {
-            SpannableStringBuilder str = new SpannableStringBuilder(getString(R.string.app_name) + "/" + getString(nameToolbar));
-            str.setSpan(new ForegroundColorSpan(getColorAccentTheme()), 0, 4, SpannableStringBuilder.SPAN_EXCLUSIVE_EXCLUSIVE);
-            setTitle(str);
-        } else {
-            setTitle(getString(R.string.app_name) + "/" + getString(nameToolbar));
-        }
-    }
-
-    private int getColorAccentTheme() {
-        TypedValue typedValue = new TypedValue();
-        getTheme().resolveAttribute(R.attr.colorAccent, typedValue, true);
-        return typedValue.data;
     }
 
     @Override

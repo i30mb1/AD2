@@ -6,7 +6,6 @@ import android.support.annotation.NonNull;
 import android.support.annotation.Nullable;
 import android.support.design.widget.Snackbar;
 import android.support.v4.app.Fragment;
-import android.support.v4.view.AsyncLayoutInflater;
 import android.util.TypedValue;
 import android.view.LayoutInflater;
 import android.view.Menu;
@@ -163,7 +162,7 @@ public class HeroFragment extends Fragment {
                         ll_fragment_hero_personal_descriptions.removeAllViewsInLayout();
                         final View item_hero_personal_talent = getLayoutInflater().inflate(R.layout.item_hero_personal_description_talent, null);
                         try {
-                            ((TextView) item_hero_personal_talent.findViewById(R.id.tv_item_name)).setText(getString(R.string.item_hero_personal_description_talents));
+                            ((TextView) item_hero_personal_talent.findViewById(R.id.tv)).setText(getString(R.string.item_hero_personal_description_talents));
                             ((TextView) item_hero_personal_talent.findViewById(R.id.tv_25_left)).setText(jsonHeroDescription.getJSONArray("talents").get(0).toString().split(":")[0]);
                             ((TextView) item_hero_personal_talent.findViewById(R.id.tv_25_right)).setText(jsonHeroDescription.getJSONArray("talents").get(0).toString().split(":")[1]);
                             ((TextView) item_hero_personal_talent.findViewById(R.id.tv_20_left)).setText(jsonHeroDescription.getJSONArray("talents").get(1).toString().split(":")[0]);
@@ -252,7 +251,7 @@ public class HeroFragment extends Fragment {
         if (loadWithError) return;
         JSONObject jsonObjectSpell = (JSONObject) jsonArrayHeroSpells.get(spellNum);
         final View item_hero_personal_spell = getLayoutInflater().inflate(R.layout.item_hero_personal_description, null);
-        ((TextView) item_hero_personal_spell.findViewById(R.id.tv_item_name)).setText(jsonObjectSpell.getString("name"));
+        ((TextView) item_hero_personal_spell.findViewById(R.id.tv)).setText(jsonObjectSpell.getString("name"));
         if (jsonObjectSpell.has("hot_key"))
             ((TextView) item_hero_personal_spell.findViewById(R.id.tv_hotkey)).setText(jsonObjectSpell.getString("hot_key"));
         if (jsonObjectSpell.has("legacy_key"))
@@ -310,7 +309,7 @@ public class HeroFragment extends Fragment {
         });
 
         final View item_hero_personal_description_simple = getLayoutInflater().inflate(R.layout.item_hero_personal_description_simple, null);
-        ((TextView) item_hero_personal_description_simple.findViewById(R.id.tv_item_name)).setText(R.string.item_hero_personal_description_notes);
+        ((TextView) item_hero_personal_description_simple.findViewById(R.id.tv)).setText(R.string.item_hero_personal_description_notes);
         LinearLayout ll_items_description = item_hero_personal_description_simple.findViewById(R.id.ll_item_description);
         for (int i = 0; i < jsonObjectSpell.getJSONArray("notes").length(); i++) {
             View item_description = getLayoutInflater().inflate(R.layout.item_description, null);
@@ -359,7 +358,7 @@ public class HeroFragment extends Fragment {
         if (loadWithError) return;
         if (jsonHeroDescription.has("desc")) {
             final View item_hero_personal_description_simple = getLayoutInflater().inflate(R.layout.item_hero_personal_description_simple, null);
-            ((TextView) item_hero_personal_description_simple.findViewById(R.id.tv_item_name)).setText(R.string.item_hero_personal_description_desc);
+            ((TextView) item_hero_personal_description_simple.findViewById(R.id.tv)).setText(R.string.item_hero_personal_description_desc);
 
             LinearLayout ll_items_description = item_hero_personal_description_simple.findViewById(R.id.ll_item_description);
             View item_description = getLayoutInflater().inflate(R.layout.item_description, null);
@@ -379,7 +378,7 @@ public class HeroFragment extends Fragment {
         }
         if (jsonHeroDescription.has("bio")) {
             final View item_hero_personal_description_simple = getLayoutInflater().inflate(R.layout.item_hero_personal_description_simple, null);
-            ((TextView) item_hero_personal_description_simple.findViewById(R.id.tv_item_name)).setText(R.string.item_hero_personal_description_bio);
+            ((TextView) item_hero_personal_description_simple.findViewById(R.id.tv)).setText(R.string.item_hero_personal_description_bio);
 
             LinearLayout ll_items_description = item_hero_personal_description_simple.findViewById(R.id.ll_item_description);
             View item_description = getLayoutInflater().inflate(R.layout.item_description, null);
@@ -399,7 +398,7 @@ public class HeroFragment extends Fragment {
         }
         if (jsonHeroDescription.has("trivia")) {
             final View item_hero_personal_description_simple = getLayoutInflater().inflate(R.layout.item_hero_personal_description_simple, null);
-            ((TextView) item_hero_personal_description_simple.findViewById(R.id.tv_item_name)).setText(R.string.item_hero_personal_description_facts);
+            ((TextView) item_hero_personal_description_simple.findViewById(R.id.tv)).setText(R.string.item_hero_personal_description_facts);
 
             try {
                 LinearLayout ll_items_description = item_hero_personal_description_simple.findViewById(R.id.ll_item_description);
@@ -420,7 +419,7 @@ public class HeroFragment extends Fragment {
         }
         if (jsonHeroDescription.has("tips")) {
             final View item_hero_personal_description_simple = getLayoutInflater().inflate(R.layout.item_hero_personal_description_simple, null);
-            ((TextView) item_hero_personal_description_simple.findViewById(R.id.tv_item_name)).setText(R.string.item_hero_personal_description_tips);
+            ((TextView) item_hero_personal_description_simple.findViewById(R.id.tv)).setText(R.string.item_hero_personal_description_tips);
 
             try {
                 LinearLayout ll_items_description = item_hero_personal_description_simple.findViewById(R.id.ll_item_description);

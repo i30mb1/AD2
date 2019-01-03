@@ -20,7 +20,8 @@ import retrofit2.Response;
 import retrofit2.Retrofit;
 import retrofit2.converter.gson.GsonConverterFactory;
 
-import static n7.ad2.MySharedPreferences.PREMIUM_ACCOUNTS;
+import static n7.ad2.main.MainViewModel.ACCOUNTS_FOR_TOP_TWITCH;
+
 
 public class StreamsStorage {
 
@@ -51,7 +52,7 @@ public class StreamsStorage {
     public List<Streams> getPremium() {
         setLoading(true);
         List<Streams> list = new ArrayList<>();
-        String premiums[] = MySharedPreferences.getSharedPreferences(application).getString(PREMIUM_ACCOUNTS, "").split("\\+");
+        String premiums[] = MySharedPreferences.getSharedPreferences(application).getString(ACCOUNTS_FOR_TOP_TWITCH, "").split("\\+");
         if (premiums.length > 0)
             for (String premium : premiums) {
                 String parts[] = premium.split("\\^");

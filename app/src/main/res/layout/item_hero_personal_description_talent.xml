@@ -26,7 +26,7 @@
             android:textSize="26sp"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toEndOf="@+id/view8"
-            app:layout_constraintTop_toBottomOf="@+id/tv_item_name" />
+            app:layout_constraintTop_toBottomOf="@+id/tv" />
 
         <TextView
             android:id="@+id/tv_20"
@@ -201,7 +201,7 @@
             tools:text="+30 к регенерации от Chemical Rage icon.png Chemical Rage" />
 
         <TextView
-            android:id="@+id/tv_item_name"
+            android:id="@+id/tv"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:background="?colorPrimaryDark"

@@ -544,7 +544,7 @@ public class TwitchGameActivity extends BaseActivity implements SurfaceHolder.Ca
 
             ViewHolder(@NonNull View itemView) {
                 super(itemView);
-                textView = itemView.findViewById(R.id.tv_item_name);
+                textView = itemView.findViewById(R.id.tv);
                 textView.setOnClickListener(new View.OnClickListener() {
                     @Override
                     public void onClick(View v) {

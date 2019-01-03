@@ -117,7 +117,7 @@ public class ItemFullActivity extends BaseActivity {
 
         //loading Description
         final View item_hero_personal_description_simple = getLayoutInflater().inflate(R.layout.item_hero_personal_description_simple, null);
-        ((TextView) item_hero_personal_description_simple.findViewById(R.id.tv_item_name)).setText(R.string.item_hero_personal_description_desc);
+        ((TextView) item_hero_personal_description_simple.findViewById(R.id.tv)).setText(R.string.item_hero_personal_description_desc);
 
         LinearLayout ll_items_description = item_hero_personal_description_simple.findViewById(R.id.ll_item_description);
         View item_description = getLayoutInflater().inflate(R.layout.item_description, null);
@@ -145,7 +145,7 @@ public class ItemFullActivity extends BaseActivity {
         //load Info
         if (jsonItemDescription.has("info")) {
             final View item_hero_personal_info_simple = getLayoutInflater().inflate(R.layout.item_hero_personal_description_simple, null);
-            ((TextView) item_hero_personal_info_simple.findViewById(R.id.tv_item_name)).setText(R.string.item_hero_personal_info_desc);
+            ((TextView) item_hero_personal_info_simple.findViewById(R.id.tv)).setText(R.string.item_hero_personal_info_desc);
             LinearLayout ll_items_info = item_hero_personal_info_simple.findViewById(R.id.ll_item_description);
             try {
                 for (int i = 0; i < jsonItemDescription.getJSONArray("info").length(); i++) {
@@ -163,7 +163,7 @@ public class ItemFullActivity extends BaseActivity {
         //load tips
         if (jsonItemDescription.has("tips")) {
             final View item_hero_personal_tips_simple = getLayoutInflater().inflate(R.layout.item_hero_personal_description_simple, null);
-            ((TextView) item_hero_personal_tips_simple.findViewById(R.id.tv_item_name)).setText(R.string.item_hero_personal_description_tips);
+            ((TextView) item_hero_personal_tips_simple.findViewById(R.id.tv)).setText(R.string.item_hero_personal_description_tips);
             LinearLayout ll_items_tips = item_hero_personal_tips_simple.findViewById(R.id.ll_item_description);
             try {
                 for (int i = 0; i < jsonItemDescription.getJSONArray("tips").length(); i++) {
@@ -180,7 +180,7 @@ public class ItemFullActivity extends BaseActivity {
         //loading Trivia
         if (jsonItemDescription.has("trivia")) {
             final View item_hero_personal_info_simple = getLayoutInflater().inflate(R.layout.item_hero_personal_description_simple, null);
-            ((TextView) item_hero_personal_info_simple.findViewById(R.id.tv_item_name)).setText(R.string.item_hero_personal_trivia_desc);
+            ((TextView) item_hero_personal_info_simple.findViewById(R.id.tv)).setText(R.string.item_hero_personal_trivia_desc);
             LinearLayout ll_items_info = item_hero_personal_info_simple.findViewById(R.id.ll_item_description);
             try {
                 for (int i = 0; i < jsonItemDescription.getJSONArray("trivia").length(); i++) {
@@ -199,7 +199,7 @@ public class ItemFullActivity extends BaseActivity {
                 for (int i = 0; i < jsonItemDescription.getJSONArray("abilities").length(); i++) {
                     final View item_item_personal_spell = getLayoutInflater().inflate(R.layout.item_item_personal_description, null);
                     JSONObject jsonObject = jsonItemDescription.getJSONArray("abilities").getJSONObject(i);
-                    ((TextView) item_item_personal_spell.findViewById(R.id.tv_item_name)).setText(jsonObject.getString("name"));
+                    ((TextView) item_item_personal_spell.findViewById(R.id.tv)).setText(jsonObject.getString("name"));
                     ((TextView) item_item_personal_spell.findViewById(R.id.ll_item_description)).setText(jsonObject.getString("description"));
 
                     LinearLayout linearLayout = item_item_personal_spell.findViewById(R.id.ll_items_description);

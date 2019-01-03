@@ -49,8 +49,10 @@
             android:layout_marginStart="8dp"
             android:layout_marginBottom="8dp"
             android:contentDescription="@string/setting_tell_friend"
+            android:onClick="@{()->viewModel.startUpdate()}"
             android:scaleType="center"
             android:tint="?android:textColorPrimary"
+            app:isBusy="@{viewModel.isUpdating}"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintLeft_toLeftOf="parent"
             app:srcCompat="@drawable/ic_update" />
@@ -152,10 +154,10 @@
 
 
                 <TextView
-                    android:onClick="@{()-> activity.setFragmentTournaments()}"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:gravity="center_vertical"
+                    android:onClick="@{()-> activity.setFragmentTournaments()}"
                     android:padding="6dp"
                     android:text="@string/tournaments"
                     android:textColor="?android:textColorPrimary"
@@ -174,10 +176,10 @@
                     android:background="@{activity.selectedItemMenu==5? @color/colorAccent :@color/textColorSecondary}" />
 
                 <TextView
-                    android:onClick="@{()-> activity.setFragmentStreams()}"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:gravity="center_vertical"
+                    android:onClick="@{()-> activity.setFragmentStreams()}"
                     android:padding="6dp"
                     android:text="@string/streams"
                     android:textAllCaps="false"
@@ -196,10 +198,10 @@
                     android:background="@{activity.selectedItemMenu==6? @color/colorAccent :@color/textColorSecondary}" />
 
                 <TextView
-                    android:onClick="@{()-> activity.setFragmentGames()}"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:gravity="center_vertical"
+                    android:onClick="@{()-> activity.setFragmentGames()}"
                     android:padding="6dp"
                     android:text="@string/games"
                     android:textColor="?android:textColorPrimary"

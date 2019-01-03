@@ -18,10 +18,10 @@
         android:textSize="14sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/dialog_rate_me_text2" />
+        app:layout_constraintTop_toBottomOf="@+id/tv2" />
 
     <View
-        android:id="@+id/dialog_rate_me_view"
+        android:id="@+id/left_red_line"
         android:layout_width="2dp"
         android:layout_height="0dp"
         android:background="?colorAccent"
@@ -30,7 +30,7 @@
         app:layout_constraintTop_toTopOf="parent" />
 
     <TextView
-        android:id="@+id/dialog_rate_me_text1"
+        android:id="@+id/tv1"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginStart="8dp"
@@ -43,11 +43,11 @@
         android:textSize="14sp"
         android:textStyle="bold"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toEndOf="@+id/dialog_rate_me_view"
+        app:layout_constraintStart_toEndOf="@+id/left_red_line"
         app:layout_constraintTop_toTopOf="parent" />
 
     <TextView
-        android:id="@+id/dialog_rate_me_text2"
+        android:id="@+id/tv2"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginStart="8dp"
@@ -60,6 +60,6 @@
         android:textSize="12sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/dialog_rate_me_text1" />
+        app:layout_constraintTop_toBottomOf="@+id/tv1" />
 
 </android.support.constraint.ConstraintLayout>

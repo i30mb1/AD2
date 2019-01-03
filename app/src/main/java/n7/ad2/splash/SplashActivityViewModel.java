@@ -132,22 +132,6 @@ public class SplashActivityViewModel extends AndroidViewModel {
 //        LiveData<PagedList<ItemModel>> items = new LivePagedListBuilder<>(dataSource, config).build();
 //    }
 
-//    public void setupLiveDataHeroes() {
-//        //DataSource.Factory генерирует сама Room
-//        DataSource.Factory dataSource = heroesDao.getDataSourceHeroes();
-//
-//        //PagedList.Config для различных условий загрузки
-//        PagedList.Config config = new PagedList.Config.Builder()
-//                .setPageSize(20)
-////                .setInitialLoadSizeHint(60) //default = pageSize*3
-////                .setPrefetchDistance(10) //default = pageSize сколько записей до конца списка чтобы загрузить новую порцию данных
-//                .setEnablePlaceholders(true) //default true
-//                .build();
-//        //LivePagedListBuilder создаёт PagedList в отдельном потоке (начальную загрузку данных тоже)
-//        //LivePagedListBuilder используя DataSource.Factory всегда сама может создать новую фабрику при появлении новых данных
-//        LiveData<PagedList<HeroModel>> heroes = new LivePagedListBuilder<>(dataSource, config).build();
-//    }
-
     private void setupSupportJsoupForOldDevices() {
         new Thread(new Runnable() {
             @Override

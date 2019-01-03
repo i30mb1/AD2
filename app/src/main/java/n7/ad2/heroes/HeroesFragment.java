@@ -1,14 +1,14 @@
-package n7.ad2.fragment;
+package n7.ad2.heroes;
 
 
 import android.arch.lifecycle.Observer;
 import android.arch.lifecycle.ViewModelProviders;
 import android.arch.paging.PagedList;
+import android.databinding.DataBindingUtil;
 import android.os.Bundle;
 import android.support.annotation.Nullable;
 import android.support.v4.app.Fragment;
 import android.support.v7.widget.GridLayoutManager;
-import android.support.v7.widget.RecyclerView;
 import android.support.v7.widget.SearchView;
 import android.view.LayoutInflater;
 import android.view.Menu;
@@ -20,15 +20,15 @@ import android.view.ViewGroup;
 import n7.ad2.MySharedPreferences;
 import n7.ad2.R;
 import n7.ad2.adapter.HeroesPagedListAdapter;
+import n7.ad2.databinding.FragmentHeroesBinding;
 import n7.ad2.db.heroes.HeroModel;
-import n7.ad2.splash.SplashActivityViewModel;
 
 
 public class HeroesFragment extends Fragment implements SearchView.OnQueryTextListener {
 
-    private View view;
-    private SplashActivityViewModel heroesViewModel;
-    private HeroesPagedListAdapter heroesPagedListAdapter;
+    private HeroesPagedListAdapter adapter;
+    private HeroesViewModel heroesViewModel;
+    private FragmentHeroesBinding binding;
 
     public HeroesFragment() {
         MySharedPreferences.LAST_FRAGMENT_SELECTED = 1;
@@ -44,28 +44,28 @@ public class HeroesFragment extends Fragment implements SearchView.OnQueryTextLi
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
-        view = inflater.inflate(R.layout.fragment_heroes, container, false);
+        binding = DataBindingUtil.inflate(inflater, R.layout.fragment_heroes, container, false);
 
         setRetainInstance(true);//фрагмент не уничтожается а передаётся новому активити (пропускает методы onCreate&onDestroy)
         setHasOptionsMenu(true);//вызов метода onCreateOptionsMenu в фрагменте
-        heroesViewModel = ViewModelProviders.of(this).get(SplashActivityViewModel.class);
+
+        heroesViewModel = ViewModelProviders.of(this).get(HeroesViewModel.class);
 
         initPagedListAdapter();
-        return view;
+        return binding.getRoot();
     }
 
     private void initPagedListAdapter() {
-        RecyclerView recyclerView = view.findViewById(R.id.rv_fragment_heroes);
-        recyclerView.setHasFixedSize(true);//если recyclerView не будет изменяться в размерах тогда ставим true
-        recyclerView.setLayoutManager(new GridLayoutManager(view.getContext(), 3));
-        heroesPagedListAdapter = new HeroesPagedListAdapter();//это RecyclerView.Adapter, заточенный под чтение данных из PagedList.
-        recyclerView.setAdapter(heroesPagedListAdapter);
-//        heroesViewModel.getPagedListHeroesFilter("").observe(this, new Observer<PagedList<HeroModel>>() {
-//            @Override
-//            public void onChanged(@Nullable PagedList<HeroModel> heroes) {
-//                heroesPagedListAdapter.submitList(heroes);
-//            }
-//        });
+        binding.rv.setHasFixedSize(true);//если recyclerView не будет изменяться в размерах тогда ставим true
+        binding.rv.setLayoutManager(new GridLayoutManager(getContext(), 3));
+        adapter = new HeroesPagedListAdapter();//это RecyclerView.Adapter, заточенный под чтение данных из PagedList.
+        binding.rv.setAdapter(adapter);
+        heroesViewModel.getHeroes().observe(this, new Observer<PagedList<HeroModel>>() {
+            @Override
+            public void onChanged(@Nullable PagedList<HeroModel> heroModels) {
+                adapter.submitList(heroModels);
+            }
+        });
     }
 
     @Override
@@ -78,7 +78,7 @@ public class HeroesFragment extends Fragment implements SearchView.OnQueryTextLi
 //        heroesViewModel.getPagedListHeroesFilter(s.trim()).observe(this, new Observer<PagedList<HeroModel>>() {
 //            @Override
 //            public void onChanged(@Nullable PagedList<HeroModel> heroes) {
-//                heroesPagedListAdapter.submitList(heroes);
+//                adapter.submitList(heroes);
 //            }
 //        });
         return false;

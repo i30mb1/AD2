@@ -1,8 +1,18 @@
 package n7.ad2.db.heroes;
 
+import android.app.Activity;
 import android.arch.persistence.room.Entity;
 import android.arch.persistence.room.PrimaryKey;
+import android.content.Intent;
 import android.support.annotation.NonNull;
+import android.support.v4.app.ActivityOptionsCompat;
+import android.view.View;
+import android.widget.ImageView;
+
+import n7.ad2.activity.HeroFullActivity;
+
+import static n7.ad2.activity.HeroFullActivity.HERO_CODE_NAME;
+import static n7.ad2.activity.HeroFullActivity.HERO_NAME;
 
 @Entity
 public class HeroModel {
@@ -119,4 +129,12 @@ public class HeroModel {
         return name;
     }
 
+
+    public void startHeroFull(View view, HeroModel hero) {
+        Intent intent = new Intent(view.getContext(), HeroFullActivity.class);
+        ActivityOptionsCompat options = ActivityOptionsCompat.makeSceneTransitionAnimation((Activity) view.getContext(), view, "iv");
+        intent.putExtra(HERO_NAME, hero.getName());
+        intent.putExtra(HERO_CODE_NAME, hero.getCodeName());
+        view.getContext().startActivity(intent, options.toBundle());
+    }
 }

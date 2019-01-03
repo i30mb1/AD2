@@ -4,6 +4,7 @@ import android.app.Application;
 import android.arch.lifecycle.AndroidViewModel;
 import android.content.Context;
 import android.content.Intent;
+import android.databinding.ObservableBoolean;
 import android.preference.PreferenceManager;
 import android.support.annotation.NonNull;
 
@@ -14,6 +15,7 @@ import java.util.concurrent.Executors;
 import n7.ad2.BuildConfig;
 import n7.ad2.MySharedPreferences;
 import n7.ad2.SingleLiveEvent;
+import n7.ad2.SnackbarMessage;
 import n7.ad2.db.n7message.N7Message;
 import n7.ad2.db.n7message.N7MessageRoomDatabase;
 import n7.ad2.retrofit.update.Update;
@@ -28,9 +30,13 @@ import static n7.ad2.splash.SplashActivityViewModel.CURRENT_DAY_IN_APP;
 
 public class MainViewModel extends AndroidViewModel {
 
+    public static final String SHOULD_UPDATE_FROM_MARKET = "SHOULD_UPDATE_FROM_MARKET";
+    public ObservableBoolean isUpdating = new ObservableBoolean(false);
     public static final String ACCOUNTS_FOR_TOP_TWITCH = "ACCOUNTS_FOR_TOP_TWITCH";
-    private static final String LAST_DAY_WHEN_CHECK_UPDATE = "LAST_DAY_WHEN_CHECK_UPDATE";
+    public static final String LAST_DAY_WHEN_CHECK_UPDATE = "LAST_DAY_WHEN_CHECK_UPDATE";
     private static final String BASE_URL = "https://raw.githubusercontent.com/i30mb1/AD2/master/";
+    public final SingleLiveEvent<Void> showDialogUpdate = new SingleLiveEvent<>();
+    public final SnackbarMessage snackbarMessage = new SnackbarMessage();
     final SingleLiveEvent<String> logEvent = new SingleLiveEvent<>();
     private Application application;
     private Executor diskIO;
@@ -39,6 +45,13 @@ public class MainViewModel extends AndroidViewModel {
         super(application);
         this.application = application;
         diskIO = Executors.newSingleThreadExecutor();
+
+        diskIO.execute(new Runnable() {
+            @Override
+            public void run() {
+                checkLastVersion();
+            }
+        });
 
     }
 
@@ -51,6 +64,8 @@ public class MainViewModel extends AndroidViewModel {
         int lastDayWhenCheckUpdate = PreferenceManager.getDefaultSharedPreferences(application).getInt(LAST_DAY_WHEN_CHECK_UPDATE, 0);
         if (currentDay != lastDayWhenCheckUpdate) {
 
+            startUpdate();
+//            PreferenceManager.getDefaultSharedPreferences(application).edit().putInt(LAST_DAY_WHEN_CHECK_UPDATE,currentDay).apply();
         }
     }
 
@@ -64,76 +79,54 @@ public class MainViewModel extends AndroidViewModel {
         MySharedPreferences.getSharedPreferences(application).edit().putString(ACCOUNTS_FOR_TOP_TWITCH, update.getMessage().getTwitch()).apply();
     }
 
-    private void startUpdate() {
-        Double deviceVersion = Double.valueOf(BuildConfig.VERSION_NAME);
+    public void startUpdate() {
+        diskIO.execute(new Runnable() {
+            @Override
+            public void run() {
+                isUpdating.set(true);
 
-        Retrofit retrofit = new Retrofit.Builder()
-                .baseUrl(BASE_URL) //базовая часть адреса
-                .addConverterFactory(GsonConverterFactory.create()) //конвертер, необходимый для преобразования JSON'а в объекты
-                .build();
+                try {
+                    Thread.sleep(5000);
+                } catch (InterruptedException e) {
+                    e.printStackTrace();
+                }
 
-        UpdateApi updateApi = retrofit.create(UpdateApi.class);
-        Call<Update> updateCall = updateApi.getUpdate();
-        try {
-            Response response = updateCall.execute();
-            if (response.isSuccessful()) {
-                Update update = (Update) response.body();
-                if (update == null) return;
+                Integer deviceVersion = Integer.valueOf(BuildConfig.VERSION_NAME);
 
-                saveMessageInDatabase(update);
-                saveTwitchAccounts(update);
+                Retrofit retrofit = new Retrofit.Builder()
+                        .baseUrl(BASE_URL) //базовая часть адреса
+                        .addConverterFactory(GsonConverterFactory.create()) //конвертер, необходимый для преобразования JSON'а в объекты
+                        .build();
 
-                boolean shouldUpdateFromGoogleMarket = update.getMessage().isUpdateFromMarket();
-                String serverVersion = update.getVersionCode().toString();
+                UpdateApi updateApi = retrofit.create(UpdateApi.class);
+                Call<Update> updateCall = updateApi.getUpdate();
+                try {
+                    Response response = updateCall.execute();
+                    if (response.isSuccessful()) {
+                        Update update = (Update) response.body();
+                        if (update == null) return;
 
-                if (serverVersion > deviceVersion) {
+                        saveMessageInDatabase(update);
+                        saveTwitchAccounts(update);
 
+                        boolean shouldUpdateFromGoogleMarket = update.getMessage().isUpdateFromMarket();
+                        PreferenceManager.getDefaultSharedPreferences(application).edit().putBoolean(SHOULD_UPDATE_FROM_MARKET, shouldUpdateFromGoogleMarket).apply();
+
+                        int serverVersion = update.getServerVersion();
+                        if (serverVersion > deviceVersion) {
+                            showDialogUpdate.call();
+                        }
+                        showDialogUpdate.call();
+                        logEvent.postValue("device_ver = " + deviceVersion);
+                        logEvent.postValue("server_ver = " + serverVersion);
+                    }
+                } catch (IOException e) {
+                    e.printStackTrace();
+                }
+                finally {
+                    isUpdating.set(false);
                 }
             }
-        } catch (IOException e) {
-            e.printStackTrace();
-        }
-
-//        WorkManager.getInstance().getStatusById(updateAppWorker.getId()).observe(MainActivity.this, new Observer<WorkStatus>() {
-//            @Override
-//            public void onChanged(@Nullable WorkStatus workStatus) {
-//                if (workStatus != null && workStatus.getState().equals(State.SUCCEEDED)) {
-//                    log("work_update_succeeded");
-//                    isUpdate = false;
-//                    final boolean fromMarket = workStatus.getOutputData().getBoolean(UpdateAppWorker.FROM_MARKET, true);
-//                    String message = workStatus.getOutputData().getString(UpdateAppWorker.MESSAGE);
-//                    AlertDialog.Builder builder = new AlertDialog.Builder(MainActivity.this);
-//                    builder.setView(R.layout.dialog_update);
-//                    final AlertDialog dialog = builder.show();
-//                    dialog.findViewById(R.id.b_dialog_update_no).setOnClickListener(new View.OnClickListener() {
-//                        @Override
-//                        public void onClick(View view) {
-//                            dialog.cancel();
-//                        }
-//                    });
-//                    dialog.findViewById(R.id.b_dialog_update_yes).setOnClickListener(new View.OnClickListener() {
-//                        @Override
-//                        public void onClick(View view) {
-//                            if (fromMarket)
-//                                loadNewVersionFromMarket();
-//                            else
-//                                loadNewVersionFromGitHub();
-//                            dialog.cancel();
-//                        }
-//                    });
-//                } else if (isUserInitiative && workStatus != null && workStatus.getState().equals(State.FAILED)) {
-//                    log("work_update_failed");
-//                    isUpdate = false;
-//                    if (Utils.isNetworkAvailable(MainActivity.this)) {
-//                        log("app_version=" + workStatus.getOutputData().getString(VERSION_CODE_APP));
-//                        log("server_version=" + workStatus.getOutputData().getString(VERSION_CODE_SERVER));
-//                        Snackbar.make(iv_drawer_setting, R.string.update_it_is_no_new_version, Snackbar.LENGTH_SHORT).show();
-//                    } else {
-//                        Snackbar.make(iv_drawer_setting, R.string.all_error_internet, Snackbar.LENGTH_SHORT).show();
-//                    }
-//                }
-//            }
-//        });
+        });
     }
-
 }

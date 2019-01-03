@@ -25,7 +25,7 @@ import n7.ad2.utils.Utils;
 
 public class HeroFullActivity extends BaseActivity {
     public static final String HERO_NAME = "HERO_NAME";
-    public static final String HERO_FOLDER = "HERO_FOLDER";
+    public static final String HERO_CODE_NAME = "HERO_CODE_NAME";
     private Toolbar toolbar;
     private String heroFolder;
     private AppExecutors appExecutors;
@@ -73,7 +73,7 @@ public class HeroFullActivity extends BaseActivity {
             String heroName = intent.getStringExtra(HERO_NAME);
             toolbar.setTitle(heroName);
             setSupportActionBar(toolbar);
-            heroFolder = intent.getStringExtra(HERO_FOLDER);
+            heroFolder = intent.getStringExtra(HERO_CODE_NAME);
 
             final TypedArray styledAttributes = getTheme().obtainStyledAttributes(new int[]{R.attr.actionBarSize});
             final int mActionBarSize = (int) styledAttributes.getDimension(0, 40) / 2;
