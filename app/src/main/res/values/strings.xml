@@ -118,8 +118,8 @@
     <string name="fragment_guide_further_items">Items</string>
     <string name="fragment_guide_skill_builds">Skill builds</string>
     <string name="games_schedule">REMIND</string>
-    <string name="dialog_update_title">Available new level for app!</string>
-    <string name="dialog_update_message">Do not miss the opportunity to raise the characteristics! Update the app!</string>
+    <string name="dialog_update_title">New update found!</string>
+    <string name="dialog_update_message">Do not miss the opportunity to raise the level! Update the app!</string>
     <string name="dialog_tip_do_not_show">do not show again</string>
     <string name="game1_activity_tip">Please be careful because red square means abilities level!!!\nP.S. try to reach 50 points</string>
     <string name="game1_activity_tip_key" translatable="false">game1_activity_tip</string>

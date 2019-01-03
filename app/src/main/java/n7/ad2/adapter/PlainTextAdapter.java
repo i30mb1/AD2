@@ -28,7 +28,7 @@ public class PlainTextAdapter extends RecyclerView.Adapter<PlainTextAdapter.Hold
         }
     }
 
-    public void add(String item) {
+   public void add(String item) {
         list.add(item);
     }
 

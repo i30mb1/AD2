@@ -1,24 +1,16 @@
 package n7.ad2.adapter;
 
-import android.app.Activity;
 import android.arch.paging.PagedListAdapter;
-import android.content.Intent;
 import android.databinding.DataBindingUtil;
 import android.support.annotation.NonNull;
-import android.support.v4.app.ActivityOptionsCompat;
 import android.support.v7.util.DiffUtil;
 import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
-import android.view.View;
 import android.view.ViewGroup;
 
 import n7.ad2.R;
-import n7.ad2.activity.HeroFullActivity;
 import n7.ad2.databinding.ItemListHeroBinding;
 import n7.ad2.db.heroes.HeroModel;
-
-import static n7.ad2.activity.HeroFullActivity.HERO_CODE_NAME;
-import static n7.ad2.activity.HeroFullActivity.HERO_NAME;
 
 public class HeroesPagedListAdapter extends PagedListAdapter<HeroModel, HeroesPagedListAdapter.ViewHolder> {
 

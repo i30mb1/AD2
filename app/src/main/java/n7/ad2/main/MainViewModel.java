@@ -63,9 +63,11 @@ public class MainViewModel extends AndroidViewModel {
         int currentDay = PreferenceManager.getDefaultSharedPreferences(application).getInt(CURRENT_DAY_IN_APP, 0);
         int lastDayWhenCheckUpdate = PreferenceManager.getDefaultSharedPreferences(application).getInt(LAST_DAY_WHEN_CHECK_UPDATE, 0);
         if (currentDay != lastDayWhenCheckUpdate) {
-
+            logEvent.postValue("checking_for_update");
             startUpdate();
 //            PreferenceManager.getDefaultSharedPreferences(application).edit().putInt(LAST_DAY_WHEN_CHECK_UPDATE,currentDay).apply();
+        } else {
+            logEvent.postValue("update_scheduled");
         }
     }
 

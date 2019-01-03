@@ -206,7 +206,7 @@ public class MainActivity extends BaseActivity {
 //    }
 
     public void log(String text) {
-        if (adapter != null && adapter.getItemCount() > 0) {
+        if (adapter != null) {
             adapter.add(text);
             bindingDrawer.rv.scrollToPosition(adapter.getItemCount() - 1);
         }
@@ -570,7 +570,7 @@ public class MainActivity extends BaseActivity {
             return;
         }
         doubleBackToExitPressedOnce = true;
-        Snackbar.make(constraintLayout, R.string.main_press_again_to_exit, Snackbar.LENGTH_SHORT).show();
+        Snackbar.make(bindingActivity.getRoot(), R.string.main_press_again_to_exit, Snackbar.LENGTH_SHORT).show();
 
         new Handler().postDelayed(new Runnable() {
             @Override

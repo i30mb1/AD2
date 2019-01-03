@@ -49,6 +49,7 @@ import n7.ad2.worker.GuideWorker;
 
 import static n7.ad2.MySharedPreferences.PREMIUM;
 import static n7.ad2.activity.HeroFullActivity.HERO_NAME;
+import static n7.ad2.worker.GuideWorker.HERO_CODE_NAME;
 
 public class GuideFragment extends Fragment {
 

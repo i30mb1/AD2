@@ -69,8 +69,8 @@
     <string name="fragment_game_title_game1">сколько стоит это заклинание</string>
     <string name="fragment_guide_further_items">Предметы</string>
     <string name="fragment_guide_skill_builds">Выбор способностей</string>
-    <string name="dialog_update_title">Доступен новый уровень!</string>
-    <string name="dialog_update_message">Не пропусти возможность поднять характеристики! Обнови приложение!</string>
+    <string name="dialog_update_title">Найдено новое обновление!</string>
+    <string name="dialog_update_message">Не пропусти возможность поднять уровень приложению!</string>
     <string name="dialog_tip_do_not_show">не показывать снова</string>
     <string name="game1_activity_tip">Будьте внимательны, красные квадраты означают уровень прокачки способности!!!\nP.S. попробуйте набрать 50 очков</string>
     <string name="game1_hard_activity_tip">Этот мод даёт вам в 2 раза больше очков но и жопец горит в разы сильнее!\nP.S. Будьте осторожны!!\nP.S.S. всё равно пытайтесь набрать 50 очков</string>

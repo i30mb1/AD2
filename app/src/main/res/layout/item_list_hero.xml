@@ -10,46 +10,45 @@
             type="n7.ad2.db.heroes.HeroModel" />
 
     </data>
-    <!--android:clickable="true"-->
-    <!--android:focusable="true"-->
+
     <android.support.v7.widget.CardView
-        android:layout_width="wrap_content"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:foreground="?android:attr/selectableItemBackground"
         app:cardCornerRadius="0dp"
         app:cardElevation="2dp"
         app:cardUseCompatPadding="true">
 
         <FrameLayout
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content">
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
 
             <ImageView
+                android:foreground="?android:attr/selectableItemBackground"
                 android:id="@+id/iv"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:adjustViewBounds="true"
                 android:background="?colorAccent"
+                android:contentDescription="@string/setting_tell_friend"
+                android:onClick="@{(view)->hero.startHeroFull(view,hero)}"
                 android:paddingStart="2dp"
                 android:paddingEnd="0dp"
                 android:scaleType="centerCrop"
                 android:transitionName="iv"
-                android:onClick="@{(view)->hero.startHeroFull(view,hero)}"
                 app:url="@{hero.codeName}"
-                tools:src="@drawable/hero_placeholder"
                 tools:ignore="UnusedAttribute"
-                android:contentDescription="@string/setting_tell_friend" />
+                tools:src="@drawable/hero_placeholder" />
 
             <TextView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="2dp"
-                android:background="@drawable/gradient"
+                android:background="@drawable/gradient_left"
                 android:paddingStart="2dp"
                 android:paddingEnd="0dp"
-                android:textSize="12sp"
-                android:textStyle="bold"
                 android:text="@{hero.name}"
+                android:textSize="10sp"
+                android:textStyle="bold"
                 tools:text="@sample/heroes.json/data/name" />
 
         </FrameLayout>

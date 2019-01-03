@@ -88,6 +88,7 @@ public class SplashActivityViewModel extends AndroidViewModel {
         String currentDayInString = new SimpleDateFormat("DDD", Locale.US).format(Calendar.getInstance().getTime());
         currentDay = Integer.valueOf(currentDayInString);
         PreferenceManager.getDefaultSharedPreferences(application).edit().putInt(CURRENT_DAY_IN_APP, currentDay).apply();
+        logEvent.postValue("current_day=" + currentDayInString);
     }
 
     private void setupAppIcon() {

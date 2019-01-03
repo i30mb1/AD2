@@ -11,6 +11,12 @@ import com.squareup.picasso.Picasso;
 
 public class CustomsDataBinding {
 
+
+    @BindingAdapter("app:url")
+    public static void loadRes(ImageView view, int resId) {
+        Picasso.get().load(resId).into(view);
+    }
+
     @BindingAdapter("app:url")
     public static void loadUrl(ImageView view, String url) {
         Picasso.get()
@@ -19,12 +25,6 @@ public class CustomsDataBinding {
                 .placeholder(R.drawable.hero_placeholder)
                 .into(view);
     }
-
-    @BindingAdapter("app:url2")
-    public static void loadRes(ImageView view, int resId) {
-        Picasso.get().load(resId).into(view);
-    }
-
 
     @BindingAdapter("isBusy")
     public static void setItBusy(View view, boolean isBusy) {

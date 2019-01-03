@@ -42,7 +42,7 @@
             android:id="@+id/tv_message"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
-            android:gravity="start"
+            android:gravity="center"
             android:padding="4dp"
             android:text="@string/dialog_update_message"
             android:textAllCaps="true"
