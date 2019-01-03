@@ -2,7 +2,7 @@ package n7.ad2.utils;
 
 public class Constants {
 //    public static List<ModelStream> streamList = new_round ArrayList<>();
-    public static final int MILLIS_FOR_EXIT = 2000;
+
     public static final String TAG = "DebugDB";
     public static final String PATH_TO_SAVE_SOUND = "/Android/data/com.n7.i30mb1.ad2heroes/files/Ringtones/";
     public static final int MY_PERMISSIONS_REQUEST_WRITE_READ = 1;

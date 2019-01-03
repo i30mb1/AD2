@@ -45,8 +45,8 @@ public class SplashActivityViewModel extends AndroidViewModel {
 
     public static final String CURRENT_DAY_IN_APP = "CURRENT_DAY_IN_APP";
     public static final String FREE_PREMIUM_DAYS = "FREE_PREMIUM_DAYS";
-    private static final String FREE_PREMIUM_DAY_LAST_USE = "FREE_PREMIUM_DAY_LAST_USE";
-    private static final String LOAD_NEWS_DAY_LAST_USE = "LOAD_NEWS_DAY_LAST_USE";
+    private static final String LAST_DAY_WHEN_USED_PREMIUM = "LAST_DAY_WHEN_USED_PREMIUM";
+    private static final String LAST_DAY_WHEN_LOAD_NEWS = "LAST_DAY_WHEN_LOAD_NEWS";
     final SingleLiveEvent<Void> startMainActivity = new SingleLiveEvent<>();
     final SingleLiveEvent<String> logEvent = new SingleLiveEvent<>();
     public ObservableInt resId = new ObservableInt();
@@ -71,16 +71,16 @@ public class SplashActivityViewModel extends AndroidViewModel {
     }
 
     private void loadNews() {
-        int newsDayLastUse = PreferenceManager.getDefaultSharedPreferences(application).getInt(LOAD_NEWS_DAY_LAST_USE, 0);
-        if (currentDay != newsDayLastUse) {
+        int lastDayWhenLoadNews = PreferenceManager.getDefaultSharedPreferences(application).getInt(LAST_DAY_WHEN_LOAD_NEWS, 0);
+        if (currentDay != lastDayWhenLoadNews) {
             Data data = new Data.Builder().putBoolean(DELETE_TABLE, true).build();
             OneTimeWorkRequest worker = new OneTimeWorkRequest.Builder(SteamDbNewsWorker.class).setInputData(data).build();
             WorkManager.getInstance().enqueue(worker);
 
-            PreferenceManager.getDefaultSharedPreferences(application).edit().putInt(LOAD_NEWS_DAY_LAST_USE, currentDay).apply();
-            logEvent.postValue("start_loading_fresh_news");
+            PreferenceManager.getDefaultSharedPreferences(application).edit().putInt(LAST_DAY_WHEN_LOAD_NEWS, currentDay).apply();
+            logEvent.postValue("start_loading_news");
         } else {
-            logEvent.postValue("no_need_to_loading_fresh_news");
+            logEvent.postValue("no_need_to_loading_news");
         }
     }
 
@@ -195,7 +195,7 @@ public class SplashActivityViewModel extends AndroidViewModel {
                     if (inv.hasPurchase(ONCE_PER_MONTH_SUBSCRIPTION)) {
                         setPremium(true);
                     } else {
-                        int freePremiumDayLastUse = PreferenceManager.getDefaultSharedPreferences(application).getInt(FREE_PREMIUM_DAY_LAST_USE, 0);
+                        int freePremiumDayLastUse = PreferenceManager.getDefaultSharedPreferences(application).getInt(LAST_DAY_WHEN_USED_PREMIUM, 0);
                         if (currentDay == freePremiumDayLastUse) {
                             setPremium(true);
                         } else {
@@ -205,7 +205,7 @@ public class SplashActivityViewModel extends AndroidViewModel {
                             } else {
                                 freePremiumDays--;
                                 PreferenceManager.getDefaultSharedPreferences(application).edit().putInt(FREE_PREMIUM_DAYS, freePremiumDays).apply();
-                                PreferenceManager.getDefaultSharedPreferences(application).edit().putInt(FREE_PREMIUM_DAY_LAST_USE, currentDay).apply();
+                                PreferenceManager.getDefaultSharedPreferences(application).edit().putInt(LAST_DAY_WHEN_USED_PREMIUM, currentDay).apply();
                                 setPremium(true);
                             }
 

@@ -1,62 +1,43 @@
 <?xml version="1.0" encoding="utf-8"?>
-<android.support.v4.widget.DrawerLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
-    android:id="@+id/dl_activity_main"
-    android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    android:background="?colorPrimaryDark">
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
 
-    <android.support.design.widget.CoordinatorLayout
+    <data>
+
+        <variable
+            name="viewModel"
+            type="n7.ad2.main.MainViewModel" />
+    </data>
+
+    <android.support.v4.widget.DrawerLayout
+        android:id="@+id/drawer"
         android:layout_width="match_parent"
-        android:layout_height="match_parent">
+        android:layout_height="match_parent"
+        android:background="?colorPrimaryDark">
 
-        <android.support.design.widget.AppBarLayout
-            android:id="@+id/app_bar_layout"
+        <android.support.design.widget.CoordinatorLayout
             android:layout_width="match_parent"
-            android:layout_height="wrap_content">
+            android:layout_height="match_parent">
 
-            <include layout="@layout/toolbar" />
-        </android.support.design.widget.AppBarLayout>
+            <android.support.design.widget.AppBarLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
 
-        <FrameLayout
-            app:layout_behavior="@string/appbar_scrolling_view_behavior"
-            android:id="@+id/details"
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:background="?colorPrimary" />
+                <android.support.v7.widget.Toolbar
+                    android:id="@+id/toolbar"
+                    app:layout_scrollFlags="scroll|enterAlways"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:minHeight="?attr/actionBarSize" />
+            </android.support.design.widget.AppBarLayout>
 
-        <ImageView
-            android:id="@+id/iv_legion"
-            android:layout_width="wrap_content"
-            android:layout_height="300dp"
-            android:layout_gravity="bottom|center_horizontal"
-            android:visibility="invisible"
-            app:srcCompat="@drawable/legion" />
+            <FrameLayout
+                app:layout_behavior="@string/appbar_scrolling_view_behavior"
+                android:id="@+id/container"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="?colorPrimary" />
 
-        <TextView
-            android:id="@+id/tv_legion"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_gravity="bottom|center_horizontal"
-            android:layout_marginBottom="15dp"
-            android:background="?colorPrimaryDark"
-            android:fontFamily="@font/mass_effect_font"
-            android:padding="6dp"
-            android:text="Malfunction"
-            android:textAllCaps="true"
-            android:textColor="?android:textColorPrimary"
-            android:textSize="14sp"
-            android:textStyle="bold"
-            android:visibility="invisible" />
-
-        <ProgressBar
-            android:id="@+id/pb"
-            style="@style/Widget.AppCompat.ProgressBar.Horizontal"
-            android:layout_width="match_parent"
-            android:layout_height="4dp"
-            android:layout_gravity="bottom"
-            android:indeterminate="true"
-            android:scaleY="5"
-            android:visibility="invisible" />
-    </android.support.design.widget.CoordinatorLayout>
-</android.support.v4.widget.DrawerLayout>
+        </android.support.design.widget.CoordinatorLayout>
+    </android.support.v4.widget.DrawerLayout>
+</layout>

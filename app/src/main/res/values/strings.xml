@@ -1,12 +1,12 @@
 <resources>
     <string name="app_name" translatable="false">AD2</string>
     <string name="toolbar_search_hint">Search by name&#8230;</string>
-    <string name="drawer_heroes">Heroes</string>
-    <string name="drawer_items">Items</string>
-    <string name="drawer_news">News</string>
-    <string name="drawer_games">Tournaments</string>
-    <string name="drawer_game">Games</string>
-    <string name="drawer_stream">Streams</string>
+    <string name="heroes">Heroes</string>
+    <string name="items">Items</string>
+    <string name="news">News</string>
+    <string name="tournaments">Tournaments</string>
+    <string name="games">Games</string>
+    <string name="streams">Streams</string>
 
     <!--preferenses-->
     <string name="setting">Setting</string>

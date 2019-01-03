@@ -27,9 +27,9 @@ import android.view.animation.AnticipateOvershootInterpolator;
 
 import n7.ad2.R;
 import n7.ad2.activity.BaseActivity;
-import n7.ad2.activity.MainActivity;
 import n7.ad2.adapter.PlainTextAdapter;
 import n7.ad2.databinding.ActivitySplashStateNormalBinding;
+import n7.ad2.main.MainActivity;
 import n7.ad2.utils.UnscrollableLinearLayoutManager;
 
 import static n7.ad2.MySharedPreferences.ANIMATION_DURATION;

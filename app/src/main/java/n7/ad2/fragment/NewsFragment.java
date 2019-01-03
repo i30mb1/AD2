@@ -27,7 +27,7 @@ import androidx.work.WorkManager;
 import androidx.work.WorkStatus;
 import n7.ad2.MySharedPreferences;
 import n7.ad2.R;
-import n7.ad2.activity.MainActivity;
+import n7.ad2.main.MainActivity;
 import n7.ad2.adapter.NewsPagedListAdapter;
 import n7.ad2.db.news.SteamNews;
 import n7.ad2.viewModels.SteamNewsViewModel;
@@ -52,7 +52,7 @@ public class NewsFragment extends Fragment {
     public View onCreateView(@NonNull LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
         View view = inflater.inflate(R.layout.fragment_news, container, false);
 
-        progressBar = getActivity().findViewById(R.id.pb);
+//        progressBar = getActivity().findViewById(R.id.pb);
 
         setHasOptionsMenu(true);
         setRetainInstance(true);
@@ -63,8 +63,8 @@ public class NewsFragment extends Fragment {
 
     private void initPagedListAdapter(View view) {
         RecyclerView recyclerView = view.findViewById(R.id.rv_fragment_news);
-        final ImageView iv_legion = getActivity().findViewById(R.id.iv_legion);
-        final TextView tv_legion = getActivity().findViewById(R.id.tv_legion);
+//        final ImageView iv_legion = getActivity().findViewById(R.id.iv_legion);
+//        final TextView tv_legion = getActivity().findViewById(R.id.tv_legion);
 
         GridLayoutManager gridLayoutManager = new GridLayoutManager(view.getContext(), 1);
         recyclerView.setLayoutManager(gridLayoutManager);
@@ -80,35 +80,35 @@ public class NewsFragment extends Fragment {
             @Override
             public void onChanged(@Nullable PagedList<SteamNews> steamNews) {
                 newsPagedListAdapter.submitList(steamNews);
-                if (newsPagedListAdapter.getItemCount() == 0) {
-                    iv_legion.setVisibility(View.VISIBLE);
-                    tv_legion.setVisibility(View.VISIBLE);
-                } else {
-                    iv_legion.setVisibility(View.INVISIBLE);
-                    tv_legion.setVisibility(View.INVISIBLE);
-                }
+//                if (newsPagedListAdapter.getItemCount() == 0) {
+//                    iv_legion.setVisibility(View.VISIBLE);
+//                    tv_legion.setVisibility(View.VISIBLE);
+//                } else {
+//                    iv_legion.setVisibility(View.INVISIBLE);
+//                    tv_legion.setVisibility(View.INVISIBLE);
+//                }
             }
         });
 
-        WorkManager.getInstance().getStatusesForUniqueWork(SteamNewsWorker.UNIQUE_WORK).observe(this, new Observer<List<WorkStatus>>() {
-            @Override
-            public void onChanged(@Nullable List<WorkStatus> workStatuses) {
-                if (workStatuses != null && workStatuses.size() == 1) {
-                    if (workStatuses.get(0).getState() == State.RUNNING) {
-                        ((MainActivity) getActivity()).log("work_news_running");
-                        progressBar.setVisibility(View.VISIBLE);
-                    } else if (workStatuses.get(0).getState() == State.ENQUEUED) {
-                        ((MainActivity) getActivity()).log("work_news_enqueued");
-                        progressBar.setVisibility(View.VISIBLE);
-                    } else if (workStatuses.get(0).getState() == State.SUCCEEDED) {
-                        progressBar.setVisibility(View.GONE);
-                        ((MainActivity) getActivity()).log("work_news_succeeded");
-                    } else if (workStatuses.get(0).getState() == State.FAILED) {
-                        progressBar.setVisibility(View.GONE);
-                        ((MainActivity) getActivity()).log("work_news_failed");
-                    }
-                }
-            }
-        });
+//        WorkManager.getInstance().getStatusesForUniqueWork(SteamNewsWorker.UNIQUE_WORK).observe(this, new Observer<List<WorkStatus>>() {
+//            @Override
+//            public void onChanged(@Nullable List<WorkStatus> workStatuses) {
+//                if (workStatuses != null && workStatuses.size() == 1) {
+//                    if (workStatuses.get(0).getState() == State.RUNNING) {
+//                        ((MainActivity) getActivity()).log("work_news_running");
+//                        progressBar.setVisibility(View.VISIBLE);
+//                    } else if (workStatuses.get(0).getState() == State.ENQUEUED) {
+//                        ((MainActivity) getActivity()).log("work_news_enqueued");
+//                        progressBar.setVisibility(View.VISIBLE);
+//                    } else if (workStatuses.get(0).getState() == State.SUCCEEDED) {
+//                        progressBar.setVisibility(View.GONE);
+//                        ((MainActivity) getActivity()).log("work_news_succeeded");
+//                    } else if (workStatuses.get(0).getState() == State.FAILED) {
+//                        progressBar.setVisibility(View.GONE);
+//                        ((MainActivity) getActivity()).log("work_news_failed");
+//                    }
+//                }
+//            }
+//        });
     }
 }

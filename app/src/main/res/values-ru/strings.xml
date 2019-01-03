@@ -2,10 +2,10 @@
 <resources>
     <string name="hero_response_ringtone_set">Устанавливаем…</string>
     <string name="hero_personal_tip_manta_descr">показывает может ли выбранная способность работать у иллюзий</string>
-    <string name="drawer_news">Новости</string>
-    <string name="drawer_stream">Стримы</string>
-    <string name="drawer_heroes">Герои</string>
-    <string name="drawer_game">Игры</string>
+    <string name="news">Новости</string>
+    <string name="streams">Стримы</string>
+    <string name="heroes">Герои</string>
+    <string name="games">Игры</string>
     <string name="all_new_version">Новая версия</string>
     <string name="all_error_internet">Недоступно без интернета</string>
     <string name="all_check_update">Проверить обновление</string>
@@ -44,14 +44,14 @@
     <string name="item_hero_personal_description_facts">Факты</string>
     <string name="item_hero_personal_description_desc">Описание</string>
     <string name="item_hero_personal_description_tips">Советы</string>
-    <string name="drawer_items">Предметы</string>
+    <string name="items">Предметы</string>
     <string name="dialog_response_download">Скачать</string>
     <string name="dialog_response_set_ringtone">Поставить на рингтон</string>
     <string name="open_file">Открыть</string>
     <string name="hero_responses_fragment_download_first">Скачайте звук</string>
     <string name="hero_responses_sound_already_downloaded">Звук уже скачан</string>
     <string name="notification_game_title">Игра началась</string>
-    <string name="drawer_games">Турниры</string>
+    <string name="tournaments">Турниры</string>
     <string name="item_hero_personal_info_desc">Информация</string>
     <string name="item_hero_personal_trivia_desc">Факты</string>
     <string name="all_open_folder">Открыть</string>

@@ -24,7 +24,7 @@ import n7.ad2.purchaseUtils.Inventory;
 import n7.ad2.purchaseUtils.Purchase;
 
 import static n7.ad2.MySharedPreferences.PREMIUM;
-import static n7.ad2.activity.MainActivity.OPEN_SUBSCRIPTION;
+import static n7.ad2.main.MainActivity.OPEN_SUBSCRIPTION;
 
 public class SettingActivity extends BaseActivity implements IabBroadcastReceiver.IabBroadcastListener {
 

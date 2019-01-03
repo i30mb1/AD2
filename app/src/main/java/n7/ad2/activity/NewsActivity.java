@@ -10,14 +10,11 @@ import android.util.TypedValue;
 import android.view.MenuItem;
 import android.webkit.WebSettings;
 import android.webkit.WebView;
-import android.webkit.WebViewClient;
 
 import n7.ad2.R;
 import n7.ad2.db.news.SteamNews;
 import n7.ad2.db.news.SteamNewsDao;
 import n7.ad2.db.news.SteamNewsRoomDatabase;
-
-import static n7.ad2.worker.SteamDbNewsWorker.PAGE;
 
 
 public class NewsActivity extends BaseActivity {
@@ -53,7 +50,7 @@ public class NewsActivity extends BaseActivity {
 
     private void setToolbar() {
         Toolbar toolbar = findViewById(R.id.toolbar);
-        toolbar.setTitle(getString(R.string.drawer_news));
+        toolbar.setTitle(getString(R.string.news));
         setSupportActionBar(toolbar);
         if (getSupportActionBar() != null) {
             getSupportActionBar().setDisplayHomeAsUpEnabled(true);

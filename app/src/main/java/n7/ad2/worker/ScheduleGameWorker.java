@@ -11,7 +11,7 @@ import android.support.v4.app.NotificationCompat;
 
 import androidx.work.Worker;
 import n7.ad2.R;
-import n7.ad2.activity.MainActivity;
+import n7.ad2.main.MainActivity;
 
 import static android.content.Context.NOTIFICATION_SERVICE;
 

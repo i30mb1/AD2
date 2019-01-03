@@ -33,7 +33,7 @@
             </intent-filter>
         </activity>
         <activity
-            android:name=".activity.MainActivity"
+            android:name=".main.MainActivity"
             android:screenOrientation="portrait" />
         <activity
             android:name=".activity.LicensesActivity"
@@ -55,7 +55,7 @@
             android:screenOrientation="portrait" />
         <activity
             android:name=".activity.GamesPersonalActivity"
-            android:parentActivityName=".activity.MainActivity"
+            android:parentActivityName=".main.MainActivity"
             android:screenOrientation="portrait" />
 
         <activity android:name=".activity.LogInActivity" />

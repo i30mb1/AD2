@@ -25,7 +25,7 @@ public abstract class MySharedPreferences {
     public static final String IS_DAY_FOR_RATE = "IS_DAY_FOR_RATE";
     public static final String IS_DAY_FOR_DONATE = "IS_DAY_FOR_DONATE";
     public static final String IS_USED_5_DAYS_BONUS_FROM_GAME1 = "IS_USED_5_DAYS_BONUS_FROM_GAME1";
-    public static final String PREMIUM_ACCOUNTS = "PREMIUM_ACCOUNTS";
+
     public static final String TWITCH_STREAMS_TYPED = "TWITCH_STREAMS_TYPED";
     public static final String NEVER = "NEVER";
     public static final int FREE_COUNT = 10;

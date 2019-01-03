@@ -29,7 +29,7 @@ import androidx.work.WorkManager;
 import androidx.work.WorkStatus;
 import n7.ad2.MySharedPreferences;
 import n7.ad2.R;
-import n7.ad2.activity.MainActivity;
+import n7.ad2.main.MainActivity;
 import n7.ad2.adapter.GamesPagedListAdapter;
 import n7.ad2.db.games.Games;
 import n7.ad2.viewModels.GamesViewModel;
@@ -62,7 +62,7 @@ public class TournamentsFragment extends Fragment {
     public View onCreateView(@NonNull LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
         view = inflater.inflate(R.layout.fragment_tournaments, container, false);
 
-        progressBar = getActivity().findViewById(R.id.pb);
+//        progressBar = getActivity().findViewById(R.id.pb);
 
         setHasOptionsMenu(true);
         setRetainInstance(true);
@@ -82,8 +82,8 @@ public class TournamentsFragment extends Fragment {
     }
 
     private void initLegion() {
-        iv_legion = getActivity().findViewById(R.id.iv_legion);
-        tv_legion = getActivity().findViewById(R.id.tv_legion);
+//        iv_legion = getActivity().findViewById(R.id.iv_legion);
+//        tv_legion = getActivity().findViewById(R.id.tv_legion);
         iv_legion.setOnLongClickListener(new View.OnLongClickListener() {
             @Override
             public boolean onLongClick(View view) {

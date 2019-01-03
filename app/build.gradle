@@ -75,8 +75,6 @@ dependencies {
     implementation 'com.yarolegovich:sliding-root-nav:1.1.0'
     // cmd ipconfig основной шлюз + :8080 (как узнать страничку для браузера)
     debugImplementation 'com.amitshekhar.android:debug-db:1.0.1'
-    // Parallax
-    implementation 'com.schibsted.spain:parallax-layer-layout:1.1.1'
     // Lib
     implementation files('libs/twirc-0.2.jar')
     // Retrofit

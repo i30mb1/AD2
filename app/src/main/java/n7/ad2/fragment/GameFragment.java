@@ -2,7 +2,6 @@ package n7.ad2.fragment;
 
 
 import android.app.Activity;
-import android.arch.lifecycle.ViewModelProviders;
 import android.content.Intent;
 import android.content.SharedPreferences;
 import android.os.Build;
@@ -28,7 +27,7 @@ import n7.ad2.R;
 import n7.ad2.activity.Game1Activity;
 import n7.ad2.activity.Game1HardActivity;
 import n7.ad2.activity.Game2Persons1Activity;
-import n7.ad2.activity.MainActivity;
+import n7.ad2.main.MainActivity;
 
 import static n7.ad2.MySharedPreferences.IS_USED_5_DAYS_BONUS_FROM_GAME1;
 

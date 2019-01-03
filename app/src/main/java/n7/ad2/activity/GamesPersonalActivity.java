@@ -228,7 +228,7 @@ public class GamesPersonalActivity extends BaseActivity {
 
     private void setToolbar() {
         toolbar = findViewById(R.id.toolbar);
-        toolbar.setTitle(getString(R.string.drawer_games));
+        toolbar.setTitle(getString(R.string.tournaments));
         setSupportActionBar(toolbar);
         if (getSupportActionBar() != null) {
             getSupportActionBar().setDisplayHomeAsUpEnabled(true);
