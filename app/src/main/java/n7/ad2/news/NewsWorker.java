@@ -70,11 +70,11 @@ public class NewsWorker extends Worker {
                 steamNews.setTitle(title);
                 steamNews.setImageHref(imageHref);
 
-                list.add(steamNews);
+                list.addLast(steamNews);
 
-                Data data = new Data.Builder().putString(HREF, href).build();
-                OneTimeWorkRequest worker = new OneTimeWorkRequest.Builder(NewsSingleWorker.class).setInputData(data).build();
-                WorkManager.getInstance().enqueue(worker);
+//                Data data = new Data.Builder().putString(HREF, href).build();
+//                OneTimeWorkRequest worker = new OneTimeWorkRequest.Builder(NewsSingleWorker.class).setInputData(data).build();
+//                WorkManager.getInstance().enqueue(worker);
             }
 
             steamNewsDao.setNews(list);

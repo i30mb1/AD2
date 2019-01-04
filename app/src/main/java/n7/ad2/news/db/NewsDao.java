@@ -21,7 +21,7 @@ public interface NewsDao {
     @Query("DELETE FROM NewsModel")
     void deleteAll();
 
-    @Query("SELECT * FROM NewsModel ORDER BY date ASC")
+    @Query("SELECT * FROM NewsModel ORDER BY id")
     DataSource.Factory<Integer, NewsModel> getDataSourceNews();
 
     @Query("UPDATE NewsModel SET content=:s where href=:href")

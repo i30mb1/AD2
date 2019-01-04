@@ -60,7 +60,7 @@ public class HeroesFragment extends Fragment implements SearchView.OnQueryTextLi
         binding.rv.setLayoutManager(new GridLayoutManager(getContext(), 3));
         adapter = new HeroesPagedListAdapter(); // PagedListAdapter, заточенный под чтение данных из PagedList.
         binding.rv.setAdapter(adapter);
-        viewModel.getHeroesByFilter("").observe(this, new Observer<PagedList<HeroModel>>() {
+        viewModel.getHeroes().observe(this, new Observer<PagedList<HeroModel>>() {
             @Override
             public void onChanged(@Nullable PagedList<HeroModel> heroModels) {
                 adapter.submitList(heroModels);

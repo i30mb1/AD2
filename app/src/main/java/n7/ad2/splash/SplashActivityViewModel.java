@@ -85,7 +85,7 @@ public class SplashActivityViewModel extends AndroidViewModel {
 
     private void loadNews() {
         int lastDayWhenLoadNews = PreferenceManager.getDefaultSharedPreferences(application).getInt(LAST_DAY_WHEN_LOAD_NEWS, 0);
-        if (currentDay != lastDayWhenLoadNews) {
+//        if (currentDay != lastDayWhenLoadNews) {
             Data data = new Data.Builder().putBoolean(DELETE_TABLE, true).build();
             OneTimeWorkRequest worker = new OneTimeWorkRequest.Builder(NewsWorker.class)
                     .setInputData(data)
@@ -94,9 +94,9 @@ public class SplashActivityViewModel extends AndroidViewModel {
 
             PreferenceManager.getDefaultSharedPreferences(application).edit().putInt(LAST_DAY_WHEN_LOAD_NEWS, currentDay).apply();
             log("loading_news::true");
-        } else {
-            log("loading_news::not_today");
-        }
+//        } else {
+//            log("loading_news::not_today");
+//        }
     }
 
     private void log(String text) {

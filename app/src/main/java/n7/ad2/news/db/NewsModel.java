@@ -14,18 +14,25 @@ import static n7.ad2.activity.NewsActivity.HREF;
 @Entity
 public class NewsModel {
 
-    @PrimaryKey
+    @PrimaryKey(autoGenerate = true)
+    private int id;
     @NonNull
     private String href;
-    private long date;
     private String content;
     private String title;
     private String imageHref;
     @Ignore
     private Boolean withImage;
-
     public NewsModel(@NonNull String href) {
         this.href = href;
+    }
+
+    public int getId() {
+        return id;
+    }
+
+    public void setId(int id) {
+        this.id = id;
     }
 
     public Boolean getWithImage() {
@@ -43,14 +50,6 @@ public class NewsModel {
 
     public void setHref(@NonNull String href) {
         this.href = href;
-    }
-
-    public long getDate() {
-        return date;
-    }
-
-    public void setDate(long date) {
-        this.date = date;
     }
 
     public String getContent() {

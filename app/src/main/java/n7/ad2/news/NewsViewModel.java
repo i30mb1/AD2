@@ -31,7 +31,8 @@ public class NewsViewModel extends AndroidViewModel {
     private NewsDao newsDao;
     private LiveData<PagedList<NewsModel>> news;
     private int pageNews = 1;
-    public ObservableBoolean isLoading = new ObservableBoolean(false);
+    public ObservableBoolean isLoading = new ObservableBoolean(true);
+    private LiveData<List<WorkStatus>> status;
 
     public NewsViewModel(@NonNull Application application) {
         super(application);
@@ -47,7 +48,7 @@ public class NewsViewModel extends AndroidViewModel {
         DataSource.Factory<Integer, NewsModel> dataSource = newsDao.getDataSourceNews();
 
         PagedList.Config config = new PagedList.Config.Builder()
-                .setPageSize(5)
+                .setPageSize(20)
                 .setEnablePlaceholders(false)
                 .build();
 
@@ -57,14 +58,18 @@ public class NewsViewModel extends AndroidViewModel {
                 super.onItemAtEndLoaded(itemAtEnd);
                 pageNews++;
                 Data data = new Data.Builder().putInt(PAGE, pageNews).build();
-                OneTimeWorkRequest worker = new OneTimeWorkRequest.Builder(NewsWorker.class).setInputData(data).build();
+                OneTimeWorkRequest worker = new OneTimeWorkRequest.Builder(NewsWorker.class)
+                        .setInputData(data)
+                        //                .setInitialDelay(10, TimeUnit.MINUTES)
+                        .build();
                 WorkManager.getInstance().beginUniqueWork(NewsWorker.TAG, ExistingWorkPolicy.APPEND, worker).enqueue();
             }
         }).build();
     }
 
     private void setupWorkManagerListener() {
-        WorkManager.getInstance().getStatusesForUniqueWork(NewsWorker.TAG).observeForever(new Observer<List<WorkStatus>>() {
+        status = WorkManager.getInstance().getStatusesForUniqueWork(NewsWorker.TAG);
+        status.observeForever(new Observer<List<WorkStatus>>() {
             @Override
             public void onChanged(@Nullable List<WorkStatus> workStatuses) {
                 if (workStatuses != null) {

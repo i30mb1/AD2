@@ -23,7 +23,6 @@ import n7.ad2.items.db.ItemModel;
 
 public class ItemsFragment extends Fragment implements SearchView.OnQueryTextListener {
 
-    private View view;
     private ItemsViewModel viewModel;
     private ItemsPagedListAdapter adapter;
     private FragmentItemsBinding binding;
