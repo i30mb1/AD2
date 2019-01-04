@@ -9,6 +9,7 @@ import org.jsoup.select.Elements;
 
 import java.io.IOException;
 import java.util.LinkedList;
+import java.util.concurrent.TimeUnit;
 
 import androidx.work.Data;
 import androidx.work.OneTimeWorkRequest;
@@ -72,9 +73,9 @@ public class NewsWorker extends Worker {
 
                 list.addLast(steamNews);
 
-//                Data data = new Data.Builder().putString(HREF, href).build();
-//                OneTimeWorkRequest worker = new OneTimeWorkRequest.Builder(NewsSingleWorker.class).setInputData(data).build();
-//                WorkManager.getInstance().enqueue(worker);
+                Data data = new Data.Builder().putString(HREF, href).build();
+                OneTimeWorkRequest worker = new OneTimeWorkRequest.Builder(NewsSingleWorker.class).setInputData(data).setInitialDelay(10, TimeUnit.SECONDS).build();
+                WorkManager.getInstance().enqueue(worker);
             }
 
             steamNewsDao.setNews(list);

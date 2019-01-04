@@ -41,7 +41,7 @@ public class ItemsViewModel extends AndroidViewModel {
 
         PagedList.Config config = new PagedList.Config.Builder()
                 .setEnablePlaceholders(true)
-                .setPageSize(100)
+                .setPageSize(20)
                 .build();
 
         items = new LivePagedListBuilder<>(dataSource, config).build();
@@ -50,7 +50,7 @@ public class ItemsViewModel extends AndroidViewModel {
     LiveData<PagedList<ItemModel>> getItemsByFilter(String chars) {
         DataSource.Factory<Integer, ItemModel> dataSource = itemsDao.getDataSourceItemsFilter(chars);
         PagedList.Config config = new PagedList.Config.Builder()
-                .setPageSize(50)
+                .setPageSize(20)
                 .build();
         LiveData<PagedList<ItemModel>> items = new LivePagedListBuilder<>(dataSource, config).build();
         return items;

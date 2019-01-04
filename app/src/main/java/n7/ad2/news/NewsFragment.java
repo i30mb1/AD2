@@ -31,14 +31,21 @@ public class NewsFragment extends Fragment {
     @Override
     public View onCreateView(@NonNull LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
         binding = DataBindingUtil.inflate(inflater, R.layout.fragment_news, container, false);
+        return binding.getRoot();
+    }
+
+    @Override
+    public void onActivityCreated(@Nullable Bundle savedInstanceState) {
+        super.onActivityCreated(savedInstanceState);
 
         viewModel = ViewModelProviders.of(this).get(NewsViewModel.class);
+        binding.setViewModel(viewModel);
+        binding.executePendingBindings();
 
         getActivity().setTitle(R.string.news);
         setRetainInstance(true);
 
         setupRecyclerView();
-        return binding.getRoot();
     }
 
     private void setupRecyclerView() {
@@ -57,26 +64,6 @@ public class NewsFragment extends Fragment {
                 adapter.submitList(newsModels);
             }
         });
-
-//        WorkManager.getInstance().getStatusesForUniqueWork(NewsWorkerOld.TAG).observe(this, new Observer<List<WorkStatus>>() {
-//            @Override
-//            public void onChanged(@Nullable List<WorkStatus> workStatuses) {
-//                if (workStatuses != null && workStatuses.size() == 1) {
-//                    if (workStatuses.get(0).getState() == State.RUNNING) {
-//                        ((MainActivity) getActivity()).log("work_news_running");
-//                        progressBar.setVisibility(View.VISIBLE);
-//                    } else if (workStatuses.get(0).getState() == State.ENQUEUED) {
-//                        ((MainActivity) getActivity()).log("work_news_enqueued");
-//                        progressBar.setVisibility(View.VISIBLE);
-//                    } else if (workStatuses.get(0).getState() == State.SUCCEEDED) {
-//                        progressBar.setVisibility(View.GONE);
-//                        ((MainActivity) getActivity()).log("work_news_succeeded");
-//                    } else if (workStatuses.get(0).getState() == State.FAILED) {
-//                        progressBar.setVisibility(View.GONE);
-//                        ((MainActivity) getActivity()).log("work_news_failed");
-//                    }
-//                }
-//            }
-//        });
     }
+
 }

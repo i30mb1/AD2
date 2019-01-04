@@ -17,12 +17,12 @@ public class HeroesPagedListAdapter extends PagedListAdapter<HeroModel, HeroesPa
     private static final DiffUtil.ItemCallback<HeroModel> DIFF_CALLBACK = new DiffUtil.ItemCallback<HeroModel>() {
         @Override
         public boolean areItemsTheSame(@NonNull HeroModel oldItem, @NonNull HeroModel newItem) {
-            return oldItem.getId() == newItem.getId();
+            return true;
         }
 
         @Override
         public boolean areContentsTheSame(@NonNull HeroModel oldItem, @NonNull HeroModel newItem) {
-            return oldItem.getName().equals(newItem.getName());
+            return oldItem.getId() == newItem.getId();
         }
     };
     private LayoutInflater inflater;

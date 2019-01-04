@@ -34,6 +34,8 @@
                 android:paddingEnd="0dp"
                 android:scaleType="centerCrop"
                 android:transitionName="iv"
+                srcHolder="@{@drawable/hero_placeholder}"
+                srcError="@{@drawable/hero_placeholder_error}"
                 srcPath='@{"file:///android_asset/heroes/" + hero.codeName + "/full.webp"}'
                 tools:ignore="UnusedAttribute"
                 tools:src="@drawable/hero_placeholder" />

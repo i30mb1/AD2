@@ -46,6 +46,7 @@ public class SplashActivity extends BaseActivity {
         viewModel = ViewModelProviders.of(this).get(SplashActivityViewModel.class);
         binding = DataBindingUtil.setContentView(this, R.layout.activity_splash_state_normal);
         binding.setViewModel(viewModel);
+        binding.executePendingBindings();
 
         setupRecyclerView();
         setupAnimationOnSplashLogo();

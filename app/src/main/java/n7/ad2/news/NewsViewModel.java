@@ -11,8 +11,6 @@ import android.databinding.ObservableBoolean;
 import android.support.annotation.NonNull;
 import android.support.annotation.Nullable;
 
-import java.util.List;
-
 import androidx.work.Data;
 import androidx.work.ExistingWorkPolicy;
 import androidx.work.OneTimeWorkRequest;
@@ -27,19 +25,17 @@ import static n7.ad2.news.NewsWorker.PAGE;
 
 public class NewsViewModel extends AndroidViewModel {
 
+    public ObservableBoolean isLoading = new ObservableBoolean(false);
     private Application application;
     private NewsDao newsDao;
     private LiveData<PagedList<NewsModel>> news;
     private int pageNews = 1;
-    public ObservableBoolean isLoading = new ObservableBoolean(true);
-    private LiveData<List<WorkStatus>> status;
 
     public NewsViewModel(@NonNull Application application) {
         super(application);
         this.application = application;
 
         setupLiveDataNews();
-        setupWorkManagerListener();
     }
 
     private void setupLiveDataNews() {
@@ -58,29 +54,19 @@ public class NewsViewModel extends AndroidViewModel {
                 super.onItemAtEndLoaded(itemAtEnd);
                 pageNews++;
                 Data data = new Data.Builder().putInt(PAGE, pageNews).build();
-                OneTimeWorkRequest worker = new OneTimeWorkRequest.Builder(NewsWorker.class)
-                        .setInputData(data)
-                        //                .setInitialDelay(10, TimeUnit.MINUTES)
-                        .build();
+                final OneTimeWorkRequest worker = new OneTimeWorkRequest.Builder(NewsWorker.class).setInputData(data).build();
                 WorkManager.getInstance().beginUniqueWork(NewsWorker.TAG, ExistingWorkPolicy.APPEND, worker).enqueue();
+                WorkManager.getInstance().getStatusById(worker.getId()).observeForever(new Observer<WorkStatus>() {
+                    @Override
+                    public void onChanged(@Nullable WorkStatus workStatus) {
+                        if (workStatus == null) return;
+                        if (workStatus.getState() == State.ENQUEUED) isLoading.set(true);
+                        if (workStatus.getState() == State.SUCCEEDED) isLoading.set(false);
+                        if (workStatus.getState() == State.FAILED) isLoading.set(false);
+                    }
+                });
             }
         }).build();
-    }
-
-    private void setupWorkManagerListener() {
-        status = WorkManager.getInstance().getStatusesForUniqueWork(NewsWorker.TAG);
-        status.observeForever(new Observer<List<WorkStatus>>() {
-            @Override
-            public void onChanged(@Nullable List<WorkStatus> workStatuses) {
-                if (workStatuses != null) {
-                    for (WorkStatus workStatus : workStatuses) {
-                        if (workStatus.getState() == State.RUNNING) {
-                            isLoading.set(true);
-                        }
-                    }
-                }
-            }
-        });
     }
 
     public LiveData<PagedList<NewsModel>> getNews() {

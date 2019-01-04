@@ -195,13 +195,13 @@ public class MainActivity extends BaseActivity {
                 ft.replace(bindingActivity.container.getId(), new GameFragment()).commit();
                 break;
         }
-        if (closeDrawer)
-            new Handler().postDelayed(new Runnable() {
-                @Override
-                public void run() {
-                    drawable.closeMenu();
-                }
-            }, 50);
+//        if (closeDrawer)
+//            new Handler().postDelayed(new Runnable() {
+//                @Override
+//                public void run() {
+//                    drawable.closeMenu();
+//                }
+//            }, 50);
     }
 
     private void setupSecretActivity() {

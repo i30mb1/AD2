@@ -42,6 +42,12 @@ public class ItemsFragment extends Fragment implements SearchView.OnQueryTextLis
     @Override
     public View onCreateView(@NonNull LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
         binding = DataBindingUtil.inflate(inflater, R.layout.fragment_items, container, false);
+        return binding.getRoot();
+    }
+
+    @Override
+    public void onActivityCreated(@Nullable Bundle savedInstanceState) {
+        super.onActivityCreated(savedInstanceState);
 
         viewModel = ViewModelProviders.of(this).get(ItemsViewModel.class);
         getActivity().setTitle(R.string.items);
@@ -49,8 +55,6 @@ public class ItemsFragment extends Fragment implements SearchView.OnQueryTextLis
         setHasOptionsMenu(true);
 
         setupRecyclerView();
-
-        return binding.getRoot();
     }
 
     private void setupRecyclerView() {

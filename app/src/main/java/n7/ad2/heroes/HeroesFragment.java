@@ -18,9 +18,15 @@ import android.view.MenuItem;
 import android.view.View;
 import android.view.ViewGroup;
 
+import java.util.List;
+
+import androidx.work.State;
+import androidx.work.WorkManager;
+import androidx.work.WorkStatus;
 import n7.ad2.R;
 import n7.ad2.databinding.FragmentHeroesBinding;
 import n7.ad2.heroes.db.HeroModel;
+import n7.ad2.news.NewsWorker;
 
 
 public class HeroesFragment extends Fragment implements SearchView.OnQueryTextListener {
@@ -44,6 +50,12 @@ public class HeroesFragment extends Fragment implements SearchView.OnQueryTextLi
     @Override
     public View onCreateView(@NonNull LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
         binding = DataBindingUtil.inflate(inflater, R.layout.fragment_heroes, container, false);
+        return binding.getRoot();
+    }
+
+    @Override
+    public void onActivityCreated(@Nullable Bundle savedInstanceState) {
+        super.onActivityCreated(savedInstanceState);
 
         getActivity().setTitle(R.string.heroes);
         setRetainInstance(true);//фрагмент не уничтожается а передаётся новому активити (пропускает методы onCreate&onDestroy)
@@ -52,7 +64,6 @@ public class HeroesFragment extends Fragment implements SearchView.OnQueryTextLi
         viewModel = ViewModelProviders.of(this).get(HeroesViewModel.class);
 
         initPagedListAdapter();
-        return binding.getRoot();
     }
 
     private void initPagedListAdapter() {
@@ -60,7 +71,7 @@ public class HeroesFragment extends Fragment implements SearchView.OnQueryTextLi
         binding.rv.setLayoutManager(new GridLayoutManager(getContext(), 3));
         adapter = new HeroesPagedListAdapter(); // PagedListAdapter, заточенный под чтение данных из PagedList.
         binding.rv.setAdapter(adapter);
-        viewModel.getHeroes().observe(this, new Observer<PagedList<HeroModel>>() {
+        viewModel.getHeroesByFilter("").observe(this, new Observer<PagedList<HeroModel>>() {
             @Override
             public void onChanged(@Nullable PagedList<HeroModel> heroModels) {
                 adapter.submitList(heroModels);

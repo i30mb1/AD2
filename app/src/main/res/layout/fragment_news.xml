@@ -15,7 +15,7 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:background="?colorPrimary"
-        app:layout_behavior="@string/appbar_scrolling_view_behavior">
+        android:fitsSystemWindows="true">
 
         <android.support.v7.widget.RecyclerView
             android:id="@+id/rv"
@@ -26,21 +26,15 @@
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent"
             tools:listitem="@layout/item_list_news" />
-        <ProgressBar
-            style="@style/Widget.AppCompat.ProgressBar.Horizontal"
-            android:layout_width="match_parent"
-            android:layout_height="4dp"
-            android:indeterminate="true"
-            android:scaleY="5"
-            android:visibility="visible" />
 
         <ProgressBar
+            android:id="@+id/pb"
             style="@style/Widget.AppCompat.ProgressBar.Horizontal"
             android:layout_width="match_parent"
             android:layout_height="4dp"
             android:indeterminate="true"
             android:scaleY="5"
-            android:visibility="visible"
-            app:layout_constraintBottom_toBottomOf="parent" />
+            android:visibility="@{viewModel.isLoading?View.VISIBLE:View.GONE}" />
+
     </android.support.constraint.ConstraintLayout>
 </layout>
