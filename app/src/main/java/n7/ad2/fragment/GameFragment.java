@@ -61,6 +61,7 @@ public class GameFragment extends Fragment {
     public View onCreateView(@NonNull LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
         View view = inflater.inflate(R.layout.fragment_game, container, false);
 
+        getActivity().setTitle(R.string.games);
         setHasOptionsMenu(true);
         sp = MySharedPreferences.getSharedPreferences(getContext());
 

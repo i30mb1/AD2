@@ -6,6 +6,7 @@ import android.arch.lifecycle.ViewModelProviders;
 import android.arch.paging.PagedList;
 import android.databinding.DataBindingUtil;
 import android.os.Bundle;
+import android.support.annotation.NonNull;
 import android.support.annotation.Nullable;
 import android.support.v4.app.Fragment;
 import android.support.v7.widget.GridLayoutManager;
@@ -36,6 +37,8 @@ public class HeroesFragment extends Fragment implements SearchView.OnQueryTextLi
 
     @Override
     public void onCreateOptionsMenu(Menu menu, MenuInflater inflater) {
+        menu.clear();
+        inflater.inflate(R.menu.menu_search, menu);
         super.onCreateOptionsMenu(menu, inflater);
         MenuItem searchHero = menu.findItem(R.id.action_search);
         SearchView searchView = (SearchView) searchHero.getActionView();
@@ -43,9 +46,10 @@ public class HeroesFragment extends Fragment implements SearchView.OnQueryTextLi
     }
 
     @Override
-    public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
+    public View onCreateView(@NonNull LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
         binding = DataBindingUtil.inflate(inflater, R.layout.fragment_heroes, container, false);
 
+        getActivity().setTitle(R.string.heroes);
         setRetainInstance(true);//фрагмент не уничтожается а передаётся новому активити (пропускает методы onCreate&onDestroy)
         setHasOptionsMenu(true);//вызов метода onCreateOptionsMenu в фрагменте
 

@@ -62,7 +62,7 @@
     <string name="all_new_version">new version</string>
     <string name="all_check_update">check update</string>
     <string name="all_error_internet">Can\'t loading without internet connection</string>
-    <string name="update_it_is_no_new_version">you have last version of app</string>
+    <string name="update_ok">no need to update</string>
     <string name="main_press_again_to_exit">press again to exit</string>
     <string name="hero_info">info</string>
     <string name="hero_sound">sounds</string>

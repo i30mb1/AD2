@@ -27,6 +27,7 @@ import androidx.work.WorkManager;
 import n7.ad2.MySharedPreferences;
 import n7.ad2.R;
 import n7.ad2.SingleLiveEvent;
+import n7.ad2.adapter.PlainTextAdapter;
 import n7.ad2.db.heroes.HeroesRoomDatabase;
 import n7.ad2.db.items.ItemsRoomDatabase;
 import n7.ad2.purchaseUtils.IabHelper;
@@ -48,26 +49,35 @@ public class SplashActivityViewModel extends AndroidViewModel {
     private static final String LAST_DAY_WHEN_USED_PREMIUM = "LAST_DAY_WHEN_USED_PREMIUM";
     private static final String LAST_DAY_WHEN_LOAD_NEWS = "LAST_DAY_WHEN_LOAD_NEWS";
     final SingleLiveEvent<Void> startMainActivity = new SingleLiveEvent<>();
-    final SingleLiveEvent<String> logEvent = new SingleLiveEvent<>();
     public ObservableInt resId = new ObservableInt();
+    public ObservableInt scrollTo = new ObservableInt();
     private Application application;
     private Executor diskIO;
     private int currentDay;
+    private PlainTextAdapter adapter;
 
     public SplashActivityViewModel(@NonNull Application application) {
         super(application);
         this.application = application;
         this.diskIO = Executors.newSingleThreadExecutor();
 
+        setupAdapter();
         setupCurrentDay();
-
         setupAppIcon();
         setupSupportJsoupForOldDevices();
         setupFirebaseAnalytics();
         setupPurchaseHelper();
 
-        initialLoadForDB();
+        initialLoadDatabase();
         loadNews();
+    }
+
+    private void setupAdapter() {
+        adapter = new PlainTextAdapter();
+    }
+
+    public PlainTextAdapter getAdapter() {
+        return adapter;
     }
 
     private void loadNews() {
@@ -78,17 +88,22 @@ public class SplashActivityViewModel extends AndroidViewModel {
             WorkManager.getInstance().enqueue(worker);
 
             PreferenceManager.getDefaultSharedPreferences(application).edit().putInt(LAST_DAY_WHEN_LOAD_NEWS, currentDay).apply();
-            logEvent.postValue("start_loading_news");
+            log("loading_news::true");
         } else {
-            logEvent.postValue("no_need_to_loading_news");
+            log("loading_news::not_today");
         }
+    }
+
+    private void log(String text) {
+        adapter.add(text);
+        scrollTo.set(adapter.getItemCount()-1);
     }
 
     private void setupCurrentDay() {
         String currentDayInString = new SimpleDateFormat("DDD", Locale.US).format(Calendar.getInstance().getTime());
         currentDay = Integer.valueOf(currentDayInString);
         PreferenceManager.getDefaultSharedPreferences(application).edit().putInt(CURRENT_DAY_IN_APP, currentDay).apply();
-        logEvent.postValue("current_day=" + currentDayInString);
+        log("current_day::" + currentDayInString);
     }
 
     private void setupAppIcon() {
@@ -104,16 +119,14 @@ public class SplashActivityViewModel extends AndroidViewModel {
                 resId.set(R.drawable.icon_dark);
                 break;
         }
-        logEvent.setValue("app_icon_loaded");
     }
 
-    private void initialLoadForDB() {
+    private void initialLoadDatabase() {
         diskIO.execute(new Runnable() {
             @Override
             public void run() {
                 HeroesRoomDatabase.getDatabase(application, diskIO).heroesDao().getAll();
                 ItemsRoomDatabase.getDatabase(application, diskIO).itemsDao().getAll();
-                logEvent.postValue("database_loaded");
                 try {
                     Thread.sleep(6000);
                 } catch (InterruptedException e) {
@@ -206,7 +219,7 @@ public class SplashActivityViewModel extends AndroidViewModel {
 
     private void setPremium(boolean isPremium) {
         MySharedPreferences.getSharedPreferences(application).edit().putBoolean(PREMIUM, isPremium).apply();
-        logEvent.postValue("have_premium = " + isPremium);
+        log("premium_status::" + isPremium);
     }
 
     private void setupFirebaseAnalytics() {

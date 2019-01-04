@@ -23,7 +23,7 @@
     <string name="hero_info">Инфа</string>
     <string name="toolbar_search_hint">Поиск по имени…</string>
     <string name="hero_sound">Реплики</string>
-    <string name="update_it_is_no_new_version">у вас самая новая версия</string>
+    <string name="update_ok">обновление не требуется</string>
     <string name="fragment_guide_starting_items">Начальные предметы</string>
     <string name="fragment_guide_best_versus">Силён против</string>
     <string name="fragment_guide_worst_versus">Слаб против</string>

@@ -54,6 +54,7 @@ public class NewsFragment extends Fragment {
 
 //        progressBar = getActivity().findViewById(R.id.pb);
 
+        getActivity().setTitle(R.string.news);
         setHasOptionsMenu(true);
         setRetainInstance(true);
 

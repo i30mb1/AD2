@@ -7,20 +7,18 @@ import android.arch.lifecycle.Observer;
 import android.arch.lifecycle.ViewModelProviders;
 import android.content.Intent;
 import android.databinding.DataBindingUtil;
-import android.os.Build;
 import android.os.Bundle;
 import android.os.Handler;
 import android.preference.PreferenceManager;
 import android.support.annotation.Nullable;
-import android.support.annotation.RequiresApi;
 import android.support.constraint.ConstraintLayout;
 import android.support.constraint.ConstraintSet;
+import android.support.transition.ChangeBounds;
+import android.support.transition.Fade;
+import android.support.transition.Transition;
+import android.support.transition.TransitionManager;
+import android.support.transition.TransitionSet;
 import android.support.v7.widget.LinearLayoutManager;
-import android.transition.ChangeBounds;
-import android.transition.Fade;
-import android.transition.Transition;
-import android.transition.TransitionManager;
-import android.transition.TransitionSet;
 import android.view.View;
 import android.view.ViewGroup;
 import android.view.animation.AnticipateOvershootInterpolator;
@@ -36,8 +34,8 @@ import static n7.ad2.MySharedPreferences.ANIMATION_DURATION;
 
 public class SplashActivity extends BaseActivity {
 
-    private PlainTextAdapter adapter;
     private ActivitySplashStateNormalBinding binding;
+    private SplashActivityViewModel viewModel;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -45,12 +43,12 @@ public class SplashActivity extends BaseActivity {
         super.onCreate(savedInstanceState);
         PreferenceManager.setDefaultValues(this, R.xml.preferences, false);
 
-        SplashActivityViewModel viewModel = ViewModelProviders.of(this).get(SplashActivityViewModel.class);
+        viewModel = ViewModelProviders.of(this).get(SplashActivityViewModel.class);
         binding = DataBindingUtil.setContentView(this, R.layout.activity_splash_state_normal);
         binding.setViewModel(viewModel);
 
         setupRecyclerView();
-        initAnimationOnSplashLogo();
+        setupAnimationOnSplashLogo();
 
         startPulsing();
 
@@ -62,16 +60,9 @@ public class SplashActivity extends BaseActivity {
                 }
             }
         });
-        viewModel.logEvent.observe(this, new Observer<String>() {
-            @Override
-            public void onChanged(@Nullable String s) {
-                adapter.add(s);
-                binding.rv.scrollToPosition(adapter.getItemCount() - 1);
-            }
-        });
     }
 
-    private void initAnimationOnSplashLogo() {
+    private void setupAnimationOnSplashLogo() {
         binding.ivLogo.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -81,17 +72,13 @@ public class SplashActivity extends BaseActivity {
     }
 
     private void startNewActivityWithAnimation() {
-        if (android.os.Build.VERSION.SDK_INT >= android.os.Build.VERSION_CODES.KITKAT) {
-            new Handler().postDelayed(new Runnable() {
-                @Override
-                public void run() {
-                    startNewActivity();
-                }
-            }, ANIMATION_DURATION);
-            startConstraintAnimation();
-        } else {
-            startNewActivity();
-        }
+        new Handler().postDelayed(new Runnable() {
+            @Override
+            public void run() {
+                startNewActivity();
+            }
+        }, ANIMATION_DURATION);
+        startConstraintAnimation();
     }
 
     private void startNewActivity() {
@@ -110,27 +97,25 @@ public class SplashActivity extends BaseActivity {
         scaleDown.start();
     }
 
-    @RequiresApi(api = Build.VERSION_CODES.KITKAT)
     private void startConstraintAnimation() {
         //содержит информацию о всех состояних view
         ConstraintSet constraintSet = new ConstraintSet();
         constraintSet.clone(this, R.layout.activity_splash_state_invisible);
 
         TransitionSet transitionSet = new TransitionSet();
-//        Transition slide = new Slide(Gravity.LEFT); //появление из любого края активити
+//        Transition slide = new Slide(Gravity.START); //появление из любого края активити
 //        Transition explode = new Explode(); //почти как Slide но может выбигать из любой точки
-//            Transition changeImageTransform = new ChangeImageTransform();//анимирует матричный переход изображений внутри ImageView
+//        Transition changeImageTransform = new ChangeImageTransform();//анимирует матричный переход изображений внутри ImageView
         Transition fade = new Fade().setDuration(ANIMATION_DURATION).addTarget(binding.ivLogo);
         Transition changeBoundsIV = new ChangeBounds().setDuration(ANIMATION_DURATION).setInterpolator(new AnticipateOvershootInterpolator(2.0f)).addTarget(binding.ivLogo);
         transitionSet.addTransition(fade).addTransition(changeBoundsIV);
         transitionSet.setOrdering(TransitionSet.ORDERING_TOGETHER);
         TransitionManager.beginDelayedTransition((ViewGroup) binding.getRoot(), transitionSet);// вызываем метод, говорящий о том, что мы хотим анимировать следующие изменения внутри constraintLayout
         constraintSet.applyTo((ConstraintLayout) binding.getRoot());// применяем изменения
-
     }
 
     private void setupRecyclerView() {
-        adapter = new PlainTextAdapter();
+        PlainTextAdapter adapter = viewModel.getAdapter();
         binding.rv.setAdapter(adapter);
         binding.rv.setLayoutManager(new UnscrollableLinearLayoutManager(this, LinearLayoutManager.VERTICAL, false));
     }

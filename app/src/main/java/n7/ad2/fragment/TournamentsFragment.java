@@ -64,6 +64,7 @@ public class TournamentsFragment extends Fragment {
 
 //        progressBar = getActivity().findViewById(R.id.pb);
 
+        getActivity().setTitle(R.string.tournaments);
         setHasOptionsMenu(true);
         setRetainInstance(true);
 

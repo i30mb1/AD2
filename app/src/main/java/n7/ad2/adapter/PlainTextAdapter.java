@@ -4,10 +4,7 @@ import android.databinding.DataBindingUtil;
 import android.support.annotation.NonNull;
 import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
-import android.view.View;
 import android.view.ViewGroup;
-import android.widget.LinearLayout;
-import android.widget.TextView;
 
 import java.util.LinkedList;
 
@@ -16,20 +13,20 @@ import n7.ad2.databinding.ItemListPlainAdapterBinding;
 
 public class PlainTextAdapter extends RecyclerView.Adapter<PlainTextAdapter.Holder> {
 
-
     private LayoutInflater inflater;
     private LinkedList<String> list = new LinkedList<>();
 
     @Override
     public void onBindViewHolder(@NonNull Holder holder, int position) {
         String name = list.get(position);
-        if (name != null) {
-            holder.bindTo(name, position);
-        }
+        holder.binding.tv.setText(name);
+        float alpha = (1F - (getItemCount() - position) * 0.075F);//для 15 элементов
+        holder.binding.tv.setAlpha(alpha);
     }
 
-   public void add(String item) {
+    public void add(String item) {
         list.add(item);
+//        notifyItemInserted(list.size() - 1);
     }
 
     @NonNull
@@ -58,11 +55,5 @@ public class PlainTextAdapter extends RecyclerView.Adapter<PlainTextAdapter.Hold
             this.binding = binding;
         }
 
-        void bindTo(String name, int position) {
-            binding.tv.setText(String.format("...%s", name));
-//        float alpha = (1F - (getItemCount() - position)* 0.1F);//для 10 элементов
-            float alpha = (1F - (getItemCount() - position) * 0.075F);//для 15 элементов
-            binding.getRoot().setAlpha(alpha);
-        }
     }
 }

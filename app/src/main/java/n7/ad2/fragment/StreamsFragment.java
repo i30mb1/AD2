@@ -55,6 +55,8 @@ public class StreamsFragment extends Fragment {
     @Override
     public View onCreateView(@NonNull LayoutInflater inflater, ViewGroup container, final Bundle savedInstanceState) {
         View view = inflater.inflate(R.layout.fragment_streams, container, false);
+
+        getActivity().setTitle(R.string.streams);
         isPremium = MySharedPreferences.getSharedPreferences(getContext()).getBoolean(MySharedPreferences.PREMIUM, false);
 
         initRecyclerView(view);

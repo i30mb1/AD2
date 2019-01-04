@@ -24,7 +24,7 @@ import n7.ad2.purchaseUtils.Inventory;
 import n7.ad2.purchaseUtils.Purchase;
 
 import static n7.ad2.MySharedPreferences.PREMIUM;
-import static n7.ad2.main.MainActivity.OPEN_SUBSCRIPTION;
+import static n7.ad2.main.MainActivity.DIALOG_SUBSCRIPTION_OPEN;
 
 public class SettingActivity extends BaseActivity implements IabBroadcastReceiver.IabBroadcastListener {
 
@@ -147,7 +147,7 @@ public class SettingActivity extends BaseActivity implements IabBroadcastReceive
     }
 
     private void checkIfNeedShowSubscription() {
-        if (getIntent().getBooleanExtra(OPEN_SUBSCRIPTION, false)) {
+        if (getIntent().getBooleanExtra(DIALOG_SUBSCRIPTION_OPEN, false)) {
             showDialogSubscription();
         }
     }

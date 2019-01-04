@@ -2,15 +2,15 @@ package n7.ad2.retrofit.update;
 
 public class Update {
 
-    private int serverVersion;
+    private int versionCode;
     private Message message;
 
-    public int getServerVersion() {
-        return serverVersion;
+    public int getVersionCode() {
+        return versionCode;
     }
 
-    public void setServerVersion(int serverVersion) {
-        this.serverVersion = serverVersion;
+    public void setVersionCode(int versionCode) {
+        this.versionCode = versionCode;
     }
 
     public Message getMessage() {

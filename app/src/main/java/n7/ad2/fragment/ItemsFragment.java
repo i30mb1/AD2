@@ -46,6 +46,7 @@ public class ItemsFragment extends Fragment implements SearchView.OnQueryTextLis
     public View onCreateView(@NonNull LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
         view = inflater.inflate(R.layout.fragment_items, container, false);
 
+        getActivity().setTitle(R.string.items);
         setRetainInstance(true);//фрагмент не уничтожается а передаётся новому активити
         setHasOptionsMenu(true);//вызов метода onCreateOptionsMenu в фрагменте
         itemsViewModel = ViewModelProviders.of(this).get(ItemsViewModel.class);

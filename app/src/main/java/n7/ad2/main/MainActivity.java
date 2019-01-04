@@ -3,11 +3,9 @@ package n7.ad2.main;
 import android.app.DownloadManager;
 import android.arch.lifecycle.Observer;
 import android.arch.lifecycle.ViewModelProviders;
-import android.content.BroadcastReceiver;
 import android.content.Context;
 import android.content.DialogInterface;
 import android.content.Intent;
-import android.content.IntentFilter;
 import android.databinding.DataBindingUtil;
 import android.databinding.ObservableInt;
 import android.net.Uri;
@@ -20,14 +18,19 @@ import android.support.annotation.StringRes;
 import android.support.constraint.ConstraintLayout;
 import android.support.constraint.ConstraintSet;
 import android.support.design.widget.Snackbar;
-import android.support.v4.app.Fragment;
+import android.support.transition.ChangeBounds;
+import android.support.transition.Transition;
+import android.support.transition.TransitionManager;
 import android.support.v4.app.FragmentTransaction;
 import android.support.v7.app.AlertDialog;
 import android.support.v7.widget.LinearLayoutManager;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.view.ViewGroup;
+import android.view.animation.AccelerateDecelerateInterpolator;
 import android.view.inputmethod.InputMethodManager;
 
+import com.google.firebase.analytics.FirebaseAnalytics;
 import com.yarolegovich.slidingrootnav.SlidingRootNav;
 import com.yarolegovich.slidingrootnav.SlidingRootNavBuilder;
 import com.yarolegovich.slidingrootnav.callback.DragStateListener;
@@ -42,11 +45,11 @@ import n7.ad2.databinding.DialogRateBinding;
 import n7.ad2.databinding.DialogUpdateBinding;
 import n7.ad2.databinding.DrawerBinding;
 import n7.ad2.fragment.GameFragment;
-import n7.ad2.heroes.HeroesFragment;
 import n7.ad2.fragment.ItemsFragment;
 import n7.ad2.fragment.NewsFragment;
 import n7.ad2.fragment.StreamsFragment;
 import n7.ad2.fragment.TournamentsFragment;
+import n7.ad2.heroes.HeroesFragment;
 import n7.ad2.utils.UnscrollableLinearLayoutManager;
 
 import static n7.ad2.main.MainViewModel.LAST_DAY_WHEN_CHECK_UPDATE;
@@ -56,41 +59,24 @@ import static n7.ad2.splash.SplashActivityViewModel.CURRENT_DAY_IN_APP;
 public class MainActivity extends BaseActivity {
     public static final int COUNTER_DIALOG_RATE = 20;
     public static final int COUNTER_DIALOG_DONATE = 40;
-    public static final String RATE_ME_DIALOG_SHOWN = "REQUEST_FOR_RATE_SAW";
-    public static final String OPEN_SUBSCRIPTION = "OPEN_SUBSCRIPTION";
-    public static final String LAST_SELECTED_TAG = "LAST_SELECTED_TAG";
-    public static final String DONATE_DIALOG_SHOWN = "DONATE_DIALOG_SHOWN";
-    public static final String RATED_MY_APP = "RATED_MY_APP";
+    public static final String FIREBASE_SAW_MY_DIALOG_RATE = "REQUEST_FOR_RATE_SAW";
+    public static final String FIREBASE_CLICKED_TO_RATE_APP = "FIREBASE_CLICKED_TO_RATE_APP";
+    public static final String FIREBASE_SAW_MY_DIALOG_DONATE = "FIREBASE_SAW_MY_DIALOG_DONATE";
+    public static final String DIALOG_SUBSCRIPTION_OPEN = "DIALOG_SUBSCRIPTION_OPEN";
+    public static final String LAST_ITEM = "LAST_ITEM";
     public static final int MILLIS_FOR_EXIT = 2000;
-    final static String TAG_HEROES = "TAG_HEROES";
-    final static String TAG_ITEMS = "TAG_ITEMS";
-    final static String TAG_NEWS = "TAG_NEWS";
-    final static String TAG_TOURNAMENTS = "TAG_TOURNAMENTS";
-    final static String TAG_STREAMS = "TAG_STREAMS";
-    final static String TAG_MULTI_TWITCH = "TAG_MULTI_TWITCH";
-    final static String TAG_GAMES = "TAG_GAMES";
-    private final BroadcastReceiver connections = new BroadcastReceiver() {
-        @Override
-        public void onReceive(Context context, Intent intent) {
-//            setToolbar();
-//            if (Utils.isNetworkAvailable(context))
-//                log("internet_connection_obtain");
-//            else
-//                log("internet_connection_lost");
-        }
-    };
-    public ObservableInt selectedItemMenu = new ObservableInt(1);
+    public ObservableInt observableLastItem = new ObservableInt(1);
     private int enterCounter = 0;
     private boolean doubleBackToExitPressedOnce = false;
-    private ConstraintSet constraintSetNew = new ConstraintSet();
+    private ConstraintSet constraintSetHidden = new ConstraintSet();
     private ConstraintSet constraintSetOrigin = new ConstraintSet();
     private ConstraintSet currentSet;
-    private ConstraintLayout constraintLayout;
-    private Fragment currentFragment;
     private PlainTextAdapter adapter;
     private ActivityMainBinding bindingActivity;
     private DrawerBinding bindingDrawer;
     private boolean shouldUpdateFromMarket;
+    private MainViewModel viewModel;
+    private SlidingRootNav drawable;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -98,7 +84,7 @@ public class MainActivity extends BaseActivity {
         super.onCreate(savedInstanceState);
         shouldUpdateFromMarket = PreferenceManager.getDefaultSharedPreferences(this).getBoolean(SHOULD_UPDATE_FROM_MARKET, true);
 
-        MainViewModel viewModel = ViewModelProviders.of(this).get(MainViewModel.class);
+        viewModel = ViewModelProviders.of(this).get(MainViewModel.class);
 
         bindingActivity = DataBindingUtil.setContentView(this, R.layout.activity_main);
         bindingActivity.setViewModel(viewModel);
@@ -109,22 +95,14 @@ public class MainActivity extends BaseActivity {
 
         setupToolbar();
         setupDrawer();
-
-//        initN7Message();
         setupRecyclerView();
 
-//        setLastFragment();
+        setLastFragment();
 
         viewModel.snackbarMessage.observe(this, new Observer<Integer>() {
             @Override
             public void onChanged(@StringRes Integer redId) {
                 SnackbarUtils.showSnackbar(bindingActivity.getRoot(), getString(redId));
-            }
-        });
-        viewModel.logEvent.observe(this, new Observer<String>() {
-            @Override
-            public void onChanged(@Nullable String s) {
-                log(s);
             }
         });
         viewModel.showDialogUpdate.observe(this, new Observer<Void>() {
@@ -135,6 +113,13 @@ public class MainActivity extends BaseActivity {
         });
     }
 
+    public void setLastFragment() {
+        int lastItem = PreferenceManager.getDefaultSharedPreferences(this).getInt(LAST_ITEM, 1);
+        observableLastItem.set(lastItem);
+        setFragment(lastItem, false);
+    }
+
+    @SuppressWarnings("ConstantConditions")
     private void showDialogUpdate() {
         AlertDialog.Builder builder = new AlertDialog.Builder(this);
 
@@ -159,7 +144,6 @@ public class MainActivity extends BaseActivity {
         setSupportActionBar(bindingActivity.toolbar);
     }
 
-
     @Override
     protected void onStart() {
         super.onStart();
@@ -169,41 +153,11 @@ public class MainActivity extends BaseActivity {
     private void setupRecyclerView() {
         boolean shouldDisplayLog = PreferenceManager.getDefaultSharedPreferences(this).getBoolean(getString(R.string.setting_log_key), true);
         if (shouldDisplayLog) {
-            adapter = new PlainTextAdapter();
+            adapter = viewModel.getAdapter();
             bindingDrawer.rv.setAdapter(adapter);
             bindingDrawer.rv.setLayoutManager(new UnscrollableLinearLayoutManager(this, LinearLayoutManager.VERTICAL, false));
         }
     }
-
-//    private void setLastFragment() {
-//        switch (MySharedPreferences.LAST_FRAGMENT_SELECTED) {
-//            default:
-//            case 1:
-//                setColorMenu(tv_drawer_heroes);
-//                setFragment(tv_drawer_heroes.getId());
-//                break;
-//            case 2:
-//                setColorMenu(tv_drawer_items);
-//                setFragment(tv_drawer_items.getId());
-//                break;
-//            case 3:
-//                setColorMenu(tv_drawer_news);
-//                setFragment(tv_drawer_news.getId());
-//                break;
-//            case 4:
-//                setColorMenu(tv_drawer_games);
-//                setFragment(tv_drawer_games.getId());
-//                break;
-//            case 5:
-//                setColorMenu(tv_drawer_stream);
-//                setFragment(tv_drawer_stream.getId());
-//                break;
-//            case 6:
-//                setColorMenu(tv_drawer_game);
-//                setFragment(tv_drawer_game.getId());
-//                break;
-//        }
-//    }
 
     public void log(String text) {
         if (adapter != null) {
@@ -212,73 +166,58 @@ public class MainActivity extends BaseActivity {
         }
     }
 
-    public void setFragmentHeroes() {
+    public void setFragment(int fragmentID, boolean closeDrawer) {
+        observableLastItem.set(fragmentID);
         FragmentTransaction ft = getSupportFragmentManager().beginTransaction();
-        ft.add(bindingActivity.container.getId(), new HeroesFragment()).commit();
-        bindingActivity.toolbar.setTitle(R.string.heroes);
-        selectedItemMenu.set(1);
+        switch (fragmentID) {
+            default:
+            case 1:
+                ft.replace(bindingActivity.container.getId(), new HeroesFragment()).commit();
+                break;
+            case 2:
+                ft.replace(bindingActivity.container.getId(), new ItemsFragment()).commit();
+                break;
+            case 3:
+                ft.replace(bindingActivity.container.getId(), new NewsFragment()).commit();
+                break;
+            case 4:
+                ft.replace(bindingActivity.container.getId(), new TournamentsFragment()).commit();
+                break;
+            case 5:
+                ft.replace(bindingActivity.container.getId(), new StreamsFragment()).commit();
+                break;
+            case 6:
+                ft.replace(bindingActivity.container.getId(), new GameFragment()).commit();
+                break;
+        }
+        if (closeDrawer)
+            new Handler().postDelayed(new Runnable() {
+                @Override
+                public void run() {
+                    drawable.closeMenu();
+                }
+            }, 50);
     }
 
-    public void setFragmentItems() {
-        FragmentTransaction ft = getSupportFragmentManager().beginTransaction();
-        ft.add(bindingActivity.container.getId(), new ItemsFragment()).commit();
-        bindingActivity.toolbar.setTitle(R.string.items);
-        selectedItemMenu.set(2);
+    private void setupSecretActivity() {
+        constraintSetOrigin.clone((ConstraintLayout) bindingDrawer.getRoot());
+        constraintSetHidden.clone(this, R.layout.drawer_hidden);
+        currentSet = constraintSetOrigin;
     }
 
-    public void setFragmentNews() {
-        FragmentTransaction ft = getSupportFragmentManager().beginTransaction();
-        ft.add(bindingActivity.container.getId(), new NewsFragment()).commit();
-        bindingActivity.toolbar.setTitle(R.string.news);
-        selectedItemMenu.set(3);
+    private void toggleSecretActivity() {
+        currentSet = (currentSet == constraintSetOrigin ? constraintSetHidden : constraintSetOrigin);
+        Transition transition = new ChangeBounds().setInterpolator(new AccelerateDecelerateInterpolator()).setDuration(1000);
+        TransitionManager.beginDelayedTransition((ViewGroup) bindingDrawer.getRoot(), transition);
+        currentSet.applyTo((ConstraintLayout) bindingDrawer.getRoot());
+//        if (currentSet == constraintSetHidden) {
+//            findViewById(R.id.drawer).animate().alpha(0.0f).setDuration(1000).start();
+//            iv_drawer_setting.animate().alpha(0.0f).setDuration(1000).start();
+//        } else {
+//            findViewById(R.id.drawer).animate().alpha(1.0f).setDuration(1000).start();
+//            iv_drawer_setting.animate().alpha(1.0f).setDuration(1000).start();
+//        }
     }
-
-    public void setFragmentTournaments() {
-        FragmentTransaction ft = getSupportFragmentManager().beginTransaction();
-        ft.add(bindingActivity.container.getId(), new TournamentsFragment()).commit();
-        bindingActivity.toolbar.setTitle(R.string.tournaments);
-        selectedItemMenu.set(4);
-    }
-
-    public void setFragmentStreams() {
-        FragmentTransaction ft = getSupportFragmentManager().beginTransaction();
-        ft.add(bindingActivity.container.getId(), new StreamsFragment()).commit();
-        bindingActivity.toolbar.setTitle(R.string.streams);
-        selectedItemMenu.set(5);
-    }
-
-    public void setFragmentGames() {
-        FragmentTransaction ft = getSupportFragmentManager().beginTransaction();
-        ft.add(bindingActivity.container.getId(), new GameFragment()).commit();
-        bindingActivity.toolbar.setTitle(R.string.games);
-        selectedItemMenu.set(6);
-    }
-
-
-//    private void initConstraintAnimation() {
-//        constraintSetOrigin.clone(constraintLayout);
-//        constraintSetNew.clone(this, R.layout.fragment_navigation_drawer_0);
-//        currentSet = constraintSetOrigin;
-//
-//        iv_drawer_setting.setOnLongClickListener(new View.OnLongClickListener() {
-//            @TargetApi(Build.VERSION_CODES.KITKAT)
-//            @Override
-//            public boolean onLongClick(View view) {
-//                currentSet = (currentSet == constraintSetOrigin ? constraintSetNew : constraintSetOrigin);
-//                Transition transition = new ChangeBounds().setInterpolator(new AccelerateDecelerateInterpolator()).setDuration(1000);
-//                TransitionManager.beginDelayedTransition(constraintLayout, transition);
-//                currentSet.applyTo(constraintLayout);
-//                if (currentSet == constraintSetNew) {
-//                    findViewById(R.id.drawer).animate().alpha(0.0f).setDuration(1000).start();
-//                    iv_drawer_setting.animate().alpha(0.0f).setDuration(1000).start();
-//                } else {
-//                    findViewById(R.id.drawer).animate().alpha(1.0f).setDuration(1000).start();
-//                    iv_drawer_setting.animate().alpha(1.0f).setDuration(1000).start();
-//                }
-//                return true;
-//            }
-//        });
-//    }
 
     public void loadNewVersion() {
         if (shouldUpdateFromMarket) {
@@ -296,6 +235,7 @@ public class MainActivity extends BaseActivity {
         }
     }
 
+    @SuppressWarnings("ConstantConditions")
     private void loadNewVersionFromGitHub() {
         DownloadManager.Request request = new DownloadManager.Request(Uri.parse(MySharedPreferences.GITHUB_LAST_APK_URL));
         request.setDescription(getString(R.string.all_new_version));
@@ -309,7 +249,7 @@ public class MainActivity extends BaseActivity {
 
     private void incCountEnter() {
         enterCounter++;
-        if (enterCounter > COUNTER_DIALOG_RATE) checkIfNeedShowDialogRate();
+//        if (enterCounter > COUNTER_DIALOG_RATE) checkIfNeedShowDialogRate();
 //        if (enterCounter > COUNTER_DIALOG_DONATE) checkIfNeedShowDialogDonate();
     }
 
@@ -324,22 +264,24 @@ public class MainActivity extends BaseActivity {
 //                @Override
 //                public void onClick(View v) {
 //                    Intent intent = new Intent(MainActivity.this, SettingActivity.class);
-//                    intent.putExtra(OPEN_SUBSCRIPTION, true);
+//                    intent.putExtra(DIALOG_SUBSCRIPTION_OPEN, true);
 //                    startActivity(intent);
 //                    dialog.dismiss();
 //                }
 //            });
 //
 //            FirebaseAnalytics firebaseAnalytics = FirebaseAnalytics.getInstance(this);
-//            firebaseAnalytics.logEvent(DONATE_DIALOG_SHOWN, null);
+//            firebaseAnalytics.logEvent(FIREBASE_SAW_MY_DIALOG_DONATE, null);
 //        }
 //    }
 
+    @SuppressWarnings("ConstantConditions")
     private void checkIfNeedShowDialogRate() {
         boolean showDialogRate = PreferenceManager.getDefaultSharedPreferences(this).getBoolean(getString(R.string.dialog_with_request_for_rate), true);
         if (showDialogRate) {
             final AlertDialog.Builder builder = new AlertDialog.Builder(this);
             DialogRateBinding binding = DataBindingUtil.inflate(getLayoutInflater(), R.layout.dialog_rate, null, false);
+            binding.setActivity(this);
             builder.setView(binding.getRoot());
             final AlertDialog dialog = builder.create();
             dialog.getWindow().getAttributes().windowAnimations = R.style.DialogTheme;
@@ -349,18 +291,22 @@ public class MainActivity extends BaseActivity {
 //                @Override
 //                public void onClick(View v) {
 //                    dialog.dismiss();
-//                    try {
-//                        startActivity(new Intent(Intent.ACTION_VIEW, Uri.parse("market://details?id=" + getPackageName())));
-//                    } catch (android.content.ActivityNotFoundException a) {
-//                        startActivity(new Intent(Intent.ACTION_VIEW, Uri.parse("https://play.google.com/store/apps/details?id=" + getPackageName())));
-//                    }
-//                    FirebaseAnalytics firebaseAnalytics = FirebaseAnalytics.getInstance(MainActivity.this);
-//                    firebaseAnalytics.logEvent(RATED_MY_APP, null);
+
 //                }
 //            });
-//            FirebaseAnalytics firebaseAnalytics = FirebaseAnalytics.getInstance(this);
-//            firebaseAnalytics.logEvent(RATE_ME_DIALOG_SHOWN, null);
+            FirebaseAnalytics firebaseAnalytics = FirebaseAnalytics.getInstance(this);
+            firebaseAnalytics.logEvent(FIREBASE_SAW_MY_DIALOG_RATE, null);
         }
+    }
+
+    public void openAppStore() {
+        try {
+            startActivity(new Intent(Intent.ACTION_VIEW, Uri.parse("market://details?id=" + getPackageName())));
+        } catch (android.content.ActivityNotFoundException a) {
+            startActivity(new Intent(Intent.ACTION_VIEW, Uri.parse("https://play.google.com/store/apps/details?id=" + getPackageName())));
+        }
+        FirebaseAnalytics firebaseAnalytics = FirebaseAnalytics.getInstance(MainActivity.this);
+        firebaseAnalytics.logEvent(FIREBASE_CLICKED_TO_RATE_APP, null);
     }
 
     private void hideKeyboard() {
@@ -370,57 +316,8 @@ public class MainActivity extends BaseActivity {
         }
     }
 
-//    private void replaceFragment(int id) {
-//        hideLoading();
-//        fragmentManager = getSupportFragmentManager();
-//        currentFragment = fragmentManager.findFragmentById(R.id.container);
-//        FragmentTransaction ft = fragmentManager.beginTransaction();
-//        if (currentFragment.getTag() != null) {
-//            switch (id) {
-//                default:
-//                case R.id.tv_drawer_heroes:
-//                    if (!currentFragment.getTag().equals(TAG_HEROES))
-//                        ft.replace(R.id.container, new HeroesFragment(), TAG_HEROES).commit();
-//                    log("set_" + TAG_HEROES);
-//                    break;
-//                case R.id.tv_drawer_items:
-//                    if (!currentFragment.getTag().equals(TAG_ITEMS))
-//                        ft.replace(R.id.container, new ItemsFragment(), TAG_ITEMS).commit();
-//                    log("set_" + TAG_ITEMS);
-//                    break;
-//                case R.id.tv_drawer_news:
-//                    if (!currentFragment.getTag().equals(TAG_NEWS))
-//                        ft.replace(R.id.container, new NewsFragment(), TAG_NEWS).commit();
-//                    log("set_" + TAG_NEWS);
-//                    break;
-//                case R.id.tv_drawer_tournaments:
-//                    if (!currentFragment.getTag().equals(TAG_TOURNAMENTS))
-//                        ft.replace(R.id.container, new TournamentsFragment(), TAG_TOURNAMENTS).commit();
-//                    log("set_" + TAG_TOURNAMENTS);
-//                    break;
-//                case R.id.tv_drawer_game:
-//                    if (!currentFragment.getTag().equals(TAG_GAMES))
-//                        ft.replace(R.id.container, new GameFragment(), TAG_GAMES).commit();
-//                    log("set_" + TAG_GAMES);
-//                    break;
-//                case R.id.tv_drawer_stream:
-//                    if (!currentFragment.getTag().equals(TAG_STREAMS))
-//                        ft.replace(R.id.container, new StreamsFragment(), TAG_STREAMS).commit();
-//                    log("set_" + TAG_STREAMS);
-//                    break;
-//            }
-//        }
-//        setToolbar();
-//        new Handler().postDelayed(new Runnable() {
-//            @Override
-//            public void run() {
-//                slidingRootNav.closeMenu();
-//            }
-//        }, 50);
-//    }
-
     private void setupDrawer() {
-        SlidingRootNav slidingRootNav = new SlidingRootNavBuilder(this)
+        drawable = new SlidingRootNavBuilder(this)
                 .withToolbarMenuToggle(bindingActivity.toolbar)
                 .withDragDistance(110)
                 .withRootViewScale(0.65f)
@@ -440,23 +337,12 @@ public class MainActivity extends BaseActivity {
                 })
                 .withMenuView(bindingDrawer.getRoot())
                 .inject();
-        slidingRootNav.openMenu();
-//
-//        iv_drawer_check_update.setOnClickListener(new View.OnClickListener() {
-//            @Override
-//            public void onClick(View view) {
-//                if (!updating) {
-//                    updating = true;
-//                    startRotate();
-//                    startWorkUpdate(true);
-//                }
-//            }
-//        });
+        drawable.openMenu();
     }
 
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
-        getMenuInflater().inflate(R.menu.menu_activity_main, menu);
+        getMenuInflater().inflate(R.menu.menu_search, menu);
         return true;
     }
 
@@ -537,8 +423,7 @@ public class MainActivity extends BaseActivity {
     @Override
     protected void onStop() {
         log("on_Stop");
-//        String lastSelectedTag = getSupportFragmentManager().findFragmentById(bindingActivity.container.getId()).getTag();
-//        PreferenceManager.getDefaultSharedPreferences(this).edit().putString(LAST_SELECTED_TAG, lastSelectedTag).apply();
+        PreferenceManager.getDefaultSharedPreferences(this).edit().putInt(LAST_ITEM, observableLastItem.get()).apply();
         super.onStop();
     }
 
@@ -555,13 +440,13 @@ public class MainActivity extends BaseActivity {
         incCountEnter();
     }
 
-    private void regReceiver() {
-        IntentFilter filter = new IntentFilter("android.net.conn.CONNECTIVITY_CHANGE");
-        filter.addAction("setToolbarName");
-        registerReceiver(connections, filter);
-        //можно затригерить ресивер этой командой
-//        getActivity().sendBroadcast(new Intent("setToolbarName"));
-    }
+//    private void regReceiver() {
+//        IntentFilter filter = new IntentFilter("android.net.conn.CONNECTIVITY_CHANGE");
+//        filter.addAction("setToolbarName");
+//        registerReceiver(connections, filter);
+//        //можно затригерить ресивер этой командой
+////        getActivity().sendBroadcast(new Intent("setToolbarName"));
+//    }
 
     @Override
     public void onBackPressed() {

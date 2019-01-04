@@ -5,6 +5,7 @@ import android.arch.lifecycle.AndroidViewModel;
 import android.content.Context;
 import android.content.Intent;
 import android.databinding.ObservableBoolean;
+import android.databinding.ObservableInt;
 import android.preference.PreferenceManager;
 import android.support.annotation.NonNull;
 
@@ -14,8 +15,10 @@ import java.util.concurrent.Executors;
 
 import n7.ad2.BuildConfig;
 import n7.ad2.MySharedPreferences;
+import n7.ad2.R;
 import n7.ad2.SingleLiveEvent;
 import n7.ad2.SnackbarMessage;
+import n7.ad2.adapter.PlainTextAdapter;
 import n7.ad2.db.n7message.N7Message;
 import n7.ad2.db.n7message.N7MessageRoomDatabase;
 import n7.ad2.retrofit.update.Update;
@@ -31,13 +34,14 @@ import static n7.ad2.splash.SplashActivityViewModel.CURRENT_DAY_IN_APP;
 public class MainViewModel extends AndroidViewModel {
 
     public static final String SHOULD_UPDATE_FROM_MARKET = "SHOULD_UPDATE_FROM_MARKET";
-    public ObservableBoolean isUpdating = new ObservableBoolean(false);
     public static final String ACCOUNTS_FOR_TOP_TWITCH = "ACCOUNTS_FOR_TOP_TWITCH";
     public static final String LAST_DAY_WHEN_CHECK_UPDATE = "LAST_DAY_WHEN_CHECK_UPDATE";
     private static final String BASE_URL = "https://raw.githubusercontent.com/i30mb1/AD2/master/";
     public final SingleLiveEvent<Void> showDialogUpdate = new SingleLiveEvent<>();
     public final SnackbarMessage snackbarMessage = new SnackbarMessage();
-    final SingleLiveEvent<String> logEvent = new SingleLiveEvent<>();
+    private final PlainTextAdapter adapter;
+    public ObservableBoolean isUpdating = new ObservableBoolean(false);
+    public ObservableInt scrollTo = new ObservableInt();
     private Application application;
     private Executor diskIO;
 
@@ -45,6 +49,8 @@ public class MainViewModel extends AndroidViewModel {
         super(application);
         this.application = application;
         diskIO = Executors.newSingleThreadExecutor();
+
+        adapter = new PlainTextAdapter();
 
         diskIO.execute(new Runnable() {
             @Override
@@ -55,6 +61,10 @@ public class MainViewModel extends AndroidViewModel {
 
     }
 
+    public PlainTextAdapter getAdapter() {
+        return adapter;
+    }
+
     public void startActivityOptions(Context context) {
         context.startActivity(new Intent(context, SettingActivity.class));
     }
@@ -63,12 +73,14 @@ public class MainViewModel extends AndroidViewModel {
         int currentDay = PreferenceManager.getDefaultSharedPreferences(application).getInt(CURRENT_DAY_IN_APP, 0);
         int lastDayWhenCheckUpdate = PreferenceManager.getDefaultSharedPreferences(application).getInt(LAST_DAY_WHEN_CHECK_UPDATE, 0);
         if (currentDay != lastDayWhenCheckUpdate) {
-            logEvent.postValue("checking_for_update");
             startUpdate();
-//            PreferenceManager.getDefaultSharedPreferences(application).edit().putInt(LAST_DAY_WHEN_CHECK_UPDATE,currentDay).apply();
-        } else {
-            logEvent.postValue("update_scheduled");
+            PreferenceManager.getDefaultSharedPreferences(application).edit().putInt(LAST_DAY_WHEN_CHECK_UPDATE, currentDay).apply();
         }
+    }
+
+    private void log(String text) {
+        adapter.add(text);
+        scrollTo.set(adapter.getItemCount() - 1);
     }
 
     private void saveMessageInDatabase(Update update) {
@@ -86,13 +98,12 @@ public class MainViewModel extends AndroidViewModel {
             @Override
             public void run() {
                 isUpdating.set(true);
-
-                try {
-                    Thread.sleep(5000);
-                } catch (InterruptedException e) {
-                    e.printStackTrace();
-                }
-
+                log("checking_update");
+//                try {
+//                    Thread.sleep(5000);
+//                } catch (InterruptedException e) {
+//                    e.printStackTrace();
+//                }
                 Integer deviceVersion = Integer.valueOf(BuildConfig.VERSION_NAME);
 
                 Retrofit retrofit = new Retrofit.Builder()
@@ -114,18 +125,18 @@ public class MainViewModel extends AndroidViewModel {
                         boolean shouldUpdateFromGoogleMarket = update.getMessage().isUpdateFromMarket();
                         PreferenceManager.getDefaultSharedPreferences(application).edit().putBoolean(SHOULD_UPDATE_FROM_MARKET, shouldUpdateFromGoogleMarket).apply();
 
-                        int serverVersion = update.getServerVersion();
+                        int serverVersion = update.getVersionCode();
                         if (serverVersion > deviceVersion) {
                             showDialogUpdate.call();
+                        } else {
+                            snackbarMessage.postValue(R.string.update_ok);
                         }
-                        showDialogUpdate.call();
-                        logEvent.postValue("device_ver = " + deviceVersion);
-                        logEvent.postValue("server_ver = " + serverVersion);
+                        log("device_version::" + deviceVersion);
+                        log("server_version::" + serverVersion);
                     }
                 } catch (IOException e) {
                     e.printStackTrace();
-                }
-                finally {
+                } finally {
                     isUpdating.set(false);
                 }
             }
