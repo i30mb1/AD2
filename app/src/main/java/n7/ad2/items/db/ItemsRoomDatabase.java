@@ -1,4 +1,4 @@
-package n7.ad2.db.items;
+package n7.ad2.items.db;
 
 import android.arch.persistence.db.SupportSQLiteDatabase;
 import android.arch.persistence.room.Database;

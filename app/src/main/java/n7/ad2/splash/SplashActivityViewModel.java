@@ -28,8 +28,8 @@ import n7.ad2.MySharedPreferences;
 import n7.ad2.R;
 import n7.ad2.SingleLiveEvent;
 import n7.ad2.adapter.PlainTextAdapter;
-import n7.ad2.db.heroes.HeroesRoomDatabase;
-import n7.ad2.db.items.ItemsRoomDatabase;
+import n7.ad2.heroes.db.HeroesRoomDatabase;
+import n7.ad2.items.db.ItemsRoomDatabase;
 import n7.ad2.purchaseUtils.IabHelper;
 import n7.ad2.purchaseUtils.IabResult;
 import n7.ad2.purchaseUtils.Inventory;
@@ -137,15 +137,6 @@ public class SplashActivityViewModel extends AndroidViewModel {
         });
     }
 
-//    private void setupLiveDataItems() {
-//        DataSource.Factory dataSource = itemsDao.getDataSourceItems();
-//        PagedList.Config config = new PagedList.Config.Builder()
-//                .setPageSize(25)
-//                .setEnablePlaceholders(true)
-//                .build();
-//        LiveData<PagedList<ItemModel>> items = new LivePagedListBuilder<>(dataSource, config).build();
-//    }
-
     private void setupSupportJsoupForOldDevices() {
         new Thread(new Runnable() {
             @Override
@@ -226,15 +217,4 @@ public class SplashActivityViewModel extends AndroidViewModel {
         FirebaseAnalytics.getInstance(application);
     }
 
-//    public LiveData<HeroModel> getHero(String codeName) {
-//        return heroesRepository.getHero(codeName);
-//    }
-//
-//    public LiveData<PagedList<HeroModel>> getPagedListHeroes() {
-//        return heroesRepository.getPagedListHeroes();
-//    }
-//
-//    public LiveData<PagedList<HeroModel>> getPagedListHeroesFilter(String s) {
-//        return heroesRepository.getPagedListHeroesFilter(s);
-//    }
 }

@@ -7,8 +7,7 @@
 
         <variable
             name="hero"
-            type="n7.ad2.db.heroes.HeroModel" />
-
+            type="n7.ad2.heroes.db.HeroModel" />
     </data>
 
     <android.support.v7.widget.CardView
@@ -35,21 +34,24 @@
                 android:paddingEnd="0dp"
                 android:scaleType="centerCrop"
                 android:transitionName="iv"
-                app:url="@{hero.codeName}"
+                app:url='@{"file:///android_asset/heroes/" + hero.codeName + "/full.webp"}'
                 tools:ignore="UnusedAttribute"
                 tools:src="@drawable/hero_placeholder" />
 
             <TextView
+                android:id="@+id/tv"
+                android:layout_gravity="bottom"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="2dp"
-                android:background="@drawable/gradient_left"
+                android:background="@drawable/gradient"
                 android:paddingStart="2dp"
                 android:paddingEnd="0dp"
                 android:text="@{hero.name}"
                 android:textSize="10sp"
                 android:textStyle="bold"
-                tools:text="@sample/heroes.json/data/name" />
+                tools:text="@sample/heroes.json/data/name"
+                tools:ignore="SmallSp" />
 
         </FrameLayout>
 

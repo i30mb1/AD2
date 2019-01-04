@@ -22,7 +22,7 @@ import n7.ad2.utils.Utils;
 public class ItemFullActivity extends BaseActivity {
 
     public final static String ITEM_NAME = "ITEM_NAME";
-    public final static String ITEM_FOLDER = "ITEM_FOLDER";
+    public final static String ITEM_CODE_NAME = "ITEM_CODE_NAME";
     private JSONObject jsonItemDescription;
     private String itemFolder;
     private String itemName;
@@ -36,7 +36,7 @@ public class ItemFullActivity extends BaseActivity {
         setContentView(R.layout.activity_item_full_0);
         isPremium = MySharedPreferences.getSharedPreferences(this).getBoolean(MySharedPreferences.PREMIUM, false);
 
-        this.itemFolder = getIntent().getStringExtra(ITEM_FOLDER);
+        this.itemFolder = getIntent().getStringExtra(ITEM_CODE_NAME);
         this.itemName = getIntent().getStringExtra(ITEM_NAME);
 
         setToolbar();

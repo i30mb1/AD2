@@ -17,32 +17,26 @@ import n7.ad2.R;
 import n7.ad2.activity.BaseActivity;
 import n7.ad2.databinding.ActivitySettingBinding;
 import n7.ad2.databinding.DialogDonateBinding;
-import n7.ad2.purchaseUtils.IabBroadcastReceiver;
 import n7.ad2.purchaseUtils.IabHelper;
 import n7.ad2.purchaseUtils.IabResult;
 import n7.ad2.purchaseUtils.Inventory;
 import n7.ad2.purchaseUtils.Purchase;
 
 import static n7.ad2.MySharedPreferences.PREMIUM;
-import static n7.ad2.main.MainActivity.DIALOG_SUBSCRIPTION_OPEN;
 
-public class SettingActivity extends BaseActivity implements IabBroadcastReceiver.IabBroadcastListener {
+public class SettingActivity extends BaseActivity {
 
     public static final String ONCE_PER_MONTH_SUBSCRIPTION = "once_per_month_subscription";
-    public static final String SAW_MY_REQUEST_OF_DONATION = "SAW_MY_REQUEST_OF_DONATION";
+
+    public static final String FIREBASE_DIALOG_DONATE_SAW = "FIREBASE_DIALOG_DONATE_SAW";
+
+    public static final String INTENT_SHOW_DIALOG_DONATE = "INTENT_SHOW_DIALOG_DONATE";
+
     public ObservableBoolean isPremium = new ObservableBoolean(false);
     private IabHelper mHelper;
     private ActivitySettingBinding binding;
     private List<Integer> images = new LinkedList<>();
     private List<String> descriptions = new LinkedList<>();
-    private final IabHelper.OnIabPurchaseFinishedListener finishedListener = new IabHelper.OnIabPurchaseFinishedListener() {
-        @Override
-        public void onIabPurchaseFinished(IabResult result, Purchase info) {
-            if (mHelper == null) return;
-            if (result.isFailure()) return;
-            checkInventory();
-        }
-    };
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -100,7 +94,7 @@ public class SettingActivity extends BaseActivity implements IabBroadcastReceive
     }
 
     @SuppressWarnings("ConstantConditions")
-    public void showDialogSubscription() {
+    public void showDialogDonate() {
         AlertDialog.Builder builder = new AlertDialog.Builder(this);
 
         DialogDonateBinding binding = DataBindingUtil.inflate(getLayoutInflater(), R.layout.dialog_donate, null, false);
@@ -115,12 +109,19 @@ public class SettingActivity extends BaseActivity implements IabBroadcastReceive
         binding.tabLayout.setupWithViewPager(binding.viewPager, true);
 
         FirebaseAnalytics firebaseAnalytics = FirebaseAnalytics.getInstance(this);
-        firebaseAnalytics.logEvent(SAW_MY_REQUEST_OF_DONATION, null);
+        firebaseAnalytics.logEvent(FIREBASE_DIALOG_DONATE_SAW, null);
     }
 
     public void launchPurchaseSubscription() {
         try {
-            mHelper.launchSubscriptionPurchaseFlow(SettingActivity.this, ONCE_PER_MONTH_SUBSCRIPTION, 7, finishedListener);
+            mHelper.launchSubscriptionPurchaseFlow(SettingActivity.this, ONCE_PER_MONTH_SUBSCRIPTION, 7, new IabHelper.OnIabPurchaseFinishedListener() {
+                @Override
+                public void onIabPurchaseFinished(IabResult result, Purchase info) {
+                    if (mHelper == null) return;
+                    if (result.isFailure()) return;
+                    checkInventory();
+                }
+            });
         } catch (IabHelper.IabAsyncInProgressException e) {
             e.printStackTrace();
         }
@@ -147,8 +148,8 @@ public class SettingActivity extends BaseActivity implements IabBroadcastReceive
     }
 
     private void checkIfNeedShowSubscription() {
-        if (getIntent().getBooleanExtra(DIALOG_SUBSCRIPTION_OPEN, false)) {
-            showDialogSubscription();
+        if (getIntent().getBooleanExtra(INTENT_SHOW_DIALOG_DONATE, false)) {
+            showDialogDonate();
         }
     }
 
@@ -196,11 +197,6 @@ public class SettingActivity extends BaseActivity implements IabBroadcastReceive
     @Override
     public void onBackPressed() {
         super.onBackPressed();
-    }
-
-    @Override
-    public void receivedBroadcast() {
-        checkInventory();
     }
 
 }

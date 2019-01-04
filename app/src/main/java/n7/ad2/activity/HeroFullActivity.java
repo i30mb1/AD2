@@ -24,6 +24,7 @@ import n7.ad2.fragment.HeroResponsesFragment;
 import n7.ad2.utils.Utils;
 
 public class HeroFullActivity extends BaseActivity {
+
     public static final String HERO_NAME = "HERO_NAME";
     public static final String HERO_CODE_NAME = "HERO_CODE_NAME";
     private Toolbar toolbar;

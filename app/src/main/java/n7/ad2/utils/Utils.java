@@ -17,7 +17,7 @@ import java.io.InputStream;
 public class Utils {
 
     public static String readJSONFromAsset(Context context, String fileName) {
-        String json = null;
+        String json;
         try {
             InputStream is = context.getAssets().open(fileName);
             int size = is.available();
@@ -26,7 +26,6 @@ public class Utils {
             is.close();
             json = new String(buffer, "UTF-8");
         } catch (IOException ex) {
-            ex.printStackTrace();
             return null;
         }
         return json;

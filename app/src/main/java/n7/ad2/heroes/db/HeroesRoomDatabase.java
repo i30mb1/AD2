@@ -1,6 +1,5 @@
-package n7.ad2.db.heroes;
+package n7.ad2.heroes.db;
 
-import android.app.Application;
 import android.arch.persistence.db.SupportSQLiteDatabase;
 import android.arch.persistence.room.Database;
 import android.arch.persistence.room.Room;

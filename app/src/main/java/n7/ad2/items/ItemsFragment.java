@@ -1,14 +1,14 @@
-package n7.ad2.fragment;
+package n7.ad2.items;
 
 import android.arch.lifecycle.Observer;
 import android.arch.lifecycle.ViewModelProviders;
 import android.arch.paging.PagedList;
+import android.databinding.DataBindingUtil;
 import android.os.Bundle;
 import android.support.annotation.NonNull;
 import android.support.annotation.Nullable;
 import android.support.v4.app.Fragment;
 import android.support.v7.widget.GridLayoutManager;
-import android.support.v7.widget.RecyclerView;
 import android.support.v7.widget.SearchView;
 import android.view.LayoutInflater;
 import android.view.Menu;
@@ -17,25 +17,23 @@ import android.view.MenuItem;
 import android.view.View;
 import android.view.ViewGroup;
 
-import n7.ad2.MySharedPreferences;
 import n7.ad2.R;
-import n7.ad2.adapter.ItemsPagedListAdapter;
-import n7.ad2.db.items.ItemModel;
-import n7.ad2.viewModels.ItemsViewModel;
+import n7.ad2.databinding.FragmentItemsBinding;
+import n7.ad2.items.db.ItemModel;
 
 public class ItemsFragment extends Fragment implements SearchView.OnQueryTextListener {
 
     private View view;
-    private ItemsViewModel itemsViewModel;
-    private ItemsPagedListAdapter itemsPagedListAdapter;
+    private ItemsViewModel viewModel;
+    private ItemsPagedListAdapter adapter;
+    private FragmentItemsBinding binding;
 
     public ItemsFragment() {
-        MySharedPreferences.LAST_FRAGMENT_SELECTED = 2;
     }
-
 
     @Override
     public void onCreateOptionsMenu(Menu menu, MenuInflater inflater) {
+        inflater.inflate(R.menu.menu_search, menu);
         super.onCreateOptionsMenu(menu, inflater);
         MenuItem searchHero = menu.findItem(R.id.action_search);
         SearchView searchView = (SearchView) searchHero.getActionView();
@@ -44,27 +42,27 @@ public class ItemsFragment extends Fragment implements SearchView.OnQueryTextLis
 
     @Override
     public View onCreateView(@NonNull LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
-        view = inflater.inflate(R.layout.fragment_items, container, false);
+        binding = DataBindingUtil.inflate(inflater, R.layout.fragment_items, container, false);
 
+        viewModel = ViewModelProviders.of(this).get(ItemsViewModel.class);
         getActivity().setTitle(R.string.items);
-        setRetainInstance(true);//фрагмент не уничтожается а передаётся новому активити
-        setHasOptionsMenu(true);//вызов метода onCreateOptionsMenu в фрагменте
-        itemsViewModel = ViewModelProviders.of(this).get(ItemsViewModel.class);
+        setRetainInstance(true);
+        setHasOptionsMenu(true);
 
-        initPagedListAdapter();
-        return view;
+        setupRecyclerView();
+
+        return binding.getRoot();
     }
 
-    private void initPagedListAdapter() {
-        RecyclerView recyclerView = view.findViewById(R.id.rv_fragment_items);
-        recyclerView.setHasFixedSize(true);
-        recyclerView.setLayoutManager(new GridLayoutManager(view.getContext(), 4));
-        itemsPagedListAdapter = new ItemsPagedListAdapter();
-        recyclerView.setAdapter(itemsPagedListAdapter);
-        itemsViewModel.getPagedListFilter("").observe(this, new Observer<PagedList<ItemModel>>() {
+    private void setupRecyclerView() {
+        binding.rv.setHasFixedSize(true);
+        binding.rv.setLayoutManager(new GridLayoutManager(view.getContext(), 4));
+        adapter = new ItemsPagedListAdapter();
+        binding.rv.setAdapter(adapter);
+        viewModel.getItems().observe(this, new Observer<PagedList<ItemModel>>() {
             @Override
             public void onChanged(@Nullable PagedList<ItemModel> items) {
-                itemsPagedListAdapter.submitList(items);
+                adapter.submitList(items);
             }
         });
     }
@@ -75,13 +73,13 @@ public class ItemsFragment extends Fragment implements SearchView.OnQueryTextLis
     }
 
     @Override
-    public boolean onQueryTextChange(String s) {
-        itemsViewModel.getPagedListFilter(s.trim()).observe(this, new Observer<PagedList<ItemModel>>() {
+    public boolean onQueryTextChange(String chars) {
+        viewModel.getItemsByFilter(chars.trim()).observe(this, new Observer<PagedList<ItemModel>>() {
             @Override
             public void onChanged(@Nullable PagedList<ItemModel> items) {
-                itemsPagedListAdapter.submitList(items);
+                adapter.submitList(items);
             }
         });
-        return false;
+        return true;
     }
 }

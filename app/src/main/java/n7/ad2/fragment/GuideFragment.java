@@ -42,7 +42,7 @@ import n7.ad2.MySharedPreferences;
 import n7.ad2.R;
 import n7.ad2.activity.HeroFullActivity;
 import n7.ad2.setting.SettingActivity;
-import n7.ad2.db.heroes.HeroModel;
+import n7.ad2.heroes.db.HeroModel;
 import n7.ad2.utils.Utils;
 import n7.ad2.splash.SplashActivityViewModel;
 import n7.ad2.worker.GuideWorker;
@@ -417,7 +417,7 @@ public class GuideFragment extends Fragment {
 //                        @Override
 //                        public void onClick(View v) {
 //                            Intent intent = new Intent(getContext(), ItemFullActivity.class);
-//                            intent.putExtra(ITEM_FOLDER, item.split("\\^")[0]);
+//                            intent.putExtra(ITEM_CODE_NAME, item.split("\\^")[0]);
 //                            intent.putExtra(ITEM_NAME, item.split("\\^")[0]);
 //                            startActivity(intent);
 //                        }

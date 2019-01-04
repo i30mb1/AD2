@@ -129,7 +129,7 @@
     <string name="setting_help_log_in_text">Now you can monitoring your Dota 2 progress on the main screen of this app</string>
     <string name="multi_streams_fragment_tip">This is experimental additional, and if you are not premium user you can launch this activity only 7 time per day!</string>
     <string name="setting_help_log_in_key" translatable="false">setting_fragment_monitoring_progress_key</string>
-    <string name="dialog_with_request_for_rate" translatable="false">dialog_with_request_for_rate</string>
+    <string name="dialog_rate_key" translatable="false">dialog_with_request_for_rate</string>
     <string name="drawer_meta" translatable="false">Meta</string>
     <string name="dialog_donate_1">- Disable all AD\'s</string>
     <string name="dialog_donate_7">- Unlimited Mini Games</string>

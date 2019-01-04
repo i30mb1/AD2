@@ -24,7 +24,6 @@ import android.support.transition.TransitionManager;
 import android.support.v4.app.FragmentTransaction;
 import android.support.v7.app.AlertDialog;
 import android.support.v7.widget.LinearLayoutManager;
-import android.view.Menu;
 import android.view.MenuItem;
 import android.view.ViewGroup;
 import android.view.animation.AccelerateDecelerateInterpolator;
@@ -45,7 +44,7 @@ import n7.ad2.databinding.DialogRateBinding;
 import n7.ad2.databinding.DialogUpdateBinding;
 import n7.ad2.databinding.DrawerBinding;
 import n7.ad2.fragment.GameFragment;
-import n7.ad2.fragment.ItemsFragment;
+import n7.ad2.items.ItemsFragment;
 import n7.ad2.fragment.NewsFragment;
 import n7.ad2.fragment.StreamsFragment;
 import n7.ad2.fragment.TournamentsFragment;
@@ -57,12 +56,14 @@ import static n7.ad2.main.MainViewModel.SHOULD_UPDATE_FROM_MARKET;
 import static n7.ad2.splash.SplashActivityViewModel.CURRENT_DAY_IN_APP;
 
 public class MainActivity extends BaseActivity {
+
     public static final int COUNTER_DIALOG_RATE = 20;
     public static final int COUNTER_DIALOG_DONATE = 40;
-    public static final String FIREBASE_SAW_MY_DIALOG_RATE = "REQUEST_FOR_RATE_SAW";
-    public static final String FIREBASE_CLICKED_TO_RATE_APP = "FIREBASE_CLICKED_TO_RATE_APP";
-    public static final String FIREBASE_SAW_MY_DIALOG_DONATE = "FIREBASE_SAW_MY_DIALOG_DONATE";
-    public static final String DIALOG_SUBSCRIPTION_OPEN = "DIALOG_SUBSCRIPTION_OPEN";
+
+    public static final String FIREBASE_DIALOG_RATE_SAW = "FIREBASE_DIALOG_RATE_SAW";
+    public static final String FIREBASE_DIALOG_RATE_CLICK = "FIREBASE_DIALOG_RATE_CLICK";
+    public static final String FIREBASE_DIALOG_PRE_DONATE_SAW = "FIREBASE_DIALOG_PRE_DONATE_SAW";
+
     public static final String LAST_ITEM = "LAST_ITEM";
     public static final int MILLIS_FOR_EXIT = 2000;
     public ObservableInt observableLastItem = new ObservableInt(1);
@@ -80,9 +81,7 @@ public class MainActivity extends BaseActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
-        log("on_Create");
         super.onCreate(savedInstanceState);
-        shouldUpdateFromMarket = PreferenceManager.getDefaultSharedPreferences(this).getBoolean(SHOULD_UPDATE_FROM_MARKET, true);
 
         viewModel = ViewModelProviders.of(this).get(MainViewModel.class);
 
@@ -96,9 +95,14 @@ public class MainActivity extends BaseActivity {
         setupToolbar();
         setupDrawer();
         setupRecyclerView();
+        setupListeners();
 
         setLastFragment();
 
+        log("on_Create");
+    }
+
+    private void setupListeners() {
         viewModel.snackbarMessage.observe(this, new Observer<Integer>() {
             @Override
             public void onChanged(@StringRes Integer redId) {
@@ -130,6 +134,7 @@ public class MainActivity extends BaseActivity {
         dialog.getWindow().getAttributes().windowAnimations = R.style.DialogTheme;
         dialog.show();
 
+        shouldUpdateFromMarket = PreferenceManager.getDefaultSharedPreferences(this).getBoolean(SHOULD_UPDATE_FROM_MARKET, true);
         dialog.setOnCancelListener(new DialogInterface.OnCancelListener() {
             @Override
             public void onCancel(DialogInterface dialog) {
@@ -210,13 +215,6 @@ public class MainActivity extends BaseActivity {
         Transition transition = new ChangeBounds().setInterpolator(new AccelerateDecelerateInterpolator()).setDuration(1000);
         TransitionManager.beginDelayedTransition((ViewGroup) bindingDrawer.getRoot(), transition);
         currentSet.applyTo((ConstraintLayout) bindingDrawer.getRoot());
-//        if (currentSet == constraintSetHidden) {
-//            findViewById(R.id.drawer).animate().alpha(0.0f).setDuration(1000).start();
-//            iv_drawer_setting.animate().alpha(0.0f).setDuration(1000).start();
-//        } else {
-//            findViewById(R.id.drawer).animate().alpha(1.0f).setDuration(1000).start();
-//            iv_drawer_setting.animate().alpha(1.0f).setDuration(1000).start();
-//        }
     }
 
     public void loadNewVersion() {
@@ -253,7 +251,7 @@ public class MainActivity extends BaseActivity {
 //        if (enterCounter > COUNTER_DIALOG_DONATE) checkIfNeedShowDialogDonate();
     }
 
-//    private void checkIfNeedShowDialogDonate() {
+    private void showPreDialogDonate() {
 //        if (!sp.getBoolean(PREMIUM, false) && !sp.getString(IS_DAY_FOR_DONATE, "0").equals(MySharedPreferences.getTodayDate())) {
 //            sp.edit().putString(IS_DAY_FOR_DONATE, MySharedPreferences.getTodayDate()).apply();
 //
@@ -264,20 +262,20 @@ public class MainActivity extends BaseActivity {
 //                @Override
 //                public void onClick(View v) {
 //                    Intent intent = new Intent(MainActivity.this, SettingActivity.class);
-//                    intent.putExtra(DIALOG_SUBSCRIPTION_OPEN, true);
+//                    intent.putExtra(INTENT_SHOW_DIALOG_DONATE, true);
 //                    startActivity(intent);
 //                    dialog.dismiss();
 //                }
 //            });
 //
 //            FirebaseAnalytics firebaseAnalytics = FirebaseAnalytics.getInstance(this);
-//            firebaseAnalytics.logEvent(FIREBASE_SAW_MY_DIALOG_DONATE, null);
+//            firebaseAnalytics.logEvent(FIREBASE_DIALOG_DONATE_SAW, null);
 //        }
-//    }
+    }
 
     @SuppressWarnings("ConstantConditions")
-    private void checkIfNeedShowDialogRate() {
-        boolean showDialogRate = PreferenceManager.getDefaultSharedPreferences(this).getBoolean(getString(R.string.dialog_with_request_for_rate), true);
+    private void showDialogRate() {
+        boolean showDialogRate = PreferenceManager.getDefaultSharedPreferences(this).getBoolean(getString(R.string.dialog_rate_key), true);
         if (showDialogRate) {
             final AlertDialog.Builder builder = new AlertDialog.Builder(this);
             DialogRateBinding binding = DataBindingUtil.inflate(getLayoutInflater(), R.layout.dialog_rate, null, false);
@@ -287,15 +285,8 @@ public class MainActivity extends BaseActivity {
             dialog.getWindow().getAttributes().windowAnimations = R.style.DialogTheme;
             dialog.show();
 
-//            dialog.findViewById(R.id.b).setOnClickListener(new View.OnClickListener() {
-//                @Override
-//                public void onClick(View v) {
-//                    dialog.dismiss();
-
-//                }
-//            });
             FirebaseAnalytics firebaseAnalytics = FirebaseAnalytics.getInstance(this);
-            firebaseAnalytics.logEvent(FIREBASE_SAW_MY_DIALOG_RATE, null);
+            firebaseAnalytics.logEvent(FIREBASE_DIALOG_RATE_SAW, null);
         }
     }
 
@@ -306,7 +297,7 @@ public class MainActivity extends BaseActivity {
             startActivity(new Intent(Intent.ACTION_VIEW, Uri.parse("https://play.google.com/store/apps/details?id=" + getPackageName())));
         }
         FirebaseAnalytics firebaseAnalytics = FirebaseAnalytics.getInstance(MainActivity.this);
-        firebaseAnalytics.logEvent(FIREBASE_CLICKED_TO_RATE_APP, null);
+        firebaseAnalytics.logEvent(FIREBASE_DIALOG_RATE_CLICK, null);
     }
 
     private void hideKeyboard() {
@@ -338,12 +329,6 @@ public class MainActivity extends BaseActivity {
                 .withMenuView(bindingDrawer.getRoot())
                 .inject();
         drawable.openMenu();
-    }
-
-    @Override
-    public boolean onCreateOptionsMenu(Menu menu) {
-        getMenuInflater().inflate(R.menu.menu_search, menu);
-        return true;
     }
 
     @Override

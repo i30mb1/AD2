@@ -1,6 +1,5 @@
-package n7.ad2.db.items;
+package n7.ad2.items.db;
 
-import android.arch.lifecycle.LiveData;
 import android.arch.paging.DataSource;
 import android.arch.persistence.room.Dao;
 import android.arch.persistence.room.Insert;
@@ -18,8 +17,8 @@ public interface ItemsDao {
     @Query("SELECT * FROM ItemModel ORDER BY name ASC")
     DataSource.Factory<Integer, ItemModel> getDataSourceItems();
 
-    @Query("SELECT * FROM ItemModel WHERE codeName LIKE '%'||:s||'%' ORDER BY name ASC")
-    DataSource.Factory<Integer, ItemModel> getDataSourceItemsFilter(String s);
+    @Query("SELECT * FROM ItemModel WHERE codeName LIKE '%'||:chars||'%' ORDER BY name ASC")
+    DataSource.Factory<Integer, ItemModel> getDataSourceItemsFilter(String chars);
 
     @Query("SELECT * FROM ItemModel")
     List<ItemModel> getAll();

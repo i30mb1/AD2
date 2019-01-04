@@ -18,26 +18,22 @@ import android.view.MenuItem;
 import android.view.View;
 import android.view.ViewGroup;
 
-import n7.ad2.MySharedPreferences;
 import n7.ad2.R;
-import n7.ad2.adapter.HeroesPagedListAdapter;
 import n7.ad2.databinding.FragmentHeroesBinding;
-import n7.ad2.db.heroes.HeroModel;
+import n7.ad2.heroes.db.HeroModel;
 
 
 public class HeroesFragment extends Fragment implements SearchView.OnQueryTextListener {
 
     private HeroesPagedListAdapter adapter;
-    private HeroesViewModel heroesViewModel;
+    private HeroesViewModel viewModel;
     private FragmentHeroesBinding binding;
 
     public HeroesFragment() {
-        MySharedPreferences.LAST_FRAGMENT_SELECTED = 1;
     }
 
     @Override
     public void onCreateOptionsMenu(Menu menu, MenuInflater inflater) {
-        menu.clear();
         inflater.inflate(R.menu.menu_search, menu);
         super.onCreateOptionsMenu(menu, inflater);
         MenuItem searchHero = menu.findItem(R.id.action_search);
@@ -53,18 +49,18 @@ public class HeroesFragment extends Fragment implements SearchView.OnQueryTextLi
         setRetainInstance(true);//фрагмент не уничтожается а передаётся новому активити (пропускает методы onCreate&onDestroy)
         setHasOptionsMenu(true);//вызов метода onCreateOptionsMenu в фрагменте
 
-        heroesViewModel = ViewModelProviders.of(this).get(HeroesViewModel.class);
+        viewModel = ViewModelProviders.of(this).get(HeroesViewModel.class);
 
         initPagedListAdapter();
         return binding.getRoot();
     }
 
     private void initPagedListAdapter() {
-        binding.rv.setHasFixedSize(true);//если recyclerView не будет изменяться в размерах тогда ставим true
+        binding.rv.setHasFixedSize(true);// если recyclerView не будет изменяться в размерах тогда ставим true
         binding.rv.setLayoutManager(new GridLayoutManager(getContext(), 3));
-        adapter = new HeroesPagedListAdapter();//это RecyclerView.Adapter, заточенный под чтение данных из PagedList.
+        adapter = new HeroesPagedListAdapter(); // PagedListAdapter, заточенный под чтение данных из PagedList.
         binding.rv.setAdapter(adapter);
-        heroesViewModel.getHeroes().observe(this, new Observer<PagedList<HeroModel>>() {
+        viewModel.getHeroes().observe(this, new Observer<PagedList<HeroModel>>() {
             @Override
             public void onChanged(@Nullable PagedList<HeroModel> heroModels) {
                 adapter.submitList(heroModels);
@@ -79,12 +75,12 @@ public class HeroesFragment extends Fragment implements SearchView.OnQueryTextLi
 
     @Override
     public boolean onQueryTextChange(String s) {
-//        heroesViewModel.getPagedListHeroesFilter(s.trim()).observe(this, new Observer<PagedList<HeroModel>>() {
-//            @Override
-//            public void onChanged(@Nullable PagedList<HeroModel> heroes) {
-//                adapter.submitList(heroes);
-//            }
-//        });
-        return false;
+        viewModel.getHeroesByFilter(s.trim()).observe(this, new Observer<PagedList<HeroModel>>() {
+            @Override
+            public void onChanged(@Nullable PagedList<HeroModel> heroModels) {
+                adapter.submitList(heroModels);
+            }
+        });
+        return true;
     }
 }

@@ -1,4 +1,4 @@
-package n7.ad2.db.heroes;
+package n7.ad2.heroes.db;
 
 import android.app.Activity;
 import android.arch.persistence.room.Entity;
@@ -7,7 +7,6 @@ import android.content.Intent;
 import android.support.annotation.NonNull;
 import android.support.v4.app.ActivityOptionsCompat;
 import android.view.View;
-import android.widget.ImageView;
 
 import n7.ad2.activity.HeroFullActivity;
 
@@ -36,7 +35,7 @@ public class HeroModel {
 
     public HeroModel(@NonNull String codeName, @NonNull String name) {
         this.codeName = codeName;
-        this.name = name;
+        this.name = name.replace("%27", "'");
     }
 
     public String getTime() {

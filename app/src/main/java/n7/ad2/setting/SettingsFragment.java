@@ -85,7 +85,7 @@ public class SettingsFragment extends PreferenceFragment {
         subscription.setOnPreferenceClickListener(new Preference.OnPreferenceClickListener() {
             @Override
             public boolean onPreferenceClick(Preference preference) {
-                ((SettingActivity) getActivity()).showDialogSubscription();
+                ((SettingActivity) getActivity()).showDialogDonate();
                 return true;
             }
         });

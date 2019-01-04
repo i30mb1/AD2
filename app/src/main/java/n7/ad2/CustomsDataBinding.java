@@ -1,6 +1,7 @@
 package n7.ad2;
 
 import android.databinding.BindingAdapter;
+import android.graphics.drawable.Drawable;
 import android.support.v7.widget.RecyclerView;
 import android.view.View;
 import android.view.animation.Animation;
@@ -14,15 +15,15 @@ import com.squareup.picasso.Picasso;
 public class CustomsDataBinding {
 
 
-    @BindingAdapter("app:url")
-    public static void loadRes(ImageView view, int resId) {
-        Picasso.get().load(resId).into(view);
+    @BindingAdapter("app:srcPath")
+    public static void loadRes(ImageView view, int srcPath) {
+        Picasso.get().load(srcPath).into(view);
     }
 
-    @BindingAdapter("app:url")
-    public static void loadUrl(ImageView view, String url) {
+    @BindingAdapter({"app:srcPath"})
+    public static void loadUrl(ImageView view, String srcPath) {
         Picasso.get()
-                .load("file:///android_asset/heroes/" + url + "/full.webp")
+                .load(srcPath)
                 .error(R.drawable.hero_placeholder_error)
                 .placeholder(R.drawable.hero_placeholder)
                 .into(view);

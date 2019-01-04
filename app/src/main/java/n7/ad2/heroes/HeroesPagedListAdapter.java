@@ -1,4 +1,4 @@
-package n7.ad2.adapter;
+package n7.ad2.heroes;
 
 import android.arch.paging.PagedListAdapter;
 import android.databinding.DataBindingUtil;
@@ -10,7 +10,7 @@ import android.view.ViewGroup;
 
 import n7.ad2.R;
 import n7.ad2.databinding.ItemListHeroBinding;
-import n7.ad2.db.heroes.HeroModel;
+import n7.ad2.heroes.db.HeroModel;
 
 public class HeroesPagedListAdapter extends PagedListAdapter<HeroModel, HeroesPagedListAdapter.ViewHolder> {
 
@@ -27,7 +27,7 @@ public class HeroesPagedListAdapter extends PagedListAdapter<HeroModel, HeroesPa
     };
     private LayoutInflater inflater;
 
-    public HeroesPagedListAdapter() {
+    HeroesPagedListAdapter() {
         super(DIFF_CALLBACK);
     }
 
@@ -52,7 +52,7 @@ public class HeroesPagedListAdapter extends PagedListAdapter<HeroModel, HeroesPa
 
         ItemListHeroBinding binding;
 
-        public ViewHolder(ItemListHeroBinding binding) {
+        ViewHolder(ItemListHeroBinding binding) {
             super(binding.getRoot());
             this.binding = binding;
         }
@@ -62,7 +62,8 @@ public class HeroesPagedListAdapter extends PagedListAdapter<HeroModel, HeroesPa
         }
 
         private void clear() {
-
+            binding.iv.setImageResource(R.drawable.hero_placeholder);
+            binding.tv.setText("");
         }
     }
 }

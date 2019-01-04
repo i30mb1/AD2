@@ -11,9 +11,9 @@ import java.io.IOException;
 import java.util.concurrent.Executors;
 
 import androidx.work.Worker;
-import n7.ad2.db.heroes.HeroModel;
-import n7.ad2.db.heroes.HeroesDao;
-import n7.ad2.db.heroes.HeroesRoomDatabase;
+import n7.ad2.heroes.db.HeroModel;
+import n7.ad2.heroes.db.HeroesDao;
+import n7.ad2.heroes.db.HeroesRoomDatabase;
 
 public class GuideWorker extends Worker {
 
