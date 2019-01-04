@@ -129,11 +129,11 @@ public class HeroModel {
     }
 
 
-    public void startHeroFull(View view, HeroModel hero) {
+    public void startHeroFull(View view) {
         Intent intent = new Intent(view.getContext(), HeroFullActivity.class);
         ActivityOptionsCompat options = ActivityOptionsCompat.makeSceneTransitionAnimation((Activity) view.getContext(), view, "iv");
-        intent.putExtra(HERO_NAME, hero.getName());
-        intent.putExtra(HERO_CODE_NAME, hero.getCodeName());
+        intent.putExtra(HERO_NAME, name);
+        intent.putExtra(HERO_CODE_NAME, codeName);
         view.getContext().startActivity(intent, options.toBundle());
     }
 }

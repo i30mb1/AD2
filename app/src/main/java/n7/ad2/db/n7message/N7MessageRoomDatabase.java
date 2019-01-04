@@ -5,7 +5,7 @@ import android.arch.persistence.room.Room;
 import android.arch.persistence.room.RoomDatabase;
 import android.content.Context;
 
-@Database(entities = {N7Message.class}, version = 1)
+@Database(entities = {N7Message.class}, version = 2,exportSchema = false)
 public abstract class N7MessageRoomDatabase extends RoomDatabase {
 
     public abstract N7MessageDao n7MessageDao();
@@ -17,7 +17,7 @@ public abstract class N7MessageRoomDatabase extends RoomDatabase {
             synchronized (N7MessageRoomDatabase.class) {
                 if (INSTANCE == null) {
                     INSTANCE = Room
-                            .databaseBuilder(context.getApplicationContext(), N7MessageRoomDatabase.class, "N7.db")
+                            .databaseBuilder(context.getApplicationContext(), N7MessageRoomDatabase.class, "N7_2.db")
                             .fallbackToDestructiveMigration()
                             .build();
                 }

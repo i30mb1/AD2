@@ -11,35 +11,33 @@ import androidx.work.Data;
 import androidx.work.ExistingWorkPolicy;
 import androidx.work.OneTimeWorkRequest;
 import androidx.work.WorkManager;
-import n7.ad2.db.news.SteamNews;
-import n7.ad2.db.news.SteamNewsDao;
-import n7.ad2.db.news.SteamNewsRoomDatabase;
-import n7.ad2.worker.SteamDbNewsWorker;
-import n7.ad2.worker.SteamNewsWorker;
+import n7.ad2.news.db.NewsModel;
+import n7.ad2.news.db.NewsDao;
+import n7.ad2.news.db.NewsRoomDatabase;
+import n7.ad2.news.NewsWorker;
 
-import static n7.ad2.worker.SteamDbNewsWorker.PAGE;
-import static n7.ad2.worker.SteamNewsWorker.END_DATE;
+import static n7.ad2.news.NewsWorker.PAGE;
 
 public class SteamDbNewsRepository {
 
-    private final SteamNewsDao steamNewsDao;
+    private final NewsDao steamNewsDao;
     private Application application;
     private int page = 1;
 
     public SteamDbNewsRepository(Application application) {
         this.application = application;
-        steamNewsDao = SteamNewsRoomDatabase.getDatabase(application).steamNewsDao();
+        steamNewsDao = NewsRoomDatabase.getDatabase(application).steamNewsDao();
     }
 
-    public LiveData<PagedList<SteamNews>> getSteamNews() {
-        DataSource.Factory factory = steamNewsDao.getDataSourceSteamNews();
+    public LiveData<PagedList<NewsModel>> getSteamNews() {
+        DataSource.Factory factory = steamNewsDao.getDataSourceNews();
 
         PagedList.Config config = new PagedList.Config.Builder()
                 .setPageSize(20)
                 .setEnablePlaceholders(false)
                 .build();
 
-        LiveData<PagedList<SteamNews>> listLiveData = new LivePagedListBuilder(factory, config).setBoundaryCallback(new ItemBoundaryCallback()).build();
+        LiveData<PagedList<NewsModel>> listLiveData = new LivePagedListBuilder(factory, config).setBoundaryCallback(new ItemBoundaryCallback()).build();
         return listLiveData;
     }
 
@@ -50,8 +48,8 @@ public class SteamDbNewsRepository {
             super.onItemAtEndLoaded(itemAtEnd);
             page++;
             Data data = new Data.Builder().putInt(PAGE, page).build();
-            OneTimeWorkRequest worker = new OneTimeWorkRequest.Builder(SteamDbNewsWorker.class).setInputData(data).build();
-            WorkManager.getInstance().beginUniqueWork(SteamDbNewsWorker.UNIQUE_WORK, ExistingWorkPolicy.KEEP, worker).enqueue();
+            OneTimeWorkRequest worker = new OneTimeWorkRequest.Builder(NewsWorker.class).setInputData(data).build();
+            WorkManager.getInstance().beginUniqueWork(NewsWorker.TAG, ExistingWorkPolicy.APPEND, worker).enqueue();
         }
     }
 }

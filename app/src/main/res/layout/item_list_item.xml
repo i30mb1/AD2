@@ -34,7 +34,7 @@
                 android:paddingEnd="0dp"
                 android:scaleType="centerCrop"
                 android:transitionName="iv"
-                app:srcPath='@{"file:///android_asset/items/" + item.getCodeName() + "/full.webp"}'
+                srcPath='@{"file:///android_asset/items/" + item.getCodeName() + "/full.webp"}'
                 android:onClick="@{(view)-> item.startItemFull(view)}"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintEnd_toEndOf="parent"

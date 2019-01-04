@@ -29,12 +29,12 @@
                 android:adjustViewBounds="true"
                 android:background="?colorAccent"
                 android:contentDescription="@string/setting_tell_friend"
-                android:onClick="@{(view)->hero.startHeroFull(view,hero)}"
+                android:onClick="@{(view)->hero.startHeroFull(view)}"
                 android:paddingStart="2dp"
                 android:paddingEnd="0dp"
                 android:scaleType="centerCrop"
                 android:transitionName="iv"
-                app:url='@{"file:///android_asset/heroes/" + hero.codeName + "/full.webp"}'
+                srcPath='@{"file:///android_asset/heroes/" + hero.codeName + "/full.webp"}'
                 tools:ignore="UnusedAttribute"
                 tools:src="@drawable/hero_placeholder" />
 

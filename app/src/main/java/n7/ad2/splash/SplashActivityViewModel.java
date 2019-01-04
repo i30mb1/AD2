@@ -2,7 +2,9 @@ package n7.ad2.splash;
 
 import android.app.Application;
 import android.arch.lifecycle.AndroidViewModel;
+import android.databinding.ObservableField;
 import android.databinding.ObservableInt;
+import android.graphics.drawable.Drawable;
 import android.preference.PreferenceManager;
 import android.support.annotation.NonNull;
 
@@ -22,6 +24,7 @@ import java.util.concurrent.Executors;
 import javax.net.ssl.SSLContext;
 
 import androidx.work.Data;
+import androidx.work.ExistingWorkPolicy;
 import androidx.work.OneTimeWorkRequest;
 import androidx.work.WorkManager;
 import n7.ad2.MySharedPreferences;
@@ -30,17 +33,17 @@ import n7.ad2.SingleLiveEvent;
 import n7.ad2.adapter.PlainTextAdapter;
 import n7.ad2.heroes.db.HeroesRoomDatabase;
 import n7.ad2.items.db.ItemsRoomDatabase;
+import n7.ad2.news.NewsWorker;
 import n7.ad2.purchaseUtils.IabHelper;
 import n7.ad2.purchaseUtils.IabResult;
 import n7.ad2.purchaseUtils.Inventory;
-import n7.ad2.worker.SteamDbNewsWorker;
 
 import static n7.ad2.MySharedPreferences.PREMIUM;
 import static n7.ad2.activity.BaseActivity.THEME_DARK;
 import static n7.ad2.activity.BaseActivity.THEME_GRAY;
 import static n7.ad2.activity.BaseActivity.THEME_WHITE;
+import static n7.ad2.news.NewsWorker.DELETE_TABLE;
 import static n7.ad2.setting.SettingActivity.ONCE_PER_MONTH_SUBSCRIPTION;
-import static n7.ad2.worker.SteamNewsWorker.DELETE_TABLE;
 
 public class SplashActivityViewModel extends AndroidViewModel {
 
@@ -49,7 +52,7 @@ public class SplashActivityViewModel extends AndroidViewModel {
     private static final String LAST_DAY_WHEN_USED_PREMIUM = "LAST_DAY_WHEN_USED_PREMIUM";
     private static final String LAST_DAY_WHEN_LOAD_NEWS = "LAST_DAY_WHEN_LOAD_NEWS";
     final SingleLiveEvent<Void> startMainActivity = new SingleLiveEvent<>();
-    public ObservableInt resId = new ObservableInt();
+    public ObservableField<Drawable> resId = new ObservableField<>();
     public ObservableInt scrollTo = new ObservableInt();
     private Application application;
     private Executor diskIO;
@@ -84,8 +87,10 @@ public class SplashActivityViewModel extends AndroidViewModel {
         int lastDayWhenLoadNews = PreferenceManager.getDefaultSharedPreferences(application).getInt(LAST_DAY_WHEN_LOAD_NEWS, 0);
         if (currentDay != lastDayWhenLoadNews) {
             Data data = new Data.Builder().putBoolean(DELETE_TABLE, true).build();
-            OneTimeWorkRequest worker = new OneTimeWorkRequest.Builder(SteamDbNewsWorker.class).setInputData(data).build();
-            WorkManager.getInstance().enqueue(worker);
+            OneTimeWorkRequest worker = new OneTimeWorkRequest.Builder(NewsWorker.class)
+                    .setInputData(data)
+                    .build();
+            WorkManager.getInstance().beginUniqueWork(NewsWorker.TAG, ExistingWorkPolicy.APPEND, worker).enqueue();
 
             PreferenceManager.getDefaultSharedPreferences(application).edit().putInt(LAST_DAY_WHEN_LOAD_NEWS, currentDay).apply();
             log("loading_news::true");
@@ -96,7 +101,7 @@ public class SplashActivityViewModel extends AndroidViewModel {
 
     private void log(String text) {
         adapter.add(text);
-        scrollTo.set(adapter.getItemCount()-1);
+        scrollTo.set(adapter.getItemCount() - 1);
     }
 
     private void setupCurrentDay() {
@@ -110,13 +115,13 @@ public class SplashActivityViewModel extends AndroidViewModel {
         switch (PreferenceManager.getDefaultSharedPreferences(application).getString(application.getString(R.string.setting_theme_key), THEME_GRAY)) {
             default:
             case THEME_GRAY:
-                resId.set(R.drawable.icon_gray);
+                resId.set(application.getResources().getDrawable(R.drawable.icon_gray));
                 break;
             case THEME_WHITE:
-                resId.set(R.drawable.icon_white);
+                resId.set(application.getResources().getDrawable(R.drawable.icon_white));
                 break;
             case THEME_DARK:
-                resId.set(R.drawable.icon_dark);
+                resId.set(application.getResources().getDrawable(R.drawable.icon_dark));
                 break;
         }
     }

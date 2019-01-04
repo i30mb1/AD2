@@ -56,10 +56,10 @@ public class ItemsFragment extends Fragment implements SearchView.OnQueryTextLis
 
     private void setupRecyclerView() {
         binding.rv.setHasFixedSize(true);
-        binding.rv.setLayoutManager(new GridLayoutManager(view.getContext(), 4));
+        binding.rv.setLayoutManager(new GridLayoutManager(getContext(), 4));
         adapter = new ItemsPagedListAdapter();
         binding.rv.setAdapter(adapter);
-        viewModel.getItems().observe(this, new Observer<PagedList<ItemModel>>() {
+        viewModel.getItemsByFilter("").observe(this, new Observer<PagedList<ItemModel>>() {
             @Override
             public void onChanged(@Nullable PagedList<ItemModel> items) {
                 adapter.submitList(items);

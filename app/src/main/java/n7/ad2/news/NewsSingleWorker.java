@@ -1,4 +1,4 @@
-package n7.ad2.worker;
+package n7.ad2.news;
 
 import android.support.annotation.NonNull;
 
@@ -11,18 +11,20 @@ import java.io.IOException;
 
 import androidx.work.Worker;
 import n7.ad2.R;
-import n7.ad2.db.news.SteamNewsDao;
-import n7.ad2.db.news.SteamNewsRoomDatabase;
+import n7.ad2.news.db.NewsDao;
+import n7.ad2.news.db.NewsRoomDatabase;
 
-import static n7.ad2.worker.SteamDbNewsWorker.HREF;
+import static n7.ad2.news.NewsWorker.HREF;
 
-public class SteamDbSingleNewsWorker extends Worker {
-    public String base_url = "https://www.dotabuff.com";
+public class NewsSingleWorker extends Worker {
+
+    private String base_url;
 
     @NonNull
     @Override
     public Result doWork() {
         initBaseUrl();
+
         String href = getInputData().getString(HREF);
         try {
             Document doc = Jsoup.connect(base_url + href).get();
@@ -50,10 +52,10 @@ public class SteamDbSingleNewsWorker extends Worker {
                 body = doc.getElementsByClass("story-big");
             }
 
-            String contents = body.toString();
+            String content = body.toString();
 
-            SteamNewsDao steamNewsDao = SteamNewsRoomDatabase.getDatabase(getApplicationContext()).steamNewsDao();
-            steamNewsDao.setContents(contents, href);
+            NewsDao steamNewsDao = NewsRoomDatabase.getDatabase(getApplicationContext()).steamNewsDao();
+            steamNewsDao.setContent(content, href);
 
         } catch (IOException e) {
             e.printStackTrace();

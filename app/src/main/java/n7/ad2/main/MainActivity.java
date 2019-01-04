@@ -45,7 +45,7 @@ import n7.ad2.databinding.DialogUpdateBinding;
 import n7.ad2.databinding.DrawerBinding;
 import n7.ad2.fragment.GameFragment;
 import n7.ad2.items.ItemsFragment;
-import n7.ad2.fragment.NewsFragment;
+import n7.ad2.news.NewsFragment;
 import n7.ad2.fragment.StreamsFragment;
 import n7.ad2.fragment.TournamentsFragment;
 import n7.ad2.heroes.HeroesFragment;

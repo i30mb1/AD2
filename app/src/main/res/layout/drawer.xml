@@ -50,10 +50,10 @@
             android:layout_marginStart="8dp"
             android:layout_marginBottom="8dp"
             android:contentDescription="@string/setting_tell_friend"
-            android:onClick="@{()->viewModel.startUpdate()}"
+            android:onClick="@{()->viewModel.startUpdate(true)}"
             android:scaleType="center"
             android:tint="?android:textColorPrimary"
-            app:isBusy="@{viewModel.isUpdating}"
+            isBusy="@{viewModel.isUpdating}"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintLeft_toLeftOf="parent"
             app:srcCompat="@drawable/ic_update" />

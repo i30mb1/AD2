@@ -36,10 +36,8 @@ public class HeroesViewModel extends AndroidViewModel {
 
     private void setupLiveDataHeroes() {
         heroesDao = HeroesRoomDatabase.getDatabase(application, diskIO).heroesDao();
-
         //DataSource.Factory генерирует сама Room
         DataSource.Factory<Integer, HeroModel> dataSource = heroesDao.getDataSourceHeroes();
-
         //PagedList.Config для различных условий загрузки
         PagedList.Config config = new PagedList.Config.Builder()
                 .setPageSize(100)
@@ -54,7 +52,7 @@ public class HeroesViewModel extends AndroidViewModel {
 
     LiveData<PagedList<HeroModel>> getHeroesByFilter(String chars) {
         DataSource.Factory<Integer, HeroModel> dataSource = heroesDao.getDataSourceHeroesFilter(chars);
-        PagedList.Config config = new PagedList.Config.Builder().setPageSize(100).setEnablePlaceholders(false).build();
+        PagedList.Config config = new PagedList.Config.Builder().setPageSize(50).build();
         return new LivePagedListBuilder<>(dataSource, config).build();
     }
 }

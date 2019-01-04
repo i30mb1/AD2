@@ -12,9 +12,9 @@ import android.webkit.WebSettings;
 import android.webkit.WebView;
 
 import n7.ad2.R;
-import n7.ad2.db.news.SteamNews;
-import n7.ad2.db.news.SteamNewsDao;
-import n7.ad2.db.news.SteamNewsRoomDatabase;
+import n7.ad2.news.db.NewsDao;
+import n7.ad2.news.db.NewsModel;
+import n7.ad2.news.db.NewsRoomDatabase;
 
 
 public class NewsActivity extends BaseActivity {
@@ -91,12 +91,12 @@ public class NewsActivity extends BaseActivity {
 
         String href = getIntent().getStringExtra(HREF);
 
-        SteamNewsDao steamNewsDao = SteamNewsRoomDatabase.getDatabase(this).steamNewsDao();
-        steamNewsDao.getNewsByIndex(href).observe(this, new Observer<SteamNews>() {
+        NewsDao steamNewsDao = NewsRoomDatabase.getDatabase(this).steamNewsDao();
+        steamNewsDao.getNewsByIndex(href).observe(this, new Observer<NewsModel>() {
             @Override
-            public void onChanged(@Nullable SteamNews steamNews) {
+            public void onChanged(@Nullable NewsModel steamNews) {
                 contents.loadDataWithBaseURL(null, "<style>img{display: inline;height: auto;max-width: 100%;text-decoration:none;}</style>" +
-                        "<style type=\"text/css\">body{color:" + getColorTextTheme() + ";}</style>" + steamNews.contents, "text/html", "UTF-8", null);
+                        "<style type=\"text/css\">body{color:" + getColorTextTheme() + ";}</style>" + steamNews.getContent(), "text/html", "UTF-8", null);
             }
         });
 //        webSettings.setDefaultFontSize(10);

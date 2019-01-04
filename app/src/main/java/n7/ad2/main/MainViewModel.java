@@ -73,7 +73,7 @@ public class MainViewModel extends AndroidViewModel {
         int currentDay = PreferenceManager.getDefaultSharedPreferences(application).getInt(CURRENT_DAY_IN_APP, 0);
         int lastDayWhenCheckUpdate = PreferenceManager.getDefaultSharedPreferences(application).getInt(LAST_DAY_WHEN_CHECK_UPDATE, 0);
         if (currentDay != lastDayWhenCheckUpdate) {
-            startUpdate();
+            startUpdate(false);
             PreferenceManager.getDefaultSharedPreferences(application).edit().putInt(LAST_DAY_WHEN_CHECK_UPDATE, currentDay).apply();
         }
     }
@@ -93,7 +93,7 @@ public class MainViewModel extends AndroidViewModel {
         MySharedPreferences.getSharedPreferences(application).edit().putString(ACCOUNTS_FOR_TOP_TWITCH, update.getMessage().getTwitch()).apply();
     }
 
-    public void startUpdate() {
+    public void startUpdate(final boolean showSnackbar) {
         diskIO.execute(new Runnable() {
             @Override
             public void run() {
@@ -129,7 +129,7 @@ public class MainViewModel extends AndroidViewModel {
                         if (serverVersion > deviceVersion) {
                             showDialogUpdate.call();
                         } else {
-                            snackbarMessage.postValue(R.string.update_ok);
+                            if (showSnackbar) snackbarMessage.postValue(R.string.update_ok);
                         }
                         log("device_version::" + deviceVersion);
                         log("server_version::" + serverVersion);
