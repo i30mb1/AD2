@@ -22,8 +22,6 @@ import n7.ad2.purchaseUtils.IabResult;
 import n7.ad2.purchaseUtils.Inventory;
 import n7.ad2.purchaseUtils.Purchase;
 
-import static n7.ad2.MySharedPreferences.SUBSCRIPTION;
-
 public class SettingActivity extends BaseActivity {
 
     public static final String ONCE_PER_MONTH_SUBSCRIPTION = "once_per_month_subscription";
@@ -32,7 +30,9 @@ public class SettingActivity extends BaseActivity {
 
     public static final String INTENT_SHOW_DIALOG_DONATE = "INTENT_SHOW_DIALOG_DONATE";
 
-    public ObservableBoolean isPremium = new ObservableBoolean(false);
+    public static final String SUBSCRIPTION = "SUBSCRIPTION";
+
+    public ObservableBoolean subscription = new ObservableBoolean(false);
     private IabHelper mHelper;
     private ActivitySettingBinding binding;
     private List<Integer> images = new LinkedList<>();
@@ -45,7 +45,7 @@ public class SettingActivity extends BaseActivity {
         binding = DataBindingUtil.setContentView(this, R.layout.activity_setting);
 
         if (savedInstanceState == null) {
-            getFragmentManager().beginTransaction().replace(binding.container.getId(), new SettingsFragment()).commit();
+            getFragmentManager().beginTransaction().replace(binding.containerActivitySetting.getId(), new SettingsFragment()).commit();
         }
 
         setToolbar();
@@ -61,10 +61,10 @@ public class SettingActivity extends BaseActivity {
                 public void onQueryInventoryFinished(IabResult result, Inventory inv) {
                     if (mHelper == null && result.isFailure()) return;
                     if (inv.hasPurchase(ONCE_PER_MONTH_SUBSCRIPTION)) {
-                        isPremium.set(true);
+                        subscription.set(true);
                         MySharedPreferences.getSharedPreferences(SettingActivity.this).edit().putBoolean(SUBSCRIPTION, true).apply();
                     } else {
-                        isPremium.set(false);
+                        subscription.set(false);
                         MySharedPreferences.getSharedPreferences(SettingActivity.this).edit().putBoolean(SUBSCRIPTION, false).apply();
                     }
 //            if (inv.hasPurchase(MONTHLY_SUBSCRIPTION)) {
@@ -176,8 +176,8 @@ public class SettingActivity extends BaseActivity {
     }
 
     private void setToolbar() {
-        setSupportActionBar(binding.toolbar);
-        binding.toolbar.setTitle(R.string.setting);
+        setSupportActionBar(binding.toolbarActivitySetting);
+        binding.toolbarActivitySetting.setTitle(R.string.setting);
         if (getSupportActionBar() != null) {
             getSupportActionBar().setDisplayShowHomeEnabled(true);//включаем кнопку домой
             getSupportActionBar().setDisplayHomeAsUpEnabled(true);//ставим значок стрелочки на кнопку

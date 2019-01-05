@@ -371,7 +371,7 @@ public class MainActivity extends BaseActivity {
 //                                    list.pollLast();
 //                                }
 //                                sp.edit().putString(TWITCH_STREAMS_TYPED, Arrays.toString(list.toArray())).apply();
-//                                Intent intent = new Intent(MainActivity.this, TwitchGameActivity.class);
+//                                Intent intent = new Intent(MainActivity.this, StreamsFullActivity.class);
 //                                intent.putExtra(CHANNEL_NAME, et_dialog_open_by_name.getText().toString().trim());
 //                                intent.putExtra(CHANNEL_TITLE, "");
 //                                startActivity(intent);

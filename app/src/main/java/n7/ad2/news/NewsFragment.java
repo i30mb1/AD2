@@ -50,13 +50,13 @@ public class NewsFragment extends Fragment {
 
     private void setupRecyclerView() {
         GridLayoutManager gridLayoutManager = new GridLayoutManager(getContext(), 1);
-        binding.rv.setLayoutManager(gridLayoutManager);
-        binding.rv.setHasFixedSize(true);
+        binding.rvFragmentNews.setLayoutManager(gridLayoutManager);
+        binding.rvFragmentNews.setHasFixedSize(true);
 
         boolean withImage = MySharedPreferences.getSharedPreferences(getContext()).getBoolean(getString(R.string.setting_news_key), true);
 
         adapter = new NewsPagedListAdapter(withImage);
-        binding.rv.setAdapter(adapter);
+        binding.rvFragmentNews.setAdapter(adapter);
 
         viewModel.getNews().observe(this, new Observer<PagedList<NewsModel>>() {
             @Override

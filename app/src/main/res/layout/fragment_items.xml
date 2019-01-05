@@ -19,6 +19,9 @@
             app:layout_constraintLeft_toLeftOf="parent"
             app:layout_constraintRight_toRightOf="parent"
             app:layout_constraintTop_toTopOf="parent"
+            tools:itemCount="30"
+            tools:layoutManager="GridLayoutManager"
+            tools:spanCount="4"
             tools:listitem="@layout/item_list_item" />
     </android.support.constraint.ConstraintLayout>
 </layout>

@@ -6,7 +6,7 @@ import android.support.v7.widget.LinearSmoothScroller;
 import android.support.v7.widget.RecyclerView;
 import android.util.DisplayMetrics;
 
-import static n7.ad2.streams.TwitchGameActivity.speed;
+import static n7.ad2.streams.StreamsFullActivity.speed;
 
 public class SmoothScrollableLinearLayoutManager extends LinearLayoutManager {
     private final Context context;

@@ -32,6 +32,8 @@ import n7.ad2.activity.HeroFullActivity;
 import n7.ad2.setting.SettingActivity;
 import n7.ad2.utils.Utils;
 
+import static n7.ad2.setting.SettingActivity.SUBSCRIPTION;
+
 public class HeroFragment extends Fragment {
 
     public static final int FILES_IN_FOLDER_NOT_SPELL = 7;
@@ -61,7 +63,7 @@ public class HeroFragment extends Fragment {
     @Override
     public View onCreateView(@NonNull LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
         view = inflater.inflate(R.layout.fragment_hero_personal, container, false);
-        isPremium = MySharedPreferences.getSharedPreferences(getContext()).getBoolean(MySharedPreferences.SUBSCRIPTION, false);
+        isPremium = MySharedPreferences.getSharedPreferences(getContext()).getBoolean(SUBSCRIPTION, false);
 
         setRetainInstance(true);
         setHasOptionsMenu(true);

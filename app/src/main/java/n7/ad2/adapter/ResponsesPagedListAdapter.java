@@ -46,6 +46,8 @@ import n7.ad2.model.ResponseModel;
 import n7.ad2.utils.StickyHeaderDecorator;
 import n7.ad2.utils.Utils;
 
+import static n7.ad2.setting.SettingActivity.SUBSCRIPTION;
+
 public class ResponsesPagedListAdapter extends PagedListAdapter<ResponseModel, ResponsesPagedListAdapter.ViewHolder> implements StickyHeaderDecorator.StickyHeaderInterface {
 
     private static final DiffUtil.ItemCallback<ResponseModel> DIFF_CALLBACK = new DiffUtil.ItemCallback<ResponseModel>() {
@@ -304,7 +306,7 @@ public class ResponsesPagedListAdapter extends PagedListAdapter<ResponseModel, R
                         Button b_dialog_response_download = dialog.findViewById(R.id.b_dialog_response_download);
                         Button b_dialog_response_set_ringtone = dialog.findViewById(R.id.b_dialog_response_set_ringtone);
 
-                        if (MySharedPreferences.getSharedPreferences(view.getContext()).getBoolean(MySharedPreferences.SUBSCRIPTION, false))
+                        if (MySharedPreferences.getSharedPreferences(view.getContext()).getBoolean(SUBSCRIPTION, false))
                             tv_dialog_response_count.setVisibility(View.GONE);
                         int count = MySharedPreferences.getSharedPreferences(view.getContext()).getInt(MySharedPreferences.RESPONSE_COUNT_KEY, MySharedPreferences.FREE_COUNT);
                         tv_dialog_response_count.setText(String.valueOf(count));
@@ -342,7 +344,7 @@ public class ResponsesPagedListAdapter extends PagedListAdapter<ResponseModel, R
                                 }
                             }
                         });
-                        if (count > 0 || MySharedPreferences.getSharedPreferences(view.getContext()).getBoolean(MySharedPreferences.SUBSCRIPTION, false)) {
+                        if (count > 0 || MySharedPreferences.getSharedPreferences(view.getContext()).getBoolean(SUBSCRIPTION, false)) {
                             b_dialog_response_download.setOnClickListener(new View.OnClickListener() {
                                 @Override
                                 public void onClick(final View view) {

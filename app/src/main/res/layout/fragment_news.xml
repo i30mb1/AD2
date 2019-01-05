@@ -11,16 +11,15 @@
             type="n7.ad2.news.NewsViewModel" />
     </data>
 
-    <android.support.constraint.ConstraintLayout
+    <FrameLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:background="?colorPrimary"
-        android:fitsSystemWindows="true">
+        android:background="?colorPrimary">
 
         <android.support.v7.widget.RecyclerView
-            android:id="@+id/rv"
-            android:layout_width="0dp"
-            android:layout_height="0dp"
+            android:id="@+id/rv_fragment_news"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
@@ -28,13 +27,12 @@
             tools:listitem="@layout/item_list_news" />
 
         <ProgressBar
-            android:id="@+id/pb"
             style="@style/Widget.AppCompat.ProgressBar.Horizontal"
             android:layout_width="match_parent"
             android:layout_height="4dp"
             android:indeterminate="true"
             android:scaleY="5"
-            android:visibility="@{viewModel.isLoading?View.VISIBLE:View.GONE}" />
+            android:visibility="@{viewModel.isLoading ? View.VISIBLE : View.GONE}" />
 
-    </android.support.constraint.ConstraintLayout>
+    </FrameLayout>
 </layout>

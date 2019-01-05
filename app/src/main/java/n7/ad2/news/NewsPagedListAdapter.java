@@ -64,15 +64,10 @@ public class NewsPagedListAdapter extends PagedListAdapter<NewsModel, NewsPagedL
 
         private void bindTo(NewsModel news) {
             binding.setNews(news);
-//            if (withImage) {
-//                title.setTextColor(context.getResources().getColor(R.color.textColorPrimary));
-//            } else {
-//                title.setBackground(null);
-//            }
         }
 
         private void clear() {
-            binding.tv.setText("");
+            binding.tvItemListNews.setText("");
         }
     }
 

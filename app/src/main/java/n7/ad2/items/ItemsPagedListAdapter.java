@@ -64,8 +64,8 @@ public class ItemsPagedListAdapter extends PagedListAdapter<ItemModel, ItemsPage
         }
 
         private void clear() {
-            binding.iv.setImageResource(R.drawable.item_placeholder);
-            binding.tv.setText("");
+            binding.ivItemListItem.setImageResource(R.drawable.item_placeholder);
+            binding.tvItemListItem.setText("");
         }
     }
 

@@ -16,6 +16,8 @@ import n7.ad2.MySharedPreferences;
 import n7.ad2.R;
 import n7.ad2.databinding.ActivityLicenseBinding;
 
+import static n7.ad2.setting.SettingActivity.SUBSCRIPTION;
+
 public class LicensesActivity extends BaseActivity {
 
     private Handler handler;
@@ -37,7 +39,7 @@ public class LicensesActivity extends BaseActivity {
                         Calendar calendar = Calendar.getInstance();
                         calendar.add(Calendar.YEAR, 1);
                         MySharedPreferences.getSharedPreferences(getApplicationContext()).edit().putLong(MySharedPreferences.DATE_END_PREMIUM, calendar.getTimeInMillis()).apply();
-                        PreferenceManager.getDefaultSharedPreferences(getApplicationContext()).edit().putBoolean(MySharedPreferences.SUBSCRIPTION, true).apply();
+                        PreferenceManager.getDefaultSharedPreferences(getApplicationContext()).edit().putBoolean(SUBSCRIPTION, true).apply();
                         MediaPlayer.create(getApplicationContext(), R.raw.yes_it_does).start();
                         startBlinking();
                         snackbar.dismiss();

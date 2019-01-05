@@ -52,7 +52,7 @@
                 android:text="@{hero.name}"
                 android:textSize="10sp"
                 android:textStyle="bold"
-                tools:text="@sample/heroes.json/data/name"
+                tools:text="@sample/heroes.json/data/nameEng"
                 tools:ignore="SmallSp" />
 
         </FrameLayout>

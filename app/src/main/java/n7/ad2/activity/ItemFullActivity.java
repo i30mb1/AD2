@@ -19,6 +19,8 @@ import n7.ad2.R;
 import n7.ad2.setting.SettingActivity;
 import n7.ad2.utils.Utils;
 
+import static n7.ad2.setting.SettingActivity.SUBSCRIPTION;
+
 public class ItemFullActivity extends BaseActivity {
 
     public final static String ITEM_NAME = "ITEM_NAME";
@@ -34,7 +36,7 @@ public class ItemFullActivity extends BaseActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_item_full_0);
-        isPremium = MySharedPreferences.getSharedPreferences(this).getBoolean(MySharedPreferences.SUBSCRIPTION, false);
+        isPremium = MySharedPreferences.getSharedPreferences(this).getBoolean(SUBSCRIPTION, false);
 
         this.itemFolder = getIntent().getStringExtra(ITEM_CODE_NAME);
         this.itemName = getIntent().getStringExtra(ITEM_NAME);
@@ -52,7 +54,7 @@ public class ItemFullActivity extends BaseActivity {
                 onBackPressed();
                 break;
             case R.id.action_switch:
-                if (!MySharedPreferences.getSharedPreferences(this).getBoolean(MySharedPreferences.SUBSCRIPTION, false)) {
+                if (!MySharedPreferences.getSharedPreferences(this).getBoolean(SUBSCRIPTION, false)) {
                     Snackbar.make(toolbar, R.string.all_only_for_subscribers, Snackbar.LENGTH_LONG).setAction(R.string.all_buy, new View.OnClickListener() {
                         @Override
                         public void onClick(View view) {

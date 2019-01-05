@@ -29,13 +29,13 @@ import androidx.work.WorkManager;
 import androidx.work.WorkStatus;
 import n7.ad2.MySharedPreferences;
 import n7.ad2.R;
-import n7.ad2.main.MainActivity;
 import n7.ad2.adapter.GamesPagedListAdapter;
 import n7.ad2.db.games.Games;
+import n7.ad2.main.MainActivity;
 import n7.ad2.viewModels.GamesViewModel;
 import n7.ad2.worker.GamesWorker;
 
-import static n7.ad2.MySharedPreferences.SUBSCRIPTION;
+import static n7.ad2.setting.SettingActivity.SUBSCRIPTION;
 import static n7.ad2.worker.GamesWorker.PAGE;
 import static n7.ad2.worker.GamesWorker.UNIQUE_WORK;
 

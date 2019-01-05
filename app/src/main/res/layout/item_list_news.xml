@@ -23,7 +23,7 @@
             android:layout_height="wrap_content">
 
             <ImageView
-                android:id="@+id/iv"
+                android:id="@+id/iv_item_list_news"
                 android:layout_width="0dp"
                 android:layout_height="0dp"
                 android:contentDescription="@string/setting_tell_friend_title"
@@ -33,11 +33,12 @@
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent"
+                tools:src="@tools:sample/backgrounds/scenic"
                 withImage="@{news.withImage}"
                 srcPath="@{news.imageHref}" />
 
             <TextView
-                android:id="@+id/tv"
+                android:id="@+id/tv_item_list_news"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:background="@android:drawable/screen_background_dark_transparent"
@@ -54,7 +55,7 @@
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent"
                 tools:targetApi="lollipop"
-                tools:text="@string/setting_tell_friend_title" />
+                tools:text="@tools:sample/lorem" />
 
             <View
                 android:id="@+id/left_red_line"

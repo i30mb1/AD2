@@ -38,12 +38,12 @@ import n7.ad2.purchaseUtils.IabHelper;
 import n7.ad2.purchaseUtils.IabResult;
 import n7.ad2.purchaseUtils.Inventory;
 
-import static n7.ad2.MySharedPreferences.SUBSCRIPTION;
 import static n7.ad2.activity.BaseActivity.THEME_DARK;
 import static n7.ad2.activity.BaseActivity.THEME_GRAY;
 import static n7.ad2.activity.BaseActivity.THEME_WHITE;
 import static n7.ad2.news.NewsWorker.DELETE_TABLE;
 import static n7.ad2.setting.SettingActivity.ONCE_PER_MONTH_SUBSCRIPTION;
+import static n7.ad2.setting.SettingActivity.SUBSCRIPTION;
 
 public class SplashViewModel extends AndroidViewModel {
 
@@ -86,6 +86,7 @@ public class SplashViewModel extends AndroidViewModel {
     private void loadNews() {
         int lastDayWhenLoadNews = PreferenceManager.getDefaultSharedPreferences(application).getInt(LAST_DAY_WHEN_LOAD_NEWS, 0);
         if (currentDay != lastDayWhenLoadNews) {
+            //todo only when internet connection
             Data data = new Data.Builder().putBoolean(DELETE_TABLE, true).build();
             OneTimeWorkRequest worker = new OneTimeWorkRequest.Builder(NewsWorker.class).setInputData(data).build();
             WorkManager.getInstance().beginUniqueWork(NewsWorker.TAG, ExistingWorkPolicy.APPEND, worker).enqueue();
@@ -211,9 +212,9 @@ public class SplashViewModel extends AndroidViewModel {
         }
     }
 
-    private void setPremium(boolean isPremium) {
-        MySharedPreferences.getSharedPreferences(application).edit().putBoolean(SUBSCRIPTION, isPremium).apply();
-        log("premium_status::" + isPremium);
+    private void setPremium(boolean subscription) {
+        MySharedPreferences.getSharedPreferences(application).edit().putBoolean(SUBSCRIPTION, subscription).apply();
+        log("premium_status::" + subscription);
     }
 
     private void setupFirebaseAnalytics() {

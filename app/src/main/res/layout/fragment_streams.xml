@@ -5,23 +5,32 @@
 
     <data>
 
+        <import type="android.view.View" />
+
+        <variable
+            name="viewModel"
+            type="n7.ad2.streams.StreamsViewModel" />
     </data>
 
-    <android.support.constraint.ConstraintLayout
+    <FrameLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:background="?colorPrimary"
         app:layout_behavior="@string/appbar_scrolling_view_behavior">
 
+        <ProgressBar
+            style="@style/Widget.AppCompat.ProgressBar.Horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="4dp"
+            android:indeterminate="true"
+            android:scaleY="5"
+            android:visibility="@{viewModel.isLoading ? View.VISIBLE : View.GONE}" />
+
         <android.support.v7.widget.RecyclerView
             android:id="@+id/rv_fragment_streams"
-            android:layout_height="match_parent"
             android:layout_width="match_parent"
-            tools:listitem="@layout/item_list_stream"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent" />
+            android:layout_height="match_parent"
+            tools:listitem="@layout/item_list_stream" />
 
-    </android.support.constraint.ConstraintLayout>
+    </FrameLayout>
 </layout>

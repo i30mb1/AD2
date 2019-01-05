@@ -14,6 +14,9 @@
             android:id="@+id/rv_fragment_heroes"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
+            tools:itemCount="30"
+            tools:layoutManager="GridLayoutManager"
+            tools:spanCount="3"
             tools:listitem="@layout/item_list_hero" />
     </FrameLayout>
 </layout>

@@ -1,42 +1,39 @@
 package n7.ad2.streams;
 
+import android.arch.lifecycle.Observer;
 import android.arch.lifecycle.ViewModelProviders;
+import android.arch.paging.PagedList;
 import android.databinding.DataBindingUtil;
 import android.os.Bundle;
 import android.preference.PreferenceManager;
 import android.support.annotation.NonNull;
 import android.support.annotation.Nullable;
 import android.support.v4.app.Fragment;
+import android.support.v7.widget.GridLayoutManager;
 import android.view.LayoutInflater;
 import android.view.Menu;
 import android.view.MenuInflater;
 import android.view.View;
 import android.view.ViewGroup;
 
-import n7.ad2.MySharedPreferences;
 import n7.ad2.R;
 import n7.ad2.databinding.FragmentStreamsBinding;
-import n7.ad2.main.MainViewModel;
-import n7.ad2.viewModels.StreamsViewModel;
+import n7.ad2.streams.retrofit.Streams;
+
+import static n7.ad2.setting.SettingActivity.SUBSCRIPTION;
 
 public class StreamsFragment extends Fragment {
 
-    private boolean isPremium;
     private FragmentStreamsBinding binding;
+    private StreamsViewModel viewModel;
+    private boolean subscription;
 
     public StreamsFragment() {
     }
 
     @Override
-    public void onCreate(@Nullable Bundle savedInstanceState) {
-        super.onCreate(savedInstanceState);
-        setHasOptionsMenu(true);
-    }
-
-    @Override
     public void onCreateOptionsMenu(Menu menu, MenuInflater inflater) {
-        menu.clear();
-        if (isPremium) {
+        if (subscription) {
             inflater.inflate(R.menu.menu_fragment_streams, menu);
         } else {
             inflater.inflate(R.menu.menu_fragment_streams_simple, menu);
@@ -54,62 +51,30 @@ public class StreamsFragment extends Fragment {
     public void onActivityCreated(@Nullable Bundle savedInstanceState) {
         super.onActivityCreated(savedInstanceState);
 
-        MainViewModel mainViewModel = ViewModelProviders.of(getActivity()).get(MainViewModel.class);
+        viewModel = ViewModelProviders.of(this).get(StreamsViewModel.class);
+        binding.setViewModel(viewModel);
+        binding.executePendingBindings();
 
+        subscription = PreferenceManager.getDefaultSharedPreferences(getContext()).getBoolean(SUBSCRIPTION, false);
         getActivity().setTitle(R.string.streams);
+        setHasOptionsMenu(true);
 
         initRecyclerView();
     }
 
     private void initRecyclerView() {
-//        final TextView tv_legion = getActivity().findViewById(R.id.tv_legion);
-//        final ImageView iv_legion = getActivity().findViewById(R.id.iv_legion);
-//        final ProgressBar pb_fragment_streams = getActivity().findViewById(R.id.pb);
-//        iv_legion.setOnLongClickListener(new View.OnLongClickListener() {
-//            @Override
-//            public boolean onLongClick(View v) {
-//                MediaPlayer.create(getContext(), R.raw.does_this_unit_have_a___).start();
-//                tv_legion.setText("?????");
-//                iv_legion.animate().alpha(0.0f).setDuration(8000L).start();
-//                tv_legion.animate().alpha(0.0f).setDuration(8000L).start();
-//                iv_legion.setLongClickable(false);
-//                return true;
-//            }
-//        });
+        GridLayoutManager gridLayoutManager = new GridLayoutManager(getContext(), 1);
+        binding.rvFragmentStreams.setLayoutManager(gridLayoutManager);
+        binding.rvFragmentStreams.setHasFixedSize(true);
 
-//        RecyclerView recyclerView = findViewById(R.id.tv_fragment_streams);
-//        GridLayoutManager gridLayoutManager = new GridLayoutManager(view.getContext(), 1);
-//        recyclerView.setLayoutManager(gridLayoutManager);
-//        recyclerView.setHasFixedSize(true);
-//
-//        streamsPagedListAdapter = new StreamsPagedListAdapter();
-//        recyclerView.setAdapter(streamsPagedListAdapter);
+        final StreamsPagedListAdapter adapter = new StreamsPagedListAdapter();
+        binding.rvFragmentStreams.setAdapter(adapter);
 
-        StreamsViewModel streamsViewModel = ViewModelProviders.of(this).get(StreamsViewModel.class);
-//        streamsViewModel.getStatusLoading().observe(this, new Observer<Boolean>() {
-//            @Override
-//            public void onChanged(@Nullable Boolean aBoolean) {
-//                if (aBoolean != null && aBoolean) {
-//                    ((MainActivity) getActivity()).log("streams_begin_loading");
-//                    pb_fragment_streams.setVisibility(View.VISIBLE);
-//                } else {
-//                    ((MainActivity) getActivity()).log("streams_end_loading");
-//                    pb_fragment_streams.setVisibility(View.INVISIBLE);
-//                }
-//            }
-//        });
-//        streamsViewModel.getStreams().observe(this, new Observer<PagedList<Streams>>() {
-//            @Override
-//            public void onChanged(@Nullable PagedList<Streams> streams) {
-//                streamsPagedListAdapter.submitList(streams);
-//                if (streamsPagedListAdapter.getItemCount() == 0) {
-//                    iv_legion.setVisibility(View.VISIBLE);
-//                    tv_legion.setVisibility(View.VISIBLE);
-//                } else {
-//                    iv_legion.setVisibility(View.INVISIBLE);
-//                    tv_legion.setVisibility(View.INVISIBLE);
-//                }
-//            }
-//        });
+        viewModel.getStreams().observe(this, new Observer<PagedList<Streams>>() {
+            @Override
+            public void onChanged(@Nullable PagedList<Streams> streams) {
+                adapter.submitList(streams);
+            }
+        });
     }
 }

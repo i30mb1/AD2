@@ -30,9 +30,9 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_margin="4dp"
-            android:text="@{view.isPremium ? @string/all_on : @string/all_off}"
+            android:text="@{view.subscription ? @string/all_on : @string/all_off}"
             android:textAllCaps="true"
-            android:textColor="@{view.isPremium ? @android:color/holo_green_light : @android:color/holo_red_light}"
+            android:textColor="@{view.subscription ? @android:color/holo_green_light : @android:color/holo_red_light}"
             android:textStyle="bold" />
 
         <FrameLayout
@@ -61,7 +61,7 @@
             android:layout_height="wrap_content"
             android:layout_margin="4dp"
             android:onClick="@{()-> view.launchPurchaseSubscription()}"
-            android:text="@{view.isPremium ? @string/all_deactivate : @string/dialog_donate_month}"
+            android:text="@{view.subscription ? @string/all_deactivate : @string/dialog_donate_month}"
             android:textSize="14sp" />
 
     </LinearLayout>

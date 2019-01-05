@@ -46,7 +46,7 @@
             android:name=".activity.HeroFullActivity"
             android:screenOrientation="portrait" />
         <activity
-            android:name=".streams.TwitchGameActivity"
+            android:name=".streams.StreamsFullActivity"
             android:configChanges="keyboard|orientation|screenSize|smallestScreenSize|screenLayout"
             android:launchMode="singleTask"
             android:screenOrientation="landscape" />

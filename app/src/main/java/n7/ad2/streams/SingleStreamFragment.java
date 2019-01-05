@@ -50,11 +50,10 @@ import java.util.List;
 
 import n7.ad2.AppExecutors;
 import n7.ad2.R;
-import n7.ad2.retrofit.streams.Streams;
+import n7.ad2.streams.retrofit.Streams;
 import n7.ad2.utilsTwitch.Element;
 import n7.ad2.utilsTwitch.Playlist;
 import n7.ad2.utilsTwitch.TappableSurfaceView;
-import n7.ad2.viewModels.StreamsViewModel;
 import okhttp3.OkHttpClient;
 import okhttp3.Request;
 import okhttp3.Response;
@@ -241,16 +240,16 @@ public class SingleStreamFragment extends Fragment implements SurfaceHolder.Call
         rv_fragment_single_stream.setAdapter(streamsAdapter);
 
         StreamsViewModel streamsViewModel = ViewModelProviders.of(this).get(StreamsViewModel.class);
-        streamsViewModel.getStatusLoading().observe(this, new Observer<Boolean>() {
-            @Override
-            public void onChanged(@Nullable Boolean aBoolean) {
-                if (aBoolean != null && aBoolean) {
-                    pb_fragment_single_stream.setVisibility(View.VISIBLE);
-                } else {
-                    pb_fragment_single_stream.setVisibility(View.INVISIBLE);
-                }
-            }
-        });
+//        streamsViewModel.getStatusLoading().observe(this, new Observer<Boolean>() {
+//            @Override
+//            public void onChanged(@Nullable Boolean aBoolean) {
+//                if (aBoolean != null && aBoolean) {
+//                    pb_fragment_single_stream.setVisibility(View.VISIBLE);
+//                } else {
+//                    pb_fragment_single_stream.setVisibility(View.INVISIBLE);
+//                }
+//            }
+//        });
         streamsViewModel.getStreams().observe(this, new Observer<PagedList<Streams>>() {
             @Override
             public void onChanged(@Nullable PagedList<Streams> streams) {
