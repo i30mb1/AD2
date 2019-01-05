@@ -4,16 +4,9 @@ import android.content.Context;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.LinearSmoothScroller;
 import android.support.v7.widget.RecyclerView;
-import android.util.AttributeSet;
 import android.util.DisplayMetrics;
-import android.view.GestureDetector;
-import android.view.MotionEvent;
 
-import java.util.ArrayList;
-
-import n7.ad2.utilsTwitch.TappableSurfaceView;
-
-import static n7.ad2.activity.TwitchGameActivity.speed;
+import static n7.ad2.streams.TwitchGameActivity.speed;
 
 public class SmoothScrollableLinearLayoutManager extends LinearLayoutManager {
     private final Context context;

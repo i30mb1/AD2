@@ -20,11 +20,11 @@ import com.squareup.picasso.Picasso;
 import java.util.Random;
 
 import n7.ad2.R;
-import n7.ad2.activity.TwitchGameActivity;
+import n7.ad2.streams.TwitchGameActivity;
 import n7.ad2.retrofit.streams.Streams;
 
-import static n7.ad2.activity.TwitchGameActivity.CHANNEL_NAME;
-import static n7.ad2.activity.TwitchGameActivity.CHANNEL_TITLE;
+import static n7.ad2.streams.TwitchGameActivity.CHANNEL_NAME;
+import static n7.ad2.streams.TwitchGameActivity.CHANNEL_TITLE;
 
 public class StreamsPagedListAdapter extends PagedListAdapter<Streams, StreamsPagedListAdapter.ViewHolder> {
 
@@ -73,10 +73,10 @@ public class StreamsPagedListAdapter extends PagedListAdapter<Streams, StreamsPa
 
         public ViewHolder(@NonNull View itemView) {
             super(itemView);
-            cv_item_list_stream_root = itemView.findViewById(R.id.cv_item_list_stream_root);
+//            cv_item_list_stream_root = itemView.findViewById(R.id.cv_item_list_stream_root);
             tv_item_list_stream_viewers = itemView.findViewById(R.id.tv_item_list_stream_viewers);
             tv_item_list_stream_viewers.setCharacterList(TickerUtils.getDefaultNumberList());
-            iv_item_list_stream_image = itemView.findViewById(R.id.iv_item_list_stream_image);
+//            iv_item_list_stream_image = itemView.findViewById(R.id.iv_item_list_stream_image);
             tv_item_list_stream_channel_name = itemView.findViewById(R.id.tv_item_list_stream_channel_name);
             tv_item_list_stream_channel_description = itemView.findViewById(R.id.tv_item_list_stream_channel_description);
             handler = new Handler();

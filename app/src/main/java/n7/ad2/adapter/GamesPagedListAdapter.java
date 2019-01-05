@@ -36,8 +36,8 @@ import n7.ad2.activity.GamesPersonalActivity;
 import n7.ad2.db.games.Games;
 import n7.ad2.worker.ScheduleGameWorker;
 
-import static n7.ad2.MySharedPreferences.ANIMATION_DURATION;
 import static n7.ad2.activity.GamesPersonalActivity.URL;
+import static n7.ad2.splash.SplashActivity.ANIMATION_DURATION;
 
 public class GamesPagedListAdapter extends PagedListAdapter<Games, GamesPagedListAdapter.ViewHolder> {
 
@@ -55,7 +55,7 @@ public class GamesPagedListAdapter extends PagedListAdapter<Games, GamesPagedLis
     private LifecycleOwner lifecycleOwner;
     private boolean isPremium;
 
-    public GamesPagedListAdapter(LifecycleOwner lifecycleOwner,boolean isPremium) {
+    public GamesPagedListAdapter(LifecycleOwner lifecycleOwner, boolean isPremium) {
         super(DIFF_CALLBACK);
         this.isPremium = isPremium;
         this.lifecycleOwner = lifecycleOwner;
@@ -168,17 +168,17 @@ public class GamesPagedListAdapter extends PagedListAdapter<Games, GamesPagedLis
                         }
                     }
                 });
-                if(isPremium)
-                root.setOnClickListener(new View.OnClickListener() {
-                    @Override
-                    public void onClick(View view) {
-                        if (collapse) {
-                            showButtonScheduler();
-                        } else {
-                            hideButtonScheduler();
+                if (isPremium)
+                    root.setOnClickListener(new View.OnClickListener() {
+                        @Override
+                        public void onClick(View view) {
+                            if (collapse) {
+                                showButtonScheduler();
+                            } else {
+                                hideButtonScheduler();
+                            }
                         }
-                    }
-                });
+                    });
                 b_tv_item_list_games.setClickable(false);
             }
         }

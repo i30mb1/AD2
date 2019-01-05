@@ -1,4 +1,4 @@
-package n7.ad2.fragment;
+package n7.ad2.streams;
 
 
 import android.content.BroadcastReceiver;
@@ -18,13 +18,13 @@ import android.view.MenuInflater;
 import android.view.MenuItem;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.Button;
 import android.widget.FrameLayout;
 import android.widget.LinearLayout;
 import android.widget.TextView;
 
 import n7.ad2.MySharedPreferences;
 import n7.ad2.R;
+import n7.ad2.streams.SingleStreamFragment;
 
 public class MultiStreamsFragment extends Fragment {
 

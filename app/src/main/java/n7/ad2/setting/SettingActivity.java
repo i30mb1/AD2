@@ -22,7 +22,7 @@ import n7.ad2.purchaseUtils.IabResult;
 import n7.ad2.purchaseUtils.Inventory;
 import n7.ad2.purchaseUtils.Purchase;
 
-import static n7.ad2.MySharedPreferences.PREMIUM;
+import static n7.ad2.MySharedPreferences.SUBSCRIPTION;
 
 public class SettingActivity extends BaseActivity {
 
@@ -62,10 +62,10 @@ public class SettingActivity extends BaseActivity {
                     if (mHelper == null && result.isFailure()) return;
                     if (inv.hasPurchase(ONCE_PER_MONTH_SUBSCRIPTION)) {
                         isPremium.set(true);
-                        MySharedPreferences.getSharedPreferences(SettingActivity.this).edit().putBoolean(PREMIUM, true).apply();
+                        MySharedPreferences.getSharedPreferences(SettingActivity.this).edit().putBoolean(SUBSCRIPTION, true).apply();
                     } else {
                         isPremium.set(false);
-                        MySharedPreferences.getSharedPreferences(SettingActivity.this).edit().putBoolean(PREMIUM, false).apply();
+                        MySharedPreferences.getSharedPreferences(SettingActivity.this).edit().putBoolean(SUBSCRIPTION, false).apply();
                     }
 //            if (inv.hasPurchase(MONTHLY_SUBSCRIPTION)) {
 //                try {

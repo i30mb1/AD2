@@ -1,8 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
-<android.support.v7.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+<android.support.v7.widget.CardView
+    xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
-    android:id="@+id/cv_item_list_stream_root"
+    android:id="@+id/cv"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
     android:clickable="true"
@@ -13,15 +14,12 @@
     app:cardElevation="2dp"
     app:cardUseCompatPadding="true">
 
-    <android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
-        xmlns:app="http://schemas.android.com/apk/res-auto"
-        xmlns:tools="http://schemas.android.com/tools"
+    <android.support.constraint.ConstraintLayout
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:orientation="vertical">
+        android:layout_height="wrap_content">
 
         <ImageView
-            android:id="@+id/iv_item_list_stream_image"
+            android:id="@+id/iv"
             android:layout_width="150dp"
             android:layout_height="80dp"
             android:elevation="2dp"
@@ -43,8 +41,8 @@
             android:textColor="?android:textColorPrimary"
             android:textSize="14sp"
             android:textStyle="bold"
-            app:layout_constraintLeft_toRightOf="@+id/iv_item_list_stream_image"
-            app:layout_constraintTop_toTopOf="@+id/iv_item_list_stream_image"
+            app:layout_constraintLeft_toRightOf="@+id/iv"
+            app:layout_constraintTop_toTopOf="@+id/iv"
             tools:text="i30mb1" />
 
         <TextView
@@ -60,7 +58,7 @@
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0.0"
-            app:layout_constraintStart_toEndOf="@+id/iv_item_list_stream_image"
+            app:layout_constraintStart_toEndOf="@+id/iv"
             app:layout_constraintTop_toBottomOf="@+id/tv_item_list_stream_channel_name"
             app:layout_constraintVertical_bias="0.0"
             tools:text="остаться здесь или пробится наверх" />
@@ -76,7 +74,7 @@
             android:textSize="10sp"
             app:layout_constraintBottom_toBottomOf="@+id/imageView2"
             app:layout_constraintLeft_toRightOf="@+id/imageView2"
-            app:layout_constraintRight_toRightOf="@+id/iv_item_list_stream_image"
+            app:layout_constraintRight_toRightOf="@+id/iv"
             app:layout_constraintTop_toTopOf="@+id/imageView2"
             app:ticker_animationDuration="1000" />
 
@@ -87,7 +85,7 @@
             android:background="#4c000000"
             android:elevation="2dp"
             app:layout_constraintLeft_toRightOf="@+id/view"
-            app:layout_constraintTop_toTopOf="@+id/iv_item_list_stream_image"
+            app:layout_constraintTop_toTopOf="@+id/iv"
             app:srcCompat="@drawable/streams_viewers" />
 
         <View

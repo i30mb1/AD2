@@ -46,12 +46,12 @@
             android:name=".activity.HeroFullActivity"
             android:screenOrientation="portrait" />
         <activity
-            android:name=".activity.TwitchGameActivity"
+            android:name=".streams.TwitchGameActivity"
             android:configChanges="keyboard|orientation|screenSize|smallestScreenSize|screenLayout"
             android:launchMode="singleTask"
             android:screenOrientation="landscape" />
         <activity
-            android:name=".activity.NewsActivity"
+            android:name=".news.NewsActivity"
             android:screenOrientation="portrait" />
         <activity
             android:name=".activity.GamesPersonalActivity"

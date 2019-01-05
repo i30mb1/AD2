@@ -25,7 +25,7 @@
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:scrollTo="@{viewModel.scrollTo}"
-            tools:listitem="@layout/item_list_plain_adapter" />
+            tools:listitem="@layout/item_list_plain" />
 
         <ImageView
             android:id="@+id/iv_setting"
@@ -33,7 +33,7 @@
             android:layout_height="50dp"
             android:layout_marginBottom="8dp"
             android:background="?attr/selectableItemBackground"
-            android:contentDescription="@string/setting_tell_friend"
+            android:contentDescription="@string/setting_tell_friend_title"
             android:onClick="@{()->viewModel.startActivityOptions(context)}"
             android:scaleType="center"
             android:tint="?android:textColorPrimary"
@@ -49,7 +49,7 @@
             android:layout_centerVertical="true"
             android:layout_marginStart="8dp"
             android:layout_marginBottom="8dp"
-            android:contentDescription="@string/setting_tell_friend"
+            android:contentDescription="@string/setting_tell_friend_title"
             android:onClick="@{()->viewModel.startUpdate(true)}"
             android:scaleType="center"
             android:tint="?android:textColorPrimary"

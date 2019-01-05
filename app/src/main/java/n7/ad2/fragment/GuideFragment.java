@@ -44,10 +44,10 @@ import n7.ad2.activity.HeroFullActivity;
 import n7.ad2.setting.SettingActivity;
 import n7.ad2.heroes.db.HeroModel;
 import n7.ad2.utils.Utils;
-import n7.ad2.splash.SplashActivityViewModel;
+import n7.ad2.splash.SplashViewModel;
 import n7.ad2.worker.GuideWorker;
 
-import static n7.ad2.MySharedPreferences.PREMIUM;
+import static n7.ad2.MySharedPreferences.SUBSCRIPTION;
 import static n7.ad2.activity.HeroFullActivity.HERO_NAME;
 import static n7.ad2.worker.GuideWorker.HERO_CODE_NAME;
 
@@ -201,7 +201,7 @@ public class GuideFragment extends Fragment {
 
         setHasOptionsMenu(true);
         SharedPreferences sp = MySharedPreferences.getSharedPreferences(getContext());
-        isPremium = sp.getBoolean(PREMIUM, false);
+        isPremium = sp.getBoolean(SUBSCRIPTION, false);
 
         initViews();
         setDpMaxItemsInRow();
@@ -209,7 +209,7 @@ public class GuideFragment extends Fragment {
         startGuideWork();
         layoutInflater = getLayoutInflater();
 
-        SplashActivityViewModel heroesViewModel = ViewModelProviders.of(this).get(SplashActivityViewModel.class);
+        SplashViewModel heroesViewModel = ViewModelProviders.of(this).get(SplashViewModel.class);
 //        heroesViewModel.getHero(heroFolder).observe(this, new Observer<HeroModel>() {
 //            @Override
 //            public void onChanged(@Nullable HeroModel heroes) {

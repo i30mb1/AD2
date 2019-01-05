@@ -27,7 +27,7 @@
                 android:layout_height="wrap_content"
                 android:layout_gravity="center_horizontal"
                 android:layout_marginTop="15dp"
-                android:contentDescription="@string/setting_tell_friend"
+                android:contentDescription="@string/setting_tell_friend_title"
                 android:src="@mipmap/ic_launcher" />
 
             <TextView

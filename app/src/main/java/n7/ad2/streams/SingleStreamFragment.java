@@ -1,4 +1,4 @@
-package n7.ad2.fragment;
+package n7.ad2.streams;
 
 
 import android.arch.lifecycle.Observer;
@@ -59,7 +59,7 @@ import okhttp3.OkHttpClient;
 import okhttp3.Request;
 import okhttp3.Response;
 
-import static n7.ad2.MySharedPreferences.ANIMATION_DURATION;
+import static n7.ad2.splash.SplashActivity.ANIMATION_DURATION;
 
 public class SingleStreamFragment extends Fragment implements SurfaceHolder.Callback {
 

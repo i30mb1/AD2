@@ -30,7 +30,7 @@ import androidx.work.WorkManager;
 import n7.ad2.MySharedPreferences;
 import n7.ad2.R;
 import n7.ad2.SingleLiveEvent;
-import n7.ad2.adapter.PlainTextAdapter;
+import n7.ad2.adapter.PlainAdapter;
 import n7.ad2.heroes.db.HeroesRoomDatabase;
 import n7.ad2.items.db.ItemsRoomDatabase;
 import n7.ad2.news.NewsWorker;
@@ -38,14 +38,14 @@ import n7.ad2.purchaseUtils.IabHelper;
 import n7.ad2.purchaseUtils.IabResult;
 import n7.ad2.purchaseUtils.Inventory;
 
-import static n7.ad2.MySharedPreferences.PREMIUM;
+import static n7.ad2.MySharedPreferences.SUBSCRIPTION;
 import static n7.ad2.activity.BaseActivity.THEME_DARK;
 import static n7.ad2.activity.BaseActivity.THEME_GRAY;
 import static n7.ad2.activity.BaseActivity.THEME_WHITE;
 import static n7.ad2.news.NewsWorker.DELETE_TABLE;
 import static n7.ad2.setting.SettingActivity.ONCE_PER_MONTH_SUBSCRIPTION;
 
-public class SplashActivityViewModel extends AndroidViewModel {
+public class SplashViewModel extends AndroidViewModel {
 
     public static final String CURRENT_DAY_IN_APP = "CURRENT_DAY_IN_APP";
     public static final String FREE_PREMIUM_DAYS = "FREE_PREMIUM_DAYS";
@@ -57,9 +57,9 @@ public class SplashActivityViewModel extends AndroidViewModel {
     private Application application;
     private Executor diskIO;
     private int currentDay;
-    private PlainTextAdapter adapter;
+    private PlainAdapter adapter;
 
-    public SplashActivityViewModel(@NonNull Application application) {
+    public SplashViewModel(@NonNull Application application) {
         super(application);
         this.application = application;
         this.diskIO = Executors.newSingleThreadExecutor();
@@ -76,10 +76,10 @@ public class SplashActivityViewModel extends AndroidViewModel {
     }
 
     private void setupAdapter() {
-        adapter = new PlainTextAdapter();
+        adapter = new PlainAdapter();
     }
 
-    public PlainTextAdapter getAdapter() {
+    public PlainAdapter getAdapter() {
         return adapter;
     }
 
@@ -212,7 +212,7 @@ public class SplashActivityViewModel extends AndroidViewModel {
     }
 
     private void setPremium(boolean isPremium) {
-        MySharedPreferences.getSharedPreferences(application).edit().putBoolean(PREMIUM, isPremium).apply();
+        MySharedPreferences.getSharedPreferences(application).edit().putBoolean(SUBSCRIPTION, isPremium).apply();
         log("premium_status::" + isPremium);
     }
 

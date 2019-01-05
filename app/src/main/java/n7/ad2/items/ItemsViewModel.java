@@ -49,9 +49,7 @@ public class ItemsViewModel extends AndroidViewModel {
 
     LiveData<PagedList<ItemModel>> getItemsByFilter(String chars) {
         DataSource.Factory<Integer, ItemModel> dataSource = itemsDao.getDataSourceItemsFilter(chars);
-        PagedList.Config config = new PagedList.Config.Builder()
-                .setPageSize(20)
-                .build();
+        PagedList.Config config = new PagedList.Config.Builder().setPageSize(20).build();
         LiveData<PagedList<ItemModel>> items = new LivePagedListBuilder<>(dataSource, config).build();
         return items;
     }

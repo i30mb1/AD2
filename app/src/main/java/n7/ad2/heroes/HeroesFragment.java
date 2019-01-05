@@ -18,15 +18,10 @@ import android.view.MenuItem;
 import android.view.View;
 import android.view.ViewGroup;
 
-import java.util.List;
-
-import androidx.work.State;
-import androidx.work.WorkManager;
-import androidx.work.WorkStatus;
 import n7.ad2.R;
 import n7.ad2.databinding.FragmentHeroesBinding;
 import n7.ad2.heroes.db.HeroModel;
-import n7.ad2.news.NewsWorker;
+import n7.ad2.main.MainViewModel;
 
 
 public class HeroesFragment extends Fragment implements SearchView.OnQueryTextListener {
@@ -34,6 +29,7 @@ public class HeroesFragment extends Fragment implements SearchView.OnQueryTextLi
     private HeroesPagedListAdapter adapter;
     private HeroesViewModel viewModel;
     private FragmentHeroesBinding binding;
+    private MainViewModel mainViewModel;
 
     public HeroesFragment() {
     }
@@ -61,16 +57,17 @@ public class HeroesFragment extends Fragment implements SearchView.OnQueryTextLi
         setRetainInstance(true);//фрагмент не уничтожается а передаётся новому активити (пропускает методы onCreate&onDestroy)
         setHasOptionsMenu(true);//вызов метода onCreateOptionsMenu в фрагменте
 
+        mainViewModel = ViewModelProviders.of(getActivity()).get(MainViewModel.class);
         viewModel = ViewModelProviders.of(this).get(HeroesViewModel.class);
 
         initPagedListAdapter();
     }
 
     private void initPagedListAdapter() {
-        binding.rv.setHasFixedSize(true);// если recyclerView не будет изменяться в размерах тогда ставим true
-        binding.rv.setLayoutManager(new GridLayoutManager(getContext(), 3));
+        binding.rvFragmentHeroes.setHasFixedSize(true);// если recyclerView не будет изменяться в размерах тогда ставим true
+        binding.rvFragmentHeroes.setLayoutManager(new GridLayoutManager(getContext(), 3));
         adapter = new HeroesPagedListAdapter(); // PagedListAdapter, заточенный под чтение данных из PagedList.
-        binding.rv.setAdapter(adapter);
+        binding.rvFragmentHeroes.setAdapter(adapter);
         viewModel.getHeroesByFilter("").observe(this, new Observer<PagedList<HeroModel>>() {
             @Override
             public void onChanged(@Nullable PagedList<HeroModel> heroModels) {

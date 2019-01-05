@@ -40,7 +40,7 @@
         <Preference
             android:key="@string/setting_tell_friend_key"
             android:summary="@string/setting_tell_friend_summary"
-            android:title="@string/setting_tell_friend" />
+            android:title="@string/setting_tell_friend_title" />
         <Preference
             android:key="@string/setting_contact_key"
             android:summary="@string/setting_contact_summary"

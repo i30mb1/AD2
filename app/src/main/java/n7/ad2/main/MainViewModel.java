@@ -2,6 +2,10 @@ package n7.ad2.main;
 
 import android.app.Application;
 import android.arch.lifecycle.AndroidViewModel;
+import android.arch.lifecycle.LiveData;
+import android.arch.paging.DataSource;
+import android.arch.paging.LivePagedListBuilder;
+import android.arch.paging.PagedList;
 import android.content.Context;
 import android.content.Intent;
 import android.databinding.ObservableBoolean;
@@ -18,9 +22,15 @@ import n7.ad2.MySharedPreferences;
 import n7.ad2.R;
 import n7.ad2.SingleLiveEvent;
 import n7.ad2.SnackbarMessage;
-import n7.ad2.adapter.PlainTextAdapter;
+import n7.ad2.adapter.PlainAdapter;
 import n7.ad2.db.n7message.N7Message;
 import n7.ad2.db.n7message.N7MessageRoomDatabase;
+import n7.ad2.heroes.db.HeroModel;
+import n7.ad2.heroes.db.HeroesDao;
+import n7.ad2.heroes.db.HeroesRoomDatabase;
+import n7.ad2.items.db.ItemModel;
+import n7.ad2.items.db.ItemsDao;
+import n7.ad2.items.db.ItemsRoomDatabase;
 import n7.ad2.retrofit.update.Update;
 import n7.ad2.retrofit.update.UpdateApi;
 import n7.ad2.setting.SettingActivity;
@@ -29,7 +39,8 @@ import retrofit2.Response;
 import retrofit2.Retrofit;
 import retrofit2.converter.gson.GsonConverterFactory;
 
-import static n7.ad2.splash.SplashActivityViewModel.CURRENT_DAY_IN_APP;
+import static n7.ad2.MySharedPreferences.SUBSCRIPTION;
+import static n7.ad2.splash.SplashViewModel.CURRENT_DAY_IN_APP;
 
 public class MainViewModel extends AndroidViewModel {
 
@@ -39,29 +50,48 @@ public class MainViewModel extends AndroidViewModel {
     private static final String BASE_URL = "https://raw.githubusercontent.com/i30mb1/AD2/master/";
     public final SingleLiveEvent<Void> showDialogUpdate = new SingleLiveEvent<>();
     public final SnackbarMessage snackbarMessage = new SnackbarMessage();
-    private final PlainTextAdapter adapter;
+    private final PlainAdapter adapter;
     public ObservableBoolean isUpdating = new ObservableBoolean(false);
     public ObservableInt scrollTo = new ObservableInt();
     private Application application;
     private Executor diskIO;
+    private ObservableBoolean isSubscriber = new ObservableBoolean(false);
+    private final HeroesDao heroesDao;
+    private final ItemsDao itemsDao;
 
-    public MainViewModel(@NonNull Application application) {
+    public MainViewModel(@NonNull final Application application) {
         super(application);
         this.application = application;
         diskIO = Executors.newSingleThreadExecutor();
 
-        adapter = new PlainTextAdapter();
+        heroesDao = HeroesRoomDatabase.getDatabase(application, diskIO).heroesDao();
+        itemsDao = ItemsRoomDatabase.getDatabase(application, diskIO).itemsDao();
+        adapter = new PlainAdapter();
 
         diskIO.execute(new Runnable() {
             @Override
             public void run() {
+                isSubscriber.set(PreferenceManager.getDefaultSharedPreferences(application).getBoolean(SUBSCRIPTION,false));
                 checkLastVersion();
             }
         });
 
     }
 
-    public PlainTextAdapter getAdapter() {
+    public LiveData<PagedList<ItemModel>> getItemsByFilter(String chars) {
+        DataSource.Factory<Integer, ItemModel> dataSource = itemsDao.getDataSourceItemsFilter(chars);
+        PagedList.Config config = new PagedList.Config.Builder().setPageSize(20).build();
+        LiveData<PagedList<ItemModel>> items = new LivePagedListBuilder<>(dataSource, config).build();
+        return items;
+    }
+
+    public LiveData<PagedList<HeroModel>> getHeroesByFilter(String chars) {
+        DataSource.Factory<Integer, HeroModel> dataSource = heroesDao.getDataSourceHeroesFilter(chars);
+        PagedList.Config config = new PagedList.Config.Builder().setPageSize(20).build();
+        return new LivePagedListBuilder<>(dataSource, config).build();
+    }
+
+    public PlainAdapter getAdapter() {
         return adapter;
     }
 
@@ -78,7 +108,7 @@ public class MainViewModel extends AndroidViewModel {
         }
     }
 
-    private void log(String text) {
+    public void log(String text) {
         adapter.add(text);
         scrollTo.set(adapter.getItemCount() - 1);
     }

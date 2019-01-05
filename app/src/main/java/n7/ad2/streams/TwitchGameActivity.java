@@ -1,4 +1,4 @@
-package n7.ad2.activity;
+package n7.ad2.streams;
 
 import android.content.DialogInterface;
 import android.content.Intent;
@@ -46,6 +46,7 @@ import java.util.List;
 import n7.ad2.AppExecutors;
 import n7.ad2.MySharedPreferences;
 import n7.ad2.R;
+import n7.ad2.activity.BaseActivity;
 import n7.ad2.setting.SettingActivity;
 import n7.ad2.utils.SmoothScrollableLinearLayoutManager;
 import n7.ad2.utilsTwitch.Element;
@@ -56,8 +57,8 @@ import okhttp3.Request;
 import okhttp3.Response;
 
 import static android.support.v4.internal.view.SupportMenuItem.SHOW_AS_ACTION_ALWAYS;
-import static n7.ad2.MySharedPreferences.ANIMATION_DURATION;
-import static n7.ad2.MySharedPreferences.PREMIUM;
+import static n7.ad2.MySharedPreferences.SUBSCRIPTION;
+import static n7.ad2.splash.SplashActivity.ANIMATION_DURATION;
 
 public class TwitchGameActivity extends BaseActivity implements SurfaceHolder.Callback {
 
@@ -252,7 +253,7 @@ public class TwitchGameActivity extends BaseActivity implements SurfaceHolder.Ca
 
     private void initPremium() {
         sp = MySharedPreferences.getSharedPreferences(this);
-        isPremium = sp.getBoolean(PREMIUM, false);
+        isPremium = sp.getBoolean(SUBSCRIPTION, false);
 
         if (!isPremium) {
             alphaChat = 1.0F;

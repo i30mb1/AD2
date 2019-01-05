@@ -304,7 +304,7 @@ public class ResponsesPagedListAdapter extends PagedListAdapter<ResponseModel, R
                         Button b_dialog_response_download = dialog.findViewById(R.id.b_dialog_response_download);
                         Button b_dialog_response_set_ringtone = dialog.findViewById(R.id.b_dialog_response_set_ringtone);
 
-                        if (MySharedPreferences.getSharedPreferences(view.getContext()).getBoolean(MySharedPreferences.PREMIUM, false))
+                        if (MySharedPreferences.getSharedPreferences(view.getContext()).getBoolean(MySharedPreferences.SUBSCRIPTION, false))
                             tv_dialog_response_count.setVisibility(View.GONE);
                         int count = MySharedPreferences.getSharedPreferences(view.getContext()).getInt(MySharedPreferences.RESPONSE_COUNT_KEY, MySharedPreferences.FREE_COUNT);
                         tv_dialog_response_count.setText(String.valueOf(count));
@@ -342,7 +342,7 @@ public class ResponsesPagedListAdapter extends PagedListAdapter<ResponseModel, R
                                 }
                             }
                         });
-                        if (count > 0 || MySharedPreferences.getSharedPreferences(view.getContext()).getBoolean(MySharedPreferences.PREMIUM, false)) {
+                        if (count > 0 || MySharedPreferences.getSharedPreferences(view.getContext()).getBoolean(MySharedPreferences.SUBSCRIPTION, false)) {
                             b_dialog_response_download.setOnClickListener(new View.OnClickListener() {
                                 @Override
                                 public void onClick(final View view) {

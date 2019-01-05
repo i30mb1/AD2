@@ -1,23 +1,16 @@
 package n7.ad2.news;
 
 import android.arch.paging.PagedListAdapter;
-import android.content.Intent;
 import android.databinding.DataBindingUtil;
 import android.support.annotation.NonNull;
 import android.support.v7.util.DiffUtil;
 import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
-import android.view.View;
 import android.view.ViewGroup;
 
-import com.squareup.picasso.Picasso;
-
 import n7.ad2.R;
-import n7.ad2.activity.NewsActivity;
 import n7.ad2.databinding.ItemListNewsBinding;
 import n7.ad2.news.db.NewsModel;
-
-import static n7.ad2.activity.NewsActivity.HREF;
 
 public class NewsPagedListAdapter extends PagedListAdapter<NewsModel, NewsPagedListAdapter.ViewHolder> {
 

@@ -7,9 +7,9 @@ import android.content.Intent;
 import android.support.annotation.NonNull;
 import android.view.View;
 
-import n7.ad2.activity.NewsActivity;
+import n7.ad2.news.NewsActivity;
 
-import static n7.ad2.activity.NewsActivity.HREF;
+import static n7.ad2.news.NewsActivity.HREF;
 
 @Entity
 public class NewsModel {

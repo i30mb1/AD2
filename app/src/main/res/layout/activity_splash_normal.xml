@@ -7,7 +7,7 @@
 
         <variable
             name="viewModel"
-            type="n7.ad2.splash.SplashActivityViewModel" />
+            type="n7.ad2.splash.SplashViewModel" />
     </data>
 
     <android.support.constraint.ConstraintLayout
@@ -15,26 +15,27 @@
         android:layout_height="match_parent">
 
         <android.support.v7.widget.RecyclerView
-            app:scrollTo="@{viewModel.scrollTo}"
-            android:id="@+id/rv"
+            android:id="@+id/rv_activity_splash"
             android:layout_width="wrap_content"
             android:layout_height="0dp"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
-            tools:listitem="@layout/item_list_plain_adapter" />
+            app:scrollTo="@{viewModel.scrollTo}"
+            tools:listitem="@layout/item_list_plain" />
 
         <ImageView
+            android:id="@+id/iv_activity_splash"
             android:layout_width="150dp"
             android:layout_height="150dp"
             android:layout_gravity="center"
+            android:contentDescription="@string/setting_tell_friend_title"
             android:scaleType="fitCenter"
-            android:id="@+id/iv_logo"
+            android:src="@{viewModel.resId}"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent"
-            android:src="@{viewModel.resId}"
-            android:contentDescription="@string/setting_tell_friend" />
+            tools:src="@drawable/icon_gray" />
 
     </android.support.constraint.ConstraintLayout>
 </layout>

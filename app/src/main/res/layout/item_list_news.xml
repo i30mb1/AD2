@@ -26,7 +26,7 @@
                 android:id="@+id/iv"
                 android:layout_width="0dp"
                 android:layout_height="0dp"
-                android:contentDescription="@string/setting_tell_friend"
+                android:contentDescription="@string/setting_tell_friend_title"
                 android:foreground="?android:attr/selectableItemBackground"
                 android:scaleType="centerCrop"
                 app:layout_constraintBottom_toBottomOf="parent"
@@ -54,7 +54,7 @@
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent"
                 tools:targetApi="lollipop"
-                tools:text="@string/setting_tell_friend" />
+                tools:text="@string/setting_tell_friend_title" />
 
             <View
                 android:id="@+id/left_red_line"

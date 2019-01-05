@@ -35,7 +35,7 @@ import n7.ad2.db.games.Games;
 import n7.ad2.viewModels.GamesViewModel;
 import n7.ad2.worker.GamesWorker;
 
-import static n7.ad2.MySharedPreferences.PREMIUM;
+import static n7.ad2.MySharedPreferences.SUBSCRIPTION;
 import static n7.ad2.worker.GamesWorker.PAGE;
 import static n7.ad2.worker.GamesWorker.UNIQUE_WORK;
 
@@ -101,7 +101,7 @@ public class TournamentsFragment extends Fragment {
         recyclerView.setLayoutManager(gridLayoutManager);
         recyclerView.setHasFixedSize(true);
 
-        final GamesPagedListAdapter gamesPagedListAdapter = new GamesPagedListAdapter(getViewLifecycleOwner(),MySharedPreferences.getSharedPreferences(getContext()).getBoolean(PREMIUM,false));
+        final GamesPagedListAdapter gamesPagedListAdapter = new GamesPagedListAdapter(getViewLifecycleOwner(),MySharedPreferences.getSharedPreferences(getContext()).getBoolean(SUBSCRIPTION,false));
         recyclerView.setAdapter(gamesPagedListAdapter);
 
         GamesViewModel gamesViewModel = ViewModelProviders.of(this).get(GamesViewModel.class);

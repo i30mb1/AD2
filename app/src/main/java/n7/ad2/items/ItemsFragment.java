@@ -20,12 +20,14 @@ import android.view.ViewGroup;
 import n7.ad2.R;
 import n7.ad2.databinding.FragmentItemsBinding;
 import n7.ad2.items.db.ItemModel;
+import n7.ad2.main.MainViewModel;
 
 public class ItemsFragment extends Fragment implements SearchView.OnQueryTextListener {
 
     private ItemsViewModel viewModel;
     private ItemsPagedListAdapter adapter;
     private FragmentItemsBinding binding;
+    private MainViewModel mainViewModel;
 
     public ItemsFragment() {
     }
@@ -50,6 +52,7 @@ public class ItemsFragment extends Fragment implements SearchView.OnQueryTextLis
         super.onActivityCreated(savedInstanceState);
 
         viewModel = ViewModelProviders.of(this).get(ItemsViewModel.class);
+        mainViewModel = ViewModelProviders.of(this).get(MainViewModel.class);
         getActivity().setTitle(R.string.items);
         setRetainInstance(true);
         setHasOptionsMenu(true);
@@ -58,10 +61,10 @@ public class ItemsFragment extends Fragment implements SearchView.OnQueryTextLis
     }
 
     private void setupRecyclerView() {
-        binding.rv.setHasFixedSize(true);
-        binding.rv.setLayoutManager(new GridLayoutManager(getContext(), 4));
+        binding.rvFragmentItems.setHasFixedSize(true);
+        binding.rvFragmentItems.setLayoutManager(new GridLayoutManager(getContext(), 4));
         adapter = new ItemsPagedListAdapter();
-        binding.rv.setAdapter(adapter);
+        binding.rvFragmentItems.setAdapter(adapter);
         viewModel.getItemsByFilter("").observe(this, new Observer<PagedList<ItemModel>>() {
             @Override
             public void onChanged(@Nullable PagedList<ItemModel> items) {

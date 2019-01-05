@@ -34,7 +34,7 @@ public class ItemFullActivity extends BaseActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_item_full_0);
-        isPremium = MySharedPreferences.getSharedPreferences(this).getBoolean(MySharedPreferences.PREMIUM, false);
+        isPremium = MySharedPreferences.getSharedPreferences(this).getBoolean(MySharedPreferences.SUBSCRIPTION, false);
 
         this.itemFolder = getIntent().getStringExtra(ITEM_CODE_NAME);
         this.itemName = getIntent().getStringExtra(ITEM_NAME);
@@ -52,7 +52,7 @@ public class ItemFullActivity extends BaseActivity {
                 onBackPressed();
                 break;
             case R.id.action_switch:
-                if (!MySharedPreferences.getSharedPreferences(this).getBoolean(MySharedPreferences.PREMIUM, false)) {
+                if (!MySharedPreferences.getSharedPreferences(this).getBoolean(MySharedPreferences.SUBSCRIPTION, false)) {
                     Snackbar.make(toolbar, R.string.all_only_for_subscribers, Snackbar.LENGTH_LONG).setAction(R.string.all_buy, new View.OnClickListener() {
                         @Override
                         public void onClick(View view) {

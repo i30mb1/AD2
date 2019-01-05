@@ -29,7 +29,7 @@ public class SettingsFragment extends PreferenceFragment {
 
     public void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        addPreferencesFromResource(R.xml.preferences);
+        addPreferencesFromResource(R.xml.setting);
 
         Preference theme = findPreference(getString(R.string.setting_theme_key));
         theme.setSummary(getPreferenceScreen().getSharedPreferences().getString(theme.getKey(), THEME_GRAY));
@@ -116,7 +116,7 @@ public class SettingsFragment extends PreferenceFragment {
                 intent.setType("text/plain");
                 intent.putExtra(Intent.EXTRA_SUBJECT, getString(R.string.setting_tell_friend_message));
                 intent.putExtra(Intent.EXTRA_TEXT, getString(R.string.setting_tell_friend_message));
-                intent = Intent.createChooser(intent, getString(R.string.setting_tell_friend));
+                intent = Intent.createChooser(intent, getString(R.string.setting_tell_friend_title));
                 startActivity(intent);
                 return true;
             }

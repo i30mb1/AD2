@@ -23,12 +23,12 @@
 
             <ImageView
                 android:foreground="?android:attr/selectableItemBackground"
-                android:id="@+id/iv"
+                android:id="@+id/iv_item_list_hero"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:adjustViewBounds="true"
                 android:background="?colorAccent"
-                android:contentDescription="@string/setting_tell_friend"
+                android:contentDescription="@string/setting_tell_friend_title"
                 android:onClick="@{(view)->hero.startHeroFull(view)}"
                 android:paddingStart="2dp"
                 android:paddingEnd="0dp"
@@ -41,7 +41,7 @@
                 tools:src="@drawable/hero_placeholder" />
 
             <TextView
-                android:id="@+id/tv"
+                android:id="@+id/tv_item_list_hero"
                 android:layout_gravity="bottom"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"

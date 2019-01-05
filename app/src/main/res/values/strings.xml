@@ -31,7 +31,7 @@
     <string name="setting_theme_key" translatable="false">setting_theme_key</string>
     <string name="setting_theme_default" translatable="false">GRAY</string>
     <string name="setting_category_about">ABOUT APP</string>
-    <string name="setting_tell_friend">Tell a friend</string>
+    <string name="setting_tell_friend_title">Tell a friend</string>
     <string name="setting_tell_friend_summary">do you have anyone?</string>
     <string name="setting_tell_friend_key" translatable="false">tell_friend_key</string>
     <string name="setting_tell_friend_message" translatable="false">https://goo.gl/au2HTE</string>

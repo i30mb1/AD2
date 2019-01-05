@@ -37,7 +37,7 @@ public class LicensesActivity extends BaseActivity {
                         Calendar calendar = Calendar.getInstance();
                         calendar.add(Calendar.YEAR, 1);
                         MySharedPreferences.getSharedPreferences(getApplicationContext()).edit().putLong(MySharedPreferences.DATE_END_PREMIUM, calendar.getTimeInMillis()).apply();
-                        PreferenceManager.getDefaultSharedPreferences(getApplicationContext()).edit().putBoolean(MySharedPreferences.PREMIUM, true).apply();
+                        PreferenceManager.getDefaultSharedPreferences(getApplicationContext()).edit().putBoolean(MySharedPreferences.SUBSCRIPTION, true).apply();
                         MediaPlayer.create(getApplicationContext(), R.raw.yes_it_does).start();
                         startBlinking();
                         snackbar.dismiss();

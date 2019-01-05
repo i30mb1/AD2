@@ -18,7 +18,7 @@
     <string name="setting_contact_summary">проблемы? баги? сотрудничество?</string>
     <string name="setting_high_quality_desc_off">выключена</string>
     <string name="setting_high_quality_desc_on">включена</string>
-    <string name="setting_tell_friend">Рассказать друзьям</string>
+    <string name="setting_tell_friend_title">Рассказать друзьям</string>
     <string name="setting_tell_friend_summary">у тебя они есть, ведь так?</string>
     <string name="hero_info">Инфа</string>
     <string name="toolbar_search_hint">Поиск по имени…</string>

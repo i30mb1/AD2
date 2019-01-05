@@ -1,38 +1,30 @@
-package n7.ad2.fragment;
+package n7.ad2.streams;
 
-import android.arch.lifecycle.Observer;
 import android.arch.lifecycle.ViewModelProviders;
-import android.arch.paging.PagedList;
-import android.media.MediaPlayer;
+import android.databinding.DataBindingUtil;
 import android.os.Bundle;
+import android.preference.PreferenceManager;
 import android.support.annotation.NonNull;
 import android.support.annotation.Nullable;
 import android.support.v4.app.Fragment;
-import android.support.v7.widget.GridLayoutManager;
-import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
 import android.view.Menu;
 import android.view.MenuInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.ImageView;
-import android.widget.ProgressBar;
-import android.widget.TextView;
 
 import n7.ad2.MySharedPreferences;
 import n7.ad2.R;
-import n7.ad2.main.MainActivity;
-import n7.ad2.adapter.StreamsPagedListAdapter;
-import n7.ad2.retrofit.streams.Streams;
+import n7.ad2.databinding.FragmentStreamsBinding;
+import n7.ad2.main.MainViewModel;
 import n7.ad2.viewModels.StreamsViewModel;
 
 public class StreamsFragment extends Fragment {
 
-    private StreamsPagedListAdapter streamsPagedListAdapter;
     private boolean isPremium;
+    private FragmentStreamsBinding binding;
 
     public StreamsFragment() {
-        MySharedPreferences.LAST_FRAGMENT_SELECTED = 5;
     }
 
     @Override
@@ -54,16 +46,22 @@ public class StreamsFragment extends Fragment {
 
     @Override
     public View onCreateView(@NonNull LayoutInflater inflater, ViewGroup container, final Bundle savedInstanceState) {
-        View view = inflater.inflate(R.layout.fragment_streams, container, false);
-
-        getActivity().setTitle(R.string.streams);
-        isPremium = MySharedPreferences.getSharedPreferences(getContext()).getBoolean(MySharedPreferences.PREMIUM, false);
-
-        initRecyclerView(view);
-        return view;
+        binding = DataBindingUtil.inflate(inflater, R.layout.fragment_streams, container, false);
+        return binding.getRoot();
     }
 
-    private void initRecyclerView(View view) {
+    @Override
+    public void onActivityCreated(@Nullable Bundle savedInstanceState) {
+        super.onActivityCreated(savedInstanceState);
+
+        MainViewModel mainViewModel = ViewModelProviders.of(getActivity()).get(MainViewModel.class);
+
+        getActivity().setTitle(R.string.streams);
+
+        initRecyclerView();
+    }
+
+    private void initRecyclerView() {
 //        final TextView tv_legion = getActivity().findViewById(R.id.tv_legion);
 //        final ImageView iv_legion = getActivity().findViewById(R.id.iv_legion);
 //        final ProgressBar pb_fragment_streams = getActivity().findViewById(R.id.pb);
@@ -79,13 +77,13 @@ public class StreamsFragment extends Fragment {
 //            }
 //        });
 
-        RecyclerView recyclerView = view.findViewById(R.id.tv_fragment_streams);
-        GridLayoutManager gridLayoutManager = new GridLayoutManager(view.getContext(), 1);
-        recyclerView.setLayoutManager(gridLayoutManager);
-        recyclerView.setHasFixedSize(true);
-
-        streamsPagedListAdapter = new StreamsPagedListAdapter();
-        recyclerView.setAdapter(streamsPagedListAdapter);
+//        RecyclerView recyclerView = findViewById(R.id.tv_fragment_streams);
+//        GridLayoutManager gridLayoutManager = new GridLayoutManager(view.getContext(), 1);
+//        recyclerView.setLayoutManager(gridLayoutManager);
+//        recyclerView.setHasFixedSize(true);
+//
+//        streamsPagedListAdapter = new StreamsPagedListAdapter();
+//        recyclerView.setAdapter(streamsPagedListAdapter);
 
         StreamsViewModel streamsViewModel = ViewModelProviders.of(this).get(StreamsViewModel.class);
 //        streamsViewModel.getStatusLoading().observe(this, new Observer<Boolean>() {

@@ -1,4 +1,4 @@
-package n7.ad2.activity;
+package n7.ad2.news;
 
 import android.arch.lifecycle.Observer;
 import android.content.res.Resources;
@@ -12,6 +12,7 @@ import android.webkit.WebSettings;
 import android.webkit.WebView;
 
 import n7.ad2.R;
+import n7.ad2.activity.BaseActivity;
 import n7.ad2.news.db.NewsDao;
 import n7.ad2.news.db.NewsModel;
 import n7.ad2.news.db.NewsRoomDatabase;
@@ -20,32 +21,14 @@ import n7.ad2.news.db.NewsRoomDatabase;
 public class NewsActivity extends BaseActivity {
 
     public static final String HREF = "href";
-    public String base_url = "https://www.dotabuff.com";
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_news);
 
-        initBaseUrl();
         setToolbar();
         setNews();
-    }
-
-    private void initBaseUrl() {
-        String language = getString(R.string.language_resource);
-        switch (language) {
-            default:
-            case "eng":
-                base_url = "https://www.dotabuff.com";
-                break;
-            case "ru":
-                base_url = "https://ru.dotabuff.com";
-                break;
-            case "zh":
-                base_url = "https://ru.dotabuff.com";
-                break;
-        }
     }
 
     private void setToolbar() {

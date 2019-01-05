@@ -38,7 +38,7 @@ import n7.ad2.MySharedPreferences;
 import n7.ad2.R;
 import n7.ad2.SnackbarUtils;
 import n7.ad2.activity.BaseActivity;
-import n7.ad2.adapter.PlainTextAdapter;
+import n7.ad2.adapter.PlainAdapter;
 import n7.ad2.databinding.ActivityMainBinding;
 import n7.ad2.databinding.DialogRateBinding;
 import n7.ad2.databinding.DialogUpdateBinding;
@@ -46,14 +46,14 @@ import n7.ad2.databinding.DrawerBinding;
 import n7.ad2.fragment.GameFragment;
 import n7.ad2.items.ItemsFragment;
 import n7.ad2.news.NewsFragment;
-import n7.ad2.fragment.StreamsFragment;
+import n7.ad2.streams.StreamsFragment;
 import n7.ad2.fragment.TournamentsFragment;
 import n7.ad2.heroes.HeroesFragment;
 import n7.ad2.utils.UnscrollableLinearLayoutManager;
 
 import static n7.ad2.main.MainViewModel.LAST_DAY_WHEN_CHECK_UPDATE;
 import static n7.ad2.main.MainViewModel.SHOULD_UPDATE_FROM_MARKET;
-import static n7.ad2.splash.SplashActivityViewModel.CURRENT_DAY_IN_APP;
+import static n7.ad2.splash.SplashViewModel.CURRENT_DAY_IN_APP;
 
 public class MainActivity extends BaseActivity {
 
@@ -72,7 +72,7 @@ public class MainActivity extends BaseActivity {
     private ConstraintSet constraintSetHidden = new ConstraintSet();
     private ConstraintSet constraintSetOrigin = new ConstraintSet();
     private ConstraintSet currentSet;
-    private PlainTextAdapter adapter;
+    private PlainAdapter adapter;
     private ActivityMainBinding bindingActivity;
     private DrawerBinding bindingDrawer;
     private boolean shouldUpdateFromMarket;
@@ -146,7 +146,7 @@ public class MainActivity extends BaseActivity {
     }
 
     private void setupToolbar() {
-        setSupportActionBar(bindingActivity.toolbar);
+        setSupportActionBar(bindingActivity.toolbarActivityMain);
     }
 
     @Override
@@ -159,15 +159,15 @@ public class MainActivity extends BaseActivity {
         boolean shouldDisplayLog = PreferenceManager.getDefaultSharedPreferences(this).getBoolean(getString(R.string.setting_log_key), true);
         if (shouldDisplayLog) {
             adapter = viewModel.getAdapter();
-            bindingDrawer.rv.setAdapter(adapter);
-            bindingDrawer.rv.setLayoutManager(new UnscrollableLinearLayoutManager(this, LinearLayoutManager.VERTICAL, false));
+            bindingDrawer.rvDrawer.setAdapter(adapter);
+            bindingDrawer.rvDrawer.setLayoutManager(new UnscrollableLinearLayoutManager(this, LinearLayoutManager.VERTICAL, false));
         }
     }
 
     public void log(String text) {
         if (adapter != null) {
             adapter.add(text);
-            bindingDrawer.rv.scrollToPosition(adapter.getItemCount() - 1);
+            bindingDrawer.rvDrawer.scrollToPosition(adapter.getItemCount() - 1);
         }
     }
 
@@ -177,22 +177,22 @@ public class MainActivity extends BaseActivity {
         switch (fragmentID) {
             default:
             case 1:
-                ft.replace(bindingActivity.container.getId(), new HeroesFragment()).commit();
+                ft.replace(bindingActivity.containerActivityMain.getId(), new HeroesFragment()).commit();
                 break;
             case 2:
-                ft.replace(bindingActivity.container.getId(), new ItemsFragment()).commit();
+                ft.replace(bindingActivity.containerActivityMain.getId(), new ItemsFragment()).commit();
                 break;
             case 3:
-                ft.replace(bindingActivity.container.getId(), new NewsFragment()).commit();
+                ft.replace(bindingActivity.containerActivityMain.getId(), new NewsFragment()).commit();
                 break;
             case 4:
-                ft.replace(bindingActivity.container.getId(), new TournamentsFragment()).commit();
+                ft.replace(bindingActivity.containerActivityMain.getId(), new TournamentsFragment()).commit();
                 break;
             case 5:
-                ft.replace(bindingActivity.container.getId(), new StreamsFragment()).commit();
+                ft.replace(bindingActivity.containerActivityMain.getId(), new StreamsFragment()).commit();
                 break;
             case 6:
-                ft.replace(bindingActivity.container.getId(), new GameFragment()).commit();
+                ft.replace(bindingActivity.containerActivityMain.getId(), new GameFragment()).commit();
                 break;
         }
 //        if (closeDrawer)
@@ -252,7 +252,7 @@ public class MainActivity extends BaseActivity {
     }
 
     private void showPreDialogDonate() {
-//        if (!sp.getBoolean(PREMIUM, false) && !sp.getString(IS_DAY_FOR_DONATE, "0").equals(MySharedPreferences.getTodayDate())) {
+//        if (!sp.getBoolean(SUBSCRIPTION, false) && !sp.getString(IS_DAY_FOR_DONATE, "0").equals(MySharedPreferences.getTodayDate())) {
 //            sp.edit().putString(IS_DAY_FOR_DONATE, MySharedPreferences.getTodayDate()).apply();
 //
 //            final AlertDialog.Builder builder = new AlertDialog.Builder(this);
@@ -309,7 +309,7 @@ public class MainActivity extends BaseActivity {
 
     private void setupDrawer() {
         drawable = new SlidingRootNavBuilder(this)
-                .withToolbarMenuToggle(bindingActivity.toolbar)
+                .withToolbarMenuToggle(bindingActivity.toolbarActivityMain)
                 .withDragDistance(110)
                 .withRootViewScale(0.65f)
                 .withRootViewElevation(8)
@@ -318,7 +318,7 @@ public class MainActivity extends BaseActivity {
                 .addDragStateListener(new DragStateListener() {
                     @Override
                     public void onDragStart() {
-                        hideKeyboard();
+//                        hideKeyboard();
                     }
 
                     @Override
@@ -381,7 +381,7 @@ public class MainActivity extends BaseActivity {
 //                    });
                 break;
             case R.id.menu_fragment_streams_open_multitab:
-//                if (sp.getBoolean(PREMIUM, false)) {
+//                if (sp.getBoolean(SUBSCRIPTION, false)) {
 //                    fragmentManager = getSupportFragmentManager();
 //                    currentFragment = fragmentManager.findFragmentById(R.id.container);
 //                    FragmentTransaction ft = fragmentManager.beginTransaction();
