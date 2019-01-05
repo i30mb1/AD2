@@ -157,5 +157,6 @@
     <string name="commercial_8">INSPIRATION TO CONTINUE WORKING TOWARDS GOALS</string>
     <string name="dialog_donate_me_text1">We spend a lot of time and effort supporting applications. Your every action is a traffic expense for our servers. Take a subscription and protect the application from unnecessary advertising.</string>
     <string name="dialog_donate_me_text2">WE NEED YOU!</string>
+    <string name="dialog_open_stream_hint">Channel name</string>
 
 </resources>
