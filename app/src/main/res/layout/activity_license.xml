@@ -4,7 +4,7 @@
     <data>
         <variable
             name="var"
-            type="n7.ad2.activity.LicensesActivity" />
+            type="n7.ad2.setting.LicensesActivity" />
     </data>
 
     <ScrollView

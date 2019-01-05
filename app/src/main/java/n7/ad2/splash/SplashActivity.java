@@ -24,8 +24,8 @@ import android.view.ViewGroup;
 import android.view.animation.AnticipateOvershootInterpolator;
 
 import n7.ad2.R;
-import n7.ad2.activity.BaseActivity;
-import n7.ad2.adapter.PlainAdapter;
+import n7.ad2.utils.BaseActivity;
+import n7.ad2.utils.PlainAdapter;
 import n7.ad2.databinding.ActivitySplashNormalBinding;
 import n7.ad2.main.MainActivity;
 import n7.ad2.utils.UnscrollableLinearLayoutManager;

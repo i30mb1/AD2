@@ -36,14 +36,14 @@
             android:name=".main.MainActivity"
             android:screenOrientation="portrait" />
         <activity
-            android:name=".activity.LicensesActivity"
+            android:name=".setting.LicensesActivity"
             android:screenOrientation="portrait"
             android:label="Open Source Licenses" />
         <activity
             android:name=".setting.SettingActivity"
             android:screenOrientation="portrait" />
         <activity
-            android:name=".activity.HeroFullActivity"
+            android:name=".heroes.full.HeroFullActivity"
             android:screenOrientation="portrait" />
         <activity
             android:name=".streams.StreamsFullActivity"
@@ -54,24 +54,24 @@
             android:name=".news.NewsActivity"
             android:screenOrientation="portrait" />
         <activity
-            android:name=".activity.GamesPersonalActivity"
+            android:name=".games.GamesPersonalActivity"
             android:parentActivityName=".main.MainActivity"
             android:screenOrientation="portrait" />
 
-        <activity android:name=".activity.LogInActivity" />
+        <activity android:name=".setting.LogInActivity" />
 
-        <activity android:name=".activity.DotabuffActivity" />
+        <activity android:name=".main.DotabuffActivity" />
         <activity
-            android:name=".activity.Game1Activity"
+            android:name=".games.Game1Activity"
             android:screenOrientation="portrait" />
         <activity
-            android:name=".activity.ItemFullActivity"
+            android:name=".items.full.ItemFullActivity"
             android:screenOrientation="portrait" />
         <activity
-            android:name=".activity.Game1HardActivity"
+            android:name=".games.Game1HardActivity"
             android:screenOrientation="portrait" />
         <activity
-            android:name=".activity.Game2Persons1Activity"
+            android:name=".games.Game2Persons1Activity"
             android:screenOrientation="portrait"/>
         <meta-data
             android:name="io.fabric.ApiKey"

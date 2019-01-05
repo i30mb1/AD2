@@ -14,7 +14,7 @@
         tools:context=".streams.SingleStreamFragment"
         tools:layout_editor_absoluteY="25dp">
 
-        <n7.ad2.utilsTwitch.TappableSurfaceView
+        <n7.ad2.streams.utilsTwitch.TappableSurfaceView
             android:id="@+id/sv_fragment_single_stream"
             android:layout_width="0dp"
             android:layout_height="150dp"

@@ -4,6 +4,6 @@
     android:id="@+id/wv_dotabuff"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context="n7.ad2.activity.DotabuffActivity">
+    tools:context="n7.ad2.main.DotabuffActivity">
 
 </WebView>

@@ -7,7 +7,7 @@ import java.io.IOException;
 import java.util.ArrayList;
 import java.util.List;
 
-import n7.ad2.MySharedPreferences;
+import n7.ad2.utils.MySharedPreferences;
 import n7.ad2.streams.retrofit.Channel;
 import n7.ad2.streams.retrofit.Preview;
 import n7.ad2.streams.retrofit.StreamList;

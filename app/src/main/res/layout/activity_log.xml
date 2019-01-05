@@ -4,4 +4,4 @@
     android:id="@+id/wb_activity_log"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context="n7.ad2.activity.LogInActivity"/>
+    tools:context="n7.ad2.setting.LogInActivity"/>

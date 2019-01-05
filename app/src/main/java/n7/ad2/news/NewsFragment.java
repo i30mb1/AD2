@@ -14,7 +14,7 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 
-import n7.ad2.MySharedPreferences;
+import n7.ad2.utils.MySharedPreferences;
 import n7.ad2.R;
 import n7.ad2.databinding.FragmentNewsBinding;
 import n7.ad2.news.db.NewsModel;

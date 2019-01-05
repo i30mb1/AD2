@@ -22,9 +22,11 @@ import android.widget.FrameLayout;
 import android.widget.LinearLayout;
 import android.widget.TextView;
 
-import n7.ad2.MySharedPreferences;
+import n7.ad2.utils.MySharedPreferences;
 import n7.ad2.R;
-import n7.ad2.streams.SingleStreamFragment;
+
+import static n7.ad2.streams.StreamsFragment.TAG_MULTI_TWITCH;
+import static n7.ad2.streams.StreamsFragment.TAG_ONE_TWITCH;
 
 public class MultiStreamsFragment extends Fragment {
 
@@ -47,7 +49,6 @@ public class MultiStreamsFragment extends Fragment {
 
     @Override
     public void onCreateOptionsMenu(Menu menu, MenuInflater inflater) {
-        menu.clear();
         inflater.inflate(R.menu.menu_fragment_multi_streams, menu);
         super.onCreateOptionsMenu(menu, inflater);
     }
@@ -73,6 +74,16 @@ public class MultiStreamsFragment extends Fragment {
             case R.id.menu_fragment_streams_plus:
                 addFragmentStream();
                 break;
+            case R.id.menu_fragment_streams_open_multitab:
+                FragmentManager fragmentManager = getActivity().getSupportFragmentManager();
+                Fragment currentFragment = fragmentManager.findFragmentById(R.id.container_activity_main);
+                FragmentTransaction ft = fragmentManager.beginTransaction();
+                if (currentFragment.getTag() != null && currentFragment.getTag().equals(TAG_ONE_TWITCH)) {
+                    ft.replace(R.id.container_activity_main, new StreamsFragment(), TAG_MULTI_TWITCH).commit();
+                } else {
+                    ft.replace(R.id.container_activity_main, new MultiStreamsFragment(), TAG_ONE_TWITCH).commit();
+                }
+                break;
         }
         return super.onOptionsItemSelected(item);
     }
@@ -82,8 +93,7 @@ public class MultiStreamsFragment extends Fragment {
         super.onCreate(savedInstanceState);
         setHasOptionsMenu(true);
         IntentFilter filter = new IntentFilter("refresh_ll");
-        if (getContext() != null)
-            getContext().registerReceiver(connections, filter);
+        if (getContext() != null) getContext().registerReceiver(connections, filter);
     }
 
     @Override

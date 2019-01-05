@@ -5,7 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="?colorPrimary"
-    tools:context="n7.ad2.activity.ItemFullActivity">
+    tools:context="n7.ad2.items.full.ItemFullActivity">
 
     <android.support.design.widget.AppBarLayout
         android:layout_width="match_parent"

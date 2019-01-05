@@ -8,10 +8,10 @@ import android.support.annotation.NonNull;
 import android.support.v4.app.ActivityOptionsCompat;
 import android.view.View;
 
-import n7.ad2.activity.HeroFullActivity;
+import n7.ad2.heroes.full.HeroFullActivity;
 
-import static n7.ad2.activity.HeroFullActivity.HERO_CODE_NAME;
-import static n7.ad2.activity.HeroFullActivity.HERO_NAME;
+import static n7.ad2.heroes.full.HeroFullActivity.HERO_CODE_NAME;
+import static n7.ad2.heroes.full.HeroFullActivity.HERO_NAME;
 
 @Entity
 public class HeroModel {

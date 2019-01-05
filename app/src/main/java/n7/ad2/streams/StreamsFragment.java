@@ -10,6 +10,8 @@ import android.preference.PreferenceManager;
 import android.support.annotation.NonNull;
 import android.support.annotation.Nullable;
 import android.support.v4.app.Fragment;
+import android.support.v4.app.FragmentManager;
+import android.support.v4.app.FragmentTransaction;
 import android.support.v7.app.AlertDialog;
 import android.support.v7.widget.GridLayoutManager;
 import android.view.LayoutInflater;
@@ -18,7 +20,6 @@ import android.view.MenuInflater;
 import android.view.MenuItem;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.ArrayAdapter;
 import android.widget.TextView;
 
 import java.util.Arrays;
@@ -36,6 +37,8 @@ import static n7.ad2.streams.StreamsFullActivity.CHANNEL_TITLE;
 public class StreamsFragment extends Fragment {
 
     public static final String TWITCH_STREAMS_TYPED = "TWITCH_STREAMS_TYPED";
+    public static final String TAG_MULTI_TWITCH = "TAG_MULTI_TWITCH";
+    public static final String TAG_ONE_TWITCH = "TAG_ONE_TWITCH";
     private FragmentStreamsBinding binding;
     private StreamsViewModel viewModel;
     private boolean subscription;
@@ -60,22 +63,22 @@ public class StreamsFragment extends Fragment {
                 createDialogOpenStream();
                 break;
             case R.id.menu_fragment_streams_open_multitab:
-//                if (sp.getBoolean(SUBSCRIPTION, false)) {
-//                    fragmentManager = getSupportFragmentManager();
-//                    currentFragment = fragmentManager.findFragmentById(R.id.container);
-//                    FragmentTransaction ft = fragmentManager.beginTransaction();
-//                    if (currentFragment.getTag() != null && currentFragment.getTag().equals(TAG_MULTI_TWITCH)) {
-//                        ft.replace(R.id.container, new StreamsFragment(), TAG_STREAMS).commit();
-//                    } else {
-//                        ft.replace(R.id.container, new MultiStreamsFragment(), TAG_MULTI_TWITCH).commit();
-//                    }
-//                } else {
-//                    showSnackBarPremium();
-//                }
-
+                startActivityMultiStreams();
                 break;
         }
         return true;
+    }
+
+    private void startActivityMultiStreams() {
+        if (getActivity() == null && getActivity().getSupportFragmentManager() == null) return;
+        FragmentManager fragmentManager = getActivity().getSupportFragmentManager();
+        Fragment currentFragment = fragmentManager.findFragmentById(R.id.container_activity_main);
+        FragmentTransaction ft = fragmentManager.beginTransaction();
+        if (currentFragment.getTag() != null && currentFragment.getTag().equals(TAG_ONE_TWITCH)) {
+            ft.replace(R.id.container_activity_main, new StreamsFragment(), TAG_MULTI_TWITCH).commit();
+        } else {
+            ft.replace(R.id.container_activity_main, new MultiStreamsFragment(), TAG_ONE_TWITCH).commit();
+        }
     }
 
     @SuppressWarnings("ConstantConditions")
@@ -93,7 +96,7 @@ public class StreamsFragment extends Fragment {
         String arraysStreams[] = streamTyped.substring(1, streamTyped.length() - 1).split(", ");
         list.addAll(Arrays.asList(arraysStreams));
         for (final String i : list) {
-            TextView tv = (TextView) getLayoutInflater().inflate(R.layout.item_list_stream_typed,null);
+            TextView tv = (TextView) getLayoutInflater().inflate(R.layout.item_list_stream_typed, null);
             tv.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View v) {
@@ -103,9 +106,6 @@ public class StreamsFragment extends Fragment {
             tv.setText(i);
             binding.llDialogOpenStream.addView(tv);
         }
-
-//        PreferenceManager.getDefaultSharedPreferences(getContext()).edit().putStringSet("asdf", list);
-//        ArrayAdapter<String> adapter = new ArrayAdapter<>(getContext(), R.layout.dialog_open_stream, list);
 
         binding.ibDialogOpenByName.setOnClickListener(new View.OnClickListener() {
             @Override

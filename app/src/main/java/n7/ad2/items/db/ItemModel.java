@@ -8,10 +8,10 @@ import android.support.annotation.NonNull;
 import android.support.v4.app.ActivityOptionsCompat;
 import android.view.View;
 
-import n7.ad2.activity.ItemFullActivity;
+import n7.ad2.items.full.ItemFullActivity;
 
-import static n7.ad2.activity.ItemFullActivity.ITEM_CODE_NAME;
-import static n7.ad2.activity.ItemFullActivity.ITEM_NAME;
+import static n7.ad2.items.full.ItemFullActivity.ITEM_CODE_NAME;
+import static n7.ad2.items.full.ItemFullActivity.ITEM_NAME;
 
 @Entity
 public class ItemModel {

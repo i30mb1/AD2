@@ -16,14 +16,12 @@ import android.widget.TextView;
 
 import n7.ad2.BuildConfig;
 import n7.ad2.R;
-import n7.ad2.activity.LicensesActivity;
-import n7.ad2.activity.LogInActivity;
 import n7.ad2.main.MainActivity;
 
 import static android.app.Activity.RESULT_OK;
-import static n7.ad2.activity.BaseActivity.THEME_DARK;
-import static n7.ad2.activity.BaseActivity.THEME_GRAY;
-import static n7.ad2.activity.BaseActivity.THEME_WHITE;
+import static n7.ad2.utils.BaseActivity.THEME_DARK;
+import static n7.ad2.utils.BaseActivity.THEME_GRAY;
+import static n7.ad2.utils.BaseActivity.THEME_WHITE;
 
 public class SettingsFragment extends PreferenceFragment {
 

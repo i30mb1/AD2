@@ -27,20 +27,20 @@ import androidx.work.Data;
 import androidx.work.ExistingWorkPolicy;
 import androidx.work.OneTimeWorkRequest;
 import androidx.work.WorkManager;
-import n7.ad2.MySharedPreferences;
+import n7.ad2.utils.MySharedPreferences;
 import n7.ad2.R;
-import n7.ad2.SingleLiveEvent;
-import n7.ad2.adapter.PlainAdapter;
+import n7.ad2.utils.SingleLiveEvent;
+import n7.ad2.utils.PlainAdapter;
 import n7.ad2.heroes.db.HeroesRoomDatabase;
 import n7.ad2.items.db.ItemsRoomDatabase;
 import n7.ad2.news.NewsWorker;
-import n7.ad2.purchaseUtils.IabHelper;
-import n7.ad2.purchaseUtils.IabResult;
-import n7.ad2.purchaseUtils.Inventory;
+import n7.ad2.setting.purchaseUtils.IabHelper;
+import n7.ad2.setting.purchaseUtils.IabResult;
+import n7.ad2.setting.purchaseUtils.Inventory;
 
-import static n7.ad2.activity.BaseActivity.THEME_DARK;
-import static n7.ad2.activity.BaseActivity.THEME_GRAY;
-import static n7.ad2.activity.BaseActivity.THEME_WHITE;
+import static n7.ad2.utils.BaseActivity.THEME_DARK;
+import static n7.ad2.utils.BaseActivity.THEME_GRAY;
+import static n7.ad2.utils.BaseActivity.THEME_WHITE;
 import static n7.ad2.news.NewsWorker.DELETE_TABLE;
 import static n7.ad2.setting.SettingActivity.ONCE_PER_MONTH_SUBSCRIPTION;
 import static n7.ad2.setting.SettingActivity.SUBSCRIPTION;
@@ -48,8 +48,8 @@ import static n7.ad2.setting.SettingActivity.SUBSCRIPTION;
 public class SplashViewModel extends AndroidViewModel {
 
     public static final String CURRENT_DAY_IN_APP = "CURRENT_DAY_IN_APP";
-    public static final String FREE_PREMIUM_DAYS = "FREE_PREMIUM_DAYS";
-    private static final String LAST_DAY_WHEN_USED_PREMIUM = "LAST_DAY_WHEN_USED_PREMIUM";
+    public static final String FREE_SUBSCRIPTION_DAYS = "FREE_SUBSCRIPTION_DAYS";
+    private static final String FREE_SUBSCRIPTION_DAY_LAST_USE = "FREE_SUBSCRIPTION_DAY_LAST_USE";
     private static final String LAST_DAY_WHEN_LOAD_NEWS = "LAST_DAY_WHEN_LOAD_NEWS";
     final SingleLiveEvent<Void> startMainActivity = new SingleLiveEvent<>();
     public ObservableField<Drawable> resId = new ObservableField<>();
@@ -77,6 +77,7 @@ public class SplashViewModel extends AndroidViewModel {
 
     private void setupAdapter() {
         adapter = new PlainAdapter();
+        log("welcome_back_master");
     }
 
     public PlainAdapter getAdapter() {
@@ -92,9 +93,9 @@ public class SplashViewModel extends AndroidViewModel {
             WorkManager.getInstance().beginUniqueWork(NewsWorker.TAG, ExistingWorkPolicy.APPEND, worker).enqueue();
 
             PreferenceManager.getDefaultSharedPreferences(application).edit().putInt(LAST_DAY_WHEN_LOAD_NEWS, currentDay).apply();
-            log("loading_news::true");
+            log("loading_news_status = is_loading");
         } else {
-            log("loading_news::not_today");
+            log("loading_news_status = was_loaded");
         }
     }
 
@@ -107,7 +108,7 @@ public class SplashViewModel extends AndroidViewModel {
         String currentDayInString = new SimpleDateFormat("DDD", Locale.US).format(Calendar.getInstance().getTime());
         currentDay = Integer.valueOf(currentDayInString);
         PreferenceManager.getDefaultSharedPreferences(application).edit().putInt(CURRENT_DAY_IN_APP, currentDay).apply();
-        log("current_day::" + currentDayInString);
+        log("today_is_day_number#" + currentDayInString);
     }
 
     private void setupAppIcon() {
@@ -186,23 +187,23 @@ public class SplashViewModel extends AndroidViewModel {
                     if (result.isFailure()) return;
 
                     if (inv.hasPurchase(ONCE_PER_MONTH_SUBSCRIPTION)) {
-                        setPremium(true);
+                        setSubscriptionMessage(true);
                     } else {
-                        int freePremiumDayLastUse = PreferenceManager.getDefaultSharedPreferences(application).getInt(LAST_DAY_WHEN_USED_PREMIUM, 0);
-                        if (currentDay == freePremiumDayLastUse) {
-                            setPremium(true);
+                        int freeSubscriptionDayLastUse = PreferenceManager.getDefaultSharedPreferences(application).getInt(FREE_SUBSCRIPTION_DAY_LAST_USE, 0);
+                        int freeSubscriptionDays = PreferenceManager.getDefaultSharedPreferences(application).getInt(FREE_SUBSCRIPTION_DAYS, 0);
+                        if (currentDay == freeSubscriptionDayLastUse) {
+                            setSubscriptionMessage(true);
                         } else {
-                            int freePremiumDays = PreferenceManager.getDefaultSharedPreferences(application).getInt(FREE_PREMIUM_DAYS, 0);
-                            if (freePremiumDays <= 0) {
-                                setPremium(false);
+                            if (freeSubscriptionDays <= 0) {
+                                setSubscriptionMessage(false);
                             } else {
-                                freePremiumDays--;
-                                PreferenceManager.getDefaultSharedPreferences(application).edit().putInt(FREE_PREMIUM_DAYS, freePremiumDays).apply();
-                                PreferenceManager.getDefaultSharedPreferences(application).edit().putInt(LAST_DAY_WHEN_USED_PREMIUM, currentDay).apply();
-                                setPremium(true);
+                                freeSubscriptionDays--;
+                                PreferenceManager.getDefaultSharedPreferences(application).edit().putInt(FREE_SUBSCRIPTION_DAYS, freeSubscriptionDays).apply();
+                                PreferenceManager.getDefaultSharedPreferences(application).edit().putInt(FREE_SUBSCRIPTION_DAY_LAST_USE, currentDay).apply();
+                                setSubscriptionMessage(true);
                             }
-
                         }
+                        log("subscription_days_remain = " + freeSubscriptionDays);
                     }
 
                 }
@@ -212,9 +213,9 @@ public class SplashViewModel extends AndroidViewModel {
         }
     }
 
-    private void setPremium(boolean subscription) {
+    private void setSubscriptionMessage(boolean subscription) {
         MySharedPreferences.getSharedPreferences(application).edit().putBoolean(SUBSCRIPTION, subscription).apply();
-        log("premium_status::" + subscription);
+        log("subscription_status = " + subscription);
     }
 
     private void setupFirebaseAnalytics() {

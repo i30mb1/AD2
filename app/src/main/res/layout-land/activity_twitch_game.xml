@@ -7,7 +7,7 @@
     android:layout_height="match_parent"
     tools:ignore="MissingDefaultResource">
 
-    <n7.ad2.utilsTwitch.TappableSurfaceView
+    <n7.ad2.streams.utilsTwitch.TappableSurfaceView
         android:id="@+id/sv_activity_twitch_game"
         android:layout_width="0dp"
         android:layout_height="0dp"

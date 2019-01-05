@@ -5,7 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="?colorPrimary"
-    tools:context=".fragment.GameFragment"
+    tools:context=".games.GameFragment"
     app:layout_behavior="@string/appbar_scrolling_view_behavior"
     tools:layout_editor_absoluteY="25dp">
 

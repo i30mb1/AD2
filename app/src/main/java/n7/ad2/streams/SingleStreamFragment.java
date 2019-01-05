@@ -48,12 +48,12 @@ import java.net.URLEncoder;
 import java.util.ArrayList;
 import java.util.List;
 
-import n7.ad2.AppExecutors;
+import n7.ad2.utils.AppExecutors;
 import n7.ad2.R;
 import n7.ad2.streams.retrofit.Streams;
-import n7.ad2.utilsTwitch.Element;
-import n7.ad2.utilsTwitch.Playlist;
-import n7.ad2.utilsTwitch.TappableSurfaceView;
+import n7.ad2.streams.utilsTwitch.Element;
+import n7.ad2.streams.utilsTwitch.Playlist;
+import n7.ad2.streams.utilsTwitch.TappableSurfaceView;
 import okhttp3.OkHttpClient;
 import okhttp3.Request;
 import okhttp3.Response;

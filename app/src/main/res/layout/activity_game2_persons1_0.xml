@@ -6,7 +6,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="?colorPrimary"
-    tools:context=".activity.Game2Persons1Activity">
+    tools:context=".games.Game2Persons1Activity">
 
     <TextView
         android:id="@+id/tv_fragment_game_title_game2"

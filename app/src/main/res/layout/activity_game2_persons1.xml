@@ -5,7 +5,7 @@
     android:background="?colorPrimary"
     android:id="@+id/root"
     xmlns:tools="http://schemas.android.com/tools"
-    tools:context=".activity.Game2Persons1Activity"
+    tools:context=".games.Game2Persons1Activity"
     xmlns:android="http://schemas.android.com/apk/res/android">
 
     <View
