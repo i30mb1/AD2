@@ -32,6 +32,15 @@ public class HeroModel {
     private String startingItems = "-+-+-+-+-";
     private String furtherItems = "-+-+-+-+-";
     private String skillBuilds = "-+-+-+-+-";
+    private int guideLastDay = 0;
+
+    public int getGuideLastDay() {
+        return guideLastDay;
+    }
+
+    public void setGuideLastDay(int guideLastDay) {
+        this.guideLastDay = guideLastDay;
+    }
 
     public HeroModel(@NonNull String codeName, @NonNull String name) {
         this.codeName = codeName;

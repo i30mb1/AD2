@@ -21,6 +21,8 @@ import android.support.transition.TransitionSet;
 import android.support.v7.widget.LinearLayoutManager;
 import android.view.View;
 import android.view.ViewGroup;
+import android.view.Window;
+import android.view.WindowManager;
 import android.view.animation.AnticipateOvershootInterpolator;
 
 import n7.ad2.R;
@@ -38,6 +40,8 @@ public class SplashActivity extends BaseActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
+        requestWindowFeature(Window.FEATURE_NO_TITLE);
+        getWindow().setFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN, WindowManager.LayoutParams.FLAG_FULLSCREEN);
 //        getWindow().addFlags(WindowManager.LayoutParams.FLAG_TURN_SCREEN_ON | WindowManager.LayoutParams.FLAG_SHOW_WHEN_LOCKED | WindowManager.LayoutParams.FLAG_KEEP_SCREEN_ON | WindowManager.LayoutParams.FLAG_FULLSCREEN);
         super.onCreate(savedInstanceState);
         PreferenceManager.setDefaultValues(this, R.xml.setting, false);
@@ -118,7 +122,6 @@ public class SplashActivity extends BaseActivity {
         PlainAdapter adapter = viewModel.getAdapter();
         binding.rvActivitySplash.setAdapter(adapter);
         binding.rvActivitySplash.setLayoutManager(new UnscrollableLinearLayoutManager(this, LinearLayoutManager.VERTICAL, false));
-
     }
 
 }

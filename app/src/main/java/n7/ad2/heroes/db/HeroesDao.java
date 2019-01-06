@@ -8,7 +8,6 @@ import android.arch.persistence.room.Insert;
 import android.arch.persistence.room.OnConflictStrategy;
 import android.arch.persistence.room.Query;
 import android.arch.persistence.room.Update;
-import android.support.annotation.WorkerThread;
 
 import java.util.List;
 
@@ -38,7 +37,7 @@ public interface HeroesDao {
     @Query("SELECT * FROM HeroModel ORDER BY name ASC")
     DataSource.Factory<Integer, HeroModel> getDataSourceHeroes();
 
-    @Query("SELECT * FROM HeroModel WHERE codeName LIKE '%'||:chars||'%' ORDER BY name ASC")
+    @Query("SELECT * FROM HeroModel WHERE codeName LIKE '%'||:chars||'%' ORDER BY codeName ASC")
     DataSource.Factory<Integer, HeroModel> getDataSourceHeroesFilter(String chars);
 
     @Query("SELECT * FROM HeroModel WHERE codeName =:codeName")
@@ -46,6 +45,9 @@ public interface HeroesDao {
 
     @Query("SELECT * FROM HeroModel WHERE codeName =:codeName")
     HeroModel getHeroByCodeNameObject(String codeName);
+
+    @Query("UPDATE HeroModel SET guideLastDay=:lastDay  WHERE codeName=:codeName")
+    void setGuideLastDay(String codeName, int lastDay);
 
     @Query("SELECT * FROM HeroModel")
     List<HeroModel> getAll();

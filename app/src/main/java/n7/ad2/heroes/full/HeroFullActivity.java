@@ -123,14 +123,13 @@ public class HeroFullActivity extends BaseActivity {
         @Override
         public CharSequence getPageTitle(int position) {
             switch (position) {
+                default:
                 case 0:
                     return getString(R.string.hero_info);
                 case 1:
                     return getString(R.string.hero_sound);
                 case 2:
                     return getString(R.string.hero_guide);
-                default:
-                    return "";
             }
         }
     }

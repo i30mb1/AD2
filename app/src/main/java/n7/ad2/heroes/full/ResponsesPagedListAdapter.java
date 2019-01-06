@@ -14,6 +14,7 @@ import android.media.RingtoneManager;
 import android.net.Uri;
 import android.os.Build;
 import android.os.Environment;
+import android.preference.PreferenceManager;
 import android.provider.MediaStore;
 import android.provider.Settings;
 import android.support.annotation.NonNull;
@@ -42,6 +43,8 @@ import n7.ad2.R;
 import n7.ad2.utils.AppExecutors;
 import n7.ad2.utils.StickyHeaderDecorator;
 import n7.ad2.utils.Utils;
+
+import static n7.ad2.setting.SettingActivity.SUBSCRIPTION;
 
 public class ResponsesPagedListAdapter extends PagedListAdapter<ResponseModel, ResponsesPagedListAdapter.ViewHolder> implements StickyHeaderDecorator.StickyHeaderInterface {
 
@@ -291,98 +294,99 @@ public class ResponsesPagedListAdapter extends PagedListAdapter<ResponseModel, R
                         }
                     }
                 });
-                ll_item_response.setOnLongClickListener(new View.OnLongClickListener() {
-                    @Override
-                    public boolean onLongClick(final View view) {
-                        AlertDialog.Builder builder = new AlertDialog.Builder(view.getContext());
-                        builder.setView(R.layout.dialog_response);
-                        final AlertDialog dialog = builder.show();
-                        TextView tv_dialog_response_count = dialog.findViewById(R.id.tv_dialog_response_count);
-                        Button b_dialog_response_download = dialog.findViewById(R.id.b_dialog_response_download);
-                        Button b_dialog_response_set_ringtone = dialog.findViewById(R.id.b_dialog_response_set_ringtone);
+                if (PreferenceManager.getDefaultSharedPreferences(context).getBoolean(SUBSCRIPTION, false)) {
+                    ll_item_response.setOnLongClickListener(new View.OnLongClickListener() {
+                        @Override
+                        public boolean onLongClick(final View view) {
+                            AlertDialog.Builder builder = new AlertDialog.Builder(view.getContext());
+                            builder.setView(R.layout.dialog_response);
+                            final AlertDialog dialog = builder.show();
+                            Button b_dialog_response_download = dialog.findViewById(R.id.b_dialog_response_download);
+                            Button b_dialog_response_set_ringtone = dialog.findViewById(R.id.b_dialog_response_set_ringtone);
 
-                        b_dialog_response_set_ringtone.setOnClickListener(new View.OnClickListener() {
-                            @Override
-                            public void onClick(final View view) {
-                                if (enableWriteSetting(view.getContext(), view) && checkPermission(view)) {
-                                    appExecutors.networkIO().execute(new Runnable() {
-                                        @Override
-                                        public void run() {
-                                            File file = new File(view.getContext().getExternalFilesDir(Environment.DIRECTORY_RINGTONES) + File.separator + heroName + File.separator + model.getTitle().replace("?", "") + ".mp3");
-                                            if (file.exists()) {
-                                                ContentValues values = new ContentValues();
-                                                values.put(MediaStore.MediaColumns.DATA, file.getAbsolutePath());
-                                                values.put(MediaStore.MediaColumns.TITLE, model.getTitle());
-                                                values.put(MediaStore.MediaColumns.MIME_TYPE, "audio/mp3");
-                                                values.put(MediaStore.MediaColumns.SIZE, file.length());
-                                                values.put(MediaStore.Audio.Media.IS_NOTIFICATION, true);
-                                                values.put(MediaStore.Audio.Media.IS_RINGTONE, true);
-                                                values.put(MediaStore.Audio.Media.IS_ALARM, true);
-                                                values.put(MediaStore.Audio.Media.IS_MUSIC, false);
+                            b_dialog_response_set_ringtone.setOnClickListener(new View.OnClickListener() {
+                                @Override
+                                public void onClick(final View view) {
+                                    if (enableWriteSetting(view.getContext(), view) && checkPermission(view)) {
+                                        appExecutors.networkIO().execute(new Runnable() {
+                                            @Override
+                                            public void run() {
+                                                File file = new File(view.getContext().getExternalFilesDir(Environment.DIRECTORY_RINGTONES) + File.separator + heroName + File.separator + model.getTitle().replace("?", "") + ".mp3");
+                                                if (file.exists()) {
+                                                    ContentValues values = new ContentValues();
+                                                    values.put(MediaStore.MediaColumns.DATA, file.getAbsolutePath());
+                                                    values.put(MediaStore.MediaColumns.TITLE, model.getTitle());
+                                                    values.put(MediaStore.MediaColumns.MIME_TYPE, "audio/mp3");
+                                                    values.put(MediaStore.MediaColumns.SIZE, file.length());
+                                                    values.put(MediaStore.Audio.Media.IS_NOTIFICATION, true);
+                                                    values.put(MediaStore.Audio.Media.IS_RINGTONE, true);
+                                                    values.put(MediaStore.Audio.Media.IS_ALARM, true);
+                                                    values.put(MediaStore.Audio.Media.IS_MUSIC, false);
 
-                                                ContentResolver contentResolver = context.getContentResolver();
-                                                Uri generalaudiouri = MediaStore.Audio.Media.INTERNAL_CONTENT_URI;
-                                                contentResolver.delete(generalaudiouri, MediaStore.MediaColumns.DATA + "='" + file.getAbsolutePath() + "'", null);
-                                                Uri ringtoneuri = contentResolver.insert(generalaudiouri, values);
-                                                RingtoneManager.setActualDefaultRingtoneUri(context, RingtoneManager.TYPE_NOTIFICATION, ringtoneuri);
-                                                Snackbar.make(parentView, R.string.hero_response_ringtone_set, Snackbar.LENGTH_SHORT).show();
-                                            } else {
-                                                Snackbar.make(parentView, R.string.hero_responses_fragment_download_first, Snackbar.LENGTH_SHORT).show();
-                                            }
-                                            dialog.cancel();
-                                        }
-                                    });
-                                }
-                            }
-                        });
-                        b_dialog_response_download.setOnClickListener(new View.OnClickListener() {
-                            @Override
-                            public void onClick(final View view) {
-                                if (Utils.isNetworkAvailable(view.getContext())) {
-                                    appExecutors.networkIO().execute(new Runnable() {
-                                        @Override
-                                        public void run() {
-                                            File file = new File(view.getContext().getExternalFilesDir(Environment.DIRECTORY_RINGTONES) + File.separator + heroName + File.separator + model.getTitle() + ".mp3");
-                                            if (file.exists()) {
-                                                Snackbar.make(parentView, R.string.hero_responses_sound_already_downloaded, Snackbar.LENGTH_LONG).setAction(R.string.open_file, new View.OnClickListener() {
-                                                    @Override
-                                                    public void onClick(View view) {
-                                                        Uri selectedUri = Uri.parse(context.getExternalFilesDir(Environment.DIRECTORY_RINGTONES) + File.separator);
-                                                        Intent intentOpenFile = new Intent(Intent.ACTION_VIEW);
-                                                        intentOpenFile.setDataAndType(selectedUri, "application/*");
-                                                        if (intentOpenFile.resolveActivityInfo(context.getPackageManager(), 0) != null) {
-                                                            context.startActivity(Intent.createChooser(intentOpenFile, context.getString(R.string.hero_responses_open_folder_with)));
-                                                        } else {
-                                                            // if you reach this place, it means there is no any file
-                                                            // explorer app installed on your device
-                                                        }
-                                                    }
-                                                }).show();
-                                            } else {
-                                                DownloadManager manager = (DownloadManager) view.getContext().getSystemService(Context.DOWNLOAD_SERVICE);
-                                                if (manager != null) {
-                                                    manager.enqueue(new DownloadManager.Request(Uri.parse(model.getHref()))
-                                                            .setDescription(heroName)
-                                                            .setTitle(model.getTitle())
-                                                            .setNotificationVisibility(DownloadManager.Request.VISIBILITY_VISIBLE_NOTIFY_COMPLETED)
-                                                            .setDestinationInExternalFilesDir(view.getContext(), Environment.DIRECTORY_RINGTONES, heroName + File.separator + model.getTitle().replace("?", "") + ".mp3")
-                                                    );
+                                                    ContentResolver contentResolver = context.getContentResolver();
+                                                    Uri generalaudiouri = MediaStore.Audio.Media.INTERNAL_CONTENT_URI;
+                                                    contentResolver.delete(generalaudiouri, MediaStore.MediaColumns.DATA + "='" + file.getAbsolutePath() + "'", null);
+                                                    Uri ringtoneuri = contentResolver.insert(generalaudiouri, values);
+                                                    RingtoneManager.setActualDefaultRingtoneUri(context, RingtoneManager.TYPE_NOTIFICATION, ringtoneuri);
+                                                    Snackbar.make(parentView, R.string.hero_response_ringtone_set, Snackbar.LENGTH_SHORT).show();
+                                                } else {
+                                                    Snackbar.make(parentView, R.string.hero_responses_fragment_download_first, Snackbar.LENGTH_SHORT).show();
                                                 }
+                                                dialog.cancel();
                                             }
-                                            dialog.cancel();
-                                        }
-                                    });
-                                } else {
-                                    dialog.cancel();
-                                    Snackbar.make(parentView, R.string.all_error_internet, Snackbar.LENGTH_LONG).show();
+                                        });
+                                    }
                                 }
+                            });
+                            b_dialog_response_download.setOnClickListener(new View.OnClickListener() {
+                                @Override
+                                public void onClick(final View view) {
+                                    if (Utils.isNetworkAvailable(view.getContext())) {
+                                        appExecutors.networkIO().execute(new Runnable() {
+                                            @Override
+                                            public void run() {
+                                                File file = new File(view.getContext().getExternalFilesDir(Environment.DIRECTORY_RINGTONES) + File.separator + heroName + File.separator + model.getTitle() + ".mp3");
+                                                if (file.exists()) {
+                                                    Snackbar.make(parentView, R.string.hero_responses_sound_already_downloaded, Snackbar.LENGTH_LONG).setAction(R.string.open_file, new View.OnClickListener() {
+                                                        @Override
+                                                        public void onClick(View view) {
+                                                            Uri selectedUri = Uri.parse(context.getExternalFilesDir(Environment.DIRECTORY_RINGTONES) + File.separator);
+                                                            Intent intentOpenFile = new Intent(Intent.ACTION_VIEW);
+                                                            intentOpenFile.setDataAndType(selectedUri, "application/*");
+                                                            if (intentOpenFile.resolveActivityInfo(context.getPackageManager(), 0) != null) {
+                                                                context.startActivity(Intent.createChooser(intentOpenFile, context.getString(R.string.hero_responses_open_folder_with)));
+                                                            } else {
+                                                                // if you reach this place, it means there is no any file
+                                                                // explorer app installed on your device
+                                                            }
+                                                        }
+                                                    }).show();
+                                                } else {
+                                                    DownloadManager manager = (DownloadManager) view.getContext().getSystemService(Context.DOWNLOAD_SERVICE);
+                                                    if (manager != null) {
+                                                        manager.enqueue(new DownloadManager.Request(Uri.parse(model.getHref()))
+                                                                .setDescription(heroName)
+                                                                .setTitle(model.getTitle())
+                                                                .setNotificationVisibility(DownloadManager.Request.VISIBILITY_VISIBLE_NOTIFY_COMPLETED)
+                                                                .setDestinationInExternalFilesDir(view.getContext(), Environment.DIRECTORY_RINGTONES, heroName + File.separator + model.getTitle().replace("?", "") + ".mp3")
+                                                        );
+                                                    }
+                                                }
+                                                dialog.cancel();
+                                            }
+                                        });
+                                    } else {
+                                        dialog.cancel();
+                                        Snackbar.make(parentView, R.string.all_error_internet, Snackbar.LENGTH_LONG).show();
+                                    }
 
-                            }
-                        });
+                                }
+                            });
 
-                        return true;
-                    }
-                });
+                            return true;
+                        }
+                    });
+                }
             }
         }
 

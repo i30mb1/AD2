@@ -51,7 +51,7 @@ public class HeroesViewModel extends AndroidViewModel {
     }
 
     LiveData<PagedList<HeroModel>> getHeroesByFilter(String chars) {
-        DataSource.Factory<Integer, HeroModel> dataSource = heroesDao.getDataSourceHeroesFilter(chars);
+        DataSource.Factory<Integer, HeroModel> dataSource = heroesDao.getDataSourceHeroesFilter(chars.trim().toLowerCase());
         PagedList.Config config = new PagedList.Config.Builder().setPageSize(30).build();
         return new LivePagedListBuilder<>(dataSource, config).build();
     }

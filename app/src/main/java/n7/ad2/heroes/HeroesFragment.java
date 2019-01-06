@@ -5,6 +5,7 @@ import android.arch.lifecycle.Observer;
 import android.arch.lifecycle.ViewModelProviders;
 import android.arch.paging.PagedList;
 import android.databinding.DataBindingUtil;
+import android.databinding.ObservableBoolean;
 import android.os.Bundle;
 import android.support.annotation.NonNull;
 import android.support.annotation.Nullable;
@@ -27,7 +28,6 @@ import n7.ad2.main.MainViewModel;
 
 public class HeroesFragment extends Fragment implements SearchView.OnQueryTextListener {
 
-    private HeroesPagedListAdapter adapter;
     private HeroesViewModel viewModel;
     private FragmentHeroesBinding binding;
     private MainViewModel mainViewModel;
@@ -68,7 +68,7 @@ public class HeroesFragment extends Fragment implements SearchView.OnQueryTextLi
         binding.rvFragmentHeroes.setHasFixedSize(true);// если recyclerView не будет изменяться в размерах тогда ставим true
         binding.rvFragmentHeroes.setLayoutManager(new GridLayoutManager(getContext(), 3));
         binding.rvFragmentHeroes.setItemAnimator(new DefaultItemAnimator());
-        adapter = new HeroesPagedListAdapter(); // PagedListAdapter, заточенный под чтение данных из PagedList.
+        final HeroesPagedListAdapter adapter = new HeroesPagedListAdapter(); // PagedListAdapter, заточенный под чтение данных из PagedList.
         binding.rvFragmentHeroes.setAdapter(adapter);
         viewModel.getHeroesByFilter("").observe(this, new Observer<PagedList<HeroModel>>() {
             @Override
@@ -76,6 +76,7 @@ public class HeroesFragment extends Fragment implements SearchView.OnQueryTextLi
                 adapter.submitList(heroModels);
             }
         });
+
     }
 
     @Override
@@ -85,7 +86,9 @@ public class HeroesFragment extends Fragment implements SearchView.OnQueryTextLi
 
     @Override
     public boolean onQueryTextChange(String s) {
-        viewModel.getHeroesByFilter(s.trim()).observe(this, new Observer<PagedList<HeroModel>>() {
+        final HeroesPagedListAdapter adapter = new HeroesPagedListAdapter();
+        binding.rvFragmentHeroes.setAdapter(adapter);
+        viewModel.getHeroesByFilter(s).observe(this, new Observer<PagedList<HeroModel>>() {
             @Override
             public void onChanged(@Nullable PagedList<HeroModel> heroModels) {
                 adapter.submitList(heroModels);

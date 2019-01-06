@@ -4,17 +4,20 @@ import android.app.Activity;
 import android.arch.persistence.room.Entity;
 import android.arch.persistence.room.PrimaryKey;
 import android.content.Intent;
+import android.databinding.BaseObservable;
+import android.databinding.Bindable;
 import android.support.annotation.NonNull;
 import android.support.v4.app.ActivityOptionsCompat;
 import android.view.View;
 
+import n7.ad2.BR;
 import n7.ad2.items.full.ItemFullActivity;
 
 import static n7.ad2.items.full.ItemFullActivity.ITEM_CODE_NAME;
 import static n7.ad2.items.full.ItemFullActivity.ITEM_NAME;
 
 @Entity
-public class ItemModel {
+public class ItemModel  {
 
     @PrimaryKey(autoGenerate = true)
     private int id;

@@ -17,7 +17,7 @@ public class ItemsPagedListAdapter extends PagedListAdapter<ItemModel, ItemsPage
     private static final DiffUtil.ItemCallback<ItemModel> DIFF_CALLBACK = new DiffUtil.ItemCallback<ItemModel>() {
         @Override
         public boolean areItemsTheSame(@NonNull ItemModel items, @NonNull ItemModel t1) {
-            return true;
+            return items.getCodeName().equals(t1.getCodeName());
         }
 
         @Override
@@ -61,6 +61,7 @@ public class ItemsPagedListAdapter extends PagedListAdapter<ItemModel, ItemsPage
 
         private void bindTo(ItemModel item) {
             binding.setItem(item);
+            binding.executePendingBindings();
         }
 
         private void clear() {

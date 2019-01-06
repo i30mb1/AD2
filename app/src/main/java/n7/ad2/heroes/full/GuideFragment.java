@@ -1,7 +1,6 @@
 package n7.ad2.heroes.full;
 
 import android.arch.lifecycle.Observer;
-import android.arch.lifecycle.ViewModelProviders;
 import android.content.Intent;
 import android.content.SharedPreferences;
 import android.os.Build;
@@ -9,7 +8,6 @@ import android.os.Bundle;
 import android.preference.PreferenceManager;
 import android.support.annotation.NonNull;
 import android.support.annotation.Nullable;
-import android.support.design.widget.Snackbar;
 import android.support.v4.app.Fragment;
 import android.util.DisplayMetrics;
 import android.view.Gravity;
@@ -38,16 +36,17 @@ import androidx.work.Data;
 import androidx.work.OneTimeWorkRequest;
 import androidx.work.WorkManager;
 import androidx.work.WorkStatus;
-import n7.ad2.utils.AppExecutors;
 import n7.ad2.R;
-import n7.ad2.setting.SettingActivity;
 import n7.ad2.heroes.db.HeroModel;
+import n7.ad2.heroes.db.HeroesDao;
+import n7.ad2.heroes.db.HeroesRoomDatabase;
+import n7.ad2.utils.AppExecutors;
 import n7.ad2.utils.Utils;
-import n7.ad2.splash.SplashViewModel;
 
+import static n7.ad2.heroes.full.GuideWorker.HERO_CODE_NAME;
 import static n7.ad2.heroes.full.HeroFullActivity.HERO_NAME;
 import static n7.ad2.setting.SettingActivity.SUBSCRIPTION;
-import static n7.ad2.heroes.full.GuideWorker.HERO_CODE_NAME;
+import static n7.ad2.splash.SplashViewModel.CURRENT_DAY_IN_APP;
 
 public class GuideFragment extends Fragment {
 
@@ -66,12 +65,14 @@ public class GuideFragment extends Fragment {
     private int currentMenu = 1;
     private MenuItem previousMenu;
     private HeroModel hero;
-    private boolean isPremium = false;
+    private boolean subscription = false;
     private HashMap<String, String> hashMapSpells = new HashMap<>();
     private JSONObject jsonHeroDescription;
     private JSONArray jsonArrayHeroSpells;
     private LayoutInflater layoutInflater;
     private int maxItemsInRow = 0;
+    private ProgressBar pb_fragment_guide;
+    private HeroesDao heroesDao;
 
     public GuideFragment() {
         // Required empty public constructor
@@ -88,7 +89,7 @@ public class GuideFragment extends Fragment {
     public void onCreateOptionsMenu(Menu menu, MenuInflater inflater) {
         super.onCreateOptionsMenu(menu, inflater);
         menu.clear();
-        if (isPremium) {
+        if (subscription) {
             inflater.inflate(R.menu.menu_fragment_guide_5_button, menu);
         } else {
             inflater.inflate(R.menu.menu_fragment_guide_2_button, menu);
@@ -116,52 +117,34 @@ public class GuideFragment extends Fragment {
                 loadPaged();
                 break;
             case R.id.menu_fragment_guide_3:
-                if (isPremium) {
-                    revertCurrentMenu();
-                    previousMenu = item;
-                    currentMenu = 3;
-                    item.setIcon(R.drawable.ic_menu_fragment_guide_3selected);
-                    currentPage = 2;
-                    loadPaged();
-                } else {
-                    showSnackBarPremium();
-                }
+                revertCurrentMenu();
+                previousMenu = item;
+                currentMenu = 3;
+                item.setIcon(R.drawable.ic_menu_fragment_guide_3selected);
+                currentPage = 2;
+                loadPaged();
+
                 break;
             case R.id.menu_fragment_guide_4:
-                if (isPremium) {
-                    revertCurrentMenu();
-                    previousMenu = item;
-                    currentMenu = 4;
-                    item.setIcon(R.drawable.ic_menu_fragment_guide_4selected);
-                    currentPage = 3;
-                    loadPaged();
-                } else {
-                    showSnackBarPremium();
-                }
+                revertCurrentMenu();
+                previousMenu = item;
+                currentMenu = 4;
+                item.setIcon(R.drawable.ic_menu_fragment_guide_4selected);
+                currentPage = 3;
+                loadPaged();
                 break;
             case R.id.menu_fragment_guide_5:
-                if (isPremium) {
-                    revertCurrentMenu();
-                    previousMenu = item;
-                    currentMenu = 5;
-                    item.setIcon(R.drawable.ic_menu_fragment_guide_5selected);
-                    currentPage = 4;
-                    loadPaged();
-                } else {
-                    showSnackBarPremium();
-                }
+
+                revertCurrentMenu();
+                previousMenu = item;
+                currentMenu = 5;
+                item.setIcon(R.drawable.ic_menu_fragment_guide_5selected);
+                currentPage = 4;
+                loadPaged();
+
                 break;
         }
         return super.onOptionsItemSelected(item);
-    }
-
-    private void showSnackBarPremium() {
-        Snackbar.make(view, R.string.all_only_for_subscribers, Snackbar.LENGTH_LONG).setAction(R.string.all_buy, new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                startActivity(new Intent(getContext(), SettingActivity.class));
-            }
-        }).show();
     }
 
     private void revertCurrentMenu() {
@@ -195,49 +178,62 @@ public class GuideFragment extends Fragment {
     @Override
     public View onCreateView(@NonNull LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
         view = inflater.inflate(R.layout.fragment_guide, container, false);
-
+        pb_fragment_guide = view.findViewById(R.id.pb_fragment_guide);
         setHasOptionsMenu(true);
         SharedPreferences sp = PreferenceManager.getDefaultSharedPreferences(getContext());
-        isPremium = sp.getBoolean(SUBSCRIPTION, false);
+        subscription = sp.getBoolean(SUBSCRIPTION, false);
 
         initViews();
         setDpMaxItemsInRow();
         loadHeroDescriptionFile();
-        startGuideWork();
+
         layoutInflater = getLayoutInflater();
 
-        SplashViewModel heroesViewModel = ViewModelProviders.of(this).get(SplashViewModel.class);
-//        heroesViewModel.getHero(heroFolder).observe(this, new Observer<HeroModel>() {
-//            @Override
-//            public void onChanged(@Nullable HeroModel heroes) {
-//                if (heroes != null) {
-//                    hero = heroes;
-//                    addBestVersusHeroes(hero.getBestVersus());
-//                    addWorstVersusHeroes(hero.getWorstVersus());
-//                    loadPaged();
-//                }
-//            }
-//        });
-
+        heroesDao = HeroesRoomDatabase.getDatabase(getContext(), appExecutors.diskIO()).heroesDao();
+        heroesDao.getHeroByCodeName(heroFolder).observe(this, new Observer<HeroModel>() {
+            @Override
+            public void onChanged(@Nullable HeroModel heroModel) {
+                if (heroModel != null) {
+                    hero = heroModel;
+                    addBestVersusHeroes(hero.getBestVersus());
+                    addWorstVersusHeroes(hero.getWorstVersus());
+                    loadPaged();
+                }
+            }
+        });
+        startGuideWork();
         return view;
     }
 
     private void startGuideWork() {
-        Data data = new Data.Builder().putString(HERO_CODE_NAME, heroFolder).build();
-        OneTimeWorkRequest worker = new OneTimeWorkRequest.Builder(GuideWorker.class).setInputData(data).build();
-        WorkManager.getInstance().enqueue(worker);
-        WorkManager.getInstance().getStatusById(worker.getId()).observe(this, new Observer<WorkStatus>() {
+        appExecutors.diskIO().execute(new Runnable() {
             @Override
-            public void onChanged(@Nullable WorkStatus workStatus) {
-                if (workStatus != null) {
-                    if (workStatus.getState().isFinished()) {
-//                        pb_fragment_guide.setVisibility(View.GONE);
-                    } else {
-//                        pb_fragment_guide.setVisibility(View.VISIBLE);
+            public void run() {
+                int currentDay = PreferenceManager.getDefaultSharedPreferences(getContext()).getInt(CURRENT_DAY_IN_APP, 0);
+                int guideLastDay = heroesDao.getHeroByCodeNameObject(heroFolder).getGuideLastDay();
+
+                if(currentDay==guideLastDay)return;
+
+                heroesDao.setGuideLastDay(heroFolder, currentDay);
+
+                Data data = new Data.Builder().putString(HERO_CODE_NAME, heroFolder).build();
+                OneTimeWorkRequest worker = new OneTimeWorkRequest.Builder(GuideWorker.class).setInputData(data).build();
+                WorkManager.getInstance().enqueue(worker);
+                WorkManager.getInstance().getStatusById(worker.getId()).observe(GuideFragment.this, new Observer<WorkStatus>() {
+                    @Override
+                    public void onChanged(@Nullable WorkStatus workStatus) {
+                        if (workStatus != null) {
+                            if (workStatus.getState().isFinished()) {
+                                pb_fragment_guide.setVisibility(View.GONE);
+                            } else {
+                                pb_fragment_guide.setVisibility(View.VISIBLE);
+                            }
+                        }
                     }
-                }
+                });
             }
         });
+
     }
 
     private void loadHeroDescriptionFile() {
@@ -455,10 +451,10 @@ public class GuideFragment extends Fragment {
                 String[] bestVersus = bestVersusHeroes.split("/");
                 for (final String hero : bestVersus) {
                     final View item_list_hero = layoutInflater.inflate(R.layout.item_list_hero, null);
-                    TextView tv_item_name = item_list_hero.findViewById(R.id.tv);
+                    TextView tv_item_name = item_list_hero.findViewById(R.id.tv_item_list_hero);
                     tv_item_name.setText(hero.split("\\^")[1]);
                     tv_item_name.setTextColor(getResources().getColor(android.R.color.holo_green_light));
-                    final ImageView iv_item_image = item_list_hero.findViewById(R.id.iv);
+                    final ImageView iv_item_image = item_list_hero.findViewById(R.id.iv_item_list_hero);
                     if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.LOLLIPOP) {
                         iv_item_image.setTransitionName("");
                     }
@@ -496,10 +492,10 @@ public class GuideFragment extends Fragment {
                     String[] bestVersus = worstVersusHeroes.split("/");
                     for (final String hero : bestVersus) {
                         final View item_list_hero = layoutInflater.inflate(R.layout.item_list_hero, null);
-                        TextView tv_item_name = item_list_hero.findViewById(R.id.tv);
+                        TextView tv_item_name = item_list_hero.findViewById(R.id.tv_item_list_hero);
                         tv_item_name.setText(hero.split("\\^")[1]);
                         tv_item_name.setTextColor(getResources().getColor(android.R.color.holo_red_light));
-                        final ImageView iv_item_image = item_list_hero.findViewById(R.id.iv);
+                        final ImageView iv_item_image = item_list_hero.findViewById(R.id.iv_item_list_hero);
                         if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.LOLLIPOP) {
                             iv_item_image.setTransitionName("");
                         }
