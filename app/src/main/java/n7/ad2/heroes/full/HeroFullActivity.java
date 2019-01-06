@@ -1,7 +1,7 @@
 package n7.ad2.heroes.full;
 
-import android.content.Intent;
 import android.content.res.TypedArray;
+import android.databinding.DataBindingUtil;
 import android.graphics.Bitmap;
 import android.graphics.drawable.BitmapDrawable;
 import android.graphics.drawable.Drawable;
@@ -16,6 +16,7 @@ import android.support.v7.widget.Toolbar;
 import android.view.View;
 import android.view.ViewTreeObserver;
 
+import n7.ad2.databinding.ActivityHeroFullBinding;
 import n7.ad2.utils.AppExecutors;
 import n7.ad2.R;
 import n7.ad2.utils.BaseActivity;
@@ -25,14 +26,15 @@ public class HeroFullActivity extends BaseActivity {
 
     public static final String HERO_NAME = "HERO_NAME";
     public static final String HERO_CODE_NAME = "HERO_CODE_NAME";
-    private Toolbar toolbar;
-    private String heroFolder;
+    private String codeName;
     private AppExecutors appExecutors;
+    private ActivityHeroFullBinding binding;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_hero_personal);
+        binding = DataBindingUtil.setContentView(this, R.layout.activity_hero_full);
+
 
         if (savedInstanceState == null) {
             appExecutors = new AppExecutors();
@@ -58,35 +60,31 @@ public class HeroFullActivity extends BaseActivity {
     }
 
     private void setViewPager() {
-        ViewPager viewPager = findViewById(R.id.vp_activity_hero_personal);
-        viewPager.setAdapter(new ViewPagerAdapter(getSupportFragmentManager()));
-        viewPager.setOffscreenPageLimit(2);
-        TabLayout tabLayout = findViewById(R.id.tab_activity_hero_personal);
-        tabLayout.setupWithViewPager(viewPager);
+        binding.vpActivityHeroFull.setAdapter(new ViewPagerAdapter(getSupportFragmentManager()));
+        binding.vpActivityHeroFull.setOffscreenPageLimit(2);
+        binding.tabActivityHeroFull.setupWithViewPager(binding.vpActivityHeroFull);
     }
 
     private void setToolbar() {
         try {
-            Intent intent = getIntent();
-            toolbar = findViewById(R.id.toolbar);
-            String heroName = intent.getStringExtra(HERO_NAME);
-            toolbar.setTitle(heroName);
-            setSupportActionBar(toolbar);
-            heroFolder = intent.getStringExtra(HERO_CODE_NAME);
+            String name = getIntent().getStringExtra(HERO_NAME);
+            codeName = getIntent().getStringExtra(HERO_CODE_NAME);
+            binding.toolbarActivityHeroFull.setTitle(name);
+            setSupportActionBar(binding.toolbarActivityHeroFull);
 
             final TypedArray styledAttributes = getTheme().obtainStyledAttributes(new int[]{R.attr.actionBarSize});
             final int mActionBarSize = (int) styledAttributes.getDimension(0, 40) / 2;
-            Bitmap icon = Utils.getBitmapFromAssets(this, String.format("heroes/%s/mini.webp", heroFolder));
+            Bitmap icon = Utils.getBitmapFromAssets(this, String.format("heroes/%s/mini.webp", codeName));
             icon = Bitmap.createScaledBitmap(icon, mActionBarSize, mActionBarSize, false);
             final Drawable iconDrawable = new BitmapDrawable(getResources(), icon);
-            toolbar.setNavigationIcon(iconDrawable);
+            binding.toolbarActivityHeroFull.setNavigationIcon(iconDrawable);
 
             if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.LOLLIPOP) {
-                toolbar.setNavigationOnClickListener(new View.OnClickListener() {
+                binding.toolbarActivityHeroFull.setNavigationOnClickListener(new View.OnClickListener() {
                     @Override
                     public void onClick(View view) {
                         try {
-                            Utils.startAnimation(HeroFullActivity.this, toolbar, "heroes/" + heroFolder + "/emoticon.webp", true, mActionBarSize);
+                            Utils.startAnimation(HeroFullActivity.this, binding.toolbarActivityHeroFull, "heroes/" + codeName + "/emoticon.webp", false, mActionBarSize);
                         } catch (NullPointerException e) {
                             e.printStackTrace();
                         }
@@ -108,11 +106,11 @@ public class HeroFullActivity extends BaseActivity {
         public Fragment getItem(int position) {
             switch (position) {
                 case 0:
-                    return HeroFragment.newInstance(heroFolder, appExecutors);
+                    return HeroFragment.newInstance(codeName, appExecutors);
                 case 1:
-                    return HeroResponsesFragment.newInstance(heroFolder, appExecutors);
+                    return HeroResponsesFragment.newInstance(codeName, appExecutors);
                 case 2:
-                    return GuideFragment.newInstance(heroFolder, appExecutors);
+                    return GuideFragment.newInstance(codeName, appExecutors);
             }
             return null;
         }

@@ -62,7 +62,6 @@ public class GuideFragment extends Fragment {
     private LinearLayout ll_fragment_guide_worst_versus;
     private LinearLayout ll_fragment_guide_starting_items;
     private LinearLayout ll_fragment_guide_further_items;
-    private ProgressBar pb_fragment_guide;
     private int currentPage = 0;
     private int currentMenu = 1;
     private MenuItem previousMenu;
@@ -232,9 +231,9 @@ public class GuideFragment extends Fragment {
             public void onChanged(@Nullable WorkStatus workStatus) {
                 if (workStatus != null) {
                     if (workStatus.getState().isFinished()) {
-                        pb_fragment_guide.setVisibility(View.GONE);
+//                        pb_fragment_guide.setVisibility(View.GONE);
                     } else {
-                        pb_fragment_guide.setVisibility(View.VISIBLE);
+//                        pb_fragment_guide.setVisibility(View.VISIBLE);
                     }
                 }
             }
@@ -541,7 +540,7 @@ public class GuideFragment extends Fragment {
         ll_fragment_guide_starting_items = view.findViewById(R.id.ll_fragment_guide_starting_items);
         ll_fragment_guide_further_items = view.findViewById(R.id.ll_fragment_guide_further_items);
         ll_fragment_guide_skill_builds = view.findViewById(R.id.ll_fragment_guide_skill_builds);
-        pb_fragment_guide = getActivity().findViewById(R.id.pb_fragment_guide);
+
     }
 
 }

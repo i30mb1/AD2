@@ -9,6 +9,7 @@ import android.os.Bundle;
 import android.support.annotation.NonNull;
 import android.support.annotation.Nullable;
 import android.support.v4.app.Fragment;
+import android.support.v7.widget.DefaultItemAnimator;
 import android.support.v7.widget.GridLayoutManager;
 import android.support.v7.widget.SearchView;
 import android.view.LayoutInflater;
@@ -66,6 +67,7 @@ public class HeroesFragment extends Fragment implements SearchView.OnQueryTextLi
     private void initPagedListAdapter() {
         binding.rvFragmentHeroes.setHasFixedSize(true);// если recyclerView не будет изменяться в размерах тогда ставим true
         binding.rvFragmentHeroes.setLayoutManager(new GridLayoutManager(getContext(), 3));
+        binding.rvFragmentHeroes.setItemAnimator(new DefaultItemAnimator());
         adapter = new HeroesPagedListAdapter(); // PagedListAdapter, заточенный под чтение данных из PagedList.
         binding.rvFragmentHeroes.setAdapter(adapter);
         viewModel.getHeroesByFilter("").observe(this, new Observer<PagedList<HeroModel>>() {

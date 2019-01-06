@@ -7,12 +7,16 @@ import android.support.v7.util.DiffUtil;
 import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
 import android.view.ViewGroup;
+import android.widget.Filter;
+import android.widget.Filterable;
+
+import java.util.List;
 
 import n7.ad2.R;
 import n7.ad2.databinding.ItemListHeroBinding;
 import n7.ad2.heroes.db.HeroModel;
 
-public class HeroesPagedListAdapter extends PagedListAdapter<HeroModel, HeroesPagedListAdapter.ViewHolder> {
+public class HeroesPagedListAdapter extends PagedListAdapter<HeroModel, HeroesPagedListAdapter.ViewHolder>   {
 
     private static final DiffUtil.ItemCallback<HeroModel> DIFF_CALLBACK = new DiffUtil.ItemCallback<HeroModel>() {
         @Override

@@ -118,6 +118,7 @@ public class SplashActivity extends BaseActivity {
         PlainAdapter adapter = viewModel.getAdapter();
         binding.rvActivitySplash.setAdapter(adapter);
         binding.rvActivitySplash.setLayoutManager(new UnscrollableLinearLayoutManager(this, LinearLayoutManager.VERTICAL, false));
+
     }
 
 }

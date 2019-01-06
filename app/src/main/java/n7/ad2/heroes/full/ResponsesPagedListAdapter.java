@@ -48,12 +48,12 @@ public class ResponsesPagedListAdapter extends PagedListAdapter<ResponseModel, R
     private static final DiffUtil.ItemCallback<ResponseModel> DIFF_CALLBACK = new DiffUtil.ItemCallback<ResponseModel>() {
         @Override
         public boolean areItemsTheSame(@NonNull ResponseModel oldItem, @NonNull ResponseModel newItem) {
-            return oldItem.getTitle().equals(newItem.getTitle());
+            return true;
         }
 
         @Override
         public boolean areContentsTheSame(@NonNull ResponseModel oldItem, @NonNull ResponseModel newItem) {
-            return oldItem.getHref().equals(newItem.getHref()) & oldItem.isInStore() == newItem.isInStore();
+            return oldItem.getTitle().equals(newItem.getTitle());
         }
     };
     MediaPlayer mediaPlayer = new MediaPlayer();
