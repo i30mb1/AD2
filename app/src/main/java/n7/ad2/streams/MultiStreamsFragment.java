@@ -22,7 +22,6 @@ import android.widget.FrameLayout;
 import android.widget.LinearLayout;
 import android.widget.TextView;
 
-import n7.ad2.utils.MySharedPreferences;
 import n7.ad2.R;
 
 import static n7.ad2.streams.StreamsFragment.TAG_MULTI_TWITCH;
@@ -120,21 +119,20 @@ public class MultiStreamsFragment extends Fragment {
 
 
     private void showInstructionDialog() {
-        if (getContext() != null && MySharedPreferences.getSharedPreferences(getContext()).getBoolean(getString(R.string.multi_streams_fragment_tip_key), true)) {
-            AlertDialog.Builder builder = new AlertDialog.Builder(getContext());
-            builder.setView(R.layout.dialog_info);
-            final AlertDialog dialog = builder.show();
-            TextView tv_dialog_tip = dialog.findViewById(R.id.tv_dialog_info);
-            if (tv_dialog_tip != null)
-                tv_dialog_tip.setText(R.string.multi_streams_fragment_tip);
-            tv_dialog_tip.setOnClickListener(new View.OnClickListener() {
-                    @Override
-                    public void onClick(View v) {
-                        MySharedPreferences.getSharedPreferences(getContext()).edit().putBoolean(getString(R.string.multi_streams_fragment_tip_key), false).apply();
-                        dialog.dismiss();
-                    }
-                });
-        }
+//        if (getContext() != null && MySharedPreferences.getSharedPreferences(getContext()).getBoolean(getString(R.string.multi_streams_fragment_tip_key), true)) {
+//            AlertDialog.Builder builder = new AlertDialog.Builder(getContext());
+//            builder.setView(R.layout.dialog_info);
+//            final AlertDialog dialog = builder.show();
+//            TextView tv_dialog_tip = dialog.findViewById(R.id.tv_dialog_info);
+//            if (tv_dialog_tip != null)
+//                tv_dialog_tip.setText(R.string.multi_streams_fragment_tip);
+//            tv_dialog_tip.setOnClickListener(new View.OnClickListener() {
+//                    @Override
+//                    public void onClick(View v) {
+//                        dialog.dismiss();
+//                    }
+//                });
+//        }
     }
 
 }

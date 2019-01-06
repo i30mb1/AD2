@@ -22,7 +22,6 @@ import java.util.HashSet;
 import java.util.Random;
 
 import n7.ad2.utils.AppExecutors;
-import n7.ad2.utils.MySharedPreferences;
 import n7.ad2.R;
 import n7.ad2.utils.BaseActivity;
 import n7.ad2.utils.Utils;
@@ -57,22 +56,22 @@ public class Game1Activity extends BaseActivity implements View.OnClickListener 
     }
 
     private void showInstructionDialog() {
-        if (MySharedPreferences.getSharedPreferences(this).getBoolean(getString(R.string.game1_activity_tip_key), true)) {
-            AlertDialog.Builder builder = new AlertDialog.Builder(this);
-            builder.setView(R.layout.dialog_info);
-            final AlertDialog dialog = builder.show();
-            TextView tv_dialog_tip = dialog.findViewById(R.id.tv_dialog_info);
-            if (tv_dialog_tip != null)
-                tv_dialog_tip.setText(R.string.game1_activity_tip);
-            if (tv_dialog_tip != null)
-                tv_dialog_tip.setOnClickListener(new View.OnClickListener() {
-                    @Override
-                    public void onClick(View v) {
-                        MySharedPreferences.getSharedPreferences(Game1Activity.this).edit().putBoolean(getString(R.string.game1_activity_tip_key), false).apply();
-                        dialog.dismiss();
-                    }
-                });
-        }
+//        if (MySharedPreferences.getSharedPreferences(this).getBoolean(getString(R.string.game1_activity_tip_key), true)) {
+//            AlertDialog.Builder builder = new AlertDialog.Builder(this);
+//            builder.setView(R.layout.dialog_info);
+//            final AlertDialog dialog = builder.show();
+//            TextView tv_dialog_tip = dialog.findViewById(R.id.tv_dialog_info);
+//            if (tv_dialog_tip != null)
+//                tv_dialog_tip.setText(R.string.game1_activity_tip);
+//            if (tv_dialog_tip != null)
+//                tv_dialog_tip.setOnClickListener(new View.OnClickListener() {
+//                    @Override
+//                    public void onClick(View v) {
+//                        MySharedPreferences.getSharedPreferences(Game1Activity.this).edit().putBoolean(getString(R.string.game1_activity_tip_key), false).apply();
+//                        dialog.dismiss();
+//                    }
+//                });
+//        }
     }
 
     private void initViews() {

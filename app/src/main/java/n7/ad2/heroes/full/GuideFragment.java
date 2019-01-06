@@ -6,6 +6,7 @@ import android.content.Intent;
 import android.content.SharedPreferences;
 import android.os.Build;
 import android.os.Bundle;
+import android.preference.PreferenceManager;
 import android.support.annotation.NonNull;
 import android.support.annotation.Nullable;
 import android.support.design.widget.Snackbar;
@@ -38,7 +39,6 @@ import androidx.work.OneTimeWorkRequest;
 import androidx.work.WorkManager;
 import androidx.work.WorkStatus;
 import n7.ad2.utils.AppExecutors;
-import n7.ad2.utils.MySharedPreferences;
 import n7.ad2.R;
 import n7.ad2.setting.SettingActivity;
 import n7.ad2.heroes.db.HeroModel;
@@ -198,7 +198,7 @@ public class GuideFragment extends Fragment {
         view = inflater.inflate(R.layout.fragment_guide, container, false);
 
         setHasOptionsMenu(true);
-        SharedPreferences sp = MySharedPreferences.getSharedPreferences(getContext());
+        SharedPreferences sp = PreferenceManager.getDefaultSharedPreferences(getContext());
         isPremium = sp.getBoolean(SUBSCRIPTION, false);
 
         initViews();

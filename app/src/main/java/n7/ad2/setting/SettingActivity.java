@@ -4,6 +4,7 @@ import android.content.Intent;
 import android.databinding.DataBindingUtil;
 import android.databinding.ObservableBoolean;
 import android.os.Bundle;
+import android.preference.PreferenceManager;
 import android.support.v7.app.AlertDialog;
 import android.view.MenuItem;
 
@@ -20,7 +21,6 @@ import n7.ad2.setting.purchaseUtils.IabResult;
 import n7.ad2.setting.purchaseUtils.Inventory;
 import n7.ad2.setting.purchaseUtils.Purchase;
 import n7.ad2.utils.BaseActivity;
-import n7.ad2.utils.MySharedPreferences;
 
 import static n7.ad2.main.MainActivity.FIREBASE_DIALOG_DONATE_SAW;
 
@@ -60,10 +60,10 @@ public class SettingActivity extends BaseActivity {
                     if (mHelper == null && result.isFailure()) return;
                     if (inv.hasPurchase(ONCE_PER_MONTH_SUBSCRIPTION)) {
                         subscription.set(true);
-                        MySharedPreferences.getSharedPreferences(SettingActivity.this).edit().putBoolean(SUBSCRIPTION, true).apply();
+                        PreferenceManager.getDefaultSharedPreferences(SettingActivity.this).edit().putBoolean(SUBSCRIPTION, true).apply();
                     } else {
                         subscription.set(false);
-                        MySharedPreferences.getSharedPreferences(SettingActivity.this).edit().putBoolean(SUBSCRIPTION, false).apply();
+                        PreferenceManager.getDefaultSharedPreferences(SettingActivity.this).edit().putBoolean(SUBSCRIPTION, false).apply();
                     }
 //            if (inv.hasPurchase(MONTHLY_SUBSCRIPTION)) {
 //                try {

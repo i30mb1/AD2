@@ -2,12 +2,12 @@ package n7.ad2.streams;
 
 import android.app.Application;
 import android.databinding.ObservableBoolean;
+import android.preference.PreferenceManager;
 
 import java.io.IOException;
 import java.util.ArrayList;
 import java.util.List;
 
-import n7.ad2.utils.MySharedPreferences;
 import n7.ad2.streams.retrofit.Channel;
 import n7.ad2.streams.retrofit.Preview;
 import n7.ad2.streams.retrofit.StreamList;
@@ -34,7 +34,7 @@ public class StreamsStorage {
     public List<Streams> getSubscribersStreams() {
         isLoading.set(true);
         List<Streams> list = new ArrayList<>();
-        String accounts[] = MySharedPreferences.getSharedPreferences(application).getString(ACCOUNTS_FOR_TOP_TWITCH, "").split("\\+");
+        String accounts[] = PreferenceManager.getDefaultSharedPreferences(application).getString(ACCOUNTS_FOR_TOP_TWITCH, "").split("\\+");
         if (accounts.length > 0) for (String account : accounts) {
             String parts[] = account.split("\\^");
 

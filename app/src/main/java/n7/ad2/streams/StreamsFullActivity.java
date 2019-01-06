@@ -7,6 +7,7 @@ import android.media.AudioManager;
 import android.media.MediaPlayer;
 import android.os.Bundle;
 import android.os.Handler;
+import android.preference.PreferenceManager;
 import android.support.annotation.NonNull;
 import android.support.constraint.ConstraintLayout;
 import android.support.design.widget.Snackbar;
@@ -44,7 +45,6 @@ import java.util.ArrayList;
 import java.util.List;
 
 import n7.ad2.utils.AppExecutors;
-import n7.ad2.utils.MySharedPreferences;
 import n7.ad2.R;
 import n7.ad2.utils.BaseActivity;
 import n7.ad2.setting.SettingActivity;
@@ -252,7 +252,7 @@ public class StreamsFullActivity extends BaseActivity implements SurfaceHolder.C
     }
 
     private void initPremium() {
-        sp = MySharedPreferences.getSharedPreferences(this);
+        sp = PreferenceManager.getDefaultSharedPreferences(this);
         isPremium = sp.getBoolean(SUBSCRIPTION, false);
 
         if (!isPremium) {

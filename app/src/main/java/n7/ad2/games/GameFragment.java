@@ -4,10 +4,8 @@ package n7.ad2.games;
 import android.app.Activity;
 import android.content.Intent;
 import android.content.SharedPreferences;
-import android.os.Build;
 import android.os.Bundle;
 import android.support.annotation.NonNull;
-import android.support.design.widget.Snackbar;
 import android.support.v4.app.ActivityOptionsCompat;
 import android.support.v4.app.Fragment;
 import android.support.v4.util.Pair;
@@ -19,14 +17,7 @@ import android.view.ViewGroup;
 import android.widget.Button;
 import android.widget.TextView;
 
-import java.util.Calendar;
-import java.util.Objects;
-
-import n7.ad2.utils.MySharedPreferences;
 import n7.ad2.R;
-import n7.ad2.main.MainActivity;
-
-import static n7.ad2.utils.MySharedPreferences.IS_USED_5_DAYS_BONUS_FROM_GAME1;
 
 public class GameFragment extends Fragment {
 
@@ -45,7 +36,6 @@ public class GameFragment extends Fragment {
     private boolean isPremium = false;
 
     public GameFragment() {
-        MySharedPreferences.LAST_FRAGMENT_SELECTED = 6;
     }
 
     @Override
@@ -60,7 +50,6 @@ public class GameFragment extends Fragment {
 
         getActivity().setTitle(R.string.games);
         setHasOptionsMenu(true);
-        sp = MySharedPreferences.getSharedPreferences(getContext());
 
         initGame1(view);
         initGame2(view);
@@ -112,8 +101,6 @@ public class GameFragment extends Fragment {
         scoreGame1 = sp.getInt(SCORE_GAME1_GAME_FRAGMENT, 0);
         tv_fragment_game_score_game1.setText(String.valueOf(scoreGame1));
 
-        checkAchievedBonus();
-
         b_fragment_game_medium_game1.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -145,14 +132,6 @@ public class GameFragment extends Fragment {
         startActivityForResult(intent, REQUEST_CODE_GAME1, optionsCompat.toBundle());
     }
 
-    private void checkAchievedBonus() {
-        if (sp.getBoolean(IS_USED_5_DAYS_BONUS_FROM_GAME1, false)) {
-            tv_fragment_game_score_game1.setTextColor(getResources().getColor(android.R.color.holo_green_light));
-        } else {
-            tv_fragment_game_score_game1.setTextColor(getResources().getColor(android.R.color.holo_red_light));
-        }
-    }
-
     @Override
     public void onActivityResult(int requestCode, int resultCode, Intent data) {
         super.onActivityResult(requestCode, resultCode, data);
@@ -177,28 +156,6 @@ public class GameFragment extends Fragment {
             tv_fragment_game_score_game1.setText(String.valueOf(newData));
             scoreGame1 = newData;
             sp.edit().putInt(SCORE_GAME1_GAME_FRAGMENT, scoreGame1).apply();
-            if (newData > COUNT_FOR_5_DAYS_PREMIUM && !sp.getBoolean(IS_USED_5_DAYS_BONUS_FROM_GAME1, false)) {
-                final Snackbar snackbar = Snackbar.make(tv_fragment_game_score_game1, R.string.game_fragment_earn_5_premium, Snackbar.LENGTH_INDEFINITE);
-                snackbar.setAction(android.R.string.ok, new View.OnClickListener() {
-                    @Override
-                    public void onClick(View v) {
-                        Calendar calendar = Calendar.getInstance();
-                        Long inMemoryTime = sp.getLong(MySharedPreferences.DATE_END_PREMIUM, calendar.getTimeInMillis());
-                        Long currentTime = calendar.getTimeInMillis();
-                        Long latestTime = (inMemoryTime > currentTime ? inMemoryTime : currentTime);
-                        calendar.setTimeInMillis(latestTime);
-                        calendar.add(Calendar.DATE, 5);
-                        sp.edit().putLong(MySharedPreferences.DATE_END_PREMIUM, calendar.getTimeInMillis()).apply();
-                        sp.edit().putBoolean(IS_USED_5_DAYS_BONUS_FROM_GAME1, true).apply();
-                        checkAchievedBonus();
-                        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.KITKAT) {
-                            ((MainActivity) Objects.requireNonNull(getActivity())).log("5_day_premium_obtained");
-                        }
-                        snackbar.dismiss();
-                    }
-                });
-                snackbar.show();
-            }
         }
     }
 }

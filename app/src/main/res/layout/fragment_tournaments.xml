@@ -1,17 +1,35 @@
 <?xml version="1.0" encoding="utf-8"?>
-<android.support.design.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    xmlns:tools="http://schemas.android.com/tools"
-    android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    app:layout_behavior="@string/appbar_scrolling_view_behavior"
-    android:background="?colorPrimary">
+    xmlns:tools="http://schemas.android.com/tools">
 
-    <android.support.v7.widget.RecyclerView
-        android:id="@+id/rv_fragment_games"
+    <data>
+
+        <import type="android.view.View" />
+
+        <variable
+            name="viewModel"
+            type="n7.ad2.tournaments.TournamentsViewModel" />
+    </data>
+
+    <android.support.design.widget.CoordinatorLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        tools:listitem="@layout/item_list_games"
-        tools:layoutManager="GridLayoutManager" />
+        android:background="?colorPrimary"
+        app:layout_behavior="@string/appbar_scrolling_view_behavior">
 
-</android.support.design.widget.CoordinatorLayout>
+        <android.support.v7.widget.RecyclerView
+            android:id="@+id/rv_fragment_tournaments"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            tools:listitem="@layout/item_list_games" />
+
+        <ProgressBar
+            style="@style/Widget.AppCompat.ProgressBar.Horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="4dp"
+            android:indeterminate="true"
+            android:scaleY="5"
+            android:visibility="@{viewModel.isLoading ? View.VISIBLE : View.GONE}" />
+    </android.support.design.widget.CoordinatorLayout>
+</layout>

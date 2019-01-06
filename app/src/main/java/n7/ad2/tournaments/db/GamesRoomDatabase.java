@@ -5,7 +5,7 @@ import android.arch.persistence.room.Room;
 import android.arch.persistence.room.RoomDatabase;
 import android.content.Context;
 
-@Database(entities = {Games.class}, version = 1,exportSchema = false)
+@Database(entities = {Games.class}, version = 2,exportSchema = false)
 public abstract class GamesRoomDatabase extends RoomDatabase {
 
     public static GamesRoomDatabase INSTANCE;
@@ -14,7 +14,7 @@ public abstract class GamesRoomDatabase extends RoomDatabase {
         if (INSTANCE == null) {
             synchronized (GamesRoomDatabase.class) {
                 if (INSTANCE == null) {
-                    INSTANCE = Room.databaseBuilder(context, GamesRoomDatabase.class, "Games.db")
+                    INSTANCE = Room.databaseBuilder(context, GamesRoomDatabase.class, "tournaments2.db")
                             .fallbackToDestructiveMigration()
                             .build();
                 }

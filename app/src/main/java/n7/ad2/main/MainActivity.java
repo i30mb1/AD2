@@ -253,8 +253,8 @@ public class MainActivity extends BaseActivity {
     private void incCountEnter() {
         enterCounter++;
         //todo ДОДЕЛАТЬ ДИАЛОГИ Ы
-        if (enterCounter > COUNTER_DIALOG_RATE) showDialogRate();
-        if (enterCounter > COUNTER_DIALOG_DONATE) showPreDialogDonate();
+//        if (enterCounter > COUNTER_DIALOG_RATE) showDialogRate();
+//        if (enterCounter > COUNTER_DIALOG_DONATE) showPreDialogDonate();
     }
 
     @SuppressWarnings("ConstantConditions")
@@ -324,7 +324,7 @@ public class MainActivity extends BaseActivity {
                 .addDragStateListener(new DragStateListener() {
                     @Override
                     public void onDragStart() {
-//                        hideKeyboard();
+                        hideKeyboard();
                     }
 
                     @Override

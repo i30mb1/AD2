@@ -30,7 +30,6 @@ import java.util.ArrayList;
 import java.util.List;
 
 import n7.ad2.utils.AppExecutors;
-import n7.ad2.utils.MySharedPreferences;
 import n7.ad2.R;
 import n7.ad2.utils.StickyHeaderDecorator;
 
@@ -45,7 +44,6 @@ public class HeroResponsesFragment extends Fragment implements SearchView.OnQuer
         public void onReceive(final Context context, Intent intent) {
             scanFolderForResponses();
             responsesPagedListAdapter.notifyDataSetChanged();
-            MySharedPreferences.getSharedPreferences(view.getContext()).edit().putInt(MySharedPreferences.RESPONSE_COUNT_KEY, MySharedPreferences.getSharedPreferences(view.getContext()).getInt(MySharedPreferences.RESPONSE_COUNT_KEY, MySharedPreferences.FREE_COUNT) - 1).apply();
             Snackbar.make(view, R.string.hero_responses_fragment_sound_downloaded, Snackbar.LENGTH_LONG).setAction(R.string.open_file, new View.OnClickListener() {
                 @Override
                 public void onClick(View view) {

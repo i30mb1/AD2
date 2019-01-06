@@ -1,4 +1,4 @@
-package n7.ad2.games;
+package n7.ad2.tournaments;
 
 import android.support.annotation.NonNull;
 
@@ -18,13 +18,12 @@ import n7.ad2.tournaments.db.Games;
 import n7.ad2.tournaments.db.GamesDao;
 import n7.ad2.tournaments.db.GamesRoomDatabase;
 
-public class GamesWorker extends Worker {
+public class TournamentsWorker extends Worker {
 
-    public static final String BASE_URL = "https://dota2.ru/esport/matches/?page=";
+    private static final String BASE_URL = "https://dota2.ru/esport/matches/?page=";
     public static final String DELETE_TABLE = "delete_table";
     public static final String PAGE = "page";
-    public static final String UNIQUE_WORK = "unique_games_work";
-
+    public static final String TAG = "tournaments_worker_tag";
 
     @NonNull
     @Override
@@ -35,7 +34,7 @@ public class GamesWorker extends Worker {
         List<Games> gamesList = new ArrayList<>();
 
         try {
-            String url = "https://dota2.ru/esport/matches/?page=" + page;
+            String url = BASE_URL + page;
             Document doc = Jsoup.connect(url).get();
             Elements matchElements = doc.getElementsByClass("esport-match-single");
             for (int j = 0; j < matchElements.size(); j++) {

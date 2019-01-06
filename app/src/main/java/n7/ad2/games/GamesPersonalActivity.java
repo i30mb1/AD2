@@ -22,7 +22,7 @@ import org.jsoup.select.Elements;
 import java.io.IOException;
 
 import jp.wasabeef.picasso.transformations.GrayscaleTransformation;
-import n7.ad2.tournaments.GamesViewModel;
+import n7.ad2.tournaments.TournamentsViewModel;
 import n7.ad2.utils.AppExecutors;
 import n7.ad2.R;
 import n7.ad2.utils.BaseActivity;
@@ -202,19 +202,19 @@ public class GamesPersonalActivity extends BaseActivity {
         tv_activity_games_personal_middle = findViewById(R.id.tv_activity_games_personal_middle);
         tv_activity_games_personal_holder = findViewById(R.id.tv_activity_games_personal_holder);
 
-        GamesViewModel gamesViewModel = ViewModelProviders.of(this).get(GamesViewModel.class);
-        gamesViewModel.getGameByUrl(url).observe(this, new Observer<Games>() {
-            @Override
-            public void onChanged(@Nullable Games games) {
-                if (games != null) {
-                    Picasso.get().load(games.team1Logo).placeholder(R.drawable.games_unknown_team1).into(tv_activity_games_personal_team1_logo);
-                    Picasso.get().load(games.team2Logo).placeholder(R.drawable.games_unknown_team2).into(tv_activity_games_personal_team2_logo);
-                    tv_activity_games_personal_team1_name.setText(games.team1Name);
-                    tv_activity_games_personal_team2_name.setText(games.team2Name);
-                    tv_activity_games_personal_middle.setText(games.teamScore);
-                }
-            }
-        });
+        TournamentsViewModel gamesViewModel = ViewModelProviders.of(this).get(TournamentsViewModel.class);
+//        gamesViewModel.getGameByUrl(url).observe(this, new Observer<Games>() {
+//            @Override
+//            public void onChanged(@Nullable Games games) {
+//                if (games != null) {
+//                    Picasso.get().load(games.team1Logo).placeholder(R.drawable.games_unknown_team1).into(tv_activity_games_personal_team1_logo);
+//                    Picasso.get().load(games.team2Logo).placeholder(R.drawable.games_unknown_team2).into(tv_activity_games_personal_team2_logo);
+//                    tv_activity_games_personal_team1_name.setText(games.team1Name);
+//                    tv_activity_games_personal_team2_name.setText(games.team2Name);
+//                    tv_activity_games_personal_middle.setText(games.teamScore);
+//                }
+//            }
+//        });
     }
 
     @Override

@@ -2,6 +2,7 @@ package n7.ad2.heroes.full;
 
 import android.content.Intent;
 import android.os.Bundle;
+import android.preference.PreferenceManager;
 import android.support.annotation.NonNull;
 import android.support.annotation.Nullable;
 import android.support.design.widget.Snackbar;
@@ -26,7 +27,6 @@ import org.json.JSONObject;
 import java.io.IOException;
 
 import n7.ad2.utils.AppExecutors;
-import n7.ad2.utils.MySharedPreferences;
 import n7.ad2.R;
 import n7.ad2.setting.SettingActivity;
 import n7.ad2.utils.Utils;
@@ -62,7 +62,7 @@ public class HeroFragment extends Fragment {
     @Override
     public View onCreateView(@NonNull LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
         view = inflater.inflate(R.layout.fragment_hero_personal, container, false);
-        isPremium = MySharedPreferences.getSharedPreferences(getContext()).getBoolean(SUBSCRIPTION, false);
+        isPremium = PreferenceManager.getDefaultSharedPreferences(getContext()).getBoolean(SUBSCRIPTION, false);
 
         setRetainInstance(true);
         setHasOptionsMenu(true);

@@ -14,7 +14,6 @@ import java.util.concurrent.Executor;
 import java.util.concurrent.Executors;
 
 import n7.ad2.BuildConfig;
-import n7.ad2.utils.MySharedPreferences;
 import n7.ad2.R;
 import n7.ad2.utils.SingleLiveEvent;
 import n7.ad2.utils.SnackbarMessage;
@@ -90,7 +89,7 @@ public class MainViewModel extends AndroidViewModel {
     }
 
     private void saveTwitchAccounts(Update update) {
-        MySharedPreferences.getSharedPreferences(application).edit().putString(ACCOUNTS_FOR_TOP_TWITCH, update.getMessage().getTwitch()).apply();
+        PreferenceManager.getDefaultSharedPreferences(application).edit().putString(ACCOUNTS_FOR_TOP_TWITCH, update.getMessage().getTwitch()).apply();
     }
 
     public void startUpdate(final boolean showSnackbar) {

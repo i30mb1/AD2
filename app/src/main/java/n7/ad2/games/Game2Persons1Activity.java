@@ -29,7 +29,6 @@ import android.widget.TextView;
 import java.text.DecimalFormat;
 import java.util.Random;
 
-import n7.ad2.utils.MySharedPreferences;
 import n7.ad2.R;
 
 import static n7.ad2.games.GameFragment.SCORE_GAME2_GAME_FRAGMENT;
@@ -139,7 +138,7 @@ public class Game2Persons1Activity extends AppCompatActivity implements View.OnC
     }
 
     private void saveResult() {
-        MySharedPreferences.getSharedPreferences(this).edit().putString(SCORE_GAME2_GAME_FRAGMENT, currentAPM()).apply();
+//        MySharedPreferences.getSharedPreferences(this).edit().putString(SCORE_GAME2_GAME_FRAGMENT, currentAPM()).apply();
     }
 
     private void passResultAndFinish(Handler handler) {

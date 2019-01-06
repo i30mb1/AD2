@@ -36,7 +36,6 @@ import n7.ad2.news.NewsWorker;
 import n7.ad2.setting.purchaseUtils.IabHelper;
 import n7.ad2.setting.purchaseUtils.IabResult;
 import n7.ad2.setting.purchaseUtils.Inventory;
-import n7.ad2.utils.MySharedPreferences;
 import n7.ad2.utils.PlainAdapter;
 import n7.ad2.utils.SingleLiveEvent;
 
@@ -217,7 +216,7 @@ public class SplashViewModel extends AndroidViewModel {
     }
 
     private void setSubscriptionMessage(boolean subscription) {
-        MySharedPreferences.getSharedPreferences(application).edit().putBoolean(SUBSCRIPTION, subscription).apply();
+        PreferenceManager.getDefaultSharedPreferences(application).edit().putBoolean(SUBSCRIPTION, subscription).apply();
         log("subscription_status = " + subscription);
     }
 

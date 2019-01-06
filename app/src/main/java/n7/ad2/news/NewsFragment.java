@@ -6,6 +6,7 @@ import android.arch.lifecycle.ViewModelProviders;
 import android.arch.paging.PagedList;
 import android.databinding.DataBindingUtil;
 import android.os.Bundle;
+import android.preference.PreferenceManager;
 import android.support.annotation.NonNull;
 import android.support.annotation.Nullable;
 import android.support.v4.app.Fragment;
@@ -14,7 +15,6 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 
-import n7.ad2.utils.MySharedPreferences;
 import n7.ad2.R;
 import n7.ad2.databinding.FragmentNewsBinding;
 import n7.ad2.news.db.NewsModel;
@@ -53,7 +53,7 @@ public class NewsFragment extends Fragment {
         binding.rvFragmentNews.setLayoutManager(gridLayoutManager);
         binding.rvFragmentNews.setHasFixedSize(true);
 
-        boolean withImage = MySharedPreferences.getSharedPreferences(getContext()).getBoolean(getString(R.string.setting_news_key), true);
+        boolean withImage = PreferenceManager.getDefaultSharedPreferences(getContext()).getBoolean(getString(R.string.setting_news_key), true);
 
         adapter = new NewsPagedListAdapter(withImage);
         binding.rvFragmentNews.setAdapter(adapter);
