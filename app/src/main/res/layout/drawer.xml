@@ -44,6 +44,7 @@
 
         <ImageView
             android:id="@+id/iv_drawer_update"
+            isBusy="@{viewModel.isUpdating}"
             android:layout_width="50dp"
             android:layout_height="50dp"
             android:layout_centerVertical="true"
@@ -53,7 +54,6 @@
             android:onClick="@{()->viewModel.startUpdate(true)}"
             android:scaleType="center"
             android:tint="?android:textColorPrimary"
-            isBusy="@{viewModel.isUpdating}"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintLeft_toLeftOf="parent"
             app:srcCompat="@drawable/ic_update" />
@@ -96,7 +96,7 @@
                     android:onClick="@{()-> activity.setFragment(1,true)}"
                     android:padding="6dp"
                     android:text="@string/heroes"
-                    android:textColor="?android:textColorPrimary"
+                    android:textColor="@{activity.observableLastItem==1? @color/colorAccent :@color/textColorSecondary}"
                     android:textSize="14sp" />
 
             </LinearLayout>
@@ -119,7 +119,7 @@
                     android:onClick="@{()-> activity.setFragment(2,true)}"
                     android:padding="6dp"
                     android:text="@string/items"
-                    android:textColor="?android:textColorPrimary"
+                    android:textColor="@{activity.observableLastItem==2? @color/colorAccent :@color/textColorSecondary}"
                     android:textSize="14sp" />
             </LinearLayout>
 
@@ -142,7 +142,7 @@
                     android:onClick="@{()-> activity.setFragment(3,true)}"
                     android:padding="6dp"
                     android:text="@string/news"
-                    android:textColor="?android:textColorPrimary"
+                    android:textColor="@{activity.observableLastItem==3? @color/colorAccent :@color/textColorSecondary}"
                     android:textSize="14sp" />
             </LinearLayout>
 
@@ -165,7 +165,7 @@
                     android:onClick="@{()-> activity.setFragment(4,true)}"
                     android:padding="6dp"
                     android:text="@string/tournaments"
-                    android:textColor="?android:textColorPrimary"
+                    android:textColor="@{activity.observableLastItem==4? @color/colorAccent :@color/textColorSecondary}"
                     android:textSize="14sp" />
             </LinearLayout>
 
@@ -189,7 +189,7 @@
                     android:padding="6dp"
                     android:text="@string/streams"
                     android:textAllCaps="false"
-                    android:textColor="?android:textColorPrimary"
+                    android:textColor="@{activity.observableLastItem==5? @color/colorAccent :@color/textColorSecondary}"
                     android:textSize="14sp" />
             </LinearLayout>
 
@@ -211,7 +211,7 @@
                     android:onClick="@{()-> activity.setFragment(6,true)}"
                     android:padding="6dp"
                     android:text="@string/games"
-                    android:textColor="?android:textColorPrimary"
+                    android:textColor="@{activity.observableLastItem==6? @color/colorAccent :@color/textColorSecondary}"
                     android:textSize="14sp" />
             </LinearLayout>
         </LinearLayout>

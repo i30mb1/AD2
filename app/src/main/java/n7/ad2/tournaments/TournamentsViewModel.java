@@ -52,7 +52,10 @@ public class TournamentsViewModel extends AndroidViewModel {
                 WorkManager.getInstance().getStatusById(worker.getId()).observeForever(new Observer<WorkStatus>() {
                     @Override
                     public void onChanged(@Nullable WorkStatus workStatus) {
-                        if (workStatus == null) return;
+                        if (workStatus == null) {
+                            isLoading.set(false);
+                            return;
+                        }
                         if (workStatus.getState() == State.ENQUEUED) isLoading.set(true);
                         if (workStatus.getState() == State.SUCCEEDED) isLoading.set(false);
                         if (workStatus.getState() == State.FAILED) isLoading.set(false);

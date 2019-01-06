@@ -135,7 +135,7 @@ public class ItemFullActivity extends BaseActivity {
         ll_activity_item_full_descriptions.addView(item_hero_personal_description_simple);
 
         //load Info
-        if (jsonItemDescription.has("info")) {
+        if (jsonItemDescription.has("info") && subscription) {
             final View item_hero_personal_info_simple = getLayoutInflater().inflate(R.layout.item_hero_personal_description_simple, null);
             ((TextView) item_hero_personal_info_simple.findViewById(R.id.tv)).setText(R.string.item_hero_personal_info_desc);
             LinearLayout ll_items_info = item_hero_personal_info_simple.findViewById(R.id.ll_item_description);
@@ -153,7 +153,7 @@ public class ItemFullActivity extends BaseActivity {
         }
 
         //load tips
-        if (jsonItemDescription.has("tips")) {
+        if (jsonItemDescription.has("tips") && subscription) {
             final View item_hero_personal_tips_simple = getLayoutInflater().inflate(R.layout.item_hero_personal_description_simple, null);
             ((TextView) item_hero_personal_tips_simple.findViewById(R.id.tv)).setText(R.string.item_hero_personal_description_tips);
             LinearLayout ll_items_tips = item_hero_personal_tips_simple.findViewById(R.id.ll_item_description);
@@ -215,7 +215,7 @@ public class ItemFullActivity extends BaseActivity {
                             linearLayout.addView(item_descriptions);
                         }
                     }
-                    if (jsonObject.has("notes")) {
+                    if (jsonObject.has("notes") && subscription) {
                         for (int i1 = 0; i1 < jsonObject.getJSONArray("notes").length(); i1++) {
                             View item_descriptions = getLayoutInflater().inflate(R.layout.item_description, null);
                             ((TextView) item_descriptions.findViewById(R.id.tv_description)).setText(jsonObject.getJSONArray("notes").get(i1).toString());

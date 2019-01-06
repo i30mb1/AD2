@@ -17,7 +17,6 @@
         android:layout_width="match_parent"
         android:layout_height="?android:actionBarSize"
         android:background="?colorPrimary"
-        android:elevation="8dp"
         app:layout_scrollFlags="scroll|enterAlways"
         android:minHeight="?attr/actionBarSize" />
 
@@ -33,7 +32,7 @@
             app:layout_behavior="@string/appbar_scrolling_view_behavior"
             android:id="@+id/tv_activity_news_contents"
             android:layout_width="match_parent"
-            android:layout_height="match_parent"
+            android:layout_height="wrap_content"
             android:scrollbars="none"
             android:textColor="?android:textColorSecondary"
             tools:text="каждый месяц убивают по одному этому реперу и главное ВСЕ БЛЯТЬ ЗНАЮТ КТО ЭТО ТАКОЙ сука реально я не так живу может блять как можно знать кто это откуда вы все блять знаете этих реперов вот откуда блять и как каждый ебучий месяц убивают или сдыхает от передоза ебучий репер негр и вся продота блять знает этого еблана я в ахуе" />

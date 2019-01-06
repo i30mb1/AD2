@@ -79,7 +79,7 @@ public class NewsActivity extends BaseActivity {
             @Override
             public void onChanged(@Nullable NewsModel steamNews) {
                 contents.loadDataWithBaseURL(null, "<style>img{display: inline;height: auto;max-width: 100%;text-decoration:none;}</style>" +
-                        "<style type=\"text/css\">body{color:" + getColorTextTheme() + ";}</style>" + steamNews.getContent(), "text/html", "UTF-8", null);
+                        "<style type=\"text/css\">body{color:" + getColorTextTheme() + ";}</style>" + steamNews.getContent().trim(), "text/html", "UTF-8", null);
             }
         });
 //        webSettings.setDefaultFontSize(10);
