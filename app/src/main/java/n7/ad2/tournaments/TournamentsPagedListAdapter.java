@@ -32,23 +32,22 @@ import androidx.work.State;
 import androidx.work.WorkManager;
 import androidx.work.WorkStatus;
 import n7.ad2.R;
-import n7.ad2.games.GamesPersonalActivity;
-import n7.ad2.tournaments.db.Games;
+import n7.ad2.tournaments.db.TournamentGame;
 
-import static n7.ad2.games.GamesPersonalActivity.URL;
+import static n7.ad2.tournaments.GameFullActivity.URL;
 import static n7.ad2.splash.SplashActivity.ANIMATION_DURATION;
 
-public class TournamentsPagedListAdapter extends PagedListAdapter<Games, TournamentsPagedListAdapter.ViewHolder> {
+public class TournamentsPagedListAdapter extends PagedListAdapter<TournamentGame, TournamentsPagedListAdapter.ViewHolder> {
 
-    private static final DiffUtil.ItemCallback<Games> DIFF_CALLBACK = new DiffUtil.ItemCallback<Games>() {
+    private static final DiffUtil.ItemCallback<TournamentGame> DIFF_CALLBACK = new DiffUtil.ItemCallback<TournamentGame>() {
         @Override
-        public boolean areItemsTheSame(@NonNull Games oldItem, @NonNull Games newItem) {
-            return oldItem.url.equals(newItem.url);
+        public boolean areItemsTheSame(@NonNull TournamentGame tournamentGame, @NonNull TournamentGame t1) {
+            return true;
         }
 
         @Override
-        public boolean areContentsTheSame(@NonNull Games oldItem, @NonNull Games newItem) {
-            return oldItem.team1Name.equals(newItem.team1Name) && oldItem.team2Name.equals(newItem.team2Name);
+        public boolean areContentsTheSame(@NonNull TournamentGame tournamentGame, @NonNull TournamentGame t1) {
+            return tournamentGame.url.equals(t1.url);
         }
     };
     private LifecycleOwner lifecycleOwner;
@@ -63,13 +62,13 @@ public class TournamentsPagedListAdapter extends PagedListAdapter<Games, Tournam
     @NonNull
     @Override
     public ViewHolder onCreateViewHolder(@NonNull ViewGroup viewGroup, int i) {
-        View view = LayoutInflater.from(viewGroup.getContext()).inflate(R.layout.item_list_games, viewGroup, false);
+        View view = LayoutInflater.from(viewGroup.getContext()).inflate(R.layout.item_list_tournament_game, viewGroup, false);
         return new ViewHolder(view);
     }
 
     @Override
     public void onBindViewHolder(@NonNull ViewHolder viewHolder, int position) {
-        Games games = getItem(position);
+        TournamentGame games = getItem(position);
         if (games != null)
             viewHolder.bindTo(games);
     }
@@ -88,31 +87,32 @@ public class TournamentsPagedListAdapter extends PagedListAdapter<Games, Tournam
 
         ViewHolder(@NonNull View itemView) {
             super(itemView);
-            root = itemView.findViewById(R.id.item_list_games_root);
-            tv_item_list_games_team1_name = itemView.findViewById(R.id.tv_item_list_games_team1_name);
-            tv_item_list_games_team2_name = itemView.findViewById(R.id.tv_item_list_games_team2_name);
-            tv_item_list_games_middle = itemView.findViewById(R.id.tv_item_list_games_middle);
-            iv_item_list_games_team1_logo = itemView.findViewById(R.id.iv_item_list_games_team1_logo);
-            iv_item_list_games_team2_logo = itemView.findViewById(R.id.iv_item_list_games_team2_logo);
-            b_tv_item_list_games = itemView.findViewById(R.id.b_tv_item_list_games);
+            root = itemView.findViewById(R.id.root_item_list_tournament_game);
+            tv_item_list_games_team1_name = itemView.findViewById(R.id.tv_item_list_tournament_game_team1);
+            tv_item_list_games_team2_name = itemView.findViewById(R.id.tv_item_list_tournament_game_team2);
+            tv_item_list_games_middle = itemView.findViewById(R.id.tv_item_list_tournament_game_score);
+            iv_item_list_games_team1_logo = itemView.findViewById(R.id.iv_item_list_tournament_game_team1);
+            iv_item_list_games_team2_logo = itemView.findViewById(R.id.iv_item_list_tournament_game_team2);
+            b_tv_item_list_games = itemView.findViewById(R.id.b_item_list_tournament_game);
         }
 
-        private void bindTo(final Games games) {
+        private void bindTo(final TournamentGame game) {
+            collapse = false;
             hideButtonScheduler();
-            tv_item_list_games_team1_name.setText(games.team1Name);
-            tv_item_list_games_team2_name.setText(games.team2Name);
-            Picasso.get().load(games.team1Logo).placeholder(R.drawable.games_unknown_team1).into(iv_item_list_games_team1_logo);
-            Picasso.get().load(games.team2Logo).placeholder(R.drawable.games_unknown_team2).into(iv_item_list_games_team2_logo);
-            if (!games.teamScore.equals("")) tv_item_list_games_middle.setText(games.teamScore);
-            if (games.teamTime != 0) {
-                tv_item_list_games_middle.setText(new SimpleDateFormat("HH:mm dd.MM.yyyy", Locale.US).format(games.teamTime));
+            tv_item_list_games_team1_name.setText(game.team1Name);
+            tv_item_list_games_team2_name.setText(game.team2Name);
+            Picasso.get().load(game.team1Logo).placeholder(R.drawable.game_unknown_team1).into(iv_item_list_games_team1_logo);
+            Picasso.get().load(game.team2Logo).placeholder(R.drawable.game_unknown_team2).into(iv_item_list_games_team2_logo);
+            if (!game.teamScore.equals("")) tv_item_list_games_middle.setText(game.teamScore);
+            if (game.teamTime != 0) {
+                tv_item_list_games_middle.setText(new SimpleDateFormat("HH:mm dd.MM.yyyy", Locale.US).format(game.teamTime));
             }
-            if (games.teamTimeRemains == 0) {
+            if (game.teamTimeRemains == 0) {
                 root.setOnClickListener(new View.OnClickListener() {
                     @Override
                     public void onClick(View view) {
-                        Intent intent = new Intent(view.getContext(), GamesPersonalActivity.class);
-                        intent.putExtra(URL, games.url);
+                        Intent intent = new Intent(view.getContext(), GameFullActivity.class);
+                        intent.putExtra(URL, game.url);
                         Pair<View, String> p1 = Pair.create((View) tv_item_list_games_team1_name, "team1_name");
                         Pair<View, String> p2 = Pair.create((View) tv_item_list_games_team2_name, "team2_name");
                         Pair<View, String> p3 = Pair.create((View) tv_item_list_games_middle, "middle");
@@ -123,25 +123,22 @@ public class TournamentsPagedListAdapter extends PagedListAdapter<Games, Tournam
                     }
                 });
             } else {
-                WorkManager.getInstance().getStatusesByTag(games.url).observe(lifecycleOwner, new Observer<List<WorkStatus>>() {
+                WorkManager.getInstance().getStatusesByTag(game.url).observe(lifecycleOwner, new Observer<List<WorkStatus>>() {
                     @Override
                     public void onChanged(@Nullable List<WorkStatus> workStatuses) {
                         if (workStatuses != null && workStatuses.size() == 0) {
                             status = null;
-                            b_tv_item_list_games.setText(R.string.games_schedule);
-                            b_tv_item_list_games.setTextColor(itemView.getResources().getColor(R.color.textColorSecondary));
+                            b_tv_item_list_games.setCompoundDrawablesWithIntrinsicBounds(R.drawable.ic_alarm_off, 0, 0, 0);
                         }
                         if (workStatuses != null && workStatuses.size() != 0) {
                             status = workStatuses.get(0).getState();
                             if (workStatuses.get(0).getState().equals(State.ENQUEUED)) {
-                                b_tv_item_list_games.setText(android.R.string.cancel);
-                                b_tv_item_list_games.setTextColor(itemView.getResources().getColor(R.color.colorAccent));
+                                b_tv_item_list_games.setCompoundDrawablesWithIntrinsicBounds(R.drawable.ic_alarm_on, 0, 0, 0);
                             }
                             if (workStatuses.get(0).getState().equals(State.SUCCEEDED) || workStatuses.get(0).getState().equals(State.CANCELLED)) {
                                 status = null;
-                                b_tv_item_list_games.setText(R.string.games_schedule);
-                                b_tv_item_list_games.setTextColor(itemView.getResources().getColor(R.color.textColorSecondary));
-                                WorkManager.getInstance().cancelAllWorkByTag(games.url);
+                                b_tv_item_list_games.setCompoundDrawablesWithIntrinsicBounds(R.drawable.ic_alarm_off, 0, 0, 0);
+                                WorkManager.getInstance().cancelAllWorkByTag(game.url);
                                 WorkManager.getInstance().pruneWork();//очищает все завершённые работы
                             }
                         }
@@ -151,17 +148,17 @@ public class TournamentsPagedListAdapter extends PagedListAdapter<Games, Tournam
                     @Override
                     public void onClick(View view) {
                         if (status == null) {
-                            Data data = new Data.Builder().putString("message", games.team1Name + " vs " + games.team2Name).build();
+                            Data data = new Data.Builder().putString("message", game.team1Name + " vs " + game.team2Name).build();
                             OneTimeWorkRequest oneTimeWorkRequest = new OneTimeWorkRequest
                                     .Builder(ScheduleGameWorker.class)
-                                    .setInitialDelay(games.teamTimeRemains, TimeUnit.SECONDS)
+                                    .setInitialDelay(game.teamTimeRemains, TimeUnit.SECONDS)
                                     .setInputData(data)
-                                    .addTag(games.url)
+                                    .addTag(game.url)
                                     .build();
                             WorkManager.getInstance().enqueue(oneTimeWorkRequest);
                             hideButtonScheduler();
                         } else {
-                            WorkManager.getInstance().cancelAllWorkByTag(games.url);
+                            WorkManager.getInstance().cancelAllWorkByTag(game.url);
                             WorkManager.getInstance().pruneWork();
                             hideButtonScheduler();
                         }
@@ -183,14 +180,14 @@ public class TournamentsPagedListAdapter extends PagedListAdapter<Games, Tournam
         }
 
         private void showButtonScheduler() {
-            tv_item_list_games_middle.animate().translationY(-tv_item_list_games_middle.getHeight()).setDuration(ANIMATION_DURATION).start();
+            tv_item_list_games_middle.animate().alpha(0.0f).setDuration(ANIMATION_DURATION).start();
             b_tv_item_list_games.animate().alpha(1.0f).setDuration(ANIMATION_DURATION).start();
             b_tv_item_list_games.setClickable(true);
             collapse = !collapse;
         }
 
         private void hideButtonScheduler() {
-            tv_item_list_games_middle.animate().translationY(0).setDuration(ANIMATION_DURATION).start();
+            tv_item_list_games_middle.animate().alpha(1.0f).setDuration(ANIMATION_DURATION).start();
             b_tv_item_list_games.animate().alpha(0.0f).setDuration(ANIMATION_DURATION).start();
             b_tv_item_list_games.setClickable(false);
             collapse = !collapse;

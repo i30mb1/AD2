@@ -1,15 +1,13 @@
-package n7.ad2.games;
+package n7.ad2.tournaments;
 
 import android.arch.lifecycle.Observer;
-import android.arch.lifecycle.ViewModelProviders;
+import android.databinding.DataBindingUtil;
 import android.os.Bundle;
 import android.support.annotation.Nullable;
-import android.support.v7.widget.Toolbar;
 import android.view.MenuItem;
 import android.view.View;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
-import android.widget.ProgressBar;
 import android.widget.TextView;
 
 import com.squareup.picasso.Picasso;
@@ -22,30 +20,26 @@ import org.jsoup.select.Elements;
 import java.io.IOException;
 
 import jp.wasabeef.picasso.transformations.GrayscaleTransformation;
-import n7.ad2.tournaments.TournamentsViewModel;
-import n7.ad2.utils.AppExecutors;
 import n7.ad2.R;
+import n7.ad2.databinding.ActivityGameFullBinding;
+import n7.ad2.tournaments.db.GamesDao;
+import n7.ad2.tournaments.db.GamesRoomDatabase;
+import n7.ad2.tournaments.db.TournamentGame;
+import n7.ad2.utils.AppExecutors;
 import n7.ad2.utils.BaseActivity;
-import n7.ad2.tournaments.db.Games;
 
-public class GamesPersonalActivity extends BaseActivity {
+public class GameFullActivity extends BaseActivity {
 
     public static final String URL = "URL";
-    LinearLayout tv_activity_games_personal_holder;
-    private Toolbar toolbar;
-    private ImageView tv_activity_games_personal_team1_logo;
-    private ImageView tv_activity_games_personal_team2_logo;
-    private TextView tv_activity_games_personal_team1_name;
-    private TextView tv_activity_games_personal_team2_name;
-    private TextView tv_activity_games_personal_middle;
+
     private AppExecutors appExecutors;
     private String url;
-    private ProgressBar pb_activity_games_personal;
+    private ActivityGameFullBinding binding;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_games_personal);
+        binding = DataBindingUtil.setContentView(this, R.layout.activity_game_full);
         appExecutors = new AppExecutors();
 
         if (savedInstanceState == null) {
@@ -58,7 +52,7 @@ public class GamesPersonalActivity extends BaseActivity {
     }
 
     private void loadingHeroes() {
-        pb_activity_games_personal.setVisibility(View.VISIBLE);
+        binding.pbActivityGamesPersonal.setVisibility(View.VISIBLE);
         appExecutors.networkIO().execute(new Runnable() {
             @Override
             public void run() {
@@ -171,7 +165,7 @@ public class GamesPersonalActivity extends BaseActivity {
                         appExecutors.mainThread().execute(new Runnable() {
                             @Override
                             public void run() {
-                                tv_activity_games_personal_holder.addView(gameView);
+                                binding.tvActivityGamesPersonalHolder.addView(gameView);
                             }
                         });
                     }
@@ -183,7 +177,7 @@ public class GamesPersonalActivity extends BaseActivity {
                     appExecutors.mainThread().execute(new Runnable() {
                         @Override
                         public void run() {
-                            pb_activity_games_personal.setVisibility(View.GONE);
+                            binding.pbActivityGamesPersonal.setVisibility(View.GONE);
                         }
                     });
 
@@ -194,27 +188,19 @@ public class GamesPersonalActivity extends BaseActivity {
 
     private void initLoadedViews() {
         url = getIntent().getStringExtra(URL);
-        pb_activity_games_personal = findViewById(R.id.pb_activity_games_personal);
-        tv_activity_games_personal_team1_logo = findViewById(R.id.tv_activity_games_personal_team1_logo);
-        tv_activity_games_personal_team2_logo = findViewById(R.id.tv_activity_games_personal_team2_logo);
-        tv_activity_games_personal_team1_name = findViewById(R.id.tv_item_list_games_team1_name);
-        tv_activity_games_personal_team2_name = findViewById(R.id.tv_activity_games_personal_team2_name);
-        tv_activity_games_personal_middle = findViewById(R.id.tv_activity_games_personal_middle);
-        tv_activity_games_personal_holder = findViewById(R.id.tv_activity_games_personal_holder);
-
-        TournamentsViewModel gamesViewModel = ViewModelProviders.of(this).get(TournamentsViewModel.class);
-//        gamesViewModel.getGameByUrl(url).observe(this, new Observer<Games>() {
-//            @Override
-//            public void onChanged(@Nullable Games games) {
-//                if (games != null) {
-//                    Picasso.get().load(games.team1Logo).placeholder(R.drawable.games_unknown_team1).into(tv_activity_games_personal_team1_logo);
-//                    Picasso.get().load(games.team2Logo).placeholder(R.drawable.games_unknown_team2).into(tv_activity_games_personal_team2_logo);
-//                    tv_activity_games_personal_team1_name.setText(games.team1Name);
-//                    tv_activity_games_personal_team2_name.setText(games.team2Name);
-//                    tv_activity_games_personal_middle.setText(games.teamScore);
-//                }
-//            }
-//        });
+        GamesDao gamesDao = GamesRoomDatabase.getDatabase(this).gamesDao();
+        gamesDao.getGameByUrl(url).observe(this, new Observer<TournamentGame>() {
+            @Override
+            public void onChanged(@Nullable TournamentGame games) {
+                if (games != null) {
+                    Picasso.get().load(games.team1Logo).placeholder(R.drawable.game_unknown_team1).into(binding.ivActivityGameFullTeam1);
+                    Picasso.get().load(games.team2Logo).placeholder(R.drawable.game_unknown_team2).into(binding.ivActivityGameFullTeam2);
+                    binding.tvActivityGameFullTeam1.setText(games.team1Name);
+                    binding.tvActivityGameFullTeam2.setText(games.team2Name);
+                    binding.tvActivityGameFullScore.setText(games.teamScore);
+                }
+            }
+        });
     }
 
     @Override
@@ -228,9 +214,8 @@ public class GamesPersonalActivity extends BaseActivity {
     }
 
     private void setToolbar() {
-        toolbar = findViewById(R.id.toolbar);
-        toolbar.setTitle(getString(R.string.tournaments));
-        setSupportActionBar(toolbar);
+        binding.toolbarActivityGameFull.setTitle(getString(R.string.tournaments));
+        setSupportActionBar(binding.toolbarActivityGameFull);
         if (getSupportActionBar() != null) {
             getSupportActionBar().setDisplayHomeAsUpEnabled(true);
             getSupportActionBar().setDisplayShowHomeEnabled(true);

@@ -22,7 +22,7 @@
             android:id="@+id/rv_fragment_tournaments"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            tools:listitem="@layout/item_list_games" />
+            tools:listitem="@layout/item_list_tournament_game" />
 
         <ProgressBar
             style="@style/Widget.AppCompat.ProgressBar.Horizontal"

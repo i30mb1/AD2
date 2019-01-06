@@ -309,7 +309,7 @@ public class MainActivity extends BaseActivity {
     private void hideKeyboard() {
         InputMethodManager imm = (InputMethodManager) getSystemService(INPUT_METHOD_SERVICE);
         if (imm != null) {
-            imm.hideSoftInputFromWindow(findViewById(R.id.toolbar).getWindowToken(), 0);
+            imm.hideSoftInputFromWindow(bindingActivity.toolbarActivityMain.getWindowToken(), 0);
         }
     }
 

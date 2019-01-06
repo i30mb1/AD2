@@ -1,6 +1,8 @@
 package n7.ad2.tournaments;
 
+import android.arch.lifecycle.Observer;
 import android.arch.lifecycle.ViewModelProviders;
+import android.arch.paging.PagedList;
 import android.databinding.DataBindingUtil;
 import android.os.Bundle;
 import android.preference.PreferenceManager;
@@ -18,6 +20,7 @@ import androidx.work.OneTimeWorkRequest;
 import androidx.work.WorkManager;
 import n7.ad2.databinding.FragmentTournamentsBinding;
 import n7.ad2.R;
+import n7.ad2.tournaments.db.TournamentGame;
 
 import static n7.ad2.setting.SettingActivity.SUBSCRIPTION;
 import static n7.ad2.tournaments.TournamentsWorker.PAGE;
@@ -27,6 +30,8 @@ public class TournamentsFragment extends Fragment {
 
     private FragmentTournamentsBinding binding;
     private boolean subscription;
+    private TournamentsViewModel viewModel;
+    private TournamentsPagedListAdapter adapter;
 
     public TournamentsFragment() {
     }
@@ -42,8 +47,10 @@ public class TournamentsFragment extends Fragment {
     public void onActivityCreated(@Nullable Bundle savedInstanceState) {
         super.onActivityCreated(savedInstanceState);
 
-        TournamentsViewModel viewModel = ViewModelProviders.of(this).get(TournamentsViewModel.class);
+        viewModel = ViewModelProviders.of(this).get(TournamentsViewModel.class);
         binding.setViewModel(viewModel);
+        binding.executePendingBindings();
+
         subscription = PreferenceManager.getDefaultSharedPreferences(getContext()).getBoolean(SUBSCRIPTION, false);
         getActivity().setTitle(R.string.tournaments);
         setRetainInstance(true);
@@ -63,8 +70,14 @@ public class TournamentsFragment extends Fragment {
         binding.rvFragmentTournaments.setLayoutManager(gridLayoutManager);
         binding.rvFragmentTournaments.setHasFixedSize(true);
 
-        TournamentsPagedListAdapter gamesPagedListAdapter = new TournamentsPagedListAdapter(getViewLifecycleOwner(),subscription);
-        binding.rvFragmentTournaments.setAdapter(gamesPagedListAdapter);
+        adapter = new TournamentsPagedListAdapter(getViewLifecycleOwner(),subscription);
+        binding.rvFragmentTournaments.setAdapter(adapter);
+        viewModel.getTournamentsGames().observe(this, new Observer<PagedList<TournamentGame>>() {
+            @Override
+            public void onChanged(@Nullable PagedList<TournamentGame> games) {
+                adapter.submitList(games);
+            }
+        });
     }
 }
 

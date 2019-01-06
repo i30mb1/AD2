@@ -13,18 +13,18 @@ import java.util.List;
 public interface GamesDao {
 
     @Insert(onConflict = OnConflictStrategy.IGNORE)
-    long[] setGames(List<Games> object);
+    long[] setGames(List<TournamentGame> object);
 
-    @Query("DELETE FROM Games")
+    @Query("DELETE FROM TournamentGame")
     void deleteAll();
 
-    @Query("DELETE FROM Games where teamTimeRemains!=0")
+    @Query("DELETE FROM TournamentGame where teamTimeRemains!=0")
     void deleteAllUnfinished();
 
-    @Query("SELECT * FROM Games where url=:url")
-    LiveData<Games> getGameByUrl(String url);
+    @Query("SELECT * FROM TournamentGame where url=:url")
+    LiveData<TournamentGame> getGameByUrl(String url);
 
-    @Query("SELECT * FROM Games")
-    DataSource.Factory<Integer, Games> getDataSourceGames();
+    @Query("SELECT * FROM TournamentGame")
+    DataSource.Factory<Integer, TournamentGame> getDataSourceGames();
 
 }

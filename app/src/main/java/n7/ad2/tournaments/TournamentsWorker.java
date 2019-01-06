@@ -14,7 +14,7 @@ import java.util.List;
 import java.util.Locale;
 
 import androidx.work.Worker;
-import n7.ad2.tournaments.db.Games;
+import n7.ad2.tournaments.db.TournamentGame;
 import n7.ad2.tournaments.db.GamesDao;
 import n7.ad2.tournaments.db.GamesRoomDatabase;
 
@@ -31,14 +31,14 @@ public class TournamentsWorker extends Worker {
         boolean deleteTable = getInputData().getBoolean(DELETE_TABLE, false);
         int page = getInputData().getInt(PAGE, 0);
 
-        List<Games> gamesList = new ArrayList<>();
+        List<TournamentGame> gamesList = new ArrayList<>();
 
         try {
             String url = BASE_URL + page;
             Document doc = Jsoup.connect(url).get();
             Elements matchElements = doc.getElementsByClass("esport-match-single");
             for (int j = 0; j < matchElements.size(); j++) {
-                Games game = new Games();
+                TournamentGame game = new TournamentGame();
                 game.url = "https://dota2.ru" + matchElements.get(j).child(0).attr("href");
                 Elements matchElementsChildren = matchElements.get(j).child(0).children();
                 for (int i = 0; i < matchElementsChildren.size(); i++) {

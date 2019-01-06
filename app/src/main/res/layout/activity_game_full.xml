@@ -1,0 +1,151 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+    </data>
+
+    <android.support.design.widget.CoordinatorLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="?colorPrimary">
+
+        <android.support.design.widget.AppBarLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <android.support.v7.widget.Toolbar
+                android:id="@+id/toolbar_activity_game_full"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:minHeight="?attr/actionBarSize"
+                app:layout_scrollFlags="scroll|enterAlways" />
+        </android.support.design.widget.AppBarLayout>
+
+        <android.support.v4.widget.NestedScrollView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:layout_behavior="@string/appbar_scrolling_view_behavior">
+
+            <android.support.constraint.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <TextView
+                    android:id="@+id/tv_activity_game_full_team1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="8dp"
+                    android:layout_marginTop="4dp"
+                    android:layout_marginEnd="8dp"
+                    android:maxLines="1"
+                    android:textColor="?android:textColorSecondary"
+                    android:textSize="12sp"
+                    android:transitionName="tv1"
+                    app:layout_constraintEnd_toEndOf="@+id/iv__activity_game_full_team1"
+                    app:layout_constraintLeft_toLeftOf="parent"
+                    app:layout_constraintStart_toStartOf="@+id/iv__activity_game_full_team1"
+                    app:layout_constraintTop_toTopOf="parent"
+                    tools:targetApi="lollipop"
+                    tools:text="@tools:sample/lorem" />
+
+                <TextView
+                    android:id="@+id/tv_activity_game_full_team2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="8dp"
+                    android:layout_marginTop="4dp"
+                    android:layout_marginEnd="8dp"
+                    android:layout_weight="1"
+                    android:maxLines="1"
+                    android:textColor="?android:textColorSecondary"
+                    android:textSize="12sp"
+                    android:transitionName="tv2"
+                    app:layout_constraintEnd_toEndOf="@+id/iv_activity_game_full_team2"
+                    app:layout_constraintRight_toRightOf="parent"
+                    app:layout_constraintStart_toStartOf="@+id/iv_activity_game_full_team2"
+                    app:layout_constraintTop_toTopOf="parent"
+                    tools:targetApi="lollipop"
+                    tools:text="@tools:sample/lorem" />
+
+                <TextView
+                    android:id="@+id/tv_activity_game_full_score"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:layout_marginTop="8dp"
+                    android:layout_marginBottom="8dp"
+                    android:background="?colorPrimary"
+                    android:paddingStart="8dp"
+                    android:paddingTop="2dp"
+                    android:paddingEnd="8dp"
+                    android:paddingBottom="2dp"
+                    android:textColor="?android:textColorSecondary"
+                    android:textSize="14sp"
+                    android:textStyle="bold"
+                    android:transitionName="tv3"
+                    app:layout_constraintBottom_toBottomOf="@+id/iv__activity_game_full_team1"
+                    app:layout_constraintEnd_toStartOf="@+id/iv_activity_game_full_team2"
+                    app:layout_constraintHorizontal_bias="0.5"
+                    app:layout_constraintStart_toEndOf="@+id/iv__activity_game_full_team1"
+                    app:layout_constraintTop_toTopOf="@+id/iv__activity_game_full_team1"
+                    tools:targetApi="lollipop"
+                    tools:text="@tools:sample/date/hhmm" />
+
+                <ImageView
+                    android:id="@+id/iv__activity_game_full_team1"
+                    android:layout_width="80dp"
+                    android:layout_height="80dp"
+                    android:layout_marginTop="4dp"
+                    android:contentDescription="@string/setting_tell_friend_title"
+                    android:transitionName="iv1"
+                    app:layout_constraintEnd_toStartOf="@+id/tv_activity_game_full_score"
+                    app:layout_constraintHorizontal_bias="0.5"
+                    app:layout_constraintHorizontal_chainStyle="spread"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/tv_activity_game_full_team1"
+                    app:srcCompat="@drawable/game_unknown_team1"
+                    tools:targetApi="lollipop" />
+
+                <ImageView
+                    android:id="@+id/iv_activity_game_full_team2"
+                    android:layout_width="80dp"
+                    android:layout_height="80dp"
+                    android:layout_marginTop="4dp"
+                    android:contentDescription="@string/setting_tell_friend_title"
+                    android:transitionName="iv2"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHorizontal_bias="0.5"
+                    app:layout_constraintStart_toEndOf="@+id/tv_activity_game_full_score"
+                    app:layout_constraintTop_toBottomOf="@+id/tv_activity_game_full_team2"
+                    app:srcCompat="@drawable/game_unknown_team2"
+                    tools:targetApi="lollipop" />
+
+                <LinearLayout
+                    android:id="@+id/tv_activity_games_personal_holder"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:animateLayoutChanges="true"
+                    android:minHeight="400dp"
+                    android:orientation="vertical"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintLeft_toLeftOf="parent"
+                    app:layout_constraintRight_toRightOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/iv__activity_game_full_team1" />
+
+
+            </android.support.constraint.ConstraintLayout>
+        </android.support.v4.widget.NestedScrollView>
+
+        <ProgressBar
+            android:id="@+id/pb_activity_games_personal"
+            style="@style/Widget.AppCompat.ProgressBar.Horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="4dp"
+            android:indeterminate="true"
+            android:scaleY="5"
+            android:visibility="visible" />
+    </android.support.design.widget.CoordinatorLayout>
+</layout>

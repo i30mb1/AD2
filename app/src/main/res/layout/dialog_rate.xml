@@ -16,12 +16,12 @@
 
         <Button
             android:id="@+id/b"
-            android:onClick="@{()-> activity.openAppStore()}"
             style="@style/Widget.MaterialComponents.Button.UnelevatedButton"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_marginTop="16dp"
             android:layout_marginBottom="8dp"
+            android:onClick="@{()-> activity.openAppStore()}"
             android:text="@android:string/ok"
             android:textSize="14sp"
             app:layout_constraintBottom_toBottomOf="parent"
@@ -30,7 +30,7 @@
             app:layout_constraintTop_toBottomOf="@+id/tv2" />
 
         <View
-            android:id="@+id/left_red_line"
+            android:id="@+id/red_line_dialog_rate"
             android:layout_width="2dp"
             android:layout_height="0dp"
             android:background="?colorAccent"
@@ -51,7 +51,7 @@
             android:textSize="16sp"
             android:textStyle="bold"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toEndOf="@+id/left_red_line"
+            app:layout_constraintStart_toEndOf="@+id/red_line_dialog_rate"
             app:layout_constraintTop_toTopOf="parent" />
 
         <TextView

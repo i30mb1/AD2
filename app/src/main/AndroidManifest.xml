@@ -54,7 +54,7 @@
             android:name=".news.NewsActivity"
             android:screenOrientation="portrait" />
         <activity
-            android:name=".games.GamesPersonalActivity"
+            android:name=".tournaments.GameFullActivity"
             android:parentActivityName=".main.MainActivity"
             android:screenOrientation="portrait" />
 

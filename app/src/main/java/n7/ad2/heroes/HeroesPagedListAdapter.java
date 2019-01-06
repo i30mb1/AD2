@@ -22,7 +22,7 @@ public class HeroesPagedListAdapter extends PagedListAdapter<HeroModel, HeroesPa
 
         @Override
         public boolean areContentsTheSame(@NonNull HeroModel oldItem, @NonNull HeroModel newItem) {
-            return oldItem.getId() == newItem.getId();
+            return true;
         }
     };
     private LayoutInflater inflater;
@@ -59,6 +59,7 @@ public class HeroesPagedListAdapter extends PagedListAdapter<HeroModel, HeroesPa
 
         private void bindTo(final HeroModel hero) {
             binding.setHero(hero);
+            binding.executePendingBindings();
         }
 
         private void clear() {

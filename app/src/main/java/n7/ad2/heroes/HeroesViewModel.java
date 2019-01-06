@@ -40,7 +40,7 @@ public class HeroesViewModel extends AndroidViewModel {
         DataSource.Factory<Integer, HeroModel> dataSource = heroesDao.getDataSourceHeroes();
         //PagedList.Config для различных условий загрузки
         PagedList.Config config = new PagedList.Config.Builder()
-                .setPageSize(20)
+                .setPageSize(30)
 //              .setInitialLoadSizeHint(60) //default = pageSize*3
 //              .setPrefetchDistance(10) //default = pageSize сколько записей до конца списка чтобы загрузить новую порцию данных
                 .setEnablePlaceholders(true) //default true
@@ -52,7 +52,7 @@ public class HeroesViewModel extends AndroidViewModel {
 
     LiveData<PagedList<HeroModel>> getHeroesByFilter(String chars) {
         DataSource.Factory<Integer, HeroModel> dataSource = heroesDao.getDataSourceHeroesFilter(chars);
-        PagedList.Config config = new PagedList.Config.Builder().setPageSize(20).build();
+        PagedList.Config config = new PagedList.Config.Builder().setPageSize(30).build();
         return new LivePagedListBuilder<>(dataSource, config).build();
     }
 }

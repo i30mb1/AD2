@@ -10,7 +10,6 @@ import android.arch.paging.PagedList;
 import android.databinding.ObservableBoolean;
 import android.support.annotation.NonNull;
 import android.support.annotation.Nullable;
-import android.support.annotation.WorkerThread;
 
 import androidx.work.Data;
 import androidx.work.ExistingWorkPolicy;
@@ -18,7 +17,7 @@ import androidx.work.OneTimeWorkRequest;
 import androidx.work.State;
 import androidx.work.WorkManager;
 import androidx.work.WorkStatus;
-import n7.ad2.tournaments.db.Games;
+import n7.ad2.tournaments.db.TournamentGame;
 import n7.ad2.tournaments.db.GamesDao;
 import n7.ad2.tournaments.db.GamesRoomDatabase;
 
@@ -39,12 +38,12 @@ public class TournamentsViewModel extends AndroidViewModel {
         gamesDao = GamesRoomDatabase.getDatabase(application).gamesDao();
     }
 
-    public LiveData<PagedList<Games>> getGames() {
-        DataSource.Factory<Integer, Games> dataSource = gamesDao.getDataSourceGames();
+    public LiveData<PagedList<TournamentGame>> getTournamentsGames() {
+        DataSource.Factory<Integer, TournamentGame> dataSource = gamesDao.getDataSourceGames();
         PagedList.Config config = new PagedList.Config.Builder().setPageSize(20).setEnablePlaceholders(false).build();
-        LiveData<PagedList<Games>> listLiveData = new LivePagedListBuilder<>(dataSource, config).setBoundaryCallback(new PagedList.BoundaryCallback<Games>() {
+        LiveData<PagedList<TournamentGame>> listLiveData = new LivePagedListBuilder<>(dataSource, config).setBoundaryCallback(new PagedList.BoundaryCallback<TournamentGame>() {
             @Override
-            public void onItemAtEndLoaded(@NonNull Games itemAtEnd) {
+            public void onItemAtEndLoaded(@NonNull TournamentGame itemAtEnd) {
                 super.onItemAtEndLoaded(itemAtEnd);
                 page = page + 30;
                 Data data = new Data.Builder().putInt(PAGE, page).build();

@@ -5,7 +5,7 @@ import android.arch.persistence.room.PrimaryKey;
 import android.support.annotation.NonNull;
 
 @Entity
-public class Games {
+public class TournamentGame {
 
     @PrimaryKey
     @NonNull
@@ -18,4 +18,5 @@ public class Games {
     public String teamScore = ".";
     public long teamTimeRemains = 0;
     public long teamTime = 0;
+
 }
