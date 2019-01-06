@@ -1,8 +1,7 @@
 package n7.ad2.items.full;
 
-import android.content.Intent;
 import android.os.Bundle;
-import android.support.design.widget.Snackbar;
+import android.preference.PreferenceManager;
 import android.support.v7.widget.Toolbar;
 import android.view.Menu;
 import android.view.MenuItem;
@@ -14,10 +13,8 @@ import android.widget.TextView;
 import org.json.JSONException;
 import org.json.JSONObject;
 
-import n7.ad2.utils.MySharedPreferences;
 import n7.ad2.R;
 import n7.ad2.utils.BaseActivity;
-import n7.ad2.setting.SettingActivity;
 import n7.ad2.utils.Utils;
 
 import static n7.ad2.setting.SettingActivity.SUBSCRIPTION;
@@ -31,13 +28,14 @@ public class ItemFullActivity extends BaseActivity {
     private String itemName;
     private String currentLanguage;
     private Toolbar toolbar;
-    private boolean isPremium;
+    private boolean subscription;
+    private boolean loadWithError = false;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_item_full_0);
-        isPremium = MySharedPreferences.getSharedPreferences(this).getBoolean(SUBSCRIPTION, false);
+        subscription = PreferenceManager.getDefaultSharedPreferences(this).getBoolean(SUBSCRIPTION, false);
 
         this.itemFolder = getIntent().getStringExtra(ITEM_CODE_NAME);
         this.itemName = getIntent().getStringExtra(ITEM_NAME);
@@ -55,18 +53,9 @@ public class ItemFullActivity extends BaseActivity {
                 onBackPressed();
                 break;
             case R.id.action_switch:
-                if (!MySharedPreferences.getSharedPreferences(this).getBoolean(SUBSCRIPTION, false)) {
-                    Snackbar.make(toolbar, R.string.all_only_for_subscribers, Snackbar.LENGTH_LONG).setAction(R.string.all_buy, new View.OnClickListener() {
-                        @Override
-                        public void onClick(View view) {
-                            startActivity(new Intent(ItemFullActivity.this, SettingActivity.class));
-                        }
-                    }).show();
-                } else {
-                    loadHeroDescriptionFile(switchLanguage());
-                    item.setTitle(currentLanguage);
-                    setItems();
-                }
+                loadHeroDescriptionFile(switchLanguage());
+                item.setTitle(currentLanguage);
+                setItems();
                 break;
         }
         return super.onOptionsItemSelected(item);
@@ -74,8 +63,8 @@ public class ItemFullActivity extends BaseActivity {
 
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
-        if(isPremium)
-        getMenuInflater().inflate(R.menu.menu_activity_items_change_language, menu);
+        if (subscription)
+            getMenuInflater().inflate(R.menu.menu_activity_items_change_language, menu);
         return super.onCreateOptionsMenu(menu);
     }
 
@@ -103,7 +92,7 @@ public class ItemFullActivity extends BaseActivity {
     }
 
     private void setItems() {
-        if(loadWithError) return;
+        if (loadWithError) return;
         final ImageView iv_activity_item_full_main_image = findViewById(R.id.iv_activity_item_full_main_image);
         iv_activity_item_full_main_image.setImageDrawable(Utils.getDrawableFromAssets(this, String.format("items/%s/full.webp", itemFolder)));
         final TextView tv_activity_item_full_name = findViewById(R.id.tv_activity_item_full_name);
@@ -261,12 +250,10 @@ public class ItemFullActivity extends BaseActivity {
 //        iv_activity_item_full_main_image.callOnClick();
     }
 
-    private boolean loadWithError = false;
-
     private void loadHeroDescriptionFile(final String language) {
         try {
             String file = Utils.readJSONFromAsset(ItemFullActivity.this, "items/" + itemFolder + "/" + language + "_description.json");
-            if(file==null) throw new JSONException("");
+            if (file == null) throw new JSONException("");
             jsonItemDescription = new JSONObject(file);
             setItems();
             loadWithError = false;

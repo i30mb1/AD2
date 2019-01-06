@@ -12,24 +12,22 @@ import com.google.firebase.analytics.FirebaseAnalytics;
 import java.util.LinkedList;
 import java.util.List;
 
-import n7.ad2.utils.MySharedPreferences;
 import n7.ad2.R;
-import n7.ad2.utils.BaseActivity;
 import n7.ad2.databinding.ActivitySettingBinding;
 import n7.ad2.databinding.DialogDonateBinding;
 import n7.ad2.setting.purchaseUtils.IabHelper;
 import n7.ad2.setting.purchaseUtils.IabResult;
 import n7.ad2.setting.purchaseUtils.Inventory;
 import n7.ad2.setting.purchaseUtils.Purchase;
+import n7.ad2.utils.BaseActivity;
+import n7.ad2.utils.MySharedPreferences;
+
+import static n7.ad2.main.MainActivity.FIREBASE_DIALOG_DONATE_SAW;
 
 public class SettingActivity extends BaseActivity {
 
     public static final String ONCE_PER_MONTH_SUBSCRIPTION = "once_per_month_subscription";
-
-    public static final String FIREBASE_DIALOG_DONATE_SAW = "FIREBASE_DIALOG_DONATE_SAW";
-
     public static final String INTENT_SHOW_DIALOG_DONATE = "INTENT_SHOW_DIALOG_DONATE";
-
     public static final String SUBSCRIPTION = "SUBSCRIPTION";
 
     public ObservableBoolean subscription = new ObservableBoolean(false);

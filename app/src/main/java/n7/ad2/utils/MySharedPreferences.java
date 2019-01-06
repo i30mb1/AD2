@@ -10,8 +10,7 @@ import java.util.Locale;
 
 public abstract class MySharedPreferences {
 
-    public static final String GITHUB_LAST_APK_URL = "https://github.com/i30mb1/AD2/blob/master/app/release/app-release.apk?raw=true";
-    public static final String GITHUB_UPDATE_URL = "https://github.com/i30mb1/AD2/blob/master/updates.json?raw=true";
+
     public static final String LAST_FRAGMENT_SELECTED_KEY = "last_fragment_selected_key";
     public static final String DATE_END_PREMIUM = "DATE_END_PREMIUM";
     public static final String RESPONSE_COUNT_KEY = "RESPONSE_COUNT_KEY";

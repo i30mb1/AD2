@@ -23,34 +23,36 @@ import java.util.concurrent.Executors;
 
 import javax.net.ssl.SSLContext;
 
+import androidx.work.Constraints;
 import androidx.work.Data;
 import androidx.work.ExistingWorkPolicy;
+import androidx.work.NetworkType;
 import androidx.work.OneTimeWorkRequest;
 import androidx.work.WorkManager;
-import n7.ad2.utils.MySharedPreferences;
 import n7.ad2.R;
-import n7.ad2.utils.SingleLiveEvent;
-import n7.ad2.utils.PlainAdapter;
 import n7.ad2.heroes.db.HeroesRoomDatabase;
 import n7.ad2.items.db.ItemsRoomDatabase;
 import n7.ad2.news.NewsWorker;
 import n7.ad2.setting.purchaseUtils.IabHelper;
 import n7.ad2.setting.purchaseUtils.IabResult;
 import n7.ad2.setting.purchaseUtils.Inventory;
+import n7.ad2.utils.MySharedPreferences;
+import n7.ad2.utils.PlainAdapter;
+import n7.ad2.utils.SingleLiveEvent;
 
-import static n7.ad2.utils.BaseActivity.THEME_DARK;
-import static n7.ad2.utils.BaseActivity.THEME_GRAY;
-import static n7.ad2.utils.BaseActivity.THEME_WHITE;
 import static n7.ad2.news.NewsWorker.DELETE_TABLE;
 import static n7.ad2.setting.SettingActivity.ONCE_PER_MONTH_SUBSCRIPTION;
 import static n7.ad2.setting.SettingActivity.SUBSCRIPTION;
+import static n7.ad2.utils.BaseActivity.THEME_DARK;
+import static n7.ad2.utils.BaseActivity.THEME_GRAY;
+import static n7.ad2.utils.BaseActivity.THEME_WHITE;
 
 public class SplashViewModel extends AndroidViewModel {
 
     public static final String CURRENT_DAY_IN_APP = "CURRENT_DAY_IN_APP";
     public static final String FREE_SUBSCRIPTION_DAYS = "FREE_SUBSCRIPTION_DAYS";
     private static final String FREE_SUBSCRIPTION_DAY_LAST_USE = "FREE_SUBSCRIPTION_DAY_LAST_USE";
-    private static final String LAST_DAY_WHEN_LOAD_NEWS = "LAST_DAY_WHEN_LOAD_NEWS";
+    private static final String NEWS_LOAD_LAST_DAY = "NEWS_LOAD_LAST_DAY";
     final SingleLiveEvent<Void> startMainActivity = new SingleLiveEvent<>();
     public ObservableField<Drawable> resId = new ObservableField<>();
     public ObservableInt scrollTo = new ObservableInt();
@@ -85,14 +87,14 @@ public class SplashViewModel extends AndroidViewModel {
     }
 
     private void loadNews() {
-        int lastDayWhenLoadNews = PreferenceManager.getDefaultSharedPreferences(application).getInt(LAST_DAY_WHEN_LOAD_NEWS, 0);
+        int lastDayWhenLoadNews = PreferenceManager.getDefaultSharedPreferences(application).getInt(NEWS_LOAD_LAST_DAY, 0);
         if (currentDay != lastDayWhenLoadNews) {
-            //todo only when internet connection
+            Constraints constraints = new Constraints.Builder().setRequiredNetworkType(NetworkType.CONNECTED).build();
             Data data = new Data.Builder().putBoolean(DELETE_TABLE, true).build();
-            OneTimeWorkRequest worker = new OneTimeWorkRequest.Builder(NewsWorker.class).setInputData(data).build();
+            OneTimeWorkRequest worker = new OneTimeWorkRequest.Builder(NewsWorker.class).setInputData(data).setConstraints(constraints).build();
             WorkManager.getInstance().beginUniqueWork(NewsWorker.TAG, ExistingWorkPolicy.APPEND, worker).enqueue();
 
-            PreferenceManager.getDefaultSharedPreferences(application).edit().putInt(LAST_DAY_WHEN_LOAD_NEWS, currentDay).apply();
+            PreferenceManager.getDefaultSharedPreferences(application).edit().putInt(NEWS_LOAD_LAST_DAY, currentDay).apply();
             log("loading_news_status = is_loading");
         } else {
             log("loading_news_status = was_loaded");
@@ -102,6 +104,7 @@ public class SplashViewModel extends AndroidViewModel {
     private void log(String text) {
         adapter.add(text);
         scrollTo.set(adapter.getItemCount() - 1);
+        adapter.notifyDataSetChanged();
     }
 
     private void setupCurrentDay() {

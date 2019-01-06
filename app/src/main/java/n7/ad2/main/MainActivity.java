@@ -33,38 +33,43 @@ import com.yarolegovich.slidingrootnav.SlidingRootNav;
 import com.yarolegovich.slidingrootnav.SlidingRootNavBuilder;
 import com.yarolegovich.slidingrootnav.callback.DragStateListener;
 
-import n7.ad2.utils.MySharedPreferences;
 import n7.ad2.R;
-import n7.ad2.utils.SnackbarUtils;
-import n7.ad2.utils.BaseActivity;
-import n7.ad2.utils.PlainAdapter;
 import n7.ad2.databinding.ActivityMainBinding;
+import n7.ad2.databinding.DialogPreDonateBinding;
 import n7.ad2.databinding.DialogRateBinding;
 import n7.ad2.databinding.DialogUpdateBinding;
 import n7.ad2.databinding.DrawerBinding;
 import n7.ad2.games.GameFragment;
+import n7.ad2.heroes.HeroesFragment;
 import n7.ad2.items.ItemsFragment;
 import n7.ad2.news.NewsFragment;
+import n7.ad2.setting.SettingActivity;
 import n7.ad2.streams.StreamsFragment;
 import n7.ad2.tournaments.TournamentsFragment;
-import n7.ad2.heroes.HeroesFragment;
+import n7.ad2.utils.BaseActivity;
+import n7.ad2.utils.PlainAdapter;
+import n7.ad2.utils.SnackbarUtils;
 import n7.ad2.utils.UnscrollableLinearLayoutManager;
 
 import static n7.ad2.main.MainViewModel.LAST_DAY_WHEN_CHECK_UPDATE;
 import static n7.ad2.main.MainViewModel.SHOULD_UPDATE_FROM_MARKET;
+import static n7.ad2.setting.SettingActivity.INTENT_SHOW_DIALOG_DONATE;
+import static n7.ad2.setting.SettingActivity.SUBSCRIPTION;
 import static n7.ad2.splash.SplashViewModel.CURRENT_DAY_IN_APP;
 
 public class MainActivity extends BaseActivity {
 
     public static final int COUNTER_DIALOG_RATE = 20;
-    public static final int COUNTER_DIALOG_DONATE = 40;
+    public static final int COUNTER_DIALOG_DONATE = 30;
 
-    public static final String FIREBASE_DIALOG_RATE_SAW = "FIREBASE_DIALOG_RATE_SAW";
-    public static final String FIREBASE_DIALOG_RATE_CLICK = "FIREBASE_DIALOG_RATE_CLICK";
-    public static final String FIREBASE_DIALOG_PRE_DONATE_SAW = "FIREBASE_DIALOG_PRE_DONATE_SAW";
-
+    public static final String FIREBASE_DIALOG_DONATE_SAW = "DIALOG_DONATE_SAW";
+    public static final String FIREBASE_DIALOG_PRE_DONATE_SAW = "DIALOG_PRE_DONATE_SAW";
+    public static final String FIREBASE_DIALOG_RATE_SAW = "DIALOG_RATE_SAW";
+    public static final String FIREBASE_DIALOG_RATE_CLICK = "DIALOG_RATE_CLICK";
     public static final String LAST_ITEM = "LAST_ITEM";
     public static final int MILLIS_FOR_EXIT = 2000;
+    public static final String GITHUB_LAST_APK_URL = "https://github.com/i30mb1/AD2/blob/master/app/release/app-release.apk?raw=true";
+    private static final String DIALOG_PRE_DONATE_LAST_DAY = "DIALOG_PRE_DONATE_LAST_DAY";
     public ObservableInt observableLastItem = new ObservableInt(1);
     private int enterCounter = 0;
     private boolean doubleBackToExitPressedOnce = false;
@@ -166,6 +171,7 @@ public class MainActivity extends BaseActivity {
     public void log(String text) {
         if (adapter != null) {
             adapter.add(text);
+            adapter.notifyDataSetChanged();
             bindingDrawer.rvDrawer.scrollToPosition(adapter.getItemCount() - 1);
         }
     }
@@ -234,7 +240,7 @@ public class MainActivity extends BaseActivity {
 
     @SuppressWarnings("ConstantConditions")
     private void loadNewVersionFromGitHub() {
-        DownloadManager.Request request = new DownloadManager.Request(Uri.parse(MySharedPreferences.GITHUB_LAST_APK_URL));
+        DownloadManager.Request request = new DownloadManager.Request(Uri.parse(GITHUB_LAST_APK_URL));
         request.setDescription(getString(R.string.all_new_version));
         request.setTitle(getString(R.string.app_name));
         request.setNotificationVisibility(DownloadManager.Request.VISIBILITY_VISIBLE_NOTIFY_COMPLETED);
@@ -246,30 +252,25 @@ public class MainActivity extends BaseActivity {
 
     private void incCountEnter() {
         enterCounter++;
-//        if (enterCounter > COUNTER_DIALOG_RATE) checkIfNeedShowDialogRate();
-//        if (enterCounter > COUNTER_DIALOG_DONATE) checkIfNeedShowDialogDonate();
+        //todo ДОДЕЛАТЬ ДИАЛОГИ Ы
+        if (enterCounter > COUNTER_DIALOG_RATE) showDialogRate();
+        if (enterCounter > COUNTER_DIALOG_DONATE) showPreDialogDonate();
     }
 
-    private void showPreDialogDonate() {
-//        if (!sp.getBoolean(SUBSCRIPTION, false) && !sp.getString(IS_DAY_FOR_DONATE, "0").equals(MySharedPreferences.getTodayDate())) {
-//            sp.edit().putString(IS_DAY_FOR_DONATE, MySharedPreferences.getTodayDate()).apply();
-//
-//            final AlertDialog.Builder builder = new AlertDialog.Builder(this);
-//            builder.setView(R.layout.dialog_donate_me);
-//            final AlertDialog dialog = builder.show();
-//            dialog.findViewById(R.id.dialog_donate_me_ok).setOnClickListener(new View.OnClickListener() {
-//                @Override
-//                public void onClick(View v) {
-//                    Intent intent = new Intent(MainActivity.this, SettingActivity.class);
-//                    intent.putExtra(INTENT_SHOW_DIALOG_DONATE, true);
-//                    startActivity(intent);
-//                    dialog.dismiss();
-//                }
-//            });
-//
-//            FirebaseAnalytics firebaseAnalytics = FirebaseAnalytics.getInstance(this);
-//            firebaseAnalytics.logEvent(FIREBASE_DIALOG_DONATE_SAW, null);
-//        }
+    @SuppressWarnings("ConstantConditions")
+    void showPreDialogDonate() {
+        if (PreferenceManager.getDefaultSharedPreferences(this).getBoolean(SUBSCRIPTION, false)) return;
+
+        final AlertDialog.Builder builder = new AlertDialog.Builder(this);
+        DialogPreDonateBinding binding = DataBindingUtil.inflate(getLayoutInflater(), R.layout.dialog_pre_donate, null, false);
+        builder.setView(binding.getRoot());
+
+        AlertDialog dialog = builder.create();
+        dialog.getWindow().getAttributes().windowAnimations = R.style.DialogTheme;
+        dialog.show();
+
+        FirebaseAnalytics firebaseAnalytics = FirebaseAnalytics.getInstance(this);
+        firebaseAnalytics.logEvent(FIREBASE_DIALOG_DONATE_SAW, null);
     }
 
     @SuppressWarnings("ConstantConditions")
@@ -287,6 +288,12 @@ public class MainActivity extends BaseActivity {
             FirebaseAnalytics firebaseAnalytics = FirebaseAnalytics.getInstance(this);
             firebaseAnalytics.logEvent(FIREBASE_DIALOG_RATE_SAW, null);
         }
+    }
+
+    public void startSettingWithDonate() {
+        Intent intent = new Intent(MainActivity.this, SettingActivity.class);
+        intent.putExtra(INTENT_SHOW_DIALOG_DONATE, true);
+        startActivity(intent);
     }
 
     public void openAppStore() {
