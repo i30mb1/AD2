@@ -84,9 +84,11 @@ public class SplashActivity extends BaseActivity {
     }
 
     private void startPulsing() {
-        ObjectAnimator scaleDown = ObjectAnimator.ofPropertyValuesHolder(binding.ivActivitySplash,
+        ObjectAnimator scaleDown = ObjectAnimator.ofPropertyValuesHolder(
+                binding.ivActivitySplash,
                 PropertyValuesHolder.ofFloat(View.SCALE_X, 1.1f),
-                PropertyValuesHolder.ofFloat(View.SCALE_Y, 1.1f));
+                PropertyValuesHolder.ofFloat(View.SCALE_Y, 1.1f)
+        );
         scaleDown.setDuration(1000L);
         scaleDown.setRepeatCount(ObjectAnimator.INFINITE);
         scaleDown.setRepeatMode(ObjectAnimator.REVERSE);
@@ -109,7 +111,7 @@ public class SplashActivity extends BaseActivity {
         TransitionManager.beginDelayedTransition((ViewGroup) binding.getRoot(), transitionSet);
         //изменяем текущие параметры view на параметры хранящиеся в constraintSet
 //        constraintSet.applyTo((ConstraintLayout) binding.getRoot());
-        //именяем параметры view которые начнуть анимироваться согласно transitionSet
+        //изменяем параметры view которые начнуть анимироваться согласно transitionSet
         ViewGroup.LayoutParams layoutParams = binding.ivActivitySplash.getLayoutParams();
         layoutParams.width = 1;
         layoutParams.height = 1;

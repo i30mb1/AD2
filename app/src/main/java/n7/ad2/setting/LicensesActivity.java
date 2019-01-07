@@ -1,6 +1,7 @@
 package n7.ad2.setting;
 
 import android.animation.ArgbEvaluator;
+import android.animation.ObjectAnimator;
 import android.animation.ValueAnimator;
 import android.databinding.DataBindingUtil;
 import android.media.MediaPlayer;
@@ -11,16 +12,16 @@ import android.support.design.widget.Snackbar;
 import android.view.View;
 
 import n7.ad2.R;
-import n7.ad2.utils.BaseActivity;
 import n7.ad2.databinding.ActivityLicenseBinding;
+import n7.ad2.utils.BaseActivity;
 
 import static n7.ad2.setting.SettingActivity.SUBSCRIPTION;
 import static n7.ad2.splash.SplashViewModel.FREE_SUBSCRIPTION_DAYS;
 
 public class LicensesActivity extends BaseActivity {
 
-    private Handler handler;
     ActivityLicenseBinding binding;
+    private Handler handler;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -53,7 +54,13 @@ public class LicensesActivity extends BaseActivity {
         handler.post(new Runnable() {
             @Override
             public void run() {
-                ValueAnimator colorAnimation = ValueAnimator.ofObject(new ArgbEvaluator(), 0, getResources().getColor(R.color.colorAccent_Dark), getResources().getColor(R.color.colorAccent), 0);
+                ValueAnimator colorAnimation = ValueAnimator.ofObject(
+                        new ArgbEvaluator(),
+                        0,
+                        getResources().getColor(R.color.colorAccent_Dark),
+                        getResources().getColor(R.color.colorAccent),
+                        0
+                );
                 colorAnimation.setDuration(2000);
                 colorAnimation.addUpdateListener(new ValueAnimator.AnimatorUpdateListener() {
                     @Override

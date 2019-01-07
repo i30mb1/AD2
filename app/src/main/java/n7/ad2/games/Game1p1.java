@@ -10,6 +10,9 @@ import android.os.Bundle;
 import android.os.CountDownTimer;
 import android.os.Handler;
 import android.view.View;
+import android.view.animation.AlphaAnimation;
+import android.view.animation.AnimationSet;
+import android.view.animation.ScaleAnimation;
 import android.widget.TextView;
 
 import com.squareup.picasso.Picasso;
@@ -163,15 +166,13 @@ public class Game1p1 extends BaseActivity {
     }
 
     public void expandAnimation() {
-        binding.tvActivityGame1P1Title.animate().withEndAction(new Runnable() {
-            @Override
-            public void run() {
-                binding.tvActivityGame1P1Title.clearAnimation();
-                binding.tvActivityGame1P1Title.setVisibility(View.VISIBLE);
-            }
-        })
-                .alpha(0F).scaleY(2F).scaleX(2F).setDuration(1000)
-                .start();
+        AnimationSet animationSet = new AnimationSet(false);
+        AlphaAnimation alphaAnimation = new AlphaAnimation(1f, 0f);
+        ScaleAnimation scaleAnimation = new ScaleAnimation(1f, 5f, 1f, 5f,binding.ivActivityGame1P1Spell.getWidth()/2,binding.ivActivityGame1P1Spell.getHeight()/2);
+        animationSet.addAnimation(scaleAnimation);
+        animationSet.addAnimation(alphaAnimation);
+        animationSet.setDuration(300);
+        binding.ivActivityGame1P1Spell.startAnimation(animationSet);
     }
 
     public void check(View view) {

@@ -87,6 +87,7 @@
             android:layout_height="wrap_content"
             android:layout_marginBottom="8dp"
             android:gravity="center"
+            android:animateLayoutChanges="true"
             android:orientation="horizontal"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
@@ -158,10 +159,14 @@
         </LinearLayout>
 
         <LinearLayout
-            android:layout_width="wrap_content"
+            android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_marginTop="8dp"
+            android:layout_marginEnd="8dp"
+            android:animateLayoutChanges="true"
             android:orientation="horizontal"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
             app:layout_constraintStart_toStartOf="@+id/iv_activity_game1P1_spell"
             app:layout_constraintTop_toBottomOf="@+id/iv_activity_game1P1_spell">
 
@@ -169,7 +174,6 @@
                 android:layout_width="15dp"
                 android:layout_height="15dp"
                 android:layout_margin="5dp"
-                android:layout_weight="1"
                 android:contentDescription="@string/setting_tell_friend_title"
                 android:elevation="2dp"
                 app:srcCompat="@color/colorAccent"
@@ -182,7 +186,6 @@
                 android:layout_width="15dp"
                 android:layout_height="15dp"
                 android:layout_margin="5dp"
-                android:layout_weight="1"
                 android:contentDescription="@string/setting_tell_friend_title"
                 android:elevation="2dp"
                 android:visibility="@{activity.currentSpellLVL>0?View.VISIBLE:View.GONE}"
@@ -192,26 +195,24 @@
                 tools:targetApi="lollipop" />
 
             <ImageView
-                android:visibility="@{activity.currentSpellLVL>1?View.VISIBLE:View.GONE}"
                 android:id="@+id/iv_activity_game1P1_3"
                 android:layout_width="15dp"
                 android:layout_height="15dp"
                 android:layout_margin="5dp"
-                android:layout_weight="1"
                 android:contentDescription="@string/setting_tell_friend_title"
                 android:elevation="2dp"
+                android:visibility="@{activity.currentSpellLVL>1?View.VISIBLE:View.GONE}"
                 app:srcCompat="@color/colorAccent"
                 tools:targetApi="lollipop" />
 
             <ImageView
-                android:visibility="@{activity.currentSpellLVL>2?View.VISIBLE:View.GONE}"
                 android:id="@+id/iv_activity_game1P1_4"
                 android:layout_width="15dp"
                 android:layout_height="15dp"
                 android:layout_margin="5dp"
-                android:layout_weight="1"
                 android:contentDescription="@string/setting_tell_friend_title"
                 android:elevation="2dp"
+                android:visibility="@{activity.currentSpellLVL>2?View.VISIBLE:View.GONE}"
                 app:srcCompat="@color/colorAccent"
                 tools:targetApi="lollipop" />
         </LinearLayout>
