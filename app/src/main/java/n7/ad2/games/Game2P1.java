@@ -6,7 +6,6 @@ import android.animation.PropertyValuesHolder;
 import android.animation.ValueAnimator;
 import android.app.Activity;
 import android.content.Context;
-import android.content.Intent;
 import android.graphics.Point;
 import android.media.AudioManager;
 import android.media.SoundPool;
@@ -31,9 +30,7 @@ import java.util.Random;
 
 import n7.ad2.R;
 
-import static n7.ad2.games.GameFragment.SCORE_GAME2_GAME_FRAGMENT;
-
-public class Game2Persons1Activity extends AppCompatActivity implements View.OnClickListener {
+public class Game2P1 extends AppCompatActivity implements View.OnClickListener {
 
     private static long END_TIME = 0;
     private long time = 30;
@@ -74,7 +71,7 @@ public class Game2Persons1Activity extends AppCompatActivity implements View.OnC
         initDisplayWidthHeight();
         setCreepsInCenter();
 
-        startPulsing(iv_activity_game2_persons1_creep,800L);
+        startPulsing(iv_activity_game2_persons1_creep, 800L);
         startTimer();
     }
 
@@ -85,7 +82,7 @@ public class Game2Persons1Activity extends AppCompatActivity implements View.OnC
 
     private void initView() {
         tv_activity_game2_persons1_desc_apm = findViewById(R.id.tv_activity_game2_persons1_desc_apm);
-        tv_fragment_game_title_game2 = findViewById(R.id.tv_fragment_game_title_game2);
+        tv_fragment_game_title_game2 = findViewById(R.id.tv_fragment_game_G2);
         tv_activity_game2_desc_clicks = findViewById(R.id.tv_activity_game2_desc_clicks);
         tv_activity_game2_desc_remain = findViewById(R.id.tv_activity_game2_desc_remain);
         tv_activity_game2_persons1_equal = findViewById(R.id.tv_activity_game2_persons1_equal);
@@ -105,8 +102,8 @@ public class Game2Persons1Activity extends AppCompatActivity implements View.OnC
     private void setCreepsInCenter() {
         for (View view : new View[]{iv_activity_game2_persons1_creep, iv_activity_game2_persons1_creep2, iv_activity_game2_persons1_creep3, iv_activity_game2_persons1_creep4}) {
             ConstraintLayout.LayoutParams absParams = (ConstraintLayout.LayoutParams) view.getLayoutParams();
-            absParams.topMargin = height/2;
-            absParams.leftMargin = width/2;
+            absParams.topMargin = height / 2;
+            absParams.leftMargin = width / 2;
             view.setLayoutParams(absParams);
         }
     }
@@ -142,11 +139,7 @@ public class Game2Persons1Activity extends AppCompatActivity implements View.OnC
     }
 
     private void passResultAndFinish(Handler handler) {
-        Bundle bundle = new Bundle();
-        bundle.putString(SCORE_GAME2_GAME_FRAGMENT, currentAPM());
-        Intent intent = new Intent();
-        intent.putExtras(bundle);
-        setResult(Activity.RESULT_OK, intent);
+        setResult(Activity.RESULT_OK);
         handler.postDelayed(new Runnable() {
             @Override
             public void run() {
@@ -213,7 +206,7 @@ public class Game2Persons1Activity extends AppCompatActivity implements View.OnC
         }
     }
 
-    private void startPulsing(View view,long duration) {
+    private void startPulsing(View view, long duration) {
         ObjectAnimator scaleDown = ObjectAnimator.ofPropertyValuesHolder(view,
                 PropertyValuesHolder.ofFloat(View.SCALE_X, 0.9f),
                 PropertyValuesHolder.ofFloat(View.SCALE_Y, 0.9f));
@@ -256,13 +249,13 @@ public class Game2Persons1Activity extends AppCompatActivity implements View.OnC
         incClicks();
         moveCreep(v);
         if (clicks == 10) {
-            startPulsing(iv_activity_game2_persons1_creep2,700L);
+            startPulsing(iv_activity_game2_persons1_creep2, 700L);
             iv_activity_game2_persons1_creep2.setVisibility(View.VISIBLE);
         }
         if (clicks == 20) {
-            startPulsing(iv_activity_game2_persons1_creep3,750L);
+            startPulsing(iv_activity_game2_persons1_creep3, 750L);
             iv_activity_game2_persons1_creep3.setVisibility(View.VISIBLE);
-            startPulsing(iv_activity_game2_persons1_creep4,650L);
+            startPulsing(iv_activity_game2_persons1_creep4, 650L);
             iv_activity_game2_persons1_creep4.setVisibility(View.VISIBLE);
         }
     }

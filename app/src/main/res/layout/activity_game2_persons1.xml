@@ -5,7 +5,7 @@
     android:background="?colorPrimary"
     android:id="@+id/root"
     xmlns:tools="http://schemas.android.com/tools"
-    tools:context=".games.Game2Persons1Activity"
+    tools:context=".games.Game2P1"
     xmlns:android="http://schemas.android.com/apk/res/android">
 
     <View
@@ -24,7 +24,7 @@
         app:layout_constraintTop_toTopOf="parent" />
 
     <TextView
-        android:id="@+id/tv_fragment_game_title_game2"
+        android:id="@+id/tv_fragment_game_G2"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="8dp"
@@ -64,7 +64,7 @@
         android:text="CLICKS"
         android:textColor="?android:textColorPrimary"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/tv_fragment_game_title_game2" />
+        app:layout_constraintTop_toBottomOf="@+id/tv_fragment_game_G2" />
 
     <TextView
         android:id="@+id/tv_activity_game2_persons1_timer"
@@ -89,7 +89,7 @@
         android:textAllCaps="true"
         android:textColor="?android:textColorPrimary"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/tv_fragment_game_title_game2" />
+        app:layout_constraintTop_toBottomOf="@+id/tv_fragment_game_G2" />
 
     <TextView
         android:id="@+id/tv_activity_game2_persons1_final_score"

@@ -112,7 +112,7 @@
     <string name="all_buy">Buy</string>
     <string name="all_come_back_tomorrow">Come back tomorrow or buy Subscription</string>
     <string name="game_fragment_earn_5_premium">You earn 5 days premium</string>
-    <string name="fragment_game_title_game1">how many cost this spell</string>
+    <string name="fragment_game_G1">how many cost this spell</string>
     <string name="fragment_guide_lane" translatable="false">%s</string>
     <string name="activity_twitch_game" translatable="false">Quality</string>
     <string name="fragment_guide_further_items">Items</string>
@@ -159,5 +159,9 @@
     <string name="dialog_donate_me_text2">WE NEED YOU!</string>
     <string name="dialog_open_stream_hint">Channel name</string>
     <string name="item_list_tournament_game_notification">notification</string>
+    <string name="fragment_game_1_player">1 PLAYER</string>
+    <string name="fragment_game_2_players">2 PLAYERS</string>
+    <string name="fragment_game_G2">SHOW ME YOUR APM</string>
+    <string name="activity_game1P1_second_remaining" translatable="false">second_remaining_%d</string>
 
 </resources>

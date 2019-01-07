@@ -5,13 +5,9 @@
     package="n7.ad2">
 
     <uses-permission android:name="android.permission.INTERNET" />
-    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
     <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
     <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
-    <uses-permission android:name="android.permission.WRITE_SETTINGS" />
-    <uses-permission android:name="android.permission.CHANGE_CONFIGURATION" />
     <uses-permission android:name="android.permission.MODIFY_AUDIO_SETTINGS" />
-    <uses-permission android:name="android.permission.VIBRATE" />
     <uses-permission android:name="com.android.vending.BILLING" />
 
     <application
@@ -62,16 +58,13 @@
 
         <activity android:name=".main.DotabuffActivity" />
         <activity
-            android:name=".games.Game1Activity"
-            android:screenOrientation="portrait" />
-        <activity
             android:name=".items.full.ItemFullActivity"
             android:screenOrientation="portrait" />
         <activity
-            android:name=".games.Game1HardActivity"
-            android:screenOrientation="portrait" />
+            android:name=".games.Game2P1"
+            android:screenOrientation="portrait"/>
         <activity
-            android:name=".games.Game2Persons1Activity"
+            android:name=".games.Game1p1"
             android:screenOrientation="portrait"/>
         <meta-data
             android:name="io.fabric.ApiKey"
