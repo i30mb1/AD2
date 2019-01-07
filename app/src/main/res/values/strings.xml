@@ -162,6 +162,6 @@
     <string name="fragment_game_1_player">1 PLAYER</string>
     <string name="fragment_game_2_players">2 PLAYERS</string>
     <string name="fragment_game_G2">SHOW ME YOUR APM</string>
-    <string name="activity_game1P1_second_remaining" translatable="false">second_remaining_%d</string>
+    <string name="activity_game1P1_second_remaining" translatable="false">timer_%d_remit</string>
 
 </resources>

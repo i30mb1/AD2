@@ -14,6 +14,7 @@
     </data>
 
     <android.support.constraint.ConstraintLayout
+        android:id="@+id/cl_drawer"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:background="?android:windowBackground">
@@ -28,6 +29,7 @@
             tools:listitem="@layout/item_list_plain" />
 
         <ImageView
+            android:onLongClick="@{activity::toggleSecretActivity}"
             android:id="@+id/iv_drawer_setting"
             android:layout_width="50dp"
             android:layout_height="50dp"
@@ -72,23 +74,27 @@
         <!--android:textColor="?android:colorAccent"-->
 
         <LinearLayout
-            android:layout_width="match_parent"
+            android:id="@+id/ll_drawer_vertical"
+            android:layout_width="300dp"
             android:layout_height="wrap_content"
             android:orientation="vertical"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintTop_toTopOf="parent">
 
             <LinearLayout
+                android:id="@+id/linearLayout1"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:orientation="horizontal">
 
                 <View
+                    android:id="@+id/view1"
                     android:layout_width="3dp"
                     android:layout_height="match_parent"
                     android:background="@{activity.observableLastItem==1? @color/colorAccent :@color/textColorSecondary}" />
 
                 <TextView
+                    android:id="@+id/textView1"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:foreground="?android:attr/selectableItemBackground"
@@ -102,16 +108,19 @@
             </LinearLayout>
 
             <LinearLayout
+                android:id="@+id/linearLayout2"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:orientation="horizontal">
 
                 <View
+                    android:id="@+id/view2"
                     android:layout_width="3dp"
                     android:layout_height="match_parent"
                     android:background="@{activity.observableLastItem==2? @color/colorAccent :@color/textColorSecondary}" />
 
                 <TextView
+                    android:id="@+id/textView2"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:foreground="?android:attr/selectableItemBackground"
@@ -125,16 +134,19 @@
 
 
             <LinearLayout
+                android:id="@+id/linearLayout3"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:orientation="horizontal">
 
                 <View
+                    android:id="@+id/view3"
                     android:layout_width="3dp"
                     android:layout_height="match_parent"
                     android:background="@{activity.observableLastItem==3? @color/colorAccent :@color/textColorSecondary}" />
 
                 <TextView
+                    android:id="@+id/textView3"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:foreground="?android:attr/selectableItemBackground"
@@ -147,17 +159,20 @@
             </LinearLayout>
 
             <LinearLayout
+                android:id="@+id/linearLayout4"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:orientation="horizontal">
 
                 <View
+                    android:id="@+id/view4"
                     android:layout_width="3dp"
                     android:layout_height="match_parent"
                     android:background="@{activity.observableLastItem==4? @color/colorAccent :@color/textColorSecondary}" />
 
 
                 <TextView
+                    android:id="@+id/textView4"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:foreground="?android:attr/selectableItemBackground"
@@ -171,16 +186,19 @@
 
 
             <LinearLayout
+                android:id="@+id/linearLayout5"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:orientation="horizontal">
 
                 <View
+                    android:id="@+id/view5"
                     android:layout_width="3dp"
                     android:layout_height="match_parent"
                     android:background="@{activity.observableLastItem==5? @color/colorAccent :@color/textColorSecondary}" />
 
                 <TextView
+                    android:id="@+id/textView5"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:foreground="?android:attr/selectableItemBackground"
@@ -194,16 +212,19 @@
             </LinearLayout>
 
             <LinearLayout
+                android:id="@+id/linearLayout6"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:orientation="horizontal">
 
                 <View
+                    android:id="@+id/view6"
                     android:layout_width="3dp"
                     android:layout_height="match_parent"
                     android:background="@{activity.observableLastItem==6? @color/colorAccent :@color/textColorSecondary}" />
 
                 <TextView
+                    android:id="@+id/textView6"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:foreground="?android:attr/selectableItemBackground"

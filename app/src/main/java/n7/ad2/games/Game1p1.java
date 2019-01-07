@@ -162,6 +162,18 @@ public class Game1p1 extends BaseActivity {
         currentSpellLVL.set(i);
     }
 
+    public void expandAnimation() {
+        binding.tvActivityGame1P1Title.animate().withEndAction(new Runnable() {
+            @Override
+            public void run() {
+                binding.tvActivityGame1P1Title.clearAnimation();
+                binding.tvActivityGame1P1Title.setVisibility(View.VISIBLE);
+            }
+        })
+                .alpha(0F).scaleY(2F).scaleX(2F).setDuration(1000)
+                .start();
+    }
+
     public void check(View view) {
         lock.set(true);
         boolean isRight;

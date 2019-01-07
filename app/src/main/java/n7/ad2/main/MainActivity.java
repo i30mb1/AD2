@@ -19,13 +19,16 @@ import android.support.constraint.ConstraintLayout;
 import android.support.constraint.ConstraintSet;
 import android.support.design.widget.Snackbar;
 import android.support.transition.ChangeBounds;
+import android.support.transition.Fade;
 import android.support.transition.Transition;
 import android.support.transition.TransitionManager;
+import android.support.transition.TransitionSet;
 import android.support.v4.app.FragmentTransaction;
 import android.support.v7.app.AlertDialog;
 import android.support.v7.widget.LinearLayoutManager;
+import android.view.View;
 import android.view.ViewGroup;
-import android.view.animation.AccelerateDecelerateInterpolator;
+import android.view.animation.BounceInterpolator;
 import android.view.inputmethod.InputMethodManager;
 
 import com.google.firebase.analytics.FirebaseAnalytics;
@@ -81,7 +84,7 @@ public class MainActivity extends BaseActivity {
     private DrawerBinding bindingDrawer;
     private boolean shouldUpdateFromMarket;
     private MainViewModel viewModel;
-    private SlidingRootNav drawable;
+    private SlidingRootNav drawer;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -100,6 +103,7 @@ public class MainActivity extends BaseActivity {
         setupDrawer();
         setupRecyclerView();
         setupListeners();
+        setupSecretActivity();
 
         setLastFragment();
 
@@ -204,7 +208,7 @@ public class MainActivity extends BaseActivity {
 //            new Handler().postDelayed(new Runnable() {
 //                @Override
 //                public void run() {
-//                    drawable.closeMenu();
+//                    drawer.closeMenu();
 //                }
 //            }, 50);
     }
@@ -215,11 +219,21 @@ public class MainActivity extends BaseActivity {
         currentSet = constraintSetOrigin;
     }
 
-    private void toggleSecretActivity() {
+    public boolean toggleSecretActivity(View view) {
         currentSet = (currentSet == constraintSetOrigin ? constraintSetHidden : constraintSetOrigin);
-        Transition transition = new ChangeBounds().setInterpolator(new AccelerateDecelerateInterpolator()).setDuration(1000);
-        TransitionManager.beginDelayedTransition((ViewGroup) bindingDrawer.getRoot(), transition);
-        currentSet.applyTo((ConstraintLayout) bindingDrawer.getRoot());
+        TransitionSet transitionSet = new TransitionSet();
+        Transition transition = new ChangeBounds().setInterpolator(new BounceInterpolator()).setDuration(3000);
+        Transition fadeOut = new Fade(2).setDuration(3000);
+        transitionSet.addTransition(transition).addTransition(fadeOut);
+        //после этого метода все изменения внутри ViewGroup будут анимированы
+        TransitionManager.beginDelayedTransition((ViewGroup) bindingDrawer.getRoot(), transitionSet);
+//        TransitionManager.beginDelayedTransition((ViewGroup) bindingDrawer.getRoot(), new AutoTransition());
+        //применяет все изменения находящиеся в currentSet с анимациями из transitionSet
+//        currentSet.applyTo((ConstraintLayout) bindingDrawer.getRoot());
+        ViewGroup.LayoutParams layoutParams = bindingDrawer.view1.getLayoutParams();
+        layoutParams.width = 300;
+        bindingDrawer.view1.setLayoutParams(layoutParams);
+        return true;
     }
 
     public void loadNewVersion() {
@@ -314,7 +328,7 @@ public class MainActivity extends BaseActivity {
     }
 
     private void setupDrawer() {
-        drawable = new SlidingRootNavBuilder(this)
+        drawer = new SlidingRootNavBuilder(this)
                 .withToolbarMenuToggle(bindingActivity.toolbarActivityMain)
                 .withDragDistance(110)
                 .withRootViewScale(0.65f)
@@ -334,7 +348,7 @@ public class MainActivity extends BaseActivity {
                 })
                 .withMenuView(bindingDrawer.getRoot())
                 .inject();
-        drawable.openMenu();
+        drawer.openMenu();
     }
 
     @Override
@@ -387,4 +401,5 @@ public class MainActivity extends BaseActivity {
             }
         }, MILLIS_FOR_EXIT);
     }
+
 }

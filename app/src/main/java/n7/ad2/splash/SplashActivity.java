@@ -23,7 +23,9 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.view.Window;
 import android.view.WindowManager;
+import android.view.animation.AnticipateInterpolator;
 import android.view.animation.AnticipateOvershootInterpolator;
+import android.view.animation.BounceInterpolator;
 
 import n7.ad2.R;
 import n7.ad2.utils.BaseActivity;
@@ -49,33 +51,23 @@ public class SplashActivity extends BaseActivity {
         viewModel = ViewModelProviders.of(this).get(SplashViewModel.class);
         binding = DataBindingUtil.setContentView(this, R.layout.activity_splash_normal);
         binding.setViewModel(viewModel);
+        binding.setActivity(this);
         binding.executePendingBindings();
 
         setupRecyclerView();
-        setupAnimationOnSplashLogo();
-
         startPulsing();
 
         viewModel.startMainActivity.observe(this, new Observer<Void>() {
             @Override
             public void onChanged(@Nullable Void aVoid) {
                 if (getLifecycle().getCurrentState() == Lifecycle.State.RESUMED) {
-                    startNewActivityWithAnimation();
+                    startMainActivity(null);
                 }
             }
         });
     }
 
-    private void setupAnimationOnSplashLogo() {
-        binding.ivActivitySplash.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                startNewActivityWithAnimation();
-            }
-        });
-    }
-
-    private void startNewActivityWithAnimation() {
+    public void startMainActivity(View view) {
         new Handler().postDelayed(new Runnable() {
             @Override
             public void run() {
@@ -102,20 +94,26 @@ public class SplashActivity extends BaseActivity {
     }
 
     private void startConstraintAnimation() {
-        //содержит информацию о всех состояних view
-        ConstraintSet constraintSet = new ConstraintSet();
-        constraintSet.clone(this, R.layout.activity_splash_invisible);
-
-        TransitionSet transitionSet = new TransitionSet();
+        //содержит информацию о всех состояних view в layout
+//        ConstraintSet constraintSet = new ConstraintSet();
+//        constraintSet.clone(this, R.layout.activity_splash_invisible);
+        //хранит транзакции
+        TransitionSet transitionSet = new TransitionSet()
+                .addTransition(new ChangeBounds().setInterpolator(new AnticipateInterpolator()))
+                .setDuration(ANIMATION_DURATION);
 //        Transition slide = new Slide(Gravity.START); //появление из любого края активити
 //        Transition explode = new Explode(); //почти как Slide но может выбигать из любой точки
 //        Transition changeImageTransform = new ChangeImageTransform();//анимирует матричный переход изображений внутри ImageView
-        Transition fade = new Fade().setDuration(ANIMATION_DURATION).addTarget(binding.ivActivitySplash);
-        Transition changeBoundsIV = new ChangeBounds().setDuration(ANIMATION_DURATION).setInterpolator(new AnticipateOvershootInterpolator(2.0f)).addTarget(binding.ivActivitySplash);
-        transitionSet.addTransition(fade).addTransition(changeBoundsIV);
-        transitionSet.setOrdering(TransitionSet.ORDERING_TOGETHER);
-        TransitionManager.beginDelayedTransition((ViewGroup) binding.getRoot(), transitionSet);// вызываем метод, говорящий о том, что мы хотим анимировать следующие изменения внутри constraintLayout
-        constraintSet.applyTo((ConstraintLayout) binding.getRoot());// применяем изменения
+//        Transition fadeOut = new Fade(2).setDuration(ANIMATION_DURATION);
+        //анимируем все изменения внутри ViewGroup согласно установленному TransitionSet или по умолчанию ( new AutoTransition() )
+        TransitionManager.beginDelayedTransition((ViewGroup) binding.getRoot(), transitionSet);
+        //изменяем текущие параметры view на параметры хранящиеся в constraintSet
+//        constraintSet.applyTo((ConstraintLayout) binding.getRoot());
+        //именяем параметры view которые начнуть анимироваться согласно transitionSet
+        ViewGroup.LayoutParams layoutParams = binding.ivActivitySplash.getLayoutParams();
+        layoutParams.width = 1;
+        layoutParams.height = 1;
+        binding.ivActivitySplash.setLayoutParams(layoutParams);
     }
 
     private void setupRecyclerView() {

@@ -1,6 +1,7 @@
 package n7.ad2.streams;
 
 
+import android.animation.LayoutTransition;
 import android.content.BroadcastReceiver;
 import android.content.Context;
 import android.content.Intent;
@@ -108,6 +109,8 @@ public class MultiStreamsFragment extends Fragment {
 
 //        showInstructionDialog();
         ll_fragment_multi_streams = view.findViewById(R.id.ll_fragment_multi_streams);
+        LayoutTransition layoutTransition = ll_fragment_multi_streams.getLayoutTransition();
+        layoutTransition.enableTransitionType(LayoutTransition.CHANGING);
         FragmentManager fragmentManager = getFragmentManager();
         if (fragmentManager != null) {
             FragmentTransaction fragmentTransaction = fragmentManager.beginTransaction();

@@ -14,12 +14,13 @@
     </data>
 
     <android.support.constraint.ConstraintLayout
+        android:id="@+id/cl_drawer"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:background="?android:windowBackground">
 
         <android.support.v7.widget.RecyclerView
-            android:id="@+id/rv"
+            android:id="@+id/rv_drawer"
             android:layout_width="wrap_content"
             android:layout_height="0dp"
             app:layout_constraintBottom_toBottomOf="parent"
@@ -28,13 +29,15 @@
             tools:listitem="@layout/item_list_plain" />
 
         <ImageView
-            android:id="@+id/iv_setting"
+            android:id="@+id/iv_drawer_setting"
             android:layout_width="50dp"
             android:layout_height="50dp"
+            android:layout_marginStart="8dp"
             android:layout_marginBottom="8dp"
             android:background="?attr/selectableItemBackground"
             android:contentDescription="@string/setting_tell_friend_title"
             android:onClick="@{()->viewModel.startActivityOptions(context)}"
+            android:onLongClick="@{activity::toggleSecretActivity}"
             android:scaleType="center"
             android:tint="?android:textColorPrimary"
             app:layout_constraintBottom_toBottomOf="parent"
@@ -43,7 +46,8 @@
             app:srcCompat="@drawable/ic_setting" />
 
         <ImageView
-            android:id="@+id/iv_update"
+            android:id="@+id/iv_drawer_update"
+            isBusy="@{viewModel.isUpdating}"
             android:layout_width="50dp"
             android:layout_height="50dp"
             android:layout_centerVertical="true"
@@ -53,13 +57,12 @@
             android:onClick="@{()->viewModel.startUpdate(true)}"
             android:scaleType="center"
             android:tint="?android:textColorPrimary"
-            app:isBusy="@{viewModel.isUpdating}"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintRight_toLeftOf="parent"
             app:srcCompat="@drawable/ic_update" />
 
         <TextView
-            android:id="@+id/tv_message"
+            android:id="@+id/tv_drawer_message"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginStart="8dp"
@@ -72,7 +75,8 @@
         <!--android:textColor="?android:colorAccent"-->
 
         <LinearLayout
-            android:layout_width="wrap_content"
+            android:id="@+id/ll_drawer_vertical"
+            android:layout_width="300dp"
             android:layout_height="wrap_content"
             android:orientation="vertical"
             app:layout_constraintBottom_toBottomOf="parent"
@@ -80,16 +84,19 @@
             app:layout_constraintTop_toTopOf="parent">
 
             <LinearLayout
+                android:id="@+id/linearLayout1"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:orientation="horizontal">
 
                 <View
+                    android:id="@+id/view1"
                     android:layout_width="3dp"
                     android:layout_height="match_parent"
                     android:background="@{activity.observableLastItem==1? @color/colorAccent :@color/textColorSecondary}" />
 
                 <TextView
+                    android:id="@+id/textView1"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:foreground="?android:attr/selectableItemBackground"
@@ -97,22 +104,25 @@
                     android:onClick="@{()-> activity.setFragment(1,true)}"
                     android:padding="6dp"
                     android:text="@string/heroes"
-                    android:textColor="?android:textColorPrimary"
+                    android:textColor="@{activity.observableLastItem==1? @color/colorAccent :@color/textColorSecondary}"
                     android:textSize="14sp" />
 
             </LinearLayout>
 
             <LinearLayout
+                android:id="@+id/linearLayout2"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:orientation="horizontal">
 
                 <View
+                    android:id="@+id/view2"
                     android:layout_width="3dp"
                     android:layout_height="match_parent"
                     android:background="@{activity.observableLastItem==2? @color/colorAccent :@color/textColorSecondary}" />
 
                 <TextView
+                    android:id="@+id/textView2"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:foreground="?android:attr/selectableItemBackground"
@@ -120,22 +130,25 @@
                     android:onClick="@{()-> activity.setFragment(2,true)}"
                     android:padding="6dp"
                     android:text="@string/items"
-                    android:textColor="?android:textColorPrimary"
+                    android:textColor="@{activity.observableLastItem==2? @color/colorAccent :@color/textColorSecondary}"
                     android:textSize="14sp" />
             </LinearLayout>
 
 
             <LinearLayout
+                android:id="@+id/linearLayout3"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:orientation="horizontal">
 
                 <View
+                    android:id="@+id/view3"
                     android:layout_width="3dp"
                     android:layout_height="match_parent"
                     android:background="@{activity.observableLastItem==3? @color/colorAccent :@color/textColorSecondary}" />
 
                 <TextView
+                    android:id="@+id/textView3"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:foreground="?android:attr/selectableItemBackground"
@@ -143,22 +156,25 @@
                     android:onClick="@{()-> activity.setFragment(3,true)}"
                     android:padding="6dp"
                     android:text="@string/news"
-                    android:textColor="?android:textColorPrimary"
+                    android:textColor="@{activity.observableLastItem==3? @color/colorAccent :@color/textColorSecondary}"
                     android:textSize="14sp" />
             </LinearLayout>
 
             <LinearLayout
+                android:id="@+id/linearLayout4"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:orientation="horizontal">
 
                 <View
+                    android:id="@+id/view4"
                     android:layout_width="3dp"
                     android:layout_height="match_parent"
                     android:background="@{activity.observableLastItem==4? @color/colorAccent :@color/textColorSecondary}" />
 
 
                 <TextView
+                    android:id="@+id/textView4"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:foreground="?android:attr/selectableItemBackground"
@@ -166,22 +182,25 @@
                     android:onClick="@{()-> activity.setFragment(4,true)}"
                     android:padding="6dp"
                     android:text="@string/tournaments"
-                    android:textColor="?android:textColorPrimary"
+                    android:textColor="@{activity.observableLastItem==4? @color/colorAccent :@color/textColorSecondary}"
                     android:textSize="14sp" />
             </LinearLayout>
 
 
             <LinearLayout
+                android:id="@+id/linearLayout5"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:orientation="horizontal">
 
                 <View
+                    android:id="@+id/view5"
                     android:layout_width="3dp"
                     android:layout_height="match_parent"
                     android:background="@{activity.observableLastItem==5? @color/colorAccent :@color/textColorSecondary}" />
 
                 <TextView
+                    android:id="@+id/textView5"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:foreground="?android:attr/selectableItemBackground"
@@ -190,21 +209,24 @@
                     android:padding="6dp"
                     android:text="@string/streams"
                     android:textAllCaps="false"
-                    android:textColor="?android:textColorPrimary"
+                    android:textColor="@{activity.observableLastItem==5? @color/colorAccent :@color/textColorSecondary}"
                     android:textSize="14sp" />
             </LinearLayout>
 
             <LinearLayout
+                android:id="@+id/linearLayout6"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:orientation="horizontal">
 
                 <View
+                    android:id="@+id/view6"
                     android:layout_width="3dp"
                     android:layout_height="match_parent"
                     android:background="@{activity.observableLastItem==6? @color/colorAccent :@color/textColorSecondary}" />
 
                 <TextView
+                    android:id="@+id/textView6"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:foreground="?android:attr/selectableItemBackground"
@@ -212,7 +234,7 @@
                     android:onClick="@{()-> activity.setFragment(6,true)}"
                     android:padding="6dp"
                     android:text="@string/games"
-                    android:textColor="?android:textColorPrimary"
+                    android:textColor="@{activity.observableLastItem==6? @color/colorAccent :@color/textColorSecondary}"
                     android:textSize="14sp" />
             </LinearLayout>
         </LinearLayout>

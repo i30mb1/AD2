@@ -6,6 +6,9 @@
     <data>
 
         <variable
+            name="activity"
+            type="n7.ad2.splash.SplashActivity" />
+        <variable
             name="viewModel"
             type="n7.ad2.splash.SplashViewModel" />
     </data>
@@ -24,6 +27,7 @@
             tools:listitem="@layout/item_list_plain" />
 
         <ImageView
+            android:onClick="@{activity::startMainActivity}"
             android:id="@+id/iv_activity_splash"
             android:layout_width="150dp"
             android:layout_height="150dp"
