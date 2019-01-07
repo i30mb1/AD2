@@ -345,7 +345,7 @@ public class ResponsesPagedListAdapter extends PagedListAdapter<ResponseModel, R
                                         appExecutors.networkIO().execute(new Runnable() {
                                             @Override
                                             public void run() {
-                                                File file = new File(view.getContext().getExternalFilesDir(Environment.DIRECTORY_RINGTONES) + File.separator + heroName + File.separator + model.getTitle() + ".mp3");
+                                                File file = new File(view.getContext().getExternalFilesDir(Environment.DIRECTORY_RINGTONES) + File.separator + heroName + File.separator + model.getTitle().replace("?", "") + ".mp3");
                                                 if (file.exists()) {
                                                     Snackbar.make(parentView, R.string.hero_responses_sound_already_downloaded, Snackbar.LENGTH_LONG).setAction(R.string.open_file, new View.OnClickListener() {
                                                         @Override
