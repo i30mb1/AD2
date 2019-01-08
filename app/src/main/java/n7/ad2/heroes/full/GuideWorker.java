@@ -1,5 +1,6 @@
 package n7.ad2.heroes.full;
 
+import android.content.Context;
 import android.support.annotation.NonNull;
 
 import org.jsoup.Jsoup;
@@ -11,6 +12,7 @@ import java.io.IOException;
 import java.util.concurrent.Executors;
 
 import androidx.work.Worker;
+import androidx.work.WorkerParameters;
 import n7.ad2.heroes.db.HeroModel;
 import n7.ad2.heroes.db.HeroesDao;
 import n7.ad2.heroes.db.HeroesRoomDatabase;
@@ -19,6 +21,10 @@ public class GuideWorker extends Worker {
 
     public static final String UNIQUE_WORK = "UNIQUE_GUIDE_WORK";
     public static final String HERO_CODE_NAME = "HERO_CODE_NAME";
+
+    public GuideWorker(@NonNull Context context, @NonNull WorkerParameters workerParams) {
+        super(context, workerParams);
+    }
 
     @NonNull
     @Override
@@ -143,9 +149,9 @@ public class GuideWorker extends Worker {
             heroesDao.update(heroes);
 
         } catch (IOException e) {
-            return Result.FAILURE;
+            return Result.failure();
         }
-        return Result.SUCCESS;
+        return Result.success();
     }
 
     private String detectLine(Element element) {

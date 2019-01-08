@@ -81,7 +81,7 @@ dependencies {
     implementation 'com.squareup.retrofit2:retrofit:2.4.0'
     implementation 'com.squareup.retrofit2:converter-gson:2.3.0'
     // WorkManager
-    implementation "android.arch.work:work-runtime:1.0.0-alpha06"
+    implementation "android.arch.work:work-runtime:1.0.0-beta01"
     // Room components
     implementation "android.arch.persistence.room:runtime:1.1.1"
     annotationProcessor "android.arch.persistence.room:compiler:1.1.1"
@@ -105,6 +105,7 @@ dependencies {
     implementation 'org.jsoup:jsoup:1.11.2'
     //поддержка jsoup для старых устройств
     implementation 'com.google.android.gms:play-services-auth:16.0.1'
-    implementation 'com.google.firebase:firebase-core:16.0.5'
+    implementation 'com.google.firebase:firebase-core:16.0.6'
 
+    implementation 'com.google.android.gms:play-services-ads:17.1.2'
 }

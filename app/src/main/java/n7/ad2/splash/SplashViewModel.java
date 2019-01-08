@@ -8,6 +8,7 @@ import android.graphics.drawable.Drawable;
 import android.preference.PreferenceManager;
 import android.support.annotation.NonNull;
 
+import com.google.android.gms.ads.MobileAds;
 import com.google.android.gms.common.GooglePlayServicesNotAvailableException;
 import com.google.android.gms.common.GooglePlayServicesRepairableException;
 import com.google.android.gms.security.ProviderInstaller;
@@ -52,6 +53,7 @@ public class SplashViewModel extends AndroidViewModel {
     public static final String FREE_SUBSCRIPTION_DAYS = "FREE_SUBSCRIPTION_DAYS";
     private static final String FREE_SUBSCRIPTION_DAY_LAST_USE = "FREE_SUBSCRIPTION_DAY_LAST_USE";
     private static final String NEWS_LOAD_LAST_DAY = "NEWS_LOAD_LAST_DAY";
+    public static final String ADMOB_APP_ID = "ca-app-pub-5742225922710304~2823923052";
     final SingleLiveEvent<Void> startMainActivity = new SingleLiveEvent<>();
     public ObservableField<Drawable> resId = new ObservableField<>();
     public ObservableInt scrollTo = new ObservableInt();
@@ -221,7 +223,13 @@ public class SplashViewModel extends AndroidViewModel {
     }
 
     private void setupFirebaseAnalytics() {
-        FirebaseAnalytics.getInstance(application);
+        diskIO.execute(new Runnable() {
+            @Override
+            public void run() {
+                FirebaseAnalytics.getInstance(application);
+                MobileAds.initialize(application, ADMOB_APP_ID);
+            }
+        });
     }
 
 }

@@ -1,5 +1,6 @@
 package n7.ad2.news;
 
+import android.content.Context;
 import android.support.annotation.NonNull;
 
 import org.jsoup.Jsoup;
@@ -10,6 +11,7 @@ import org.jsoup.select.Elements;
 import java.io.IOException;
 
 import androidx.work.Worker;
+import androidx.work.WorkerParameters;
 import n7.ad2.R;
 import n7.ad2.news.db.NewsDao;
 import n7.ad2.news.db.NewsRoomDatabase;
@@ -19,6 +21,10 @@ import static n7.ad2.news.NewsWorker.HREF;
 public class NewsSingleWorker extends Worker {
 
     private String base_url;
+
+    public NewsSingleWorker(@NonNull Context context, @NonNull WorkerParameters workerParams) {
+        super(context, workerParams);
+    }
 
     @NonNull
     @Override
@@ -57,11 +63,12 @@ public class NewsSingleWorker extends Worker {
             NewsDao steamNewsDao = NewsRoomDatabase.getDatabase(getApplicationContext()).steamNewsDao();
             steamNewsDao.setContent(content, href);
 
+            return Result.success();
         } catch (IOException e) {
             e.printStackTrace();
         }
 
-        return Result.FAILURE;
+        return Result.failure();
     }
 
     private void initBaseUrl() {

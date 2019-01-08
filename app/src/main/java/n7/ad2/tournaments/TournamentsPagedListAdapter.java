@@ -28,14 +28,13 @@ import java.util.concurrent.TimeUnit;
 
 import androidx.work.Data;
 import androidx.work.OneTimeWorkRequest;
-import androidx.work.State;
+import androidx.work.WorkInfo;
 import androidx.work.WorkManager;
-import androidx.work.WorkStatus;
 import n7.ad2.R;
 import n7.ad2.tournaments.db.TournamentGame;
 
-import static n7.ad2.tournaments.GameFullActivity.URL;
 import static n7.ad2.splash.SplashActivity.ANIMATION_DURATION;
+import static n7.ad2.tournaments.GameFullActivity.URL;
 
 public class TournamentsPagedListAdapter extends PagedListAdapter<TournamentGame, TournamentsPagedListAdapter.ViewHolder> {
 
@@ -83,7 +82,7 @@ public class TournamentsPagedListAdapter extends PagedListAdapter<TournamentGame
         private final CardView root;
         private final Button b_tv_item_list_games;
         private boolean collapse = false;
-        private State status;
+        private WorkInfo.State status;
 
         ViewHolder(@NonNull View itemView) {
             super(itemView);
@@ -123,19 +122,19 @@ public class TournamentsPagedListAdapter extends PagedListAdapter<TournamentGame
                     }
                 });
             } else {
-                WorkManager.getInstance().getStatusesByTag(game.url).observe(lifecycleOwner, new Observer<List<WorkStatus>>() {
+                WorkManager.getInstance().getWorkInfosByTagLiveData(game.url).observe(lifecycleOwner, new Observer<List<WorkInfo>>() {
                     @Override
-                    public void onChanged(@Nullable List<WorkStatus> workStatuses) {
-                        if (workStatuses != null && workStatuses.size() == 0) {
+                    public void onChanged(@Nullable List<WorkInfo> workInfos) {
+                        if (workInfos != null && workInfos.size() == 0) {
                             status = null;
                             b_tv_item_list_games.setCompoundDrawablesWithIntrinsicBounds(R.drawable.ic_alarm_off, 0, 0, 0);
                         }
-                        if (workStatuses != null && workStatuses.size() != 0) {
-                            status = workStatuses.get(0).getState();
-                            if (workStatuses.get(0).getState().equals(State.ENQUEUED)) {
+                        if (workInfos != null && workInfos.size() != 0) {
+                            status = workInfos.get(0).getState();
+                            if (workInfos.get(0).getState().equals(WorkInfo.State.ENQUEUED)) {
                                 b_tv_item_list_games.setCompoundDrawablesWithIntrinsicBounds(R.drawable.ic_alarm_on, 0, 0, 0);
                             }
-                            if (workStatuses.get(0).getState().equals(State.SUCCEEDED) || workStatuses.get(0).getState().equals(State.CANCELLED)) {
+                            if (workInfos.get(0).getState().equals(WorkInfo.State.SUCCEEDED) || workInfos.get(0).getState().equals(WorkInfo.State.CANCELLED)) {
                                 status = null;
                                 b_tv_item_list_games.setCompoundDrawablesWithIntrinsicBounds(R.drawable.ic_alarm_off, 0, 0, 0);
                                 WorkManager.getInstance().cancelAllWorkByTag(game.url);

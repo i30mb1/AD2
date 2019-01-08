@@ -14,9 +14,8 @@ import android.support.annotation.Nullable;
 import androidx.work.Data;
 import androidx.work.ExistingWorkPolicy;
 import androidx.work.OneTimeWorkRequest;
-import androidx.work.State;
+import androidx.work.WorkInfo;
 import androidx.work.WorkManager;
-import androidx.work.WorkStatus;
 import n7.ad2.news.db.NewsDao;
 import n7.ad2.news.db.NewsModel;
 import n7.ad2.news.db.NewsRoomDatabase;
@@ -56,16 +55,16 @@ public class NewsViewModel extends AndroidViewModel {
                 Data data = new Data.Builder().putInt(PAGE, pageNews).build();
                 final OneTimeWorkRequest worker = new OneTimeWorkRequest.Builder(NewsWorker.class).setInputData(data).build();
                 WorkManager.getInstance().beginUniqueWork(NewsWorker.TAG, ExistingWorkPolicy.APPEND, worker).enqueue();
-                WorkManager.getInstance().getStatusById(worker.getId()).observeForever(new Observer<WorkStatus>() {
+                WorkManager.getInstance().getWorkInfoByIdLiveData(worker.getId()).observeForever(new Observer<WorkInfo>() {
                     @Override
-                    public void onChanged(@Nullable WorkStatus workStatus) {
-                        if (workStatus == null) {
-                            isLoading.set(false);
-                            return;
+                    public void onChanged(@Nullable WorkInfo workInfo) {
+                        if (workInfo != null) {
+                            if (workInfo.getState().isFinished()) {
+                                isLoading.set(true);
+                            } else {
+                                isLoading.set(false);
+                            }
                         }
-                        if (workStatus.getState() == State.ENQUEUED) isLoading.set(true);
-                        if (workStatus.getState() == State.SUCCEEDED) isLoading.set(false);
-                        if (workStatus.getState() == State.FAILED) isLoading.set(false);
                     }
                 });
             }

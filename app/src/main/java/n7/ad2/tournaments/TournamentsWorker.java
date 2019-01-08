@@ -1,5 +1,6 @@
 package n7.ad2.tournaments;
 
+import android.content.Context;
 import android.support.annotation.NonNull;
 
 import org.jsoup.Jsoup;
@@ -14,6 +15,7 @@ import java.util.List;
 import java.util.Locale;
 
 import androidx.work.Worker;
+import androidx.work.WorkerParameters;
 import n7.ad2.tournaments.db.TournamentGame;
 import n7.ad2.tournaments.db.GamesDao;
 import n7.ad2.tournaments.db.GamesRoomDatabase;
@@ -24,6 +26,10 @@ public class TournamentsWorker extends Worker {
     public static final String DELETE_TABLE = "delete_table";
     public static final String PAGE = "page";
     public static final String TAG = "tournaments_worker_tag";
+
+    public TournamentsWorker(@NonNull Context context, @NonNull WorkerParameters workerParams) {
+        super(context, workerParams);
+    }
 
     @NonNull
     @Override
@@ -84,11 +90,11 @@ public class TournamentsWorker extends Worker {
             GamesDao gamesDao = GamesRoomDatabase.getDatabase(getApplicationContext()).gamesDao();
             if (deleteTable) gamesDao.deleteAll();
             gamesDao.setGames(gamesList);
-            return Result.SUCCESS;
+            return Result.success();
         } catch (Exception e) {
             GamesDao gamesDao = GamesRoomDatabase.getDatabase(getApplicationContext()).gamesDao();
             gamesDao.deleteAllUnfinished();
         }
-        return Result.FAILURE;
+        return Result.failure();
     }
 }

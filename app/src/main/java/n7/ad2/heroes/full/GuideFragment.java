@@ -34,8 +34,8 @@ import java.util.HashMap;
 
 import androidx.work.Data;
 import androidx.work.OneTimeWorkRequest;
+import androidx.work.WorkInfo;
 import androidx.work.WorkManager;
-import androidx.work.WorkStatus;
 import n7.ad2.R;
 import n7.ad2.heroes.db.HeroModel;
 import n7.ad2.heroes.db.HeroesDao;
@@ -212,18 +212,18 @@ public class GuideFragment extends Fragment {
                 int currentDay = PreferenceManager.getDefaultSharedPreferences(getContext()).getInt(CURRENT_DAY_IN_APP, 0);
                 int guideLastDay = heroesDao.getHeroByCodeNameObject(heroFolder).getGuideLastDay();
 
-                if(currentDay==guideLastDay)return;
+                if (currentDay == guideLastDay) return;
 
                 heroesDao.setGuideLastDay(heroFolder, currentDay);
 
                 Data data = new Data.Builder().putString(HERO_CODE_NAME, heroFolder).build();
-                OneTimeWorkRequest worker = new OneTimeWorkRequest.Builder(GuideWorker.class).setInputData(data).build();
+                final OneTimeWorkRequest worker = new OneTimeWorkRequest.Builder(GuideWorker.class).setInputData(data).build();
                 WorkManager.getInstance().enqueue(worker);
-                WorkManager.getInstance().getStatusById(worker.getId()).observe(GuideFragment.this, new Observer<WorkStatus>() {
+                WorkManager.getInstance().getWorkInfoByIdLiveData(worker.getId()).observe(GuideFragment.this, new Observer<WorkInfo>() {
                     @Override
-                    public void onChanged(@Nullable WorkStatus workStatus) {
-                        if (workStatus != null) {
-                            if (workStatus.getState().isFinished()) {
+                    public void onChanged(@Nullable WorkInfo workInfo) {
+                        if (workInfo != null) {
+                            if (workInfo.getState().isFinished()) {
                                 pb_fragment_guide.setVisibility(View.GONE);
                             } else {
                                 pb_fragment_guide.setVisibility(View.VISIBLE);

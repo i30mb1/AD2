@@ -1,5 +1,6 @@
 package n7.ad2.news;
 
+import android.content.Context;
 import android.support.annotation.NonNull;
 
 import org.jsoup.Jsoup;
@@ -15,6 +16,7 @@ import androidx.work.Data;
 import androidx.work.OneTimeWorkRequest;
 import androidx.work.WorkManager;
 import androidx.work.Worker;
+import androidx.work.WorkerParameters;
 import n7.ad2.R;
 import n7.ad2.news.db.NewsDao;
 import n7.ad2.news.db.NewsModel;
@@ -27,6 +29,10 @@ public class NewsWorker extends Worker {
     public static final String DELETE_TABLE = "delete_table";
     public static final String TAG = "news_worker_tag";
     public String base_url = "https://ru.dotabuff.com/blog?page=";
+
+    public NewsWorker(@NonNull Context context, @NonNull WorkerParameters workerParams) {
+        super(context, workerParams);
+    }
 
     private void initBaseUrl() {
         String language = getApplicationContext().getString(R.string.language_resource);
@@ -81,11 +87,11 @@ public class NewsWorker extends Worker {
             steamNewsDao.setNews(list);
 
 
-            return Result.SUCCESS;
+            return Result.success();
         } catch (IOException e) {
             e.printStackTrace();
         }
-        return Result.FAILURE;
+        return Result.failure();
     }
 
 }

@@ -4,6 +4,7 @@
 
     <data>
 
+        <import type="android.view.View" />
         <variable
             name="viewModel"
             type="n7.ad2.main.MainViewModel" />
@@ -236,6 +237,20 @@
                     android:textSize="14sp" />
             </LinearLayout>
         </LinearLayout>
+
+        <Button
+            android:onClick="@{activity::showVideoAD}"
+            android:id="@+id/button"
+            style="@style/Widget.MaterialComponents.Button.UnelevatedButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:layout_marginEnd="8dp"
+            android:text="+"
+            android:visibility="@{activity.freeSubscriptionButtonVisibility?View.VISIBLE:View.GONE}"
+            android:textSize="14sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
 
     </android.support.constraint.ConstraintLayout>
 </layout>

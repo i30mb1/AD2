@@ -14,21 +14,20 @@ import android.support.annotation.Nullable;
 import androidx.work.Data;
 import androidx.work.ExistingWorkPolicy;
 import androidx.work.OneTimeWorkRequest;
-import androidx.work.State;
+import androidx.work.WorkInfo;
 import androidx.work.WorkManager;
-import androidx.work.WorkStatus;
-import n7.ad2.tournaments.db.TournamentGame;
 import n7.ad2.tournaments.db.GamesDao;
 import n7.ad2.tournaments.db.GamesRoomDatabase;
+import n7.ad2.tournaments.db.TournamentGame;
 
 import static n7.ad2.tournaments.TournamentsWorker.PAGE;
 import static n7.ad2.tournaments.TournamentsWorker.TAG;
 
 public class TournamentsViewModel extends AndroidViewModel {
 
-    private Application application;
-    public ObservableBoolean isLoading = new ObservableBoolean(false);
     private final GamesDao gamesDao;
+    public ObservableBoolean isLoading = new ObservableBoolean(false);
+    private Application application;
     private int page = 0;
 
     public TournamentsViewModel(@NonNull Application application) {
@@ -49,16 +48,16 @@ public class TournamentsViewModel extends AndroidViewModel {
                 Data data = new Data.Builder().putInt(PAGE, page).build();
                 OneTimeWorkRequest worker = new OneTimeWorkRequest.Builder(TournamentsWorker.class).setInputData(data).build();
                 WorkManager.getInstance().beginUniqueWork(TAG, ExistingWorkPolicy.KEEP, worker).enqueue();
-                WorkManager.getInstance().getStatusById(worker.getId()).observeForever(new Observer<WorkStatus>() {
+                WorkManager.getInstance().getWorkInfoByIdLiveData(worker.getId()).observeForever(new Observer<WorkInfo>() {
                     @Override
-                    public void onChanged(@Nullable WorkStatus workStatus) {
-                        if (workStatus == null) {
-                            isLoading.set(false);
-                            return;
+                    public void onChanged(@Nullable WorkInfo workInfo) {
+                        if (workInfo != null) {
+                            if (workInfo.getState().isFinished()) {
+                                isLoading.set(false);
+                            } else {
+                                isLoading.set(true);
+                            }
                         }
-                        if (workStatus.getState() == State.ENQUEUED) isLoading.set(true);
-                        if (workStatus.getState() == State.SUCCEEDED) isLoading.set(false);
-                        if (workStatus.getState() == State.FAILED) isLoading.set(false);
                     }
                 });
             }

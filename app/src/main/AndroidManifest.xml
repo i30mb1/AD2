@@ -1,15 +1,16 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
-    android:installLocation="auto"
-    package="n7.ad2">
+    package="n7.ad2"
+    android:installLocation="auto">
 
     <uses-permission android:name="android.permission.INTERNET" />
     <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
     <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
     <uses-permission android:name="android.permission.MODIFY_AUDIO_SETTINGS" />
     <uses-permission android:name="com.android.vending.BILLING" />
-    <uses-permission android:name="android.permission.WRITE_SETTINGS"
+    <uses-permission
+        android:name="android.permission.WRITE_SETTINGS"
         tools:ignore="ProtectedPermissions" />
 
     <application
@@ -35,8 +36,8 @@
             android:screenOrientation="portrait" />
         <activity
             android:name=".setting.LicensesActivity"
-            android:screenOrientation="portrait"
-            android:label="Open Source Licenses" />
+            android:label="Open Source Licenses"
+            android:screenOrientation="portrait" />
         <activity
             android:name=".setting.SettingActivity"
             android:screenOrientation="portrait" />
@@ -64,13 +65,17 @@
             android:screenOrientation="portrait" />
         <activity
             android:name=".games.Game2P1"
-            android:screenOrientation="portrait"/>
+            android:screenOrientation="portrait" />
         <activity
             android:name=".games.Game1p1"
-            android:screenOrientation="portrait"/>
+            android:screenOrientation="portrait" />
+
         <meta-data
             android:name="io.fabric.ApiKey"
             android:value="c67b89578c61892a0a5462cbb130966d6be800b5" />
+        <meta-data
+            android:name="com.google.android.gms.ads.APPLICATION_ID"
+            android:value="ca-app-pub-5742225922710304~2823923052" />
     </application>
 
 </manifest>

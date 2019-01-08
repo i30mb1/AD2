@@ -2,6 +2,7 @@ package n7.ad2.tournaments;
 
 import android.app.NotificationManager;
 import android.app.PendingIntent;
+import android.content.Context;
 import android.content.Intent;
 import android.graphics.Bitmap;
 import android.graphics.BitmapFactory;
@@ -10,12 +11,17 @@ import android.support.annotation.NonNull;
 import android.support.v4.app.NotificationCompat;
 
 import androidx.work.Worker;
+import androidx.work.WorkerParameters;
 import n7.ad2.R;
 import n7.ad2.main.MainActivity;
 
 import static android.content.Context.NOTIFICATION_SERVICE;
 
 public class ScheduleGameWorker extends Worker {
+    public ScheduleGameWorker(@NonNull Context context, @NonNull WorkerParameters workerParams) {
+        super(context, workerParams);
+    }
+
     @NonNull
     @Override
     public Result doWork() {
@@ -49,7 +55,7 @@ public class ScheduleGameWorker extends Worker {
 //        mgr.notify(0, big.setSummaryText("o").addLine("1").addLine("2").build());
         if (notificationManager != null) {
             notificationManager.notify(7, b.build());
-            return Result.SUCCESS;
-        } else return Result.FAILURE;
+            return Result.success();
+        } else return Result.failure();
     }
 }

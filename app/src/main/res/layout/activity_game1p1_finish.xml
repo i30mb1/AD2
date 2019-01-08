@@ -19,31 +19,17 @@
         tools:context=".games.Game1p1">
 
         <TextView
-            android:id="@+id/textView"
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            android:gravity="center"
-            android:text="@{activity.roflText}"
-            android:textSize="14sp"
-            android:textStyle="bold"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="parent" />
-
-        <TextView
             android:id="@+id/tv_activity_game1_timer"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginStart="8dp"
-            android:layout_marginTop="8dp"
             android:layout_marginEnd="8dp"
             android:layout_marginBottom="8dp"
             android:text="@{@string/activity_game1P1_second_remaining(activity.secondRemaining)}"
             android:textSize="24sp"
-            app:layout_constraintBottom_toTopOf="@+id/tv_activity_game1_score"
+            app:layout_constraintBottom_toTopOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/tv_activity_game1P1_title"
             tools:text="@string/activity_game1P1_second_remaining" />
 
         <TextView
@@ -68,18 +54,13 @@
             android:id="@+id/tv_activity_game1_score"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginStart="8dp"
-            android:layout_marginTop="8dp"
-            android:layout_marginEnd="8dp"
-            android:layout_marginBottom="8dp"
             android:text="@{String.valueOf(activity.score)}"
             android:textColor="?android:textColorPrimary"
             android:textSize="36sp"
-            app:layout_constraintBottom_toTopOf="@+id/iv_activity_game1P1_spell"
-            app:layout_constraintEnd_toEndOf="@+id/iv_activity_game1P1_spell"
-            app:layout_constraintStart_toStartOf="@+id/iv_activity_game1P1_spell"
-            app:layout_constraintTop_toBottomOf="@+id/tv_activity_game1P1_title"
-            app:layout_constraintVertical_bias="0.7"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
             tools:text="0" />
 
         <ImageView
@@ -88,6 +69,7 @@
             android:layout_height="100dp"
             android:contentDescription="@string/setting_tell_friend_title"
             android:onClick="@{(view)->activity.expandAnimation(view)}"
+            android:visibility="invisible"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
@@ -98,13 +80,12 @@
             android:id="@+id/linearLayout"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
-            android:layout_marginBottom="8dp"
             android:animateLayoutChanges="true"
             android:gravity="center"
             android:orientation="horizontal"
-            app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent">
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="parent">
 
             <TextView
                 android:id="@+id/tv_activity_game1P1_1"
@@ -179,6 +160,7 @@
             android:layout_marginEnd="8dp"
             android:animateLayoutChanges="true"
             android:orientation="horizontal"
+            android:visibility="invisible"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0.0"
             app:layout_constraintStart_toStartOf="@+id/iv_activity_game1P1_spell"
@@ -243,6 +225,19 @@
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/textView"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:text="@{activity.roflText}"
+            android:textSize="14sp"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/tv_activity_game1_score"
+            tools:text="SKELETON KING DETECTED" />
 
     </android.support.constraint.ConstraintLayout>
 </layout>

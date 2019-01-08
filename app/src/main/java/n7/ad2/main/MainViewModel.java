@@ -9,6 +9,11 @@ import android.databinding.ObservableInt;
 import android.preference.PreferenceManager;
 import android.support.annotation.NonNull;
 
+import com.google.android.gms.ads.MobileAds;
+import com.google.android.gms.ads.reward.RewardItem;
+import com.google.android.gms.ads.reward.RewardedVideoAd;
+import com.google.android.gms.ads.reward.RewardedVideoAdListener;
+
 import java.io.IOException;
 import java.util.concurrent.Executor;
 import java.util.concurrent.Executors;

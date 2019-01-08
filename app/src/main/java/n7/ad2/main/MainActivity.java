@@ -7,6 +7,7 @@ import android.content.Context;
 import android.content.DialogInterface;
 import android.content.Intent;
 import android.databinding.DataBindingUtil;
+import android.databinding.ObservableBoolean;
 import android.databinding.ObservableInt;
 import android.net.Uri;
 import android.os.Bundle;
@@ -30,12 +31,22 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.view.animation.BounceInterpolator;
 import android.view.inputmethod.InputMethodManager;
+import android.widget.Button;
 
+import com.google.android.gms.ads.AdRequest;
+import com.google.android.gms.ads.MobileAds;
+import com.google.android.gms.ads.reward.RewardItem;
+import com.google.android.gms.ads.reward.RewardedVideoAd;
+import com.google.android.gms.ads.reward.RewardedVideoAdListener;
 import com.google.firebase.analytics.FirebaseAnalytics;
 import com.yarolegovich.slidingrootnav.SlidingRootNav;
 import com.yarolegovich.slidingrootnav.SlidingRootNavBuilder;
 import com.yarolegovich.slidingrootnav.callback.DragStateListener;
 
+import java.util.concurrent.TimeUnit;
+
+import androidx.work.OneTimeWorkRequest;
+import androidx.work.WorkManager;
 import n7.ad2.R;
 import n7.ad2.databinding.ActivityMainBinding;
 import n7.ad2.databinding.DialogPreDonateBinding;
@@ -72,8 +83,11 @@ public class MainActivity extends BaseActivity {
     public static final String LAST_ITEM = "LAST_ITEM";
     public static final int MILLIS_FOR_EXIT = 2000;
     public static final String GITHUB_LAST_APK_URL = "https://github.com/i30mb1/AD2/blob/master/app/release/app-release.apk?raw=true";
+    public static final String ADMOB_ID = "ca-app-pub-5742225922710304/8697652489";
+    public static final String ADMOB_ID_FAKE = "ca-app-pub-3940256099942544/5224354917";
     private static final String DIALOG_PRE_DONATE_LAST_DAY = "DIALOG_PRE_DONATE_LAST_DAY";
     public ObservableInt observableLastItem = new ObservableInt(1);
+    public ObservableBoolean freeSubscriptionButtonVisibility = new ObservableBoolean(false);
     private int enterCounter = 0;
     private boolean doubleBackToExitPressedOnce = false;
     private ConstraintSet constraintSetHidden = new ConstraintSet();
@@ -85,10 +99,14 @@ public class MainActivity extends BaseActivity {
     private boolean shouldUpdateFromMarket;
     private MainViewModel viewModel;
     private SlidingRootNav drawer;
+    private RewardedVideoAd rewardedVideoAd;
+    private boolean subscription;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+
+        setupRewardedVideoAd();
 
         viewModel = ViewModelProviders.of(this).get(MainViewModel.class);
 
@@ -108,6 +126,79 @@ public class MainActivity extends BaseActivity {
         setLastFragment();
 
         log("on_Create");
+    }
+
+    public void subscriptionButtonState() {
+        subscription = PreferenceManager.getDefaultSharedPreferences(MainActivity.this).getBoolean(SUBSCRIPTION, false);
+        if (subscription) {
+            freeSubscriptionButtonVisibility.set(false);
+            return;
+        }
+        if (rewardedVideoAd != null && rewardedVideoAd.isLoaded()) {
+            freeSubscriptionButtonVisibility.set(true);
+        } else {
+            freeSubscriptionButtonVisibility.set(false);
+            loadVideoAD();
+        }
+    }
+
+    public void showVideoAD(View view) {
+        rewardedVideoAd.show();
+    }
+
+    private void loadVideoAD() {
+        rewardedVideoAd.loadAd(ADMOB_ID_FAKE, new AdRequest.Builder().build());
+    }
+
+    public void setupRewardedVideoAd() {
+        subscription = PreferenceManager.getDefaultSharedPreferences(MainActivity.this).getBoolean(SUBSCRIPTION, false);
+        if (subscription) return;
+        rewardedVideoAd = MobileAds.getRewardedVideoAdInstance(this);
+        rewardedVideoAd.setRewardedVideoAdListener(new RewardedVideoAdListener() {
+            @Override
+            public void onRewardedVideoAdLoaded() {
+                subscriptionButtonState();
+            }
+
+            @Override
+            public void onRewardedVideoAdOpened() {
+
+            }
+
+            @Override
+            public void onRewardedVideoStarted() {
+
+            }
+
+            @Override
+            public void onRewardedVideoAdClosed() {
+//                loadVideoAD();
+            }
+
+            @Override
+            public void onRewarded(RewardItem rewardItem) {
+                log("subscription_granted_10_minutes");
+                OneTimeWorkRequest worker = new OneTimeWorkRequest.Builder(ADRewardWorker.class).setInitialDelay(rewardItem.getAmount(), TimeUnit.SECONDS).build();
+                WorkManager.getInstance().enqueue(worker);
+                PreferenceManager.getDefaultSharedPreferences(MainActivity.this).edit().putBoolean(SUBSCRIPTION,true).apply();
+            }
+
+            @Override
+            public void onRewardedVideoAdLeftApplication() {
+
+            }
+
+            @Override
+            public void onRewardedVideoAdFailedToLoad(int i) {
+
+            }
+
+            @Override
+            public void onRewardedVideoCompleted() {
+
+            }
+        });
+        loadVideoAD();
     }
 
     private void setupListeners() {
@@ -273,7 +364,8 @@ public class MainActivity extends BaseActivity {
 
     @SuppressWarnings("ConstantConditions")
     void showPreDialogDonate() {
-        if (PreferenceManager.getDefaultSharedPreferences(this).getBoolean(SUBSCRIPTION, false)) return;
+        if (PreferenceManager.getDefaultSharedPreferences(this).getBoolean(SUBSCRIPTION, false))
+            return;
 
         final AlertDialog.Builder builder = new AlertDialog.Builder(this);
         DialogPreDonateBinding binding = DataBindingUtil.inflate(getLayoutInflater(), R.layout.dialog_pre_donate, null, false);
@@ -353,6 +445,7 @@ public class MainActivity extends BaseActivity {
 
     @Override
     protected void onPause() {
+        rewardedVideoAd.pause(this);
         log("on_Pause");
         super.onPause();
     }
@@ -366,15 +459,18 @@ public class MainActivity extends BaseActivity {
 
     @Override
     protected void onDestroy() {
+        rewardedVideoAd.destroy(this);
         log("on_Destroy");
         super.onDestroy();
     }
 
     @Override
     protected void onResume() {
-        super.onResume();
+        rewardedVideoAd.resume(this);
         log("on_Resume");
+        subscriptionButtonState();
         incCountEnter();
+        super.onResume();
     }
 
 //    private void regReceiver() {
