@@ -19,20 +19,11 @@
         android:layout_height="match_parent"
         android:background="?android:windowBackground">
 
-        <android.support.v7.widget.RecyclerView
-            android:id="@+id/rv_drawer"
-            android:layout_width="wrap_content"
-            android:layout_height="0dp"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:scrollTo="@{viewModel.scrollTo}"
-            tools:listitem="@layout/item_list_plain" />
-
         <ImageView
             android:id="@+id/iv_drawer_setting"
             android:layout_width="50dp"
             android:layout_height="50dp"
-            android:layout_marginStart="8dp"
+            android:layout_marginEnd="8dp"
             android:layout_marginBottom="8dp"
             android:background="?attr/selectableItemBackground"
             android:contentDescription="@string/setting_tell_friend_title"
@@ -40,9 +31,9 @@
             android:onLongClick="@{activity::toggleSecretActivity}"
             android:scaleType="center"
             android:tint="?android:textColorPrimary"
+            android:visibility="invisible"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
             app:srcCompat="@drawable/ic_setting" />
 
         <ImageView
@@ -57,8 +48,7 @@
             android:onClick="@{()->viewModel.startUpdate(true)}"
             android:scaleType="center"
             android:tint="?android:textColorPrimary"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintRight_toLeftOf="parent"
+            app:layout_constraintTop_toBottomOf="parent"
             app:srcCompat="@drawable/ic_update" />
 
         <TextView

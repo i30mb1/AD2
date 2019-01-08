@@ -284,7 +284,7 @@ public class GuideFragment extends Fragment {
 
     private void addLane(String lanes) {
         String laneArrays[] = lanes.split("\\+");
-        tv_fragment_guide_lane.setText(getString(R.string.fragment_guide_lane, laneArrays[currentPage]));
+        tv_fragment_guide_lane.setText("" + laneArrays[currentPage]);
     }
 
     private void addSkillBuilds(final String skillBuilds) {

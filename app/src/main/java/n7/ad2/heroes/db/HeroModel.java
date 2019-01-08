@@ -12,6 +12,7 @@ import n7.ad2.heroes.full.HeroFullActivity;
 
 import static n7.ad2.heroes.full.HeroFullActivity.HERO_CODE_NAME;
 import static n7.ad2.heroes.full.HeroFullActivity.HERO_NAME;
+import static n7.ad2.main.MainActivity.LOG_ON_RECEIVE;
 
 @Entity
 public class HeroModel {

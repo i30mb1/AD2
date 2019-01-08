@@ -54,7 +54,7 @@
                 android:elevation="2dp"
                 android:paddingStart="3dp"
                 android:paddingEnd="3dp"
-                android:text="lane"
+                android:text="@string/fragment_guide_lane"
                 android:textAllCaps="true"
                 android:textColor="?android:textColorSecondary"
                 android:textSize="14sp"

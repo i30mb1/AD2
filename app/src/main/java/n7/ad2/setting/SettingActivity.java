@@ -112,12 +112,14 @@ public class SettingActivity extends BaseActivity {
 
     private void loadItemsForDialogSubscription() {
         images.add(R.drawable.ad1);
+        images.add(R.drawable.ad6);
         images.add(R.drawable.ad2);
         images.add(R.drawable.ad3);
         images.add(R.drawable.ad4);
         images.add(R.drawable.ad5);
 
         descriptions.add(getString(R.string.ad1));
+        descriptions.add(getString(R.string.ad6));
         descriptions.add(getString(R.string.ad2));
         descriptions.add(getString(R.string.ad3));
         descriptions.add(getString(R.string.ad4));

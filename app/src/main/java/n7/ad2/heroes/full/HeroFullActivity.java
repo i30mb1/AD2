@@ -1,5 +1,6 @@
 package n7.ad2.heroes.full;
 
+import android.content.Intent;
 import android.content.res.TypedArray;
 import android.databinding.DataBindingUtil;
 import android.graphics.Bitmap;
@@ -22,6 +23,8 @@ import n7.ad2.R;
 import n7.ad2.utils.BaseActivity;
 import n7.ad2.utils.Utils;
 
+import static n7.ad2.main.MainActivity.LOG_ON_RECEIVE;
+
 public class HeroFullActivity extends BaseActivity {
 
     public static final String HERO_NAME = "HERO_NAME";
@@ -34,7 +37,6 @@ public class HeroFullActivity extends BaseActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         binding = DataBindingUtil.setContentView(this, R.layout.activity_hero_full);
-
 
         if (savedInstanceState == null) {
             appExecutors = new AppExecutors();
@@ -69,6 +71,7 @@ public class HeroFullActivity extends BaseActivity {
         try {
             String name = getIntent().getStringExtra(HERO_NAME);
             codeName = getIntent().getStringExtra(HERO_CODE_NAME);
+            sendBroadcast(new Intent(LOG_ON_RECEIVE).putExtra(LOG_ON_RECEIVE, "hero_"+codeName+"_loaded"));
             binding.toolbarActivityHeroFull.setTitle(name);
             setSupportActionBar(binding.toolbarActivityHeroFull);
 

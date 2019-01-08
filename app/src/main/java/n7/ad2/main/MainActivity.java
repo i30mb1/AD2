@@ -32,6 +32,7 @@ import android.support.v7.widget.LinearLayoutManager;
 import android.view.View;
 import android.view.ViewGroup;
 import android.view.animation.BounceInterpolator;
+import android.view.animation.LinearInterpolator;
 import android.view.inputmethod.InputMethodManager;
 
 import com.google.android.gms.ads.AdRequest;
@@ -156,7 +157,7 @@ public class MainActivity extends BaseActivity {
     }
 
     private void loadVideoAD() {
-        rewardedVideoAd.loadAd(ADMOB_ID_FAKE, new AdRequest.Builder().build());
+       if(rewardedVideoAd!=null) rewardedVideoAd.loadAd(ADMOB_ID_FAKE, new AdRequest.Builder().build());
     }
 
     public void setupRewardedVideoAd() {
@@ -287,27 +288,21 @@ public class MainActivity extends BaseActivity {
             default:
             case 1:
                 ft.replace(bindingActivity.containerActivityMain.getId(), new HeroesFragment()).commit();
-                log("replace_fragment_heroes");
                 break;
             case 2:
                 ft.replace(bindingActivity.containerActivityMain.getId(), new ItemsFragment()).commit();
-                log("replace_fragment_items");
                 break;
             case 3:
                 ft.replace(bindingActivity.containerActivityMain.getId(), new NewsFragment()).commit();
-                log("replace_fragment_news");
                 break;
             case 4:
                 ft.replace(bindingActivity.containerActivityMain.getId(), new TournamentsFragment()).commit();
-                log("replace_fragment_tournaments");
                 break;
             case 5:
                 ft.replace(bindingActivity.containerActivityMain.getId(), new StreamsFragment()).commit();
-                log("replace_fragment_streams");
                 break;
             case 6:
                 ft.replace(bindingActivity.containerActivityMain.getId(), new GameFragment()).commit();
-                log("replace_fragment_game");
                 break;
         }
 //        if (closeDrawer)
@@ -327,18 +322,19 @@ public class MainActivity extends BaseActivity {
 
     public boolean toggleSecretActivity(View view) {
         currentSet = (currentSet == constraintSetOrigin ? constraintSetHidden : constraintSetOrigin);
-        TransitionSet transitionSet = new TransitionSet();
-        Transition transition = new ChangeBounds().setInterpolator(new BounceInterpolator()).setDuration(3000);
-        Transition fadeOut = new Fade(2).setDuration(3000);
-        transitionSet.addTransition(transition).addTransition(fadeOut);
+        TransitionSet transitionSet = new TransitionSet()
+                .setDuration(500)
+                .addTransition(new ChangeBounds().setInterpolator(new LinearInterpolator()));
         //после этого метода все изменения внутри ViewGroup будут анимированы
         TransitionManager.beginDelayedTransition((ViewGroup) bindingDrawer.getRoot(), transitionSet);
 //        TransitionManager.beginDelayedTransition((ViewGroup) bindingDrawer.getRoot(), new AutoTransition());
         //применяет все изменения находящиеся в currentSet с анимациями из transitionSet
-//        currentSet.applyTo((ConstraintLayout) bindingDrawer.getRoot());
-        ViewGroup.LayoutParams layoutParams = bindingDrawer.view1.getLayoutParams();
-        layoutParams.width = 300;
-        bindingDrawer.view1.setLayoutParams(layoutParams);
+        currentSet.applyTo((ConstraintLayout) bindingDrawer.getRoot());
+        if (currentSet == constraintSetOrigin) {
+            bindingActivity.getRoot().animate().alpha(1.0f).setDuration(500).start();
+        } else {
+            bindingActivity.getRoot().animate().alpha(0.0f).setDuration(500).start();
+        }
         return true;
     }
 
@@ -461,7 +457,6 @@ public class MainActivity extends BaseActivity {
     @Override
     protected void onPause() {
         if (rewardedVideoAd != null) rewardedVideoAd.pause(this);
-        if (broadcastReceiver != null) unregisterReceiver(broadcastReceiver);
         log("on_Pause");
         super.onPause();
     }
@@ -476,6 +471,7 @@ public class MainActivity extends BaseActivity {
     @Override
     protected void onDestroy() {
         if (rewardedVideoAd != null) rewardedVideoAd.destroy(this);
+        if (broadcastReceiver != null) unregisterReceiver(broadcastReceiver);
         log("on_Destroy");
         super.onDestroy();
     }
@@ -502,6 +498,10 @@ public class MainActivity extends BaseActivity {
     public void onBackPressed() {
         if (doubleBackToExitPressedOnce) {
             finish();
+            return;
+        }
+        if (currentSet == constraintSetHidden) {
+            toggleSecretActivity(bindingActivity.getRoot());
             return;
         }
         doubleBackToExitPressedOnce = true;

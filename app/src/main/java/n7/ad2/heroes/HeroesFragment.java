@@ -4,6 +4,7 @@ package n7.ad2.heroes;
 import android.arch.lifecycle.Observer;
 import android.arch.lifecycle.ViewModelProviders;
 import android.arch.paging.PagedList;
+import android.content.Intent;
 import android.databinding.DataBindingUtil;
 import android.databinding.ObservableBoolean;
 import android.os.Bundle;
@@ -24,6 +25,8 @@ import n7.ad2.R;
 import n7.ad2.databinding.FragmentHeroesBinding;
 import n7.ad2.heroes.db.HeroModel;
 import n7.ad2.main.MainViewModel;
+
+import static n7.ad2.main.MainActivity.LOG_ON_RECEIVE;
 
 
 public class HeroesFragment extends Fragment implements SearchView.OnQueryTextListener {
@@ -55,6 +58,7 @@ public class HeroesFragment extends Fragment implements SearchView.OnQueryTextLi
         super.onActivityCreated(savedInstanceState);
 
         getActivity().setTitle(R.string.heroes);
+        getActivity().sendBroadcast(new Intent(LOG_ON_RECEIVE).putExtra(LOG_ON_RECEIVE, "heroes_activity_created"));
         setRetainInstance(true);//фрагмент не уничтожается а передаётся новому активити (пропускает методы onCreate&onDestroy)
         setHasOptionsMenu(true);//вызов метода onCreateOptionsMenu в фрагменте
 

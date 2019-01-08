@@ -1,6 +1,7 @@
 package n7.ad2.tournaments;
 
 import android.content.Context;
+import android.content.Intent;
 import android.support.annotation.NonNull;
 
 import org.jsoup.Jsoup;
@@ -19,6 +20,8 @@ import androidx.work.WorkerParameters;
 import n7.ad2.tournaments.db.TournamentGame;
 import n7.ad2.tournaments.db.GamesDao;
 import n7.ad2.tournaments.db.GamesRoomDatabase;
+
+import static n7.ad2.main.MainActivity.LOG_ON_RECEIVE;
 
 public class TournamentsWorker extends Worker {
 
@@ -90,10 +93,12 @@ public class TournamentsWorker extends Worker {
             GamesDao gamesDao = GamesRoomDatabase.getDatabase(getApplicationContext()).gamesDao();
             if (deleteTable) gamesDao.deleteAll();
             gamesDao.setGames(gamesList);
+            getApplicationContext().sendBroadcast(new Intent(LOG_ON_RECEIVE).putExtra(LOG_ON_RECEIVE, "new_portion_games_loaded"));
             return Result.success();
         } catch (Exception e) {
             GamesDao gamesDao = GamesRoomDatabase.getDatabase(getApplicationContext()).gamesDao();
             gamesDao.deleteAllUnfinished();
+            getApplicationContext().sendBroadcast(new Intent(LOG_ON_RECEIVE).putExtra(LOG_ON_RECEIVE, "new_portion_games_failed"));
         }
         return Result.failure();
     }

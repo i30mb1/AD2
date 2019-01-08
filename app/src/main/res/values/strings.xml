@@ -16,7 +16,7 @@
     <string name="setting_news_key" translatable="false">setting_news_with_image_key</string>
     <string name="setting_about_key" translatable="false">pref_about_key</string>
     <string name="setting_account_title">Display your account</string>
-    <string name="setting_log_title">Fancy random text</string>
+    <string name="setting_log_title">Panel with log-text</string>
     <string name="setting_log_summary">on main screen</string>
     <string name="setting_account_summary">Show your friends</string>
     <string name="setting_about_title" translatable="false">About Dota 2</string>
@@ -113,7 +113,7 @@
     <string name="all_come_back_tomorrow">Come back tomorrow or buy Subscription</string>
     <string name="game_fragment_earn_5_premium">You earn 5 days premium</string>
     <string name="fragment_game_G1">how many cost this spell</string>
-    <string name="fragment_guide_lane" translatable="false">%s</string>
+    <string name="fragment_guide_lane">lane</string>
     <string name="activity_twitch_game" translatable="false">Quality</string>
     <string name="fragment_guide_further_items">Items</string>
     <string name="fragment_guide_skill_builds">Skill builds</string>
@@ -153,7 +153,7 @@
     <string name="ad3">multi-twitch</string>
     <string name="ad4">control twitch-chat transparency and speed</string>
     <string name="ad5">set reminder on oncoming match</string>
-    <string name="commercial_6">MULTI-TWITCH</string>
+    <string name="ad6">choose one from five version of guides</string>
     <string name="commercial_7">SET ALARM FOR UPCOMING GAMES</string>
     <string name="commercial_8">INSPIRATION TO CONTINUE WORKING TOWARDS GOALS</string>
     <string name="dialog_donate_me_text1">We spend a lot of time and effort supporting applications. Your every action is a traffic expense for our servers. Take a subscription and protect the application from unnecessary advertising.</string>

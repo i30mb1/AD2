@@ -3,6 +3,7 @@ package n7.ad2.tournaments;
 import android.arch.lifecycle.Observer;
 import android.arch.lifecycle.ViewModelProviders;
 import android.arch.paging.PagedList;
+import android.content.Intent;
 import android.databinding.DataBindingUtil;
 import android.os.Bundle;
 import android.preference.PreferenceManager;
@@ -22,6 +23,7 @@ import n7.ad2.databinding.FragmentTournamentsBinding;
 import n7.ad2.R;
 import n7.ad2.tournaments.db.TournamentGame;
 
+import static n7.ad2.main.MainActivity.LOG_ON_RECEIVE;
 import static n7.ad2.setting.SettingActivity.SUBSCRIPTION;
 import static n7.ad2.tournaments.TournamentsWorker.PAGE;
 import static n7.ad2.tournaments.TournamentsWorker.TAG;
@@ -53,6 +55,7 @@ public class TournamentsFragment extends Fragment {
 
         subscription = PreferenceManager.getDefaultSharedPreferences(getContext()).getBoolean(SUBSCRIPTION, false);
         getActivity().setTitle(R.string.tournaments);
+        getActivity().sendBroadcast(new Intent(LOG_ON_RECEIVE).putExtra(LOG_ON_RECEIVE, "tournaments_activity_created"));
         setRetainInstance(true);
 
         startGamesWorker();

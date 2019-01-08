@@ -23,6 +23,8 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.view.Window;
 import android.view.WindowManager;
+import android.view.animation.AccelerateDecelerateInterpolator;
+import android.view.animation.AccelerateInterpolator;
 import android.view.animation.AnticipateInterpolator;
 import android.view.animation.AnticipateOvershootInterpolator;
 import android.view.animation.BounceInterpolator;
@@ -39,6 +41,7 @@ public class SplashActivity extends BaseActivity {
     public static final long ANIMATION_DURATION = 300L;
     private ActivitySplashNormalBinding binding;
     private SplashViewModel viewModel;
+    private ObjectAnimator scaleDown;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -73,7 +76,8 @@ public class SplashActivity extends BaseActivity {
             public void run() {
                 startNewActivity();
             }
-        }, ANIMATION_DURATION);
+        }, ANIMATION_DURATION+25);
+        if(scaleDown!=null) scaleDown.cancel();
         startConstraintAnimation();
     }
 
@@ -84,7 +88,7 @@ public class SplashActivity extends BaseActivity {
     }
 
     private void startPulsing() {
-        ObjectAnimator scaleDown = ObjectAnimator.ofPropertyValuesHolder(
+        scaleDown = ObjectAnimator.ofPropertyValuesHolder(
                 binding.ivActivitySplash,
                 PropertyValuesHolder.ofFloat(View.SCALE_X, 1.1f),
                 PropertyValuesHolder.ofFloat(View.SCALE_Y, 1.1f)

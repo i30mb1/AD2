@@ -1,6 +1,7 @@
 package n7.ad2.news;
 
 import android.content.Context;
+import android.content.Intent;
 import android.support.annotation.NonNull;
 
 import org.jsoup.Jsoup;
@@ -21,6 +22,8 @@ import n7.ad2.R;
 import n7.ad2.news.db.NewsDao;
 import n7.ad2.news.db.NewsModel;
 import n7.ad2.news.db.NewsRoomDatabase;
+
+import static n7.ad2.main.MainActivity.LOG_ON_RECEIVE;
 
 public class NewsWorker extends Worker {
 
@@ -85,7 +88,7 @@ public class NewsWorker extends Worker {
             }
 
             steamNewsDao.setNews(list);
-
+            getApplicationContext().sendBroadcast(new Intent(LOG_ON_RECEIVE).putExtra(LOG_ON_RECEIVE, "new_portion_news_loaded"));
 
             return Result.success();
         } catch (IOException e) {

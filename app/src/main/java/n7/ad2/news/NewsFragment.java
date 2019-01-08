@@ -4,6 +4,7 @@ package n7.ad2.news;
 import android.arch.lifecycle.Observer;
 import android.arch.lifecycle.ViewModelProviders;
 import android.arch.paging.PagedList;
+import android.content.Intent;
 import android.databinding.DataBindingUtil;
 import android.os.Bundle;
 import android.preference.PreferenceManager;
@@ -18,6 +19,8 @@ import android.view.ViewGroup;
 import n7.ad2.R;
 import n7.ad2.databinding.FragmentNewsBinding;
 import n7.ad2.news.db.NewsModel;
+
+import static n7.ad2.main.MainActivity.LOG_ON_RECEIVE;
 
 public class NewsFragment extends Fragment {
 
@@ -43,6 +46,7 @@ public class NewsFragment extends Fragment {
         binding.executePendingBindings();
 
         getActivity().setTitle(R.string.news);
+        getActivity().sendBroadcast(new Intent(LOG_ON_RECEIVE).putExtra(LOG_ON_RECEIVE, "news_activity_created"));
         setRetainInstance(true);
 
         setupRecyclerView();

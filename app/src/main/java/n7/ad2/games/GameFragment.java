@@ -17,6 +17,7 @@ import android.view.ViewGroup;
 import n7.ad2.R;
 import n7.ad2.databinding.FragmentGameBinding;
 
+import static n7.ad2.main.MainActivity.LOG_ON_RECEIVE;
 import static n7.ad2.setting.SettingActivity.SUBSCRIPTION;
 
 public class GameFragment extends Fragment {
@@ -41,6 +42,7 @@ public class GameFragment extends Fragment {
 
         subscription = PreferenceManager.getDefaultSharedPreferences(getContext()).getBoolean(SUBSCRIPTION, false);
         getActivity().setTitle(R.string.games);
+        getActivity().sendBroadcast(new Intent(LOG_ON_RECEIVE).putExtra(LOG_ON_RECEIVE, "games_activity_created"));
         setHasOptionsMenu(true);
     }
 

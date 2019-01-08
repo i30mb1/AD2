@@ -3,6 +3,7 @@ package n7.ad2.items;
 import android.arch.lifecycle.Observer;
 import android.arch.lifecycle.ViewModelProviders;
 import android.arch.paging.PagedList;
+import android.content.Intent;
 import android.databinding.DataBindingUtil;
 import android.os.Bundle;
 import android.support.annotation.NonNull;
@@ -21,6 +22,8 @@ import n7.ad2.R;
 import n7.ad2.databinding.FragmentItemsBinding;
 import n7.ad2.items.db.ItemModel;
 import n7.ad2.main.MainViewModel;
+
+import static n7.ad2.main.MainActivity.LOG_ON_RECEIVE;
 
 public class ItemsFragment extends Fragment implements SearchView.OnQueryTextListener {
 
@@ -54,6 +57,7 @@ public class ItemsFragment extends Fragment implements SearchView.OnQueryTextLis
         viewModel = ViewModelProviders.of(this).get(ItemsViewModel.class);
         mainViewModel = ViewModelProviders.of(this).get(MainViewModel.class);
         getActivity().setTitle(R.string.items);
+        getActivity().sendBroadcast(new Intent(LOG_ON_RECEIVE).putExtra(LOG_ON_RECEIVE, "items_activity_created"));
         setRetainInstance(true);
         setHasOptionsMenu(true);
 

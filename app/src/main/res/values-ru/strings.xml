@@ -33,7 +33,7 @@
     <string name="setting_subscription_title">Подписка</string>
     <string name="setting_account_title">Отображать ваш ранг</string>
     <string name="setting_account_summary">Показывайте его друзьям</string>
-    <string name="setting_log_title">Как в матрице</string>
+    <string name="setting_log_title">Панель с лог-текстом</string>
     <string name="setting_log_summary">на главном экране</string>
     <string name="log_in">Log In</string>
     <string name="language_resource">ru</string>
@@ -94,7 +94,7 @@
     <string name="ad3">multi-twitch</string>
     <string name="ad4">конролируй прозрачность и скорость чата</string>
     <string name="ad5">установливай уведомление о начале матча</string>
-    <string name="commercial_6">МУЛЬТИ-TWTICH</string>
+    <string name="ad6">выбирайте один из пяти метовых вариантов гайда</string>
     <string name="commercial_7">СТАВЬ УВЕДОМЛЕНИЯ КОТОРЫЕ НАПОМНЯТ ТЕБЕ О НАЧАЛЕ ТУРНИРНЫХ ИГР</string>
     <string name="commercial_8">ДАЙ ВОЗМОЖНОСТЬ ПРОДОЛЖАТЬ РАБОТУ НАД ПРОЕКТОМ</string>
     <string name="dialog_donate_me_text1">Мы тратим много сил и времени на поддержку приложения. Каждое ваше действие - это расход трафика для наших серверов. Приобрети подписку и защити приложение от ненужной рекламы.</string>
@@ -108,5 +108,6 @@
     <string name="fragment_game_1_player">1 ИГРОК</string>
     <string name="fragment_game_2_players">2 ИГРОКА</string>
     <string name="fragment_game_G2">покажи мне свой APM</string>
+    <string name="fragment_guide_lane">линия</string>
 
 </resources>
