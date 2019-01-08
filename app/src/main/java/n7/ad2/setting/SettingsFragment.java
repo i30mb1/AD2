@@ -177,7 +177,7 @@ public class SettingsFragment extends PreferenceFragment {
         final AlertDialog dialog = builder.create();
         dialog.getWindow().getAttributes().windowAnimations = R.style.DialogTheme;
         dialog.show();
-        TextView textView = dialog.findViewById(R.id.tv_dialog_info);
+        TextView textView = dialog.findViewById(R.id.tv_dialog_info_summary);
         textView.setText(R.string.setting_help_log_in_text);
         dialog.setOnCancelListener(new DialogInterface.OnCancelListener() {
             @Override

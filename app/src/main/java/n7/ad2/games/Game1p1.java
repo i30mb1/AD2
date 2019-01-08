@@ -56,6 +56,7 @@ public class Game1p1 extends BaseActivity {
     public ObservableInt currentSpellLVL = new ObservableInt(1);
     public ObservableInt score = new ObservableInt(0);
     public ObservableBoolean lock = new ObservableBoolean(true);
+    public ObservableField<String> endText = new ObservableField<>();
     private String rightAnswerString;
     private Executor diskIO;
     private int hero;
@@ -63,10 +64,10 @@ public class Game1p1 extends BaseActivity {
     private SoundPool soundPool;
     private int soundYes;
     private int soundNo;
-    private int more1;
-    private int more2;
-    private int more3;
-    private int more4;
+    private int you_are_succeeded_where_other_did_not;
+    private int you_are_the_most_successful;
+    private int does_this_unit_have_a_soul;
+    private int yes_it_does;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -86,10 +87,10 @@ public class Game1p1 extends BaseActivity {
         soundPool = new SoundPool(2, AudioManager.STREAM_MUSIC, 0);
         soundYes = soundPool.load(this, R.raw.yes, 1);
         soundNo = soundPool.load(this, R.raw.no, 1);
-        more1 = soundPool.load(this, R.raw.you_are_sucseded_where_other_did_not, 1);
-        more2 = soundPool.load(this, R.raw.you_are_the_most_sucsesful, 1);
-        more3 = soundPool.load(this, R.raw.does_this_unit_have_a_soul, 1);
-        more4 = soundPool.load(this, R.raw.yes_it_does, 1);
+        you_are_succeeded_where_other_did_not = soundPool.load(this, R.raw.you_are_succeeded_where_other_did_not, 1);
+        you_are_the_most_successful = soundPool.load(this, R.raw.you_are_the_most_successful, 1);
+        does_this_unit_have_a_soul = soundPool.load(this, R.raw.does_this_unit_have_a_soul, 1);
+        yes_it_does = soundPool.load(this, R.raw.yes_it_does, 1);
     }
 
     private void startCountDownTimer() {
@@ -109,11 +110,10 @@ public class Game1p1 extends BaseActivity {
 
     private void showResult() {
         lock.set(true);
+        setEndText();
         changeBackgroundColor();
         startConstraintAnimation();
     }
-
-    public ObservableField<String> roflText = new ObservableField<>();
 
     private void startConstraintAnimation() {
         ConstraintSet constraintSet = new ConstraintSet();
@@ -133,7 +133,7 @@ public class Game1p1 extends BaseActivity {
                         .setStartDelay(1000)
                         .setDuration(1000));
 
-        TransitionManager.beginDelayedTransition((ViewGroup) binding.getRoot(),transitionSet);
+        TransitionManager.beginDelayedTransition((ViewGroup) binding.getRoot(), transitionSet);
         constraintSet.applyTo((ConstraintLayout) binding.getRoot());
     }
 
@@ -260,45 +260,48 @@ public class Game1p1 extends BaseActivity {
     }
 
     private void playSound(boolean isRight) {
-        int hzScore = score.get();
-        setRoflText(hzScore);
-//        if (score.get() > 9) soundPool.play(more4, 0.6F, 0.6F, 0, 0, 1F);
-//        if (score.get() == 8) soundPool.play(more3, 0.6F, 0.6F, 0, 0, 1F);
-//        if (score.get() == 6) soundPool.play(more2, 0.6F, 0.6F, 0, 0, 1F);
-//        if (score.get() == 4) soundPool.play(more1, 0.6F, 0.6F, 0, 0, 1F);
-//        if (hz < 9 && hz != 8 && hz != 6 && hz != 4) {
         if (isRight) {
             soundPool.play(soundYes, 0.6F, 0.6F, 0, 0, 1F);
         } else {
             soundPool.play(soundNo, 0.6F, 0.6F, 0, 0, 1F);
         }
-//        }
     }
 
-    private void setRoflText(int hzScore) {
-        if (hzScore > 10) {
-            roflText.set("YOU SUCCEEDED WHERE OTHER DO NOT");
-            return;
-        }
-        if (hzScore > 7) {
-            roflText.set("UGANDA FOREVER");
-            return;
-        }
-        if (hzScore > 5) {
-            roflText.set("DOES THIS UNIT HAVE A SOUL?");
-            return;
-        }
-        if (hzScore > 1) {
-            roflText.set("GG&WP");
-            return;
-        }
-        if (hzScore < 1) {
-            roflText.set("SKELETON_KING PLAYER DETECTED");
-        }
-        if (hzScore < -5) {
-            roflText.set("SUCK MY DATA, HUMAN");
+    private void setEndText() {
+        switch (score.get()) {
+            case -6:
+                endText.set("SUCK MY DATA, HUMAN");
+                break;
+            case -5:
+            case -4:
+            case -3:
+            case -2:
+            case -1:
+                endText.set("SKELETON_KING PLAYER DETECTED");
+                break;
+            case 0:
+            default:
+            case 1:
+                endText.set("GG&WP");
+                break;
+            case 2:
+            case 3:
+            case 4:
+            case 5:
+                endText.set("DOES THIS UNIT HAVE A SOUL?");
+                soundPool.play(does_this_unit_have_a_soul, 0.6F, 0.6F, 0, 0, 1F);
+                break;
+            case 6:
+            case 7:
+                endText.set("UGANDA FOREVER");
+                soundPool.play(you_are_the_most_successful, 0.6F, 0.6F, 0, 0, 1F);
+                break;
+            case 8:
+            case 9:
+            case 10:
+                endText.set("YOU SUCCEEDED WHERE OTHER DO NOT");
+                soundPool.play(you_are_succeeded_where_other_did_not, 0.6F, 0.6F, 0, 0, 1F);
+                break;
         }
     }
-
-
 }

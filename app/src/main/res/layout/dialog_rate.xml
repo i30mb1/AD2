@@ -15,19 +15,18 @@
         android:background="?colorPrimary">
 
         <Button
-            android:id="@+id/b"
+            android:id="@+id/b_dialog_rate"
             style="@style/Widget.MaterialComponents.Button.UnelevatedButton"
             android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="16dp"
-            android:layout_marginBottom="8dp"
+            android:layout_height="40dp"
+            android:layout_marginTop="8dp"
             android:onClick="@{()-> activity.openAppStore()}"
             android:text="@android:string/ok"
             android:textSize="14sp"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/tv2" />
+            app:layout_constraintStart_toEndOf="@+id/red_line_dialog_rate"
+            app:layout_constraintTop_toBottomOf="@+id/tv_dialog_rate_summary" />
 
         <View
             android:id="@+id/red_line_dialog_rate"
@@ -39,7 +38,7 @@
             app:layout_constraintTop_toTopOf="parent" />
 
         <TextView
-            android:id="@+id/tv1"
+            android:id="@+id/tv_dialog_rate_title"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_marginEnd="8dp"
@@ -55,7 +54,7 @@
             app:layout_constraintTop_toTopOf="parent" />
 
         <TextView
-            android:id="@+id/tv2"
+            android:id="@+id/tv_dialog_rate_summary"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_marginEnd="8dp"
@@ -68,6 +67,6 @@
             android:textStyle="bold"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/tv1" />
+            app:layout_constraintTop_toBottomOf="@+id/tv_dialog_rate_title" />
     </android.support.constraint.ConstraintLayout>
 </layout>

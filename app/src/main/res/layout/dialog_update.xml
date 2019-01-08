@@ -15,7 +15,7 @@
         android:background="?colorPrimary">
 
         <View
-            android:id="@+id/left_red_line"
+            android:id="@+id/red_line_dialog_update"
             android:layout_width="2dp"
             android:layout_height="0dp"
             android:background="?colorAccent"
@@ -24,7 +24,7 @@
             app:layout_constraintTop_toTopOf="parent" />
 
         <TextView
-            android:id="@+id/tv_title"
+            android:id="@+id/tv_dialog_update_title"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:gravity="center"
@@ -35,11 +35,11 @@
             android:textSize="14sp"
             android:textStyle="italic"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toEndOf="@+id/left_red_line"
+            app:layout_constraintStart_toEndOf="@+id/red_line_dialog_update"
             app:layout_constraintTop_toTopOf="parent" />
 
         <TextView
-            android:id="@+id/tv_message"
+            android:id="@+id/tv_dialog_update_message"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:gravity="center"
@@ -50,23 +50,21 @@
             android:textSize="12sp"
             android:textStyle="italic"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toEndOf="@+id/left_red_line"
-            app:layout_constraintTop_toBottomOf="@+id/tv_title" />
+            app:layout_constraintStart_toEndOf="@+id/red_line_dialog_update"
+            app:layout_constraintTop_toBottomOf="@+id/tv_dialog_update_title" />
 
         <Button
-            android:id="@+id/b"
+            android:id="@+id/b_dialog_update"
             style="@style/Widget.MaterialComponents.Button"
             android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            android:layout_marginStart="8dp"
-            android:layout_marginEnd="8dp"
+            android:layout_height="40dp"
             android:onClick="@{()->activity.loadNewVersion()}"
             android:text="@android:string/ok"
             android:textSize="14sp"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toEndOf="@id/left_red_line"
-            app:layout_constraintTop_toBottomOf="@+id/tv_message" />
+            app:layout_constraintStart_toEndOf="@+id/red_line_dialog_update"
+            app:layout_constraintTop_toBottomOf="@+id/tv_dialog_update_message" />
 
 
     </android.support.constraint.ConstraintLayout>

@@ -49,11 +49,11 @@
                     tools:targetApi="lollipop" />
 
                 <Button
-                    android:onClick="@{()->activity.startG1P1()}"
                     android:id="@+id/b_fragment_game_G1P1"
                     style="@style/Widget.MaterialComponents.Button.UnelevatedButton"
                     android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
+                    android:layout_height="40dp"
+                    android:onClick="@{()->activity.startG1P1()}"
                     android:text="@string/fragment_game_1_player"
                     android:textAllCaps="true"
                     android:textSize="14sp"
@@ -65,11 +65,11 @@
                     app:layout_constraintTop_toBottomOf="@+id/tv_fragment_game_G1" />
 
                 <Button
-                    android:onClick="@{()->activity.startG1P2()}"
                     android:id="@+id/b_fragment_game_G1P2"
                     style="@style/Widget.MaterialComponents.Button.UnelevatedButton"
                     android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
+                    android:layout_height="40dp"
+                    android:onClick="@{()->activity.startG1P2()}"
                     android:text="@string/fragment_game_2_players"
                     android:textAllCaps="true"
                     android:textSize="14sp"
@@ -108,7 +108,9 @@
                     android:id="@+id/tv_fragment_game_G2"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:padding="5dp"
+                    android:layout_marginStart="8dp"
+                    android:layout_marginTop="8dp"
+                    android:layout_marginEnd="8dp"
                     android:text="@string/fragment_game_G2"
                     android:textAllCaps="true"
                     android:textColor="?android:textColorPrimary"
@@ -121,14 +123,15 @@
                     tools:targetApi="lollipop" />
 
                 <Button
-                    android:onClick="@{()->activity.startG2P1()}"
                     android:id="@+id/b_fragment_game_G2P1"
                     style="@style/Widget.MaterialComponents.Button.UnelevatedButton"
                     android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
+                    android:layout_height="40dp"
+                    android:onClick="@{()->activity.startG2P1()}"
                     android:text="@string/fragment_game_1_player"
                     android:textAllCaps="false"
                     android:textSize="14sp"
+                    app:layout_constraintBottom_toBottomOf="parent"
                     app:layout_constraintEnd_toStartOf="@+id/b_fragment_game_G2P2"
                     app:layout_constraintHorizontal_bias="0.5"
                     app:layout_constraintStart_toEndOf="@+id/red_line_fragment_game_G2"
@@ -138,7 +141,7 @@
                     android:id="@+id/b_fragment_game_G2P2"
                     style="@style/Widget.MaterialComponents.Button.UnelevatedButton"
                     android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
+                    android:layout_height="40dp"
                     android:enabled="false"
                     android:text="@string/fragment_game_2_players"
                     android:textSize="14sp"
