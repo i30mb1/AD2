@@ -97,7 +97,7 @@ public class SettingActivity extends BaseActivity {
 
         DialogDonateBinding binding = DataBindingUtil.inflate(getLayoutInflater(), R.layout.dialog_donate, null, false);
         builder.setView(binding.getRoot());
-        binding.setView(this);
+        binding.setActivity(this);
 
         AlertDialog dialog = builder.create();
         dialog.getWindow().getAttributes().windowAnimations = R.style.DialogTheme;
@@ -108,6 +108,20 @@ public class SettingActivity extends BaseActivity {
 
         FirebaseAnalytics firebaseAnalytics = FirebaseAnalytics.getInstance(this);
         firebaseAnalytics.logEvent(FIREBASE_DIALOG_DONATE_SAW, null);
+    }
+
+    private void loadItemsForDialogSubscription() {
+        images.add(R.drawable.ad1);
+        images.add(R.drawable.ad2);
+        images.add(R.drawable.ad3);
+        images.add(R.drawable.ad4);
+        images.add(R.drawable.ad5);
+
+        descriptions.add(getString(R.string.ad1));
+        descriptions.add(getString(R.string.ad2));
+        descriptions.add(getString(R.string.ad3));
+        descriptions.add(getString(R.string.ad4));
+        descriptions.add(getString(R.string.ad5));
     }
 
     public void launchPurchaseSubscription() {
@@ -123,26 +137,6 @@ public class SettingActivity extends BaseActivity {
         } catch (IabHelper.IabAsyncInProgressException e) {
             e.printStackTrace();
         }
-    }
-
-    private void loadItemsForDialogSubscription() {
-        images.add(R.drawable.commercial_1);
-        images.add(R.drawable.commercial_2);
-        images.add(R.drawable.commercial_3);
-        images.add(R.drawable.commercial_4);
-        images.add(R.drawable.commercial_5);
-        images.add(R.drawable.commercial_6);
-        images.add(R.drawable.commercial_7);
-        images.add(R.drawable.commercial_8);
-
-        descriptions.add(getString(R.string.commercial_1));
-        descriptions.add(getString(R.string.commercial_2));
-        descriptions.add(getString(R.string.commercial_3));
-        descriptions.add(getString(R.string.commercial_4));
-        descriptions.add(getString(R.string.commercial_5));
-        descriptions.add(getString(R.string.commercial_6));
-        descriptions.add(getString(R.string.commercial_7));
-        descriptions.add(getString(R.string.commercial_8));
     }
 
     private void checkIfNeedShowSubscription() {

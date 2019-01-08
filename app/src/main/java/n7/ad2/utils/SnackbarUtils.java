@@ -29,7 +29,7 @@ public class SnackbarUtils {
         if (v == null || snackbarText == null) {
             return;
         }
-        Snackbar.make(v, snackbarText, Snackbar.LENGTH_LONG).show();
+        Snackbar.make(v, snackbarText, Snackbar.LENGTH_SHORT).show();
     }
 
 }

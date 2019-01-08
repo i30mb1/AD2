@@ -132,7 +132,7 @@
                 android:alpha="0"
                 android:drawableLeft="@drawable/ic_alarm_on"
                 android:drawablePadding="10dp"
-                android:text="@string/item_list_tournament_game_notification"
+                tools:text="@string/item_list_tournament_game_notification_off"
                 android:textAllCaps="true"
                 android:textSize="12sp"
                 app:layout_constraintBottom_toBottomOf="parent"

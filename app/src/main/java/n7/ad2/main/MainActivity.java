@@ -3,9 +3,11 @@ package n7.ad2.main;
 import android.app.DownloadManager;
 import android.arch.lifecycle.Observer;
 import android.arch.lifecycle.ViewModelProviders;
+import android.content.BroadcastReceiver;
 import android.content.Context;
 import android.content.DialogInterface;
 import android.content.Intent;
+import android.content.IntentFilter;
 import android.databinding.DataBindingUtil;
 import android.databinding.ObservableBoolean;
 import android.databinding.ObservableInt;
@@ -31,7 +33,6 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.view.animation.BounceInterpolator;
 import android.view.inputmethod.InputMethodManager;
-import android.widget.Button;
 
 import com.google.android.gms.ads.AdRequest;
 import com.google.android.gms.ads.MobileAds;
@@ -85,6 +86,7 @@ public class MainActivity extends BaseActivity {
     public static final String GITHUB_LAST_APK_URL = "https://github.com/i30mb1/AD2/blob/master/app/release/app-release.apk?raw=true";
     public static final String ADMOB_ID = "ca-app-pub-5742225922710304/8697652489";
     public static final String ADMOB_ID_FAKE = "ca-app-pub-3940256099942544/5224354917";
+    public static final String LOG_ON_RECEIVE = "log";
     private static final String DIALOG_PRE_DONATE_LAST_DAY = "DIALOG_PRE_DONATE_LAST_DAY";
     public ObservableInt observableLastItem = new ObservableInt(1);
     public ObservableBoolean freeSubscriptionButtonVisibility = new ObservableBoolean(false);
@@ -96,6 +98,13 @@ public class MainActivity extends BaseActivity {
     private PlainAdapter adapter;
     private ActivityMainBinding bindingActivity;
     private DrawerBinding bindingDrawer;
+    BroadcastReceiver broadcastReceiver = new BroadcastReceiver() {
+        @Override
+        public void onReceive(Context context, Intent intent) {
+            String string = intent.getStringExtra(LOG_ON_RECEIVE);
+            log(string);
+        }
+    };
     private boolean shouldUpdateFromMarket;
     private MainViewModel viewModel;
     private SlidingRootNav drawer;
@@ -180,7 +189,7 @@ public class MainActivity extends BaseActivity {
                 log("subscription_granted_10_minutes");
                 OneTimeWorkRequest worker = new OneTimeWorkRequest.Builder(ADRewardWorker.class).setInitialDelay(rewardItem.getAmount(), TimeUnit.SECONDS).build();
                 WorkManager.getInstance().enqueue(worker);
-                PreferenceManager.getDefaultSharedPreferences(MainActivity.this).edit().putBoolean(SUBSCRIPTION,true).apply();
+                PreferenceManager.getDefaultSharedPreferences(MainActivity.this).edit().putBoolean(SUBSCRIPTION, true).apply();
             }
 
             @Override
@@ -278,21 +287,27 @@ public class MainActivity extends BaseActivity {
             default:
             case 1:
                 ft.replace(bindingActivity.containerActivityMain.getId(), new HeroesFragment()).commit();
+                log("replace_fragment_heroes");
                 break;
             case 2:
                 ft.replace(bindingActivity.containerActivityMain.getId(), new ItemsFragment()).commit();
+                log("replace_fragment_items");
                 break;
             case 3:
                 ft.replace(bindingActivity.containerActivityMain.getId(), new NewsFragment()).commit();
+                log("replace_fragment_news");
                 break;
             case 4:
                 ft.replace(bindingActivity.containerActivityMain.getId(), new TournamentsFragment()).commit();
+                log("replace_fragment_tournaments");
                 break;
             case 5:
                 ft.replace(bindingActivity.containerActivityMain.getId(), new StreamsFragment()).commit();
+                log("replace_fragment_streams");
                 break;
             case 6:
                 ft.replace(bindingActivity.containerActivityMain.getId(), new GameFragment()).commit();
+                log("replace_fragment_game");
                 break;
         }
 //        if (closeDrawer)
@@ -445,7 +460,8 @@ public class MainActivity extends BaseActivity {
 
     @Override
     protected void onPause() {
-        rewardedVideoAd.pause(this);
+        if (rewardedVideoAd != null) rewardedVideoAd.pause(this);
+        if (broadcastReceiver != null) unregisterReceiver(broadcastReceiver);
         log("on_Pause");
         super.onPause();
     }
@@ -459,27 +475,28 @@ public class MainActivity extends BaseActivity {
 
     @Override
     protected void onDestroy() {
-        rewardedVideoAd.destroy(this);
+        if (rewardedVideoAd != null) rewardedVideoAd.destroy(this);
         log("on_Destroy");
         super.onDestroy();
     }
 
     @Override
     protected void onResume() {
-        rewardedVideoAd.resume(this);
+        if (rewardedVideoAd != null) rewardedVideoAd.resume(this);
         log("on_Resume");
         subscriptionButtonState();
         incCountEnter();
+        regReceiver();
         super.onResume();
     }
 
-//    private void regReceiver() {
-//        IntentFilter filter = new IntentFilter("android.net.conn.CONNECTIVITY_CHANGE");
-//        filter.addAction("setToolbarName");
-//        registerReceiver(connections, filter);
-//        //можно затригерить ресивер этой командой
-////        getActivity().sendBroadcast(new Intent("setToolbarName"));
-//    }
+    private void regReceiver() {
+        IntentFilter filter = new IntentFilter();
+        filter.addAction(LOG_ON_RECEIVE);
+        registerReceiver(broadcastReceiver, filter);
+        //можно затригерить ресивер этой командой
+//        getActivity().sendBroadcast(new Intent("setToolbarName"));
+    }
 
     @Override
     public void onBackPressed() {

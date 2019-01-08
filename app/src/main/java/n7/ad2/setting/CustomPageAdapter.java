@@ -51,8 +51,8 @@ public class CustomPageAdapter extends PagerAdapter {
         LayoutInflater inflater = (LayoutInflater) context.getSystemService(Context.LAYOUT_INFLATER_SERVICE);
         View view = inflater.inflate(R.layout.item_list_commercial, null);
 
-        TextView textView = view.findViewById(R.id.tv);
-        ImageView imageView = view.findViewById(R.id.iv);
+        TextView textView = view.findViewById(R.id.tv_item_list_commercial);
+        ImageView imageView = view.findViewById(R.id.iv_item_list_commercial);
 
         textView.setText(descriptions.get(position));
         imageView.setImageResource(images.get(position));

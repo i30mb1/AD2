@@ -102,7 +102,7 @@
     <string name="all_open_folder">Open</string>
     <string name="hero_responses_fragment_sound_downloaded">Sound downloaded</string>
     <string name="dialog_donate_annual">ANNUAL</string>
-    <string name="dialog_donate_month">ACTIVATE</string>
+
     <string name="dialog_donate_subscription">SUBSCRIPTION</string>
     <string name="dialog_rate_me_never">Never</string>
     <string name="dialog_rate_me_later">LATER</string>
@@ -141,24 +141,26 @@
     <string name="dialog_donate_4">- Switcher for 3 languages Russian, English and China</string>
     <string name="dialog_donate_8">- Quick opportunity to contact with developers via E-mail</string>
     <string name="dialog_donate_9">- Possibility to add your Twitch.tv account on first position (only for 6 month subscribers)</string>
-    <string name="all_on" translatable="false">ON</string>
-    <string name="all_off" translatable="false">OFF</string>
-    <string name="all_deactivate">DEACTIVATE</string>
+    <string name="all_subscription_activated">is activated</string>
+    <string name="all_subscription_deactivated">is deactivated</string>
+    <string name="all_deactivate">deactivate</string>
+    <string name="all_activate">activate</string>
     <string name="activity_game2_persons_equal" translatable="false">x 2 =</string>
     <string name="setting_news_title">Image for news</string>
     <string name="setting_news_summary" translatable="false">Wubalubadubdub!</string>
-    <string name="commercial_1">FIVE BUILD VARIATIONS</string>
-    <string name="commercial_2">NO LIMITS FOR RESPONSES</string>
-    <string name="commercial_3">SPEED AND TRANSPARENCY CONTROL FOR TWITCH.TV CHAT</string>
-    <string name="commercial_4">REMOVE ADS</string>
-    <string name="commercial_5">SWITCH BETWEEN RUSSIAN AND ENGLISH LANGUAGES</string>
+    <string name="ad1">learn more information about heroes and items</string>
+    <string name="ad2">download and set tune on notification</string>
+    <string name="ad3">multi-twitch</string>
+    <string name="ad4">control twitch-chat transparency and speed</string>
+    <string name="ad5">set reminder on oncoming match</string>
     <string name="commercial_6">MULTI-TWITCH</string>
     <string name="commercial_7">SET ALARM FOR UPCOMING GAMES</string>
     <string name="commercial_8">INSPIRATION TO CONTINUE WORKING TOWARDS GOALS</string>
     <string name="dialog_donate_me_text1">We spend a lot of time and effort supporting applications. Your every action is a traffic expense for our servers. Take a subscription and protect the application from unnecessary advertising.</string>
     <string name="dialog_donate_me_text2">WE NEED YOU!</string>
     <string name="dialog_open_stream_hint">Channel name</string>
-    <string name="item_list_tournament_game_notification">notification</string>
+    <string name="item_list_tournament_game_notification_on">notification on</string>
+    <string name="item_list_tournament_game_notification_off">notification off</string>
     <string name="fragment_game_1_player">1 PLAYER</string>
     <string name="fragment_game_2_players">2 PLAYERS</string>
     <string name="fragment_game_G2">SHOW ME YOUR APM</string>

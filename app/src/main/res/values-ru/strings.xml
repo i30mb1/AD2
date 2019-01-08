@@ -76,7 +76,6 @@
     <string name="game1_hard_activity_tip">Этот мод даёт вам в 2 раза больше очков но и жопец горит в разы сильнее!\nP.S. Будьте осторожны!!\nP.S.S. всё равно пытайтесь набрать 50 очков</string>
     <string name="setting_help_log_in_text">Теперь вы можете следить за своим рангом Dota 2 на главном экране этого приложения</string>
     <string name="multi_streams_fragment_tip">Это экспериментальное дополнение, и если вы не являетесь пользователем премиум-класса, вы можете запускать эту деятельность только 7 раз в день!</string>
-    <string name="dialog_donate_month">АКТИВИРОВАТЬ</string>
     <string name="dialog_donate_1">- Отключение всей рекламы (текущей/будущей/скрытой)</string>
     <string name="dialog_donate_8">- Кнопка для быстрой связи с разработчиками</string>
     <string name="dialog_donate_9">"- Возможность поднять свою Twitch.tv трансляцию на первое место (только для подписчиков больше 6 месяцев) "</string>
@@ -90,15 +89,24 @@
     <string name="dialog_donate_10">Доступ к мульти-Twitch.tv</string>
     <string name="setting_news_title">Картинки в новостях</string>
     <string name="games_schedule">НАПОМНИТЬ</string>
-    <string name="commercial_1">5 ВАРИАНТОВ БИЛДОВ</string>
-    <string name="commercial_2">БЕЗЛИМИТНЫЙ ДОСТУП К РЕПЛИКАМ</string>
-    <string name="commercial_3">КОНТРОЛИРУЙ СКОРОСТЬ И ПРОЗРАЧНОСТЬ TWITCH ЧАТА</string>
-    <string name="commercial_4">НИКАКОЙ РЕКЛАМЫ</string>
-    <string name="commercial_5">ПЕРЕКЛЮЧЕНИЕ МЕЖДУ АНГЛИЙСКИЙ И РУССКИМ ЯЗЫКОМ</string>
+    <string name="ad1">узнай больше информации о героях и придметах</string>
+    <string name="ad2">скачивай и устанавливай реплики героев на уведомления</string>
+    <string name="ad3">multi-twitch</string>
+    <string name="ad4">конролируй прозрачность и скорость чата</string>
+    <string name="ad5">установливай уведомление о начале матча</string>
     <string name="commercial_6">МУЛЬТИ-TWTICH</string>
     <string name="commercial_7">СТАВЬ УВЕДОМЛЕНИЯ КОТОРЫЕ НАПОМНЯТ ТЕБЕ О НАЧАЛЕ ТУРНИРНЫХ ИГР</string>
     <string name="commercial_8">ДАЙ ВОЗМОЖНОСТЬ ПРОДОЛЖАТЬ РАБОТУ НАД ПРОЕКТОМ</string>
     <string name="dialog_donate_me_text1">Мы тратим много сил и времени на поддержку приложения. Каждое ваше действие - это расход трафика для наших серверов. Приобрети подписку и защити приложение от ненужной рекламы.</string>
     <string name="dialog_donate_me_text2">ТЫ НУЖЕН НАМ!</string>
+    <string name="all_subscription_activated">активна</string>
+    <string name="all_subscription_deactivated">не активна</string>
+    <string name="all_activate">активировать</string>
+    <string name="dialog_open_stream_hint">название канала</string>
+    <string name="item_list_tournament_game_notification_on">уведомление вкл.</string>
+    <string name="item_list_tournament_game_notification_off">уведомление выкл.</string>
+    <string name="fragment_game_1_player">1 ИГРОК</string>
+    <string name="fragment_game_2_players">2 ИГРОКА</string>
+    <string name="fragment_game_G2">покажи мне свой APM</string>
 
 </resources>

@@ -9,30 +9,26 @@ import android.databinding.ObservableInt;
 import android.preference.PreferenceManager;
 import android.support.annotation.NonNull;
 
-import com.google.android.gms.ads.MobileAds;
-import com.google.android.gms.ads.reward.RewardItem;
-import com.google.android.gms.ads.reward.RewardedVideoAd;
-import com.google.android.gms.ads.reward.RewardedVideoAdListener;
-
 import java.io.IOException;
 import java.util.concurrent.Executor;
 import java.util.concurrent.Executors;
 
 import n7.ad2.BuildConfig;
 import n7.ad2.R;
-import n7.ad2.utils.SingleLiveEvent;
-import n7.ad2.utils.SnackbarMessage;
-import n7.ad2.utils.PlainAdapter;
 import n7.ad2.main.db.N7Message;
 import n7.ad2.main.db.N7MessageRoomDatabase;
 import n7.ad2.main.retrofit.Update;
 import n7.ad2.main.retrofit.UpdateApi;
 import n7.ad2.setting.SettingActivity;
+import n7.ad2.utils.PlainAdapter;
+import n7.ad2.utils.SingleLiveEvent;
+import n7.ad2.utils.SnackbarMessage;
 import retrofit2.Call;
 import retrofit2.Response;
 import retrofit2.Retrofit;
 import retrofit2.converter.gson.GsonConverterFactory;
 
+import static n7.ad2.main.MainActivity.LOG_ON_RECEIVE;
 import static n7.ad2.splash.SplashViewModel.CURRENT_DAY_IN_APP;
 
 public class MainViewModel extends AndroidViewModel {
@@ -102,7 +98,7 @@ public class MainViewModel extends AndroidViewModel {
             @Override
             public void run() {
                 isUpdating.set(true);
-                log("checking_update");
+                application.sendBroadcast(new Intent(LOG_ON_RECEIVE).putExtra(LOG_ON_RECEIVE, "checking_update"));
 //                try {
 //                    Thread.sleep(5000);
 //                } catch (InterruptedException e) {
@@ -135,8 +131,8 @@ public class MainViewModel extends AndroidViewModel {
                         } else {
                             if (showSnackbar) snackbarMessage.postValue(R.string.update_ok);
                         }
-                        log("device_version::" + deviceVersion);
-                        log("server_version::" + serverVersion);
+                        application.sendBroadcast(new Intent(LOG_ON_RECEIVE).putExtra(LOG_ON_RECEIVE, "device_version = " + deviceVersion));
+                        application.sendBroadcast(new Intent(LOG_ON_RECEIVE).putExtra(LOG_ON_RECEIVE, "server_version = " + serverVersion));
                     }
                 } catch (IOException e) {
                     e.printStackTrace();

@@ -223,13 +223,8 @@ public class SplashViewModel extends AndroidViewModel {
     }
 
     private void setupFirebaseAnalytics() {
-        diskIO.execute(new Runnable() {
-            @Override
-            public void run() {
-                FirebaseAnalytics.getInstance(application);
-                MobileAds.initialize(application, ADMOB_APP_ID);
-            }
-        });
+        FirebaseAnalytics.getInstance(application);
+        MobileAds.initialize(application, ADMOB_APP_ID);
     }
 
 }

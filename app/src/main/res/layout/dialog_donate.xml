@@ -1,11 +1,12 @@
 <?xml version="1.0" encoding="utf-8"?>
-<layout xmlns:android="http://schemas.android.com/apk/res/android"
+<layout xmlns:tools="http://schemas.android.com/tools"
+    xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto">
 
     <data>
 
         <variable
-            name="view"
+            name="activity"
             type="n7.ad2.setting.SettingActivity" />
     </data>
 
@@ -30,10 +31,11 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_margin="4dp"
-            android:text="@{view.subscription ? @string/all_on : @string/all_off}"
+            android:text="@{activity.subscription ? @string/all_subscription_activated : @string/all_subscription_deactivated}"
             android:textAllCaps="true"
-            android:textColor="@{view.subscription ? @android:color/holo_green_light : @android:color/holo_red_light}"
-            android:textStyle="bold" />
+            android:textColor="@{activity.subscription ? @android:color/holo_green_light : @android:color/holo_red_light}"
+            android:textStyle="bold"
+            tools:text="IS ACTIVE" />
 
         <FrameLayout
             android:layout_width="match_parent"
@@ -47,7 +49,7 @@
 
             <android.support.design.widget.TabLayout
                 android:id="@+id/tab_layout"
-                android:layout_width="match_parent"
+                android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_gravity="bottom|center_horizontal"
                 app:tabBackground="@drawable/indicator_selector"
@@ -57,12 +59,14 @@
 
         <Button
             style="@style/Widget.MaterialComponents.Button"
-            android:layout_width="wrap_content"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_margin="4dp"
-            android:onClick="@{()-> view.launchPurchaseSubscription()}"
-            android:text="@{view.subscription ? @string/all_deactivate : @string/dialog_donate_month}"
-            android:textSize="14sp" />
+            android:onClick="@{()-> activity.launchPurchaseSubscription()}"
+            android:text="@{activity.subscription ? @string/all_deactivate : @string/all_activate}"
+            android:textAllCaps="true"
+            android:textSize="14sp"
+            tools:text="activate" />
 
     </LinearLayout>
 </layout>

@@ -127,15 +127,21 @@ public class TournamentsPagedListAdapter extends PagedListAdapter<TournamentGame
                     public void onChanged(@Nullable List<WorkInfo> workInfos) {
                         if (workInfos != null && workInfos.size() == 0) {
                             status = null;
+                            b_tv_item_list_games.setText(tv_item_list_games_middle.getContext().getText(R.string.item_list_tournament_game_notification_off));
+                            b_tv_item_list_games.setTextColor(tv_item_list_games_middle.getContext().getResources().getColor(android.R.color.holo_red_light));
                             b_tv_item_list_games.setCompoundDrawablesWithIntrinsicBounds(R.drawable.ic_alarm_off, 0, 0, 0);
                         }
                         if (workInfos != null && workInfos.size() != 0) {
                             status = workInfos.get(0).getState();
                             if (workInfos.get(0).getState().equals(WorkInfo.State.ENQUEUED)) {
+                                b_tv_item_list_games.setText(tv_item_list_games_middle.getContext().getText(R.string.item_list_tournament_game_notification_on));
+                                b_tv_item_list_games.setTextColor(tv_item_list_games_middle.getContext().getResources().getColor(android.R.color.holo_green_light));
                                 b_tv_item_list_games.setCompoundDrawablesWithIntrinsicBounds(R.drawable.ic_alarm_on, 0, 0, 0);
                             }
                             if (workInfos.get(0).getState().equals(WorkInfo.State.SUCCEEDED) || workInfos.get(0).getState().equals(WorkInfo.State.CANCELLED)) {
                                 status = null;
+                                b_tv_item_list_games.setText(tv_item_list_games_middle.getContext().getText(R.string.item_list_tournament_game_notification_off));
+                                b_tv_item_list_games.setTextColor(tv_item_list_games_middle.getContext().getResources().getColor(android.R.color.holo_red_light));
                                 b_tv_item_list_games.setCompoundDrawablesWithIntrinsicBounds(R.drawable.ic_alarm_off, 0, 0, 0);
                                 WorkManager.getInstance().cancelAllWorkByTag(game.url);
                                 WorkManager.getInstance().pruneWork();//очищает все завершённые работы
