@@ -17,7 +17,7 @@ import n7.ad2.R;
 import n7.ad2.utils.BaseActivity;
 import n7.ad2.utils.Utils;
 
-import static n7.ad2.setting.SettingActivity.SUBSCRIPTION;
+import static n7.ad2.setting.SettingActivity.SUBSCRIPTION_PREF;
 
 public class ItemFullActivity extends BaseActivity {
 
@@ -35,7 +35,7 @@ public class ItemFullActivity extends BaseActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_item_full_0);
-        subscription = PreferenceManager.getDefaultSharedPreferences(this).getBoolean(SUBSCRIPTION, false);
+        subscription = PreferenceManager.getDefaultSharedPreferences(this).getBoolean(SUBSCRIPTION_PREF, false);
 
         this.itemFolder = getIntent().getStringExtra(ITEM_CODE_NAME);
         this.itemName = getIntent().getStringExtra(ITEM_NAME);
@@ -63,9 +63,10 @@ public class ItemFullActivity extends BaseActivity {
 
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
-        if (subscription)
+        if (subscription) {
             getMenuInflater().inflate(R.menu.menu_activity_items_change_language, menu);
-        return super.onCreateOptionsMenu(menu);
+        }
+        return true;
     }
 
     public String switchLanguage() {

@@ -42,7 +42,7 @@ import n7.ad2.utils.SingleLiveEvent;
 
 import static n7.ad2.news.NewsWorker.DELETE_TABLE;
 import static n7.ad2.setting.SettingActivity.ONCE_PER_MONTH_SUBSCRIPTION;
-import static n7.ad2.setting.SettingActivity.SUBSCRIPTION;
+import static n7.ad2.setting.SettingActivity.SUBSCRIPTION_PREF;
 import static n7.ad2.utils.BaseActivity.THEME_DARK;
 import static n7.ad2.utils.BaseActivity.THEME_GRAY;
 import static n7.ad2.utils.BaseActivity.THEME_WHITE;
@@ -218,7 +218,7 @@ public class SplashViewModel extends AndroidViewModel {
     }
 
     private void setSubscriptionMessage(boolean subscription) {
-        PreferenceManager.getDefaultSharedPreferences(application).edit().putBoolean(SUBSCRIPTION, subscription).apply();
+        PreferenceManager.getDefaultSharedPreferences(application).edit().putBoolean(SUBSCRIPTION_PREF, subscription).apply();
         log("subscription_status = " + subscription);
     }
 

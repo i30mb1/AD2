@@ -44,7 +44,7 @@ import n7.ad2.utils.AppExecutors;
 import n7.ad2.utils.StickyHeaderDecorator;
 import n7.ad2.utils.Utils;
 
-import static n7.ad2.setting.SettingActivity.SUBSCRIPTION;
+import static n7.ad2.setting.SettingActivity.SUBSCRIPTION_PREF;
 
 public class ResponsesPagedListAdapter extends PagedListAdapter<ResponseModel, ResponsesPagedListAdapter.ViewHolder> implements StickyHeaderDecorator.StickyHeaderInterface {
 
@@ -294,7 +294,7 @@ public class ResponsesPagedListAdapter extends PagedListAdapter<ResponseModel, R
                         }
                     }
                 });
-                if (PreferenceManager.getDefaultSharedPreferences(context).getBoolean(SUBSCRIPTION, false)) {
+                if (PreferenceManager.getDefaultSharedPreferences(context).getBoolean(SUBSCRIPTION_PREF, false)) {
                     ll_item_response.setOnLongClickListener(new View.OnLongClickListener() {
                         @Override
                         public boolean onLongClick(final View view) {

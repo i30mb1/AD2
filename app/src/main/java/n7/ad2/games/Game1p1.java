@@ -84,7 +84,7 @@ public class Game1p1 extends BaseActivity {
     }
 
     private void loadPlayer() {
-        soundPool = new SoundPool(2, AudioManager.STREAM_MUSIC, 0);
+        soundPool = new SoundPool(1, AudioManager.STREAM_MUSIC, 0);
         soundYes = soundPool.load(this, R.raw.yes, 1);
         soundNo = soundPool.load(this, R.raw.no, 1);
         you_are_succeeded_where_other_did_not = soundPool.load(this, R.raw.you_are_succeeded_where_other_did_not, 1);
@@ -94,7 +94,7 @@ public class Game1p1 extends BaseActivity {
     }
 
     private void startCountDownTimer() {
-        new CountDownTimer(10000, 100) {
+        new CountDownTimer(30000, 100) {
             @Override
             public void onTick(long millisUntilFinished) {
                 secondRemaining.set((int) (millisUntilFinished / 1000));
@@ -135,6 +135,13 @@ public class Game1p1 extends BaseActivity {
 
         TransitionManager.beginDelayedTransition((ViewGroup) binding.getRoot(), transitionSet);
         constraintSet.applyTo((ConstraintLayout) binding.getRoot());
+
+        new Handler().postDelayed(new Runnable() {
+            @Override
+            public void run() {
+                finish();
+            }
+        }, 3000);
     }
 
     private void changeBackgroundColor() {
@@ -270,36 +277,55 @@ public class Game1p1 extends BaseActivity {
     private void setEndText() {
         switch (score.get()) {
             case -6:
-                endText.set("SUCK MY DATA, HUMAN");
+                endText.set("SUCK MY DATA, HUMAN!");
                 break;
             case -5:
+                endText.set("If our lives are already written, it would take a courageous man to change the script.");
+                break;
             case -4:
+                endText.set("Stand in the ashes of a trillion dead souls and ask the ghosts if honor matters. Their silence is your answer.");
+                break;
             case -3:
+                endText.set("You are great in bed ;) …. You can sleep for days.");
+                break;
             case -2:
+                endText.set("You didn’t fall. The floor just needed a hug.");
+                break;
             case -1:
-                endText.set("SKELETON_KING PLAYER DETECTED");
+                endText.set("SKELETON_KING PLAYER DETECTED.");
                 break;
             case 0:
             default:
             case 1:
-                endText.set("GG&WP");
+                endText.set("GG&WP!");
                 break;
             case 2:
+                endText.set("Are you a boy or a girl?");
+                break;
             case 3:
+                endText.set("sorry, you lose!");
             case 4:
+                endText.set("you do not get older. you lvl up.");
+                break;
             case 5:
                 endText.set("DOES THIS UNIT HAVE A SOUL?");
                 soundPool.play(does_this_unit_have_a_soul, 0.6F, 0.6F, 0, 0, 1F);
                 break;
             case 6:
+                endText.set("A hero need not speak. When he is gone, the world will speak for him.");
+                break;
             case 7:
-                endText.set("UGANDA FOREVER");
+                endText.set("UGANDA FOREVER!");
                 soundPool.play(you_are_the_most_successful, 0.6F, 0.6F, 0, 0, 1F);
                 break;
             case 8:
+                endText.set("You are nobody.. nobody's perfect.. therefore YOU ARE PERFECT!");
+                break;
             case 9:
+                endText.set("If anything’s possible, then is it possible that nothing’s possible?");
+                break;
             case 10:
-                endText.set("YOU SUCCEEDED WHERE OTHER DO NOT");
+                endText.set("YOU SUCCEEDED WHERE OTHER DO NOT.");
                 soundPool.play(you_are_succeeded_where_other_did_not, 0.6F, 0.6F, 0, 0, 1F);
                 break;
         }

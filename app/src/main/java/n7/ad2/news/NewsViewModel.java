@@ -64,6 +64,8 @@ public class NewsViewModel extends AndroidViewModel {
                             } else {
                                 isLoading.set(false);
                             }
+                        } else {
+                            isLoading.set(false);
                         }
                     }
                 });

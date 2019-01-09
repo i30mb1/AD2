@@ -28,7 +28,7 @@ import n7.ad2.R;
 import n7.ad2.utils.AppExecutors;
 import n7.ad2.utils.Utils;
 
-import static n7.ad2.setting.SettingActivity.SUBSCRIPTION;
+import static n7.ad2.setting.SettingActivity.SUBSCRIPTION_PREF;
 
 public class HeroFragment extends Fragment {
 
@@ -59,7 +59,7 @@ public class HeroFragment extends Fragment {
     @Override
     public View onCreateView(@NonNull LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
         view = inflater.inflate(R.layout.fragment_hero_personal, container, false);
-        subscription = PreferenceManager.getDefaultSharedPreferences(getContext()).getBoolean(SUBSCRIPTION, false);
+        subscription = PreferenceManager.getDefaultSharedPreferences(getContext()).getBoolean(SUBSCRIPTION_PREF, false);
 
         setRetainInstance(true);
         setHasOptionsMenu(true);

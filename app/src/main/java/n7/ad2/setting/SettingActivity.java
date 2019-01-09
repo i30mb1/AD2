@@ -28,7 +28,7 @@ public class SettingActivity extends BaseActivity {
 
     public static final String ONCE_PER_MONTH_SUBSCRIPTION = "once_per_month_subscription";
     public static final String INTENT_SHOW_DIALOG_DONATE = "INTENT_SHOW_DIALOG_DONATE";
-    public static final String SUBSCRIPTION = "SUBSCRIPTION";
+    public static final String SUBSCRIPTION_PREF = "SUBSCRIPTION_PREF";
 
     public ObservableBoolean subscription = new ObservableBoolean(false);
     private IabHelper mHelper;
@@ -41,6 +41,7 @@ public class SettingActivity extends BaseActivity {
         super.onCreate(savedInstanceState);
 
         binding = DataBindingUtil.setContentView(this, R.layout.activity_setting);
+        subscription.set(PreferenceManager.getDefaultSharedPreferences(this).getBoolean(SUBSCRIPTION_PREF, false));
 
         if (savedInstanceState == null) {
             getFragmentManager().beginTransaction().replace(binding.containerActivitySetting.getId(), new SettingsFragment()).commit();
@@ -60,10 +61,7 @@ public class SettingActivity extends BaseActivity {
                     if (mHelper == null && result.isFailure()) return;
                     if (inv.hasPurchase(ONCE_PER_MONTH_SUBSCRIPTION)) {
                         subscription.set(true);
-                        PreferenceManager.getDefaultSharedPreferences(SettingActivity.this).edit().putBoolean(SUBSCRIPTION, true).apply();
-                    } else {
-                        subscription.set(false);
-                        PreferenceManager.getDefaultSharedPreferences(SettingActivity.this).edit().putBoolean(SUBSCRIPTION, false).apply();
+                        PreferenceManager.getDefaultSharedPreferences(SettingActivity.this).edit().putBoolean(SUBSCRIPTION_PREF, true).apply();
                     }
 //            if (inv.hasPurchase(MONTHLY_SUBSCRIPTION)) {
 //                try {

@@ -60,8 +60,8 @@
     <string name="dialog_donate_subscription">ПОДПИСКА</string>
     <string name="dialog_rate_me_never">Никогда</string>
     <string name="dialog_rate_me_later">Позже</string>
-    <string name="dialog_rate_me_text1">Оцени меня в Google Play, пожалуйста!</string>
-    <string name="dialog_rate_me_text2">и получите 5 дней подписки БЕСПЛАТНО!</string>
+    <string name="dialog_rate_me_title">Привет, мы заметили что ты активно пользуешься приложением и готовы заключить с тобой сделку.</string>
+    <string name="dialog_rate_me_summary">Оставь свою оценку в Google Play и получи 2 дня подписки!</string>
     <string name="all_only_for_subscribers">Только для подписчиков!</string>
     <string name="all_buy">Купить</string>
     <string name="all_come_back_tomorrow">Вернитесь завтра или купите подписку</string>
@@ -97,8 +97,8 @@
     <string name="ad6">выбирайте один из пяти метовых вариантов гайда</string>
     <string name="commercial_7">СТАВЬ УВЕДОМЛЕНИЯ КОТОРЫЕ НАПОМНЯТ ТЕБЕ О НАЧАЛЕ ТУРНИРНЫХ ИГР</string>
     <string name="commercial_8">ДАЙ ВОЗМОЖНОСТЬ ПРОДОЛЖАТЬ РАБОТУ НАД ПРОЕКТОМ</string>
-    <string name="dialog_donate_me_text1">Мы тратим много сил и времени на поддержку приложения. Каждое ваше действие - это расход трафика для наших серверов. Приобрети подписку и защити приложение от ненужной рекламы.</string>
-    <string name="dialog_donate_me_text2">ТЫ НУЖЕН НАМ!</string>
+    <string name="dialog_donate_me_summary">Рассмотри приобритение ежемесячной подписки, спасибо!</string>
+    <string name="dialog_donate_me_title">Мы заметили что ты активно используешь приложение, и это радует нас.</string>
     <string name="all_subscription_activated">активна</string>
     <string name="all_subscription_deactivated">не активна</string>
     <string name="all_activate">активировать</string>
@@ -109,5 +109,6 @@
     <string name="fragment_game_2_players">2 ИГРОКА</string>
     <string name="fragment_game_G2">покажи мне свой APM</string>
     <string name="fragment_guide_lane">линия</string>
+    <string name="dialog_rate_ok">Хорошо</string>
 
 </resources>

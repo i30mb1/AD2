@@ -106,8 +106,8 @@
     <string name="dialog_donate_subscription">SUBSCRIPTION</string>
     <string name="dialog_rate_me_never">Never</string>
     <string name="dialog_rate_me_later">LATER</string>
-    <string name="dialog_rate_me_text1">Rate me on Google Play, please!</string>
-    <string name="dialog_rate_me_text2">and take 5 days of Subscriptions for FREE!</string>
+    <string name="dialog_rate_me_title">Hello, we see you are actively use this app and ready to offer you an agreement.</string>
+    <string name="dialog_rate_me_summary">Rate us in Google Play and take 2 days of subscription!</string>
     <string name="all_only_for_subscribers">Only for Subscribers!</string>
     <string name="all_buy">Buy</string>
     <string name="all_come_back_tomorrow">Come back tomorrow or buy Subscription</string>
@@ -129,7 +129,6 @@
     <string name="setting_help_log_in_text">Now you can monitoring your Dota 2 progress on the main screen of this app</string>
     <string name="multi_streams_fragment_tip">This is experimental additional, and if you are not premium user you can launch this activity only 7 time per day!</string>
     <string name="setting_help_log_in_key" translatable="false">setting_fragment_monitoring_progress_key</string>
-    <string name="dialog_rate_key" translatable="false">dialog_with_request_for_rate</string>
     <string name="drawer_meta" translatable="false">Meta</string>
     <string name="dialog_donate_1">- Disable all AD\'s</string>
     <string name="dialog_donate_7">- Unlimited Mini Games</string>
@@ -156,8 +155,8 @@
     <string name="ad6">choose one from five version of guides</string>
     <string name="commercial_7">SET ALARM FOR UPCOMING GAMES</string>
     <string name="commercial_8">INSPIRATION TO CONTINUE WORKING TOWARDS GOALS</string>
-    <string name="dialog_donate_me_text1">We spend a lot of time and effort supporting applications. Your every action is a traffic expense for our servers. Take a subscription and protect the application from unnecessary advertising.</string>
-    <string name="dialog_donate_me_text2">WE NEED YOU!</string>
+    <string name="dialog_donate_me_summary">Consider purchasing a subscription!</string>
+    <string name="dialog_donate_me_title">We noticed you like this app, and it makes us happy.</string>
     <string name="dialog_open_stream_hint">Channel name</string>
     <string name="item_list_tournament_game_notification_on">notification on</string>
     <string name="item_list_tournament_game_notification_off">notification off</string>
@@ -165,5 +164,6 @@
     <string name="fragment_game_2_players">2 PLAYERS</string>
     <string name="fragment_game_G2">SHOW ME YOUR APM</string>
     <string name="activity_game1P1_second_remaining" translatable="false">%d</string>
+    <string name="dialog_rate_ok">This suits me</string>
 
 </resources>

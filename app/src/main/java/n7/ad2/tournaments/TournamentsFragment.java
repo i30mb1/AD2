@@ -24,7 +24,7 @@ import n7.ad2.R;
 import n7.ad2.tournaments.db.TournamentGame;
 
 import static n7.ad2.main.MainActivity.LOG_ON_RECEIVE;
-import static n7.ad2.setting.SettingActivity.SUBSCRIPTION;
+import static n7.ad2.setting.SettingActivity.SUBSCRIPTION_PREF;
 import static n7.ad2.tournaments.TournamentsWorker.PAGE;
 import static n7.ad2.tournaments.TournamentsWorker.TAG;
 
@@ -53,7 +53,7 @@ public class TournamentsFragment extends Fragment {
         binding.setViewModel(viewModel);
         binding.executePendingBindings();
 
-        subscription = PreferenceManager.getDefaultSharedPreferences(getContext()).getBoolean(SUBSCRIPTION, false);
+        subscription = PreferenceManager.getDefaultSharedPreferences(getContext()).getBoolean(SUBSCRIPTION_PREF, false);
         getActivity().setTitle(R.string.tournaments);
         getActivity().sendBroadcast(new Intent(LOG_ON_RECEIVE).putExtra(LOG_ON_RECEIVE, "tournaments_activity_created"));
         setRetainInstance(true);

@@ -18,7 +18,7 @@ import n7.ad2.R;
 import n7.ad2.databinding.FragmentGameBinding;
 
 import static n7.ad2.main.MainActivity.LOG_ON_RECEIVE;
-import static n7.ad2.setting.SettingActivity.SUBSCRIPTION;
+import static n7.ad2.setting.SettingActivity.SUBSCRIPTION_PREF;
 
 public class GameFragment extends Fragment {
 
@@ -40,7 +40,7 @@ public class GameFragment extends Fragment {
     public void onActivityCreated(@Nullable Bundle savedInstanceState) {
         super.onActivityCreated(savedInstanceState);
 
-        subscription = PreferenceManager.getDefaultSharedPreferences(getContext()).getBoolean(SUBSCRIPTION, false);
+        subscription = PreferenceManager.getDefaultSharedPreferences(getContext()).getBoolean(SUBSCRIPTION_PREF, false);
         getActivity().setTitle(R.string.games);
         getActivity().sendBroadcast(new Intent(LOG_ON_RECEIVE).putExtra(LOG_ON_RECEIVE, "games_activity_created"));
         setHasOptionsMenu(true);

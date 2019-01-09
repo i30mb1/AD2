@@ -22,8 +22,6 @@ import android.support.constraint.ConstraintLayout;
 import android.support.constraint.ConstraintSet;
 import android.support.design.widget.Snackbar;
 import android.support.transition.ChangeBounds;
-import android.support.transition.Fade;
-import android.support.transition.Transition;
 import android.support.transition.TransitionManager;
 import android.support.transition.TransitionSet;
 import android.support.v4.app.FragmentTransaction;
@@ -31,7 +29,6 @@ import android.support.v7.app.AlertDialog;
 import android.support.v7.widget.LinearLayoutManager;
 import android.view.View;
 import android.view.ViewGroup;
-import android.view.animation.BounceInterpolator;
 import android.view.animation.LinearInterpolator;
 import android.view.inputmethod.InputMethodManager;
 
@@ -70,8 +67,9 @@ import n7.ad2.utils.UnscrollableLinearLayoutManager;
 import static n7.ad2.main.MainViewModel.LAST_DAY_WHEN_CHECK_UPDATE;
 import static n7.ad2.main.MainViewModel.SHOULD_UPDATE_FROM_MARKET;
 import static n7.ad2.setting.SettingActivity.INTENT_SHOW_DIALOG_DONATE;
-import static n7.ad2.setting.SettingActivity.SUBSCRIPTION;
+import static n7.ad2.setting.SettingActivity.SUBSCRIPTION_PREF;
 import static n7.ad2.splash.SplashViewModel.CURRENT_DAY_IN_APP;
+import static n7.ad2.splash.SplashViewModel.FREE_SUBSCRIPTION_DAYS;
 
 public class MainActivity extends BaseActivity {
 
@@ -88,6 +86,8 @@ public class MainActivity extends BaseActivity {
     public static final String ADMOB_ID = "ca-app-pub-5742225922710304/8697652489";
     public static final String ADMOB_ID_FAKE = "ca-app-pub-3940256099942544/5224354917";
     public static final String LOG_ON_RECEIVE = "log";
+    public static final String DIALOG_RATE_SAW = "DIALOG_RATE_SAW";
+    public static final String DIALOG_RATE_FIST_TIME = "DIALOG_RATE_FIST_TIME";
     private static final String DIALOG_PRE_DONATE_LAST_DAY = "DIALOG_PRE_DONATE_LAST_DAY";
     public ObservableInt observableLastItem = new ObservableInt(1);
     public ObservableBoolean freeSubscriptionButtonVisibility = new ObservableBoolean(false);
@@ -139,7 +139,7 @@ public class MainActivity extends BaseActivity {
     }
 
     public void subscriptionButtonState() {
-        subscription = PreferenceManager.getDefaultSharedPreferences(MainActivity.this).getBoolean(SUBSCRIPTION, false);
+        subscription = PreferenceManager.getDefaultSharedPreferences(MainActivity.this).getBoolean(SUBSCRIPTION_PREF, false);
         if (subscription) {
             freeSubscriptionButtonVisibility.set(false);
             return;
@@ -157,11 +157,12 @@ public class MainActivity extends BaseActivity {
     }
 
     private void loadVideoAD() {
-       if(rewardedVideoAd!=null) rewardedVideoAd.loadAd(ADMOB_ID_FAKE, new AdRequest.Builder().build());
+        if (rewardedVideoAd != null)
+            rewardedVideoAd.loadAd(ADMOB_ID_FAKE, new AdRequest.Builder().build());
     }
 
     public void setupRewardedVideoAd() {
-        subscription = PreferenceManager.getDefaultSharedPreferences(MainActivity.this).getBoolean(SUBSCRIPTION, false);
+        subscription = PreferenceManager.getDefaultSharedPreferences(MainActivity.this).getBoolean(SUBSCRIPTION_PREF, false);
         if (subscription) return;
         rewardedVideoAd = MobileAds.getRewardedVideoAdInstance(this);
         rewardedVideoAd.setRewardedVideoAdListener(new RewardedVideoAdListener() {
@@ -187,10 +188,12 @@ public class MainActivity extends BaseActivity {
 
             @Override
             public void onRewarded(RewardItem rewardItem) {
+                PreferenceManager.getDefaultSharedPreferences(MainActivity.this).edit().putBoolean(SUBSCRIPTION_PREF, true).apply();
                 log("free_subscription = +10 min");
-                OneTimeWorkRequest worker = new OneTimeWorkRequest.Builder(ADRewardWorker.class).setInitialDelay(rewardItem.getAmount(), TimeUnit.SECONDS).build();
+                OneTimeWorkRequest worker = new OneTimeWorkRequest.Builder(ADRewardWorker.class)
+//                        .setInitialDelay(rewardItem.getAmount(), TimeUnit.SECONDS).build();
+                        .setInitialDelay(30, TimeUnit.SECONDS).build();
                 WorkManager.getInstance().enqueue(worker);
-                PreferenceManager.getDefaultSharedPreferences(MainActivity.this).edit().putBoolean(SUBSCRIPTION, true).apply();
             }
 
             @Override
@@ -369,31 +372,50 @@ public class MainActivity extends BaseActivity {
     private void incCountEnter() {
         enterCounter++;
         //todo ДОДЕЛАТЬ ДИАЛОГИ Ы
-//        if (enterCounter > COUNTER_DIALOG_RATE) showDialogRate();
-//        if (enterCounter > COUNTER_DIALOG_DONATE) showPreDialogDonate();
+        if (enterCounter > COUNTER_DIALOG_RATE) showDialogRate();
+        if (enterCounter > COUNTER_DIALOG_DONATE) showPreDialogDonate();
     }
 
     @SuppressWarnings("ConstantConditions")
     void showPreDialogDonate() {
-        if (PreferenceManager.getDefaultSharedPreferences(this).getBoolean(SUBSCRIPTION, false))
-            return;
+        if (!subscription) {
+            int currentDay = PreferenceManager.getDefaultSharedPreferences(this).getInt(CURRENT_DAY_IN_APP, 0);
+            int lastDayDialog = PreferenceManager.getDefaultSharedPreferences(this).getInt(DIALOG_PRE_DONATE_LAST_DAY, 0);
+            if (currentDay > lastDayDialog) {
 
-        final AlertDialog.Builder builder = new AlertDialog.Builder(this);
-        DialogPreDonateBinding binding = DataBindingUtil.inflate(getLayoutInflater(), R.layout.dialog_pre_donate, null, false);
-        builder.setView(binding.getRoot());
+                final AlertDialog.Builder builder = new AlertDialog.Builder(this);
+                DialogPreDonateBinding binding = DataBindingUtil.inflate(getLayoutInflater(), R.layout.dialog_pre_donate, null, false);
+                builder.setView(binding.getRoot());
+                binding.setActivity(this);
 
-        AlertDialog dialog = builder.create();
-        dialog.getWindow().getAttributes().windowAnimations = R.style.DialogTheme;
-        dialog.show();
+                final AlertDialog dialog = builder.create();
+                dialog.getWindow().getAttributes().windowAnimations = R.style.DialogTheme;
+                dialog.show();
 
-        FirebaseAnalytics firebaseAnalytics = FirebaseAnalytics.getInstance(this);
-        firebaseAnalytics.logEvent(FIREBASE_DIALOG_DONATE_SAW, null);
+                binding.dialogPreDonate.setOnClickListener(new View.OnClickListener() {
+                    @Override
+                    public void onClick(View v) {
+                        dialog.dismiss();
+                        startSettingWithDonate();
+                    }
+                });
+
+                PreferenceManager.getDefaultSharedPreferences(this).edit().putInt(DIALOG_PRE_DONATE_LAST_DAY, currentDay + 2).apply();
+                FirebaseAnalytics firebaseAnalytics = FirebaseAnalytics.getInstance(this);
+                firebaseAnalytics.logEvent(FIREBASE_DIALOG_DONATE_SAW, null);
+                enterCounter = 0;
+            }
+
+        } else {
+            enterCounter = 0;
+        }
+
     }
 
     @SuppressWarnings("ConstantConditions")
     private void showDialogRate() {
-        boolean showDialogRate = PreferenceManager.getDefaultSharedPreferences(this).getBoolean(getString(R.string.dialog_rate_key), true);
-        if (showDialogRate) {
+        boolean showDialogRate = PreferenceManager.getDefaultSharedPreferences(this).getBoolean(DIALOG_RATE_SAW, true);
+        if (showDialogRate && !subscription) {
             final AlertDialog.Builder builder = new AlertDialog.Builder(this);
             DialogRateBinding binding = DataBindingUtil.inflate(getLayoutInflater(), R.layout.dialog_rate, null, false);
             binding.setActivity(this);
@@ -401,9 +423,26 @@ public class MainActivity extends BaseActivity {
             final AlertDialog dialog = builder.create();
             dialog.getWindow().getAttributes().windowAnimations = R.style.DialogTheme;
             dialog.show();
+            binding.bDialogRateYes.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View v) {
+                    dialog.dismiss();
+                    openAppStore();
+                }
+            });
 
+            binding.bDialogRateNo.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View v) {
+                    dialog.dismiss();
+                }
+            });
+            PreferenceManager.getDefaultSharedPreferences(this).edit().putBoolean(DIALOG_RATE_SAW, false).apply();
             FirebaseAnalytics firebaseAnalytics = FirebaseAnalytics.getInstance(this);
             firebaseAnalytics.logEvent(FIREBASE_DIALOG_RATE_SAW, null);
+        }
+        if (subscription) {
+            enterCounter = 0;
         }
     }
 
@@ -419,6 +458,11 @@ public class MainActivity extends BaseActivity {
         } catch (android.content.ActivityNotFoundException a) {
             startActivity(new Intent(Intent.ACTION_VIEW, Uri.parse("https://play.google.com/store/apps/details?id=" + getPackageName())));
         }
+
+        log("free_subscription = +2 days");
+        PreferenceManager.getDefaultSharedPreferences(getApplicationContext()).edit().putInt(FREE_SUBSCRIPTION_DAYS, 2).apply();
+        PreferenceManager.getDefaultSharedPreferences(getApplicationContext()).edit().putBoolean(SUBSCRIPTION_PREF, true).apply();
+
         FirebaseAnalytics firebaseAnalytics = FirebaseAnalytics.getInstance(MainActivity.this);
         firebaseAnalytics.logEvent(FIREBASE_DIALOG_RATE_CLICK, null);
     }

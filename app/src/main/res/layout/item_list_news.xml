@@ -46,7 +46,6 @@
                 android:onClick="@{(view)-> news.startNewsFull(view)}"
                 android:padding="20dp"
                 android:text="@{news.title}"
-                android:textColor="?android:textColorPrimary"
                 android:textSize="14sp"
                 android:textStyle="bold"
                 android:transitionName="tv"

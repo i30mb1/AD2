@@ -57,7 +57,7 @@ import okhttp3.Request;
 import okhttp3.Response;
 
 import static android.support.v4.internal.view.SupportMenuItem.SHOW_AS_ACTION_ALWAYS;
-import static n7.ad2.setting.SettingActivity.SUBSCRIPTION;
+import static n7.ad2.setting.SettingActivity.SUBSCRIPTION_PREF;
 import static n7.ad2.splash.SplashActivity.ANIMATION_DURATION;
 
 public class StreamsFullActivity extends BaseActivity implements SurfaceHolder.Callback {
@@ -253,7 +253,7 @@ public class StreamsFullActivity extends BaseActivity implements SurfaceHolder.C
 
     private void initPremium() {
         sp = PreferenceManager.getDefaultSharedPreferences(this);
-        isPremium = sp.getBoolean(SUBSCRIPTION, false);
+        isPremium = sp.getBoolean(SUBSCRIPTION_PREF, false);
 
         if (!isPremium) {
             alphaChat = 1.0F;

@@ -45,7 +45,7 @@ import n7.ad2.utils.Utils;
 
 import static n7.ad2.heroes.full.GuideWorker.HERO_CODE_NAME;
 import static n7.ad2.heroes.full.HeroFullActivity.HERO_NAME;
-import static n7.ad2.setting.SettingActivity.SUBSCRIPTION;
+import static n7.ad2.setting.SettingActivity.SUBSCRIPTION_PREF;
 import static n7.ad2.splash.SplashViewModel.CURRENT_DAY_IN_APP;
 
 public class GuideFragment extends Fragment {
@@ -181,7 +181,7 @@ public class GuideFragment extends Fragment {
         pb_fragment_guide = view.findViewById(R.id.pb_fragment_guide);
         setHasOptionsMenu(true);
         SharedPreferences sp = PreferenceManager.getDefaultSharedPreferences(getContext());
-        subscription = sp.getBoolean(SUBSCRIPTION, false);
+        subscription = sp.getBoolean(SUBSCRIPTION_PREF, false);
 
         initViews();
         setDpMaxItemsInRow();

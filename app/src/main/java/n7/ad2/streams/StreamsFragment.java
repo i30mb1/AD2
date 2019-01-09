@@ -31,7 +31,7 @@ import n7.ad2.databinding.FragmentStreamsBinding;
 import n7.ad2.streams.retrofit.Streams;
 
 import static n7.ad2.main.MainActivity.LOG_ON_RECEIVE;
-import static n7.ad2.setting.SettingActivity.SUBSCRIPTION;
+import static n7.ad2.setting.SettingActivity.SUBSCRIPTION_PREF;
 import static n7.ad2.streams.StreamsFullActivity.CHANNEL_NAME;
 import static n7.ad2.streams.StreamsFullActivity.CHANNEL_TITLE;
 
@@ -140,7 +140,7 @@ public class StreamsFragment extends Fragment {
         binding.setViewModel(viewModel);
         binding.executePendingBindings();
 
-        subscription = PreferenceManager.getDefaultSharedPreferences(getContext()).getBoolean(SUBSCRIPTION, false);
+        subscription = PreferenceManager.getDefaultSharedPreferences(getContext()).getBoolean(SUBSCRIPTION_PREF, false);
         getActivity().setTitle(R.string.streams);
         getActivity().sendBroadcast(new Intent(LOG_ON_RECEIVE).putExtra(LOG_ON_RECEIVE, "streams_activity_created"));
         setHasOptionsMenu(true);
