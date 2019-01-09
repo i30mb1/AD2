@@ -187,7 +187,7 @@ public class MainActivity extends BaseActivity {
 
             @Override
             public void onRewarded(RewardItem rewardItem) {
-                log("subscription_granted_10_minutes");
+                log("free_subscription = +10 min");
                 OneTimeWorkRequest worker = new OneTimeWorkRequest.Builder(ADRewardWorker.class).setInitialDelay(rewardItem.getAmount(), TimeUnit.SECONDS).build();
                 WorkManager.getInstance().enqueue(worker);
                 PreferenceManager.getDefaultSharedPreferences(MainActivity.this).edit().putBoolean(SUBSCRIPTION, true).apply();

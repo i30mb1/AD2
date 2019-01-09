@@ -66,7 +66,7 @@ public class GameFragment extends Fragment {
     public void startG2P1() {
         Pair<View, String> p2 = Pair.create((View) binding.tvFragmentGameG2, "tv2");
         ActivityOptionsCompat optionsCompat = ActivityOptionsCompat.makeSceneTransitionAnimation(getActivity(), p2);
-        Intent intent = new Intent(getContext(), Game2P1.class);
+        Intent intent = new Intent(getContext(), Game2p1.class);
         startActivity(intent, optionsCompat.toBundle());
     }
 

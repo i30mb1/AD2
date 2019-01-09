@@ -22,6 +22,9 @@ import android.transition.TransitionSet;
 import android.util.TypedValue;
 import android.view.Display;
 import android.view.View;
+import android.view.animation.AlphaAnimation;
+import android.view.animation.AnimationSet;
+import android.view.animation.ScaleAnimation;
 import android.widget.ImageView;
 import android.widget.TextView;
 
@@ -30,7 +33,7 @@ import java.util.Random;
 
 import n7.ad2.R;
 
-public class Game2P1 extends AppCompatActivity implements View.OnClickListener {
+public class Game2p1 extends AppCompatActivity implements View.OnClickListener {
 
     private static long END_TIME = 0;
     private long time = 30;
@@ -63,7 +66,7 @@ public class Game2P1 extends AppCompatActivity implements View.OnClickListener {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_game2_persons1);
+        setContentView(R.layout.activity_game2p1);
 
         initView();
         initConstraintAnimation();
@@ -243,6 +246,13 @@ public class Game2P1 extends AppCompatActivity implements View.OnClickListener {
         soundPool.play(soundIdAxeHit, 0.6F, 0.6F, 0, 0, 0.5F);
     }
 
+    public void collapseAnimation(View view) {
+        AnimationSet animationSet = new AnimationSet(false);
+        ScaleAnimation scaleAnimation = new ScaleAnimation(1f, 0f, 1f, 0f, view.getWidth() / 2, view.getHeight() / 2);
+        animationSet.addAnimation(scaleAnimation);
+        animationSet.setDuration(100);
+        view.startAnimation(animationSet);
+    }
 
     @Override
     public void onClick(View v) {
@@ -255,8 +265,8 @@ public class Game2P1 extends AppCompatActivity implements View.OnClickListener {
         if (clicks == 20) {
             startPulsing(iv_activity_game2_persons1_creep3, 750L);
             iv_activity_game2_persons1_creep3.setVisibility(View.VISIBLE);
-            startPulsing(iv_activity_game2_persons1_creep4, 650L);
-            iv_activity_game2_persons1_creep4.setVisibility(View.VISIBLE);
+//            startPulsing(iv_activity_game2_persons1_creep4, 650L);
+//            iv_activity_game2_persons1_creep4.setVisibility(View.VISIBLE);
         }
     }
 }

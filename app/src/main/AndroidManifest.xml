@@ -64,7 +64,7 @@
             android:name=".items.full.ItemFullActivity"
             android:screenOrientation="portrait" />
         <activity
-            android:name=".games.Game2P1"
+            android:name=".games.Game2p1"
             android:screenOrientation="portrait" />
         <activity
             android:name=".games.Game1p1"
