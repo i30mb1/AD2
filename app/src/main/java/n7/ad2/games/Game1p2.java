@@ -25,7 +25,6 @@ import android.view.Window;
 import android.view.WindowManager;
 import android.view.animation.AlphaAnimation;
 import android.view.animation.AnimationSet;
-import android.view.animation.AnticipateInterpolator;
 import android.view.animation.BounceInterpolator;
 import android.view.animation.LinearInterpolator;
 import android.view.animation.ScaleAnimation;
@@ -126,6 +125,8 @@ public class Game1p2 extends AppCompatActivity {
     }
 
     private void calculateResult() {
+        isLoadingPlayer1.set(false);
+        isLoadingPlayer2.set(false);
         if (scorePlayer1.get() > scorePlayer2.get()) {
             endTextPlayer1.set(getString(R.string.game_you_win));
             binding.tvStatePlayer1.setTextColor(getResources().getColor(android.R.color.holo_green_light));
@@ -218,7 +219,7 @@ public class Game1p2 extends AppCompatActivity {
 
                     setLVL(spellLVL);
                     setMpPlayer1(spellManaPoints);
-                    setImageSpell(String.format("file:///android_asset/heroes/%s/%s.webp", listHeroes[hero], String.valueOf(randomSpell + 1)),binding.ivActivityGame1P1Spell);
+                    setImageSpell(String.format("file:///android_asset/heroes/%s/%s.webp", listHeroes[hero], String.valueOf(randomSpell + 1)), binding.ivActivityGame1P1Spell);
 
                 } catch (IOException e) {
                     startGamePlayer1();
@@ -254,7 +255,7 @@ public class Game1p2 extends AppCompatActivity {
 
                     setLVLPlayer2(spellLVL);
                     setMpPlayer2(spellManaPoints);
-                    setImageSpell(String.format("file:///android_asset/heroes/%s/%s.webp", listHeroes[hero], String.valueOf(randomSpell + 1)),binding.ivActivityGame1P1Spell2);
+                    setImageSpell(String.format("file:///android_asset/heroes/%s/%s.webp", listHeroes[hero], String.valueOf(randomSpell + 1)), binding.ivActivityGame1P1Spell2);
 
                 } catch (IOException e) {
                     startGamePlayer2();
@@ -382,7 +383,6 @@ public class Game1p2 extends AppCompatActivity {
             }
         }, 300);
     }
-
 
 
     private void playSound(boolean isRight) {

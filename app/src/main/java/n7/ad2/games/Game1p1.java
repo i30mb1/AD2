@@ -110,6 +110,7 @@ public class Game1p1 extends BaseActivity {
 
     private void showResult() {
         lock.set(true);
+        isLoading.set(false);
         setEndText();
         changeBackgroundColor();
         startConstraintAnimation();
