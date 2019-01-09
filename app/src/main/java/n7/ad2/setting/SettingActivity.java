@@ -115,6 +115,7 @@ public class SettingActivity extends BaseActivity {
         images.add(R.drawable.ad3);
         images.add(R.drawable.ad4);
         images.add(R.drawable.ad5);
+        images.add(R.drawable.gradient);
 
         descriptions.add(getString(R.string.ad1));
         descriptions.add(getString(R.string.ad6));
@@ -122,6 +123,7 @@ public class SettingActivity extends BaseActivity {
         descriptions.add(getString(R.string.ad3));
         descriptions.add(getString(R.string.ad4));
         descriptions.add(getString(R.string.ad5));
+        descriptions.add(getString(R.string.ad7));
     }
 
     public void launchPurchaseSubscription() {

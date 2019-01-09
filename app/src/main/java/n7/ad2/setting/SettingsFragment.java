@@ -39,17 +39,17 @@ public class SettingsFragment extends PreferenceFragment {
             }
         });
 
-        Preference account = findPreference(getString(R.string.setting_account_key));
-        account.setOnPreferenceChangeListener(new Preference.OnPreferenceChangeListener() {
-            @Override
-            public boolean onPreferenceChange(Preference preference, Object newValue) {
-                boolean needAuthentication = (boolean) newValue;
-                if (needAuthentication) {
-                    startActivityForResult(new Intent(getActivity(), LogInActivity.class), LogInActivity.REQUEST_CODE_LOG_IN);
-                }
-                return true;
-            }
-        });
+//        Preference account = findPreference(getString(R.string.setting_account_key));
+//        account.setOnPreferenceChangeListener(new Preference.OnPreferenceChangeListener() {
+//            @Override
+//            public boolean onPreferenceChange(Preference preference, Object newValue) {
+//                boolean needAuthentication = (boolean) newValue;
+//                if (needAuthentication) {
+//                    startActivityForResult(new Intent(getActivity(), LogInActivity.class), LogInActivity.REQUEST_CODE_LOG_IN);
+//                }
+//                return true;
+//            }
+//        });
 
         Preference log = findPreference(getString(R.string.setting_log_key));
         log.setOnPreferenceChangeListener(new Preference.OnPreferenceChangeListener() {

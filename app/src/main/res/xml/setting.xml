@@ -12,11 +12,11 @@
             android:defaultValue="@string/setting_theme_default"
             android:key="@string/setting_theme_key"
             android:title="@string/setting_theme_title" />
-        <SwitchPreference
-            android:defaultValue="false"
-            android:key="@string/setting_account_key"
-            android:summary="@string/setting_account_summary"
-            android:title="@string/setting_account_title" />
+        <!--<SwitchPreference-->
+            <!--android:defaultValue="false"-->
+            <!--android:key="@string/setting_account_key"-->
+            <!--android:summary="@string/setting_account_summary"-->
+            <!--android:title="@string/setting_account_title" />-->
         <SwitchPreference
             android:defaultValue="true"
             android:key="@string/setting_log_key"
