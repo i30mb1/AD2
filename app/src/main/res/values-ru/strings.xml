@@ -111,5 +111,10 @@
     <string name="fragment_guide_lane">линия</string>
     <string name="dialog_rate_ok">Хорошо</string>
     <string name="dialog_video_ad_title">Просмотрите объявление, чтобы получить 10 минут премиума!</string>
+    <string name="game_you_win">ВЫ ПОБЕДИЛИ</string>
+    <string name="game_you_lose">ВЫ ПРОИГРАЛИ</string>
+    <string name="activity_game2p1_clicks">КЛИКИ</string>
+    <string name="tv_second_remains">секунд осталось</string>
+    <string name="activity_game2p1_your_apm">твой апм</string>
 
 </resources>

@@ -69,6 +69,7 @@
                     style="@style/Widget.MaterialComponents.Button.UnelevatedButton"
                     android:layout_width="wrap_content"
                     android:layout_height="40dp"
+                    android:enabled="@{activity.subscription?true:false}"
                     android:onClick="@{()->activity.startG1P2()}"
                     android:text="@string/fragment_game_2_players"
                     android:textAllCaps="true"
@@ -105,7 +106,7 @@
                 android:layout_height="wrap_content">
 
                 <TextView
-                    android:id="@+id/tv_fragment_game_G2"
+                    android:id="@+id/tv_activity_game2p1_title"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginStart="8dp"
@@ -135,14 +136,15 @@
                     app:layout_constraintEnd_toStartOf="@+id/b_fragment_game_G2P2"
                     app:layout_constraintHorizontal_bias="0.5"
                     app:layout_constraintStart_toEndOf="@+id/red_line_fragment_game_G2"
-                    app:layout_constraintTop_toBottomOf="@+id/tv_fragment_game_G2" />
+                    app:layout_constraintTop_toBottomOf="@+id/tv_activity_game2p1_title" />
 
                 <Button
+                    android:enabled="@{activity.subscription?true:false}"
                     android:id="@+id/b_fragment_game_G2P2"
                     style="@style/Widget.MaterialComponents.Button.UnelevatedButton"
                     android:layout_width="wrap_content"
                     android:layout_height="40dp"
-                    android:enabled="false"
+                    android:onClick="@{()->activity.startG2P2()}"
                     android:text="@string/fragment_game_2_players"
                     android:textSize="14sp"
                     app:layout_constraintBottom_toBottomOf="parent"

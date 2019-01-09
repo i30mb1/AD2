@@ -5,6 +5,7 @@ import android.arch.lifecycle.LifecycleOwner;
 import android.arch.lifecycle.Observer;
 import android.arch.paging.PagedListAdapter;
 import android.content.Intent;
+import android.databinding.ObservableBoolean;
 import android.support.annotation.NonNull;
 import android.support.annotation.Nullable;
 import android.support.v4.app.ActivityOptionsCompat;
@@ -50,9 +51,9 @@ public class TournamentsPagedListAdapter extends PagedListAdapter<TournamentGame
         }
     };
     private LifecycleOwner lifecycleOwner;
-    private boolean isPremium;
+    private ObservableBoolean isPremium;
 
-    public TournamentsPagedListAdapter(LifecycleOwner lifecycleOwner, boolean isPremium) {
+    public TournamentsPagedListAdapter(LifecycleOwner lifecycleOwner, ObservableBoolean isPremium) {
         super(DIFF_CALLBACK);
         this.isPremium = isPremium;
         this.lifecycleOwner = lifecycleOwner;
@@ -169,7 +170,7 @@ public class TournamentsPagedListAdapter extends PagedListAdapter<TournamentGame
                         }
                     }
                 });
-                if (isPremium)
+                if (isPremium.get())
                     root.setOnClickListener(new View.OnClickListener() {
                         @Override
                         public void onClick(View view) {

@@ -88,7 +88,7 @@ public class MainActivity extends BaseActivity {
     public static final String ADMOB_ID_FAKE = "ca-app-pub-3940256099942544/5224354917";
     public static final String LOG_ON_RECEIVE = "log";
     public static final String DIALOG_RATE_SAW = "DIALOG_RATE_SAW";
-    public static final String DIALOG_RATE_FIST_TIME = "DIALOG_RATE_FIST_TIME";
+    public static final String DIALOG_VIDEO_AD_SAW = "DIALOG_VIDEO_AD_SAW";
     private static final String DIALOG_PRE_DONATE_LAST_DAY = "DIALOG_PRE_DONATE_LAST_DAY";
     public ObservableInt observableLastItem = new ObservableInt(1);
     public ObservableBoolean freeSubscriptionButtonVisibility = new ObservableBoolean(false);
@@ -162,11 +162,9 @@ public class MainActivity extends BaseActivity {
         } else {
             showDialogForVideoAD();
         }
-
     }
 
-    public static final String DIALOG_VIDEO_AD_SAW = "DIALOG_VIDEO_AD_SAW";
-
+    @SuppressWarnings("ConstantConditions")
     private void showDialogForVideoAD() {
         final AlertDialog.Builder builder = new AlertDialog.Builder(this);
         DialogVideoAdBinding binding = DataBindingUtil.inflate(getLayoutInflater(), R.layout.dialog_video_ad, null, false);
@@ -401,7 +399,6 @@ public class MainActivity extends BaseActivity {
 
     private void incCountEnter() {
         enterCounter++;
-        //todo ДОДЕЛАТЬ ДИАЛОГИ Ы
         if (enterCounter > COUNTER_DIALOG_RATE) showDialogRate();
         if (enterCounter > COUNTER_DIALOG_DONATE) showPreDialogDonate();
     }
@@ -430,7 +427,7 @@ public class MainActivity extends BaseActivity {
 
                 PreferenceManager.getDefaultSharedPreferences(this).edit().putInt(DIALOG_PRE_DONATE_LAST_DAY, currentDay + 2).apply();
                 FirebaseAnalytics firebaseAnalytics = FirebaseAnalytics.getInstance(this);
-                firebaseAnalytics.logEvent(FIREBASE_DIALOG_DONATE_SAW, null);
+                firebaseAnalytics.logEvent(FIREBASE_DIALOG_PRE_DONATE_SAW, null);
                 enterCounter = 0;
             }
         } else {

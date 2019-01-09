@@ -6,6 +6,7 @@ import android.animation.PropertyValuesHolder;
 import android.animation.ValueAnimator;
 import android.content.Context;
 import android.databinding.DataBindingUtil;
+import android.databinding.ObservableField;
 import android.databinding.ObservableInt;
 import android.graphics.Point;
 import android.media.AudioManager;
@@ -22,21 +23,29 @@ import android.util.TypedValue;
 import android.view.Display;
 import android.view.View;
 import android.view.ViewGroup;
+import android.view.Window;
+import android.view.WindowManager;
 
 import java.util.Random;
 
 import n7.ad2.R;
-import n7.ad2.databinding.ActivityGame2p1Binding;
+import n7.ad2.databinding.ActivityGame2p2Binding;
 
-public class Game2p1 extends AppCompatActivity {
+public class Game2p2 extends AppCompatActivity {
 
-    public ObservableInt clicks = new ObservableInt();
+
+    public ObservableInt clicksPlayer1 = new ObservableInt();
+    public ObservableInt clicksPlayer2 = new ObservableInt();
     public ObservableInt secondRemains = new ObservableInt();
+    public ObservableField<String> endTextPlayer1 = new ObservableField<>();
+    public ObservableField<String> endTextPlayer2 = new ObservableField<>();
     private int soundIdAxeHit;
     private SoundPool soundPool;
     private int width;
-    private int height;
-    private ActivityGame2p1Binding binding;
+    private int heightPlayer1;
+    private int heightPlayer2;
+    private ActivityGame2p2Binding binding;
+    private int sizeInPx;
 
     public static int convertDpToPixel(Context ctx, int dp) {
         float density = ctx.getResources().getDisplayMetrics().density;
@@ -45,8 +54,10 @@ public class Game2p1 extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
+        requestWindowFeature(Window.FEATURE_NO_TITLE);
+        getWindow().setFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN, WindowManager.LayoutParams.FLAG_FULLSCREEN);
         super.onCreate(savedInstanceState);
-        binding = DataBindingUtil.setContentView(this, R.layout.activity_game2p1);
+        binding = DataBindingUtil.setContentView(this, R.layout.activity_game2p2);
         binding.setActivity(this);
         binding.executePendingBindings();
 
@@ -54,7 +65,8 @@ public class Game2p1 extends AppCompatActivity {
         initDisplayWidthHeight();
         setCreepsInCenter();
 
-        startPulsing(binding.ivActivityGame2p1Creep1, 800L);
+        startPulsing(binding.ivCreep1Player1, 800L);
+        startPulsing(binding.ivCreep1Player2, 750L);
         startTimer();
     }
 
@@ -64,16 +76,27 @@ public class Game2p1 extends AppCompatActivity {
     }
 
     private void setCreepsInCenter() {
-        for (View view : new View[]{binding.ivActivityGame2p1Creep1, binding.ivActivityGame2p1Creep2, binding.ivActivityGame2p1Creep3}) {
+        for (View view : new View[]{binding.ivCreep1Player2, binding.ivCreep2Player2}) {
             ConstraintLayout.LayoutParams absParams = (ConstraintLayout.LayoutParams) view.getLayoutParams();
-            absParams.topMargin = height / 2;
+            absParams.topMargin = heightPlayer1 / 2;
+            absParams.leftMargin = width / 2;
+            view.setLayoutParams(absParams);
+        }
+
+        for (View view : new View[]{binding.ivCreep1Player1, binding.ivCreep2Player1}) {
+            ConstraintLayout.LayoutParams absParams = (ConstraintLayout.LayoutParams) view.getLayoutParams();
+            absParams.topMargin = (heightPlayer2 / 2) + heightPlayer1;
             absParams.leftMargin = width / 2;
             view.setLayoutParams(absParams);
         }
     }
 
-    public void incClicks() {
-        clicks.set(clicks.get() + 1);
+    public void incClicksPlayer1() {
+        clicksPlayer1.set(clicksPlayer1.get() + 1);
+    }
+
+    public void incClicksPlayer2() {
+        clicksPlayer2.set(clicksPlayer2.get() + 1);
     }
 
     private void startTimer() {
@@ -86,17 +109,18 @@ public class Game2p1 extends AppCompatActivity {
             @Override
             public void onFinish() {
                 secondRemains.set(0);
+                setResult();
                 changeBackgroundColor();
-                showResult();
+                startAnimation();
             }
         }.start();
     }
 
-    private void showResult() {
+    private void startAnimation() {
         ConstraintSet constraintSet = new ConstraintSet();
-        constraintSet.clone(this, R.layout.activity_game2p1_finish);
+        constraintSet.clone(this, R.layout.activity_game2p2_finish);
 
-        TransitionManager.beginDelayedTransition((ViewGroup) binding.getRoot(),new AutoTransition());
+        TransitionManager.beginDelayedTransition((ViewGroup) binding.getRoot(), new AutoTransition());
 
         constraintSet.applyTo((ConstraintLayout) binding.getRoot());
 
@@ -106,6 +130,26 @@ public class Game2p1 extends AppCompatActivity {
                 finish();
             }
         }, 6000);
+    }
+
+    private void setResult() {
+        int scorePlayer1 = clicksPlayer1.get();
+        int scorePlayer2 = clicksPlayer2.get();
+        if (scorePlayer1 > scorePlayer2) {
+            endTextPlayer1.set(getString(R.string.game_you_win));
+            binding.tvFinalPlayer1.setTextColor(getResources().getColor(android.R.color.holo_green_light));
+            endTextPlayer2.set(getString(R.string.game_you_lose));
+            binding.tvFinalPlayer2.setTextColor(getResources().getColor(android.R.color.holo_red_light));
+        } else {
+            endTextPlayer2.set(getString(R.string.game_you_win));
+            binding.tvFinalPlayer2.setTextColor(getResources().getColor(android.R.color.holo_green_light));
+            endTextPlayer1.set(getString(R.string.game_you_lose));
+            binding.tvFinalPlayer1.setTextColor(getResources().getColor(android.R.color.holo_red_light));
+        }
+        if (scorePlayer1 == scorePlayer2) {
+            endTextPlayer1.set("GG&WP");
+            endTextPlayer2.set("GG&WP");
+        }
     }
 
     private void changeBackgroundColor() {
@@ -137,36 +181,52 @@ public class Game2p1 extends AppCompatActivity {
         scaleDown.start();
     }
 
-    public void moveCreep(View view) {
-        incClicks();
-        setMargins(view);
+    public void moveCreepPlayer1(View view) {
+        incClicksPlayer1();
+        setMarginsPlayer1(view);
         playSoundClick();
-        if (clicks.get() > 5) {
-            binding.ivActivityGame2p1Creep2.setVisibility(View.VISIBLE);
-            startPulsing(binding.ivActivityGame2p1Creep2, 750L);
-        }
-        if (clicks.get() > 15) {
-            binding.ivActivityGame2p1Creep3.setVisibility(View.VISIBLE);
-            startPulsing(binding.ivActivityGame2p1Creep3, 700L);
+        if (clicksPlayer1.get() > 10) {
+            binding.ivCreep2Player1.setVisibility(View.VISIBLE);
+            startPulsing(binding.ivCreep2Player1, 700L);
         }
     }
 
-    private void setMargins(View view) {
+    public void moveCreepPlayer2(View view) {
+        incClicksPlayer2();
+        setMarginsPlayer2(view);
+        playSoundClick();
+        if (clicksPlayer2.get() > 10) {
+            binding.ivCreep2Player2.setVisibility(View.VISIBLE);
+            startPulsing(binding.ivCreep2Player2, 650);
+        }
+    }
+
+    private void setMarginsPlayer1(View view) {
         Random r = new Random();
         ConstraintLayout.LayoutParams absParams = (ConstraintLayout.LayoutParams) view.getLayoutParams();
-        absParams.topMargin = r.nextInt(height);
-        absParams.leftMargin = r.nextInt(width);
+        absParams.topMargin = r.nextInt(heightPlayer1) + heightPlayer1 + sizeInPx / 2;
+        absParams.leftMargin = r.nextInt(width) + sizeInPx / 2;
         view.setLayoutParams(absParams);
     }
 
+    private void setMarginsPlayer2(View view) {
+        Random r = new Random();
+        ConstraintLayout.LayoutParams absParams = (ConstraintLayout.LayoutParams) view.getLayoutParams();
+        absParams.topMargin = r.nextInt(heightPlayer2);
+        absParams.leftMargin = r.nextInt(width) + sizeInPx / 2;
+        view.setLayoutParams(absParams);
+    }
+
+
     private void initDisplayWidthHeight() {
-        int sizeInDp = 75;
-        int dp50inPx = convertDpToPixel(this, sizeInDp);
+        int sizeInDp = 80;
+        sizeInPx = convertDpToPixel(this, sizeInDp);
         Display display = getWindowManager().getDefaultDisplay();
         Point size = new Point();
         display.getSize(size);
-        width = size.x - dp50inPx;
-        height = size.y - dp50inPx;
+        width = size.x - sizeInPx;
+        heightPlayer1 = (size.y - sizeInPx) / 2;
+        heightPlayer2 = (size.y - sizeInPx) / 2;
     }
 
     private void playSoundClick() {

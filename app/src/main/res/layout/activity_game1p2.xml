@@ -193,6 +193,7 @@
 
             <TextView
                 android:id="@+id/tv_activity_game1P1_1_2"
+                android:foreground="?android:attr/selectableItemBackground"
                 android:layout_width="75dp"
                 android:layout_height="60dp"
                 android:layout_margin="4dp"
@@ -208,6 +209,7 @@
                 tools:text="@{activity.slot4_2}" />
 
             <TextView
+                android:foreground="?android:attr/selectableItemBackground"
                 android:id="@+id/tv_activity_game1P1_2_2"
                 android:layout_width="75dp"
                 android:layout_height="60dp"
@@ -224,6 +226,7 @@
                 tools:text="@{activity.slot1_2}" />
 
             <TextView
+                android:foreground="?android:attr/selectableItemBackground"
                 android:id="@+id/tv_activity_game1P1_3_2"
                 android:layout_width="75dp"
                 android:layout_height="60dp"
@@ -241,6 +244,7 @@
 
             <TextView
                 android:id="@+id/tv_activity_game1P1_4_2"
+                android:foreground="?android:attr/selectableItemBackground"
                 android:layout_width="75dp"
                 android:layout_height="60dp"
                 android:layout_margin="4dp"
@@ -268,6 +272,7 @@
             app:layout_constraintStart_toStartOf="parent">
 
             <TextView
+                android:foreground="?android:attr/selectableItemBackground"
                 android:id="@+id/tv_activity_game1P1_1"
                 android:layout_width="75dp"
                 android:layout_height="60dp"
@@ -284,6 +289,7 @@
                 tools:text="@{activity.slot4_2}" />
 
             <TextView
+                android:foreground="?android:attr/selectableItemBackground"
                 android:id="@+id/tv_activity_game1P1_2"
                 android:layout_width="75dp"
                 android:layout_height="60dp"
@@ -300,6 +306,7 @@
                 tools:text="@{activity.slot1}" />
 
             <TextView
+                android:foreground="?android:attr/selectableItemBackground"
                 android:id="@+id/tv_activity_game1P1_3"
                 android:layout_width="75dp"
                 android:layout_height="60dp"
@@ -316,6 +323,7 @@
                 tools:text="@{activity.slot2}" />
 
             <TextView
+                android:foreground="?android:attr/selectableItemBackground"
                 android:id="@+id/tv_activity_game1P1_4"
                 android:layout_width="75dp"
                 android:layout_height="60dp"

@@ -125,8 +125,6 @@ public class Game1p2 extends AppCompatActivity {
     }
 
     private void calculateResult() {
-        isLoadingPlayer1.set(false);
-        isLoadingPlayer2.set(false);
         if (scorePlayer1.get() > scorePlayer2.get()) {
             endTextPlayer1.set(getString(R.string.game_you_win));
             binding.tvStatePlayer1.setTextColor(getResources().getColor(android.R.color.holo_green_light));
@@ -145,6 +143,9 @@ public class Game1p2 extends AppCompatActivity {
     }
 
     private void startConstraintAnimation() {
+        isLoadingPlayer1.set(false);
+        isLoadingPlayer2.set(false);
+
         ConstraintSet constraintSet = new ConstraintSet();
         constraintSet.clone(this, R.layout.activity_game1p2_finish);
 
