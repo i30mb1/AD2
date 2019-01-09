@@ -165,5 +165,8 @@
     <string name="fragment_game_G2">SHOW ME YOUR APM</string>
     <string name="activity_game1P1_second_remaining" translatable="false">%d</string>
     <string name="dialog_rate_ok">This suits me</string>
+    <string name="dialog_video_ad_title">View this ad to receive 10 minutes of subscription!</string>
+    <string name="game_you_win">YOU WIN</string>
+    <string name="game_you_lose">YOU LOSE</string>
 
 </resources>

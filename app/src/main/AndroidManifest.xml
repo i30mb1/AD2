@@ -56,9 +56,7 @@
             android:name=".tournaments.GameFullActivity"
             android:parentActivityName=".main.MainActivity"
             android:screenOrientation="portrait" />
-
         <activity android:name=".setting.LogInActivity" />
-
         <activity android:name=".main.DotabuffActivity" />
         <activity
             android:name=".items.full.ItemFullActivity"
@@ -76,6 +74,8 @@
         <meta-data
             android:name="com.google.android.gms.ads.APPLICATION_ID"
             android:value="ca-app-pub-5742225922710304~2823923052" />
+
+        <activity android:name=".games.Game1p2"></activity>
     </application>
 
 </manifest>

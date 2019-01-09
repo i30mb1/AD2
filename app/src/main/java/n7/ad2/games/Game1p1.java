@@ -141,7 +141,7 @@ public class Game1p1 extends BaseActivity {
             public void run() {
                 finish();
             }
-        }, 3000);
+        }, 6000);
     }
 
     private void changeBackgroundColor() {

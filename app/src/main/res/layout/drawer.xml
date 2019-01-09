@@ -238,19 +238,20 @@
             </LinearLayout>
         </LinearLayout>
 
-        <Button
-            android:id="@+id/button"
+        <ImageButton
+            android:id="@+id/b_drawer"
             style="@style/Widget.MaterialComponents.Button.UnelevatedButton"
             android:layout_width="wrap_content"
             android:layout_height="40dp"
             android:layout_marginTop="8dp"
             android:layout_marginEnd="8dp"
-            android:onClick="@{activity::showVideoAD}"
-            android:text="+"
+            android:onClick="@{(view)->activity.showVideoAD(view)}"
+            app:srcCompat="@drawable/ic_subscription"
             android:textSize="14sp"
             android:visibility="@{activity.freeSubscriptionButtonVisibility?View.VISIBLE:View.GONE}"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintTop_toTopOf="parent" />
+            app:layout_constraintTop_toTopOf="parent"
+            android:contentDescription="@string/setting_tell_friend_title" />
 
     </android.support.constraint.ConstraintLayout>
 </layout>

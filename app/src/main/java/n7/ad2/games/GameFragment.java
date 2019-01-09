@@ -56,10 +56,8 @@ public class GameFragment extends Fragment {
 
     @SuppressWarnings({"unchecked", "ConstantConditions"})
     public void startG1P2() {
-        Pair<View, String> p2 = Pair.create((View) binding.tvFragmentGameG1, "tv1");
-        ActivityOptionsCompat optionsCompat = ActivityOptionsCompat.makeSceneTransitionAnimation(getActivity(), p2);
-        Intent intent = new Intent(getContext(), Game1p1.class);
-        startActivity(intent, optionsCompat.toBundle());
+        Intent intent = new Intent(getContext(), Game1p2.class);
+        startActivity(intent);
     }
 
     @SuppressWarnings({"unchecked", "ConstantConditions"})

@@ -51,6 +51,7 @@ import n7.ad2.databinding.ActivityMainBinding;
 import n7.ad2.databinding.DialogPreDonateBinding;
 import n7.ad2.databinding.DialogRateBinding;
 import n7.ad2.databinding.DialogUpdateBinding;
+import n7.ad2.databinding.DialogVideoAdBinding;
 import n7.ad2.databinding.DrawerBinding;
 import n7.ad2.games.GameFragment;
 import n7.ad2.heroes.HeroesFragment;
@@ -111,13 +112,14 @@ public class MainActivity extends BaseActivity {
     private SlidingRootNav drawer;
     private RewardedVideoAd rewardedVideoAd;
     private boolean subscription;
+    private int currentDay;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
 
         setupRewardedVideoAd();
-
+        currentDay = PreferenceManager.getDefaultSharedPreferences(this).getInt(CURRENT_DAY_IN_APP, 0);
         viewModel = ViewModelProviders.of(this).get(MainViewModel.class);
 
         bindingActivity = DataBindingUtil.setContentView(this, R.layout.activity_main);
@@ -153,7 +155,36 @@ public class MainActivity extends BaseActivity {
     }
 
     public void showVideoAD(View view) {
-        rewardedVideoAd.show();
+        int lastDayVideoAD = PreferenceManager.getDefaultSharedPreferences(this).getInt(DIALOG_VIDEO_AD_SAW, 0);
+
+        if (lastDayVideoAD == currentDay) {
+            rewardedVideoAd.show();
+        } else {
+            showDialogForVideoAD();
+        }
+
+    }
+
+    public static final String DIALOG_VIDEO_AD_SAW = "DIALOG_VIDEO_AD_SAW";
+
+    private void showDialogForVideoAD() {
+        final AlertDialog.Builder builder = new AlertDialog.Builder(this);
+        DialogVideoAdBinding binding = DataBindingUtil.inflate(getLayoutInflater(), R.layout.dialog_video_ad, null, false);
+        builder.setView(binding.getRoot());
+
+        final AlertDialog dialog = builder.create();
+        dialog.getWindow().getAttributes().windowAnimations = R.style.DialogTheme;
+        dialog.show();
+
+        binding.bDialogVideoAd.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                dialog.dismiss();
+                showVideoAD(v);
+            }
+        });
+
+        PreferenceManager.getDefaultSharedPreferences(this).edit().putInt(DIALOG_VIDEO_AD_SAW, currentDay).apply();
     }
 
     private void loadVideoAD() {
@@ -191,8 +222,8 @@ public class MainActivity extends BaseActivity {
                 PreferenceManager.getDefaultSharedPreferences(MainActivity.this).edit().putBoolean(SUBSCRIPTION_PREF, true).apply();
                 log("free_subscription = +10 min");
                 OneTimeWorkRequest worker = new OneTimeWorkRequest.Builder(ADRewardWorker.class)
-//                        .setInitialDelay(rewardItem.getAmount(), TimeUnit.SECONDS).build();
-                        .setInitialDelay(30, TimeUnit.SECONDS).build();
+                        .setInitialDelay(rewardItem.getAmount(), TimeUnit.MINUTES).build();
+//                        .setInitialDelay(30, TimeUnit.SECONDS).build();
                 WorkManager.getInstance().enqueue(worker);
             }
 
@@ -250,7 +281,6 @@ public class MainActivity extends BaseActivity {
         dialog.setOnCancelListener(new DialogInterface.OnCancelListener() {
             @Override
             public void onCancel(DialogInterface dialog) {
-                int currentDay = PreferenceManager.getDefaultSharedPreferences(MainActivity.this).getInt(CURRENT_DAY_IN_APP, 0);
                 PreferenceManager.getDefaultSharedPreferences(MainActivity.this).edit().putInt(LAST_DAY_WHEN_CHECK_UPDATE, currentDay).apply();
             }
         });
@@ -379,10 +409,8 @@ public class MainActivity extends BaseActivity {
     @SuppressWarnings("ConstantConditions")
     void showPreDialogDonate() {
         if (!subscription) {
-            int currentDay = PreferenceManager.getDefaultSharedPreferences(this).getInt(CURRENT_DAY_IN_APP, 0);
             int lastDayDialog = PreferenceManager.getDefaultSharedPreferences(this).getInt(DIALOG_PRE_DONATE_LAST_DAY, 0);
             if (currentDay > lastDayDialog) {
-
                 final AlertDialog.Builder builder = new AlertDialog.Builder(this);
                 DialogPreDonateBinding binding = DataBindingUtil.inflate(getLayoutInflater(), R.layout.dialog_pre_donate, null, false);
                 builder.setView(binding.getRoot());
@@ -405,7 +433,6 @@ public class MainActivity extends BaseActivity {
                 firebaseAnalytics.logEvent(FIREBASE_DIALOG_DONATE_SAW, null);
                 enterCounter = 0;
             }
-
         } else {
             enterCounter = 0;
         }

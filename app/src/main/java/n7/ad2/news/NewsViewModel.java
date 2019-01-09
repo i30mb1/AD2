@@ -43,7 +43,7 @@ public class NewsViewModel extends AndroidViewModel {
         DataSource.Factory<Integer, NewsModel> dataSource = newsDao.getDataSourceNews();
 
         PagedList.Config config = new PagedList.Config.Builder()
-                .setPageSize(20)
+                .setPageSize(13)
                 .setEnablePlaceholders(false)
                 .build();
 
