@@ -54,10 +54,14 @@ public class HeroesFragment extends Fragment implements SearchView.OnQueryTextLi
 
     public void startHeroFull(View view,HeroModel model) {
         Intent intent = new Intent(view.getContext(), HeroFullActivity.class);
-        ActivityOptionsCompat options = ActivityOptionsCompat.makeSceneTransitionAnimation(getActivity(), view, "iv");
         intent.putExtra(HERO_NAME, model.getName());
         intent.putExtra(HERO_CODE_NAME, model.getCodeName());
-        startActivity(intent, options.toBundle());
+        if (getActivity() != null) {
+            ActivityOptionsCompat options = ActivityOptionsCompat.makeSceneTransitionAnimation(getActivity(), view, "iv");
+            startActivity(intent, options.toBundle());
+        } else {
+            startActivity(intent);
+        }
     }
 
     @Override

@@ -56,10 +56,14 @@ public class ItemsFragment extends Fragment implements SearchView.OnQueryTextLis
 
     public void startItemFull(View view, ItemModel item) {
         Intent intent = new Intent(view.getContext(), ItemFullActivity.class);
-        ActivityOptionsCompat options = ActivityOptionsCompat.makeSceneTransitionAnimation(getActivity(), view, "iv");
         intent.putExtra(ITEM_CODE_NAME, item.getCodeName());
         intent.putExtra(ITEM_NAME, item.getName());
-        startActivity(intent, options.toBundle());
+        if (getActivity() != null) {
+            ActivityOptionsCompat options = ActivityOptionsCompat.makeSceneTransitionAnimation(getActivity(), view, "iv");
+            startActivity(intent, options.toBundle());
+        } else {
+            startActivity(intent);
+        }
     }
 
     @Override

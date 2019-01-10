@@ -62,7 +62,7 @@ public class TournamentsWorker extends Worker {
                     }
                     if (matchElementsChildren.get(i).attr("class").equals("status")) {
                         for (Element element : matchElementsChildren.get(i).children()) {
-                            if (element.attr("class").equals("scorePlayer1 match-shop-result"))
+                            if (element.attr("class").equals("score match-shop-result"))
                                 game.teamScore = element.attr("data-value");
                             if (element.attr("class").equals("time")) {
                                 SimpleDateFormat simpleDateFormat = new SimpleDateFormat("HH:mm dd.MM.yyyy", new Locale("ru", "RU"));
