@@ -214,8 +214,6 @@ public class GuideFragment extends Fragment {
 
                 if (currentDay == guideLastDay) return;
 
-                heroesDao.setGuideLastDay(heroFolder, currentDay);
-
                 Data data = new Data.Builder().putString(HERO_CODE_NAME, heroFolder).build();
                 final OneTimeWorkRequest worker = new OneTimeWorkRequest.Builder(GuideWorker.class).setInputData(data).build();
                 WorkManager.getInstance().enqueue(worker);

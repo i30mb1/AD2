@@ -1,6 +1,7 @@
 package n7.ad2.heroes.full;
 
 import android.content.Context;
+import android.preference.PreferenceManager;
 import android.support.annotation.NonNull;
 
 import org.jsoup.Jsoup;
@@ -16,6 +17,8 @@ import androidx.work.WorkerParameters;
 import n7.ad2.heroes.db.HeroModel;
 import n7.ad2.heroes.db.HeroesDao;
 import n7.ad2.heroes.db.HeroesRoomDatabase;
+
+import static n7.ad2.splash.SplashViewModel.CURRENT_DAY_IN_APP;
 
 public class GuideWorker extends Worker {
 
@@ -145,6 +148,7 @@ public class GuideWorker extends Worker {
             heroes.setSkillBuilds(stringSkillBuilds.toString());
             heroes.setBestVersus(stringBestVersus.toString());
             heroes.setWorstVersus(stringWorstVersus.toString());
+            heroes.setGuideLastDay(PreferenceManager.getDefaultSharedPreferences(getApplicationContext()).getInt(CURRENT_DAY_IN_APP, 0));
 
             heroesDao.update(heroes);
 
