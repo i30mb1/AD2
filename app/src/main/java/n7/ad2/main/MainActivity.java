@@ -187,7 +187,7 @@ public class MainActivity extends BaseActivity {
 
     private void loadVideoAD() {
         if (rewardedVideoAd != null)
-            rewardedVideoAd.loadAd(ADMOB_ID_FAKE, new AdRequest.Builder().build());
+            rewardedVideoAd.loadAd(ADMOB_ID, new AdRequest.Builder().build());
     }
 
     public void setupRewardedVideoAd() {
