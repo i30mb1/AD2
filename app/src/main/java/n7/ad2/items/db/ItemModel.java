@@ -57,11 +57,4 @@ public class ItemModel  {
         this.name = name;
     }
 
-    public void startItemFull(View view) {
-        Intent intent = new Intent(view.getContext(), ItemFullActivity.class);
-        ActivityOptionsCompat options = ActivityOptionsCompat.makeSceneTransitionAnimation((Activity) view.getContext(), view, "iv");
-        intent.putExtra(ITEM_CODE_NAME, codeName);
-        intent.putExtra(ITEM_NAME, name);
-        view.getContext().startActivity(intent, options.toBundle());
-    }
 }

@@ -8,6 +8,7 @@ import android.databinding.DataBindingUtil;
 import android.os.Bundle;
 import android.support.annotation.NonNull;
 import android.support.annotation.Nullable;
+import android.support.v4.app.ActivityOptionsCompat;
 import android.support.v4.app.Fragment;
 import android.support.v7.widget.GridLayoutManager;
 import android.support.v7.widget.SearchView;
@@ -21,8 +22,11 @@ import android.view.ViewGroup;
 import n7.ad2.R;
 import n7.ad2.databinding.FragmentItemsBinding;
 import n7.ad2.items.db.ItemModel;
+import n7.ad2.items.full.ItemFullActivity;
 import n7.ad2.main.MainViewModel;
 
+import static n7.ad2.items.full.ItemFullActivity.ITEM_CODE_NAME;
+import static n7.ad2.items.full.ItemFullActivity.ITEM_NAME;
 import static n7.ad2.main.MainActivity.LOG_ON_RECEIVE;
 
 public class ItemsFragment extends Fragment implements SearchView.OnQueryTextListener {
@@ -50,6 +54,14 @@ public class ItemsFragment extends Fragment implements SearchView.OnQueryTextLis
         return binding.getRoot();
     }
 
+    public void startItemFull(View view, ItemModel item) {
+        Intent intent = new Intent(view.getContext(), ItemFullActivity.class);
+        ActivityOptionsCompat options = ActivityOptionsCompat.makeSceneTransitionAnimation(getActivity(), view, "iv");
+        intent.putExtra(ITEM_CODE_NAME, item.getCodeName());
+        intent.putExtra(ITEM_NAME, item.getName());
+        startActivity(intent, options.toBundle());
+    }
+
     @Override
     public void onActivityCreated(@Nullable Bundle savedInstanceState) {
         super.onActivityCreated(savedInstanceState);
@@ -67,7 +79,7 @@ public class ItemsFragment extends Fragment implements SearchView.OnQueryTextLis
     private void setupRecyclerView() {
         binding.rvFragmentItems.setHasFixedSize(true);
         binding.rvFragmentItems.setLayoutManager(new GridLayoutManager(getContext(), 4));
-        adapter = new ItemsPagedListAdapter();
+        adapter = new ItemsPagedListAdapter(this);
         binding.rvFragmentItems.setAdapter(adapter);
         viewModel.getItemsByFilter("").observe(this, new Observer<PagedList<ItemModel>>() {
             @Override

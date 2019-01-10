@@ -1,6 +1,7 @@
 package n7.ad2.heroes;
 
 
+import android.app.Activity;
 import android.arch.lifecycle.Observer;
 import android.arch.lifecycle.ViewModelProviders;
 import android.arch.paging.PagedList;
@@ -10,6 +11,7 @@ import android.databinding.ObservableBoolean;
 import android.os.Bundle;
 import android.support.annotation.NonNull;
 import android.support.annotation.Nullable;
+import android.support.v4.app.ActivityOptionsCompat;
 import android.support.v4.app.Fragment;
 import android.support.v7.widget.DefaultItemAnimator;
 import android.support.v7.widget.GridLayoutManager;
@@ -24,8 +26,11 @@ import android.view.ViewGroup;
 import n7.ad2.R;
 import n7.ad2.databinding.FragmentHeroesBinding;
 import n7.ad2.heroes.db.HeroModel;
+import n7.ad2.heroes.full.HeroFullActivity;
 import n7.ad2.main.MainViewModel;
 
+import static n7.ad2.heroes.full.HeroFullActivity.HERO_CODE_NAME;
+import static n7.ad2.heroes.full.HeroFullActivity.HERO_NAME;
 import static n7.ad2.main.MainActivity.LOG_ON_RECEIVE;
 
 
@@ -45,6 +50,14 @@ public class HeroesFragment extends Fragment implements SearchView.OnQueryTextLi
         MenuItem searchHero = menu.findItem(R.id.action_search);
         SearchView searchView = (SearchView) searchHero.getActionView();
         searchView.setOnQueryTextListener(this);
+    }
+
+    public void startHeroFull(View view,HeroModel model) {
+        Intent intent = new Intent(view.getContext(), HeroFullActivity.class);
+        ActivityOptionsCompat options = ActivityOptionsCompat.makeSceneTransitionAnimation(getActivity(), view, "iv");
+        intent.putExtra(HERO_NAME, model.getName());
+        intent.putExtra(HERO_CODE_NAME, model.getCodeName());
+        startActivity(intent, options.toBundle());
     }
 
     @Override
@@ -72,7 +85,7 @@ public class HeroesFragment extends Fragment implements SearchView.OnQueryTextLi
         binding.rvFragmentHeroes.setHasFixedSize(true);// если recyclerView не будет изменяться в размерах тогда ставим true
         binding.rvFragmentHeroes.setLayoutManager(new GridLayoutManager(getContext(), 3));
         binding.rvFragmentHeroes.setItemAnimator(new DefaultItemAnimator());
-        final HeroesPagedListAdapter adapter = new HeroesPagedListAdapter(); // PagedListAdapter, заточенный под чтение данных из PagedList.
+        final HeroesPagedListAdapter adapter = new HeroesPagedListAdapter(this); // PagedListAdapter, заточенный под чтение данных из PagedList.
         binding.rvFragmentHeroes.setAdapter(adapter);
         viewModel.getHeroesByFilter("").observe(this, new Observer<PagedList<HeroModel>>() {
             @Override
@@ -90,7 +103,7 @@ public class HeroesFragment extends Fragment implements SearchView.OnQueryTextLi
 
     @Override
     public boolean onQueryTextChange(String s) {
-        final HeroesPagedListAdapter adapter = new HeroesPagedListAdapter();
+        final HeroesPagedListAdapter adapter = new HeroesPagedListAdapter(this);
         binding.rvFragmentHeroes.setAdapter(adapter);
         viewModel.getHeroesByFilter(s).observe(this, new Observer<PagedList<HeroModel>>() {
             @Override

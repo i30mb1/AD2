@@ -6,6 +6,9 @@
     <data>
 
         <variable
+            name="fragment"
+            type="n7.ad2.heroes.HeroesFragment" />
+        <variable
             name="hero"
             type="n7.ad2.heroes.db.HeroModel" />
     </data>
@@ -29,7 +32,7 @@
                 android:adjustViewBounds="true"
                 android:background="?colorAccent"
                 android:contentDescription="@string/setting_tell_friend_title"
-                android:onClick="@{(view)->hero.startHeroFull(view)}"
+                android:onClick="@{(view)->fragment.startHeroFull(view,hero)}"
                 android:paddingStart="2dp"
                 android:paddingEnd="0dp"
                 android:scaleType="centerCrop"

@@ -6,6 +6,9 @@
     <data>
 
         <variable
+            name="fragment"
+            type="n7.ad2.items.ItemsFragment" />
+        <variable
             name="item"
             type="n7.ad2.items.db.ItemModel" />
 
@@ -37,7 +40,7 @@
                 srcHolder="@{@drawable/item_placeholder}"
                 srcError="@{@drawable/item_placeholder_error}"
                 srcPath='@{"file:///android_asset/items/" + item.getCodeName() + "/full.webp"}'
-                android:onClick="@{(view)-> item.startItemFull(view)}"
+                android:onClick="@{(view)-> fragment.startItemFull(view,item)}"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"

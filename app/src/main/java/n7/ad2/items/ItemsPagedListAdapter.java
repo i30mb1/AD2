@@ -27,9 +27,11 @@ public class ItemsPagedListAdapter extends PagedListAdapter<ItemModel, ItemsPage
     };
 
     private LayoutInflater inflater;
+    private ItemsFragment fragment;
 
-    ItemsPagedListAdapter() {
+    ItemsPagedListAdapter(ItemsFragment fragment) {
         super(DIFF_CALLBACK);
+        this.fragment = fragment;
     }
 
     @NonNull
@@ -61,6 +63,7 @@ public class ItemsPagedListAdapter extends PagedListAdapter<ItemModel, ItemsPage
 
         private void bindTo(ItemModel item) {
             binding.setItem(item);
+            binding.setFragment(fragment);
             binding.executePendingBindings();
         }
 
