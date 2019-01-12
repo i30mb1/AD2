@@ -1,1 +1,18 @@
-{"contains":["Point_Booster","Vitality_Booster","Energy_Booster"],"cost":"3200","description":"Regain lost courage.","further":["Bloodstone","Octarine_Core"],"attrs":["Bonus +425 Health +425 Mana","Disassemble? No","Alert allies? No"]}
+{
+  "contains": [
+    "Point_Booster",
+    "Vitality_Booster",
+    "Energy_Booster"
+  ],
+  "cost": "3200",
+  "description": "Regain lost courage.",
+  "further": [
+    "Bloodstone",
+    "Octarine_Core"
+  ],
+  "attrs": [
+    "Bonus +425 Health +425 Mana",
+    "Disassemble? No",
+    "Alert allies? No"
+  ]
+}

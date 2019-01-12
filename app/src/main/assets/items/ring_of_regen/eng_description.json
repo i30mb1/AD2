@@ -1,1 +1,20 @@
-{"cost":"300","description":"This ring is considered a good luck charm among the Gnomes.","further":["Headdress","Hood_of_Defiance","Tranquil_Boots","Soul_Ring","Meteor_Hammer","Force_Staff"],"attrs":["Bonus +2 Health regeneration","Disassemble? No","Alert allies? No"],"info":["Ring of Regen is partially shareable."]}
+{
+  "cost": "300",
+  "description": "This ring is considered a good luck charm among the Gnomes.",
+  "further": [
+    "Headdress",
+    "Hood_of_Defiance",
+    "Tranquil_Boots",
+    "Soul_Ring",
+    "Meteor_Hammer",
+    "Force_Staff"
+  ],
+  "attrs": [
+    "Bonus +2 Health regeneration",
+    "Disassemble? No",
+    "Alert allies? No"
+  ],
+  "info": [
+    "Ring of Regen is partially shareable."
+  ]
+}

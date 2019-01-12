@@ -1,1 +1,20 @@
-{"cost":"300","description":"Гномы считают, что это кольцо приносит удачу.","further":["Headdress","Hood_of_Defiance","Tranquil_Boots","Soul_Ring","Meteor_Hammer","Force_Staff"],"attrs":["Бонус +1,5 к регенерации здоровья","Можно разобрать? Нет","Можно сообщать? Нет"],"info":["Ring of Regen - условно передаваемый предмет."]}
+{
+  "cost": "300",
+  "description": "Гномы считают, что это кольцо приносит удачу.",
+  "further": [
+    "Headdress",
+    "Hood_of_Defiance",
+    "Tranquil_Boots",
+    "Soul_Ring",
+    "Meteor_Hammer",
+    "Force_Staff"
+  ],
+  "attrs": [
+    "Бонус +1,5 к регенерации здоровья",
+    "Можно разобрать? Нет",
+    "Можно сообщать? Нет"
+  ],
+  "info": [
+    "Ring of Regen - условно передаваемый предмет."
+  ]
+}

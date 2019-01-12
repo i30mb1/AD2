@@ -1,1 +1,39 @@
-{"abilities":[{"effects":["Cast Range Increase: 250"],"notes":["Cast range bonuses of multiple Aether Lenses do not stack.","Stacks with the cast range increases from talents.","The cast range bonus only affects ability and item cast ranges. It does not affect the area of effect of any spell.","Some spells which affect a line or an area in front of the caster, have their reach increased as well (with some exceptions).","Blink and other blink-like spells also have their max distance increased.","Does not affect the range of active attack modifiers and Focus Fire."],"elements":["Ability Passive","Affects Self"],"name":"Aethereal Focus","description":"Increases targeted spell and item cast range by 250."}],"cost":"2350","description":"Polished with the incantation of his final breath, the gift of a dying mage to his sickly son.","further":["Energy_Booster","Void_Stone","Recipe"],"tips":["Useful to outrange enemies' damage and disable spells. The range allow you to spam your abilities while staying under the tower."],"attrs":["Passive Aethereal Focus","Bonus +450 Mana +3 Mana regeneration","Disassemble? No","Alert allies? No"]}
+{
+  "abilities": [
+    {
+      "effects": [
+        "Cast Range Increase: 250"
+      ],
+      "notes": [
+        "Cast range bonuses of multiple Aether Lenses do not stack.",
+        "Stacks with the cast range increases from talents.",
+        "The cast range bonus only affects ability and item cast ranges. It does not affect the area of effect of any spell.",
+        "Some spells which affect a line or an area in front of the caster, have their reach increased as well (with some exceptions).",
+        "Blink and other blink-like spells also have their max distance increased.",
+        "Does not affect the range of active attack modifiers and Focus Fire."
+      ],
+      "elements": [
+        "Ability Passive",
+        "Affects Self"
+      ],
+      "name": "Aethereal Focus",
+      "description": "Increases targeted spell and item cast range by 250."
+    }
+  ],
+  "cost": "2350",
+  "description": "Polished with the incantation of his final breath, the gift of a dying mage to his sickly son.",
+  "further": [
+    "Energy_Booster",
+    "Void_Stone",
+    "Recipe"
+  ],
+  "tips": [
+    "Useful to outrange enemies' damage and disable spells. The range allow you to spam your abilities while staying under the tower."
+  ],
+  "attrs": [
+    "Passive Aethereal Focus",
+    "Bonus +450 Mana +3 Mana regeneration",
+    "Disassemble? No",
+    "Alert allies? No"
+  ]
+}

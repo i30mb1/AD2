@@ -1,1 +1,71 @@
-{"abilities":[{"effects":["Radius: 1200","Move Speed Bonus: 13%","Attack Speed Bonus: 35","Duration: 6"],"notes":["Interrupts the user's channeling spells upon cast.","Multiple casts of Endurance do not stack the buff, but refresh the duration instead.","Only affects player controlled units, including invulnerable units, excluding wards."],"elements":["Ability No Target","Affects Allies"],"name":"Endurance","description":"Gives +35 attack speed and +13% movement speed to nearby allies for 6 seconds."},{"effects":["Radius: 1200","Move Speed Bonus: 6%","Aura Linger Duration: 0.5"],"notes":["The aura's buff lingers for 0.5 seconds.","Fully stacks with other sources of movement speed bonuses, except for Swiftness Auras of multiple Drums.","Affects invulnerable units."],"elements":["Ability Aura","Affects Allies"],"name":"Swiftness Aura","description":"Gives 6% movement speed to nearby allies."}],"cost":"1525","description":"A relic that enchants the bodies of those around it for swifter movement in times of crisis.","trivia":["In the original DotA, this item was called Ancient Janggo of Endurance."],"further":["Crown","Sage's_Mask","Wind_Lace","Recipe"],"tips":["Use the active while attacking buildings with your team to destroy them faster.","Works on controlled units like Necronomicons and stack with the archer's bonus movement speed aura."],"attrs":["Active Endurance","Charges 6","Passive Swiftness Aura","Bonus +6 Strength +6 Agility +6 Intelligence +1.5 Mana regeneration","Disassemble? No","Alert allies? No"],"info":["For strength heroes, it grants 135 health, 0.75 health regen, 0.6% magic resistance, 0.96 armor, 6 attack speed, 0.3% movement speed, 72 mana, 1.8 mana regen, 0.42% spell damage and 6 attack damage.","For agility heroes, it grants 108 health, 0.6 health regen, 0.48% magic resistance, 1.2 armor, 7.5 attack speed, 0.38% movement speed, 72 mana, 1.8 mana regen, 0.42% spell damage and 6 attack damage.","For intelligence heroes, it grants 108 health, 0.6 health regen, 0.48% magic resistance, 0.96 armor, 6 attack speed, 0.3% movement speed, 90 mana, 1.88 mana regen, 0.53% spell damage and 6 attack damage. Together with the active ability, it grants a total of 41 attack speed to the owner.","The item does not disappear upon using up all charges.","The charges can be replenished by purchasing the recipe again."]}
+{
+  "abilities": [
+    {
+      "effects": [
+        "Radius: 1200",
+        "Move Speed Bonus: 13%",
+        "Attack Speed Bonus: 35",
+        "Duration: 6"
+      ],
+      "notes": [
+        "Interrupts the user's channeling spells upon cast.",
+        "Multiple casts of Endurance do not stack the buff, but refresh the duration instead.",
+        "Only affects player controlled units, including invulnerable units, excluding wards."
+      ],
+      "elements": [
+        "Ability No Target",
+        "Affects Allies"
+      ],
+      "name": "Endurance",
+      "description": "Gives +35 attack speed and +13% movement speed to nearby allies for 6 seconds."
+    },
+    {
+      "effects": [
+        "Radius: 1200",
+        "Move Speed Bonus: 6%",
+        "Aura Linger Duration: 0.5"
+      ],
+      "notes": [
+        "The aura's buff lingers for 0.5 seconds.",
+        "Fully stacks with other sources of movement speed bonuses, except for Swiftness Auras of multiple Drums.",
+        "Affects invulnerable units."
+      ],
+      "elements": [
+        "Ability Aura",
+        "Affects Allies"
+      ],
+      "name": "Swiftness Aura",
+      "description": "Gives 6% movement speed to nearby allies."
+    }
+  ],
+  "cost": "1525",
+  "description": "A relic that enchants the bodies of those around it for swifter movement in times of crisis.",
+  "trivia": [
+    "In the original DotA, this item was called Ancient Janggo of Endurance."
+  ],
+  "further": [
+    "Crown",
+    "Sage's_Mask",
+    "Wind_Lace",
+    "Recipe"
+  ],
+  "tips": [
+    "Use the active while attacking buildings with your team to destroy them faster.",
+    "Works on controlled units like Necronomicons and stack with the archer's bonus movement speed aura."
+  ],
+  "attrs": [
+    "Active Endurance",
+    "Charges 6",
+    "Passive Swiftness Aura",
+    "Bonus +6 Strength +6 Agility +6 Intelligence +1.5 Mana regeneration",
+    "Disassemble? No",
+    "Alert allies? No"
+  ],
+  "info": [
+    "For strength heroes, it grants 135 health, 0.75 health regen, 0.6% magic resistance, 0.96 armor, 6 attack speed, 0.3% movement speed, 72 mana, 1.8 mana regen, 0.42% spell damage and 6 attack damage.",
+    "For agility heroes, it grants 108 health, 0.6 health regen, 0.48% magic resistance, 1.2 armor, 7.5 attack speed, 0.38% movement speed, 72 mana, 1.8 mana regen, 0.42% spell damage and 6 attack damage.",
+    "For intelligence heroes, it grants 108 health, 0.6 health regen, 0.48% magic resistance, 0.96 armor, 6 attack speed, 0.3% movement speed, 90 mana, 1.88 mana regen, 0.53% spell damage and 6 attack damage. Together with the active ability, it grants a total of 41 attack speed to the owner.",
+    "The item does not disappear upon using up all charges.",
+    "The charges can be replenished by purchasing the recipe again."
+  ]
+}

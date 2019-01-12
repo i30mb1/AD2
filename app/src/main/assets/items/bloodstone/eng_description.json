@@ -1,1 +1,67 @@
-{"abilities":[{"effects":["Current Mana Converted: 60%","Duration: 2"],"notes":["Interrupts the caster's channeling spells upon cast.","Checks the caster's mana once upon cast, and drains mana and grants health regen according to that. This means the drain and regen values do not update after cast, and stay the same throughout the entire duration.","Removes 1.5% mana in 0.05 second intervals, starting 0.05 seconds after cast, resulting in 40 intances.","Heals in the form of health regeneration, so it restores 3% of the current mana as health in 0.1 seconds intervals.","The mana loss bypasses mana loss reductions completely.","Recasting Bloodpact refreshes the duration, without updating the mana loss and health regen values."],"elements":["Ability No Target","Affects Self"],"name":"Bloodpact","description":"Converts 60% of your current mana to health regeneration over 2 seconds."},{"effects":["Charge Gain Radius: 1600","Charge Gain per Enemy Hero Death: 1","Charge Loss per Death: 3","Health and Mana Regen Bonus per Charge: 0.3"],"notes":["When having multiple Bloodstones, the one in the higher inventory slot gains charges. The top left inventory slot has the highest priority, the bottom right one the lowest.","The effects of Bloodstone charges from all Bloodstones a hero owns fully stack.","Gains a charge whenever an enemy hero dies (including Reincarnation) within the radius, or whenever the owner makes a kill from any distance.","When multiple heroes in a team have Bloodstones, each hero can gain a charge from the same enemy death.","Each charge can regenerate up to 18 health and mana in one minute.","The Bloodstone loses 3 charges upon dying. Cannot go below 0 charges.","Charges are not lost when the carrier dies with Reincarnation."],"elements":["Ability Passive","Affects Self"],"name":"Mana Battery","description":"Each charge provides 0.3 HP and MP regen. Nearby kills provide 1 charges. Dying causes you to lose 3 charges. Starts with 14 charges."}],"cost":"4900","description":"The Bloodstone's bright ruby color is unmistakable on the battlefield, as the owner seems to have infinite vitality and spirit.","further":["Perseverance","Soul_Booster"],"tips":["Most heroes who want to build Bloodstone can take advantage of the ability to Disassemble Arcane Boots to complete the Soul Booster."],"attrs":["Active Bloodpact","Charges 14","Passive Mana Battery","Bonus +475 Health +6 Health regeneration +425 Mana +3 Mana regeneration +200% Mana regeneration","Disassemble? No","Alert allies? No"],"info":["Bloodstone cannot be put into the backpack."]}
+{
+  "abilities": [
+    {
+      "effects": [
+        "Current Mana Converted: 60%",
+        "Duration: 2"
+      ],
+      "notes": [
+        "Interrupts the caster's channeling spells upon cast.",
+        "Checks the caster's mana once upon cast, and drains mana and grants health regen according to that. This means the drain and regen values do not update after cast, and stay the same throughout the entire duration.",
+        "Removes 1.5% mana in 0.05 second intervals, starting 0.05 seconds after cast, resulting in 40 intances.",
+        "Heals in the form of health regeneration, so it restores 3% of the current mana as health in 0.1 seconds intervals.",
+        "The mana loss bypasses mana loss reductions completely.",
+        "Recasting Bloodpact refreshes the duration, without updating the mana loss and health regen values."
+      ],
+      "elements": [
+        "Ability No Target",
+        "Affects Self"
+      ],
+      "name": "Bloodpact",
+      "description": "Converts 60% of your current mana to health regeneration over 2 seconds."
+    },
+    {
+      "effects": [
+        "Charge Gain Radius: 1600",
+        "Charge Gain per Enemy Hero Death: 1",
+        "Charge Loss per Death: 3",
+        "Health and Mana Regen Bonus per Charge: 0.3"
+      ],
+      "notes": [
+        "When having multiple Bloodstones, the one in the higher inventory slot gains charges. The top left inventory slot has the highest priority, the bottom right one the lowest.",
+        "The effects of Bloodstone charges from all Bloodstones a hero owns fully stack.",
+        "Gains a charge whenever an enemy hero dies (including Reincarnation) within the radius, or whenever the owner makes a kill from any distance.",
+        "When multiple heroes in a team have Bloodstones, each hero can gain a charge from the same enemy death.",
+        "Each charge can regenerate up to 18 health and mana in one minute.",
+        "The Bloodstone loses 3 charges upon dying. Cannot go below 0 charges.",
+        "Charges are not lost when the carrier dies with Reincarnation."
+      ],
+      "elements": [
+        "Ability Passive",
+        "Affects Self"
+      ],
+      "name": "Mana Battery",
+      "description": "Each charge provides 0.3 HP and MP regen. Nearby kills provide 1 charges. Dying causes you to lose 3 charges. Starts with 14 charges."
+    }
+  ],
+  "cost": "4900",
+  "description": "The Bloodstone's bright ruby color is unmistakable on the battlefield, as the owner seems to have infinite vitality and spirit.",
+  "further": [
+    "Perseverance",
+    "Soul_Booster"
+  ],
+  "tips": [
+    "Most heroes who want to build Bloodstone can take advantage of the ability to Disassemble Arcane Boots to complete the Soul Booster."
+  ],
+  "attrs": [
+    "Active Bloodpact",
+    "Charges 14",
+    "Passive Mana Battery",
+    "Bonus +475 Health +6 Health regeneration +425 Mana +3 Mana regeneration +200% Mana regeneration",
+    "Disassemble? No",
+    "Alert allies? No"
+  ],
+  "info": [
+    "Bloodstone cannot be put into the backpack."
+  ]
+}

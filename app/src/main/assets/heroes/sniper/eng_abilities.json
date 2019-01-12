@@ -1,1 +1,168 @@
-{"abilities":[{"spell":"Consumes a charge to launch a ball of shrapnel that showers the target area in explosive pellets. Enemies are subject to damage and slowed movement. Reveals the targeted area. Shrapnel charges restore every 55 seconds.","effects":["Ability Target Area","Affects Enemies","Damage Magical"],"notes":["Sniper gets all 3 charges immediately upon learning Shrapnel. Choosing the extra charges talent also immediately grants the 6 charges.","Shrapnel starts dealing damage, slowing and providing vision after the effect delay.","Provides 450 radius flying vision at the targeted area.","The damage and the slow are both provided by an aura. Its debuff lingers for 0.5 seconds. Multiple instances of the aura do not stack.","Deals damage in 1 second intervals, starting immediately as the debuff is placed, resulting in up to 11 possible damage instances.","Can deal up to 165\/385\/605\/825 ( 550\/770\/990\/1210) damage to a single unit (before reductions).","Does not affect buildings."],"mana":"50","elements":["Does not pierce spell immunity."],"cooldown":"0","name":"Shrapnel","description":["Cast Animation: 0.3+0","Cast Range: 1800","Effect Radius: 450","Effect Delay: 1.2","Damage per Second: 15\/35\/55\/75 ( 50\/70\/90\/110)","Move Speed Slow: 15%\/20%\/25%\/30%","Aura Linger Duration: 0.5","Shrapnel Duration: 10","Number of Charges: 3 ( 9)","Charge Replenish Time: 55 ( 41.25)"],"hot_key":"Q","legacy_key":"R"},{"spell":"Sniper increases his accuracy, giving him a chance to deal extra damage and briefly stop the movements of his enemies.","effects":["Ability Passive","Affects Enemies \/ Allies","Damage Physical"],"notes":["Headshot can miss.","The proccing attack first applies the debuffs, then its own damage.","The bonus damage is dealt in one instance together with the attack damage, and counts as attack damage as well. It can be lifestealed off of, but it is not considered by crit or cleave. It is also not affected by percentage-based attack damage bonuses or reductions, but can be reduced with flat reductions.","Increases Sniper's attack damage output on average by 8\/20\/32\/44.","Cannot proc against wards and buildings, can proc against allies.","Headshot uses pseudo-random distribution.","When the talent is chosen, Headshot applies forced movement on the target upon proccing, pushing the target away from Sniper. The knockback does not interrupt channeling spells. The knockback is not applied on units who are already affected by other sources of forced movement. Knocks units back at a speed of 350."],"mana":"0","elements":["Cannot be used by illusions.","Disabled by Break.","Partially pierces spell immunity."],"cooldown":"0","name":"Headshot","description":["Proc Chance: 40%","Damage: 20\/50\/80\/110","Move Speed Slow: 100%","Attack Speed Slow: 100","Knockback Distance: 0 ( 35)","Slow Duration: 0.5","Knockback Duration: 0 ( 0.1)"],"hot_key":"W","legacy_key":"D"},{"spell":"Extends the attack range of Sniper's rifle. Can be activated to double the attack range bonus for 1 attack.","effects":["Ability No Target \/ Passive","Affects Self"],"notes":["Interrupts Sniper's channeling spells upon cast.","When cast, Sniper receives a buff which doubles the range bonus of Take Aim.","The buff has no set duration. It lasts until performing an attack, or until dying. This means the outcome of the attack does not matter.","The cooldown starts upon losing the buff in any way. It does not start upon cast.","Passively increases Sniper's total attack range to 650\/750\/850\/950 ( 775\/875\/975\/1075). With the active, Sniper has an attack range of 750\/950\/1150\/1350 ( 875\/1075\/1275\/1475) for one attack."],"mana":"30","elements":["Can be used by illusions.","Disabled by Break.","Pierces spell immunity."],"cooldown":"15\/12\/9\/6","name":"Take Aim","description":["Cast Animation: 0+0","Passive Attack Range Bonus: 100\/200\/300\/400","Active Attack Range Bonus: 100\/200\/300\/400","Active Max Attacks: 1"],"hot_key":"E","legacy_key":"E"},{"spell":"Sniper locks onto a target enemy unit and, after a short aiming duration, fires a devastating shot that deals damage at long range and mini-stuns the target.","effects":["Ability Target Unit ( Target Area)","Affects Enemies","Damage Magical ( Physical)"],"notes":["The projectile travels at a speed of 2500.","Assassinate first applies the damage ( the attack), then the stun debuff.","Although the stun duration is set to 0.01 seconds, it lasts 0.03-0.04 seconds due to the server tick rate limit.","Assassinate places a debuff on the target as soon as Sniper begins casting. The debuff lasts 4 seconds, or until the projectile lands, or the cast gets canceled. The debuff grants shared vision with the targeted unit. Does not provide any vision when targeting neutral creeps. The debuff grants True Sight over the target, meaning it cannot be canceled or be disjointed with invisibility without True Sight immunity. The debuff is visible to everyone. The cross hair above the target is visible to allies only.","Can directly target invulnerable units, and does not get canceled if the target turns invulnerable during the cast time. The vision debuff is not placed when targeting an invulnerable unit, but stays if the unit turned invulnerable during the cast time. The projectile does not affect the target if it is still invulnerable on impact.","Cannot target hidden units and does get canceled when the target turns hidden.","The initial weapon loading sound during the cast time is audible to Sniper only.","When upgraded, Assassinate targets every player-controlled unit within the target area, placing the debuff on all player-controlled units. However, upon reaching the cast point only heroes, illusions and creep-heroes are hit by projectiles. Other targeted units are not hit. Since the vision debuff disappears only when the projectile hits, or the cast gets canceled, it lasts for the full 4 seconds on all other targets. Unlike the default version, the upgraded Assassinate fully ignores invulnerable units, neither initially targeting them, nor launching a projectile. All targets are marked upon cast. Entering or leaving the area during the cast time has no effect. While the single-target version is subject to the motion buffer range, the area targeted version is not, so that distance cannot cancel the cast. This means even if an enemy teleports away after being marked, Sniper still launches the projectile towards them. If no valid targets are within the area, the spell still gets cast, wasting mana and cooldown.","Aghanim's Scepter causes Sniper to perform an instant attack on all targets. The projectile is still the regular Assassinate projectile, but having its damage set to 0. The instant attack is perfomed as it hits its target. These instant attacks do not use Sniper's attack projectile speed, they hit their targets instantly. These attacks have True Strike, and can therefore never miss. They also ignore disarms. Can proc any attack modifier on all of the hit targets normally. Can also proc any on-hit effects, including Damage Block. These attacks have an ensured critical strike. They also always proc Headshot."],"mana":"175\/225\/275","elements":["Can partially be disjointed.","Partially blocked by Linken's Sphere.","Does not pierce spell immunity."],"cooldown":"20\/15\/10 ( 15\/11.25\/7.5)","name":"Assassinate","description":["Cast Animation: 2+1.37 ( 0.5+2.87)","Cast Range: 3000","Radius: 0 ( 400)","Damage: 320\/485\/650 ( 0)","Critical Damage: 0% ( 280%)","Stun Duration: 0.01","Vision Buff Max Duration: 4"],"hot_key":"R","legacy_key":"T"}],"bio":"Kardel Sharpeye was born deep in the mountainous valleys of Knollen where, since time immemorial, the folk have survived by hunting the strange, cliff-dwelling steepstalkers above their village\u2014killing them from a distance and collecting their carcasses where they fell. Sharpeye was among the best of these strange folk for whom projectile weapons are but another appendage, and to shoot is as natural as to touch. On his day of summoning, when he was to gain full standing in his village, Sharpeye took the ancient test: a single shot from the valley floor to strike a beast down from the cliffs. To miss was to be dishonored. With his entire village standing vigil, Sharpeye took his shot. A steepstalker fell; the crowd cheered. But when the carcass was collected, the village grew silent, for the elders found that the bullet had pierced its glittering central eye then fallen to be clenched in the steepstalker's mandibles. This ominous sign was the literal opening of a dark prophecy, foretelling both greatness and exile for the gunman who made such a shot. Sharpeye the Sniper was thus, by his own skill, condemned to make his way apart from his people\u2014and unwelcome back among them until he has fulfilled the remainder of the prophecy by attaining legendary stature on a field of battle.","talentsTips":["This attack damage talent is added as raw attack damage, so it does not benefit illusions, and is not affected by most percentage-based damage increasing or reducing effects.","The cooldown reduction talent stacks multiplicatively with Octarine Core and additively other sources of cooldown reduction."],"trivia":["A number of Sniper's lines are either direct quotations or paraphrases of lines used by the Sniper class in Team Fortress 2, a popular class-based shooter also by Valve. Such phrases include: Thanks for standing still, wanker! Let's have a go at it! Jarate! Professionals have standards. I'm polite and efficient. As long as there are two heroes left on the battlefield, someone is gonna want someone dead.","One of Sniper's lines while bottling a rune is \"Jarate!\", which is a reference to Team Fortress 2 in-game weapon for Sniper class, Jarate.","One of Sniper's lines while casting his ultimate is \"Boom headshot!\", which is a reference to the Pure Pwnage mockumentary series.","Incidentally, his voice actor, Gary Schwartz, also voices the Heavy Weapons Guy and Demoman in Team Fortress 2.","Sniper's line, \"Play Inconceivable!\" is likely a reference to Vizzini's catchphrase in the film The Princess Bride due to the similarities in both the appearance and voices of the two.","Sniper's name, Kardel Sharpeye, is a reference to professional Counter-Strike player Kyle \"Ksharp\" Miller of team 3D, who is regarded for his skillful AWP (Sniper rifle) use. Sniper's ultimate, Assassinate, also uses the same, though slightly modified gunshot sound as Counter-Strike's AWP.","Sniper's fun name in DotA was Vasily Zaitsev, a highly skilled Russian sniper who was active during World War 2.","Sniper's line, \"Play What a dum-dum!\" is a pun on the Expanding bullet, also known as a dum-dum. It is designed to expand on impact in order to limit penetration and create a wound larger in diameter.","Sniper's line, \"Play Oh, a few bullets more!\" is a reference to the film For a Few Dollars More."],"talents":["+6 Shrapnel Charges:+125 Attack Range","-1.5s Assassinate Cast Time:+35 Knockback Distance Headshot","+35 Shrapnel DPS:+40 Attack Speed","+20 Damage:25% Cooldown Reduction"],"desc":"Kardel Sharpeye, the Sniper, is a ranged agility hero who excels at dealing moderate to heavy damage from an incredible range. With no escape mechanism, poor mobility, and only a modest health pool, Sniper is exceptionally frail at all stages of the game and vulnerable to enemies who confront him head-on. However, his abilities provide him both the means to keep his distance and systematically destroy his enemies from afar. Shrapnel is a potent, high-cast range zoning ability that provides vision for Sniper while slowing and damaging enemies in its area of effect; with up to 3 charges on the ability, Sniper can completely close off any viable routes for his opponents to approach or escape. Headshot supplements Sniper's right-click damage and briefly stops enemies when it procs, which can be quite debilitating since it has a high rate of occurring. His third ability, Take Aim, gives him the largest attack range of any hero in the game, allowing him to deal high DPS from a safe distance while also giving him the ease to switch between targets at a moment's notice. Finally, Assassinate is a strong finishing and harassing ability, dealing hefty damage to an enemy from an enormous distance after a brief aiming period. Sniper is heavily item-dependent, relying on means to increase his survivability as well as his damage output as the game progresses. Skilled players will find that positioning is the most important thing to keep in mind when playing both as him or against him."}
+{
+  "abilities": [
+    {
+      "spell": "Consumes a charge to launch a ball of shrapnel that showers the target area in explosive pellets. Enemies are subject to damage and slowed movement. Reveals the targeted area. Shrapnel charges restore every 55 seconds.",
+      "effects": [
+        "Ability Target Area",
+        "Affects Enemies",
+        "Damage Magical"
+      ],
+      "notes": [
+        "Sniper gets all 3 charges immediately upon learning Shrapnel. Choosing the extra charges talent also immediately grants the 6 charges.",
+        "Shrapnel starts dealing damage, slowing and providing vision after the effect delay.",
+        "Provides 450 radius flying vision at the targeted area.",
+        "The damage and the slow are both provided by an aura. Its debuff lingers for 0.5 seconds. Multiple instances of the aura do not stack.",
+        "Deals damage in 1 second intervals, starting immediately as the debuff is placed, resulting in up to 11 possible damage instances.",
+        "Can deal up to 165\/385\/605\/825 ( 550\/770\/990\/1210) damage to a single unit (before reductions).",
+        "Does not affect buildings."
+      ],
+      "mana": "50",
+      "elements": [
+        "Does not pierce spell immunity."
+      ],
+      "cooldown": "0",
+      "name": "Shrapnel",
+      "description": [
+        "Cast Animation: 0.3+0",
+        "Cast Range: 1800",
+        "Effect Radius: 450",
+        "Effect Delay: 1.2",
+        "Damage per Second: 15\/35\/55\/75 ( 50\/70\/90\/110)",
+        "Move Speed Slow: 15%\/20%\/25%\/30%",
+        "Aura Linger Duration: 0.5",
+        "Shrapnel Duration: 10",
+        "Number of Charges: 3 ( 9)",
+        "Charge Replenish Time: 55 ( 41.25)"
+      ],
+      "hot_key": "Q",
+      "legacy_key": "R"
+    },
+    {
+      "spell": "Sniper increases his accuracy, giving him a chance to deal extra damage and briefly stop the movements of his enemies.",
+      "effects": [
+        "Ability Passive",
+        "Affects Enemies \/ Allies",
+        "Damage Physical"
+      ],
+      "notes": [
+        "Headshot can miss.",
+        "The proccing attack first applies the debuffs, then its own damage.",
+        "The bonus damage is dealt in one instance together with the attack damage, and counts as attack damage as well. It can be lifestealed off of, but it is not considered by crit or cleave. It is also not affected by percentage-based attack damage bonuses or reductions, but can be reduced with flat reductions.",
+        "Increases Sniper's attack damage output on average by 8\/20\/32\/44.",
+        "Cannot proc against wards and buildings, can proc against allies.",
+        "Headshot uses pseudo-random distribution.",
+        "When the talent is chosen, Headshot applies forced movement on the target upon proccing, pushing the target away from Sniper. The knockback does not interrupt channeling spells. The knockback is not applied on units who are already affected by other sources of forced movement. Knocks units back at a speed of 350."
+      ],
+      "mana": "0",
+      "elements": [
+        "Cannot be used by illusions.",
+        "Disabled by Break.",
+        "Partially pierces spell immunity."
+      ],
+      "cooldown": "0",
+      "name": "Headshot",
+      "description": [
+        "Proc Chance: 40%",
+        "Damage: 20\/50\/80\/110",
+        "Move Speed Slow: 100%",
+        "Attack Speed Slow: 100",
+        "Knockback Distance: 0 ( 35)",
+        "Slow Duration: 0.5",
+        "Knockback Duration: 0 ( 0.1)"
+      ],
+      "hot_key": "W",
+      "legacy_key": "D"
+    },
+    {
+      "spell": "Extends the attack range of Sniper's rifle. Can be activated to double the attack range bonus for 1 attack.",
+      "effects": [
+        "Ability No Target \/ Passive",
+        "Affects Self"
+      ],
+      "notes": [
+        "Interrupts Sniper's channeling spells upon cast.",
+        "When cast, Sniper receives a buff which doubles the range bonus of Take Aim.",
+        "The buff has no set duration. It lasts until performing an attack, or until dying. This means the outcome of the attack does not matter.",
+        "The cooldown starts upon losing the buff in any way. It does not start upon cast.",
+        "Passively increases Sniper's total attack range to 650\/750\/850\/950 ( 775\/875\/975\/1075). With the active, Sniper has an attack range of 750\/950\/1150\/1350 ( 875\/1075\/1275\/1475) for one attack."
+      ],
+      "mana": "30",
+      "elements": [
+        "Can be used by illusions.",
+        "Disabled by Break.",
+        "Pierces spell immunity."
+      ],
+      "cooldown": "15\/12\/9\/6",
+      "name": "Take Aim",
+      "description": [
+        "Cast Animation: 0+0",
+        "Passive Attack Range Bonus: 100\/200\/300\/400",
+        "Active Attack Range Bonus: 100\/200\/300\/400",
+        "Active Max Attacks: 1"
+      ],
+      "hot_key": "E",
+      "legacy_key": "E"
+    },
+    {
+      "spell": "Sniper locks onto a target enemy unit and, after a short aiming duration, fires a devastating shot that deals damage at long range and mini-stuns the target.",
+      "effects": [
+        "Ability Target Unit ( Target Area)",
+        "Affects Enemies",
+        "Damage Magical ( Physical)"
+      ],
+      "notes": [
+        "The projectile travels at a speed of 2500.",
+        "Assassinate first applies the damage ( the attack), then the stun debuff.",
+        "Although the stun duration is set to 0.01 seconds, it lasts 0.03-0.04 seconds due to the server tick rate limit.",
+        "Assassinate places a debuff on the target as soon as Sniper begins casting. The debuff lasts 4 seconds, or until the projectile lands, or the cast gets canceled. The debuff grants shared vision with the targeted unit. Does not provide any vision when targeting neutral creeps. The debuff grants True Sight over the target, meaning it cannot be canceled or be disjointed with invisibility without True Sight immunity. The debuff is visible to everyone. The cross hair above the target is visible to allies only.",
+        "Can directly target invulnerable units, and does not get canceled if the target turns invulnerable during the cast time. The vision debuff is not placed when targeting an invulnerable unit, but stays if the unit turned invulnerable during the cast time. The projectile does not affect the target if it is still invulnerable on impact.",
+        "Cannot target hidden units and does get canceled when the target turns hidden.",
+        "The initial weapon loading sound during the cast time is audible to Sniper only.",
+        "When upgraded, Assassinate targets every player-controlled unit within the target area, placing the debuff on all player-controlled units. However, upon reaching the cast point only heroes, illusions and creep-heroes are hit by projectiles. Other targeted units are not hit. Since the vision debuff disappears only when the projectile hits, or the cast gets canceled, it lasts for the full 4 seconds on all other targets. Unlike the default version, the upgraded Assassinate fully ignores invulnerable units, neither initially targeting them, nor launching a projectile. All targets are marked upon cast. Entering or leaving the area during the cast time has no effect. While the single-target version is subject to the motion buffer range, the area targeted version is not, so that distance cannot cancel the cast. This means even if an enemy teleports away after being marked, Sniper still launches the projectile towards them. If no valid targets are within the area, the spell still gets cast, wasting mana and cooldown.",
+        "Aghanim's Scepter causes Sniper to perform an instant attack on all targets. The projectile is still the regular Assassinate projectile, but having its damage set to 0. The instant attack is perfomed as it hits its target. These instant attacks do not use Sniper's attack projectile speed, they hit their targets instantly. These attacks have True Strike, and can therefore never miss. They also ignore disarms. Can proc any attack modifier on all of the hit targets normally. Can also proc any on-hit effects, including Damage Block. These attacks have an ensured critical strike. They also always proc Headshot."
+      ],
+      "mana": "175\/225\/275",
+      "elements": [
+        "Can partially be disjointed.",
+        "Partially blocked by Linken's Sphere.",
+        "Does not pierce spell immunity."
+      ],
+      "cooldown": "20\/15\/10 ( 15\/11.25\/7.5)",
+      "name": "Assassinate",
+      "description": [
+        "Cast Animation: 2+1.37 ( 0.5+2.87)",
+        "Cast Range: 3000",
+        "Radius: 0 ( 400)",
+        "Damage: 320\/485\/650 ( 0)",
+        "Critical Damage: 0% ( 280%)",
+        "Stun Duration: 0.01",
+        "Vision Buff Max Duration: 4"
+      ],
+      "hot_key": "R",
+      "legacy_key": "T"
+    }
+  ],
+  "bio": "Kardel Sharpeye was born deep in the mountainous valleys of Knollen where, since time immemorial, the folk have survived by hunting the strange, cliff-dwelling steepstalkers above their village\u2014killing them from a distance and collecting their carcasses where they fell. Sharpeye was among the best of these strange folk for whom projectile weapons are but another appendage, and to shoot is as natural as to touch. On his day of summoning, when he was to gain full standing in his village, Sharpeye took the ancient test: a single shot from the valley floor to strike a beast down from the cliffs. To miss was to be dishonored. With his entire village standing vigil, Sharpeye took his shot. A steepstalker fell; the crowd cheered. But when the carcass was collected, the village grew silent, for the elders found that the bullet had pierced its glittering central eye then fallen to be clenched in the steepstalker's mandibles. This ominous sign was the literal opening of a dark prophecy, foretelling both greatness and exile for the gunman who made such a shot. Sharpeye the Sniper was thus, by his own skill, condemned to make his way apart from his people\u2014and unwelcome back among them until he has fulfilled the remainder of the prophecy by attaining legendary stature on a field of battle.",
+  "talentsTips": [
+    "This attack damage talent is added as raw attack damage, so it does not benefit illusions, and is not affected by most percentage-based damage increasing or reducing effects.",
+    "The cooldown reduction talent stacks multiplicatively with Octarine Core and additively other sources of cooldown reduction."
+  ],
+  "trivia": [
+    "A number of Sniper's lines are either direct quotations or paraphrases of lines used by the Sniper class in Team Fortress 2, a popular class-based shooter also by Valve. Such phrases include: Thanks for standing still, wanker! Let's have a go at it! Jarate! Professionals have standards. I'm polite and efficient. As long as there are two heroes left on the battlefield, someone is gonna want someone dead.",
+    "One of Sniper's lines while bottling a rune is \"Jarate!\", which is a reference to Team Fortress 2 in-game weapon for Sniper class, Jarate.",
+    "One of Sniper's lines while casting his ultimate is \"Boom headshot!\", which is a reference to the Pure Pwnage mockumentary series.",
+    "Incidentally, his voice actor, Gary Schwartz, also voices the Heavy Weapons Guy and Demoman in Team Fortress 2.",
+    "Sniper's line, \"Play Inconceivable!\" is likely a reference to Vizzini's catchphrase in the film The Princess Bride due to the similarities in both the appearance and voices of the two.",
+    "Sniper's name, Kardel Sharpeye, is a reference to professional Counter-Strike player Kyle \"Ksharp\" Miller of team 3D, who is regarded for his skillful AWP (Sniper rifle) use. Sniper's ultimate, Assassinate, also uses the same, though slightly modified gunshot sound as Counter-Strike's AWP.",
+    "Sniper's fun name in DotA was Vasily Zaitsev, a highly skilled Russian sniper who was active during World War 2.",
+    "Sniper's line, \"Play What a dum-dum!\" is a pun on the Expanding bullet, also known as a dum-dum. It is designed to expand on impact in order to limit penetration and create a wound larger in diameter.",
+    "Sniper's line, \"Play Oh, a few bullets more!\" is a reference to the film For a Few Dollars More."
+  ],
+  "talents": [
+    "+6 Shrapnel Charges:+125 Attack Range",
+    "-1.5s Assassinate Cast Time:+35 Knockback Distance Headshot",
+    "+35 Shrapnel DPS:+40 Attack Speed",
+    "+20 Damage:25% Cooldown Reduction"
+  ],
+  "desc": "Kardel Sharpeye, the Sniper, is a ranged agility hero who excels at dealing moderate to heavy damage from an incredible range. With no escape mechanism, poor mobility, and only a modest health pool, Sniper is exceptionally frail at all stages of the game and vulnerable to enemies who confront him head-on. However, his abilities provide him both the means to keep his distance and systematically destroy his enemies from afar. Shrapnel is a potent, high-cast range zoning ability that provides vision for Sniper while slowing and damaging enemies in its area of effect; with up to 3 charges on the ability, Sniper can completely close off any viable routes for his opponents to approach or escape. Headshot supplements Sniper's right-click damage and briefly stops enemies when it procs, which can be quite debilitating since it has a high rate of occurring. His third ability, Take Aim, gives him the largest attack range of any hero in the game, allowing him to deal high DPS from a safe distance while also giving him the ease to switch between targets at a moment's notice. Finally, Assassinate is a strong finishing and harassing ability, dealing hefty damage to an enemy from an enormous distance after a brief aiming period. Sniper is heavily item-dependent, relying on means to increase his survivability as well as his damage output as the game progresses. Skilled players will find that positioning is the most important thing to keep in mind when playing both as him or against him."
+}

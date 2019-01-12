@@ -1,1 +1,44 @@
-{"abilities":[{"effects":["Proc Chance: 50%","Blocked Damage (Melee): 70","Blocked Damage (Ranged): 35"],"notes":["Does not work against wards ( Plague Ward, Mass Serpent Ward, Death Ward).","Does not reduce physical damage from spells, except from Moon Glaives and The Swarm.","Damage Block uses pseudo-random distribution.","For more details, see Damage Block."],"elements":["Ability Passive","Affects Self"],"name":"Damage Block","description":"Grants a 50% chance to block 70 damage from incoming attacks on melee heroes, and 35 damage on ranged."}],"contains":["Ring_of_Health","Vitality_Booster","Stout_Shield"],"cost":"2150","description":"A powerful shield that defends its wielder from even the most vicious of attacks.","further":["Crimson_Guard","Abyssal_Blade"],"tips":["Effective to block the damages from illusions (excepted from Chaos Knight's ultimate which copy his full damage and can crit) and summoned units.","It is especially useful with tanky frontline heroes that need to survive much damage, like Bristleback, Spectre, Centaur Warrunner or Axe, with units that overall take amplified damage, like illusions, and against low damage units like Windranger without Aghanim's Scepter or Phantom Lancer's illusions, which hit often but not hard, causing many block procs that block attacks entirely or almost entirely. On the other hand, it is less useful for heroes with high armor, like Dragon Knight or Sven."],"attrs":["Passive Damage Block","Bonus +250 Health +7 Health regeneration","Disassemble? No","Alert allies? No"]}
+{
+  "abilities": [
+    {
+      "effects": [
+        "Proc Chance: 50%",
+        "Blocked Damage (Melee): 70",
+        "Blocked Damage (Ranged): 35"
+      ],
+      "notes": [
+        "Does not work against wards ( Plague Ward, Mass Serpent Ward, Death Ward).",
+        "Does not reduce physical damage from spells, except from Moon Glaives and The Swarm.",
+        "Damage Block uses pseudo-random distribution.",
+        "For more details, see Damage Block."
+      ],
+      "elements": [
+        "Ability Passive",
+        "Affects Self"
+      ],
+      "name": "Damage Block",
+      "description": "Grants a 50% chance to block 70 damage from incoming attacks on melee heroes, and 35 damage on ranged."
+    }
+  ],
+  "contains": [
+    "Ring_of_Health",
+    "Vitality_Booster",
+    "Stout_Shield"
+  ],
+  "cost": "2150",
+  "description": "A powerful shield that defends its wielder from even the most vicious of attacks.",
+  "further": [
+    "Crimson_Guard",
+    "Abyssal_Blade"
+  ],
+  "tips": [
+    "Effective to block the damages from illusions (excepted from Chaos Knight's ultimate which copy his full damage and can crit) and summoned units.",
+    "It is especially useful with tanky frontline heroes that need to survive much damage, like Bristleback, Spectre, Centaur Warrunner or Axe, with units that overall take amplified damage, like illusions, and against low damage units like Windranger without Aghanim's Scepter or Phantom Lancer's illusions, which hit often but not hard, causing many block procs that block attacks entirely or almost entirely. On the other hand, it is less useful for heroes with high armor, like Dragon Knight or Sven."
+  ],
+  "attrs": [
+    "Passive Damage Block",
+    "Bonus +250 Health +7 Health regeneration",
+    "Disassemble? No",
+    "Alert allies? No"
+  ]
+}

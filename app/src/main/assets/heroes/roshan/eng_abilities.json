@@ -1,1 +1,128 @@
-{"abilities":[{"spell":"Roshan will block one targeted spell every 15 seconds. Also reduces status effects by 25%.","effects":["Ability Passive","Affects Self"],"notes":["Does not block spells cast by allies.","Does not block Ion Shell, Toss, and Snowball.","Does not block Urn of Shadows, Spirit Vessel, Medallion of Courage, and Solar Crest.","For a list of blocked spells, see Spell Block.","Besides this, Roshan additionally is untargetable by certain spells. A list of spells can be found below."],"mana":"0","elements":["Not disabled by Break.","Pierces spell immunity."],"cooldown":"15","name":"Spell Block","description":["Status Resistance Bonus: 25%"]},{"spell":"Roshan has a chance to stun on attack.","effects":["Ability Passive","Affects Enemies","Damage Physical"],"notes":["The proccing attack first applies the debuff, then its own damage.","The bonus damage is dealt in one instance together with the attack damage, and counts as attack damage as well. It can be lifestealed off of, but it is not considered by crit or cleave. It is also not affected by percentage-based attack damage bonuses or reductions, but can be reduced with flat reductions.","Adds an average of 7.5 damage to every attack.","Damages, but does not stun wards.","Fully affects buildings.","Bash uses pseudo-random distribution."],"mana":"0","elements":["Disabled by Break.","Pierces spell immunity."],"cooldown":"0","name":"Bash","description":["Proc Chance: 15%","Damage: 50","Stun Duration: 1.65"]},{"spell":"Roshan slams the ground, damaging and slowing all nearby enemies. Slam's damage will increase every minute.","effects":["Ability No Target","Affects Enemies","Damage Magical"],"notes":["Slam first applies the debuff, then the damage.","Roshan only casts Slam when there are 3 or more enemy units within the radius.","Damage increases by 10 every minute since the first creep spawn. The first increase happens just as the first wave spawns.","This is how much damage the Slam deals (before reductions) at certain game times: 10 Minutes: 170 damage 20 Minutes: 270 damage 30 Minutes: 370 damage 40 Minutes: 470 damage 50 Minutes: 570 damage 60 Minutes: 670 damage 80 Minutes: 870 damage 100 Minutes: 1070 damage"],"mana":"0","elements":["Does not pierce spell immunity."],"cooldown":"10","name":"Slam","description":["Cast Animation: 0.47+0.57","Effect Radius: 350","Base Damage: 70","Extra Damage per Minute: 10","Move Speed Slow: 50%","Attack Speed Slow: 50","Hero Duration: 2","Non-Hero Duration: 4"],"hot_key":"E","legacy_key":"E"},{"spell":"Roshan possesses numerous protective abilities, including 55% magic damage resistance, the ability to reduce damage from attacking illusions, and a scaling armor bonus that increases as time goes on.","effects":["Ability Passive","Affects Self"],"notes":["The first armor bonus is granted as the first creep wave spawns, and then every minute onward.","The armor is provided by a 1 radius aura. This means it can also affect other neutral creeps when close enough to Roshan.","The aura's buff lingers for 0.5 seconds.","The phased status is given to him as he spawns.","All other bonuses are granted every minute after the first creep wave spawns.","The bonuses persist through his death and keep on increasing while he is dead.","Illusions deal 80% less damage to Roshan with their attacks. Their spells deal full damage if they can cast.","The extra attack speed causes Roshan to attack exactly once per second."],"mana":"0","elements":["Not disabled by Break.","Pierces spell immunity."],"cooldown":"0","name":"Strength of the Immortal","description":["Interval in Minutes: 1","Armor Bonus per Interval: 0.325","Max Health Bonus per Interval: 115","Attack Damage Bonus per Interval: 4","Experience Bounty Growth per Interval: 20","Attack Speed Bonus: 100","Illusion Damage Reduction: 80%"]}],"trivia":["Roshan was named after Guinsoo's bowling ball.","According to the Are We Heroes Yet? comic, Roshan killed a Shopkeeper, thus claiming the Aegis of the Immortal, and being cursed to have his treasure stolen from him again and again.","Roshan in Farsi means \"Light\", \"On\" or \"Bright\", and is also a common Persian name.","League of Legends' Baron Nashor is conceptually based on Roshan. The word \"Nashor\" is an anagram of \"Roshan.\""],"desc":""}
+{
+  "abilities": [
+    {
+      "spell": "Roshan will block one targeted spell every 15 seconds. Also reduces status effects by 25%.",
+      "effects": [
+        "Ability Passive",
+        "Affects Self"
+      ],
+      "notes": [
+        "Does not block spells cast by allies.",
+        "Does not block Ion Shell, Toss, and Snowball.",
+        "Does not block Urn of Shadows, Spirit Vessel, Medallion of Courage, and Solar Crest.",
+        "For a list of blocked spells, see Spell Block.",
+        "Besides this, Roshan additionally is untargetable by certain spells. A list of spells can be found below."
+      ],
+      "mana": "0",
+      "elements": [
+        "Not disabled by Break.",
+        "Pierces spell immunity."
+      ],
+      "cooldown": "15",
+      "name": "Spell Block",
+      "description": [
+        "Status Resistance Bonus: 25%"
+      ]
+    },
+    {
+      "spell": "Roshan has a chance to stun on attack.",
+      "effects": [
+        "Ability Passive",
+        "Affects Enemies",
+        "Damage Physical"
+      ],
+      "notes": [
+        "The proccing attack first applies the debuff, then its own damage.",
+        "The bonus damage is dealt in one instance together with the attack damage, and counts as attack damage as well. It can be lifestealed off of, but it is not considered by crit or cleave. It is also not affected by percentage-based attack damage bonuses or reductions, but can be reduced with flat reductions.",
+        "Adds an average of 7.5 damage to every attack.",
+        "Damages, but does not stun wards.",
+        "Fully affects buildings.",
+        "Bash uses pseudo-random distribution."
+      ],
+      "mana": "0",
+      "elements": [
+        "Disabled by Break.",
+        "Pierces spell immunity."
+      ],
+      "cooldown": "0",
+      "name": "Bash",
+      "description": [
+        "Proc Chance: 15%",
+        "Damage: 50",
+        "Stun Duration: 1.65"
+      ]
+    },
+    {
+      "spell": "Roshan slams the ground, damaging and slowing all nearby enemies. Slam's damage will increase every minute.",
+      "effects": [
+        "Ability No Target",
+        "Affects Enemies",
+        "Damage Magical"
+      ],
+      "notes": [
+        "Slam first applies the debuff, then the damage.",
+        "Roshan only casts Slam when there are 3 or more enemy units within the radius.",
+        "Damage increases by 10 every minute since the first creep spawn. The first increase happens just as the first wave spawns.",
+        "This is how much damage the Slam deals (before reductions) at certain game times: 10 Minutes: 170 damage 20 Minutes: 270 damage 30 Minutes: 370 damage 40 Minutes: 470 damage 50 Minutes: 570 damage 60 Minutes: 670 damage 80 Minutes: 870 damage 100 Minutes: 1070 damage"
+      ],
+      "mana": "0",
+      "elements": [
+        "Does not pierce spell immunity."
+      ],
+      "cooldown": "10",
+      "name": "Slam",
+      "description": [
+        "Cast Animation: 0.47+0.57",
+        "Effect Radius: 350",
+        "Base Damage: 70",
+        "Extra Damage per Minute: 10",
+        "Move Speed Slow: 50%",
+        "Attack Speed Slow: 50",
+        "Hero Duration: 2",
+        "Non-Hero Duration: 4"
+      ],
+      "hot_key": "E",
+      "legacy_key": "E"
+    },
+    {
+      "spell": "Roshan possesses numerous protective abilities, including 55% magic damage resistance, the ability to reduce damage from attacking illusions, and a scaling armor bonus that increases as time goes on.",
+      "effects": [
+        "Ability Passive",
+        "Affects Self"
+      ],
+      "notes": [
+        "The first armor bonus is granted as the first creep wave spawns, and then every minute onward.",
+        "The armor is provided by a 1 radius aura. This means it can also affect other neutral creeps when close enough to Roshan.",
+        "The aura's buff lingers for 0.5 seconds.",
+        "The phased status is given to him as he spawns.",
+        "All other bonuses are granted every minute after the first creep wave spawns.",
+        "The bonuses persist through his death and keep on increasing while he is dead.",
+        "Illusions deal 80% less damage to Roshan with their attacks. Their spells deal full damage if they can cast.",
+        "The extra attack speed causes Roshan to attack exactly once per second."
+      ],
+      "mana": "0",
+      "elements": [
+        "Not disabled by Break.",
+        "Pierces spell immunity."
+      ],
+      "cooldown": "0",
+      "name": "Strength of the Immortal",
+      "description": [
+        "Interval in Minutes: 1",
+        "Armor Bonus per Interval: 0.325",
+        "Max Health Bonus per Interval: 115",
+        "Attack Damage Bonus per Interval: 4",
+        "Experience Bounty Growth per Interval: 20",
+        "Attack Speed Bonus: 100",
+        "Illusion Damage Reduction: 80%"
+      ]
+    }
+  ],
+  "trivia": [
+    "Roshan was named after Guinsoo's bowling ball.",
+    "According to the Are We Heroes Yet? comic, Roshan killed a Shopkeeper, thus claiming the Aegis of the Immortal, and being cursed to have his treasure stolen from him again and again.",
+    "Roshan in Farsi means \"Light\", \"On\" or \"Bright\", and is also a common Persian name.",
+    "League of Legends' Baron Nashor is conceptually based on Roshan. The word \"Nashor\" is an anagram of \"Roshan.\""
+  ],
+  "desc": ""
+}

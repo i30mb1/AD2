@@ -1,1 +1,166 @@
-{"abilities":[{"spell":"Launches a cask of paralyzing powder that ricochets between enemy units, stunning and damaging those it hits.","effects":["Ability Target Unit","Affects Enemies","Damage Magical"],"notes":["The cask travels at a speed of 1000.","The projectile bounces in 0.3 second intervals.","Can bounce on the same unit multiple times, but only when another target was hit between the bounces.","Cannot bounce on invisible, invulnerable or hidden units, but can bounce on units in the Fog of War.","Can deal up to 150\/300\/500\/750 ( 225\/400\/625\/900) (100\/150\/200\/250 ( 150\/200\/250\/300) to heroes) damage to a single unit (before reductions).","All bounces together can deal up to 225\/500\/875\/1350 ( 375\/700\/1125\/1650) (150\/250\/350\/450 ( 250\/350\/450\/550) to heroes) damage (before reductions).","The cask first applies the debuff, then the damage.","Illusions are treated as creeps, while Roshan and creep-heroes are treated as heroes.","Multiple casks from the same hero both reset and share the remaining number of bounces between all instances."],"mana":"110\/120\/130\/140","elements":["Cannot be disjointed.","Partially blocked by Linken's Sphere.","Partially pierces spell immunity."],"cooldown":"20\/18\/16\/14","name":"Paralyzing Cask","description":["Cast Animation: 0.35+0.37","Cast Range: 700","Bounce Distance: 575","Number of Bounces: 2\/4\/6\/8 ( 4\/6\/8\/10)","Hero Damage: 50","Creep Damage: 75\/100\/125\/150","Hero Stun Duration: 1","Creep Stun Duration: 5"],"hot_key":"Q","legacy_key":"C"},{"spell":"Witch Doctor focuses his magic to heal nearby allied units.","effects":["Ability Toggle \/ Aura","Affects Allies"],"notes":["Voodoo Restoration does not interrupt channeling spells upon toggling.","Disabling Witch Doctor does not turn Voodoo Restoration off. However, he cannot turn it off himself while disabled either.","Heals for 5.28\/7.92\/10.56\/13.2 ( +0.495% of max health) health and costs 2.64\/3.96\/5.28\/6.6 mana in 0.33 second intervals, starting 0.33 seconds after toggled on.","The heal is provided by an aura. The mana cost is also depending on the aura. The buff lingers for 0.5 seconds. This means when toggled off, the spell still heals and drains mana for 0.5 seconds before stopping. If Witch Doctor does not have enough mana to support another heal instance, the spell toggles itself off. However, the lingering buff continues healing, despite the lack of mana, giving up to 2 possible heal instances for free."],"mana":"35\/40\/45\/50","elements":["Does not proc any on-cast effects when cast.","Pierces spell immunity."],"cooldown":"0","name":"Voodoo Restoration","description":["Cast Animation: 0+0","Heal Radius: 500","Mana Cost per Second: 8\/12\/16\/20","Base Heal per Second: 16\/24\/32\/40","Max Health as Heal per Second: 0% ( 1.5%)","Aura Linger Duration: 0.5"],"hot_key":"W","legacy_key":"V"},{"spell":"Curses all enemy Heroes in a small area, causing them to take a set amount of damage each second, as well as bursts of damage every 4 seconds based on how much health they have lost since the curse began.","effects":["Ability Target Area","Affects Enemy Heroes","Damage Magical"],"notes":["Checks the affected units' current health 4 ( 5) times, once as the curse is applied, and then every 4 seconds for the duration.","The burst damage is entirely based on the difference between the hero's current health and its health as the curse got applied. This means the bigger the difference of current health and health upon receiving the debuff gets, the more damage the bursts do. Vice versa, the lower the difference gets, the lower is the damage of the bursts, so getting healed during it reduces its damage. It also means it does not matter how affected units lose health, as it directly compares its health values, not damage values. This is how much of the lost health is re-dealt as damage by the curse, depending on when the health was lost during the curse on each level (before reductions): 0\u20133.9 Seconds: 48%\/72%\/97%\/121% ( 64%\/97%\/129%\/161%) 3.9\u20137.9 Seconds: 32%\/48%\/64%\/80% ( 48%\/72%\/97%\/121%) 7.9\u201311.9 Seconds: 16%\/24%\/32%\/40% ( 32%\/48%\/64%\/80%) ( 11.9-15.9 Seconds: 16%\/24%\/32%\/40%)","Deals its own damage in 1 second intervals, starting 1 second after the debuff is applied, resulting in 12 ( 16) damage instances.","Together with the bursts, it deals a total of 15 ( 20) damage instances.","The bursts happen 0.1 seconds before each 4th damage tick, so the bursts happen after the 3rd, 7th, and 11th ( 15th) damage tick.","With no other sources of health loss or heals, Maledict can deal up to 109.9\/249.6\/423.1\/634.8 ( 137.9\/305.6\/507.1\/746.8) damage to a unit (before reductions).","The debuff can be placed on illusions and creep-heroes.","Does not affect invulnerable and hidden units. Affects invisible units."],"mana":"105\/110\/115\/120","elements":["Does not pierce spell immunity."],"cooldown":"50\/40\/30\/20","name":"Maledict","description":["Cast Animation: 0.35+0","Cast Range: 575","Radius: 180","Damage per Second: 7\/14\/21\/28","Lost Health as Burst Damage: 16%\/24%\/32%\/40%","Burst Damage Interval: 4","Curse Duration: 12 ( 16)"],"hot_key":"E","legacy_key":"E"},{"spell":"Summons a deadly ward to attack enemy heroes within 700 range. Lasts a maximum of 8 seconds.","effects":["Ability Target Point \/ Channeled","Affects Enemy Heroes"],"notes":["The Death Ward automatically attacks enemy heroes within its attack range, using default auto-attack rules. Upon created, the ward attacks the closest enemy hero to it. After that, it follows default auto-attack rules. It is possible to manually give the ward an attack target by just right-clicking an enemy hero in range. Giving an attack order while having Witch Doctor and the ward selected, does not cause the channeling to be canceled. It is also possible to stop the ward from attacking by ordering it to stop (only works when the auto-attack option is turned off).","Can only attack or bounce to heroes (including Meepo clones and Tempest Doubles) and illusions.","The damage source is the ward itself, meaning certain on-damage effects react on the ward rather than on Witch Doctor (e.g. Blade Mail).","The primary attack can be disjointed and can miss, doing so prevents the projectile from bouncing. Cannot miss when upgraded.","However, after having bounced at least once, it can no longer miss, but can still be disjointed. When disjointed, it does continue to bounce and can even bounce back to the disjointing hero.","Does not bounce on invisible units or units in the Fog of War. One projectile can never hit the same unit twice.","With its 0.22 second attack rate, it can attack up to 36 times. With the bounces added by Aghanim's Scepter, it can deal 180 damage instances.","With the current attack rate and damage, it can deal up to 340.9\/568.2\/795.5 ( 681.8\/909.1\/1136.4) damage per second to a single hero.","Can deal up to 2700\/4500\/6300 ( 5400\/7200\/9000) damage to a single hero (before reductions).","When all attacks and bounces hit, it can deal up to 2700\/4500\/6300 ( 13500\/22500\/31500) damage (before reductions). With the damage upgrading talent, it can deal up to 5400\/7200\/9000 ( 27000\/36000\/45000) damage (before reductions).","Death Ward's attack damage is not reduced by Damage Block.","Provides 1200\/800 range ground vision for 5 seconds at its location after the channeling stops."],"mana":"200","elements":["Pierces spell immunity."],"cooldown":"80","name":"Death Ward","description":["Cast Animation: 0.35+0","Cast Range: 600","Max Channel Time: 8","Bounce Distance: 0 ( 650)","Number of Bounces: 0 ( 4)"],"hot_key":"R","legacy_key":"D"}],"bio":"A wiry silhouette hitches forward\u2014uneven of feature and limb, bizarre of gait, relentlessly criss-crossing the battlefield in search of that vital weak point where his talents can do most good, and most harm. Whether broken or mismade it is not clear, but still, none can doubt the power carried in his twisted physique. A long staff thumps the earth as the Witch Doctor advances, deploying a terrifying arsenal of fetishes, hexes and spells. It is a body of magical knowledge learned over several lifetimes in the island highlands of Prefectura, now wielded with precise accuracy against his enemies. Witch Doctor is your best friend, or your worst enemy--healing allies and laying waste to all who oppose him.","talentsTips":["The armor talent does not benefit illusions.","This attack damage talent is added as raw attack damage, so it does not benefit illusions, and is not affected by most percentage-based damage increasing or reducing effects.","Gold granted from the talent is unreliable gold."],"trivia":["Witch Doctor is sometimes called \"The Walking Fountain\", referring to his support abilities Voodoo Restoration and Death Ward.","Witch Doctor's last hit response \"Pills here!\" is a reference to Left 4 Dead, another title from Valve, where the players can notify the other survivors that they found pills. The survivors would say \"Pills here\" upon finding some.","Witch Doctor's original name in DotA was Vol'jin, a reference to the character from the Warcraft universe. Vol'Jin is the warchief of the playable race, the Trolls.","Witch Doctor's fun name in DotA was Moose, taken from the player DL.Moose who played the Witch Doctor.","His dying line \"Bad medicine..\" is likely a reference to Bon Jovi's popular old classic Bad Medicine.","The line \"Ask not for whom the spell tolls.\" is a reference to John Donne's poem \"Meditation XVII\". It could also be a reference to the thrash metal Group Metallica, with their song For Whom the Bell Tolls","Witch Doctor's name, Zharvakko, may be a reference to the popular novel and film Doctor Zhivago.."],"talents":["+75 Death Ward Damage:+1.5% Max Health Voodoo Restoration","+1 Maledict Tick:+125 Death Ward Attack Range","+120 Gold\/Min:+2 Cask Bounces","+5 Armor:+75 Damage"],"desc":"Zharvakko, the Witch Doctor, is a ranged intelligence hero who can take on the role of a support or a ganker. A master of voodoo curses and healing arts, he possesses several positioning-dependent crowd control\/damage spells as well as a heal that scales well into the late game. Maledict is one of the most powerful damaging spells in the game, and is fittingly enough quite hard to hit properly - but when applied at the right time, Malediction can curse someone to suffer a slow, humiliating death as they limp back towards safety. Paralyzing Cask is a somewhat-unreliable stun that requires multiple enemies to bounce between to be effective, but can provide a barrage of stuns to the enemy team if they are grouped together. Death Ward has the potential to be one of the most damaging ultimates in the game as long as he is able to channel the spell uninterrupted."}
+{
+  "abilities": [
+    {
+      "spell": "Launches a cask of paralyzing powder that ricochets between enemy units, stunning and damaging those it hits.",
+      "effects": [
+        "Ability Target Unit",
+        "Affects Enemies",
+        "Damage Magical"
+      ],
+      "notes": [
+        "The cask travels at a speed of 1000.",
+        "The projectile bounces in 0.3 second intervals.",
+        "Can bounce on the same unit multiple times, but only when another target was hit between the bounces.",
+        "Cannot bounce on invisible, invulnerable or hidden units, but can bounce on units in the Fog of War.",
+        "Can deal up to 150\/300\/500\/750 ( 225\/400\/625\/900) (100\/150\/200\/250 ( 150\/200\/250\/300) to heroes) damage to a single unit (before reductions).",
+        "All bounces together can deal up to 225\/500\/875\/1350 ( 375\/700\/1125\/1650) (150\/250\/350\/450 ( 250\/350\/450\/550) to heroes) damage (before reductions).",
+        "The cask first applies the debuff, then the damage.",
+        "Illusions are treated as creeps, while Roshan and creep-heroes are treated as heroes.",
+        "Multiple casks from the same hero both reset and share the remaining number of bounces between all instances."
+      ],
+      "mana": "110\/120\/130\/140",
+      "elements": [
+        "Cannot be disjointed.",
+        "Partially blocked by Linken's Sphere.",
+        "Partially pierces spell immunity."
+      ],
+      "cooldown": "20\/18\/16\/14",
+      "name": "Paralyzing Cask",
+      "description": [
+        "Cast Animation: 0.35+0.37",
+        "Cast Range: 700",
+        "Bounce Distance: 575",
+        "Number of Bounces: 2\/4\/6\/8 ( 4\/6\/8\/10)",
+        "Hero Damage: 50",
+        "Creep Damage: 75\/100\/125\/150",
+        "Hero Stun Duration: 1",
+        "Creep Stun Duration: 5"
+      ],
+      "hot_key": "Q",
+      "legacy_key": "C"
+    },
+    {
+      "spell": "Witch Doctor focuses his magic to heal nearby allied units.",
+      "effects": [
+        "Ability Toggle \/ Aura",
+        "Affects Allies"
+      ],
+      "notes": [
+        "Voodoo Restoration does not interrupt channeling spells upon toggling.",
+        "Disabling Witch Doctor does not turn Voodoo Restoration off. However, he cannot turn it off himself while disabled either.",
+        "Heals for 5.28\/7.92\/10.56\/13.2 ( +0.495% of max health) health and costs 2.64\/3.96\/5.28\/6.6 mana in 0.33 second intervals, starting 0.33 seconds after toggled on.",
+        "The heal is provided by an aura. The mana cost is also depending on the aura. The buff lingers for 0.5 seconds. This means when toggled off, the spell still heals and drains mana for 0.5 seconds before stopping. If Witch Doctor does not have enough mana to support another heal instance, the spell toggles itself off. However, the lingering buff continues healing, despite the lack of mana, giving up to 2 possible heal instances for free."
+      ],
+      "mana": "35\/40\/45\/50",
+      "elements": [
+        "Does not proc any on-cast effects when cast.",
+        "Pierces spell immunity."
+      ],
+      "cooldown": "0",
+      "name": "Voodoo Restoration",
+      "description": [
+        "Cast Animation: 0+0",
+        "Heal Radius: 500",
+        "Mana Cost per Second: 8\/12\/16\/20",
+        "Base Heal per Second: 16\/24\/32\/40",
+        "Max Health as Heal per Second: 0% ( 1.5%)",
+        "Aura Linger Duration: 0.5"
+      ],
+      "hot_key": "W",
+      "legacy_key": "V"
+    },
+    {
+      "spell": "Curses all enemy Heroes in a small area, causing them to take a set amount of damage each second, as well as bursts of damage every 4 seconds based on how much health they have lost since the curse began.",
+      "effects": [
+        "Ability Target Area",
+        "Affects Enemy Heroes",
+        "Damage Magical"
+      ],
+      "notes": [
+        "Checks the affected units' current health 4 ( 5) times, once as the curse is applied, and then every 4 seconds for the duration.",
+        "The burst damage is entirely based on the difference between the hero's current health and its health as the curse got applied. This means the bigger the difference of current health and health upon receiving the debuff gets, the more damage the bursts do. Vice versa, the lower the difference gets, the lower is the damage of the bursts, so getting healed during it reduces its damage. It also means it does not matter how affected units lose health, as it directly compares its health values, not damage values. This is how much of the lost health is re-dealt as damage by the curse, depending on when the health was lost during the curse on each level (before reductions): 0\u20133.9 Seconds: 48%\/72%\/97%\/121% ( 64%\/97%\/129%\/161%) 3.9\u20137.9 Seconds: 32%\/48%\/64%\/80% ( 48%\/72%\/97%\/121%) 7.9\u201311.9 Seconds: 16%\/24%\/32%\/40% ( 32%\/48%\/64%\/80%) ( 11.9-15.9 Seconds: 16%\/24%\/32%\/40%)",
+        "Deals its own damage in 1 second intervals, starting 1 second after the debuff is applied, resulting in 12 ( 16) damage instances.",
+        "Together with the bursts, it deals a total of 15 ( 20) damage instances.",
+        "The bursts happen 0.1 seconds before each 4th damage tick, so the bursts happen after the 3rd, 7th, and 11th ( 15th) damage tick.",
+        "With no other sources of health loss or heals, Maledict can deal up to 109.9\/249.6\/423.1\/634.8 ( 137.9\/305.6\/507.1\/746.8) damage to a unit (before reductions).",
+        "The debuff can be placed on illusions and creep-heroes.",
+        "Does not affect invulnerable and hidden units. Affects invisible units."
+      ],
+      "mana": "105\/110\/115\/120",
+      "elements": [
+        "Does not pierce spell immunity."
+      ],
+      "cooldown": "50\/40\/30\/20",
+      "name": "Maledict",
+      "description": [
+        "Cast Animation: 0.35+0",
+        "Cast Range: 575",
+        "Radius: 180",
+        "Damage per Second: 7\/14\/21\/28",
+        "Lost Health as Burst Damage: 16%\/24%\/32%\/40%",
+        "Burst Damage Interval: 4",
+        "Curse Duration: 12 ( 16)"
+      ],
+      "hot_key": "E",
+      "legacy_key": "E"
+    },
+    {
+      "spell": "Summons a deadly ward to attack enemy heroes within 700 range. Lasts a maximum of 8 seconds.",
+      "effects": [
+        "Ability Target Point \/ Channeled",
+        "Affects Enemy Heroes"
+      ],
+      "notes": [
+        "The Death Ward automatically attacks enemy heroes within its attack range, using default auto-attack rules. Upon created, the ward attacks the closest enemy hero to it. After that, it follows default auto-attack rules. It is possible to manually give the ward an attack target by just right-clicking an enemy hero in range. Giving an attack order while having Witch Doctor and the ward selected, does not cause the channeling to be canceled. It is also possible to stop the ward from attacking by ordering it to stop (only works when the auto-attack option is turned off).",
+        "Can only attack or bounce to heroes (including Meepo clones and Tempest Doubles) and illusions.",
+        "The damage source is the ward itself, meaning certain on-damage effects react on the ward rather than on Witch Doctor (e.g. Blade Mail).",
+        "The primary attack can be disjointed and can miss, doing so prevents the projectile from bouncing. Cannot miss when upgraded.",
+        "However, after having bounced at least once, it can no longer miss, but can still be disjointed. When disjointed, it does continue to bounce and can even bounce back to the disjointing hero.",
+        "Does not bounce on invisible units or units in the Fog of War. One projectile can never hit the same unit twice.",
+        "With its 0.22 second attack rate, it can attack up to 36 times. With the bounces added by Aghanim's Scepter, it can deal 180 damage instances.",
+        "With the current attack rate and damage, it can deal up to 340.9\/568.2\/795.5 ( 681.8\/909.1\/1136.4) damage per second to a single hero.",
+        "Can deal up to 2700\/4500\/6300 ( 5400\/7200\/9000) damage to a single hero (before reductions).",
+        "When all attacks and bounces hit, it can deal up to 2700\/4500\/6300 ( 13500\/22500\/31500) damage (before reductions). With the damage upgrading talent, it can deal up to 5400\/7200\/9000 ( 27000\/36000\/45000) damage (before reductions).",
+        "Death Ward's attack damage is not reduced by Damage Block.",
+        "Provides 1200\/800 range ground vision for 5 seconds at its location after the channeling stops."
+      ],
+      "mana": "200",
+      "elements": [
+        "Pierces spell immunity."
+      ],
+      "cooldown": "80",
+      "name": "Death Ward",
+      "description": [
+        "Cast Animation: 0.35+0",
+        "Cast Range: 600",
+        "Max Channel Time: 8",
+        "Bounce Distance: 0 ( 650)",
+        "Number of Bounces: 0 ( 4)"
+      ],
+      "hot_key": "R",
+      "legacy_key": "D"
+    }
+  ],
+  "bio": "A wiry silhouette hitches forward\u2014uneven of feature and limb, bizarre of gait, relentlessly criss-crossing the battlefield in search of that vital weak point where his talents can do most good, and most harm. Whether broken or mismade it is not clear, but still, none can doubt the power carried in his twisted physique. A long staff thumps the earth as the Witch Doctor advances, deploying a terrifying arsenal of fetishes, hexes and spells. It is a body of magical knowledge learned over several lifetimes in the island highlands of Prefectura, now wielded with precise accuracy against his enemies. Witch Doctor is your best friend, or your worst enemy--healing allies and laying waste to all who oppose him.",
+  "talentsTips": [
+    "The armor talent does not benefit illusions.",
+    "This attack damage talent is added as raw attack damage, so it does not benefit illusions, and is not affected by most percentage-based damage increasing or reducing effects.",
+    "Gold granted from the talent is unreliable gold."
+  ],
+  "trivia": [
+    "Witch Doctor is sometimes called \"The Walking Fountain\", referring to his support abilities Voodoo Restoration and Death Ward.",
+    "Witch Doctor's last hit response \"Pills here!\" is a reference to Left 4 Dead, another title from Valve, where the players can notify the other survivors that they found pills. The survivors would say \"Pills here\" upon finding some.",
+    "Witch Doctor's original name in DotA was Vol'jin, a reference to the character from the Warcraft universe. Vol'Jin is the warchief of the playable race, the Trolls.",
+    "Witch Doctor's fun name in DotA was Moose, taken from the player DL.Moose who played the Witch Doctor.",
+    "His dying line \"Bad medicine..\" is likely a reference to Bon Jovi's popular old classic Bad Medicine.",
+    "The line \"Ask not for whom the spell tolls.\" is a reference to John Donne's poem \"Meditation XVII\". It could also be a reference to the thrash metal Group Metallica, with their song For Whom the Bell Tolls",
+    "Witch Doctor's name, Zharvakko, may be a reference to the popular novel and film Doctor Zhivago.."
+  ],
+  "talents": [
+    "+75 Death Ward Damage:+1.5% Max Health Voodoo Restoration",
+    "+1 Maledict Tick:+125 Death Ward Attack Range",
+    "+120 Gold\/Min:+2 Cask Bounces",
+    "+5 Armor:+75 Damage"
+  ],
+  "desc": "Zharvakko, the Witch Doctor, is a ranged intelligence hero who can take on the role of a support or a ganker. A master of voodoo curses and healing arts, he possesses several positioning-dependent crowd control\/damage spells as well as a heal that scales well into the late game. Maledict is one of the most powerful damaging spells in the game, and is fittingly enough quite hard to hit properly - but when applied at the right time, Malediction can curse someone to suffer a slow, humiliating death as they limp back towards safety. Paralyzing Cask is a somewhat-unreliable stun that requires multiple enemies to bounce between to be effective, but can provide a barrage of stuns to the enemy team if they are grouped together. Death Ward has the potential to be one of the most damaging ultimates in the game as long as he is able to channel the spell uninterrupted."
+}

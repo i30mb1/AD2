@@ -1,1 +1,147 @@
-{"abilities":[{"spell":"Sven unleashes his magical gauntlet that deals damage and stuns enemy units.","effects":["Ability Target Unit","Affects Enemies","Damage Magical"],"notes":["The targeting reticule must be centered over an enemy unit.","Storm Hammer travels at a speed of 1000.","Turning invulnerable or hidden does not prevent it from affecting the area around the target.","Storm Hammer first applies the damage, then the debuff.","The projectile has 225 radius flying vision. This vision does not last.","Sven's sword emits some particles during the cast time, visible to everyone.","If the talent is chosen, applies a basic dispel on all hit enemies."],"mana":"110\/120\/130\/140","elements":["Can be disjointed.","Partially blocked by Linken's Sphere.","Partially pierces spell immunity."],"cooldown":"13 ( 7)","name":"Storm Hammer","description":["Cast Animation: 0.3+0","Cast Range: 600","Effect Radius: 255","Damage: 100\/175\/250\/325","Stun Duration: 1.7\/1.8\/1.9\/2 ( 2.95\/3.05\/3.15\/3.25)"],"hot_key":"Q","legacy_key":"T"},{"spell":"Sven strikes with great force, cleaving all nearby enemy units with his attack.","effects":["Ability Passive","Affects Enemies","Damage Physical"],"notes":["Cleave damage cannot be amplified with spell damage amplification and cannot spell lifesteal.","Cleave damage is reduced by Damage Block.","The complete area is shaped like an isosceles trapezoid in front of Sven.","Fully stacks with other sources of cleaves. Each source of cleave works completely independent.","Does not cleave upon attacking wards, buildings or allied units. Wards and buildings are unaffected by cleave.","Despite the visual effect, cleave damage is applied instantly in the whole area."],"mana":"0","elements":["Cannot be used by illusions.","Disabled by Break.","Pierces spell immunity."],"cooldown":"0","name":"Great Cleave","description":["Starting Radius: 150","Distance: 650","End Radius: 360","Cleave Damage: 45%\/60%\/75%\/90%"],"hot_key":"W","legacy_key":"C"},{"spell":"Sven's Warcry heartens his allied heroes for battle, increasing their movement speed and provides them with an attack damage shield. Buff ends if the shield is consumed. Shield has 25% more health on your hero.","effects":["Ability No Target","Affects Allies"],"notes":["Interrupts Sven's channeling spells upon cast.","Warcry fully negates attack damage (after most reductions), causing several on-damage effects to not trigger. Only works against attack damage, regardless of damage type. This means it does block magical attack damage as well, but not physical spell damage. Blocks damage before it gets reduced\/blocked by Aphotic Shield, Living Armor, Ghostship, and Borrowed Time Aura.","Only affects allied heroes, including clones, illusions and creep-heroes."],"mana":"40","elements":["Pierces spell immunity."],"cooldown":"36\/32\/28\/24","name":"Warcry","description":["Cast Animation: 0+0","Effect Radius: 700","Movement Speed Bonus: 8%\/12%\/16%\/20%","Shield Capacity: 110\/220\/330\/440","Caster Shield Health Bonus: 25%","Duration: 10"],"hot_key":"E","legacy_key":"W"},{"spell":"Sven channels his rogue strength, granting bonus damage for 25 seconds.","effects":["Ability No Target ( Aura)","Affects Self ( Allied Heroes)"],"notes":["Only increases base damage and that given by the primary attribute of Sven. Raw bonus damage is not increased.","Checks Sven's main attack damage periodically and adapts the attack damage bonus instantly.","The strength bonus effectively grants Sven 225\/450\/675 health, 1.25\/2.5\/3.75 health regen, 1%\/2%\/3% magic resistance, and 10\/20\/30 attack damage. The talent increases these to 1125\/1350\/1575 health, 6.25\/7.5\/8.75 health regen, 5%\/6%\/7% magic resistance, and 50\/60\/70 attack damage. The damage from the strength gets further increased to 18\/44\/78 ( 90\/132\/182) by the God's Strength damage bonus, since it is attributes-based damage.","The effect added by Aghanim's Scepter is an aura, which is only active while God's Strength is active. The aura places the Gods Strength Child buff on allied heroes, which lingers for 0.5 seconds. The bonus attack damage is based on the main attack damage of the affected allies, and not on Sven's own attack damage. Just like for Sven, the affected allies' current main attack damage is periodically checked, and the bonuses adapted instantly. The aura treats creep-heroes as heroes, thus it fully affects them."],"mana":"100\/150\/200","elements":["Cannot be used by illusions.","Pierces spell immunity."],"cooldown":"80","name":"God's Strength","description":["Cast Animation: 0.3+0","Allies Bonus Radius: 0 ( 1200)","Self Attack Damage Bonus: 80%\/120%\/160%","Self Strength Bonus: 10\/20\/30 ( 50\/60\/70)","Allies Attack Damage Bonus: 0 ( 75%\/100%\/125%)","Aura Linger Duration: 0.5","Duration: 25"],"hot_key":"R","legacy_key":"R"}],"bio":"Sven is the bastard son of a Vigil Knight, born of a Pallid Meranth, raised in the Shadeshore Ruins. With his father executed for violating the Vigil Codex, and his mother shunned by her wild race, Sven believes that honor is to be found in no social order, but only in himself. After tending his mother through a lingering death, he offered himself as a novice to the Vigil Knights, never revealing his identity. For thirteen years he studied in his father's school, mastering the rigid code that declared his existence an abomination. Then, on the day that should have been his In-Swearing, he seized the Outcast Blade, shattered the Sacred Helm, and burned the Codex in the Vigil's Holy Flame. He strode from Vigil Keep, forever solitary, following his private code to the last strict rune. Still a knight, yes...but a Rogue Knight. He answers only to himself.","talentsTips":["The strength talent effectively grants Sven 180 health, 1 health regen, 0.8% magic resistance and 8 attack damage.","The lifesteal talent stacks additively with other sources of lifesteal."],"trivia":["Sven is named after Danish bodybuilder and actor Sven-Ole Thorsen. In earlier versions of DotA, Sven had the fun name \"Arnold Schwarzenegger\".","The phrases \"Play Twas only a flesh wound\" and \"Play It was but a scratch\" are references to the Black Knight from Monty Python and the Holy Grail.","The phrases \"Play Blame the host\" and \"Play Bad host\" are references to the original Warcraft III DotA gameplay when game stability depended on the quality of internet connection on the host player.","Storm Hammer was named Storm Bolt in the early beta phases and was renamed into Storm Hammer at one point. It is also its original name in DotA1 and reflected in one of Sven's cast responses in Dota 2, where he's referring to it as \"Storm Bolt\"."],"talents":["+1.25s Storm Hammer Stun Duration:+40 STR God's Strength","-6s Storm Hammer Cooldown:25% Lifesteal","Storm Hammer Dispels Enemies:+30 Movement Speed","+3 Mana Regen:+8 Strength"],"desc":"Sven, the Rogue Knight, is a versatile melee strength hero with superior physical power coupled with powerful utility abilities. He can fulfill various roles, but is often played as a semi-carry due to his high utility even without items. He possesses a versatile arsenal, from Warcry, which grants armor that can be used for escaping as well as pushing, to the throwable Storm Hammer that stuns enemies around the targeted unit. With enough items, Sven has the potential to be a strong late-game carry due to his ultimate, which increases his damage, making him hit up to three times as hard, which can then be used in conjunction with his Great Cleave to secure multiple kills with just a few swings of his sword. This immense power granted to him solely by his ultimate makes him one of strongest late-game carries in the game, and arguably the strongest semi-carry of all, as his killing presence remains even if he decides to build more supportive and tanky utility items. A truly frightening enemy to go up against if farmed, strong and versatile, Sven is a solid addition to almost every team composition."}
+{
+  "abilities": [
+    {
+      "spell": "Sven unleashes his magical gauntlet that deals damage and stuns enemy units.",
+      "effects": [
+        "Ability Target Unit",
+        "Affects Enemies",
+        "Damage Magical"
+      ],
+      "notes": [
+        "The targeting reticule must be centered over an enemy unit.",
+        "Storm Hammer travels at a speed of 1000.",
+        "Turning invulnerable or hidden does not prevent it from affecting the area around the target.",
+        "Storm Hammer first applies the damage, then the debuff.",
+        "The projectile has 225 radius flying vision. This vision does not last.",
+        "Sven's sword emits some particles during the cast time, visible to everyone.",
+        "If the talent is chosen, applies a basic dispel on all hit enemies."
+      ],
+      "mana": "110\/120\/130\/140",
+      "elements": [
+        "Can be disjointed.",
+        "Partially blocked by Linken's Sphere.",
+        "Partially pierces spell immunity."
+      ],
+      "cooldown": "13 ( 7)",
+      "name": "Storm Hammer",
+      "description": [
+        "Cast Animation: 0.3+0",
+        "Cast Range: 600",
+        "Effect Radius: 255",
+        "Damage: 100\/175\/250\/325",
+        "Stun Duration: 1.7\/1.8\/1.9\/2 ( 2.95\/3.05\/3.15\/3.25)"
+      ],
+      "hot_key": "Q",
+      "legacy_key": "T"
+    },
+    {
+      "spell": "Sven strikes with great force, cleaving all nearby enemy units with his attack.",
+      "effects": [
+        "Ability Passive",
+        "Affects Enemies",
+        "Damage Physical"
+      ],
+      "notes": [
+        "Cleave damage cannot be amplified with spell damage amplification and cannot spell lifesteal.",
+        "Cleave damage is reduced by Damage Block.",
+        "The complete area is shaped like an isosceles trapezoid in front of Sven.",
+        "Fully stacks with other sources of cleaves. Each source of cleave works completely independent.",
+        "Does not cleave upon attacking wards, buildings or allied units. Wards and buildings are unaffected by cleave.",
+        "Despite the visual effect, cleave damage is applied instantly in the whole area."
+      ],
+      "mana": "0",
+      "elements": [
+        "Cannot be used by illusions.",
+        "Disabled by Break.",
+        "Pierces spell immunity."
+      ],
+      "cooldown": "0",
+      "name": "Great Cleave",
+      "description": [
+        "Starting Radius: 150",
+        "Distance: 650",
+        "End Radius: 360",
+        "Cleave Damage: 45%\/60%\/75%\/90%"
+      ],
+      "hot_key": "W",
+      "legacy_key": "C"
+    },
+    {
+      "spell": "Sven's Warcry heartens his allied heroes for battle, increasing their movement speed and provides them with an attack damage shield. Buff ends if the shield is consumed. Shield has 25% more health on your hero.",
+      "effects": [
+        "Ability No Target",
+        "Affects Allies"
+      ],
+      "notes": [
+        "Interrupts Sven's channeling spells upon cast.",
+        "Warcry fully negates attack damage (after most reductions), causing several on-damage effects to not trigger. Only works against attack damage, regardless of damage type. This means it does block magical attack damage as well, but not physical spell damage. Blocks damage before it gets reduced\/blocked by Aphotic Shield, Living Armor, Ghostship, and Borrowed Time Aura.",
+        "Only affects allied heroes, including clones, illusions and creep-heroes."
+      ],
+      "mana": "40",
+      "elements": [
+        "Pierces spell immunity."
+      ],
+      "cooldown": "36\/32\/28\/24",
+      "name": "Warcry",
+      "description": [
+        "Cast Animation: 0+0",
+        "Effect Radius: 700",
+        "Movement Speed Bonus: 8%\/12%\/16%\/20%",
+        "Shield Capacity: 110\/220\/330\/440",
+        "Caster Shield Health Bonus: 25%",
+        "Duration: 10"
+      ],
+      "hot_key": "E",
+      "legacy_key": "W"
+    },
+    {
+      "spell": "Sven channels his rogue strength, granting bonus damage for 25 seconds.",
+      "effects": [
+        "Ability No Target ( Aura)",
+        "Affects Self ( Allied Heroes)"
+      ],
+      "notes": [
+        "Only increases base damage and that given by the primary attribute of Sven. Raw bonus damage is not increased.",
+        "Checks Sven's main attack damage periodically and adapts the attack damage bonus instantly.",
+        "The strength bonus effectively grants Sven 225\/450\/675 health, 1.25\/2.5\/3.75 health regen, 1%\/2%\/3% magic resistance, and 10\/20\/30 attack damage. The talent increases these to 1125\/1350\/1575 health, 6.25\/7.5\/8.75 health regen, 5%\/6%\/7% magic resistance, and 50\/60\/70 attack damage. The damage from the strength gets further increased to 18\/44\/78 ( 90\/132\/182) by the God's Strength damage bonus, since it is attributes-based damage.",
+        "The effect added by Aghanim's Scepter is an aura, which is only active while God's Strength is active. The aura places the Gods Strength Child buff on allied heroes, which lingers for 0.5 seconds. The bonus attack damage is based on the main attack damage of the affected allies, and not on Sven's own attack damage. Just like for Sven, the affected allies' current main attack damage is periodically checked, and the bonuses adapted instantly. The aura treats creep-heroes as heroes, thus it fully affects them."
+      ],
+      "mana": "100\/150\/200",
+      "elements": [
+        "Cannot be used by illusions.",
+        "Pierces spell immunity."
+      ],
+      "cooldown": "80",
+      "name": "God's Strength",
+      "description": [
+        "Cast Animation: 0.3+0",
+        "Allies Bonus Radius: 0 ( 1200)",
+        "Self Attack Damage Bonus: 80%\/120%\/160%",
+        "Self Strength Bonus: 10\/20\/30 ( 50\/60\/70)",
+        "Allies Attack Damage Bonus: 0 ( 75%\/100%\/125%)",
+        "Aura Linger Duration: 0.5",
+        "Duration: 25"
+      ],
+      "hot_key": "R",
+      "legacy_key": "R"
+    }
+  ],
+  "bio": "Sven is the bastard son of a Vigil Knight, born of a Pallid Meranth, raised in the Shadeshore Ruins. With his father executed for violating the Vigil Codex, and his mother shunned by her wild race, Sven believes that honor is to be found in no social order, but only in himself. After tending his mother through a lingering death, he offered himself as a novice to the Vigil Knights, never revealing his identity. For thirteen years he studied in his father's school, mastering the rigid code that declared his existence an abomination. Then, on the day that should have been his In-Swearing, he seized the Outcast Blade, shattered the Sacred Helm, and burned the Codex in the Vigil's Holy Flame. He strode from Vigil Keep, forever solitary, following his private code to the last strict rune. Still a knight, yes...but a Rogue Knight. He answers only to himself.",
+  "talentsTips": [
+    "The strength talent effectively grants Sven 180 health, 1 health regen, 0.8% magic resistance and 8 attack damage.",
+    "The lifesteal talent stacks additively with other sources of lifesteal."
+  ],
+  "trivia": [
+    "Sven is named after Danish bodybuilder and actor Sven-Ole Thorsen. In earlier versions of DotA, Sven had the fun name \"Arnold Schwarzenegger\".",
+    "The phrases \"Play Twas only a flesh wound\" and \"Play It was but a scratch\" are references to the Black Knight from Monty Python and the Holy Grail.",
+    "The phrases \"Play Blame the host\" and \"Play Bad host\" are references to the original Warcraft III DotA gameplay when game stability depended on the quality of internet connection on the host player.",
+    "Storm Hammer was named Storm Bolt in the early beta phases and was renamed into Storm Hammer at one point. It is also its original name in DotA1 and reflected in one of Sven's cast responses in Dota 2, where he's referring to it as \"Storm Bolt\"."
+  ],
+  "talents": [
+    "+1.25s Storm Hammer Stun Duration:+40 STR God's Strength",
+    "-6s Storm Hammer Cooldown:25% Lifesteal",
+    "Storm Hammer Dispels Enemies:+30 Movement Speed",
+    "+3 Mana Regen:+8 Strength"
+  ],
+  "desc": "Sven, the Rogue Knight, is a versatile melee strength hero with superior physical power coupled with powerful utility abilities. He can fulfill various roles, but is often played as a semi-carry due to his high utility even without items. He possesses a versatile arsenal, from Warcry, which grants armor that can be used for escaping as well as pushing, to the throwable Storm Hammer that stuns enemies around the targeted unit. With enough items, Sven has the potential to be a strong late-game carry due to his ultimate, which increases his damage, making him hit up to three times as hard, which can then be used in conjunction with his Great Cleave to secure multiple kills with just a few swings of his sword. This immense power granted to him solely by his ultimate makes him one of strongest late-game carries in the game, and arguably the strongest semi-carry of all, as his killing presence remains even if he decides to build more supportive and tanky utility items. A truly frightening enemy to go up against if farmed, strong and versatile, Sven is a solid addition to almost every team composition."
+}

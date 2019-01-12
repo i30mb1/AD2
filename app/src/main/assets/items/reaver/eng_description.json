@@ -1,1 +1,25 @@
-{"cost":"3000","description":"A massive axe capable of tearing whole mountains down.","trivia":["According to the comic Are We Heroes Yet?, this item's full name is Reaver's Axe.[1]","In the original DotA, this item was named Messerschmidt's Reaver,[2] a reference to the unique items of the same name from Diablo I & II.","According to the Axe weapon, Reaver was forged in volcanic fire.[3]","Reaver is featured in the Dota 2 Gamescom Trailer as an item for \"strong\" heroes possessing \"the might to overpower any foe\".","Axe's cosmetic item, Reaver, and Centaur Warrunner's Black Reaver are based on Reaver and share names with it."],"further":["Heart_of_Tarrasque","Satanic"],"attrs":["Bonus +25 Strength","Disassemble? No","Alert allies? No"],"info":["For strength heroes, it grants 562.5 health, 3.13 health regen, 2.5% magic resistance and 25 attack damage.","For agility heroes, it grants 450 health, 2.5 health regen and 2% magic resistance.","For intelligence heroes, it grants 450 health, 2.5 health regen and 2% magic resistance."]}
+{
+  "cost": "3000",
+  "description": "A massive axe capable of tearing whole mountains down.",
+  "trivia": [
+    "According to the comic Are We Heroes Yet?, this item's full name is Reaver's Axe.[1]",
+    "In the original DotA, this item was named Messerschmidt's Reaver,[2] a reference to the unique items of the same name from Diablo I & II.",
+    "According to the Axe weapon, Reaver was forged in volcanic fire.[3]",
+    "Reaver is featured in the Dota 2 Gamescom Trailer as an item for \"strong\" heroes possessing \"the might to overpower any foe\".",
+    "Axe's cosmetic item, Reaver, and Centaur Warrunner's Black Reaver are based on Reaver and share names with it."
+  ],
+  "further": [
+    "Heart_of_Tarrasque",
+    "Satanic"
+  ],
+  "attrs": [
+    "Bonus +25 Strength",
+    "Disassemble? No",
+    "Alert allies? No"
+  ],
+  "info": [
+    "For strength heroes, it grants 562.5 health, 3.13 health regen, 2.5% magic resistance and 25 attack damage.",
+    "For agility heroes, it grants 450 health, 2.5 health regen and 2% magic resistance.",
+    "For intelligence heroes, it grants 450 health, 2.5 health regen and 2% magic resistance."
+  ]
+}

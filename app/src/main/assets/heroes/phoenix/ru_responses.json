@@ -1,1 +1,201 @@
-[{"name":"Появление","responses":[{"href":"https:\/\/d1u5p3l4wpay3k.cloudfront.net\/dota2_gamepedia\/1\/18\/Phoenix_bird_respawn.mp3","title":"phoenix_1"}]},{"name":"Насмешка","responses":[{"href":"https:\/\/d1u5p3l4wpay3k.cloudfront.net\/dota2_gamepedia\/8\/89\/Phoenix_bird_inthebag.mp3","title":"phoenix_3"}]},{"name":"Начало битвы","responses":[{"href":"https:\/\/d1u5p3l4wpay3k.cloudfront.net\/dota2_gamepedia\/d\/da\/Phoenix_bird_victory.mp3","title":"phoenix_5"}]},{"name":"Передвижение","responses":[{"href":"https:\/\/d1u5p3l4wpay3k.cloudfront.net\/dota2_gamepedia\/8\/89\/Phoenix_bird_moving01.mp3","title":"phoenix_7"},{"href":"https:\/\/d1u5p3l4wpay3k.cloudfront.net\/dota2_gamepedia\/d\/d4\/Phoenix_bird_moving02.mp3","title":"phoenix_8"}]},{"name":"Атака","responses":[{"href":"https:\/\/d1u5p3l4wpay3k.cloudfront.net\/dota2_gamepedia\/a\/a5\/Phoenix_bird_attack.mp3","title":"phoenix_10"}]},{"name":"Получение уровня","responses":[{"href":"https:\/\/d1u5p3l4wpay3k.cloudfront.net\/dota2_gamepedia\/8\/8d\/Phoenix_bird_level_up.mp3","title":"phoenix_12"}]},{"name":"Убийство врага","responses":[{"href":"https:\/\/d1u5p3l4wpay3k.cloudfront.net\/dota2_gamepedia\/4\/4d\/Phoenix_bird_kill.mp3","title":"phoenix_14"},{"icon":"alchemist+ancient_apparition+elder_titan+enigma+invoker+keeper_of_the_light+lina+skywrath_mage+terrorblade+underlord+","href":"https:\/\/d1u5p3l4wpay3k.cloudfront.net\/dota2_gamepedia\/3\/31\/Phoenix_bird_emote_bad.mp3","title":"phoenix_15"}]},{"name":"Добивание","responses":[{"href":"https:\/\/d1u5p3l4wpay3k.cloudfront.net\/dota2_gamepedia\/f\/f6\/Phoenix_bird_last_hit.mp3","title":"phoenix_17"}]},{"name":"Добивание союзного юнита","responses":[{"href":"https:\/\/d1u5p3l4wpay3k.cloudfront.net\/dota2_gamepedia\/c\/c4\/Phoenix_bird_denied.mp3","title":"phoenix_19"}]},{"name":"Получение предмета","responses":[{"href":"https:\/\/d1u5p3l4wpay3k.cloudfront.net\/dota2_gamepedia\/7\/79\/Phoenix_bird_rune.mp3","title":"phoenix_21"}]},{"name":"Смерть","responses":[{"href":"https:\/\/d1u5p3l4wpay3k.cloudfront.net\/dota2_gamepedia\/d\/d9\/Phoenix_bird_death_defeat.mp3","title":"phoenix_23"}]},{"name":"Возрождение","responses":[{"href":"https:\/\/d1u5p3l4wpay3k.cloudfront.net\/dota2_gamepedia\/1\/18\/Phoenix_bird_respawn.mp3","title":"phoenix_25"}]},{"name":"Активация рун","responses":[{"href":"https:\/\/d1u5p3l4wpay3k.cloudfront.net\/dota2_gamepedia\/7\/79\/Phoenix_bird_rune.mp3","title":"phoenix_27"},{"href":"https:\/\/d1u5p3l4wpay3k.cloudfront.net\/dota2_gamepedia\/7\/79\/Phoenix_bird_rune.mp3","title":"phoenix_28"}]},{"name":"Способность на перезарядке","responses":[{"href":"https:\/\/d1u5p3l4wpay3k.cloudfront.net\/dota2_gamepedia\/4\/49\/Phoenix_bird_no01.mp3","title":"phoenix_30"},{"href":"https:\/\/d1u5p3l4wpay3k.cloudfront.net\/dota2_gamepedia\/e\/e7\/Phoenix_bird_no02.mp3","title":"phoenix_31"},{"href":"https:\/\/d1u5p3l4wpay3k.cloudfront.net\/dota2_gamepedia\/b\/b4\/Phoenix_bird_no03.mp3","title":"phoenix_32"}]},{"name":"Нехватка маны","responses":[{"href":"https:\/\/d1u5p3l4wpay3k.cloudfront.net\/dota2_gamepedia\/4\/49\/Phoenix_bird_no01.mp3","title":"phoenix_34"},{"href":"https:\/\/d1u5p3l4wpay3k.cloudfront.net\/dota2_gamepedia\/e\/e7\/Phoenix_bird_no02.mp3","title":"phoenix_35"},{"href":"https:\/\/d1u5p3l4wpay3k.cloudfront.net\/dota2_gamepedia\/b\/b4\/Phoenix_bird_no03.mp3","title":"phoenix_36"}]},{"name":"Получение урона","responses":[{"href":"https:\/\/d1u5p3l4wpay3k.cloudfront.net\/dota2_gamepedia\/8\/8e\/Phoenix_bird_under_attack.mp3","title":"phoenix_38"}]},{"name":"Реплики в чате","responses":[{"href":"https:\/\/d1u5p3l4wpay3k.cloudfront.net\/dota2_gamepedia\/8\/8c\/Phoenix_bird_emote_good.mp3","title":"phoenix_40"},{"href":"https:\/\/d1u5p3l4wpay3k.cloudfront.net\/dota2_gamepedia\/5\/51\/Phoenix_bird_laugh.mp3","title":"phoenix_41"}]},{"name":"Окончание матча","responses":[{"href":"https:\/\/d1u5p3l4wpay3k.cloudfront.net\/dota2_gamepedia\/d\/da\/Phoenix_bird_victory.mp3","title":"phoenix_43"},{"href":"https:\/\/d1u5p3l4wpay3k.cloudfront.net\/dota2_gamepedia\/d\/d9\/Phoenix_bird_death_defeat.mp3","title":"phoenix_44"}]}]
+[
+  {
+    "name": "Появление",
+    "responses": [
+      {
+        "href": "https:\/\/d1u5p3l4wpay3k.cloudfront.net\/dota2_gamepedia\/1\/18\/Phoenix_bird_respawn.mp3",
+        "title": "phoenix_1"
+      }
+    ]
+  },
+  {
+    "name": "Насмешка",
+    "responses": [
+      {
+        "href": "https:\/\/d1u5p3l4wpay3k.cloudfront.net\/dota2_gamepedia\/8\/89\/Phoenix_bird_inthebag.mp3",
+        "title": "phoenix_3"
+      }
+    ]
+  },
+  {
+    "name": "Начало битвы",
+    "responses": [
+      {
+        "href": "https:\/\/d1u5p3l4wpay3k.cloudfront.net\/dota2_gamepedia\/d\/da\/Phoenix_bird_victory.mp3",
+        "title": "phoenix_5"
+      }
+    ]
+  },
+  {
+    "name": "Передвижение",
+    "responses": [
+      {
+        "href": "https:\/\/d1u5p3l4wpay3k.cloudfront.net\/dota2_gamepedia\/8\/89\/Phoenix_bird_moving01.mp3",
+        "title": "phoenix_7"
+      },
+      {
+        "href": "https:\/\/d1u5p3l4wpay3k.cloudfront.net\/dota2_gamepedia\/d\/d4\/Phoenix_bird_moving02.mp3",
+        "title": "phoenix_8"
+      }
+    ]
+  },
+  {
+    "name": "Атака",
+    "responses": [
+      {
+        "href": "https:\/\/d1u5p3l4wpay3k.cloudfront.net\/dota2_gamepedia\/a\/a5\/Phoenix_bird_attack.mp3",
+        "title": "phoenix_10"
+      }
+    ]
+  },
+  {
+    "name": "Получение уровня",
+    "responses": [
+      {
+        "href": "https:\/\/d1u5p3l4wpay3k.cloudfront.net\/dota2_gamepedia\/8\/8d\/Phoenix_bird_level_up.mp3",
+        "title": "phoenix_12"
+      }
+    ]
+  },
+  {
+    "name": "Убийство врага",
+    "responses": [
+      {
+        "href": "https:\/\/d1u5p3l4wpay3k.cloudfront.net\/dota2_gamepedia\/4\/4d\/Phoenix_bird_kill.mp3",
+        "title": "phoenix_14"
+      },
+      {
+        "icon": "alchemist+ancient_apparition+elder_titan+enigma+invoker+keeper_of_the_light+lina+skywrath_mage+terrorblade+underlord+",
+        "href": "https:\/\/d1u5p3l4wpay3k.cloudfront.net\/dota2_gamepedia\/3\/31\/Phoenix_bird_emote_bad.mp3",
+        "title": "phoenix_15"
+      }
+    ]
+  },
+  {
+    "name": "Добивание",
+    "responses": [
+      {
+        "href": "https:\/\/d1u5p3l4wpay3k.cloudfront.net\/dota2_gamepedia\/f\/f6\/Phoenix_bird_last_hit.mp3",
+        "title": "phoenix_17"
+      }
+    ]
+  },
+  {
+    "name": "Добивание союзного юнита",
+    "responses": [
+      {
+        "href": "https:\/\/d1u5p3l4wpay3k.cloudfront.net\/dota2_gamepedia\/c\/c4\/Phoenix_bird_denied.mp3",
+        "title": "phoenix_19"
+      }
+    ]
+  },
+  {
+    "name": "Получение предмета",
+    "responses": [
+      {
+        "href": "https:\/\/d1u5p3l4wpay3k.cloudfront.net\/dota2_gamepedia\/7\/79\/Phoenix_bird_rune.mp3",
+        "title": "phoenix_21"
+      }
+    ]
+  },
+  {
+    "name": "Смерть",
+    "responses": [
+      {
+        "href": "https:\/\/d1u5p3l4wpay3k.cloudfront.net\/dota2_gamepedia\/d\/d9\/Phoenix_bird_death_defeat.mp3",
+        "title": "phoenix_23"
+      }
+    ]
+  },
+  {
+    "name": "Возрождение",
+    "responses": [
+      {
+        "href": "https:\/\/d1u5p3l4wpay3k.cloudfront.net\/dota2_gamepedia\/1\/18\/Phoenix_bird_respawn.mp3",
+        "title": "phoenix_25"
+      }
+    ]
+  },
+  {
+    "name": "Активация рун",
+    "responses": [
+      {
+        "href": "https:\/\/d1u5p3l4wpay3k.cloudfront.net\/dota2_gamepedia\/7\/79\/Phoenix_bird_rune.mp3",
+        "title": "phoenix_27"
+      },
+      {
+        "href": "https:\/\/d1u5p3l4wpay3k.cloudfront.net\/dota2_gamepedia\/7\/79\/Phoenix_bird_rune.mp3",
+        "title": "phoenix_28"
+      }
+    ]
+  },
+  {
+    "name": "Способность на перезарядке",
+    "responses": [
+      {
+        "href": "https:\/\/d1u5p3l4wpay3k.cloudfront.net\/dota2_gamepedia\/4\/49\/Phoenix_bird_no01.mp3",
+        "title": "phoenix_30"
+      },
+      {
+        "href": "https:\/\/d1u5p3l4wpay3k.cloudfront.net\/dota2_gamepedia\/e\/e7\/Phoenix_bird_no02.mp3",
+        "title": "phoenix_31"
+      },
+      {
+        "href": "https:\/\/d1u5p3l4wpay3k.cloudfront.net\/dota2_gamepedia\/b\/b4\/Phoenix_bird_no03.mp3",
+        "title": "phoenix_32"
+      }
+    ]
+  },
+  {
+    "name": "Нехватка маны",
+    "responses": [
+      {
+        "href": "https:\/\/d1u5p3l4wpay3k.cloudfront.net\/dota2_gamepedia\/4\/49\/Phoenix_bird_no01.mp3",
+        "title": "phoenix_34"
+      },
+      {
+        "href": "https:\/\/d1u5p3l4wpay3k.cloudfront.net\/dota2_gamepedia\/e\/e7\/Phoenix_bird_no02.mp3",
+        "title": "phoenix_35"
+      },
+      {
+        "href": "https:\/\/d1u5p3l4wpay3k.cloudfront.net\/dota2_gamepedia\/b\/b4\/Phoenix_bird_no03.mp3",
+        "title": "phoenix_36"
+      }
+    ]
+  },
+  {
+    "name": "Получение урона",
+    "responses": [
+      {
+        "href": "https:\/\/d1u5p3l4wpay3k.cloudfront.net\/dota2_gamepedia\/8\/8e\/Phoenix_bird_under_attack.mp3",
+        "title": "phoenix_38"
+      }
+    ]
+  },
+  {
+    "name": "Реплики в чате",
+    "responses": [
+      {
+        "href": "https:\/\/d1u5p3l4wpay3k.cloudfront.net\/dota2_gamepedia\/8\/8c\/Phoenix_bird_emote_good.mp3",
+        "title": "phoenix_40"
+      },
+      {
+        "href": "https:\/\/d1u5p3l4wpay3k.cloudfront.net\/dota2_gamepedia\/5\/51\/Phoenix_bird_laugh.mp3",
+        "title": "phoenix_41"
+      }
+    ]
+  },
+  {
+    "name": "Окончание матча",
+    "responses": [
+      {
+        "href": "https:\/\/d1u5p3l4wpay3k.cloudfront.net\/dota2_gamepedia\/d\/da\/Phoenix_bird_victory.mp3",
+        "title": "phoenix_43"
+      },
+      {
+        "href": "https:\/\/d1u5p3l4wpay3k.cloudfront.net\/dota2_gamepedia\/d\/d9\/Phoenix_bird_death_defeat.mp3",
+        "title": "phoenix_44"
+      }
+    ]
+  }
+]

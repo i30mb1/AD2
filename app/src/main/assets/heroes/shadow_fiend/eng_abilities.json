@@ -1,1 +1,210 @@
-{"abilities":[{"spell":"Shadow Fiend razes the ground directly in front of him, dealing damage to enemy units in the area. Adds a stacking damage amplifier on the target that causes the enemy to take bonus Shadow Raze damage per stack.","effects":["Ability No Target","Affects Enemies","Damage Magical"],"notes":["The three Shadowraze spells are linked together and are always on the same level. Leveling one of them automatically levels the others as well.","Shadowraze (Near) blasts a 250 radius area 200 range in front of Nevermore upon cast. This means that it can hit units up to 50 range behind Shadow Fiend, and up to 450 range in front of him.","Places one debuff on the enemy. This debuff counts how many razes hit the target within its duration. Shadowraze first sets its damage based on current stacks, then applies the debuff\/increases the stack count, and then deals the damage. This means the stack added by the raze does not affect the raze's damage. A number on the icon shows how many times the debuff was refreshed, including the first cast. The debuff has no stack limit and can be increased infinitely.","Hitting all three razes consecutively can deal up to 420\/660\/900\/1140 ( 870\/1110\/1350\/1590) damage to a single unit (before reductions).","The Shadowraze Counter debuff placed on heroes is used to count successive Shadowraze hits. It lasts for 3 seconds. Although only the Demon Eater cosmetic item makes use of it, the counter is always placed."],"mana":"90","elements":["Does not pierce spell immunity."],"cooldown":"10 ( 6)","name":"Shadowraze (Near)","description":["Cast Animation: 0.55+0","Distance: 200","Radius: 250","Base Damage: 90\/160\/230\/300 ( 240\/310\/380\/450)","Damage Increase per Stack: 50\/60\/70\/80","Stack Duration: 8"],"hot_key":"Q","legacy_key":"Z"},{"spell":"Shadow Fiend razes the ground a short distance away from him, dealing damage to enemy units in the area. Adds a stacking damage amplifier on the target that causes the enemy to take bonus Shadow Raze damage per stack.","effects":["Ability No Target","Affects Enemies","Damage Magical"],"notes":["Shadowraze (Medium) blasts a 250 radius area 450 range in front of Nevermore upon cast. This means that it can hit units from 200 to 700 range in front of Shadow Fiend."],"mana":"90","elements":["Does not pierce spell immunity."],"cooldown":"10 ( 6)","name":"Shadowraze (Medium)","description":["Cast Animation: 0.55+0","Distance: 450","Radius: 250","Base Damage: 90\/160\/230\/300 ( 240\/310\/380\/450)","Damage Increase per Stack: 50\/60\/70\/80","Stack Duration: 8"],"hot_key":"W","legacy_key":"X"},{"spell":"Shadow Fiend razes the ground a longer distance away from him, dealing damage to enemy units in the area. Adds a stacking damage amplifier on the target that causes the enemy to take bonus Shadow Raze damage per stack.","effects":["Ability No Target","Affects Enemies","Damage Magical"],"notes":["Shadowraze (Far) blasts a 250 radius area 700 range in front of Nevermore upon cast. This means that it can hit units from 450 to 950 range in front of Shadow Fiend."],"mana":"90","elements":["Does not pierce spell immunity."],"cooldown":"10 ( 6)","name":"Shadowraze (Far)","description":["Cast Animation: 0.55+0","Distance: 700","Radius: 250","Base Damage: 90\/160\/230\/300 ( 240\/310\/380\/450)","Damage Increase per Stack: 50\/60\/70\/80","Stack Duration: 8"],"hot_key":"E","legacy_key":"C"},{"spell":"Shadow Fiend steals the soul from units he kills, gaining bonus damage. If the killed unit is a hero, he gains 12 souls. On death, he releases half of them from bondage.","effects":["Ability Passive","Affects Self"],"notes":["Can get souls from every unit, including wards and allies, excluding illusions, Tempest Doubles and buildings.","Despite the visual effects, Shadow Fiend instantly gains the soul and thus the damage of killed units.","The number of current souls is visible on the status buff icon.","If Shadow Fiend has an odd number of souls upon death, the number of lost souls is rounded down. This means that he never can lose all his souls. He still keeps 1 soul, even when dying while only having 1 soul.","The more souls Shadow Fiend has, the more red particles fly around his chest area.","The maximum possible amount of souls with each level of Necromastery provides 24\/40\/56\/72 ( 44\/60\/76\/92) bonus damage. With the respective talent skilled, it is increased up to 48\/80\/112\/144 ( 88\/120\/152\/184) bonus damage.","When dying while holding Aegis of the Immortal no souls are lost.","The extra souls from Aghanim's Scepter do affect the number of lines created by Requiem of Souls. It effectively increases the number of possible lines from 6\/10\/14\/18 to 11\/15\/19\/23. When dropping Aghanim's Scepter, Shadow Fiend keeps his souls even when having more than the default allowed amount. This means Requiem of Souls still releases more lines even when not holding the Scepter. However, the attack damage bonus adapts immediately and does not account the extra souls when not holding the Scepter."],"mana":"0","elements":["Partially usable by illusions.","Disabled by Break.","Pierces spell immunity."],"cooldown":"0","name":"Necromastery","description":["Max Souls: 12\/20\/28\/36 ( 22\/30\/38\/46)","Soul Gain per Hero Kill: 12","Soul Gain per Non-Hero Kill: 1","Attack Damage Bonus per Soul: 2 ( 4)","Soul Loss on Death: 50%"],"hot_key":"D","legacy_key":"N"},{"spell":"Shadow Fiend's presence reduces the armor of nearby enemies.","effects":["Ability Aura","Affects Enemies"],"notes":["The armor reduction is provided by an aura. Its debuff lingers for 0.5 seconds.","Does not affect enemies which have no vision over Shadow Fiend.","Affects buildings, if the talent for it is chosen."],"mana":"0","elements":["Can be used by illusions.","Disabled by Break.","Pierces spell immunity."],"cooldown":"0","name":"Presence of the Dark Lord","description":["Radius: 1200","Armor Reduction: 3\/4\/5\/6 ( 8\/9\/10\/11)","Aura Linger Duration: 0.5"],"hot_key":"F","legacy_key":"P"},{"spell":"Shadow Fiend gathers his captured souls to release them as lines of demonic energy. Units near Shadow Fiend when the souls are released can be damaged by several lines of energy. Any unit damaged by Requiem of Souls will have its movement speed and attack damage reduced. Lines of energy are created for every 2 souls captured through Necromastery. Requiem of Souls is automatically cast whenever Shadow Fiend dies, regardless of its cooldown.","effects":["Ability No Target","Affects Enemies ( Self)","Damage Magical"],"notes":["Shadow Fiend becomes phased while casting this ability.","The damage is entirely based on the amount of souls gathered with Necromastery. Each 2 souls create 1 damaging line. If an odd number of souls is gathered, it is rounded down to the next even number.","The damaging lines have the following mechanics: The area of every single damaging line is shaped like a cone. The distance between the damaging lines is always even. One line is always released towards east and the others adapt accordingly. The damaging lines travel at a speed of 700, taking 1.43 seconds to reach the max distance. Damaging lines can hit units up to 1425 range away (travel distance + end width). Each damaging line cannot hit the same unit more than once per cast ( upon expanding and returning respectively).","Reduces movement speed and attack damage of all enemy units hit by the damaging lines of Requiem of Souls.","Only reduces base damage and that given by the primary attribute of affected units. Raw bonus damage is not reduced.","The expanding lines can deal up to 1440\/2160\/2880 ( 1840\/2760\/3680) damage to a single unit (before reductions), if all lines hit.","The lines first apply the damage, then the debuff.","Upon death, Requiem of Souls is cast automatically and instantly, regardless of mana and cooldown. Shadow Fiend first loses 50% of his souls before this happens. So this passive requiem can only have 9 ( 11) lines at max. If Shadow Fiend had 1 soul left upon death, it still releases 1 line, despite requiring at least 2 souls when normally cast. When dying while holding Aegis of the Immortal no passive Requiem of Souls is released.","When having Aghanim's Scepter, after reaching their max distance, each line starts moving back to Shadow Fiend. Despite the visual effects, the lines do not \"respawn\" around Shadow Fiend. They start moving back exactly where they stopped. The lines return to Shadow Fiend's current location, not to the location he originally cast the spell from. The lines do not adapt to new locations if Shadow Fiend moves. Once they started to return, their path cannot be further altered. The max travel distance applies to the lines also upon returning, meaning they travel a total distance of 2000. The width of the lines is reversed upon returning: They start with maximum width and get thinner towards the end. Lines from the passive Requiem of Souls released on death do not return. The returning lines deal 40% damage. They hit all units regularly like the expanding lines and also apply the debuff.","The returning lines can deal up to 736\/1104\/1472 damage to a single unit (before reductions), if all lines hit. Together with the expanding lines, Requiem of Souls can deal up to 2576\/3864\/5152 damage to a single unit (before reductions).","The heal is only based on the damage dealt by the returning lines, not by the initial expanding lines. The heal is applied as soon as the lines stop moving. Only heals from damage dealt to heroes, including illusions. Always heals for 32\/48\/64 health per hit, regardless of how much damage the lines actually dealt."],"mana":"150\/175\/200","elements":["Not disabled by Break.","Does not pierce spell immunity."],"cooldown":"120\/110\/100 ( 72\/66\/60)","name":"Requiem of Souls","description":["Cast Animation: 1.67+0.77","Damage Lines Travel Distance: 1000","Damage Lines Starting Width: 125","Damage Lines End Width: 425","Necromastery Souls Required per Line: 2","Damage per Line on Release: 80\/120\/160","Damage per Line on Return: 0 ( 32\/48\/64)","Heal per Hit Hero on Return: 0 ( 32\/48\/64)","Move Speed Slow: 25%","Attack Damage Reduction: 50%","Debuff Duration: 5"],"hot_key":"R","legacy_key":"R"}],"bio":"It is said that Nevermore the Shadow Fiend has the soul of a poet, and in fact he has thousands of them. Over the ages he has claimed the souls of poets, priests, emperors, beggars, slaves, philosophers, criminals and (naturally) heroes; no sort of soul escapes him. What he does with them is unknown. No one has ever peered into the Abysm whence Nevermore reaches out like an eel from among astral rocks. Does he devour them one after another? Does he mount them along the halls of an eldritch temple, or pickle the souls in necromantic brine? Is he merely a puppet, pushed through the dimensional rift by a demonic puppeteer? Such is his evil, so intense his aura of darkness, that no rational mind may penetrate it. Of course, if you really want to know where the stolen souls go, there's one sure way to find out: Add your soul to his collection. Or just wait for Nevermore.","talentsTips":["The cooldown reduction talent stacks multiplicatively with Octarine Core and additively other sources of cooldown reduction."],"trivia":["Shadow Fiend's alternate\/fun name in DotA was \"YaphetS\", a tribute to a professional DotA player who skillfully used Nevermore.","The name \"Nevermore\" likely refers to the poem The Raven by Edgar Allen Poe. This is also referenced in his bio.","The voice response \"Never say Nevermore...\" is in reference to the James Bond movie \"Never say never again\".","Apart for popular demand by fans, Shadow Fiend's model rework may have also been done to adhere to certain countries' censorship laws, namely the Chinese client."],"talents":["40% Cooldown Reduction:-5 Presence Aura","+150 Shadowraze Damage:+2 Damage Per Soul","+30 Movement Speed:Presence Aura Affects Building","+20 Attack Speed:+8% Spell Amplification"],"desc":"Nevermore, the Shadow Fiend, is a ranged agility hero possessing abilities that inflict superb burst damage from varying distances. Whether near or far, Shadow Fiend is able to release incredible offensive power, both physical and magical. Shadow Fiend's true power comes from the souls he takes, making him more dangerous every time he kills. With enough souls, he can release all of the captured souls in a devastating burst, dealing more damage to enemies that are closer to him. Shadow Fiend is a carry who is powerful at all stages of the game, a trait most carries don't share. He can harass and conquer the early game, gank unsuspecting heroes during the mid-stages of the game, and has huge right-click potential in the late game thanks to his passives, although his active abilities scale off by the end-game."}
+{
+  "abilities": [
+    {
+      "spell": "Shadow Fiend razes the ground directly in front of him, dealing damage to enemy units in the area. Adds a stacking damage amplifier on the target that causes the enemy to take bonus Shadow Raze damage per stack.",
+      "effects": [
+        "Ability No Target",
+        "Affects Enemies",
+        "Damage Magical"
+      ],
+      "notes": [
+        "The three Shadowraze spells are linked together and are always on the same level. Leveling one of them automatically levels the others as well.",
+        "Shadowraze (Near) blasts a 250 radius area 200 range in front of Nevermore upon cast. This means that it can hit units up to 50 range behind Shadow Fiend, and up to 450 range in front of him.",
+        "Places one debuff on the enemy. This debuff counts how many razes hit the target within its duration. Shadowraze first sets its damage based on current stacks, then applies the debuff\/increases the stack count, and then deals the damage. This means the stack added by the raze does not affect the raze's damage. A number on the icon shows how many times the debuff was refreshed, including the first cast. The debuff has no stack limit and can be increased infinitely.",
+        "Hitting all three razes consecutively can deal up to 420\/660\/900\/1140 ( 870\/1110\/1350\/1590) damage to a single unit (before reductions).",
+        "The Shadowraze Counter debuff placed on heroes is used to count successive Shadowraze hits. It lasts for 3 seconds. Although only the Demon Eater cosmetic item makes use of it, the counter is always placed."
+      ],
+      "mana": "90",
+      "elements": [
+        "Does not pierce spell immunity."
+      ],
+      "cooldown": "10 ( 6)",
+      "name": "Shadowraze (Near)",
+      "description": [
+        "Cast Animation: 0.55+0",
+        "Distance: 200",
+        "Radius: 250",
+        "Base Damage: 90\/160\/230\/300 ( 240\/310\/380\/450)",
+        "Damage Increase per Stack: 50\/60\/70\/80",
+        "Stack Duration: 8"
+      ],
+      "hot_key": "Q",
+      "legacy_key": "Z"
+    },
+    {
+      "spell": "Shadow Fiend razes the ground a short distance away from him, dealing damage to enemy units in the area. Adds a stacking damage amplifier on the target that causes the enemy to take bonus Shadow Raze damage per stack.",
+      "effects": [
+        "Ability No Target",
+        "Affects Enemies",
+        "Damage Magical"
+      ],
+      "notes": [
+        "Shadowraze (Medium) blasts a 250 radius area 450 range in front of Nevermore upon cast. This means that it can hit units from 200 to 700 range in front of Shadow Fiend."
+      ],
+      "mana": "90",
+      "elements": [
+        "Does not pierce spell immunity."
+      ],
+      "cooldown": "10 ( 6)",
+      "name": "Shadowraze (Medium)",
+      "description": [
+        "Cast Animation: 0.55+0",
+        "Distance: 450",
+        "Radius: 250",
+        "Base Damage: 90\/160\/230\/300 ( 240\/310\/380\/450)",
+        "Damage Increase per Stack: 50\/60\/70\/80",
+        "Stack Duration: 8"
+      ],
+      "hot_key": "W",
+      "legacy_key": "X"
+    },
+    {
+      "spell": "Shadow Fiend razes the ground a longer distance away from him, dealing damage to enemy units in the area. Adds a stacking damage amplifier on the target that causes the enemy to take bonus Shadow Raze damage per stack.",
+      "effects": [
+        "Ability No Target",
+        "Affects Enemies",
+        "Damage Magical"
+      ],
+      "notes": [
+        "Shadowraze (Far) blasts a 250 radius area 700 range in front of Nevermore upon cast. This means that it can hit units from 450 to 950 range in front of Shadow Fiend."
+      ],
+      "mana": "90",
+      "elements": [
+        "Does not pierce spell immunity."
+      ],
+      "cooldown": "10 ( 6)",
+      "name": "Shadowraze (Far)",
+      "description": [
+        "Cast Animation: 0.55+0",
+        "Distance: 700",
+        "Radius: 250",
+        "Base Damage: 90\/160\/230\/300 ( 240\/310\/380\/450)",
+        "Damage Increase per Stack: 50\/60\/70\/80",
+        "Stack Duration: 8"
+      ],
+      "hot_key": "E",
+      "legacy_key": "C"
+    },
+    {
+      "spell": "Shadow Fiend steals the soul from units he kills, gaining bonus damage. If the killed unit is a hero, he gains 12 souls. On death, he releases half of them from bondage.",
+      "effects": [
+        "Ability Passive",
+        "Affects Self"
+      ],
+      "notes": [
+        "Can get souls from every unit, including wards and allies, excluding illusions, Tempest Doubles and buildings.",
+        "Despite the visual effects, Shadow Fiend instantly gains the soul and thus the damage of killed units.",
+        "The number of current souls is visible on the status buff icon.",
+        "If Shadow Fiend has an odd number of souls upon death, the number of lost souls is rounded down. This means that he never can lose all his souls. He still keeps 1 soul, even when dying while only having 1 soul.",
+        "The more souls Shadow Fiend has, the more red particles fly around his chest area.",
+        "The maximum possible amount of souls with each level of Necromastery provides 24\/40\/56\/72 ( 44\/60\/76\/92) bonus damage. With the respective talent skilled, it is increased up to 48\/80\/112\/144 ( 88\/120\/152\/184) bonus damage.",
+        "When dying while holding Aegis of the Immortal no souls are lost.",
+        "The extra souls from Aghanim's Scepter do affect the number of lines created by Requiem of Souls. It effectively increases the number of possible lines from 6\/10\/14\/18 to 11\/15\/19\/23. When dropping Aghanim's Scepter, Shadow Fiend keeps his souls even when having more than the default allowed amount. This means Requiem of Souls still releases more lines even when not holding the Scepter. However, the attack damage bonus adapts immediately and does not account the extra souls when not holding the Scepter."
+      ],
+      "mana": "0",
+      "elements": [
+        "Partially usable by illusions.",
+        "Disabled by Break.",
+        "Pierces spell immunity."
+      ],
+      "cooldown": "0",
+      "name": "Necromastery",
+      "description": [
+        "Max Souls: 12\/20\/28\/36 ( 22\/30\/38\/46)",
+        "Soul Gain per Hero Kill: 12",
+        "Soul Gain per Non-Hero Kill: 1",
+        "Attack Damage Bonus per Soul: 2 ( 4)",
+        "Soul Loss on Death: 50%"
+      ],
+      "hot_key": "D",
+      "legacy_key": "N"
+    },
+    {
+      "spell": "Shadow Fiend's presence reduces the armor of nearby enemies.",
+      "effects": [
+        "Ability Aura",
+        "Affects Enemies"
+      ],
+      "notes": [
+        "The armor reduction is provided by an aura. Its debuff lingers for 0.5 seconds.",
+        "Does not affect enemies which have no vision over Shadow Fiend.",
+        "Affects buildings, if the talent for it is chosen."
+      ],
+      "mana": "0",
+      "elements": [
+        "Can be used by illusions.",
+        "Disabled by Break.",
+        "Pierces spell immunity."
+      ],
+      "cooldown": "0",
+      "name": "Presence of the Dark Lord",
+      "description": [
+        "Radius: 1200",
+        "Armor Reduction: 3\/4\/5\/6 ( 8\/9\/10\/11)",
+        "Aura Linger Duration: 0.5"
+      ],
+      "hot_key": "F",
+      "legacy_key": "P"
+    },
+    {
+      "spell": "Shadow Fiend gathers his captured souls to release them as lines of demonic energy. Units near Shadow Fiend when the souls are released can be damaged by several lines of energy. Any unit damaged by Requiem of Souls will have its movement speed and attack damage reduced. Lines of energy are created for every 2 souls captured through Necromastery. Requiem of Souls is automatically cast whenever Shadow Fiend dies, regardless of its cooldown.",
+      "effects": [
+        "Ability No Target",
+        "Affects Enemies ( Self)",
+        "Damage Magical"
+      ],
+      "notes": [
+        "Shadow Fiend becomes phased while casting this ability.",
+        "The damage is entirely based on the amount of souls gathered with Necromastery. Each 2 souls create 1 damaging line. If an odd number of souls is gathered, it is rounded down to the next even number.",
+        "The damaging lines have the following mechanics: The area of every single damaging line is shaped like a cone. The distance between the damaging lines is always even. One line is always released towards east and the others adapt accordingly. The damaging lines travel at a speed of 700, taking 1.43 seconds to reach the max distance. Damaging lines can hit units up to 1425 range away (travel distance + end width). Each damaging line cannot hit the same unit more than once per cast ( upon expanding and returning respectively).",
+        "Reduces movement speed and attack damage of all enemy units hit by the damaging lines of Requiem of Souls.",
+        "Only reduces base damage and that given by the primary attribute of affected units. Raw bonus damage is not reduced.",
+        "The expanding lines can deal up to 1440\/2160\/2880 ( 1840\/2760\/3680) damage to a single unit (before reductions), if all lines hit.",
+        "The lines first apply the damage, then the debuff.",
+        "Upon death, Requiem of Souls is cast automatically and instantly, regardless of mana and cooldown. Shadow Fiend first loses 50% of his souls before this happens. So this passive requiem can only have 9 ( 11) lines at max. If Shadow Fiend had 1 soul left upon death, it still releases 1 line, despite requiring at least 2 souls when normally cast. When dying while holding Aegis of the Immortal no passive Requiem of Souls is released.",
+        "When having Aghanim's Scepter, after reaching their max distance, each line starts moving back to Shadow Fiend. Despite the visual effects, the lines do not \"respawn\" around Shadow Fiend. They start moving back exactly where they stopped. The lines return to Shadow Fiend's current location, not to the location he originally cast the spell from. The lines do not adapt to new locations if Shadow Fiend moves. Once they started to return, their path cannot be further altered. The max travel distance applies to the lines also upon returning, meaning they travel a total distance of 2000. The width of the lines is reversed upon returning: They start with maximum width and get thinner towards the end. Lines from the passive Requiem of Souls released on death do not return. The returning lines deal 40% damage. They hit all units regularly like the expanding lines and also apply the debuff.",
+        "The returning lines can deal up to 736\/1104\/1472 damage to a single unit (before reductions), if all lines hit. Together with the expanding lines, Requiem of Souls can deal up to 2576\/3864\/5152 damage to a single unit (before reductions).",
+        "The heal is only based on the damage dealt by the returning lines, not by the initial expanding lines. The heal is applied as soon as the lines stop moving. Only heals from damage dealt to heroes, including illusions. Always heals for 32\/48\/64 health per hit, regardless of how much damage the lines actually dealt."
+      ],
+      "mana": "150\/175\/200",
+      "elements": [
+        "Not disabled by Break.",
+        "Does not pierce spell immunity."
+      ],
+      "cooldown": "120\/110\/100 ( 72\/66\/60)",
+      "name": "Requiem of Souls",
+      "description": [
+        "Cast Animation: 1.67+0.77",
+        "Damage Lines Travel Distance: 1000",
+        "Damage Lines Starting Width: 125",
+        "Damage Lines End Width: 425",
+        "Necromastery Souls Required per Line: 2",
+        "Damage per Line on Release: 80\/120\/160",
+        "Damage per Line on Return: 0 ( 32\/48\/64)",
+        "Heal per Hit Hero on Return: 0 ( 32\/48\/64)",
+        "Move Speed Slow: 25%",
+        "Attack Damage Reduction: 50%",
+        "Debuff Duration: 5"
+      ],
+      "hot_key": "R",
+      "legacy_key": "R"
+    }
+  ],
+  "bio": "It is said that Nevermore the Shadow Fiend has the soul of a poet, and in fact he has thousands of them. Over the ages he has claimed the souls of poets, priests, emperors, beggars, slaves, philosophers, criminals and (naturally) heroes; no sort of soul escapes him. What he does with them is unknown. No one has ever peered into the Abysm whence Nevermore reaches out like an eel from among astral rocks. Does he devour them one after another? Does he mount them along the halls of an eldritch temple, or pickle the souls in necromantic brine? Is he merely a puppet, pushed through the dimensional rift by a demonic puppeteer? Such is his evil, so intense his aura of darkness, that no rational mind may penetrate it. Of course, if you really want to know where the stolen souls go, there's one sure way to find out: Add your soul to his collection. Or just wait for Nevermore.",
+  "talentsTips": [
+    "The cooldown reduction talent stacks multiplicatively with Octarine Core and additively other sources of cooldown reduction."
+  ],
+  "trivia": [
+    "Shadow Fiend's alternate\/fun name in DotA was \"YaphetS\", a tribute to a professional DotA player who skillfully used Nevermore.",
+    "The name \"Nevermore\" likely refers to the poem The Raven by Edgar Allen Poe. This is also referenced in his bio.",
+    "The voice response \"Never say Nevermore...\" is in reference to the James Bond movie \"Never say never again\".",
+    "Apart for popular demand by fans, Shadow Fiend's model rework may have also been done to adhere to certain countries' censorship laws, namely the Chinese client."
+  ],
+  "talents": [
+    "40% Cooldown Reduction:-5 Presence Aura",
+    "+150 Shadowraze Damage:+2 Damage Per Soul",
+    "+30 Movement Speed:Presence Aura Affects Building",
+    "+20 Attack Speed:+8% Spell Amplification"
+  ],
+  "desc": "Nevermore, the Shadow Fiend, is a ranged agility hero possessing abilities that inflict superb burst damage from varying distances. Whether near or far, Shadow Fiend is able to release incredible offensive power, both physical and magical. Shadow Fiend's true power comes from the souls he takes, making him more dangerous every time he kills. With enough souls, he can release all of the captured souls in a devastating burst, dealing more damage to enemies that are closer to him. Shadow Fiend is a carry who is powerful at all stages of the game, a trait most carries don't share. He can harass and conquer the early game, gank unsuspecting heroes during the mid-stages of the game, and has huge right-click potential in the late game thanks to his passives, although his active abilities scale off by the end-game."
+}

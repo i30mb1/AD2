@@ -1,1 +1,14 @@
-{"cost":"1400","description":"Thick metal plates that protect the entire upper body. Avoid dropping on feet.","further":["Assault_Cuirass","Shiva's_Guard","Lotus_Orb"],"attrs":["Bonus +10 Armor","Disassemble? No","Alert allies? No"]}
+{
+  "cost": "1400",
+  "description": "Thick metal plates that protect the entire upper body. Avoid dropping on feet.",
+  "further": [
+    "Assault_Cuirass",
+    "Shiva's_Guard",
+    "Lotus_Orb"
+  ],
+  "attrs": [
+    "Bonus +10 Armor",
+    "Disassemble? No",
+    "Alert allies? No"
+  ]
+}

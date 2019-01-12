@@ -1,1 +1,15 @@
-{"cost":"550","description":"Металлическая кольчуга средней прочности.","further":["Assault_Cuirass","Blade_Mail","Medallion_of_Courage","Buckler"],"attrs":["Бонус +5 к броне","Можно разобрать? Нет","Можно сообщать? Нет"]}
+{
+  "cost": "550",
+  "description": "Металлическая кольчуга средней прочности.",
+  "further": [
+    "Assault_Cuirass",
+    "Blade_Mail",
+    "Medallion_of_Courage",
+    "Buckler"
+  ],
+  "attrs": [
+    "Бонус +5 к броне",
+    "Можно разобрать? Нет",
+    "Можно сообщать? Нет"
+  ]
+}

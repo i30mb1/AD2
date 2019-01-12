@@ -1,1 +1,71 @@
-{"abilities":[{"effects":[],"notes":["Does not block spells cast by allies.","Does not block Ion Shell, Toss, and Snowball.","Does not block Urn of Shadows, Spirit Vessel, Medallion of Courage, and Solar Crest.","For a list of blocked spells, see Spell Block."],"elements":["Ability Passive","Affects Self"],"name":"Spellblock","description":"Blocks most targeted spells once every 13 seconds."},{"effects":["Cast Range: 700","Buff Duration: 13"],"notes":["Cannot be cast on self.","Multiple instances of the buff work fully independently from each other. This means it is possible to cast two instances on the same allied hero, and each buff can block one spell. This also means that when an ally places the Linken's buff on a hero that has its own Linken's Sphere, both can block a spell. The allied buff is used up first in this case.","Puts Linken's Sphere on cooldown upon transferring the buff. During this period, it does not block spells on the owner.","Goes into cooldown once again when the buff blocks a spell on the targeted allied hero.","Does not go into cooldown when the buff did not block a spell and expired.","Can be cast on creep-heroes."],"elements":["Ability Target Unit","Affects Allied Heroes"],"name":"Transfer Spellblock","description":"Temporarily removes Spellblock from the item's owner and transfers it to an allied unit for 13 seconds."}],"cost":"5050","description":"This magical sphere once protected one of the most famous heroes in history.","trivia":["Linken's Sphere is named after Linken, a character from World of Warcraft, who is in turn named after Link, the protagonist of the Legend of Zelda franchise.","As Linken's Sphere was originally created, it was named \"Linken's Mirror\". Its ability was Spell Mirror, which was basically a chance-based Echo Shell from Lotus Orb. The item was reworked into the present version in 6.09."],"further":["Perseverance","Ultimate_Orb","Recipe"],"tips":["Although Heroes that solely have single-target abilities (like Bane and Lion) seem like they would be rendered harmless with Linken's, this actually means they would be able to bypass the Spell Block much more easily than Heroes with only one single-target spell (like Lina or Wraith King), as Linken's Sphere only blocks one spell at a time.","As such, when facing against an enemy with Linken's Sphere, it's best to use a cheap, spammable spell like Stifling Dagger or Fade Bolt to put the item on cooldown so that you or an ally can then use more powerful spells like Reaper's Scythe or Doom.","It is wise to place the Spell Block buff on your allied initiator or carry to prevent them from being disabled immediately when charging into the enemy team.","It is good to purchase this item on Heroes that use invisibility or are going to buy items that grant it, as the Spell Block can prevent some spells, such as Corrosive Haze, from revealing the Hero. If the enemy lacks any detection but has strong burst damage, the Spell Block may also prevent some disables or ultimates from locking and bursting down your Hero before your fade time, or at least give you a warning that you are about to be targeted.","This item can be useful on heroes with quick escape options such as Weaver, Ember Spirit, Clinkz or Storm Spirit, as Linken's Sphere can easily make you almost immune to enemy ganks by blocking any enemy's spell - protecting you from a potential disable and also giving you an early warning that the enemy is coming, allowing you to make your escape.","Projectile-based spells are always blocked upon impact. This makes them easier to blocked for an ally, than spells with instant effect, because the Spellblock buff can be placed on the targeted ally before the projectile hits.","Linken's Sphere is a good combination with Black King Bar, because it can force enemy hero to cast his most powerful singe-targeted ability on you."],"attrs":["Active Transfer Spellblock","Passive Spellblock","Bonus +13 Strength +13 Agility +13 Intelligence +6.5 Health regeneration +5 Mana regeneration","Disassemble? No","Alert allies? No"],"info":["For strength heroes, it grants 292.5 health, 8.13 health regen, 1.3% magic resistance, 2.08 armor, 13 attack speed, 0.65% movement speed, 156 mana, 5.65 mana regen, 0.91% spell damage and 13 attack damage.","For agility heroes, it grants 234 health, 7.8 health regen, 1.04% magic resistance, 2.6 armor, 16.25 attack speed, 0.81% movement speed, 156 mana, 5.65 mana regen, 0.91% spell damage and 13 attack damage.","For intelligence heroes, it grants 234 health, 7.8 health regen, 1.04% magic resistance, 2.08 armor, 13 attack speed, 0.65% movement speed, 195 mana, 5.81 mana regen, 1.14% spell damage and 13 attack damage."]}
+{
+  "abilities": [
+    {
+      "effects": [],
+      "notes": [
+        "Does not block spells cast by allies.",
+        "Does not block Ion Shell, Toss, and Snowball.",
+        "Does not block Urn of Shadows, Spirit Vessel, Medallion of Courage, and Solar Crest.",
+        "For a list of blocked spells, see Spell Block."
+      ],
+      "elements": [
+        "Ability Passive",
+        "Affects Self"
+      ],
+      "name": "Spellblock",
+      "description": "Blocks most targeted spells once every 13 seconds."
+    },
+    {
+      "effects": [
+        "Cast Range: 700",
+        "Buff Duration: 13"
+      ],
+      "notes": [
+        "Cannot be cast on self.",
+        "Multiple instances of the buff work fully independently from each other. This means it is possible to cast two instances on the same allied hero, and each buff can block one spell. This also means that when an ally places the Linken's buff on a hero that has its own Linken's Sphere, both can block a spell. The allied buff is used up first in this case.",
+        "Puts Linken's Sphere on cooldown upon transferring the buff. During this period, it does not block spells on the owner.",
+        "Goes into cooldown once again when the buff blocks a spell on the targeted allied hero.",
+        "Does not go into cooldown when the buff did not block a spell and expired.",
+        "Can be cast on creep-heroes."
+      ],
+      "elements": [
+        "Ability Target Unit",
+        "Affects Allied Heroes"
+      ],
+      "name": "Transfer Spellblock",
+      "description": "Temporarily removes Spellblock from the item's owner and transfers it to an allied unit for 13 seconds."
+    }
+  ],
+  "cost": "5050",
+  "description": "This magical sphere once protected one of the most famous heroes in history.",
+  "trivia": [
+    "Linken's Sphere is named after Linken, a character from World of Warcraft, who is in turn named after Link, the protagonist of the Legend of Zelda franchise.",
+    "As Linken's Sphere was originally created, it was named \"Linken's Mirror\". Its ability was Spell Mirror, which was basically a chance-based Echo Shell from Lotus Orb. The item was reworked into the present version in 6.09."
+  ],
+  "further": [
+    "Perseverance",
+    "Ultimate_Orb",
+    "Recipe"
+  ],
+  "tips": [
+    "Although Heroes that solely have single-target abilities (like Bane and Lion) seem like they would be rendered harmless with Linken's, this actually means they would be able to bypass the Spell Block much more easily than Heroes with only one single-target spell (like Lina or Wraith King), as Linken's Sphere only blocks one spell at a time.",
+    "As such, when facing against an enemy with Linken's Sphere, it's best to use a cheap, spammable spell like Stifling Dagger or Fade Bolt to put the item on cooldown so that you or an ally can then use more powerful spells like Reaper's Scythe or Doom.",
+    "It is wise to place the Spell Block buff on your allied initiator or carry to prevent them from being disabled immediately when charging into the enemy team.",
+    "It is good to purchase this item on Heroes that use invisibility or are going to buy items that grant it, as the Spell Block can prevent some spells, such as Corrosive Haze, from revealing the Hero. If the enemy lacks any detection but has strong burst damage, the Spell Block may also prevent some disables or ultimates from locking and bursting down your Hero before your fade time, or at least give you a warning that you are about to be targeted.",
+    "This item can be useful on heroes with quick escape options such as Weaver, Ember Spirit, Clinkz or Storm Spirit, as Linken's Sphere can easily make you almost immune to enemy ganks by blocking any enemy's spell - protecting you from a potential disable and also giving you an early warning that the enemy is coming, allowing you to make your escape.",
+    "Projectile-based spells are always blocked upon impact. This makes them easier to blocked for an ally, than spells with instant effect, because the Spellblock buff can be placed on the targeted ally before the projectile hits.",
+    "Linken's Sphere is a good combination with Black King Bar, because it can force enemy hero to cast his most powerful singe-targeted ability on you."
+  ],
+  "attrs": [
+    "Active Transfer Spellblock",
+    "Passive Spellblock",
+    "Bonus +13 Strength +13 Agility +13 Intelligence +6.5 Health regeneration +5 Mana regeneration",
+    "Disassemble? No",
+    "Alert allies? No"
+  ],
+  "info": [
+    "For strength heroes, it grants 292.5 health, 8.13 health regen, 1.3% magic resistance, 2.08 armor, 13 attack speed, 0.65% movement speed, 156 mana, 5.65 mana regen, 0.91% spell damage and 13 attack damage.",
+    "For agility heroes, it grants 234 health, 7.8 health regen, 1.04% magic resistance, 2.6 armor, 16.25 attack speed, 0.81% movement speed, 156 mana, 5.65 mana regen, 0.91% spell damage and 13 attack damage.",
+    "For intelligence heroes, it grants 234 health, 7.8 health regen, 1.04% magic resistance, 2.08 armor, 13 attack speed, 0.65% movement speed, 195 mana, 5.81 mana regen, 1.14% spell damage and 13 attack damage."
+  ]
+}

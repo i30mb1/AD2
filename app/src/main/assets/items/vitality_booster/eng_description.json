@@ -1,1 +1,16 @@
-{"cost":"1100","description":"A ruby gemstone that has been passed down through generations of warrior kin.","further":["Heart_of_Tarrasque","Soul_Booster","Vanguard","Spirit_Vessel","Aeon_Disk"],"attrs":["Bonus +250 Health","Disassemble? No","Alert allies? No"]}
+{
+  "cost": "1100",
+  "description": "A ruby gemstone that has been passed down through generations of warrior kin.",
+  "further": [
+    "Heart_of_Tarrasque",
+    "Soul_Booster",
+    "Vanguard",
+    "Spirit_Vessel",
+    "Aeon_Disk"
+  ],
+  "attrs": [
+    "Bonus +250 Health",
+    "Disassemble? No",
+    "Alert allies? No"
+  ]
+}

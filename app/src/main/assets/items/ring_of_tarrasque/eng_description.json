@@ -1,1 +1,20 @@
-{"cost":"700","description":"Cost 700 Bought From Arcane","trivia":["This item was revealed first in Artifact.","The name \"Tarrasque\" references the Tarrasque, an almost undefeatable monster in Dungeons & Dragons, which in return references the Tarasque, a mythological dragon-hybrid that was tamed by Saint Martha."],"further":["Holy_Locket","Heart_of_Tarrasque"],"attrs":["Bonus +150 Health +3.75 Health regeneration","Disassemble? No","Alert allies? No"],"info":["Ring of Tarrasque is partially shareable."]}
+{
+  "cost": "700",
+  "description": "Cost 700 Bought From Arcane",
+  "trivia": [
+    "This item was revealed first in Artifact.",
+    "The name \"Tarrasque\" references the Tarrasque, an almost undefeatable monster in Dungeons & Dragons, which in return references the Tarasque, a mythological dragon-hybrid that was tamed by Saint Martha."
+  ],
+  "further": [
+    "Holy_Locket",
+    "Heart_of_Tarrasque"
+  ],
+  "attrs": [
+    "Bonus +150 Health +3.75 Health regeneration",
+    "Disassemble? No",
+    "Alert allies? No"
+  ],
+  "info": [
+    "Ring of Tarrasque is partially shareable."
+  ]
+}

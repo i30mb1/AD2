@@ -1,1 +1,176 @@
-{"abilities":[{"spell":"Puck launches a magic orb that floats in a straight path, damaging enemy units along the way. At any point, Puck may teleport to the orb's location using Ethereal Jaunt.","effects":["Ability Target Point","Affects Enemies","Damage Magical"],"notes":["Illusory Orb travels at a speed of 651 ( 911.4), resulting in a total travel time of 2.995 seconds.","The orb emits red pulses for the last 650 distance, indicating that it is about to reach its maximum travel range.","The orb can damage units up to 2175 ( 2955) range away (travel distance + radius).","The orb has 450 range flying vision.","The orb also spawns 7 ( 10) vision fields with the same vision range every 279 ( 273) distance traveled.","These vision fields last for 3.34 seconds each."],"mana":"80\/100\/120\/140","elements":["Does not pierce spell immunity."],"cooldown":"13\/12\/11\/10","name":"Illusory Orb","description":["Cast Animation: 0.1+0.27","Cast Range: 3000","Travel Distance: 1950 ( 2730)","Damage Radius: 225","Damage: 70\/140\/210\/280"],"hot_key":"Q","legacy_key":"R"},{"spell":"Teleports Puck to a flying Illusory Orb.","effects":["Ability No Target","Affects Self"],"notes":["This ability is automatically learned whenever Illusory Orb is learned.","This ability stays inactive until Illusory Orb is cast and turns inactive again once the orb of that cast is gone.","Ethereal Jaunt disjoints projectiles upon cast.","When two orbs are cast in succession, this ability only stays active for the duration of the first cast orb.","However, it always teleports Puck to its last created orb."],"mana":"0","elements":["Does not proc any on-cast effects when cast."],"cooldown":"0","name":"Ethereal Jaunt","description":["Cast Animation: 0+0.53"],"hot_key":"D","legacy_key":"E"},{"spell":"Puck releases a burst of faerie dust that deals damage and silences enemy units nearby.","effects":["Ability No Target","Affects Enemies","Damage Magical"],"notes":["Despite the visual effects, the silence and damage are applied instantly in the entire radius.","Waning Rift first applies the damage, then the debuff."],"mana":"100\/110\/120\/130","elements":["Does not pierce spell immunity."],"cooldown":"16\/15\/14\/13 ( 8\/7\/6\/5)","name":"Waning Rift","description":["Cast Animation: 0.1+0.27","Radius: 400","Damage: 100\/160\/220\/280","Duration: 2\/2.5\/3\/3.5"],"hot_key":"W","legacy_key":"W"},{"spell":"Puck briefly shifts into another dimension where it is immune from harm.","effects":["Ability No Target \/ Channeled","Affects Self"],"notes":["Phase Shift disjoints projectiles upon cast.","Certain items which do not cancel channeling spells (e.g. Shadow Blade or Shiva's Guard) do cancel Phase Shift.","Puck is invulnerable and hidden during Phase Shift, turning it to an invalid target for every spell.","The buff lingers for one server tick once the channeling ends or is interrupted, which allows using items while still invulnerable and hidden.","Puck retains its collision size during Phase Shift.","Puck can cancel Phase Shift at any time with any action."],"mana":"0","elements":["Does not proc any on-cast effects when cast.","Cannot be cast while rooted or leashed.","Pierces spell immunity."],"cooldown":"6","name":"Phase Shift","description":["Cast Animation: 0+0","Max Channel Time: 0.75\/1.5\/2.25\/3.25"],"hot_key":"E","legacy_key":"F"},{"spell":"Creates a coil of volatile magic that latches onto enemy Heroes, stunning them for 0.5 seconds and damaging them. If the enemy hero stretches the coil by moving too far away, it snaps, stunning and dealing additional damage.","effects":["Ability Target Area","Affects Enemy Heroes","Damage Magical"],"notes":["Every enemy hero within 375 range of the coil upon cast gets linked to it. The links last as long as the coil itself or until broken. Leashes all linked enemies, preventing them from casting certain mobility spells.","Entering the area has no effect. The coil does not leash enemies after cast.","If a linked hero moves 600 range away from the coil, the link breaks and stuns and damages the hero.","It does not matter how far or how fast the hero moves away, the stun and damage always hit it, unless they are invulnerable.","Dream Coil latches on invisible units and on units in the Fog of War. But the visible link draws to their last known location.","Also latches on illusions and creep-heroes.","The link break first applies the damage, then the debuff.","Multiple instances of Dream Coil fully stack, with each cast placing its own separate debuff.","When the level 25 talent is chosen, Puck performs instant attacks on all enemies who have the coiled debuff. The attacks are limited to Puck's attack range, and are not global. These attacks can proc any attack modifier and on hit effects normally. The attacks are performed even while Puck is disabled, hidden or even while dead. This means the attacks happen even during Phase Shift. Since the rapid fire is bound to the coiled debuff, removing it earlier causes the attacks to stop, even when the enemy is still linked. Multiple instances of Dream Coil on enemies causes Puck to attack multiple times, for each instance, with the interval based on when the debuffs were received."],"mana":"100\/150\/200","elements":["Partially pierces spell immunity."],"cooldown":"70\/65\/60","name":"Dream Coil","description":["Cast Animation: 0.1+0.27","Cast Range: 750","Coil Latch Radius: 375","Link Break Radius: 600","Link Break Damage: 300\/400\/500 ( 400\/550\/700)","Rapid Fire Attack Interval: 0 ( 0.6)","Initial Stun Duration: 0.5","Link Break Stun Duration: 1.8\/2.4\/3 ( 1.5\/3\/4.5)","Coil Duration: 6 ( 8)"],"hot_key":"R","legacy_key":"C"}],"bio":"While Puck seems at first glance a mischievous, childish character, this quality masks an alien personality. The juvenile form of a Faerie Dragon, a creature that lives for eons, Puck spends countless millennia in its childish form. So while it is technically true that Puck is juvenile, it will continue to be so when the cities of the present age have sloughed away into dust. Its motives are therefore inscrutable, and what appears to be play may in fact indicate a darker purpose or just its endless fondness for mischief.","talentsTips":["The armor talent does not benefit illusions.","The intelligence talent effectively grants Puck 150 mana, 0.63 mana regen, 0.88% spell damage and 10 attack damage.","This attack damage talent is added as raw attack damage, so it does not benefit illusions, and is not affected by most percentage-based damage increasing or reducing effects.","Gold granted from the talent is unreliable gold."],"trivia":["Puck's alternate name was Kupu-Kupu, which means \"moth\" or \"butterfly\" in the Malay and Indonesian languages.","Puck was introduced in Version 6.48 as a result of a hero creation contest held on the DotA-Allstars forum, in which players designed a new hero to suit the faerie dragon model from Warcraft III. This makes Puck the first and only hero created by the community.","Puck pays homage to a character of the same name from Shakespeare's A Midsummer Night's Dream. Aside from Puck's playful attitude, its line \"A midsummer nightmare\" is also an allusion to the play.","Since Puck pays homage to a Shakespeare character, most of its lines are delivered in phrasing similar to iambic pentameter.","The Version 6.87 Illusory Orb speed change was a developer's joke based on this reddit thread.","This line \"One Puck, two Puck, three Puck more!\" is a reference to Eminem's final rap battle in 8 Mile movie (2002).","This line \"One and one and one is three!\" is a reference to The Beatles' song \"Come Together\" (1969)."],"talents":["Dream Coil Rapid Fire:+420 Gold\/Min","+40% Illusory Orb Distance\/Speed:-8s Waning Rift Cooldown","+90 Damage:+15% Spell Amplification","+5 Armor:+10 Intelligence"],"desc":"Puck, the Faerie Dragon, is a highly mobile ranged intelligence hero best known for being an extremely unpredictable and slippery target. Puck is commonly played as an initiator and ganker, with spells that are equally useful for super-aggressive maneuvers as well as daring escapes. Expert use of Puck's abilities will let you appear out of nowhere, suddenly leave your enemies crippled and disadvantaged, and get away in the blink of an eye - but mess up your timing or misjudge the situation, and there is little left to save this fragile Hero from death."}
+{
+  "abilities": [
+    {
+      "spell": "Puck launches a magic orb that floats in a straight path, damaging enemy units along the way. At any point, Puck may teleport to the orb's location using Ethereal Jaunt.",
+      "effects": [
+        "Ability Target Point",
+        "Affects Enemies",
+        "Damage Magical"
+      ],
+      "notes": [
+        "Illusory Orb travels at a speed of 651 ( 911.4), resulting in a total travel time of 2.995 seconds.",
+        "The orb emits red pulses for the last 650 distance, indicating that it is about to reach its maximum travel range.",
+        "The orb can damage units up to 2175 ( 2955) range away (travel distance + radius).",
+        "The orb has 450 range flying vision.",
+        "The orb also spawns 7 ( 10) vision fields with the same vision range every 279 ( 273) distance traveled.",
+        "These vision fields last for 3.34 seconds each."
+      ],
+      "mana": "80\/100\/120\/140",
+      "elements": [
+        "Does not pierce spell immunity."
+      ],
+      "cooldown": "13\/12\/11\/10",
+      "name": "Illusory Orb",
+      "description": [
+        "Cast Animation: 0.1+0.27",
+        "Cast Range: 3000",
+        "Travel Distance: 1950 ( 2730)",
+        "Damage Radius: 225",
+        "Damage: 70\/140\/210\/280"
+      ],
+      "hot_key": "Q",
+      "legacy_key": "R"
+    },
+    {
+      "spell": "Teleports Puck to a flying Illusory Orb.",
+      "effects": [
+        "Ability No Target",
+        "Affects Self"
+      ],
+      "notes": [
+        "This ability is automatically learned whenever Illusory Orb is learned.",
+        "This ability stays inactive until Illusory Orb is cast and turns inactive again once the orb of that cast is gone.",
+        "Ethereal Jaunt disjoints projectiles upon cast.",
+        "When two orbs are cast in succession, this ability only stays active for the duration of the first cast orb.",
+        "However, it always teleports Puck to its last created orb."
+      ],
+      "mana": "0",
+      "elements": [
+        "Does not proc any on-cast effects when cast."
+      ],
+      "cooldown": "0",
+      "name": "Ethereal Jaunt",
+      "description": [
+        "Cast Animation: 0+0.53"
+      ],
+      "hot_key": "D",
+      "legacy_key": "E"
+    },
+    {
+      "spell": "Puck releases a burst of faerie dust that deals damage and silences enemy units nearby.",
+      "effects": [
+        "Ability No Target",
+        "Affects Enemies",
+        "Damage Magical"
+      ],
+      "notes": [
+        "Despite the visual effects, the silence and damage are applied instantly in the entire radius.",
+        "Waning Rift first applies the damage, then the debuff."
+      ],
+      "mana": "100\/110\/120\/130",
+      "elements": [
+        "Does not pierce spell immunity."
+      ],
+      "cooldown": "16\/15\/14\/13 ( 8\/7\/6\/5)",
+      "name": "Waning Rift",
+      "description": [
+        "Cast Animation: 0.1+0.27",
+        "Radius: 400",
+        "Damage: 100\/160\/220\/280",
+        "Duration: 2\/2.5\/3\/3.5"
+      ],
+      "hot_key": "W",
+      "legacy_key": "W"
+    },
+    {
+      "spell": "Puck briefly shifts into another dimension where it is immune from harm.",
+      "effects": [
+        "Ability No Target \/ Channeled",
+        "Affects Self"
+      ],
+      "notes": [
+        "Phase Shift disjoints projectiles upon cast.",
+        "Certain items which do not cancel channeling spells (e.g. Shadow Blade or Shiva's Guard) do cancel Phase Shift.",
+        "Puck is invulnerable and hidden during Phase Shift, turning it to an invalid target for every spell.",
+        "The buff lingers for one server tick once the channeling ends or is interrupted, which allows using items while still invulnerable and hidden.",
+        "Puck retains its collision size during Phase Shift.",
+        "Puck can cancel Phase Shift at any time with any action."
+      ],
+      "mana": "0",
+      "elements": [
+        "Does not proc any on-cast effects when cast.",
+        "Cannot be cast while rooted or leashed.",
+        "Pierces spell immunity."
+      ],
+      "cooldown": "6",
+      "name": "Phase Shift",
+      "description": [
+        "Cast Animation: 0+0",
+        "Max Channel Time: 0.75\/1.5\/2.25\/3.25"
+      ],
+      "hot_key": "E",
+      "legacy_key": "F"
+    },
+    {
+      "spell": "Creates a coil of volatile magic that latches onto enemy Heroes, stunning them for 0.5 seconds and damaging them. If the enemy hero stretches the coil by moving too far away, it snaps, stunning and dealing additional damage.",
+      "effects": [
+        "Ability Target Area",
+        "Affects Enemy Heroes",
+        "Damage Magical"
+      ],
+      "notes": [
+        "Every enemy hero within 375 range of the coil upon cast gets linked to it. The links last as long as the coil itself or until broken. Leashes all linked enemies, preventing them from casting certain mobility spells.",
+        "Entering the area has no effect. The coil does not leash enemies after cast.",
+        "If a linked hero moves 600 range away from the coil, the link breaks and stuns and damages the hero.",
+        "It does not matter how far or how fast the hero moves away, the stun and damage always hit it, unless they are invulnerable.",
+        "Dream Coil latches on invisible units and on units in the Fog of War. But the visible link draws to their last known location.",
+        "Also latches on illusions and creep-heroes.",
+        "The link break first applies the damage, then the debuff.",
+        "Multiple instances of Dream Coil fully stack, with each cast placing its own separate debuff.",
+        "When the level 25 talent is chosen, Puck performs instant attacks on all enemies who have the coiled debuff. The attacks are limited to Puck's attack range, and are not global. These attacks can proc any attack modifier and on hit effects normally. The attacks are performed even while Puck is disabled, hidden or even while dead. This means the attacks happen even during Phase Shift. Since the rapid fire is bound to the coiled debuff, removing it earlier causes the attacks to stop, even when the enemy is still linked. Multiple instances of Dream Coil on enemies causes Puck to attack multiple times, for each instance, with the interval based on when the debuffs were received."
+      ],
+      "mana": "100\/150\/200",
+      "elements": [
+        "Partially pierces spell immunity."
+      ],
+      "cooldown": "70\/65\/60",
+      "name": "Dream Coil",
+      "description": [
+        "Cast Animation: 0.1+0.27",
+        "Cast Range: 750",
+        "Coil Latch Radius: 375",
+        "Link Break Radius: 600",
+        "Link Break Damage: 300\/400\/500 ( 400\/550\/700)",
+        "Rapid Fire Attack Interval: 0 ( 0.6)",
+        "Initial Stun Duration: 0.5",
+        "Link Break Stun Duration: 1.8\/2.4\/3 ( 1.5\/3\/4.5)",
+        "Coil Duration: 6 ( 8)"
+      ],
+      "hot_key": "R",
+      "legacy_key": "C"
+    }
+  ],
+  "bio": "While Puck seems at first glance a mischievous, childish character, this quality masks an alien personality. The juvenile form of a Faerie Dragon, a creature that lives for eons, Puck spends countless millennia in its childish form. So while it is technically true that Puck is juvenile, it will continue to be so when the cities of the present age have sloughed away into dust. Its motives are therefore inscrutable, and what appears to be play may in fact indicate a darker purpose or just its endless fondness for mischief.",
+  "talentsTips": [
+    "The armor talent does not benefit illusions.",
+    "The intelligence talent effectively grants Puck 150 mana, 0.63 mana regen, 0.88% spell damage and 10 attack damage.",
+    "This attack damage talent is added as raw attack damage, so it does not benefit illusions, and is not affected by most percentage-based damage increasing or reducing effects.",
+    "Gold granted from the talent is unreliable gold."
+  ],
+  "trivia": [
+    "Puck's alternate name was Kupu-Kupu, which means \"moth\" or \"butterfly\" in the Malay and Indonesian languages.",
+    "Puck was introduced in Version 6.48 as a result of a hero creation contest held on the DotA-Allstars forum, in which players designed a new hero to suit the faerie dragon model from Warcraft III. This makes Puck the first and only hero created by the community.",
+    "Puck pays homage to a character of the same name from Shakespeare's A Midsummer Night's Dream. Aside from Puck's playful attitude, its line \"A midsummer nightmare\" is also an allusion to the play.",
+    "Since Puck pays homage to a Shakespeare character, most of its lines are delivered in phrasing similar to iambic pentameter.",
+    "The Version 6.87 Illusory Orb speed change was a developer's joke based on this reddit thread.",
+    "This line \"One Puck, two Puck, three Puck more!\" is a reference to Eminem's final rap battle in 8 Mile movie (2002).",
+    "This line \"One and one and one is three!\" is a reference to The Beatles' song \"Come Together\" (1969)."
+  ],
+  "talents": [
+    "Dream Coil Rapid Fire:+420 Gold\/Min",
+    "+40% Illusory Orb Distance\/Speed:-8s Waning Rift Cooldown",
+    "+90 Damage:+15% Spell Amplification",
+    "+5 Armor:+10 Intelligence"
+  ],
+  "desc": "Puck, the Faerie Dragon, is a highly mobile ranged intelligence hero best known for being an extremely unpredictable and slippery target. Puck is commonly played as an initiator and ganker, with spells that are equally useful for super-aggressive maneuvers as well as daring escapes. Expert use of Puck's abilities will let you appear out of nowhere, suddenly leave your enemies crippled and disadvantaged, and get away in the blink of an eye - but mess up your timing or misjudge the situation, and there is little left to save this fragile Hero from death."
+}

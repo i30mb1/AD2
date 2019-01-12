@@ -1,1 +1,47 @@
-{"abilities":[{"effects":["Radius: 1200","Mana Restored: 160"],"notes":["Interrupts the user's channeling spells upon cast.","Affects every allied unit, including illusions, invulnerable units and hidden units, excluding wards and buildings.","Meepo clones cannot cast Replenish Mana."],"elements":["Ability No Target","Affects Allies"],"name":"Replenish Mana","description":"Restores 160 mana to all nearby allies."}],"contains":["Boots_of_Speed","Energy_Booster"],"cost":"1400","description":"Magi equipped with these boots are valued in battle.","trivia":["Before 6.68, Arcane Boots was known as Arcane Ring. It required a Ring of Protection and a recipe, instead of Boots of Speed. It had the same active ability, but passively granted armor, instead of movement speed."],"further":["Guardian_Greaves"],"tips":["If the player drops items which provides a large amount of mana (e.g. Bloodstone or Eye of Skadi), then uses Arcane Boots, and then picks up the dropped items again, the player will overall gain far more than 160 mana. This is because upon dropping the mana granting items, the player's maximum mana drops while the current mana percentage stays the same, but Arcane Boots still gives the full amount. After picking up the items again, its maximum mana raises, and its current mana percentage stays the same.","Using Replenish Mana every time it is off cooldown is equivalent to 2.91 mana per second, which regenerates the bonus mana in 55 seconds."],"attrs":["Active Replenish Mana","Bonus +250 Mana +15% Movement speed","Disassemble? Yes","Alert allies? Yes"],"info":["Movement speed bonuses from multiple pairs of boots do not stack.","Stacks with all other movement speed bonuses."]}
+{
+  "abilities": [
+    {
+      "effects": [
+        "Radius: 1200",
+        "Mana Restored: 160"
+      ],
+      "notes": [
+        "Interrupts the user's channeling spells upon cast.",
+        "Affects every allied unit, including illusions, invulnerable units and hidden units, excluding wards and buildings.",
+        "Meepo clones cannot cast Replenish Mana."
+      ],
+      "elements": [
+        "Ability No Target",
+        "Affects Allies"
+      ],
+      "name": "Replenish Mana",
+      "description": "Restores 160 mana to all nearby allies."
+    }
+  ],
+  "contains": [
+    "Boots_of_Speed",
+    "Energy_Booster"
+  ],
+  "cost": "1400",
+  "description": "Magi equipped with these boots are valued in battle.",
+  "trivia": [
+    "Before 6.68, Arcane Boots was known as Arcane Ring. It required a Ring of Protection and a recipe, instead of Boots of Speed. It had the same active ability, but passively granted armor, instead of movement speed."
+  ],
+  "further": [
+    "Guardian_Greaves"
+  ],
+  "tips": [
+    "If the player drops items which provides a large amount of mana (e.g. Bloodstone or Eye of Skadi), then uses Arcane Boots, and then picks up the dropped items again, the player will overall gain far more than 160 mana. This is because upon dropping the mana granting items, the player's maximum mana drops while the current mana percentage stays the same, but Arcane Boots still gives the full amount. After picking up the items again, its maximum mana raises, and its current mana percentage stays the same.",
+    "Using Replenish Mana every time it is off cooldown is equivalent to 2.91 mana per second, which regenerates the bonus mana in 55 seconds."
+  ],
+  "attrs": [
+    "Active Replenish Mana",
+    "Bonus +250 Mana +15% Movement speed",
+    "Disassemble? Yes",
+    "Alert allies? Yes"
+  ],
+  "info": [
+    "Movement speed bonuses from multiple pairs of boots do not stack.",
+    "Stacks with all other movement speed bonuses."
+  ]
+}

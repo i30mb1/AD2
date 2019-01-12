@@ -1,1 +1,406 @@
-{"abilities":[{"spell":"Slams the ground, dealing damage and slowing the movement speed and attack rate of nearby enemy land units.","effects":["Ability No Target","Affects Enemies","Damage Magical"],"notes":["Treats creep-heroes as creeps.","The clap first applies the debuff, then the damage."],"mana":"90\/100\/110\/120","elements":["Does not pierce spell immunity."],"cooldown":"13","name":"Thunder Clap","description":["Cast Animation: 0.4+0.4","Radius: 400","Damage: 100\/175\/250\/300","Move Speed Slow: 25%\/35%\/45%\/55%","Attack Speed Slow: 25\/35\/45\/55","Hero Slow Duration: 4 ( 7)","Creep Slow Duration: 8 ( 11)"],"hot_key":"Q","legacy_key":"C"},{"spell":"Drenches an area in alcohol, causing enemy units to have a chance to attack themselves, and combust for a short period whenever spell damage over 80 is dealt.","effects":["Ability Target Area","Affects Enemies"],"notes":["Cinder Brew's projectile travels at a speed of 1600.","Places a debuff on enemy units in the area upon cast. Leaving or entering the area afterwards has no effect.","The self-attack proc is determined upon attack begin. It is indicated by mug of beer falling on the attacking unit's head. The attack is made to target the unit itself, instead of its original attack target. All attack modifiers apply normally, if they can affect allies. The self-attack is never lethal. Also works against instant attack.","When an enemy with the Cinder Brew debuff takes 80 or more spell damage in a single instance (before reductions), it receives the ignition debuff. The brew has no limit on how many times it can be ignited. Each spell damage above the threshold triggers it. Multiple instances of the ignition debuff do not stack. Igniting it again refreshes the duration.","The ignition deals 10\/12.5\/15\/17.5 damage in 0.5 second intervals, starting 0.5 seconds after being placed, resulting in 6 instances.","Can deal up to 60\/75\/90\/105 damage per ignited unit (before reductions).","Recasting onto the same enemies refreshes the duration, but does not update the debuff to the current level. If already ignited, refreshing it does not cause the damage to stop"],"mana":"50","elements":["Does not pierce spell immunity."],"cooldown":"20\/18\/16\/14","name":"Cinder Brew","description":["Cast Animation: 0.2+0.6","Cast Range: 850","Radius: 400","Self Attack Chance: 20%\/25%\/30%\/35%","Movement Speed Slow: 25%","Minimum Spell Damage for Ignition: 80","Ignition Damage per Second: 20\/25\/30\/35","Brew Duration: 7","Ignition Duration: 3"],"hot_key":"W","legacy_key":"D"},{"spell":"Goes into a drunken brawler state, granting you a chance to avoid attacks and to deal critical damage. Moves with a varying amount of movement speed, alternating between 20% slower and 40% faster. Lasts 5 seconds.","effects":["Ability No Target","Affects Self \/ Enemies"],"notes":["Interrupts Brewmaster's channeling spells on cast.","While active, increases attack damage by an average of 56%\/80%\/104%\/128% ( 196%\/220%\/244%\/268%) and survivability versus attacks by 100%\/150%\/233%\/400%.","The proc chances of multiple crit sources stack. If two sources of critical strike proc at the same time, the higher multiplier has priority.","Drunken Brawler's evasion stacks multiplicatively with other sources of evasion.","Drunken Brawler's crit and evasion use pseudo-random distribution.","The sound and particles of the critical strike play upon start of the attack, not when the attack lands.","The movement speed change switches around every second, starting with the bonus. This results in a 40% movement speed bonus in the first, third and fifth second, and a 20% movement speed slow in the second and fourth second."],"mana":"35\/40\/45\/50","elements":["Pierces spell immunity."],"cooldown":"23\/21\/19\/17","name":"Drunken Brawler","description":["Cast Animation: 0+0","Evasion: 50%\/60%\/70%\/80%","Critical Chance: 80%","Critical Damage: 170%\/200%\/230%\/260% ( 345%\/375%\/405%\/435%)","Movement Speed Slow: 20%","Movement Speed Bonus: 40%","Duration: 5"],"hot_key":"E","legacy_key":"B"},{"spell":"Splits Brewmaster into elements, forming 3 specialized warriors, adept at survival. If any of them survive until the end of their summoned timer, the Brewmaster is reborn.","effects":["Ability No Target","Affects Self"],"notes":["Brewmaster is invulnerable and hidden during the split time and duration. Does not apply any form of dispel upon cast.","During Primal Split, Brewmaster is periodically moved to Earth's position. If Earth dies, to Storm's and if Storm dies, to Fire's. This affects multiple things such as: When Primal Split ends, Brewmaster appears at Earth's location. If Earth is dead, at Storm's and if Storm is dead, at Fire's location. Every aura Brewmaster has (including Gem of True Sight and Radiance) affects units around Earth, if Earth is dead, around Storm and if Storm is dead, around Fire. Effects which react on heroes' presence ( Smoke of Deceit, Marksmanship, Blur) react on Earth's presence, if Earth is dead, on Storm's and if Storm is dead, on Fire's. Teleporting effects like Holy Persuasion or Relocate cause the periodic moving of Brewmaster to get canceled, so that the 3 notes above do not apply anymore.","The spirits spawn always in the same formation, forming an equilateral triangle which fits within a 100 radius circle. The earth spirit is always spawned 100 range in front on Brewmaster's cast location. The storm spirit is always spawned 50 range behind and 86.603 range to the left of Brewmaster's cast location. The fire spirit is always spawned 50 range behind and 86.603 range to the right of Brewmaster's cast location. Their facing angle equals Brewmaster's facing angle on cast.","The spirits are creep-heroes and ancient creeps, making them interact differently with several spells. For detailed interactions follow the two links."],"mana":"125\/150\/175","elements":[],"cooldown":"140\/130\/120 ( 75\/65\/55)","name":"Primal Split","description":["Cast Animation: 0.65+0","Split Time: 0.6","Duration: 16\/18\/20"],"hot_key":"R","legacy_key":"R"},{"spell":"Throws a boulder at a unit, doing damage and stunning it.","effects":["Ability Target Unit","Affects Enemies","Damage Magical"],"notes":["The boulder travels at a speed of 800.","The boulder first applies the debuff, then the damage."],"mana":"0","elements":["Can be disjointed.","Blocked by Linken's Sphere.","Does not pierce spell immunity."],"cooldown":"5","name":"Hurl Boulder","description":["Cast Animation: 0.25+0.8","Cast Range: 800","Damage: 50\/100\/150","Stun Duration: 2"],"hot_key":"Q","legacy_key":"D"},{"spell":"Immune to spells.","effects":["Ability Passive","Affects Self"],"notes":[],"mana":"0","elements":["Not disabled by Break."],"cooldown":"0","name":"Spell Immunity","description":["Magic Resistance Bonus: 100%"]},{"spell":"Deals bonus damage to buildings.","effects":["Ability Passive","Affects Enemies"],"notes":["The damage is directly added to Earth's attack damage. But since it is conditional, it is not visible in the HUD."],"mana":"0","elements":["Disabled by Break."],"cooldown":"0","name":"Demolish","description":["Building Attack Damage Bonus: 90\/180\/270"]},{"spell":"Slams the ground, dealing damage and slowing the movement speed and attack rate of nearby enemy land units.","effects":["Ability No Target","Affects Enemies","Damage Magical"],"notes":["Given to Earth when holding Aghanim's Scepter, at the same level as the original Brewmaster.","Same notes as for Brewmaster's Thunder Clap apply."],"mana":"90\/100\/110\/120","elements":["Does not pierce spell immunity."],"cooldown":"13","name":"Thunder Clap","description":["Cast Animation: 0.4+0.53","Radius: 400","Damage: 100\/175\/250\/300","Move Speed Slow: 25%\/35%\/45%\/55%","Attack Speed Slow: 25\/35\/45\/55","Hero Slow Duration: 4 ( 7)","Creep Slow Duration: 8 ( 11)"],"hot_key":"R","legacy_key":"C"},{"spell":"Damages summoned units in an area and purges most buffs or debuffs.","effects":["Ability Target Area","Affects Enemies \/ Allies","Damage Magical"],"notes":["Applies a basic dispel on all units within the area.","Always dispels Cyclone off of units within the area, regardless of alliances. Besides this, follows the default dispel rules, dispelling debuffs off of allies, and buffs off of enemies.","The damage is applied to units which were created by an ability, including illusions. Creep-heroes are only affected when they also are considered ancient creeps.","Affects invulnerable, but not hidden units."],"mana":"75","elements":["Partially pierces spell immunity."],"cooldown":"4","name":"Dispel Magic","description":["Cast Animation: 0.4+0.93","Cast Range: 500","Radius: 600","Damage to Summons: 1000"],"hot_key":"Q","legacy_key":"D"},{"spell":"Encloses a unit in a tornado, removing it from the battlefield.","effects":["Ability Target Unit","Affects Enemies"],"notes":["Applies a cyclone effect on the target upon cast, so it turns it invulnerable and fully disables it.","However, unlike other cyclones, this one does not dispel the target.","While in the air, other units may pass below the cycloned unit.","Can be cast on Roshan, but has no effect, since Roshan is immune to forced movement. He only gets interrupted."],"mana":"150","elements":["Blocked by Linken's Sphere.","Does not pierce spell immunity."],"cooldown":"8","name":"Cyclone","description":["Cast Animation: 0.4+0.67","Cast Range: 600","Hero Duration: 6","Creep Duration: 20"],"hot_key":"W","legacy_key":"C"},{"spell":"Provides temporary invisibility, bonus movement speed and attack damage when invisible.","effects":["Ability No Target","Affects Self \/ Enemies","Damage Physical"],"notes":["Does not interrupt Storm's channeling spells upon cast.","The bonus damage is dealt in one instance together with the attack damage, and counts as attack damage as well. It can be lifestealed off of, and is considered by crit or cleave. It is not affected by percentage-based attack damage bonuses or reductions, but can be reduced with flat reductions.","During the fade time, Storm can cast spells and perform attacks without breaking the invisibility. Those attacks do apply the 100\/160\/220 damage to the target.","The bonus damage is not applied when attacking buildings out of the invisibility, but is applied against wards.","The invisibility is lost upon reaching the cast point of spells, or upon launching an attack. This means when the attack misses, the invisibility is still lost.","Allows Storm to pass through other units, including wards, but not through buildings."],"mana":"75","elements":["Pierces spell immunity."],"cooldown":"5","name":"Wind Walk","description":["Cast Animation: 0+0","Fade Time: 0.6","Move Speed Bonus: 50%","Damage: 100\/160\/220","Duration: 20"],"hot_key":"E","legacy_key":"W"},{"spell":"Drenches an area in alcohol, causing enemy units to have a chance to attack themselves, and combust for a short period whenever spell damage over 80 is dealt.","effects":["Ability Target Area","Affects Enemies"],"notes":["Given to Storm when holding Aghanim's Scepter, at the same level as the original Brewmaster.","Same notes as for Brewmaster's Cinder Brew apply."],"mana":"50","elements":["Does not pierce spell immunity."],"cooldown":"20\/18\/16\/14","name":"Cinder Brew","description":["Cast Animation: 0.2+0.67","Cast Range: 850","Radius: 400","Self Attack Chance: 20%\/25%\/30%\/35%","Movement Speed Slow: 25%","Minimum Spell Damage for Ignition: 80","Ignition Damage per Second: 20\/25\/30\/35","Brew Duration: 7","Ignition Duration: 3"],"hot_key":"R","legacy_key":"T"},{"spell":"Burns nearby enemy units.","effects":["Ability Aura","Affects Enemies","Damage Magical"],"notes":["Permanent Immolation is an aura. Its debuff lingers for 0.5 seconds.","Deals damage in 1 second intervals, starting 1 second after the debuff is placed.","Can deal up to 330\/740\/1230 damage to a single unit (before reductions) if it stays within range for its whole duration."],"mana":"0","elements":["Not disabled by Break.","Does not pierce spell immunity."],"cooldown":"0","name":"Permanent Immolation","description":["Radius: 220","Damage per Second: 20\/40\/60","Aura Linger Duration: 0.5"]},{"spell":"Goes into a drunken brawler state, granting you a chance to avoid attacks and to deal critical damage. Moves with a varying amount of movement speed, alternating between 20% slower and 40% faster. Lasts 5 seconds.","effects":["Ability No Target","Affects Self \/ Enemies"],"notes":["Given to Fire when holding Aghanim's Scepter, at the same level as the original Brewmaster.","Same notes as for Brewmaster's Drunken Brawler apply."],"mana":"35\/40\/45\/50","elements":["Pierces spell immunity."],"cooldown":"23\/21\/19\/17","name":"Drunken Brawler","description":["Cast Animation: 0+0","Evasion: 50%\/60%\/70%\/80%","Critical Chance: 80%","Critical Damage: 170%\/200%\/230%\/260% ( 345%\/375%\/405%\/435%)","Movement Speed Slow: 20%","Movement Speed Bonus: 40%","Duration: 5"],"hot_key":"W","legacy_key":"W"}],"bio":"Deep in the Wailing Mountains, in a valley beneath the Ruined City, the ancient Order of the Oyo has for centuries practiced its rites of holy reverie, communing with the spirit realm in grand festivals of drink. Born to a mother's flesh by a Celestial father, the youth known as Mangix was the first to grow up with the talents of both lineages. He trained with the greatest aesthetes of the Order, eventually earning, through diligent drunkenness, the right to challenge for the title of Brewmaster, that appellation most honored among the contemplative malt-brewing sect. As much drinking competition as mortal combat, Mangix for nine days drank and fought the elder master. For nine nights they stumbled and whirled, chugged and struck, until at last the elder warrior collapsed into a drunken stupor, and a new Brewmaster was named. Now the new, young Brewmaster calls upon the strength of his Oyo forebears to speed his staff. When using magic, it is to his spirit ancestors that he turns. Like all Brewmasters before him, he was sent out from his people with a single mission. He wanders the land, striving toward enlightenment through drink, searching for the answer to the ancient spiritual schism. Hoping to think the single thought that will unite the spirit and physical planes again.","talentsTips":["The health talent increases maximum health capacity, and keeps the current health percentage.","This attack damage talent is added as raw attack damage, so it does not benefit illusions, and is not affected by most percentage-based damage increasing or reducing effects.","The magic resistance talent stacks multiplicatively with other sources of magic resistance.","The magic resistance talent increases Brewmaster's magic resistance to 40%."],"trivia":["Brewmaster, like Storm Spirit, Ember Spirit and Earth Spirit, was a Pandaren in DotA. However, he was re-skinned due to copyright issues with Blizzard Entertainment. His design is similar to that of a red panda, rather than the giant panda that the Pandaren in DotA were based on.","Primal Split's sound effect upon spawning the 3 spirits is based on this laughter response line of Brewmaster."],"talents":["+175% Drunken Brawler Critical Strike Damage:-65s Primal Split Cooldown","+100 Attack Speed:+1500 Health to Primal Split Units","+20% Magic Resistance:+3s Thunder Clap Slow","+200 Health:+20 Damage"],"desc":"Mangix the Brewmaster is a melee strength hero that can fill almost any role, though he is primarily seen as a carry, ganker, tank or initiator. He fits well into any lane, but is very experience dependent, which means he is often seen on the offlane or the midlane. His core abilities make him a respectable physical damage dealer and an especially good duelist since he has abilities that involve negating opposing attacks while strengthening his own. However, his true power lies in his ultimate, Primal Split, which, if used properly, can by itself turn the tide of a team fight. Each of the three aspects of the Brewmaster are exceptionally powerful, with exceptional disables, survivability against magic and physical attacks, and damage; they are also able to charge recklessly into the enemy since the damage they take is not permanent, and very rarely will all three die before Primal Split ends. For this reason, Brewmaster is almost always built to fully maximize the potential of this ultimate, getting items such as Blink Dagger so that he can combo into his ultimate without risk of being initiated on, Heart of Tarrasque to ensure he can survive the first wave of stuns and burst in order to cast his ultimate, and of course Aghanim's Scepter to give his spirits his abilities, Thunder Clap to Earth, Drunken Haze to Storm, and Drunken Brawler to Fire, all independent of the original Brewmaster's cooldowns for his abilities."}
+{
+  "abilities": [
+    {
+      "spell": "Slams the ground, dealing damage and slowing the movement speed and attack rate of nearby enemy land units.",
+      "effects": [
+        "Ability No Target",
+        "Affects Enemies",
+        "Damage Magical"
+      ],
+      "notes": [
+        "Treats creep-heroes as creeps.",
+        "The clap first applies the debuff, then the damage."
+      ],
+      "mana": "90\/100\/110\/120",
+      "elements": [
+        "Does not pierce spell immunity."
+      ],
+      "cooldown": "13",
+      "name": "Thunder Clap",
+      "description": [
+        "Cast Animation: 0.4+0.4",
+        "Radius: 400",
+        "Damage: 100\/175\/250\/300",
+        "Move Speed Slow: 25%\/35%\/45%\/55%",
+        "Attack Speed Slow: 25\/35\/45\/55",
+        "Hero Slow Duration: 4 ( 7)",
+        "Creep Slow Duration: 8 ( 11)"
+      ],
+      "hot_key": "Q",
+      "legacy_key": "C"
+    },
+    {
+      "spell": "Drenches an area in alcohol, causing enemy units to have a chance to attack themselves, and combust for a short period whenever spell damage over 80 is dealt.",
+      "effects": [
+        "Ability Target Area",
+        "Affects Enemies"
+      ],
+      "notes": [
+        "Cinder Brew's projectile travels at a speed of 1600.",
+        "Places a debuff on enemy units in the area upon cast. Leaving or entering the area afterwards has no effect.",
+        "The self-attack proc is determined upon attack begin. It is indicated by mug of beer falling on the attacking unit's head. The attack is made to target the unit itself, instead of its original attack target. All attack modifiers apply normally, if they can affect allies. The self-attack is never lethal. Also works against instant attack.",
+        "When an enemy with the Cinder Brew debuff takes 80 or more spell damage in a single instance (before reductions), it receives the ignition debuff. The brew has no limit on how many times it can be ignited. Each spell damage above the threshold triggers it. Multiple instances of the ignition debuff do not stack. Igniting it again refreshes the duration.",
+        "The ignition deals 10\/12.5\/15\/17.5 damage in 0.5 second intervals, starting 0.5 seconds after being placed, resulting in 6 instances.",
+        "Can deal up to 60\/75\/90\/105 damage per ignited unit (before reductions).",
+        "Recasting onto the same enemies refreshes the duration, but does not update the debuff to the current level. If already ignited, refreshing it does not cause the damage to stop"
+      ],
+      "mana": "50",
+      "elements": [
+        "Does not pierce spell immunity."
+      ],
+      "cooldown": "20\/18\/16\/14",
+      "name": "Cinder Brew",
+      "description": [
+        "Cast Animation: 0.2+0.6",
+        "Cast Range: 850",
+        "Radius: 400",
+        "Self Attack Chance: 20%\/25%\/30%\/35%",
+        "Movement Speed Slow: 25%",
+        "Minimum Spell Damage for Ignition: 80",
+        "Ignition Damage per Second: 20\/25\/30\/35",
+        "Brew Duration: 7",
+        "Ignition Duration: 3"
+      ],
+      "hot_key": "W",
+      "legacy_key": "D"
+    },
+    {
+      "spell": "Goes into a drunken brawler state, granting you a chance to avoid attacks and to deal critical damage. Moves with a varying amount of movement speed, alternating between 20% slower and 40% faster. Lasts 5 seconds.",
+      "effects": [
+        "Ability No Target",
+        "Affects Self \/ Enemies"
+      ],
+      "notes": [
+        "Interrupts Brewmaster's channeling spells on cast.",
+        "While active, increases attack damage by an average of 56%\/80%\/104%\/128% ( 196%\/220%\/244%\/268%) and survivability versus attacks by 100%\/150%\/233%\/400%.",
+        "The proc chances of multiple crit sources stack. If two sources of critical strike proc at the same time, the higher multiplier has priority.",
+        "Drunken Brawler's evasion stacks multiplicatively with other sources of evasion.",
+        "Drunken Brawler's crit and evasion use pseudo-random distribution.",
+        "The sound and particles of the critical strike play upon start of the attack, not when the attack lands.",
+        "The movement speed change switches around every second, starting with the bonus. This results in a 40% movement speed bonus in the first, third and fifth second, and a 20% movement speed slow in the second and fourth second."
+      ],
+      "mana": "35\/40\/45\/50",
+      "elements": [
+        "Pierces spell immunity."
+      ],
+      "cooldown": "23\/21\/19\/17",
+      "name": "Drunken Brawler",
+      "description": [
+        "Cast Animation: 0+0",
+        "Evasion: 50%\/60%\/70%\/80%",
+        "Critical Chance: 80%",
+        "Critical Damage: 170%\/200%\/230%\/260% ( 345%\/375%\/405%\/435%)",
+        "Movement Speed Slow: 20%",
+        "Movement Speed Bonus: 40%",
+        "Duration: 5"
+      ],
+      "hot_key": "E",
+      "legacy_key": "B"
+    },
+    {
+      "spell": "Splits Brewmaster into elements, forming 3 specialized warriors, adept at survival. If any of them survive until the end of their summoned timer, the Brewmaster is reborn.",
+      "effects": [
+        "Ability No Target",
+        "Affects Self"
+      ],
+      "notes": [
+        "Brewmaster is invulnerable and hidden during the split time and duration. Does not apply any form of dispel upon cast.",
+        "During Primal Split, Brewmaster is periodically moved to Earth's position. If Earth dies, to Storm's and if Storm dies, to Fire's. This affects multiple things such as: When Primal Split ends, Brewmaster appears at Earth's location. If Earth is dead, at Storm's and if Storm is dead, at Fire's location. Every aura Brewmaster has (including Gem of True Sight and Radiance) affects units around Earth, if Earth is dead, around Storm and if Storm is dead, around Fire. Effects which react on heroes' presence ( Smoke of Deceit, Marksmanship, Blur) react on Earth's presence, if Earth is dead, on Storm's and if Storm is dead, on Fire's. Teleporting effects like Holy Persuasion or Relocate cause the periodic moving of Brewmaster to get canceled, so that the 3 notes above do not apply anymore.",
+        "The spirits spawn always in the same formation, forming an equilateral triangle which fits within a 100 radius circle. The earth spirit is always spawned 100 range in front on Brewmaster's cast location. The storm spirit is always spawned 50 range behind and 86.603 range to the left of Brewmaster's cast location. The fire spirit is always spawned 50 range behind and 86.603 range to the right of Brewmaster's cast location. Their facing angle equals Brewmaster's facing angle on cast.",
+        "The spirits are creep-heroes and ancient creeps, making them interact differently with several spells. For detailed interactions follow the two links."
+      ],
+      "mana": "125\/150\/175",
+      "elements": [],
+      "cooldown": "140\/130\/120 ( 75\/65\/55)",
+      "name": "Primal Split",
+      "description": [
+        "Cast Animation: 0.65+0",
+        "Split Time: 0.6",
+        "Duration: 16\/18\/20"
+      ],
+      "hot_key": "R",
+      "legacy_key": "R"
+    },
+    {
+      "spell": "Throws a boulder at a unit, doing damage and stunning it.",
+      "effects": [
+        "Ability Target Unit",
+        "Affects Enemies",
+        "Damage Magical"
+      ],
+      "notes": [
+        "The boulder travels at a speed of 800.",
+        "The boulder first applies the debuff, then the damage."
+      ],
+      "mana": "0",
+      "elements": [
+        "Can be disjointed.",
+        "Blocked by Linken's Sphere.",
+        "Does not pierce spell immunity."
+      ],
+      "cooldown": "5",
+      "name": "Hurl Boulder",
+      "description": [
+        "Cast Animation: 0.25+0.8",
+        "Cast Range: 800",
+        "Damage: 50\/100\/150",
+        "Stun Duration: 2"
+      ],
+      "hot_key": "Q",
+      "legacy_key": "D"
+    },
+    {
+      "spell": "Immune to spells.",
+      "effects": [
+        "Ability Passive",
+        "Affects Self"
+      ],
+      "notes": [],
+      "mana": "0",
+      "elements": [
+        "Not disabled by Break."
+      ],
+      "cooldown": "0",
+      "name": "Spell Immunity",
+      "description": [
+        "Magic Resistance Bonus: 100%"
+      ]
+    },
+    {
+      "spell": "Deals bonus damage to buildings.",
+      "effects": [
+        "Ability Passive",
+        "Affects Enemies"
+      ],
+      "notes": [
+        "The damage is directly added to Earth's attack damage. But since it is conditional, it is not visible in the HUD."
+      ],
+      "mana": "0",
+      "elements": [
+        "Disabled by Break."
+      ],
+      "cooldown": "0",
+      "name": "Demolish",
+      "description": [
+        "Building Attack Damage Bonus: 90\/180\/270"
+      ]
+    },
+    {
+      "spell": "Slams the ground, dealing damage and slowing the movement speed and attack rate of nearby enemy land units.",
+      "effects": [
+        "Ability No Target",
+        "Affects Enemies",
+        "Damage Magical"
+      ],
+      "notes": [
+        "Given to Earth when holding Aghanim's Scepter, at the same level as the original Brewmaster.",
+        "Same notes as for Brewmaster's Thunder Clap apply."
+      ],
+      "mana": "90\/100\/110\/120",
+      "elements": [
+        "Does not pierce spell immunity."
+      ],
+      "cooldown": "13",
+      "name": "Thunder Clap",
+      "description": [
+        "Cast Animation: 0.4+0.53",
+        "Radius: 400",
+        "Damage: 100\/175\/250\/300",
+        "Move Speed Slow: 25%\/35%\/45%\/55%",
+        "Attack Speed Slow: 25\/35\/45\/55",
+        "Hero Slow Duration: 4 ( 7)",
+        "Creep Slow Duration: 8 ( 11)"
+      ],
+      "hot_key": "R",
+      "legacy_key": "C"
+    },
+    {
+      "spell": "Damages summoned units in an area and purges most buffs or debuffs.",
+      "effects": [
+        "Ability Target Area",
+        "Affects Enemies \/ Allies",
+        "Damage Magical"
+      ],
+      "notes": [
+        "Applies a basic dispel on all units within the area.",
+        "Always dispels Cyclone off of units within the area, regardless of alliances. Besides this, follows the default dispel rules, dispelling debuffs off of allies, and buffs off of enemies.",
+        "The damage is applied to units which were created by an ability, including illusions. Creep-heroes are only affected when they also are considered ancient creeps.",
+        "Affects invulnerable, but not hidden units."
+      ],
+      "mana": "75",
+      "elements": [
+        "Partially pierces spell immunity."
+      ],
+      "cooldown": "4",
+      "name": "Dispel Magic",
+      "description": [
+        "Cast Animation: 0.4+0.93",
+        "Cast Range: 500",
+        "Radius: 600",
+        "Damage to Summons: 1000"
+      ],
+      "hot_key": "Q",
+      "legacy_key": "D"
+    },
+    {
+      "spell": "Encloses a unit in a tornado, removing it from the battlefield.",
+      "effects": [
+        "Ability Target Unit",
+        "Affects Enemies"
+      ],
+      "notes": [
+        "Applies a cyclone effect on the target upon cast, so it turns it invulnerable and fully disables it.",
+        "However, unlike other cyclones, this one does not dispel the target.",
+        "While in the air, other units may pass below the cycloned unit.",
+        "Can be cast on Roshan, but has no effect, since Roshan is immune to forced movement. He only gets interrupted."
+      ],
+      "mana": "150",
+      "elements": [
+        "Blocked by Linken's Sphere.",
+        "Does not pierce spell immunity."
+      ],
+      "cooldown": "8",
+      "name": "Cyclone",
+      "description": [
+        "Cast Animation: 0.4+0.67",
+        "Cast Range: 600",
+        "Hero Duration: 6",
+        "Creep Duration: 20"
+      ],
+      "hot_key": "W",
+      "legacy_key": "C"
+    },
+    {
+      "spell": "Provides temporary invisibility, bonus movement speed and attack damage when invisible.",
+      "effects": [
+        "Ability No Target",
+        "Affects Self \/ Enemies",
+        "Damage Physical"
+      ],
+      "notes": [
+        "Does not interrupt Storm's channeling spells upon cast.",
+        "The bonus damage is dealt in one instance together with the attack damage, and counts as attack damage as well. It can be lifestealed off of, and is considered by crit or cleave. It is not affected by percentage-based attack damage bonuses or reductions, but can be reduced with flat reductions.",
+        "During the fade time, Storm can cast spells and perform attacks without breaking the invisibility. Those attacks do apply the 100\/160\/220 damage to the target.",
+        "The bonus damage is not applied when attacking buildings out of the invisibility, but is applied against wards.",
+        "The invisibility is lost upon reaching the cast point of spells, or upon launching an attack. This means when the attack misses, the invisibility is still lost.",
+        "Allows Storm to pass through other units, including wards, but not through buildings."
+      ],
+      "mana": "75",
+      "elements": [
+        "Pierces spell immunity."
+      ],
+      "cooldown": "5",
+      "name": "Wind Walk",
+      "description": [
+        "Cast Animation: 0+0",
+        "Fade Time: 0.6",
+        "Move Speed Bonus: 50%",
+        "Damage: 100\/160\/220",
+        "Duration: 20"
+      ],
+      "hot_key": "E",
+      "legacy_key": "W"
+    },
+    {
+      "spell": "Drenches an area in alcohol, causing enemy units to have a chance to attack themselves, and combust for a short period whenever spell damage over 80 is dealt.",
+      "effects": [
+        "Ability Target Area",
+        "Affects Enemies"
+      ],
+      "notes": [
+        "Given to Storm when holding Aghanim's Scepter, at the same level as the original Brewmaster.",
+        "Same notes as for Brewmaster's Cinder Brew apply."
+      ],
+      "mana": "50",
+      "elements": [
+        "Does not pierce spell immunity."
+      ],
+      "cooldown": "20\/18\/16\/14",
+      "name": "Cinder Brew",
+      "description": [
+        "Cast Animation: 0.2+0.67",
+        "Cast Range: 850",
+        "Radius: 400",
+        "Self Attack Chance: 20%\/25%\/30%\/35%",
+        "Movement Speed Slow: 25%",
+        "Minimum Spell Damage for Ignition: 80",
+        "Ignition Damage per Second: 20\/25\/30\/35",
+        "Brew Duration: 7",
+        "Ignition Duration: 3"
+      ],
+      "hot_key": "R",
+      "legacy_key": "T"
+    },
+    {
+      "spell": "Burns nearby enemy units.",
+      "effects": [
+        "Ability Aura",
+        "Affects Enemies",
+        "Damage Magical"
+      ],
+      "notes": [
+        "Permanent Immolation is an aura. Its debuff lingers for 0.5 seconds.",
+        "Deals damage in 1 second intervals, starting 1 second after the debuff is placed.",
+        "Can deal up to 330\/740\/1230 damage to a single unit (before reductions) if it stays within range for its whole duration."
+      ],
+      "mana": "0",
+      "elements": [
+        "Not disabled by Break.",
+        "Does not pierce spell immunity."
+      ],
+      "cooldown": "0",
+      "name": "Permanent Immolation",
+      "description": [
+        "Radius: 220",
+        "Damage per Second: 20\/40\/60",
+        "Aura Linger Duration: 0.5"
+      ]
+    },
+    {
+      "spell": "Goes into a drunken brawler state, granting you a chance to avoid attacks and to deal critical damage. Moves with a varying amount of movement speed, alternating between 20% slower and 40% faster. Lasts 5 seconds.",
+      "effects": [
+        "Ability No Target",
+        "Affects Self \/ Enemies"
+      ],
+      "notes": [
+        "Given to Fire when holding Aghanim's Scepter, at the same level as the original Brewmaster.",
+        "Same notes as for Brewmaster's Drunken Brawler apply."
+      ],
+      "mana": "35\/40\/45\/50",
+      "elements": [
+        "Pierces spell immunity."
+      ],
+      "cooldown": "23\/21\/19\/17",
+      "name": "Drunken Brawler",
+      "description": [
+        "Cast Animation: 0+0",
+        "Evasion: 50%\/60%\/70%\/80%",
+        "Critical Chance: 80%",
+        "Critical Damage: 170%\/200%\/230%\/260% ( 345%\/375%\/405%\/435%)",
+        "Movement Speed Slow: 20%",
+        "Movement Speed Bonus: 40%",
+        "Duration: 5"
+      ],
+      "hot_key": "W",
+      "legacy_key": "W"
+    }
+  ],
+  "bio": "Deep in the Wailing Mountains, in a valley beneath the Ruined City, the ancient Order of the Oyo has for centuries practiced its rites of holy reverie, communing with the spirit realm in grand festivals of drink. Born to a mother's flesh by a Celestial father, the youth known as Mangix was the first to grow up with the talents of both lineages. He trained with the greatest aesthetes of the Order, eventually earning, through diligent drunkenness, the right to challenge for the title of Brewmaster, that appellation most honored among the contemplative malt-brewing sect. As much drinking competition as mortal combat, Mangix for nine days drank and fought the elder master. For nine nights they stumbled and whirled, chugged and struck, until at last the elder warrior collapsed into a drunken stupor, and a new Brewmaster was named. Now the new, young Brewmaster calls upon the strength of his Oyo forebears to speed his staff. When using magic, it is to his spirit ancestors that he turns. Like all Brewmasters before him, he was sent out from his people with a single mission. He wanders the land, striving toward enlightenment through drink, searching for the answer to the ancient spiritual schism. Hoping to think the single thought that will unite the spirit and physical planes again.",
+  "talentsTips": [
+    "The health talent increases maximum health capacity, and keeps the current health percentage.",
+    "This attack damage talent is added as raw attack damage, so it does not benefit illusions, and is not affected by most percentage-based damage increasing or reducing effects.",
+    "The magic resistance talent stacks multiplicatively with other sources of magic resistance.",
+    "The magic resistance talent increases Brewmaster's magic resistance to 40%."
+  ],
+  "trivia": [
+    "Brewmaster, like Storm Spirit, Ember Spirit and Earth Spirit, was a Pandaren in DotA. However, he was re-skinned due to copyright issues with Blizzard Entertainment. His design is similar to that of a red panda, rather than the giant panda that the Pandaren in DotA were based on.",
+    "Primal Split's sound effect upon spawning the 3 spirits is based on this laughter response line of Brewmaster."
+  ],
+  "talents": [
+    "+175% Drunken Brawler Critical Strike Damage:-65s Primal Split Cooldown",
+    "+100 Attack Speed:+1500 Health to Primal Split Units",
+    "+20% Magic Resistance:+3s Thunder Clap Slow",
+    "+200 Health:+20 Damage"
+  ],
+  "desc": "Mangix the Brewmaster is a melee strength hero that can fill almost any role, though he is primarily seen as a carry, ganker, tank or initiator. He fits well into any lane, but is very experience dependent, which means he is often seen on the offlane or the midlane. His core abilities make him a respectable physical damage dealer and an especially good duelist since he has abilities that involve negating opposing attacks while strengthening his own. However, his true power lies in his ultimate, Primal Split, which, if used properly, can by itself turn the tide of a team fight. Each of the three aspects of the Brewmaster are exceptionally powerful, with exceptional disables, survivability against magic and physical attacks, and damage; they are also able to charge recklessly into the enemy since the damage they take is not permanent, and very rarely will all three die before Primal Split ends. For this reason, Brewmaster is almost always built to fully maximize the potential of this ultimate, getting items such as Blink Dagger so that he can combo into his ultimate without risk of being initiated on, Heart of Tarrasque to ensure he can survive the first wave of stuns and burst in order to cast his ultimate, and of course Aghanim's Scepter to give his spirits his abilities, Thunder Clap to Earth, Drunken Haze to Storm, and Drunken Brawler to Fire, all independent of the original Brewmaster's cooldowns for his abilities."
+}
