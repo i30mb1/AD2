@@ -11,11 +11,7 @@ import android.os.Bundle;
 import android.os.Handler;
 import android.preference.PreferenceManager;
 import android.support.annotation.Nullable;
-import android.support.constraint.ConstraintLayout;
-import android.support.constraint.ConstraintSet;
 import android.support.transition.ChangeBounds;
-import android.support.transition.Fade;
-import android.support.transition.Transition;
 import android.support.transition.TransitionManager;
 import android.support.transition.TransitionSet;
 import android.support.v7.widget.LinearLayoutManager;
@@ -23,17 +19,13 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.view.Window;
 import android.view.WindowManager;
-import android.view.animation.AccelerateDecelerateInterpolator;
-import android.view.animation.AccelerateInterpolator;
 import android.view.animation.AnticipateInterpolator;
-import android.view.animation.AnticipateOvershootInterpolator;
-import android.view.animation.BounceInterpolator;
 
 import n7.ad2.R;
-import n7.ad2.utils.BaseActivity;
-import n7.ad2.utils.PlainAdapter;
 import n7.ad2.databinding.ActivitySplashNormalBinding;
 import n7.ad2.main.MainActivity;
+import n7.ad2.utils.BaseActivity;
+import n7.ad2.utils.PlainAdapter;
 import n7.ad2.utils.UnscrollableLinearLayoutManager;
 
 public class SplashActivity extends BaseActivity {

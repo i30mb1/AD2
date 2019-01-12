@@ -8,18 +8,15 @@ import android.graphics.drawable.BitmapDrawable;
 import android.graphics.drawable.Drawable;
 import android.os.Build;
 import android.os.Bundle;
-import android.support.design.widget.TabLayout;
 import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentManager;
 import android.support.v4.app.FragmentPagerAdapter;
-import android.support.v4.view.ViewPager;
-import android.support.v7.widget.Toolbar;
 import android.view.View;
 import android.view.ViewTreeObserver;
 
+import n7.ad2.R;
 import n7.ad2.databinding.ActivityHeroFullBinding;
 import n7.ad2.utils.AppExecutors;
-import n7.ad2.R;
 import n7.ad2.utils.BaseActivity;
 import n7.ad2.utils.Utils;
 

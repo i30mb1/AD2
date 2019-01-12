@@ -9,7 +9,6 @@ import org.json.JSONObject;
 import java.util.ArrayList;
 import java.util.List;
 
-import n7.ad2.heroes.full.ResponseModel;
 import n7.ad2.utils.Utils;
 
 public class ResponsesStorage {

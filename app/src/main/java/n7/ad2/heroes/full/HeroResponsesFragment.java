@@ -29,8 +29,8 @@ import java.io.File;
 import java.util.ArrayList;
 import java.util.List;
 
-import n7.ad2.utils.AppExecutors;
 import n7.ad2.R;
+import n7.ad2.utils.AppExecutors;
 import n7.ad2.utils.StickyHeaderDecorator;
 
 public class HeroResponsesFragment extends Fragment implements SearchView.OnQueryTextListener {

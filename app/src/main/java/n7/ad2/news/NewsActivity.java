@@ -12,10 +12,10 @@ import android.webkit.WebSettings;
 import android.webkit.WebView;
 
 import n7.ad2.R;
-import n7.ad2.utils.BaseActivity;
 import n7.ad2.news.db.NewsDao;
 import n7.ad2.news.db.NewsModel;
 import n7.ad2.news.db.NewsRoomDatabase;
+import n7.ad2.utils.BaseActivity;
 
 
 public class NewsActivity extends BaseActivity {
