@@ -95,11 +95,11 @@
     <string name="ad4">конролируй прозрачность и скорость чата</string>
     <string name="ad5">установливай уведомление о начале матча</string>
     <string name="ad6">выбирайте один из пяти метовых вариантов гайда</string>
-    <string name="ad7">а также вы получите :\n- доступ к играм для 2 игроков;\n- возможность переключать тексты на английский язык;\n- отключение рекламы;\n- более качественный продукт;\n- для 6-месячных подписчиков возможность добавить ваш Twitch аккаунт в топ просматриваемых;</string>
+    <string name="ad7">а также вы получите :\n\n- доступ к играм для 2 игроков;\n\n- возможность переключать тексты на английский язык;\n\n- отключение рекламы;\n\n- более качественный продукт;\n\n- для 6-месячных подписчиков возможность добавить ваш Twitch аккаунт в топ просматриваемых;</string>
     <string name="commercial_7">СТАВЬ УВЕДОМЛЕНИЯ КОТОРЫЕ НАПОМНЯТ ТЕБЕ О НАЧАЛЕ ТУРНИРНЫХ ИГР</string>
     <string name="commercial_8">ДАЙ ВОЗМОЖНОСТЬ ПРОДОЛЖАТЬ РАБОТУ НАД ПРОЕКТОМ</string>
-    <string name="dialog_donate_me_summary">Рассмотри приобритение ежемесячной подписки, спасибо!</string>
-    <string name="dialog_donate_me_title">Мы заметили что ты активно используешь приложение, и это радует нас.</string>
+    <string name="dialog_donate_me_summary">Ты можешь получить подписку 2 способами:\n\n1. Купить подписку на месяц\n\n2. Посмотрев короткую рекламу (кнопка появляется на главном экране)\n\nЧтобы узнат что даст тебе подписка нажми кнопку ниже</string>
+    <string name="dialog_donate_me_title">Расширь функционал приложения получив подписку!</string>
     <string name="all_subscription_activated">активна</string>
     <string name="all_subscription_deactivated">не активна</string>
     <string name="all_activate">активировать</string>
@@ -117,5 +117,6 @@
     <string name="activity_game2p1_clicks">КЛИКИ</string>
     <string name="tv_second_remains">секунд осталось</string>
     <string name="activity_game2p1_your_apm">твой апм</string>
+    <string name="fragment_game_G3">can you buy it?</string>
 
 </resources>

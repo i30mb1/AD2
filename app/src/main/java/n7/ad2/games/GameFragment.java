@@ -72,6 +72,15 @@ public class GameFragment extends Fragment implements SharedPreferences.OnShared
         startActivity(intent, optionsCompat.toBundle());
     }
 
+
+    @SuppressWarnings({"unchecked", "ConstantConditions"})
+    public void startG3P1() {
+        Pair<View, String> p2 = Pair.create((View) binding.tvActivityGame3p1Title, "tv2");
+        ActivityOptionsCompat optionsCompat = ActivityOptionsCompat.makeSceneTransitionAnimation(getActivity(), p2);
+        Intent intent = new Intent(getContext(), Game3p1.class);
+        startActivity(intent, optionsCompat.toBundle());
+    }
+
     @SuppressWarnings({"unchecked", "ConstantConditions"})
     public void startG2P2() {
         Intent intent = new Intent(getContext(), Game2p2.class);

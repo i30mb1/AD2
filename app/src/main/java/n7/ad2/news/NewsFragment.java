@@ -65,7 +65,9 @@ public class NewsFragment extends Fragment {
         viewModel.getNews().observe(this, new Observer<PagedList<NewsModel>>() {
             @Override
             public void onChanged(@Nullable PagedList<NewsModel> newsModels) {
-                adapter.submitList(newsModels);
+                if (adapter != null) {
+                    adapter.submitList(newsModels);
+                }
             }
         });
     }

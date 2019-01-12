@@ -131,8 +131,8 @@ public class MainViewModel extends AndroidViewModel {
                         } else {
                             if (showSnackbar) snackbarMessage.postValue(R.string.update_ok);
                         }
-                        application.sendBroadcast(new Intent(LOG_ON_RECEIVE).putExtra(LOG_ON_RECEIVE, "device_version = " + deviceVersion));
-                        application.sendBroadcast(new Intent(LOG_ON_RECEIVE).putExtra(LOG_ON_RECEIVE, "server_version = " + serverVersion));
+                        application.sendBroadcast(new Intent(LOG_ON_RECEIVE).putExtra(LOG_ON_RECEIVE, "device_version_" + deviceVersion));
+                        application.sendBroadcast(new Intent(LOG_ON_RECEIVE).putExtra(LOG_ON_RECEIVE, "server_version_" + serverVersion));
                     }
                 } catch (IOException e) {
                     e.printStackTrace();

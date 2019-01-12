@@ -67,6 +67,11 @@ public class HeroFullActivity extends BaseActivity {
         binding.tabActivityHeroFull.setupWithViewPager(binding.vpActivityHeroFull);
     }
 
+    @Override
+    protected void onResume() {
+        super.onResume();
+    }
+
     private void setToolbar() {
         try {
             String name = getIntent().getStringExtra(HERO_NAME);

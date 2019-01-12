@@ -32,7 +32,9 @@ import android.view.ViewGroup;
 import android.view.animation.LinearInterpolator;
 import android.view.inputmethod.InputMethodManager;
 
+import com.google.android.gms.ads.AdListener;
 import com.google.android.gms.ads.AdRequest;
+import com.google.android.gms.ads.InterstitialAd;
 import com.google.android.gms.ads.MobileAds;
 import com.google.android.gms.ads.reward.RewardItem;
 import com.google.android.gms.ads.reward.RewardedVideoAd;
@@ -74,8 +76,8 @@ import static n7.ad2.splash.SplashViewModel.FREE_SUBSCRIPTION_DAYS;
 
 public class MainActivity extends BaseActivity {
 
-    public static final int COUNTER_DIALOG_RATE = 20;
-    public static final int COUNTER_DIALOG_DONATE = 30;
+    public static final int COUNTER_DIALOG_RATE = 15;
+    public static final int COUNTER_DIALOG_DONATE = 10;
 
     public static final String FIREBASE_DIALOG_DONATE_SAW = "DIALOG_DONATE_SAW";
     public static final String FIREBASE_DIALOG_PRE_DONATE_SAW = "DIALOG_PRE_DONATE_SAW";
@@ -86,13 +88,16 @@ public class MainActivity extends BaseActivity {
     public static final String GITHUB_LAST_APK_URL = "https://github.com/i30mb1/AD2/blob/master/app/release/app-release.apk?raw=true";
     public static final String ADMOB_ID = "ca-app-pub-5742225922710304/8697652489";
     public static final String ADMOB_ID_FAKE = "ca-app-pub-3940256099942544/5224354917";
+    public static final String ADMOB_ID_BACK = "ca-app-pub-5742225922710304/6328775876";
+    public static final String ADMOB_ID_BACK_FAKE = "ca-app-pub-3940256099942544/1033173712";
     public static final String LOG_ON_RECEIVE = "log";
     public static final String DIALOG_RATE_SAW = "DIALOG_RATE_SAW";
     public static final String DIALOG_VIDEO_AD_SAW = "DIALOG_VIDEO_AD_SAW";
+    public static final int ACTION_BEFORE_SHOW_ADVERTISEMENT = 3;
     private static final String DIALOG_PRE_DONATE_LAST_DAY = "DIALOG_PRE_DONATE_LAST_DAY";
     public ObservableInt observableLastItem = new ObservableInt(1);
     public ObservableBoolean freeSubscriptionButtonVisibility = new ObservableBoolean(false);
-    private int enterCounter = 0;
+    private int timeCounter = -1;
     private boolean doubleBackToExitPressedOnce = false;
     private ConstraintSet constraintSetHidden = new ConstraintSet();
     private ConstraintSet constraintSetOrigin = new ConstraintSet();
@@ -113,12 +118,13 @@ public class MainActivity extends BaseActivity {
     private RewardedVideoAd rewardedVideoAd;
     private boolean subscription;
     private int currentDay;
+    private InterstitialAd interstitialAd;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
 
-        setupRewardedVideoAd();
+
         currentDay = PreferenceManager.getDefaultSharedPreferences(this).getInt(CURRENT_DAY_IN_APP, 0);
         viewModel = ViewModelProviders.of(this).get(MainViewModel.class);
 
@@ -129,36 +135,24 @@ public class MainActivity extends BaseActivity {
         bindingDrawer.setViewModel(viewModel);
         bindingDrawer.setActivity(this);
 
+        setupRecyclerView();
+        log("on_Create");
         setupToolbar();
         setupDrawer();
-        setupRecyclerView();
         setupListeners();
         setupSecretActivity();
+        setupAD();
 
         setLastFragment();
 
-        log("on_Create");
-    }
 
-    public void subscriptionButtonState() {
-        subscription = PreferenceManager.getDefaultSharedPreferences(MainActivity.this).getBoolean(SUBSCRIPTION_PREF, false);
-        if (subscription) {
-            freeSubscriptionButtonVisibility.set(false);
-            return;
-        }
-        if (rewardedVideoAd != null && rewardedVideoAd.isLoaded()) {
-            freeSubscriptionButtonVisibility.set(true);
-        } else {
-            freeSubscriptionButtonVisibility.set(false);
-            loadVideoAD();
-        }
     }
 
     public void showVideoAD(View view) {
         int lastDayVideoAD = PreferenceManager.getDefaultSharedPreferences(this).getInt(DIALOG_VIDEO_AD_SAW, 0);
 
         if (lastDayVideoAD == currentDay) {
-            rewardedVideoAd.show();
+           if(rewardedVideoAd!=null) rewardedVideoAd.show();
         } else {
             showDialogForVideoAD();
         }
@@ -185,19 +179,38 @@ public class MainActivity extends BaseActivity {
         PreferenceManager.getDefaultSharedPreferences(this).edit().putInt(DIALOG_VIDEO_AD_SAW, currentDay).apply();
     }
 
-    private void loadVideoAD() {
-        if (rewardedVideoAd != null)
-            rewardedVideoAd.loadAd(ADMOB_ID, new AdRequest.Builder().build());
+    public void setSubscriptionButton() {
+        subscription = PreferenceManager.getDefaultSharedPreferences(MainActivity.this).getBoolean(SUBSCRIPTION_PREF, false);
+        if (subscription) {
+            freeSubscriptionButtonVisibility.set(false);
+            return;
+        }
+        if (rewardedVideoAd != null && rewardedVideoAd.isLoaded()) {
+            freeSubscriptionButtonVisibility.set(true);
+        } else {
+            freeSubscriptionButtonVisibility.set(false);
+            loadVideoAD();
+        }
     }
 
-    public void setupRewardedVideoAd() {
+    public void setupAD() {
         subscription = PreferenceManager.getDefaultSharedPreferences(MainActivity.this).getBoolean(SUBSCRIPTION_PREF, false);
-        if (subscription) return;
+        if (subscription) {
+            log("AD_disabled");
+            return;
+        }
+
+        log("AD_enabled");
+        setupVideoAD();
+        setupInterstitialAD();
+    }
+
+    private void setupVideoAD() {
         rewardedVideoAd = MobileAds.getRewardedVideoAdInstance(this);
         rewardedVideoAd.setRewardedVideoAdListener(new RewardedVideoAdListener() {
             @Override
             public void onRewardedVideoAdLoaded() {
-                subscriptionButtonState();
+                setSubscriptionButton();
             }
 
             @Override
@@ -221,7 +234,6 @@ public class MainActivity extends BaseActivity {
                 log("free_subscription = +10 min");
                 OneTimeWorkRequest worker = new OneTimeWorkRequest.Builder(ADRewardWorker.class)
                         .setInitialDelay(rewardItem.getAmount(), TimeUnit.MINUTES).build();
-//                        .setInitialDelay(30, TimeUnit.SECONDS).build();
                 WorkManager.getInstance().enqueue(worker);
             }
 
@@ -232,7 +244,7 @@ public class MainActivity extends BaseActivity {
 
             @Override
             public void onRewardedVideoAdFailedToLoad(int i) {
-
+                log("failed_to_load_rewarded_video");
             }
 
             @Override
@@ -241,6 +253,36 @@ public class MainActivity extends BaseActivity {
             }
         });
         loadVideoAD();
+    }
+
+    private void loadVideoAD() {
+        if (rewardedVideoAd != null)
+            rewardedVideoAd.loadAd(ADMOB_ID_FAKE, new AdRequest.Builder().build());
+    }
+
+    private void setupInterstitialAD() {
+        interstitialAd = new InterstitialAd(this);
+        interstitialAd.setAdUnitId(ADMOB_ID_BACK_FAKE);
+        interstitialAd.setAdListener(new AdListener() {
+            @Override
+            public void onAdClosed() {
+                super.onAdClosed();
+                loadInterstitialAD();
+            }
+        });
+        loadInterstitialAD();
+    }
+
+    private void loadInterstitialAD() {
+        if (interstitialAd != null) interstitialAd.loadAd(new AdRequest.Builder().build());
+    }
+
+    private void ShowInterstitialAd() {
+        if (!subscription) {
+            if (interstitialAd != null && interstitialAd.isLoaded()) {
+                interstitialAd.show();
+            }
+        }
     }
 
     private void setupListeners() {
@@ -366,6 +408,7 @@ public class MainActivity extends BaseActivity {
         } else {
             bindingActivity.getRoot().animate().alpha(0.0f).setDuration(500).start();
         }
+        setSubscriptionButton();
         return true;
     }
 
@@ -398,9 +441,10 @@ public class MainActivity extends BaseActivity {
     }
 
     private void incCountEnter() {
-        enterCounter++;
-        if (enterCounter > COUNTER_DIALOG_RATE) showDialogRate();
-        if (enterCounter > COUNTER_DIALOG_DONATE) showPreDialogDonate();
+        timeCounter++;
+//        if (timeCounter > COUNTER_DIALOG_RATE) showDialogRate();
+        if (timeCounter > COUNTER_DIALOG_DONATE) showPreDialogDonate();
+        if (timeCounter % ACTION_BEFORE_SHOW_ADVERTISEMENT == 0) ShowInterstitialAd();
     }
 
     @SuppressWarnings("ConstantConditions")
@@ -428,10 +472,8 @@ public class MainActivity extends BaseActivity {
                 PreferenceManager.getDefaultSharedPreferences(this).edit().putInt(DIALOG_PRE_DONATE_LAST_DAY, currentDay + 2).apply();
                 FirebaseAnalytics firebaseAnalytics = FirebaseAnalytics.getInstance(this);
                 firebaseAnalytics.logEvent(FIREBASE_DIALOG_PRE_DONATE_SAW, null);
-                enterCounter = 0;
+                timeCounter = 0;
             }
-        } else {
-            enterCounter = 0;
         }
 
     }
@@ -466,7 +508,7 @@ public class MainActivity extends BaseActivity {
             firebaseAnalytics.logEvent(FIREBASE_DIALOG_RATE_SAW, null);
         }
         if (subscription) {
-            enterCounter = 0;
+            timeCounter = 0;
         }
     }
 
@@ -548,7 +590,7 @@ public class MainActivity extends BaseActivity {
     protected void onResume() {
         if (rewardedVideoAd != null) rewardedVideoAd.resume(this);
         log("on_Resume");
-        subscriptionButtonState();
+        setSubscriptionButton();
         incCountEnter();
         regReceiver();
         super.onResume();

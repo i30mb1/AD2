@@ -96,9 +96,9 @@ public class SplashViewModel extends AndroidViewModel {
             WorkManager.getInstance().beginUniqueWork(NewsWorker.TAG, ExistingWorkPolicy.APPEND, worker).enqueue();
 
             PreferenceManager.getDefaultSharedPreferences(application).edit().putInt(NEWS_LOAD_LAST_DAY, currentDay).apply();
-            log("loading_news_status = is_loading");
+            log("loading_fresh_news");
         } else {
-            log("loading_news_status = was_loaded");
+            log("loading_old_news");
         }
     }
 
@@ -207,7 +207,7 @@ public class SplashViewModel extends AndroidViewModel {
                                 setSubscriptionMessage(true);
                             }
                         }
-                        log("subscription_days_remain = " + freeSubscriptionDays);
+                        log("subscription_days_remain_" + freeSubscriptionDays);
                     }
 
                 }
@@ -219,7 +219,7 @@ public class SplashViewModel extends AndroidViewModel {
 
     private void setSubscriptionMessage(boolean subscription) {
         PreferenceManager.getDefaultSharedPreferences(application).edit().putBoolean(SUBSCRIPTION_PREF, subscription).apply();
-        log("subscription_status = " + subscription);
+        log("subscription_status_" + subscription);
     }
 
     private void setupFirebaseAnalytics() {

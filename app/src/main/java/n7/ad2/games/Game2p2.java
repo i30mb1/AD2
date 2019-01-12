@@ -39,13 +39,14 @@ public class Game2p2 extends AppCompatActivity {
     public ObservableInt secondRemains = new ObservableInt();
     public ObservableField<String> endTextPlayer1 = new ObservableField<>();
     public ObservableField<String> endTextPlayer2 = new ObservableField<>();
-    private int soundIdAxeHit;
     private SoundPool soundPool;
     private int width;
     private int heightPlayer1;
     private int heightPlayer2;
     private ActivityGame2p2Binding binding;
     private int sizeInPx;
+    private int pain1;
+    private int pain2;
 
     public static int convertDpToPixel(Context ctx, int dp) {
         float density = ctx.getResources().getDisplayMetrics().density;
@@ -72,7 +73,8 @@ public class Game2p2 extends AppCompatActivity {
 
     private void initSoundPoolPlayer() {
         soundPool = new SoundPool(2, AudioManager.STREAM_MUSIC, 0);
-        soundIdAxeHit = soundPool.load(this, R.raw.axe_hit, 1);
+        pain1 = soundPool.load(this, R.raw.pain1, 1);
+        pain2 = soundPool.load(this, R.raw.pain2, 1);
     }
 
     private void setCreepsInCenter() {
@@ -184,7 +186,7 @@ public class Game2p2 extends AppCompatActivity {
     public void moveCreepPlayer1(View view) {
         incClicksPlayer1();
         setMarginsPlayer1(view);
-        playSoundClick();
+        playSoundClickPlayer1();
         if (clicksPlayer1.get() > 10) {
             binding.ivCreep2Player1.setVisibility(View.VISIBLE);
             startPulsing(binding.ivCreep2Player1, 700L);
@@ -194,7 +196,7 @@ public class Game2p2 extends AppCompatActivity {
     public void moveCreepPlayer2(View view) {
         incClicksPlayer2();
         setMarginsPlayer2(view);
-        playSoundClick();
+        playSoundClickPlayer2();
         if (clicksPlayer2.get() > 10) {
             binding.ivCreep2Player2.setVisibility(View.VISIBLE);
             startPulsing(binding.ivCreep2Player2, 650);
@@ -229,8 +231,11 @@ public class Game2p2 extends AppCompatActivity {
         heightPlayer2 = (size.y - sizeInPx) / 2;
     }
 
-    private void playSoundClick() {
-        soundPool.play(soundIdAxeHit, 0.6F, 0.6F, 0, 0, 0.5F);
+    private void playSoundClickPlayer1() {
+        soundPool.play(pain1, 1F, 1F, 0, 0, 1F);
+    }
+    private void playSoundClickPlayer2() {
+        soundPool.play(pain2, 1F, 1F, 0, 0, 1F);
     }
 
 }

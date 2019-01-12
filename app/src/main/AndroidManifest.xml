@@ -75,8 +75,16 @@
             android:name="com.google.android.gms.ads.APPLICATION_ID"
             android:value="ca-app-pub-5742225922710304~2823923052" />
 
-        <activity android:name=".games.Game1p2" />
-        <activity android:name=".games.Game2p2"></activity>
+        <activity android:name=".games.Game1p2"
+            android:screenOrientation="portrait"  />
+        <activity android:name=".games.Game2p2"
+            android:screenOrientation="portrait" />
+        <activity android:name=".games.Game3p1"
+            android:screenOrientation="portrait">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+            </intent-filter>
+        </activity>
     </application>
 
 </manifest>
