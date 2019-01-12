@@ -257,12 +257,12 @@ public class MainActivity extends BaseActivity {
 
     private void loadVideoAD() {
         if (rewardedVideoAd != null)
-            rewardedVideoAd.loadAd(ADMOB_ID_FAKE, new AdRequest.Builder().build());
+            rewardedVideoAd.loadAd(ADMOB_ID, new AdRequest.Builder().build());
     }
 
     private void setupInterstitialAD() {
         interstitialAd = new InterstitialAd(this);
-        interstitialAd.setAdUnitId(ADMOB_ID_BACK_FAKE);
+        interstitialAd.setAdUnitId(ADMOB_ID_BACK);
         interstitialAd.setAdListener(new AdListener() {
             @Override
             public void onAdClosed() {

@@ -1,18 +1,1 @@
-{
-  "cost": "850",
-  "description": "A shiny ring found beneath a fat halfling\u2019s corpse.",
-  "further": [
-    "Hood_of_Defiance",
-    "Perseverance",
-    "Vanguard",
-    "Helm_of_the_Dominator"
-  ],
-  "attrs": [
-    "Bonus +6 Health regeneration",
-    "Disassemble? No",
-    "Alert allies? No"
-  ],
-  "info": [
-    "Ring of Health is partially shareable."
-  ]
-}
+{"cost":"850","description":"A shiny ring found beneath a fat halfling\u2019s corpse.","further":["Hood_of_Defiance","Perseverance","Vanguard","Helm_of_the_Dominator"],"attrs":["Bonus +6 Health regeneration","Disassemble? No","Alert allies? No"],"info":["Ring of Health is partially shareable."]}

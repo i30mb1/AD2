@@ -1,15 +1,1 @@
-{
-  "cost": "875",
-  "description": "A basic staff that allows you to strike quickly.",
-  "further": [
-    "Oblivion_Staff",
-    "Monkey_King_Bar",
-    "Butterfly",
-    "Mask_of_Madness"
-  ],
-  "attrs": [
-    "Bonus +10 Attack speed +10 Attack damage",
-    "Disassemble? No",
-    "Alert allies? No"
-  ]
-}
+{"cost":"875","description":"A basic staff that allows you to strike quickly.","further":["Oblivion_Staff","Monkey_King_Bar","Butterfly","Mask_of_Madness"],"attrs":["Bonus +10 Attack speed +10 Attack damage","Disassemble? No","Alert allies? No"]}

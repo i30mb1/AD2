@@ -1,13 +1,1 @@
-{
-  "cost": "1400",
-  "description": "A sword that can cut through armor, it's a commonly chosen first weapon for budding swordsmen.",
-  "further": [
-    "Shadow_Blade",
-    "Satanic"
-  ],
-  "attrs": [
-    "Bonus +21 Attack damage",
-    "Disassemble? No",
-    "Alert allies? No"
-  ]
-}
+{"cost":"1400","description":"A sword that can cut through armor, it's a commonly chosen first weapon for budding swordsmen.","further":["Shadow_Blade","Satanic"],"attrs":["Bonus +21 Attack damage","Disassemble? No","Alert allies? No"]}

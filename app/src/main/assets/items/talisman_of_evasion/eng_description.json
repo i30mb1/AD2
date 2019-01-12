@@ -1,17 +1,1 @@
-{
-  "cost": "1400",
-  "description": "A necklace that allows you to anticipate enemy attacks.",
-  "further": [
-    "Butterfly",
-    "Heaven's_Halberd"
-  ],
-  "attrs": [
-    "Bonus +15% Evasion",
-    "Disassemble? No",
-    "Alert allies? No"
-  ],
-  "info": [
-    "The evasion stacks diminishingly with other sources of evasion.",
-    "The evasion uses pseudo-random distribution."
-  ]
-}
+{"cost":"1400","description":"A necklace that allows you to anticipate enemy attacks.","further":["Butterfly","Heaven's_Halberd"],"attrs":["Bonus +15% Evasion","Disassemble? No","Alert allies? No"],"info":["The evasion stacks diminishingly with other sources of evasion.","The evasion uses pseudo-random distribution."]}

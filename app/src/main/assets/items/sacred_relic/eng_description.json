@@ -1,17 +1,1 @@
-{
-  "cost": "3800",
-  "description": "An ancient weapon that often turns the tides of war.",
-  "further": [
-    "Divine_Rapier",
-    "Radiance",
-    "Nullifier"
-  ],
-  "attrs": [
-    "Bonus +60 Attack damage",
-    "Disassemble? No",
-    "Alert allies? No"
-  ],
-  "info": [
-    "When having a Demon Edge and a Radiance recipe in the inventory, buying Sacred Relic results in a finished Radiance, and not a Divine Rapier. Similarly, having a Helm of Iron Will and a Demon Edge in the inventory will result in a finished Nullifier."
-  ]
-}
+{"cost":"3800","description":"An ancient weapon that often turns the tides of war.","further":["Divine_Rapier","Radiance","Nullifier"],"attrs":["Bonus +60 Attack damage","Disassemble? No","Alert allies? No"],"info":["When having a Demon Edge and a Radiance recipe in the inventory, buying Sacred Relic results in a finished Radiance, and not a Divine Rapier. Similarly, having a Helm of Iron Will and a Demon Edge in the inventory will result in a finished Nullifier."]}

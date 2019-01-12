@@ -1,15 +1,1 @@
-{
-  "cost": "500",
-  "description": "A pair of magical gloves that seems to render weapons weightless.",
-  "further": [
-    "Phase_Boots",
-    "Hand_of_Midas",
-    "Armlet_of_Mordiggian",
-    "Helm_of_the_Dominator"
-  ],
-  "attrs": [
-    "Bonus +20 Attack speed",
-    "Disassemble? No",
-    "Alert allies? No"
-  ]
-}
+{"cost":"500","description":"A pair of magical gloves that seems to render weapons weightless.","further":["Phase_Boots","Hand_of_Midas","Armlet_of_Mordiggian","Helm_of_the_Dominator"],"attrs":["Bonus +20 Attack speed","Disassemble? No","Alert allies? No"]}
