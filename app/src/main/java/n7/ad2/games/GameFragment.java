@@ -90,7 +90,7 @@ public class GameFragment extends Fragment implements SharedPreferences.OnShared
     @Override
     public void onSharedPreferenceChanged(SharedPreferences sharedPreferences, String key) {
         if (key.equals(SUBSCRIPTION_PREF)) {
-            subscription.set(sharedPreferences.getBoolean(key,false));
+            subscription.set(sharedPreferences.getBoolean(key, false));
         }
     }
 }

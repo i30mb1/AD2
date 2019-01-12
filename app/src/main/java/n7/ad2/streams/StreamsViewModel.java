@@ -20,7 +20,7 @@ public class StreamsViewModel extends AndroidViewModel {
         super(application);
         this.application = application;
 
-        streamsStorage = new StreamsStorage(application,isLoading);
+        streamsStorage = new StreamsStorage(application, isLoading);
     }
 
     public LiveData<PagedList<Streams>> getStreams() {

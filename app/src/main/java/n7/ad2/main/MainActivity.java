@@ -152,7 +152,7 @@ public class MainActivity extends BaseActivity {
         int lastDayVideoAD = PreferenceManager.getDefaultSharedPreferences(this).getInt(DIALOG_VIDEO_AD_SAW, 0);
 
         if (lastDayVideoAD == currentDay) {
-           if(rewardedVideoAd!=null) rewardedVideoAd.show();
+            if (rewardedVideoAd != null) rewardedVideoAd.show();
         } else {
             showDialogForVideoAD();
         }

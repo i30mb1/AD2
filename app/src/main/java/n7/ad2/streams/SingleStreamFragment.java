@@ -153,8 +153,8 @@ public class SingleStreamFragment extends Fragment implements SurfaceHolder.Call
                         public void onPrivMsg(TwitchUser sender, TwitchMessage message) {
                             super.onPrivMsg(sender, message);
                             adapterChat.add(sender.getName() + ": " + message.getContent());
-                            if(!linearLayout.isSmoothScrolling())
-                            rv_fragment_single_stream_chat.smoothScrollToPosition(adapterChat.getItemCount() - 1);
+                            if (!linearLayout.isSmoothScrolling())
+                                rv_fragment_single_stream_chat.smoothScrollToPosition(adapterChat.getItemCount() - 1);
                         }
                     });
                 } catch (IOException | InterruptedException e) {
@@ -272,7 +272,7 @@ public class SingleStreamFragment extends Fragment implements SurfaceHolder.Call
                         @Override
                         public void onClick(DialogInterface dialogInterface, int i) {
                             qualityPosition = i;
-                            tv_fragment_single_quality.setText(qualitiesTitles.get(qualityPosition).substring(0,3).toLowerCase());
+                            tv_fragment_single_quality.setText(qualitiesTitles.get(qualityPosition).substring(0, 3).toLowerCase());
                             startStreamWithDefineQuality();
                             dialogInterface.dismiss();
                         }
@@ -288,8 +288,8 @@ public class SingleStreamFragment extends Fragment implements SurfaceHolder.Call
             public void onClick(View v) {
                 if (getFragmentManager() != null) {
 //                    getFragmentManager().beginTransaction().remove(SingleStreamFragment.this).commit();
-                    if(getContext()!=null)
-                        getContext().sendBroadcast(new Intent("refresh_ll").putExtra("id",((FrameLayout) view.getParent()).getId()));
+                    if (getContext() != null)
+                        getContext().sendBroadcast(new Intent("refresh_ll").putExtra("id", ((FrameLayout) view.getParent()).getId()));
                 }
             }
         });
@@ -301,11 +301,9 @@ public class SingleStreamFragment extends Fragment implements SurfaceHolder.Call
             public void onClick(View v) {
                 if (alphaChat == 1.0F) {
                     alphaChat = 0.6F;
-                }
-                else if (alphaChat == 0.6F) {
+                } else if (alphaChat == 0.6F) {
                     alphaChat = 0.3F;
-                }
-                else if (alphaChat == 0.3F) {
+                } else if (alphaChat == 0.3F) {
                     alphaChat = 1.0F;
                 }
                 tv_fragment_single_alpha.setText(String.valueOf(alphaChat));

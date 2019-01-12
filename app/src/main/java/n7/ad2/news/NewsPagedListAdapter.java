@@ -17,7 +17,7 @@ public class NewsPagedListAdapter extends PagedListAdapter<NewsModel, NewsPagedL
     private static final DiffUtil.ItemCallback<NewsModel> DIFF_CALLBACK = new DiffUtil.ItemCallback<NewsModel>() {
         @Override
         public boolean areItemsTheSame(@NonNull NewsModel oldItem, @NonNull NewsModel newItem) {
-            return oldItem.getId()==newItem.getId();
+            return oldItem.getId() == newItem.getId();
         }
 
         @Override

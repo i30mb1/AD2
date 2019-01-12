@@ -23,7 +23,7 @@ public class ADRewardWorker extends Worker {
         boolean subscription = PreferenceManager.getDefaultSharedPreferences(getApplicationContext()).getBoolean(SUBSCRIPTION_PREF, false);
 
         if (subscription) {
-            PreferenceManager.getDefaultSharedPreferences(getApplicationContext()).edit().putBoolean(SUBSCRIPTION_PREF,false).apply();
+            PreferenceManager.getDefaultSharedPreferences(getApplicationContext()).edit().putBoolean(SUBSCRIPTION_PREF, false).apply();
             getApplicationContext().sendBroadcast(new Intent(LOG_ON_RECEIVE).putExtra(LOG_ON_RECEIVE, "FREE_SUBSCRIPTION = END"));
         }
 

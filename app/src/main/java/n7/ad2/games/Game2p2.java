@@ -234,6 +234,7 @@ public class Game2p2 extends AppCompatActivity {
     private void playSoundClickPlayer1() {
         soundPool.play(pain1, 1F, 1F, 0, 0, 1F);
     }
+
     private void playSoundClickPlayer2() {
         soundPool.play(pain2, 1F, 1F, 0, 0, 1F);
     }

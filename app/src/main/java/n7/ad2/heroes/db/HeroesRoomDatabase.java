@@ -16,7 +16,7 @@ import java.util.concurrent.Executor;
 import n7.ad2.R;
 import n7.ad2.utils.Utils;
 
-@Database(entities = {HeroModel.class}, version = 7,exportSchema = false)
+@Database(entities = {HeroModel.class}, version = 7, exportSchema = false)
 public abstract class HeroesRoomDatabase extends RoomDatabase {
 
     public abstract HeroesDao heroesDao();
@@ -46,7 +46,7 @@ public abstract class HeroesRoomDatabase extends RoomDatabase {
                                                         JSONArray jsonHeroes = new JSONArray(new Utils().readJSONFromAsset(context, "heroes.json"));
                                                         for (int i = 0; i < jsonHeroes.length(); i++) {
                                                             JSONObject jsonObject = jsonHeroes.getJSONObject(i);
-                                                            HeroModel heroes = new HeroModel(jsonObject.getString("name"),jsonObject.getString("nameEng"));
+                                                            HeroModel heroes = new HeroModel(jsonObject.getString("name"), jsonObject.getString("nameEng"));
                                                             if (jsonObject.getString("name").equals("roshan")) {
                                                                 heroes.setSkillBuilds("Spell Block/Bash/Slam+Spell Block/Bash/Slam+Spell Block/Bash/Slam+Spell Block/Bash/Slam+Spell Block/Bash/Slam");
                                                                 heroes.setTime("fresh+fresh+fresh+fresh+fresh");
@@ -58,7 +58,7 @@ public abstract class HeroesRoomDatabase extends RoomDatabase {
                                                                 heroes.setStartingItems("aegis_of_the_immortal+aegis_of_the_immortal+aegis_of_the_immortal+aegis_of_the_immortal+aegis_of_the_immortal");
                                                                 heroes.setFurtherItems("refresher_shard+cheese/refresher_shard+cheese/refresher_shard+cheese/refresher_shard+cheese/refresher_shard+cheese/refresher_shard");
                                                             }
-                                                            getDatabase(context,diskIO).heroesDao().insert(heroes);
+                                                            getDatabase(context, diskIO).heroesDao().insert(heroes);
                                                         }
                                                     } catch (JSONException e) {
                                                         e.printStackTrace();

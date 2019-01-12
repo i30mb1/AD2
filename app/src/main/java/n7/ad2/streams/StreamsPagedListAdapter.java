@@ -72,7 +72,8 @@ public class StreamsPagedListAdapter extends PagedListAdapter<Streams, StreamsPa
                     try {
                         int value = Integer.valueOf(binding.tvItemListStreamViewers.getText());
                         int randomValue = +view[new Random().nextInt(view.length - 1)];
-                        if (value + randomValue >= 0) binding.tvItemListStreamViewers.setText(String.valueOf(value + randomValue));
+                        if (value + randomValue >= 0)
+                            binding.tvItemListStreamViewers.setText(String.valueOf(value + randomValue));
                     } catch (NumberFormatException e) {
                         e.printStackTrace();
                     }

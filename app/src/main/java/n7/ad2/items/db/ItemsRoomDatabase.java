@@ -16,7 +16,7 @@ import java.util.concurrent.Executor;
 import n7.ad2.R;
 import n7.ad2.utils.Utils;
 
-@Database(entities = ItemModel.class, version = 3,exportSchema = false)
+@Database(entities = ItemModel.class, version = 3, exportSchema = false)
 public abstract class ItemsRoomDatabase extends RoomDatabase {
 
     private static ItemsRoomDatabase INSTANCE;

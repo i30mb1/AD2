@@ -68,8 +68,8 @@ public class SplashActivity extends BaseActivity {
             public void run() {
                 startNewActivity();
             }
-        }, ANIMATION_DURATION+25);
-        if(scaleDown!=null) scaleDown.cancel();
+        }, ANIMATION_DURATION + 25);
+        if (scaleDown != null) scaleDown.cancel();
         startConstraintAnimation();
     }
 

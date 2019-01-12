@@ -96,7 +96,7 @@ public class Game2p1 extends AppCompatActivity {
         ConstraintSet constraintSet = new ConstraintSet();
         constraintSet.clone(this, R.layout.activity_game2p1_finish);
 
-        TransitionManager.beginDelayedTransition((ViewGroup) binding.getRoot(),new AutoTransition());
+        TransitionManager.beginDelayedTransition((ViewGroup) binding.getRoot(), new AutoTransition());
 
         constraintSet.applyTo((ConstraintLayout) binding.getRoot());
 

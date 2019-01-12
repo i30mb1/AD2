@@ -1,7 +1,7 @@
 package n7.ad2.streams.retrofit;
 
 public class Preview {
-    private String medium="";
+    private String medium = "";
 
     public String getMedium() {
         return medium;

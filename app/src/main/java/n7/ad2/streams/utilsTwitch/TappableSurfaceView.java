@@ -35,7 +35,6 @@ public class TappableSurfaceView extends SurfaceView {
     }
 
 
-
     public void addTapListener(TapListener l) {
         listeners.add(l);
     }

@@ -50,7 +50,7 @@ public class HeroesFragment extends Fragment implements SearchView.OnQueryTextLi
         searchView.setOnQueryTextListener(this);
     }
 
-    public void startHeroFull(View view,HeroModel model) {
+    public void startHeroFull(View view, HeroModel model) {
         Intent intent = new Intent(view.getContext(), HeroFullActivity.class);
         intent.putExtra(HERO_NAME, model.getName());
         intent.putExtra(HERO_CODE_NAME, model.getCodeName());

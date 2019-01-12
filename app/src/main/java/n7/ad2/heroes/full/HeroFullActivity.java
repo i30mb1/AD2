@@ -73,7 +73,7 @@ public class HeroFullActivity extends BaseActivity {
         try {
             String name = getIntent().getStringExtra(HERO_NAME);
             codeName = getIntent().getStringExtra(HERO_CODE_NAME);
-            sendBroadcast(new Intent(LOG_ON_RECEIVE).putExtra(LOG_ON_RECEIVE, "hero_"+codeName+"_loaded"));
+            sendBroadcast(new Intent(LOG_ON_RECEIVE).putExtra(LOG_ON_RECEIVE, "hero_" + codeName + "_loaded"));
             binding.toolbarActivityHeroFull.setTitle(name);
             setSupportActionBar(binding.toolbarActivityHeroFull);
 

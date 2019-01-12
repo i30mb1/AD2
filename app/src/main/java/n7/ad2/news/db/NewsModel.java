@@ -23,6 +23,7 @@ public class NewsModel {
     private String imageHref;
     @Ignore
     private Boolean withImage;
+
     public NewsModel(@NonNull String href) {
         this.href = href;
     }

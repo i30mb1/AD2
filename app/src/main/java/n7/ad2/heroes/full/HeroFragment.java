@@ -297,7 +297,7 @@ public class HeroFragment extends Fragment {
             });
         }
 
-        if (jsonObjectSpell.has("notes")&& subscription) {
+        if (jsonObjectSpell.has("notes") && subscription) {
             final View item_hero_personal_description_simple = getLayoutInflater().inflate(R.layout.item_hero_personal_description_simple, null);
             ((TextView) item_hero_personal_description_simple.findViewById(R.id.tv)).setText(R.string.item_hero_personal_description_notes);
             LinearLayout ll_items_description = item_hero_personal_description_simple.findViewById(R.id.ll_item_description);

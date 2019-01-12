@@ -93,12 +93,12 @@ public class TournamentsWorker extends Worker {
             GamesDao gamesDao = GamesRoomDatabase.getDatabase(getApplicationContext()).gamesDao();
             if (deleteTable) gamesDao.deleteAll();
             gamesDao.setGames(gamesList);
-            getApplicationContext().sendBroadcast(new Intent(LOG_ON_RECEIVE).putExtra(LOG_ON_RECEIVE, "page_"+page+"_loaded"));
+            getApplicationContext().sendBroadcast(new Intent(LOG_ON_RECEIVE).putExtra(LOG_ON_RECEIVE, "page_" + page + "_loaded"));
             return Result.success();
         } catch (Exception e) {
             GamesDao gamesDao = GamesRoomDatabase.getDatabase(getApplicationContext()).gamesDao();
             gamesDao.deleteAllUnfinished();
-            getApplicationContext().sendBroadcast(new Intent(LOG_ON_RECEIVE).putExtra(LOG_ON_RECEIVE, "page_"+page+"_failed"));
+            getApplicationContext().sendBroadcast(new Intent(LOG_ON_RECEIVE).putExtra(LOG_ON_RECEIVE, "page_" + page + "_failed"));
         }
         return Result.failure();
     }

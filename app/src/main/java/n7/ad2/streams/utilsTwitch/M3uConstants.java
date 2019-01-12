@@ -132,11 +132,12 @@ final class M3uConstants {
      * A holder class for Patterns.
      */
     static class Patterns {
-final static Pattern EXTINF = Pattern.compile(tagPattern(M3uConstants.EXTINF) + "\\s*(-1|[0-9]*)\\s*(?:,((.*)))?");
-final static Pattern EXTSTREAMINF = Pattern.compile(tagPattern(M3uConstants.EXT_X_STREAM_INF) + "\\s*(-1|[0-9]*)\\s*(?:,((.*)))?");                // #EXT-X-KEY:METHOD=&lt;method&gt;[,URI="&lt;URI&gt;"
+        final static Pattern EXTINF = Pattern.compile(tagPattern(M3uConstants.EXTINF) + "\\s*(-1|[0-9]*)\\s*(?:,((.*)))?");
+        final static Pattern EXTSTREAMINF = Pattern.compile(tagPattern(M3uConstants.EXT_X_STREAM_INF) + "\\s*(-1|[0-9]*)\\s*(?:,((.*)))?");                // #EXT-X-KEY:METHOD=&lt;method&gt;[,URI="&lt;URI&gt;"
         // #EXT-X-KEY:METHOD=AES-128,URI="https://priv.example.com/key.php?r=52"
         final static Pattern EXT_X_KEY = Pattern.compile(tagPattern(M3uConstants.EXT_X_KEY) + "METHOD=([0-9A-Za-z\\-]*)(,URI=\"(([^\\\\\"]*.*))\")?");
-        final static Pattern EXT_X_TARGET_DURATION = Pattern.compile(tagPattern(M3uConstants.EXT_X_TARGET_DURATION) + "([0-9]*)");                final static Pattern EXT_X_MEDIA_SEQUENCE = Pattern.compile(tagPattern(M3uConstants.EXT_X_MEDIA_SEQUENCE) + "([0-9]*)");
+        final static Pattern EXT_X_TARGET_DURATION = Pattern.compile(tagPattern(M3uConstants.EXT_X_TARGET_DURATION) + "([0-9]*)");
+        final static Pattern EXT_X_MEDIA_SEQUENCE = Pattern.compile(tagPattern(M3uConstants.EXT_X_MEDIA_SEQUENCE) + "([0-9]*)");
         // YYYY-MM-DDThh:mm:ss
         final static Pattern EXT_X_PROGRAM_DATE_TIME = Pattern.compile(tagPattern(M3uConstants.EXT_X_PROGRAM_DATE_TIME)
                 + "(.*)");
@@ -145,11 +146,11 @@ final static Pattern EXTSTREAMINF = Pattern.compile(tagPattern(M3uConstants.EXT_
             throw new AssertionError();
         }
 
-private static String tagPattern(String tagName) {
+        private static String tagPattern(String tagName) {
             return "\\s*" + tagName + "\\s*:\\s*";
         }
 
-/**
+        /**
          * Helper method to create a date object for EXT_X_PROGRAM_DATE_TIME pattern.
          *
          * @param line       the line to parse.

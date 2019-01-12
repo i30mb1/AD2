@@ -26,7 +26,7 @@ public class StreamsStorage {
     private Application application;
     private ObservableBoolean isLoading;
 
-    public StreamsStorage(Application application,ObservableBoolean isLoading) {
+    public StreamsStorage(Application application, ObservableBoolean isLoading) {
         this.application = application;
         this.isLoading = isLoading;
     }

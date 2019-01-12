@@ -5,7 +5,7 @@ import android.arch.persistence.room.Room;
 import android.arch.persistence.room.RoomDatabase;
 import android.content.Context;
 
-@Database(entities = {N7Message.class}, version = 2,exportSchema = false)
+@Database(entities = {N7Message.class}, version = 2, exportSchema = false)
 public abstract class N7MessageRoomDatabase extends RoomDatabase {
 
     public abstract N7MessageDao n7MessageDao();
