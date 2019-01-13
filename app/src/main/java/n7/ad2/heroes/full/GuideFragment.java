@@ -451,7 +451,7 @@ public class GuideFragment extends Fragment {
                     final View item_list_hero = layoutInflater.inflate(R.layout.item_list_hero, null);
                     TextView tv_item_name = item_list_hero.findViewById(R.id.tv_item_list_hero);
                     tv_item_name.setText(hero.split("\\^")[1]);
-                    tv_item_name.setTextColor(getResources().getColor(android.R.color.holo_green_light));
+                    tv_item_name.setTextColor(getActivity().getResources().getColor(android.R.color.holo_green_light));
                     final ImageView iv_item_image = item_list_hero.findViewById(R.id.iv_item_list_hero);
                     if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.LOLLIPOP) {
                         iv_item_image.setTransitionName("");

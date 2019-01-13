@@ -23,18 +23,18 @@ class NewParse {
 
     public static void main(String[] args) {
 
-        String reHeroes[] = new String[]{"invoker"};
+        String reHeroes[] = new String[]{"viper"};
 
         int count = 0;
-        for (String hero : loadHeroesFromFile()) {
+        for (String hero : reHeroes) {
             String counter = String.format(Locale.US, "% d/%d ", ++count, loadHeroesFromFile().size());
-            loadResponses(hero, counter);
+//            loadResponses(hero, counter);
             loadSpellsAndDescription(hero, counter);
         }
 
 //        loadZhItems(false);
-        loadRusItems(false);
-        loadEngItems(false);
+//        loadRusItems(false);
+//        loadEngItems(false);
     }
 
     private static void loadZhItems(boolean loadImage) {
