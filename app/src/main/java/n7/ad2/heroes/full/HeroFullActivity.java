@@ -79,20 +79,21 @@ public class HeroFullActivity extends BaseActivity {
 
             final TypedArray styledAttributes = getTheme().obtainStyledAttributes(new int[]{R.attr.actionBarSize});
             final int mActionBarSize = (int) styledAttributes.getDimension(0, 40) / 2;
-            Bitmap icon = Utils.getBitmapFromAssets(this, String.format("heroes/%s/mini.webp", codeName));
-            icon = Bitmap.createScaledBitmap(icon, mActionBarSize, mActionBarSize, false);
-            final Drawable iconDrawable = new BitmapDrawable(getResources(), icon);
-            binding.toolbarActivityHeroFull.setNavigationIcon(iconDrawable);
 
+
+            try {
+                Utils.startAnimation(HeroFullActivity.this, binding.toolbarActivityHeroFull, "heroes/" + codeName + "/emoticon.webp", false, mActionBarSize);
+            } catch (NullPointerException e) {
+                e.printStackTrace();
+            }
             if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.LOLLIPOP) {
                 binding.toolbarActivityHeroFull.setNavigationOnClickListener(new View.OnClickListener() {
                     @Override
                     public void onClick(View view) {
-                        try {
-                            Utils.startAnimation(HeroFullActivity.this, binding.toolbarActivityHeroFull, "heroes/" + codeName + "/emoticon.webp", false, mActionBarSize);
-                        } catch (NullPointerException e) {
-                            e.printStackTrace();
-                        }
+                        Bitmap icon = Utils.getBitmapFromAssets(HeroFullActivity.this, String.format("heroes/%s/mini.webp", codeName));
+                        icon = Bitmap.createScaledBitmap(icon, mActionBarSize, mActionBarSize, false);
+                        final Drawable iconDrawable = new BitmapDrawable(getResources(), icon);
+                        binding.toolbarActivityHeroFull.setNavigationIcon(iconDrawable);
                     }
                 });
             }
