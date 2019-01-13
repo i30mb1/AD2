@@ -37,6 +37,7 @@ import n7.ad2.news.NewsWorker;
 import n7.ad2.setting.purchaseUtils.IabHelper;
 import n7.ad2.setting.purchaseUtils.IabResult;
 import n7.ad2.setting.purchaseUtils.Inventory;
+import n7.ad2.setting.purchaseUtils.Purchase;
 import n7.ad2.utils.PlainAdapter;
 import n7.ad2.utils.SingleLiveEvent;
 
@@ -182,6 +183,9 @@ public class SplashViewModel extends AndroidViewModel {
 
     }
 
+    public static final String FREE_WEEK = "free_week";
+    public static final String FREE_MONTH = "free_month";
+
     private void checkInventory(final IabHelper mHelper) {
         try {
             mHelper.queryInventoryAsync(new IabHelper.QueryInventoryFinishedListener() {
@@ -189,6 +193,34 @@ public class SplashViewModel extends AndroidViewModel {
                 public void onQueryInventoryFinished(IabResult result, Inventory inv) {
                     if (mHelper == null) return;
                     if (result.isFailure()) return;
+
+                    if (inv.hasPurchase(FREE_WEEK)) {
+                        try {
+                            mHelper.consumeAsync(inv.getPurchase(FREE_WEEK), new IabHelper.OnConsumeFinishedListener() {
+                                @Override
+                                public void onConsumeFinished(Purchase purchase, IabResult result) {
+                                    PreferenceManager.getDefaultSharedPreferences(getApplication()).edit().putInt(FREE_SUBSCRIPTION_DAYS, 7).apply();
+                                    PreferenceManager.getDefaultSharedPreferences(getApplication()).edit().putBoolean(SUBSCRIPTION_PREF, true).apply();
+                                }
+                            });
+                        } catch (IabHelper.IabAsyncInProgressException e) {
+                            e.printStackTrace();
+                        }
+                    }
+
+                    if (inv.hasPurchase(FREE_MONTH)) {
+                        try {
+                            mHelper.consumeAsync(inv.getPurchase(FREE_MONTH), new IabHelper.OnConsumeFinishedListener() {
+                                @Override
+                                public void onConsumeFinished(Purchase purchase, IabResult result) {
+                                    PreferenceManager.getDefaultSharedPreferences(getApplication()).edit().putInt(FREE_SUBSCRIPTION_DAYS, 31).apply();
+                                    PreferenceManager.getDefaultSharedPreferences(getApplication()).edit().putBoolean(SUBSCRIPTION_PREF, true).apply();
+                                }
+                            });
+                        } catch (IabHelper.IabAsyncInProgressException e) {
+                            e.printStackTrace();
+                        }
+                    }
 
                     if (inv.hasPurchase(ONCE_PER_MONTH_SUBSCRIPTION)) {
                         setSubscriptionMessage(true);

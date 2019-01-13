@@ -63,18 +63,6 @@ public class SettingActivity extends BaseActivity {
                         subscription.set(true);
                         PreferenceManager.getDefaultSharedPreferences(SettingActivity.this).edit().putBoolean(SUBSCRIPTION_PREF, true).apply();
                     }
-//            if (inv.hasPurchase(MONTHLY_SUBSCRIPTION)) {
-//                try {
-//                    mHelper.consumeAsync(inv.getPurchase(MONTHLY_SUBSCRIPTION), new IabHelper.OnConsumeFinishedListener() {
-//                        @Override
-//                        public void onConsumeFinished(Purchase purchase, IabResult result) {
-//                            saveTimePremiumMonth();
-//                        }
-//                    });
-//                } catch (IabHelper.IabAsyncInProgressException e) {
-//                    e.printStackTrace();
-//                }
-//            }
                 }
             });
         } catch (IabHelper.IabAsyncInProgressException e) {
