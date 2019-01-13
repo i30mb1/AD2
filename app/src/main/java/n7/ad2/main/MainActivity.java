@@ -93,7 +93,7 @@ public class MainActivity extends BaseActivity {
     public static final String LOG_ON_RECEIVE = "log";
     public static final String DIALOG_RATE_SAW = "DIALOG_RATE_SAW";
     public static final String DIALOG_VIDEO_AD_SAW = "DIALOG_VIDEO_AD_SAW";
-    public static final int ACTION_BEFORE_SHOW_ADVERTISEMENT = 3;
+    public static final int ACTION_BEFORE_SHOW_ADVERTISEMENT = 4;
     private static final String DIALOG_PRE_DONATE_LAST_DAY = "DIALOG_PRE_DONATE_LAST_DAY";
     public ObservableInt observableLastItem = new ObservableInt(1);
     public ObservableBoolean freeSubscriptionButtonVisibility = new ObservableBoolean(false);

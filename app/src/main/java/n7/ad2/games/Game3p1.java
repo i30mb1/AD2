@@ -95,6 +95,8 @@ public class Game3p1 extends AppCompatActivity {
                     startGame();
                 } catch (NullPointerException e) {
                     startGame();
+                } catch (NumberFormatException e) {
+                    startGame();
                 } finally {
                     isLoading.set(false);
                     lock.set(false);
