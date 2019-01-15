@@ -12,7 +12,6 @@ import android.support.annotation.NonNull;
 import android.support.annotation.Nullable;
 
 import androidx.work.Data;
-import androidx.work.ExistingWorkPolicy;
 import androidx.work.OneTimeWorkRequest;
 import androidx.work.WorkInfo;
 import androidx.work.WorkManager;
@@ -44,9 +43,9 @@ public class NewsViewModel extends AndroidViewModel {
 
         PagedList.Config config = new PagedList.Config.Builder()
                 .setPageSize(12)
-                .setPrefetchDistance(6)
                 .setInitialLoadSizeHint(12)
-                .setEnablePlaceholders(false)
+                .setPrefetchDistance(12)
+                .setEnablePlaceholders(true)
                 .build();
 
         news = new LivePagedListBuilder<>(dataSource, config).setBoundaryCallback(new PagedList.BoundaryCallback<NewsModel>() {
@@ -56,18 +55,16 @@ public class NewsViewModel extends AndroidViewModel {
                 pageNews++;
                 Data data = new Data.Builder().putInt(PAGE, pageNews).build();
                 final OneTimeWorkRequest worker = new OneTimeWorkRequest.Builder(NewsWorker.class).setInputData(data).build();
-                WorkManager.getInstance().beginUniqueWork(NewsWorker.TAG, ExistingWorkPolicy.APPEND, worker).enqueue();
+                WorkManager.getInstance().enqueue(worker);
                 WorkManager.getInstance().getWorkInfoByIdLiveData(worker.getId()).observeForever(new Observer<WorkInfo>() {
                     @Override
                     public void onChanged(@Nullable WorkInfo workInfo) {
                         if (workInfo != null) {
                             if (workInfo.getState().isFinished()) {
-                                isLoading.set(true);
-                            } else {
                                 isLoading.set(false);
+                            } else {
+                                isLoading.set(true);
                             }
-                        } else {
-                            isLoading.set(false);
                         }
                     }
                 });

@@ -24,7 +24,7 @@ public class CustomsDataBinding {
 
     @BindingAdapter({"srcPath", "withImage"})
     public static void loadUrl(ImageView view, String srcPath, Boolean withImage) {
-        if (withImage) {
+        if (withImage != null && withImage) {
             Picasso.get().load(srcPath).into(view);
         }
     }

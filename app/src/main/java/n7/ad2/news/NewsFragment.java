@@ -25,7 +25,6 @@ import static n7.ad2.main.MainActivity.LOG_ON_RECEIVE;
 public class NewsFragment extends Fragment {
 
     private FragmentNewsBinding binding;
-    private NewsPagedListAdapter adapter;
     private NewsViewModel viewModel;
 
     public NewsFragment() {
@@ -55,19 +54,17 @@ public class NewsFragment extends Fragment {
     private void setupRecyclerView() {
         GridLayoutManager gridLayoutManager = new GridLayoutManager(getContext(), 1);
         binding.rvFragmentNews.setLayoutManager(gridLayoutManager);
-        binding.rvFragmentNews.setHasFixedSize(true);
+//        binding.rvFragmentNews.setHasFixedSize(true);
 
         boolean withImage = PreferenceManager.getDefaultSharedPreferences(getContext()).getBoolean(getString(R.string.setting_news_key), true);
 
-        adapter = new NewsPagedListAdapter(withImage);
+        final NewsPagedListAdapter adapter = new NewsPagedListAdapter(withImage);
         binding.rvFragmentNews.setAdapter(adapter);
 
         viewModel.getNews().observe(this, new Observer<PagedList<NewsModel>>() {
             @Override
             public void onChanged(@Nullable PagedList<NewsModel> newsModels) {
-                if (adapter != null) {
-                    adapter.submitList(newsModels);
-                }
+                adapter.submitList(newsModels);
             }
         });
     }

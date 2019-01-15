@@ -22,7 +22,7 @@ public class ItemsPagedListAdapter extends PagedListAdapter<ItemModel, ItemsPage
 
         @Override
         public boolean areContentsTheSame(@NonNull ItemModel items, @NonNull ItemModel t1) {
-            return items.getId() == t1.getId();
+            return true;
         }
     };
 

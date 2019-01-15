@@ -91,9 +91,15 @@ public class SplashViewModel extends AndroidViewModel {
     private void loadNews() {
         int lastDayWhenLoadNews = PreferenceManager.getDefaultSharedPreferences(application).getInt(NEWS_LOAD_LAST_DAY, 0);
         if (currentDay != lastDayWhenLoadNews) {
+//        if (true) {
             Constraints constraints = new Constraints.Builder().setRequiredNetworkType(NetworkType.CONNECTED).build();
-            Data data = new Data.Builder().putBoolean(DELETE_TABLE, true).build();
-            OneTimeWorkRequest worker = new OneTimeWorkRequest.Builder(NewsWorker.class).setInputData(data).setConstraints(constraints).build();
+            Data data = new Data.Builder()
+                    .putBoolean(DELETE_TABLE, true)
+                    .build();
+            OneTimeWorkRequest worker = new OneTimeWorkRequest.Builder(NewsWorker.class)
+                    .setInputData(data)
+                    .setConstraints(constraints)
+                    .build();
             WorkManager.getInstance().beginUniqueWork(NewsWorker.TAG, ExistingWorkPolicy.APPEND, worker).enqueue();
 
             PreferenceManager.getDefaultSharedPreferences(application).edit().putInt(NEWS_LOAD_LAST_DAY, currentDay).apply();

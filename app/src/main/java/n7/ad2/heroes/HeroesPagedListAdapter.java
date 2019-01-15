@@ -22,7 +22,7 @@ public class HeroesPagedListAdapter extends PagedListAdapter<HeroModel, HeroesPa
 
         @Override
         public boolean areContentsTheSame(@NonNull HeroModel oldItem, @NonNull HeroModel newItem) {
-            return false;
+            return true;
         }
     };
     private LayoutInflater inflater;

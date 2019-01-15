@@ -14,26 +14,18 @@ import static n7.ad2.news.NewsActivity.HREF;
 @Entity
 public class NewsModel {
 
-    @PrimaryKey(autoGenerate = true)
-    private int id;
     @NonNull
-    private String href;
-    private String content;
-    private String title;
-    private String imageHref;
+    private String href ="";
+    private String content ="loading...";
+    @NonNull
+    @PrimaryKey
+    private String title ="";
+    private String imageHref ="";
     @Ignore
-    private Boolean withImage;
+    private Boolean withImage = true;
 
     public NewsModel(@NonNull String href) {
         this.href = href;
-    }
-
-    public int getId() {
-        return id;
-    }
-
-    public void setId(int id) {
-        this.id = id;
     }
 
     public Boolean getWithImage() {

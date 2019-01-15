@@ -17,12 +17,12 @@ public class NewsPagedListAdapter extends PagedListAdapter<NewsModel, NewsPagedL
     private static final DiffUtil.ItemCallback<NewsModel> DIFF_CALLBACK = new DiffUtil.ItemCallback<NewsModel>() {
         @Override
         public boolean areItemsTheSame(@NonNull NewsModel oldItem, @NonNull NewsModel newItem) {
-            return oldItem.getId() == newItem.getId();
+            return oldItem.getTitle().equals(newItem.getTitle());
         }
 
         @Override
         public boolean areContentsTheSame(@NonNull NewsModel oldItem, @NonNull NewsModel newItem) {
-            return oldItem.getHref().equals(newItem.getHref());
+            return true;
         }
     };
     private boolean withImage;
@@ -64,6 +64,7 @@ public class NewsPagedListAdapter extends PagedListAdapter<NewsModel, NewsPagedL
 
         private void bindTo(NewsModel news) {
             binding.setNews(news);
+            binding.executePendingBindings();
         }
 
         private void clear() {
