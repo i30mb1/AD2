@@ -44,7 +44,7 @@ public class NewsViewModel extends AndroidViewModel {
         PagedList.Config config = new PagedList.Config.Builder()
                 .setPageSize(12)
                 .setInitialLoadSizeHint(12)
-                .setPrefetchDistance(12)
+                .setPrefetchDistance(3)
                 .setEnablePlaceholders(true)
                 .build();
 

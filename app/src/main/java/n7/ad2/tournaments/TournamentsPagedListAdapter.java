@@ -42,13 +42,12 @@ public class TournamentsPagedListAdapter extends PagedListAdapter<TournamentGame
     private static final DiffUtil.ItemCallback<TournamentGame> DIFF_CALLBACK = new DiffUtil.ItemCallback<TournamentGame>() {
         @Override
         public boolean areItemsTheSame(@NonNull TournamentGame tournamentGame, @NonNull TournamentGame t1) {
-            return tournamentGame.team1Logo.equals(t1.team1Logo) &&
-                    tournamentGame.team2Logo.equals(t1.team2Logo);
+            return tournamentGame.team1Logo.equals(t1.team1Logo) && tournamentGame.team2Logo.equals(t1.team2Logo);
         }
 
         @Override
         public boolean areContentsTheSame(@NonNull TournamentGame tournamentGame, @NonNull TournamentGame t1) {
-            return tournamentGame.teamTimeRemains == t1.teamTimeRemains;
+            return true;
         }
     };
     private LifecycleOwner lifecycleOwner;
@@ -115,11 +114,11 @@ public class TournamentsPagedListAdapter extends PagedListAdapter<TournamentGame
                     public void onClick(View view) {
                         Intent intent = new Intent(view.getContext(), GameFullActivity.class);
                         intent.putExtra(URL, game.url);
-                        Pair<View, String> p1 = Pair.create((View) tv_item_list_games_team1_name, "team1_name");
-                        Pair<View, String> p2 = Pair.create((View) tv_item_list_games_team2_name, "team2_name");
-                        Pair<View, String> p3 = Pair.create((View) tv_item_list_games_middle, "middle");
-                        Pair<View, String> p4 = Pair.create((View) iv_item_list_games_team1_logo, "team1_logo");
-                        Pair<View, String> p5 = Pair.create((View) iv_item_list_games_team2_logo, "team2_logo");
+                        Pair<View, String> p1 = Pair.create((View) tv_item_list_games_team1_name, "tv1");
+                        Pair<View, String> p2 = Pair.create((View) tv_item_list_games_team2_name, "tv2");
+                        Pair<View, String> p3 = Pair.create((View) tv_item_list_games_middle, "tv3");
+                        Pair<View, String> p4 = Pair.create((View) iv_item_list_games_team1_logo, "iv1");
+                        Pair<View, String> p5 = Pair.create((View) iv_item_list_games_team2_logo, "iv2");
                         ActivityOptionsCompat optionsCompat = ActivityOptionsCompat.makeSceneTransitionAnimation((Activity) view.getContext(), p1, p2, p3, p4, p5);
                         view.getContext().startActivity(intent, optionsCompat.toBundle());
                     }

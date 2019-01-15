@@ -39,7 +39,11 @@ public class TournamentsViewModel extends AndroidViewModel {
 
     public LiveData<PagedList<TournamentGame>> getTournamentsGames() {
         DataSource.Factory<Integer, TournamentGame> dataSource = gamesDao.getDataSourceGames();
-        PagedList.Config config = new PagedList.Config.Builder().setPageSize(10).setEnablePlaceholders(false).build();
+        PagedList.Config config = new PagedList.Config.Builder()
+                .setPageSize(30)
+                .setInitialLoadSizeHint(30)
+                .setPrefetchDistance(10)
+                .setEnablePlaceholders(true).build();
         LiveData<PagedList<TournamentGame>> listLiveData = new LivePagedListBuilder<>(dataSource, config).setBoundaryCallback(new PagedList.BoundaryCallback<TournamentGame>() {
             @Override
             public void onItemAtEndLoaded(@NonNull TournamentGame itemAtEnd) {
@@ -47,7 +51,7 @@ public class TournamentsViewModel extends AndroidViewModel {
                 page = page + 30;
                 Data data = new Data.Builder().putInt(PAGE, page).build();
                 OneTimeWorkRequest worker = new OneTimeWorkRequest.Builder(TournamentsWorker.class).setInputData(data).build();
-                WorkManager.getInstance().beginUniqueWork(TAG, ExistingWorkPolicy.KEEP, worker).enqueue();
+                WorkManager.getInstance().enqueue(worker);
                 WorkManager.getInstance().getWorkInfoByIdLiveData(worker.getId()).observeForever(new Observer<WorkInfo>() {
                     @Override
                     public void onChanged(@Nullable WorkInfo workInfo) {

@@ -2,6 +2,7 @@ package n7.ad2.tournaments;
 
 import android.arch.lifecycle.Observer;
 import android.databinding.DataBindingUtil;
+import android.databinding.ObservableBoolean;
 import android.os.Bundle;
 import android.support.annotation.Nullable;
 import android.view.MenuItem;
@@ -35,11 +36,15 @@ public class GameFullActivity extends BaseActivity {
     private AppExecutors appExecutors;
     private String url;
     private ActivityGameFullBinding binding;
+    public ObservableBoolean isLoading = new ObservableBoolean(false);
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         binding = DataBindingUtil.setContentView(this, R.layout.activity_game_full);
+        binding.setActivity(this);
+        binding.executePendingBindings();
+
         appExecutors = new AppExecutors();
 
         if (savedInstanceState == null) {
@@ -52,7 +57,7 @@ public class GameFullActivity extends BaseActivity {
     }
 
     private void loadingHeroes() {
-        binding.pbActivityGamesPersonal.setVisibility(View.VISIBLE);
+        isLoading.set(true);
         appExecutors.networkIO().execute(new Runnable() {
             @Override
             public void run() {
@@ -174,13 +179,7 @@ public class GameFullActivity extends BaseActivity {
                 } catch (Exception e) {
                     e.printStackTrace();
                 } finally {
-                    appExecutors.mainThread().execute(new Runnable() {
-                        @Override
-                        public void run() {
-                            binding.pbActivityGamesPersonal.setVisibility(View.GONE);
-                        }
-                    });
-
+                    isLoading.set(false);
                 }
             }
         });

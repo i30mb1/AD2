@@ -26,7 +26,7 @@ class NewParse {
         String reHeroes[] = new String[]{"viper"};
 
         int count = 0;
-        for (String hero : reHeroes) {
+        for (String hero : loadHeroesFromFile()) {
             String counter = String.format(Locale.US, "% d/%d ", ++count, loadHeroesFromFile().size());
 //            loadResponses(hero, counter);
             loadSpellsAndDescription(hero, counter);

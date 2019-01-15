@@ -5,6 +5,12 @@
 
     <data>
 
+        <import type="android.view.View" />
+
+        <variable
+            name="activity"
+            type="n7.ad2.tournaments.GameFullActivity" />
+
     </data>
 
     <android.support.design.widget.CoordinatorLayout
@@ -136,16 +142,17 @@
                     app:layout_constraintTop_toBottomOf="@+id/iv__activity_game_full_team1" />
 
 
+                <ProgressBar
+                    android:id="@+id/pb_activity_games_personal"
+                    style="@style/Widget.AppCompat.ProgressBar.Horizontal"
+                    android:layout_width="match_parent"
+                    android:layout_height="4dp"
+                    android:indeterminate="true"
+                    android:scaleY="5"
+                    android:visibility="@{activity.isLoading?View.VISIBLE:View.GONE}" />
             </android.support.constraint.ConstraintLayout>
         </android.support.v4.widget.NestedScrollView>
 
-        <ProgressBar
-            android:id="@+id/pb_activity_games_personal"
-            style="@style/Widget.AppCompat.ProgressBar.Horizontal"
-            android:layout_width="match_parent"
-            android:layout_height="4dp"
-            android:indeterminate="true"
-            android:scaleY="5"
-            android:visibility="visible" />
+
     </android.support.design.widget.CoordinatorLayout>
 </layout>

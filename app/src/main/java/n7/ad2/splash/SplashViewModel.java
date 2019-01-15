@@ -53,7 +53,7 @@ public class SplashViewModel extends AndroidViewModel {
     public static final String CURRENT_DAY_IN_APP = "CURRENT_DAY_IN_APP";
     public static final String FREE_SUBSCRIPTION_DAYS = "FREE_SUBSCRIPTION_DAYS";
     private static final String FREE_SUBSCRIPTION_DAY_LAST_USE = "FREE_SUBSCRIPTION_DAY_LAST_USE";
-    private static final String NEWS_LOAD_LAST_DAY = "NEWS_LOAD_LAST_DAY";
+    private static final String NEWS_LOAD_LAST_DAY = "NEWS_LOAD_LAST_DAYY";
     public static final String ADMOB_APP_ID = "ca-app-pub-5742225922710304~2823923052";
     final SingleLiveEvent<Void> startMainActivity = new SingleLiveEvent<>();
     public ObservableField<Drawable> resId = new ObservableField<>();
