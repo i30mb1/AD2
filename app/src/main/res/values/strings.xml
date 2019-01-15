@@ -115,7 +115,7 @@
     <string name="fragment_game_G1">how many cost this spell</string>
     <string name="fragment_guide_lane">lane</string>
     <string name="activity_twitch_game" translatable="false">Quality</string>
-    <string name="fragment_guide_further_items">Items</string>
+    <string name="fragment_guide_further_items">Items and timings</string>
     <string name="fragment_guide_skill_builds">Skill builds</string>
     <string name="games_schedule">REMIND</string>
     <string name="dialog_update_title">New update found!</string>

@@ -7,8 +7,7 @@ import android.support.annotation.NonNull;
 @Entity
 public class HeroModel {
 
-    @PrimaryKey(autoGenerate = true)
-    private int id;
+    @PrimaryKey
     @NonNull
     private String codeName;
     @NonNull
@@ -92,14 +91,6 @@ public class HeroModel {
 
     public void setWorstVersus(String worstVersus) {
         this.worstVersus = worstVersus;
-    }
-
-    public int getId() {
-        return id;
-    }
-
-    public void setId(int id) {
-        this.id = id;
     }
 
     public String getWinrate() {

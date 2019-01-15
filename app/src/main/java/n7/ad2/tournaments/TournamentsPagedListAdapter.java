@@ -70,8 +70,9 @@ public class TournamentsPagedListAdapter extends PagedListAdapter<TournamentGame
     @Override
     public void onBindViewHolder(@NonNull ViewHolder viewHolder, int position) {
         TournamentGame games = getItem(position);
-        if (games != null)
+        if (games != null) {
             viewHolder.bindTo(games);
+        }
     }
 
     class ViewHolder extends RecyclerView.ViewHolder {

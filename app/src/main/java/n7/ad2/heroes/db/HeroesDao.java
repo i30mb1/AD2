@@ -37,7 +37,7 @@ public interface HeroesDao {
     @Query("SELECT * FROM HeroModel ORDER BY name ASC")
     DataSource.Factory<Integer, HeroModel> getDataSourceHeroes();
 
-    @Query("SELECT * FROM HeroModel WHERE codeName LIKE '%'||:chars||'%' ORDER BY codeName ASC")
+    @Query("SELECT * FROM HeroModel WHERE codeName LIKE '%'||:chars||'%'")
     DataSource.Factory<Integer, HeroModel> getDataSourceHeroesFilter(String chars);
 
     @Query("SELECT * FROM HeroModel WHERE codeName =:codeName")

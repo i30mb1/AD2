@@ -112,6 +112,7 @@ public class GuideWorker extends Worker {
                 }
                 for (int i = 0; i < elementsItemRows.size(); i++) {
                     boolean findTime = false;
+                    if(i==0&&elementsItemRows.get(i).children().size()>2) continue;
                     for (Element item : elementsItemRows.get(i).children()) {
                         if (item.tag().toString().equals("div")) {
                             String itemName = item.child(0).child(0).child(0).attr("title").toLowerCase().trim().replace(" ", "_");
