@@ -42,12 +42,13 @@ public class TournamentsPagedListAdapter extends PagedListAdapter<TournamentGame
     private static final DiffUtil.ItemCallback<TournamentGame> DIFF_CALLBACK = new DiffUtil.ItemCallback<TournamentGame>() {
         @Override
         public boolean areItemsTheSame(@NonNull TournamentGame tournamentGame, @NonNull TournamentGame t1) {
-            return true;
+            return tournamentGame.team1Logo.equals(t1.team1Logo) &&
+                    tournamentGame.team2Logo.equals(t1.team2Logo);
         }
 
         @Override
         public boolean areContentsTheSame(@NonNull TournamentGame tournamentGame, @NonNull TournamentGame t1) {
-            return tournamentGame.url.equals(t1.url);
+            return tournamentGame.teamTimeRemains == t1.teamTimeRemains;
         }
     };
     private LifecycleOwner lifecycleOwner;

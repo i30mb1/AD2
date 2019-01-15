@@ -39,7 +39,7 @@ public class TournamentsViewModel extends AndroidViewModel {
 
     public LiveData<PagedList<TournamentGame>> getTournamentsGames() {
         DataSource.Factory<Integer, TournamentGame> dataSource = gamesDao.getDataSourceGames();
-        PagedList.Config config = new PagedList.Config.Builder().setPageSize(20).setEnablePlaceholders(false).build();
+        PagedList.Config config = new PagedList.Config.Builder().setPageSize(10).setEnablePlaceholders(false).build();
         LiveData<PagedList<TournamentGame>> listLiveData = new LivePagedListBuilder<>(dataSource, config).setBoundaryCallback(new PagedList.BoundaryCallback<TournamentGame>() {
             @Override
             public void onItemAtEndLoaded(@NonNull TournamentGame itemAtEnd) {
