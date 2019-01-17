@@ -28,13 +28,13 @@ class NewParse {
         int count = 0;
         for (String hero : loadHeroesFromFile()) {
             String counter = String.format(Locale.US, "% d/%d ", ++count, loadHeroesFromFile().size());
-            loadResponses(hero, counter);
-//            loadSpellsAndDescription(hero, counter);
+//            loadResponses(hero, counter);
+            loadSpellsAndDescription(hero, counter);
         }
 
 //        loadZhItems(false);
-//        loadRusItems(false);
-//        loadEngItems(false);
+        loadRusItems(false);
+        loadEngItems(false);
     }
 
     private static void loadZhItems(boolean loadImage) {

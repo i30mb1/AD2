@@ -32,7 +32,9 @@ import org.json.JSONObject;
 
 import java.util.HashMap;
 
+import androidx.work.Constraints;
 import androidx.work.Data;
+import androidx.work.NetworkType;
 import androidx.work.OneTimeWorkRequest;
 import androidx.work.WorkInfo;
 import androidx.work.WorkManager;
@@ -214,8 +216,9 @@ public class GuideFragment extends Fragment {
 
                 if (currentDay == guideLastDay) return;
 
+                Constraints constraints = new Constraints.Builder().setRequiredNetworkType(NetworkType.CONNECTED).build();
                 Data data = new Data.Builder().putString(HERO_CODE_NAME, heroFolder).build();
-                final OneTimeWorkRequest worker = new OneTimeWorkRequest.Builder(GuideWorker.class).setInputData(data).build();
+                final OneTimeWorkRequest worker = new OneTimeWorkRequest.Builder(GuideWorker.class).setInputData(data).setConstraints(constraints).build();
                 WorkManager.getInstance().enqueue(worker);
                 WorkManager.getInstance().getWorkInfoByIdLiveData(worker.getId()).observe(GuideFragment.this, new Observer<WorkInfo>() {
                     @Override

@@ -27,7 +27,7 @@ public class StreamsViewModel extends AndroidViewModel {
         StreamsSourceFactory sourceFactory = new StreamsSourceFactory(streamsStorage);
         PagedList.Config config = new PagedList.Config.Builder()
                 .setEnablePlaceholders(false)
-                .setPageSize(40).build();
+                .setPageSize(30).build();
         LiveData<PagedList<Streams>> pagedListLiveData = new LivePagedListBuilder<>(sourceFactory, config).build();
         return pagedListLiveData;
     }

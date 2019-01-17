@@ -50,16 +50,20 @@ public class GuideWorker extends Worker {
         try {
             Document documentSimple = Jsoup.connect("https://ru.dotabuff.com/heroes/" + heroCodeName.replace("_", "-")).get();
             // BEST VERSUS
-            Elements best = documentSimple.getElementsByTag("tbody").get(3).children();
-            for (Element element : best) {
-                stringBestVersus.append(element.child(1).text().toLowerCase().trim().replace(" ", "_"))
-                        .append("^").append(element.child(2).text()).append("/");
+            if (documentSimple.getElementsByTag("tbody").size() >= 3 && documentSimple.getElementsByTag("tbody").get(3).children().size() > 0) {
+                Elements best = documentSimple.getElementsByTag("tbody").get(3).children();
+                for (Element element : best) {
+                    stringBestVersus.append(element.child(1).text().toLowerCase().trim().replace(" ", "_"))
+                            .append("^").append(element.child(2).text()).append("/");
+                }
             }
             // WORST VERSUS
-            Elements worst = documentSimple.getElementsByTag("tbody").get(4).children();
-            for (Element element : worst) {
-                stringWorstVersus.append(element.child(1).text().toLowerCase().trim().replace(" ", "_"))
-                        .append("^").append(element.child(2).text()).append("/");
+            if (documentSimple.getElementsByTag("tbody").size() >= 4 && documentSimple.getElementsByTag("tbody").get(4).children().size() > 0) {
+                Elements worst = documentSimple.getElementsByTag("tbody").get(4).children();
+                for (Element element : worst) {
+                    stringWorstVersus.append(element.child(1).text().toLowerCase().trim().replace(" ", "_"))
+                            .append("^").append(element.child(2).text()).append("/");
+                }
             }
 
             Document document = Jsoup.connect("https://www.dotabuff.com/heroes/" + heroCodeName.replace("_", "-") + "/guides").get();
@@ -74,29 +78,31 @@ public class GuideWorker extends Worker {
             }
             // PICK RATE
             Elements pickrate = document.getElementsByTag("dd");
-            if (pickrate.size() > 0)
+            if (pickrate.size() > 0) {
                 stringPickRate.append(pickrate.get(0).text());
+            }
             // 5 DIFFERENT PACKS
             Elements elements = document.getElementsByClass("r-stats-grid");
-            for (Element element : elements) {
-                element.children();
-                // TIME LAST PLAY
-                Elements time = element.getElementsByTag("time");
-                if (time.size() > 0) {
-                    if (stringTime.length() != 0) {
-                        stringTime.append("+");
+            if (elements.size() > 0) {
+                for (Element element : elements) {
+                    // TIME LAST PLAY
+                    Elements time = element.getElementsByTag("time");
+                    if (time.size() > 0) {
+                        if (stringTime.length() != 0) {
+                            stringTime.append("+");
+                        }
+                        stringTime.append(time.text());
                     }
-                    stringTime.append(time.text());
-                }
-                // LANE
-                if (stringLane.length() != 0) {
-                    stringLane.append("+");
-                }
-                stringLane.append(detectLine(element));
-                // ITEMS
-                Elements elementsItemRows = element.child(2).getElementsByClass("kv r-none-mobile");
-                // STARTING ITEMS
-                Element startingItems = elementsItemRows.get(0);
+                    // LANE
+                    if (stringLane.length() != 0) {
+                        stringLane.append("+");
+                    }
+                    stringLane.append(detectLine(element));
+                    // ITEMS
+                    if (element.children().size() >= 2) {
+                        Elements elementsItemRows = element.child(2).getElementsByClass("kv r-none-mobile");
+                        // STARTING ITEMS
+//                Element startingItems = elementsItemRows.get(0);
 //                if (stringStartingItems.length() != 0) {
 //                    stringStartingItems.append("+");
 //                }
@@ -106,38 +112,43 @@ public class GuideWorker extends Worker {
 //                        stringStartingItems.append("/");
 //                    }
 //                }
-                // FURTHER ITEMS
-                if (stringFurtherItems.length() != 0) {
-                    stringFurtherItems.append("+");
-                }
-                for (int i = 0; i < elementsItemRows.size(); i++) {
-                    boolean findTime = false;
-                    if(i==0&&elementsItemRows.get(i).children().size()>2) continue;
-                    for (Element item : elementsItemRows.get(i).children()) {
-                        if (item.tag().toString().equals("div")) {
-                            String itemName = item.child(0).child(0).child(0).attr("title").toLowerCase().trim().replace(" ", "_");
-                            if (itemName.equals("gem_of_true_sight")) continue;
-                            stringFurtherItems.append(itemName);
-                            if (i != 0)
-                                if (!findTime && elementsItemRows.get(i).getElementsByTag("small").size() > 0) {
-                                    findTime = true;
-                                    stringFurtherItems.append("^").append(elementsItemRows.get(i).getElementsByTag("small").get(0).text());
-                                }
+                        // FURTHER ITEMS
+                        if (stringFurtherItems.length() != 0) {
+                            stringFurtherItems.append("+");
                         }
-                        if (!stringFurtherItems.toString().endsWith("/"))
-                            stringFurtherItems.append("/");
+                        for (int i = 0; i < elementsItemRows.size(); i++) {
+                            boolean findTime = false;
+                            if (i == 0 && elementsItemRows.get(i).children().size() > 2) continue;
+                            for (Element item : elementsItemRows.get(i).children()) {
+                                if (item.tag().toString().equals("div")) {
+                                    String itemName = item.child(0).child(0).child(0).attr("title").toLowerCase().trim().replace(" ", "_");
+                                    if (itemName.equals("gem_of_true_sight")) continue;
+                                    stringFurtherItems.append(itemName);
+                                    if (i != 0)
+                                        if (!findTime && elementsItemRows.get(i).getElementsByTag("small").size() > 0) {
+                                            findTime = true;
+                                            stringFurtherItems.append("^").append(elementsItemRows.get(i).getElementsByTag("small").get(0).text());
+                                        }
+                                }
+                                if (!stringFurtherItems.toString().endsWith("/"))
+                                    stringFurtherItems.append("/");
+                            }
+                        }
+                    }
+                    // SKILL BUILD
+                    if (stringSkillBuilds.length() != 0) {
+                        stringSkillBuilds.append("+");
+                    }
+                    if (element.children().size() >= 3) {
+                        Elements skills = element.child(3).getElementsByClass("kv kv-small-margin");
+                        for (Element skill : skills) {
+                            String skillName = skill.child(0).child(0).child(0).attr("alt");
+                            if (skillName.startsWith("Talent:")) skillName = "talent";
+                            stringSkillBuilds.append(skillName).append("/");
+                        }
                     }
                 }
-                // SKILL BUILD
-                if (stringSkillBuilds.length() != 0) {
-                    stringSkillBuilds.append("+");
-                }
-                Elements skills = element.child(3).getElementsByClass("kv kv-small-margin");
-                for (Element skill : skills) {
-                    String skillName = skill.child(0).child(0).child(0).attr("alt");
-                    if (skillName.startsWith("Talent:")) skillName = "talent";
-                    stringSkillBuilds.append(skillName).append("/");
-                }
+
             }
             // SAVE DATA
             heroes.setFurtherItems(stringFurtherItems.toString().replace("'", "%27"));
