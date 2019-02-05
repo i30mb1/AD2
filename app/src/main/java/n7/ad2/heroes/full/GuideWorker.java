@@ -24,6 +24,7 @@ public class GuideWorker extends Worker {
 
     public static final String UNIQUE_WORK = "UNIQUE_GUIDE_WORK";
     public static final String HERO_CODE_NAME = "HERO_CODE_NAME";
+    private String heroCodeName = "";
 
     public GuideWorker(@NonNull Context context, @NonNull WorkerParameters workerParams) {
         super(context, workerParams);
@@ -33,9 +34,12 @@ public class GuideWorker extends Worker {
     @Override
     public Result doWork() {
 
-        String heroCodeName = getInputData().getString(HERO_CODE_NAME);
+        heroCodeName = getInputData().getString(HERO_CODE_NAME);
         HeroesDao heroesDao = HeroesRoomDatabase.getDatabase(getApplicationContext(), Executors.newSingleThreadExecutor()).heroesDao();
         HeroModel heroes = heroesDao.getHeroByCodeNameObject(heroCodeName);
+
+        //todo check this statement | do not work with nature's prophet
+        heroCodeName = heroCodeName.replace("_", "-").replace("'", "");
 
         StringBuilder stringWinRate = new StringBuilder();
         StringBuilder stringPickRate = new StringBuilder();
@@ -48,7 +52,7 @@ public class GuideWorker extends Worker {
         StringBuilder stringWorstVersus = new StringBuilder();
 
         try {
-            Document documentSimple = Jsoup.connect("https://ru.dotabuff.com/heroes/" + heroCodeName.replace("_", "-")).get();
+            Document documentSimple = Jsoup.connect("https://ru.dotabuff.com/heroes/" + heroCodeName).get();
             // BEST VERSUS
             if (documentSimple.getElementsByTag("tbody").size() >= 3 && documentSimple.getElementsByTag("tbody").get(3).children().size() > 0) {
                 Elements best = documentSimple.getElementsByTag("tbody").get(3).children();
@@ -66,7 +70,7 @@ public class GuideWorker extends Worker {
                 }
             }
 
-            Document document = Jsoup.connect("https://www.dotabuff.com/heroes/" + heroCodeName.replace("_", "-") + "/guides").get();
+            Document document = Jsoup.connect("https://www.dotabuff.com/heroes/" + heroCodeName + "/guides").get();
             // WIN RATE
             Elements winrate = document.getElementsByClass("won");
             Elements loserate = document.getElementsByClass("lost");

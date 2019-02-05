@@ -81,7 +81,7 @@ public class MainActivity extends BaseActivity {
 
     public static final String FIREBASE_DIALOG_DONATE_SAW = "DIALOG_DONATE_SAW";
     public static final String FIREBASE_DIALOG_PRE_DONATE_SAW = "DIALOG_PRE_DONATE_SAW";
-    public static final String FIREBASE_DIALOG_RATE_SAW = "DIALOG_RATE_SAW";
+    public static final String FIREBASE_DIALOG_RATE_SAW = "DIALOG_RATE_SHOW";
     public static final String FIREBASE_DIALOG_RATE_CLICK = "DIALOG_RATE_CLICK";
     public static final String LAST_ITEM = "LAST_ITEM";
     public static final int MILLIS_FOR_EXIT = 2000;
@@ -91,7 +91,7 @@ public class MainActivity extends BaseActivity {
     public static final String ADMOB_ID_BACK = "ca-app-pub-5742225922710304/6328775876";
     public static final String ADMOB_ID_BACK_FAKE = "ca-app-pub-3940256099942544/1033173712";
     public static final String LOG_ON_RECEIVE = "log";
-    public static final String DIALOG_RATE_SAW = "DIALOG_RATE_SAW";
+    public static final String DIALOG_RATE_SHOW = "DIALOG_RATE_SHOW";
     public static final String DIALOG_VIDEO_AD_SAW = "DIALOG_VIDEO_AD_SAW";
     public static final int ACTION_BEFORE_SHOW_ADVERTISEMENT = 4;
     private static final String DIALOG_PRE_DONATE_LAST_DAY = "DIALOG_PRE_DONATE_LAST_DAY";
@@ -124,7 +124,6 @@ public class MainActivity extends BaseActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
 
-
         currentDay = PreferenceManager.getDefaultSharedPreferences(this).getInt(CURRENT_DAY_IN_APP, 0);
         viewModel = ViewModelProviders.of(this).get(MainViewModel.class);
 
@@ -144,7 +143,6 @@ public class MainActivity extends BaseActivity {
         setupAD();
 
         setLastFragment();
-
 
     }
 
@@ -442,7 +440,7 @@ public class MainActivity extends BaseActivity {
 
     private void incCountEnter() {
         timeCounter++;
-//        if (timeCounter > COUNTER_DIALOG_RATE) showDialogRate();
+        if (timeCounter > COUNTER_DIALOG_RATE) showDialogRate();
         if (timeCounter > COUNTER_DIALOG_DONATE) showPreDialogDonate();
         if (timeCounter % ACTION_BEFORE_SHOW_ADVERTISEMENT == 0) ShowInterstitialAd();
     }
@@ -472,7 +470,6 @@ public class MainActivity extends BaseActivity {
                 PreferenceManager.getDefaultSharedPreferences(this).edit().putInt(DIALOG_PRE_DONATE_LAST_DAY, currentDay + 2).apply();
                 FirebaseAnalytics firebaseAnalytics = FirebaseAnalytics.getInstance(this);
                 firebaseAnalytics.logEvent(FIREBASE_DIALOG_PRE_DONATE_SAW, null);
-                timeCounter = 0;
             }
         }
 
@@ -480,15 +477,17 @@ public class MainActivity extends BaseActivity {
 
     @SuppressWarnings("ConstantConditions")
     private void showDialogRate() {
-        boolean showDialogRate = PreferenceManager.getDefaultSharedPreferences(this).getBoolean(DIALOG_RATE_SAW, true);
+        boolean showDialogRate = PreferenceManager.getDefaultSharedPreferences(this).getBoolean(DIALOG_RATE_SHOW, true);
         if (showDialogRate && !subscription) {
             final AlertDialog.Builder builder = new AlertDialog.Builder(this);
             DialogRateBinding binding = DataBindingUtil.inflate(getLayoutInflater(), R.layout.dialog_rate, null, false);
             binding.setActivity(this);
             builder.setView(binding.getRoot());
+
             final AlertDialog dialog = builder.create();
             dialog.getWindow().getAttributes().windowAnimations = R.style.DialogTheme;
             dialog.show();
+
             binding.bDialogRateYes.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View v) {
@@ -503,12 +502,9 @@ public class MainActivity extends BaseActivity {
                     dialog.dismiss();
                 }
             });
-            PreferenceManager.getDefaultSharedPreferences(this).edit().putBoolean(DIALOG_RATE_SAW, false).apply();
+            PreferenceManager.getDefaultSharedPreferences(this).edit().putBoolean(DIALOG_RATE_SHOW, false).apply();
             FirebaseAnalytics firebaseAnalytics = FirebaseAnalytics.getInstance(this);
             firebaseAnalytics.logEvent(FIREBASE_DIALOG_RATE_SAW, null);
-        }
-        if (subscription) {
-            timeCounter = 0;
         }
     }
 

@@ -34,7 +34,7 @@ public interface HeroesDao {
 //    int delete(List<HeroModel> hero);
 
     // Integer тип говорит что нужно использовать PositionalDataSource
-    @Query("SELECT * FROM HeroModel ORDER BY name ASC")
+    @Query("SELECT * FROM HeroModel ORDER BY HeroModel.name ASC")
     DataSource.Factory<Integer, HeroModel> getDataSourceHeroes();
 
     @Query("SELECT * FROM HeroModel WHERE codeName LIKE '%'||:chars||'%'")
@@ -51,4 +51,11 @@ public interface HeroesDao {
 
     @Query("SELECT * FROM HeroModel")
     List<HeroModel> getAll();
+
+    //SQL запросы
+    /* SELECT name, Max(killedBy)
+    FROM HeroModel
+    GROUP BY name - (позволяет определять подмножество значений отдельного поля в терминах другого поля и применять функции агрегирования к полученому подмножеству)для каждой различной позиции num ищем максимальное значение
+    ORDER BY 2 DESC
+    * */
 }

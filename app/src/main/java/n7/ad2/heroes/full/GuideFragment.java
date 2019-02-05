@@ -208,6 +208,7 @@ public class GuideFragment extends Fragment {
     }
 
     private void startGuideWork() {
+        if (heroesDao == null) return;
         appExecutors.diskIO().execute(new Runnable() {
             @Override
             public void run() {

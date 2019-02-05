@@ -16,5 +16,6 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_gravity="end"
-        tools:srcCompat="@drawable/ic_fragment_single_stream_sound_off" />
+        tools:srcCompat="@drawable/ic_fragment_single_stream_sound_off"
+        android:contentDescription="@string/setting_tell_friend_title" />
 </android.support.v7.widget.Toolbar>
