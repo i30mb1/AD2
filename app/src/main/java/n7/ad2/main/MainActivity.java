@@ -76,8 +76,8 @@ import static n7.ad2.splash.SplashViewModel.FREE_SUBSCRIPTION_DAYS;
 
 public class MainActivity extends BaseActivity {
 
-    public static final int COUNTER_DIALOG_RATE = 15;
-    public static final int COUNTER_DIALOG_DONATE = 10;
+    public static final int COUNTER_DIALOG_RATE = 10;
+    public static final int COUNTER_DIALOG_DONATE = 13;
 
     public static final String FIREBASE_DIALOG_DONATE_SAW = "DIALOG_DONATE_SAW";
     public static final String FIREBASE_DIALOG_PRE_DONATE_SAW = "DIALOG_PRE_DONATE_SAW";

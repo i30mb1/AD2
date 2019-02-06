@@ -25,10 +25,10 @@ import static n7.ad2.main.MainActivity.LOG_ON_RECEIVE;
 
 public class TournamentsWorker extends Worker {
 
-    private static final String BASE_URL = "https://dota2.ru/esport/matches/?page=";
     public static final String DELETE_TABLE = "delete_table";
     public static final String PAGE = "page";
     public static final String TAG = "tournaments_worker_tag";
+    private static final String BASE_URL = "https://dota2.ru/esport/matches/?page=";
 
     public TournamentsWorker(@NonNull Context context, @NonNull WorkerParameters workerParams) {
         super(context, workerParams);
@@ -91,7 +91,7 @@ public class TournamentsWorker extends Worker {
             }
             if (gamesList.size() == 0) throw new Exception();
             GamesDao gamesDao = GamesRoomDatabase.getDatabase(getApplicationContext()).gamesDao();
-            if (deleteTable) gamesDao.deleteAll();
+            if (deleteTable && matchElements.size() != 0) gamesDao.deleteAll();
             gamesDao.setGames(gamesList);
             getApplicationContext().sendBroadcast(new Intent(LOG_ON_RECEIVE).putExtra(LOG_ON_RECEIVE, "page_" + page + "_loaded"));
             return Result.success();
