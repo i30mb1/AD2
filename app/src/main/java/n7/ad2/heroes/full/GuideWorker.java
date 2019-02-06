@@ -168,7 +168,7 @@ public class GuideWorker extends Worker {
 
             heroesDao.update(heroes);
 
-        } catch (IOException e) {
+        } catch (Exception e) {
             return Result.failure();
         }
         return Result.success();

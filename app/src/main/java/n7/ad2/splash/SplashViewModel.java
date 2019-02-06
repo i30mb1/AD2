@@ -34,6 +34,8 @@ import n7.ad2.R;
 import n7.ad2.heroes.db.HeroesRoomDatabase;
 import n7.ad2.items.db.ItemsRoomDatabase;
 import n7.ad2.news.NewsWorker;
+import n7.ad2.news.db.NewsDao;
+import n7.ad2.news.db.NewsRoomDatabase;
 import n7.ad2.setting.purchaseUtils.IabHelper;
 import n7.ad2.setting.purchaseUtils.IabResult;
 import n7.ad2.setting.purchaseUtils.Inventory;
@@ -89,24 +91,31 @@ public class SplashViewModel extends AndroidViewModel {
     }
 
     private void loadNews() {
-        int lastDayWhenLoadNews = PreferenceManager.getDefaultSharedPreferences(application).getInt(NEWS_LOAD_LAST_DAY, 0);
-        if (currentDay != lastDayWhenLoadNews) {
-//        if (true) {
-            Constraints constraints = new Constraints.Builder().setRequiredNetworkType(NetworkType.CONNECTED).build();
-            Data data = new Data.Builder()
-                    .putBoolean(DELETE_TABLE, true)
-                    .build();
-            OneTimeWorkRequest worker = new OneTimeWorkRequest.Builder(NewsWorker.class)
-                    .setInputData(data)
-                    .setConstraints(constraints)
-                    .build();
-            WorkManager.getInstance().beginUniqueWork(NewsWorker.TAG, ExistingWorkPolicy.APPEND, worker).enqueue();
+        diskIO.execute(new Runnable() {
+            @Override
+            public void run() {
+                int lastDayWhenLoadNews = PreferenceManager.getDefaultSharedPreferences(application).getInt(NEWS_LOAD_LAST_DAY, 0);
 
-            PreferenceManager.getDefaultSharedPreferences(application).edit().putInt(NEWS_LOAD_LAST_DAY, currentDay).apply();
-            log("loading_fresh_news");
-        } else {
-            log("loading_old_news");
-        }
+                if (currentDay != lastDayWhenLoadNews) {
+//        if (true) {
+                    Constraints constraints = new Constraints.Builder().setRequiredNetworkType(NetworkType.CONNECTED).build();
+                    Data data = new Data.Builder()
+                            .putBoolean(DELETE_TABLE, true)
+                            .build();
+                    OneTimeWorkRequest worker = new OneTimeWorkRequest.Builder(NewsWorker.class)
+                            .setInputData(data)
+                            .setConstraints(constraints)
+                            .build();
+                    WorkManager.getInstance().beginUniqueWork(NewsWorker.TAG, ExistingWorkPolicy.APPEND, worker).enqueue();
+
+                    PreferenceManager.getDefaultSharedPreferences(application).edit().putInt(NEWS_LOAD_LAST_DAY, currentDay).apply();
+                    log("loading_fresh_news");
+                } else {
+                    log("loading_old_news");
+                }
+            }
+        });
+
     }
 
     private void log(String text) {

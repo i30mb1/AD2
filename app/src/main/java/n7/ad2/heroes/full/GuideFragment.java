@@ -239,7 +239,7 @@ public class GuideFragment extends Fragment {
     }
 
     private void loadHeroDescriptionFile() {
-        if (getContext() != null)
+        if (getContext() != null && appExecutors!=null)
             appExecutors.diskIO().execute(new Runnable() {
                 @Override
                 public void run() {

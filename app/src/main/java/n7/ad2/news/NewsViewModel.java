@@ -60,11 +60,13 @@ public class NewsViewModel extends AndroidViewModel {
                     @Override
                     public void onChanged(@Nullable WorkInfo workInfo) {
                         if (workInfo != null) {
+
                             if (workInfo.getState().isFinished()) {
                                 isLoading.set(false);
                             } else {
                                 isLoading.set(true);
                             }
+
                         }
                     }
                 });
