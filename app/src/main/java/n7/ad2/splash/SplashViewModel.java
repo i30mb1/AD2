@@ -54,9 +54,11 @@ public class SplashViewModel extends AndroidViewModel {
 
     public static final String CURRENT_DAY_IN_APP = "CURRENT_DAY_IN_APP";
     public static final String FREE_SUBSCRIPTION_DAYS = "FREE_SUBSCRIPTION_DAYS";
+    public static final String ADMOB_APP_ID = "ca-app-pub-5742225922710304~2823923052";
+    public static final String FREE_WEEK = "free_week";
+    public static final String FREE_MONTH = "free_month";
     private static final String FREE_SUBSCRIPTION_DAY_LAST_USE = "FREE_SUBSCRIPTION_DAY_LAST_USE";
     private static final String NEWS_LOAD_LAST_DAY = "NEWS_LOAD_LAST_DAYY";
-    public static final String ADMOB_APP_ID = "ca-app-pub-5742225922710304~2823923052";
     final SingleLiveEvent<Void> startMainActivity = new SingleLiveEvent<>();
     public ObservableField<Drawable> resId = new ObservableField<>();
     public ObservableInt scrollTo = new ObservableInt();
@@ -91,31 +93,25 @@ public class SplashViewModel extends AndroidViewModel {
     }
 
     private void loadNews() {
-        diskIO.execute(new Runnable() {
-            @Override
-            public void run() {
-                int lastDayWhenLoadNews = PreferenceManager.getDefaultSharedPreferences(application).getInt(NEWS_LOAD_LAST_DAY, 0);
+        int lastDayWhenLoadNews = PreferenceManager.getDefaultSharedPreferences(application).getInt(NEWS_LOAD_LAST_DAY, 0);
 
-                if (currentDay != lastDayWhenLoadNews) {
+        if (currentDay != lastDayWhenLoadNews) {
 //        if (true) {
-                    Constraints constraints = new Constraints.Builder().setRequiredNetworkType(NetworkType.CONNECTED).build();
-                    Data data = new Data.Builder()
-                            .putBoolean(DELETE_TABLE, true)
-                            .build();
-                    OneTimeWorkRequest worker = new OneTimeWorkRequest.Builder(NewsWorker.class)
-                            .setInputData(data)
-                            .setConstraints(constraints)
-                            .build();
-                    WorkManager.getInstance().beginUniqueWork(NewsWorker.TAG, ExistingWorkPolicy.APPEND, worker).enqueue();
+            Constraints constraints = new Constraints.Builder().setRequiredNetworkType(NetworkType.CONNECTED).build();
+            Data data = new Data.Builder()
+                    .putBoolean(DELETE_TABLE, true)
+                    .build();
+            OneTimeWorkRequest worker = new OneTimeWorkRequest.Builder(NewsWorker.class)
+                    .setInputData(data)
+                    .setConstraints(constraints)
+                    .build();
+            WorkManager.getInstance().beginUniqueWork(NewsWorker.TAG, ExistingWorkPolicy.APPEND, worker).enqueue();
 
-                    PreferenceManager.getDefaultSharedPreferences(application).edit().putInt(NEWS_LOAD_LAST_DAY, currentDay).apply();
-                    log("loading_fresh_news");
-                } else {
-                    log("loading_old_news");
-                }
-            }
-        });
-
+            PreferenceManager.getDefaultSharedPreferences(application).edit().putInt(NEWS_LOAD_LAST_DAY, currentDay).apply();
+            log("loading_fresh_news");
+        } else {
+            log("loading_old_news");
+        }
     }
 
     private void log(String text) {
@@ -197,9 +193,6 @@ public class SplashViewModel extends AndroidViewModel {
         });
 
     }
-
-    public static final String FREE_WEEK = "free_week";
-    public static final String FREE_MONTH = "free_month";
 
     private void checkInventory(final IabHelper mHelper) {
         try {
