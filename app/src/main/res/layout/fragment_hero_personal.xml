@@ -1,70 +1,83 @@
 <?xml version="1.0" encoding="utf-8"?>
-<android.support.v4.widget.NestedScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    android:layout_width="match_parent"
-    android:layout_height="match_parent">
+    xmlns:tools="http://schemas.android.com/tools">
 
-    <android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
-        xmlns:app="http://schemas.android.com/apk/res-auto"
+    <data>
+
+    </data>
+
+    <android.support.v4.widget.NestedScrollView
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:background="?colorPrimary">
+        android:layout_height="match_parent">
 
-        <ImageView
-            android:id="@+id/iv_fragment_hero_personal"
-            android:layout_width="150dp"
-            android:layout_height="80dp"
-            android:layout_marginStart="8dp"
-            android:layout_marginTop="8dp"
-            android:background="?colorAccent"
-            android:clickable="true"
-            android:cropToPadding="true"
-            android:elevation="2dp"
-            android:focusable="true"
-            android:foreground="?android:attr/selectableItemBackground"
-            android:paddingStart="2dp"
-            android:scaleType="centerCrop"
-            android:transitionName="iv"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent"
-            app:srcCompat="@drawable/hero_placeholder" />
-
-        <ScrollView
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            app:layout_constraintBottom_toBottomOf="@+id/iv_fragment_hero_personal"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toEndOf="@+id/iv_fragment_hero_personal"
-            app:layout_constraintTop_toTopOf="@+id/iv_fragment_hero_personal">
-
-            <HorizontalScrollView
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:scrollbars="none">
-
-                <LinearLayout
-                    android:id="@+id/ll_fragment_hero_personal_spells"
-                    android:layout_width="wrap_content"
-                    android:layout_height="match_parent"
-                    android:animateLayoutChanges="true"
-                    android:orientation="horizontal"
-                    android:paddingStart="8dp"
-                    android:paddingEnd="8dp" />
-            </HorizontalScrollView>
-        </ScrollView>
-
-        <LinearLayout
-            android:id="@+id/ll_fragment_hero_personal_descriptions"
+        <android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+            xmlns:app="http://schemas.android.com/apk/res-auto"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginTop="8dp"
-            android:animateLayoutChanges="true"
-            android:minHeight="400dp"
-            android:orientation="vertical"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/iv_fragment_hero_personal">
+            android:background="?colorPrimary">
 
-        </LinearLayout>
-    </android.support.constraint.ConstraintLayout>
-</android.support.v4.widget.NestedScrollView>
+            <ImageView
+                android:id="@+id/iv_fragment_hero_personal"
+                android:layout_width="150dp"
+                android:layout_height="80dp"
+                android:layout_marginStart="8dp"
+                android:layout_marginTop="8dp"
+                android:background="?colorAccent"
+                android:clickable="true"
+                android:contentDescription="@string/setting_tell_friend_title"
+                android:cropToPadding="true"
+                android:elevation="2dp"
+                android:focusable="true"
+                android:foreground="?android:attr/selectableItemBackground"
+                android:paddingStart="2dp"
+                android:paddingEnd="0dp"
+                android:scaleType="centerCrop"
+                android:transitionName="iv"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:srcCompat="@drawable/hero_placeholder"
+                tools:ignore="UnusedAttribute" />
+
+            <ScrollView
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                app:layout_constraintBottom_toBottomOf="@+id/iv_fragment_hero_personal"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toEndOf="@+id/iv_fragment_hero_personal"
+                app:layout_constraintTop_toTopOf="@+id/iv_fragment_hero_personal">
+
+                <HorizontalScrollView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:minHeight="60dp"
+                    android:layout_gravity="center_vertical"
+                    android:scrollbars="none">
+
+                    <LinearLayout
+                        android:id="@+id/ll_fragment_hero_personal_spells"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:animateLayoutChanges="true"
+                        android:orientation="horizontal"
+                        android:paddingStart="8dp"
+                        android:paddingEnd="8dp" />
+                </HorizontalScrollView>
+            </ScrollView>
+
+            <LinearLayout
+                android:id="@+id/ll_fragment_hero_personal_descriptions"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:animateLayoutChanges="true"
+                android:minHeight="400dp"
+                android:orientation="vertical"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/iv_fragment_hero_personal">
+
+            </LinearLayout>
+        </android.support.constraint.ConstraintLayout>
+    </android.support.v4.widget.NestedScrollView>
+</layout>

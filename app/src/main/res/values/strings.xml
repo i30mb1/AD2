@@ -84,12 +84,12 @@
     <string name="all_logout" translatable="false">logout complete</string>
     <string name="heart" translatable="false">heart</string>
     <string name="language_resource">eng</string>
-    <string name="item_hero_personal_description_notes">Notes</string>
+    <string name="hero_fragment_notes">Notes</string>
     <string name="item_hero_personal_description_talents">Talents</string>
-    <string name="item_hero_personal_description_bio">Bio</string>
-    <string name="item_hero_personal_description_facts">Trivia</string>
-    <string name="item_hero_personal_description_desc">Description</string>
-    <string name="item_hero_personal_description_tips">Tips</string>
+    <string name="hero_fragment_bio">Bio</string>
+    <string name="hero_fragment_trivia">Trivia</string>
+    <string name="hero_fragment_description">Description</string>
+    <string name="hero_fragment_tips">Tips</string>
     <string name="open_file">Open</string>
     <string name="hero_responses_fragment_download_first">You should download sound first</string>
     <string name="hero_responses_sound_already_downloaded">Sound already downloaded</string>
@@ -100,7 +100,7 @@
     <string name="item_hero_personal_info_desc">Information</string>
     <string name="item_hero_personal_trivia_desc">Trivia</string>
     <string name="all_open_folder">Open</string>
-    <string name="hero_responses_fragment_sound_downloaded">Sound downloaded</string>
+    <string name="responses_fragment_sound_downloaded">Sound downloaded</string>
     <string name="dialog_donate_annual">ANNUAL</string>
 
     <string name="dialog_donate_subscription">SUBSCRIPTION</string>
@@ -175,5 +175,7 @@
     <string name="fragment_game_G3">can you buy it?</string>
     <string name="all_yes" translatable="false">YES</string>
     <string name="all_no" translatable="false">NO</string>
+    <string name="all_dash" translatable="false">-</string>
+    <string name="fragment_guide_date">Date</string>
 
 </resources>

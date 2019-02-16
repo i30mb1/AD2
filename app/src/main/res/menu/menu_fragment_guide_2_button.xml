@@ -3,7 +3,7 @@
     xmlns:app="http://schemas.android.com/apk/res-auto">
     <item
         android:id="@+id/menu_fragment_guide_1"
-        android:icon="@drawable/ic_menu_fragment_guide_1selected"
+        android:icon="@drawable/ic_menu_fragment_guide_1"
         android:title="1"
         app:showAsAction="always" />
     <item

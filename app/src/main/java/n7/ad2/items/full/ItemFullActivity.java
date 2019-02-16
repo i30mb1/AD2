@@ -109,14 +109,14 @@ public class ItemFullActivity extends BaseActivity {
         }
 
         //loading Description
-        final View item_hero_personal_description_simple = getLayoutInflater().inflate(R.layout.item_hero_personal_description_simple, null);
-        ((TextView) item_hero_personal_description_simple.findViewById(R.id.tv)).setText(R.string.item_hero_personal_description_desc);
+        final View item_hero_personal_description_simple = getLayoutInflater().inflate(R.layout.item_hero_description, null);
+        ((TextView) item_hero_personal_description_simple.findViewById(R.id.tv_item_hero_description)).setText(R.string.hero_fragment_description);
 
-        LinearLayout ll_items_description = item_hero_personal_description_simple.findViewById(R.id.ll_item_description);
-        View item_description = getLayoutInflater().inflate(R.layout.item_description, null);
+        LinearLayout ll_items_description = item_hero_personal_description_simple.findViewById(R.id.ll_item_hero_description);
+        View item_description = getLayoutInflater().inflate(R.layout.item_text_for_description, null);
         try {
-            ((TextView) item_description.findViewById(R.id.tv_description)).setText(jsonItemDescription.getString("description"));
-            item_description.findViewById(R.id.textView2).setVisibility(View.GONE);
+            ((TextView) item_description.findViewById(R.id.tv_item_text_for_description_text)).setText(jsonItemDescription.getString("description"));
+            item_description.findViewById(R.id.tv_item_text_for_description_dash).setVisibility(View.GONE);
         } catch (JSONException e) {
             e.printStackTrace();
         }
@@ -125,8 +125,8 @@ public class ItemFullActivity extends BaseActivity {
         if (jsonItemDescription.has("attrs")) {
             try {
                 for (int i = 0; i < jsonItemDescription.getJSONArray("attrs").length(); i++) {
-                    View item_descriptions = getLayoutInflater().inflate(R.layout.item_description, null);
-                    ((TextView) item_descriptions.findViewById(R.id.tv_description)).setText(jsonItemDescription.getJSONArray("attrs").get(i).toString());
+                    View item_descriptions = getLayoutInflater().inflate(R.layout.item_text_for_description, null);
+                    ((TextView) item_descriptions.findViewById(R.id.tv_item_text_for_description_text)).setText(jsonItemDescription.getJSONArray("attrs").get(i).toString());
                     ll_items_description.addView(item_descriptions);
                 }
             } catch (JSONException e) {
@@ -137,13 +137,13 @@ public class ItemFullActivity extends BaseActivity {
 
         //load Info
         if (jsonItemDescription.has("info") && subscription) {
-            final View item_hero_personal_info_simple = getLayoutInflater().inflate(R.layout.item_hero_personal_description_simple, null);
-            ((TextView) item_hero_personal_info_simple.findViewById(R.id.tv)).setText(R.string.item_hero_personal_info_desc);
-            LinearLayout ll_items_info = item_hero_personal_info_simple.findViewById(R.id.ll_item_description);
+            final View item_hero_personal_info_simple = getLayoutInflater().inflate(R.layout.item_hero_description, null);
+            ((TextView) item_hero_personal_info_simple.findViewById(R.id.tv_item_hero_description)).setText(R.string.item_hero_personal_info_desc);
+            LinearLayout ll_items_info = item_hero_personal_info_simple.findViewById(R.id.ll_item_hero_description);
             try {
                 for (int i = 0; i < jsonItemDescription.getJSONArray("info").length(); i++) {
-                    View item_descriptions = getLayoutInflater().inflate(R.layout.item_description, null);
-                    ((TextView) item_descriptions.findViewById(R.id.tv_description)).setText(jsonItemDescription.getJSONArray("info").get(i).toString());
+                    View item_descriptions = getLayoutInflater().inflate(R.layout.item_text_for_description, null);
+                    ((TextView) item_descriptions.findViewById(R.id.tv_item_text_for_description_text)).setText(jsonItemDescription.getJSONArray("info").get(i).toString());
                     ll_items_info.addView(item_descriptions);
                 }
             } catch (JSONException e) {
@@ -155,13 +155,13 @@ public class ItemFullActivity extends BaseActivity {
 
         //load tips
         if (jsonItemDescription.has("tips") && subscription) {
-            final View item_hero_personal_tips_simple = getLayoutInflater().inflate(R.layout.item_hero_personal_description_simple, null);
-            ((TextView) item_hero_personal_tips_simple.findViewById(R.id.tv)).setText(R.string.item_hero_personal_description_tips);
-            LinearLayout ll_items_tips = item_hero_personal_tips_simple.findViewById(R.id.ll_item_description);
+            final View item_hero_personal_tips_simple = getLayoutInflater().inflate(R.layout.item_hero_description, null);
+            ((TextView) item_hero_personal_tips_simple.findViewById(R.id.tv_item_hero_description)).setText(R.string.hero_fragment_tips);
+            LinearLayout ll_items_tips = item_hero_personal_tips_simple.findViewById(R.id.ll_item_hero_description);
             try {
                 for (int i = 0; i < jsonItemDescription.getJSONArray("tips").length(); i++) {
-                    View item_descriptions = getLayoutInflater().inflate(R.layout.item_description, null);
-                    ((TextView) item_descriptions.findViewById(R.id.tv_description)).setText(jsonItemDescription.getJSONArray("tips").get(i).toString());
+                    View item_descriptions = getLayoutInflater().inflate(R.layout.item_text_for_description, null);
+                    ((TextView) item_descriptions.findViewById(R.id.tv_item_text_for_description_text)).setText(jsonItemDescription.getJSONArray("tips").get(i).toString());
                     ll_items_tips.addView(item_descriptions);
                 }
             } catch (JSONException e) {
@@ -172,13 +172,13 @@ public class ItemFullActivity extends BaseActivity {
         }
         //loading Trivia
         if (jsonItemDescription.has("trivia")) {
-            final View item_hero_personal_info_simple = getLayoutInflater().inflate(R.layout.item_hero_personal_description_simple, null);
-            ((TextView) item_hero_personal_info_simple.findViewById(R.id.tv)).setText(R.string.item_hero_personal_trivia_desc);
-            LinearLayout ll_items_info = item_hero_personal_info_simple.findViewById(R.id.ll_item_description);
+            final View item_hero_personal_info_simple = getLayoutInflater().inflate(R.layout.item_hero_description, null);
+            ((TextView) item_hero_personal_info_simple.findViewById(R.id.tv_item_hero_description)).setText(R.string.item_hero_personal_trivia_desc);
+            LinearLayout ll_items_info = item_hero_personal_info_simple.findViewById(R.id.ll_item_hero_description);
             try {
                 for (int i = 0; i < jsonItemDescription.getJSONArray("trivia").length(); i++) {
-                    View item_descriptions = getLayoutInflater().inflate(R.layout.item_description, null);
-                    ((TextView) item_descriptions.findViewById(R.id.tv_description)).setText(jsonItemDescription.getJSONArray("trivia").get(i).toString());
+                    View item_descriptions = getLayoutInflater().inflate(R.layout.item_text_for_description, null);
+                    ((TextView) item_descriptions.findViewById(R.id.tv_item_text_for_description_text)).setText(jsonItemDescription.getJSONArray("trivia").get(i).toString());
                     ll_items_info.addView(item_descriptions);
                 }
             } catch (JSONException e) {
@@ -211,15 +211,15 @@ public class ItemFullActivity extends BaseActivity {
 
                     if (jsonObject.has("effects")) {
                         for (int i1 = 0; i1 < jsonObject.getJSONArray("effects").length(); i1++) {
-                            View item_descriptions = getLayoutInflater().inflate(R.layout.item_description, null);
-                            ((TextView) item_descriptions.findViewById(R.id.tv_description)).setText(jsonObject.getJSONArray("effects").get(i1).toString());
+                            View item_descriptions = getLayoutInflater().inflate(R.layout.item_text_for_description, null);
+                            ((TextView) item_descriptions.findViewById(R.id.tv_item_text_for_description_text)).setText(jsonObject.getJSONArray("effects").get(i1).toString());
                             linearLayout.addView(item_descriptions);
                         }
                     }
                     if (jsonObject.has("notes") && subscription) {
                         for (int i1 = 0; i1 < jsonObject.getJSONArray("notes").length(); i1++) {
-                            View item_descriptions = getLayoutInflater().inflate(R.layout.item_description, null);
-                            ((TextView) item_descriptions.findViewById(R.id.tv_description)).setText(jsonObject.getJSONArray("notes").get(i1).toString());
+                            View item_descriptions = getLayoutInflater().inflate(R.layout.item_text_for_description, null);
+                            ((TextView) item_descriptions.findViewById(R.id.tv_item_text_for_description_text)).setText(jsonObject.getJSONArray("notes").get(i1).toString());
                             linearLayout.addView(item_descriptions);
                         }
                     }

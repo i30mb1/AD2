@@ -124,7 +124,6 @@ public class MainViewModel extends AndroidViewModel {
 
                         boolean shouldUpdateFromGoogleMarket = update.getMessage().isUpdateFromMarket();
                         PreferenceManager.getDefaultSharedPreferences(application).edit().putBoolean(SHOULD_UPDATE_FROM_MARKET, shouldUpdateFromGoogleMarket).apply();
-
                         int serverVersion = update.getVersionCode();
                         if (serverVersion > deviceVersion) {
                             showDialogUpdate.call();

@@ -5,6 +5,7 @@
     <data>
 
         <import type="android.view.View" />
+
         <variable
             name="viewModel"
             type="n7.ad2.main.MainViewModel" />
@@ -30,7 +31,6 @@
             tools:listitem="@layout/item_list_plain" />
 
         <ImageView
-            android:onLongClick="@{activity::toggleSecretActivity}"
             android:id="@+id/iv_drawer_setting"
             android:layout_width="50dp"
             android:layout_height="50dp"
@@ -39,6 +39,7 @@
             android:background="?attr/selectableItemBackground"
             android:contentDescription="@string/setting_tell_friend_title"
             android:onClick="@{()->viewModel.startActivityOptions(context)}"
+            android:onLongClick="@{activity::toggleSecretActivity}"
             android:scaleType="center"
             android:tint="?android:textColorPrimary"
             app:layout_constraintBottom_toBottomOf="parent"
@@ -245,13 +246,13 @@
             android:layout_height="40dp"
             android:layout_marginTop="8dp"
             android:layout_marginEnd="8dp"
+            android:contentDescription="@string/setting_tell_friend_title"
             android:onClick="@{(view)->activity.showVideoAD(view)}"
-            app:srcCompat="@drawable/ic_subscription"
             android:textSize="14sp"
             android:visibility="@{activity.freeSubscriptionButtonVisibility?View.VISIBLE:View.GONE}"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintTop_toTopOf="parent"
-            android:contentDescription="@string/setting_tell_friend_title" />
+            app:srcCompat="@drawable/ic_subscription" />
 
     </android.support.constraint.ConstraintLayout>
 </layout>

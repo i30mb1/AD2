@@ -1,5 +1,6 @@
 package n7.ad2.heroes.full;
 
+import android.arch.lifecycle.ViewModelProviders;
 import android.content.Intent;
 import android.content.res.TypedArray;
 import android.databinding.DataBindingUtil;
@@ -26,9 +27,9 @@ public class HeroFullActivity extends BaseActivity {
 
     public static final String HERO_NAME = "HERO_NAME";
     public static final String HERO_CODE_NAME = "HERO_CODE_NAME";
-    private String codeName;
-    private AppExecutors appExecutors;
+    private String heroCode;
     private ActivityHeroFullBinding binding;
+    private String heroName;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -36,14 +37,25 @@ public class HeroFullActivity extends BaseActivity {
         binding = DataBindingUtil.setContentView(this, R.layout.activity_hero_full);
 
         if (savedInstanceState == null) {
-            appExecutors = new AppExecutors();
-
-            setToolbar();
-            setViewPager();
-            supportPostponeEnterTransition();
+            heroName = getIntent().getStringExtra(HERO_NAME);
+            heroCode = getIntent().getStringExtra(HERO_CODE_NAME);
         } else {
-            finish();
+            heroName = savedInstanceState.getString(HERO_NAME);
+            heroCode = savedInstanceState.getString(HERO_CODE_NAME);
         }
+
+        HeroFulViewModel viewModel = ViewModelProviders.of(this, new HeroFullViewModelFactory(getApplication(), heroCode, heroName)).get(HeroFulViewModel.class);
+
+        setToolbar();
+        setViewPager();
+        supportPostponeEnterTransition();
+    }
+
+    @Override
+    protected void onSaveInstanceState(Bundle outState) {
+        super.onSaveInstanceState(outState);
+        outState.putString(HERO_NAME, heroName);
+        outState.putString(HERO_CODE_NAME, heroCode);
     }
 
     public void scheduleStartPostponedTransition(final View sharedElement) {
@@ -59,7 +71,8 @@ public class HeroFullActivity extends BaseActivity {
     }
 
     private void setViewPager() {
-        binding.vpActivityHeroFull.setAdapter(new ViewPagerAdapter(getSupportFragmentManager()));
+        ViewPagerAdapter viewPagerAdapter = new ViewPagerAdapter(getSupportFragmentManager());
+        binding.vpActivityHeroFull.setAdapter(viewPagerAdapter);
         binding.vpActivityHeroFull.setOffscreenPageLimit(2);
         binding.tabActivityHeroFull.setupWithViewPager(binding.vpActivityHeroFull);
     }
@@ -71,10 +84,8 @@ public class HeroFullActivity extends BaseActivity {
 
     private void setToolbar() {
         try {
-            String name = getIntent().getStringExtra(HERO_NAME);
-            codeName = getIntent().getStringExtra(HERO_CODE_NAME);
-            sendBroadcast(new Intent(LOG_ON_RECEIVE).putExtra(LOG_ON_RECEIVE, "hero_" + codeName + "_loaded"));
-            binding.toolbarActivityHeroFull.setTitle(name);
+            sendBroadcast(new Intent(LOG_ON_RECEIVE).putExtra(LOG_ON_RECEIVE, "hero_" + heroCode + "_loaded"));
+            binding.toolbarActivityHeroFull.setTitle(heroName);
             setSupportActionBar(binding.toolbarActivityHeroFull);
 
             final TypedArray styledAttributes = getTheme().obtainStyledAttributes(new int[]{R.attr.actionBarSize});
@@ -82,7 +93,7 @@ public class HeroFullActivity extends BaseActivity {
 
 
             try {
-                Utils.startAnimation(HeroFullActivity.this, binding.toolbarActivityHeroFull, "heroes/" + codeName + "/emoticon.webp", false, mActionBarSize);
+                Utils.startAnimation(HeroFullActivity.this, binding.toolbarActivityHeroFull, "heroes/" + heroCode + "/emoticon.webp", false, mActionBarSize);
             } catch (NullPointerException e) {
                 e.printStackTrace();
             }
@@ -90,7 +101,7 @@ public class HeroFullActivity extends BaseActivity {
                 binding.toolbarActivityHeroFull.setNavigationOnClickListener(new View.OnClickListener() {
                     @Override
                     public void onClick(View view) {
-                        Bitmap icon = Utils.getBitmapFromAssets(HeroFullActivity.this, String.format("heroes/%s/mini.webp", codeName));
+                        Bitmap icon = Utils.getBitmapFromAssets(HeroFullActivity.this, String.format("heroes/%s/mini.webp", heroCode));
                         icon = Bitmap.createScaledBitmap(icon, mActionBarSize, mActionBarSize, false);
                         final Drawable iconDrawable = new BitmapDrawable(getResources(), icon);
                         binding.toolbarActivityHeroFull.setNavigationIcon(iconDrawable);
@@ -112,11 +123,11 @@ public class HeroFullActivity extends BaseActivity {
         public Fragment getItem(int position) {
             switch (position) {
                 case 0:
-                    return HeroFragment.newInstance(codeName, appExecutors);
+                    return HeroFragment.newInstance();
                 case 1:
-                    return HeroResponsesFragment.newInstance(codeName, appExecutors);
+                    return ResponsesFragment.newInstance();
                 case 2:
-                    return GuideFragment.newInstance(codeName, appExecutors);
+                    return GuideFragment.newInstance();
             }
             return null;
         }

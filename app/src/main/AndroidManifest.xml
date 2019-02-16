@@ -42,8 +42,7 @@
             android:name=".setting.SettingActivity"
             android:screenOrientation="portrait" />
         <activity
-            android:name=".heroes.full.HeroFullActivity"
-            android:screenOrientation="portrait" />
+            android:name=".heroes.full.HeroFullActivity" />
         <activity
             android:name=".streams.StreamsFullActivity"
             android:configChanges="keyboard|orientation|screenSize|smallestScreenSize|screenLayout"

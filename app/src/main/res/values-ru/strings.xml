@@ -38,12 +38,12 @@
     <string name="log_in">Log In</string>
     <string name="language_resource">ru</string>
     <string name="hero_guide">гайд</string>
-    <string name="item_hero_personal_description_notes">Примечания</string>
+    <string name="hero_fragment_notes">Примечания</string>
     <string name="item_hero_personal_description_talents">Таланты</string>
-    <string name="item_hero_personal_description_bio">Биография</string>
-    <string name="item_hero_personal_description_facts">Факты</string>
-    <string name="item_hero_personal_description_desc">Описание</string>
-    <string name="item_hero_personal_description_tips">Советы</string>
+    <string name="hero_fragment_bio">Биография</string>
+    <string name="hero_fragment_trivia">Факты</string>
+    <string name="hero_fragment_description">Описание</string>
+    <string name="hero_fragment_tips">Советы</string>
     <string name="items">Предметы</string>
     <string name="dialog_response_download">Скачать</string>
     <string name="dialog_response_set_ringtone">Поставить на рингтон</string>
@@ -55,7 +55,7 @@
     <string name="item_hero_personal_info_desc">Информация</string>
     <string name="item_hero_personal_trivia_desc">Факты</string>
     <string name="all_open_folder">Открыть</string>
-    <string name="hero_responses_fragment_sound_downloaded">Звук скачан</string>
+    <string name="responses_fragment_sound_downloaded">Звук скачан</string>
     <string name="dialog_donate_annual">ГОД</string>
     <string name="dialog_donate_subscription">ПОДПИСКА</string>
     <string name="dialog_rate_me_never">Никогда</string>

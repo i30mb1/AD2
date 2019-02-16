@@ -1,25 +1,18 @@
 package n7.ad2.heroes.full;
 
-import android.Manifest;
-import android.app.Activity;
 import android.app.DownloadManager;
 import android.arch.paging.PagedListAdapter;
 import android.content.ContentResolver;
 import android.content.ContentValues;
 import android.content.Context;
 import android.content.Intent;
-import android.content.pm.PackageManager;
 import android.media.MediaPlayer;
 import android.media.RingtoneManager;
 import android.net.Uri;
-import android.os.Build;
 import android.os.Environment;
-import android.preference.PreferenceManager;
 import android.provider.MediaStore;
-import android.provider.Settings;
 import android.support.annotation.NonNull;
 import android.support.design.widget.Snackbar;
-import android.support.v4.app.ActivityCompat;
 import android.support.v7.app.AlertDialog;
 import android.support.v7.util.DiffUtil;
 import android.support.v7.widget.RecyclerView;
@@ -37,14 +30,11 @@ import com.squareup.picasso.Picasso;
 
 import java.io.File;
 import java.io.IOException;
-import java.util.List;
+import java.util.LinkedList;
 
 import n7.ad2.R;
-import n7.ad2.utils.AppExecutors;
 import n7.ad2.utils.StickyHeaderDecorator;
 import n7.ad2.utils.Utils;
-
-import static n7.ad2.setting.SettingActivity.SUBSCRIPTION_PREF;
 
 public class ResponsesPagedListAdapter extends PagedListAdapter<ResponseModel, ResponsesPagedListAdapter.ViewHolder> implements StickyHeaderDecorator.StickyHeaderInterface {
 
@@ -59,21 +49,18 @@ public class ResponsesPagedListAdapter extends PagedListAdapter<ResponseModel, R
             return oldItem.getTitle().equals(newItem.getTitle());
         }
     };
-    MediaPlayer mediaPlayer = new MediaPlayer();
-    private String heroName;
-    private AppExecutors appExecutors;
-    private Context context;
-    private List<String> listSavedResponses;
-    private View parentView;
-    private int viewRunningPosition = -1;
 
-    public ResponsesPagedListAdapter(String heroName, AppExecutors appExecutors, Context context, List list, View parentView) {
+    private MediaPlayer mediaPlayer = new MediaPlayer();
+    private LinkedList<String> listSavedResponses;
+    private View root;
+    private int viewRunningPosition = -1;
+    private HeroFulViewModel viewModel;
+
+    ResponsesPagedListAdapter(View root, HeroFulViewModel viewModel) {
         super(DIFF_CALLBACK);
-        this.heroName = heroName;
-        this.appExecutors = appExecutors;
-        this.context = context;
-        this.listSavedResponses = list;
-        this.parentView = parentView;
+        this.viewModel = viewModel;
+        this.listSavedResponses = viewModel.responsesInMemory;
+        this.root = root;
     }
 
     @NonNull
@@ -100,11 +87,15 @@ public class ResponsesPagedListAdapter extends PagedListAdapter<ResponseModel, R
 
     @Override
     public int getItemViewType(int position) {
-        if (getItem(position).getHref().equals("")) {
-            return 1;
-        } else {
-            return 0;
+        ResponseModel model = getItem(position);
+        if (model != null) {
+            if (model.getHref().equals("")) {
+                return 1;
+            } else {
+                return 0;
+            }
         }
+        return 0;
     }
 
     @Override
@@ -127,69 +118,29 @@ public class ResponsesPagedListAdapter extends PagedListAdapter<ResponseModel, R
 
     @Override
     public void bindHeaderData(View header, int headerPosition) {
-        ((TextView) header.findViewById(R.id.tv_item_response)).setText(getItem(headerPosition).getTitle());
+        ResponseModel model = getItem(headerPosition);
+        if (model != null) {
+            ((TextView) header.findViewById(R.id.tv_item_response)).setText(model.getTitle());
+        }
     }
 
     @Override
     public boolean isHeader(int itemPosition) {
-        if (itemPosition > 0 && getItem(itemPosition).getHref().equals("")) {
-            return true;
-        } else {
-            return false;
+        ResponseModel model = getItem(itemPosition);
+        if (model != null) {
+            return itemPosition > 0 && model.getHref().equals("");
         }
+        return false;
     }
 
-    public boolean enableWriteSetting(final Context context, final View view) {
-        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.M) {
-            if (Settings.System.canWrite(context)) {
-                return true;
-            } else {
-                Snackbar.make(view, R.string.all_grand_permission, Snackbar.LENGTH_INDEFINITE).setAction(R.string.all_enable,
-                        new View.OnClickListener() {
-                            @Override
-                            public void onClick(View view) {
-                                Intent intent = new Intent(Settings.ACTION_MANAGE_WRITE_SETTINGS);
-                                intent.setData(Uri.parse("package:" + context.getPackageName()));
-                                intent.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
-                                context.startActivity(intent);
-                            }
-                        }).show();
-                return false;
-            }
-        }
-        return true;
-    }
-
-    private boolean checkPermission(View view) {
-        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.M) {
-            if (context.checkSelfPermission(Manifest.permission.WRITE_EXTERNAL_STORAGE) == PackageManager.PERMISSION_GRANTED) {
-                return true;
-            } else {
-                Snackbar.make(view, R.string.all_grand_permission, Snackbar.LENGTH_INDEFINITE).setAction(R.string.all_enable, new View.OnClickListener() {
-                    @Override
-                    public void onClick(View view) {
-                        ActivityCompat.requestPermissions((Activity) context, new String[]{Manifest.permission.WRITE_EXTERNAL_STORAGE}, 7);
-                    }
-                }).show();
-                return false;
-            }
-        }
-        return true;
-    }
-
-    public int dpSize(int px) {
-        float scale = parentView.getContext().getResources().getDisplayMetrics().density;
-        return (int) (px * scale + 0.5f);
-    }
-
-    public class ViewHolder extends RecyclerView.ViewHolder {
+    class ViewHolder extends RecyclerView.ViewHolder {
         TextView tv_item_response;
         LinearLayout ll_item_response;
         ImageView iv_item_response_icons;
         ImageView iv_item_response;
         ProgressBar pb_item_response;
 
-        public ViewHolder(@NonNull View itemView) {
+        ViewHolder(@NonNull View itemView) {
             super(itemView);
             tv_item_response = itemView.findViewById(R.id.tv_item_response);
             ll_item_response = itemView.findViewById(R.id.ll_item_response);
@@ -211,7 +162,7 @@ public class ResponsesPagedListAdapter extends PagedListAdapter<ResponseModel, R
             }
 
             if (iv_item_response_icons != null && model.getIcons().equals("")) {
-                iv_item_response_icons.setVisibility(View.GONE);
+
             }
 
             if (iv_item_response_icons != null && !model.getIcons().equals("")) {
@@ -235,19 +186,21 @@ public class ResponsesPagedListAdapter extends PagedListAdapter<ResponseModel, R
                                         .into(iv_item_response_icons);
                             }
                         });
+            } else if (iv_item_response_icons != null) {
+                iv_item_response_icons.setVisibility(View.GONE);
             }
 
             if (ll_item_response != null) {
                 ll_item_response.setOnClickListener(new View.OnClickListener() {
                     @Override
-                    public void onClick(View view) {
+                    public void onClick(final View view) {
                         try {
                             notifyItemChanged(viewRunningPosition);
                             viewRunningPosition = position;
                             notifyItemChanged(position);
                             mediaPlayer.release();
                             mediaPlayer = new MediaPlayer();
-                            File file = new File(view.getContext().getExternalFilesDir(Environment.DIRECTORY_RINGTONES) + File.separator + heroName + File.separator + model.getTitle() + ".mp3");
+                            File file = new File(view.getContext().getExternalFilesDir(Environment.DIRECTORY_RINGTONES) + File.separator + viewModel.heroName + File.separator + model.getTitle() + ".mp3");
                             if (file.exists()) mediaPlayer.setDataSource(file.getPath());
                             else
                                 mediaPlayer.setDataSource(model.getHref());
@@ -269,14 +222,14 @@ public class ResponsesPagedListAdapter extends PagedListAdapter<ResponseModel, R
                                 @Override
                                 public boolean onError(MediaPlayer mediaPlayer, int i, int i1) {
                                     removeProgressBar();
-                                    showErrorSnackbar();
+                                    showErrorSnackbar(view);
                                     return true;
                                 }
                             });
 
                         } catch (IOException e) {
                             removeProgressBar();
-                            showErrorSnackbar();
+                            showErrorSnackbar(view);
                         }
                     }
 
@@ -286,15 +239,15 @@ public class ResponsesPagedListAdapter extends PagedListAdapter<ResponseModel, R
                         notifyItemChanged(position);
                     }
 
-                    private void showErrorSnackbar() {
-                        if (Utils.isNetworkAvailable(context)) {
-                            Snackbar.make(parentView, R.string.all_something_went_wrong, Snackbar.LENGTH_SHORT).show();
+                    private void showErrorSnackbar(View view) {
+                        if (Utils.isNetworkAvailable(view.getContext())) {
+                            Snackbar.make(root, R.string.all_something_went_wrong, Snackbar.LENGTH_SHORT).show();
                         } else {
-                            Snackbar.make(parentView, R.string.all_error_internet, Snackbar.LENGTH_SHORT).show();
+                            Snackbar.make(root, R.string.all_error_internet, Snackbar.LENGTH_SHORT).show();
                         }
                     }
                 });
-                if (PreferenceManager.getDefaultSharedPreferences(context).getBoolean(SUBSCRIPTION_PREF, false)) {
+                if (viewModel.userSubscription()) {
                     ll_item_response.setOnLongClickListener(new View.OnLongClickListener() {
                         @Override
                         public boolean onLongClick(final View view) {
@@ -304,84 +257,74 @@ public class ResponsesPagedListAdapter extends PagedListAdapter<ResponseModel, R
                             Button b_dialog_response_download = dialog.findViewById(R.id.b_dialog_response_download);
                             Button b_dialog_response_set_ringtone = dialog.findViewById(R.id.b_dialog_response_set_ringtone);
 
-                            b_dialog_response_set_ringtone.setOnClickListener(new View.OnClickListener() {
-                                @Override
-                                public void onClick(final View view) {
-                                    if (enableWriteSetting(view.getContext(), view) && checkPermission(view)) {
-                                        appExecutors.networkIO().execute(new Runnable() {
-                                            @Override
-                                            public void run() {
-                                                File file = new File(view.getContext().getExternalFilesDir(Environment.DIRECTORY_RINGTONES) + File.separator + heroName + File.separator + model.getTitle().replace("?", "") + ".mp3");
-                                                if (file.exists()) {
-                                                    ContentValues values = new ContentValues();
-                                                    values.put(MediaStore.MediaColumns.DATA, file.getAbsolutePath());
-                                                    values.put(MediaStore.MediaColumns.TITLE, model.getTitle());
-                                                    values.put(MediaStore.MediaColumns.MIME_TYPE, "audio/mp3");
-                                                    values.put(MediaStore.MediaColumns.SIZE, file.length());
-                                                    values.put(MediaStore.Audio.Media.IS_NOTIFICATION, true);
-                                                    values.put(MediaStore.Audio.Media.IS_RINGTONE, true);
-                                                    values.put(MediaStore.Audio.Media.IS_ALARM, true);
-                                                    values.put(MediaStore.Audio.Media.IS_MUSIC, false);
+                            if (b_dialog_response_set_ringtone != null)
+                                b_dialog_response_set_ringtone.setOnClickListener(new View.OnClickListener() {
+                                    @Override
+                                    public void onClick(final View view) {
+                                        if (viewModel.enableWriteSetting() && viewModel.checkPermission()) {
+                                            File file = new File(view.getContext().getExternalFilesDir(Environment.DIRECTORY_RINGTONES) + File.separator + viewModel.heroName + File.separator + model.getTitle().replace("?", "") + ".mp3");
+                                            if (file.exists()) {
+                                                ContentValues values = new ContentValues();
+                                                values.put(MediaStore.MediaColumns.DATA, file.getAbsolutePath());
+                                                values.put(MediaStore.MediaColumns.TITLE, model.getTitle());
+                                                values.put(MediaStore.MediaColumns.MIME_TYPE, "audio/mp3");
+                                                values.put(MediaStore.MediaColumns.SIZE, file.length());
+                                                values.put(MediaStore.Audio.Media.IS_NOTIFICATION, true);
+                                                values.put(MediaStore.Audio.Media.IS_RINGTONE, true);
+                                                values.put(MediaStore.Audio.Media.IS_ALARM, true);
+                                                values.put(MediaStore.Audio.Media.IS_MUSIC, false);
 
-                                                    ContentResolver contentResolver = context.getContentResolver();
-                                                    Uri generalaudiouri = MediaStore.Audio.Media.INTERNAL_CONTENT_URI;
-                                                    contentResolver.delete(generalaudiouri, MediaStore.MediaColumns.DATA + "='" + file.getAbsolutePath() + "'", null);
-                                                    Uri ringtoneuri = contentResolver.insert(generalaudiouri, values);
-                                                    RingtoneManager.setActualDefaultRingtoneUri(context, RingtoneManager.TYPE_NOTIFICATION, ringtoneuri);
-                                                    Snackbar.make(parentView, R.string.hero_response_ringtone_set, Snackbar.LENGTH_SHORT).show();
-                                                } else {
-                                                    Snackbar.make(parentView, R.string.hero_responses_fragment_download_first, Snackbar.LENGTH_SHORT).show();
-                                                }
-                                                dialog.cancel();
+                                                ContentResolver contentResolver = view.getContext().getContentResolver();
+                                                Uri generalaudiouri = MediaStore.Audio.Media.INTERNAL_CONTENT_URI;
+                                                contentResolver.delete(generalaudiouri, MediaStore.MediaColumns.DATA + "='" + file.getAbsolutePath() + "'", null);
+                                                Uri ringtoneuri = contentResolver.insert(generalaudiouri, values);
+                                                RingtoneManager.setActualDefaultRingtoneUri(view.getContext(), RingtoneManager.TYPE_NOTIFICATION, ringtoneuri);
+                                                Snackbar.make(root, R.string.hero_response_ringtone_set, Snackbar.LENGTH_SHORT).show();
+                                            } else {
+                                                Snackbar.make(root, R.string.hero_responses_fragment_download_first, Snackbar.LENGTH_SHORT).show();
                                             }
-                                        });
+                                            dialog.cancel();
+                                        }
                                     }
-                                }
-                            });
-                            b_dialog_response_download.setOnClickListener(new View.OnClickListener() {
-                                @Override
-                                public void onClick(final View view) {
-                                    if (Utils.isNetworkAvailable(view.getContext())) {
-                                        appExecutors.networkIO().execute(new Runnable() {
-                                            @Override
-                                            public void run() {
-                                                File file = new File(view.getContext().getExternalFilesDir(Environment.DIRECTORY_RINGTONES) + File.separator + heroName + File.separator + model.getTitle().replace("?", "") + ".mp3");
-                                                if (file.exists()) {
-                                                    Snackbar.make(parentView, R.string.hero_responses_sound_already_downloaded, Snackbar.LENGTH_LONG).setAction(R.string.open_file, new View.OnClickListener() {
-                                                        @Override
-                                                        public void onClick(View view) {
-                                                            Uri selectedUri = Uri.parse(context.getExternalFilesDir(Environment.DIRECTORY_RINGTONES) + File.separator);
-                                                            Intent intentOpenFile = new Intent(Intent.ACTION_VIEW);
-                                                            intentOpenFile.setDataAndType(selectedUri, "application/*");
-                                                            if (intentOpenFile.resolveActivityInfo(context.getPackageManager(), 0) != null) {
-                                                                context.startActivity(Intent.createChooser(intentOpenFile, context.getString(R.string.hero_responses_open_folder_with)));
-                                                            } else {
-                                                                // if you reach this place, it means there is no any file
-                                                                // explorer app installed on your device
-                                                            }
+                                });
+                            if (b_dialog_response_download != null)
+                                b_dialog_response_download.setOnClickListener(new View.OnClickListener() {
+                                    @Override
+                                    public void onClick(final View view) {
+                                        if (Utils.isNetworkAvailable(view.getContext())) {
+                                            File file = new File(view.getContext().getExternalFilesDir(Environment.DIRECTORY_RINGTONES) + File.separator + viewModel.heroName + File.separator + model.getTitle().replace("?", "") + ".mp3");
+                                            if (file.exists()) {
+                                                Snackbar.make(root, R.string.hero_responses_sound_already_downloaded, Snackbar.LENGTH_LONG).setAction(R.string.open_file, new View.OnClickListener() {
+                                                    @Override
+                                                    public void onClick(View view) {
+                                                        Uri selectedUri = Uri.parse(view.getContext().getExternalFilesDir(Environment.DIRECTORY_RINGTONES) + File.separator);
+                                                        Intent intentOpenFile = new Intent(Intent.ACTION_VIEW);
+                                                        intentOpenFile.setDataAndType(selectedUri, "application/*");
+                                                        if (intentOpenFile.resolveActivityInfo(view.getContext().getPackageManager(), 0) != null) {
+                                                            view.getContext().startActivity(Intent.createChooser(intentOpenFile, view.getContext().getString(R.string.hero_responses_open_folder_with)));
+                                                        } else {
+                                                            // if you reach this place, it means there is no any file
+                                                            // explorer app installed on your device
                                                         }
-                                                    }).show();
-                                                } else {
-                                                    DownloadManager manager = (DownloadManager) view.getContext().getSystemService(Context.DOWNLOAD_SERVICE);
-                                                    if (manager != null) {
-                                                        manager.enqueue(new DownloadManager.Request(Uri.parse(model.getHref()))
-                                                                .setDescription(heroName)
-                                                                .setTitle(model.getTitle())
-                                                                .setNotificationVisibility(DownloadManager.Request.VISIBILITY_VISIBLE_NOTIFY_COMPLETED)
-                                                                .setDestinationInExternalFilesDir(view.getContext(), Environment.DIRECTORY_RINGTONES, heroName + File.separator + model.getTitle().replace("?", "") + ".mp3")
-                                                        );
                                                     }
+                                                }).show();
+                                            } else {
+                                                DownloadManager manager = (DownloadManager) view.getContext().getSystemService(Context.DOWNLOAD_SERVICE);
+                                                if (manager != null) {
+                                                    manager.enqueue(new DownloadManager.Request(Uri.parse(model.getHref()))
+                                                            .setDescription(viewModel.heroName)
+                                                            .setTitle(model.getTitle())
+                                                            .setNotificationVisibility(DownloadManager.Request.VISIBILITY_VISIBLE_NOTIFY_COMPLETED)
+                                                            .setDestinationInExternalFilesDir(view.getContext(), Environment.DIRECTORY_RINGTONES, viewModel.heroName + File.separator + model.getTitle().replace("?", "") + ".mp3")
+                                                    );
                                                 }
-                                                dialog.cancel();
                                             }
-                                        });
-                                    } else {
+                                        } else {
+                                            Snackbar.make(root, R.string.all_error_internet, Snackbar.LENGTH_LONG).show();
+                                        }
                                         dialog.cancel();
-                                        Snackbar.make(parentView, R.string.all_error_internet, Snackbar.LENGTH_LONG).show();
                                     }
-
-                                }
-                            });
+                                });
 
                             return true;
                         }
