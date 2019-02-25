@@ -52,7 +52,8 @@
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintTop_toTopOf="parent"
             app:srcCompat="@drawable/ic_menu_open_custom_url"
-            android:contentDescription="@string/setting_tell_friend_title" />
+            android:contentDescription="@string/setting_tell_friend_title"
+            tools:targetApi="m" />
 
         <LinearLayout
             android:id="@+id/ll_dialog_open_stream"

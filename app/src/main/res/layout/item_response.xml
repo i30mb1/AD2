@@ -20,7 +20,8 @@
         android:layout_height="20dp"
         android:layout_weight="0"
         android:visibility="gone"
-        app:srcCompat="@drawable/ic_response_save" />
+        app:srcCompat="@drawable/ic_response_save"
+        android:contentDescription="@string/setting_tell_friend_title" />
 
     <ImageView
         android:id="@+id/iv_item_response_icons"
@@ -29,7 +30,8 @@
         android:layout_weight="0"
         android:minWidth="20dp"
         android:orientation="horizontal"
-        android:visibility="gone" />
+        android:visibility="gone"
+        android:contentDescription="@string/setting_tell_friend_title" />
 
     <TextView
         android:id="@+id/tv_item_response"

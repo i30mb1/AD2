@@ -35,7 +35,8 @@
                 app:layout_constraintTop_toTopOf="parent"
                 tools:src="@tools:sample/backgrounds/scenic"
                 withImage="@{news.withImage}"
-                srcPath="@{news.imageHref}" />
+                srcPath="@{news.imageHref}"
+                tools:targetApi="m" />
 
             <TextView
                 android:id="@+id/tv_item_list_news"

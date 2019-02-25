@@ -118,5 +118,6 @@
     <string name="tv_second_remains">секунд осталось</string>
     <string name="activity_game2p1_your_apm">твой апм</string>
     <string name="fragment_game_G3">хватает ли тебе денег?</string>
+    <string name="fragment_guide_date">Дата</string>
 
 </resources>

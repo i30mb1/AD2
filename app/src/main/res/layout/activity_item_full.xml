@@ -10,33 +10,39 @@
     <android.support.design.widget.AppBarLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content">
+
         <android.support.v7.widget.Toolbar
             android:id="@+id/toolbar"
             android:layout_width="match_parent"
             android:layout_height="?android:actionBarSize"
             android:background="?colorPrimary"
             android:elevation="8dp"
+            android:minHeight="?attr/actionBarSize"
             app:layout_scrollFlags="scroll"
-            android:minHeight="?attr/actionBarSize"/>
+            tools:targetApi="lollipop" />
     </android.support.design.widget.AppBarLayout>
 
     <android.support.v4.widget.NestedScrollView
-        app:layout_behavior="@string/appbar_scrolling_view_behavior"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content">
+        android:layout_height="wrap_content"
+        app:layout_behavior="@string/appbar_scrolling_view_behavior">
+
         <android.support.constraint.ConstraintLayout
             android:layout_width="match_parent"
             android:layout_height="match_parent">
+
             <ImageView
                 android:id="@+id/iv_activity_item_full_cost"
                 android:layout_width="20dp"
                 android:layout_height="20dp"
                 android:background="?colorPrimaryDark"
+                android:contentDescription="@string/setting_tell_friend_title"
                 android:elevation="2dp"
                 android:visibility="gone"
                 app:layout_constraintBottom_toBottomOf="@+id/iv_activity_item_full_main_image"
                 app:layout_constraintStart_toEndOf="@+id/iv_activity_item_full_main_image"
-                app:srcCompat="@drawable/gold" />
+                app:srcCompat="@drawable/gold"
+                tools:ignore="UnusedAttribute" />
 
             <TextView
                 android:id="@+id/tv_activity_item_full_cost"
@@ -52,7 +58,8 @@
                 app:layout_constraintBottom_toBottomOf="@+id/iv_activity_item_full_cost"
                 app:layout_constraintStart_toEndOf="@+id/iv_activity_item_full_cost"
                 app:layout_constraintTop_toTopOf="@+id/iv_activity_item_full_cost"
-                tools:text="0" />
+                tools:text="0"
+                tools:ignore="UnusedAttribute" />
 
             <TextView
                 android:id="@+id/tv_activity_item_full_name"
@@ -60,13 +67,14 @@
                 android:layout_height="wrap_content"
                 android:background="?colorPrimaryDark"
                 android:elevation="2dp"
-                android:paddingEnd="4dp"
                 android:paddingStart="4dp"
+                android:paddingEnd="4dp"
                 android:textColor="?android:textColorSecondary"
                 android:textStyle="bold"
                 app:layout_constraintStart_toEndOf="@+id/iv_activity_item_full_main_image"
                 app:layout_constraintTop_toTopOf="@+id/iv_activity_item_full_main_image"
-                tools:text="Bracer" />
+                tools:text="Bracer"
+                tools:ignore="UnusedAttribute" />
 
             <ImageView
                 android:id="@+id/iv_activity_item_full_main_image"
@@ -82,7 +90,9 @@
                 android:transitionName="iv"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent"
-                app:srcCompat="@drawable/item_placeholder" />
+                app:srcCompat="@drawable/item_placeholder"
+                android:contentDescription="@string/setting_tell_friend_title"
+                tools:ignore="UnusedAttribute" />
 
 
             <LinearLayout

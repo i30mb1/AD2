@@ -78,7 +78,8 @@
                 android:layout_height="25dp"
                 android:paddingStart="4dp"
                 android:paddingEnd="4dp"
-                app:srcCompat="@drawable/ic_fragment_single_stream_sound_on" />
+                app:srcCompat="@drawable/ic_fragment_single_stream_sound_on"
+                android:contentDescription="@string/setting_tell_friend_title" />
 
             <ImageView
                 android:id="@+id/iv_fragment_single_stream"
@@ -86,7 +87,8 @@
                 android:layout_height="25dp"
                 android:paddingStart="4dp"
                 android:paddingEnd="4dp"
-                app:srcCompat="@drawable/ic_fragment_single_stream_on" />
+                app:srcCompat="@drawable/ic_fragment_single_stream_on"
+                android:contentDescription="@string/setting_tell_friend_title" />
 
             <TextView
                 android:id="@+id/tv_fragment_single_quality"
@@ -94,7 +96,7 @@
                 android:layout_height="25dp"
                 android:gravity="center"
                 android:maxLines="1"
-                android:text="160"
+                tools:text="160"
                 android:textColor="?android:textColorSecondary"
                 android:textSize="12sp"
                 android:textStyle="bold" />
@@ -105,7 +107,8 @@
                 android:layout_height="25dp"
                 android:paddingStart="4dp"
                 android:paddingEnd="4dp"
-                app:srcCompat="@drawable/ic_fragment_single_stream_chat_on" />
+                app:srcCompat="@drawable/ic_fragment_single_stream_chat_on"
+                android:contentDescription="@string/setting_tell_friend_title" />
 
             <TextView
                 android:id="@+id/tv_fragment_single_alpha"
@@ -115,7 +118,7 @@
                 android:maxLines="1"
                 android:paddingStart="4dp"
                 android:paddingEnd="4dp"
-                android:text="1.0"
+                tools:text="1.0"
                 android:textColor="?android:textColorSecondary"
                 android:textSize="12sp"
                 android:textStyle="bold" />
@@ -127,7 +130,8 @@
                 android:visibility="visible"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintTop_toTopOf="parent"
-                app:srcCompat="@drawable/ic_fragment_single_stream_close" />
+                app:srcCompat="@drawable/ic_fragment_single_stream_close"
+                android:contentDescription="@string/setting_tell_friend_title" />
 
         </LinearLayout>
 

@@ -9,11 +9,10 @@ import java.util.LinkedList;
 public class MathOperation {
 
     public static void main(String[] args) {
-        LinkedList<String> linkedList = new LinkedList<>();
-        linkedList.add("1");
+//        LinkedList<String> linkedList = new LinkedList<>();
+//        linkedList.add("1");
+//
+//        linkedList.get(5);
 
-        linkedList.get(5);
     }
-
-
 }

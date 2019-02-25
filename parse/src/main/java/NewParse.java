@@ -970,11 +970,8 @@ class NewParse {
                         findTrivia = false;
                         if (findAbilities) {
                             jsonObject.put("abilities", jsonArrayAbilities);//кладём все способности в обьект
-                            if (heroName.toLowerCase().equals("invoker") || heroName.equals("祈求者")) {
-                                findAbilities = true;
-                            } else {
-                                findAbilities = false;//todo только для рошана должна быть включенна и инвокера
-                            }
+                            //todo только для рошана должна быть включенна и инвокера
+                            findAbilities = heroName.toLowerCase().equals("invoker") || heroName.equals("祈求者");
                         }
                         if (child.child(1).id().equals(".D0.91.D0.B8.D0.BE.D0.B3.D1.80.D0.B0.D1.84.D0.B8.D1.8F") ||
                                 child.child(0).id().equals("Bio") || child.child(1).id().equals(".E4.BB.8B.E7.BB.8D")) {//нашли биографию

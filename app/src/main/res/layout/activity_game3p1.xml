@@ -80,7 +80,8 @@
             android:textSize="24sp"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toStartOf="@+id/guideline2"
-            app:layout_constraintStart_toStartOf="parent" />
+            app:layout_constraintStart_toStartOf="parent"
+            tools:targetApi="m" />
 
         <ProgressBar
             android:id="@+id/pb_activity_game1"
@@ -111,7 +112,8 @@
             android:textSize="24sp"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toEndOf="@id/guideline2" />
+            app:layout_constraintStart_toEndOf="@id/guideline2"
+            tools:targetApi="m" />
 
         <android.support.constraint.Guideline
             android:id="@+id/guideline2"

@@ -77,7 +77,8 @@
             android:textColor="@android:color/black"
             android:textSize="24sp"
             app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintEnd_toStartOf="parent" />
+            app:layout_constraintEnd_toStartOf="parent"
+            tools:targetApi="m" />
 
         <Button
             android:id="@+id/b_activity_game3p1_no"
@@ -94,7 +95,8 @@
             android:textColor="@android:color/black"
             android:textSize="24sp"
             app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintStart_toEndOf="parent" />
+            app:layout_constraintStart_toEndOf="parent"
+            tools:targetApi="m" />
 
         <android.support.constraint.Guideline
             android:id="@+id/guideline2"

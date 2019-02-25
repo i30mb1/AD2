@@ -10,6 +10,7 @@
     android:paddingTop="2dp"
     android:textColor="?android:textColorSecondary"
     android:textSize="14sp"
-    tools:text="i30mb1">
+    tools:text="i30mb1"
+    tools:targetApi="m">
 
 </TextView>

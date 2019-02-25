@@ -1,4 +1,5 @@
-<layout xmlns:android="http://schemas.android.com/apk/res/android"
+<layout xmlns:tools="http://schemas.android.com/tools"
+    xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto">
 
     <data>
@@ -94,7 +95,8 @@
                     android:padding="6dp"
                     android:text="@string/heroes"
                     android:textColor="@{activity.observableLastItem==1? @color/colorAccent :@color/textColorSecondary}"
-                    android:textSize="14sp" />
+                    android:textSize="14sp"
+                    tools:targetApi="m" />
 
             </LinearLayout>
 
@@ -120,7 +122,8 @@
                     android:padding="6dp"
                     android:text="@string/items"
                     android:textColor="@{activity.observableLastItem==2? @color/colorAccent :@color/textColorSecondary}"
-                    android:textSize="14sp" />
+                    android:textSize="14sp"
+                    tools:targetApi="m" />
             </LinearLayout>
 
 
@@ -146,7 +149,8 @@
                     android:padding="6dp"
                     android:text="@string/news"
                     android:textColor="@{activity.observableLastItem==3? @color/colorAccent :@color/textColorSecondary}"
-                    android:textSize="14sp" />
+                    android:textSize="14sp"
+                    tools:targetApi="m" />
             </LinearLayout>
 
             <LinearLayout
@@ -172,7 +176,8 @@
                     android:padding="6dp"
                     android:text="@string/tournaments"
                     android:textColor="@{activity.observableLastItem==4? @color/colorAccent :@color/textColorSecondary}"
-                    android:textSize="14sp" />
+                    android:textSize="14sp"
+                    tools:targetApi="m" />
             </LinearLayout>
 
 
@@ -199,7 +204,8 @@
                     android:text="@string/streams"
                     android:textAllCaps="false"
                     android:textColor="@{activity.observableLastItem==5? @color/colorAccent :@color/textColorSecondary}"
-                    android:textSize="14sp" />
+                    android:textSize="14sp"
+                    tools:targetApi="m" />
             </LinearLayout>
 
             <LinearLayout
@@ -224,7 +230,8 @@
                     android:padding="6dp"
                     android:text="@string/games"
                     android:textColor="@{activity.observableLastItem==6? @color/colorAccent :@color/textColorSecondary}"
-                    android:textSize="14sp" />
+                    android:textSize="14sp"
+                    tools:targetApi="m" />
             </LinearLayout>
         </LinearLayout>
 

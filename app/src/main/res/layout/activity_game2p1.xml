@@ -115,7 +115,8 @@
             app:layout_constraintTop_toTopOf="parent"
             app:layout_constraintVertical_bias="0.0"
             app:srcCompat="@drawable/creep"
-            android:contentDescription="@string/setting_tell_friend_title" />
+            android:contentDescription="@string/setting_tell_friend_title"
+            tools:targetApi="m" />
 
         <ImageView
             android:foreground="?android:attr/selectableItemBackground"
@@ -132,7 +133,8 @@
             app:layout_constraintTop_toTopOf="parent"
             app:layout_constraintVertical_bias="0.0"
             app:srcCompat="@drawable/creep2"
-            android:contentDescription="@string/setting_tell_friend_title" />
+            android:contentDescription="@string/setting_tell_friend_title"
+            tools:targetApi="m" />
 
         <ImageView
             android:foreground="?android:attr/selectableItemBackground"
@@ -149,7 +151,8 @@
             app:layout_constraintTop_toTopOf="parent"
             app:layout_constraintVertical_bias="0.0"
             app:srcCompat="@drawable/creep3"
-            android:contentDescription="@string/setting_tell_friend_title" />
+            android:contentDescription="@string/setting_tell_friend_title"
+            tools:targetApi="m" />
 
     </android.support.constraint.ConstraintLayout>
 </layout>

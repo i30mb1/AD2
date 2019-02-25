@@ -19,7 +19,8 @@ public class PositionalResponsesDataSource extends PositionalDataSource<Response
     public void loadInitial(@NonNull LoadInitialParams params, @NonNull LoadInitialCallback<ResponseModel> callback) {
         if (search.equals("")) {
             List<ResponseModel> list = responsesStorage.getData(params.requestedStartPosition, params.requestedLoadSize);
-            callback.onResult(list, 0);
+            callback.onResult(list, params.requestedStartPosition);
+            //todo check this
         } else {
             List<ResponseModel> list = responsesStorage.getDataSearch(search);
             callback.onResult(list, 0);

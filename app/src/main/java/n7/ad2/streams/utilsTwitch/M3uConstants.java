@@ -131,6 +131,7 @@ final class M3uConstants {
     /**
      * A holder class for Patterns.
      */
+    @SuppressWarnings("Annotator")
     static class Patterns {
         final static Pattern EXTINF = Pattern.compile(tagPattern(M3uConstants.EXTINF) + "\\s*(-1|[0-9]*)\\s*(?:,((.*)))?");
         final static Pattern EXTSTREAMINF = Pattern.compile(tagPattern(M3uConstants.EXT_X_STREAM_INF) + "\\s*(-1|[0-9]*)\\s*(?:,((.*)))?");                // #EXT-X-KEY:METHOD=&lt;method&gt;[,URI="&lt;URI&gt;"

@@ -43,7 +43,7 @@ public abstract class HeroesRoomDatabase extends RoomDatabase {
                                                 case "ru":
                                                 case "eng":
                                                     try {
-                                                        JSONArray jsonHeroes = new JSONArray(new Utils().readJSONFromAsset(context, "heroes.json"));
+                                                        JSONArray jsonHeroes = new JSONArray(Utils.readJSONFromAsset(context, "heroes.json"));
                                                         for (int i = 0; i < jsonHeroes.length(); i++) {
                                                             JSONObject jsonObject = jsonHeroes.getJSONObject(i);
                                                             HeroModel heroes = new HeroModel(jsonObject.getString("name"), jsonObject.getString("nameEng"));

@@ -41,6 +41,7 @@ import java.io.InputStreamReader;
 import java.net.HttpURLConnection;
 import java.net.URL;
 import java.net.URLEncoder;
+import java.nio.charset.StandardCharsets;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -94,7 +95,7 @@ public class StreamsFullActivity extends BaseActivity implements SurfaceHolder.C
     private ConstraintLayout root;
 
     private static String readStream(InputStream in) throws IOException {
-        InputStreamReader inputStreamReader = new InputStreamReader(in, "UTF-8");
+        InputStreamReader inputStreamReader = new InputStreamReader(in, StandardCharsets.UTF_8);
         BufferedReader bufferedReader = new BufferedReader(inputStreamReader);
         StringBuilder result = new StringBuilder();
         String line = "";

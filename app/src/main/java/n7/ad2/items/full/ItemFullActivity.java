@@ -34,7 +34,7 @@ public class ItemFullActivity extends BaseActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_item_full_0);
+        setContentView(R.layout.activity_item_full);
         subscription = PreferenceManager.getDefaultSharedPreferences(this).getBoolean(SUBSCRIPTION_PREF, false);
 
         this.itemFolder = getIntent().getStringExtra(ITEM_CODE_NAME);

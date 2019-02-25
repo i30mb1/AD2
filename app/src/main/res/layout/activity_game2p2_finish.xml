@@ -116,7 +116,8 @@
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent"
             app:layout_constraintVertical_bias="0.0"
-            app:srcCompat="@drawable/creep" />
+            app:srcCompat="@drawable/creep"
+            tools:targetApi="m" />
 
         <ImageView
             android:foreground="?android:attr/selectableItemBackground"
@@ -133,7 +134,8 @@
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent"
             app:layout_constraintVertical_bias="0.0"
-            app:srcCompat="@drawable/creep" />
+            app:srcCompat="@drawable/creep"
+            tools:targetApi="m" />
 
         <ImageView
             android:foreground="?android:attr/selectableItemBackground"
@@ -151,7 +153,8 @@
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent"
             app:layout_constraintVertical_bias="0.0"
-            app:srcCompat="@drawable/creep" />
+            app:srcCompat="@drawable/creep"
+            tools:targetApi="m" />
 
         <ImageView
             android:foreground="?android:attr/selectableItemBackground"
@@ -169,7 +172,8 @@
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent"
             app:layout_constraintVertical_bias="0.0"
-            app:srcCompat="@drawable/creep" />
+            app:srcCompat="@drawable/creep"
+            tools:targetApi="m" />
 
         <View
             android:id="@+id/line"

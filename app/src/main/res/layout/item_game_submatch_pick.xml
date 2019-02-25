@@ -16,7 +16,8 @@
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:srcCompat="@drawable/hero_placeholder" />
+        app:srcCompat="@drawable/hero_placeholder"
+        android:contentDescription="@string/setting_tell_friend_title" />
 
     <TextView
         android:id="@+id/tv_player"
@@ -28,7 +29,8 @@
         android:textSize="10sp"
         app:layout_constraintStart_toEndOf="@+id/iv"
         app:layout_constraintTop_toTopOf="parent"
-        tools:text="i30mb1" />
+        tools:text="i30mb1"
+        tools:ignore="SmallSp" />
 
     <TextView
         android:id="@+id/tv_hero"
@@ -44,5 +46,6 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toEndOf="@+id/iv"
-        tools:text="Legion Commander" />
+        tools:text="Legion Commander"
+        tools:ignore="SmallSp" />
 </android.support.constraint.ConstraintLayout>

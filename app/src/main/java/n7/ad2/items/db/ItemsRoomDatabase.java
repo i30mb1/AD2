@@ -39,7 +39,7 @@ public abstract class ItemsRoomDatabase extends RoomDatabase {
                                                 default:
                                                 case "eng":
                                                     try {
-                                                        JSONArray jsonHeroes = new JSONArray(new Utils().readJSONFromAsset(context, "items.json"));
+                                                        JSONArray jsonHeroes = new JSONArray(Utils.readJSONFromAsset(context, "items.json"));
                                                         for (int i = 0; i < jsonHeroes.length(); i++) {
                                                             JSONObject jsonObject = jsonHeroes.getJSONObject(i);
                                                             ItemModel item = new ItemModel(jsonObject.getString("name"), jsonObject.getString("nameEng"));
