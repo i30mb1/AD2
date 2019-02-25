@@ -66,7 +66,7 @@ public class GameFullActivity extends BaseActivity {
                     Elements games = documentSimple.getElementsByClass("esport-match-view-map-single esport-tabs-content clearfix");
                     for (Element game : games) {
                         if (game.children().size() < 2) continue;
-                        final View gameView = getLayoutInflater().inflate(R.layout.item_game_submatch, null, false);
+                        final View gameView = getLayoutInflater().inflate(R.layout.item_game_submatch, binding.tvActivityGamesPersonalHolder, false);
                         LinearLayout ll_item_left_picks = gameView.findViewById(R.id.ll_item_left_picks);
                         LinearLayout ll_item_left_bans = gameView.findViewById(R.id.ll_item_left_bans);
                         LinearLayout ll_item_left_bans2 = gameView.findViewById(R.id.ll_item_left_bans2);
@@ -77,7 +77,7 @@ public class GameFullActivity extends BaseActivity {
                         Elements team1picks = game.child(0).getElementsByClass("esport-match-view-map-single-side-picks-single clearfix");
                         if (team1picks.size() != 0)
                             for (Element team1pick : team1picks) {
-                                View pick = getLayoutInflater().inflate(R.layout.item_game_submatch_pick, null, false);
+                                View pick = getLayoutInflater().inflate(R.layout.item_game_submatch_pick, ll_item_left_picks, false);
                                 TextView tv_player = pick.findViewById(R.id.tv_player);
                                 TextView tv_hero = pick.findViewById(R.id.tv_hero);
                                 final ImageView iv = pick.findViewById(R.id.iv);
@@ -103,7 +103,7 @@ public class GameFullActivity extends BaseActivity {
                         Elements team2picks = game.child(2).getElementsByClass("esport-match-view-map-single-side-picks-single clearfix");
                         if (team2picks.size() != 0)
                             for (Element team2pick : team2picks) {
-                                View pick = getLayoutInflater().inflate(R.layout.item_game_submatch_pick_reverse, null, false);
+                                View pick = getLayoutInflater().inflate(R.layout.item_game_submatch_pick_reverse, ll_item_right_picks, false);
                                 TextView tv_player = pick.findViewById(R.id.tv_player);
                                 TextView tv_hero = pick.findViewById(R.id.tv_hero);
                                 final ImageView iv = pick.findViewById(R.id.iv);
@@ -129,7 +129,7 @@ public class GameFullActivity extends BaseActivity {
                         int count = 0;
                         if (team1bans.size() != 0)
                             for (Element team1ban : team1bans) {
-                                View ban = getLayoutInflater().inflate(R.layout.item_game_submatch_ban, null, false);
+                                View ban = getLayoutInflater().inflate(R.layout.item_game_submatch_ban, ll_item_left_bans, false);
                                 final ImageView iv = ban.findViewById(R.id.iv);
                                 final String hero = team1ban.child(0).attr("title").toLowerCase().trim().replace(" ", "_");
                                 appExecutors.mainThread().execute(new Runnable() {
@@ -149,7 +149,7 @@ public class GameFullActivity extends BaseActivity {
                         Elements team2bans = game.child(2).getElementsByClass("esport-match-view-map-single-side-bans-single");
                         if (team2bans.size() != 0)
                             for (Element team2ban : team2bans) {
-                                View ban = getLayoutInflater().inflate(R.layout.item_game_submatch_ban, null, false);
+                                View ban = getLayoutInflater().inflate(R.layout.item_game_submatch_ban, ll_item_right_bans, false);
                                 final ImageView iv = ban.findViewById(R.id.iv);
                                 final String hero = team2ban.child(0).attr("title").toLowerCase().trim().replace(" ", "_");
                                 appExecutors.mainThread().execute(new Runnable() {

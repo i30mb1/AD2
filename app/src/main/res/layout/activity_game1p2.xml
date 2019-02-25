@@ -242,7 +242,8 @@
                 android:textSize="24sp"
                 android:textStyle="bold"
                 tools:targetApi="m"
-                tools:text="@{activity.slot2_2}" />
+                tools:text="@{activity.slot2_2}"
+                tools:ignore="UnusedAttribute" />
 
             <TextView
                 android:id="@+id/tv_activity_game1P1_4_2"
@@ -259,7 +260,8 @@
                 android:textSize="24sp"
                 android:textStyle="bold"
                 tools:targetApi="m"
-                tools:text="@{activity.slot3_2}" />
+                tools:text="@{activity.slot3_2}"
+                tools:ignore="UnusedAttribute" />
         </LinearLayout>
 
         <LinearLayout
@@ -288,7 +290,8 @@
                 android:textSize="24sp"
                 android:textStyle="bold"
                 tools:targetApi="m"
-                tools:text="@{activity.slot4_2}" />
+                tools:text="@{activity.slot4_2}"
+                tools:ignore="UnusedAttribute" />
 
             <TextView
                 android:foreground="?android:attr/selectableItemBackground"
@@ -305,7 +308,8 @@
                 android:textSize="24sp"
                 android:textStyle="bold"
                 tools:targetApi="m"
-                tools:text="@{activity.slot1}" />
+                tools:text="@{activity.slot1}"
+                tools:ignore="UnusedAttribute" />
 
             <TextView
                 android:foreground="?android:attr/selectableItemBackground"
@@ -322,7 +326,8 @@
                 android:textSize="24sp"
                 android:textStyle="bold"
                 tools:targetApi="m"
-                tools:text="@{activity.slot2}" />
+                tools:text="@{activity.slot2}"
+                tools:ignore="UnusedAttribute" />
 
             <TextView
                 android:foreground="?android:attr/selectableItemBackground"
@@ -339,7 +344,8 @@
                 android:textSize="24sp"
                 android:textStyle="bold"
                 tools:targetApi="m"
-                tools:text="@{activity.slot3}" />
+                tools:text="@{activity.slot3}"
+                tools:ignore="UnusedAttribute" />
         </LinearLayout>
 
         <LinearLayout

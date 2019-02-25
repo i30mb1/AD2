@@ -1,5 +1,6 @@
 package n7.ad2.streams.utilsTwitch;
 
+import android.annotation.SuppressLint;
 import android.content.Context;
 import android.util.AttributeSet;
 import android.view.GestureDetector;
@@ -26,6 +27,7 @@ public class TappableSurfaceView extends SurfaceView {
         super(context, attrs);
     }
 
+    @SuppressLint("ClickableViewAccessibility")
     public boolean onTouchEvent(MotionEvent event) {
         if (event.getAction() == MotionEvent.ACTION_UP) {
             gestureListener.onSingleTapUp(event);

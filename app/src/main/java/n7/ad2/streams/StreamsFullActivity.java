@@ -41,6 +41,7 @@ import java.io.InputStreamReader;
 import java.net.HttpURLConnection;
 import java.net.URL;
 import java.net.URLEncoder;
+import java.nio.charset.Charset;
 import java.nio.charset.StandardCharsets;
 import java.util.ArrayList;
 import java.util.List;
@@ -91,11 +92,15 @@ public class StreamsFullActivity extends BaseActivity implements SurfaceHolder.C
     private Toolbar toolbar;
     private float alphaChat = 1.0F;
     private SmoothScrollableLinearLayoutManager layoutManager;
-    private TappableSurfaceView sv_activity_twitch_game;
     private ConstraintLayout root;
 
     private static String readStream(InputStream in) throws IOException {
-        InputStreamReader inputStreamReader = new InputStreamReader(in, StandardCharsets.UTF_8);
+        InputStreamReader inputStreamReader;
+        if (android.os.Build.VERSION.SDK_INT >= android.os.Build.VERSION_CODES.KITKAT) {
+            inputStreamReader = new InputStreamReader(in, StandardCharsets.UTF_8);
+        } else {
+            inputStreamReader = new InputStreamReader(in, Charset.forName("UTF-8"));
+        }
         BufferedReader bufferedReader = new BufferedReader(inputStreamReader);
         StringBuilder result = new StringBuilder();
         String line = "";
@@ -372,7 +377,7 @@ public class StreamsFullActivity extends BaseActivity implements SurfaceHolder.C
     }
 
     private void initSurfaceHolder() {
-        sv_activity_twitch_game = findViewById(R.id.sv_activity_twitch_game);
+        TappableSurfaceView sv_activity_twitch_game = findViewById(R.id.sv_activity_twitch_game);
         sv_activity_twitch_game.addTapListener(new TappableSurfaceView.TapListener() {
             @Override
             public void onTap(MotionEvent event) {

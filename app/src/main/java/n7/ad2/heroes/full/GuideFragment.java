@@ -285,6 +285,7 @@ public class GuideFragment extends Fragment {
     }
 
     private void addHeroes(final String bestHeroes, int textColor, LinearLayout linearLayout) {
+        linearLayout.removeAllViewsInLayout();
         String[] heroes = bestHeroes.split("/");
         for (final String hero : heroes) {
             final String[] heroNameAndWinrate = hero.split("\\^");

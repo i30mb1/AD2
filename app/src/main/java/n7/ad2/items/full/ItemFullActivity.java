@@ -27,7 +27,6 @@ public class ItemFullActivity extends BaseActivity {
     private String itemFolder;
     private String itemName;
     private String currentLanguage;
-    private Toolbar toolbar;
     private boolean subscription;
     private boolean loadWithError = false;
 
@@ -83,7 +82,7 @@ public class ItemFullActivity extends BaseActivity {
     }
 
     private void setToolbar() {
-        toolbar = findViewById(R.id.toolbar);
+        Toolbar toolbar = findViewById(R.id.toolbar);
         toolbar.setTitle(itemName);
         setSupportActionBar(toolbar);
         if (getSupportActionBar() != null) {
@@ -190,7 +189,7 @@ public class ItemFullActivity extends BaseActivity {
         if (jsonItemDescription.has("abilities")) {
             try {
                 for (int i = 0; i < jsonItemDescription.getJSONArray("abilities").length(); i++) {
-                    final View item_item_personal_spell = getLayoutInflater().inflate(R.layout.item_item_personal_description, null);
+                    final View item_item_personal_spell = getLayoutInflater().inflate(R.layout.item_item_personal_description, ll_activity_item_full_descriptions, false);
                     JSONObject jsonObject = jsonItemDescription.getJSONArray("abilities").getJSONObject(i);
                     ((TextView) item_item_personal_spell.findViewById(R.id.tv)).setText(jsonObject.getString("name"));
                     ((TextView) item_item_personal_spell.findViewById(R.id.ll_item_description)).setText(jsonObject.getString("description"));
