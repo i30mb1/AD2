@@ -139,7 +139,7 @@ public class MainActivity extends BaseActivity {
         setupToolbar();
         setupDrawer();
         setupListeners();
-        setupSecretActivity();
+//        setupSecretActivity();
         setupAD();
 
         setLastFragment();

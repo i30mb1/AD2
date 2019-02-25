@@ -74,6 +74,7 @@ public class GuideFragment extends Fragment {
     @Override
     public boolean onOptionsItemSelected(MenuItem item) {
         revertCurrentMenu();
+        menuSelected = item;
         switch (item.getItemId()) {
             case R.id.menu_fragment_guide_1:
                 item.setIcon(R.drawable.ic_menu_fragment_guide_1selected);

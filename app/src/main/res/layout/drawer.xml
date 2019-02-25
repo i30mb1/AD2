@@ -39,12 +39,13 @@
             android:background="?attr/selectableItemBackground"
             android:contentDescription="@string/setting_tell_friend_title"
             android:onClick="@{()->viewModel.startActivityOptions(context)}"
-            android:onLongClick="@{activity::toggleSecretActivity}"
+
             android:scaleType="center"
             android:tint="?android:textColorPrimary"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintRight_toRightOf="parent"
             app:srcCompat="@drawable/ic_setting" />
+        <!--android:onLongClick="@{activity::toggleSecretActivity}"-->
 
         <ImageView
             android:id="@+id/iv_drawer_update"

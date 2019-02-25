@@ -34,8 +34,6 @@ import n7.ad2.R;
 import n7.ad2.heroes.db.HeroesRoomDatabase;
 import n7.ad2.items.db.ItemsRoomDatabase;
 import n7.ad2.news.NewsWorker;
-import n7.ad2.news.db.NewsDao;
-import n7.ad2.news.db.NewsRoomDatabase;
 import n7.ad2.setting.purchaseUtils.IabHelper;
 import n7.ad2.setting.purchaseUtils.IabResult;
 import n7.ad2.setting.purchaseUtils.Inventory;
@@ -263,8 +261,13 @@ public class SplashViewModel extends AndroidViewModel {
     }
 
     private void setupFirebaseAnalytics() {
-        FirebaseAnalytics.getInstance(application);
-        MobileAds.initialize(application, ADMOB_APP_ID);
+        diskIO.execute(new Runnable() {
+            @Override
+            public void run() {
+                FirebaseAnalytics.getInstance(application);
+                MobileAds.initialize(application, ADMOB_APP_ID);
+            }
+        });
     }
 
 }
