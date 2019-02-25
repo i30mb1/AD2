@@ -106,6 +106,7 @@ dependencies {
     //поддержка jsoup для старых устройств
     implementation 'com.google.android.gms:play-services-auth:16.0.1'
     implementation 'com.google.firebase:firebase-core:16.0.6'
+    implementation 'com.google.firebase:firebase-messaging:17.4.0'
 
     implementation 'com.google.android.gms:play-services-ads:17.1.2'
 }

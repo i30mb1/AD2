@@ -543,7 +543,7 @@ public class MainActivity extends BaseActivity {
                 .withRootViewScale(0.65f)
                 .withRootViewElevation(8)
                 .withRootViewYTranslation(0)
-                .withContentClickableWhenMenuOpened(false)
+                .withContentClickableWhenMenuOpened(true)
                 .addDragStateListener(new DragStateListener() {
                     @Override
                     public void onDragStart() {
