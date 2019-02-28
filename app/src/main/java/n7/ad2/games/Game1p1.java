@@ -17,6 +17,8 @@ import android.support.transition.ChangeBounds;
 import android.support.transition.Fade;
 import android.support.transition.TransitionManager;
 import android.support.transition.TransitionSet;
+import android.support.v4.text.TextUtilsCompat;
+import android.support.v4.widget.TextViewCompat;
 import android.util.TypedValue;
 import android.view.View;
 import android.view.ViewGroup;
@@ -81,6 +83,7 @@ public class Game1p1 extends BaseActivity {
         loadPlayer();
         startCountDownTimer();
         startGame();
+
     }
 
     private void loadPlayer() {

@@ -117,8 +117,9 @@
                 android:gravity="center"
                 android:onClick="@{(view)->activity.check(view)}"
                 android:textColor="@{activity.isLoading ? @color/textColorPrimary: @color/textColorPrimary}"
-                android:textSize="24sp"
                 android:textStyle="bold"
+                app:autoSizeMaxTextSize="24sp"
+                app:autoSizeTextType="uniform"
                 tools:targetApi="lollipop"
                 tools:text="@{activity.slot4}" />
 
@@ -165,8 +166,9 @@
                 android:gravity="center"
                 android:onClick="@{(view)->activity.check(view)}"
                 android:textColor="@{activity.isLoading ? @color/textColorPrimary: @color/textColorPrimary}"
-                android:textSize="24sp"
                 android:textStyle="bold"
+                app:autoSizeMaxTextSize="24sp"
+                app:autoSizeTextType="uniform"
                 tools:targetApi="lollipop"
                 tools:text="@{activity.slot3}" />
         </LinearLayout>
