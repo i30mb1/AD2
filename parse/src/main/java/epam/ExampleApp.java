@@ -6,7 +6,6 @@ import java.nio.charset.StandardCharsets;
 import java.nio.file.Files;
 import java.nio.file.Paths;
 import java.util.ArrayList;
-import java.util.Arrays;
 import java.util.List;
 
 import epam.api.GpsNavigator;
@@ -21,13 +20,13 @@ public class ExampleApp {
         final GpsNavigator navigator = new StubGpsNavigator();
         navigator.readData("C:\\Users\\i30mb1\\Desktop\\1.txt");
 
-        final Path path = navigator.findPath("F", "B");
+        final Path path = navigator.findPath("C", "B");
         System.out.println(path);
     }
 
     private static class StubGpsNavigator implements GpsNavigator {
 
-        private ArrayList<Graph.Line> graph = new ArrayList<>();
+        private ArrayList<Graph.Road> roads = new ArrayList<>();
 
         @Override
         public void readData(String filePath) {
@@ -40,23 +39,20 @@ public class ExampleApp {
                     String length = lineParts[2];
                     String cost = lineParts[3];
 
-                    String lineName = startPath + " " + endPath;
-                    Integer lineTotalCost = Integer.valueOf(cost) * Integer.valueOf(length);
+                    int lineTotalCost = Integer.valueOf(cost) * Integer.valueOf(length);
 
-                    graph.add(new Graph.Line(startPath, endPath, lineTotalCost));
+                    roads.add(new Graph.Road(startPath, endPath, lineTotalCost));
                 }
 
             } catch (IOException e) {
-                System.out.println("file not found");
+                e.printStackTrace();
             }
         }
 
         @Override
         public Path findPath(String pointA, String pointB) {
-            Graph g = new Graph(graph);
-            g.dijkstra(pointA);
-            g.printPath(pointB);
-            return new Path(Arrays.asList("A", "C", "D", "E"), 22);
+            Graph g = new Graph(roads, pointA, pointB);
+            return new Path(g.getResultList(), g.getResultCost());
         }
     }
 }

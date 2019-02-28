@@ -7,67 +7,64 @@ import java.util.NavigableSet;
 import java.util.TreeSet;
 
 class Graph {
-    private final Map<String, Vertex> graph; // mapping of vertex names to Vertex objects, built from a set of Edges
+    private final static ArrayList<String> resultList = new ArrayList<>();
+    private static int resultCost = 0;
+    private final Map<String, Vertex> graph;
 
-    /**
-     * Builds a graph from a set of edges
-     */
-    public Graph(ArrayList<Line> edges) {
+    public Graph(ArrayList<Road> edges, String pointA, String pointB) {
         graph = new HashMap<>(edges.size());
 
-        //one pass to find all vertices
-        for (Line e : edges) {
+        for (Road e : edges) {
             if (!graph.containsKey(e.pointA)) graph.put(e.pointA, new Vertex(e.pointA));
             if (!graph.containsKey(e.pointB)) graph.put(e.pointB, new Vertex(e.pointB));
         }
 
-        //another pass to set neighbouring vertices
-        for (Line e : edges) {
-            graph.get(e.pointA).neighbours.put(graph.get(e.pointB), e.size);
-            //graph.get(e.pointB).neighbours.put(graph.get(e.pointA), e.size); // also do this for an undirected graph
+        for (Road e : edges) {
+            graph.get(e.pointA).neighbours.put(graph.get(e.pointB), e.cost);
         }
+
+        setUpVertices(pointA);
+        calculatePath(pointB);
     }
 
-    /**
-     * Runs dijkstra using a specified source vertex
-     */
-    public void dijkstra(String startName) {
-        if (!graph.containsKey(startName)) {
-            System.err.printf("Graph doesn't contain start vertex \"%s\"\n", startName);
+    public ArrayList<String> getResultList() {
+        return resultList;
+    }
+
+    public int getResultCost() {
+        return resultCost;
+    }
+
+    private void setUpVertices(String pointA) {
+        if (!graph.containsKey(pointA)) {
+            System.err.printf("Roads doesn't contain pointA \"%s\"\n", pointA);
             return;
         }
-        final Vertex source = graph.get(startName);
+        final Vertex source = graph.get(pointA);
         NavigableSet<Vertex> q = new TreeSet<>();
 
-        // set-up vertices
         for (Vertex v : graph.values()) {
             v.previous = v == source ? source : null;
-            v.dist = v == source ? 0 : Integer.MAX_VALUE;
+            v.cost = v == source ? 0 : Integer.MAX_VALUE;
             q.add(v);
         }
 
-        dijkstra(q);
+        setUpVerticesNeighbours(q);
     }
 
-    /**
-     * Implementation of dijkstra's algorithm using a binary heap.
-     */
-    private void dijkstra(final NavigableSet<Vertex> q) {
+    private void setUpVerticesNeighbours(final NavigableSet<Vertex> q) {
         Vertex u, v;
         while (!q.isEmpty()) {
+            u = q.pollFirst();
+            if (u.cost == Integer.MAX_VALUE) break;
 
-            u = q.pollFirst(); // vertex with shortest distance (first iteration will return source)
-            if (u.dist == Integer.MAX_VALUE)
-                break; // we can ignore u (and any other remaining vertices) since they are unreachable
-
-            //look at distances to each neighbour
             for (Map.Entry<Vertex, Integer> a : u.neighbours.entrySet()) {
-                v = a.getKey(); //the neighbour in this iteration
+                v = a.getKey();
 
-                final int alternateDist = u.dist + a.getValue();
-                if (alternateDist < v.dist) { // shorter path to neighbour found
+                final int alternateCost = u.cost + a.getValue();
+                if (alternateCost < v.cost) {
                     q.remove(v);
-                    v.dist = alternateDist;
+                    v.cost = alternateCost;
                     v.previous = u;
                     q.add(v);
                 }
@@ -78,78 +75,59 @@ class Graph {
     /**
      * Prints a path from the source to the specified vertex
      */
-    public void printPath(String endName) {
-        if (!graph.containsKey(endName)) {
-            System.err.printf("Graph doesn't contain end vertex \"%s\"\n", endName);
+    public void calculatePath(String pointB) {
+        if (!graph.containsKey(pointB)) {
+            System.err.printf("Roads doesn't contain pointB \"%s\"\n", pointB);
             return;
         }
 
-        graph.get(endName).printPath();
-        System.out.println();
+        graph.get(pointB).savePathWithCost();
     }
 
-    /**
-     * Prints the path from the source to every vertex (output order is not guaranteed)
-     */
-    public void printAllPaths() {
-        for (Vertex v : graph.values()) {
-            v.printPath();
-            System.out.println();
-        }
-    }
-
-    /**
-     * One edge of the graph (only used by Graph constructor)
-     */
-    public static class Line {
+    public static class Road {
         public final String pointA, pointB;
-        public final int size;
+        public final int cost;
 
-        public Line(String v1, String v2, int cost) {
-            this.pointA = v1;
-            this.pointB = v2;
-            this.size = cost;
+        public Road(String pointA, String pointB, int cost) {
+            this.pointA = pointA;
+            this.pointB = pointB;
+            this.cost = cost;
         }
     }
 
-    /**
-     * One vertex of the graph, complete with mappings to neighbouring vertices
-     */
     public static class Vertex implements Comparable<Vertex> {
         public final String name;
         public final Map<Vertex, Integer> neighbours = new HashMap<>();
-        public int dist = Integer.MAX_VALUE; // MAX_VALUE assumed to be infinity
+        public int cost = Integer.MAX_VALUE;
         public Vertex previous = null;
 
         public Vertex(String name) {
             this.name = name;
         }
 
-        private void printPath() {
+        private void savePathWithCost() {
             if (this == this.previous) {
-                System.out.printf("%s", this.name);
+                resultList.add(this.name);
             } else if (this.previous == null) {
                 System.out.printf("%s(exception)", this.name);
             } else {
-                this.previous.printPath();
-                System.out.printf("%s", this.name);
+                this.previous.savePathWithCost();
+                resultList.add(this.name);
+                resultCost = this.cost;
             }
         }
 
-        private int getSize() {
-            return dist;
-        }
-
         public int compareTo(Vertex other) {
-            if (dist == other.dist)
+            if (cost == other.cost) {
                 return name.compareTo(other.name);
+            }
 
-            return Integer.compare(dist, other.dist);
+            return Integer.compare(cost, other.cost);
         }
 
         @Override
         public String toString() {
-            return "(" + name + ", " + dist + ")";
+            return "(" + name + ", " + cost + ")";
         }
     }
 }

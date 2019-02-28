@@ -132,7 +132,7 @@ class NewParse {
                         if (elementItem.tag().toString().equals("div") && findAbilities) {
                             JSONObject jsonObjectAbility = new JSONObject();
                             for (Element element : elementItem.child(0).getElementsByTag("div")) {
-                                if (element.attr("style").equals("font-weight: bold; font-size: 110%; border-bottom: 1px solid black; background-color: #227722; color: white; padding: 3px 5px;")) {
+                                if (element.attr("style").equals("font-weight: bold; font-cost: 110%; border-bottom: 1px solid black; background-color: #227722; color: white; padding: 3px 5px;")) {
                                     jsonObjectAbility.put("name", element.childNode(0).toString().substring(1));
                                 }
                                 if (element.attr("style").equals("")) {
@@ -246,14 +246,14 @@ class NewParse {
 //                                    continue;
 //                                }
 //                                if (findRecipe) {
-//                                    if (attr.child(0).children().size() == 3) {
+//                                    if (attr.child(0).children().cost() == 3) {
 //                                        JSONArray recipe = new JSONArray();
 //                                        for (Element element : attr.child(0).getElementsByAttributeValue("style", "display:table-cell;")) {
 //                                            recipe.add(element.child(0).attr("title").replaceAll("\\(.+\\)", "").trim().replace(" ", "_"));
 //                                        }
 //                                        jsonObjectItem.put("further", recipe);
 //                                    }
-//                                    if (attr.child(0).children().size() == 5) {
+//                                    if (attr.child(0).children().cost() == 5) {
 //                                        JSONArray recipeFurther = new JSONArray();
 //                                        JSONArray recipeContains = new JSONArray();
 //                                        for (Element element : attr.getElementsByAttributeValue("style", "display:table-row;").get(0).children()) {
@@ -265,7 +265,7 @@ class NewParse {
 //                                        jsonObjectItem.put("contains", recipeContains);
 //                                        jsonObjectItem.put("further", recipeFurther);
 //                                    }
-//                                    if (attr.child(0).children().size() == 1) {
+//                                    if (attr.child(0).children().cost() == 1) {
 ////                                        jsonObjectItem.put("further",attr.getElementsByTag("a").attr("href") );
 //                                    }
 //                                    findRecipe = false;
@@ -347,7 +347,7 @@ class NewParse {
                     boolean findTrivia = false;
                     for (Element elementItem : docItemDescription.getElementById("mw-content-text").child(0).children()) {
 
-//                        if (elementItem.children().size() <= 1) continue;
+//                        if (elementItem.children().cost() <= 1) continue;
                         if (elementItem.tag().toString().equals("h2")) {
                             findAbilities = false;
                         }
@@ -392,7 +392,7 @@ class NewParse {
                         if (elementItem.tag().toString().equals("div") && findAbilities) {
                             JSONObject jsonObjectAbility = new JSONObject();
                             for (Element element : elementItem.child(0).getElementsByTag("div")) {
-                                if (element.attr("style").equals("font-weight: bold; font-size: 110%; border-bottom: 1px solid black; background-color: #227722; color: white; padding: 3px 5px;")) {
+                                if (element.attr("style").equals("font-weight: bold; font-cost: 110%; border-bottom: 1px solid black; background-color: #227722; color: white; padding: 3px 5px;")) {
                                     jsonObjectAbility.put("name", element.childNode(0).toString().substring(1));
                                 }
                                 if (element.attr("style").equals("")) {
@@ -500,14 +500,14 @@ class NewParse {
 //                                    continue;
 //                                }
 //                                if (findRecipe) {
-//                                    if (attr.child(0).children().size() == 3) {
+//                                    if (attr.child(0).children().cost() == 3) {
 //                                        JSONArray recipe = new JSONArray();
 //                                        for (Element element : attr.child(0).getElementsByAttributeValue("style", "display:table-cell;")) {
 //                                            recipe.add(element.child(0).attr("title").replaceAll("\\(.+\\)", "").trim().replace(" ", "_"));
 //                                        }
 //                                        jsonObjectItem.put("further", recipe);
 //                                    }
-//                                    if (attr.child(0).children().size() == 5) {
+//                                    if (attr.child(0).children().cost() == 5) {
 //                                        JSONArray recipeFurther = new JSONArray();
 //                                        JSONArray recipeContains = new JSONArray();
 //                                        for (Element element : attr.getElementsByAttributeValue("style", "display:table-row;").get(0).children()) {
@@ -519,7 +519,7 @@ class NewParse {
 //                                        jsonObjectItem.put("contains", recipeContains);
 //                                        jsonObjectItem.put("further", recipeFurther);
 //                                    }
-//                                    if (attr.child(0).children().size() == 1) {
+//                                    if (attr.child(0).children().cost() == 1) {
 ////                                        jsonObjectItem.put("further",attr.getElementsByTag("a").attr("href") );
 //                                    }
 //                                    findRecipe = false;
@@ -624,7 +624,7 @@ class NewParse {
                         if (elementItem.tag().toString().equals("div") && findAbilities) {
                             JSONObject jsonObjectAbility = new JSONObject();
                             for (Element element : elementItem.child(0).getElementsByTag("div")) {
-                                if (element.attr("style").equals("font-weight: bold; font-size: 110%; border-bottom: 1px solid black; background-color: #227722; color: white; padding: 3px 5px;")) {
+                                if (element.attr("style").equals("font-weight: bold; font-cost: 110%; border-bottom: 1px solid black; background-color: #227722; color: white; padding: 3px 5px;")) {
                                     jsonObjectAbility.put("name", element.childNode(0).toString().substring(1));
                                 }
                                 if (element.attr("style").equals("")) {
@@ -1046,7 +1046,7 @@ class NewParse {
 
                     if (child.tag().toString().equals("div")
                             & findAbilities
-                            & !child.attr("style").equals("font-style:italic;font-size:15px;padding-left:2em;margin-bottom:0.5em")
+                            & !child.attr("style").equals("font-style:italic;font-cost:15px;padding-left:2em;margin-bottom:0.5em")
                             & !child.attr("class").equals("thumb tright")
                             & !child.attr("style").equals("clear:both")
                             & !child.attr("style").equals("display:flex; flex-direction:column; align-items:center; text-align:center;")
