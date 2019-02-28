@@ -1,6 +1,5 @@
 package epam;
 
-
 import java.io.IOException;
 import java.nio.charset.StandardCharsets;
 import java.nio.file.Files;
@@ -22,7 +21,7 @@ public class ExampleApp {
         final GpsNavigator navigator = new StubGpsNavigator();
         navigator.readData("C:\\Users\\i30mb1\\Desktop\\1.txt");
 
-        final Path path = navigator.findPath("F", "C");
+        final Path path = navigator.findPath("Z", "F");
         System.out.println(path);
     }
 
@@ -53,8 +52,8 @@ public class ExampleApp {
 
         @Override
         public Path findPath(String pointA, String pointB) {
-            Graph g = new Graph(roads, pointA, pointB);
-            return new Path(g.getResultList(), g.getResultCost());
+            Graph graph = new Graph(roads, pointA, pointB);
+            return new Path(graph.getResultList(), graph.getResultCost());
         }
     }
 }

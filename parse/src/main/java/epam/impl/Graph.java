@@ -24,7 +24,7 @@ public class Graph {
         }
 
         setUpVertices(pointA);
-        savePath(pointB);
+        pathToEndPoint(pointB);
     }
 
     public ArrayList<String> getResultList() {
@@ -37,7 +37,7 @@ public class Graph {
 
     private void setUpVertices(String pointA) {
         if (!graph.containsKey(pointA)) {
-            System.err.printf("Roads does not contain pointA \"%s\"\n", pointA);
+            System.err.printf("Roads do not contain pointA \"%s\"\n", pointA);
             return;
         }
         final Vertex source = graph.get(pointA);
@@ -72,9 +72,9 @@ public class Graph {
         }
     }
 
-    public void savePath(String pointB) {
+    public void pathToEndPoint(String pointB) {
         if (!graph.containsKey(pointB)) {
-            System.err.printf("Roads does not contain pointB \"%s\"\n", pointB);
+            System.err.printf("Roads do not contain pointB \"%s\"\n", pointB);
             return;
         }
 
@@ -95,7 +95,7 @@ public class Graph {
             if (this == this.previous) {
                 resultList.add(this.name);
             } else if (this.previous == null) {
-                System.err.printf("Road to point %s does not exist\n", this.name);
+                System.err.printf("Road to pointB \"%s\" does not exist\n", this.name);
             } else {
                 this.previous.savePathAndCost();
                 resultList.add(this.name);
