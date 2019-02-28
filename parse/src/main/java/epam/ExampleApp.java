@@ -10,6 +10,8 @@ import java.util.List;
 
 import epam.api.GpsNavigator;
 import epam.api.Path;
+import epam.impl.Graph;
+import epam.impl.Road;
 
 /**
  * This class app demonstrates how your implementation of {@link epam.api.GpsNavigator} is intended to be used.
@@ -20,13 +22,13 @@ public class ExampleApp {
         final GpsNavigator navigator = new StubGpsNavigator();
         navigator.readData("C:\\Users\\i30mb1\\Desktop\\1.txt");
 
-        final Path path = navigator.findPath("C", "B");
+        final Path path = navigator.findPath("F", "C");
         System.out.println(path);
     }
 
     private static class StubGpsNavigator implements GpsNavigator {
 
-        private ArrayList<Graph.Road> roads = new ArrayList<>();
+        private ArrayList<Road> roads = new ArrayList<>();
 
         @Override
         public void readData(String filePath) {
@@ -41,7 +43,7 @@ public class ExampleApp {
 
                     int lineTotalCost = Integer.valueOf(cost) * Integer.valueOf(length);
 
-                    roads.add(new Graph.Road(startPath, endPath, lineTotalCost));
+                    roads.add(new Road(startPath, endPath, lineTotalCost));
                 }
 
             } catch (IOException e) {

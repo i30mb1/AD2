@@ -1,4 +1,4 @@
-package epam;
+package epam.impl;
 
 import java.util.ArrayList;
 import java.util.HashMap;
@@ -6,10 +6,10 @@ import java.util.Map;
 import java.util.NavigableSet;
 import java.util.TreeSet;
 
-class Graph {
-    private final static ArrayList<String> resultList = new ArrayList<>();
-    private static int resultCost = 0;
-    private final Map<String, Vertex> graph;
+public class Graph {
+    private ArrayList<String> resultList = new ArrayList<>();
+    private int resultCost = 0;
+    private Map<String, Vertex> graph;
 
     public Graph(ArrayList<Road> edges, String pointA, String pointB) {
         graph = new HashMap<>(edges.size());
@@ -24,7 +24,7 @@ class Graph {
         }
 
         setUpVertices(pointA);
-        calculatePath(pointB);
+        savePath(pointB);
     }
 
     public ArrayList<String> getResultList() {
@@ -37,7 +37,7 @@ class Graph {
 
     private void setUpVertices(String pointA) {
         if (!graph.containsKey(pointA)) {
-            System.err.printf("Roads doesn't contain pointA \"%s\"\n", pointA);
+            System.err.printf("Roads does not contain pointA \"%s\"\n", pointA);
             return;
         }
         final Vertex source = graph.get(pointA);
@@ -72,30 +72,16 @@ class Graph {
         }
     }
 
-    /**
-     * Prints a path from the source to the specified vertex
-     */
-    public void calculatePath(String pointB) {
+    public void savePath(String pointB) {
         if (!graph.containsKey(pointB)) {
-            System.err.printf("Roads doesn't contain pointB \"%s\"\n", pointB);
+            System.err.printf("Roads does not contain pointB \"%s\"\n", pointB);
             return;
         }
 
-        graph.get(pointB).savePathWithCost();
+        graph.get(pointB).savePathAndCost();
     }
 
-    public static class Road {
-        public final String pointA, pointB;
-        public final int cost;
-
-        public Road(String pointA, String pointB, int cost) {
-            this.pointA = pointA;
-            this.pointB = pointB;
-            this.cost = cost;
-        }
-    }
-
-    public static class Vertex implements Comparable<Vertex> {
+    public class Vertex implements Comparable<Vertex> {
         public final String name;
         public final Map<Vertex, Integer> neighbours = new HashMap<>();
         public int cost = Integer.MAX_VALUE;
@@ -105,13 +91,13 @@ class Graph {
             this.name = name;
         }
 
-        private void savePathWithCost() {
+        private void savePathAndCost() {
             if (this == this.previous) {
                 resultList.add(this.name);
             } else if (this.previous == null) {
-                System.out.printf("%s(exception)", this.name);
+                System.err.printf("Road to point %s does not exist\n", this.name);
             } else {
-                this.previous.savePathWithCost();
+                this.previous.savePathAndCost();
                 resultList.add(this.name);
                 resultCost = this.cost;
             }
