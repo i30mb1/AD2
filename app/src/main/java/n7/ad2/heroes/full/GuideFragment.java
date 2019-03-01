@@ -4,7 +4,6 @@ import android.arch.lifecycle.Observer;
 import android.arch.lifecycle.ViewModelProviders;
 import android.content.Intent;
 import android.databinding.DataBindingUtil;
-import android.os.Build;
 import android.os.Bundle;
 import android.support.annotation.NonNull;
 import android.support.annotation.Nullable;
@@ -31,7 +30,6 @@ import java.util.HashMap;
 import n7.ad2.R;
 import n7.ad2.databinding.FragmentGuideBinding;
 import n7.ad2.databinding.ItemListGuideItemBinding;
-import n7.ad2.databinding.ItemListHeroBinding;
 import n7.ad2.databinding.ItemListHeroCompareBinding;
 import n7.ad2.heroes.db.HeroModel;
 import n7.ad2.items.full.ItemFullActivity;
@@ -145,20 +143,19 @@ public class GuideFragment extends Fragment {
             @Override
             public void onChanged(@Nullable JSONArray jsonArray) {
                 if (jsonArray != null) {
+                    hashMapSpells.clear();
                     for (int i = 0; i < jsonArray.length(); i++) {
                         try {
                             String skillName = jsonArray.getJSONObject(i).getString("name").toLowerCase();
-                            if (skillName.startsWith("shadowraze")) {
-                                hashMapSpells.put("shadowraze", String.valueOf(i + 1).toLowerCase());
-                            } else if (skillName.startsWith("whirling axes")) {
-                                hashMapSpells.put("whirling axes (melee)", String.valueOf(i + 1).toLowerCase());
-                                hashMapSpells.put("whirling axes (ranged)", String.valueOf(i + 1).toLowerCase());
-                            } else {
-                                hashMapSpells.put(skillName, String.valueOf(i + 1));
-                            }
+                            hashMapSpells.put(skillName, String.valueOf(i + 1));
+
                         } catch (JSONException e) {
                             e.printStackTrace();
                         }
+
+                        hashMapSpells.put("shadowraze", "1");
+                        hashMapSpells.put("whirling axes (melee)", "3");
+                        hashMapSpells.put("whirling axes (ranged)", "3");
                     }
                 }
             }
@@ -242,7 +239,7 @@ public class GuideFragment extends Fragment {
         binding.llFragmentGuideItems.removeAllViews();
         String[] pages = items.split("\\+");
         String[] itemsName = pages[currentPage].split("/");
-        if(itemsName.length==1) return;
+        if (itemsName.length == 1) return;
         int itemCount = 0;
         LinearLayout linearLayout = new LinearLayout(getContext());
         for (final String item : itemsName) {

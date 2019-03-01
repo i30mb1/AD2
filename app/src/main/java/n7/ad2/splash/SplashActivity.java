@@ -34,6 +34,7 @@ public class SplashActivity extends BaseActivity {
     private ActivitySplashNormalBinding binding;
     private SplashViewModel viewModel;
     private ObjectAnimator scaleDown;
+    private boolean autoStart = true;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -55,7 +56,7 @@ public class SplashActivity extends BaseActivity {
         viewModel.startMainActivity.observe(this, new Observer<Void>() {
             @Override
             public void onChanged(@Nullable Void aVoid) {
-                if (getLifecycle().getCurrentState() == Lifecycle.State.RESUMED) {
+                if (getLifecycle().getCurrentState() == Lifecycle.State.RESUMED && autoStart) {
                     startMainActivity(null);
                 }
             }
@@ -70,6 +71,7 @@ public class SplashActivity extends BaseActivity {
             }
         }, ANIMATION_DURATION + 50);
         if (scaleDown != null) scaleDown.cancel();
+        autoStart = false;
         startConstraintAnimation();
     }
 

@@ -55,6 +55,7 @@ public class ResponsesPagedListAdapter extends PagedListAdapter<ResponseModel, R
     private View root;
     private int viewRunningPosition = -1;
     private HeroFulViewModel viewModel;
+    private LayoutInflater inflater;
 
     ResponsesPagedListAdapter(View root, HeroFulViewModel viewModel) {
         super(DIFF_CALLBACK);
@@ -66,11 +67,12 @@ public class ResponsesPagedListAdapter extends PagedListAdapter<ResponseModel, R
     @NonNull
     @Override
     public ViewHolder onCreateViewHolder(@NonNull ViewGroup viewGroup, int viewType) {
+        if (inflater == null) inflater = LayoutInflater.from(viewGroup.getContext());
         if (viewType == 0) {
-            View view = LayoutInflater.from(viewGroup.getContext()).inflate(R.layout.item_response, viewGroup, false);
+            View view = inflater.inflate(R.layout.item_response, viewGroup, false);
             return new ViewHolder(view);
         } else {
-            View view = LayoutInflater.from(viewGroup.getContext()).inflate(R.layout.item_response_header, viewGroup, false);
+            View view = inflater.inflate(R.layout.item_response_header, viewGroup, false);
             return new ViewHolder(view);
         }
     }
@@ -136,17 +138,17 @@ public class ResponsesPagedListAdapter extends PagedListAdapter<ResponseModel, R
     class ViewHolder extends RecyclerView.ViewHolder {
         TextView tv_item_response;
         LinearLayout ll_item_response;
-        ImageView iv_item_response_icons;
         ImageView iv_item_response;
         ProgressBar pb_item_response;
+        LinearLayout ll_item_response_icons_row;
 
         ViewHolder(@NonNull View itemView) {
             super(itemView);
             tv_item_response = itemView.findViewById(R.id.tv_item_response);
             ll_item_response = itemView.findViewById(R.id.ll_item_response);
-            iv_item_response_icons = itemView.findViewById(R.id.iv_item_response_icons);
             iv_item_response = itemView.findViewById(R.id.iv_item_response);
             pb_item_response = itemView.findViewById(R.id.pb_item_response);
+            ll_item_response_icons_row = itemView.findViewById(R.id.ll_item_response_icons_row);
         }
 
         private void bindTo(final ResponseModel model, final int position) {
@@ -161,33 +163,39 @@ public class ResponsesPagedListAdapter extends PagedListAdapter<ResponseModel, R
                 pb_item_response.setVisibility((viewRunningPosition == position) ? View.VISIBLE : View.INVISIBLE);
             }
 
-            if (iv_item_response_icons != null && model.getIcons().equals("")) {
+            if (ll_item_response_icons_row != null && !model.getIcons().equals("")) {
+                ll_item_response_icons_row.removeAllViewsInLayout();
+                int counter = 0;
+                LinearLayout linearLayout = new LinearLayout(ll_item_response_icons_row.getContext());
+                linearLayout.setOrientation(LinearLayout.HORIZONTAL);
 
-            }
+                String[] icons = model.getIcons().split("\\+");
+                for (final String icon : icons) {
+                    final ImageView imageView = (ImageView) inflater.inflate(R.layout.item_response_icon, linearLayout, false);
+//                    imageView.getLayoutParams().height = 20;
+                    Picasso.get().load("file:///android_asset/heroes/" + icon.replace("%27","'") + "/mini.webp")
+                            .into(imageView, new Callback() {
+                                @Override
+                                public void onSuccess() {
 
-            if (iv_item_response_icons != null && !model.getIcons().equals("")) {
-                iv_item_response_icons.setVisibility(View.VISIBLE);
-                final String icon = model.getIcons().split("\\+")[0];
-//               Drawable drawable = Utils.getDrawableFromAssets(iv_item_response_icons.getContext(), String.format("heroes/%s/%s", icon, "mini.webp"));
-//                if (drawable == null) {
-//                    drawable = Utils.getDrawableFromAssets(iv_item_response_icons.getContext(), String.format("items/%s/%s", icon, "full.webp"));
-//                }
-//                iv_item_response_icons.setImageDrawable(drawable);
-                Picasso.get().load("file:///android_asset/heroes/" + icon + "/mini.webp")
-                        .into(iv_item_response_icons, new Callback() {
-                            @Override
-                            public void onSuccess() {
+                                }
 
-                            }
-
-                            @Override
-                            public void onError(Exception e) {
-                                Picasso.get().load("file:///android_asset/items/" + icon + "/full.webp")
-                                        .into(iv_item_response_icons);
-                            }
-                        });
-            } else if (iv_item_response_icons != null) {
-                iv_item_response_icons.setVisibility(View.GONE);
+                                @Override
+                                public void onError(Exception e) {
+                                    Picasso.get().load("file:///android_asset/items/" + icon + "/full.webp")
+                                            .into(imageView);
+                                }
+                            });
+                    if (counter % 4 == 0) {
+                        linearLayout = new LinearLayout(ll_item_response_icons_row.getContext());
+                        linearLayout.setOrientation(LinearLayout.HORIZONTAL);
+                        ll_item_response_icons_row.addView(linearLayout);
+                    }
+                    linearLayout.addView(imageView);
+                    counter++;
+                }
+            }else if(ll_item_response_icons_row != null){
+                ll_item_response_icons_row.removeAllViews();
             }
 
             if (ll_item_response != null) {

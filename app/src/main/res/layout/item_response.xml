@@ -23,15 +23,15 @@
         app:srcCompat="@drawable/ic_response_save"
         android:contentDescription="@string/setting_tell_friend_title" />
 
-    <ImageView
-        android:id="@+id/iv_item_response_icons"
+    <LinearLayout
+        android:id="@+id/ll_item_response_icons_row"
+        android:orientation="vertical"
         android:layout_width="wrap_content"
-        android:layout_height="20dp"
-        android:layout_weight="0"
-        android:minWidth="20dp"
-        android:orientation="horizontal"
-        android:visibility="gone"
-        android:contentDescription="@string/setting_tell_friend_title" />
+        android:layout_height="wrap_content">
+
+    </LinearLayout>
+
+
 
     <TextView
         android:id="@+id/tv_item_response"
