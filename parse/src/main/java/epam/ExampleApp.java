@@ -21,7 +21,7 @@ public class ExampleApp {
         final GpsNavigator navigator = new StubGpsNavigator();
         navigator.readData("C:\\Users\\i30mb1\\Desktop\\1.txt");
 
-        final Path path = navigator.findPath("Z", "F");
+        final Path path = navigator.findPath("C", "F");
         System.out.println(path);
     }
 

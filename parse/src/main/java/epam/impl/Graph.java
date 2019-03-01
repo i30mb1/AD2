@@ -52,6 +52,7 @@ public class Graph {
         setUpVerticesNeighbours(q);
     }
 
+    @SuppressWarnings("ConstantConditions")
     private void setUpVerticesNeighbours(final NavigableSet<Vertex> q) {
         Vertex u, v;
         while (!q.isEmpty()) {
@@ -72,7 +73,7 @@ public class Graph {
         }
     }
 
-    public void pathToEndPoint(String pointB) {
+    private void pathToEndPoint(String pointB) {
         if (!graph.containsKey(pointB)) {
             System.err.printf("Roads do not contain pointB \"%s\"\n", pointB);
             return;
@@ -82,12 +83,12 @@ public class Graph {
     }
 
     public class Vertex implements Comparable<Vertex> {
-        public final String name;
-        public final Map<Vertex, Integer> neighbours = new HashMap<>();
-        public int cost = Integer.MAX_VALUE;
-        public Vertex previous = null;
+        final String name;
+        final Map<Vertex, Integer> neighbours = new HashMap<>();
+        int cost = Integer.MAX_VALUE;
+        Vertex previous = null;
 
-        public Vertex(String name) {
+        Vertex(String name) {
             this.name = name;
         }
 
@@ -103,6 +104,7 @@ public class Graph {
             }
         }
 
+        @SuppressWarnings("NullableProblems")
         public int compareTo(Vertex other) {
             if (cost == other.cost) {
                 return name.compareTo(other.name);

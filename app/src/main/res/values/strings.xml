@@ -113,7 +113,7 @@
     <string name="all_come_back_tomorrow">Come back tomorrow or buy Subscription</string>
     <string name="game_fragment_earn_5_premium">You earn 5 days premium</string>
     <string name="fragment_game_G1">how many cost this spell</string>
-    <string name="fragment_guide_lane">lane</string>
+    <string name="fragment_guide_lane">lane / %s</string>
     <string name="activity_twitch_game" translatable="false">Quality</string>
     <string name="fragment_guide_further_items">Items and timings</string>
     <string name="fragment_guide_skill_builds">Skill builds</string>
@@ -176,6 +176,6 @@
     <string name="all_yes" translatable="false">YES</string>
     <string name="all_no" translatable="false">NO</string>
     <string name="all_dash" translatable="false">-</string>
-    <string name="fragment_guide_date">Date</string>
+    <string name="fragment_guide_date">guide date / %s</string>
 
 </resources>

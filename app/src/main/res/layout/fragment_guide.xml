@@ -16,9 +16,9 @@
         android:layout_height="wrap_content">
 
         <LinearLayout
-            android:orientation="vertical"
             android:layout_width="match_parent"
-            android:layout_height="match_parent">
+            android:layout_height="match_parent"
+            android:orientation="vertical">
 
             <ProgressBar
                 android:id="@+id/pb_fragment_guide"
@@ -42,25 +42,16 @@
                 android:textAllCaps="true"
                 android:textColor="?android:textColorSecondary" />
 
-            <ScrollView
+            <LinearLayout
+                android:id="@+id/ll_fragment_guide_best"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                android:animateLayoutChanges="true"
                 android:background="?colorPrimaryDark"
-                android:scrollbars="none">
+                tools:minHeight="100dp"
+                android:gravity="center_horizontal"
+                android:orientation="vertical" />
 
-                <HorizontalScrollView
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:scrollbars="none">
-
-                    <LinearLayout
-                        android:id="@+id/ll_fragment_guide_best"
-                        android:layout_width="wrap_content"
-                        android:layout_height="50dp"
-                        android:animateLayoutChanges="true"
-                        android:orientation="horizontal" />
-                </HorizontalScrollView>
-            </ScrollView>
 
             <TextView
                 android:id="@+id/tv_fragment_guide_worst_versus"
@@ -75,79 +66,50 @@
                 android:textAllCaps="true"
                 android:textColor="?android:textColorSecondary" />
 
-            <ScrollView
+            <LinearLayout
+                android:id="@+id/ll_fragment_guide_worst"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                android:animateLayoutChanges="true"
                 android:background="?colorPrimaryDark"
-                android:scrollbars="none">
-
-                <HorizontalScrollView
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:scrollbars="none">
-
-                    <LinearLayout
-                        android:id="@+id/ll_fragment_guide_worst"
-                        android:layout_width="wrap_content"
-                        android:layout_height="50dp"
-                        android:animateLayoutChanges="true"
-                        android:orientation="horizontal" />
-                </HorizontalScrollView>
-            </ScrollView>
+                android:gravity="center_horizontal"
+                tools:minHeight="100dp"
+                android:orientation="vertical" />
 
             <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="5dp"
-                android:background="?colorPrimaryDark"
-                android:layout_gravity="center_horizontal"
-                android:paddingStart="5dp"
-                android:paddingEnd="5dp"
-                android:text="@string/fragment_guide_lane"
-                android:textAllCaps="true"
-                android:textColor="?android:textColorSecondary"
-                android:textSize="14sp" />
-
-            <com.robinhood.ticker.TickerView
                 android:id="@+id/tv_fragment_guide_lane"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:textAllCaps="true"
                 android:layout_gravity="center_horizontal"
-                android:textColor="?android:textColorSecondary"
-                android:textSize="14sp"
-                app:ticker_animationDuration="1000" />
-
-            <TextView
-                android:layout_gravity="center_horizontal"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
                 android:layout_marginTop="5dp"
                 android:background="?colorPrimaryDark"
-                android:paddingStart="5dp"
-                android:paddingEnd="5dp"
-                android:text="@string/fragment_guide_date"
+                android:paddingStart="20dp"
+                android:paddingEnd="20dp"
+                android:text="@string/fragment_guide_lane"
                 android:textAllCaps="true"
                 android:textColor="?android:textColorSecondary"
-                android:textSize="14sp" />
+                android:textSize="12sp" />
+
 
             <TextView
-                android:layout_gravity="center_horizontal"
                 android:id="@+id/tv_fragment_guide_date"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:textColor="?android:textColorSecondary"
-                android:textSize="14sp"
-                android:paddingStart="5dp"
-                android:paddingEnd="5dp"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginTop="5dp"
                 android:background="?colorPrimaryDark"
-                tools:text="05.09.2018" />
+                android:paddingStart="20dp"
+                android:paddingEnd="20dp"
+                android:text="@string/fragment_guide_date"
+                android:textAllCaps="true"
+                android:textColor="?android:textColorSecondary"
+                android:textSize="12sp" />
 
 
             <TextView
-                android:layout_gravity="center_horizontal"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
                 android:layout_marginTop="5dp"
                 android:background="?colorPrimaryDark"
                 android:paddingStart="5dp"
@@ -164,12 +126,12 @@
                 android:background="?colorPrimaryDark"
                 android:gravity="center"
                 android:minHeight="40dp"
-                android:orientation="vertical"/>
+                android:orientation="vertical" />
 
             <TextView
-                android:layout_gravity="center_horizontal"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
                 android:layout_marginTop="5dp"
                 android:background="?colorPrimaryDark"
                 android:paddingStart="5dp"

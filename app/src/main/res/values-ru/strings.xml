@@ -109,7 +109,7 @@
     <string name="fragment_game_1_player">1 ИГРОК</string>
     <string name="fragment_game_2_players">2 ИГРОКА</string>
     <string name="fragment_game_G2">покажи мне свой APM</string>
-    <string name="fragment_guide_lane">линия</string>
+    <string name="fragment_guide_lane">линия / %s</string>
     <string name="dialog_rate_ok">Хорошо</string>
     <string name="dialog_video_ad_title">Просмотрите объявление, чтобы получить 10 минут премиума!</string>
     <string name="game_you_win">ВЫ ПОБЕДИЛИ</string>
@@ -118,6 +118,6 @@
     <string name="tv_second_remains">секунд осталось</string>
     <string name="activity_game2p1_your_apm">твой апм</string>
     <string name="fragment_game_G3">хватает ли тебе денег?</string>
-    <string name="fragment_guide_date">Дата</string>
+    <string name="fragment_guide_date">дата гайда / %s</string>
 
 </resources>

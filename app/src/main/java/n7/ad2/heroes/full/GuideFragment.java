@@ -20,7 +20,6 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.LinearLayout;
 
-import com.robinhood.ticker.TickerUtils;
 import com.squareup.picasso.Callback;
 import com.squareup.picasso.Picasso;
 
@@ -33,6 +32,7 @@ import n7.ad2.R;
 import n7.ad2.databinding.FragmentGuideBinding;
 import n7.ad2.databinding.ItemListGuideItemBinding;
 import n7.ad2.databinding.ItemListHeroBinding;
+import n7.ad2.databinding.ItemListHeroCompareBinding;
 import n7.ad2.heroes.db.HeroModel;
 import n7.ad2.items.full.ItemFullActivity;
 
@@ -136,8 +136,6 @@ public class GuideFragment extends Fragment {
 
         setHasOptionsMenu(true);
 
-        binding.tvFragmentGuideLane.setCharacterList(TickerUtils.getDefaultListForUSCurrency());
-
         calculateMaxItemInRow();
         setObservers();
     }
@@ -152,6 +150,9 @@ public class GuideFragment extends Fragment {
                             String skillName = jsonArray.getJSONObject(i).getString("name").toLowerCase();
                             if (skillName.startsWith("shadowraze")) {
                                 hashMapSpells.put("shadowraze", String.valueOf(i + 1).toLowerCase());
+                            } else if (skillName.startsWith("whirling axes")) {
+                                hashMapSpells.put("whirling axes (melee)", String.valueOf(i + 1).toLowerCase());
+                                hashMapSpells.put("whirling axes (ranged)", String.valueOf(i + 1).toLowerCase());
                             } else {
                                 hashMapSpells.put(skillName, String.valueOf(i + 1));
                             }
@@ -186,18 +187,21 @@ public class GuideFragment extends Fragment {
 
     private void setDate(String date) {
         String timeArrays[] = date.split("\\+");
-        binding.tvFragmentGuideDate.setText(timeArrays[currentPage]);
+        binding.tvFragmentGuideDate.setText(getString(R.string.fragment_guide_date, timeArrays[currentPage]));
     }
 
     private void setLane(String lanes) {
         String laneArrays[] = lanes.split("\\+");
-        binding.tvFragmentGuideLane.setText(laneArrays[currentPage]);
+        binding.tvFragmentGuideLane.setText(getString(R.string.fragment_guide_lane, laneArrays[currentPage]));
     }
 
     private void inflateSkillBuild(final String skillBuilds) {
         binding.llFragmentGuideSkills.removeAllViews();
         String[] pages = skillBuilds.split("\\+");
         String[] spells = pages[currentPage].split("/");
+        if (spells.length == 1) {
+            return;
+        }
         int countSpell = 1;
         for (final String spell : spells) {
             ItemListGuideItemBinding itemListGuideItemBinding = DataBindingUtil.inflate(getLayoutInflater(), R.layout.item_list_guide_item, binding.llFragmentGuideSkills, false);
@@ -238,6 +242,7 @@ public class GuideFragment extends Fragment {
         binding.llFragmentGuideItems.removeAllViews();
         String[] pages = items.split("\\+");
         String[] itemsName = pages[currentPage].split("/");
+        if(itemsName.length==1) return;
         int itemCount = 0;
         LinearLayout linearLayout = new LinearLayout(getContext());
         for (final String item : itemsName) {
@@ -287,16 +292,24 @@ public class GuideFragment extends Fragment {
 
     private void addHeroes(final String bestHeroes, int textColor, LinearLayout linearLayout) {
         linearLayout.removeAllViewsInLayout();
+
+        int counter = 0;
+        LinearLayout linearLayoutFirst5item = new LinearLayout(getContext());
+        linearLayoutFirst5item.setOrientation(LinearLayout.HORIZONTAL);
+        linearLayout.addView(linearLayoutFirst5item);
+
+        LinearLayout linearLayoutSecond5item = new LinearLayout(getContext());
+        linearLayoutSecond5item.setOrientation(LinearLayout.HORIZONTAL);
+        linearLayout.addView(linearLayoutSecond5item);
+
         String[] heroes = bestHeroes.split("/");
+        if (heroes.length == 1) return;
         for (final String hero : heroes) {
             final String[] heroNameAndWinrate = hero.split("\\^");
-            ItemListHeroBinding itemListHeroBinding = DataBindingUtil.inflate(getLayoutInflater(), R.layout.item_list_hero, linearLayout, false);
+            ItemListHeroCompareBinding itemListHeroBinding = DataBindingUtil.inflate(getLayoutInflater(), R.layout.item_list_hero_compare, linearLayout, false);
             itemListHeroBinding.setHero(new HeroModel(heroNameAndWinrate[0], heroNameAndWinrate[1]));
             itemListHeroBinding.executePendingBindings();
             itemListHeroBinding.tvItemListHero.setTextColor(textColor);
-            if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.LOLLIPOP) {
-                itemListHeroBinding.ivItemListHero.setTransitionName("");
-            }
             itemListHeroBinding.ivItemListHero.setPadding(0, 0, 0, 0);
             itemListHeroBinding.getRoot().setOnClickListener(new View.OnClickListener() {
                 @Override
@@ -306,11 +319,16 @@ public class GuideFragment extends Fragment {
                     intent.putExtra(HERO_CODE_NAME, heroNameAndWinrate[0]);
                     startActivity(intent);
                     if (getActivity() != null) {
-                        getActivity().finish();
+//                        getActivity().finish();
                     }
                 }
             });
-            linearLayout.addView(itemListHeroBinding.getRoot());
+            if (counter >= 4) {
+                linearLayoutSecond5item.addView(itemListHeroBinding.getRoot());
+            } else {
+                linearLayoutFirst5item.addView(itemListHeroBinding.getRoot());
+            }
+            counter++;
         }
     }
 

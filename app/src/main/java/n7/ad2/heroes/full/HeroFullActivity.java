@@ -17,7 +17,6 @@ import android.view.ViewTreeObserver;
 
 import n7.ad2.R;
 import n7.ad2.databinding.ActivityHeroFullBinding;
-import n7.ad2.utils.AppExecutors;
 import n7.ad2.utils.BaseActivity;
 import n7.ad2.utils.Utils;
 
@@ -27,6 +26,7 @@ public class HeroFullActivity extends BaseActivity {
 
     public static final String HERO_NAME = "HERO_NAME";
     public static final String HERO_CODE_NAME = "HERO_CODE_NAME";
+    public static final String CURRENT_ITEM = "CURRENT_ITEM";
     private String heroCode;
     private ActivityHeroFullBinding binding;
     private String heroName;
@@ -74,12 +74,19 @@ public class HeroFullActivity extends BaseActivity {
         ViewPagerAdapter viewPagerAdapter = new ViewPagerAdapter(getSupportFragmentManager());
         binding.vpActivityHeroFull.setAdapter(viewPagerAdapter);
         binding.vpActivityHeroFull.setOffscreenPageLimit(2);
+        binding.vpActivityHeroFull.setCurrentItem(getPreferences(MODE_PRIVATE).getInt(CURRENT_ITEM, 0));
         binding.tabActivityHeroFull.setupWithViewPager(binding.vpActivityHeroFull);
     }
 
     @Override
     protected void onResume() {
         super.onResume();
+    }
+
+    @Override
+    protected void onDestroy() {
+        super.onDestroy();
+        getPreferences(MODE_PRIVATE).edit().putInt(CURRENT_ITEM, binding.vpActivityHeroFull.getCurrentItem()).apply();
     }
 
     private void setToolbar() {
@@ -93,7 +100,10 @@ public class HeroFullActivity extends BaseActivity {
 
 
             try {
-                Utils.startAnimation(HeroFullActivity.this, binding.toolbarActivityHeroFull, "heroes/" + heroCode + "/emoticon.webp", false, mActionBarSize);
+                Bitmap icon = Utils.getBitmapFromAssets(HeroFullActivity.this, String.format("heroes/%s/mini.webp", heroCode));
+                icon = Bitmap.createScaledBitmap(icon, mActionBarSize, mActionBarSize, false);
+                final Drawable iconDrawable = new BitmapDrawable(getResources(), icon);
+                binding.toolbarActivityHeroFull.setNavigationIcon(iconDrawable);
             } catch (NullPointerException e) {
                 e.printStackTrace();
             }
@@ -101,10 +111,7 @@ public class HeroFullActivity extends BaseActivity {
                 binding.toolbarActivityHeroFull.setNavigationOnClickListener(new View.OnClickListener() {
                     @Override
                     public void onClick(View view) {
-                        Bitmap icon = Utils.getBitmapFromAssets(HeroFullActivity.this, String.format("heroes/%s/mini.webp", heroCode));
-                        icon = Bitmap.createScaledBitmap(icon, mActionBarSize, mActionBarSize, false);
-                        final Drawable iconDrawable = new BitmapDrawable(getResources(), icon);
-                        binding.toolbarActivityHeroFull.setNavigationIcon(iconDrawable);
+                        Utils.startAnimation(HeroFullActivity.this, binding.toolbarActivityHeroFull, "heroes/" + heroCode + "/emoticon.webp", false, mActionBarSize);
                     }
                 });
             }

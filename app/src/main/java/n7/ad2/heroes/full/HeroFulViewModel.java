@@ -84,13 +84,16 @@ public class HeroFulViewModel extends AndroidViewModel {
                 if (currentDay != guideLastDay) {
                     Constraints constraints = new Constraints.Builder().setRequiredNetworkType(NetworkType.CONNECTED).build();
                     Data data = new Data.Builder().putString(HERO_CODE_NAME, heroCode).build();
-                    OneTimeWorkRequest worker = new OneTimeWorkRequest.Builder(GuideWorker.class).setInputData(data).setConstraints(constraints).build();
+                    OneTimeWorkRequest worker = new OneTimeWorkRequest.Builder(GuideWorker.class)
+                            .setInputData(data)
+                            .setConstraints(constraints)
+                            .build();
                     WorkManager.getInstance().enqueue(worker);
                     WorkManager.getInstance().getWorkInfoByIdLiveData(worker.getId()).observeForever(new Observer<WorkInfo>() {
                         @Override
                         public void onChanged(@Nullable WorkInfo workInfo) {
                             if (workInfo != null) {
-                                if (workInfo.getState().isFinished()) {
+                                if (workInfo.getState().isFinished()|| workInfo.getState().equals(WorkInfo.State.ENQUEUED)) {
                                     isGuideLoading.set(false);
                                 } else {
                                     isGuideLoading.set(true);
@@ -183,12 +186,11 @@ public class HeroFulViewModel extends AndroidViewModel {
 
     public boolean userSubscription() {
         boolean subscription = PreferenceManager.getDefaultSharedPreferences(application).getBoolean(SUBSCRIPTION_PREF, false);
-        return subscription;
-//        if (isNetworkAvailable()) {
-//            return subscription;
-//        } else {
-//            return true;
-//        }
+        if (isNetworkAvailable()) {
+            return subscription;
+        } else {
+            return true;
+        }
     }
 
     private boolean isNetworkAvailable() {

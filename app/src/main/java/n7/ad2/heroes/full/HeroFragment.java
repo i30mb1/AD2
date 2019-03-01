@@ -2,7 +2,6 @@ package n7.ad2.heroes.full;
 
 import android.arch.lifecycle.Observer;
 import android.arch.lifecycle.ViewModelProviders;
-import android.content.res.AssetManager;
 import android.databinding.DataBindingUtil;
 import android.os.Bundle;
 import android.support.annotation.NonNull;
@@ -44,7 +43,6 @@ public class HeroFragment extends Fragment {
     private FragmentHeroPersonalBinding binding;
     private HeroFulViewModel viewModel;
     private int colorAccentTheme;
-    private AssetManager assetManager;
 
     public HeroFragment() {
 

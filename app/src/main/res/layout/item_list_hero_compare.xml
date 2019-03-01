@@ -34,11 +34,9 @@
             android:background="?colorAccent"
             android:contentDescription="@string/setting_tell_friend_title"
             android:foreground="?android:attr/selectableItemBackground"
-            android:onClick="@{(view)->fragment.startHeroFull(view,hero)}"
             android:paddingStart="2dp"
             android:paddingEnd="0dp"
             android:scaleType="centerCrop"
-            android:transitionName="iv"
             tools:ignore="UnusedAttribute"
             tools:src="@drawable/hero_placeholder" />
 
