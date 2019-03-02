@@ -26,15 +26,15 @@ class NewParse {
         String reHeroes[] = new String[]{"Legion_Commander"};
 
         int count = 0;
-        for (String hero : reHeroes) {
+        for (String hero : loadHeroesFromFile()) {
             String counter = String.format(Locale.US, "% d/%d ", ++count, loadHeroesFromFile().size());
             loadResponses(hero, counter);
-//            loadSpellsAndDescription(hero, counter);
+            loadSpellsAndDescription(hero, counter);
         }
 
 //        loadZhItems(false);
-//        loadRusItems(false);
-//        loadEngItems(false);
+        loadRusItems(false);
+        loadEngItems(false);
     }
 
     private static void loadZhItems(boolean loadImage) {
