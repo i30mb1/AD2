@@ -1,5 +1,8 @@
 package n7.ad2.heroes.full;
 
+import android.Manifest;
+import android.annotation.SuppressLint;
+import android.arch.lifecycle.Observer;
 import android.arch.lifecycle.ViewModelProviders;
 import android.content.Intent;
 import android.content.res.TypedArray;
@@ -7,17 +10,27 @@ import android.databinding.DataBindingUtil;
 import android.graphics.Bitmap;
 import android.graphics.drawable.BitmapDrawable;
 import android.graphics.drawable.Drawable;
+import android.net.Uri;
 import android.os.Build;
 import android.os.Bundle;
+import android.os.Environment;
+import android.provider.Settings;
+import android.support.annotation.Nullable;
+import android.support.annotation.StringRes;
+import android.support.design.widget.Snackbar;
+import android.support.v4.app.ActivityCompat;
 import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentManager;
 import android.support.v4.app.FragmentPagerAdapter;
 import android.view.View;
 import android.view.ViewTreeObserver;
 
+import java.io.File;
+
 import n7.ad2.R;
 import n7.ad2.databinding.ActivityHeroFullBinding;
 import n7.ad2.utils.BaseActivity;
+import n7.ad2.utils.SnackbarUtils;
 import n7.ad2.utils.Utils;
 
 import static n7.ad2.main.MainActivity.LOG_ON_RECEIVE;
@@ -27,9 +40,11 @@ public class HeroFullActivity extends BaseActivity {
     public static final String HERO_NAME = "HERO_NAME";
     public static final String HERO_CODE_NAME = "HERO_CODE_NAME";
     public static final String CURRENT_ITEM = "CURRENT_ITEM";
+    public static int REQUESTED_PERMISSION = 1;
     private String heroCode;
     private ActivityHeroFullBinding binding;
     private String heroName;
+    private HeroFulViewModel viewModel;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -44,11 +59,58 @@ public class HeroFullActivity extends BaseActivity {
             heroCode = savedInstanceState.getString(HERO_CODE_NAME);
         }
 
-        HeroFulViewModel viewModel = ViewModelProviders.of(this, new HeroFullViewModelFactory(getApplication(), heroCode, heroName)).get(HeroFulViewModel.class);
+        viewModel = ViewModelProviders.of(this, new HeroFullViewModelFactory(getApplication(), heroCode, heroName)).get(HeroFulViewModel.class);
 
         setToolbar();
         setViewPager();
         supportPostponeEnterTransition();
+        setObservers();
+    }
+
+    private void setObservers() {
+        viewModel.showSnackBar.observe(this, new Observer<Integer>() {
+            @Override
+            public void onChanged(@StringRes Integer integer) {
+                if (integer == -7) {
+                    Snackbar.make(binding.getRoot(), R.string.hero_responses_sound_already_downloaded, Snackbar.LENGTH_LONG).setAction(R.string.open_file, new View.OnClickListener() {
+                        @Override
+                        public void onClick(View view) {
+                            Uri selectedUri = Uri.parse(view.getContext().getExternalFilesDir(Environment.DIRECTORY_RINGTONES) + File.separator);
+                            Intent intentOpenFile = new Intent(Intent.ACTION_VIEW);
+                            intentOpenFile.setDataAndType(selectedUri, "application/*");
+                            if (intentOpenFile.resolveActivityInfo(view.getContext().getPackageManager(), 0) != null) {
+                                view.getContext().startActivity(Intent.createChooser(intentOpenFile, view.getContext().getString(R.string.hero_responses_open_folder_with)));
+                            } else {
+                                // if you reach this place, it means there is no any file
+                                // explorer app installed on your device
+                            }
+                        }
+                    }).show();
+                } else {
+                    SnackbarUtils.showSnackbar(binding.getRoot(),getString(integer));
+                }
+            }
+        });
+        viewModel.grandPermission.observe(this, new Observer<Integer>() {
+            @Override
+            public void onChanged(@Nullable Integer integer) {
+                ActivityCompat.requestPermissions(HeroFullActivity.this, new String[]{Manifest.permission.WRITE_EXTERNAL_STORAGE}, REQUESTED_PERMISSION);
+            }
+        });
+        viewModel.grandSetting.observe(this, new Observer<Integer>() {
+            @Override
+            public void onChanged(@StringRes Integer redId) {
+                SnackbarUtils.showSnackbarWithAction(binding.getRoot(), getString(redId), getString(R.string.all_enable), new View.OnClickListener() {
+                    @Override
+                    public void onClick(View v) {
+                        @SuppressLint("InlinedApi") Intent intent = new Intent(Settings.ACTION_MANAGE_WRITE_SETTINGS);
+                        intent.setData(Uri.parse("package:" + getApplication().getPackageName()));
+                        intent.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
+                        getApplication().startActivity(intent);
+                    }
+                });
+            }
+        });
     }
 
     @Override

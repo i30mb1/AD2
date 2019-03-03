@@ -2,23 +2,30 @@ package n7.ad2.heroes.full;
 
 import android.Manifest;
 import android.app.Application;
+import android.app.DownloadManager;
 import android.arch.lifecycle.AndroidViewModel;
 import android.arch.lifecycle.LiveData;
 import android.arch.lifecycle.MutableLiveData;
 import android.arch.lifecycle.Observer;
 import android.arch.paging.LivePagedListBuilder;
 import android.arch.paging.PagedList;
+import android.content.ContentResolver;
+import android.content.ContentValues;
 import android.content.Context;
 import android.content.pm.PackageManager;
 import android.databinding.ObservableBoolean;
+import android.media.RingtoneManager;
 import android.net.ConnectivityManager;
 import android.net.NetworkInfo;
+import android.net.Uri;
 import android.os.Build;
 import android.os.Environment;
 import android.preference.PreferenceManager;
+import android.provider.MediaStore;
 import android.provider.Settings;
 import android.support.annotation.NonNull;
 import android.support.annotation.Nullable;
+import android.support.v7.app.AlertDialog;
 
 import org.json.JSONArray;
 import org.json.JSONObject;
@@ -49,6 +56,7 @@ public class HeroFulViewModel extends AndroidViewModel {
 
     public final SnackbarMessage grandSetting = new SnackbarMessage();
     public final SnackbarMessage grandPermission = new SnackbarMessage();
+    public final SnackbarMessage showSnackBar = new SnackbarMessage();
     public MutableLiveData<JSONObject> jsonObjectHeroFull = new MutableLiveData<>();
     public MutableLiveData<JSONArray> jsonArrayHeroAbilities = new MutableLiveData<>();
     public ObservableBoolean isGuideLoading = new ObservableBoolean(false);
@@ -93,7 +101,7 @@ public class HeroFulViewModel extends AndroidViewModel {
                         @Override
                         public void onChanged(@Nullable WorkInfo workInfo) {
                             if (workInfo != null) {
-                                if (workInfo.getState().isFinished()|| workInfo.getState().equals(WorkInfo.State.ENQUEUED)) {
+                                if (workInfo.getState().isFinished() || workInfo.getState().equals(WorkInfo.State.ENQUEUED)) {
                                     isGuideLoading.set(false);
                                 } else {
                                     isGuideLoading.set(true);
@@ -226,5 +234,53 @@ public class HeroFulViewModel extends AndroidViewModel {
         return true;
     }
 
+    public void downloadResponse(ResponseModel model, AlertDialog dialog) {
+        if (Utils.isNetworkAvailable(application)) {
+            File file = new File(application.getExternalFilesDir(Environment.DIRECTORY_RINGTONES) + File.separator + heroName + File.separator + model.getTitle().replace("?", "") + ".mp3");
+            if (file.exists()) {
+                showSnackBar.postValue(-7);
+            } else {
+                DownloadManager manager = (DownloadManager) application.getSystemService(Context.DOWNLOAD_SERVICE);
+                if (manager != null) {
+                    manager.enqueue(new DownloadManager.Request(Uri.parse(model.getHref()))
+                            .setDescription(heroName)
+                            .setTitle(model.getTitle())
+                            .setNotificationVisibility(DownloadManager.Request.VISIBILITY_VISIBLE_NOTIFY_COMPLETED)
+                            .setDestinationInExternalFilesDir(application, Environment.DIRECTORY_RINGTONES, heroName + File.separator + model.getTitle().replace("?", "") + ".mp3")
+                    );
+                }
+            }
+        } else {
+            showSnackBar.postValue(R.string.all_error_internet);
+        }
+        dialog.cancel();
+    }
+
+    public void setOnRingtone(ResponseModel model,AlertDialog dialog) {
+        if (enableWriteSetting() && checkPermission()) {
+            File file = new File(application.getExternalFilesDir(Environment.DIRECTORY_RINGTONES) + File.separator + heroName + File.separator + model.getTitle().replace("?", "") + ".mp3");
+            if (file.exists()) {
+                ContentValues values = new ContentValues();
+                values.put(MediaStore.MediaColumns.DATA, file.getAbsolutePath());
+                values.put(MediaStore.MediaColumns.TITLE, model.getTitle());
+                values.put(MediaStore.MediaColumns.MIME_TYPE, "audio/mp3");
+                values.put(MediaStore.MediaColumns.SIZE, file.length());
+                values.put(MediaStore.Audio.Media.IS_NOTIFICATION, true);
+                values.put(MediaStore.Audio.Media.IS_RINGTONE, true);
+                values.put(MediaStore.Audio.Media.IS_ALARM, true);
+                values.put(MediaStore.Audio.Media.IS_MUSIC, false);
+
+                ContentResolver contentResolver = application.getContentResolver();
+                Uri generalaudiouri = MediaStore.Audio.Media.INTERNAL_CONTENT_URI;
+                contentResolver.delete(generalaudiouri, MediaStore.MediaColumns.DATA + "='" + file.getAbsolutePath() + "'", null);
+                Uri ringtoneuri = contentResolver.insert(generalaudiouri, values);
+                RingtoneManager.setActualDefaultRingtoneUri(application, RingtoneManager.TYPE_NOTIFICATION, ringtoneuri);
+                showSnackBar.postValue(R.string.hero_response_ringtone_set);
+            } else {
+                showSnackBar.postValue(R.string.hero_responses_fragment_download_first);
+            }
+        }
+        dialog.cancel();
+    }
 
 }

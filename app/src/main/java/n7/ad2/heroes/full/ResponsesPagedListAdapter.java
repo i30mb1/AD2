@@ -1,16 +1,9 @@
 package n7.ad2.heroes.full;
 
-import android.app.DownloadManager;
 import android.arch.paging.PagedListAdapter;
-import android.content.ContentResolver;
-import android.content.ContentValues;
-import android.content.Context;
-import android.content.Intent;
+import android.databinding.DataBindingUtil;
 import android.media.MediaPlayer;
-import android.media.RingtoneManager;
-import android.net.Uri;
 import android.os.Environment;
-import android.provider.MediaStore;
 import android.support.annotation.NonNull;
 import android.support.design.widget.Snackbar;
 import android.support.v7.app.AlertDialog;
@@ -19,7 +12,6 @@ import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.ProgressBar;
@@ -33,6 +25,7 @@ import java.io.IOException;
 import java.util.LinkedList;
 
 import n7.ad2.R;
+import n7.ad2.databinding.DialogResponseBinding;
 import n7.ad2.utils.StickyHeaderDecorator;
 import n7.ad2.utils.Utils;
 
@@ -140,15 +133,16 @@ public class ResponsesPagedListAdapter extends PagedListAdapter<ResponseModel, R
         LinearLayout ll_item_response;
         ImageView iv_item_response;
         ProgressBar pb_item_response;
-        LinearLayout ll_item_response_icons_row;
+        View rootView;
+
 
         ViewHolder(@NonNull View itemView) {
             super(itemView);
+            rootView = itemView.getRootView();
             tv_item_response = itemView.findViewById(R.id.tv_item_response);
-            ll_item_response = itemView.findViewById(R.id.ll_item_response);
-            iv_item_response = itemView.findViewById(R.id.iv_item_response);
+            ll_item_response = itemView.findViewById(R.id.ll_item_response_heroes);
+            iv_item_response = itemView.findViewById(R.id.iv_item_response_saved);
             pb_item_response = itemView.findViewById(R.id.pb_item_response);
-            ll_item_response_icons_row = itemView.findViewById(R.id.ll_item_response_icons_row);
         }
 
         private void bindTo(final ResponseModel model, final int position) {
@@ -163,17 +157,17 @@ public class ResponsesPagedListAdapter extends PagedListAdapter<ResponseModel, R
                 pb_item_response.setVisibility((viewRunningPosition == position) ? View.VISIBLE : View.INVISIBLE);
             }
 
-            if (ll_item_response_icons_row != null && !model.getIcons().equals("")) {
-                ll_item_response_icons_row.removeAllViewsInLayout();
+            if (ll_item_response != null && !model.getIcons().equals("")) {
+                ll_item_response.removeAllViewsInLayout();
                 int counter = 0;
-                LinearLayout linearLayout = new LinearLayout(ll_item_response_icons_row.getContext());
+                LinearLayout linearLayout = new LinearLayout(ll_item_response.getContext());
                 linearLayout.setOrientation(LinearLayout.HORIZONTAL);
 
                 String[] icons = model.getIcons().split("\\+");
                 for (final String icon : icons) {
                     final ImageView imageView = (ImageView) inflater.inflate(R.layout.item_response_icon, linearLayout, false);
 //                    imageView.getLayoutParams().height = 20;
-                    Picasso.get().load("file:///android_asset/heroes/" + icon.replace("%27","'") + "/mini.webp")
+                    Picasso.get().load("file:///android_asset/heroes/" + icon.replace("%27", "'") + "/mini.webp")
                             .into(imageView, new Callback() {
                                 @Override
                                 public void onSuccess() {
@@ -187,19 +181,19 @@ public class ResponsesPagedListAdapter extends PagedListAdapter<ResponseModel, R
                                 }
                             });
                     if (counter % 4 == 0) {
-                        linearLayout = new LinearLayout(ll_item_response_icons_row.getContext());
+                        linearLayout = new LinearLayout(ll_item_response.getContext());
                         linearLayout.setOrientation(LinearLayout.HORIZONTAL);
-                        ll_item_response_icons_row.addView(linearLayout);
+                        ll_item_response.addView(linearLayout);
                     }
                     linearLayout.addView(imageView);
                     counter++;
                 }
-            }else if(ll_item_response_icons_row != null){
-                ll_item_response_icons_row.removeAllViews();
+            } else if (ll_item_response != null) {
+                ll_item_response.removeAllViews();
             }
 
-            if (ll_item_response != null) {
-                ll_item_response.setOnClickListener(new View.OnClickListener() {
+            if (rootView != null) {
+                rootView.setOnClickListener(new View.OnClickListener() {
                     @Override
                     public void onClick(final View view) {
                         try {
@@ -256,84 +250,21 @@ public class ResponsesPagedListAdapter extends PagedListAdapter<ResponseModel, R
                     }
                 });
                 if (viewModel.userSubscription()) {
-                    ll_item_response.setOnLongClickListener(new View.OnLongClickListener() {
+                    rootView.setOnLongClickListener(new View.OnLongClickListener() {
                         @Override
                         public boolean onLongClick(final View view) {
+
                             AlertDialog.Builder builder = new AlertDialog.Builder(view.getContext());
-                            builder.setView(R.layout.dialog_response);
-                            final AlertDialog dialog = builder.show();
-                            Button b_dialog_response_download = dialog.findViewById(R.id.b_dialog_response_download);
-                            Button b_dialog_response_set_ringtone = dialog.findViewById(R.id.b_dialog_response_set_ringtone);
 
-                            if (b_dialog_response_set_ringtone != null)
-                                b_dialog_response_set_ringtone.setOnClickListener(new View.OnClickListener() {
-                                    @Override
-                                    public void onClick(final View view) {
-                                        if (viewModel.enableWriteSetting() && viewModel.checkPermission()) {
-                                            File file = new File(view.getContext().getExternalFilesDir(Environment.DIRECTORY_RINGTONES) + File.separator + viewModel.heroName + File.separator + model.getTitle().replace("?", "") + ".mp3");
-                                            if (file.exists()) {
-                                                ContentValues values = new ContentValues();
-                                                values.put(MediaStore.MediaColumns.DATA, file.getAbsolutePath());
-                                                values.put(MediaStore.MediaColumns.TITLE, model.getTitle());
-                                                values.put(MediaStore.MediaColumns.MIME_TYPE, "audio/mp3");
-                                                values.put(MediaStore.MediaColumns.SIZE, file.length());
-                                                values.put(MediaStore.Audio.Media.IS_NOTIFICATION, true);
-                                                values.put(MediaStore.Audio.Media.IS_RINGTONE, true);
-                                                values.put(MediaStore.Audio.Media.IS_ALARM, true);
-                                                values.put(MediaStore.Audio.Media.IS_MUSIC, false);
+                            DialogResponseBinding binding = DataBindingUtil.inflate(inflater, R.layout.dialog_response, null, false);
+                            binding.setModel(model);
+                            binding.setViewModel(viewModel);
+                            builder.setView(binding.getRoot());
 
-                                                ContentResolver contentResolver = view.getContext().getContentResolver();
-                                                Uri generalaudiouri = MediaStore.Audio.Media.INTERNAL_CONTENT_URI;
-                                                contentResolver.delete(generalaudiouri, MediaStore.MediaColumns.DATA + "='" + file.getAbsolutePath() + "'", null);
-                                                Uri ringtoneuri = contentResolver.insert(generalaudiouri, values);
-                                                RingtoneManager.setActualDefaultRingtoneUri(view.getContext(), RingtoneManager.TYPE_NOTIFICATION, ringtoneuri);
-                                                Snackbar.make(root, R.string.hero_response_ringtone_set, Snackbar.LENGTH_SHORT).show();
-                                            } else {
-                                                Snackbar.make(root, R.string.hero_responses_fragment_download_first, Snackbar.LENGTH_SHORT).show();
-                                            }
-                                            dialog.cancel();
-                                        }
-                                    }
-                                });
-                            if (b_dialog_response_download != null)
-                                b_dialog_response_download.setOnClickListener(new View.OnClickListener() {
-                                    @Override
-                                    public void onClick(final View view) {
-                                        if (Utils.isNetworkAvailable(view.getContext())) {
-                                            File file = new File(view.getContext().getExternalFilesDir(Environment.DIRECTORY_RINGTONES) + File.separator + viewModel.heroName + File.separator + model.getTitle().replace("?", "") + ".mp3");
-                                            if (file.exists()) {
-                                                Snackbar.make(root, R.string.hero_responses_sound_already_downloaded, Snackbar.LENGTH_LONG).setAction(R.string.open_file, new View.OnClickListener() {
-                                                    @Override
-                                                    public void onClick(View view) {
-                                                        Uri selectedUri = Uri.parse(view.getContext().getExternalFilesDir(Environment.DIRECTORY_RINGTONES) + File.separator);
-                                                        Intent intentOpenFile = new Intent(Intent.ACTION_VIEW);
-                                                        intentOpenFile.setDataAndType(selectedUri, "application/*");
-                                                        if (intentOpenFile.resolveActivityInfo(view.getContext().getPackageManager(), 0) != null) {
-                                                            view.getContext().startActivity(Intent.createChooser(intentOpenFile, view.getContext().getString(R.string.hero_responses_open_folder_with)));
-                                                        } else {
-                                                            // if you reach this place, it means there is no any file
-                                                            // explorer app installed on your device
-                                                        }
-                                                    }
-                                                }).show();
-                                            } else {
-                                                DownloadManager manager = (DownloadManager) view.getContext().getSystemService(Context.DOWNLOAD_SERVICE);
-                                                if (manager != null) {
-                                                    manager.enqueue(new DownloadManager.Request(Uri.parse(model.getHref()))
-                                                            .setDescription(viewModel.heroName)
-                                                            .setTitle(model.getTitle())
-                                                            .setNotificationVisibility(DownloadManager.Request.VISIBILITY_VISIBLE_NOTIFY_COMPLETED)
-                                                            .setDestinationInExternalFilesDir(view.getContext(), Environment.DIRECTORY_RINGTONES, viewModel.heroName + File.separator + model.getTitle().replace("?", "") + ".mp3")
-                                                    );
-                                                }
-                                            }
-                                        } else {
-                                            Snackbar.make(root, R.string.all_error_internet, Snackbar.LENGTH_LONG).show();
-                                        }
-                                        dialog.cancel();
-                                    }
-                                });
-
+                            AlertDialog dialog = builder.create();
+                            dialog.getWindow().getAttributes().windowAnimations = R.style.DialogTheme;
+                            binding.setDialog(dialog);
+                            dialog.show();
                             return true;
                         }
                     });

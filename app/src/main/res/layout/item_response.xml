@@ -1,54 +1,66 @@
 <?xml version="1.0" encoding="utf-8"?>
 
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    xmlns:tools="http://schemas.android.com/tools"
-    android:id="@+id/ll_item_response"
-    android:layout_width="match_parent"
-    android:layout_height="wrap_content"
-    android:background="?attr/selectableItemBackground"
-    android:clickable="true"
-    android:focusable="true"
-    android:gravity="center"
-    android:orientation="horizontal"
-    android:padding="4dp"
-    tools:ignore="Overdraw">
+    xmlns:tools="http://schemas.android.com/tools">
 
-    <ImageView
-        android:id="@+id/iv_item_response"
-        android:layout_width="wrap_content"
-        android:layout_height="20dp"
-        android:layout_weight="0"
-        android:visibility="gone"
-        app:srcCompat="@drawable/ic_response_save"
-        android:contentDescription="@string/setting_tell_friend_title" />
+    <data>
+
+        <import type="android.view.View" />
+
+        <variable
+            name="model"
+            type="n7.ad2.heroes.full.ResponseModel" />
+
+    </data>
 
     <LinearLayout
-        android:id="@+id/ll_item_response_icons_row"
-        android:orientation="vertical"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content">
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="?attr/selectableItemBackground"
+        android:gravity="center"
+        android:orientation="horizontal"
+        android:padding="4dp"
+        tools:ignore="Overdraw">
+
+        <ImageView
+            android:id="@+id/iv_item_response_saved"
+            android:layout_width="wrap_content"
+            android:layout_height="20dp"
+            android:layout_weight="0"
+            android:contentDescription="response_saved"
+            android:visibility="@{model.inStore? View.VISIBLE : View.GONE}"
+            app:srcCompat="@drawable/ic_response_save"
+            tools:ignore="HardcodedText" />
+
+        <LinearLayout
+            android:id="@+id/ll_item_response_heroes"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:visibility="@{model.icons!=null ? View.VISIBLE : View.GONE}">
+
+        </LinearLayout>
+
+
+        <TextView
+            android:id="@+id/tv_item_response"
+            android:layout_width="0px"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:paddingStart="4dp"
+            android:paddingEnd="4dp"
+            android:text="@{model.title}"
+            android:textColor="?android:textColorSecondary"
+            tools:text="И даже если я разочарую тебя, я хочу, чтобы ты запомнил меня" />
+
+        <ProgressBar
+            android:id="@+id/pb_item_response"
+            android:layout_width="20dp"
+            android:layout_height="20dp"
+            android:layout_weight="0"
+            android:visibility="@{model.playing ? View.VISIBLE:View.GONE}" />
+
 
     </LinearLayout>
-
-
-
-    <TextView
-        android:id="@+id/tv_item_response"
-        android:layout_width="0px"
-        android:layout_height="wrap_content"
-        android:layout_weight="1"
-        android:paddingEnd="4dp"
-        android:paddingStart="4dp"
-        android:textColor="?android:textColorSecondary"
-        tools:text="И даже если я разочарую тебя, я хочу, чтобы ты запомнил меня" />
-
-    <ProgressBar
-        android:id="@+id/pb_item_response"
-        android:layout_width="20dp"
-        android:layout_height="20dp"
-        android:layout_weight="0"
-        android:visibility="invisible" />
-
-
-</LinearLayout>
+</layout>

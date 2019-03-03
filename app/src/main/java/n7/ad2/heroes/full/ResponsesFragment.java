@@ -39,7 +39,6 @@ import n7.ad2.utils.StickyHeaderDecorator;
 
 public class ResponsesFragment extends Fragment implements SearchView.OnQueryTextListener {
 
-    public static int REQUESTED_PERMISSION = 1;
     private ResponsesPagedListAdapter responsesPagedListAdapter;
     private String currentLanguage;
     private FragmentHeroResponsesBinding binding;
@@ -135,7 +134,7 @@ public class ResponsesFragment extends Fragment implements SearchView.OnQueryTex
         setRetainInstance(true);
 
         setupPagedListAdapter();
-        setObservers();
+        getResponses();
 //        MyUtils.startSpriteAnim(getContext(), (ImageView) view.findViewById(R.id.iv_player2_heartRed2), "hero_responses_sprite.webp", true, 232, 232, 1000, 1);
     }
 
@@ -168,34 +167,6 @@ public class ResponsesFragment extends Fragment implements SearchView.OnQueryTex
         responsesPagedListAdapter = new ResponsesPagedListAdapter(binding.getRoot(), viewModel);
         binding.rvFragmentHeroResponses.addItemDecoration(new StickyHeaderDecorator(binding.rvFragmentHeroResponses, responsesPagedListAdapter));
         binding.rvFragmentHeroResponses.setAdapter(responsesPagedListAdapter);
-    }
-
-    private void setObservers() {
-        getResponses();
-        viewModel.grandPermission.observe(this, new Observer<Integer>() {
-            @Override
-            public void onChanged(@Nullable Integer integer) {
-                if (getActivity() != null) {
-                    ActivityCompat.requestPermissions(getActivity(), new String[]{Manifest.permission.WRITE_EXTERNAL_STORAGE}, REQUESTED_PERMISSION);
-                }
-            }
-        });
-        viewModel.grandSetting.observe(this, new Observer<Integer>() {
-            @Override
-            public void onChanged(@StringRes Integer redId) {
-                SnackbarUtils.showSnackbarWithAction(binding.getRoot(), getString(redId), getString(R.string.all_enable), new View.OnClickListener() {
-                    @Override
-                    public void onClick(View v) {
-                        if (getContext() != null) {
-                            @SuppressLint("InlinedApi") Intent intent = new Intent(Settings.ACTION_MANAGE_WRITE_SETTINGS);
-                            intent.setData(Uri.parse("package:" + getContext().getPackageName()));
-                            intent.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
-                            getContext().startActivity(intent);
-                        }
-                    }
-                });
-            }
-        });
     }
 
     private void getResponses() {

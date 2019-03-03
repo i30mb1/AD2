@@ -6,6 +6,7 @@ public class ResponseModel {
     private String title = "";
     private String icons = "";
     private boolean inStore = false;
+    public boolean playing = false;
 
     public String getIcons() {
         return icons;
