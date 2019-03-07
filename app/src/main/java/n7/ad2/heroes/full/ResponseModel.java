@@ -1,12 +1,19 @@
 package n7.ad2.heroes.full;
 
-public class ResponseModel {
+import android.databinding.ObservableBoolean;
 
+public class ResponseModel implements Response {
+
+    public ObservableBoolean playing = new ObservableBoolean(false);
+    public ObservableBoolean inStore = new ObservableBoolean(false);
     private String href = "";
     private String title = "";
     private String icons = "";
-    private boolean inStore = false;
-    public boolean playing = false;
+    private String titleForFolder = "";
+
+    public String getTitleForFolder() {
+        return titleForFolder;
+    }
 
     public String getIcons() {
         return icons;
@@ -16,20 +23,18 @@ public class ResponseModel {
         this.icons = icons;
     }
 
-    public boolean isInStore() {
-        return inStore;
-    }
-
-    public void setInStore(boolean inStore) {
-        this.inStore = inStore;
-    }
-
     public String getTitle() {
         return title;
     }
 
     public void setTitle(String title) {
         this.title = title;
+        this.titleForFolder = title.toLowerCase()
+                .replace(" ", "_")
+                .replace(".", "")
+                .replace("!", "")
+                .replace("?", "")
+                .trim() + ".mp3";
     }
 
     public String getHref() {
@@ -40,4 +45,8 @@ public class ResponseModel {
         this.href = href;
     }
 
+    @Override
+    public int getType() {
+        return Response.TYPE_RESPONSE;
+    }
 }

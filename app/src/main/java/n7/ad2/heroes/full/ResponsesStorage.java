@@ -14,7 +14,7 @@ import n7.ad2.utils.Utils;
 public class ResponsesStorage {
 
     public Invalidate invalidate;
-    private LinkedList<ResponseModel> list = new LinkedList<>();
+    private LinkedList<Response> list = new LinkedList<>();
     private Executor diskIO;
     private Application application;
     private String path;
@@ -44,7 +44,7 @@ public class ResponsesStorage {
                     JSONArray jsonArray = new JSONArray(jsonString);
                     for (int i = 0; i < jsonArray.length(); i++) {
                         JSONObject jsonObjectSection = jsonArray.getJSONObject(i);
-                        ResponseModel section = new ResponseModel();
+                        HeaderModel section = new HeaderModel();
                         section.setTitle(jsonObjectSection.getString("name"));
                         list.add(section);
                         JSONArray jsonArrayResponses = jsonObjectSection.getJSONArray("responses");
@@ -68,8 +68,8 @@ public class ResponsesStorage {
         });
     }
 
-    LinkedList<ResponseModel> getData(int startPosition, int size) {
-        LinkedList<ResponseModel> newList = new LinkedList<>();
+    LinkedList<Response> getData(int startPosition, int size) {
+        LinkedList<Response> newList = new LinkedList<>();
         for (int i = 0; i < size; i++) {
             if (list.size() > startPosition) {
                 newList.add(list.get(startPosition));
@@ -79,11 +79,15 @@ public class ResponsesStorage {
         return newList;
     }
 
-    LinkedList<ResponseModel> getDataSearch(String search) {
-        LinkedList<ResponseModel> newList = new LinkedList<>();
+    LinkedList<Response> getDataSearch(String search) {
+        LinkedList<Response> newList = new LinkedList<>();
         for (int i = 0; i < list.size(); i++) {
-            if (list.get(i).getTitle().toLowerCase().contains(search.toLowerCase().trim()))
-                newList.add(list.get(i));
+            Response response = list.get(i);
+            if (response.getType() == Response.TYPE_RESPONSE) {
+                if (((ResponseModel) response).getTitle().toLowerCase().contains(search.toLowerCase().trim())) {
+                    newList.add(list.get(i));
+                }
+            }
         }
         return newList;
     }

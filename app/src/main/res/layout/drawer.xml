@@ -82,6 +82,7 @@
             android:layout_height="wrap_content"
             android:orientation="vertical"
             app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent">
 
             <LinearLayout
@@ -256,10 +257,25 @@
             android:contentDescription="@string/setting_tell_friend_title"
             android:onClick="@{(view)->activity.showVideoAD(view)}"
             android:textSize="14sp"
-            android:visibility="@{activity.freeSubscriptionButtonVisibility?View.VISIBLE:View.GONE}"
+            android:visibility="@{activity.freeSubscriptionButtonVisibility?View.VISIBLE:View.INVISIBLE}"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintTop_toTopOf="parent"
             app:srcCompat="@drawable/ic_subscription" />
+
+        <Button
+            android:id="@+id/b_drawer_counter"
+            style="@style/Widget.MaterialComponents.Button.UnelevatedButton"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:layout_marginTop="8dp"
+            android:layout_marginEnd="8dp"
+            android:textSize="14sp"
+            app:layout_constraintEnd_toStartOf="@+id/b_drawer"
+            app:layout_constraintTop_toTopOf="parent"
+            android:visibility="@{activity.freeSubscriptionButtonVisibility?View.VISIBLE:View.INVISIBLE}"
+            android:onClick="@{(view)->activity.activateSubscription(view)}"
+            android:text="@{activity.freeSubscriptionCounter}"
+            tools:text="0" />
 
     </android.support.constraint.ConstraintLayout>
 </layout>

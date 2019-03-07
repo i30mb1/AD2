@@ -5,7 +5,7 @@ import android.support.annotation.NonNull;
 
 import java.util.List;
 
-public class PositionalResponsesDataSource extends PositionalDataSource<ResponseModel> {
+public class PositionalResponsesDataSource extends PositionalDataSource<Response> {
 
     private final ResponsesStorage responsesStorage;
     private String search;
@@ -16,22 +16,21 @@ public class PositionalResponsesDataSource extends PositionalDataSource<Response
     }
 
     @Override
-    public void loadInitial(@NonNull LoadInitialParams params, @NonNull LoadInitialCallback<ResponseModel> callback) {
+    public void loadInitial(@NonNull LoadInitialParams params, @NonNull LoadInitialCallback<Response> callback) {
         if (search.equals("")) {
-            List<ResponseModel> list = responsesStorage.getData(params.requestedStartPosition, params.requestedLoadSize);
+            List<Response> list = responsesStorage.getData(params.requestedStartPosition, params.requestedLoadSize);
             callback.onResult(list, params.requestedStartPosition);
-            //todo check this
         } else {
-            List<ResponseModel> list = responsesStorage.getDataSearch(search);
+            List<Response> list = responsesStorage.getDataSearch(search);
             callback.onResult(list, 0);
         }
 
     }
 
     @Override
-    public void loadRange(@NonNull LoadRangeParams params, @NonNull LoadRangeCallback<ResponseModel> callback) {
+    public void loadRange(@NonNull LoadRangeParams params, @NonNull LoadRangeCallback<Response> callback) {
         if (search.equals("")) {
-            List<ResponseModel> list = responsesStorage.getData(params.startPosition, params.loadSize);
+            List<Response> list = responsesStorage.getData(params.startPosition, params.loadSize);
             callback.onResult(list);
         }
     }

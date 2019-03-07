@@ -3,7 +3,7 @@ package n7.ad2.heroes.full;
 
 import android.arch.paging.DataSource;
 
-public class ResponsesSourceFactory extends DataSource.Factory<Integer, ResponseModel> {
+public class ResponsesSourceFactory extends DataSource.Factory<Integer, Response> {
 
     private final ResponsesStorage responsesStorage;
     private String search;
@@ -23,7 +23,7 @@ public class ResponsesSourceFactory extends DataSource.Factory<Integer, Response
     }
 
     @Override
-    public DataSource<Integer, ResponseModel> create() {
+    public DataSource<Integer, Response> create() {
         responsesDataSource = new PositionalResponsesDataSource(responsesStorage, search);
         return responsesDataSource;
     }

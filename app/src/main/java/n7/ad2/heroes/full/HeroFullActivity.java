@@ -33,6 +33,7 @@ import n7.ad2.utils.BaseActivity;
 import n7.ad2.utils.SnackbarUtils;
 import n7.ad2.utils.Utils;
 
+import static n7.ad2.heroes.full.HeroFulViewModel.FILE_EXIST;
 import static n7.ad2.main.MainActivity.LOG_ON_RECEIVE;
 
 public class HeroFullActivity extends BaseActivity {
@@ -71,7 +72,7 @@ public class HeroFullActivity extends BaseActivity {
         viewModel.showSnackBar.observe(this, new Observer<Integer>() {
             @Override
             public void onChanged(@StringRes Integer integer) {
-                if (integer == -7) {
+                if (integer == FILE_EXIST) {
                     Snackbar.make(binding.getRoot(), R.string.hero_responses_sound_already_downloaded, Snackbar.LENGTH_LONG).setAction(R.string.open_file, new View.OnClickListener() {
                         @Override
                         public void onClick(View view) {
@@ -87,7 +88,7 @@ public class HeroFullActivity extends BaseActivity {
                         }
                     }).show();
                 } else {
-                    SnackbarUtils.showSnackbar(binding.getRoot(),getString(integer));
+                    SnackbarUtils.showSnackbar(binding.getRoot(), getString(integer));
                 }
             }
         });

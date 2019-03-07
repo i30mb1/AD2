@@ -1,11 +1,9 @@
 package n7.ad2.heroes.full;
 
 import android.arch.paging.PagedListAdapter;
+import android.content.Context;
 import android.databinding.DataBindingUtil;
-import android.media.MediaPlayer;
-import android.os.Environment;
 import android.support.annotation.NonNull;
-import android.support.design.widget.Snackbar;
 import android.support.v7.app.AlertDialog;
 import android.support.v7.util.DiffUtil;
 import android.support.v7.widget.RecyclerView;
@@ -14,83 +12,82 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
-import android.widget.ProgressBar;
 import android.widget.TextView;
 
 import com.squareup.picasso.Callback;
 import com.squareup.picasso.Picasso;
 
-import java.io.File;
-import java.io.IOException;
-import java.util.LinkedList;
-
 import n7.ad2.R;
 import n7.ad2.databinding.DialogResponseBinding;
+import n7.ad2.databinding.ItemResponseBinding;
+import n7.ad2.databinding.ItemResponseHeaderBinding;
 import n7.ad2.utils.StickyHeaderDecorator;
-import n7.ad2.utils.Utils;
 
-public class ResponsesPagedListAdapter extends PagedListAdapter<ResponseModel, ResponsesPagedListAdapter.ViewHolder> implements StickyHeaderDecorator.StickyHeaderInterface {
+public class ResponsesPagedListAdapter extends PagedListAdapter<Response, RecyclerView.ViewHolder> implements StickyHeaderDecorator.StickyHeaderInterface {
 
-    private static final DiffUtil.ItemCallback<ResponseModel> DIFF_CALLBACK = new DiffUtil.ItemCallback<ResponseModel>() {
+    private static final DiffUtil.ItemCallback<Response> DIFF_CALLBACK = new DiffUtil.ItemCallback<Response>() {
         @Override
-        public boolean areItemsTheSame(@NonNull ResponseModel oldItem, @NonNull ResponseModel newItem) {
-            return true;
+        public boolean areItemsTheSame(@NonNull Response oldItem, @NonNull Response newItem) {
+            return oldItem.getType() == newItem.getType();
         }
 
         @Override
-        public boolean areContentsTheSame(@NonNull ResponseModel oldItem, @NonNull ResponseModel newItem) {
-            return oldItem.getTitle().equals(newItem.getTitle());
+        public boolean areContentsTheSame(@NonNull Response oldItem, @NonNull Response newItem) {
+            switch (oldItem.getType()) {
+                case Response.TYPE_HEADER:
+                    return ((HeaderModel) oldItem).getTitle().equals(((HeaderModel) newItem).getTitle());
+                case Response.TYPE_RESPONSE:
+                    return ((ResponseModel) oldItem).getTitle().equals(((ResponseModel) newItem).getTitle());
+                default:
+                    return false;
+            }
         }
     };
 
-    private MediaPlayer mediaPlayer = new MediaPlayer();
-    private LinkedList<String> listSavedResponses;
-    private View root;
-    private int viewRunningPosition = -1;
     private HeroFulViewModel viewModel;
     private LayoutInflater inflater;
 
-    ResponsesPagedListAdapter(View root, HeroFulViewModel viewModel) {
+    ResponsesPagedListAdapter(HeroFulViewModel viewModel) {
         super(DIFF_CALLBACK);
         this.viewModel = viewModel;
-        this.listSavedResponses = viewModel.responsesInMemory;
-        this.root = root;
     }
 
     @NonNull
     @Override
-    public ViewHolder onCreateViewHolder(@NonNull ViewGroup viewGroup, int viewType) {
+    public RecyclerView.ViewHolder onCreateViewHolder(@NonNull ViewGroup viewGroup, int viewType) {
         if (inflater == null) inflater = LayoutInflater.from(viewGroup.getContext());
-        if (viewType == 0) {
-            View view = inflater.inflate(R.layout.item_response, viewGroup, false);
-            return new ViewHolder(view);
-        } else {
-            View view = inflater.inflate(R.layout.item_response_header, viewGroup, false);
-            return new ViewHolder(view);
+        switch (viewType) {
+            default:
+            case Response.TYPE_HEADER:
+                ItemResponseHeaderBinding itemResponseHeaderBinding = DataBindingUtil.inflate(inflater, R.layout.item_response_header, viewGroup, false);
+                return new HeaderViewHolder(itemResponseHeaderBinding);
+            case Response.TYPE_RESPONSE:
+                ItemResponseBinding itemResponseBinding = DataBindingUtil.inflate(inflater, R.layout.item_response, viewGroup, false);
+                return new ResponseViewHolder(itemResponseBinding);
         }
     }
 
     @Override
-    public void onBindViewHolder(@NonNull ViewHolder viewHolder, int position) {
-        ResponseModel model = getItem(position);
-        if (model == null) {
-            viewHolder.clear();
-        } else {
-            viewHolder.bindTo(model, position);
+    public void onBindViewHolder(@NonNull RecyclerView.ViewHolder viewHolder, int position) {
+        switch (getItemViewType(position)) {
+            default:
+            case Response.TYPE_HEADER:
+                ((HeaderViewHolder) viewHolder).bindTo(((HeaderModel) getItem(position)));
+                break;
+            case Response.TYPE_RESPONSE:
+                ((ResponseViewHolder) viewHolder).bindTo(((ResponseModel) getItem(position)));
+                break;
         }
     }
 
     @Override
     public int getItemViewType(int position) {
-        ResponseModel model = getItem(position);
+        Response model = getItem(position);
         if (model != null) {
-            if (model.getHref().equals("")) {
-                return 1;
-            } else {
-                return 0;
-            }
+            return model.getType();
+        } else {
+            return Response.TYPE_RESPONSE;
         }
-        return 0;
     }
 
     @Override
@@ -113,7 +110,11 @@ public class ResponsesPagedListAdapter extends PagedListAdapter<ResponseModel, R
 
     @Override
     public void bindHeaderData(View header, int headerPosition) {
-        ResponseModel model = getItem(headerPosition);
+        Response item = getItem(headerPosition);
+        if (item != null && item.getType() == Response.TYPE_RESPONSE) {
+            return;
+        }
+        HeaderModel model = (HeaderModel) getItem(headerPosition);
         if (model != null) {
             ((TextView) header.findViewById(R.id.tv_item_response)).setText(model.getTitle());
         }
@@ -121,159 +122,116 @@ public class ResponsesPagedListAdapter extends PagedListAdapter<ResponseModel, R
 
     @Override
     public boolean isHeader(int itemPosition) {
-        ResponseModel model = getItem(itemPosition);
+        Response model = getItem(itemPosition);
         if (model != null) {
-            return itemPosition > 0 && model.getHref().equals("");
+            return model.getType() == Response.TYPE_HEADER;
         }
         return false;
     }
 
-    class ViewHolder extends RecyclerView.ViewHolder {
-        TextView tv_item_response;
-        LinearLayout ll_item_response;
-        ImageView iv_item_response;
-        ProgressBar pb_item_response;
-        View rootView;
+    public boolean showDialog(Context context, ResponseModel model) {
+        AlertDialog.Builder builder = new AlertDialog.Builder(context);
 
+        DialogResponseBinding binding = DataBindingUtil.inflate(inflater, R.layout.dialog_response, null, false);
+        binding.setModel(model);
+        binding.setViewModel(viewModel);
+        builder.setView(binding.getRoot());
 
-        ViewHolder(@NonNull View itemView) {
-            super(itemView);
-            rootView = itemView.getRootView();
-            tv_item_response = itemView.findViewById(R.id.tv_item_response);
-            ll_item_response = itemView.findViewById(R.id.ll_item_response_heroes);
-            iv_item_response = itemView.findViewById(R.id.iv_item_response_saved);
-            pb_item_response = itemView.findViewById(R.id.pb_item_response);
+        AlertDialog dialog = builder.create();
+        dialog.getWindow().getAttributes().windowAnimations = R.style.DialogTheme;
+        binding.setDialog(dialog);
+        dialog.show();
+        return true;
+    }
+
+    class HeaderViewHolder extends RecyclerView.ViewHolder {
+        ItemResponseHeaderBinding binding;
+
+        HeaderViewHolder(@NonNull ItemResponseHeaderBinding binding) {
+            super(binding.getRoot());
+            this.binding = binding;
         }
 
-        private void bindTo(final ResponseModel model, final int position) {
+        void bindTo(HeaderModel model) {
+            binding.setModel(model);
+            binding.executePendingBindings();
+        }
 
-            if (iv_item_response != null) {
-                iv_item_response.setVisibility((listSavedResponses.contains(model.getTitle().replace("?", "") + ".mp3")) ? View.VISIBLE : View.GONE);
+        void clear() {
+
+        }
+    }
+
+    class ResponseViewHolder extends RecyclerView.ViewHolder {
+        ItemResponseBinding binding;
+
+        ResponseViewHolder(@NonNull ItemResponseBinding binding) {
+            super(binding.getRoot());
+            this.binding = binding;
+        }
+
+        void bindTo(ResponseModel model) {
+            binding.setModel(model);
+            binding.setViewModel(viewModel);
+            binding.setAdapter(ResponsesPagedListAdapter.this);
+            binding.executePendingBindings();
+
+            if (viewModel.responsesInMemory.contains(model.getTitleForFolder())) {
+                model.inStore.set(true);
+            } else {
+                model.inStore.set(false);
             }
 
-            tv_item_response.setText(model.getTitle());
+            inflateIconsForResponse(model);
+        }
 
-            if (pb_item_response != null) {
-                pb_item_response.setVisibility((viewRunningPosition == position) ? View.VISIBLE : View.INVISIBLE);
-            }
+        void inflateIconsForResponse(ResponseModel model) {
+            binding.llItemResponseHeroes.removeAllViews();
+            String[] icons = model.getIcons().split("\\+");
+            if (icons.length == 1) return;
 
-            if (ll_item_response != null && !model.getIcons().equals("")) {
-                ll_item_response.removeAllViewsInLayout();
-                int counter = 0;
-                LinearLayout linearLayout = new LinearLayout(ll_item_response.getContext());
-                linearLayout.setOrientation(LinearLayout.HORIZONTAL);
+            int counter = 0;
+            LinearLayout linearLayout = new LinearLayout(binding.llItemResponseHeroes.getContext());
+            linearLayout.setOrientation(LinearLayout.HORIZONTAL);
 
-                String[] icons = model.getIcons().split("\\+");
-                for (final String icon : icons) {
-                    final ImageView imageView = (ImageView) inflater.inflate(R.layout.item_response_icon, linearLayout, false);
+            for (final String icon : icons) {
+                final ImageView imageView = (ImageView) inflater.inflate(R.layout.item_response_icon, linearLayout, false);
 //                    imageView.getLayoutParams().height = 20;
-                    Picasso.get().load("file:///android_asset/heroes/" + icon.replace("%27", "'") + "/mini.webp")
-                            .into(imageView, new Callback() {
-                                @Override
-                                public void onSuccess() {
+                Picasso.get().load("file:///android_asset/heroes/" + icon.replace("%27", "'") + "/mini.webp")
+                        .into(imageView, new Callback() {
+                            @Override
+                            public void onSuccess() {
 
-                                }
+                            }
 
-                                @Override
-                                public void onError(Exception e) {
-                                    Picasso.get().load("file:///android_asset/items/" + icon + "/full.webp")
-                                            .into(imageView);
-                                }
-                            });
-                    if (counter % 4 == 0) {
-                        linearLayout = new LinearLayout(ll_item_response.getContext());
-                        linearLayout.setOrientation(LinearLayout.HORIZONTAL);
-                        ll_item_response.addView(linearLayout);
-                    }
-                    linearLayout.addView(imageView);
-                    counter++;
+                            @Override
+                            public void onError(Exception e) {
+                                Picasso.get().load("file:///android_asset/items/" + icon + "/full.webp")
+                                        .into(imageView, new Callback() {
+                                            @Override
+                                            public void onSuccess() {
+
+                                            }
+
+                                            @Override
+                                            public void onError(Exception e) {
+
+                                            }
+                                        });
+                            }
+                        });
+                if (counter % 4 == 0) {
+                    linearLayout = new LinearLayout(binding.llItemResponseHeroes.getContext());
+                    linearLayout.setOrientation(LinearLayout.HORIZONTAL);
+                    binding.llItemResponseHeroes.addView(linearLayout);
                 }
-            } else if (ll_item_response != null) {
-                ll_item_response.removeAllViews();
-            }
-
-            if (rootView != null) {
-                rootView.setOnClickListener(new View.OnClickListener() {
-                    @Override
-                    public void onClick(final View view) {
-                        try {
-                            notifyItemChanged(viewRunningPosition);
-                            viewRunningPosition = position;
-                            notifyItemChanged(position);
-                            mediaPlayer.release();
-                            mediaPlayer = new MediaPlayer();
-                            File file = new File(view.getContext().getExternalFilesDir(Environment.DIRECTORY_RINGTONES) + File.separator + viewModel.heroName + File.separator + model.getTitle() + ".mp3");
-                            if (file.exists()) mediaPlayer.setDataSource(file.getPath());
-                            else
-                                mediaPlayer.setDataSource(model.getHref());
-                            mediaPlayer.prepareAsync();
-
-                            mediaPlayer.setOnPreparedListener(new MediaPlayer.OnPreparedListener() {
-                                @Override
-                                public void onPrepared(MediaPlayer mediaPlayer) {
-                                    mediaPlayer.start();
-                                }
-                            });
-                            mediaPlayer.setOnCompletionListener(new MediaPlayer.OnCompletionListener() {
-                                @Override
-                                public void onCompletion(MediaPlayer mediaPlayer) {
-                                    removeProgressBar();
-                                }
-                            });
-                            mediaPlayer.setOnErrorListener(new MediaPlayer.OnErrorListener() {
-                                @Override
-                                public boolean onError(MediaPlayer mediaPlayer, int i, int i1) {
-                                    removeProgressBar();
-                                    showErrorSnackbar(view);
-                                    return true;
-                                }
-                            });
-
-                        } catch (IOException e) {
-                            removeProgressBar();
-                            showErrorSnackbar(view);
-                        }
-                    }
-
-                    private void removeProgressBar() {
-                        mediaPlayer.release();
-                        viewRunningPosition = -1;
-                        notifyItemChanged(position);
-                    }
-
-                    private void showErrorSnackbar(View view) {
-                        if (Utils.isNetworkAvailable(view.getContext())) {
-                            Snackbar.make(root, R.string.all_something_went_wrong, Snackbar.LENGTH_SHORT).show();
-                        } else {
-                            Snackbar.make(root, R.string.all_error_internet, Snackbar.LENGTH_SHORT).show();
-                        }
-                    }
-                });
-                if (viewModel.userSubscription()) {
-                    rootView.setOnLongClickListener(new View.OnLongClickListener() {
-                        @Override
-                        public boolean onLongClick(final View view) {
-
-                            AlertDialog.Builder builder = new AlertDialog.Builder(view.getContext());
-
-                            DialogResponseBinding binding = DataBindingUtil.inflate(inflater, R.layout.dialog_response, null, false);
-                            binding.setModel(model);
-                            binding.setViewModel(viewModel);
-                            builder.setView(binding.getRoot());
-
-                            AlertDialog dialog = builder.create();
-                            dialog.getWindow().getAttributes().windowAnimations = R.style.DialogTheme;
-                            binding.setDialog(dialog);
-                            dialog.show();
-                            return true;
-                        }
-                    });
-                }
+                linearLayout.addView(imageView);
+                counter++;
             }
         }
 
-        private void clear() {
-            tv_item_response.setText("...");
+        void clear() {
+
         }
     }
 }

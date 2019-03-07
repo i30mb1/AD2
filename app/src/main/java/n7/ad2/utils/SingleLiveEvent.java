@@ -10,6 +10,8 @@ import android.support.annotation.Nullable;
 
 import java.util.concurrent.atomic.AtomicBoolean;
 
+import n7.ad2.heroes.full.ResponseModel;
+
 /**
  * A lifecycle-aware observable that sends only new updates after subscription, used for events like
  * navigation and Snackbar messages.

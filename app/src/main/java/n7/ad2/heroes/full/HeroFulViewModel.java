@@ -14,6 +14,7 @@ import android.content.ContentValues;
 import android.content.Context;
 import android.content.pm.PackageManager;
 import android.databinding.ObservableBoolean;
+import android.media.MediaPlayer;
 import android.media.RingtoneManager;
 import android.net.ConnectivityManager;
 import android.net.NetworkInfo;
@@ -31,6 +32,7 @@ import org.json.JSONArray;
 import org.json.JSONObject;
 
 import java.io.File;
+import java.io.IOException;
 import java.util.LinkedList;
 import java.util.concurrent.Executor;
 import java.util.concurrent.Executors;
@@ -54,9 +56,11 @@ import static n7.ad2.splash.SplashViewModel.CURRENT_DAY_IN_APP;
 
 public class HeroFulViewModel extends AndroidViewModel {
 
+    public static final int FILE_EXIST = -7;
     public final SnackbarMessage grandSetting = new SnackbarMessage();
     public final SnackbarMessage grandPermission = new SnackbarMessage();
     public final SnackbarMessage showSnackBar = new SnackbarMessage();
+    private final Executor diskIO = Executors.newSingleThreadExecutor();
     public MutableLiveData<JSONObject> jsonObjectHeroFull = new MutableLiveData<>();
     public MutableLiveData<JSONArray> jsonArrayHeroAbilities = new MutableLiveData<>();
     public ObservableBoolean isGuideLoading = new ObservableBoolean(false);
@@ -66,15 +70,16 @@ public class HeroFulViewModel extends AndroidViewModel {
     public String heroName;
     public HeroesDao heroesDao;
     private Application application;
-    private Executor diskIO;
     private ResponsesStorage responsesStorage;
+    private ObservableBoolean lastPlaying;
+    private MediaPlayer mediaPlayer = new MediaPlayer();
 
     public HeroFulViewModel(@NonNull Application application, String heroCode, String heroName) {
         super(application);
         this.application = application;
         this.heroCode = heroCode;
         this.heroName = heroName;
-        diskIO = Executors.newSingleThreadExecutor();
+
         heroesDao = HeroesRoomDatabase.getDatabase(application, diskIO).heroesDao();
 
         loadHeroDescription(application.getString(R.string.language_resource));
@@ -125,7 +130,6 @@ public class HeroFulViewModel extends AndroidViewModel {
         });
     }
 
-
     public void loadResponses(final String language) {
         switch (language) {
 //            case "zh":
@@ -174,7 +178,7 @@ public class HeroFulViewModel extends AndroidViewModel {
         });
     }
 
-    public LiveData<PagedList<ResponseModel>> getResponsesPagedList(String search) {
+    public LiveData<PagedList<Response>> getResponsesPagedList(String search) {
         // DataSource это посредник между PagedList и Storage
         // PositionalResponsesDataSource dataSource = new PositionalResponsesDataSource(responsesStorage);
 
@@ -186,7 +190,7 @@ public class HeroFulViewModel extends AndroidViewModel {
         // PagedList обёртка над List он содержит данные, умеет отдавать их а также подгружает новые
         // PagedList<ResponseModel> pagedList = new PagedList.Builder<>(dataSource,config).build();
         // обёртка над PagedList чтобы всё это происходило в бэкграунд потоке
-        LiveData<PagedList<ResponseModel>> pagedListLiveData = new LivePagedListBuilder<>(sourceFactory, config)
+        LiveData<PagedList<Response>> pagedListLiveData = new LivePagedListBuilder<>(sourceFactory, config)
 //                .setInitialLoadKey(initialKey)
                 .build();
         return pagedListLiveData;
@@ -194,11 +198,7 @@ public class HeroFulViewModel extends AndroidViewModel {
 
     public boolean userSubscription() {
         boolean subscription = PreferenceManager.getDefaultSharedPreferences(application).getBoolean(SUBSCRIPTION_PREF, false);
-        if (isNetworkAvailable()) {
-            return subscription;
-        } else {
-            return true;
-        }
+        return subscription;
     }
 
     private boolean isNetworkAvailable() {
@@ -234,11 +234,66 @@ public class HeroFulViewModel extends AndroidViewModel {
         return true;
     }
 
-    public void downloadResponse(ResponseModel model, AlertDialog dialog) {
-        if (Utils.isNetworkAvailable(application)) {
-            File file = new File(application.getExternalFilesDir(Environment.DIRECTORY_RINGTONES) + File.separator + heroName + File.separator + model.getTitle().replace("?", "") + ".mp3");
+    public void startPlay(final ResponseModel model) {
+        try {
+            if (lastPlaying != null) {
+                lastPlaying.set(false);
+            }
+            model.playing.set(true);
+            if (mediaPlayer != null) {
+                mediaPlayer.reset();
+                mediaPlayer.release();
+            }
+            mediaPlayer = new MediaPlayer();
+            lastPlaying = model.playing;
+            model.playing.set(true);
+
+            File file = new File(application.getExternalFilesDir(Environment.DIRECTORY_RINGTONES) + File.separator + heroCode + File.separator + model.getTitleForFolder());
             if (file.exists()) {
-                showSnackBar.postValue(-7);
+                mediaPlayer.setDataSource(file.getPath());
+            } else {
+                mediaPlayer.setDataSource(model.getHref());
+            }
+            mediaPlayer.prepareAsync();
+            mediaPlayer.setOnPreparedListener(new MediaPlayer.OnPreparedListener() {
+                @Override
+                public void onPrepared(MediaPlayer mp) {
+                    mediaPlayer.start();
+                }
+            });
+            mediaPlayer.setOnCompletionListener(new MediaPlayer.OnCompletionListener() {
+                @Override
+                public void onCompletion(MediaPlayer mp) {
+                    model.playing.set(false);
+                }
+            });
+            mediaPlayer.setOnErrorListener(new MediaPlayer.OnErrorListener() {
+                @Override
+                public boolean onError(MediaPlayer mp, int what, int extra) {
+                    model.playing.set(false);
+                    showErrorSnackbar();
+                    return true;
+                }
+            });
+
+        } catch (IOException e) {
+            model.playing.set(false);
+        }
+    }
+
+    private void showErrorSnackbar() {
+        if (isNetworkAvailable()) {
+            showSnackBar.postValue(R.string.all_something_went_wrong);
+        } else {
+            showSnackBar.postValue(R.string.all_error_internet);
+        }
+    }
+
+    public void downloadResponse(ResponseModel model, AlertDialog dialog) {
+        if (isNetworkAvailable()) {
+            File file = new File(application.getExternalFilesDir(Environment.DIRECTORY_RINGTONES) + File.separator + heroCode + File.separator + model.getTitleForFolder());
+            if (file.exists()) {
+                showSnackBar.postValue(FILE_EXIST);
             } else {
                 DownloadManager manager = (DownloadManager) application.getSystemService(Context.DOWNLOAD_SERVICE);
                 if (manager != null) {
@@ -246,7 +301,7 @@ public class HeroFulViewModel extends AndroidViewModel {
                             .setDescription(heroName)
                             .setTitle(model.getTitle())
                             .setNotificationVisibility(DownloadManager.Request.VISIBILITY_VISIBLE_NOTIFY_COMPLETED)
-                            .setDestinationInExternalFilesDir(application, Environment.DIRECTORY_RINGTONES, heroName + File.separator + model.getTitle().replace("?", "") + ".mp3")
+                            .setDestinationInExternalFilesDir(application, Environment.DIRECTORY_RINGTONES, heroCode + File.separator + model.getTitleForFolder())
                     );
                 }
             }
@@ -256,9 +311,9 @@ public class HeroFulViewModel extends AndroidViewModel {
         dialog.cancel();
     }
 
-    public void setOnRingtone(ResponseModel model,AlertDialog dialog) {
+    public void setOnRingtone(ResponseModel model, AlertDialog dialog) {
         if (enableWriteSetting() && checkPermission()) {
-            File file = new File(application.getExternalFilesDir(Environment.DIRECTORY_RINGTONES) + File.separator + heroName + File.separator + model.getTitle().replace("?", "") + ".mp3");
+            File file = new File(application.getExternalFilesDir(Environment.DIRECTORY_RINGTONES) + File.separator + heroCode + File.separator + model.getTitleForFolder());
             if (file.exists()) {
                 ContentValues values = new ContentValues();
                 values.put(MediaStore.MediaColumns.DATA, file.getAbsolutePath());

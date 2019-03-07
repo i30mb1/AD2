@@ -32,12 +32,6 @@ public class Utils {
         return json;
     }
 
-    public static boolean isNetworkAvailable(Context context) {
-        ConnectivityManager cm = (ConnectivityManager) context.getSystemService(Context.CONNECTIVITY_SERVICE);
-        NetworkInfo networkInfo = cm.getActiveNetworkInfo();
-        return networkInfo != null && networkInfo.isConnected();
-    }
-
     public static Bitmap getBitmapFromAssets(Context context, String filePath) {
         AssetManager assetManager = context.getAssets();
         Bitmap bitmap = null;

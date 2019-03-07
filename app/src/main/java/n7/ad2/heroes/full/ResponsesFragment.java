@@ -164,16 +164,16 @@ public class ResponsesFragment extends Fragment implements SearchView.OnQueryTex
         binding.rvFragmentHeroResponses.setHasFixedSize(true);
         linearLayoutManager = new LinearLayoutManager(getContext(), LinearLayoutManager.VERTICAL, false);
         binding.rvFragmentHeroResponses.setLayoutManager(linearLayoutManager);
-        responsesPagedListAdapter = new ResponsesPagedListAdapter(binding.getRoot(), viewModel);
+        responsesPagedListAdapter = new ResponsesPagedListAdapter(viewModel);
         binding.rvFragmentHeroResponses.addItemDecoration(new StickyHeaderDecorator(binding.rvFragmentHeroResponses, responsesPagedListAdapter));
         binding.rvFragmentHeroResponses.setAdapter(responsesPagedListAdapter);
     }
 
     private void getResponses() {
-        viewModel.getResponsesPagedList("").observe(this, new Observer<PagedList<ResponseModel>>() {
+        viewModel.getResponsesPagedList("").observe(this, new Observer<PagedList<Response>>() {
             @Override
-            public void onChanged(@Nullable PagedList<ResponseModel> responseModels) {
-                responsesPagedListAdapter.submitList(responseModels);
+            public void onChanged(@Nullable PagedList<Response> responses) {
+                responsesPagedListAdapter.submitList(responses);
             }
         });
     }
@@ -185,10 +185,10 @@ public class ResponsesFragment extends Fragment implements SearchView.OnQueryTex
 
     @Override
     public boolean onQueryTextChange(String newText) {
-        viewModel.getResponsesPagedList(newText).observe(this, new Observer<PagedList<ResponseModel>>() {
+        viewModel.getResponsesPagedList(newText).observe(this, new Observer<PagedList<Response>>() {
             @Override
-            public void onChanged(@Nullable PagedList<ResponseModel> responseModels) {
-                responsesPagedListAdapter.submitList(responseModels);
+            public void onChanged(@Nullable PagedList<Response> responses) {
+                responsesPagedListAdapter.submitList(responses);
             }
         });
         return true;

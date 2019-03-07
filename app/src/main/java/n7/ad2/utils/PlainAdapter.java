@@ -6,6 +6,7 @@ import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
 import android.view.ViewGroup;
 
+import java.util.ArrayList;
 import java.util.LinkedList;
 
 import n7.ad2.R;
@@ -14,7 +15,7 @@ import n7.ad2.databinding.ItemListPlainBinding;
 public class PlainAdapter extends RecyclerView.Adapter<PlainAdapter.Holder> {
 
     private LayoutInflater inflater;
-    private LinkedList<String> list = new LinkedList<>();
+    private ArrayList<String> list = new ArrayList<>(100);
 
     @Override
     public void onBindViewHolder(@NonNull Holder holder, int position) {

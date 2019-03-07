@@ -28,6 +28,20 @@ import n7.ad2.utils.BaseActivity;
 import n7.ad2.utils.PlainAdapter;
 import n7.ad2.utils.UnscrollableLinearLayoutManager;
 
+/**
+ *
+ * Dear Programmer:
+ * When i wrote this program, only god an i knew how it worked.
+ * Now, only God knows it!
+ *
+ * Therefore, if you are trying to optimize this routine and
+ * it fails (most surely), please increase this counter
+ * as a warning for the next person:
+ *
+ * total_hours_wasted_here: 569
+ *
+ */
+
 public class SplashActivity extends BaseActivity {
 
     public static final long ANIMATION_DURATION = 300L;

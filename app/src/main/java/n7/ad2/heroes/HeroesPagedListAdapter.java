@@ -44,10 +44,11 @@ public class HeroesPagedListAdapter extends PagedListAdapter<HeroModel, HeroesPa
     @Override
     public void onBindViewHolder(@NonNull ViewHolder holder, int position) {
         HeroModel hero = getItem(position);
-        if (hero != null)
+        if (hero != null) {
             holder.bindTo(hero);
-        else
+        } else {
             holder.clear();
+        }
     }
 
     class ViewHolder extends RecyclerView.ViewHolder {

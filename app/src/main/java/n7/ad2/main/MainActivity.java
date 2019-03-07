@@ -8,6 +8,7 @@ import android.content.Context;
 import android.content.DialogInterface;
 import android.content.Intent;
 import android.content.IntentFilter;
+import android.content.SharedPreferences;
 import android.databinding.DataBindingUtil;
 import android.databinding.ObservableBoolean;
 import android.databinding.ObservableInt;
@@ -74,10 +75,11 @@ import static n7.ad2.setting.SettingActivity.SUBSCRIPTION_PREF;
 import static n7.ad2.splash.SplashViewModel.CURRENT_DAY_IN_APP;
 import static n7.ad2.splash.SplashViewModel.FREE_SUBSCRIPTION_DAYS;
 
-public class MainActivity extends BaseActivity {
+public class MainActivity extends BaseActivity implements SharedPreferences.OnSharedPreferenceChangeListener {
 
     public static final int COUNTER_DIALOG_RATE = 10;
     public static final int COUNTER_DIALOG_DONATE = 13;
+    public static final String FREE_SUBSCRIPTION_COUNTER = "FREE_SUBSCRIPTION_COUNTER";
 
     public static final String FIREBASE_DIALOG_DONATE_SAW = "DIALOG_DONATE_SAW";
     public static final String FIREBASE_DIALOG_PRE_DONATE_SAW = "DIALOG_PRE_DONATE_SAW";
@@ -97,6 +99,7 @@ public class MainActivity extends BaseActivity {
     private static final String DIALOG_PRE_DONATE_LAST_DAY = "DIALOG_PRE_DONATE_LAST_DAY";
     public ObservableInt observableLastItem = new ObservableInt(1);
     public ObservableBoolean freeSubscriptionButtonVisibility = new ObservableBoolean(false);
+    public ObservableInt freeSubscriptionCounter = new ObservableInt(0);
     private int timeCounter = -1;
     private boolean doubleBackToExitPressedOnce = false;
     private ConstraintSet constraintSetHidden = new ConstraintSet();
@@ -146,10 +149,18 @@ public class MainActivity extends BaseActivity {
 
     }
 
-    public void showVideoAD(View view) {
-        int lastDayVideoAD = PreferenceManager.getDefaultSharedPreferences(this).getInt(DIALOG_VIDEO_AD_SAW, 0);
+    public void activateSubscription(View view) {
+        if (freeSubscriptionCounter.get() <= 0) {
+            Snackbar.make(bindingActivity.getRoot(), "you have not free usage", Snackbar.LENGTH_SHORT).show();
+        } else {
+            activate10MinSubscription();
+        }
+    }
 
-        if (lastDayVideoAD == currentDay) {
+    public void showVideoAD(View view) {
+        int lastDayTipsForVideoAD = PreferenceManager.getDefaultSharedPreferences(this).getInt(DIALOG_VIDEO_AD_SAW, 0);
+
+        if (lastDayTipsForVideoAD == currentDay) {
             if (rewardedVideoAd != null) rewardedVideoAd.show();
         } else {
             showDialogForVideoAD();
@@ -228,11 +239,7 @@ public class MainActivity extends BaseActivity {
 
             @Override
             public void onRewarded(RewardItem rewardItem) {
-                PreferenceManager.getDefaultSharedPreferences(MainActivity.this).edit().putBoolean(SUBSCRIPTION_PREF, true).apply();
-                log("free_subscription = +10 min");
-                OneTimeWorkRequest worker = new OneTimeWorkRequest.Builder(ADRewardWorker.class)
-                        .setInitialDelay(rewardItem.getAmount(), TimeUnit.MINUTES).build();
-                WorkManager.getInstance().enqueue(worker);
+                rewardUserWith10MinSubscription();
             }
 
             @Override
@@ -253,9 +260,25 @@ public class MainActivity extends BaseActivity {
         loadVideoAD();
     }
 
+    private void activate10MinSubscription() {
+        PreferenceManager.getDefaultSharedPreferences(MainActivity.this).edit().putBoolean(SUBSCRIPTION_PREF, true).apply();
+        PreferenceManager.getDefaultSharedPreferences(MainActivity.this).edit().putInt(FREE_SUBSCRIPTION_COUNTER, freeSubscriptionCounter.get() - 1).apply();
+        log("free_subscription_-1_usage");
+        log("free_subscription_+10_min");
+        OneTimeWorkRequest worker = new OneTimeWorkRequest.Builder(ADRewardWorker.class)
+                .setInitialDelay(10, TimeUnit.MINUTES).build();
+        WorkManager.getInstance().enqueue(worker);
+    }
+
+    private void rewardUserWith10MinSubscription() {
+        PreferenceManager.getDefaultSharedPreferences(MainActivity.this).edit().putInt(FREE_SUBSCRIPTION_COUNTER, freeSubscriptionCounter.get() + 1).apply();
+        log("free_subscription_+1_usage");
+    }
+
     private void loadVideoAD() {
         if (rewardedVideoAd != null)
-            rewardedVideoAd.loadAd(ADMOB_ID, new AdRequest.Builder().build());
+            rewardedVideoAd.loadAd(ADMOB_ID_FAKE, new AdRequest.Builder().build());
+        //todo revert after testing
     }
 
     private void setupInterstitialAD() {
@@ -543,7 +566,7 @@ public class MainActivity extends BaseActivity {
                 .withRootViewScale(0.65f)
                 .withRootViewElevation(8)
                 .withRootViewYTranslation(0)
-                .withContentClickableWhenMenuOpened(true)
+                .withContentClickableWhenMenuOpened(false)
                 .addDragStateListener(new DragStateListener() {
                     @Override
                     public void onDragStart() {
@@ -621,4 +644,11 @@ public class MainActivity extends BaseActivity {
         }, MILLIS_FOR_EXIT);
     }
 
+    @Override
+    public void onSharedPreferenceChanged(SharedPreferences sharedPreferences, String key) {
+        if (key.equals(FREE_SUBSCRIPTION_COUNTER)) {
+            int value = sharedPreferences.getInt(FREE_SUBSCRIPTION_COUNTER, 0);
+            freeSubscriptionCounter.set(value);
+        }
+    }
 }
