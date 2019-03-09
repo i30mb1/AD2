@@ -342,6 +342,7 @@ public class MainActivity extends BaseActivity {
 
         DialogUpdateBinding binding = DataBindingUtil.inflate(getLayoutInflater(), R.layout.dialog_update, null, false);
         builder.setView(binding.getRoot());
+        binding.setActivity(this);
 
         AlertDialog dialog = builder.create();
         dialog.getWindow().getAttributes().windowAnimations = R.style.DialogTheme;
