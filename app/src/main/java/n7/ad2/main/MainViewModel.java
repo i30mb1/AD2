@@ -43,12 +43,12 @@ public class MainViewModel extends AndroidViewModel {
     public ObservableBoolean isUpdating = new ObservableBoolean(false);
     public ObservableInt scrollTo = new ObservableInt();
     private Application application;
-    private Executor diskIO;
+    public ObservableBoolean subscription = new ObservableBoolean(false);
+    private final static Executor diskIO  = Executors.newSingleThreadExecutor();
 
     public MainViewModel(@NonNull final Application application) {
         super(application);
         this.application = application;
-        diskIO = Executors.newSingleThreadExecutor();
 
         adapter = new PlainAdapter();
 

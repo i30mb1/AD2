@@ -8,7 +8,6 @@ import android.content.Context;
 import android.content.DialogInterface;
 import android.content.Intent;
 import android.content.IntentFilter;
-import android.content.SharedPreferences;
 import android.databinding.DataBindingUtil;
 import android.databinding.ObservableBoolean;
 import android.databinding.ObservableInt;
@@ -75,7 +74,7 @@ import static n7.ad2.setting.SettingActivity.SUBSCRIPTION_PREF;
 import static n7.ad2.splash.SplashViewModel.CURRENT_DAY_IN_APP;
 import static n7.ad2.splash.SplashViewModel.FREE_SUBSCRIPTION_DAYS;
 
-public class MainActivity extends BaseActivity implements SharedPreferences.OnSharedPreferenceChangeListener {
+public class MainActivity extends BaseActivity {
 
     public static final int COUNTER_DIALOG_RATE = 10;
     public static final int COUNTER_DIALOG_DONATE = 13;
@@ -98,7 +97,7 @@ public class MainActivity extends BaseActivity implements SharedPreferences.OnSh
     public static final int ACTION_BEFORE_SHOW_ADVERTISEMENT = 4;
     private static final String DIALOG_PRE_DONATE_LAST_DAY = "DIALOG_PRE_DONATE_LAST_DAY";
     public ObservableInt observableLastItem = new ObservableInt(1);
-    public ObservableBoolean freeSubscriptionButtonVisibility = new ObservableBoolean(false);
+    public ObservableBoolean rewardedVideoLoaded = new ObservableBoolean(false);
     public ObservableInt freeSubscriptionCounter = new ObservableInt(0);
     private int timeCounter = -1;
     private boolean doubleBackToExitPressedOnce = false;
@@ -117,9 +116,8 @@ public class MainActivity extends BaseActivity implements SharedPreferences.OnSh
     };
     private boolean shouldUpdateFromMarket;
     private MainViewModel viewModel;
-    private SlidingRootNav drawer;
     private RewardedVideoAd rewardedVideoAd;
-    private boolean subscription;
+    public ObservableBoolean subscription = new ObservableBoolean(false);
     private int currentDay;
     private InterstitialAd interstitialAd;
 
@@ -127,6 +125,7 @@ public class MainActivity extends BaseActivity implements SharedPreferences.OnSh
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
 
+        updateFreeSubscriptionCounter();
         currentDay = PreferenceManager.getDefaultSharedPreferences(this).getInt(CURRENT_DAY_IN_APP, 0);
         viewModel = ViewModelProviders.of(this).get(MainViewModel.class);
 
@@ -149,11 +148,16 @@ public class MainActivity extends BaseActivity implements SharedPreferences.OnSh
 
     }
 
+    private void updateFreeSubscriptionCounter() {
+        freeSubscriptionCounter.set(PreferenceManager.getDefaultSharedPreferences(this).getInt(FREE_SUBSCRIPTION_COUNTER,0));
+    }
+
     public void activateSubscription(View view) {
         if (freeSubscriptionCounter.get() <= 0) {
             Snackbar.make(bindingActivity.getRoot(), "you have not free usage", Snackbar.LENGTH_SHORT).show();
+            freeSubscriptionCounter.set(0);
         } else {
-            activate10MinSubscription();
+            activateFreeSubscription();
         }
     }
 
@@ -163,12 +167,12 @@ public class MainActivity extends BaseActivity implements SharedPreferences.OnSh
         if (lastDayTipsForVideoAD == currentDay) {
             if (rewardedVideoAd != null) rewardedVideoAd.show();
         } else {
-            showDialogForVideoAD();
+            showDialogBeforeVideoAD();
         }
     }
 
     @SuppressWarnings("ConstantConditions")
-    private void showDialogForVideoAD() {
+    private void showDialogBeforeVideoAD() {
         final AlertDialog.Builder builder = new AlertDialog.Builder(this);
         DialogVideoAdBinding binding = DataBindingUtil.inflate(getLayoutInflater(), R.layout.dialog_video_ad, null, false);
         builder.setView(binding.getRoot());
@@ -188,30 +192,15 @@ public class MainActivity extends BaseActivity implements SharedPreferences.OnSh
         PreferenceManager.getDefaultSharedPreferences(this).edit().putInt(DIALOG_VIDEO_AD_SAW, currentDay).apply();
     }
 
-    public void setSubscriptionButton() {
-        subscription = PreferenceManager.getDefaultSharedPreferences(MainActivity.this).getBoolean(SUBSCRIPTION_PREF, false);
-        if (subscription) {
-            freeSubscriptionButtonVisibility.set(false);
-            return;
-        }
-        if (rewardedVideoAd != null && rewardedVideoAd.isLoaded()) {
-            freeSubscriptionButtonVisibility.set(true);
-        } else {
-            freeSubscriptionButtonVisibility.set(false);
-            loadVideoAD();
-        }
-    }
-
     public void setupAD() {
-        subscription = PreferenceManager.getDefaultSharedPreferences(MainActivity.this).getBoolean(SUBSCRIPTION_PREF, false);
-        if (subscription) {
+        subscription.set(PreferenceManager.getDefaultSharedPreferences(MainActivity.this).getBoolean(SUBSCRIPTION_PREF, false));
+        if (subscription.get()) {
             log("AD_disabled");
-            return;
+        } else {
+            log("AD_enabled");
+            setupVideoAD();
+            setupInterstitialAD();
         }
-
-        log("AD_enabled");
-        setupVideoAD();
-        setupInterstitialAD();
     }
 
     private void setupVideoAD() {
@@ -219,7 +208,8 @@ public class MainActivity extends BaseActivity implements SharedPreferences.OnSh
         rewardedVideoAd.setRewardedVideoAdListener(new RewardedVideoAdListener() {
             @Override
             public void onRewardedVideoAdLoaded() {
-                setSubscriptionButton();
+                log("rewarded_video_loaded");
+                rewardedVideoLoaded.set(true);
             }
 
             @Override
@@ -229,17 +219,20 @@ public class MainActivity extends BaseActivity implements SharedPreferences.OnSh
 
             @Override
             public void onRewardedVideoStarted() {
-
+                rewardedVideoLoaded.set(false);
             }
 
             @Override
             public void onRewardedVideoAdClosed() {
-//                loadVideoAD();
+                rewardedVideoLoaded.set(false);
+                loadVideoAD();
             }
 
             @Override
             public void onRewarded(RewardItem rewardItem) {
-                rewardUserWith10MinSubscription();
+                log("free_subscription_+1_usage");
+                plusOneFreeSubscriptionCounter();
+                updateFreeSubscriptionCounter();
             }
 
             @Override
@@ -260,9 +253,11 @@ public class MainActivity extends BaseActivity implements SharedPreferences.OnSh
         loadVideoAD();
     }
 
-    private void activate10MinSubscription() {
+    private void activateFreeSubscription() {
+        freeSubscriptionCounter.set(freeSubscriptionCounter.get() - 1);
+        subscription.set(true);
         PreferenceManager.getDefaultSharedPreferences(MainActivity.this).edit().putBoolean(SUBSCRIPTION_PREF, true).apply();
-        PreferenceManager.getDefaultSharedPreferences(MainActivity.this).edit().putInt(FREE_SUBSCRIPTION_COUNTER, freeSubscriptionCounter.get() - 1).apply();
+        PreferenceManager.getDefaultSharedPreferences(MainActivity.this).edit().putInt(FREE_SUBSCRIPTION_COUNTER, freeSubscriptionCounter.get()).apply();
         log("free_subscription_-1_usage");
         log("free_subscription_+10_min");
         OneTimeWorkRequest worker = new OneTimeWorkRequest.Builder(ADRewardWorker.class)
@@ -270,20 +265,19 @@ public class MainActivity extends BaseActivity implements SharedPreferences.OnSh
         WorkManager.getInstance().enqueue(worker);
     }
 
-    private void rewardUserWith10MinSubscription() {
-        PreferenceManager.getDefaultSharedPreferences(MainActivity.this).edit().putInt(FREE_SUBSCRIPTION_COUNTER, freeSubscriptionCounter.get() + 1).apply();
-        log("free_subscription_+1_usage");
+    private void plusOneFreeSubscriptionCounter() {
+        PreferenceManager.getDefaultSharedPreferences(MainActivity.this).edit().putInt(FREE_SUBSCRIPTION_COUNTER, (freeSubscriptionCounter.get() + 1)).apply();
     }
 
     private void loadVideoAD() {
-        if (rewardedVideoAd != null)
+        if (rewardedVideoAd != null && !rewardedVideoAd.isLoaded()) {
             rewardedVideoAd.loadAd(ADMOB_ID_FAKE, new AdRequest.Builder().build());
-        //todo revert after testing
+        }
     }
 
     private void setupInterstitialAD() {
         interstitialAd = new InterstitialAd(this);
-        interstitialAd.setAdUnitId(ADMOB_ID_BACK);
+        interstitialAd.setAdUnitId(ADMOB_ID_BACK_FAKE);
         interstitialAd.setAdListener(new AdListener() {
             @Override
             public void onAdClosed() {
@@ -295,11 +289,13 @@ public class MainActivity extends BaseActivity implements SharedPreferences.OnSh
     }
 
     private void loadInterstitialAD() {
-        if (interstitialAd != null) interstitialAd.loadAd(new AdRequest.Builder().build());
+        if (interstitialAd != null) {
+            interstitialAd.loadAd(new AdRequest.Builder().build());
+        }
     }
 
     private void ShowInterstitialAd() {
-        if (!subscription) {
+        if (!subscription.get()) {
             if (interstitialAd != null && interstitialAd.isLoaded()) {
                 interstitialAd.show();
             }
@@ -429,7 +425,6 @@ public class MainActivity extends BaseActivity implements SharedPreferences.OnSh
         } else {
             bindingActivity.getRoot().animate().alpha(0.0f).setDuration(500).start();
         }
-        setSubscriptionButton();
         return true;
     }
 
@@ -470,7 +465,7 @@ public class MainActivity extends BaseActivity implements SharedPreferences.OnSh
 
     @SuppressWarnings("ConstantConditions")
     void showPreDialogDonate() {
-        if (!subscription) {
+        if (!subscription.get()) {
             int lastDayDialog = PreferenceManager.getDefaultSharedPreferences(this).getInt(DIALOG_PRE_DONATE_LAST_DAY, 0);
             if (currentDay > lastDayDialog) {
                 final AlertDialog.Builder builder = new AlertDialog.Builder(this);
@@ -501,7 +496,7 @@ public class MainActivity extends BaseActivity implements SharedPreferences.OnSh
     @SuppressWarnings("ConstantConditions")
     private void showDialogRate() {
         boolean showDialogRate = PreferenceManager.getDefaultSharedPreferences(this).getBoolean(DIALOG_RATE_SHOW, true);
-        if (showDialogRate && !subscription) {
+        if (showDialogRate && !subscription.get()) {
             final AlertDialog.Builder builder = new AlertDialog.Builder(this);
             DialogRateBinding binding = DataBindingUtil.inflate(getLayoutInflater(), R.layout.dialog_rate, null, false);
             binding.setActivity(this);
@@ -560,7 +555,7 @@ public class MainActivity extends BaseActivity implements SharedPreferences.OnSh
     }
 
     private void setupDrawer() {
-        drawer = new SlidingRootNavBuilder(this)
+        SlidingRootNav drawer = new SlidingRootNavBuilder(this)
                 .withToolbarMenuToggle(bindingActivity.toolbarActivityMain)
                 .withDragDistance(110)
                 .withRootViewScale(0.65f)
@@ -609,7 +604,6 @@ public class MainActivity extends BaseActivity implements SharedPreferences.OnSh
     protected void onResume() {
         if (rewardedVideoAd != null) rewardedVideoAd.resume(this);
         log("on_Resume");
-        setSubscriptionButton();
         incCountEnter();
         regReceiver();
         super.onResume();
@@ -644,11 +638,4 @@ public class MainActivity extends BaseActivity implements SharedPreferences.OnSh
         }, MILLIS_FOR_EXIT);
     }
 
-    @Override
-    public void onSharedPreferenceChanged(SharedPreferences sharedPreferences, String key) {
-        if (key.equals(FREE_SUBSCRIPTION_COUNTER)) {
-            int value = sharedPreferences.getInt(FREE_SUBSCRIPTION_COUNTER, 0);
-            freeSubscriptionCounter.set(value);
-        }
-    }
 }

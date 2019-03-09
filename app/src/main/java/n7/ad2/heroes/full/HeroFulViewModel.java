@@ -60,7 +60,7 @@ public class HeroFulViewModel extends AndroidViewModel {
     public final SnackbarMessage grandSetting = new SnackbarMessage();
     public final SnackbarMessage grandPermission = new SnackbarMessage();
     public final SnackbarMessage showSnackBar = new SnackbarMessage();
-    private final Executor diskIO = Executors.newSingleThreadExecutor();
+    private final static Executor diskIO = Executors.newSingleThreadExecutor();
     public MutableLiveData<JSONObject> jsonObjectHeroFull = new MutableLiveData<>();
     public MutableLiveData<JSONArray> jsonArrayHeroAbilities = new MutableLiveData<>();
     public ObservableBoolean isGuideLoading = new ObservableBoolean(false);
