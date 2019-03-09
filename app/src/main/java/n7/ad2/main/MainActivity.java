@@ -366,6 +366,7 @@ public class MainActivity extends BaseActivity {
     protected void onStart() {
         super.onStart();
         log("on_Start");
+
     }
 
     private void setupRecyclerView() {
