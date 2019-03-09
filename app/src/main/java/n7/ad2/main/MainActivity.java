@@ -340,13 +340,19 @@ public class MainActivity extends BaseActivity {
     private void showDialogUpdate() {
         AlertDialog.Builder builder = new AlertDialog.Builder(this);
 
-        DialogUpdateBinding binding = DataBindingUtil.inflate(getLayoutInflater(), R.layout.dialog_update, null, false);
+        final DialogUpdateBinding binding = DataBindingUtil.inflate(getLayoutInflater(), R.layout.dialog_update, null, false);
         builder.setView(binding.getRoot());
-        binding.setActivity(this);
 
-        AlertDialog dialog = builder.create();
+        final AlertDialog dialog = builder.create();
         dialog.getWindow().getAttributes().windowAnimations = R.style.DialogTheme;
         dialog.show();
+        binding.bDialogUpdate.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                dialog.dismiss();
+                loadNewVersion();
+            }
+        });
 
         shouldUpdateFromMarket = PreferenceManager.getDefaultSharedPreferences(this).getBoolean(SHOULD_UPDATE_FROM_MARKET, true);
         dialog.setOnCancelListener(new DialogInterface.OnCancelListener() {
