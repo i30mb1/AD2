@@ -20,6 +20,7 @@ import android.support.annotation.Nullable;
 import android.support.annotation.StringRes;
 import android.support.constraint.ConstraintLayout;
 import android.support.constraint.ConstraintSet;
+import android.support.design.widget.BottomSheetDialog;
 import android.support.design.widget.Snackbar;
 import android.support.transition.ChangeBounds;
 import android.support.transition.TransitionManager;
@@ -76,8 +77,8 @@ import static n7.ad2.splash.SplashViewModel.FREE_SUBSCRIPTION_DAYS;
 
 public class MainActivity extends BaseActivity {
 
-    public static final int COUNTER_DIALOG_RATE = 10;
-    public static final int COUNTER_DIALOG_DONATE = 13;
+    public static final int COUNTER_DIALOG_RATE = 11;
+    public static final int COUNTER_DIALOG_DONATE = 18;
     public static final String FREE_SUBSCRIPTION_COUNTER = "FREE_SUBSCRIPTION_COUNTER";
 
     public static final String FIREBASE_DIALOG_DONATE_SAW = "DIALOG_DONATE_SAW";
@@ -154,7 +155,7 @@ public class MainActivity extends BaseActivity {
 
     public void activateSubscription(View view) {
         if (freeSubscriptionCounter.get() <= 0) {
-            Snackbar.make(bindingActivity.getRoot(), "you have not free usage", Snackbar.LENGTH_SHORT).show();
+            Snackbar.make(bindingActivity.getRoot(), R.string.zero_free_count_subscription, Snackbar.LENGTH_SHORT).show();
             freeSubscriptionCounter.set(0);
         } else {
             activateFreeSubscription();
@@ -173,22 +174,34 @@ public class MainActivity extends BaseActivity {
 
     @SuppressWarnings("ConstantConditions")
     private void showDialogBeforeVideoAD() {
-        final AlertDialog.Builder builder = new AlertDialog.Builder(this);
+//        final AlertDialog.Builder builder = new AlertDialog.Builder(this);
+//        DialogVideoAdBinding binding = DataBindingUtil.inflate(getLayoutInflater(), R.layout.dialog_video_ad, null, false);
+//        builder.setView(binding.getRoot());
+//
+//        final AlertDialog dialog = builder.create();
+//        dialog.getWindow().getAttributes().windowAnimations = R.style.DialogTheme;
+//        dialog.show();
+//
+//        binding.bDialogVideoAd.setOnClickListener(new View.OnClickListener() {
+//            @Override
+//            public void onClick(View v) {
+//                dialog.dismiss();
+//                showVideoAD(v);
+//            }
+//        });
+
+
+        final BottomSheetDialog bottomSheetDialog = new BottomSheetDialog(this);
         DialogVideoAdBinding binding = DataBindingUtil.inflate(getLayoutInflater(), R.layout.dialog_video_ad, null, false);
-        builder.setView(binding.getRoot());
-
-        final AlertDialog dialog = builder.create();
-        dialog.getWindow().getAttributes().windowAnimations = R.style.DialogTheme;
-        dialog.show();
-
+        bottomSheetDialog.setContentView(binding.getRoot());
         binding.bDialogVideoAd.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                dialog.dismiss();
+                bottomSheetDialog.dismiss();
                 showVideoAD(v);
             }
         });
-
+        bottomSheetDialog.show();
         PreferenceManager.getDefaultSharedPreferences(this).edit().putInt(DIALOG_VIDEO_AD_SAW, currentDay).apply();
     }
 
@@ -271,13 +284,13 @@ public class MainActivity extends BaseActivity {
 
     private void loadVideoAD() {
         if (rewardedVideoAd != null && !rewardedVideoAd.isLoaded()) {
-            rewardedVideoAd.loadAd(ADMOB_ID_FAKE, new AdRequest.Builder().build());
+            rewardedVideoAd.loadAd(ADMOB_ID, new AdRequest.Builder().build());
         }
     }
 
     private void setupInterstitialAD() {
         interstitialAd = new InterstitialAd(this);
-        interstitialAd.setAdUnitId(ADMOB_ID_BACK_FAKE);
+        interstitialAd.setAdUnitId(ADMOB_ID_BACK);
         interstitialAd.setAdListener(new AdListener() {
             @Override
             public void onAdClosed() {

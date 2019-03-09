@@ -26,10 +26,10 @@ class NewParse {
         String reHeroes[] = new String[]{"mars"};
 
         int count = 0;
-        for (String hero : reHeroes) {
+        for (String hero : loadHeroesFromFile()) {
             String counter = String.format(Locale.US, "% d/%d ", ++count, loadHeroesFromFile().size());
             loadResponses(hero, counter);
-            loadSpellsAndDescription(hero, counter);
+//            loadSpellsAndDescription(hero, counter);
         }
 
 //        loadZhItems(false);
@@ -816,7 +816,7 @@ class NewParse {
                 JSONObject jsonObjectResponse = new JSONObject();//создаём обьект {...} для одной реплики
                 for (Element child : children) {
                     if (child.tag().toString().equals("h2")) { //нашли имя секции, значит создаём обьект
-                        if (jsonObjectSection.size() != 0 & jsonObjectResponse.size() != 0)
+                        if (jsonObjectSection.size() == 2 & jsonObjectResponse.size() != 0)
                             jsonArrayHeroes.add(jsonObjectSection);//перед созданием новой секции сохраняем старую
                         jsonObjectSection = new JSONObject();
                         jsonArrayResponsesForSection = new JSONArray();

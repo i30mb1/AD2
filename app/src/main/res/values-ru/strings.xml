@@ -111,7 +111,7 @@
     <string name="fragment_game_G2">покажи мне свой APM</string>
     <string name="fragment_guide_lane">линия / %s</string>
     <string name="dialog_rate_ok">Хорошо</string>
-    <string name="dialog_video_ad_title">Просмотрите объявление, чтобы получить 10 минут премиума!</string>
+    <string name="dialog_video_ad_title">Просмотрите объявление, чтобы получить 1 использование премиума на 10 минут. Вы можете их застакать и использовать их когда нет интернет соединения!</string>
     <string name="game_you_win">ВЫ ПОБЕДИЛИ</string>
     <string name="game_you_lose">ВЫ ПРОИГРАЛИ</string>
     <string name="activity_game2p1_clicks">КЛИКИ</string>
@@ -119,5 +119,6 @@
     <string name="activity_game2p1_your_apm">твой апм</string>
     <string name="fragment_game_G3">хватает ли тебе денег?</string>
     <string name="fragment_guide_date">дата гайда / %s</string>
+    <string name="zero_free_count_subscription">у вас больше нет бесплатных использований подписки</string>
 
 </resources>

@@ -166,7 +166,7 @@
     <string name="fragment_game_G2">SHOW ME YOUR APM</string>
     <string name="activity_game1P1_second_remaining" translatable="false">%d</string>
     <string name="dialog_rate_ok">This suits me</string>
-    <string name="dialog_video_ad_title">View this ad to receive 10 minutes of subscription!</string>
+    <string name="dialog_video_ad_title">Browse through the ad to get 1 premium use for 10 minutes. You can stacking them and use them when there is no internet connection!</string>
     <string name="game_you_win">YOU WIN</string>
     <string name="game_you_lose">YOU LOSE</string>
     <string name="activity_game2p1_clicks">CLICKS</string>
@@ -177,5 +177,6 @@
     <string name="all_no" translatable="false">NO</string>
     <string name="all_dash" translatable="false">-</string>
     <string name="fragment_guide_date">guide date / %s</string>
+    <string name="zero_free_count_subscription">you no longer have free subscriptions</string>
 
 </resources>
