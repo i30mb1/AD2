@@ -29,7 +29,7 @@ class NewParse {
         for (String hero : loadHeroesFromFile()) {
             String counter = String.format(Locale.US, "% d/%d ", ++count, loadHeroesFromFile().size());
             loadResponses(hero, counter);
-//            loadSpellsAndDescription(hero, counter);
+            loadSpellsAndDescription(hero, counter);
         }
 
 //        loadZhItems(false);

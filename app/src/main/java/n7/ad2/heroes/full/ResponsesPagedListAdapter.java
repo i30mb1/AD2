@@ -33,13 +33,17 @@ public class ResponsesPagedListAdapter extends PagedListAdapter<Response, Recycl
 
         @Override
         public boolean areContentsTheSame(@NonNull Response oldItem, @NonNull Response newItem) {
-            switch (oldItem.getType()) {
-                case Response.TYPE_HEADER:
-                    return ((HeaderModel) oldItem).getTitle().equals(((HeaderModel) newItem).getTitle());
-                case Response.TYPE_RESPONSE:
-                    return ((ResponseModel) oldItem).getTitle().equals(((ResponseModel) newItem).getTitle());
-                default:
-                    return false;
+            if (oldItem.getType() == newItem.getType()) {
+                switch (oldItem.getType()) {
+                    case Response.TYPE_HEADER:
+                        return ((HeaderModel) oldItem).getTitle().equals(((HeaderModel) newItem).getTitle());
+                    case Response.TYPE_RESPONSE:
+                        return ((ResponseModel) oldItem).getTitle().equals(((ResponseModel) newItem).getTitle());
+                    default:
+                        return false;
+                }
+            } else {
+                return false;
             }
         }
     };

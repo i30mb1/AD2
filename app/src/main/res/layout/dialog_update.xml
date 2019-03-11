@@ -65,6 +65,5 @@
             app:layout_constraintStart_toEndOf="@+id/red_line_dialog_update"
             app:layout_constraintTop_toBottomOf="@+id/tv_dialog_update_message" />
 
-
     </android.support.constraint.ConstraintLayout>
 </layout>
