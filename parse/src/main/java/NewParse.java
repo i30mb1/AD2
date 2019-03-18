@@ -28,13 +28,13 @@ class NewParse {
         int count = 0;
         for (String hero : loadHeroesFromFile()) {
             String counter = String.format(Locale.US, "% d/%d ", ++count, loadHeroesFromFile().size());
-            loadResponses(hero, counter);
+//            loadResponses(hero, counter);
             loadSpellsAndDescription(hero, counter);
         }
 
 //        loadZhItems(false);
-        loadRusItems(false);
-        loadEngItems(false);
+//        loadRusItems(false);
+//        loadEngItems(false);
     }
 
     private static void loadZhItems(boolean loadImage) {
@@ -957,7 +957,7 @@ class NewParse {
                 JSONObject jsonObject = new JSONObject();//создаём обьект для героя
                 JSONArray jsonArrayAbilities = new JSONArray();//ряды для способностей
                 JSONObject jsonObjectAbility = new JSONObject();//обьект для одной способности
-                jsonObject.put("desc", doc.getElementsByTag("p").get(0).text()); //кладём описание героя
+                jsonObject.put("desc", doc.getElementsByClass("mw-parser-output").get(0).child(2).text()); //кладём описание героя
                 Elements children = doc.getElementById("mw-content-text").child(0).children();
                 boolean findBio = false;
                 boolean findAbilities = false;
