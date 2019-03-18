@@ -91,7 +91,7 @@ public class NewsWorker extends Worker {
             getApplicationContext().sendBroadcast(new Intent(LOG_ON_RECEIVE).putExtra(LOG_ON_RECEIVE, "page_" + page + "_news_loaded"));
 
             return Result.success();
-        } catch (Exception e) {
+        } catch (Throwable e) {
             e.printStackTrace();
         }
         return Result.failure();

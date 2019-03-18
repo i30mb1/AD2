@@ -126,6 +126,7 @@ public class ResponsesPagedListAdapter extends PagedListAdapter<Response, Recycl
 
     @Override
     public boolean isHeader(int itemPosition) {
+        if (itemPosition < 0) return false;
         Response model = getItem(itemPosition);
         if (model != null) {
             return model.getType() == Response.TYPE_HEADER;

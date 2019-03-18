@@ -31,6 +31,16 @@
                 android:src="@mipmap/ic_launcher" />
 
             <TextView
+                android:id="@+id/private_policy"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:text="@string/private_policy"
+                android:textColor="?android:textColorSecondary"
+                android:textAllCaps="true"
+                android:textStyle="bold" />
+
+            <TextView
 
                 android:layout_width="match_parent"
                 android:textColor="?android:textColorSecondary"

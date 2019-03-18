@@ -2,13 +2,17 @@ package n7.ad2.setting;
 
 import android.animation.ArgbEvaluator;
 import android.animation.ValueAnimator;
+import android.content.DialogInterface;
 import android.databinding.DataBindingUtil;
 import android.media.MediaPlayer;
 import android.os.Bundle;
 import android.os.Handler;
 import android.preference.PreferenceManager;
 import android.support.design.widget.Snackbar;
+import android.support.v7.app.AlertDialog;
 import android.view.View;
+import android.webkit.WebView;
+import android.webkit.WebViewClient;
 
 import n7.ad2.R;
 import n7.ad2.databinding.ActivityLicenseBinding;
@@ -46,6 +50,36 @@ public class LicensesActivity extends BaseActivity {
                 return true;
             }
         });
+        binding.privatePolicy.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                callThisMethodWhenPrivacyButtonClicked();
+            }
+        });
+    }
+
+    private void callThisMethodWhenPrivacyButtonClicked() {
+        AlertDialog.Builder alert = new AlertDialog.Builder(this);
+        alert.setTitle("Title here");
+
+        WebView wv = new WebView(this);
+        wv.loadUrl("https://i30mb1.github.io");
+        wv.setWebViewClient(new WebViewClient() {
+            @Override
+            public boolean shouldOverrideUrlLoading(WebView view, String url) {
+                view.loadUrl(url);
+                return true;
+            }
+        });
+
+        alert.setView(wv);
+        alert.setNegativeButton("Close", new DialogInterface.OnClickListener() {
+            @Override
+            public void onClick(DialogInterface dialog, int id) {
+                dialog.dismiss();
+            }
+        });
+        alert.show();
     }
 
     private void startBlinking() {

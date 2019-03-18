@@ -95,7 +95,7 @@ public class TournamentsWorker extends Worker {
             gamesDao.setGames(gamesList);
             getApplicationContext().sendBroadcast(new Intent(LOG_ON_RECEIVE).putExtra(LOG_ON_RECEIVE, "page_" + page + "_loaded"));
             return Result.success();
-        } catch (Exception e) {
+        } catch (Throwable e) {
             GamesDao gamesDao = GamesRoomDatabase.getDatabase(getApplicationContext()).gamesDao();
             gamesDao.deleteAllUnfinished();
             getApplicationContext().sendBroadcast(new Intent(LOG_ON_RECEIVE).putExtra(LOG_ON_RECEIVE, "page_" + page + "_failed"));

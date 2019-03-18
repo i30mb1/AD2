@@ -33,8 +33,8 @@ class NewParse {
         }
 
 //        loadZhItems(false);
-//        loadRusItems(false);
-//        loadEngItems(false);
+        loadRusItems(false);
+        loadEngItems(false);
     }
 
     private static void loadZhItems(boolean loadImage) {

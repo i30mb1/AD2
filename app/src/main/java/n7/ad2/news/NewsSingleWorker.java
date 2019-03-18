@@ -64,7 +64,7 @@ public class NewsSingleWorker extends Worker {
             steamNewsDao.setContent(content, href);
 
             return Result.success();
-        } catch (IOException e) {
+        } catch (Throwable e) {
             e.printStackTrace();
         }
 
