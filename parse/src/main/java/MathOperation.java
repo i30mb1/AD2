@@ -1,5 +1,6 @@
-
 import java.util.ArrayList;
+import java.util.Arrays;
+import java.util.HashMap;
 import java.util.LinkedList;
 
 public class MathOperation {
@@ -29,5 +30,17 @@ public class MathOperation {
         }
         time_2 = System.currentTimeMillis();
         System.out.println("arrayList speed = " + (time_2 - time_1));
+
+        HashMap<Object, Object> objectObjectHashMap = new HashMap<>();
+
+        //        Преобразование массив в ArrayList
+        String[] stringArray = {"a", "b", "c", "d", "e"};
+        ArrayList<String> arrayList = new ArrayList<>(Arrays.asList(stringArray));
+        //        Преобразование ArrayList в массив
+        String[] stringArr = new String[arrayList.size()];
+        arrayList.toArray(stringArr);
+        //        Объединение элементов массива в строку
+        String j = String.join(", ", new String[]{"a", "b", "c"});
+        System.out.println(j);
     }
 }
