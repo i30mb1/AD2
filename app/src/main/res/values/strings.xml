@@ -15,11 +15,13 @@
     <string name="setting_log_key" translatable="false">setting_show_log_key</string>
     <string name="setting_news_key" translatable="false">setting_news_with_image_key</string>
     <string name="setting_about_key" translatable="false">pref_about_key</string>
+    <string name="setting_private_policy_key" translatable="false">setting_private_policy_key</string>
     <string name="setting_account_title">Display your account</string>
     <string name="setting_log_title">Panel with log-text</string>
     <string name="setting_log_summary">on main screen</string>
     <string name="setting_account_summary">Show your friends</string>
     <string name="setting_about_title" translatable="false">About Dota 2</string>
+    <string name="setting_private_policy_title" translatable="false">Private Policy</string>
     <string name="setting_high_quality_desc_on">On</string>
     <string name="setting_high_quality_desc_off">Off</string>
     <string name="setting_about_summary" translatable="false">v%1$s</string>
@@ -178,6 +180,6 @@
     <string name="all_dash" translatable="false">-</string>
     <string name="fragment_guide_date">guide date / %s</string>
     <string name="zero_free_count_subscription">you no longer have free subscriptions</string>
-    <string name="private_policy" translatable="false">private policy</string>
+    <string name="private_policy" translatable="false">- private policy -</string>
 
 </resources>

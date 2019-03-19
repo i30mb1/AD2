@@ -12,6 +12,8 @@ import android.support.annotation.Nullable;
 import android.support.v4.app.TaskStackBuilder;
 import android.support.v7.app.AlertDialog;
 import android.view.View;
+import android.webkit.WebView;
+import android.webkit.WebViewClient;
 import android.widget.TextView;
 
 import n7.ad2.BuildConfig;
@@ -69,6 +71,16 @@ public class SettingsFragment extends PreferenceFragment {
             }
         });
 
+        Preference privatePolicy = findPreference(getString(R.string.setting_private_policy_key));
+        privatePolicy.setOnPreferenceClickListener(new Preference.OnPreferenceClickListener() {
+            @Override
+            public boolean onPreferenceClick(Preference preference) {
+                callThisMethodWhenPrivacyButtonClicked();
+                return true;
+            }
+        });
+
+
         Preference aboutApp = findPreference(getString(R.string.setting_about_key));
         aboutApp.setSummary(getString(R.string.setting_about_summary, BuildConfig.VERSION_NAME));
         aboutApp.setOnPreferenceClickListener(new Preference.OnPreferenceClickListener() {
@@ -119,6 +131,30 @@ public class SettingsFragment extends PreferenceFragment {
                 return true;
             }
         });
+    }
+
+    private void callThisMethodWhenPrivacyButtonClicked() {
+        AlertDialog.Builder alert = new AlertDialog.Builder(getActivity());
+        alert.setTitle("Private Policy");
+
+        WebView wv = new WebView(getActivity());
+        wv.loadUrl("https://i30mb1.github.io");
+        wv.setWebViewClient(new WebViewClient() {
+            @Override
+            public boolean shouldOverrideUrlLoading(WebView view, String url) {
+                view.loadUrl(url);
+                return true;
+            }
+        });
+
+        alert.setView(wv);
+        alert.setNegativeButton("Close", new DialogInterface.OnClickListener() {
+            @Override
+            public void onClick(DialogInterface dialog, int id) {
+                dialog.dismiss();
+            }
+        });
+        alert.show();
     }
 
     @SuppressWarnings("ConstantConditions")

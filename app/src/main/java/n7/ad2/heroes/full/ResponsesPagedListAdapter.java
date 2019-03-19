@@ -126,7 +126,7 @@ public class ResponsesPagedListAdapter extends PagedListAdapter<Response, Recycl
 
     @Override
     public boolean isHeader(int itemPosition) {
-        if (itemPosition < 0) return false;
+        if (itemPosition < 0 || itemPosition >= getItemCount()) return false;
         Response model = getItem(itemPosition);
         if (model != null) {
             return model.getType() == Response.TYPE_HEADER;
@@ -200,6 +200,9 @@ public class ResponsesPagedListAdapter extends PagedListAdapter<Response, Recycl
             linearLayout.setOrientation(LinearLayout.HORIZONTAL);
 
             for (final String icon : icons) {
+                if (icon.length() == 0) {
+                    continue;
+                }
                 final ImageView imageView = (ImageView) inflater.inflate(R.layout.item_response_icon, linearLayout, false);
 //                    imageView.getLayoutParams().height = 20;
                 Picasso.get().load("file:///android_asset/heroes/" + icon.replace("%27", "'") + "/mini.webp")

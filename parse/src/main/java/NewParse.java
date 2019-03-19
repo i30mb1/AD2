@@ -26,10 +26,10 @@ class NewParse {
         String reHeroes[] = new String[]{"mars"};
 
         int count = 0;
-        for (String hero : loadHeroesFromFile()) {
+        for (String hero : reHeroes) {
             String counter = String.format(Locale.US, "% d/%d ", ++count, loadHeroesFromFile().size());
-//            loadResponses(hero, counter);
-            loadSpellsAndDescription(hero, counter);
+            loadResponses(hero, counter);
+//            loadSpellsAndDescription(hero, counter);
         }
 
 //        loadZhItems(false);
