@@ -4,7 +4,7 @@ import java.util.Calendar;
 import java.util.Date;
 import java.util.Locale;
 
-public class MyDate {
+public class DateAndStrings {
 
     private static Date gameDate;
     private static String s;

@@ -5,7 +5,7 @@ import java.util.Iterator;
 import java.util.LinkedList;
 import java.util.Random;
 
-public class algorithms {
+public class Algorithms {
 
     public static void main(String[] args) {
         Integer[] numbers = {31, 15, 8, 3, 1};

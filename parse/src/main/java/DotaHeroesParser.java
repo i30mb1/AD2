@@ -19,7 +19,7 @@ import java.util.Locale;
 
 import javax.imageio.ImageIO;
 
-class NewParse {
+class DotaHeroesParser {
 
     public static void main(String[] args) {
 
