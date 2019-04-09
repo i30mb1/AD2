@@ -115,6 +115,7 @@ public class SettingActivity extends BaseActivity {
     }
 
     public void launchPurchaseSubscription() {
+        if (mHelper == null) return;
         try {
             mHelper.launchSubscriptionPurchaseFlow(SettingActivity.this, ONCE_PER_MONTH_SUBSCRIPTION, 7, new IabHelper.OnIabPurchaseFinishedListener() {
                 @Override

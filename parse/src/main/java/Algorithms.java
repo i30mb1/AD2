@@ -1,8 +1,10 @@
 import java.util.ArrayList;
 import java.util.Arrays;
+import java.util.HashMap;
 import java.util.HashSet;
 import java.util.Iterator;
 import java.util.LinkedList;
+import java.util.Map;
 import java.util.Random;
 
 public class Algorithms {
@@ -16,6 +18,9 @@ public class Algorithms {
         System.out.println("Sum all number in array " + sum(new LinkedList<>(Arrays.asList(numbers))));
         System.out.println("Highest number in array " + findHighest(new LinkedList<>(Arrays.asList(numbers))));
         System.out.println("Recursive Sort by ABC" + recursiveSort(new LinkedList<>(Arrays.asList(numbers2))));
+        System.out.println("Integer Sum From nums " + Arrays.toString(findIntegerSumFromNums(new int[]{1,45,2,3},4)));
+        System.out.println("Find longest substring " + findLongestSubstring("abcafb"));
+
     }
     // Специальная нотация «0-болъшое> описывает скорость работы алгоритма (в наихудшей скорости)
     // БИНАРНЫЙ ПОИСК O(log n)
@@ -121,6 +126,62 @@ public class Algorithms {
         Integer first = list.pollFirst();
         Integer second = findHighest(list);
         return first > second ? first : second;
+    }
+
+    // есть ли число в массиве
+    private static int[] findIntegerSumFromNums(int[] nums, int target) {
+        Map<Integer, Integer> map = new HashMap<>();
+        for (int i = 0; i < nums.length; i++) {
+            int complement = target - nums[i];
+            if (map.containsKey(complement)) {
+                return new int[]{map.get(complement), nums[i]};
+            }
+            map.put(nums[i], nums[i]);
+        }
+        throw new IllegalArgumentException("No two sum solution");
+    }
+
+    // найти количество неповторяющихся символов идущих подряд
+    private static int findLongestSubstring(String s) {
+        int length = s.length();
+        HashSet<Object> set = new HashSet<>();
+        int ans = 0, i = 0, currentIterablePosition = 0;
+        while (i < length && currentIterablePosition < length) {
+            if (!set.contains(s.charAt(currentIterablePosition))) {
+                set.add(s.charAt(currentIterablePosition++));
+                ans = Math.max(ans, currentIterablePosition - i);
+            } else {
+                set.remove(s.charAt(i++));
+            }
+        }
+        return ans;
+    }
+
+    // реверсируем число
+    private static int reverseInteger(int primal) {
+        long reverse = 0;
+        while (primal != 0) {
+            reverse = reverse * 10 + primal % 10;
+            primal = primal / 10;
+        }
+        if (reverse > Integer.MAX_VALUE || reverse < Integer.MIN_VALUE) {
+            return 0;
+        } else {
+            return (int) reverse;
+        }
+    }
+
+    // является ли числом полиндромом
+    private static boolean isPalindrome(int x) {
+        if (x < 0 || (x % 10 == 0 && x != 0)) {
+            return false;
+        }
+        int revertedNumber = 0;
+        while (x > revertedNumber) {
+            revertedNumber = revertedNumber * 10 + x % 10;
+            x = x / 10;
+        }
+        return x == revertedNumber || x == revertedNumber / 10;
     }
 
 }

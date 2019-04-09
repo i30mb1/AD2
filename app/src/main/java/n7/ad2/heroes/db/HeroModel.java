@@ -1,28 +1,45 @@
 package n7.ad2.heroes.db;
 
+import android.arch.persistence.room.ColumnInfo;
 import android.arch.persistence.room.Entity;
 import android.arch.persistence.room.PrimaryKey;
 import android.support.annotation.NonNull;
 
-@Entity
+@Entity(tableName = "HeroModel")
 public class HeroModel {
 
     @PrimaryKey
     @NonNull
+    @ColumnInfo(name = "codeName")
     private String codeName;
     @NonNull
     private String name;
 
+    @ColumnInfo(name = "winrate")
     private String winrate = "-";
+    @ColumnInfo(name = "pickrate")
     private String pickrate = "-";
+    @ColumnInfo(name = "lane")
     private String lane = "-+-+-+-+-";
+    @ColumnInfo(name = "time")
     private String time = "-+-+-+-+-";
+    @ColumnInfo(name = "bestVersus")
     private String bestVersus = "-^-";
+    @ColumnInfo(name = "worstVersus")
     private String worstVersus = "-^-";
+    @ColumnInfo(name = "startingItems")
     private String startingItems = "-+-+-+-+-";
+    @ColumnInfo(name = "furtherItems")
     private String furtherItems = "-+-+-+-+-";
+    @ColumnInfo(name = "skillBuilds")
     private String skillBuilds = "-+-+-+-+-";
+    @ColumnInfo(name = "guideLastDay")
     private int guideLastDay = 0;
+
+    public HeroModel(@NonNull String codeName, @NonNull String name) {
+        this.codeName = codeName;
+        this.name = name.replace("%27", "'");
+    }
 
     public int getGuideLastDay() {
         return guideLastDay;
@@ -30,11 +47,6 @@ public class HeroModel {
 
     public void setGuideLastDay(int guideLastDay) {
         this.guideLastDay = guideLastDay;
-    }
-
-    public HeroModel(@NonNull String codeName, @NonNull String name) {
-        this.codeName = codeName;
-        this.name = name.replace("%27", "'");
     }
 
     public String getTime() {
