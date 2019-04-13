@@ -74,10 +74,11 @@ public class StreamsFragment extends Fragment {
         if (getActivity() == null) return;
         FragmentManager fragmentManager = getActivity().getSupportFragmentManager();
         Fragment currentFragment = fragmentManager.findFragmentById(R.id.container_activity_main);
-        FragmentTransaction ft = fragmentManager.beginTransaction();
-        if (currentFragment.getTag() != null && currentFragment.getTag().equals(TAG_ONE_TWITCH)) {
+        if (currentFragment!=null && currentFragment.getTag() != null && currentFragment.getTag().equals(TAG_ONE_TWITCH)) {
+            FragmentTransaction ft = fragmentManager.beginTransaction();
             ft.replace(R.id.container_activity_main, new StreamsFragment(), TAG_MULTI_TWITCH).commit();
         } else {
+            FragmentTransaction ft = fragmentManager.beginTransaction();
             ft.replace(R.id.container_activity_main, new MultiStreamsFragment(), TAG_ONE_TWITCH).commit();
         }
     }
