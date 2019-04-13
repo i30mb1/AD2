@@ -1,0 +1,27 @@
+<resources xmlns:tools="http://schemas.android.com/tools">
+
+    <!--Grey тема-->
+    <style name="AD2Theme" parent="Theme.AppCompat.NoActionBar">
+        <!--фон панели уведомления-->
+        <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
+        <!--фон панели приложения-->
+        <item name="colorPrimary">@color/colorPrimary</item>
+        <!--бэкграунд приложения-->
+        <item name="android:windowBackground">@color/colorPrimary</item>
+        <!--подсветка элементов-->
+        <item name="colorAccent">@color/colorAccent</item>
+        <!--цвет главного текста-->
+        <item name="android:textColorPrimary">@color/textColorPrimary</item>
+        <!--цвет под заголовков-->
+        <item name="android:textColorSecondary">@color/textColorSecondary</item>
+        <!--цвет меню текста-->
+        <item name="android:actionMenuTextColor">@color/textColorSecondary</item>
+
+    </style>
+
+    <style name="DialogTheme">
+        <item name="android:windowEnterAnimation">@anim/slide_from_left</item>
+        <item name="android:windowExitAnimation">@anim/slide_to_right</item>
+    </style>
+
+</resources>
