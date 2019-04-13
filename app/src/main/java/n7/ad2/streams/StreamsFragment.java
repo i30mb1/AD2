@@ -71,7 +71,7 @@ public class StreamsFragment extends Fragment {
     }
 
     private void startActivityMultiStreams() {
-        if (getActivity() == null && getActivity().getSupportFragmentManager() == null) return;
+        if (getActivity() == null) return;
         FragmentManager fragmentManager = getActivity().getSupportFragmentManager();
         Fragment currentFragment = fragmentManager.findFragmentById(R.id.container_activity_main);
         FragmentTransaction ft = fragmentManager.beginTransaction();

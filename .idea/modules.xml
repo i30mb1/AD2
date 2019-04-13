@@ -5,7 +5,6 @@
       <module fileurl="file://$PROJECT_DIR$/AD2.iml" filepath="$PROJECT_DIR$/AD2.iml" />
       <module fileurl="file://$PROJECT_DIR$/app/app.iml" filepath="$PROJECT_DIR$/app/app.iml" />
       <module fileurl="file://$PROJECT_DIR$/parse/parse.iml" filepath="$PROJECT_DIR$/parse/parse.iml" />
-      <module fileurl="file://$PROJECT_DIR$/twitch/twitch.iml" filepath="$PROJECT_DIR$/twitch/twitch.iml" />
     </modules>
   </component>
 </project>
