@@ -7,8 +7,7 @@ import android.support.v7.app.AppCompatActivity;
 
 import n7.ad2.R;
 
-
-public class MainActivity extends AppCompatActivity {
+public class InstantStreamActivity extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {

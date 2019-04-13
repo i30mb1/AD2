@@ -9,7 +9,7 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AD2Theme">
-        <activity android:name=".twitch.MainActivity">
+        <activity android:name=".twitch.InstantStreamActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
