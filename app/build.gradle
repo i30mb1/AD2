@@ -81,7 +81,7 @@ dependencies {
     implementation 'com.squareup.retrofit2:retrofit:2.4.0'
     implementation 'com.squareup.retrofit2:converter-gson:2.3.0'
     // WorkManager
-    implementation "android.arch.work:work-runtime:1.0.0-beta01"
+    implementation "android.arch.work:work-runtime:1.0.1"
     // Room components
     implementation "android.arch.persistence.room:runtime:1.1.1"
     annotationProcessor "android.arch.persistence.room:compiler:1.1.1"

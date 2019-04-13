@@ -33,7 +33,7 @@ class DotaHeroesParser {
         }
 
 //        loadZhItems(false);
-//        loadRusItems(false);
+        loadRusItems(false);
         loadEngItems(false);
     }
 
