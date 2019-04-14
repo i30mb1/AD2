@@ -47,7 +47,7 @@ public class StreamsFragment extends Fragment {
     @Override
     public boolean onOptionsItemSelected(MenuItem item) {
         switch (item.getItemId()) {
-            case R.id.menu_fragment_streams_open_by_name:
+            default:
                 createDialogOpenStream();
                 break;
         }
