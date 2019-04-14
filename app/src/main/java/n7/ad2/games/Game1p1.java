@@ -19,6 +19,7 @@ import android.support.transition.TransitionManager;
 import android.support.transition.TransitionSet;
 import android.support.v4.text.TextUtilsCompat;
 import android.support.v4.widget.TextViewCompat;
+import android.support.v7.app.AppCompatActivity;
 import android.util.TypedValue;
 import android.view.View;
 import android.view.ViewGroup;
@@ -47,7 +48,7 @@ import n7.ad2.utils.BaseActivity;
 import n7.ad2.utils.Utils;
 
 
-public class Game1p1 extends BaseActivity {
+public class Game1p1 extends AppCompatActivity {
 
     public ObservableInt secondRemaining = new ObservableInt(30);
     public ObservableBoolean isLoading = new ObservableBoolean(true);

@@ -1,0 +1,116 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+        <variable
+            name="stream"
+            type="n7.ad2.twitch.retrofit.Streams" />
+    </data>
+
+    <android.support.v7.widget.CardView
+        android:onClick="@{(view)-> stream.startStreamFull(view)}"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:clickable="true"
+        android:focusable="true"
+        android:foreground="?android:attr/selectableItemBackground"
+        app:cardBackgroundColor="?colorPrimaryDark"
+        app:cardCornerRadius="0dp"
+        app:cardElevation="2dp"
+        app:cardUseCompatPadding="true">
+
+        <android.support.constraint.ConstraintLayout
+            android:layout_width="match_parent"
+            tools:targetApi="lollipop"
+            android:layout_height="wrap_content">
+
+            <ImageView
+                srcHolder="@{@drawable/streams_placeholder}"
+                srcError="@{@drawable/streams_placeholder}"
+                srcPath="@{stream.preview.medium}"
+                android:id="@+id/iv_item_list_stream"
+                android:layout_width="150dp"
+                android:layout_height="80dp"
+                android:elevation="2dp"
+                android:scaleType="centerCrop"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:srcCompat="@drawable/streams_placeholder" />
+
+            <TextView
+                android:text="@{stream.channel.display_name}"
+                android:id="@+id/tv_item_list_stream_title"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="4dp"
+                android:layout_marginTop="4dp"
+                android:elevation="2dp"
+                android:textColor="?android:textColorPrimary"
+                android:textSize="14sp"
+                android:textStyle="bold"
+                android:lines="1"
+                app:layout_constraintLeft_toRightOf="@+id/iv_item_list_stream"
+                app:layout_constraintTop_toTopOf="@+id/iv_item_list_stream"
+                tools:text="@tools:sample/first_names" />
+
+            <TextView
+                android:text="@{stream.channel.status}"
+                android:id="@+id/tv_item_list_stream_summary"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_margin="4dp"
+                android:elevation="2dp"
+                android:maxLines="2"
+                android:textColor="?android:textColorSecondary"
+                android:textSize="12sp"
+                android:textStyle="italic"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toEndOf="@+id/iv_item_list_stream"
+                app:layout_constraintTop_toBottomOf="@+id/tv_item_list_stream_title"
+                app:layout_constraintVertical_bias="0.0"
+                tools:text="@tools:sample/lorem" />
+
+            <com.robinhood.ticker.TickerView
+                android:id="@+id/tv_item_list_stream_viewers"
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                android:background="#4c000000"
+                android:elevation="2dp"
+                android:gravity="center_vertical|start"
+                android:textColor="#fff"
+                android:textSize="10sp"
+                app:layout_constraintBottom_toBottomOf="@+id/iv_item_list_stream_viewers"
+                app:layout_constraintLeft_toRightOf="@+id/iv_item_list_stream_viewers"
+                app:layout_constraintRight_toRightOf="@+id/iv_item_list_stream"
+                app:layout_constraintTop_toTopOf="@+id/iv_item_list_stream_viewers"
+                app:ticker_animationDuration="1000"
+                tools:ignore="SmallSp" />
+
+            <ImageView
+                android:id="@+id/iv_item_list_stream_viewers"
+                android:layout_width="13dp"
+                android:layout_height="13dp"
+                android:background="@android:drawable/screen_background_dark_transparent"
+                android:elevation="2dp"
+                app:layout_constraintLeft_toRightOf="@+id/red_line_item_list_stream"
+                app:layout_constraintTop_toTopOf="@+id/iv_item_list_stream"
+                app:srcCompat="@drawable/streams_viewers" />
+
+            <View
+                android:id="@+id/red_line_item_list_stream"
+                android:layout_width="2dp"
+                android:layout_height="0dp"
+                android:background="?colorAccent"
+                android:elevation="2dp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+        </android.support.constraint.ConstraintLayout>
+
+    </android.support.v7.widget.CardView>
+</layout>

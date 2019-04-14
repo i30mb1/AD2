@@ -4,21 +4,23 @@ android {
     baseFeature true
     compileSdkVersion 28
 
-
+    dataBinding {
+        enabled = true
+    }
 
     defaultConfig {
-        minSdkVersion 18
+        vectorDrawables.useSupportLibrary = true
+        minSdkVersion 23
         targetSdkVersion 28
-        versionCode 1
-        versionName "1.0"
-
-        testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
+        versionCode 2
+        versionName "2"
 
     }
 
     buildTypes {
         release {
-            minifyEnabled false
+            minifyEnabled true
+            shrinkResources true
             proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
         }
     }
@@ -27,5 +29,19 @@ android {
 
 dependencies {
     implementation 'com.android.support:appcompat-v7:28.0.0'
+    implementation 'com.android.support:design:28.0.0'
     implementation 'com.android.support.constraint:constraint-layout:1.1.3'
+    // Lifecycle components
+    implementation "android.arch.lifecycle:extensions:1.1.1"
+    // Paging
+    implementation "android.arch.paging:runtime:1.0.1"
+    implementation 'com.android.support:cardview-v7:28.0.0'
+    implementation "com.android.support:recyclerview-v7:28.0.0"
+    // Retrofit
+    implementation 'com.squareup.retrofit2:retrofit:2.4.0'
+    implementation 'com.squareup.retrofit2:converter-gson:2.3.0'
+    // Animated TextView
+    implementation 'com.robinhood.ticker:ticker:1.2.2'
+// Picasso
+    implementation 'com.squareup.picasso:picasso:2.71828'
 }

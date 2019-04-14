@@ -1,15 +1,17 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    package="n7.ad2">
-
+    package="n7.ad2.twitch">
+    <uses-feature android:name="android.hardware.screen.portrait" />
+    <uses-feature android:name="android.hardware.screen.landscape" />
     <application
         android:allowBackup="true"
-        android:icon="@mipmap/ic_launcher"
+        android:icon="@drawable/ic_launcher"
         android:label="@string/app_name"
-        android:roundIcon="@mipmap/ic_launcher_round"
+        android:roundIcon="@drawable/ic_launcher"
         android:supportsRtl="true"
         android:theme="@style/AD2Theme">
-        <activity android:name=".twitch.InstantStreamActivity">
+        <activity android:name=".InstantStreamActivity"
+            android:screenOrientation="portrait">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
@@ -22,9 +24,9 @@
                 <category android:name="android.intent.category.BROWSABLE" />
 
                 <data
-                    android:scheme="http"
                     android:host="i30mb1.github.io"
-                    android:pathPrefix="/streams" />
+                    android:pathPrefix="/streams"
+                    android:scheme="http" />
             </intent-filter>
             <intent-filter android:autoVerify="true">
                 <action android:name="android.intent.action.VIEW" />
@@ -33,11 +35,13 @@
                 <category android:name="android.intent.category.BROWSABLE" />
 
                 <data
-                    android:scheme="https"
                     android:host="i30mb1.github.io"
-                    android:pathPrefix="/streams" />
+                    android:pathPrefix="/streams"
+                    android:scheme="https" />
             </intent-filter>
-            <meta-data android:name="default-url"
+
+            <meta-data
+                android:name="default-url"
                 android:value="https://i30mb1.github.io/streams" />
         </activity>
     </application>
