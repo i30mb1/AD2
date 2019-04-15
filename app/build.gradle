@@ -4,7 +4,7 @@ apply plugin: 'com.android.application'
 android {
     compileSdkVersion 28
     defaultConfig {
-//        multiDexEnabled true
+        multiDexEnabled true
         vectorDrawables.useSupportLibrary = true
         applicationId "n7.ad2"
         minSdkVersion 18
@@ -121,8 +121,8 @@ dependencies {
 
     implementation 'com.google.android.gms:play-services-ads:17.2.0'
 
-//    implementation project(':twitch')
-//    implementation 'com.android.support:multidex:1.0.3'
+    implementation project(':twitch')
+    implementation 'com.android.support:multidex:1.0.3'
 }
 
 apply plugin: 'com.google.gms.google-services'
