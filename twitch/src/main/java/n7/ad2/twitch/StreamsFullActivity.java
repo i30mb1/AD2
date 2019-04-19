@@ -1,4 +1,4 @@
-package n7.ad2.streams;
+package n7.ad2.twitch;
 
 import android.content.DialogInterface;
 import android.content.SharedPreferences;
@@ -9,6 +9,7 @@ import android.os.Handler;
 import android.preference.PreferenceManager;
 import android.support.annotation.NonNull;
 import android.support.v7.app.AlertDialog;
+import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.RecyclerView;
 import android.support.v7.widget.Toolbar;
 import android.view.Menu;
@@ -45,25 +46,23 @@ import java.util.ArrayList;
 import java.util.List;
 
 import n7.ad2.R;
-import n7.ad2.streams.utilsTwitch.Element;
-import n7.ad2.streams.utilsTwitch.Playlist;
-import n7.ad2.streams.utilsTwitch.TappableSurfaceView;
-import n7.ad2.utils.AppExecutors;
-import n7.ad2.utils.BaseActivity;
-import n7.ad2.utils.SmoothScrollableLinearLayoutManager;
+import n7.ad2.twitch.utilsTwitch.AppExecutors;
+import n7.ad2.twitch.utilsTwitch.Element;
+import n7.ad2.twitch.utilsTwitch.Playlist;
+import n7.ad2.twitch.utilsTwitch.SmoothScrollableLinearLayoutManager;
+import n7.ad2.twitch.utilsTwitch.TappableSurfaceView;
 import okhttp3.OkHttpClient;
 import okhttp3.Request;
 import okhttp3.Response;
 
 import static android.support.v4.internal.view.SupportMenuItem.SHOW_AS_ACTION_ALWAYS;
-import static n7.ad2.setting.SettingActivity.SUBSCRIPTION_PREF;
-import static n7.ad2.splash.SplashActivity.ANIMATION_DURATION;
 
-public class StreamsFullActivity extends BaseActivity implements SurfaceHolder.Callback {
+public class StreamsFullActivity extends AppCompatActivity implements SurfaceHolder.Callback {
 
     public static final String CHANNEL_NAME = "CHANNEL_NAME";
     public static final String CHANNEL_TITLE = "CHANNEL_TITLE";
     public static final int DELAY_TO_CLOSE_TOOLBAR = 3000;
+    public static final long ANIMATION_DURATION = 300L;
     private static final String PLAYER_DEFAULT_QUALITY = "PLAYER_DEFAULT_QUALITY";
     private static final String PLAYER_DEFAULT_CHAT_SPEED = "PLAYER_DEFAULT_CHAT_SPEED";
     public static float speed = 1;
@@ -89,6 +88,7 @@ public class StreamsFullActivity extends BaseActivity implements SurfaceHolder.C
     private Toolbar toolbar;
     private float alphaChat = 1.0F;
     private SmoothScrollableLinearLayoutManager layoutManager;
+    private String channel_name;
 
     private static String readStream(InputStream in) throws IOException {
         InputStreamReader inputStreamReader;
@@ -110,7 +110,7 @@ public class StreamsFullActivity extends BaseActivity implements SurfaceHolder.C
 
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
-        itemMenuQuality = menu.add(R.string.activity_twitch_game);
+        itemMenuQuality = menu.add("Qualities");
         itemMenuQuality.setShowAsAction(SHOW_AS_ACTION_ALWAYS);
 
         if (isPremium) {
@@ -165,6 +165,8 @@ public class StreamsFullActivity extends BaseActivity implements SurfaceHolder.C
                 });
                 AlertDialog dialog = builder.create();
                 dialog.show();
+            } else {
+                showSnackBarPremium();
             }
         }
         if (itemMenuVisibility == item) {
@@ -178,6 +180,8 @@ public class StreamsFullActivity extends BaseActivity implements SurfaceHolder.C
                 }
                 itemMenuVisibility.setTitle(String.valueOf(alphaChat));
                 adapter.notifyDataSetChanged();
+            } else {
+                showSnackBarPremium();
             }
         }
 
@@ -210,6 +214,15 @@ public class StreamsFullActivity extends BaseActivity implements SurfaceHolder.C
 
     }
 
+    private void showSnackBarPremium() {
+//        Snackbar.make(root, R.string.all_only_for_subscribers, Snackbar.LENGTH_SHORT).setAction(R.string.all_buy, new View.OnClickListener() {
+//            @Override
+//            public void onClick(View view) {
+//                startActivity(new Intent(StreamsFullActivity.this, SettingActivity.class));
+//            }
+//        }).show();
+    }
+
     private void initWindow() {
         requestWindowFeature(Window.FEATURE_NO_TITLE);
         getWindow().requestFeature(Window.FEATURE_ACTION_BAR_OVERLAY);
@@ -240,7 +253,7 @@ public class StreamsFullActivity extends BaseActivity implements SurfaceHolder.C
 
     private void initPremium() {
         sp = PreferenceManager.getDefaultSharedPreferences(this);
-        isPremium = sp.getBoolean(SUBSCRIPTION_PREF, false);
+        isPremium = sp.getBoolean("PREF", false);
 
         if (!isPremium) {
             alphaChat = 1.0F;
@@ -249,25 +262,35 @@ public class StreamsFullActivity extends BaseActivity implements SurfaceHolder.C
     }
 
     private void startStream() {
+        channel_name = getIntent().getExtras().getString(CHANNEL_NAME);
         pb_activity_twitch_game.setVisibility(View.VISIBLE);
         appExecutors.networkIO().execute(new Runnable() {
             @Override
             public void run() {
                 try {
-                    String accessToken = "https://api.twitch.tv/api/channels/" + getIntent().getExtras().getString(CHANNEL_NAME) + "/access_token?client_id=vmr0piicf3e3nxw4fs0zz2e2vqak8y";
+                    String accessToken = "https://api.twitch.tv/api/channels/" + channel_name + "/access_token?client_id=vmr0piicf3e3nxw4fs0zz2e2vqak8y";
                     OkHttpClient client = new OkHttpClient();
                     Request request = new Request.Builder().url(accessToken).build();
                     Response response = client.newCall(request).execute();
-                    JSONObject jsonObject = new JSONObject(response.body().string());
+                    final JSONObject jsonObject = new JSONObject(response.body().string());
                     String token = jsonObject.getString("token");
                     String sig = jsonObject.getString("sig");
-                    String url = "http://usher.twitch.tv/api/channel/hls/" + getIntent().getExtras().getString(CHANNEL_NAME) + ".m3u8?token=" + URLEncoder.encode(token, "UTF-8") + "&sig=" + sig;
+                    String url = "http://usher.twitch.tv/api/channel/hls/" + channel_name + ".m3u8?token=" + URLEncoder.encode(token, "UTF-8") + "&sig=" + sig;
                     String result2 = basicRequestSend(url);
-                    Playlist playList = Playlist.parse(result2);
+                    final Playlist playList = Playlist.parse(result2);
                     qualities = new Element.List(playList.getElements());
                     for (int i = 0; i < qualities.size(); i++) {
                         qualitiesTitles.add(qualities.get(i).getQuality());
                     }
+                    appExecutors.mainThread().execute(new Runnable() {
+                        @Override
+                        public void run() {
+                            Toast.makeText(StreamsFullActivity.this, "jsonObject = " + jsonObject.toString(), Toast.LENGTH_LONG).show();
+                            Toast.makeText(StreamsFullActivity.this, "playList = " + playList.toString(), Toast.LENGTH_LONG).show();
+                             Toast.makeText(StreamsFullActivity.this, "size = " + qualities.size(), Toast.LENGTH_LONG).show();
+                        }
+                    });
+//
                     qualityPosition = sp.getInt(PLAYER_DEFAULT_QUALITY, qualities.size() - 1);
                     startStreamWithDefineQuality();
                 } catch (final Exception e) {
@@ -282,6 +305,7 @@ public class StreamsFullActivity extends BaseActivity implements SurfaceHolder.C
                         @Override
                         public void run() {
                             pb_activity_twitch_game.setVisibility(View.INVISIBLE);
+
                         }
                     });
                 }
@@ -463,7 +487,7 @@ public class StreamsFullActivity extends BaseActivity implements SurfaceHolder.C
 
     private void setToolbar() {
         toolbar = findViewById(R.id.toolbar);
-        iv_toolbar = findViewById(R.id.iv_toolbar_chat);
+        iv_toolbar = findViewById(R.id.iv_toolbar);
 
         setSupportActionBar(toolbar);
         setTitle(getIntent().getStringExtra(CHANNEL_NAME));

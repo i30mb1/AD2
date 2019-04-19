@@ -18,7 +18,7 @@ public class CustomException {
     }
 
 
-    public static class NotSasukeUser extends Exception {
+    public static class NotSasukeUser extends Throwable {
 
         String message;
 

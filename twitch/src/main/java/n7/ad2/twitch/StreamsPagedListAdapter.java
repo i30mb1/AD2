@@ -13,7 +13,8 @@ import com.robinhood.ticker.TickerUtils;
 
 import java.util.Random;
 
-import n7.ad2.twitch.databinding.ItemListStreamBinding;
+import n7.ad2.R;
+import n7.ad2.databinding.ItemListStreamBinding;
 import n7.ad2.twitch.retrofit.Streams;
 
 public class StreamsPagedListAdapter extends PagedListAdapter<Streams, StreamsPagedListAdapter.ViewHolder> {

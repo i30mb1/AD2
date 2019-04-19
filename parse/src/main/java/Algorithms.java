@@ -74,8 +74,6 @@ public class Algorithms {
         while (iterator.hasNext()) {
             System.out.println(iterator.next());
         }
-
-
         return 1;
     }
 
@@ -128,7 +126,7 @@ public class Algorithms {
         return first > second ? first : second;
     }
 
-    // есть ли число в массиве
+    // есть ли сумма 2 чисел в массиве
     private static int[] findIntegerSumFromNums(int[] nums, int target) {
         Map<Integer, Integer> map = new HashMap<>();
         for (int i = 0; i < nums.length; i++) {

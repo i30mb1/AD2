@@ -3,6 +3,7 @@ package n7.ad2.twitch;
 import android.arch.lifecycle.Observer;
 import android.arch.lifecycle.ViewModelProviders;
 import android.arch.paging.PagedList;
+import android.content.Intent;
 import android.databinding.DataBindingUtil;
 import android.os.Bundle;
 import android.preference.PreferenceManager;
@@ -22,9 +23,13 @@ import android.widget.TextView;
 import java.util.Arrays;
 import java.util.LinkedList;
 
-import n7.ad2.twitch.databinding.DialogOpenStreamBinding;
-import n7.ad2.twitch.databinding.FragmentStreamsBinding;
+import n7.ad2.R;
+import n7.ad2.databinding.DialogOpenStreamBinding;
+import n7.ad2.databinding.FragmentStreamsBinding;
 import n7.ad2.twitch.retrofit.Streams;
+
+import static n7.ad2.twitch.StreamsFullActivity.CHANNEL_NAME;
+import static n7.ad2.twitch.StreamsFullActivity.CHANNEL_TITLE;
 
 public class StreamsFragment extends Fragment {
 
@@ -89,10 +94,10 @@ public class StreamsFragment extends Fragment {
                     list.pollLast();
                 }
                 PreferenceManager.getDefaultSharedPreferences(getContext()).edit().putString(TWITCH_STREAMS_TYPED, Arrays.toString(list.toArray())).apply();
-//                Intent intent = new Intent(getContext(), StreamsFullActivity.class);
-//                intent.putExtra(CHANNEL_NAME, inputTex);
-//                intent.putExtra(CHANNEL_TITLE, "");
-//                startActivity(intent);
+                Intent intent = new Intent(getContext(), StreamsFullActivity.class);
+                intent.putExtra(CHANNEL_NAME, inputTex);
+                intent.putExtra(CHANNEL_TITLE, "");
+                startActivity(intent);
                 dialog.dismiss();
             }
         });

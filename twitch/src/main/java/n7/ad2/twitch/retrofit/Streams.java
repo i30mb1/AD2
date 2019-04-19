@@ -1,7 +1,13 @@
 package n7.ad2.twitch.retrofit;
 
 
+import android.content.Intent;
 import android.view.View;
+
+import n7.ad2.twitch.StreamsFullActivity;
+
+import static n7.ad2.twitch.StreamsFullActivity.CHANNEL_NAME;
+import static n7.ad2.twitch.StreamsFullActivity.CHANNEL_TITLE;
 
 public class Streams {
     private int viewers = 0;
@@ -42,9 +48,9 @@ public class Streams {
     }
 
     public void startStreamFull(View view) {
-//        Intent intent = new Intent(view.getContext(), StreamsFullActivity.class);
-//        intent.putExtra(CHANNEL_NAME, getChannel().getDisplay_name().toLowerCase());
-//        intent.putExtra(CHANNEL_TITLE, getChannel().getStatus());
-//        view.getContext().startActivity(intent);
+        Intent intent = new Intent(view.getContext(), StreamsFullActivity.class);
+        intent.putExtra(CHANNEL_NAME, getChannel().getDisplay_name().toLowerCase());
+        intent.putExtra(CHANNEL_TITLE, getChannel().getStatus());
+        view.getContext().startActivity(intent);
     }
 }
