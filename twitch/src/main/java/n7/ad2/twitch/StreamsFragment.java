@@ -23,9 +23,8 @@ import android.widget.TextView;
 import java.util.Arrays;
 import java.util.LinkedList;
 
-import n7.ad2.R;
-import n7.ad2.databinding.DialogOpenStreamBinding;
-import n7.ad2.databinding.FragmentStreamsBinding;
+import n7.ad2.twitch.databinding.DialogOpenStreamBinding;
+import n7.ad2.twitch.databinding.FragmentStreamsBinding;
 import n7.ad2.twitch.retrofit.Streams;
 
 import static n7.ad2.twitch.StreamsFullActivity.CHANNEL_NAME;

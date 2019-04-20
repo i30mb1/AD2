@@ -121,7 +121,7 @@ dependencies {
 
     implementation 'com.google.android.gms:play-services-ads:17.2.0'
 
-//    implementation project(':twitch')
+    implementation project(':twitch')
     implementation 'com.android.support:multidex:1.0.3'
 }
 

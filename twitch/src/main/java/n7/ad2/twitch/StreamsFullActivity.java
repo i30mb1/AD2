@@ -25,12 +25,6 @@ import android.widget.ProgressBar;
 import android.widget.TextView;
 import android.widget.Toast;
 
-import com.gikk.twirk.Twirk;
-import com.gikk.twirk.TwirkBuilder;
-import com.gikk.twirk.events.TwirkListenerBaseImpl;
-import com.gikk.twirk.types.twitchMessage.TwitchMessage;
-import com.gikk.twirk.types.users.TwitchUser;
-
 import org.json.JSONObject;
 
 import java.io.BufferedReader;
@@ -45,7 +39,6 @@ import java.nio.charset.StandardCharsets;
 import java.util.ArrayList;
 import java.util.List;
 
-import n7.ad2.R;
 import n7.ad2.twitch.utilsTwitch.AppExecutors;
 import n7.ad2.twitch.utilsTwitch.Element;
 import n7.ad2.twitch.utilsTwitch.Playlist;
@@ -365,34 +358,34 @@ public class StreamsFullActivity extends AppCompatActivity implements SurfaceHol
     }
 
     private void startChat() {
-        appExecutors.networkIO().execute(new Runnable() {
-            @Override
-            public void run() {
-//                final Twirk twirk = new TwirkBuilder("#" + getIntent().getExtras().getString(CHANNEL_NAME), "i30mb1", "oauth:g8qwh3dw0ul0oopjsr8dmmkxa2mpqe").build();
-                final Twirk twirk = new TwirkBuilder("#" + getIntent().getExtras().getString(CHANNEL_NAME), "aboutdota2", "oauth:jfhimbps50vmxgto0aj75n0smbbphz").build();
-                try {
-                    twirk.connect();
-                    twirk.addIrcListener(new TwirkListenerBaseImpl() {
-                        @Override
-                        public void onPrivMsg(TwitchUser sender, TwitchMessage message) {
-                            super.onPrivMsg(sender, message);
-                            if (isChatVisible) {
-                                adapter.add(message.getContent());
-                                if (chatSpeedSelected > 0) {
-                                    if (!layoutManager.isSmoothScrolling())
-                                        rv_activity_twitch_game.smoothScrollToPosition(adapter.getItemCount() - 1);
-                                } else {
-                                    rv_activity_twitch_game.smoothScrollToPosition(adapter.getItemCount() - 1);
-                                }
-                            }
-                        }
-                    });
-                } catch (IOException | InterruptedException e) {
-                    e.printStackTrace();
-                }
-
-            }
-        });
+//        appExecutors.networkIO().execute(new Runnable() {
+//            @Override
+//            public void run() {
+////                final Twirk twirk = new TwirkBuilder("#" + getIntent().getExtras().getString(CHANNEL_NAME), "i30mb1", "oauth:g8qwh3dw0ul0oopjsr8dmmkxa2mpqe").build();
+//                final Twirk twirk = new TwirkBuilder("#" + getIntent().getExtras().getString(CHANNEL_NAME), "aboutdota2", "oauth:jfhimbps50vmxgto0aj75n0smbbphz").build();
+//                try {
+//                    twirk.connect();
+//                    twirk.addIrcListener(new TwirkListenerBaseImpl() {
+//                        @Override
+//                        public void onPrivMsg(TwitchUser sender, TwitchMessage message) {
+//                            super.onPrivMsg(sender, message);
+//                            if (isChatVisible) {
+//                                adapter.add(message.getContent());
+//                                if (chatSpeedSelected > 0) {
+//                                    if (!layoutManager.isSmoothScrolling())
+//                                        rv_activity_twitch_game.smoothScrollToPosition(adapter.getItemCount() - 1);
+//                                } else {
+//                                    rv_activity_twitch_game.smoothScrollToPosition(adapter.getItemCount() - 1);
+//                                }
+//                            }
+//                        }
+//                    });
+//                } catch (IOException | InterruptedException e) {
+//                    e.printStackTrace();
+//                }
+//
+//            }
+//        });
     }
 
     private void initSurfaceHolder() {
