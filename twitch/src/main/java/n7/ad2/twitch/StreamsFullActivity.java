@@ -280,7 +280,7 @@ public class StreamsFullActivity extends AppCompatActivity implements SurfaceHol
                         public void run() {
                             Toast.makeText(StreamsFullActivity.this, "jsonObject = " + jsonObject.toString(), Toast.LENGTH_LONG).show();
                             Toast.makeText(StreamsFullActivity.this, "playList = " + playList.toString(), Toast.LENGTH_LONG).show();
-                             Toast.makeText(StreamsFullActivity.this, "size = " + qualities.size(), Toast.LENGTH_LONG).show();
+                            Toast.makeText(StreamsFullActivity.this, "size = " + qualities.size(), Toast.LENGTH_LONG).show();
                         }
                     });
 //

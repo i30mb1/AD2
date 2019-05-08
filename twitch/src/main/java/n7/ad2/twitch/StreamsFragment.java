@@ -117,7 +117,7 @@ public class StreamsFragment extends Fragment {
         binding.executePendingBindings();
 
         subscription = false;
-        getActivity().setTitle("Streams");
+        getActivity().setTitle("Streams v" + BuildConfig.VERSION_NAME);
         setHasOptionsMenu(true);
 
         initRecyclerView();
