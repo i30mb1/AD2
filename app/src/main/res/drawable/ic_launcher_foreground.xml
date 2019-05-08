@@ -17,7 +17,7 @@
         
               <path
                   android:fillColor="#C40B11"
-                  android:pathData="M 0 0 H 1024 V 500 H 0 V 0 Z" />
+                  android:pathData="M 0 0 H 1024 V 600 H 0 V 0 Z" />
               <path
                   android:fillColor="#000000"
                   android:fillAlpha="0.68"
@@ -38,3 +38,4 @@
       </group>
     </group>
   </group>
+</vector>
