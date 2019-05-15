@@ -51,7 +51,8 @@
         <activity
             android:name=".streams.StreamsFullActivity"
             android:configChanges="keyboard|orientation|screenSize|smallestScreenSize|screenLayout"
-            android:launchMode="singleTask"
+            android:launchMode="singleTop"
+            android:finishOnTaskLaunch="true"
             android:screenOrientation="landscape" />
         <activity
             android:name=".news.NewsActivity"

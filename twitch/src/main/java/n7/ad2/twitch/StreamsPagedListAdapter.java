@@ -13,7 +13,7 @@ import com.robinhood.ticker.TickerUtils;
 
 import java.util.Random;
 
-import n7.ad2.twitch.databinding.ItemListStreamBinding;
+import n7.ad2.R;
 import n7.ad2.twitch.retrofit.Streams;
 
 public class StreamsPagedListAdapter extends PagedListAdapter<Streams, StreamsPagedListAdapter.ViewHolder> {
@@ -42,7 +42,7 @@ public class StreamsPagedListAdapter extends PagedListAdapter<Streams, StreamsPa
     public ViewHolder onCreateViewHolder(@NonNull ViewGroup viewGroup, int i) {
         if (inflater == null) inflater = LayoutInflater.from(viewGroup.getContext());
 
-        ItemListStreamBinding binding = DataBindingUtil.inflate(inflater, R.layout.item_list_stream, viewGroup, false);
+        n7.ad2.databinding.ItemListStreamBinding binding = DataBindingUtil.inflate(inflater, R.layout.item_list_stream, viewGroup, false);
         return new ViewHolder(binding);
     }
 
@@ -57,10 +57,10 @@ public class StreamsPagedListAdapter extends PagedListAdapter<Streams, StreamsPa
     }
 
     class ViewHolder extends RecyclerView.ViewHolder {
-        ItemListStreamBinding binding;
+        n7.ad2.databinding.ItemListStreamBinding binding;
         Handler handler;
 
-        ViewHolder(@NonNull final ItemListStreamBinding binding) {
+        ViewHolder(@NonNull final n7.ad2.databinding.ItemListStreamBinding binding) {
             super(binding.getRoot());
             this.binding = binding;
             binding.tvItemListStreamViewers.setCharacterList(TickerUtils.getDefaultNumberList());
@@ -73,24 +73,29 @@ public class StreamsPagedListAdapter extends PagedListAdapter<Streams, StreamsPa
                         int randomValue = +view[new Random().nextInt(view.length - 1)];
                         if (value + randomValue >= 0)
                             binding.tvItemListStreamViewers.setText(String.valueOf(value + randomValue));
-                    } catch (NumberFormatException e) {
+                        handler.postDelayed(this, duration[new Random().nextInt(duration.length - 1)]);
+                    } catch (Exception e) {
                         e.printStackTrace();
                     }
-                    handler.postDelayed(this, duration[new Random().nextInt(duration.length - 1)]);
+
                 }
             });
         }
 
         private void bindTo(final Streams streams) {
-            binding.tvItemListStreamViewers.setText(String.valueOf(streams.getViewers()));
-            binding.setStream(streams);
+            try {
+                binding.tvItemListStreamViewers.setText(String.valueOf(streams.getViewers()));
+                binding.setStream(streams);
+            } catch (Exception e) {
+                e.printStackTrace();
+            }
+
         }
 
         private void clear() {
-            binding.ivItemListStream.setImageResource(R.drawable.streams_placeholder);
-            binding.tvItemListStreamTitle.setText("");
-            binding.tvItemListStreamSummary.setText("");
-            binding.tvItemListStreamViewers.setText("0");
+//            binding.ivItemListStream.setImageResource(R.drawable.streams_placeholder);
+//            binding.tvItemListStreamTitle.setText("");
+//            binding.tvItemListStreamSummary.setText("");
         }
     }
 

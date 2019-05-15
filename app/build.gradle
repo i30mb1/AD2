@@ -56,7 +56,7 @@ def gitCommitCount() {
             standardOutput = stdout
         }
         def commitCount = stdout.toString().trim().toInteger()
-        return commitCount + 300
+        return commitCount + 310
     }
     catch (ignored) {
         return 0
@@ -121,7 +121,7 @@ dependencies {
 
     implementation 'com.google.android.gms:play-services-ads:17.2.0'
 
-    implementation project(':twitch')
+//    implementation project(':twitch')
     implementation 'com.android.support:multidex:1.0.3'
 }
 

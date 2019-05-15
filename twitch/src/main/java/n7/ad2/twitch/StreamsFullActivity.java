@@ -45,6 +45,7 @@ import java.nio.charset.StandardCharsets;
 import java.util.ArrayList;
 import java.util.List;
 
+import n7.ad2.R;
 import n7.ad2.twitch.utilsTwitch.AppExecutors;
 import n7.ad2.twitch.utilsTwitch.Element;
 import n7.ad2.twitch.utilsTwitch.Playlist;
@@ -278,7 +279,7 @@ public class StreamsFullActivity extends AppCompatActivity implements SurfaceHol
                     String result2 = basicRequestSend(url);
                     final Playlist playList = Playlist.parse(result2);
                     qualities = new Element.List(playList.getElements());
-                    if(qualities.size()==0) throw new Exception("qualities.size() == 0");
+                    if (qualities.size() == 0) throw new Exception("qualities.size() == 0");
                     for (int i = 0; i < qualities.size(); i++) {
                         qualitiesTitles.add(qualities.get(i).getQuality());
                     }
@@ -291,7 +292,7 @@ public class StreamsFullActivity extends AppCompatActivity implements SurfaceHol
                         public void run() {
                             Toast.makeText(StreamsFullActivity.this, e.toString(), Toast.LENGTH_LONG).show();
                             if (e.getMessage().equals("qualities.size() == 0")) {
-                                String message = e.getMessage() + "\n" + "Maybe someday this feature will work, but today download my app";
+                                String message = e.getMessage() + "\n" + "Maybe someday this feature will work, but today works only text chat if you want video too download full app";
                                 TextView tv = findViewById(R.id.tv_activity_twitch_game_error);
                                 tv.setVisibility(View.VISIBLE);
                                 tv.setText(message);
