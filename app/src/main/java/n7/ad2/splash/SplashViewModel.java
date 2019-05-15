@@ -94,7 +94,7 @@ public class SplashViewModel extends AndroidViewModel {
         int lastDayWhenLoadNews = PreferenceManager.getDefaultSharedPreferences(application).getInt(NEWS_LOAD_LAST_DAY, 0);
 
         if (currentDay != lastDayWhenLoadNews) {
-//        if (true) {
+
             Constraints constraints = new Constraints.Builder().setRequiredNetworkType(NetworkType.CONNECTED).build();
             Data data = new Data.Builder()
                     .putBoolean(DELETE_TABLE, true)

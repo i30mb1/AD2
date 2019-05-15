@@ -25,6 +25,12 @@ import android.widget.ProgressBar;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import com.gikk.twirk.Twirk;
+import com.gikk.twirk.TwirkBuilder;
+import com.gikk.twirk.events.TwirkListenerBaseImpl;
+import com.gikk.twirk.types.twitchMessage.TwitchMessage;
+import com.gikk.twirk.types.users.TwitchUser;
+
 import org.json.JSONObject;
 
 import java.io.BufferedReader;
@@ -272,17 +278,10 @@ public class StreamsFullActivity extends AppCompatActivity implements SurfaceHol
                     String result2 = basicRequestSend(url);
                     final Playlist playList = Playlist.parse(result2);
                     qualities = new Element.List(playList.getElements());
+                    if(qualities.size()==0) throw new Exception("qualities.size() == 0");
                     for (int i = 0; i < qualities.size(); i++) {
                         qualitiesTitles.add(qualities.get(i).getQuality());
                     }
-                    appExecutors.mainThread().execute(new Runnable() {
-                        @Override
-                        public void run() {
-                            Toast.makeText(StreamsFullActivity.this, "jsonObject = " + jsonObject.toString(), Toast.LENGTH_LONG).show();
-                            Toast.makeText(StreamsFullActivity.this, "playList = " + playList.toString(), Toast.LENGTH_LONG).show();
-                            Toast.makeText(StreamsFullActivity.this, "size = " + qualities.size(), Toast.LENGTH_LONG).show();
-                        }
-                    });
 //
                     qualityPosition = sp.getInt(PLAYER_DEFAULT_QUALITY, qualities.size() - 1);
                     startStreamWithDefineQuality();
@@ -291,6 +290,12 @@ public class StreamsFullActivity extends AppCompatActivity implements SurfaceHol
                         @Override
                         public void run() {
                             Toast.makeText(StreamsFullActivity.this, e.toString(), Toast.LENGTH_LONG).show();
+                            if (e.getMessage().equals("qualities.size() == 0")) {
+                                String message = e.getMessage() + "\n" + "Maybe someday this feature will work, but today download my app";
+                                TextView tv = findViewById(R.id.tv_activity_twitch_game_error);
+                                tv.setVisibility(View.VISIBLE);
+                                tv.setText(message);
+                            }
                         }
                     });
                 } finally {
@@ -358,34 +363,34 @@ public class StreamsFullActivity extends AppCompatActivity implements SurfaceHol
     }
 
     private void startChat() {
-//        appExecutors.networkIO().execute(new Runnable() {
-//            @Override
-//            public void run() {
-////                final Twirk twirk = new TwirkBuilder("#" + getIntent().getExtras().getString(CHANNEL_NAME), "i30mb1", "oauth:g8qwh3dw0ul0oopjsr8dmmkxa2mpqe").build();
-//                final Twirk twirk = new TwirkBuilder("#" + getIntent().getExtras().getString(CHANNEL_NAME), "aboutdota2", "oauth:jfhimbps50vmxgto0aj75n0smbbphz").build();
-//                try {
-//                    twirk.connect();
-//                    twirk.addIrcListener(new TwirkListenerBaseImpl() {
-//                        @Override
-//                        public void onPrivMsg(TwitchUser sender, TwitchMessage message) {
-//                            super.onPrivMsg(sender, message);
-//                            if (isChatVisible) {
-//                                adapter.add(message.getContent());
-//                                if (chatSpeedSelected > 0) {
-//                                    if (!layoutManager.isSmoothScrolling())
-//                                        rv_activity_twitch_game.smoothScrollToPosition(adapter.getItemCount() - 1);
-//                                } else {
-//                                    rv_activity_twitch_game.smoothScrollToPosition(adapter.getItemCount() - 1);
-//                                }
-//                            }
-//                        }
-//                    });
-//                } catch (IOException | InterruptedException e) {
-//                    e.printStackTrace();
-//                }
-//
-//            }
-//        });
+        appExecutors.networkIO().execute(new Runnable() {
+            @Override
+            public void run() {
+//                final Twirk twirk = new TwirkBuilder("#" + getIntent().getExtras().getString(CHANNEL_NAME), "i30mb1", "oauth:g8qwh3dw0ul0oopjsr8dmmkxa2mpqe").build();
+                final Twirk twirk = new TwirkBuilder("#" + getIntent().getExtras().getString(CHANNEL_NAME), "aboutdota2", "oauth:jfhimbps50vmxgto0aj75n0smbbphz").build();
+                try {
+                    twirk.connect();
+                    twirk.addIrcListener(new TwirkListenerBaseImpl() {
+                        @Override
+                        public void onPrivMsg(TwitchUser sender, TwitchMessage message) {
+                            super.onPrivMsg(sender, message);
+                            if (isChatVisible) {
+                                adapter.add(message.getContent());
+                                if (chatSpeedSelected > 0) {
+                                    if (!layoutManager.isSmoothScrolling())
+                                        rv_activity_twitch_game.smoothScrollToPosition(adapter.getItemCount() - 1);
+                                } else {
+                                    rv_activity_twitch_game.smoothScrollToPosition(adapter.getItemCount() - 1);
+                                }
+                            }
+                        }
+                    });
+                } catch (IOException | InterruptedException e) {
+                    e.printStackTrace();
+                }
+
+            }
+        });
     }
 
     private void initSurfaceHolder() {

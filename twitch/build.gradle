@@ -45,5 +45,5 @@ dependencies {
 // Picasso
     implementation 'com.squareup.picasso:picasso:2.71828'
 
-//    implementation files('libs/twirc-0.3.jar')
+    implementation files('libs/twirc-0.3.jar')
 }
