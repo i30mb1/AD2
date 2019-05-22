@@ -24,8 +24,8 @@ import android.widget.TextView;
 import java.util.Arrays;
 import java.util.LinkedList;
 
-import n7.ad2.BuildConfig;
-import n7.ad2.R;
+import n7.ad2.twitch.databinding.DialogOpenStreamBinding;
+import n7.ad2.twitch.databinding.FragmentStreamsBinding;
 import n7.ad2.twitch.retrofit.Streams;
 
 import static n7.ad2.twitch.StreamsFullActivity.CHANNEL_NAME;
@@ -36,7 +36,7 @@ public class StreamsFragment extends Fragment {
     public static final String TWITCH_STREAMS_TYPED = "TWITCH_STREAMS_TYPED";
     public static final String TAG_MULTI_TWITCH = "TAG_MULTI_TWITCH";
     public static final String TAG_ONE_TWITCH = "TAG_ONE_TWITCH";
-    private n7.ad2.databinding.FragmentStreamsBinding binding;
+    private FragmentStreamsBinding binding;
     private StreamsViewModel viewModel;
     private boolean subscription;
 
@@ -62,7 +62,7 @@ public class StreamsFragment extends Fragment {
     @SuppressWarnings("ConstantConditions")
     private void createDialogOpenStream() {
         AlertDialog.Builder builder = new AlertDialog.Builder(getContext());
-        final n7.ad2.databinding.DialogOpenStreamBinding binding = DataBindingUtil.inflate(getLayoutInflater(), R.layout.dialog_open_stream, null, false);
+        final DialogOpenStreamBinding binding = DataBindingUtil.inflate(getLayoutInflater(), R.layout.dialog_open_stream, null, false);
 
         final AlertDialog dialog = builder.create();
         dialog.setView(binding.getRoot());

@@ -74,10 +74,11 @@ public class StreamsPagedListAdapter extends PagedListAdapter<Streams, StreamsPa
                         int randomValue = +view[new Random().nextInt(view.length - 1)];
                         if (value + randomValue >= 0)
                             binding.tvItemListStreamViewers.setText(String.valueOf(value + randomValue));
-                    } catch (NumberFormatException e) {
+                        handler.postDelayed(this, duration[new Random().nextInt(duration.length - 1)]);
+                    } catch (Exception e) {
                         e.printStackTrace();
                     }
-                    handler.postDelayed(this, duration[new Random().nextInt(duration.length - 1)]);
+
                 }
             });
         }
@@ -91,7 +92,6 @@ public class StreamsPagedListAdapter extends PagedListAdapter<Streams, StreamsPa
             binding.ivItemListStream.setImageResource(R.drawable.streams_placeholder);
             binding.tvItemListStreamTitle.setText("");
             binding.tvItemListStreamSummary.setText("");
-            binding.tvItemListStreamViewers.setText("0");
         }
     }
 

@@ -45,7 +45,6 @@ import java.nio.charset.StandardCharsets;
 import java.util.ArrayList;
 import java.util.List;
 
-import n7.ad2.R;
 import n7.ad2.twitch.utilsTwitch.AppExecutors;
 import n7.ad2.twitch.utilsTwitch.Element;
 import n7.ad2.twitch.utilsTwitch.Playlist;

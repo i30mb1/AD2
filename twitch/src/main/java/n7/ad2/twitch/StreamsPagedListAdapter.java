@@ -13,7 +13,7 @@ import com.robinhood.ticker.TickerUtils;
 
 import java.util.Random;
 
-import n7.ad2.R;
+import n7.ad2.twitch.databinding.ItemListStreamBinding;
 import n7.ad2.twitch.retrofit.Streams;
 
 public class StreamsPagedListAdapter extends PagedListAdapter<Streams, StreamsPagedListAdapter.ViewHolder> {
@@ -42,7 +42,7 @@ public class StreamsPagedListAdapter extends PagedListAdapter<Streams, StreamsPa
     public ViewHolder onCreateViewHolder(@NonNull ViewGroup viewGroup, int i) {
         if (inflater == null) inflater = LayoutInflater.from(viewGroup.getContext());
 
-        n7.ad2.databinding.ItemListStreamBinding binding = DataBindingUtil.inflate(inflater, R.layout.item_list_stream, viewGroup, false);
+        ItemListStreamBinding binding = DataBindingUtil.inflate(inflater, R.layout.item_list_stream, viewGroup, false);
         return new ViewHolder(binding);
     }
 
@@ -57,10 +57,10 @@ public class StreamsPagedListAdapter extends PagedListAdapter<Streams, StreamsPa
     }
 
     class ViewHolder extends RecyclerView.ViewHolder {
-        n7.ad2.databinding.ItemListStreamBinding binding;
+        ItemListStreamBinding binding;
         Handler handler;
 
-        ViewHolder(@NonNull final n7.ad2.databinding.ItemListStreamBinding binding) {
+        ViewHolder(@NonNull final ItemListStreamBinding binding) {
             super(binding.getRoot());
             this.binding = binding;
             binding.tvItemListStreamViewers.setCharacterList(TickerUtils.getDefaultNumberList());

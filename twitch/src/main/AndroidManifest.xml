@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    package="n7.ad2">
+    package="n7.ad2.twitch">
 
     <uses-permission android:name="android.permission.INTERNET" />
 
@@ -11,12 +11,11 @@
     <!--android:roundIcon="@drawable/ic_launcher"-->
     <application
         android:allowBackup="true"
-        android:icon="@drawable/ic_launcher"
-        android:label="@string/app_name"
+
         android:supportsRtl="true"
         android:theme="@style/AD2Theme">
         <activity
-            android:name=".twitch.InstantStreamActivity"
+            android:name=".InstantStreamActivity"
             android:screenOrientation="portrait">
             <intent-filter android:autoVerify="true">
                 <action android:name="android.intent.action.VIEW" />
@@ -46,7 +45,7 @@
                 android:value="https://i30mb1.github.io/streams" />
         </activity>
         <activity
-            android:name=".twitch.StreamsFullActivity"
+            android:name=".StreamsFullActivity"
             android:configChanges="keyboard|orientation|screenSize|smallestScreenSize|screenLayout"
             android:launchMode="singleTask"
             android:finishOnTaskLaunch="true"

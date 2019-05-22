@@ -1,1 +1,1 @@
-include ':app', ':parse', ':twitch', ':instant'
+include ':app', ':parse'
