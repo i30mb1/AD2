@@ -33,9 +33,9 @@
             android:key="@string/setting_about_key"
             android:summary="@string/setting_about_summary"
             android:title="@string/setting_about_title" />
-        <Preference
-            android:key="@string/setting_private_policy_key"
-            android:title="@string/setting_private_policy_title" />
+        <!--<Preference-->
+            <!--android:key="@string/setting_private_policy_key"-->
+            <!--android:title="@string/setting_private_policy_title" />-->
         <Preference
             android:key="@string/setting_subscription_key"
             android:summary="@string/setting_subscription_summary"

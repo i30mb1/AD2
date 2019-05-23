@@ -71,14 +71,14 @@ public class SettingsFragment extends PreferenceFragment {
             }
         });
 
-        Preference privatePolicy = findPreference(getString(R.string.setting_private_policy_key));
-        privatePolicy.setOnPreferenceClickListener(new Preference.OnPreferenceClickListener() {
-            @Override
-            public boolean onPreferenceClick(Preference preference) {
-                callThisMethodWhenPrivacyButtonClicked();
-                return true;
-            }
-        });
+//        Preference privatePolicy = findPreference(getString(R.string.setting_private_policy_key));
+//        privatePolicy.setOnPreferenceClickListener(new Preference.OnPreferenceClickListener() {
+//            @Override
+//            public boolean onPreferenceClick(Preference preference) {
+//                callThisMethodWhenPrivacyButtonClicked();
+//                return true;
+//            }
+//        });
 
 
         Preference aboutApp = findPreference(getString(R.string.setting_about_key));
