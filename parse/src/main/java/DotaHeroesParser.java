@@ -28,8 +28,8 @@ class DotaHeroesParser {
         int count = 0;
         for (String hero : loadHeroesFromFile()) {
             String counter = String.format(Locale.US, "% d/%d ", ++count, loadHeroesFromFile().size());
-            loadResponses(hero, counter);
-//            loadSpellsAndDescription(hero, counter);
+//            loadResponses(hero, counter);
+            loadSpellsAndDescription(hero, counter);
         }
 
 //        loadZhItems(false);
@@ -1040,6 +1040,10 @@ class DotaHeroesParser {
                     if (child.tag().toString().equals("ul") & findTrivia) {
                         JSONArray jsonArrayTrivia = new JSONArray();
                         for (Element element : child.children()) {
+                            Elements a = element.getElementsByClass("ext-audiobutton");
+                            for (Element element1 : a) {
+                                element1.remove();
+                            }
                             jsonArrayTrivia.add(element.text().replaceAll("\\[[1-9]+]", "").replace(" Play ", " "));
                         }
                         jsonObject.put("trivia", jsonArrayTrivia);
