@@ -71,6 +71,7 @@ public class SettingsFragment extends PreferenceFragment {
             }
         });
 
+
 //        Preference privatePolicy = findPreference(getString(R.string.setting_private_policy_key));
 //        privatePolicy.setOnPreferenceClickListener(new Preference.OnPreferenceClickListener() {
 //            @Override

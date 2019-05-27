@@ -29,12 +29,12 @@ class DotaHeroesParser {
         for (String hero : loadHeroesFromFile()) {
             String counter = String.format(Locale.US, "% d/%d ", ++count, loadHeroesFromFile().size());
             loadResponses(hero, counter);
-            loadSpellsAndDescription(hero, counter);
+//            loadSpellsAndDescription(hero, counter);
         }
 
 //        loadZhItems(false);
-        loadRusItems(false);
-        loadEngItems(false);
+//        loadRusItems(false);
+//        loadEngItems(false);
     }
 
     private static void loadZhItems(boolean loadImage) {
@@ -833,7 +833,7 @@ class DotaHeroesParser {
                             if (response.children().size() == 0)
                                 continue;//бывают реплики без URL их незаписываем
                             jsonObjectResponse = new JSONObject();//response.childNode(0).toString().trim()
-                            jsonObjectResponse.put("href", response.child(0).attr("href").trim());//ссылка на воспроизведение реплики
+                            jsonObjectResponse.put("href", response.child(0).child(0).attr("src").trim());//ссылка на воспроизведение реплики
                             jsonObjectResponse.put("title", response.childNode(response.childNodes().size() - 1).toString().trim());//имя для реплики
                             if (response.childNode(response.childNodes().size() - 1).toString().trim().startsWith("<"))
                                 jsonObjectResponse.put("title", heroName + "_" + countResponses);//имя для реплики без имени
