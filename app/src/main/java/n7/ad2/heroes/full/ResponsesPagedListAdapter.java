@@ -192,8 +192,8 @@ public class ResponsesPagedListAdapter extends PagedListAdapter<Response, Recycl
 
         void inflateIconsForResponse(ResponseModel model) {
             binding.llItemResponseHeroes.removeAllViews();
+            if (model.getIcons().length()==0) return;
             String[] icons = model.getIcons().split("\\+");
-            if (icons.length == 1) return;
 
             int counter = 0;
             LinearLayout linearLayout = new LinearLayout(binding.llItemResponseHeroes.getContext());

@@ -830,9 +830,16 @@ class DotaHeroesParser {
                     if (child.tag().toString().equals("ul")) { //нашли реплики для секции
                         jsonObjectResponse = new JSONObject();
                         for (Element response : child.children()) {
-                            if (response.children().size() == 0)
+                            if(response.children().size()==0)
+                                continue;
+                            if (response.child(0).children().size()==0)
                                 continue;//бывают реплики без URL их незаписываем
                             jsonObjectResponse = new JSONObject();//response.childNode(0).toString().trim()
+
+                            if (countResponses == 120) {
+                                int newPasfdsdf = 5;
+                            }
+
                             jsonObjectResponse.put("href", response.child(0).child(0).attr("src").trim());//ссылка на воспроизведение реплики
                             jsonObjectResponse.put("title", response.childNode(response.childNodes().size() - 1).toString().trim());//имя для реплики
                             if (response.childNode(response.childNodes().size() - 1).toString().trim().startsWith("<"))
