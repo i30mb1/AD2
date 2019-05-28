@@ -23,7 +23,7 @@ class DotaHeroesParser {
 
     public static void main(String[] args) {
 
-        String reHeroes[] = new String[]{"mars"};
+        String reHeroes[] = new String[]{"roshan"};
 
         int count = 0;
         for (String hero : loadHeroesFromFile()) {
