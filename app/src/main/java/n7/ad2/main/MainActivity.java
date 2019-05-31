@@ -190,7 +190,6 @@ public class MainActivity extends BaseActivity {
 //            }
 //        });
 
-
         final BottomSheetDialog bottomSheetDialog = new BottomSheetDialog(this);
         DialogVideoAdBinding binding = DataBindingUtil.inflate(getLayoutInflater(), R.layout.dialog_video_ad, null, false);
         bottomSheetDialog.setContentView(binding.getRoot());
@@ -659,4 +658,8 @@ public class MainActivity extends BaseActivity {
         }, MILLIS_FOR_EXIT);
     }
 
+    @Override
+    public void onAttachedToWindow() {
+        super.onAttachedToWindow();
+    }
 }
