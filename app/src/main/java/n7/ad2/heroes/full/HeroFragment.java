@@ -252,6 +252,14 @@ public class HeroFragment extends Fragment {
                 e.printStackTrace();
             }
         }
+        if (jsonObjectSpell.has("spell")) {
+            try {
+                String name = jsonObjectSpell.getString("spell");
+                spellDescription.tvItemHeroSpellDescriptionText.setText(name);
+            } catch (JSONException e) {
+                e.printStackTrace();
+            }
+        }
 
         if (jsonObjectSpell.has("hot_key")) {
             try {
