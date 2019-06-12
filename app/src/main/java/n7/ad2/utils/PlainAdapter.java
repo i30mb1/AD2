@@ -21,7 +21,7 @@ public class PlainAdapter extends RecyclerView.Adapter<PlainAdapter.Holder> {
     public void onBindViewHolder(@NonNull Holder holder, int position) {
         String name = list.get(position);
         holder.binding.tvItemListPlain.setText(name);
-        float alpha = (1F - (getItemCount() - position) * 0.075F);//для 15 элементов
+        float alpha = (1F - (getItemCount() - position) * 0.040F);//чем меньше число тем больше элементо
         holder.binding.getRoot().setAlpha(alpha);
     }
 

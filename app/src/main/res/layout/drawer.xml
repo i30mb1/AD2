@@ -39,7 +39,7 @@
             android:background="?attr/selectableItemBackground"
             android:contentDescription="@string/setting_tell_friend_title"
             android:onClick="@{()->viewModel.startActivityOptions(context)}"
-
+            android:onLongClick="@{activity::toggleSecretActivity}"
             android:scaleType="center"
             android:tint="?android:textColorPrimary"
             app:layout_constraintBottom_toBottomOf="parent"
@@ -248,6 +248,7 @@
             </LinearLayout>
         </LinearLayout>
 
+        <!--android:visibility="@{activity.rewardedVideoLoaded?View.VISIBLE:View.GONE}"-->
         <ImageButton
             android:id="@+id/b_drawer"
             style="@style/Widget.MaterialComponents.Button.UnelevatedButton"
@@ -258,7 +259,7 @@
             android:contentDescription="@string/setting_tell_friend_title"
             android:onClick="@{(view)->activity.showVideoAD(view)}"
             android:textSize="14sp"
-            android:visibility="@{activity.rewardedVideoLoaded?View.VISIBLE:View.GONE}"
+            android:visibility="gone"
             app:layout_constraintEnd_toStartOf="@+id/b_drawer_counter"
             app:layout_constraintTop_toTopOf="parent"
             app:srcCompat="@drawable/ic_show_video_ad" />
@@ -277,11 +278,12 @@
             app:layout_constraintTop_toTopOf="parent"
             tools:text="0" />
 
+        <!--android:visibility="@{activity.subscription ? View.GONE : View.VISIBLE}"-->
         <android.support.constraint.Group
             android:id="@+id/group"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:visibility="@{activity.subscription ? View.GONE : View.VISIBLE}"
+            android:visibility="gone"
             app:constraint_referenced_ids="b_drawer_counter,b_subscription" />
 
         <ImageButton
@@ -291,12 +293,13 @@
             android:layout_height="40dp"
             android:layout_marginStart="8dp"
             android:layout_marginTop="8dp"
+            android:contentDescription="show dialog about subscription"
             android:onClick="@{()->activity.startSettingWithDonate()}"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent"
             app:srcCompat="@drawable/ic_subscription"
-            android:contentDescription="show dialog about subscription"
-            tools:ignore="HardcodedText" />
+            tools:ignore="HardcodedText"
+            tools:visibility="visible" />
 
     </android.support.constraint.ConstraintLayout>
 </layout>

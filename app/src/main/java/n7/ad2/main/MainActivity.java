@@ -95,7 +95,7 @@ public class MainActivity extends BaseActivity {
     public static final String LOG_ON_RECEIVE = "log";
     public static final String DIALOG_RATE_SHOW = "DIALOG_RATE_SHOW";
     public static final String DIALOG_VIDEO_AD_SAW = "DIALOG_VIDEO_AD_SAW";
-    public static final int ACTION_BEFORE_SHOW_ADVERTISEMENT = 4;
+    public static final int ACTION_BEFORE_SHOW_ADVERTISEMENT = 3;
     private static final String DIALOG_PRE_DONATE_LAST_DAY = "DIALOG_PRE_DONATE_LAST_DAY";
     public ObservableInt observableLastItem = new ObservableInt(1);
     public ObservableBoolean rewardedVideoLoaded = new ObservableBoolean(false);
@@ -142,7 +142,7 @@ public class MainActivity extends BaseActivity {
         setupToolbar();
         setupDrawer();
         setupListeners();
-//        setupSecretActivity();
+        setupSecretActivity();
         setupAD();
 
         setLastFragment();
@@ -210,7 +210,7 @@ public class MainActivity extends BaseActivity {
             log("AD_disabled");
         } else {
             log("AD_enabled");
-            setupVideoAD();
+//            setupVideoAD();
             setupInterstitialAD();
         }
     }
@@ -387,6 +387,7 @@ public class MainActivity extends BaseActivity {
         if (adapter != null) {
             adapter.add(text);
             adapter.notifyDataSetChanged();
+//            adapter.notifyItemChanged(adapter.getItemCount());
             bindingDrawer.rvDrawer.scrollToPosition(adapter.getItemCount() - 1);
         }
     }

@@ -117,6 +117,7 @@
                 android:gravity="center"
                 android:onClick="@{(view)->activity.check(view)}"
                 android:textColor="@{activity.isLoading ? @color/textColorPrimary: @color/textColorPrimary}"
+                android:textSize="24sp"
                 android:textStyle="bold"
                 app:autoSizeMaxTextSize="24sp"
                 app:autoSizeTextType="uniform"
@@ -124,6 +125,8 @@
                 tools:text="@{activity.slot4}" />
 
             <TextView
+                app:autoSizeMaxTextSize="24sp"
+                app:autoSizeTextType="uniform"
                 android:id="@+id/tv_activity_game1P1_2"
                 android:layout_width="75dp"
                 android:layout_height="60dp"
@@ -140,6 +143,8 @@
                 tools:text="@{activity.slot1}" />
 
             <TextView
+                app:autoSizeMaxTextSize="24sp"
+                app:autoSizeTextType="uniform"
                 android:id="@+id/tv_activity_game1P1_3"
                 android:layout_width="75dp"
                 android:layout_height="60dp"
@@ -166,6 +171,7 @@
                 android:gravity="center"
                 android:onClick="@{(view)->activity.check(view)}"
                 android:textColor="@{activity.isLoading ? @color/textColorPrimary: @color/textColorPrimary}"
+                android:textSize="24sp"
                 android:textStyle="bold"
                 app:autoSizeMaxTextSize="24sp"
                 app:autoSizeTextType="uniform"

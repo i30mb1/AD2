@@ -74,6 +74,8 @@ public class HeroesFragment extends Fragment implements SearchView.OnQueryTextLi
     public void onActivityCreated(@Nullable Bundle savedInstanceState) {
         super.onActivityCreated(savedInstanceState);
 
+
+//        getActivity().setTitle(getString(R.string.ad2_toolbar, getString(R.string.heroes)));
         getActivity().setTitle(R.string.heroes);
         getActivity().sendBroadcast(new Intent(LOG_ON_RECEIVE).putExtra(LOG_ON_RECEIVE, "heroes_activity_created"));
         setRetainInstance(true);//фрагмент не уничтожается а передаётся новому активити (пропускает методы onCreate&onDestroy)

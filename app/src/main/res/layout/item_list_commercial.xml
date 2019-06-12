@@ -18,6 +18,8 @@
         android:padding="6dp"
         android:textAllCaps="true"
         android:textSize="14sp"
+        app:autoSizeMaxTextSize="14sp"
+        app:autoSizeTextType="uniform"
         android:textColor="@color/colorPrimaryDark.White"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
