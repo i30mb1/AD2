@@ -266,6 +266,7 @@ public class SplashViewModel extends AndroidViewModel {
             public void run() {
                 FirebaseAnalytics.getInstance(application);
                 MobileAds.initialize(application, ADMOB_APP_ID);
+
             }
         });
     }

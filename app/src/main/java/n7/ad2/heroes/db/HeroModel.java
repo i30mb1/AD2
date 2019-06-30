@@ -6,6 +6,7 @@ import android.arch.persistence.room.PrimaryKey;
 import android.support.annotation.NonNull;
 
 @Entity(tableName = "HeroModel")
+//@Fts4 in Room 2.1 для поиска без LIKE
 public class HeroModel {
 
     @PrimaryKey

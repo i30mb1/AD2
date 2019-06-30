@@ -28,6 +28,23 @@ import android.support.annotation.NonNull;
 import android.support.annotation.Nullable;
 import android.support.v7.app.AlertDialog;
 
+import androidx.work.Constraints;
+import androidx.work.Data;
+import androidx.work.NetworkType;
+import androidx.work.OneTimeWorkRequest;
+import androidx.work.WorkInfo;
+import androidx.work.WorkManager;
+
+import com.google.android.exoplayer2.ExoPlaybackException;
+import com.google.android.exoplayer2.ExoPlayerFactory;
+import com.google.android.exoplayer2.Player;
+import com.google.android.exoplayer2.SimpleExoPlayer;
+import com.google.android.exoplayer2.source.MediaSource;
+import com.google.android.exoplayer2.source.ProgressiveMediaSource;
+import com.google.android.exoplayer2.upstream.DataSource;
+import com.google.android.exoplayer2.upstream.DefaultDataSourceFactory;
+import com.google.android.exoplayer2.util.Util;
+
 import org.json.JSONArray;
 import org.json.JSONObject;
 
@@ -37,12 +54,6 @@ import java.util.LinkedList;
 import java.util.concurrent.Executor;
 import java.util.concurrent.Executors;
 
-import androidx.work.Constraints;
-import androidx.work.Data;
-import androidx.work.NetworkType;
-import androidx.work.OneTimeWorkRequest;
-import androidx.work.WorkInfo;
-import androidx.work.WorkManager;
 import n7.ad2.R;
 import n7.ad2.heroes.db.HeroModel;
 import n7.ad2.heroes.db.HeroesDao;
@@ -57,10 +68,10 @@ import static n7.ad2.splash.SplashViewModel.CURRENT_DAY_IN_APP;
 public class HeroFulViewModel extends AndroidViewModel {
 
     public static final int FILE_EXIST = -7;
+    private final static Executor diskIO = Executors.newSingleThreadExecutor();
     public final SnackbarMessage grandSetting = new SnackbarMessage();
     public final SnackbarMessage grandPermission = new SnackbarMessage();
     public final SnackbarMessage showSnackBar = new SnackbarMessage();
-    private final static Executor diskIO = Executors.newSingleThreadExecutor();
     public MutableLiveData<JSONObject> jsonObjectHeroFull = new MutableLiveData<>();
     public MutableLiveData<JSONArray> jsonArrayHeroAbilities = new MutableLiveData<>();
     public ObservableBoolean isGuideLoading = new ObservableBoolean(false);
@@ -72,7 +83,7 @@ public class HeroFulViewModel extends AndroidViewModel {
     private Application application;
     private ResponsesStorage responsesStorage;
     private ObservableBoolean lastPlaying;
-    private MediaPlayer mediaPlayer = new MediaPlayer();
+    private MediaPlayer mediaPlayer;
 
     public HeroFulViewModel(@NonNull Application application, String heroCode, String heroName) {
         super(application);
@@ -240,13 +251,20 @@ public class HeroFulViewModel extends AndroidViewModel {
                 lastPlaying.set(false);
             }
             model.playing.set(true);
+
+            lastPlaying = model.playing;
+
+            if (Build.VERSION.SDK_INT <= Build.VERSION_CODES.LOLLIPOP) {
+                startExoPlayer(model);
+                return;
+            }
+
             if (mediaPlayer != null) {
                 mediaPlayer.reset();
                 mediaPlayer.release();
             }
+
             mediaPlayer = new MediaPlayer();
-            lastPlaying = model.playing;
-            model.playing.set(true);
 
             File file = new File(application.getExternalFilesDir(Environment.DIRECTORY_RINGTONES) + File.separator + heroCode + File.separator + model.getTitleForFolder());
             if (file.exists()) {
@@ -279,6 +297,31 @@ public class HeroFulViewModel extends AndroidViewModel {
         } catch (IOException e) {
             model.playing.set(false);
         }
+    }
+
+    private void startExoPlayer(final ResponseModel model) {
+        SimpleExoPlayer player = ExoPlayerFactory.newSimpleInstance(application);
+        player.setPlayWhenReady(true);
+        // Produces DataSource instances through which media data is loaded.
+        DataSource.Factory dataSourceFactory = new DefaultDataSourceFactory(application, Util.getUserAgent(application, "ad2"));
+// This is the MediaSource representing the media to be played.
+        MediaSource videoSource = new ProgressiveMediaSource.Factory(dataSourceFactory).createMediaSource(Uri.parse(model.getHref()));
+// Prepare the player with the source.
+        player.prepare(videoSource);
+        player.addListener(new Player.EventListener() {
+            @Override
+            public void onPlayerStateChanged(boolean playWhenReady, int playbackState) {
+                if (playWhenReady && playbackState == Player.STATE_ENDED) {
+                    model.playing.set(false);
+                }
+            }
+
+            @Override
+            public void onPlayerError(ExoPlaybackException error) {
+                model.playing.set(false);
+                showErrorSnackbar();
+            }
+        });
     }
 
     private void showErrorSnackbar() {

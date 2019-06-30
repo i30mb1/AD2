@@ -39,6 +39,9 @@ public interface HeroesDao {
 
     @Query("SELECT * FROM HeroModel WHERE codeName LIKE '%'||:chars||'%'")
     DataSource.Factory<Integer, HeroModel> getDataSourceHeroesFilter(String chars);
+    // in Room 2.1
+//    @Query("SELECT * FROM HeroModel WHERE codeName MATCH :chars")
+//    DataSource.Factory<Integer, HeroModel> getDataSourceHeroesFilter(String chars);
 
     @Query("SELECT * FROM HeroModel WHERE codeName =:codeName")
     LiveData<HeroModel> getHeroByCodeName(String codeName);

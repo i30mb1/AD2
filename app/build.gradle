@@ -45,6 +45,10 @@ android {
         // if true, only report errors.
         ignoreWarnings true
     }
+
+    compileOptions {
+        targetCompatibility JavaVersion.VERSION_1_8
+    }
 }
 
 def gitCommitCount() {
@@ -120,6 +124,8 @@ dependencies {
 
     implementation 'com.google.android.gms:play-services-ads:17.2.0'
 
+//    implementation 'com.google.android.exoplayer:exoplayer:2.10.2'
+    implementation 'com.google.android.exoplayer:exoplayer-core:2.10.2'
     implementation project(':twitch')
     implementation 'com.android.support:multidex:1.0.3'
 }
