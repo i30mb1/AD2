@@ -222,7 +222,7 @@ public class HeroFragment extends Fragment {
     }
 
     private void inflateNotes(JSONObject jsonObjectSpell) {
-        if (jsonObjectSpell.has("notes") && subscription) {
+        if (jsonObjectSpell.has("notes")) {
             ItemHeroDescriptionBinding description = DataBindingUtil.inflate(getLayoutInflater(), R.layout.item_hero_description, binding.llFragmentHeroPersonalDescriptions, false);
             description.tvItemHeroDescription.setText(R.string.hero_fragment_notes);
 
@@ -382,7 +382,7 @@ public class HeroFragment extends Fragment {
                 e.printStackTrace();
             }
         }
-        if (jsonObjectHeroFull.has("trivia") && subscription) {
+        if (jsonObjectHeroFull.has("trivia")) {
             try {
                 ItemHeroDescriptionBinding description = DataBindingUtil.inflate(getLayoutInflater(), R.layout.item_hero_description, binding.llFragmentHeroPersonalDescriptions, false);
                 description.tvItemHeroDescription.setText(R.string.hero_fragment_trivia);
@@ -399,7 +399,7 @@ public class HeroFragment extends Fragment {
                 e.printStackTrace();
             }
         }
-        if (jsonObjectHeroFull.has("tips") && subscription) {
+        if (jsonObjectHeroFull.has("tips")) {
             try {
                 ItemHeroDescriptionBinding description = DataBindingUtil.inflate(getLayoutInflater(), R.layout.item_hero_description, binding.llFragmentHeroPersonalDescriptions, false);
                 description.tvItemHeroDescription.setText(R.string.hero_fragment_tips);
