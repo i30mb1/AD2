@@ -1,26 +1,48 @@
+import java.io.ByteArrayInputStream;
+import java.io.ByteArrayOutputStream;
+import java.io.File;
+import java.io.IOException;
+import java.io.InputStream;
 import java.util.ArrayList;
 import java.util.Arrays;
-import java.util.HashMap;
+import java.util.HashSet;
 import java.util.Iterator;
+import java.util.LinkedHashSet;
 import java.util.LinkedList;
+import java.util.TreeSet;
+import java.util.concurrent.ConcurrentHashMap;
 
-public class CollectionsAndOperations {
+public class CollectionsAndOperations implements Runnable {
 
     public static void main(String[] args) {
 
-        speedArrayListLinkedList();
+        byte[] n7 = {78,55};
+        byte[] empty = new byte[10];
+        ByteArrayInputStream inputStream = new ByteArrayInputStream(n7);
+        int read = 0;
+        try {
+            read = inputStream.read(empty);
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+        for (byte b : empty) {
+            System.out.println((char) b);
+        }
 
-        HashMap<Object, Object> objectObjectHashMap = new HashMap<>();
 
-        // Преобразование массив в ArrayList
-        String[] stringArray = {"a", "b", "c", "d", "e"};
-        ArrayList<String> arrayList = new ArrayList<>(Arrays.asList(stringArray));
-        // Преобразование ArrayList в массив
-        String[] stringArr = new String[arrayList.size()];
-        arrayList.toArray(stringArr);
-        // Объединение элементов массива в строку
-        String j = String.join(", ", new String[]{"a", "b", "c"});
-        System.out.println(j);
+//        speedArrayListLinkedList();
+//
+//        HashMap<Object, Object> objectObjectHashMap = new HashMap<>();
+//
+//        // Преобразование массив в ArrayList
+//        String[] stringArray = {"a", "b", "c", "d", "e"};
+//        ArrayList<String> arrayList = new ArrayList<>(Arrays.asList(stringArray));
+//        // Преобразование ArrayList в массив
+//        String[] stringArr = new String[arrayList.size()];
+//        arrayList.toArray(stringArr);
+//        // Объединение элементов массива в строку
+//        String j = String.join(", ", new String[]{"a", "b", "c"});
+//        System.out.println(j);
 
 
     }
@@ -72,6 +94,11 @@ public class CollectionsAndOperations {
         }
         time_2 = System.currentTimeMillis();
         System.out.println("LinkedList speed reading with iterator = " + (time_2 - time_1));
+
+    }
+
+    @Override
+    public void run() {
 
     }
 }

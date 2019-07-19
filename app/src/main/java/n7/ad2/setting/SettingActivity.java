@@ -1,12 +1,15 @@
 package n7.ad2.setting;
 
+import android.app.PendingIntent;
 import android.content.Intent;
 import android.databinding.DataBindingUtil;
 import android.databinding.ObservableBoolean;
 import android.os.Bundle;
 import android.preference.PreferenceManager;
 import android.support.v7.app.AlertDialog;
+import android.support.v7.widget.RecyclerView;
 import android.view.MenuItem;
+import android.view.MotionEvent;
 
 import com.google.firebase.analytics.FirebaseAnalytics;
 
@@ -80,7 +83,6 @@ public class SettingActivity extends BaseActivity {
     @SuppressWarnings("ConstantConditions")
     public void showDialogDonate() {
         AlertDialog.Builder builder = new AlertDialog.Builder(this);
-
         DialogDonateBinding binding = DataBindingUtil.inflate(getLayoutInflater(), R.layout.dialog_donate, null, false);
         builder.setView(binding.getRoot());
         binding.setActivity(this);
@@ -94,6 +96,7 @@ public class SettingActivity extends BaseActivity {
 
         FirebaseAnalytics firebaseAnalytics = FirebaseAnalytics.getInstance(this);
         firebaseAnalytics.logEvent(FIREBASE_DIALOG_DONATE_SAW, null);
+
     }
 
     private void loadItemsForDialogSubscription() {

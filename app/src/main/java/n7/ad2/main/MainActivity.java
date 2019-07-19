@@ -8,9 +8,14 @@ import android.content.Context;
 import android.content.DialogInterface;
 import android.content.Intent;
 import android.content.IntentFilter;
+import android.content.res.AssetFileDescriptor;
+import android.content.res.AssetManager;
 import android.databinding.DataBindingUtil;
 import android.databinding.ObservableBoolean;
 import android.databinding.ObservableInt;
+import android.graphics.Rect;
+import android.media.AudioManager;
+import android.media.SoundPool;
 import android.net.Uri;
 import android.os.Bundle;
 import android.os.Environment;
@@ -28,10 +33,14 @@ import android.support.transition.TransitionSet;
 import android.support.v4.app.FragmentTransaction;
 import android.support.v7.app.AlertDialog;
 import android.support.v7.widget.LinearLayoutManager;
+import android.view.MotionEvent;
 import android.view.View;
 import android.view.ViewGroup;
 import android.view.animation.LinearInterpolator;
 import android.view.inputmethod.InputMethodManager;
+
+import androidx.work.OneTimeWorkRequest;
+import androidx.work.WorkManager;
 
 import com.google.android.gms.ads.AdListener;
 import com.google.android.gms.ads.AdRequest;
@@ -45,10 +54,9 @@ import com.yarolegovich.slidingrootnav.SlidingRootNav;
 import com.yarolegovich.slidingrootnav.SlidingRootNavBuilder;
 import com.yarolegovich.slidingrootnav.callback.DragStateListener;
 
+import java.io.InputStream;
 import java.util.concurrent.TimeUnit;
 
-import androidx.work.OneTimeWorkRequest;
-import androidx.work.WorkManager;
 import n7.ad2.R;
 import n7.ad2.databinding.ActivityMainBinding;
 import n7.ad2.databinding.DialogPreDonateBinding;
@@ -62,6 +70,7 @@ import n7.ad2.items.ItemsFragment;
 import n7.ad2.news.NewsFragment;
 import n7.ad2.setting.SettingActivity;
 import n7.ad2.streams.StreamsFragment;
+import n7.ad2.streams.retrofit.Stream;
 import n7.ad2.tournaments.TournamentsFragment;
 import n7.ad2.utils.BaseActivity;
 import n7.ad2.utils.PlainAdapter;
@@ -100,6 +109,7 @@ public class MainActivity extends BaseActivity {
     public ObservableInt observableLastItem = new ObservableInt(1);
     public ObservableBoolean rewardedVideoLoaded = new ObservableBoolean(false);
     public ObservableInt freeSubscriptionCounter = new ObservableInt(0);
+    public ObservableBoolean subscription = new ObservableBoolean(false);
     private int timeCounter = -1;
     private boolean doubleBackToExitPressedOnce = false;
     private ConstraintSet constraintSetHidden = new ConstraintSet();
@@ -118,7 +128,6 @@ public class MainActivity extends BaseActivity {
     private boolean shouldUpdateFromMarket;
     private MainViewModel viewModel;
     private RewardedVideoAd rewardedVideoAd;
-    public ObservableBoolean subscription = new ObservableBoolean(false);
     private int currentDay;
     private InterstitialAd interstitialAd;
 
@@ -150,7 +159,7 @@ public class MainActivity extends BaseActivity {
     }
 
     private void updateFreeSubscriptionCounter() {
-        freeSubscriptionCounter.set(PreferenceManager.getDefaultSharedPreferences(this).getInt(FREE_SUBSCRIPTION_COUNTER,0));
+        freeSubscriptionCounter.set(PreferenceManager.getDefaultSharedPreferences(this).getInt(FREE_SUBSCRIPTION_COUNTER, 0));
     }
 
     public void activateSubscription(View view) {
@@ -573,6 +582,47 @@ public class MainActivity extends BaseActivity {
         if (imm != null) {
             imm.hideSoftInputFromWindow(bindingActivity.toolbarActivityMain.getWindowToken(), 0);
         }
+    }
+
+    @Override
+    public boolean dispatchTouchEvent(MotionEvent ev) {
+        float[] x = new float[10];
+        float[] y = new float[10];
+        boolean[] touched = new boolean[10];
+
+        // событие
+        int action = ev.getActionMasked();
+        // индекс косания
+        int index = ev.getActionIndex();
+        // id косания
+        int id = ev.getPointerId(index);
+
+        switch (action) {
+            case MotionEvent.ACTION_DOWN:
+            case MotionEvent.ACTION_POINTER_DOWN:
+                touched[id] = true;
+                x[id] = ev.getX(index);
+                y[id] = ev.getY(index);
+                break;
+            case MotionEvent.ACTION_UP:
+            case MotionEvent.ACTION_POINTER_UP:
+            case MotionEvent.ACTION_CANCEL:
+                touched[id] = false;
+                x[id] = ev.getX(index);
+                y[id] = ev.getY(index);
+                break;
+            case MotionEvent.ACTION_MOVE:
+                // число косаний
+                int count = ev.getPointerCount();
+                for (int i = 0; i < count; i++) {
+                    index = i;
+                    id = ev.getPointerId(index);
+                    x[id] = ev.getX(index);
+                    y[id] = ev.getY(index);
+                }
+                break;
+        }
+        return false;
     }
 
     private void setupDrawer() {
