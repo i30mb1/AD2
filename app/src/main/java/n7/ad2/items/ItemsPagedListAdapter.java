@@ -62,6 +62,7 @@ public class ItemsPagedListAdapter extends PagedListAdapter<ItemModel, ItemsPage
         }
 
         private void bindTo(ItemModel item) {
+            item.setName( item.getName().replace("%27", "'"));
             binding.setItem(item);
             binding.setFragment(fragment);
             binding.executePendingBindings();
