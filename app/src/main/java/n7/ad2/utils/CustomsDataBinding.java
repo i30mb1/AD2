@@ -1,5 +1,6 @@
 package n7.ad2.utils;
 
+import android.animation.ObjectAnimator;
 import android.databinding.BindingAdapter;
 import android.graphics.drawable.Drawable;
 import android.support.v7.widget.RecyclerView;
@@ -8,6 +9,7 @@ import android.view.animation.Animation;
 import android.view.animation.RotateAnimation;
 import android.view.animation.TranslateAnimation;
 import android.widget.ImageView;
+import android.widget.TextView;
 
 import com.squareup.picasso.Picasso;
 
@@ -33,6 +35,19 @@ public class CustomsDataBinding {
     public static void scrollTo(RecyclerView recyclerView, int position) {
         if (recyclerView != null) {
             recyclerView.scrollToPosition(position);
+        }
+    }
+
+    @BindingAdapter("vvv")
+    public static void animateVisibility(View textView, boolean visibility) {
+        if (textView != null) {
+            if (visibility) {
+                if (textView.getAlpha()>0) return;
+                ObjectAnimator.ofFloat(textView, View.ALPHA, 1.0f).setDuration(300L).start();
+            } else {
+                if (textView.getAlpha()<1) return;
+                ObjectAnimator.ofFloat(textView, View.ALPHA, 0.0f).setDuration(300L).start();
+            }
         }
     }
 

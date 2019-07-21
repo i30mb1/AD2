@@ -8,14 +8,10 @@ import android.content.Context;
 import android.content.DialogInterface;
 import android.content.Intent;
 import android.content.IntentFilter;
-import android.content.res.AssetFileDescriptor;
-import android.content.res.AssetManager;
 import android.databinding.DataBindingUtil;
+import android.databinding.ObservableArrayList;
 import android.databinding.ObservableBoolean;
 import android.databinding.ObservableInt;
-import android.graphics.Rect;
-import android.media.AudioManager;
-import android.media.SoundPool;
 import android.net.Uri;
 import android.os.Bundle;
 import android.os.Environment;
@@ -54,7 +50,7 @@ import com.yarolegovich.slidingrootnav.SlidingRootNav;
 import com.yarolegovich.slidingrootnav.SlidingRootNavBuilder;
 import com.yarolegovich.slidingrootnav.callback.DragStateListener;
 
-import java.io.InputStream;
+import java.util.Arrays;
 import java.util.concurrent.TimeUnit;
 
 import n7.ad2.R;
@@ -70,7 +66,6 @@ import n7.ad2.items.ItemsFragment;
 import n7.ad2.news.NewsFragment;
 import n7.ad2.setting.SettingActivity;
 import n7.ad2.streams.StreamsFragment;
-import n7.ad2.streams.retrofit.Stream;
 import n7.ad2.tournaments.TournamentsFragment;
 import n7.ad2.utils.BaseActivity;
 import n7.ad2.utils.PlainAdapter;
@@ -86,8 +81,8 @@ import static n7.ad2.splash.SplashViewModel.FREE_SUBSCRIPTION_DAYS;
 
 public class MainActivity extends BaseActivity {
 
-    public static final int COUNTER_DIALOG_RATE = 11;
-    public static final int COUNTER_DIALOG_DONATE = 18;
+    public static final int COUNTER_DIALOG_RATE = 5;
+    public static final int COUNTER_DIALOG_DONATE = 15;
     public static final String FREE_SUBSCRIPTION_COUNTER = "FREE_SUBSCRIPTION_COUNTER";
 
     public static final String FIREBASE_DIALOG_DONATE_SAW = "DIALOG_DONATE_SAW";
@@ -106,10 +101,14 @@ public class MainActivity extends BaseActivity {
     public static final String DIALOG_VIDEO_AD_SAW = "DIALOG_VIDEO_AD_SAW";
     public static final int ACTION_BEFORE_SHOW_ADVERTISEMENT = 3;
     private static final String DIALOG_PRE_DONATE_LAST_DAY = "DIALOG_PRE_DONATE_LAST_DAY";
+    public static final String EASTER_EGG_ACTIVATED = "EASTER_EGG_ACTIVATED";
+    private boolean easter_egg_value = false;
     public ObservableInt observableLastItem = new ObservableInt(1);
     public ObservableBoolean rewardedVideoLoaded = new ObservableBoolean(false);
     public ObservableInt freeSubscriptionCounter = new ObservableInt(0);
     public ObservableBoolean subscription = new ObservableBoolean(false);
+    ObservableArrayList<Float> movementListX = new ObservableArrayList<>();
+    ObservableArrayList<Float> movementListY = new ObservableArrayList<>();
     private int timeCounter = -1;
     private boolean doubleBackToExitPressedOnce = false;
     private ConstraintSet constraintSetHidden = new ConstraintSet();
@@ -130,6 +129,7 @@ public class MainActivity extends BaseActivity {
     private RewardedVideoAd rewardedVideoAd;
     private int currentDay;
     private InterstitialAd interstitialAd;
+    private boolean shouldDisplayLog;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -144,6 +144,10 @@ public class MainActivity extends BaseActivity {
 
         bindingDrawer = DataBindingUtil.inflate(getLayoutInflater(), R.layout.drawer, null, false);
         bindingDrawer.setViewModel(viewModel);
+        movementListX.addAll(Arrays.asList(new Float[10]));
+        movementListY.addAll(Arrays.asList(new Float[10]));
+        bindingDrawer.setArrayX(movementListX);
+        bindingDrawer.setArrayY(movementListY);
         bindingDrawer.setActivity(this);
 
         setupRecyclerView();
@@ -160,6 +164,7 @@ public class MainActivity extends BaseActivity {
 
     private void updateFreeSubscriptionCounter() {
         freeSubscriptionCounter.set(PreferenceManager.getDefaultSharedPreferences(this).getInt(FREE_SUBSCRIPTION_COUNTER, 0));
+        easter_egg_value = PreferenceManager.getDefaultSharedPreferences(this).getBoolean(EASTER_EGG_ACTIVATED, false);
     }
 
     public void activateSubscription(View view) {
@@ -384,7 +389,7 @@ public class MainActivity extends BaseActivity {
     }
 
     private void setupRecyclerView() {
-        boolean shouldDisplayLog = PreferenceManager.getDefaultSharedPreferences(this).getBoolean(getString(R.string.setting_log_key), true);
+        shouldDisplayLog = PreferenceManager.getDefaultSharedPreferences(this).getBoolean(getString(R.string.setting_log_key), true);
         if (shouldDisplayLog) {
             adapter = viewModel.getAdapter();
             bindingDrawer.rvDrawer.setAdapter(adapter);
@@ -586,10 +591,7 @@ public class MainActivity extends BaseActivity {
 
     @Override
     public boolean dispatchTouchEvent(MotionEvent ev) {
-        float[] x = new float[10];
-        float[] y = new float[10];
-        boolean[] touched = new boolean[10];
-
+        if(!shouldDisplayLog) return super.dispatchTouchEvent(ev);
         // событие
         int action = ev.getActionMasked();
         // индекс косания
@@ -600,29 +602,55 @@ public class MainActivity extends BaseActivity {
         switch (action) {
             case MotionEvent.ACTION_DOWN:
             case MotionEvent.ACTION_POINTER_DOWN:
-                touched[id] = true;
-                x[id] = ev.getX(index);
-                y[id] = ev.getY(index);
+                movementListX.set(id, ev.getX(index));
+                movementListY.set(id, ev.getY(index));
                 break;
             case MotionEvent.ACTION_UP:
             case MotionEvent.ACTION_POINTER_UP:
             case MotionEvent.ACTION_CANCEL:
-                touched[id] = false;
-                x[id] = ev.getX(index);
-                y[id] = ev.getY(index);
+                movementListX.set(id, 0f);
+                movementListY.set(id, 0f);
                 break;
             case MotionEvent.ACTION_MOVE:
                 // число косаний
                 int count = ev.getPointerCount();
+//                log("fingers = " +count);
                 for (int i = 0; i < count; i++) {
                     index = i;
                     id = ev.getPointerId(index);
-                    x[id] = ev.getX(index);
-                    y[id] = ev.getY(index);
+                    movementListX.set(id, ev.getX(index));
+                    movementListY.set(id, ev.getY(index));
+                }
+                if (count > 9) {
+                    showDialogCongratulations();
                 }
                 break;
         }
-        return false;
+        bindingDrawer.setArrayX(movementListX);
+        bindingDrawer.setArrayY(movementListY);
+        return super.dispatchTouchEvent(ev);
+    }
+
+    private void showDialogCongratulations() {
+        if (easter_egg_value) return;
+        final BottomSheetDialog bottomSheetDialog = new BottomSheetDialog(this);
+        DialogVideoAdBinding binding = DataBindingUtil.inflate(getLayoutInflater(), R.layout.dialog_video_ad, null, false);
+        bottomSheetDialog.setContentView(binding.getRoot());
+        binding.bDialogVideoAd.setText(getResources().getText(R.string.EASTER_EGG_OK));
+        binding.tvDialogVideoAdTitle.setText(getResources().getText(R.string.EASTER_EGG));
+        binding.bDialogVideoAd.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                bottomSheetDialog.dismiss();
+                log("EASTER EGG ACTIVATED");
+                log("free_subscription = +1 day");
+                PreferenceManager.getDefaultSharedPreferences(getApplicationContext()).edit().putInt(FREE_SUBSCRIPTION_DAYS, 1).apply();
+                PreferenceManager.getDefaultSharedPreferences(getApplicationContext()).edit().putBoolean(SUBSCRIPTION_PREF, true).apply();
+            }
+        });
+        bottomSheetDialog.show();
+        PreferenceManager.getDefaultSharedPreferences(getApplicationContext()).edit().putBoolean(EASTER_EGG_ACTIVATED, true).apply();
+        easter_egg_value = true;
     }
 
     private void setupDrawer() {

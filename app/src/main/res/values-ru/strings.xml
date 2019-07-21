@@ -60,8 +60,8 @@
     <string name="dialog_donate_subscription">ПОДПИСКА</string>
     <string name="dialog_rate_me_never">Никогда</string>
     <string name="dialog_rate_me_later">Позже</string>
-    <string name="dialog_rate_me_title">Привет, помоги нам сделать приложение лучше!</string>
-    <string name="dialog_rate_me_summary">Оцени приложение в Google Play, напиши что можно сделать лучше. Если нечего написать, напиши что-нибудь милое ^^. Мы знаем что можем расчитывать на тебя!</string>
+    <string name="dialog_rate_me_title">Привет, помоги сделать приложение лучше!</string>
+    <string name="dialog_rate_me_summary">Оцени приложение в Google Play, напиши что можно сделать лучше. Мы знаем что можем расчитывать на тебя! \nP.S. Взамен получи 2 дня подписки</string>
     <string name="all_only_for_subscribers">Только для подписчиков!</string>
     <string name="all_buy">Купить</string>
     <string name="all_come_back_tomorrow">Вернитесь завтра или купите подписку</string>
@@ -120,5 +120,7 @@
     <string name="fragment_game_G3">хватает ли тебе денег?</string>
     <string name="fragment_guide_date">дата гайда / %s</string>
     <string name="zero_free_count_subscription">у вас больше нет бесплатных использований подписки</string>
+    <string name="EASTER_EGG">ТЫ НАШЁЛ ПАСХАЛКУ \nP.S. а ещё попробуйте зажать кнопку настроек на 1–2 сек</string>
+    <string name="EASTER_EGG_OK">Я ПРИНИМАЮ 1 ДЕНЬ ПОДПИСКИ</string>
 
 </resources>

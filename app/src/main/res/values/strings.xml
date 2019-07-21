@@ -109,7 +109,7 @@
     <string name="dialog_rate_me_never">Never</string>
     <string name="dialog_rate_me_later">LATER</string>
     <string name="dialog_rate_me_title">Hello, we need your help!</string>
-    <string name="dialog_rate_me_summary">We want you to rate us in Google Play, describe how can we improve this app. If you have no words you can write something cute ^^. We knew we can count on you!</string>
+    <string name="dialog_rate_me_summary">We want you to rate us in Google Play, describe how can we improve this app. We knew we can count on you! \nP.S. Instead take 2 days of subscription</string>
     <string name="all_only_for_subscribers">Only for Subscribers!</string>
     <string name="all_buy">Buy</string>
     <string name="all_come_back_tomorrow">Come back tomorrow or buy Subscription</string>
@@ -182,5 +182,7 @@
     <string name="fragment_guide_date">guide date / %s</string>
     <string name="zero_free_count_subscription">you have not free subscriptions</string>
     <string name="private_policy" translatable="false">- private policy -</string>
+    <string name="EASTER_EGG">YOU FOUND AN EASTER EGG \nP.S. and try to hold the settings button for 1–2 seconds</string>
+    <string name="EASTER_EGG_OK">I ACCEPT 1 DAY SUBSCRIPTION</string>
 
 </resources>

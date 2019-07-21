@@ -409,18 +409,19 @@ public class StreamsFullActivity extends BaseActivity implements SurfaceHolder.C
     }
 
     private void toggleToolbar() {
+        if (toolbar == null) return;
         if (isToolbarVisible) {
             toolbar.animate().alpha(0.0f).withEndAction(new Runnable() {
                 @Override
                 public void run() {
-                    toolbar.setVisibility(View.GONE);
+                    if (toolbar != null) toolbar.setVisibility(View.GONE);
                 }
             }).setDuration(ANIMATION_DURATION).start();
         } else {
             toolbar.animate().alpha(1.0f).withStartAction(new Runnable() {
                 @Override
                 public void run() {
-                    toolbar.setVisibility(View.VISIBLE);
+                    if (toolbar != null) toolbar.setVisibility(View.VISIBLE);
                     final Handler handler = new Handler();
                     handler.postDelayed(new Runnable() {
                         @Override
@@ -458,6 +459,13 @@ public class StreamsFullActivity extends BaseActivity implements SurfaceHolder.C
         if (mediaPlayer != null && !mediaPlayer.isPlaying()) {
             mediaPlayer.start();
         }
+        new Handler().postDelayed(new Runnable() {
+            @Override
+            public void run() {
+                toggleToolbar();
+            }
+        }, ANIMATION_DURATION+2000);
+
         super.onResume();
     }
 

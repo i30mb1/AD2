@@ -77,6 +77,7 @@ public class HeroFulViewModel extends AndroidViewModel {
     public ObservableBoolean isGuideLoading = new ObservableBoolean(false);
     public MutableLiveData<HeroModel> hero = new MutableLiveData<>();
     public LinkedList<String> responsesInMemory = new LinkedList<>();
+
     public String heroCode;
     public String heroName;
     public HeroesDao heroesDao;

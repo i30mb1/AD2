@@ -28,13 +28,13 @@ class DotaHeroesParser {
         int count = 0;
         for (String hero : loadHeroesFromFile()) {
             String counter = String.format(Locale.US, "% d/%d ", ++count, loadHeroesFromFile().size());
-            loadResponses(hero, counter);
-            loadSpellsAndDescription(hero, counter);
+//            loadResponses(hero, counter);
+//            loadSpellsAndDescription(hero, counter);
         }
 
 //        loadZhItems(false);
         loadRusItems(false);
-        loadEngItems(false);
+//        loadEngItems(false);
     }
 
     private static void loadZhItems(boolean loadImage) {
@@ -90,36 +90,36 @@ class DotaHeroesParser {
                         if (elementItem.tag().toString().equals("h2")) {
                             findAbilities = false;
                         }
-                        if(elementItem.children().size()>1)
-                        if (elementItem.tag().toString().equals("h2") && elementItem.child(0).attr("id").equals("Additional_information") ||
-                                elementItem.child(1).attr("id").equals(".D0.94.D0.BE.D0.BF.D0.BE.D0.BB.D0.BD.D0.B8.D1.82.D0.B5.D0.BB.D1.8C.D0.BD.D0.B0.D1.8F_.D0.B8.D0.BD.D1.84.D0.BE.D1.80.D0.BC.D0.B0.D1.86.D0.B8.D1.8F") ||
-                                elementItem.child(1).attr("id").equals(".E9.A2.9D.E5.A4.96.E4.BF.A1.E6.81.AF")) {
-                            findInfo = true;
-                            continue;
-                        }
-                        if(elementItem.children().size()>1)
-                        if (elementItem.tag().toString().equals("h2") && elementItem.child(0).attr("id").equals("Trivia") ||
-                                elementItem.child(1).attr("id").equals(".E8.8A.B1.E7.B5.AE") ||
-                                elementItem.child(1).attr("id").equals(".D0.98.D0.BD.D1.82.D0.B5.D1.80.D0.B5.D1.81.D0.BD.D1.8B.D0.B5_.D1.84.D0.B0.D0.BA.D1.82.D1.8B")) {
-                            findTrivia = true;
-                            continue;
-                        }
-                        if(elementItem.children().size()>1)
-                        if (elementItem.tag().toString().equals("h2") && elementItem.child(0).attr("id").equals("Tips") ||
-                                elementItem.child(1).attr("id").equals(".D0.98.D0.BD.D1.84.D0.BE.D1.80.D0.BC.D0.B0.D1.86.D0.B8.D1.8F")) {
-                            findTips = true;
-                            continue;
-                        }
-                        if(elementItem.children().size()>1)
-                        if (elementItem.tag().toString().equals("h2") && elementItem.child(0).attr("id").equals("Ability") ||
-                                elementItem.child(0).attr("id").equals("Abilities") ||
-                                elementItem.child(1).attr("id").equals(".E6.8A.80.E8.83.BD") ||
-                                elementItem.child(1).attr("id").equals(".D0.98.D1.81.D0.BF.D0.BE.D0.BB.D1.8C.D0.B7.D0.BE.D0.B2.D0.B0.D0.BD.D0.B8.D0.B5") ||
-                                elementItem.child(1).attr("id").equals(".D0.A1.D0.BF.D0.BE.D1.81.D0.BE.D0.B1.D0.BD.D0.BE.D1.81.D1.82.D0.B8") ||
-                                elementItem.child(1).attr("id").equals(".D0.A1.D0.BF.D0.BE.D1.81.D0.BE.D0.B1.D0.BD.D0.BE.D1.81.D1.82.D1.8C")) {
-                            findAbilities = true;
-                            continue;
-                        }
+                        if (elementItem.children().size() > 1)
+                            if (elementItem.tag().toString().equals("h2") && elementItem.child(0).attr("id").equals("Additional_information") ||
+                                    elementItem.child(1).attr("id").equals(".D0.94.D0.BE.D0.BF.D0.BE.D0.BB.D0.BD.D0.B8.D1.82.D0.B5.D0.BB.D1.8C.D0.BD.D0.B0.D1.8F_.D0.B8.D0.BD.D1.84.D0.BE.D1.80.D0.BC.D0.B0.D1.86.D0.B8.D1.8F") ||
+                                    elementItem.child(1).attr("id").equals(".E9.A2.9D.E5.A4.96.E4.BF.A1.E6.81.AF")) {
+                                findInfo = true;
+                                continue;
+                            }
+                        if (elementItem.children().size() > 1)
+                            if (elementItem.tag().toString().equals("h2") && elementItem.child(0).attr("id").equals("Trivia") ||
+                                    elementItem.child(1).attr("id").equals(".E8.8A.B1.E7.B5.AE") ||
+                                    elementItem.child(1).attr("id").equals(".D0.98.D0.BD.D1.82.D0.B5.D1.80.D0.B5.D1.81.D0.BD.D1.8B.D0.B5_.D1.84.D0.B0.D0.BA.D1.82.D1.8B")) {
+                                findTrivia = true;
+                                continue;
+                            }
+                        if (elementItem.children().size() > 1)
+                            if (elementItem.tag().toString().equals("h2") && elementItem.child(0).attr("id").equals("Tips") ||
+                                    elementItem.child(1).attr("id").equals(".D0.98.D0.BD.D1.84.D0.BE.D1.80.D0.BC.D0.B0.D1.86.D0.B8.D1.8F")) {
+                                findTips = true;
+                                continue;
+                            }
+                        if (elementItem.children().size() > 1)
+                            if (elementItem.tag().toString().equals("h2") && elementItem.child(0).attr("id").equals("Ability") ||
+                                    elementItem.child(0).attr("id").equals("Abilities") ||
+                                    elementItem.child(1).attr("id").equals(".E6.8A.80.E8.83.BD") ||
+                                    elementItem.child(1).attr("id").equals(".D0.98.D1.81.D0.BF.D0.BE.D0.BB.D1.8C.D0.B7.D0.BE.D0.B2.D0.B0.D0.BD.D0.B8.D0.B5") ||
+                                    elementItem.child(1).attr("id").equals(".D0.A1.D0.BF.D0.BE.D1.81.D0.BE.D0.B1.D0.BD.D0.BE.D1.81.D1.82.D0.B8") ||
+                                    elementItem.child(1).attr("id").equals(".D0.A1.D0.BF.D0.BE.D1.81.D0.BE.D0.B1.D0.BD.D0.BE.D1.81.D1.82.D1.8C")) {
+                                findAbilities = true;
+                                continue;
+                            }
                         if (findTrivia) {
                             JSONArray trivia = new JSONArray();
                             for (Element element : elementItem.children()) {
@@ -322,7 +322,6 @@ class DotaHeroesParser {
                     if (itemName.startsWith("/Animal_Courier")) continue;
                     if (itemName.startsWith("/Power_Treads")) continue;
 
-
                     String itemNameImage = itemName.replaceAll("\\(.+\\)", "").trim().replace(" ", "_").replace("\\\\", "");
                     if (loadImage) {
                         String imageUrl = item.child(0).child(0).attr("src");
@@ -351,35 +350,35 @@ class DotaHeroesParser {
                         if (elementItem.tag().toString().equals("h2")) {
                             findAbilities = false;
                         }
-                        if(elementItem.children().size()>1)
-                        if (elementItem.tag().toString().equals("h2") && elementItem.child(0).attr("id").equals("Additional_information") ||
-                                elementItem.child(1).attr("id").equals(".D0.94.D0.BE.D0.BF.D0.BE.D0.BB.D0.BD.D0.B8.D1.82.D0.B5.D0.BB.D1.8C.D0.BD.D0.B0.D1.8F_.D0.B8.D0.BD.D1.84.D0.BE.D1.80.D0.BC.D0.B0.D1.86.D0.B8.D1.8F")) {
-                            findInfo = true;
-                            continue;
-                        }
-                        if(elementItem.children().size()>1)
-                        if (elementItem.tag().toString().equals("h2") && elementItem.child(0).attr("id").equals("Trivia") ||
-                                elementItem.child(1).attr("id").equals(".E8.8A.B1.E7.B5.AE") ||
-                                elementItem.child(1).attr("id").equals(".D0.98.D0.BD.D1.82.D0.B5.D1.80.D0.B5.D1.81.D0.BD.D1.8B.D0.B5_.D1.84.D0.B0.D0.BA.D1.82.D1.8B")) {
-                            findTrivia = true;
-                            continue;
-                        }
-                        if(elementItem.children().size()>1)
-                        if (elementItem.tag().toString().equals("h2") && elementItem.child(0).attr("id").equals("Tips") ||
-                                elementItem.child(1).attr("id").equals(".D0.98.D0.BD.D1.84.D0.BE.D1.80.D0.BC.D0.B0.D1.86.D0.B8.D1.8F")) {
-                            findTips = true;
-                            continue;
-                        }
-                        if(elementItem.children().size()>1)
-                        if (elementItem.tag().toString().equals("h2") && elementItem.child(0).attr("id").equals("Ability") ||
-                                elementItem.child(0).attr("id").equals("Abilities") ||
-                                elementItem.child(1).attr("id").equals(".E6.8A.80.E8.83.BD") ||
-                                elementItem.child(1).attr("id").equals(".D0.98.D1.81.D0.BF.D0.BE.D0.BB.D1.8C.D0.B7.D0.BE.D0.B2.D0.B0.D0.BD.D0.B8.D0.B5") ||
-                                elementItem.child(1).attr("id").equals(".D0.A1.D0.BF.D0.BE.D1.81.D0.BE.D0.B1.D0.BD.D0.BE.D1.81.D1.82.D0.B8") ||
-                                elementItem.child(1).attr("id").equals(".D0.A1.D0.BF.D0.BE.D1.81.D0.BE.D0.B1.D0.BD.D0.BE.D1.81.D1.82.D1.8C")) {
-                            findAbilities = true;
-                            continue;
-                        }
+                        if (elementItem.children().size() > 1)
+                            if (elementItem.tag().toString().equals("h2") && elementItem.child(0).attr("id").equals("Additional_information") ||
+                                    elementItem.child(1).attr("id").equals(".D0.94.D0.BE.D0.BF.D0.BE.D0.BB.D0.BD.D0.B8.D1.82.D0.B5.D0.BB.D1.8C.D0.BD.D0.B0.D1.8F_.D0.B8.D0.BD.D1.84.D0.BE.D1.80.D0.BC.D0.B0.D1.86.D0.B8.D1.8F")) {
+                                findInfo = true;
+                                continue;
+                            }
+                        if (elementItem.children().size() > 1)
+                            if (elementItem.tag().toString().equals("h2") && elementItem.child(0).attr("id").equals("Trivia") ||
+                                    elementItem.child(1).attr("id").equals(".E8.8A.B1.E7.B5.AE") ||
+                                    elementItem.child(1).attr("id").equals(".D0.98.D0.BD.D1.82.D0.B5.D1.80.D0.B5.D1.81.D0.BD.D1.8B.D0.B5_.D1.84.D0.B0.D0.BA.D1.82.D1.8B")) {
+                                findTrivia = true;
+                                continue;
+                            }
+                        if (elementItem.children().size() > 1)
+                            if (elementItem.tag().toString().equals("h2") && elementItem.child(0).attr("id").equals("Tips") ||
+                                    elementItem.child(1).attr("id").equals(".D0.98.D0.BD.D1.84.D0.BE.D1.80.D0.BC.D0.B0.D1.86.D0.B8.D1.8F")) {
+                                findTips = true;
+                                continue;
+                            }
+                        if (elementItem.children().size() > 1)
+                            if (elementItem.tag().toString().equals("h2") && elementItem.child(0).attr("id").equals("Ability") ||
+                                    elementItem.child(0).attr("id").equals("Abilities") ||
+                                    elementItem.child(1).attr("id").equals(".E6.8A.80.E8.83.BD") ||
+                                    elementItem.child(1).attr("id").equals(".D0.98.D1.81.D0.BF.D0.BE.D0.BB.D1.8C.D0.B7.D0.BE.D0.B2.D0.B0.D0.BD.D0.B8.D0.B5") ||
+                                    elementItem.child(1).attr("id").equals(".D0.A1.D0.BF.D0.BE.D1.81.D0.BE.D0.B1.D0.BD.D0.BE.D1.81.D1.82.D0.B8") ||
+                                    elementItem.child(1).attr("id").equals(".D0.A1.D0.BF.D0.BE.D1.81.D0.BE.D0.B1.D0.BD.D0.BE.D1.81.D1.82.D1.8C")) {
+                                findAbilities = true;
+                                continue;
+                            }
                         if (findTrivia) {
                             JSONArray trivia = new JSONArray();
                             for (Element element : elementItem.children()) {
@@ -392,7 +391,7 @@ class DotaHeroesParser {
                         if (elementItem.tag().toString().equals("div") && findAbilities) {
                             JSONObject jsonObjectAbility = new JSONObject();
                             for (Element element : elementItem.child(0).getElementsByTag("div")) {
-                                if (element.attr("style").equals("font-weight: bold; font-cost: 110%; border-bottom: 1px solid black; background-color: #227722; color: white; padding: 3px 5px;")) {
+                                if (element.attr("style").equals("font-weight: bold; font-size: 110%; border-bottom: 1px solid black; background-color: #227722; color: white; padding: 3px 5px;")) {
                                     jsonObjectAbility.put("name", element.childNode(0).toString().substring(1));
                                 }
                                 if (element.attr("style").equals("")) {
@@ -529,7 +528,12 @@ class DotaHeroesParser {
                         }
                     }
                     try {
-                        FileWriter file = new FileWriter("C:\\Users\\i30mb1\\AndroidProjects\\AD2\\app\\src\\main\\assets\\items\\" + itemNameImage.toLowerCase() + "\\ru_description.json");
+                        FileWriter file = null;
+                        if (itemNameImage.toLowerCase().endsWith("_aghanim%27s_scepter")) {
+                            file = new FileWriter("C:\\Users\\i30mb1\\AndroidProjects\\AD2\\app\\src\\main\\assets\\items\\" + "aghanim%27s_blessing" + "\\ru_description.json");
+                        } else {
+                            file = new FileWriter("C:\\Users\\i30mb1\\AndroidProjects\\AD2\\app\\src\\main\\assets\\items\\" + itemNameImage.toLowerCase() + "\\ru_description.json");
+                        }
                         file.write(jsonObjectItem.toJSONString());
                         file.flush();
                         file.close();
@@ -551,7 +555,7 @@ class DotaHeroesParser {
         String itemName = "";
         try {
             String eng = "https://dota2.gamepedia.com";
-            Document docRus = Jsoup.connect("https://dota2-ru.gamepedia.com/%D0%9F%D1%80%D0%B5%D0%B4%D0%BC%D0%B5%D1%82%D1%8B").get();
+            Document docRus = Jsoup.connect("https://dota2.gamepedia.com/Items").get();
 
             int count = 0;
             JSONArray jsonArrayItems = new JSONArray();
@@ -830,9 +834,9 @@ class DotaHeroesParser {
                     if (child.tag().toString().equals("ul")) { //нашли реплики для секции
                         jsonObjectResponse = new JSONObject();
                         for (Element response : child.children()) {
-                            if(response.children().size()==0)
+                            if (response.children().size() == 0)
                                 continue;
-                            if (response.child(0).children().size()==0)
+                            if (response.child(0).children().size() == 0)
                                 continue;//бывают реплики без URL их незаписываем
                             jsonObjectResponse = new JSONObject();//response.childNode(0).toString().trim()
 
@@ -1061,7 +1065,7 @@ class DotaHeroesParser {
                             & !child.attr("class").equals("thumb tright")
                             & !child.attr("style").equals("clear:both")
                             & !child.attr("style").equals("display:flex; flex-direction:column; align-items:center; text-align:center;")
-                            ) {//нашли ветку со способностями
+                    ) {//нашли ветку со способностями
                         jsonObjectAbility = new JSONObject();//создаём обьект для способности
 
                         JSONArray jsonArrayEffects = new JSONArray();//ряд для эфектов
@@ -1135,7 +1139,7 @@ class DotaHeroesParser {
                     file.flush();
                     file.close();
                     if (!URL.contains("-ru") || !URL.contains("-zh")) {
-                        System.out.println("hero " + heroName + " saved " + language + counter +"("+jsonObject.size() +")");
+                        System.out.println("hero " + heroName + " saved " + language + counter + "(" + jsonObject.size() + ")");
                     }
                 } catch (IOException ex) {
                     System.out.println("hero not saved " + URL + heroName);

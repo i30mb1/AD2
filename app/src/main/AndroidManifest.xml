@@ -50,10 +50,9 @@
             android:name=".heroes.full.HeroFullActivity" />
         <activity
             android:name=".streams.StreamsFullActivity"
-            android:configChanges="keyboard|orientation|screenSize|smallestScreenSize|screenLayout"
             android:launchMode="singleTop"
             android:finishOnTaskLaunch="true"
-            android:screenOrientation="landscape" />
+            android:screenOrientation="sensorLandscape" />
         <activity
             android:name=".news.NewsActivity"
             android:screenOrientation="portrait" />

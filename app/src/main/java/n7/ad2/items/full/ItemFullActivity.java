@@ -27,14 +27,14 @@ public class ItemFullActivity extends BaseActivity {
     private String itemFolder;
     private String itemName;
     private String currentLanguage;
-    private boolean subscription;
+    private boolean subscription = true;
     private boolean loadWithError = false;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_item_full);
-        subscription = PreferenceManager.getDefaultSharedPreferences(this).getBoolean(SUBSCRIPTION_PREF, false);
+//        subscription = PreferenceManager.getDefaultSharedPreferences(this).getBoolean(SUBSCRIPTION_PREF, false);
 
         this.itemFolder = getIntent().getStringExtra(ITEM_CODE_NAME);
         this.itemName = getIntent().getStringExtra(ITEM_NAME);
@@ -191,8 +191,8 @@ public class ItemFullActivity extends BaseActivity {
                 for (int i = 0; i < jsonItemDescription.getJSONArray("abilities").length(); i++) {
                     final View item_item_personal_spell = getLayoutInflater().inflate(R.layout.item_item_personal_description, ll_activity_item_full_descriptions, false);
                     JSONObject jsonObject = jsonItemDescription.getJSONArray("abilities").getJSONObject(i);
-                    ((TextView) item_item_personal_spell.findViewById(R.id.tv)).setText(jsonObject.getString("name"));
-                    ((TextView) item_item_personal_spell.findViewById(R.id.ll_item_description)).setText(jsonObject.getString("description"));
+                    if (jsonObject.has("name")) ((TextView) item_item_personal_spell.findViewById(R.id.tv)).setText(jsonObject.getString("name"));
+                    if (jsonObject.has("description"))  ((TextView) item_item_personal_spell.findViewById(R.id.ll_item_description)).setText(jsonObject.getString("description"));
 
                     LinearLayout linearLayout = item_item_personal_spell.findViewById(R.id.ll_items_description);
                     if (jsonObject.has("mp")) {
