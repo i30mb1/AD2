@@ -1,0 +1,31 @@
+{
+  "abilities": [
+    {
+      "effects": [],
+      "notes": [
+        "When a hero has an upgrade available, the item's and the upgraded spell's tooltip states what exactly is upgraded.",
+        "Single target spells with Aghanim's Scepter upgrades that are reflected by Spell Reflection depend on whether the reflecting hero has Aghanim's Scepter, not the original caster of the reflected spell."
+      ],
+      "elements": [
+        "Ability Passive",
+        "Affects Self"
+      ],
+      "description": "Upgrades the ultimate, and some abilities, of all heroes."
+    }
+  ],
+  "cost": "6200",
+  "description": "The scepter of a wizard with demigod-like powers.",
+  "further": [
+    "Aghanim's_Scepter",
+    "Recipe"
+  ],
+  "attrs": [
+    "Passive Ultimate Upgrade",
+    "Disassemble? No",
+    "Alert allies? No"
+  ],
+  "info": [
+    "A hero may only have the Aghanim's Blessing buff once. Alchemist's infused Aghanim's Scepter uses the same buff as the bought upgrade.",
+    "On his third death, Roshan either drops Aghanim's Blessing or a Refresher Shard as a third item, resulting in a 50% chance for either. On his fourth death and onwards, Roshan always drops Aghanim's Blessing as a fourth item. Unlike a bought one, the Aghanim's Blessing dropped by Roshan cannot be sold. Just like Cheese and Refresher Shard, Aghanim's Blessing dropped by Roshan is sharable and can be used by allied and enemy heroes."
+  ]
+}
