@@ -29,7 +29,7 @@ class DotaHeroesParser {
         int size = loadHeroesFromFile().size();
         for (String hero : loadHeroesFromFile()) {
             String counter = String.format(Locale.US, "% d/%d ", ++count, size);
-            loadResponses(hero, counter);
+//            loadResponses(hero, counter);
 //            loadSpellsAndDescription(hero, counter);
         }
 
@@ -882,23 +882,6 @@ class DotaHeroesParser {
                                 lastHref = href;
                                 jsonArrayResponsesForSection.add(jsonObjectResponse);//кладём реплику в секцию для реплик
                             }
-
-//                            jsonObjectResponse.put("href", response.child(0).child(0).attr("src").trim());//ссылка на воспроизведение реплики
-//                            jsonObjectResponse.put("title", response.childNode(response.childNodes().size() - 1).toString().trim());//имя для реплики
-//                            if (response.childNode(response.childNodes().size() - 1).toString().trim().startsWith("<"))
-//                                jsonObjectResponse.put("title", heroName + "_" + countResponses);//имя для реплики без имени
-//                            countResponses = countResponses + 1;
-//                            StringBuilder stringIcons = new StringBuilder();
-//                            if (response.children().size() > 2) {
-//                                for (Element icon : response.children()) {
-//                                    if (icon.attr("href").startsWith("/"))
-//                                        stringIcons.append(icon.attr("href").replace("/", "").toLowerCase()).append("+");
-//                                }
-//                            }
-//                            if (stringIcons.length() > 0)
-//                                jsonObjectResponse.put("icon", stringIcons.toString());
-
-//                            jsonArrayResponsesForSection.add(jsonObjectResponse);//кладём реплику в секцию для реплик
                         }
                         jsonObjectSection.put("responses", jsonArrayResponsesForSection);//кладём всю секцию
                     }
