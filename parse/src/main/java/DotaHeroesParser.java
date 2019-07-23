@@ -23,7 +23,7 @@ class DotaHeroesParser {
 
     public static void main(String[] args) {
 
-        String reHeroes[] = new String[]{"Zeus"};
+        String reHeroes[] = new String[]{"undying"};
 
         int count = 0;
         int size = loadHeroesFromFile().size();
@@ -856,7 +856,10 @@ class DotaHeroesParser {
                                     title = response.childNode(response.childNodes().size() - 1).toString().trim();
                                 } else {
                                     title = response.childNode(response.childNodes().size() - 1).toString().trim();
-                                    if(href.contains("_arc_")) isArcane = true;
+                                    if (href.contains("_arc_") || href.contains("_dem_") || href.contains("_bearform_") || href.contains("_big_")||href.contains("_dragon_")) {
+                                        stringIcons.append(heroName.toLowerCase()).append("_arcane+");
+                                        isArcane = true;
+                                    }
 //                                    title += "( arcane )";
                                 }
                                 jsonObjectResponse.put("title", title);
@@ -871,9 +874,10 @@ class DotaHeroesParser {
                                 }
                                 if (stringIcons.length() > 0) {
                                     jsonObjectResponse.put("icon", stringIcons.toString());
-                                } else if (isArcane) {
-                                    jsonObjectResponse.put("icon", heroName.toLowerCase() + "_arcane");
                                 }
+//                                else if (isArcane) {
+//                                    jsonObjectResponse.put("icon", heroName.toLowerCase() + "_arcane");
+//                                }
                                 lastHref = href;
                                 jsonArrayResponsesForSection.add(jsonObjectResponse);//кладём реплику в секцию для реплик
                             }

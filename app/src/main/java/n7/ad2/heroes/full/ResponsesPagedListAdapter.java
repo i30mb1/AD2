@@ -207,8 +207,7 @@ public class ResponsesPagedListAdapter extends PagedListAdapter<Response, Recycl
                 }
                 final ImageView imageView = (ImageView) inflater.inflate(R.layout.item_response_icon, linearLayout, false);
 //                    imageView.getLayoutParams().height = 20;
-                Picasso.get().load("file:///android_asset/heroes/" + icon.replace("%27", "'") + "/mini.webp")
-                        .into(imageView, new Callback() {
+                Picasso.get().load("file:///android_asset/trash/" + icon + ".webp").into(imageView, new Callback() {
                             @Override
                             public void onSuccess() {
 
@@ -216,8 +215,7 @@ public class ResponsesPagedListAdapter extends PagedListAdapter<Response, Recycl
 
                             @Override
                             public void onError(Exception e) {
-                                Picasso.get().load("file:///android_asset/items/" + icon + "/full.webp")
-                                        .into(imageView, new Callback() {
+                                Picasso.get().load("file:///android_asset/items/" + icon + "/full.webp").into(imageView, new Callback() {
                                             @Override
                                             public void onSuccess() {
 
@@ -225,7 +223,7 @@ public class ResponsesPagedListAdapter extends PagedListAdapter<Response, Recycl
 
                                             @Override
                                             public void onError(Exception e) {
-                                                Picasso.get().load("file:///android_asset/trash/" + icon + ".webp").into(imageView);
+                                                Picasso.get().load("file:///android_asset/heroes/" + icon.replace("%27", "'") + "/mini.webp").into(imageView);
                                             }
                                         });
                             }
