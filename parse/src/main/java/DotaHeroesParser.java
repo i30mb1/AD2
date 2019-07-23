@@ -856,7 +856,8 @@ class DotaHeroesParser {
                                     title = response.childNode(response.childNodes().size() - 1).toString().trim();
                                 } else {
                                     title = response.childNode(response.childNodes().size() - 1).toString().trim();
-                                    if (href.contains("_arc_") || href.contains("_dem_") || href.contains("_bearform_") || href.contains("_big_")||href.contains("_dragon_")) {
+//                                    if (href.contains("_arc_") || href.contains("_dem_") || href.contains("_bearform_") || href.contains("_big_")||href.contains("_dragon_")) {
+                                    if (true) {
                                         stringIcons.append(heroName.toLowerCase()).append("_arcane+");
                                         isArcane = true;
                                     }

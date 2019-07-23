@@ -203,6 +203,7 @@ public class Game3p1 extends AppCompatActivity {
     public void clickNo(View view) {
         lock.set(true);
         if (fakeCostItem.get() == realCostItem.get()) {
+            binding.tvActivityGame3p1SuggestedCost.setText(String.valueOf(fakeCostItem.get()));
             endGame(R.layout.activity_game3p1_final2);
         } else {
             currentScore.set(currentScore.get() + 1);
