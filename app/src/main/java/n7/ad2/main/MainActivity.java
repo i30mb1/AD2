@@ -481,14 +481,18 @@ public class MainActivity extends BaseActivity {
 
     @SuppressWarnings("ConstantConditions")
     private void loadNewVersionFromGitHub() {
-        DownloadManager.Request request = new DownloadManager.Request(Uri.parse(GITHUB_LAST_APK_URL));
-        request.setDescription(getString(R.string.all_new_version));
-        request.setTitle(getString(R.string.app_name));
-        request.setNotificationVisibility(DownloadManager.Request.VISIBILITY_VISIBLE_NOTIFY_COMPLETED);
-        request.setMimeType("application/vnd.android.package-archive");
-        request.setDestinationInExternalPublicDir(Environment.DIRECTORY_DOWNLOADS, getString(R.string.app_name));
-        DownloadManager manager = (DownloadManager) getSystemService(Context.DOWNLOAD_SERVICE);
-        manager.enqueue(request);
+        try {
+            DownloadManager.Request request = new DownloadManager.Request(Uri.parse(GITHUB_LAST_APK_URL));
+            request.setDescription(getString(R.string.all_new_version));
+            request.setTitle(getString(R.string.app_name));
+            request.setNotificationVisibility(DownloadManager.Request.VISIBILITY_VISIBLE_NOTIFY_COMPLETED);
+            request.setMimeType("application/vnd.android.package-archive");
+            request.setDestinationInExternalPublicDir(Environment.DIRECTORY_DOWNLOADS, getString(R.string.app_name));
+            DownloadManager manager = (DownloadManager) getSystemService(Context.DOWNLOAD_SERVICE);
+            manager.enqueue(request);
+        } catch (SecurityException e) {
+            e.printStackTrace();
+        }
     }
 
     private void incCountEnter() {
