@@ -91,7 +91,7 @@ public class MainActivity extends BaseActivity {
     public static final String FIREBASE_DIALOG_RATE_CLICK = "DIALOG_RATE_CLICK";
     public static final String LAST_ITEM = "LAST_ITEM";
     public static final int MILLIS_FOR_EXIT = 2000;
-    public static final String GITHUB_LAST_APK_URL = "https://github.com/i30mb1/AD2/blob/master/app/release/app-release.apk?raw=true";
+    public static final String GITHUB_LAST_APK_URL = "https://github.com/i30mb1/AD2/blob/master/app-release.apk?raw=true";
     public static final String ADMOB_ID = "ca-app-pub-5742225922710304/8697652489";
     public static final String ADMOB_ID_FAKE = "ca-app-pub-3940256099942544/5224354917";
     public static final String ADMOB_ID_BACK = "ca-app-pub-5742225922710304/6328775876";
