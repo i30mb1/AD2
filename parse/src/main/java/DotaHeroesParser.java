@@ -23,13 +23,14 @@ class DotaHeroesParser {
 
     public static void main(String[] args) {
 
-        String reHeroes[] = new String[]{"roshan"};
+        String reHeroes[] = new String[]{"Zeus"};
 
         int count = 0;
+        int size = loadHeroesFromFile().size();
         for (String hero : loadHeroesFromFile()) {
-            String counter = String.format(Locale.US, "% d/%d ", ++count, loadHeroesFromFile().size());
+            String counter = String.format(Locale.US, "% d/%d ", ++count, size);
             loadResponses(hero, counter);
-            loadSpellsAndDescription(hero, counter);
+//            loadSpellsAndDescription(hero, counter);
         }
 
 //        loadZhItems(false);
@@ -838,33 +839,66 @@ class DotaHeroesParser {
                                 continue;
                             if (response.child(0).children().size() == 0)
                                 continue;//бывают реплики без URL их незаписываем
-                            jsonObjectResponse = new JSONObject();//response.childNode(0).toString().trim()
 
-                            if (countResponses == 120) {
-                                int newPasfdsdf = 5;
-                            }
-
-                            jsonObjectResponse.put("href", response.child(0).child(0).attr("src").trim());//ссылка на воспроизведение реплики
-                            jsonObjectResponse.put("title", response.childNode(response.childNodes().size() - 1).toString().trim());//имя для реплики
-                            if (response.childNode(response.childNodes().size() - 1).toString().trim().startsWith("<"))
-                                jsonObjectResponse.put("title", heroName + "_" + countResponses);//имя для реплики без имени
-                            countResponses = countResponses + 1;
-                            StringBuilder stringIcons = new StringBuilder();
-                            if (response.children().size() > 2) {
-                                for (Element icon : response.children()) {
-                                    if (icon.attr("href").startsWith("/"))
-                                        stringIcons.append(icon.attr("href").replace("/", "").toLowerCase()).append("+");
+                            Elements audios = response.getElementsByTag("audio");
+                            boolean firstTime = true;
+                            boolean isArcane = false;
+                            String lastHref = "";
+                            for (Element audio : audios) {
+                                jsonObjectResponse = new JSONObject();//response.childNode(0).toString().trim()
+                                StringBuilder stringIcons = new StringBuilder();
+                                String href = audio.getElementsByTag("audio").get(0).child(0).attr("src");
+                                if(lastHref.equals(href)) break;
+                                jsonObjectResponse.put("href", href);
+                                String title;
+                                if (firstTime) {
+                                    firstTime = false;
+                                    title = response.childNode(response.childNodes().size() - 1).toString().trim();
+                                } else {
+                                    title = response.childNode(response.childNodes().size() - 1).toString().trim();
+                                    if(href.contains("_arc_")) isArcane = true;
+//                                    title += "( arcane )";
                                 }
+                                jsonObjectResponse.put("title", title);
+                                if (response.childNode(response.childNodes().size() - 1).toString().trim().startsWith("<"))
+                                    jsonObjectResponse.put("title", heroName + "_" + countResponses);//имя для реплики без имени
+                                countResponses = countResponses + 1;
+                                if (response.children().size() > 2) {
+                                    for (Element icon : response.children()) {
+                                        if (icon.attr("href").startsWith("/"))
+                                            stringIcons.append(icon.attr("href").replace("/", "").toLowerCase()).append("+");
+                                    }
+                                }
+                                if (stringIcons.length() > 0) {
+                                    jsonObjectResponse.put("icon", stringIcons.toString());
+                                } else if (isArcane) {
+                                    jsonObjectResponse.put("icon", heroName.toLowerCase() + "_arcane");
+                                }
+                                lastHref = href;
+                                jsonArrayResponsesForSection.add(jsonObjectResponse);//кладём реплику в секцию для реплик
                             }
-                            if (stringIcons.length() > 0)
-                                jsonObjectResponse.put("icon", stringIcons.toString());
 
-                            jsonArrayResponsesForSection.add(jsonObjectResponse);//кладём реплику в секцию для реплик
+//                            jsonObjectResponse.put("href", response.child(0).child(0).attr("src").trim());//ссылка на воспроизведение реплики
+//                            jsonObjectResponse.put("title", response.childNode(response.childNodes().size() - 1).toString().trim());//имя для реплики
+//                            if (response.childNode(response.childNodes().size() - 1).toString().trim().startsWith("<"))
+//                                jsonObjectResponse.put("title", heroName + "_" + countResponses);//имя для реплики без имени
+//                            countResponses = countResponses + 1;
+//                            StringBuilder stringIcons = new StringBuilder();
+//                            if (response.children().size() > 2) {
+//                                for (Element icon : response.children()) {
+//                                    if (icon.attr("href").startsWith("/"))
+//                                        stringIcons.append(icon.attr("href").replace("/", "").toLowerCase()).append("+");
+//                                }
+//                            }
+//                            if (stringIcons.length() > 0)
+//                                jsonObjectResponse.put("icon", stringIcons.toString());
+
+//                            jsonArrayResponsesForSection.add(jsonObjectResponse);//кладём реплику в секцию для реплик
                         }
                         jsonObjectSection.put("responses", jsonArrayResponsesForSection);//кладём всю секцию
                     }
                 }
-                jsonArrayHeroes.add(jsonObjectSection);//кладём последнюю секци
+                jsonArrayHeroes.add(jsonObjectSection);//кладём последнюю секцию с репликами
 
                 try {
                     FileWriter file = new FileWriter(System.getProperty("user.dir") + "\\app\\src\\main\\assets\\heroes\\" + heroName.toLowerCase() + "\\" + language + "_responses.json");

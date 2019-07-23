@@ -43,7 +43,8 @@ public class GameFragment extends Fragment implements SharedPreferences.OnShared
     public void onActivityCreated(@Nullable Bundle savedInstanceState) {
         super.onActivityCreated(savedInstanceState);
 
-        subscription.set(PreferenceManager.getDefaultSharedPreferences(getContext()).getBoolean(SUBSCRIPTION_PREF, false));
+//        subscription.set(PreferenceManager.getDefaultSharedPreferences(getContext()).getBoolean(SUBSCRIPTION_PREF, false));
+        subscription.set(true);
         PreferenceManager.getDefaultSharedPreferences(getContext()).registerOnSharedPreferenceChangeListener(this);
         getActivity().setTitle(R.string.games);
         getActivity().sendBroadcast(new Intent(LOG_ON_RECEIVE).putExtra(LOG_ON_RECEIVE, "games_activity_created"));
@@ -89,8 +90,8 @@ public class GameFragment extends Fragment implements SharedPreferences.OnShared
 
     @Override
     public void onSharedPreferenceChanged(SharedPreferences sharedPreferences, String key) {
-        if (key.equals(SUBSCRIPTION_PREF)) {
-            subscription.set(sharedPreferences.getBoolean(key, false));
-        }
+//        if (key.equals(SUBSCRIPTION_PREF)) {
+//            subscription.set(sharedPreferences.getBoolean(key, false));
+//        }
     }
 }

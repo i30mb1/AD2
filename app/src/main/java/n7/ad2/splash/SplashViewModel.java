@@ -57,6 +57,7 @@ public class SplashViewModel extends AndroidViewModel {
     public static final String FREE_MONTH = "free_month";
     private static final String FREE_SUBSCRIPTION_DAY_LAST_USE = "FREE_SUBSCRIPTION_DAY_LAST_USE";
     private static final String NEWS_LOAD_LAST_DAY = "NEWS_LOAD_LAST_DAYY";
+    public static final int DELAY_BEFORE_START_NEW_ACTIVITY = 6000;
     final SingleLiveEvent<Void> startMainActivity = new SingleLiveEvent<>();
     public ObservableField<Drawable> resId = new ObservableField<>();
     public ObservableInt scrollTo = new ObservableInt();
@@ -146,7 +147,7 @@ public class SplashViewModel extends AndroidViewModel {
                 HeroesRoomDatabase.getDatabase(application, diskIO).heroesDao().getAll();
                 ItemsRoomDatabase.getDatabase(application, diskIO).itemsDao().getAll();
                 try {
-                    Thread.sleep(6000);
+                    Thread.sleep(DELAY_BEFORE_START_NEW_ACTIVITY);
                 } catch (InterruptedException e) {
                     e.printStackTrace();
                 }

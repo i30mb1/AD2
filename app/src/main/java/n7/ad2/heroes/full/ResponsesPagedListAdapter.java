@@ -225,7 +225,7 @@ public class ResponsesPagedListAdapter extends PagedListAdapter<Response, Recycl
 
                                             @Override
                                             public void onError(Exception e) {
-
+                                                Picasso.get().load("file:///android_asset/trash/" + icon + ".webp").into(imageView);
                                             }
                                         });
                             }
