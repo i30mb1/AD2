@@ -11,6 +11,8 @@ android {
         targetSdkVersion 28
         versionCode gitCommitCount()
         versionName getGitVersionMessage()
+//        versionCode 1
+//        versionName "1"
 
         dataBinding {
             enabled = true
@@ -128,6 +130,9 @@ dependencies {
     implementation 'com.google.android.exoplayer:exoplayer-core:2.10.2'
     implementation project(':twitch')
     implementation 'com.android.support:multidex:1.0.3'
+
+    // auto update
+    implementation 'com.google.android.play:core:1.6.1'
 }
 
 apply plugin: 'com.google.gms.google-services'

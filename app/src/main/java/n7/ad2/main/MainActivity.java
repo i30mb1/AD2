@@ -8,6 +8,7 @@ import android.content.Context;
 import android.content.DialogInterface;
 import android.content.Intent;
 import android.content.IntentFilter;
+import android.content.IntentSender;
 import android.databinding.DataBindingUtil;
 import android.databinding.ObservableArrayList;
 import android.databinding.ObservableBoolean;
@@ -45,6 +46,17 @@ import com.google.android.gms.ads.MobileAds;
 import com.google.android.gms.ads.reward.RewardItem;
 import com.google.android.gms.ads.reward.RewardedVideoAd;
 import com.google.android.gms.ads.reward.RewardedVideoAdListener;
+import com.google.android.play.core.appupdate.AppUpdateInfo;
+import com.google.android.play.core.appupdate.AppUpdateManager;
+import com.google.android.play.core.appupdate.AppUpdateManagerFactory;
+import com.google.android.play.core.install.InstallState;
+import com.google.android.play.core.install.InstallStateUpdatedListener;
+import com.google.android.play.core.install.model.AppUpdateType;
+import com.google.android.play.core.install.model.InstallStatus;
+import com.google.android.play.core.install.model.UpdateAvailability;
+import com.google.android.play.core.tasks.OnCompleteListener;
+import com.google.android.play.core.tasks.OnSuccessListener;
+import com.google.android.play.core.tasks.Task;
 import com.google.firebase.analytics.FirebaseAnalytics;
 import com.yarolegovich.slidingrootnav.SlidingRootNav;
 import com.yarolegovich.slidingrootnav.SlidingRootNavBuilder;
@@ -100,15 +112,16 @@ public class MainActivity extends BaseActivity {
     public static final String DIALOG_RATE_SHOW = "DIALOG_RATE_SHOW";
     public static final String DIALOG_VIDEO_AD_SAW = "DIALOG_VIDEO_AD_SAW";
     public static final int ACTION_BEFORE_SHOW_ADVERTISEMENT = 3;
-    private static final String DIALOG_PRE_DONATE_LAST_DAY = "DIALOG_PRE_DONATE_LAST_DAY";
     public static final String EASTER_EGG_ACTIVATED = "EASTER_EGG_ACTIVATED";
-    private boolean easter_egg_value = false;
+    private static final String DIALOG_PRE_DONATE_LAST_DAY = "DIALOG_PRE_DONATE_LAST_DAY";
+    private static final int MY_REQUEST_CODE_UPDATE = 17;
     public ObservableInt observableLastItem = new ObservableInt(1);
     public ObservableBoolean rewardedVideoLoaded = new ObservableBoolean(false);
     public ObservableInt freeSubscriptionCounter = new ObservableInt(0);
     public ObservableBoolean subscription = new ObservableBoolean(false);
     ObservableArrayList<Float> movementListX = new ObservableArrayList<>();
     ObservableArrayList<Float> movementListY = new ObservableArrayList<>();
+    private boolean easter_egg_value = false;
     private int timeCounter = -1;
     private boolean doubleBackToExitPressedOnce = false;
     private ConstraintSet constraintSetHidden = new ConstraintSet();
@@ -124,12 +137,22 @@ public class MainActivity extends BaseActivity {
             log(string);
         }
     };
-    private boolean shouldUpdateFromMarket;
+    private boolean shouldUpdateFromMarket = true;
     private MainViewModel viewModel;
     private RewardedVideoAd rewardedVideoAd;
     private int currentDay;
     private InterstitialAd interstitialAd;
     private boolean shouldDisplayLog;
+    private AppUpdateManager appUpdateManager;
+    InstallStateUpdatedListener UpdateListener = new InstallStateUpdatedListener() {
+        @Override
+        public void onStateUpdate(InstallState installState) {
+            if (installState.installStatus() == InstallStatus.DOWNLOADED) {
+                popupSnackbarForCompleteUpdate();
+                if(appUpdateManager!=null) appUpdateManager.unregisterListener(UpdateListener);
+            }
+        }
+    };
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -465,10 +488,74 @@ public class MainActivity extends BaseActivity {
 
     public void loadNewVersion() {
         if (shouldUpdateFromMarket) {
-            loadNewVersionFromMarket();
+            checkInstallUpdate();
         } else {
             loadNewVersionFromGitHub();
         }
+    }
+
+    private void loadNewVersionFlexible() {
+        // Creates instance of the manager.
+        if (appUpdateManager == null) appUpdateManager = AppUpdateManagerFactory.create(this);
+        // Returns an intent object that you use to check for an update.
+        Task<AppUpdateInfo> appUpdateInfoTask = appUpdateManager.getAppUpdateInfo();
+        // Checks that the platform will allow the specified type of update.
+        appUpdateInfoTask.addOnSuccessListener(new OnSuccessListener<AppUpdateInfo>() {
+            @Override
+            public void onSuccess(AppUpdateInfo appUpdateInfo) {
+
+                if (appUpdateInfo.updateAvailability() == UpdateAvailability.UPDATE_AVAILABLE
+                        // For a flexible update, use AppUpdateType.FLEXIBLE
+                        && appUpdateInfo.isUpdateTypeAllowed(AppUpdateType.FLEXIBLE)) {
+                    // Request the update.
+                    try {
+                        appUpdateManager.startUpdateFlowForResult(
+                                // Pass the intent that is returned by 'getAppUpdateInfo()'.
+                                appUpdateInfo,
+                                // Or 'AppUpdateType.FLEXIBLE' for flexible updates.
+                                AppUpdateType.FLEXIBLE,
+                                // The current activity making the update request.
+                                MainActivity.this,
+                                // Include a request code to later monitor this update request.
+                                MY_REQUEST_CODE_UPDATE);
+                    } catch (IntentSender.SendIntentException e) {
+                        log("load_version_flexible = failed");
+                        loadNewVersionFromMarket();
+                    }
+                }
+            }
+        });
+        appUpdateInfoTask.addOnCompleteListener(new OnCompleteListener<AppUpdateInfo>() {
+            @Override
+            public void onComplete(Task<AppUpdateInfo> task) {
+
+            }
+        });
+    }
+
+    @Override
+    protected void onActivityResult(int requestCode, int resultCode, @Nullable Intent data) {
+        super.onActivityResult(requestCode, resultCode, data);
+        if (requestCode == MY_REQUEST_CODE_UPDATE) {
+            if (resultCode == RESULT_OK) {
+                if (appUpdateManager != null) appUpdateManager.registerListener(UpdateListener);
+            } else {
+                log("Update flow failed! Result code: " + resultCode);
+            }
+        }
+    }
+
+    /* Displays the snackbar notification and call to action. */
+    private void popupSnackbarForCompleteUpdate() {
+        Snackbar snackbar = Snackbar.make(bindingActivity.getRoot(), R.string.main_activity_update_me, Snackbar.LENGTH_INDEFINITE);
+        snackbar.setAction(R.string.main_activity_okay, new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                if (appUpdateManager != null) appUpdateManager.completeUpdate();
+            }
+        });
+        snackbar.setActionTextColor(getResources().getColor(R.color.colorAccent));
+        snackbar.show();
     }
 
     private void loadNewVersionFromMarket() {
@@ -595,7 +682,7 @@ public class MainActivity extends BaseActivity {
 
     @Override
     public boolean dispatchTouchEvent(MotionEvent ev) {
-        if(!shouldDisplayLog) return super.dispatchTouchEvent(ev);
+        if (!shouldDisplayLog) return super.dispatchTouchEvent(ev);
         // событие
         int action = ev.getActionMasked();
         // индекс косания
@@ -708,11 +795,32 @@ public class MainActivity extends BaseActivity {
         if (rewardedVideoAd != null) rewardedVideoAd.resume(this);
         log("on_Resume");
         incCountEnter();
-        regReceiver();
+        regReceiverLog();
+//        checkInstallUpdate();
         super.onResume();
     }
 
-    private void regReceiver() {
+    private void checkInstallUpdate() {
+        if (appUpdateManager == null) appUpdateManager = AppUpdateManagerFactory.create(this);
+        appUpdateManager.getAppUpdateInfo().addOnSuccessListener(new OnSuccessListener<AppUpdateInfo>() {
+            @Override
+            public void onSuccess(AppUpdateInfo appUpdateInfo) {
+                // If the update is downloaded but not installed,
+                // notify the user to complete the update.
+                switch (appUpdateInfo.installStatus()) {
+                    case InstallStatus.DOWNLOADED:
+                        popupSnackbarForCompleteUpdate();
+                        break;
+                    case InstallStatus.UNKNOWN:
+                        loadNewVersionFlexible();
+                        break;
+                }
+            }
+        });
+    }
+
+
+    private void regReceiverLog() {
         IntentFilter filter = new IntentFilter();
         filter.addAction(LOG_ON_RECEIVE);
         registerReceiver(broadcastReceiver, filter);

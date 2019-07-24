@@ -184,5 +184,7 @@
     <string name="private_policy" translatable="false">- private policy -</string>
     <string name="EASTER_EGG">YOU FOUND AN EASTER EGG \nP.S. and try to hold the settings button for 1–2 seconds</string>
     <string name="EASTER_EGG_OK">I ACCEPT 1 DAY SUBSCRIPTION</string>
+    <string name="main_activity_update_me">Launch update?</string>
+    <string name="main_activity_okay">Yes</string>
 
 </resources>

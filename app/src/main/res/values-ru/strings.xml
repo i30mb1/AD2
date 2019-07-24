@@ -122,5 +122,6 @@
     <string name="zero_free_count_subscription">у вас больше нет бесплатных использований подписки</string>
     <string name="EASTER_EGG">ТЫ НАШЁЛ ПАСХАЛКУ \nP.S. а ещё попробуйте зажать кнопку настроек на 1–2 сек</string>
     <string name="EASTER_EGG_OK">Я ПРИНИМАЮ 1 ДЕНЬ ПОДПИСКИ</string>
-
+    <string name="main_activity_update_me">Запустить обновление?</string>
+    <string name="main_activity_okay">Да</string>
 </resources>
