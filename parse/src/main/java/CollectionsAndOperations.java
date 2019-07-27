@@ -1,34 +1,23 @@
-import java.io.ByteArrayInputStream;
-import java.io.ByteArrayOutputStream;
-import java.io.File;
-import java.io.IOException;
-import java.io.InputStream;
+import java.io.PrintStream;
+import java.io.UnsupportedEncodingException;
 import java.util.ArrayList;
-import java.util.Arrays;
-import java.util.HashSet;
 import java.util.Iterator;
-import java.util.LinkedHashSet;
 import java.util.LinkedList;
-import java.util.TreeSet;
-import java.util.concurrent.ConcurrentHashMap;
 
 public class CollectionsAndOperations implements Runnable {
 
-    public static void main(String[] args) {
 
-        byte[] n7 = {78,55};
-        byte[] empty = new byte[10];
-        ByteArrayInputStream inputStream = new ByteArrayInputStream(n7);
-        int read = 0;
+
+    public static void main(String[] args) {
+        String convert = ConvertNumber.convert(1211_765);
+
+        PrintStream out = null;
         try {
-            read = inputStream.read(empty);
-        } catch (IOException e) {
+            out = new PrintStream(System.out, true, "windows-1251");
+        } catch (UnsupportedEncodingException e) {
             e.printStackTrace();
         }
-        for (byte b : empty) {
-            System.out.println((char) b);
-        }
-
+        out.println(convert);
 
 //        speedArrayListLinkedList();
 //
@@ -101,4 +90,6 @@ public class CollectionsAndOperations implements Runnable {
     public void run() {
 
     }
+
+
 }

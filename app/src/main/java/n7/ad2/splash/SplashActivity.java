@@ -15,6 +15,7 @@ import android.support.transition.ChangeBounds;
 import android.support.transition.TransitionManager;
 import android.support.transition.TransitionSet;
 import android.support.v7.widget.LinearLayoutManager;
+import android.util.TimingLogger;
 import android.view.View;
 import android.view.ViewGroup;
 import android.view.Window;
@@ -49,6 +50,14 @@ public class SplashActivity extends BaseActivity {
     private SplashViewModel viewModel;
     private ObjectAnimator scaleDown;
     private boolean autoStart = true;
+
+    private void measurementOperations() {
+        //  An idiomatic Android approach to measuring execution time
+        TimingLogger timingLogger = new TimingLogger("N7", "work");
+        timingLogger.addSplit("(1)");
+        timingLogger.dumpToLog();
+        // - adb shell setprop log.tag.N7 VERBOSE
+    }
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {

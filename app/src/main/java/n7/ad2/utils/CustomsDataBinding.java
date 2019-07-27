@@ -3,8 +3,12 @@ package n7.ad2.utils;
 import android.animation.ObjectAnimator;
 import android.databinding.BindingAdapter;
 import android.graphics.drawable.Drawable;
+import android.support.transition.Slide;
 import android.support.v7.widget.RecyclerView;
+import android.support.transition.TransitionManager;
+import android.view.Gravity;
 import android.view.View;
+import android.view.ViewGroup;
 import android.view.animation.Animation;
 import android.view.animation.RotateAnimation;
 import android.view.animation.TranslateAnimation;
@@ -41,12 +45,11 @@ public class CustomsDataBinding {
     @BindingAdapter("vvv")
     public static void animateVisibility(View textView, boolean visibility) {
         if (textView != null) {
+            TransitionManager.beginDelayedTransition((ViewGroup) textView.getRootView(),new Slide(Gravity.START).setDuration(1000));
             if (visibility) {
-                if (textView.getAlpha()>0) return;
-                ObjectAnimator.ofFloat(textView, View.ALPHA, 1.0f).setDuration(300L).start();
+                textView.setVisibility(View.VISIBLE);
             } else {
-                if (textView.getAlpha()<1) return;
-                ObjectAnimator.ofFloat(textView, View.ALPHA, 0.0f).setDuration(300L).start();
+                textView.setVisibility(View.INVISIBLE);
             }
         }
     }
@@ -55,8 +58,10 @@ public class CustomsDataBinding {
     public static void setItBusy(View view, boolean isBusy) {
         Animation animation = view.getAnimation();
         if (isBusy && animation == null) {
+            view.setEnabled(false);
             view.startAnimation(getAnimation());
         } else if (animation != null) {
+            view.setEnabled(true);
             animation.cancel();
             view.setAnimation(null);
         }

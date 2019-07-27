@@ -96,7 +96,7 @@
                 android:layout_height="25dp"
                 android:gravity="center"
                 android:maxLines="1"
-                tools:text="160"
+                android:text="160"
                 android:textColor="?android:textColorSecondary"
                 android:textSize="12sp"
                 android:textStyle="bold" />
@@ -118,7 +118,7 @@
                 android:maxLines="1"
                 android:paddingStart="4dp"
                 android:paddingEnd="4dp"
-                tools:text="1.0"
+                android:text="1.0"
                 android:textColor="?android:textColorSecondary"
                 android:textSize="12sp"
                 android:textStyle="bold" />

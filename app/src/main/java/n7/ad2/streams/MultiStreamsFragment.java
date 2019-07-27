@@ -35,7 +35,7 @@ public class MultiStreamsFragment extends Fragment {
         @Override
         public void onReceive(Context context, Intent intent) {
             if (ll_fragment_multi_streams != null) {
-                ll_fragment_multi_streams.removeView(view.findViewById(intent.getIntExtra("id", 0)));
+                ll_fragment_multi_streams.removeViewInLayout(view.findViewById(intent.getIntExtra("id", 0)));
                 addFragmentStream();
             }
         }
@@ -73,7 +73,7 @@ public class MultiStreamsFragment extends Fragment {
                 addFragmentStream();
                 break;
             case R.id.menu_fragment_streams_open_multitab:
-                FragmentManager fragmentManager = getActivity().getSupportFragmentManager();
+                FragmentManager fragmentManager = getChildFragmentManager();
                 Fragment currentFragment = fragmentManager.findFragmentById(R.id.container_activity_main);
                 FragmentTransaction ft = fragmentManager.beginTransaction();
                 if (currentFragment.getTag() != null && currentFragment.getTag().equals(TAG_ONE_TWITCH)) {

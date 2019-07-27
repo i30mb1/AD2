@@ -478,10 +478,13 @@ public class MainActivity extends BaseActivity {
 //        TransitionManager.beginDelayedTransition((ViewGroup) bindingDrawer.getRoot(), new AutoTransition());
         //применяет все изменения находящиеся в currentSet с анимациями из transitionSet
         currentSet.applyTo((ConstraintLayout) bindingDrawer.getRoot());
+        TransitionManager.beginDelayedTransition((ViewGroup) bindingActivity.getRoot());
         if (currentSet == constraintSetOrigin) {
-            bindingActivity.getRoot().animate().alpha(1.0f).setDuration(500).start();
+            bindingActivity.getRoot().setVisibility(View.VISIBLE);
+//            bindingActivity.getRoot().animate().alpha(1.0f).setDuration(500).start();
         } else {
-            bindingActivity.getRoot().animate().alpha(0.0f).setDuration(500).start();
+            bindingActivity.getRoot().setVisibility(View.INVISIBLE);
+//            bindingActivity.getRoot().animate().alpha(0.0f).setDuration(500).start();
         }
         return true;
     }
