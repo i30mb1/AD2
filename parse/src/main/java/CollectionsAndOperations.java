@@ -19,6 +19,7 @@ public class CollectionsAndOperations implements Runnable {
         }
         out.println(convert);
 
+
 //        speedArrayListLinkedList();
 //
 //        HashMap<Object, Object> objectObjectHashMap = new HashMap<>();

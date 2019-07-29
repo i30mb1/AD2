@@ -12,8 +12,10 @@ import android.arch.paging.PagedList;
 import android.content.ContentResolver;
 import android.content.ContentValues;
 import android.content.Context;
+import android.content.SharedPreferences;
 import android.content.pm.PackageManager;
 import android.databinding.ObservableBoolean;
+import android.databinding.ObservableInt;
 import android.media.MediaPlayer;
 import android.media.RingtoneManager;
 import android.net.ConnectivityManager;
@@ -65,16 +67,21 @@ import static n7.ad2.heroes.full.HeroFullActivity.HERO_CODE_NAME;
 import static n7.ad2.setting.SettingActivity.SUBSCRIPTION_PREF;
 import static n7.ad2.splash.SplashViewModel.CURRENT_DAY_IN_APP;
 
-public class HeroFulViewModel extends AndroidViewModel {
+public class HeroFulViewModel extends AndroidViewModel implements SharedPreferences.OnSharedPreferenceChangeListener {
 
+    public static final String FREE_RESPONSE_FOR_DAY_KEY = "FREE_RESPONSE_FOR_DAY_KEY";
+    public static final int FREE_RESPONSE_FOR_DAY = 10;
     public static final int FILE_EXIST = -7;
     private final static Executor diskIO = Executors.newSingleThreadExecutor();
     public final SnackbarMessage grandSetting = new SnackbarMessage();
     public final SnackbarMessage grandPermission = new SnackbarMessage();
     public final SnackbarMessage showSnackBar = new SnackbarMessage();
+    public ObservableInt counterFreeResponses = new ObservableInt(FREE_RESPONSE_FOR_DAY);
     public MutableLiveData<JSONObject> jsonObjectHeroFull = new MutableLiveData<>();
     public MutableLiveData<JSONArray> jsonArrayHeroAbilities = new MutableLiveData<>();
     public ObservableBoolean isGuideLoading = new ObservableBoolean(false);
+    public ObservableBoolean canDownloadResponses = new ObservableBoolean(true);
+    public ObservableBoolean userSubscription = new ObservableBoolean(false);
     public MutableLiveData<HeroModel> hero = new MutableLiveData<>();
     public LinkedList<String> responsesInMemory = new LinkedList<>();
 
@@ -98,6 +105,29 @@ public class HeroFulViewModel extends AndroidViewModel {
         loadAvailableResponsesInMemory();
         loadResponses(application.getString(R.string.language_resource));
         laodHeroByCodeName(heroCode);
+        loadFreeResponses();
+        loadUserSubscription();
+    }
+
+    @Override
+    public void onSharedPreferenceChanged(SharedPreferences sharedPreferences, String key) {
+        if (key.equals(FREE_RESPONSE_FOR_DAY_KEY)) {
+            loadFreeResponses();
+        }
+    }
+
+    private void loadFreeResponses() {
+        int counter = PreferenceManager.getDefaultSharedPreferences(application).getInt(FREE_RESPONSE_FOR_DAY_KEY, FREE_RESPONSE_FOR_DAY);
+        counterFreeResponses.set(counter);
+        if (counter > 0) {
+            canDownloadResponses.set(true);
+        } else {
+            canDownloadResponses.set(false);
+        }
+    }
+
+    public void decreaseFreeResponses() {
+        PreferenceManager.getDefaultSharedPreferences(application).edit().putInt(FREE_RESPONSE_FOR_DAY_KEY, counterFreeResponses.get() - 1).apply();
     }
 
     private void loadFreshGuideForHero(final HeroModel heroModel) {
@@ -107,6 +137,7 @@ public class HeroFulViewModel extends AndroidViewModel {
                 int currentDay = PreferenceManager.getDefaultSharedPreferences(application).getInt(CURRENT_DAY_IN_APP, 0);
                 int guideLastDay = heroModel.getGuideLastDay();
                 if (currentDay != guideLastDay) {
+                    PreferenceManager.getDefaultSharedPreferences(application).edit().putInt(FREE_RESPONSE_FOR_DAY_KEY, FREE_RESPONSE_FOR_DAY).apply();
                     Constraints constraints = new Constraints.Builder().setRequiredNetworkType(NetworkType.CONNECTED).build();
                     Data data = new Data.Builder().putString(HERO_CODE_NAME, heroCode).build();
                     OneTimeWorkRequest worker = new OneTimeWorkRequest.Builder(GuideWorker.class)
@@ -208,9 +239,9 @@ public class HeroFulViewModel extends AndroidViewModel {
         return pagedListLiveData;
     }
 
-    public boolean userSubscription() {
+    public void loadUserSubscription() {
         boolean subscription = PreferenceManager.getDefaultSharedPreferences(application).getBoolean(SUBSCRIPTION_PREF, false);
-        return subscription;
+        userSubscription.set(subscription);
     }
 
     private boolean isNetworkAvailable() {
@@ -339,6 +370,7 @@ public class HeroFulViewModel extends AndroidViewModel {
             if (file.exists()) {
                 showSnackBar.postValue(FILE_EXIST);
             } else {
+                if (!userSubscription.get()) decreaseFreeResponses();
                 DownloadManager manager = (DownloadManager) application.getSystemService(Context.DOWNLOAD_SERVICE);
                 if (manager != null) {
                     manager.enqueue(new DownloadManager.Request(Uri.parse(model.getHref()))

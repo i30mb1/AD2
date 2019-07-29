@@ -61,7 +61,8 @@ public class GuideFragment extends Fragment {
     public void onCreateOptionsMenu(Menu menu, MenuInflater inflater) {
         super.onCreateOptionsMenu(menu, inflater);
         menu.clear();
-        if (viewModel.userSubscription()) {
+        currentPage = 0;
+        if (viewModel.userSubscription.get()) {
             inflater.inflate(R.menu.menu_fragment_guide_5_button, menu);
         } else {
             inflater.inflate(R.menu.menu_fragment_guide_2_button, menu);

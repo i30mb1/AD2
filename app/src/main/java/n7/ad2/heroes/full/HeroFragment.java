@@ -65,7 +65,7 @@ public class HeroFragment extends Fragment {
 
         viewModel = ViewModelProviders.of(getActivity()).get(HeroFulViewModel.class);
 
-        subscription = viewModel.userSubscription();
+        subscription = viewModel.userSubscription.get();
         currentLocale = getString(R.string.language_resource);
 
         setHasOptionsMenu(true);

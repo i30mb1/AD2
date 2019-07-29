@@ -135,19 +135,17 @@ public class ResponsesPagedListAdapter extends PagedListAdapter<Response, Recycl
     }
 
     public boolean showDialog(Context context, ResponseModel model) {
-        if (viewModel.userSubscription()) {
-            AlertDialog.Builder builder = new AlertDialog.Builder(context);
+        AlertDialog.Builder builder = new AlertDialog.Builder(context);
 
-            DialogResponseBinding binding = DataBindingUtil.inflate(inflater, R.layout.dialog_response, null, false);
-            binding.setModel(model);
-            binding.setViewModel(viewModel);
-            builder.setView(binding.getRoot());
+        DialogResponseBinding binding = DataBindingUtil.inflate(inflater, R.layout.dialog_response, null, false);
+        binding.setModel(model);
+        binding.setViewModel(viewModel);
+        builder.setView(binding.getRoot());
 
-            AlertDialog dialog = builder.create();
-            dialog.getWindow().getAttributes().windowAnimations = R.style.DialogTheme;
-            binding.setDialog(dialog);
-            dialog.show();
-        }
+        AlertDialog dialog = builder.create();
+        dialog.getWindow().getAttributes().windowAnimations = R.style.DialogTheme;
+        binding.setDialog(dialog);
+        dialog.show();
         return true;
     }
 
@@ -194,7 +192,7 @@ public class ResponsesPagedListAdapter extends PagedListAdapter<Response, Recycl
 
         void inflateIconsForResponse(ResponseModel model) {
             binding.llItemResponseHeroes.removeAllViews();
-            if (model.getIcons().length()==0) return;
+            if (model.getIcons().length() == 0) return;
             String[] icons = model.getIcons().split("\\+");
 
             int counter = 0;
