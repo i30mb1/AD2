@@ -117,6 +117,7 @@ public class HeroFulViewModel extends AndroidViewModel implements SharedPreferen
     }
 
     private void loadFreeResponses() {
+        PreferenceManager.getDefaultSharedPreferences(application).registerOnSharedPreferenceChangeListener(this);
         int counter = PreferenceManager.getDefaultSharedPreferences(application).getInt(FREE_RESPONSE_FOR_DAY_KEY, FREE_RESPONSE_FOR_DAY);
         counterFreeResponses.set(counter);
         if (counter > 0) {

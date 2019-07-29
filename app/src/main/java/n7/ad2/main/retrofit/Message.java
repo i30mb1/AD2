@@ -1,12 +1,19 @@
 package n7.ad2.main.retrofit;
 
+import com.google.gson.annotations.SerializedName;
+
 public class Message {
 
+    @SerializedName("twitch")
     private String twitch;
+    @SerializedName("en")
     private String en;
+    @SerializedName("ru")
     private String ru;
+    @SerializedName("n7message")
     private String n7message;
-    private boolean updateFromMarket;
+    @SerializedName("updateFromMarket")
+    private boolean updateFromMarket = true;
 
     public String getTwitch() {
         return twitch;

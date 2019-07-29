@@ -149,7 +149,7 @@ public class MainActivity extends BaseActivity {
         public void onStateUpdate(InstallState installState) {
             if (installState.installStatus() == InstallStatus.DOWNLOADED) {
                 popupSnackbarForCompleteUpdate();
-                if(appUpdateManager!=null) appUpdateManager.unregisterListener(UpdateListener);
+                if (appUpdateManager != null) appUpdateManager.unregisterListener(UpdateListener);
             }
         }
     };
@@ -572,6 +572,7 @@ public class MainActivity extends BaseActivity {
     @SuppressWarnings("ConstantConditions")
     private void loadNewVersionFromGitHub() {
         try {
+            log("Loading latest version from GitHub");
             DownloadManager.Request request = new DownloadManager.Request(Uri.parse(GITHUB_LAST_APK_URL));
             request.setDescription(getString(R.string.all_new_version));
             request.setTitle(getString(R.string.app_name));
@@ -814,6 +815,7 @@ public class MainActivity extends BaseActivity {
                     case InstallStatus.DOWNLOADED:
                         popupSnackbarForCompleteUpdate();
                         break;
+                    default:
                     case InstallStatus.UNKNOWN:
                         loadNewVersionFlexible();
                         break;
