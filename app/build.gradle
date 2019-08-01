@@ -85,7 +85,7 @@ def getGitVersionMessage() {
 
 dependencies {
     implementation fileTree(include: ['*.jar'], dir: 'libs')
-    // Animated TextView
+//     Animated TextView
     implementation 'com.robinhood.ticker:ticker:1.2.2'
     // Navigation
     implementation 'com.yarolegovich:sliding-root-nav:1.1.0'
@@ -106,7 +106,7 @@ dependencies {
     annotationProcessor "android.arch.lifecycle:compiler:1.1.1"
     // Paging
     implementation "android.arch.paging:runtime:1.0.1"
-    // Android
+//     Android
     implementation "com.android.support:recyclerview-v7:28.0.0"
     implementation 'com.android.support:appcompat-v7:28.0.0'
     implementation 'com.android.support:design:28.0.0'
@@ -115,7 +115,7 @@ dependencies {
     implementation 'com.android.support.constraint:constraint-layout:1.1.3'
     // Picasso
     implementation 'com.squareup.picasso:picasso:2.71828'
-    implementation 'jp.wasabeef:picasso-transformations:2.1.2'
+    implementation 'jp.wasabeef:picasso-transformations:2.2.1'
     implementation 'jp.co.cyberagent.android.gpuimage:gpuimage-library:1.4.1'
     // Jsoup для разбора html
     implementation 'org.jsoup:jsoup:1.11.2'

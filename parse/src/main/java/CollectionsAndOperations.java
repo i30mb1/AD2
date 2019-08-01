@@ -1,11 +1,20 @@
 import java.io.PrintStream;
 import java.io.UnsupportedEncodingException;
 import java.util.ArrayList;
+import java.util.HashSet;
 import java.util.Iterator;
+import java.util.LinkedHashSet;
 import java.util.LinkedList;
+import java.util.Set;
+import java.util.TreeSet;
 
 public class CollectionsAndOperations implements Runnable {
 
+    class ky{
+        private int a;
+        int b;
+
+    }
 
 
     public static void main(String[] args) {
@@ -18,6 +27,8 @@ public class CollectionsAndOperations implements Runnable {
             e.printStackTrace();
         }
         out.println(convert);
+
+        HashSet<String> s = new LinkedHashSet<>();
 
 
 //        speedArrayListLinkedList();

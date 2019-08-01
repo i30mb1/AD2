@@ -19,10 +19,10 @@ public class Algorithms {
         System.out.println("Highest number in array " + findHighest(new LinkedList<>(Arrays.asList(numbers))));
         System.out.println("Recursive Sort by ABC" + recursiveSort(new LinkedList<>(Arrays.asList(numbers2))));
         System.out.println("Integer Sum From nums " + Arrays.toString(findIntegerSumFromNums(new int[]{1,45,2,3},4)));
-        System.out.println("Find longest substring " + findLongestSubstring("abcafb"));
+        System.out.println("Find longest substring " + findLongestSubstring("aab"));
 
     }
-    // Специальная нотация «0-болъшое> описывает скорость работы алгоритма (в наихудшей скорости)
+    // Специальная нотация «0-болъшое> описывает скорость работы алгоритма
     // БИНАРНЫЙ ПОИСК O(log n)
     private static Integer binarySearch(Integer[] list, int searchedNumber) { //только для отсартированных масивов или списков
         int low = 0;
