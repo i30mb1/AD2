@@ -11,6 +11,7 @@ import android.os.Bundle;
 import android.os.Handler;
 import android.preference.PreferenceManager;
 import android.support.annotation.Nullable;
+import android.support.design.widget.Snackbar;
 import android.support.transition.ChangeBounds;
 import android.support.transition.TransitionManager;
 import android.support.transition.TransitionSet;

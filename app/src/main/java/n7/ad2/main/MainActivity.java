@@ -468,6 +468,8 @@ public class MainActivity extends BaseActivity {
         currentSet = constraintSetOrigin;
     }
 
+    private boolean modeSecretActivity = false;
+
     public boolean toggleSecretActivity(View view) {
         currentSet = (currentSet == constraintSetOrigin ? constraintSetHidden : constraintSetOrigin);
         TransitionSet transitionSet = new TransitionSet()
@@ -480,11 +482,11 @@ public class MainActivity extends BaseActivity {
         currentSet.applyTo((ConstraintLayout) bindingDrawer.getRoot());
         TransitionManager.beginDelayedTransition((ViewGroup) bindingActivity.getRoot());
         if (currentSet == constraintSetOrigin) {
+            modeSecretActivity = false;
             bindingActivity.getRoot().setVisibility(View.VISIBLE);
-//            bindingActivity.getRoot().animate().alpha(1.0f).setDuration(500).start();
         } else {
+            modeSecretActivity = true;
             bindingActivity.getRoot().setVisibility(View.INVISIBLE);
-//            bindingActivity.getRoot().animate().alpha(0.0f).setDuration(500).start();
         }
         return true;
     }
