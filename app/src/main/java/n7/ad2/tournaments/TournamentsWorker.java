@@ -49,7 +49,7 @@ public class TournamentsWorker extends Worker {
             for (int j = 0; j < matchElements.size(); j++) {
                 TournamentGame game = new TournamentGame();
                 game.url = "https://dota2.ru" + matchElements.get(j).child(0).attr("href");
-                Elements matchElementsChildren = matchElements.get(j).child(0).children();
+                Elements matchElementsChildren = matchElements.get(j).child(1).children();
                 for (int i = 0; i < matchElementsChildren.size(); i++) {
                     matchElementsChildren.get(i);
                     if (matchElementsChildren.get(i).attr("class").equals("team team-left")) {

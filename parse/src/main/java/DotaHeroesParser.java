@@ -5,6 +5,7 @@ import org.json.simple.parser.ParseException;
 import org.jsoup.Jsoup;
 import org.jsoup.nodes.Document;
 import org.jsoup.nodes.Element;
+import org.jsoup.nodes.Node;
 import org.jsoup.select.Elements;
 
 import java.awt.image.BufferedImage;
@@ -851,37 +852,57 @@ class DotaHeroesParser {
                                 if(lastHref.equals(href)) break;
                                 jsonObjectResponse.put("href", href);
                                 String title;
+                                response.getElementsByTag("i").remove();
+
+                                if(response.getElementsByTag("a").size() >=1){
+                                    for (Element a : response.getElementsByTag("a")) {
+                                        if (a.text().startsWith("Link")) {
+                                            a.remove();
+                                        }
+                                    }
+                                    response.getElementsByTag("span").remove();
+                                }
+
                                 if (firstTime) {
                                     firstTime = false;
-                                    title = response.childNode(response.childNodes().size() - 1).toString().trim();
+                                    title = response.text().trim();
                                 } else {
-                                    title = response.childNode(response.childNodes().size() - 1).toString().trim();
+                                    title = response.text().trim();
 //                                    if (href.contains("_arc_") || href.contains("_dem_") || href.contains("_bearform_") || href.contains("_big_")||href.contains("_dragon_")) {
                                     if (true) {
                                         stringIcons.append(heroName.toLowerCase()).append("_arcane+");
                                         isArcane = true;
                                     }
+
 //                                    title += "( arcane )";
                                 }
                                 jsonObjectResponse.put("title", title);
-                                if (response.childNode(response.childNodes().size() - 1).toString().trim().startsWith("<"))
-                                    jsonObjectResponse.put("title", heroName + "_" + countResponses);//имя для реплики без имени
-                                countResponses = countResponses + 1;
-                                if (response.children().size() > 2) {
-                                    for (Element icon : response.children()) {
-                                        if (icon.attr("href").startsWith("/"))
-                                            stringIcons.append(icon.attr("href").replace("/", "").toLowerCase()).append("+");
+                                if (response.childNodes().size() != 0 && response.childNode(response.childNodes().size() - 1).toString().trim().startsWith("<")) {
+                                    jsonObjectResponse.put("title", heroName + "_" + countResponses);//имя для реплики без имени}
+                                }
+                                if(title.length()==0){
+                                    jsonObjectResponse.put("title", heroName + "_" + countResponses);//имя для реплики без имени}
+                                }
+
+                                    countResponses = countResponses + 1;
+                                    if (title.equals("Abyssal filth!")) {
+                                        int stopTheTime = 0;
                                     }
-                                }
-                                if (stringIcons.length() > 0) {
-                                    jsonObjectResponse.put("icon", stringIcons.toString());
-                                }
+                                    if (response.childNodes().size() > 2) {
+                                        for (Node icon : response.childNodes()) {
+                                            if (icon.attr("href").startsWith("/"))
+                                                stringIcons.append(icon.attr("href").replace("/", "").toLowerCase()).append("+");
+                                        }
+                                    }
+                                    if (stringIcons.length() > 0) {
+                                        jsonObjectResponse.put("icon", stringIcons.toString());
+                                    }
 //                                else if (isArcane) {
 //                                    jsonObjectResponse.put("icon", heroName.toLowerCase() + "_arcane");
 //                                }
-                                lastHref = href;
-                                jsonArrayResponsesForSection.add(jsonObjectResponse);//кладём реплику в секцию для реплик
-                            }
+                                    lastHref = href;
+                                    jsonArrayResponsesForSection.add(jsonObjectResponse);//кладём реплику в секцию для реплик
+                                }
                         }
                         jsonObjectSection.put("responses", jsonArrayResponsesForSection);//кладём всю секцию
                     }
