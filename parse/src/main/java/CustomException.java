@@ -1,11 +1,7 @@
 public class CustomException {
 
     public static void main(String[] args) {
-        try {
-            runSuske(1);
-        } catch (NotSasukeUser e) {
-            e.printStackTrace();
-        }
+
     }
 
     private static void runSuske(int i) throws NotSasukeUser{
@@ -18,7 +14,7 @@ public class CustomException {
     }
 
 
-    public static class NotSasukeUser extends Throwable {
+    public static class NotSasukeUser extends RuntimeException {
 
         String message;
 
