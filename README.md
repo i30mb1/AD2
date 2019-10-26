@@ -1,6 +1,7 @@
 # About Dota 2
 All you want to know about dota in one app
-![google play](google_play.png)
+
+![google play](google_play.png)(vk.com)
 
 ## Tech-stack
 * [Jetpack](https://developer.android.com/jetpack)
