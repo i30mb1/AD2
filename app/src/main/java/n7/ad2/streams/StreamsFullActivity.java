@@ -258,7 +258,10 @@ public class StreamsFullActivity extends BaseActivity implements SurfaceHolder.C
                 try {
                     String accessToken = "https://api.twitch.tv/api/channels/" + getIntent().getExtras().getString(CHANNEL_NAME) + "/access_token?client_id=vmr0piicf3e3nxw4fs0zz2e2vqak8y";
                     OkHttpClient client = new OkHttpClient();
-                    Request request = new Request.Builder().url(accessToken).build();
+                    Request request = new Request.Builder().url(accessToken)
+                            .header("Accept","application/vnd.twitchtv.v5+json")
+                            .addHeader("Client-ID","4y4xzjdeymcf1ks882wijv5ezhaqoa")
+                            .build();
                     Response response = client.newCall(request).execute();
                     JSONObject jsonObject = new JSONObject(response.body().string());
                     String token = jsonObject.getString("token");
