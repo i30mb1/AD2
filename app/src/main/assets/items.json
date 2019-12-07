@@ -1,654 +1,894 @@
 [
   {
-    "name": "abyssal_blade",
-    "nameEng": "Abyssal Blade"
+    "nameEng": "Observer Ward",
+    "name": "observer_ward"
   },
   {
-    "name": "aegis_of_the_immortal",
-    "nameEng": "Aegis of the Immortal"
+    "nameEng": "Clarity",
+    "name": "clarity"
   },
   {
-    "name": "aeon_disk",
-    "nameEng": "Aeon Disk"
+    "nameEng": "Town Portal Scroll",
+    "name": "town_portal_scroll"
   },
   {
-    "name": "aether_lens",
-    "nameEng": "Aether Lens"
+    "nameEng": "Enchanted Mango",
+    "name": "enchanted_mango"
   },
   {
-    "name": "aghanim%27s_scepter",
-    "nameEng": "Aghanim%27s Scepter"
+    "nameEng": "Sentry Ward",
+    "name": "sentry_ward"
   },
   {
-    "name": "aghanim%27s_blessing",
-    "nameEng": "Aghanim%27s Blessing"
+    "nameEng": "Smoke of Deceit",
+    "name": "smoke_of_deceit"
   },
   {
-    "name": "arcane_boots",
-    "nameEng": "Arcane Boots"
+    "nameEng": "Dust of Appearance",
+    "name": "dust_of_appearance"
   },
   {
-    "name": "armlet_of_mordiggian",
-    "nameEng": "Armlet of Mordiggian"
+    "nameEng": "Tango",
+    "name": "tango"
   },
   {
-    "name": "assault_cuirass",
-    "nameEng": "Assault Cuirass"
+    "nameEng": "Healing Salve",
+    "name": "healing_salve"
   },
   {
-    "name": "band_of_elvenskin",
-    "nameEng": "Band of Elvenskin"
+    "nameEng": "Faerie Fire",
+    "name": "faerie_fire"
   },
   {
-    "name": "battle_fury",
-    "nameEng": "Battle Fury"
+    "nameEng": "Tome of Knowledge",
+    "name": "tome_of_knowledge"
   },
   {
-    "name": "belt_of_strength",
-    "nameEng": "Belt of Strength"
+    "nameEng": "Bottle",
+    "name": "bottle"
   },
   {
-    "name": "black_king_bar",
-    "nameEng": "Black King Bar"
+    "nameEng": "Iron Branch",
+    "name": "iron_branch"
   },
   {
-    "name": "blade_mail",
-    "nameEng": "Blade Mail"
+    "nameEng": "Gauntlets of Strength",
+    "name": "gauntlets_of_strength"
   },
   {
-    "name": "blade_of_alacrity",
-    "nameEng": "Blade of Alacrity"
+    "nameEng": "Mantle of Intelligence",
+    "name": "mantle_of_intelligence"
   },
   {
-    "name": "blades_of_attack",
-    "nameEng": "Blades of Attack"
+    "nameEng": "Slippers of Agility",
+    "name": "slippers_of_agility"
   },
   {
-    "name": "blight_stone",
-    "nameEng": "Blight Stone"
+    "nameEng": "Circlet",
+    "name": "circlet"
   },
   {
-    "name": "blink_dagger",
-    "nameEng": "Blink Dagger"
+    "nameEng": "Band of Elvenskin",
+    "name": "band_of_elvenskin"
   },
   {
-    "name": "bloodstone",
-    "nameEng": "Bloodstone"
+    "nameEng": "Belt of Strength",
+    "name": "belt_of_strength"
   },
   {
-    "name": "bloodthorn",
-    "nameEng": "Bloodthorn"
+    "nameEng": "Crown",
+    "name": "crown"
   },
   {
-    "name": "boots_of_speed",
-    "nameEng": "Boots of Speed"
+    "nameEng": "Robe of the Magi",
+    "name": "robe_of_the_magi"
   },
   {
-    "name": "boots_of_travel_1",
-    "nameEng": "Boots of Travel 1"
+    "nameEng": "Blade of Alacrity",
+    "name": "blade_of_alacrity"
   },
   {
-    "name": "boots_of_travel_2",
-    "nameEng": "Boots of Travel 2"
+    "nameEng": "Ogre Axe",
+    "name": "ogre_axe"
   },
   {
-    "name": "bottle",
-    "nameEng": "Bottle"
+    "nameEng": "Staff of Wizardry",
+    "name": "staff_of_wizardry"
   },
   {
-    "name": "bracer",
-    "nameEng": "Bracer"
+    "nameEng": "Quelling Blade",
+    "name": "quelling_blade"
   },
   {
-    "name": "broadsword",
-    "nameEng": "Broadsword"
+    "nameEng": "Ring of Protection",
+    "name": "ring_of_protection"
   },
   {
-    "name": "buckler",
-    "nameEng": "Buckler"
+    "nameEng": "Infused Raindrops",
+    "name": "infused_raindrops"
   },
   {
-    "name": "butterfly",
-    "nameEng": "Butterfly"
+    "nameEng": "Blight Stone",
+    "name": "blight_stone"
   },
   {
-    "name": "chainmail",
-    "nameEng": "Chainmail"
+    "nameEng": "Orb of Venom",
+    "name": "orb_of_venom"
   },
   {
-    "name": "cheese",
-    "nameEng": "Cheese"
+    "nameEng": "Blades of Attack",
+    "name": "blades_of_attack"
   },
   {
-    "name": "circlet",
-    "nameEng": "Circlet"
+    "nameEng": "Chainmail",
+    "name": "chainmail"
   },
   {
-    "name": "clarity",
-    "nameEng": "Clarity"
+    "nameEng": "Quarterstaff",
+    "name": "quarterstaff"
   },
   {
-    "name": "claymore",
-    "nameEng": "Claymore"
+    "nameEng": "Helm of Iron Will",
+    "name": "helm_of_iron_will"
   },
   {
-    "name": "cloak",
-    "nameEng": "Cloak"
+    "nameEng": "Javelin",
+    "name": "javelin"
   },
   {
-    "name": "crimson_guard",
-    "nameEng": "Crimson Guard"
+    "nameEng": "Broadsword",
+    "name": "broadsword"
   },
   {
-    "name": "crown",
-    "nameEng": "Crown"
+    "nameEng": "Claymore",
+    "name": "claymore"
   },
   {
-    "name": "crystalys",
-    "nameEng": "Crystalys"
+    "nameEng": "Mithril Hammer",
+    "name": "mithril_hammer"
   },
   {
-    "name": "daedalus",
-    "nameEng": "Daedalus"
+    "nameEng": "Magic Stick",
+    "name": "magic_stick"
   },
   {
-    "name": "dagon_1",
-    "nameEng": "Dagon 1"
+    "nameEng": "Ring of Regen",
+    "name": "ring_of_regen"
   },
   {
-    "name": "dagon_2",
-    "nameEng": "Dagon 2"
+    "nameEng": "Sage%27s Mask",
+    "name": "sage%27s_mask"
   },
   {
-    "name": "dagon_3",
-    "nameEng": "Dagon 3"
+    "nameEng": "Wind Lace",
+    "name": "wind_lace"
   },
   {
-    "name": "dagon_4",
-    "nameEng": "Dagon 4"
+    "nameEng": "Gloves of Haste",
+    "name": "gloves_of_haste"
   },
   {
-    "name": "dagon_5",
-    "nameEng": "Dagon 5"
+    "nameEng": "Boots of Speed",
+    "name": "boots_of_speed"
   },
   {
-    "name": "demon_edge",
-    "nameEng": "Demon Edge"
+    "nameEng": "Cloak",
+    "name": "cloak"
   },
   {
-    "name": "desolator",
-    "nameEng": "Desolator"
+    "nameEng": "Ring of Tarrasque",
+    "name": "ring_of_tarrasque"
   },
   {
-    "name": "diffusal_blade",
-    "nameEng": "Diffusal Blade"
+    "nameEng": "Gem of True Sight",
+    "name": "gem_of_true_sight"
   },
   {
-    "name": "divine_rapier",
-    "nameEng": "Divine Rapier"
+    "nameEng": "Morbid Mask",
+    "name": "morbid_mask"
   },
   {
-    "name": "dragon_lance",
-    "nameEng": "Dragon Lance"
+    "nameEng": "Shadow Amulet",
+    "name": "shadow_amulet"
   },
   {
-    "name": "drum_of_endurance",
-    "nameEng": "Drum of Endurance"
+    "nameEng": "Ghost Scepter",
+    "name": "ghost_scepter"
   },
   {
-    "name": "dust_of_appearance",
-    "nameEng": "Dust of Appearance"
+    "nameEng": "Blink Dagger",
+    "name": "blink_dagger"
   },
   {
-    "name": "eaglesong",
-    "nameEng": "Eaglesong"
+    "nameEng": "Ring of Health",
+    "name": "ring_of_health"
   },
   {
-    "name": "echo_sabre",
-    "nameEng": "Echo Sabre"
+    "nameEng": "Void Stone",
+    "name": "void_stone"
   },
   {
-    "name": "enchanted_mango",
-    "nameEng": "Enchanted Mango"
+    "nameEng": "Energy Booster",
+    "name": "energy_booster"
   },
   {
-    "name": "energy_booster",
-    "nameEng": "Energy Booster"
+    "nameEng": "Vitality Booster",
+    "name": "vitality_booster"
   },
   {
-    "name": "ethereal_blade",
-    "nameEng": "Ethereal Blade"
+    "nameEng": "Point Booster",
+    "name": "point_booster"
   },
   {
-    "name": "eul%27s_scepter_of_divinity",
-    "nameEng": "Eul%27s Scepter of Divinity"
+    "nameEng": "Platemail",
+    "name": "platemail"
   },
   {
-    "name": "eye_of_skadi",
-    "nameEng": "Eye of Skadi"
+    "nameEng": "Talisman of Evasion",
+    "name": "talisman_of_evasion"
   },
   {
-    "name": "faerie_fire",
-    "nameEng": "Faerie Fire"
+    "nameEng": "Hyperstone",
+    "name": "hyperstone"
   },
   {
-    "name": "force_staff",
-    "nameEng": "Force Staff"
+    "nameEng": "Ultimate Orb",
+    "name": "ultimate_orb"
   },
   {
-    "name": "gauntlets_of_strength",
-    "nameEng": "Gauntlets of Strength"
+    "nameEng": "Demon Edge",
+    "name": "demon_edge"
   },
   {
-    "name": "gem_of_true_sight",
-    "nameEng": "Gem of True Sight"
+    "nameEng": "Mystic Staff",
+    "name": "mystic_staff"
   },
   {
-    "name": "ghost_scepter",
-    "nameEng": "Ghost Scepter"
+    "nameEng": "Reaver",
+    "name": "reaver"
   },
   {
-    "name": "glimmer_cape",
-    "nameEng": "Glimmer Cape"
+    "nameEng": "Eaglesong",
+    "name": "eaglesong"
   },
   {
-    "name": "gloves_of_haste",
-    "nameEng": "Gloves of Haste"
+    "nameEng": "Sacred Relic",
+    "name": "sacred_relic"
   },
   {
-    "name": "guardian_greaves",
-    "nameEng": "Guardian Greaves"
+    "nameEng": "Magic Wand",
+    "name": "magic_wand"
   },
   {
-    "name": "hand_of_midas",
-    "nameEng": "Hand of Midas"
+    "nameEng": "Bracer",
+    "name": "bracer"
   },
   {
-    "name": "headdress",
-    "nameEng": "Headdress"
+    "nameEng": "Null Talisman",
+    "name": "null_talisman"
   },
   {
-    "name": "healing_salve",
-    "nameEng": "Healing Salve"
+    "nameEng": "Wraith Band",
+    "name": "wraith_band"
   },
   {
-    "name": "heart_of_tarrasque",
-    "nameEng": "Heart of Tarrasque"
+    "nameEng": "Soul Ring",
+    "name": "soul_ring"
   },
   {
-    "name": "heaven%27s_halberd",
-    "nameEng": "Heaven%27s Halberd"
+    "nameEng": "Phase Boots",
+    "name": "phase_boots"
   },
   {
-    "name": "helm_of_iron_will",
-    "nameEng": "Helm of Iron Will"
+    "nameEng": "Oblivion Staff",
+    "name": "oblivion_staff"
   },
   {
-    "name": "helm_of_the_dominator",
-    "nameEng": "Helm of the Dominator"
+    "nameEng": "Perseverance",
+    "name": "perseverance"
   },
   {
-    "name": "holy_locket",
-    "nameEng": "Holy Locket"
+    "nameEng": "Mask of Madness",
+    "name": "mask_of_madness"
   },
   {
-    "name": "hood_of_defiance",
-    "nameEng": "Hood of Defiance"
+    "nameEng": "Hand of Midas",
+    "name": "hand_of_midas"
   },
   {
-    "name": "hurricane_pike",
-    "nameEng": "Hurricane Pike"
+    "nameEng": "Helm of the Dominator",
+    "name": "helm_of_the_dominator"
   },
   {
-    "name": "hyperstone",
-    "nameEng": "Hyperstone"
+    "nameEng": "Boots of Travel",
+    "name": "boots_of_travel"
   },
   {
-    "name": "infused_raindrop",
-    "nameEng": "Infused Raindrop"
+    "nameEng": "Boots of Travel 1",
+    "name": "boots_of_travel_1"
   },
   {
-    "name": "iron_branch",
-    "nameEng": "Iron Branch"
+    "nameEng": "Moon Shard",
+    "name": "moon_shard"
   },
   {
-    "name": "javelin",
-    "nameEng": "Javelin"
+    "nameEng": "Boots of Travel 2",
+    "name": "boots_of_travel_2"
   },
   {
-    "name": "kaya",
-    "nameEng": "Kaya"
+    "nameEng": "Buckler",
+    "name": "buckler"
   },
   {
-    "name": "kaya_and_sange",
-    "nameEng": "Kaya and Sange"
+    "nameEng": "Headdress",
+    "name": "headdress"
   },
   {
-    "name": "linken%27s_sphere",
-    "nameEng": "Linken%27s Sphere"
+    "nameEng": "Ring of Basilius",
+    "name": "ring_of_basilius"
   },
   {
-    "name": "lotus_orb",
-    "nameEng": "Lotus Orb"
+    "nameEng": "Urn of Shadows",
+    "name": "urn_of_shadows"
   },
   {
-    "name": "maelstrom",
-    "nameEng": "Maelstrom"
+    "nameEng": "Tranquil Boots",
+    "name": "tranquil_boots"
   },
   {
-    "name": "magic_stick",
-    "nameEng": "Magic Stick"
+    "nameEng": "Medallion of Courage",
+    "name": "medallion_of_courage"
   },
   {
-    "name": "magic_wand",
-    "nameEng": "Magic Wand"
+    "nameEng": "Arcane Boots",
+    "name": "arcane_boots"
   },
   {
-    "name": "manta_style",
-    "nameEng": "Manta Style"
+    "nameEng": "Drum of Endurance",
+    "name": "drum_of_endurance"
   },
   {
-    "name": "mantle_of_intelligence",
-    "nameEng": "Mantle of Intelligence"
+    "nameEng": "Mekansm",
+    "name": "mekansm"
   },
   {
-    "name": "mask_of_madness",
-    "nameEng": "Mask of Madness"
+    "nameEng": "Vladmir%27s Offering",
+    "name": "vladmir%27s_offering"
   },
   {
-    "name": "medallion_of_courage",
-    "nameEng": "Medallion of Courage"
+    "nameEng": "Holy Locket",
+    "name": "holy_locket"
   },
   {
-    "name": "mekansm",
-    "nameEng": "Mekansm"
+    "nameEng": "Pipe of Insight",
+    "name": "pipe_of_insight"
   },
   {
-    "name": "meteor_hammer",
-    "nameEng": "Meteor Hammer"
+    "nameEng": "Spirit Vessel",
+    "name": "spirit_vessel"
   },
   {
-    "name": "mithril_hammer",
-    "nameEng": "Mithril Hammer"
+    "nameEng": "Guardian Greaves",
+    "name": "guardian_greaves"
   },
   {
-    "name": "mjollnir",
-    "nameEng": "Mjollnir"
+    "nameEng": "Glimmer Cape",
+    "name": "glimmer_cape"
   },
   {
-    "name": "monkey_king_bar",
-    "nameEng": "Monkey King Bar"
+    "nameEng": "Veil of Discord",
+    "name": "veil_of_discord"
   },
   {
-    "name": "moon_shard",
-    "nameEng": "Moon Shard"
+    "nameEng": "Force Staff",
+    "name": "force_staff"
   },
   {
-    "name": "morbid_mask",
-    "nameEng": "Morbid Mask"
+    "nameEng": "Necronomicon",
+    "name": "necronomicon"
   },
   {
-    "name": "mystic_staff",
-    "nameEng": "Mystic Staff"
+    "nameEng": "Necronomicon 1",
+    "name": "necronomicon_1"
   },
   {
-    "name": "necronomicon_1",
-    "nameEng": "Necronomicon 1"
+    "nameEng": "Aether Lens",
+    "name": "aether_lens"
   },
   {
-    "name": "necronomicon_2",
-    "nameEng": "Necronomicon 2"
+    "nameEng": "Dagon",
+    "name": "dagon"
   },
   {
-    "name": "necronomicon_3",
-    "nameEng": "Necronomicon 3"
+    "nameEng": "Dagon 1",
+    "name": "dagon_1"
   },
   {
-    "name": "null_talisman",
-    "nameEng": "Null Talisman"
+    "nameEng": "Eul%27s Scepter of Divinity",
+    "name": "eul%27s_scepter_of_divinity"
   },
   {
-    "name": "nullifier",
-    "nameEng": "Nullifier"
+    "nameEng": "Rod of Atos",
+    "name": "rod_of_atos"
   },
   {
-    "name": "oblivion_staff",
-    "nameEng": "Oblivion Staff"
+    "nameEng": "Necronomicon 2",
+    "name": "necronomicon_2"
   },
   {
-    "name": "observer_ward",
-    "nameEng": "Observer Ward"
+    "nameEng": "Solar Crest",
+    "name": "solar_crest"
   },
   {
-    "name": "octarine_core",
-    "nameEng": "Octarine Core"
+    "nameEng": "Orchid Malevolence",
+    "name": "orchid_malevolence"
   },
   {
-    "name": "ogre_axe",
-    "nameEng": "Ogre Axe"
+    "nameEng": "Dagon 2",
+    "name": "dagon_2"
   },
   {
-    "name": "orb_of_venom",
-    "nameEng": "Orb of Venom"
+    "nameEng": "Aghanim%27s Scepter",
+    "name": "aghanim%27s_scepter"
   },
   {
-    "name": "orchid_malevolence",
-    "nameEng": "Orchid Malevolence"
+    "nameEng": "Nullifier",
+    "name": "nullifier"
   },
   {
-    "name": "perseverance",
-    "nameEng": "Perseverance"
+    "nameEng": "Necronomicon 3",
+    "name": "necronomicon_3"
   },
   {
-    "name": "phase_boots",
-    "nameEng": "Phase Boots"
+    "nameEng": "Refresher Orb",
+    "name": "refresher_orb"
   },
   {
-    "name": "pipe_of_insight",
-    "nameEng": "Pipe of Insight"
+    "nameEng": "Dagon 3",
+    "name": "dagon_3"
   },
   {
-    "name": "platemail",
-    "nameEng": "Platemail"
+    "nameEng": "Scythe of Vyse",
+    "name": "scythe_of_vyse"
   },
   {
-    "name": "point_booster",
-    "nameEng": "Point Booster"
+    "nameEng": "Octarine Core",
+    "name": "octarine_core"
   },
   {
-    "name": "quarterstaff",
-    "nameEng": "Quarterstaff"
+    "nameEng": "Aghanim%27s Blessing",
+    "name": "aghanim%27s_blessing"
   },
   {
-    "name": "quelling_blade",
-    "nameEng": "Quelling Blade"
+    "nameEng": "Hood of Defiance",
+    "name": "hood_of_defiance"
   },
   {
-    "name": "radiance",
-    "nameEng": "Radiance"
+    "nameEng": "Vanguard",
+    "name": "vanguard"
   },
   {
-    "name": "reaver",
-    "nameEng": "Reaver"
+    "nameEng": "Blade Mail",
+    "name": "blade_mail"
   },
   {
-    "name": "refresher_orb",
-    "nameEng": "Refresher Orb"
+    "nameEng": "Aeon Disk",
+    "name": "aeon_disk"
   },
   {
-    "name": "refresher_shard",
-    "nameEng": "Refresher Shard"
+    "nameEng": "Soul Booster",
+    "name": "soul_booster"
   },
   {
-    "name": "ring_of_basilius",
-    "nameEng": "Ring of Basilius"
+    "nameEng": "Crimson Guard",
+    "name": "crimson_guard"
   },
   {
-    "name": "ring_of_health",
-    "nameEng": "Ring of Health"
+    "nameEng": "Lotus Orb",
+    "name": "lotus_orb"
   },
   {
-    "name": "ring_of_protection",
-    "nameEng": "Ring of Protection"
+    "nameEng": "Black King Bar",
+    "name": "black_king_bar"
   },
   {
-    "name": "ring_of_regen",
-    "nameEng": "Ring of Regen"
+    "nameEng": "Hurricane Pike",
+    "name": "hurricane_pike"
   },
   {
-    "name": "ring_of_tarrasque",
-    "nameEng": "Ring of Tarrasque"
+    "nameEng": "Manta Style",
+    "name": "manta_style"
   },
   {
-    "name": "robe_of_the_magi",
-    "nameEng": "Robe of the Magi"
+    "nameEng": "Shiva%27s Guard",
+    "name": "shiva%27s_guard"
   },
   {
-    "name": "rod_of_atos",
-    "nameEng": "Rod of Atos"
+    "nameEng": "Linken%27s Sphere",
+    "name": "linken%27s_sphere"
   },
   {
-    "name": "sacred_relic",
-    "nameEng": "Sacred Relic"
+    "nameEng": "Assault Cuirass",
+    "name": "assault_cuirass"
   },
   {
-    "name": "sage%27s_mask",
-    "nameEng": "Sage%27s Mask"
+    "nameEng": "Heart of Tarrasque",
+    "name": "heart_of_tarrasque"
   },
   {
-    "name": "sange",
-    "nameEng": "Sange"
+    "nameEng": "Bloodstone",
+    "name": "bloodstone"
   },
   {
-    "name": "sange_and_yasha",
-    "nameEng": "Sange and Yasha"
+    "nameEng": "Crystalys",
+    "name": "crystalys"
   },
   {
-    "name": "satanic",
-    "nameEng": "Satanic"
+    "nameEng": "Armlet of Mordiggian",
+    "name": "armlet_of_mordiggian"
   },
   {
-    "name": "scythe_of_vyse",
-    "nameEng": "Scythe of Vyse"
+    "nameEng": "Meteor Hammer",
+    "name": "meteor_hammer"
   },
   {
-    "name": "sentry_ward",
-    "nameEng": "Sentry Ward"
+    "nameEng": "Shadow Blade",
+    "name": "shadow_blade"
   },
   {
-    "name": "shadow_amulet",
-    "nameEng": "Shadow Amulet"
+    "nameEng": "Skull Basher",
+    "name": "skull_basher"
   },
   {
-    "name": "shadow_blade",
-    "nameEng": "Shadow Blade"
+    "nameEng": "Monkey King Bar",
+    "name": "monkey_king_bar"
   },
   {
-    "name": "shiva%27s_guard",
-    "nameEng": "Shiva%27s Guard"
+    "nameEng": "Battle Fury",
+    "name": "battle_fury"
   },
   {
-    "name": "silver_edge",
-    "nameEng": "Silver Edge"
+    "nameEng": "Ethereal Blade",
+    "name": "ethereal_blade"
   },
   {
-    "name": "skull_basher",
-    "nameEng": "Skull Basher"
+    "nameEng": "Radiance",
+    "name": "radiance"
   },
   {
-    "name": "slippers_of_agility",
-    "nameEng": "Slippers of Agility"
+    "nameEng": "Daedalus",
+    "name": "daedalus"
   },
   {
-    "name": "smoke_of_deceit",
-    "nameEng": "Smoke of Deceit"
+    "nameEng": "Butterfly",
+    "name": "butterfly"
   },
   {
-    "name": "solar_crest",
-    "nameEng": "Solar Crest"
+    "nameEng": "Silver Edge",
+    "name": "silver_edge"
   },
   {
-    "name": "soul_booster",
-    "nameEng": "Soul Booster"
+    "nameEng": "Divine Rapier",
+    "name": "divine_rapier"
   },
   {
-    "name": "soul_ring",
-    "nameEng": "Soul Ring"
+    "nameEng": "Abyssal Blade",
+    "name": "abyssal_blade"
   },
   {
-    "name": "spirit_vessel",
-    "nameEng": "Spirit Vessel"
+    "nameEng": "Bloodthorn",
+    "name": "bloodthorn"
   },
   {
-    "name": "staff_of_wizardry",
-    "nameEng": "Staff of Wizardry"
+    "nameEng": "Dragon Lance",
+    "name": "dragon_lance"
   },
   {
-    "name": "stout_shield",
-    "nameEng": "Stout Shield"
+    "nameEng": "Kaya",
+    "name": "kaya"
   },
   {
-    "name": "talisman_of_evasion",
-    "nameEng": "Talisman of Evasion"
+    "nameEng": "Sange",
+    "name": "sange"
   },
   {
-    "name": "tango",
-    "nameEng": "Tango"
+    "nameEng": "Yasha",
+    "name": "yasha"
   },
   {
-    "name": "tome_of_knowledge",
-    "nameEng": "Tome of Knowledge"
+    "nameEng": "Echo Sabre",
+    "name": "echo_sabre"
   },
   {
-    "name": "town_portal_scroll",
-    "nameEng": "Town Portal Scroll"
+    "nameEng": "Maelstrom",
+    "name": "maelstrom"
   },
   {
-    "name": "tranquil_boots",
-    "nameEng": "Tranquil Boots"
+    "nameEng": "Diffusal Blade",
+    "name": "diffusal_blade"
   },
   {
-    "name": "ultimate_orb",
-    "nameEng": "Ultimate Orb"
+    "nameEng": "Heaven%27s Halberd",
+    "name": "heaven%27s_halberd"
   },
   {
-    "name": "urn_of_shadows",
-    "nameEng": "Urn of Shadows"
+    "nameEng": "Desolator",
+    "name": "desolator"
   },
   {
-    "name": "vanguard",
-    "nameEng": "Vanguard"
+    "nameEng": "Kaya and Sange",
+    "name": "kaya_and_sange"
   },
   {
-    "name": "veil_of_discord",
-    "nameEng": "Veil of Discord"
+    "nameEng": "Sange and Yasha",
+    "name": "sange_and_yasha"
   },
   {
-    "name": "vitality_booster",
-    "nameEng": "Vitality Booster"
+    "nameEng": "Yasha and Kaya",
+    "name": "yasha_and_kaya"
   },
   {
-    "name": "vladmir%27s_offering",
-    "nameEng": "Vladmir%27s Offering"
+    "nameEng": "Satanic",
+    "name": "satanic"
   },
   {
-    "name": "void_stone",
-    "nameEng": "Void Stone"
+    "nameEng": "Eye of Skadi",
+    "name": "eye_of_skadi"
   },
   {
-    "name": "wind_lace",
-    "nameEng": "Wind Lace"
+    "nameEng": "Mjollnir",
+    "name": "mjollnir"
   },
   {
-    "name": "wraith_band",
-    "nameEng": "Wraith Band"
+    "nameEng": "Aegis of the Immortal",
+    "name": "aegis_of_the_immortal"
   },
   {
-    "name": "yasha",
-    "nameEng": "Yasha"
+    "nameEng": "Cheese",
+    "name": "cheese"
   },
   {
-    "name": "yasha_and_kaya",
-    "nameEng": "Yasha and Kaya"
+    "nameEng": "Refresher Shard",
+    "name": "refresher_shard"
+  },
+  {
+    "nameEng": "Arcane Ring",
+    "name": "arcane_ring"
+  },
+  {
+    "nameEng": "Broom Handle",
+    "name": "broom_handle"
+  },
+  {
+    "nameEng": "Elixir",
+    "name": "elixir"
+  },
+  {
+    "nameEng": "Faded Broach",
+    "name": "faded_broach"
+  },
+  {
+    "nameEng": "Iron Talon",
+    "name": "iron_talon"
+  },
+  {
+    "nameEng": "Keen Optic",
+    "name": "keen_optic"
+  },
+  {
+    "nameEng": "Mango Tree",
+    "name": "mango_tree"
+  },
+  {
+    "nameEng": "Ocean Heart",
+    "name": "ocean_heart"
+  },
+  {
+    "nameEng": "Poor Man%27s Shield",
+    "name": "poor_man%27s_shield"
+  },
+  {
+    "nameEng": "Royal Jelly",
+    "name": "royal_jelly"
+  },
+  {
+    "nameEng": "Trusty Shovel",
+    "name": "trusty_shovel"
+  },
+  {
+    "nameEng": "Ironwood Tree",
+    "name": "ironwood_tree"
+  },
+  {
+    "nameEng": "Clumsy Net",
+    "name": "clumsy_net"
+  },
+  {
+    "nameEng": "Dragon Scale",
+    "name": "dragon_scale"
+  },
+  {
+    "nameEng": "Essence Ring",
+    "name": "essence_ring"
+  },
+  {
+    "nameEng": "Grove Bow",
+    "name": "grove_bow"
+  },
+  {
+    "nameEng": "Imp Claw",
+    "name": "imp_claw"
+  },
+  {
+    "nameEng": "Nether Shawl",
+    "name": "nether_shawl"
+  },
+  {
+    "nameEng": "Philosopher%27s Stone",
+    "name": "philosopher%27s_stone"
+  },
+  {
+    "nameEng": "Pupil%27s Gift",
+    "name": "pupil%27s_gift"
+  },
+  {
+    "nameEng": "Ring of Aquila",
+    "name": "ring_of_aquila"
+  },
+  {
+    "nameEng": "Vampire Fangs",
+    "name": "vampire_fangs"
+  },
+  {
+    "nameEng": "Craggy Coat",
+    "name": "craggy_coat"
+  },
+  {
+    "nameEng": "Enchanted Quiver",
+    "name": "enchanted_quiver"
+  },
+  {
+    "nameEng": "Greater Faerie Fire",
+    "name": "greater_faerie_fire"
+  },
+  {
+    "nameEng": "Helm of the Undying",
+    "name": "helm_of_the_undying"
+  },
+  {
+    "nameEng": "Mind Breaker",
+    "name": "mind_breaker"
+  },
+  {
+    "nameEng": "Orb of Destruction",
+    "name": "orb_of_destruction"
+  },
+  {
+    "nameEng": "Paladin Sword",
+    "name": "paladin_sword"
+  },
+  {
+    "nameEng": "Quickening Charm",
+    "name": "quickening_charm"
+  },
+  {
+    "nameEng": "Repair Kit",
+    "name": "repair_kit"
+  },
+  {
+    "nameEng": "Spider Legs",
+    "name": "spider_legs"
+  },
+  {
+    "nameEng": "Third Eye",
+    "name": "third_eye"
+  },
+  {
+    "nameEng": "Titan Sliver",
+    "name": "titan_sliver"
+  },
+  {
+    "nameEng": "Flicker",
+    "name": "flicker"
+  },
+  {
+    "nameEng": "Havoc Hammer",
+    "name": "havoc_hammer"
+  },
+  {
+    "nameEng": "Illusionist%27s Cape",
+    "name": "illusionist%27s_cape"
+  },
+  {
+    "nameEng": "Magic Lamp",
+    "name": "magic_lamp"
+  },
+  {
+    "nameEng": "Minotaur Horn",
+    "name": "minotaur_horn"
+  },
+  {
+    "nameEng": "Ninja Gear",
+    "name": "ninja_gear"
+  },
+  {
+    "nameEng": "Prince%27s Knife",
+    "name": "prince%27s_knife"
+  },
+  {
+    "nameEng": "Spell Prism",
+    "name": "spell_prism"
+  },
+  {
+    "nameEng": "Telescope",
+    "name": "telescope"
+  },
+  {
+    "nameEng": "The Leveller",
+    "name": "the_leveller"
+  },
+  {
+    "nameEng": "Timeless Relic",
+    "name": "timeless_relic"
+  },
+  {
+    "nameEng": "Witless Shako",
+    "name": "witless_shako"
+  },
+  {
+    "nameEng": "Apex",
+    "name": "apex"
+  },
+  {
+    "nameEng": "Ballista",
+    "name": "ballista"
+  },
+  {
+    "nameEng": "Book of the Dead",
+    "name": "book_of_the_dead"
+  },
+  {
+    "nameEng": "Ex Machina",
+    "name": "ex_machina"
+  },
+  {
+    "nameEng": "Force Boots",
+    "name": "force_boots"
+  },
+  {
+    "nameEng": "Fusion Rune",
+    "name": "fusion_rune"
+  },
+  {
+    "nameEng": "Mirror Shield",
+    "name": "mirror_shield"
+  },
+  {
+    "nameEng": "Phoenix Ash",
+    "name": "phoenix_ash"
+  },
+  {
+    "nameEng": "Pirate Hat",
+    "name": "pirate_hat"
+  },
+  {
+    "nameEng": "Seer Stone",
+    "name": "seer_stone"
+  },
+  {
+    "nameEng": "Stygian Desolator",
+    "name": "stygian_desolator"
+  },
+  {
+    "nameEng": "Woodland Striders",
+    "name": "woodland_striders"
+  },
+  {
+    "nameEng": "Fallen Sky",
+    "name": "fallen_sky"
+  },
+  {
+    "nameEng": "Trident",
+    "name": "trident"
   }
 ]

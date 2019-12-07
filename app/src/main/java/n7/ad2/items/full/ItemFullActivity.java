@@ -41,6 +41,7 @@ public class ItemFullActivity extends BaseActivity {
 
         setToolbar();
         currentLanguage = getString(R.string.language_resource);
+
         loadHeroDescriptionFile(currentLanguage);
 
     }
@@ -259,6 +260,7 @@ public class ItemFullActivity extends BaseActivity {
             loadWithError = false;
         } catch (JSONException e) {
             e.printStackTrace();
+            loadHeroDescriptionFile("eng");
             loadWithError = true;
         }
     }
