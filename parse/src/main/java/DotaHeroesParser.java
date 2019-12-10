@@ -846,43 +846,44 @@ class DotaHeroesParser {
                             boolean isArcane = false;
                             String lastHref = "";
                             for (Element audio : audios) {
-                                jsonObjectResponse = new JSONObject();//response.childNode(0).toString().trim()
-                                StringBuilder stringIcons = new StringBuilder();
-                                String href = audio.getElementsByTag("audio").get(0).child(0).attr("src");
-                                if(lastHref.equals(href)) break;
-                                jsonObjectResponse.put("href", href);
-                                String title;
-                                response.getElementsByTag("i").remove();
+                                try {
+                                    jsonObjectResponse = new JSONObject();//response.childNode(0).toString().trim()
+                                    StringBuilder stringIcons = new StringBuilder();
+                                    String href = audio.getElementsByTag("audio").get(0).child(0).attr("src");
+                                    if(lastHref.equals(href)) break;
+                                    jsonObjectResponse.put("href", href);
+                                    String title;
+                                    response.getElementsByTag("i").remove();
 
-                                if(response.getElementsByTag("a").size() >=1){
-                                    for (Element a : response.getElementsByTag("a")) {
-                                        if (a.text().startsWith("Link")) {
-                                            a.remove();
+                                    if(response.getElementsByTag("a").size() >=1){
+                                        for (Element a : response.getElementsByTag("a")) {
+                                            if (a.text().startsWith("Link")) {
+                                                a.remove();
+                                            }
                                         }
-                                    }
-                                    response.getElementsByTag("span").remove();
-                                }
-
-                                if (firstTime) {
-                                    firstTime = false;
-                                    title = response.text().trim();
-                                } else {
-                                    title = response.text().trim();
-//                                    if (href.contains("_arc_") || href.contains("_dem_") || href.contains("_bearform_") || href.contains("_big_")||href.contains("_dragon_")) {
-                                    if (true) {
-                                        stringIcons.append(heroName.toLowerCase()).append("_arcane+");
-                                        isArcane = true;
+                                        response.getElementsByTag("span").remove();
                                     }
 
-//                                    title += "( arcane )";
-                                }
-                                jsonObjectResponse.put("title", title);
-                                if (response.childNodes().size() != 0 && response.childNode(response.childNodes().size() - 1).toString().trim().startsWith("<")) {
-                                    jsonObjectResponse.put("title", heroName + "_" + countResponses);//имя для реплики без имени}
-                                }
-                                if(title.length()==0){
-                                    jsonObjectResponse.put("title", heroName + "_" + countResponses);//имя для реплики без имени}
-                                }
+                                    if (firstTime) {
+                                        firstTime = false;
+                                        title = response.text().trim();
+                                    } else {
+                                        title = response.text().trim();
+    //                                    if (href.contains("_arc_") || href.contains("_dem_") || href.contains("_bearform_") || href.contains("_big_")||href.contains("_dragon_")) {
+                                        if (true) {
+                                            stringIcons.append(heroName.toLowerCase()).append("_arcane+");
+                                            isArcane = true;
+                                        }
+
+    //                                    title += "( arcane )";
+                                    }
+                                    jsonObjectResponse.put("title", title);
+                                    if (response.childNodes().size() != 0 && response.childNode(response.childNodes().size() - 1).toString().trim().startsWith("<")) {
+                                        jsonObjectResponse.put("title", heroName + "_" + countResponses);//имя для реплики без имени}
+                                    }
+                                    if(title.length()==0){
+                                        jsonObjectResponse.put("title", heroName + "_" + countResponses);//имя для реплики без имени}
+                                    }
 
                                     countResponses = countResponses + 1;
                                     if (title.equals("Abyssal filth!")) {
@@ -902,7 +903,10 @@ class DotaHeroesParser {
 //                                }
                                     lastHref = href;
                                     jsonArrayResponsesForSection.add(jsonObjectResponse);//кладём реплику в секцию для реплик
+                                } catch (Exception e) {
+                                    e.printStackTrace();
                                 }
+                            }
                         }
                         jsonObjectSection.put("responses", jsonArrayResponsesForSection);//кладём всю секцию
                     }
@@ -915,12 +919,12 @@ class DotaHeroesParser {
                     file.flush();
                     file.close();
                     if (language.equals("ru")) {
-                        System.out.print("hero" + counter + "response saved " + language + "." + heroName + " || ");
+                        System.out.print("hero" + counter + "response saved (" + jsonArrayHeroes.size() +")" + language + "." + heroName + " || ");
                     } else {
-                        System.out.println(language + "." + heroName);
+                        System.out.println("(" +jsonArrayHeroes.size()+")" +language + "." + heroName);
                     }
                 } catch (IOException ex) {
-                    System.out.println("hero response not saved " + language + "." + heroName);
+                    System.out.println("hero response not saved (" + jsonArrayHeroes.size() +")" + language + "." + heroName);
                 }
             } catch (IOException e) {
                 System.out.println("error: " + URL);
