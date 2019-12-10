@@ -90,7 +90,7 @@
                 android:transitionName="iv"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent"
-                app:srcCompat="@drawable/hero_placeholder_error"
+                app:srcCompat="@drawable/item_placeholder"
                 android:contentDescription="@string/setting_tell_friend_title"
                 tools:ignore="UnusedAttribute" />
 

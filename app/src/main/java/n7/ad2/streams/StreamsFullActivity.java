@@ -242,8 +242,7 @@ public class StreamsFullActivity extends BaseActivity implements SurfaceHolder.C
 
     private void initPremium() {
         sp = PreferenceManager.getDefaultSharedPreferences(this);
-//        isPremium = sp.getBoolean(SUBSCRIPTION_PREF, false);
-        isPremium = true;
+        isPremium = sp.getBoolean(SUBSCRIPTION_PREF, false);
 
         if (!isPremium) {
             alphaChat = 1.0F;
@@ -257,9 +256,11 @@ public class StreamsFullActivity extends BaseActivity implements SurfaceHolder.C
             @Override
             public void run() {
                 try {
-                    String accessToken = "https://api.twitch.tv/api/channels/" + getIntent().getExtras().getString(CHANNEL_NAME) + "/access_token?client_id=kimne78kx3ncx6brgo4mv6wki5h1ko";
+                    String accessToken = "https://api.twitch.tv/api/channels/" + getIntent().getExtras().getString(CHANNEL_NAME) + "/access_token?client_id=vmr0piicf3e3nxw4fs0zz2e2vqak8y";
                     OkHttpClient client = new OkHttpClient();
                     Request request = new Request.Builder().url(accessToken)
+                            .header("Accept","application/vnd.twitchtv.v5+json")
+                            .addHeader("Client-ID","4y4xzjdeymcf1ks882wijv5ezhaqoa")
                             .build();
                     Response response = client.newCall(request).execute();
                     JSONObject jsonObject = new JSONObject(response.body().string());

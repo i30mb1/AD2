@@ -317,7 +317,7 @@ class DotaHeroesParser {
 
             for (Element itemGroup : docRus.getElementsByClass("itemlist")) {
                 count++;
-                if (count >= 18) break;
+                if (count >= 13) break;
                 for (Element item : itemGroup.children()) {
                     itemName = item.child(0).attr("href");
 
@@ -566,7 +566,7 @@ class DotaHeroesParser {
 
             for (Element itemGroup : docRus.getElementsByClass("itemlist")) {
                 count++;
-                if (count >= 18) break;
+                if (count >= 13) break;
                 for (Element item : itemGroup.children()) {
                     itemName = item.child(0).attr("href");
 
@@ -576,7 +576,7 @@ class DotaHeroesParser {
 
                     String itemNameImage = itemName.replaceAll("\\(.+\\)", "").trim().replace(" ", "_").replace("\\\\", "");
                     if (loadImage) {
-                        String imageUrl = item.child(0).child(0).attr("srcset").split(" ")[0];
+                        String imageUrl = item.child(0).child(0).attr("src");
                         image = ImageIO.read(new URL(imageUrl));
                         new File("C:\\Users\\i30mb1\\AndroidProjects\\AD2\\app\\src\\main\\assets\\items\\" + itemNameImage.toLowerCase()).mkdirs();
                         ImageIO.write(image, "png", new File("C:\\Users\\i30mb1\\AndroidProjects\\AD2\\app\\src\\main\\assets\\items\\" + itemNameImage.toLowerCase() + "\\full.png"));
@@ -742,14 +742,6 @@ class DotaHeroesParser {
                     jsonArrayItems.add(jsonObjectSection);
                     System.out.println("loaded eng-" + itemName);
                 }
-                            try {
-                FileWriter file = new FileWriter("C:\\" + "items.json");
-                file.write(jsonArrayItems.toJSONString());
-                file.flush();
-                file.close();
-            } catch (IOException ex) {
-                ex.printStackTrace();
-            }
             }
         } catch (IOException e) {
             e.printStackTrace();
@@ -923,15 +915,13 @@ class DotaHeroesParser {
                     file.flush();
                     file.close();
                     if (language.equals("ru")) {
-                        System.out.print("hero" + counter + "response saved ("+ jsonArrayHeroes.size() + language + ")." + heroName + " || ");
+                        System.out.print("hero" + counter + "response saved " + language + "." + heroName + " || ");
                     } else {
-                        System.out.println(language +"(" + jsonArrayHeroes.size() + ")." + heroName);
+                        System.out.println(language + "." + heroName);
                     }
-
                 } catch (IOException ex) {
                     System.out.println("hero response not saved " + language + "." + heroName);
                 }
-
             } catch (IOException e) {
                 System.out.println("error: " + URL);
             }
@@ -1024,7 +1014,7 @@ class DotaHeroesParser {
                 if (language.equals("eng")) {
                     jsonObject.put("desc", doc.getElementsByClass("mw-parser-output").get(0).child(2).text()); //кладём описание героя
                 } else {
-                    jsonObject.put("desc", doc.getElementsByClass("mw-parser-output").get(0).child(2).text()); //кладём описание героя
+                    jsonObject.put("desc", doc.getElementsByClass("mw-parser-output").get(1).child(2).text()); //кладём описание героя
                 }
                 Elements children = doc.getElementById("mw-content-text").child(0).children();
                 boolean findBio = false;

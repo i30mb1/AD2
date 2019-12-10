@@ -172,7 +172,7 @@ public class SingleStreamFragment extends Fragment implements SurfaceHolder.Call
             @Override
             public void run() {
                 try {
-                    String accessToken = "https://api.twitch.tv/api/channels/" + channel + "/access_token?client_id=kimne78kx3ncx6brgo4mv6wki5h1ko";
+                    String accessToken = "https://api.twitch.tv/api/channels/" + channel + "/access_token?client_id=4y4xzjdeymcf1ks882wijv5ezhaqoa";
                     OkHttpClient client = new OkHttpClient();
                     Request request = new Request.Builder().url(accessToken).build();
                     Response response = client.newCall(request).execute();
