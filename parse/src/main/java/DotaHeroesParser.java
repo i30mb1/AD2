@@ -317,7 +317,7 @@ class DotaHeroesParser {
 
             for (Element itemGroup : docRus.getElementsByClass("itemlist")) {
                 count++;
-                if (count >= 13) break;
+                if (count >= 18) break;
                 for (Element item : itemGroup.children()) {
                     itemName = item.child(0).attr("href");
 
@@ -566,7 +566,7 @@ class DotaHeroesParser {
 
             for (Element itemGroup : docRus.getElementsByClass("itemlist")) {
                 count++;
-                if (count >= 13) break;
+                if (count >= 18) break;
                 for (Element item : itemGroup.children()) {
                     itemName = item.child(0).attr("href");
 
@@ -576,7 +576,7 @@ class DotaHeroesParser {
 
                     String itemNameImage = itemName.replaceAll("\\(.+\\)", "").trim().replace(" ", "_").replace("\\\\", "");
                     if (loadImage) {
-                        String imageUrl = item.child(0).child(0).attr("src");
+                        String imageUrl = item.child(0).child(0).attr("srcset").split(" ")[0];
                         image = ImageIO.read(new URL(imageUrl));
                         new File("C:\\Users\\i30mb1\\AndroidProjects\\AD2\\app\\src\\main\\assets\\items\\" + itemNameImage.toLowerCase()).mkdirs();
                         ImageIO.write(image, "png", new File("C:\\Users\\i30mb1\\AndroidProjects\\AD2\\app\\src\\main\\assets\\items\\" + itemNameImage.toLowerCase() + "\\full.png"));
