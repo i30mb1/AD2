@@ -36,7 +36,7 @@ class DotaHeroesParser {
 
 //        loadZhItems(false);
 //        loadRusItems(false);
-        loadEngItems(true);
+        loadEngItems(false);
     }
 
     private static void loadZhItems(boolean loadImage) {
