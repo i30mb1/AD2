@@ -35,8 +35,8 @@ class DotaHeroesParser {
         }
 
 //        loadZhItems(false);
-//        loadRusItems(false);
-        loadEngItems(true);
+        loadRusItems(false);
+        loadEngItems(false);
     }
 
     private static void loadZhItems(boolean loadImage) {
@@ -149,7 +149,7 @@ class DotaHeroesParser {
                                     if (jsonArrayDescription.size() > 0)
                                         jsonObjectAbility.put("elements", jsonArrayDescription);
                                 }
-                                if (element.attr("style").equals("vertical-align:top; padding: 3px 5px;")) {
+                                if (element.attr("style").equals("vertical-align:top; padding: 3px 5px; display:inline-block;")) {
                                     JSONArray jsonArrayDescription = new JSONArray();
                                     for (Element descript : element.children()) {
                                         if (descript.attr("style").equals(""))
@@ -393,7 +393,7 @@ class DotaHeroesParser {
                         if (elementItem.tag().toString().equals("div") && findAbilities) {
                             JSONObject jsonObjectAbility = new JSONObject();
                             for (Element element : elementItem.child(0).getElementsByTag("div")) {
-                                if (element.attr("style").equals("font-weight: bold; font-size: 110%; border-bottom: 1px solid black; background-color: #227722; color: white; padding: 3px 5px;")) {
+                                if (element.attr("style").equals("font-weight: bold; font-size: 110%; border-bottom: 1px solid black; background: linear-gradient(-90deg, #1B1E21 -20%, #1B1E21 -20%, #1B1E21 -20%, #227722) 90%; color: white; padding: 3px 5px;")) {
                                     jsonObjectAbility.put("name", element.childNode(0).toString().substring(1));
                                 }
                                 if (element.attr("style").equals("")) {
@@ -408,7 +408,7 @@ class DotaHeroesParser {
                                     if (jsonArrayDescription.size() > 0)
                                         jsonObjectAbility.put("elements", jsonArrayDescription);
                                 }
-                                if (element.attr("style").equals("vertical-align:top; padding: 3px 5px;")) {
+                                if (element.attr("style").equals("vertical-align:top; padding: 3px 5px; display:inline-block;")) {
                                     JSONArray jsonArrayDescription = new JSONArray();
                                     for (Element descript : element.children()) {
                                         if (descript.attr("style").equals(""))
@@ -477,7 +477,14 @@ class DotaHeroesParser {
                                         JSONArray recipeFurther = new JSONArray();
                                         JSONArray recipeContains = new JSONArray();
                                         for (Element element : attr.getElementsByAttributeValue("style", "display:table-row;").get(0).children()) {
-                                            recipeFurther.add(element.child(0).attr("title").replaceAll("\\(.+\\)", "").trim().replace(" ", "_"));
+                                           if(itemName.startsWith("Dagon_2")){
+                                               int g = 5;
+                                           }
+                                            try {
+                                                recipeFurther.add(element.child(0).attr("title").replaceAll("\\(.+\\)", "").trim().replace(" ", "_"));
+                                            } catch (Exception e) {
+                                                e.printStackTrace();
+                                            }
                                         }
                                         for (Element element : attr.getElementsByAttributeValue("style", "display:table-row;").get(1).children()) {
                                             recipeContains.add(element.child(0).attr("title").replaceAll("\\(.+\\)", "").trim().replace(" ", "_"));
@@ -539,14 +546,14 @@ class DotaHeroesParser {
                         file.write(jsonObjectItem.toJSONString());
                         file.flush();
                         file.close();
-                    } catch (IOException ex) {
+                    } catch (Exception ex) {
                         ex.printStackTrace();
                     }
                     jsonArrayItems.add(jsonObjectSection);
                     System.out.println("loaded ru-" + itemName);
                 }
             }
-        } catch (IOException e) {
+        } catch (Exception e) {
             e.printStackTrace();
             System.out.println(itemName);
         }
@@ -645,7 +652,7 @@ class DotaHeroesParser {
                                     if (jsonArrayDescription.size() > 0)
                                         jsonObjectAbility.put("elements", jsonArrayDescription);
                                 }
-                                if (element.attr("style").equals("vertical-align:top; padding: 3px 5px;")) {
+                                if (element.attr("style").equals("vertical-align:top; padding: 3px 5px; display:inline-block;")) {
                                     JSONArray jsonArrayDescription = new JSONArray();
                                     for (Element descript : element.children()) {
                                         if (descript.attr("style").equals(""))
