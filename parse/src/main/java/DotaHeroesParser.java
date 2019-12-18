@@ -30,8 +30,8 @@ class DotaHeroesParser {
         int size = loadHeroesFromFile().size();
         for (String hero : loadHeroesFromFile()) {
             String counter = String.format(Locale.US, "% d/%d ", ++count, size);
-            loadResponses(hero, counter);
-//            loadSpellsAndDescription(hero, counter);
+//            loadResponses(hero, counter);
+            loadSpellsAndDescription(hero, counter);
         }
 
 //        loadZhItems(false);
@@ -1127,18 +1127,18 @@ class DotaHeroesParser {
                         jsonObjectAbility = new JSONObject();//создаём обьект для способности
 
                         JSONArray jsonArrayEffects = new JSONArray();//ряд для эфектов
-                        for (Element element : child.child(0).child(1).child(1).child(0).children()) {
+                        for (Element element : child.child(0).child(0).child(1).child(1).child(0).children()) {
                             if (element.text().length() != 0)
                                 jsonArrayEffects.add(element.text());
                         }
                         jsonObjectAbility.put("effects", jsonArrayEffects);
 
-                        jsonObjectAbility.put("spell", child.child(0).child(1).child(1).child(1).text());//описание для способности
+                        jsonObjectAbility.put("spell", child.child(0).child(0).child(1).child(1).child(1).text());//описание для способности
 
                         jsonObjectAbility.put("cooldown", "0");
                         jsonObjectAbility.put("mana", "0");
                         JSONArray jsonArrayDescription = new JSONArray();//ряд для описания способностей
-                        for (Element element : child.child(0).child(2).children()) {
+                        for (Element element : child.child(0).child(0).child(2).children()) {
                             if (element.attr("style").equals("")) {
                                 jsonArrayDescription.add(element.text());
                             }
@@ -1154,11 +1154,11 @@ class DotaHeroesParser {
                         jsonObjectAbility.put("description", jsonArrayDescription);
 
 
-                        String name = child.child(0).child(0).childNode(0).toString();//имя способности
+                        String name = child.child(0).child(0).child(0).childNode(0).toString();//имя способности
                         jsonObjectAbility.put("name", name.substring(1));
                         JSONArray jsonArrayElements = new JSONArray();//ряд для элементов
                         boolean findHotKey = true;
-                        for (Element element : child.child(0).child(0).children().get(0).children()) {
+                        for (Element element : child.child(0).child(0).child(0).children().get(0).children()) {
                             if (element.tag().toString().equals("a")) {//свойство способности
                                 jsonArrayElements.add(element.attr("title"));//бкб,сильвер и другие
                             }
