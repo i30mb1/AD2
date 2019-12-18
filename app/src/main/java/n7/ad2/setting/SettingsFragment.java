@@ -92,14 +92,14 @@ public class SettingsFragment extends PreferenceFragment {
             }
         });
 
-        Preference subscription = findPreference(getString(R.string.setting_subscription_key));
-        subscription.setOnPreferenceClickListener(new Preference.OnPreferenceClickListener() {
-            @Override
-            public boolean onPreferenceClick(Preference preference) {
-                ((SettingActivity) getActivity()).showDialogDonate();
-                return true;
-            }
-        });
+//        Preference subscription = findPreference(getString(R.string.setting_subscription_key));
+//        subscription.setOnPreferenceClickListener(new Preference.OnPreferenceClickListener() {
+//            @Override
+//            public boolean onPreferenceClick(Preference preference) {
+//                ((SettingActivity) getActivity()).showDialogDonate();
+//                return true;
+//            }
+//        });
 
         Preference contactUs = findPreference(getString(R.string.setting_contact_key));
         contactUs.setOnPreferenceClickListener(new Preference.OnPreferenceClickListener() {

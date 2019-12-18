@@ -75,8 +75,10 @@ public class SplashViewModel extends AndroidViewModel {
         setupCurrentDay();
         setupAppIcon();
         setupSupportJsoupForOldDevices();
-        setupFirebaseAnalytics();
-        setupPurchaseHelper();
+//        setupFirebaseAnalytics();
+//        setupPurchaseHelper();
+        PreferenceManager.getDefaultSharedPreferences(getApplication()).edit().putInt(FREE_SUBSCRIPTION_DAYS, 7).apply();
+        PreferenceManager.getDefaultSharedPreferences(getApplication()).edit().putBoolean(SUBSCRIPTION_PREF, true).apply();
 
         initialLoadDatabase();
         loadNews();

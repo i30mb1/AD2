@@ -6,7 +6,7 @@
         android:id="@+id/menu_fragment_streams_open_multitab"
         android:title="open onetab"
         android:icon="@drawable/ic_menu_open_onetab"
-        android:visible="true"
+        android:visible="false"
         app:showAsAction="always"
         />
     <!--<item-->

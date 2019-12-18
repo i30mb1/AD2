@@ -1025,7 +1025,7 @@ class DotaHeroesParser {
                 if (language.equals("eng")) {
                     jsonObject.put("desc", doc.getElementsByClass("mw-parser-output").get(0).child(2).text()); //кладём описание героя
                 } else {
-                    jsonObject.put("desc", doc.getElementsByClass("mw-parser-output").get(1).child(2).text()); //кладём описание героя
+                    jsonObject.put("desc", doc.getElementsByClass("mw-parser-output").get(0).child(2).text()); //кладём описание героя
                 }
                 Elements children = doc.getElementById("mw-content-text").child(0).children();
                 boolean findBio = false;

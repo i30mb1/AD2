@@ -16,7 +16,7 @@ import java.util.concurrent.Executor;
 import n7.ad2.R;
 import n7.ad2.utils.Utils;
 
-@Database(entities = ItemModel.class, version = 8, exportSchema = false)
+@Database(entities = ItemModel.class, version = 77, exportSchema = false)
 public abstract class ItemsRoomDatabase extends RoomDatabase {
 
     private static ItemsRoomDatabase INSTANCE;
@@ -26,7 +26,7 @@ public abstract class ItemsRoomDatabase extends RoomDatabase {
             synchronized (ItemsRoomDatabase.class) {
                 if (INSTANCE == null) {
                     INSTANCE = Room
-                            .databaseBuilder(context.getApplicationContext(), ItemsRoomDatabase.class, "items8.db")
+                            .databaseBuilder(context.getApplicationContext(), ItemsRoomDatabase.class, "items77.db")
                             .fallbackToDestructiveMigration()
                             .addCallback(new Callback() {
                                 @Override

@@ -179,7 +179,7 @@ public class MainActivity extends BaseActivity {
         setupDrawer();
         setupListeners();
         setupSecretActivity();
-        setupAD();
+//        setupAD();
 
         setLastFragment();
 
