@@ -1,11 +1,14 @@
 package n7.ad2.utils;
 
 import android.animation.ObjectAnimator;
+import android.content.res.TypedArray;
 import android.databinding.BindingAdapter;
 import android.graphics.drawable.Drawable;
 import android.support.transition.Slide;
+import android.support.v4.content.ContextCompat;
 import android.support.v7.widget.RecyclerView;
 import android.support.transition.TransitionManager;
+import android.util.TypedValue;
 import android.view.Gravity;
 import android.view.View;
 import android.view.ViewGroup;
@@ -16,6 +19,8 @@ import android.widget.ImageView;
 import android.widget.TextView;
 
 import com.squareup.picasso.Picasso;
+
+import n7.ad2.R;
 
 public class CustomsDataBinding {
 
@@ -39,6 +44,43 @@ public class CustomsDataBinding {
     public static void scrollTo(RecyclerView recyclerView, int position) {
         if (recyclerView != null) {
             recyclerView.scrollToPosition(position);
+        }
+    }
+
+    @BindingAdapter("setMyBackground")
+    public static void setBackground(View view, boolean check) {
+        if (check) {
+            TypedValue typedValue = new TypedValue();
+
+            TypedArray a = view.getContext().obtainStyledAttributes(typedValue.data, new int[] { R.attr.colorAccent });
+            int color = a.getColor(0, 0);
+            view.setBackgroundColor(color);
+            a.recycle();
+        } else {
+            TypedValue typedValue = new TypedValue();
+
+            TypedArray a = view.getContext().obtainStyledAttributes(typedValue.data, new int[] { android.R.attr.textColorSecondary});
+            int color = a.getColor(0, 0);
+            view.setBackgroundColor(color);
+            a.recycle();
+        }
+    }
+    @BindingAdapter("setMyTextColor")
+    public static void setBackgroundText(TextView view, boolean check) {
+        if (check) {
+            TypedValue typedValue = new TypedValue();
+
+            TypedArray a = view.getContext().obtainStyledAttributes(typedValue.data, new int[] { R.attr.colorAccent });
+            int color = a.getColor(0, 0);
+            view.setTextColor(color);
+            a.recycle();
+        } else {
+            TypedValue typedValue = new TypedValue();
+
+            TypedArray a = view.getContext().obtainStyledAttributes(typedValue.data, new int[] { android.R.attr.textColorSecondary});
+            int color = a.getColor(0, 0);
+            view.setTextColor(color);
+            a.recycle();
         }
     }
 

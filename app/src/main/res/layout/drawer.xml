@@ -204,7 +204,7 @@
                     android:id="@+id/view1"
                     android:layout_width="3dp"
                     android:layout_height="match_parent"
-                    android:background="@{activity.observableLastItem==1? @color/colorAccent :@color/textColorSecondary}" />
+                    setMyBackground="@{activity.observableLastItem==1}" />
 
                 <TextView
                     android:id="@+id/textView1"
@@ -215,7 +215,7 @@
                     android:onClick="@{()-> activity.setFragment(1,true)}"
                     android:padding="6dp"
                     android:text="@string/heroes"
-                    android:textColor="@{activity.observableLastItem==1? @color/colorAccent :@color/textColorSecondary}"
+                    setMyTextColor="@{activity.observableLastItem==1}"
                     android:textSize="14sp"
                     tools:targetApi="m" />
 
@@ -231,7 +231,7 @@
                     android:id="@+id/view2"
                     android:layout_width="3dp"
                     android:layout_height="match_parent"
-                    android:background="@{activity.observableLastItem==2? @color/colorAccent :@color/textColorSecondary}" />
+                    setMyBackground="@{activity.observableLastItem==2}" />
 
                 <TextView
                     android:id="@+id/textView2"
@@ -242,7 +242,7 @@
                     android:onClick="@{()-> activity.setFragment(2,true)}"
                     android:padding="6dp"
                     android:text="@string/items"
-                    android:textColor="@{activity.observableLastItem==2? @color/colorAccent :@color/textColorSecondary}"
+                    setMyTextColor="@{activity.observableLastItem==2}"
                     android:textSize="14sp"
                     tools:targetApi="m" />
             </LinearLayout>
@@ -258,7 +258,7 @@
                     android:id="@+id/view3"
                     android:layout_width="3dp"
                     android:layout_height="match_parent"
-                    android:background="@{activity.observableLastItem==3? @color/colorAccent :@color/textColorSecondary}" />
+                    setMyBackground="@{activity.observableLastItem==3}" />
 
                 <TextView
                     android:id="@+id/textView3"
@@ -269,7 +269,7 @@
                     android:onClick="@{()-> activity.setFragment(3,true)}"
                     android:padding="6dp"
                     android:text="@string/news"
-                    android:textColor="@{activity.observableLastItem==3? @color/colorAccent :@color/textColorSecondary}"
+                    setMyTextColor="@{activity.observableLastItem==3}"
                     android:textSize="14sp"
                     tools:targetApi="m" />
             </LinearLayout>
@@ -284,7 +284,7 @@
                     android:id="@+id/view4"
                     android:layout_width="3dp"
                     android:layout_height="match_parent"
-                    android:background="@{activity.observableLastItem==4? @color/colorAccent :@color/textColorSecondary}" />
+                    setMyBackground="@{activity.observableLastItem==4}"/>
 
 
                 <TextView
@@ -296,7 +296,7 @@
                     android:onClick="@{()-> activity.setFragment(4,true)}"
                     android:padding="6dp"
                     android:text="@string/tournaments"
-                    android:textColor="@{activity.observableLastItem==4? @color/colorAccent :@color/textColorSecondary}"
+                    setMyTextColor="@{activity.observableLastItem==4}"
                     android:textSize="14sp"
                     tools:targetApi="m" />
             </LinearLayout>
@@ -312,7 +312,7 @@
                     android:id="@+id/view5"
                     android:layout_width="3dp"
                     android:layout_height="match_parent"
-                    android:background="@{activity.observableLastItem==5? @color/colorAccent :@color/textColorSecondary}" />
+                    setMyBackground="@{activity.observableLastItem==5}" />
 
                 <TextView
                     android:id="@+id/textView5"
@@ -324,7 +324,7 @@
                     android:padding="6dp"
                     android:text="@string/streams"
                     android:textAllCaps="false"
-                    android:textColor="@{activity.observableLastItem==5? @color/colorAccent :@color/textColorSecondary}"
+                    setMyTextColor="@{activity.observableLastItem==5}"
                     android:textSize="14sp"
                     tools:targetApi="m" />
             </LinearLayout>
@@ -339,7 +339,7 @@
                     android:id="@+id/view6"
                     android:layout_width="3dp"
                     android:layout_height="match_parent"
-                    android:background="@{activity.observableLastItem==6? @color/colorAccent :@color/textColorSecondary}" />
+                    setMyBackground="@{activity.observableLastItem==6}" />
 
                 <TextView
                     android:id="@+id/textView6"
@@ -350,7 +350,7 @@
                     android:onClick="@{()-> activity.setFragment(6,true)}"
                     android:padding="6dp"
                     android:text="@string/games"
-                    android:textColor="@{activity.observableLastItem==6? @color/colorAccent :@color/textColorSecondary}"
+                    setMyTextColor="@{activity.observableLastItem==6}"
                     android:textSize="14sp"
                     tools:targetApi="m" />
             </LinearLayout>

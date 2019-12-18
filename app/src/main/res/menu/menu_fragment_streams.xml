@@ -5,7 +5,7 @@
         android:id="@+id/menu_fragment_streams_open_multitab"
         android:title="open multitab"
         android:icon="@drawable/ic_menu_open_multitab"
-        android:visible="true"
+        android:visible="false"
         app:showAsAction="always"
         />
     <item
