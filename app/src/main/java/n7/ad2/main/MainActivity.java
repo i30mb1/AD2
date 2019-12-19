@@ -158,7 +158,7 @@ public class MainActivity extends BaseActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
 
-        updateFreeSubscriptionCounter();
+//        updateFreeSubscriptionCounter();
         currentDay = PreferenceManager.getDefaultSharedPreferences(this).getInt(CURRENT_DAY_IN_APP, 0);
         viewModel = ViewModelProviders.of(this).get(MainViewModel.class);
 
@@ -281,7 +281,7 @@ public class MainActivity extends BaseActivity {
             public void onRewarded(RewardItem rewardItem) {
                 log("free_subscription_+1_usage");
                 plusOneFreeSubscriptionCounter();
-                updateFreeSubscriptionCounter();
+//                updateFreeSubscriptionCounter();
             }
 
             @Override
@@ -591,8 +591,8 @@ public class MainActivity extends BaseActivity {
     private void incCountEnter() {
         timeCounter++;
         if (timeCounter > COUNTER_DIALOG_RATE) showDialogRate();
-        if (timeCounter > COUNTER_DIALOG_DONATE) showPreDialogDonate();
-        if (timeCounter % ACTION_BEFORE_SHOW_ADVERTISEMENT == 0) ShowInterstitialAd();
+//        if (timeCounter > COUNTER_DIALOG_DONATE) showPreDialogDonate();
+//        if (timeCounter % ACTION_BEFORE_SHOW_ADVERTISEMENT == 0) ShowInterstitialAd();
     }
 
     @SuppressWarnings("ConstantConditions")
@@ -719,7 +719,7 @@ public class MainActivity extends BaseActivity {
                     movementListY.set(id, ev.getY(index));
                 }
                 if (count > 9) {
-                    showDialogCongratulations();
+//                    showDialogCongratulations();
                 }
                 break;
         }

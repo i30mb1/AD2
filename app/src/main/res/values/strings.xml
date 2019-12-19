@@ -109,7 +109,7 @@
     <string name="dialog_rate_me_never">Never</string>
     <string name="dialog_rate_me_later">LATER</string>
     <string name="dialog_rate_me_title">Hello, we need your help!</string>
-    <string name="dialog_rate_me_summary">We want you to rate us in Google Play, describe how can we improve this app. We knew we can count on you! \nP.S. Instead take 2 days of subscription</string>
+    <string name="dialog_rate_me_summary">We want you to rate us in Google Play, describe how can we improve this app. We knew we can count on you!</string>
     <string name="all_only_for_subscribers">Only for Subscribers!</string>
     <string name="all_buy">Buy</string>
     <string name="all_come_back_tomorrow">Come back tomorrow or buy Subscription</string>
