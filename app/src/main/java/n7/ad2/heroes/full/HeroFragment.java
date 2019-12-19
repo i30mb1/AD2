@@ -147,6 +147,7 @@ public class HeroFragment extends Fragment {
 
     @SuppressWarnings("ConstantConditions")
     private void inflateAllSpells() {
+        binding.llFragmentHeroPersonalSpells.removeAllViewsInLayout();
         inflateTalent();
 
         try {
