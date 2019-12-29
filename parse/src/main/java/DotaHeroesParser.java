@@ -30,13 +30,13 @@ class DotaHeroesParser {
         int size = loadHeroesFromFile().size();
         for (String hero : loadHeroesFromFile()) {
             String counter = String.format(Locale.US, "% d/%d ", ++count, size);
-            loadResponses(hero, counter);
+//            loadResponses(hero, counter);
 //            loadSpellsAndDescription(hero, counter);
         }
 
 //        loadZhItems(false);
-//        loadRusItems(false);
-//        loadEngItems(false);
+        loadEngItems(true);
+        loadRusItems(false);
     }
 
     private static void loadZhItems(boolean loadImage) {
@@ -322,7 +322,7 @@ class DotaHeroesParser {
                     itemName = item.child(0).attr("href");
 
                     if (itemName.startsWith("/Animal_Courier")) continue;
-                    if (itemName.startsWith("/Power_Treads")) continue;
+//                    if (itemName.startsWith("/Power_Treads")) continue;
 
                     String itemNameImage = itemName.replaceAll("\\(.+\\)", "").trim().replace(" ", "_").replace("\\\\", "");
                     if (loadImage) {
@@ -578,7 +578,7 @@ class DotaHeroesParser {
                     itemName = item.child(0).attr("href");
 
                     if (itemName.startsWith("/Animal_Courier")) continue;
-                    if (itemName.startsWith("/Power_Treads")) continue;
+//                    if (itemName.startsWith("/Power_Treads")) continue;
 
 
                     String itemNameImage = itemName.replaceAll("\\(.+\\)", "").trim().replace(" ", "_").replace("\\\\", "");

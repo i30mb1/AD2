@@ -7,6 +7,7 @@ import android.databinding.DataBindingUtil;
 import android.os.Bundle;
 import android.support.annotation.NonNull;
 import android.support.annotation.Nullable;
+import android.support.design.widget.Snackbar;
 import android.support.v4.app.ActivityOptionsCompat;
 import android.support.v4.app.Fragment;
 import android.util.DisplayMetrics;
@@ -281,8 +282,16 @@ public class GuideFragment extends Fragment {
 
                         @Override
                         public void onError(Exception e) {
+//                            itemListGuideItemBinding.getRoot().setVisibility(View.GONE);
                         }
                     });
+            itemListGuideItemBinding.ivItemListGuideItem.setOnLongClickListener(new View.OnLongClickListener() {
+                @Override
+                public boolean onLongClick(View v) {
+                    Snackbar.make(itemListGuideItemBinding.getRoot(),item.split("\\^")[0],Snackbar.LENGTH_SHORT).show();
+                    return true;
+                }
+            });
 
             itemCount++;
         }

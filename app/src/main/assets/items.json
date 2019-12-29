@@ -215,6 +215,11 @@
     "name": "boots_of_speed"
   },
   {
+    "nameEng": "Power Treads",
+    "nameZh": "Power Treads",
+    "name": "power_treads"
+  },
+  {
     "nameEng": "Cloak",
     "nameZh": "Cloak",
     "name": "cloak"
@@ -377,7 +382,7 @@
   {
     "nameEng": "Boots of Travel",
     "nameZh": "Boots of Travel",
-    "name": "boots_of_travel"
+    "name": "boots_of_travel_1"
   },
   {
     "nameEng": "Moon Shard",
@@ -815,11 +820,6 @@
     "name": "broom_handle"
   },
   {
-    "nameEng": "Elixir",
-    "nameZh": "Elixir",
-    "name": "elixir"
-  },
-  {
     "nameEng": "Faded Broach",
     "nameZh": "Faded Broach",
     "name": "faded_broach"
@@ -933,11 +933,6 @@
     "nameEng": "Greater Faerie Fire",
     "nameZh": "Greater Faerie Fire",
     "name": "greater_faerie_fire"
-  },
-  {
-    "nameEng": "Helm of the Undying",
-    "nameZh": "Helm of the Undying",
-    "name": "helm_of_the_undying"
   },
   {
     "nameEng": "Mind Breaker",
