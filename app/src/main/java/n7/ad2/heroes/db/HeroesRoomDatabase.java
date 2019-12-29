@@ -16,7 +16,7 @@ import java.util.concurrent.Executor;
 import n7.ad2.R;
 import n7.ad2.utils.Utils;
 
-@Database(entities = {HeroModel.class}, version = 77, exportSchema = false)
+@Database(entities = {HeroModel.class}, version = 78, exportSchema = false)
 public abstract class HeroesRoomDatabase extends RoomDatabase {
 
     public abstract HeroesDao heroesDao();
@@ -28,7 +28,7 @@ public abstract class HeroesRoomDatabase extends RoomDatabase {
             synchronized (HeroesRoomDatabase.class) {
                 if (INSTANCE == null) {
                     INSTANCE = Room
-                            .databaseBuilder(context.getApplicationContext(), HeroesRoomDatabase.class, "heroes77.db")
+                            .databaseBuilder(context.getApplicationContext(), HeroesRoomDatabase.class, "heroes78.db")
                             .fallbackToDestructiveMigration()
                             .addCallback(new Callback() {
                                 @Override
