@@ -30,13 +30,13 @@ class DotaHeroesParser {
         int size = loadHeroesFromFile().size();
         for (String hero : loadHeroesFromFile()) {
             String counter = String.format(Locale.US, "% d/%d ", ++count, size);
-//            loadResponses(hero, counter);
+            loadResponses(hero, counter);
 //            loadSpellsAndDescription(hero, counter);
         }
 
 //        loadZhItems(false);
-        loadEngItems(true);
-        loadRusItems(false);
+//        loadEngItems(true);
+//        loadRusItems(false);
     }
 
     private static void loadZhItems(boolean loadImage) {
