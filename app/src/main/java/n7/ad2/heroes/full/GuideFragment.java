@@ -282,6 +282,7 @@ public class GuideFragment extends Fragment {
 
                         @Override
                         public void onError(Exception e) {
+
 //                            itemListGuideItemBinding.getRoot().setVisibility(View.GONE);
                         }
                     });
