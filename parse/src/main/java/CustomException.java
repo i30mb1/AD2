@@ -10,7 +10,6 @@ public class CustomException {
         } else {
             throw new NotSasukeUser();
         }
-
     }
 
     public static class NotSasukeUser extends RuntimeException {
