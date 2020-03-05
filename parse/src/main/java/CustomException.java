@@ -13,7 +13,6 @@ public class CustomException {
 
     }
 
-
     public static class NotSasukeUser extends RuntimeException {
 
         String message;
