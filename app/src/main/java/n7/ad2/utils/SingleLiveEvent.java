@@ -1,16 +1,14 @@
 package n7.ad2.utils;
 
-import android.arch.lifecycle.LifecycleOwner;
-import android.arch.lifecycle.MutableLiveData;
-import android.arch.lifecycle.Observer;
-import android.support.annotation.AnyThread;
-import android.support.annotation.MainThread;
-import android.support.annotation.NonNull;
-import android.support.annotation.Nullable;
+import androidx.lifecycle.LifecycleOwner;
+import androidx.lifecycle.MutableLiveData;
+import androidx.lifecycle.Observer;
+import androidx.annotation.AnyThread;
+import androidx.annotation.MainThread;
+import androidx.annotation.NonNull;
+import androidx.annotation.Nullable;
 
 import java.util.concurrent.atomic.AtomicBoolean;
-
-import n7.ad2.heroes.full.ResponseModel;
 
 /**
  * A lifecycle-aware observable that sends only new updates after subscription, used for events like
@@ -26,9 +24,8 @@ public class SingleLiveEvent<T> extends MutableLiveData<T> {
 
     private final AtomicBoolean mPending = new AtomicBoolean(false);
 
-    @MainThread
-    public void observe(@NonNull LifecycleOwner owner, @NonNull final Observer<T> observer) {
-
+    @Override
+    public void observe(@NonNull LifecycleOwner owner,final @NonNull Observer<? super T> observer) {
         // Observe the internal MutableLiveData
         super.observe(owner, new Observer<T>() {
             @Override

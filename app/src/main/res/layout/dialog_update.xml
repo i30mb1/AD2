@@ -9,7 +9,7 @@
             type="n7.ad2.main.MainActivity" />
     </data>
 
-    <android.support.constraint.ConstraintLayout
+    <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:background="?colorPrimary">
@@ -65,5 +65,5 @@
             app:layout_constraintStart_toEndOf="@+id/red_line_dialog_update"
             app:layout_constraintTop_toBottomOf="@+id/tv_dialog_update_message" />
 
-    </android.support.constraint.ConstraintLayout>
+    </androidx.constraintlayout.widget.ConstraintLayout>
 </layout>

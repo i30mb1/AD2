@@ -1,13 +1,13 @@
 package n7.ad2.main;
 
 import android.app.Application;
-import android.arch.lifecycle.AndroidViewModel;
+import androidx.lifecycle.AndroidViewModel;
 import android.content.Context;
 import android.content.Intent;
-import android.databinding.ObservableBoolean;
-import android.databinding.ObservableInt;
+import androidx.databinding.ObservableBoolean;
+import androidx.databinding.ObservableInt;
 import android.preference.PreferenceManager;
-import android.support.annotation.NonNull;
+import androidx.annotation.NonNull;
 
 import java.io.IOException;
 import java.util.concurrent.Executor;

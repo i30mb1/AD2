@@ -15,7 +15,7 @@
 
         <variable
             name="dialog"
-            type="android.support.v7.app.AlertDialog" />
+            type="androidx.appcompat.app.AlertDialog" />
 
         <import type="android.view.View" />
     </data>

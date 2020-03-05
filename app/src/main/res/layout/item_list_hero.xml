@@ -14,7 +14,7 @@
             type="n7.ad2.heroes.db.HeroModel" />
     </data>
 
-    <android.support.v7.widget.CardView
+    <androidx.cardview.widget.CardView
         android:layout_weight="1"
         android:foreground="?android:attr/selectableItemBackground"
         android:layout_width="match_parent"
@@ -57,5 +57,5 @@
             tools:ignore="SmallSp"
             tools:text="@sample/heroes.json/data/nameEng" />
 
-    </android.support.v7.widget.CardView>
+    </androidx.cardview.widget.CardView>
 </layout>

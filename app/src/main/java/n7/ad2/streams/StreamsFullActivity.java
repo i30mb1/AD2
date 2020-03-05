@@ -1,18 +1,16 @@
 package n7.ad2.streams;
 
-import android.content.Context;
 import android.content.DialogInterface;
 import android.content.SharedPreferences;
 import android.media.AudioManager;
 import android.media.MediaPlayer;
 import android.os.Bundle;
 import android.os.Handler;
-import android.os.PowerManager;
 import android.preference.PreferenceManager;
-import android.support.annotation.NonNull;
-import android.support.v7.app.AlertDialog;
-import android.support.v7.widget.RecyclerView;
-import android.support.v7.widget.Toolbar;
+import androidx.annotation.NonNull;
+import androidx.appcompat.app.AlertDialog;
+import androidx.recyclerview.widget.RecyclerView;
+import androidx.appcompat.widget.Toolbar;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.MotionEvent;
@@ -57,7 +55,7 @@ import okhttp3.OkHttpClient;
 import okhttp3.Request;
 import okhttp3.Response;
 
-import static android.support.v4.internal.view.SupportMenuItem.SHOW_AS_ACTION_ALWAYS;
+import static androidx.core.internal.view.SupportMenuItem.SHOW_AS_ACTION_ALWAYS;
 import static n7.ad2.setting.SettingActivity.SUBSCRIPTION_PREF;
 import static n7.ad2.splash.SplashActivity.ANIMATION_DURATION;
 

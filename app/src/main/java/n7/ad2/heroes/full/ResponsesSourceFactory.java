@@ -1,7 +1,7 @@
 package n7.ad2.heroes.full;
 
 
-import android.arch.paging.DataSource;
+import androidx.paging.DataSource;
 
 public class ResponsesSourceFactory extends DataSource.Factory<Integer, Response> {
 

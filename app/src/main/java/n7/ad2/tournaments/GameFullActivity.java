@@ -1,10 +1,10 @@
 package n7.ad2.tournaments;
 
-import android.arch.lifecycle.Observer;
-import android.databinding.DataBindingUtil;
-import android.databinding.ObservableBoolean;
+import androidx.lifecycle.Observer;
+import androidx.databinding.DataBindingUtil;
+import androidx.databinding.ObservableBoolean;
 import android.os.Bundle;
-import android.support.annotation.Nullable;
+import androidx.annotation.Nullable;
 import android.view.MenuItem;
 import android.view.View;
 import android.widget.ImageView;

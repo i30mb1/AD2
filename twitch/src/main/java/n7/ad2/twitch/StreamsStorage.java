@@ -1,7 +1,7 @@
 package n7.ad2.twitch;
 
 import android.app.Application;
-import android.databinding.ObservableBoolean;
+import androidx.databinding.ObservableBoolean;
 import android.preference.PreferenceManager;
 
 import java.io.IOException;

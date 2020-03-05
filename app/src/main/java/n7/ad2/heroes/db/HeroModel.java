@@ -1,9 +1,9 @@
 package n7.ad2.heroes.db;
 
-import android.arch.persistence.room.ColumnInfo;
-import android.arch.persistence.room.Entity;
-import android.arch.persistence.room.PrimaryKey;
-import android.support.annotation.NonNull;
+import androidx.room.ColumnInfo;
+import androidx.room.Entity;
+import androidx.room.PrimaryKey;
+import androidx.annotation.NonNull;
 
 @Entity(tableName = "HeroModel")
 //@Fts4 in Room 2.1 для поиска без LIKE

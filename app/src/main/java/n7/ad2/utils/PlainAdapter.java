@@ -1,13 +1,12 @@
 package n7.ad2.utils;
 
-import android.databinding.DataBindingUtil;
-import android.support.annotation.NonNull;
-import android.support.v7.widget.RecyclerView;
+import androidx.databinding.DataBindingUtil;
+import androidx.annotation.NonNull;
+import androidx.recyclerview.widget.RecyclerView;
 import android.view.LayoutInflater;
 import android.view.ViewGroup;
 
 import java.util.ArrayList;
-import java.util.LinkedList;
 
 import n7.ad2.R;
 import n7.ad2.databinding.ItemListPlainBinding;

@@ -1,7 +1,7 @@
 package n7.ad2.heroes.full;
 
-import android.arch.paging.PositionalDataSource;
-import android.support.annotation.NonNull;
+import androidx.paging.PositionalDataSource;
+import androidx.annotation.NonNull;
 
 import java.util.List;
 

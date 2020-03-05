@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<android.support.design.widget.CoordinatorLayout
+<androidx.coordinatorlayout.widget.CoordinatorLayout
     xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
@@ -7,12 +7,12 @@
     android:layout_height="match_parent"
     android:background="?colorPrimary">
 
-    <android.support.design.widget.AppBarLayout
+    <com.google.android.material.appbar.AppBarLayout
         android:id="@+id/app_bar_layout"
         android:layout_width="match_parent"
         android:layout_height="wrap_content">
 
-    <android.support.v7.widget.Toolbar
+    <androidx.appcompat.widget.Toolbar
         android:id="@+id/toolbar"
         android:layout_width="match_parent"
         android:layout_height="?android:actionBarSize"
@@ -20,8 +20,8 @@
         app:layout_scrollFlags="scroll|enterAlways"
         android:minHeight="?attr/actionBarSize" />
 
-    </android.support.design.widget.AppBarLayout>
-    <android.support.v4.widget.NestedScrollView
+    </com.google.android.material.appbar.AppBarLayout>
+    <androidx.core.widget.NestedScrollView
         xmlns:android="http://schemas.android.com/apk/res/android"
         xmlns:app="http://schemas.android.com/apk/res-auto"
         android:layout_width="match_parent"
@@ -36,6 +36,6 @@
             android:scrollbars="none"
             android:textColor="?android:textColorSecondary"
             tools:text="каждый месяц убивают по одному этому реперу и главное ВСЕ БЛЯТЬ ЗНАЮТ КТО ЭТО ТАКОЙ сука реально я не так живу может блять как можно знать кто это откуда вы все блять знаете этих реперов вот откуда блять и как каждый ебучий месяц убивают или сдыхает от передоза ебучий репер негр и вся продота блять знает этого еблана я в ахуе" />
-    </android.support.v4.widget.NestedScrollView>
+    </androidx.core.widget.NestedScrollView>
 
-</android.support.design.widget.CoordinatorLayout>
+</androidx.coordinatorlayout.widget.CoordinatorLayout>

@@ -3,7 +3,7 @@ package n7.ad2.main;
 import android.content.Context;
 import android.content.Intent;
 import android.preference.PreferenceManager;
-import android.support.annotation.NonNull;
+import androidx.annotation.NonNull;
 
 import androidx.work.Worker;
 import androidx.work.WorkerParameters;

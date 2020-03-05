@@ -1,6 +1,6 @@
 package n7.ad2.heroes.full;
 
-import android.databinding.ObservableBoolean;
+import androidx.databinding.ObservableBoolean;
 
 public class ResponseModel implements Response {
 

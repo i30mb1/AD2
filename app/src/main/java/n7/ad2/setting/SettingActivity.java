@@ -1,15 +1,13 @@
 package n7.ad2.setting;
 
-import android.app.PendingIntent;
 import android.content.Intent;
-import android.databinding.DataBindingUtil;
-import android.databinding.ObservableBoolean;
+import androidx.databinding.DataBindingUtil;
+import androidx.databinding.ObservableBoolean;
 import android.os.Bundle;
 import android.preference.PreferenceManager;
-import android.support.v7.app.AlertDialog;
-import android.support.v7.widget.RecyclerView;
+import androidx.appcompat.app.AlertDialog;
+
 import android.view.MenuItem;
-import android.view.MotionEvent;
 
 import com.google.firebase.analytics.FirebaseAnalytics;
 

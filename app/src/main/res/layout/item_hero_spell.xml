@@ -7,7 +7,7 @@
 
     </data>
 
-    <android.support.v7.widget.CardView
+    <androidx.cardview.widget.CardView
         android:id="@+id/cv_item_hero_spell"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
@@ -29,5 +29,5 @@
             android:paddingEnd="0dp"
             android:scaleType="centerCrop"
             tools:srcCompat="@drawable/spell_placeholder" />
-    </android.support.v7.widget.CardView>
+    </androidx.cardview.widget.CardView>
 </layout>

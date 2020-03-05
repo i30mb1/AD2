@@ -2,17 +2,15 @@ package n7.ad2.setting;
 
 import android.animation.ArgbEvaluator;
 import android.animation.ValueAnimator;
-import android.content.DialogInterface;
-import android.databinding.DataBindingUtil;
+
+import androidx.databinding.DataBindingUtil;
 import android.media.MediaPlayer;
 import android.os.Bundle;
 import android.os.Handler;
 import android.preference.PreferenceManager;
-import android.support.design.widget.Snackbar;
-import android.support.v7.app.AlertDialog;
+import com.google.android.material.snackbar.Snackbar;
+import androidx.appcompat.app.AlertDialog;
 import android.view.View;
-import android.webkit.WebView;
-import android.webkit.WebViewClient;
 
 import n7.ad2.R;
 import n7.ad2.databinding.ActivityLicenseBinding;

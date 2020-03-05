@@ -2,7 +2,7 @@ package n7.ad2.tournaments;
 
 import android.content.Context;
 import android.content.Intent;
-import android.support.annotation.NonNull;
+import androidx.annotation.NonNull;
 
 import org.jsoup.Jsoup;
 import org.jsoup.nodes.Document;

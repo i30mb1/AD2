@@ -13,11 +13,11 @@
             type="n7.ad2.splash.SplashViewModel" />
     </data>
 
-    <android.support.constraint.ConstraintLayout
+    <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent">
 
-        <android.support.v7.widget.RecyclerView
+        <androidx.recyclerview.widget.RecyclerView
             android:id="@+id/rv_activity_splash"
             android:layout_width="wrap_content"
             android:layout_height="0dp"
@@ -41,5 +41,5 @@
             app:layout_constraintTop_toTopOf="parent"
             tools:src="@drawable/icon_gray" />
 
-    </android.support.constraint.ConstraintLayout>
+    </androidx.constraintlayout.widget.ConstraintLayout>
 </layout>

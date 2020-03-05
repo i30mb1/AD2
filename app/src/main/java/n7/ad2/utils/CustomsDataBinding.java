@@ -1,13 +1,12 @@
 package n7.ad2.utils;
 
-import android.animation.ObjectAnimator;
 import android.content.res.TypedArray;
-import android.databinding.BindingAdapter;
+import androidx.databinding.BindingAdapter;
 import android.graphics.drawable.Drawable;
-import android.support.transition.Slide;
-import android.support.v4.content.ContextCompat;
-import android.support.v7.widget.RecyclerView;
-import android.support.transition.TransitionManager;
+import androidx.transition.Slide;
+import androidx.core.content.ContextCompat;
+import androidx.recyclerview.widget.RecyclerView;
+import androidx.transition.TransitionManager;
 import android.util.TypedValue;
 import android.view.Gravity;
 import android.view.View;

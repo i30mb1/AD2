@@ -1,6 +1,6 @@
 package n7.ad2.streams;
 
-import android.arch.paging.DataSource;
+import androidx.paging.DataSource;
 
 import n7.ad2.streams.retrofit.Streams;
 

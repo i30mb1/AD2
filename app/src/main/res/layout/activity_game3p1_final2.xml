@@ -11,7 +11,7 @@
             type="n7.ad2.games.Game3p1" />
     </data>
 
-    <android.support.constraint.ConstraintLayout
+    <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:background="?colorPrimary"
@@ -97,7 +97,7 @@
             tools:ignore="UnusedAttribute"
             tools:targetApi="m" />
 
-        <android.support.constraint.Guideline
+        <androidx.constraintlayout.widget.Guideline
             android:id="@+id/guideline2"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
@@ -143,11 +143,11 @@
             app:layout_constraintStart_toEndOf="@+id/tv_activity_game3p1_suggested_cost"
             app:layout_constraintTop_toTopOf="@+id/tv_activity_game3p1_suggested_cost" />
 
-        <android.support.constraint.Guideline
+        <androidx.constraintlayout.widget.Guideline
             android:id="@+id/guideline3"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:orientation="horizontal"
             app:layout_constraintGuide_percent="0.5" />
-    </android.support.constraint.ConstraintLayout>
+    </androidx.constraintlayout.widget.ConstraintLayout>
 </layout>

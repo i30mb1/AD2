@@ -13,7 +13,7 @@
             type="n7.ad2.main.MainActivity" />
     </data>
 
-    <android.support.constraint.ConstraintLayout
+    <androidx.constraintlayout.widget.ConstraintLayout
         android:id="@+id/cl_drawer"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
@@ -235,5 +235,5 @@
             </LinearLayout>
         </LinearLayout>
 
-    </android.support.constraint.ConstraintLayout>
+    </androidx.constraintlayout.widget.ConstraintLayout>
 </layout>

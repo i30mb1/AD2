@@ -6,5 +6,5 @@
         android:title="@android:string/search_go"
         android:icon="@android:drawable/ic_menu_search"
         yourapp:showAsAction="always|collapseActionView"
-        yourapp:actionViewClass="android.support.v7.widget.SearchView" />
+        yourapp:actionViewClass="androidx.appcompat.widget.SearchView" />
 </menu>

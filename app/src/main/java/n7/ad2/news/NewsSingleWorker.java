@@ -1,14 +1,12 @@
 package n7.ad2.news;
 
 import android.content.Context;
-import android.support.annotation.NonNull;
+import androidx.annotation.NonNull;
 
 import org.jsoup.Jsoup;
 import org.jsoup.nodes.Document;
 import org.jsoup.nodes.Element;
 import org.jsoup.select.Elements;
-
-import java.io.IOException;
 
 import androidx.work.Worker;
 import androidx.work.WorkerParameters;

@@ -9,27 +9,27 @@
             type="n7.ad2.main.MainViewModel" />
     </data>
 
-    <android.support.v4.widget.DrawerLayout
+    <androidx.drawerlayout.widget.DrawerLayout
         android:id="@+id/drawer_activity_main"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:background="?colorPrimaryDark">
 
-        <android.support.design.widget.CoordinatorLayout
+        <androidx.coordinatorlayout.widget.CoordinatorLayout
             android:layout_width="match_parent"
             android:layout_height="match_parent">
 
-            <android.support.design.widget.AppBarLayout
+            <com.google.android.material.appbar.AppBarLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content">
 
-                <android.support.v7.widget.Toolbar
+                <androidx.appcompat.widget.Toolbar
                     android:id="@+id/toolbar_activity_main"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:minHeight="?attr/actionBarSize"
                     app:layout_scrollFlags="scroll|enterAlways" />
-            </android.support.design.widget.AppBarLayout>
+            </com.google.android.material.appbar.AppBarLayout>
 
             <FrameLayout
                 android:id="@+id/container_activity_main"
@@ -38,6 +38,6 @@
                 android:background="?colorPrimary"
                 app:layout_behavior="@string/appbar_scrolling_view_behavior" />
 
-        </android.support.design.widget.CoordinatorLayout>
-    </android.support.v4.widget.DrawerLayout>
+        </androidx.coordinatorlayout.widget.CoordinatorLayout>
+    </androidx.drawerlayout.widget.DrawerLayout>
 </layout>

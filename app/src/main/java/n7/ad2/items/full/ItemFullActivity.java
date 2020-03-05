@@ -1,8 +1,8 @@
 package n7.ad2.items.full;
 
 import android.os.Bundle;
-import android.preference.PreferenceManager;
-import android.support.v7.widget.Toolbar;
+
+import androidx.appcompat.widget.Toolbar;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
@@ -16,8 +16,6 @@ import org.json.JSONObject;
 import n7.ad2.R;
 import n7.ad2.utils.BaseActivity;
 import n7.ad2.utils.Utils;
-
-import static n7.ad2.setting.SettingActivity.SUBSCRIPTION_PREF;
 
 public class ItemFullActivity extends BaseActivity {
 

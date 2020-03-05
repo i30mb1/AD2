@@ -1,11 +1,11 @@
 package n7.ad2.streams;
 
-import android.arch.paging.PagedListAdapter;
-import android.databinding.DataBindingUtil;
+import androidx.paging.PagedListAdapter;
+import androidx.databinding.DataBindingUtil;
 import android.os.Handler;
-import android.support.annotation.NonNull;
-import android.support.v7.util.DiffUtil;
-import android.support.v7.widget.RecyclerView;
+import androidx.annotation.NonNull;
+import androidx.recyclerview.widget.DiffUtil;
+import androidx.recyclerview.widget.RecyclerView;
 import android.view.LayoutInflater;
 import android.view.ViewGroup;
 

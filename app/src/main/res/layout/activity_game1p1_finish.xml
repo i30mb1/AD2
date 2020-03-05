@@ -12,7 +12,7 @@
             type="n7.ad2.games.Game1p1" />
     </data>
 
-    <android.support.constraint.ConstraintLayout
+    <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:background="?colorPrimary"
@@ -239,5 +239,5 @@
             app:layout_constraintTop_toBottomOf="@+id/tv_activity_game1_score"
             tools:text="SKELETON KING DETECTED" />
 
-    </android.support.constraint.ConstraintLayout>
+    </androidx.constraintlayout.widget.ConstraintLayout>
 </layout>

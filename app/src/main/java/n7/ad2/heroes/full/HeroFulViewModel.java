@@ -3,19 +3,19 @@ package n7.ad2.heroes.full;
 import android.Manifest;
 import android.app.Application;
 import android.app.DownloadManager;
-import android.arch.lifecycle.AndroidViewModel;
-import android.arch.lifecycle.LiveData;
-import android.arch.lifecycle.MutableLiveData;
-import android.arch.lifecycle.Observer;
-import android.arch.paging.LivePagedListBuilder;
-import android.arch.paging.PagedList;
+import androidx.lifecycle.AndroidViewModel;
+import androidx.lifecycle.LiveData;
+import androidx.lifecycle.MutableLiveData;
+import androidx.lifecycle.Observer;
+import androidx.paging.LivePagedListBuilder;
+import androidx.paging.PagedList;
 import android.content.ContentResolver;
 import android.content.ContentValues;
 import android.content.Context;
 import android.content.SharedPreferences;
 import android.content.pm.PackageManager;
-import android.databinding.ObservableBoolean;
-import android.databinding.ObservableInt;
+import androidx.databinding.ObservableBoolean;
+import androidx.databinding.ObservableInt;
 import android.media.MediaPlayer;
 import android.media.RingtoneManager;
 import android.net.ConnectivityManager;
@@ -26,9 +26,9 @@ import android.os.Environment;
 import android.preference.PreferenceManager;
 import android.provider.MediaStore;
 import android.provider.Settings;
-import android.support.annotation.NonNull;
-import android.support.annotation.Nullable;
-import android.support.v7.app.AlertDialog;
+import androidx.annotation.NonNull;
+import androidx.annotation.Nullable;
+import androidx.appcompat.app.AlertDialog;
 
 import androidx.work.Constraints;
 import androidx.work.Data;
@@ -132,37 +132,35 @@ public class HeroFulViewModel extends AndroidViewModel implements SharedPreferen
     }
 
     private void loadFreshGuideForHero(final HeroModel heroModel) {
-        diskIO.execute(new Runnable() {
-            @Override
-            public void run() {
-                int currentDay = PreferenceManager.getDefaultSharedPreferences(application).getInt(CURRENT_DAY_IN_APP, 0);
-                int guideLastDay = heroModel.getGuideLastDay();
-                if (currentDay != guideLastDay) {
-                    PreferenceManager.getDefaultSharedPreferences(application).edit().putInt(FREE_RESPONSE_FOR_DAY_KEY, FREE_RESPONSE_FOR_DAY).apply();
-                    Constraints constraints = new Constraints.Builder().setRequiredNetworkType(NetworkType.CONNECTED).build();
-                    Data data = new Data.Builder().putString(HERO_CODE_NAME, heroCode).build();
-                    OneTimeWorkRequest worker = new OneTimeWorkRequest.Builder(GuideWorker.class)
-                            .setInputData(data)
-                            .setConstraints(constraints)
-                            .build();
-                    WorkManager.getInstance().enqueue(worker);
-                    WorkManager.getInstance().getWorkInfoByIdLiveData(worker.getId()).observeForever(new Observer<WorkInfo>() {
-                        @Override
-                        public void onChanged(@Nullable WorkInfo workInfo) {
-                            if (workInfo != null) {
-                                if (workInfo.getState().isFinished() || workInfo.getState().equals(WorkInfo.State.ENQUEUED)) {
-                                    isGuideLoading.set(false);
-                                } else {
-                                    isGuideLoading.set(true);
-                                }
-                            }
-                        }
-                    });
-                }
-            }
-        });
 
+        int currentDay = PreferenceManager.getDefaultSharedPreferences(application).getInt(CURRENT_DAY_IN_APP, 0);
+        int guideLastDay = heroModel.getGuideLastDay();
+        if (currentDay != guideLastDay) {
+            PreferenceManager.getDefaultSharedPreferences(application).edit().putInt(FREE_RESPONSE_FOR_DAY_KEY, FREE_RESPONSE_FOR_DAY).apply();
+            Constraints constraints = new Constraints.Builder().setRequiredNetworkType(NetworkType.CONNECTED).build();
+            Data data = new Data.Builder().putString(HERO_CODE_NAME, heroCode).build();
+            OneTimeWorkRequest worker = new OneTimeWorkRequest.Builder(GuideWorker.class)
+                    .setInputData(data)
+                    .setConstraints(constraints)
+                    .build();
+            WorkManager.getInstance().enqueue(worker);
+            WorkManager.getInstance().getWorkInfoByIdLiveData(worker.getId()).observeForever(new Observer<WorkInfo>() {
+                @Override
+                public void onChanged(@Nullable WorkInfo workInfo) {
+                    if (workInfo != null) {
+                        if (workInfo.getState().isFinished() || workInfo.getState().equals(WorkInfo.State.ENQUEUED)) {
+                            isGuideLoading.set(false);
+                        } else {
+                            isGuideLoading.set(true);
+                        }
+                    }
+                }
+            });
+        }
     }
+
+
+
 
     private void laodHeroByCodeName(final String heroCode) {
         diskIO.execute(new Runnable() {

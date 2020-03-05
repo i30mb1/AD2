@@ -1,12 +1,12 @@
 package n7.ad2.splash;
 
 import android.app.Application;
-import android.arch.lifecycle.AndroidViewModel;
-import android.databinding.ObservableField;
-import android.databinding.ObservableInt;
+import androidx.lifecycle.AndroidViewModel;
+import androidx.databinding.ObservableField;
+import androidx.databinding.ObservableInt;
 import android.graphics.drawable.Drawable;
 import android.preference.PreferenceManager;
-import android.support.annotation.NonNull;
+import androidx.annotation.NonNull;
 
 import com.google.android.gms.ads.MobileAds;
 import com.google.android.gms.common.GooglePlayServicesNotAvailableException;

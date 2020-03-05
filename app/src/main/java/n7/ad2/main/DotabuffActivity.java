@@ -2,7 +2,7 @@ package n7.ad2.main;
 
 import android.os.Bundle;
 import android.preference.PreferenceManager;
-import android.support.v7.app.AppCompatActivity;
+import androidx.appcompat.app.AppCompatActivity;
 import android.webkit.WebView;
 import android.webkit.WebViewClient;
 

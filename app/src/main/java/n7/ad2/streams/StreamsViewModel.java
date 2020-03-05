@@ -1,12 +1,12 @@
 package n7.ad2.streams;
 
 import android.app.Application;
-import android.arch.lifecycle.AndroidViewModel;
-import android.arch.lifecycle.LiveData;
-import android.arch.paging.LivePagedListBuilder;
-import android.arch.paging.PagedList;
-import android.databinding.ObservableBoolean;
-import android.support.annotation.NonNull;
+import androidx.lifecycle.AndroidViewModel;
+import androidx.lifecycle.LiveData;
+import androidx.paging.LivePagedListBuilder;
+import androidx.paging.PagedList;
+import androidx.databinding.ObservableBoolean;
+import androidx.annotation.NonNull;
 
 import n7.ad2.streams.retrofit.Streams;
 

@@ -1,6 +1,6 @@
 package n7.ad2.twitch;
 
-import android.arch.paging.DataSource;
+import androidx.paging.DataSource;
 
 import n7.ad2.twitch.retrofit.Streams;
 

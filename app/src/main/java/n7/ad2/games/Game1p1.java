@@ -2,24 +2,24 @@ package n7.ad2.games;
 
 import android.animation.ArgbEvaluator;
 import android.animation.ValueAnimator;
-import android.databinding.DataBindingUtil;
-import android.databinding.ObservableBoolean;
-import android.databinding.ObservableField;
-import android.databinding.ObservableInt;
+import androidx.databinding.DataBindingUtil;
+import androidx.databinding.ObservableBoolean;
+import androidx.databinding.ObservableField;
+import androidx.databinding.ObservableInt;
 import android.media.AudioManager;
 import android.media.SoundPool;
 import android.os.Bundle;
 import android.os.CountDownTimer;
 import android.os.Handler;
-import android.support.constraint.ConstraintLayout;
-import android.support.constraint.ConstraintSet;
-import android.support.transition.ChangeBounds;
-import android.support.transition.Fade;
-import android.support.transition.TransitionManager;
-import android.support.transition.TransitionSet;
-import android.support.v4.text.TextUtilsCompat;
-import android.support.v4.widget.TextViewCompat;
-import android.support.v7.app.AppCompatActivity;
+import androidx.constraintlayout.widget.ConstraintLayout;
+import androidx.constraintlayout.widget.ConstraintSet;
+import androidx.transition.ChangeBounds;
+import androidx.transition.Fade;
+import androidx.transition.TransitionManager;
+import androidx.transition.TransitionSet;
+import androidx.core.text.TextUtilsCompat;
+import androidx.core.widget.TextViewCompat;
+import androidx.appcompat.app.AppCompatActivity;
 import android.util.TypedValue;
 import android.view.View;
 import android.view.ViewGroup;
@@ -44,7 +44,6 @@ import java.util.concurrent.Executors;
 
 import n7.ad2.R;
 import n7.ad2.databinding.ActivityGame1p1Binding;
-import n7.ad2.utils.BaseActivity;
 import n7.ad2.utils.Utils;
 
 

@@ -23,7 +23,7 @@
             type="ArrayList&lt;Float&gt;" />
     </data>
 
-    <android.support.constraint.ConstraintLayout
+    <androidx.constraintlayout.widget.ConstraintLayout
         android:id="@+id/cl_drawer"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
@@ -129,7 +129,7 @@
         </LinearLayout>
 
 
-        <android.support.v7.widget.RecyclerView
+        <androidx.recyclerview.widget.RecyclerView
             android:id="@+id/rv_drawer"
             android:layout_width="wrap_content"
             android:layout_height="0dp"
@@ -387,7 +387,7 @@
             tools:text="0" />
 
         <!--android:visibility="@{activity.subscription ? View.GONE : View.VISIBLE}"-->
-        <android.support.constraint.Group
+        <androidx.constraintlayout.widget.Group
             android:id="@+id/group"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
@@ -409,5 +409,5 @@
             tools:ignore="HardcodedText"
             tools:visibility="visible" />
 
-    </android.support.constraint.ConstraintLayout>
+    </androidx.constraintlayout.widget.ConstraintLayout>
 </layout>

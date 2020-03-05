@@ -1,15 +1,15 @@
 package n7.ad2.news;
 
 import android.app.Application;
-import android.arch.lifecycle.AndroidViewModel;
-import android.arch.lifecycle.LiveData;
-import android.arch.lifecycle.Observer;
-import android.arch.paging.DataSource;
-import android.arch.paging.LivePagedListBuilder;
-import android.arch.paging.PagedList;
-import android.databinding.ObservableBoolean;
-import android.support.annotation.NonNull;
-import android.support.annotation.Nullable;
+import androidx.lifecycle.AndroidViewModel;
+import androidx.lifecycle.LiveData;
+import androidx.lifecycle.Observer;
+import androidx.paging.DataSource;
+import androidx.paging.LivePagedListBuilder;
+import androidx.paging.PagedList;
+import androidx.databinding.ObservableBoolean;
+import androidx.annotation.NonNull;
+import androidx.annotation.Nullable;
 
 import androidx.work.Data;
 import androidx.work.OneTimeWorkRequest;

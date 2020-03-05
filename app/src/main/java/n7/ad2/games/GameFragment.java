@@ -3,15 +3,15 @@ package n7.ad2.games;
 
 import android.content.Intent;
 import android.content.SharedPreferences;
-import android.databinding.DataBindingUtil;
-import android.databinding.ObservableBoolean;
+import androidx.databinding.DataBindingUtil;
+import androidx.databinding.ObservableBoolean;
 import android.os.Bundle;
 import android.preference.PreferenceManager;
-import android.support.annotation.NonNull;
-import android.support.annotation.Nullable;
-import android.support.v4.app.ActivityOptionsCompat;
-import android.support.v4.app.Fragment;
-import android.support.v4.util.Pair;
+import androidx.annotation.NonNull;
+import androidx.annotation.Nullable;
+import androidx.core.app.ActivityOptionsCompat;
+import androidx.fragment.app.Fragment;
+import androidx.core.util.Pair;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -20,7 +20,6 @@ import n7.ad2.R;
 import n7.ad2.databinding.FragmentGameBinding;
 
 import static n7.ad2.main.MainActivity.LOG_ON_RECEIVE;
-import static n7.ad2.setting.SettingActivity.SUBSCRIPTION_PREF;
 
 public class GameFragment extends Fragment implements SharedPreferences.OnSharedPreferenceChangeListener {
 
