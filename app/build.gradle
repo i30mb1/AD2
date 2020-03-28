@@ -128,7 +128,6 @@ dependencies {
     api 'com.google.android.gms:play-services-ads:17.2.0'
 
     api 'com.google.android.exoplayer:exoplayer-core:2.10.2'
-    api 'androidx.multidex:multidex:2.0.0'
 
     // auto update
     api 'com.google.android.play:core:1.6.1'
