@@ -23,6 +23,8 @@ import android.net.NetworkInfo;
 import android.net.Uri;
 import android.os.Build;
 import android.os.Environment;
+import android.os.Handler;
+import android.os.Looper;
 import android.preference.PreferenceManager;
 import android.provider.MediaStore;
 import android.provider.Settings;
@@ -139,23 +141,29 @@ public class HeroFulViewModel extends AndroidViewModel implements SharedPreferen
             PreferenceManager.getDefaultSharedPreferences(application).edit().putInt(FREE_RESPONSE_FOR_DAY_KEY, FREE_RESPONSE_FOR_DAY).apply();
             Constraints constraints = new Constraints.Builder().setRequiredNetworkType(NetworkType.CONNECTED).build();
             Data data = new Data.Builder().putString(HERO_CODE_NAME, heroCode).build();
-            OneTimeWorkRequest worker = new OneTimeWorkRequest.Builder(GuideWorker.class)
+            final OneTimeWorkRequest worker = new OneTimeWorkRequest.Builder(GuideWorker.class)
                     .setInputData(data)
                     .setConstraints(constraints)
                     .build();
             WorkManager.getInstance().enqueue(worker);
-            WorkManager.getInstance().getWorkInfoByIdLiveData(worker.getId()).observeForever(new Observer<WorkInfo>() {
+            new Handler(Looper.getMainLooper()).post(new Runnable() {
                 @Override
-                public void onChanged(@Nullable WorkInfo workInfo) {
-                    if (workInfo != null) {
-                        if (workInfo.getState().isFinished() || workInfo.getState().equals(WorkInfo.State.ENQUEUED)) {
-                            isGuideLoading.set(false);
-                        } else {
-                            isGuideLoading.set(true);
+                public void run() {
+                    WorkManager.getInstance().getWorkInfoByIdLiveData(worker.getId()).observeForever(new Observer<WorkInfo>() {
+                        @Override
+                        public void onChanged(@Nullable WorkInfo workInfo) {
+                            if (workInfo != null) {
+                                if (workInfo.getState().isFinished() || workInfo.getState().equals(WorkInfo.State.ENQUEUED)) {
+                                    isGuideLoading.set(false);
+                                } else {
+                                    isGuideLoading.set(true);
+                                }
+                            }
                         }
-                    }
+                    });
                 }
             });
+
         }
     }
 
