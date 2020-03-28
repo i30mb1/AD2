@@ -4,9 +4,7 @@
     <modules>
       <module fileurl="file://$PROJECT_DIR$/AD2.iml" filepath="$PROJECT_DIR$/AD2.iml" group="AD2" />
       <module fileurl="file://$PROJECT_DIR$/app/app.iml" filepath="$PROJECT_DIR$/app/app.iml" group="AD2/app" />
-      <module fileurl="file://$PROJECT_DIR$/instant/instant.iml" filepath="$PROJECT_DIR$/instant/instant.iml" group="AD2/instant" />
       <module fileurl="file://$PROJECT_DIR$/parse/parse.iml" filepath="$PROJECT_DIR$/parse/parse.iml" group="AD2/parse" />
-      <module fileurl="file://$PROJECT_DIR$/twitch/twitch.iml" filepath="$PROJECT_DIR$/twitch/twitch.iml" group="AD2/twitch" />
     </modules>
   </component>
 </project>
