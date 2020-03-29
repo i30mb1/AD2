@@ -14,7 +14,7 @@ import org.jsoup.nodes.Element
 import org.jsoup.select.Elements
 import java.io.File
 
-class Parse : CoroutineScope by (CoroutineScope(Dispatchers.IO)) {
+class ParseHeroes : CoroutineScope by (CoroutineScope(Dispatchers.IO)) {
     private val assetsFilePath = System.getProperty("user.dir") + "\\app\\src\\main\\assets"
 
     private fun getHeroes(document: Document): Elements {
@@ -31,7 +31,7 @@ class Parse : CoroutineScope by (CoroutineScope(Dispatchers.IO)) {
     }
 
 
-    fun loadHeroesNameInFile(withZh: Boolean = false) = launch {
+    fun loadHeroesNameInFile(withZh: Boolean = false, createFolders: Boolean = false) = launch {
         val heroesEngUrl = "https://dota2.gamepedia.com/Heroes"
         val heroesZhUrl = "https://dota2-zh.gamepedia.com/Heroes"
         val fileName = "heroesNew.json"
@@ -55,7 +55,7 @@ class Parse : CoroutineScope by (CoroutineScope(Dispatchers.IO)) {
                         if (withZh) put("hrefZh", getHeroHref(heroesZh[index]))
                         val directory = "heroes2" + File.separator + heroName
                         put("assetsPath", directory)
-                        createHeroFolderInAssets(directory)
+                        if (createFolders) createHeroFolderInAssets(directory)
                     }
                     add(heroObject)
                 }
@@ -71,7 +71,7 @@ class Parse : CoroutineScope by (CoroutineScope(Dispatchers.IO)) {
 }
 
 fun main() = runBlocking {
-    val parse = Parse()
+    val parse = ParseHeroes()
     parse.loadHeroesNameInFile().join()
 }
 
