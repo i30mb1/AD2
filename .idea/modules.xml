@@ -5,6 +5,7 @@
       <module fileurl="file://$PROJECT_DIR$/AD2.iml" filepath="$PROJECT_DIR$/AD2.iml" group="AD2" />
       <module fileurl="file://$PROJECT_DIR$/app/app.iml" filepath="$PROJECT_DIR$/app/app.iml" group="AD2/app" />
       <module fileurl="file://$PROJECT_DIR$/parse/parse.iml" filepath="$PROJECT_DIR$/parse/parse.iml" group="AD2/parse" />
+      <module fileurl="file://$PROJECT_DIR$/parseInfo/parseInfo.iml" filepath="$PROJECT_DIR$/parseInfo/parseInfo.iml" group="AD2/parseInfo" />
     </modules>
   </component>
 </project>
