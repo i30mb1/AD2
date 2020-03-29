@@ -13,6 +13,8 @@ import org.jsoup.nodes.Document
 import org.jsoup.nodes.Element
 import org.jsoup.select.Elements
 import java.io.File
+import java.net.URL
+import javax.imageio.ImageIO
 
 class ParseHeroes : CoroutineScope by (CoroutineScope(Dispatchers.IO)) {
     private val assetsFilePath = System.getProperty("user.dir") + "\\app\\src\\main\\assets"
@@ -60,7 +62,7 @@ class ParseHeroes : CoroutineScope by (CoroutineScope(Dispatchers.IO)) {
                         val directory = "heroes2" + File.separator + heroName
                         put("assetsPath", directory)
                         if (createFolders) createHeroFolderInAssets(directory)
-                        loadHeroInfo(heroHrefEng)
+                        loadHeroInfo(heroHrefEng, directory)
                     }
                     add(heroObject)
                 }
@@ -70,13 +72,27 @@ class ParseHeroes : CoroutineScope by (CoroutineScope(Dispatchers.IO)) {
         }
     }
 
-    private fun loadHeroInfo(heroPath: String) {
+    private fun loadHeroInfo(heroPath: String, directory: String) {
         val heroUrlEng = "https://dota2.gamepedia.com$heroPath"
         if (!checkConnectToHero(heroUrlEng)) return
 
         val root = connectTo(heroUrlEng)
 
+        loadHeroImageFull(root, directory)
 
+    }
+
+    private fun loadHeroImageFull(root: Document, directory: String) {
+        try {
+            val imageUrl = root.getElementsByTag("img")[0].attr("src")
+            val bufferImageIO = ImageIO.read(URL(imageUrl))
+            val file = File(assetsFilePath + File.separator + directory + File.separator + "full.png")
+            file.mkdirs()
+            ImageIO.write(bufferImageIO, "png", file)
+            println("image full saved")
+        } catch (e: Exception) {
+            println("image full not saved")
+        }
     }
 
     private fun checkConnectToHero(url: String): Boolean {
@@ -97,6 +113,6 @@ class ParseHeroes : CoroutineScope by (CoroutineScope(Dispatchers.IO)) {
 
 fun main() = runBlocking {
     val parse = ParseHeroes()
-    parse.loadHeroesNameInFile().join()
+    parse.loadHeroesNameInFile(createFolders = true).join()
 }
 
