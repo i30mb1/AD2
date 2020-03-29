@@ -30,14 +30,17 @@ class ParseHeroes : CoroutineScope by (CoroutineScope(Dispatchers.IO)) {
         return element.getElementsByTag("a")[0].attr("href")
     }
 
+    private fun connectTo(url: String): Document {
+        return Jsoup.connect(url).get()
+    }
 
-    fun loadHeroesNameInFile(withZh: Boolean = false, createFolders: Boolean = false) = launch {
+    fun loadHeroesNameInFile(withZh: Boolean = false, createFolders: Boolean = false, checkConnect: Boolean = false) = launch {
         val heroesEngUrl = "https://dota2.gamepedia.com/Heroes"
         val heroesZhUrl = "https://dota2-zh.gamepedia.com/Heroes"
         val fileName = "heroesNew.json"
 
-        val rootEng = Jsoup.connect(heroesEngUrl).get()
-        val rootZh = Jsoup.connect(heroesZhUrl).get()
+        val rootEng = connectTo(heroesEngUrl)
+        val rootZh = connectTo(heroesZhUrl)
 
         JSONObject().apply {
             JSONArray().apply {
@@ -48,20 +51,42 @@ class ParseHeroes : CoroutineScope by (CoroutineScope(Dispatchers.IO)) {
                 heroesEng.forEachIndexed { index, _ ->
                     val heroObject = JSONObject().apply {
                         val heroName = getHeroName(heroesEng[index])
+                        val heroHrefEng = getHeroHref(heroesEng[index])
 
                         put("nameEng", heroName)
-                        put("hrefEng", getHeroHref(heroesEng[index]))
+                        put("hrefEng", heroHrefEng)
                         if (withZh) put("nameZh", getHeroName(heroesZh[index]))
                         if (withZh) put("hrefZh", getHeroHref(heroesZh[index]))
                         val directory = "heroes2" + File.separator + heroName
                         put("assetsPath", directory)
                         if (createFolders) createHeroFolderInAssets(directory)
+                        loadHeroInfo(heroHrefEng)
                     }
                     add(heroObject)
                 }
                 put("heroes", this)
             }
             File(assetsFilePath + File.separator + fileName).writeText(toJSONString())
+        }
+    }
+
+    private fun loadHeroInfo(heroPath: String) {
+        val heroUrlEng = "https://dota2.gamepedia.com$heroPath"
+        if (!checkConnectToHero(heroUrlEng)) return
+
+        val root = connectTo(heroUrlEng)
+
+
+    }
+
+    private fun checkConnectToHero(url: String): Boolean {
+        return try {
+            connectTo(url)
+            println("connect to $url success")
+            true
+        } catch (e: Exception) {
+            println("connect to $url fail")
+            false
         }
     }
 
