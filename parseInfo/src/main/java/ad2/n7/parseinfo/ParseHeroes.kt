@@ -161,16 +161,30 @@ class ParseHeroes private constructor(
                     val params = it.getElementsByAttributeValue("style", "vertical-align:top; padding: 3px 5px; display:inline-block;")[0].children()
                     params.filter { it.attr("style").isEmpty() }.also {
                         JSONArray().apply {
-                            it.forEach { add(it.text().replace("(","(tag")) }
+                            it.forEach {
+                                if (it.getElementsByAttribute("href").getOrNull(0)?.attr("href").equals("/Aghanim%27s_Scepter")) {
+                                    add(it.text().replace("(", "(TagAghanim"))
+                                } else {
+                                    add(it.text().replace("(", "(TagTalent"))
+                                }
+                            }
                             put("params", this)
                         }
                     }
 
-                    val cooldown = it.getElementsByAttributeValue("style","display:inline-block; margin:8px 0px 0px 50px; width:190px; vertical-align:top;").text()
-                    put("cooldown", cooldown.replace("(","(tag"))
+                    val cooldown = it.getElementsByAttributeValue("style","display:inline-block; margin:8px 0px 0px 50px; width:190px; vertical-align:top;").getOrNull(0)
+                    if (cooldown?.getElementsByAttribute("href")?.getOrNull(0)?.attr("href").equals("/Aghanim%27s_Scepter")) {
+                        put("cooldown", cooldown?.text()?.replace("(", "(TagAghanim"))
+                    } else {
+                        put("cooldown", cooldown?.text()?.replace("(", "(TagTalent"))
+                    }
 
-                    val mana = it.getElementsByAttributeValue("style","display:inline-block; margin:8px 0px 0px; width:190px; vertical-align:top;").text()
-                    put("mana", mana.replace("(","(tag"))
+                    val mana = it.getElementsByAttributeValue("style","display:inline-block; margin:8px 0px 0px; width:190px; vertical-align:top;").getOrNull(0)
+                    if (mana?.getElementsByAttribute("href")?.getOrNull(0)?.attr("href").equals("/Aghanim%27s_Scepter")) {
+                        put("mana", mana?.text()?.replace("(", "(TagAghanim"))
+                    } else {
+                        put("mana", mana?.text()?.replace("(", "(TagTalent"))
+                    }
 
                     add(this)
                 }
