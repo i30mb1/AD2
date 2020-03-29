@@ -143,6 +143,12 @@ class ParseHeroes private constructor(
                     val spellAudio = it.getElementsByTag("source").attr("src")
                     put("spellAudio", spellAudio)
 
+                    val hotKey = it.getElementsByAttributeValue("title","Hotkey").getOrNull(0)?.text() ?: ""
+                    put("hotKey", hotKey)
+
+                    val legacyKey = it.getElementsByAttributeValue("title","Legacy Key").getOrNull(0)?.text() ?: ""
+                    put("legacyKey", legacyKey)
+
                     add(this)
                 }
             }
