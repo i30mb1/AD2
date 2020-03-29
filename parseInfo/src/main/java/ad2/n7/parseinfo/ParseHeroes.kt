@@ -20,7 +20,7 @@ import javax.imageio.ImageIO
 // Builder Pattern https://medium.com/mindorks/builder-pattern-vs-kotlin-dsl-c3ebaca6bc3b
 class ParseHeroes private constructor(
         private val createHeroesFiles: Boolean,
-        private val loadHeroFullImage: Boolean
+        private val loadHeroImage: Boolean
 ) : CoroutineScope by (CoroutineScope(Dispatchers.IO)) {
 
     private constructor(builder: Builder) : this(
@@ -62,7 +62,7 @@ class ParseHeroes private constructor(
         return Jsoup.connect(url).get()
     }
 
-    private fun loadHeroesNameInFile(withZh: Boolean = false, checkConnect: Boolean = false) = launch {
+    private fun loadHeroesNameInFile(withZh: Boolean = false) = launch {
         val heroesEngUrl = "https://dota2.gamepedia.com/Heroes"
         val heroesZhUrl = "https://dota2-zh.gamepedia.com/Heroes"
         val fileName = "heroesNew.json"
@@ -104,8 +104,22 @@ class ParseHeroes private constructor(
 
         val root = connectTo(heroUrlEng)
 
-        if (loadHeroFullImage) loadHeroImageFull(root, directory)
+        if (loadHeroImage) loadHeroImageFull(root, directory)
+        if (loadHeroImage) loadHeroImageMinimap(root, directory)
         loadHeroInformation(root, directory)
+    }
+
+    private fun loadHeroImageMinimap(root: Document, directory: String) {
+        try {
+            val imageUrl = root.getElementsByTag("img")[4].attr("src")
+            val bufferImageIO = ImageIO.read(URL(imageUrl))
+            val file = File(assetsFilePath + File.separator + directory + File.separator + "minimap.png")
+            file.mkdirs()
+            ImageIO.write(bufferImageIO, "png", file)
+            println("image minimap saved")
+        } catch (e: Exception) {
+            println("image minimap not saved")
+        }
     }
 
     private fun loadHeroInformation(root: Document, directory: String) {
