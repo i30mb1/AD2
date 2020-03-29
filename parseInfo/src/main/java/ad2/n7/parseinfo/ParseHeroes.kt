@@ -158,7 +158,7 @@ class ParseHeroes private constructor(
                     val description = it.getElementsByTag("div")[14].text()
                     put("description", description)
 
-                    var params = it.getElementsByAttributeValue("style", "vertical-align:top; padding: 3px 5px; display:inline-block;")[0].children()
+                    val params = it.getElementsByAttributeValue("style", "vertical-align:top; padding: 3px 5px; display:inline-block;")[0].children()
                     params.filter { it.attr("style").isEmpty() }.also {
                         JSONArray().apply {
                             it.forEach { add(it.text()) }
@@ -166,6 +166,8 @@ class ParseHeroes private constructor(
                         }
                     }
 
+                    val cooldown = it.getElementsByAttributeValue("style","display:inline-block; margin:8px 0px 0px 50px; width:190px; vertical-align:top;").text()
+                    put("cooldown", cooldown.replace("(","(tag"))
 
                     add(this)
                 }
