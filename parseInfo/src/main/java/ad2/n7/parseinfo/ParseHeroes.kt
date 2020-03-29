@@ -124,13 +124,40 @@ class ParseHeroes private constructor(
 
     private fun loadHeroInformation(root: Document, directory: String) {
         JSONObject().apply {
-            val description = root.getElementsByTag("p")[0].text()
-            put("description", description)
-
-
+            loadDescription(root)
+            loadHistory(root)
+            loadAbilities(root)
 
             File(assetsFilePath + File.separator + directory + File.separator + "description.json").writeText(toJSONString())
         }
+    }
+
+    private fun JSONObject.loadAbilities(root: Document) {
+        val spells = root.getElementsByAttributeValue("style", "display: flex; flex-wrap: wrap; align-items: flex-start;")
+        JSONArray().apply {
+            spells.forEach {
+                JSONObject().apply {
+                    val spellName = it.getElementsByTag("div")[3].childNode(0).toString().trim()
+                    put("spellName", spellName)
+
+                    val spellAudio = it.getElementsByTag("source").attr("src")
+                    put("spellAudio", spellAudio)
+
+                    add(this)
+                }
+            }
+            put("abilities", this)
+        }
+    }
+
+    private fun JSONObject.loadHistory(root: Document) {
+        val history = root.getElementsByAttributeValue("style", "display: table-cell; font-style: italic;")[0].text()
+        put("history", history)
+    }
+
+    private fun JSONObject.loadDescription(root: Document) {
+        val description = root.getElementsByTag("p")[0].text()
+        put("description", description)
     }
 
     private fun loadHeroImageFull(root: Document, directory: String) {
