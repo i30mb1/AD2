@@ -2,6 +2,7 @@
 
 package ad2.n7.parseinfo
 
+import ad2.n7.parseinfo.ParseHeroes.Companion.parser
 import kotlinx.coroutines.CoroutineScope
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.launch
@@ -16,7 +17,31 @@ import java.io.File
 import java.net.URL
 import javax.imageio.ImageIO
 
-class ParseHeroes : CoroutineScope by (CoroutineScope(Dispatchers.IO)) {
+class ParseHeroes private constructor(
+        private val createHeroesFiles: Boolean,
+        private val loadHeroFullImage: Boolean
+) : CoroutineScope by (CoroutineScope(Dispatchers.IO)) {
+
+    private constructor(builder: Builder) : this(
+            builder.createHeroesFiles,
+            builder.loadHeroFullImage
+    )
+
+    companion object {
+        inline fun parser(block: Builder.() -> Unit) = Builder().apply(block).build()
+
+        class Builder {
+            var createHeroesFiles: Boolean = false
+            var loadHeroFullImage: Boolean = false
+
+            fun build() = ParseHeroes(this)
+        }
+    }
+
+    suspend fun start() {
+        if (createHeroesFiles) loadHeroesNameInFile().join()
+    }
+
     private val assetsFilePath = System.getProperty("user.dir") + "\\app\\src\\main\\assets"
 
     private fun getHeroes(document: Document): Elements {
@@ -36,7 +61,7 @@ class ParseHeroes : CoroutineScope by (CoroutineScope(Dispatchers.IO)) {
         return Jsoup.connect(url).get()
     }
 
-    fun loadHeroesNameInFile(withZh: Boolean = false, createFolders: Boolean = false, checkConnect: Boolean = false) = launch {
+    private fun loadHeroesNameInFile(withZh: Boolean = false, checkConnect: Boolean = false) = launch {
         val heroesEngUrl = "https://dota2.gamepedia.com/Heroes"
         val heroesZhUrl = "https://dota2-zh.gamepedia.com/Heroes"
         val fileName = "heroesNew.json"
@@ -61,8 +86,8 @@ class ParseHeroes : CoroutineScope by (CoroutineScope(Dispatchers.IO)) {
                         if (withZh) put("hrefZh", getHeroHref(heroesZh[index]))
                         val directory = "heroes2" + File.separator + heroName
                         put("assetsPath", directory)
-                        if (createFolders) createHeroFolderInAssets(directory)
-                        loadHeroInfo(heroHrefEng, directory)
+                        createHeroFolderInAssets(directory)
+                        loadHero(heroHrefEng, directory)
                     }
                     add(heroObject)
                 }
@@ -72,14 +97,25 @@ class ParseHeroes : CoroutineScope by (CoroutineScope(Dispatchers.IO)) {
         }
     }
 
-    private fun loadHeroInfo(heroPath: String, directory: String) {
+    private fun loadHero(heroPath: String, directory: String) {
         val heroUrlEng = "https://dota2.gamepedia.com$heroPath"
         if (!checkConnectToHero(heroUrlEng)) return
 
         val root = connectTo(heroUrlEng)
 
-        loadHeroImageFull(root, directory)
+        if (loadHeroFullImage) loadHeroImageFull(root, directory)
+        loadHeroInformation(root, directory)
+    }
 
+    private fun loadHeroInformation(root: Document, directory: String) {
+        JSONObject().apply {
+            val description = root.getElementsByTag("p")[0].text()
+            put("description", description)
+
+
+
+            File(assetsFilePath + File.separator + directory + File.separator + "description.json").writeText(toJSONString())
+        }
     }
 
     private fun loadHeroImageFull(root: Document, directory: String) {
@@ -112,7 +148,9 @@ class ParseHeroes : CoroutineScope by (CoroutineScope(Dispatchers.IO)) {
 }
 
 fun main() = runBlocking {
-    val parse = ParseHeroes()
-    parse.loadHeroesNameInFile(createFolders = true).join()
+    parser {
+        createHeroesFiles = true
+        loadHeroFullImage = false
+    }.start()
 }
 
