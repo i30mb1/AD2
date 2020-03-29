@@ -17,6 +17,7 @@ import java.io.File
 import java.net.URL
 import javax.imageio.ImageIO
 
+// Builder Pattern https://medium.com/mindorks/builder-pattern-vs-kotlin-dsl-c3ebaca6bc3b
 class ParseHeroes private constructor(
         private val createHeroesFiles: Boolean,
         private val loadHeroFullImage: Boolean
