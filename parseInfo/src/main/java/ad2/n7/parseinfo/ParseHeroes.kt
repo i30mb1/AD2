@@ -155,6 +155,8 @@ class ParseHeroes private constructor(
                         put("effects", this)
                     }
 
+                    val description = it.getElementsByTag("div")[14].text()
+                    put("description", description)
 
                     add(this)
                 }
