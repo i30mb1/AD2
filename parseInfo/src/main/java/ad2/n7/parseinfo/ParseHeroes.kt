@@ -158,6 +158,15 @@ class ParseHeroes private constructor(
                     val description = it.getElementsByTag("div")[14].text()
                     put("description", description)
 
+                    var params = it.getElementsByAttributeValue("style", "vertical-align:top; padding: 3px 5px; display:inline-block;")[0].children()
+                    params.filter { it.attr("style").isEmpty() }.also {
+                        JSONArray().apply {
+                            it.forEach { add(it.text()) }
+                            put("params", this)
+                        }
+                    }
+
+
                     add(this)
                 }
             }
