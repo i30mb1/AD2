@@ -186,6 +186,18 @@ class ParseHeroes private constructor(
                         put("mana", mana?.text()?.replace("(", "(TagTalent"))
                     }
 
+                    val itemBehaviour = it.getElementsByAttributeValue("style","margin-left: 50px;")
+                    JSONArray().apply {
+                        itemBehaviour.forEach {
+                            val alt = it.getElementsByTag("img").attr("src")
+                            if (alt.contains("Spell_immunity_block_partial_symbol.png")) {
+                                add("(Spell_immunity_block_partial_symbol.png) " + it.text().replace(". ",".\n"))
+                            }
+                        }
+
+                        put("itemBehaviour", this)
+                    }
+
                     add(this)
                 }
             }
