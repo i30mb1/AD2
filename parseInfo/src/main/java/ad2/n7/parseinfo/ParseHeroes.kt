@@ -205,6 +205,17 @@ class ParseHeroes private constructor(
                     val story = it.getElementsByAttributeValue("style", "margin-top: 5px; padding-top: 2px; border-top: 1px solid #C1C1C1;").getOrNull(0)
                     put("story", story?.text())
 
+                    val notesBlock = it.getElementsByAttributeValue("style","flex: 1 1 450px; word-wrap: break-word;").getOrNull(0)
+                    val notes = notesBlock?.getElementsByTag("ul")
+                    JSONArray().apply {
+                        notes?.forEach {
+                            add(it.text().replace("( ","(TagTalent "))
+                        }
+
+                        put("notes", this)
+                    }
+
+
                     add(this)
                 }
             }
