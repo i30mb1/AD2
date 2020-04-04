@@ -128,8 +128,31 @@ class ParseHeroes private constructor(
             loadHistory(root)
             loadAbilities(root)
             loadTrivia(root)
+            loadTalents(root)
+
 
             File(assetsFilePath + File.separator + directory + File.separator + "description.json").writeText(toJSONString())
+        }
+    }
+
+    private fun JSONObject.loadTalents(root: Document) {
+        val talentBlock = root.getElementsByAttributeValue("style", "display:flex; flex-wrap:wrap; align-items:flex-start;")[0]
+        val talentLines = talentBlock.getElementsByTag("tr")
+        JSONArray().apply {
+            for (talentLine in talentLines) {
+                if (talentLine.children().size == 1) continue
+                add("${talentLine.child(0).text()}^${talentLine.child(2).text()}")
+            }
+
+            put("talents", this)
+        }
+        val talentTips = talentBlock.getElementsByTag("li")
+        JSONArray().apply {
+            for (talentTip in talentTips) {
+                add(talentTip.text())
+            }
+
+            put("talentTips", this)
         }
     }
 
