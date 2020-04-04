@@ -127,8 +127,35 @@ class ParseHeroes private constructor(
             loadDescription(root)
             loadHistory(root)
             loadAbilities(root)
+            loadTrivia(root)
 
             File(assetsFilePath + File.separator + directory + File.separator + "description.json").writeText(toJSONString())
+        }
+    }
+
+    private fun JSONObject.loadTrivia(root: Document) {
+        val children = root.getElementById("mw-content-text").child(0).children()
+        var nextSectionIsTips = false
+        for (child in children) {
+            if (nextSectionIsTips) {
+                val trivias = child.getElementsByTag("li")
+                JSONArray().apply {
+                    for (trivia in trivias) {
+                        add(trivia.text())
+                    }
+                    nextSectionIsTips = false
+
+                    put("trivia", this)
+                }
+            }
+
+            if (child.tag().toString() == "h2") { // нашли заголовок секции
+                when (child.child(0).id()) {
+                    "Trivia", ".D0.A4.D0.B0.D0.BA.D1.82.D1.8B" -> {
+                        nextSectionIsTips = true
+                    }
+                }
+            }
         }
     }
 
@@ -151,7 +178,7 @@ class ParseHeroes private constructor(
 
                     val effects = it.getElementsByAttributeValue("style", "display: inline-block; width: 32%; vertical-align: top;")
                     JSONArray().apply {
-                        effects.mapNotNull { if (it.text() != "") add(it.text().replace("(","(TagAghanim")) }
+                        effects.mapNotNull { if (it.text() != "") add(it.text().replace("(", "(TagAghanim")) }
                         put("effects", this)
                     }
 
@@ -172,21 +199,21 @@ class ParseHeroes private constructor(
                         }
                     }
 
-                    val cooldown = it.getElementsByAttributeValue("style","display:inline-block; margin:8px 0px 0px 50px; width:190px; vertical-align:top;").getOrNull(0)
+                    val cooldown = it.getElementsByAttributeValue("style", "display:inline-block; margin:8px 0px 0px 50px; width:190px; vertical-align:top;").getOrNull(0)
                     if (cooldown?.getElementsByAttribute("href")?.getOrNull(0)?.attr("href").equals("/Aghanim%27s_Scepter")) {
                         put("cooldown", cooldown?.text()?.replace("(", "(TagAghanim"))
                     } else {
                         put("cooldown", cooldown?.text()?.replace("(", "(TagTalent"))
                     }
 
-                    val mana = it.getElementsByAttributeValue("style","display:inline-block; margin:8px 0px 0px; width:190px; vertical-align:top;").getOrNull(0)
+                    val mana = it.getElementsByAttributeValue("style", "display:inline-block; margin:8px 0px 0px; width:190px; vertical-align:top;").getOrNull(0)
                     if (mana?.getElementsByAttribute("href")?.getOrNull(0)?.attr("href").equals("/Aghanim%27s_Scepter")) {
                         put("mana", mana?.text()?.replace("(", "(TagAghanim"))
                     } else {
                         put("mana", mana?.text()?.replace("(", "(TagTalent"))
                     }
 
-                    val itemBehaviour = it.getElementsByAttributeValue("style","margin-left: 50px;")
+                    val itemBehaviour = it.getElementsByAttributeValue("style", "margin-left: 50px;")
                     JSONArray().apply {
                         itemBehaviour.forEach {
                             val alt = it.getElementsByTag("img").attr("src")
@@ -205,11 +232,11 @@ class ParseHeroes private constructor(
                     val story = it.getElementsByAttributeValue("style", "margin-top: 5px; padding-top: 2px; border-top: 1px solid #C1C1C1;").getOrNull(0)
                     put("story", story?.text())
 
-                    val notesBlock = it.getElementsByAttributeValue("style","flex: 1 1 450px; word-wrap: break-word;").getOrNull(0)
+                    val notesBlock = it.getElementsByAttributeValue("style", "flex: 1 1 450px; word-wrap: break-word;").getOrNull(0)
                     val notes = notesBlock?.getElementsByTag("li")
                     JSONArray().apply {
                         notes?.forEach {
-                            add(it.text().replace("( ","(TagTalent "))
+                            add(it.text().replace("( ", "(TagTalent "))
                         }
 
                         put("notes", this)
