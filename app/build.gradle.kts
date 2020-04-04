@@ -1,3 +1,5 @@
+import com.android.build.gradle.internal.cxx.configure.gradleLocalProperties
+
 plugins {
     androidApp()
     kotlinAndroid()
@@ -21,10 +23,10 @@ android {
 
     signingConfigs {
         create("release") {
-            storeFile = file("C:\\Users\\i30mb1\\AndroidProjects\\key111111.jks")
-            storePassword = "111111"
-            keyAlias = "key"
-            keyPassword = "111111"
+            storeFile = file(gradleLocalProperties(rootDir).getProperty("storeFile"))
+            storePassword = gradleLocalProperties(rootDir).getProperty("storePassword")
+            keyAlias = gradleLocalProperties(rootDir).getProperty("keyAlias")
+            keyPassword = gradleLocalProperties(rootDir).getProperty("keyPassword")
         }
     }
 
