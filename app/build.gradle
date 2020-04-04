@@ -1,7 +1,7 @@
-apply plugin: 'com.android.application'
-apply plugin: 'kotlin-android'
-apply plugin: 'kotlin-android-extensions'
-apply plugin: 'kotlin-kapt'
+apply plugin: "com.android.application"
+apply plugin: "kotlin-android"
+apply plugin: "kotlin-android-extensions"
+apply plugin: "kotlin-kapt"
 
 android {
     compileSdkVersion 28
@@ -11,10 +11,8 @@ android {
         applicationId "n7.ad2"
         minSdkVersion 18
         targetSdkVersion 28
-        versionCode gitCommitCount()
-        versionName getGitVersionMessage()
-//        versionCode 1
-//        versionName "1"
+        versionCode 1
+        versionName "1"
 
         dataBinding {
             enabled = true
@@ -35,7 +33,7 @@ android {
             resValue("string", "PORT_NUMBER", "8081")
         }
         release {
-            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+            proguardFiles getDefaultProguardFile("proguard-android.txt"), "proguard-rules.pro"
             signingConfig signingConfigs.release
             minifyEnabled true
         }
@@ -56,92 +54,63 @@ android {
 
 }
 
-def gitCommitCount() {
-    try {
-        def stdout = new ByteArrayOutputStream()
-        exec {
-            commandLine 'git', 'rev-list', '--count', 'HEAD'
-            standardOutput = stdout
-        }
-        def commitCount = stdout.toString().trim().toInteger()
-        return commitCount + 330
-    }
-    catch (ignored) {
-        return 0
-    }
-}
-
-def getGitVersionMessage() {
-    try {
-        def stdout = new ByteArrayOutputStream()
-        exec {
-            commandLine 'git', 'log', '-1', '--pretty=%B'
-            standardOutput = stdout
-        }
-        def commitCount = stdout.toString().trim()
-        return commitCount
-    }
-    catch (ignored) {
-        return "1"
-    }
-}
-
 dependencies {
-    api fileTree(include: ['*.jar'], dir: 'libs')
+    api fileTree(include: ["*.jar"], dir: "libs")
 //     Animated TextView
-    api 'com.robinhood.ticker:ticker:1.2.2'
+    api "com.robinhood.ticker:ticker:1.2.2"
     // Navigation
-    api 'com.yarolegovich:sliding-root-nav:1.1.0'
+    api "com.yarolegovich:sliding-root-nav:1.1.0"
     // cmd ipconfig основной шлюз + :8080 (как узнать страничку для браузера)
-    debugImplementation 'com.amitshekhar.android:debug-db:1.0.1'
+    debugImplementation "com.amitshekhar.android:debug-db:1.0.1"
     // Retrofit
-    api 'com.squareup.retrofit2:retrofit:2.4.0'
-    api 'com.squareup.retrofit2:converter-gson:2.3.0'
+    api "com.squareup.retrofit2:retrofit:2.4.0"
+    api "com.squareup.retrofit2:converter-gson:2.3.0"
     // WorkManager
-    api 'androidx.work:work-runtime:2.0.1'
+    api "androidx.work:work-runtime:2.0.1"
     // Room components
-    api 'androidx.room:room-runtime:2.0.0'
-    kapt 'androidx.room:room-compiler:2.0.0'
+    api "androidx.room:room-runtime:2.0.0"
+    kapt "androidx.room:room-compiler:2.0.0"
     // Lifecycle components
-    api 'androidx.lifecycle:lifecycle-extensions:2.0.0'
-    kapt 'androidx.lifecycle:lifecycle-compiler:2.0.0'
+    api "androidx.lifecycle:lifecycle-extensions:2.0.0"
+    kapt "androidx.lifecycle:lifecycle-compiler:2.0.0"
     // Paging
-    api 'androidx.paging:paging-runtime:2.0.0'
+    api "androidx.paging:paging-runtime:2.0.0"
 //     Android
-    api 'androidx.recyclerview:recyclerview:1.0.0'
-    api 'androidx.appcompat:appcompat:1.0.0'
-    api 'com.google.android.material:material:1.0.0'
-    api 'androidx.legacy:legacy-support-v4:1.0.0'
-    api 'androidx.cardview:cardview:1.0.0'
-    api 'androidx.constraintlayout:constraintlayout:1.1.3'
+    api "androidx.recyclerview:recyclerview:1.0.0"
+    api "androidx.appcompat:appcompat:1.0.0"
+    api "com.google.android.material:material:1.0.0"
+    api "androidx.legacy:legacy-support-v4:1.0.0"
+    api "androidx.cardview:cardview:1.0.0"
+    api "androidx.constraintlayout:constraintlayout:1.1.3"
     // Picasso
-    api 'com.squareup.picasso:picasso:2.71828'
-    api 'jp.wasabeef:picasso-transformations:2.2.1'
-    api 'jp.co.cyberagent.android.gpuimage:gpuimage-library:1.4.1'
+    api "com.squareup.picasso:picasso:2.71828"
+    api "jp.wasabeef:picasso-transformations:2.2.1"
+    api "jp.co.cyberagent.android.gpuimage:gpuimage-library:1.4.1"
     // Jsoup для разбора html
-    api 'org.jsoup:jsoup:1.11.2'
+    api "org.jsoup:jsoup:1.11.2"
     //поддержка jsoup для старых устройств
-    api 'com.google.android.gms:play-services-auth:16.0.1'
-    api 'com.google.firebase:firebase-core:16.0.8'
-    api 'com.google.firebase:firebase-messaging:17.6.0'
+    api "com.google.android.gms:play-services-auth:16.0.1"
+    api "com.google.firebase:firebase-core:16.0.8"
+    api "com.google.firebase:firebase-messaging:17.6.0"
 
-    api 'com.google.android.gms:play-services-ads:17.2.0'
+    api "com.google.android.gms:play-services-ads:17.2.0"
 
-    api 'com.google.android.exoplayer:exoplayer-core:2.10.2'
+    api "com.google.android.exoplayer:exoplayer-core:2.10.2"
 
     // auto update
-    api 'com.google.android.play:core:1.6.1'
+    api "com.google.android.play:core:1.6.1"
+
     api "androidx.core:core-ktx:1.2.0"
     api "org.jetbrains.kotlinx:kotlinx-coroutines-core:1.3.3"
     api "androidx.lifecycle:lifecycle-runtime-ktx:2.2.0"
     api "androidx.lifecycle:lifecycle-livedata-ktx:2.2.0"
     api "androidx.lifecycle:lifecycle-viewmodel-ktx:2.2.0"
-    api "androidx.fragment:fragment-ktx:1.2.3"
+    api "androidx.fragment:fragment-ktx:1.2.4"
     api "androidx.activity:activity-ktx:1.1.0"
-    implementation "org.jetbrains.kotlin:kotlin-stdlib-jdk7:$kotlin_version"
+    implementation "org.jetbrains.kotlin:kotlin-stdlib-jdk7:1.3.71"
 }
 
-apply plugin: 'com.google.gms.google-services'
+apply plugin: "com.google.gms.google-services"
 repositories {
     mavenCentral()
 }
