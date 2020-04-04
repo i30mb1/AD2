@@ -190,18 +190,31 @@ class ParseHeroes private constructor(
                     JSONArray().apply {
                         itemBehaviour.forEach {
                             val alt = it.getElementsByTag("img").attr("src")
-                            if (alt.contains("Spell_immunity_block_partial_symbol.png")) {
-                                add("(Spell_immunity_block_partial_symbol.png) " + it.text().replace(". ",".\n"))
-                            }
+                            ifContainAdd(alt, "Spell_immunity_block_partial_symbol.png", it)
+                            ifContainAdd(alt, "Spell_block_partial_symbol.png", it)
+                            ifContainAdd(alt, "Spell_immunity_block_symbol.png", it)
+                            ifContainAdd(alt, "Disjointable_symbol.png", it)
+                            ifContainAdd(alt, "Aghanim%27s_Scepter_symbol.png", it)
+                            ifContainAdd(alt, "Breakable_symbol.png", it)
+                            ifContainAdd(alt, "Breakable_partial_symbol.png", it)
                         }
 
                         put("itemBehaviour", this)
                     }
 
+                    val story = it.getElementsByAttributeValue("style", "margin-top: 5px; padding-top: 2px; border-top: 1px solid #C1C1C1;").getOrNull(0)
+                    put("story", story?.text())
+
                     add(this)
                 }
             }
             put("abilities", this)
+        }
+    }
+
+    private fun JSONArray.ifContainAdd(alt: String, spellImmunityBlockPartial: String, it: Element) {
+        if (alt.contains(spellImmunityBlockPartial)) {
+            add("($spellImmunityBlockPartial)^" + it.text().replace(". ", ".\n"))
         }
     }
 
