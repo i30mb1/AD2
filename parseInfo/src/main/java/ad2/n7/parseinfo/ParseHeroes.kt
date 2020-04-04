@@ -20,12 +20,14 @@ import javax.imageio.ImageIO
 // Builder Pattern https://medium.com/mindorks/builder-pattern-vs-kotlin-dsl-c3ebaca6bc3b
 class ParseHeroes private constructor(
         private val createHeroesFiles: Boolean,
-        private val loadHeroImage: Boolean
+        private val loadHeroImage: Boolean,
+        private val loadHeroSpellImage: Boolean
 ) : CoroutineScope by (CoroutineScope(Dispatchers.IO)) {
 
     private constructor(builder: Builder) : this(
             builder.createHeroesFiles,
-            builder.loadHeroFullImage
+            builder.loadHeroFullImage,
+            builder.loadHeroSpellImage
     )
 
     companion object {
@@ -34,6 +36,7 @@ class ParseHeroes private constructor(
         class Builder {
             var createHeroesFiles: Boolean = false
             var loadHeroFullImage: Boolean = false
+            var loadHeroSpellImage: Boolean = false
 
             fun build() = ParseHeroes(this)
         }
@@ -112,10 +115,7 @@ class ParseHeroes private constructor(
     private fun loadHeroImageMinimap(root: Document, directory: String) {
         try {
             val imageUrl = root.getElementsByTag("img")[4].attr("src")
-            val bufferImageIO = ImageIO.read(URL(imageUrl))
-            val file = File(assetsFilePath + File.separator + directory + File.separator + "minimap.png")
-            file.mkdirs()
-            ImageIO.write(bufferImageIO, "png", file)
+            saveImageInDirectory(imageUrl, directory, "minimap.png")
             println("image minimap saved")
         } catch (e: Exception) {
             println("image minimap not saved")
@@ -129,7 +129,6 @@ class ParseHeroes private constructor(
             loadAbilities(root)
             loadTrivia(root)
             loadTalents(root)
-
 
             File(assetsFilePath + File.separator + directory + File.separator + "description.json").writeText(toJSONString())
         }
@@ -189,6 +188,11 @@ class ParseHeroes private constructor(
                 JSONObject().apply {
                     val spellName = it.getElementsByTag("div")[3].childNode(0).toString().trim()
                     put("spellName", spellName)
+
+                    if (loadHeroSpellImage) {
+                        val spellImage = it.getElementsByAttributeValue("class", "image")[0].child(0).attr("src")
+                        saveImageInDirectory(spellImage, "heroesSpell" + File.separator, "$spellName.png")
+                    }
 
                     val spellAudio = it.getElementsByTag("source").attr("src")
                     put("spellAudio", spellAudio)
@@ -293,14 +297,18 @@ class ParseHeroes private constructor(
     private fun loadHeroImageFull(root: Document, directory: String) {
         try {
             val imageUrl = root.getElementsByTag("img")[0].attr("src")
-            val bufferImageIO = ImageIO.read(URL(imageUrl))
-            val file = File(assetsFilePath + File.separator + directory + File.separator + "full.png")
-            file.mkdirs()
-            ImageIO.write(bufferImageIO, "png", file)
+            saveImageInDirectory(imageUrl, directory, "full.png")
             println("image full saved")
         } catch (e: Exception) {
             println("image full not saved")
         }
+    }
+
+    private fun saveImageInDirectory(imageUrl: String, directory: String, fileName: String) {
+        val bufferImageIO = ImageIO.read(URL(imageUrl))
+        val file = File(assetsFilePath + File.separator + directory + File.separator + fileName)
+        file.mkdirs()
+        ImageIO.write(bufferImageIO, "png", file)
     }
 
     private fun checkConnectToHero(url: String): Boolean {
@@ -323,6 +331,7 @@ fun main() = runBlocking {
     parser {
         createHeroesFiles = true
         loadHeroFullImage = false
+        loadHeroSpellImage = true
     }.start()
 }
 
