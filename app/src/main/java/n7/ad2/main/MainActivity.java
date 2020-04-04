@@ -1,51 +1,44 @@
 package n7.ad2.main;
 
 import android.app.DownloadManager;
-import androidx.lifecycle.Observer;
-import androidx.lifecycle.ViewModelProviders;
 import android.content.BroadcastReceiver;
 import android.content.Context;
 import android.content.DialogInterface;
 import android.content.Intent;
 import android.content.IntentFilter;
 import android.content.IntentSender;
-import androidx.databinding.DataBindingUtil;
-import androidx.databinding.ObservableArrayList;
-import androidx.databinding.ObservableBoolean;
-import androidx.databinding.ObservableInt;
 import android.net.Uri;
 import android.os.Bundle;
 import android.os.Environment;
 import android.os.Handler;
 import android.preference.PreferenceManager;
-import androidx.annotation.Nullable;
-import androidx.annotation.StringRes;
-import androidx.constraintlayout.widget.ConstraintLayout;
-import androidx.constraintlayout.widget.ConstraintSet;
-import com.google.android.material.bottomsheet.BottomSheetDialog;
-import com.google.android.material.snackbar.Snackbar;
-import androidx.transition.ChangeBounds;
-import androidx.transition.TransitionManager;
-import androidx.transition.TransitionSet;
-import androidx.fragment.app.FragmentTransaction;
-import androidx.appcompat.app.AlertDialog;
-import androidx.recyclerview.widget.LinearLayoutManager;
 import android.view.MotionEvent;
 import android.view.View;
 import android.view.ViewGroup;
 import android.view.animation.LinearInterpolator;
 import android.view.inputmethod.InputMethodManager;
 
+import androidx.annotation.Nullable;
+import androidx.annotation.StringRes;
+import androidx.appcompat.app.AlertDialog;
+import androidx.constraintlayout.widget.ConstraintLayout;
+import androidx.constraintlayout.widget.ConstraintSet;
+import androidx.databinding.DataBindingUtil;
+import androidx.databinding.ObservableArrayList;
+import androidx.databinding.ObservableBoolean;
+import androidx.databinding.ObservableInt;
+import androidx.fragment.app.FragmentTransaction;
+import androidx.lifecycle.Observer;
+import androidx.lifecycle.ViewModelProviders;
+import androidx.recyclerview.widget.LinearLayoutManager;
+import androidx.transition.ChangeBounds;
+import androidx.transition.TransitionManager;
+import androidx.transition.TransitionSet;
 import androidx.work.OneTimeWorkRequest;
 import androidx.work.WorkManager;
 
-import com.google.android.gms.ads.AdListener;
-import com.google.android.gms.ads.AdRequest;
-import com.google.android.gms.ads.InterstitialAd;
-import com.google.android.gms.ads.MobileAds;
-import com.google.android.gms.ads.reward.RewardItem;
-import com.google.android.gms.ads.reward.RewardedVideoAd;
-import com.google.android.gms.ads.reward.RewardedVideoAdListener;
+import com.google.android.material.bottomsheet.BottomSheetDialog;
+import com.google.android.material.snackbar.Snackbar;
 import com.google.android.play.core.appupdate.AppUpdateInfo;
 import com.google.android.play.core.appupdate.AppUpdateManager;
 import com.google.android.play.core.appupdate.AppUpdateManagerFactory;
@@ -139,9 +132,7 @@ public class MainActivity extends BaseActivity {
     };
     private boolean shouldUpdateFromMarket = true;
     private MainViewModel viewModel;
-    private RewardedVideoAd rewardedVideoAd;
     private int currentDay;
-    private InterstitialAd interstitialAd;
     private boolean shouldDisplayLog;
     private AppUpdateManager appUpdateManager;
     InstallStateUpdatedListener UpdateListener = new InstallStateUpdatedListener() {
@@ -153,6 +144,7 @@ public class MainActivity extends BaseActivity {
             }
         }
     };
+    private boolean modeSecretActivity = false;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -199,16 +191,6 @@ public class MainActivity extends BaseActivity {
         }
     }
 
-    public void showVideoAD(View view) {
-        int lastDayTipsForVideoAD = PreferenceManager.getDefaultSharedPreferences(this).getInt(DIALOG_VIDEO_AD_SAW, 0);
-
-        if (lastDayTipsForVideoAD == currentDay) {
-            if (rewardedVideoAd != null) rewardedVideoAd.show();
-        } else {
-            showDialogBeforeVideoAD();
-        }
-    }
-
     @SuppressWarnings("ConstantConditions")
     private void showDialogBeforeVideoAD() {
 //        final AlertDialog.Builder builder = new AlertDialog.Builder(this);
@@ -234,7 +216,6 @@ public class MainActivity extends BaseActivity {
             @Override
             public void onClick(View v) {
                 bottomSheetDialog.dismiss();
-                showVideoAD(v);
             }
         });
         bottomSheetDialog.show();
@@ -248,58 +229,7 @@ public class MainActivity extends BaseActivity {
         } else {
             log("AD_enabled");
 //            setupVideoAD();
-            setupInterstitialAD();
         }
-    }
-
-    private void setupVideoAD() {
-        rewardedVideoAd = MobileAds.getRewardedVideoAdInstance(this);
-        rewardedVideoAd.setRewardedVideoAdListener(new RewardedVideoAdListener() {
-            @Override
-            public void onRewardedVideoAdLoaded() {
-                log("rewarded_video_loaded");
-                rewardedVideoLoaded.set(true);
-            }
-
-            @Override
-            public void onRewardedVideoAdOpened() {
-
-            }
-
-            @Override
-            public void onRewardedVideoStarted() {
-                rewardedVideoLoaded.set(false);
-            }
-
-            @Override
-            public void onRewardedVideoAdClosed() {
-                rewardedVideoLoaded.set(false);
-                loadVideoAD();
-            }
-
-            @Override
-            public void onRewarded(RewardItem rewardItem) {
-                log("free_subscription_+1_usage");
-                plusOneFreeSubscriptionCounter();
-//                updateFreeSubscriptionCounter();
-            }
-
-            @Override
-            public void onRewardedVideoAdLeftApplication() {
-
-            }
-
-            @Override
-            public void onRewardedVideoAdFailedToLoad(int i) {
-                log("failed_to_load_rewarded_video");
-            }
-
-            @Override
-            public void onRewardedVideoCompleted() {
-
-            }
-        });
-        loadVideoAD();
     }
 
     private void activateFreeSubscription() {
@@ -316,39 +246,6 @@ public class MainActivity extends BaseActivity {
 
     private void plusOneFreeSubscriptionCounter() {
         PreferenceManager.getDefaultSharedPreferences(MainActivity.this).edit().putInt(FREE_SUBSCRIPTION_COUNTER, (freeSubscriptionCounter.get() + 1)).apply();
-    }
-
-    private void loadVideoAD() {
-        if (rewardedVideoAd != null && !rewardedVideoAd.isLoaded()) {
-            rewardedVideoAd.loadAd(ADMOB_ID, new AdRequest.Builder().build());
-        }
-    }
-
-    private void setupInterstitialAD() {
-        interstitialAd = new InterstitialAd(this);
-        interstitialAd.setAdUnitId(ADMOB_ID_BACK);
-        interstitialAd.setAdListener(new AdListener() {
-            @Override
-            public void onAdClosed() {
-                super.onAdClosed();
-                loadInterstitialAD();
-            }
-        });
-        loadInterstitialAD();
-    }
-
-    private void loadInterstitialAD() {
-        if (interstitialAd != null) {
-            interstitialAd.loadAd(new AdRequest.Builder().build());
-        }
-    }
-
-    private void ShowInterstitialAd() {
-        if (!subscription.get()) {
-            if (interstitialAd != null && interstitialAd.isLoaded()) {
-                interstitialAd.show();
-            }
-        }
     }
 
     private void setupListeners() {
@@ -467,8 +364,6 @@ public class MainActivity extends BaseActivity {
         constraintSetHidden.clone(this, R.layout.drawer_hidden);
         currentSet = constraintSetOrigin;
     }
-
-    private boolean modeSecretActivity = false;
 
     public boolean toggleSecretActivity(View view) {
         currentSet = (currentSet == constraintSetOrigin ? constraintSetHidden : constraintSetOrigin);
@@ -776,7 +671,6 @@ public class MainActivity extends BaseActivity {
 
     @Override
     protected void onPause() {
-        if (rewardedVideoAd != null) rewardedVideoAd.pause(this);
         log("on_Pause");
         super.onPause();
     }
@@ -790,7 +684,6 @@ public class MainActivity extends BaseActivity {
 
     @Override
     protected void onDestroy() {
-        if (rewardedVideoAd != null) rewardedVideoAd.destroy(this);
         if (broadcastReceiver != null) unregisterReceiver(broadcastReceiver);
         log("on_Destroy");
         super.onDestroy();
@@ -798,7 +691,6 @@ public class MainActivity extends BaseActivity {
 
     @Override
     protected void onResume() {
-        if (rewardedVideoAd != null) rewardedVideoAd.resume(this);
         log("on_Resume");
         incCountEnter();
         regReceiverLog();

@@ -180,8 +180,7 @@
             android:textSize="18sp"
             android:textStyle="bold"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/b_subscription" />
+            app:layout_constraintStart_toStartOf="parent" />
         <!--android:text="@{String.valueOf(activity.observableLastItem)}"-->
         <!--android:textColor="?android:colorAccent"-->
 
@@ -355,59 +354,6 @@
                     tools:targetApi="m" />
             </LinearLayout>
         </LinearLayout>
-
-        <!--android:visibility="@{activity.rewardedVideoLoaded?View.VISIBLE:View.GONE}"-->
-        <ImageButton
-            android:id="@+id/b_drawer"
-            style="@style/Widget.MaterialComponents.Button.UnelevatedButton"
-            android:layout_width="wrap_content"
-            android:layout_height="40dp"
-            android:layout_marginTop="8dp"
-            android:layout_marginEnd="8dp"
-            android:contentDescription="@string/setting_tell_friend_title"
-            android:onClick="@{(view)->activity.showVideoAD(view)}"
-            android:textSize="14sp"
-            android:visibility="gone"
-            app:layout_constraintEnd_toStartOf="@+id/b_drawer_counter"
-            app:layout_constraintTop_toTopOf="parent"
-            app:srcCompat="@drawable/ic_show_video_ad" />
-
-        <Button
-            android:id="@+id/b_drawer_counter"
-            style="@style/Widget.MaterialComponents.Button.UnelevatedButton"
-            android:layout_width="40dp"
-            android:layout_height="40dp"
-            android:layout_marginTop="8dp"
-            android:layout_marginEnd="8dp"
-            android:onClick="@{(view)->activity.activateSubscription(view)}"
-            android:text="@{String.valueOf(activity.freeSubscriptionCounter)}"
-            android:textSize="14sp"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintTop_toTopOf="parent"
-            tools:text="0" />
-
-        <!--android:visibility="@{activity.subscription ? View.GONE : View.VISIBLE}"-->
-        <androidx.constraintlayout.widget.Group
-            android:id="@+id/group"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:visibility="gone"
-            app:constraint_referenced_ids="b_drawer_counter,b_subscription" />
-
-        <ImageButton
-            android:id="@+id/b_subscription"
-            style="@style/Widget.MaterialComponents.Button.UnelevatedButton"
-            android:layout_width="wrap_content"
-            android:layout_height="40dp"
-            android:layout_marginStart="8dp"
-            android:layout_marginTop="8dp"
-            android:contentDescription="show dialog about subscription"
-            android:onClick="@{()->activity.startSettingWithDonate()}"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent"
-            app:srcCompat="@drawable/ic_subscription"
-            tools:ignore="HardcodedText"
-            tools:visibility="visible" />
 
     </androidx.constraintlayout.widget.ConstraintLayout>
 </layout>

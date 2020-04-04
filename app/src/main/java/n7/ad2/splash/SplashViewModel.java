@@ -8,7 +8,6 @@ import android.graphics.drawable.Drawable;
 import android.preference.PreferenceManager;
 import androidx.annotation.NonNull;
 
-import com.google.android.gms.ads.MobileAds;
 import com.google.android.gms.common.GooglePlayServicesNotAvailableException;
 import com.google.android.gms.common.GooglePlayServicesRepairableException;
 import com.google.android.gms.security.ProviderInstaller;
@@ -267,8 +266,6 @@ public class SplashViewModel extends AndroidViewModel {
             @Override
             public void run() {
                 FirebaseAnalytics.getInstance(application);
-                MobileAds.initialize(application, ADMOB_APP_ID);
-
             }
         });
     }

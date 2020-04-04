@@ -39,15 +39,15 @@ import androidx.work.OneTimeWorkRequest;
 import androidx.work.WorkInfo;
 import androidx.work.WorkManager;
 
-import com.google.android.exoplayer2.ExoPlaybackException;
-import com.google.android.exoplayer2.ExoPlayerFactory;
-import com.google.android.exoplayer2.Player;
-import com.google.android.exoplayer2.SimpleExoPlayer;
-import com.google.android.exoplayer2.source.MediaSource;
-import com.google.android.exoplayer2.source.ProgressiveMediaSource;
-import com.google.android.exoplayer2.upstream.DataSource;
-import com.google.android.exoplayer2.upstream.DefaultDataSourceFactory;
-import com.google.android.exoplayer2.util.Util;
+//import com.google.android.exoplayer2.ExoPlaybackException;
+//import com.google.android.exoplayer2.ExoPlayerFactory;
+//import com.google.android.exoplayer2.Player;
+//import com.google.android.exoplayer2.SimpleExoPlayer;
+//import com.google.android.exoplayer2.source.MediaSource;
+//import com.google.android.exoplayer2.source.ProgressiveMediaSource;
+//import com.google.android.exoplayer2.upstream.DataSource;
+//import com.google.android.exoplayer2.upstream.DefaultDataSourceFactory;
+//import com.google.android.exoplayer2.util.Util;
 
 import org.json.JSONArray;
 import org.json.JSONObject;
@@ -339,28 +339,28 @@ public class HeroFulViewModel extends AndroidViewModel implements SharedPreferen
     }
 
     private void startExoPlayer(final ResponseModel model) {
-        SimpleExoPlayer player = ExoPlayerFactory.newSimpleInstance(application);
-        player.setPlayWhenReady(true);
-        // Produces DataSource instances through which media data is loaded.
-        DataSource.Factory dataSourceFactory = new DefaultDataSourceFactory(application, Util.getUserAgent(application, "ad2"));
-// This is the MediaSource representing the media to be played.
-        MediaSource videoSource = new ProgressiveMediaSource.Factory(dataSourceFactory).createMediaSource(Uri.parse(model.getHref()));
-// Prepare the player with the source.
-        player.prepare(videoSource);
-        player.addListener(new Player.EventListener() {
-            @Override
-            public void onPlayerStateChanged(boolean playWhenReady, int playbackState) {
-                if (playWhenReady && playbackState == Player.STATE_ENDED) {
-                    model.playing.set(false);
-                }
-            }
-
-            @Override
-            public void onPlayerError(ExoPlaybackException error) {
-                model.playing.set(false);
-                showErrorSnackbar();
-            }
-        });
+//        SimpleExoPlayer player = ExoPlayerFactory.newSimpleInstance(application);
+//        player.setPlayWhenReady(true);
+//        // Produces DataSource instances through which media data is loaded.
+//        DataSource.Factory dataSourceFactory = new DefaultDataSourceFactory(application, Util.getUserAgent(application, "ad2"));
+//// This is the MediaSource representing the media to be played.
+//        MediaSource videoSource = new ProgressiveMediaSource.Factory(dataSourceFactory).createMediaSource(Uri.parse(model.getHref()));
+//// Prepare the player with the source.
+//        player.prepare(videoSource);
+//        player.addListener(new Player.EventListener() {
+//            @Override
+//            public void onPlayerStateChanged(boolean playWhenReady, int playbackState) {
+//                if (playWhenReady && playbackState == Player.STATE_ENDED) {
+//                    model.playing.set(false);
+//                }
+//            }
+//
+//            @Override
+//            public void onPlayerError(ExoPlaybackException error) {
+//                model.playing.set(false);
+//                showErrorSnackbar();
+//            }
+//        });
     }
 
     private void showErrorSnackbar() {
