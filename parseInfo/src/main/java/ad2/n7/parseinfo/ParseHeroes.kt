@@ -206,7 +206,7 @@ class ParseHeroes private constructor(
                     put("story", story?.text())
 
                     val notesBlock = it.getElementsByAttributeValue("style","flex: 1 1 450px; word-wrap: break-word;").getOrNull(0)
-                    val notes = notesBlock?.getElementsByTag("ul")
+                    val notes = notesBlock?.getElementsByTag("li")
                     JSONArray().apply {
                         notes?.forEach {
                             add(it.text().replace("( ","(TagTalent "))
@@ -214,6 +214,7 @@ class ParseHeroes private constructor(
 
                         put("notes", this)
                     }
+
 
 
                     add(this)
