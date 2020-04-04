@@ -151,7 +151,7 @@ class ParseHeroes private constructor(
 
                     val effects = it.getElementsByAttributeValue("style", "display: inline-block; width: 32%; vertical-align: top;")
                     JSONArray().apply {
-                        effects.mapNotNull { if (it.text() != "") add(it.text()) }
+                        effects.mapNotNull { if (it.text() != "") add(it.text().replace("(","(TagAghanim")) }
                         put("effects", this)
                     }
 
