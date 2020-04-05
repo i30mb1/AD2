@@ -7,7 +7,8 @@
         <!--фон панели приложения-->
         <item name="colorPrimary">@color/colorPrimary</item>
         <!--бэкграунд приложения-->
-        <item name="android:windowBackground">@drawable/background_hd</item>
+        <item name="android:windowBackground">@color/colorPrimary</item>
+        <item name="myBackgroundAD2">@drawable/background_hd</item>
         <!--подсветка элементов-->
         <item name="colorAccent">@color/colorAccent</item>
         <!--цвет главного текста-->
@@ -22,6 +23,8 @@
         <!--цвет меню текста-->
         <item name="android:actionMenuTextColor">@color/textColorSecondary</item>
 
+        <item name="android:textColor">@color/myTextColorPrimary</item>
+        <item name="android:windowAnimationStyle">@style/MyWindowAnimationTransition</item>
     </style>
 
     <!--Black тема-->
@@ -32,6 +35,7 @@
         <item name="colorPrimary">@color/colorPrimary.Dark</item>
         <!--бэкграунд приложения-->
         <item name="android:windowBackground">@drawable/background_hd_black</item>
+        <item name="myBackgroundAD2">@drawable/background_hd_black</item>
         <!--подсветка элементов-->
         <item name="colorAccent">@color/colorAccent.Dark</item>
         <!--цвет главного текста-->
@@ -49,7 +53,8 @@
         <!--фон панели приложения-->
         <item name="colorPrimary">@color/colorPrimary.White</item>
         <!--бэкграунд приложения-->
-        <item name="android:windowBackground">@drawable/background_hd_white</item>
+        <item name="android:windowBackground">@color/colorPrimary.White</item>
+        <item name="myBackgroundAD2">@drawable/background_hd_white</item>
         <!--подсветка элементов-->
         <item name="colorAccent">@color/colorAccent.White</item>
         <!--цвет главного текста-->
@@ -69,6 +74,7 @@
         <item name="android:dividerHeight">1dp</item>
         <item name="android:showDividers">middle</item>
 
+        <item name="android:textColor">@color/myTextColorPrimaryDark</item>
     </style>
 
     <style name="SplashTheme" parent="AD2Theme">
@@ -76,7 +82,6 @@
         <item name="android:windowTranslucentNavigation">true</item>
         <item name="android:windowBackground">@android:color/transparent</item>
         <item name="android:windowShowWallpaper">true</item>
-        <item name="android:windowAnimationStyle">@style/MyWindowAnimationTransition</item>
     </style>
 
     <style name="SplashTheme.Dark" parent="AD2Theme.Black">
@@ -84,7 +89,6 @@
         <item name="android:windowTranslucentNavigation">true</item>
         <item name="android:windowBackground">@android:color/transparent</item>
         <item name="android:windowShowWallpaper">true</item>
-        <item name="android:windowAnimationStyle">@style/MyWindowAnimationTransition</item>
     </style>
 
     <style name="SplashTheme.White" parent="AD2Theme.White">
@@ -92,10 +96,7 @@
         <item name="android:windowTranslucentNavigation">true</item>
         <item name="android:windowBackground">@android:color/transparent</item>
         <item name="android:windowShowWallpaper">true</item>
-        <item name="android:windowAnimationStyle">@style/MyWindowAnimationTransition</item>
     </style>
-
-
 
     <style name="MyWindowAnimationTransition">
         <item name="android:windowEnterAnimation">@android:anim/fade_in</item>

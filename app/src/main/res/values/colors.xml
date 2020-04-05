@@ -19,6 +19,8 @@
     <color name="textColorPrimary.White">#212121</color>
     <color name="textColorSecondary.White">#757575</color>
 
+    <color name="myTextColorPrimary">#fff</color>
+    <color name="myTextColorPrimaryDark">#000</color>
     <!--<color name="discordTextUser">#C3C4C5</color>-->
     <!--<color name="discordImportantTextUser">#00B0F4</color>-->
     <!--<color name="colorImportant">#ffcb05</color>-->

@@ -69,8 +69,8 @@ class SplashActivity : AppCompatActivity() {
             TransitionManager.beginDelayedTransition(binding.root as ViewGroup)
             binding.tv.visibility = View.VISIBLE
             delay(DELAY_START_ACTIVITY)
-            finish()
             startActivity(Intent(this@SplashActivity, MainActivity::class.java))
+            finish()
         }
     }
 
