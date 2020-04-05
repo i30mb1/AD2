@@ -19,7 +19,7 @@ import n7.ad2.main.db.N7Message;
 import n7.ad2.main.db.N7MessageRoomDatabase;
 import n7.ad2.main.retrofit.Update;
 import n7.ad2.main.retrofit.UpdateApi;
-import n7.ad2.setting.SettingActivity;
+import n7.ad2.ui.setting.SettingActivity;
 import n7.ad2.utils.PlainAdapter;
 import n7.ad2.utils.SingleLiveEvent;
 import n7.ad2.utils.SnackbarMessage;

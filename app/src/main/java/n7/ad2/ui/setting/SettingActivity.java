@@ -1,4 +1,4 @@
-package n7.ad2.setting;
+package n7.ad2.ui.setting;
 
 import android.os.Bundle;
 import android.view.MenuItem;
@@ -7,6 +7,7 @@ import androidx.databinding.DataBindingUtil;
 
 import n7.ad2.R;
 import n7.ad2.databinding.ActivitySettingBinding;
+import n7.ad2.ui.setting.SettingsFragment;
 import n7.ad2.utils.BaseActivity;
 
 public class SettingActivity extends BaseActivity {

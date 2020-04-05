@@ -1,4 +1,4 @@
-package n7.ad2.setting
+package n7.ad2.ui.setting
 
 import android.content.Intent
 import android.net.Uri

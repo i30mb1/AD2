@@ -36,11 +36,11 @@
             android:name=".main.MainActivity"
             android:screenOrientation="portrait" />
         <activity
-            android:name=".setting.LicensesActivity"
+            android:name=".ui.setting.LicensesActivity"
             android:label="Open Source Licenses"
             android:screenOrientation="portrait" />
         <activity
-            android:name=".setting.SettingActivity"
+            android:name=".ui.setting.SettingActivity"
             android:screenOrientation="portrait" />
         <activity android:name=".heroes.full.HeroFullActivity" />
         <activity
