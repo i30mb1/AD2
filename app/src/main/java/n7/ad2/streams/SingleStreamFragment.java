@@ -59,8 +59,6 @@ import okhttp3.OkHttpClient;
 import okhttp3.Request;
 import okhttp3.Response;
 
-import static n7.ad2.splash.SplashActivity.ANIMATION_DURATION;
-
 public class SingleStreamFragment extends Fragment implements SurfaceHolder.Callback {
 
     private final DiffUtil.ItemCallback<Streams> DIFF_CALLBACK = new DiffUtil.ItemCallback<Streams>() {
@@ -331,10 +329,10 @@ public class SingleStreamFragment extends Fragment implements SurfaceHolder.Call
             public void onClick(View v) {
                 if (isChatEnabled) {
                     iv_fragment_single_stream_chat.setImageResource(R.drawable.ic_fragment_single_stream_chat_off);
-                    rv_fragment_single_stream_chat.animate().alpha(0.0F).setDuration(ANIMATION_DURATION).start();
+                    rv_fragment_single_stream_chat.animate().alpha(0.0F).setDuration(300).start();
                 } else {
                     iv_fragment_single_stream_chat.setImageResource(R.drawable.ic_fragment_single_stream_chat_on);
-                    rv_fragment_single_stream_chat.animate().alpha(1F).setDuration(ANIMATION_DURATION).start();
+                    rv_fragment_single_stream_chat.animate().alpha(1F).setDuration(300).start();
                 }
                 isChatEnabled = !isChatEnabled;
             }
@@ -345,12 +343,12 @@ public class SingleStreamFragment extends Fragment implements SurfaceHolder.Call
             public void onClick(View v) {
                 if (isStreamEnabled) {
                     iv_fragment_single_stream.setImageResource(R.drawable.ic_fragment_single_stream_off);
-                    sv_fragment_single_stream.animate().alpha(0.0f).setDuration(ANIMATION_DURATION).start();
+                    sv_fragment_single_stream.animate().alpha(0.0f).setDuration(300).start();
                     if (mediaPlayer != null)
                         mediaPlayer.pause();
                 } else {
                     iv_fragment_single_stream.setImageResource(R.drawable.ic_fragment_single_stream_on);
-                    sv_fragment_single_stream.animate().alpha(1.0f).setDuration(ANIMATION_DURATION).start();
+                    sv_fragment_single_stream.animate().alpha(1.0f).setDuration(300).start();
                     if (mediaPlayer != null && !mediaPlayer.isPlaying()) {
                         mediaPlayer.start();
                     }
@@ -362,9 +360,9 @@ public class SingleStreamFragment extends Fragment implements SurfaceHolder.Call
 
     private void toggleWindow() {
         if (isHolderEnabled) {
-            ll_fragment_single_stream_holder.animate().translationX(-ll_fragment_single_stream_holder.getHeight()).setDuration(ANIMATION_DURATION).start();
+            ll_fragment_single_stream_holder.animate().translationX(-ll_fragment_single_stream_holder.getHeight()).setDuration(300).start();
         } else {
-            ll_fragment_single_stream_holder.animate().translationX(0).setDuration(ANIMATION_DURATION).start();
+            ll_fragment_single_stream_holder.animate().translationX(0).setDuration(300).start();
         }
         isHolderEnabled = !isHolderEnabled;
     }
@@ -482,7 +480,7 @@ public class SingleStreamFragment extends Fragment implements SurfaceHolder.Call
                             public void run() {
                                 rv_fragment_single_stream.setVisibility(View.GONE);
                             }
-                        }).setDuration(ANIMATION_DURATION).start();
+                        }).setDuration(300).start();
                     }
                 });
                 Picasso.get().load(streams.getPreview().getMedium()).placeholder(R.drawable.streams_placeholder).into(viewHolder.iv);

@@ -23,7 +23,7 @@
         <!--цвет меню текста-->
         <item name="android:actionMenuTextColor">@color/textColorSecondary</item>
 
-        <item name="android:textColor">@color/myTextColorPrimary</item>
+<!--        <item name="android:textColor">@color/myTextColorPrimary</item>-->
         <item name="android:windowAnimationStyle">@style/MyWindowAnimationTransition</item>
     </style>
 

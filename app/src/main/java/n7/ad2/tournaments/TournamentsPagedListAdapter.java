@@ -34,7 +34,6 @@ import androidx.work.WorkManager;
 import n7.ad2.R;
 import n7.ad2.tournaments.db.TournamentGame;
 
-import static n7.ad2.splash.SplashActivity.ANIMATION_DURATION;
 import static n7.ad2.tournaments.GameFullActivity.URL;
 
 public class TournamentsPagedListAdapter extends PagedListAdapter<TournamentGame, TournamentsPagedListAdapter.ViewHolder> {
@@ -187,15 +186,15 @@ public class TournamentsPagedListAdapter extends PagedListAdapter<TournamentGame
         }
 
         private void showButtonScheduler() {
-            tv_item_list_games_middle.animate().alpha(0.0f).setDuration(ANIMATION_DURATION).start();
-            b_tv_item_list_games.animate().alpha(1.0f).setDuration(ANIMATION_DURATION).start();
+            tv_item_list_games_middle.animate().alpha(0.0f).setDuration(300).start();
+            b_tv_item_list_games.animate().alpha(1.0f).setDuration(300).start();
             b_tv_item_list_games.setClickable(true);
             collapse = !collapse;
         }
 
         private void hideButtonScheduler() {
-            tv_item_list_games_middle.animate().alpha(1.0f).setDuration(ANIMATION_DURATION).start();
-            b_tv_item_list_games.animate().alpha(0.0f).setDuration(ANIMATION_DURATION).start();
+            tv_item_list_games_middle.animate().alpha(1.0f).setDuration(300).start();
+            b_tv_item_list_games.animate().alpha(0.0f).setDuration(300).start();
             b_tv_item_list_games.setClickable(false);
             collapse = !collapse;
         }

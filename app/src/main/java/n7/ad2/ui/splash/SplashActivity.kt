@@ -14,7 +14,11 @@ import kotlinx.coroutines.launch
 import n7.ad2.R
 import n7.ad2.databinding.ActivitySplashBinding
 import n7.ad2.main.MainActivity
+import java.text.SimpleDateFormat
+import java.util.*
 
+@JvmField
+val CURRENT_DAY_IN_APP = "CURRENT_DAY_IN_APP"
 
 class SplashActivity : AppCompatActivity() {
 
@@ -41,6 +45,13 @@ class SplashActivity : AppCompatActivity() {
         }
 
         binding.tv.text = getErrorEmote()
+        setupDay()
+    }
+
+    private fun setupDay() {
+            val currentDayInString = SimpleDateFormat("DDD", Locale.US).format(Calendar.getInstance().time)
+            val currentDay = Integer.valueOf(currentDayInString)
+            PreferenceManager.getDefaultSharedPreferences(application).edit().putInt(CURRENT_DAY_IN_APP, currentDay).apply()
     }
 
     private fun setMySplashTheme() {

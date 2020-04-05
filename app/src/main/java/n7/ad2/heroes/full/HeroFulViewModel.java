@@ -67,7 +67,7 @@ import n7.ad2.utils.Utils;
 
 import static n7.ad2.heroes.full.HeroFullActivity.HERO_CODE_NAME;
 import static n7.ad2.setting.SettingActivity.SUBSCRIPTION_PREF;
-import static n7.ad2.splash.SplashViewModel.CURRENT_DAY_IN_APP;
+import static n7.ad2.ui.splash.SplashActivityKt.CURRENT_DAY_IN_APP;
 
 public class HeroFulViewModel extends AndroidViewModel implements SharedPreferences.OnSharedPreferenceChangeListener {
 

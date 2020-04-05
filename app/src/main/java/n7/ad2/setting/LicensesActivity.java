@@ -17,7 +17,6 @@ import n7.ad2.databinding.ActivityLicenseBinding;
 import n7.ad2.utils.BaseActivity;
 
 import static n7.ad2.setting.SettingActivity.SUBSCRIPTION_PREF;
-import static n7.ad2.splash.SplashViewModel.FREE_SUBSCRIPTION_DAYS;
 
 public class LicensesActivity extends BaseActivity {
 
@@ -37,7 +36,6 @@ public class LicensesActivity extends BaseActivity {
                 snackbar.setAction("Yes, it does", new View.OnClickListener() {
                     @Override
                     public void onClick(View view) {
-                        PreferenceManager.getDefaultSharedPreferences(getApplicationContext()).edit().putInt(FREE_SUBSCRIPTION_DAYS, 1).apply();
                         PreferenceManager.getDefaultSharedPreferences(getApplicationContext()).edit().putBoolean(SUBSCRIPTION_PREF, true).apply();
                         MediaPlayer.create(getApplicationContext(), R.raw.yes_it_does).start();
                         startBlinking();

@@ -2,7 +2,10 @@ package n7.ad2.heroes.full;
 
 import android.content.Context;
 import android.preference.PreferenceManager;
+
 import androidx.annotation.NonNull;
+import androidx.work.Worker;
+import androidx.work.WorkerParameters;
 
 import org.jsoup.Jsoup;
 import org.jsoup.nodes.Document;
@@ -11,13 +14,11 @@ import org.jsoup.select.Elements;
 
 import java.util.concurrent.Executors;
 
-import androidx.work.Worker;
-import androidx.work.WorkerParameters;
 import n7.ad2.heroes.db.HeroModel;
 import n7.ad2.heroes.db.HeroesDao;
 import n7.ad2.heroes.db.HeroesRoomDatabase;
 
-import static n7.ad2.splash.SplashViewModel.CURRENT_DAY_IN_APP;
+import static n7.ad2.ui.splash.SplashActivityKt.CURRENT_DAY_IN_APP;
 
 public class GuideWorker extends Worker {
 

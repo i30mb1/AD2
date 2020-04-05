@@ -81,8 +81,7 @@ import static n7.ad2.main.MainViewModel.LAST_DAY_WHEN_CHECK_UPDATE;
 import static n7.ad2.main.MainViewModel.SHOULD_UPDATE_FROM_MARKET;
 import static n7.ad2.setting.SettingActivity.INTENT_SHOW_DIALOG_DONATE;
 import static n7.ad2.setting.SettingActivity.SUBSCRIPTION_PREF;
-import static n7.ad2.splash.SplashViewModel.CURRENT_DAY_IN_APP;
-import static n7.ad2.splash.SplashViewModel.FREE_SUBSCRIPTION_DAYS;
+import static n7.ad2.ui.splash.SplashActivityKt.CURRENT_DAY_IN_APP;
 
 public class MainActivity extends BaseActivity {
 
@@ -566,10 +565,6 @@ public class MainActivity extends BaseActivity {
             startActivity(new Intent(Intent.ACTION_VIEW, Uri.parse("https://play.google.com/store/apps/details?id=" + getPackageName())));
         }
 
-        log("free_subscription = +2 days");
-        PreferenceManager.getDefaultSharedPreferences(getApplicationContext()).edit().putInt(FREE_SUBSCRIPTION_DAYS, 2).apply();
-        PreferenceManager.getDefaultSharedPreferences(getApplicationContext()).edit().putBoolean(SUBSCRIPTION_PREF, true).apply();
-
         FirebaseAnalytics firebaseAnalytics = FirebaseAnalytics.getInstance(MainActivity.this);
         firebaseAnalytics.logEvent(FIREBASE_DIALOG_RATE_CLICK, null);
     }
@@ -621,28 +616,6 @@ public class MainActivity extends BaseActivity {
         bindingDrawer.setArrayX(movementListX);
         bindingDrawer.setArrayY(movementListY);
         return super.dispatchTouchEvent(ev);
-    }
-
-    private void showDialogCongratulations() {
-        if (easter_egg_value) return;
-        final BottomSheetDialog bottomSheetDialog = new BottomSheetDialog(this);
-        DialogVideoAdBinding binding = DataBindingUtil.inflate(getLayoutInflater(), R.layout.dialog_video_ad, null, false);
-        bottomSheetDialog.setContentView(binding.getRoot());
-        binding.bDialogVideoAd.setText(getResources().getText(R.string.EASTER_EGG_OK));
-        binding.tvDialogVideoAdTitle.setText(getResources().getText(R.string.EASTER_EGG));
-        binding.bDialogVideoAd.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                bottomSheetDialog.dismiss();
-                log("EASTER EGG ACTIVATED");
-                log("free_subscription = +1 day");
-                PreferenceManager.getDefaultSharedPreferences(getApplicationContext()).edit().putInt(FREE_SUBSCRIPTION_DAYS, 1).apply();
-                PreferenceManager.getDefaultSharedPreferences(getApplicationContext()).edit().putBoolean(SUBSCRIPTION_PREF, true).apply();
-            }
-        });
-        bottomSheetDialog.show();
-        PreferenceManager.getDefaultSharedPreferences(getApplicationContext()).edit().putBoolean(EASTER_EGG_ACTIVATED, true).apply();
-        easter_egg_value = true;
     }
 
     private void setupDrawer() {

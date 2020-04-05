@@ -57,7 +57,6 @@ import okhttp3.Response;
 
 import static androidx.core.internal.view.SupportMenuItem.SHOW_AS_ACTION_ALWAYS;
 import static n7.ad2.setting.SettingActivity.SUBSCRIPTION_PREF;
-import static n7.ad2.splash.SplashActivity.ANIMATION_DURATION;
 
 public class StreamsFullActivity extends BaseActivity implements SurfaceHolder.Callback {
 
@@ -416,7 +415,7 @@ public class StreamsFullActivity extends BaseActivity implements SurfaceHolder.C
                 public void run() {
                     if (toolbar != null) toolbar.setVisibility(View.GONE);
                 }
-            }).setDuration(ANIMATION_DURATION).start();
+            }).setDuration(300).start();
         } else {
             toolbar.animate().alpha(1.0f).withStartAction(new Runnable() {
                 @Override
@@ -432,7 +431,7 @@ public class StreamsFullActivity extends BaseActivity implements SurfaceHolder.C
                         }
                     }, DELAY_TO_CLOSE_TOOLBAR);
                 }
-            }).setDuration(ANIMATION_DURATION).start();
+            }).setDuration(300).start();
         }
         isToolbarVisible = !isToolbarVisible;
     }
@@ -440,10 +439,10 @@ public class StreamsFullActivity extends BaseActivity implements SurfaceHolder.C
     private void setImageViewToolbar(boolean isVisible) {
         if (isVisible) {
             iv_toolbar.setImageResource(R.drawable.ic_fragment_single_stream_chat_on);
-            rv_activity_twitch_game.animate().alpha(1.0f).setDuration(ANIMATION_DURATION).start();
+            rv_activity_twitch_game.animate().alpha(1.0f).setDuration(300).start();
         } else {
             iv_toolbar.setImageResource(R.drawable.ic_fragment_single_stream_chat_off);
-            rv_activity_twitch_game.animate().alpha(0.0f).setDuration(ANIMATION_DURATION).start();
+            rv_activity_twitch_game.animate().alpha(0.0f).setDuration(300).start();
         }
     }
 
@@ -464,7 +463,7 @@ public class StreamsFullActivity extends BaseActivity implements SurfaceHolder.C
             public void run() {
                 toggleToolbar();
             }
-        }, ANIMATION_DURATION+2000);
+        }, 300+2000);
 
         super.onResume();
     }

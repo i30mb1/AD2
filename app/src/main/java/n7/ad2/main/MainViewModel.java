@@ -29,7 +29,7 @@ import retrofit2.Retrofit;
 import retrofit2.converter.gson.GsonConverterFactory;
 
 import static n7.ad2.main.MainActivity.LOG_ON_RECEIVE;
-import static n7.ad2.splash.SplashViewModel.CURRENT_DAY_IN_APP;
+import static n7.ad2.ui.splash.SplashActivityKt.CURRENT_DAY_IN_APP;
 
 public class MainViewModel extends AndroidViewModel {
 
