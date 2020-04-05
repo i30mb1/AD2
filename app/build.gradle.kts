@@ -77,4 +77,3 @@ dependencies {
     api(Lib.fragmentKtx)
     api(Lib.activityKtx)
 }
-

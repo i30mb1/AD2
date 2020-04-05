@@ -188,4 +188,5 @@
     <string name="main_activity_update_me">Launch update?</string>
     <string name="main_activity_okay">Yes</string>
     <string name="dialog_response_message">you have %d free downloads</string>
+    <string name="desc_application_logo">application logo</string>
 </resources>
