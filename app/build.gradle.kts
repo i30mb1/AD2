@@ -76,4 +76,6 @@ dependencies {
     api(Lib.coroutinesViewmodel)
     api(Lib.fragmentKtx)
     api(Lib.activityKtx)
+    implementation(Lib.preference)
+    implementation(Lib.preferenceKtx)
 }

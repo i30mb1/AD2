@@ -50,8 +50,7 @@ class SplashActivity : AppCompatActivity() {
 
     private fun setupDay() {
             val currentDayInString = SimpleDateFormat("DDD", Locale.US).format(Calendar.getInstance().time)
-            val currentDay = Integer.valueOf(currentDayInString)
-            PreferenceManager.getDefaultSharedPreferences(application).edit().putInt(CURRENT_DAY_IN_APP, currentDay).apply()
+            PreferenceManager.getDefaultSharedPreferences(application).edit().putInt(CURRENT_DAY_IN_APP, currentDayInString.toInt()).apply()
     }
 
     private fun setMySplashTheme() {

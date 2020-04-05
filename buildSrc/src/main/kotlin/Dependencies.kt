@@ -30,6 +30,11 @@ object Lib {
     const val jsonSimple       = "com.googlecode.json-simple:json-simple:1.1.1"
     const val kotlinStdlib     = "org.jetbrains.kotlin:kotlin-stdlib-jdk7:1.3.71"
 
+    // --- Preference ---
+    const val preference       = "androidx.preference:preference:1.1.0"
+    const val preferenceKtx    = "androidx.preference:preference-ktx:1.1.0"
+
+
     // --- Room ---
     const val room           = "androidx.room:room-runtime:2.2.4"
     const val roomAnnotation = "androidx.room:room-compiler:2.2.4"
