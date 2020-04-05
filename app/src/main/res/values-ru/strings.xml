@@ -11,8 +11,8 @@
     <string name="all_check_update">Проверить обновление</string>
     <string name="main_press_again_to_exit">нажмите снова для выхода</string>
     <string name="setting">Настройки</string>
-    <string name="setting_category_about">О ПРИЛОЖЕНИИ</string>
-    <string name="setting_category_setting">НАСТРОЙКИ</string>
+    <string name="setting_category_about_title">О ПРИЛОЖЕНИИ</string>
+    <string name="setting_category_setting_title">НАСТРОЙКИ</string>
     <string name="setting_theme_title">Поменять тему</string>
     <string name="setting_contact_title">Связаться с создателем</string>
     <string name="setting_contact_summary">проблемы? баги? сотрудничество?</string>

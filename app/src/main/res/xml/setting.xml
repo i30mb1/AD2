@@ -1,6 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto">
+<PreferenceScreen xmlns:app="http://schemas.android.com/apk/res-auto">
     key = имя параметра хранящейсего в SharedPreferences
     entries = список элементов в виде списка вариантов в GUI
     entryValues = значение выбранного элемента будет храниться в SharedPreferences
@@ -8,46 +7,47 @@
     summary = описание отображаеммое в GUI
     persistent = если true то сохранение значения после каждого его изменения
     default = значение выбранное по умолчанию
-    <PreferenceCategory android:title="@string/setting_category_setting">
+    <PreferenceCategory
+        app:iconSpaceReserved="false"
+        app:key="@string/setting_category_setting_key"
+        app:title="@string/setting_category_setting_title">
         <Preference
-            android:defaultValue="@string/setting_theme_default"
-            android:key="@string/setting_theme_key"
-            android:title="@string/setting_theme_title" />
-        <!--<SwitchPreference-->
-            <!--android:defaultValue="false"-->
-            <!--android:key="@string/setting_account_key"-->
-            <!--android:summary="@string/setting_account_summary"-->
-            <!--android:title="@string/setting_account_title" />-->
+            app:defaultValue="@string/setting_theme_default"
+            app:iconSpaceReserved="false"
+            app:key="@string/setting_theme_key"
+            app:title="@string/setting_theme_title"
+            app:useSimpleSummaryProvider="true" />
         <SwitchPreference
-            android:defaultValue="true"
-            android:key="@string/setting_log_key"
-            android:summary="@string/setting_log_summary"
-            android:title="@string/setting_log_title" />
+            app:defaultValue="true"
+            app:iconSpaceReserved="false"
+            app:key="@string/setting_log_key"
+            app:summary="@string/setting_log_summary"
+            app:title="@string/setting_log_title" />
         <SwitchPreference
-            android:defaultValue="true"
-            android:key="@string/setting_news_key"
-            android:summary="@string/setting_news_summary"
-            android:title="@string/setting_news_title" />
+            app:defaultValue="true"
+            app:iconSpaceReserved="false"
+            app:key="@string/setting_news_key"
+            app:summary="@string/setting_news_summary"
+            app:title="@string/setting_news_title" />
     </PreferenceCategory>
-    <PreferenceCategory android:title="@string/setting_category_about">
+    <PreferenceCategory
+        app:iconSpaceReserved="false"
+        app:key="@string/setting_category_about_key"
+        app:title="@string/setting_category_about_title">
         <Preference
-            android:key="@string/setting_about_key"
-            android:summary="@string/setting_about_summary"
-            android:title="@string/setting_about_title" />
-        <!--<Preference-->
-            <!--android:key="@string/setting_private_policy_key"-->
-            <!--android:title="@string/setting_private_policy_title" />-->
-<!--        <Preference-->
-<!--            android:key="@string/setting_subscription_key"-->
-<!--            android:summary="@string/setting_subscription_summary"-->
-<!--            android:title="@string/setting_subscription_title" />-->
+            app:iconSpaceReserved="false"
+            app:key="@string/setting_about_key"
+            app:summary="@string/setting_about_summary"
+            app:title="@string/setting_about_title" />
         <Preference
-            android:key="@string/setting_tell_friend_key"
-            android:summary="@string/setting_tell_friend_summary"
-            android:title="@string/setting_tell_friend_title" />
+            app:iconSpaceReserved="false"
+            app:key="@string/setting_tell_friend_key"
+            app:summary="@string/setting_tell_friend_summary"
+            app:title="@string/setting_tell_friend_title" />
         <Preference
-            android:key="@string/setting_contact_key"
-            android:summary="@string/setting_contact_summary"
-            android:title="@string/setting_contact_title" />
+            app:iconSpaceReserved="false"
+            app:key="@string/setting_contact_key"
+            app:summary="@string/setting_contact_summary"
+            app:title="@string/setting_contact_title" />
     </PreferenceCategory>
 </PreferenceScreen>

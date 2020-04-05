@@ -34,10 +34,7 @@ import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.transition.ChangeBounds;
 import androidx.transition.TransitionManager;
 import androidx.transition.TransitionSet;
-import androidx.work.OneTimeWorkRequest;
-import androidx.work.WorkManager;
 
-import com.google.android.material.bottomsheet.BottomSheetDialog;
 import com.google.android.material.snackbar.Snackbar;
 import com.google.android.play.core.appupdate.AppUpdateInfo;
 import com.google.android.play.core.appupdate.AppUpdateManager;
@@ -56,20 +53,16 @@ import com.yarolegovich.slidingrootnav.SlidingRootNavBuilder;
 import com.yarolegovich.slidingrootnav.callback.DragStateListener;
 
 import java.util.Arrays;
-import java.util.concurrent.TimeUnit;
 
 import n7.ad2.R;
 import n7.ad2.databinding.ActivityMainBinding;
-import n7.ad2.databinding.DialogPreDonateBinding;
 import n7.ad2.databinding.DialogRateBinding;
 import n7.ad2.databinding.DialogUpdateBinding;
-import n7.ad2.databinding.DialogVideoAdBinding;
 import n7.ad2.databinding.DrawerBinding;
 import n7.ad2.games.GameFragment;
 import n7.ad2.heroes.HeroesFragment;
 import n7.ad2.items.ItemsFragment;
 import n7.ad2.news.NewsFragment;
-import n7.ad2.setting.SettingActivity;
 import n7.ad2.streams.StreamsFragment;
 import n7.ad2.tournaments.TournamentsFragment;
 import n7.ad2.utils.BaseActivity;
@@ -79,8 +72,6 @@ import n7.ad2.utils.UnscrollableLinearLayoutManager;
 
 import static n7.ad2.main.MainViewModel.LAST_DAY_WHEN_CHECK_UPDATE;
 import static n7.ad2.main.MainViewModel.SHOULD_UPDATE_FROM_MARKET;
-import static n7.ad2.setting.SettingActivity.INTENT_SHOW_DIALOG_DONATE;
-import static n7.ad2.setting.SettingActivity.SUBSCRIPTION_PREF;
 import static n7.ad2.ui.splash.SplashActivityKt.CURRENT_DAY_IN_APP;
 
 public class MainActivity extends BaseActivity {
@@ -170,81 +161,8 @@ public class MainActivity extends BaseActivity {
         setupDrawer();
         setupListeners();
         setupSecretActivity();
-//        setupAD();
-
         setLastFragment();
 
-    }
-
-    private void updateFreeSubscriptionCounter() {
-        freeSubscriptionCounter.set(PreferenceManager.getDefaultSharedPreferences(this).getInt(FREE_SUBSCRIPTION_COUNTER, 0));
-        easter_egg_value = PreferenceManager.getDefaultSharedPreferences(this).getBoolean(EASTER_EGG_ACTIVATED, false);
-    }
-
-    public void activateSubscription(View view) {
-        if (freeSubscriptionCounter.get() <= 0) {
-            Snackbar.make(bindingActivity.getRoot(), R.string.zero_free_count_subscription, Snackbar.LENGTH_SHORT).show();
-            freeSubscriptionCounter.set(0);
-        } else {
-            activateFreeSubscription();
-        }
-    }
-
-    @SuppressWarnings("ConstantConditions")
-    private void showDialogBeforeVideoAD() {
-//        final AlertDialog.Builder builder = new AlertDialog.Builder(this);
-//        DialogVideoAdBinding binding = DataBindingUtil.inflate(getLayoutInflater(), R.layout.dialog_video_ad, null, false);
-//        builder.setView(binding.getRoot());
-//
-//        final AlertDialog dialog = builder.create();
-//        dialog.getWindow().getAttributes().windowAnimations = R.style.DialogTheme;
-//        dialog.show();
-//
-//        binding.bDialogVideoAd.setOnClickListener(new View.OnClickListener() {
-//            @Override
-//            public void onClick(View v) {
-//                dialog.dismiss();
-//                showVideoAD(v);
-//            }
-//        });
-
-        final BottomSheetDialog bottomSheetDialog = new BottomSheetDialog(this);
-        DialogVideoAdBinding binding = DataBindingUtil.inflate(getLayoutInflater(), R.layout.dialog_video_ad, null, false);
-        bottomSheetDialog.setContentView(binding.getRoot());
-        binding.bDialogVideoAd.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                bottomSheetDialog.dismiss();
-            }
-        });
-        bottomSheetDialog.show();
-        PreferenceManager.getDefaultSharedPreferences(this).edit().putInt(DIALOG_VIDEO_AD_SAW, currentDay).apply();
-    }
-
-    public void setupAD() {
-        subscription.set(PreferenceManager.getDefaultSharedPreferences(MainActivity.this).getBoolean(SUBSCRIPTION_PREF, false));
-        if (subscription.get()) {
-            log("AD_disabled");
-        } else {
-            log("AD_enabled");
-//            setupVideoAD();
-        }
-    }
-
-    private void activateFreeSubscription() {
-        freeSubscriptionCounter.set(freeSubscriptionCounter.get() - 1);
-        subscription.set(true);
-        PreferenceManager.getDefaultSharedPreferences(MainActivity.this).edit().putBoolean(SUBSCRIPTION_PREF, true).apply();
-        PreferenceManager.getDefaultSharedPreferences(MainActivity.this).edit().putInt(FREE_SUBSCRIPTION_COUNTER, freeSubscriptionCounter.get()).apply();
-        log("free_subscription_-1_usage");
-        log("free_subscription_+10_min");
-        OneTimeWorkRequest worker = new OneTimeWorkRequest.Builder(ADRewardWorker.class)
-                .setInitialDelay(10, TimeUnit.MINUTES).build();
-        WorkManager.getInstance().enqueue(worker);
-    }
-
-    private void plusOneFreeSubscriptionCounter() {
-        PreferenceManager.getDefaultSharedPreferences(MainActivity.this).edit().putInt(FREE_SUBSCRIPTION_COUNTER, (freeSubscriptionCounter.get() + 1)).apply();
     }
 
     private void setupListeners() {
@@ -490,36 +408,6 @@ public class MainActivity extends BaseActivity {
     }
 
     @SuppressWarnings("ConstantConditions")
-    void showPreDialogDonate() {
-        if (!subscription.get()) {
-            int lastDayDialog = PreferenceManager.getDefaultSharedPreferences(this).getInt(DIALOG_PRE_DONATE_LAST_DAY, 0);
-            if (currentDay > lastDayDialog) {
-                final AlertDialog.Builder builder = new AlertDialog.Builder(this);
-                DialogPreDonateBinding binding = DataBindingUtil.inflate(getLayoutInflater(), R.layout.dialog_pre_donate, null, false);
-                builder.setView(binding.getRoot());
-                binding.setActivity(this);
-
-                final AlertDialog dialog = builder.create();
-                dialog.getWindow().getAttributes().windowAnimations = R.style.DialogTheme;
-                dialog.show();
-
-                binding.dialogPreDonate.setOnClickListener(new View.OnClickListener() {
-                    @Override
-                    public void onClick(View v) {
-                        dialog.dismiss();
-                        startSettingWithDonate();
-                    }
-                });
-
-                PreferenceManager.getDefaultSharedPreferences(this).edit().putInt(DIALOG_PRE_DONATE_LAST_DAY, currentDay + 2).apply();
-                FirebaseAnalytics firebaseAnalytics = FirebaseAnalytics.getInstance(this);
-                firebaseAnalytics.logEvent(FIREBASE_DIALOG_PRE_DONATE_SAW, null);
-            }
-        }
-
-    }
-
-    @SuppressWarnings("ConstantConditions")
     private void showDialogRate() {
         boolean showDialogRate = PreferenceManager.getDefaultSharedPreferences(this).getBoolean(DIALOG_RATE_SHOW, true);
         if (showDialogRate && !subscription.get()) {
@@ -550,12 +438,6 @@ public class MainActivity extends BaseActivity {
             FirebaseAnalytics firebaseAnalytics = FirebaseAnalytics.getInstance(this);
             firebaseAnalytics.logEvent(FIREBASE_DIALOG_RATE_SAW, null);
         }
-    }
-
-    public void startSettingWithDonate() {
-        Intent intent = new Intent(MainActivity.this, SettingActivity.class);
-        intent.putExtra(INTENT_SHOW_DIALOG_DONATE, true);
-        startActivity(intent);
     }
 
     public void openAppStore() {

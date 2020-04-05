@@ -1,0 +1,108 @@
+package n7.ad2.setting
+
+import android.content.Intent
+import android.net.Uri
+import android.os.Build
+import android.os.Build.VERSION
+import android.os.Bundle
+import android.view.View
+import androidx.appcompat.app.AlertDialog
+import androidx.core.app.TaskStackBuilder
+import androidx.preference.Preference
+import androidx.preference.PreferenceFragmentCompat
+import n7.ad2.BuildConfig
+import n7.ad2.R
+import n7.ad2.main.MainActivity
+import n7.ad2.utils.BaseActivity
+
+class SettingsFragment : PreferenceFragmentCompat() {
+
+    override fun onCreatePreferences(savedInstanceState: Bundle?, rootKey: String?) {
+        setPreferencesFromResource(R.xml.setting, rootKey)
+
+        findPreference<Preference>(getString(R.string.setting_theme_key))?.apply {
+            onPreferenceClickListener = Preference.OnPreferenceClickListener {
+                createDialogTheme(it)
+                true
+            }
+        }
+
+        findPreference<Preference>(getString(R.string.setting_log_key))?.apply {
+            onPreferenceChangeListener = Preference.OnPreferenceChangeListener { _, _ ->
+                recreateActivity()
+                true
+            }
+        }
+
+        findPreference<Preference>(getString(R.string.setting_news_key))?.apply {
+            onPreferenceChangeListener = Preference.OnPreferenceChangeListener { _, _ ->
+                recreateActivity()
+                true
+            }
+        }
+
+        findPreference<Preference>(getString(R.string.setting_about_key))?.apply {
+            summary = getString(R.string.setting_about_summary, BuildConfig.VERSION_NAME)
+            onPreferenceClickListener = Preference.OnPreferenceClickListener {
+                startActivity(Intent(activity, LicensesActivity::class.java))
+                true
+            }
+        }
+
+        findPreference<Preference>(getString(R.string.setting_contact_key))?.apply {
+            onPreferenceClickListener = Preference.OnPreferenceClickListener {
+                val sendInfo = StringBuilder()
+                sendInfo.append("\n\n\n--------------------------\n")
+                sendInfo.append("App Version: ").append(getString(R.string.setting_about_summary, BuildConfig.VERSION_NAME)).append("\n")
+                sendInfo.append("Device Brand: ").append(Build.BRAND).append("\n")
+                sendInfo.append("Device Model: ").append(Build.MODEL).append("\n")
+                sendInfo.append("OS: Android ").append(VERSION.RELEASE).append("(").append(VERSION.CODENAME).append(") \n")
+                val intent = Intent(Intent.ACTION_VIEW)
+                intent.data = Uri.parse("mailto:fate.i30mb1@gmail.com?subject=Feedback about AD2 on Android&body=$sendInfo")
+                startActivity(intent)
+                true
+            }
+        }
+
+        findPreference<Preference>(getString(R.string.setting_tell_friend_key))?.apply {
+            onPreferenceClickListener = Preference.OnPreferenceClickListener {
+                Intent(Intent.ACTION_SEND).apply {
+                    type = "text/plain"
+                    putExtra(Intent.EXTRA_SUBJECT, getString(R.string.setting_tell_friend_message))
+                    putExtra(Intent.EXTRA_TEXT, getString(R.string.setting_tell_friend_message))
+                    intent = Intent.createChooser(this, getString(R.string.setting_tell_friend_title))
+                    startActivity(this)
+                }
+                true
+            }
+        }
+
+    }
+
+    private fun createDialogTheme(preference: Preference) {
+        val builder = AlertDialog.Builder(requireContext())
+        builder.setView(R.layout.dialog_theme)
+        val dialog = builder.create()
+        dialog.window?.attributes?.windowAnimations = R.style.DialogTheme
+        dialog.show()
+        dialog.findViewById<View>(R.id.b_dialog_theme_dark)!!.setOnClickListener {
+            preference.sharedPreferences.edit().putString(preference.key, BaseActivity.THEME_DARK).apply()
+            recreateActivity()
+        }
+        dialog.findViewById<View>(R.id.b_dialog_theme_gray)!!.setOnClickListener {
+            preference.sharedPreferences.edit().putString(preference.key, BaseActivity.THEME_GRAY).apply()
+            recreateActivity()
+        }
+        dialog.findViewById<View>(R.id.b_dialog_theme_white)!!.setOnClickListener {
+            preference.sharedPreferences.edit().putString(preference.key, BaseActivity.THEME_WHITE).apply()
+            recreateActivity()
+        }
+    }
+
+    private fun recreateActivity() {
+        TaskStackBuilder.create(requireContext())
+                .addNextIntent(Intent(requireActivity(), MainActivity::class.java))
+                .addNextIntent(requireActivity().intent)
+                .startActivities()
+    }
+}

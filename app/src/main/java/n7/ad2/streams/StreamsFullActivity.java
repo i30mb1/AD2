@@ -56,7 +56,6 @@ import okhttp3.Request;
 import okhttp3.Response;
 
 import static androidx.core.internal.view.SupportMenuItem.SHOW_AS_ACTION_ALWAYS;
-import static n7.ad2.setting.SettingActivity.SUBSCRIPTION_PREF;
 
 public class StreamsFullActivity extends BaseActivity implements SurfaceHolder.Callback {
 
@@ -80,7 +79,7 @@ public class StreamsFullActivity extends BaseActivity implements SurfaceHolder.C
     private Element.List qualities;
     private PlainTextAdapter adapter;
     private SharedPreferences sp;
-    private boolean isPremium = false;
+    private boolean isPremium = true;
     private AppExecutors appExecutors;
     private MenuItem itemMenuQuality;
     private MenuItem itemMenuVisibility;
@@ -239,7 +238,6 @@ public class StreamsFullActivity extends BaseActivity implements SurfaceHolder.C
 
     private void initPremium() {
         sp = PreferenceManager.getDefaultSharedPreferences(this);
-        isPremium = sp.getBoolean(SUBSCRIPTION_PREF, false);
 
         if (!isPremium) {
             alphaChat = 1.0F;

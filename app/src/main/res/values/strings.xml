@@ -10,7 +10,7 @@
 
     <!--preferenses-->
     <string name="setting">Setting</string>
-    <string name="setting_category_setting">APP SETTING</string>
+    <string name="setting_category_setting_title">APP SETTING</string>
     <string name="setting_account_key" translatable="false">setting_account_toggle_key</string>
     <string name="setting_log_key" translatable="false">setting_show_log_key</string>
     <string name="setting_news_key" translatable="false">setting_news_with_image_key</string>
@@ -32,7 +32,7 @@
     <string name="setting_theme_title">Change theme</string>
     <string name="setting_theme_key" translatable="false">setting_theme_key</string>
     <string name="setting_theme_default" translatable="false">GRAY</string>
-    <string name="setting_category_about">ABOUT APP</string>
+    <string name="setting_category_about_title">ABOUT APP</string>
     <string name="setting_tell_friend_title">Tell a friend</string>
     <string name="setting_tell_friend_summary">do you have anyone?</string>
     <string name="setting_tell_friend_key" translatable="false">tell_friend_key</string>
@@ -189,4 +189,6 @@
     <string name="main_activity_okay">Yes</string>
     <string name="dialog_response_message">you have %d free downloads</string>
     <string name="desc_application_logo">application logo</string>
+    <string name="setting_category_setting_key">setting_category_setting_key</string>
+    <string name="setting_category_about_key">setting_category_about_key</string>
 </resources>

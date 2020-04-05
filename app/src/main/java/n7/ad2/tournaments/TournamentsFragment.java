@@ -1,37 +1,35 @@
 package n7.ad2.tournaments;
 
-import androidx.lifecycle.Observer;
-import androidx.lifecycle.ViewModelProviders;
-import androidx.paging.PagedList;
 import android.content.Intent;
-import android.content.SharedPreferences;
-import androidx.databinding.DataBindingUtil;
-import androidx.databinding.ObservableBoolean;
 import android.os.Bundle;
-import android.preference.PreferenceManager;
-import androidx.annotation.NonNull;
-import androidx.annotation.Nullable;
-import androidx.fragment.app.Fragment;
-import androidx.appcompat.app.AppCompatDelegate;
-import androidx.recyclerview.widget.GridLayoutManager;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 
+import androidx.annotation.NonNull;
+import androidx.annotation.Nullable;
+import androidx.appcompat.app.AppCompatDelegate;
+import androidx.databinding.DataBindingUtil;
+import androidx.databinding.ObservableBoolean;
+import androidx.fragment.app.Fragment;
+import androidx.lifecycle.Observer;
+import androidx.lifecycle.ViewModelProviders;
+import androidx.paging.PagedList;
+import androidx.recyclerview.widget.GridLayoutManager;
 import androidx.work.Data;
 import androidx.work.ExistingWorkPolicy;
 import androidx.work.OneTimeWorkRequest;
 import androidx.work.WorkManager;
+
 import n7.ad2.R;
 import n7.ad2.databinding.FragmentTournamentsBinding;
 import n7.ad2.tournaments.db.TournamentGame;
 
 import static n7.ad2.main.MainActivity.LOG_ON_RECEIVE;
-import static n7.ad2.setting.SettingActivity.SUBSCRIPTION_PREF;
 import static n7.ad2.tournaments.TournamentsWorker.PAGE;
 import static n7.ad2.tournaments.TournamentsWorker.TAG;
 
-public class TournamentsFragment extends Fragment implements SharedPreferences.OnSharedPreferenceChangeListener {
+public class TournamentsFragment extends Fragment {
 
     private FragmentTournamentsBinding binding;
     private ObservableBoolean subscription = new ObservableBoolean(false);
@@ -57,8 +55,6 @@ public class TournamentsFragment extends Fragment implements SharedPreferences.O
         binding.setViewModel(viewModel);
         binding.executePendingBindings();
 
-        subscription.set(PreferenceManager.getDefaultSharedPreferences(getContext()).getBoolean(SUBSCRIPTION_PREF, false));
-        PreferenceManager.getDefaultSharedPreferences(getContext()).registerOnSharedPreferenceChangeListener(this);
         getActivity().setTitle(R.string.tournaments);
         getActivity().sendBroadcast(new Intent(LOG_ON_RECEIVE).putExtra(LOG_ON_RECEIVE, "tournaments_activity_created"));
         setRetainInstance(true);
@@ -88,14 +84,5 @@ public class TournamentsFragment extends Fragment implements SharedPreferences.O
         });
     }
 
-    @Override
-    public void onSharedPreferenceChanged(SharedPreferences sharedPreferences, String key) {
-        if (key.equals(SUBSCRIPTION_PREF)) {
-            subscription.set(sharedPreferences.getBoolean(key, false));
-            if (adapter != null) {
-                adapter.notifyDataSetChanged();
-            }
-        }
-    }
 }
 
