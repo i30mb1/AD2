@@ -3,14 +3,13 @@
     xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
-    android:layout_height="wrap_content"
-    android:background="?colorPrimary">
+    android:layout_height="wrap_content">
 
     <Button
         android:id="@+id/b_dialog_theme_gray"
         style="@style/Widget.MaterialComponents.Button.UnelevatedButton"
         android:layout_width="wrap_content"
-        android:layout_height="40dp"
+        android:layout_height="wrap_content"
         android:layout_marginTop="8dp"
         android:layout_marginBottom="8dp"
         android:text="@string/setting_theme_gray"
@@ -27,7 +26,7 @@
         android:id="@+id/b_dialog_theme_white"
         style="@style/Widget.MaterialComponents.Button.UnelevatedButton"
         android:layout_width="wrap_content"
-        android:layout_height="40dp"
+        android:layout_height="wrap_content"
         android:text="@string/setting_theme_white"
         android:textAllCaps="true"
         android:textSize="14sp"
@@ -41,7 +40,7 @@
         android:id="@+id/b_dialog_theme_dark"
         style="@style/Widget.MaterialComponents.Button.UnelevatedButton"
         android:layout_width="wrap_content"
-        android:layout_height="40dp"
+        android:layout_height="wrap_content"
         android:text="@string/setting_theme_dark"
         android:textAllCaps="true"
         android:textSize="14sp"
