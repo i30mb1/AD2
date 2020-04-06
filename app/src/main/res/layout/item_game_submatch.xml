@@ -38,7 +38,7 @@
             app:layout_constraintHorizontal_chainStyle="spread_inside"
             app:layout_constraintStart_toEndOf="@+id/view3"
             app:layout_constraintTop_toTopOf="parent"
-            tools:background="@color/textColorSecondary" />
+            tools:background="@color/gray_100" />
 
         <LinearLayout
             android:id="@+id/ll_item_left_bans2"
@@ -49,7 +49,7 @@
             app:layout_constraintEnd_toEndOf="@+id/ll_item_left_bans"
             app:layout_constraintStart_toStartOf="@+id/ll_item_left_bans"
             app:layout_constraintTop_toBottomOf="@+id/ll_item_left_bans"
-            tools:background="@color/textColorSecondary" />
+            tools:background="@color/gray_100" />
 
         <LinearLayout
             android:id="@+id/ll_item_left_picks"
@@ -65,7 +65,7 @@
             app:layout_constraintStart_toEndOf="@+id/view3"
             app:layout_constraintTop_toBottomOf="@+id/ll_item_left_bans2"
             app:layout_constraintVertical_bias="0.0"
-            tools:background="@color/textColorSecondary" />
+            tools:background="@color/gray_100" />
 
 
         <LinearLayout
@@ -81,7 +81,7 @@
             app:layout_constraintHorizontal_bias="0.5"
             app:layout_constraintStart_toEndOf="@+id/ll_item_left_bans"
             app:layout_constraintTop_toTopOf="parent"
-            tools:background="@color/textColorSecondary" />
+            tools:background="@color/gray_100" />
 
         <LinearLayout
             android:id="@+id/ll_item_right_bans2"
@@ -92,7 +92,7 @@
             app:layout_constraintEnd_toEndOf="@+id/ll_item_right_bans"
             app:layout_constraintStart_toStartOf="@+id/ll_item_right_bans"
             app:layout_constraintTop_toBottomOf="@+id/ll_item_right_bans"
-            tools:background="@color/textColorSecondary" />
+            tools:background="@color/gray_100" />
 
         <LinearLayout
             android:id="@+id/ll_item_right_picks"
@@ -108,6 +108,6 @@
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/ll_item_right_bans2"
             app:layout_constraintVertical_bias="0.0"
-            tools:background="@color/textColorSecondary" />
+            tools:background="@color/gray_100" />
     </androidx.constraintlayout.widget.ConstraintLayout>
 </androidx.cardview.widget.CardView>

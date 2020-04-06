@@ -55,8 +55,6 @@
             android:name=".tournaments.GameFullActivity"
             android:parentActivityName=".main.MainActivity"
             android:screenOrientation="portrait" />
-        <activity android:name=".setting.LogInActivity" />
-        <activity android:name=".main.DotabuffActivity" />
         <activity
             android:name=".items.full.ItemFullActivity"
             android:screenOrientation="portrait" />

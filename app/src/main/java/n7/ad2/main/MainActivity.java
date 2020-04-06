@@ -371,7 +371,7 @@ public class MainActivity extends BaseActivity {
                 if (appUpdateManager != null) appUpdateManager.completeUpdate();
             }
         });
-        snackbar.setActionTextColor(getResources().getColor(R.color.colorAccent));
+        snackbar.setActionTextColor(getResources().getColor(R.color.red_500));
         snackbar.show();
     }
 

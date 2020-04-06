@@ -5,7 +5,7 @@ object Apps {
     const val minSdk        = 23
     const val targetSdk     = 28
     const val versionCode   = 1
-    const val versionName   = "1.0"
+    const val versionName   = "1"
 }
 
 object Lib {
@@ -33,7 +33,6 @@ object Lib {
     // --- Preference ---
     const val preference       = "androidx.preference:preference:1.1.0"
     const val preferenceKtx    = "androidx.preference:preference-ktx:1.1.0"
-
 
     // --- Room ---
     const val room           = "androidx.room:room-runtime:2.2.4"

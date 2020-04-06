@@ -464,13 +464,13 @@ public class SingleStreamFragment extends Fragment implements SurfaceHolder.Call
         public void onBindViewHolder(@NonNull final ViewHolder viewHolder, int i) {
             final Streams streams = getItem(i);
             if (streams != null) {
-                viewHolder.tv.setTextColor(getResources().getColor(R.color.textColorSecondary));
+                viewHolder.tv.setTextColor(getResources().getColor(R.color.gray_100));
                 viewHolder.tv.setText(streams.getChannel().getDisplay_name());
                 viewHolder.tv.setOnClickListener(new View.OnClickListener() {
                     @Override
                     public void onClick(View v) {
                         if (oldView != null)
-                            ((TextView) oldView).setTextColor(getResources().getColor(R.color.textColorSecondary));
+                            ((TextView) oldView).setTextColor(getResources().getColor(R.color.gray_100));
                         oldView = v;
                         viewHolder.tv.setTextColor(getColorAccentTheme());
                         startStream(streams.getChannel().getDisplay_name().toLowerCase());
