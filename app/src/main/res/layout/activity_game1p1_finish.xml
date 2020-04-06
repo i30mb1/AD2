@@ -173,7 +173,7 @@
                 android:layout_margin="5dp"
                 android:contentDescription="@string/setting_tell_friend_title"
                 android:elevation="2dp"
-                app:srcCompat="@color/colorAccent"
+                app:srcCompat="@color/red_500"
                 tools:layout_editor_absoluteX="159dp"
                 tools:layout_editor_absoluteY="365dp"
                 tools:targetApi="lollipop" />
@@ -186,7 +186,7 @@
                 android:contentDescription="@string/setting_tell_friend_title"
                 android:elevation="2dp"
                 android:visibility="@{activity.currentSpellLVL>0?View.VISIBLE:View.GONE}"
-                app:srcCompat="@color/colorAccent"
+                app:srcCompat="@color/red_500"
                 tools:layout_editor_absoluteX="139dp"
                 tools:layout_editor_absoluteY="365dp"
                 tools:targetApi="lollipop" />
@@ -199,7 +199,7 @@
                 android:contentDescription="@string/setting_tell_friend_title"
                 android:elevation="2dp"
                 android:visibility="@{activity.currentSpellLVL>1?View.VISIBLE:View.GONE}"
-                app:srcCompat="@color/colorAccent"
+                app:srcCompat="@color/red_500"
                 tools:targetApi="lollipop" />
 
             <ImageView
@@ -210,7 +210,7 @@
                 android:contentDescription="@string/setting_tell_friend_title"
                 android:elevation="2dp"
                 android:visibility="@{activity.currentSpellLVL>2?View.VISIBLE:View.GONE}"
-                app:srcCompat="@color/colorAccent"
+                app:srcCompat="@color/red_500"
                 tools:targetApi="lollipop" />
         </LinearLayout>
 

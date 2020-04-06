@@ -1,26 +1,19 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
     <!--серая тема-->
-    <color name="colorPrimaryDark">#303337</color>
-    <color name="colorPrimary">#36393E</color>
-    <color name="colorAccent">#f44336</color>
-    <color name="textColorPrimary">#ffffff</color>
-    <color name="textColorSecondary">#C1C2C3</color>
+    <color name="gray_100">#C1C2C3</color>
+    <color name="gray_700">#303337</color>
+    <color name="gray_500">#36393E</color>
+    <color name="red_500">#f44336</color>
     <!--чёрная тема-->
-    <color name="colorPrimaryDark.Dark">#000000</color>
-    <color name="colorPrimary.Dark">#17161A</color>
-    <color name="colorAccent.Dark">#4F009F</color>
-    <color name="textColorPrimary.Dark">#fff</color>
-    <color name="textColorSecondary.Dark">#757575</color>
+    <color name="black_700">#17161A</color>
+    <color name="purple">#4F009F</color>
+    <color name="gray_800">#757575</color>
     <!--светлая тема-->
-    <color name="colorPrimaryDark.White">#ffffff</color>
-    <color name="colorPrimary.White">#ffffff</color>
-    <color name="colorAccent.White">#448aff</color>
-    <color name="textColorPrimary.White">#212121</color>
-    <color name="textColorSecondary.White">#757575</color>
+    <color name="blue">#448aff</color>
+    <color name="black_800">#212121</color>
+    <color name="gray_900">#757575</color>
 
-    <color name="myTextColorPrimary">#fff</color>
-    <color name="myTextColorPrimaryDark">#000</color>
     <!--<color name="discordTextUser">#C3C4C5</color>-->
     <!--<color name="discordImportantTextUser">#00B0F4</color>-->
     <!--<color name="colorImportant">#ffcb05</color>-->
