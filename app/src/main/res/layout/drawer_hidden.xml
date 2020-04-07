@@ -30,7 +30,6 @@
             android:onClick="@{()->viewModel.startActivityOptions(context)}"
             android:onLongClick="@{activity::toggleSecretActivity}"
             android:scaleType="center"
-            android:tint="?android:textColorPrimary"
             android:visibility="invisible"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
@@ -47,7 +46,6 @@
             android:contentDescription="@string/setting_tell_friend_title"
             android:onClick="@{()->viewModel.startUpdate(true)}"
             android:scaleType="center"
-            android:tint="?android:textColorPrimary"
             app:layout_constraintTop_toBottomOf="parent"
             app:srcCompat="@drawable/ic_update" />
 
@@ -62,7 +60,6 @@
             android:textStyle="bold"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent" />
-        <!--android:textColor="?android:colorAccent"-->
 
         <LinearLayout
             android:id="@+id/ll_drawer_vertical"
@@ -83,8 +80,7 @@
                     android:id="@+id/view1"
                     android:layout_width="3dp"
                     android:layout_height="match_parent"
-                    android:background="@{activity.observableLastItem==1? @color/colorAccent :@color/textColorSecondary}" />
-
+/>
                 <TextView
                     android:id="@+id/textView1"
                     android:layout_width="match_parent"
@@ -94,7 +90,6 @@
                     android:onClick="@{()-> activity.setFragment(1,true)}"
                     android:padding="6dp"
                     android:text="@string/heroes"
-                    android:textColor="@{activity.observableLastItem==1? @color/colorAccent :@color/textColorSecondary}"
                     android:textSize="14sp"
                     tools:targetApi="m" />
 
@@ -109,8 +104,7 @@
                 <View
                     android:id="@+id/view2"
                     android:layout_width="3dp"
-                    android:layout_height="match_parent"
-                    android:background="@{activity.observableLastItem==2? @color/colorAccent :@color/textColorSecondary}" />
+                    android:layout_height="match_parent"/>
 
                 <TextView
                     android:id="@+id/textView2"
@@ -121,7 +115,6 @@
                     android:onClick="@{()-> activity.setFragment(2,true)}"
                     android:padding="6dp"
                     android:text="@string/items"
-                    android:textColor="@{activity.observableLastItem==2? @color/colorAccent :@color/textColorSecondary}"
                     android:textSize="14sp"
                     tools:targetApi="m" />
             </LinearLayout>
@@ -136,8 +129,7 @@
                 <View
                     android:id="@+id/view3"
                     android:layout_width="3dp"
-                    android:layout_height="match_parent"
-                    android:background="@{activity.observableLastItem==3? @color/colorAccent :@color/textColorSecondary}" />
+                    android:layout_height="match_parent"/>
 
                 <TextView
                     android:id="@+id/textView3"
@@ -148,7 +140,6 @@
                     android:onClick="@{()-> activity.setFragment(3,true)}"
                     android:padding="6dp"
                     android:text="@string/news"
-                    android:textColor="@{activity.observableLastItem==3? @color/colorAccent :@color/textColorSecondary}"
                     android:textSize="14sp"
                     tools:targetApi="m" />
             </LinearLayout>
@@ -162,8 +153,7 @@
                 <View
                     android:id="@+id/view4"
                     android:layout_width="3dp"
-                    android:layout_height="match_parent"
-                    android:background="@{activity.observableLastItem==4? @color/colorAccent :@color/textColorSecondary}" />
+                    android:layout_height="match_parent"/>
 
 
                 <TextView
@@ -175,7 +165,6 @@
                     android:onClick="@{()-> activity.setFragment(4,true)}"
                     android:padding="6dp"
                     android:text="@string/tournaments"
-                    android:textColor="@{activity.observableLastItem==4? @color/colorAccent :@color/textColorSecondary}"
                     android:textSize="14sp"
                     tools:targetApi="m" />
             </LinearLayout>
@@ -190,8 +179,7 @@
                 <View
                     android:id="@+id/view5"
                     android:layout_width="3dp"
-                    android:layout_height="match_parent"
-                    android:background="@{activity.observableLastItem==5? @color/colorAccent :@color/textColorSecondary}" />
+                    android:layout_height="match_parent"/>
 
                 <TextView
                     android:id="@+id/textView5"
@@ -203,7 +191,6 @@
                     android:padding="6dp"
                     android:text="@string/streams"
                     android:textAllCaps="false"
-                    android:textColor="@{activity.observableLastItem==5? @color/colorAccent :@color/textColorSecondary}"
                     android:textSize="14sp"
                     tools:targetApi="m" />
             </LinearLayout>
@@ -218,7 +205,7 @@
                     android:id="@+id/view6"
                     android:layout_width="3dp"
                     android:layout_height="match_parent"
-                    android:background="@{activity.observableLastItem==6? @color/colorAccent :@color/textColorSecondary}" />
+                    />
 
                 <TextView
                     android:id="@+id/textView6"
@@ -229,7 +216,6 @@
                     android:onClick="@{()-> activity.setFragment(6,true)}"
                     android:padding="6dp"
                     android:text="@string/games"
-                    android:textColor="@{activity.observableLastItem==6? @color/colorAccent :@color/textColorSecondary}"
                     android:textSize="14sp"
                     tools:targetApi="m" />
             </LinearLayout>

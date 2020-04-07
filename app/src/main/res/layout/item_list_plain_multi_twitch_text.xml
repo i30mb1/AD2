@@ -16,7 +16,6 @@
         android:layout_weight="1"
         android:paddingEnd="2dp"
         android:paddingStart="2dp"
-        android:textColor="@color/textColorPrimary"
         android:textSize="12sp"
         tools:text="@sample/heroes.json/data/nameEng" />
 
