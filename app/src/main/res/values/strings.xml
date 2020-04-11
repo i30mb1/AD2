@@ -24,7 +24,7 @@
     <string name="setting_private_policy_title" translatable="false">Private Policy</string>
     <string name="setting_high_quality_desc_on">On</string>
     <string name="setting_high_quality_desc_off">Off</string>
-    <string name="setting_about_summary" translatable="false">v%1$s %2$d</string>
+    <string name="setting_about_summary" translatable="false">v%1$s</string>
     <string name="setting_donate_days_remains" translatable="false">premium %d days remains</string>
     <string name="setting_contact_title">Contact us</string>
     <string name="setting_contact_key" translatable="false">contact_us_key</string>
@@ -34,7 +34,7 @@
     <string name="setting_theme_default" translatable="false">GRAY</string>
     <string name="setting_category_about_title">ABOUT APP</string>
     <string name="setting_tell_friend_title">Tell a friend</string>
-    <string name="setting_tell_friend_summary">do you have anyone?</string>
+    <string name="setting_tell_friend_summary">Have you %1$d friends? Do not you?</string>
     <string name="setting_tell_friend_key" translatable="false">tell_friend_key</string>
     <string name="setting_tell_friend_message" translatable="false">https://goo.gl/au2HTE</string>
     <string name="setting_theme_gray" translatable="false">Gray</string>
