@@ -4,11 +4,16 @@
     <style name="AD2Theme" parent="Theme.MaterialComponents.Light.NoActionBar">
         <item name="colorPrimaryDark">@color/gray_700</item>
         <item name="colorPrimary">@color/red_500</item>
-
         <item name="android:colorBackground">@color/gray_500</item>
-
         <item name="myBackgroundAD2">@drawable/background_hd</item>
-        <!--цвет главного текста-->
+
+        <!-- surface colors (CardView, Sheet, Menu) -->
+        <item name="colorSurface">@android:color/black</item>
+        <item name="colorOnSurface">@android:color/white</item>
+
+        <item name="myTextColorPrimary">@android:color/white</item>
+        <item name="myTextColorSecondary">@android:color/white</item>
+        <!--цвет главного текста -->
         <item name="android:textColorPrimary">@android:color/white</item>
         <!--цвет под заголовков-->
         <item name="android:textColorSecondary">@color/gray_100</item>
@@ -19,7 +24,10 @@
 
         <item name="android:windowAnimationStyle">@style/MyWindowAnimationTransition</item>
 
-        <item name="textAppearanceButton">@style/Button</item>
+        <item name="textAppearanceButton">@style/MyTextAppearanceButton</item>
+
+        <item name="shapeAppearanceMediumComponent">@style/MyMediumComponent</item>
+        <item name="materialAlertDialogTheme">@style/MyMaterialAlertDialogTheme</item>
     </style>
 
     <!--Black тема-->
@@ -46,6 +54,8 @@
         <!--бэкграунд приложения-->
         <item name="android:windowBackground">@android:color/white</item>
         <item name="myBackgroundAD2">@drawable/background_hd_white</item>
+        <item name="myTextColorPrimary">@android:color/black</item>
+        <item name="myTextColorSecondary">@android:color/black</item>
         <!--цвет главного текста-->
         <item name="android:textColorPrimary">@color/black_800</item>
         <!--цвет под заголовков-->
@@ -82,19 +92,20 @@
         <item name="android:windowTranslucentNavigation">true</item>
         <item name="android:windowBackground">@android:color/transparent</item>
         <item name="android:windowShowWallpaper">true</item>
-        <item name="textAppearanceHeadline4">@style/Headline4.Black</item>
+        <item name="textAppearanceHeadline4">@style/Headline4</item>
     </style>
 
-    <style name="Button" parent="TextAppearance.MaterialComponents.Button">
-        <item name="android:textColor">@android:color/black</item>
+    <style name="MyMediumComponent" parent="ShapeAppearance.MaterialComponents.MediumComponent">
+        <item name="cornerFamily">cut</item>
+        <item name="cornerSize">0dp</item>
+    </style>
+
+    <style name="MyTextAppearanceButton" parent="TextAppearance.MaterialComponents.Button">
+
     </style>
 
     <style name="Headline4" parent="TextAppearance.MaterialComponents.Headline4">
-        <item name="android:textColor">@android:color/white</item>
-    </style>
-
-    <style name="Headline4.Black">
-        <item name="android:textColor">@android:color/black</item>
+        <item name="android:textColor">?myTextColorPrimary</item>
     </style>
 
     <style name="MyWindowAnimationTransition">
@@ -102,9 +113,22 @@
         <item name="android:windowExitAnimation">@android:anim/fade_out</item>
     </style>
 
-    <style name="DialogTheme">
+    <style name="MyMaterialAlertDialogTheme" parent="ThemeOverlay.MaterialComponents.MaterialAlertDialog">
+        <item name="alertDialogStyle">@style/MyDialogContainerAttributes</item>
+        <item name="android:windowAnimationStyle">@style/MyWindowAnimationStyle</item>
+    </style>
+
+    <style name="MyWindowAnimationStyle" parent="Animation.AppCompat.Dialog">
         <item name="android:windowEnterAnimation">@anim/slide_from_left</item>
         <item name="android:windowExitAnimation">@anim/slide_to_right</item>
+    </style>
+
+    <style name="MyDialogContainerAttributes" parent="MaterialAlertDialog.MaterialComponents">
+        <item name="backgroundInsetTop">80dp</item>
+        <item name="backgroundInsetBottom">80dp</item>
+        <item name="backgroundInsetStart">0dp</item>
+        <item name="backgroundInsetEnd">0dp</item>
+        <item name="shapeAppearance">?shapeAppearanceMediumComponent</item>
     </style>
 
 </resources>

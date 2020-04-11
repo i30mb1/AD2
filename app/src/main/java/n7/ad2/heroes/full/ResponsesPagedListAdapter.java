@@ -143,7 +143,7 @@ public class ResponsesPagedListAdapter extends PagedListAdapter<Response, Recycl
         builder.setView(binding.getRoot());
 
         AlertDialog dialog = builder.create();
-        dialog.getWindow().getAttributes().windowAnimations = R.style.DialogTheme;
+        dialog.getWindow().getAttributes().windowAnimations = R.style.MyMaterialAlertDialogTheme;
         binding.setDialog(dialog);
         dialog.show();
         return true;

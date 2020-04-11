@@ -1,44 +1,48 @@
 <?xml version="1.0" encoding="utf-8"?>
-<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    android:layout_width="match_parent"
-    android:layout_height="wrap_content">
+<layout xmlns:android="http://schemas.android.com/apk/res/android">
 
-    <LinearLayout
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_gravity="center">
+    <data>
 
-        <Button
-            android:id="@+id/b_gray"
-            style="@style/Widget.MaterialComponents.Button.UnelevatedButton"
+    </data>
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <LinearLayout
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_margin="8dp"
-            android:text="@string/setting_theme_gray"
-            android:textAppearance="@style/Button" />
+            android:layout_gravity="center">
 
-        <Button
-            android:id="@+id/b_white"
-            style="@style/Widget.MaterialComponents.Button.UnelevatedButton"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_margin="8dp"
-            android:text="@string/setting_theme_white"
-            android:textAppearance="@style/Button" />
+            <Button
+                android:id="@+id/b_gray"
+                style="@style/Widget.MaterialComponents.Button.UnelevatedButton"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="4dp"
+                android:text="@string/setting_theme_gray" />
 
-        <Button
-            android:id="@+id/b_dark"
-            style="@style/Widget.MaterialComponents.Button.UnelevatedButton"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_margin="8dp"
-            android:text="@string/setting_theme_dark"
-            android:textAppearance="@style/Button" />
-    </LinearLayout>
+            <Button
+                android:id="@+id/b_white"
+                style="@style/Widget.MaterialComponents.Button.UnelevatedButton"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="4dp"
+                android:text="@string/setting_theme_white" />
 
-    <View
-        android:layout_width="@dimen/line_width"
-        android:layout_height="80dp"
-        android:background="?colorPrimary" />
+            <Button
+                android:id="@+id/b_dark"
+                style="@style/Widget.MaterialComponents.Button.UnelevatedButton"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="4dp"
+                android:text="@string/setting_theme_dark" />
+        </LinearLayout>
 
-</FrameLayout>
+        <View
+            android:layout_width="@dimen/line_width"
+            android:layout_height="80dp"
+            android:background="?colorPrimary" />
+
+    </FrameLayout>
+</layout>

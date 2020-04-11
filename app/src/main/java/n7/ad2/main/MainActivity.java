@@ -194,7 +194,7 @@ public class MainActivity extends BaseActivity {
         builder.setView(binding.getRoot());
 
         final AlertDialog dialog = builder.create();
-        dialog.getWindow().getAttributes().windowAnimations = R.style.DialogTheme;
+        dialog.getWindow().getAttributes().windowAnimations = R.style.MyMaterialAlertDialogTheme;
         dialog.show();
         binding.bDialogUpdate.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -417,7 +417,7 @@ public class MainActivity extends BaseActivity {
             builder.setView(binding.getRoot());
 
             final AlertDialog dialog = builder.create();
-            dialog.getWindow().getAttributes().windowAnimations = R.style.DialogTheme;
+            dialog.getWindow().getAttributes().windowAnimations = R.style.MyMaterialAlertDialogTheme;
             dialog.show();
 
             binding.bDialogRateYes.setOnClickListener(new View.OnClickListener() {

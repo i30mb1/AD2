@@ -89,7 +89,7 @@ public class StreamsFragment extends Fragment {
 
         final AlertDialog dialog = builder.create();
         dialog.setView(binding.getRoot());
-        dialog.getWindow().getAttributes().windowAnimations = R.style.DialogTheme;
+        dialog.getWindow().getAttributes().windowAnimations = R.style.MyMaterialAlertDialogTheme;
         dialog.show();
 
         final LinkedList<String> list = new LinkedList<>();

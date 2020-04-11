@@ -10,6 +10,7 @@ import androidx.appcompat.app.AlertDialog
 import androidx.core.app.TaskStackBuilder
 import androidx.preference.Preference
 import androidx.preference.PreferenceFragmentCompat
+import com.google.android.material.dialog.MaterialAlertDialogBuilder
 import n7.ad2.BuildConfig
 import n7.ad2.R
 import n7.ad2.main.MainActivity
@@ -105,10 +106,13 @@ class SettingsFragment : PreferenceFragmentCompat() {
     }
 
     private fun createDialogTheme(preference: Preference) {
-        val builder = AlertDialog.Builder(requireContext())
-        builder.setView(R.layout.dialog_setting_fragment_theme)
-        builder.create().apply {
-            window?.attributes?.windowAnimations = R.style.DialogTheme
+        val dialogTheme = DialogTheme()
+        dialogTheme.show(childFragmentManager, null)
+
+//        val builder = AlertDialog.Builder(requireContext())
+//        builder.setView(R.layout.dialog_setting_fragment_theme)
+//        builder.create().apply {
+//            window?.attributes?.windowAnimations = R.style.DialogTheme
 
 //            findViewById<View>(R.id.b_dialog_theme_dark)?.setOnClickListener {
 //                preference.sharedPreferences.edit().putString(preference.key, THEME_DARK).apply()
@@ -123,8 +127,8 @@ class SettingsFragment : PreferenceFragmentCompat() {
 //                recreateActivity()
 //            }
 
-            show()
-        }
+//            show()
+//        }
     }
 
     private fun recreateActivity() {
