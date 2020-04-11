@@ -106,22 +106,22 @@ class SettingsFragment : PreferenceFragmentCompat() {
 
     private fun createDialogTheme(preference: Preference) {
         val builder = AlertDialog.Builder(requireContext())
-        builder.setView(R.layout.dialog_theme)
+        builder.setView(R.layout.dialog_setting_fragment_theme)
         builder.create().apply {
             window?.attributes?.windowAnimations = R.style.DialogTheme
 
-            findViewById<View>(R.id.b_dialog_theme_dark)?.setOnClickListener {
-                preference.sharedPreferences.edit().putString(preference.key, THEME_DARK).apply()
-                recreateActivity()
-            }
-            findViewById<View>(R.id.b_dialog_theme_gray)?.setOnClickListener {
-                preference.sharedPreferences.edit().putString(preference.key, THEME_GRAY).apply()
-                recreateActivity()
-            }
-            findViewById<View>(R.id.b_dialog_theme_white)?.setOnClickListener {
-                preference.sharedPreferences.edit().putString(preference.key, THEME_WHITE).apply()
-                recreateActivity()
-            }
+//            findViewById<View>(R.id.b_dialog_theme_dark)?.setOnClickListener {
+//                preference.sharedPreferences.edit().putString(preference.key, THEME_DARK).apply()
+//                recreateActivity()
+//            }
+//            findViewById<View>(R.id.b_dialog_theme_gray)?.setOnClickListener {
+//                preference.sharedPreferences.edit().putString(preference.key, THEME_GRAY).apply()
+//                recreateActivity()
+//            }
+//            findViewById<View>(R.id.b_dialog_theme_white)?.setOnClickListener {
+//                preference.sharedPreferences.edit().putString(preference.key, THEME_WHITE).apply()
+//                recreateActivity()
+//            }
 
             show()
         }

@@ -2,28 +2,24 @@
 
     <!--Grey тема-->
     <style name="AD2Theme" parent="Theme.MaterialComponents.Light.NoActionBar">
-        <!--фон панели уведомления-->
         <item name="colorPrimaryDark">@color/gray_700</item>
-        <!--фон панели приложения-->
-        <item name="colorPrimary">@color/gray_500</item>
-        <!--бэкграунд приложения-->
-        <item name="android:windowBackground">@color/gray_500</item>
+        <item name="colorPrimary">@color/red_500</item>
+
+        <item name="android:colorBackground">@color/gray_500</item>
+
         <item name="myBackgroundAD2">@drawable/background_hd</item>
-        <!--подсветка элементов-->
-        <item name="colorAccent">@color/red_500</item>
         <!--цвет главного текста-->
         <item name="android:textColorPrimary">@android:color/white</item>
         <!--цвет под заголовков-->
         <item name="android:textColorSecondary">@color/gray_100</item>
-
         <!--подсказка для строки поиска-->
         <item name="queryHint">@string/toolbar_search_hint</item>
-        <!--устанавливаем тему для диалогового окна-->
-        <!--<item name="android:alertDialogTheme">@style/MyAlertDialogStyle</item>-->
         <!--цвет меню текста-->
         <item name="android:actionMenuTextColor">@color/gray_100</item>
 
         <item name="android:windowAnimationStyle">@style/MyWindowAnimationTransition</item>
+
+        <item name="textAppearanceButton">@style/Button</item>
     </style>
 
     <!--Black тема-->
@@ -31,18 +27,14 @@
         <!--фон панели уведомления-->
         <item name="colorPrimaryDark">@android:color/black</item>
         <!--фон панели приложения-->
-        <item name="colorPrimary">@color/black_700</item>
+        <item name="colorPrimary">@color/purple</item>
         <!--бэкграунд приложения-->
-        <item name="android:windowBackground">@drawable/background_hd_black</item>
+        <item name="android:windowBackground">@color/black_700</item>
         <item name="myBackgroundAD2">@drawable/background_hd_black</item>
-        <!--подсветка элементов-->
-        <item name="colorAccent">@color/purple</item>
         <!--цвет главного текста-->
         <item name="android:textColorPrimary">@android:color/white</item>
         <!--цвет под заголовков-->
         <item name="android:textColorSecondary">@color/gray_800</item>
-        <!--устанавливаем тему для диалогового окна-->
-        <!--<item name="android:alertDialogTheme">@style/MyAlertDialogStyle.Black</item>-->
     </style>
 
     <!--White тема-->
@@ -50,21 +42,16 @@
         <!--фон панели уведомления-->
         <item name="colorPrimaryDark">@android:color/white</item>
         <!--фон панели приложения-->
-        <item name="colorPrimary">@android:color/white</item>
+        <item name="colorPrimary">@color/blue</item>
         <!--бэкграунд приложения-->
         <item name="android:windowBackground">@android:color/white</item>
         <item name="myBackgroundAD2">@drawable/background_hd_white</item>
-        <!--подсветка элементов-->
-        <item name="colorAccent">@color/blue</item>
         <!--цвет главного текста-->
         <item name="android:textColorPrimary">@color/black_800</item>
         <!--цвет под заголовков-->
         <item name="android:textColorSecondary">@color/gray_900</item>
         <!--цвет неактивных элементов-->
         <item name="android:colorControlNormal" tools:targetApi="lollipop">@color/gray_900</item>
-        <!--устанавливаем тему для диалогового окна-->
-        <!--<item name="android:alertDialogTheme">@style/MyAlertDialogStyle.White</item>-->
-
         <!--тёмные иконки для светкой панели уведомления-->
         <item name="android:windowLightStatusBar">true</item>
 
@@ -72,7 +59,6 @@
         <item name="android:divider">@color/gray_100</item>
         <item name="android:dividerHeight">1dp</item>
         <item name="android:showDividers">middle</item>
-
     </style>
 
     <style name="SplashTheme" parent="AD2Theme">
@@ -97,6 +83,10 @@
         <item name="android:windowBackground">@android:color/transparent</item>
         <item name="android:windowShowWallpaper">true</item>
         <item name="textAppearanceHeadline4">@style/Headline4.Black</item>
+    </style>
+
+    <style name="Button" parent="TextAppearance.MaterialComponents.Button">
+        <item name="android:textColor">@android:color/black</item>
     </style>
 
     <style name="Headline4" parent="TextAppearance.MaterialComponents.Headline4">
