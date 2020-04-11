@@ -4,12 +4,11 @@
     <style name="AD2Theme" parent="Theme.MaterialComponents.Light.NoActionBar">
         <item name="colorPrimaryDark">@color/gray_700</item>
         <item name="colorPrimary">@color/red_500</item>
+        <item name="colorSecondary">@color/red_500</item>
         <item name="android:colorBackground">@color/gray_500</item>
         <item name="myBackgroundAD2">@drawable/background_hd</item>
-
-        <!-- surface colors (CardView, Sheet, Menu) -->
         <item name="colorSurface">@android:color/black</item>
-        <item name="colorOnSurface">@android:color/white</item>
+        <item name="colorOnSurface">@color/red_500</item>
 
         <item name="myTextColorPrimary">@android:color/white</item>
         <item name="myTextColorSecondary">@android:color/white</item>
@@ -36,6 +35,8 @@
         <item name="colorPrimaryDark">@android:color/black</item>
         <!--фон панели приложения-->
         <item name="colorPrimary">@color/purple</item>
+        <item name="colorSecondary">@color/purple</item>
+        <item name="colorOnSurface">@color/purple</item>
         <!--бэкграунд приложения-->
         <item name="android:windowBackground">@color/black_700</item>
         <item name="myBackgroundAD2">@drawable/background_hd_black</item>
@@ -51,6 +52,8 @@
         <item name="colorPrimaryDark">@android:color/white</item>
         <!--фон панели приложения-->
         <item name="colorPrimary">@color/blue</item>
+        <item name="colorSecondary">@color/blue</item>
+        <item name="colorOnSurface">@color/blue</item>
         <!--бэкграунд приложения-->
         <item name="android:windowBackground">@android:color/white</item>
         <item name="myBackgroundAD2">@drawable/background_hd_white</item>
