@@ -19,7 +19,7 @@ class SaveCurrentDateInSharedPrefUseCase @Inject constructor(
 
     suspend operator fun invoke() = withContext(ioDispatcher) {
         val currentDayInString = SimpleDateFormat("DDD", Locale.US).format(Calendar.getInstance().time)
-        sharedPreferences.edit {
+        sharedPreferences.edit(true) {
             putInt(application.getString(R.string.setting_current_day), currentDayInString.toInt())
         }
     }
