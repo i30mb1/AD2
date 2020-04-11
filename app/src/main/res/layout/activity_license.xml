@@ -2,9 +2,7 @@
 <layout xmlns:android="http://schemas.android.com/apk/res/android">
 
     <data>
-        <variable
-            name="var"
-            type="n7.ad2.ui.setting.LicensesActivity" />
+
     </data>
 
     <ScrollView
@@ -15,156 +13,86 @@
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_gravity="top|bottom|center_vertical|fill_vertical|center|fill"
-            android:layout_marginLeft="15dp"
-            android:layout_marginRight="15dp"
-            android:orientation="vertical">
+            android:orientation="vertical"
+            android:padding="15dp">
 
             <ImageView
                 android:id="@+id/iv"
-                android:layout_width="match_parent"
+                android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_gravity="center_horizontal"
-                android:layout_marginTop="15dp"
-                android:contentDescription="@string/setting_tell_friend_title"
+                android:contentDescription="@string/desc_application_logo"
                 android:src="@mipmap/ic_launcher" />
 
             <TextView
-
-                android:layout_width="match_parent"
-                android:textColor="?android:textColorSecondary"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="20dp"
+                style="@style/MyTextViewLicenseStyle"
                 android:text="@string/license_title"
                 android:textStyle="bold" />
 
             <TextView
-                android:layout_width="match_parent"
-                android:textColor="?android:textColorSecondary"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="20dp"
-                android:text="@string/license_text1"
-                android:textSize="12sp" />
+                style="@style/MyTextViewLicenseStyle"
+                android:text="@string/license_text1" />
 
             <TextView
-                android:layout_width="match_parent"
-                android:textColor="?android:textColorSecondary"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="20dp"
-                android:text="@string/license_text2"
-                android:textSize="12sp" />
+                style="@style/MyTextViewLicenseStyle"
+
+                android:text="@string/license_text2" />
 
             <TextView
-                android:layout_width="match_parent"
-                android:textColor="?android:textColorSecondary"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="20dp"
-                android:text="@string/license_text3"
-                android:textSize="12sp" />
+                style="@style/MyTextViewLicenseStyle"
+                android:text="@string/license_text3" />
 
             <TextView
-                android:layout_width="match_parent"
-                android:textColor="?android:textColorSecondary"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="20dp"
-                android:text="@string/license_text4"
-                android:textSize="12sp" />
+                style="@style/MyTextViewLicenseStyle"
+                android:text="@string/license_text4" />
 
             <TextView
-                android:layout_width="match_parent"
-                android:textColor="?android:textColorSecondary"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="20dp"
-                android:text="@string/license_text5"
-                android:textSize="12sp" />
+                style="@style/MyTextViewLicenseStyle"
+                android:text="@string/license_text5" />
 
             <TextView
-                android:layout_width="match_parent"
-                android:textColor="?android:textColorSecondary"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="10dp"
-                android:text="@string/license_text6"
-                android:textSize="12sp" />
+                style="@style/MyTextViewLicenseStyle"
+                android:text="@string/license_text6" />
 
             <TextView
-                android:layout_width="match_parent"
-                android:textColor="?android:textColorSecondary"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="10dp"
-                android:text="@string/license_text7"
-                android:textSize="12sp" />
+                style="@style/MyTextViewLicenseStyle"
+                android:text="@string/license_text7" />
 
             <TextView
-                android:layout_width="match_parent"
-                android:textColor="?android:textColorSecondary"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="10dp"
-                android:text="@string/license_text8"
-                android:textSize="12sp" />
+                style="@style/MyTextViewLicenseStyle"
+                android:text="@string/license_text8" />
 
             <TextView
-                android:layout_width="match_parent"
-                android:textColor="?android:textColorSecondary"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="10dp"
-                android:text="@string/license_text9"
-                android:textSize="12sp" />
+                style="@style/MyTextViewLicenseStyle"
+                android:text="@string/license_text9" />
 
             <TextView
-                android:layout_width="match_parent"
-                android:textColor="?android:textColorSecondary"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="10dp"
-                android:text="@string/license_text10"
-                android:textSize="12sp" />
+                style="@style/MyTextViewLicenseStyle"
+                android:text="@string/license_text10" />
 
             <TextView
-                android:layout_width="match_parent"
-                android:textColor="?android:textColorSecondary"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="10dp"
-                android:text="@string/license_text11"
-                android:textSize="12sp" />
+                style="@style/MyTextViewLicenseStyle"
+                android:text="@string/license_text11" />
 
             <TextView
-                android:layout_width="match_parent"
-                android:textColor="?android:textColorSecondary"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="10dp"
-                android:text="@string/license_text12"
-                android:textSize="12sp" />
+                style="@style/MyTextViewLicenseStyle"
+                android:text="@string/license_text12" />
 
             <TextView
-                android:layout_width="match_parent"
-                android:textColor="?android:textColorSecondary"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="10dp"
-                android:text="@string/license_text13"
-                android:textSize="12sp" />
+                style="@style/MyTextViewLicenseStyle"
+                android:text="@string/license_text13" />
 
             <TextView
-                android:layout_width="match_parent"
-                android:textColor="?android:textColorSecondary"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="10dp"
-                android:text="@string/license_text14"
-                android:textSize="12sp" />
+                style="@style/MyTextViewLicenseStyle"
+                android:text="@string/license_text14" />
 
             <TextView
-                android:layout_width="match_parent"
-                android:textColor="?android:textColorSecondary"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="10dp"
-                android:text="@string/license_text15"
-                android:textSize="12sp" />
+                style="@style/MyTextViewLicenseStyle"
+                android:text="@string/license_text15" />
 
             <TextView
-                android:layout_width="match_parent"
-                android:textColor="?android:textColorSecondary"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="10dp"
-                android:text="@string/license_text16"
-                android:textSize="12sp" />
+                style="@style/MyTextViewLicenseStyle"
+                android:text="@string/license_text16" />
         </LinearLayout>
     </ScrollView>
 </layout>
