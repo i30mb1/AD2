@@ -16,6 +16,7 @@
         tools:ignore="ProtectedPermissions" />
 
     <application
+        android:name=".ui.MyApplication"
         android:allowBackup="true"
         android:fullBackupContent="true"
         android:icon="@mipmap/ic_launcher"

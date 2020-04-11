@@ -54,4 +54,10 @@ object Lib {
     const val moshiCodegen = "com.squareup.moshi:moshi-kotlin-codegen:1.9.2" // Add codegen to moshi (generating by using @JsonClass(generateAdapter = true))
     const val moshiKotlin  = "com.squareup.moshi:moshi-kotlin:1.9.2" // Add reflection to moshi (better not to use : 2.5 MB)
     const val moshiAdapter = "com.squareup.moshi:moshi-adapters:1.9.2"
+
+    // --- Dagger ---
+    const val dagger                   = "com.google.dagger:dagger:2.25.2"
+    const val daggerAnnotation         = "com.google.dagger:dagger-compiler:2.25.2"
+    const val daggerAssisted           = "com.squareup.inject:assisted-inject-annotations-dagger2:0.5.2"
+    const val daggerAssistedAnnotation = "com.squareup.inject:assisted-inject-processor-dagger2:0.5.2"
 }

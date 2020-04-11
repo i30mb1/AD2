@@ -4,8 +4,9 @@ import android.content.Intent
 import android.os.Bundle
 import android.view.View
 import android.view.ViewGroup
-import androidx.appcompat.app.AppCompatActivity
 import androidx.databinding.DataBindingUtil
+import androidx.fragment.app.FragmentActivity
+import androidx.lifecycle.Observer
 import androidx.lifecycle.lifecycleScope
 import androidx.preference.PreferenceManager
 import androidx.transition.TransitionManager
@@ -13,14 +14,14 @@ import kotlinx.coroutines.delay
 import kotlinx.coroutines.launch
 import n7.ad2.R
 import n7.ad2.databinding.ActivitySplashBinding
+import n7.ad2.di.injector
 import n7.ad2.ui.MainActivity
-import java.text.SimpleDateFormat
-import java.util.*
+import n7.ad2.utils.viewModel
 
 @JvmField
 val CURRENT_DAY_IN_APP = "CURRENT_DAY_IN_APP"
 
-class SplashActivity : AppCompatActivity() {
+class SplashActivity : FragmentActivity() {
 
     companion object {
         const val DELAY_START_ACTIVITY = 1000L
@@ -33,25 +34,24 @@ class SplashActivity : AppCompatActivity() {
 
     private var fadeIn = false
     private lateinit var binding: ActivitySplashBinding
+    private val viewModel: SplashViewModel by viewModel { injector.splashViewModel }
 
     override fun onCreate(savedInstanceState: Bundle?) {
         setMySplashTheme()
         super.onCreate(savedInstanceState)
         binding = DataBindingUtil.setContentView(this, R.layout.activity_splash)
         PreferenceManager.setDefaultValues(this, R.xml.setting, false)
+        viewModel.saveCurrentDateInSharedPref()
 
         if (savedInstanceState == null) {
             fadeIn = true
         }
 
-        binding.tv.text = getErrorEmote()
-        setupDay()
+        viewModel.textEmote.observe(this, Observer {
+            binding.tv.text = it
+        })
     }
 
-    private fun setupDay() {
-            val currentDayInString = SimpleDateFormat("DDD", Locale.US).format(Calendar.getInstance().time)
-            PreferenceManager.getDefaultSharedPreferences(application).edit().putInt(CURRENT_DAY_IN_APP, currentDayInString.toInt()).apply()
-    }
 
     private fun setMySplashTheme() {
         when (PreferenceManager.getDefaultSharedPreferences(this).getString(getString(R.string.setting_theme_key), null)) {
@@ -82,24 +82,6 @@ class SplashActivity : AppCompatActivity() {
             startActivity(Intent(this@SplashActivity, MainActivity::class.java))
             finish()
         }
-    }
-
-    private fun getErrorEmote(): String? {
-        val emotes = arrayOf(
-                "('.')",
-                "('x')",
-                "(>_<)",
-                "(>.<)",
-                "(;-;)",
-                "\\(o_o)/",
-                "(O_o)",
-                "(o_0)",
-                "(≥o≤)",
-                "(≥o≤)",
-                "(·.·)",
-                "(·_·)"
-        )
-        return emotes.random()
     }
 
 }

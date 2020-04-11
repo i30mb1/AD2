@@ -45,6 +45,13 @@ android {
         sourceCompatibility = JavaVersion.VERSION_1_8
         targetCompatibility = JavaVersion.VERSION_1_8
     }
+    tasks.withType<org.jetbrains.kotlin.gradle.tasks.KotlinCompile> {
+        kotlinOptions {
+            noStdlib = true
+            jvmTarget = JavaVersion.VERSION_1_8.toString()
+            freeCompilerArgs = listOf("-Xallow-result-return-type")
+        }
+    }
 
 }
 
@@ -76,6 +83,10 @@ dependencies {
     api(Lib.coroutinesViewmodel)
     api(Lib.fragmentKtx)
     api(Lib.activityKtx)
+    implementation(Lib.dagger)
+    kapt(Lib.daggerAnnotation)
+    compileOnly(Lib.daggerAssisted)
+    kapt(Lib.daggerAssistedAnnotation)
     implementation(Lib.preference)
     implementation(Lib.preferenceKtx)
 }

@@ -112,8 +112,8 @@ public class MainActivity extends BaseActivity {
     private ConstraintSet constraintSetOrigin = new ConstraintSet();
     private ConstraintSet currentSet;
     private PlainAdapter adapter;
-    private ActivityMainBinding bindingActivity;
-    private DrawerBinding bindingDrawer;
+    private ActivityMainBinding binding;
+    private DrawerBinding drawer;
     BroadcastReceiver broadcastReceiver = new BroadcastReceiver() {
         @Override
         public void onReceive(Context context, Intent intent) {
@@ -140,20 +140,20 @@ public class MainActivity extends BaseActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+        binding = DataBindingUtil.setContentView(this, R.layout.activity_main);
 
         currentDay = PreferenceManager.getDefaultSharedPreferences(this).getInt(CURRENT_DAY_IN_APP, 0);
         viewModel = ViewModelProviders.of(this).get(MainViewModel.class);
 
-        bindingActivity = DataBindingUtil.setContentView(this, R.layout.activity_main);
-        bindingActivity.setViewModel(viewModel);
+        binding.setViewModel(viewModel);
 
-        bindingDrawer = DataBindingUtil.inflate(getLayoutInflater(), R.layout.drawer, null, false);
-        bindingDrawer.setViewModel(viewModel);
+        drawer = DataBindingUtil.inflate(getLayoutInflater(), R.layout.drawer, null, false);
+        drawer.setViewModel(viewModel);
         movementListX.addAll(Arrays.asList(new Float[10]));
         movementListY.addAll(Arrays.asList(new Float[10]));
-        bindingDrawer.setArrayX(movementListX);
-        bindingDrawer.setArrayY(movementListY);
-        bindingDrawer.setActivity(this);
+        drawer.setArrayX(movementListX);
+        drawer.setArrayY(movementListY);
+        drawer.setActivity(this);
 
         setupRecyclerView();
         log("on_Create");
@@ -169,7 +169,7 @@ public class MainActivity extends BaseActivity {
         viewModel.snackbarMessage.observe(this, new Observer<Integer>() {
             @Override
             public void onChanged(@StringRes Integer redId) {
-                SnackbarUtils.showSnackbar(bindingActivity.getRoot(), getString(redId));
+                SnackbarUtils.showSnackbar(binding.getRoot(), getString(redId));
             }
         });
         viewModel.showDialogUpdate.observe(this, new Observer<Void>() {
@@ -215,7 +215,7 @@ public class MainActivity extends BaseActivity {
     }
 
     private void setupToolbar() {
-        setSupportActionBar(bindingActivity.toolbar);
+        setSupportActionBar(binding.toolbar);
     }
 
     @Override
@@ -229,8 +229,8 @@ public class MainActivity extends BaseActivity {
         shouldDisplayLog = PreferenceManager.getDefaultSharedPreferences(this).getBoolean(getString(R.string.setting_log_key), true);
         if (shouldDisplayLog) {
             adapter = viewModel.getAdapter();
-            bindingDrawer.rvDrawer.setAdapter(adapter);
-            bindingDrawer.rvDrawer.setLayoutManager(new UnscrollableLinearLayoutManager(this, LinearLayoutManager.VERTICAL, false));
+            drawer.rvDrawer.setAdapter(adapter);
+            drawer.rvDrawer.setLayoutManager(new UnscrollableLinearLayoutManager(this, LinearLayoutManager.VERTICAL, false));
         }
     }
 
@@ -239,7 +239,7 @@ public class MainActivity extends BaseActivity {
             adapter.add(text);
             adapter.notifyDataSetChanged();
 //            adapter.notifyItemChanged(adapter.getItemCount());
-            bindingDrawer.rvDrawer.scrollToPosition(adapter.getItemCount() - 1);
+            drawer.rvDrawer.scrollToPosition(adapter.getItemCount() - 1);
         }
     }
 
@@ -249,22 +249,22 @@ public class MainActivity extends BaseActivity {
         switch (fragmentID) {
             default:
             case 1:
-                ft.replace(bindingActivity.container.getId(), new HeroesFragment()).commit();
+                ft.replace(binding.container.getId(), new HeroesFragment()).commit();
                 break;
             case 2:
-                ft.replace(bindingActivity.container.getId(), new ItemsFragment()).commit();
+                ft.replace(binding.container.getId(), new ItemsFragment()).commit();
                 break;
             case 3:
-                ft.replace(bindingActivity.container.getId(), new NewsFragment()).commit();
+                ft.replace(binding.container.getId(), new NewsFragment()).commit();
                 break;
             case 4:
-                ft.replace(bindingActivity.container.getId(), new TournamentsFragment()).commit();
+                ft.replace(binding.container.getId(), new TournamentsFragment()).commit();
                 break;
             case 5:
-                ft.replace(bindingActivity.container.getId(), new StreamsFragment()).commit();
+                ft.replace(binding.container.getId(), new StreamsFragment()).commit();
                 break;
             case 6:
-                ft.replace(bindingActivity.container.getId(), new GameFragment()).commit();
+                ft.replace(binding.container.getId(), new GameFragment()).commit();
                 break;
         }
 //        if (closeDrawer)
@@ -277,7 +277,7 @@ public class MainActivity extends BaseActivity {
     }
 
     private void setupSecretActivity() {
-        constraintSetOrigin.clone((ConstraintLayout) bindingDrawer.getRoot());
+        constraintSetOrigin.clone((ConstraintLayout) drawer.getRoot());
         constraintSetHidden.clone(this, R.layout.drawer_hidden);
         currentSet = constraintSetOrigin;
     }
@@ -288,17 +288,17 @@ public class MainActivity extends BaseActivity {
                 .setDuration(500)
                 .addTransition(new ChangeBounds().setInterpolator(new LinearInterpolator()));
         //после этого метода все изменения внутри ViewGroup будут анимированы
-        TransitionManager.beginDelayedTransition((ViewGroup) bindingDrawer.getRoot(), transitionSet);
+        TransitionManager.beginDelayedTransition((ViewGroup) drawer.getRoot(), transitionSet);
 //        TransitionManager.beginDelayedTransition((ViewGroup) bindingDrawer.getRoot(), new AutoTransition());
         //применяет все изменения находящиеся в currentSet с анимациями из transitionSet
-        currentSet.applyTo((ConstraintLayout) bindingDrawer.getRoot());
-        TransitionManager.beginDelayedTransition((ViewGroup) bindingActivity.getRoot());
+        currentSet.applyTo((ConstraintLayout) drawer.getRoot());
+        TransitionManager.beginDelayedTransition((ViewGroup) binding.getRoot());
         if (currentSet == constraintSetOrigin) {
             modeSecretActivity = false;
-            bindingActivity.getRoot().setVisibility(View.VISIBLE);
+            binding.getRoot().setVisibility(View.VISIBLE);
         } else {
             modeSecretActivity = true;
-            bindingActivity.getRoot().setVisibility(View.INVISIBLE);
+            binding.getRoot().setVisibility(View.INVISIBLE);
         }
         return true;
     }
@@ -364,7 +364,7 @@ public class MainActivity extends BaseActivity {
 
     /* Displays the snackbar notification and call to action. */
     private void popupSnackbarForCompleteUpdate() {
-        Snackbar snackbar = Snackbar.make(bindingActivity.getRoot(), R.string.main_activity_update_me, Snackbar.LENGTH_INDEFINITE);
+        Snackbar snackbar = Snackbar.make(binding.getRoot(), R.string.main_activity_update_me, Snackbar.LENGTH_INDEFINITE);
         snackbar.setAction(R.string.main_activity_okay, new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -454,7 +454,7 @@ public class MainActivity extends BaseActivity {
     private void hideKeyboard() {
         InputMethodManager imm = (InputMethodManager) getSystemService(INPUT_METHOD_SERVICE);
         if (imm != null) {
-            imm.hideSoftInputFromWindow(bindingActivity.toolbar.getWindowToken(), 0);
+            imm.hideSoftInputFromWindow(binding.toolbar.getWindowToken(), 0);
         }
     }
 
@@ -495,14 +495,14 @@ public class MainActivity extends BaseActivity {
                 }
                 break;
         }
-        bindingDrawer.setArrayX(movementListX);
-        bindingDrawer.setArrayY(movementListY);
+        drawer.setArrayX(movementListX);
+        drawer.setArrayY(movementListY);
         return super.dispatchTouchEvent(ev);
     }
 
     private void setupDrawer() {
         SlidingRootNav drawer = new SlidingRootNavBuilder(this)
-                .withToolbarMenuToggle(bindingActivity.toolbar)
+                .withToolbarMenuToggle(binding.toolbar)
                 .withDragDistance(110)
                 .withRootViewScale(0.65f)
                 .withRootViewElevation(8)
@@ -519,7 +519,7 @@ public class MainActivity extends BaseActivity {
 
                     }
                 })
-                .withMenuView(bindingDrawer.getRoot())
+                .withMenuView(this.drawer.getRoot())
                 .inject();
         drawer.openMenu();
     }
@@ -589,11 +589,11 @@ public class MainActivity extends BaseActivity {
             return;
         }
         if (currentSet == constraintSetHidden) {
-            toggleSecretActivity(bindingActivity.getRoot());
+            toggleSecretActivity(binding.getRoot());
             return;
         }
         doubleBackToExitPressedOnce = true;
-        Snackbar.make(bindingActivity.getRoot(), R.string.main_press_again_to_exit, Snackbar.LENGTH_SHORT).show();
+        Snackbar.make(binding.getRoot(), R.string.main_press_again_to_exit, Snackbar.LENGTH_SHORT).show();
 
         new Handler().postDelayed(new Runnable() {
             @Override

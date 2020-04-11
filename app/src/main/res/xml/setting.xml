@@ -50,4 +50,8 @@
             app:summary="@string/setting_contact_summary"
             app:title="@string/setting_contact_title" />
     </PreferenceCategory>
+    <Preference
+        app:isPreferenceVisible="false"
+        app:iconSpaceReserved="false"
+        app:key="@string/setting_current_day"/>
 </PreferenceScreen>
