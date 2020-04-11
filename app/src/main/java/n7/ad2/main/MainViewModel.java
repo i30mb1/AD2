@@ -29,7 +29,6 @@ import retrofit2.Retrofit;
 import retrofit2.converter.gson.GsonConverterFactory;
 
 import static n7.ad2.ui.MainActivity.LOG_ON_RECEIVE;
-import static n7.ad2.ui.splash.SplashActivityKt.CURRENT_DAY_IN_APP;
 
 public class MainViewModel extends AndroidViewModel {
 
@@ -70,7 +69,7 @@ public class MainViewModel extends AndroidViewModel {
     }
 
     private void checkLastVersion() {
-        int currentDay = PreferenceManager.getDefaultSharedPreferences(application).getInt(CURRENT_DAY_IN_APP, 0);
+        int currentDay = PreferenceManager.getDefaultSharedPreferences(application).getInt(application.getString(R.string.setting_current_day), 0);
         int lastDayWhenCheckUpdate = PreferenceManager.getDefaultSharedPreferences(application).getInt(LAST_DAY_WHEN_CHECK_UPDATE, 0);
         if (currentDay != lastDayWhenCheckUpdate) {
             startUpdate(false);

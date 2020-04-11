@@ -16,10 +16,10 @@ import n7.ad2.R
 import n7.ad2.databinding.ActivitySplashBinding
 import n7.ad2.di.injector
 import n7.ad2.ui.MainActivity
+import n7.ad2.ui.setting.SettingsFragment.Companion.THEME_DARK
+import n7.ad2.ui.setting.SettingsFragment.Companion.THEME_GRAY
+import n7.ad2.ui.setting.SettingsFragment.Companion.THEME_WHITE
 import n7.ad2.utils.viewModel
-
-@JvmField
-val CURRENT_DAY_IN_APP = "CURRENT_DAY_IN_APP"
 
 class SplashActivity : FragmentActivity() {
 
@@ -27,9 +27,6 @@ class SplashActivity : FragmentActivity() {
         const val DELAY_START_ACTIVITY = 1000L
         const val DELAY_FADE_ANIMATION = 600L
         const val FADE_DURATION_ANIMATION = 1000L
-        const val THEME_GRAY = "GRAY"
-        const val THEME_WHITE = "WHITE"
-        const val THEME_DARK = "DARK"
     }
 
     private var fadeIn = false
@@ -43,15 +40,10 @@ class SplashActivity : FragmentActivity() {
         PreferenceManager.setDefaultValues(this, R.xml.setting, false)
         viewModel.saveCurrentDateInSharedPref()
 
-        if (savedInstanceState == null) {
-            fadeIn = true
-        }
+        if (savedInstanceState == null) { fadeIn = true }
 
-        viewModel.textEmote.observe(this, Observer {
-            binding.tv.text = it
-        })
+        viewModel.textEmote.observe(this, Observer { binding.tv.text = it })
     }
-
 
     private fun setMySplashTheme() {
         when (PreferenceManager.getDefaultSharedPreferences(this).getString(getString(R.string.setting_theme_key), null)) {

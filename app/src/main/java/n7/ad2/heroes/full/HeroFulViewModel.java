@@ -66,7 +66,6 @@ import n7.ad2.utils.SnackbarMessage;
 import n7.ad2.utils.Utils;
 
 import static n7.ad2.heroes.full.HeroFullActivity.HERO_CODE_NAME;
-import static n7.ad2.ui.splash.SplashActivityKt.CURRENT_DAY_IN_APP;
 
 public class HeroFulViewModel extends AndroidViewModel implements SharedPreferences.OnSharedPreferenceChangeListener {
 
@@ -134,7 +133,7 @@ public class HeroFulViewModel extends AndroidViewModel implements SharedPreferen
 
     private void loadFreshGuideForHero(final HeroModel heroModel) {
 
-        int currentDay = PreferenceManager.getDefaultSharedPreferences(application).getInt(CURRENT_DAY_IN_APP, 0);
+        int currentDay = PreferenceManager.getDefaultSharedPreferences(application).getInt(application.getString(R.string.setting_current_day), 0);
         int guideLastDay = heroModel.getGuideLastDay();
         if (currentDay != guideLastDay) {
             PreferenceManager.getDefaultSharedPreferences(application).edit().putInt(FREE_RESPONSE_FOR_DAY_KEY, FREE_RESPONSE_FOR_DAY).apply();

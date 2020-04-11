@@ -14,11 +14,10 @@ import org.jsoup.select.Elements;
 
 import java.util.concurrent.Executors;
 
+import n7.ad2.R;
 import n7.ad2.heroes.db.HeroModel;
 import n7.ad2.heroes.db.HeroesDao;
 import n7.ad2.heroes.db.HeroesRoomDatabase;
-
-import static n7.ad2.ui.splash.SplashActivityKt.CURRENT_DAY_IN_APP;
 
 public class GuideWorker extends Worker {
 
@@ -164,7 +163,7 @@ public class GuideWorker extends Worker {
             heroes.setSkillBuilds(stringSkillBuilds.toString());
             heroes.setBestVersus(stringBestVersus.toString());
             heroes.setWorstVersus(stringWorstVersus.toString());
-            heroes.setGuideLastDay(PreferenceManager.getDefaultSharedPreferences(getApplicationContext()).getInt(CURRENT_DAY_IN_APP, 0));
+            heroes.setGuideLastDay(PreferenceManager.getDefaultSharedPreferences(getApplicationContext()).getInt(getApplicationContext().getString(R.string.setting_current_day), 0));
 
             heroesDao.update(heroes);
 
