@@ -22,7 +22,7 @@ import n7.ad2.news.db.NewsDao;
 import n7.ad2.news.db.NewsModel;
 import n7.ad2.news.db.NewsRoomDatabase;
 
-import static n7.ad2.main.MainActivity.LOG_ON_RECEIVE;
+import static n7.ad2.ui.MainActivity.LOG_ON_RECEIVE;
 
 public class NewsWorker extends Worker {
 

@@ -74,12 +74,12 @@ public class MultiStreamsFragment extends Fragment {
                 break;
             case R.id.menu_fragment_streams_open_multitab:
                 FragmentManager fragmentManager = getChildFragmentManager();
-                Fragment currentFragment = fragmentManager.findFragmentById(R.id.container_activity_main);
+                Fragment currentFragment = fragmentManager.findFragmentById(R.id.container);
                 FragmentTransaction ft = fragmentManager.beginTransaction();
                 if (currentFragment.getTag() != null && currentFragment.getTag().equals(TAG_ONE_TWITCH)) {
-                    ft.replace(R.id.container_activity_main, new StreamsFragment(), TAG_MULTI_TWITCH).commit();
+                    ft.replace(R.id.container, new StreamsFragment(), TAG_MULTI_TWITCH).commit();
                 } else {
-                    ft.replace(R.id.container_activity_main, new MultiStreamsFragment(), TAG_ONE_TWITCH).commit();
+                    ft.replace(R.id.container, new MultiStreamsFragment(), TAG_ONE_TWITCH).commit();
                 }
                 break;
         }

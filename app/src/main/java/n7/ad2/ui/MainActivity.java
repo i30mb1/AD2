@@ -1,4 +1,4 @@
-package n7.ad2.main;
+package n7.ad2.ui;
 
 import android.app.DownloadManager;
 import android.content.BroadcastReceiver;
@@ -62,6 +62,7 @@ import n7.ad2.databinding.DrawerBinding;
 import n7.ad2.games.GameFragment;
 import n7.ad2.heroes.HeroesFragment;
 import n7.ad2.items.ItemsFragment;
+import n7.ad2.main.MainViewModel;
 import n7.ad2.news.NewsFragment;
 import n7.ad2.streams.StreamsFragment;
 import n7.ad2.tournaments.TournamentsFragment;
@@ -140,7 +141,6 @@ public class MainActivity extends BaseActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
 
-//        updateFreeSubscriptionCounter();
         currentDay = PreferenceManager.getDefaultSharedPreferences(this).getInt(CURRENT_DAY_IN_APP, 0);
         viewModel = ViewModelProviders.of(this).get(MainViewModel.class);
 
@@ -215,7 +215,7 @@ public class MainActivity extends BaseActivity {
     }
 
     private void setupToolbar() {
-        setSupportActionBar(bindingActivity.toolbarActivityMain);
+        setSupportActionBar(bindingActivity.toolbar);
     }
 
     @Override
@@ -249,22 +249,22 @@ public class MainActivity extends BaseActivity {
         switch (fragmentID) {
             default:
             case 1:
-                ft.replace(bindingActivity.containerActivityMain.getId(), new HeroesFragment()).commit();
+                ft.replace(bindingActivity.container.getId(), new HeroesFragment()).commit();
                 break;
             case 2:
-                ft.replace(bindingActivity.containerActivityMain.getId(), new ItemsFragment()).commit();
+                ft.replace(bindingActivity.container.getId(), new ItemsFragment()).commit();
                 break;
             case 3:
-                ft.replace(bindingActivity.containerActivityMain.getId(), new NewsFragment()).commit();
+                ft.replace(bindingActivity.container.getId(), new NewsFragment()).commit();
                 break;
             case 4:
-                ft.replace(bindingActivity.containerActivityMain.getId(), new TournamentsFragment()).commit();
+                ft.replace(bindingActivity.container.getId(), new TournamentsFragment()).commit();
                 break;
             case 5:
-                ft.replace(bindingActivity.containerActivityMain.getId(), new StreamsFragment()).commit();
+                ft.replace(bindingActivity.container.getId(), new StreamsFragment()).commit();
                 break;
             case 6:
-                ft.replace(bindingActivity.containerActivityMain.getId(), new GameFragment()).commit();
+                ft.replace(bindingActivity.container.getId(), new GameFragment()).commit();
                 break;
         }
 //        if (closeDrawer)
@@ -454,7 +454,7 @@ public class MainActivity extends BaseActivity {
     private void hideKeyboard() {
         InputMethodManager imm = (InputMethodManager) getSystemService(INPUT_METHOD_SERVICE);
         if (imm != null) {
-            imm.hideSoftInputFromWindow(bindingActivity.toolbarActivityMain.getWindowToken(), 0);
+            imm.hideSoftInputFromWindow(bindingActivity.toolbar.getWindowToken(), 0);
         }
     }
 
@@ -502,7 +502,7 @@ public class MainActivity extends BaseActivity {
 
     private void setupDrawer() {
         SlidingRootNav drawer = new SlidingRootNavBuilder(this)
-                .withToolbarMenuToggle(bindingActivity.toolbarActivityMain)
+                .withToolbarMenuToggle(bindingActivity.toolbar)
                 .withDragDistance(110)
                 .withRootViewScale(0.65f)
                 .withRootViewElevation(8)

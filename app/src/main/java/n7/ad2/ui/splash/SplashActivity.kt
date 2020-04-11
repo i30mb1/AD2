@@ -13,7 +13,7 @@ import kotlinx.coroutines.delay
 import kotlinx.coroutines.launch
 import n7.ad2.R
 import n7.ad2.databinding.ActivitySplashBinding
-import n7.ad2.main.MainActivity
+import n7.ad2.ui.MainActivity
 import java.text.SimpleDateFormat
 import java.util.*
 

@@ -19,7 +19,7 @@ import android.view.ViewGroup;
 import n7.ad2.R;
 import n7.ad2.databinding.FragmentGameBinding;
 
-import static n7.ad2.main.MainActivity.LOG_ON_RECEIVE;
+import static n7.ad2.ui.MainActivity.LOG_ON_RECEIVE;
 
 public class GameFragment extends Fragment implements SharedPreferences.OnSharedPreferenceChangeListener {
 

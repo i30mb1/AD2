@@ -31,7 +31,7 @@ import n7.ad2.main.MainViewModel;
 
 import static n7.ad2.heroes.full.HeroFullActivity.HERO_CODE_NAME;
 import static n7.ad2.heroes.full.HeroFullActivity.HERO_NAME;
-import static n7.ad2.main.MainActivity.LOG_ON_RECEIVE;
+import static n7.ad2.ui.MainActivity.LOG_ON_RECEIVE;
 
 
 public class HeroesFragment extends Fragment implements SearchView.OnQueryTextListener {

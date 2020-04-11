@@ -27,7 +27,7 @@ import n7.ad2.main.MainViewModel;
 
 import static n7.ad2.items.full.ItemFullActivity.ITEM_CODE_NAME;
 import static n7.ad2.items.full.ItemFullActivity.ITEM_NAME;
-import static n7.ad2.main.MainActivity.LOG_ON_RECEIVE;
+import static n7.ad2.ui.MainActivity.LOG_ON_RECEIVE;
 
 public class ItemsFragment extends Fragment implements SearchView.OnQueryTextListener {
 

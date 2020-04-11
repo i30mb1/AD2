@@ -20,7 +20,7 @@ import n7.ad2.R;
 import n7.ad2.databinding.FragmentNewsBinding;
 import n7.ad2.news.db.NewsModel;
 
-import static n7.ad2.main.MainActivity.LOG_ON_RECEIVE;
+import static n7.ad2.ui.MainActivity.LOG_ON_RECEIVE;
 
 public class NewsFragment extends Fragment {
 

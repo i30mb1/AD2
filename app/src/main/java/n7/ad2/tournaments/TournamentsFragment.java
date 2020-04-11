@@ -25,7 +25,7 @@ import n7.ad2.R;
 import n7.ad2.databinding.FragmentTournamentsBinding;
 import n7.ad2.tournaments.db.TournamentGame;
 
-import static n7.ad2.main.MainActivity.LOG_ON_RECEIVE;
+import static n7.ad2.ui.MainActivity.LOG_ON_RECEIVE;
 import static n7.ad2.tournaments.TournamentsWorker.PAGE;
 import static n7.ad2.tournaments.TournamentsWorker.TAG;
 

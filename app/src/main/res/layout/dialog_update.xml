@@ -6,7 +6,7 @@
 
         <variable
             name="activity"
-            type="n7.ad2.main.MainActivity" />
+            type="n7.ad2.ui.MainActivity" />
     </data>
 
     <androidx.constraintlayout.widget.ConstraintLayout

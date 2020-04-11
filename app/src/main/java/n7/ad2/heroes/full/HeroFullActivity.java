@@ -34,7 +34,7 @@ import n7.ad2.utils.SnackbarUtils;
 import n7.ad2.utils.Utils;
 
 import static n7.ad2.heroes.full.HeroFulViewModel.FILE_EXIST;
-import static n7.ad2.main.MainActivity.LOG_ON_RECEIVE;
+import static n7.ad2.ui.MainActivity.LOG_ON_RECEIVE;
 
 public class HeroFullActivity extends BaseActivity {
 

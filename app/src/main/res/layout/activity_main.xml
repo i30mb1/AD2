@@ -10,10 +10,9 @@
     </data>
 
     <androidx.drawerlayout.widget.DrawerLayout
-        android:id="@+id/drawer_activity_main"
+        android:id="@+id/drawer"
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:background="?colorPrimaryDark">
+        android:layout_height="match_parent">
 
         <androidx.coordinatorlayout.widget.CoordinatorLayout
             android:layout_width="match_parent"
@@ -24,7 +23,7 @@
                 android:layout_height="wrap_content">
 
                 <androidx.appcompat.widget.Toolbar
-                    android:id="@+id/toolbar_activity_main"
+                    android:id="@+id/toolbar"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:minHeight="?attr/actionBarSize"
@@ -32,10 +31,9 @@
             </com.google.android.material.appbar.AppBarLayout>
 
             <FrameLayout
-                android:id="@+id/container_activity_main"
+                android:id="@+id/container"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
-                android:background="?colorPrimary"
                 app:layout_behavior="@string/appbar_scrolling_view_behavior" />
 
         </androidx.coordinatorlayout.widget.CoordinatorLayout>

@@ -30,7 +30,7 @@ import n7.ad2.databinding.DialogOpenStreamBinding;
 import n7.ad2.databinding.FragmentStreamsBinding;
 import n7.ad2.streams.retrofit.Streams;
 
-import static n7.ad2.main.MainActivity.LOG_ON_RECEIVE;
+import static n7.ad2.ui.MainActivity.LOG_ON_RECEIVE;
 import static n7.ad2.streams.StreamsFullActivity.CHANNEL_NAME;
 import static n7.ad2.streams.StreamsFullActivity.CHANNEL_TITLE;
 
@@ -72,13 +72,13 @@ public class StreamsFragment extends Fragment {
     private void startActivityMultiStreams() {
         if (getActivity() == null) return;
         FragmentManager fragmentManager = getActivity().getSupportFragmentManager();
-        Fragment currentFragment = fragmentManager.findFragmentById(R.id.container_activity_main);
+        Fragment currentFragment = fragmentManager.findFragmentById(R.id.container);
         if (currentFragment!=null && currentFragment.getTag() != null && currentFragment.getTag().equals(TAG_ONE_TWITCH)) {
             FragmentTransaction ft = fragmentManager.beginTransaction();
-            ft.replace(R.id.container_activity_main, new StreamsFragment(), TAG_MULTI_TWITCH).commit();
+            ft.replace(R.id.container, new StreamsFragment(), TAG_MULTI_TWITCH).commit();
         } else {
             FragmentTransaction ft = fragmentManager.beginTransaction();
-            ft.replace(R.id.container_activity_main, new MultiStreamsFragment(), TAG_ONE_TWITCH).commit();
+            ft.replace(R.id.container, new MultiStreamsFragment(), TAG_ONE_TWITCH).commit();
         }
     }
 

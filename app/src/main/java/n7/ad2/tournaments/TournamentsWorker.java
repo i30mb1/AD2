@@ -21,7 +21,7 @@ import n7.ad2.tournaments.db.GamesDao;
 import n7.ad2.tournaments.db.GamesRoomDatabase;
 import n7.ad2.tournaments.db.TournamentGame;
 
-import static n7.ad2.main.MainActivity.LOG_ON_RECEIVE;
+import static n7.ad2.ui.MainActivity.LOG_ON_RECEIVE;
 
 public class TournamentsWorker extends Worker {
 

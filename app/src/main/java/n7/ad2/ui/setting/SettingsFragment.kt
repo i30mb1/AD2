@@ -10,7 +10,7 @@ import androidx.preference.Preference
 import androidx.preference.PreferenceFragmentCompat
 import n7.ad2.BuildConfig
 import n7.ad2.R
-import n7.ad2.main.MainActivity
+import n7.ad2.ui.MainActivity
 
 class SettingsFragment : PreferenceFragmentCompat() {
 
