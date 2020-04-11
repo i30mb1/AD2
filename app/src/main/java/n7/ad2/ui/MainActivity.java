@@ -73,7 +73,6 @@ import n7.ad2.utils.UnscrollableLinearLayoutManager;
 
 import static n7.ad2.main.MainViewModel.LAST_DAY_WHEN_CHECK_UPDATE;
 import static n7.ad2.main.MainViewModel.SHOULD_UPDATE_FROM_MARKET;
-import static n7.ad2.ui.splash.SplashActivityKt.CURRENT_DAY_IN_APP;
 
 public class MainActivity extends BaseActivity {
 
@@ -142,7 +141,7 @@ public class MainActivity extends BaseActivity {
         super.onCreate(savedInstanceState);
         binding = DataBindingUtil.setContentView(this, R.layout.activity_main);
 
-        currentDay = PreferenceManager.getDefaultSharedPreferences(this).getInt(CURRENT_DAY_IN_APP, 0);
+        currentDay = PreferenceManager.getDefaultSharedPreferences(this).getInt(getString(R.string.setting_current_day), 0);
         viewModel = ViewModelProviders.of(this).get(MainViewModel.class);
 
         binding.setViewModel(viewModel);
