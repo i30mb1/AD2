@@ -4,22 +4,24 @@ import android.app.Dialog
 import android.os.Bundle
 import androidx.fragment.app.DialogFragment
 import com.google.android.material.dialog.MaterialAlertDialogBuilder
-import n7.ad2.R
 import n7.ad2.databinding.DialogSettingFragmentThemeBinding
+import n7.ad2.ui.setting.SettingsFragment.Companion.THEME_DARK
+import n7.ad2.ui.setting.SettingsFragment.Companion.THEME_GRAY
+import n7.ad2.ui.setting.SettingsFragment.Companion.THEME_WHITE
 
 class DialogTheme : DialogFragment() {
 
-    override fun onActivityCreated(savedInstanceState: Bundle?) {
-        super.onActivityCreated(savedInstanceState)
-//        dialog?.window?.setWindowAnimations(R.style.MyWindowAnimationTransition)
-    }
-
     override fun onCreateDialog(savedInstanceState: Bundle?): Dialog {
-        val dialogView = DialogSettingFragmentThemeBinding.inflate(layoutInflater)
+        val settingsFragment = parentFragment as SettingsFragment
+
+        val dialogView = DialogSettingFragmentThemeBinding.inflate(layoutInflater).apply {
+            bDark.setOnClickListener { settingsFragment.applyTheme(THEME_DARK) }
+            bGray.setOnClickListener { settingsFragment.applyTheme(THEME_GRAY) }
+            bWhite.setOnClickListener { settingsFragment.applyTheme(THEME_WHITE) }
+        }
 
         val dialogBuilder = MaterialAlertDialogBuilder(context)
                 .setView(dialogView.root)
-
 
         return dialogBuilder.create()
     }

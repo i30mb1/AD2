@@ -5,12 +5,9 @@ import android.net.Uri
 import android.os.Build
 import android.os.Build.VERSION
 import android.os.Bundle
-import android.view.View
-import androidx.appcompat.app.AlertDialog
 import androidx.core.app.TaskStackBuilder
 import androidx.preference.Preference
 import androidx.preference.PreferenceFragmentCompat
-import com.google.android.material.dialog.MaterialAlertDialogBuilder
 import n7.ad2.BuildConfig
 import n7.ad2.R
 import n7.ad2.main.MainActivity
@@ -99,36 +96,20 @@ class SettingsFragment : PreferenceFragmentCompat() {
     private fun setupTheme() {
         findPreference<Preference>(getString(R.string.setting_theme_key))?.apply {
             onPreferenceClickListener = Preference.OnPreferenceClickListener {
-                createDialogTheme(it)
+                createDialogTheme()
                 true
             }
         }
     }
 
-    private fun createDialogTheme(preference: Preference) {
+    fun applyTheme(key: String) {
+        preferenceManager.sharedPreferences.edit().putString(getString(R.string.setting_theme_key), key).apply()
+        recreateActivity()
+    }
+
+    private fun createDialogTheme() {
         val dialogTheme = DialogTheme()
         dialogTheme.show(childFragmentManager, null)
-
-//        val builder = AlertDialog.Builder(requireContext())
-//        builder.setView(R.layout.dialog_setting_fragment_theme)
-//        builder.create().apply {
-//            window?.attributes?.windowAnimations = R.style.DialogTheme
-
-//            findViewById<View>(R.id.b_dialog_theme_dark)?.setOnClickListener {
-//                preference.sharedPreferences.edit().putString(preference.key, THEME_DARK).apply()
-//                recreateActivity()
-//            }
-//            findViewById<View>(R.id.b_dialog_theme_gray)?.setOnClickListener {
-//                preference.sharedPreferences.edit().putString(preference.key, THEME_GRAY).apply()
-//                recreateActivity()
-//            }
-//            findViewById<View>(R.id.b_dialog_theme_white)?.setOnClickListener {
-//                preference.sharedPreferences.edit().putString(preference.key, THEME_WHITE).apply()
-//                recreateActivity()
-//            }
-
-//            show()
-//        }
     }
 
     private fun recreateActivity() {
