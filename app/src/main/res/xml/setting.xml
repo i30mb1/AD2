@@ -52,6 +52,5 @@
     </PreferenceCategory>
     <Preference
         app:isPreferenceVisible="false"
-        app:iconSpaceReserved="false"
         app:key="@string/setting_current_day"/>
 </PreferenceScreen>

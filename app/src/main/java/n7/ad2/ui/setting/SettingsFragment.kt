@@ -49,9 +49,10 @@ class SettingsFragment : PreferenceFragmentCompat() {
     private fun setupContact() {
         findPreference<Preference>(getString(R.string.setting_contact_key))?.apply {
             onPreferenceClickListener = Preference.OnPreferenceClickListener {
+                val date = sharedPreferences.getInt(getString(R.string.setting_current_day), 0)
                 StringBuilder().apply {
                     append("\n\n\n--------------------------\n")
-                    append("App Version: ").append(getString(R.string.setting_about_summary, BuildConfig.VERSION_NAME)).append("\n")
+                    append("App Version: ").append(getString(R.string.setting_about_summary, BuildConfig.VERSION_NAME, date)).append("\n")
                     append("Device Brand: ").append(Build.BRAND).append("\n")
                     append("Device Model: ").append(Build.MODEL).append("\n")
                     append("OS: Android ").append(VERSION.RELEASE).append("(").append(VERSION.CODENAME).append(") \n")
@@ -67,7 +68,9 @@ class SettingsFragment : PreferenceFragmentCompat() {
 
     private fun setupAbout() {
         findPreference<Preference>(getString(R.string.setting_about_key))?.apply {
-            summary = getString(R.string.setting_about_summary, BuildConfig.VERSION_NAME)
+            val date = sharedPreferences.getInt(getString(R.string.setting_current_day), 0)
+
+            summary = getString(R.string.setting_about_summary, BuildConfig.VERSION_NAME, date)
             onPreferenceClickListener = Preference.OnPreferenceClickListener {
                 startActivity(Intent(activity, LicensesActivity::class.java))
                 true
