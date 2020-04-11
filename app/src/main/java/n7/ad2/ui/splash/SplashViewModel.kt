@@ -11,43 +11,24 @@ import kotlinx.coroutines.CoroutineDispatcher
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.launch
 import n7.ad2.R
+import n7.ad2.ui.splash.domain.usecase.GetRandomEmoteUseCase
+import n7.ad2.ui.splash.domain.usecase.SaveCurrentDateInSharedPrefUseCase
 import java.text.SimpleDateFormat
 import java.util.*
 import javax.inject.Inject
 
 class SplashViewModel @Inject constructor(
         application: Application,
-        private val sharedPreferences: SharedPreferences,
-        private val ioDispatcher: CoroutineDispatcher = Dispatchers.IO
+        private val saveCurrentDateInSharedPrefUseCase: SaveCurrentDateInSharedPrefUseCase,
+        private val getRandomEmoteUseCase: GetRandomEmoteUseCase
 ) : AndroidViewModel(application) {
 
     val textEmote: LiveData<String> = liveData {
-        emit(getEmote())
+        emit(getRandomEmoteUseCase())
     }
 
-    fun saveCurrentDateInSharedPref() = viewModelScope.launch(ioDispatcher) {
-        val currentDayInString = SimpleDateFormat("DDD", Locale.US).format(Calendar.getInstance().time)
-        sharedPreferences.edit(true) {
-            putInt(getApplication<Application>().getString(R.string.setting_current_day), currentDayInString.toInt())
-        }
-    }
-
-    private fun getEmote(): String {
-        val emotes = arrayOf(
-                "('.')",
-                "('x')",
-                "(>_<)",
-                "(>.<)",
-                "(;-;)",
-                "\\(o_o)/",
-                "(O_o)",
-                "(o_0)",
-                "(≥o≤)",
-                "(≥o≤)",
-                "(·.·)",
-                "(·_·)"
-        )
-        return emotes.random()
+    fun saveCurrentDateInSharedPref() = viewModelScope.launch {
+        saveCurrentDateInSharedPrefUseCase()
     }
 
 }
