@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <style name="Caption" parent="TextAppearance.MaterialComponents.Caption">
+        <item name="android:textColor">?myTextColorSecondary</item>
+    </style>
+
+    <style name="MyTextAppearanceButton" parent="TextAppearance.MaterialComponents.Button">
+
+    </style>
+
+    <style name="Headline4" parent="TextAppearance.MaterialComponents.Headline4">
+        <item name="android:textColor">?myTextColorPrimary</item>
+    </style>
+</resources>

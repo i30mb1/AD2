@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <!--Grey тема-->
+    <style name="AD2Theme" parent="Theme.MaterialComponents.Light.NoActionBar">
+        <item name="colorPrimaryDark">@color/gray_700</item>
+        <item name="colorPrimary">@color/red_500</item>
+        <item name="colorSecondary">@color/red_500</item>
+        <item name="android:colorBackground">@color/gray_500</item>
+        <item name="myBackgroundAD2">@drawable/background_hd</item>
+        <item name="colorSurface">@color/gray_700</item>
+        <item name="colorOnSurface">@color/red_500</item>
+
+        <item name="myTextColorPrimary">@android:color/white</item>
+        <item name="myTextColorSecondary">@android:color/white</item>
+        <!--цвет главного текста -->
+        <item name="android:textColorPrimary">@android:color/white</item>
+        <!--цвет под заголовков-->
+        <item name="android:textColorSecondary">@color/gray_100</item>
+        <!--подсказка для строки поиска-->
+        <item name="queryHint">@string/toolbar_search_hint</item>
+        <!--цвет меню текста-->
+        <item name="android:actionMenuTextColor">@color/gray_100</item>
+
+        <item name="android:windowAnimationStyle">@style/MyWindowAnimationTransition</item>
+
+        <item name="textAppearanceCaption">@style/Caption</item>
+        <item name="textAppearanceButton">@style/MyTextAppearanceButton</item>
+
+        <item name="shapeAppearanceMediumComponent">@style/MyMediumComponent</item>
+        <item name="materialAlertDialogTheme">@style/MyMaterialAlertDialogTheme</item>
+    </style>
+
+    <!--Black тема-->
+    <style name="AD2Theme.Black" >
+        <!--фон панели уведомления-->
+        <item name="colorPrimaryDark">@android:color/black</item>
+        <!--фон панели приложения-->
+        <item name="colorPrimary">@color/purple</item>
+        <item name="colorSecondary">@color/purple</item>
+        <item name="colorSurface">@android:color/black</item>
+        <item name="colorOnSurface">@color/purple</item>
+        <!--бэкграунд приложения-->
+        <item name="android:windowBackground">@color/black_700</item>
+        <item name="myBackgroundAD2">@drawable/background_hd_black</item>
+        <!--цвет главного текста-->
+        <item name="android:textColorPrimary">@android:color/white</item>
+        <!--цвет под заголовков-->
+        <item name="android:textColorSecondary">@color/gray_800</item>
+    </style>
+
+    <!--White тема-->
+    <style name="AD2Theme.White" >
+        <!--фон панели уведомления-->
+        <item name="colorPrimaryDark">@android:color/white</item>
+        <!--фон панели приложения-->
+        <item name="colorPrimary">@color/blue</item>
+        <item name="colorSecondary">@color/blue</item>
+        <item name="colorSurface">@android:color/white</item>
+        <item name="colorOnSurface">@color/blue</item>
+        <!--бэкграунд приложения-->
+        <item name="android:windowBackground">@android:color/white</item>
+        <item name="myBackgroundAD2">@drawable/background_hd_white</item>
+        <item name="myTextColorPrimary">@android:color/black</item>
+        <item name="myTextColorSecondary">@android:color/black</item>
+        <!--цвет главного текста-->
+        <item name="android:textColorPrimary">@color/black_800</item>
+        <!--цвет под заголовков-->
+        <item name="android:textColorSecondary">@color/gray_900</item>
+        <!--цвет неактивных элементов-->
+        <item name="android:colorControlNormal">@color/gray_900</item>
+        <!--тёмные иконки для светкой панели уведомления-->
+        <item name="android:windowLightStatusBar">true</item>
+
+        <item name="android:listDivider">@color/gray_100</item>
+        <item name="android:divider">@color/gray_100</item>
+        <item name="android:dividerHeight">1dp</item>
+        <item name="android:showDividers">middle</item>
+    </style>
+
+    <style name="SplashTheme">
+        <item name="android:windowTranslucentStatus">true</item>
+        <item name="android:windowTranslucentNavigation">true</item>
+        <item name="android:windowBackground">@android:color/transparent</item>
+        <item name="textAppearanceHeadline4">@style/Headline4</item>
+        <item name="android:windowShowWallpaper">true</item>
+    </style>
+
+    <style name="SplashTheme.Dark" parent="AD2Theme.Black">
+        <item name="android:windowTranslucentStatus">true</item>
+        <item name="android:windowTranslucentNavigation">true</item>
+        <item name="android:windowBackground">@android:color/transparent</item>
+        <item name="textAppearanceHeadline4">@style/Headline4</item>
+        <item name="android:windowShowWallpaper">true</item>
+    </style>
+
+    <style name="SplashTheme.White" parent="AD2Theme.White">
+        <item name="android:windowTranslucentStatus">true</item>
+        <item name="android:windowTranslucentNavigation">true</item>
+        <item name="android:windowBackground">@android:color/transparent</item>
+        <item name="android:windowShowWallpaper">true</item>
+        <item name="textAppearanceHeadline4">@style/Headline4</item>
+    </style>
+
+</resources>
