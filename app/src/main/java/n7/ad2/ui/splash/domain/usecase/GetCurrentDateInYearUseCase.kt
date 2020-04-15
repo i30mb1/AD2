@@ -6,7 +6,7 @@ import java.text.SimpleDateFormat
 import java.util.*
 import javax.inject.Inject
 
-class GetCurrentDateUseCase @Inject constructor(
+class GetCurrentDateInYearUseCase @Inject constructor(
         private val ioDispatcher: CoroutineDispatcher,
         private val calendar: Calendar
 ) {

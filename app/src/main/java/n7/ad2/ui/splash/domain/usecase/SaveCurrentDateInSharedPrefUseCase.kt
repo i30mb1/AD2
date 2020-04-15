@@ -12,7 +12,7 @@ class SaveCurrentDateInSharedPrefUseCase @Inject constructor(
         private val ioDispatcher: CoroutineDispatcher,
         private val sharedPreferences: SharedPreferences,
         private val application: Application,
-        private val getCurrentDateUseCase: GetCurrentDateUseCase
+        private val getCurrentDateUseCase: GetCurrentDateInYearUseCase
 ) {
 
     suspend operator fun invoke() = withContext(ioDispatcher) {
