@@ -39,6 +39,7 @@ public class DateAndStrings {
         long remainSec = remain / 1000;
         System.out.println("remain : " + String.format(Locale.US, "%02d:%02d:%02d", remainSec / 3600, remainSec / 360, remainSec % 60));
 
+        // read it https://medium.com/better-programming/formatting-strings-with-java-2281d40accce
         // %[argument_index$][flag][width][.precision]conversion
         // % - начало инструкций
         // [argument_index$] - целоде десятичное число указывающее на позицию в списке аргументов
