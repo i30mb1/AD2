@@ -8,6 +8,7 @@ import dagger.Provides
 import dagger.Reusable
 import kotlinx.coroutines.CoroutineDispatcher
 import kotlinx.coroutines.Dispatchers
+import java.util.*
 
 @Module
 object ApplicationModule {
@@ -21,5 +22,9 @@ object ApplicationModule {
     fun provideSharedPreferences(application: Application): SharedPreferences {
         return PreferenceManager.getDefaultSharedPreferences(application)
     }
+
+    @Reusable
+    @Provides
+    fun provideCalendar(): Calendar = Calendar.getInstance()
 
 }
