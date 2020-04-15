@@ -7,11 +7,12 @@ import java.util.*
 import javax.inject.Inject
 
 class GetCurrentDateUseCase @Inject constructor(
-        private val ioDispatcher: CoroutineDispatcher
+        private val ioDispatcher: CoroutineDispatcher,
+        private val calendar: Calendar
 ) {
 
-    suspend operator fun invoke() = withContext(ioDispatcher) {
-        val currentDayInString = SimpleDateFormat("DDD", Locale.US).format(Calendar.getInstance().time)
+    suspend operator fun invoke(date: Date = calendar.time) = withContext(ioDispatcher) {
+        val currentDayInString = SimpleDateFormat("DDD", Locale.getDefault()).format(date)
         currentDayInString.toInt()
     }
 
