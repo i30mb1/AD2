@@ -31,8 +31,8 @@ object Lib {
     const val kotlinStdlib     = "org.jetbrains.kotlin:kotlin-stdlib-jdk7:1.3.71"
 
     // --- Preference ---
-    const val preference       = "androidx.preference:preference:1.1.0"
-    const val preferenceKtx    = "androidx.preference:preference-ktx:1.1.0"
+    const val preference       = "androidx.preference:preference:1.1.1"
+    const val preferenceKtx    = "androidx.preference:preference-ktx:1.1.1"
 
     // --- Room ---
     const val room           = "androidx.room:room-runtime:2.2.4"
@@ -46,7 +46,7 @@ object Lib {
     const val coroutinesLivedata  = "androidx.lifecycle:lifecycle-livedata-ktx:2.2.0" // liveData (LiveData + coroutines)
     const val coroutinesViewmodel = "androidx.lifecycle:lifecycle-viewmodel-ktx:2.2.0" // viewModelScope + savedStateHandle
     const val lifecycleAnnotation = "androidx.lifecycle:lifecycle-common-java8:2.2.0" // that's only needed if you have lifecycle-related annotations in your code, specifically @OnLifecycleEvent
-    const val fragmentKtx         = "androidx.fragment:fragment-ktx:1.2.3" // easy fragment transaction + by viewModels()
+    const val fragmentKtx         = "androidx.fragment:fragment-ktx:1.2.4" // easy fragment transaction + by viewModels()
     const val activityKtx         = "androidx.activity:activity-ktx:1.1.0" // on BackPress support for Fragment
 
     // --- Moshi ---
