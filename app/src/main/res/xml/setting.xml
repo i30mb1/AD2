@@ -11,7 +11,7 @@
         app:iconSpaceReserved="false"
         app:key="@string/setting_category_setting_key"
         app:title="@string/setting_category_setting_title">
-        <Preference
+        <n7.ad2.ui.setting.DialogThemePreference
             app:allowDividerAbove="true"
             app:defaultValue="@string/setting_theme_default"
             app:iconSpaceReserved="false"
@@ -32,13 +32,13 @@
             app:title="@string/setting_news_title" />
     </PreferenceCategory>
     <PreferenceCategory
-        app:iconSpaceReserved="false"
         app:allowDividerAbove="false"
+        app:iconSpaceReserved="false"
         app:key="@string/setting_category_about_key"
         app:title="@string/setting_category_about_title">
         <Preference
-            app:iconSpaceReserved="false"
             app:allowDividerAbove="true"
+            app:iconSpaceReserved="false"
             app:key="@string/setting_about_key"
             app:summary="@string/setting_about_summary"
             app:title="@string/setting_about_title" />
@@ -55,5 +55,5 @@
     </PreferenceCategory>
     <Preference
         app:isPreferenceVisible="false"
-        app:key="@string/setting_current_day"/>
+        app:key="@string/setting_current_day" />
 </PreferenceScreen>

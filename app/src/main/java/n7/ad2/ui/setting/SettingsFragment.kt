@@ -23,7 +23,6 @@ class SettingsFragment : PreferenceFragmentCompat() {
     override fun onCreatePreferences(savedInstanceState: Bundle?, rootKey: String?) {
         setPreferencesFromResource(R.xml.setting, rootKey)
 
-        setupTheme()
         setupLog()
         setupNews()
         setupAbout()
@@ -95,15 +94,6 @@ class SettingsFragment : PreferenceFragmentCompat() {
         }
     }
 
-    private fun setupTheme() {
-        findPreference<Preference>(getString(R.string.setting_theme_key))?.apply {
-            onPreferenceClickListener = Preference.OnPreferenceClickListener {
-                createDialogTheme()
-                true
-            }
-        }
-    }
-
     fun applyTheme(key: String) {
         preferenceManager.sharedPreferences.edit().putString(getString(R.string.setting_theme_key), key).apply()
         recreateActivity()
@@ -112,6 +102,14 @@ class SettingsFragment : PreferenceFragmentCompat() {
     private fun createDialogTheme() {
         val dialogTheme = DialogTheme()
         dialogTheme.show(childFragmentManager, null)
+    }
+
+    override fun onDisplayPreferenceDialog(preference: Preference?) {
+        when (preference) {
+            is DialogThemePreference -> createDialogTheme()
+            else -> super.onDisplayPreferenceDialog(preference)
+        }
+
     }
 
     private fun recreateActivity() {
