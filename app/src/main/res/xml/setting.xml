@@ -12,6 +12,7 @@
         app:key="@string/setting_category_setting_key"
         app:title="@string/setting_category_setting_title">
         <Preference
+            app:allowDividerAbove="true"
             app:defaultValue="@string/setting_theme_default"
             app:iconSpaceReserved="false"
             app:key="@string/setting_theme_key"
@@ -32,10 +33,12 @@
     </PreferenceCategory>
     <PreferenceCategory
         app:iconSpaceReserved="false"
+        app:allowDividerAbove="false"
         app:key="@string/setting_category_about_key"
         app:title="@string/setting_category_about_title">
         <Preference
             app:iconSpaceReserved="false"
+            app:allowDividerAbove="true"
             app:key="@string/setting_about_key"
             app:summary="@string/setting_about_summary"
             app:title="@string/setting_about_title" />
