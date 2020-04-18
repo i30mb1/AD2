@@ -5,7 +5,7 @@ import android.content.Context
 import android.os.Bundle
 import android.util.AttributeSet
 import androidx.fragment.app.DialogFragment
-import androidx.preference.DialogPreference
+import androidx.preference.EditTextPreference
 import com.google.android.material.dialog.MaterialAlertDialogBuilder
 import n7.ad2.databinding.DialogSettingFragmentThemeBinding
 import n7.ad2.ui.setting.SettingsFragment.Companion.THEME_DARK
@@ -31,8 +31,5 @@ class DialogTheme : DialogFragment() {
 
 }
 
-class DialogThemePreference(context: Context, attrs: AttributeSet) : DialogPreference(context, attrs) {
-
-
-}
+class DialogThemePreference(context: Context, attrs: AttributeSet) : EditTextPreference(context, attrs)
 
