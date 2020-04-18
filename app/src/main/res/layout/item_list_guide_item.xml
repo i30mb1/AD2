@@ -33,6 +33,7 @@
             android:layout_marginStart="2dp"
             android:background="@drawable/gradient"
             android:textSize="10sp"
+            android:textColor="@android:color/white"
             android:visibility="gone"
             tools:ignore="SmallSp"
             tools:text="@sample/heroes.json/data/name"

@@ -22,7 +22,7 @@ android {
     }
 
     signingConfigs {
-        create("release") {
+        create("releaseConfig") {
             storeFile = file(gradleLocalProperties(rootDir).getProperty("storeFile"))
             storePassword = gradleLocalProperties(rootDir).getProperty("storePassword")
             keyAlias = gradleLocalProperties(rootDir).getProperty("keyAlias")
@@ -35,9 +35,9 @@ android {
             resValue("string", "PORT_NUMBER", "8081")
         }
         getByName("release") {
-            proguardFiles(getDefaultProguardFile("proguard-android.txt"), "proguard-rules.pro")
-            signingConfig = signingConfigs.getByName("release")
+            signingConfig = signingConfigs.getByName("releaseConfig")
             isMinifyEnabled = true
+            proguardFiles(getDefaultProguardFile("proguard-android.txt"), "proguard-rules.pro")
         }
     }
 

@@ -1,11 +1,11 @@
 object Apps {
-    const val compileSdk    = 28
+    const val compileSdk    = 29
     const val buildToolsSdk = "29.0.2"
     const val applicationId = "n7.ad2"
     const val minSdk        = 23
-    const val targetSdk     = 28
-    const val versionCode   = 1
-    const val versionName   = "1"
+    const val targetSdk     = 29
+    const val versionCode   = 451
+    const val versionName   = "1.0"
 }
 
 object Lib {
