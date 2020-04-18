@@ -8,6 +8,7 @@ import n7.ad2.di.ApplicationComponent
 import n7.ad2.di.DaggerApplicationComponent
 import n7.ad2.di.DaggerComponentProvider
 
+// “Code never lies, comments sometimes do” — Ron Jeffries
 class MyApplication : Application(), DaggerComponentProvider {
 
     override val component: ApplicationComponent by lazy {
