@@ -72,10 +72,10 @@
         <!--тёмные иконки для светкой панели уведомления-->
         <item name="android:windowLightStatusBar">true</item>
 
-        <item name="android:listDivider">@color/gray_100</item>
-        <item name="android:divider">@color/gray_100</item>
-        <item name="android:dividerHeight">1dp</item>
-        <item name="android:showDividers">middle</item>
+<!--        <item name="android:listDivider">@color/gray_100</item>-->
+<!--        <item name="android:divider">@color/gray_100</item>-->
+<!--        <item name="android:dividerHeight">1dp</item>-->
+<!--        <item name="android:showDividers">middle</item>-->
     </style>
 
     <style name="SplashTheme">
