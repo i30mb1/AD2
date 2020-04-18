@@ -48,11 +48,11 @@ public class StreamsFragment extends Fragment {
 
     @Override
     public void onCreateOptionsMenu(Menu menu, MenuInflater inflater) {
-        if (subscription) {
-            inflater.inflate(R.menu.menu_fragment_streams, menu);
-        } else {
-            inflater.inflate(R.menu.menu_fragment_streams_simple, menu);
-        }
+//        if (subscription) {
+//            inflater.inflate(R.menu.menu_fragment_streams, menu);
+//        } else {
+//            inflater.inflate(R.menu.menu_fragment_streams_simple, menu);
+//        }
         super.onCreateOptionsMenu(menu, inflater);
     }
 
@@ -155,7 +155,7 @@ public class StreamsFragment extends Fragment {
         final StreamsPagedListAdapter adapter = new StreamsPagedListAdapter();
         binding.rvFragmentStreams.setAdapter(adapter);
 
-        viewModel.getStreams().observe(this, new Observer<PagedList<Streams>>() {
+        viewModel.getStreams().observe(getViewLifecycleOwner(), new Observer<PagedList<Streams>>() {
             @Override
             public void onChanged(@Nullable PagedList<Streams> streams) {
                 adapter.submitList(streams);

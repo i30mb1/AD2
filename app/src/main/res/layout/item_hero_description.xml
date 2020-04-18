@@ -22,7 +22,7 @@
                 android:id="@+id/tv_item_hero_description"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
-                android:background="?colorPrimaryDark"
+                android:background="?colorPrimary"
                 android:padding="4dp"
                 android:textColor="?android:textColorSecondary"
                 android:textSize="14sp"
