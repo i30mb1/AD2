@@ -13,15 +13,13 @@
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:background="?colorPrimary"
         android:orientation="vertical"
         app:layout_behavior="@string/appbar_scrolling_view_behavior">
 
-        <androidx.cardview.widget.CardView
+        <com.google.android.material.card.MaterialCardView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:foreground="?android:attr/selectableItemBackground"
-            app:cardBackgroundColor="?colorPrimaryDark"
             app:cardCornerRadius="0dp"
             app:cardElevation="4dp"
             app:cardUseCompatPadding="true">
@@ -90,13 +88,12 @@
                     app:layout_constraintTop_toTopOf="parent" />
 
             </androidx.constraintlayout.widget.ConstraintLayout>
-        </androidx.cardview.widget.CardView>
+        </com.google.android.material.card.MaterialCardView>
 
-        <androidx.cardview.widget.CardView
+        <com.google.android.material.card.MaterialCardView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:foreground="?android:attr/selectableItemBackground"
-            app:cardBackgroundColor="?colorPrimaryDark"
             app:cardCornerRadius="0dp"
             app:cardElevation="4dp"
             app:cardUseCompatPadding="true">
@@ -139,11 +136,11 @@
                     app:layout_constraintTop_toBottomOf="@+id/tv_activity_game2p1_title" />
 
                 <Button
-                    android:enabled="@{activity.subscription?true:false}"
                     android:id="@+id/b_fragment_game_G2P2"
                     style="@style/Widget.MaterialComponents.Button.UnelevatedButton"
                     android:layout_width="wrap_content"
                     android:layout_height="40dp"
+                    android:enabled="@{activity.subscription?true:false}"
                     android:onClick="@{()->activity.startG2P2()}"
                     android:text="@string/fragment_game_2_players"
                     android:textSize="14sp"
@@ -164,13 +161,12 @@
                     app:layout_constraintTop_toTopOf="parent" />
 
             </androidx.constraintlayout.widget.ConstraintLayout>
-        </androidx.cardview.widget.CardView>
+        </com.google.android.material.card.MaterialCardView>
 
-        <androidx.cardview.widget.CardView
+        <com.google.android.material.card.MaterialCardView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:foreground="?android:attr/selectableItemBackground"
-            app:cardBackgroundColor="?colorPrimaryDark"
             app:cardCornerRadius="0dp"
             app:cardElevation="4dp"
             app:cardUseCompatPadding="true">
@@ -215,7 +211,6 @@
                     app:layout_constraintTop_toBottomOf="@+id/tv_activity_game3p1_title" />
 
 
-
                 <View
                     android:id="@+id/red_line_fragment_game_G3"
                     android:layout_width="2dp"
@@ -226,7 +221,7 @@
                     app:layout_constraintTop_toTopOf="parent" />
 
             </androidx.constraintlayout.widget.ConstraintLayout>
-        </androidx.cardview.widget.CardView>
+        </com.google.android.material.card.MaterialCardView>
 
 
     </LinearLayout>

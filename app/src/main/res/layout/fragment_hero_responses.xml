@@ -7,7 +7,6 @@
     </data>
 
         <androidx.recyclerview.widget.RecyclerView
-            android:background="?colorPrimary"
             android:id="@+id/rv_fragment_hero_responses"
             android:layout_width="match_parent"
             android:layout_height="match_parent"

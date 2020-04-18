@@ -26,6 +26,7 @@
             android:lines="1"
             android:textColor="?android:textColorPrimary"
             android:textStyle="bold"
+            android:textAppearance="@style/TextAppearance.MaterialComponents.Caption"
             android:text='@{model.title ?? "..."}'
             tools:text="И даже если я разочарую тебя, я хочу, чтобы ты запомнил меня" />
     </LinearLayout>

@@ -472,7 +472,7 @@ public class StreamsFullActivity extends BaseActivity implements SurfaceHolder.C
 
         setSupportActionBar(toolbar);
         setTitle(getIntent().getStringExtra(CHANNEL_NAME));
-        toolbar.setSubtitle(getIntent().getStringExtra(CHANNEL_TITLE));
+//        toolbar.setSubtitle(getIntent().getStringExtra(CHANNEL_TITLE));
         iv_toolbar.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {

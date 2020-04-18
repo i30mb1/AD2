@@ -7,11 +7,10 @@
 
     </data>
 
-    <androidx.cardview.widget.CardView
+    <com.google.android.material.card.MaterialCardView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_margin="4dp"
-        app:cardBackgroundColor="?colorPrimary"
         app:cardCornerRadius="0dp"
         app:cardElevation="2dp"
         app:cardUseCompatPadding="true">
@@ -31,7 +30,7 @@
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
-                    android:background="?colorPrimaryDark"
+                    android:background="?android:attr/colorBackground"
                     android:padding="4dp"
                     android:textColor="?android:textColorSecondary"
                     android:textSize="14sp"
@@ -176,5 +175,5 @@
             </LinearLayout>
         </LinearLayout>
 
-    </androidx.cardview.widget.CardView>
+    </com.google.android.material.card.MaterialCardView>
 </layout>

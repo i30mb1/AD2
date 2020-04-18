@@ -39,6 +39,7 @@ class SplashActivity : FragmentActivity() {
         binding = DataBindingUtil.setContentView(this, R.layout.activity_splash)
         PreferenceManager.setDefaultValues(this, R.xml.setting, false)
         viewModel.saveCurrentDateInSharedPref()
+        viewModel.loadNews()
 
         if (savedInstanceState == null) { fadeIn = true }
 

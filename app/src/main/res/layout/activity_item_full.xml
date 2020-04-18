@@ -4,7 +4,6 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="?colorPrimary"
     tools:context="n7.ad2.items.full.ItemFullActivity">
 
     <com.google.android.material.appbar.AppBarLayout

@@ -10,14 +10,13 @@
             type="n7.ad2.streams.retrofit.Streams" />
     </data>
 
-    <androidx.cardview.widget.CardView
+    <com.google.android.material.card.MaterialCardView
         android:onClick="@{(view)-> stream.startStreamFull(view)}"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:clickable="true"
         android:focusable="true"
         android:foreground="?android:attr/selectableItemBackground"
-        app:cardBackgroundColor="?colorPrimaryDark"
         app:cardCornerRadius="0dp"
         app:cardElevation="2dp"
         app:cardUseCompatPadding="true">
@@ -114,5 +113,5 @@
                 app:layout_constraintTop_toTopOf="parent" />
         </androidx.constraintlayout.widget.ConstraintLayout>
 
-    </androidx.cardview.widget.CardView>
+    </com.google.android.material.card.MaterialCardView>
 </layout>

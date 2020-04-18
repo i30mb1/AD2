@@ -9,8 +9,7 @@
 
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:background="?colorPrimary">
+        android:layout_height="wrap_content">
 
         <View
             android:id="@+id/red_line_dialog_open_stream"

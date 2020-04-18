@@ -10,12 +10,11 @@
             type="n7.ad2.tournaments.db.TournamentGame" />
     </data>
 
-    <androidx.cardview.widget.CardView
+    <com.google.android.material.card.MaterialCardView
         android:id="@+id/root_item_list_tournament_game"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:foreground="?android:attr/selectableItemBackground"
-        app:cardBackgroundColor="?colorPrimaryDark"
         app:cardCornerRadius="0dp"
         app:cardElevation="2dp"
         app:cardUseCompatPadding="true">
@@ -67,8 +66,7 @@
                 android:layout_marginStart="8dp"
                 android:maxLines="1"
                 android:text="@{game.team1Name}"
-                android:textColor="?android:textColorSecondary"
-                android:textSize="12sp"
+                android:textAppearance="@style/TextAppearance.MaterialComponents.Caption"
                 android:transitionName="tv1"
                 app:layout_constraintStart_toEndOf="@+id/iv_item_list_tournament_game_team1"
                 app:layout_constraintTop_toTopOf="@+id/iv_item_list_tournament_game_team1"
@@ -82,8 +80,7 @@
                 android:layout_marginEnd="8dp"
                 android:maxLines="1"
                 android:text="@{game.team2Name}"
-                android:textColor="?android:textColorSecondary"
-                android:textSize="12sp"
+                android:textAppearance="@style/TextAppearance.MaterialComponents.Caption"
                 android:transitionName="tv2"
                 app:layout_constraintBottom_toBottomOf="@+id/iv_item_list_tournament_game_team2"
                 app:layout_constraintEnd_toStartOf="@+id/iv_item_list_tournament_game_team2"
@@ -140,5 +137,5 @@
                 app:layout_constraintTop_toTopOf="parent" />
 
         </androidx.constraintlayout.widget.ConstraintLayout>
-    </androidx.cardview.widget.CardView>
+    </com.google.android.material.card.MaterialCardView>
 </layout>

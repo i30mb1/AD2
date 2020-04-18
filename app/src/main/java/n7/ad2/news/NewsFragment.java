@@ -61,7 +61,7 @@ public class NewsFragment extends Fragment {
         final NewsPagedListAdapter adapter = new NewsPagedListAdapter(withImage);
         binding.rvFragmentNews.setAdapter(adapter);
 
-        viewModel.getNews().observe(this, new Observer<PagedList<NewsModel>>() {
+        viewModel.getNews().observe(getViewLifecycleOwner(), new Observer<PagedList<NewsModel>>() {
             @Override
             public void onChanged(@Nullable PagedList<NewsModel> newsModels) {
                 adapter.submitList(newsModels);

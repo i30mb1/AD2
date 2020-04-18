@@ -5,11 +5,6 @@
 
     </data>
 
-    <FrameLayout
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:background="?colorPrimary">
-
         <androidx.recyclerview.widget.RecyclerView
             android:id="@+id/rv_fragment_heroes"
             android:layout_width="match_parent"
@@ -18,5 +13,4 @@
             tools:layoutManager="GridLayoutManager"
             tools:spanCount="3"
             tools:listitem="@layout/item_list_hero" />
-    </FrameLayout>
 </layout>

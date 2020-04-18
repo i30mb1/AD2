@@ -174,7 +174,7 @@ public class MainActivity extends BaseActivity {
         viewModel.showDialogUpdate.observe(this, new Observer<Void>() {
             @Override
             public void onChanged(@Nullable Void aVoid) {
-                showDialogUpdate();
+//                showDialogUpdate();
             }
         });
     }
@@ -401,7 +401,7 @@ public class MainActivity extends BaseActivity {
 
     private void incCountEnter() {
         timeCounter++;
-        if (timeCounter > COUNTER_DIALOG_RATE) showDialogRate();
+//        if (timeCounter > COUNTER_DIALOG_RATE) showDialogRate();
 //        if (timeCounter > COUNTER_DIALOG_DONATE) showPreDialogDonate();
 //        if (timeCounter % ACTION_BEFORE_SHOW_ADVERTISEMENT == 0) ShowInterstitialAd();
     }
