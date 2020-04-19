@@ -19,13 +19,15 @@ import javax.imageio.ImageIO
 
 // Builder Pattern https://medium.com/mindorks/builder-pattern-vs-kotlin-dsl-c3ebaca6bc3b
 class ParseHeroes private constructor(
-        private val createHeroesFiles: Boolean,
+        private val createHeroesFile: Boolean,
+        private val loadHeros: Boolean,
         private val loadHeroImage: Boolean,
         private val loadHeroSpellImage: Boolean
 ) : CoroutineScope by (CoroutineScope(Dispatchers.IO)) {
 
     private constructor(builder: Builder) : this(
-            builder.createHeroesFiles,
+            builder.createHeroesFile,
+            builder.loadHeros,
             builder.loadHeroFullImage,
             builder.loadHeroSpellImage
     )
@@ -34,7 +36,8 @@ class ParseHeroes private constructor(
         inline fun parser(block: Builder.() -> Unit) = Builder().apply(block).build()
 
         class Builder {
-            var createHeroesFiles: Boolean = false
+            var createHeroesFile: Boolean = false
+            var loadHeros: Boolean = false
             var loadHeroFullImage: Boolean = false
             var loadHeroSpellImage: Boolean = false
 
@@ -43,7 +46,8 @@ class ParseHeroes private constructor(
     }
 
     suspend fun start() {
-        loadHeroesNameInFile().join()
+        if (createHeroesFile) loadHeroesFile().join()
+        if (loadHeros) loadHeroes().join()
     }
 
     private val assetsFilePath = System.getProperty("user.dir") + "\\app\\src\\main\\assets"
@@ -65,40 +69,59 @@ class ParseHeroes private constructor(
         return Jsoup.connect(url).get()
     }
 
-    private fun loadHeroesNameInFile(withZh: Boolean = false) = launch {
+    private fun loadHeroes() = launch {
+        val directoryForFile = "heroes2/"
         val heroesEngUrl = "https://dota2.gamepedia.com/Heroes"
-        val heroesZhUrl = "https://dota2-zh.gamepedia.com/Heroes"
+//        val heroesZhUrl = "https://dota2-zh.gamepedia.com/Heroes"
+
+        val rootEng = connectTo(heroesEngUrl)
+//        val rootZh = connectTo(heroesZhUrl)
+
+        val heroesEng = getHeroes(rootEng)
+//        val heroesZh = getHeroes(rootZh)
+
+        heroesEng.forEachIndexed { index, _ ->
+            val heroName = getHeroName(heroesEng[index])
+            val heroHrefEng = getHeroHref(heroesEng[index])
+
+            loadHero(heroHrefEng, directoryForFile + heroName)
+        }
+    }
+
+    private fun loadHeroesFile() = launch {
+        val heroesEngUrl = "https://dota2.gamepedia.com/Heroes"
+//        val heroesZhUrl = "https://dota2-zh.gamepedia.com/Heroes"
         val fileName = "heroesNew.json"
 
         val rootEng = connectTo(heroesEngUrl)
-        val rootZh = connectTo(heroesZhUrl)
+//        val rootZh = connectTo(heroesZhUrl)
 
         JSONObject().apply {
             JSONArray().apply {
 
                 val heroesEng = getHeroes(rootEng)
-                val heroesZh = getHeroes(rootZh)
+//                val heroesZh = getHeroes(rootZh)
 
                 heroesEng.forEachIndexed { index, _ ->
                     val heroObject = JSONObject().apply {
                         val heroName = getHeroName(heroesEng[index])
-                        val heroHrefEng = getHeroHref(heroesEng[index])
+//                        val heroHrefEng = getHeroHref(heroesEng[index])
 
                         put("nameEng", heroName)
-                        put("hrefEng", heroHrefEng)
-                        if (withZh) put("nameZh", getHeroName(heroesZh[index]))
-                        if (withZh) put("hrefZh", getHeroHref(heroesZh[index]))
+//                        put("hrefEng", heroHrefEng)
+//                        if (withZh) put("nameZh", getHeroName(heroesZh[index]))
+//                        if (withZh) put("hrefZh", getHeroHref(heroesZh[index]))
                         val directory = "heroes2" + File.separator + heroName
                         put("assetsPath", directory)
                         createHeroFolderInAssets(directory)
-                        loadHero(heroHrefEng, directory)
                     }
                     add(heroObject)
                 }
                 put("heroes", this)
             }
-            if (createHeroesFiles) File(assetsFilePath + File.separator + fileName).writeText(toJSONString())
+            File(assetsFilePath + File.separator + fileName).writeText(toJSONString())
         }
+        println("file $fileName saved")
     }
 
     private fun loadHero(heroPath: String, directory: String) {
@@ -329,7 +352,8 @@ class ParseHeroes private constructor(
 
 fun main() = runBlocking {
     parser {
-        createHeroesFiles = true
+        createHeroesFile = true
+        loadHeros = false
         loadHeroFullImage = false
         loadHeroSpellImage = true
     }.start()
