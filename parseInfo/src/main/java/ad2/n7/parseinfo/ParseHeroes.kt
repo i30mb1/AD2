@@ -21,7 +21,7 @@ import javax.imageio.ImageIO
 class ParseHeroes private constructor(
         private val createHeroesFile: Boolean,
         private val loadHeros: Boolean,
-        private val loadHeroImage: Boolean,
+        private val loadHeroFullImage: Boolean,
         private val loadHeroSpellImage: Boolean
 ) : CoroutineScope by (CoroutineScope(Dispatchers.IO)) {
 
@@ -90,6 +90,7 @@ class ParseHeroes private constructor(
 
     private fun loadHeroesFile() = launch {
         val heroesEngUrl = "https://dota2.gamepedia.com/Heroes"
+        var heroMainAttr = "Strength"
 //        val heroesZhUrl = "https://dota2-zh.gamepedia.com/Heroes"
         val fileName = "heroesNew.json"
 
@@ -108,6 +109,9 @@ class ParseHeroes private constructor(
 //                        val heroHrefEng = getHeroHref(heroesEng[index])
 
                         put("nameEng", heroName)
+                        if(heroName=="Anti-Mage") heroMainAttr = "Agility"
+                        if(heroName=="Ancient Apparition") heroMainAttr = "Intelligence"
+                        put("mainAttr", heroMainAttr)
 //                        put("hrefEng", heroHrefEng)
 //                        if (withZh) put("nameZh", getHeroName(heroesZh[index]))
 //                        if (withZh) put("hrefZh", getHeroHref(heroesZh[index]))
@@ -130,8 +134,8 @@ class ParseHeroes private constructor(
 
         val root = connectTo(heroUrlEng)
 
-        if (loadHeroImage) loadHeroImageFull(root, directory)
-        if (loadHeroImage) loadHeroImageMinimap(root, directory)
+        if (loadHeroFullImage) loadHeroImageFull(root, directory)
+        if (loadHeroFullImage) loadHeroImageMinimap(root, directory)
         loadHeroInformation(root, directory)
     }
 
@@ -354,7 +358,7 @@ fun main() = runBlocking {
     parser {
         createHeroesFile = true
         loadHeros = false
-        loadHeroFullImage = false
+        loadHeroFullImage = true
         loadHeroSpellImage = true
     }.start()
 }
