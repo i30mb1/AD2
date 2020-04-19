@@ -43,7 +43,7 @@ class ParseHeroes private constructor(
     }
 
     suspend fun start() {
-        if (createHeroesFiles) loadHeroesNameInFile().join()
+        loadHeroesNameInFile().join()
     }
 
     private val assetsFilePath = System.getProperty("user.dir") + "\\app\\src\\main\\assets"
@@ -97,7 +97,7 @@ class ParseHeroes private constructor(
                 }
                 put("heroes", this)
             }
-            File(assetsFilePath + File.separator + fileName).writeText(toJSONString())
+            if (createHeroesFiles) File(assetsFilePath + File.separator + fileName).writeText(toJSONString())
         }
     }
 
