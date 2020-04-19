@@ -6,9 +6,9 @@ import android.os.Build
 import android.os.Build.VERSION
 import android.os.Bundle
 import androidx.core.app.TaskStackBuilder
+import androidx.databinding.library.BuildConfig
 import androidx.preference.Preference
 import androidx.preference.PreferenceFragmentCompat
-import n7.ad2.BuildConfig
 import n7.ad2.R
 import n7.ad2.ui.MainActivity
 
@@ -99,14 +99,15 @@ class SettingsFragment : PreferenceFragmentCompat() {
         recreateActivity()
     }
 
-    private fun createDialogTheme() {
-        val dialogTheme = DialogTheme()
-        dialogTheme.show(childFragmentManager, null)
+    private fun createDialogTheme(key: String) {
+        val dialogTheme = DialogNew().newInstance(key)
+        dialogTheme.setTargetFragment(this, 0)
+        dialogTheme.show(requireFragmentManager(), "null")
     }
 
     override fun onDisplayPreferenceDialog(preference: Preference?) {
         when (preference) {
-            is DialogThemePreference -> createDialogTheme()
+            is DialogThemePreference -> createDialogTheme(preference.key)
             else -> super.onDisplayPreferenceDialog(preference)
         }
 
