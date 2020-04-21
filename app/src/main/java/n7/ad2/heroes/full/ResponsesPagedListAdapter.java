@@ -23,6 +23,7 @@ import n7.ad2.databinding.ItemResponseBinding;
 import n7.ad2.databinding.ItemResponseHeaderBinding;
 import n7.ad2.utils.StickyHeaderDecorator;
 
+// https://youtu.be/xF1x-Pm6IPw
 public class ResponsesPagedListAdapter extends PagedListAdapter<Response, RecyclerView.ViewHolder> implements StickyHeaderDecorator.StickyHeaderInterface {
 
     private static final DiffUtil.ItemCallback<Response> DIFF_CALLBACK = new DiffUtil.ItemCallback<Response>() {
