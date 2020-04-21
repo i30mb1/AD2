@@ -1,3 +1,6 @@
+import org.gradle.api.artifacts.Dependency
+import org.gradle.api.artifacts.dsl.DependencyHandler
+
 object Apps {
     const val compileSdk    = 29
     const val buildToolsSdk = "29.0.2"
@@ -78,6 +81,27 @@ object Lib {
 
         const val espresso        = "androidx.test.espresso:espresso-core:3.2.0"
         const val espressoIntents = "androidx.test.espresso:espresso-intents:3.2.0"
-
     }
+}
+
+private fun DependencyHandler.androidTestImplementation(dependencyNotation: Any): Dependency? =
+        add("androidTestImplementation", dependencyNotation)
+
+private fun DependencyHandler.testImplementation(dependencyNotation: Any): Dependency? =
+        add("testImplementation", dependencyNotation)
+
+fun DependencyHandler.addTestDependencies() {
+    testImplementation(Lib.Test.testCore)
+    testImplementation(Lib.Test.testCoreKtx)
+    testImplementation(Lib.Test.testRunner)
+    testImplementation(Lib.Test.testRules)
+    testImplementation(Lib.Test.testJunit)
+    testImplementation(Lib.Test.testJunitKtx)
+    testImplementation(Lib.Test.testTruth)
+    testImplementation(Lib.Test.testTruth2)
+    testImplementation(Lib.Test.coreTesting)
+    testImplementation(Lib.Test.mockitoWeb)
+    testImplementation(Lib.Test.mockito)
+    testImplementation(Lib.Test.mockitokotlin)
+    testImplementation(Lib.Test.coroutinesTest)
 }

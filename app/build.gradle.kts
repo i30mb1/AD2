@@ -89,17 +89,5 @@ dependencies {
     implementation(Lib.preference)
     implementation(Lib.preferenceKtx)
 
-    testImplementation(Lib.Test.testCore)
-    testImplementation(Lib.Test.testCoreKtx)
-    testImplementation(Lib.Test.testRunner)
-    testImplementation(Lib.Test.testRules)
-    testImplementation(Lib.Test.testJunit)
-    testImplementation(Lib.Test.testJunitKtx)
-    testImplementation(Lib.Test.testTruth)
-    testImplementation(Lib.Test.testTruth2)
-    testImplementation(Lib.Test.coreTesting)
-    testImplementation(Lib.Test.mockitoWeb)
-    testImplementation(Lib.Test.mockito)
-    testImplementation(Lib.Test.mockitokotlin)
-    testImplementation(Lib.Test.coroutinesTest)
+    addTestDependencies()
 }
