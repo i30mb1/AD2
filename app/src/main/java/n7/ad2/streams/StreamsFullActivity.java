@@ -56,7 +56,7 @@ import okhttp3.Request;
 import okhttp3.Response;
 
 import static androidx.core.internal.view.SupportMenuItem.SHOW_AS_ACTION_ALWAYS;
-
+// https://medium.com/@mattgrint/detecting-clicks-or-scrolls-in-kotlin-for-android-9c2cf0aab7fa
 public class StreamsFullActivity extends BaseActivity implements SurfaceHolder.Callback {
 
     public static final String CHANNEL_NAME = "CHANNEL_NAME";
