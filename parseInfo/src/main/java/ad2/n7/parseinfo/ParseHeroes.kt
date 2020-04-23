@@ -12,6 +12,7 @@ import org.json.simple.JSONObject
 import org.jsoup.Jsoup
 import org.jsoup.nodes.Document
 import org.jsoup.nodes.Element
+import org.jsoup.nodes.TextNode
 import org.jsoup.select.Elements
 import java.io.File
 import java.net.URL
@@ -156,8 +157,35 @@ class ParseHeroes private constructor(
             loadAbilities(root)
             loadTrivia(root)
             loadTalents(root)
+            loadMainAttributes(root)
 
             File(assetsFilePath + File.separator + directory + File.separator + "description.json").writeText(toJSONString())
+        }
+    }
+
+    private fun JSONObject.loadMainAttributes(root: Document) {
+        val mainAttributes = root.getElementsByAttributeValue("style", "width: 100%; padding: 4px 0; display: grid; grid-template-columns: auto auto auto; color: white; text-align: center;")[0]
+        val mainAttributesElements = mainAttributes.getElementsByTag("div")
+
+        val attrStrength = (mainAttributesElements[4].childNode(0) as Element).text()
+        val attrStrengthInc = (mainAttributesElements[4].childNode(1) as TextNode).text().split(" ").last()
+        val attrAgility = (mainAttributesElements[5].childNode(0) as Element).text()
+        val attrAgilityInc = (mainAttributesElements[5].childNode(1) as TextNode).text().split(" ").last()
+        val attrIntelligence = (mainAttributesElements[6].childNode(0) as Element).text()
+        val attrIntelligenceInc = (mainAttributesElements[6].childNode(1) as TextNode).text().split(" ").last()
+
+        JSONArray().apply {
+            JSONObject().apply {
+                put("attrStrength", attrStrength)
+                put("attrStrengthInc", attrStrengthInc)
+                put("attrAgility", attrAgility)
+                put("attrAgilityInc", attrAgilityInc)
+                put("attrIntelligence", attrIntelligence)
+                put("attrIntelligenceInc", attrIntelligenceInc)
+
+                add(this)
+            }
+            put("mainAttributes", this)
         }
     }
 
@@ -356,10 +384,10 @@ class ParseHeroes private constructor(
 
 fun main() = runBlocking {
     parser {
-        createHeroesFile = true
-        loadHeros = false
-        loadHeroFullImage = true
-        loadHeroSpellImage = true
+        createHeroesFile = false
+        loadHeros = true
+        loadHeroFullImage = false
+        loadHeroSpellImage = false
     }.start()
 }
 
