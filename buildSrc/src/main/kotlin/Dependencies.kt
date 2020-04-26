@@ -32,6 +32,8 @@ object Lib {
     const val coreKtx          = "androidx.core:core-ktx:1.2.0" // Write more concise, idiomatic Kotlin code.
     const val jsonSimple       = "com.googlecode.json-simple:json-simple:1.1.1"
     const val kotlinStdlib     = "org.jetbrains.kotlin:kotlin-stdlib-jdk7:1.3.71"
+    const val springAnimation     = "androidx.dynamicanimation:dynamicanimation:1.0.0"
+    const val springAnimationKtx  = "androidx.dynamicanimation:dynamicanimation-ktx:1.0.0-alpha03"
 
     // --- Preference ---
     const val preference       = "androidx.preference:preference:1.1.1"

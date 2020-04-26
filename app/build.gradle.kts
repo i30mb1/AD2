@@ -88,6 +88,8 @@ dependencies {
     kapt(Lib.daggerAssistedAnnotation)
     implementation(Lib.preference)
     implementation(Lib.preferenceKtx)
+    implementation(Lib.springAnimation)
+    implementation(Lib.springAnimationKtx)
 
     addTestDependencies()
 }
