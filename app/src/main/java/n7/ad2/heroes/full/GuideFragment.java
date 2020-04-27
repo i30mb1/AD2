@@ -212,11 +212,11 @@ public class GuideFragment extends Fragment {
             itemListGuideItemBinding.tvItemListGuideItem.setVisibility(View.VISIBLE);
             if (spell.equals("talent")) {
                 Picasso.get().load(R.drawable.hero_talent)
-                        .placeholder(R.drawable.item_placeholder).error(R.drawable.item_placeholder_error)
+                        .placeholder(R.drawable.item_placeholder).error(R.drawable.item_placeholder)
                         .into(itemListGuideItemBinding.ivItemListGuideItem);
             } else {
                 Picasso.get().load("file:///android_asset/heroes/" + viewModel.heroCode + "/" + hashMapSpells.get(spell.toLowerCase()) + ".webp")
-                        .placeholder(R.drawable.item_placeholder).error(R.drawable.item_placeholder_error)
+                        .placeholder(R.drawable.item_placeholder).error(R.drawable.item_placeholder)
                         .into(itemListGuideItemBinding.ivItemListGuideItem);
             }
             countSpell++;
@@ -260,7 +260,7 @@ public class GuideFragment extends Fragment {
 
             Picasso.get().load("file:///android_asset/items/" + item.split("\\^")[0] + "/full.webp")
 //                                    .resize(dpSize(88), dpSize(64))
-                    .placeholder(R.drawable.item_placeholder).error(R.drawable.item_placeholder_error)
+                    .placeholder(R.drawable.item_placeholder).error(R.drawable.item_placeholder)
                     .into(itemListGuideItemBinding.ivItemListGuideItem, new Callback() {
                         @Override
                         public void onSuccess() {

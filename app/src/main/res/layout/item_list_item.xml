@@ -38,7 +38,7 @@
                 android:scaleType="centerCrop"
                 android:transitionName="iv"
                 srcHolder="@{@drawable/item_placeholder}"
-                srcError="@{@drawable/item_placeholder_error}"
+                srcError="@{@drawable/item_placeholder}"
                 srcPath='@{"file:///android_asset/items/" + item.getCodeName() + "/full.webp"}'
                 android:onClick="@{(view)-> fragment.startItemFull(view,item)}"
                 app:layout_constraintBottom_toBottomOf="parent"

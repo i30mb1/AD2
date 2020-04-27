@@ -92,7 +92,7 @@ public class GameFullActivity extends BaseActivity {
                                         @Override
                                         public void run() {
                                             Picasso.get().load("file:///android_asset/heroes/" + hero.toLowerCase().trim().replace(" ", "_") + "/full.webp")
-                                                    .placeholder(R.drawable.hero_placeholder).error(R.drawable.hero_placeholder_error)
+                                                    .placeholder(R.drawable.hero_placeholder).error(R.drawable.hero_placeholder)
                                                     .into(iv);
                                         }
                                     });
@@ -118,7 +118,7 @@ public class GameFullActivity extends BaseActivity {
                                         @Override
                                         public void run() {
                                             Picasso.get().load("file:///android_asset/heroes/" + hero.toLowerCase().replace(" ", "_") + "/full.webp")
-                                                    .placeholder(R.drawable.hero_placeholder).error(R.drawable.hero_placeholder_error)
+                                                    .placeholder(R.drawable.hero_placeholder).error(R.drawable.hero_placeholder)
                                                     .into(iv);
                                         }
                                     });
@@ -136,7 +136,7 @@ public class GameFullActivity extends BaseActivity {
                                     @Override
                                     public void run() {
                                         Picasso.get().load("file:///android_asset/heroes/" + hero + "/full.webp").transform(new GrayscaleTransformation())
-                                                .placeholder(R.drawable.hero_placeholder).error(R.drawable.hero_placeholder_error)
+                                                .placeholder(R.drawable.hero_placeholder).error(R.drawable.hero_placeholder)
                                                 .into(iv);
                                     }
                                 });
@@ -156,7 +156,7 @@ public class GameFullActivity extends BaseActivity {
                                     @Override
                                     public void run() {
                                         Picasso.get().load("file:///android_asset/heroes/" + hero + "/full.webp").transform(new GrayscaleTransformation())
-                                                .placeholder(R.drawable.hero_placeholder).error(R.drawable.hero_placeholder_error)
+                                                .placeholder(R.drawable.hero_placeholder).error(R.drawable.hero_placeholder)
                                                 .into(iv);
                                     }
                                 });

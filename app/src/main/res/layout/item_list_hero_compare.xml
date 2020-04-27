@@ -25,7 +25,7 @@
 
         <ImageView
             android:id="@+id/iv_item_list_hero"
-            srcError="@{@drawable/hero_placeholder_error}"
+            srcError="@{@drawable/hero_placeholder}"
             srcHolder="@{@drawable/hero_placeholder}"
             srcPath='@{"file:///android_asset/heroes/" + hero.codeName + "/full.webp"}'
             android:layout_width="match_parent"

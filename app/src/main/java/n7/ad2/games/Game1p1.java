@@ -207,7 +207,7 @@ public class Game1p1 extends AppCompatActivity {
         runOnUiThread(new Runnable() {
             @Override
             public void run() {
-                Picasso.get().load(format).error(R.drawable.spell_placeholder_error).placeholder(R.drawable.spell_placeholder).into(binding.ivActivityGame1P1Spell);
+                Picasso.get().load(format).error(R.drawable.spell_placeholder).placeholder(R.drawable.spell_placeholder).into(binding.ivActivityGame1P1Spell);
             }
         });
     }

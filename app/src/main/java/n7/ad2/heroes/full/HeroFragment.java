@@ -155,7 +155,7 @@ public class HeroFragment extends Fragment {
             for (int i = 1; i < itemLength - FILES_IN_FOLDER_NOT_SPELL; i++) {
                 final ItemHeroSpellBinding spell = DataBindingUtil.inflate(getLayoutInflater(), R.layout.item_hero_spell, binding.llFragmentHeroPersonalSpells, false);
                 Picasso.get().load("file:///android_asset/heroes/" + viewModel.heroCode + "/" + i + ".webp")
-                        .error(R.drawable.spell_placeholder_error)
+                        .error(R.drawable.spell_placeholder)
                         .placeholder(R.drawable.spell_placeholder)
                         .into(spell.ivItemHeroSpell);
 

@@ -274,7 +274,7 @@ public class Game1p2 extends AppCompatActivity {
         runOnUiThread(new Runnable() {
             @Override
             public void run() {
-                Picasso.get().load(format).error(R.drawable.spell_placeholder_error).placeholder(R.drawable.spell_placeholder).into(view);
+                Picasso.get().load(format).error(R.drawable.spell_placeholder).placeholder(R.drawable.spell_placeholder).into(view);
             }
         });
     }
