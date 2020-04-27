@@ -368,6 +368,7 @@ public class HeroFulViewModel extends AndroidViewModel implements SharedPreferen
         }
     }
 
+    // about download manager https://youtu.be/-4JqEROeI7U
     public void downloadResponse(ResponseModel model, AlertDialog dialog) {
         if (isNetworkAvailable()) {
             File file = new File(application.getExternalFilesDir(Environment.DIRECTORY_RINGTONES) + File.separator + heroCode + File.separator + model.getTitleForFolder());
