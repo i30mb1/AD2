@@ -40,11 +40,13 @@ android {
         }
     }
 
+    dynamicFeatures = mutableSetOf(":feature_streams")
+
     compileOptions {
         sourceCompatibility = JavaVersion.VERSION_1_8
         targetCompatibility = JavaVersion.VERSION_1_8
     }
-    tasks.withType<org.jetbrains.kotlin.gradle.tasks.KotlinCompile> {
+    tasks.withType < org.jetbrains.kotlin.gradle.tasks.KotlinCompile > {
         kotlinOptions {
             noStdlib = true
             jvmTarget = JavaVersion.VERSION_1_8.toString()
