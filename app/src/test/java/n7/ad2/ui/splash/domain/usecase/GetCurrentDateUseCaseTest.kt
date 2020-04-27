@@ -24,7 +24,7 @@ class GetCurrentDateUseCaseTest {
     @get:Rule
     val coroutineTestRule = CoroutineTestRule()
 
-    val testDate = Calendar.getInstance().apply {
+    private val testDate = Calendar.getInstance().apply {
         set(YEAR, MONTH, DAY)
     }
 
