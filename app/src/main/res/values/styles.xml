@@ -30,4 +30,8 @@
         <item name="android:textAppearance">@style/Caption</item>
     </style>
 
+    <style name="MyMaterialCardView" parent="Widget.MaterialComponents.CardView">
+        <item name="cardUseCompatPadding">true</item>
+    </style>
+
 </resources>

@@ -29,6 +29,7 @@
 
         <item name="shapeAppearanceMediumComponent">@style/MyMediumComponent</item>
         <item name="materialAlertDialogTheme">@style/MyMaterialAlertDialogTheme</item>
+        <item name="materialCardViewStyle">@style/MyMaterialCardView</item>
     </style>
 
     <!--Black тема-->
