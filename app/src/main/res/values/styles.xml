@@ -32,6 +32,7 @@
 
     <style name="MyMaterialCardView" parent="Widget.MaterialComponents.CardView">
         <item name="cardUseCompatPadding">true</item>
+        <item name="android:foreground">?android:attr/selectableItemBackground</item>
     </style>
 
 </resources>
