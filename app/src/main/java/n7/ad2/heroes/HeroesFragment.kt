@@ -2,18 +2,15 @@ package n7.ad2.heroes
 
 import android.content.Intent
 import android.os.Bundle
-import android.view.LayoutInflater
 import android.view.Menu
 import android.view.MenuInflater
 import android.view.View
-import android.view.ViewGroup
 import androidx.appcompat.widget.SearchView
 import androidx.core.app.ActivityOptionsCompat
-import androidx.databinding.DataBindingUtil
 import androidx.fragment.app.Fragment
 import androidx.lifecycle.Observer
 import androidx.lifecycle.ViewModelProviders
-import androidx.recyclerview.widget.DefaultItemAnimator
+import androidx.lifecycle.observe
 import androidx.recyclerview.widget.GridLayoutManager
 import n7.ad2.R
 import n7.ad2.databinding.FragmentHeroesBinding
@@ -22,7 +19,7 @@ import n7.ad2.heroes.full.HeroFullActivity
 import n7.ad2.main.MainViewModel
 import n7.ad2.ui.MainActivity
 
-class HeroesFragment : Fragment() {
+class HeroesFragment : Fragment(R.layout.fragment_heroes) {
 
     private lateinit var viewModel: HeroesViewModel
     private lateinit var binding: FragmentHeroesBinding
@@ -40,7 +37,7 @@ class HeroesFragment : Fragment() {
 
             override fun onQueryTextChange(newText: String?): Boolean {
                 val adapter = HeroesPagedListAdapter(this@HeroesFragment)
-                binding.rvFragmentHeroes.adapter = adapter
+                binding.rv.adapter = adapter
                 viewModel.getHeroesByFilter(newText).observe(viewLifecycleOwner, Observer { heroModels -> adapter.submitList(heroModels) })
                 return true
             }
@@ -52,38 +49,40 @@ class HeroesFragment : Fragment() {
         intent.putExtra(HeroFullActivity.HERO_NAME, model.name)
         intent.putExtra(HeroFullActivity.HERO_CODE_NAME, model.codeName)
         if (activity != null) {
-            val options = ActivityOptionsCompat.makeSceneTransitionAnimation(activity!!, view, "iv")
+            val options = ActivityOptionsCompat.makeSceneTransitionAnimation(requireActivity(), view, "iv")
             startActivity(intent, options.toBundle())
         } else {
             startActivity(intent)
         }
     }
 
-    override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?, savedInstanceState: Bundle?): View? {
-        binding = DataBindingUtil.inflate(inflater, R.layout.fragment_heroes, container, false)
-        return binding.getRoot()
+    override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
+        super.onViewCreated(view, savedInstanceState)
+        binding = FragmentHeroesBinding.bind(view).also {
+            it.lifecycleOwner = viewLifecycleOwner
+        }
     }
 
     override fun onActivityCreated(savedInstanceState: Bundle?) {
         super.onActivityCreated(savedInstanceState)
-
-
-//        getActivity().setTitle(getString(R.string.ad2_toolbar, getString(R.string.heroes)));
-        activity!!.setTitle(R.string.heroes)
-        activity!!.sendBroadcast(Intent(MainActivity.LOG_ON_RECEIVE).putExtra(MainActivity.LOG_ON_RECEIVE, "heroes_activity_created"))
+        requireActivity().apply {
+            setTitle(R.string.heroes)
+            sendBroadcast(Intent(MainActivity.LOG_ON_RECEIVE).putExtra(MainActivity.LOG_ON_RECEIVE, "heroes_activity_created"))
+        }
         retainInstance = true //фрагмент не уничтожается а передаётся новому активити (пропускает методы onCreate&onDestroy)
         setHasOptionsMenu(true) //вызов метода onCreateOptionsMenu в фрагменте
-        mainViewModel = ViewModelProviders.of(activity!!).get(MainViewModel::class.java)
+        mainViewModel = ViewModelProviders.of(requireActivity()).get(MainViewModel::class.java)
         viewModel = ViewModelProviders.of(this).get(HeroesViewModel::class.java)
-        initPagedListAdapter()
+        setupAdapter()
     }
 
-    private fun initPagedListAdapter() {
-        binding!!.rvFragmentHeroes.setHasFixedSize(true) // если recyclerView не будет изменяться в размерах тогда ставим true
-        binding!!.rvFragmentHeroes.layoutManager = GridLayoutManager(context, 3)
-        binding!!.rvFragmentHeroes.itemAnimator = DefaultItemAnimator()
-        val adapter = HeroesPagedListAdapter(this) // PagedListAdapter, заточенный под чтение данных из PagedList.
-        binding!!.rvFragmentHeroes.adapter = adapter
-        viewModel!!.getHeroesByFilter("").observe(this, Observer { heroModels -> adapter.submitList(heroModels) })
+    private fun setupAdapter() {
+        val myAdapter = HeroesPagedListAdapter(this) // PagedListAdapter, заточенный под чтение данных из PagedList.
+        binding.rv.apply {
+            setHasFixedSize(true)
+            layoutManager = GridLayoutManager(context, 3)
+            adapter = myAdapter
+        }
+        viewModel.getHeroesByFilter("").observe(viewLifecycleOwner, myAdapter::submitList)
     }
 }
