@@ -22,18 +22,29 @@ import n7.ad2.heroes.full.HeroFullActivity
 import n7.ad2.main.MainViewModel
 import n7.ad2.ui.MainActivity
 
-class HeroesFragment : Fragment(), SearchView.OnQueryTextListener {
+class HeroesFragment : Fragment() {
 
     private lateinit var viewModel: HeroesViewModel
     private lateinit var binding: FragmentHeroesBinding
     private lateinit var mainViewModel: MainViewModel
 
     override fun onCreateOptionsMenu(menu: Menu, inflater: MenuInflater) {
+        // implement search for last queries https://developer.android.com/guide/topics/search/adding-recent-query-suggestions
         inflater.inflate(R.menu.menu_search, menu)
-        super.onCreateOptionsMenu(menu, inflater)
         val searchHero = menu.findItem(R.id.action_search)
         val searchView = searchHero.actionView as SearchView
-        searchView.setOnQueryTextListener(this)
+        searchView.setOnQueryTextListener(object : SearchView.OnQueryTextListener {
+            override fun onQueryTextSubmit(query: String?): Boolean {
+                return false
+            }
+
+            override fun onQueryTextChange(newText: String?): Boolean {
+                val adapter = HeroesPagedListAdapter(this@HeroesFragment)
+                binding.rvFragmentHeroes.adapter = adapter
+                viewModel.getHeroesByFilter(newText).observe(viewLifecycleOwner, Observer { heroModels -> adapter.submitList(heroModels) })
+                return true
+            }
+        })
     }
 
     fun startHeroFull(view: View, model: HeroModel) {
@@ -74,16 +85,5 @@ class HeroesFragment : Fragment(), SearchView.OnQueryTextListener {
         val adapter = HeroesPagedListAdapter(this) // PagedListAdapter, заточенный под чтение данных из PagedList.
         binding!!.rvFragmentHeroes.adapter = adapter
         viewModel!!.getHeroesByFilter("").observe(this, Observer { heroModels -> adapter.submitList(heroModels) })
-    }
-
-    override fun onQueryTextSubmit(query: String): Boolean {
-        return false
-    }
-
-    override fun onQueryTextChange(s: String): Boolean {
-        val adapter = HeroesPagedListAdapter(this)
-        binding!!.rvFragmentHeroes.adapter = adapter
-        viewModel!!.getHeroesByFilter(s).observe(this, Observer { heroModels -> adapter.submitList(heroModels) })
-        return true
     }
 }
