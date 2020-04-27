@@ -193,4 +193,5 @@
     <string name="setting_category_about_key">setting_category_about_key</string>
     <string name="setting_current_day">setting_current_day</string>
     <string name="title_feature_streams">Streams</string>
+    <string name="dota_hero" translatable="false">dota_hero</string>
 </resources>
