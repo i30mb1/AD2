@@ -67,7 +67,7 @@ public class HeroesPagedListAdapter extends PagedListAdapter<HeroModel, HeroesPa
         }
 
         private void clear() {
-            binding.ivItemListHero.setImageResource(R.drawable.hero_placeholder);
+            binding.iv.setImageResource(R.drawable.hero_placeholder);
             binding.tvItemListHero.setText("");
         }
     }
