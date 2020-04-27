@@ -42,7 +42,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_gravity="bottom"
-            android:background="@drawable/gradient"
+            android:background="@drawable/transparent_50"
             android:paddingStart="4dp"
             android:paddingEnd="0dp"
             android:text='@{hero.name ?? "empty"}'

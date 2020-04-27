@@ -31,7 +31,7 @@
             android:layout_height="wrap_content"
             android:layout_gravity="bottom"
             android:layout_marginStart="2dp"
-            android:background="@drawable/gradient"
+            android:background="@drawable/transparent_50"
             android:textSize="10sp"
             android:visibility="gone"
             tools:ignore="SmallSp"
