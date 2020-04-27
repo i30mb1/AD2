@@ -4,7 +4,8 @@
     xmlns:tools="http://schemas.android.com/tools"
     package="n7.ad2"
     android:installLocation="auto"
-    android:targetSandboxVersion="1">
+    android:targetSandboxVersion="2"
+    tools:ignore="UnusedAttribute">
 
     <dist:module dist:instant="true" />
 
