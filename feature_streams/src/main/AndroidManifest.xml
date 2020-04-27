@@ -16,7 +16,8 @@
         <dist:fusing dist:include="true" />
     </dist:module>
 
-    <application tools:ignore="AllowBackup,MissingApplicationIcon">
+    <application tools:ignore="AllowBackup,MissingApplicationIcon"
+        android:networkSecurityConfig="@xml/network_security_config">
         <activity android:name=".StreamsActivity">
 
             <intent-filter android:autoVerify="true">
