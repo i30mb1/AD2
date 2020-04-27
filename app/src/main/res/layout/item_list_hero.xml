@@ -14,11 +14,11 @@
     </data>
 
     <com.google.android.material.card.MaterialCardView
-        tools:layout_width="200dp"
-        tools:layout_height="112dp"
-        android:onClick="@{(view)->fragment.startHeroFull(view,hero)}"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content">
+        android:layout_height="wrap_content"
+        android:onClick="@{(view)->fragment.startHeroFull(view,hero)}"
+        tools:layout_height="112dp"
+        tools:layout_width="200dp">
 
         <ImageView
             android:id="@+id/iv"
@@ -32,10 +32,6 @@
             android:transitionName="iv"
             tools:src="@drawable/hero_placeholder" />
 
-        <View
-            android:layout_width="@dimen/line_width"
-            android:layout_height="match_parent"
-            android:background="?colorPrimary" />
 
         <TextView
             android:id="@+id/tv"
@@ -46,12 +42,13 @@
             android:paddingStart="4dp"
             android:paddingEnd="0dp"
             android:text='@{hero.name ?? "empty"}'
-            android:textAppearance="@style/TextAppearance.MaterialComponents.Caption"
-            android:textColor="@android:color/white"
-            android:textSize="10sp"
+            android:textAppearance="?textAppearanceCaption"
             android:textStyle="bold"
-            tools:ignore="SmallSp"
             tools:text="@sample/heroes.json/data/nameEng" />
 
+        <View
+            android:layout_width="@dimen/line_width"
+            android:layout_height="match_parent"
+            android:background="?colorPrimary" />
     </com.google.android.material.card.MaterialCardView>
 </layout>
