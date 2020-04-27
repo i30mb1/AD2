@@ -1,7 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:dist="http://schemas.android.com/apk/distribution"
-    package="ad2.n7.feature_streams">
+    xmlns:tools="http://schemas.android.com/tools"
+    android:targetSandboxVersion="2"
+    package="ad2.n7.feature_streams"
+    tools:ignore="UnusedAttribute">
 
     <dist:module
         dist:instant="true"
@@ -13,7 +16,7 @@
         <dist:fusing dist:include="true" />
     </dist:module>
 
-    <application>
+    <application tools:ignore="AllowBackup,MissingApplicationIcon">
         <activity android:name=".StreamsActivity">
 
             <intent-filter android:autoVerify="true">
@@ -22,21 +25,11 @@
                 <category android:name="android.intent.category.DEFAULT" />
                 <category android:name="android.intent.category.BROWSABLE" />
 
-                <data
-                    android:scheme="http"
-                    android:host="i30mb1.github.io"
-                    android:pathPrefix="/streams" />
-            </intent-filter>
-            <intent-filter>
-                <action android:name="android.intent.action.VIEW" />
+                <data android:scheme="https" />
+                <data android:scheme="http" />
+                <data android:host="i30mb1.github.io" />
+                <data android:pathPrefix="/streams" />
 
-                <category android:name="android.intent.category.DEFAULT" />
-                <category android:name="android.intent.category.BROWSABLE" />
-
-                <data
-                    android:scheme="https"
-                    android:host="i30mb1.github.io"
-                    android:pathPrefix="/streams" />
             </intent-filter>
         </activity>
     </application>
