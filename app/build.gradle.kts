@@ -92,7 +92,7 @@ dependencies {
     implementation(Lib.preferenceKtx)
     implementation(Lib.springAnimation)
     implementation(Lib.springAnimationKtx)
-    api(Lib.instantApps)
+    implementation(Lib.instantApps)
 
     addTestDependencies()
 }

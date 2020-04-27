@@ -2,8 +2,8 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:dist="http://schemas.android.com/apk/distribution"
     xmlns:tools="http://schemas.android.com/tools"
-    android:targetSandboxVersion="2"
     package="ad2.n7.feature_streams"
+    android:targetSandboxVersion="2"
     tools:ignore="UnusedAttribute">
 
     <dist:module
@@ -16,21 +16,27 @@
         <dist:fusing dist:include="true" />
     </dist:module>
 
-    <application tools:ignore="AllowBackup,MissingApplicationIcon"
-        android:networkSecurityConfig="@xml/network_security_config">
+    <application
+        android:networkSecurityConfig="@xml/network_security_config"
+        tools:ignore="AllowBackup,MissingApplicationIcon">
         <activity android:name=".StreamsActivity">
 
-            <intent-filter android:autoVerify="true">
+            <intent-filter
+                android:autoVerify="true"
+                android:order="1">
                 <action android:name="android.intent.action.VIEW" />
 
                 <category android:name="android.intent.category.DEFAULT" />
                 <category android:name="android.intent.category.BROWSABLE" />
 
-                <data android:scheme="https" />
-                <data android:scheme="http" />
-                <data android:host="i30mb1.github.io" />
-                <data android:pathPrefix="/streams" />
-
+                <data
+                    android:host="i30mb1.github.io"
+                    android:pathPrefix="/streams"
+                    android:scheme="http" />
+                <data
+                    android:host="i30mb1.github.io"
+                    android:pathPrefix="/streams"
+                    android:scheme="https" />
             </intent-filter>
         </activity>
     </application>

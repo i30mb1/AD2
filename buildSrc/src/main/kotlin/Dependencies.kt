@@ -7,8 +7,8 @@ object Apps {
     const val applicationId = "n7.ad2"
     const val minSdk        = 23
     const val targetSdk     = 29
-    const val versionCode   = 551
-    const val versionName   = "551"
+    const val versionCode   = 552
+    const val versionName   = "552"
 }
 
 object Lib {
