@@ -34,6 +34,7 @@ object Lib {
     const val kotlinStdlib     = "org.jetbrains.kotlin:kotlin-stdlib-jdk7:1.3.71"
     const val springAnimation     = "androidx.dynamicanimation:dynamicanimation:1.0.0"
     const val springAnimationKtx  = "androidx.dynamicanimation:dynamicanimation-ktx:1.0.0-alpha03"
+    const val instantApps  = "com.google.android.gms:play-services-instantapps:17.0.0"
 
     // --- Preference ---
     const val preference       = "androidx.preference:preference:1.1.1"
