@@ -38,8 +38,8 @@ class LicensesActivity : BaseActivity() {
                 val colorAnimation = ValueAnimator.ofObject(
                         ArgbEvaluator(),
                         0,
-                        resources.getColor(R.color.purple),
-                        resources.getColor(R.color.red_500),
+                        getColor(R.color.purple),
+                        getColor(R.color.red_500),
                         0
                 )
                 colorAnimation.duration = 2000
