@@ -10,18 +10,18 @@ import n7.ad2.R
 import n7.ad2.databinding.ItemListHeroBinding
 import n7.ad2.heroes.db.HeroModel
 
-class HeroesPagedListAdapter internal constructor(private val fragment: HeroesFragment) : PagedListAdapter<HeroModel, HeroesPagedListAdapter.ViewHolder>(DiffCallback()) {
+class HeroesPagedListAdapter internal constructor(fragment: HeroesFragment) : PagedListAdapter<HeroModel, HeroesPagedListAdapter.ViewHolder>(DiffCallback()) {
 
     private val listener = View.OnClickListener {
         fragment.startHeroFragment(it, it.getTag(R.id.ViewHolderObject) as HeroModel)
     }
 
-    override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): ViewHolder = ViewHolder.from(parent)
+    override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): ViewHolder = ViewHolder.from(parent, listener)
 
     override fun onBindViewHolder(holder: ViewHolder, position: Int) {
         val hero = getItem(position)
         if (hero != null) {
-            holder.bindTo(hero, listener)
+            holder.bindTo(hero)
         } else {
             holder.clear()
         }
@@ -29,10 +29,9 @@ class HeroesPagedListAdapter internal constructor(private val fragment: HeroesFr
 
     class ViewHolder(var binding: ItemListHeroBinding) : RecyclerView.ViewHolder(binding.root) {
 
-        fun bindTo(hero: HeroModel, listener: View.OnClickListener) {
+        fun bindTo(hero: HeroModel) {
             binding.hero = hero
             binding.root.setTag(R.id.ViewHolderObject, hero)
-            binding.root.setOnClickListener(listener)
             binding.executePendingBindings()
         }
 
@@ -42,9 +41,10 @@ class HeroesPagedListAdapter internal constructor(private val fragment: HeroesFr
         }
 
         companion object {
-            fun from(parent: ViewGroup): ViewHolder {
+            fun from(parent: ViewGroup, listener: View.OnClickListener): ViewHolder {
                 val layoutInflater = LayoutInflater.from(parent.context)
                 val binding = ItemListHeroBinding.inflate(layoutInflater, parent, false)
+                binding.root.setOnClickListener(listener)
                 return ViewHolder(binding)
             }
         }
