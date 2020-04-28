@@ -4,6 +4,7 @@ import com.google.common.truth.Truth.assertThat
 import com.squareup.moshi.Moshi
 import kotlinx.coroutines.ExperimentalCoroutinesApi
 import n7.ad2.CoroutineTestRule
+import n7.ad2.data.source.local.model.AssetsHero
 import n7.ad2.data.source.local.model.LocalHero
 import n7.ad2.runBlockingTest
 import org.junit.Rule
@@ -29,7 +30,7 @@ class GetLocalHeroesFromJsonUseCaseTest {
 
     @Test
     fun `return object with fields from json`() = coroutineTestRule.runBlockingTest {
-        val testObject = LocalHero("Abaddon", "heroes2\\Abaddon", "Strength")
+        val testObject = AssetsHero("Abaddon", "heroes2\\Abaddon", "Strength")
         val jsonString = """
                 {
                   "heroes": [
