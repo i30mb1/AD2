@@ -4,12 +4,17 @@ import android.app.Application
 import android.content.SharedPreferences
 import androidx.preference.PreferenceManager
 import androidx.room.Room
+import androidx.room.RoomDatabase
+import androidx.sqlite.db.SupportSQLiteDatabase
+import androidx.work.OneTimeWorkRequestBuilder
+import androidx.work.WorkManager
 import dagger.Module
 import dagger.Provides
 import dagger.Reusable
 import kotlinx.coroutines.CoroutineDispatcher
 import kotlinx.coroutines.Dispatchers
 import n7.ad2.data.source.local.db.AppDatabase
+import n7.ad2.workers.DatabaseWorker
 import java.util.*
 
 @Module
@@ -23,8 +28,19 @@ object ApplicationModule {
                 AppDatabase::class.java,
                 AppDatabase.DB_NAME
         )
+                .addCallback(object : RoomDatabase.Callback() {
+                    override fun onCreate(db: SupportSQLiteDatabase) {
+                        super.onCreate(db)
+                        fillInDb(application)
+                    }
+                })
                 .fallbackToDestructiveMigration()
                 .build()
+    }
+
+    private fun fillInDb(application: Application) {
+        val request = OneTimeWorkRequestBuilder<DatabaseWorker>().build()
+        WorkManager.getInstance(application).enqueue(request)
     }
 
     @Reusable
