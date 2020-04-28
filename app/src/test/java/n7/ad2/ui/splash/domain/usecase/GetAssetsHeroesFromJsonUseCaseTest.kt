@@ -1,5 +1,6 @@
 package n7.ad2.ui.splash.domain.usecase
 
+import androidx.test.filters.SmallTest
 import com.google.common.truth.Truth.assertThat
 import com.squareup.moshi.Moshi
 import kotlinx.coroutines.ExperimentalCoroutinesApi
@@ -11,6 +12,7 @@ import org.junit.Test
 import java.io.FileNotFoundException
 
 @ExperimentalCoroutinesApi
+@SmallTest
 class GetAssetsHeroesFromJsonUseCaseTest {
 
     @get:Rule
