@@ -10,7 +10,6 @@ import androidx.lifecycle.LifecycleOwner
 import androidx.lifecycle.LiveData
 import androidx.lifecycle.Observer
 import com.google.android.material.snackbar.Snackbar
-import n7.ad2.R
 
 // create or grubbing existing spring animation
 fun View.spring(property: DynamicAnimation.ViewProperty): SpringAnimation {
@@ -33,7 +32,7 @@ fun getKey(property: DynamicAnimation.ViewProperty): Int {
 /**
  * Transforms static java function Snackbar.make() to an extension function on View.
  */
-fun View.showSnackbar(snackbarText: String, timeLength: Int = Snackbar.LENGTH_SHORT) {
+fun View.showSnackbar(snackbarText: String, timeLength: Int = Snackbar.LENGTH_SHORT, actionText: String? = null, action: (() -> Unit)? = null) {
     Snackbar.make(this, snackbarText, timeLength).run {
         addCallback(object : Snackbar.Callback() {
             override fun onShown(sb: Snackbar?) {
@@ -44,6 +43,10 @@ fun View.showSnackbar(snackbarText: String, timeLength: Int = Snackbar.LENGTH_SH
                 // EspressoIdlingResource.decrement()
             }
         })
+        if (actionText != null) setAction(actionText) {
+            action?.invoke()
+            dismiss()
+        }
         show()
     }
 }
@@ -52,9 +55,9 @@ fun View.showSnackbar(snackbarText: String, timeLength: Int = Snackbar.LENGTH_SH
  * Triggers a snackbar message when the value contained by snackbarTaskMessageLiveEvent is modified.
  */
 fun View.setupErrorSnackbar(
-    lifecycleOwner: LifecycleOwner,
-    snackbarEvent: LiveData<String>,
-    timeLength: Int = Snackbar.LENGTH_SHORT
+        lifecycleOwner: LifecycleOwner,
+        snackbarEvent: LiveData<String>,
+        timeLength: Int = Snackbar.LENGTH_SHORT
 ) {
 
     snackbarEvent.observe(lifecycleOwner, Observer { event ->
@@ -90,15 +93,15 @@ fun View.focusAndShowKeyboard() {
     } else {
         // We need to wait until the window gets focus.
         viewTreeObserver.addOnWindowFocusChangeListener(
-            object : ViewTreeObserver.OnWindowFocusChangeListener {
-                override fun onWindowFocusChanged(hasFocus: Boolean) {
-                    // This notification will arrive just before the InputMethodManager gets set up.
-                    if (hasFocus) {
-                        this@focusAndShowKeyboard.showTheKeyboardNow()
-                        // It’s very important to remove this listener once we are done.
-                        viewTreeObserver.removeOnWindowFocusChangeListener(this)
+                object : ViewTreeObserver.OnWindowFocusChangeListener {
+                    override fun onWindowFocusChanged(hasFocus: Boolean) {
+                        // This notification will arrive just before the InputMethodManager gets set up.
+                        if (hasFocus) {
+                            this@focusAndShowKeyboard.showTheKeyboardNow()
+                            // It’s very important to remove this listener once we are done.
+                            viewTreeObserver.removeOnWindowFocusChangeListener(this)
+                        }
                     }
-                }
-            })
+                })
     }
 }
