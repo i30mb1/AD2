@@ -5,7 +5,7 @@ import n7.ad2.data.source.local.model.LocalHero
 import n7.ad2.ui.splash.domain.adapter.toLocalHero
 import javax.inject.Inject
 
-class ConvertAssetsHeroListToLocalHeroList @Inject constructor() {
+class ConvertAssetsHeroListToLocalHeroListUseCase @Inject constructor() {
 
     operator fun invoke(assetsHeroList: List<AssetsHero>): List<LocalHero> {
         return assetsHeroList.map {

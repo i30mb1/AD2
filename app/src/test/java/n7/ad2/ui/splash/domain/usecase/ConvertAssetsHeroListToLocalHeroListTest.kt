@@ -11,12 +11,12 @@ import org.junit.Test
 
 @ExperimentalCoroutinesApi
 @SmallTest
-class ConvertAssetsHeroListToLocalHeroListTest {
+class ConvertAssetsHeroListToLocalHeroListUseCaseTest {
 
     @get:Rule
     val coroutineTestRule = CoroutineTestRule()
 
-    private val convertAssetsHeroesFromJsonUseCase = ConvertAssetsHeroListToLocalHeroList()
+    private val convertAssetsHeroesFromJsonUseCase = ConvertAssetsHeroListToLocalHeroListUseCase()
 
     @Test
     fun `fields of final object not empty`() = coroutineTestRule.runBlockingTest {
