@@ -11,13 +11,16 @@ object Apps {
     const val versionName   = "552"
 }
 
+object Versions {
+    const val workManager = "2.3.4"
+}
+
 object Lib {
     const val ticker           = "com.robinhood.ticker:ticker:1.2.2"
     const val sliding          = "com.yarolegovich:sliding-root-nav:1.1.0"
     const val debugDB          = "com.amitshekhar.android:debug-db:1.0.1" // cmd ipconfig основной шлюз + :8080 (как узнать страничку для браузера)
     const val retrofit         = "com.squareup.retrofit2:retrofit:2.7.1"
     const val gsonConverter    = "com.squareup.retrofit2:converter-gson:2.6.2"
-    const val workManager      = "androidx.work:work-runtime:2.0.1"
     const val paging           = "androidx.paging:paging-runtime:2.1.2"
     const val material         = "com.google.android.material:material:1.2.0-alpha02"
     const val constraintLayout = "androidx.constraintlayout:constraintlayout:1.1.3"
@@ -35,6 +38,11 @@ object Lib {
     const val springAnimation     = "androidx.dynamicanimation:dynamicanimation:1.0.0"
     const val springAnimationKtx  = "androidx.dynamicanimation:dynamicanimation-ktx:1.0.0-alpha03"
     const val instantApps  = "com.google.android.gms:play-services-instantapps:17.0.0"
+
+    const val workManager      = "androidx.work:work-runtime:2.0.1"
+    const val workManagerKotlin      = "androidx.work:work-runtime-ktx:${Versions.workManager}"
+    const val workGCM = "androidx.work:work-gcm:${Versions.workManager}"
+
 
     // --- Preference ---
     const val preference       = "androidx.preference:preference:1.1.1"
@@ -81,6 +89,8 @@ object Lib {
         const val mockitoWeb     = "com.squareup.okhttp3:mockwebserver:4.4.0"
         const val mockito        = "org.mockito:mockito-core:3.2.4"
         const val mockitokotlin  = "com.nhaarman.mockitokotlin2:mockito-kotlin:2.2.0" // A small library that provides helper functions to work with Mockito in Kotlin.
+
+        const val testWorking    = "androidx.work:work-testing:${Versions.workManager}"
 
         const val espresso        = "androidx.test.espresso:espresso-core:3.2.0"
         const val espressoIntents = "androidx.test.espresso:espresso-intents:3.2.0"
