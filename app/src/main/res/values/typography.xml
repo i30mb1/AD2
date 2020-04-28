@@ -2,9 +2,9 @@
 <resources>
 
     <style name="Caption" parent="TextAppearance.MaterialComponents.Caption">
-        <item name="android:textColor">?myTextColorSecondary</item>
         <item name="android:textSize">10sp</item>
         <item name="android:textStyle">bold</item>
+        <item name="android:textColor">@android:color/white</item>
     </style>
 
     <style name="MyTextAppearanceButton" parent="TextAppearance.MaterialComponents.Button">
