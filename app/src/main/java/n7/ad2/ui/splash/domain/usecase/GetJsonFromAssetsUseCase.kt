@@ -3,9 +3,11 @@ package n7.ad2.ui.splash.domain.usecase
 import android.app.Application
 import kotlinx.coroutines.CoroutineDispatcher
 import kotlinx.coroutines.withContext
+import javax.inject.Inject
+
 
 @Suppress("BlockingMethodInNonBlockingContext")
-class GetJsonFromAssetsUseCase constructor(
+class GetJsonFromAssetsUseCase @Inject constructor(
         private val application: Application,
         private val ioDispatcher: CoroutineDispatcher
 ) {
@@ -16,4 +18,7 @@ class GetJsonFromAssetsUseCase constructor(
         }
     }
 
+    companion object {
+        const val HEROES_DATA_FILENAME = "heroesNew.json"
+    }
 }
