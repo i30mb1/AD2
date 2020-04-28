@@ -64,6 +64,7 @@ dependencies {
     api(Lib.retrofit)
     api(Lib.gsonConverter)
     api(Lib.workManager)
+    api(Lib.workManagerKotlin)
     api(Lib.room)
     api(Lib.roomKtx)
     kapt(Lib.roomAnnotation)
