@@ -3,32 +3,41 @@ package n7.ad2.heroes
 import android.app.Application
 import androidx.lifecycle.AndroidViewModel
 import androidx.lifecycle.LiveData
+import androidx.lifecycle.MutableLiveData
+import androidx.paging.Config
 import androidx.paging.LivePagedListBuilder
 import androidx.paging.PagedList
+import androidx.paging.toLiveData
 import n7.ad2.heroes.db.HeroModel
 import n7.ad2.heroes.db.HeroesDao
 import n7.ad2.heroes.db.HeroesRoomDatabase
-import java.util.concurrent.*
 
-class HeroesViewModel(application: Application) : AndroidViewModel(application) {
+class HeroesViewModel constructor(
+        application: Application
+) : AndroidViewModel(application) {
 
-    var heroes: LiveData<PagedList<HeroModel>>? = null
-        private set
-    private lateinit var heroesDao: HeroesDao
+    private var heroesDao: HeroesDao = HeroesRoomDatabase.getDatabase(getApplication(), null).heroesDao()
+    var heroes: LiveData<PagedList<HeroModel>> = heroesDao.getDataSourceHeroes().toLiveData(Config(
+            pageSize = 10,
+            initialLoadSizeHint = 40,
+            enablePlaceholders = true,
+            maxSize = 200,
+            prefetchDistance = 10
+    ))
 
     private fun setupLiveDataHeroes() {
-        heroesDao = HeroesRoomDatabase.getDatabase(getApplication(), null).heroesDao()
         //DataSource.Factory генерирует сама Room
         val dataSource = heroesDao.getDataSourceHeroes()
         //PagedList.Config для различных условий загрузки
         val config = PagedList.Config.Builder()
-                .setPageSize(30) //              .setInitialLoadSizeHint(60) //default = pageSize*3
+                .setPageSize(30)
+                //              .setInitialLoadSizeHint(60) //default = pageSize*3
                 //              .setPrefetchDistance(10) //default = pageSize сколько записей до конца списка чтобы загрузить новую порцию данных
-                .setEnablePlaceholders(true) //default true
+                //                .setEnablePlaceholders(true)
                 .build()
         //LivePagedListBuilder создаёт PagedList в отдельном потоке (и начальную загрузку данных)
         //LivePagedListBuilder используя DataSource.Factory всегда сама может создать новую фабрику при появлении новых данных
-        heroes = LivePagedListBuilder(dataSource, config).build()
+//        heroes = LivePagedListBuilder(dataSource, config).build()
     }
 
     fun getHeroesByFilter(chars: String): LiveData<PagedList<HeroModel>> {
