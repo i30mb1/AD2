@@ -95,5 +95,8 @@ dependencies {
     implementation(Lib.springAnimationKtx)
     implementation(Lib.instantApps)
 
+    implementation(Lib.moshi)
+    implementation(Lib.moshiCodegen)
+
     addTestDependencies()
 }
