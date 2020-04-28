@@ -24,9 +24,9 @@ class ConvertAssetsHeroListToLocalHeroListTest {
 
         val localHero = convertAssetsHeroesFromJsonUseCase(assetsHeroList)[0]
 
-        assertThat(localHero.assetsPath).isNotNull()
-        assertThat(localHero.name).isNotNull()
-        assertThat(localHero.mainAttr).isNotNull()
+        assertThat(localHero.assetsPath).isNotEmpty()
+        assertThat(localHero.name).isNotEmpty()
+        assertThat(localHero.mainAttr).isNotEmpty()
     }
 
 }
