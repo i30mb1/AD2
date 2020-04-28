@@ -25,73 +25,73 @@
                 android:src="@mipmap/ic_launcher" />
 
             <TextView
-                style="@style/MyTextViewLicenseStyle"
+                style="@style/Widget.TextView.License"
                 android:text="@string/license_title"
                 android:textStyle="bold" />
 
             <TextView
-                style="@style/MyTextViewLicenseStyle"
+                style="@style/Widget.TextView.License"
                 android:text="@string/license_text1" />
 
             <TextView
-                style="@style/MyTextViewLicenseStyle"
+                style="@style/Widget.TextView.License"
 
                 android:text="@string/license_text2" />
 
             <TextView
-                style="@style/MyTextViewLicenseStyle"
+                style="@style/Widget.TextView.License"
                 android:text="@string/license_text3" />
 
             <TextView
-                style="@style/MyTextViewLicenseStyle"
+                style="@style/Widget.TextView.License"
                 android:text="@string/license_text4" />
 
             <TextView
-                style="@style/MyTextViewLicenseStyle"
+                style="@style/Widget.TextView.License"
                 android:text="@string/license_text5" />
 
             <TextView
-                style="@style/MyTextViewLicenseStyle"
+                style="@style/Widget.TextView.License"
                 android:text="@string/license_text6" />
 
             <TextView
-                style="@style/MyTextViewLicenseStyle"
+                style="@style/Widget.TextView.License"
                 android:text="@string/license_text7" />
 
             <TextView
-                style="@style/MyTextViewLicenseStyle"
+                style="@style/Widget.TextView.License"
                 android:text="@string/license_text8" />
 
             <TextView
-                style="@style/MyTextViewLicenseStyle"
+                style="@style/Widget.TextView.License"
                 android:text="@string/license_text9" />
 
             <TextView
-                style="@style/MyTextViewLicenseStyle"
+                style="@style/Widget.TextView.License"
                 android:text="@string/license_text10" />
 
             <TextView
-                style="@style/MyTextViewLicenseStyle"
+                style="@style/Widget.TextView.License"
                 android:text="@string/license_text11" />
 
             <TextView
-                style="@style/MyTextViewLicenseStyle"
+                style="@style/Widget.TextView.License"
                 android:text="@string/license_text12" />
 
             <TextView
-                style="@style/MyTextViewLicenseStyle"
+                style="@style/Widget.TextView.License"
                 android:text="@string/license_text13" />
 
             <TextView
-                style="@style/MyTextViewLicenseStyle"
+                style="@style/Widget.TextView.License"
                 android:text="@string/license_text14" />
 
             <TextView
-                style="@style/MyTextViewLicenseStyle"
+                style="@style/Widget.TextView.License"
                 android:text="@string/license_text15" />
 
             <TextView
-                style="@style/MyTextViewLicenseStyle"
+                style="@style/Widget.TextView.License"
                 android:text="@string/license_text16" />
         </LinearLayout>
     </ScrollView>
