@@ -1,12 +1,6 @@
 package n7.ad2.heroes.full;
 
-import androidx.lifecycle.Observer;
-import androidx.lifecycle.ViewModelProviders;
-import androidx.databinding.DataBindingUtil;
 import android.os.Bundle;
-import androidx.annotation.NonNull;
-import androidx.annotation.Nullable;
-import androidx.fragment.app.Fragment;
 import android.util.TypedValue;
 import android.view.LayoutInflater;
 import android.view.Menu;
@@ -14,6 +8,13 @@ import android.view.MenuInflater;
 import android.view.MenuItem;
 import android.view.View;
 import android.view.ViewGroup;
+
+import androidx.annotation.NonNull;
+import androidx.annotation.Nullable;
+import androidx.databinding.DataBindingUtil;
+import androidx.fragment.app.Fragment;
+import androidx.lifecycle.Observer;
+import androidx.lifecycle.ViewModelProvider;
 
 import com.squareup.picasso.Picasso;
 
@@ -63,7 +64,7 @@ public class HeroFragment extends Fragment {
     public void onActivityCreated(@Nullable Bundle savedInstanceState) {
         super.onActivityCreated(savedInstanceState);
 
-        viewModel = ViewModelProviders.of(getActivity()).get(HeroFulViewModel.class);
+        viewModel = new ViewModelProvider(requireActivity()).get(HeroFulViewModel.class);
 
         subscription = viewModel.userSubscription.get();
         currentLocale = getString(R.string.language_resource);
@@ -75,14 +76,14 @@ public class HeroFragment extends Fragment {
     }
 
     private void setObservers() {
-        viewModel.jsonObjectHeroFull.observe(this, new Observer<JSONObject>() {
+        viewModel.jsonObjectHeroFull.observe(getViewLifecycleOwner(), new Observer<JSONObject>() {
             @Override
             public void onChanged(@Nullable JSONObject jsonObject) {
                 jsonObjectHeroFull = jsonObject;
                 binding.ivFragmentHeroPersonal.callOnClick();
             }
         });
-        viewModel.jsonArrayHeroAbilities.observe(this, new Observer<JSONArray>() {
+        viewModel.jsonArrayHeroAbilities.observe(getViewLifecycleOwner(), new Observer<JSONArray>() {
             @Override
             public void onChanged(@Nullable JSONArray jsonArray) {
                 if (jsonArray != null) {

@@ -1,23 +1,24 @@
 package n7.ad2.items;
 
-import androidx.lifecycle.Observer;
-import androidx.lifecycle.ViewModelProviders;
-import androidx.paging.PagedList;
 import android.content.Intent;
-import androidx.databinding.DataBindingUtil;
 import android.os.Bundle;
-import androidx.annotation.NonNull;
-import androidx.annotation.Nullable;
-import androidx.core.app.ActivityOptionsCompat;
-import androidx.fragment.app.Fragment;
-import androidx.recyclerview.widget.GridLayoutManager;
-import androidx.appcompat.widget.SearchView;
 import android.view.LayoutInflater;
 import android.view.Menu;
 import android.view.MenuInflater;
 import android.view.MenuItem;
 import android.view.View;
 import android.view.ViewGroup;
+
+import androidx.annotation.NonNull;
+import androidx.annotation.Nullable;
+import androidx.appcompat.widget.SearchView;
+import androidx.core.app.ActivityOptionsCompat;
+import androidx.databinding.DataBindingUtil;
+import androidx.fragment.app.Fragment;
+import androidx.lifecycle.Observer;
+import androidx.lifecycle.ViewModelProvider;
+import androidx.paging.PagedList;
+import androidx.recyclerview.widget.GridLayoutManager;
 
 import n7.ad2.R;
 import n7.ad2.databinding.FragmentItemsBinding;
@@ -70,8 +71,8 @@ public class ItemsFragment extends Fragment implements SearchView.OnQueryTextLis
     public void onActivityCreated(@Nullable Bundle savedInstanceState) {
         super.onActivityCreated(savedInstanceState);
 
-        viewModel = ViewModelProviders.of(this).get(ItemsViewModel.class);
-        mainViewModel = ViewModelProviders.of(this).get(MainViewModel.class);
+        viewModel = new ViewModelProvider(this).get(ItemsViewModel.class);
+        mainViewModel = new ViewModelProvider(this).get(MainViewModel.class);
         getActivity().setTitle(R.string.items);
         getActivity().sendBroadcast(new Intent(LOG_ON_RECEIVE).putExtra(LOG_ON_RECEIVE, "items_activity_created"));
         setRetainInstance(true);
@@ -85,7 +86,7 @@ public class ItemsFragment extends Fragment implements SearchView.OnQueryTextLis
         binding.rvFragmentItems.setLayoutManager(new GridLayoutManager(getContext(), 4));
         adapter = new ItemsPagedListAdapter(this);
         binding.rvFragmentItems.setAdapter(adapter);
-        viewModel.getItemsByFilter("").observe(this, new Observer<PagedList<ItemModel>>() {
+        viewModel.getItemsByFilter("").observe(getViewLifecycleOwner(), new Observer<PagedList<ItemModel>>() {
             @Override
             public void onChanged(@Nullable PagedList<ItemModel> items) {
                 adapter.submitList(items);

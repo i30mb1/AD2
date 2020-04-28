@@ -8,8 +8,9 @@ import android.view.View
 import androidx.appcompat.widget.SearchView
 import androidx.core.app.ActivityOptionsCompat
 import androidx.fragment.app.Fragment
+import androidx.fragment.app.activityViewModels
+import androidx.fragment.app.viewModels
 import androidx.lifecycle.Observer
-import androidx.lifecycle.ViewModelProviders
 import androidx.lifecycle.observe
 import androidx.recyclerview.widget.GridLayoutManager
 import n7.ad2.R
@@ -21,9 +22,9 @@ import n7.ad2.ui.MainActivity
 
 class HeroesFragment : Fragment(R.layout.fragment_heroes) {
 
-    private lateinit var viewModel: HeroesViewModel
+    private val viewModel: HeroesViewModel by viewModels()
     private lateinit var binding: FragmentHeroesBinding
-    private lateinit var mainViewModel: MainViewModel
+    private val mainViewModel: MainViewModel by activityViewModels()
 
     override fun onCreateOptionsMenu(menu: Menu, inflater: MenuInflater) {
         // implement search for last queries https://developer.android.com/guide/topics/search/adding-recent-query-suggestions
@@ -35,7 +36,7 @@ class HeroesFragment : Fragment(R.layout.fragment_heroes) {
                 return false
             }
 
-            override fun onQueryTextChange(newText: String?): Boolean {
+            override fun onQueryTextChange(newText: String): Boolean {
                 val adapter = HeroesPagedListAdapter(this@HeroesFragment)
                 binding.rv.adapter = adapter
                 viewModel.getHeroesByFilter(newText).observe(viewLifecycleOwner, Observer { heroModels -> adapter.submitList(heroModels) })
@@ -72,8 +73,6 @@ class HeroesFragment : Fragment(R.layout.fragment_heroes) {
         }
         retainInstance = true //фрагмент не уничтожается а передаётся новому активити (пропускает методы onCreate&onDestroy)
         setHasOptionsMenu(true) //вызов метода onCreateOptionsMenu в фрагменте
-        mainViewModel = ViewModelProviders.of(requireActivity()).get(MainViewModel::class.java)
-        viewModel = ViewModelProviders.of(this).get(HeroesViewModel::class.java)
         setupAdapter()
     }
 

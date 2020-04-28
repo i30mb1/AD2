@@ -29,7 +29,7 @@ import androidx.databinding.ObservableBoolean;
 import androidx.databinding.ObservableInt;
 import androidx.fragment.app.FragmentTransaction;
 import androidx.lifecycle.Observer;
-import androidx.lifecycle.ViewModelProviders;
+import androidx.lifecycle.ViewModelProvider;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.transition.ChangeBounds;
 import androidx.transition.TransitionManager;
@@ -142,7 +142,7 @@ public class MainActivity extends BaseActivity {
         binding = DataBindingUtil.setContentView(this, R.layout.activity_main);
 
         currentDay = PreferenceManager.getDefaultSharedPreferences(this).getInt(getString(R.string.setting_current_day), 0);
-        viewModel = ViewModelProviders.of(this).get(MainViewModel.class);
+        viewModel = new ViewModelProvider(this).get(MainViewModel.class);
 
         binding.setViewModel(viewModel);
 

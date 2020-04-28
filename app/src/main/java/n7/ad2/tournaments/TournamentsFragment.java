@@ -13,7 +13,7 @@ import androidx.databinding.DataBindingUtil;
 import androidx.databinding.ObservableBoolean;
 import androidx.fragment.app.Fragment;
 import androidx.lifecycle.Observer;
-import androidx.lifecycle.ViewModelProviders;
+import androidx.lifecycle.ViewModelProvider;
 import androidx.paging.PagedList;
 import androidx.recyclerview.widget.GridLayoutManager;
 import androidx.work.Data;
@@ -25,9 +25,9 @@ import n7.ad2.R;
 import n7.ad2.databinding.FragmentTournamentsBinding;
 import n7.ad2.tournaments.db.TournamentGame;
 
-import static n7.ad2.ui.MainActivity.LOG_ON_RECEIVE;
 import static n7.ad2.tournaments.TournamentsWorker.PAGE;
 import static n7.ad2.tournaments.TournamentsWorker.TAG;
+import static n7.ad2.ui.MainActivity.LOG_ON_RECEIVE;
 
 public class TournamentsFragment extends Fragment {
 
@@ -51,7 +51,7 @@ public class TournamentsFragment extends Fragment {
     public void onActivityCreated(@Nullable Bundle savedInstanceState) {
         super.onActivityCreated(savedInstanceState);
 
-        viewModel = ViewModelProviders.of(this).get(TournamentsViewModel.class);
+        viewModel = new ViewModelProvider(this).get(TournamentsViewModel.class);
         binding.setViewModel(viewModel);
         binding.executePendingBindings();
 
@@ -76,7 +76,7 @@ public class TournamentsFragment extends Fragment {
 
         adapter = new TournamentsPagedListAdapter(getViewLifecycleOwner(), subscription);
         binding.rvFragmentTournaments.setAdapter(adapter);
-        viewModel.getTournamentsGames().observe(this, new Observer<PagedList<TournamentGame>>() {
+        viewModel.getTournamentsGames().observe(getViewLifecycleOwner(), new Observer<PagedList<TournamentGame>>() {
             @Override
             public void onChanged(@Nullable PagedList<TournamentGame> games) {
                 adapter.submitList(games);

@@ -1,22 +1,11 @@
 package n7.ad2.streams;
 
 
-import androidx.lifecycle.Observer;
-import androidx.lifecycle.ViewModelProviders;
-import androidx.paging.PagedList;
-import androidx.paging.PagedListAdapter;
 import android.content.DialogInterface;
 import android.content.Intent;
 import android.media.AudioManager;
 import android.media.MediaPlayer;
 import android.os.Bundle;
-import androidx.annotation.NonNull;
-import androidx.annotation.Nullable;
-import androidx.fragment.app.Fragment;
-import androidx.appcompat.app.AlertDialog;
-import androidx.recyclerview.widget.DiffUtil;
-import androidx.recyclerview.widget.LinearLayoutManager;
-import androidx.recyclerview.widget.RecyclerView;
 import android.util.TypedValue;
 import android.view.LayoutInflater;
 import android.view.MotionEvent;
@@ -28,6 +17,18 @@ import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.ProgressBar;
 import android.widget.TextView;
+
+import androidx.annotation.NonNull;
+import androidx.annotation.Nullable;
+import androidx.appcompat.app.AlertDialog;
+import androidx.fragment.app.Fragment;
+import androidx.lifecycle.Observer;
+import androidx.lifecycle.ViewModelProvider;
+import androidx.paging.PagedList;
+import androidx.paging.PagedListAdapter;
+import androidx.recyclerview.widget.DiffUtil;
+import androidx.recyclerview.widget.LinearLayoutManager;
+import androidx.recyclerview.widget.RecyclerView;
 
 import com.gikk.twirk.Twirk;
 import com.gikk.twirk.TwirkBuilder;
@@ -238,7 +239,7 @@ public class SingleStreamFragment extends Fragment implements SurfaceHolder.Call
         streamsAdapter = new StreamsAdapter();
         rv_fragment_single_stream.setAdapter(streamsAdapter);
 
-        StreamsViewModel streamsViewModel = ViewModelProviders.of(this).get(StreamsViewModel.class);
+        StreamsViewModel streamsViewModel = new ViewModelProvider(this).get(StreamsViewModel.class);
 //        streamsViewModel.getStatusLoading().observe(this, new Observer<Boolean>() {
 //            @Override
 //            public void onChanged(@Nullable Boolean aBoolean) {

@@ -2,11 +2,8 @@ package n7.ad2.heroes.full;
 
 import android.Manifest;
 import android.annotation.SuppressLint;
-import androidx.lifecycle.Observer;
-import androidx.lifecycle.ViewModelProviders;
 import android.content.Intent;
 import android.content.res.TypedArray;
-import androidx.databinding.DataBindingUtil;
 import android.graphics.Bitmap;
 import android.graphics.drawable.BitmapDrawable;
 import android.graphics.drawable.Drawable;
@@ -15,15 +12,20 @@ import android.os.Build;
 import android.os.Bundle;
 import android.os.Environment;
 import android.provider.Settings;
+import android.view.View;
+import android.view.ViewTreeObserver;
+
 import androidx.annotation.Nullable;
 import androidx.annotation.StringRes;
-import com.google.android.material.snackbar.Snackbar;
 import androidx.core.app.ActivityCompat;
+import androidx.databinding.DataBindingUtil;
 import androidx.fragment.app.Fragment;
 import androidx.fragment.app.FragmentManager;
 import androidx.fragment.app.FragmentPagerAdapter;
-import android.view.View;
-import android.view.ViewTreeObserver;
+import androidx.lifecycle.Observer;
+import androidx.lifecycle.ViewModelProvider;
+
+import com.google.android.material.snackbar.Snackbar;
 
 import java.io.File;
 
@@ -60,7 +62,7 @@ public class HeroFullActivity extends BaseActivity {
             heroCode = savedInstanceState.getString(HERO_CODE_NAME);
         }
 
-        viewModel = ViewModelProviders.of(this, new HeroFullViewModelFactory(getApplication(), heroCode, heroName)).get(HeroFulViewModel.class);
+        viewModel = new ViewModelProvider(this, new HeroFullViewModelFactory(getApplication(), heroCode, heroName)).get(HeroFulViewModel.class);
 
         setToolbar();
         setViewPager();

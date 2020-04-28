@@ -1,19 +1,8 @@
 package n7.ad2.streams;
 
-import androidx.lifecycle.Observer;
-import androidx.lifecycle.ViewModelProviders;
-import androidx.paging.PagedList;
 import android.content.Intent;
-import androidx.databinding.DataBindingUtil;
 import android.os.Bundle;
 import android.preference.PreferenceManager;
-import androidx.annotation.NonNull;
-import androidx.annotation.Nullable;
-import androidx.fragment.app.Fragment;
-import androidx.fragment.app.FragmentManager;
-import androidx.fragment.app.FragmentTransaction;
-import androidx.appcompat.app.AlertDialog;
-import androidx.recyclerview.widget.GridLayoutManager;
 import android.view.LayoutInflater;
 import android.view.Menu;
 import android.view.MenuInflater;
@@ -21,6 +10,18 @@ import android.view.MenuItem;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.TextView;
+
+import androidx.annotation.NonNull;
+import androidx.annotation.Nullable;
+import androidx.appcompat.app.AlertDialog;
+import androidx.databinding.DataBindingUtil;
+import androidx.fragment.app.Fragment;
+import androidx.fragment.app.FragmentManager;
+import androidx.fragment.app.FragmentTransaction;
+import androidx.lifecycle.Observer;
+import androidx.lifecycle.ViewModelProvider;
+import androidx.paging.PagedList;
+import androidx.recyclerview.widget.GridLayoutManager;
 
 import java.util.Arrays;
 import java.util.LinkedList;
@@ -30,9 +31,9 @@ import n7.ad2.databinding.DialogOpenStreamBinding;
 import n7.ad2.databinding.FragmentStreamsBinding;
 import n7.ad2.streams.retrofit.Streams;
 
-import static n7.ad2.ui.MainActivity.LOG_ON_RECEIVE;
 import static n7.ad2.streams.StreamsFullActivity.CHANNEL_NAME;
 import static n7.ad2.streams.StreamsFullActivity.CHANNEL_TITLE;
+import static n7.ad2.ui.MainActivity.LOG_ON_RECEIVE;
 
 public class StreamsFragment extends Fragment {
 
@@ -73,7 +74,7 @@ public class StreamsFragment extends Fragment {
         if (getActivity() == null) return;
         FragmentManager fragmentManager = getActivity().getSupportFragmentManager();
         Fragment currentFragment = fragmentManager.findFragmentById(R.id.container);
-        if (currentFragment!=null && currentFragment.getTag() != null && currentFragment.getTag().equals(TAG_ONE_TWITCH)) {
+        if (currentFragment != null && currentFragment.getTag() != null && currentFragment.getTag().equals(TAG_ONE_TWITCH)) {
             FragmentTransaction ft = fragmentManager.beginTransaction();
             ft.replace(R.id.container, new StreamsFragment(), TAG_MULTI_TWITCH).commit();
         } else {
@@ -136,7 +137,7 @@ public class StreamsFragment extends Fragment {
     public void onActivityCreated(@Nullable Bundle savedInstanceState) {
         super.onActivityCreated(savedInstanceState);
 
-        viewModel = ViewModelProviders.of(this).get(StreamsViewModel.class);
+        viewModel = new ViewModelProvider(this).get(StreamsViewModel.class);
         binding.setViewModel(viewModel);
         binding.executePendingBindings();
 
