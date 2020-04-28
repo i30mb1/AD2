@@ -5,21 +5,20 @@ import com.squareup.moshi.Moshi
 import kotlinx.coroutines.ExperimentalCoroutinesApi
 import n7.ad2.CoroutineTestRule
 import n7.ad2.data.source.local.model.AssetsHero
-import n7.ad2.data.source.local.model.LocalHero
 import n7.ad2.runBlockingTest
 import org.junit.Rule
 import org.junit.Test
 import java.io.FileNotFoundException
 
 @ExperimentalCoroutinesApi
-class GetLocalHeroesFromJsonUseCaseTest {
+class GetAssetsHeroesFromJsonUseCaseTest {
 
     @get:Rule
     val coroutineTestRule = CoroutineTestRule()
 
     private val moshi = Moshi.Builder().build()
 
-    val getLocalHeroesFromFileUseCase = GetLocalHeroesFromJsonUseCase(coroutineTestRule.testDispatcher, moshi)
+    val getLocalHeroesFromFileUseCase = GetAssetsHeroesFromJsonUseCase(coroutineTestRule.testDispatcher, moshi)
 
     @Test(expected = FileNotFoundException::class)
     fun `if file empty throw error`() = coroutineTestRule.runBlockingTest {

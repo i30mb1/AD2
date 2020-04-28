@@ -9,12 +9,14 @@ import javax.inject.Inject
 
 const val HEROES_DATA_FILENAME = "heroesNew.json"
 
-class GetLocalHeroesFromJsonUseCase @Inject constructor(
+class GetAssetsHeroesFromJsonUseCase @Inject constructor(
         private val ioDispatcher: CoroutineDispatcher,
         private val moshi: Moshi
 ) {
     operator fun invoke(jsonString: String): List<LocalHero> {
         if(jsonString.isEmpty()) throw FileNotFoundException("File empty or not exist")
+
+        moshi.adapter()
 
         return emptyList()
     }
