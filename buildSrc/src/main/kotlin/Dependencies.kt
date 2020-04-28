@@ -13,6 +13,7 @@ object Apps {
 
 object Versions {
     const val workManager = "2.3.4"
+    const val moshi = "1.9.2"
 }
 
 object Lib {
@@ -64,10 +65,10 @@ object Lib {
     const val activityKtx         = "androidx.activity:activity-ktx:1.1.0" // on BackPress support for Fragment
 
     // --- Moshi ---
-    const val moshi        = "com.squareup.moshi:moshi:1.9.2" // It makes it easy to parse JSON into Kotlin objects
-    const val moshiCodegen = "com.squareup.moshi:moshi-kotlin-codegen:1.9.2" // Add codegen to moshi (generating by using @JsonClass(generateAdapter = true))
-    const val moshiKotlin  = "com.squareup.moshi:moshi-kotlin:1.9.2" // Add reflection to moshi (better not to use : 2.5 MB)
-    const val moshiAdapter = "com.squareup.moshi:moshi-adapters:1.9.2"
+    const val moshi        = "com.squareup.moshi:moshi:${Versions.moshi}" // It makes it easy to parse JSON into Kotlin objects
+    const val moshiCodegen = "com.squareup.moshi:moshi-kotlin-codegen:${Versions.moshi}" // Add codegen to moshi (generating by using @JsonClass(generateAdapter = true))
+    const val moshiKotlin  = "com.squareup.moshi:moshi-kotlin:${Versions.moshi}" // Add reflection to moshi (better not to use : 2.5 MB)
+    const val moshiAdapter = "com.squareup.moshi:moshi-adapters:${Versions.moshi}"
 
     // --- Dagger ---
     const val dagger                   = "com.google.dagger:dagger:2.25.2"
