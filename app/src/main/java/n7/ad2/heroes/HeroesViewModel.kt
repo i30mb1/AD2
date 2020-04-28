@@ -17,13 +17,7 @@ class HeroesViewModel constructor(
 ) : AndroidViewModel(application) {
 
     private var heroesDao: HeroesDao = HeroesRoomDatabase.getDatabase(getApplication(), null).heroesDao()
-    var heroes: LiveData<PagedList<HeroModel>> = heroesDao.getDataSourceHeroes().toLiveData(Config(
-            pageSize = 10,
-            initialLoadSizeHint = 40,
-            enablePlaceholders = true,
-            maxSize = 200,
-            prefetchDistance = 10
-    ))
+    var heroes: LiveData<PagedList<HeroModel>> = heroesDao.getDataSourceHeroes().toLiveData(20)
 
     private fun setupLiveDataHeroes() {
         //DataSource.Factory генерирует сама Room
