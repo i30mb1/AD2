@@ -96,7 +96,7 @@ dependencies {
     implementation(Lib.instantApps)
 
     implementation(Lib.moshi)
-    implementation(Lib.moshiCodegen)
+    kapt(Lib.moshiCodegen)
 
     addTestDependencies()
 }
