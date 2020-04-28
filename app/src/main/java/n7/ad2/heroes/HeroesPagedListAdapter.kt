@@ -1,6 +1,7 @@
 package n7.ad2.heroes
 
 import android.view.LayoutInflater
+import android.view.View
 import android.view.ViewGroup
 import androidx.paging.PagedListAdapter
 import androidx.recyclerview.widget.DiffUtil
@@ -11,12 +12,16 @@ import n7.ad2.heroes.db.HeroModel
 
 class HeroesPagedListAdapter internal constructor(private val fragment: HeroesFragment) : PagedListAdapter<HeroModel, HeroesPagedListAdapter.ViewHolder>(DiffCallback()) {
 
+    private val listener = View.OnClickListener {
+        fragment.startHeroFragment(it, it.getTag(R.id.ViewHolderObject) as HeroModel)
+    }
+
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): ViewHolder = ViewHolder.from(parent)
 
     override fun onBindViewHolder(holder: ViewHolder, position: Int) {
         val hero = getItem(position)
         if (hero != null) {
-            holder.bindTo(hero, fragment)
+            holder.bindTo(hero, listener)
         } else {
             holder.clear()
         }
@@ -24,9 +29,10 @@ class HeroesPagedListAdapter internal constructor(private val fragment: HeroesFr
 
     class ViewHolder(var binding: ItemListHeroBinding) : RecyclerView.ViewHolder(binding.root) {
 
-        fun bindTo(hero: HeroModel, fragment: HeroesFragment) {
+        fun bindTo(hero: HeroModel, listener: View.OnClickListener) {
             binding.hero = hero
-            binding.fragment = fragment
+            binding.root.setTag(R.id.ViewHolderObject, hero)
+            binding.root.setOnClickListener(listener)
             binding.executePendingBindings()
         }
 
