@@ -39,9 +39,9 @@ class GetAssetsHeroesFromJsonUseCaseTest {
                       "nameEng": "${testObject.name}",
                       "assetsPath": "${testObject.assetsPath}",
                       "mainAttr": "${testObject.mainAttr}"
-                      }
-] 
-}
+                    }
+                          ] 
+                }
         """.trimIndent()
 
         val list = getLocalHeroesFromFileUseCase(jsonString)

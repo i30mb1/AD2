@@ -8,8 +8,7 @@ import n7.ad2.data.source.local.model.AssetsHeroList
 import java.io.FileNotFoundException
 import javax.inject.Inject
 
-const val HEROES_DATA_FILENAME = "heroesNew.json"
-
+@Suppress("BlockingMethodInNonBlockingContext")
 class GetAssetsHeroesFromJsonUseCase @Inject constructor(
         private val ioDispatcher: CoroutineDispatcher,
         private val moshi: Moshi
