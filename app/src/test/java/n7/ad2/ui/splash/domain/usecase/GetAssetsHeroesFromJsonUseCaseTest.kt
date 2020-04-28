@@ -29,20 +29,21 @@ class GetAssetsHeroesFromJsonUseCaseTest {
 
     @Test
     fun `return object with fields from json`() = coroutineTestRule.runBlockingTest {
-        val testObject = AssetsHero("Abaddon", "heroes2\\Abaddon", "Strength")
+        val testObject = AssetsHero("name", "assetsPath", "mainAttr")
         val jsonString = """
                 {
-                  "heroes": [
+                "heroes": [
                     {
-                      "nameEng": ${testObject.name}",
-                      "assetsPath": ${testObject.assetsPath},
-                      "mainAttr": ${testObject.mainAttr}
-                    }
-                            ] 
-                }
+                      "nameEng": "${testObject.name}",
+                      "assetsPath": "${testObject.assetsPath}",
+                      "mainAttr": "${testObject.mainAttr}"
+                      }
+] 
+}
         """.trimIndent()
 
-        val list = getLocalHeroesFromFileUseCase(jsonString)[0]
-        assertThat(list).isEqualTo(testObject)
+        val list = getLocalHeroesFromFileUseCase(jsonString)
+
+        assertThat(list[0]).isEqualTo(testObject)
     }
 }
