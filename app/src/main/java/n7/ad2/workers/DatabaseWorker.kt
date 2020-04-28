@@ -14,7 +14,7 @@ class DatabaseWorker(
 ) : CoroutineWorker(context, workerParameters) {
 
     @Inject
-    private lateinit var appDatabase: AppDatabase
+    lateinit var appDatabase: AppDatabase
 
     override suspend fun doWork(): Result = coroutineScope {
         (context as MyApplication).component.inject(this@DatabaseWorker)
