@@ -2,6 +2,7 @@ package n7.ad2.ui.splash.domain.usecase
 
 import com.squareup.moshi.Moshi
 import kotlinx.coroutines.CoroutineDispatcher
+import kotlinx.coroutines.withContext
 import n7.ad2.data.source.local.model.AssetsHero
 import n7.ad2.data.source.local.model.AssetsHeroList
 import java.io.FileNotFoundException
@@ -13,11 +14,11 @@ class GetAssetsHeroesFromJsonUseCase @Inject constructor(
         private val ioDispatcher: CoroutineDispatcher,
         private val moshi: Moshi
 ) {
-    operator fun invoke(jsonString: String): List<AssetsHero> {
+    suspend operator fun invoke(jsonString: String): List<AssetsHero> = withContext(ioDispatcher) {
         if (jsonString.isEmpty()) throw FileNotFoundException("File empty or not exist")
 
         val result = moshi.adapter(AssetsHeroList::class.java).fromJson(jsonString)!!
 
-        return result.heroes
+        result.heroes
     }
 }
