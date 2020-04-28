@@ -32,14 +32,14 @@ object ApplicationModule {
                 .addCallback(object : RoomDatabase.Callback() {
                     override fun onCreate(db: SupportSQLiteDatabase) {
                         super.onCreate(db)
-                        fillInDb(application)
+                        fillInDatabase(application)
                     }
                 })
                 .fallbackToDestructiveMigration()
                 .build()
     }
 
-    private fun fillInDb(application: Application) {
+    private fun fillInDatabase(application: Application) {
         val request = OneTimeWorkRequestBuilder<DatabaseWorker>().build()
         WorkManager.getInstance(application).enqueue(request)
     }
