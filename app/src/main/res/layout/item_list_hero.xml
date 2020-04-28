@@ -17,7 +17,7 @@
     <com.google.android.material.card.MaterialCardView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:onClick="@{(view)->fragment.startHeroFull(view,hero)}"
+        android:onClick="@{(view)->fragment.startHeroFragment(view,hero)}"
         tools:layout_height="112dp"
         tools:layout_width="200dp">
 

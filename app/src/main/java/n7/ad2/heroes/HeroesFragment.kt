@@ -44,15 +44,16 @@ class HeroesFragment : Fragment(R.layout.fragment_heroes) {
         })
     }
 
-    fun startHeroFull(view: View, model: HeroModel) {
-        val intent = Intent(view.context, HeroFullActivity::class.java)
-        intent.putExtra(HeroFullActivity.HERO_NAME, model.name)
-        intent.putExtra(HeroFullActivity.HERO_CODE_NAME, model.codeName)
-        if (activity != null) {
-            val options = ActivityOptionsCompat.makeSceneTransitionAnimation(requireActivity(), view, "iv")
-            startActivity(intent, options.toBundle())
-        } else {
-            startActivity(intent)
+    fun startHeroFragment(view: View, model: HeroModel) {
+        Intent(view.context, HeroFullActivity::class.java).apply {
+            putExtra(HeroFullActivity.HERO_NAME, model.name)
+            putExtra(HeroFullActivity.HERO_CODE_NAME, model.codeName)
+            if (activity != null) {
+                val options = ActivityOptionsCompat.makeSceneTransitionAnimation(requireActivity(), view, "iv")
+                startActivity(this, options.toBundle())
+            } else {
+                startActivity(this)
+            }
         }
     }
 
