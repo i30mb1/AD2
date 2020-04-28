@@ -8,6 +8,7 @@ import androidx.room.RoomDatabase
 import androidx.sqlite.db.SupportSQLiteDatabase
 import androidx.work.OneTimeWorkRequestBuilder
 import androidx.work.WorkManager
+import com.squareup.moshi.Moshi
 import dagger.Module
 import dagger.Provides
 import dagger.Reusable
@@ -42,6 +43,11 @@ object ApplicationModule {
         val request = OneTimeWorkRequestBuilder<DatabaseWorker>().build()
         WorkManager.getInstance(application).enqueue(request)
     }
+
+    @Reusable
+    @Provides
+    fun moshi(): Moshi = Moshi.Builder()
+            .build()
 
     @Reusable
     @Provides
