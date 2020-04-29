@@ -14,6 +14,7 @@ object Apps {
 object Versions {
     const val workManager = "2.3.4"
     const val moshi = "1.9.2"
+    const val room = "2.2.5"
 }
 
 object Lib {
@@ -50,9 +51,9 @@ object Lib {
     const val preferenceKtx    = "androidx.preference:preference-ktx:1.1.1"
 
     // --- Room ---
-    const val room           = "androidx.room:room-runtime:2.2.4"
-    const val roomAnnotation = "androidx.room:room-compiler:2.2.4"
-    const val roomKtx        = "androidx.room:room-ktx:2.2.4" // kotlin Extensions and Coroutines support for Room
+    const val room           = "androidx.room:room-runtime:${Versions.room}"
+    const val roomAnnotation = "androidx.room:room-compiler:${Versions.room}"
+    const val roomKtx        = "androidx.room:room-ktx:${Versions.room}" // kotlin Extensions and Coroutines support for Room
 
     // --- Coroutines ---
     const val coroutines          = "org.jetbrains.kotlinx:kotlinx-coroutines-core:1.3.2"
