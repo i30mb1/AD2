@@ -30,15 +30,14 @@ class HeroesFragment : Fragment(R.layout.fragment_heroes) {
         inflater.inflate(R.menu.menu_search, menu)
         val searchHero = menu.findItem(R.id.action_search)
         val searchView = searchHero.actionView as SearchView
+
         searchView.setOnQueryTextListener(object : SearchView.OnQueryTextListener {
             override fun onQueryTextSubmit(query: String?): Boolean {
                 return false
             }
 
             override fun onQueryTextChange(newText: String): Boolean {
-                val adapter = HeroesPagedListAdapter(this@HeroesFragment)
-                binding.rv.adapter = adapter
-                viewModel.getHeroesByFilter(newText).observe(viewLifecycleOwner, adapter::submitList)
+                viewModel.filterHeroes(newText)
                 return true
             }
         })
@@ -82,6 +81,6 @@ class HeroesFragment : Fragment(R.layout.fragment_heroes) {
             layoutManager = GridLayoutManager(context, 3)
             adapter = myAdapter
         }
-        viewModel.getHeroesByFilter("").observe(viewLifecycleOwner, myAdapter::submitList)
+        viewModel.heroesPagedList.observe(viewLifecycleOwner, myAdapter::submitList)
     }
 }
