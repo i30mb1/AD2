@@ -1,6 +1,7 @@
 package n7.ad2.ui.heroInfo
 
 import android.view.LayoutInflater
+import android.view.View
 import android.view.ViewGroup
 import androidx.recyclerview.widget.DiffUtil
 import androidx.recyclerview.widget.ListAdapter
@@ -11,21 +12,32 @@ import n7.ad2.ui.heroInfo.domain.vo.VOSpell
 
 class SpellsListAdapter : ListAdapter<VOSpell, SpellsListAdapter.ViewHolder>(DiffCallback()) {
 
-    override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): ViewHolder = ViewHolder.from(parent)
+    private val listener: View.OnClickListener = View.OnClickListener {
+        it.isSelected = !it.isSelected
+    }
+
+    override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): ViewHolder = ViewHolder.from(parent, listener)
 
     override fun onBindViewHolder(holder: ViewHolder, position: Int) = holder.bind(getItem(position))
 
-    class ViewHolder private constructor(private val binding: ItemSpellBinding) : RecyclerView.ViewHolder(binding.root) {
+    class ViewHolder private constructor(
+            private val binding: ItemSpellBinding,
+            private val listener: View.OnClickListener
+    ) : RecyclerView.ViewHolder(binding.root) {
 
         fun bind(spell: VOSpell) {
             binding.iv.setImageResource(R.drawable.spell_placeholder)
+            binding.root.setOnClickListener(listener)
         }
 
         companion object {
-            fun from(parent: ViewGroup): ViewHolder {
+            fun from(
+                    parent: ViewGroup,
+                    listener: View.OnClickListener
+            ): ViewHolder {
                 val layoutInflater = LayoutInflater.from(parent.context)
                 val binding = ItemSpellBinding.inflate(layoutInflater, parent, false)
-                return ViewHolder(binding)
+                return ViewHolder(binding, listener)
             }
         }
     }
