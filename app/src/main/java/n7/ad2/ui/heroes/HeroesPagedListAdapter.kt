@@ -9,7 +9,6 @@ import androidx.recyclerview.widget.RecyclerView
 import n7.ad2.R
 import n7.ad2.data.source.local.model.LocalHero
 import n7.ad2.databinding.ItemHeroBinding
-import n7.ad2.heroes.db.HeroModel
 import n7.ad2.ui.heroes.domain.adapter.toVo
 
 class HeroesPagedListAdapter internal constructor(fragment: HeroesFragment) : PagedListAdapter<LocalHero, HeroesPagedListAdapter.ViewHolder>(DiffCallback()) {
@@ -25,11 +24,14 @@ class HeroesPagedListAdapter internal constructor(fragment: HeroesFragment) : Pa
         if (hero != null) holder.bindTo(hero) else holder.clear()
     }
 
-    class ViewHolder(var binding: ItemHeroBinding) : RecyclerView.ViewHolder(binding.root) {
+    class ViewHolder(
+            private val binding: ItemHeroBinding,
+            private val listener: View.OnClickListener
+    ) : RecyclerView.ViewHolder(binding.root) {
 
         fun bindTo(hero: LocalHero) {
             binding.hero = hero.toVo()
-
+            binding.root.setOnClickListener(listener)
             binding.root.setTag(R.id.ViewHolderObject, hero)
             binding.executePendingBindings()
         }
@@ -43,8 +45,7 @@ class HeroesPagedListAdapter internal constructor(fragment: HeroesFragment) : Pa
             fun from(parent: ViewGroup, listener: View.OnClickListener): ViewHolder {
                 val layoutInflater = LayoutInflater.from(parent.context)
                 val binding = ItemHeroBinding.inflate(layoutInflater, parent, false)
-                binding.root.setOnClickListener(listener)
-                return ViewHolder(binding)
+                return ViewHolder(binding, listener)
             }
         }
     }
