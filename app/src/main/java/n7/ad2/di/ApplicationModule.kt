@@ -59,7 +59,6 @@ object ApplicationModule {
         return PreferenceManager.getDefaultSharedPreferences(application)
     }
 
-    @Reusable
     @Provides
     fun provideCalendar(): Calendar = Calendar.getInstance()
 
