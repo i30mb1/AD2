@@ -8,6 +8,7 @@
 
     <com.google.android.material.card.MaterialCardView
         android:layout_width="wrap_content"
+        android:stateListAnimator="@animator/spell"
         android:layout_height="wrap_content">
 
         <ImageView
