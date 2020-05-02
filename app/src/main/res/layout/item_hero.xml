@@ -35,9 +35,9 @@
             android:background="@drawable/transparent_50"
             android:ellipsize="end"
             android:lines="1"
-            android:paddingStart="4dp"
+            android:paddingStart="@{@dimen/line_width * 2}"
             android:paddingEnd="0dp"
-            android:text='@{hero.name ?? "empty"}'
+            android:text="@{hero.name}"
             android:textAppearance="?textAppearanceCaption"
             tools:text="@sample/heroes.json/data/nameEng" />
 
