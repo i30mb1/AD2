@@ -7,27 +7,15 @@
 
     </data>
 
-    <androidx.cardview.widget.CardView
-        android:id="@+id/cv_item_hero_spell"
+    <com.google.android.material.card.MaterialCardView
         android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:clickable="true"
-        android:layout_marginStart="2dp"
-        android:layout_marginEnd="2dp"
-        android:focusable="true"
-        android:foreground="?android:attr/selectableItemBackground"
-        app:cardCornerRadius="0dp"
-        app:cardElevation="2dp"
-        app:cardUseCompatPadding="true">
+        android:layout_height="wrap_content">
 
         <ImageView
             android:id="@+id/iv_item_hero_spell"
             android:layout_width="60dp"
             android:layout_height="60dp"
-            android:contentDescription="@string/setting_tell_friend_title"
-            android:paddingStart="5dp"
-            android:paddingEnd="0dp"
-            android:scaleType="centerCrop"
-            tools:srcCompat="@drawable/spell_placeholder" />
-    </androidx.cardview.widget.CardView>
+            app:srcCompat="@drawable/spell_placeholder"
+            android:contentDescription="@string/desc_hero_spell" />
+    </com.google.android.material.card.MaterialCardView>
 </layout>
