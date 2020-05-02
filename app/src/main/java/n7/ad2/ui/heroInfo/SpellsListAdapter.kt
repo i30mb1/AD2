@@ -6,13 +6,15 @@ import android.view.ViewGroup
 import androidx.recyclerview.widget.DiffUtil
 import androidx.recyclerview.widget.ListAdapter
 import androidx.recyclerview.widget.RecyclerView
+import n7.ad2.R
 import n7.ad2.databinding.ItemSpellBinding
 import n7.ad2.ui.heroInfo.domain.vo.VOSpell
 
 class SpellsListAdapter : ListAdapter<VOSpell, SpellsListAdapter.ViewHolder>(DiffCallback()) {
 
     private val listener: View.OnClickListener = View.OnClickListener {
-        it.isSelected = !it.isSelected
+        currentList.forEach { item -> item.selected = false }
+        (it.getTag(R.id.ViewHolderObject) as VOSpell).selected = true
     }
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): ViewHolder = ViewHolder.from(parent, listener)
@@ -27,6 +29,7 @@ class SpellsListAdapter : ListAdapter<VOSpell, SpellsListAdapter.ViewHolder>(Dif
         fun bind(model: VOSpell) = binding.let {
             it.model = model
             it.listener = listener
+            it.root.setTag(R.id.ViewHolderObject, model)
             it.executePendingBindings()
         }
 
