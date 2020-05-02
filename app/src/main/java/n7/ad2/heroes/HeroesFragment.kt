@@ -8,7 +8,6 @@ import android.view.View
 import androidx.appcompat.widget.SearchView
 import androidx.core.app.ActivityOptionsCompat
 import androidx.fragment.app.Fragment
-import androidx.fragment.app.activityViewModels
 import androidx.fragment.app.viewModels
 import androidx.lifecycle.observe
 import androidx.recyclerview.widget.GridLayoutManager
@@ -16,14 +15,12 @@ import n7.ad2.R
 import n7.ad2.databinding.FragmentHeroesBinding
 import n7.ad2.heroes.db.HeroModel
 import n7.ad2.heroes.full.HeroFullActivity
-import n7.ad2.main.MainViewModel
 import n7.ad2.ui.MainActivity
 
 class HeroesFragment : Fragment(R.layout.fragment_heroes) {
 
     private val viewModel: HeroesViewModel by viewModels()
     private lateinit var binding: FragmentHeroesBinding
-    private val mainViewModel: MainViewModel by activityViewModels()
 
     override fun onCreateOptionsMenu(menu: Menu, inflater: MenuInflater) {
         // implement search for last queries https://developer.android.com/guide/topics/search/adding-recent-query-suggestions
@@ -32,9 +29,7 @@ class HeroesFragment : Fragment(R.layout.fragment_heroes) {
         val searchView = searchHero.actionView as SearchView
 
         searchView.setOnQueryTextListener(object : SearchView.OnQueryTextListener {
-            override fun onQueryTextSubmit(query: String?): Boolean {
-                return false
-            }
+            override fun onQueryTextSubmit(query: String?): Boolean = false
 
             override fun onQueryTextChange(newText: String): Boolean {
                 viewModel.filterHeroes(newText)
@@ -69,7 +64,6 @@ class HeroesFragment : Fragment(R.layout.fragment_heroes) {
             setTitle(R.string.heroes)
             sendBroadcast(Intent(MainActivity.LOG_ON_RECEIVE).putExtra(MainActivity.LOG_ON_RECEIVE, "heroes_activity_created"))
         }
-        retainInstance = true //фрагмент не уничтожается а передаётся новому активити (пропускает методы onCreate&onDestroy)
         setHasOptionsMenu(true) //вызов метода onCreateOptionsMenu в фрагменте
         setupAdapter()
     }

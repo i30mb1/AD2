@@ -20,11 +20,7 @@ class HeroesPagedListAdapter internal constructor(fragment: HeroesFragment) : Pa
 
     override fun onBindViewHolder(holder: ViewHolder, position: Int) {
         val hero = getItem(position)
-        if (hero != null) {
-            holder.bindTo(hero)
-        } else {
-            holder.clear()
-        }
+        if (hero != null) holder.bindTo(hero) else holder.clear()
     }
 
     class ViewHolder(var binding: ItemListHeroBinding) : RecyclerView.ViewHolder(binding.root) {
