@@ -3,21 +3,22 @@
     xmlns:app="http://schemas.android.com/apk/res-auto">
 
     <data>
+
         <variable
             name="model"
             type="n7.ad2.ui.heroInfo.domain.vo.VOSpell" />
 
         <variable
             name="listener"
-            type="android.view.View.OnClickListener" />
+            type="n7.ad2.base.BaseVOListener" />
     </data>
 
     <com.google.android.material.card.MaterialCardView
         android:layout_width="wrap_content"
-        app:selected="@{model.selected}"
-        android:onClick="@{listener}"
+        android:layout_height="wrap_content"
+        android:onClick="@{()->listener.onClickListener(model)}"
         android:stateListAnimator="@animator/spell"
-        android:layout_height="wrap_content">
+        app:selected="@{model.selected}">
 
         <ImageView
             android:id="@+id/iv"
