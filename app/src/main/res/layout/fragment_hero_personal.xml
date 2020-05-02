@@ -21,6 +21,8 @@
             <ImageView
                 android:id="@+id/iv_image"
                 loadImageUrl="@{viewModel.heroImage}"
+                onError="@{@drawable/hero_placeholder}"
+                placeHolder="@{@drawable/hero_placeholder}"
                 android:layout_width="150dp"
                 android:layout_height="80dp"
                 android:layout_marginStart="8dp"
@@ -30,7 +32,8 @@
                 android:transitionName="iv"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent"
-                tools:srcCompat="@drawable/hero_placeholder" />
+                tools:srcCompat="@drawable/hero_placeholder"
+                android:contentDescription="@string/desc_dota_hero" />
 
             <androidx.recyclerview.widget.RecyclerView
                 android:id="@+id/rv_spells"
