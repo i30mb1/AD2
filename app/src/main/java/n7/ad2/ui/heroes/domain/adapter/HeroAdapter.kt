@@ -7,6 +7,6 @@ import java.io.File
 fun LocalHero.toVo() : VOHero {
     return VOHero().also {
         it.name = name
-        it.image = "$assetsPath\\full.webp"
+        it.image = "file:///android_asset/$assetsPath/full.webp"
     }
 }
