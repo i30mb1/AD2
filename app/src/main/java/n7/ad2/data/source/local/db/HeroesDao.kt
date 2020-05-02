@@ -16,4 +16,6 @@ interface HeroesDao : BaseDao<LocalHero> {
     @Query("SELECT * FROM LocalHeroes WHERE name LIKE '%'||:filter||'%'")
     fun getHeroesFilter(filter: String): DataSource.Factory<Int, LocalHero>
 
+    @Query("SELECT * FROM LocalHeroes WHERE name =:name")
+    fun getHero(name: String): LocalHero
 }
