@@ -116,7 +116,7 @@ class ParseHeroes private constructor(
 //                        put("hrefEng", heroHrefEng)
 //                        if (withZh) put("nameZh", getHeroName(heroesZh[index]))
 //                        if (withZh) put("hrefZh", getHeroHref(heroesZh[index]))
-                        val directory = "heroes2" + File.separator + heroName
+                        val directory = "heroes2/$heroName"
                         put("assetsPath", directory)
                         createHeroFolderInAssets(directory)
                     }
