@@ -4,6 +4,7 @@ import android.app.Application
 import dagger.BindsInstance
 import dagger.Component
 import n7.ad2.data.source.local.db.AppDatabase
+import n7.ad2.ui.heroes.HeroesViewModel
 import n7.ad2.ui.splash.SplashViewModel
 import n7.ad2.workers.DatabaseWorker
 import javax.inject.Singleton
@@ -25,4 +26,6 @@ interface ApplicationComponent {
     fun inject(databaseWorker: DatabaseWorker)
 
     val splashViewModel: SplashViewModel
+
+    val heroesViewModel: HeroesViewModel
 }
