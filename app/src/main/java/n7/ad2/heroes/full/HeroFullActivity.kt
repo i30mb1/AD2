@@ -4,9 +4,6 @@ import android.Manifest
 import android.annotation.SuppressLint
 import android.content.Context
 import android.content.Intent
-import android.graphics.Bitmap
-import android.graphics.drawable.BitmapDrawable
-import android.graphics.drawable.Drawable
 import android.net.Uri
 import android.os.Bundle
 import android.os.Environment
@@ -23,10 +20,9 @@ import androidx.lifecycle.ViewModelProvider
 import com.google.android.material.snackbar.Snackbar
 import n7.ad2.R
 import n7.ad2.databinding.ActivityHeroFullBinding
-import n7.ad2.ui.MainActivity
+import n7.ad2.ui.heroInfo.HeroInfoFragment
 import n7.ad2.utils.BaseActivity
 import n7.ad2.utils.SnackbarUtils
-import n7.ad2.utils.Utils
 import java.io.File
 
 class HeroFullActivity : BaseActivity() {
@@ -148,7 +144,7 @@ class HeroFullActivity : BaseActivity() {
 
         override fun getItem(position: Int): Fragment {
             return when (position) {
-                0 -> HeroFragment.newInstance()
+                0 -> HeroInfoFragment.newInstance()
                 1 -> ResponsesFragment.newInstance()
                 else -> GuideFragment.newInstance()
             }

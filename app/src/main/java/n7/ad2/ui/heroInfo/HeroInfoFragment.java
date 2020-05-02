@@ -1,4 +1,4 @@
-package n7.ad2.heroes.full;
+package n7.ad2.ui.heroInfo;
 
 import android.os.Bundle;
 import android.util.TypedValue;
@@ -31,9 +31,11 @@ import n7.ad2.databinding.ItemHeroSpellBinding;
 import n7.ad2.databinding.ItemHeroSpellDescriptionBinding;
 import n7.ad2.databinding.ItemHeroTalentBinding;
 import n7.ad2.databinding.ItemTextForDescriptionBinding;
+import n7.ad2.heroes.full.HeroFulViewModel;
+import n7.ad2.heroes.full.HeroFullActivity;
 import n7.ad2.utils.Utils;
 
-public class HeroFragment extends Fragment {
+public class HeroInfoFragment extends Fragment {
 
     public static final int FILES_IN_FOLDER_NOT_SPELL = 6;
     private String currentLocale;
@@ -45,12 +47,12 @@ public class HeroFragment extends Fragment {
     private HeroFulViewModel viewModel;
     private int colorAccentTheme;
 
-    public HeroFragment() {
+    public HeroInfoFragment() {
 
     }
 
-    public static HeroFragment newInstance() {
-        return new HeroFragment();
+    public static HeroInfoFragment newInstance() {
+        return new HeroInfoFragment();
     }
 
     @Nullable
