@@ -4,6 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools">
 
     <data>
+
         <variable
             name="viewModel"
             type="n7.ad2.ui.heroInfo.HeroInfoViewModel" />
@@ -13,13 +14,13 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent">
 
-        <androidx.constraintlayout.widget.ConstraintLayout
+        <RelativeLayout
             android:layout_width="match_parent"
             android:layout_height="match_parent">
 
             <ImageView
+                android:id="@+id/iv_image"
                 loadImageUrl="@{viewModel.heroImage}"
-                android:id="@+id/iv_fragment_hero_personal"
                 android:layout_width="150dp"
                 android:layout_height="80dp"
                 android:layout_marginStart="8dp"
@@ -31,6 +32,16 @@
                 app:layout_constraintTop_toTopOf="parent"
                 tools:srcCompat="@drawable/hero_placeholder" />
 
-        </androidx.constraintlayout.widget.ConstraintLayout>
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/rv_spells"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/iv_image"
+                android:orientation="horizontal"
+                app:layoutManager="LinearLayoutManager"
+                tools:itemCount="4"
+                tools:listitem="@layout/item_spell" />
+
+        </RelativeLayout>
     </androidx.core.widget.NestedScrollView>
 </layout>
