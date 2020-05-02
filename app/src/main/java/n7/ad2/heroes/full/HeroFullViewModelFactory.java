@@ -7,12 +7,11 @@ import androidx.annotation.NonNull;
 
 public class HeroFullViewModelFactory extends ViewModelProvider.NewInstanceFactory {
 
-    private final String heroCode;
     private final String heroName;
     private final Application application;
 
-    public HeroFullViewModelFactory(Application application, String heroCode, String heroName) {
-        this.heroCode = heroCode;
+    public HeroFullViewModelFactory(Application application, String heroName) {
+
         this.heroName = heroName;
         this.application = application;
     }
@@ -22,7 +21,7 @@ public class HeroFullViewModelFactory extends ViewModelProvider.NewInstanceFacto
     @Override
     public <T extends ViewModel> T create(@NonNull Class<T> modelClass) {
         if (modelClass == HeroFulViewModel.class) {
-            return (T) new HeroFulViewModel(application, heroCode, heroName);
+            return (T) new HeroFulViewModel(application, heroName);
         }
         return super.create(modelClass);
     }

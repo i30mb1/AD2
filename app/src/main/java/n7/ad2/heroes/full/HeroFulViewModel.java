@@ -87,7 +87,7 @@ public class HeroFulViewModel extends AndroidViewModel {
     private ObservableBoolean lastPlaying;
     private MediaPlayer mediaPlayer;
 
-    public HeroFulViewModel(@NonNull Application application, String heroCode, String heroName) {
+    public HeroFulViewModel(@NonNull Application application, String heroName) {
         super(application);
         this.application = application;
         this.heroCode = heroCode;
@@ -104,35 +104,35 @@ public class HeroFulViewModel extends AndroidViewModel {
 
     private void loadFreshGuideForHero(final HeroModel heroModel) {
 
-        int currentDay = PreferenceManager.getDefaultSharedPreferences(application).getInt(application.getString(R.string.setting_current_day), 0);
-        int guideLastDay = heroModel.getGuideLastDay();
-        if (currentDay != guideLastDay) {
-            Constraints constraints = new Constraints.Builder().setRequiredNetworkType(NetworkType.CONNECTED).build();
-            Data data = new Data.Builder().putString(HERO_CODE_NAME, heroCode).build();
-            final OneTimeWorkRequest worker = new OneTimeWorkRequest.Builder(GuideWorker.class)
-                    .setInputData(data)
-                    .setConstraints(constraints)
-                    .build();
-            WorkManager.getInstance().enqueue(worker);
-            new Handler(Looper.getMainLooper()).post(new Runnable() {
-                @Override
-                public void run() {
-                    WorkManager.getInstance().getWorkInfoByIdLiveData(worker.getId()).observeForever(new Observer<WorkInfo>() {
-                        @Override
-                        public void onChanged(@Nullable WorkInfo workInfo) {
-                            if (workInfo != null) {
-                                if (workInfo.getState().isFinished() || workInfo.getState().equals(WorkInfo.State.ENQUEUED)) {
-                                    isGuideLoading.set(false);
-                                } else {
-                                    isGuideLoading.set(true);
-                                }
-                            }
-                        }
-                    });
-                }
-            });
-
-        }
+//        int currentDay = PreferenceManager.getDefaultSharedPreferences(application).getInt(application.getString(R.string.setting_current_day), 0);
+//        int guideLastDay = heroModel.getGuideLastDay();
+//        if (currentDay != guideLastDay) {
+//            Constraints constraints = new Constraints.Builder().setRequiredNetworkType(NetworkType.CONNECTED).build();
+//            Data data = new Data.Builder().putString(HERO_CODE_NAME, heroCode).build();
+//            final OneTimeWorkRequest worker = new OneTimeWorkRequest.Builder(GuideWorker.class)
+//                    .setInputData(data)
+//                    .setConstraints(constraints)
+//                    .build();
+//            WorkManager.getInstance().enqueue(worker);
+//            new Handler(Looper.getMainLooper()).post(new Runnable() {
+//                @Override
+//                public void run() {
+//                    WorkManager.getInstance().getWorkInfoByIdLiveData(worker.getId()).observeForever(new Observer<WorkInfo>() {
+//                        @Override
+//                        public void onChanged(@Nullable WorkInfo workInfo) {
+//                            if (workInfo != null) {
+//                                if (workInfo.getState().isFinished() || workInfo.getState().equals(WorkInfo.State.ENQUEUED)) {
+//                                    isGuideLoading.set(false);
+//                                } else {
+//                                    isGuideLoading.set(true);
+//                                }
+//                            }
+//                        }
+//                    });
+//                }
+//            });
+//
+//        }
     }
 
 

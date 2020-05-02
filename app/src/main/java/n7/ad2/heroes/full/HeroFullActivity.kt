@@ -31,10 +31,9 @@ import java.io.File
 
 class HeroFullActivity : BaseActivity() {
 
-    private var heroCode: String? = null
     private lateinit var binding: ActivityHeroFullBinding
-    private var heroName: String? = null
-    private var viewModel: HeroFulViewModel? = null
+    private lateinit var heroName: String
+    private lateinit var viewModel: HeroFulViewModel
 
     companion object {
         const val HERO_NAME = "HERO_NAME"
@@ -48,14 +47,12 @@ class HeroFullActivity : BaseActivity() {
         binding = DataBindingUtil.setContentView(this, R.layout.activity_hero_full)
 
         if (savedInstanceState == null) {
-            heroName = intent.getStringExtra(HERO_NAME)
-            heroCode = intent.getStringExtra(HERO_CODE_NAME)
+            heroName = intent.getStringExtra(HERO_NAME)!!
         } else {
-            heroName = savedInstanceState.getString(HERO_NAME)
-            heroCode = savedInstanceState.getString(HERO_CODE_NAME)
+            heroName = savedInstanceState.getString(HERO_NAME)!!
         }
 
-        viewModel = ViewModelProvider(this, HeroFullViewModelFactory(application, heroCode, heroName)).get(HeroFulViewModel::class.java)
+        viewModel = ViewModelProvider(this, HeroFullViewModelFactory(application, heroName)).get(HeroFulViewModel::class.java)
         setToolbar()
         setViewPager()
         supportPostponeEnterTransition()
@@ -94,7 +91,6 @@ class HeroFullActivity : BaseActivity() {
     override fun onSaveInstanceState(outState: Bundle) {
         super.onSaveInstanceState(outState)
         outState.putString(HERO_NAME, heroName)
-        outState.putString(HERO_CODE_NAME, heroCode)
     }
 
     fun scheduleStartPostponedTransition(sharedElement: View) {
@@ -126,26 +122,26 @@ class HeroFullActivity : BaseActivity() {
     }
 
     private fun setToolbar() {
-        try {
-            sendBroadcast(Intent(MainActivity.LOG_ON_RECEIVE).putExtra(MainActivity.LOG_ON_RECEIVE, "hero_" + heroCode + "_loaded"))
-            binding.toolbarActivityHeroFull.title = heroName
-            setSupportActionBar(binding.toolbarActivityHeroFull)
-            val styledAttributes = theme.obtainStyledAttributes(intArrayOf(R.attr.actionBarSize))
-            val mActionBarSize = styledAttributes.getDimension(0, 40f).toInt() / 2
-            try {
-                var icon = Utils.getBitmapFromAssets(this@HeroFullActivity, String.format("heroes/%s/mini.webp", heroCode))
-                icon = Bitmap.createScaledBitmap(icon!!, mActionBarSize, mActionBarSize, false)
-                val iconDrawable: Drawable = BitmapDrawable(resources, icon)
-                binding.toolbarActivityHeroFull.navigationIcon = iconDrawable
-            } catch (e: NullPointerException) {
-                e.printStackTrace()
-            }
-
-            binding.toolbarActivityHeroFull.setNavigationOnClickListener { Utils.startAnimation(this@HeroFullActivity, binding.toolbarActivityHeroFull, "heroes/$heroCode/emoticon.webp", false, mActionBarSize) }
-
-        } catch (e: NullPointerException) {
-            e.printStackTrace()
-        }
+//        try {
+//            sendBroadcast(Intent(MainActivity.LOG_ON_RECEIVE).putExtra(MainActivity.LOG_ON_RECEIVE, "hero_" + heroCode + "_loaded"))
+//            binding.toolbarActivityHeroFull.title = heroName
+//            setSupportActionBar(binding.toolbarActivityHeroFull)
+//            val styledAttributes = theme.obtainStyledAttributes(intArrayOf(R.attr.actionBarSize))
+//            val mActionBarSize = styledAttributes.getDimension(0, 40f).toInt() / 2
+//            try {
+//                var icon = Utils.getBitmapFromAssets(this@HeroFullActivity, String.format("heroes/%s/mini.webp", heroCode))
+//                icon = Bitmap.createScaledBitmap(icon!!, mActionBarSize, mActionBarSize, false)
+//                val iconDrawable: Drawable = BitmapDrawable(resources, icon)
+//                binding.toolbarActivityHeroFull.navigationIcon = iconDrawable
+//            } catch (e: NullPointerException) {
+//                e.printStackTrace()
+//            }
+//
+//            binding.toolbarActivityHeroFull.setNavigationOnClickListener { Utils.startAnimation(this@HeroFullActivity, binding.toolbarActivityHeroFull, "heroes/$heroCode/emoticon.webp", false, mActionBarSize) }
+//
+//        } catch (e: NullPointerException) {
+//            e.printStackTrace()
+//        }
     }
 
     inner class ViewPagerAdapter internal constructor(fm: FragmentManager?) : FragmentPagerAdapter(fm!!) {
