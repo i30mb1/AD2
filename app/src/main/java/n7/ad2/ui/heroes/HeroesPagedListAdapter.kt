@@ -15,7 +15,7 @@ import n7.ad2.ui.heroes.domain.adapter.toVo
 class HeroesPagedListAdapter internal constructor(fragment: HeroesFragment) : PagedListAdapter<LocalHero, HeroesPagedListAdapter.ViewHolder>(DiffCallback()) {
 
     private val listener = View.OnClickListener {
-        fragment.startHeroFragment(it, it.getTag(R.id.ViewHolderObject) as HeroModel)
+        fragment.startHeroFragment(it, it.getTag(R.id.ViewHolderObject) as LocalHero)
     }
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): ViewHolder = ViewHolder.from(parent, listener)

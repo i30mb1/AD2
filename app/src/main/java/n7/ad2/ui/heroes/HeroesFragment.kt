@@ -11,6 +11,7 @@ import androidx.fragment.app.Fragment
 import androidx.lifecycle.observe
 import androidx.recyclerview.widget.GridLayoutManager
 import n7.ad2.R
+import n7.ad2.data.source.local.model.LocalHero
 import n7.ad2.databinding.FragmentHeroesBinding
 import n7.ad2.di.injector
 import n7.ad2.heroes.db.HeroModel
@@ -39,10 +40,9 @@ class HeroesFragment : Fragment(R.layout.fragment_heroes) {
         })
     }
 
-    fun startHeroFragment(view: View, model: HeroModel) {
+    fun startHeroFragment(view: View, model: LocalHero) {
         Intent(view.context, HeroFullActivity::class.java).apply {
             putExtra(HeroFullActivity.HERO_NAME, model.name)
-            putExtra(HeroFullActivity.HERO_CODE_NAME, model.codeName)
             if (activity != null) {
                 val options = ActivityOptionsCompat.makeSceneTransitionAnimation(requireActivity(), view, "iv")
                 startActivity(this, options.toBundle())
