@@ -8,18 +8,19 @@ import android.view.View
 import androidx.appcompat.widget.SearchView
 import androidx.core.app.ActivityOptionsCompat
 import androidx.fragment.app.Fragment
-import androidx.fragment.app.viewModels
 import androidx.lifecycle.observe
 import androidx.recyclerview.widget.GridLayoutManager
 import n7.ad2.R
 import n7.ad2.databinding.FragmentHeroesBinding
+import n7.ad2.di.injector
 import n7.ad2.heroes.db.HeroModel
 import n7.ad2.heroes.full.HeroFullActivity
 import n7.ad2.ui.MainActivity
+import n7.ad2.utils.viewModel
 
 class HeroesFragment : Fragment(R.layout.fragment_heroes) {
 
-    private val viewModel: HeroesViewModel by viewModels()
+    private val viewModel: HeroesViewModel by viewModel { injector.heroesViewModel }
     private lateinit var binding: FragmentHeroesBinding
 
     override fun onCreateOptionsMenu(menu: Menu, inflater: MenuInflater) {
