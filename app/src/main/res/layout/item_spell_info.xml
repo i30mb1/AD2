@@ -9,10 +9,31 @@
         android:layout_width="match_parent"
         android:layout_height="200dp">
 
-        <TextView
+        <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:background="?colorPrimary" />
+            android:gravity="center_vertical"
+            android:background="?colorPrimary">
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="Naruto" />
+
+            <ImageView
+                android:id="@+id/click"
+                android:layout_width="30dp"
+                android:src="@color/black_700"
+                android:layout_height="30dp" />
+
+            <ImageView
+                android:id="@+id/click2"
+                android:layout_width="30dp"
+                android:src="@color/black_700"
+                android:layout_height="30dp" />
+        </LinearLayout>
+
 
     </com.google.android.material.card.MaterialCardView>
 </layout>

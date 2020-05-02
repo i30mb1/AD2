@@ -21,7 +21,12 @@ class SpellsInfoListAdapter : ListAdapter<VOSpell, RecyclerView.ViewHolder>(Diff
     class ViewHolderSpellInfoPlain private constructor(private val binding: ItemSpellInfoBinding) : RecyclerView.ViewHolder(binding.root) {
 
         fun bind(item: VOSpell) {
-
+            binding.click.setOnClickListener {
+                InfoPopupWindow(it)
+            }
+            binding.click2.setOnClickListener {
+                InfoPopupWindow(it)
+            }
         }
 
         companion object {
