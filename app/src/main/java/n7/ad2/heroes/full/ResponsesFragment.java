@@ -31,6 +31,7 @@ import java.io.File;
 
 import n7.ad2.R;
 import n7.ad2.databinding.FragmentHeroResponsesBinding;
+import n7.ad2.ui.heroInfo.HeroInfoViewModel;
 import n7.ad2.utils.StickyHeaderDecorator;
 
 public class ResponsesFragment extends Fragment implements SearchView.OnQueryTextListener {
@@ -38,7 +39,7 @@ public class ResponsesFragment extends Fragment implements SearchView.OnQueryTex
     private ResponsesPagedListAdapter responsesPagedListAdapter;
     private String currentLanguage;
     private FragmentHeroResponsesBinding binding;
-    private HeroFulViewModel viewModel;
+    private HeroInfoViewModel viewModel;
     //    private int initialKey;
     BroadcastReceiver onComplete = new BroadcastReceiver() {
         public void onReceive(final Context context, Intent intent) {
@@ -117,7 +118,7 @@ public class ResponsesFragment extends Fragment implements SearchView.OnQueryTex
     public void onActivityCreated(@Nullable Bundle savedInstanceState) {
         super.onActivityCreated(savedInstanceState);
 
-        viewModel = new ViewModelProvider(requireActivity()).get(HeroFulViewModel.class);
+        viewModel = new ViewModelProvider(requireActivity()).get(HeroInfoViewModel.class);
 //        if (savedInstanceState == null) {
 //            initialKey = 0;
 //        } else {
@@ -166,12 +167,12 @@ public class ResponsesFragment extends Fragment implements SearchView.OnQueryTex
     }
 
     private void getResponses() {
-        viewModel.getResponsesPagedList("").observe(getViewLifecycleOwner(), new Observer<PagedList<Response>>() {
-            @Override
-            public void onChanged(@Nullable PagedList<Response> responses) {
-                responsesPagedListAdapter.submitList(responses);
-            }
-        });
+//        viewModel.getResponsesPagedList("").observe(getViewLifecycleOwner(), new Observer<PagedList<Response>>() {
+//            @Override
+//            public void onChanged(@Nullable PagedList<Response> responses) {
+//                responsesPagedListAdapter.submitList(responses);
+//            }
+//        });
     }
 
     @Override
@@ -181,12 +182,12 @@ public class ResponsesFragment extends Fragment implements SearchView.OnQueryTex
 
     @Override
     public boolean onQueryTextChange(String newText) {
-        viewModel.getResponsesPagedList(newText).observe(this, new Observer<PagedList<Response>>() {
-            @Override
-            public void onChanged(@Nullable PagedList<Response> responses) {
-                responsesPagedListAdapter.submitList(responses);
-            }
-        });
+//        viewModel.getResponsesPagedList(newText).observe(this, new Observer<PagedList<Response>>() {
+//            @Override
+//            public void onChanged(@Nullable PagedList<Response> responses) {
+//                responsesPagedListAdapter.submitList(responses);
+//            }
+//        });
         return true;
     }
 

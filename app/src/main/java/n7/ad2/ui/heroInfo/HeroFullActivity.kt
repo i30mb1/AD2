@@ -1,35 +1,28 @@
-package n7.ad2.heroes.full
+package n7.ad2.ui.heroInfo
 
-import android.Manifest
-import android.annotation.SuppressLint
 import android.content.Context
-import android.content.Intent
-import android.net.Uri
 import android.os.Bundle
-import android.os.Environment
-import android.provider.Settings
 import android.view.View
 import android.view.ViewTreeObserver
-import androidx.core.app.ActivityCompat
 import androidx.databinding.DataBindingUtil
 import androidx.fragment.app.Fragment
 import androidx.fragment.app.FragmentManager
 import androidx.fragment.app.FragmentPagerAdapter
-import androidx.lifecycle.Observer
-import androidx.lifecycle.ViewModelProvider
-import com.google.android.material.snackbar.Snackbar
 import n7.ad2.R
 import n7.ad2.databinding.ActivityHeroFullBinding
-import n7.ad2.ui.heroInfo.HeroInfoFragment
+import n7.ad2.di.injector
+import n7.ad2.heroes.full.GuideFragment
+import n7.ad2.heroes.full.ResponsesFragment
 import n7.ad2.utils.BaseActivity
-import n7.ad2.utils.SnackbarUtils
-import java.io.File
+import n7.ad2.utils.viewModelWithSavedStateHandle
 
 class HeroFullActivity : BaseActivity() {
 
     private lateinit var binding: ActivityHeroFullBinding
     private lateinit var heroName: String
-    private lateinit var viewModel: HeroFulViewModel
+    private val viewModel: HeroInfoViewModel by viewModelWithSavedStateHandle {
+        injector.heroInfoViewModelFactory
+    }
 
     companion object {
         const val HERO_NAME = "HERO_NAME"
@@ -48,40 +41,41 @@ class HeroFullActivity : BaseActivity() {
             heroName = savedInstanceState.getString(HERO_NAME)!!
         }
 
-        viewModel = ViewModelProvider(this, HeroFullViewModelFactory(application, heroName)).get(HeroFulViewModel::class.java)
+        viewModel.loadHero(heroName)
+
         setToolbar()
         setViewPager()
-        supportPostponeEnterTransition()
+//        supportPostponeEnterTransition()
         setObservers()
     }
 
     private fun setObservers() {
-        viewModel!!.showSnackBar.observe(this, Observer { integer ->
-            if (integer == HeroFulViewModel.FILE_EXIST) {
-                Snackbar.make(binding.root, R.string.hero_responses_sound_already_downloaded, Snackbar.LENGTH_LONG).setAction(R.string.open_file) { view ->
-                    val selectedUri = Uri.parse(view.context.getExternalFilesDir(Environment.DIRECTORY_RINGTONES).toString() + File.separator)
-                    val intentOpenFile = Intent(Intent.ACTION_VIEW)
-                    intentOpenFile.setDataAndType(selectedUri, "application/*")
-                    if (intentOpenFile.resolveActivityInfo(view.context.packageManager, 0) != null) {
-                        view.context.startActivity(Intent.createChooser(intentOpenFile, view.context.getString(R.string.hero_responses_open_folder_with)))
-                    } else {
-                        // if you reach this place, it means there is no any file
-                        // explorer app installed on your device
-                    }
-                }.show()
-            } else {
-                SnackbarUtils.showSnackbar(binding.root, getString(integer))
-            }
-        })
-        viewModel!!.grandPermission.observe(this, Observer { ActivityCompat.requestPermissions(this@HeroFullActivity, arrayOf(Manifest.permission.WRITE_EXTERNAL_STORAGE), REQUESTED_PERMISSION) })
-        viewModel!!.grandSetting.observe(this, Observer { redId ->
-            SnackbarUtils.showSnackbarWithAction(binding.root, getString(redId!!), getString(R.string.all_enable)) {
-                @SuppressLint("InlinedApi") val intent = Intent(Settings.ACTION_MANAGE_WRITE_SETTINGS)
-                intent.data = Uri.parse("package:" + application.packageName)
-                intent.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK)
-                application.startActivity(intent)
-            }
-        })
+//        viewModel!!.showSnackBar.observe(this, Observer { integer ->
+//            if (integer == HeroInfoViewModel.FILE_EXIST) {
+//                Snackbar.make(binding.root, R.string.hero_responses_sound_already_downloaded, Snackbar.LENGTH_LONG).setAction(R.string.open_file) { view ->
+//                    val selectedUri = Uri.parse(view.context.getExternalFilesDir(Environment.DIRECTORY_RINGTONES).toString() + File.separator)
+//                    val intentOpenFile = Intent(Intent.ACTION_VIEW)
+//                    intentOpenFile.setDataAndType(selectedUri, "application/*")
+//                    if (intentOpenFile.resolveActivityInfo(view.context.packageManager, 0) != null) {
+//                        view.context.startActivity(Intent.createChooser(intentOpenFile, view.context.getString(R.string.hero_responses_open_folder_with)))
+//                    } else {
+//                        // if you reach this place, it means there is no any file
+//                        // explorer app installed on your device
+//                    }
+//                }.show()
+//            } else {
+//                SnackbarUtils.showSnackbar(binding.root, getString(integer))
+//            }
+//        })
+//        viewModel!!.grandPermission.observe(this, Observer { ActivityCompat.requestPermissions(this@HeroFullActivity, arrayOf(Manifest.permission.WRITE_EXTERNAL_STORAGE), REQUESTED_PERMISSION) })
+//        viewModel!!.grandSetting.observe(this, Observer { redId ->
+//            SnackbarUtils.showSnackbarWithAction(binding.root, getString(redId!!), getString(R.string.all_enable)) {
+//                @SuppressLint("InlinedApi") val intent = Intent(Settings.ACTION_MANAGE_WRITE_SETTINGS)
+//                intent.data = Uri.parse("package:" + application.packageName)
+//                intent.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK)
+//                application.startActivity(intent)
+//            }
+//        })
     }
 
     override fun onSaveInstanceState(outState: Bundle) {

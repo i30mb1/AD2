@@ -1,131 +1,100 @@
-package n7.ad2.ui.heroInfo;
+package n7.ad2.ui.heroInfo
 
-import android.os.Bundle;
-import android.util.TypedValue;
-import android.view.LayoutInflater;
-import android.view.Menu;
-import android.view.MenuInflater;
-import android.view.MenuItem;
-import android.view.View;
-import android.view.ViewGroup;
+import android.os.Bundle
+import android.util.TypedValue
+import android.view.LayoutInflater
+import android.view.Menu
+import android.view.MenuInflater
+import android.view.MenuItem
+import android.view.View
+import android.view.ViewGroup
+import androidx.databinding.DataBindingUtil
+import androidx.fragment.app.Fragment
+import androidx.fragment.app.activityViewModels
+import n7.ad2.R
+import n7.ad2.databinding.FragmentHeroPersonalBinding
+import org.json.JSONArray
+import org.json.JSONException
+import org.json.JSONObject
 
-import androidx.annotation.NonNull;
-import androidx.annotation.Nullable;
-import androidx.databinding.DataBindingUtil;
-import androidx.fragment.app.Fragment;
-import androidx.lifecycle.Observer;
-import androidx.lifecycle.ViewModelProvider;
-
-import com.squareup.picasso.Picasso;
-
-import org.json.JSONArray;
-import org.json.JSONException;
-import org.json.JSONObject;
-
-import java.io.IOException;
-
-import n7.ad2.R;
-import n7.ad2.databinding.FragmentHeroPersonalBinding;
-import n7.ad2.databinding.ItemHeroDescriptionBinding;
-import n7.ad2.databinding.ItemHeroSpellBinding;
-import n7.ad2.databinding.ItemHeroSpellDescriptionBinding;
-import n7.ad2.databinding.ItemHeroTalentBinding;
-import n7.ad2.databinding.ItemTextForDescriptionBinding;
-import n7.ad2.heroes.full.HeroFulViewModel;
-import n7.ad2.heroes.full.HeroFullActivity;
-import n7.ad2.utils.Utils;
-
-public class HeroInfoFragment extends Fragment {
-
-    public static final int FILES_IN_FOLDER_NOT_SPELL = 6;
-    private String currentLocale;
-    private View lastClickedView;
-    private JSONObject jsonObjectHeroFull;
-    private JSONArray jsonArrayHeroAbilities;
-    private FragmentHeroPersonalBinding binding;
-    private HeroFulViewModel viewModel;
-    private int colorAccentTheme;
-
-    public HeroInfoFragment() {
-
-    }
-
-    public static HeroInfoFragment newInstance() {
-        return new HeroInfoFragment();
-    }
-
-    @Nullable
-    @Override
-    public View onCreateView(@NonNull LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
-        binding = DataBindingUtil.inflate(inflater, R.layout.fragment_hero_personal, container, false);
-        return binding.getRoot();
-    }
-
-    @Override
-    public void onActivityCreated(@Nullable Bundle savedInstanceState) {
-        super.onActivityCreated(savedInstanceState);
-
-        viewModel = new ViewModelProvider(requireActivity()).get(HeroFulViewModel.class);
-
-        currentLocale = getString(R.string.language_resource);
-
-        setHasOptionsMenu(true);
-
-        setHeroImage();
-        setObservers();
-    }
-
-    private void setObservers() {
-        viewModel.jsonObjectHeroFull.observe(getViewLifecycleOwner(), new Observer<JSONObject>() {
-            @Override
-            public void onChanged(@Nullable JSONObject jsonObject) {
-                jsonObjectHeroFull = jsonObject;
-                binding.ivFragmentHeroPersonal.callOnClick();
-            }
-        });
-        viewModel.jsonArrayHeroAbilities.observe(getViewLifecycleOwner(), new Observer<JSONArray>() {
-            @Override
-            public void onChanged(@Nullable JSONArray jsonArray) {
-                if (jsonArray != null) {
-                    jsonArrayHeroAbilities = jsonArray;
-                    inflateAllSpells();
-                }
-            }
-        });
-    }
-
-    @Override
-    public void onCreateOptionsMenu(Menu menu, MenuInflater inflater) {
-        super.onCreateOptionsMenu(menu, inflater);
-        inflater.inflate(R.menu.menu_activity_items_change_language, menu);
-    }
-
-    public String switchLanguage() {
-        switch (currentLocale) {
-            case "ru":
-                currentLocale = "eng";
-                break;
-            default:
-            case "eng":
-                currentLocale = "ru";
-                break;
+class HeroInfoFragment : Fragment(R.layout.fragment_hero_personal) {
+    private var currentLocale: String? = null
+    private var lastClickedView: View? = null
+    private val jsonObjectHeroFull: JSONObject? = null
+    private val jsonArrayHeroAbilities: JSONArray? = null
+    private lateinit var binding: FragmentHeroPersonalBinding
+    private val viewModel: HeroInfoViewModel by activityViewModels()
+    private var colorAccentTheme = 0
+        private get() = if (field == 0 && context != null) {
+            val typedValue = TypedValue()
+            context!!.theme.resolveAttribute(R.attr.colorAccent, typedValue, true)
+            field = typedValue.data
+            typedValue.data
+        } else {
+            field
         }
-        return currentLocale;
-    }
 
-    @Override
-    public boolean onOptionsItemSelected(MenuItem item) {
-        switch (item.getItemId()) {
-            case R.id.action_switch:
-                viewModel.loadHeroDescription(switchLanguage());
-                item.setTitle(currentLocale);
-                lastClickedView.callOnClick();
-                break;
+    override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
+        super.onViewCreated(view, savedInstanceState)
+        binding = FragmentHeroPersonalBinding.bind(view).also {
+            it.lifecycleOwner = viewLifecycleOwner
+            it.viewModel = viewModel
         }
-        return true;
     }
 
-    private void inflateTalent() {
+    override fun onActivityCreated(savedInstanceState: Bundle?) {
+        super.onActivityCreated(savedInstanceState)
+        currentLocale = getString(R.string.language_resource)
+        setHasOptionsMenu(true)
+        setHeroImage()
+        setObservers()
+    }
+
+    private fun setObservers() {
+//        viewModel.jsonObjectHeroFull.observe(getViewLifecycleOwner(), new Observer<JSONObject>() {
+//            @Override
+//            public void onChanged(@Nullable JSONObject jsonObject) {
+//                jsonObjectHeroFull = jsonObject;
+//                binding.ivFragmentHeroPersonal.callOnClick();
+//            }
+//        });
+//        viewModel.jsonArrayHeroAbilities.observe(getViewLifecycleOwner(), new Observer<JSONArray>() {
+//            @Override
+//            public void onChanged(@Nullable JSONArray jsonArray) {
+//                if (jsonArray != null) {
+//                    jsonArrayHeroAbilities = jsonArray;
+//                    inflateAllSpells();
+//                }
+//            }
+//        });
+    }
+
+    override fun onCreateOptionsMenu(menu: Menu, inflater: MenuInflater) {
+        super.onCreateOptionsMenu(menu, inflater)
+        inflater.inflate(R.menu.menu_activity_items_change_language, menu)
+    }
+
+    fun switchLanguage(): String {
+        currentLocale = when (currentLocale) {
+            "ru" -> "eng"
+            "eng" -> "ru"
+            else -> "ru"
+        }
+        return currentLocale!!
+    }
+
+    override fun onOptionsItemSelected(item: MenuItem): Boolean {
+        when (item.itemId) {
+            R.id.action_switch -> {
+                viewModel!!.loadHeroDescription(switchLanguage())
+                item.title = currentLocale
+                lastClickedView!!.callOnClick()
+            }
+        }
+        return true
+    }
+
+    private fun inflateTalent() {
 //        final ItemHeroSpellBinding talent = DataBindingUtil.inflate(getLayoutInflater(), R.layout.item_hero_spell, binding.llFragmentHeroPersonalSpells, false);
 //
 //        talent.ivItemHeroSpell.setImageResource(R.drawable.hero_talent);
@@ -140,14 +109,13 @@ public class HeroInfoFragment extends Fragment {
 //        binding.llFragmentHeroPersonalSpells.addView(talent.getRoot());
     }
 
-    private void setClickedView(View v) {
-        lastClickedView.setBackgroundColor(0x00000000);
-        lastClickedView = v;
-        v.setBackgroundColor(getColorAccentTheme());
+    private fun setClickedView(v: View) {
+        lastClickedView!!.setBackgroundColor(0x00000000)
+        lastClickedView = v
+        v.setBackgroundColor(colorAccentTheme)
     }
 
-    @SuppressWarnings("ConstantConditions")
-    private void inflateAllSpells() {
+    private fun inflateAllSpells() {
 //        binding.llFragmentHeroPersonalSpells.removeAllViewsInLayout();
 //        inflateTalent();
 //
@@ -178,7 +146,7 @@ public class HeroInfoFragment extends Fragment {
 //        }
     }
 
-    private void inflateTalentView() {
+    private fun inflateTalentView() {
 //        binding.llFragmentHeroPersonalDescriptions.removeAllViewsInLayout();
 //
 //        try {
@@ -213,17 +181,17 @@ public class HeroInfoFragment extends Fragment {
 //        }
     }
 
-    private void loadSpell(int spellNum) {
+    private fun loadSpell(spellNum: Int) {
         try {
-            JSONObject jsonObjectSpell = (JSONObject) jsonArrayHeroAbilities.get(spellNum);
-            inflateSpellDescription(jsonObjectSpell);
-            inflateNotes(jsonObjectSpell);
-        } catch (JSONException e) {
-            e.printStackTrace();
+            val jsonObjectSpell = jsonArrayHeroAbilities!![spellNum] as JSONObject
+            inflateSpellDescription(jsonObjectSpell)
+            inflateNotes(jsonObjectSpell)
+        } catch (e: JSONException) {
+            e.printStackTrace()
         }
     }
 
-    private void inflateNotes(JSONObject jsonObjectSpell) {
+    private fun inflateNotes(jsonObjectSpell: JSONObject) {
 //        if (jsonObjectSpell.has("notes")) {
 //            ItemHeroDescriptionBinding description = DataBindingUtil.inflate(getLayoutInflater(), R.layout.item_hero_description, binding.llFragmentHeroPersonalDescriptions, false);
 //            description.tvItemHeroDescription.setText(R.string.hero_fragment_notes);
@@ -243,7 +211,7 @@ public class HeroInfoFragment extends Fragment {
 //        }
     }
 
-    private void inflateSpellDescription(JSONObject jsonObjectSpell) {
+    private fun inflateSpellDescription(jsonObjectSpell: JSONObject) {
 //        ItemHeroSpellDescriptionBinding spellDescription = DataBindingUtil.inflate(getLayoutInflater(), R.layout.item_hero_spell_description, binding.llFragmentHeroPersonalDescriptions, false);
 //
 //        if (jsonObjectSpell.has("name")) {
@@ -338,21 +306,21 @@ public class HeroInfoFragment extends Fragment {
 //        binding.llFragmentHeroPersonalDescriptions.addView(spellDescription.getRoot());
     }
 
-    private void setHeroImage() {
-        lastClickedView = binding.ivFragmentHeroPersonal;
-        binding.ivFragmentHeroPersonal.setImageDrawable(Utils.getDrawableFromAssets(getActivity(), String.format("heroes/%s/full.webp", viewModel.heroCode)));
-        binding.ivFragmentHeroPersonal.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                setClickedView(view);
-                loadHeroDescription();
-            }
-        });
-        //start animation
-        ((HeroFullActivity) getActivity()).scheduleStartPostponedTransition(binding.ivFragmentHeroPersonal);
+    private fun setHeroImage() {
+//        lastClickedView = binding.ivFragmentHeroPersonal;
+//        binding.ivFragmentHeroPersonal.setImageDrawable(Utils.getDrawableFromAssets(getActivity(), String.format("heroes/%s/full.webp", viewModel.heroCode)));
+//        binding.ivFragmentHeroPersonal.setOnClickListener(new View.OnClickListener() {
+//            @Override
+//            public void onClick(View view) {
+//                setClickedView(view);
+//                loadHeroDescription();
+//            }
+//        });
+//        //start animation
+//        ((HeroFullActivity) getActivity()).scheduleStartPostponedTransition(binding.ivFragmentHeroPersonal);
     }
 
-    private void loadHeroDescription() {
+    private fun loadHeroDescription() {
 //        binding.llFragmentHeroPersonalDescriptions.removeAllViewsInLayout();
 //        if (jsonObjectHeroFull.has("desc")) {
 //            try {
@@ -420,15 +388,10 @@ public class HeroInfoFragment extends Fragment {
 //        }
     }
 
-    private int getColorAccentTheme() {
-        if (colorAccentTheme == 0 && getContext() != null) {
-            TypedValue typedValue = new TypedValue();
-            getContext().getTheme().resolveAttribute(R.attr.colorAccent, typedValue, true);
-            colorAccentTheme = typedValue.data;
-            return typedValue.data;
-        } else {
-            return colorAccentTheme;
+    companion object {
+        const val FILES_IN_FOLDER_NOT_SPELL = 6
+        fun newInstance(): HeroInfoFragment {
+            return HeroInfoFragment()
         }
     }
-
 }

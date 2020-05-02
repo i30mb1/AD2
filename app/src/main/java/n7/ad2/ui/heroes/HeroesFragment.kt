@@ -14,8 +14,7 @@ import n7.ad2.R
 import n7.ad2.data.source.local.model.LocalHero
 import n7.ad2.databinding.FragmentHeroesBinding
 import n7.ad2.di.injector
-import n7.ad2.heroes.db.HeroModel
-import n7.ad2.heroes.full.HeroFullActivity
+import n7.ad2.ui.heroInfo.HeroFullActivity
 import n7.ad2.ui.MainActivity
 import n7.ad2.utils.viewModel
 

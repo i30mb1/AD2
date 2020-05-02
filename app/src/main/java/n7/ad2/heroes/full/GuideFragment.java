@@ -17,15 +17,11 @@ import androidx.annotation.Nullable;
 import androidx.core.app.ActivityOptionsCompat;
 import androidx.databinding.DataBindingUtil;
 import androidx.fragment.app.Fragment;
-import androidx.lifecycle.Observer;
 import androidx.lifecycle.ViewModelProvider;
 
 import com.google.android.material.snackbar.Snackbar;
 import com.squareup.picasso.Callback;
 import com.squareup.picasso.Picasso;
-
-import org.json.JSONArray;
-import org.json.JSONException;
 
 import java.util.HashMap;
 
@@ -35,9 +31,10 @@ import n7.ad2.databinding.ItemListGuideItemBinding;
 import n7.ad2.databinding.ItemListHeroCompareBinding;
 import n7.ad2.heroes.db.HeroModel;
 import n7.ad2.items.full.ItemFullActivity;
+import n7.ad2.ui.heroInfo.HeroFullActivity;
+import n7.ad2.ui.heroInfo.HeroInfoViewModel;
 
-import static n7.ad2.heroes.full.HeroFullActivity.HERO_CODE_NAME;
-import static n7.ad2.heroes.full.HeroFullActivity.HERO_NAME;
+import static n7.ad2.ui.heroInfo.HeroFullActivity.HERO_NAME;
 import static n7.ad2.items.full.ItemFullActivity.ITEM_CODE_NAME;
 import static n7.ad2.items.full.ItemFullActivity.ITEM_NAME;
 
@@ -47,7 +44,7 @@ public class GuideFragment extends Fragment {
     private HeroModel hero;
     private HashMap<String, String> hashMapSpells = new HashMap<>();
     private int maxItemsInRow = 0;
-    private HeroFulViewModel viewModel;
+    private HeroInfoViewModel viewModel;
     private FragmentGuideBinding binding;
     private MenuItem menuSelected;
 
@@ -64,11 +61,8 @@ public class GuideFragment extends Fragment {
         super.onCreateOptionsMenu(menu, inflater);
         menu.clear();
         currentPage = 0;
-        if (viewModel.userSubscription.get()) {
             inflater.inflate(R.menu.menu_fragment_guide_5_button, menu);
-        } else {
-            inflater.inflate(R.menu.menu_fragment_guide_2_button, menu);
-        }
+
         menuSelected = menu.findItem(R.id.menu_fragment_guide_1);
     }
 
@@ -132,7 +126,7 @@ public class GuideFragment extends Fragment {
     @Override
     public void onActivityCreated(@Nullable Bundle savedInstanceState) {
         super.onActivityCreated(savedInstanceState);
-        viewModel = new ViewModelProvider(getActivity()).get(HeroFulViewModel.class);
+        viewModel = new ViewModelProvider(getActivity()).get(HeroInfoViewModel.class);
         binding.setViewModel(viewModel);
 
         setHasOptionsMenu(true);
@@ -142,38 +136,38 @@ public class GuideFragment extends Fragment {
     }
 
     private void setObservers() {
-        viewModel.jsonArrayHeroAbilities.observe(this, new Observer<JSONArray>() {
-            @Override
-            public void onChanged(@Nullable JSONArray jsonArray) {
-                if (jsonArray != null) {
-                    hashMapSpells.clear();
-                    for (int i = 0; i < jsonArray.length(); i++) {
-                        try {
-                            String skillName = jsonArray.getJSONObject(i).getString("name").toLowerCase();
-                            hashMapSpells.put(skillName, String.valueOf(i + 1));
-
-                        } catch (JSONException e) {
-                            e.printStackTrace();
-                        }
-
-                        hashMapSpells.put("shadowraze", "1");
-                        hashMapSpells.put("whirling axes (melee)", "3");
-                        hashMapSpells.put("whirling axes (ranged)", "3");
-                    }
-                }
-            }
-        });
-        viewModel.heroesDao.getHeroByCodeName(viewModel.heroCode).observe(this, new Observer<HeroModel>() {
-            @Override
-            public void onChanged(@Nullable HeroModel heroModel) {
-                if (heroModel != null) {
-                    hero = heroModel;
-                    addHeroes(heroModel.getBestVersus(), getResources().getColor(android.R.color.holo_green_light), binding.llFragmentGuideBest);
-                    addHeroes(hero.getWorstVersus(), getResources().getColor(android.R.color.holo_red_light), binding.llFragmentGuideWorst);
-                    loadPage();
-                }
-            }
-        });
+//        viewModel.jsonArrayHeroAbilities.observe(this, new Observer<JSONArray>() {
+//            @Override
+//            public void onChanged(@Nullable JSONArray jsonArray) {
+//                if (jsonArray != null) {
+//                    hashMapSpells.clear();
+//                    for (int i = 0; i < jsonArray.length(); i++) {
+//                        try {
+//                            String skillName = jsonArray.getJSONObject(i).getString("name").toLowerCase();
+//                            hashMapSpells.put(skillName, String.valueOf(i + 1));
+//
+//                        } catch (JSONException e) {
+//                            e.printStackTrace();
+//                        }
+//
+//                        hashMapSpells.put("shadowraze", "1");
+//                        hashMapSpells.put("whirling axes (melee)", "3");
+//                        hashMapSpells.put("whirling axes (ranged)", "3");
+//                    }
+//                }
+//            }
+//        });
+//        viewModel.heroesDao.getHeroByCodeName(viewModel.heroCode).observe(this, new Observer<HeroModel>() {
+//            @Override
+//            public void onChanged(@Nullable HeroModel heroModel) {
+//                if (heroModel != null) {
+//                    hero = heroModel;
+//                    addHeroes(heroModel.getBestVersus(), getResources().getColor(android.R.color.holo_green_light), binding.llFragmentGuideBest);
+//                    addHeroes(hero.getWorstVersus(), getResources().getColor(android.R.color.holo_red_light), binding.llFragmentGuideWorst);
+//                    loadPage();
+//                }
+//            }
+//        });
     }
 
     private void loadPage() {
@@ -216,9 +210,9 @@ public class GuideFragment extends Fragment {
                         .placeholder(R.drawable.item_placeholder).error(R.drawable.item_placeholder)
                         .into(itemListGuideItemBinding.ivItemListGuideItem);
             } else {
-                Picasso.get().load("file:///android_asset/heroes/" + viewModel.heroCode + "/" + hashMapSpells.get(spell.toLowerCase()) + ".webp")
-                        .placeholder(R.drawable.item_placeholder).error(R.drawable.item_placeholder)
-                        .into(itemListGuideItemBinding.ivItemListGuideItem);
+//                Picasso.get().load("file:///android_asset/heroes/" + viewModel.heroCode + "/" + hashMapSpells.get(spell.toLowerCase()) + ".webp")
+//                        .placeholder(R.drawable.item_placeholder).error(R.drawable.item_placeholder)
+//                        .into(itemListGuideItemBinding.ivItemListGuideItem);
             }
             countSpell++;
             binding.llFragmentGuideSkills.addView(itemListGuideItemBinding.getRoot());
@@ -325,7 +319,7 @@ public class GuideFragment extends Fragment {
                 public void onClick(View v) {
                     Intent intent = new Intent(getContext(), HeroFullActivity.class);
                     intent.putExtra(HERO_NAME, "");
-                    intent.putExtra(HERO_CODE_NAME, heroNameAndWinrate[0]);
+//                    intent.putExtra(HERO_CODE_NAME, heroNameAndWinrate[0]);
                     startActivity(intent);
                     if (getActivity() != null) {
 //                        getActivity().finish();

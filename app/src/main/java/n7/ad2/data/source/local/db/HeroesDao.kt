@@ -17,5 +17,5 @@ interface HeroesDao : BaseDao<LocalHero> {
     fun getHeroesFilter(filter: String): DataSource.Factory<Int, LocalHero>
 
     @Query("SELECT * FROM LocalHeroes WHERE name =:name")
-    fun getHero(name: String): LocalHero
+    suspend fun getHero(name: String): LocalHero
 }

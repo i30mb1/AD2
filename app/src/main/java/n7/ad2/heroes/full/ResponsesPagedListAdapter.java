@@ -21,6 +21,7 @@ import n7.ad2.R;
 import n7.ad2.databinding.DialogResponseBinding;
 import n7.ad2.databinding.ItemResponseBinding;
 import n7.ad2.databinding.ItemResponseHeaderBinding;
+import n7.ad2.ui.heroInfo.HeroInfoViewModel;
 import n7.ad2.utils.StickyHeaderDecorator;
 
 // https://youtu.be/xF1x-Pm6IPw
@@ -49,10 +50,10 @@ public class ResponsesPagedListAdapter extends PagedListAdapter<Response, Recycl
         }
     };
 
-    private HeroFulViewModel viewModel;
+    private HeroInfoViewModel viewModel;
     private LayoutInflater inflater;
 
-    ResponsesPagedListAdapter(HeroFulViewModel viewModel) {
+    ResponsesPagedListAdapter(HeroInfoViewModel viewModel) {
         super(DIFF_CALLBACK);
         this.viewModel = viewModel;
     }
@@ -182,11 +183,11 @@ public class ResponsesPagedListAdapter extends PagedListAdapter<Response, Recycl
             binding.setAdapter(ResponsesPagedListAdapter.this);
             binding.executePendingBindings();
 
-            if (viewModel.responsesInMemory.contains(model.getTitleForFolder())) {
-                model.inStore.set(true);
-            } else {
-                model.inStore.set(false);
-            }
+//            if (viewModel.responsesInMemory.contains(model.getTitleForFolder())) {
+//                model.inStore.set(true);
+//            } else {
+//                model.inStore.set(false);
+//            }
 
             inflateIconsForResponse(model);
         }
