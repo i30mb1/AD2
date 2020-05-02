@@ -60,7 +60,7 @@ import n7.ad2.databinding.DialogRateBinding;
 import n7.ad2.databinding.DialogUpdateBinding;
 import n7.ad2.databinding.DrawerBinding;
 import n7.ad2.games.GameFragment;
-import n7.ad2.heroes.HeroesFragment;
+import n7.ad2.ui.heroes.HeroesFragment;
 import n7.ad2.items.ItemsFragment;
 import n7.ad2.main.MainViewModel;
 import n7.ad2.news.NewsFragment;
