@@ -13,14 +13,13 @@ import javax.inject.Inject
 
 class HeroesViewModel @Inject constructor(
         application: Application,
-        appDatabase: AppDatabase,
-        private val convertLocalHeroListToVoListUseCase: ConvertLocalHeroListToVoListUseCase
+        appDatabase: AppDatabase
 ) : AndroidViewModel(application) {
 
     private val heroesDao = appDatabase.heroesDao
     private val heroesFilter = MutableLiveData("")
     val heroesPagedList = heroesFilter.switchMap {
-        heroesDao.getHeroesFilter(it).toLiveData(10)
+        heroesDao.getHeroesFilter(it).toLiveData(20)
     }
 
     fun filterHeroes(chars: String) {
