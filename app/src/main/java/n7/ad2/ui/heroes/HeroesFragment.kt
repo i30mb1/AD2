@@ -42,12 +42,12 @@ class HeroesFragment : Fragment(R.layout.fragment_heroes) {
     fun startHeroFragment(view: View, model: LocalHero) {
         Intent(view.context, HeroFullActivity::class.java).apply {
             putExtra(HeroFullActivity.HERO_NAME, model.name)
-            if (activity != null) {
-                val options = ActivityOptionsCompat.makeSceneTransitionAnimation(requireActivity(), view, "iv")
-                startActivity(this, options.toBundle())
-            } else {
+//            if (activity != null) {
+//                val options = ActivityOptionsCompat.makeSceneTransitionAnimation(requireActivity(), view, "iv")
+//                startActivity(this, options.toBundle())
+//            } else {
                 startActivity(this)
-            }
+//            }
         }
     }
 
