@@ -1,0 +1,130 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <data>
+
+    </data>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <ImageView
+            android:id="@+id/ivStr"
+            android:layout_width="20dp"
+            android:layout_height="20dp"
+            android:layout_marginTop="8dp"
+            android:src="@drawable/icon_dark"
+            app:layout_constraintEnd_toStartOf="@+id/ivInt"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <ImageView
+            android:id="@+id/ivInt"
+            android:layout_width="20dp"
+            android:layout_height="20dp"
+            android:layout_marginTop="8dp"
+            android:src="@drawable/icon_gray"
+            app:layout_constraintEnd_toStartOf="@+id/ivAgi"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toEndOf="@+id/ivStr"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <ImageView
+            android:id="@+id/ivAgi"
+            android:layout_width="20dp"
+            android:layout_height="20dp"
+            android:layout_marginTop="8dp"
+            android:src="@drawable/icon_white"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toEndOf="@+id/ivInt"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/tv_attr_str"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="20"
+            android:textAppearance="@style/Widget.TextView.Attrs"
+            app:layout_constraintEnd_toStartOf="@+id/tv_attr_str_inc"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintHorizontal_chainStyle="packed"
+            app:layout_constraintStart_toStartOf="@+id/ivStr"
+            app:layout_constraintTop_toBottomOf="@+id/ivStr" />
+
+        <TextView
+            android:id="@+id/tv_attr_str_inc"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="4dp"
+            android:text="+1.5"
+            android:textAppearance="@style/Widget.TextView.Attrs"
+            app:layout_constraintEnd_toEndOf="@+id/ivStr"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toEndOf="@+id/tv_attr_str"
+            app:layout_constraintTop_toBottomOf="@+id/ivStr" />
+
+        <TextView
+            android:id="@+id/tv_attr_agi"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="20"
+            android:textAppearance="@style/Widget.TextView.Attrs"
+            app:layout_constraintEnd_toStartOf="@+id/tv_attr_agi_inc"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintHorizontal_chainStyle="packed"
+            app:layout_constraintStart_toStartOf="@+id/ivAgi"
+            app:layout_constraintTop_toBottomOf="@+id/ivAgi" />
+
+        <TextView
+            android:id="@+id/tv_attr_agi_inc"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="4dp"
+            android:text="+1.5"
+            android:textAppearance="@style/Widget.TextView.Attrs"
+            app:layout_constraintEnd_toEndOf="@+id/ivAgi"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toEndOf="@+id/tv_attr_agi"
+            app:layout_constraintTop_toBottomOf="@+id/ivAgi" />
+
+        <TextView
+            android:id="@+id/tv_attr_int"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="20"
+            android:textAppearance="@style/Widget.TextView.Attrs"
+            app:layout_constraintEnd_toStartOf="@+id/tv_attr_int_inc"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintHorizontal_chainStyle="packed"
+            app:layout_constraintStart_toStartOf="@+id/ivInt"
+            app:layout_constraintTop_toBottomOf="@+id/ivInt" />
+
+        <TextView
+            android:id="@+id/tv_attr_int_inc"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="4dp"
+            android:text="+1.5"
+            android:textAppearance="@style/Widget.TextView.Attrs"
+            app:layout_constraintEnd_toEndOf="@+id/ivInt"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toEndOf="@+id/tv_attr_int"
+            app:layout_constraintTop_toBottomOf="@+id/ivInt" />
+
+        <SeekBar
+            android:id="@+id/seekBar"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/tv_attr_int_inc"
+            app:layout_constraintVertical_bias="1.0" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

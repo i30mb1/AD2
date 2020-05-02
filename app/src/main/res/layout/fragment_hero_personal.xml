@@ -36,6 +36,14 @@
                 app:layout_constraintTop_toTopOf="parent"
                 tools:srcCompat="@drawable/hero_placeholder" />
 
+            <n7.ad2.CustomHeroAttrs
+                android:layout_toEndOf="@id/iv_image"
+                android:layout_alignParentEnd="true"
+                android:layout_alignBottom="@id/iv_image"
+                android:layout_alignTop="@id/iv_image"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"/>
+
             <androidx.recyclerview.widget.RecyclerView
                 android:id="@+id/rv_spells"
                 android:layout_width="match_parent"
