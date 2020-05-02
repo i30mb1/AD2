@@ -2,17 +2,15 @@ package n7.ad2.ui.heroInfo
 
 import android.os.Bundle
 import android.util.TypedValue
-import android.view.LayoutInflater
 import android.view.Menu
 import android.view.MenuInflater
 import android.view.MenuItem
 import android.view.View
-import android.view.ViewGroup
-import androidx.databinding.DataBindingUtil
 import androidx.fragment.app.Fragment
 import androidx.fragment.app.activityViewModels
 import n7.ad2.R
 import n7.ad2.databinding.FragmentHeroPersonalBinding
+import n7.ad2.ui.heroInfo.domain.vo.VOSpell
 import org.json.JSONArray
 import org.json.JSONException
 import org.json.JSONObject
@@ -48,6 +46,19 @@ class HeroInfoFragment : Fragment(R.layout.fragment_hero_personal) {
         setHasOptionsMenu(true)
         setHeroImage()
         setObservers()
+
+        setupSpellRecyclerView()
+    }
+
+    private fun setupSpellRecyclerView() {
+        val spellsAdapter = SpellsListAdapter()
+
+        binding.rvSpells.apply {
+            setHasFixedSize(true)
+            adapter = spellsAdapter
+        }
+
+        spellsAdapter.submitList(listOf(VOSpell(),VOSpell()))
     }
 
     private fun setObservers() {
