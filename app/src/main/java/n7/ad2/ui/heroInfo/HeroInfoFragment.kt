@@ -8,6 +8,7 @@ import android.view.MenuItem
 import android.view.View
 import androidx.fragment.app.Fragment
 import androidx.fragment.app.activityViewModels
+import androidx.recyclerview.widget.LinearLayoutManager
 import n7.ad2.R
 import n7.ad2.databinding.FragmentHeroPersonalBinding
 import n7.ad2.ui.heroInfo.domain.vo.VOSpell
@@ -48,6 +49,18 @@ class HeroInfoFragment : Fragment(R.layout.fragment_hero_personal) {
         setObservers()
 
         setupSpellRecyclerView()
+        setupSpellInfoRecyclerView()
+    }
+
+    private fun setupSpellInfoRecyclerView() {
+        val spellsInfoListAdapter = SpellsInfoListAdapter()
+
+        binding.rvSpellsInfo.apply {
+            adapter = spellsInfoListAdapter
+            layoutManager = LinearLayoutManager(requireContext(), LinearLayoutManager.VERTICAL, false)
+        }
+
+        spellsInfoListAdapter.submitList(listOf(VOSpell(), VOSpell()))
     }
 
     private fun setupSpellRecyclerView() {
@@ -58,7 +71,7 @@ class HeroInfoFragment : Fragment(R.layout.fragment_hero_personal) {
             adapter = spellsAdapter
         }
 
-        spellsAdapter.submitList(listOf(VOSpell(),VOSpell()))
+        spellsAdapter.submitList(listOf(VOSpell(), VOSpell(), VOSpell(), VOSpell()))
     }
 
     private fun setObservers() {
