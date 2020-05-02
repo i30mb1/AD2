@@ -6,7 +6,7 @@
 
         <variable
             name="hero"
-            type="n7.ad2.heroes.db.HeroModel" />
+            type="n7.ad2.ui.heroes.domain.vo.VOHero" />
     </data>
 
     <com.google.android.material.card.MaterialCardView
@@ -17,7 +17,7 @@
 
         <ImageView
             android:id="@+id/iv"
-            loadImageUrl='@{"file:///android_asset/heroes/" + hero.codeName + "/full.webp"}'
+            loadImageUrl="@{hero.image}"
             onError="@{@drawable/hero_placeholder}"
             placeHolder="@{@drawable/hero_placeholder}"
             android:layout_width="match_parent"

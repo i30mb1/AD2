@@ -7,10 +7,12 @@ import androidx.paging.PagedListAdapter
 import androidx.recyclerview.widget.DiffUtil
 import androidx.recyclerview.widget.RecyclerView
 import n7.ad2.R
-import n7.ad2.databinding.ItemListHeroBinding
+import n7.ad2.data.source.local.model.LocalHero
+import n7.ad2.databinding.ItemHeroBinding
 import n7.ad2.heroes.db.HeroModel
+import n7.ad2.ui.heroes.domain.adapter.toVo
 
-class HeroesPagedListAdapter internal constructor(fragment: HeroesFragment) : PagedListAdapter<HeroModel, HeroesPagedListAdapter.ViewHolder>(DiffCallback()) {
+class HeroesPagedListAdapter internal constructor(fragment: HeroesFragment) : PagedListAdapter<LocalHero, HeroesPagedListAdapter.ViewHolder>(DiffCallback()) {
 
     private val listener = View.OnClickListener {
         fragment.startHeroFragment(it, it.getTag(R.id.ViewHolderObject) as HeroModel)
@@ -23,10 +25,11 @@ class HeroesPagedListAdapter internal constructor(fragment: HeroesFragment) : Pa
         if (hero != null) holder.bindTo(hero) else holder.clear()
     }
 
-    class ViewHolder(var binding: ItemListHeroBinding) : RecyclerView.ViewHolder(binding.root) {
+    class ViewHolder(var binding: ItemHeroBinding) : RecyclerView.ViewHolder(binding.root) {
 
-        fun bindTo(hero: HeroModel) {
-            binding.hero = hero
+        fun bindTo(hero: LocalHero) {
+            binding.hero = hero.toVo()
+
             binding.root.setTag(R.id.ViewHolderObject, hero)
             binding.executePendingBindings()
         }
@@ -39,7 +42,7 @@ class HeroesPagedListAdapter internal constructor(fragment: HeroesFragment) : Pa
         companion object {
             fun from(parent: ViewGroup, listener: View.OnClickListener): ViewHolder {
                 val layoutInflater = LayoutInflater.from(parent.context)
-                val binding = ItemListHeroBinding.inflate(layoutInflater, parent, false)
+                val binding = ItemHeroBinding.inflate(layoutInflater, parent, false)
                 binding.root.setOnClickListener(listener)
                 return ViewHolder(binding)
             }
@@ -47,8 +50,8 @@ class HeroesPagedListAdapter internal constructor(fragment: HeroesFragment) : Pa
     }
 }
 
-class DiffCallback : DiffUtil.ItemCallback<HeroModel>() {
-    override fun areItemsTheSame(oldItem: HeroModel, newItem: HeroModel) = oldItem.codeName == newItem.codeName
+class DiffCallback : DiffUtil.ItemCallback<LocalHero>() {
+    override fun areItemsTheSame(oldItem: LocalHero, newItem: LocalHero) = oldItem.name == newItem.name
 
-    override fun areContentsTheSame(oldItem: HeroModel, newItem: HeroModel) = true
+    override fun areContentsTheSame(oldItem: LocalHero, newItem: LocalHero) = true
 }
