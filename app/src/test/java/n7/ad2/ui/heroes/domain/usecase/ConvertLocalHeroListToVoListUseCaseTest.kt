@@ -26,6 +26,7 @@ class ConvertLocalHeroListToVoListUseCaseTest {
 
         val voList: List<VOHero> = convertLocalHeroListToVoListUseCase.invoke(list)
 
+        //todo загуглить как проверить что все поля у обьекта были вызваны хотябы 1 раз
         Truth.assertThat(voList[0].name).isNotEmpty()
         Truth.assertThat(voList[0].image).isNotEmpty()
 
