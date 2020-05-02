@@ -82,7 +82,7 @@ class HeroInfoFragment : Fragment(R.layout.fragment_hero_personal) {
             adapter = spellsAdapter
         }
 
-        spellsAdapter.submitList(listOf(VOSpell(), VOSpell(), VOSpell(), VOSpell()))
+        spellsAdapter.submitList(listOf(VOSpell().apply { selected = true }, VOSpell(), VOSpell(), VOSpell()))
     }
 
     private fun setObservers() {

@@ -6,7 +6,6 @@ import android.view.ViewGroup
 import androidx.recyclerview.widget.DiffUtil
 import androidx.recyclerview.widget.ListAdapter
 import androidx.recyclerview.widget.RecyclerView
-import n7.ad2.R
 import n7.ad2.databinding.ItemSpellBinding
 import n7.ad2.ui.heroInfo.domain.vo.VOSpell
 
@@ -25,9 +24,10 @@ class SpellsListAdapter : ListAdapter<VOSpell, SpellsListAdapter.ViewHolder>(Dif
             private val listener: View.OnClickListener
     ) : RecyclerView.ViewHolder(binding.root) {
 
-        fun bind(spell: VOSpell) {
-            binding.iv.setImageResource(R.drawable.spell_placeholder)
-            binding.root.setOnClickListener(listener)
+        fun bind(model: VOSpell) = binding.let {
+            it.model = model
+            it.listener = listener
+            it.executePendingBindings()
         }
 
         companion object {

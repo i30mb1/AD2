@@ -8,16 +8,23 @@ class VOSpell : BaseObservable() {
 
     @get:Bindable
     var name: String = ""
-    set(value) {
-        field = value
-        notifyPropertyChanged(BR.name)
-    }
+        set(value) {
+            field = value
+            notifyPropertyChanged(BR.name)
+        }
 
     @get:Bindable
     var image: String = ""
-    set(value) {
-        field = value
-        notifyPropertyChanged(BR.image)
-    }
+        set(value) {
+            field = value
+            notifyPropertyChanged(BR.image)
+        }
+
+    @get:Bindable
+    var selected: Boolean = false
+        set(value) {
+            field = value
+            notifyPropertyChanged(BR.selected)
+        }
 
 }

@@ -3,16 +3,27 @@
     xmlns:app="http://schemas.android.com/apk/res-auto">
 
     <data>
+        <variable
+            name="model"
+            type="n7.ad2.ui.heroInfo.domain.vo.VOSpell" />
 
+        <variable
+            name="listener"
+            type="android.view.View.OnClickListener" />
     </data>
 
     <com.google.android.material.card.MaterialCardView
         android:layout_width="wrap_content"
+        app:selected="@{model.selected}"
+        android:onClick="@{listener}"
         android:stateListAnimator="@animator/spell"
         android:layout_height="wrap_content">
 
         <ImageView
             android:id="@+id/iv"
+            loadImageUrl="@{model.image}"
+            onError="@{@drawable/spell_placeholder}"
+            placeHolder="@{@drawable/spell_placeholder}"
             android:layout_width="60dp"
             android:layout_height="60dp"
             android:contentDescription="@string/desc_hero_spell"
