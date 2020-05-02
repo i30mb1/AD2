@@ -17,6 +17,8 @@ import org.json.JSONException
 import org.json.JSONObject
 
 class HeroInfoFragment : Fragment(R.layout.fragment_hero_personal) {
+
+    private var infoPopupWindow: InfoPopupWindow? = null
     private var currentLocale: String? = null
     private var lastClickedView: View? = null
     private val jsonObjectHeroFull: JSONObject? = null
@@ -52,8 +54,17 @@ class HeroInfoFragment : Fragment(R.layout.fragment_hero_personal) {
         setupSpellInfoRecyclerView()
     }
 
+   fun showPopup(view: View) {
+        infoPopupWindow = InfoPopupWindow(view)
+    }
+
+    override fun onPause() {
+        super.onPause()
+        infoPopupWindow?.dismiss()
+    }
+
     private fun setupSpellInfoRecyclerView() {
-        val spellsInfoListAdapter = SpellsInfoListAdapter()
+        val spellsInfoListAdapter = SpellsInfoListAdapter(this)
 
         binding.rvSpellsInfo.apply {
             adapter = spellsInfoListAdapter

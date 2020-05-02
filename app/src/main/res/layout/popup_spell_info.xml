@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+    </data>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <ImageView
+            android:id="@+id/pointer"
+            android:layout_width="wrap_content"
+            android:background="@drawable/popup_pointer"
+            android:layout_height="wrap_content"
+            tools:ignore="ContentDescription" />
+
+        <View
+            android:id="@+id/body"
+            android:layout_below="@id/pointer"
+            android:layout_width="match_parent"
+            android:background="@color/red_500"
+            android:layout_height="200dp" />
+
+
+    </RelativeLayout>
+</layout>
