@@ -13,19 +13,18 @@
         <ImageView
             android:id="@+id/pointer"
             android:layout_width="wrap_content"
-            android:background="@drawable/popup_pointer"
             android:layout_height="wrap_content"
-            tools:ignore="ContentDescription" />
+            android:background="@drawable/popup_pointer"
+            tools:ignore="ContentDescription"
+            tools:layout_marginStart="30dp" />
 
         <View
             android:id="@+id/body"
-            android:layout_marginEnd="8dp"
-            android:layout_marginStart="8dp"
-            android:layout_below="@id/pointer"
             android:layout_width="match_parent"
-            android:background="@color/red_500"
-            android:layout_height="200dp" />
-
-
+            android:layout_height="200dp"
+            android:layout_below="@id/pointer"
+            android:layout_marginStart="8dp"
+            android:layout_marginEnd="8dp"
+            android:background="@color/red_500" />
     </RelativeLayout>
 </layout>
