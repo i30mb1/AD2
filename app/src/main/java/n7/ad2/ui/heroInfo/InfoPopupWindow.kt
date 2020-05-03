@@ -7,6 +7,8 @@ import android.view.View
 import android.view.ViewGroup
 import android.widget.LinearLayout
 import android.widget.PopupWindow
+import androidx.core.graphics.component1
+import androidx.core.graphics.component2
 import androidx.core.view.doOnPreDraw
 import n7.ad2.databinding.PopupSpellInfoBinding
 
@@ -35,10 +37,10 @@ class InfoPopupWindow(private val anchor: View) {
     }
 
     private fun updatePointerLocation() {
-        val locationOnScreen = getLocationOnScreen()
+        val (x, y) = getLocationOnScreen()
 
         val params = binding.pointer.layoutParams as ViewGroup.MarginLayoutParams
-        params.leftMargin = locationOnScreen.x
+        params.leftMargin = x
         binding.pointer.layoutParams = params
     }
 
