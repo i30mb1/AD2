@@ -24,8 +24,9 @@
 
         <item name="android:windowAnimationStyle">@style/MyWindowAnimationTransition</item>
 
-        <item name="textAppearanceCaption">@style/Caption</item>
-        <item name="textAppearanceButton">@style/MyTextAppearanceButton</item>
+        <item name="textAppearanceCaption">@style/TextAppearance.Caption</item>
+        <item name="textAppearanceButton">@style/TextAppearance.Button</item>
+        <item name="textAppearanceOverline">@style/TextAppearance.OverLine</item>
 
         <item name="shapeAppearanceMediumComponent">@style/MyMediumComponent</item>
         <item name="materialAlertDialogTheme">@style/MyMaterialAlertDialogTheme</item>

@@ -19,7 +19,8 @@
             app:layout_constraintEnd_toStartOf="@+id/ivInt"
             app:layout_constraintHorizontal_bias="0.5"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent" />
+            app:layout_constraintTop_toTopOf="parent"
+            android:contentDescription="@string/desc_strength" />
 
         <ImageView
             android:id="@+id/ivInt"
@@ -30,7 +31,8 @@
             app:layout_constraintEnd_toStartOf="@+id/ivAgi"
             app:layout_constraintHorizontal_bias="0.5"
             app:layout_constraintStart_toEndOf="@+id/ivStr"
-            app:layout_constraintTop_toTopOf="parent" />
+            app:layout_constraintTop_toTopOf="parent"
+            android:contentDescription="@string/desc_intellect" />
 
         <ImageView
             android:id="@+id/ivAgi"
@@ -41,14 +43,15 @@
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0.5"
             app:layout_constraintStart_toEndOf="@+id/ivInt"
-            app:layout_constraintTop_toTopOf="parent" />
+            app:layout_constraintTop_toTopOf="parent"
+            android:contentDescription="@string/desc_agility" />
 
         <TextView
             android:id="@+id/tv_attr_str"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="20"
-            android:textAppearance="@style/Widget.TextView.Attrs"
+            android:textAppearance="?textAppearanceOverline"
             app:layout_constraintEnd_toStartOf="@+id/tv_attr_str_inc"
             app:layout_constraintHorizontal_bias="0.5"
             app:layout_constraintHorizontal_chainStyle="packed"
@@ -61,7 +64,7 @@
             android:layout_height="wrap_content"
             android:layout_marginStart="4dp"
             android:text="+1.5"
-            android:textAppearance="@style/Widget.TextView.Attrs"
+            android:textAppearance="?textAppearanceOverline"
             app:layout_constraintEnd_toEndOf="@+id/ivStr"
             app:layout_constraintHorizontal_bias="0.5"
             app:layout_constraintStart_toEndOf="@+id/tv_attr_str"
@@ -72,7 +75,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="20"
-            android:textAppearance="@style/Widget.TextView.Attrs"
+            android:textAppearance="?textAppearanceOverline"
             app:layout_constraintEnd_toStartOf="@+id/tv_attr_agi_inc"
             app:layout_constraintHorizontal_bias="0.5"
             app:layout_constraintHorizontal_chainStyle="packed"
@@ -85,7 +88,7 @@
             android:layout_height="wrap_content"
             android:layout_marginStart="4dp"
             android:text="+1.5"
-            android:textAppearance="@style/Widget.TextView.Attrs"
+            android:textAppearance="?textAppearanceOverline"
             app:layout_constraintEnd_toEndOf="@+id/ivAgi"
             app:layout_constraintHorizontal_bias="0.5"
             app:layout_constraintStart_toEndOf="@+id/tv_attr_agi"
@@ -96,7 +99,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="20"
-            android:textAppearance="@style/Widget.TextView.Attrs"
+            android:textAppearance="?textAppearanceOverline"
             app:layout_constraintEnd_toStartOf="@+id/tv_attr_int_inc"
             app:layout_constraintHorizontal_bias="0.5"
             app:layout_constraintHorizontal_chainStyle="packed"
@@ -109,7 +112,7 @@
             android:layout_height="wrap_content"
             android:layout_marginStart="4dp"
             android:text="+1.5"
-            android:textAppearance="@style/Widget.TextView.Attrs"
+            android:textAppearance="?textAppearanceOverline"
             app:layout_constraintEnd_toEndOf="@+id/ivInt"
             app:layout_constraintHorizontal_bias="0.5"
             app:layout_constraintStart_toEndOf="@+id/tv_attr_int"
