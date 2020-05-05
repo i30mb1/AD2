@@ -42,12 +42,12 @@
                 android:layout_alignBottom="@id/iv_image"
                 android:layout_alignTop="@id/iv_image"
                 android:layout_width="wrap_content"
-                app:agility="@{5}"
-                app:agilityInc="1"
-                app:intelligence="3"
-                app:intelligenceInc="1"
-                app:strength="3"
-                app:strengthInc="1"
+                app:agility="@{1}"
+                app:agilityInc="@{2}"
+                app:intelligence="@{3}"
+                app:intelligenceInc="@{4}"
+                app:strength="@{5}"
+                app:strengthInc="@{6}"
                 android:layout_height="wrap_content"/>
 
             <androidx.recyclerview.widget.RecyclerView

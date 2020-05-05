@@ -1,5 +1,6 @@
 package n7.ad2
 
+import android.annotation.SuppressLint
 import android.content.Context
 import android.graphics.Bitmap
 import android.graphics.Canvas
@@ -9,6 +10,7 @@ import androidx.constraintlayout.widget.ConstraintLayout
 import n7.ad2.databinding.CustomHeroAttrsBinding
 
 // link about @JVMOverload https://proandroiddev.com/misconception-about-kotlin-jvmoverloads-for-android-view-creation-cb88f432e1fe
+@SuppressLint("SetTextI18n")
 class CustomHeroAttrs(
         context: Context,
         attributeSet: AttributeSet
@@ -22,7 +24,7 @@ class CustomHeroAttrs(
         }
     var strengthInc: Int = 0
         set(value) {
-            binding.tvAttrStrInc.text = value.toString()
+            binding.tvAttrStrInc.text = "+$value"
             field = value
         }
     var agility: Int = 0
@@ -32,7 +34,7 @@ class CustomHeroAttrs(
         }
     var agilityInc: Int = 0
         set(value) {
-            binding.tvAttrAgiInc.text = value.toString()
+            binding.tvAttrAgiInc.text = "+$value"
             field = value
         }
     var intelligence: Int = 0
@@ -42,7 +44,7 @@ class CustomHeroAttrs(
         }
     var intelligenceInc: Int = 0
         set(value) {
-            binding.tvAttrIntInc.text = value.toString()
+            binding.tvAttrIntInc.text = "+$value"
             field = value
         }
 

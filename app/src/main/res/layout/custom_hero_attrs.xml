@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <layout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto">
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
 
     <data>
 
@@ -47,73 +48,72 @@
             android:id="@+id/tv_attr_str"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="20"
             android:textAppearance="?textAppearanceOverline"
             app:layout_constraintEnd_toStartOf="@+id/tv_attr_str_inc"
             app:layout_constraintHorizontal_bias="0.5"
             app:layout_constraintHorizontal_chainStyle="packed"
             app:layout_constraintStart_toStartOf="@+id/ivStr"
-            app:layout_constraintTop_toBottomOf="@+id/ivStr" />
+            app:layout_constraintTop_toBottomOf="@+id/ivStr"
+            tools:text="20" />
 
         <TextView
             android:id="@+id/tv_attr_str_inc"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginStart="4dp"
-            android:text="+1.5"
             android:textAppearance="?textAppearanceOverline"
             app:layout_constraintEnd_toEndOf="@+id/ivStr"
             app:layout_constraintHorizontal_bias="0.5"
             app:layout_constraintStart_toEndOf="@+id/tv_attr_str"
-            app:layout_constraintTop_toBottomOf="@+id/ivStr" />
+            app:layout_constraintTop_toBottomOf="@+id/ivStr"
+            tools:text="+1.5" />
 
         <TextView
             android:id="@+id/tv_attr_agi"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="20"
             android:textAppearance="?textAppearanceOverline"
             app:layout_constraintEnd_toStartOf="@+id/tv_attr_agi_inc"
             app:layout_constraintHorizontal_bias="0.5"
             app:layout_constraintHorizontal_chainStyle="packed"
             app:layout_constraintStart_toStartOf="@+id/ivAgi"
-            app:layout_constraintTop_toBottomOf="@+id/ivAgi" />
+            app:layout_constraintTop_toBottomOf="@+id/ivAgi"
+            tools:text="20" />
 
         <TextView
             android:id="@+id/tv_attr_agi_inc"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginStart="4dp"
-            android:text="+1.5"
+
             android:textAppearance="?textAppearanceOverline"
             app:layout_constraintEnd_toEndOf="@+id/ivAgi"
             app:layout_constraintHorizontal_bias="0.5"
             app:layout_constraintStart_toEndOf="@+id/tv_attr_agi"
-            app:layout_constraintTop_toBottomOf="@+id/ivAgi" />
+            app:layout_constraintTop_toBottomOf="@+id/ivAgi"
+            tools:text="+1.5" />
 
         <TextView
             android:id="@+id/tv_attr_int"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="20"
             android:textAppearance="?textAppearanceOverline"
             app:layout_constraintEnd_toStartOf="@+id/tv_attr_int_inc"
             app:layout_constraintHorizontal_bias="0.5"
             app:layout_constraintHorizontal_chainStyle="packed"
             app:layout_constraintStart_toStartOf="@+id/ivInt"
-            app:layout_constraintTop_toBottomOf="@+id/ivInt" />
+            app:layout_constraintTop_toBottomOf="@+id/ivInt"
+            tools:text="20" />
 
         <TextView
             android:id="@+id/tv_attr_int_inc"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginStart="4dp"
-            android:text="+1.5"
+
             android:textAppearance="?textAppearanceOverline"
             app:layout_constraintEnd_toEndOf="@+id/ivInt"
             app:layout_constraintHorizontal_bias="0.5"
             app:layout_constraintStart_toEndOf="@+id/tv_attr_int"
-            app:layout_constraintTop_toBottomOf="@+id/ivInt" />
+            app:layout_constraintTop_toBottomOf="@+id/ivInt"
+            tools:text="+1.5" />
 
         <SeekBar
             android:id="@+id/seekBar"
