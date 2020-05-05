@@ -14,37 +14,34 @@
             android:id="@+id/ivStr"
             android:layout_width="20dp"
             android:layout_height="20dp"
-            android:layout_marginTop="8dp"
-            android:src="@drawable/icon_dark"
+            android:contentDescription="@string/desc_strength"
+            android:src="@drawable/strength"
             app:layout_constraintEnd_toStartOf="@+id/ivInt"
             app:layout_constraintHorizontal_bias="0.5"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent"
-            android:contentDescription="@string/desc_strength" />
+            app:layout_constraintTop_toTopOf="parent" />
 
         <ImageView
             android:id="@+id/ivInt"
             android:layout_width="20dp"
             android:layout_height="20dp"
-            android:layout_marginTop="8dp"
-            android:src="@drawable/icon_gray"
+            android:contentDescription="@string/desc_intellect"
+            android:src="@drawable/intelligence"
             app:layout_constraintEnd_toStartOf="@+id/ivAgi"
             app:layout_constraintHorizontal_bias="0.5"
             app:layout_constraintStart_toEndOf="@+id/ivStr"
-            app:layout_constraintTop_toTopOf="parent"
-            android:contentDescription="@string/desc_intellect" />
+            app:layout_constraintTop_toTopOf="parent" />
 
         <ImageView
             android:id="@+id/ivAgi"
             android:layout_width="20dp"
             android:layout_height="20dp"
-            android:layout_marginTop="8dp"
-            android:src="@drawable/icon_white"
+            android:contentDescription="@string/desc_agility"
+            android:src="@drawable/agility"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0.5"
             app:layout_constraintStart_toEndOf="@+id/ivInt"
-            app:layout_constraintTop_toTopOf="parent"
-            android:contentDescription="@string/desc_agility" />
+            app:layout_constraintTop_toTopOf="parent" />
 
         <TextView
             android:id="@+id/tv_attr_str"
@@ -125,6 +122,7 @@
             android:layout_marginTop="8dp"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
+            android:visibility="gone"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/tv_attr_int_inc"
             app:layout_constraintVertical_bias="1.0" />
