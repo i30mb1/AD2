@@ -41,7 +41,13 @@
                 android:layout_alignParentEnd="true"
                 android:layout_alignBottom="@id/iv_image"
                 android:layout_alignTop="@id/iv_image"
-                android:layout_width="0dp"
+                android:layout_width="wrap_content"
+                app:agility="3"
+                app:agilityInc="1"
+                app:intelligence="3"
+                app:intelligenceInc="1"
+                app:strength="3"
+                app:strengthInc="1"
                 android:layout_height="wrap_content"/>
 
             <androidx.recyclerview.widget.RecyclerView

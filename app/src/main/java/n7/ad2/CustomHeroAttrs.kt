@@ -15,9 +15,30 @@ class CustomHeroAttrs(
 ) : ConstraintLayout(context, attributeSet) {
 
     val binding: CustomHeroAttrsBinding = CustomHeroAttrsBinding.inflate(LayoutInflater.from(context), this, true)
+    private var strength: Int
+    private var strengthInc: Int
+    private var agility: Int
+    private var agilityInc: Int
+    private var intelligence: Int
+    private var intelligenceInc: Int
 
     init {
+        context.obtainStyledAttributes(attributeSet, R.styleable.CustomHeroAttrs).apply {
+            strength = getInt(R.styleable.CustomHeroAttrs_strength, 0)
+            strengthInc = getInt(R.styleable.CustomHeroAttrs_strengthInc, 0)
+            agility = getInt(R.styleable.CustomHeroAttrs_agility, 0)
+            agilityInc = getInt(R.styleable.CustomHeroAttrs_agilityInc, 0)
+            intelligence = getInt(R.styleable.CustomHeroAttrs_intelligence, 0)
+            intelligenceInc = getInt(R.styleable.CustomHeroAttrs_intelligenceInc, 0)
+            recycle()
+        }
 
+        binding.tvAttrStr.text = strength.toString()
+        binding.tvAttrStrInc.text = strengthInc.toString()
+        binding.tvAttrAgi.text = agility.toString()
+        binding.tvAttrAgiInc.text = agilityInc.toString()
+        binding.tvAttrInt.text = intelligence.toString()
+        binding.tvAttrIntInc.text = intelligenceInc.toString()
     }
 
     fun getBitmapFromView(): Bitmap {
