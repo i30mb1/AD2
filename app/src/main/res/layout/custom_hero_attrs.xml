@@ -9,123 +9,100 @@
 
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
-        android:layout_height="wrap_content">
+        android:layout_height="match_parent">
 
         <ImageView
             android:id="@+id/ivStr"
-            android:layout_width="20dp"
-            android:layout_height="20dp"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
             android:contentDescription="@string/desc_strength"
             android:src="@drawable/strength"
+            app:layout_constraintBottom_toTopOf="@+id/guideline5"
             app:layout_constraintEnd_toStartOf="@+id/ivInt"
             app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintHorizontal_chainStyle="spread"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent" />
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="1.0" />
 
         <ImageView
             android:id="@+id/ivInt"
-            android:layout_width="20dp"
-            android:layout_height="20dp"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
             android:contentDescription="@string/desc_intellect"
             android:src="@drawable/intelligence"
+            app:layout_constraintBottom_toTopOf="@+id/guideline5"
             app:layout_constraintEnd_toStartOf="@+id/ivAgi"
             app:layout_constraintHorizontal_bias="0.5"
             app:layout_constraintStart_toEndOf="@+id/ivStr"
-            app:layout_constraintTop_toTopOf="parent" />
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="1.0" />
 
         <ImageView
             android:id="@+id/ivAgi"
-            android:layout_width="20dp"
-            android:layout_height="20dp"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
             android:contentDescription="@string/desc_agility"
             android:src="@drawable/agility"
+            app:layout_constraintBottom_toTopOf="@+id/guideline5"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0.5"
             app:layout_constraintStart_toEndOf="@+id/ivInt"
-            app:layout_constraintTop_toTopOf="parent" />
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="1.0" />
 
         <TextView
             android:id="@+id/tv_attr_str"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:textAppearance="?textAppearanceOverline"
-            app:layout_constraintEnd_toStartOf="@+id/tv_attr_str_inc"
-            app:layout_constraintHorizontal_bias="0.5"
-            app:layout_constraintHorizontal_chainStyle="packed"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="@+id/ivStr"
             app:layout_constraintStart_toStartOf="@+id/ivStr"
             app:layout_constraintTop_toBottomOf="@+id/ivStr"
+            app:layout_constraintVertical_bias="0.0"
             tools:text="20" />
 
-        <TextView
-            android:id="@+id/tv_attr_str_inc"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:textAppearance="?textAppearanceOverline"
-            app:layout_constraintEnd_toEndOf="@+id/ivStr"
-            app:layout_constraintHorizontal_bias="0.5"
-            app:layout_constraintStart_toEndOf="@+id/tv_attr_str"
-            app:layout_constraintTop_toBottomOf="@+id/ivStr"
-            tools:text="+1.5" />
 
         <TextView
             android:id="@+id/tv_attr_agi"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:textAppearance="?textAppearanceOverline"
-            app:layout_constraintEnd_toStartOf="@+id/tv_attr_agi_inc"
-            app:layout_constraintHorizontal_bias="0.5"
-            app:layout_constraintHorizontal_chainStyle="packed"
-            app:layout_constraintStart_toStartOf="@+id/ivAgi"
-            app:layout_constraintTop_toBottomOf="@+id/ivAgi"
-            tools:text="20" />
-
-        <TextView
-            android:id="@+id/tv_attr_agi_inc"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-
-            android:textAppearance="?textAppearanceOverline"
+            app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="@+id/ivAgi"
-            app:layout_constraintHorizontal_bias="0.5"
-            app:layout_constraintStart_toEndOf="@+id/tv_attr_agi"
-            app:layout_constraintTop_toBottomOf="@+id/ivAgi"
-            tools:text="+1.5" />
+            app:layout_constraintStart_toStartOf="@+id/ivAgi"
+            app:layout_constraintTop_toTopOf="@+id/guideline5"
+            app:layout_constraintVertical_bias="0.0"
+            tools:text="20" />
 
         <TextView
             android:id="@+id/tv_attr_int"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:textAppearance="?textAppearanceOverline"
-            app:layout_constraintEnd_toStartOf="@+id/tv_attr_int_inc"
-            app:layout_constraintHorizontal_bias="0.5"
-            app:layout_constraintHorizontal_chainStyle="packed"
+            app:layout_constraintBottom_toBottomOf="@+id/seekBar"
+            app:layout_constraintEnd_toEndOf="@+id/ivInt"
+            app:layout_constraintHorizontal_bias="0.444"
             app:layout_constraintStart_toStartOf="@+id/ivInt"
             app:layout_constraintTop_toBottomOf="@+id/ivInt"
+            app:layout_constraintVertical_bias="0.0"
             tools:text="20" />
-
-        <TextView
-            android:id="@+id/tv_attr_int_inc"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-
-            android:textAppearance="?textAppearanceOverline"
-            app:layout_constraintEnd_toEndOf="@+id/ivInt"
-            app:layout_constraintHorizontal_bias="0.5"
-            app:layout_constraintStart_toEndOf="@+id/tv_attr_int"
-            app:layout_constraintTop_toBottomOf="@+id/ivInt"
-            tools:text="+1.5" />
 
         <SeekBar
             android:id="@+id/seekBar"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
-            android:layout_marginTop="8dp"
             android:visibility="gone"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/tv_attr_int_inc"
-            app:layout_constraintVertical_bias="1.0" />
+            tools:layout_editor_absoluteX="206dp"
+            tools:layout_editor_absoluteY="60dp" />
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/guideline5"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            app:layout_constraintGuide_percent="0.5" />
 
     </androidx.constraintlayout.widget.ConstraintLayout>
 </layout>
