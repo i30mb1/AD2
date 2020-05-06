@@ -20,7 +20,7 @@ class GetLocalHeroDescriptionFromJsonUseCaseTest {
 
     private val moshi = Moshi.Builder().build()
 
-    private val useCase = GetLocalHeroDescriptionFromJsonUseCase(mock(), coroutineTestRule.testDispatcher, moshi)
+    private val useCase = GetLocalHeroDescriptionFromJsonUseCase(coroutineTestRule.testDispatcher, moshi)
 
     @Test
     fun `out put file length more than 500 chars`() = coroutineTestRule.runBlockingTest {

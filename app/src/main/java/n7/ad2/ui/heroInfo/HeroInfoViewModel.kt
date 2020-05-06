@@ -21,6 +21,9 @@ import n7.ad2.heroes.full.Response
 import n7.ad2.heroes.full.ResponseModel
 import n7.ad2.heroes.full.ResponsesSourceFactory
 import n7.ad2.heroes.full.ResponsesStorage
+import n7.ad2.ui.heroInfo.domain.model.MainAttribute
+import n7.ad2.ui.heroInfo.domain.usecase.GetLocalHeroDescriptionFromJsonUseCase
+import n7.ad2.ui.splash.domain.usecase.GetJsonFromAssetsUseCase
 import n7.ad2.utils.SnackbarMessage
 import org.json.JSONArray
 import org.json.JSONObject
@@ -43,7 +46,9 @@ interface ViewModelAssistedFactory<T : ViewModel> {
 class HeroInfoViewModel @AssistedInject constructor(
         application: Application,
         appDatabase: AppDatabase,
-        @Assisted handle: SavedStateHandle
+        @Assisted handle: SavedStateHandle,
+        private val getJsonFromAssetsUseCase: GetJsonFromAssetsUseCase,
+        private val getLocalHeroDescriptionFromJsonUseCase: GetLocalHeroDescriptionFromJsonUseCase
 ) : AndroidViewModel(application) {
 
     @AssistedInject.Factory
@@ -77,6 +82,9 @@ class HeroInfoViewModel @AssistedInject constructor(
         viewModelScope.launch {
             val hero = heroesDao.getHero(name)
             heroImage.postValue("file:///android_asset/${hero.assetsPath}/full.png")
+
+            val json = getJsonFromAssetsUseCase("${hero.assetsPath}/${GetJsonFromAssetsUseCase.HERO_DESCRIPTION}")
+            val localHeroDescription = getLocalHeroDescriptionFromJsonUseCase(json)
         }
 
     }
