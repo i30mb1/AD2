@@ -76,7 +76,7 @@ class HeroInfoViewModel @AssistedInject constructor(
     fun loadHero(name: String) {
         viewModelScope.launch {
             val hero = heroesDao.getHero(name)
-            heroImage.postValue("file:///android_asset/${hero.assetsPath}/full.webp")
+            heroImage.postValue("file:///android_asset/${hero.assetsPath}/full.png")
         }
 
     }
