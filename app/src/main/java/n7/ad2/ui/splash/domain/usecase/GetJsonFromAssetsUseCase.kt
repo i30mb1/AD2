@@ -20,5 +20,6 @@ class GetJsonFromAssetsUseCase @Inject constructor(
 
     companion object {
         const val HEROES_DATA_FILENAME = "heroesNew.json"
+        const val HERO_DESCRIPTION = "description.json"
     }
 }
