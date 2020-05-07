@@ -21,8 +21,10 @@ import n7.ad2.heroes.full.Response
 import n7.ad2.heroes.full.ResponseModel
 import n7.ad2.heroes.full.ResponsesSourceFactory
 import n7.ad2.heroes.full.ResponsesStorage
+import n7.ad2.ui.heroInfo.domain.adapter.toVO
 import n7.ad2.ui.heroInfo.domain.model.MainAttribute
 import n7.ad2.ui.heroInfo.domain.usecase.GetLocalHeroDescriptionFromJsonUseCase
+import n7.ad2.ui.heroInfo.domain.vo.VOHeroDescription
 import n7.ad2.ui.splash.domain.usecase.GetJsonFromAssetsUseCase
 import n7.ad2.utils.SnackbarMessage
 import org.json.JSONArray
@@ -68,7 +70,7 @@ class HeroInfoViewModel @AssistedInject constructor(
     private var mediaPlayer: MediaPlayer? = null
 
     private val heroesDao = appDatabase.heroesDao
-    val heroImage = MutableLiveData<String>()
+    val vOHero = MutableLiveData<VOHeroDescription>()
 
     init {
 //        loadHeroDescription(application.getString(R.string.language_resource))
@@ -81,10 +83,10 @@ class HeroInfoViewModel @AssistedInject constructor(
     fun loadHero(name: String) {
         viewModelScope.launch {
             val hero = heroesDao.getHero(name)
-            heroImage.postValue("file:///android_asset/${hero.assetsPath}/full.png")
 
             val json = getJsonFromAssetsUseCase("${hero.assetsPath}/${GetJsonFromAssetsUseCase.HERO_DESCRIPTION}")
-            val localHeroDescription = getLocalHeroDescriptionFromJsonUseCase(json)
+            val vOHeroDescription = getLocalHeroDescriptionFromJsonUseCase(json).toVO(hero.assetsPath)
+            vOHero.postValue(vOHeroDescription)
         }
 
     }

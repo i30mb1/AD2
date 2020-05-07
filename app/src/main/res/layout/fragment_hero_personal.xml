@@ -21,7 +21,7 @@
 
             <ImageView
                 android:id="@+id/iv_image"
-                loadImageUrl="@{viewModel.heroImage}"
+                loadImageUrl="@{viewModel.vOHero.heroImagePath}"
                 onError="@{@drawable/hero_placeholder}"
                 placeHolder="@{@drawable/hero_placeholder}"
                 android:layout_width="150dp"
