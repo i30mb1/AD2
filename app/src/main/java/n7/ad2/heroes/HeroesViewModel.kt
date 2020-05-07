@@ -11,12 +11,13 @@ import n7.ad2.heroes.db.HeroModel
 import n7.ad2.heroes.db.HeroesDao
 import n7.ad2.heroes.db.HeroesRoomDatabase
 import java.util.*
+import java.util.concurrent.*
 
 class HeroesViewModel constructor(
         application: Application
 ) : AndroidViewModel(application) {
 
-    private val heroesDao: HeroesDao = HeroesRoomDatabase.getDatabase(getApplication(), null).heroesDao()
+    private val heroesDao: HeroesDao = HeroesRoomDatabase.getDatabase(getApplication(), Executors.newSingleThreadExecutor()).heroesDao()
     private val heroesFilter = MutableLiveData("")
     val heroesPagedList: LiveData<PagedList<HeroModel>> = heroesFilter.switchMap {
         heroesDao.getDataSourceHeroesFilter(it).toLiveData(10)
