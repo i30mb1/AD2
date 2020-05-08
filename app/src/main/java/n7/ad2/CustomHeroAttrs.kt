@@ -81,6 +81,7 @@ class CustomHeroAttrs(
     }
 
    private fun getBitmapFromView(): Bitmap {
+       // instead of it you can use View.drawToBitmap
         val bitmap = Bitmap.createBitmap(this.width, this.height, Bitmap.Config.ARGB_8888)
         val canvas = Canvas(bitmap)
         this.draw(canvas)
