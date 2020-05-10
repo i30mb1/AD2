@@ -37,18 +37,18 @@
                 tools:srcCompat="@drawable/hero_placeholder" />
 
             <n7.ad2.CustomHeroAttrs
-                android:layout_toEndOf="@id/iv_image"
-                android:layout_alignParentEnd="true"
-                android:layout_alignBottom="@id/iv_image"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
                 android:layout_alignTop="@id/iv_image"
-                android:layout_width="wrap_content"
+                android:layout_alignBottom="@id/iv_image"
+                android:layout_alignParentEnd="true"
+                android:layout_toEndOf="@id/iv_image"
                 app:agility="@{1}"
                 app:agilityInc="@{2}"
                 app:intelligence="@{3}"
                 app:intelligenceInc="@{4}"
                 app:strength="@{5}"
-                app:strengthInc="@{6}"
-                android:layout_height="wrap_content"/>
+                app:strengthInc="@{6}" />
 
             <androidx.recyclerview.widget.RecyclerView
                 android:id="@+id/rv_spells"

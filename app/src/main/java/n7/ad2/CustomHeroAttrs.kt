@@ -55,7 +55,6 @@ class CustomHeroAttrs(
         }
 
     init {
-        foregroundGravity = Gravity.CENTER
         context.obtainStyledAttributes(attributeSet, R.styleable.CustomHeroAttrs).apply {
 
             recycle()

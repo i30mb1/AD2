@@ -10,6 +10,8 @@
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:layout_gravity="center_vertical"
+        android:gravity="center"
         android:orientation="vertical">
 
         <LinearLayout
@@ -24,8 +26,8 @@
 
             <ImageView
                 android:id="@+id/ivStr"
-                android:layout_width="30dp"
-                android:layout_height="30dp"
+                android:layout_width="25dp"
+                android:layout_height="25dp"
                 android:contentDescription="@string/desc_strength"
                 android:src="@drawable/strength"
                 app:layout_constraintBottom_toTopOf="@+id/guideline5"
@@ -43,8 +45,8 @@
 
             <ImageView
                 android:id="@+id/ivInt"
-                android:layout_width="29dp"
-                android:layout_height="match_parent"
+                android:layout_width="25dp"
+                android:layout_height="25dp"
                 android:contentDescription="@string/desc_intellect"
                 android:src="@drawable/intelligence"
                 app:layout_constraintBottom_toTopOf="@+id/guideline5"
@@ -61,8 +63,8 @@
 
             <ImageView
                 android:id="@+id/ivAgi"
-                android:layout_width="30dp"
-                android:layout_height="30dp"
+                android:layout_width="25dp"
+                android:layout_height="25dp"
                 android:contentDescription="@string/desc_agility"
                 android:src="@drawable/agility"
                 app:layout_constraintBottom_toTopOf="@+id/guideline5"
