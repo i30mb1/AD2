@@ -9,12 +9,13 @@
 
     <LinearLayout
         android:layout_width="match_parent"
-        android:orientation="vertical"
-        android:layout_height="wrap_content">
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
         <LinearLayout
             android:layout_width="match_parent"
-            android:orientation="horizontal"
-            android:layout_height="wrap_content">
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
 
             <Space
                 android:layout_width="0dp"
@@ -42,8 +43,8 @@
 
             <ImageView
                 android:id="@+id/ivInt"
-                android:layout_width="30dp"
-                android:layout_height="30dp"
+                android:layout_width="29dp"
+                android:layout_height="match_parent"
                 android:contentDescription="@string/desc_intellect"
                 android:src="@drawable/intelligence"
                 app:layout_constraintBottom_toTopOf="@+id/guideline5"
@@ -78,13 +79,16 @@
 
 
         </LinearLayout>
+
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content">
+
             <Space
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:layout_weight="1" />
+
             <TextView
                 android:id="@+id/tv_attr_str"
                 android:layout_width="wrap_content"
@@ -101,6 +105,7 @@
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:layout_weight="1" />
+
             <TextView
                 android:id="@+id/tv_attr_agi"
                 android:layout_width="wrap_content"
@@ -117,6 +122,7 @@
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:layout_weight="1" />
+
             <TextView
                 android:id="@+id/tv_attr_int"
                 android:layout_width="wrap_content"

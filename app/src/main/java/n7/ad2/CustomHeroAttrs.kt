@@ -5,7 +5,9 @@ import android.content.Context
 import android.graphics.Bitmap
 import android.graphics.Canvas
 import android.util.AttributeSet
+import android.view.Gravity
 import android.view.LayoutInflater
+import android.widget.FrameLayout
 import android.widget.LinearLayout
 import n7.ad2.databinding.CustomHeroAttrsBinding
 
@@ -14,7 +16,7 @@ import n7.ad2.databinding.CustomHeroAttrsBinding
 class CustomHeroAttrs(
         context: Context,
         attributeSet: AttributeSet
-) : LinearLayout(context, attributeSet) {
+) : FrameLayout(context, attributeSet) {
 
     companion object {
        private const val DEFAULT_SIZE = 60
@@ -53,6 +55,7 @@ class CustomHeroAttrs(
         }
 
     init {
+        foregroundGravity = Gravity.CENTER
         context.obtainStyledAttributes(attributeSet, R.styleable.CustomHeroAttrs).apply {
 
             recycle()
