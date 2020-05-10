@@ -20,18 +20,9 @@ class GetAssetsHeroesFromJsonUseCaseTest {
     @get:Rule
     val coroutineTestRule = CoroutineTestRule()
 
-    private val file = File("${System.getProperty("user.dir")}\\src\\main\\assets\\heroes.json")
     private val moshi = Moshi.Builder().build()
 
     val getLocalHeroesFromFileUseCase = GetAssetsHeroesFromJsonUseCase(coroutineTestRule.testDispatcher, moshi)
-
-    @Test
-    fun `hero file exist and not empty`() {
-        assertWithMessage("heroes file not Exist").that(file.exists()).isTrue()
-
-        val text = file.readText()
-        assertWithMessage("heroes file not ready! Run ParserInfo").that(text).isNotEmpty()
-    }
 
     @Test(expected = FileNotFoundException::class)
     fun `if file empty throw error`() = coroutineTestRule.runBlockingTest {
