@@ -11,8 +11,8 @@ class Repository @Inject constructor(
 ) {
 
     companion object {
-        const val HEROES_DATA_FILENAME = "heroesNew.json"
-        const val HERO_DESCRIPTION = "description.json"
+        const val ASSETS_PATH_HEROES = "heroes.json"
+        const val ASSETS_PATH_HERO_DESC = "description.json"
     }
 
     suspend fun getHeroesDao(): HeroesDao {

@@ -5,24 +5,19 @@ import android.media.MediaPlayer
 import androidx.appcompat.app.AlertDialog
 import androidx.databinding.ObservableBoolean
 import androidx.lifecycle.AndroidViewModel
-import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.SavedStateHandle
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
-import androidx.paging.LivePagedListBuilder
-import androidx.paging.PagedList
 import com.squareup.inject.assisted.Assisted
 import com.squareup.inject.assisted.AssistedInject
 import kotlinx.coroutines.launch
+import n7.ad2.data.source.local.Repository
 import n7.ad2.data.source.local.db.AppDatabase
 import n7.ad2.heroes.db.HeroModel
-import n7.ad2.heroes.full.Response
 import n7.ad2.heroes.full.ResponseModel
-import n7.ad2.heroes.full.ResponsesSourceFactory
 import n7.ad2.heroes.full.ResponsesStorage
 import n7.ad2.ui.heroInfo.domain.adapter.toVO
-import n7.ad2.ui.heroInfo.domain.model.MainAttribute
 import n7.ad2.ui.heroInfo.domain.usecase.GetLocalHeroDescriptionFromJsonUseCase
 import n7.ad2.ui.heroInfo.domain.vo.VOHeroDescription
 import n7.ad2.ui.splash.domain.usecase.GetJsonFromAssetsUseCase
@@ -84,7 +79,7 @@ class HeroInfoViewModel @AssistedInject constructor(
         viewModelScope.launch {
             val hero = heroesDao.getHero(name)
 
-            val json = getJsonFromAssetsUseCase("${hero.assetsPath}/${GetJsonFromAssetsUseCase.HERO_DESCRIPTION}")
+            val json = getJsonFromAssetsUseCase("${hero.assetsPath}/${Repository.ASSETS_PATH_HERO_DESC}")
             val vOHeroDescription = getLocalHeroDescriptionFromJsonUseCase(json).toVO(hero.assetsPath)
             vOHero.postValue(vOHeroDescription)
         }

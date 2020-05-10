@@ -4,11 +4,12 @@ import android.content.Context
 import androidx.work.CoroutineWorker
 import androidx.work.WorkerParameters
 import kotlinx.coroutines.coroutineScope
-import n7.ad2.data.source.local.db.AppDatabase
+import n7.ad2.data.source.local.Repository
 import n7.ad2.ui.MyApplication
 import n7.ad2.ui.splash.domain.usecase.ConvertAssetsHeroListToLocalHeroListUseCase
 import n7.ad2.ui.splash.domain.usecase.GetAssetsHeroesFromJsonUseCase
 import n7.ad2.ui.splash.domain.usecase.GetJsonFromAssetsUseCase
+import n7.ad2.ui.splash.domain.usecase.SaveLocalHeroesInDatabaseUseCase
 import javax.inject.Inject
 
 class DatabaseWorker(
@@ -17,7 +18,7 @@ class DatabaseWorker(
 ) : CoroutineWorker(context, workerParameters) {
 
     @Inject
-    lateinit var appDatabase: AppDatabase
+    lateinit var saveLocalHeroesInDatabaseUseCase: SaveLocalHeroesInDatabaseUseCase
 
     @Inject
     lateinit var getJsonFromAssetsUseCase: GetJsonFromAssetsUseCase
@@ -31,11 +32,11 @@ class DatabaseWorker(
     override suspend fun doWork(): Result = coroutineScope {
         (context as MyApplication).component.inject(this@DatabaseWorker)
 
-        val file: String = getJsonFromAssetsUseCase(GetJsonFromAssetsUseCase.HEROES_DATA_FILENAME)
+        val file: String = getJsonFromAssetsUseCase(Repository.ASSETS_PATH_HEROES)
         val assetsHeroesList = getAssetsHeroesFromJsonUseCase(file)
         val localHeroesList = convertAssetsHeroListToLocalHeroListUseCase(assetsHeroesList)
 
-        appDatabase.heroesDao.insert(localHeroesList)
+        saveLocalHeroesInDatabaseUseCase(localHeroesList)
 
         Result.success()
     }

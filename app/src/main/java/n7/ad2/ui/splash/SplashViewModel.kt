@@ -40,7 +40,7 @@ class SplashViewModel @Inject constructor(
                 .setInputData(data)
                 .setConstraints(constraints)
                 .build()
-        WorkManager.getInstance().beginUniqueWork(NewsWorker.TAG, ExistingWorkPolicy.APPEND, worker).enqueue()
+        WorkManager.getInstance(getApplication()).beginUniqueWork(NewsWorker.TAG, ExistingWorkPolicy.APPEND, worker).enqueue()
     }
 
 

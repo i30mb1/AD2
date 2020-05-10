@@ -385,9 +385,9 @@ class ParseHeroes private constructor(
 fun main() = runBlocking {
     parser {
         createHeroesFile = true
-        loadHeros = true
-        loadHeroFullImage = true
-        loadHeroSpellImage = true
+        loadHeros = false
+        loadHeroFullImage = false
+        loadHeroSpellImage = false
     }.start()
 }
 
