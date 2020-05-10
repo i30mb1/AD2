@@ -6,7 +6,9 @@ import androidx.room.PrimaryKey
 
 @Entity(tableName = "LocalHeroes")
 data class LocalHero(
-        @PrimaryKey
+        @PrimaryKey(autoGenerate = true)
+        @ColumnInfo(name = "rowid")
+        val id: Long = 0,
         @ColumnInfo(name = "name")
         val name: String,
         @ColumnInfo(name = "assetsPath")
