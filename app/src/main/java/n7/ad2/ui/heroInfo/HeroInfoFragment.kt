@@ -2,6 +2,7 @@ package n7.ad2.ui.heroInfo
 
 import android.os.Bundle
 import android.util.TypedValue
+import android.view.Gravity
 import android.view.Menu
 import android.view.MenuInflater
 import android.view.MenuItem
@@ -9,6 +10,7 @@ import android.view.View
 import androidx.fragment.app.Fragment
 import androidx.fragment.app.activityViewModels
 import androidx.recyclerview.widget.LinearLayoutManager
+import androidx.recyclerview.widget.LinearSnapHelper
 import n7.ad2.R
 import n7.ad2.databinding.FragmentHeroPersonalBinding
 import n7.ad2.ui.heroInfo.domain.vo.VOSpell
@@ -79,10 +81,11 @@ class HeroInfoFragment : Fragment(R.layout.fragment_hero_personal) {
 
         binding.rvSpells.apply {
             setHasFixedSize(true)
+            LinearSnapHelper().attachToRecyclerView(this)
             adapter = spellsAdapter
         }
 
-        spellsAdapter.submitList(listOf(VOSpell().apply { selected = true }, VOSpell(), VOSpell(), VOSpell()))
+        spellsAdapter.submitList(listOf(VOSpell().apply { selected = true }, VOSpell(), VOSpell(), VOSpell(), VOSpell()))
     }
 
     private fun setObservers() {
