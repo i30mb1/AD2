@@ -9,7 +9,7 @@ import java.io.FileNotFoundException
 import javax.inject.Inject
 
 @Suppress("BlockingMethodInNonBlockingContext")
-class GetAssetsHeroesFromJsonUseCase @Inject constructor(
+class ConvertJsonHeroesToAssetsHeroesUseCase @Inject constructor(
         private val ioDispatcher: CoroutineDispatcher,
         private val moshi: Moshi
 ) {

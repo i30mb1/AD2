@@ -1,7 +1,6 @@
 package n7.ad2.ui.splash.domain.usecase
 
 import android.app.Application
-import android.content.SharedPreferences
 import androidx.core.content.edit
 import kotlinx.coroutines.CoroutineDispatcher
 import kotlinx.coroutines.withContext

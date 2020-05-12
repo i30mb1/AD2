@@ -20,7 +20,7 @@ import n7.ad2.heroes.full.ResponsesStorage
 import n7.ad2.ui.heroInfo.domain.adapter.toVO
 import n7.ad2.ui.heroInfo.domain.usecase.GetLocalHeroDescriptionFromJsonUseCase
 import n7.ad2.ui.heroInfo.domain.vo.VOHeroDescription
-import n7.ad2.ui.splash.domain.usecase.GetJsonFromAssetsUseCase
+import n7.ad2.ui.splash.domain.usecase.GetJsonHeroesFromAssetsUseCase
 import n7.ad2.utils.SnackbarMessage
 import org.json.JSONArray
 import org.json.JSONObject
@@ -44,7 +44,7 @@ class HeroInfoViewModel @AssistedInject constructor(
         application: Application,
         appDatabase: AppDatabase,
         @Assisted handle: SavedStateHandle,
-        private val getJsonFromAssetsUseCase: GetJsonFromAssetsUseCase,
+        private val getJsonFromAssetsUseCase: GetJsonHeroesFromAssetsUseCase,
         private val getLocalHeroDescriptionFromJsonUseCase: GetLocalHeroDescriptionFromJsonUseCase
 ) : AndroidViewModel(application) {
 
