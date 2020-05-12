@@ -79,7 +79,7 @@ class HeroInfoViewModel @AssistedInject constructor(
         viewModelScope.launch {
             val hero = heroesDao.getHero(name)
 
-            val json = getJsonFromAssetsUseCase("${hero.assetsPath}/${Repository.ASSETS_PATH_HERO_DESC}")
+            val json = getJsonFromAssetsUseCase()
             val vOHeroDescription = getLocalHeroDescriptionFromJsonUseCase(json).toVO(hero.assetsPath)
             vOHero.postValue(vOHeroDescription)
         }

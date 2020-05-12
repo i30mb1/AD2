@@ -2,7 +2,6 @@ package n7.ad2.ui.heroInfo.domain.usecase
 
 import androidx.test.filters.SmallTest
 import com.google.common.truth.Truth.assertThat
-import com.nhaarman.mockitokotlin2.mock
 import com.squareup.moshi.Moshi
 import kotlinx.coroutines.ExperimentalCoroutinesApi
 import n7.ad2.CoroutineTestRule
