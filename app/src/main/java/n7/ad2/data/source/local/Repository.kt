@@ -5,6 +5,7 @@ import android.content.SharedPreferences
 import kotlinx.coroutines.withContext
 import n7.ad2.data.source.local.db.AppDatabase
 import n7.ad2.data.source.local.db.HeroesDao
+import n7.ad2.data.source.local.model.LocalHero
 import javax.inject.Inject
 
 class Repository @Inject constructor(
@@ -18,8 +19,8 @@ class Repository @Inject constructor(
         const val ASSETS_PATH_HERO_DESC = "description.json"
     }
 
-    suspend fun getHeroesDao(): HeroesDao {
-        return appDatabase.heroesDao
+    suspend fun insertHeroes(list: List<LocalHero>) {
+        appDatabase.heroesDao.insert(list)
     }
 
     suspend fun getAssetsFile(filePath: String): String {
