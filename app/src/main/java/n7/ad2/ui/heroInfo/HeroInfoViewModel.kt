@@ -12,15 +12,14 @@ import androidx.lifecycle.viewModelScope
 import com.squareup.inject.assisted.Assisted
 import com.squareup.inject.assisted.AssistedInject
 import kotlinx.coroutines.launch
-import n7.ad2.data.source.local.Repository
 import n7.ad2.data.source.local.db.AppDatabase
 import n7.ad2.heroes.db.HeroModel
 import n7.ad2.heroes.full.ResponseModel
 import n7.ad2.heroes.full.ResponsesStorage
 import n7.ad2.ui.heroInfo.domain.adapter.toVO
+import n7.ad2.ui.heroInfo.domain.usecase.GetJsonHeroDescriptionUseCase
 import n7.ad2.ui.heroInfo.domain.usecase.GetLocalHeroDescriptionFromJsonUseCase
 import n7.ad2.ui.heroInfo.domain.vo.VOHeroDescription
-import n7.ad2.ui.splash.domain.usecase.GetJsonHeroesFromAssetsUseCase
 import n7.ad2.utils.SnackbarMessage
 import org.json.JSONArray
 import org.json.JSONObject
@@ -44,7 +43,7 @@ class HeroInfoViewModel @AssistedInject constructor(
         application: Application,
         appDatabase: AppDatabase,
         @Assisted handle: SavedStateHandle,
-        private val getJsonFromAssetsUseCase: GetJsonHeroesFromAssetsUseCase,
+        private val getJsonHeroDescriptionUseCase: GetJsonHeroDescriptionUseCase,
         private val getLocalHeroDescriptionFromJsonUseCase: GetLocalHeroDescriptionFromJsonUseCase
 ) : AndroidViewModel(application) {
 
@@ -79,9 +78,9 @@ class HeroInfoViewModel @AssistedInject constructor(
         viewModelScope.launch {
             val hero = heroesDao.getHero(name)
 
-            val json = getJsonFromAssetsUseCase()
-            val vOHeroDescription = getLocalHeroDescriptionFromJsonUseCase(json).toVO(hero.assetsPath)
-            vOHero.postValue(vOHeroDescription)
+            val json = getJsonHeroDescriptionUseCase(hero.assetsPath)
+            val vOHeroDescription = getLocalHeroDescriptionFromJsonUseCase(json).toVO(hero)
+            vOHero.value = vOHeroDescription
         }
 
     }
