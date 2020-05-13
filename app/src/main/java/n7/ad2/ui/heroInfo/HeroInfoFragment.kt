@@ -81,12 +81,9 @@ class HeroInfoFragment : Fragment(R.layout.fragment_hero_personal) {
         val spellsAdapter = SpellsListAdapter()
 
         binding.rvSpells.apply {
-//            setHasFixedSize(true)
             LinearSnapHelper().attachToRecyclerView(this)
             adapter = spellsAdapter
         }
-        viewModel.spells.observe(viewLifecycleOwner, Observer { t -> spellsAdapter.submitList(t) })
-//        spellsAdapter.submitList(listOf(VOSpell().apply { selected = true }, VOSpell(), VOSpell(), VOSpell(), VOSpell()))
     }
 
     private fun setObservers() {

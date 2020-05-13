@@ -60,6 +60,7 @@
                 android:paddingBottom="4dp"
                 app:layoutManager="LinearLayoutManager"
                 tools:itemCount="4"
+                data="@{viewModel.VOHero.spells}"
                 tools:listitem="@layout/item_spell" />
 
             <androidx.recyclerview.widget.RecyclerView

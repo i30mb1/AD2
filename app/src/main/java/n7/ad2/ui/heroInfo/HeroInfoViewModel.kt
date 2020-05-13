@@ -67,9 +67,6 @@ class HeroInfoViewModel @AssistedInject constructor(
 
     private val heroesDao = appDatabase.heroesDao
     val vOHero = MutableLiveData<VOHeroDescription>()
-    val spells = Transformations.switchMap(vOHero) { input ->
-        MutableLiveData(input.spells)
-    }
 
     init {
 //        loadHeroDescription(application.getString(R.string.language_resource))
