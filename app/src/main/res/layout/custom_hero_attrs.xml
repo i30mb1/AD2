@@ -144,13 +144,12 @@
                 android:layout_weight="1" />
         </LinearLayout>
 
-        <SeekBar
-            android:id="@+id/seekBar"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
+        <com.google.android.material.slider.Slider
+            android:layout_width="wrap_content"
+            android:valueFrom="1"
+            android:valueTo="25"
             android:visibility="gone"
-            tools:layout_editor_absoluteX="206dp"
-            tools:layout_editor_absoluteY="60dp" />
+            android:layout_height="wrap_content"/>
     </LinearLayout>
 
 
