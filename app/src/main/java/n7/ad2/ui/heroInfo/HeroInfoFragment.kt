@@ -9,6 +9,7 @@ import android.view.MenuItem
 import android.view.View
 import androidx.fragment.app.Fragment
 import androidx.fragment.app.activityViewModels
+import androidx.lifecycle.Observer
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.LinearSnapHelper
 import n7.ad2.R
@@ -80,12 +81,12 @@ class HeroInfoFragment : Fragment(R.layout.fragment_hero_personal) {
         val spellsAdapter = SpellsListAdapter()
 
         binding.rvSpells.apply {
-            setHasFixedSize(true)
+//            setHasFixedSize(true)
             LinearSnapHelper().attachToRecyclerView(this)
             adapter = spellsAdapter
         }
-
-        spellsAdapter.submitList(listOf(VOSpell().apply { selected = true }, VOSpell(), VOSpell(), VOSpell(), VOSpell()))
+        viewModel.spells.observe(viewLifecycleOwner, Observer { t -> spellsAdapter.submitList(t) })
+//        spellsAdapter.submitList(listOf(VOSpell().apply { selected = true }, VOSpell(), VOSpell(), VOSpell(), VOSpell()))
     }
 
     private fun setObservers() {

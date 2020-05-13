@@ -5,8 +5,10 @@ import android.media.MediaPlayer
 import androidx.appcompat.app.AlertDialog
 import androidx.databinding.ObservableBoolean
 import androidx.lifecycle.AndroidViewModel
+import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.SavedStateHandle
+import androidx.lifecycle.Transformations
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
 import com.squareup.inject.assisted.Assisted
@@ -65,6 +67,9 @@ class HeroInfoViewModel @AssistedInject constructor(
 
     private val heroesDao = appDatabase.heroesDao
     val vOHero = MutableLiveData<VOHeroDescription>()
+    val spells = Transformations.switchMap(vOHero) { input ->
+        MutableLiveData(input.spells)
+    }
 
     init {
 //        loadHeroDescription(application.getString(R.string.language_resource))
