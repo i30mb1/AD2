@@ -13,4 +13,11 @@ class VOHeroDescription : BaseObservable() {
         notifyPropertyChanged(BR.heroImagePath)
     }
 
+    @get:Bindable
+    var spells: List<VOSpell> = emptyList()
+    set(value) {
+        field = value
+        notifyPropertyChanged(BR.spells)
+    }
+
 }
