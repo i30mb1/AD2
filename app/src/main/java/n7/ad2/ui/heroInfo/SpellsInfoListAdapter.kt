@@ -3,12 +3,14 @@ package n7.ad2.ui.heroInfo
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import androidx.recyclerview.widget.DiffUtil
 import androidx.recyclerview.widget.ListAdapter
 import androidx.recyclerview.widget.RecyclerView
 import n7.ad2.databinding.ItemSpellInfoBinding
+import n7.ad2.ui.heroInfo.domain.vo.VODescription
 import n7.ad2.ui.heroInfo.domain.vo.VOSpell
 
-class SpellsInfoListAdapter(fragment: HeroInfoFragment) : ListAdapter<VOSpell, RecyclerView.ViewHolder>(DiffCallback()) {
+class SpellsInfoListAdapter(fragment: HeroInfoFragment) : ListAdapter<VODescription, RecyclerView.ViewHolder>(DiffCallback()) {
 
     private var listener: View.OnClickListener = View.OnClickListener {
         fragment.showPopup(it)
@@ -27,7 +29,7 @@ class SpellsInfoListAdapter(fragment: HeroInfoFragment) : ListAdapter<VOSpell, R
             private val listener: View.OnClickListener
     ) : RecyclerView.ViewHolder(binding.root) {
 
-        fun bind(item: VOSpell) {
+        fun bind(item: VODescription) {
             binding.click.setOnClickListener(listener)
             binding.click2.setOnClickListener(listener)
         }
@@ -39,7 +41,14 @@ class SpellsInfoListAdapter(fragment: HeroInfoFragment) : ListAdapter<VOSpell, R
                 return ViewHolderSpellInfoPlain(binding, listener)
             }
         }
-
     }
 
+    private class DiffCallback : DiffUtil.ItemCallback<VODescription>() {
+
+        override fun areItemsTheSame(oldItem: VODescription, newItem: VODescription): Boolean = oldItem.title == newItem.title
+
+        override fun areContentsTheSame(oldItem: VODescription, newItem: VODescription): Boolean = true
+    }
 }
+
+
