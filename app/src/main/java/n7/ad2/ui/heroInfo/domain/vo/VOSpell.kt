@@ -27,4 +27,11 @@ class VOSpell : BaseObservable() {
             notifyPropertyChanged(BR.selected)
         }
 
+    @get:Bindable
+    var voDescription: List<VODescription> = emptyList()
+        set(value) {
+            field = value
+            notifyPropertyChanged(BR.voDescription)
+        }
+
 }
