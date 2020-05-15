@@ -24,7 +24,7 @@
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
                 android:text="@{model.title}"
-                android:textAppearance="?textAppearanceSubtitle2"
+                android:textAppearance="?textAppearanceSubtitle1"
                 tools:text="Duel" />
 
             <TextView
@@ -34,7 +34,7 @@
                 android:background="@color/black_700"
                 android:gravity="center"
                 android:text="@{model.hotkey}"
-                android:textAppearance="?textAppearanceSubtitle2"
+                android:textAppearance="?textAppearanceSubtitle1"
                 tools:text="T" />
 
             <TextView
@@ -44,7 +44,7 @@
                 android:background="@color/black_700"
                 android:gravity="center"
                 android:text="@{model.hotkey}"
-                android:textAppearance="?textAppearanceSubtitle2"
+                android:textAppearance="?textAppearanceSubtitle1"
                 tools:text="T" />
         </LinearLayout>
 
