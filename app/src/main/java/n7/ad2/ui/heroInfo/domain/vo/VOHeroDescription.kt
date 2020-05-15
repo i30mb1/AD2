@@ -20,4 +20,11 @@ class VOHeroDescription : BaseObservable() {
         notifyPropertyChanged(BR.spells)
     }
 
+    @get:Bindable
+    var selectedDescriptionList: List<VODescription> = emptyList()
+    set(value) {
+        field = value
+        notifyPropertyChanged(BR.selectedDescriptionList)
+    }
+
 }
