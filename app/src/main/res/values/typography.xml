@@ -15,6 +15,18 @@
         <item name="android:textColor">?myTextColorPrimary</item>
     </style>
 
+    <style name="TextAppearance.Subtitle2" parent="TextAppearance.MaterialComponents.Subtitle2">
+        <item name="android:textColor">@android:color/white</item>
+        <item name="android:textSize">12sp</item>
+    </style>
+
+    <style name="TextAppearance.Subtitle1" parent="TextAppearance.MaterialComponents.Subtitle1">
+        <item name="android:textColor">?myTextColorPrimary</item>
+        <item name="android:textSize">14sp</item>
+        <item name="android:textStyle">bold</item>
+
+    </style>
+
     <style name="TextAppearance.OverLine" parent="TextAppearance.MaterialComponents.Overline">
         <item name="android:textColor">?myTextColorPrimary</item>
         <item name="android:textSize">12sp</item>

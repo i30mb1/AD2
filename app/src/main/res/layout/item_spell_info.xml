@@ -1,11 +1,12 @@
 <?xml version="1.0" encoding="utf-8"?>
 <layout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto">
+    xmlns:tools="http://schemas.android.com/tools">
 
     <data>
+
         <variable
             name="model"
-            type="n7.ad2.ui.heroInfo.domain.vo.VOSpell" />
+            type="n7.ad2.ui.heroInfo.domain.vo.VODescription" />
     </data>
 
     <com.google.android.material.card.MaterialCardView
@@ -15,26 +16,36 @@
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:gravity="center_vertical"
-            android:background="?colorPrimary">
+            android:background="?colorPrimary"
+            android:gravity="center_vertical">
 
             <TextView
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
-                android:text="@{model.name}" />
+                android:text="@{model.title}"
+                android:textAppearance="?textAppearanceSubtitle2"
+                tools:text="Duel" />
 
-            <ImageView
+            <TextView
                 android:id="@+id/click"
                 android:layout_width="30dp"
-                android:src="@color/black_700"
-                android:layout_height="30dp" />
+                android:layout_height="30dp"
+                android:background="@color/black_700"
+                android:gravity="center"
+                android:text="@{model.hotkey}"
+                android:textAppearance="?textAppearanceSubtitle2"
+                tools:text="T" />
 
-            <ImageView
+            <TextView
                 android:id="@+id/click2"
                 android:layout_width="30dp"
-                android:src="@color/black_700"
-                android:layout_height="30dp" />
+                android:layout_height="30dp"
+                android:background="@color/black_700"
+                android:gravity="center"
+                android:text="@{model.hotkey}"
+                android:textAppearance="?textAppearanceSubtitle2"
+                tools:text="T" />
         </LinearLayout>
 
 
