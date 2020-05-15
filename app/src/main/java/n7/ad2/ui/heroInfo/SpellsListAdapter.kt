@@ -9,10 +9,11 @@ import n7.ad2.base.BaseVOListener
 import n7.ad2.databinding.ItemSpellBinding
 import n7.ad2.ui.heroInfo.domain.vo.VOSpell
 
-class SpellsListAdapter : ListAdapter<VOSpell, SpellsListAdapter.ViewHolder>(DiffCallback()) {
+class SpellsListAdapter(fragment: HeroInfoFragment) : ListAdapter<VOSpell, SpellsListAdapter.ViewHolder>(DiffCallback()) {
 
     private val listener = object : BaseVOListener<VOSpell> {
         override fun onClickListener(model: VOSpell) {
+            fragment.setDescription(model.voDescription)
             currentList.forEach { item -> item.selected = false }
             model.selected = true
         }
