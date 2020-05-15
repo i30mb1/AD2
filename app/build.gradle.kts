@@ -54,6 +54,12 @@ android {
         }
     }
 
+    testOptions {
+        unitTests.apply {
+            isIncludeAndroidResources = true
+        }
+    }
+
 }
 
 dependencies {

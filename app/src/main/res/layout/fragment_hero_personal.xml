@@ -5,77 +5,72 @@
 
     <data>
 
+        <variable
+            name="viewModel"
+            type="n7.ad2.ui.heroInfo.HeroInfoViewModel" />
     </data>
 
     <androidx.core.widget.NestedScrollView
         android:layout_width="match_parent"
         android:layout_height="match_parent">
 
-        <androidx.constraintlayout.widget.ConstraintLayout
+        <RelativeLayout
             android:layout_width="match_parent"
-            android:layout_height="wrap_content">
+            android:layout_height="match_parent"
+            android:padding="4dp">
 
             <ImageView
-                android:id="@+id/iv_fragment_hero_personal"
+                android:id="@+id/iv_image"
+                loadImageUrl="@{viewModel.vOHero.heroImagePath}"
+                onError="@{@drawable/hero_placeholder}"
+                placeHolder="@{@drawable/hero_placeholder}"
                 android:layout_width="150dp"
                 android:layout_height="80dp"
-                android:layout_marginStart="8dp"
-                android:layout_marginTop="8dp"
-                android:background="?colorAccent"
-                android:clickable="true"
-                android:contentDescription="@string/setting_tell_friend_title"
+                android:layout_marginStart="4dp"
+                android:layout_marginTop="4dp"
+                android:contentDescription="@string/desc_dota_hero"
                 android:cropToPadding="true"
-                android:elevation="2dp"
-                android:focusable="true"
-                android:foreground="?android:attr/selectableItemBackground"
-                android:paddingStart="2dp"
-                android:paddingEnd="0dp"
                 android:scaleType="centerCrop"
                 android:transitionName="iv"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent"
-                app:srcCompat="@drawable/hero_placeholder"
-                tools:ignore="UnusedAttribute" />
+                tools:srcCompat="@drawable/hero_placeholder" />
 
-            <ScrollView
-                android:layout_width="0dp"
-                android:layout_height="0dp"
-                app:layout_constraintBottom_toBottomOf="@+id/iv_fragment_hero_personal"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintStart_toEndOf="@+id/iv_fragment_hero_personal"
-                app:layout_constraintTop_toTopOf="@+id/iv_fragment_hero_personal">
+            <n7.ad2.CustomHeroAttrs
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_alignTop="@id/iv_image"
+                android:layout_alignBottom="@id/iv_image"
+                android:layout_alignParentEnd="true"
+                android:layout_toEndOf="@id/iv_image"
+                app:agility="@{1}"
+                app:agilityInc="@{2}"
+                app:intelligence="@{3}"
+                app:intelligenceInc="@{4}"
+                app:strength="@{5}"
+                app:strengthInc="@{6}" />
 
-                <HorizontalScrollView
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:minHeight="60dp"
-                    android:layout_gravity="center_vertical"
-                    android:scrollbars="none">
-
-                    <LinearLayout
-                        android:id="@+id/ll_fragment_hero_personal_spells"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:animateLayoutChanges="true"
-                        android:orientation="horizontal"
-                        android:paddingStart="8dp"
-                        android:paddingEnd="8dp" />
-                </HorizontalScrollView>
-            </ScrollView>
-
-            <LinearLayout
-                android:id="@+id/ll_fragment_hero_personal_descriptions"
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/rv_spells"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="8dp"
-                android:animateLayoutChanges="true"
-                android:minHeight="400dp"
-                android:orientation="vertical"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/iv_fragment_hero_personal">
+                android:layout_below="@+id/iv_image"
+                android:orientation="horizontal"
+                android:paddingTop="4dp"
+                android:paddingBottom="4dp"
+                app:layoutManager="LinearLayoutManager"
+                tools:itemCount="4"
+                data="@{viewModel.VOHero.spells}"
+                tools:listitem="@layout/item_spell" />
 
-            </LinearLayout>
-        </androidx.constraintlayout.widget.ConstraintLayout>
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/rv_spells_info"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_below="@id/rv_spells"
+                tools:itemCount="3"
+                tools:listitem="@layout/item_spell_info" />
+
+        </RelativeLayout>
     </androidx.core.widget.NestedScrollView>
 </layout>

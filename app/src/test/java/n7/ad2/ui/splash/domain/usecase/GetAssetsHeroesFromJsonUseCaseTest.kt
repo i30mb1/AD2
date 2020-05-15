@@ -20,7 +20,7 @@ class GetAssetsHeroesFromJsonUseCaseTest {
 
     private val moshi = Moshi.Builder().build()
 
-    val getLocalHeroesFromFileUseCase = GetAssetsHeroesFromJsonUseCase(coroutineTestRule.testDispatcher, moshi)
+    val getLocalHeroesFromFileUseCase = ConvertJsonHeroesToAssetsHeroesUseCase(coroutineTestRule.testDispatcher, moshi)
 
     @Test(expected = FileNotFoundException::class)
     fun `if file empty throw error`() = coroutineTestRule.runBlockingTest {

@@ -4,11 +4,11 @@ import android.content.Context
 import androidx.work.CoroutineWorker
 import androidx.work.WorkerParameters
 import kotlinx.coroutines.coroutineScope
-import n7.ad2.data.source.local.db.AppDatabase
 import n7.ad2.ui.MyApplication
 import n7.ad2.ui.splash.domain.usecase.ConvertAssetsHeroListToLocalHeroListUseCase
-import n7.ad2.ui.splash.domain.usecase.GetAssetsHeroesFromJsonUseCase
-import n7.ad2.ui.splash.domain.usecase.GetJsonFromAssetsUseCase
+import n7.ad2.ui.splash.domain.usecase.ConvertJsonHeroesToAssetsHeroesUseCase
+import n7.ad2.ui.splash.domain.usecase.GetJsonHeroesFromAssetsUseCase
+import n7.ad2.ui.splash.domain.usecase.SaveLocalHeroesInDatabaseUseCase
 import javax.inject.Inject
 
 class DatabaseWorker(
@@ -17,13 +17,13 @@ class DatabaseWorker(
 ) : CoroutineWorker(context, workerParameters) {
 
     @Inject
-    lateinit var appDatabase: AppDatabase
+    lateinit var saveLocalHeroesInDatabaseUseCase: SaveLocalHeroesInDatabaseUseCase
 
     @Inject
-    lateinit var getJsonFromAssetsUseCase: GetJsonFromAssetsUseCase
+    lateinit var getJsonHeroesFromAssetsUseCase: GetJsonHeroesFromAssetsUseCase
 
     @Inject
-    lateinit var getAssetsHeroesFromJsonUseCase: GetAssetsHeroesFromJsonUseCase
+    lateinit var convertJsonHeroesToAssetsHeroesUseCase: ConvertJsonHeroesToAssetsHeroesUseCase
 
     @Inject
     lateinit var convertAssetsHeroListToLocalHeroListUseCase: ConvertAssetsHeroListToLocalHeroListUseCase
@@ -31,11 +31,11 @@ class DatabaseWorker(
     override suspend fun doWork(): Result = coroutineScope {
         (context as MyApplication).component.inject(this@DatabaseWorker)
 
-        val file: String = getJsonFromAssetsUseCase(GetJsonFromAssetsUseCase.HEROES_DATA_FILENAME)
-        val assetsHeroesList = getAssetsHeroesFromJsonUseCase(file)
+        val json: String = getJsonHeroesFromAssetsUseCase()
+        val assetsHeroesList = convertJsonHeroesToAssetsHeroesUseCase(json)
         val localHeroesList = convertAssetsHeroListToLocalHeroListUseCase(assetsHeroesList)
 
-        appDatabase.heroesDao.insert(localHeroesList)
+        saveLocalHeroesInDatabaseUseCase(localHeroesList)
 
         Result.success()
     }

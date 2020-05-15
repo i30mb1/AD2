@@ -12,5 +12,5 @@
             tools:itemCount="30"
             tools:layoutManager="GridLayoutManager"
             tools:spanCount="3"
-            tools:listitem="@layout/item_list_hero" />
+            tools:listitem="@layout/item_hero" />
 </layout>

@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+        <variable
+            name="model"
+            type="n7.ad2.ui.heroInfo.domain.vo.VODescription" />
+    </data>
+
+    <com.google.android.material.card.MaterialCardView
+        android:layout_width="match_parent"
+        android:layout_height="200dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="?colorPrimary"
+            android:gravity="center_vertical">
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="@{model.title}"
+                android:textAppearance="?textAppearanceSubtitle2"
+                tools:text="Duel" />
+
+            <TextView
+                android:id="@+id/click"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:background="@color/black_700"
+                android:gravity="center"
+                android:text="@{model.hotkey}"
+                android:textAppearance="?textAppearanceSubtitle2"
+                tools:text="T" />
+
+            <TextView
+                android:id="@+id/click2"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:background="@color/black_700"
+                android:gravity="center"
+                android:text="@{model.hotkey}"
+                android:textAppearance="?textAppearanceSubtitle2"
+                tools:text="T" />
+        </LinearLayout>
+
+
+    </com.google.android.material.card.MaterialCardView>
+</layout>

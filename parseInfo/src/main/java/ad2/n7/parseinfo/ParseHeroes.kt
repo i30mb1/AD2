@@ -71,7 +71,7 @@ class ParseHeroes private constructor(
     }
 
     private fun loadHeroes() = launch {
-        val directoryForFile = "heroes2/"
+        val directoryForFile = "heroes/"
         val heroesEngUrl = "https://dota2.gamepedia.com/Heroes"
 //        val heroesZhUrl = "https://dota2-zh.gamepedia.com/Heroes"
 
@@ -116,7 +116,7 @@ class ParseHeroes private constructor(
 //                        put("hrefEng", heroHrefEng)
 //                        if (withZh) put("nameZh", getHeroName(heroesZh[index]))
 //                        if (withZh) put("hrefZh", getHeroHref(heroesZh[index]))
-                        val directory = "heroes2" + File.separator + heroName
+                        val directory = "heroes/$heroName"
                         put("assetsPath", directory)
                         createHeroFolderInAssets(directory)
                     }
