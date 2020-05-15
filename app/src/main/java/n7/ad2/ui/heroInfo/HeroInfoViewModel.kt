@@ -5,10 +5,8 @@ import android.media.MediaPlayer
 import androidx.appcompat.app.AlertDialog
 import androidx.databinding.ObservableBoolean
 import androidx.lifecycle.AndroidViewModel
-import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.SavedStateHandle
-import androidx.lifecycle.Transformations
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
 import com.squareup.inject.assisted.Assisted
@@ -21,6 +19,7 @@ import n7.ad2.heroes.full.ResponsesStorage
 import n7.ad2.ui.heroInfo.domain.adapter.toVO
 import n7.ad2.ui.heroInfo.domain.usecase.GetJsonHeroDescriptionUseCase
 import n7.ad2.ui.heroInfo.domain.usecase.GetLocalHeroDescriptionFromJsonUseCase
+import n7.ad2.ui.heroInfo.domain.usecase.GetVOHeroDescriptionUseCase
 import n7.ad2.ui.heroInfo.domain.vo.VOHeroDescription
 import n7.ad2.utils.SnackbarMessage
 import org.json.JSONArray
@@ -46,7 +45,8 @@ class HeroInfoViewModel @AssistedInject constructor(
         appDatabase: AppDatabase,
         @Assisted handle: SavedStateHandle,
         private val getJsonHeroDescriptionUseCase: GetJsonHeroDescriptionUseCase,
-        private val getLocalHeroDescriptionFromJsonUseCase: GetLocalHeroDescriptionFromJsonUseCase
+        private val getLocalHeroDescriptionFromJsonUseCase: GetLocalHeroDescriptionFromJsonUseCase,
+        private val getVOHeroDescriptionUseCase: GetVOHeroDescriptionUseCase
 ) : AndroidViewModel(application) {
 
     @AssistedInject.Factory
@@ -78,10 +78,11 @@ class HeroInfoViewModel @AssistedInject constructor(
 
     fun loadHero(name: String) {
         viewModelScope.launch {
-            val hero = heroesDao.getHero(name)
+            val localHero = heroesDao.getHero(name)
 
-            val json = getJsonHeroDescriptionUseCase(hero.assetsPath)
-            val vOHeroDescription = getLocalHeroDescriptionFromJsonUseCase(json).toVO(hero)
+            val json = getJsonHeroDescriptionUseCase(localHero.assetsPath)
+            val localHeroDescription = getLocalHeroDescriptionFromJsonUseCase(json)
+            val vOHeroDescription = getVOHeroDescriptionUseCase(localHeroDescription, localHero)
             vOHero.value = vOHeroDescription
         }
 
