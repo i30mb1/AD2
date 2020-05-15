@@ -14,6 +14,7 @@ import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.LinearSnapHelper
 import n7.ad2.R
 import n7.ad2.databinding.FragmentHeroPersonalBinding
+import n7.ad2.ui.heroInfo.domain.vo.VODescription
 import n7.ad2.ui.heroInfo.domain.vo.VOSpell
 import org.json.JSONArray
 import org.json.JSONException
@@ -28,6 +29,7 @@ class HeroInfoFragment : Fragment(R.layout.fragment_hero_personal) {
     private val jsonArrayHeroAbilities: JSONArray? = null
     private lateinit var binding: FragmentHeroPersonalBinding
     private val viewModel: HeroInfoViewModel by activityViewModels()
+    private lateinit var spellsInfoListAdapter: SpellsInfoListAdapter
     private var colorAccentTheme = 0
         private get() = if (field == 0 && context != null) {
             val typedValue = TypedValue()
@@ -66,8 +68,12 @@ class HeroInfoFragment : Fragment(R.layout.fragment_hero_personal) {
         infoPopupWindow?.dismiss()
     }
 
+    fun setDescription(voDescription: List<VODescription>) {
+        spellsInfoListAdapter.submitList(voDescription)
+    }
+
     private fun setupSpellInfoRecyclerView() {
-        val spellsInfoListAdapter = SpellsInfoListAdapter(this)
+        spellsInfoListAdapter = SpellsInfoListAdapter(this)
 
         binding.rvSpellsInfo.apply {
             adapter = spellsInfoListAdapter
@@ -423,6 +429,8 @@ class HeroInfoFragment : Fragment(R.layout.fragment_hero_personal) {
 //            }
 //        }
     }
+
+
 
     companion object {
         const val FILES_IN_FOLDER_NOT_SPELL = 6
