@@ -79,12 +79,10 @@ class HeroInfoFragment : Fragment(R.layout.fragment_hero_personal) {
             adapter = spellsInfoListAdapter
             layoutManager = LinearLayoutManager(requireContext(), LinearLayoutManager.VERTICAL, false)
         }
-
-        spellsInfoListAdapter.submitList(listOf(VOSpell(), VOSpell()))
     }
 
     private fun setupSpellRecyclerView() {
-        val spellsAdapter = SpellsListAdapter()
+        val spellsAdapter = SpellsListAdapter(this)
 
         binding.rvSpells.apply {
             LinearSnapHelper().attachToRecyclerView(this)

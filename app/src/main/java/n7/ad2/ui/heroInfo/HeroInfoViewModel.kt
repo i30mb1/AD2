@@ -16,7 +16,6 @@ import n7.ad2.data.source.local.db.AppDatabase
 import n7.ad2.heroes.db.HeroModel
 import n7.ad2.heroes.full.ResponseModel
 import n7.ad2.heroes.full.ResponsesStorage
-import n7.ad2.ui.heroInfo.domain.adapter.toVO
 import n7.ad2.ui.heroInfo.domain.usecase.GetJsonHeroDescriptionUseCase
 import n7.ad2.ui.heroInfo.domain.usecase.GetLocalHeroDescriptionFromJsonUseCase
 import n7.ad2.ui.heroInfo.domain.usecase.GetVOHeroDescriptionUseCase

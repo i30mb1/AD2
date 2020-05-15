@@ -30,8 +30,9 @@ class SpellsInfoListAdapter(fragment: HeroInfoFragment) : ListAdapter<VODescript
     ) : RecyclerView.ViewHolder(binding.root) {
 
         fun bind(item: VODescription) {
+            binding.model = item
             binding.click.setOnClickListener(listener)
-            binding.click2.setOnClickListener(listener)
+            binding.executePendingBindings()
         }
 
         companion object {
