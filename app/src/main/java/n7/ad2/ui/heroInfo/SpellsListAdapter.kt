@@ -46,11 +46,12 @@ class SpellsListAdapter(fragment: HeroInfoFragment) : ListAdapter<VOSpell, Spell
         }
     }
 
+    class DiffCallback : DiffUtil.ItemCallback<VOSpell>() {
+
+        override fun areItemsTheSame(oldItem: VOSpell, newItem: VOSpell): Boolean = oldItem.name == newItem.name
+
+        override fun areContentsTheSame(oldItem: VOSpell, newItem: VOSpell): Boolean = true
+    }
 }
 
-class DiffCallback : DiffUtil.ItemCallback<VOSpell>() {
 
-    override fun areItemsTheSame(oldItem: VOSpell, newItem: VOSpell): Boolean = oldItem.name == newItem.name
-
-    override fun areContentsTheSame(oldItem: VOSpell, newItem: VOSpell): Boolean = true
-}
