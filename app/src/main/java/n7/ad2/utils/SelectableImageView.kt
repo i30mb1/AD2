@@ -9,19 +9,18 @@ import android.util.AttributeSet
 import androidx.appcompat.widget.AppCompatImageView
 import n7.ad2.R
 import n7.ad2.utils.extension.themeColor
-import n7.ad2.utils.extension.toPx
 
 class SelectableImageView(
         context: Context,
         attributeSet: AttributeSet
 ) : AppCompatImageView(context, attributeSet) {
 
-    private val borderWidth = 8.toPx
+    private val borderWidth = resources.getDimension(R.dimen.line_width)
     private var currentBorderWidth = 0f
     private val rect = Rect()
     private val borderPaint = Paint(Paint.ANTI_ALIAS_FLAG).apply {
-        style = Paint.Style.STROKE
-        strokeWidth = currentBorderWidth
+        style = Paint.Style.FILL_AND_STROKE
+        strokeWidth = 1f
         color = context.themeColor(R.attr.colorAccent)
     }
     private var canvasHeight = 0f
@@ -31,7 +30,7 @@ class SelectableImageView(
 
     override fun onSizeChanged(w: Int, h: Int, oldw: Int, oldh: Int) {
         super.onSizeChanged(w, h, oldw, oldh)
-        rect.set(0, 0, width, height)
+        rect.set(0, 0, borderWidth.toInt(), height)
 
         canvasHeight = height.toFloat()
         canvasWidth = width.toFloat()
@@ -45,7 +44,7 @@ class SelectableImageView(
             duration = 300L
             addUpdateListener {
                 currentBorderWidth = it.animatedValue as Float
-                borderPaint.strokeWidth = currentBorderWidth
+                rect.set(0, 0, currentBorderWidth.toInt(), height)
                 postInvalidateOnAnimation()
             }
             start()
@@ -55,7 +54,7 @@ class SelectableImageView(
     override fun onDraw(canvas: Canvas?) {
         super.onDraw(canvas)
 
-        if (borderPaint.strokeWidth != 0f) canvas?.drawRect(rect, borderPaint)
+        if (currentBorderWidth != 0f) canvas?.drawRect(rect, borderPaint)
     }
 
 }
