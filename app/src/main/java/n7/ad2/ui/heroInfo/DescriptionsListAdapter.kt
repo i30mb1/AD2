@@ -50,7 +50,7 @@ class DescriptionsListAdapter(fragment: HeroInfoFragment) : ListAdapter<VODescri
 
     private class DiffCallback : DiffUtil.ItemCallback<VODescription>() {
 
-        override fun areItemsTheSame(oldItem: VODescription, newItem: VODescription): Boolean = oldItem.title == newItem.title
+        override fun areItemsTheSame(oldItem: VODescription, newItem: VODescription): Boolean = true
 
         override fun areContentsTheSame(oldItem: VODescription, newItem: VODescription): Boolean = oldItem.body == newItem.body
     }
