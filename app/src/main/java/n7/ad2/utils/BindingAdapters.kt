@@ -1,6 +1,5 @@
 package n7.ad2.utils
 
-import android.graphics.Color
 import android.graphics.drawable.Drawable
 import android.text.Spannable
 import android.text.style.ForegroundColorSpan
@@ -16,7 +15,9 @@ import androidx.databinding.BindingAdapter
 import androidx.recyclerview.widget.ListAdapter
 import androidx.recyclerview.widget.RecyclerView
 import coil.api.load
+import n7.ad2.R
 import n7.ad2.ui.heroInfo.domain.usecase.GetVOHeroDescriptionUseCase.Companion.SEPARATOR
+import n7.ad2.utils.extension.themeColor
 
 @BindingAdapter("loadImageUrl", "onError", "placeHolder", requireAll = false)
 fun ImageView.loadImageUrl(url: String?, error: Drawable?, placeHolder: Drawable?) {
@@ -48,15 +49,15 @@ fun TextView.asyncText(text: CharSequence, textSize: Int?, withDash: Boolean = f
     }
 
     val spannable = text.toSpannable()
-    if (withDash) coloringDash(spannable, 0)
+    if (withDash) coloringDash(spannable, 0, this.context.themeColor(R.attr.colorAccent))
 
     val params = TextViewCompat.getTextMetricsParams(this)
     (this as AppCompatTextView).setTextFuture(PrecomputedTextCompat.getTextFuture(spannable, params, null))
 }
 
-fun coloringDash(text: Spannable, index: Int) {
+fun coloringDash(text: Spannable, index: Int, color: Int) {
     val innerIndex = text.indexOf(SEPARATOR, index)
     if (innerIndex == -1) return
-    text[innerIndex, innerIndex + SEPARATOR.length] = ForegroundColorSpan(Color.RED)
-    coloringDash(text, index + SEPARATOR.length)
+    text[innerIndex, innerIndex + SEPARATOR.length] = ForegroundColorSpan(color)
+    coloringDash(text, index + 1, color)
 }
