@@ -10,7 +10,7 @@ import n7.ad2.databinding.ItemSpellInfoBinding
 import n7.ad2.ui.heroInfo.domain.vo.VODescription
 import n7.ad2.ui.heroInfo.domain.vo.VOSpell
 
-class SpellsInfoListAdapter(fragment: HeroInfoFragment) : ListAdapter<VODescription, RecyclerView.ViewHolder>(DiffCallback()) {
+class DescriptionsListAdapter(fragment: HeroInfoFragment) : ListAdapter<VODescription, RecyclerView.ViewHolder>(DiffCallback()) {
 
     private var listener: View.OnClickListener = View.OnClickListener {
         fragment.showPopup(it)
