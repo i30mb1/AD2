@@ -6,13 +6,18 @@ import android.view.ViewGroup
 import androidx.recyclerview.widget.DiffUtil
 import androidx.recyclerview.widget.ListAdapter
 import androidx.recyclerview.widget.RecyclerView
+import n7.ad2.base.VOPopUpListener
 import n7.ad2.databinding.ItemDescriptionBinding
 import n7.ad2.ui.heroInfo.domain.vo.VODescription
 
 class DescriptionsListAdapter(fragment: HeroInfoFragment) : ListAdapter<VODescription, RecyclerView.ViewHolder>(DiffCallback()) {
 
-    private var popUpListener: View.OnClickListener = View.OnClickListener {
-        fragment.showPopup(it)
+    private var popUpListener: VOPopUpListener = object : VOPopUpListener {
+
+        override fun onClickListener(view: View, text: String) {
+            fragment.showPopup(view, text)
+        }
+
     }
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): RecyclerView.ViewHolder {
@@ -25,17 +30,17 @@ class DescriptionsListAdapter(fragment: HeroInfoFragment) : ListAdapter<VODescri
 
     class ViewHolderSpellInfoPlain private constructor(
             private val binding: ItemDescriptionBinding,
-            private val popUpListener: View.OnClickListener
+            private val popUpListener: VOPopUpListener
     ) : RecyclerView.ViewHolder(binding.root) {
 
         fun bind(item: VODescription) {
             binding.model = item
-//            binding.hotKey.setOnClickListener(popUpListener)
+            binding.popUpListener = popUpListener
             binding.executePendingBindings()
         }
 
         companion object {
-            fun from(parent: ViewGroup, listener: View.OnClickListener): ViewHolderSpellInfoPlain {
+            fun from(parent: ViewGroup, listener: VOPopUpListener): ViewHolderSpellInfoPlain {
                 val layoutInflater = LayoutInflater.from(parent.context)
                 val binding = ItemDescriptionBinding.inflate(layoutInflater, parent, false)
                 return ViewHolderSpellInfoPlain(binding, listener)

@@ -12,7 +12,7 @@ import androidx.core.graphics.component2
 import androidx.core.view.doOnPreDraw
 import n7.ad2.databinding.PopupSpellInfoBinding
 
-class InfoPopupWindow(private val anchor: View) {
+class InfoPopupWindow(private val anchor: View, private val text: String) {
 
     private val binding = PopupSpellInfoBinding.inflate(LayoutInflater.from(anchor.context))
     private val popup: PopupWindow

@@ -10,7 +10,7 @@
 
         <variable
             name="popUpListener"
-            type="n7.ad2.base.VOModelListener" />
+            type="n7.ad2.base.VOPopUpListener" />
     </data>
 
     <com.google.android.material.card.MaterialCardView

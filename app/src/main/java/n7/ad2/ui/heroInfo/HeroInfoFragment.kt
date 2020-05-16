@@ -56,8 +56,8 @@ class HeroInfoFragment : Fragment(R.layout.fragment_hero_personal) {
         setupSpellInfoRecyclerView()
     }
 
-   fun showPopup(view: View) {
-        infoPopupWindow = InfoPopupWindow(view)
+   fun showPopup(view: View, text: String) {
+        infoPopupWindow = InfoPopupWindow(view, text)
     }
 
     override fun onPause() {
