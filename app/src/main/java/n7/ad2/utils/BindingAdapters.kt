@@ -49,7 +49,7 @@ fun TextView.asyncText(text: CharSequence, textSize: Int?, withDash: Boolean = f
     }
 
     val spannable = text.toSpannable()
-    if (withDash) coloringDash(spannable, 0, this.context.themeColor(R.attr.colorAccent))
+    if (false) coloringDash(spannable, 0, this.context.themeColor(R.attr.colorAccent))
 
     val params = TextViewCompat.getTextMetricsParams(this)
     (this as AppCompatTextView).setTextFuture(PrecomputedTextCompat.getTextFuture(spannable, params, null))
