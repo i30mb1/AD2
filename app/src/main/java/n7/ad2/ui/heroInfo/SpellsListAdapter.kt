@@ -13,7 +13,7 @@ class SpellsListAdapter(fragment: HeroInfoFragment) : ListAdapter<VOSpell, Spell
 
     private val listener = object : BaseVOListener<VOSpell> {
         override fun onClickListener(model: VOSpell) {
-            fragment.setDescription(model.voDescription)
+            fragment.setDescription(model.listVODescriptions)
             currentList.forEach { item -> item.selected = false }
             model.selected = true
         }

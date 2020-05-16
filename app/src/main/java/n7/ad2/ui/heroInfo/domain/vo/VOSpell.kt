@@ -28,10 +28,12 @@ class VOSpell : BaseObservable() {
         }
 
     @get:Bindable
-    var voDescription: List<VODescription> = emptyList()
+    var listVODescriptions: List<VODescription> = emptyList()
         set(value) {
             field = value
-            notifyPropertyChanged(BR.voDescription)
+            notifyPropertyChanged(BR.listVODescriptions)
         }
+
+    var spellAudio: String = ""
 
 }
