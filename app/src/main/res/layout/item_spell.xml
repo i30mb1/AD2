@@ -10,7 +10,7 @@
 
         <variable
             name="listener"
-            type="n7.ad2.base.BaseVOListener" />
+            type="n7.ad2.base.VOModelListener" />
     </data>
 
     <com.google.android.material.card.MaterialCardView

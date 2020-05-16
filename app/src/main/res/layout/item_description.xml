@@ -7,6 +7,10 @@
         <variable
             name="model"
             type="n7.ad2.ui.heroInfo.domain.vo.VODescription" />
+
+        <variable
+            name="popUpListener"
+            type="n7.ad2.base.VOModelListener" />
     </data>
 
     <com.google.android.material.card.MaterialCardView
@@ -35,7 +39,7 @@
                     tools:text="Duel" />
 
                 <TextView
-                    android:id="@+id/click"
+                    android:id="@+id/hotKey"
                     android:layout_width="30dp"
                     android:layout_height="30dp"
                     android:background="@color/black_700"
@@ -45,12 +49,12 @@
                     tools:text="T" />
 
                 <TextView
-                    android:id="@+id/click2"
+                    android:id="@+id/legacyKey"
                     android:layout_width="30dp"
                     android:layout_height="30dp"
                     android:background="@color/black_700"
                     android:gravity="center"
-                    android:text="@{model.hotkey}"
+                    android:text="@{model.legacyKey}"
                     android:textAppearance="?textAppearanceSubtitle1"
                     tools:text="T" />
             </LinearLayout>

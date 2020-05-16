@@ -5,13 +5,13 @@ import android.view.ViewGroup
 import androidx.recyclerview.widget.DiffUtil
 import androidx.recyclerview.widget.ListAdapter
 import androidx.recyclerview.widget.RecyclerView
-import n7.ad2.base.BaseVOListener
+import n7.ad2.base.VOModelListener
 import n7.ad2.databinding.ItemSpellBinding
 import n7.ad2.ui.heroInfo.domain.vo.VOSpell
 
 class SpellsListAdapter(fragment: HeroInfoFragment) : ListAdapter<VOSpell, SpellsListAdapter.ViewHolder>(DiffCallback()) {
 
-    private val listener = object : BaseVOListener<VOSpell> {
+    private val listener = object : VOModelListener<VOSpell> {
         override fun onClickListener(model: VOSpell) {
             fragment.setDescription(model.listVODescriptions)
             currentList.forEach { item -> item.selected = false }
@@ -25,7 +25,7 @@ class SpellsListAdapter(fragment: HeroInfoFragment) : ListAdapter<VOSpell, Spell
 
     class ViewHolder private constructor(
             private val binding: ItemSpellBinding,
-            private val listener: BaseVOListener<VOSpell>
+            private val listener: VOModelListener<VOSpell>
     ) : RecyclerView.ViewHolder(binding.root) {
 
         fun bind(model: VOSpell) = binding.let {
@@ -37,7 +37,7 @@ class SpellsListAdapter(fragment: HeroInfoFragment) : ListAdapter<VOSpell, Spell
         companion object {
             fun from(
                     parent: ViewGroup,
-                    listener: BaseVOListener<VOSpell>
+                    listener: VOModelListener<VOSpell>
             ): ViewHolder {
                 val layoutInflater = LayoutInflater.from(parent.context)
                 val binding = ItemSpellBinding.inflate(layoutInflater, parent, false)
