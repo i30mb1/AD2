@@ -20,7 +20,7 @@
         android:stateListAnimator="@animator/spell"
         app:selected="@{model.selected}">
 
-        <ImageView
+        <n7.ad2.utils.SelectableImageView
             android:id="@+id/iv"
             loadImageUrl="@{model.image}"
             onError="@{@drawable/spell_placeholder}"
