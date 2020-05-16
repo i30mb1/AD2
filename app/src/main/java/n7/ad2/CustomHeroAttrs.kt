@@ -5,10 +5,9 @@ import android.content.Context
 import android.graphics.Bitmap
 import android.graphics.Canvas
 import android.util.AttributeSet
-import android.view.Gravity
 import android.view.LayoutInflater
 import android.widget.FrameLayout
-import android.widget.LinearLayout
+import androidx.core.content.withStyledAttributes
 import n7.ad2.databinding.CustomHeroAttrsBinding
 
 // link about @JVMOverload https://proandroiddev.com/misconception-about-kotlin-jvmoverloads-for-android-view-creation-cb88f432e1fe
@@ -19,7 +18,7 @@ class CustomHeroAttrs(
 ) : FrameLayout(context, attributeSet) {
 
     companion object {
-       private const val DEFAULT_SIZE = 60
+        private const val DEFAULT_SIZE = 60
     }
 
     val binding: CustomHeroAttrsBinding = CustomHeroAttrsBinding.inflate(LayoutInflater.from(context), this, true)
@@ -55,9 +54,8 @@ class CustomHeroAttrs(
         }
 
     init {
-        context.obtainStyledAttributes(attributeSet, R.styleable.CustomHeroAttrs).apply {
+        context.withStyledAttributes(attributeSet, R.styleable.CustomHeroAttrs) {
 
-            recycle()
         }
     }
 
@@ -75,15 +73,17 @@ class CustomHeroAttrs(
 
     private fun resolveDefaultSize(spec: Int): Int {
         return when (MeasureSpec.getMode(spec)) {
-            MeasureSpec.UNSPECIFIED -> {context.dpToPx(DEFAULT_SIZE).toInt()}
+            MeasureSpec.UNSPECIFIED -> {
+                context.dpToPx(DEFAULT_SIZE).toInt()
+            }
             MeasureSpec.AT_MOST -> MeasureSpec.getSize(spec)
             MeasureSpec.EXACTLY -> MeasureSpec.getSize(spec)
             else -> MeasureSpec.getSize(spec)
         }
     }
 
-   private fun getBitmapFromView(): Bitmap {
-       // instead of it you can use View.drawToBitmap
+    private fun getBitmapFromView(): Bitmap {
+        // instead of it you can use View.drawToBitmap
         val bitmap = Bitmap.createBitmap(this.width, this.height, Bitmap.Config.ARGB_8888)
         val canvas = Canvas(bitmap)
         this.draw(canvas)
@@ -92,6 +92,6 @@ class CustomHeroAttrs(
 
 }
 
-fun Context.dpToPx(dp:Int):Float {
+fun Context.dpToPx(dp: Int): Float {
     return dp.toFloat() * this.resources.displayMetrics.density
 }
