@@ -26,6 +26,7 @@ class InfoPopupWindow(private val anchor: View, private val text: String) {
         binding.root.doOnPreDraw {
             updatePointerLocation()
         }
+        binding.body.text = text
         binding.body.setOnClickListener {
             popup.dismiss()
         }

@@ -26,8 +26,8 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:background="?colorPrimary"
-                android:minHeight="@dimen/header_width"
-                android:gravity="center_vertical">
+                android:gravity="center_vertical"
+                android:minHeight="@dimen/header_width">
 
                 <TextView
                     android:layout_width="0dp"
@@ -47,6 +47,7 @@
                     android:background="@color/black_700"
                     android:gravity="center"
                     android:maxEms="1"
+                    android:onClick="@{(view)-> popUpListener.onClickListener(view, @string/hotkey)}"
                     android:text="@{model.hotkey}"
                     android:textAppearance="?textAppearanceSubtitle1"
                     tools:text="T" />
@@ -59,6 +60,7 @@
                     android:background="@color/black_700"
                     android:gravity="center"
                     android:maxEms="1"
+                    android:onClick="@{(view)-> popUpListener.onClickListener(view, @string/legacykey)}"
                     android:text="@{model.legacyKey}"
                     android:textAppearance="?textAppearanceSubtitle1"
                     tools:text="T" />

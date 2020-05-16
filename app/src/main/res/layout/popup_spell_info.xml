@@ -18,10 +18,13 @@
             tools:ignore="ContentDescription"
             tools:layout_marginStart="30dp" />
 
-        <View
+        <TextView
+            android:layout_alignParentEnd="true"
             android:id="@+id/body"
-            android:layout_width="match_parent"
-            android:layout_height="200dp"
+            android:padding="8dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            tools:text="@tools:sample/lorem/random"
             android:layout_below="@id/pointer"
             android:layout_marginStart="8dp"
             android:layout_marginEnd="8dp"
