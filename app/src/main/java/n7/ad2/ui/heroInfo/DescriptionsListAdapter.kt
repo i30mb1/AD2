@@ -12,7 +12,7 @@ import n7.ad2.ui.heroInfo.domain.vo.VODescription
 
 class DescriptionsListAdapter(fragment: HeroInfoFragment) : ListAdapter<VODescription, RecyclerView.ViewHolder>(DiffCallback()) {
 
-    private var popUpListener: VOPopUpListener = object : VOPopUpListener {
+    private var listener: VOPopUpListener = object : VOPopUpListener {
 
         override fun onClickListener(view: View, text: String) {
             fragment.showPopup(view, text)
@@ -21,7 +21,7 @@ class DescriptionsListAdapter(fragment: HeroInfoFragment) : ListAdapter<VODescri
     }
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): RecyclerView.ViewHolder {
-        return ViewHolderSpellInfoPlain.from(parent, popUpListener)
+        return ViewHolderSpellInfoPlain.from(parent, listener)
     }
 
     override fun onBindViewHolder(holder: RecyclerView.ViewHolder, position: Int) {
@@ -30,12 +30,12 @@ class DescriptionsListAdapter(fragment: HeroInfoFragment) : ListAdapter<VODescri
 
     class ViewHolderSpellInfoPlain private constructor(
             private val binding: ItemDescriptionBinding,
-            private val popUpListener: VOPopUpListener
+            private val listener: VOPopUpListener
     ) : RecyclerView.ViewHolder(binding.root) {
 
         fun bind(item: VODescription) {
             binding.model = item
-            binding.popUpListener = popUpListener
+            binding.listener = listener
             binding.executePendingBindings()
         }
 
