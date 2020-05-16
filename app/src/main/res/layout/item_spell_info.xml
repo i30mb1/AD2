@@ -11,43 +11,59 @@
 
     <com.google.android.material.card.MaterialCardView
         android:layout_width="match_parent"
-        android:layout_height="200dp">
+        android:layout_height="wrap_content">
 
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:background="?colorPrimary"
-            android:gravity="center_vertical">
+            android:orientation="vertical">
 
-            <TextView
-                android:layout_width="0dp"
+            <LinearLayout
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_weight="1"
-                android:text="@{model.title}"
-                android:textAppearance="?textAppearanceSubtitle1"
-                tools:text="Duel" />
+                android:background="?colorPrimary"
+                android:gravity="center_vertical">
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="4dp"
+                    android:layout_marginEnd="4dp"
+                    android:layout_weight="1"
+                    android:text="@{model.title}"
+                    android:textAppearance="?textAppearanceSubtitle1"
+                    tools:text="Duel" />
+
+                <TextView
+                    android:id="@+id/click"
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
+                    android:background="@color/black_700"
+                    android:gravity="center"
+                    android:text="@{model.hotkey}"
+                    android:textAppearance="?textAppearanceSubtitle1"
+                    tools:text="T" />
+
+                <TextView
+                    android:id="@+id/click2"
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
+                    android:background="@color/black_700"
+                    android:gravity="center"
+                    android:text="@{model.hotkey}"
+                    android:textAppearance="?textAppearanceSubtitle1"
+                    tools:text="T" />
+            </LinearLayout>
 
             <TextView
-                android:id="@+id/click"
-                android:layout_width="30dp"
-                android:layout_height="30dp"
-                android:background="@color/black_700"
-                android:gravity="center"
-                android:text="@{model.hotkey}"
-                android:textAppearance="?textAppearanceSubtitle1"
-                tools:text="T" />
-
-            <TextView
-                android:id="@+id/click2"
-                android:layout_width="30dp"
-                android:layout_height="30dp"
-                android:background="@color/black_700"
-                android:gravity="center"
-                android:text="@{model.hotkey}"
-                android:textAppearance="?textAppearanceSubtitle1"
-                tools:text="T" />
+                android:id="@+id/tv_body"
+                android:padding="8dp"
+                android:textAppearance="@style/TextAppearance.Body1"
+                tools:text="@tools:sample/lorem/random"
+                android:text="@{model.body}"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
         </LinearLayout>
-
 
     </com.google.android.material.card.MaterialCardView>
 </layout>
