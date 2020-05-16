@@ -35,7 +35,7 @@
                     android:layout_marginStart="4dp"
                     android:layout_marginEnd="4dp"
                     android:layout_weight="1"
-                    android:text="@{model.title}"
+                    asyncText="@{model.title}"
                     android:textAppearance="?textAppearanceSubtitle1"
                     tools:text="Duel" />
 
@@ -47,7 +47,7 @@
                     android:background="@color/black_700"
                     android:gravity="center"
                     android:maxEms="1"
-                    android:onClick="@{(view)-> popUpListener.onClickListener(view, @string/hotkey)}"
+                    android:onClick="@{(view)-> listener.onClickListener(view, @string/hotkey)}"
                     android:text="@{model.hotkey}"
                     android:textAppearance="?textAppearanceSubtitle1"
                     tools:text="T" />
@@ -60,7 +60,7 @@
                     android:background="@color/black_700"
                     android:gravity="center"
                     android:maxEms="1"
-                    android:onClick="@{(view)-> popUpListener.onClickListener(view, @string/legacykey)}"
+                    android:onClick="@{(view)-> listener.onClickListener(view, @string/legacykey)}"
                     android:text="@{model.legacyKey}"
                     android:textAppearance="?textAppearanceSubtitle1"
                     tools:text="T" />
@@ -71,7 +71,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:padding="8dp"
-                android:text="@{model.body}"
+                asyncText="@{model.body}"
                 android:textAppearance="@style/TextAppearance.Body1"
                 tools:text="@tools:sample/lorem/random" />
         </LinearLayout>

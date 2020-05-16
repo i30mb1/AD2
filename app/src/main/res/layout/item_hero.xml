@@ -37,7 +37,7 @@
             android:lines="1"
             android:paddingStart="@{@dimen/line_width * 2}"
             android:paddingEnd="0dp"
-            android:text="@{hero.name}"
+            asyncText="@{hero.name}"
             android:textAppearance="?textAppearanceCaption"
             tools:text="@sample/heroes.json/data/nameEng" />
 
