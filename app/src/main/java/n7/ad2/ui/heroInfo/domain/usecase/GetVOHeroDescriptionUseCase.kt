@@ -20,6 +20,7 @@ class GetVOHeroDescriptionUseCase @Inject constructor(
    private fun List<String>.toListWithDash(): String {
         val builder = StringBuilder()
         forEachIndexed { index, text ->
+            builder.append("- ")
             builder.append(text)
            if(index != lastIndex) builder.append(System.lineSeparator())
         }
