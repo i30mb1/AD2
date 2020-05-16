@@ -72,6 +72,7 @@
                 android:layout_height="wrap_content"
                 android:padding="8dp"
                 asyncText="@{model.body}"
+                withDash="@{true}"
                 android:textAppearance="@style/TextAppearance.Body1"
                 tools:text="@tools:sample/lorem/random" />
         </LinearLayout>
