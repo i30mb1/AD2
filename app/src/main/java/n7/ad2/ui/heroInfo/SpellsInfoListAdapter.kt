@@ -48,7 +48,7 @@ class SpellsInfoListAdapter(fragment: HeroInfoFragment) : ListAdapter<VODescript
 
         override fun areItemsTheSame(oldItem: VODescription, newItem: VODescription): Boolean = oldItem.title == newItem.title
 
-        override fun areContentsTheSame(oldItem: VODescription, newItem: VODescription): Boolean = true
+        override fun areContentsTheSame(oldItem: VODescription, newItem: VODescription): Boolean = oldItem.body == newItem.body
     }
 }
 
