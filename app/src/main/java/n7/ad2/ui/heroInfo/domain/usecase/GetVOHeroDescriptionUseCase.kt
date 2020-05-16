@@ -17,10 +17,14 @@ class GetVOHeroDescriptionUseCase @Inject constructor(
         private val application: Application
 ) {
 
+    companion object {
+        const val SEPARATOR = "- "
+    }
+
    private fun List<String>.toListWithDash(): String {
         val builder = StringBuilder()
         forEachIndexed { index, text ->
-            builder.append("- ")
+            builder.append(SEPARATOR)
             builder.append(text)
            if(index != lastIndex) builder.append(System.lineSeparator())
         }

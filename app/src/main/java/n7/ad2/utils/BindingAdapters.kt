@@ -2,6 +2,7 @@ package n7.ad2.utils
 
 import android.graphics.Color
 import android.graphics.drawable.Drawable
+import android.text.Spannable
 import android.text.style.ForegroundColorSpan
 import android.view.View
 import android.widget.ImageView
@@ -15,6 +16,7 @@ import androidx.databinding.BindingAdapter
 import androidx.recyclerview.widget.ListAdapter
 import androidx.recyclerview.widget.RecyclerView
 import coil.api.load
+import n7.ad2.ui.heroInfo.domain.usecase.GetVOHeroDescriptionUseCase.Companion.SEPARATOR
 
 @BindingAdapter("loadImageUrl", "onError", "placeHolder", requireAll = false)
 fun ImageView.loadImageUrl(url: String?, error: Drawable?, placeHolder: Drawable?) {
@@ -37,28 +39,24 @@ fun View.isVisible(isVisible: Boolean) {
 }
 
 @BindingAdapter("asyncText", "android:textSize", "withDash", requireAll = false)
-fun asyncText(textView: TextView, text: CharSequence, textSize: Int?, withDash: Boolean = false) {
+fun TextView.asyncText(text: CharSequence, textSize: Int?, withDash: Boolean = false) {
     // first, set all measurement affecting properties of the text
     // (size, locale, typeface, direction, etc)
     if (textSize != null) {
         // interpret the text size as SP
-        textView.textSize = textSize.toFloat()
+        this.textSize = textSize.toFloat()
     }
 
     val spannable = text.toSpannable()
-    if (withDash) {
-//        val index = spannable.indexOf("-")
-//        while (index != -1) {
-        spannable[0, 10] = ForegroundColorSpan(Color.RED)
-//        }
-    }
+    if (withDash) coloringDash(spannable, 0)
 
-    val params = TextViewCompat.getTextMetricsParams(textView)
-    (textView as AppCompatTextView).setTextFuture(
-            PrecomputedTextCompat.getTextFuture(
-                    spannable,
-                    params,
-                    null
-            )
-    )
+    val params = TextViewCompat.getTextMetricsParams(this)
+    (this as AppCompatTextView).setTextFuture(PrecomputedTextCompat.getTextFuture(spannable, params, null))
+}
+
+fun coloringDash(text: Spannable, index: Int) {
+    val innerIndex = text.indexOf(SEPARATOR, index)
+    if (innerIndex == -1) return
+    text[innerIndex, innerIndex + SEPARATOR.length] = ForegroundColorSpan(Color.RED)
+    coloringDash(text, index + SEPARATOR.length)
 }
