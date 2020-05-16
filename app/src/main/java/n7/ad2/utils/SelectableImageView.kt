@@ -1,5 +1,6 @@
 package n7.ad2.utils
 
+import android.animation.ValueAnimator
 import android.content.Context
 import android.graphics.Canvas
 import android.graphics.Paint
@@ -16,10 +17,11 @@ class SelectableImageView(
 ) : AppCompatImageView(context, attributeSet) {
 
     private val borderWidth = 8.toPx
+    private var currentBorderWidth = 0f
     private val rect = Rect()
     private val borderPaint = Paint(Paint.ANTI_ALIAS_FLAG).apply {
         style = Paint.Style.STROKE
-        strokeWidth = borderWidth
+        strokeWidth = currentBorderWidth
         color = context.themeColor(R.attr.colorAccent)
     }
     private var canvasHeight = 0f
@@ -37,10 +39,23 @@ class SelectableImageView(
         canvasHalfWidth = canvasWidth / 2f
     }
 
+    override fun setSelected(selected: Boolean) {
+        super.setSelected(selected)
+        ValueAnimator.ofFloat(currentBorderWidth, if (selected) borderWidth else 0f).apply {
+            duration = 300L
+            addUpdateListener {
+                currentBorderWidth = it.animatedValue as Float
+                borderPaint.strokeWidth = currentBorderWidth
+                postInvalidateOnAnimation()
+            }
+            start()
+        }
+    }
+
     override fun onDraw(canvas: Canvas?) {
         super.onDraw(canvas)
 
-        if (isSelected) canvas?.drawRect(rect, borderPaint)
+        if (borderPaint.strokeWidth != 0f) canvas?.drawRect(rect, borderPaint)
     }
 
 }
