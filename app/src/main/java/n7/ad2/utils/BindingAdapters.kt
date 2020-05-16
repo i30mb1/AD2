@@ -1,6 +1,7 @@
 package n7.ad2.utils
 
 import android.graphics.drawable.Drawable
+import android.view.View
 import android.widget.ImageView
 import androidx.databinding.BindingAdapter
 import androidx.recyclerview.widget.ListAdapter
@@ -20,4 +21,9 @@ fun ImageView.loadImageUrl(url: String?, error: Drawable?, placeHolder: Drawable
 @BindingAdapter("data")
 fun <T> RecyclerView.loadData(list: List<T>?) {
     (this.adapter as ListAdapter<T, RecyclerView.ViewHolder>).submitList(list)
+}
+
+@BindingAdapter("isVisible")
+fun View.isVisible(isVisible: Boolean) {
+    this.visibility = if(isVisible) View.VISIBLE else View.GONE
 }

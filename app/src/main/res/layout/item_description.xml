@@ -26,6 +26,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:background="?colorPrimary"
+                android:minHeight="@dimen/header_width"
                 android:gravity="center_vertical">
 
                 <TextView
@@ -40,20 +41,24 @@
 
                 <TextView
                     android:id="@+id/hotKey"
-                    android:layout_width="30dp"
-                    android:layout_height="30dp"
+                    isVisible='@{!model.hotkey.equals("")}'
+                    android:layout_width="@dimen/header_width"
+                    android:layout_height="@dimen/header_width"
                     android:background="@color/black_700"
                     android:gravity="center"
+                    android:maxEms="1"
                     android:text="@{model.hotkey}"
                     android:textAppearance="?textAppearanceSubtitle1"
                     tools:text="T" />
 
                 <TextView
                     android:id="@+id/legacyKey"
-                    android:layout_width="30dp"
-                    android:layout_height="30dp"
+                    isVisible='@{!model.hotkey.equals("")}'
+                    android:layout_width="@dimen/header_width"
+                    android:layout_height="@dimen/header_width"
                     android:background="@color/black_700"
                     android:gravity="center"
+                    android:maxEms="1"
                     android:text="@{model.legacyKey}"
                     android:textAppearance="?textAppearanceSubtitle1"
                     tools:text="T" />
@@ -61,12 +66,12 @@
 
             <TextView
                 android:id="@+id/tv_body"
-                android:padding="8dp"
-                android:textAppearance="@style/TextAppearance.Body1"
-                tools:text="@tools:sample/lorem/random"
-                android:text="@{model.body}"
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content" />
+                android:layout_height="wrap_content"
+                android:padding="8dp"
+                android:text="@{model.body}"
+                android:textAppearance="@style/TextAppearance.Body1"
+                tools:text="@tools:sample/lorem/random" />
         </LinearLayout>
 
     </com.google.android.material.card.MaterialCardView>
