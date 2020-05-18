@@ -1,18 +1,13 @@
 package n7.ad2.ui.heroInfo
 
-import android.content.Context
 import android.os.Bundle
 import android.view.View
 import android.view.ViewTreeObserver
 import androidx.databinding.DataBindingUtil
-import androidx.fragment.app.Fragment
-import androidx.fragment.app.FragmentManager
-import androidx.fragment.app.FragmentPagerAdapter
+import com.google.android.material.tabs.TabLayoutMediator
 import n7.ad2.R
 import n7.ad2.databinding.ActivityHeroFullBinding
 import n7.ad2.di.injector
-import n7.ad2.heroes.full.GuideFragment
-import n7.ad2.heroes.full.ResponsesFragment
 import n7.ad2.utils.BaseActivity
 import n7.ad2.utils.viewModelWithSavedStateHandle
 
@@ -44,7 +39,7 @@ class HeroFullActivity : BaseActivity() {
         viewModel.loadHero(heroName)
 
         setToolbar()
-        setViewPager()
+        setViewPager2()
 //        supportPostponeEnterTransition()
         setObservers()
     }
@@ -94,21 +89,16 @@ class HeroFullActivity : BaseActivity() {
                 })
     }
 
-    private fun setViewPager() {
-        val viewPagerAdapter = ViewPagerAdapter(supportFragmentManager)
-        binding.vpActivityHeroFull.adapter = viewPagerAdapter
-        binding.vpActivityHeroFull.offscreenPageLimit = 2
-        binding.vpActivityHeroFull.currentItem = getPreferences(Context.MODE_PRIVATE).getInt(CURRENT_ITEM, 0)
-        binding.tabActivityHeroFull.setupWithViewPager(binding.vpActivityHeroFull)
-    }
-
-    override fun onResume() {
-        super.onResume()
-    }
-
-    override fun onDestroy() {
-        super.onDestroy()
-        getPreferences(Context.MODE_PRIVATE).edit().putInt(CURRENT_ITEM, binding.vpActivityHeroFull.currentItem).apply()
+    private fun setViewPager2() {
+        val viewPager2Adapter = ViewPager2Adapter(this)
+        binding.vp.adapter = viewPager2Adapter
+        TabLayoutMediator(binding.tl, binding.vp) { tab, position ->
+            tab.text = when (position) {
+                0 -> getString(R.string.hero_info)
+                1 -> getString(R.string.hero_sound)
+                else -> getString(R.string.hero_guide)
+            }
+        }.attach()
     }
 
     private fun setToolbar() {
@@ -132,29 +122,5 @@ class HeroFullActivity : BaseActivity() {
 //        } catch (e: NullPointerException) {
 //            e.printStackTrace()
 //        }
-    }
-
-    inner class ViewPagerAdapter internal constructor(fm: FragmentManager?) : FragmentPagerAdapter(fm!!) {
-
-        override fun getItem(position: Int): Fragment {
-            return when (position) {
-                0 -> HeroInfoFragment.newInstance()
-                1 -> ResponsesFragment.newInstance()
-                else -> GuideFragment.newInstance()
-            }
-        }
-
-        override fun getCount(): Int {
-            return 3
-        }
-
-        override fun getPageTitle(position: Int): CharSequence? {
-            return when (position) {
-                0 -> getString(R.string.hero_info)
-                1 -> getString(R.string.hero_sound)
-                else -> getString(R.string.hero_guide)
-            }
-        }
-
     }
 }

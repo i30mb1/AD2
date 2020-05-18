@@ -23,15 +23,17 @@
                 app:layout_scrollFlags="scroll" />
 
             <com.google.android.material.tabs.TabLayout
-                android:id="@+id/tab_activity_hero_full"
+                android:id="@+id/tl"
                 android:layout_width="match_parent"
                 android:layout_height="35dp" />
+
         </com.google.android.material.appbar.AppBarLayout>
 
-        <androidx.viewpager.widget.ViewPager
-            android:id="@+id/vp_activity_hero_full"
+        <androidx.viewpager2.widget.ViewPager2
+            android:id="@+id/vp"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             app:layout_behavior="@string/appbar_scrolling_view_behavior" />
+
     </androidx.coordinatorlayout.widget.CoordinatorLayout>
 </layout>
