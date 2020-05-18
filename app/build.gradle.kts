@@ -100,6 +100,7 @@ dependencies {
     implementation(Lib.springAnimation)
     implementation(Lib.springAnimationKtx)
     implementation(Lib.instantApps)
+    implementation(Lib.viewPager2)
 
     implementation(Lib.moshi)
     kapt(Lib.moshiCodegen)

@@ -40,6 +40,7 @@ object Lib {
     const val springAnimation     = "androidx.dynamicanimation:dynamicanimation:1.0.0"
     const val springAnimationKtx  = "androidx.dynamicanimation:dynamicanimation-ktx:1.0.0-alpha03"
     const val instantApps  = "com.google.android.gms:play-services-instantapps:17.0.0"
+    const val viewPager2  = "androidx.viewpager2:viewpager2:1.0.0"
 
     const val workManager      = "androidx.work:work-runtime:2.0.1"
     const val workManagerKotlin      = "androidx.work:work-runtime-ktx:${Versions.workManager}"
