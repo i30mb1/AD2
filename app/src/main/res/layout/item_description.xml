@@ -40,7 +40,7 @@
                     tools:text="Duel" />
 
                 <TextView
-                    android:id="@+id/hotKey"
+                    android:id="@+id/hot_key"
                     isVisible='@{!model.hotkey.equals("")}'
                     android:layout_width="@dimen/header_width"
                     android:layout_height="@dimen/header_width"
@@ -53,7 +53,7 @@
                     tools:text="T" />
 
                 <TextView
-                    android:id="@+id/legacyKey"
+                    android:id="@+id/legacy_key"
                     isVisible='@{!model.hotkey.equals("")}'
                     android:layout_width="@dimen/header_width"
                     android:layout_height="@dimen/header_width"
