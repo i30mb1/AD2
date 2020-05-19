@@ -29,16 +29,16 @@ class HeroesPagedListAdapter internal constructor(fragment: HeroesFragment) : Pa
             private val listener: View.OnClickListener
     ) : RecyclerView.ViewHolder(binding.root) {
 
-        fun bindTo(hero: LocalHero) {
-            binding.hero = hero.toVo()
-            binding.root.setOnClickListener(listener)
-            binding.root.setTag(R.id.ViewHolderObject, hero)
-            binding.executePendingBindings()
+        fun bindTo(hero: LocalHero) = binding.apply {
+            model = hero.toVo()
+            root.setOnClickListener(listener)
+            root.setTag(R.id.ViewHolderObject, hero)
+            executePendingBindings()
         }
 
-        fun clear() {
-            binding.iv.setImageResource(R.drawable.hero_placeholder)
-            binding.tv.text = ""
+        fun clear() = binding.apply {
+            iv.setImageResource(R.drawable.hero_placeholder)
+            tv.text = ""
         }
 
         companion object {

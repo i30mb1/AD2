@@ -5,7 +5,7 @@
     <data>
 
         <variable
-            name="hero"
+            name="model"
             type="n7.ad2.ui.heroes.domain.vo.VOHero" />
     </data>
 
@@ -17,7 +17,7 @@
 
         <ImageView
             android:id="@+id/iv"
-            loadImageUrl="@{hero.image}"
+            loadImageUrl="@{model.image}"
             onError="@{@drawable/hero_placeholder}"
             placeHolder="@{@drawable/hero_placeholder}"
             android:layout_width="match_parent"
@@ -37,7 +37,7 @@
             android:lines="1"
             android:paddingStart="@{@dimen/line_width * 2}"
             android:paddingEnd="0dp"
-            asyncText="@{hero.name}"
+            asyncText="@{model.name}"
             android:textAppearance="?textAppearanceCaption"
             tools:text="@sample/heroes.json/data/nameEng" />
 
