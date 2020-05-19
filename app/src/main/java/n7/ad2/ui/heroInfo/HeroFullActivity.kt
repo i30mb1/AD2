@@ -22,6 +22,7 @@ class HeroFullActivity : BaseActivity() {
     companion object {
         const val HERO_NAME = "HERO_NAME"
         const val HERO_CODE_NAME = "HERO_CODE_NAME"
+        const val TN_PHOTO = "TN_PHOTO"
         const val CURRENT_ITEM = "CURRENT_ITEM"
         const val REQUESTED_PERMISSION = 1
     }

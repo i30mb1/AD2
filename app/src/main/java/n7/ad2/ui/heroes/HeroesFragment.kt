@@ -13,6 +13,7 @@ import androidx.recyclerview.widget.GridLayoutManager
 import n7.ad2.R
 import n7.ad2.data.source.local.model.LocalHero
 import n7.ad2.databinding.FragmentHeroesBinding
+import n7.ad2.databinding.ItemHeroBinding
 import n7.ad2.di.injector
 import n7.ad2.ui.heroInfo.HeroFullActivity
 import n7.ad2.ui.MainActivity
@@ -39,15 +40,16 @@ class HeroesFragment : Fragment(R.layout.fragment_heroes) {
         })
     }
 
-    fun startHeroFragment(view: View, model: LocalHero) {
-        Intent(view.context, HeroFullActivity::class.java).apply {
+    fun startHeroFragment(model: LocalHero, binding: ItemHeroBinding) {
+        Intent(binding.root.context, HeroFullActivity::class.java).apply {
             putExtra(HeroFullActivity.HERO_NAME, model.name)
-//            if (activity != null) {
-//                val options = ActivityOptionsCompat.makeSceneTransitionAnimation(requireActivity(), view, "iv")
-//                startActivity(this, options.toBundle())
-//            } else {
+            putExtra(HeroFullActivity.TN_PHOTO, binding.iv.transitionName)
+            if (false) {
+                val options = ActivityOptionsCompat.makeSceneTransitionAnimation(requireActivity(), binding.iv, binding.iv.transitionName)
+                startActivity(this, options.toBundle())
+            } else {
                 startActivity(this)
-//            }
+            }
         }
     }
 
@@ -74,6 +76,8 @@ class HeroesFragment : Fragment(R.layout.fragment_heroes) {
             setHasFixedSize(true)
             layoutManager = GridLayoutManager(context, 3)
             adapter = myAdapter
+            postponeEnterTransition()
+            viewTreeObserver.addOnPreDrawListener { startPostponedEnterTransition(); true }
         }
         viewModel.heroesPagedList.observe(viewLifecycleOwner, myAdapter::submitList)
     }

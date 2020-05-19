@@ -8,8 +8,11 @@ import android.view.MenuItem
 import android.view.View
 import androidx.fragment.app.Fragment
 import androidx.fragment.app.activityViewModels
+import androidx.interpolator.view.animation.FastOutSlowInInterpolator
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.LinearSnapHelper
+import com.google.android.material.transition.MaterialContainerTransform
+import com.google.android.material.transition.MaterialContainerTransformSharedElementCallback
 import n7.ad2.R
 import n7.ad2.databinding.FragmentHeroPersonalBinding
 import n7.ad2.ui.heroInfo.domain.vo.VODescription
@@ -42,8 +45,19 @@ class HeroInfoFragment : Fragment(R.layout.fragment_hero_personal) {
         binding = FragmentHeroPersonalBinding.bind(view).also {
             it.lifecycleOwner = viewLifecycleOwner
             it.viewModel = viewModel
+            it.ivImage.transitionName = requireActivity().intent.getStringExtra(HeroFullActivity.TN_PHOTO)
         }
+
+        sharedElementEnterTransition = buildContainerTransform()
+        sharedElementReturnTransition = buildContainerTransform()
     }
+
+    private fun buildContainerTransform() = MaterialContainerTransform().apply {
+                addTarget(binding.ivImage)
+                duration = 3000
+                interpolator = FastOutSlowInInterpolator()
+                fadeMode = MaterialContainerTransform.FADE_MODE_OUT
+            }
 
     override fun onActivityCreated(savedInstanceState: Bundle?) {
         super.onActivityCreated(savedInstanceState)
