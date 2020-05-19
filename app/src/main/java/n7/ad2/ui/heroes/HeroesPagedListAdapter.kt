@@ -14,7 +14,7 @@ import n7.ad2.ui.heroes.domain.adapter.toVo
 class HeroesPagedListAdapter internal constructor(fragment: HeroesFragment) : PagedListAdapter<LocalHero, HeroesPagedListAdapter.ViewHolder>(DiffCallback()) {
 
     private val listener = View.OnClickListener {
-        fragment.startHeroFragment(it, it.getTag(R.id.ViewHolderObject) as LocalHero)
+        fragment.startHeroFragment(it, it.getTag(R.id.ViewHolderModel) as LocalHero)
     }
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): ViewHolder = ViewHolder.from(parent, listener)
@@ -32,7 +32,7 @@ class HeroesPagedListAdapter internal constructor(fragment: HeroesFragment) : Pa
         fun bindTo(hero: LocalHero) = binding.apply {
             model = hero.toVo()
             root.setOnClickListener(listener)
-            root.setTag(R.id.ViewHolderObject, hero)
+            root.setTag(R.id.ViewHolderModel, hero)
             executePendingBindings()
         }
 
