@@ -23,7 +23,7 @@ class DialogTheme : DialogFragment() {
             bWhite.setOnClickListener { settingsFragment.applyTheme(THEME_WHITE) }
         }
 
-        val dialogBuilder = MaterialAlertDialogBuilder(context)
+        val dialogBuilder = MaterialAlertDialogBuilder(requireContext())
                 .setView(dialogView.root)
 
         return dialogBuilder.create()
