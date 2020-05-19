@@ -189,9 +189,9 @@
     <string name="main_activity_update_me">Launch update?</string>
     <string name="main_activity_okay">Yes</string>
     <string name="dialog_response_message">you have %d free downloads</string>
-    <string name="setting_category_setting_key">setting_category_setting_key</string>
-    <string name="setting_category_about_key">setting_category_about_key</string>
-    <string name="setting_current_day">setting_current_day</string>
+    <string name="setting_category_setting_key" translatable="false">setting_category_setting_key</string>
+    <string name="setting_category_about_key" translatable="false">setting_category_about_key</string>
+    <string name="setting_current_day" translatable="false">setting_current_day</string>
     <string name="title_feature_streams">Streams</string>
     <string name="desc_dota_hero" translatable="false">dota hero</string>
     <string name="desc_application_logo" translatable="false">application logo</string>
@@ -202,4 +202,6 @@
 
     <string name="hotkey" translatable="false">Hot Key</string>
     <string name="legacykey" translatable="false">Legacy Key</string>
+
+    <string name="tn_iv_photo" translatable="false">tn_iv_photo_%1$s</string>
 </resources>

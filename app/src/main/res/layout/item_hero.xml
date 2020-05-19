@@ -24,7 +24,7 @@
             android:layout_height="wrap_content"
             android:adjustViewBounds="true"
             android:contentDescription="@string/desc_dota_hero"
-            android:transitionName="iv"
+            android:transitionName="@{@string/tn_iv_photo(model.name)}"
             tools:src="@drawable/hero_placeholder" />
 
         <TextView
