@@ -30,18 +30,18 @@
                 android:minHeight="@dimen/header_width">
 
                 <TextView
+                    asyncText="@{model.title}"
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
                     android:layout_marginStart="4dp"
                     android:layout_marginEnd="4dp"
                     android:layout_weight="1"
-                    asyncText="@{model.title}"
                     android:textAppearance="?textAppearanceSubtitle1"
                     tools:text="Duel" />
 
                 <TextView
                     android:id="@+id/hot_key"
-                    isVisible='@{!model.hotkey.equals("")}'
+                    isVisible='@{model.hotkey!=null}'
                     android:layout_width="@dimen/header_width"
                     android:layout_height="@dimen/header_width"
                     android:background="@color/black_700"
@@ -54,7 +54,7 @@
 
                 <TextView
                     android:id="@+id/legacy_key"
-                    isVisible='@{!model.hotkey.equals("")}'
+                    isVisible='@{model.hotkey!=null}'
                     android:layout_width="@dimen/header_width"
                     android:layout_height="@dimen/header_width"
                     android:background="@color/black_700"
@@ -68,11 +68,11 @@
 
             <TextView
                 android:id="@+id/tv_body"
+                asyncText="@{model.body}"
+                withDash="@{true}"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:padding="8dp"
-                asyncText="@{model.body}"
-                withDash="@{true}"
                 android:textAppearance="@style/TextAppearance.Body1"
                 tools:text="@tools:sample/lorem/random" />
         </LinearLayout>

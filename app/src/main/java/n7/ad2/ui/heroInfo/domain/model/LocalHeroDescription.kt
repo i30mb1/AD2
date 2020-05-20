@@ -30,11 +30,11 @@ data class Ability(
     @Json(name = "effects")
     val effects: List<String> = listOf(),
     @Json(name = "hotKey")
-    val hotKey: String = "",
+    val hotKey: String? = null,
     @Json(name = "itemBehaviour")
     val itemBehaviour: List<String> = listOf(),
     @Json(name = "legacyKey")
-    val legacyKey: String = "",
+    val legacyKey: String? = null,
     @Json(name = "mana")
     val mana: String? = null,
     @Json(name = "notes")
