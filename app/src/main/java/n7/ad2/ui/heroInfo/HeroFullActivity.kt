@@ -37,7 +37,7 @@ class HeroFullActivity : BaseActivity() {
             heroName = savedInstanceState.getString(HERO_NAME)!!
         }
 
-        viewModel.loadHero(heroName)
+        viewModel.loadHero(heroName, theme)
 
         setToolbar()
         setViewPager2()

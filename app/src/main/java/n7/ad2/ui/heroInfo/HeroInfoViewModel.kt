@@ -1,6 +1,7 @@
 package n7.ad2.ui.heroInfo
 
 import android.app.Application
+import android.content.res.Resources
 import android.media.MediaPlayer
 import androidx.appcompat.app.AlertDialog
 import androidx.databinding.ObservableBoolean
@@ -75,13 +76,13 @@ class HeroInfoViewModel @AssistedInject constructor(
 //        loadUserSubscription()
     }
 
-    fun loadHero(name: String) {
+    fun loadHero(name: String, theme: Resources.Theme) {
         viewModelScope.launch {
             val localHero = heroesDao.getHero(name)
 
             val json = getJsonHeroDescriptionUseCase(localHero.assetsPath)
             val localHeroDescription = getLocalHeroDescriptionFromJsonUseCase(json)
-            val vOHeroDescription = getVOHeroDescriptionUseCase(localHeroDescription, localHero)
+            val vOHeroDescription = getVOHeroDescriptionUseCase(localHeroDescription, localHero, theme)
             vOHero.value = vOHeroDescription
         }
 
