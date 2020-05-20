@@ -1,7 +1,10 @@
+@file:Suppress("BlockingMethodInNonBlockingContext")
+
 package n7.ad2.data.source.local
 
 import android.app.Application
 import android.content.SharedPreferences
+import androidx.annotation.WorkerThread
 import kotlinx.coroutines.withContext
 import n7.ad2.data.source.local.db.AppDatabase
 import n7.ad2.data.source.local.db.HeroesDao

@@ -14,12 +14,12 @@ import androidx.work.WorkManager
 import kotlinx.coroutines.launch
 import n7.ad2.news.NewsWorker
 import n7.ad2.ui.splash.domain.usecase.GetRandomEmoteUseCase
-import n7.ad2.ui.splash.domain.usecase.SaveCurrentDateInSharedPrefUseCase
+import n7.ad2.ui.splash.domain.usecase.SaveCurrentDateUseCase
 import javax.inject.Inject
 
 class SplashViewModel @Inject constructor(
         application: Application,
-        private val saveCurrentDateInSharedPrefUseCase: SaveCurrentDateInSharedPrefUseCase,
+        private val saveCurrentDateUseCase: SaveCurrentDateUseCase,
         private val getRandomEmoteUseCase: GetRandomEmoteUseCase
 ) : AndroidViewModel(application) {
 
@@ -27,8 +27,8 @@ class SplashViewModel @Inject constructor(
         emit(getRandomEmoteUseCase())
     }
 
-    fun saveCurrentDateInSharedPref() = viewModelScope.launch {
-        saveCurrentDateInSharedPrefUseCase()
+    fun saveCurrentDate() = viewModelScope.launch {
+        saveCurrentDateUseCase()
     }
 
     fun loadNews() {

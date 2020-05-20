@@ -8,7 +8,7 @@ import n7.ad2.R
 import n7.ad2.data.source.local.Repository
 import javax.inject.Inject
 
-class SaveCurrentDateInSharedPrefUseCase @Inject constructor(
+class SaveCurrentDateUseCase @Inject constructor(
         private val ioDispatcher: CoroutineDispatcher,
         private val repository: Repository,
         private val application: Application,
