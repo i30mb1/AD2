@@ -209,5 +209,5 @@
     <string name="tn_iv_photo" translatable="false">tn_iv_photo_%1$s</string>
 
     <string name="channel_tournament_name" translatable="false">Tournament</string>
-    <string name="talent" translatable="false">Talent</string>
+    <string name="info_talent" translatable="false">With talent that affect this ability</string>
 </resources>

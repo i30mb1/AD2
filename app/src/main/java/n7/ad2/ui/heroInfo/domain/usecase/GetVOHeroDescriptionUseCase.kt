@@ -75,13 +75,13 @@ class GetVOHeroDescriptionUseCase @Inject constructor(
             val indexOf = it.cooldown.indexOf(TAG_TALENT)
             val spannableString = SpannableString(it.cooldown)
             if (indexOf == -1) return spannableString
-            val icon = application.resources.getDrawable(R.drawable.hero_talent, theme).apply {
+            val icon = application.resources.getDrawable(R.drawable.talent, theme).apply {
                 setBounds(0,0, application.resources.getDimensionPixelSize(R.dimen.icon_in_description), application.resources.getDimensionPixelSize(R.dimen.icon_in_description))
             }
             spannableString.setSpan(ImageSpan(icon, DynamicDrawableSpan.ALIGN_BOTTOM), indexOf, indexOf + TAG_TALENT.length, Spannable.SPAN_EXCLUSIVE_EXCLUSIVE)
             spannableString.setSpan(object : ClickableSpan() {
                 override fun onClick(widget: View) {
-                  InfoPopupWindow(widget, application.getString(R.string.talent))
+                  InfoPopupWindow(widget, application.getString(R.string.info_talent))
                 }
 
             }, indexOf,indexOf + TAG_TALENT.length, Spannable.SPAN_EXCLUSIVE_EXCLUSIVE)
