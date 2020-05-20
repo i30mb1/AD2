@@ -4,12 +4,15 @@ import android.app.Application
 import android.content.res.Resources
 import android.text.Spannable
 import android.text.SpannableString
+import android.text.style.ClickableSpan
 import android.text.style.DynamicDrawableSpan
 import android.text.style.ImageSpan
+import android.view.View
 import kotlinx.coroutines.CoroutineDispatcher
 import kotlinx.coroutines.withContext
 import n7.ad2.R
 import n7.ad2.data.source.local.model.LocalHero
+import n7.ad2.ui.heroInfo.InfoPopupWindow
 import n7.ad2.ui.heroInfo.domain.model.Ability
 import n7.ad2.ui.heroInfo.domain.model.LocalHeroDescription
 import n7.ad2.ui.heroInfo.domain.vo.VODescription
@@ -76,6 +79,12 @@ class GetVOHeroDescriptionUseCase @Inject constructor(
                 setBounds(0,0, application.resources.getDimensionPixelSize(R.dimen.icon_in_description), application.resources.getDimensionPixelSize(R.dimen.icon_in_description))
             }
             spannableString.setSpan(ImageSpan(icon, DynamicDrawableSpan.ALIGN_BOTTOM), indexOf, indexOf + TAG_TALENT.length, Spannable.SPAN_EXCLUSIVE_EXCLUSIVE)
+            spannableString.setSpan(object : ClickableSpan() {
+                override fun onClick(widget: View) {
+                  InfoPopupWindow(widget, application.getString(R.string.talent))
+                }
+
+            }, indexOf,indexOf + TAG_TALENT.length, Spannable.SPAN_EXCLUSIVE_EXCLUSIVE)
             return spannableString
         }
         return null

@@ -70,7 +70,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:background="@color/black_700"
-                android:orientation="horizontal">
+                android:orientation="vertical">
 
                 <TextView
                     isVisible="@{model.effect1!=null}"
@@ -80,6 +80,7 @@
                     android:gravity="center_horizontal"
                     android:padding="4dp"
                     android:text="@{model.effect1}"
+                    android:textSize="12sp"
                     android:textAppearance="?textAppearanceSubtitle1"
                     tools:text="@tools:sample/lorem" />
 
@@ -91,6 +92,7 @@
                     android:gravity="center_horizontal"
                     android:padding="4dp"
                     android:text="@{model.effect2}"
+                    android:textSize="12sp"
                     android:textAppearance="?textAppearanceSubtitle1"
                     tools:text="@tools:sample/lorem" />
 
@@ -101,6 +103,7 @@
                     android:layout_weight="1"
                     android:gravity="center_horizontal"
                     android:padding="4dp"
+                    android:textSize="12sp"
                     android:text="@{model.effect3}"
                     android:textAppearance="?textAppearanceSubtitle1"
                     tools:text="@tools:sample/lorem" />
@@ -131,7 +134,7 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginEnd="8dp"
-                    android:text="@{model.cooldown}"
+                    clickableText="@{model.cooldown}"
                     android:textAppearance="?textAppearanceBody1"
                     tools:text="@tools:sample/date/hhmm" />
 

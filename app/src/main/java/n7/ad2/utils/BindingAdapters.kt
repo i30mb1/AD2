@@ -2,6 +2,7 @@ package n7.ad2.utils
 
 import android.graphics.drawable.Drawable
 import android.text.Spannable
+import android.text.method.LinkMovementMethod
 import android.text.style.ForegroundColorSpan
 import android.view.View
 import android.widget.ImageView
@@ -53,6 +54,12 @@ fun TextView.asyncText(text: CharSequence, textSize: Int?, withDash: Boolean = f
 
     val params = TextViewCompat.getTextMetricsParams(this)
     (this as AppCompatTextView).setTextFuture(PrecomputedTextCompat.getTextFuture(spannable, params, null))
+}
+
+@BindingAdapter("clickableText")
+fun TextView.clickableText(text: CharSequence?) {
+    movementMethod = LinkMovementMethod.getInstance()
+    setText(text)
 }
 
 fun coloringDash(text: Spannable, index: Int, color: Int) {
