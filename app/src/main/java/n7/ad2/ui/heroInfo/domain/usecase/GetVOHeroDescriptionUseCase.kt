@@ -9,7 +9,6 @@ import n7.ad2.ui.heroInfo.domain.model.LocalHeroDescription
 import n7.ad2.ui.heroInfo.domain.vo.VODescription
 import n7.ad2.ui.heroInfo.domain.vo.VOHeroDescription
 import n7.ad2.ui.heroInfo.domain.vo.VOSpell
-import java.lang.StringBuilder
 import javax.inject.Inject
 
 class GetVOHeroDescriptionUseCase @Inject constructor(
@@ -21,12 +20,12 @@ class GetVOHeroDescriptionUseCase @Inject constructor(
         const val SEPARATOR = "- "
     }
 
-   private fun List<String>.toListWithDash(): String {
+    private fun List<String>.toListWithDash(): String {
         val builder = StringBuilder()
         forEachIndexed { index, text ->
             builder.append(SEPARATOR)
             builder.append(text)
-           if(index != lastIndex) builder.append(System.lineSeparator())
+            if (index != lastIndex) builder.append(System.lineSeparator())
         }
         return builder.toString()
     }
@@ -38,7 +37,7 @@ class GetVOHeroDescriptionUseCase @Inject constructor(
 
         val voSpellList: List<VOSpell> = localHeroDescription.abilities.map {
             val descriptions = mutableListOf<VODescription>().apply {
-                add(VODescription(it.spellName, it.hotKey, it.legacyKey, it.description))
+                add(VODescription(it.spellName, it.hotKey, it.legacyKey, it.description, it.effects.getOrNull(0), it.effects.getOrNull(1), it.effects.getOrNull(2)))
                 if (it.story != null) add(VODescription(title = application.getString(R.string.hero_fragment_story), body = it.story))
                 add(VODescription(title = application.getString(R.string.hero_fragment_notes), body = it.notes.toListWithDash()))
 
