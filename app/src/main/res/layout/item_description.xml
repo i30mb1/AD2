@@ -121,6 +121,7 @@
                 tools:text="@tools:sample/lorem" />
 
             <LinearLayout
+                isVisible="@{model.cooldown!=null}"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_gravity="end"
@@ -130,7 +131,6 @@
                 tools:ignore="UseCompoundDrawables">
 
                 <TextView
-                    isVisible="@{model.cooldown!=null}"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginEnd="8dp"
@@ -139,7 +139,6 @@
                     tools:text="@tools:sample/date/hhmm" />
 
                 <ImageView
-                    isVisible="@{model.cooldown!=null}"
                     android:layout_width="@dimen/icon_in_description"
                     android:layout_height="@dimen/icon_in_description"
                     android:contentDescription="@string/desc_cooldown"
@@ -148,6 +147,7 @@
             </LinearLayout>
 
             <LinearLayout
+                isVisible="@{model.mana!=null}"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_gravity="end"
@@ -157,7 +157,6 @@
                 tools:ignore="UseCompoundDrawables">
 
                 <TextView
-                    isVisible="@{model.mana!=null}"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginEnd="8dp"
@@ -167,7 +166,6 @@
                     tools:text="@tools:sample/date/hhmm" />
 
                 <ImageView
-                    isVisible="@{model.mana!=null}"
                     android:layout_width="@dimen/icon_in_description"
                     android:layout_height="@dimen/icon_in_description"
                     android:contentDescription="@string/desc_mana"
