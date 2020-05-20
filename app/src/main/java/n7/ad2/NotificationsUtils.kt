@@ -13,3 +13,16 @@ fun Context.isChannelEnabled(channelId: String): Boolean {
     }
     return true
 }
+
+const val CHANNEL_ID = "01_tournament"
+
+fun Context.createNotificationChannel() {
+    if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.O) {
+        val channel = NotificationChannel(
+                CHANNEL_ID,
+                getString(R.string.channel_tournament_name),
+                NotificationManager.IMPORTANCE_HIGH)
+        val notificationManager = getSystemService(Context.NOTIFICATION_SERVICE) as NotificationManager
+        notificationManager.createNotificationChannel(channel)
+    }
+}

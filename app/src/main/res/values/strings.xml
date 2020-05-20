@@ -204,4 +204,6 @@
     <string name="legacykey" translatable="false">Legacy Key</string>
 
     <string name="tn_iv_photo" translatable="false">tn_iv_photo_%1$s</string>
+
+    <string name="channel_tournament_name" translatable="false">Tournament</string>
 </resources>
