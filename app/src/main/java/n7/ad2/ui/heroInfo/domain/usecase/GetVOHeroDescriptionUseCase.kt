@@ -29,7 +29,7 @@ class GetVOHeroDescriptionUseCase @Inject constructor(
         const val TAG_TALENT = "TagTalent"
     }
 
-    private fun List<String>.toListWithDash(): String {
+    private fun List<String>.toStringListWithDash(): String {
         val builder = StringBuilder()
         forEachIndexed { index, text ->
             builder.append(SEPARATOR)
@@ -47,12 +47,12 @@ class GetVOHeroDescriptionUseCase @Inject constructor(
         val voSpellList: List<VOSpell> = localHeroDescription.abilities.map {
             val descriptions = mutableListOf<VODescription>().apply {
                 val cooldown = if (it.cooldown != null) getSpannableTagTalent(it.cooldown, theme) else SpannableString("")
-                val params = getSpannableTagTalent(it.params.toListWithDash(), theme)
+                val params = getSpannableTagTalent(it.params.toStringListWithDash(), theme)
 
                 add(VODescription(it.spellName, it.hotKey, it.legacyKey, SpannableString(it.description), it.effects.getOrNull(0), it.effects.getOrNull(1), it.effects.getOrNull(2), it.mana, cooldown, it.spellAudio))
                 add(VODescription(title = application.getString(R.string.hero_fragment_params), body = params))
                 if (it.story != null) add(VODescription(title = application.getString(R.string.hero_fragment_story), body = SpannableString(it.story)))
-                add(VODescription(title = application.getString(R.string.hero_fragment_notes), body = SpannableString(it.notes.toListWithDash())))
+                add(VODescription(title = application.getString(R.string.hero_fragment_notes), body = SpannableString(it.notes.toStringListWithDash())))
 
             }
 
