@@ -6,8 +6,8 @@ import android.view.View
 import android.view.ViewGroup
 import androidx.databinding.DataBindingUtil
 import androidx.fragment.app.FragmentActivity
-import androidx.lifecycle.Observer
 import androidx.lifecycle.lifecycleScope
+import androidx.lifecycle.observe
 import androidx.preference.PreferenceManager
 import androidx.transition.TransitionManager
 import kotlinx.coroutines.delay
@@ -17,7 +17,6 @@ import n7.ad2.databinding.ActivitySplashBinding
 import n7.ad2.di.injector
 import n7.ad2.ui.MainActivity
 import n7.ad2.ui.setting.SettingsFragment.Companion.THEME_DARK
-import n7.ad2.ui.setting.SettingsFragment.Companion.THEME_GRAY
 import n7.ad2.ui.setting.SettingsFragment.Companion.THEME_WHITE
 import n7.ad2.utils.viewModel
 
@@ -43,14 +42,13 @@ class SplashActivity : FragmentActivity() {
 
         if (savedInstanceState == null) { fadeIn = true }
 
-        viewModel.textEmote.observe(this, Observer { binding.tv.text = it })
+        viewModel.textEmote.observe(this) { binding.tv.text = it }
     }
 
     private fun setMySplashTheme() {
         when (PreferenceManager.getDefaultSharedPreferences(this).getString(getString(R.string.setting_theme_key), null)) {
             THEME_WHITE -> setTheme(R.style.SplashTheme_White)
             THEME_DARK -> setTheme(R.style.SplashTheme_Dark)
-            THEME_GRAY -> setTheme(R.style.SplashTheme)
             else -> setTheme(R.style.SplashTheme)
         }
     }
