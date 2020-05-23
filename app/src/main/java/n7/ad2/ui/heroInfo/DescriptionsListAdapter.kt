@@ -1,8 +1,10 @@
 package n7.ad2.ui.heroInfo
 
+import android.text.style.ImageSpan
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import androidx.core.text.getSpans
 import androidx.recyclerview.widget.DiffUtil
 import androidx.recyclerview.widget.ListAdapter
 import androidx.recyclerview.widget.RecyclerView
@@ -31,8 +33,13 @@ class DescriptionsListAdapter(private val fragment: HeroInfoFragment) : ListAdap
             private val binding: ItemDescriptionBinding
     ) : RecyclerView.ViewHolder(binding.root) {
 
+        private val lineHeight = binding.tvBody.lineHeight
+
         fun bind(item: VODescription) {
             binding.model = item
+            item.body.getSpans<ImageSpan>().forEach {
+                it.drawable.setBounds(0, 0, lineHeight, lineHeight)
+            }
             binding.executePendingBindings()
         }
 

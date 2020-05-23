@@ -47,7 +47,7 @@ class GetVOHeroDescriptionUseCase @Inject constructor(
         val voSpellList: List<VOSpell> = localHeroDescription.abilities.map {
             val descriptions = mutableListOf<VODescription>().apply {
                 val cooldown = if (it.cooldown != null) getSpannableTagTalent(it.cooldown, theme) else SpannableString("")
-                val params = getSpannableTagTalent(it.params.toListWithDash(), theme, true)
+                val params = getSpannableTagTalent(it.params.toListWithDash(), theme)
 
                 add(VODescription(it.spellName, it.hotKey, it.legacyKey, SpannableString(it.description), it.effects.getOrNull(0), it.effects.getOrNull(1), it.effects.getOrNull(2), it.mana, cooldown, it.spellAudio))
                 add(VODescription(title = application.getString(R.string.hero_fragment_params), body = params))
@@ -71,18 +71,17 @@ class GetVOHeroDescriptionUseCase @Inject constructor(
         voHeroDescription
     }
 
-    private fun getSpannableTagTalent(body: String, theme: Resources.Theme, fitText: Boolean = false): SpannableString {
+    private fun getSpannableTagTalent(body: String, theme: Resources.Theme): SpannableString {
         var startIndex = 0
         var indexOf = body.indexOf(TAG_TALENT, startIndex)
         val spannableString = SpannableString(body)
         if (indexOf == -1) return spannableString
+        val icon = application.resources.getDrawable(R.drawable.talent, theme).apply {
+            val imageSize = application.resources.getDimensionPixelSize(R.dimen.icon_in_description)
+            setBounds(0, 0, imageSize, imageSize)
+        }
         do {
-            val icon = application.resources.getDrawable(R.drawable.talent, theme).apply {
-                var imageSize = application.resources.getDimensionPixelSize(R.dimen.icon_in_description)
-                if (fitText) imageSize /= 2
-                setBounds(0, 0, imageSize, imageSize)
-            }
-            spannableString.setSpan(ImageSpan(icon, if (fitText) DynamicDrawableSpan.ALIGN_BASELINE else DynamicDrawableSpan.ALIGN_BOTTOM), indexOf, indexOf + TAG_TALENT.length, Spannable.SPAN_EXCLUSIVE_EXCLUSIVE)
+            spannableString.setSpan(ImageSpan(icon, DynamicDrawableSpan.ALIGN_BOTTOM), indexOf, indexOf + TAG_TALENT.length, Spannable.SPAN_EXCLUSIVE_EXCLUSIVE)
             spannableString.setSpan(object : ClickableSpan() {
                 override fun onClick(widget: View) {
                     InfoPopupWindow(widget, application.getString(R.string.info_talent))
@@ -94,7 +93,6 @@ class GetVOHeroDescriptionUseCase @Inject constructor(
         } while (indexOf != -1)
 
         return spannableString
-
     }
 
 }
