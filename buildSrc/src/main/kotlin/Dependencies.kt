@@ -33,7 +33,7 @@ object Lib {
     const val jsoup            = "org.jsoup:jsoup:1.11.2" // Jsoup для разбора html
     const val firebaseAnal     = "com.google.firebase:firebase-analytics:17.3.0"
     const val playCore         = "com.google.android.play:core:1.7.2" // auto update
-    const val exoPlayer        = "com.google.android.exoplayer:exoplayer-core:2.10.2"
+    const val exoPlayer        = "com.google.android.exoplayer:exoplayer-core:2.11.4"
     const val coreKtx          = "androidx.core:core-ktx:1.2.0" // Write more concise, idiomatic Kotlin code.
     const val jsonSimple       = "com.googlecode.json-simple:json-simple:1.1.1"
     const val kotlinStdlib     = "org.jetbrains.kotlin:kotlin-stdlib-jdk7:1.3.71"

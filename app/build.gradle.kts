@@ -101,6 +101,7 @@ dependencies {
     implementation(Lib.springAnimationKtx)
     implementation(Lib.instantApps)
     implementation(Lib.viewPager2)
+    implementation(Lib.exoPlayer)
 
     implementation(Lib.moshi)
     kapt(Lib.moshiCodegen)
