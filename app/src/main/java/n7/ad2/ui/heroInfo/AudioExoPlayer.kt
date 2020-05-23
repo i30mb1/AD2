@@ -69,7 +69,7 @@ class AudioExoPlayer(private val application: Application) : Player.EventListene
 
     fun play(@RawRes id: Int) = play(RawResourceDataSource.buildRawResourceUri(id))
 
-    fun play(url: String?) = play(Uri.parse(url))
+    fun play(url: String) = play(Uri.parse(url))
 
     fun play(uri: Uri) {
         val source = buildMediaSource(uri)

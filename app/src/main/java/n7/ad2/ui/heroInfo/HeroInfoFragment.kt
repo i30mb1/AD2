@@ -70,7 +70,7 @@ class HeroInfoFragment : Fragment(R.layout.fragment_hero_personal) {
     }
 
     fun playAudio(url: String?) {
-        audioExoPlayer.play(url)
+       if(url!=null) audioExoPlayer.play(url)
     }
 
    fun showPopup(view: View, text: String) {
