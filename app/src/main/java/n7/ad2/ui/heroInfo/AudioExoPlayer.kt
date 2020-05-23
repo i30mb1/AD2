@@ -68,7 +68,7 @@ class AudioExoPlayer(private val application: Application) : Player.EventListene
         }
     }
 
-    fun play(url: String) {
+    fun play(url: String?) {
         val source = buildMediaSource(url)
 
         exoPlayer.prepare(source)
@@ -118,7 +118,7 @@ class AudioExoPlayer(private val application: Application) : Player.EventListene
         exoPlayer.setAudioAttributes(audioAttributes, true)
     }
 
-    private fun buildMediaSource(url: String): ProgressiveMediaSource {
+    private fun buildMediaSource(url: String?): ProgressiveMediaSource {
         val userAgent = Util.getUserAgent(application, application.getString(R.string.app_name))
         val dataSourceFactory = DefaultDataSourceFactory(application, userAgent)
         return ProgressiveMediaSource.Factory(dataSourceFactory)

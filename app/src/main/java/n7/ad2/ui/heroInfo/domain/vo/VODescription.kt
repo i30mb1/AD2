@@ -11,6 +11,7 @@ class VODescription(
         val effect2: String? = null,
         val effect3: String? = null,
         val mana: String? = null,
-        val cooldown: SpannableString? = null
+        val cooldown: SpannableString? = null,
+        val audioUrl: String? = null
 
 )

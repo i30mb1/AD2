@@ -49,7 +49,7 @@ class GetVOHeroDescriptionUseCase @Inject constructor(
             val descriptions = mutableListOf<VODescription>().apply {
                 val cooldown = getSpannableTagTalent(it, theme)
 
-                add(VODescription(it.spellName, it.hotKey, it.legacyKey, it.description, it.effects.getOrNull(0), it.effects.getOrNull(1), it.effects.getOrNull(2), it.mana, cooldown))
+                add(VODescription(it.spellName, it.hotKey, it.legacyKey, it.description, it.effects.getOrNull(0), it.effects.getOrNull(1), it.effects.getOrNull(2), it.mana, cooldown, it.spellAudio))
                 if (it.story != null) add(VODescription(title = application.getString(R.string.hero_fragment_story), body = it.story))
                 add(VODescription(title = application.getString(R.string.hero_fragment_notes), body = it.notes.toListWithDash()))
 

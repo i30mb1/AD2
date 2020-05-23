@@ -10,18 +10,17 @@ import n7.ad2.base.VOPopUpListener
 import n7.ad2.databinding.ItemDescriptionBinding
 import n7.ad2.ui.heroInfo.domain.vo.VODescription
 
-class DescriptionsListAdapter(fragment: HeroInfoFragment) : ListAdapter<VODescription, RecyclerView.ViewHolder>(DiffCallback()) {
+class DescriptionsListAdapter(private val fragment: HeroInfoFragment) : ListAdapter<VODescription, RecyclerView.ViewHolder>(DiffCallback()) {
 
     private var listener: VOPopUpListener<String> = object : VOPopUpListener<String> {
 
         override fun onClickListener(view: View, text: String) {
             fragment.showPopup(view, text)
         }
-
     }
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): RecyclerView.ViewHolder {
-        return ViewHolderSpellInfoPlain.from(parent, listener)
+        return ViewHolderSpellInfoPlain.from(parent, listener, fragment)
     }
 
     override fun onBindViewHolder(holder: RecyclerView.ViewHolder, position: Int) {
@@ -29,21 +28,21 @@ class DescriptionsListAdapter(fragment: HeroInfoFragment) : ListAdapter<VODescri
     }
 
     class ViewHolderSpellInfoPlain private constructor(
-            private val binding: ItemDescriptionBinding,
-            private val listener: VOPopUpListener<String>
+            private val binding: ItemDescriptionBinding
     ) : RecyclerView.ViewHolder(binding.root) {
 
         fun bind(item: VODescription) {
             binding.model = item
-            binding.listener = listener
             binding.executePendingBindings()
         }
 
         companion object {
-            fun from(parent: ViewGroup, listener: VOPopUpListener<String>): ViewHolderSpellInfoPlain {
+            fun from(parent: ViewGroup, listener: VOPopUpListener<String>, fragment: HeroInfoFragment): ViewHolderSpellInfoPlain {
                 val layoutInflater = LayoutInflater.from(parent.context)
                 val binding = ItemDescriptionBinding.inflate(layoutInflater, parent, false)
-                return ViewHolderSpellInfoPlain(binding, listener)
+                binding.listener = listener
+                binding.fragment = fragment
+                return ViewHolderSpellInfoPlain(binding)
             }
         }
     }

@@ -37,6 +37,7 @@ class HeroInfoFragment : Fragment(R.layout.fragment_hero_personal) {
         } else {
             field
         }
+     private val audioExoPlayer by lazy { AudioExoPlayer(requireActivity().application) }
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
@@ -66,6 +67,10 @@ class HeroInfoFragment : Fragment(R.layout.fragment_hero_personal) {
 
         setupSpellRecyclerView()
         setupSpellInfoRecyclerView()
+    }
+
+    fun playAudio(url: String?) {
+        audioExoPlayer.play(url)
     }
 
    fun showPopup(view: View, text: String) {
