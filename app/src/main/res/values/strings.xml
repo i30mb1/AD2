@@ -88,6 +88,7 @@
     <string name="language_resource">eng</string>
     <string name="hero_fragment_notes">Notes</string>
     <string name="hero_fragment_story">Story</string>
+    <string name="hero_fragment_params">Parameters</string>
     <string name="item_hero_personal_description_talents">Talents</string>
     <string name="hero_fragment_bio">Bio</string>
     <string name="hero_fragment_trivia">Trivia</string>
