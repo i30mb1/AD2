@@ -17,6 +17,8 @@ import com.google.android.exoplayer2.Player
 import com.google.android.exoplayer2.SimpleExoPlayer
 import com.google.android.exoplayer2.source.ProgressiveMediaSource
 import com.google.android.exoplayer2.trackselection.DefaultTrackSelector
+import com.google.android.exoplayer2.upstream.AssetDataSource
+import com.google.android.exoplayer2.upstream.DataSpec
 import com.google.android.exoplayer2.upstream.DefaultDataSourceFactory
 import com.google.android.exoplayer2.upstream.HttpDataSource.HttpDataSourceException
 import com.google.android.exoplayer2.upstream.HttpDataSource.InvalidResponseCodeException
@@ -68,6 +70,15 @@ class AudioExoPlayer(private val application: Application) : Player.EventListene
                 }
             }
         }
+    }
+
+    fun playFromAssets(url: String) {
+        val dataSpec = DataSpec(Uri.parse(url))
+
+        val assetDataSource = AssetDataSource(application)
+        assetDataSource.open(dataSpec)
+
+        play(assetDataSource.uri!!)
     }
 
     fun play(@RawRes id: Int) = play(RawResourceDataSource.buildRawResourceUri(id))
