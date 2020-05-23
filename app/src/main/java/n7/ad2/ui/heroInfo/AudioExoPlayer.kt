@@ -5,6 +5,7 @@ import android.app.Application
 import android.net.Uri
 import android.os.Build
 import android.view.View
+import androidx.annotation.RawRes
 import androidx.lifecycle.Lifecycle
 import androidx.lifecycle.LifecycleObserver
 import androidx.lifecycle.OnLifecycleEvent
@@ -19,6 +20,7 @@ import com.google.android.exoplayer2.trackselection.DefaultTrackSelector
 import com.google.android.exoplayer2.upstream.DefaultDataSourceFactory
 import com.google.android.exoplayer2.upstream.HttpDataSource.HttpDataSourceException
 import com.google.android.exoplayer2.upstream.HttpDataSource.InvalidResponseCodeException
+import com.google.android.exoplayer2.upstream.RawResourceDataSource
 import com.google.android.exoplayer2.util.Util
 import n7.ad2.R
 import java.io.IOException
@@ -68,8 +70,12 @@ class AudioExoPlayer(private val application: Application) : Player.EventListene
         }
     }
 
-    fun play(url: String?) {
-        val source = buildMediaSource(url)
+    fun play(@RawRes id: Int) = play(RawResourceDataSource.buildRawResourceUri(id))
+
+    fun play(url: String?) = play(Uri.parse(url))
+
+    fun play(uri: Uri) {
+        val source = buildMediaSource(uri)
 
         exoPlayer.prepare(source)
         exoPlayer.playWhenReady = true
@@ -118,11 +124,11 @@ class AudioExoPlayer(private val application: Application) : Player.EventListene
         exoPlayer.setAudioAttributes(audioAttributes, true)
     }
 
-    private fun buildMediaSource(url: String?): ProgressiveMediaSource {
+    private fun buildMediaSource(uri: Uri): ProgressiveMediaSource {
         val userAgent = Util.getUserAgent(application, application.getString(R.string.app_name))
         val dataSourceFactory = DefaultDataSourceFactory(application, userAgent)
         return ProgressiveMediaSource.Factory(dataSourceFactory)
-                .createMediaSource(Uri.parse(url))
+                .createMediaSource(uri)
     }
 
     @SuppressLint("InlinedApi")
