@@ -6,7 +6,7 @@ class VODescription(
         val title: String,
         val hotkey: String? = null,
         val legacyKey: String? = null,
-        val body: String,
+        val body: SpannableString,
         val effect1: String? = null,
         val effect2: String? = null,
         val effect3: String? = null,
