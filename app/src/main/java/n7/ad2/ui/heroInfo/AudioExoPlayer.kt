@@ -20,17 +20,15 @@ import com.google.android.exoplayer2.trackselection.DefaultTrackSelector
 import com.google.android.exoplayer2.upstream.AssetDataSource
 import com.google.android.exoplayer2.upstream.DataSpec
 import com.google.android.exoplayer2.upstream.DefaultDataSourceFactory
-import com.google.android.exoplayer2.upstream.HttpDataSource.HttpDataSourceException
-import com.google.android.exoplayer2.upstream.HttpDataSource.InvalidResponseCodeException
 import com.google.android.exoplayer2.upstream.RawResourceDataSource
 import com.google.android.exoplayer2.util.Util
 import n7.ad2.R
-import java.io.IOException
 
 
 class AudioExoPlayer(private val application: Application) : Player.EventListener, LifecycleObserver {
 
     private lateinit var exoPlayer: SimpleExoPlayer
+    private var listener: ((errorMessage: String) -> Unit)? = null
 
     init {
         initializePlayer()
@@ -53,23 +51,11 @@ class AudioExoPlayer(private val application: Application) : Player.EventListene
     }
 
     override fun onPlayerError(error: ExoPlaybackException) {
-        if (error.type == ExoPlaybackException.TYPE_SOURCE) {
-            val cause: IOException = error.sourceException
-            if (cause is HttpDataSourceException) {
-                // An HTTP error occurred.
-                // This is the request for which the error occurred.
-                val requestDataSpec = cause.dataSpec
-                // It's possible to find out more about the error both by casting and by
-                // querying the cause.
-                if (cause is InvalidResponseCodeException) {
-                    // Cast to InvalidResponseCodeException and retrieve the response code,
-                    // message and headers.
-                } else {
-                    // Try calling httpError.getCause() to retrieve the underlying cause,
-                    // although note that it may be null.
-                }
-            }
-        }
+        listener?.invoke("${error.message}")
+    }
+
+    fun setErrorListener(listener: (String) -> Unit) {
+        this.listener = listener
     }
 
     fun playFromAssets(url: String) {
