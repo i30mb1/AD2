@@ -11,6 +11,7 @@ import androidx.recyclerview.widget.RecyclerView
 import n7.ad2.base.VOPopUpListener
 import n7.ad2.databinding.ItemDescriptionBinding
 import n7.ad2.ui.heroInfo.domain.vo.VODescription
+import n7.ad2.utils.extension.toPx
 
 class DescriptionsListAdapter(private val fragment: HeroInfoFragment) : ListAdapter<VODescription, RecyclerView.ViewHolder>(DiffCallback()) {
 
@@ -33,7 +34,7 @@ class DescriptionsListAdapter(private val fragment: HeroInfoFragment) : ListAdap
             private val binding: ItemDescriptionBinding
     ) : RecyclerView.ViewHolder(binding.root) {
 
-        private val lineHeight = binding.tvBody.lineHeight
+        private val lineHeight = binding.tvBody.lineHeight - 2.toPx.toInt()
 
         fun bind(item: VODescription) {
             binding.model = item
