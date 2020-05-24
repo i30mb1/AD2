@@ -62,7 +62,6 @@ class GetVOHeroDescriptionUseCase @Inject constructor(
 
     suspend operator fun invoke(localHeroDescription: LocalHeroDescription, localHero: LocalHero, theme: Resources.Theme): VOHeroDescription = withContext(ioDispatcher) {
         val voHeroDescription = VOHeroDescription()
-
         voHeroDescription.heroImagePath = "file:///android_asset/${localHero.assetsPath}/full.png"
 
         val voSpellList: List<VOSpell> = localHeroDescription.abilities.map {
@@ -87,7 +86,12 @@ class GetVOHeroDescriptionUseCase @Inject constructor(
         }
         voHeroDescription.spells = voSpellList
 
-
+        val heroBio = mutableListOf<VODescription>().apply {
+            add(VODescription(title = application.getString(R.string.hero_fragment_description), body = SpannableString(localHeroDescription.description)))
+            add(VODescription(title = application.getString(R.string.hero_fragment_bio), body = SpannableString(localHeroDescription.history)))
+            add(VODescription(title = application.getString(R.string.hero_fragment_trivia), body = SpannableString(localHeroDescription.trivia.toStringListWithDash())))
+        }
+        voHeroDescription.heroBio = heroBio
 
         voHeroDescription
     }

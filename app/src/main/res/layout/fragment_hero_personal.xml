@@ -25,6 +25,7 @@
                 onError="@{@drawable/hero_placeholder}"
                 placeHolder="@{@drawable/hero_placeholder}"
                 android:layout_width="150dp"
+                android:onClick="@{()-> viewModel.showHeroBio()}"
                 android:layout_height="80dp"
                 android:layout_marginStart="4dp"
                 android:layout_marginTop="4dp"
@@ -65,6 +66,7 @@
 
             <androidx.recyclerview.widget.RecyclerView
                 android:id="@+id/rv_spells_info"
+                data="@{viewModel.VOHero.selectedDescriptionList}"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:layout_below="@id/rv_spells"

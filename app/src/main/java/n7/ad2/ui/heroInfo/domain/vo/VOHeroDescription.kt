@@ -27,4 +27,11 @@ class VOHeroDescription : BaseObservable() {
         notifyPropertyChanged(BR.selectedDescriptionList)
     }
 
+    @get:Bindable
+    var heroBio: List<VODescription> = emptyList()
+        set(value) {
+            field = value
+            notifyPropertyChanged(BR.heroBio)
+        }
+
 }

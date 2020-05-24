@@ -88,6 +88,11 @@ class HeroInfoViewModel @AssistedInject constructor(
 
     }
 
+    fun showHeroBio() {
+        vOHero.value?.selectedDescriptionList = vOHero.value?.heroBio!!
+        vOHero.postValue(vOHero.value)
+    }
+
     private fun loadFreshGuideForHero(heroModel: HeroModel) {
 
 //        int currentDay = PreferenceManager.getDefaultSharedPreferences(application).getInt(application.getString(R.string.setting_current_day), 0);
