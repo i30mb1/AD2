@@ -9,6 +9,7 @@ import n7.ad2.runBlockingTest
 import n7.ad2.ui.heroes.domain.vo.VOHero
 import org.junit.Rule
 import org.junit.Test
+import kotlin.reflect.full.declaredMembers
 
 @ExperimentalCoroutinesApi
 @SmallTest
@@ -26,7 +27,6 @@ class ConvertLocalHeroListToVoListUseCaseTest {
 
         val voList: List<VOHero> = convertLocalHeroListToVoListUseCase.invoke(list)
 
-        //todo загуглить как проверить что все поля у обьекта были вызваны хотябы 1 раз
         Truth.assertThat(voList[0].name).isNotEmpty()
         Truth.assertThat(voList[0].image).isNotEmpty()
 
