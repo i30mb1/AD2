@@ -19,8 +19,7 @@
 
     <com.google.android.material.card.MaterialCardView
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:onClick="@{()-> fragment.playAudio(model.audioUrl)}">
+        android:layout_height="wrap_content">
 
         <LinearLayout
             android:layout_width="match_parent"
@@ -47,10 +46,11 @@
                 <ImageView
                     android:id="@+id/play"
                     isVisible="@{model.audioUrl!=null}"
+                    isSelected="@{model.isPlaying}"
                     android:layout_width="@dimen/header_width"
                     android:layout_height="@dimen/header_width"
                     android:contentDescription="@string/desc_play"
-                    android:onClick="@{(view)-> play.setSelected(!view.isSelected)}"
+                    android:onClick="@{(view)-> fragment.playAudio(view, model)}"
                     android:src="@drawable/animated_play" />
 
                 <TextView

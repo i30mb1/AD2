@@ -1,6 +1,5 @@
 package n7.ad2.ui.heroInfo
 
-import android.content.Context
 import android.os.Bundle
 import android.util.TypedValue
 import android.view.Menu
@@ -9,7 +8,6 @@ import android.view.MenuItem
 import android.view.View
 import androidx.fragment.app.Fragment
 import androidx.fragment.app.activityViewModels
-import androidx.interpolator.view.animation.FastOutSlowInInterpolator
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.LinearSnapHelper
 import n7.ad2.R
@@ -72,8 +70,11 @@ class HeroInfoFragment : Fragment(R.layout.fragment_hero_personal) {
         setupSpellInfoRecyclerView()
     }
 
-    fun playAudio(url: String?) {
-       if(url!=null) audioExoPlayer.play(url)
+    fun playAudio(view: View, model: VODescription) {
+       if(model.audioUrl != null) {
+           audioExoPlayer.setSelectedView(view)
+           audioExoPlayer.play(model)
+       }
     }
 
    fun showPopup(view: View, text: String) {

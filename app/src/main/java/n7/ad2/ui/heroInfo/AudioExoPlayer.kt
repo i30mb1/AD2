@@ -6,6 +6,7 @@ import android.net.Uri
 import android.os.Build
 import android.view.View
 import androidx.annotation.RawRes
+import androidx.databinding.ObservableBoolean
 import androidx.lifecycle.Lifecycle
 import androidx.lifecycle.LifecycleObserver
 import androidx.lifecycle.OnLifecycleEvent
@@ -23,6 +24,7 @@ import com.google.android.exoplayer2.upstream.DefaultDataSourceFactory
 import com.google.android.exoplayer2.upstream.RawResourceDataSource
 import com.google.android.exoplayer2.util.Util
 import n7.ad2.R
+import n7.ad2.ui.heroInfo.domain.vo.VODescription
 
 
 class AudioExoPlayer(
@@ -31,7 +33,9 @@ class AudioExoPlayer(
 ) : Player.EventListener, LifecycleObserver {
 
     private lateinit var exoPlayer: SimpleExoPlayer
+    private var view: View? = null
     private var listener: ((errorMessage: String) -> Unit)? = null
+    private var isPlaying = ObservableBoolean(false)
 
     init {
         lifecycle.addObserver(this)
@@ -46,14 +50,17 @@ class AudioExoPlayer(
             ExoPlayer.STATE_READY -> {
             }
             ExoPlayer.STATE_ENDED -> {
+                isPlaying.set(false)
             }
             else -> {
+                isPlaying.set(false)
             }
         }
     }
 
     override fun onPlayerError(error: ExoPlaybackException) {
         listener?.invoke("${error.message}")
+        isPlaying.set(false)
     }
 
     fun setErrorListener(listener: (String) -> Unit) {
@@ -69,6 +76,18 @@ class AudioExoPlayer(
         play(assetDataSource.uri!!)
     }
 
+    fun play(model: VODescription) {
+        if (isPlaying !== model.isPlaying) isPlaying.set(false)
+        isPlaying = model.isPlaying
+        if (isPlaying.get()) {
+            isPlaying.set(false)
+            stop()
+        } else {
+            isPlaying.set(true)
+            play(model.audioUrl!!)
+        }
+    }
+
     fun play(@RawRes id: Int) = play(RawResourceDataSource.buildRawResourceUri(id))
 
     fun play(url: String) = play(Uri.parse(url))
@@ -80,6 +99,10 @@ class AudioExoPlayer(
         exoPlayer.playWhenReady = true
     }
 
+    fun setSelectedView(view: View) {
+        this.view = view
+    }
+
     @OnLifecycleEvent(Lifecycle.Event.ON_PAUSE)
     private fun onPause() = if (Build.VERSION.SDK_INT < Build.VERSION_CODES.N) destroy() else Unit
 
@@ -87,9 +110,13 @@ class AudioExoPlayer(
     private fun onStop() = if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.N) destroy() else Unit
 
     @OnLifecycleEvent(Lifecycle.Event.ON_DESTROY)
-    private fun onDestroy()  {
+    private fun onDestroy() {
         exoPlayer.removeListener(this)
         lifecycle.removeObserver(this)
+    }
+
+    private fun stop() {
+        exoPlayer.stop()
     }
 
     private fun destroy() {

@@ -40,6 +40,11 @@ fun View.isVisible(isVisible: Boolean) {
     this.visibility = if (isVisible) View.VISIBLE else View.GONE
 }
 
+@BindingAdapter("isSelected")
+fun View.isSelected(isSelected: Boolean) {
+    this.isSelected = isSelected
+}
+
 @BindingAdapter("asyncText", "android:textSize", "withDash", requireAll = false)
 fun TextView.asyncText(text: CharSequence, textSize: Int?, withDash: Boolean = false) {
     // first, set all measurement affecting properties of the text

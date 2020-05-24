@@ -41,6 +41,7 @@ class DescriptionsListAdapter(private val fragment: HeroInfoFragment) : ListAdap
             item.body.getSpans<ImageSpan>().forEach {
                 it.drawable.setBounds(0, 0, lineHeight, lineHeight)
             }
+
             binding.executePendingBindings()
         }
 
