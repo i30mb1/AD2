@@ -4,4 +4,8 @@
     <dimen name="header_width">30dp</dimen>
 
     <dimen name="icon_in_description">20dp</dimen>
+
+    <integer name="animation_short">100</integer>
+    <integer name="animation_medium">300</integer>
+    <integer name="animation_long">600</integer>
 </resources>

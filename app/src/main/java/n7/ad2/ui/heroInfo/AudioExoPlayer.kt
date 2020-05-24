@@ -79,13 +79,7 @@ class AudioExoPlayer(
     fun play(model: VODescription) {
         if (isPlaying !== model.isPlaying) isPlaying.set(false)
         isPlaying = model.isPlaying
-        if (isPlaying.get()) {
-            isPlaying.set(false)
-            stop()
-        } else {
-            isPlaying.set(true)
-            play(model.audioUrl!!)
-        }
+        if (isPlaying.get()) stop() else play(model.audioUrl!!)
     }
 
     fun play(@RawRes id: Int) = play(RawResourceDataSource.buildRawResourceUri(id))
@@ -93,6 +87,7 @@ class AudioExoPlayer(
     fun play(url: String) = play(Uri.parse(url))
 
     fun play(uri: Uri) {
+        isPlaying.set(true)
         val source = buildMediaSource(uri)
 
         exoPlayer.prepare(source)
@@ -116,6 +111,7 @@ class AudioExoPlayer(
     }
 
     private fun stop() {
+        isPlaying.set(false)
         exoPlayer.stop()
     }
 

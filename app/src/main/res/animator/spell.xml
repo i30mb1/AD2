@@ -3,13 +3,13 @@
     <item android:state_selected="true">
         <set android:ordering="together">
             <objectAnimator
-                android:duration="500"
+                android:duration="@integer/animation_long"
                 android:interpolator="@android:interpolator/bounce"
                 android:propertyName="scaleX"
                 android:valueTo="0.9" />
             <objectAnimator
+                android:duration="@integer/animation_long"
                 android:interpolator="@android:interpolator/bounce"
-                android:duration="500"
                 android:propertyName="scaleY"
                 android:valueTo="0.9" />
         </set>
@@ -17,12 +17,12 @@
     <item>
         <set android:ordering="together">
             <objectAnimator
-                android:duration="500"
+                android:duration="@integer/animation_long"
                 android:interpolator="@android:interpolator/bounce"
                 android:propertyName="scaleX"
                 android:valueTo="1" />
             <objectAnimator
-                android:duration="500"
+                android:duration="@integer/animation_long"
                 android:interpolator="@android:interpolator/bounce"
                 android:propertyName="scaleY"
                 android:valueTo="1" />

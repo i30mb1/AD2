@@ -51,7 +51,7 @@
                     android:layout_height="@dimen/header_width"
                     android:contentDescription="@string/desc_play"
                     android:onClick="@{(view)-> fragment.playAudio(view, model)}"
-                    android:src="@drawable/animated_play" />
+                    android:src="@drawable/selector_play" />
 
                 <TextView
                     android:id="@+id/hot_key"

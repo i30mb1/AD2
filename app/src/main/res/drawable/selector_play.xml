@@ -12,12 +12,12 @@
         android:state_selected="true" />
 
     <transition
-        android:drawable="@drawable/pause_to_play"
+        android:drawable="@drawable/transition_pause_to_play"
         android:fromId="@id/paused"
         android:toId="@id/play" />
 
     <transition
-        android:drawable="@drawable/play_to_pause"
+        android:drawable="@drawable/transition_play_to_pause"
         android:fromId="@id/play"
         android:toId="@id/paused" />
 </animated-selector>

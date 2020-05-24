@@ -41,7 +41,7 @@ class SelectableImageView(
     override fun setSelected(selected: Boolean) {
         super.setSelected(selected)
         ValueAnimator.ofFloat(currentBorderWidth, if (selected) borderWidth else 0f).apply {
-            duration = 300L
+            duration = resources.getInteger(R.integer.animation_medium).toLong()
             addUpdateListener {
                 currentBorderWidth = it.animatedValue as Float
                 rect.set(0, 0, currentBorderWidth.toInt(), height)
