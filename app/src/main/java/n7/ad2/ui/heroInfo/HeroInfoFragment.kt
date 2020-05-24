@@ -28,7 +28,7 @@ class HeroInfoFragment : Fragment(R.layout.fragment_hero_personal) {
     private val jsonArrayHeroAbilities: JSONArray? = null
     private lateinit var binding: FragmentHeroPersonalBinding
     private val viewModel: HeroInfoViewModel by activityViewModels()
-    private lateinit var descriptionsListAdapter: DescriptionsListAdapter
+    private lateinit var spellsAdapter: SpellsListAdapter
     private var colorAccentTheme = 0
         private get() = if (field == 0 && context != null) {
             val typedValue = TypedValue()
@@ -46,6 +46,7 @@ class HeroInfoFragment : Fragment(R.layout.fragment_hero_personal) {
         binding = FragmentHeroPersonalBinding.bind(view).also {
             it.lifecycleOwner = viewLifecycleOwner
             it.viewModel = viewModel
+            it.fragment = this
             it.ivImage.transitionName = requireActivity().intent.getStringExtra(HeroFullActivity.TN_PHOTO)
         }
 
@@ -85,11 +86,12 @@ class HeroInfoFragment : Fragment(R.layout.fragment_hero_personal) {
     }
 
     fun setDescription(voDescription: List<VODescription>) {
-        descriptionsListAdapter.submitList(voDescription)
+        spellsAdapter.deselectAll()
+        viewModel.vOHero.value?.selectedDescriptionList = voDescription
     }
 
     private fun setupSpellInfoRecyclerView() {
-        descriptionsListAdapter = DescriptionsListAdapter(this)
+        val descriptionsListAdapter = DescriptionsListAdapter(this)
 
         binding.rvSpellsInfo.apply {
             adapter = descriptionsListAdapter
@@ -98,7 +100,7 @@ class HeroInfoFragment : Fragment(R.layout.fragment_hero_personal) {
     }
 
     private fun setupSpellRecyclerView() {
-        val spellsAdapter = SpellsListAdapter(this)
+        spellsAdapter = SpellsListAdapter(this)
 
         binding.rvSpells.apply {
             LinearSnapHelper().attachToRecyclerView(this)

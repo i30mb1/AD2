@@ -6,6 +6,10 @@
     <data>
 
         <variable
+            name="fragment"
+            type="n7.ad2.ui.heroInfo.HeroInfoFragment" />
+
+        <variable
             name="viewModel"
             type="n7.ad2.ui.heroInfo.HeroInfoViewModel" />
     </data>
@@ -19,13 +23,13 @@
             android:layout_height="match_parent"
             android:padding="4dp">
 
-            <ImageView
+            <n7.ad2.utils.SelectableImageView
                 android:id="@+id/iv_image"
                 loadImageUrl="@{viewModel.vOHero.heroImagePath}"
                 onError="@{@drawable/hero_placeholder}"
                 placeHolder="@{@drawable/hero_placeholder}"
                 android:layout_width="150dp"
-                android:onClick="@{()-> viewModel.showHeroBio()}"
+                android:onClick="@{()-> fragment.setDescription(viewModel.vOHero.heroBio)}"
                 android:layout_height="80dp"
                 android:layout_marginStart="4dp"
                 android:layout_marginTop="4dp"
