@@ -25,14 +25,16 @@ import com.google.android.exoplayer2.util.Util
 import n7.ad2.R
 
 
-class AudioExoPlayer(private val application: Application) : Player.EventListener, LifecycleObserver {
+class AudioExoPlayer(
+        private val application: Application,
+        private val lifecycle: Lifecycle
+) : Player.EventListener, LifecycleObserver {
 
     private lateinit var exoPlayer: SimpleExoPlayer
     private var listener: ((errorMessage: String) -> Unit)? = null
 
     init {
-        initializePlayer()
-        initAudioFocus()
+        lifecycle.addObserver(this)
     }
 
     override fun onPlayerStateChanged(playWhenReady: Boolean, playbackState: Int) {
@@ -79,27 +81,27 @@ class AudioExoPlayer(private val application: Application) : Player.EventListene
     }
 
     @OnLifecycleEvent(Lifecycle.Event.ON_PAUSE)
-    fun onPause() {
-        if (Build.VERSION.SDK_INT < Build.VERSION_CODES.N) {
-            exoPlayer.playWhenReady // play/pause state using
-            exoPlayer.currentPosition // current playback position
-            exoPlayer.currentWindowIndex // current window index
-
-            exoPlayer.removeListener(this)
-            exoPlayer.stop()
-            exoPlayer.release()
-        }
-    }
+    private fun onPause() = if (Build.VERSION.SDK_INT < Build.VERSION_CODES.N) destroy() else Unit
 
     @OnLifecycleEvent(Lifecycle.Event.ON_STOP)
-    fun onStop() {
-        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.N) {
-            exoPlayer.removeListener(this)
-            exoPlayer.stop()
-            exoPlayer.release()
-        }
+    private fun onStop() = if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.N) destroy() else Unit
+
+    @OnLifecycleEvent(Lifecycle.Event.ON_DESTROY)
+    private fun onDestroy()  {
+        exoPlayer.removeListener(this)
+        lifecycle.removeObserver(this)
     }
 
+    private fun destroy() {
+        exoPlayer.playWhenReady // play/pause state using
+        exoPlayer.currentPosition // current playback position
+        exoPlayer.currentWindowIndex // current window index
+
+        exoPlayer.stop()
+        exoPlayer.release()
+    }
+
+    @OnLifecycleEvent(Lifecycle.Event.ON_CREATE)
     private fun initializePlayer() {
         val trackSelector = DefaultTrackSelector(application)
         val loadControl = DefaultLoadControl()
@@ -110,6 +112,7 @@ class AudioExoPlayer(private val application: Application) : Player.EventListene
                 .build()
 
         exoPlayer.addListener(this)
+        initAudioFocus()
     }
 
     private fun initAudioFocus() {

@@ -1,5 +1,6 @@
 package n7.ad2.ui.heroInfo
 
+import android.content.Context
 import android.os.Bundle
 import android.util.TypedValue
 import android.view.Menu
@@ -37,7 +38,8 @@ class HeroInfoFragment : Fragment(R.layout.fragment_hero_personal) {
         } else {
             field
         }
-     private val audioExoPlayer by lazy { AudioExoPlayer(requireActivity().application) }
+     private lateinit var audioExoPlayer: AudioExoPlayer
+
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
@@ -105,6 +107,7 @@ class HeroInfoFragment : Fragment(R.layout.fragment_hero_personal) {
     }
 
     private fun setObservers() {
+        audioExoPlayer = AudioExoPlayer(requireActivity().application, lifecycle)
 //        viewModel.jsonObjectHeroFull.observe(getViewLifecycleOwner(), new Observer<JSONObject>() {
 //            @Override
 //            public void onChanged(@Nullable JSONObject jsonObject) {
