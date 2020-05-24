@@ -335,7 +335,9 @@ class ParseHeroes private constructor(
 
     private fun JSONArray.ifContainAdd(alt: String, spellImmunityBlockPartial: String, it: Element) {
         if (alt.contains(spellImmunityBlockPartial)) {
-            add("($spellImmunityBlockPartial)^" + it.text().replace(". ", ".\n"))
+            add("(${spellImmunityBlockPartial.dropLast(4)})^"
+                    + it.getElementsByAttribute("title")[0].attr("title").dropLast(1) + "\n"
+                    + it.text().replace(". ", "\n"))
         }
     }
 
