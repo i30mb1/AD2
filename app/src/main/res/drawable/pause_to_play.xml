@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<animated-vector xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:aapt="http://schemas.android.com/aapt"
+    android:drawable="@drawable/ic_play">
+
+    <target
+        android:name="pause_right">
+        <aapt:attr name="android:animation">
+            <objectAnimator
+                android:duration="100"
+                android:interpolator="@android:interpolator/accelerate_decelerate"
+                android:propertyName="pathData"
+                android:valueFrom="M37,23 L37,32 L37,41"
+                android:valueTo="M26,23 L41,32 L27,41"
+                android:valueType="pathType" />
+        </aapt:attr>
+    </target>
+
+</animated-vector>

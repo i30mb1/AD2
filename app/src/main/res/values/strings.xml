@@ -203,6 +203,7 @@
     <string name="desc_strength" translatable="false">strength</string>
     <string name="desc_intellect" translatable="false">intellect</string>
     <string name="desc_agility" translatable="false">Agility</string>
+    <string name="desc_play" translatable="false">play</string>
 
     <string name="hotkey" translatable="false">Hot Key</string>
     <string name="legacykey" translatable="false">Legacy Key</string>
