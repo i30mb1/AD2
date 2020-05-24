@@ -67,7 +67,7 @@ class GetVOHeroDescriptionUseCase @Inject constructor(
 
         val voSpellList: List<VOSpell> = localHeroDescription.abilities.map {
             val descriptions = mutableListOf<VODescription>().apply {
-                val cooldown = if (it.cooldown != null) getSpannableTagTalent(it.cooldown, theme) else SpannableString("")
+                val cooldown = if (it.cooldown != null) getSpannableTagTalent(it.cooldown, theme) else null
                 val params = getSpannableTagTalent(it.params.toStringListWithDash(), theme)
 
                 add(VODescription(it.spellName, it.hotKey, it.legacyKey, SpannableString(it.description), it.effects.getOrNull(0), it.effects.getOrNull(1), it.effects.getOrNull(2), it.mana, cooldown, it.spellAudio))
