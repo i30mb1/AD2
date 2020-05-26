@@ -11,8 +11,8 @@ class GetCurrentDateInYearUseCase @Inject constructor(
         private val calendar: Calendar
 ) {
 
-    suspend operator fun invoke(date: Date = calendar.time) = withContext(ioDispatcher) {
-        val currentDayInString = SimpleDateFormat("DDD", Locale.getDefault()).format(date)
+    suspend operator fun invoke(date: Date = calendar.time, locale: Locale = Locale.getDefault()) = withContext(ioDispatcher) {
+        val currentDayInString = SimpleDateFormat("DDD", locale).format(date)
         currentDayInString.toInt()
     }
 
