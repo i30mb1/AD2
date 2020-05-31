@@ -92,6 +92,7 @@ class GetVOHeroDescriptionUseCase @Inject constructor(
             add(VODescription(title = application.getString(R.string.hero_fragment_trivia), body = SpannableString(localHeroDescription.trivia.toStringListWithDash())))
         }
         voHeroDescription.heroBio = heroBio
+        voHeroDescription.selectedDescriptionList = heroBio
 
         voHeroDescription
     }
