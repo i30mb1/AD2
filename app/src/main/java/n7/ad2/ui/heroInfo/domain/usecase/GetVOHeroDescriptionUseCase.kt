@@ -2,6 +2,7 @@ package n7.ad2.ui.heroInfo.domain.usecase
 
 import android.app.Application
 import android.content.res.Resources
+import android.net.Uri
 import android.text.Spannable
 import android.text.SpannableString
 import android.text.SpannableStringBuilder
@@ -11,6 +12,7 @@ import android.text.style.ImageSpan
 import android.view.View
 import kotlinx.coroutines.CoroutineDispatcher
 import kotlinx.coroutines.withContext
+import n7.ad2.BuildConfig
 import n7.ad2.R
 import n7.ad2.data.source.local.model.LocalHero
 import n7.ad2.ui.heroInfo.InfoPopupWindow
@@ -64,7 +66,7 @@ class GetVOHeroDescriptionUseCase @Inject constructor(
         val voHeroDescription = VOHeroDescription()
         voHeroDescription.heroImagePath = "file:///android_asset/${localHero.assetsPath}/full.png"
 
-        val voSpellList: List<VOSpell> = localHeroDescription.abilities.map {
+        val spells: MutableList<VOSpell> = localHeroDescription.abilities.map {
             val descriptions = mutableListOf<VODescription>().apply {
                 val cooldown = if (it.cooldown != null) getSpannableTagTalent(it.cooldown, theme) else null
                 val params = getSpannableTagTalent(it.params.toStringListWithDash(), theme)
@@ -83,8 +85,14 @@ class GetVOHeroDescriptionUseCase @Inject constructor(
                 listVODescriptions = descriptions
                 spellAudio = it.spellAudio
             }
-        }
-        voHeroDescription.spells = voSpellList
+        }.toMutableList()
+        spells.add(0, VOSpell().apply {
+                    name = application.getString(R.string.item_hero_personal_description_talents)
+                    selected = false
+                    image = Uri.parse("android.resource://" + BuildConfig.APPLICATION_ID + "/" + R.drawable.talent).toString()
+                }
+        )
+        voHeroDescription.spells = spells
 
         val heroBio = mutableListOf<VODescription>().apply {
             add(VODescription(title = application.getString(R.string.hero_fragment_description), body = SpannableString(localHeroDescription.description)))
