@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+        <variable
+            name="item"
+            type="n7.ad2.ui.heroInfo.domain.vo.VOTitleSimple" />
+    </data>
+
+    <LinearLayout
+        android:layout_marginTop="10dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="?colorPrimary"
+        android:gravity="center_vertical"
+        android:minHeight="@dimen/header_width">
+
+        <TextView
+            asyncText="@{item.title}"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="4dp"
+            android:layout_marginEnd="4dp"
+            android:layout_weight="1"
+            android:textAppearance="?textAppearanceSubtitle1"
+            tools:text="Duel" />
+    </LinearLayout>
+</layout>

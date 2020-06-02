@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+        <variable
+            name="item"
+            type="n7.ad2.ui.heroInfo.domain.vo.VOTitleWithIcon" />
+
+        <variable
+            name="listener"
+            type="n7.ad2.base.VOPopUpListener" />
+
+        <variable
+            name="fragment"
+            type="n7.ad2.ui.heroInfo.HeroInfoFragment" />
+    </data>
+
+    <LinearLayout
+        android:layout_marginTop="10dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="?colorPrimary"
+        android:gravity="center_vertical"
+        android:minHeight="@dimen/header_width">
+
+        <TextView
+            asyncText="@{item.title}"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="4dp"
+            android:layout_marginEnd="4dp"
+            android:layout_weight="1"
+            android:textAppearance="?textAppearanceSubtitle1"
+            tools:text="Duel" />
+
+        <ImageView
+            android:id="@+id/play"
+            isSelected="@{item.isPlaying}"
+            isVisible="@{item.audioUrl!=null}"
+            android:layout_width="@dimen/header_width"
+            android:layout_height="@dimen/header_width"
+            android:contentDescription="@string/desc_play"
+            android:onClick="@{(view)-> fragment.playAudio(view, item)}"
+            android:src="@drawable/selector_play" />
+
+        <TextView
+            android:id="@+id/hot_key"
+            isVisible='@{item.hotkey!=null}'
+            android:layout_width="@dimen/header_width"
+            android:layout_height="@dimen/header_width"
+            android:background="@drawable/transparent_50"
+            android:gravity="center"
+            android:maxEms="1"
+            android:onClick="@{(view)-> listener.onClickListener(view, @string/hotkey)}"
+            android:text="@{item.hotkey}"
+            android:textAppearance="?textAppearanceSubtitle1"
+            tools:text="T" />
+
+        <TextView
+            android:id="@+id/legacy_key"
+            isVisible='@{item.hotkey!=null}'
+            android:layout_width="@dimen/header_width"
+            android:layout_height="@dimen/header_width"
+            android:background="@drawable/transparent_50"
+            android:gravity="center"
+            android:maxEms="1"
+            android:onClick="@{(view)-> listener.onClickListener(view, @string/legacykey)}"
+            android:text="@{item.legacyKey}"
+            android:textAppearance="?textAppearanceSubtitle1"
+            tools:text="T" />
+    </LinearLayout>
+</layout>

@@ -34,6 +34,4 @@ class VOSpell : BaseObservable() {
             notifyPropertyChanged(BR.listVODescriptions)
         }
 
-    var spellAudio: String = ""
-
 }

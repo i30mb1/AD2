@@ -13,6 +13,7 @@ import androidx.recyclerview.widget.LinearSnapHelper
 import n7.ad2.R
 import n7.ad2.databinding.FragmentHeroPersonalBinding
 import n7.ad2.ui.heroInfo.domain.vo.VODescription
+import n7.ad2.ui.heroInfo.domain.vo.VOTitleWithIcon
 import org.json.JSONArray
 import org.json.JSONException
 import org.json.JSONObject
@@ -70,7 +71,7 @@ class HeroInfoFragment : Fragment(R.layout.fragment_hero_personal) {
         setupSpellInfoRecyclerView()
     }
 
-    fun playAudio(view: View, model: VODescription) {
+    fun playAudio(view: View, model: VOTitleWithIcon) {
        if(model.audioUrl != null) {
            audioExoPlayer.setSelectedView(view)
            audioExoPlayer.play(model)

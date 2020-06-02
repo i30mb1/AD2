@@ -72,10 +72,11 @@
                 android:id="@+id/rv_spells_info"
                 data="@{viewModel.VOHero.selectedDescriptionList}"
                 android:layout_width="match_parent"
+                android:minHeight="400dp"
                 android:layout_height="match_parent"
                 android:layout_below="@id/rv_spells"
                 tools:itemCount="3"
-                tools:listitem="@layout/item_description" />
+                tools:listitem="@layout/item_body_simple" />
 
         </RelativeLayout>
     </androidx.core.widget.NestedScrollView>

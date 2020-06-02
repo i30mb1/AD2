@@ -24,7 +24,7 @@ import com.google.android.exoplayer2.upstream.DefaultDataSourceFactory
 import com.google.android.exoplayer2.upstream.RawResourceDataSource
 import com.google.android.exoplayer2.util.Util
 import n7.ad2.R
-import n7.ad2.ui.heroInfo.domain.vo.VODescription
+import n7.ad2.ui.heroInfo.domain.vo.VOTitleWithIcon
 
 
 class AudioExoPlayer(
@@ -76,7 +76,7 @@ class AudioExoPlayer(
         play(assetDataSource.uri!!)
     }
 
-    fun play(model: VODescription) {
+    fun play(model: VOTitleWithIcon) {
         if (isPlaying !== model.isPlaying) isPlaying.set(false)
         isPlaying = model.isPlaying
         if (isPlaying.get()) stop() else play(model.audioUrl!!)

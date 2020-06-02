@@ -45,6 +45,11 @@ fun View.isSelected(isSelected: Boolean) {
     this.isSelected = isSelected
 }
 
+@BindingAdapter("android:src")
+fun setImageDrawable(view: ImageView, drawable: Int) {
+    view.setImageResource(drawable)
+}
+
 @BindingAdapter("asyncText", "android:textSize", "withDash", requireAll = false)
 fun TextView.asyncText(text: CharSequence, textSize: Int?, withDash: Boolean = false) {
     // first, set all measurement affecting properties of the text

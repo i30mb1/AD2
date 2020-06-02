@@ -17,9 +17,15 @@ import n7.ad2.R
 import n7.ad2.data.source.local.model.LocalHero
 import n7.ad2.ui.heroInfo.InfoPopupWindow
 import n7.ad2.ui.heroInfo.domain.model.LocalHeroDescription
+import n7.ad2.ui.heroInfo.domain.vo.VOBodySimple
+import n7.ad2.ui.heroInfo.domain.vo.VOBodyWithSeparator
+import n7.ad2.ui.heroInfo.domain.vo.VOBodyWithImage
 import n7.ad2.ui.heroInfo.domain.vo.VODescription
+import n7.ad2.ui.heroInfo.domain.vo.VOBodyLine
 import n7.ad2.ui.heroInfo.domain.vo.VOHeroDescription
 import n7.ad2.ui.heroInfo.domain.vo.VOSpell
+import n7.ad2.ui.heroInfo.domain.vo.VOTitleSimple
+import n7.ad2.ui.heroInfo.domain.vo.VOTitleWithIcon
 import javax.inject.Inject
 
 class GetVOHeroDescriptionUseCase @Inject constructor(
@@ -44,10 +50,10 @@ class GetVOHeroDescriptionUseCase @Inject constructor(
         if (indexOf == -1) return builder.toString()
 
         do {
-            builder.insert(indexOf + 1,"\n")
+            builder.insert(indexOf + 1, "\n")
             startIndex++
             indexOf = builder.indexOf(COLON, startIndex)
-        } while (indexOf!= -1)
+        } while (indexOf != -1)
 
         return builder.toString()
     }
@@ -68,38 +74,53 @@ class GetVOHeroDescriptionUseCase @Inject constructor(
 
         val spells: MutableList<VOSpell> = localHeroDescription.abilities.map {
             val descriptions = mutableListOf<VODescription>().apply {
-                val cooldown = if (it.cooldown != null) spanWithDotaImages(it.cooldown, theme) else null
-                val params = spanWithDotaImages(it.params.toStringListWithDash(), theme)
 
-                add(VODescription(it.spellName, it.hotKey, it.legacyKey, SpannableString(it.description), it.effects.getOrNull(0), it.effects.getOrNull(1), it.effects.getOrNull(2), it.mana, cooldown, it.spellAudio))
-                add(VODescription(title = application.getString(R.string.hero_fragment_params), body = params))
-                if (it.story != null) add(VODescription(title = application.getString(R.string.hero_fragment_story), body = SpannableString(it.story)))
-                add(VODescription(title = application.getString(R.string.hero_fragment_notes), body = SpannableString(it.notes.toStringListWithDash())))
+                add(VOTitleWithIcon(it.spellName, it.hotKey, it.legacyKey, it.spellAudio))
+                it.effects.forEach { add(VOBodyLine(it)) }
+                add(VOBodySimple(it.description))
+                it.cooldown?.let { add(VOBodyWithImage(spanWithDotaImages(it, theme), R.drawable.cooldown)) }
+                it.mana?.let { add(VOBodyWithImage(spanWithDotaImages(it, theme), R.drawable.mana)) }
 
+                add(VOTitleSimple(application.getString(R.string.hero_fragment_params)))
+                add(VOBodyWithSeparator(spanWithDotaImages(it.params.toStringListWithDash(), theme)))
+
+                it.story?.let {
+                    add(VOTitleSimple(application.getString(R.string.hero_fragment_story)))
+                    add(VOBodyWithSeparator(SpannableString(it)))
+                }
+
+                add(VOTitleSimple(application.getString(R.string.hero_fragment_notes)))
+                add(VOBodyWithSeparator(SpannableString(it.notes.toStringListWithDash())))
             }
 
             VOSpell().apply {
                 name = it.spellName
                 image = "file:///android_asset/spells/${it.spellName}.png"
                 listVODescriptions = descriptions
-                spellAudio = it.spellAudio
             }
         }.toMutableList()
+
         val talentListVoDescription = mutableListOf<VODescription>().apply {
-            add(VODescription(title = application.getString(R.string.hero_fragment_tips), body = SpannableString(localHeroDescription.talentTips.toStringListWithDash())))
+            add(VOTitleSimple(application.getString(R.string.hero_fragment_tips)))
+            add(VOBodyWithSeparator(SpannableString(localHeroDescription.talentTips.toStringListWithDash())))
         }
         spells.add(0, VOSpell().apply {
-                    name = application.getString(R.string.item_hero_personal_description_talents)
-                    image = Uri.parse("android.resource://" + BuildConfig.APPLICATION_ID + "/" + R.drawable.talent).toString()
-                    listVODescriptions = talentListVoDescription
-                }
+            name = application.getString(R.string.item_hero_personal_description_talents)
+            image = Uri.parse("android.resource://" + BuildConfig.APPLICATION_ID + "/" + R.drawable.talent).toString()
+            listVODescriptions = talentListVoDescription
+        }
         )
         voHeroDescription.spells = spells
 
         val heroBio = mutableListOf<VODescription>().apply {
-            add(VODescription(title = application.getString(R.string.hero_fragment_description), body = SpannableString(localHeroDescription.description)))
-            add(VODescription(title = application.getString(R.string.hero_fragment_bio), body = SpannableString(localHeroDescription.history)))
-            add(VODescription(title = application.getString(R.string.hero_fragment_trivia), body = SpannableString(localHeroDescription.trivia.toStringListWithDash())))
+            add(VOTitleSimple(application.getString(R.string.hero_fragment_description)))
+            add(VOBodyWithSeparator(SpannableString(localHeroDescription.description)))
+
+            add(VOTitleSimple(application.getString(R.string.hero_fragment_bio)))
+            add(VOBodyWithSeparator(SpannableString(localHeroDescription.history)))
+
+            add(VOTitleSimple(application.getString(R.string.hero_fragment_trivia)))
+            add(VOBodyWithSeparator(SpannableString(localHeroDescription.trivia.toStringListWithDash())))
         }
         voHeroDescription.heroBio = heroBio
         voHeroDescription.selectedDescriptionList = heroBio
