@@ -68,8 +68,8 @@ class GetVOHeroDescriptionUseCase @Inject constructor(
 
         val spells: MutableList<VOSpell> = localHeroDescription.abilities.map {
             val descriptions = mutableListOf<VODescription>().apply {
-                val cooldown = if (it.cooldown != null) getSpannableTagTalent(it.cooldown, theme) else null
-                val params = getSpannableTagTalent(it.params.toStringListWithDash(), theme)
+                val cooldown = if (it.cooldown != null) spanWithDotaImages(it.cooldown, theme) else null
+                val params = spanWithDotaImages(it.params.toStringListWithDash(), theme)
 
                 add(VODescription(it.spellName, it.hotKey, it.legacyKey, SpannableString(it.description), it.effects.getOrNull(0), it.effects.getOrNull(1), it.effects.getOrNull(2), it.mana, cooldown, it.spellAudio))
                 add(VODescription(title = application.getString(R.string.hero_fragment_params), body = params))
@@ -80,16 +80,18 @@ class GetVOHeroDescriptionUseCase @Inject constructor(
 
             VOSpell().apply {
                 name = it.spellName
-                selected = false
                 image = "file:///android_asset/spells/${it.spellName}.png"
                 listVODescriptions = descriptions
                 spellAudio = it.spellAudio
             }
         }.toMutableList()
+        val talentListVoDescription = mutableListOf<VODescription>().apply {
+            add(VODescription(title = application.getString(R.string.hero_fragment_tips), body = SpannableString(localHeroDescription.talentTips.toStringListWithDash())))
+        }
         spells.add(0, VOSpell().apply {
                     name = application.getString(R.string.item_hero_personal_description_talents)
-                    selected = false
                     image = Uri.parse("android.resource://" + BuildConfig.APPLICATION_ID + "/" + R.drawable.talent).toString()
+                    listVODescriptions = talentListVoDescription
                 }
         )
         voHeroDescription.spells = spells
@@ -105,7 +107,7 @@ class GetVOHeroDescriptionUseCase @Inject constructor(
         voHeroDescription
     }
 
-    private fun getSpannableTagTalent(body: String, theme: Resources.Theme): SpannableString {
+    private fun spanWithDotaImages(body: String, theme: Resources.Theme): SpannableString {
         var startIndex = 0
         var indexOf = body.indexOf(TAG_TALENT, startIndex)
         val spannableString = SpannableString(body)
