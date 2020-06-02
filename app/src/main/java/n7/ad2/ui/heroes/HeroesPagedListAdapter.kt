@@ -52,10 +52,11 @@ class HeroesPagedListAdapter internal constructor(fragment: HeroesFragment) : Pa
             }
         }
     }
+
+    private class DiffCallback : DiffUtil.ItemCallback<LocalHero>() {
+        override fun areItemsTheSame(oldItem: LocalHero, newItem: LocalHero) = oldItem.name == newItem.name
+
+        override fun areContentsTheSame(oldItem: LocalHero, newItem: LocalHero) = true
+    }
 }
 
-class DiffCallback : DiffUtil.ItemCallback<LocalHero>() {
-    override fun areItemsTheSame(oldItem: LocalHero, newItem: LocalHero) = oldItem.name == newItem.name
-
-    override fun areContentsTheSame(oldItem: LocalHero, newItem: LocalHero) = true
-}
