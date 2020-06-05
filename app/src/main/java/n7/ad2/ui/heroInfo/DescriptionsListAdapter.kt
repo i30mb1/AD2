@@ -56,7 +56,9 @@ class DescriptionsListAdapter(private val fragment: HeroInfoFragment) : ListAdap
     override fun onBindViewHolder(holder: ViewHolder, position: Int) = holder.bind(getItem(position))
 
     class ViewHolder private constructor(
-            private val binding: ViewDataBinding
+            private val binding: ViewDataBinding,
+            private val listener: VOPopUpListener<String>,
+            private val fragment: HeroInfoFragment
     ) : RecyclerView.ViewHolder(binding.root) {
 
         private var lineHeight = 0
@@ -70,7 +72,8 @@ class DescriptionsListAdapter(private val fragment: HeroInfoFragment) : ListAdap
         private fun bindSpecificVO(binding: ViewDataBinding, item: VODescription) {
             when (binding) {
                 is ItemBodyWithSeparatorBinding -> setBoundToImageSpan(binding.tvBody, (item as VOBodyWithSeparator).body)
-                is ItemBodyWithImageBinding -> setBoundToImageSpan(binding.tvBody, (item as VOBodyWithImage).body)
+                is ItemBodyWithImageBinding -> { setBoundToImageSpan(binding.tvBody, (item as VOBodyWithImage).body); binding.listener = listener }
+                is ItemTitleWithIconBinding -> binding.let { it.fragment = fragment; it.listener = listener }
             }
         }
 
@@ -86,11 +89,7 @@ class DescriptionsListAdapter(private val fragment: HeroInfoFragment) : ListAdap
                      fragment: HeroInfoFragment): ViewHolder {
                 val layoutInflater = LayoutInflater.from(parent.context)
                 val binding = DataBindingUtil.inflate<ViewDataBinding>(layoutInflater, viewType, parent, false)
-                (binding as? ItemTitleWithIconBinding)?.let {
-                    it.listener = listener
-                    it.fragment = fragment
-                }
-                return ViewHolder(binding)
+                return ViewHolder(binding, listener, fragment)
             }
         }
     }
