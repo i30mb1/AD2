@@ -249,8 +249,9 @@ class ParseHeroes private constructor(
                         saveImageInDirectory(spellImage, "heroesSpell" + File.separator, "$spellName.png")
                     }
 
-                    val spellAudio = it.getElementsByTag("source").attr("src")
-                    put("spellAudio", spellAudio)
+                    var audioUrl = it.getElementsByTag("source").attr("src")
+                    if(audioUrl.isNullOrEmpty()) audioUrl = null
+                    put("audioUrl", audioUrl)
 
                     val hotKey = it.getElementsByAttributeValue("title", "Hotkey").getOrNull(0)?.text()
                     put("hotKey", hotKey)

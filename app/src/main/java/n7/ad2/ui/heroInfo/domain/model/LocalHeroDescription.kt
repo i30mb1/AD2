@@ -23,29 +23,29 @@ data class LocalHeroDescription(
 
 @JsonClass(generateAdapter = true)
 data class Ability(
-    @Json(name = "cooldown")
+        @Json(name = "cooldown")
     val cooldown: String? = null,
-    @Json(name = "description")
+        @Json(name = "description")
     val description: String = "",
-    @Json(name = "effects")
+        @Json(name = "effects")
     val effects: List<String> = listOf(),
-    @Json(name = "hotKey")
+        @Json(name = "hotKey")
     val hotKey: String? = null,
-    @Json(name = "itemBehaviour")
+        @Json(name = "itemBehaviour")
     val itemBehaviour: List<String> = listOf(),
-    @Json(name = "legacyKey")
+        @Json(name = "legacyKey")
     val legacyKey: String? = null,
-    @Json(name = "mana")
+        @Json(name = "mana")
     val mana: String? = null,
-    @Json(name = "notes")
+        @Json(name = "notes")
     val notes: List<String> = listOf(),
-    @Json(name = "params")
+        @Json(name = "params")
     val params: List<String> = listOf(),
-    @Json(name = "spellAudio")
-    val spellAudio: String = "",
-    @Json(name = "spellName")
+        @Json(name = "audioUrl")
+    val audioUrl: String? = null,
+        @Json(name = "spellName")
     val spellName: String = "",
-    @Json(name = "story")
+        @Json(name = "story")
     val story: String? = null
 )
 

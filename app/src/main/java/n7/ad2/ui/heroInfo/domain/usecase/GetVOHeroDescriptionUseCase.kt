@@ -77,7 +77,7 @@ class GetVOHeroDescriptionUseCase @Inject constructor(
         val spells: MutableList<VOSpell> = localHeroDescription.abilities.map {
             val descriptions = mutableListOf<VODescription>().apply {
 
-                add(VOTitleWithIcon(it.spellName, it.hotKey, it.legacyKey, it.spellAudio))
+                add(VOTitleWithIcon(it.spellName, it.hotKey, it.legacyKey, it.audioUrl))
                 it.effects.forEach { add(VOBodyLine(it)) }
                 add(VOBodySimple(it.description))
                 it.cooldown?.let { add(VOBodyWithImage(spanWithDotaImages(it, theme), R.drawable.cooldown)) }
