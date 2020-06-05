@@ -54,7 +54,7 @@
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="2dp"
-                android:background="@drawable/transparent_50"
+                android:background="@drawable/transparent_30"
                 android:maxLines="2"
                 android:paddingStart="2dp"
                 android:paddingEnd="0dp"

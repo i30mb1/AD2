@@ -20,6 +20,7 @@ import n7.ad2.databinding.ItemBodyWithSeparatorBinding
 import n7.ad2.databinding.ItemTitleWithIconBinding
 import n7.ad2.ui.heroInfo.domain.vo.VOBodyLine
 import n7.ad2.ui.heroInfo.domain.vo.VOBodySimple
+import n7.ad2.ui.heroInfo.domain.vo.VOBodyTalent
 import n7.ad2.ui.heroInfo.domain.vo.VOBodyWithImage
 import n7.ad2.ui.heroInfo.domain.vo.VOBodyWithSeparator
 import n7.ad2.ui.heroInfo.domain.vo.VODescription
@@ -44,6 +45,7 @@ class DescriptionsListAdapter(private val fragment: HeroInfoFragment) : ListAdap
             is VOTitleSimple -> R.layout.item_title_simple
             is VOBodyWithSeparator -> R.layout.item_body_with_separator
             is VOBodyWithImage -> R.layout.item_body_with_image
+            is VOBodyTalent -> R.layout.item_body_talent
         }
     }
 
@@ -103,6 +105,7 @@ class DescriptionsListAdapter(private val fragment: HeroInfoFragment) : ListAdap
                 is VOBodyWithSeparator -> newItem is VOBodyWithSeparator
                 is VOBodyWithImage -> newItem is VOBodyWithImage
                 is VOBodyLine -> newItem is VOBodyLine
+                is VOBodyTalent -> newItem is VOBodyTalent
             }
         }
 

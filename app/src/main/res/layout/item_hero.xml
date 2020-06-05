@@ -32,7 +32,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_gravity="bottom"
-            android:background="@drawable/transparent_50"
+            android:background="@drawable/transparent_30"
             android:ellipsize="end"
             android:lines="1"
             android:paddingStart="@{@dimen/line_width * 2}"

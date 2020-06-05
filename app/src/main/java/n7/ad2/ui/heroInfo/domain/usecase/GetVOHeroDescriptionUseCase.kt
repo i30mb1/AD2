@@ -17,11 +17,12 @@ import n7.ad2.R
 import n7.ad2.data.source.local.model.LocalHero
 import n7.ad2.ui.heroInfo.InfoPopupWindow
 import n7.ad2.ui.heroInfo.domain.model.LocalHeroDescription
-import n7.ad2.ui.heroInfo.domain.vo.VOBodySimple
-import n7.ad2.ui.heroInfo.domain.vo.VOBodyWithSeparator
-import n7.ad2.ui.heroInfo.domain.vo.VOBodyWithImage
-import n7.ad2.ui.heroInfo.domain.vo.VODescription
 import n7.ad2.ui.heroInfo.domain.vo.VOBodyLine
+import n7.ad2.ui.heroInfo.domain.vo.VOBodySimple
+import n7.ad2.ui.heroInfo.domain.vo.VOBodyTalent
+import n7.ad2.ui.heroInfo.domain.vo.VOBodyWithImage
+import n7.ad2.ui.heroInfo.domain.vo.VOBodyWithSeparator
+import n7.ad2.ui.heroInfo.domain.vo.VODescription
 import n7.ad2.ui.heroInfo.domain.vo.VOHeroDescription
 import n7.ad2.ui.heroInfo.domain.vo.VOSpell
 import n7.ad2.ui.heroInfo.domain.vo.VOTitleSimple
@@ -37,6 +38,7 @@ class GetVOHeroDescriptionUseCase @Inject constructor(
         const val SEPARATOR = "- "
         const val TAG_TALENT = "TagTalent"
         const val COLON = ": "
+        const val SEPARATOR_TALENT = "^"
     }
 
     private fun List<String>.toStringListWithDashAfterColon(): String {
@@ -101,6 +103,14 @@ class GetVOHeroDescriptionUseCase @Inject constructor(
         }.toMutableList()
 
         val talentListVoDescription = mutableListOf<VODescription>().apply {
+            add(VOTitleSimple(application.getString(R.string.item_hero_personal_description_talents)))
+            var talentLVL = 5
+            localHeroDescription.talents.forEach {
+                val parts = it.split(SEPARATOR_TALENT)
+                add(VOBodyTalent(parts[0], talentLVL, parts[1]))
+                talentLVL += 5
+            }
+
             add(VOTitleSimple(application.getString(R.string.hero_fragment_tips)))
             add(VOBodyWithSeparator(SpannableString(localHeroDescription.talentTips.toStringListWithDash())))
         }

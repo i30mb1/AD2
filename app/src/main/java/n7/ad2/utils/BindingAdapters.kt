@@ -50,6 +50,11 @@ fun setImageDrawable(view: ImageView, drawable: Int) {
     view.setImageResource(drawable)
 }
 
+@BindingAdapter("android:text")
+fun setText(view: TextView, text: Int) {
+    view.text = text.toString()
+}
+
 @BindingAdapter("asyncText", "android:textSize", "withDash", requireAll = false)
 fun TextView.asyncText(text: CharSequence, textSize: Int?, withDash: Boolean = false) {
     // first, set all measurement affecting properties of the text

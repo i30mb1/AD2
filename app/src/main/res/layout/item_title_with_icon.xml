@@ -50,7 +50,7 @@
             isVisible='@{item.hotkey!=null}'
             android:layout_width="@dimen/header_width"
             android:layout_height="@dimen/header_width"
-            android:background="@drawable/transparent_50"
+            android:background="@drawable/transparent_30"
             android:gravity="center"
             android:maxEms="1"
             android:onClick="@{(view)-> listener.onClickListener(view, @string/hotkey)}"
@@ -63,7 +63,7 @@
             isVisible='@{item.hotkey!=null}'
             android:layout_width="@dimen/header_width"
             android:layout_height="@dimen/header_width"
-            android:background="@drawable/transparent_50"
+            android:background="@drawable/transparent_30"
             android:gravity="center"
             android:maxEms="1"
             android:onClick="@{(view)-> listener.onClickListener(view, @string/legacykey)}"
