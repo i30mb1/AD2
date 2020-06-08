@@ -10,12 +10,12 @@ import n7.ad2.data.source.local.model.LocalHero
 @Dao
 interface HeroesDao : BaseDao<LocalHero> {
 
-    @Query("SELECT * FROM LocalHeroes")
+    @Query("SELECT rowid,* FROM LocalHeroes")
     fun getAll(): LiveData<List<LocalHero>>
 
-    @Query("SELECT * FROM LocalHeroes WHERE name LIKE '%'||:filter||'%'")
+    @Query("SELECT rowid,* FROM LocalHeroes WHERE name LIKE '%'||:filter||'%'")
     fun getHeroesFilter(filter: String): DataSource.Factory<Int, LocalHero>
 
-    @Query("SELECT * FROM LocalHeroes WHERE name =:name")
+    @Query("SELECT rowid,* FROM LocalHeroes WHERE name =:name")
     suspend fun getHero(name: String): LocalHero
 }
