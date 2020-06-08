@@ -93,7 +93,7 @@ class ParseHeroes private constructor(
         val heroesEngUrl = "https://dota2.gamepedia.com/Heroes"
         var heroMainAttr = "Strength"
 //        val heroesZhUrl = "https://dota2-zh.gamepedia.com/Heroes"
-        val fileName = "heroesNew.json"
+        val fileName = "heroes.json"
 
         val rootEng = connectTo(heroesEngUrl)
 //        val rootZh = connectTo(heroesZhUrl)
@@ -387,8 +387,8 @@ class ParseHeroes private constructor(
 
 fun main() = runBlocking {
     parser {
-        createHeroesFile = false
-        loadHeros = true
+        createHeroesFile = true
+        loadHeros = false
         loadHeroFullImage = false
         loadHeroSpellImage = false
     }.start()
