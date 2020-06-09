@@ -20,25 +20,36 @@ import javax.imageio.ImageIO
 
 // Builder Pattern https://medium.com/mindorks/builder-pattern-vs-kotlin-dsl-c3ebaca6bc3b
 class ParseHeroes private constructor(
-        private val createHeroesFile: Boolean,
-        private val loadHeros: Boolean,
+        private val loadRus: Boolean,
+        private val loadEng: Boolean,
         private val loadHeroFullImage: Boolean,
         private val loadHeroSpellImage: Boolean
 ) : CoroutineScope by (CoroutineScope(Dispatchers.IO)) {
 
     private constructor(builder: Builder) : this(
-            builder.createHeroesFile,
-            builder.loadHeros,
+            builder.loadEng,
+            builder.loadRus,
             builder.loadHeroFullImage,
             builder.loadHeroSpellImage
     )
 
+    enum class LOCALE(val urlAllHeroes: String, val urlHeroSpecific: String, val directory: String) {
+        RU("https://dota2-ru.gamepedia.com/%D0%93%D0%B5%D1%80%D0%BE%D0%B8", "https://dota2-ru.gamepedia.com", ENGLISH_LOCALE_FOLDER),
+        ENG("https://dota2.gamepedia.com/Heroes", "https://dota2.gamepedia.com", RUSSIAN_LOCALE_FOLDER)
+    }
+
+
     companion object {
+        const val ENGLISH_LOCALE_FOLDER = "en"
+        const val RUSSIAN_LOCALE_FOLDER = "ru"
+        const val COMMON_HERO_FOLDER = "heroes"
+
         inline fun parser(block: Builder.() -> Unit) = Builder().apply(block).build()
 
         class Builder {
-            var createHeroesFile: Boolean = false
             var loadHeros: Boolean = false
+            var loadEng: Boolean = true
+            var loadRus: Boolean = true
             var loadHeroFullImage: Boolean = false
             var loadHeroSpellImage: Boolean = false
 
@@ -47,8 +58,9 @@ class ParseHeroes private constructor(
     }
 
     suspend fun start() {
-        if (createHeroesFile) loadHeroesFile().join()
-        if (loadHeros) loadHeroes().join()
+        loadHeroesFile().join()
+        if (loadEng) loadHeroes(LOCALE.ENG).join()
+        if (loadRus) loadHeroes(LOCALE.RU).join()
     }
 
     private val assetsFilePath = System.getProperty("user.dir") + "\\app\\src\\main\\assets"
@@ -70,32 +82,24 @@ class ParseHeroes private constructor(
         return Jsoup.connect(url).get()
     }
 
-    private fun loadHeroes() = launch {
-        val directoryForFile = "heroes/"
-        val heroesEngUrl = "https://dota2.gamepedia.com/Heroes"
-//        val heroesZhUrl = "https://dota2-zh.gamepedia.com/Heroes"
-
-        val rootEng = connectTo(heroesEngUrl)
-//        val rootZh = connectTo(heroesZhUrl)
-
+    private fun loadHeroes(locale: LOCALE) = launch {
+        val rootEng = connectTo(locale.urlAllHeroes)
         val heroesEng = getHeroes(rootEng)
-//        val heroesZh = getHeroes(rootZh)
 
         heroesEng.forEachIndexed { index, _ ->
             val heroName = getHeroName(heroesEng[index])
             val heroHrefEng = getHeroHref(heroesEng[index])
 
-            loadHero(heroHrefEng, directoryForFile + heroName)
+            loadHero(locale, heroHrefEng, COMMON_HERO_FOLDER + File.separator + heroName + File.separator + locale.directory)
         }
     }
 
     private fun loadHeroesFile() = launch {
-        val heroesEngUrl = "https://dota2.gamepedia.com/Heroes"
         var heroMainAttr = "Strength"
 //        val heroesZhUrl = "https://dota2-zh.gamepedia.com/Heroes"
         val fileName = "heroes.json"
 
-        val rootEng = connectTo(heroesEngUrl)
+        val rootEng = connectTo(LOCALE.ENG.urlAllHeroes)
 //        val rootZh = connectTo(heroesZhUrl)
 
         JSONObject().apply {
@@ -110,15 +114,16 @@ class ParseHeroes private constructor(
 //                        val heroHrefEng = getHeroHref(heroesEng[index])
 
                         put("nameEng", heroName)
-                        if(heroName=="Anti-Mage") heroMainAttr = "Agility"
-                        if(heroName=="Ancient Apparition") heroMainAttr = "Intelligence"
+                        if (heroName == "Anti-Mage") heroMainAttr = "Agility"
+                        if (heroName == "Ancient Apparition") heroMainAttr = "Intelligence"
                         put("mainAttr", heroMainAttr)
 //                        put("hrefEng", heroHrefEng)
 //                        if (withZh) put("nameZh", getHeroName(heroesZh[index]))
 //                        if (withZh) put("hrefZh", getHeroHref(heroesZh[index]))
                         val directory = "heroes/$heroName"
                         put("assetsPath", directory)
-                        createHeroFolderInAssets(directory)
+                        if (loadEng) createHeroFolderInAssets("$directory/$ENGLISH_LOCALE_FOLDER")
+                        if (loadRus) createHeroFolderInAssets("$directory/$RUSSIAN_LOCALE_FOLDER")
                     }
                     add(heroObject)
                 }
@@ -129,8 +134,8 @@ class ParseHeroes private constructor(
         println("file $fileName saved")
     }
 
-    private fun loadHero(heroPath: String, directory: String) {
-        val heroUrlEng = "https://dota2.gamepedia.com$heroPath"
+    private fun loadHero(locale: LOCALE, heroPath: String, directory: String) {
+        val heroUrlEng = "${locale.urlHeroSpecific}$heroPath"
         if (!checkConnectToHero(heroUrlEng)) return
 
         val root = connectTo(heroUrlEng)
@@ -387,8 +392,9 @@ class ParseHeroes private constructor(
 
 fun main() = runBlocking {
     parser {
-        createHeroesFile = true
-        loadHeros = false
+        loadHeros = true
+        loadRus = true
+        loadEng = true
         loadHeroFullImage = false
         loadHeroSpellImage = false
     }.start()
