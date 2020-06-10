@@ -10,8 +10,8 @@ class GetJsonHeroDescriptionUseCase @Inject constructor(
         private val ioDispatcher: CoroutineDispatcher
 ) {
 
-    suspend operator fun invoke(heroAssetsPath: String) = withContext(ioDispatcher) {
-        repository.getAssetsFile("${heroAssetsPath}/${Repository.ASSETS_PATH_HERO_DESC}")
+    suspend operator fun invoke(heroAssetsPath: String, locale: String) = withContext(ioDispatcher) {
+       repository.getHeroDescription(heroAssetsPath, locale)
     }
 
 }
