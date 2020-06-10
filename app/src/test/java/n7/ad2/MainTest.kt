@@ -27,16 +27,18 @@ class MainTest {
 
         val text = file.readText()
         assertWithMessage("heroes file not ready! Run ParserInfo").that(text).isNotEmpty()
+
+        `all heroes have english description`("ru")
+        `all heroes have english description`("en")
     }
 
-    @Test
-    fun `all heroes have english description`() = coroutineTestRule.runBlockingTest {
+    fun `all heroes have english description`(locale: String) = coroutineTestRule.runBlockingTest {
         val heroesJson = File("${System.getProperty("user.dir")}\\src\\main\\assets\\heroes.json").readText()
         val heroes = convertJsonHeroesToAssetsHeroesUseCase(heroesJson)
 
         val path = "${System.getProperty("user.dir")}\\src\\main\\assets\\"
         heroes.forEach {
-            val file = File("$path${it.assetsPath}\\en\\description.json")
+            val file = File("$path${it.assetsPath}\\$locale\\description.json")
 
             assertWithMessage("description file not exist for ${it.name}").that(file.exists()).isTrue()
 
