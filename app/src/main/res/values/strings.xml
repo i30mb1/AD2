@@ -85,7 +85,7 @@
     <string name="log_in">Log In</string>
     <string name="all_logout" translatable="false">logout complete</string>
     <string name="heart" translatable="false">heart</string>
-    <string name="language_resource">eng</string>
+    <string name="language_resource">en</string>
     <string name="hero_fragment_notes">Notes</string>
     <string name="hero_fragment_story">Story</string>
     <string name="hero_fragment_params">Parameters</string>
