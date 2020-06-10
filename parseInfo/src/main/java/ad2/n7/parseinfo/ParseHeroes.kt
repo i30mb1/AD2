@@ -34,8 +34,8 @@ class ParseHeroes private constructor(
     )
 
     enum class LOCALE(val urlAllHeroes: String, val urlHeroSpecific: String, val directory: String) {
-        RU("https://dota2-ru.gamepedia.com/%D0%93%D0%B5%D1%80%D0%BE%D0%B8", "https://dota2-ru.gamepedia.com", ENGLISH_LOCALE_FOLDER),
-        ENG("https://dota2.gamepedia.com/Heroes", "https://dota2.gamepedia.com", RUSSIAN_LOCALE_FOLDER)
+        RU("https://dota2-ru.gamepedia.com/%D0%93%D0%B5%D1%80%D0%BE%D0%B8", "https://dota2-ru.gamepedia.com", RUSSIAN_LOCALE_FOLDER),
+        EN("https://dota2.gamepedia.com/Heroes", "https://dota2.gamepedia.com", ENGLISH_LOCALE_FOLDER)
     }
 
 
@@ -59,7 +59,7 @@ class ParseHeroes private constructor(
 
     suspend fun start() {
         loadHeroesFile().join()
-        if (loadEng) loadHeroes(LOCALE.ENG).join()
+        if (loadEng) loadHeroes(LOCALE.EN).join()
         if (loadRus) loadHeroes(LOCALE.RU).join()
     }
 
@@ -99,7 +99,7 @@ class ParseHeroes private constructor(
 //        val heroesZhUrl = "https://dota2-zh.gamepedia.com/Heroes"
         val fileName = "heroes.json"
 
-        val rootEng = connectTo(LOCALE.ENG.urlAllHeroes)
+        val rootEng = connectTo(LOCALE.EN.urlAllHeroes)
 //        val rootZh = connectTo(heroesZhUrl)
 
         JSONObject().apply {
