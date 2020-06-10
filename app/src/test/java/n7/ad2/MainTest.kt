@@ -36,7 +36,7 @@ class MainTest {
 
         val path = "${System.getProperty("user.dir")}\\src\\main\\assets\\"
         heroes.forEach {
-            val file = File("$path${it.assetsPath}\\description.json")
+            val file = File("$path${it.assetsPath}\\en\\description.json")
 
             assertWithMessage("description file not exist for ${it.name}").that(file.exists()).isTrue()
 
