@@ -26,6 +26,12 @@ class Repository @Inject constructor(
         appDatabase.heroesDao.insert(list)
     }
 
+    suspend fun getHeroDescription(assetsPath: String, locale: String): String {
+        return application.assets.open("$assetsPath/$locale/$ASSETS_PATH_HERO_DESC").bufferedReader().use {
+            it.readText()
+        }
+    }
+
     suspend fun getAssetsFile(filePath: String): String {
        return application.assets.open(filePath).bufferedReader().use {
             it.readText()
