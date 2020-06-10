@@ -13,6 +13,7 @@ import androidx.lifecycle.viewModelScope
 import com.squareup.inject.assisted.Assisted
 import com.squareup.inject.assisted.AssistedInject
 import kotlinx.coroutines.launch
+import n7.ad2.R
 import n7.ad2.data.source.local.db.AppDatabase
 import n7.ad2.heroes.db.HeroModel
 import n7.ad2.heroes.full.ResponseModel
@@ -80,7 +81,7 @@ class HeroInfoViewModel @AssistedInject constructor(
         viewModelScope.launch {
             val localHero = heroesDao.getHero(name)
 
-            val json = getJsonHeroDescriptionUseCase(localHero.assetsPath)
+            val json = getJsonHeroDescriptionUseCase(localHero.assetsPath, getApplication<Application>().getString(R.string.language_resource))
             val localHeroDescription = getLocalHeroDescriptionFromJsonUseCase(json)
             val vOHeroDescription = getVOHeroDescriptionUseCase(localHeroDescription, localHero, theme)
             vOHero.value = vOHeroDescription
