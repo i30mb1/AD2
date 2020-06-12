@@ -5,6 +5,7 @@ package ad2.n7.parseinfo
 import ad2.n7.parseinfo.ParseHeroes.Companion.parser
 import kotlinx.coroutines.CoroutineScope
 import kotlinx.coroutines.Dispatchers
+import kotlinx.coroutines.async
 import kotlinx.coroutines.launch
 import kotlinx.coroutines.runBlocking
 import org.json.simple.JSONArray
@@ -33,9 +34,9 @@ class ParseHeroes private constructor(
             builder.loadHeroSpellImage
     )
 
-    enum class LOCALE(val urlAllHeroes: String, val urlHeroSpecific: String, val directory: String) {
-        RU("https://dota2-ru.gamepedia.com/%D0%93%D0%B5%D1%80%D0%BE%D0%B8", "https://dota2-ru.gamepedia.com", RUSSIAN_LOCALE_FOLDER),
-        EN("https://dota2.gamepedia.com/Heroes", "https://dota2.gamepedia.com", ENGLISH_LOCALE_FOLDER)
+    enum class LOCALE(val urlAllHeroes: String, val baseUrl: String, val directory: String, val response: String) {
+        RU("https://dota2-ru.gamepedia.com/%D0%93%D0%B5%D1%80%D0%BE%D0%B8", "https://dota2-ru.gamepedia.com", RUSSIAN_LOCALE_FOLDER, "Responses"),
+        EN("https://dota2.gamepedia.com/Heroes", "https://dota2.gamepedia.com", ENGLISH_LOCALE_FOLDER, "Реплики")
     }
 
 
@@ -58,9 +59,19 @@ class ParseHeroes private constructor(
     }
 
     suspend fun start() {
-        loadHeroesFile().join()
-        if (loadEng) loadHeroes(LOCALE.EN).join()
-        if (loadRus) loadHeroes(LOCALE.RU).join()
+        val list = loadHeroesFile().await()
+//        if (loadEng) loadHeroes(LOCALE.EN).join()
+//        if (loadRus) loadHeroes(LOCALE.RU).join()
+        loadResponses(LOCALE.EN, list).join()
+    }
+
+    private fun loadResponses(locale: LOCALE, heroList: ArrayList<String>) = launch {
+        heroList.forEach {
+            val root = connectTo("${locale.baseUrl}/${it}/${locale.response}")
+
+            File(assetsFilePath + File.separator + COMMON_HERO_FOLDER + File.separator + it + File.separator + locale.directory + File.separator + "responses.json").writeText(root.toString())
+
+        }
     }
 
     private val assetsFilePath = System.getProperty("user.dir") + "\\app\\src\\main\\assets"
@@ -83,18 +94,19 @@ class ParseHeroes private constructor(
     }
 
     private fun loadHeroes(locale: LOCALE) = launch {
-        val rootEng = connectTo(locale.urlAllHeroes)
-        val heroesEng = getHeroes(rootEng)
+        val rootUrl = connectTo(locale.urlAllHeroes)
+        val heroes = getHeroes(rootUrl)
 
-        heroesEng.forEachIndexed { index, _ ->
-            val heroName = getHeroName(heroesEng[index])
-            val heroHrefEng = getHeroHref(heroesEng[index])
+        heroes.forEachIndexed { index, _ ->
+            val heroName = getHeroName(heroes[index])
+            val heroDescriptionUrl = getHeroHref(heroes[index])
 
-            loadHero(locale, heroHrefEng, COMMON_HERO_FOLDER + File.separator + heroName + File.separator + locale.directory)
+            loadHero(locale, heroDescriptionUrl, COMMON_HERO_FOLDER + File.separator + heroName + File.separator + locale.directory)
         }
     }
 
-    private fun loadHeroesFile() = launch {
+    private fun loadHeroesFile() = async {
+        val heroList = ArrayList<String>()
         var heroMainAttr = "Strength"
 //        val heroesZhUrl = "https://dota2-zh.gamepedia.com/Heroes"
         val fileName = "heroes.json"
@@ -124,6 +136,8 @@ class ParseHeroes private constructor(
                         put("assetsPath", directory)
                         if (loadEng) createHeroFolderInAssets("$directory/$ENGLISH_LOCALE_FOLDER")
                         if (loadRus) createHeroFolderInAssets("$directory/$RUSSIAN_LOCALE_FOLDER")
+
+                        heroList.add(heroName)
                     }
                     add(heroObject)
                 }
@@ -132,10 +146,11 @@ class ParseHeroes private constructor(
             File(assetsFilePath + File.separator + fileName).writeText(toJSONString())
         }
         println("file $fileName saved")
+        heroList
     }
 
     private fun loadHero(locale: LOCALE, heroPath: String, directory: String) {
-        val heroUrlEng = "${locale.urlHeroSpecific}$heroPath"
+        val heroUrlEng = "${locale.baseUrl}$heroPath"
         if (!checkConnectToHero(heroUrlEng)) return
 
         val root = connectTo(heroUrlEng)
