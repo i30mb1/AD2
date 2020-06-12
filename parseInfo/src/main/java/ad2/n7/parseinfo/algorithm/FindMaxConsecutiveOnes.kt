@@ -1,7 +1,7 @@
 package ad2.n7.parseinfo.algorithm
 
 fun main() {
-
+    println(sortedSquares(intArrayOf(-3, 1, 0, 3, 15)))
 }
 
 fun findMaxConsecutiveOnes(nums: IntArray): Int {
@@ -25,5 +25,9 @@ fun findEvenNumbers(nums: IntArray): Int {
 fun findInnerNumberOfNumber(number: Int): Int {
     if (number / 10 == 0) return 1
     return findInnerNumberOfNumber(number / 10) + 1
+}
+
+fun sortedSquares(array: IntArray): IntArray {
+   return array.map { it * it }.sorted().toIntArray()
 }
 
