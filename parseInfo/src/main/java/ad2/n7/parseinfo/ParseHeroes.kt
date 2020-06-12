@@ -35,8 +35,8 @@ class ParseHeroes private constructor(
     )
 
     enum class LOCALE(val urlAllHeroes: String, val baseUrl: String, val directory: String, val response: String) {
-        RU("https://dota2-ru.gamepedia.com/%D0%93%D0%B5%D1%80%D0%BE%D0%B8", "https://dota2-ru.gamepedia.com", RUSSIAN_LOCALE_FOLDER, "Responses"),
-        EN("https://dota2.gamepedia.com/Heroes", "https://dota2.gamepedia.com", ENGLISH_LOCALE_FOLDER, "Реплики")
+        RU("https://dota2-ru.gamepedia.com/%D0%93%D0%B5%D1%80%D0%BE%D0%B8", "https://dota2-ru.gamepedia.com", RUSSIAN_LOCALE_FOLDER, "Реплики"),
+        EN("https://dota2.gamepedia.com/Heroes", "https://dota2.gamepedia.com", ENGLISH_LOCALE_FOLDER, "Responses")
     }
 
 
@@ -68,8 +68,35 @@ class ParseHeroes private constructor(
     private fun loadResponses(locale: LOCALE, heroList: ArrayList<String>) = launch {
         heroList.forEach {
             val root = connectTo("${locale.baseUrl}/${it}/${locale.response}")
+            var allResponsesWithCategories = JSONArray()
 
-            File(assetsFilePath + File.separator + COMMON_HERO_FOLDER + File.separator + it + File.separator + locale.directory + File.separator + "responses.json").writeText(root.toString())
+            JSONArray().apply {
+                var count = 0
+                val children = root.getElementById("mw-content-text").child(0).children()
+
+                var category = JSONObject()
+                var responses = JSONArray()
+                var response = JSONObject()
+
+                for (child in children) {
+                    if (child.tag().toString() == "h2") {
+                        if(category.size != 0) allResponsesWithCategories.add(category)
+                        category = JSONObject()
+                        responses = JSONArray()
+
+                        count++
+                        if (child.children().size > 1) {
+                            category["category"] = child.child(1).text().trim()
+                        } else {
+                            category["category"] = child.child(0).text().trim()
+                        }
+
+                    }
+                }
+            }
+
+            println("response in ${locale.directory} for hero $it saved")
+            File(assetsFilePath + File.separator + COMMON_HERO_FOLDER + File.separator + it + File.separator + locale.directory + File.separator + "responses.json").writeText(allResponsesWithCategories.toString())
 
         }
     }
@@ -408,8 +435,8 @@ class ParseHeroes private constructor(
 fun main() = runBlocking {
     parser {
         loadHeros = true
-        loadRus = true
-        loadEng = true
+        loadRus = false
+        loadEng = false
         loadHeroFullImage = false
         loadHeroSpellImage = false
     }.start()
