@@ -1,9 +1,7 @@
 package ad2.n7.parseinfo.algorithm
 
 fun main() {
-    val intArray = IntArray(10) { 1 }
-    intArray[5] = 0
-    println(findMaxConsecutiveOnes(intArray))
+
 }
 
 fun findMaxConsecutiveOnes(nums: IntArray): Int {
@@ -22,5 +20,10 @@ fun findEvenNumbers(nums: IntArray): Int {
     return nums.map { it.toString() }
             .filter { it.length % 2 == 0 }
             .count()
+}
+
+fun findInnerNumberOfNumber(number: Int): Int {
+    if (number / 10 == 0) return 1
+    return findInnerNumberOfNumber(number / 10) + 1
 }
 
