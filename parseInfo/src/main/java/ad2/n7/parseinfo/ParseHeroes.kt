@@ -90,14 +90,24 @@ class ParseHeroes private constructor(
                         } else {
                             category["category"] = child.child(0).text().trim()
                         }
+                    }
+                    if (child.tag().toString() == "ul") {
+//                        if(child.child(0).children().size == 0) continue // реплики без URL
+//                        if(child.children().size == 0) // cекция без реплик
 
+                        child.children().forEach { node ->
+                            response = JSONObject()
+                            response["audioUrl"] = node.getElementsByTag("a")[0].attr("href").toString()
+                            responses.add(response)
+                        }
+                        category["responses"] = responses
                     }
                 }
+                allResponsesWithCategories.add(category)
             }
 
             println("response in ${locale.directory} for hero $it saved")
             File(assetsFilePath + File.separator + COMMON_HERO_FOLDER + File.separator + it + File.separator + locale.directory + File.separator + "responses.json").writeText(allResponsesWithCategories.toString())
-
         }
     }
 
