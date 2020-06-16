@@ -30,6 +30,13 @@ fun findInnerNumberOfNumber(number: Int): Int {
     return findInnerNumberOfNumber(number / 10) + 1
 }
 
+fun mergeSortedArray(nums1: IntArray, elementsInNums1: Int, nums2: IntArray, elementsInNum2: Int) {
+    var nums1Index = elementsInNum2 - 1
+    var nums2Index = elementsInNums1 - 1
+    var currentIndex = elementsInNum2 + elementsInNums1 - 1
+    while (nums1Index >= 0 && nums2Index >= 0) nums1[currentIndex--] = if (nums1[nums1Index] >= nums2[nums2Index]) nums1[nums1Index--] else nums2[nums2Index--]
+}
+
 fun duplicateEachOccurrenceOfZeroShiftingTheRemainingToRight(arr: IntArray) {
     val q: Queue<Int> = LinkedList()
 
