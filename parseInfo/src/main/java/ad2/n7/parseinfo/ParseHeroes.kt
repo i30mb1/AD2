@@ -98,6 +98,10 @@ class ParseHeroes private constructor(
                         child.children().forEach { node ->
                             response = JSONObject()
                             response["audioUrl"] = node.getElementsByTag("a")[0].attr("href").toString()
+                            response["title"] = node.let { innerNode ->
+                                innerNode.getElementsByTag("span").forEach { span -> span.remove() }
+                                innerNode.text()
+                            }
                             responses.add(response)
                         }
                         category["responses"] = responses
