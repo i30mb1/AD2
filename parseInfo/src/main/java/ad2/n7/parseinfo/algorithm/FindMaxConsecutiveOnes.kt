@@ -1,9 +1,10 @@
 package ad2.n7.parseinfo.algorithm
 
+import java.util.*
 import kotlin.math.abs
 
 fun main() {
-    println(sortedSquares(intArrayOf(-3, 1, 0, 3, 15)))
+    duplicateEachOccurrenceOfZeroShiftingTheRemainingToRight2(intArrayOf(1,0,2,3,0,4,5,0))
 }
 
 fun findMaxConsecutiveOnes(nums: IntArray): Int {
@@ -29,14 +30,40 @@ fun findInnerNumberOfNumber(number: Int): Int {
     return findInnerNumberOfNumber(number / 10) + 1
 }
 
+fun duplicateEachOccurrenceOfZeroShiftingTheRemainingToRight(arr: IntArray) {
+    val q: Queue<Int> = LinkedList()
+
+    for (i in arr.indices) {
+        q.add(arr[i])
+        if (arr[i] == 0) q.add(0)
+        arr[i] = q.remove()
+    }
+}
+
+fun duplicateEachOccurrenceOfZeroShiftingTheRemainingToRight2(arr: IntArray) {
+        var i = 0
+        while (i < arr.size) {
+            if (arr[i] == 0) {
+                for (j in arr.size - 1 downTo i + 1) {
+                    arr[j] = arr[j - 1]
+                }
+                i++
+            }
+            i++
+        }
+    arr.forEach {
+        println(it)
+    }
+}
+
 fun sortedSquares(array: IntArray): IntArray {
-   return array.map { it * it }.sorted().toIntArray()
+    return array.map { it * it }.sorted().toIntArray()
 }
 
 fun sortedSquares2(array: IntArray): IntArray {
     var leftMarker = 0
     var rightMarker = array.size - 1
-    var currentMarker = array.size -1
+    var currentMarker = array.size - 1
 
     val result = IntArray(array.size)
 
