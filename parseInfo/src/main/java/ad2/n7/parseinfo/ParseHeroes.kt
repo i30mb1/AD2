@@ -66,8 +66,8 @@ class ParseHeroes private constructor(
     }
 
     private fun loadResponses(locale: LOCALE, heroList: ArrayList<String>) = launch {
-        heroList.forEach {
-            val root = connectTo("${locale.baseUrl}/${it}/${locale.response}")
+        heroList.forEach { hero ->
+            val root = connectTo("${locale.baseUrl}/${hero}/${locale.response}")
             var allResponsesWithCategories = JSONArray()
 
             JSONArray().apply {
@@ -93,11 +93,12 @@ class ParseHeroes private constructor(
                     }
                     if (child.tag().toString() == "ul") {
 //                        if(child.child(0).children().size == 0) continue // реплики без URL
-//                        if(child.children().size == 0) // cекция без реплик
+//                        if(child.children().size >1) // cекция без реплик
 
-                        child.children().forEach { node ->
+                        child.children().forEach node@{ node ->
                             response = JSONObject()
-                            response["audioUrl"] = node.getElementsByTag("a")[0].attr("href").toString()
+                            val audioUrl = node.getElementsByTag("a").getOrNull(0) ?: return@node
+                            response["audioUrl"] = audioUrl.attr("href").toString()
                             response["title"] = node.let { innerNode ->
                                 innerNode.getElementsByTag("span").forEach { span -> span.remove() }
                                 innerNode.text()
@@ -110,8 +111,8 @@ class ParseHeroes private constructor(
                 allResponsesWithCategories.add(category)
             }
 
-            println("response in ${locale.directory} for hero $it saved")
-            File(assetsFilePath + File.separator + COMMON_HERO_FOLDER + File.separator + it + File.separator + locale.directory + File.separator + "responses.json").writeText(allResponsesWithCategories.toString())
+            println("response in ${locale.directory} for hero $hero saved (${allResponsesWithCategories.toString().length} bytes)")
+            File(assetsFilePath + File.separator + COMMON_HERO_FOLDER + File.separator + hero + File.separator + locale.directory + File.separator + "responses.json").writeText(allResponsesWithCategories.toString())
         }
     }
 
