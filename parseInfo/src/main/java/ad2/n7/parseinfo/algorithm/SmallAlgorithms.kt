@@ -4,7 +4,17 @@ import java.util.*
 import kotlin.math.abs
 
 fun main() {
-    duplicateEachOccurrenceOfZeroShiftingTheRemainingToRight2(intArrayOf(1,0,2,3,0,4,5,0))
+   removeElement(intArrayOf(3,2,2,3), 3)
+}
+
+fun removeElement(nums: IntArray, `val`: Int): Int {
+    var size = 0
+    for (i in nums.indices) {
+        if (nums[i] != `val`) {
+            nums[size++] = nums[i]
+        }
+    }
+    return size
 }
 
 fun findMaxConsecutiveOnes(nums: IntArray): Int {
