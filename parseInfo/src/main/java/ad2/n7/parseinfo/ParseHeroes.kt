@@ -103,6 +103,16 @@ class ParseHeroes private constructor(
                                 innerNode.getElementsByTag("span").forEach { span -> span.remove() }
                                 innerNode.text()
                             }
+                            if (node.getElementsByTag("img").size > 0) {
+                                response["images"] = JSONArray().apply {
+                                    node.let { innerNode ->
+                                        innerNode.getElementsByTag("span").forEach { span -> span.remove() }
+                                        innerNode.getElementsByTag("a").forEach { image ->
+                                            add(image.attr("title").replace(" \\(.+?\\)".toRegex(),""))
+                                        }
+                                    }
+                                }
+                            }
                             responses.add(response)
                         }
                         category["responses"] = responses
