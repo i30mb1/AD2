@@ -4,10 +4,7 @@ package n7.ad2.data.source.local
 
 import android.app.Application
 import android.content.SharedPreferences
-import androidx.annotation.WorkerThread
-import kotlinx.coroutines.withContext
 import n7.ad2.data.source.local.db.AppDatabase
-import n7.ad2.data.source.local.db.HeroesDao
 import n7.ad2.data.source.local.model.LocalHero
 import javax.inject.Inject
 
@@ -20,6 +17,7 @@ class Repository @Inject constructor(
     companion object {
         const val ASSETS_PATH_HEROES = "heroes.json"
         const val ASSETS_PATH_HERO_DESC = "description.json"
+        const val ASSETS_PATH_HERO_RESPONSES = "responses.json"
     }
 
     suspend fun insertHeroes(list: List<LocalHero>) {
@@ -28,6 +26,12 @@ class Repository @Inject constructor(
 
     suspend fun getHeroDescription(assetsPath: String, locale: String): String {
         return application.assets.open("$assetsPath/$locale/$ASSETS_PATH_HERO_DESC").bufferedReader().use {
+            it.readText()
+        }
+    }
+
+    suspend fun getHeroResponses(assetsPath: String, locale: String): String {
+        return application.assets.open("$assetsPath/$locale/$ASSETS_PATH_HERO_RESPONSES").bufferedReader().use {
             it.readText()
         }
     }
