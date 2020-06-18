@@ -17,6 +17,14 @@ fun removeElement(nums: IntArray, `val`: Int): Int {
     return size
 }
 
+fun removeDuplicates(nums: IntArray): Int {
+    var size = 1
+    for (i in 1 until nums.size) {
+        if(nums[i-1]!=nums[i]) nums[size++] = nums[i]
+    }
+    return size
+}
+
 fun findMaxConsecutiveOnes(nums: IntArray): Int {
     var max = 0
     var cur = 0
