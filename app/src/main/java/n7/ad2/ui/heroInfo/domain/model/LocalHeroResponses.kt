@@ -3,7 +3,7 @@ import com.squareup.moshi.JsonClass
 
 import com.squareup.moshi.Json
 
-class HeroResponses : ArrayList<HeroResponsesItem>()
+class LocalHeroResponses : ArrayList<HeroResponsesItem>()
 
 @JsonClass(generateAdapter = true)
 data class HeroResponsesItem(
