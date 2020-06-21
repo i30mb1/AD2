@@ -18,11 +18,12 @@ import com.google.android.material.snackbar.Snackbar
 import n7.ad2.R
 import n7.ad2.databinding.FragmentHeroResponsesBinding
 import n7.ad2.ui.heroInfo.HeroInfoViewModel
+import n7.ad2.ui.heroInfo.ResponsesListAdapter
 import n7.ad2.utils.StickyHeaderDecorator
 import java.io.File
 
 class ResponsesFragment : Fragment(R.layout.fragment_hero_responses), SearchView.OnQueryTextListener {
-    private lateinit var responsesPagedListAdapter: ResponsesPagedListAdapter
+    private lateinit var responsesPagedListAdapter: ResponsesListAdapter
     private var currentLanguage: String? = null
     private lateinit var binding: FragmentHeroResponsesBinding
     private var viewModel: HeroInfoViewModel? = null
@@ -117,7 +118,7 @@ class ResponsesFragment : Fragment(R.layout.fragment_hero_responses), SearchView
     }
 
     private fun setupPagedListAdapter() {
-        responsesPagedListAdapter = ResponsesPagedListAdapter(viewModel)
+        responsesPagedListAdapter = ResponsesListAdapter(viewModel)
         binding.rv.apply {
             setHasFixedSize(true)
             layoutManager = LinearLayoutManager(context, LinearLayoutManager.VERTICAL, false)
