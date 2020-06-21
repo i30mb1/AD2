@@ -21,36 +21,40 @@ import javax.imageio.ImageIO
 
 // Builder Pattern https://medium.com/mindorks/builder-pattern-vs-kotlin-dsl-c3ebaca6bc3b
 class ParseHeroes private constructor(
-        private val loadRus: Boolean,
-        private val loadEng: Boolean,
+        private val loadRusDescription: Boolean,
+        private val loadEngDescription: Boolean,
+        private val loadRusResponses: Boolean,
+        private val loadEngResponses: Boolean,
         private val loadHeroFullImage: Boolean,
         private val loadHeroSpellImage: Boolean
 ) : CoroutineScope by (CoroutineScope(Dispatchers.IO)) {
 
     private constructor(builder: Builder) : this(
-            builder.loadEng,
-            builder.loadRus,
+            builder.loadRusDescription,
+            builder.loadEngDescription,
+            builder.loadRusResponses,
+            builder.loadEngResponses,
             builder.loadHeroFullImage,
             builder.loadHeroSpellImage
     )
 
     enum class LOCALE(val urlAllHeroes: String, val baseUrl: String, val directory: String, val response: String) {
-        RU("https://dota2-ru.gamepedia.com/%D0%93%D0%B5%D1%80%D0%BE%D0%B8", "https://dota2-ru.gamepedia.com", RUSSIAN_LOCALE_FOLDER, "Реплики"),
-        EN("https://dota2.gamepedia.com/Heroes", "https://dota2.gamepedia.com", ENGLISH_LOCALE_FOLDER, "Responses")
+        RU("https://dota2-ru.gamepedia.com/%D0%93%D0%B5%D1%80%D0%BE%D0%B8", "https://dota2-ru.gamepedia.com", "ru", "Реплики"),
+        EN("https://dota2.gamepedia.com/Heroes", "https://dota2.gamepedia.com", "en", "Responses")
     }
 
 
     companion object {
-        const val ENGLISH_LOCALE_FOLDER = "en"
-        const val RUSSIAN_LOCALE_FOLDER = "ru"
         const val COMMON_HERO_FOLDER = "heroes"
 
         inline fun parser(block: Builder.() -> Unit) = Builder().apply(block).build()
 
         class Builder {
             var loadHeros: Boolean = false
-            var loadEng: Boolean = true
-            var loadRus: Boolean = true
+            var loadEngDescription: Boolean = false
+            var loadRusDescription: Boolean = false
+            var loadEngResponses: Boolean = false
+            var loadRusResponses: Boolean = false
             var loadHeroFullImage: Boolean = false
             var loadHeroSpellImage: Boolean = false
 
@@ -60,15 +64,16 @@ class ParseHeroes private constructor(
 
     suspend fun start() {
         val list = loadHeroesFile().await()
-//        if (loadEng) loadHeroes(LOCALE.EN).join()
-//        if (loadRus) loadHeroes(LOCALE.RU).join()
-        loadResponses(LOCALE.EN, list).join()
+        if (loadEngDescription) loadHeroes(LOCALE.EN).join()
+        if (loadRusDescription) loadHeroes(LOCALE.RU).join()
+        if (loadEngResponses) loadResponses(LOCALE.EN, list).join()
+        if (loadRusResponses) loadResponses(LOCALE.RU, list).join()
     }
 
     private fun loadResponses(locale: LOCALE, heroList: ArrayList<String>) = launch {
         heroList.forEach { hero ->
             val root = connectTo("${locale.baseUrl}/${hero}/${locale.response}")
-            var allResponsesWithCategories = JSONArray()
+            val allResponsesWithCategories = JSONArray()
 
             JSONArray().apply {
                 var count = 0
@@ -76,7 +81,7 @@ class ParseHeroes private constructor(
 
                 var category = JSONObject()
                 var responses = JSONArray()
-                var response = JSONObject()
+                var response: JSONObject
 
                 for (child in children) {
                     if (child.tag().toString() == "h2") {
@@ -186,8 +191,8 @@ class ParseHeroes private constructor(
 //                        if (withZh) put("hrefZh", getHeroHref(heroesZh[index]))
                         val directory = "heroes/$heroName"
                         put("assetsPath", directory)
-                        if (loadEng) createHeroFolderInAssets("$directory/$ENGLISH_LOCALE_FOLDER")
-                        if (loadRus) createHeroFolderInAssets("$directory/$RUSSIAN_LOCALE_FOLDER")
+                        if (loadEngDescription) createHeroFolderInAssets("$directory/en")
+                        if (loadRusDescription) createHeroFolderInAssets("$directory/ru")
 
                         heroList.add(heroName)
                     }
@@ -460,8 +465,10 @@ class ParseHeroes private constructor(
 fun main() = runBlocking {
     parser {
         loadHeros = true
-        loadRus = false
-        loadEng = false
+        loadRusDescription = false
+        loadEngDescription = false
+        loadRusResponses = true
+        loadEngResponses = false
         loadHeroFullImage = false
         loadHeroSpellImage = false
     }.start()
