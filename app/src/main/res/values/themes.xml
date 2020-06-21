@@ -22,6 +22,8 @@
         <!--цвет меню текста-->
         <item name="android:actionMenuTextColor">@color/gray_100</item>
 
+        <item name="android:windowActivityTransitions">true</item>
+
         <item name="android:windowAnimationStyle">@style/MyWindowAnimationTransition</item>
 
         <item name="textAppearanceSubtitle1">@style/TextAppearance.Subtitle1</item>
