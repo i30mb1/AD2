@@ -5,20 +5,11 @@
     xmlns:tools="http://schemas.android.com/tools">
 
     <data>
-
         <import type="android.view.View" />
 
         <variable
             name="model"
-            type="n7.ad2.heroes.full.ResponseModel" />
-
-        <variable
-            name="viewModel"
-            type="n7.ad2.ui.heroInfo.HeroInfoViewModel" />
-
-        <variable
-            name="adapter"
-            type="n7.ad2.heroes.full.ResponsesPagedListAdapter" />
+            type="n7.ad2.ui.heroInfo.domain.vo.VOResponseBody" />
 
     </data>
 
@@ -28,49 +19,36 @@
         android:background="?attr/selectableItemBackground"
         android:gravity="center"
         android:orientation="horizontal"
-        android:padding="4dp"
-        android:onClick="@{()-> viewModel.startPlay(model)}"
-        android:onLongClick="@{()->adapter.showDialog(context,model)}"
-        tools:ignore="Overdraw">
+        android:padding="4dp">
 
         <ImageView
-            android:id="@+id/iv_item_response_saved"
             android:layout_width="wrap_content"
             android:layout_height="20dp"
             android:layout_weight="0"
-            android:contentDescription="response_saved"
-            android:visibility="@{model.inStore? View.VISIBLE : View.GONE}"
             app:srcCompat="@drawable/ic_response_save"
-            tools:ignore="HardcodedText" />
+            android:contentDescription="@string/desc_saved" />
 
         <LinearLayout
-            android:id="@+id/ll_item_response_heroes"
+            android:id="@+id/ll_container"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:orientation="vertical"
-            android:visibility="@{model.icons!=null ? View.VISIBLE : View.GONE}">
-
-        </LinearLayout>
-
+            android:orientation="vertical" />
 
         <TextView
-            android:id="@+id/tv_item_response"
-            android:layout_width="0px"
+            android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_weight="1"
             android:paddingStart="4dp"
+            android:textAppearance="?textAppearanceBody1"
             android:paddingEnd="4dp"
             android:text="@{model.title}"
             android:textColor="?android:textColorSecondary"
             tools:text="И даже если я разочарую тебя, я хочу, чтобы ты запомнил меня" />
 
         <ProgressBar
-            android:id="@+id/pb_item_response"
             android:layout_width="20dp"
             android:layout_height="20dp"
             android:layout_weight="0"
             android:visibility="@{model.playing ? View.VISIBLE:View.INVISIBLE}" />
-
-
     </LinearLayout>
 </layout>
