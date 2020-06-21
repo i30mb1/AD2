@@ -18,9 +18,7 @@ import n7.ad2.data.source.local.db.AppDatabase
 import n7.ad2.heroes.db.HeroModel
 import n7.ad2.heroes.full.ResponseModel
 import n7.ad2.heroes.full.ResponsesStorage
-import n7.ad2.ui.heroInfo.domain.usecase.GetJsonHeroDescriptionUseCase
-import n7.ad2.ui.heroInfo.domain.usecase.GetLocalHeroDescriptionFromJsonUseCase
-import n7.ad2.ui.heroInfo.domain.usecase.GetVOHeroDescriptionUseCase
+import n7.ad2.ui.heroInfo.domain.interactor.GetHeroDescriptionInteractor
 import n7.ad2.ui.heroInfo.domain.vo.VOHeroDescription
 import n7.ad2.utils.SnackbarMessage
 import org.json.JSONArray
@@ -45,9 +43,7 @@ class HeroInfoViewModel @AssistedInject constructor(
         application: Application,
         appDatabase: AppDatabase,
         @Assisted handle: SavedStateHandle,
-        private val getJsonHeroDescriptionUseCase: GetJsonHeroDescriptionUseCase,
-        private val getLocalHeroDescriptionFromJsonUseCase: GetLocalHeroDescriptionFromJsonUseCase,
-        private val getVOHeroDescriptionUseCase: GetVOHeroDescriptionUseCase
+        private val getHeroDescriptionInteractor: GetHeroDescriptionInteractor
 ) : AndroidViewModel(application) {
 
     @AssistedInject.Factory
@@ -80,11 +76,7 @@ class HeroInfoViewModel @AssistedInject constructor(
     fun loadHero(name: String, theme: Resources.Theme) {
         viewModelScope.launch {
             val localHero = heroesDao.getHero(name)
-
-            val json = getJsonHeroDescriptionUseCase(localHero.assetsPath, getApplication<Application>().getString(R.string.language_resource))
-            val localHeroDescription = getLocalHeroDescriptionFromJsonUseCase(json)
-            val vOHeroDescription = getVOHeroDescriptionUseCase(localHeroDescription, localHero, theme)
-            vOHero.value = vOHeroDescription
+            vOHero.value = getHeroDescriptionInteractor(localHero, getApplication<Application>().getString(R.string.language_resource), theme)
         }
 
     }
