@@ -13,7 +13,6 @@ import androidx.recyclerview.widget.DiffUtil
 import androidx.recyclerview.widget.RecyclerView
 import n7.ad2.R
 import n7.ad2.databinding.DialogResponseBinding
-import n7.ad2.databinding.ItemResponseBinding
 import n7.ad2.databinding.ItemResponseHeaderBinding
 import n7.ad2.heroes.full.HeaderModel
 import n7.ad2.heroes.full.Response
@@ -26,22 +25,19 @@ import n7.ad2.utils.StickyHeaderDecorator.StickyHeaderInterface
 // https://youtu.be/xF1x-Pm6IPw
 class ResponsesListAdapter constructor(
         private val viewModel: HeroInfoViewModel
-) : PagedListAdapter<VOResponse, RecyclerView.ViewHolder>(DiffCallback()), StickyHeaderInterface {
+) : PagedListAdapter<VOResponse, ResponsesListAdapter.ViewHolder>(DiffCallback()), StickyHeaderInterface {
 
-    override fun onCreateViewHolder(viewGroup: ViewGroup, viewType: Int): RecyclerView.ViewHolder = ViewHolder.from(viewGroup, viewType)
+    override fun onCreateViewHolder(viewGroup: ViewGroup, viewType: Int): ViewHolder = ViewHolder.from(viewGroup, viewType)
 
-    override fun onBindViewHolder(viewHolder: RecyclerView.ViewHolder, position: Int) {
-        when (getItemViewType(position)) {
-            Response.TYPE_HEADER -> (viewHolder as HeaderViewHolder).bindTo(getItem(position) as HeaderModel?)
-            Response.TYPE_RESPONSE -> (viewHolder as ResponseViewHolder).bindTo(getItem(position) as ResponseModel?)
-            else -> (viewHolder as HeaderViewHolder).bindTo(getItem(position) as HeaderModel?)
-        }
+    override fun onBindViewHolder(viewHolder: ViewHolder, position: Int) {
+        val item = getItem(position)
+        if (item != null) viewHolder.bind(item) else viewHolder.clear()
     }
 
     override fun getItemViewType(position: Int): Int {
-        return when(getItem(position)) {
+        return when (getItem(position)) {
             is VOResponseHeader -> R.layout.item_response_header
-            is VOResponseBody -> R.layout.item_response_body
+            else -> R.layout.item_response_body
         }
     }
 
@@ -58,50 +54,20 @@ class ResponsesListAdapter constructor(
         return headerPosition
     }
 
-    override fun getHeaderLayout(headerPosition: Int): Int {
-        return R.layout.item_response_header
-    }
+    override fun getHeaderLayout(headerPosition: Int) = R.layout.item_response_header
 
     override fun bindHeaderData(header: View?, headerPosition: Int) {
         val item = getItem(headerPosition)
-        if (item != null && item.type == Response.TYPE_RESPONSE) {
-            return
-        }
-        val model = getItem(headerPosition) as HeaderModel?
-        if (model != null) {
-            (header!!.findViewById<View>(R.id.tv_item_response) as TextView).text = model.title
-        }
+        if (item != null) return
+
     }
 
     override fun isHeader(itemPosition: Int): Boolean {
         if (itemPosition < 0 || itemPosition >= itemCount) return false
-        val model = getItem(itemPosition)
-        return if (model != null) {
-            model.type == Response.TYPE_HEADER
-        } else false
-    }
-
-    fun showDialog(context: Context?, model: ResponseModel?): Boolean {
-        val builder = AlertDialog.Builder(context!!)
-        val binding: DialogResponseBinding = DataBindingUtil.inflate(inflater!!, R.layout.dialog_response, null, false)
-        binding.model = model
-        binding.viewModel = viewModel
-        builder.setView(binding.root)
-        val dialog = builder.create()
-        dialog.window!!.attributes.windowAnimations = R.style.MyMaterialAlertDialogTheme
-        binding.dialog = dialog
-        dialog.show()
-        return true
-    }
-
-    internal inner class HeaderViewHolder(var binding: ItemResponseHeaderBinding) : RecyclerView.ViewHolder(binding.root) {
-        fun bindTo(model: HeaderModel?) {
-            binding.model = model
-            binding.executePendingBindings()
+        return when(getItem(itemPosition)) {
+            is VOResponseHeader -> true
+            else -> false
         }
-
-        fun clear() {}
-
     }
 
     class ViewHolder(
