@@ -7,6 +7,26 @@ fun main() {
    removeElement(intArrayOf(3,2,2,3), 3)
 }
 
+fun checkIfNAndItsDoubleExist(arr: IntArray): Boolean {
+    var isDouble = false
+    for (i in arr.indices) {
+        for(j in arr.indices) {
+            if(arr[i]*2 == arr[j]) { isDouble = true ; break }
+        }
+        if(isDouble) break
+    }
+    return isDouble
+}
+
+fun checkIfNAndItsDoubleExist2(arr: IntArray): Boolean {
+    val set = mutableSetOf<Int>()
+    for(a in arr) {
+        if(set.contains(a*2) || (a.rem(2) == 0 && set.contains(a/2))) return true
+        else set.add(a * 2)
+    }
+    return false
+}
+
 fun removeElement(nums: IntArray, `val`: Int): Int {
     var size = 0
     for (i in nums.indices) {
