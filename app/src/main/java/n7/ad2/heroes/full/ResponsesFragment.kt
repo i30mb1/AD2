@@ -118,21 +118,23 @@ class ResponsesFragment : Fragment(R.layout.fragment_hero_responses), SearchView
     }
 
     private fun setupPagedListAdapter() {
-        responsesPagedListAdapter = ResponsesListAdapter(viewModel)
+        responsesPagedListAdapter = ResponsesListAdapter(viewModel!!)
         binding.rv.apply {
             setHasFixedSize(true)
             layoutManager = LinearLayoutManager(context, LinearLayoutManager.VERTICAL, false)
             addItemDecoration(StickyHeaderDecorator(this, responsesPagedListAdapter))
             adapter = responsesPagedListAdapter
         }
+
+        viewModel.getResponsesPagedList("").observe(getViewLifecycleOwner(), new Observer<PagedList<Response>>() {
+            @Override
+            public void onChanged(@Nullable PagedList<Response> responses) {
+                responsesPagedListAdapter.submitList(responses);
+            }
+        });
     }
 
-    //        viewModel.getResponsesPagedList("").observe(getViewLifecycleOwner(), new Observer<PagedList<Response>>() {
-//            @Override
-//            public void onChanged(@Nullable PagedList<Response> responses) {
-//                responsesPagedListAdapter.submitList(responses);
-//            }
-//        });
+
     private val responses: Unit
         private get() {
 //        viewModel.getResponsesPagedList("").observe(getViewLifecycleOwner(), new Observer<PagedList<Response>>() {

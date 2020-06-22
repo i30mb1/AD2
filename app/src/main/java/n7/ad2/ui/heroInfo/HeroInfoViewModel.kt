@@ -6,10 +6,13 @@ import android.media.MediaPlayer
 import androidx.appcompat.app.AlertDialog
 import androidx.databinding.ObservableBoolean
 import androidx.lifecycle.AndroidViewModel
+import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.SavedStateHandle
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
+import androidx.paging.LivePagedListBuilder
+import androidx.paging.PagedList
 import com.squareup.inject.assisted.Assisted
 import com.squareup.inject.assisted.AssistedInject
 import kotlinx.coroutines.launch
@@ -17,9 +20,11 @@ import n7.ad2.R
 import n7.ad2.data.source.local.db.AppDatabase
 import n7.ad2.heroes.db.HeroModel
 import n7.ad2.heroes.full.ResponseModel
+import n7.ad2.heroes.full.ResponsesSourceFactory
 import n7.ad2.heroes.full.ResponsesStorage
 import n7.ad2.ui.heroInfo.domain.interactor.GetHeroDescriptionInteractor
 import n7.ad2.ui.heroInfo.domain.vo.VOHeroDescription
+import n7.ad2.ui.heroInfo.domain.vo.VOResponse
 import n7.ad2.utils.SnackbarMessage
 import org.json.JSONArray
 import org.json.JSONObject
@@ -156,20 +161,20 @@ class HeroInfoViewModel @AssistedInject constructor(
 //        }
     }
 
-//    fun getResponsesPagedList(search: String?): LiveData<PagedList<Response>> {
-//        // DataSource это посредник между PagedList и Storage
-//        // PositionalResponsesDataSource dataSource = new PositionalResponsesDataSource(responsesStorage);
-//
-//        // ResponsesSourceFactory фабрика, которую LivePagedListBuilder сможет использовать, чтобы самостоятельно создавать DataSource
-//        val sourceFactory = ResponsesSourceFactory(responsesStorage, search)
-//        val config = PagedList.Config.Builder().setEnablePlaceholders(false).setPageSize(20).build()
-//
-//        // PagedList обёртка над List он содержит данные, умеет отдавать их а также подгружает новые
-//        // PagedList<ResponseModel> pagedList = new PagedList.Builder<>(dataSource,config).build();
-//        // обёртка над PagedList чтобы всё это происходило в бэкграунд потоке
-//        return LivePagedListBuilder(sourceFactory, config) //                .setInitialLoadKey(initialKey)
-//                .build()
-//    }
+    fun getResponsesPagedList(search: String?): LiveData<PagedList<VOResponse>> {
+        // DataSource это посредник между PagedList и Storage
+        // PositionalResponsesDataSource dataSource = new PositionalResponsesDataSource(responsesStorage);
+
+        // ResponsesSourceFactory фабрика, которую LivePagedListBuilder сможет использовать, чтобы самостоятельно создавать DataSource
+        val sourceFactory = ResponsesSourceFactory(responsesStorage, search)
+        val config = PagedList.Config.Builder().setEnablePlaceholders(false).setPageSize(20).build()
+
+        // PagedList обёртка над List он содержит данные, умеет отдавать их а также подгружает новые
+        // PagedList<ResponseModel> pagedList = new PagedList.Builder<>(dataSource,config).build();
+        // обёртка над PagedList чтобы всё это происходило в бэкграунд потоке
+        return LivePagedListBuilder(sourceFactory, config) //                .setInitialLoadKey(initialKey)
+                .build()
+    }
 
     fun loadUserSubscription() {
         userSubscription.set(true)
