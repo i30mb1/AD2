@@ -6,8 +6,8 @@
     <data>
 
         <variable
-            name="model"
-            type="n7.ad2.heroes.full.HeaderModel" />
+            name="item"
+            type="n7.ad2.ui.heroInfo.domain.vo.VOResponseHeader" />
 
     </data>
 
@@ -24,9 +24,8 @@
             android:layout_height="wrap_content"
             android:layout_gravity="center_vertical"
             android:lines="1"
-            android:textColor="?android:textColorPrimary"
-            android:textStyle="bold"
-            android:text='@{model.title ?? "..."}'
+            android:textAppearance="?textAppearanceOverline"
+            android:text="@{item.title}"
             tools:text="И даже если я разочарую тебя, я хочу, чтобы ты запомнил меня" />
     </LinearLayout>
 </layout>
