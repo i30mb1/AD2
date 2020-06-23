@@ -13,6 +13,7 @@ import android.view.View
 import androidx.appcompat.widget.SearchView
 import androidx.fragment.app.Fragment
 import androidx.lifecycle.ViewModelProvider
+import androidx.lifecycle.observe
 import androidx.recyclerview.widget.LinearLayoutManager
 import com.google.android.material.snackbar.Snackbar
 import n7.ad2.R
@@ -26,7 +27,7 @@ class ResponsesFragment : Fragment(R.layout.fragment_hero_responses), SearchView
     private lateinit var responsesPagedListAdapter: ResponsesListAdapter
     private var currentLanguage: String? = null
     private lateinit var binding: FragmentHeroResponsesBinding
-    private var viewModel: HeroInfoViewModel? = null
+    private lateinit var viewModel: HeroInfoViewModel
 
     //    private int initialKey;
     var onComplete: BroadcastReceiver = object : BroadcastReceiver() {
@@ -126,12 +127,9 @@ class ResponsesFragment : Fragment(R.layout.fragment_hero_responses), SearchView
             adapter = responsesPagedListAdapter
         }
 
-        viewModel.getResponsesPagedList("").observe(getViewLifecycleOwner(), new Observer<PagedList<Response>>() {
-            @Override
-            public void onChanged(@Nullable PagedList<Response> responses) {
-                responsesPagedListAdapter.submitList(responses);
-            }
-        });
+        viewModel.voResponses.observe(viewLifecycleOwner) {
+            responsesPagedListAdapter.submitList(it)
+        }
     }
 
 

@@ -10,9 +10,11 @@ import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.SavedStateHandle
 import androidx.lifecycle.ViewModel
+import androidx.lifecycle.liveData
 import androidx.lifecycle.viewModelScope
 import androidx.paging.LivePagedListBuilder
 import androidx.paging.PagedList
+import androidx.paging.toLiveData
 import com.squareup.inject.assisted.Assisted
 import com.squareup.inject.assisted.AssistedInject
 import kotlinx.coroutines.launch
@@ -23,6 +25,7 @@ import n7.ad2.heroes.full.ResponseModel
 import n7.ad2.heroes.full.ResponsesSourceFactory
 import n7.ad2.heroes.full.ResponsesStorage
 import n7.ad2.ui.heroInfo.domain.interactor.GetHeroDescriptionInteractor
+import n7.ad2.ui.heroInfo.domain.interactor.GetHeroResponsesInteractor
 import n7.ad2.ui.heroInfo.domain.vo.VOHeroDescription
 import n7.ad2.ui.heroInfo.domain.vo.VOResponse
 import n7.ad2.utils.SnackbarMessage
@@ -48,7 +51,8 @@ class HeroInfoViewModel @AssistedInject constructor(
         application: Application,
         appDatabase: AppDatabase,
         @Assisted handle: SavedStateHandle,
-        private val getHeroDescriptionInteractor: GetHeroDescriptionInteractor
+        private val getHeroDescriptionInteractor: GetHeroDescriptionInteractor,
+        private val getHeroResponsesInteractor: GetHeroResponsesInteractor
 ) : AndroidViewModel(application) {
 
     @AssistedInject.Factory
@@ -69,6 +73,12 @@ class HeroInfoViewModel @AssistedInject constructor(
 
     private val heroesDao = appDatabase.heroesDao
     val vOHero = MutableLiveData<VOHeroDescription>()
+     val voResponses = liveData {
+        val sourceFactory = ResponsesSourceFactory(getHeroResponsesInteractor("Axe","ru"), "")
+        val config = PagedList.Config.Builder().setEnablePlaceholders(false).setPageSize(20).build()
+
+       emitSource(sourceFactory.toLiveData(config))
+    }
 
     init {
 //        loadHeroDescription(application.getString(R.string.language_resource))
@@ -83,7 +93,13 @@ class HeroInfoViewModel @AssistedInject constructor(
             val localHero = heroesDao.getHero(name)
             vOHero.value = getHeroDescriptionInteractor(localHero, getApplication<Application>().getString(R.string.language_resource), theme)
         }
+    }
 
+    fun loadResponse(name: String) {
+        viewModelScope.launch {
+            val localHero = heroesDao.getHero(name)
+//            voResponses.value = getHeroResponsesInteractor(localHero.assetsPath, getApplication<Application>().getString(R.string.language_resource))
+        }
     }
 
     private fun loadFreshGuideForHero(heroModel: HeroModel) {
@@ -159,21 +175,6 @@ class HeroInfoViewModel @AssistedInject constructor(
 //                }
 //            }
 //        }
-    }
-
-    fun getResponsesPagedList(search: String?): LiveData<PagedList<VOResponse>> {
-        // DataSource это посредник между PagedList и Storage
-        // PositionalResponsesDataSource dataSource = new PositionalResponsesDataSource(responsesStorage);
-
-        // ResponsesSourceFactory фабрика, которую LivePagedListBuilder сможет использовать, чтобы самостоятельно создавать DataSource
-        val sourceFactory = ResponsesSourceFactory(responsesStorage, search)
-        val config = PagedList.Config.Builder().setEnablePlaceholders(false).setPageSize(20).build()
-
-        // PagedList обёртка над List он содержит данные, умеет отдавать их а также подгружает новые
-        // PagedList<ResponseModel> pagedList = new PagedList.Builder<>(dataSource,config).build();
-        // обёртка над PagedList чтобы всё это происходило в бэкграунд потоке
-        return LivePagedListBuilder(sourceFactory, config) //                .setInitialLoadKey(initialKey)
-                .build()
     }
 
     fun loadUserSubscription() {
