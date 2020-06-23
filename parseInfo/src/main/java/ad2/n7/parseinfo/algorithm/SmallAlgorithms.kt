@@ -4,7 +4,20 @@ import java.util.*
 import kotlin.math.abs
 
 fun main() {
-   removeElement(intArrayOf(3,2,2,3), 3)
+    println(validMountainArray(intArrayOf(6,2,3,4,3,2,1)))
+
+}
+
+fun validMountainArray(arr: IntArray): Boolean {
+    if(arr.size <3) return false
+    var start = 0
+    var end = arr.size - 1
+    while (start < end) {
+        if(arr[start+1] > arr[start]) { start++ }
+        else if (arr[end-1] > arr[end]) { end-- }
+        else { break }
+    }
+    return start!=0 && end!= arr.size - 1 && start == end
 }
 
 fun checkIfNAndItsDoubleExist(arr: IntArray): Boolean {
