@@ -322,8 +322,12 @@ class ParseHeroes private constructor(
                     put("spellName", spellName)
 
                     if (loadHeroSpellImage) {
-                        val spellImage = it.getElementsByAttributeValue("class", "image")[0].child(0).attr("src")
-                        saveImageInDirectory(spellImage, "heroesSpell" + File.separator, "$spellName.png")
+                        try {
+                            val spellImage = it.getElementsByAttributeValue("class", "image")[0].child(0).attr("src")
+                            saveImageInDirectory(spellImage, "heroesSpell" + File.separator, "$spellName.png")
+                        } catch (e: Exception) {
+                            println("cannot download hero spell $spellName")
+                        }
                     }
 
                     var audioUrl = it.getElementsByTag("source").attr("src")
@@ -465,12 +469,12 @@ class ParseHeroes private constructor(
 fun main() = runBlocking {
     parser {
         loadHeros = true
-        loadRusDescription = false
-        loadEngDescription = false
+        loadRusDescription = true
+        loadEngDescription = true
         loadRusResponses = true
-        loadEngResponses = false
-        loadHeroFullImage = false
-        loadHeroSpellImage = false
+        loadEngResponses = true
+        loadHeroFullImage = true
+        loadHeroSpellImage = true
     }.start()
 }
 
