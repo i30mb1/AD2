@@ -31,10 +31,10 @@ import n7.ad2.databinding.ItemListGuideItemBinding;
 import n7.ad2.databinding.ItemListHeroCompareBinding;
 import n7.ad2.heroes.db.HeroModel;
 import n7.ad2.items.full.ItemFullActivity;
-import n7.ad2.ui.heroInfo.HeroFullActivity;
+import n7.ad2.ui.heroPage.HeroPageActivity;
 import n7.ad2.ui.heroInfo.HeroInfoViewModel;
 
-import static n7.ad2.ui.heroInfo.HeroFullActivity.HERO_NAME;
+import static n7.ad2.ui.heroPage.HeroPageActivity.HERO_NAME;
 import static n7.ad2.items.full.ItemFullActivity.ITEM_CODE_NAME;
 import static n7.ad2.items.full.ItemFullActivity.ITEM_NAME;
 
@@ -317,7 +317,7 @@ public class GuideFragment extends Fragment {
             itemListHeroBinding.getRoot().setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View v) {
-                    Intent intent = new Intent(getContext(), HeroFullActivity.class);
+                    Intent intent = new Intent(getContext(), HeroPageActivity.class);
                     intent.putExtra(HERO_NAME, "");
 //                    intent.putExtra(HERO_CODE_NAME, heroNameAndWinrate[0]);
                     startActivity(intent);

@@ -15,7 +15,7 @@ import n7.ad2.data.source.local.model.LocalHero
 import n7.ad2.databinding.FragmentHeroesBinding
 import n7.ad2.databinding.ItemHeroBinding
 import n7.ad2.di.injector
-import n7.ad2.ui.heroInfo.HeroFullActivity
+import n7.ad2.ui.heroPage.HeroPageActivity
 import n7.ad2.ui.MainActivity
 import n7.ad2.utils.viewModel
 
@@ -41,9 +41,9 @@ class HeroesFragment : Fragment(R.layout.fragment_heroes) {
     }
 
     fun startHeroFragment(model: LocalHero, binding: ItemHeroBinding) {
-        Intent(binding.root.context, HeroFullActivity::class.java).apply {
-            putExtra(HeroFullActivity.HERO_NAME, model.name)
-            putExtra(HeroFullActivity.TN_PHOTO, binding.iv.transitionName)
+        Intent(binding.root.context, HeroPageActivity::class.java).apply {
+            putExtra(HeroPageActivity.HERO_NAME, model.name)
+            putExtra(HeroPageActivity.TN_PHOTO, binding.iv.transitionName)
             if (false) {
                 val options = ActivityOptionsCompat.makeSceneTransitionAnimation(requireActivity(), binding.iv, binding.iv.transitionName)
                 startActivity(this, options.toBundle())

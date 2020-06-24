@@ -14,6 +14,7 @@ import n7.ad2.R
 import n7.ad2.databinding.FragmentHeroPersonalBinding
 import n7.ad2.ui.heroInfo.domain.vo.VODescription
 import n7.ad2.ui.heroInfo.domain.vo.VOTitleWithIcon
+import n7.ad2.ui.heroPage.HeroPageActivity
 import org.json.JSONArray
 import org.json.JSONException
 import org.json.JSONObject
@@ -46,7 +47,7 @@ class HeroInfoFragment : Fragment(R.layout.fragment_hero_personal) {
             it.lifecycleOwner = viewLifecycleOwner
             it.viewModel = viewModel
             it.fragment = this
-            it.ivImage.transitionName = requireActivity().intent.getStringExtra(HeroFullActivity.TN_PHOTO)
+            it.ivImage.transitionName = requireActivity().intent.getStringExtra(HeroPageActivity.TN_PHOTO)
         }
 
 //        sharedElementEnterTransition = buildContainerTransform()

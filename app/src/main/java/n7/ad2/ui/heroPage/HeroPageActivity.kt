@@ -1,4 +1,4 @@
-package n7.ad2.ui.heroInfo
+package n7.ad2.ui.heroPage
 
 import android.os.Bundle
 import android.view.View
@@ -8,10 +8,11 @@ import com.google.android.material.tabs.TabLayoutMediator
 import n7.ad2.R
 import n7.ad2.databinding.ActivityHeroFullBinding
 import n7.ad2.di.injector
+import n7.ad2.ui.heroInfo.HeroInfoViewModel
 import n7.ad2.utils.BaseActivity
 import n7.ad2.utils.viewModelWithSavedStateHandle
 
-class HeroFullActivity : BaseActivity() {
+class HeroPageActivity : BaseActivity() {
 
     private lateinit var binding: ActivityHeroFullBinding
     private lateinit var heroName: String

@@ -1,9 +1,10 @@
-package n7.ad2.ui.heroInfo
+package n7.ad2.ui.heroPage
 
 import androidx.fragment.app.Fragment
 import androidx.fragment.app.FragmentActivity
 import androidx.viewpager2.adapter.FragmentStateAdapter
 import n7.ad2.heroes.full.GuideFragment
+import n7.ad2.ui.heroInfo.HeroInfoFragment
 import n7.ad2.ui.heroResponse.ResponsesFragment
 
 class ViewPager2Adapter(
