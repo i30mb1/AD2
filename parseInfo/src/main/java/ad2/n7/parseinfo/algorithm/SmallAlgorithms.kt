@@ -4,18 +4,32 @@ import java.util.*
 import kotlin.math.abs
 
 fun main() {
-    println(validMountainArray(intArrayOf(6,2,3,4,3,2,1)))
+    println(validMountainArray(intArrayOf(6, 2, 3, 4, 3, 2, 1)))
 
 }
 
+fun replaceElementsWithGreatestElementOnRightSide(arr: IntArray): IntArray {
+    var max = -1
+    for (i in arr.size - 1 downTo 0) {
+        val temp = arr[i]
+        arr[i] = max
+        if (temp > max) max = temp
+    }
+    return arr
+}
+
 fun validMountainArray(arr: IntArray): Boolean {
-    if(arr.size <3) return false
+    if (arr.size < 3) return false
     var start = 0
     var end = arr.size - 1
     while (start < end) {
-        if(arr[start+1] > arr[start]) { start++ }
-        else if (arr[end-1] > arr[end]) { end-- }
-        else { break }
+        if (arr[start + 1] > arr[start]) {
+            start++
+        } else if (arr[end - 1] > arr[end]) {
+            end--
+        } else {
+            break
+        }
     }
     return start!=0 && end!= arr.size - 1 && start == end
 }
