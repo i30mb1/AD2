@@ -7,7 +7,7 @@
 
         <variable
             name="item"
-            type="n7.ad2.ui.heroInfo.domain.vo.VOResponseHeader" />
+            type="n7.ad2.ui.heroResponse.domain.vo.VOResponseHeader" />
 
     </data>
 

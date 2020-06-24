@@ -1,12 +1,12 @@
-package n7.ad2.ui.heroInfo.domain.usecase
+package n7.ad2.ui.heroResponse.domain.usecase
 
 import android.app.Application
 import kotlinx.coroutines.CoroutineDispatcher
 import kotlinx.coroutines.withContext
-import n7.ad2.ui.heroInfo.domain.model.LocalHeroResponses
-import n7.ad2.ui.heroInfo.domain.vo.VOResponse
-import n7.ad2.ui.heroInfo.domain.vo.VOResponseBody
-import n7.ad2.ui.heroInfo.domain.vo.VOResponseHeader
+import n7.ad2.ui.heroResponse.domain.model.LocalHeroResponses
+import n7.ad2.ui.heroResponse.domain.vo.VOResponse
+import n7.ad2.ui.heroResponse.domain.vo.VOResponseBody
+import n7.ad2.ui.heroResponse.domain.vo.VOResponseHeader
 import javax.inject.Inject
 
 class GetVOHeroResponsesUseCase @Inject constructor(

@@ -1,4 +1,4 @@
-package n7.ad2.heroes.full
+package n7.ad2.ui.heroResponse
 
 import android.content.BroadcastReceiver
 import android.content.Context
@@ -19,7 +19,6 @@ import com.google.android.material.snackbar.Snackbar
 import n7.ad2.R
 import n7.ad2.databinding.FragmentHeroResponsesBinding
 import n7.ad2.ui.heroInfo.HeroInfoViewModel
-import n7.ad2.ui.heroInfo.ResponsesListAdapter
 import n7.ad2.utils.StickyHeaderDecorator
 import java.io.File
 

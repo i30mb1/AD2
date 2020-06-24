@@ -1,6 +1,5 @@
-package n7.ad2.ui.heroInfo.domain.vo
+package n7.ad2.ui.heroResponse.domain.vo
 
-import androidx.databinding.BaseObservable
 import androidx.databinding.ObservableBoolean
 
 sealed class VOResponse

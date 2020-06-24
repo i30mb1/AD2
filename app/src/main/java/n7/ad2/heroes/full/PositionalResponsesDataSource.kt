@@ -1,7 +1,7 @@
 package n7.ad2.heroes.full
 
 import androidx.paging.PositionalDataSource
-import n7.ad2.ui.heroInfo.domain.vo.VOResponse
+import n7.ad2.ui.heroResponse.domain.vo.VOResponse
 
 class PositionalResponsesDataSource(
         private val list: List<VOResponse>,

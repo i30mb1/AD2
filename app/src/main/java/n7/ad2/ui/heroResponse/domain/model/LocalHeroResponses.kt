@@ -1,4 +1,4 @@
-package n7.ad2.ui.heroInfo.domain.model
+package n7.ad2.ui.heroResponse.domain.model
 import com.squareup.moshi.JsonClass
 
 import com.squareup.moshi.Json

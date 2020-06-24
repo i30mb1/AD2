@@ -6,13 +6,11 @@ import android.media.MediaPlayer
 import androidx.appcompat.app.AlertDialog
 import androidx.databinding.ObservableBoolean
 import androidx.lifecycle.AndroidViewModel
-import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.SavedStateHandle
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.liveData
 import androidx.lifecycle.viewModelScope
-import androidx.paging.LivePagedListBuilder
 import androidx.paging.PagedList
 import androidx.paging.toLiveData
 import com.squareup.inject.assisted.Assisted
@@ -25,9 +23,8 @@ import n7.ad2.heroes.full.ResponseModel
 import n7.ad2.heroes.full.ResponsesSourceFactory
 import n7.ad2.heroes.full.ResponsesStorage
 import n7.ad2.ui.heroInfo.domain.interactor.GetHeroDescriptionInteractor
-import n7.ad2.ui.heroInfo.domain.interactor.GetHeroResponsesInteractor
+import n7.ad2.ui.heroResponse.domain.interactor.GetHeroResponsesInteractor
 import n7.ad2.ui.heroInfo.domain.vo.VOHeroDescription
-import n7.ad2.ui.heroInfo.domain.vo.VOResponse
 import n7.ad2.utils.SnackbarMessage
 import org.json.JSONArray
 import org.json.JSONObject

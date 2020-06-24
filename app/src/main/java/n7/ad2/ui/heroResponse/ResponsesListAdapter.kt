@@ -1,25 +1,18 @@
-package n7.ad2.ui.heroInfo
+package n7.ad2.ui.heroResponse
 
-import android.content.Context
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import android.widget.TextView
-import androidx.appcompat.app.AlertDialog
 import androidx.databinding.DataBindingUtil
 import androidx.databinding.ViewDataBinding
 import androidx.paging.PagedListAdapter
 import androidx.recyclerview.widget.DiffUtil
 import androidx.recyclerview.widget.RecyclerView
 import n7.ad2.R
-import n7.ad2.databinding.DialogResponseBinding
-import n7.ad2.databinding.ItemResponseHeaderBinding
-import n7.ad2.heroes.full.HeaderModel
-import n7.ad2.heroes.full.Response
-import n7.ad2.heroes.full.ResponseModel
-import n7.ad2.ui.heroInfo.domain.vo.VOResponse
-import n7.ad2.ui.heroInfo.domain.vo.VOResponseBody
-import n7.ad2.ui.heroInfo.domain.vo.VOResponseHeader
+import n7.ad2.ui.heroInfo.HeroInfoViewModel
+import n7.ad2.ui.heroResponse.domain.vo.VOResponse
+import n7.ad2.ui.heroResponse.domain.vo.VOResponseBody
+import n7.ad2.ui.heroResponse.domain.vo.VOResponseHeader
 import n7.ad2.utils.StickyHeaderDecorator.StickyHeaderInterface
 
 // https://youtu.be/xF1x-Pm6IPw

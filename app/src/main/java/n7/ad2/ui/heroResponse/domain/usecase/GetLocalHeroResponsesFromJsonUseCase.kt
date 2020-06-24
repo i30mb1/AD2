@@ -1,10 +1,9 @@
-package n7.ad2.ui.heroInfo.domain.usecase
+package n7.ad2.ui.heroResponse.domain.usecase
 
 import com.squareup.moshi.Moshi
 import kotlinx.coroutines.CoroutineDispatcher
 import kotlinx.coroutines.withContext
-import n7.ad2.ui.heroInfo.domain.model.LocalHeroDescription
-import n7.ad2.ui.heroInfo.domain.model.LocalHeroResponses
+import n7.ad2.ui.heroResponse.domain.model.LocalHeroResponses
 import javax.inject.Inject
 
 class GetLocalHeroResponsesFromJsonUseCase @Inject constructor(

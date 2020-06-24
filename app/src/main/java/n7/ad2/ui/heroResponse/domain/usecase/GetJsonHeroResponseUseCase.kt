@@ -1,4 +1,4 @@
-package n7.ad2.ui.heroInfo.domain.usecase
+package n7.ad2.ui.heroResponse.domain.usecase
 
 import kotlinx.coroutines.CoroutineDispatcher
 import kotlinx.coroutines.withContext

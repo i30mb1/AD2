@@ -9,7 +9,7 @@
 
         <variable
             name="model"
-            type="n7.ad2.ui.heroInfo.domain.vo.VOResponseBody" />
+            type="n7.ad2.ui.heroResponse.domain.vo.VOResponseBody" />
 
     </data>
 
