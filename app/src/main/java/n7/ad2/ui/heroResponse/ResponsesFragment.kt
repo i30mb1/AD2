@@ -100,7 +100,7 @@ class ResponsesFragment : Fragment(R.layout.fragment_hero_responses), SearchView
 
     override fun onSaveInstanceState(outState: Bundle) {
         super.onSaveInstanceState(outState)
-        outState.putInt("initialKey", linearLayoutManager!!.findFirstCompletelyVisibleItemPosition())
+//        outState.putInt("initialKey", linearLayoutManager!!.findFirstCompletelyVisibleItemPosition())
     }
 
     override fun onResume() {

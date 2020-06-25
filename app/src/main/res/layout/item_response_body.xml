@@ -8,7 +8,7 @@
         <import type="android.view.View" />
 
         <variable
-            name="model"
+            name="item"
             type="n7.ad2.ui.heroResponse.domain.vo.VOResponseBody" />
 
     </data>
@@ -25,6 +25,8 @@
             android:layout_width="wrap_content"
             android:layout_height="20dp"
             android:layout_weight="0"
+            android:visibility="gone"
+            tools:visibility="visible"
             app:srcCompat="@drawable/ic_response_save"
             android:contentDescription="@string/desc_saved" />
 
@@ -41,7 +43,7 @@
             android:paddingStart="4dp"
             android:textAppearance="?textAppearanceBody1"
             android:paddingEnd="4dp"
-            android:text="@{model.title}"
+            android:text="@{item.title}"
             android:textColor="?android:textColorSecondary"
             tools:text="И даже если я разочарую тебя, я хочу, чтобы ты запомнил меня" />
 
@@ -49,6 +51,6 @@
             android:layout_width="20dp"
             android:layout_height="20dp"
             android:layout_weight="0"
-            android:visibility="@{model.playing ? View.VISIBLE:View.INVISIBLE}" />
+            android:visibility="@{item.playing ? View.VISIBLE:View.INVISIBLE}" />
     </LinearLayout>
 </layout>

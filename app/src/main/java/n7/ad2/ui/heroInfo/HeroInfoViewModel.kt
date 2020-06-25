@@ -71,7 +71,7 @@ class HeroInfoViewModel @AssistedInject constructor(
     private val heroesDao = appDatabase.heroesDao
     val vOHero = MutableLiveData<VOHeroDescription>()
      val voResponses = liveData {
-        val sourceFactory = ResponsesSourceFactory(getHeroResponsesInteractor("Axe","ru"), "")
+        val sourceFactory = ResponsesSourceFactory(getHeroResponsesInteractor("heroes/Axe","ru"), "")
         val config = PagedList.Config.Builder().setEnablePlaceholders(false).setPageSize(20).build()
 
        emitSource(sourceFactory.toLiveData(config))

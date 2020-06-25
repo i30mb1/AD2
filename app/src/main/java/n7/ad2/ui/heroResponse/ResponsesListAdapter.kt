@@ -3,11 +3,13 @@ package n7.ad2.ui.heroResponse
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.widget.TextView
 import androidx.databinding.DataBindingUtil
 import androidx.databinding.ViewDataBinding
 import androidx.paging.PagedListAdapter
 import androidx.recyclerview.widget.DiffUtil
 import androidx.recyclerview.widget.RecyclerView
+import n7.ad2.BR
 import n7.ad2.R
 import n7.ad2.ui.heroInfo.HeroInfoViewModel
 import n7.ad2.ui.heroResponse.domain.vo.VOResponse
@@ -51,8 +53,8 @@ class ResponsesListAdapter constructor(
 
     override fun bindHeaderData(header: View?, headerPosition: Int) {
         val item = getItem(headerPosition)
-        if (item != null) return
-
+        if (item == null) return
+        header?.findViewById<TextView>(R.id.tv_item_response)?.text = (item as VOResponseHeader).title
     }
 
     override fun isHeader(itemPosition: Int): Boolean {
@@ -68,6 +70,7 @@ class ResponsesListAdapter constructor(
     ) : RecyclerView.ViewHolder(binding.root) {
 
         fun bind(item: VOResponse) {
+            binding.setVariable(BR.item, item)
             binding.executePendingBindings()
         }
 

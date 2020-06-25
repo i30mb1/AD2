@@ -3,10 +3,8 @@ import com.squareup.moshi.JsonClass
 
 import com.squareup.moshi.Json
 
-class LocalHeroResponses : ArrayList<HeroResponsesItem>()
-
 @JsonClass(generateAdapter = true)
-data class HeroResponsesItem(
+data class LocalHeroResponsesItem(
     @Json(name = "category")
     val category: String = "",
     @Json(name = "responses")
