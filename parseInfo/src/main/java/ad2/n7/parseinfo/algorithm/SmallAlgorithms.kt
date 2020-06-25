@@ -66,7 +66,7 @@ fun removeElement(nums: IntArray, `val`: Int): Int {
 
 fun removeDuplicates(nums: IntArray): Int {
     var size = 1
-    for (i in 1 until nums.size) {
+    for (i in size until nums.size) {
         if(nums[i-1]!=nums[i]) nums[size++] = nums[i]
     }
     return size
