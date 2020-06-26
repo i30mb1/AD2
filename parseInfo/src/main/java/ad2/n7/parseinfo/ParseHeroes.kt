@@ -48,7 +48,7 @@ class ParseHeroes private constructor(
         const val HERO_FULL_PHOTO_NAME = "full"
         const val HERO_FULL_PHOTO_TYPE = "png"
         const val HEROES_SPELL_FOLDER = "heroesSpell"
-        const val COMMON_HERO_FOLDER = "heroes"
+        const val ASSETS_FOLDER_HEROES = "heroes"
 
         inline fun parser(block: Builder.() -> Unit) = Builder().apply(block).build()
 
@@ -129,7 +129,7 @@ class ParseHeroes private constructor(
             }
 
             println("response in ${locale.directory} for hero $hero saved (${allResponsesWithCategories.toString().length} bytes)")
-            File(assetsFilePath + File.separator + COMMON_HERO_FOLDER + File.separator + hero + File.separator + locale.directory + File.separator + "responses.json").writeText(allResponsesWithCategories.toString())
+            File(assetsFilePath + File.separator + ASSETS_FOLDER_HEROES + File.separator + hero + File.separator + locale.directory + File.separator + "responses.json").writeText(allResponsesWithCategories.toString())
         }
     }
 
@@ -160,7 +160,7 @@ class ParseHeroes private constructor(
             val heroName = getHeroName(heroes[index])
             val heroDescriptionUrl = getHeroHref(heroes[index])
 
-            loadHero(locale, heroDescriptionUrl, "$COMMON_HERO_FOLDER/$heroName/${locale.directory}", "$COMMON_HERO_FOLDER/$heroName")
+            loadHero(locale, heroDescriptionUrl, "$ASSETS_FOLDER_HEROES/$heroName/${locale.directory}", "$ASSETS_FOLDER_HEROES/$heroName")
         }
     }
 

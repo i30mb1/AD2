@@ -15,6 +15,7 @@ class Repository @Inject constructor(
 ) {
 
     companion object {
+        const val ASSETS_FOLDER_HEROES = "heroes"
         const val ASSETS_PATH_HEROES = "heroes.json"
         const val ASSETS_PATH_HERO_DESC = "description.json"
         const val ASSETS_PATH_HERO_RESPONSES = "responses.json"
