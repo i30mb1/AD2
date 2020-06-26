@@ -77,14 +77,6 @@ class HeroInfoViewModel @AssistedInject constructor(
        emitSource(sourceFactory.toLiveData(config))
     }
 
-    init {
-//        loadHeroDescription(application.getString(R.string.language_resource))
-//        loadAvailableResponsesInMemory()
-//        loadResponses(application.getString(R.string.language_resource))
-//        laodHeroByCodeName(heroCode)
-//        loadUserSubscription()
-    }
-
     fun loadHero(name: String, theme: Resources.Theme) {
         viewModelScope.launch {
             val localHero = heroesDao.getHero(name)
@@ -132,34 +124,6 @@ class HeroInfoViewModel @AssistedInject constructor(
 //        }
     }
 
-    private fun laodHeroByCodeName(heroCode: String) {
-//        diskIO.execute {
-//            val heroModel = heroesDao.getHeroByCodeNameObject(heroCode)
-//            loadFreshGuideForHero(heroModel)
-//        }
-    }
-
-    fun loadResponses(language: String?) {
-//        responsesStorage = when (language) {
-//            "ru" -> ResponsesStorage(application, "heroes/$heroCode/ru_responses.json", diskIO)
-//            else -> ResponsesStorage(application, "heroes/$heroCode/eng_responses.json", diskIO)
-//        }
-//        responsesStorage!!.load()
-    }
-
-    fun loadHeroDescription(language: String) {
-//        diskIO.execute {
-//            try {
-//                val jsonObject = JSONObject(Utils.readJSONFromAsset(application, "heroes/" + heroCode + "/" + language + "_abilities.json"))
-//                jsonObjectHeroFull.postValue(jsonObject)
-//                val abilities = jsonObject.getJSONArray("abilities")
-//                jsonArrayHeroAbilities.postValue(abilities)
-//            } catch (e: Exception) {
-//                e.printStackTrace()
-//            }
-//        }
-    }
-
     fun loadAvailableResponsesInMemory() {
 //        diskIO.execute {
 //            val directory = File(application.getExternalFilesDir(Environment.DIRECTORY_RINGTONES).toString() + File.separator + heroCode + File.separator)
@@ -174,10 +138,6 @@ class HeroInfoViewModel @AssistedInject constructor(
 //        }
     }
 
-    fun loadUserSubscription() {
-        userSubscription.set(true)
-    }
-
     fun enableWriteSetting(): Boolean {
 //        return if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.M) {
 //            if (Settings.System.canWrite(application)) {
@@ -188,86 +148,6 @@ class HeroInfoViewModel @AssistedInject constructor(
 //            }
 //        } else true
         return true
-    }
-
-    fun checkPermission(): Boolean {
-//        return if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.M) {
-//            if (application.checkSelfPermission(Manifest.permission.WRITE_EXTERNAL_STORAGE) == PackageManager.PERMISSION_GRANTED) {
-//                true
-//            } else {
-//                grandPermission.call()
-//                false
-//            }
-//        } else true
-        return true
-    }
-
-    fun startPlay(model: ResponseModel) {
-//        try {
-//            if (lastPlaying != null) {
-//                lastPlaying!!.set(false)
-//            }
-//            model.playing.set(true)
-//            lastPlaying = model.playing
-//            if (Build.VERSION.SDK_INT <= Build.VERSION_CODES.LOLLIPOP) {
-//                startExoPlayer(model)
-//                return
-//            }
-//            if (mediaPlayer != null) {
-//                mediaPlayer!!.reset()
-//                mediaPlayer!!.release()
-//            }
-//            mediaPlayer = MediaPlayer()
-//            val file = File(application.getExternalFilesDir(Environment.DIRECTORY_RINGTONES).toString() + File.separator + heroCode + File.separator + model.titleForFolder)
-//            if (file.exists()) {
-//                mediaPlayer!!.setDataSource(file.path)
-//            } else {
-//                mediaPlayer!!.setDataSource(model.href)
-//            }
-//            mediaPlayer!!.prepareAsync()
-//            mediaPlayer!!.setOnPreparedListener { mediaPlayer!!.start() }
-//            mediaPlayer!!.setOnCompletionListener { model.playing.set(false) }
-//            mediaPlayer!!.setOnErrorListener { mp, what, extra ->
-//                model.playing.set(false)
-//                showErrorSnackbar()
-//                true
-//            }
-//        } catch (e: IOException) {
-//            model.playing.set(false)
-//        }
-    }
-
-    private fun startExoPlayer(model: ResponseModel) {
-//        SimpleExoPlayer player = ExoPlayerFactory.newSimpleInstance(application);
-//        player.setPlayWhenReady(true);
-//        // Produces DataSource instances through which media data is loaded.
-//        DataSource.Factory dataSourceFactory = new DefaultDataSourceFactory(application, Util.getUserAgent(application, "ad2"));
-//// This is the MediaSource representing the media to be played.
-//        MediaSource videoSource = new ProgressiveMediaSource.Factory(dataSourceFactory).createMediaSource(Uri.parse(model.getHref()));
-//// Prepare the player with the source.
-//        player.prepare(videoSource);
-//        player.addListener(new Player.EventListener() {
-//            @Override
-//            public void onPlayerStateChanged(boolean playWhenReady, int playbackState) {
-//                if (playWhenReady && playbackState == Player.STATE_ENDED) {
-//                    model.playing.set(false);
-//                }
-//            }
-//
-//            @Override
-//            public void onPlayerError(ExoPlaybackException error) {
-//                model.playing.set(false);
-//                showErrorSnackbar();
-//            }
-//        });
-    }
-
-    private fun showErrorSnackbar() {
-//        if (isNetworkAvailable) {
-//            showSnackBar.postValue(R.string.all_something_went_wrong)
-//        } else {
-//            showSnackBar.postValue(R.string.all_error_internet)
-//        }
     }
 
     // about download manager https://youtu.be/-4JqEROeI7U
