@@ -10,6 +10,7 @@ import android.text.style.ClickableSpan
 import android.text.style.DynamicDrawableSpan
 import android.text.style.ImageSpan
 import android.view.View
+import android.webkit.WebView.HitTestResult.IMAGE_TYPE
 import kotlinx.coroutines.CoroutineDispatcher
 import kotlinx.coroutines.withContext
 import n7.ad2.BuildConfig
@@ -35,6 +36,8 @@ class GetVOHeroDescriptionUseCase @Inject constructor(
 ) {
 
     companion object {
+        const val HERO_FULL_PHOTO_NAME = "full"
+        const val HERO_FULL_PHOTO_TYPE = "png"
         const val HEROES_SPELL_FOLDER = "heroesSpell"
         const val SEPARATOR = "- "
         const val TAG_TALENT = "TagTalent"
@@ -73,7 +76,7 @@ class GetVOHeroDescriptionUseCase @Inject constructor(
 
     suspend operator fun invoke(localHeroDescription: LocalHeroDescription, localHero: LocalHero, theme: Resources.Theme): VOHeroDescription = withContext(ioDispatcher) {
         val voHeroDescription = VOHeroDescription()
-        voHeroDescription.heroImagePath = "file:///android_asset/${localHero.assetsPath}/full.png"
+        voHeroDescription.heroImagePath = "file:///android_asset/${localHero.assetsPath}/$HERO_FULL_PHOTO_NAME.$HERO_FULL_PHOTO_TYPE"
 
         val spells: MutableList<VOSpell> = localHeroDescription.abilities.map {
             val descriptions = mutableListOf<VODescription>().apply {
@@ -98,7 +101,7 @@ class GetVOHeroDescriptionUseCase @Inject constructor(
 
             VOSpell().apply {
                 name = it.spellName
-                image = "file:///android_asset/$HEROES_SPELL_FOLDER/${it.spellName}.png"
+                image = "file:///android_asset/$HEROES_SPELL_FOLDER/${it.spellName}.$IMAGE_TYPE"
                 listVODescriptions = descriptions
             }
         }.toMutableList()

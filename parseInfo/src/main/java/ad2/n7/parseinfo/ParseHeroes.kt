@@ -45,6 +45,8 @@ class ParseHeroes private constructor(
 
 
     companion object {
+        const val HERO_FULL_PHOTO_NAME = "full"
+        const val HERO_FULL_PHOTO_TYPE = "png"
         const val HEROES_SPELL_FOLDER = "heroesSpell"
         const val COMMON_HERO_FOLDER = "heroes"
 
@@ -436,7 +438,7 @@ class ParseHeroes private constructor(
     private fun loadHeroImageFull(root: Document, directory: String) {
         try {
             val imageUrl = root.getElementsByTag("img")[0].attr("src")
-            saveImageInDirectory(imageUrl, directory, "full.png")
+            saveImageInDirectory(imageUrl, directory, "$HERO_FULL_PHOTO_NAME.$HERO_FULL_PHOTO_TYPE")
             println("image full saved")
         } catch (e: Exception) {
             println("image full not saved")
