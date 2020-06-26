@@ -50,7 +50,6 @@ class ParseHeroes private constructor(
         inline fun parser(block: Builder.() -> Unit) = Builder().apply(block).build()
 
         class Builder {
-            var loadHeros: Boolean = false
             var loadEngDescription: Boolean = false
             var loadRusDescription: Boolean = false
             var loadEngResponses: Boolean = false
@@ -158,7 +157,7 @@ class ParseHeroes private constructor(
             val heroName = getHeroName(heroes[index])
             val heroDescriptionUrl = getHeroHref(heroes[index])
 
-            loadHero(locale, heroDescriptionUrl, COMMON_HERO_FOLDER + File.separator + heroName + File.separator + locale.directory)
+            loadHero(locale, heroDescriptionUrl, "$COMMON_HERO_FOLDER/$heroName/${locale.directory}", "$COMMON_HERO_FOLDER/$heroName")
         }
     }
 
@@ -206,15 +205,15 @@ class ParseHeroes private constructor(
         heroList
     }
 
-    private fun loadHero(locale: LOCALE, heroPath: String, directory: String) {
+    private fun loadHero(locale: LOCALE, heroPath: String, heroLocalizedDirectory: String, heroDirectory: String) {
         val heroUrlEng = "${locale.baseUrl}$heroPath"
         if (!checkConnectToHero(heroUrlEng)) return
 
         val root = connectTo(heroUrlEng)
 
-        if (loadHeroFullImage) loadHeroImageFull(root, directory)
-        if (loadHeroFullImage) loadHeroImageMinimap(root, directory)
-        loadHeroInformation(root, directory)
+        if (loadHeroFullImage) loadHeroImageFull(root, heroDirectory)
+        if (loadHeroFullImage) loadHeroImageMinimap(root, heroDirectory)
+        loadHeroInformation(root, heroLocalizedDirectory)
     }
 
     private fun loadHeroImageMinimap(root: Document, directory: String) {
@@ -468,13 +467,12 @@ class ParseHeroes private constructor(
 
 fun main() = runBlocking {
     parser {
-        loadHeros = true
-        loadRusDescription = true
+        loadRusDescription = false
         loadEngDescription = true
-        loadRusResponses = true
-        loadEngResponses = true
+        loadRusResponses = false
+        loadEngResponses = false
         loadHeroFullImage = true
-        loadHeroSpellImage = true
+        loadHeroSpellImage = false
     }.start()
 }
 
