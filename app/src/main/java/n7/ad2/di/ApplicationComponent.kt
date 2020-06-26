@@ -4,6 +4,7 @@ import android.app.Application
 import dagger.BindsInstance
 import dagger.Component
 import n7.ad2.ui.heroInfo.HeroInfoViewModel
+import n7.ad2.ui.heroResponse.ResponsesViewModel
 import n7.ad2.ui.heroes.HeroesViewModel
 import n7.ad2.ui.splash.SplashViewModel
 import n7.ad2.workers.DatabaseWorker
@@ -27,8 +28,8 @@ interface ApplicationComponent {
     fun inject(databaseWorker: DatabaseWorker)
 
     val splashViewModel: SplashViewModel
-
     val heroesViewModel: HeroesViewModel
+    val responsesViewModel: ResponsesViewModel
 
     val heroInfoViewModelFactory: HeroInfoViewModel.Factory
 }

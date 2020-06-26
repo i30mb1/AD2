@@ -19,7 +19,6 @@ import n7.ad2.utils.StickyHeaderDecorator.StickyHeaderInterface
 
 // https://youtu.be/xF1x-Pm6IPw
 class ResponsesListAdapter constructor(
-        private val viewModel: HeroInfoViewModel
 ) : PagedListAdapter<VOResponse, ResponsesListAdapter.ViewHolder>(DiffCallback()), StickyHeaderInterface {
 
     override fun onCreateViewHolder(viewGroup: ViewGroup, viewType: Int): ViewHolder = ViewHolder.from(viewGroup, viewType)

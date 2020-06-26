@@ -101,7 +101,7 @@ class GetVOHeroDescriptionUseCase @Inject constructor(
 
             VOSpell().apply {
                 name = it.spellName
-                image = "file:///android_asset/$HEROES_SPELL_FOLDER/${it.spellName}.$IMAGE_TYPE"
+                image = "file:///android_asset/$HEROES_SPELL_FOLDER/${it.spellName}.$HERO_FULL_PHOTO_TYPE"
                 listVODescriptions = descriptions
             }
         }.toMutableList()

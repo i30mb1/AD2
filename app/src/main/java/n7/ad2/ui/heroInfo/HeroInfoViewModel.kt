@@ -48,8 +48,7 @@ class HeroInfoViewModel @AssistedInject constructor(
         application: Application,
         appDatabase: AppDatabase,
         @Assisted handle: SavedStateHandle,
-        private val getHeroDescriptionInteractor: GetHeroDescriptionInteractor,
-        private val getHeroResponsesInteractor: GetHeroResponsesInteractor
+        private val getHeroDescriptionInteractor: GetHeroDescriptionInteractor
 ) : AndroidViewModel(application) {
 
     @AssistedInject.Factory
@@ -70,12 +69,6 @@ class HeroInfoViewModel @AssistedInject constructor(
 
     private val heroesDao = appDatabase.heroesDao
     val vOHero = MutableLiveData<VOHeroDescription>()
-     val voResponses = liveData {
-        val sourceFactory = ResponsesSourceFactory(getHeroResponsesInteractor("heroes/Axe","ru"), "")
-        val config = PagedList.Config.Builder().setEnablePlaceholders(false).setPageSize(20).build()
-
-       emitSource(sourceFactory.toLiveData(config))
-    }
 
     fun loadHero(name: String, theme: Resources.Theme) {
         viewModelScope.launch {

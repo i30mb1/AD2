@@ -18,20 +18,23 @@ import androidx.recyclerview.widget.LinearLayoutManager
 import com.google.android.material.snackbar.Snackbar
 import n7.ad2.R
 import n7.ad2.databinding.FragmentHeroResponsesBinding
+import n7.ad2.di.injector
 import n7.ad2.ui.heroInfo.HeroInfoViewModel
 import n7.ad2.utils.StickyHeaderDecorator
+import n7.ad2.utils.viewModel
 import java.io.File
 
 class ResponsesFragment : Fragment(R.layout.fragment_hero_responses), SearchView.OnQueryTextListener {
     private lateinit var responsesPagedListAdapter: ResponsesListAdapter
     private var currentLanguage: String? = null
     private lateinit var binding: FragmentHeroResponsesBinding
-    private lateinit var viewModel: HeroInfoViewModel
+    private val viewModel by viewModel {
+        injector.responsesViewModel
+    }
 
     //    private int initialKey;
     var onComplete: BroadcastReceiver = object : BroadcastReceiver() {
         override fun onReceive(context: Context, intent: Intent) {
-            viewModel!!.loadAvailableResponsesInMemory()
             responsesPagedListAdapter!!.notifyDataSetChanged()
             Snackbar.make(binding!!.root, R.string.responses_fragment_sound_downloaded, Snackbar.LENGTH_SHORT).setAction(R.string.open_file) {
                 if (getContext() != null) {
@@ -86,7 +89,6 @@ class ResponsesFragment : Fragment(R.layout.fragment_hero_responses), SearchView
 
     override fun onActivityCreated(savedInstanceState: Bundle?) {
         super.onActivityCreated(savedInstanceState)
-        viewModel = ViewModelProvider(requireActivity()).get(HeroInfoViewModel::class.java)
         //        if (savedInstanceState == null) {
 //            initialKey = 0;
 //        } else {
@@ -118,7 +120,7 @@ class ResponsesFragment : Fragment(R.layout.fragment_hero_responses), SearchView
     }
 
     private fun setupPagedListAdapter() {
-        responsesPagedListAdapter = ResponsesListAdapter(viewModel!!)
+        responsesPagedListAdapter = ResponsesListAdapter()
         binding.rv.apply {
             setHasFixedSize(true)
             layoutManager = LinearLayoutManager(context, LinearLayoutManager.VERTICAL, false)
@@ -129,6 +131,7 @@ class ResponsesFragment : Fragment(R.layout.fragment_hero_responses), SearchView
         viewModel.voResponses.observe(viewLifecycleOwner) {
             responsesPagedListAdapter.submitList(it)
         }
+        viewModel.loadResponses("Axe")
     }
 
 

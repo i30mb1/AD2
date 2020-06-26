@@ -148,7 +148,6 @@ class HeroInfoFragment : Fragment(R.layout.fragment_hero_personal) {
     override fun onOptionsItemSelected(item: MenuItem): Boolean {
         when (item.itemId) {
             R.id.action_switch -> {
-                viewModel!!.loadHeroDescription(switchLanguage())
                 item.title = currentLocale
                 lastClickedView!!.callOnClick()
             }
