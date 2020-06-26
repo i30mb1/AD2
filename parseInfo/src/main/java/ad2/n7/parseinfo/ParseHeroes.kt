@@ -45,6 +45,7 @@ class ParseHeroes private constructor(
 
 
     companion object {
+        const val HEROES_SPELL_FOLDER = "heroesSpell"
         const val COMMON_HERO_FOLDER = "heroes"
 
         inline fun parser(block: Builder.() -> Unit) = Builder().apply(block).build()
@@ -323,7 +324,7 @@ class ParseHeroes private constructor(
                     if (loadHeroSpellImage) {
                         try {
                             val spellImage = it.getElementsByAttributeValue("class", "image")[0].child(0).attr("src")
-                            saveImageInDirectory(spellImage, "heroesSpell" + File.separator, "$spellName.png")
+                            saveImageInDirectory(spellImage, HEROES_SPELL_FOLDER + File.separator, "$spellName.png")
                         } catch (e: Exception) {
                             println("cannot download hero spell $spellName")
                         }

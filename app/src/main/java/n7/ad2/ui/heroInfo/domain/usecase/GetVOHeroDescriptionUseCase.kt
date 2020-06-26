@@ -35,6 +35,7 @@ class GetVOHeroDescriptionUseCase @Inject constructor(
 ) {
 
     companion object {
+        const val HEROES_SPELL_FOLDER = "heroesSpell"
         const val SEPARATOR = "- "
         const val TAG_TALENT = "TagTalent"
         const val COLON = ": "
@@ -97,7 +98,7 @@ class GetVOHeroDescriptionUseCase @Inject constructor(
 
             VOSpell().apply {
                 name = it.spellName
-                image = "file:///android_asset/spells/${it.spellName}.png"
+                image = "file:///android_asset/$HEROES_SPELL_FOLDER/${it.spellName}.png"
                 listVODescriptions = descriptions
             }
         }.toMutableList()
