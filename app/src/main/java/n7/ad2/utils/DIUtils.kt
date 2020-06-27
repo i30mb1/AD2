@@ -62,3 +62,19 @@ inline fun <reified T : ViewModel> FragmentActivity.viewModelWithSavedStateHandl
         }
     }
 }
+
+/* Please work */
+inline fun <reified T : ViewModel> Fragment.viewModelWithSavedStateHandle(
+        defaultArgs: Bundle? = null,
+        crossinline provider: () -> ViewModelAssistedFactory<T>
+) = viewModels<T> {
+    object : AbstractSavedStateViewModelFactory(this, defaultArgs) {
+        override fun <T : ViewModel?> create(
+                key: String,
+                modelClass: Class<T>,
+                handle: SavedStateHandle
+        ): T {
+            return provider().create(handle) as T
+        }
+    }
+}
