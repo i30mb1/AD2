@@ -28,12 +28,15 @@ import n7.ad2.ui.heroInfo.domain.vo.VOTitleSimple
 import n7.ad2.ui.heroInfo.domain.vo.VOTitleWithIcon
 import n7.ad2.utils.extension.toPx
 
-class DescriptionsListAdapter(private val fragment: HeroInfoFragment) : ListAdapter<VODescription, DescriptionsListAdapter.ViewHolder>(DiffCallback()) {
+class DescriptionsListAdapter(
+        private val fragment: HeroInfoFragment,
+        private val infoPopupWindow: InfoPopupWindow
+) : ListAdapter<VODescription, DescriptionsListAdapter.ViewHolder>(DiffCallback()) {
 
     private var listener: VOPopUpListener<String> = object : VOPopUpListener<String> {
 
         override fun onClickListener(view: View, text: String) {
-            fragment.showPopup(view, text)
+            infoPopupWindow.show(view, text)
         }
     }
 
