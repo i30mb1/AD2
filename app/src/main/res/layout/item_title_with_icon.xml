@@ -13,8 +13,8 @@
             type="n7.ad2.base.VOPopUpListener" />
 
         <variable
-            name="fragment"
-            type="n7.ad2.ui.heroInfo.HeroInfoFragment" />
+            name="audioExoPlayer"
+            type="n7.ad2.ui.heroInfo.AudioExoPlayer" />
     </data>
 
     <LinearLayout
@@ -42,7 +42,7 @@
             android:layout_width="@dimen/header_width"
             android:layout_height="@dimen/header_width"
             android:contentDescription="@string/desc_play"
-            android:onClick="@{(view)-> fragment.playAudio(view, item)}"
+            android:onClick="@{()-> audioExoPlayer.play(item)}"
             android:src="@drawable/selector_play" />
 
         <TextView

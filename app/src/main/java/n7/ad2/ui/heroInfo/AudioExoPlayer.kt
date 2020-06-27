@@ -1,10 +1,8 @@
 package n7.ad2.ui.heroInfo
 
-import android.annotation.SuppressLint
 import android.app.Application
 import android.net.Uri
 import android.os.Build
-import android.view.View
 import androidx.annotation.RawRes
 import androidx.databinding.ObservableBoolean
 import androidx.lifecycle.Lifecycle
@@ -26,14 +24,12 @@ import com.google.android.exoplayer2.util.Util
 import n7.ad2.R
 import n7.ad2.ui.heroInfo.domain.vo.VOTitleWithIcon
 
-
 class AudioExoPlayer(
         private val application: Application,
         private val lifecycle: Lifecycle
 ) : Player.EventListener, LifecycleObserver {
 
     private lateinit var exoPlayer: SimpleExoPlayer
-    private var view: View? = null
     private var listener: ((errorMessage: String) -> Unit)? = null
     private var isPlaying = ObservableBoolean(false)
 
@@ -77,7 +73,7 @@ class AudioExoPlayer(
     }
 
     fun play(model: VOTitleWithIcon) {
-        if (isPlaying !== model.isPlaying) isPlaying.set(false)
+        if (isPlaying !== model.isPlaying) stop()
         isPlaying = model.isPlaying
         if (isPlaying.get()) stop() else play(model.audioUrl!!)
     }
@@ -92,10 +88,6 @@ class AudioExoPlayer(
 
         exoPlayer.prepare(source)
         exoPlayer.playWhenReady = true
-    }
-
-    fun setSelectedView(view: View) {
-        this.view = view
     }
 
     @OnLifecycleEvent(Lifecycle.Event.ON_PAUSE)
@@ -152,16 +144,6 @@ class AudioExoPlayer(
         val dataSourceFactory = DefaultDataSourceFactory(application, userAgent)
         return ProgressiveMediaSource.Factory(dataSourceFactory)
                 .createMediaSource(uri)
-    }
-
-    @SuppressLint("InlinedApi")
-    private fun hideSystemUi(playerView: View) {
-        playerView.systemUiVisibility = (View.SYSTEM_UI_FLAG_LOW_PROFILE
-                or View.SYSTEM_UI_FLAG_FULLSCREEN
-                or View.SYSTEM_UI_FLAG_LAYOUT_STABLE
-                or View.SYSTEM_UI_FLAG_IMMERSIVE_STICKY
-                or View.SYSTEM_UI_FLAG_LAYOUT_HIDE_NAVIGATION
-                or View.SYSTEM_UI_FLAG_HIDE_NAVIGATION)
     }
 
 }

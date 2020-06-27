@@ -9,7 +9,6 @@ import n7.ad2.R
 import n7.ad2.databinding.FragmentHeroInfoBinding
 import n7.ad2.di.injector
 import n7.ad2.ui.heroInfo.domain.vo.VODescription
-import n7.ad2.ui.heroInfo.domain.vo.VOTitleWithIcon
 import n7.ad2.ui.heroPage.HeroPageActivity
 import n7.ad2.utils.viewModelWithSavedStateHandle
 
@@ -41,16 +40,11 @@ class HeroInfoFragment : Fragment(R.layout.fragment_hero_info) {
 
     override fun onActivityCreated(savedInstanceState: Bundle?) {
         super.onActivityCreated(savedInstanceState)
-        setHasOptionsMenu(true)
+
+        viewModel.loadHero(requireActivity().intent.getStringExtra(HeroPageActivity.HERO_NAME)!!, requireActivity().theme)
 
         setupSpellRecyclerView()
         setupSpellInfoRecyclerView()
-    }
-
-    fun playAudio(view: View, model: VOTitleWithIcon) {
-       if(model.audioUrl != null) {
-           audioExoPlayer.play(model)
-       }
     }
 
     fun setDescription(voDescription: List<VODescription>) {
@@ -59,7 +53,7 @@ class HeroInfoFragment : Fragment(R.layout.fragment_hero_info) {
     }
 
     private fun setupSpellInfoRecyclerView() {
-        val descriptionsListAdapter = DescriptionsListAdapter(this)
+        val descriptionsListAdapter = DescriptionsListAdapter(audioExoPlayer, infoPopupWindow)
 
         binding.rvSpellsInfo.apply {
             adapter = descriptionsListAdapter

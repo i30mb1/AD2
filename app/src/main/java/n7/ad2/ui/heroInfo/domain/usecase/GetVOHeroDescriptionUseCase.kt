@@ -10,13 +10,11 @@ import android.text.style.ClickableSpan
 import android.text.style.DynamicDrawableSpan
 import android.text.style.ImageSpan
 import android.view.View
-import android.webkit.WebView.HitTestResult.IMAGE_TYPE
 import kotlinx.coroutines.CoroutineDispatcher
 import kotlinx.coroutines.withContext
 import n7.ad2.BuildConfig
 import n7.ad2.R
 import n7.ad2.data.source.local.model.LocalHero
-import n7.ad2.ui.heroInfo.InfoPopupWindow
 import n7.ad2.ui.heroInfo.domain.model.LocalHeroDescription
 import n7.ad2.ui.heroInfo.domain.vo.VOBodyLine
 import n7.ad2.ui.heroInfo.domain.vo.VOBodySimple
@@ -153,10 +151,7 @@ class GetVOHeroDescriptionUseCase @Inject constructor(
         }
         do {
             spannableString.setSpan(ImageSpan(icon, DynamicDrawableSpan.ALIGN_BOTTOM), indexOf, indexOf + TAG_TALENT.length, Spannable.SPAN_EXCLUSIVE_EXCLUSIVE)
-            spannableString.setSpan(object : ClickableSpan() {
-                override fun onClick(widget: View) {
-                    InfoPopupWindow(widget, application.getString(R.string.info_talent))
-                }
+            spannableString.setSpan(object : MyClickableSpan(application.getString(R.string.info_talent)) {
 
             }, indexOf, indexOf + TAG_TALENT.length, Spannable.SPAN_EXCLUSIVE_EXCLUSIVE)
             startIndex++
@@ -164,6 +159,16 @@ class GetVOHeroDescriptionUseCase @Inject constructor(
         } while (indexOf != -1)
 
         return spannableString
+    }
+
+}
+
+open class MyClickableSpan(private val text: String) : ClickableSpan() {
+
+    var action: ((View, String) -> Unit)? = null
+
+    override fun onClick(widget: View) {
+        action?.invoke(widget, text)
     }
 
 }
