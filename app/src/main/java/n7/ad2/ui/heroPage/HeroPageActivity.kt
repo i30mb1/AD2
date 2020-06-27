@@ -6,7 +6,7 @@ import android.view.ViewTreeObserver
 import androidx.databinding.DataBindingUtil
 import com.google.android.material.tabs.TabLayoutMediator
 import n7.ad2.R
-import n7.ad2.databinding.ActivityHeroFullBinding
+import n7.ad2.databinding.ActivityHeroPageBinding
 import n7.ad2.di.injector
 import n7.ad2.ui.heroInfo.HeroInfoViewModel
 import n7.ad2.utils.BaseActivity
@@ -14,31 +14,16 @@ import n7.ad2.utils.viewModelWithSavedStateHandle
 
 class HeroPageActivity : BaseActivity() {
 
-    private lateinit var binding: ActivityHeroFullBinding
-    private lateinit var heroName: String
-    private val viewModel: HeroInfoViewModel by viewModelWithSavedStateHandle {
-        injector.heroInfoViewModelFactory
-    }
+    private lateinit var binding: ActivityHeroPageBinding
 
     companion object {
         const val HERO_NAME = "HERO_NAME"
-        const val HERO_CODE_NAME = "HERO_CODE_NAME"
         const val TN_PHOTO = "TN_PHOTO"
-        const val CURRENT_ITEM = "CURRENT_ITEM"
-        const val REQUESTED_PERMISSION = 1
     }
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        binding = DataBindingUtil.setContentView(this, R.layout.activity_hero_full)
-
-        if (savedInstanceState == null) {
-            heroName = intent.getStringExtra(HERO_NAME)!!
-        } else {
-            heroName = savedInstanceState.getString(HERO_NAME)!!
-        }
-
-        viewModel.loadHero(heroName, theme)
+        binding = DataBindingUtil.setContentView(this, R.layout.activity_hero_page)
 
         setToolbar()
         setViewPager2()
@@ -73,11 +58,6 @@ class HeroPageActivity : BaseActivity() {
 //                application.startActivity(intent)
 //            }
 //        })
-    }
-
-    override fun onSaveInstanceState(outState: Bundle) {
-        super.onSaveInstanceState(outState)
-        outState.putString(HERO_NAME, heroName)
     }
 
     fun scheduleStartPostponedTransition(sharedElement: View) {
