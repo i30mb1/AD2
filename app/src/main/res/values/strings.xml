@@ -205,6 +205,7 @@
     <string name="desc_agility" translatable="false">Agility</string>
     <string name="desc_play" translatable="false">play</string>
     <string name="desc_saved" translatable="false">saved</string>
+    <string name="desc_hero_mini_avatar" translatable="false">hero mini avatar</string>
 
     <string name="hotkey" translatable="false">Hot Key</string>
     <string name="legacykey" translatable="false">Legacy Key</string>
@@ -213,5 +214,6 @@
 
     <string name="channel_tournament_name" translatable="false">Tournament</string>
     <string name="info_talent" translatable="false">With talent that affect this ability</string>
+
 
 </resources>

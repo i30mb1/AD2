@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <layout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto">
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
 
     <data>
 
@@ -20,7 +21,16 @@
                 android:layout_width="match_parent"
                 android:layout_height="?android:actionBarSize"
                 android:minHeight="?attr/actionBarSize"
-                app:layout_scrollFlags="scroll" />
+                app:layout_scrollFlags="scroll">
+
+                <ImageView
+                    android:id="@+id/minimap"
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
+                    android:layout_gravity="center"
+                    android:contentDescription="@string/desc_hero_mini_avatar"
+                    tools:src="@tools:sample/avatars" />
+            </androidx.appcompat.widget.Toolbar>
 
             <com.google.android.material.tabs.TabLayout
                 android:id="@+id/tl"

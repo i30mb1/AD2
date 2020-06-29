@@ -19,6 +19,7 @@ class Repository @Inject constructor(
         const val ASSETS_PATH_HEROES = "heroes.json"
         const val ASSETS_PATH_HERO_DESC = "description.json"
         const val ASSETS_PATH_HERO_RESPONSES = "responses.json"
+        const val ASSETS_FILE_MINIMAP = "minimap.png"
     }
 
     suspend fun insertHeroes(list: List<LocalHero>) {
