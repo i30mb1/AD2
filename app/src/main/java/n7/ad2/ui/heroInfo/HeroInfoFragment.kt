@@ -41,7 +41,7 @@ class HeroInfoFragment : Fragment(R.layout.fragment_hero_info) {
     override fun onActivityCreated(savedInstanceState: Bundle?) {
         super.onActivityCreated(savedInstanceState)
 
-        viewModel.loadHero(requireActivity().intent.getStringExtra(HeroPageActivity.HERO_NAME)!!, requireActivity().theme)
+        viewModel.loadHero(requireActivity().intent.getStringExtra(HeroPageActivity.HERO_NAME)!!)
 
         setupSpellRecyclerView()
         setupSpellInfoRecyclerView()

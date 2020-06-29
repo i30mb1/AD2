@@ -70,10 +70,10 @@ class HeroInfoViewModel @AssistedInject constructor(
     private val heroesDao = appDatabase.heroesDao
     val vOHero = MutableLiveData<VOHeroDescription>()
 
-    fun loadHero(name: String, theme: Resources.Theme) {
+    fun loadHero(name: String) {
         viewModelScope.launch {
             val localHero = heroesDao.getHero(name)
-            vOHero.value = getHeroDescriptionInteractor(localHero, getApplication<Application>().getString(R.string.language_resource), theme)
+            vOHero.value = getHeroDescriptionInteractor(localHero, getApplication<Application>().getString(R.string.language_resource))
         }
     }
 

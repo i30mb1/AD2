@@ -1,7 +1,6 @@
 package n7.ad2.ui.heroInfo.domain.usecase
 
 import android.app.Application
-import android.content.res.Resources
 import android.net.Uri
 import android.text.Spannable
 import android.text.SpannableString
@@ -72,7 +71,7 @@ class GetVOHeroDescriptionUseCase @Inject constructor(
         return builder.toString()
     }
 
-    suspend operator fun invoke(localHeroDescription: LocalHeroDescription, localHero: LocalHero, theme: Resources.Theme): VOHeroDescription = withContext(ioDispatcher) {
+    suspend operator fun invoke(localHeroDescription: LocalHeroDescription, localHero: LocalHero): VOHeroDescription = withContext(ioDispatcher) {
         val voHeroDescription = VOHeroDescription()
         voHeroDescription.heroImagePath = "file:///android_asset/${localHero.assetsPath}/$HERO_FULL_PHOTO_NAME.$HERO_FULL_PHOTO_TYPE"
 
@@ -82,11 +81,11 @@ class GetVOHeroDescriptionUseCase @Inject constructor(
                 add(VOTitleWithIcon(it.spellName, it.hotKey, it.legacyKey, it.audioUrl))
                 it.effects.forEach { add(VOBodyLine(it)) }
                 add(VOBodySimple(it.description))
-                it.cooldown?.let { add(VOBodyWithImage(spanWithDotaImages(it, theme), R.drawable.cooldown)) }
-                it.mana?.let { add(VOBodyWithImage(spanWithDotaImages(it, theme), R.drawable.mana)) }
+                it.cooldown?.let { add(VOBodyWithImage(spanWithDotaImages(it), R.drawable.cooldown)) }
+                it.mana?.let { add(VOBodyWithImage(spanWithDotaImages(it), R.drawable.mana)) }
 
                 add(VOTitleSimple(application.getString(R.string.hero_fragment_params)))
-                add(VOBodyWithSeparator(spanWithDotaImages(it.params.toStringListWithDash(), theme)))
+                add(VOBodyWithSeparator(spanWithDotaImages(it.params.toStringListWithDash())))
 
                 it.story?.let {
                     add(VOTitleSimple(application.getString(R.string.hero_fragment_story)))
@@ -140,12 +139,12 @@ class GetVOHeroDescriptionUseCase @Inject constructor(
         voHeroDescription
     }
 
-    private fun spanWithDotaImages(body: String, theme: Resources.Theme): SpannableString {
+    private fun spanWithDotaImages(body: String): SpannableString {
         var startIndex = 0
         var indexOf = body.indexOf(TAG_TALENT, startIndex)
         val spannableString = SpannableString(body)
         if (indexOf == -1) return spannableString
-        val icon = application.resources.getDrawable(R.drawable.talent, theme).apply {
+        val icon = application.resources.getDrawable(R.drawable.talent, null).apply {
             val imageSize = application.resources.getDimensionPixelSize(R.dimen.icon_in_description)
             setBounds(0, 0, imageSize, imageSize)
         }
