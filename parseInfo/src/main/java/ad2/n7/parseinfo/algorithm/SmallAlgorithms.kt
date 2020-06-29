@@ -4,8 +4,35 @@ import java.util.*
 import kotlin.math.abs
 
 fun main() {
-    println(validMountainArray(intArrayOf(6, 2, 3, 4, 3, 2, 1)))
+    moveZeroesToEnd2(intArrayOf(1, 2, 0, 4, 0, 32))
 
+}
+
+fun moveZeroesToEnd(nums: IntArray) {
+    var size = 0
+
+    for (i in nums) if (i != 0) nums[size++] = i
+    while (size < nums.size) nums[size++] = 0
+
+    for (num in nums) {
+        println(num)
+    }
+}
+
+fun moveZeroesToEnd2(nums: IntArray) {
+    var left = 0
+    var right = 0
+    while (right < nums.size) {
+        if (nums[right] != 0) {
+            nums[left] = nums[right].also { nums[right] = nums[left] }
+            left++
+        }
+        right++
+    }
+
+    for (num in nums) {
+        println(num)
+    }
 }
 
 fun replaceElementsWithGreatestElementOnRightSide(arr: IntArray): IntArray {
