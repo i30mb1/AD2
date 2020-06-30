@@ -8,6 +8,19 @@ fun main() {
 
 }
 
+fun sortArrayByParity(A: IntArray): IntArray {
+    var left = 0
+    var right = 0
+    while (right < A.size) {
+        if (A[right] % 2 == 0) {
+            A[left] = A[right].also { A[right] = A[left] }
+            left++
+        }
+        right++
+    }
+    return A
+}
+
 fun moveZeroesToEnd(nums: IntArray) {
     var size = 0
 
