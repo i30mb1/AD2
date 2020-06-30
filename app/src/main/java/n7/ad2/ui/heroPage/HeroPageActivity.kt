@@ -4,6 +4,7 @@ import android.os.Bundle
 import android.view.View
 import android.view.ViewTreeObserver
 import androidx.databinding.DataBindingUtil
+import androidx.lifecycle.observe
 import coil.api.load
 import com.google.android.material.tabs.TabLayoutMediator
 import n7.ad2.R
@@ -16,8 +17,7 @@ import n7.ad2.utils.viewModelWithSavedStateHandle
 class HeroPageActivity : BaseActivity() {
 
     private lateinit var binding: ActivityHeroPageBinding
-    private lateinit var heroName: String
-    private val heroPageViewModel: HeroPageViewModel by viewModelWithSavedStateHandle { injector.heroPageViewModelFactory }
+    private val viewModelHeroPage: HeroPageViewModel by viewModelWithSavedStateHandle { injector.heroPageViewModelFactory }
 
     companion object {
         const val HERO_NAME = "HERO_NAME"
@@ -28,7 +28,9 @@ class HeroPageActivity : BaseActivity() {
         super.onCreate(savedInstanceState)
         binding = DataBindingUtil.setContentView(this, R.layout.activity_hero_page)
 
-        heroName = intent.getStringExtra(HERO_NAME)!!
+        if (savedInstanceState == null) {
+            viewModelHeroPage.loadHero(intent.getStringExtra(HERO_NAME)!!)
+        }
 
         setToolbar()
         setViewPager2()
@@ -60,7 +62,11 @@ class HeroPageActivity : BaseActivity() {
 
     private fun setToolbar() {
         setSupportActionBar(binding.toolbar)
-        binding.minimap.load("file:///android_asset/heroes/$heroName/${Repository.ASSETS_FILE_MINIMAP}")
+        binding.toolbar.title = null
+        viewModelHeroPage.hero.observe(this) {
+            binding.minimap.load("file:///android_asset/${it.assetsPath}/${Repository.ASSETS_FILE_MINIMAP}")
+        }
+
 //        try {
 //            binding.toolbarActivityHeroFull.title = heroName
 //
