@@ -4,6 +4,7 @@ import android.app.Application
 import dagger.BindsInstance
 import dagger.Component
 import n7.ad2.ui.heroInfo.HeroInfoViewModel
+import n7.ad2.ui.heroPage.HeroPageViewModel
 import n7.ad2.ui.heroResponse.ResponsesViewModel
 import n7.ad2.ui.heroes.HeroesViewModel
 import n7.ad2.ui.splash.SplashViewModel
@@ -31,5 +32,6 @@ interface ApplicationComponent {
     val heroesViewModel: HeroesViewModel
     val responsesViewModel: ResponsesViewModel
 
+    val heroPageViewModelFactory: HeroPageViewModel.Factory
     val heroInfoViewModelFactory: HeroInfoViewModel.Factory
 }

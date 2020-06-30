@@ -9,12 +9,15 @@ import com.google.android.material.tabs.TabLayoutMediator
 import n7.ad2.R
 import n7.ad2.data.source.local.Repository
 import n7.ad2.databinding.ActivityHeroPageBinding
+import n7.ad2.di.injector
 import n7.ad2.utils.BaseActivity
+import n7.ad2.utils.viewModelWithSavedStateHandle
 
 class HeroPageActivity : BaseActivity() {
 
     private lateinit var binding: ActivityHeroPageBinding
     private lateinit var heroName: String
+    private val heroPageViewModel: HeroPageViewModel by viewModelWithSavedStateHandle { injector.heroPageViewModelFactory }
 
     companion object {
         const val HERO_NAME = "HERO_NAME"
