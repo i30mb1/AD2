@@ -22,6 +22,10 @@ class Repository @Inject constructor(
         const val ASSETS_FILE_MINIMAP = "minimap.png"
     }
 
+    suspend fun getHero(name: String): LocalHero {
+       return appDatabase.heroesDao.getHero(name)
+    }
+
     suspend fun insertHeroes(list: List<LocalHero>) {
         appDatabase.heroesDao.insert(list)
     }
