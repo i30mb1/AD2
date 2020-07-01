@@ -8,11 +8,8 @@ plugins {
 }
 
 android {
-    compileSdkVersion(Apps.compileSdk)
     defaultConfig {
         applicationId = Apps.applicationId
-        minSdkVersion(Apps.minSdk)
-        targetSdkVersion(Apps.targetSdk)
         versionCode = Apps.versionCode
         versionName = Apps.versionName
     }
@@ -42,29 +39,17 @@ android {
 
     dynamicFeatures = mutableSetOf(":feature_streams")
 
-    compileOptions {
-        sourceCompatibility = JavaVersion.VERSION_1_8
-        targetCompatibility = JavaVersion.VERSION_1_8
-    }
-    tasks.withType < org.jetbrains.kotlin.gradle.tasks.KotlinCompile > {
-        kotlinOptions {
-            noStdlib = true
-            jvmTarget = JavaVersion.VERSION_1_8.toString()
-            freeCompilerArgs = listOf("-Xallow-result-return-type")
-        }
-    }
-
     testOptions {
         unitTests.apply {
             isIncludeAndroidResources = true
         }
     }
-
 }
 
 dependencies {
     implementation(fileTree(mapOf("dir" to "libs", "include" to listOf("*.jar"))))
     debugImplementation(Lib.debugDB)
+    implementation(kotlin("stdlib-jdk7"))
     api(Lib.ticker)
     api(Lib.sliding)
     api(Lib.retrofit)
