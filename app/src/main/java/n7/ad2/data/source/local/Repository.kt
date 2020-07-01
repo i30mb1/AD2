@@ -4,6 +4,8 @@ package n7.ad2.data.source.local
 
 import android.app.Application
 import android.content.SharedPreferences
+import android.graphics.Bitmap
+import android.graphics.BitmapFactory
 import n7.ad2.data.source.local.db.AppDatabase
 import n7.ad2.data.source.local.model.LocalHero
 import javax.inject.Inject
@@ -20,10 +22,18 @@ class Repository @Inject constructor(
         const val ASSETS_PATH_HERO_DESC = "description.json"
         const val ASSETS_PATH_HERO_RESPONSES = "responses.json"
         const val ASSETS_FILE_MINIMAP = "minimap.png"
+        const val ASSETS_FILE_ANIMATION = "emoticon.webp"
     }
 
+    suspend fun getHeroAnimation(assetsPath: String, name: String): Bitmap {
+        return application.assets.open("$assetsPath/$name/$ASSETS_FILE_ANIMATION").use {
+            BitmapFactory.decodeStream(it)
+        }
+    }
+
+
     suspend fun getHero(name: String): LocalHero {
-       return appDatabase.heroesDao.getHero(name)
+        return appDatabase.heroesDao.getHero(name)
     }
 
     suspend fun insertHeroes(list: List<LocalHero>) {
