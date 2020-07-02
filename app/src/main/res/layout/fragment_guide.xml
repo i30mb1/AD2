@@ -27,7 +27,6 @@
                 android:layout_height="4dp"
                 android:indeterminate="true"
                 android:scaleY="5"
-                android:visibility="@{viewModel.isGuideLoading? View.VISIBLE : View.INVISIBLE}"
                 tools:visibility="visible" />
 
             <TextView

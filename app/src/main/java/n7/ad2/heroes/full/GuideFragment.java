@@ -44,7 +44,6 @@ public class GuideFragment extends Fragment {
     private HeroModel hero;
     private HashMap<String, String> hashMapSpells = new HashMap<>();
     private int maxItemsInRow = 0;
-    private HeroInfoViewModel viewModel;
     private FragmentGuideBinding binding;
     private MenuItem menuSelected;
 
@@ -126,8 +125,6 @@ public class GuideFragment extends Fragment {
     @Override
     public void onActivityCreated(@Nullable Bundle savedInstanceState) {
         super.onActivityCreated(savedInstanceState);
-        viewModel = new ViewModelProvider(getActivity()).get(HeroInfoViewModel.class);
-        binding.setViewModel(viewModel);
 
         setHasOptionsMenu(true);
 

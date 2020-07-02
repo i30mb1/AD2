@@ -1,34 +1,17 @@
 package n7.ad2.ui.heroInfo
 
 import android.app.Application
-import android.content.res.Resources
-import android.media.MediaPlayer
 import androidx.appcompat.app.AlertDialog
-import androidx.databinding.ObservableBoolean
-import androidx.lifecycle.AndroidViewModel
-import androidx.lifecycle.MutableLiveData
-import androidx.lifecycle.SavedStateHandle
-import androidx.lifecycle.ViewModel
-import androidx.lifecycle.liveData
-import androidx.lifecycle.viewModelScope
-import androidx.paging.PagedList
-import androidx.paging.toLiveData
+import androidx.lifecycle.*
 import com.squareup.inject.assisted.Assisted
 import com.squareup.inject.assisted.AssistedInject
 import kotlinx.coroutines.launch
 import n7.ad2.R
-import n7.ad2.data.source.local.db.AppDatabase
+import n7.ad2.data.source.local.model.LocalHero
 import n7.ad2.heroes.db.HeroModel
 import n7.ad2.heroes.full.ResponseModel
-import n7.ad2.heroes.full.ResponsesSourceFactory
-import n7.ad2.heroes.full.ResponsesStorage
 import n7.ad2.ui.heroInfo.domain.interactor.GetHeroDescriptionInteractor
-import n7.ad2.ui.heroResponse.domain.interactor.GetHeroResponsesInteractor
 import n7.ad2.ui.heroInfo.domain.vo.VOHeroDescription
-import n7.ad2.utils.SnackbarMessage
-import org.json.JSONArray
-import org.json.JSONObject
-import java.util.*
 
 //import com.google.android.exoplayer2.ExoPlaybackException;
 //import com.google.android.exoplayer2.ExoPlayerFactory;
@@ -46,7 +29,6 @@ interface ViewModelAssistedFactory<T : ViewModel> {
 
 class HeroInfoViewModel @AssistedInject constructor(
         application: Application,
-        appDatabase: AppDatabase,
         @Assisted handle: SavedStateHandle,
         private val getHeroDescriptionInteractor: GetHeroDescriptionInteractor
 ) : AndroidViewModel(application) {
@@ -54,38 +36,17 @@ class HeroInfoViewModel @AssistedInject constructor(
     @AssistedInject.Factory
     interface Factory : ViewModelAssistedFactory<HeroInfoViewModel>
 
-    val grandSetting = SnackbarMessage()
-    val grandPermission = SnackbarMessage()
-    val showSnackBar = SnackbarMessage()
-    var jsonObjectHeroFull = MutableLiveData<JSONObject>()
-    var jsonArrayHeroAbilities = MutableLiveData<JSONArray>()
-    var isGuideLoading = ObservableBoolean(false)
-    var userSubscription = ObservableBoolean(false)
     var hero = MutableLiveData<HeroModel>()
-    var responsesInMemory = LinkedList<String>()
-    private var responsesStorage: ResponsesStorage? = null
-    private var lastPlaying: ObservableBoolean? = null
-    private var mediaPlayer: MediaPlayer? = null
 
-    private val heroesDao = appDatabase.heroesDao
     val vOHero = MutableLiveData<VOHeroDescription>()
 
-    fun loadHero(name: String) {
+    fun loadHero(localHero: LocalHero) {
         viewModelScope.launch {
-            val localHero = heroesDao.getHero(name)
             vOHero.value = getHeroDescriptionInteractor(localHero, getApplication<Application>().getString(R.string.language_resource))
         }
     }
 
-    fun loadResponse(name: String) {
-        viewModelScope.launch {
-            val localHero = heroesDao.getHero(name)
-//            voResponses.value = getHeroResponsesInteractor(localHero.assetsPath, getApplication<Application>().getString(R.string.language_resource))
-        }
-    }
-
     private fun loadFreshGuideForHero(heroModel: HeroModel) {
-
 //        int currentDay = PreferenceManager.getDefaultSharedPreferences(application).getInt(application.getString(R.string.setting_current_day), 0);
 //        int guideLastDay = heroModel.getGuideLastDay();
 //        if (currentDay != guideLastDay) {
@@ -114,20 +75,6 @@ class HeroInfoViewModel @AssistedInject constructor(
 //                }
 //            });
 //
-//        }
-    }
-
-    fun loadAvailableResponsesInMemory() {
-//        diskIO.execute {
-//            val directory = File(application.getExternalFilesDir(Environment.DIRECTORY_RINGTONES).toString() + File.separator + heroCode + File.separator)
-//            val files = directory.listFiles()
-//            if (files != null) {
-//                for (file in files) {
-//                    if (!responsesInMemory.contains(file.name)) {
-//                        responsesInMemory.add(file.name)
-//                    }
-//                }
-//            }
 //        }
     }
 

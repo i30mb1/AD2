@@ -71,7 +71,9 @@
                 android:id="@+id/rv_spells_info"
                 data="@{viewModel.VOHero.selectedDescriptionList}"
                 android:layout_width="match_parent"
+                android:orientation="vertical"
                 android:layout_height="match_parent"
+                app:layoutManager="LinearLayoutManager"
                 android:layout_below="@id/rv_spells"
                 tools:itemCount="3"
                 tools:listitem="@layout/item_body_simple" />

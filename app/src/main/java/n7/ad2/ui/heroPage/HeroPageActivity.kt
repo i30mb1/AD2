@@ -1,8 +1,13 @@
 package n7.ad2.ui.heroPage
 
+import android.content.Context
+import android.graphics.Bitmap
+import android.graphics.drawable.AnimationDrawable
+import android.graphics.drawable.BitmapDrawable
 import android.os.Bundle
 import android.view.View
 import android.view.ViewTreeObserver
+import androidx.appcompat.widget.Toolbar
 import androidx.databinding.DataBindingUtil
 import androidx.lifecycle.observe
 import coil.api.load
@@ -12,6 +17,7 @@ import n7.ad2.data.source.local.Repository
 import n7.ad2.databinding.ActivityHeroPageBinding
 import n7.ad2.di.injector
 import n7.ad2.utils.BaseActivity
+import n7.ad2.utils.Utils
 import n7.ad2.utils.viewModelWithSavedStateHandle
 
 class HeroPageActivity : BaseActivity() {
@@ -28,13 +34,10 @@ class HeroPageActivity : BaseActivity() {
         super.onCreate(savedInstanceState)
         binding = DataBindingUtil.setContentView(this, R.layout.activity_hero_page)
 
-        if (savedInstanceState == null) {
-            viewModelHeroPage.loadHero(intent.getStringExtra(HERO_NAME)!!)
-        }
+        if (savedInstanceState == null) viewModelHeroPage.loadHero(intent.getStringExtra(HERO_NAME)!!)
 
         setToolbar()
         setViewPager2()
-//        supportPostponeEnterTransition()
     }
 
     fun scheduleStartPostponedTransition(sharedElement: View) {
@@ -61,30 +64,44 @@ class HeroPageActivity : BaseActivity() {
     }
 
     private fun setToolbar() {
-        setSupportActionBar(binding.toolbar)
-        binding.toolbar.title = null
         viewModelHeroPage.hero.observe(this) {
             binding.minimap.load("file:///android_asset/${it.assetsPath}/${Repository.ASSETS_FILE_MINIMAP}")
         }
+    }
 
-//        try {
-//            binding.toolbarActivityHeroFull.title = heroName
-//
-//            val styledAttributes = theme.obtainStyledAttributes(intArrayOf(R.attr.actionBarSize))
-//            val mActionBarSize = styledAttributes.getDimension(0, 40f).toInt() / 2
-//            try {
-//                var icon = Utils.getBitmapFromAssets(this@HeroFullActivity, String.format("heroes/%s/mini.webp", heroCode))
-//                icon = Bitmap.createScaledBitmap(icon!!, mActionBarSize, mActionBarSize, false)
-//                val iconDrawable: Drawable = BitmapDrawable(resources, icon)
-//                binding.toolbarActivityHeroFull.navigationIcon = iconDrawable
-//            } catch (e: NullPointerException) {
-//                e.printStackTrace()
-//            }
-//
-//            binding.toolbarActivityHeroFull.setNavigationOnClickListener { Utils.startAnimation(this@HeroFullActivity, binding.toolbarActivityHeroFull, "heroes/$heroCode/emoticon.webp", false, mActionBarSize) }
-//
-//        } catch (e: NullPointerException) {
-//            e.printStackTrace()
-//        }
+    fun startAnimation(context: Context, img: Toolbar, name: String?, isLooped: Boolean?, mActionBarSize: Int) {
+        val bitmapFromAssets = Utils.getBitmapFromAssets(context, name)
+        if (bitmapFromAssets != null) {
+            // cut bitmaps to array of bitmaps
+            val bitmaps: Array<Bitmap?>
+            val FRAME_W = 32
+            val FRAME_H = 32
+            val NB_FRAMES = bitmapFromAssets.width / FRAME_W
+            val FRAME_DURATION = 70 // in ms !
+            val COUNT_X = bitmapFromAssets.width / FRAME_W
+            val COUNT_Y = 1
+            bitmaps = arrayOfNulls(NB_FRAMES)
+            var currentFrame = 0
+            for (i in 0 until COUNT_Y) {
+                for (j in 0 until COUNT_X) {
+                    bitmaps[currentFrame] = Bitmap.createBitmap(bitmapFromAssets, FRAME_W * j, FRAME_H * i, FRAME_W, FRAME_H)
+                    // apply scale factor
+                    bitmaps[currentFrame] = Bitmap.createScaledBitmap(bitmaps[currentFrame]!!, mActionBarSize, mActionBarSize, true)
+                    if (++currentFrame >= NB_FRAMES) {
+                        break
+                    }
+                }
+            }
+            // create animation programmatically
+            val animation = AnimationDrawable()
+            animation.isOneShot = isLooped!! // repeat animation
+            for (i in 0 until NB_FRAMES) {
+                animation.addFrame(BitmapDrawable(context.resources, bitmaps[i]), FRAME_DURATION)
+            }
+            // load animation on image
+            img.navigationIcon = animation
+            // start animation on image
+            img.post { animation.start() }
+        }
     }
 }

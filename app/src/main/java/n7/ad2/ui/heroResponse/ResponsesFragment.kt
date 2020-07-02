@@ -6,30 +6,29 @@ import android.content.Intent
 import android.net.Uri
 import android.os.Bundle
 import android.os.Environment
-import android.view.Menu
-import android.view.MenuInflater
-import android.view.MenuItem
 import android.view.View
-import androidx.appcompat.widget.SearchView
 import androidx.fragment.app.Fragment
-import androidx.lifecycle.ViewModelProvider
+import androidx.fragment.app.activityViewModels
 import androidx.lifecycle.observe
 import androidx.recyclerview.widget.LinearLayoutManager
 import com.google.android.material.snackbar.Snackbar
 import n7.ad2.R
 import n7.ad2.databinding.FragmentHeroResponsesBinding
 import n7.ad2.di.injector
-import n7.ad2.ui.heroInfo.HeroInfoViewModel
+import n7.ad2.ui.heroPage.HeroPageViewModel
 import n7.ad2.utils.StickyHeaderDecorator
 import n7.ad2.utils.viewModel
 import java.io.File
 
-class ResponsesFragment : Fragment(R.layout.fragment_hero_responses), SearchView.OnQueryTextListener {
+class ResponsesFragment : Fragment(R.layout.fragment_hero_responses) {
+
     private lateinit var responsesPagedListAdapter: ResponsesListAdapter
-    private var currentLanguage: String? = null
     private lateinit var binding: FragmentHeroResponsesBinding
-    private val viewModel by viewModel {
-        injector.responsesViewModel
+    private val viewModel by viewModel { injector.responsesViewModel }
+    private val heroPageViewModel by activityViewModels<HeroPageViewModel>()
+
+    companion object {
+        fun newInstance(): ResponsesFragment = ResponsesFragment()
     }
 
     //    private int initialKey;
@@ -51,34 +50,6 @@ class ResponsesFragment : Fragment(R.layout.fragment_hero_responses), SearchView
             }.show()
         }
     }
-    private var linearLayoutManager: LinearLayoutManager? = null
-    override fun onCreateOptionsMenu(menu: Menu, inflater: MenuInflater) {
-        super.onCreateOptionsMenu(menu, inflater)
-        inflater.inflate(R.menu.menu_fragment_hero_responses, menu)
-        val searchHero = menu.findItem(R.id.action_search)
-        val searchView = searchHero.actionView as SearchView
-        searchView.setOnQueryTextListener(this)
-    }
-
-    fun switchLanguage(): String {
-        currentLanguage = when (currentLanguage) {
-            "ru" -> "eng"
-            "eng" -> "ru"
-            else -> "ru"
-        }
-        return currentLanguage!!
-    }
-
-    override fun onOptionsItemSelected(item: MenuItem): Boolean {
-        when (item.itemId) {
-            R.id.action_switch_language -> {
-                viewModel!!.loadResponses(switchLanguage())
-                responses
-                item.title = currentLanguage
-            }
-        }
-        return super.onOptionsItemSelected(item)
-    }
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
@@ -89,34 +60,9 @@ class ResponsesFragment : Fragment(R.layout.fragment_hero_responses), SearchView
 
     override fun onActivityCreated(savedInstanceState: Bundle?) {
         super.onActivityCreated(savedInstanceState)
-        //        if (savedInstanceState == null) {
-//            initialKey = 0;
-//        } else {
-//            initialKey = savedInstanceState.getInt("initialKey");
-//        }
-        currentLanguage = getString(R.string.language_resource)
-        setHasOptionsMenu(true)
+
+        heroPageViewModel.hero.observe(viewLifecycleOwner, viewModel::loadResponses)
         setupPagedListAdapter()
-        //        MyUtils.startSpriteAnim(getContext(), (ImageView) view.findViewById(R.id.iv_player2_heartRed2), "hero_responses_sprite.webp", true, 232, 232, 1000, 1);
-    }
-
-    override fun onSaveInstanceState(outState: Bundle) {
-        super.onSaveInstanceState(outState)
-//        outState.putInt("initialKey", linearLayoutManager!!.findFirstCompletelyVisibleItemPosition())
-    }
-
-    override fun onResume() {
-        super.onResume()
-        if (context != null) {
-//            context!!.registerReceiver(onComplete, IntentFilter(DownloadManager.ACTION_DOWNLOAD_COMPLETE))
-        }
-    }
-
-    override fun onPause() {
-        super.onPause()
-        if (context != null) {
-//            context!!.unregisterReceiver(onComplete)
-        }
     }
 
     private fun setupPagedListAdapter() {
@@ -130,38 +76,6 @@ class ResponsesFragment : Fragment(R.layout.fragment_hero_responses), SearchView
 
         viewModel.voResponses.observe(viewLifecycleOwner) {
             responsesPagedListAdapter.submitList(it)
-        }
-        viewModel.loadResponses("Axe")
-    }
-
-
-    private val responses: Unit
-        private get() {
-//        viewModel.getResponsesPagedList("").observe(getViewLifecycleOwner(), new Observer<PagedList<Response>>() {
-//            @Override
-//            public void onChanged(@Nullable PagedList<Response> responses) {
-//                responsesPagedListAdapter.submitList(responses);
-//            }
-//        });
-        }
-
-    override fun onQueryTextSubmit(query: String): Boolean {
-        return false
-    }
-
-    override fun onQueryTextChange(newText: String): Boolean {
-//        viewModel.getResponsesPagedList(newText).observe(this, new Observer<PagedList<Response>>() {
-//            @Override
-//            public void onChanged(@Nullable PagedList<Response> responses) {
-//                responsesPagedListAdapter.submitList(responses);
-//            }
-//        });
-        return true
-    }
-
-    companion object {
-        fun newInstance(): ResponsesFragment {
-            return ResponsesFragment()
         }
     }
 }
