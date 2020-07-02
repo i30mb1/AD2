@@ -4,8 +4,15 @@ import java.util.*
 import kotlin.math.abs
 
 fun main() {
-    moveZeroesToEnd2(intArrayOf(1, 2, 0, 4, 0, 32))
+    println(heightChecker(intArrayOf(1,1,4,2,1,3)))
 
+}
+
+fun heightChecker(heights: IntArray): Int {
+    return heights
+            .sorted()
+            .mapIndexed { index, i -> if(heights[index] != i) 1 else 0 }
+            .sum()
 }
 
 fun sortArrayByParity(A: IntArray): IntArray {
