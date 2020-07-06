@@ -4,14 +4,23 @@ import java.util.*
 import kotlin.math.abs
 
 fun main() {
-    println(heightChecker(intArrayOf(1,1,4,2,1,3)))
+    println(thirdMax(intArrayOf(2, 2, 3, 5, 4, 1)))
 
+}
+
+fun thirdMax(nums: IntArray): Int {
+    val set = TreeSet<Int>()
+    for (num in nums) {
+        set.add(num)
+        if (set.size > 3) set.pollFirst()
+    }
+    return if (set.size < 3) set.last() else set.first()
 }
 
 fun heightChecker(heights: IntArray): Int {
     return heights
             .sorted()
-            .mapIndexed { index, i -> if(heights[index] != i) 1 else 0 }
+            .mapIndexed { index, i -> if (heights[index] != i) 1 else 0 }
             .sum()
 }
 
