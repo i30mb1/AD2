@@ -27,6 +27,7 @@ import n7.ad2.ui.heroInfo.domain.vo.VOBodyWithSeparator
 import n7.ad2.ui.heroInfo.domain.vo.VODescription
 import n7.ad2.ui.heroInfo.domain.vo.VOTitleSimple
 import n7.ad2.ui.heroInfo.domain.vo.VOTitleWithIcon
+import n7.ad2.ui.heroPage.AudioExoPlayer
 import n7.ad2.utils.extension.toPx
 
 class DescriptionsListAdapter(

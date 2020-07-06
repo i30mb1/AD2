@@ -10,6 +10,7 @@ import n7.ad2.R
 import n7.ad2.databinding.FragmentHeroInfoBinding
 import n7.ad2.di.injector
 import n7.ad2.ui.heroInfo.domain.vo.VODescription
+import n7.ad2.ui.heroPage.AudioExoPlayer
 import n7.ad2.ui.heroPage.HeroPageActivity
 import n7.ad2.ui.heroPage.HeroPageViewModel
 import n7.ad2.utils.viewModelWithSavedStateHandle

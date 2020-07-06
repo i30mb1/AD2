@@ -1,4 +1,4 @@
-package n7.ad2.ui.heroInfo
+package n7.ad2.ui.heroPage
 
 import android.app.Application
 import android.net.Uri
