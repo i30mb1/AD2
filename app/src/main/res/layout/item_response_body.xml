@@ -5,12 +5,14 @@
     xmlns:tools="http://schemas.android.com/tools">
 
     <data>
-        <import type="android.view.View" />
+
+        <variable
+            name="audioExoPlayer"
+            type="n7.ad2.ui.heroPage.AudioExoPlayer" />
 
         <variable
             name="item"
             type="n7.ad2.ui.heroResponse.domain.vo.VOResponseBody" />
-
     </data>
 
     <LinearLayout
@@ -18,6 +20,7 @@
         android:layout_height="wrap_content"
         android:background="?attr/selectableItemBackground"
         android:gravity="center"
+        android:onClick="@{()-> audioExoPlayer.play(item)}"
         android:orientation="horizontal"
         android:padding="4dp">
 
@@ -51,6 +54,7 @@
             android:layout_width="20dp"
             android:layout_height="20dp"
             android:layout_weight="0"
-            android:visibility="@{item.playing ? View.VISIBLE:View.INVISIBLE}" />
+            withSpace="@{true}"
+            isVisible="@{item.isPlaying()}" />
     </LinearLayout>
 </layout>

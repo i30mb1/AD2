@@ -8,12 +8,7 @@ import androidx.databinding.ObservableBoolean
 import androidx.lifecycle.Lifecycle
 import androidx.lifecycle.LifecycleObserver
 import androidx.lifecycle.OnLifecycleEvent
-import com.google.android.exoplayer2.C
-import com.google.android.exoplayer2.DefaultLoadControl
-import com.google.android.exoplayer2.ExoPlaybackException
-import com.google.android.exoplayer2.ExoPlayer
-import com.google.android.exoplayer2.Player
-import com.google.android.exoplayer2.SimpleExoPlayer
+import com.google.android.exoplayer2.*
 import com.google.android.exoplayer2.source.ProgressiveMediaSource
 import com.google.android.exoplayer2.trackselection.DefaultTrackSelector
 import com.google.android.exoplayer2.upstream.AssetDataSource
@@ -22,7 +17,11 @@ import com.google.android.exoplayer2.upstream.DefaultDataSourceFactory
 import com.google.android.exoplayer2.upstream.RawResourceDataSource
 import com.google.android.exoplayer2.util.Util
 import n7.ad2.R
-import n7.ad2.ui.heroInfo.domain.vo.VOTitleWithIcon
+
+interface Playable {
+    val isPlaying: ObservableBoolean
+    val audioUrl: String?
+}
 
 class AudioExoPlayer(
         private val application: Application,
@@ -72,7 +71,7 @@ class AudioExoPlayer(
         play(assetDataSource.uri!!)
     }
 
-    fun play(model: VOTitleWithIcon) {
+    fun play(model: Playable) {
         if (isPlaying !== model.isPlaying) stop()
         isPlaying = model.isPlaying
         if (isPlaying.get()) stop() else play(model.audioUrl!!)

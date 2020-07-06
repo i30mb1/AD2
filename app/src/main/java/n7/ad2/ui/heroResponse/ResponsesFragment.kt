@@ -15,6 +15,7 @@ import com.google.android.material.snackbar.Snackbar
 import n7.ad2.R
 import n7.ad2.databinding.FragmentHeroResponsesBinding
 import n7.ad2.di.injector
+import n7.ad2.ui.heroPage.AudioExoPlayer
 import n7.ad2.ui.heroPage.HeroPageViewModel
 import n7.ad2.utils.StickyHeaderDecorator
 import n7.ad2.utils.viewModel
@@ -26,6 +27,7 @@ class ResponsesFragment : Fragment(R.layout.fragment_hero_responses) {
     private lateinit var binding: FragmentHeroResponsesBinding
     private val viewModel by viewModel { injector.responsesViewModel }
     private val heroPageViewModel by activityViewModels<HeroPageViewModel>()
+    private lateinit var audioExoPlayer: AudioExoPlayer
 
     companion object {
         fun newInstance(): ResponsesFragment = ResponsesFragment()
@@ -56,6 +58,7 @@ class ResponsesFragment : Fragment(R.layout.fragment_hero_responses) {
         binding = FragmentHeroResponsesBinding.bind(view).also {
             it.lifecycleOwner = viewLifecycleOwner
         }
+        audioExoPlayer = AudioExoPlayer(requireActivity().application, lifecycle)
     }
 
     override fun onActivityCreated(savedInstanceState: Bundle?) {
@@ -66,7 +69,7 @@ class ResponsesFragment : Fragment(R.layout.fragment_hero_responses) {
     }
 
     private fun setupPagedListAdapter() {
-        responsesPagedListAdapter = ResponsesListAdapter()
+        responsesPagedListAdapter = ResponsesListAdapter(audioExoPlayer)
         binding.rv.apply {
             setHasFixedSize(true)
             layoutManager = LinearLayoutManager(context, LinearLayoutManager.VERTICAL, false)

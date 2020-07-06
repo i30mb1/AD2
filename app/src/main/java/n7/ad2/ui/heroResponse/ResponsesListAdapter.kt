@@ -11,17 +11,19 @@ import androidx.recyclerview.widget.DiffUtil
 import androidx.recyclerview.widget.RecyclerView
 import n7.ad2.BR
 import n7.ad2.R
-import n7.ad2.ui.heroInfo.HeroInfoViewModel
+import n7.ad2.databinding.ItemResponseBodyBinding
+import n7.ad2.ui.heroPage.AudioExoPlayer
 import n7.ad2.ui.heroResponse.domain.vo.VOResponse
 import n7.ad2.ui.heroResponse.domain.vo.VOResponseBody
 import n7.ad2.ui.heroResponse.domain.vo.VOResponseHeader
 import n7.ad2.utils.StickyHeaderDecorator.StickyHeaderInterface
 
 // https://youtu.be/xF1x-Pm6IPw
-class ResponsesListAdapter constructor(
+class ResponsesListAdapter(
+        private val audioExoPlayer: AudioExoPlayer
 ) : PagedListAdapter<VOResponse, ResponsesListAdapter.ViewHolder>(DiffCallback()), StickyHeaderInterface {
 
-    override fun onCreateViewHolder(viewGroup: ViewGroup, viewType: Int): ViewHolder = ViewHolder.from(viewGroup, viewType)
+    override fun onCreateViewHolder(viewGroup: ViewGroup, viewType: Int): ViewHolder = ViewHolder.from(viewGroup, viewType, audioExoPlayer)
 
     override fun onBindViewHolder(viewHolder: ViewHolder, position: Int) {
         val item = getItem(position)
@@ -65,12 +67,23 @@ class ResponsesListAdapter constructor(
     }
 
     class ViewHolder(
-            val binding: ViewDataBinding
+            val binding: ViewDataBinding,
+            val audioExoPlayer: AudioExoPlayer
     ) : RecyclerView.ViewHolder(binding.root) {
 
         fun bind(item: VOResponse) {
+            bindSpecificVO(binding)
             binding.setVariable(BR.item, item)
             binding.executePendingBindings()
+        }
+
+        private fun bindSpecificVO(binding: ViewDataBinding) {
+            when (binding) {
+                is ItemResponseBodyBinding -> {
+                    binding.audioExoPlayer = audioExoPlayer
+                }
+            }
+
         }
 
 
@@ -80,10 +93,11 @@ class ResponsesListAdapter constructor(
 
         companion object {
             fun from(parent: ViewGroup,
-                     viewType: Int): ViewHolder {
+                     viewType: Int,
+                     audioExoPlayer: AudioExoPlayer): ViewHolder {
                 val layoutInflater = LayoutInflater.from(parent.context)
                 val binding = DataBindingUtil.inflate<ViewDataBinding>(layoutInflater, viewType, parent, false)
-                return ViewHolder(binding)
+                return ViewHolder(binding, audioExoPlayer)
             }
         }
 

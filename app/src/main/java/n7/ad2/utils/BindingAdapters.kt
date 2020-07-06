@@ -35,9 +35,13 @@ fun <T> RecyclerView.loadData(list: List<T>?) {
     (this.adapter as ListAdapter<T, RecyclerView.ViewHolder>).submitList(list)
 }
 
-@BindingAdapter("isVisible")
-fun View.isVisible(isVisible: Boolean) {
-    this.visibility = if (isVisible) View.VISIBLE else View.GONE
+@BindingAdapter("isVisible", "withSpace", requireAll = false)
+fun View.isVisible(isVisible: Boolean, withSpace: Boolean) {
+    when (withSpace) {
+        true -> this.visibility = if (isVisible) View.VISIBLE else View.INVISIBLE
+        false -> this.visibility = if (isVisible) View.VISIBLE else View.GONE
+    }
+
 }
 
 @BindingAdapter("isSelected")
