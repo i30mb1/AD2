@@ -29,7 +29,7 @@ class AudioExoPlayer(
 ) : Player.EventListener, LifecycleObserver {
 
     private lateinit var exoPlayer: SimpleExoPlayer
-    private var listener: ((errorMessage: String) -> Unit)? = null
+    private var listener: ((errorMessage: Exception) -> Unit)? = null
     private var isPlaying = ObservableBoolean(false)
 
     init {
@@ -54,11 +54,11 @@ class AudioExoPlayer(
     }
 
     override fun onPlayerError(error: ExoPlaybackException) {
-        listener?.invoke("${error.message}")
+        listener?.invoke(error)
         isPlaying.set(false)
     }
 
-    fun setErrorListener(listener: (String) -> Unit) {
+    fun setErrorListener(listener: (Exception) -> Unit) {
         this.listener = listener
     }
 
