@@ -71,7 +71,7 @@ object Lib {
     // --- Moshi ---
     const val moshi        = "com.squareup.moshi:moshi:${Versions.moshi}" // It makes it easy to parse JSON into Kotlin objects
     const val moshiCodegen = "com.squareup.moshi:moshi-kotlin-codegen:${Versions.moshi}" // Add codegen to moshi (generating by using @JsonClass(generateAdapter = true))
-    const val moshiKotlin  = "com.squareup.moshi:moshi-kotlin:${Versions.moshi}" // Add reflection to moshi (better not to use : 2.5 MB)
+    const val moshiKotlin  = "com.squareup.moshi:moshi-kotlin:${Versions.moshi}" // Add reflection to moshi (better not to use : 2.5 MB) Moshi.Builder().add(KotlinJsonAdapterFactory()).build()
     const val moshiAdapter = "com.squareup.moshi:moshi-adapters:${Versions.moshi}"
 
     // --- Dagger ---
