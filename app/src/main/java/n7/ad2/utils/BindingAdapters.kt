@@ -52,7 +52,7 @@ fun setText(view: TextView, text: Int) {
     view.text = text.toString()
 }
 
-@BindingAdapter("asyncText", "android:textSize")
+@BindingAdapter("asyncText", "android:textSize", requireAll = false)
 fun TextView.asyncText(text: CharSequence, textSize: Int?) {
     // first, set all measurement affecting properties of the text
     // (size, locale, typeface, direction, etc)
