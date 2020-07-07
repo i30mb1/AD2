@@ -7,8 +7,10 @@ import android.net.Uri
 import android.os.Bundle
 import android.os.Environment
 import android.view.View
+import androidx.core.os.bundleOf
 import androidx.fragment.app.Fragment
 import androidx.fragment.app.activityViewModels
+import androidx.fragment.app.setFragmentResult
 import androidx.lifecycle.observe
 import androidx.recyclerview.widget.LinearLayoutManager
 import com.google.android.material.snackbar.Snackbar
@@ -60,14 +62,16 @@ class ResponsesFragment : Fragment(R.layout.fragment_hero_responses) {
             it.lifecycleOwner = viewLifecycleOwner
         }
         audioExoPlayer = AudioExoPlayer(requireActivity().application, lifecycle)
+        audioExoPlayer.setErrorListener {
+            createDialogError(it.message.toString())
+        }
         heroPageViewModel.hero.observe(viewLifecycleOwner, viewModel::loadResponses)
         setupPagedListAdapter()
     }
 
 
-    private fun createDialogError() {
-
-        val dialogTheme = DialogError()
+    private fun createDialogError(title: String) {
+        val dialogTheme = DialogError.newInstance(title)
         dialogTheme.show(childFragmentManager, null)
     }
 
