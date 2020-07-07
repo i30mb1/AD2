@@ -38,10 +38,6 @@ class HeroInfoFragment : Fragment(R.layout.fragment_hero_info) {
         }
         audioExoPlayer = AudioExoPlayer(requireActivity().application, lifecycle)
         infoPopupWindow = InfoPopupWindow(requireContext(), lifecycle)
-    }
-
-    override fun onActivityCreated(savedInstanceState: Bundle?) {
-        super.onActivityCreated(savedInstanceState)
 
         heroPageViewModel.hero.observe(viewLifecycleOwner, viewModel::loadHero)
         setupSpellRecyclerView()

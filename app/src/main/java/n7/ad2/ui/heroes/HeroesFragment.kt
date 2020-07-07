@@ -58,10 +58,6 @@ class HeroesFragment : Fragment(R.layout.fragment_heroes) {
         binding = FragmentHeroesBinding.bind(view).also {
             it.lifecycleOwner = viewLifecycleOwner
         }
-    }
-
-    override fun onActivityCreated(savedInstanceState: Bundle?) {
-        super.onActivityCreated(savedInstanceState)
         requireActivity().apply {
             setTitle(R.string.heroes)
             sendBroadcast(Intent(MainActivity.LOG_ON_RECEIVE).putExtra(MainActivity.LOG_ON_RECEIVE, "heroes_activity_created"))
@@ -69,6 +65,7 @@ class HeroesFragment : Fragment(R.layout.fragment_heroes) {
         setHasOptionsMenu(true) //вызов метода onCreateOptionsMenu в фрагменте
         setupAdapter()
     }
+
 
     private fun setupAdapter() {
         val myAdapter = HeroesPagedListAdapter(this) // PagedListAdapter, заточенный под чтение данных из PagedList.
