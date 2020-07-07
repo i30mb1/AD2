@@ -8,6 +8,10 @@ fun main() {
 
 }
 
+fun findDisappearedNumbers(nums: IntArray): List<Int> {
+    return (1..nums.size).filter { it !in nums }
+}
+
 fun thirdMax(nums: IntArray): Int {
     val set = TreeSet<Int>()
     for (num in nums) {
