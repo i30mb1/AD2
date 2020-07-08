@@ -9,7 +9,6 @@ import androidx.paging.PagedList
 import androidx.paging.toLiveData
 import n7.ad2.R
 import n7.ad2.data.source.local.model.LocalHero
-import n7.ad2.heroes.full.ResponsesSourceFactory
 import n7.ad2.ui.heroResponse.domain.interactor.GetHeroResponsesInteractor
 import javax.inject.Inject
 

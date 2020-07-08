@@ -1,4 +1,4 @@
-package n7.ad2.heroes.full
+package n7.ad2.ui.heroResponse
 
 import androidx.paging.PositionalDataSource
 import n7.ad2.ui.heroResponse.domain.vo.VOResponse
