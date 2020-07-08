@@ -133,15 +133,17 @@ fun removeDuplicates(nums: IntArray): Int {
 }
 
 fun findMaxConsecutiveOnes(nums: IntArray): Int {
-    var max = 0
+    var best = 0
     var cur = 0
     for (number in nums) {
-        if (number == 1) cur++
-        else {
-            max = maxOf(cur, max); cur = 0
+        if (number == 1) {
+            cur++
+            best = maxOf(cur, best)
+        } else {
+            cur = 0
         }
     }
-    return maxOf(cur, max)
+    return best
 }
 
 fun findEvenNumbers(nums: IntArray): Int {
