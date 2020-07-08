@@ -1,19 +1,11 @@
 package n7.ad2.ui.heroResponse
 
-import android.content.BroadcastReceiver
-import android.content.Context
-import android.content.Intent
-import android.net.Uri
 import android.os.Bundle
-import android.os.Environment
 import android.view.View
-import androidx.core.os.bundleOf
 import androidx.fragment.app.Fragment
 import androidx.fragment.app.activityViewModels
-import androidx.fragment.app.setFragmentResult
 import androidx.lifecycle.observe
 import androidx.recyclerview.widget.LinearLayoutManager
-import com.google.android.material.snackbar.Snackbar
 import n7.ad2.R
 import n7.ad2.databinding.FragmentHeroResponsesBinding
 import n7.ad2.di.injector
@@ -22,7 +14,6 @@ import n7.ad2.ui.heroPage.DialogError
 import n7.ad2.ui.heroPage.HeroPageViewModel
 import n7.ad2.utils.StickyHeaderDecorator
 import n7.ad2.utils.viewModel
-import java.io.File
 
 class ResponsesFragment : Fragment(R.layout.fragment_hero_responses) {
 
@@ -34,26 +25,6 @@ class ResponsesFragment : Fragment(R.layout.fragment_hero_responses) {
 
     companion object {
         fun newInstance(): ResponsesFragment = ResponsesFragment()
-    }
-
-    //    private int initialKey;
-    var onComplete: BroadcastReceiver = object : BroadcastReceiver() {
-        override fun onReceive(context: Context, intent: Intent) {
-            responsesPagedListAdapter!!.notifyDataSetChanged()
-            Snackbar.make(binding!!.root, R.string.responses_fragment_sound_downloaded, Snackbar.LENGTH_SHORT).setAction(R.string.open_file) {
-                if (getContext() != null) {
-                    val selectedUri = Uri.parse(requireActivity().getExternalFilesDir(Environment.DIRECTORY_RINGTONES).toString() + File.separator)
-                    val intentOpenFile = Intent(Intent.ACTION_VIEW)
-                    intentOpenFile.setDataAndType(selectedUri, "application/*")
-                    if (intentOpenFile.resolveActivityInfo(requireActivity().packageManager, 0) != null) {
-                        startActivity(Intent.createChooser(intentOpenFile, getString(R.string.all_open_folder)))
-                    } else {
-                        // if you reach this place, it means there is no any file
-                        // explorer app installed on your device
-                    }
-                }
-            }.show()
-        }
     }
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {

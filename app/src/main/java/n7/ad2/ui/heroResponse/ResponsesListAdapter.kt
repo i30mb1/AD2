@@ -38,23 +38,22 @@ class ResponsesListAdapter(
     }
 
     override fun getHeaderPositionForItem(itemPosition: Int): Int {
-        var itemPosition = itemPosition
+        var position = itemPosition
         var headerPosition = 0
         do {
-            if (isHeader(itemPosition)) {
-                headerPosition = itemPosition
+            if (isHeader(position)) {
+                headerPosition = position
                 break
             }
-            itemPosition -= 1
-        } while (itemPosition >= 0)
+            position -= 1
+        } while (position >= 0)
         return headerPosition
     }
 
     override fun getHeaderLayout(headerPosition: Int) = R.layout.item_response_header
 
     override fun bindHeaderData(header: View?, headerPosition: Int) {
-        val item = getItem(headerPosition)
-        if (item == null) return
+        val item = getItem(headerPosition) ?: return
         header?.findViewById<TextView>(R.id.tv_item_response)?.text = (item as VOResponseHeader).title
     }
 
