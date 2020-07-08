@@ -1,7 +1,6 @@
 plugins {
     dynamicFeature()
     kotlinAndroid()
-    kotlinAndroidExt()
 }
 
 android {

@@ -3,7 +3,6 @@ import com.android.build.gradle.internal.cxx.configure.gradleLocalProperties
 plugins {
     androidApp()
     kotlinAndroid()
-    kotlinAndroidExt()
     kotlinKapt()
 }
 

@@ -12,7 +12,7 @@ fun PluginDependenciesSpec.junit5(): PluginDependencySpec = id("de.mannodermaus.
 
 fun PluginDependenciesSpec.kotlinAndroid(): PluginDependencySpec = kotlin("android")
 
-fun PluginDependenciesSpec.kotlinAndroidExt(): PluginDependencySpec = kotlin("android.extensions")
+fun PluginDependenciesSpec.kotlinAndroidExt(): PluginDependencySpec = kotlin("android.extensions") // kotlin synthetics
 
 fun PluginDependenciesSpec.kotlinKapt(): PluginDependencySpec = kotlin("kapt")
 
