@@ -6,6 +6,7 @@ import android.view.ViewGroup
 import androidx.paging.PagedListAdapter
 import androidx.recyclerview.widget.DiffUtil
 import androidx.recyclerview.widget.RecyclerView
+import coil.api.clear
 import n7.ad2.R
 import n7.ad2.data.source.local.model.LocalHero
 import n7.ad2.databinding.ItemHeroBinding
@@ -26,6 +27,11 @@ class HeroesPagedListAdapter internal constructor(fragment: HeroesFragment) : Pa
         if (hero != null) holder.bindTo(hero) else holder.clear()
     }
 
+    override fun onViewRecycled(holder: ViewHolder) {
+        super.onViewRecycled(holder)
+        holder.clear()
+    }
+
     class ViewHolder(
             private val binding: ItemHeroBinding,
             private val listener: View.OnClickListener
@@ -40,7 +46,7 @@ class HeroesPagedListAdapter internal constructor(fragment: HeroesFragment) : Pa
         }
 
         fun clear() = binding.apply {
-            iv.setImageResource(R.drawable.hero_placeholder)
+            iv.clear()
             tv.text = ""
         }
 
