@@ -18,7 +18,6 @@ import n7.ad2.ui.heroResponse.domain.vo.VOResponseBody
 import n7.ad2.ui.heroResponse.domain.vo.VOResponseHeader
 import n7.ad2.utils.StickyHeaderDecorator.StickyHeaderInterface
 
-// https://youtu.be/xF1x-Pm6IPw
 class ResponsesListAdapter(
         private val audioExoPlayer: AudioExoPlayer
 ) : PagedListAdapter<VOResponse, ResponsesListAdapter.ViewHolder>(DiffCallback()), StickyHeaderInterface {

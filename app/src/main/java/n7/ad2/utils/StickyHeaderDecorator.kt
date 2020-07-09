@@ -1,6 +1,7 @@
 package n7.ad2.utils
 
 import android.graphics.Canvas
+import android.graphics.Rect
 import android.view.LayoutInflater
 import android.view.MotionEvent
 import android.view.View
@@ -9,9 +10,18 @@ import androidx.recyclerview.widget.RecyclerView
 import androidx.recyclerview.widget.RecyclerView.ItemDecoration
 import androidx.recyclerview.widget.RecyclerView.OnItemTouchListener
 
+// https://youtu.be/xF1x-Pm6IPw
 class StickyHeaderDecorator(recyclerView: RecyclerView, private val mListener: StickyHeaderInterface) : ItemDecoration() {
 
     private var mStickyHeaderHeight = 0
+
+    override fun getItemOffsets(outRect: Rect, view: View, parent: RecyclerView, state: RecyclerView.State) {
+        super.getItemOffsets(outRect, view, parent, state)
+    }
+
+    override fun onDraw(c: Canvas, parent: RecyclerView, state: RecyclerView.State) {
+        super.onDraw(c, parent, state)
+    }
 
     override fun onDrawOver(c: Canvas, parent: RecyclerView, state: RecyclerView.State) {
         super.onDrawOver(c, parent, state)
