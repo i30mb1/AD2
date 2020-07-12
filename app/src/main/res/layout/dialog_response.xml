@@ -4,60 +4,35 @@
 
     <data>
 
-        <variable
-            name="viewModel"
-            type="n7.ad2.ui.heroInfo.HeroInfoViewModel" />
-
-        <variable
-            name="model"
-            type="n7.ad2.heroes.full.ResponseModel" />
-
-        <variable
-            name="dialog"
-            type="androidx.appcompat.app.AlertDialog" />
-
-        <import type="android.view.View" />
     </data>
 
-    <LinearLayout
+    <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:background="?android:attr/colorBackground"
         android:orientation="horizontal">
 
         <View
-            android:id="@+id/red_line_dialog_response"
-            android:layout_width="2dp"
-            android:layout_height="match_parent"
-            android:background="?colorAccent"
+            android:id="@+id/line"
+            android:layout_width="@dimen/line_width"
+            android:layout_height="0dp"
+            android:background="?colorPrimary"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent" />
 
-        <LinearLayout
-            android:layout_width="match_parent"
+        <Button
+            android:id="@+id/b_dialog_response_download"
+            style="@style/Widget.MaterialComponents.Button.UnelevatedButton"
+            android:layout_width="0dp"
             android:layout_height="wrap_content"
-            android:orientation="vertical">
+            android:layout_margin="8dp"
+            android:text="@string/dialog_response_download"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/line"
+            app:layout_constraintTop_toTopOf="parent" />
 
-            <Button
-                android:id="@+id/b_dialog_response_download"
-                style="@style/Widget.MaterialComponents.Button.OutlinedButton"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:onClick="@{() -> viewModel.downloadResponse(model,dialog)}"
-                android:text="@string/dialog_response_download"
-                android:textSize="14sp" />
 
-            <Button
-                android:id="@+id/b_dialog_response_set_ringtone"
-                style="@style/Widget.MaterialComponents.Button.OutlinedButton"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:onClick="@{() -> viewModel.setOnRingtone(model,dialog)}"
-                android:text="@string/dialog_response_set_ringtone"
-                android:textSize="14sp" />
-
-        </LinearLayout>
-
-    </LinearLayout>
+    </androidx.constraintlayout.widget.ConstraintLayout>
 </layout>
