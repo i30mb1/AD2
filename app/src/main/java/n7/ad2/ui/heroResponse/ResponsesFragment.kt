@@ -1,9 +1,12 @@
 package n7.ad2.ui.heroResponse
 
 import android.os.Bundle
+import android.os.Handler
+import android.os.Looper
 import android.view.View
 import androidx.fragment.app.Fragment
 import androidx.fragment.app.activityViewModels
+import androidx.fragment.app.setFragmentResultListener
 import androidx.lifecycle.observe
 import androidx.recyclerview.widget.LinearLayoutManager
 import n7.ad2.R
@@ -12,6 +15,7 @@ import n7.ad2.di.injector
 import n7.ad2.ui.heroPage.AudioExoPlayer
 import n7.ad2.ui.heroPage.DialogError
 import n7.ad2.ui.heroPage.HeroPageViewModel
+import n7.ad2.ui.heroResponse.domain.vo.VOResponseBody
 import n7.ad2.utils.StickyHeaderDecorator
 import n7.ad2.utils.viewModel
 
@@ -19,6 +23,7 @@ class ResponsesFragment : Fragment(R.layout.fragment_hero_responses) {
 
     private lateinit var responsesPagedListAdapter: ResponsesListAdapter
     private lateinit var binding: FragmentHeroResponsesBinding
+    private lateinit var downloadResponseManager: DownloadResponseManager
     private val viewModel by viewModel { injector.responsesViewModel }
     private val heroPageViewModel by activityViewModels<HeroPageViewModel>()
     private lateinit var audioExoPlayer: AudioExoPlayer
@@ -32,6 +37,8 @@ class ResponsesFragment : Fragment(R.layout.fragment_hero_responses) {
         binding = FragmentHeroResponsesBinding.bind(view).also {
             it.lifecycleOwner = viewLifecycleOwner
         }
+
+        downloadResponseManager = DownloadResponseManager(requireActivity().contentResolver, Handler(Looper.getMainLooper()), requireActivity().application, lifecycle)
         audioExoPlayer = AudioExoPlayer(requireActivity().application, lifecycle)
         audioExoPlayer.setErrorListener {
             createDialogError(it.message.toString())
@@ -40,14 +47,23 @@ class ResponsesFragment : Fragment(R.layout.fragment_hero_responses) {
         setupPagedListAdapter()
     }
 
+    private fun createDialogResponse(item: VOResponseBody) {
+        childFragmentManager.setFragmentResultListener(DialogResponse.REQUEST_KEY, this) { _: String, _: Bundle ->
+            downloadResponseManager.download(item)
+        }
+        val dialogResponse = DialogResponse.newInstance()
+        dialogResponse.show(childFragmentManager, null)
+    }
 
     private fun createDialogError(title: String) {
-        val dialogTheme = DialogError.newInstance(title)
-        dialogTheme.show(childFragmentManager, null)
+        val dialogError = DialogError.newInstance(title)
+        dialogError.show(childFragmentManager, null)
     }
 
     private fun setupPagedListAdapter() {
-        responsesPagedListAdapter = ResponsesListAdapter(audioExoPlayer)
+        responsesPagedListAdapter = ResponsesListAdapter(audioExoPlayer) {
+            createDialogResponse(it)
+        }
         binding.rv.apply {
             setHasFixedSize(true)
             layoutManager = LinearLayoutManager(context, LinearLayoutManager.VERTICAL, false)

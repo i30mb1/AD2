@@ -22,7 +22,8 @@
             app:layout_constraintTop_toTopOf="parent" />
 
         <Button
-            android:id="@+id/b_dialog_response_download"
+
+            android:id="@+id/b_download"
             style="@style/Widget.MaterialComponents.Button.UnelevatedButton"
             android:layout_width="0dp"
             android:layout_height="wrap_content"

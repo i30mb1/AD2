@@ -7,6 +7,10 @@
     <data>
 
         <variable
+            name="downloadResponseManager"
+            type="n7.ad2.ui.heroResponse.DownloadResponseManager" />
+
+        <variable
             name="audioExoPlayer"
             type="n7.ad2.ui.heroPage.AudioExoPlayer" />
 

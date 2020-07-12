@@ -20,7 +20,7 @@ class ResponsesViewModel @Inject constructor(
     private val heroName = MutableLiveData<LocalHero>()
     val voResponses = heroName.switchMap {
         liveData {
-            val sourceFactory = ResponsesSourceFactory(getHeroResponsesInteractor(it.assetsPath, getApplication<Application>().getString(R.string.language_resource)), "")
+            val sourceFactory = ResponsesSourceFactory(getHeroResponsesInteractor(it, getApplication<Application>().getString(R.string.language_resource)), "")
             val config = PagedList.Config.Builder().setEnablePlaceholders(false).setPageSize(20).build()
 
             emitSource(sourceFactory.toLiveData(config))

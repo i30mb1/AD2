@@ -19,10 +19,11 @@ import n7.ad2.ui.heroResponse.domain.vo.VOResponseHeader
 import n7.ad2.utils.StickyHeaderDecorator.StickyHeaderInterface
 
 class ResponsesListAdapter(
-        private val audioExoPlayer: AudioExoPlayer
+        private val audioExoPlayer: AudioExoPlayer,
+        private val showDialogResponse: (VOResponseBody) -> Unit
 ) : PagedListAdapter<VOResponse, ResponsesListAdapter.ViewHolder>(DiffCallback()), StickyHeaderInterface {
 
-    override fun onCreateViewHolder(viewGroup: ViewGroup, viewType: Int): ViewHolder = ViewHolder.from(viewGroup, viewType, audioExoPlayer)
+    override fun onCreateViewHolder(viewGroup: ViewGroup, viewType: Int): ViewHolder = ViewHolder.from(viewGroup, viewType, audioExoPlayer, showDialogResponse)
 
     override fun onBindViewHolder(viewHolder: ViewHolder, position: Int) {
         val item = getItem(position)
@@ -65,25 +66,29 @@ class ResponsesListAdapter(
     }
 
     class ViewHolder(
-            val binding: ViewDataBinding,
-            val audioExoPlayer: AudioExoPlayer
+            private val binding: ViewDataBinding,
+            private val audioExoPlayer: AudioExoPlayer,
+            private val showDialogResponse: (VOResponseBody) -> Unit
     ) : RecyclerView.ViewHolder(binding.root) {
 
         fun bind(item: VOResponse) {
-            bindSpecificVO(binding)
+            bindSpecificVO(binding, item)
             binding.setVariable(BR.item, item)
             binding.executePendingBindings()
         }
 
-        private fun bindSpecificVO(binding: ViewDataBinding) {
+        private fun bindSpecificVO(binding: ViewDataBinding, item: VOResponse) {
             when (binding) {
                 is ItemResponseBodyBinding -> {
                     binding.audioExoPlayer = audioExoPlayer
+                    binding.root.setOnLongClickListener {
+                        showDialogResponse(item as VOResponseBody)
+                        true
+                    }
                 }
             }
 
         }
-
 
         fun clear() {
 
@@ -92,10 +97,11 @@ class ResponsesListAdapter(
         companion object {
             fun from(parent: ViewGroup,
                      viewType: Int,
-                     audioExoPlayer: AudioExoPlayer): ViewHolder {
+                     audioExoPlayer: AudioExoPlayer,
+                     showDialogResponse: (VOResponseBody) -> Unit): ViewHolder {
                 val layoutInflater = LayoutInflater.from(parent.context)
                 val binding = DataBindingUtil.inflate<ViewDataBinding>(layoutInflater, viewType, parent, false)
-                return ViewHolder(binding, audioExoPlayer)
+                return ViewHolder(binding, audioExoPlayer, showDialogResponse)
             }
         }
 
