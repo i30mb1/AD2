@@ -1,10 +1,10 @@
 package ad2.n7.parseinfo.algorithm
 
 import java.util.*
-import kotlin.math.abs
 
 fun main() {
-    println(thirdMax(intArrayOf(2, 2, 3, 5, 4, 1)))
+    sortedSquares2(intArrayOf(-4, -1, 0, 3, 10))
+//    println(thirdMax(intArrayOf(2, 2, 3, 5, 4, 1)))
 
 }
 
@@ -117,18 +117,14 @@ fun checkIfNAndItsDoubleExist2(arr: IntArray): Boolean {
 fun removeElement(nums: IntArray, `val`: Int): Int {
     var size = 0
     for (i in nums.indices) {
-        if (nums[i] != `val`) {
-            nums[size++] = nums[i]
-        }
+        if (nums[i] != `val`) nums[size++] = nums[i]
     }
     return size
 }
 
 fun removeDuplicates(nums: IntArray): Int {
     var size = 1
-    for (i in size until nums.size) {
-        if(nums[i-1]!=nums[i]) nums[size++] = nums[i]
-    }
+    for (i in size until nums.size) if (nums[i - 1] != nums[i]) nums[size++] = nums[i]
     return size
 }
 
@@ -139,9 +135,7 @@ fun findMaxConsecutiveOnes(nums: IntArray): Int {
         if (number == 1) {
             cur++
             best = maxOf(cur, best)
-        } else {
-            cur = 0
-        }
+        } else cur = 0
     }
     return best
 }
@@ -185,36 +179,32 @@ fun duplicateEachOccurrenceOfZeroShiftingTheRemainingToRight2(arr: IntArray) {
             }
             i++
         }
-    arr.forEach {
-        println(it)
-    }
 }
 
 fun sortedSquares(array: IntArray): IntArray {
     return array.map { it * it }.sorted().toIntArray()
 }
 
-fun sortedSquares2(array: IntArray): IntArray {
+fun sortedSquares2(array: IntArray) {
+    print("initArray = ${array.toList()}")
     var leftMarker = 0
     var rightMarker = array.size - 1
     var currentMarker = array.size - 1
 
     val result = IntArray(array.size)
 
-    while (leftMarker <= rightMarker){
-        val left = abs(array[leftMarker])
-        val right = abs(array[rightMarker])
+    while (leftMarker <= rightMarker) {
+        val left = array[leftMarker] * array[leftMarker]
+        val right = array[rightMarker] * array[rightMarker]
 
-        result[currentMarker] = if (right > left) {
+        result[currentMarker--] = if (right > left) {
             rightMarker--
-            right * right
+            right
         } else {
             leftMarker++
-            left * left
+            left
         }
-
-        currentMarker--
     }
-    return result
+    println(" result = ${result.toList()}")
 }
 
