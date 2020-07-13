@@ -20,6 +20,7 @@ import java.io.File
 
 sealed class DownloadResult
 data class DownloadSuccess(val downloadId: Long) : DownloadResult()
+data class DownloadInProgress(val downloadedBytes: Int, val totalBytes: Int) : DownloadResult()
 object DownloadFailed : DownloadResult()
 
 class DownloadResponseManager(
@@ -38,7 +39,7 @@ class DownloadResponseManager(
     private val downloadEndReceiver = object : BroadcastReceiver() {
         override fun onReceive(context: Context, intent: Intent) {
             val downloadId = intent.getLongExtra(DownloadManager.EXTRA_DOWNLOAD_ID, -1L)
-            actionOnStatus(downloadId)
+            getDMStatus(downloadId)
         }
     }
     private val observer = object : ContentObserver(handler) {
@@ -81,35 +82,28 @@ class DownloadResponseManager(
         contentResolver.registerContentObserver(getUri(downloadId), false, observer)
     }
 
-    private fun getDMStatus(downloadId: Long): Int? {
+    private fun getDMStatus(downloadId: Long) {
         val request = DownloadManager.Query().setFilterById(downloadId)
         downloadManager.query(request).use {
-            return if (it.count > 0) {
+            if (it.count > 0) {
                 val downloadedBytes = it.getInt(it.getColumnIndex(DownloadManager.COLUMN_BYTES_DOWNLOADED_SO_FAR))
                 val totalBytes = it.getInt(it.getColumnIndex(DownloadManager.COLUMN_TOTAL_SIZE_BYTES))
-                it.getInt(it.getColumnIndex(DownloadManager.COLUMN_STATUS))
-            } else null
+                val status = it.getInt(it.getColumnIndex(DownloadManager.COLUMN_STATUS))
+                when (status) {
+                    DownloadManager.STATUS_FAILED -> downloadListener?.invoke(DownloadFailed)
+                    DownloadManager.STATUS_PAUSED, DownloadManager.STATUS_RUNNING, DownloadManager.STATUS_PENDING -> downloadListener?.invoke(DownloadInProgress(downloadedBytes, totalBytes))
+                    DownloadManager.STATUS_SUCCESSFUL -> {
+                        downloadListener?.invoke(DownloadSuccess(downloadId))
+                        contentResolver.unregisterContentObserver(observer)
+                    }
+                }
+            }
         }
     }
 
     fun getFileDescription(downloadId: Long) {
         val pdf = downloadManager.openDownloadedFile(downloadId)
         val fd = pdf.fileDescriptor
-    }
-
-    fun actionOnStatus(downloadId: Long) {
-        when (getDMStatus(downloadId)) {
-            null, DownloadManager.STATUS_FAILED -> {
-                downloadListener?.invoke(DownloadFailed)
-            }
-            DownloadManager.STATUS_PAUSED, DownloadManager.STATUS_RUNNING, DownloadManager.STATUS_PENDING -> {
-
-            }
-            DownloadManager.STATUS_SUCCESSFUL -> {
-                downloadListener?.invoke(DownloadSuccess(downloadId))
-                contentResolver.unregisterContentObserver(observer)
-            }
-        }
     }
 
     @OnLifecycleEvent(Lifecycle.Event.ON_DESTROY)
