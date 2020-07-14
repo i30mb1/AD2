@@ -46,10 +46,6 @@ fun moveZeroesToEnd(nums: IntArray) {
 
     for (i in nums) if (i != 0) nums[size++] = i
     while (size < nums.size) nums[size++] = 0
-
-    for (num in nums) {
-        println(num)
-    }
 }
 
 fun moveZeroesToEnd2(nums: IntArray) {
@@ -61,10 +57,6 @@ fun moveZeroesToEnd2(nums: IntArray) {
             left++
         }
         right++
-    }
-
-    for (num in nums) {
-        println(num)
     }
 }
 

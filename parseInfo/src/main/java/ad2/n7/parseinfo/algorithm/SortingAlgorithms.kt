@@ -8,12 +8,12 @@ fun main() {
 }
 
 fun bubbleSorting(array: IntArray): IntArray {
-    var sorted = true
-    while (sorted) {
-        sorted = false
-        for (i in 1 until array.size) {
+    var needSorting = true
+    while (needSorting) {
+        needSorting = false
+        for (i in 1..array.size - 1) {
             if (array[i] < array[i - 1]) {
-                sorted = true
+                needSorting = true
                 array[i - 1] = array[i].also { array[i] = array[i - 1] }
             }
         }
