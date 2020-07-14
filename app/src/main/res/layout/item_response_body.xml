@@ -19,46 +19,62 @@
             type="n7.ad2.ui.heroResponse.domain.vo.VOResponseBody" />
     </data>
 
-    <LinearLayout
+    <FrameLayout
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:background="?attr/selectableItemBackground"
-        android:gravity="center"
         android:onClick="@{()-> audioExoPlayer.play(item)}"
-        android:orientation="horizontal"
-        android:padding="4dp">
-
-        <ImageView
-            android:layout_width="wrap_content"
-            android:layout_height="20dp"
-            android:layout_weight="0"
-            android:visibility="gone"
-            tools:visibility="visible"
-            app:srcCompat="@drawable/ic_response_save"
-            android:contentDescription="@string/desc_saved" />
-
-        <LinearLayout
-            android:id="@+id/ll_container"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:orientation="vertical" />
-
-        <TextView
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            android:layout_weight="1"
-            android:paddingStart="4dp"
-            android:textAppearance="?textAppearanceBody1"
-            android:paddingEnd="4dp"
-            android:text="@{item.title}"
-            android:textColor="?android:textColorSecondary"
-            tools:text="И даже если я разочарую тебя, я хочу, чтобы ты запомнил меня" />
+        android:layout_height="wrap_content">
 
         <ProgressBar
-            android:layout_width="20dp"
-            android:layout_height="20dp"
-            android:layout_weight="0"
-            withSpace="@{true}"
-            isVisible="@{item.isPlaying()}" />
-    </LinearLayout>
+            style="@style/Widget.AppCompat.ProgressBar.Horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:max="@{item.maxProgress}"
+            android:progress="@{item.currentProgress}"
+            isVisible="@{item.maxProgress > 0}"
+            tools:progress="30"
+            android:scaleY="10" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="?attr/selectableItemBackground"
+            android:gravity="center"
+            android:orientation="horizontal"
+            android:padding="4dp">
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="20dp"
+                android:layout_weight="0"
+                android:contentDescription="@string/desc_saved"
+                android:visibility="gone"
+                app:srcCompat="@drawable/ic_response_save"
+                tools:visibility="visible" />
+
+            <LinearLayout
+                android:id="@+id/ll_container"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="vertical" />
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:paddingStart="4dp"
+                android:paddingEnd="4dp"
+                android:text="@{item.title}"
+                android:textAppearance="?textAppearanceBody1"
+                android:textColor="?android:textColorSecondary"
+                tools:text="И даже если я разочарую тебя, я хочу, чтобы ты запомнил меня" />
+
+            <ProgressBar
+                isVisible="@{item.isPlaying()}"
+                withSpace="@{true}"
+                android:layout_width="20dp"
+                android:layout_height="20dp"
+                android:layout_weight="0" />
+        </LinearLayout>
+
+    </FrameLayout>
 </layout>
