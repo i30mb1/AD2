@@ -14,7 +14,5 @@ data class VOResponseBody(val heroName: String, val title: String, override val 
 
     val maxProgress = ObservableInt(0)
 
-    var progressObserver: ContentObserver? = null
-
     val titleForFile = title.replace(" ","_").plus(".mp3")
 }

@@ -44,7 +44,7 @@ class DownloadResponseManager(
             getDMStatus(downloadId)
         }
     }
-    private val hashMap = LongSparseArray<VOResponseBody>()
+    private val hashMap = LongSparseArray<Pair<VOResponseBody, ContentObserver>>()
 
     init {
         application.registerReceiver(downloadEndReceiver, IntentFilter(DownloadManager.ACTION_DOWNLOAD_COMPLETE))
@@ -80,8 +80,7 @@ class DownloadResponseManager(
                 updateProgress(downloadId)
             }
         }
-        item.progressObserver = observer
-        hashMap.put(downloadId, item)
+        hashMap.put(downloadId, Pair(item, observer))
         contentResolver.registerContentObserver(getUri(downloadId), false, observer)
     }
 
@@ -113,17 +112,14 @@ class DownloadResponseManager(
                     }
                     DownloadManager.STATUS_PAUSED, DownloadManager.STATUS_RUNNING, DownloadManager.STATUS_PENDING -> {
                         hashMap.get(downloadId)?.let { item ->
-                            if (totalBytes != null) item.maxProgress.set(totalBytes)
-                            if (downloadedBytes != null) item.currentProgress.set(downloadedBytes)
+                            if (totalBytes != null) item.first.maxProgress.set(totalBytes)
+                            if (downloadedBytes != null) item.first.currentProgress.set(downloadedBytes)
                         }
                     }
                     DownloadManager.STATUS_SUCCESSFUL -> {
                         stopProgress(downloadId)
                         downloadListener?.invoke(DownloadSuccess(downloadId))
-                        hashMap.get(downloadId).progressObserver?.let { contentObserver ->
-                            contentResolver.unregisterContentObserver(contentObserver)
-                        }
-
+                        contentResolver.unregisterContentObserver(hashMap.get(downloadId).second)
                     }
                 }
             }
@@ -131,7 +127,7 @@ class DownloadResponseManager(
     }
 
     private fun stopProgress(downloadId: Long) {
-        hashMap.get(downloadId)?.maxProgress?.set(0)
+        hashMap.get(downloadId)?.first?.maxProgress?.set(0)
     }
 
     private fun updateProgress(downloadId: Long) {
@@ -147,9 +143,7 @@ class DownloadResponseManager(
     private fun onDestroy() {
         downloadListener = null
         hashMap.forEach { _, item ->
-            item.progressObserver?.let {
-                contentResolver.unregisterContentObserver(it)
-            }
+            contentResolver.unregisterContentObserver(item.second)
         }
         application.unregisterReceiver(downloadEndReceiver)
         lifecycle.removeObserver(this)
