@@ -7,10 +7,12 @@ import android.database.ContentObserver
 import android.net.Uri
 import android.os.Environment
 import android.os.Handler
+import android.util.LongSparseArray
 import androidx.core.content.getSystemService
 import androidx.core.database.getIntOrNull
 import androidx.core.database.getStringOrNull
 import androidx.core.net.toUri
+import androidx.core.util.forEach
 import androidx.lifecycle.Lifecycle
 import androidx.lifecycle.LifecycleObserver
 import androidx.lifecycle.OnLifecycleEvent
@@ -19,7 +21,6 @@ import java.io.File
 
 sealed class DownloadResult
 data class DownloadSuccess(val downloadId: Long) : DownloadResult()
-data class DownloadInProgress(val downloadedBytes: Int, val totalBytes: Int) : DownloadResult()
 object DownloadFailed : DownloadResult()
 
 class DownloadResponseManager(
@@ -43,12 +44,7 @@ class DownloadResponseManager(
             getDMStatus(downloadId)
         }
     }
-    private val observer = object : ContentObserver(handler) {
-        override fun onChange(selfChange: Boolean, uri: Uri?) {
-            super.onChange(selfChange, uri)
-            updateProgress()
-        }
-    }
+    private val hashMap = LongSparseArray<VOResponseBody>()
 
     init {
         application.registerReceiver(downloadEndReceiver, IntentFilter(DownloadManager.ACTION_DOWNLOAD_COMPLETE))
@@ -60,7 +56,6 @@ class DownloadResponseManager(
     }
 
     fun download(item: VOResponseBody): Long {
-        stopProgress()
         currentItem = item
 
         val uri = item.audioUrl!!.toUri()
@@ -73,12 +68,20 @@ class DownloadResponseManager(
 //                .addRequestHeader()
 
         downloadId = downloadManager.enqueue(downloadRequest)
-        registerObserverFor(downloadId)
+        registerObserverFor(downloadId, item)
 
         return downloadId
     }
 
-    private fun registerObserverFor(downloadId: Long) {
+    private fun registerObserverFor(downloadId: Long, item: VOResponseBody) {
+        val observer = object : ContentObserver(handler) {
+            override fun onChange(selfChange: Boolean, uri: Uri?) {
+                super.onChange(selfChange, uri)
+                updateProgress(downloadId)
+            }
+        }
+        item.progressObserver = observer
+        hashMap.put(downloadId, item)
         contentResolver.registerContentObserver(getUri(downloadId), false, observer)
     }
 
@@ -106,32 +109,32 @@ class DownloadResponseManager(
                 when (status) {
                     DownloadManager.STATUS_FAILED -> {
                         downloadListener?.invoke(DownloadFailed)
-                        stopProgress()
+                        stopProgress(downloadId)
                     }
                     DownloadManager.STATUS_PAUSED, DownloadManager.STATUS_RUNNING, DownloadManager.STATUS_PENDING -> {
-//                        downloadListener?.invoke(DownloadInProgress(downloadedBytes, totalBytes))
-                        currentItem?.let { item ->
+                        hashMap.get(downloadId)?.let { item ->
                             if (totalBytes != null) item.maxProgress.set(totalBytes)
                             if (downloadedBytes != null) item.currentProgress.set(downloadedBytes)
                         }
                     }
                     DownloadManager.STATUS_SUCCESSFUL -> {
-                        stopProgress()
+                        stopProgress(downloadId)
                         downloadListener?.invoke(DownloadSuccess(downloadId))
-                        contentResolver.unregisterContentObserver(observer)
+                        hashMap.get(downloadId).progressObserver?.let { contentObserver ->
+                            contentResolver.unregisterContentObserver(contentObserver)
+                        }
+
                     }
                 }
             }
         }
     }
 
-    private fun stopProgress() {
-        currentItem?.let {
-            it.maxProgress.set(0)
-        }
+    private fun stopProgress(downloadId: Long) {
+        hashMap.get(downloadId)?.maxProgress?.set(0)
     }
 
-    private fun updateProgress() {
+    private fun updateProgress(downloadId: Long) {
         getDMStatus(downloadId)
     }
 
@@ -143,7 +146,11 @@ class DownloadResponseManager(
     @OnLifecycleEvent(Lifecycle.Event.ON_DESTROY)
     private fun onDestroy() {
         downloadListener = null
-        contentResolver.unregisterContentObserver(observer)
+        hashMap.forEach { _, item ->
+            item.progressObserver?.let {
+                contentResolver.unregisterContentObserver(it)
+            }
+        }
         application.unregisterReceiver(downloadEndReceiver)
         lifecycle.removeObserver(this)
     }
