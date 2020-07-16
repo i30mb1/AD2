@@ -2,11 +2,11 @@ import org.gradle.api.artifacts.Dependency
 import org.gradle.api.artifacts.dsl.DependencyHandler
 
 object Apps {
-    const val compileSdk    = 30
+    const val compileSdk    = 29
     const val buildToolsSdk = "29.0.2"
     const val applicationId = "n7.ad2"
     const val minSdk        = 23
-    const val targetSdk     = 30
+    const val targetSdk     = 29
     const val versionCode   = 552
     const val versionName   = "552"
 }
