@@ -16,6 +16,7 @@ import androidx.core.util.forEach
 import androidx.lifecycle.Lifecycle
 import androidx.lifecycle.LifecycleObserver
 import androidx.lifecycle.OnLifecycleEvent
+import n7.ad2.data.source.local.Repository
 import n7.ad2.ui.heroResponse.domain.vo.VOResponseBody
 import java.io.File
 
@@ -31,10 +32,6 @@ class DownloadResponseManager(
         private val application: Application,
         private val lifecycle: Lifecycle
 ) : LifecycleObserver {
-
-    companion object {
-        val DIRECTORY = Environment.DIRECTORY_RINGTONES
-    }
 
     private var downloadId: Long = 0
     private var currentItem: VOResponseBody? = null
@@ -65,7 +62,7 @@ class DownloadResponseManager(
                 .setAllowedNetworkTypes(DownloadManager.Request.NETWORK_MOBILE)
                 .setTitle(item.title)
                 .setNotificationVisibility(DownloadManager.Request.VISIBILITY_VISIBLE_NOTIFY_COMPLETED)
-                .setDestinationInExternalFilesDir(application, DIRECTORY, item.heroName + File.separator + item.titleForFile)
+                .setDestinationInExternalFilesDir(application, Repository.DIRECTORY_RESPONSES, item.heroName + File.separator + item.titleForFile)
 //                .setVisibleInDownloadsUi(false)
 //                .addRequestHeader()
 

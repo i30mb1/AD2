@@ -6,6 +6,7 @@ import android.app.Application
 import android.content.SharedPreferences
 import android.graphics.Bitmap
 import android.graphics.BitmapFactory
+import android.os.Environment
 import n7.ad2.data.source.local.db.AppDatabase
 import n7.ad2.data.source.local.model.LocalHero
 import javax.inject.Inject
@@ -23,6 +24,7 @@ class Repository @Inject constructor(
         const val ASSETS_PATH_HERO_RESPONSES = "responses.json"
         const val ASSETS_FILE_MINIMAP = "minimap.png"
         const val ASSETS_FILE_ANIMATION = "emoticon.webp"
+        val DIRECTORY_RESPONSES = Environment.DIRECTORY_RINGTONES
     }
 
     suspend fun getHeroAnimation(assetsPath: String, name: String): Bitmap {
@@ -50,6 +52,10 @@ class Repository @Inject constructor(
         return application.assets.open("$assetsPath/$locale/$ASSETS_PATH_HERO_RESPONSES").bufferedReader().use {
             it.readText()
         }
+    }
+
+    suspend fun getSavedHeroResponses(heroName: String) {
+
     }
 
     suspend fun getAssetsFile(filePath: String): String {
