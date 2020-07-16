@@ -23,6 +23,8 @@ sealed class DownloadResult
 data class DownloadSuccess(val downloadId: Long) : DownloadResult()
 object DownloadFailed : DownloadResult()
 
+private typealias Result<T> = (T) -> Unit
+
 class DownloadResponseManager(
         private val contentResolver: ContentResolver,
         private val handler: Handler,
@@ -51,7 +53,7 @@ class DownloadResponseManager(
         lifecycle.addObserver(this)
     }
 
-    fun setDownloadListener(listener: (result: DownloadResult) -> Unit) {
+    fun setDownloadListener(listener: Result<DownloadResult>) {
         downloadListener = listener
     }
 
