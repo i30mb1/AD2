@@ -1,6 +1,5 @@
 package n7.ad2.ui.heroResponse.domain.vo
 
-import android.database.ContentObserver
 import androidx.databinding.ObservableBoolean
 import androidx.databinding.ObservableInt
 import n7.ad2.ui.heroPage.Playable
@@ -14,5 +13,5 @@ data class VOResponseBody(val heroName: String, val title: String, override val 
 
     val maxProgress = ObservableInt(0)
 
-    val titleForFile = title.replace(" ","_").plus(".mp3")
+    val titleForFile = "\"" + title.replace(" ","_").plus("\"").plus(".mp3")
 }

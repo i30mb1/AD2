@@ -48,8 +48,10 @@ class ResponsesFragment : Fragment(R.layout.fragment_hero_responses) {
     }
 
     private fun createDialogResponse(item: VOResponseBody) {
-        childFragmentManager.setFragmentResultListener(DialogResponse.REQUEST_KEY, this) { _: String, _: Bundle ->
-            downloadResponseManager.download(item)
+        childFragmentManager.setFragmentResultListener(DialogResponse.REQUEST_KEY, this) { _: String, bundle: Bundle ->
+            when (bundle.getString(DialogResponse.RESULT_KEY)) {
+                DialogResponse.ACTION_DOWNLOAD_RESPONSE -> downloadResponseManager.download(item)
+            }
         }
         val dialogResponse = DialogResponse.newInstance()
         dialogResponse.show(childFragmentManager, null)
