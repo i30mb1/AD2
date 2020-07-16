@@ -9,6 +9,7 @@ import android.graphics.BitmapFactory
 import android.os.Environment
 import n7.ad2.data.source.local.db.AppDatabase
 import n7.ad2.data.source.local.model.LocalHero
+import java.io.File
 import javax.inject.Inject
 
 class Repository @Inject constructor(
@@ -54,8 +55,8 @@ class Repository @Inject constructor(
         }
     }
 
-    suspend fun getSavedHeroResponses(heroName: String) {
-
+    suspend fun getSavedHeroResponses(heroName: String): Array<String>? {
+        return application.getExternalFilesDir(DIRECTORY_RESPONSES + File.separator + heroName)?.list()
     }
 
     suspend fun getAssetsFile(filePath: String): String {
