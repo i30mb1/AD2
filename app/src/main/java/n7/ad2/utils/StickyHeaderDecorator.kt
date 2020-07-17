@@ -6,6 +6,7 @@ import android.view.LayoutInflater
 import android.view.MotionEvent
 import android.view.View
 import android.view.ViewGroup
+import androidx.core.graphics.withTranslation
 import androidx.recyclerview.widget.RecyclerView
 import androidx.recyclerview.widget.RecyclerView.ItemDecoration
 import androidx.recyclerview.widget.RecyclerView.OnItemTouchListener
@@ -49,17 +50,13 @@ class StickyHeaderDecorator(recyclerView: RecyclerView, private val mListener: S
     }
 
     private fun drawHeader(c: Canvas, header: View) {
-        c.save()
-        c.translate(0f, 0f)
         header.draw(c)
-        c.restore()
     }
 
     private fun moveHeader(c: Canvas, currentHeader: View, nextHeader: View) {
-        c.save()
-        c.translate(0f, nextHeader.top - currentHeader.height.toFloat())
-        currentHeader.draw(c)
-        c.restore()
+        c.withTranslation(0f, nextHeader.top - currentHeader.height.toFloat()) {
+            currentHeader.draw(this)
+        }
     }
 
     private fun getChildInContact(parent: RecyclerView, contactPoint: Int): View? {
