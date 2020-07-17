@@ -1,5 +1,6 @@
 package n7.ad2
 
+import androidx.arch.core.executor.testing.InstantTaskExecutorRule
 import androidx.test.filters.SmallTest
 import com.google.common.truth.Truth.assertWithMessage
 import com.squareup.moshi.Moshi
@@ -15,6 +16,9 @@ class MainTest {
 
     @get:Rule
     val coroutineTestRule = CoroutineTestRule()
+
+    @get:Rule
+    val instantTaskExecutorRule =  InstantTaskExecutorRule()
 
     private val moshi = Moshi.Builder().build()
 
