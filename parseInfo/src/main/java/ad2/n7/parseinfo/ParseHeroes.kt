@@ -336,10 +336,10 @@ class ParseHeroes private constructor(
                     if(audioUrl.isNullOrEmpty()) audioUrl = null
                     put("audioUrl", audioUrl)
 
-                    val hotKey = it.getElementsByAttributeValue("title", "Hotkey").getOrNull(0)?.text()
+                    val hotKey = it.getElementsByAttributeValue("class", "tooltip").getOrNull(0)?.text()
                     put("hotKey", hotKey)
 
-                    val legacyKey = it.getElementsByAttributeValue("title", "Legacy Key").getOrNull(0)?.text()
+                    val legacyKey = it.getElementsByAttributeValue("class", "tooltip").getOrNull(1)?.text()
                     put("legacyKey", legacyKey)
 
                     val effects = it.getElementsByAttributeValue("style", "display: inline-block; width: 32%; vertical-align: top;")
@@ -470,11 +470,11 @@ class ParseHeroes private constructor(
 
 fun main() = runBlocking {
     parser {
-        loadRusDescription = false
-        loadEngDescription = true
+        loadRusDescription = true
+        loadEngDescription = false
         loadRusResponses = false
         loadEngResponses = false
-        loadHeroFullImage = true
+        loadHeroFullImage = false
         loadHeroSpellImage = false
     }.start()
 }
