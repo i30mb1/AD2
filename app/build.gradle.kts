@@ -11,10 +11,16 @@ android {
         applicationId = Apps.applicationId
         versionCode = Apps.versionCode
         versionName = Apps.versionName
+
+        javaCompileOptions {
+            annotationProcessorOptions {
+                arguments = mapOf("room.incremental" to "true")
+            }
+        }
     }
 
-    dataBinding {
-        isEnabled = true
+    buildFeatures {
+        dataBinding = true
     }
 
     signingConfigs {
