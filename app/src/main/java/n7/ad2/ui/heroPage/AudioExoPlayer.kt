@@ -141,6 +141,7 @@ class AudioExoPlayer(
     private fun buildMediaSource(uri: Uri): ProgressiveMediaSource {
         val userAgent = Util.getUserAgent(application, application.getString(R.string.app_name))
         val dataSourceFactory = DefaultDataSourceFactory(application, userAgent)
+
         return ProgressiveMediaSource.Factory(dataSourceFactory)
                 .createMediaSource(uri)
     }
