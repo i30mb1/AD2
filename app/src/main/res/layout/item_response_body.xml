@@ -47,7 +47,8 @@
                 android:layout_height="20dp"
                 android:layout_weight="0"
                 android:contentDescription="@string/desc_saved"
-                android:visibility="gone"
+                isVisible="@{item.savedInMemory}"
+                withSpace="@{false}"
                 app:srcCompat="@drawable/ic_response_save"
                 tools:visibility="visible" />
 

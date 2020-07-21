@@ -14,13 +14,19 @@ class GetVOHeroResponsesUseCase @Inject constructor(
         private val application: Application
 ) {
 
-    suspend operator fun invoke(heroName: String, localHeroResponses: List<LocalHeroResponsesItem>): List<VOResponse> = withContext(ioDispatcher) {
+    suspend operator fun invoke(
+        heroName: String,
+        localHeroResponses: List<LocalHeroResponsesItem>,
+        savedHeroResponses: List<String>
+    ): List<VOResponse> = withContext(ioDispatcher) {
         val result = mutableListOf<VOResponse>()
 
         localHeroResponses.forEach {
             result.add(VOResponseHeader(it.category))
             it.responses.forEach { response ->
-                result.add(VOResponseBody(heroName, response.title, response.audioUrl, emptyList()))
+                val titleForFile = response.title.replace(" ", "_").plus(".mp3")
+                val savedInMemory = savedHeroResponses.contains(titleForFile)
+                result.add(VOResponseBody(response.audioUrl, heroName, response.title, emptyList(), titleForFile, savedInMemory))
             }
         }
 
