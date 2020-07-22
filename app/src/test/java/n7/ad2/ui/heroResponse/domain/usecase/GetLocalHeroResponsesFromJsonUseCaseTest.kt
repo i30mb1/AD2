@@ -25,14 +25,17 @@ class GetLocalHeroResponsesFromJsonUseCaseTest {
     @Test
     fun `fields from json converts properly in LocalHeroResponsesItem`() = coroutineTestRule.runBlockingTest {
         val actual = LocalHeroResponsesItem("Fight", listOf(Response("https//...", "arrrr")))
-        val json = """[{
+        val json = """[
+  {
     "responses": [
       {
         "audioUrl": "${actual.responses[0].audioUrl}",
         "title": "${actual.responses[0].title}"
-      }],
-       "category": "${actual.category}"
-  }]
+      }
+    ],
+    "category": "${actual.category}"
+  }
+]
         """.trimIndent()
         val result = getLocalHeroResponsesFromJsonUseCase(json)
         assertThat(result[0].category).isEqualTo(actual.category)
