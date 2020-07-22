@@ -55,12 +55,12 @@ class Repository @Inject constructor(
         }
     }
 
-    suspend fun getSavedHeroResponses(heroName: String): Array<String>? {
-        return application.getExternalFilesDir(DIRECTORY_RESPONSES + File.separator + heroName)?.list()
+    suspend fun getSavedHeroResponses(heroName: String): Array<File> {
+        return application.getExternalFilesDir(DIRECTORY_RESPONSES + File.separator + heroName)?.listFiles() ?: emptyArray()
     }
 
     suspend fun getAssetsFile(filePath: String): String {
-       return application.assets.open(filePath).bufferedReader().use {
+        return application.assets.open(filePath).bufferedReader().use {
             it.readText()
         }
     }
