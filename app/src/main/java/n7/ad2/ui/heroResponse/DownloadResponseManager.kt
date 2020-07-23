@@ -61,10 +61,9 @@ class DownloadResponseManager(
         val downloadRequest = DownloadManager.Request(uri)
                 .setAllowedNetworkTypes(DownloadManager.Request.NETWORK_MOBILE)
                 .setTitle(item.title)
-                .setNotificationVisibility(DownloadManager.Request.VISIBILITY_VISIBLE_NOTIFY_COMPLETED)
+                .setNotificationVisibility(DownloadManager.Request.VISIBILITY_HIDDEN)
                 .setDestinationInExternalFilesDir(application, Repository.DIRECTORY_RESPONSES, item.heroName + File.separator + item.titleForFile)
 //                .setVisibleInDownloadsUi(false)
-//                .addRequestHeader()
 
         downloadId = downloadManager.enqueue(downloadRequest)
         registerObserverFor(downloadId, item)
