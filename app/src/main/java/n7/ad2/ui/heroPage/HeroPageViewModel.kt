@@ -33,6 +33,10 @@ class HeroPageViewModel @AssistedInject constructor(
         }
     }
 
+    fun refresh() {
+        _hero.value = _hero.value
+    }
+
     fun loadHero(name: String) = handle.set(LOCAL_HERO_KEY, name)
 
 }

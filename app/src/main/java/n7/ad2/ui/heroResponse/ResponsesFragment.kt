@@ -39,6 +39,9 @@ class ResponsesFragment : Fragment(R.layout.fragment_hero_responses) {
         }
 
         downloadResponseManager = DownloadResponseManager(requireActivity().contentResolver, Handler(Looper.getMainLooper()), requireActivity().application, lifecycle)
+        downloadResponseManager.setDownloadListener {
+            heroPageViewModel.refresh()
+        }
         audioExoPlayer = AudioExoPlayer(requireActivity().application, lifecycle)
         audioExoPlayer.setErrorListener {
             createDialogError(it.message.toString())
