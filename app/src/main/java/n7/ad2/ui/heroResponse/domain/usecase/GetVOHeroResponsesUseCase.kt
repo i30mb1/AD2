@@ -37,7 +37,10 @@ class GetVOHeroResponsesUseCase @Inject constructor(
                         return@endCycle
                     }
                 }
-                savedResponses.remove(fileToRemoveFromSavedResponses)
+                // todo need to optimize this
+
+//                savedResponses.remove(fileToRemoveFromSavedResponses)
+
                 result.add(VOResponseBody(audioUrl, heroName, response.title, emptyList(), titleForSavedFile, savedInMemory))
             }
         }
