@@ -116,7 +116,14 @@ class ResponsesListAdapter(
             }
         }
 
-        override fun areContentsTheSame(oldItem: VOResponse, newItem: VOResponse): Boolean = false
+        override fun areContentsTheSame(oldItem: VOResponse, newItem: VOResponse): Boolean {
+            return when (oldItem) {
+                is VOResponseHeader -> if (newItem is VOResponseHeader) return true else false
+                is VOResponseBody -> if(newItem is VOResponseHeader) return false else {
+                    oldItem.title == (newItem as VOResponseBody).title && oldItem.savedInMemory == newItem.savedInMemory
+                }
+            }
+        }
 
     }
 
