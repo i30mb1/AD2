@@ -5,8 +5,8 @@ import android.app.DownloadManager
 import android.content.*
 import android.database.ContentObserver
 import android.net.Uri
-import android.os.Environment
 import android.os.Handler
+import android.provider.MediaStore
 import android.util.LongSparseArray
 import androidx.core.content.getSystemService
 import androidx.core.database.getIntOrNull
@@ -60,15 +60,31 @@ class DownloadResponseManager(
         val uri = item.audioUrl!!.toUri()
         val downloadRequest = DownloadManager.Request(uri)
                 .setAllowedNetworkTypes(DownloadManager.Request.NETWORK_MOBILE)
-                .setTitle(item.title)
-                .setNotificationVisibility(DownloadManager.Request.VISIBILITY_HIDDEN)
-                .setDestinationInExternalFilesDir(application, Repository.DIRECTORY_RESPONSES, item.heroName + File.separator + item.titleForFile)
+            .setTitle(item.title)
+            .setNotificationVisibility(DownloadManager.Request.VISIBILITY_HIDDEN)
+            .setDestinationInExternalFilesDir(application, Repository.DIRECTORY_RESPONSES, item.heroName + File.separator + item.titleForFile)
 //                .setVisibleInDownloadsUi(false)
 
         downloadId = downloadManager.enqueue(downloadRequest)
         registerObserverFor(downloadId, item)
 
         return downloadId
+    }
+
+    private fun reSaveResponseIn() {
+        val resolver = application.contentResolver
+        val audioCollection = MediaStore.Audio.Media.getContentUri(MediaStore.VOLUME_EXTERNAL_PRIMARY)
+        val responseDetails = ContentValues().apply {
+            put(MediaStore.Audio.Media.DISPLAY_NAME, "response.mp3")
+            put(MediaStore.Audio.Media.IS_PENDING, 1)
+        }
+        val contentUri = resolver.insert(audioCollection, responseDetails)!!
+        resolver.openFileDescriptor(contentUri, "w", null).use {
+            // write data
+        }
+        responseDetails.clear()
+        responseDetails.put(MediaStore.Audio.Media.IS_PENDING, 0)
+        resolver.update(contentUri, responseDetails, null, null)
     }
 
     private fun registerObserverFor(downloadId: Long, item: VOResponseBody) {
