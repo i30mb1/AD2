@@ -7,13 +7,12 @@ import org.jsoup.nodes.Document
 import java.io.File
 
 val assetsFilePath = System.getProperty("user.dir") + "\\app\\src\\main\\assets"
-const val assetsFolderItem = "items/"
+const val assetsFolderItem = "items\\"
 const val fileName = "items.json"
 
 fun main() {
+    loadItemsFileAndPrepareFolders()
 
-
-    loadItemsFile()
 }
 
 enum class LOCALE(val urlAllItems: String, val baseUrl: String, val directory: String) {
@@ -21,9 +20,10 @@ enum class LOCALE(val urlAllItems: String, val baseUrl: String, val directory: S
     EN("https://dota2.gamepedia.com/Items", "https://dota2.gamepedia.com", "en")
 }
 
-private fun loadItemsFile() {
-    val root = connectTo(LOCALE.EN.urlAllItems)
+private fun loadItemsFileAndPrepareFolders(deleteOldFiles: Boolean = false) {
+    if (deleteOldFiles) File(assetsFilePath + File.separator + assetsFolderItem).deleteRecursively()
 
+    val root = connectTo(LOCALE.EN.urlAllItems)
     val finalDestination = assetsFilePath + File.separator + fileName
     var findItemSection = false
 
@@ -37,10 +37,7 @@ private fun loadItemsFile() {
             if (element.id().toString() == "Items") findItemSection = true
             if (element.id().toString() == "Events") {
                 findItemSection = false
-                if (itemSection.size != 0) {
-                    put(itemSectionName, itemSection)
-                    println("section $itemSectionName added")
-                }
+                if (itemSection.size != 0) put(itemSectionName, itemSection)
             }
 
             if (findItemSection) {
@@ -51,7 +48,6 @@ private fun loadItemsFile() {
                     }
                     itemSectionName = element.text()
                     itemSection = JSONArray()
-
                 }
 
                 if (element.tag().toString() == "div") {
@@ -68,7 +64,6 @@ private fun loadItemsFile() {
                             println("item $itemName added")
 
                             createFolderInAssets(assetsPath)
-                            loadItem()
                         }
                     }
 
@@ -82,9 +77,6 @@ private fun loadItemsFile() {
     }
 }
 
-fun loadItem() {
-
-}
 
 private fun connectTo(url: String): Document {
     return Jsoup.connect(url).get()
