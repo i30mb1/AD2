@@ -13,6 +13,8 @@ const val fileName = "items.json"
 fun main() {
     loadItemsFileAndPrepareFolders()
 
+    loadItemsOneByOne(LOCALE.EN)
+    loadItemsOneByOne(LOCALE.RU)
 }
 
 enum class LOCALE(val urlAllItems: String, val baseUrl: String, val directory: String) {
@@ -20,61 +22,81 @@ enum class LOCALE(val urlAllItems: String, val baseUrl: String, val directory: S
     EN("https://dota2.gamepedia.com/Items", "https://dota2.gamepedia.com", "en")
 }
 
+private fun loadItemsOneByOne(locale: LOCALE) {
+    JSONObject().apply {
+        val list = loadItems(connectTo(locale.urlAllItems))
+
+        list.forEach {
+            val root = connectTo(locale.baseUrl + it.first)
+
+
+        }
+    }
+
+}
+
 private fun loadItemsFileAndPrepareFolders(deleteOldFiles: Boolean = false) {
     if (deleteOldFiles) File(assetsFilePath + File.separator + assetsFolderItem).deleteRecursively()
 
     val root = connectTo(LOCALE.EN.urlAllItems)
     val finalDestination = assetsFilePath + File.separator + fileName
-    var findItemSection = false
-
-    val sections = root.getElementById("mw-content-text")!!
-
-    var itemSection = JSONArray()
-    var itemSectionName = ""
 
     JSONObject().apply {
-        for (element in sections.allElements) {
-            if (element.id().toString() == "Items") findItemSection = true
-            if (element.id().toString() == "Events") {
-                findItemSection = false
-                if (itemSection.size != 0) put(itemSectionName, itemSection)
-            }
-
-            if (findItemSection) {
-                if (element.tag().toString() == "h3") {
-                    if (itemSection.size != 0) {
-                        put(itemSectionName, itemSection)
-                        println("section $itemSectionName added")
-                    }
-                    itemSectionName = element.text()
-                    itemSection = JSONArray()
-                }
-
-                if (element.tag().toString() == "div") {
-                    for (item in element.children()) {
-                        if (item.children().size < 2) continue
-                        JSONObject().apply {
-                            val itemHref = item.child(1).attr("href")!!
-                            val itemName = item.child(1).attr("title")!!
-
-                            put("nameEng", itemName)
-                            val assetsPath = assetsFolderItem + itemName
-                            put("assetsPath", assetsPath)
-                            itemSection.add(this)
-                            println("item $itemName added")
-
-                            createFolderInAssets(assetsPath)
-                        }
-                    }
-
-                }
-            }
-        }
+        loadItems(root)
 
         createFolderInAssets(assetsFolderItem)
         File(finalDestination).writeText(toJSONString())
         println("file $finalDestination loaded successfully")
     }
+}
+
+private fun JSONObject.loadItems(root: Document): MutableList<Pair<String, String>> {
+    val resultItemList = mutableListOf<Pair<String, String>>()
+
+    var findItemSection = false
+    val sections = root.getElementById("mw-content-text")!!
+    var itemSection = JSONArray()
+    var itemSectionName = ""
+    for (element in sections.allElements) {
+        if (element.id().toString() == "Items") findItemSection = true
+        if (element.id().toString() == "Events") {
+            findItemSection = false
+            if (itemSection.size != 0) put(itemSectionName, itemSection)
+        }
+
+        if (findItemSection) {
+            if (element.tag().toString() == "h3") {
+                if (itemSection.size != 0) {
+                    put(itemSectionName, itemSection)
+                    println("section $itemSectionName added")
+                }
+                itemSectionName = element.text()
+                itemSection = JSONArray()
+            }
+
+            if (element.tag().toString() == "div") {
+                for (item in element.children()) {
+                    if (item.children().size < 2) continue
+                    JSONObject().apply {
+                        val itemHref = item.child(1).attr("href")!!
+                        val itemName = item.child(1).attr("title")!!
+
+                        val assetsPath = assetsFolderItem + itemName
+                        createFolderInAssets(assetsPath)
+                        resultItemList.add(Pair(itemHref, itemName))
+
+                        put("nameEng", itemName)
+                        put("assetsPath", assetsPath)
+
+                        itemSection.add(this)
+                        println("item $itemName added")
+                    }
+                }
+
+            }
+        }
+    }
+    return resultItemList
 }
 
 
