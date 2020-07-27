@@ -133,8 +133,6 @@ class ParseHeroes private constructor(
         }
     }
 
-    private val assetsFilePath = System.getProperty("user.dir") + "\\app\\src\\main\\assets"
-
     private fun getHeroes(document: Document): Elements {
         val heroesTable = document.getElementsByAttributeValue("style", "text-align:center")[0]
         return heroesTable.getElementsByAttributeValue("style", "width:150px; height:84px; display:inline-block; overflow:hidden; margin:1px")
