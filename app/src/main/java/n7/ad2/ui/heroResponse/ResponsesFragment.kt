@@ -15,6 +15,7 @@ import n7.ad2.di.injector
 import n7.ad2.ui.heroPage.AudioExoPlayer
 import n7.ad2.ui.heroPage.DialogError
 import n7.ad2.ui.heroPage.HeroPageViewModel
+import n7.ad2.ui.heroPage.showDialogError
 import n7.ad2.ui.heroResponse.domain.vo.VOResponseBody
 import n7.ad2.utils.StickyHeaderDecorator
 import n7.ad2.utils.viewModel
@@ -43,9 +44,7 @@ class ResponsesFragment : Fragment(R.layout.fragment_hero_responses) {
             heroPageViewModel.refresh()
         }
         audioExoPlayer = AudioExoPlayer(requireActivity().application, lifecycle)
-        audioExoPlayer.setErrorListener {
-            createDialogError(it.message.toString())
-        }
+        audioExoPlayer.setErrorListener(::showDialogError)
         heroPageViewModel.hero.observe(viewLifecycleOwner, viewModel::loadResponses)
         setupPagedListAdapter()
     }
@@ -58,11 +57,6 @@ class ResponsesFragment : Fragment(R.layout.fragment_hero_responses) {
         }
         val dialogResponse = DialogResponse.newInstance()
         dialogResponse.show(childFragmentManager, null)
-    }
-
-    private fun createDialogError(title: String) {
-        val dialogError = DialogError.newInstance(title)
-        dialogError.show(childFragmentManager, null)
     }
 
     private fun setupPagedListAdapter() {

@@ -13,6 +13,7 @@ import n7.ad2.ui.heroInfo.domain.vo.VODescription
 import n7.ad2.ui.heroPage.AudioExoPlayer
 import n7.ad2.ui.heroPage.HeroPageActivity
 import n7.ad2.ui.heroPage.HeroPageViewModel
+import n7.ad2.ui.heroPage.showDialogError
 import n7.ad2.utils.viewModelWithSavedStateHandle
 
 class HeroInfoFragment : Fragment(R.layout.fragment_hero_info) {
@@ -37,6 +38,7 @@ class HeroInfoFragment : Fragment(R.layout.fragment_hero_info) {
             it.ivImage.transitionName = requireActivity().intent.getStringExtra(HeroPageActivity.TN_PHOTO)
         }
         audioExoPlayer = AudioExoPlayer(requireActivity().application, lifecycle)
+        audioExoPlayer.setErrorListener(::showDialogError)
         infoPopupWindow = InfoPopupWindow(requireContext(), lifecycle)
 
         heroPageViewModel.hero.observe(viewLifecycleOwner, viewModel::loadHero)
