@@ -4,15 +4,13 @@ import android.app.Dialog
 import android.os.Bundle
 import androidx.core.os.bundleOf
 import androidx.fragment.app.DialogFragment
-import androidx.fragment.app.Fragment
-import androidx.fragment.app.setFragmentResultListener
+import androidx.fragment.app.FragmentActivity
 import com.google.android.material.dialog.MaterialAlertDialogBuilder
 import n7.ad2.databinding.DialogErrorBinding
-import n7.ad2.ui.heroResponse.ResponsesFragment
 
-fun Fragment.showDialogError(title: Exception) {
+fun FragmentActivity.showDialogError(title: Exception) {
     val dialogError = DialogError.newInstance(title.message.toString())
-    dialogError.show(childFragmentManager, null)
+    dialogError.show(supportFragmentManager, null)
 }
 
 class DialogError : DialogFragment() {

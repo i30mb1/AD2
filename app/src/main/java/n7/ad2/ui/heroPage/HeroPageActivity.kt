@@ -9,8 +9,7 @@ import android.graphics.drawable.BitmapDrawable
 import android.os.Bundle
 import android.view.View
 import android.view.ViewTreeObserver
-import androidx.activity.result.contract.ActivityResultContracts
-import androidx.activity.result.contract.ActivityResultContracts.*
+import androidx.activity.result.contract.ActivityResultContracts.RequestPermission
 import androidx.annotation.RequiresPermission
 import androidx.appcompat.widget.Toolbar
 import androidx.databinding.DataBindingUtil
@@ -29,6 +28,7 @@ class HeroPageActivity : BaseActivity() {
 
     private lateinit var binding: ActivityHeroPageBinding
     private val viewModelHeroPage: HeroPageViewModel by viewModelWithSavedStateHandle { injector.heroPageViewModelFactory }
+    lateinit var audioExoPlayer: AudioExoPlayer
 
     companion object {
         const val HERO_NAME = "HERO_NAME"
@@ -40,6 +40,9 @@ class HeroPageActivity : BaseActivity() {
         binding = DataBindingUtil.setContentView(this, R.layout.activity_hero_page)
 
         if (savedInstanceState == null) viewModelHeroPage.loadHero(intent.getStringExtra(HERO_NAME)!!)
+
+        audioExoPlayer = AudioExoPlayer(application, lifecycle)
+        audioExoPlayer.setErrorListener(::showDialogError)
 
         setToolbar()
         setViewPager2()

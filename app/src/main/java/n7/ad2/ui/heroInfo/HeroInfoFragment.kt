@@ -10,10 +10,8 @@ import n7.ad2.R
 import n7.ad2.databinding.FragmentHeroInfoBinding
 import n7.ad2.di.injector
 import n7.ad2.ui.heroInfo.domain.vo.VODescription
-import n7.ad2.ui.heroPage.AudioExoPlayer
 import n7.ad2.ui.heroPage.HeroPageActivity
 import n7.ad2.ui.heroPage.HeroPageViewModel
-import n7.ad2.ui.heroPage.showDialogError
 import n7.ad2.utils.viewModelWithSavedStateHandle
 
 class HeroInfoFragment : Fragment(R.layout.fragment_hero_info) {
@@ -23,7 +21,6 @@ class HeroInfoFragment : Fragment(R.layout.fragment_hero_info) {
     private val heroPageViewModel by activityViewModels<HeroPageViewModel>()
     private lateinit var infoPopupWindow: InfoPopupWindow
     private lateinit var spellsAdapter: SpellsListAdapter
-    private lateinit var audioExoPlayer: AudioExoPlayer
 
     companion object {
         fun newInstance(): HeroInfoFragment = HeroInfoFragment()
@@ -37,8 +34,6 @@ class HeroInfoFragment : Fragment(R.layout.fragment_hero_info) {
             it.fragment = this
             it.ivImage.transitionName = requireActivity().intent.getStringExtra(HeroPageActivity.TN_PHOTO)
         }
-        audioExoPlayer = AudioExoPlayer(requireActivity().application, lifecycle)
-        audioExoPlayer.setErrorListener(::showDialogError)
         infoPopupWindow = InfoPopupWindow(requireContext(), lifecycle)
 
         heroPageViewModel.hero.observe(viewLifecycleOwner, viewModel::loadHero)
@@ -52,7 +47,7 @@ class HeroInfoFragment : Fragment(R.layout.fragment_hero_info) {
     }
 
     private fun setupSpellInfoRecyclerView() {
-        val descriptionsListAdapter = DescriptionsListAdapter(audioExoPlayer, infoPopupWindow)
+        val descriptionsListAdapter = DescriptionsListAdapter((requireActivity() as HeroPageActivity).audioExoPlayer, infoPopupWindow)
 
         binding.rvSpellsInfo.apply {
             adapter = descriptionsListAdapter

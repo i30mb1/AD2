@@ -9,6 +9,7 @@ import androidx.lifecycle.Lifecycle
 import androidx.lifecycle.LifecycleObserver
 import androidx.lifecycle.OnLifecycleEvent
 import com.google.android.exoplayer2.*
+import com.google.android.exoplayer2.audio.AudioAttributes
 import com.google.android.exoplayer2.source.ProgressiveMediaSource
 import com.google.android.exoplayer2.trackselection.DefaultTrackSelector
 import com.google.android.exoplayer2.upstream.AssetDataSource
@@ -89,6 +90,19 @@ class AudioExoPlayer(
         exoPlayer.playWhenReady = true
     }
 
+    @OnLifecycleEvent(Lifecycle.Event.ON_START)
+    private fun onStart() = if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.N) initializePlayer() else Unit
+
+    @OnLifecycleEvent(Lifecycle.Event.ON_RESUME)
+    private fun onResume() = if (Build.VERSION.SDK_INT < Build.VERSION_CODES.N) initializePlayer() else Unit
+
+    private fun initializePlayer() {
+        exoPlayer = SimpleExoPlayer.Builder(application).build()
+
+        exoPlayer.addListener(this)
+        initAudioFocus()
+    }
+
     @OnLifecycleEvent(Lifecycle.Event.ON_PAUSE)
     private fun onPause() = if (Build.VERSION.SDK_INT < Build.VERSION_CODES.N) destroy() else Unit
 
@@ -115,25 +129,11 @@ class AudioExoPlayer(
         exoPlayer.release()
     }
 
-    @OnLifecycleEvent(Lifecycle.Event.ON_CREATE)
-    private fun initializePlayer() {
-        val trackSelector = DefaultTrackSelector(application)
-        val loadControl = DefaultLoadControl()
-
-        exoPlayer = SimpleExoPlayer.Builder(application)
-                .setTrackSelector(trackSelector)
-                .setLoadControl(loadControl)
-                .build()
-
-        exoPlayer.addListener(this)
-        initAudioFocus()
-    }
-
     private fun initAudioFocus() {
-        val audioAttributes = com.google.android.exoplayer2.audio.AudioAttributes.Builder()
-                .setUsage(C.USAGE_MEDIA)
-                .setContentType(C.CONTENT_TYPE_SPEECH)
-                .build()
+        val audioAttributes = AudioAttributes.Builder()
+            .setUsage(C.USAGE_MEDIA)
+            .setContentType(C.CONTENT_TYPE_SPEECH)
+            .build()
 
         exoPlayer.setAudioAttributes(audioAttributes, true)
     }

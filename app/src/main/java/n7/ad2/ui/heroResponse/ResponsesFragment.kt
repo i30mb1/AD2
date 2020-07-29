@@ -12,10 +12,8 @@ import androidx.recyclerview.widget.LinearLayoutManager
 import n7.ad2.R
 import n7.ad2.databinding.FragmentHeroResponsesBinding
 import n7.ad2.di.injector
-import n7.ad2.ui.heroPage.AudioExoPlayer
-import n7.ad2.ui.heroPage.DialogError
+import n7.ad2.ui.heroPage.HeroPageActivity
 import n7.ad2.ui.heroPage.HeroPageViewModel
-import n7.ad2.ui.heroPage.showDialogError
 import n7.ad2.ui.heroResponse.domain.vo.VOResponseBody
 import n7.ad2.utils.StickyHeaderDecorator
 import n7.ad2.utils.viewModel
@@ -27,7 +25,6 @@ class ResponsesFragment : Fragment(R.layout.fragment_hero_responses) {
     private lateinit var downloadResponseManager: DownloadResponseManager
     private val viewModel by viewModel { injector.responsesViewModel }
     private val heroPageViewModel by activityViewModels<HeroPageViewModel>()
-    private lateinit var audioExoPlayer: AudioExoPlayer
 
     companion object {
         fun newInstance(): ResponsesFragment = ResponsesFragment()
@@ -43,8 +40,6 @@ class ResponsesFragment : Fragment(R.layout.fragment_hero_responses) {
         downloadResponseManager.setDownloadListener {
             heroPageViewModel.refresh()
         }
-        audioExoPlayer = AudioExoPlayer(requireActivity().application, lifecycle)
-        audioExoPlayer.setErrorListener(::showDialogError)
         heroPageViewModel.hero.observe(viewLifecycleOwner, viewModel::loadResponses)
         setupPagedListAdapter()
     }
@@ -60,7 +55,7 @@ class ResponsesFragment : Fragment(R.layout.fragment_hero_responses) {
     }
 
     private fun setupPagedListAdapter() {
-        responsesPagedListAdapter = ResponsesListAdapter(audioExoPlayer) {
+        responsesPagedListAdapter = ResponsesListAdapter((requireActivity() as HeroPageActivity).audioExoPlayer) {
             createDialogResponse(it)
         }
         binding.rv.apply {
