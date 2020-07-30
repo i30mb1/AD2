@@ -129,7 +129,7 @@ class ParseHeroes private constructor(
             }
 
             println("response in ${locale.directory} for hero $hero saved (${allResponsesWithCategories.toString().length} bytes)")
-            File(assetsFilePath + File.separator + ASSETS_FOLDER_HEROES + File.separator + hero + File.separator + locale.directory + File.separator + "responses.json").writeText(allResponsesWithCategories.toString())
+            File(assets + File.separator + ASSETS_FOLDER_HEROES + File.separator + hero + File.separator + locale.directory + File.separator + "responses.json").writeText(allResponsesWithCategories.toString())
         }
     }
 
@@ -200,7 +200,7 @@ class ParseHeroes private constructor(
                 }
                 put("heroes", this)
             }
-            File(assetsFilePath + File.separator + fileName).writeText(toJSONString())
+            File(assets + fileName).writeText(toJSONString())
         }
         println("file $fileName saved")
         heroList
@@ -236,7 +236,7 @@ class ParseHeroes private constructor(
             loadTalents(root)
             loadMainAttributes(root)
 
-            File(assetsFilePath + File.separator + directory + File.separator + "description.json").writeText(toJSONString())
+            File(assets + directory + File.separator + "description.json").writeText(toJSONString())
         }
     }
 
@@ -445,7 +445,7 @@ class ParseHeroes private constructor(
 
     private fun saveImageInDirectory(imageUrl: String, directory: String, fileName: String) {
         val bufferImageIO = ImageIO.read(URL(imageUrl))
-        val file = File(assetsFilePath + File.separator + directory + File.separator + fileName)
+        val file = File(assets + directory + File.separator + fileName)
         file.mkdirs()
         ImageIO.write(bufferImageIO, "png", file)
     }
@@ -462,7 +462,7 @@ class ParseHeroes private constructor(
     }
 
     private fun createHeroFolderInAssets(path: String) {
-        File(assetsFilePath + File.separator + path).mkdirs()
+        File(assets + path).mkdirs()
     }
 }
 
