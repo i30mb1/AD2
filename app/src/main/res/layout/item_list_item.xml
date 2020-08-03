@@ -7,7 +7,7 @@
 
         <variable
             name="fragment"
-            type="n7.ad2.items.ItemsFragment" />
+            type="n7.ad2.ui.items.ItemsFragment" />
         <variable
             name="item"
             type="n7.ad2.items.db.ItemModel" />

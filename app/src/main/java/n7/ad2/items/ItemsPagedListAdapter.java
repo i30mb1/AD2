@@ -11,6 +11,7 @@ import android.view.ViewGroup;
 import n7.ad2.R;
 import n7.ad2.databinding.ItemListItemBinding;
 import n7.ad2.items.db.ItemModel;
+import n7.ad2.ui.items.ItemsFragment;
 
 public class ItemsPagedListAdapter extends PagedListAdapter<ItemModel, ItemsPagedListAdapter.ViewHolder> {
 
