@@ -1,4 +1,4 @@
-package n7.ad2.data.source.local.model
+package n7.ad2.ui.splash.domain.model
 
 import com.squareup.moshi.Json
 import com.squareup.moshi.JsonClass

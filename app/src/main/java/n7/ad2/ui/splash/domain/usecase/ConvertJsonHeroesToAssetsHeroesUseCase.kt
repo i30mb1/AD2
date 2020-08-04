@@ -3,8 +3,8 @@ package n7.ad2.ui.splash.domain.usecase
 import com.squareup.moshi.Moshi
 import kotlinx.coroutines.CoroutineDispatcher
 import kotlinx.coroutines.withContext
-import n7.ad2.data.source.local.model.AssetsHero
-import n7.ad2.data.source.local.model.AssetsHeroList
+import n7.ad2.ui.splash.domain.model.AssetsHero
+import n7.ad2.ui.splash.domain.model.AssetsHeroList
 import java.io.FileNotFoundException
 import javax.inject.Inject
 

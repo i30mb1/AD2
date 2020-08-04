@@ -4,7 +4,7 @@ import androidx.test.filters.SmallTest
 import com.google.common.truth.Truth.assertThat
 import kotlinx.coroutines.ExperimentalCoroutinesApi
 import n7.ad2.CoroutineTestRule
-import n7.ad2.data.source.local.model.AssetsHero
+import n7.ad2.ui.splash.domain.model.AssetsHero
 import n7.ad2.runBlockingTest
 import org.junit.Rule
 import org.junit.Test
