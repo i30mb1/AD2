@@ -14,5 +14,5 @@ data class LocalItem(
     @ColumnInfo(name = "assetsPath")
     val assetsPath: String,
     @ColumnInfo(name = "type")
-    val mainAttr: String
+    val type: String
 )
