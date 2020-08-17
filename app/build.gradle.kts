@@ -65,6 +65,7 @@ dependencies {
     api(Lib.roomKtx)
     kapt(Lib.roomAnnotation)
     api(Lib.paging)
+    api(Lib.paging3)
     api(Lib.material)
     api(Lib.coreKtx)
     api(Lib.constraintLayout)

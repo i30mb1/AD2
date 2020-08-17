@@ -26,6 +26,7 @@ object Lib {
     const val retrofit         = "com.squareup.retrofit2:retrofit:2.7.1"
     const val gsonConverter    = "com.squareup.retrofit2:converter-gson:2.6.2"
     const val paging           = "androidx.paging:paging-runtime-ktx:2.1.2"
+    const val paging3          = "androidx.paging:paging-runtime:3.0.0-alpha03"
     const val material         = "com.google.android.material:material:1.2.0"
     const val constraintLayout = "androidx.constraintlayout:constraintlayout:1.1.3"
     const val coil             = "io.coil-kt:coil:0.9.5"
