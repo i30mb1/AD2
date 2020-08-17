@@ -17,6 +17,8 @@ abstract class AppDatabase : RoomDatabase() {
 
     abstract val heroesDao: HeroesDao
 
+    abstract val itemsDao: ItemsDao
+
     companion object {
         const val DB_NAME = "AppDatabase$DB_VERSION.db"
     }
