@@ -278,17 +278,12 @@ private fun JSONObject.fillJsonWithItems(root: Document) {
         if (element.id().toString() == "Items") findItemSection = true
         if (element.id().toString() == "Events") {
             findItemSection = false
-            if (itemSection.size != 0) put(itemSectionName, itemSection)
+            if (itemSection.size != 0) put("items", itemSection)
         }
 
         if (findItemSection) {
             if (element.tag().toString() == "h3") {
-                if (itemSection.size != 0) {
-                    put(itemSectionName, itemSection)
-                    println("section $itemSectionName added")
-                }
                 itemSectionName = element.text()
-                itemSection = JSONArray()
             }
 
             if (element.tag().toString() == "div") {
@@ -302,6 +297,7 @@ private fun JSONObject.fillJsonWithItems(root: Document) {
 
                         put("nameEng", itemName)
                         put("assetsPath", assetsPath)
+                        put("section", itemSectionName)
 
                         itemSection.add(this)
                         println("item $itemName added")
