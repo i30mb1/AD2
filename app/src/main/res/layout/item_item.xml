@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+        <variable
+            name="listener"
+            type="n7.ad2.base.VOModelListener" />
+
+        <variable
+            name="model"
+            type="n7.ad2.ui.items.domain.vo.VOItem" />
+    </data>
+
+    <com.google.android.material.card.MaterialCardView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        tools:layout_height="64dp"
+        tools:layout_width="88dp">
+
+        <ImageView
+            android:id="@+id/iv"
+            loadImageUrl="@{model.image}"
+            onError="@{@drawable/item_placeholder}"
+            placeHolder="@{@drawable/item_placeholder}"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:adjustViewBounds="true"
+            android:contentDescription="@string/desc_dota_hero"
+            android:transitionName="@{@string/tn_iv_photo(model.name)}"
+            tools:src="@drawable/hero_placeholder" />
+
+        <TextView
+            android:id="@+id/tv"
+            asyncText="@{model.name}"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="bottom"
+            android:background="@drawable/transparent_30"
+            android:ellipsize="end"
+            android:lines="1"
+            android:paddingStart="@{@dimen/line_width * 2}"
+            android:paddingEnd="@{@dimen/line_width * 2}"
+            android:textAppearance="?textAppearanceCaption"
+            tools:text="@sample/heroes.json/data/nameEng" />
+
+        <View
+            android:layout_width="@dimen/line_width"
+            android:layout_height="match_parent"
+            android:background="?colorPrimary" />
+
+    </com.google.android.material.card.MaterialCardView>
+</layout>
