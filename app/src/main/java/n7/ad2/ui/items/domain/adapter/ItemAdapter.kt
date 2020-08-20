@@ -6,6 +6,6 @@ import n7.ad2.ui.items.domain.vo.VOItem
 fun LocalItem.toVO(): VOItem {
     return VOItem().also {
         it.name = name
-        it.image = "-"
+        it.image = "file:///android_asset/$assetsPath/full.png"
     }
 }
