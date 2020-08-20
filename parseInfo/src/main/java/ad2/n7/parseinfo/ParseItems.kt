@@ -7,8 +7,7 @@ import org.jsoup.nodes.Document
 import org.jsoup.nodes.Element
 import java.io.File
 
-val assets = System.getProperty("user.dir") + "\\app\\src\\main\\assets\\"
-const val assetsFolderItem = "items\\"
+const val assetsFolderItem = "items/"
 const val fileName = "items.json"
 
 fun String.connect():Document {
@@ -21,6 +20,7 @@ fun main() {
     loadItemsOneByOne(LOCALE.EN)
     loadItemsOneByOne(LOCALE.RU)
 }
+
 enum class LOCALE(val urlAllItems: String, val baseUrl: String, val directory: String) {
     RU("https://dota2-ru.gamepedia.com/%D0%9F%D1%80%D0%B5%D0%B4%D0%BC%D0%B5%D1%82%D1%8B", "https://dota2-ru.gamepedia.com", "ru"),
     EN("https://dota2.gamepedia.com/Items", "https://dota2.gamepedia.com", "en")
@@ -28,7 +28,7 @@ enum class LOCALE(val urlAllItems: String, val baseUrl: String, val directory: S
 
 private fun loadItemsOneByOne(locale: LOCALE) {
     JSONObject().apply {
-        val list = getItems(LOCALE.EN.urlAllItems.connect())
+        val list = getItems(LOCALE.EN.urlAllItems.connect()).filter { !it.first.contains("(") }
         val description = "description.json"
 
         list.forEach {
@@ -42,6 +42,9 @@ private fun loadItemsOneByOne(locale: LOCALE) {
                 loadAbilities(root)
                 loadTips(root)
                 loadLore(root)
+
+                val loadImage = false
+                if(loadImage) saveImage(root.getElementById("itemmainimage").getElementsByTag("img").attr("src"), assetsFolderItem + it.second + File.separator, "full")
 
                 createFolderInAssets(folderForItemsDescription)
                 File(assets + folderForItemsDescription + File.separator + description).writeText(toJSONString())
