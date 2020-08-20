@@ -7,6 +7,7 @@ import n7.ad2.ui.heroInfo.HeroInfoViewModel
 import n7.ad2.ui.heroPage.HeroPageViewModel
 import n7.ad2.ui.heroResponse.ResponsesViewModel
 import n7.ad2.ui.heroes.HeroesViewModel
+import n7.ad2.ui.items.ItemsViewModel
 import n7.ad2.ui.splash.SplashViewModel
 import n7.ad2.workers.DatabaseWorker
 import javax.inject.Singleton
@@ -30,6 +31,7 @@ interface ApplicationComponent {
 
     val splashViewModel: SplashViewModel
     val heroesViewModel: HeroesViewModel
+    val itemsViewModel: ItemsViewModel
     val responsesViewModel: ResponsesViewModel
 
     val heroPageViewModelFactory: HeroPageViewModel.Factory

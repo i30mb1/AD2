@@ -12,5 +12,5 @@
             tools:itemCount="30"
             tools:layoutManager="GridLayoutManager"
             tools:spanCount="4"
-            tools:listitem="@layout/item_list_item" />
+            tools:listitem="@layout/item_item" />
 </layout>
