@@ -4,6 +4,7 @@ plugins {
     androidApp()
     kotlinAndroid()
     kotlinKapt()
+    id("com.github.plnice.canidropjetifier") version "0.5"
 }
 
 android {
