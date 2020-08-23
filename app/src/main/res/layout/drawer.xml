@@ -41,7 +41,7 @@
                 android:id="@+id/tv_drawer_touch1"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:fontFamily="@font/iceland"
+                style="@style/Widget.TextView.Coordinate"
                 android:text='@{"[x"+String.valueOf((int) arrayX.get(0))+"][y"+String.valueOf((int) arrayY.get(0))+"]"}'
                 android:visibility="@{arrayX.get(0)>0.0f ? View.VISIBLE:View.GONE}"
                 tools:text="[x100][y200]" />
@@ -50,7 +50,7 @@
                 android:id="@+id/tv_drawer_touch2"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:fontFamily="@font/iceland"
+                style="@style/Widget.TextView.Coordinate"
                 android:text='@{"[x"+String.valueOf((int) arrayX.get(1))+"][y"+String.valueOf((int) arrayY.get(1))+"]"}'
                 android:visibility="@{arrayX.get(1)>0.0f ? View.VISIBLE:View.GONE}"
                 tools:text="[x100][y200]" />
@@ -59,7 +59,7 @@
                 android:id="@+id/tv_drawer_touch3"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:fontFamily="@font/iceland"
+                style="@style/Widget.TextView.Coordinate"
                 android:text='@{"[x"+String.valueOf((int) arrayX.get(2))+"][y"+String.valueOf((int) arrayY.get(2))+"]"}'
                 android:visibility="@{arrayX.get(2)>0.0f ? View.VISIBLE:View.GONE}"
                 tools:text="[x100][y200]" />
@@ -68,7 +68,7 @@
                 android:id="@+id/tv_drawer_touch4"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:fontFamily="@font/iceland"
+                style="@style/Widget.TextView.Coordinate"
                 android:text='@{"[x"+String.valueOf((int) arrayX.get(3))+"][y"+String.valueOf((int) arrayY.get(3))+"]"}'
                 android:visibility="@{arrayX.get(3)>0.0f ? View.VISIBLE:View.GONE}"
                 tools:text="[x100][y200]" />
@@ -77,7 +77,7 @@
                 android:id="@+id/tv_drawer_touch5"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:fontFamily="@font/iceland"
+                style="@style/Widget.TextView.Coordinate"
                 android:text='@{"[x"+String.valueOf((int) arrayX.get(4))+"][y"+String.valueOf((int) arrayY.get(4))+"]"}'
                 android:visibility="@{arrayX.get(4)>0.0f ? View.VISIBLE:View.GONE}"
                 tools:text="[x100][y200]" />
@@ -86,7 +86,7 @@
                 android:id="@+id/tv_drawer_touch6"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:fontFamily="@font/iceland"
+                style="@style/Widget.TextView.Coordinate"
                 android:text='@{"[x"+String.valueOf((int) arrayX.get(5))+"][y"+String.valueOf((int) arrayY.get(5))+"]"}'
                 android:visibility="@{arrayX.get(5)>0.0f ? View.VISIBLE:View.GONE}"
                 tools:text="[x100][y200]" />
@@ -95,7 +95,7 @@
                 android:id="@+id/tv_drawer_touch7"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:fontFamily="@font/iceland"
+                style="@style/Widget.TextView.Coordinate"
                 android:text='@{"[x"+String.valueOf((int) arrayX.get(6))+"][y"+String.valueOf((int) arrayY.get(6))+"]"}'
                 android:visibility="@{arrayX.get(6)>0.0f ? View.VISIBLE:View.GONE}"
                 tools:text="[x100][y200]" />
@@ -104,7 +104,7 @@
                 android:id="@+id/tv_drawer_touch8"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:fontFamily="@font/iceland"
+                style="@style/Widget.TextView.Coordinate"
                 android:text='@{"[x"+String.valueOf((int) arrayX.get(7))+"][y"+String.valueOf((int) arrayY.get(7))+"]"}'
                 android:visibility="@{arrayX.get(7)>0.0f ? View.VISIBLE:View.GONE}"
                 tools:text="[x100][y200]" />
@@ -113,7 +113,7 @@
                 android:id="@+id/tv_drawer_touch9"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:fontFamily="@font/iceland"
+                style="@style/Widget.TextView.Coordinate"
                 android:text='@{"[x"+String.valueOf((int) arrayX.get(8))+"][y"+String.valueOf((int) arrayY.get(8))+"]"}'
                 android:visibility="@{arrayX.get(8)>0.0f ? View.VISIBLE:View.GONE}"
                 tools:text="[x100][y200]" />
@@ -122,7 +122,7 @@
                 android:id="@+id/tv_drawer_touch10"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:fontFamily="@font/iceland"
+                style="@style/Widget.TextView.Coordinate"
                 android:text='@{"[x"+String.valueOf((int) arrayX.get(9))+"][y"+String.valueOf((int) arrayY.get(9))+"]"}'
                 android:visibility="@{arrayX.get(9)>0.0f ? View.VISIBLE:View.GONE}"
                 tools:text="[x100][y200]" />
