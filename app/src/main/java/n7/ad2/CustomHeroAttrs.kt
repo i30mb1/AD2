@@ -4,6 +4,8 @@ import android.annotation.SuppressLint
 import android.content.Context
 import android.graphics.Bitmap
 import android.graphics.Canvas
+import android.os.Parcel
+import android.os.Parcelable
 import android.util.AttributeSet
 import android.view.LayoutInflater
 import android.widget.FrameLayout
@@ -69,6 +71,65 @@ class CustomHeroAttrs(
 //
 //        val initSize = resolveDefaultSize(widthMeasureSpec)
 //        setMeasuredDimension(initSize, resolveDefaultSize(widthMeasureSpec))
+    }
+
+    override fun onSaveInstanceState(): Parcelable? {
+        val superState: Parcelable? = super.onSaveInstanceState()
+        superState?.let {
+            val state = SavedState(superState)
+            state.strength = this.strength
+            return state
+        } ?: kotlin.run {
+            return superState
+        }
+    }
+
+    override fun onRestoreInstanceState(state: Parcelable?) {
+        when (state) {
+            is SavedState -> {
+                super.onRestoreInstanceState(state.superState)
+                this.strength = state.strength
+            }
+            else -> {
+                super.onRestoreInstanceState(state)
+            }
+        }
+    }
+
+    internal class SavedState : androidx.customview.view.AbsSavedState {
+        var strength: Int = 0
+
+        constructor(superState: Parcelable) : super(superState)
+
+        constructor(source: Parcel, loader: ClassLoader?) : super(source, loader) {
+            strength = source.readInt()
+        }
+
+        override fun writeToParcel(out: Parcel, flags: Int) {
+            super.writeToParcel(out, flags)
+            out.writeInt(strength)
+        }
+
+        companion object {
+            @JvmField
+            val CREATOR: Parcelable.Creator<SavedState> = object : Parcelable.ClassLoaderCreator<SavedState> {
+
+                override fun newArray(size: Int): Array<SavedState> {
+                    return newArray(size)
+                }
+
+                override fun createFromParcel(source: Parcel, loader: ClassLoader?): SavedState {
+                    return SavedState(source, loader)
+                }
+
+                override fun createFromParcel(source: Parcel): SavedState {
+                    return SavedState(source, null)
+                }
+            }
+
+
+        }
+
     }
 
     private fun resolveDefaultSize(spec: Int): Int {
