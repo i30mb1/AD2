@@ -9,7 +9,7 @@ import android.graphics.drawable.BitmapDrawable
 import android.os.Bundle
 import android.view.View
 import android.view.ViewTreeObserver
-import androidx.activity.result.contract.ActivityResultContracts.RequestPermission
+import androidx.activity.result.contract.ActivityResultContracts
 import androidx.annotation.RequiresPermission
 import androidx.appcompat.widget.Toolbar
 import androidx.databinding.DataBindingUtil
@@ -83,7 +83,7 @@ class HeroPageActivity : BaseActivity() {
     }
 
     private fun requestPermission() {
-        val registerPermission = registerForActivityResult(RequestPermission()) {
+        val registerPermission = registerForActivityResult(ActivityResultContracts.RequestPermission()) {
 
         }
         registerPermission.launch(Manifest.permission.WRITE_SETTINGS)
