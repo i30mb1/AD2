@@ -20,15 +20,17 @@ class HeroGuideWorker(
     }
 
     override suspend fun doWork(): Result = coroutineScope {
-        val heroName = inputData.getString(HERO_NAME)!!.replace("_", "-").replace("'", "")
+        try {
+            val heroName = inputData.getString(HERO_NAME)!!.replace("_", "-").replace("'", "")
 
-        val documentSimple = Jsoup.connect("https://ru.dotabuff.com/heroes/$heroName").get()
+            val documentSimple = Jsoup.connect("https://ru.dotabuff.com/heroes/$heroName").get()
 
-        val localGuide = LocalGuide(name = heroName, json = documentSimple.toString())
+            val localGuide = LocalGuide(name = heroName, json = documentSimple.toString())
 
-
-
-        Result.success()
+            Result.success()
+        } catch (e: Exception) {
+            Result.failure()
+        }
     }
 
 }
