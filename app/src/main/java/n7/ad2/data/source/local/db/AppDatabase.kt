@@ -10,13 +10,14 @@ private const val DB_VERSION = 1
 @Database(
     entities = [
         LocalHero::class,
-        LocalItem::class
+        LocalItem::class,
+        GuideDao::class
     ], version = DB_VERSION, exportSchema = false
 )
 abstract class AppDatabase : RoomDatabase() {
 
     abstract val heroesDao: HeroesDao
-
+    abstract val guideDao: GuideDao
     abstract val itemsDao: ItemsDao
 
     companion object {
