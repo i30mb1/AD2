@@ -8,6 +8,7 @@ import android.graphics.Bitmap
 import android.graphics.BitmapFactory
 import android.os.Environment
 import n7.ad2.data.source.local.db.AppDatabase
+import n7.ad2.data.source.local.model.LocalGuide
 import n7.ad2.data.source.local.model.LocalHero
 import n7.ad2.data.source.local.model.LocalItem
 import java.io.File
@@ -36,6 +37,9 @@ class Repository @Inject constructor(
         }
     }
 
+    suspend fun insertGuide(localGuide: LocalGuide): Long {
+        return appDatabase.guideDao.insert(localGuide)
+    }
 
     suspend fun getHero(name: String): LocalHero {
         return appDatabase.heroesDao.getHero(name)

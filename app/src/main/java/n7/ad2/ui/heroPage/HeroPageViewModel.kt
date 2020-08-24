@@ -1,15 +1,14 @@
 package n7.ad2.ui.heroPage
 
 import android.app.Application
-import androidx.lifecycle.AndroidViewModel
-import androidx.lifecycle.LiveData
-import androidx.lifecycle.MutableLiveData
-import androidx.lifecycle.SavedStateHandle
-import androidx.lifecycle.liveData
-import androidx.lifecycle.switchMap
+import androidx.lifecycle.*
+import androidx.work.OneTimeWorkRequestBuilder
+import androidx.work.WorkManager
+import androidx.work.workDataOf
 import com.squareup.inject.assisted.Assisted
 import com.squareup.inject.assisted.AssistedInject
 import n7.ad2.data.source.local.model.LocalHero
+import n7.ad2.ui.heroGuide.HeroGuideWorker
 import n7.ad2.ui.heroInfo.ViewModelAssistedFactory
 import n7.ad2.ui.heroPage.domain.usecase.GetLocalHeroByNameUseCase
 
@@ -29,6 +28,7 @@ class HeroPageViewModel @AssistedInject constructor(
     private val _hero: MutableLiveData<String> = handle.getLiveData(LOCAL_HERO_KEY)
     val hero: LiveData<LocalHero> = _hero.switchMap {
         liveData {
+            loadHeroGuide(it)
             emit(getLocalHeroByNameUseCase(it))
         }
     }
@@ -39,4 +39,12 @@ class HeroPageViewModel @AssistedInject constructor(
 
     fun loadHero(name: String) = handle.set(LOCAL_HERO_KEY, name)
 
+    private fun loadHeroGuide(heroName: String) {
+        val data = workDataOf(HeroGuideWorker.HERO_NAME to heroName)
+        val request = OneTimeWorkRequestBuilder<HeroGuideWorker>()
+            .setInputData(data)
+            .build()
+
+        WorkManager.getInstance(getApplication()).enqueue(request)
+    }
 }
