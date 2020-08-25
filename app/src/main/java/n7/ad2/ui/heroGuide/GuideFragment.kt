@@ -7,8 +7,6 @@ import android.widget.LinearLayout
 import androidx.core.app.ActivityOptionsCompat
 import androidx.databinding.DataBindingUtil
 import androidx.fragment.app.Fragment
-import androidx.work.OneTimeWorkRequestBuilder
-import androidx.work.WorkManager
 import com.google.android.material.snackbar.Snackbar
 import com.squareup.picasso.Callback
 import com.squareup.picasso.Picasso
@@ -17,7 +15,6 @@ import n7.ad2.databinding.FragmentGuideBinding
 import n7.ad2.databinding.ItemListGuideItemBinding
 import n7.ad2.databinding.ItemListHeroCompareBinding
 import n7.ad2.heroes.db.HeroModel
-import n7.ad2.heroes.full.GuideWorker
 import n7.ad2.items.full.ItemFullActivity
 import n7.ad2.ui.heroPage.HeroPageActivity
 import java.util.*
@@ -27,8 +24,7 @@ class GuideFragment : Fragment() {
     private val hero: HeroModel? = null
     private val hashMapSpells = HashMap<String, String>()
     private var maxItemsInRow = 0
-    private var _binding: FragmentGuideBinding? = null
-    private var binding = _binding!!
+    private lateinit var binding: FragmentGuideBinding
     private var menuSelected: MenuItem? = null
     override fun onCreateOptionsMenu(menu: Menu, inflater: MenuInflater) {
         super.onCreateOptionsMenu(menu, inflater)
