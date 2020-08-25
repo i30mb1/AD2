@@ -1,6 +1,8 @@
 package ad2.n7.parseinfo.algorithm
 
 import java.util.*
+import kotlin.collections.ArrayDeque
+import kotlin.collections.ArrayList
 
 class TreeNode(var value: Int) {
     var left: TreeNode? = null
@@ -19,7 +21,27 @@ fun main() {
     preOrderTraversal(root)
     inOrderTraversal(root)
     postOrderTraversal(root)
+    levelOrderTraversal(root)
+}
 
+fun levelOrderTraversal(root: TreeNode): List<List<Int>> {
+    val result = mutableListOf<MutableList<Int>>()
+    val queue = java.util.ArrayDeque<TreeNode>()
+    queue.add(root)
+    while (queue.isNotEmpty()) {
+        var size = queue.size
+        val list = ArrayList<Int>()
+        while(size > 0) {
+            val node = queue.poll()
+            list.add(node.value)
+            node.left?.let { queue.add(it) }
+            node.right?.let { queue.add(it) }
+            size --
+        }
+        result.add(list)
+    }
+    println(result)
+    return result
 }
 
 fun preOrderTraversal(root: TreeNode?): List<Int> {
@@ -48,8 +70,8 @@ fun inOrderTraversal(root: TreeNode?): List<Int> {
             curr = curr.left
         }
         curr = stack.pop()
-        result.add(curr?.value ?: 0)
-        curr = curr?.right
+        result.add(curr.value)
+        curr = curr.right
     }
     println(result)
     return result
