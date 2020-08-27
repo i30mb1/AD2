@@ -11,15 +11,15 @@ import n7.ad2.di.injector
 import n7.ad2.ui.heroPage.HeroPageViewModel
 import n7.ad2.utils.viewModelWithSavedStateHandle
 
-class GuideFragment : Fragment(R.layout.fragment_hero_guide) {
+class HeroGuideFragment : Fragment(R.layout.fragment_hero_guide) {
 
     private lateinit var binding: FragmentHeroGuideBinding
     private val viewModel: HeroGuideViewModel by viewModelWithSavedStateHandle { injector.heroGuideViewModelFactory }
     private val heroPageViewModel by activityViewModels<HeroPageViewModel>()
 
     companion object {
-        fun newInstance(): GuideFragment {
-            return GuideFragment()
+        fun newInstance(): HeroGuideFragment {
+            return HeroGuideFragment()
         }
     }
 
