@@ -10,6 +10,7 @@ import android.os.Environment
 import n7.ad2.data.source.local.db.AppDatabase
 import n7.ad2.data.source.local.model.LocalGuide
 import n7.ad2.data.source.local.model.LocalHero
+import n7.ad2.data.source.local.model.LocalHeroWithGuides
 import n7.ad2.data.source.local.model.LocalItem
 import java.io.File
 import javax.inject.Inject
@@ -28,13 +29,17 @@ class Repository @Inject constructor(
         const val ASSETS_PATH_HERO_RESPONSES = "responses.json"
         const val ASSETS_FILE_MINIMAP = "minimap.png"
         const val ASSETS_FILE_ANIMATION = "emoticon.webp"
-        val DIRECTORY_RESPONSES = Environment.DIRECTORY_RINGTONES
+        val DIRECTORY_RESPONSES: String = Environment.DIRECTORY_RINGTONES
     }
 
     suspend fun getHeroAnimation(assetsPath: String, name: String): Bitmap {
         return application.assets.open("$assetsPath/$name/$ASSETS_FILE_ANIMATION").use {
             BitmapFactory.decodeStream(it)
         }
+    }
+
+    suspend fun getHeroWithGuides(heroName: String): List<LocalHeroWithGuides> {
+        return appDatabase.heroesDao.getHeroWithGuides(heroName)
     }
 
     suspend fun insertGuide(localGuide: LocalGuide): Long {
