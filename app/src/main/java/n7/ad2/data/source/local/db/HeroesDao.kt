@@ -4,11 +4,17 @@ import androidx.lifecycle.LiveData
 import androidx.paging.DataSource
 import androidx.room.Dao
 import androidx.room.Query
+import androidx.room.Transaction
 import n7.ad2.base.BaseDao
 import n7.ad2.data.source.local.model.LocalHero
+import n7.ad2.data.source.local.model.LocalHeroWithGuides
 
 @Dao
 interface HeroesDao : BaseDao<LocalHero> {
+
+    @Transaction
+    @Query("SELECT rowid,* FROM LocalHeroes WHERE name=:name")
+    fun getHeroWithGuides(name: String): List<LocalHeroWithGuides>
 
     @Query("SELECT rowid,* FROM LocalHeroes")
     fun getAll(): LiveData<List<LocalHero>>
