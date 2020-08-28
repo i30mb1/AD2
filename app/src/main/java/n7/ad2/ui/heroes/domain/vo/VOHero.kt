@@ -20,4 +20,11 @@ class VOHero : BaseObservable() {
             notifyPropertyChanged(BR.image)
         }
 
+    @get:Bindable
+    var viewedByUser: Boolean = false
+    set(value) {
+        field = value
+        notifyPropertyChanged(BR.viewedByUser)
+    }
+
 }

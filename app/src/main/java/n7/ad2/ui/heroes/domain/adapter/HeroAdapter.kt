@@ -8,5 +8,6 @@ fun LocalHero.toVo() : VOHero {
     return VOHero().also {
         it.name = name
         it.image = "file:///android_asset/$assetsPath/full.png"
+        it.viewedByUser = viewedByUser
     }
 }

@@ -16,5 +16,7 @@ data class LocalHero(
         @ColumnInfo(name = "assetsPath")
         val assetsPath: String,
         @ColumnInfo(name = "mainAttr")
-        val mainAttr: String
+        val mainAttr: String,
+        @ColumnInfo(name = "viewedByUser")
+        val viewedByUser: Boolean
 )
