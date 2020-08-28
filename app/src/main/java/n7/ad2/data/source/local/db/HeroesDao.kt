@@ -12,6 +12,9 @@ import n7.ad2.data.source.local.model.LocalHeroWithGuides
 @Dao
 interface HeroesDao : BaseDao<LocalHero> {
 
+    @Query("UPDATE LocalHeroes SET viewedByUser = 1 WHERE name =:name")
+    fun updateViewedByUserFieldForName(name: String)
+
     @Transaction
     @Query("SELECT rowid,* FROM LocalHeroes WHERE name=:name")
     fun getHeroWithGuides(name: String): List<LocalHeroWithGuides>

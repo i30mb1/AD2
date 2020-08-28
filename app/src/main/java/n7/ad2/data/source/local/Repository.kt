@@ -38,6 +38,10 @@ class Repository @Inject constructor(
         }
     }
 
+    suspend fun updateViewedByUserFieldForName(name: String) {
+        appDatabase.heroesDao.updateViewedByUserFieldForName(name)
+    }
+
     suspend fun getHeroWithGuides(heroName: String): List<LocalHeroWithGuides> {
         return appDatabase.heroesDao.getHeroWithGuides(heroName)
     }
