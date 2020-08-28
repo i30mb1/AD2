@@ -51,6 +51,8 @@ class HeroesFragment : Fragment(R.layout.fragment_heroes) {
                 startActivity(this)
             }
         }
+
+       if (!model.viewedByUser) viewModel.updateViewedByUserFieldForHero(model.name)
     }
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {

@@ -43,6 +43,7 @@
 
         <View
             android:layout_width="@dimen/line_width"
+            isVisible="@{model.viewedByUser}"
             android:layout_height="match_parent"
             android:background="?colorPrimary" />
     </com.google.android.material.card.MaterialCardView>
