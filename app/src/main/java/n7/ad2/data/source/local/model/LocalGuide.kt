@@ -12,5 +12,7 @@ class LocalGuide(
     @ColumnInfo(name = "name")
     val name: String,
     @ColumnInfo(name = "json")
-    val json: String
+    val json: String,
+    @ColumnInfo(name= "timestamp", defaultValue = "CURRENT_TIMESTAMP")
+    val timestamp: Long
 )
