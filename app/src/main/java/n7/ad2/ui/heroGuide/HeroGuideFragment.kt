@@ -31,6 +31,9 @@ class HeroGuideFragment : Fragment(R.layout.fragment_hero_guide) {
         }
 
         heroPageViewModel.hero.observe(viewLifecycleOwner, viewModel::loadHeroWithGuides)
+        viewModel.guide.observe(viewLifecycleOwner) {
+            it.guides[0]
+        }
     }
 
 

@@ -17,7 +17,7 @@ interface HeroesDao : BaseDao<LocalHero> {
 
     @Transaction
     @Query("SELECT rowid,* FROM LocalHeroes WHERE name=:name")
-    fun getHeroWithGuides(name: String): List<LocalHeroWithGuides>
+    fun getHeroWithGuides(name: String): LocalHeroWithGuides
 
     @Query("SELECT rowid,* FROM LocalHeroes")
     fun getAll(): LiveData<List<LocalHero>>
