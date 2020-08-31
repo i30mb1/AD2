@@ -1,4 +1,5 @@
-<layout xmlns:android="http://schemas.android.com/apk/res/android">
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
 
     <data>
 
@@ -12,6 +13,39 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent">
 
+        <androidx.constraintlayout.helper.widget.Flow
+            android:id="@+id/flow_hero_best_versus"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:constraint_referenced_ids="red, blue, purple"
+            app:flow_horizontalGap="2dp"
+            app:flow_horizontalStyle="packed"
+            app:flow_verticalGap="2dp"
+            app:flow_verticalStyle="packed"
+            app:flow_wrapMode="aligned"
+            app:flow_horizontalAlign="start"
+            app:flow_verticalAlign="bottom"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <View
+            android:id="@+id/red"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:background="@color/red_500" />
+
+        <View
+            android:id="@+id/blue"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:background="@color/blue" />
+
+        <View
+            android:id="@+id/purple"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:background="@color/purple" />
     </androidx.constraintlayout.widget.ConstraintLayout>
 
 </layout>
