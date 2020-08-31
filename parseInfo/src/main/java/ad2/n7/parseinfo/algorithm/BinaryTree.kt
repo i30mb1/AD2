@@ -2,6 +2,7 @@ package ad2.n7.parseinfo.algorithm
 
 import java.util.*
 import kotlin.collections.ArrayList
+import kotlin.math.max
 
 class TreeNode(var value: Int) {
     var left: TreeNode? = null
@@ -24,6 +25,13 @@ fun main() {
     levelOrderTraversal(root)
 }
 
+fun maxDepth(root: TreeNode?): Int {
+    if (root == null) return 0
+    val maxLeft = maxDepth(root.left)
+    val maxRight = maxDepth(root.right)
+    return max(maxLeft, maxRight) + 1
+}
+
 fun levelOrderTraversal(root: TreeNode): List<List<Int>> {
     val result = mutableListOf<MutableList<Int>>()
     val queue = ArrayDeque<TreeNode>()
@@ -31,7 +39,7 @@ fun levelOrderTraversal(root: TreeNode): List<List<Int>> {
     while (queue.isNotEmpty()) {
         var size = queue.size
         val list = ArrayList<Int>()
-        while(size > 0) {
+        while (size > 0) {
             val node = queue.pollLast()
             list.add(node.value)
             node.left?.let { queue.addFirst(it) }
