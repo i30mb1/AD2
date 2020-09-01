@@ -25,6 +25,19 @@ fun main() {
     levelOrderTraversal(root)
 }
 
+fun isSymmetric(root: TreeNode?): Boolean {
+    if (root == null) return true
+    return isSymmetric(root.left, root.right)
+
+}
+
+fun isSymmetric(left: TreeNode?, right: TreeNode?): Boolean {
+    if (left == null && right == null) return true
+    if (left == null || right == null) return false
+    if (left.value != right.value) return false
+    return isSymmetric(left.left, right.right) && isSymmetric(left.right, right.left)
+}
+
 fun maxDepth(root: TreeNode?): Int {
     if (root == null) return 0
     val maxLeft = maxDepth(root.left)
