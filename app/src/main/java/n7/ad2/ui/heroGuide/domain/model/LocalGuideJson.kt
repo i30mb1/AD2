@@ -5,7 +5,7 @@ import com.squareup.moshi.JsonClass
 
 
 @JsonClass(generateAdapter = true)
-class LocalGuideJsonModel(
+class LocalGuideJson(
     @Json(name = "heroName")
     val heroName: String,
     @Json(name = "heroWinRate")

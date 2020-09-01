@@ -14,7 +14,7 @@ import n7.ad2.createNotificationChannel
 import n7.ad2.data.source.local.model.LocalGuide
 import n7.ad2.isChannelNotCreated
 import n7.ad2.ui.MyApplication
-import n7.ad2.ui.heroGuide.domain.model.LocalGuideJsonModel
+import n7.ad2.ui.heroGuide.domain.model.LocalGuideJson
 import n7.ad2.ui.heroGuide.domain.usecase.SaveLocalGuideUseCase
 import org.jsoup.Jsoup
 import java.util.*
@@ -70,7 +70,7 @@ class HeroGuideWorker(
                 }
             }
 
-            val localGuideJsonModel = LocalGuideJsonModel(
+            val localGuideJsonModel = LocalGuideJson(
                 heroName,
                 "50",
                 "50",
@@ -80,7 +80,7 @@ class HeroGuideWorker(
                 emptyList()
             )
 
-            val json = moshi.adapter(LocalGuideJsonModel::class.java).toJson(localGuideJsonModel)
+            val json = moshi.adapter(LocalGuideJson::class.java).toJson(localGuideJsonModel)
             val localGuide = LocalGuide(name = heroName, json = json)
 
             saveLocalGuideUseCase(localGuide)
