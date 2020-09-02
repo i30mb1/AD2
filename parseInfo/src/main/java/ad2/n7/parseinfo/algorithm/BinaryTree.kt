@@ -25,6 +25,12 @@ fun main() {
     levelOrderTraversal(root)
 }
 
+fun hasPathSum(root: TreeNode?, sum: Int): Boolean {
+    if (root == null) return false
+    if (root.left == null && root.right == null && sum - root.value == 0) return true
+    return hasPathSum(root.left, sum - root.value) || hasPathSum(root.right, sum - root.value)
+}
+
 fun isSymmetric(root: TreeNode?): Boolean {
     if (root == null) return true
     return isSymmetric(root.left, root.right)
