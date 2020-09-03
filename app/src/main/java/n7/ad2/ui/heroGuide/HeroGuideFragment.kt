@@ -2,9 +2,12 @@ package n7.ad2.ui.heroGuide
 
 import android.os.Bundle
 import android.view.View
+import android.widget.ImageView
+import androidx.constraintlayout.widget.ConstraintLayout
 import androidx.fragment.app.Fragment
 import androidx.fragment.app.activityViewModels
 import androidx.lifecycle.observe
+import coil.api.load
 import n7.ad2.R
 import n7.ad2.databinding.FragmentHeroGuideBinding
 import n7.ad2.di.injector
@@ -31,8 +34,12 @@ class HeroGuideFragment : Fragment(R.layout.fragment_hero_guide) {
         }
 
         heroPageViewModel.hero.observe(viewLifecycleOwner, viewModel::loadHeroWithGuides)
-        viewModel.guide.observe(viewLifecycleOwner) {
-            it.guides[0]
+        viewModel.guide.observe(viewLifecycleOwner) { vo ->
+            vo.heroBestVersus.forEach {
+                binding.root.addView(it)
+                binding.flowHeroBestVersus.addView(it)
+            }
+
         }
     }
 
