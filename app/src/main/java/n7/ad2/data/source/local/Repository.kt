@@ -28,6 +28,7 @@ class Repository @Inject constructor(
         const val ASSETS_PATH_HERO_DESC = "description.json"
         const val ASSETS_PATH_HERO_RESPONSES = "responses.json"
         const val ASSETS_FILE_MINIMAP = "minimap.png"
+        const val ASSETS_FILE_FULL = "full.png"
         const val ASSETS_FILE_ANIMATION = "emoticon.webp"
         val DIRECTORY_RESPONSES: String = Environment.DIRECTORY_RINGTONES
     }
