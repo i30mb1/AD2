@@ -14,5 +14,5 @@ class LocalGuide(
     @ColumnInfo(name = "json")
     val json: String,
     @ColumnInfo(name= "timestamp", defaultValue = "CURRENT_TIMESTAMP")
-    val timestamp: Long
+    val timestamp: Long = 0
 )
