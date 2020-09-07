@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
 
-    <style name="Headline4" parent="TextAppearance.MaterialComponents.Headline5">
+    <style name="Headline5" parent="TextAppearance.MaterialComponents.Headline5">
         <item name="android:textColor">?myTextColorPrimary</item>
     </style>
 

@@ -90,7 +90,7 @@
         <item name="android:windowTranslucentStatus">true</item>
         <item name="android:windowTranslucentNavigation">true</item>
         <item name="android:windowBackground">@android:color/transparent</item>
-        <item name="textAppearanceHeadline5">@style/Headline4</item>
+        <item name="textAppearanceHeadline5">@style/Headline5</item>
         <item name="android:windowShowWallpaper">true</item>
     </style>
 
@@ -98,7 +98,7 @@
         <item name="android:windowTranslucentStatus">true</item>
         <item name="android:windowTranslucentNavigation">true</item>
         <item name="android:windowBackground">@android:color/transparent</item>
-        <item name="textAppearanceHeadline5">@style/Headline4</item>
+        <item name="textAppearanceHeadline5">@style/Headline5</item>
         <item name="android:windowShowWallpaper">true</item>
     </style>
 
@@ -107,7 +107,7 @@
         <item name="android:windowTranslucentNavigation">true</item>
         <item name="android:windowBackground">@android:color/transparent</item>
         <item name="android:windowShowWallpaper">true</item>
-        <item name="textAppearanceHeadline5">@style/Headline4</item>
+        <item name="textAppearanceHeadline5">@style/Headline5</item>
     </style>
 
 </resources>
