@@ -28,7 +28,6 @@ class HeroPageViewModel @AssistedInject constructor(
     private val _hero: MutableLiveData<String> = handle.getLiveData(LOCAL_HERO_KEY)
     val hero: LiveData<LocalHero> = _hero.switchMap {
         liveData {
-            loadHeroGuide(it)
             emit(getLocalHeroByNameUseCase(it))
         }
     }
@@ -39,12 +38,4 @@ class HeroPageViewModel @AssistedInject constructor(
 
     fun loadHero(name: String) = handle.set(LOCAL_HERO_KEY, name)
 
-    private fun loadHeroGuide(heroName: String) {
-        val data = workDataOf(HeroGuideWorker.HERO_NAME to heroName)
-        val request = OneTimeWorkRequestBuilder<HeroGuideWorker>()
-            .setInputData(data)
-            .build()
-
-        WorkManager.getInstance(getApplication()).enqueue(request)
-    }
 }

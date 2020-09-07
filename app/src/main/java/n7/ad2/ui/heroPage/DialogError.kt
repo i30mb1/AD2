@@ -8,8 +8,10 @@ import androidx.fragment.app.FragmentActivity
 import com.google.android.material.dialog.MaterialAlertDialogBuilder
 import n7.ad2.databinding.DialogErrorBinding
 
-fun FragmentActivity.showDialogError(title: Exception) {
-    val dialogError = DialogError.newInstance(title.message.toString())
+fun FragmentActivity.showDialogError(title: Exception) = showDialogError(title.message.toString())
+
+fun FragmentActivity.showDialogError(title: String) {
+    val dialogError = DialogError.newInstance(title)
     dialogError.show(supportFragmentManager, null)
 }
 

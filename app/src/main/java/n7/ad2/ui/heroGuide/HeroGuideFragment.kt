@@ -2,16 +2,18 @@ package n7.ad2.ui.heroGuide
 
 import android.os.Bundle
 import android.view.View
-import android.widget.ImageView
-import androidx.constraintlayout.widget.ConstraintLayout
 import androidx.fragment.app.Fragment
 import androidx.fragment.app.activityViewModels
 import androidx.lifecycle.observe
-import coil.api.load
+import androidx.work.OneTimeWorkRequestBuilder
+import androidx.work.WorkInfo
+import androidx.work.WorkManager
+import androidx.work.workDataOf
 import n7.ad2.R
 import n7.ad2.databinding.FragmentHeroGuideBinding
 import n7.ad2.di.injector
 import n7.ad2.ui.heroPage.HeroPageViewModel
+import n7.ad2.ui.heroPage.showDialogError
 import n7.ad2.utils.viewModelWithSavedStateHandle
 
 class HeroGuideFragment : Fragment(R.layout.fragment_hero_guide) {
@@ -33,14 +35,32 @@ class HeroGuideFragment : Fragment(R.layout.fragment_hero_guide) {
             it.vieModel = viewModel
         }
 
-        heroPageViewModel.hero.observe(viewLifecycleOwner, viewModel::loadHeroWithGuides)
+        heroPageViewModel.hero.observe(viewLifecycleOwner) {
+            viewModel.loadHeroWithGuides(it)
+            loadHeroGuide(it.name)
+        }
         viewModel.guide.observe(viewLifecycleOwner) { vo ->
             vo.heroBestVersus.forEach {
                 binding.root.addView(it)
                 binding.flowHeroBestVersus.addView(it)
             }
-
         }
+    }
+
+    private fun loadHeroGuide(heroName: String) {
+        val data = workDataOf(HeroGuideWorker.HERO_NAME to heroName)
+        val request = OneTimeWorkRequestBuilder<HeroGuideWorker>()
+            .setInputData(data)
+            .build()
+
+        WorkManager.getInstance(requireContext()).getWorkInfoByIdLiveData(request.id).observe(viewLifecycleOwner) {
+            when(it?.state) {
+                WorkInfo.State.FAILED -> { requireActivity().showDialogError(it.outputData.getString(HeroGuideWorker.RESULT)!!) }
+                else -> {  }
+            }
+        }
+
+        WorkManager.getInstance(requireContext()).enqueue(request)
     }
 
 

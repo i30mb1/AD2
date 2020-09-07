@@ -7,6 +7,7 @@ import androidx.core.app.NotificationCompat
 import androidx.work.CoroutineWorker
 import androidx.work.ForegroundInfo
 import androidx.work.WorkerParameters
+import androidx.work.workDataOf
 import com.squareup.moshi.Moshi
 import kotlinx.coroutines.coroutineScope
 import n7.ad2.R
@@ -28,6 +29,7 @@ class HeroGuideWorker(
 
     companion object {
         const val HERO_NAME = "HERO_NAME"
+        const val RESULT = "RESULT"
     }
 
     private val notificationId = 1
@@ -86,7 +88,8 @@ class HeroGuideWorker(
             saveLocalGuideUseCase(localGuide)
             Result.success()
         } catch (e: Exception) {
-            Result.failure()
+            val error = workDataOf(RESULT to e.toString())
+            Result.failure(error)
         }
     }
 
