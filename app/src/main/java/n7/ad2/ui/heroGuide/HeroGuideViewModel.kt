@@ -4,6 +4,7 @@ import android.app.Application
 import androidx.lifecycle.*
 import com.squareup.inject.assisted.Assisted
 import com.squareup.inject.assisted.AssistedInject
+import kotlinx.coroutines.flow.collect
 import kotlinx.coroutines.launch
 import n7.ad2.data.source.local.model.LocalHero
 import n7.ad2.ui.heroGuide.domain.usecase.ConvertLocalGuideJsonToVOHeroGuide
@@ -28,9 +29,11 @@ class HeroGuideViewModel @AssistedInject constructor(
 
     fun loadHeroWithGuides(localHero: LocalHero) {
         viewModelScope.launch {
-            val heroWithGuidesUseCase = getLocalHeroWithGuidesUseCase(localHero.name)
-            val localGuideJsonList = convertLocalHeroWithGuidesToLocalGuideJsonUseCase(heroWithGuidesUseCase)
-            if (localGuideJsonList.isNotEmpty()) _guide.postValue(convertLocalGuideJsonToVOHeroGuide(localGuideJsonList, getApplication())[0])
+            getLocalHeroWithGuidesUseCase(localHero.name).collect {
+                val localGuideJsonList = convertLocalHeroWithGuidesToLocalGuideJsonUseCase(it)
+                if (localGuideJsonList.isNotEmpty()) _guide.postValue(convertLocalGuideJsonToVOHeroGuide(localGuideJsonList, getApplication())[0])
+            }
+
         }
     }
 

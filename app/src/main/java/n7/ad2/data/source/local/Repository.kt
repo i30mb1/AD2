@@ -7,6 +7,7 @@ import android.content.SharedPreferences
 import android.graphics.Bitmap
 import android.graphics.BitmapFactory
 import android.os.Environment
+import kotlinx.coroutines.flow.Flow
 import n7.ad2.data.source.local.db.AppDatabase
 import n7.ad2.data.source.local.model.LocalGuide
 import n7.ad2.data.source.local.model.LocalHero
@@ -43,7 +44,7 @@ class Repository @Inject constructor(
         appDatabase.heroesDao.updateViewedByUserFieldForName(name)
     }
 
-    suspend fun getHeroWithGuides(heroName: String): LocalHeroWithGuides {
+    suspend fun getHeroWithGuides(heroName: String): Flow<LocalHeroWithGuides> {
         return appDatabase.heroesDao.getHeroWithGuides(heroName)
     }
 

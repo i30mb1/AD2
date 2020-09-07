@@ -5,6 +5,7 @@ import androidx.paging.DataSource
 import androidx.room.Dao
 import androidx.room.Query
 import androidx.room.Transaction
+import kotlinx.coroutines.flow.Flow
 import n7.ad2.base.BaseDao
 import n7.ad2.data.source.local.model.LocalHero
 import n7.ad2.data.source.local.model.LocalHeroWithGuides
@@ -17,7 +18,7 @@ interface HeroesDao : BaseDao<LocalHero> {
 
     @Transaction
     @Query("SELECT rowid,* FROM LocalHeroes WHERE name=:name")
-    fun getHeroWithGuides(name: String): LocalHeroWithGuides
+    fun getHeroWithGuides(name: String): Flow<LocalHeroWithGuides>
 
     @Query("SELECT rowid,* FROM LocalHeroes")
     fun getAll(): LiveData<List<LocalHero>>
