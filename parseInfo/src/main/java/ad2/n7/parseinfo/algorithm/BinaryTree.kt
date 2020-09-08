@@ -25,6 +25,22 @@ fun main() {
     levelOrderTraversal(root)
 }
 
+var rootIndex = 0
+fun constructBinaryTreeFromInOrderAndPostOrder(inOrder: IntArray, postOrder: IntArray): TreeNode? {
+    rootIndex = postOrder.size - 1
+    fun build(inOrder: IntArray, postOrder: IntArray, from: Int, to: Int): TreeNode? {
+        if (from > to) return null
+        val rootValue = postOrder[rootIndex--]
+        val root = TreeNode(rootValue)
+        if (from == to) return root
+        val i = inOrder.indexOf(rootValue)
+        root.left = build(inOrder, postOrder, from, i - 1)
+        root.right = build(inOrder, postOrder, i + 1, to)
+        return root
+    }
+    return build(inOrder, postOrder, 0, postOrder.size - 1)
+}
+
 fun hasPathSum(root: TreeNode?, sum: Int): Boolean {
     if (root == null) return false
     if (root.left == null && root.right == null && sum - root.value == 0) return true
