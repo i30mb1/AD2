@@ -52,6 +52,10 @@
             app:key="@string/setting_contact_key"
             app:summary="@string/setting_contact_summary"
             app:title="@string/setting_contact_title" />
+        <Preference
+            app:iconSpaceReserved="false"
+            app:key="@string/setting_rate_me_key"
+            app:title="@string/setting_rate_me_title" />
     </PreferenceCategory>
     <Preference
         app:isPreferenceVisible="false"

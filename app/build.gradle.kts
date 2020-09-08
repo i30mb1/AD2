@@ -76,6 +76,7 @@ dependencies {
     api(Lib.jsoup)
     api(Lib.firebaseAnal)
     api(Lib.playCore)
+    api(Lib.playCoreKtx)
     api(Lib.coroutines)
     api(Lib.coroutinesLifecycle)
     api(Lib.coroutinesLivedata)

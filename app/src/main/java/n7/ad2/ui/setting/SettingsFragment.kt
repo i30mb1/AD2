@@ -8,6 +8,7 @@ import android.os.Bundle
 import androidx.core.app.TaskStackBuilder
 import androidx.preference.Preference
 import androidx.preference.PreferenceFragmentCompat
+import com.google.android.play.core.review.ReviewManagerFactory
 import n7.ad2.BuildConfig
 import n7.ad2.R
 import n7.ad2.ui.MainActivity
@@ -28,6 +29,31 @@ class SettingsFragment : PreferenceFragmentCompat() {
         setupAbout()
         setupContact()
         setupTellFriends()
+        setupRateMe()
+    }
+
+    private fun setupRateMe() {
+        findPreference<Preference>(getString(R.string.setting_rate_me_key))?.apply {
+            onPreferenceClickListener = Preference.OnPreferenceClickListener {
+                val reviewManager = ReviewManagerFactory.create(requireContext())
+                val requestReviewFlow = reviewManager.requestReviewFlow()
+                requestReviewFlow.addOnCompleteListener { request ->
+                    if (request.isSuccessful) {
+                        // We got the ReviewInfo object
+                        val reviewInfo = request.result
+                        val flow = reviewManager.launchReviewFlow(requireActivity(), reviewInfo)
+                        flow.addOnCompleteListener {
+                            // The flow has finished. The API does not indicate whether the user
+                            // reviewed or not, or even whether the review dialog was shown. Thus, no
+                            // matter the result, we continue our app flow.
+                        }
+                    } else {
+                        // There was some problem, continue regardless of the result.
+                    }
+                }
+                true
+            }
+        }
     }
 
     private fun setupTellFriends() {

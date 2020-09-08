@@ -29,6 +29,8 @@
     <string name="setting_contact_title">Contact us</string>
     <string name="setting_contact_key" translatable="false">contact_us_key</string>
     <string name="setting_contact_summary">Bugs? Errors? Contribution?</string>
+    <string name="setting_rate_me_title" translatable="false">Rate app</string>
+    <string name="setting_rate_me_key" translatable="false">rate_me_key</string>
     <string name="setting_theme_title">Change theme</string>
     <string name="setting_theme_key" translatable="false">setting_theme_key</string>
     <string name="setting_theme_default" translatable="false">GRAY</string>
