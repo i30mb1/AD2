@@ -39,16 +39,13 @@ class SettingsFragment : PreferenceFragmentCompat() {
                 val requestReviewFlow = reviewManager.requestReviewFlow()
                 requestReviewFlow.addOnCompleteListener { request ->
                     if (request.isSuccessful) {
-                        // We got the ReviewInfo object
                         val reviewInfo = request.result
                         val flow = reviewManager.launchReviewFlow(requireActivity(), reviewInfo)
                         flow.addOnCompleteListener {
-                            // The flow has finished. The API does not indicate whether the user
-                            // reviewed or not, or even whether the review dialog was shown. Thus, no
-                            // matter the result, we continue our app flow.
+                           requireActivity().sendBroadcast(Intent(MainActivity.LOG_ON_RECEIVE).putExtra(MainActivity.LOG_ON_RECEIVE, "dialog_rate_is_successful"))
                         }
                     } else {
-                        // There was some problem, continue regardless of the result.
+                        requireActivity().sendBroadcast(Intent(MainActivity.LOG_ON_RECEIVE).putExtra(MainActivity.LOG_ON_RECEIVE, "dialog_rate_is_fail"))
                     }
                 }
                 true
