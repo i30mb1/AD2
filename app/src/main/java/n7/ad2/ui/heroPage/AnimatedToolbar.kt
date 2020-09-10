@@ -6,6 +6,7 @@ import android.view.Gravity
 import android.widget.ImageView
 import androidx.appcompat.widget.Toolbar
 import coil.api.load
+import n7.ad2.R
 import n7.ad2.data.source.local.Repository
 import n7.ad2.data.source.local.model.LocalHero
 import n7.ad2.utils.extension.toPx
@@ -16,6 +17,7 @@ class AnimatedToolbar(context: Context, attr: AttributeSet) : Toolbar(context, a
         val params = LayoutParams(30.toPx.toInt(), 30.toPx.toInt())
         params.gravity = Gravity.CENTER
         layoutParams = params
+        contentDescription = context.getString(R.string.desc_hero_mini_avatar)
         addView(this)
     }
 
