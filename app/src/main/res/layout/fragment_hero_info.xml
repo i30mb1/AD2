@@ -42,6 +42,7 @@
                 tools:srcCompat="@drawable/hero_placeholder" />
 
             <n7.ad2.CustomHeroAttrs
+                android:id="@+id/v_attr"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:layout_alignTop="@id/iv_image"
