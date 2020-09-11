@@ -53,12 +53,8 @@ class HeroesFragment : Fragment(R.layout.fragment_heroes) {
         Intent(binding.root.context, HeroPageActivity::class.java).apply {
             putExtra(HeroPageActivity.HERO_NAME, model.name)
             putExtra(HeroPageActivity.TN_PHOTO, binding.iv.transitionName)
-            if (true) {
-                val options = ActivityOptionsCompat.makeSceneTransitionAnimation(requireActivity(), binding.iv, binding.iv.transitionName)
-                startActivity(this, options.toBundle())
-            } else {
-                startActivity(this)
-            }
+            val options = ActivityOptionsCompat.makeSceneTransitionAnimation(requireActivity(), binding.iv, binding.iv.transitionName)
+            startActivity(this, options.toBundle())
         }
 
         if (!model.viewedByUser) viewModel.updateViewedByUserFieldForHero(model.name)
