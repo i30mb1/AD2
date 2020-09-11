@@ -14,10 +14,9 @@ import androidx.annotation.RequiresPermission
 import androidx.appcompat.widget.Toolbar
 import androidx.databinding.DataBindingUtil
 import androidx.lifecycle.observe
-import coil.api.load
+import androidx.viewpager2.widget.ViewPager2
 import com.google.android.material.tabs.TabLayoutMediator
 import n7.ad2.R
-import n7.ad2.data.source.local.Repository
 import n7.ad2.databinding.ActivityHeroPageBinding
 import n7.ad2.di.injector
 import n7.ad2.utils.BaseActivity
@@ -69,11 +68,18 @@ class HeroPageActivity : BaseActivity() {
                 else -> getString(R.string.hero_guide)
             }
         }.attach()
+
+        binding.vp.registerOnPageChangeCallback(object : ViewPager2.OnPageChangeCallback() {
+            override fun onPageSelected(position: Int) {
+                super.onPageSelected(position)
+                binding.toolbar.pageSelected(position)
+            }
+        })
     }
 
     private fun setToolbar() {
         viewModelHeroPage.hero.observe(this) {
-            binding.minimap.load("file:///android_asset/${it.assetsPath}/${Repository.ASSETS_FILE_MINIMAP}")
+            binding.toolbar.loadHero(it)
         }
     }
 
@@ -84,19 +90,13 @@ class HeroPageActivity : BaseActivity() {
 
     private fun requestPermission() {
         val registerPermission = registerForActivityResult(ActivityResultContracts.RequestPermission()) {
-
+            if (it) writeSetting()
         }
-        registerPermission.launch(Manifest.permission.WRITE_SETTINGS)
         when {
-            checkSelfPermission(Manifest.permission.WRITE_SETTINGS) == PackageManager.PERMISSION_GRANTED -> {
-                writeSetting()
-            }
+            checkSelfPermission(Manifest.permission.WRITE_SETTINGS) == PackageManager.PERMISSION_GRANTED -> writeSetting()
             shouldShowRequestPermissionRationale(Manifest.permission.WRITE_SETTINGS) -> {
-
             }
-            else -> {
-                registerPermission.launch(Manifest.permission.WRITE_SETTINGS)
-            }
+            else -> registerPermission.launch(Manifest.permission.WRITE_SETTINGS)
         }
 
     }

@@ -3,14 +3,13 @@ package n7.ad2.ui.heroPage
 import android.content.Context
 import android.util.AttributeSet
 import android.view.Gravity
+import android.view.animation.AccelerateDecelerateInterpolator
 import android.widget.ImageView
 import android.widget.TextView
 import androidx.appcompat.widget.Toolbar
-import androidx.core.view.isVisible
 import androidx.transition.Slide
 import androidx.transition.TransitionManager
-import androidx.transition.TransitionSet
-import coil.api.load
+import coil.load
 import n7.ad2.R
 import n7.ad2.data.source.local.Repository
 import n7.ad2.data.source.local.model.LocalHero
@@ -21,40 +20,40 @@ class AnimatedToolbar(context: Context, attr: AttributeSet) : Toolbar(context, a
     private val params = LayoutParams(30.toPx.toInt(), 30.toPx.toInt()).apply {
         gravity = Gravity.CENTER
     }
-
-    private val imageHero: ImageView = ImageView(context).apply {
+    private val ivHero: ImageView = ImageView(context).apply {
         layoutParams = params
         contentDescription = context.getString(R.string.desc_hero_mini_avatar)
         addView(this)
     }
-    private val responseLocale: TextView = TextView(context).apply {
+    private val tvLocale: TextView = TextView(context, null, R.style.TextAppearance_Body1).apply {
         layoutParams = params
         visibility = GONE
+        gravity = Gravity.CENTER
         text = context.getString(R.string.locale)
         addView(this)
     }
-
-    init {
-        imageHero.setOnClickListener {
-            val slide = Slide()
-            slide.slideEdge = Gravity.START
-            slide.duration = 300
-            slide.addTarget(imageHero)
-            val slide2 = Slide()
-            slide2.slideEdge = Gravity.END
-            slide2.duration = 300
-            slide2.addTarget(responseLocale)
-            val transition = TransitionSet()
-            transition.addTransition(slide)
-            transition.addTransition(slide2)
-            TransitionManager.beginDelayedTransition(this, transition)
-            imageHero.visibility = GONE
-            responseLocale.visibility = VISIBLE
-        }
+    private var oldPage = -1
+    private val transition = Slide().apply {
+        duration = resources.getInteger(R.integer.animation_medium).toLong()
+        interpolator = AccelerateDecelerateInterpolator()
     }
 
     fun loadHero(hero: LocalHero) {
-        imageHero.load("file:///android_asset/${hero.assetsPath}/${Repository.ASSETS_FILE_MINIMAP}")
+        ivHero.load("file:///android_asset/${hero.assetsPath}/${Repository.ASSETS_FILE_MINIMAP}")
+    }
+
+    fun pageSelected(newPage: Int) {
+        TransitionManager.beginDelayedTransition(this, transition)
+        changeVisibilityForPage(newPage, VISIBLE)
+        changeVisibilityForPage(oldPage, GONE)
+        oldPage = newPage
+    }
+
+    private fun changeVisibilityForPage(page: Int, visibility: Int) {
+        when (page) {
+            0 -> ivHero.visibility = visibility
+            1 -> tvLocale.visibility = visibility
+        }
     }
 
 }
