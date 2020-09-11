@@ -99,7 +99,7 @@ class HeroesFragment : Fragment(R.layout.fragment_heroes) {
         heroAdapter.submitList(null)
         heroAdapter.notifyDataSetChanged()
         lifecycleScope.launch {
-            delay(3000)
+            delay(resources.getInteger(R.integer.animation_medium).toLong() * 2)
             explode = Explode()
             explode.duration = resources.getInteger(R.integer.animation_medium).toLong()
             explode.mode = Visibility.MODE_IN
