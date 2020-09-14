@@ -53,14 +53,15 @@ fun setText(view: TextView, text: Int) {
 }
 
 @BindingAdapter("asyncText", "android:textSize", requireAll = false)
-fun TextView.asyncText(text: CharSequence, textSize: Int?) {
+fun TextView.asyncText(text: CharSequence?, textSize: Int?) {
+    if (text == null) return
+    if (this.text == text) return
     // first, set all measurement affecting properties of the text
     // (size, locale, typeface, direction, etc)
     if (textSize != null) {
         // interpret the text size as SP
         this.textSize = textSize.toFloat()
     }
-
     val params = TextViewCompat.getTextMetricsParams(this)
     (this as AppCompatTextView).setTextFuture(PrecomputedTextCompat.getTextFuture(text, params, null))
 }
