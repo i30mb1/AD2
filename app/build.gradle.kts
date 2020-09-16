@@ -97,6 +97,8 @@ dependencies {
 
     implementation(Lib.moshi)
     kapt(Lib.moshiCodegen)
+    
+    lintChecks(project(":rules"))
 
     addTestDependencies()
 }
