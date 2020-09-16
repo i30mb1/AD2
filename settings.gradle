@@ -1,3 +1,0 @@
-include ':app', ':parse'
-include ':parseInfo'
-include ':feature_streams'
