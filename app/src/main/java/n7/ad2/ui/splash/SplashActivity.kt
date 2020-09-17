@@ -53,9 +53,9 @@ class SplashActivity : FragmentActivity() {
         }
     }
 
-    override fun onPostResume() {
-        super.onPostResume()
-        if (fadeIn) {
+    override fun onWindowFocusChanged(hasFocus: Boolean) {
+        super.onWindowFocusChanged(hasFocus)
+        if (hasFocus && fadeIn) {
             window.decorView.run {
                 alpha = 0f
                 animate().cancel()
