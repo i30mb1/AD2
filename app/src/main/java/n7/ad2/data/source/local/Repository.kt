@@ -45,10 +45,6 @@ class Repository @Inject constructor(
         return appDatabase.heroesDao.getHeroWithGuides(heroName)
     }
 
-    suspend fun insertGuide(localGuide: LocalGuide): Long {
-        return appDatabase.guideDao.insert(localGuide)
-    }
-
     suspend fun getHero(name: String): LocalHero {
         return appDatabase.heroesDao.getHero(name)
     }
