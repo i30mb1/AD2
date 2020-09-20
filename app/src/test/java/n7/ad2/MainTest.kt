@@ -18,7 +18,7 @@ class MainTest {
     val coroutineTestRule = CoroutineTestRule()
 
     @get:Rule
-    val instantTaskExecutorRule =  InstantTaskExecutorRule()
+    val instantTaskExecutorRule = InstantTaskExecutorRule()
 
     private val moshi = Moshi.Builder().build()
 
@@ -26,17 +26,28 @@ class MainTest {
 
     @Test
     fun `hero file exist and not empty`() {
-        val file = File("${System.getProperty("user.dir")}\\src\\main\\assets\\heroes.json")
-        assertWithMessage("heroes file not Exist").that(file.exists()).isTrue()
-
-        val text = file.readText()
-        assertWithMessage("heroes file not ready! Run ParserInfo").that(text).isNotEmpty()
+        `file exist and not empty`("heroes.json")
 
         `all heroes have english description`("ru")
         `all heroes have english description`("en")
     }
 
-    fun `all heroes have english description`(locale: String) = coroutineTestRule.runBlockingTest {
+    @Test
+    fun `item file exist and not empty`() {
+        `file exist and not empty`("items.json")
+
+    }
+
+    private fun `file exist and not empty`(path: String) {
+        val file = File("${System.getProperty("user.dir")}\\src\\main\\assets\\$path")
+        assertWithMessage("heroes file not Exist").that(file.exists()).isTrue()
+
+        val text = file.readText()
+        assertWithMessage("heroes file not ready! Run ParserInfo").that(text).isNotEmpty()
+    }
+
+
+    private fun `all heroes have english description`(locale: String) = coroutineTestRule.runBlockingTest {
         val heroesJson = File("${System.getProperty("user.dir")}\\src\\main\\assets\\heroes.json").readText()
         val heroes = convertJsonHeroesToAssetsHeroesUseCase(heroesJson)
 
