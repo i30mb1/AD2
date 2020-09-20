@@ -22,7 +22,7 @@ class ConvertLocalHeroListToVoListUseCaseTest {
 
     @Test
     fun `fields of final object not empty`() = coroutineTestRule.runBlockingTest {
-        val hero = LocalHero(0,"Naruto", "path", "agility")
+        val hero = LocalHero(0,"Naruto", "path", "agility", false)
         val list = listOf(hero, hero)
 
         val voList: List<VOHero> = convertLocalHeroListToVoListUseCase.invoke(list)
