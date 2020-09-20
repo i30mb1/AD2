@@ -12,9 +12,9 @@ import n7.ad2.ui.items.domain.vo.VOItem
 
 class ItemsPagedListAdapter constructor(fragment: ItemsFragment) : PagedListAdapter<VOItem, ItemsPagedListAdapter.ViewHolder>(DiffCallback()) {
 
-    private val listener = object : VOModelListener<VOItem> {
-        override fun onClickListener(model: VOItem) {
-
+    private val listener = object : VOModelListener<ItemItemBinding> {
+        override fun onClickListener(model: ItemItemBinding) {
+            fragment.startItemInfoFragment(model.model!!, model)
         }
     }
 
@@ -32,12 +32,15 @@ class ItemsPagedListAdapter constructor(fragment: ItemsFragment) : PagedListAdap
 
     class ViewHolder(
         private val binding: ItemItemBinding,
-        private val listener: VOModelListener<VOItem>
+        private val listener: VOModelListener<ItemItemBinding>
     ) : RecyclerView.ViewHolder(binding.root) {
 
         fun bindTo(item: VOItem) = binding.let {
             it.model = item
             it.listener = listener
+            it.root.setOnClickListener {
+                listener.onClickListener(binding)
+            }
             it.executePendingBindings()
         }
 
@@ -47,7 +50,7 @@ class ItemsPagedListAdapter constructor(fragment: ItemsFragment) : PagedListAdap
         }
 
         companion object {
-            fun from(parent: ViewGroup, listener: VOModelListener<VOItem>): ViewHolder {
+            fun from(parent: ViewGroup, listener: VOModelListener<ItemItemBinding>): ViewHolder {
                 val layoutInflater = LayoutInflater.from(parent.context)
                 val binding = ItemItemBinding.inflate(layoutInflater, parent, false)
                 return ViewHolder(binding, listener)

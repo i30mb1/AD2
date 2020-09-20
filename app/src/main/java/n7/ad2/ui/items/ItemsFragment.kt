@@ -8,8 +8,10 @@ import androidx.lifecycle.observe
 import androidx.recyclerview.widget.GridLayoutManager
 import n7.ad2.R
 import n7.ad2.databinding.FragmentItemsBinding
+import n7.ad2.databinding.ItemItemBinding
 import n7.ad2.di.injector
 import n7.ad2.ui.MainActivity
+import n7.ad2.ui.items.domain.vo.VOItem
 import n7.ad2.utils.viewModel
 
 class ItemsFragment : Fragment(R.layout.fragment_items) {
@@ -29,6 +31,10 @@ class ItemsFragment : Fragment(R.layout.fragment_items) {
         }
         setHasOptionsMenu(true)
         setupAdapter()
+    }
+
+    fun startItemInfoFragment(model: VOItem, binding: ItemItemBinding) {
+
     }
 
     private fun setupAdapter() {
