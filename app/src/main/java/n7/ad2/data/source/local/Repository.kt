@@ -17,8 +17,7 @@ import javax.inject.Inject
 
 class Repository @Inject constructor(
         private val application: Application,
-        private val appDatabase: AppDatabase,
-        private val sharedPreferences: SharedPreferences
+        private val appDatabase: AppDatabase
 ) {
 
     companion object {
@@ -78,10 +77,6 @@ class Repository @Inject constructor(
         return application.assets.open(ASSETS_PATH_HEROES).bufferedReader().use {
             it.readText()
         }
-    }
-
-    suspend fun getSharedPreferences(): SharedPreferences {
-        return sharedPreferences
     }
 
 }
