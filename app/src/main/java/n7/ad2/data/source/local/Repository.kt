@@ -12,7 +12,6 @@ import n7.ad2.data.source.local.db.AppDatabase
 import n7.ad2.data.source.local.model.LocalGuide
 import n7.ad2.data.source.local.model.LocalHero
 import n7.ad2.data.source.local.model.LocalHeroWithGuides
-import n7.ad2.data.source.local.model.LocalItem
 import java.io.File
 import javax.inject.Inject
 
@@ -25,7 +24,6 @@ class Repository @Inject constructor(
     companion object {
         const val ASSETS_FOLDER_HEROES = "heroes"
         const val ASSETS_PATH_HEROES = "heroes.json"
-        const val ASSETS_PATH_ITEMS = "items.json"
         const val ASSETS_PATH_HERO_DESC = "description.json"
         const val ASSETS_PATH_HERO_RESPONSES = "responses.json"
         const val ASSETS_FILE_MINIMAP = "minimap.png"
@@ -56,10 +54,6 @@ class Repository @Inject constructor(
         return appDatabase.heroesDao.getHero(name)
     }
 
-    suspend fun insertItems(list: List<LocalItem>) {
-        appDatabase.itemsDao.insert(list)
-    }
-
     suspend fun insertHeroes(list: List<LocalHero>) {
         appDatabase.heroesDao.insert(list)
     }
@@ -80,8 +74,8 @@ class Repository @Inject constructor(
         return application.getExternalFilesDir(DIRECTORY_RESPONSES + File.separator + heroName)?.listFiles() ?: emptyArray()
     }
 
-    suspend fun getAssetsFile(filePath: String): String {
-        return application.assets.open(filePath).bufferedReader().use {
+    suspend fun getAssetsHeroes(): String {
+        return application.assets.open(ASSETS_PATH_HEROES).bufferedReader().use {
             it.readText()
         }
     }

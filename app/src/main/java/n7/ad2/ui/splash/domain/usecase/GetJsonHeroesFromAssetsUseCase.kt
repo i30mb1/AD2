@@ -11,7 +11,7 @@ class GetJsonHeroesFromAssetsUseCase @Inject constructor(
 ) {
 
     suspend operator fun invoke(): String = withContext(ioDispatcher) {
-        repository.getAssetsFile(Repository.ASSETS_PATH_HEROES)
+        repository.getAssetsHeroes()
     }
 
 }
