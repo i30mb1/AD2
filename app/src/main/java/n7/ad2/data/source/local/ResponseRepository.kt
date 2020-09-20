@@ -4,17 +4,21 @@ import android.app.Application
 import java.io.File
 import javax.inject.Inject
 
+enum class ResponseLocale(val value: String) {
+    RU("ru"), ENG("eng")
+}
+
 class ResponseRepository @Inject constructor(
     private val application: Application
 ) {
 
     companion object {
         private const val ASSETS_PATH_HERO_RESPONSES = "responses.json"
-        private val DIRECTORY_RESPONSES: String = android.os.Environment.DIRECTORY_RINGTONES
+        val DIRECTORY_RESPONSES: String = android.os.Environment.DIRECTORY_RINGTONES
     }
 
-    fun getHeroResponses(assetsPath: String, locale: String): String {
-        return application.assets.open("$assetsPath/$locale/${ASSETS_PATH_HERO_RESPONSES}").bufferedReader().use {
+    fun getHeroResponses(assetsPath: String, locale: ResponseLocale): String {
+        return application.assets.open("$assetsPath/${locale.value}/${ASSETS_PATH_HERO_RESPONSES}").bufferedReader().use {
             it.readText()
         }
     }

@@ -4,7 +4,7 @@
 
     <item
         android:id="@+id/action_switch"
-        android:title="@string/language_resource"
+        android:title="@string/locale"
         app:showAsAction="always" />
 
 </menu>

@@ -38,7 +38,7 @@ public class ItemFullActivity extends BaseActivity {
         this.itemName = getIntent().getStringExtra(ITEM_NAME);
 
         setToolbar();
-        currentLanguage = getString(R.string.language_resource);
+        currentLanguage = getString(R.string.locale);
         loadHeroDescriptionFile(currentLanguage);
 
     }

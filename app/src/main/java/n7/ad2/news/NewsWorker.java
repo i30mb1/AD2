@@ -37,7 +37,7 @@ public class NewsWorker extends Worker {
     }
 
     private void initBaseUrl() {
-        String language = getApplicationContext().getString(R.string.language_resource);
+        String language = getApplicationContext().getString(R.string.locale);
         switch (language) {
             default:
             case "eng":

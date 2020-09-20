@@ -2,6 +2,7 @@ package n7.ad2.ui.heroResponse.domain.usecase
 
 import kotlinx.coroutines.CoroutineDispatcher
 import kotlinx.coroutines.withContext
+import n7.ad2.data.source.local.ResponseLocale
 import n7.ad2.data.source.local.ResponseRepository
 import javax.inject.Inject
 
@@ -10,7 +11,7 @@ class GetJsonHeroResponseUseCase @Inject constructor(
         private val ioDispatcher: CoroutineDispatcher
 ) {
 
-    suspend operator fun invoke(heroAssetsPath: String, locale: String) = withContext(ioDispatcher) {
+    suspend operator fun invoke(heroAssetsPath: String, locale: ResponseLocale) = withContext(ioDispatcher) {
         repository.getHeroResponses(heroAssetsPath, locale)
     }
 

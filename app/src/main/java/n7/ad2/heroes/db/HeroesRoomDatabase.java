@@ -38,7 +38,7 @@ public abstract class HeroesRoomDatabase extends RoomDatabase {
                                     diskIO.execute(new Runnable() {
                                         @Override
                                         public void run() {
-                                            switch (context.getResources().getString(R.string.language_resource)) {
+                                            switch (context.getResources().getString(R.string.locale)) {
                                                 default:
                                                 case "ru":
                                                 case "eng":

@@ -17,6 +17,7 @@ import androidx.lifecycle.Lifecycle
 import androidx.lifecycle.LifecycleObserver
 import androidx.lifecycle.OnLifecycleEvent
 import n7.ad2.data.source.local.Repository
+import n7.ad2.data.source.local.ResponseRepository
 import n7.ad2.ui.heroResponse.domain.vo.VOResponseBody
 import java.io.File
 
@@ -62,7 +63,7 @@ class DownloadResponseManager(
                 .setAllowedNetworkTypes(DownloadManager.Request.NETWORK_MOBILE)
             .setTitle(item.title)
             .setNotificationVisibility(DownloadManager.Request.VISIBILITY_HIDDEN)
-            .setDestinationInExternalFilesDir(application, Repository.DIRECTORY_RESPONSES, item.heroName + File.separator + item.titleForFile)
+            .setDestinationInExternalFilesDir(application, ResponseRepository.DIRECTORY_RESPONSES, item.heroName + File.separator + item.titleForFile)
 //                .setVisibleInDownloadsUi(false)
 
         downloadId = downloadManager.enqueue(downloadRequest)

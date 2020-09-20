@@ -12,11 +12,14 @@ import androidx.transition.TransitionManager
 import coil.load
 import n7.ad2.R
 import n7.ad2.data.source.local.Repository
+import n7.ad2.data.source.local.ResponseLocale
 import n7.ad2.data.source.local.model.LocalHero
 import n7.ad2.utils.extension.toPx
 
 class AnimatedToolbar(context: Context, attr: AttributeSet) : Toolbar(context, attr) {
 
+    private var locale = ResponseLocale.valueOf(context.getString(R.string.locale))
+    private var onChangeResponseLocaleListener: ((locale: ResponseLocale) -> Unit)? = null
     private val params = LayoutParams(30.toPx.toInt(), 30.toPx.toInt()).apply {
         gravity = Gravity.CENTER
     }
@@ -29,13 +32,26 @@ class AnimatedToolbar(context: Context, attr: AttributeSet) : Toolbar(context, a
         layoutParams = params
         visibility = GONE
         gravity = Gravity.CENTER
-        text = context.getString(R.string.locale)
+        text = locale.value
+        setOnClickListener {
+            if (text == ResponseLocale.ENG.value) {
+                locale = ResponseLocale.RU
+                text = ResponseLocale.RU.value
+            } else {
+                locale = ResponseLocale.ENG
+                text = ResponseLocale.ENG.value
+            }
+        }
         addView(this)
     }
     private var oldPage = -1
     private val transition = Slide().apply {
         duration = resources.getInteger(R.integer.animation_medium).toLong()
         interpolator = AccelerateDecelerateInterpolator()
+    }
+
+    fun onChangeResponseLocale(listener: (locale: ResponseLocale) -> Unit) {
+        this.onChangeResponseLocaleListener = listener
     }
 
     fun loadHero(hero: LocalHero) {

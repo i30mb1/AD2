@@ -42,7 +42,7 @@ class HeroInfoViewModel @AssistedInject constructor(
 
     fun loadHero(localHero: LocalHero) {
         viewModelScope.launch {
-            vOHero.value = getHeroDescriptionInteractor(localHero, getApplication<Application>().getString(R.string.language_resource))
+            vOHero.value = getHeroDescriptionInteractor(localHero, getApplication<Application>().getString(R.string.locale))
         }
     }
 
