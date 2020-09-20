@@ -127,4 +127,7 @@
     <string name="EASTER_EGG_OK">Я ПРИНИМАЮ 1 ДЕНЬ ПОДПИСКИ</string>
     <string name="main_activity_update_me">Запустить обновление?</string>
     <string name="main_activity_okay">Да</string>
+
+    <string name="locale">RU</string>
+    <string name="setting_rate_me_title">Оценить приложение</string>
 </resources>
