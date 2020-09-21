@@ -12,14 +12,14 @@ import androidx.transition.TransitionManager
 import coil.load
 import n7.ad2.R
 import n7.ad2.data.source.local.Repository
-import n7.ad2.data.source.local.ResponseLocale
+import n7.ad2.data.source.local.HeroLocale
 import n7.ad2.data.source.local.model.LocalHero
 import n7.ad2.utils.extension.toPx
 
 class AnimatedToolbar(context: Context, attr: AttributeSet) : Toolbar(context, attr) {
 
-    private var locale = ResponseLocale.valueOf(context.getString(R.string.locale))
-    private var onChangeResponseLocaleListener: ((locale: ResponseLocale) -> Unit)? = null
+    private var locale = HeroLocale.valueOf(context.getString(R.string.locale))
+    private var onChangeResponseLocaleListener: ((locale: HeroLocale) -> Unit)? = null
     private val params = LayoutParams(30.toPx.toInt(), 30.toPx.toInt()).apply {
         gravity = Gravity.CENTER
     }
@@ -34,12 +34,12 @@ class AnimatedToolbar(context: Context, attr: AttributeSet) : Toolbar(context, a
         gravity = Gravity.CENTER
         text = locale.value
         setOnClickListener {
-            if (text == ResponseLocale.ENG.value) {
-                locale = ResponseLocale.RU
-                text = ResponseLocale.RU.value
+            if (text == HeroLocale.ENG.value) {
+                locale = HeroLocale.RU
+                text = HeroLocale.RU.value
             } else {
-                locale = ResponseLocale.ENG
-                text = ResponseLocale.ENG.value
+                locale = HeroLocale.ENG
+                text = HeroLocale.ENG.value
             }
         }
         addView(this)
@@ -50,7 +50,7 @@ class AnimatedToolbar(context: Context, attr: AttributeSet) : Toolbar(context, a
         interpolator = AccelerateDecelerateInterpolator()
     }
 
-    fun onChangeResponseLocale(listener: (locale: ResponseLocale) -> Unit) {
+    fun onChangeResponseLocale(listener: (locale: HeroLocale) -> Unit) {
         this.onChangeResponseLocaleListener = listener
     }
 

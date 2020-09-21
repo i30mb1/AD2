@@ -47,8 +47,8 @@ class Repository @Inject constructor(
         appDatabase.heroesDao.insert(list)
     }
 
-    fun getHeroDescription(assetsPath: String, locale: String): String {
-        return application.assets.open("$assetsPath/$locale/$ASSETS_PATH_HERO_DESC").bufferedReader().use {
+    fun getHeroDescription(assetsPath: String, locale: HeroLocale): String {
+        return application.assets.open("$assetsPath/${locale.value}/$ASSETS_PATH_HERO_DESC").bufferedReader().use {
             it.readText()
         }
     }

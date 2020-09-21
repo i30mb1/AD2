@@ -8,7 +8,7 @@ import androidx.lifecycle.switchMap
 import androidx.paging.PagedList
 import androidx.paging.toLiveData
 import n7.ad2.R
-import n7.ad2.data.source.local.ResponseLocale
+import n7.ad2.data.source.local.HeroLocale
 import n7.ad2.data.source.local.model.LocalHero
 import n7.ad2.ui.heroResponse.domain.interactor.GetHeroResponsesInteractor
 import javax.inject.Inject
@@ -18,7 +18,7 @@ class ResponsesViewModel @Inject constructor(
         private val getHeroResponsesInteractor: GetHeroResponsesInteractor
 ) : AndroidViewModel(application) {
 
-    private var locale = ResponseLocale.valueOf(getApplication<Application>().getString(R.string.locale))
+    private var locale = HeroLocale.valueOf(getApplication<Application>().getString(R.string.locale))
     private val heroName = MutableLiveData<LocalHero>()
     val voResponses = heroName.switchMap {
         liveData {
@@ -33,7 +33,7 @@ class ResponsesViewModel @Inject constructor(
         heroName.value = localHero
     }
 
-    fun loadResponsesLocale(locale: ResponseLocale) {
+    fun loadResponsesLocale(locale: HeroLocale) {
         this.locale = locale
         heroName.value = heroName.value
     }
