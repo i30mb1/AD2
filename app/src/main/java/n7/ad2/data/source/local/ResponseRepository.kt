@@ -4,10 +4,6 @@ import android.app.Application
 import java.io.File
 import javax.inject.Inject
 
-enum class ResponseLocale(val value: String) {
-    RU("ru"), ENG("eng")
-}
-
 class ResponseRepository @Inject constructor(
     private val application: Application
 ) {
@@ -17,7 +13,7 @@ class ResponseRepository @Inject constructor(
         val DIRECTORY_RESPONSES: String = android.os.Environment.DIRECTORY_RINGTONES
     }
 
-    fun getHeroResponses(assetsPath: String, locale: ResponseLocale): String {
+    fun getHeroResponses(assetsPath: String, locale: HeroLocale): String {
         return application.assets.open("$assetsPath/${locale.value}/${ASSETS_PATH_HERO_RESPONSES}").bufferedReader().use {
             it.readText()
         }
