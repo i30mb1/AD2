@@ -2,20 +2,18 @@ package n7.ad2.ui.heroPage
 
 import android.app.Application
 import androidx.lifecycle.*
-import androidx.work.OneTimeWorkRequestBuilder
-import androidx.work.WorkManager
-import androidx.work.workDataOf
 import com.squareup.inject.assisted.Assisted
 import com.squareup.inject.assisted.AssistedInject
+import n7.ad2.data.source.local.HeroLocale
 import n7.ad2.data.source.local.model.LocalHero
-import n7.ad2.ui.heroGuide.HeroGuideWorker
 import n7.ad2.ui.heroInfo.ViewModelAssistedFactory
 import n7.ad2.ui.heroPage.domain.usecase.GetLocalHeroByNameUseCase
 
+@Suppress("UsePropertyAccessSyntax")
 class HeroPageViewModel @AssistedInject constructor(
-        application: Application,
-        @Assisted private val handle: SavedStateHandle,
-        private val getLocalHeroByNameUseCase: GetLocalHeroByNameUseCase
+    application: Application,
+    @Assisted private val handle: SavedStateHandle,
+    private val getLocalHeroByNameUseCase: GetLocalHeroByNameUseCase
 ) : AndroidViewModel(application) {
 
     companion object {
@@ -31,10 +29,14 @@ class HeroPageViewModel @AssistedInject constructor(
             emit(getLocalHeroByNameUseCase(it))
         }
     }
+    private val _locale: MutableLiveData<HeroLocale> = MutableLiveData()
+    val locale: LiveData<HeroLocale> = _locale
 
     fun refresh() {
         _hero.value = _hero.value
     }
+
+    fun updateLocale(newLocale: HeroLocale) = _locale.setValue(newLocale)
 
     fun loadHero(name: String) = handle.set(LOCAL_HERO_KEY, name)
 

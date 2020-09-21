@@ -23,8 +23,8 @@ class ResponsesFragment : Fragment(R.layout.fragment_hero_responses) {
     private lateinit var responsesPagedListAdapter: ResponsesListAdapter
     private lateinit var binding: FragmentHeroResponsesBinding
     private lateinit var downloadResponseManager: DownloadResponseManager
-    private val viewModel by viewModel { injector.responsesViewModel }
-    private val heroPageViewModel by activityViewModels<HeroPageViewModel>()
+    private val viewModel: ResponsesViewModel by viewModel { injector.responsesViewModel }
+    private val heroPageViewModel: HeroPageViewModel by activityViewModels()
 
     companion object {
         fun newInstance(): ResponsesFragment = ResponsesFragment()
@@ -41,6 +41,7 @@ class ResponsesFragment : Fragment(R.layout.fragment_hero_responses) {
             heroPageViewModel.refresh()
         }
         heroPageViewModel.hero.observe(viewLifecycleOwner, viewModel::loadResponses)
+        heroPageViewModel.locale.observe(viewLifecycleOwner, viewModel::loadResponsesLocale)
         setupPagedListAdapter()
     }
 

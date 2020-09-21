@@ -81,6 +81,7 @@ class HeroPageActivity : BaseActivity() {
         viewModelHeroPage.hero.observe(this) {
             binding.toolbar.loadHero(it)
         }
+        binding.toolbar.setOnChangeHeroLocaleListener(viewModelHeroPage::updateLocale)
     }
 
     @RequiresPermission(Manifest.permission.WRITE_SETTINGS)

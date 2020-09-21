@@ -11,8 +11,8 @@ import androidx.transition.Slide
 import androidx.transition.TransitionManager
 import coil.load
 import n7.ad2.R
-import n7.ad2.data.source.local.Repository
 import n7.ad2.data.source.local.HeroLocale
+import n7.ad2.data.source.local.Repository
 import n7.ad2.data.source.local.model.LocalHero
 import n7.ad2.utils.extension.toPx
 
@@ -32,15 +32,11 @@ class AnimatedToolbar(context: Context, attr: AttributeSet) : Toolbar(context, a
         layoutParams = params
         visibility = GONE
         gravity = Gravity.CENTER
-        text = locale.value
+        text = locale.name
         setOnClickListener {
-            if (text == HeroLocale.ENG.value) {
-                locale = HeroLocale.RU
-                text = HeroLocale.RU.value
-            } else {
-                locale = HeroLocale.ENG
-                text = HeroLocale.ENG.value
-            }
+            locale = if (text == HeroLocale.ENG.name) HeroLocale.RU else HeroLocale.ENG
+            text = locale.name
+            onChangeResponseLocaleListener?.invoke(locale)
         }
         addView(this)
     }
@@ -50,7 +46,7 @@ class AnimatedToolbar(context: Context, attr: AttributeSet) : Toolbar(context, a
         interpolator = AccelerateDecelerateInterpolator()
     }
 
-    fun onChangeResponseLocale(listener: (locale: HeroLocale) -> Unit) {
+    fun setOnChangeHeroLocaleListener(listener: (locale: HeroLocale) -> Unit) {
         this.onChangeResponseLocaleListener = listener
     }
 
