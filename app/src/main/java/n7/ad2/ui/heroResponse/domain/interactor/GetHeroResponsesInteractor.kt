@@ -16,10 +16,14 @@ class GetHeroResponsesInteractor @Inject constructor(
     private val getSavedHeroResponseUseCase: GetSavedHeroResponseUseCase
 ) {
 
-    suspend operator fun invoke(localHero: LocalHero, locale: HeroLocale): List<VOResponse> {
-        val json = getJsonHeroResponseUseCase(localHero.assetsPath, locale)
-        val localHeroResponses = getLocalHeroResponsesFromJsonUseCase(json)
-        val savedHeroResponses = getSavedHeroResponseUseCase(localHero.name)
-        return getVOHeroResponsesUseCase.invoke(localHero.name, localHeroResponses, savedHeroResponses)
+    suspend operator fun invoke(localHero: LocalHero, locale: HeroLocale): Result<List<VOResponse>> {
+        return try {
+            val json = getJsonHeroResponseUseCase(localHero.assetsPath, locale)
+            val localHeroResponses = getLocalHeroResponsesFromJsonUseCase(json)
+            val savedHeroResponses = getSavedHeroResponseUseCase(localHero.name)
+            Result.success(getVOHeroResponsesUseCase.invoke(localHero.name, localHeroResponses, savedHeroResponses))
+        } catch (e: Exception) {
+            Result.failure(e)
+        }
     }
 }

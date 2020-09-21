@@ -14,6 +14,7 @@ import n7.ad2.databinding.FragmentHeroResponsesBinding
 import n7.ad2.di.injector
 import n7.ad2.ui.heroPage.HeroPageActivity
 import n7.ad2.ui.heroPage.HeroPageViewModel
+import n7.ad2.ui.heroPage.showDialogError
 import n7.ad2.ui.heroResponse.domain.vo.VOResponseBody
 import n7.ad2.utils.StickyHeaderDecorator
 import n7.ad2.utils.viewModel
@@ -39,6 +40,11 @@ class ResponsesFragment : Fragment(R.layout.fragment_hero_responses) {
         downloadResponseManager = DownloadResponseManager(requireActivity().contentResolver, Handler(Looper.getMainLooper()), requireActivity().application, lifecycle)
         downloadResponseManager.setDownloadListener {
             heroPageViewModel.refresh()
+        }
+        viewModel.error.observe(viewLifecycleOwner) {
+            it?.let {
+                requireActivity().showDialogError(it)
+            }
         }
         heroPageViewModel.hero.observe(viewLifecycleOwner, viewModel::loadResponses)
         heroPageViewModel.locale.observe(viewLifecycleOwner, viewModel::loadResponsesLocale)

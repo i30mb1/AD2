@@ -2,6 +2,7 @@ package n7.ad2.ui.heroResponse
 
 import android.app.Application
 import androidx.lifecycle.AndroidViewModel
+import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.liveData
 import androidx.lifecycle.switchMap
@@ -18,14 +19,22 @@ class ResponsesViewModel @Inject constructor(
         private val getHeroResponsesInteractor: GetHeroResponsesInteractor
 ) : AndroidViewModel(application) {
 
+    private val _error = MutableLiveData<Throwable?>()
+    val error: LiveData<Throwable?> = _error
     private var locale = HeroLocale.valueOf(getApplication<Application>().getString(R.string.locale))
     private val heroName = MutableLiveData<LocalHero>()
     val voResponses = heroName.switchMap {
         liveData {
-            val sourceFactory = ResponsesSourceFactory(getHeroResponsesInteractor(it, locale), "")
-            val config = PagedList.Config.Builder().setEnablePlaceholders(false).setPageSize(20).build()
-
-            emitSource(sourceFactory.toLiveData(config))
+            getHeroResponsesInteractor(it, locale)
+                .onSuccess {
+                    val sourceFactory = ResponsesSourceFactory(it, "")
+                    val config = PagedList.Config.Builder().setEnablePlaceholders(false).setPageSize(20).build()
+                    emitSource(sourceFactory.toLiveData(config))
+                }
+                .onFailure {
+                    _error.value = it
+                    _error.value = null
+                }
         }
     }
 
