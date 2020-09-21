@@ -48,7 +48,7 @@ class Repository @Inject constructor(
     }
 
     fun getHeroDescription(assetsPath: String, locale: HeroLocale): String {
-        return application.assets.open("$assetsPath/${locale.value}/$ASSETS_PATH_HERO_DESC").bufferedReader().use {
+        return application.assets.open("$assetsPath/${locale.heroFolderName}/$ASSETS_PATH_HERO_DESC").bufferedReader().use {
             it.readText()
         }
     }

@@ -14,7 +14,7 @@ class ResponseRepository @Inject constructor(
     }
 
     fun getHeroResponses(assetsPath: String, locale: HeroLocale): String {
-        return application.assets.open("$assetsPath/${locale.value}/${ASSETS_PATH_HERO_RESPONSES}").bufferedReader().use {
+        return application.assets.open("$assetsPath/${locale.heroFolderName}/${ASSETS_PATH_HERO_RESPONSES}").bufferedReader().use {
             it.readText()
         }
     }
