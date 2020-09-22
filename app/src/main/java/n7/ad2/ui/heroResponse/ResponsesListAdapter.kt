@@ -68,7 +68,8 @@ class ResponsesListAdapter(
     class ViewHolder(
             private val binding: ViewDataBinding,
             private val audioExoPlayer: AudioExoPlayer,
-            private val showDialogResponse: (VOResponseBody) -> Unit
+            private val showDialogResponse: (VOResponseBody) -> Unit,
+            private val responsesImagesAdapter: ResponsesImagesAdapter
     ) : RecyclerView.ViewHolder(binding.root) {
 
         fun bind(item: VOResponse) {
@@ -81,6 +82,7 @@ class ResponsesListAdapter(
             when (binding) {
                 is ItemResponseBodyBinding -> {
                     binding.audioExoPlayer = audioExoPlayer
+                    binding.rv.adapter = responsesImagesAdapter
                     binding.root.setOnLongClickListener {
                         showDialogResponse(item as VOResponseBody)
                         true
@@ -95,13 +97,16 @@ class ResponsesListAdapter(
         }
 
         companion object {
-            fun from(parent: ViewGroup,
-                     viewType: Int,
-                     audioExoPlayer: AudioExoPlayer,
-                     showDialogResponse: (VOResponseBody) -> Unit): ViewHolder {
+            fun from(
+                parent: ViewGroup,
+                viewType: Int,
+                audioExoPlayer: AudioExoPlayer,
+                showDialogResponse: (VOResponseBody) -> Unit
+            ): ViewHolder {
                 val layoutInflater = LayoutInflater.from(parent.context)
                 val binding = DataBindingUtil.inflate<ViewDataBinding>(layoutInflater, viewType, parent, false)
-                return ViewHolder(binding, audioExoPlayer, showDialogResponse)
+                val responsesImagesAdapter = ResponsesImagesAdapter()
+                return ViewHolder(binding, audioExoPlayer, showDialogResponse, responsesImagesAdapter)
             }
         }
 

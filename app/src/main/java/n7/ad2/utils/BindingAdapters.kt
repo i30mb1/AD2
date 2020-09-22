@@ -12,6 +12,7 @@ import androidx.databinding.BindingAdapter
 import androidx.recyclerview.widget.ListAdapter
 import androidx.recyclerview.widget.RecyclerView
 import coil.api.load
+import n7.ad2.ui.heroResponse.ResponsesImagesAdapter
 
 @BindingAdapter("loadImageUrl", "onError", "placeHolder", requireAll = false)
 fun ImageView.loadImageUrl(url: String?, error: Drawable?, placeHolder: Drawable?) {
@@ -20,6 +21,11 @@ fun ImageView.loadImageUrl(url: String?, error: Drawable?, placeHolder: Drawable
         error(error)
         placeholder(placeHolder)
     }
+}
+
+@BindingAdapter("icons")
+fun RecyclerView.loadIcons(list: List<String>) {
+   (this.adapter as ResponsesImagesAdapter).list = list
 }
 
 @Suppress("UNCHECKED_CAST")
