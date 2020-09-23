@@ -73,7 +73,7 @@ class ParseHeroes private constructor(
     }
 
     private fun loadResponses(locale: LOCALE, heroList: ArrayList<String>) = launch {
-        heroList.forEach { hero ->
+        heroList.filter { it == "Legion Commander" }.forEach { hero ->
             val root = connectTo("${locale.baseUrl}/${hero}/${locale.response}")
             val allResponsesWithCategories = JSONArray()
 
@@ -111,11 +111,20 @@ class ParseHeroes private constructor(
                                 innerNode.text()
                             }
                             if (node.getElementsByTag("img").size > 0) {
-                                response["images"] = JSONArray().apply {
+                                response["icons"] = JSONArray().apply {
                                     node.let { innerNode ->
                                         innerNode.getElementsByTag("span").forEach { span -> span.remove() }
                                         innerNode.getElementsByTag("a").forEach { image ->
-                                            add(image.attr("title").replace(" \\(.+?\\)".toRegex(),""))
+                                            val regex = Regex(" \\(.+?\\)")
+                                            var title = image.attr("title")
+                                            val matches = regex.containsMatchIn(title)
+                                            if (matches) {
+                                                title = "items/" + title.replace(regex, "") + "/full.png"
+                                                add(title)
+                                            } else {
+                                                title = "heroes/$title/minimap.png"
+                                                add(title)
+                                            }
                                         }
                                     }
                                 }
@@ -468,10 +477,10 @@ class ParseHeroes private constructor(
 
 fun main() = runBlocking {
     parser {
-        loadRusDescription = true
+        loadRusDescription = false
         loadEngDescription = false
         loadRusResponses = false
-        loadEngResponses = false
+        loadEngResponses = true
         loadHeroFullImage = false
         loadHeroSpellImage = false
     }.start()
