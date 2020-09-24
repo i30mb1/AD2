@@ -105,6 +105,7 @@ class ParseHeroes private constructor(
                         child.children().forEach node@{ node ->
                             response = JSONObject()
                             val audioUrl = node.getElementsByTag("a").getOrNull(0) ?: return@node
+                            val audioUrl2 = node.getElementsByTag("a").getOrNull(2)?.attr("href")?.toString()
                             response["audioUrl"] = audioUrl.attr("href").toString()
                             response["title"] = node.let { innerNode ->
                                 innerNode.getElementsByTag("span").forEach { span -> span.remove() }
@@ -129,7 +130,19 @@ class ParseHeroes private constructor(
                                     }
                                 }
                             }
+                            val previousTitle = (responses.getOrNull(responses.size - 1) as? JSONObject)?.getOrDefault("title","-")
+                            if(previousTitle == response["title"]) response["isArcane"] = true
                             responses.add(response)
+
+                            if (audioUrl2 != null) {
+                                val oldCopy = response
+                                response = JSONObject()
+                                if (oldCopy.containsKey("icons")) response["icons"] = oldCopy.get("icons")
+                                response["audioUrl"] = audioUrl2
+                                response["title"] = oldCopy["title"]
+                                response["isArcane"] = true
+                                responses.add(response)
+                            }
                         }
                         category["responses"] = responses
                     }
