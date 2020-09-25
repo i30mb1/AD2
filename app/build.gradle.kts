@@ -77,7 +77,6 @@ dependencies {
     api(Lib.firebaseAnal)
     api(Lib.playCore)
     api(Lib.playCoreKtx)
-    api(Lib.coroutines)
     api(Lib.coroutinesLifecycle)
     api(Lib.coroutinesLivedata)
     api(Lib.coroutinesViewmodel)
