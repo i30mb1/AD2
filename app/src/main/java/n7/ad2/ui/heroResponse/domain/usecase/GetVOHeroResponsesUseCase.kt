@@ -25,7 +25,7 @@ class GetVOHeroResponsesUseCase @Inject constructor(
         localHeroResponses.forEach {
             result.add(VOResponseHeader(it.category))
             it.responses.forEach { response ->
-                val titleForSavedFile = response.audioUrl.substringAfterLast("/")
+                val titleForSavedFile = response.audioUrl.substringBeforeLast(".mp3").substringAfterLast("/") + ".mp3"
 
                 var savedInMemory = false
                 var audioUrl = response.audioUrl
