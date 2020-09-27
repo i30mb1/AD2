@@ -40,8 +40,11 @@ class GetVOHeroResponsesUseCase @Inject constructor(
                 // todo need to optimize this
 
 //                savedResponses.remove(fileToRemoveFromSavedResponses)
+                val icons = response.icons.map { iconPath ->
+                    "file:///android_asset/$iconPath"
+                }
 
-                result.add(VOResponseBody(audioUrl, heroName, response.title, emptyList(), titleForSavedFile, savedInMemory))
+                result.add(VOResponseBody(audioUrl, heroName, response.title, icons, titleForSavedFile, savedInMemory))
             }
         }
 

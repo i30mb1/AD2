@@ -20,7 +20,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="?android:actionBarSize"
                 android:minHeight="?attr/actionBarSize"
-                app:layout_scrollFlags="scroll" />
+                app:layout_scrollFlags="scroll|snap" />
 
             <com.google.android.material.tabs.TabLayout
                 android:id="@+id/tl"

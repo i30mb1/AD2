@@ -16,5 +16,7 @@ data class Response(
     @Json(name = "audioUrl")
     val audioUrl: String = "",
     @Json(name = "title")
-    val title: String = ""
+    val title: String = "",
+    @Json(name = "icons")
+    val icons: List<String> = emptyList()
 )
