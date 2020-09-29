@@ -124,6 +124,10 @@ class ResponsesListAdapter(
 
             private const val MAX_ICONS_IN_ROW = 3
             private const val MIN_ICONS_IN_ROW = 1
+            private const val MAX_VIEWS_RESPONSE_BODY = 30
+            private val viewPool = RecyclerView.RecycledViewPool().apply {
+                setMaxRecycledViews(R.layout.item_response_body, MAX_VIEWS_RESPONSE_BODY)
+            }
 
             fun from(
                 parent: ViewGroup,
@@ -132,6 +136,8 @@ class ResponsesListAdapter(
             ): BodyViewHolder {
                 val layoutInflater = LayoutInflater.from(parent.context)
                 val binding = ItemResponseBodyBinding.inflate(layoutInflater, parent, false)
+                binding.rv.setRecycledViewPool(viewPool)
+                (binding.rv.layoutManager as GridLayoutManager).recycleChildrenOnDetach = true
                 val responsesImagesAdapter = ResponsesImagesAdapter()
                 return BodyViewHolder(binding, audioExoPlayer, showDialogResponse, responsesImagesAdapter)
             }
