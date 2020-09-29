@@ -4,10 +4,12 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.TextView
+import androidx.core.math.MathUtils.clamp
 import androidx.databinding.DataBindingUtil
 import androidx.databinding.ViewDataBinding
 import androidx.paging.PagedListAdapter
 import androidx.recyclerview.widget.DiffUtil
+import androidx.recyclerview.widget.GridLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import n7.ad2.BR
 import n7.ad2.R
@@ -83,8 +85,9 @@ class ResponsesListAdapter(
                 is ItemResponseBodyBinding -> {
                     binding.audioExoPlayer = audioExoPlayer
                     binding.rv.adapter = responsesImagesAdapter
+                    (binding.rv.layoutManager as GridLayoutManager).spanCount = clamp((item as VOResponseBody).icons.size, MIN_ICONS_IN_ROW, MAX_ICONS_IN_ROW)
                     binding.root.setOnLongClickListener {
-                        showDialogResponse(item as VOResponseBody)
+                        showDialogResponse(item)
                         true
                     }
                 }
@@ -97,6 +100,10 @@ class ResponsesListAdapter(
         }
 
         companion object {
+
+            const val MAX_ICONS_IN_ROW = 3
+            const val MIN_ICONS_IN_ROW = 1
+
             fun from(
                 parent: ViewGroup,
                 viewType: Int,
