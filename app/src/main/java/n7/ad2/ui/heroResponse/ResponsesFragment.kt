@@ -39,7 +39,11 @@ class ResponsesFragment : Fragment(R.layout.fragment_hero_responses) {
 
         downloadResponseManager = DownloadResponseManager(requireActivity().contentResolver, Handler(Looper.getMainLooper()), requireActivity().application, lifecycle)
         downloadResponseManager.setDownloadListener {
-            heroPageViewModel.refresh()
+            when (it) {
+                is DownloadSuccess -> heroPageViewModel.refresh()
+                is DownloadFailed -> requireActivity().showDialogError(it.error)
+            }
+
         }
         viewModel.error.observe(viewLifecycleOwner) {
             it?.let {

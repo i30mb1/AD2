@@ -2,7 +2,12 @@ package n7.ad2.ui.heroResponse
 
 import android.app.Application
 import android.app.DownloadManager
-import android.content.*
+import android.content.BroadcastReceiver
+import android.content.ContentResolver
+import android.content.ContentValues
+import android.content.Context
+import android.content.Intent
+import android.content.IntentFilter
 import android.database.ContentObserver
 import android.net.Uri
 import android.os.Handler
@@ -16,14 +21,13 @@ import androidx.core.util.forEach
 import androidx.lifecycle.Lifecycle
 import androidx.lifecycle.LifecycleObserver
 import androidx.lifecycle.OnLifecycleEvent
-import n7.ad2.data.source.local.Repository
 import n7.ad2.data.source.local.ResponseRepository
 import n7.ad2.ui.heroResponse.domain.vo.VOResponseBody
 import java.io.File
 
 sealed class DownloadResult
 data class DownloadSuccess(val downloadId: Long) : DownloadResult()
-object DownloadFailed : DownloadResult()
+data class DownloadFailed(val error: Throwable) : DownloadResult()
 
 private typealias Result<T> = (T) -> Unit
 
@@ -55,21 +59,26 @@ class DownloadResponseManager(
         downloadListener = listener
     }
 
-    fun download(item: VOResponseBody): Long {
-        currentItem = item
+    fun download(item: VOResponseBody): Long? {
+        try {
+            currentItem = item
 
-        val uri = item.audioUrl!!.toUri()
-        val downloadRequest = DownloadManager.Request(uri)
+            val uri = item.audioUrl!!.toUri()
+            val downloadRequest = DownloadManager.Request(uri)
                 .setAllowedNetworkTypes(DownloadManager.Request.NETWORK_MOBILE)
-            .setTitle(item.title)
-            .setNotificationVisibility(DownloadManager.Request.VISIBILITY_HIDDEN)
-            .setDestinationInExternalFilesDir(application, ResponseRepository.DIRECTORY_RESPONSES, item.heroName + File.separator + item.titleForFile)
+                .setTitle(item.title)
+                .setNotificationVisibility(DownloadManager.Request.VISIBILITY_HIDDEN)
+                .setDestinationInExternalFilesDir(application, ResponseRepository.DIRECTORY_RESPONSES, item.heroName + File.separator + item.titleForFile)
 //                .setVisibleInDownloadsUi(false)
 
-        downloadId = downloadManager.enqueue(downloadRequest)
-        registerObserverFor(downloadId, item)
+            downloadId = downloadManager.enqueue(downloadRequest)
+            registerObserverFor(downloadId, item)
 
-        return downloadId
+            return downloadId
+        } catch (e: Exception) {
+            downloadListener?.invoke(DownloadFailed(e))
+        }
+        return null
     }
 
     private fun reSaveResponseIn() {
@@ -120,9 +129,10 @@ class DownloadResponseManager(
                 val downloadedBytes = it.getIntOrNull(it.getColumnIndex(DownloadManager.COLUMN_BYTES_DOWNLOADED_SO_FAR))
                 val totalBytes = it.getIntOrNull(it.getColumnIndex(DownloadManager.COLUMN_TOTAL_SIZE_BYTES))
                 val status = it.getIntOrNull(it.getColumnIndex(DownloadManager.COLUMN_STATUS))
+                val errorCode = it.getIntOrNull(it.getColumnIndex(DownloadManager.COLUMN_REASON))
                 when (status) {
                     DownloadManager.STATUS_FAILED -> {
-                        downloadListener?.invoke(DownloadFailed)
+                        downloadListener?.invoke(DownloadFailed(Throwable("Donwload Error Code = $errorCode")))
                         stopProgress(downloadId)
                     }
                     DownloadManager.STATUS_PAUSED, DownloadManager.STATUS_RUNNING, DownloadManager.STATUS_PENDING -> {
