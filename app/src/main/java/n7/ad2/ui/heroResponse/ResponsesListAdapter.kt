@@ -124,9 +124,9 @@ class ResponsesListAdapter(
 
             private const val MAX_ICONS_IN_ROW = 3
             private const val MIN_ICONS_IN_ROW = 1
-            private const val MAX_VIEWS_RESPONSE_BODY = 30
+            private const val MAX_VIEWS_RESPONSE_IMAGE = 30
             private val viewPool = RecyclerView.RecycledViewPool().apply {
-                setMaxRecycledViews(R.layout.item_response_body, MAX_VIEWS_RESPONSE_BODY)
+                setMaxRecycledViews(R.layout.item_response_image, MAX_VIEWS_RESPONSE_IMAGE)
             }
 
             fun from(
