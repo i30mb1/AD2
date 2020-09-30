@@ -5,6 +5,10 @@
     <data>
 
         <variable
+            name="binding"
+            type="androidx.databinding.ViewDataBinding" />
+
+        <variable
             name="listener"
             type="n7.ad2.base.VOModelListener" />
 
@@ -15,6 +19,7 @@
 
     <com.google.android.material.card.MaterialCardView
         android:layout_width="match_parent"
+        android:onClick="@{()-> listener.onClickListener(binding)}"
         android:layout_height="wrap_content"
         tools:layout_height="64dp"
         tools:layout_width="88dp">

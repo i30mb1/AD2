@@ -5,7 +5,7 @@ import android.view.ViewGroup
 import androidx.paging.PagedListAdapter
 import androidx.recyclerview.widget.DiffUtil
 import androidx.recyclerview.widget.RecyclerView
-import coil.api.clear
+import coil.clear
 import n7.ad2.base.VOModelListener
 import n7.ad2.databinding.ItemItemBinding
 import n7.ad2.ui.items.domain.vo.VOItem
@@ -35,12 +35,10 @@ class ItemsPagedListAdapter constructor(fragment: ItemsFragment) : PagedListAdap
         private val listener: VOModelListener<ItemItemBinding>
     ) : RecyclerView.ViewHolder(binding.root) {
 
-        fun bindTo(item: VOItem) = binding.let {
-            it.model = item
+        fun bindTo(model: VOItem) = binding.let {
+            it.model = model
             it.listener = listener
-            it.root.setOnClickListener {
-                listener.onClickListener(binding)
-            }
+            it.binding = binding
             it.executePendingBindings()
         }
 
