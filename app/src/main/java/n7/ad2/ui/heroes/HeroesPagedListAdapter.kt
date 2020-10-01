@@ -28,6 +28,8 @@ class HeroesPagedListAdapter internal constructor(fragment: HeroesFragment) : Pa
         true
     }
 
+    override fun getItemViewType(position: Int): Int = R.layout.item_hero
+
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): ViewHolder = ViewHolder.from(parent, listener, longListener)
 
     override fun onBindViewHolder(holder: ViewHolder, position: Int) {

@@ -136,6 +136,7 @@ class ResponsesListAdapter(
                 val layoutInflater = LayoutInflater.from(parent.context)
                 val binding = ItemResponseBodyBinding.inflate(layoutInflater, parent, false)
                 binding.rv.setRecycledViewPool(viewPool)
+                binding.rv.setItemViewCacheSize(MAX_VIEWS_RESPONSE_IMAGE)
                 binding.rv.setHasFixedSize(true)
                 (binding.rv.layoutManager as GridLayoutManager).recycleChildrenOnDetach = true
                 val responsesImagesAdapter = ResponsesImagesAdapter()
