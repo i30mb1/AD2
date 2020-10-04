@@ -5,11 +5,12 @@ import android.util.AttributeSet
 import android.view.Gravity
 import android.view.animation.AccelerateDecelerateInterpolator
 import android.widget.ImageView
-import android.widget.TextView
 import androidx.appcompat.widget.Toolbar
 import androidx.transition.Slide
 import androidx.transition.TransitionManager
 import coil.load
+import com.robinhood.ticker.TickerUtils
+import com.robinhood.ticker.TickerView
 import n7.ad2.R
 import n7.ad2.data.source.local.HeroLocale
 import n7.ad2.data.source.local.Repository
@@ -18,7 +19,6 @@ import n7.ad2.utils.extension.toPx
 
 class AnimatedToolbar(context: Context, attr: AttributeSet) : Toolbar(context, attr) {
 
-    private var locale = HeroLocale.valueOf(context.getString(R.string.locale))
     private var onChangeResponseLocaleListener: ((locale: HeroLocale) -> Unit)? = null
     private val params = LayoutParams(30.toPx, 30.toPx).apply {
         gravity = Gravity.CENTER
@@ -28,13 +28,15 @@ class AnimatedToolbar(context: Context, attr: AttributeSet) : Toolbar(context, a
         contentDescription = context.getString(R.string.desc_hero_mini_avatar)
         addView(this)
     }
-    private val tvLocale: TextView = TextView(context, null, R.style.TextAppearance_Body1).apply {
+    private val tvLocale: TickerView = TickerView(context, null, R.style.TextAppearance_Body1).apply {
         layoutParams = params.apply { width = 60.toPx }
+        setCharacterList(TickerUtils.getDefaultListForUSCurrency())
+        animationDuration = resources.getInteger(R.integer.animation_long).toLong()
         visibility = GONE
         gravity = Gravity.CENTER
-        text = locale.name
+        text = HeroLocale.valueOf(context.getString(R.string.locale)).name
         setOnClickListener {
-            locale = if (text == HeroLocale.ENG.name) HeroLocale.RU else HeroLocale.ENG
+            val locale = if (text == HeroLocale.ENG.name) HeroLocale.RU else HeroLocale.ENG
             text = locale.name
             onChangeResponseLocaleListener?.invoke(locale)
         }
