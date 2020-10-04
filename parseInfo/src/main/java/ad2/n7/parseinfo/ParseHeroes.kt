@@ -136,7 +136,7 @@ class ParseHeroes private constructor(
                             if(previousTitle == response["title"]) response["isArcane"] = true
                             responses.add(response)
 
-                            if (audioUrl2 != null) {
+                            if (audioUrl2 != null && !audioUrl2.startsWith("/")) {
                                 val oldCopy = response
                                 response = JSONObject()
                                 if (oldCopy.containsKey("icons")) response["icons"] = oldCopy.get("icons")
