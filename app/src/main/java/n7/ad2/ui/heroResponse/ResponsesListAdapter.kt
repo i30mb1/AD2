@@ -136,7 +136,7 @@ class ResponsesListAdapter(
                 val layoutInflater = LayoutInflater.from(parent.context)
                 val binding = ItemResponseBodyBinding.inflate(layoutInflater, parent, false)
                 binding.rv.setRecycledViewPool(viewPool)
-                binding.rv.setItemViewCacheSize(MAX_VIEWS_RESPONSE_IMAGE)
+//                binding.rv.setItemViewCacheSize(MAX_VIEWS_RESPONSE_IMAGE)
                 binding.rv.setHasFixedSize(true)
                 (binding.rv.layoutManager as GridLayoutManager).recycleChildrenOnDetach = true
                 val responsesImagesAdapter = ResponsesImagesAdapter()
@@ -157,9 +157,11 @@ class ResponsesListAdapter(
 
         override fun areContentsTheSame(oldItem: VOResponse, newItem: VOResponse): Boolean {
             return when (oldItem) {
-                is VOResponseHeader -> if (newItem is VOResponseHeader) return true else false
+                is VOResponseHeader -> if (newItem is VOResponseBody) return false else {
+                    oldItem == (newItem as VOResponseHeader)
+                }
                 is VOResponseBody -> if(newItem is VOResponseHeader) return false else {
-                    oldItem.title == (newItem as VOResponseBody).title && oldItem.savedInMemory == newItem.savedInMemory
+                    oldItem == (newItem as VOResponseBody)
                 }
             }
         }
