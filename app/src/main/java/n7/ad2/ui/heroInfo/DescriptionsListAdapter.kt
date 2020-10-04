@@ -92,7 +92,7 @@ class DescriptionsListAdapter(
         }
 
         private fun setBoundToImageSpan(tv: TextView, spannableString: SpannableString, infoPopupWindow: InfoPopupWindow) {
-            if (lineHeight == 0) lineHeight = tv.lineHeight - 2.toPx.toInt()
+            if (lineHeight == 0) lineHeight = tv.lineHeight - 2.toPx
             spannableString.getSpans<ImageSpan>().forEach {
                 it.drawable.setBounds(0, 0, lineHeight, lineHeight)
             }
