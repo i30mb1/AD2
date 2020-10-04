@@ -1,1 +1,1 @@
-include(":rules", ":app", ":parse", ":parseInfo", ":feature_streams")
+include(":rules", ":app", ":parseInfo", ":feature_streams")

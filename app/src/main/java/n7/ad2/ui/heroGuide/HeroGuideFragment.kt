@@ -38,6 +38,7 @@ class HeroGuideFragment : Fragment(R.layout.fragment_hero_guide) {
         heroPageViewModel.hero.observe(viewLifecycleOwner) {
             viewModel.loadHeroWithGuides(it)
             loadHeroGuide(it.name)
+            // todo syka вызывается каждый раз когда сэчу новый лист нахуй?:
         }
         viewModel.guide.observe(viewLifecycleOwner) { vo ->
             vo.heroBestVersus.forEach {

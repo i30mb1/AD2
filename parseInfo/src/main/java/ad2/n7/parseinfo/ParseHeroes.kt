@@ -73,7 +73,9 @@ class ParseHeroes private constructor(
     }
 
     private fun loadResponses(locale: LOCALE, heroList: ArrayList<String>) = launch {
-        heroList.filter { it == "Legion Commander" }.forEach { hero ->
+        heroList
+//            .filter { it == "Legion Commander" }
+            .forEach { hero ->
             val root = connectTo("${locale.baseUrl}/${hero}/${locale.response}")
             val allResponsesWithCategories = JSONArray()
 
@@ -492,7 +494,7 @@ fun main() = runBlocking {
     parser {
         loadRusDescription = false
         loadEngDescription = false
-        loadRusResponses = false
+        loadRusResponses = true
         loadEngResponses = true
         loadHeroFullImage = false
         loadHeroSpellImage = false

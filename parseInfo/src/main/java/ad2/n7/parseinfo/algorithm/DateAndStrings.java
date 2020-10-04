@@ -1,3 +1,5 @@
+package ad2.n7.parseinfo.algorithm;
+
 import java.text.ParseException;
 import java.text.SimpleDateFormat;
 import java.util.Calendar;
