@@ -20,7 +20,7 @@ class AnimatedToolbar(context: Context, attr: AttributeSet) : Toolbar(context, a
 
     private var locale = HeroLocale.valueOf(context.getString(R.string.locale))
     private var onChangeResponseLocaleListener: ((locale: HeroLocale) -> Unit)? = null
-    private val params = LayoutParams(30.toPx.toInt(), 30.toPx.toInt()).apply {
+    private val params = LayoutParams(30.toPx, 30.toPx).apply {
         gravity = Gravity.CENTER
     }
     private val ivHero: ImageView = ImageView(context).apply {
@@ -29,7 +29,7 @@ class AnimatedToolbar(context: Context, attr: AttributeSet) : Toolbar(context, a
         addView(this)
     }
     private val tvLocale: TextView = TextView(context, null, R.style.TextAppearance_Body1).apply {
-        layoutParams = params
+        layoutParams = params.apply { width = 60.toPx }
         visibility = GONE
         gravity = Gravity.CENTER
         text = locale.name
