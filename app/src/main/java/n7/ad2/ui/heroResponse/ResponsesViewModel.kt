@@ -8,6 +8,9 @@ import androidx.lifecycle.liveData
 import androidx.lifecycle.switchMap
 import androidx.paging.PagedList
 import androidx.paging.toLiveData
+import kotlinx.coroutines.channels.BroadcastChannel
+import kotlinx.coroutines.channels.Channel
+import kotlinx.coroutines.flow.asFlow
 import n7.ad2.R
 import n7.ad2.data.source.local.HeroLocale
 import n7.ad2.data.source.local.model.LocalHero
@@ -19,6 +22,8 @@ class ResponsesViewModel @Inject constructor(
         private val getHeroResponsesInteractor: GetHeroResponsesInteractor
 ) : AndroidViewModel(application) {
 
+    private val _error2 = BroadcastChannel<Throwable>(Channel.BUFFERED)
+    val error2 = _error2.asFlow()
     private val _error = MutableLiveData<Throwable?>()
     val error: LiveData<Throwable?> = _error
     private var locale = HeroLocale.valueOf(getApplication<Application>().getString(R.string.locale))
@@ -32,6 +37,7 @@ class ResponsesViewModel @Inject constructor(
                     emitSource(sourceFactory.toLiveData(config))
                 }
                 .onFailure {
+                    _error2.send(it)
                     _error.value = it
                     _error.value = null
                 }
