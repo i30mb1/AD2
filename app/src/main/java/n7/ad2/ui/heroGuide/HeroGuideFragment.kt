@@ -34,7 +34,7 @@ class HeroGuideFragment : Fragment(R.layout.fragment_hero_guide) {
             it.lifecycleOwner = viewLifecycleOwner
             it.vieModel = viewModel
         }
-
+        // region Click
         heroPageViewModel.hero.observe(viewLifecycleOwner) {
             viewModel.loadHeroWithGuides(it)
             loadHeroGuide(it.name)
@@ -46,6 +46,7 @@ class HeroGuideFragment : Fragment(R.layout.fragment_hero_guide) {
                 binding.flowHeroBestVersus.addView(it)
             }
         }
+        // endregion
     }
 
     private fun loadHeroGuide(heroName: String) {
