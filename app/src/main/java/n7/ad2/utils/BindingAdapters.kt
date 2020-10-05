@@ -11,7 +11,7 @@ import androidx.core.widget.TextViewCompat
 import androidx.databinding.BindingAdapter
 import androidx.recyclerview.widget.ListAdapter
 import androidx.recyclerview.widget.RecyclerView
-import coil.api.load
+import coil.load
 import n7.ad2.ui.heroResponse.ResponsesImagesAdapter
 
 @BindingAdapter("loadImageUrl", "onError", "placeHolder", requireAll = false)

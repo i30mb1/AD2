@@ -13,7 +13,8 @@
         android:layout_width="20dp"
         android:layout_height="20dp"
         loadImageUrl="@{url}"
+        onError="@{@drawable/ic_error_response}"
         android:contentDescription="@{url}"
         android:padding="2dp"
-        tools:src="@drawable/creep" />
+        tools:src="@drawable/ic_error_response" />
 </layout>
