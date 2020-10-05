@@ -2,6 +2,7 @@ package n7.ad2.ui.heroResponse.domain.usecase
 
 import kotlinx.coroutines.CoroutineDispatcher
 import kotlinx.coroutines.withContext
+import n7.ad2.data.source.local.model.LocalHero
 import n7.ad2.ui.heroResponse.domain.model.LocalHeroResponsesItem
 import n7.ad2.ui.heroResponse.domain.vo.VOResponse
 import n7.ad2.ui.heroResponse.domain.vo.VOResponseBody
@@ -14,7 +15,7 @@ class ConvertLocalHeroToVOHeroUseCase @Inject constructor(
 ) {
 
     suspend operator fun invoke(
-        heroName: String,
+        localHero: LocalHero,
         localHeroResponses: List<LocalHeroResponsesItem>,
         savedHeroResponses: List<File>
     ): List<VOResponse> = withContext(ioDispatcher) {
@@ -43,8 +44,11 @@ class ConvertLocalHeroToVOHeroUseCase @Inject constructor(
                 val icons = response.icons.map { iconPath ->
                     "file:///android_asset/$iconPath"
                 }
+                if (response.isArcane) {
+                    (icons as MutableList).add(0, "file:///android_asset/${localHero.assetsPath}/arcane.png")
+                }
 
-                result.add(VOResponseBody(audioUrl, heroName, response.title, icons, titleForSavedFile, savedInMemory))
+                result.add(VOResponseBody(audioUrl, localHero.name, response.title, icons, titleForSavedFile, savedInMemory))
             }
         }
 

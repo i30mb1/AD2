@@ -21,7 +21,7 @@ class GetHeroResponsesInteractor @Inject constructor(
             val json = getJsonHeroResponseUseCase(localHero.assetsPath, locale)
             val localHeroResponses = getLocalHeroResponsesFromJsonUseCase(json)
             val savedHeroResponses = getSavedHeroResponseUseCase(localHero.name)
-            Result.success(convertLocalHeroToVOHeroUseCase.invoke(localHero.name, localHeroResponses, savedHeroResponses))
+            Result.success(convertLocalHeroToVOHeroUseCase.invoke(localHero, localHeroResponses, savedHeroResponses))
         } catch (e: Exception) {
             Result.failure(e)
         }

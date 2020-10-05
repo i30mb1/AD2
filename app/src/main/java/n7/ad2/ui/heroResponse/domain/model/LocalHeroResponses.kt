@@ -18,5 +18,7 @@ data class Response(
     @Json(name = "title")
     val title: String = "",
     @Json(name = "icons")
-    val icons: List<String> = emptyList()
+    val icons: List<String> = emptyList(),
+    @Json(name = "isArcane")
+    val isArcane: Boolean = false
 )
