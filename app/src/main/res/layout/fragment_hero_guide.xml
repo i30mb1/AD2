@@ -1,4 +1,5 @@
 <layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
     xmlns:app="http://schemas.android.com/apk/res-auto">
 
     <data>
@@ -14,17 +15,30 @@
         android:id="@+id/root"
         android:layout_height="match_parent">
 
+        <TextView
+            android:id="@+id/tv_best_versus"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:paddingStart="4dp"
+            android:paddingEnd="4dp"
+            android:text="@string/best_versus"
+            android:textAppearance="?textAppearanceBody1"
+            tools:ignore="MissingConstraints" />
+
         <androidx.constraintlayout.helper.widget.Flow
             android:id="@+id/flow_hero_best_versus"
             android:layout_width="match_parent"
+            android:padding="2dp"
+            app:constraint_referenced_ids="tv_best_versus"
             android:layout_height="wrap_content"
             app:flow_horizontalGap="2dp"
             app:flow_horizontalStyle="packed"
+            app:flow_horizontalBias="0"
             app:flow_verticalGap="2dp"
             app:flow_verticalStyle="packed"
-            app:flow_wrapMode="aligned"
+            app:flow_wrapMode="chain"
             app:flow_horizontalAlign="start"
-            app:flow_verticalAlign="bottom"
+            app:flow_verticalAlign="baseline"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent" />

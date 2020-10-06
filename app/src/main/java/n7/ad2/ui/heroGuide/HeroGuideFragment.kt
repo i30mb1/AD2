@@ -6,6 +6,7 @@ import androidx.fragment.app.Fragment
 import androidx.fragment.app.activityViewModels
 import androidx.lifecycle.lifecycleScope
 import androidx.lifecycle.observe
+import androidx.transition.TransitionManager
 import androidx.work.OneTimeWorkRequestBuilder
 import androidx.work.WorkInfo
 import androidx.work.WorkManager
@@ -45,6 +46,7 @@ class HeroGuideFragment : Fragment(R.layout.fragment_hero_guide) {
         }
         viewModel.guide.observe(viewLifecycleOwner) { vo ->
             lifecycleScope.launch {
+                TransitionManager.beginDelayedTransition(binding.root)
                 vo.heroBestVersus.forEach {
                     yield()
                     binding.root.addView(it)
