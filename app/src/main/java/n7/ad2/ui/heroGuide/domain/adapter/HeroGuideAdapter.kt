@@ -4,7 +4,7 @@ import android.app.Application
 import android.view.View
 import android.widget.ImageView
 import androidx.constraintlayout.widget.ConstraintLayout
-import coil.api.load
+import coil.load
 import n7.ad2.data.source.local.Repository
 import n7.ad2.ui.heroGuide.domain.model.LocalGuideJson
 import n7.ad2.ui.heroGuide.domain.vo.VOHeroGuide
