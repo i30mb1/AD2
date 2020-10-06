@@ -74,8 +74,8 @@
     <string name="hero_response_ringtone_set">Ringtone has been set! Probably!</string>
     <string name="hero_personal_tip_manta_descr">it shows can be this ability used by illusions or not</string>
     <string name="fragment_guide_starting_items">Starting items</string>
-    <string name="fragment_guide_best_versus">Best Versus</string>
-    <string name="fragment_guide_worst_versus">Worst Versus</string>
+    <string name="best_versus">Best Versus : </string>
+    <string name="worst_versus">Worst Versus : </string>
     <string name="fragment_guide_current_winrate" translatable="false">%s</string>
     <string name="fragment_guide_current_pickrate" translatable="false">%s</string>
     <string name="setting_subscription_key" translatable="false">pref_month_key</string>
