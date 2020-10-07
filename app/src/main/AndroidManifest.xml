@@ -43,7 +43,9 @@
         <activity
             android:name=".ui.setting.SettingActivity"
             android:screenOrientation="portrait" />
-        <activity android:name=".ui.heroPage.HeroPageActivity" />
+        <activity
+            android:name=".ui.heroPage.HeroPageActivity"
+            android:screenOrientation="portrait" />
         <activity
             android:name=".streams.StreamsFullActivity"
             android:finishOnTaskLaunch="true"

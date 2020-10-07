@@ -3,6 +3,7 @@ package n7.ad2.ui.heroPage
 import android.content.Context
 import android.util.AttributeSet
 import android.view.Gravity
+import android.view.OrientationEventListener
 import android.view.animation.AccelerateDecelerateInterpolator
 import android.widget.ImageView
 import androidx.appcompat.widget.Toolbar
@@ -47,6 +48,12 @@ class AnimatedToolbar(context: Context, attr: AttributeSet) : Toolbar(context, a
         duration = resources.getInteger(R.integer.animation_medium).toLong()
         interpolator = AccelerateDecelerateInterpolator()
     }
+    private val listener = object : OrientationEventListener(context) {
+        override fun onOrientationChanged(orientation: Int) {
+                ivHero.rotation = orientation.toFloat()
+        }
+
+    }.enable()
 
     fun setOnChangeHeroLocaleListener(listener: (locale: HeroLocale) -> Unit) {
         this.onChangeResponseLocaleListener = listener
