@@ -2,17 +2,17 @@ package n7.ad2.ui.heroGuide
 
 import android.os.Bundle
 import android.view.View
+import androidx.constraintlayout.helper.widget.Flow
+import androidx.core.view.children
 import androidx.fragment.app.Fragment
 import androidx.fragment.app.activityViewModels
 import androidx.lifecycle.lifecycleScope
 import androidx.lifecycle.observe
-import androidx.transition.TransitionManager
 import androidx.work.OneTimeWorkRequestBuilder
 import androidx.work.WorkInfo
 import androidx.work.WorkManager
 import androidx.work.workDataOf
 import kotlinx.coroutines.launch
-import kotlinx.coroutines.yield
 import n7.ad2.R
 import n7.ad2.databinding.FragmentHeroGuideBinding
 import n7.ad2.di.injector
@@ -40,15 +40,18 @@ class HeroGuideFragment : Fragment(R.layout.fragment_hero_guide) {
         }
         // region Click
         heroPageViewModel.hero.observe(viewLifecycleOwner) {
-            viewModel.loadHeroWithGuides(it)
+            viewModel.loadHeroWithGuides(it, requireContext())
             loadHeroGuide(it.name)
             // todo syka вызывается каждый раз когда сэчу новый лист нахуй?:
         }
         viewModel.guide.observe(viewLifecycleOwner) { vo ->
             lifecycleScope.launch {
-                TransitionManager.beginDelayedTransition(binding.root)
+                binding.root.children
+                    .asIterable()
+                    .filter { it !is Flow }
+                    .forEach { binding.root.removeView(it) }
+
                 vo.heroBestVersus.forEach {
-                    yield()
                     binding.root.addView(it)
                     binding.flowHeroBestVersus.addView(it)
                 }

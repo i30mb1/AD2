@@ -1,7 +1,12 @@
 package n7.ad2.ui.heroGuide
 
 import android.app.Application
-import androidx.lifecycle.*
+import android.content.Context
+import androidx.lifecycle.AndroidViewModel
+import androidx.lifecycle.LiveData
+import androidx.lifecycle.MutableLiveData
+import androidx.lifecycle.SavedStateHandle
+import androidx.lifecycle.viewModelScope
 import com.squareup.inject.assisted.Assisted
 import com.squareup.inject.assisted.AssistedInject
 import kotlinx.coroutines.flow.collect
@@ -27,11 +32,11 @@ class HeroGuideViewModel @AssistedInject constructor(
     private val _guide: MutableLiveData<VOHeroGuide> = MutableLiveData()
     val guide: LiveData<VOHeroGuide> = _guide
 
-    fun loadHeroWithGuides(localHero: LocalHero) {
+    fun loadHeroWithGuides(localHero: LocalHero, context: Context) {
         viewModelScope.launch {
             getLocalHeroWithGuidesUseCase(localHero.name).collect {
                 val localGuideJsonList = convertLocalHeroWithGuidesToLocalGuideJsonUseCase(it)
-                if (localGuideJsonList.isNotEmpty()) _guide.postValue(convertLocalGuideJsonToVOHeroGuide(localGuideJsonList, getApplication())[0])
+                if (localGuideJsonList.isNotEmpty()) _guide.postValue(convertLocalGuideJsonToVOHeroGuide(localGuideJsonList, context)[0])
             }
 
         }

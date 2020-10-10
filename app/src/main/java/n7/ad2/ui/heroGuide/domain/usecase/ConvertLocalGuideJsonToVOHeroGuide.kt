@@ -1,6 +1,6 @@
 package n7.ad2.ui.heroGuide.domain.usecase
 
-import android.app.Application
+import android.content.Context
 import kotlinx.coroutines.CoroutineDispatcher
 import kotlinx.coroutines.withContext
 import n7.ad2.ui.heroGuide.domain.adapter.toVO
@@ -12,9 +12,9 @@ class ConvertLocalGuideJsonToVOHeroGuide @Inject constructor(
     private val ioDispatcher: CoroutineDispatcher
 ) {
 
-    suspend operator fun invoke(list: List<LocalGuideJson>, application: Application): List<VOHeroGuide> = withContext(ioDispatcher) {
+    suspend operator fun invoke(list: List<LocalGuideJson>, context: Context): List<VOHeroGuide> = withContext(ioDispatcher) {
         list.map {
-            it.toVO(application)
+            it.toVO(context)
         }
     }
 
