@@ -3,9 +3,9 @@ package n7.ad2.ui.heroGuide
 import android.os.Bundle
 import android.view.View
 import androidx.constraintlayout.helper.widget.Flow
+import androidx.core.os.bundleOf
 import androidx.core.view.children
 import androidx.fragment.app.Fragment
-import androidx.fragment.app.activityViewModels
 import androidx.lifecycle.lifecycleScope
 import androidx.lifecycle.observe
 import androidx.work.OneTimeWorkRequestBuilder
@@ -16,7 +16,6 @@ import kotlinx.coroutines.launch
 import n7.ad2.R
 import n7.ad2.databinding.FragmentHeroGuideBinding
 import n7.ad2.di.injector
-import n7.ad2.ui.heroPage.HeroPageViewModel
 import n7.ad2.ui.heroPage.showDialogError
 import n7.ad2.utils.viewModelWithSavedStateHandle
 
@@ -24,11 +23,11 @@ class HeroGuideFragment : Fragment(R.layout.fragment_hero_guide) {
 
     private lateinit var binding: FragmentHeroGuideBinding
     private val viewModel: HeroGuideViewModel by viewModelWithSavedStateHandle { injector.heroGuideViewModelFactory }
-    private val heroPageViewModel by activityViewModels<HeroPageViewModel>()
 
     companion object {
-        fun newInstance(): HeroGuideFragment {
-            return HeroGuideFragment()
+        private const val HERO_NAME = "HERO_NAME"
+        fun newInstance(heroName: String): HeroGuideFragment = HeroGuideFragment().apply {
+            arguments = bundleOf(HERO_NAME to heroName)
         }
     }
 
@@ -39,11 +38,9 @@ class HeroGuideFragment : Fragment(R.layout.fragment_hero_guide) {
             it.vieModel = viewModel
         }
         // region Click
-        heroPageViewModel.hero.observe(viewLifecycleOwner) {
-            viewModel.loadHeroWithGuides(it, requireContext())
-            loadHeroGuide(it.name)
-            // todo syka вызывается каждый раз когда сэчу новый лист нахуй?:
-        }
+        val heroName = requireArguments().getString(HERO_NAME)!!
+        viewModel.loadHeroWithGuides(heroName, requireContext())
+        loadNewHeroGuide(heroName)
         viewModel.guide.observe(viewLifecycleOwner) { vo ->
             lifecycleScope.launch {
                 binding.root.children
@@ -60,16 +57,19 @@ class HeroGuideFragment : Fragment(R.layout.fragment_hero_guide) {
         // endregion
     }
 
-    private fun loadHeroGuide(heroName: String) {
+    private fun loadNewHeroGuide(heroName: String) {
         val data = workDataOf(HeroGuideWorker.HERO_NAME to heroName)
         val request = OneTimeWorkRequestBuilder<HeroGuideWorker>()
             .setInputData(data)
             .build()
 
         WorkManager.getInstance(requireContext()).getWorkInfoByIdLiveData(request.id).observe(viewLifecycleOwner) {
-            when(it?.state) {
-                WorkInfo.State.FAILED -> { requireActivity().showDialogError(it.outputData.getString(HeroGuideWorker.RESULT)!!) }
-                else -> {  }
+            when (it?.state) {
+                WorkInfo.State.FAILED -> {
+                    requireActivity().showDialogError(it.outputData.getString(HeroGuideWorker.RESULT)!!)
+                }
+                else -> {
+                }
             }
         }
 

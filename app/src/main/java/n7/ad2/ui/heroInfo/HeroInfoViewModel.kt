@@ -13,6 +13,7 @@ import n7.ad2.heroes.db.HeroModel
 import n7.ad2.heroes.full.ResponseModel
 import n7.ad2.ui.heroInfo.domain.interactor.GetHeroDescriptionInteractor
 import n7.ad2.ui.heroInfo.domain.vo.VOHeroDescription
+import n7.ad2.ui.heroPage.domain.usecase.GetLocalHeroByNameUseCase
 
 //import com.google.android.exoplayer2.ExoPlaybackException;
 //import com.google.android.exoplayer2.ExoPlayerFactory;
@@ -31,7 +32,8 @@ interface ViewModelAssistedFactory<T : ViewModel> {
 class HeroInfoViewModel @AssistedInject constructor(
         application: Application,
         @Assisted handle: SavedStateHandle,
-        private val getHeroDescriptionInteractor: GetHeroDescriptionInteractor
+        private val getHeroDescriptionInteractor: GetHeroDescriptionInteractor,
+        private val getLocalHeroByNameUseCase: GetLocalHeroByNameUseCase
 ) : AndroidViewModel(application) {
 
     @AssistedInject.Factory
@@ -41,9 +43,10 @@ class HeroInfoViewModel @AssistedInject constructor(
 
     val vOHero = MutableLiveData<VOHeroDescription>()
 
-    fun loadHero(localHero: LocalHero) {
+    fun loadHero(heroName: String) {
         viewModelScope.launch {
             val locale = HeroLocale.valueOf(getApplication<Application>().getString(R.string.locale))
+            val localHero = getLocalHeroByNameUseCase(heroName)
             vOHero.value = getHeroDescriptionInteractor(localHero, locale)
         }
     }

@@ -13,21 +13,18 @@ import androidx.activity.result.contract.ActivityResultContracts
 import androidx.annotation.RequiresPermission
 import androidx.appcompat.widget.Toolbar
 import androidx.databinding.DataBindingUtil
-import androidx.lifecycle.observe
 import androidx.viewpager2.widget.ViewPager2
 import com.google.android.material.tabs.TabLayoutMediator
 import n7.ad2.R
 import n7.ad2.databinding.ActivityHeroPageBinding
-import n7.ad2.di.injector
 import n7.ad2.utils.BaseActivity
 import n7.ad2.utils.Utils
-import n7.ad2.utils.viewModelWithSavedStateHandle
 
 class HeroPageActivity : BaseActivity() {
 
-    private lateinit var binding: ActivityHeroPageBinding
-    private val viewModelHeroPage: HeroPageViewModel by viewModelWithSavedStateHandle { injector.heroPageViewModelFactory }
+    lateinit var binding: ActivityHeroPageBinding
     lateinit var audioExoPlayer: AudioExoPlayer
+    lateinit var heroName: String
 
     companion object {
         const val HERO_NAME = "HERO_NAME"
@@ -37,29 +34,28 @@ class HeroPageActivity : BaseActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         binding = DataBindingUtil.setContentView(this, R.layout.activity_hero_page)
-
-        if (savedInstanceState == null) viewModelHeroPage.loadHero(intent.getStringExtra(HERO_NAME)!!)
+        heroName = intent.getStringExtra(HERO_NAME)!!
 
         audioExoPlayer = AudioExoPlayer(application, lifecycle)
         audioExoPlayer.setErrorListener(::showDialogError)
 
-        setToolbar()
-        setViewPager2()
+        setToolbar(heroName)
+        setViewPager2(heroName)
     }
 
     fun scheduleStartPostponedTransition(sharedElement: View) {
         sharedElement.viewTreeObserver.addOnPreDrawListener(
-                object : ViewTreeObserver.OnPreDrawListener {
-                    override fun onPreDraw(): Boolean {
-                        sharedElement.viewTreeObserver.removeOnPreDrawListener(this)
-                        supportStartPostponedEnterTransition()
-                        return true
-                    }
-                })
+            object : ViewTreeObserver.OnPreDrawListener {
+                override fun onPreDraw(): Boolean {
+                    sharedElement.viewTreeObserver.removeOnPreDrawListener(this)
+                    supportStartPostponedEnterTransition()
+                    return true
+                }
+            })
     }
 
-    private fun setViewPager2() {
-        val viewPager2Adapter = ViewPager2Adapter(this)
+    private fun setViewPager2(heroName: String) {
+        val viewPager2Adapter = ViewPager2Adapter(this, heroName)
         binding.vp.adapter = viewPager2Adapter
         TabLayoutMediator(binding.tl, binding.vp) { tab, position ->
             tab.text = when (position) {
@@ -77,11 +73,8 @@ class HeroPageActivity : BaseActivity() {
         })
     }
 
-    private fun setToolbar() {
-        viewModelHeroPage.hero.observe(this) {
-            binding.toolbar.loadHero(it)
-        }
-        binding.toolbar.setOnChangeHeroLocaleListener(viewModelHeroPage::updateLocale)
+    private fun setToolbar(heroName: String) {
+        binding.toolbar.loadHero(heroName)
     }
 
     @RequiresPermission(Manifest.permission.WRITE_SETTINGS)

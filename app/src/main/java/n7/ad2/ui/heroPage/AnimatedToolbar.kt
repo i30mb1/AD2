@@ -15,7 +15,6 @@ import com.robinhood.ticker.TickerView
 import n7.ad2.R
 import n7.ad2.data.source.local.HeroLocale
 import n7.ad2.data.source.local.Repository
-import n7.ad2.data.source.local.model.LocalHero
 import n7.ad2.utils.extension.toPx
 
 class AnimatedToolbar(context: Context, attr: AttributeSet) : Toolbar(context, attr) {
@@ -50,17 +49,26 @@ class AnimatedToolbar(context: Context, attr: AttributeSet) : Toolbar(context, a
     }
     private val listener = object : OrientationEventListener(context) {
         override fun onOrientationChanged(orientation: Int) {
-                ivHero.rotation = orientation.toFloat()
+            ivHero.rotation = orientation.toFloat()
         }
+    }
 
-    }.enable()
+    init {
+        listener.enable()
+    }
+
+    override fun onDetachedFromWindow() {
+        super.onDetachedFromWindow()
+        listener.disable()
+        onChangeResponseLocaleListener = null
+    }
 
     fun setOnChangeHeroLocaleListener(listener: (locale: HeroLocale) -> Unit) {
         this.onChangeResponseLocaleListener = listener
     }
 
-    fun loadHero(hero: LocalHero) {
-        ivHero.load("file:///android_asset/${hero.assetsPath}/${Repository.ASSETS_FILE_MINIMAP}")
+    fun loadHero(heroName: String) {
+        ivHero.load("file:///android_asset/${heroName}/${Repository.ASSETS_FILE_MINIMAP}")
     }
 
     fun pageSelected(newPage: Int) {

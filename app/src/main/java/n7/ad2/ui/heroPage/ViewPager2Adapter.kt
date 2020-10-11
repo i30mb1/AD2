@@ -8,16 +8,17 @@ import n7.ad2.ui.heroInfo.HeroInfoFragment
 import n7.ad2.ui.heroResponse.ResponsesFragment
 
 class ViewPager2Adapter(
-        activity: FragmentActivity
+        activity: FragmentActivity,
+        private val heroName: String
 ) : FragmentStateAdapter(activity) {
 
     override fun getItemCount(): Int = 3
 
     override fun createFragment(position: Int): Fragment {
         return when (position) {
-            0 -> HeroInfoFragment.newInstance()
-            1 -> ResponsesFragment.newInstance()
-            else -> HeroGuideFragment.newInstance()
+            0 -> HeroInfoFragment.newInstance(heroName)
+            1 -> ResponsesFragment.newInstance(heroName)
+            else -> HeroGuideFragment.newInstance(heroName)
         }
     }
 }

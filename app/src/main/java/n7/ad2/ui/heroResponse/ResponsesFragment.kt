@@ -4,8 +4,8 @@ import android.os.Bundle
 import android.os.Handler
 import android.os.Looper
 import android.view.View
+import androidx.core.os.bundleOf
 import androidx.fragment.app.Fragment
-import androidx.fragment.app.activityViewModels
 import androidx.fragment.app.setFragmentResultListener
 import androidx.lifecycle.lifecycleScope
 import androidx.lifecycle.observe
@@ -16,7 +16,6 @@ import n7.ad2.R
 import n7.ad2.databinding.FragmentHeroResponsesBinding
 import n7.ad2.di.injector
 import n7.ad2.ui.heroPage.HeroPageActivity
-import n7.ad2.ui.heroPage.HeroPageViewModel
 import n7.ad2.ui.heroPage.showDialogError
 import n7.ad2.ui.heroResponse.domain.vo.VOResponseBody
 import n7.ad2.utils.StickyHeaderDecorator
@@ -28,10 +27,12 @@ class ResponsesFragment : Fragment(R.layout.fragment_hero_responses) {
     private lateinit var binding: FragmentHeroResponsesBinding
     private lateinit var downloadResponseManager: DownloadResponseManager
     private val viewModel: ResponsesViewModel by viewModel { injector.responsesViewModel }
-    private val heroPageViewModel: HeroPageViewModel by activityViewModels()
 
     companion object {
-        fun newInstance(): ResponsesFragment = ResponsesFragment()
+        private const val HERO_NAME = "HERO_NAME"
+        fun newInstance(heroName: String): ResponsesFragment = ResponsesFragment().apply {
+            arguments = bundleOf(HERO_NAME to heroName)
+        }
     }
 
     @InternalCoroutinesApi
@@ -44,7 +45,7 @@ class ResponsesFragment : Fragment(R.layout.fragment_hero_responses) {
         downloadResponseManager = DownloadResponseManager(requireActivity().contentResolver, Handler(Looper.getMainLooper()), requireActivity().application, lifecycle)
         downloadResponseManager.setDownloadListener {
             when (it) {
-                is DownloadSuccess -> heroPageViewModel.refresh()
+                is DownloadSuccess -> viewModel.refreshResponses()
                 is DownloadFailed -> showDialogError(it.error)
             }
         }
@@ -58,8 +59,12 @@ class ResponsesFragment : Fragment(R.layout.fragment_hero_responses) {
                 showDialogError(it)
             }
         }
-        heroPageViewModel.hero.observe(viewLifecycleOwner, viewModel::loadResponses)
-        heroPageViewModel.locale.observe(viewLifecycleOwner, viewModel::loadResponsesLocale)
+
+        val heroName = requireArguments().getString(HERO_NAME)!!
+        (requireActivity() as HeroPageActivity).binding.toolbar.setOnChangeHeroLocaleListener {
+            viewModel.loadResponses(heroName, it)
+        }
+        viewModel.loadResponses(heroName)
         setupPagedListAdapter()
     }
 
