@@ -39,7 +39,6 @@ class DownloadResponseManager(
 ) : LifecycleObserver {
 
     private var downloadId: Long = 0
-    private var currentItem: VOResponseBody? = null
     private val downloadManager: DownloadManager = application.getSystemService()!!
     private var downloadListener: ((result: DownloadResult) -> Unit)? = null
     private val downloadEndReceiver = object : BroadcastReceiver() {
@@ -61,8 +60,6 @@ class DownloadResponseManager(
 
     fun download(item: VOResponseBody): Long? {
         try {
-            currentItem = item
-
             val uri = item.audioUrl!!.toUri()
             val downloadRequest = DownloadManager.Request(uri)
                 .setAllowedNetworkTypes(DownloadManager.Request.NETWORK_MOBILE)
