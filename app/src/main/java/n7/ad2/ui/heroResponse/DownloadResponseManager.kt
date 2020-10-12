@@ -101,7 +101,7 @@ class DownloadResponseManager(
         val observer = object : ContentObserver(handler) {
             override fun onChange(selfChange: Boolean, uri: Uri?) {
                 super.onChange(selfChange, uri)
-                updateProgress(downloadId)
+                updateDMStatus(downloadId)
             }
         }
         hashMap.put(downloadId, Pair(item, observer))
@@ -153,10 +153,6 @@ class DownloadResponseManager(
 
     private fun stopProgress(downloadId: Long) {
         hashMap.get(downloadId)?.first?.maxProgress?.set(0)
-    }
-
-    private fun updateProgress(downloadId: Long) {
-        updateDMStatus(downloadId)
     }
 
     fun getFileDescription(downloadId: Long) {
