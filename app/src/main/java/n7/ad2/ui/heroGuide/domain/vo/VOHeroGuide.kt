@@ -8,7 +8,7 @@ import n7.ad2.BR
 class VOHeroGuide : BaseObservable() {
 
     @get:Bindable
-    var heroBestVersus: List<View> = emptyList()
+    var heroBestVersus: MutableList<View> = mutableListOf()
         set(value) {
             field = value
             notifyPropertyChanged(BR.heroBestVersus)

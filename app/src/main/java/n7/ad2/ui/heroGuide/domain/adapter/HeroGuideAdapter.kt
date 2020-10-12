@@ -14,22 +14,25 @@ import n7.ad2.ui.heroGuide.domain.model.LocalGuideJson
 import n7.ad2.ui.heroGuide.domain.vo.VOHeroGuide
 import n7.ad2.utils.extension.toDp
 
-fun LocalGuideJson.toVO(context: Context): VOHeroGuide {
-    return VOHeroGuide().also {
-        it.heroBestVersus = heroBestVersus.map {
-            ImageView(context).apply {
-                layoutParams = ConstraintLayout.LayoutParams(128, 72)
-                id = View.generateViewId()
-                load("file:///android_asset/heroes/${it}/${Repository.ASSETS_FILE_FULL}")
-            }
-        }
-        TextView(context, null, R.attr.textAppearanceBody1).apply {
-            layoutParams = ConstraintLayout.LayoutParams(ViewGroup.LayoutParams.WRAP_CONTENT, ViewGroup.LayoutParams.WRAP_CONTENT)
-            updatePadding(left = 4.toDp, right = 4.toDp)
-            id = View.generateViewId()
-            text = context.getText(R.string.best_versus)
+fun LocalGuideJson.toVO(context: Context) = VOHeroGuide().also {
+    it.heroBestVersus.add(inflateDescriptionTextView(context, R.string.best_versus))
+    it.heroBestVersus.addAll(heroBestVersus.mapToIcons(context))
 
-            (it.heroBestVersus as MutableList).add(0, this)
-        }
+}
+
+
+private fun inflateDescriptionTextView(context: Context, textId: Int) = TextView(context, null, R.attr.textAppearanceBody1).apply {
+    layoutParams = ConstraintLayout.LayoutParams(ViewGroup.LayoutParams.WRAP_CONTENT, ViewGroup.LayoutParams.WRAP_CONTENT)
+    updatePadding(left = 4.toDp, right = 4.toDp)
+    id = View.generateViewId()
+    text = context.getText(textId)
+}
+
+
+private fun List<String>.mapToIcons(context: Context): List<ImageView> = this.map {
+    ImageView(context).apply {
+        layoutParams = ConstraintLayout.LayoutParams(128, 72)
+        id = View.generateViewId()
+        load("file:///android_asset/heroes/${it}/${Repository.ASSETS_FILE_FULL}")
     }
 }
