@@ -216,7 +216,7 @@
     <string name="tn_iv_photo" translatable="false">tn_iv_photo_%1$s</string>
 
     <string name="channel_tournament_name" translatable="false">Tournament</string>
-    <string name="channel_guide" translatable="false">Guide</string>
+    <string name="channel_name_guide" translatable="false">Guide</string>
     <string name="info_talent" translatable="false">With talent that affect this ability</string>
     <string name="error" translatable="false"> Oops! error occurred...</string>
     <string name="locale">ENG</string>

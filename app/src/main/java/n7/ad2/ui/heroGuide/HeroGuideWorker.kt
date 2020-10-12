@@ -36,7 +36,7 @@ class HeroGuideWorker(
 
     private val notificationId = 1
     private val channelId = "guide_worker"
-    private val channelName = applicationContext.getString(R.string.channel_guide)
+    private val channelName = applicationContext.getString(R.string.channel_name_guide)
     private val notificationTitle = applicationContext.getString(R.string.notification_title_guide)
 
     @Inject
