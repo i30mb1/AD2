@@ -45,7 +45,7 @@ class DownloadResponseManager(
     private val downloadEndReceiver = object : BroadcastReceiver() {
         override fun onReceive(context: Context, intent: Intent) {
             val downloadId = intent.getLongExtra(DownloadManager.EXTRA_DOWNLOAD_ID, -1L)
-            getDMStatus(downloadId)
+            updateDMStatus(downloadId)
         }
     }
     private val hashMap = LongSparseArray<Pair<VOResponseBody, ContentObserver>>()
@@ -121,7 +121,7 @@ class DownloadResponseManager(
         }
     }
 
-    private fun getDMStatus(downloadId: Long) {
+    private fun updateDMStatus(downloadId: Long) {
         val request = DownloadManager.Query().setFilterById(downloadId)
         downloadManager.query(request).use {
             if (it.count > 0) {
@@ -156,7 +156,7 @@ class DownloadResponseManager(
     }
 
     private fun updateProgress(downloadId: Long) {
-        getDMStatus(downloadId)
+        updateDMStatus(downloadId)
     }
 
     fun getFileDescription(downloadId: Long) {
