@@ -13,6 +13,7 @@ import androidx.work.WorkInfo
 import androidx.work.WorkManager
 import androidx.work.workDataOf
 import kotlinx.coroutines.launch
+import kotlinx.coroutines.yield
 import n7.ad2.R
 import n7.ad2.databinding.FragmentHeroGuideBinding
 import n7.ad2.di.injector
@@ -51,6 +52,11 @@ class HeroGuideFragment : Fragment(R.layout.fragment_hero_guide) {
                 vo.heroBestVersus.forEach {
                     binding.root.addView(it)
                     binding.flowHeroBestVersus.addView(it)
+                }
+
+                vo.heroWorstVersus.forEach {
+                    binding.root.addView(it)
+                    binding.flowHeroWorstVersus.addView(it)
                 }
             }
         }

@@ -14,10 +14,16 @@ import n7.ad2.ui.heroGuide.domain.model.LocalGuideJson
 import n7.ad2.ui.heroGuide.domain.vo.VOHeroGuide
 import n7.ad2.utils.extension.toDp
 
-fun LocalGuideJson.toVO(context: Context) = VOHeroGuide().also {
-    it.heroBestVersus.add(inflateDescriptionTextView(context, R.string.best_versus))
-    it.heroBestVersus.addAll(heroBestVersus.mapToIcons(context))
+fun LocalGuideJson.toVO(context: Context): VOHeroGuide {
+    val best = mutableListOf<View>()
+    best.add(inflateDescriptionTextView(context, R.string.best_versus))
+    best.addAll(heroBestVersus.mapToIcons(context))
 
+    val worst = mutableListOf<View>()
+    worst.add(inflateDescriptionTextView(context, R.string.worst_versus))
+    worst.addAll(heroWorstVersus.mapToIcons(context))
+
+    return VOHeroGuide(best, worst)
 }
 
 
