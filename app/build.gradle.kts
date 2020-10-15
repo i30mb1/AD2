@@ -15,7 +15,7 @@ android {
 
         javaCompileOptions {
             annotationProcessorOptions {
-                arguments = mapOf("room.incremental" to "true")
+                argument("room.incremental","true")
             }
         }
     }
@@ -55,7 +55,6 @@ android {
 dependencies {
     implementation(fileTree(mapOf("dir" to "libs", "include" to listOf("*.jar"))))
     debugImplementation(Lib.debugDB)
-    implementation(kotlin("stdlib-jdk7"))
     api(Lib.ticker)
     api(Lib.sliding)
     api(Lib.retrofit)
