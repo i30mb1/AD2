@@ -7,11 +7,9 @@ import android.view.View
 import androidx.core.os.bundleOf
 import androidx.fragment.app.Fragment
 import androidx.fragment.app.setFragmentResultListener
-import androidx.lifecycle.lifecycleScope
 import androidx.lifecycle.observe
 import androidx.recyclerview.widget.LinearLayoutManager
 import kotlinx.coroutines.InternalCoroutinesApi
-import kotlinx.coroutines.flow.collect
 import n7.ad2.R
 import n7.ad2.databinding.FragmentHeroResponsesBinding
 import n7.ad2.di.injector
@@ -49,15 +47,8 @@ class ResponsesFragment : Fragment(R.layout.fragment_hero_responses) {
                 is DownloadFailed -> showDialogError(it.error)
             }
         }
-//        viewModel.error.observe(viewLifecycleOwner) {
-//            it?.let {
-//                showDialogError(it)
-//            }
-//        }
-        lifecycleScope.launchWhenStarted {
-            viewModel.error2.collect {
-                showDialogError(it)
-            }
+        viewModel.error.observe(viewLifecycleOwner) {
+            it?.let(::showDialogError)
         }
 
         val heroName = requireArguments().getString(HERO_NAME)!!
