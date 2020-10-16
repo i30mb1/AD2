@@ -6,8 +6,6 @@ import android.os.Looper
 import android.view.View
 import androidx.core.os.bundleOf
 import androidx.fragment.app.Fragment
-import androidx.fragment.app.setFragmentResultListener
-import androidx.lifecycle.observe
 import androidx.recyclerview.widget.LinearLayoutManager
 import kotlinx.coroutines.InternalCoroutinesApi
 import n7.ad2.R
@@ -47,6 +45,7 @@ class ResponsesFragment : Fragment(R.layout.fragment_hero_responses) {
                 is DownloadFailed -> showDialogError(it.error)
             }
         }
+
         viewModel.error.observe(viewLifecycleOwner) {
             it?.let(::showDialogError)
         }
