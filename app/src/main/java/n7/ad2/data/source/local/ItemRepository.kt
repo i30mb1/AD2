@@ -14,6 +14,7 @@ class ItemRepository @Inject constructor(
 
     companion object {
         const val ASSETS_PATH_ITEMS = "items.json"
+        const val ASSETS_PATH_ITEM_DESC = "description.json"
     }
 
     suspend fun insertItems(list: List<LocalItem>) {
@@ -21,13 +22,16 @@ class ItemRepository @Inject constructor(
     }
 
     fun getItemDescription(assetsPath: String, locale: Locale): String {
-        return application.assets.open("$assetsPath/${locale.folderName}/${Repository.ASSETS_PATH_HERO_DESC}").bufferedReader().use {
+        return application.assets
+            .open("$assetsPath/${locale.folderName}/${ASSETS_PATH_ITEM_DESC}")
+            .bufferedReader().use {
             it.readText()
         }
     }
 
     suspend fun getAssetsItems(): String {
-        return application.assets.open(ASSETS_PATH_ITEMS).bufferedReader().use {
+        return application.assets
+            .open(ASSETS_PATH_ITEMS).bufferedReader().use {
             it.readText()
         }
     }
