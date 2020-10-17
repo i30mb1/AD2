@@ -8,6 +8,7 @@ import n7.ad2.ui.heroGuide.HeroGuideWorker
 import n7.ad2.ui.heroInfo.HeroInfoViewModel
 import n7.ad2.ui.heroResponse.ResponsesViewModel
 import n7.ad2.ui.heroes.HeroesViewModel
+import n7.ad2.ui.itemInfo.ItemInfoViewModel
 import n7.ad2.ui.items.ItemsViewModel
 import n7.ad2.ui.splash.SplashViewModel
 import n7.ad2.workers.DatabaseWorker
@@ -35,6 +36,7 @@ interface ApplicationComponent {
     val heroesViewModel: HeroesViewModel
     val itemsViewModel: ItemsViewModel
     val responsesViewModel: ResponsesViewModel
+    val itemInfoViewModel: ItemInfoViewModel
 
     val heroInfoViewModelFactory: HeroInfoViewModel.Factory
     val heroGuideViewModelFactory: HeroGuideViewModel.Factory
