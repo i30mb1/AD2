@@ -20,8 +20,6 @@ class ItemInfoViewModel @Inject constructor(
     private val _voItemInfo = MutableLiveData<List<VODescription>>()
     val voItemInfo: LiveData<List<VODescription>> = _voItemInfo
 
-    @SuppressLint("NullSafeMutableLiveData")
-    @ExperimentalStdlibApi
     fun loadItemInfo(itemName: String, locale: Locale) = viewModelScope.launch {
         _voItemInfo.value = getVOItemDescriptionInteractor(itemName, locale)
     }

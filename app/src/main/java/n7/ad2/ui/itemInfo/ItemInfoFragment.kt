@@ -25,7 +25,6 @@ class ItemInfoFragment : Fragment(R.layout.fragment_item_info) {
         fun newInstance(): ItemInfoFragment = ItemInfoFragment()
     }
 
-    @OptIn(ExperimentalStdlibApi::class)
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
         binding = FragmentItemsBinding.bind(view).also {

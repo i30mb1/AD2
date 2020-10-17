@@ -11,11 +11,10 @@ class GetVOItemDescriptionUseCase @Inject constructor(
     private val ioDispatcher: CoroutineDispatcher,
 ) {
 
-    @ExperimentalStdlibApi
-    @Suppress("BlockingMethodInNonBlockingContext")
     suspend operator fun invoke(localItemDescription: LocalItemDescription): List<VODescription> = withContext(ioDispatcher) {
-        buildList<VODescription> {
-            add(VOTitleSimple(localItemDescription.name))
-        }
+        val list = mutableListOf<VODescription>()
+        list.add(VOTitleSimple(localItemDescription.name))
+
+        list
     }
 }

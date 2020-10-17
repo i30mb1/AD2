@@ -15,7 +15,6 @@ class GetVOItemDescriptionInteractor @Inject constructor(
     private val getVOItemDescriptionUseCase: GetVOItemDescriptionUseCase,
 ) {
 
-    @ExperimentalStdlibApi
     @Suppress("BlockingMethodInNonBlockingContext")
     suspend operator fun invoke(itemName: String, locale: Locale): List<VODescription> {
         val localItem = getLocalItemByNameUseCase(itemName)
