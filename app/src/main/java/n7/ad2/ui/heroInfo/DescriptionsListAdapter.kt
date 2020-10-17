@@ -31,8 +31,8 @@ import n7.ad2.ui.heroPage.AudioExoPlayer
 import n7.ad2.utils.extension.toPx
 
 class DescriptionsListAdapter(
-        private val audioExoPlayer: AudioExoPlayer,
-        private val infoPopupWindow: InfoPopupWindow
+    private val audioExoPlayer: AudioExoPlayer,
+    private val infoPopupWindow: InfoPopupWindow,
 ) : ListAdapter<VODescription, DescriptionsListAdapter.ViewHolder>(DiffCallback()) {
 
     private var listener: VOPopUpListener<String> = object : VOPopUpListener<String> {
@@ -55,61 +55,64 @@ class DescriptionsListAdapter(
     }
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): ViewHolder {
-        return ViewHolder.from(parent, viewType, listener, audioExoPlayer, infoPopupWindow)
+        return ViewHolder.from(parent, viewType, listener, audioExoPlayer)
     }
 
     override fun onBindViewHolder(holder: ViewHolder, position: Int) = holder.bind(getItem(position))
 
     class ViewHolder private constructor(
-            private val binding: ViewDataBinding,
-            private val listener: VOPopUpListener<String>,
-            private val audioExoPlayer: AudioExoPlayer,
-            private val infoPopupWindow: InfoPopupWindow
+        private val binding: ViewDataBinding,
+        private val listener: VOPopUpListener<String>,
+        private val audioExoPlayer: AudioExoPlayer,
     ) : RecyclerView.ViewHolder(binding.root) {
 
         private var lineHeight = 0
 
         fun bind(item: VODescription) {
-            bindSpecificVO(binding, item)
             binding.setVariable(BR.item, item)
+            bindSpecificVO(binding)
             binding.executePendingBindings()
         }
 
-        private fun bindSpecificVO(binding: ViewDataBinding, item: VODescription) {
+        private fun bindSpecificVO(binding: ViewDataBinding) {
             when (binding) {
                 is ItemBodyWithSeparatorBinding -> {
-                    setBoundToImageSpan(binding.tvBody, (item as VOBodyWithSeparator).body, infoPopupWindow)
+                    setBoundToImageSpan(binding.tvBody, binding.item!!.body)
                 }
                 is ItemBodyWithImageBinding -> {
-                    setBoundToImageSpan(binding.tvBody, (item as VOBodyWithImage).body, infoPopupWindow)
+                    setBoundToImageSpan(binding.tvBody, binding.item!!.body)
                     binding.listener = listener
                 }
-                is ItemTitleWithIconBinding -> binding.let {
-                    it.audioExoPlayer = audioExoPlayer
-                    it.listener = listener
+                is ItemTitleWithIconBinding -> {
+                    binding.audioExoPlayer = audioExoPlayer
+                    binding.listener = listener
                 }
             }
         }
 
-        private fun setBoundToImageSpan(tv: TextView, spannableString: SpannableString, infoPopupWindow: InfoPopupWindow) {
+        private fun setBoundToImageSpan(
+            tv: TextView,
+            spannableString: SpannableString,
+        ) {
             if (lineHeight == 0) lineHeight = tv.lineHeight - 2.toPx
             spannableString.getSpans<ImageSpan>().forEach {
                 it.drawable.setBounds(0, 0, lineHeight, lineHeight)
             }
             spannableString.getSpans<MyClickableSpan>().forEach {
-                it.action = { view, text -> infoPopupWindow.show(view, text) }
+                it.listener = listener
             }
         }
 
         companion object {
-            fun from(parent: ViewGroup,
-                     viewType: Int,
-                     listener: VOPopUpListener<String>,
-                     audioExoPlayer: AudioExoPlayer,
-                     infoPopupWindow: InfoPopupWindow): ViewHolder {
+            fun from(
+                parent: ViewGroup,
+                viewType: Int,
+                listener: VOPopUpListener<String>,
+                audioExoPlayer: AudioExoPlayer,
+            ): ViewHolder {
                 val layoutInflater = LayoutInflater.from(parent.context)
                 val binding = DataBindingUtil.inflate<ViewDataBinding>(layoutInflater, viewType, parent, false)
-                return ViewHolder(binding, listener, audioExoPlayer, infoPopupWindow)
+                return ViewHolder(binding, listener, audioExoPlayer)
             }
         }
     }

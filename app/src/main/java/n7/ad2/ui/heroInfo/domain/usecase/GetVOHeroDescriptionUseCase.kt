@@ -13,6 +13,7 @@ import kotlinx.coroutines.CoroutineDispatcher
 import kotlinx.coroutines.withContext
 import n7.ad2.BuildConfig
 import n7.ad2.R
+import n7.ad2.base.VOPopUpListener
 import n7.ad2.data.source.local.model.LocalHero
 import n7.ad2.ui.heroInfo.domain.model.LocalHeroDescription
 import n7.ad2.ui.heroInfo.domain.vo.VOBodyLine
@@ -164,10 +165,10 @@ class GetVOHeroDescriptionUseCase @Inject constructor(
 
 open class MyClickableSpan(private val text: String) : ClickableSpan() {
 
-    var action: ((View, String) -> Unit)? = null
+    var listener: VOPopUpListener<String>? = null
 
     override fun onClick(widget: View) {
-        action?.invoke(widget, text)
+        listener?.onClickListener(widget, text)
     }
 
 }
