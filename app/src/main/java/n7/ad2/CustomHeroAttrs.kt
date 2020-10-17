@@ -9,6 +9,7 @@ import android.view.LayoutInflater
 import android.widget.FrameLayout
 import androidx.core.content.withStyledAttributes
 import n7.ad2.databinding.CustomHeroAttrsBinding
+import n7.ad2.utils.extension.toPx
 
 // link about @JVMOverload https://proandroiddev.com/misconception-about-kotlin-jvmoverloads-for-android-view-creation-cb88f432e1fe
 @SuppressLint("SetTextI18n")
@@ -132,9 +133,7 @@ class CustomHeroAttrs(
 
     private fun resolveDefaultSize(spec: Int): Int {
         return when (MeasureSpec.getMode(spec)) {
-            MeasureSpec.UNSPECIFIED -> {
-                context.dpToPx(DEFAULT_SIZE).toInt()
-            }
+            MeasureSpec.UNSPECIFIED -> DEFAULT_SIZE.toPx
             MeasureSpec.AT_MOST -> MeasureSpec.getSize(spec)
             MeasureSpec.EXACTLY -> MeasureSpec.getSize(spec)
             else -> MeasureSpec.getSize(spec)
@@ -149,8 +148,4 @@ class CustomHeroAttrs(
         return bitmap
     }
 
-}
-
-fun Context.dpToPx(dp: Int): Float {
-    return dp.toFloat() * this.resources.displayMetrics.density
 }
