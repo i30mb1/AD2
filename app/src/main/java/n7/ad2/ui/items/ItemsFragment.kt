@@ -4,7 +4,6 @@ import android.content.Intent
 import android.os.Bundle
 import android.view.View
 import androidx.fragment.app.Fragment
-import androidx.lifecycle.observe
 import androidx.recyclerview.widget.GridLayoutManager
 import n7.ad2.R
 import n7.ad2.databinding.FragmentItemsBinding
