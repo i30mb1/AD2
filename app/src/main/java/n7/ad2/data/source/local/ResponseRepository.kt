@@ -13,8 +13,8 @@ class ResponseRepository @Inject constructor(
         val DIRECTORY_RESPONSES: String = android.os.Environment.DIRECTORY_RINGTONES
     }
 
-    fun getHeroResponses(assetsPath: String, locale: HeroLocale): String {
-        return application.assets.open("$assetsPath/${locale.heroFolderName}/${ASSETS_PATH_HERO_RESPONSES}").bufferedReader().use {
+    fun getHeroResponses(assetsPath: String, locale: Locale): String {
+        return application.assets.open("$assetsPath/${locale.folderName}/${ASSETS_PATH_HERO_RESPONSES}").bufferedReader().use {
             it.readText()
         }
     }

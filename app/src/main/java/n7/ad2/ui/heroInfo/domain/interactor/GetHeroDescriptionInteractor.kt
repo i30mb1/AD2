@@ -1,6 +1,6 @@
 package n7.ad2.ui.heroInfo.domain.interactor
 
-import n7.ad2.data.source.local.HeroLocale
+import n7.ad2.data.source.local.Locale
 import n7.ad2.data.source.local.model.LocalHero
 import n7.ad2.ui.heroInfo.domain.usecase.GetJsonHeroDescriptionUseCase
 import n7.ad2.ui.heroInfo.domain.usecase.GetLocalHeroDescriptionFromJsonUseCase
@@ -14,7 +14,7 @@ class GetHeroDescriptionInteractor @Inject constructor(
         val getVOHeroDescriptionUseCase: GetVOHeroDescriptionUseCase
 ) {
 
-    suspend operator fun invoke(localHero: LocalHero, locale: HeroLocale): VOHeroDescription {
+    suspend operator fun invoke(localHero: LocalHero, locale: Locale): VOHeroDescription {
         val json = getJsonHeroDescriptionUseCase(localHero.assetsPath, locale)
         val localHeroDescription = getLocalHeroDescriptionFromJsonUseCase(json)
         return getVOHeroDescriptionUseCase(localHeroDescription, localHero)

@@ -9,15 +9,9 @@ import androidx.lifecycle.switchMap
 import androidx.lifecycle.viewModelScope
 import androidx.paging.PagedList
 import androidx.paging.toLiveData
-import kotlinx.coroutines.ExperimentalCoroutinesApi
-import kotlinx.coroutines.channels.BroadcastChannel
-import kotlinx.coroutines.channels.Channel
-import kotlinx.coroutines.flow.MutableStateFlow
-import kotlinx.coroutines.flow.StateFlow
-import kotlinx.coroutines.flow.asFlow
 import kotlinx.coroutines.launch
 import n7.ad2.R
-import n7.ad2.data.source.local.HeroLocale
+import n7.ad2.data.source.local.Locale
 import n7.ad2.data.source.local.model.LocalHero
 import n7.ad2.ui.heroPage.domain.usecase.GetLocalHeroByNameUseCase
 import n7.ad2.ui.heroResponse.domain.interactor.GetHeroResponsesInteractor
@@ -31,7 +25,7 @@ class ResponsesViewModel @Inject constructor(
 
     private val _error = MutableLiveData<Throwable?>()
     val error: LiveData<Throwable?> = _error
-    private val heroWithLocale = MutableLiveData<Pair<LocalHero, HeroLocale>>()
+    private val heroWithLocale = MutableLiveData<Pair<LocalHero, Locale>>()
     val voResponses = heroWithLocale.switchMap {
         liveData {
             getHeroResponsesInteractor(it.first, it.second)
@@ -51,10 +45,10 @@ class ResponsesViewModel @Inject constructor(
         heroWithLocale.value = heroWithLocale.value
     }
 
-    fun loadResponses(heroName: String, heroLocale: HeroLocale? = null) {
+    fun loadResponses(heroName: String, heroLocale: Locale? = null) {
         viewModelScope.launch {
             val localHero = getLocalHeroByNameUseCase(heroName)
-            val locale = heroLocale ?: HeroLocale.valueOf(getApplication<Application>().getString(R.string.locale))
+            val locale = heroLocale ?: Locale.valueOf(getApplication<Application>().getString(R.string.locale))
             heroWithLocale.value = Pair(localHero, locale)
         }
     }

@@ -7,8 +7,7 @@ import com.squareup.inject.assisted.Assisted
 import com.squareup.inject.assisted.AssistedInject
 import kotlinx.coroutines.launch
 import n7.ad2.R
-import n7.ad2.data.source.local.HeroLocale
-import n7.ad2.data.source.local.model.LocalHero
+import n7.ad2.data.source.local.Locale
 import n7.ad2.heroes.db.HeroModel
 import n7.ad2.heroes.full.ResponseModel
 import n7.ad2.ui.heroInfo.domain.interactor.GetHeroDescriptionInteractor
@@ -45,7 +44,7 @@ class HeroInfoViewModel @AssistedInject constructor(
 
     fun loadHero(heroName: String) {
         viewModelScope.launch {
-            val locale = HeroLocale.valueOf(getApplication<Application>().getString(R.string.locale))
+            val locale = Locale.valueOf(getApplication<Application>().getString(R.string.locale))
             val localHero = getLocalHeroByNameUseCase(heroName)
             vOHero.value = getHeroDescriptionInteractor(localHero, locale)
         }

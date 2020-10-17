@@ -20,6 +20,12 @@ class ItemRepository @Inject constructor(
         appDatabase.itemsDao.insert(list)
     }
 
+    fun getItemDescription(assetsPath: String, locale: Locale): String {
+        return application.assets.open("$assetsPath/${locale.folderName}/${Repository.ASSETS_PATH_HERO_DESC}").bufferedReader().use {
+            it.readText()
+        }
+    }
+
     suspend fun getAssetsItems(): String {
         return application.assets.open(ASSETS_PATH_ITEMS).bufferedReader().use {
             it.readText()

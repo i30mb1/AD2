@@ -13,13 +13,13 @@ import coil.load
 import com.robinhood.ticker.TickerUtils
 import com.robinhood.ticker.TickerView
 import n7.ad2.R
-import n7.ad2.data.source.local.HeroLocale
+import n7.ad2.data.source.local.Locale
 import n7.ad2.data.source.local.Repository
 import n7.ad2.utils.extension.toPx
 
 class AnimatedToolbar(context: Context, attr: AttributeSet) : Toolbar(context, attr) {
 
-    private var onChangeResponseLocaleListener: ((locale: HeroLocale) -> Unit)? = null
+    private var onChangeResponseLocaleListener: ((locale: Locale) -> Unit)? = null
     private val params = LayoutParams(30.toPx, 30.toPx).apply {
         gravity = Gravity.CENTER
     }
@@ -34,9 +34,9 @@ class AnimatedToolbar(context: Context, attr: AttributeSet) : Toolbar(context, a
         animationDuration = resources.getInteger(R.integer.animation_long).toLong()
         visibility = GONE
         gravity = Gravity.CENTER
-        text = HeroLocale.valueOf(context.getString(R.string.locale)).name
+        text = Locale.valueOf(context.getString(R.string.locale)).name
         setOnClickListener {
-            val locale = if (text == HeroLocale.ENG.name) HeroLocale.RU else HeroLocale.ENG
+            val locale = if (text == Locale.ENG.name) Locale.RU else Locale.ENG
             text = locale.name
             onChangeResponseLocaleListener?.invoke(locale)
         }
@@ -63,7 +63,7 @@ class AnimatedToolbar(context: Context, attr: AttributeSet) : Toolbar(context, a
         onChangeResponseLocaleListener = null
     }
 
-    fun setOnChangeHeroLocaleListener(listener: (locale: HeroLocale) -> Unit) {
+    fun setOnChangeHeroLocaleListener(listener: (locale: Locale) -> Unit) {
         this.onChangeResponseLocaleListener = listener
     }
 
