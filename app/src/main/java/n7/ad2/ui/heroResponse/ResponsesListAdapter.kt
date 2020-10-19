@@ -1,5 +1,6 @@
 package n7.ad2.ui.heroResponse
 
+import android.os.Trace
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
@@ -105,6 +106,7 @@ class ResponsesListAdapter(
     ) : RecyclerView.ViewHolder(binding.root) {
 
         fun bind(item: VOResponseBody) {
+            Trace.beginSection("bind")
             binding.audioExoPlayer = audioExoPlayer
             binding.rv.adapter = responsesImagesAdapter
             (binding.rv.layoutManager as GridLayoutManager).spanCount = clamp(item.icons.size, MIN_ICONS_IN_ROW, MAX_ICONS_IN_ROW)
@@ -114,6 +116,7 @@ class ResponsesListAdapter(
             }
             binding.setVariable(BR.item, item)
             binding.executePendingBindings()
+            Trace.endSection()
         }
 
         fun clear() {
