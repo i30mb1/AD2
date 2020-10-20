@@ -10,6 +10,8 @@ import n7.ad2.databinding.FragmentItemsBinding
 import n7.ad2.databinding.ItemItemBinding
 import n7.ad2.di.injector
 import n7.ad2.ui.MainActivity
+import n7.ad2.ui.itemInfo.ItemInfoActivity
+import n7.ad2.ui.itemInfo.ItemInfoFragment
 import n7.ad2.ui.items.domain.vo.VOItem
 import n7.ad2.utils.viewModel
 
@@ -33,7 +35,9 @@ class ItemsFragment : Fragment(R.layout.fragment_items) {
     }
 
     fun startItemInfoFragment(model: VOItem, binding: ItemItemBinding) {
-
+        val intent = Intent(requireContext(), ItemInfoActivity::class.java)
+        intent.putExtra(ItemInfoFragment.ITEM_NAME, model.name)
+        startActivity(intent)
     }
 
     private fun setupAdapter() {

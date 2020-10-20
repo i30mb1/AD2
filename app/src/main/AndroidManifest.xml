@@ -5,7 +5,7 @@
     package="n7.ad2"
     android:installLocation="auto"
     android:targetSandboxVersion="2"
-    tools:ignore="UnusedAttribute">
+    tools:ignore="UnusedAttribute" >
 
     <dist:module dist:instant="true" />
 
@@ -24,9 +24,12 @@
         android:supportsRtl="true"
         android:theme="@style/AD2Theme"
         android:usesCleartextTraffic="true"
-        tools:ignore="GoogleAppIndexingWarning">
-        <activity android:name=".ui.splash.SplashActivity"
-            android:theme="@style/SplashTheme">
+        tools:ignore="GoogleAppIndexingWarning" >
+        <activity android:name=".ui.itemInfo.ItemInfoActivity" >
+        </activity>
+        <activity
+            android:name=".ui.splash.SplashActivity"
+            android:theme="@style/SplashTheme" >
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
@@ -83,7 +86,7 @@
             android:screenOrientation="portrait" />
         <activity
             android:name=".games.Game3p1"
-            android:screenOrientation="portrait">
+            android:screenOrientation="portrait" >
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
             </intent-filter>
