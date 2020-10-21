@@ -6,8 +6,9 @@ import androidx.fragment.app.FragmentActivity
 import androidx.fragment.app.commit
 import n7.ad2.R
 import n7.ad2.databinding.ActivityItemInfoBinding
+import n7.ad2.utils.BaseActivity
 
-class ItemInfoActivity : FragmentActivity() {
+class ItemInfoActivity : BaseActivity() {
 
     lateinit var binding: ActivityItemInfoBinding
 
