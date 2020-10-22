@@ -113,7 +113,7 @@ class GetVOHeroDescriptionUseCase @Inject constructor(
                 talentLVL += 5
             }
 
-            add(VOTitleSimple(application.getString(R.string.hero_fragment_tips)))
+            add(VOTitleSimple(application.getString(R.string.tips)))
             add(VOBodyWithSeparator(SpannableString(localHeroDescription.talentTips.toStringListWithDash())))
         }
         spells.add(0, VOSpell().apply {
