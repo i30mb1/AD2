@@ -26,6 +26,7 @@ import n7.ad2.ui.heroInfo.domain.vo.VOHeroDescription
 import n7.ad2.ui.heroInfo.domain.vo.VOSpell
 import n7.ad2.ui.heroInfo.domain.vo.VOTitleSimple
 import n7.ad2.ui.heroInfo.domain.vo.VOTitleWithIcon
+import n7.ad2.utils.extension.toStringListWithDash
 import javax.inject.Inject
 
 class GetVOHeroDescriptionUseCase @Inject constructor(
@@ -37,39 +38,8 @@ class GetVOHeroDescriptionUseCase @Inject constructor(
         const val HERO_FULL_PHOTO_NAME = "full"
         const val HERO_FULL_PHOTO_TYPE = "png"
         const val HEROES_SPELL_FOLDER = "heroesSpell"
-        const val SEPARATOR = "- "
         const val TAG_TALENT = "TagTalent"
-        const val COLON = ": "
         const val SEPARATOR_TALENT = "^"
-    }
-
-    private fun List<String>.toStringListWithDashAfterColon(): String {
-        val builder = SpannableStringBuilder()
-        forEachIndexed { index, text ->
-            builder.append(text)
-            if (index != lastIndex) builder.append(System.lineSeparator())
-        }
-        var startIndex = 0
-        var indexOf = builder.indexOf(COLON, startIndex)
-        if (indexOf == -1) return builder.toString()
-
-        do {
-            builder.insert(indexOf + 1, "\n")
-            startIndex++
-            indexOf = builder.indexOf(COLON, startIndex)
-        } while (indexOf != -1)
-
-        return builder.toString()
-    }
-
-    private fun List<String>.toStringListWithDash(): String {
-        val builder = StringBuilder()
-        forEachIndexed { index, text ->
-            builder.append(SEPARATOR)
-            builder.append(text)
-            if (index != lastIndex) builder.append(System.lineSeparator())
-        }
-        return builder.toString()
     }
 
     suspend operator fun invoke(localHeroDescription: LocalHeroDescription, localHero: LocalHero): VOHeroDescription = withContext(ioDispatcher) {
