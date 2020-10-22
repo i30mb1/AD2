@@ -94,7 +94,7 @@
     <string name="hero_fragment_bio">Bio</string>
     <string name="hero_fragment_trivia">Trivia</string>
     <string name="hero_fragment_description">Description</string>
-    <string name="hero_fragment_tips">Tips</string>
+    <string name="tips">Tips</string>
     <string name="open_file">Open</string>
     <string name="hero_responses_fragment_download_first">You should download sound first</string>
     <string name="hero_responses_sound_already_downloaded">Sound already downloaded</string>

@@ -43,7 +43,7 @@
     <string name="hero_fragment_bio">Биография</string>
     <string name="hero_fragment_trivia">Факты</string>
     <string name="hero_fragment_description">Описание</string>
-    <string name="hero_fragment_tips">Советы</string>
+    <string name="tips">Советы</string>
     <string name="items">Предметы</string>
     <string name="dialog_response_download">Скачать</string>
     <string name="dialog_response_set_ringtone">Поставить на рингтон</string>

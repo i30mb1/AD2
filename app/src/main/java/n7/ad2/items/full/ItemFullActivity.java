@@ -153,7 +153,7 @@ public class ItemFullActivity extends BaseActivity {
         //load tips
         if (jsonItemDescription.has("tips") && subscription) {
             final View item_hero_personal_tips_simple = getLayoutInflater().inflate(R.layout.item_hero_description, ll_activity_item_full_descriptions,false);
-            ((TextView) item_hero_personal_tips_simple.findViewById(R.id.tv_item_hero_description)).setText(R.string.hero_fragment_tips);
+            ((TextView) item_hero_personal_tips_simple.findViewById(R.id.tv_item_hero_description)).setText(R.string.tips);
             LinearLayout ll_items_tips = item_hero_personal_tips_simple.findViewById(R.id.ll_item_hero_description);
             try {
                 for (int i = 0; i < jsonItemDescription.getJSONArray("tips").length(); i++) {
