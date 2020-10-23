@@ -80,9 +80,10 @@ private fun JSONObject.loadTips(root: Document) {
 private fun JSONObject.loadLore(root: Document) {
     val children = root.getElementById("mw-content-text").child(0).children()
     var nextSectionIsAdditionalInformation = false
-    val array = JSONArray()
+    var array : JSONArray? = null
     for (child in children) {
         if (nextSectionIsAdditionalInformation) {
+            array = JSONArray()
             val additionalInformation = child.getElementsByTag("li")
             for (item in additionalInformation) {
                 array.add(item.text().replace("\\[.+?]".toRegex(),"").trim())
@@ -90,9 +91,9 @@ private fun JSONObject.loadLore(root: Document) {
         }
 
         if (child.tag().toString() == "h2") {
-            when (child.child(0).id()) {
-                "Lore", "История" -> nextSectionIsAdditionalInformation = true
-                else -> nextSectionIsAdditionalInformation = false
+            nextSectionIsAdditionalInformation = when (child.child(0).id()) {
+                "Lore", "История" -> true
+                else -> false
             }
         }
     }
