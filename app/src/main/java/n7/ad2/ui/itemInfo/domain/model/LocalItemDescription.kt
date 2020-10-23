@@ -16,7 +16,7 @@ data class LocalItemDescription(
     @Json(name = "name")
     val name: String = "",
     @Json(name = "tips")
-    val tips: List<String> = listOf()
+    val tips: List<String>? = null,
 )
 
 @JsonClass(generateAdapter = true)
