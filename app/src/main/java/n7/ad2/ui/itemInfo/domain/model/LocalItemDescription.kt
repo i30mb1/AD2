@@ -12,7 +12,7 @@ data class LocalItemDescription(
     @Json(name = "description")
     val description: String = "",
     @Json(name = "lore")
-    val lore: List<Any> = listOf(),
+    val lore: List<String>? = null,
     @Json(name = "name")
     val name: String = "",
     @Json(name = "tips")
