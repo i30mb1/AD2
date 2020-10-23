@@ -59,21 +59,18 @@ private fun loadItemsOneByOne(locale: LOCALE) {
 private fun JSONObject.loadTips(root: Document) {
     val children = root.getElementById("mw-content-text").child(0).children()
     var nextSectionIsAdditionalInformation = false
-    val array = JSONArray()
+    var array: JSONArray? = null
     for (child in children) {
         if (nextSectionIsAdditionalInformation) {
+            array = JSONArray()
             val additionalInformation = child.getElementsByTag("li")
-            for (item in additionalInformation) {
-                array.add(item.text())
-            }
+            for (item in additionalInformation) array.add(item.text())
         }
 
         if (child.tag().toString() == "h2") {
-            when (child.child(0).id()) {
-                "Tips", "Советы" -> {
-                    nextSectionIsAdditionalInformation = true
-                }
-                else -> nextSectionIsAdditionalInformation = false
+            nextSectionIsAdditionalInformation = when (child.child(0).id()) {
+                "Tips", "Советы" -> true
+                else -> false
             }
         }
     }
