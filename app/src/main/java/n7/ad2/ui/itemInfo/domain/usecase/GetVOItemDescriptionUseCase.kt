@@ -28,6 +28,11 @@ class GetVOItemDescriptionUseCase @Inject constructor(
                 add(VOBodyWithSeparator(SpannableString(localItemDescription.tips.toStringListWithDash())))
             }
 
+            localItemDescription.lore?.let {
+                add(VOTitleSimple(application.getString(R.string.lore)))
+                add(VOBodyWithSeparator(SpannableString(localItemDescription.lore.toStringListWithDash())))
+            }
+
         }
     }
 }
