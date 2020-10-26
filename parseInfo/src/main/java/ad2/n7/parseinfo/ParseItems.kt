@@ -28,12 +28,13 @@ enum class LOCALE(val urlAllItems: String, val baseUrl: String, val directory: S
 
 private fun loadItemsOneByOne(locale: LOCALE) {
     JSONObject().apply {
-        val list = getItems(LOCALE.EN.urlAllItems.connect()).filter { !it.first.contains("(") }
+        val list = getItems(LOCALE.EN.urlAllItems.connect())
+            .filter { !it.first.contains("(") }
         val description = "description.json"
 
         list.forEach {
             val root = (locale.baseUrl + it.first).connect()
-            val folderForItemsDescription =assetsFolderItem + it.second + File.separator + locale.directory
+            val folderForItemsDescription = assetsFolderItem + it.second + File.separator + locale.directory
 
             JSONObject().apply {
                 loadName(root)
@@ -57,7 +58,8 @@ private fun loadItemsOneByOne(locale: LOCALE) {
 }
 
 private fun JSONObject.loadTips(root: Document) {
-    val children = root.getElementById("mw-content-text").child(0).children()
+    var children = root.getElementById("mw-content-text").child(0).children()
+    if (children.size == 1) children = root.getElementById("mw-content-text").child(1).children()
     var nextSectionIsAdditionalInformation = false
     var array: JSONArray? = null
     for (child in children) {
@@ -65,6 +67,7 @@ private fun JSONObject.loadTips(root: Document) {
             array = JSONArray()
             val additionalInformation = child.getElementsByTag("li")
             for (item in additionalInformation) array.add(item.text())
+            nextSectionIsAdditionalInformation = false
         }
 
         if (child.tag().toString() == "h2") {
@@ -78,7 +81,8 @@ private fun JSONObject.loadTips(root: Document) {
 }
 
 private fun JSONObject.loadLore(root: Document) {
-    val children = root.getElementById("mw-content-text").child(0).children()
+    var children = root.getElementById("mw-content-text").child(0).children()
+    if (children.size == 1) children = root.getElementById("mw-content-text").child(1).children()
     var nextSectionIsAdditionalInformation = false
     var array : JSONArray? = null
     for (child in children) {
@@ -88,6 +92,7 @@ private fun JSONObject.loadLore(root: Document) {
             for (item in additionalInformation) {
                 array.add(item.text().replace("\\[.+?]".toRegex(),"").trim())
             }
+            nextSectionIsAdditionalInformation = false
         }
 
         if (child.tag().toString() == "h2") {
