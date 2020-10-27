@@ -5,6 +5,7 @@ import org.json.simple.JSONObject
 import org.jsoup.Jsoup
 import org.jsoup.nodes.Document
 import org.jsoup.nodes.Element
+import org.jsoup.nodes.TextNode
 import java.io.File
 
 const val assetsFolderItem = "items/"
@@ -30,6 +31,7 @@ private fun loadItemsOneByOne(locale: LOCALE) {
     JSONObject().apply {
         val list = getItems(LOCALE.EN.urlAllItems.connect())
             .filter { !it.first.contains("(") }
+            .filter { it.second == "Observer Ward" }
         val description = "description.json"
 
         list.forEach {
@@ -43,6 +45,7 @@ private fun loadItemsOneByOne(locale: LOCALE) {
                 loadAbilities(root)
                 loadTips(root)
                 loadLore(root)
+                loadCostAndPlace(root)
 
                 val loadImage = false
                 if(loadImage) saveImage(root.getElementById("itemmainimage").getElementsByTag("img").attr("src"), assetsFolderItem + it.second + File.separator, "full")
@@ -55,6 +58,14 @@ private fun loadItemsOneByOne(locale: LOCALE) {
         }
     }
 
+}
+
+private fun JSONObject.loadCostAndPlace(root: Document) {
+    val table = root.getElementsByClass("infobox")[0]
+    val cost = (table.getElementsByAttributeValue("style", "width:50%; background-color:#DAA520;")[0].childNodes().lastOrNull() as? TextNode)?.text()?.trim()
+    put("cost", cost)
+    val place = (table.getElementsByAttributeValue("style", "width:50%;")[0].childNodes().lastOrNull() as? TextNode)?.text()?.trim()
+    put("place", place)
 }
 
 private fun JSONObject.loadTips(root: Document) {
