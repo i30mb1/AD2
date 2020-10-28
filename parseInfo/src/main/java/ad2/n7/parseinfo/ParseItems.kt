@@ -202,7 +202,8 @@ private fun JSONObject.loadAbilities(root: Document) {
 }
 
 private fun JSONObject.loadAdditionalInformation(root: Document) {
-    val children = root.getElementById("mw-content-text").child(0).children()
+    var children = root.getElementById("mw-content-text").child(0).children()
+    if (children.size == 1) children = root.getElementById("mw-content-text").child(1).children()
     var nextSectionIsAdditionalInformation = false
     for (child in children) {
         if (nextSectionIsAdditionalInformation) {
