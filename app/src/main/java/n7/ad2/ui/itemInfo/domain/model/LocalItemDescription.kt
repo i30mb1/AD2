@@ -15,6 +15,10 @@ data class LocalItemDescription(
     val lore: List<String>? = null,
     @Json(name = "name")
     val name: String = "",
+    @Json(name = "cost")
+    val cost: String = "",
+    @Json(name = "boughtFrom")
+    val boughtFrom: String = "",
     @Json(name = "tips")
     val tips: List<String>? = null,
 )
