@@ -8,7 +8,7 @@ data class LocalItemDescription(
     @Json(name = "abilities")
     val abilities: List<Ability> = listOf(),
     @Json(name = "additionalInformation")
-    val additionalInformation: List<String> = listOf(),
+    val additionalInformation: List<String>? = null,
     @Json(name = "description")
     val description: String = "",
     @Json(name = "lore")

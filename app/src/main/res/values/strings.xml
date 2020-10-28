@@ -225,5 +225,6 @@
     <string name="en" translatable="false">ENG</string>
     <string name="cost">Cost : %s</string>
     <string name="bought_from">Bought From : %s</string>
+    <string name="additional_information">Additional information</string>
 
 </resources>

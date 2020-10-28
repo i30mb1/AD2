@@ -132,4 +132,5 @@
     <string name="setting_rate_me_title">Оценить приложение</string>
     <string name="cost">Стоимость : %s</string>
     <string name="bought_from">Покупается в : %s</string>
+    <string name="additional_information">Дополнительная информация</string>
 </resources>
