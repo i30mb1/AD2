@@ -5,6 +5,7 @@ import android.text.SpannableString
 import kotlinx.coroutines.CoroutineDispatcher
 import kotlinx.coroutines.withContext
 import n7.ad2.R
+import n7.ad2.ui.heroInfo.domain.vo.VOBodyLine
 import n7.ad2.ui.heroInfo.domain.vo.VOBodySimple
 import n7.ad2.ui.heroInfo.domain.vo.VOBodyWithSeparator
 import n7.ad2.ui.heroInfo.domain.vo.VODescription
@@ -21,6 +22,8 @@ class GetVOItemDescriptionUseCase @Inject constructor(
     suspend operator fun invoke(localItemDescription: LocalItemDescription): List<VODescription> = withContext(ioDispatcher) {
         mutableListOf<VODescription>().apply {
             add(VOTitleSimple(localItemDescription.name))
+            add(VOBodyLine(application.getString(R.string.cost, localItemDescription.cost)))
+            add(VOBodyLine(application.getString(R.string.bought_from, localItemDescription.boughtFrom)))
             add(VOBodySimple(localItemDescription.description))
 
             localItemDescription.tips?.let {
@@ -32,6 +35,8 @@ class GetVOItemDescriptionUseCase @Inject constructor(
                 add(VOTitleSimple(application.getString(R.string.lore)))
                 add(VOBodyWithSeparator(SpannableString(localItemDescription.lore.toStringListWithDash())))
             }
+
+
 
         }
     }

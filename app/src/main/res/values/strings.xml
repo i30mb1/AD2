@@ -223,5 +223,7 @@
     <string name="locale">ENG</string>
     <string name="ru" translatable="false">RU</string>
     <string name="en" translatable="false">ENG</string>
+    <string name="cost">Cost : %s</string>
+    <string name="bought_from">Bought From : %s</string>
 
 </resources>
