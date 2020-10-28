@@ -45,7 +45,7 @@ private fun loadItemsOneByOne(locale: LOCALE) {
                 loadAbilities(root)
                 loadTips(root)
                 loadLore(root)
-                loadCostAndPlace(root)
+                loadCostAndBoughtFrom(root)
 
                 val loadImage = false
                 if(loadImage) saveImage(root.getElementById("itemmainimage").getElementsByTag("img").attr("src"), assetsFolderItem + it.second + File.separator, "full")
@@ -60,12 +60,12 @@ private fun loadItemsOneByOne(locale: LOCALE) {
 
 }
 
-private fun JSONObject.loadCostAndPlace(root: Document) {
+private fun JSONObject.loadCostAndBoughtFrom(root: Document) {
     val table = root.getElementsByClass("infobox")[0]
     val cost = (table.getElementsByAttributeValue("style", "width:50%; background-color:#DAA520;")[0].childNodes().lastOrNull() as? TextNode)?.text()?.trim()
     put("cost", cost)
     val place = (table.getElementsByAttributeValue("style", "width:50%;")[0].childNodes().lastOrNull() as? TextNode)?.text()?.trim()
-    put("place", place)
+    put("boughtFrom", place)
 }
 
 private fun JSONObject.loadTips(root: Document) {
