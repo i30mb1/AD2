@@ -31,7 +31,7 @@ private fun loadItemsOneByOne(locale: LOCALE) {
     JSONObject().apply {
         val list = getItems(LOCALE.EN.urlAllItems.connect())
             .filter { !it.first.contains("(") }
-            .filter { it.second == "Magic Wand" }
+            .filter { it.second == "Observer Ward" }
         val description = "description.json"
 
         list.forEach {
@@ -63,10 +63,24 @@ private fun loadItemsOneByOne(locale: LOCALE) {
 
 private fun JSONObject.loadRecipe(root: Document) {
     val table = root.getElementsByAttributeValue("style", "text-align:left;")[0].child(0).children()
-    val children = table.last().child(0).children()
+    val children = table.last().getElementsByAttributeValue("width", "40")
+    val upgradeInList = JSONArray()
+    val containsFromList = JSONArray()
+    var findMatchWithItemName = false
     for (child in children) {
-        if(child.tag().toString() == " div") 3
+        val recipeName = child.attr("alt").removeBrackets()
+        if (this["name"] == recipeName) {
+            findMatchWithItemName = true
+            continue
+        }
+        if (findMatchWithItemName) {
+            containsFromList.add(recipeName)
+        } else {
+            upgradeInList.add(recipeName)
+        }
     }
+    put("upgradeIn", if (upgradeInList.size > 0) upgradeInList else null)
+    put("consistFrom", if (containsFromList.size > 0) containsFromList else null)
 }
 
 private fun JSONObject.loadCostAndBoughtFrom(root: Document) {
