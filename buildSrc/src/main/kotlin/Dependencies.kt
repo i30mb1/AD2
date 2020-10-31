@@ -63,8 +63,8 @@ object Lib {
     const val roomKtx        = "androidx.room:room-ktx:${Versions.room}" // kotlin Extensions and Coroutines support for Room
 
     // --- Coroutines ---
-    const val coroutines          = "org.jetbrains.kotlinx:kotlinx-coroutines-core:1.3.2"
-    const val coroutinesAndroid   = "org.jetbrains.kotlinx:kotlinx-coroutines-android:1.3.2" // for testing coroutines
+    const val coroutines          = "org.jetbrains.kotlinx:kotlinx-coroutines-core:1.4.0"
+    const val coroutinesAndroid   = "org.jetbrains.kotlinx:kotlinx-coroutines-android:1.4.0" // for testing coroutines
     const val coroutinesLifecycle = "androidx.lifecycle:lifecycle-runtime-ktx:2.2.0" // lifecycleScope + launchWhenResumed and ets.
     const val coroutinesLivedata  = "androidx.lifecycle:lifecycle-livedata-ktx:2.2.0" // liveData (LiveData + coroutines)
     const val coroutinesViewmodel = "androidx.lifecycle:lifecycle-viewmodel-ktx:2.2.0" // viewModelScope + savedStateHandle

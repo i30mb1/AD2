@@ -79,6 +79,7 @@ dependencies {
     api(Lib.coroutinesLifecycle)
     api(Lib.coroutinesLivedata)
     api(Lib.coroutinesViewmodel)
+    api(Lib.coroutines)
     api(Lib.fragmentKtx)
     api(Lib.activityKtx)
     implementation(Lib.dagger)
