@@ -1,4 +1,4 @@
-package ad2.n7.parseinfo
+package n7.ad2.parseinfo
 
 import org.json.simple.JSONArray
 import org.json.simple.JSONObject

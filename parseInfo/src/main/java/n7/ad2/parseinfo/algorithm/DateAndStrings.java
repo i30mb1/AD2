@@ -1,4 +1,4 @@
-package ad2.n7.parseinfo.algorithm;
+package n7.ad2.parseinfo.algorithm;
 
 import java.text.ParseException;
 import java.text.SimpleDateFormat;

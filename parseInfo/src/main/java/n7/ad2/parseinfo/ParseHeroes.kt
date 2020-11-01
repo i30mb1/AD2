@@ -1,8 +1,8 @@
 @file:Suppress("BlockingMethodInNonBlockingContext")
 
-package ad2.n7.parseinfo
+package n7.ad2.parseinfo
 
-import ad2.n7.parseinfo.ParseHeroes.Companion.parser
+import n7.ad2.parseinfo.ParseHeroes.Companion.parser
 import kotlinx.coroutines.CoroutineScope
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.async

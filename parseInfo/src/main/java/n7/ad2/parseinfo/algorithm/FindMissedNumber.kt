@@ -1,4 +1,4 @@
-package ad2.n7.parseinfo.algorithm
+package n7.ad2.parseinfo.algorithm
 
 import java.io.FileReader
 import java.util.*

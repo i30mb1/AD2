@@ -1,6 +1,5 @@
-package ad2.n7.feature_streams
+package n7.ad2.feature_streams
 
-import android.content.Intent
 import android.net.Uri
 import android.os.Bundle
 import android.util.Log
@@ -9,7 +8,7 @@ import androidx.appcompat.app.AppCompatActivity
 class StreamsActivity : AppCompatActivity() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
-        setTheme(n7.ad2.R.style.AD2Theme_White)
+        setTheme(R.style.AD2Theme_White)
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_streams)
 

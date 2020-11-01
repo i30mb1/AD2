@@ -1,4 +1,4 @@
-package ad2.n7.parseinfo
+package n7.ad2.parseinfo
 
 import java.io.File
 import java.net.URL
