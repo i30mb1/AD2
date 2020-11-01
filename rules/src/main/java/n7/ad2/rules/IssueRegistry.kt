@@ -1,6 +1,6 @@
-package ad2.n7.rules
+package n7.ad2.rules
 
-import ad2.n7.rules.issues.WrongUsingAttrDetector
+import n7.ad2.rules.issues.WrongUsingAttrDetector
 import com.android.tools.lint.client.api.IssueRegistry
 import com.android.tools.lint.detector.api.CURRENT_API
 import com.android.tools.lint.detector.api.Issue

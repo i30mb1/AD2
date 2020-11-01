@@ -1,4 +1,4 @@
-package ad2.n7.rules.issues
+package n7.ad2.rules.issues
 
 import com.android.tools.lint.detector.api.Category
 import com.android.tools.lint.detector.api.Implementation
