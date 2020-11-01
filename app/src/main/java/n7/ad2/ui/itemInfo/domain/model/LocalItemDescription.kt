@@ -21,6 +21,8 @@ data class LocalItemDescription(
     val boughtFrom: String = "",
     @Json(name = "tips")
     val tips: List<String>? = null,
+    @Json(name = "consistFrom")
+    val consistFrom: List<String>? = null
 )
 
 @JsonClass(generateAdapter = true)
