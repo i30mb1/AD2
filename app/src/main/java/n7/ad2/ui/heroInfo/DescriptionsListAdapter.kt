@@ -20,6 +20,7 @@ import n7.ad2.databinding.ItemBodyWithSeparatorBinding
 import n7.ad2.databinding.ItemTitleWithIconBinding
 import n7.ad2.ui.heroInfo.domain.usecase.MyClickableSpan
 import n7.ad2.ui.heroInfo.domain.vo.VOBodyLine
+import n7.ad2.ui.heroInfo.domain.vo.VOBodyRecipe
 import n7.ad2.ui.heroInfo.domain.vo.VOBodySimple
 import n7.ad2.ui.heroInfo.domain.vo.VOBodyTalent
 import n7.ad2.ui.heroInfo.domain.vo.VOBodyWithImage
@@ -51,12 +52,11 @@ class DescriptionsListAdapter(
             is VOBodyWithSeparator -> R.layout.item_body_with_separator
             is VOBodyWithImage -> R.layout.item_body_with_image
             is VOBodyTalent -> R.layout.item_body_talent
+            is VOBodyRecipe -> R.layout.item_body_recipe
         }
     }
 
-    override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): ViewHolder {
-        return ViewHolder.from(parent, viewType, listener, audioExoPlayer)
-    }
+    override fun onCreateViewHolder(parent: ViewGroup, viewType: Int) = ViewHolder.from(parent, viewType, listener, audioExoPlayer)
 
     override fun onBindViewHolder(holder: ViewHolder, position: Int) = holder.bind(getItem(position))
 
@@ -128,6 +128,7 @@ class DescriptionsListAdapter(
                 is VOBodyWithImage -> newItem is VOBodyWithImage
                 is VOBodyLine -> newItem is VOBodyLine
                 is VOBodyTalent -> newItem is VOBodyTalent
+                is VOBodyRecipe -> newItem is VOBodyRecipe
             }
         }
 
