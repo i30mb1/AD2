@@ -24,7 +24,7 @@ class WrongUsingAttrDetector : LayoutDetector() {
         if (attribute.value.startsWith("#") || attribute.value.startsWith("@color/")) {
             context.report(
                 ISSUE,
-                context.getLocation(attribute.ownerElement),
+                context.getLocation(attribute),
                 ISSUE.getExplanation(TextFormat.RAW)
             )
         }
