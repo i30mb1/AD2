@@ -10,11 +10,13 @@ import androidx.core.text.getSpans
 import androidx.databinding.DataBindingUtil
 import androidx.databinding.ViewDataBinding
 import androidx.recyclerview.widget.DiffUtil
+import androidx.recyclerview.widget.GridLayoutManager
 import androidx.recyclerview.widget.ListAdapter
 import androidx.recyclerview.widget.RecyclerView
 import n7.ad2.BR
 import n7.ad2.R
 import n7.ad2.base.VOPopUpListener
+import n7.ad2.databinding.ItemBodyRecipeBinding
 import n7.ad2.databinding.ItemBodyWithImageBinding
 import n7.ad2.databinding.ItemBodyWithSeparatorBinding
 import n7.ad2.databinding.ItemTitleWithIconBinding
@@ -29,6 +31,7 @@ import n7.ad2.ui.heroInfo.domain.vo.VODescription
 import n7.ad2.ui.heroInfo.domain.vo.VOTitleSimple
 import n7.ad2.ui.heroInfo.domain.vo.VOTitleWithIcon
 import n7.ad2.ui.heroPage.AudioExoPlayer
+import n7.ad2.ui.itemInfo.RecipeImagesAdapter
 import n7.ad2.utils.extension.toPx
 
 class DescriptionsListAdapter(
@@ -76,9 +79,8 @@ class DescriptionsListAdapter(
 
         private fun bindSpecificVO(binding: ViewDataBinding) {
             when (binding) {
-                is ItemBodyWithSeparatorBinding -> {
-                    setBoundToImageSpan(binding.tvBody, binding.item!!.body)
-                }
+                is ItemBodyRecipeBinding -> (binding.rv.layoutManager as GridLayoutManager).spanCount = binding.item!!.recipes.size
+                is ItemBodyWithSeparatorBinding -> setBoundToImageSpan(binding.tvBody, binding.item!!.body)
                 is ItemBodyWithImageBinding -> {
                     setBoundToImageSpan(binding.tvBody, binding.item!!.body)
                     binding.listener = listener
@@ -111,7 +113,10 @@ class DescriptionsListAdapter(
                 audioExoPlayer: AudioExoPlayer,
             ): ViewHolder {
                 val layoutInflater = LayoutInflater.from(parent.context)
-                val binding = DataBindingUtil.inflate<ViewDataBinding>(layoutInflater, viewType, parent, false)
+                val binding: ViewDataBinding = when (viewType) {
+                    R.layout.item_body_recipe -> ItemBodyRecipeBinding.inflate(layoutInflater, parent, false).apply { rv.adapter = RecipeImagesAdapter() }
+                    else -> DataBindingUtil.inflate(layoutInflater, viewType, parent, false)
+                }
                 return ViewHolder(binding, listener, audioExoPlayer)
             }
         }
