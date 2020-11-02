@@ -86,7 +86,7 @@ private fun JSONObject.loadRecipe(root: Document) {
 
 private fun JSONObject.loadCostAndBoughtFrom(root: Document) {
     val table = root.getElementsByClass("infobox")[0]
-    val cost = (table.getElementsByAttributeValue("style", "width:50%; background-color:#DAA520;")[0].childNodes().lastOrNull() as? TextNode)?.text()?.trim()
+    val cost = (table.getElementsByAttributeValue("style", "width:50%; background-color:#DAA520;")[0].childNodes().lastOrNull() as? TextNode)?.text()?.removeBrackets()
     put("cost", cost)
     val place = (table.getElementsByAttributeValue("style", "width:50%;")[0].childNodes().lastOrNull() as? TextNode)?.text()?.trim()
     put("boughtFrom", place)
