@@ -6,8 +6,10 @@ import android.os.Looper
 import android.view.View
 import androidx.core.os.bundleOf
 import androidx.fragment.app.Fragment
+import androidx.lifecycle.lifecycleScope
 import androidx.recyclerview.widget.LinearLayoutManager
 import kotlinx.coroutines.InternalCoroutinesApi
+import kotlinx.coroutines.flow.collect
 import n7.ad2.R
 import n7.ad2.databinding.FragmentHeroResponsesBinding
 import n7.ad2.di.injector
@@ -46,8 +48,8 @@ class ResponsesFragment : Fragment(R.layout.fragment_hero_responses) {
             }
         }
 
-        viewModel.error.observe(viewLifecycleOwner) {
-            it?.let(::showDialogError)
+        lifecycleScope.launchWhenResumed {
+            viewModel.error.collect(::showDialogError)
         }
 
         val heroName = requireArguments().getString(HERO_NAME)!!

@@ -9,6 +9,8 @@ import androidx.lifecycle.switchMap
 import androidx.lifecycle.viewModelScope
 import androidx.paging.PagedList
 import androidx.paging.toLiveData
+import kotlinx.coroutines.flow.MutableStateFlow
+import kotlinx.coroutines.flow.StateFlow
 import kotlinx.coroutines.launch
 import n7.ad2.R
 import n7.ad2.data.source.local.Locale
@@ -25,8 +27,8 @@ class ResponsesViewModel @Inject constructor(
     private val getLocalHeroByNameUseCase: GetLocalHeroByNameUseCase
 ) : AndroidViewModel(application) {
 
-    private val _error = MutableLiveData<Throwable?>()
-    val error: LiveData<Throwable?> = _error
+    private val _error = MutableStateFlow<Throwable?>(null)
+    val error: StateFlow<Throwable?> = _error
     private val heroWithLocale = MutableLiveData<Pair<LocalHero, Locale>>()
     val voResponses = heroWithLocale.switchMap {
         liveData {
@@ -38,7 +40,6 @@ class ResponsesViewModel @Inject constructor(
                 }
                 .onFailure {
                     _error.value = it
-                    _error.value = null
                 }
         }
     }
