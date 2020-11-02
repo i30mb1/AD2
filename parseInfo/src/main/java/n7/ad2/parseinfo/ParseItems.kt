@@ -31,7 +31,7 @@ private fun loadItemsOneByOne(locale: LOCALE) {
     JSONObject().apply {
         val list = getItems(LOCALE.EN.urlAllItems.connect())
             .filter { !it.first.contains("(") }
-            .filter { it.second == "Observer Ward" }
+//            .filter { it.second == "Observer Ward" }
         val description = "description.json"
 
         list.forEach {
@@ -68,13 +68,14 @@ private fun JSONObject.loadRecipe(root: Document) {
     val containsFromList = JSONArray()
     var findMatchWithItemName = false
     for (child in children) {
-        val recipeName = child.attr("alt").removeBrackets()
+        var recipeName = child.attr("alt").removeBrackets()
         if (this["name"] == recipeName) {
             findMatchWithItemName = true
             continue
         }
         if (findMatchWithItemName) {
-            containsFromList.add(recipeName)
+            if (recipeName == "Рецепт") containsFromList.add("Recipe")
+            else containsFromList.add(recipeName)
         } else {
             upgradeInList.add(recipeName)
         }
