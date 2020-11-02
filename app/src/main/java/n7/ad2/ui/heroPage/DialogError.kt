@@ -9,9 +9,10 @@ import androidx.fragment.app.FragmentActivity
 import com.google.android.material.dialog.MaterialAlertDialogBuilder
 import n7.ad2.databinding.DialogErrorBinding
 
-fun Fragment.showDialogError(throwable: Throwable) = showDialogError(throwable.toString())
+fun Fragment.showDialogError(throwable: Throwable?) = showDialogError(throwable?.toString())
 
-fun Fragment.showDialogError(title: String) {
+fun Fragment.showDialogError(title: String?) {
+    requireNotNull(title)
     val dialogError = DialogError.newInstance(title)
     dialogError.show(childFragmentManager, null)
 }
@@ -35,7 +36,7 @@ class DialogError : DialogFragment() {
 
     override fun onCreateDialog(savedInstanceState: Bundle?): Dialog {
         val dialogView = DialogErrorBinding.inflate(layoutInflater).apply {
-            body.text = arguments?.getString(BODY_KEY)
+            body.text = requireArguments().getString(BODY_KEY)
         }
 
         val dialogBuilder = MaterialAlertDialogBuilder(requireContext())
