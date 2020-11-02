@@ -1,4 +1,5 @@
 package n7.ad2.ui.itemInfo.domain.model
+
 import com.squareup.moshi.JsonClass
 
 import com.squareup.moshi.Json
@@ -22,7 +23,9 @@ data class LocalItemDescription(
     @Json(name = "tips")
     val tips: List<String>? = null,
     @Json(name = "consistFrom")
-    val consistFrom: List<String>? = null
+    val consistFrom: List<String>? = null,
+    @Json(name = "trivia")
+    val trivia: List<String>? = null,
 )
 
 @JsonClass(generateAdapter = true)
@@ -46,5 +49,5 @@ data class Ability(
     @Json(name = "params")
     val params: List<String> = listOf(),
     @Json(name = "story")
-    val story: Any? = null
+    val story: Any? = null,
 )
