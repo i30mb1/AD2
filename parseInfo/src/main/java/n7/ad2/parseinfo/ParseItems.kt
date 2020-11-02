@@ -44,6 +44,7 @@ private fun loadItemsOneByOne(locale: LOCALE) {
                 loadAdditionalInformation(root)
                 loadAbilities(root)
                 loadTips(root)
+                loadFacts(root)
                 loadLore(root)
                 loadCostAndBoughtFrom(root)
                 loadRecipe(root)
@@ -90,6 +91,29 @@ private fun JSONObject.loadCostAndBoughtFrom(root: Document) {
     put("cost", cost)
     val place = (table.getElementsByAttributeValue("style", "width:50%;")[0].childNodes().lastOrNull() as? TextNode)?.text()?.trim()
     put("boughtFrom", place)
+}
+
+private fun JSONObject.loadFacts(root: Document) {
+    var children = root.getElementById("mw-content-text").child(0).children()
+    if (children.size == 1) children = root.getElementById("mw-content-text").child(1).children()
+    var nextSectionIsAdditionalInformation = false
+    var array: JSONArray? = null
+    for (child in children) {
+        if (nextSectionIsAdditionalInformation) {
+            array = JSONArray()
+            val additionalInformation = child.getElementsByTag("li")
+            for (item in additionalInformation) array.add(item.text())
+            nextSectionIsAdditionalInformation = false
+        }
+
+        if (child.tag().toString() == "h2") {
+            nextSectionIsAdditionalInformation = when (child.child(0).id()) {
+                "Trivia", "Факты" -> true
+                else -> false
+            }
+        }
+    }
+    put("trivia", array)
 }
 
 private fun JSONObject.loadTips(root: Document) {
