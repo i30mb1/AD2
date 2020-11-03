@@ -134,4 +134,5 @@
     <string name="recipe">Рецепт</string>
     <string name="bought_from">Покупается в : %s</string>
     <string name="additional_information">Дополнительная информация</string>
+    <string name="trivia">Факты</string>
 </resources>

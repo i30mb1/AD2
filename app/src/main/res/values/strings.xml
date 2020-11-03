@@ -227,5 +227,6 @@
     <string name="recipe">Recipe</string>
     <string name="bought_from">Bought From : %s</string>
     <string name="additional_information">Additional information</string>
+    <string name="trivia">Trivia</string>
 
 </resources>
