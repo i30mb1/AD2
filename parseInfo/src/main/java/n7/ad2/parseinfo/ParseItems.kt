@@ -31,7 +31,7 @@ private fun loadItemsOneByOne(locale: LOCALE) {
     JSONObject().apply {
         val list = getItems(LOCALE.EN.urlAllItems.connect())
             .filter { !it.first.contains("(") }
-//            .filter { it.second == "Observer Ward" }
+            .filter { it.second == "Holy Locket" }
         val description = "description.json"
 
         list.forEach {
@@ -48,6 +48,7 @@ private fun loadItemsOneByOne(locale: LOCALE) {
                 loadLore(root)
                 loadCostAndBoughtFrom(root)
                 loadRecipe(root)
+                loadBonuses(root)
 
                 val loadImage = false
                 if(loadImage) saveImage(root.getElementById("itemmainimage").getElementsByTag("img").attr("src"), assetsFolderItem + it.second + File.separator, "full")
@@ -60,6 +61,20 @@ private fun loadItemsOneByOne(locale: LOCALE) {
         }
     }
 
+}
+
+private fun JSONObject.loadBonuses(root: Document) {
+    val table = root.getElementsByAttributeValue("style", "text-align:left;")[0].child(0).children()
+    var array: JSONArray? = null
+    for (row in table) {
+        val haveBonuses = row.child(0).text().startsWith("Bonus") || row.child(0).text().startsWith("Бонус")
+        if (haveBonuses) {
+            array = JSONArray()
+            val bonuses = row.child(1).text().split(Regex("(?=\\+)")).drop(1).map { it.trim() }
+            bonuses.forEach { array.add(it) }
+        }
+        put("bonuses", array)
+    }
 }
 
 private fun JSONObject.loadRecipe(root: Document) {
