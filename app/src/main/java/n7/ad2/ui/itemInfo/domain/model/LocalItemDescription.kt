@@ -35,7 +35,7 @@ data class Ability(
     @Json(name = "audioUrl")
     val audioUrl: String? = null,
     @Json(name = "cooldown")
-    val cooldown: Any? = null,
+    val cooldown: String? = null,
     @Json(name = "description")
     val description: String = "",
     @Json(name = "effects")
@@ -49,5 +49,5 @@ data class Ability(
     @Json(name = "params")
     val params: List<String> = listOf(),
     @Json(name = "story")
-    val story: Any? = null,
+    val story: String? = null,
 )

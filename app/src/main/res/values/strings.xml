@@ -95,6 +95,7 @@
     <string name="hero_fragment_trivia">Trivia</string>
     <string name="hero_fragment_description">Description</string>
     <string name="tips">Tips</string>
+    <string name="abilities">Ability : %s</string>
     <string name="lore">Lore</string>
     <string name="open_file">Open</string>
     <string name="hero_responses_fragment_download_first">You should download sound first</string>

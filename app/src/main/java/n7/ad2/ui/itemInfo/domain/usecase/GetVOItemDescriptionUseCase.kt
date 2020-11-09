@@ -8,9 +8,11 @@ import n7.ad2.R
 import n7.ad2.ui.heroInfo.domain.vo.VOBodyLine
 import n7.ad2.ui.heroInfo.domain.vo.VOBodyRecipe
 import n7.ad2.ui.heroInfo.domain.vo.VOBodySimple
+import n7.ad2.ui.heroInfo.domain.vo.VOBodyWithImage
 import n7.ad2.ui.heroInfo.domain.vo.VOBodyWithSeparator
 import n7.ad2.ui.heroInfo.domain.vo.VODescription
 import n7.ad2.ui.heroInfo.domain.vo.VOTitleSimple
+import n7.ad2.ui.heroInfo.domain.vo.VOTitleWithIcon
 import n7.ad2.ui.itemInfo.domain.adapter.toVORecipe
 import n7.ad2.ui.itemInfo.domain.model.LocalItemDescription
 import n7.ad2.utils.extension.toStringListWithDash
@@ -31,6 +33,19 @@ class GetVOItemDescriptionUseCase @Inject constructor(
             localItemDescription.consistFrom?.let {
                 add(VOTitleSimple(application.getString(R.string.recipe)))
                 add(VOBodyRecipe(it.map { itemName -> itemName.toVORecipe() }))
+            }
+
+            localItemDescription.abilities?.let { list ->
+                list.forEach { ability ->
+                    add(VOTitleWithIcon(application.getString(R.string.abilities, ability.abilityName), null, null, audioUrl = ability.audioUrl))
+                    ability.notes.forEach { add(VOBodyLine(it)) }
+                    add(VOBodySimple(ability.description))
+                    if (ability.story != null) add(VOBodySimple(ability.story))
+                    add(VOBodyWithSeparator(SpannableString(ability.params.toStringListWithDash())))
+                    add(VOBodyWithSeparator(SpannableString(ability.notes.toStringListWithDash())))
+                    if (ability.mana != null) add(VOBodyWithImage(SpannableString(ability.mana), R.drawable.mana))
+                    if (ability.cooldown != null) add(VOBodyWithImage(SpannableString(ability.cooldown), R.drawable.cooldown))
+                }
             }
 
             localItemDescription.tips?.let {
