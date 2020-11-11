@@ -51,6 +51,7 @@
             tools:text="@sample/heroes.json/data/nameEng" />
 
         <View
+            isVisible="@{model.viewedByUser}"
             android:layout_width="@dimen/line_width"
             android:layout_height="match_parent"
             android:background="?colorPrimary" />
