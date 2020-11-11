@@ -14,5 +14,7 @@ data class LocalItem(
     @ColumnInfo(name = "assetsPath")
     val assetsPath: String,
     @ColumnInfo(name = "type")
-    val type: String
+    val type: String,
+    @ColumnInfo(name = "viewedByUser")
+    val viewedByUser: Boolean,
 )
