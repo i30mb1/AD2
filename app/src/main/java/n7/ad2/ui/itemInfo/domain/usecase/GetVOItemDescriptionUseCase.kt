@@ -38,7 +38,7 @@ class GetVOItemDescriptionUseCase @Inject constructor(
             localItemDescription.abilities?.let { list ->
                 list.forEach { ability ->
                     add(VOTitleWithIcon(application.getString(R.string.abilities, ability.abilityName), null, null, audioUrl = ability.audioUrl))
-                    ability.notes.forEach { add(VOBodyLine(it)) }
+                    ability.effects.forEach { add(VOBodyLine(it)) }
                     add(VOBodySimple(ability.description))
                     if (ability.story != null) add(VOBodySimple(ability.story))
                     add(VOBodyWithSeparator(SpannableString(ability.params.toStringListWithDash())))
