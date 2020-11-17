@@ -19,4 +19,7 @@ interface ItemsDao: BaseDao<LocalItem> {
     @Query("SELECT rowid,* FROM LocalItems WHERE name =:name")
     suspend fun getItem(name: String): LocalItem
 
+    @Query("UPDATE LocalItems SET viewedByUser = 1 WHERE name =:name")
+    fun updateItemViewedByUserField(name: String)
+
 }

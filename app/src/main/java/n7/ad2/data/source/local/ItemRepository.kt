@@ -29,6 +29,10 @@ class ItemRepository @Inject constructor(
         }
     }
 
+    suspend fun updateItemViewedByUserField(name: String) {
+        appDatabase.itemsDao.updateItemViewedByUserField(name)
+    }
+
     suspend fun getAssetsItems(): String {
         return application.assets
             .open(ASSETS_PATH_ITEMS).bufferedReader().use {

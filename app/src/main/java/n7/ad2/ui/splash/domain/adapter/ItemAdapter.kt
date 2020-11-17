@@ -7,6 +7,7 @@ fun AssetsItem.toLocalItem(): LocalItem {
     return LocalItem(
         name = this.nameEng,
         assetsPath = this.assetsPath,
-        type = this.section
+        type = this.section,
+        viewedByUser = false
     )
 }
