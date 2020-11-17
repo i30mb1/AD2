@@ -9,7 +9,7 @@ fun Context.isChannelNotCreated(channelId: String): Boolean {
     if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.O) {
         val notificationManager = getSystemService(Context.NOTIFICATION_SERVICE) as NotificationManager
         val notificationChannel: NotificationChannel? = notificationManager.getNotificationChannel(channelId)
-        return notificationChannel?.importance == NotificationManager.IMPORTANCE_NONE
+        return notificationChannel?.importance != NotificationManager.IMPORTANCE_NONE
     }
     return false
 }
