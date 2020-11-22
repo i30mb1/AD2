@@ -60,7 +60,7 @@ class ItemsPagedListAdapter constructor(fragment: ItemsFragment) : PagedListAdap
     private class DiffCallback : DiffUtil.ItemCallback<VOItem>() {
         override fun areItemsTheSame(oldItem: VOItem, newItem: VOItem): Boolean = oldItem.name == newItem.name
 
-        override fun areContentsTheSame(oldItem: VOItem, newItem: VOItem): Boolean = true
+        override fun areContentsTheSame(oldItem: VOItem, newItem: VOItem): Boolean = oldItem.viewedByUser == newItem.viewedByUser
 
     }
 
