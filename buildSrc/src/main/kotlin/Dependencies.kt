@@ -17,11 +17,11 @@ object Versions {
     const val workManager   = "2.3.4"
     const val moshi         = "1.9.2"
     const val room          = "2.2.5"
-    const val kotlinVersion = "1.4.10"
+    const val kotlin        = "1.4.10"
 }
 
 object Lib {
-    const val kotlinReflection = "org.jetbrains.kotlin:kotlin-reflect:${Versions.kotlinVersion}"
+    const val kotlinReflection = "org.jetbrains.kotlin:kotlin-reflect:${Versions.kotlin}"
     const val ticker           = "com.robinhood.ticker:ticker:1.2.2"
     const val sliding          = "com.yarolegovich:sliding-root-nav:1.1.0"
     const val debugDB          = "com.amitshekhar.android:debug-db:1.0.1" // cmd ipconfig основной шлюз + :8080 (как узнать страничку для браузера)
@@ -42,7 +42,7 @@ object Lib {
     const val exoPlayer        = "com.google.android.exoplayer:exoplayer-core:2.11.4"
     const val coreKtx          = "androidx.core:core-ktx:1.2.0" // Write more concise, idiomatic Kotlin code.
     const val jsonSimple       = "com.googlecode.json-simple:json-simple:1.1.1"
-    const val kotlinStdlib     = "org.jetbrains.kotlin:kotlin-stdlib-jdk7:${Versions.kotlinVersion}"
+    const val kotlinStdlib     = "org.jetbrains.kotlin:kotlin-stdlib-jdk7:${Versions.kotlin}"
     const val springAnimation     = "androidx.dynamicanimation:dynamicanimation:1.0.0"
     const val springAnimationKtx  = "androidx.dynamicanimation:dynamicanimation-ktx:1.0.0-alpha03"
     const val instantApps  = "com.google.android.gms:play-services-instantapps:17.0.0"
