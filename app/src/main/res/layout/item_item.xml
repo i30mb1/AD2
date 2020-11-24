@@ -14,13 +14,13 @@
 
         <variable
             name="model"
-            type="n7.ad2.ui.items.domain.vo.VOItem" />
+            type="n7.ad2.ui.items.domain.vo.VOItemBody" />
     </data>
 
     <com.google.android.material.card.MaterialCardView
         android:layout_width="match_parent"
-        android:onClick="@{()-> listener.onClickListener(binding)}"
         android:layout_height="wrap_content"
+        android:onClick="@{()-> listener.onClickListener(binding)}"
         tools:layout_height="64dp"
         tools:layout_width="88dp">
 
