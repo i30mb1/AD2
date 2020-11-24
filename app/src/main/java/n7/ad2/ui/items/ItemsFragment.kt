@@ -13,6 +13,7 @@ import n7.ad2.ui.MainActivity
 import n7.ad2.ui.itemInfo.ItemInfoActivity
 import n7.ad2.ui.itemInfo.ItemInfoFragment
 import n7.ad2.ui.items.domain.vo.VOItem
+import n7.ad2.ui.items.domain.vo.VOItemBody
 import n7.ad2.utils.viewModel
 
 class ItemsFragment : Fragment(R.layout.fragment_items) {
@@ -34,7 +35,7 @@ class ItemsFragment : Fragment(R.layout.fragment_items) {
         setupAdapter()
     }
 
-    fun startItemInfoFragment(model: VOItem, binding: ItemItemBinding) {
+    fun startItemInfoFragment(model: VOItemBody, binding: ItemItemBinding) {
         val intent = Intent(requireContext(), ItemInfoActivity::class.java)
         intent.putExtra(ItemInfoFragment.ITEM_NAME, model.name)
         startActivity(intent)
@@ -43,10 +44,11 @@ class ItemsFragment : Fragment(R.layout.fragment_items) {
     }
 
     private fun setupAdapter() {
-        val myAdapter = ItemsPagedListAdapter(this)
+        val gridLayoutManager = GridLayoutManager(context, 4)
+        val myAdapter = ItemsPagedListAdapter(this, gridLayoutManager)
         binding.rv.apply {
             setHasFixedSize(true)
-            layoutManager = GridLayoutManager(context, 4)
+            layoutManager = gridLayoutManager
             adapter = myAdapter
         }
         viewModel.itemsPagedList.observe(viewLifecycleOwner, myAdapter::submitList)
