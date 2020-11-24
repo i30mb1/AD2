@@ -11,6 +11,7 @@ import android.content.IntentFilter
 import android.database.ContentObserver
 import android.net.Uri
 import android.os.Handler
+import android.os.Looper
 import android.provider.MediaStore
 import android.util.LongSparseArray
 import androidx.core.content.getSystemService
@@ -32,10 +33,9 @@ data class DownloadFailed(val error: Throwable) : DownloadResult()
 private typealias Result<T> = (T) -> Unit
 
 class DownloadResponseManager(
-        private val contentResolver: ContentResolver,
-        private val handler: Handler,
-        private val application: Application,
-        private val lifecycle: Lifecycle
+    private val contentResolver: ContentResolver,
+    private val application: Application,
+    private val lifecycle: Lifecycle
 ) : LifecycleObserver {
 
     private var downloadId: Long = 0
@@ -94,7 +94,7 @@ class DownloadResponseManager(
         resolver.update(contentUri, responseDetails, null, null)
     }
 
-    private fun registerObserverFor(downloadId: Long, item: VOResponseBody) {
+    private fun registerObserverFor(downloadId: Long, item: VOResponseBody, handler: Handler = Handler(Looper.getMainLooper())) {
         val observer = object : ContentObserver(handler) {
             override fun onChange(selfChange: Boolean, uri: Uri?) {
                 super.onChange(selfChange, uri)

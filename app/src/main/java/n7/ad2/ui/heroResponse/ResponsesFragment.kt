@@ -40,7 +40,7 @@ class ResponsesFragment : Fragment(R.layout.fragment_hero_responses) {
             it.lifecycleOwner = viewLifecycleOwner
         }
 
-        downloadResponseManager = DownloadResponseManager(requireActivity().contentResolver, Handler(Looper.getMainLooper()), requireActivity().application, lifecycle)
+        downloadResponseManager = DownloadResponseManager(requireActivity().contentResolver, requireActivity().application, lifecycle)
         downloadResponseManager.setDownloadListener {
             when (it) {
                 is DownloadSuccess -> viewModel.refreshResponses()
