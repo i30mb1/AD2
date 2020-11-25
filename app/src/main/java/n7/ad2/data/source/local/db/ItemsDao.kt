@@ -1,9 +1,9 @@
 package n7.ad2.data.source.local.db
 
-import androidx.lifecycle.LiveData
 import androidx.paging.DataSource
 import androidx.room.Dao
 import androidx.room.Query
+import kotlinx.coroutines.flow.Flow
 import n7.ad2.base.BaseDao
 import n7.ad2.data.source.local.model.LocalItem
 
@@ -11,7 +11,7 @@ import n7.ad2.data.source.local.model.LocalItem
 interface ItemsDao: BaseDao<LocalItem> {
 
     @Query("SELECT rowid,* FROM LocalItems")
-    fun getAll(): LiveData<List<LocalItem>>
+    fun getAll(): Flow<List<LocalItem>>
 
     @Query("SELECT rowid,* FROM LocalItems WHERE name LIKE '%'||:filter||'%'")
     fun getItemsFilter(filter: String): DataSource.Factory<Int, LocalItem>
