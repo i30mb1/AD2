@@ -1,15 +1,11 @@
 package n7.ad2.ui.heroResponse
 
 import android.os.Bundle
-import android.os.Handler
-import android.os.Looper
 import android.view.View
 import androidx.core.os.bundleOf
 import androidx.fragment.app.Fragment
-import androidx.lifecycle.lifecycleScope
 import androidx.recyclerview.widget.LinearLayoutManager
 import kotlinx.coroutines.InternalCoroutinesApi
-import kotlinx.coroutines.flow.collect
 import n7.ad2.R
 import n7.ad2.databinding.FragmentHeroResponsesBinding
 import n7.ad2.di.injector
@@ -48,8 +44,8 @@ class ResponsesFragment : Fragment(R.layout.fragment_hero_responses) {
             }
         }
 
-        lifecycleScope.launchWhenResumed {
-            viewModel.error.collect(::showDialogError)
+        viewModel.error.observe(viewLifecycleOwner) {
+            if (it != null) showDialogError(it)
         }
 
         val heroName = requireArguments().getString(HERO_NAME)!!

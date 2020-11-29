@@ -27,8 +27,8 @@ class ResponsesViewModel @Inject constructor(
     private val getLocalHeroByNameUseCase: GetLocalHeroByNameUseCase
 ) : AndroidViewModel(application) {
 
-    private val _error = MutableStateFlow<Throwable?>(null)
-    val error: StateFlow<Throwable?> = _error
+    private val _error = MutableLiveData<Throwable?>(null)
+    val error: LiveData<Throwable?> = _error
     private val heroWithLocale = MutableLiveData<Pair<LocalHero, Locale>>()
     val voResponses = heroWithLocale.switchMap {
         liveData {
@@ -40,6 +40,7 @@ class ResponsesViewModel @Inject constructor(
                 }
                 .onFailure {
                     _error.value = it
+                    _error.value = null
                 }
         }
     }
