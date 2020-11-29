@@ -54,10 +54,10 @@ class ResponsesListAdapter(
         header?.findViewById<TextView>(R.id.tv_item_response)?.text = (item as VOResponseHeader).title
     }
 
-    override fun isHeader(itemPosition: Int): Boolean {
-        if (itemPosition < 0 || itemPosition >= itemCount) return false
-        return when (getItem(itemPosition)) {
-            is VOResponseHeader -> true
+    override fun isHeader(position: Int): Boolean {
+        if (position < 0 || position >= itemCount) return false
+        return when (getItemViewType(position)) {
+            R.layout.item_response_header -> true
             else -> false
         }
     }
