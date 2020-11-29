@@ -16,14 +16,6 @@ class StickyHeaderDecorator(recyclerView: RecyclerView, private val mListener: S
 
     private var mStickyHeaderHeight = 0
 
-    override fun getItemOffsets(outRect: Rect, view: View, parent: RecyclerView, state: RecyclerView.State) {
-        super.getItemOffsets(outRect, view, parent, state)
-    }
-
-    override fun onDraw(c: Canvas, parent: RecyclerView, state: RecyclerView.State) {
-        super.onDraw(c, parent, state)
-    }
-
     override fun onDrawOver(c: Canvas, parent: RecyclerView, state: RecyclerView.State) {
         super.onDrawOver(c, parent, state)
         val topChild = parent.getChildAt(0) ?: return
@@ -99,7 +91,18 @@ class StickyHeaderDecorator(recyclerView: RecyclerView, private val mListener: S
          * @param itemPosition int. Adapter's position of the item for which to do the search of the position of the header item.
          * @return int. Position of the header item in the adapter.
          */
-        fun getHeaderPositionForItem(itemPosition: Int): Int
+        fun getHeaderPositionForItem(itemPosition: Int): Int {
+            var position = itemPosition
+            var headerPosition = 0
+            do {
+                if (isHeader(position)) {
+                    headerPosition = position
+                    break
+                }
+                position--
+            } while (position >= 0)
+            return headerPosition
+        }
 
         /**
          * This method gets called by [StickyHeaderDecorator] to get layout resource id for the header item at specified adapter's position.

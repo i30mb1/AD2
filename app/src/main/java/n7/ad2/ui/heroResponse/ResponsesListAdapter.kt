@@ -47,19 +47,6 @@ class ResponsesListAdapter(
         }
     }
 
-    override fun getHeaderPositionForItem(itemPosition: Int): Int {
-        var position = itemPosition
-        var headerPosition = 0
-        do {
-            if (isHeader(position)) {
-                headerPosition = position
-                break
-            }
-            position -= 1
-        } while (position >= 0)
-        return headerPosition
-    }
-
     override fun getHeaderLayout(headerPosition: Int) = R.layout.item_response_header
 
     override fun bindHeaderData(header: View?, headerPosition: Int) {
