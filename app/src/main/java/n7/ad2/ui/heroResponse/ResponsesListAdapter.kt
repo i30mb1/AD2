@@ -2,10 +2,9 @@ package n7.ad2.ui.heroResponse
 
 import android.os.Trace
 import android.view.LayoutInflater
-import android.view.View
 import android.view.ViewGroup
-import android.widget.TextView
 import androidx.core.math.MathUtils.clamp
+import androidx.databinding.ViewDataBinding
 import androidx.paging.PagedListAdapter
 import androidx.recyclerview.widget.DiffUtil
 import androidx.recyclerview.widget.GridLayoutManager
@@ -22,13 +21,14 @@ import n7.ad2.utils.StickyHeaderDecorator.StickyHeaderInterface
 
 class ResponsesListAdapter(
     private val audioExoPlayer: AudioExoPlayer,
-    private val showDialogResponse: (VOResponseBody) -> Unit
+    private val showDialogResponse: (VOResponseBody) -> Unit,
 ) : PagedListAdapter<VOResponse, RecyclerView.ViewHolder>(DiffCallback()), StickyHeaderInterface {
 
     override fun onCreateViewHolder(viewGroup: ViewGroup, viewType: Int): RecyclerView.ViewHolder {
         return when (viewType) {
             R.layout.item_response_body -> BodyViewHolder.from(viewGroup, audioExoPlayer, showDialogResponse)
-            else -> HeaderViewHolder.from(viewGroup)
+            R.layout.item_response_header -> HeaderViewHolder.from(viewGroup)
+            else -> throw UnsupportedOperationException("could not find ViewHolder for $viewGroup")
         }
     }
 
@@ -37,13 +37,15 @@ class ResponsesListAdapter(
         when (viewHolder) {
             is BodyViewHolder -> if (item != null) viewHolder.bind(item as VOResponseBody) else viewHolder.clear()
             is HeaderViewHolder -> if (item != null) viewHolder.bind(item as VOResponseHeader) else viewHolder.clear()
+            else -> throw UnsupportedOperationException("could not bind for $viewHolder")
         }
     }
 
     override fun getItemViewType(position: Int): Int {
         return when (getItem(position)) {
             is VOResponseHeader -> R.layout.item_response_header
-            else -> R.layout.item_response_body
+            is VOResponseBody -> R.layout.item_response_body
+            else -> throw UnsupportedOperationException("could not get type for $position")
         }
     }
 
@@ -63,7 +65,7 @@ class ResponsesListAdapter(
     }
 
     class HeaderViewHolder private constructor(
-        private val binding: ItemResponseHeaderBinding
+        private val binding: ItemResponseHeaderBinding,
     ) : RecyclerView.ViewHolder(binding.root) {
 
         fun bind(item: VOResponseHeader) {
@@ -89,7 +91,7 @@ class ResponsesListAdapter(
         private val binding: ItemResponseBodyBinding,
         private val audioExoPlayer: AudioExoPlayer,
         private val showDialogResponse: (VOResponseBody) -> Unit,
-        private val responsesImagesAdapter: ResponsesImagesAdapter
+        private val responsesImagesAdapter: ResponsesImagesAdapter,
     ) : RecyclerView.ViewHolder(binding.root) {
 
         fun bind(item: VOResponseBody) {
@@ -106,8 +108,7 @@ class ResponsesListAdapter(
             Trace.endSection()
         }
 
-        fun clear() {
-        }
+        fun clear() = Unit
 
         companion object {
 
@@ -121,7 +122,7 @@ class ResponsesListAdapter(
             fun from(
                 parent: ViewGroup,
                 audioExoPlayer: AudioExoPlayer,
-                showDialogResponse: (VOResponseBody) -> Unit
+                showDialogResponse: (VOResponseBody) -> Unit,
             ): BodyViewHolder {
                 val layoutInflater = LayoutInflater.from(parent.context)
                 val binding = ItemResponseBodyBinding.inflate(layoutInflater, parent, false)
@@ -150,7 +151,7 @@ class ResponsesListAdapter(
                 is VOResponseHeader -> if (newItem is VOResponseBody) return false else {
                     oldItem == (newItem as VOResponseHeader)
                 }
-                is VOResponseBody -> if(newItem is VOResponseHeader) return false else {
+                is VOResponseBody -> if (newItem is VOResponseHeader) return false else {
                     oldItem == (newItem as VOResponseBody)
                 }
             }
