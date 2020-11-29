@@ -49,11 +49,11 @@ class ResponsesListAdapter(
         }
     }
 
-    override fun getHeaderLayout(headerPosition: Int) = R.layout.item_response_header
+    override fun getHeaderLayout() = R.layout.item_response_header
 
-    override fun bindHeaderData(header: View?, headerPosition: Int) {
-        val item = getItem(headerPosition) ?: return
-        header?.findViewById<TextView>(R.id.tv_item_response)?.text = (item as VOResponseHeader).title
+    override fun bindHeaderData(header: ViewDataBinding, headerPosition: Int) {
+        val item = getItem(headerPosition) as? VOResponseHeader ?: throw UnsupportedOperationException("")
+        (header as ItemResponseHeaderBinding).tv.text = item.title
     }
 
     override fun isHeader(position: Int): Boolean {
@@ -73,9 +73,7 @@ class ResponsesListAdapter(
             binding.executePendingBindings()
         }
 
-        fun clear() {
-
-        }
+        fun clear() = Unit
 
         companion object {
             fun from(parent: ViewGroup): HeaderViewHolder {
@@ -139,23 +137,12 @@ class ResponsesListAdapter(
 
     private class DiffCallback : DiffUtil.ItemCallback<VOResponse>() {
 
-        override fun areItemsTheSame(oldItem: VOResponse, newItem: VOResponse): Boolean {
-            return when (oldItem) {
-                is VOResponseBody -> newItem is VOResponseBody
-                is VOResponseHeader -> newItem is VOResponseHeader
-            }
+        override fun areItemsTheSame(oldItem: VOResponse, newItem: VOResponse) = when (oldItem) {
+            is VOResponseBody -> newItem is VOResponseBody
+            is VOResponseHeader -> newItem is VOResponseHeader
         }
 
-        override fun areContentsTheSame(oldItem: VOResponse, newItem: VOResponse): Boolean {
-            return when (oldItem) {
-                is VOResponseHeader -> if (newItem is VOResponseBody) return false else {
-                    oldItem == (newItem as VOResponseHeader)
-                }
-                is VOResponseBody -> if (newItem is VOResponseHeader) return false else {
-                    oldItem == (newItem as VOResponseBody)
-                }
-            }
-        }
+        override fun areContentsTheSame(oldItem: VOResponse, newItem: VOResponse) = oldItem == newItem
 
     }
 

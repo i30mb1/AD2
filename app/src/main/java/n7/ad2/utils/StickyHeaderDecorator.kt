@@ -1,20 +1,29 @@
 package n7.ad2.utils
 
 import android.graphics.Canvas
-import android.graphics.Rect
 import android.view.LayoutInflater
 import android.view.MotionEvent
 import android.view.View
 import android.view.ViewGroup
 import androidx.core.graphics.withTranslation
+import androidx.core.view.forEach
+import androidx.databinding.DataBindingUtil
+import androidx.databinding.ViewDataBinding
 import androidx.recyclerview.widget.RecyclerView
 import androidx.recyclerview.widget.RecyclerView.ItemDecoration
 import androidx.recyclerview.widget.RecyclerView.OnItemTouchListener
 
 // https://youtu.be/xF1x-Pm6IPw
-class StickyHeaderDecorator(recyclerView: RecyclerView, private val mListener: StickyHeaderInterface) : ItemDecoration() {
+class StickyHeaderDecorator(
+    private val recyclerView: RecyclerView,
+    private val listener: StickyHeaderInterface,
+) : ItemDecoration() {
 
     private var mStickyHeaderHeight = 0
+    private val header: ViewDataBinding by lazy {
+        val layoutInflater = LayoutInflater.from(recyclerView.context)
+        DataBindingUtil.inflate(layoutInflater, listener.getHeaderLayout(), recyclerView, false)
+    }
 
     override fun onDrawOver(c: Canvas, parent: RecyclerView, state: RecyclerView.State) {
         super.onDrawOver(c, parent, state)
@@ -22,27 +31,21 @@ class StickyHeaderDecorator(recyclerView: RecyclerView, private val mListener: S
         val topChildPosition = parent.getChildAdapterPosition(topChild)
         if (topChildPosition == RecyclerView.NO_POSITION) return
 
-        val currentHeader = getHeaderViewForItem(topChildPosition, parent)
+        val currentHeader = getHeaderViewForItem(topChildPosition)
         fixLayoutSize(parent, currentHeader)
         val contactPoint = currentHeader.bottom
         val childInContact = getChildInContact(parent, contactPoint) ?: return
-        if (mListener.isHeader(parent.getChildAdapterPosition(childInContact))) {
+        if (listener.isHeader(parent.getChildAdapterPosition(childInContact))) {
             moveHeader(c, currentHeader, childInContact)
             return
         }
-        drawHeader(c, currentHeader)
+        currentHeader.draw(c)
     }
 
-    private fun getHeaderViewForItem(itemPosition: Int, parent: RecyclerView): View {
-        val headerPosition = mListener.getHeaderPositionForItem(itemPosition)
-        val layoutResId = mListener.getHeaderLayout(headerPosition)
-        val header = LayoutInflater.from(parent.context).inflate(layoutResId, parent, false)
-        mListener.bindHeaderData(header, headerPosition)
-        return header
-    }
-
-    private fun drawHeader(c: Canvas, header: View) {
-        header.draw(c)
+    private fun getHeaderViewForItem(itemPosition: Int): View {
+        val headerPosition = getHeaderPositionForItem(itemPosition)
+        listener.bindHeaderData(header, headerPosition)
+        return header.root
     }
 
     private fun moveHeader(c: Canvas, currentHeader: View, nextHeader: View) {
@@ -52,23 +55,15 @@ class StickyHeaderDecorator(recyclerView: RecyclerView, private val mListener: S
     }
 
     private fun getChildInContact(parent: RecyclerView, contactPoint: Int): View? {
-        var childInContact: View? = null
-        for (i in 0 until parent.childCount) {
-            val child = parent.getChildAt(i)
-            if (child.bottom > contactPoint) {
-                if (child.top <= contactPoint) {
-                    // This child overlaps the contactPoint
-                    childInContact = child
-                    break
-                }
-            }
+        parent.forEach {
+            if (it.bottom > contactPoint && it.top <= contactPoint) return it
         }
-        return childInContact
+        return null
     }
 
     /**
      * Properly measures and layouts the top sticky header.
-     *
+     * https://stackoverflow.com/questions/50878305/how-to-draw-a-view-in-an-itemdecoration/50919862
      * @param parent ViewGroup: RecyclerView in this case.
      */
     private fun fixLayoutSize(parent: ViewGroup, view: View) {
@@ -83,34 +78,22 @@ class StickyHeaderDecorator(recyclerView: RecyclerView, private val mListener: S
         view.layout(0, 0, view.measuredWidth, view.measuredHeight.also { mStickyHeaderHeight = it })
     }
 
-    interface StickyHeaderInterface {
-        /**
-         * This method gets called by [StickyHeaderDecorator] to fetch the position of the header item in the adapter
-         * that is used for (represents) item at specified position.
-         *
-         * @param itemPosition int. Adapter's position of the item for which to do the search of the position of the header item.
-         * @return int. Position of the header item in the adapter.
-         */
-        fun getHeaderPositionForItem(itemPosition: Int): Int {
-            var position = itemPosition
-            var headerPosition = 0
-            do {
-                if (isHeader(position)) {
-                    headerPosition = position
-                    break
-                }
-                position--
-            } while (position >= 0)
-            return headerPosition
+    private fun getHeaderPositionForItem(itemPosition: Int): Int {
+        var position = itemPosition
+        while (position >= 0) {
+            if (listener.isHeader(position)) return position
+            position--
         }
+        return 0
+    }
 
+    interface StickyHeaderInterface {
         /**
          * This method gets called by [StickyHeaderDecorator] to get layout resource id for the header item at specified adapter's position.
          *
-         * @param headerPosition int. Position of the header item in the adapter.
          * @return int. Layout resource id.
          */
-        fun getHeaderLayout(headerPosition: Int): Int
+        fun getHeaderLayout(): Int
 
         /**
          * This method gets called by [StickyHeaderDecorator] to setup the header View.
@@ -118,15 +101,14 @@ class StickyHeaderDecorator(recyclerView: RecyclerView, private val mListener: S
          * @param header         View. Header to set the data on.
          * @param headerPosition int. Position of the header item in the adapter.
          */
-        fun bindHeaderData(header: View?, headerPosition: Int)
+        fun bindHeaderData(header: ViewDataBinding, headerPosition: Int)
 
         /**
          * This method gets called by [StickyHeaderDecorator] to verify whether the item represents a header.
          *
-         * @param itemPosition int.
          * @return true, if item at the specified adapter's position represents a header.
          */
-        fun isHeader(itemPosition: Int): Boolean
+        fun isHeader(position: Int): Boolean
     }
 
     init {
