@@ -60,6 +60,7 @@ class ResponsesFragment : Fragment(R.layout.fragment_hero_responses) {
         childFragmentManager.setFragmentResultListener(DialogResponse.REQUEST_KEY, this) { _: String, bundle: Bundle ->
             when (bundle.getString(DialogResponse.RESULT_KEY)) {
                 DialogResponse.ACTION_DOWNLOAD_RESPONSE -> downloadResponseManager.download(item)
+                else -> throw UnsupportedOperationException("cannot handle unknown result key")
             }
         }
         val dialogResponse = DialogResponse.newInstance()
