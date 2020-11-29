@@ -9,10 +9,9 @@ import androidx.fragment.app.FragmentActivity
 import com.google.android.material.dialog.MaterialAlertDialogBuilder
 import n7.ad2.databinding.DialogErrorBinding
 
-fun Fragment.showDialogError(throwable: Throwable?) = showDialogError(throwable?.toString())
+fun Fragment.showDialogError(throwable: Throwable) = showDialogError(throwable.toString())
 
-fun Fragment.showDialogError(title: String?) {
-    requireNotNull(title)
+fun Fragment.showDialogError(title: String) {
     val dialogError = DialogError.newInstance(title)
     dialogError.show(childFragmentManager, null)
 }
