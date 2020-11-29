@@ -12,7 +12,6 @@ import n7.ad2.di.injector
 import n7.ad2.ui.MainActivity
 import n7.ad2.ui.itemInfo.ItemInfoActivity
 import n7.ad2.ui.itemInfo.ItemInfoFragment
-import n7.ad2.ui.items.domain.vo.VOItem
 import n7.ad2.ui.items.domain.vo.VOItemBody
 import n7.ad2.utils.viewModel
 
@@ -44,13 +43,22 @@ class ItemsFragment : Fragment(R.layout.fragment_items) {
     }
 
     private fun setupAdapter() {
-        val gridLayoutManager = GridLayoutManager(context, 4)
-        val myAdapter = ItemsPagedListAdapter(this, gridLayoutManager)
+        val myAdapter = ItemsPagedListAdapter(this)
+        val gridLayoutManager = GridLayoutManager(context, 4).apply {
+            spanSizeLookup = object : GridLayoutManager.SpanSizeLookup() {
+                override fun getSpanSize(position: Int) = when (myAdapter.getItemViewType(position)) {
+                    R.layout.item_item -> ItemsPagedListAdapter.SPAN_SIZE_ITEM
+                    R.layout.item_item_header -> ItemsPagedListAdapter.SPAN_SIZE_ITEM_HEADER
+                    else -> throw NotImplementedError()
+                }
+            }
+        }
         binding.rv.apply {
             setHasFixedSize(true)
             layoutManager = gridLayoutManager
             adapter = myAdapter
         }
+
         viewModel.itemsPagedList.observe(viewLifecycleOwner, myAdapter::submitList)
     }
 

@@ -4,7 +4,6 @@ import android.view.LayoutInflater
 import android.view.ViewGroup
 import androidx.paging.PagedListAdapter
 import androidx.recyclerview.widget.DiffUtil
-import androidx.recyclerview.widget.GridLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import coil.clear
 import n7.ad2.R
@@ -17,29 +16,17 @@ import n7.ad2.ui.items.domain.vo.VOItemHeader
 
 class ItemsPagedListAdapter(
     fragment: ItemsFragment,
-    gridLayoutManager: GridLayoutManager,
 ) : PagedListAdapter<VOItem, RecyclerView.ViewHolder>(DiffCallback()) {
 
     companion object {
-        private const val SPAN_SIZE_ITEM = 4
-        private const val SPAN_SIZE_ITEM_HEADER = 1
+        const val SPAN_SIZE_ITEM = 1
+        const val SPAN_SIZE_ITEM_HEADER = 4
     }
 
     private val listener = object : VOModelListener<ItemItemBinding> {
         override fun onClickListener(model: ItemItemBinding) {
             fragment.startItemInfoFragment(model.model!!, model)
         }
-    }
-
-    private val spanSizeListener = object : GridLayoutManager.SpanSizeLookup() {
-        override fun getSpanSize(position: Int): Int = when (getItemViewType(position)) {
-            R.layout.item_item -> SPAN_SIZE_ITEM
-            else -> SPAN_SIZE_ITEM_HEADER
-        }
-    }
-
-    init {
-        gridLayoutManager.spanSizeLookup = spanSizeListener
     }
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): RecyclerView.ViewHolder = when (viewType) {
@@ -74,7 +61,7 @@ class ItemsPagedListAdapter(
         }
     }
 
-    private class HeaderViewHolder(
+    private class HeaderViewHolder private constructor(
         private val binding: ItemItemHeaderBinding,
     ) : RecyclerView.ViewHolder(binding.root) {
 
@@ -95,7 +82,7 @@ class ItemsPagedListAdapter(
 
     }
 
-    private class ItemViewHolder(
+    private class ItemViewHolder private constructor(
         private val binding: ItemItemBinding,
         private val listener: VOModelListener<ItemItemBinding>,
     ) : RecyclerView.ViewHolder(binding.root) {
