@@ -74,7 +74,7 @@ class ResponsesFragment : Fragment(R.layout.fragment_hero_responses) {
         binding.rv.apply {
             setHasFixedSize(true)
             layoutManager = LinearLayoutManager(context, LinearLayoutManager.VERTICAL, false)
-            addItemDecoration(StickyHeaderDecorator(this, responsesPagedListAdapter))
+            addItemDecoration(StickyHeaderDecorator(responsesPagedListAdapter,this))
             adapter = responsesPagedListAdapter
         }
 
