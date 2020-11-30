@@ -19,7 +19,7 @@ import n7.ad2.ui.heroResponse.domain.vo.VOResponseBody
 import n7.ad2.ui.heroResponse.domain.vo.VOResponseHeader
 import n7.ad2.utils.StickyHeaderDecorator.StickyHeaderInterface
 
-class ResponsesListAdapter(
+class ResponsesAdapter(
     private val audioExoPlayer: AudioExoPlayer,
     private val showDialogResponse: (VOResponseBody) -> Unit,
 ) : PagedListAdapter<VOResponse, RecyclerView.ViewHolder>(DiffCallback()), StickyHeaderInterface {

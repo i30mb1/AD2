@@ -112,7 +112,6 @@ class StickyHeaderDecorator(
     }
 
     init {
-        // On Sticky Header Click
         recyclerView.addOnItemTouchListener(object : OnItemTouchListener {
             override fun onInterceptTouchEvent(recyclerView: RecyclerView, motionEvent: MotionEvent): Boolean {
                 // Handle the clicks on the header here ...

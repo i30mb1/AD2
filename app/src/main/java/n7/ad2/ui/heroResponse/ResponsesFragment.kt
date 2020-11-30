@@ -17,7 +17,7 @@ import n7.ad2.utils.viewModel
 
 class ResponsesFragment : Fragment(R.layout.fragment_hero_responses) {
 
-    private lateinit var responsesPagedListAdapter: ResponsesListAdapter
+    private lateinit var responsesPagedListAdapter: ResponsesAdapter
     private lateinit var binding: FragmentHeroResponsesBinding
     private lateinit var downloadResponseManager: DownloadResponseManager
     private val viewModel: ResponsesViewModel by viewModel { injector.responsesViewModel }
@@ -68,7 +68,7 @@ class ResponsesFragment : Fragment(R.layout.fragment_hero_responses) {
     }
 
     private fun setupPagedListAdapter() {
-        responsesPagedListAdapter = ResponsesListAdapter((requireActivity() as HeroPageActivity).audioExoPlayer) {
+        responsesPagedListAdapter = ResponsesAdapter((requireActivity() as HeroPageActivity).audioExoPlayer) {
             createDialogResponse(it)
         }
         binding.rv.apply {
