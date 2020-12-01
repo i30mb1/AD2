@@ -2,6 +2,7 @@ package n7.ad2.ui.itemInfo
 
 import android.os.Bundle
 import android.view.View
+import androidx.core.os.bundleOf
 import androidx.fragment.app.Fragment
 import n7.ad2.R
 import n7.ad2.data.source.local.Locale
@@ -23,7 +24,9 @@ class ItemInfoFragment : Fragment(R.layout.fragment_item_info) {
 
     companion object {
         const val ITEM_NAME = "ITEM_NAME"
-        fun newInstance(): ItemInfoFragment = ItemInfoFragment()
+        fun newInstance(itemName: String): ItemInfoFragment = ItemInfoFragment().apply {
+            arguments = bundleOf(ITEM_NAME to itemName)
+        }
     }
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
@@ -31,7 +34,7 @@ class ItemInfoFragment : Fragment(R.layout.fragment_item_info) {
         binding = FragmentItemInfoBinding.bind(view).also {
             it.lifecycleOwner = viewLifecycleOwner
         }
-        viewModel.loadItemInfo(requireActivity().intent.getStringExtra(ITEM_NAME)!!, Locale.valueOf(getString(R.string.locale)))
+        viewModel.loadItemInfo(requireArguments().getString(ITEM_NAME, ""), Locale.valueOf(getString(R.string.locale)))
 
         setupInfoPopupWindow()
         setupAudioPlayer()
