@@ -19,7 +19,7 @@ import n7.ad2.base.VOPopUpListener
 import n7.ad2.databinding.ItemBodyRecipeBinding
 import n7.ad2.databinding.ItemBodyWithImageBinding
 import n7.ad2.databinding.ItemBodyWithSeparatorBinding
-import n7.ad2.databinding.ItemTitleWithIconBinding
+import n7.ad2.databinding.ItemTitleBinding
 import n7.ad2.ui.heroInfo.domain.usecase.MyClickableSpan
 import n7.ad2.ui.heroInfo.domain.vo.VOBodyLine
 import n7.ad2.ui.heroInfo.domain.vo.VOBodyRecipe
@@ -47,7 +47,7 @@ class DescriptionsListAdapter(
 
     override fun getItemViewType(position: Int): Int {
         return when (getItem(position)) {
-            is VOTitle -> R.layout.item_title_with_icon
+            is VOTitle -> R.layout.item_title
             is VOBodyLine -> R.layout.item_body_line
             is VOBodySimple -> R.layout.item_body_simple
             is VOBodyWithSeparator -> R.layout.item_body_with_separator
@@ -83,7 +83,7 @@ class DescriptionsListAdapter(
                     setBoundToImageSpan(binding.tvBody, binding.item!!.body)
                     binding.listener = listener
                 }
-                is ItemTitleWithIconBinding -> {
+                is ItemTitleBinding -> {
                     binding.audioExoPlayer = audioExoPlayer
                     binding.listener = listener
                 }
