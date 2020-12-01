@@ -25,23 +25,17 @@ package n7.ad2.parseinfo.algorithm
 //}
 
 class Solution {
-    fun maxProfit(prices: IntArray): Int {
-        fun calculate(prices: IntArray, s: Int): Int {
-            if (s > prices.size) return 0
-            var max = 0
-            for (index1Price in s..prices.size - 1) {
-                var maxProfit = 0
-                for (index2Price in index1Price + 1..prices.size - 1) {
-                    if (prices[index2Price] > prices[index1Price]) {
-                        val profit = calculate(prices, index2Price + 1) + prices[index2Price] - prices[index1Price]
-                        if (profit > maxProfit) maxProfit = profit
-                    }
+    fun threeSum(nums: IntArray): List<List<Int>> {
+        if(nums.size < 3) return emptyList()
+        val result = mutableSetOf<List<Int>>()
+        for ((index, value) in nums.withIndex()) {
+            for (j in nums) {
+                for (k in nums) {
+                    if(i + j + k == 0)result.add(listOf(i, j , k))
                 }
-                if (maxProfit > max) max = maxProfit
             }
-            return max
         }
-        return calculate(prices, 0)
+        return result.toList()
     }
 }
 
