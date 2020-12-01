@@ -31,12 +31,13 @@ import n7.ad2.ui.heroInfo.domain.vo.VODescription
 import n7.ad2.ui.heroInfo.domain.vo.VOTitle
 import n7.ad2.ui.heroPage.AudioExoPlayer
 import n7.ad2.ui.itemInfo.RecipeImagesAdapter
+import n7.ad2.utils.StickyHeaderDecorator
 import n7.ad2.utils.extension.toPx
 
 class DescriptionsListAdapter(
     private val audioExoPlayer: AudioExoPlayer,
     private val infoPopupWindow: InfoPopupWindow,
-) : ListAdapter<VODescription, DescriptionsListAdapter.ViewHolder>(DiffCallback()) {
+) : ListAdapter<VODescription, DescriptionsListAdapter.ViewHolder>(DiffCallback()), StickyHeaderDecorator.StickyHeaderInterface {
 
     private var listener: VOPopUpListener<String> = object : VOPopUpListener<String> {
 
@@ -44,6 +45,9 @@ class DescriptionsListAdapter(
             infoPopupWindow.show(view, text)
         }
     }
+
+
+    override fun getHeaderLayout(): Int = R.layout.item_title
 
     override fun getItemViewType(position: Int): Int {
         return when (getItem(position)) {
@@ -136,6 +140,7 @@ class DescriptionsListAdapter(
 
         override fun areContentsTheSame(oldItem: VODescription, newItem: VODescription): Boolean = false
     }
+
 }
 
 

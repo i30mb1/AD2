@@ -11,6 +11,7 @@ import n7.ad2.ui.heroInfo.DescriptionsListAdapter
 import n7.ad2.ui.heroInfo.InfoPopupWindow
 import n7.ad2.ui.heroPage.AudioExoPlayer
 import n7.ad2.ui.heroPage.showDialogError
+import n7.ad2.utils.StickyHeaderDecorator
 import n7.ad2.utils.viewModel
 
 class ItemInfoFragment : Fragment(R.layout.fragment_item_info) {
@@ -47,11 +48,12 @@ class ItemInfoFragment : Fragment(R.layout.fragment_item_info) {
     }
 
     private fun setupItemInfoRecyclerView() {
-        val adapter = DescriptionsListAdapter(audioExoPlayer, infoPopupWindow)
-        binding.rv.adapter = adapter
-        viewModel.voItemInfo.observe(viewLifecycleOwner) {
-            adapter.submitList(it)
+        val descriptionsListAdapter = DescriptionsListAdapter(audioExoPlayer, infoPopupWindow)
+        binding.rv.apply {
+            adapter = descriptionsListAdapter
+            addItemDecoration(StickyHeaderDecorator(descriptionsListAdapter, this))
         }
+        viewModel.voItemInfo.observe(viewLifecycleOwner, descriptionsListAdapter::submitList)
     }
 
 
