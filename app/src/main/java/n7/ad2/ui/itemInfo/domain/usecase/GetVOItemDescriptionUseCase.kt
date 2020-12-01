@@ -11,8 +11,7 @@ import n7.ad2.ui.heroInfo.domain.vo.VOBodySimple
 import n7.ad2.ui.heroInfo.domain.vo.VOBodyWithImage
 import n7.ad2.ui.heroInfo.domain.vo.VOBodyWithSeparator
 import n7.ad2.ui.heroInfo.domain.vo.VODescription
-import n7.ad2.ui.heroInfo.domain.vo.VOTitleSimple
-import n7.ad2.ui.heroInfo.domain.vo.VOTitleWithIcon
+import n7.ad2.ui.heroInfo.domain.vo.VOTitle
 import n7.ad2.ui.itemInfo.domain.adapter.toVORecipe
 import n7.ad2.ui.itemInfo.domain.model.LocalItemDescription
 import n7.ad2.utils.extension.toStringListWithDash
@@ -25,19 +24,19 @@ class GetVOItemDescriptionUseCase @Inject constructor(
 
     suspend operator fun invoke(localItemDescription: LocalItemDescription): List<VODescription> = withContext(ioDispatcher) {
         mutableListOf<VODescription>().apply {
-            add(VOTitleSimple(localItemDescription.name))
+            add(VOTitle(localItemDescription.name))
             add(VOBodyLine(application.getString(R.string.cost, localItemDescription.cost)))
             add(VOBodyLine(application.getString(R.string.bought_from, localItemDescription.boughtFrom)))
             add(VOBodySimple(localItemDescription.description))
 
             localItemDescription.consistFrom?.let {
-                add(VOTitleSimple(application.getString(R.string.recipe)))
+                add(VOTitle(application.getString(R.string.recipe)))
                 add(VOBodyRecipe(it.map { itemName -> itemName.toVORecipe() }))
             }
 
             localItemDescription.abilities?.let { list ->
                 list.forEach { ability ->
-                    add(VOTitleWithIcon(application.getString(R.string.abilities, ability.abilityName), null, null, audioUrl = ability.audioUrl))
+                    add(VOTitle(application.getString(R.string.abilities, ability.abilityName), null, null, ability.audioUrl))
                     ability.effects.forEach { add(VOBodyLine(it)) }
                     add(VOBodySimple(ability.description))
                     if (ability.story != null) add(VOBodySimple(ability.story))
@@ -49,22 +48,22 @@ class GetVOItemDescriptionUseCase @Inject constructor(
             }
 
             localItemDescription.tips?.let {
-                add(VOTitleSimple(application.getString(R.string.tips)))
+                add(VOTitle(application.getString(R.string.tips)))
                 add(VOBodyWithSeparator(SpannableString(it.toStringListWithDash())))
             }
 
             localItemDescription.lore?.let {
-                add(VOTitleSimple(application.getString(R.string.lore)))
+                add(VOTitle(application.getString(R.string.lore)))
                 add(VOBodyWithSeparator(SpannableString(it.toStringListWithDash())))
             }
 
             localItemDescription.trivia?.let {
-                add(VOTitleSimple(application.getString(R.string.trivia)))
+                add(VOTitle(application.getString(R.string.trivia)))
                 add(VOBodyWithSeparator(SpannableString(it.toStringListWithDash())))
             }
 
             localItemDescription.additionalInformation?.let {
-                add(VOTitleSimple(application.getString(R.string.additional_information)))
+                add(VOTitle(application.getString(R.string.additional_information)))
                 add(VOBodyWithSeparator(SpannableString(it.toStringListWithDash())))
             }
 

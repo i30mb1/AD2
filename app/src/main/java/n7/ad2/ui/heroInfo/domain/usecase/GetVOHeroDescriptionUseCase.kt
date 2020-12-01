@@ -1,10 +1,10 @@
 package n7.ad2.ui.heroInfo.domain.usecase
 
+import android.annotation.SuppressLint
 import android.app.Application
 import android.net.Uri
 import android.text.Spannable
 import android.text.SpannableString
-import android.text.SpannableStringBuilder
 import android.text.style.ClickableSpan
 import android.text.style.DynamicDrawableSpan
 import android.text.style.ImageSpan
@@ -24,8 +24,7 @@ import n7.ad2.ui.heroInfo.domain.vo.VOBodyWithSeparator
 import n7.ad2.ui.heroInfo.domain.vo.VODescription
 import n7.ad2.ui.heroInfo.domain.vo.VOHeroDescription
 import n7.ad2.ui.heroInfo.domain.vo.VOSpell
-import n7.ad2.ui.heroInfo.domain.vo.VOTitleSimple
-import n7.ad2.ui.heroInfo.domain.vo.VOTitleWithIcon
+import n7.ad2.ui.heroInfo.domain.vo.VOTitle
 import n7.ad2.utils.extension.toStringListWithDash
 import javax.inject.Inject
 
@@ -49,21 +48,21 @@ class GetVOHeroDescriptionUseCase @Inject constructor(
         val spells: MutableList<VOSpell> = localHeroDescription.abilities.map {
             val descriptions = mutableListOf<VODescription>().apply {
 
-                add(VOTitleWithIcon(it.spellName, it.hotKey, it.legacyKey, it.audioUrl))
+                add(VOTitle(it.spellName, it.hotKey, it.legacyKey, it.audioUrl))
                 it.effects.forEach { add(VOBodyLine(it)) }
                 add(VOBodySimple(it.description))
                 it.cooldown?.let { add(VOBodyWithImage(spanWithDotaImages(it), R.drawable.cooldown)) }
                 it.mana?.let { add(VOBodyWithImage(spanWithDotaImages(it), R.drawable.mana)) }
 
-                add(VOTitleSimple(application.getString(R.string.hero_fragment_params)))
+                add(VOTitle(application.getString(R.string.hero_fragment_params)))
                 add(VOBodyWithSeparator(spanWithDotaImages(it.params.toStringListWithDash())))
 
                 it.story?.let {
-                    add(VOTitleSimple(application.getString(R.string.hero_fragment_story)))
+                    add(VOTitle(application.getString(R.string.hero_fragment_story)))
                     add(VOBodyWithSeparator(SpannableString(it)))
                 }
 
-                add(VOTitleSimple(application.getString(R.string.hero_fragment_notes)))
+                add(VOTitle(application.getString(R.string.hero_fragment_notes)))
                 add(VOBodyWithSeparator(SpannableString(it.notes.toStringListWithDash())))
             }
 
@@ -75,7 +74,7 @@ class GetVOHeroDescriptionUseCase @Inject constructor(
         }.toMutableList()
 
         val talentListVoDescription = mutableListOf<VODescription>().apply {
-            add(VOTitleSimple(application.getString(R.string.item_hero_personal_description_talents)))
+            add(VOTitle(application.getString(R.string.item_hero_personal_description_talents)))
             var talentLVL = 5
             localHeroDescription.talents.forEach {
                 val parts = it.split(SEPARATOR_TALENT)
@@ -83,7 +82,7 @@ class GetVOHeroDescriptionUseCase @Inject constructor(
                 talentLVL += 5
             }
 
-            add(VOTitleSimple(application.getString(R.string.tips)))
+            add(VOTitle(application.getString(R.string.tips)))
             add(VOBodyWithSeparator(SpannableString(localHeroDescription.talentTips.toStringListWithDash())))
         }
         spells.add(0, VOSpell().apply {
@@ -95,13 +94,13 @@ class GetVOHeroDescriptionUseCase @Inject constructor(
         voHeroDescription.spells = spells
 
         val heroBio = mutableListOf<VODescription>().apply {
-            add(VOTitleSimple(application.getString(R.string.hero_fragment_description)))
+            add(VOTitle(application.getString(R.string.hero_fragment_description)))
             add(VOBodyWithSeparator(SpannableString(localHeroDescription.description)))
 
-            add(VOTitleSimple(application.getString(R.string.hero_fragment_bio)))
+            add(VOTitle(application.getString(R.string.hero_fragment_bio)))
             add(VOBodyWithSeparator(SpannableString(localHeroDescription.history)))
 
-            add(VOTitleSimple(application.getString(R.string.hero_fragment_trivia)))
+            add(VOTitle(application.getString(R.string.hero_fragment_trivia)))
             add(VOBodyWithSeparator(SpannableString(localHeroDescription.trivia.toStringListWithDash())))
         }
         voHeroDescription.heroBio = heroBio
@@ -110,6 +109,7 @@ class GetVOHeroDescriptionUseCase @Inject constructor(
         voHeroDescription
     }
 
+    @SuppressLint("UseCompatLoadingForDrawables")
     private fun spanWithDotaImages(body: String): SpannableString {
         var startIndex = 0
         var indexOf = body.indexOf(TAG_TALENT, startIndex)

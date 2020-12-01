@@ -6,7 +6,7 @@
 
         <variable
             name="item"
-            type="n7.ad2.ui.heroInfo.domain.vo.VOTitleWithIcon" />
+            type="n7.ad2.ui.heroInfo.domain.vo.VOTitle" />
 
         <variable
             name="listener"

@@ -28,8 +28,7 @@ import n7.ad2.ui.heroInfo.domain.vo.VOBodyTalent
 import n7.ad2.ui.heroInfo.domain.vo.VOBodyWithImage
 import n7.ad2.ui.heroInfo.domain.vo.VOBodyWithSeparator
 import n7.ad2.ui.heroInfo.domain.vo.VODescription
-import n7.ad2.ui.heroInfo.domain.vo.VOTitleSimple
-import n7.ad2.ui.heroInfo.domain.vo.VOTitleWithIcon
+import n7.ad2.ui.heroInfo.domain.vo.VOTitle
 import n7.ad2.ui.heroPage.AudioExoPlayer
 import n7.ad2.ui.itemInfo.RecipeImagesAdapter
 import n7.ad2.utils.extension.toPx
@@ -48,10 +47,9 @@ class DescriptionsListAdapter(
 
     override fun getItemViewType(position: Int): Int {
         return when (getItem(position)) {
-            is VOTitleWithIcon -> R.layout.item_title_with_icon
+            is VOTitle -> R.layout.item_title_with_icon
             is VOBodyLine -> R.layout.item_body_line
             is VOBodySimple -> R.layout.item_body_simple
-            is VOTitleSimple -> R.layout.item_title_simple
             is VOBodyWithSeparator -> R.layout.item_body_with_separator
             is VOBodyWithImage -> R.layout.item_body_with_image
             is VOBodyTalent -> R.layout.item_body_talent
@@ -126,8 +124,7 @@ class DescriptionsListAdapter(
 
         override fun areItemsTheSame(oldItem: VODescription, newItem: VODescription): Boolean {
             return when (oldItem) {
-                is VOTitleWithIcon -> newItem is VOTitleWithIcon
-                is VOTitleSimple -> newItem is VOTitleSimple
+                is VOTitle -> newItem is VOTitle
                 is VOBodySimple -> newItem is VOBodySimple
                 is VOBodyWithSeparator -> newItem is VOBodyWithSeparator
                 is VOBodyWithImage -> newItem is VOBodyWithImage

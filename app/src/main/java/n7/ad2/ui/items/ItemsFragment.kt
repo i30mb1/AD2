@@ -7,7 +7,7 @@ import androidx.fragment.app.Fragment
 import androidx.recyclerview.widget.GridLayoutManager
 import n7.ad2.R
 import n7.ad2.databinding.FragmentItemsBinding
-import n7.ad2.databinding.ItemItemBinding
+import n7.ad2.databinding.ItemItemBodyBinding
 import n7.ad2.di.injector
 import n7.ad2.ui.MainActivity
 import n7.ad2.ui.itemInfo.ItemInfoActivity
@@ -34,7 +34,7 @@ class ItemsFragment : Fragment(R.layout.fragment_items) {
         setupAdapter()
     }
 
-    fun startItemInfoFragment(model: VOItemBody, binding: ItemItemBinding) {
+    fun startItemInfoFragment(model: VOItemBody, binding: ItemItemBodyBinding) {
         val intent = Intent(requireContext(), ItemInfoActivity::class.java)
         intent.putExtra(ItemInfoFragment.ITEM_NAME, model.name)
         startActivity(intent)
