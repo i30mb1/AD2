@@ -8,7 +8,7 @@ import androidx.recyclerview.widget.RecyclerView
 import coil.clear
 import n7.ad2.R
 import n7.ad2.base.VOModelListener
-import n7.ad2.databinding.ItemItemBinding
+import n7.ad2.databinding.ItemItemBodyBinding
 import n7.ad2.databinding.ItemItemHeaderBinding
 import n7.ad2.ui.items.domain.vo.VOItem
 import n7.ad2.ui.items.domain.vo.VOItemBody
@@ -23,15 +23,15 @@ class ItemsPagedListAdapter(
         const val SPAN_SIZE_ITEM_HEADER = 4
     }
 
-    private val listener = object : VOModelListener<ItemItemBinding> {
-        override fun onClickListener(model: ItemItemBinding) {
+    private val listener = object : VOModelListener<ItemItemBodyBinding> {
+        override fun onClickListener(model: ItemItemBodyBinding) {
             fragment.startItemInfoFragment(model.model!!, model)
         }
     }
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): RecyclerView.ViewHolder = when (viewType) {
         R.layout.item_item_header -> HeaderViewHolder.from(parent)
-        R.layout.item_item -> ItemViewHolder.from(parent, listener)
+        R.layout.item_item_body -> ItemViewHolder.from(parent, listener)
         else -> ItemViewHolder.from(parent, listener)
     }
 
@@ -53,7 +53,7 @@ class ItemsPagedListAdapter(
 
     override fun getItemViewType(position: Int): Int {
         return when (getItem(position)) {
-            is VOItem -> R.layout.item_item
+            is VOItemBody -> R.layout.item_item_body
             is VOItemHeader -> R.layout.item_item_header
             else -> super.getItemViewType(position)
         }
@@ -81,8 +81,8 @@ class ItemsPagedListAdapter(
     }
 
     private class ItemViewHolder private constructor(
-        private val binding: ItemItemBinding,
-        private val listener: VOModelListener<ItemItemBinding>,
+        private val binding: ItemItemBodyBinding,
+        private val listener: VOModelListener<ItemItemBodyBinding>,
     ) : RecyclerView.ViewHolder(binding.root) {
 
         fun bindTo(model: VOItemBody) = binding.let {
@@ -98,9 +98,9 @@ class ItemsPagedListAdapter(
         }
 
         companion object {
-            fun from(parent: ViewGroup, listener: VOModelListener<ItemItemBinding>): ItemViewHolder {
+            fun from(parent: ViewGroup, listener: VOModelListener<ItemItemBodyBinding>): ItemViewHolder {
                 val layoutInflater = LayoutInflater.from(parent.context)
-                val binding = ItemItemBinding.inflate(layoutInflater, parent, false)
+                val binding = ItemItemBodyBinding.inflate(layoutInflater, parent, false)
                 return ItemViewHolder(binding, listener)
             }
         }
