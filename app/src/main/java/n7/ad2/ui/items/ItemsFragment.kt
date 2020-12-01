@@ -47,9 +47,9 @@ class ItemsFragment : Fragment(R.layout.fragment_items) {
         val gridLayoutManager = GridLayoutManager(context, 4).apply {
             spanSizeLookup = object : GridLayoutManager.SpanSizeLookup() {
                 override fun getSpanSize(position: Int) = when (myAdapter.getItemViewType(position)) {
-                    R.layout.item_item -> ItemsPagedListAdapter.SPAN_SIZE_ITEM
                     R.layout.item_item_header -> ItemsPagedListAdapter.SPAN_SIZE_ITEM_HEADER
-                    else -> throw NotImplementedError()
+                    R.layout.item_item -> ItemsPagedListAdapter.SPAN_SIZE_ITEM
+                    else -> ItemsPagedListAdapter.SPAN_SIZE_ITEM
                 }
             }
         }

@@ -30,18 +30,16 @@ class ItemsPagedListAdapter(
     }
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): RecyclerView.ViewHolder = when (viewType) {
-        R.layout.item_item -> ItemViewHolder.from(parent, listener)
         R.layout.item_item_header -> HeaderViewHolder.from(parent)
-        else -> throw NotImplementedError()
+        R.layout.item_item -> ItemViewHolder.from(parent, listener)
+        else -> ItemViewHolder.from(parent, listener)
     }
-
 
     override fun onBindViewHolder(holder: RecyclerView.ViewHolder, position: Int) {
         val item = getItem(position)
         when (holder) {
             is ItemViewHolder -> if (item != null) holder.bindTo(item as VOItemBody) else holder.clear()
             is HeaderViewHolder -> if (item != null) holder.bindTo(item as VOItemHeader)
-            else -> throw NotImplementedError()
         }
     }
 
@@ -57,7 +55,7 @@ class ItemsPagedListAdapter(
         return when (getItem(position)) {
             is VOItem -> R.layout.item_item
             is VOItemHeader -> R.layout.item_item_header
-            else -> throw NotImplementedError()
+            else -> super.getItemViewType(position)
         }
     }
 
