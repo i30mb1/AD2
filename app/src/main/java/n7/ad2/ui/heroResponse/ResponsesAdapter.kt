@@ -69,15 +69,10 @@ class ResponsesAdapter(
 
     class BodyViewHolder private constructor(
         private val binding: ItemResponseBodyBinding,
-        private val audioExoPlayer: AudioExoPlayer,
         private val showDialogResponse: (VOResponseBody) -> Unit,
-        private val responsesImagesAdapter: ResponsesImagesAdapter,
     ) : RecyclerView.ViewHolder(binding.root) {
 
         fun bind(item: VOResponseBody) {
-            Trace.beginSection("bind")
-            binding.audioExoPlayer = audioExoPlayer
-            binding.rv.adapter = responsesImagesAdapter
             (binding.rv.layoutManager as GridLayoutManager).spanCount = clamp(item.icons.size, MIN_ICONS_IN_ROW, MAX_ICONS_IN_ROW)
             binding.root.setOnLongClickListener {
                 showDialogResponse(item)
@@ -85,7 +80,6 @@ class ResponsesAdapter(
             }
             binding.setVariable(BR.item, item)
             binding.executePendingBindings()
-            Trace.endSection()
         }
 
         fun clear() = Unit
@@ -105,13 +99,21 @@ class ResponsesAdapter(
                 showDialogResponse: (VOResponseBody) -> Unit,
             ): BodyViewHolder {
                 val layoutInflater = LayoutInflater.from(parent.context)
-                val binding = ItemResponseBodyBinding.inflate(layoutInflater, parent, false)
-                binding.rv.setRecycledViewPool(viewPool)
-//                binding.rv.setItemViewCacheSize(MAX_VIEWS_RESPONSE_IMAGE)
-                binding.rv.setHasFixedSize(true)
-                (binding.rv.layoutManager as GridLayoutManager).recycleChildrenOnDetach = true
+                val binding = ItemResponseBodyBinding.inflate(layoutInflater, parent, false).also {
+                    it.audioExoPlayer = audioExoPlayer
+                }
                 val responsesImagesAdapter = ResponsesImagesAdapter()
-                return BodyViewHolder(binding, audioExoPlayer, showDialogResponse, responsesImagesAdapter)
+                val gridLayoutManager = GridLayoutManager(parent.context, MAX_ICONS_IN_ROW).apply {
+                    recycleChildrenOnDetach = true
+                }
+                binding.rv.apply {
+                    setRecycledViewPool(viewPool)
+                    setHasFixedSize(true)
+                    layoutManager = gridLayoutManager
+                    adapter = responsesImagesAdapter
+//                    setItemViewCacheSize(MAX_VIEWS_RESPONSE_IMAGE)
+                }
+                return BodyViewHolder(binding, showDialogResponse)
             }
         }
 
