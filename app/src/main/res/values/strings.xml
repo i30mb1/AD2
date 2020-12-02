@@ -212,6 +212,7 @@
     <string name="desc_saved" translatable="false">saved</string>
     <string name="desc_hero_mini_avatar" translatable="false">hero mini avatar</string>
     <string name="desc_hero_item" translatable="false">hero item</string>
+    <string name="desc_arrow_left" translatable="false">arrow show to left</string>
 
     <string name="hotkey" translatable="false">Hot Key</string>
     <string name="legacykey" translatable="false">Legacy Key</string>
