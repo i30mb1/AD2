@@ -10,21 +10,41 @@
             type="n7.ad2.ui.heroInfo.domain.vo.VOBodyRecipe" />
     </data>
 
-    <FrameLayout
+    <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="wrap_content">
+        android:layout_height="wrap_content"
+        android:background="@drawable/transparent_30"
+        android:gravity="center">
+
+        <ImageView
+            android:id="@+id/iv"
+            loadImageUrl="@{item.urlImage}"
+            android:layout_width="88dp"
+            android:layout_height="64dp"
+            android:layout_margin="8dp"
+            android:contentDescription="@string/desc_hero_item"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:src="@drawable/item_placeholder" />
+
+        <ImageView
+            isVisible="@{item.recipes.size() > 0}"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:contentDescription="@string/desc_arrow_left"
+            android:src="@drawable/ic_left" />
 
         <androidx.recyclerview.widget.RecyclerView
             android:id="@+id/rv"
             data="@{item.recipes}"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_gravity="center_horizontal"
             app:layoutManager="androidx.recyclerview.widget.GridLayoutManager"
-            tools:spanCount="4"
             tools:itemCount="4"
-            tools:listitem="@layout/item_recipe" />
+            tools:listitem="@layout/item_recipe"
+            tools:spanCount="4" />
 
-    </FrameLayout>
+    </LinearLayout>
 
 </layout>

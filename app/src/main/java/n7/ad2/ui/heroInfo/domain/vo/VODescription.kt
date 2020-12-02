@@ -8,7 +8,7 @@ import n7.ad2.ui.itemInfo.domain.vo.VORecipe
 
 sealed class VODescription
 data class VOTitle(val title: String, val hotkey: String? = null, val legacyKey: String? = null, override val audioUrl: String? = null) : VODescription(), Playable { override val isPlaying: ObservableBoolean = ObservableBoolean(false) }
-data class VOBodyRecipe(val recipes: List<VORecipe>) : VODescription()
+data class VOBodyRecipe(val urlImage: String, val recipes: List<VORecipe>) : VODescription()
 data class VOBodyTalent(val leftPart: String, val lvl: Int, val rightPart: String) : VODescription()
 data class VOBodySimple(val body: String) : VODescription()
 data class VOBodyWithSeparator(val body: SpannableString) : VODescription()

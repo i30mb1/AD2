@@ -5,6 +5,7 @@ import android.text.SpannableString
 import kotlinx.coroutines.CoroutineDispatcher
 import kotlinx.coroutines.withContext
 import n7.ad2.R
+import n7.ad2.data.source.local.ItemRepository
 import n7.ad2.ui.heroInfo.domain.vo.VOBodyLine
 import n7.ad2.ui.heroInfo.domain.vo.VOBodyRecipe
 import n7.ad2.ui.heroInfo.domain.vo.VOBodySimple
@@ -27,12 +28,9 @@ class GetVOItemDescriptionUseCase @Inject constructor(
             add(VOTitle(localItemDescription.name))
             add(VOBodyLine(application.getString(R.string.cost, localItemDescription.cost)))
             add(VOBodyLine(application.getString(R.string.bought_from, localItemDescription.boughtFrom)))
+            add(VOBodyRecipe(ItemRepository.getFullUrlItemImage(localItemDescription.name) ,localItemDescription.consistFrom?.map { itemName -> itemName.toVORecipe() } ?: emptyList()))
             add(VOBodySimple(localItemDescription.description))
 
-            localItemDescription.consistFrom?.let {
-                add(VOTitle(application.getString(R.string.recipe)))
-                add(VOBodyRecipe(it.map { itemName -> itemName.toVORecipe() }))
-            }
 
             localItemDescription.abilities?.let { list ->
                 list.forEach { ability ->

@@ -33,6 +33,7 @@ import n7.ad2.ui.heroPage.AudioExoPlayer
 import n7.ad2.ui.itemInfo.RecipeImagesAdapter
 import n7.ad2.utils.StickyHeaderDecorator
 import n7.ad2.utils.extension.toPx
+import kotlin.math.max
 
 class DescriptionsListAdapter(
     private val audioExoPlayer: AudioExoPlayer,
@@ -81,7 +82,7 @@ class DescriptionsListAdapter(
 
         private fun bindSpecificVO(binding: ViewDataBinding) {
             when (binding) {
-                is ItemBodyRecipeBinding -> (binding.rv.layoutManager as GridLayoutManager).spanCount = binding.item!!.recipes.size
+                is ItemBodyRecipeBinding -> (binding.rv.layoutManager as GridLayoutManager).spanCount = max(1, binding.item!!.recipes.size)
                 is ItemBodyWithSeparatorBinding -> setBoundToImageSpan(binding.tvBody, binding.item!!.body)
                 is ItemBodyWithImageBinding -> {
                     setBoundToImageSpan(binding.tvBody, binding.item!!.body)

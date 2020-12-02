@@ -15,6 +15,7 @@ class ItemRepository @Inject constructor(
     companion object {
         const val ASSETS_PATH_ITEMS = "items.json"
         const val ASSETS_PATH_ITEM_DESC = "description.json"
+        fun getFullUrlItemImage(itemName: String) = "file:///android_asset/items/$itemName/full.png"
     }
 
     suspend fun insertItems(list: List<LocalItem>) {
