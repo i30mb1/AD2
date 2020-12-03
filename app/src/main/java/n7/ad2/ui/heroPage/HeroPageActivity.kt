@@ -24,7 +24,6 @@ class HeroPageActivity : BaseActivity() {
 
     lateinit var binding: ActivityHeroPageBinding
     lateinit var audioExoPlayer: AudioExoPlayer
-    lateinit var heroName: String
 
     companion object {
         const val HERO_NAME = "HERO_NAME"
@@ -34,7 +33,7 @@ class HeroPageActivity : BaseActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         binding = DataBindingUtil.setContentView(this, R.layout.activity_hero_page)
-        heroName = intent.getStringExtra(HERO_NAME)!!
+        val heroName = intent.getStringExtra(HERO_NAME)!!
 
         audioExoPlayer = AudioExoPlayer(application, lifecycle)
         audioExoPlayer.setErrorListener(::showDialogError)
