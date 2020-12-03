@@ -111,7 +111,7 @@ class AudioExoPlayer(
 
     @OnLifecycleEvent(Lifecycle.Event.ON_DESTROY)
     private fun onDestroy() {
-        exoPlayer.removeListener(this)
+        if(::exoPlayer.isInitialized) exoPlayer.removeListener(this)
         lifecycle.removeObserver(this)
     }
 
