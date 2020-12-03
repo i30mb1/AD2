@@ -31,7 +31,6 @@ private fun loadItemsOneByOne(locale: LOCALE) {
     JSONObject().apply {
         val list = getItems(LOCALE.EN.urlAllItems.connect())
             .filter { !it.first.contains("(") }
-            .filter { it.second == "Holy Locket" }
         val description = "description.json"
 
         list.forEach {

@@ -30,6 +30,7 @@ class GetVOItemDescriptionUseCase @Inject constructor(
             add(VOBodyLine(application.getString(R.string.bought_from, localItemDescription.boughtFrom)))
             add(VOBodyRecipe(ItemRepository.getFullUrlItemImage(localItemDescription.name) ,localItemDescription.consistFrom?.map { itemName -> itemName.toVORecipe() } ?: emptyList()))
             add(VOBodySimple(localItemDescription.description))
+            if(localItemDescription.bonuses != null) add(VOBodyWithSeparator(SpannableString(localItemDescription.bonuses.toStringListWithDash())))
 
 
             localItemDescription.abilities?.let { list ->
