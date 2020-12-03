@@ -5,6 +5,15 @@ import android.text.SpannableStringBuilder
 private const val SEPARATOR = "- "
 private const val COLON = ": "
 
+fun List<String>.toStringList(): String {
+    val builder = StringBuilder()
+    forEachIndexed { index, text ->
+        builder.append(text)
+        if (index != lastIndex) builder.append(System.lineSeparator())
+    }
+    return builder.toString()
+}
+
 fun List<String>.toStringListWithDash(): String {
     val builder = StringBuilder()
     forEachIndexed { index, text ->

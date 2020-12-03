@@ -15,6 +15,7 @@ import n7.ad2.ui.heroInfo.domain.vo.VODescription
 import n7.ad2.ui.heroInfo.domain.vo.VOTitle
 import n7.ad2.ui.itemInfo.domain.adapter.toVORecipe
 import n7.ad2.ui.itemInfo.domain.model.LocalItemDescription
+import n7.ad2.utils.extension.toStringList
 import n7.ad2.utils.extension.toStringListWithDash
 import javax.inject.Inject
 
@@ -30,7 +31,7 @@ class GetVOItemDescriptionUseCase @Inject constructor(
             add(VOBodyLine(application.getString(R.string.bought_from, localItemDescription.boughtFrom)))
             add(VOBodyRecipe(ItemRepository.getFullUrlItemImage(localItemDescription.name) ,localItemDescription.consistFrom?.map { itemName -> itemName.toVORecipe() } ?: emptyList()))
             add(VOBodySimple(localItemDescription.description))
-            if(localItemDescription.bonuses != null) add(VOBodyWithSeparator(SpannableString(localItemDescription.bonuses.toStringListWithDash())))
+            if(localItemDescription.bonuses != null) add(VOBodyWithSeparator(SpannableString(localItemDescription.bonuses.toStringList())))
 
 
             localItemDescription.abilities?.let { list ->
