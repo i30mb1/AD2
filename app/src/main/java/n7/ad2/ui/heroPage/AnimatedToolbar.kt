@@ -68,7 +68,7 @@ class AnimatedToolbar(context: Context, attr: AttributeSet) : Toolbar(context, a
     }
 
     fun loadHero(heroName: String) {
-        ivHero.load("file:///android_asset/${heroName}/${Repository.ASSETS_FILE_MINIMAP}")
+        ivHero.load(Repository.getFullUrlHeroMinimap(heroName))
     }
 
     fun pageSelected(newPage: Int) {

@@ -17,12 +17,11 @@ class Repository @Inject constructor(
 ) {
 
     companion object {
-        const val ASSETS_FOLDER_HEROES = "heroes"
         const val ASSETS_PATH_HEROES = "heroes.json"
         const val ASSETS_PATH_HERO_DESC = "description.json"
-        const val ASSETS_FILE_MINIMAP = "minimap.png"
         const val ASSETS_FILE_FULL = "full.png"
         const val ASSETS_FILE_ANIMATION = "emoticon.webp"
+        fun getFullUrlHeroMinimap(heroName: String) = "file:///android_asset/heroes/${heroName}/minimap.png"
     }
 
     suspend fun getHeroAnimation(assetsPath: String, name: String): Bitmap {
