@@ -12,8 +12,8 @@ import n7.ad2.data.source.local.model.LocalHeroWithGuides
 import javax.inject.Inject
 
 class Repository @Inject constructor(
-        private val application: Application,
-        private val appDatabase: AppDatabase
+    private val application: Application,
+    private val appDatabase: AppDatabase,
 ) {
 
     companion object {
