@@ -30,7 +30,7 @@ class Repository @Inject constructor(
         }
     }
 
-    suspend fun updateViewedByUserFieldForName(name: String) {
+    fun updateViewedByUserFieldForName(name: String) {
         appDatabase.heroesDao.updateViewedByUserFieldForName(name)
     }
 
