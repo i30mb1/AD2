@@ -45,7 +45,7 @@ class StickyHeaderDecorator<T : RecyclerView.ViewHolder>(
         val topChildPosition = parent.getChildAdapterPosition(topChild)
         if (topChildPosition == RecyclerView.NO_POSITION) return
 
-        val currentHeader = getHeaderViewForItem(topChildPosition)
+        val currentHeader = getHeaderViewForItem(topChildPosition) ?: return
         fixLayoutSize(parent, currentHeader)
         val contactPoint = currentHeader.bottom
         val childInContact = getChildInContact(parent, contactPoint) ?: return
@@ -57,8 +57,9 @@ class StickyHeaderDecorator<T : RecyclerView.ViewHolder>(
     }
 
     @Suppress("UNCHECKED_CAST")
-    private fun getHeaderViewForItem(itemPosition: Int): View {
+    private fun getHeaderViewForItem(itemPosition: Int): View? {
         val headerPosition = getHeaderPositionForItem(itemPosition)
+        if (headerPosition == -1) return null
         adapter.bindViewHolder(header as T, headerPosition)
         return header.itemView
     }
@@ -99,7 +100,7 @@ class StickyHeaderDecorator<T : RecyclerView.ViewHolder>(
             if (isHeader(position)) return position
             position--
         }
-        return 0
+        return -1
     }
 
     private fun isHeader(position: Int): Boolean = adapter.getItemViewType(position) == listener.getHeaderLayout()
