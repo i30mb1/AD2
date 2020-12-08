@@ -26,7 +26,6 @@ class GetVOItemDescriptionUseCase @Inject constructor(
 
     suspend operator fun invoke(localItemDescription: LocalItemDescription): List<VODescription> = withContext(ioDispatcher) {
         mutableListOf<VODescription>().apply {
-            add(VOTitle(localItemDescription.name))
             add(VOBodyLine(application.getString(R.string.cost, localItemDescription.cost)))
             add(VOBodyLine(application.getString(R.string.bought_from, localItemDescription.boughtFrom)))
             add(VOBodyRecipe(ItemRepository.getFullUrlItemImage(localItemDescription.name) ,localItemDescription.consistFrom?.map { itemName -> itemName.toVORecipe() } ?: emptyList()))
