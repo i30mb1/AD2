@@ -54,7 +54,7 @@ class HeroesFragment : Fragment(R.layout.fragment_heroes) {
             putExtra(HeroPageActivity.HERO_NAME, model.name)
             putExtra(HeroPageActivity.TN_PHOTO, binding.iv.transitionName)
             val options = ActivityOptionsCompat.makeSceneTransitionAnimation(requireActivity(), binding.iv, binding.iv.transitionName)
-            startActivity(this, options.toBundle())
+            startActivity(this)
         }
 
         if (!model.viewedByUser) viewModel.updateViewedByUserFieldForHero(model.name)
