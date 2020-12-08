@@ -39,7 +39,7 @@
                 android:transitionName="iv"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent"
-                tools:srcCompat="@drawable/hero_placeholder" />
+                tools:src="@drawable/hero_placeholder" />
 
             <n7.ad2.CustomHeroAttrs
                 android:id="@+id/v_attr"
