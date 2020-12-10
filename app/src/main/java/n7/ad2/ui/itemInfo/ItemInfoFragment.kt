@@ -19,7 +19,7 @@ class ItemInfoFragment : Fragment(R.layout.fragment_item_info) {
 
     private lateinit var binding: FragmentItemInfoBinding
     lateinit var audioExoPlayer: AudioExoPlayer
-    private lateinit var infoPopupWindow: InfoPopupWindow
+    private val infoPopupWindow: InfoPopupWindow by lazy { InfoPopupWindow(requireContext(), lifecycle) }
     private val viewModel: ItemInfoViewModel by viewModel { injector.itemInfoViewModel }
 
     companion object {
@@ -40,17 +40,12 @@ class ItemInfoFragment : Fragment(R.layout.fragment_item_info) {
         viewModel.loadItemInfo(itemName, locale)
 
         setupToolbar(itemName)
-        setupInfoPopupWindow()
         setupAudioPlayer()
         setupItemInfoRecyclerView()
     }
 
     private fun setupToolbar(title: String) {
         binding.toolbar.title = title
-    }
-
-    private fun setupInfoPopupWindow() {
-        infoPopupWindow = InfoPopupWindow(requireContext(), lifecycle)
     }
 
     private fun setupAudioPlayer() {
