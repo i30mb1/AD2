@@ -34,11 +34,19 @@ class ItemInfoFragment : Fragment(R.layout.fragment_item_info) {
         binding = FragmentItemInfoBinding.bind(view).also {
             it.lifecycleOwner = viewLifecycleOwner
         }
-        viewModel.loadItemInfo(requireArguments().getString(ITEM_NAME, ""), Locale.valueOf(getString(R.string.locale)))
 
+        val itemName = requireArguments().getString(ITEM_NAME)!!
+        val locale = Locale.valueOf(getString(R.string.locale))
+        viewModel.loadItemInfo(itemName, locale)
+
+        setupToolbar(itemName)
         setupInfoPopupWindow()
         setupAudioPlayer()
         setupItemInfoRecyclerView()
+    }
+
+    private fun setupToolbar(title: String) {
+        binding.toolbar.title = title
     }
 
     private fun setupInfoPopupWindow() {
