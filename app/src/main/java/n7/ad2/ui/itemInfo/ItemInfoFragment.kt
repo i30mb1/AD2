@@ -17,7 +17,8 @@ import n7.ad2.utils.viewModel
 
 class ItemInfoFragment : Fragment(R.layout.fragment_item_info) {
 
-    private lateinit var binding: FragmentItemInfoBinding
+    private var _binding: FragmentItemInfoBinding? = null
+    private val binding get() = _binding!!
     lateinit var audioExoPlayer: AudioExoPlayer
     private val infoPopupWindow: InfoPopupWindow by lazy { InfoPopupWindow(requireContext(), lifecycle) }
     private val viewModel: ItemInfoViewModel by viewModel { injector.itemInfoViewModel }
@@ -31,7 +32,7 @@ class ItemInfoFragment : Fragment(R.layout.fragment_item_info) {
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
-        binding = FragmentItemInfoBinding.bind(view).also {
+        _binding = FragmentItemInfoBinding.bind(view).also {
             it.lifecycleOwner = viewLifecycleOwner
         }
 
@@ -42,6 +43,11 @@ class ItemInfoFragment : Fragment(R.layout.fragment_item_info) {
         setupToolbar(itemName)
         setupAudioPlayer()
         setupItemInfoRecyclerView()
+    }
+
+    override fun onDestroyView() {
+        super.onDestroyView()
+        _binding = null
     }
 
     private fun setupToolbar(title: String) {
