@@ -17,7 +17,7 @@ class RecipeImagesAdapter : ListAdapter<VORecipe, RecipeImagesAdapter.ViewHolder
 
     override fun getItemViewType(position: Int): Int = R.layout.item_recipe
 
-    class ViewHolder(
+    class ViewHolder private constructor(
         private val binding: ItemRecipeBinding,
     ) : RecyclerView.ViewHolder(binding.root) {
 
