@@ -267,12 +267,12 @@ class ParseHeroes private constructor(
         val mainAttributes = root.getElementsByAttributeValue("style", "width: 100%; padding: 4px 0; display: grid; grid-template-columns: auto auto auto; color: white; text-align: center;")[0]
         val mainAttributesElements = mainAttributes.getElementsByTag("div")
 
-        val attrStrength = (mainAttributesElements[4].childNode(0) as Element).text()
-        val attrStrengthInc = (mainAttributesElements[4].childNode(1) as TextNode).text().split(" ").last()
-        val attrAgility = (mainAttributesElements[5].childNode(0) as Element).text()
-        val attrAgilityInc = (mainAttributesElements[5].childNode(1) as TextNode).text().split(" ").last()
-        val attrIntelligence = (mainAttributesElements[6].childNode(0) as Element).text()
-        val attrIntelligenceInc = (mainAttributesElements[6].childNode(1) as TextNode).text().split(" ").last()
+        val attrStrength = (mainAttributesElements[4].childNode(0) as Element).text().toDouble()
+        val attrStrengthInc = (mainAttributesElements[4].childNode(1) as TextNode).text().split(" ").last().replace(",",".").toDouble()
+        val attrAgility = (mainAttributesElements[5].childNode(0) as Element).text().toDouble()
+        val attrAgilityInc = (mainAttributesElements[5].childNode(1) as TextNode).text().split(" ").last().replace(",",".").toDouble()
+        val attrIntelligence = (mainAttributesElements[6].childNode(0) as Element).text().toDouble()
+        val attrIntelligenceInc = (mainAttributesElements[6].childNode(1) as TextNode).text().split(" ").last().replace(",",".").toDouble()
 
         JSONArray().apply {
             JSONObject().apply {
@@ -491,10 +491,10 @@ class ParseHeroes private constructor(
 
 fun main() = runBlocking {
     parser {
-        loadRusDescription = false
-        loadEngDescription = false
-        loadRusResponses = true
-        loadEngResponses = true
+        loadRusDescription = true
+        loadEngDescription = true
+        loadRusResponses = false
+        loadEngResponses = false
         loadHeroFullImage = false
         loadHeroSpellImage = false
     }.start()

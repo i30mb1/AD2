@@ -1,7 +1,7 @@
 package n7.ad2.ui.heroInfo.domain.model
-import com.squareup.moshi.JsonClass
 
 import com.squareup.moshi.Json
+import com.squareup.moshi.JsonClass
 
 @JsonClass(generateAdapter = true)
 data class LocalHeroDescription(
@@ -18,49 +18,49 @@ data class LocalHeroDescription(
     @Json(name = "talents")
     val talents: List<String> = listOf(),
     @Json(name = "trivia")
-    val trivia: List<String> = listOf()
+    val trivia: List<String> = listOf(),
 )
 
 @JsonClass(generateAdapter = true)
 data class Ability(
-        @Json(name = "cooldown")
+    @Json(name = "cooldown")
     val cooldown: String? = null,
-        @Json(name = "description")
+    @Json(name = "description")
     val description: String = "",
-        @Json(name = "effects")
+    @Json(name = "effects")
     val effects: List<String> = listOf(),
-        @Json(name = "hotKey")
+    @Json(name = "hotKey")
     val hotKey: String? = null,
-        @Json(name = "itemBehaviour")
+    @Json(name = "itemBehaviour")
     val itemBehaviour: List<String> = listOf(),
-        @Json(name = "legacyKey")
+    @Json(name = "legacyKey")
     val legacyKey: String? = null,
-        @Json(name = "mana")
+    @Json(name = "mana")
     val mana: String? = null,
-        @Json(name = "notes")
+    @Json(name = "notes")
     val notes: List<String> = listOf(),
-        @Json(name = "params")
+    @Json(name = "params")
     val params: List<String> = listOf(),
-        @Json(name = "audioUrl")
+    @Json(name = "audioUrl")
     val audioUrl: String? = null,
-        @Json(name = "spellName")
+    @Json(name = "spellName")
     val spellName: String = "",
-        @Json(name = "story")
-    val story: String? = null
+    @Json(name = "story")
+    val story: String? = null,
 )
 
 @JsonClass(generateAdapter = true)
 data class MainAttribute(
     @Json(name = "attrAgility")
-    val attrAgility: String = "",
+    val attrAgility: Double = 0.0,
     @Json(name = "attrAgilityInc")
-    val attrAgilityInc: String = "",
+    val attrAgilityInc: Double = 0.0,
     @Json(name = "attrIntelligence")
-    val attrIntelligence: String = "",
+    val attrIntelligence: Double = 0.0,
     @Json(name = "attrIntelligenceInc")
-    val attrIntelligenceInc: String = "",
+    val attrIntelligenceInc: Double = 0.0,
     @Json(name = "attrStrength")
-    val attrStrength: String = "",
+    val attrStrength: Double = 0.0,
     @Json(name = "attrStrengthInc")
-    val attrStrengthInc: String = ""
+    val attrStrengthInc: Double = 0.0,
 )
