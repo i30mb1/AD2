@@ -1,18 +1,16 @@
 <?xml version="1.0" encoding="utf-8"?>
 <layout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools">
 
     <data>
 
     </data>
 
-    <LinearLayout
+    <merge
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_gravity="center_vertical"
-        android:gravity="center"
-        android:orientation="vertical">
+        android:orientation="vertical"
+        tools:parentTag="android.widget.LinearLayout">
 
         <LinearLayout
             android:layout_width="match_parent"
@@ -29,14 +27,7 @@
                 android:layout_width="25dp"
                 android:layout_height="25dp"
                 android:contentDescription="@string/desc_strength"
-                android:src="@drawable/strength"
-                app:layout_constraintBottom_toTopOf="@+id/guideline5"
-                app:layout_constraintEnd_toStartOf="@+id/ivInt"
-                app:layout_constraintHorizontal_bias="0.5"
-                app:layout_constraintHorizontal_chainStyle="spread"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toTopOf="parent"
-                app:layout_constraintVertical_bias="1.0" />
+                android:src="@drawable/strength" />
 
             <Space
                 android:layout_width="0dp"
@@ -48,13 +39,7 @@
                 android:layout_width="25dp"
                 android:layout_height="25dp"
                 android:contentDescription="@string/desc_intellect"
-                android:src="@drawable/intelligence"
-                app:layout_constraintBottom_toTopOf="@+id/guideline5"
-                app:layout_constraintEnd_toStartOf="@+id/ivAgi"
-                app:layout_constraintHorizontal_bias="0.5"
-                app:layout_constraintStart_toEndOf="@+id/ivStr"
-                app:layout_constraintTop_toTopOf="parent"
-                app:layout_constraintVertical_bias="1.0" />
+                android:src="@drawable/intelligence" />
 
             <Space
                 android:layout_width="0dp"
@@ -66,13 +51,7 @@
                 android:layout_width="25dp"
                 android:layout_height="25dp"
                 android:contentDescription="@string/desc_agility"
-                android:src="@drawable/agility"
-                app:layout_constraintBottom_toTopOf="@+id/guideline5"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintHorizontal_bias="0.5"
-                app:layout_constraintStart_toEndOf="@+id/ivInt"
-                app:layout_constraintTop_toTopOf="parent"
-                app:layout_constraintVertical_bias="1.0" />
+                android:src="@drawable/agility" />
 
             <Space
                 android:layout_width="0dp"
@@ -92,15 +71,10 @@
                 android:layout_weight="1" />
 
             <TextView
-                android:id="@+id/tv_attr_str"
+                android:id="@+id/tv_strength"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:textAppearance="?textAppearanceOverline"
-                app:layout_constraintBottom_toBottomOf="parent"
-                app:layout_constraintEnd_toEndOf="@+id/ivStr"
-                app:layout_constraintStart_toStartOf="@+id/ivStr"
-                app:layout_constraintTop_toBottomOf="@+id/ivStr"
-                app:layout_constraintVertical_bias="0.0"
                 tools:text="20" />
 
             <Space
@@ -109,15 +83,10 @@
                 android:layout_weight="1" />
 
             <TextView
-                android:id="@+id/tv_attr_agi"
+                android:id="@+id/tv_intelligence"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:textAppearance="?textAppearanceOverline"
-                app:layout_constraintBottom_toBottomOf="parent"
-                app:layout_constraintEnd_toEndOf="@+id/ivAgi"
-                app:layout_constraintStart_toStartOf="@+id/ivAgi"
-                app:layout_constraintTop_toTopOf="@+id/guideline5"
-                app:layout_constraintVertical_bias="0.0"
                 tools:text="20" />
 
             <Space
@@ -126,16 +95,10 @@
                 android:layout_weight="1" />
 
             <TextView
-                android:id="@+id/tv_attr_int"
+                android:id="@+id/tv_agility"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:textAppearance="?textAppearanceOverline"
-                app:layout_constraintBottom_toBottomOf="@+id/seekBar"
-                app:layout_constraintEnd_toEndOf="@+id/ivInt"
-                app:layout_constraintHorizontal_bias="0.444"
-                app:layout_constraintStart_toStartOf="@+id/ivInt"
-                app:layout_constraintTop_toBottomOf="@+id/ivInt"
-                app:layout_constraintVertical_bias="0.0"
                 tools:text="20" />
 
             <Space
@@ -146,11 +109,11 @@
 
         <com.google.android.material.slider.Slider
             android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
             android:valueFrom="1"
             android:valueTo="25"
-            android:visibility="gone"
-            android:layout_height="wrap_content"/>
-    </LinearLayout>
+            android:visibility="gone" />
+    </merge>
 
 
 </layout>

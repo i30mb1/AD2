@@ -28,6 +28,7 @@ import n7.ad2.ui.heroInfo.domain.vo.VOBodyTalent
 import n7.ad2.ui.heroInfo.domain.vo.VOBodyWithImage
 import n7.ad2.ui.heroInfo.domain.vo.VOBodyWithSeparator
 import n7.ad2.ui.heroInfo.domain.vo.VODescription
+import n7.ad2.ui.heroInfo.domain.vo.VOHeroAttrs
 import n7.ad2.ui.heroInfo.domain.vo.VOTitle
 import n7.ad2.ui.heroPage.AudioExoPlayer
 import n7.ad2.ui.itemInfo.RecipeImagesAdapter
@@ -59,6 +60,7 @@ class DescriptionsListAdapter(
             is VOBodyWithImage -> R.layout.item_body_with_image
             is VOBodyTalent -> R.layout.item_body_talent
             is VOBodyRecipe -> R.layout.item_body_recipe
+            is VOHeroAttrs -> R.layout.item_body_hero_attrs
         }
     }
 
@@ -136,6 +138,7 @@ class DescriptionsListAdapter(
                 is VOBodyLine -> newItem is VOBodyLine
                 is VOBodyTalent -> newItem is VOBodyTalent
                 is VOBodyRecipe -> newItem is VOBodyRecipe
+                is VOHeroAttrs -> newItem is VOHeroAttrs
             }
         }
 

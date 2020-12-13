@@ -6,11 +6,9 @@ import android.graphics.Bitmap
 import android.graphics.Canvas
 import android.util.AttributeSet
 import android.view.LayoutInflater
-import android.widget.FrameLayout
-import androidx.core.content.withStyledAttributes
+import android.widget.LinearLayout
 import n7.ad2.databinding.CustomHeroAttrsBinding
 import n7.ad2.utils.extension.toPx
-
 
 
 // link about @JVMOverload https://proandroiddev.com/misconception-about-kotlin-jvmoverloads-for-android-view-creation-cb88f432e1fe
@@ -18,7 +16,7 @@ import n7.ad2.utils.extension.toPx
 class CustomHeroAttrs(
     context: Context,
     attributeSet: AttributeSet,
-) : FrameLayout(context, attributeSet) {
+) : LinearLayout(context, attributeSet) {
 
     companion object {
         private const val DEFAULT_SIZE = 60
@@ -28,10 +26,14 @@ class CustomHeroAttrs(
 
     val binding: CustomHeroAttrsBinding = CustomHeroAttrsBinding.inflate(LayoutInflater.from(context), this, true)
 
+    init {
+        orientation = VERTICAL
+    }
+
     fun setHeroAttrs(heroAttrs: HeroAttrs) {
-        binding.tvAttrAgi.text = "${heroAttrs.agility}"
-        binding.tvAttrStr.text = "${heroAttrs.strength}"
-        binding.tvAttrInt.text = "${heroAttrs.intelligence}"
+        binding.tvAgility.text = "${heroAttrs.agility}"
+        binding.tvStrength.text = "${heroAttrs.strength}"
+        binding.tvIntelligence.text = "${heroAttrs.intelligence}"
     }
 
     override fun onMeasure(widthMeasureSpec: Int, heightMeasureSpec: Int) {
