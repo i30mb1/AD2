@@ -36,7 +36,7 @@ class ItemsFragment : Fragment(R.layout.fragment_items) {
 
     fun startItemInfoFragment(model: VOItemBody, binding: ItemItemBodyBinding) {
         val intent = Intent(requireContext(), ItemInfoActivity::class.java)
-        intent.putExtra(ItemInfoFragment.ITEM_NAME, model.name)
+        intent.putExtra(ItemInfoActivity.ITEM_NAME, model.name)
         startActivity(intent)
 
         if(!model.viewedByUser) viewModel.updateViewedByUserFieldForItem(model.name)

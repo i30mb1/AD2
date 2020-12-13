@@ -12,7 +12,7 @@ class ItemInfoActivity : BaseActivity() {
     lateinit var binding: ActivityItemInfoBinding
 
     companion object {
-        private const val ITEM_NAME = "ITEM_NAME"
+        const val ITEM_NAME = "ITEM_NAME"
     }
 
     override fun onCreate(savedInstanceState: Bundle?) {
