@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
+    <!-- number that represent increment agility -->
     <attr name="myBackgroundAD2" format="reference" />
     <attr name="myTextColorPrimary" format="reference"/>
     <attr name="myTextColorSecondary" format="reference"/>
