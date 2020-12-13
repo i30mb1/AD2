@@ -81,8 +81,7 @@ class ParseHeroes private constructor(
 
             JSONArray().apply {
                 var count = 0
-                val children = root.getElementById("mw-content-text").child(0).children()
-
+                val children = root.getElementsByAttributeValue("class", "mw-parser-output")[0].children()
                 var category = JSONObject()
                 var responses = JSONArray()
                 var response: JSONObject
@@ -215,8 +214,8 @@ class ParseHeroes private constructor(
 //                        if (withZh) put("hrefZh", getHeroHref(heroesZh[index]))
                         val directory = "heroes/$heroName"
                         put("assetsPath", directory)
-                        if (loadEngDescription) createHeroFolderInAssets("$directory/en")
-                        if (loadRusDescription) createHeroFolderInAssets("$directory/ru")
+                        if (loadEngDescription || loadEngResponses) createHeroFolderInAssets("$directory/en")
+                        if (loadRusDescription || loadRusResponses) createHeroFolderInAssets("$directory/ru")
 
                         heroList.add(heroName)
                     }
