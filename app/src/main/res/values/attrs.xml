@@ -5,13 +5,4 @@
     <attr name="myTextColorPrimary" format="reference"/>
     <attr name="myTextColorSecondary" format="reference"/>
 
-    <declare-styleable name="CustomHeroAttrs">
-        <attr name="agility" format="integer"/>
-        <!-- number that represent increment agility -->
-        <attr name="agilityInc" format="integer"/>
-        <attr name="strength" format="integer"/>
-        <attr name="strengthInc" format="integer"/>
-        <attr name="intelligence" format="integer"/>
-        <attr name="intelligenceInc" format="integer"/>
-    </declare-styleable>
 </resources>

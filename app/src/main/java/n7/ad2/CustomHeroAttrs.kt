@@ -11,53 +11,27 @@ import androidx.core.content.withStyledAttributes
 import n7.ad2.databinding.CustomHeroAttrsBinding
 import n7.ad2.utils.extension.toPx
 
+
+
 // link about @JVMOverload https://proandroiddev.com/misconception-about-kotlin-jvmoverloads-for-android-view-creation-cb88f432e1fe
 @SuppressLint("SetTextI18n")
 class CustomHeroAttrs(
-        context: Context,
-        attributeSet: AttributeSet
+    context: Context,
+    attributeSet: AttributeSet,
 ) : FrameLayout(context, attributeSet) {
 
     companion object {
         private const val DEFAULT_SIZE = 60
+
+        data class HeroAttrs(val strength: Double, val agility: Double, val intelligence: Double)
     }
 
     val binding: CustomHeroAttrsBinding = CustomHeroAttrsBinding.inflate(LayoutInflater.from(context), this, true)
-    var strength: Int = 0
-        set(value) {
-            binding.tvAttrStr.text = "$value+$strengthInc"
-            field = value
-        }
-    var strengthInc: Int = 0
-        set(value) {
-            binding.tvAttrStr.text = "$strength+$value"
-            field = value
-        }
-    var agility: Int = 0
-        set(value) {
-            binding.tvAttrAgi.text = "$value+$agilityInc"
-            field = value
-        }
-    var agilityInc: Int = 0
-        set(value) {
-            binding.tvAttrAgi.text = "$agility+$value"
-            field = value
-        }
-    var intelligence: Int = 0
-        set(value) {
-            binding.tvAttrInt.text = "$value+$intelligenceInc"
-            field = value
-        }
-    var intelligenceInc: Int = 0
-        set(value) {
-            binding.tvAttrInt.text = "$intelligence+$value"
-            field = value
-        }
 
-    init {
-        context.withStyledAttributes(attributeSet, R.styleable.CustomHeroAttrs) {
-
-        }
+    fun setHeroAttrs(heroAttrs: HeroAttrs) {
+        binding.tvAttrAgi.text = "${heroAttrs.agility}"
+        binding.tvAttrStr.text = "${heroAttrs.strength}"
+        binding.tvAttrInt.text = "${heroAttrs.intelligence}"
     }
 
     override fun onMeasure(widthMeasureSpec: Int, heightMeasureSpec: Int) {
