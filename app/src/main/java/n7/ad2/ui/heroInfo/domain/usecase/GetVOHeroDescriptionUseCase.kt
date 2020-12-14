@@ -12,11 +12,10 @@ import android.view.View
 import kotlinx.coroutines.CoroutineDispatcher
 import kotlinx.coroutines.withContext
 import n7.ad2.BuildConfig
-import n7.ad2.CustomHeroAttrs
 import n7.ad2.R
 import n7.ad2.base.VOPopUpListener
-import n7.ad2.data.source.local.Repository
 import n7.ad2.data.source.local.model.LocalHero
+import n7.ad2.ui.heroInfo.domain.adapter.toVOHeroAttrs
 import n7.ad2.ui.heroInfo.domain.model.LocalHeroDescription
 import n7.ad2.ui.heroInfo.domain.vo.VOBodyLine
 import n7.ad2.ui.heroInfo.domain.vo.VOBodySimple
@@ -24,7 +23,6 @@ import n7.ad2.ui.heroInfo.domain.vo.VOBodyTalent
 import n7.ad2.ui.heroInfo.domain.vo.VOBodyWithImage
 import n7.ad2.ui.heroInfo.domain.vo.VOBodyWithSeparator
 import n7.ad2.ui.heroInfo.domain.vo.VODescription
-import n7.ad2.ui.heroInfo.domain.vo.VOHeroAttrs
 import n7.ad2.ui.heroInfo.domain.vo.VOHeroSpells
 import n7.ad2.ui.heroInfo.domain.vo.VOSpell
 import n7.ad2.ui.heroInfo.domain.vo.VOTitle
@@ -47,10 +45,8 @@ class GetVOHeroDescriptionUseCase @Inject constructor(
     @ExperimentalStdlibApi
     suspend operator fun invoke(localHeroDescription: LocalHeroDescription, localHero: LocalHero): List<VODescription> = withContext(ioDispatcher) {
         buildList {
-            val attrs = localHeroDescription.mainAttributes[0]
-            val heroAttrs = CustomHeroAttrs.Companion.HeroAttrs(attrs.attrStrength, attrs.attrAgility, attrs.attrIntelligence)
-            val urlHeroImage = Repository.getFullUrlHeroImage(localHero.name)
-            add(VOHeroAttrs(urlHeroImage, heroAttrs))
+            val voHeroAttrs = localHeroDescription.mainAttributes.toVOHeroAttrs(localHero.name)
+            add(voHeroAttrs)
 
             val spells: List<VOSpell> = buildList {
                 add(VOSpell().apply {
