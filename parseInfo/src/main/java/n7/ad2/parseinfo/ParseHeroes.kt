@@ -274,19 +274,15 @@ class ParseHeroes private constructor(
         val attrIntelligence = (mainAttributesElements[6].childNode(0) as Element).text().toDouble()
         val attrIntelligenceInc = (mainAttributesElements[6].childNode(1) as TextNode).text().split(" ").last().replace(",",".").toDouble()
 
-        JSONArray().apply {
-            JSONObject().apply {
-                put("attrStrength", attrStrength)
-                put("attrStrengthInc", attrStrengthInc)
-                put("attrAgility", attrAgility)
-                put("attrAgilityInc", attrAgilityInc)
-                put("attrIntelligence", attrIntelligence)
-                put("attrIntelligenceInc", attrIntelligenceInc)
-
-                add(this)
-            }
-            put("mainAttributes", this)
-        }
+           val attrs = JSONObject().apply {
+               put("attrStrength", attrStrength)
+               put("attrStrengthInc", attrStrengthInc)
+               put("attrAgility", attrAgility)
+               put("attrAgilityInc", attrAgilityInc)
+               put("attrIntelligence", attrIntelligence)
+               put("attrIntelligenceInc", attrIntelligenceInc)
+           }
+        put("mainAttributes", attrs)
     }
 
     private fun JSONObject.loadTalents(root: Document) {

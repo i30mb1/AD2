@@ -12,7 +12,7 @@ data class LocalHeroDescription(
     @Json(name = "history")
     val history: String = "",
     @Json(name = "mainAttributes")
-    val mainAttributes: List<MainAttribute> = listOf(),
+    val mainAttributes: MainAttribute = MainAttribute(),
     @Json(name = "talentTips")
     val talentTips: List<String> = listOf(),
     @Json(name = "talents")
