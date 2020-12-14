@@ -12,8 +12,10 @@ import android.view.View
 import kotlinx.coroutines.CoroutineDispatcher
 import kotlinx.coroutines.withContext
 import n7.ad2.BuildConfig
+import n7.ad2.CustomHeroAttrs
 import n7.ad2.R
 import n7.ad2.base.VOPopUpListener
+import n7.ad2.data.source.local.Repository
 import n7.ad2.data.source.local.model.LocalHero
 import n7.ad2.ui.heroInfo.domain.model.LocalHeroDescription
 import n7.ad2.ui.heroInfo.domain.vo.VOBodyLine
@@ -22,15 +24,16 @@ import n7.ad2.ui.heroInfo.domain.vo.VOBodyTalent
 import n7.ad2.ui.heroInfo.domain.vo.VOBodyWithImage
 import n7.ad2.ui.heroInfo.domain.vo.VOBodyWithSeparator
 import n7.ad2.ui.heroInfo.domain.vo.VODescription
-import n7.ad2.ui.heroInfo.domain.vo.VOHeroDescription
+import n7.ad2.ui.heroInfo.domain.vo.VOHeroAttrs
+import n7.ad2.ui.heroInfo.domain.vo.VOHeroSpells
 import n7.ad2.ui.heroInfo.domain.vo.VOSpell
 import n7.ad2.ui.heroInfo.domain.vo.VOTitle
 import n7.ad2.utils.extension.toStringListWithDash
 import javax.inject.Inject
 
 class GetVOHeroDescriptionUseCase @Inject constructor(
-        private val ioDispatcher: CoroutineDispatcher,
-        private val application: Application
+    private val ioDispatcher: CoroutineDispatcher,
+    private val application: Application,
 ) {
 
     companion object {
@@ -41,49 +44,58 @@ class GetVOHeroDescriptionUseCase @Inject constructor(
         const val SEPARATOR_TALENT = "^"
     }
 
-    suspend operator fun invoke(localHeroDescription: LocalHeroDescription, localHero: LocalHero): VOHeroDescription = withContext(ioDispatcher) {
-        val voHeroDescription = VOHeroDescription()
-        voHeroDescription.heroImagePath = "file:///android_asset/${localHero.assetsPath}/$HERO_FULL_PHOTO_NAME.$HERO_FULL_PHOTO_TYPE"
+    @ExperimentalStdlibApi
+    suspend operator fun invoke(localHeroDescription: LocalHeroDescription, localHero: LocalHero): List<VODescription> = withContext(ioDispatcher) {
+        buildList {
+            val attrs = localHeroDescription.mainAttributes[0]
+            val heroAttrs = CustomHeroAttrs.Companion.HeroAttrs(attrs.attrStrength, attrs.attrAgility, attrs.attrIntelligence)
+            val urlHeroImage = Repository.getFullUrlHeroImage(localHero.name)
+            add(VOHeroAttrs(urlHeroImage, heroAttrs))
 
-        val spells: MutableList<VOSpell> = localHeroDescription.abilities.map {
-            val descriptions = mutableListOf<VODescription>().apply {
+            val spells: List<VOSpell> = buildList {
+                add(VOSpell().apply {
+                    name = application.getString(R.string.item_hero_personal_description_talents)
+                    image = Uri.parse("android.resource://" + BuildConfig.APPLICATION_ID + "/" + R.drawable.talent).toString()
+                    listVODescriptions = buildList {
+                        add(VOTitle(application.getString(R.string.item_hero_personal_description_talents)))
+                        var talentLVL = 5
+                        localHeroDescription.talents.forEach {
+                            val parts = it.split(SEPARATOR_TALENT)
+                            add(VOBodyTalent(parts[0], talentLVL, parts[1]))
+                            talentLVL += 5
+                        }
 
-                add(VOTitle(it.spellName, it.hotKey, it.legacyKey, it.audioUrl))
-                it.effects.forEach { add(VOBodyLine(it)) }
-                add(VOBodySimple(it.description))
-                it.cooldown?.let { add(VOBodyWithImage(spanWithDotaImages(it), R.drawable.cooldown)) }
-                it.mana?.let { add(VOBodyWithImage(spanWithDotaImages(it), R.drawable.mana)) }
+                        add(VOTitle(application.getString(R.string.tips)))
+                        add(VOBodyWithSeparator(SpannableString(localHeroDescription.talentTips.toStringListWithDash())))
+                    }
+                })
+                addAll(localHeroDescription.abilities.map {
+                    VOSpell().apply {
+                        name = it.spellName
+                        image = "file:///android_asset/$HEROES_SPELL_FOLDER/${it.spellName}.$HERO_FULL_PHOTO_TYPE"
+                        listVODescriptions = buildList {
+                            add(VOTitle(it.spellName, it.hotKey, it.legacyKey, it.audioUrl))
+                            it.effects.forEach { add(VOBodyLine(it)) }
+                            add(VOBodySimple(it.description))
+                            it.cooldown?.let { add(VOBodyWithImage(spanWithDotaImages(it), R.drawable.cooldown)) }
+                            it.mana?.let { add(VOBodyWithImage(spanWithDotaImages(it), R.drawable.mana)) }
 
-                add(VOTitle(application.getString(R.string.hero_fragment_params)))
-                add(VOBodyWithSeparator(spanWithDotaImages(it.params.toStringListWithDash())))
+                            add(VOTitle(application.getString(R.string.hero_fragment_params)))
+                            add(VOBodyWithSeparator(spanWithDotaImages(it.params.toStringListWithDash())))
 
-                it.story?.let {
-                    add(VOTitle(application.getString(R.string.hero_fragment_story)))
-                    add(VOBodyWithSeparator(SpannableString(it)))
-                }
+                            it.story?.let {
+                                add(VOTitle(application.getString(R.string.hero_fragment_story)))
+                                add(VOBodyWithSeparator(SpannableString(it)))
+                            }
 
-                add(VOTitle(application.getString(R.string.hero_fragment_notes)))
-                add(VOBodyWithSeparator(SpannableString(it.notes.toStringListWithDash())))
+                            add(VOTitle(application.getString(R.string.hero_fragment_notes)))
+                            add(VOBodyWithSeparator(SpannableString(it.notes.toStringListWithDash())))
+                        }
+                    }
+                })
             }
+            add(VOHeroSpells(spells))
 
-            VOSpell().apply {
-                name = it.spellName
-                image = "file:///android_asset/$HEROES_SPELL_FOLDER/${it.spellName}.$HERO_FULL_PHOTO_TYPE"
-                listVODescriptions = descriptions
-            }
-        }.toMutableList()
-
-        val talentListVoDescription = mutableListOf<VODescription>().apply {
-            add(VOTitle(application.getString(R.string.item_hero_personal_description_talents)))
-            var talentLVL = 5
-            localHeroDescription.talents.forEach {
-                val parts = it.split(SEPARATOR_TALENT)
-                add(VOBodyTalent(parts[0], talentLVL, parts[1]))
-                talentLVL += 5
-            }
-
-            add(VOTitle(application.getString(R.string.tips)))
-            add(VOBodyWithSeparator(SpannableString(localHeroDescription.talentTips.toStringListWithDash())))
         }
         spells.add(0, VOSpell().apply {
             name = application.getString(R.string.item_hero_personal_description_talents)

@@ -42,6 +42,7 @@ class HeroInfoViewModel @AssistedInject constructor(
 
     val vOHero = MutableLiveData<VOHeroDescription>()
 
+    @ExperimentalStdlibApi
     fun loadHero(heroName: String) {
         viewModelScope.launch {
             val locale = Locale.valueOf(getApplication<Application>().getString(R.string.locale))

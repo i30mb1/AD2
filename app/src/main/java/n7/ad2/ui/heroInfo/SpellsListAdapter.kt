@@ -9,7 +9,7 @@ import n7.ad2.base.VOModelListener
 import n7.ad2.databinding.ItemSpellBinding
 import n7.ad2.ui.heroInfo.domain.vo.VOSpell
 
-class SpellsListAdapter(fragment: HeroInfoFragment) : ListAdapter<VOSpell, SpellsListAdapter.ViewHolder>(DiffCallback()) {
+class SpellsListAdapter() : ListAdapter<VOSpell, SpellsListAdapter.ViewHolder>(DiffCallback()) {
 
     private val listener = object : VOModelListener<VOSpell> {
         override fun onClickListener(model: VOSpell) {

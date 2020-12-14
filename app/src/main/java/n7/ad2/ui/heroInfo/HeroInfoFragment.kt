@@ -26,6 +26,7 @@ class HeroInfoFragment : Fragment(R.layout.fragment_hero_info) {
         }
     }
 
+    @ExperimentalStdlibApi
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
         binding = FragmentHeroInfoBinding.bind(view).also {

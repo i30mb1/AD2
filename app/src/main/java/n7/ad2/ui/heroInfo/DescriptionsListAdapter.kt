@@ -16,6 +16,7 @@ import androidx.recyclerview.widget.RecyclerView
 import n7.ad2.BR
 import n7.ad2.R
 import n7.ad2.base.VOPopUpListener
+import n7.ad2.databinding.ItemBodyHeroSpellsBinding
 import n7.ad2.databinding.ItemBodyRecipeBinding
 import n7.ad2.databinding.ItemBodyWithImageBinding
 import n7.ad2.databinding.ItemBodyWithSeparatorBinding
@@ -29,6 +30,7 @@ import n7.ad2.ui.heroInfo.domain.vo.VOBodyWithImage
 import n7.ad2.ui.heroInfo.domain.vo.VOBodyWithSeparator
 import n7.ad2.ui.heroInfo.domain.vo.VODescription
 import n7.ad2.ui.heroInfo.domain.vo.VOHeroAttrs
+import n7.ad2.ui.heroInfo.domain.vo.VOHeroSpells
 import n7.ad2.ui.heroInfo.domain.vo.VOTitle
 import n7.ad2.ui.heroPage.AudioExoPlayer
 import n7.ad2.ui.itemInfo.RecipeImagesAdapter
@@ -61,6 +63,7 @@ class DescriptionsListAdapter(
             is VOBodyTalent -> R.layout.item_body_talent
             is VOBodyRecipe -> R.layout.item_body_recipe
             is VOHeroAttrs -> R.layout.item_body_hero_attrs
+            is VOHeroSpells -> R.layout.item_body_hero_spells
         }
     }
 
@@ -94,6 +97,9 @@ class DescriptionsListAdapter(
                     binding.audioExoPlayer = audioExoPlayer
                     binding.listener = listener
                 }
+                is ItemBodyHeroSpellsBinding -> {
+
+                }
             }
         }
 
@@ -120,6 +126,7 @@ class DescriptionsListAdapter(
                 val layoutInflater = LayoutInflater.from(parent.context)
                 val binding: ViewDataBinding = when (viewType) {
                     R.layout.item_body_recipe -> ItemBodyRecipeBinding.inflate(layoutInflater, parent, false).apply { rv.adapter = RecipeImagesAdapter() }
+                    R.layout.item_body_hero_spells -> ItemBodyHeroSpellsBinding.inflate(layoutInflater, parent, false).apply { rv.adapter = SpellsListAdapter() }
                     else -> DataBindingUtil.inflate(layoutInflater, viewType, parent, false)
                 }
                 return ViewHolder(binding, listener, audioExoPlayer)
@@ -139,6 +146,7 @@ class DescriptionsListAdapter(
                 is VOBodyTalent -> newItem is VOBodyTalent
                 is VOBodyRecipe -> newItem is VOBodyRecipe
                 is VOHeroAttrs -> newItem is VOHeroAttrs
+                is VOHeroSpells -> newItem is VOHeroSpells
             }
         }
 
