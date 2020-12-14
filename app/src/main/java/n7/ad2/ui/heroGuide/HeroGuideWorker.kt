@@ -4,6 +4,7 @@ package n7.ad2.ui.heroGuide
 
 import android.content.Context
 import androidx.core.app.NotificationCompat
+import androidx.core.app.NotificationManagerCompat
 import androidx.work.CoroutineWorker
 import androidx.work.ForegroundInfo
 import androidx.work.WorkerParameters
@@ -46,6 +47,7 @@ class HeroGuideWorker(
     lateinit var moshi: Moshi
 
     override suspend fun doWork(): Result = coroutineScope {
+        NotificationManagerCompat.from(applicationContext).areNotificationsEnabled()
         if (applicationContext.isChannelNotCreated(channelId)) applicationContext.createNotificationChannel(channelId, channelName)
 
         val notification = NotificationCompat.Builder(applicationContext, channelId)
