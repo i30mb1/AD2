@@ -367,10 +367,10 @@ class ParseHeroes private constructor(
                     if(audioUrl.isNullOrEmpty()) audioUrl = null
                     put("audioUrl", audioUrl)
 
-                    val hotKey = it.getElementsByAttributeValue("class", "tooltip").getOrNull(0)?.text()
+                    val hotKey = it.getElementsByAttributeValue("class", "tooltip").getOrNull(0)?.text()?.takeIf { it.length == 1 }
                     put("hotKey", hotKey)
 
-                    val legacyKey = it.getElementsByAttributeValue("class", "tooltip").getOrNull(1)?.text()
+                    val legacyKey = it.getElementsByAttributeValue("class", "tooltip").getOrNull(1)?.text()?.takeIf { it.length == 1 }
                     put("legacyKey", legacyKey)
 
                     val effects = it.getElementsByAttributeValue("style", "display: inline-block; width: 32%; vertical-align: top;")
