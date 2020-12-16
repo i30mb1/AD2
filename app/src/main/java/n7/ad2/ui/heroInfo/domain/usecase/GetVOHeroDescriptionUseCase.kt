@@ -55,13 +55,3 @@ class GetVOHeroDescriptionUseCase @Inject constructor(
     }
 
 }
-
-class MyClickableSpan(private val text: String) : ClickableSpan() {
-
-    var listener: VOPopUpListener<String>? = null
-
-    override fun onClick(widget: View) {
-        listener?.onClickListener(widget, text)
-    }
-
-}

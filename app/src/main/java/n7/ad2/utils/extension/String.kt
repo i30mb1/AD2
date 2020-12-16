@@ -7,8 +7,8 @@ import android.text.SpannableString
 import android.text.style.DynamicDrawableSpan
 import android.text.style.ImageSpan
 import n7.ad2.R
+import n7.ad2.ui.heroInfo.MyClickableSpan
 import n7.ad2.ui.heroInfo.domain.usecase.GetVOHeroDescriptionUseCase
-import n7.ad2.ui.heroInfo.domain.usecase.MyClickableSpan
 
 @SuppressLint("UseCompatLoadingForDrawables")
 fun String.spanWithDotaImages(application: Application): SpannableString {

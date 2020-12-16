@@ -22,7 +22,6 @@ import n7.ad2.databinding.ItemBodyRecipeBinding
 import n7.ad2.databinding.ItemBodyWithImageBinding
 import n7.ad2.databinding.ItemBodyWithSeparatorBinding
 import n7.ad2.databinding.ItemTitleBinding
-import n7.ad2.ui.heroInfo.domain.usecase.MyClickableSpan
 import n7.ad2.ui.heroInfo.domain.vo.VOBodyLine
 import n7.ad2.ui.heroInfo.domain.vo.VOBodyRecipe
 import n7.ad2.ui.heroInfo.domain.vo.VOBodySimple
