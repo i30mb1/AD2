@@ -38,9 +38,9 @@ data class Ability(
     @Json(name = "mana")
     val mana: String? = null,
     @Json(name = "notes")
-    val notes: List<String> = listOf(),
+    val notes: List<String>? = null,
     @Json(name = "params")
-    val params: List<String> = listOf(),
+    val params: List<String>? = null,
     @Json(name = "audioUrl")
     val audioUrl: String? = null,
     @Json(name = "spellName")

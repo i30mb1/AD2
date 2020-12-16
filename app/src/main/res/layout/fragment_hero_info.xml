@@ -9,65 +9,13 @@
             type="n7.ad2.ui.heroInfo.HeroInfoViewModel" />
     </data>
 
-    <androidx.core.widget.NestedScrollView
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/rv"
+        data="@{viewModel.VOHero}"
         android:layout_width="match_parent"
-        android:layout_height="match_parent">
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        tools:itemCount="3"
+        tools:listitem="@layout/item_body_simple" />
 
-        <RelativeLayout
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:padding="4dp">
-
-            <n7.ad2.utils.SelectableImageView
-                android:id="@+id/iv_image"
-                loadImageUrl="@{viewModel.vOHero.heroImagePath}"
-                onError="@{@drawable/hero_placeholder}"
-                placeHolder="@{@drawable/hero_placeholder}"
-                android:layout_width="150dp"
-                android:onClick="@{()-> fragment.setDescription(viewModel.vOHero.heroBio)}"
-                android:layout_height="80dp"
-                android:layout_marginStart="4dp"
-                android:layout_marginTop="4dp"
-                android:contentDescription="@string/desc_dota_hero"
-                android:cropToPadding="true"
-                android:scaleType="centerCrop"
-                android:transitionName="iv"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toTopOf="parent"
-                tools:src="@drawable/hero_placeholder" />
-
-            <n7.ad2.CustomHeroAttrs
-                android:id="@+id/v_attr"
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:layout_alignTop="@id/iv_image"
-                android:layout_alignBottom="@id/iv_image"
-                android:layout_alignParentEnd="true"
-                android:layout_toEndOf="@id/iv_image" />
-
-            <androidx.recyclerview.widget.RecyclerView
-                android:id="@+id/rv_spells"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_below="@+id/iv_image"
-                android:orientation="horizontal"
-                android:paddingBottom="4dp"
-                app:layoutManager="LinearLayoutManager"
-                tools:itemCount="4"
-                data="@{viewModel.VOHero.spells}"
-                tools:listitem="@layout/item_spell" />
-
-            <androidx.recyclerview.widget.RecyclerView
-                android:id="@+id/rv_spells_info"
-                data="@{viewModel.VOHero.selectedDescriptionList}"
-                android:layout_width="match_parent"
-                android:orientation="vertical"
-                android:layout_height="match_parent"
-                app:layoutManager="LinearLayoutManager"
-                android:layout_below="@id/rv_spells"
-                tools:itemCount="3"
-                tools:listitem="@layout/item_body_simple" />
-
-        </RelativeLayout>
-    </androidx.core.widget.NestedScrollView>
 </layout>

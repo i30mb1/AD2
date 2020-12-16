@@ -17,7 +17,7 @@ class SpellsListAdapter(
 
     private val listener = object : VOModelListener<VOSpell> {
         override fun onClickListener(model: VOSpell) {
-            fragment.setDescription(model.listVODescriptions)
+            descriptionsListener.onClickListener(model.voDescriptionList)
             deselectAll()
             model.selected = true
         }

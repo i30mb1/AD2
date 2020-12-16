@@ -22,7 +22,7 @@
 
         <n7.ad2.utils.SelectableImageView
             android:id="@+id/iv"
-            loadImageUrl="@{model.image}"
+            loadImageUrl="@{model.urlSpellImage}"
             onError="@{@drawable/spell_placeholder}"
             placeHolder="@{@drawable/spell_placeholder}"
             android:layout_width="60dp"

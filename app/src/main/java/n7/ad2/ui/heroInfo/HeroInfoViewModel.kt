@@ -11,6 +11,7 @@ import n7.ad2.data.source.local.Locale
 import n7.ad2.heroes.db.HeroModel
 import n7.ad2.heroes.full.ResponseModel
 import n7.ad2.ui.heroInfo.domain.interactor.GetHeroDescriptionInteractor
+import n7.ad2.ui.heroInfo.domain.vo.VODescription
 import n7.ad2.ui.heroInfo.domain.vo.VOHeroDescription
 import n7.ad2.ui.heroPage.domain.usecase.GetLocalHeroByNameUseCase
 
@@ -40,14 +41,14 @@ class HeroInfoViewModel @AssistedInject constructor(
 
     var hero = MutableLiveData<HeroModel>()
 
-    val vOHero = MutableLiveData<VOHeroDescription>()
+    val vOHero = MutableLiveData<List<VODescription>>()
 
     @ExperimentalStdlibApi
     fun loadHero(heroName: String) {
         viewModelScope.launch {
             val locale = Locale.valueOf(getApplication<Application>().getString(R.string.locale))
             val localHero = getLocalHeroByNameUseCase(heroName)
-            vOHero.value = getHeroDescriptionInteractor(localHero, locale)
+            vOHero.value = getHeroDescriptionInteractor(localHero, locale)!!
         }
     }
 

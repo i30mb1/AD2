@@ -23,7 +23,11 @@ import n7.ad2.utils.Utils
 class HeroPageActivity : BaseActivity() {
 
     lateinit var binding: ActivityHeroPageBinding
-    lateinit var audioExoPlayer: AudioExoPlayer
+    val audioExoPlayer: AudioExoPlayer by lazy {
+        AudioExoPlayer(application, lifecycle).apply {
+            setErrorListener(::showDialogError)
+        }
+    }
 
     companion object {
         const val HERO_NAME = "HERO_NAME"
@@ -33,10 +37,8 @@ class HeroPageActivity : BaseActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         binding = DataBindingUtil.setContentView(this, R.layout.activity_hero_page)
-        val heroName = intent.getStringExtra(HERO_NAME)!!
 
-        audioExoPlayer = AudioExoPlayer(application, lifecycle)
-        audioExoPlayer.setErrorListener(::showDialogError)
+        val heroName = intent.getStringExtra(HERO_NAME)!!
 
         setToolbar(heroName)
         setViewPager2(heroName)
@@ -87,8 +89,7 @@ class HeroPageActivity : BaseActivity() {
         }
         when {
             checkSelfPermission(Manifest.permission.WRITE_SETTINGS) == PackageManager.PERMISSION_GRANTED -> writeSetting()
-            shouldShowRequestPermissionRationale(Manifest.permission.WRITE_SETTINGS) -> {
-            }
+            shouldShowRequestPermissionRationale(Manifest.permission.WRITE_SETTINGS) -> Unit
             else -> registerPermission.launch(Manifest.permission.WRITE_SETTINGS)
         }
 
