@@ -20,14 +20,6 @@ class GetVOHeroDescriptionUseCase @Inject constructor(
     private val application: Application,
 ) {
 
-    companion object {
-        const val HERO_FULL_PHOTO_NAME = "full"
-        const val HERO_FULL_PHOTO_TYPE = "png"
-        const val HEROES_SPELL_FOLDER = "heroesSpell"
-        const val TAG_TALENT = "TagTalent"
-        const val SEPARATOR_TALENT = "^"
-    }
-
     @ExperimentalStdlibApi
     suspend operator fun invoke(localHeroDescription: LocalHeroDescription, localHero: LocalHero): List<VODescription> = withContext(ioDispatcher) {
         buildList {
