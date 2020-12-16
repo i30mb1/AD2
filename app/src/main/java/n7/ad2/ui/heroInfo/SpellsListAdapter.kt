@@ -6,10 +6,14 @@ import androidx.recyclerview.widget.DiffUtil
 import androidx.recyclerview.widget.ListAdapter
 import androidx.recyclerview.widget.RecyclerView
 import n7.ad2.base.VOModelListener
+import n7.ad2.base.VOObjectListener
 import n7.ad2.databinding.ItemSpellBinding
+import n7.ad2.ui.heroInfo.domain.vo.VODescription
 import n7.ad2.ui.heroInfo.domain.vo.VOSpell
 
-class SpellsListAdapter() : ListAdapter<VOSpell, SpellsListAdapter.ViewHolder>(DiffCallback()) {
+class SpellsListAdapter(
+    descriptionsListener: VOObjectListener<List<VODescription>>
+) : ListAdapter<VOSpell, SpellsListAdapter.ViewHolder>(DiffCallback()) {
 
     private val listener = object : VOModelListener<VOSpell> {
         override fun onClickListener(model: VOSpell) {

@@ -15,6 +15,7 @@ import androidx.recyclerview.widget.ListAdapter
 import androidx.recyclerview.widget.RecyclerView
 import n7.ad2.BR
 import n7.ad2.R
+import n7.ad2.base.VOObjectListener
 import n7.ad2.base.VOPopUpListener
 import n7.ad2.databinding.ItemBodyHeroSpellsBinding
 import n7.ad2.databinding.ItemBodyRecipeBinding
@@ -47,6 +48,18 @@ class DescriptionsListAdapter(
         override fun onClickListener(view: View, text: String) = infoPopupWindow.show(view, text)
     }
 
+    @OptIn(ExperimentalStdlibApi::class)
+    @Suppress("PARAMETER_NAME_CHANGED_ON_OVERRIDE")
+    private val descriptionsListener: VOObjectListener<List<VODescription>> = object : VOObjectListener<List<VODescription>> {
+        override fun onClickListener(voDescriptions: List<VODescription>) {
+            val list = buildList {
+                addAll(currentList.takeWhile { it !is VOTitle })
+                addAll(voDescriptions)
+            }
+            submitList(list)
+        }
+    }
+
     override fun getHeaderLayout(): Int = R.layout.item_title
 
     override fun getItemViewType(position: Int): Int {
@@ -63,7 +76,7 @@ class DescriptionsListAdapter(
         }
     }
 
-    override fun onCreateViewHolder(parent: ViewGroup, viewType: Int) = ViewHolder.from(parent, viewType, popupListener, audioExoPlayer)
+    override fun onCreateViewHolder(parent: ViewGroup, viewType: Int) = ViewHolder.from(parent, viewType, popupListener, audioExoPlayer, descriptionsListener)
 
     override fun onBindViewHolder(holder: ViewHolder, position: Int) = holder.bind(getItem(position))
 
@@ -118,11 +131,12 @@ class DescriptionsListAdapter(
                 viewType: Int,
                 popupListener: VOPopUpListener<String>,
                 audioExoPlayer: AudioExoPlayer,
+                descriptionsListener: VOObjectListener<List<VODescription>>,
             ): ViewHolder {
                 val layoutInflater = LayoutInflater.from(parent.context)
                 val binding: ViewDataBinding = when (viewType) {
                     R.layout.item_body_recipe -> ItemBodyRecipeBinding.inflate(layoutInflater, parent, false).apply { rv.adapter = RecipeImagesAdapter() }
-                    R.layout.item_body_hero_spells -> ItemBodyHeroSpellsBinding.inflate(layoutInflater, parent, false).apply { rv.adapter = SpellsListAdapter() }
+                    R.layout.item_body_hero_spells -> ItemBodyHeroSpellsBinding.inflate(layoutInflater, parent, false).apply { rv.adapter = SpellsListAdapter(descriptionsListener) }
                     else -> DataBindingUtil.inflate(layoutInflater, viewType, parent, false)
                 }
                 return ViewHolder(binding, popupListener, audioExoPlayer)
@@ -146,7 +160,7 @@ class DescriptionsListAdapter(
             }
         }
 
-        override fun areContentsTheSame(oldItem: VODescription, newItem: VODescription): Boolean = false
+        override fun areContentsTheSame(oldItem: VODescription, newItem: VODescription): Boolean = oldItem == newItem
     }
 
 }
