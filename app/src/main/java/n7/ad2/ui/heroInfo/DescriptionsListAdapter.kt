@@ -52,11 +52,11 @@ class DescriptionsListAdapter(
     @Suppress("PARAMETER_NAME_CHANGED_ON_OVERRIDE")
     private val descriptionsListener: VOObjectListener<List<VODescription>> = object : VOObjectListener<List<VODescription>> {
         override fun onClickListener(voDescriptions: List<VODescription>) {
-            val list = buildList {
+            val newList = buildList {
                 addAll(currentList.takeWhile { it !is VOTitle })
                 addAll(voDescriptions)
             }
-            submitList(list)
+            submitList(newList)
         }
     }
 
@@ -83,7 +83,6 @@ class DescriptionsListAdapter(
     class ViewHolder private constructor(
         private val binding: ViewDataBinding,
         private val popupListener: VOPopUpListener<String>,
-        private val audioExoPlayer: AudioExoPlayer,
     ) : RecyclerView.ViewHolder(binding.root) {
 
         private var lineHeight = 0
@@ -98,17 +97,7 @@ class DescriptionsListAdapter(
             when (binding) {
                 is ItemBodyRecipeBinding -> (binding.rv.layoutManager as GridLayoutManager).spanCount = max(1, binding.item!!.recipes.size)
                 is ItemBodyWithSeparatorBinding -> setBoundToImageSpan(binding.tvBody, binding.item!!.body)
-                is ItemBodyWithImageBinding -> {
-                    setBoundToImageSpan(binding.tvBody, binding.item!!.body)
-                    binding.popupListener = popupListener
-                }
-                is ItemTitleBinding -> {
-                    binding.audioExoPlayer = audioExoPlayer
-                    binding.listener = popupListener
-                }
-                is ItemBodyHeroSpellsBinding -> {
-
-                }
+                is ItemBodyWithImageBinding -> setBoundToImageSpan(binding.tvBody, binding.item!!.body)
             }
         }
 
@@ -117,12 +106,8 @@ class DescriptionsListAdapter(
             spannableString: SpannableString,
         ) {
             if (lineHeight == 0) lineHeight = tv.lineHeight - 2.toPx
-            spannableString.getSpans<ImageSpan>().forEach {
-                it.drawable.setBounds(0, 0, lineHeight, lineHeight)
-            }
-            spannableString.getSpans<MyClickableSpan>().forEach {
-                it.listener = popupListener
-            }
+            spannableString.getSpans<ImageSpan>().forEach { it.drawable.setBounds(0, 0, lineHeight, lineHeight) }
+            spannableString.getSpans<MyClickableSpan>().forEach { it.listener = popupListener }
         }
 
         companion object {
@@ -135,11 +120,13 @@ class DescriptionsListAdapter(
             ): ViewHolder {
                 val layoutInflater = LayoutInflater.from(parent.context)
                 val binding: ViewDataBinding = when (viewType) {
+                    R.layout.item_title -> ItemTitleBinding.inflate(layoutInflater, parent, false).also { it.audioExoPlayer = audioExoPlayer; it.popupListener = popupListener }
                     R.layout.item_body_recipe -> ItemBodyRecipeBinding.inflate(layoutInflater, parent, false).apply { rv.adapter = RecipeImagesAdapter() }
                     R.layout.item_body_hero_spells -> ItemBodyHeroSpellsBinding.inflate(layoutInflater, parent, false).apply { rv.adapter = SpellsListAdapter(descriptionsListener) }
+                    R.layout.item_body_with_image -> ItemBodyWithImageBinding.inflate(layoutInflater, parent, false).also { it.popupListener = popupListener }
                     else -> DataBindingUtil.inflate(layoutInflater, viewType, parent, false)
                 }
-                return ViewHolder(binding, popupListener, audioExoPlayer)
+                return ViewHolder(binding, popupListener)
             }
         }
     }

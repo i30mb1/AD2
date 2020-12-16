@@ -9,7 +9,7 @@
             type="n7.ad2.ui.heroInfo.domain.vo.VOTitle" />
 
         <variable
-            name="listener"
+            name="popupListener"
             type="n7.ad2.base.VOPopUpListener" />
 
         <variable
