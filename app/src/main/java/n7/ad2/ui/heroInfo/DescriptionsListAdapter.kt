@@ -43,13 +43,9 @@ class DescriptionsListAdapter(
     private val infoPopupWindow: InfoPopupWindow,
 ) : ListAdapter<VODescription, DescriptionsListAdapter.ViewHolder>(DiffCallback()), StickyHeaderDecorator.StickyHeaderInterface {
 
-    private var listener: VOPopUpListener<String> = object : VOPopUpListener<String> {
-
-        override fun onClickListener(view: View, text: String) {
-            infoPopupWindow.show(view, text)
-        }
+    private val popupListener: VOPopUpListener<String> = object : VOPopUpListener<String> {
+        override fun onClickListener(view: View, text: String) = infoPopupWindow.show(view, text)
     }
-
 
     override fun getHeaderLayout(): Int = R.layout.item_title
 
@@ -67,13 +63,13 @@ class DescriptionsListAdapter(
         }
     }
 
-    override fun onCreateViewHolder(parent: ViewGroup, viewType: Int) = ViewHolder.from(parent, viewType, listener, audioExoPlayer)
+    override fun onCreateViewHolder(parent: ViewGroup, viewType: Int) = ViewHolder.from(parent, viewType, popupListener, audioExoPlayer)
 
     override fun onBindViewHolder(holder: ViewHolder, position: Int) = holder.bind(getItem(position))
 
     class ViewHolder private constructor(
         private val binding: ViewDataBinding,
-        private val listener: VOPopUpListener<String>,
+        private val popupListener: VOPopUpListener<String>,
         private val audioExoPlayer: AudioExoPlayer,
     ) : RecyclerView.ViewHolder(binding.root) {
 
@@ -91,11 +87,11 @@ class DescriptionsListAdapter(
                 is ItemBodyWithSeparatorBinding -> setBoundToImageSpan(binding.tvBody, binding.item!!.body)
                 is ItemBodyWithImageBinding -> {
                     setBoundToImageSpan(binding.tvBody, binding.item!!.body)
-                    binding.listener = listener
+                    binding.popupListener = popupListener
                 }
                 is ItemTitleBinding -> {
                     binding.audioExoPlayer = audioExoPlayer
-                    binding.listener = listener
+                    binding.listener = popupListener
                 }
                 is ItemBodyHeroSpellsBinding -> {
 
@@ -112,7 +108,7 @@ class DescriptionsListAdapter(
                 it.drawable.setBounds(0, 0, lineHeight, lineHeight)
             }
             spannableString.getSpans<MyClickableSpan>().forEach {
-                it.listener = listener
+                it.listener = popupListener
             }
         }
 
@@ -120,7 +116,7 @@ class DescriptionsListAdapter(
             fun from(
                 parent: ViewGroup,
                 viewType: Int,
-                listener: VOPopUpListener<String>,
+                popupListener: VOPopUpListener<String>,
                 audioExoPlayer: AudioExoPlayer,
             ): ViewHolder {
                 val layoutInflater = LayoutInflater.from(parent.context)
@@ -129,7 +125,7 @@ class DescriptionsListAdapter(
                     R.layout.item_body_hero_spells -> ItemBodyHeroSpellsBinding.inflate(layoutInflater, parent, false).apply { rv.adapter = SpellsListAdapter() }
                     else -> DataBindingUtil.inflate(layoutInflater, viewType, parent, false)
                 }
-                return ViewHolder(binding, listener, audioExoPlayer)
+                return ViewHolder(binding, popupListener, audioExoPlayer)
             }
         }
     }
