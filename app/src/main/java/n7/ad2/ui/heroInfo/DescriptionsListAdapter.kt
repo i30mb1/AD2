@@ -106,7 +106,7 @@ class DescriptionsListAdapter(
         ) {
             if (lineHeight == 0) lineHeight = tv.lineHeight - 2.toPx
             spannableString.getSpans<ImageSpan>().forEach { it.drawable.setBounds(0, 0, lineHeight, lineHeight) }
-            spannableString.getSpans<MyClickableSpan>().forEach { it.listener = popupListener }
+            spannableString.getSpans<PopUpClickableSpan>().forEach { it.popUpListener = popupListener }
         }
 
         companion object {
