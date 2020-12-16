@@ -5,12 +5,11 @@ import android.view.View
 import androidx.core.os.bundleOf
 import androidx.fragment.app.Fragment
 import androidx.recyclerview.widget.LinearLayoutManager
-import androidx.recyclerview.widget.LinearSnapHelper
 import n7.ad2.R
 import n7.ad2.databinding.FragmentHeroInfoBinding
 import n7.ad2.di.injector
-import n7.ad2.ui.heroInfo.domain.vo.VODescription
 import n7.ad2.ui.heroPage.HeroPageActivity
+import n7.ad2.utils.StickyHeaderDecorator
 import n7.ad2.utils.viewModelWithSavedStateHandle
 
 class HeroInfoFragment : Fragment(R.layout.fragment_hero_info) {
@@ -47,6 +46,7 @@ class HeroInfoFragment : Fragment(R.layout.fragment_hero_info) {
         binding.rv.apply {
             adapter = descriptionsListAdapter
             layoutManager = linearLayoutManager
+            addItemDecoration(StickyHeaderDecorator(descriptionsListAdapter, this))
         }
     }
 
