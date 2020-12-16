@@ -313,7 +313,7 @@ class ParseHeroes private constructor(
         }
         val abilityTalent = JSONObject().apply {
             put("spellName", "Talent")
-            put("notes", notes)
+            if(notes.size > 0) put("notes", notes)
             put("talents", talents)
         }
         abilities.add(0, abilityTalent)
