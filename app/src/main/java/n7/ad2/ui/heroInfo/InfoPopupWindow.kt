@@ -25,6 +25,7 @@ class InfoPopupWindow(
     private val popup: PopupWindow
 
     init {
+        lifecycle.addObserver(this)
         popup = PopupWindow(binding.root, LinearLayout.LayoutParams.MATCH_PARENT, LinearLayout.LayoutParams.WRAP_CONTENT).apply {
             isOutsideTouchable = true
         }

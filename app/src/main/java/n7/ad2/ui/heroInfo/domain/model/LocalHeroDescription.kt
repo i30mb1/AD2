@@ -13,10 +13,6 @@ data class LocalHeroDescription(
     val history: String = "",
     @Json(name = "mainAttributes")
     val mainAttributes: MainAttribute = MainAttribute(),
-    @Json(name = "talentTips")
-    val talentTips: List<String> = listOf(),
-    @Json(name = "talents")
-    val talents: List<String> = listOf(),
     @Json(name = "trivia")
     val trivia: List<String> = listOf(),
 )
@@ -26,7 +22,7 @@ data class Ability(
     @Json(name = "cooldown")
     val cooldown: String? = null,
     @Json(name = "description")
-    val description: String = "",
+    val description: String? = null,
     @Json(name = "effects")
     val effects: List<String> = listOf(),
     @Json(name = "hotKey")
@@ -47,6 +43,8 @@ data class Ability(
     val spellName: String = "",
     @Json(name = "story")
     val story: String? = null,
+    @Json(name = "talents")
+    val talents: List<Talent>? = null
 )
 
 @JsonClass(generateAdapter = true)
@@ -63,4 +61,14 @@ data class MainAttribute(
     val attrStrength: Double = 0.0,
     @Json(name = "attrStrengthInc")
     val attrStrengthInc: Double = 0.0,
+)
+
+@JsonClass(generateAdapter = true)
+data class Talent(
+    @Json(name = "talentLeft")
+    val talentLeft: String = "",
+    @Json(name = "talentLvl")
+    val talentLvl: String = "",
+    @Json(name = "talentRight")
+    val talentRight: String = ""
 )

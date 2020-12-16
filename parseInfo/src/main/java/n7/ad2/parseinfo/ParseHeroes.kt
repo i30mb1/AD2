@@ -288,22 +288,36 @@ class ParseHeroes private constructor(
     private fun JSONObject.loadTalents(root: Document) {
         val talentBlock = root.getElementsByAttributeValue("style", "display:flex; flex-wrap:wrap; align-items:flex-start;")[0]
         val talentLines = talentBlock.getElementsByTag("tr")
-        JSONArray().apply {
+        val abilities: JSONArray = get("abilities") as JSONArray
+        val talents = JSONArray().apply {
+            var talentLvl = 10
             for (talentLine in talentLines) {
                 if (talentLine.children().size == 1) continue
-                add("${talentLine.child(0).text()}^${talentLine.child(2).text()}")
+                JSONObject().apply {
+                    put("talentLeft", talentLine.child(0).text())
+                    put("talentLvl", talentLvl.toString())
+                    put("talentRight", talentLine.child(2).text())
+                    add(this)
+                }
+                talentLvl += 5
             }
 
             put("talents", this)
         }
-        val talentTips = talentBlock.getElementsByTag("li")
-        JSONArray().apply {
+
+       val notes = JSONArray().apply {
+            val talentTips = talentBlock.getElementsByTag("li")
             for (talentTip in talentTips) {
                 add(talentTip.text())
             }
-
-            put("talentTips", this)
         }
+        val abilityTalent = JSONObject().apply {
+            put("spellName", "Talent")
+            put("notes", notes)
+            put("talents", talents)
+        }
+        abilities.add(0, abilityTalent)
+        put("abilities", abilities)
     }
 
     private fun JSONObject.loadTrivia(root: Document) {

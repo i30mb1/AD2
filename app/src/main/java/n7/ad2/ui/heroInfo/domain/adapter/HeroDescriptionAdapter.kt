@@ -1,6 +1,5 @@
 package n7.ad2.ui.heroInfo.domain.adapter
 
-import android.annotation.SuppressLint
 import android.app.Application
 import android.text.SpannableString
 import n7.ad2.CustomHeroAttrs
@@ -10,6 +9,7 @@ import n7.ad2.ui.heroInfo.domain.model.Ability
 import n7.ad2.ui.heroInfo.domain.model.MainAttribute
 import n7.ad2.ui.heroInfo.domain.vo.VOBodyLine
 import n7.ad2.ui.heroInfo.domain.vo.VOBodySimple
+import n7.ad2.ui.heroInfo.domain.vo.VOBodyTalent
 import n7.ad2.ui.heroInfo.domain.vo.VOBodyWithImage
 import n7.ad2.ui.heroInfo.domain.vo.VOBodyWithSeparator
 import n7.ad2.ui.heroInfo.domain.vo.VOHeroAttrs
@@ -30,7 +30,8 @@ fun Ability.toVOSpell(application: Application) = VOSpell(
     buildList {
         add(VOTitle(spellName, hotKey, legacyKey, audioUrl))
         effects.forEach { title -> add(VOBodyLine(title)) }
-        add(VOBodySimple(description))
+        talents?.forEach { talent -> add(VOBodyTalent(talent.talentLeft, talent.talentLvl, talent.talentRight)) }
+        description?.let { description -> add(VOBodySimple(description)) }
         cooldown?.let { cooldown -> add(VOBodyWithImage(cooldown.spanWithDotaImages(application), R.drawable.cooldown)) }
         mana?.let { mana -> add(VOBodyWithImage(mana.spanWithDotaImages(application), R.drawable.mana)) }
         params?.let { params ->

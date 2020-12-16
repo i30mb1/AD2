@@ -34,27 +34,8 @@ class GetVOHeroDescriptionUseCase @Inject constructor(
             val voHeroAttrs = localHeroDescription.mainAttributes.toVOHeroAttrs(localHero.name)
             add(voHeroAttrs)
 
-            val spells: List<VOSpell> = buildList {
-//                add(VOSpell(
-//                    application.getString(R.string.item_hero_personal_description_talents),
-//                    Uri.parse("android.resource://" + BuildConfig.APPLICATION_ID + "/" + R.drawable.talent).toString(),
-//                    buildList {
-//                        add(VOTitle(application.getString(R.string.item_hero_personal_description_talents)))
-//                        var talentLVL = 5
-//                        localHeroDescription.talents.forEach {
-//                            val parts = it.split(SEPARATOR_TALENT)
-//                            add(VOBodyTalent(parts[0], talentLVL, parts[1]))
-//                            talentLVL += 5
-//                        }
-//
-//                        add(VOTitle(application.getString(R.string.tips)))
-//                        add(VOBodyWithSeparator(SpannableString(localHeroDescription.talentTips.toStringListWithDash())))
-//                    }
-//                ))
-                addAll(localHeroDescription.abilities.map { it.toVOSpell(application) })
-            }
+            val spells: List<VOSpell> = localHeroDescription.abilities.map { it.toVOSpell(application) }
             add(VOHeroSpells(spells))
-
         }
 //
 //        val heroBio = mutableListOf<VODescription>().apply {
