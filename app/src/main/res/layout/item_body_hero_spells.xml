@@ -10,15 +10,24 @@
             type="n7.ad2.ui.heroInfo.domain.vo.VOHeroSpells" />
     </data>
 
-    <androidx.recyclerview.widget.RecyclerView
-        android:id="@+id/rv"
-        data="@{item.spells}"
+    <FrameLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:background="@drawable/transparent_30"
-        android:orientation="horizontal"
-        android:paddingBottom="4dp"
-        app:layoutManager="LinearLayoutManager"
-        tools:itemCount="4"
-        tools:listitem="@layout/item_spell" />
+        android:background="@drawable/transparent_30">
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/rv"
+            data="@{item.spells}"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:orientation="horizontal"
+            android:paddingBottom="4dp"
+            app:layoutManager="LinearLayoutManager"
+            tools:itemCount="4"
+            tools:listitem="@layout/item_spell" />
+
+    </FrameLayout>
+
+
 </layout>
