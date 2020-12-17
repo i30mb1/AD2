@@ -25,6 +25,7 @@ class GetVOHeroDescriptionUseCase @Inject constructor(
 
             val spells: List<VOSpell> = localHeroDescription.abilities.map { it.toVOSpell(application) }
             add(VOHeroSpells(spells))
+            addAll(voHeroAttrs.voDescriptionList)
         }
     }
 }
