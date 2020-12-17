@@ -290,7 +290,7 @@ class ParseHeroes private constructor(
         val talentLines = talentBlock.getElementsByTag("tr")
         val abilities: JSONArray = get("abilities") as JSONArray
         val talents = JSONArray().apply {
-            var talentLvl = 10
+            var talentLvl = 25
             for (talentLine in talentLines) {
                 if (talentLine.children().size == 1) continue
                 JSONObject().apply {
@@ -299,7 +299,7 @@ class ParseHeroes private constructor(
                     put("talentRight", talentLine.child(2).text())
                     add(this)
                 }
-                talentLvl += 5
+                talentLvl -= 5
             }
 
             put("talents", this)
