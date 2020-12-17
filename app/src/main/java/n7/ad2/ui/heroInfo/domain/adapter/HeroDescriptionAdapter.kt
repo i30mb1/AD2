@@ -13,6 +13,7 @@ import n7.ad2.ui.heroInfo.domain.vo.VOBodyTalent
 import n7.ad2.ui.heroInfo.domain.vo.VOBodyWithImage
 import n7.ad2.ui.heroInfo.domain.vo.VOBodyWithSeparator
 import n7.ad2.ui.heroInfo.domain.vo.VOHeroAttrs
+import n7.ad2.ui.heroInfo.domain.vo.VOHeroSpells
 import n7.ad2.ui.heroInfo.domain.vo.VOSpell
 import n7.ad2.ui.heroInfo.domain.vo.VOTitle
 import n7.ad2.utils.extension.spanWithDotaImages
@@ -33,6 +34,9 @@ fun LocalHeroDescription.toVOHeroAttrs(application: Application, heroName: Strin
         }
     }
 )
+
+@ExperimentalStdlibApi
+fun LocalHeroDescription.toVOHeroSpells(application: Application) = VOHeroSpells(abilities.map { it.toVOSpell(application) })
 
 @ExperimentalStdlibApi
 fun Ability.toVOSpell(application: Application) = VOSpell(

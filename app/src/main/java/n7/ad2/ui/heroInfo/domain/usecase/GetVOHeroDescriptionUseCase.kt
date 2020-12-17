@@ -5,11 +5,9 @@ import kotlinx.coroutines.CoroutineDispatcher
 import kotlinx.coroutines.withContext
 import n7.ad2.data.source.local.model.LocalHero
 import n7.ad2.ui.heroInfo.domain.adapter.toVOHeroAttrs
-import n7.ad2.ui.heroInfo.domain.adapter.toVOSpell
+import n7.ad2.ui.heroInfo.domain.adapter.toVOHeroSpells
 import n7.ad2.ui.heroInfo.domain.model.LocalHeroDescription
 import n7.ad2.ui.heroInfo.domain.vo.VODescription
-import n7.ad2.ui.heroInfo.domain.vo.VOHeroSpells
-import n7.ad2.ui.heroInfo.domain.vo.VOSpell
 import javax.inject.Inject
 
 class GetVOHeroDescriptionUseCase @Inject constructor(
@@ -23,8 +21,8 @@ class GetVOHeroDescriptionUseCase @Inject constructor(
             val voHeroAttrs = localHeroDescription.toVOHeroAttrs(application, localHero.name)
             add(voHeroAttrs)
 
-            val spells: List<VOSpell> = localHeroDescription.abilities.map { it.toVOSpell(application) }
-            add(VOHeroSpells(spells))
+            val voHeroSpells = localHeroDescription.toVOHeroSpells(application)
+            add(voHeroSpells)
             addAll(voHeroAttrs.voDescriptionList)
         }
     }
