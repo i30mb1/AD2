@@ -40,6 +40,13 @@
         <item name="android:textColor">@android:color/white</item>
     </style>
 
-    <style name="TextAppearance.Button" parent="TextAppearance.MaterialComponents.Button"></style>
+    <style name="TextAppearance.Button" parent="TextAppearance.MaterialComponents.Button">
+
+    </style>
+
+    <style name="TextAppearance.Talent" parent="">
+        <item name="android:textColor">?myTextColorPrimary</item>
+        <item name="android:textSize">10sp</item>
+    </style>
 
 </resources>

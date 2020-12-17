@@ -5,4 +5,5 @@
     <attr name="myTextColorPrimary" format="reference"/>
     <attr name="myTextColorSecondary" format="reference"/>
 
+    <attr name="textAppearanceTalent" format="reference" />
 </resources>
