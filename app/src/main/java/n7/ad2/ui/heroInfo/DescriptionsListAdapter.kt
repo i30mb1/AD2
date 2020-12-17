@@ -64,13 +64,10 @@ class DescriptionsListAdapter(
     override fun onBindViewHolder(holder: ViewHolder, position: Int) = holder.bind(getItem(position))
 
     @OptIn(ExperimentalStdlibApi::class)
-    private fun setDescriptions(voDescriptions: List<VODescription>) {
-        val newList = buildList {
+    private fun setDescriptions(voDescriptions: List<VODescription>) = submitList(buildList {
             addAll(currentList.takeWhile { it !is VOTitle })
             addAll(voDescriptions)
-        }
-        submitList(newList)
-    }
+        })
 
     class ViewHolder private constructor(
         private val binding: ViewDataBinding,
