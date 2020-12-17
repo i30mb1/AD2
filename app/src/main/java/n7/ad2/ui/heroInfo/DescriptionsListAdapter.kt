@@ -65,9 +65,9 @@ class DescriptionsListAdapter(
 
     @OptIn(ExperimentalStdlibApi::class)
     private fun setDescriptions(voDescriptions: List<VODescription>) = submitList(buildList {
-            addAll(currentList.takeWhile { it !is VOTitle })
-            addAll(voDescriptions)
-        })
+        addAll(currentList.takeWhile { it !is VOTitle })
+        addAll(voDescriptions)
+    })
 
     class ViewHolder private constructor(
         private val binding: ViewDataBinding,
@@ -122,24 +122,7 @@ class DescriptionsListAdapter(
     }
 
     private class DiffCallback : DiffUtil.ItemCallback<VODescription>() {
-
-        override fun areItemsTheSame(oldItem: VODescription, newItem: VODescription): Boolean {
-            return when (oldItem) {
-                is VOTitle -> newItem is VOTitle
-                is VOBodySimple -> newItem is VOBodySimple
-                is VOBodyWithSeparator -> newItem is VOBodyWithSeparator
-                is VOBodyWithImage -> newItem is VOBodyWithImage
-                is VOBodyLine -> newItem is VOBodyLine
-                is VOBodyTalent -> newItem is VOBodyTalent
-                is VOBodyRecipe -> newItem is VOBodyRecipe
-                is VOHeroAttrs -> newItem is VOHeroAttrs
-                is VOHeroSpells -> newItem is VOHeroSpells
-            }
-        }
-
+        override fun areItemsTheSame(oldItem: VODescription, newItem: VODescription): Boolean = oldItem::class == newItem::class
         override fun areContentsTheSame(oldItem: VODescription, newItem: VODescription): Boolean = oldItem == newItem
     }
-
 }
-
-
