@@ -10,7 +10,7 @@
 
         <variable
             name="popupListener"
-            type="n7.ad2.base.VOPopUpListener" />
+            type="kotlin.jvm.functions.Function2" />
 
         <variable
             name="audioExoPlayer"
@@ -52,7 +52,7 @@
             android:background="@drawable/transparent_30"
             android:gravity="center"
             android:maxEms="1"
-            android:onClick="@{(view)-> popupListener.onClickListener(view, @string/hotkey)}"
+            android:onClick="@{(view)->popupListener.invoke(view, @string/hotkey)}"
             android:text="@{item.hotkey}"
             android:textAppearance="?textAppearanceSubtitle1"
             tools:text="T" />
@@ -65,7 +65,7 @@
             android:background="@drawable/transparent_30"
             android:gravity="center"
             android:maxEms="1"
-            android:onClick="@{(view)-> popupListener.onClickListener(view, @string/legacykey)}"
+            android:onClick="@{(view)->popupListener.invoke(view, @string/legacykey)}"
             android:text="@{item.legacyKey}"
             android:textAppearance="?textAppearanceSubtitle1"
             tools:text="T" />

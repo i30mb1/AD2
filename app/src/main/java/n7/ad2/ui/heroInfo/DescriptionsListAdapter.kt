@@ -15,8 +15,6 @@ import androidx.recyclerview.widget.ListAdapter
 import androidx.recyclerview.widget.RecyclerView
 import n7.ad2.BR
 import n7.ad2.R
-import n7.ad2.base.VOObjectListener
-import n7.ad2.base.VOPopUpListener
 import n7.ad2.databinding.ItemBodyHeroAttrsBinding
 import n7.ad2.databinding.ItemBodyHeroSpellsBinding
 import n7.ad2.databinding.ItemBodyRecipeBinding
@@ -44,38 +42,24 @@ class DescriptionsListAdapter(
     private val infoPopupWindow: InfoPopupWindow,
 ) : ListAdapter<VODescription, DescriptionsListAdapter.ViewHolder>(DiffCallback()), StickyHeaderDecorator.StickyHeaderInterface {
 
-    private val popupListener = object : VOPopUpListener<String> {
-        override fun onClickListener(view: View, text: String) = infoPopupWindow.show(view, text)
-    }
-
-    private val heroAttrsListener = object : VOObjectListener<VOHeroAttrs> {
-        override fun onClickListener(any: VOHeroAttrs) {
-            setDescriptions(any.voDescriptionList)
-        }
-    }
-
-    @Suppress("PARAMETER_NAME_CHANGED_ON_OVERRIDE")
-    private val descriptionsListener = object : VOObjectListener<List<VODescription>> {
-        override fun onClickListener(voDescriptions: List<VODescription>) {
-            setDescriptions(voDescriptions)
-        }
-    }
+    private val popupListener = { view: View, text: String -> infoPopupWindow.show(view, text) }
+    private val descriptionsListener = { voDescriptions: List<VODescription> -> setDescriptions(voDescriptions) }
 
     override fun getHeaderLayout(): Int = R.layout.item_title
 
     override fun getItemViewType(position: Int): Int = when (getItem(position)) {
-            is VOTitle -> R.layout.item_title
-            is VOBodyLine -> R.layout.item_body_line
-            is VOBodySimple -> R.layout.item_body_simple
-            is VOBodyWithSeparator -> R.layout.item_body_with_separator
-            is VOBodyWithImage -> R.layout.item_body_with_image
-            is VOBodyTalent -> R.layout.item_body_talent
-            is VOBodyRecipe -> R.layout.item_body_recipe
-            is VOHeroAttrs -> R.layout.item_body_hero_attrs
-            is VOHeroSpells -> R.layout.item_body_hero_spells
-        }
+        is VOTitle -> R.layout.item_title
+        is VOBodyLine -> R.layout.item_body_line
+        is VOBodySimple -> R.layout.item_body_simple
+        is VOBodyWithSeparator -> R.layout.item_body_with_separator
+        is VOBodyWithImage -> R.layout.item_body_with_image
+        is VOBodyTalent -> R.layout.item_body_talent
+        is VOBodyRecipe -> R.layout.item_body_recipe
+        is VOHeroAttrs -> R.layout.item_body_hero_attrs
+        is VOHeroSpells -> R.layout.item_body_hero_spells
+    }
 
-    override fun onCreateViewHolder(parent: ViewGroup, viewType: Int) = ViewHolder.from(parent, viewType, popupListener, audioExoPlayer, descriptionsListener, heroAttrsListener)
+    override fun onCreateViewHolder(parent: ViewGroup, viewType: Int) = ViewHolder.from(parent, viewType, audioExoPlayer, popupListener, descriptionsListener)
 
     override fun onBindViewHolder(holder: ViewHolder, position: Int) = holder.bind(getItem(position))
 
@@ -90,7 +74,7 @@ class DescriptionsListAdapter(
 
     class ViewHolder private constructor(
         private val binding: ViewDataBinding,
-        private val popupListener: VOPopUpListener<String>,
+        private val popupListener: (View, String) -> Unit,
     ) : RecyclerView.ViewHolder(binding.root) {
 
         private var lineHeight = 0
@@ -122,10 +106,9 @@ class DescriptionsListAdapter(
             fun from(
                 parent: ViewGroup,
                 viewType: Int,
-                popupListener: VOPopUpListener<String>,
                 audioExoPlayer: AudioExoPlayer,
-                descriptionsListener: VOObjectListener<List<VODescription>>,
-                heroAttrsListener: VOObjectListener<VOHeroAttrs>,
+                popupListener: (View, String) -> Unit,
+                descriptionsListener: (List<VODescription>) -> Unit,
             ): ViewHolder {
                 val layoutInflater = LayoutInflater.from(parent.context)
                 val binding: ViewDataBinding = when (viewType) {
@@ -133,7 +116,7 @@ class DescriptionsListAdapter(
                     R.layout.item_body_recipe -> ItemBodyRecipeBinding.inflate(layoutInflater, parent, false).apply { rv.adapter = RecipeImagesAdapter() }
                     R.layout.item_body_hero_spells -> ItemBodyHeroSpellsBinding.inflate(layoutInflater, parent, false).apply { rv.adapter = SpellsListAdapter(descriptionsListener) }
                     R.layout.item_body_with_image -> ItemBodyWithImageBinding.inflate(layoutInflater, parent, false).also { it.popupListener = popupListener }
-                    R.layout.item_body_hero_attrs -> ItemBodyHeroAttrsBinding.inflate(layoutInflater, parent, false).also { it.descriptionListener = heroAttrsListener }
+                    R.layout.item_body_hero_attrs -> ItemBodyHeroAttrsBinding.inflate(layoutInflater, parent, false).also { it.descriptionListener = descriptionsListener }
                     else -> DataBindingUtil.inflate(layoutInflater, viewType, parent, false)
                 }
                 return ViewHolder(binding, popupListener)
