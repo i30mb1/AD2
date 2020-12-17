@@ -12,7 +12,7 @@ import n7.ad2.ui.heroInfo.domain.vo.VODescription
 import n7.ad2.ui.heroInfo.domain.vo.VOSpell
 
 class SpellsListAdapter(
-    descriptionsListener: VOObjectListener<List<VODescription>>
+    descriptionsListener: VOObjectListener<List<VODescription>>,
 ) : ListAdapter<VOSpell, SpellsListAdapter.ViewHolder>(DiffCallback()) {
 
     private val listener = object : VOModelListener<VOSpell> {
@@ -23,17 +23,15 @@ class SpellsListAdapter(
         }
     }
 
-    fun deselectAll() {
-        currentList.forEach { item -> item.selected = false }
-    }
+    fun deselectAll() = currentList.forEach { item -> item.selected = false }
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): ViewHolder = ViewHolder.from(parent, listener)
 
     override fun onBindViewHolder(holder: ViewHolder, position: Int) = holder.bind(getItem(position))
 
     class ViewHolder private constructor(
-            private val binding: ItemSpellBinding,
-            private val listener: VOModelListener<VOSpell>
+        private val binding: ItemSpellBinding,
+        private val listener: VOModelListener<VOSpell>,
     ) : RecyclerView.ViewHolder(binding.root) {
 
         fun bind(model: VOSpell) = binding.let {
@@ -44,8 +42,8 @@ class SpellsListAdapter(
 
         companion object {
             fun from(
-                    parent: ViewGroup,
-                    listener: VOModelListener<VOSpell>
+                parent: ViewGroup,
+                listener: VOModelListener<VOSpell>,
             ): ViewHolder {
                 val layoutInflater = LayoutInflater.from(parent.context)
                 val binding = ItemSpellBinding.inflate(layoutInflater, parent, false)
@@ -55,10 +53,8 @@ class SpellsListAdapter(
     }
 
     class DiffCallback : DiffUtil.ItemCallback<VOSpell>() {
-
         override fun areItemsTheSame(oldItem: VOSpell, newItem: VOSpell): Boolean = oldItem.name == newItem.name
-
-        override fun areContentsTheSame(oldItem: VOSpell, newItem: VOSpell): Boolean = true
+        override fun areContentsTheSame(oldItem: VOSpell, newItem: VOSpell): Boolean = oldItem == newItem
     }
 }
 

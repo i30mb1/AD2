@@ -4,7 +4,7 @@ import androidx.databinding.BaseObservable
 import androidx.databinding.Bindable
 import n7.ad2.BR
 
-class VOSpell(
+data class VOSpell(
     val name: String,
     val urlSpellImage: String,
     val voDescriptionList: List<VODescription>,

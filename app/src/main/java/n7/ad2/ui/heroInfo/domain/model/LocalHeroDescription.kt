@@ -14,7 +14,7 @@ data class LocalHeroDescription(
     @Json(name = "mainAttributes")
     val mainAttributes: MainAttribute = MainAttribute(),
     @Json(name = "trivia")
-    val trivia: List<String> = listOf(),
+    val trivia: List<String>? = null,
 )
 
 @JsonClass(generateAdapter = true)

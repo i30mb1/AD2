@@ -6,7 +6,7 @@ import n7.ad2.CustomHeroAttrs
 import n7.ad2.R
 import n7.ad2.data.source.local.Repository
 import n7.ad2.ui.heroInfo.domain.model.Ability
-import n7.ad2.ui.heroInfo.domain.model.MainAttribute
+import n7.ad2.ui.heroInfo.domain.model.LocalHeroDescription
 import n7.ad2.ui.heroInfo.domain.vo.VOBodyLine
 import n7.ad2.ui.heroInfo.domain.vo.VOBodySimple
 import n7.ad2.ui.heroInfo.domain.vo.VOBodyTalent
@@ -18,9 +18,20 @@ import n7.ad2.ui.heroInfo.domain.vo.VOTitle
 import n7.ad2.utils.extension.spanWithDotaImages
 import n7.ad2.utils.extension.toStringListWithDash
 
-fun MainAttribute.toVOHeroAttrs(heroName: String): VOHeroAttrs = VOHeroAttrs(
+@ExperimentalStdlibApi
+fun LocalHeroDescription.toVOHeroAttrs(application: Application, heroName: String): VOHeroAttrs = VOHeroAttrs(
     Repository.getFullUrlHeroImage(heroName),
-    CustomHeroAttrs.Companion.HeroAttrs(this.attrStrength, this.attrAgility, this.attrIntelligence)
+    CustomHeroAttrs.Companion.HeroAttrs(mainAttributes.attrStrength, mainAttributes.attrAgility, mainAttributes.attrIntelligence),
+    buildList {
+        add(VOTitle(application.getString(R.string.hero_fragment_description)))
+        add(VOBodyWithSeparator(SpannableString(description)))
+        add(VOTitle(application.getString(R.string.hero_fragment_bio)))
+        add(VOBodyWithSeparator(SpannableString(history)))
+        trivia?.let { trivia ->
+            add(VOTitle(application.getString(R.string.hero_fragment_trivia)))
+            add(VOBodyWithSeparator(SpannableString(trivia.toStringListWithDash())))
+        }
+    }
 )
 
 @ExperimentalStdlibApi

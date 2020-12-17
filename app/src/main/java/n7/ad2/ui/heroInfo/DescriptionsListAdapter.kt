@@ -17,6 +17,7 @@ import n7.ad2.BR
 import n7.ad2.R
 import n7.ad2.base.VOObjectListener
 import n7.ad2.base.VOPopUpListener
+import n7.ad2.databinding.ItemBodyHeroAttrsBinding
 import n7.ad2.databinding.ItemBodyHeroSpellsBinding
 import n7.ad2.databinding.ItemBodyRecipeBinding
 import n7.ad2.databinding.ItemBodyWithImageBinding
@@ -43,26 +44,26 @@ class DescriptionsListAdapter(
     private val infoPopupWindow: InfoPopupWindow,
 ) : ListAdapter<VODescription, DescriptionsListAdapter.ViewHolder>(DiffCallback()), StickyHeaderDecorator.StickyHeaderInterface {
 
-    private val popupListener: VOPopUpListener<String> = object : VOPopUpListener<String> {
+    private val popupListener = object : VOPopUpListener<String> {
         override fun onClickListener(view: View, text: String) = infoPopupWindow.show(view, text)
     }
 
-    @OptIn(ExperimentalStdlibApi::class)
+    private val heroAttrsListener = object : VOObjectListener<VOHeroAttrs> {
+        override fun onClickListener(any: VOHeroAttrs) {
+            setDescriptions(any.voDescriptionList)
+        }
+    }
+
     @Suppress("PARAMETER_NAME_CHANGED_ON_OVERRIDE")
-    private val descriptionsListener: VOObjectListener<List<VODescription>> = object : VOObjectListener<List<VODescription>> {
+    private val descriptionsListener = object : VOObjectListener<List<VODescription>> {
         override fun onClickListener(voDescriptions: List<VODescription>) {
-            val newList = buildList {
-                addAll(currentList.takeWhile { it !is VOTitle })
-                addAll(voDescriptions)
-            }
-            submitList(newList)
+            setDescriptions(voDescriptions)
         }
     }
 
     override fun getHeaderLayout(): Int = R.layout.item_title
 
-    override fun getItemViewType(position: Int): Int {
-        return when (getItem(position)) {
+    override fun getItemViewType(position: Int): Int = when (getItem(position)) {
             is VOTitle -> R.layout.item_title
             is VOBodyLine -> R.layout.item_body_line
             is VOBodySimple -> R.layout.item_body_simple
@@ -73,11 +74,19 @@ class DescriptionsListAdapter(
             is VOHeroAttrs -> R.layout.item_body_hero_attrs
             is VOHeroSpells -> R.layout.item_body_hero_spells
         }
-    }
 
-    override fun onCreateViewHolder(parent: ViewGroup, viewType: Int) = ViewHolder.from(parent, viewType, popupListener, audioExoPlayer, descriptionsListener)
+    override fun onCreateViewHolder(parent: ViewGroup, viewType: Int) = ViewHolder.from(parent, viewType, popupListener, audioExoPlayer, descriptionsListener, heroAttrsListener)
 
     override fun onBindViewHolder(holder: ViewHolder, position: Int) = holder.bind(getItem(position))
+
+    @OptIn(ExperimentalStdlibApi::class)
+    private fun setDescriptions(voDescriptions: List<VODescription>) {
+        val newList = buildList {
+            addAll(currentList.takeWhile { it !is VOTitle })
+            addAll(voDescriptions)
+        }
+        submitList(newList)
+    }
 
     class ViewHolder private constructor(
         private val binding: ViewDataBinding,
@@ -116,6 +125,7 @@ class DescriptionsListAdapter(
                 popupListener: VOPopUpListener<String>,
                 audioExoPlayer: AudioExoPlayer,
                 descriptionsListener: VOObjectListener<List<VODescription>>,
+                heroAttrsListener: VOObjectListener<VOHeroAttrs>,
             ): ViewHolder {
                 val layoutInflater = LayoutInflater.from(parent.context)
                 val binding: ViewDataBinding = when (viewType) {
@@ -123,6 +133,7 @@ class DescriptionsListAdapter(
                     R.layout.item_body_recipe -> ItemBodyRecipeBinding.inflate(layoutInflater, parent, false).apply { rv.adapter = RecipeImagesAdapter() }
                     R.layout.item_body_hero_spells -> ItemBodyHeroSpellsBinding.inflate(layoutInflater, parent, false).apply { rv.adapter = SpellsListAdapter(descriptionsListener) }
                     R.layout.item_body_with_image -> ItemBodyWithImageBinding.inflate(layoutInflater, parent, false).also { it.popupListener = popupListener }
+                    R.layout.item_body_hero_attrs -> ItemBodyHeroAttrsBinding.inflate(layoutInflater, parent, false).also { it.descriptionListener = heroAttrsListener }
                     else -> DataBindingUtil.inflate(layoutInflater, viewType, parent, false)
                 }
                 return ViewHolder(binding, popupListener)

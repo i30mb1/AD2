@@ -11,7 +11,7 @@ sealed class VODescription
 data class VOTitle(val title: String, val hotkey: String? = null, val legacyKey: String? = null, override val audioUrl: String? = null) : VODescription(), Playable { override val isPlaying: ObservableBoolean = ObservableBoolean(false) }
 data class VOBodyRecipe(val urlImage: String, val recipes: List<VORecipe>) : VODescription()
 data class VOHeroSpells(val spells: List<VOSpell>) : VODescription()
-data class VOHeroAttrs(val urlHeroImage: String, val heroAttrs: CustomHeroAttrs.Companion.HeroAttrs): VODescription()
+data class VOHeroAttrs(val urlHeroImage: String, val heroAttrs: CustomHeroAttrs.Companion.HeroAttrs, val voDescriptionList: List<VODescription>) : VODescription()
 data class VOBodyTalent(val talentLeft: String, val talentLvl: String, val talentRight: String) : VODescription()
 data class VOBodySimple(val body: String) : VODescription()
 data class VOBodyWithSeparator(val body: SpannableString) : VODescription()
