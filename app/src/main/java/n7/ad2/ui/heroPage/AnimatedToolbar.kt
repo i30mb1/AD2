@@ -49,7 +49,7 @@ class AnimatedToolbar(context: Context, attr: AttributeSet) : Toolbar(context, a
     }
     private val listener = object : OrientationEventListener(context) {
         override fun onOrientationChanged(orientation: Int) {
-            ivHero.rotation = orientation.toFloat()
+            ivHero.rotation = 360 - orientation.toFloat()
         }
     }
 
