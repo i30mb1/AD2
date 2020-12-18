@@ -78,11 +78,11 @@ class DescriptionsListAdapter(
 
         fun bind(item: VODescription) {
             binding.setVariable(BR.item, item)
-            bindSpecificVO(binding)
+            bindSetting(binding)
             binding.executePendingBindings()
         }
 
-        private fun bindSpecificVO(binding: ViewDataBinding) {
+        private fun bindSetting(binding: ViewDataBinding) {
             when (binding) {
                 is ItemBodyRecipeBinding -> (binding.rv.layoutManager as GridLayoutManager).spanCount = max(1, binding.item!!.recipes.size)
                 is ItemBodyWithSeparatorBinding -> setBoundToImageSpan(binding.tvBody, binding.item!!.body)
