@@ -16,16 +16,15 @@ import javax.inject.Singleton
 
 @Singleton
 @Component(
-        modules = [
-            ApplicationModule::class,
-            AssistedInjectModule::class
-        ]
+    modules = [
+        ApplicationModule::class,
+        AssistedInjectModule::class
+    ]
 )
 interface ApplicationComponent {
 
     @Component.Factory
     interface Factory {
-
         fun create(@BindsInstance applicationContext: Application): ApplicationComponent
     }
 
@@ -37,7 +36,7 @@ interface ApplicationComponent {
     val itemsViewModel: ItemsViewModel
     val responsesViewModel: ResponsesViewModel
     val itemInfoViewModel: ItemInfoViewModel
+    val heroGuideViewModel: HeroGuideViewModel
 
     val heroInfoViewModelFactory: HeroInfoViewModel.Factory
-    val heroGuideViewModelFactory: HeroGuideViewModel.Factory
 }
