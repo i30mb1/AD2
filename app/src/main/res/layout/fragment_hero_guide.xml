@@ -1,6 +1,5 @@
 <layout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:tools="http://schemas.android.com/tools"
-    xmlns:app="http://schemas.android.com/apk/res-auto">
+    xmlns:tools="http://schemas.android.com/tools">
 
     <data>
 
@@ -10,48 +9,11 @@
 
     </data>
 
-    <androidx.constraintlayout.widget.ConstraintLayout
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/rv"
         android:layout_width="match_parent"
-        android:id="@+id/root"
-        android:layout_height="match_parent">
-
-        <androidx.constraintlayout.helper.widget.Flow
-            android:id="@+id/flow_hero_best_versus"
-            android:layout_width="match_parent"
-            android:padding="2dp"
-            android:layout_height="wrap_content"
-            tools:layout_height="100dp"
-            app:flow_horizontalGap="2dp"
-            app:flow_horizontalStyle="packed"
-            app:flow_horizontalBias="0"
-            app:flow_verticalGap="2dp"
-            app:flow_verticalStyle="packed"
-            app:flow_wrapMode="chain"
-            app:flow_horizontalAlign="start"
-            app:flow_verticalAlign="baseline"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent" />
-
-        <androidx.constraintlayout.helper.widget.Flow
-            android:id="@+id/flow_hero_worst_versus"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:padding="2dp"
-            app:flow_horizontalAlign="start"
-            app:flow_horizontalBias="0"
-            app:flow_horizontalGap="2dp"
-            app:flow_horizontalStyle="packed"
-            app:flow_verticalAlign="baseline"
-            app:flow_verticalGap="2dp"
-            app:flow_verticalStyle="packed"
-            app:flow_wrapMode="chain"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.0"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/flow_hero_best_versus"
-            tools:layout_height="100dp" />
-
-    </androidx.constraintlayout.widget.ConstraintLayout>
+        android:layout_height="match_parent"
+        tools:itemCount="6"
+        tools:listitem="@layout/item_guide_title" />
 
 </layout>
