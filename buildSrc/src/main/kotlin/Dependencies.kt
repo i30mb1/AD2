@@ -30,7 +30,7 @@ object Lib {
     const val paging           = "androidx.paging:paging-runtime-ktx:2.1.2"
     const val paging3          = "androidx.paging:paging-runtime:3.0.0-alpha09"
     const val material         = "com.google.android.material:material:1.2.0"
-    const val constraintLayout = "androidx.constraintlayout:constraintlayout:2.0.0"
+    const val constraintLayout = "androidx.constraintlayout:constraintlayout:2.0.4"
     const val coil             = "io.coil-kt:coil:0.13.0"
     const val picasso          = "com.squareup.picasso:picasso:2.71828"
     const val picassoTrans     = "jp.wasabeef:picasso-transformations:2.2.1"
