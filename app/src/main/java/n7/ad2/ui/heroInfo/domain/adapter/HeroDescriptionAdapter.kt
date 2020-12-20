@@ -47,8 +47,8 @@ fun Ability.toVOSpell(application: Application) = VOSpell(
         effects.forEach { title -> add(VOBodyLine(SpannableString(title.spanWithDotaImages(application)))) }
         talents?.forEach { talent -> add(VOBodyTalent(talent.talentLeft, talent.talentLvl, talent.talentRight)) }
         description?.let { description -> add(VOBodySimple(description)) }
-        cooldown?.let { cooldown -> add(VOBodyWithImage(cooldown.spanWithDotaImages(application), R.drawable.cooldown)) }
-        mana?.let { mana -> add(VOBodyWithImage(mana.spanWithDotaImages(application), R.drawable.mana)) }
+        cooldown?.let { cooldown -> add(VOBodyWithImage(cooldown.spanWithDotaImages(application), R.drawable.cooldown, application.getString(R.string.desc_cooldown))) }
+        mana?.let { mana -> add(VOBodyWithImage(mana.spanWithDotaImages(application), R.drawable.mana, application.getString(R.string.desc_mana))) }
         params?.let { params ->
             add(VOTitle(application.getString(R.string.hero_fragment_params)))
             add(VOBodyWithSeparator((params.toStringListWithDash()).spanWithDotaImages(application)))

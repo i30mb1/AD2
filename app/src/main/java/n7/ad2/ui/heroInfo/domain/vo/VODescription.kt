@@ -14,5 +14,5 @@ data class VOHeroMainInformation(val urlHeroImage: String, val heroStatistics: H
 data class VOBodyTalent(val talentLeft: String, val talentLvl: String, val talentRight: String) : VODescription()
 data class VOBodySimple(val body: String) : VODescription()
 data class VOBodyWithSeparator(val body: SpannableString) : VODescription()
-data class VOBodyWithImage(val body: SpannableString, @DrawableRes val drawable: Int) : VODescription()
+data class VOBodyWithImage(val body: SpannableString, @DrawableRes val drawable: Int, val tip: String) : VODescription()
 data class VOBodyLine(val title: SpannableString) : VODescription()
