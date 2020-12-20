@@ -2,7 +2,7 @@ package n7.ad2.ui.heroInfo.domain.adapter
 
 import android.app.Application
 import android.text.SpannableString
-import n7.ad2.HeroStatistics
+import n7.ad2.ui.heroInfo.HeroStatistics
 import n7.ad2.R
 import n7.ad2.data.source.local.Repository
 import n7.ad2.ui.heroInfo.domain.model.Ability

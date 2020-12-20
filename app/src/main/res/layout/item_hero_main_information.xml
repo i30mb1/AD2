@@ -35,7 +35,7 @@
             android:transitionName="iv"
             tools:src="@drawable/hero_placeholder" />
 
-        <n7.ad2.HeroStatistics
+        <n7.ad2.ui.heroInfo.HeroStatistics
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             app:HeroStatistics="@{item.heroStatistics}" />

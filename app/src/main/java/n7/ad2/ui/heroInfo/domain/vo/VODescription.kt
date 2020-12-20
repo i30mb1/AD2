@@ -3,7 +3,7 @@ package n7.ad2.ui.heroInfo.domain.vo
 import android.text.SpannableString
 import androidx.annotation.DrawableRes
 import androidx.databinding.ObservableBoolean
-import n7.ad2.HeroStatistics
+import n7.ad2.ui.heroInfo.HeroStatistics
 import n7.ad2.ui.heroPage.Playable
 import n7.ad2.ui.itemInfo.domain.vo.VORecipe
 
