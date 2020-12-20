@@ -10,7 +10,7 @@ import n7.ad2.R
 import n7.ad2.ui.heroInfo.PopUpClickableSpan
 
 @SuppressLint("UseCompatLoadingForDrawables")
-fun String.spanWithDotaImages(application: Application): SpannableString {
+fun String.spanWithDotaImages(application: Application, clickable: Boolean = false): SpannableString {
     data class DotaImage(val tag: String, val tip: Int, val icon: Int)
     val list = listOf(
         DotaImage("TagTalent", R.string.popup_talent, R.drawable.talent),
@@ -24,7 +24,7 @@ fun String.spanWithDotaImages(application: Application): SpannableString {
 
         while (indexOf != -1) {
             spannableString[indexOf..indexOf + tag.length] = ImageSpan(icon, DynamicDrawableSpan.ALIGN_BOTTOM)
-            spannableString[indexOf..indexOf + tag.length] = PopUpClickableSpan(application.getString(tip))
+           if(clickable) spannableString[indexOf..indexOf + tag.length] = PopUpClickableSpan(application.getString(tip))
             indexOf = this.indexOf(tag, ++startIndex)
         }
     }
