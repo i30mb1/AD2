@@ -25,8 +25,8 @@
     <string name="hero_sound">Реплики</string>
     <string name="update_ok">обновление не требуется</string>
     <string name="fragment_guide_starting_items">Начальные предметы</string>
-    <string name="best_versus">Силён против : </string>
-    <string name="worst_versus">Слаб против : </string>
+    <string name="best_versus">Силён против героев</string>
+    <string name="worst_versus">Слаб против героев</string>
     <string name="setting_subscription_summary">Готовы сделать следующий шаг?</string>
     <string name="all_grand_permission">Требуется разрешение</string>
     <string name="all_enable">ENABLE</string>
