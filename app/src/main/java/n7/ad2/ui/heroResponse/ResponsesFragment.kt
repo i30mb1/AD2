@@ -9,6 +9,7 @@ import kotlinx.coroutines.InternalCoroutinesApi
 import n7.ad2.R
 import n7.ad2.databinding.FragmentHeroResponsesBinding
 import n7.ad2.di.injector
+import n7.ad2.ui.heroInfo.InfoPopupWindow
 import n7.ad2.ui.heroPage.HeroPageActivity
 import n7.ad2.ui.heroPage.showDialogError
 import n7.ad2.ui.heroResponse.domain.vo.VOResponseBody
@@ -21,6 +22,7 @@ class ResponsesFragment : Fragment(R.layout.fragment_hero_responses) {
     private lateinit var binding: FragmentHeroResponsesBinding
     private lateinit var downloadResponseManager: DownloadResponseManager
     private val viewModel: ResponsesViewModel by viewModel { injector.responsesViewModel }
+    private val infoPopupWindow: InfoPopupWindow by lazy { InfoPopupWindow(requireContext(), lifecycle) }
 
     companion object {
         private const val HERO_NAME = "HERO_NAME"
@@ -68,7 +70,7 @@ class ResponsesFragment : Fragment(R.layout.fragment_hero_responses) {
     }
 
     private fun setupPagedListAdapter() {
-        responsesPagedListAdapter = ResponsesAdapter((requireActivity() as HeroPageActivity).audioExoPlayer) {
+        responsesPagedListAdapter = ResponsesAdapter((requireActivity() as HeroPageActivity).audioExoPlayer, infoPopupWindow) {
             createDialogResponse(it)
         }
         binding.rv.apply {

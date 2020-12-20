@@ -15,6 +15,10 @@
             type="n7.ad2.ui.heroPage.AudioExoPlayer" />
 
         <variable
+            name="infoPopupWindow"
+            type="n7.ad2.ui.heroInfo.InfoPopupWindow" />
+
+        <variable
             name="item"
             type="n7.ad2.ui.heroResponse.domain.vo.VOResponseBody" />
     </data>
@@ -59,6 +63,7 @@
                 android:contentDescription="@string/desc_saved"
                 isVisible="@{item.savedInMemory}"
                 withSpace="@{false}"
+                android:onClick="@{(view)-> infoPopupWindow.show(view, @string/popup_saved)}"
                 app:srcCompat="@drawable/ic_response_save"
                 tools:visibility="visible" />
 
