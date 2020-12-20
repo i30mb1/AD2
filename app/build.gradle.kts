@@ -84,8 +84,6 @@ dependencies {
     api(Lib.activityKtx)
     implementation(Lib.dagger)
     kapt(Lib.daggerAnnotation)
-    compileOnly(Lib.daggerAssisted)
-    kapt(Lib.daggerAssistedAnnotation)
     implementation(Lib.preference)
     implementation(Lib.preferenceKtx)
     implementation(Lib.springAnimation)

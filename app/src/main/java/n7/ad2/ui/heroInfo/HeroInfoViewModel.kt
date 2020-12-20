@@ -6,7 +6,6 @@ import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.SavedStateHandle
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
-import com.squareup.inject.assisted.AssistedInject
 import kotlinx.coroutines.launch
 import n7.ad2.R
 import n7.ad2.data.source.local.Locale
@@ -24,9 +23,6 @@ class HeroInfoViewModel @Inject constructor(
     private val getHeroDescriptionInteractor: GetHeroDescriptionInteractor,
     private val getLocalHeroByNameUseCase: GetLocalHeroByNameUseCase,
 ) : AndroidViewModel(application) {
-
-    @AssistedInject.Factory
-    interface Factory : ViewModelAssistedFactory<HeroInfoViewModel>
 
     val vOHero = MutableLiveData<List<VODescription>>()
 

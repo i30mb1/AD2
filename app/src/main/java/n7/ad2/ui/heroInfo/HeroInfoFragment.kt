@@ -10,12 +10,12 @@ import n7.ad2.databinding.FragmentHeroInfoBinding
 import n7.ad2.di.injector
 import n7.ad2.ui.heroPage.HeroPageActivity
 import n7.ad2.utils.StickyHeaderDecorator
-import n7.ad2.utils.viewModelWithSavedStateHandle
+import n7.ad2.utils.viewModel
 
 class HeroInfoFragment : Fragment(R.layout.fragment_hero_info) {
 
     private lateinit var binding: FragmentHeroInfoBinding
-    private val viewModel: HeroInfoViewModel by viewModelWithSavedStateHandle { injector.heroInfoViewModelFactory }
+    private val viewModel: HeroInfoViewModel by viewModel { injector.heroInfoViewModel }
     private val infoPopupWindow: InfoPopupWindow by lazy { InfoPopupWindow(requireContext(), lifecycle) }
 
     companion object {

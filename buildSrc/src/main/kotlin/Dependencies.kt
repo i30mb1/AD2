@@ -80,8 +80,6 @@ object Lib {
     // --- Dagger ---
     const val dagger                   = "com.google.dagger:dagger:2.25.2"
     const val daggerAnnotation         = "com.google.dagger:dagger-compiler:2.25.2"
-    const val daggerAssisted           = "com.squareup.inject:assisted-inject-annotations-dagger2:0.5.2"
-    const val daggerAssistedAnnotation = "com.squareup.inject:assisted-inject-processor-dagger2:0.5.2"
 
     object Test {
         const val coroutinesTest = "org.jetbrains.kotlinx:kotlinx-coroutines-test:1.3.2"

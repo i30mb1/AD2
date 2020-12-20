@@ -18,7 +18,6 @@ import javax.inject.Singleton
 @Component(
     modules = [
         ApplicationModule::class,
-        AssistedInjectModule::class
     ]
 )
 interface ApplicationComponent {
@@ -37,6 +36,6 @@ interface ApplicationComponent {
     val responsesViewModel: ResponsesViewModel
     val itemInfoViewModel: ItemInfoViewModel
     val heroGuideViewModel: HeroGuideViewModel
+    val heroInfoViewModel: HeroInfoViewModel
 
-    val heroInfoViewModelFactory: HeroInfoViewModel.Factory
 }
