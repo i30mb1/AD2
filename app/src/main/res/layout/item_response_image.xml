@@ -10,11 +10,12 @@
     </data>
 
     <ImageView
-        android:layout_width="20dp"
-        android:layout_height="20dp"
         loadImageUrl="@{url}"
         onError="@{@drawable/ic_error_response}"
+        android:layout_width="20dp"
+        android:layout_height="20dp"
         android:contentDescription="@{url}"
         android:padding="2dp"
+        android:scaleType="centerCrop"
         tools:src="@drawable/ic_error_response" />
 </layout>
