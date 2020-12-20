@@ -32,10 +32,11 @@ data class DownloadFailed(val error: Throwable) : DownloadResult()
 
 private typealias Result<T> = (T) -> Unit
 
+//  https://youtu.be/-4JqEROeI7U
 class DownloadResponseManager(
     private val contentResolver: ContentResolver,
     private val application: Application,
-    private val lifecycle: Lifecycle
+    private val lifecycle: Lifecycle,
 ) : LifecycleObserver {
 
     private var downloadId: Long = 0
@@ -112,7 +113,7 @@ class DownloadResponseManager(
                 it.moveToFirst()
                 val index = it.getColumnIndex(DownloadManager.COLUMN_LOCAL_URI)
                 return it.getStringOrNull(index)?.toUri()
-                        ?: "content://downloads/all_downloads/$downloadId".toUri()
+                    ?: "content://downloads/all_downloads/$downloadId".toUri()
             }
             return "content://downloads/all_downloads/$downloadId".toUri()
         }

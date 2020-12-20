@@ -7,7 +7,7 @@
 
         <variable
             name="item"
-            type="n7.ad2.ui.heroInfo.domain.vo.VOHeroAttrs" />
+            type="n7.ad2.ui.heroInfo.domain.vo.VOHeroMainInformation" />
         
         <variable
             name="descriptionListener"
@@ -35,10 +35,10 @@
             android:transitionName="iv"
             tools:src="@drawable/hero_placeholder" />
 
-        <n7.ad2.HeroMainInformation
+        <n7.ad2.HeroStatistics
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            app:HeroAttrs="@{item.heroAttrs}" />
+            app:HeroStatistics="@{item.heroStatistics}" />
 
     </LinearLayout>
 </layout>

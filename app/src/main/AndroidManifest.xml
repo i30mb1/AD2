@@ -62,9 +62,6 @@
             android:parentActivityName=".ui.MainActivity"
             android:screenOrientation="portrait" />
         <activity
-            android:name=".items.full.ItemFullActivity"
-            android:screenOrientation="portrait" />
-        <activity
             android:name=".games.Game2p1"
             android:screenOrientation="portrait" />
         <activity

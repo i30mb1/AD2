@@ -30,13 +30,13 @@
             android:layout_height="25dp"
             android:contentDescription="@string/desc_intelligence"
             android:src="@drawable/intelligence"
-            app:layout_constraintEnd_toStartOf="@+id/Agility"
+            app:layout_constraintEnd_toStartOf="@+id/ivAgility"
             app:layout_constraintHorizontal_bias="0.5"
             app:layout_constraintStart_toEndOf="@+id/ivStrength"
             app:layout_constraintTop_toTopOf="parent" />
 
         <ImageView
-            android:id="@+id/Agility"
+            android:id="@+id/ivAgility"
             android:layout_width="25dp"
             android:layout_height="25dp"
             android:contentDescription="@string/desc_agility"
@@ -71,9 +71,9 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:textAppearance="?textAppearanceHeroStatistics"
-            app:layout_constraintEnd_toEndOf="@+id/Agility"
-            app:layout_constraintStart_toStartOf="@+id/Agility"
-            app:layout_constraintTop_toBottomOf="@id/Agility"
+            app:layout_constraintEnd_toEndOf="@+id/ivAgility"
+            app:layout_constraintStart_toStartOf="@+id/ivAgility"
+            app:layout_constraintTop_toBottomOf="@id/ivAgility"
             tools:text="20" />
 
         <com.google.android.material.slider.Slider
