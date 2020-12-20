@@ -15,6 +15,7 @@ import androidx.recyclerview.widget.RecyclerView
 import n7.ad2.BR
 import n7.ad2.R
 import n7.ad2.databinding.ItemBodyHeroSpellsBinding
+import n7.ad2.databinding.ItemBodyLineBinding
 import n7.ad2.databinding.ItemBodyWithImageBinding
 import n7.ad2.databinding.ItemBodyWithSeparatorBinding
 import n7.ad2.databinding.ItemHeroMainInformationBinding
@@ -80,6 +81,7 @@ class DescriptionsListAdapter(
             when (binding) {
                 is ItemBodyWithSeparatorBinding -> setBoundToImageSpan(binding.tvBody, binding.item!!.body)
                 is ItemBodyWithImageBinding -> setBoundToImageSpan(binding.tvBody, binding.item!!.body)
+                is ItemBodyLineBinding -> setBoundToImageSpan(binding.tvBody, binding.item!!.title)
             }
         }
 

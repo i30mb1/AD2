@@ -44,7 +44,7 @@ fun Ability.toVOSpell(application: Application) = VOSpell(
     Repository.getFullUrlHeroSpell(this.spellName),
     buildList {
         add(VOTitle(spellName, hotKey, legacyKey, audioUrl))
-        effects.forEach { title -> add(VOBodyLine(title)) }
+        effects.forEach { title -> add(VOBodyLine(SpannableString(title.spanWithDotaImages(application)))) }
         talents?.forEach { talent -> add(VOBodyTalent(talent.talentLeft, talent.talentLvl, talent.talentRight)) }
         description?.let { description -> add(VOBodySimple(description)) }
         cooldown?.let { cooldown -> add(VOBodyWithImage(cooldown.spanWithDotaImages(application), R.drawable.cooldown)) }

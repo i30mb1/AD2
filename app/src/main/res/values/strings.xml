@@ -221,7 +221,7 @@
 
     <string name="channel_tournament_name" translatable="false">Tournament</string>
     <string name="channel_name_guide" translatable="false">Guide</string>
-    <string name="info_talent" translatable="false">With talent that affect this ability</string>
+
     <string name="error" translatable="false"> Oops! error occurred...</string>
     <string name="locale">ENG</string>
     <string name="ru" translatable="false">RU</string>
@@ -231,5 +231,8 @@
     <string name="bought_from">Bought From : %s</string>
     <string name="additional_information">Additional information</string>
     <string name="trivia">Trivia</string>
+
+    <string name="popup_talent">improves upon talent selection</string>
+    <string name="popup_aghanim">improves when buying aghanim</string>
 
 </resources>

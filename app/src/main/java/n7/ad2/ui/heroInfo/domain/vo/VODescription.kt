@@ -15,4 +15,4 @@ data class VOBodyTalent(val talentLeft: String, val talentLvl: String, val talen
 data class VOBodySimple(val body: String) : VODescription()
 data class VOBodyWithSeparator(val body: SpannableString) : VODescription()
 data class VOBodyWithImage(val body: SpannableString, @DrawableRes val drawable: Int) : VODescription()
-data class VOBodyLine(val title: String) : VODescription()
+data class VOBodyLine(val title: SpannableString) : VODescription()
