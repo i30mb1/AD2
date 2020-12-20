@@ -13,7 +13,7 @@ import n7.ad2.utils.extension.toPx
 
 // link about @JVMOverload https://proandroiddev.com/misconception-about-kotlin-jvmoverloads-for-android-view-creation-cb88f432e1fe
 @SuppressLint("SetTextI18n")
-class CustomHeroAttrs(
+class HeroMainInformation(
     context: Context,
     attributeSet: AttributeSet,
 ) : ConstraintLayout(context, attributeSet) {
@@ -21,15 +21,15 @@ class CustomHeroAttrs(
     companion object {
         private const val DEFAULT_SIZE = 60
 
-        data class HeroAttrs(val strength: Double, val agility: Double, val intelligence: Double)
+        data class Statistics(val strength: Double, val agility: Double, val intelligence: Double)
     }
 
     val binding: CustomHeroAttrsBinding = CustomHeroAttrsBinding.inflate(LayoutInflater.from(context), this, true)
 
-    fun setHeroAttrs(heroAttrs: HeroAttrs) {
-        binding.tvAgility.text = "${heroAttrs.agility}"
-        binding.tvStrength.text = "${heroAttrs.strength}"
-        binding.tvIntelligence.text = "${heroAttrs.intelligence}"
+    fun setHeroAttrs(statistics: Statistics) {
+        binding.tvAgility.text = "${statistics.agility}"
+        binding.tvStrength.text = "${statistics.strength}"
+        binding.tvIntelligence.text = "${statistics.intelligence}"
     }
 
     override fun onMeasure(widthMeasureSpec: Int, heightMeasureSpec: Int) {

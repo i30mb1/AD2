@@ -2,7 +2,7 @@ package n7.ad2.ui.heroInfo.domain.adapter
 
 import android.app.Application
 import android.text.SpannableString
-import n7.ad2.CustomHeroAttrs
+import n7.ad2.HeroMainInformation
 import n7.ad2.R
 import n7.ad2.data.source.local.Repository
 import n7.ad2.ui.heroInfo.domain.model.Ability
@@ -22,7 +22,7 @@ import n7.ad2.utils.extension.toStringListWithDash
 @ExperimentalStdlibApi
 fun LocalHeroDescription.toVOHeroAttrs(application: Application, heroName: String): VOHeroAttrs = VOHeroAttrs(
     Repository.getFullUrlHeroImage(heroName),
-    CustomHeroAttrs.Companion.HeroAttrs(mainAttributes.attrStrength, mainAttributes.attrAgility, mainAttributes.attrIntelligence),
+    HeroMainInformation.Companion.Statistics(mainAttributes.attrStrength, mainAttributes.attrAgility, mainAttributes.attrIntelligence),
     buildList {
         add(VOTitle(application.getString(R.string.hero_fragment_description)))
         add(VOBodyWithSeparator(SpannableString(description)))

@@ -35,7 +35,7 @@
             android:transitionName="iv"
             tools:src="@drawable/hero_placeholder" />
 
-        <n7.ad2.CustomHeroAttrs
+        <n7.ad2.HeroMainInformation
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             app:HeroAttrs="@{item.heroAttrs}" />
