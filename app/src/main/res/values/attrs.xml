@@ -6,4 +6,5 @@
     <attr name="myTextColorSecondary" format="reference"/>
 
     <attr name="textAppearanceTalent" format="reference" />
+    <attr name="textAppearanceHeroStatistics" format="reference" />
 </resources>

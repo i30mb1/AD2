@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools">
 
     <data>
@@ -10,109 +11,80 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:orientation="vertical"
-        tools:parentTag="android.widget.LinearLayout">
+        tools:parentTag="androidx.constraintlayout.widget.ConstraintLayout">
 
-        <LinearLayout
-            android:layout_width="match_parent"
+        <ImageView
+            android:id="@+id/ivStrength"
+            android:layout_width="25dp"
+            android:layout_height="25dp"
+            android:contentDescription="@string/desc_strength"
+            android:src="@drawable/strength"
+            app:layout_constraintEnd_toStartOf="@+id/ivIntelligence"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <ImageView
+            android:id="@+id/ivIntelligence"
+            android:layout_width="25dp"
+            android:layout_height="25dp"
+            android:contentDescription="@string/desc_intelligence"
+            android:src="@drawable/intelligence"
+            app:layout_constraintEnd_toStartOf="@+id/Agility"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toEndOf="@+id/ivStrength"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <ImageView
+            android:id="@+id/Agility"
+            android:layout_width="25dp"
+            android:layout_height="25dp"
+            android:contentDescription="@string/desc_agility"
+            android:src="@drawable/agility"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toEndOf="@+id/ivIntelligence"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/tvStrength"
+            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:orientation="horizontal">
+            android:textAppearance="?textAppearanceHeroStatistics"
+            app:layout_constraintEnd_toEndOf="@+id/ivStrength"
+            app:layout_constraintStart_toStartOf="@+id/ivStrength"
+            app:layout_constraintTop_toBottomOf="@id/ivStrength"
+            tools:text="20" />
 
-            <Space
-                android:layout_width="0dp"
-                android:layout_height="wrap_content"
-                android:layout_weight="1" />
+        <TextView
+            android:id="@+id/tvIntelligence"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAppearance="?textAppearanceHeroStatistics"
+            app:layout_constraintEnd_toEndOf="@+id/ivIntelligence"
+            app:layout_constraintStart_toStartOf="@+id/ivIntelligence"
+            app:layout_constraintTop_toBottomOf="@id/ivIntelligence"
+            tools:text="20" />
 
-            <ImageView
-                android:id="@+id/ivStr"
-                android:layout_width="25dp"
-                android:layout_height="25dp"
-                android:contentDescription="@string/desc_strength"
-                android:src="@drawable/strength" />
-
-            <Space
-                android:layout_width="0dp"
-                android:layout_height="wrap_content"
-                android:layout_weight="1" />
-
-            <ImageView
-                android:id="@+id/ivInt"
-                android:layout_width="25dp"
-                android:layout_height="25dp"
-                android:contentDescription="@string/desc_intellect"
-                android:src="@drawable/intelligence" />
-
-            <Space
-                android:layout_width="0dp"
-                android:layout_height="wrap_content"
-                android:layout_weight="1" />
-
-            <ImageView
-                android:id="@+id/ivAgi"
-                android:layout_width="25dp"
-                android:layout_height="25dp"
-                android:contentDescription="@string/desc_agility"
-                android:src="@drawable/agility" />
-
-            <Space
-                android:layout_width="0dp"
-                android:layout_height="wrap_content"
-                android:layout_weight="1" />
-
-
-        </LinearLayout>
-
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content">
-
-            <Space
-                android:layout_width="0dp"
-                android:layout_height="wrap_content"
-                android:layout_weight="1" />
-
-            <TextView
-                android:id="@+id/tv_strength"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:textAppearance="?textAppearanceOverline"
-                tools:text="20" />
-
-            <Space
-                android:layout_width="0dp"
-                android:layout_height="wrap_content"
-                android:layout_weight="1" />
-
-            <TextView
-                android:id="@+id/tv_intelligence"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:textAppearance="?textAppearanceOverline"
-                tools:text="20" />
-
-            <Space
-                android:layout_width="0dp"
-                android:layout_height="wrap_content"
-                android:layout_weight="1" />
-
-            <TextView
-                android:id="@+id/tv_agility"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:textAppearance="?textAppearanceOverline"
-                tools:text="20" />
-
-            <Space
-                android:layout_width="0dp"
-                android:layout_height="wrap_content"
-                android:layout_weight="1" />
-        </LinearLayout>
+        <TextView
+            android:id="@+id/tvAgility"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAppearance="?textAppearanceHeroStatistics"
+            app:layout_constraintEnd_toEndOf="@+id/Agility"
+            app:layout_constraintStart_toStartOf="@+id/Agility"
+            app:layout_constraintTop_toBottomOf="@id/Agility"
+            tools:text="20" />
 
         <com.google.android.material.slider.Slider
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:valueFrom="1"
             android:valueTo="25"
-            android:visibility="gone" />
+            android:visibility="gone"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/tvIntelligence" />
     </merge>
 
 

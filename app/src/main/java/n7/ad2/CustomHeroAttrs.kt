@@ -6,7 +6,7 @@ import android.graphics.Bitmap
 import android.graphics.Canvas
 import android.util.AttributeSet
 import android.view.LayoutInflater
-import android.widget.LinearLayout
+import androidx.constraintlayout.widget.ConstraintLayout
 import n7.ad2.databinding.CustomHeroAttrsBinding
 import n7.ad2.utils.extension.toPx
 
@@ -16,7 +16,7 @@ import n7.ad2.utils.extension.toPx
 class CustomHeroAttrs(
     context: Context,
     attributeSet: AttributeSet,
-) : LinearLayout(context, attributeSet) {
+) : ConstraintLayout(context, attributeSet) {
 
     companion object {
         private const val DEFAULT_SIZE = 60
@@ -25,10 +25,6 @@ class CustomHeroAttrs(
     }
 
     val binding: CustomHeroAttrsBinding = CustomHeroAttrsBinding.inflate(LayoutInflater.from(context), this, true)
-
-    init {
-        orientation = VERTICAL
-    }
 
     fun setHeroAttrs(heroAttrs: HeroAttrs) {
         binding.tvAgility.text = "${heroAttrs.agility}"
