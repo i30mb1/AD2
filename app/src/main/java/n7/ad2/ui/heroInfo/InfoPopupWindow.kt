@@ -1,6 +1,7 @@
 package n7.ad2.ui.heroInfo
 
 import android.content.Context
+import android.content.res.Resources
 import android.graphics.Point
 import android.view.Gravity
 import android.view.LayoutInflater
@@ -11,6 +12,7 @@ import android.widget.PopupWindow
 import androidx.core.graphics.component1
 import androidx.core.graphics.component2
 import androidx.core.view.doOnPreDraw
+import androidx.core.view.updateLayoutParams
 import androidx.lifecycle.Lifecycle
 import androidx.lifecycle.LifecycleObserver
 import androidx.lifecycle.OnLifecycleEvent
@@ -21,6 +23,7 @@ class InfoPopupWindow(
         private val lifecycle: Lifecycle
 ) : LifecycleObserver {
 
+    private val halfScreenWidth: Int by lazy { Resources.getSystem().displayMetrics.widthPixels / 2 }
     private val binding = PopupSpellInfoBinding.inflate(LayoutInflater.from(context))
     private val popup: PopupWindow
 
@@ -48,9 +51,10 @@ class InfoPopupWindow(
     private fun updatePointerLocation(anchor: View) {
         val (x, _) = getLocationOnScreen(anchor)
 
-        val params = binding.pointer.layoutParams as ViewGroup.MarginLayoutParams
-        params.leftMargin = x
-        binding.pointer.layoutParams = params
+        binding.pointer.updateLayoutParams<ViewGroup.MarginLayoutParams> { this.leftMargin = x }
+        binding.body.updateLayoutParams<LinearLayout.LayoutParams> {
+            this.gravity = if (x > halfScreenWidth) Gravity.END else Gravity.START
+        }
     }
 
     private fun getLocationOnScreen(anchor: View): Point {

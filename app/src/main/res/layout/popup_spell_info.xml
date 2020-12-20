@@ -6,9 +6,11 @@
 
     </data>
 
-    <RelativeLayout
+    <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="match_parent">
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        tools:ignore="UseCompoundDrawables">
 
         <ImageView
             android:id="@+id/pointer"
@@ -19,16 +21,14 @@
             tools:layout_marginStart="30dp" />
 
         <TextView
-            android:layout_alignParentEnd="true"
             android:id="@+id/body"
-            android:padding="8dp"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:textAppearance="@style/TextAppearance.Body1"
-            tools:text="@tools:sample/lorem/random"
-            android:layout_below="@id/pointer"
             android:layout_marginStart="8dp"
             android:layout_marginEnd="8dp"
-            android:background="?colorAccent" />
-    </RelativeLayout>
+            android:background="?colorAccent"
+            android:padding="8dp"
+            android:textAppearance="@style/TextAppearance.Body1"
+            tools:text="tools:sample/lorem/random" />
+    </LinearLayout>
 </layout>
