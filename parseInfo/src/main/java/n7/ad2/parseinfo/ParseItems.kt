@@ -30,6 +30,7 @@ enum class LOCALE(val urlAllItems: String, val baseUrl: String, val directory: S
 private fun loadItemsOneByOne(locale: LOCALE) {
     JSONObject().apply {
         val list = getItems(LOCALE.EN.urlAllItems.connect())
+            .filter { (_, itemName) -> itemName == "Phase Boots" }
             .filter { !it.first.contains("(") }
         val description = "description.json"
 
@@ -202,13 +203,7 @@ private fun JSONObject.loadAbilities(root: Document) {
                 val params = it.getElementsByAttributeValue("style", "vertical-align:top; padding: 3px 5px; display:inline-block;")[0].children()
                 params.filter { it.attr("style").isEmpty() }.also {
                     JSONArray().apply {
-                        it.forEach {
-                            if (it.getElementsByAttribute("href").getOrNull(0)?.attr("href").equals("/Aghanim%27s_Scepter")) {
-                                add(it.text().replace("(", "(TagAghanim"))
-                            } else {
-                                add(it.text().replace("(", "(TagTalent"))
-                            }
-                        }
+                        it.forEach { add(it.text()) }
                         put("params", this)
                     }
                 }
