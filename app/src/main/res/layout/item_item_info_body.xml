@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+        <variable
+            name="item"
+            type="n7.ad2.ui.itemInfo.domain.vo.VOItemInfoBody" />
+    </data>
+
+    <TextView
+        android:id="@+id/tv_body"
+        asyncText="@{item.body}"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="?colorSurface"
+        android:padding="8dp"
+        android:textAppearance="?textAppearanceBody1"
+        tools:text="@tools:sample/lorem" />
+</layout>

@@ -5,7 +5,7 @@ import com.squareup.moshi.JsonClass
 import com.squareup.moshi.Json
 
 @JsonClass(generateAdapter = true)
-data class LocalItemDescription(
+data class LocalItemInfo(
     @Json(name = "abilities")
     val abilities: List<Ability>? = null,
     @Json(name = "additionalInformation")

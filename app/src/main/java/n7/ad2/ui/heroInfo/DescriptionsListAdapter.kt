@@ -10,19 +10,16 @@ import androidx.core.text.getSpans
 import androidx.databinding.DataBindingUtil
 import androidx.databinding.ViewDataBinding
 import androidx.recyclerview.widget.DiffUtil
-import androidx.recyclerview.widget.GridLayoutManager
 import androidx.recyclerview.widget.ListAdapter
 import androidx.recyclerview.widget.RecyclerView
 import n7.ad2.BR
 import n7.ad2.R
 import n7.ad2.databinding.ItemBodyHeroSpellsBinding
-import n7.ad2.databinding.ItemBodyRecipeBinding
 import n7.ad2.databinding.ItemBodyWithImageBinding
 import n7.ad2.databinding.ItemBodyWithSeparatorBinding
 import n7.ad2.databinding.ItemHeroMainInformationBinding
 import n7.ad2.databinding.ItemTitleBinding
 import n7.ad2.ui.heroInfo.domain.vo.VOBodyLine
-import n7.ad2.ui.heroInfo.domain.vo.VOBodyRecipe
 import n7.ad2.ui.heroInfo.domain.vo.VOBodySimple
 import n7.ad2.ui.heroInfo.domain.vo.VOBodyTalent
 import n7.ad2.ui.heroInfo.domain.vo.VOBodyWithImage
@@ -32,10 +29,8 @@ import n7.ad2.ui.heroInfo.domain.vo.VOHeroMainInformation
 import n7.ad2.ui.heroInfo.domain.vo.VOHeroSpells
 import n7.ad2.ui.heroInfo.domain.vo.VOTitle
 import n7.ad2.ui.heroPage.AudioExoPlayer
-import n7.ad2.ui.itemInfo.RecipeImagesAdapter
 import n7.ad2.utils.StickyHeaderDecorator
 import n7.ad2.utils.extension.toPx
-import kotlin.math.max
 
 class DescriptionsListAdapter(
     private val audioExoPlayer: AudioExoPlayer,
@@ -54,7 +49,6 @@ class DescriptionsListAdapter(
         is VOBodyWithSeparator -> R.layout.item_body_with_separator
         is VOBodyWithImage -> R.layout.item_body_with_image
         is VOBodyTalent -> R.layout.item_body_talent
-        is VOBodyRecipe -> R.layout.item_body_recipe
         is VOHeroMainInformation -> R.layout.item_hero_main_information
         is VOHeroSpells -> R.layout.item_body_hero_spells
     }
@@ -84,7 +78,6 @@ class DescriptionsListAdapter(
 
         private fun bindSetting(binding: ViewDataBinding) {
             when (binding) {
-                is ItemBodyRecipeBinding -> (binding.rv.layoutManager as GridLayoutManager).spanCount = max(1, binding.item!!.recipes.size)
                 is ItemBodyWithSeparatorBinding -> setBoundToImageSpan(binding.tvBody, binding.item!!.body)
                 is ItemBodyWithImageBinding -> setBoundToImageSpan(binding.tvBody, binding.item!!.body)
             }
@@ -96,7 +89,7 @@ class DescriptionsListAdapter(
         ) {
             if (lineHeight == 0) lineHeight = tv.lineHeight - 2.toPx
             spannableString.getSpans<ImageSpan>().forEach { it.drawable.setBounds(0, 0, lineHeight, lineHeight) }
-            spannableString.getSpans<PopUpClickableSpan>().forEach { it.popUpListener = popupListener }
+            spannableString.getSpans<PopUpClickableSpan>().forEach { it.popupListener = popupListener }
         }
 
         companion object {
@@ -110,7 +103,6 @@ class DescriptionsListAdapter(
                 val layoutInflater = LayoutInflater.from(parent.context)
                 val binding: ViewDataBinding = when (viewType) {
                     R.layout.item_title -> ItemTitleBinding.inflate(layoutInflater, parent, false).also { it.audioExoPlayer = audioExoPlayer; it.popupListener = popupListener }
-                    R.layout.item_body_recipe -> ItemBodyRecipeBinding.inflate(layoutInflater, parent, false).apply { rv.adapter = RecipeImagesAdapter() }
                     R.layout.item_body_hero_spells -> ItemBodyHeroSpellsBinding.inflate(layoutInflater, parent, false).apply { rv.adapter = SpellsListAdapter(descriptionsListener) }
                     R.layout.item_body_with_image -> ItemBodyWithImageBinding.inflate(layoutInflater, parent, false).also { it.popupListener = popupListener }
                     R.layout.item_hero_main_information -> ItemHeroMainInformationBinding.inflate(layoutInflater, parent, false).also { it.descriptionListener = descriptionsListener }

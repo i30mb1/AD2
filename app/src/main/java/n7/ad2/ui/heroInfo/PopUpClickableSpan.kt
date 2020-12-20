@@ -5,9 +5,9 @@ import android.view.View
 
 internal class PopUpClickableSpan(private val text: String) : ClickableSpan() {
 
-    var popUpListener: ((View, String) -> Unit)? = null
+    var popupListener: ((View, String) -> Unit)? = null
 
     override fun onClick(widget: View) {
-        popUpListener?.invoke(widget, text)
+        popupListener?.invoke(widget, text)
     }
 }

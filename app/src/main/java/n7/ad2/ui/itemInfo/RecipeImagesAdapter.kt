@@ -27,9 +27,7 @@ class RecipeImagesAdapter : ListAdapter<VORecipe, RecipeImagesAdapter.ViewHolder
         }
 
         companion object {
-            fun from(
-                parent: ViewGroup,
-            ): ViewHolder {
+            fun from(parent: ViewGroup): ViewHolder {
                 val layoutInflater = LayoutInflater.from(parent.context)
                 val binding = ItemRecipeBinding.inflate(layoutInflater, parent, false)
                 return ViewHolder(binding)

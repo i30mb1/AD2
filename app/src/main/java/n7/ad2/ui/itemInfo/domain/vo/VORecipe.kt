@@ -1,6 +1,6 @@
 package n7.ad2.ui.itemInfo.domain.vo
 
 data class VORecipe(
-    val url: String,
+    val urlItemImage: String,
     val name: String,
 )

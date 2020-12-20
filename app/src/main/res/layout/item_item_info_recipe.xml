@@ -7,7 +7,7 @@
 
         <variable
             name="item"
-            type="n7.ad2.ui.heroInfo.domain.vo.VOBodyRecipe" />
+            type="n7.ad2.ui.itemInfo.domain.vo.VOItemInfoRecipe" />
     </data>
 
     <LinearLayout
@@ -18,7 +18,7 @@
 
         <ImageView
             android:id="@+id/iv"
-            loadImageUrl="@{item.urlImage}"
+            loadImageUrl="@{item.urlItemImage}"
             android:layout_width="88dp"
             android:layout_height="64dp"
             android:layout_margin="8dp"

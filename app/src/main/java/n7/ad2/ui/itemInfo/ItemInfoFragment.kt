@@ -60,12 +60,12 @@ class ItemInfoFragment : Fragment(R.layout.fragment_item_info) {
     }
 
     private fun setupItemInfoRecyclerView() {
-        val descriptionsListAdapter = DescriptionsListAdapter(audioExoPlayer, infoPopupWindow)
+        val itemInfoAdapter = ItemInfoAdapter(audioExoPlayer, infoPopupWindow)
         binding.rv.apply {
-            adapter = descriptionsListAdapter
-            addItemDecoration(StickyHeaderDecorator(descriptionsListAdapter, this))
+            adapter = itemInfoAdapter
+            addItemDecoration(StickyHeaderDecorator(itemInfoAdapter, this))
         }
-        viewModel.voItemInfo.observe(viewLifecycleOwner, descriptionsListAdapter::submitList)
+        viewModel.voItemInfo.observe(viewLifecycleOwner, itemInfoAdapter::submitList)
     }
 
 

@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+        <variable
+            name="item"
+            type="n7.ad2.ui.itemInfo.domain.vo.VOItemInfoLineImage" />
+
+        <variable
+            name="popupListener"
+            type="kotlin.jvm.functions.Function2" />
+    </data>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="end"
+        android:background="?colorSurface"
+        android:gravity="end|bottom"
+        android:orientation="horizontal"
+        android:padding="4dp"
+        tools:ignore="UseCompoundDrawables">
+
+        <TextView
+            android:id="@+id/tv_body"
+            clickableText="@{item.body}"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="8dp"
+            android:textAppearance="?textAppearanceBody1"
+            tools:text="@tools:sample/date/hhmm" />
+
+        <ImageView
+            android:layout_width="@dimen/icon_in_description"
+            android:layout_height="@dimen/icon_in_description"
+            android:contentDescription="@string/desc_cooldown"
+            android:onClick="@{(view)-> popupListener.invoke(view, @string/desc_cooldown)}"
+            tools:src="@tools:sample/avatars"
+            android:src="@{item.drawable}" />
+    </LinearLayout>
+</layout>
