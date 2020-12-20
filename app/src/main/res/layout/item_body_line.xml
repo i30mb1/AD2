@@ -20,7 +20,7 @@
             android:layout_height="wrap_content"
             android:gravity="center_horizontal"
             android:padding="4dp"
-            android:text="@{item.title}"
+            asyncText="@{item.title}"
             android:textAppearance="?textAppearanceSubtitle1"
             android:textSize="12sp"
             tools:text="@tools:sample/lorem" />

@@ -1,6 +1,7 @@
 package n7.ad2.ui.heroInfo
 
 import android.text.SpannableString
+import android.text.method.LinkMovementMethod
 import android.text.style.ImageSpan
 import android.view.LayoutInflater
 import android.view.View
@@ -79,19 +80,20 @@ class DescriptionsListAdapter(
 
         private fun bindSetting(binding: ViewDataBinding) {
             when (binding) {
-                is ItemBodyWithSeparatorBinding -> setBoundToImageSpan(binding.tvBody, binding.item!!.body)
-                is ItemBodyWithImageBinding -> setBoundToImageSpan(binding.tvBody, binding.item!!.body)
-                is ItemBodyLineBinding -> setBoundToImageSpan(binding.tvBody, binding.item!!.title)
+                is ItemBodyWithSeparatorBinding -> setActionsForSpans(binding.tvBody, binding.item!!.body)
+                is ItemBodyWithImageBinding -> setActionsForSpans(binding.tvBody, binding.item!!.body)
+                is ItemBodyLineBinding -> setActionsForSpans(binding.tvBody, binding.item!!.title)
             }
         }
 
-        private fun setBoundToImageSpan(
+        private fun setActionsForSpans(
             tv: TextView,
             spannableString: SpannableString,
         ) {
             if (lineHeight == 0) lineHeight = tv.lineHeight - 2.toPx
             spannableString.getSpans<ImageSpan>().forEach { it.drawable.setBounds(0, 0, lineHeight, lineHeight) }
             spannableString.getSpans<PopUpClickableSpan>().forEach { it.popupListener = popupListener }
+            tv.movementMethod = LinkMovementMethod.getInstance()
         }
 
         companion object {

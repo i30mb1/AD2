@@ -71,9 +71,3 @@ fun TextView.asyncText(text: CharSequence?, textSize: Int?) {
     val params = TextViewCompat.getTextMetricsParams(this)
     (this as AppCompatTextView).setTextFuture(PrecomputedTextCompat.getTextFuture(text, params, null))
 }
-
-@BindingAdapter("clickableText")
-fun TextView.clickableText(text: CharSequence?) {
-    movementMethod = LinkMovementMethod.getInstance()
-    setText(text)
-}
