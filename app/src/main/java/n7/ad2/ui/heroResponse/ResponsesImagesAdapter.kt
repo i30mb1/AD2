@@ -6,7 +6,7 @@ import androidx.recyclerview.widget.RecyclerView
 import n7.ad2.R
 import n7.ad2.databinding.ItemResponseImageBinding
 
-class ResponsesImagesAdapter : RecyclerView.Adapter<ResponsesImagesAdapter.ViewHolder>() {
+class ResponsesImagesAdapter : RecyclerView.Adapter<ResponsesImagesAdapter.ImageViewHolder>() {
 
     var list = emptyList<String>()
         set(value) {
@@ -14,21 +14,12 @@ class ResponsesImagesAdapter : RecyclerView.Adapter<ResponsesImagesAdapter.ViewH
             notifyDataSetChanged()
         }
 
-    override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): ViewHolder = ViewHolder.from(parent)
-
-    override fun onBindViewHolder(holder: ViewHolder, position: Int) {
-        holder.bind(list[position])
-    }
-
-    override fun getItemViewType(position: Int): Int {
-        return R.layout.item_response_image
-    }
-
+    override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): ImageViewHolder = ImageViewHolder.from(parent)
+    override fun onBindViewHolder(holder: ImageViewHolder, position: Int) = holder.bind(list[position])
+    override fun getItemViewType(position: Int): Int = R.layout.item_response_image
     override fun getItemCount(): Int = list.size
 
-    class ViewHolder(
-        private val binding: ItemResponseImageBinding
-    ) : RecyclerView.ViewHolder(binding.root) {
+    class ImageViewHolder(private val binding: ItemResponseImageBinding) : RecyclerView.ViewHolder(binding.root) {
 
         fun bind(imageUrl: String) {
             binding.url = imageUrl
@@ -36,16 +27,7 @@ class ResponsesImagesAdapter : RecyclerView.Adapter<ResponsesImagesAdapter.ViewH
         }
 
         companion object {
-            fun from(
-                parent: ViewGroup
-            ): ViewHolder {
-                val layoutInflater = LayoutInflater.from(parent.context)
-                val binding = ItemResponseImageBinding.inflate(layoutInflater, parent, false)
-                return ViewHolder(binding)
-            }
+            fun from(parent: ViewGroup): ImageViewHolder = ImageViewHolder(ItemResponseImageBinding.inflate(LayoutInflater.from(parent.context), parent, false))
         }
-
     }
-
-
 }
