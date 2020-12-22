@@ -18,6 +18,7 @@ import n7.ad2.isChannelNotCreated
 import n7.ad2.ui.MyApplication
 import n7.ad2.ui.heroGuide.domain.model.DetailedGuide
 import n7.ad2.ui.heroGuide.domain.model.LocalGuideJson
+import n7.ad2.ui.heroGuide.domain.usecase.ConvertLocalGuideJsonToLocalGuide
 import n7.ad2.ui.heroGuide.domain.usecase.SaveLocalGuideUseCase
 import org.jsoup.Jsoup
 import org.jsoup.nodes.Element
@@ -33,6 +34,7 @@ class HeroGuideWorker(
     companion object {
         const val HERO_NAME = "HERO_NAME"
         const val RESULT = "RESULT"
+        private fun getUrlForHeroPage(heroName: String) = "https://ru.dotabuff.com/heroes/$heroName"
     }
 
     private val notificationId = 1
@@ -44,26 +46,18 @@ class HeroGuideWorker(
     lateinit var saveLocalGuideUseCase: SaveLocalGuideUseCase
 
     @Inject
-    lateinit var moshi: Moshi
+    lateinit var convertLocalGuideJsonToLocalGuide: ConvertLocalGuideJsonToLocalGuide
 
     override suspend fun doWork(): Result = coroutineScope {
-        if (NotificationManagerCompat.from(applicationContext).areNotificationsEnabled()) {
-            if (applicationContext.isChannelNotCreated(channelId)) applicationContext.createNotificationChannel(channelId, channelName)
-
-            val notification = NotificationCompat.Builder(applicationContext, channelId)
-                .setSmallIcon(R.mipmap.ic_launcher)
-                .setContentTitle(notificationTitle)
-                .build()
-            setForeground(ForegroundInfo(notificationId, notification))
-        }
-
         (context as MyApplication).component.inject(this@HeroGuideWorker)
 
-        try {
-            val heroName = inputData.getString(HERO_NAME)!!
-            val heroNameForWeb = heroName.replace("_", "-").replace("'", "").toLowerCase(Locale.ENGLISH)
+        createNotification()
+        val heroName = inputData.getString(HERO_NAME)!!
 
-            val documentSimple = Jsoup.connect("https://ru.dotabuff.com/heroes/$heroNameForWeb").get()
+        try {
+            val heroNameForUrl = heroName.replace("_", "-").replace("'", "").toLowerCase(Locale.ENGLISH)
+
+            val documentSimple = Jsoup.connect(getUrlForHeroPage(heroNameForUrl)).get()
 
             // BEST VERSUS
             val heroesBestVersus = mutableListOf<String>()
@@ -86,7 +80,7 @@ class HeroGuideWorker(
                 }
             }
 
-            val document = Jsoup.connect("https://www.dotabuff.com/heroes/$heroNameForWeb/guides").get()
+            val document = Jsoup.connect("https://www.dotabuff.com/heroes/$heroNameForUrl/guides").get()
             // WIN RATE
             val heroWinrate = document.getElementsByClass("won")[0].text()
             val popularity = document.getElementsByAttributeValue("class", "header-content-secondary")[0].child(0).child(0).text()
@@ -152,7 +146,7 @@ class HeroGuideWorker(
                 }
             }
 
-            val localGuideJsonModel = LocalGuideJson(
+            val localGuideJson = LocalGuideJson(
                 heroName,
                 heroWinrate,
                 popularity,
@@ -165,14 +159,25 @@ class HeroGuideWorker(
                 )
             )
 
-            val json = moshi.adapter(LocalGuideJson::class.java).toJson(localGuideJsonModel)
-            val localGuide = LocalGuide(name = heroName, json = json)
-
+            val localGuide = convertLocalGuideJsonToLocalGuide(localGuideJson, heroName)
             saveLocalGuideUseCase(localGuide)
+
             Result.success()
         } catch (e: Exception) {
             val error = workDataOf(RESULT to e.toString())
             Result.failure(error)
+        }
+    }
+
+    private suspend fun createNotification() {
+        if (NotificationManagerCompat.from(applicationContext).areNotificationsEnabled()) {
+            if (applicationContext.isChannelNotCreated(channelId)) applicationContext.createNotificationChannel(channelId, channelName)
+
+            val notification = NotificationCompat.Builder(applicationContext, channelId)
+                .setSmallIcon(R.mipmap.ic_launcher)
+                .setContentTitle(notificationTitle)
+                .build()
+            setForeground(ForegroundInfo(notificationId, notification))
         }
     }
 
