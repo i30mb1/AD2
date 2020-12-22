@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <layout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto">
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
 
     <data>
 
@@ -13,5 +14,7 @@
     <n7.ad2.ui.heroGuide.HeroFlow
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        app:heroes="@{item.list}" />
+        android:background="?colorSurface"
+        app:heroes="@{item.list}"
+        tools:layout_height="300dp" />
 </layout>
