@@ -5,10 +5,8 @@ import android.view.View
 import androidx.core.os.bundleOf
 import androidx.fragment.app.Fragment
 import androidx.recyclerview.widget.LinearLayoutManager
-import androidx.work.OneTimeWorkRequestBuilder
 import androidx.work.WorkInfo
 import androidx.work.WorkManager
-import androidx.work.workDataOf
 import n7.ad2.R
 import n7.ad2.databinding.FragmentHeroGuideBinding
 import n7.ad2.di.injector
@@ -53,20 +51,15 @@ class HeroGuideFragment : Fragment(R.layout.fragment_hero_guide) {
     }
 
     private fun loadNewHeroGuide(heroName: String) {
-        val data = workDataOf(HeroGuideWorker.HERO_NAME to heroName)
-        val request = OneTimeWorkRequestBuilder<HeroGuideWorker>()
-            .setInputData(data)
-            .build()
-
-        WorkManager.getInstance(requireContext()).getWorkInfoByIdLiveData(request.id).observe(viewLifecycleOwner) {
-            when (it?.state) {
-                WorkInfo.State.FAILED -> requireActivity().showDialogError(it.outputData.getString(HeroGuideWorker.RESULT)!!)
-                else -> {
-                }
-            }
-        }
+        val request = HeroGuideWorker.getRequest(heroName)
 
         WorkManager.getInstance(requireContext()).enqueue(request)
+        WorkManager.getInstance(requireContext()).getWorkInfoByIdLiveData(request.id).observe(viewLifecycleOwner) {
+            when (it.state) {
+                WorkInfo.State.FAILED -> showDialogError(it.outputData.getString(HeroGuideWorker.RESULT)!!)
+                else -> Unit
+            }
+        }
     }
 
 
