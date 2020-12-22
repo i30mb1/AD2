@@ -27,7 +27,7 @@ import javax.inject.Inject
 
 class HeroGuideWorker(
     val context: Context,
-    workerParameters: WorkerParameters
+    workerParameters: WorkerParameters,
 ) : CoroutineWorker(context, workerParameters) {
 
     companion object {
@@ -37,7 +37,7 @@ class HeroGuideWorker(
 
     private val notificationId = 1
     private val channelId = "guide_worker"
-    private val channelName = applicationContext.getString(R.string.channel_name_guide)
+    private val channelName = "Guide"
     private val notificationTitle = applicationContext.getString(R.string.notification_title_guide)
 
     @Inject
@@ -47,15 +47,15 @@ class HeroGuideWorker(
     lateinit var moshi: Moshi
 
     override suspend fun doWork(): Result = coroutineScope {
-        NotificationManagerCompat.from(applicationContext).areNotificationsEnabled()
-        if (applicationContext.isChannelNotCreated(channelId)) applicationContext.createNotificationChannel(channelId, channelName)
+        if (NotificationManagerCompat.from(applicationContext).areNotificationsEnabled()) {
+            if (applicationContext.isChannelNotCreated(channelId)) applicationContext.createNotificationChannel(channelId, channelName)
 
-        val notification = NotificationCompat.Builder(applicationContext, channelId)
-            .setSmallIcon(R.mipmap.ic_launcher)
-            .setContentTitle(notificationTitle)
-            .build()
-
-        setForeground(ForegroundInfo(notificationId, notification))
+            val notification = NotificationCompat.Builder(applicationContext, channelId)
+                .setSmallIcon(R.mipmap.ic_launcher)
+                .setContentTitle(notificationTitle)
+                .build()
+            setForeground(ForegroundInfo(notificationId, notification))
+        }
 
         (context as MyApplication).component.inject(this@HeroGuideWorker)
 
