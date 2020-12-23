@@ -8,14 +8,14 @@ import com.squareup.moshi.JsonClass
 class LocalGuideJson(
     @Json(name = "heroName")
     val heroName: String,
-    @Json(name = "heroWinRate")
-    val heroWinRate: String,
+    @Json(name = "heroWinrate")
+    val heroWinrate: String,
     @Json(name = "heroPopularity")
     val heroPopularity: String,
-    @Json(name = "heroBestVersus")
-    val heroBestVersus: List<String>,
-    @Json(name = "heroWorstVersus")
-    val heroWorstVersus: List<String>,
+    @Json(name = "hardToWinHeroList")
+    val hardToWinHeroList: List<String>,
+    @Json(name = "easyToWinHeroList")
+    val easyToWinHeroList: List<String>,
     @Json(name = "detailedGuide")
     val detailedGuide: DetailedGuide
 )

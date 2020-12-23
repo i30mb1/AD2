@@ -107,8 +107,8 @@ class GetLocalGuideJsonUseCase @Inject constructor(
             heroName,
             heroWinrate,
             "",
-            easyToWinHeroesList,
             hardToWinHeroesList,
+            easyToWinHeroesList,
             DetailedGuide(
                 "guideTime",
                 emptyList(),
@@ -152,6 +152,7 @@ class GetLocalGuideJsonUseCase @Inject constructor(
         }.children()
         for (item in section) {
             val name = item.child(1).text()
+                .replace("Outworld Destroyer", "Outworld Devourer")
             val heroWinrate = item.child(2).text()
             add(name)
         }
@@ -164,6 +165,7 @@ class GetLocalGuideJsonUseCase @Inject constructor(
         }.children()
         for (item in section) {
             val name = item.child(1).text()
+                .replace("Outworld Destroyer", "Outworld Devourer")
             val heroWinrate = item.child(2).text()
             add(name)
         }

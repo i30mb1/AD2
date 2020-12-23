@@ -9,7 +9,8 @@ import androidx.recyclerview.widget.ListAdapter
 import androidx.recyclerview.widget.RecyclerView
 import n7.ad2.BR
 import n7.ad2.R
-import n7.ad2.ui.heroGuide.domain.vo.VOGuideBestVersus
+import n7.ad2.ui.heroGuide.domain.vo.VOEasyToWinHeroes
+import n7.ad2.ui.heroGuide.domain.vo.VOHardToWinHeroes
 import n7.ad2.ui.heroGuide.domain.vo.VOGuideItem
 import n7.ad2.ui.heroGuide.domain.vo.VOGuideTitle
 import n7.ad2.utils.StickyHeaderDecorator
@@ -23,7 +24,8 @@ class HeroGuideAdapter
 
     override fun getItemViewType(position: Int) = when (getItem(position)) {
         is VOGuideTitle -> R.layout.item_guide_title
-        is VOGuideBestVersus -> R.layout.item_guide_best_versus
+        is VOHardToWinHeroes -> R.layout.item_hard_to_win_heroes
+        is VOEasyToWinHeroes -> R.layout.item_easy_to_win_heroes
     }
 
     override fun getHeaderLayout() = R.layout.item_guide_title

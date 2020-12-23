@@ -8,7 +8,15 @@ import coil.load
 import n7.ad2.data.source.local.Repository
 import n7.ad2.utils.extension.toPx
 
-fun List<String>.toVOGuideBestVersus(context: Context): List<ImageView> = this.map { heroName ->
+fun List<String>.toVOHardToWinHeroes(context: Context): List<ImageView> = this.map { heroName ->
+    ImageView(context).apply {
+        layoutParams = ConstraintLayout.LayoutParams(70.toPx, 40.toPx)
+        id = View.generateViewId()
+        load(Repository.getFullUrlHeroImage(heroName))
+    }
+}
+
+fun List<String>.toVOEasyToWinHeroes(context: Context): List<ImageView> = this.map { heroName ->
     ImageView(context).apply {
         layoutParams = ConstraintLayout.LayoutParams(70.toPx, 40.toPx)
         id = View.generateViewId()

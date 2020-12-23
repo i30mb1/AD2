@@ -1,6 +1,8 @@
 package n7.ad2.ui.heroGuide
 
+import android.animation.LayoutTransition
 import android.content.Context
+import android.transition.TransitionManager
 import android.util.AttributeSet
 import android.view.View
 import androidx.constraintlayout.helper.widget.Flow
@@ -32,10 +34,12 @@ class HeroFlow(
     fun setHeroes(guideHeroesLst: List<View>) {
         children.filter { it !is Flow }
             .forEach(::removeView)
+        TransitionManager.beginDelayedTransition(this)
         guideHeroesLst.forEach {
             addView(it)
             flow.addView(it)
         }
+        TransitionManager.endTransitions(this)
     }
 
 }
