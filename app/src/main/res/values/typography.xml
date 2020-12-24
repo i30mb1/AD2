@@ -55,4 +55,14 @@
         <item name="android:textSize">12sp</item>
     </style>
 
+    <style name="TextAppearance.HeroAdvantage" parent="">
+        <item name="android:textSize">8sp</item>
+        <item name="android:textColor">@android:color/holo_green_light</item>
+    </style>
+
+    <style name="TextAppearance.HeroDisadvantage" parent="TextAppearance.HeroAdvantage">
+        <item name="android:textColor">@android:color/holo_red_light</item>
+    </style>
+
+
 </resources>

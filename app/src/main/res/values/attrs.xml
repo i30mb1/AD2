@@ -7,4 +7,6 @@
 
     <attr name="textAppearanceTalent" format="reference" />
     <attr name="textAppearanceHeroStatistics" format="reference" />
+    <attr name="textAppearanceHeroAdvantage" format="reference" />
+    <attr name="textAppearanceHeroDisadvantage" format="reference" />
 </resources>

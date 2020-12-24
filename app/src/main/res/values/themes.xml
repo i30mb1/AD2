@@ -35,6 +35,8 @@
         <item name="textAppearanceOverline">@style/TextAppearance.OverLine</item>
         <item name="textAppearanceTalent">@style/TextAppearance.Talent</item>
         <item name="textAppearanceHeroStatistics">@style/TextAppearance.HeroStatistics</item>
+        <item name="textAppearanceHeroAdvantage">@style/TextAppearance.HeroAdvantage</item>
+        <item name="textAppearanceHeroDisadvantage">@style/TextAppearance.HeroDisadvantage</item>
 
         <item name="shapeAppearanceMediumComponent">@style/MyMediumComponent</item>
         <item name="materialAlertDialogTheme">@style/MyMaterialAlertDialogTheme</item>
