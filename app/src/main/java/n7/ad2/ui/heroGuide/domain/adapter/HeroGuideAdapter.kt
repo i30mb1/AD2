@@ -6,19 +6,12 @@ import n7.ad2.ui.heroGuide.domain.model.HeroWithWinrate
 import n7.ad2.ui.heroGuide.domain.vo.VOEasyToWinHeroes
 import n7.ad2.ui.heroGuide.domain.vo.VOHardToWinHeroes
 
-fun List<HeroWithWinrate>.toVOHardToWinHeroes(): VOHardToWinHeroes = VOHardToWinHeroes(
-    map {
-        VOHeroFlowItem(
-            it.heroName,
-            Repository.getFullUrlHeroImage(it.heroName),
-            "${it.heroWinrate}%")
-    }
-)
+fun List<HeroWithWinrate>.toVOHardToWinHeroes(): VOHardToWinHeroes = VOHardToWinHeroes(map { it.toVOHeroFlowItem() })
 
-fun List<HeroWithWinrate>.toVOEasyToWinHeroes(): VOEasyToWinHeroes = VOEasyToWinHeroes(
-    map {
-        VOHeroFlowItem(it.heroName,
-            Repository.getFullUrlHeroImage(it.heroName),
-            "${it.heroWinrate}%")
-    }
+fun List<HeroWithWinrate>.toVOEasyToWinHeroes(): VOEasyToWinHeroes = VOEasyToWinHeroes(map { it.toVOHeroFlowItem() })
+
+private fun HeroWithWinrate.toVOHeroFlowItem(): VOHeroFlowItem = VOHeroFlowItem(
+    heroName,
+    Repository.getFullUrlHeroImage(heroName),
+    "${heroWinrate}%"
 )
