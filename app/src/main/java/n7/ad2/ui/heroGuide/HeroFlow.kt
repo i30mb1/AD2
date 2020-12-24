@@ -18,12 +18,13 @@ import kotlinx.coroutines.flow.collect
 import kotlinx.coroutines.flow.filter
 import kotlinx.coroutines.flow.flowOn
 import kotlinx.coroutines.flow.map
+import kotlinx.coroutines.flow.onCompletion
 import kotlinx.coroutines.flow.onStart
 import kotlinx.coroutines.launch
 import n7.ad2.R
 import n7.ad2.utils.extension.toPx
 
-class VOHeroFlowItem(val heroName: String, val urlHeroImage: String)
+data class VOHeroFlowItem(val heroName: String, val urlHeroImage: String)
 
 class HeroFlow(
     context: Context,
@@ -45,6 +46,7 @@ class HeroFlow(
 
     init {
         addView(flow)
+        visibility = INVISIBLE
     }
 
     fun setHeroes(list: List<VOHeroFlowItem>) {
@@ -57,19 +59,24 @@ class HeroFlow(
                 .onStart { removeViews.collect() }
                 .map(::inflateItemHeroFlow)
                 .flowOn(Dispatchers.IO)
-                .collect {
+                .onCompletion {
                     TransitionManager.beginDelayedTransition(this@HeroFlow)
+                    visibility = VISIBLE
+                }
+                .collect {
                     addView(it)
                     flow.addView(it)
-                    TransitionManager.endTransitions(this@HeroFlow)
                 }
+
         }
     }
 
 
     private fun inflateItemHeroFlow(item: VOHeroFlowItem): View {
         val view = inflater.inflate(R.layout.item_hero_flow, this, false)
-        view.findViewById<ImageView>(R.id.iv).load(item.urlHeroImage)
+        view.findViewById<ImageView>(R.id.iv).load(item.urlHeroImage) {
+            error(R.drawable.hero_placeholder)
+        }
         view.id = generateViewId()
         return view
     }
