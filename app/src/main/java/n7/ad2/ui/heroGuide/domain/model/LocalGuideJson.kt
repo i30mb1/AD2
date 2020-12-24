@@ -13,11 +13,19 @@ class LocalGuideJson(
     @Json(name = "heroPopularity")
     val heroPopularity: String,
     @Json(name = "hardToWinHeroList")
-    val hardToWinHeroList: List<String>,
+    val hardToWinHeroList: List<HeroWithWinrate>,
     @Json(name = "easyToWinHeroList")
-    val easyToWinHeroList: List<String>,
+    val easyToWinHeroList: List<HeroWithWinrate>,
     @Json(name = "detailedGuide")
-    val detailedGuide: DetailedGuide
+    val detailedGuide: DetailedGuide,
+)
+
+@JsonClass(generateAdapter = true)
+class HeroWithWinrate(
+    @Json(name = "heroName")
+    val heroName: String,
+    @Json(name = "heroWinrate")
+    val heroWinrate: Double,
 )
 
 @JsonClass(generateAdapter = true)
@@ -27,7 +35,7 @@ class DetailedGuide(
     @Json(name = "heroItemBuild")
     val heroItemBuild: List<ItemBuild>,
     @Json(name = "heroSkillBuild")
-    val heroSkillBuild: List<String>
+    val heroSkillBuild: List<String>,
 )
 
 @JsonClass(generateAdapter = true)
@@ -35,5 +43,5 @@ class ItemBuild(
     @Json(name = "itemName")
     val itemName: List<String>,
     @Json(name = "itemTime")
-    val itemTime: List<String>
+    val itemTime: List<String>,
 )

@@ -23,6 +23,6 @@
         android:layout_gravity="center"
         android:gravity="center"
         android:textAppearance="?textAppearanceHeroAdvantage"
-        android:text="50.3%" />
+        tools:text="50.3%" />
 
 </FrameLayout>

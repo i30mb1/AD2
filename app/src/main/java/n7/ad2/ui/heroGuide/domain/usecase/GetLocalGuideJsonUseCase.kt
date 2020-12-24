@@ -3,6 +3,7 @@ package n7.ad2.ui.heroGuide.domain.usecase
 import kotlinx.coroutines.CoroutineDispatcher
 import kotlinx.coroutines.withContext
 import n7.ad2.ui.heroGuide.domain.model.DetailedGuide
+import n7.ad2.ui.heroGuide.domain.model.HeroWithWinrate
 import n7.ad2.ui.heroGuide.domain.model.LocalGuideJson
 import org.jsoup.Jsoup
 import org.jsoup.nodes.Document
@@ -146,28 +147,26 @@ class GetLocalGuideJsonUseCase @Inject constructor(
     }
 
     @OptIn(ExperimentalStdlibApi::class)
-    private fun getHeroesThatWeakAgainstSelectedHero(document: Document, heroName: String) = buildList<String> {
+    private fun getHeroesThatWeakAgainstSelectedHero(document: Document, heroName: String) = buildList {
         val section = document.getElementsByTag("tbody").getOrElse(3) {
             throw Exception("could not parse heroes that weak against $heroName")
         }.children()
         for (item in section) {
-            val name = item.child(1).text()
-                .replace("Outworld Destroyer", "Outworld Devourer")
-            val heroWinrate = item.child(2).text()
-            add(name)
+            val weakHeroName = item.child(1).text().replace("Outworld Destroyer", "Outworld Devourer")
+            val heroWinrate = item.child(2).text().replace("%", "").toDouble()
+            add(HeroWithWinrate(weakHeroName, heroWinrate))
         }
     }
 
     @OptIn(ExperimentalStdlibApi::class)
-    private fun getHeroesThatStrongAgainstSelectedHero(document: Document, heroName: String) = buildList<String> {
+    private fun getHeroesThatStrongAgainstSelectedHero(document: Document, heroName: String) = buildList {
         val section = document.getElementsByTag("tbody").getOrElse(4) {
             throw Exception("could not parse heroes that strong against $heroName")
         }.children()
         for (item in section) {
-            val name = item.child(1).text()
-                .replace("Outworld Destroyer", "Outworld Devourer")
-            val heroWinrate = item.child(2).text()
-            add(name)
+            val strongHeroName = item.child(1).text().replace("Outworld Destroyer", "Outworld Devourer")
+            val heroWinrate = item.child(2).text().replace("%", "").toDouble()
+            add(HeroWithWinrate(strongHeroName, heroWinrate))
         }
     }
 

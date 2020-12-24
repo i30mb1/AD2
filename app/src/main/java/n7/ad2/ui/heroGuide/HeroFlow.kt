@@ -26,7 +26,7 @@ import kotlinx.coroutines.launch
 import n7.ad2.R
 import n7.ad2.utils.extension.toPx
 
-data class VOHeroFlowItem(val heroName: String, val urlHeroImage: String)
+data class VOHeroFlowItem(val heroName: String, val urlHeroImage: String, val heroWinrate: String)
 
 class HeroFlow(
     context: Context,
@@ -86,6 +86,7 @@ class HeroFlow(
         }
         view.findViewById<MaterialTextView>(R.id.tv_winrate).apply {
             setTextAppearance(style)
+            text = item.heroWinrate
         }
         view.id = generateViewId()
         return view
