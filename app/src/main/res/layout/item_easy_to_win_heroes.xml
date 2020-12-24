@@ -15,6 +15,6 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:background="?colorSurface"
-        app:heroes="@{item.list}"
+        app:HeroesEasyToWin="@{item.list}"
         tools:layout_height="300dp" />
 </layout>

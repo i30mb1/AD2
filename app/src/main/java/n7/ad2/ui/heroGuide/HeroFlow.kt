@@ -5,17 +5,19 @@ import android.util.AttributeSet
 import android.view.LayoutInflater
 import android.view.View
 import android.widget.ImageView
+import androidx.annotation.StyleRes
 import androidx.constraintlayout.helper.widget.Flow
 import androidx.constraintlayout.widget.ConstraintLayout
 import androidx.core.view.children
 import androidx.transition.TransitionManager
 import coil.load
+import com.google.android.material.textview.MaterialTextView
 import kotlinx.coroutines.CoroutineScope
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.MainScope
+import kotlinx.coroutines.cancel
 import kotlinx.coroutines.flow.asFlow
 import kotlinx.coroutines.flow.collect
-import kotlinx.coroutines.flow.filter
 import kotlinx.coroutines.flow.flowOn
 import kotlinx.coroutines.flow.map
 import kotlinx.coroutines.flow.onCompletion
@@ -49,15 +51,20 @@ class HeroFlow(
         visibility = INVISIBLE
     }
 
-    fun setHeroes(list: List<VOHeroFlowItem>) {
-        launch {
-            val removeViews = children.asFlow()
-                .filter { it !is Flow }
-                .map(::removeView)
+    override fun onDetachedFromWindow() {
+        super.onDetachedFromWindow()
+        cancel()
+    }
 
+    fun setHeroesHardToWin(list: List<VOHeroFlowItem>) = setHeroes(list, R.style.TextAppearance_HeroDisadvantage)
+
+    fun setHeroesEasyToWin(list: List<VOHeroFlowItem>) = setHeroes(list, R.style.TextAppearance_HeroAdvantage)
+
+    private fun setHeroes(list: List<VOHeroFlowItem>, @StyleRes style: Int) {
+        launch {
             list.asFlow()
-                .onStart { removeViews.collect() }
-                .map(::inflateItemHeroFlow)
+                .onStart { clearFlowFromViews() }
+                .map { inflateItemHeroFlow(it, style) }
                 .flowOn(Dispatchers.IO)
                 .onCompletion {
                     TransitionManager.beginDelayedTransition(this@HeroFlow)
@@ -67,15 +74,18 @@ class HeroFlow(
                     addView(it)
                     flow.addView(it)
                 }
-
         }
     }
 
+    private fun clearFlowFromViews() = children.filter { it !is Flow }.map(::removeView)
 
-    private fun inflateItemHeroFlow(item: VOHeroFlowItem): View {
+    private fun inflateItemHeroFlow(item: VOHeroFlowItem, @StyleRes style: Int): View {
         val view = inflater.inflate(R.layout.item_hero_flow, this, false)
         view.findViewById<ImageView>(R.id.iv).load(item.urlHeroImage) {
             error(R.drawable.hero_placeholder)
+        }
+        view.findViewById<MaterialTextView>(R.id.tv_winrate).apply {
+            setTextAppearance(style)
         }
         view.id = generateViewId()
         return view
