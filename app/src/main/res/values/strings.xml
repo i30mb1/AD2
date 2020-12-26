@@ -214,7 +214,7 @@
 
     <string name="hotkey" translatable="false">Hot Key</string>
     <string name="legacykey" translatable="false">Legacy Key</string>
-    <string name="hero_winrate" translatable="false">winrate : %s</string>
+    <string name="hero_popularity" translatable="false">popularity : %s</string>
     <string name="hero_pickrate" translatable="false">pickrate: %s</string>
 
     <string name="tn_iv_photo" translatable="false">tn_iv_photo_%1$s</string>

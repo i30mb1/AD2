@@ -22,7 +22,7 @@ class ConvertLocalGuideJsonToVOGuideItemsUseCase @Inject constructor(
     suspend operator fun invoke(list: List<LocalGuideJson>): List<VOGuideItem> = withContext(ioDispatcher) {
         val item = list.getOrNull(list.lastIndex) ?: return@withContext emptyList()
         buildList {
-            add(VOGuideInfoLine(application.getString(R.string.hero_winrate, item.heroWinrate)))
+            add(VOGuideInfoLine(application.getString(R.string.hero_popularity, item.heroWinrate)))
             add(VOGuideInfoLine(application.getString(R.string.hero_pickrate, item.heroPopularity)))
             add(VOGuideTitle(application.getString(R.string.easy_to_win_heroes)))
             add(item.easyToWinHeroList.toVOEasyToWinHeroes())
