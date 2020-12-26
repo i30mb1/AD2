@@ -38,6 +38,7 @@ class GetLocalGuideJsonUseCase @Inject constructor(
         val easyToWinHeroesList = getHeroesThatWeakAgainstSelectedHero(documentWithHero, heroName)
         val hardToWinHeroesList = getHeroesThatStrongAgainstSelectedHero(documentWithHero, heroName)
         val heroWinrate = getHeroWinrate(documentWithHero)
+        val heroPopularity = getHeroPopularity(documentWithHero)
 
         val documentWithHeroGuides = getDocumentFromUrl(getUrlForHeroGuides(heroNameFormatted))
 
@@ -107,7 +108,7 @@ class GetLocalGuideJsonUseCase @Inject constructor(
         LocalGuideJson(
             heroName,
             heroWinrate,
-            "",
+            heroPopularity,
             hardToWinHeroesList,
             easyToWinHeroesList,
             DetailedGuide(
@@ -128,6 +129,12 @@ class GetLocalGuideJsonUseCase @Inject constructor(
         if (elementsSafe.size == 1) return "SAFE LANE"
         val elementsRoaming = element.getElementsByClass("fa fa-lane-roaming fa-fw lane-icon roaming-icon")
         return if (elementsRoaming.size == 1) "ROAMING" else "-"
+    }
+
+    private fun getHeroPopularity(document: Document): String {
+        val popularity = document.getElementsByClass("header-content-secondary").getOrNull(0)?.child(0)?.child(0)?.text()
+        if (popularity != null) return popularity
+        throw Exception("could not get hero popularity")
     }
 
     private fun getHeroWinrate(document: Document): String {
