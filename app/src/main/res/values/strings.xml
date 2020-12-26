@@ -76,8 +76,6 @@
     <string name="fragment_guide_starting_items">Starting items</string>
     <string name="easy_to_win_heroes">Best versus heroes</string>
     <string name="hard_to_win_heroes">Worst versus heroes</string>
-    <string name="fragment_guide_current_winrate" translatable="false">%s</string>
-    <string name="fragment_guide_current_pickrate" translatable="false">%s</string>
     <string name="setting_subscription_key" translatable="false">pref_month_key</string>
     <string name="compare_win_rate" translatable="false">Win Rate</string>
     <string name="setting_subscription_summary">Ready to take the next step?</string>
@@ -216,6 +214,8 @@
 
     <string name="hotkey" translatable="false">Hot Key</string>
     <string name="legacykey" translatable="false">Legacy Key</string>
+    <string name="hero_winrate" translatable="false">winrate : %s</string>
+    <string name="hero_pickrate" translatable="false">pickrate: %s</string>
 
     <string name="tn_iv_photo" translatable="false">tn_iv_photo_%1$s</string>
 

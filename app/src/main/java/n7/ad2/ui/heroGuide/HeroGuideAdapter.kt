@@ -13,6 +13,7 @@ import n7.ad2.ui.heroGuide.domain.vo.VOEasyToWinHeroes
 import n7.ad2.ui.heroGuide.domain.vo.VOHardToWinHeroes
 import n7.ad2.ui.heroGuide.domain.vo.VOGuideItem
 import n7.ad2.ui.heroGuide.domain.vo.VOGuideTitle
+import n7.ad2.ui.heroGuide.domain.vo.VOGuideInfoLine
 import n7.ad2.utils.StickyHeaderDecorator
 
 class HeroGuideAdapter
@@ -26,6 +27,7 @@ class HeroGuideAdapter
         is VOGuideTitle -> R.layout.item_guide_title
         is VOHardToWinHeroes -> R.layout.item_hard_to_win_heroes
         is VOEasyToWinHeroes -> R.layout.item_easy_to_win_heroes
+        is VOGuideInfoLine -> R.layout.item_guide_info_line
     }
 
     override fun getHeaderLayout() = R.layout.item_guide_title
