@@ -42,66 +42,38 @@ class GetLocalGuideJsonUseCase @Inject constructor(
 
         val documentWithHeroGuides = getDocumentFromUrl(getUrlForHeroGuides(heroNameFormatted))
 
-//        val popularity = pageWithHeroGuides.getElementsByAttributeValue("class", "header-content-secondary")[0].child(0).child(0).text()
+        val guides = documentWithHeroGuides.getElementsByClass("r-stats-grid")
+        val guide = guides[0]!!
+        val startingItemsList = getStartingItemsList(guide)
+
+        // FURTHER ITEMS
+//        for (i in elementsItemRows.indices) {
+//            var findTime = false
+//            if (i == 0 && elementsItemRows[i].children().size > 2) continue
+//            for (item in elementsItemRows[i].children()) {
+//                if (item.tag().toString() == "div") {
+//                    val itemName = item.child(0).child(0).child(0).attr("title").toLowerCase().trim { it <= ' ' }.replace(" ", "_")
+//                    if (itemName == "gem_of_true_sight") continue
+//                    stringFurtherItems.append(itemName)
+//                    if (i != 0) if (!findTime && elementsItemRows[i].getElementsByTag("small").size > 0) {
+//                        findTime = true
+//                        stringFurtherItems.append("^").append(elementsItemRows[i].getElementsByTag("small")[0].text())
+//                    }
+//                }
+//                if (!stringFurtherItems.toString().endsWith("/")) stringFurtherItems.append("/")
+//            }
+//        }
 //
-//        // 5 DIFFERENT PACKS
-//        var guideTime = ""
-//        var lane = ""
-//        val itemTime = mutableListOf<String>()
-//        val elements = pageWithHeroGuides.getElementsByClass("r-stats-grid")
-//        if (elements.size > 0) {
-//            for (element in elements) {
-//                if (itemTime.size > 0) break
-//                guideTime = element.getElementsByTag("time").text()
-//                // LANE
-//                lane = detectLine(element)
-////                    // ITEMS
-////                    if (element.children().size >= 2) {
-////                        val elementsItemRows = element.child(2).getElementsByClass("kv r-none-mobile")
-//                // STARTING ITEMS
-////                Element startingItems = elementsItemRows.get(0);
-////                if (stringStartingItems.length() != 0) {
-////                    stringStartingItems.append("+");
-////                }
-////                for (Element item : startingItems.children()) {
-////                    if (item.tag().toString().endsWith("div")) {
-////                        stringStartingItems.append(item.child(0).child(0).child(0).attr("title").toLowerCase().trim().replace(" ", "_"));
-////                        stringStartingItems.append("/");
-////                    }
-////                }
-//                // FURTHER ITEMS
-////                        if (stringFurtherItems.length != 0) {
-////                            stringFurtherItems.append("+")
-////                        }
-////                        for (i in elementsItemRows.indices) {
-////                            var findTime = false
-////                            if (i == 0 && elementsItemRows[i].children().size > 2) continue
-////                            for (item in elementsItemRows[i].children()) {
-////                                if (item.tag().toString() == "div") {
-////                                    val itemName = item.child(0).child(0).child(0).attr("title").toLowerCase().trim { it <= ' ' }.replace(" ", "_")
-////                                    if (itemName == "gem_of_true_sight") continue
-////                                    stringFurtherItems.append(itemName)
-////                                    if (i != 0) if (!findTime && elementsItemRows[i].getElementsByTag("small").size > 0) {
-////                                        findTime = true
-////                                        stringFurtherItems.append("^").append(elementsItemRows[i].getElementsByTag("small")[0].text())
-////                                    }
-////                                }
-////                                if (!stringFurtherItems.toString().endsWith("/")) stringFurtherItems.append("/")
-////                            }
-////                        }
-////                    }
-//                // SKILL BUILD
-////                    if (stringSkillBuilds.length != 0) {
-////                        stringSkillBuilds.append("+")
-////                    }
-////                    if (element.children().size >= 3) {
-////                        val skills = element.child(3).getElementsByClass("kv kv-small-margin")
-////                        for (skill in skills) {
-////                            var skillName = skill.child(0).child(0).child(0).attr("alt")
-////                            if (skillName.startsWith("Talent:")) skillName = "talent"
-////                            stringSkillBuilds.append(skillName).append("/")
-////                        }
-////                    }
+//        // SKILL BUILD
+//        if (stringSkillBuilds.length != 0) {
+//            stringSkillBuilds.append("+")
+//        }
+//        if (element.children().size >= 3) {
+//            val skills = element.child(3).getElementsByClass("kv kv-small-margin")
+//            for (skill in skills) {
+//                var skillName = skill.child(0).child(0).child(0).attr("alt")
+//                if (skillName.startsWith("Talent:")) skillName = "talent"
+//                stringSkillBuilds.append(skillName).append("/")
 //            }
 //        }
 
@@ -113,12 +85,26 @@ class GetLocalGuideJsonUseCase @Inject constructor(
             easyToWinHeroesList,
             DetailedGuide(
                 "guideTime",
+                startingItemsList,
                 emptyList(),
-                emptyList()
+                emptyList(),
             )
         )
     }
 
+    private fun getGuideTime(document: Document): String {
+        return document.getElementsByTag("time").text()
+    }
+
+    private fun getStartingItemsList(element: Element): List<String> {
+        val ignoreList = listOf("Town Portal Scroll", "Tango (Shared)")
+        val startingItems = element.child(2).getElementsByClass("kv r-none-mobile").getOrNull(0)?.getElementsByClass("inline inline-margin")
+        if (startingItems == null || startingItems.size == 0) throw Exception("could not find starting items")
+        val result = startingItems.mapNotNull { it.getElementsByTag("img").getOrNull(0)?.attr("title") }
+            .filterNot { ignoreList.contains(it) }
+        if (result.isEmpty()) throw Exception("could not map starting items")
+        return result
+    }
 
     private fun detectLine(element: Element): String {
         val elementsMid = element.getElementsByClass("fa fa-lane-midlane fa-fw lane-icon midlane-icon")
