@@ -32,10 +32,12 @@ class HeroWithWinrate(
 class DetailedGuide(
     @Json(name = "guideTime")
     val guideTime: String,
+    @Json(name = "startingItems")
+    val heroStartingItemsList: List<String>,
     @Json(name = "heroItemBuild")
-    val heroItemBuild: List<ItemBuild>,
+    val heroItemsList: List<ItemBuild>,
     @Json(name = "heroSkillBuild")
-    val heroSkillBuild: List<String>,
+    val heroSkillsList: List<String>,
 )
 
 @JsonClass(generateAdapter = true)
