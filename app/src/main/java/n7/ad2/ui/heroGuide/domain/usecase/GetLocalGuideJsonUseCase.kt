@@ -45,6 +45,7 @@ class GetLocalGuideJsonUseCase @Inject constructor(
         val guides = documentWithHeroGuides.getElementsByClass("r-stats-grid")
         val guide = guides[0]!!
         val startingItemsList = getStartingItemsList(guide)
+        val guideTime = getGuideTime(guide)
 
         // FURTHER ITEMS
 //        for (i in elementsItemRows.indices) {
@@ -84,7 +85,7 @@ class GetLocalGuideJsonUseCase @Inject constructor(
             hardToWinHeroesList,
             easyToWinHeroesList,
             DetailedGuide(
-                "guideTime",
+                guideTime,
                 startingItemsList,
                 emptyList(),
                 emptyList(),
@@ -92,8 +93,12 @@ class GetLocalGuideJsonUseCase @Inject constructor(
         )
     }
 
-    private fun getGuideTime(document: Document): String {
-        return document.getElementsByTag("time").text()
+    private fun getGuideTime(element: Element): String {
+        val elementsTime = element.getElementsByTag("time")
+        if (elementsTime.size == 0) throw Exception("could not find guide time tag")
+        val time = elementsTime.getOrNull(0)?.attr("datetime")
+        if (time != null) return time
+        throw Exception("could not parse time")
     }
 
     private fun getStartingItemsList(element: Element): List<String> {
