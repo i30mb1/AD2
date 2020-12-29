@@ -48,19 +48,7 @@ class GetLocalGuideJsonUseCase @Inject constructor(
         val startingItemsList = getStartingItemsList(guide)
         val guideTime = getGuideTime(guide)
         val heroItemsList = getHeroItemsList(guide)
-//
-//        // SKILL BUILD
-//        if (stringSkillBuilds.length != 0) {
-//            stringSkillBuilds.append("+")
-//        }
-//        if (element.children().size >= 3) {
-//            val skills = element.child(3).getElementsByClass("kv kv-small-margin")
-//            for (skill in skills) {
-//                var skillName = skill.child(0).child(0).child(0).attr("alt")
-//                if (skillName.startsWith("Talent:")) skillName = "talent"
-//                stringSkillBuilds.append(skillName).append("/")
-//            }
-//        }
+        val heroSkillList = getHeroSkillList(guide)
 
         LocalGuideJson(
             heroName,
@@ -72,9 +60,22 @@ class GetLocalGuideJsonUseCase @Inject constructor(
                 guideTime,
                 startingItemsList,
                 heroItemsList,
-                emptyList(),
+                heroSkillList,
             )
         )
+    }
+
+    private fun getHeroSkillList(element: Element): List<String> {
+        val ignoredList = listOf("")
+        val result = mutableListOf<String>()
+        val skills = element.getElementsByClass("kv kv-small-margin").map { it.getElementsByTag("img") }
+
+        for (skill in skills) {
+            val skillName = skill.attr("title")
+            if (!ignoredList.contains(skillName)) result.add(skillName)
+        }
+
+        return result
     }
 
     private fun getHeroItemsList(element: Element): List<ItemBuild> {
