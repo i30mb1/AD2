@@ -4,6 +4,7 @@ import kotlinx.coroutines.CoroutineDispatcher
 import kotlinx.coroutines.withContext
 import n7.ad2.ui.heroGuide.domain.model.DetailedGuide
 import n7.ad2.ui.heroGuide.domain.model.HeroWithWinrate
+import n7.ad2.ui.heroGuide.domain.model.ItemBuild
 import n7.ad2.ui.heroGuide.domain.model.LocalGuideJson
 import org.jsoup.Jsoup
 import org.jsoup.nodes.Document
@@ -46,24 +47,7 @@ class GetLocalGuideJsonUseCase @Inject constructor(
         val guide = guides[0]!!
         val startingItemsList = getStartingItemsList(guide)
         val guideTime = getGuideTime(guide)
-
-        // FURTHER ITEMS
-//        for (i in elementsItemRows.indices) {
-//            var findTime = false
-//            if (i == 0 && elementsItemRows[i].children().size > 2) continue
-//            for (item in elementsItemRows[i].children()) {
-//                if (item.tag().toString() == "div") {
-//                    val itemName = item.child(0).child(0).child(0).attr("title").toLowerCase().trim { it <= ' ' }.replace(" ", "_")
-//                    if (itemName == "gem_of_true_sight") continue
-//                    stringFurtherItems.append(itemName)
-//                    if (i != 0) if (!findTime && elementsItemRows[i].getElementsByTag("small").size > 0) {
-//                        findTime = true
-//                        stringFurtherItems.append("^").append(elementsItemRows[i].getElementsByTag("small")[0].text())
-//                    }
-//                }
-//                if (!stringFurtherItems.toString().endsWith("/")) stringFurtherItems.append("/")
-//            }
-//        }
+        val heroItemsList = getHeroItemsList(guide)
 //
 //        // SKILL BUILD
 //        if (stringSkillBuilds.length != 0) {
@@ -87,10 +71,30 @@ class GetLocalGuideJsonUseCase @Inject constructor(
             DetailedGuide(
                 guideTime,
                 startingItemsList,
-                emptyList(),
+                heroItemsList,
                 emptyList(),
             )
         )
+    }
+
+    private fun getHeroItemsList(element: Element): List<ItemBuild> {
+        val ignoreList = listOf("")
+        val result = mutableListOf<ItemBuild>()
+        val itemsGroup = element.getElementsByClass("kv r-none-mobile")
+        for (i in 1 until itemsGroup.size) {
+            val group = itemsGroup[i]
+            var itemTime = ""
+            group.getElementsByTag("small").getOrNull(0)?.let {
+                itemTime = it.text()
+                it.remove()
+            }
+            val groupImages = group.children().mapNotNull { it.getElementsByTag("img") }
+            for (image in groupImages) {
+                val itemName = image.attr("title")
+                if (!ignoreList.contains(itemName)) result.add(ItemBuild(itemName, itemTime))
+            }
+        }
+        return result
     }
 
     private fun getGuideTime(element: Element): String {

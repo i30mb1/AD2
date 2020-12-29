@@ -43,7 +43,7 @@ class DetailedGuide(
 @JsonClass(generateAdapter = true)
 class ItemBuild(
     @Json(name = "itemName")
-    val itemName: List<String>,
+    val itemName: String,
     @Json(name = "itemTime")
-    val itemTime: List<String>,
+    val itemTime: String,
 )
