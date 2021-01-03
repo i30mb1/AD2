@@ -10,8 +10,10 @@ import n7.ad2.ui.heroGuide.domain.model.Skill
 import org.jsoup.Jsoup
 import org.jsoup.nodes.Document
 import org.jsoup.nodes.Element
-import java.util.*
+import java.util.Locale
 import javax.inject.Inject
+
+private inline class HeroNameFormatted(val heroName: String)
 
 @OptIn(ExperimentalStdlibApi::class)
 class GetLocalGuideJsonUseCase @Inject constructor(
@@ -19,32 +21,23 @@ class GetLocalGuideJsonUseCase @Inject constructor(
 ) {
 
     companion object {
-        private fun getUrlForHeroPage(heroName: String) = "https://ru.dotabuff.com/heroes/$heroName"
-        private fun getUrlForHeroGuides(heroName: String) = "https://www.dotabuff.com/heroes/$heroName/guides"
-    }
-
-    private fun String.formatHeroNameForUrl(): String {
-        return this.toLowerCase(Locale.ENGLISH)
-            .replace("_", "-")
-            .replace("'", "")
-            .replace("%20", "-")
-            .replace(" ", "-")
+        private fun getHeroNameFormatted(heroName: String): HeroNameFormatted = HeroNameFormatted(heroName.toLowerCase(Locale.ENGLISH).replace("_", "-").replace("'", "").replace("%20", "-").replace(" ", "-"))
+        private fun getUrlForHeroPage(heroName: HeroNameFormatted) = "https://ru.dotabuff.com/heroes/$heroName"
+        private fun getUrlForHeroGuides(heroName: HeroNameFormatted) = "https://www.dotabuff.com/heroes/$heroName/guides"
     }
 
     @Suppress("BlockingMethodInNonBlockingContext")
     suspend operator fun invoke(heroName: String): LocalGuideJson = withContext(ioDispatcher) {
 
-        val heroNameFormatted = heroName.formatHeroNameForUrl()
+        val heroNameFormatted = getHeroNameFormatted(heroName)
 
         val documentWithHero = getDocumentFromUrl(getUrlForHeroPage(heroNameFormatted))
-
         val easyToWinHeroesList = getHeroesThatWeakAgainstSelectedHero(documentWithHero, heroName)
         val hardToWinHeroesList = getHeroesThatStrongAgainstSelectedHero(documentWithHero, heroName)
         val heroWinrate = getHeroWinrate(documentWithHero)
         val heroPopularity = getHeroPopularity(documentWithHero)
 
         val documentWithHeroGuides = getDocumentFromUrl(getUrlForHeroGuides(heroNameFormatted))
-
         val heroGuides = getHeroGuides(documentWithHeroGuides)
 
         LocalGuideJson(heroName, heroWinrate, heroPopularity, hardToWinHeroesList, easyToWinHeroesList, heroGuides)
