@@ -6,6 +6,7 @@ import n7.ad2.ui.heroGuide.domain.model.DetailedGuide
 import n7.ad2.ui.heroGuide.domain.model.HeroWithWinrate
 import n7.ad2.ui.heroGuide.domain.model.ItemBuild
 import n7.ad2.ui.heroGuide.domain.model.LocalGuideJson
+import n7.ad2.ui.heroGuide.domain.model.Skill
 import org.jsoup.Jsoup
 import org.jsoup.nodes.Document
 import org.jsoup.nodes.Element
@@ -65,14 +66,15 @@ class GetLocalGuideJsonUseCase @Inject constructor(
         )
     }
 
-    private fun getHeroSkillList(element: Element): List<String> {
+    private fun getHeroSkillList(element: Element): List<Skill> {
         val ignoredList = listOf("")
-        val result = mutableListOf<String>()
-        val skills = element.getElementsByClass("kv kv-small-margin").map { it.getElementsByTag("img") }
+        val result = mutableListOf<Skill>()
+        val skills = element.getElementsByClass("kv kv-small-margin").map { it.getElementsByTag("a") }
 
         for (skill in skills) {
-            val skillName = skill.attr("title")
-            if (!ignoredList.contains(skillName)) result.add(skillName)
+            val skillOrder = skill.getOrNull(0)?.child(1)?.text() ?: throw Exception("could not parse skillOrder")
+            val skillName = skill.getOrNull(0)?.attr("title") ?: throw Exception("could not parse skillName")
+            if (!ignoredList.contains(skillName)) result.add(Skill(skillName, skillOrder))
         }
 
         return result

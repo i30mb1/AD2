@@ -37,7 +37,15 @@ class DetailedGuide(
     @Json(name = "heroItemBuild")
     val heroItemsList: List<ItemBuild>,
     @Json(name = "heroSkillBuild")
-    val heroSkillsList: List<String>,
+    val heroSkillsList: List<Skill>,
+)
+
+@JsonClass(generateAdapter = true)
+class Skill(
+    @Json(name = "skillName")
+    val skillName: String,
+    @Json(name = "skillOrder")
+    val skillOrder: String,
 )
 
 @JsonClass(generateAdapter = true)
