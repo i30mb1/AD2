@@ -109,11 +109,10 @@ class GetLocalGuideJsonUseCase @Inject constructor(
     }
 
     private fun getStartingItemsList(element: Element): List<String> {
-        val ignoreList = listOf("Town Portal Scroll", "Tango (Shared)")
+        val ignoreList = listOf("Town Portal Scroll", "Tango (Shared)", "Observer Ward")
         val startingItems = element.child(2).getElementsByClass("kv r-none-mobile").getOrNull(0)?.getElementsByClass("inline inline-margin")
         if (startingItems == null || startingItems.size == 0) throw Exception("could not find starting items")
-        val result = startingItems.mapNotNull { it.getElementsByTag("img").getOrNull(0)?.attr("title") }
-            .filterNot { ignoreList.contains(it) }
+        val result = startingItems.mapNotNull { it.getElementsByTag("img").getOrNull(0)?.attr("title") }.filterNot { ignoreList.contains(it) }
         if (result.isEmpty()) throw Exception("could not map starting items")
         return result
     }
