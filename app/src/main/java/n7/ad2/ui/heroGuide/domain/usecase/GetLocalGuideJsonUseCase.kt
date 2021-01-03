@@ -45,26 +45,21 @@ class GetLocalGuideJsonUseCase @Inject constructor(
 
         val documentWithHeroGuides = getDocumentFromUrl(getUrlForHeroGuides(heroNameFormatted))
 
-        val guides = documentWithHeroGuides.getElementsByClass("r-stats-grid")
-        val guide = guides[0]!!
-        val startingItemsList = getStartingItemsList(guide)
-        val guideTime = getGuideTime(guide)
-        val heroItemsList = getHeroItemsList(guide)
-        val heroSkillList = getHeroSkillList(guide)
+        val heroGuides = getHeroGuides(documentWithHeroGuides)
 
-        LocalGuideJson(
-            heroName,
-            heroWinrate,
-            heroPopularity,
-            hardToWinHeroesList,
-            easyToWinHeroesList,
-            DetailedGuide(
-                guideTime,
-                startingItemsList,
-                heroItemsList,
-                heroSkillList,
-            )
-        )
+        LocalGuideJson(heroName, heroWinrate, heroPopularity, hardToWinHeroesList, easyToWinHeroesList, heroGuides)
+    }
+
+    private fun getHeroGuides(document: Document): List<DetailedGuide> {
+        val guides = document.getElementsByClass("r-stats-grid")
+        if (guides.size == 0) throw Exception("could not find guides section")
+        return guides.map {
+            val guideTime = getGuideTime(it)
+            val startingItemsList = getStartingItemsList(it)
+            val heroItemsList = getHeroItemsList(it)
+            val heroSkillList = getHeroSkillList(it)
+            DetailedGuide(guideTime, startingItemsList, heroItemsList, heroSkillList)
+        }
     }
 
     private fun getHeroSkillList(element: Element): List<Skill> {
