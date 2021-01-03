@@ -147,7 +147,7 @@ class GetLocalGuideJsonUseCase @Inject constructor(
         try {
             return Jsoup.connect(url).get()
         } catch (e: Exception) {
-            throw Exception("could not get document from $url")
+            throw Exception("could not get document from ${url.replace("dotabuff","*******")}")
         }
     }
 
