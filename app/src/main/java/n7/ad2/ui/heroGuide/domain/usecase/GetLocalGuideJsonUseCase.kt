@@ -13,6 +13,7 @@ import org.jsoup.nodes.Element
 import java.util.*
 import javax.inject.Inject
 
+@OptIn(ExperimentalStdlibApi::class)
 class GetLocalGuideJsonUseCase @Inject constructor(
     private val ioDispatcher: CoroutineDispatcher,
 ) {
@@ -146,11 +147,11 @@ class GetLocalGuideJsonUseCase @Inject constructor(
         try {
             return Jsoup.connect(url).get()
         } catch (e: Exception) {
-            throw Exception("could not get document from ${url.replace("dotabuff","*******")}")
+            throw Exception("could not get document from ${url.replace("dotabuff", "*******")}")
         }
     }
 
-    @OptIn(ExperimentalStdlibApi::class)
+
     private fun getHeroesThatWeakAgainstSelectedHero(document: Document, heroName: String) = buildList {
         val section = document.getElementsByTag("tbody").getOrElse(3) {
             throw Exception("could not parse heroes that weak against $heroName")
@@ -162,7 +163,6 @@ class GetLocalGuideJsonUseCase @Inject constructor(
         }
     }
 
-    @OptIn(ExperimentalStdlibApi::class)
     private fun getHeroesThatStrongAgainstSelectedHero(document: Document, heroName: String) = buildList {
         val section = document.getElementsByTag("tbody").getOrElse(4) {
             throw Exception("could not parse heroes that strong against $heroName")
