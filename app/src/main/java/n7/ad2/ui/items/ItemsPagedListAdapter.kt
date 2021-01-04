@@ -17,11 +17,6 @@ class ItemsPagedListAdapter(
     fragment: ItemsFragment,
 ) : PagedListAdapter<VOItem, RecyclerView.ViewHolder>(DiffCallback()) {
 
-    companion object {
-        const val SPAN_SIZE_ITEM = 1
-        const val SPAN_SIZE_ITEM_HEADER = 4
-    }
-
     private val itemClickListener = { model: ItemItemBodyBinding -> fragment.startItemInfoFragment(model.model!!, model) }
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): RecyclerView.ViewHolder = when (viewType) {
@@ -102,13 +97,8 @@ class ItemsPagedListAdapter(
     }
 
     private class DiffCallback : DiffUtil.ItemCallback<VOItem>() {
-        override fun areItemsTheSame(oldItem: VOItem, newItem: VOItem) = when (oldItem) {
-            is VOItemBody -> newItem is VOItemBody
-            is VOItemHeader -> newItem is VOItemHeader
-        }
-
+        override fun areItemsTheSame(oldItem: VOItem, newItem: VOItem) = oldItem::class == newItem::class
         override fun areContentsTheSame(oldItem: VOItem, newItem: VOItem) = oldItem == newItem
-
     }
 
 }
