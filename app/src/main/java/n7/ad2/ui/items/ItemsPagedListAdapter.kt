@@ -7,7 +7,6 @@ import androidx.recyclerview.widget.DiffUtil
 import androidx.recyclerview.widget.RecyclerView
 import coil.clear
 import n7.ad2.R
-import n7.ad2.base.VOModelListener
 import n7.ad2.databinding.ItemItemBodyBinding
 import n7.ad2.databinding.ItemItemHeaderBinding
 import n7.ad2.ui.items.domain.vo.VOItem
@@ -23,16 +22,11 @@ class ItemsPagedListAdapter(
         const val SPAN_SIZE_ITEM_HEADER = 4
     }
 
-    private val listener = object : VOModelListener<ItemItemBodyBinding> {
-        override fun onClickListener(model: ItemItemBodyBinding) {
-            fragment.startItemInfoFragment(model.model!!, model)
-        }
-    }
+    private val itemClickListener = { model: ItemItemBodyBinding -> fragment.startItemInfoFragment(model.model!!, model) }
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): RecyclerView.ViewHolder = when (viewType) {
         R.layout.item_item_header -> HeaderViewHolder.from(parent)
-        R.layout.item_item_body -> ItemViewHolder.from(parent, listener)
-        else -> ItemViewHolder.from(parent, listener)
+        else -> ItemViewHolder.from(parent, itemClickListener)
     }
 
     override fun onBindViewHolder(holder: RecyclerView.ViewHolder, position: Int) {
@@ -82,12 +76,12 @@ class ItemsPagedListAdapter(
 
     private class ItemViewHolder private constructor(
         private val binding: ItemItemBodyBinding,
-        private val listener: VOModelListener<ItemItemBodyBinding>,
+        private val itemClickListener: (ItemItemBodyBinding) -> Unit,
     ) : RecyclerView.ViewHolder(binding.root) {
 
         fun bindTo(model: VOItemBody) = binding.let {
             it.model = model
-            it.listener = listener
+            it.itemClickListener = itemClickListener
             it.binding = binding
             it.executePendingBindings()
         }
@@ -98,10 +92,10 @@ class ItemsPagedListAdapter(
         }
 
         companion object {
-            fun from(parent: ViewGroup, listener: VOModelListener<ItemItemBodyBinding>): ItemViewHolder {
+            fun from(parent: ViewGroup, itemClickListener: (ItemItemBodyBinding) -> Unit): ItemViewHolder {
                 val layoutInflater = LayoutInflater.from(parent.context)
                 val binding = ItemItemBodyBinding.inflate(layoutInflater, parent, false)
-                return ItemViewHolder(binding, listener)
+                return ItemViewHolder(binding, itemClickListener)
             }
         }
 
