@@ -80,7 +80,7 @@ class HeroFlow(
     private fun clearFlowFromViews() = children.filter { it !is Flow }.map(::removeView)
 
     private fun inflateItemHeroFlow(item: VOHeroFlowItem, @StyleRes style: Int): View {
-        val view = inflater.inflate(R.layout.item_hero_flow, this, false)
+        val view = inflater.inflate(R.layout.flow_hero, this, false)
         view.findViewById<ImageView>(R.id.iv).load(item.urlHeroImage) {
             error(R.drawable.hero_placeholder)
         }
