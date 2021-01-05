@@ -11,18 +11,14 @@
         android:contentDescription="@string/desc_dota_hero"
         tools:src="@drawable/hero_placeholder" />
 
-    <View
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:background="@drawable/transparent_30" />
-
     <com.google.android.material.textview.MaterialTextView
         android:id="@+id/tv_winrate"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
+        android:layout_height="match_parent"
         android:layout_gravity="center"
+        android:background="@drawable/transparent_30"
         android:gravity="center"
-        android:textAppearance="?textAppearanceHeroAdvantage"
-        tools:text="50.3%" />
+        tools:text="50.3%"
+        tools:textAppearance="?textAppearanceHeroAdvantage" />
 
 </FrameLayout>
