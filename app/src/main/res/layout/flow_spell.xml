@@ -1,15 +1,15 @@
 <?xml version="1.0" encoding="utf-8"?>
 <FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
-    android:layout_width="44dp"
-    android:layout_height="32dp">
+    android:layout_width="40dp"
+    android:layout_height="40dp">
 
     <ImageView
         android:id="@+id/iv_skill"
-        android:layout_width="44dp"
-        android:layout_height="32dp"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
         android:contentDescription="@string/desc_hero_item"
-        tools:src="@drawable/item_placeholder" />
+        tools:src="@drawable/spell_placeholder" />
 
     <com.google.android.material.textview.MaterialTextView
         android:id="@+id/tv_lvl"

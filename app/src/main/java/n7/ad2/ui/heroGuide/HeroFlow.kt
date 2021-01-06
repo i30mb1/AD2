@@ -5,6 +5,7 @@ import android.util.AttributeSet
 import android.view.LayoutInflater
 import android.view.View
 import android.widget.ImageView
+import android.widget.TextView
 import androidx.annotation.StyleRes
 import androidx.constraintlayout.helper.widget.Flow
 import androidx.constraintlayout.widget.ConstraintLayout
@@ -27,6 +28,7 @@ import n7.ad2.R
 import n7.ad2.utils.extension.toPx
 
 data class VOHeroFlowItem(val heroName: String, val urlHeroImage: String, val heroWinrate: String)
+data class VOHeroFlowSpell(val skillName: String, val urlImageSkill: String, val skillOrder: String)
 
 class HeroFlow(
     context: Context,
@@ -77,7 +79,31 @@ class HeroFlow(
         }
     }
 
+    fun setSkills(list: List<VOHeroFlowSpell>) {
+        launch {
+            list.asFlow()
+                .onStart { clearFlowFromViews() }
+                .map { inflateItemSpellFlow(it) }
+                .flowOn(Dispatchers.IO)
+                .onCompletion { visibility = VISIBLE }
+                .collect {
+                    addView(it)
+                    flow.addView(it)
+                }
+        }
+    }
+
     private fun clearFlowFromViews() = children.filter { it !is Flow }.map(::removeView)
+
+    private fun inflateItemSpellFlow(item: VOHeroFlowSpell): View {
+        val view = inflater.inflate(R.layout.flow_spell, this, false)
+        view.findViewById<ImageView>(R.id.iv_skill).load(item.urlImageSkill) {
+            error(R.drawable.spell_placeholder)
+        }
+        view.findViewById<TextView>(R.id.tv_lvl).text = item.skillOrder
+        view.id = generateViewId()
+        return view
+    }
 
     private fun inflateItemHeroFlow(item: VOHeroFlowItem, @StyleRes style: Int): View {
         val view = inflater.inflate(R.layout.flow_hero, this, false)

@@ -6,7 +6,7 @@ import n7.ad2.ui.heroGuide.domain.model.DetailedGuide
 import n7.ad2.ui.heroGuide.domain.model.HeroWithWinrate
 import n7.ad2.ui.heroGuide.domain.model.ItemBuild
 import n7.ad2.ui.heroGuide.domain.model.LocalGuideJson
-import n7.ad2.ui.heroGuide.domain.model.Skill
+import n7.ad2.ui.heroGuide.domain.model.Spell
 import org.jsoup.Jsoup
 import org.jsoup.nodes.Document
 import org.jsoup.nodes.Element
@@ -22,8 +22,8 @@ class GetLocalGuideJsonUseCase @Inject constructor(
 
     companion object {
         private fun getHeroNameFormatted(heroName: String): HeroNameFormatted = HeroNameFormatted(heroName.toLowerCase(Locale.ENGLISH).replace("_", "-").replace("'", "").replace("%20", "-").replace(" ", "-"))
-        private fun getUrlForHeroPage(heroName: HeroNameFormatted) = "https://ru.dotabuff.com/heroes/$heroName"
-        private fun getUrlForHeroGuides(heroName: HeroNameFormatted) = "https://www.dotabuff.com/heroes/$heroName/guides"
+        private fun getUrlForHeroPage(heroName: HeroNameFormatted) = "https://ru.dotabuff.com/heroes/${heroName.heroName}"
+        private fun getUrlForHeroGuides(heroName: HeroNameFormatted) = "https://www.dotabuff.com/heroes/${heroName.heroName}/guides"
     }
 
     @Suppress("BlockingMethodInNonBlockingContext")
@@ -50,20 +50,20 @@ class GetLocalGuideJsonUseCase @Inject constructor(
             val guideTime = getGuideTime(it)
             val startingItemsList = getStartingItemsList(it)
             val heroItemsList = getHeroItemsList(it)
-            val heroSkillList = getHeroSkillList(it)
+            val heroSkillList = getHeroSpellList(it)
             DetailedGuide(guideTime, startingItemsList, heroItemsList, heroSkillList)
         }
     }
 
-    private fun getHeroSkillList(element: Element): List<Skill> {
+    private fun getHeroSpellList(element: Element): List<Spell> {
         val ignoredList = listOf("")
-        val result = mutableListOf<Skill>()
-        val skills = element.getElementsByClass("kv kv-small-margin").map { it.getElementsByTag("a") }
+        val result = mutableListOf<Spell>()
+        val spells = element.getElementsByClass("kv kv-small-margin").map { it.getElementsByTag("a") }
 
-        for (skill in skills) {
-            val skillOrder = skill.getOrNull(0)?.child(1)?.text() ?: throw Exception("could not parse skillOrder")
-            val skillName = skill.getOrNull(0)?.attr("title") ?: throw Exception("could not parse skillName")
-            if (!ignoredList.contains(skillName)) result.add(Skill(skillName, skillOrder))
+        for (spell in spells) {
+            val spellOrder = spell.getOrNull(0)?.child(1)?.text() ?: throw Exception("could not parse spellOrder")
+            val spellName = spell.getOrNull(0)?.child(0)?.attr("title") ?: throw Exception("could not parse spellName")
+            if (!ignoredList.contains(spellName)) result.add(Spell(spellName, spellOrder))
         }
 
         return result

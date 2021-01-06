@@ -5,6 +5,7 @@ import kotlinx.coroutines.CoroutineDispatcher
 import kotlinx.coroutines.withContext
 import n7.ad2.R
 import n7.ad2.ui.heroGuide.domain.adapter.toVOEasyToWinHeroes
+import n7.ad2.ui.heroGuide.domain.adapter.toVOGuideSpellBuild
 import n7.ad2.ui.heroGuide.domain.adapter.toVOHardToWinHeroes
 import n7.ad2.ui.heroGuide.domain.model.LocalGuideJson
 import n7.ad2.ui.heroGuide.domain.vo.VOGuideInfoLine
@@ -28,6 +29,9 @@ class ConvertLocalGuideJsonToVOGuideItemsUseCase @Inject constructor(
             add(item.easyToWinHeroList.toVOEasyToWinHeroes())
             add(VOGuideTitle(application.getString(R.string.hard_to_win_heroes)))
             add(item.hardToWinHeroList.toVOHardToWinHeroes())
+            add(VOGuideTitle(application.getString(R.string.spell_build)))
+            add(item.detailedGuide[0].heroSpellsList.toVOGuideSpellBuild())
+
         }
     }
 }

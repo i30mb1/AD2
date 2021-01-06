@@ -136,6 +136,7 @@
     <string name="bought_from">Покупается в : %s</string>
     <string name="additional_information">Дополнительная информация</string>
     <string name="trivia">Факты</string>
+    <string name="spell_build">выбор способностей</string>
 
     <string name="popup_talent">улучшается при выборе таланта</string>
     <string name="popup_aghanim">улучшается при покупке аганима</string>

@@ -228,6 +228,7 @@
     <string name="bought_from">Bought From : %s</string>
     <string name="additional_information">Additional information</string>
     <string name="trivia">Trivia</string>
+    <string name="spell_build">skill build</string>
 
     <string name="popup_talent">improves upon talent selection</string>
     <string name="popup_aghanim">improves when buying aghanim</string>
