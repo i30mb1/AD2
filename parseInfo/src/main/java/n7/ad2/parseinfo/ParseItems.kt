@@ -8,17 +8,22 @@ import org.jsoup.nodes.Element
 import org.jsoup.nodes.TextNode
 import java.io.File
 
-const val assetsFolderItem = "items/"
-const val fileName = "items.json"
+private const val assetsPathToItem = "items\\"
 
-fun String.connect():Document {
+private class Item(val name: String, val href: String, val section: String) {
+    val path = assetsPathToItem + name
+}
+
+private fun Item.toJsonObject() = JSONObject(mapOf("name" to name, "path" to path, "section" to section))
+
+fun String.connect(): Document {
     return Jsoup.connect(this).get()
 }
 
 fun main() {
-    loadItemsFileAndPrepareFolders()
+    loadItemsJsonFile()
 
-    loadItemsOneByOne(LOCALE.EN)
+//    loadItemsOneByOne(LOCALE.EN)
     loadItemsOneByOne(LOCALE.RU)
 }
 
@@ -27,16 +32,18 @@ enum class LOCALE(val urlAllItems: String, val baseUrl: String, val directory: S
     EN("https://dota2.gamepedia.com/Items", "https://dota2.gamepedia.com", "en")
 }
 
-private fun loadItemsOneByOne(locale: LOCALE) {
+private fun loadItemsOneByOne(locale: LOCALE, loadImages: Boolean = false) {
     JSONObject().apply {
         val list = getItems(LOCALE.EN.urlAllItems.connect())
-            .filter { (_, itemName) -> itemName == "Phase Boots" }
-            .filter { !it.first.contains("(") }
-        val description = "description.json"
 
-        list.forEach {
-            val root = (locale.baseUrl + it.first).connect()
-            val folderForItemsDescription = assetsFolderItem + it.second + File.separator + locale.directory
+        for (item in list) {
+            val root = try {
+                (locale.baseUrl + item.href).connect()
+            } catch (e: Exception) {
+                println("could parse ${locale.baseUrl + item.href}")
+                continue
+            }
+            val folderForItemsDescription = assetsPathToItem + item.name + File.separator + locale.directory
 
             JSONObject().apply {
                 loadName(root)
@@ -50,14 +57,11 @@ private fun loadItemsOneByOne(locale: LOCALE) {
                 loadRecipe(root)
                 loadBonuses(root)
 
-                val loadImage = false
-                if(loadImage) saveImage(root.getElementById("itemmainimage").getElementsByTag("img").attr("src"), assetsFolderItem + it.second + File.separator, "full")
+                if (loadImages) saveImage(root.getElementById("itemmainimage").getElementsByTag("img").attr("src"), assetsPathToItem + item.name + File.separator, "full")
 
                 createFolderInAssets(folderForItemsDescription)
-                File(assets + folderForItemsDescription + File.separator + description).writeText(toJSONString())
-                println("item ${locale.directory}${it.first} saved")
+                saveFileWithDataInAssets("$folderForItemsDescription\\description.json", toJSONString())
             }
-
         }
     }
 
@@ -158,13 +162,13 @@ private fun JSONObject.loadLore(root: Document) {
     var children = root.getElementById("mw-content-text").child(0).children()
     if (children.size == 1) children = root.getElementById("mw-content-text").child(1).children()
     var nextSectionIsAdditionalInformation = false
-    var array : JSONArray? = null
+    var array: JSONArray? = null
     for (child in children) {
         if (nextSectionIsAdditionalInformation) {
             array = JSONArray()
             val additionalInformation = child.getElementsByTag("li")
             for (item in additionalInformation) {
-                array.add(item.text().replace("\\[.+?]".toRegex(),"").trim())
+                array.add(item.text().replace("\\[.+?]".toRegex(), "").trim())
             }
             nextSectionIsAdditionalInformation = false
         }
@@ -301,91 +305,38 @@ private fun JSONArray.ifContainAdd(alt: String, spellImmunityBlockPartial: Strin
     }
 }
 
-private fun loadItemsFileAndPrepareFolders(deleteOldFiles: Boolean = false) {
-    if (deleteOldFiles) File(assets + assetsFolderItem).deleteRecursively()
+private fun loadItemsJsonFile(locale: LOCALE = LOCALE.EN) {
+    val root = locale.urlAllItems.connect()
+    val items: List<JSONObject> = getItems(root).map { it.toJsonObject() }
 
-    val root = LOCALE.EN.urlAllItems.connect()
-    val finalDestination = assets + fileName
-
-    JSONObject().apply {
-        fillJsonWithItems(root)
-
-        createFolderInAssets(assetsFolderItem)
-        File(finalDestination).writeText(toJSONString())
-        println("file $finalDestination loaded successfully")
-    }
+    saveFileWithDataInAssets("items.json", items.toString())
 }
 
-private fun getItems(root: Document): MutableList<Pair<String, String>> {
-    val resultItemList = mutableListOf<Pair<String, String>>()
-
+private fun getItems(root: Document): List<Item> {
+    val ignoreList = listOf("Helm of the Dominator 1", "Helm of the Dominator 2")
+    val result = mutableListOf<Item>()
     var findItemSection = false
-    val sections = root.getElementById("mw-content-text")!!
-    for (element in sections.allElements) {
-        if (element.id().toString() == "Items") findItemSection = true
-        if (element.id().toString() == "Events") findItemSection = false
+    var itemSection = ""
 
+    val elements = root.getElementById("mw-content-text")?.allElements ?: throw Exception("could find elements")
+    for (element in elements) {
+        if (element.tag().toString() == "h2" && element.children().size > 0 && element.child(0).id().toString() == "Items") findItemSection = true
+        if (element.tag().toString() == "h2" && element.children().size > 0 && element.child(0).id().toString() == "Event_items") findItemSection = false
+        if (element.tag().toString() == "h3") itemSection = element.text()
         if (findItemSection) {
             if (element.tag().toString() == "div") {
                 for (item in element.children()) {
                     if (item.children().size < 2) continue
-                    JSONObject().apply {
-                        val itemHref = item.child(1).attr("href")!!
-                        val itemName = item.child(1).attr("title")!!
+                    val itemHref = item.child(1).attr("href") ?: throw Exception("could not find item href")
+                    val itemName = item.child(1).attr("title") ?: throw Exception("could not find item name")
 
-                        resultItemList.add(Pair(itemHref, itemName))
-                    }
+                    val item = Item(itemName, itemHref, itemSection)
+                    if (!ignoreList.contains(item.name)) result.add(item)
                 }
 
             }
         }
     }
-    return resultItemList
+    return result
 }
 
-private fun JSONObject.fillJsonWithItems(root: Document) {
-
-    var findItemSection = false
-    val sections = root.getElementById("mw-content-text")!!
-    var itemSection = JSONArray()
-    var itemSectionName = ""
-    for (element in sections.allElements) {
-        if (element.id().toString() == "Items") findItemSection = true
-        if (element.id().toString() == "Events") {
-            findItemSection = false
-            if (itemSection.size != 0) put("items", itemSection)
-        }
-
-        if (findItemSection) {
-            if (element.tag().toString() == "h3") {
-                itemSectionName = element.text()
-            }
-
-            if (element.tag().toString() == "div") {
-                for (item in element.children()) {
-                    if (item.children().size < 2) continue
-                    JSONObject().apply {
-                        val itemName = item.child(1).attr("title")!!
-
-                        val assetsPath = assetsFolderItem + itemName
-                        createFolderInAssets(assetsPath)
-
-                        put("nameEng", itemName)
-                        put("assetsPath", assetsPath)
-                        put("section", itemSectionName)
-
-                        itemSection.add(this)
-                        println("item $itemName added")
-                    }
-                }
-
-            }
-        }
-    }
-}
-
-private fun createFolderInAssets(path: String) {
-    if (File(assets + path).exists()) return
-    File(assets + path).mkdirs()
-    println("folder was created to $path")
-}

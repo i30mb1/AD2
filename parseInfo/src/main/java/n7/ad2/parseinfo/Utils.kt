@@ -20,8 +20,27 @@ internal fun saveImage(url: String, directoryInAssets: String, fileName: String)
         val file = File(assets + directoryInAssets + File.separator + "$fileName.$HERO_FULL_PHOTO_TYPE")
         file.mkdirs()
         ImageIO.write(bufferImageIO, HERO_FULL_PHOTO_TYPE, file)
-        println("image -$directoryInAssets saved")
+        println("image '$directoryInAssets' saved")
     } catch (e: Exception) {
-        println("image full not saved")
+        println("image for $directoryInAssets not saved")
     }
+}
+
+internal fun deleteFolderInAssets(path: String) {
+    val file = File(assets + path)
+    if (file.exists()) return
+    file.deleteRecursively()
+}
+
+internal fun saveFileWithDataInAssets(path: String, text: String) {
+    val file = File(assets + path)
+    file.writeText(text)
+    println("file (${file.length()} bytes) saved in '$path'")
+}
+
+internal fun createFolderInAssets(path: String) {
+    val file = File(assets + path)
+    if (file.exists()) return
+    file.mkdirs()
+    println("path to '$path' created")
 }
