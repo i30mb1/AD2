@@ -1,11 +1,12 @@
 package n7.ad2.ui.items.domain.adapter
 
+import n7.ad2.data.source.local.ItemRepository
 import n7.ad2.data.source.local.model.LocalItem
 import n7.ad2.ui.items.domain.vo.VOItem
 import n7.ad2.ui.items.domain.vo.VOItemBody
 
 fun LocalItem.toVOItemBody(): VOItem = VOItemBody(
     name,
-    "file:///android_asset/$assetsPath/full.png",
+    ItemRepository.getFullUrlItemImage(name),
     viewedByUser,
 )
