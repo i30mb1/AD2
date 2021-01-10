@@ -10,8 +10,8 @@ import n7.ad2.ui.splash.domain.interactor.PopulateItemsDatabaseInteractor
 import javax.inject.Inject
 
 class DatabaseWorker(
-        val context: Context,
-        workerParameters: WorkerParameters
+    val context: Context,
+    workerParameters: WorkerParameters,
 ) : CoroutineWorker(context, workerParameters) {
 
     @Inject
@@ -23,10 +23,13 @@ class DatabaseWorker(
     override suspend fun doWork(): Result = coroutineScope {
         (context as MyApplication).component.inject(this@DatabaseWorker)
 
-        populateHeroesDatabaseInteractor.invoke()
-        populateItemsDatabaseInteractor.invoke()
-
-        Result.success()
+        try {
+            populateHeroesDatabaseInteractor.invoke()
+            populateItemsDatabaseInteractor.invoke()
+            Result.success()
+        } catch (e: Exception) {
+            Result.failure()
+        }
     }
 
 }
