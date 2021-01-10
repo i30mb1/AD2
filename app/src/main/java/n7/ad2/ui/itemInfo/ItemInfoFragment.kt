@@ -8,7 +8,6 @@ import n7.ad2.R
 import n7.ad2.data.source.local.Locale
 import n7.ad2.databinding.FragmentItemInfoBinding
 import n7.ad2.di.injector
-import n7.ad2.ui.heroInfo.DescriptionsListAdapter
 import n7.ad2.ui.heroInfo.InfoPopupWindow
 import n7.ad2.ui.heroPage.AudioExoPlayer
 import n7.ad2.ui.heroPage.showDialogError
@@ -37,12 +36,18 @@ class ItemInfoFragment : Fragment(R.layout.fragment_item_info) {
         }
 
         val itemName = requireArguments().getString(ITEM_NAME)!!
-        val locale = Locale.valueOf(getString(R.string.locale))
-        viewModel.loadItemInfo(itemName, locale)
+        viewModel.error.observe(viewLifecycleOwner) { if (it != null) showDialogError(it) }
+
+        loadItemInfo(itemName)
 
         setupToolbar(itemName)
         setupAudioPlayer()
         setupItemInfoRecyclerView()
+    }
+
+    private fun loadItemInfo(itemName: String) {
+        val locale = Locale.valueOf(getString(R.string.locale))
+        viewModel.loadItemInfo(itemName, locale)
     }
 
     override fun onDestroyView() {

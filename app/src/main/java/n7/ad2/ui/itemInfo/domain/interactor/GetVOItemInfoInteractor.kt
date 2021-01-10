@@ -6,6 +6,7 @@ import n7.ad2.ui.itemInfo.domain.usecase.GetLocalItemByNameUseCase
 import n7.ad2.ui.itemInfo.domain.usecase.GetLocalItemInfoFromJsonUseCase
 import n7.ad2.ui.itemInfo.domain.usecase.GetVOItemInfoUseCase
 import n7.ad2.ui.itemInfo.domain.vo.ItemInfo
+import n7.ad2.utils.Result
 import javax.inject.Inject
 
 class GetVOItemInfoInteractor @Inject constructor(
@@ -16,10 +17,13 @@ class GetVOItemInfoInteractor @Inject constructor(
 ) {
 
     @Suppress("BlockingMethodInNonBlockingContext")
-    suspend operator fun invoke(itemName: String, locale: Locale): List<ItemInfo> {
+    suspend operator fun invoke(itemName: String, locale: Locale): Result<List<ItemInfo>> = try {
         val localItem = getLocalItemByNameUseCase(itemName)
         val json = getItemInfoFromAssetsUseCase(localItem, locale)
         val localItemDescription = getLocalItemInfoFromJsonUseCase(json)
-        return getVOItemInfoUseCase(localItemDescription)
+        val result = getVOItemInfoUseCase(localItemDescription)
+        Result.success(result)
+    } catch (e: Exception) {
+        Result.failure(e)
     }
 }
