@@ -9,7 +9,7 @@ import javax.inject.Inject
 
 class ItemRepository @Inject constructor(
     private val application: Application,
-    private val appDatabase: AppDatabase
+    private val appDatabase: AppDatabase,
 ) {
 
     companion object {
@@ -22,12 +22,11 @@ class ItemRepository @Inject constructor(
         appDatabase.itemsDao.insert(list)
     }
 
-    fun getItemDescription(assetsPath: String, locale: Locale): String {
-        return application.assets
-            .open("$assetsPath/${locale.folderName}/${ASSETS_PATH_ITEM_DESC}")
+    fun getItemDescription(itemName: String, locale: Locale): String {
+        return application.assets.open("items/$itemName/${locale.folderName}/${ASSETS_PATH_ITEM_DESC}")
             .bufferedReader().use {
-            it.readText()
-        }
+                it.readText()
+            }
     }
 
     suspend fun updateItemViewedByUserField(name: String) {
@@ -35,10 +34,9 @@ class ItemRepository @Inject constructor(
     }
 
     suspend fun getAssetsItems(): String {
-        return application.assets
-            .open(ASSETS_PATH_ITEMS).bufferedReader().use {
-            it.readText()
-        }
+        return application.assets.open(ASSETS_PATH_ITEMS).bufferedReader().use {
+                it.readText()
+            }
     }
 
 }

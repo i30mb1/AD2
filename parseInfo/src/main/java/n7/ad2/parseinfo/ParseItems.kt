@@ -6,15 +6,12 @@ import org.jsoup.Jsoup
 import org.jsoup.nodes.Document
 import org.jsoup.nodes.Element
 import org.jsoup.nodes.TextNode
-import java.io.File
 
 private const val assetsPathToItem = "items/"
 
-private class Item(val name: String, val href: String, val section: String) {
-    val path = assetsPathToItem + name
-}
+private class HeroItem(val name: String, val href: String, val section: String)
 
-private fun Item.toJsonObject() = JSONObject(mapOf("name" to name, "path" to path, "section" to section))
+private fun HeroItem.toJsonObject() = JSONObject(mapOf("name" to name, "section" to section))
 
 fun String.connect(): Document {
     return Jsoup.connect(this).get()
@@ -23,8 +20,8 @@ fun String.connect(): Document {
 fun main() {
     loadItemsJsonFile()
 
-    loadItemsOneByOne(LOCALE.EN, true)
-//    loadItemsOneByOne(LOCALE.RU, true)
+    loadItemsOneByOne(LOCALE.EN, false)
+    loadItemsOneByOne(LOCALE.RU, false)
 }
 
 enum class LOCALE(val urlAllItems: String, val baseUrl: String, val directory: String) {
@@ -88,7 +85,7 @@ private fun JSONObject.loadRecipe(root: Document) {
     val containsFromList = JSONArray()
     var findMatchWithItemName = false
     for (child in children) {
-        var recipeName = child.attr("alt").removeBrackets()
+        val recipeName = child.attr("alt").removeBrackets()
         if (this["name"] == recipeName) {
             findMatchWithItemName = true
             continue
@@ -312,9 +309,9 @@ private fun loadItemsJsonFile(locale: LOCALE = LOCALE.EN) {
     saveFileWithDataInAssets("items.json", items.toString())
 }
 
-private fun getItems(root: Document): List<Item> {
+private fun getItems(root: Document): List<HeroItem> {
     val ignoreList = listOf("Helm of the Dominator 1", "Helm of the Dominator 2")
-    val result = mutableListOf<Item>()
+    val result = mutableListOf<HeroItem>()
     var findItemSection = false
     var itemSection = ""
 
@@ -330,8 +327,8 @@ private fun getItems(root: Document): List<Item> {
                     val itemHref = item.child(1).attr("href") ?: throw Exception("could not find item href")
                     val itemName = item.child(1).attr("title") ?: throw Exception("could not find item name")
 
-                    val item = Item(itemName, itemHref, itemSection)
-                    if (!ignoreList.contains(item.name)) result.add(item)
+                    val heroItem = HeroItem(itemName, itemHref, itemSection)
+                    if (!ignoreList.contains(heroItem.name)) result.add(heroItem)
                 }
 
             }

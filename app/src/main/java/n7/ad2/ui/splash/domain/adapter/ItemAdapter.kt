@@ -6,8 +6,7 @@ import n7.ad2.ui.splash.domain.model.AssetsItem
 fun AssetsItem.toLocalItem(): LocalItem {
     return LocalItem(
         name = this.name,
-        assetsPath = this.path,
         type = this.section,
-        viewedByUser = false
+        viewedByUser = false,
     )
 }

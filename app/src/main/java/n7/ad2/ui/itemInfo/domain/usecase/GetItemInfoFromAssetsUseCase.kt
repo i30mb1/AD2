@@ -13,7 +13,7 @@ class GetItemInfoFromAssetsUseCase @Inject constructor(
 ) {
 
     suspend operator fun invoke(localItem: LocalItem, locale: Locale) = withContext(ioDispatcher) {
-        itemRepository.getItemDescription(localItem.assetsPath, locale)
+        itemRepository.getItemDescription(localItem.name, locale)
     }
 
 }
