@@ -8,7 +8,7 @@ import org.jsoup.nodes.Element
 import org.jsoup.nodes.TextNode
 import java.io.File
 
-private const val assetsPathToItem = "items\\"
+private const val assetsPathToItem = "items/"
 
 private class Item(val name: String, val href: String, val section: String) {
     val path = assetsPathToItem + name
