@@ -23,8 +23,8 @@ fun String.connect(): Document {
 fun main() {
     loadItemsJsonFile()
 
-//    loadItemsOneByOne(LOCALE.EN)
-    loadItemsOneByOne(LOCALE.RU)
+    loadItemsOneByOne(LOCALE.EN, true)
+//    loadItemsOneByOne(LOCALE.RU, true)
 }
 
 enum class LOCALE(val urlAllItems: String, val baseUrl: String, val directory: String) {
@@ -43,7 +43,7 @@ private fun loadItemsOneByOne(locale: LOCALE, loadImages: Boolean = false) {
                 println("could parse ${locale.baseUrl + item.href}")
                 continue
             }
-            val folderForItemsDescription = assetsPathToItem + item.name + File.separator + locale.directory
+            val folderForItemsDescription = assetsPathToItem + item.name + "/" + locale.directory
 
             JSONObject().apply {
                 loadName(root)
@@ -57,10 +57,10 @@ private fun loadItemsOneByOne(locale: LOCALE, loadImages: Boolean = false) {
                 loadRecipe(root)
                 loadBonuses(root)
 
-                if (loadImages) saveImage(root.getElementById("itemmainimage").getElementsByTag("img").attr("src"), assetsPathToItem + item.name + File.separator, "full")
+                if (loadImages) saveImage(root.getElementById("itemmainimage").getElementsByTag("img").attr("src"), assetsPathToItem + item.name + "/", "full")
 
                 createFolderInAssets(folderForItemsDescription)
-                saveFileWithDataInAssets("$folderForItemsDescription\\description.json", toJSONString())
+                saveFileWithDataInAssets("$folderForItemsDescription/description.json", toJSONString())
             }
         }
     }
