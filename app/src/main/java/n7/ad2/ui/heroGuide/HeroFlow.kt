@@ -26,6 +26,7 @@ import kotlinx.coroutines.flow.onStart
 import kotlinx.coroutines.launch
 import n7.ad2.R
 import n7.ad2.utils.extension.toPx
+import kotlinx.coroutines.flow.Flow as CoroutineFlow
 
 data class VOHeroFlowItem(val heroName: String, val urlHeroImage: String, val heroWinrate: String)
 data class VOHeroFlowSpell(val skillName: String, val urlImageSkill: String, val skillOrder: String)
@@ -62,30 +63,17 @@ class HeroFlow(
 
     fun setHeroesEasyToWin(list: List<VOHeroFlowItem>) = setHeroes(list, R.style.TextAppearance_HeroAdvantage)
 
-    private fun setHeroes(list: List<VOHeroFlowItem>, @StyleRes style: Int) {
-        launch {
-            list.asFlow()
-                .onStart { clearFlowFromViews() }
-                .map { inflateItemHeroFlow(it, style) }
-                .flowOn(Dispatchers.IO)
-                .onCompletion {
-                    TransitionManager.beginDelayedTransition(this@HeroFlow)
-                    visibility = VISIBLE
-                }
-                .collect {
-                    addView(it)
-                    flow.addView(it)
-                }
-        }
-    }
+    fun setSkills(list: List<VOHeroFlowSpell>) = setViews(list) { map { inflateItemSpellFlow(it) } }
 
-    fun setSkills(list: List<VOHeroFlowSpell>) {
+    private fun setHeroes(list: List<VOHeroFlowItem>, @StyleRes style: Int) = setViews(list) { map { inflateItemHeroFlow(it, style) } }
+
+    private fun <T> setViews(list: List<T>, operation: CoroutineFlow<T>.() -> CoroutineFlow<View>) {
         launch {
             list.asFlow()
                 .onStart { clearFlowFromViews() }
-                .map { inflateItemSpellFlow(it) }
+                .operation()
                 .flowOn(Dispatchers.IO)
-                .onCompletion { visibility = VISIBLE }
+                .onCompletion { TransitionManager.beginDelayedTransition(this@HeroFlow); visibility = VISIBLE }
                 .collect {
                     addView(it)
                     flow.addView(it)
