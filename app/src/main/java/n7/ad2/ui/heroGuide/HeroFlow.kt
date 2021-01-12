@@ -18,12 +18,12 @@ import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.MainScope
 import kotlinx.coroutines.cancel
 import kotlinx.coroutines.flow.asFlow
-import kotlinx.coroutines.flow.collect
 import kotlinx.coroutines.flow.flowOn
+import kotlinx.coroutines.flow.launchIn
 import kotlinx.coroutines.flow.map
 import kotlinx.coroutines.flow.onCompletion
+import kotlinx.coroutines.flow.onEach
 import kotlinx.coroutines.flow.onStart
-import kotlinx.coroutines.launch
 import n7.ad2.R
 import n7.ad2.utils.extension.toPx
 import kotlinx.coroutines.flow.Flow as CoroutineFlow
@@ -68,17 +68,14 @@ class HeroFlow(
     private fun setHeroes(list: List<VOHeroFlowItem>, @StyleRes style: Int) = setViews(list) { map { inflateItemHeroFlow(it, style) } }
 
     private fun <T> setViews(list: List<T>, operation: CoroutineFlow<T>.() -> CoroutineFlow<View>) {
-        launch {
-            list.asFlow()
-                .onStart { clearFlowFromViews() }
-                .operation()
-                .flowOn(Dispatchers.IO)
-                .onCompletion { TransitionManager.beginDelayedTransition(this@HeroFlow); visibility = VISIBLE }
-                .collect {
-                    addView(it)
-                    flow.addView(it)
-                }
-        }
+        list.asFlow()
+            .onStart { clearFlowFromViews() }
+            .operation()
+            .flowOn(Dispatchers.IO)
+            .onCompletion { TransitionManager.beginDelayedTransition(this@HeroFlow); visibility = VISIBLE }
+            .onEach(::addView)
+            .onEach { flow.addView(it) }
+            .launchIn(this)
     }
 
     private fun clearFlowFromViews() = children.filter { it !is Flow }.map(::removeView)
