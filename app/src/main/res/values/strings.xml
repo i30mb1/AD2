@@ -73,7 +73,7 @@
     <string name="hero_guide">guide</string>
     <string name="hero_response_ringtone_set">Ringtone has been set! Probably!</string>
     <string name="hero_personal_tip_manta_descr">it shows can be this ability used by illusions or not</string>
-    <string name="fragment_guide_starting_items">Starting items</string>
+    <string name="starting_items">Starting items</string>
     <string name="easy_to_win_heroes">Best versus heroes</string>
     <string name="hard_to_win_heroes">Worst versus heroes</string>
     <string name="setting_subscription_key" translatable="false">pref_month_key</string>

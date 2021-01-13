@@ -32,11 +32,11 @@ class HeroWithWinrate(
 class DetailedGuide(
     @Json(name = "guideTime")
     val guideTime: String,
-    @Json(name = "startingItems")
-    val heroStartingItemsList: List<String>,
-    @Json(name = "heroItemBuild")
-    val heroItemsList: List<ItemBuild>,
-    @Json(name = "heroSkillBuild")
+    @Json(name = "heroStartingHeroItemsList")
+    val heroStartingHeroItemsList: List<HeroItem>,
+    @Json(name = "heroItemsList")
+    val heroItemsList: List<HeroItem>,
+    @Json(name = "heroSpellsList")
     val heroSpellsList: List<Spell>,
 )
 
@@ -49,9 +49,9 @@ class Spell(
 )
 
 @JsonClass(generateAdapter = true)
-class ItemBuild(
+class HeroItem(
     @Json(name = "itemName")
     val itemName: String,
     @Json(name = "itemTime")
-    val itemTime: String,
+    val itemTime: String = "",
 )

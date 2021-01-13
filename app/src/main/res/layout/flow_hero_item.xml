@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:orientation="horizontal">
+
+    <com.google.android.material.textview.MaterialTextView
+        android:id="@+id/tv_time"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_vertical"
+        android:includeFontPadding="false"
+        android:rotation="270"
+        android:textAppearance="?textAppearanceCaption"
+        tools:text="12:34" />
+
+    <ImageView
+        android:id="@+id/iv_item"
+        android:layout_width="44dp"
+        android:layout_height="32dp"
+        android:contentDescription="@string/desc_hero_item"
+        tools:src="@drawable/item_placeholder" />
+
+</LinearLayout>

@@ -3,8 +3,8 @@ package n7.ad2.ui.heroGuide.domain.usecase
 import kotlinx.coroutines.CoroutineDispatcher
 import kotlinx.coroutines.withContext
 import n7.ad2.ui.heroGuide.domain.model.DetailedGuide
+import n7.ad2.ui.heroGuide.domain.model.HeroItem
 import n7.ad2.ui.heroGuide.domain.model.HeroWithWinrate
-import n7.ad2.ui.heroGuide.domain.model.ItemBuild
 import n7.ad2.ui.heroGuide.domain.model.LocalGuideJson
 import n7.ad2.ui.heroGuide.domain.model.Spell
 import org.jsoup.Jsoup
@@ -21,7 +21,9 @@ class GetLocalGuideJsonUseCase @Inject constructor(
 ) {
 
     companion object {
-        private fun getHeroNameFormatted(heroName: String): HeroNameFormatted = HeroNameFormatted(heroName.toLowerCase(Locale.ENGLISH).replace("_", "-").replace("'", "").replace("%20", "-").replace(" ", "-"))
+        private fun getHeroNameFormatted(heroName: String): HeroNameFormatted =
+            HeroNameFormatted(heroName.toLowerCase(Locale.ENGLISH).replace("_", "-").replace("'", "").replace("%20", "-").replace(" ", "-"))
+
         private fun getUrlForHeroPage(heroName: HeroNameFormatted) = "https://ru.dotabuff.com/heroes/${heroName.heroName}"
         private fun getUrlForHeroGuides(heroName: HeroNameFormatted) = "https://www.dotabuff.com/heroes/${heroName.heroName}/guides"
     }
@@ -69,9 +71,9 @@ class GetLocalGuideJsonUseCase @Inject constructor(
         return result
     }
 
-    private fun getHeroItemsList(element: Element): List<ItemBuild> {
+    private fun getHeroItemsList(element: Element): List<HeroItem> {
         val ignoreList = listOf("")
-        val result = mutableListOf<ItemBuild>()
+        val result = mutableListOf<HeroItem>()
         val itemsGroup = element.getElementsByClass("kv r-none-mobile")
         for (i in 1 until itemsGroup.size) {
             val group = itemsGroup[i]
@@ -83,7 +85,7 @@ class GetLocalGuideJsonUseCase @Inject constructor(
             val groupImages = group.children().mapNotNull { it.getElementsByTag("img") }
             for (image in groupImages) {
                 val itemName = image.attr("title")
-                if (!ignoreList.contains(itemName)) result.add(ItemBuild(itemName, itemTime))
+                if (!ignoreList.contains(itemName)) result.add(HeroItem(itemName, itemTime))
             }
         }
         return result
@@ -97,11 +99,11 @@ class GetLocalGuideJsonUseCase @Inject constructor(
         throw Exception("could not parse time")
     }
 
-    private fun getStartingItemsList(element: Element): List<String> {
+    private fun getStartingItemsList(element: Element): List<HeroItem> {
         val ignoreList = listOf("Town Portal Scroll", "Tango (Shared)", "Observer Ward")
         val startingItems = element.child(2).getElementsByClass("kv r-none-mobile").getOrNull(0)?.getElementsByClass("inline inline-margin")
         if (startingItems == null || startingItems.size == 0) throw Exception("could not find starting items")
-        val result = startingItems.mapNotNull { it.getElementsByTag("img").getOrNull(0)?.attr("title") }.filterNot { ignoreList.contains(it) }
+        val result = startingItems.mapNotNull { it.getElementsByTag("img").getOrNull(0)?.attr("title") }.filterNot { ignoreList.contains(it) }.map { HeroItem(it) }
         if (result.isEmpty()) throw Exception("could not map starting items")
         return result
     }

@@ -30,6 +30,8 @@ import kotlinx.coroutines.flow.Flow as CoroutineFlow
 
 data class VOHeroFlowItem(val heroName: String, val urlHeroImage: String, val heroWinrate: String)
 data class VOHeroFlowSpell(val skillName: String, val urlImageSkill: String, val skillOrder: String)
+data class VOHeroFlowStartingHeroItem(val itemName: String, val urlHeroItem: String)
+data class VOHeroFlowHeroItem(val itemName: String, val urlHeroItem: String, val itemTiming: String)
 
 class HeroFlow(
     context: Context,
@@ -63,6 +65,8 @@ class HeroFlow(
 
     fun setHeroesEasyToWin(list: List<VOHeroFlowItem>) = setHeroes(list, R.style.TextAppearance_HeroAdvantage)
 
+    fun setStartingHeroItems(list: List<VOHeroFlowStartingHeroItem>) = setViews(list) { map(::inflateItemHeroItemFlow) }
+
     fun setSkills(list: List<VOHeroFlowSpell>) = setViews(list) { map { inflateItemSpellFlow(it) } }
 
     private fun setHeroes(list: List<VOHeroFlowItem>, @StyleRes style: Int) = setViews(list) { map { inflateItemHeroFlow(it, style) } }
@@ -79,6 +83,14 @@ class HeroFlow(
     }
 
     private fun clearFlowFromViews() = children.filter { it !is Flow }.map(::removeView)
+
+    private fun inflateItemHeroItemFlow(item: VOHeroFlowStartingHeroItem): View {
+        val view = inflater.inflate(R.layout.flow_hero_item, this, false)
+        view.findViewById<ImageView>(R.id.iv_item).load(item.urlHeroItem) { error(R.drawable.item_placeholder) }
+        view.findViewById<TextView>(R.id.tv_time).visibility = View.INVISIBLE
+        view.id = generateViewId()
+        return view
+    }
 
     private fun inflateItemSpellFlow(item: VOHeroFlowSpell): View {
         val view = inflater.inflate(R.layout.flow_spell, this, false)
