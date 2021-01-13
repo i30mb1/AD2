@@ -7,7 +7,7 @@
 
         <variable
             name="item"
-            type="n7.ad2.ui.heroGuide.domain.vo.VOEasyToWinHeroes" />
+            type="n7.ad2.ui.heroGuide.domain.vo.VOGuideEasyToWinHeroes" />
 
     </data>
 

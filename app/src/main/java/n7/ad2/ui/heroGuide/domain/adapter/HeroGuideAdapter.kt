@@ -8,14 +8,14 @@ import n7.ad2.ui.heroGuide.VOHeroFlowStartingHeroItem
 import n7.ad2.ui.heroGuide.domain.model.HeroItem
 import n7.ad2.ui.heroGuide.domain.model.HeroWithWinrate
 import n7.ad2.ui.heroGuide.domain.model.Spell
-import n7.ad2.ui.heroGuide.domain.vo.VOEasyToWinHeroes
+import n7.ad2.ui.heroGuide.domain.vo.VOGuideEasyToWinHeroes
 import n7.ad2.ui.heroGuide.domain.vo.VOGuideSpellBuild
 import n7.ad2.ui.heroGuide.domain.vo.VOGuideStartingHeroItems
-import n7.ad2.ui.heroGuide.domain.vo.VOHardToWinHeroes
+import n7.ad2.ui.heroGuide.domain.vo.VOGuideHardToWinHeroes
 
-fun List<HeroWithWinrate>.toVOHardToWinHeroes(): VOHardToWinHeroes = VOHardToWinHeroes(map { it.toVOHeroFlowItem() })
+fun List<HeroWithWinrate>.toVOHardToWinHeroes(): VOGuideHardToWinHeroes = VOGuideHardToWinHeroes(map { it.toVOHeroFlowItem() })
 
-fun List<HeroWithWinrate>.toVOEasyToWinHeroes(): VOEasyToWinHeroes = VOEasyToWinHeroes(map { it.toVOHeroFlowItem() })
+fun List<HeroWithWinrate>.toVOEasyToWinHeroes(): VOGuideEasyToWinHeroes = VOGuideEasyToWinHeroes(map { it.toVOHeroFlowItem() })
 
 private fun HeroWithWinrate.toVOHeroFlowItem(): VOHeroFlowItem = VOHeroFlowItem(
     heroName,
