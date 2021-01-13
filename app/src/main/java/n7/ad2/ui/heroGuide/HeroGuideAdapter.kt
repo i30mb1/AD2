@@ -16,6 +16,7 @@ import n7.ad2.ui.heroGuide.domain.vo.VOGuideSpellBuild
 import n7.ad2.ui.heroGuide.domain.vo.VOGuideStartingHeroItems
 import n7.ad2.ui.heroGuide.domain.vo.VOGuideTitle
 import n7.ad2.ui.heroGuide.domain.vo.VOGuideHardToWinHeroes
+import n7.ad2.ui.heroGuide.domain.vo.VOGuideHeroItems
 import n7.ad2.utils.StickyHeaderDecorator
 
 class HeroGuideAdapter
@@ -32,6 +33,7 @@ class HeroGuideAdapter
         is VOGuideInfoLine -> R.layout.item_guide_info_line
         is VOGuideSpellBuild -> R.layout.item_guide_skill_build
         is VOGuideStartingHeroItems -> R.layout.item_guide_starting_hero_items
+        is VOGuideHeroItems -> R.layout.item_guide_hero_items
     }
 
     override fun getHeaderLayout() = R.layout.item_guide_title

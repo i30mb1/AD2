@@ -2,6 +2,7 @@ package n7.ad2.ui.heroGuide.domain.adapter
 
 import n7.ad2.data.source.local.ItemRepository
 import n7.ad2.data.source.local.Repository
+import n7.ad2.ui.heroGuide.VOHeroFlowHeroItem
 import n7.ad2.ui.heroGuide.VOHeroFlowItem
 import n7.ad2.ui.heroGuide.VOHeroFlowSpell
 import n7.ad2.ui.heroGuide.VOHeroFlowStartingHeroItem
@@ -12,6 +13,7 @@ import n7.ad2.ui.heroGuide.domain.vo.VOGuideEasyToWinHeroes
 import n7.ad2.ui.heroGuide.domain.vo.VOGuideSpellBuild
 import n7.ad2.ui.heroGuide.domain.vo.VOGuideStartingHeroItems
 import n7.ad2.ui.heroGuide.domain.vo.VOGuideHardToWinHeroes
+import n7.ad2.ui.heroGuide.domain.vo.VOGuideHeroItems
 
 fun List<HeroWithWinrate>.toVOHardToWinHeroes(): VOGuideHardToWinHeroes = VOGuideHardToWinHeroes(map { it.toVOHeroFlowItem() })
 
@@ -29,4 +31,8 @@ fun List<Spell>.toVOGuideSpellBuild(): VOGuideSpellBuild = VOGuideSpellBuild(
 
 fun List<HeroItem>.toVOGuideStartingHeroItems(): VOGuideStartingHeroItems = VOGuideStartingHeroItems(
     map { VOHeroFlowStartingHeroItem(it.itemName, ItemRepository.getFullUrlItemImage(it.itemName)) }
+)
+
+fun List<HeroItem>.toVOGuideHeroItems(): VOGuideHeroItems = VOGuideHeroItems(
+    map { VOHeroFlowHeroItem(it.itemName, ItemRepository.getFullUrlItemImage(it.itemName), it.itemTime) }
 )

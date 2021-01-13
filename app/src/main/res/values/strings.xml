@@ -121,7 +121,7 @@
     <string name="fragment_guide_lane">lane / %s</string>
     <string name="ad2_toolbar" translatable="false">AD2/%s</string>
     <string name="activity_twitch_game" translatable="false">Quality</string>
-    <string name="fragment_guide_further_items">Items and timings</string>
+    <string name="guide_items">Items and timings</string>
     <string name="fragment_guide_skill_builds">Skill builds</string>
     <string name="games_schedule">REMIND</string>
     <string name="dialog_update_title">New update found!</string>

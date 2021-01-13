@@ -1,5 +1,6 @@
 package n7.ad2.ui.heroGuide.domain.vo
 
+import n7.ad2.ui.heroGuide.VOHeroFlowHeroItem
 import n7.ad2.ui.heroGuide.VOHeroFlowItem
 import n7.ad2.ui.heroGuide.VOHeroFlowSpell
 import n7.ad2.ui.heroGuide.VOHeroFlowStartingHeroItem
@@ -11,3 +12,4 @@ data class VOGuideEasyToWinHeroes(val list: List<VOHeroFlowItem>) : VOGuideItem(
 data class VOGuideInfoLine(val title: String) : VOGuideItem()
 data class VOGuideSpellBuild(val list: List<VOHeroFlowSpell>) : VOGuideItem()
 data class VOGuideStartingHeroItems(val list: List<VOHeroFlowStartingHeroItem>) : VOGuideItem()
+data class VOGuideHeroItems(val list: List<VOHeroFlowHeroItem>) : VOGuideItem()
