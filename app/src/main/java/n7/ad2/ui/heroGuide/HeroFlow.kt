@@ -65,9 +65,9 @@ class HeroFlow(
 
     fun setHeroesEasyToWin(list: List<VOHeroFlowItem>) = setHeroes(list, R.style.TextAppearance_HeroAdvantage)
 
-    fun setHeroItems(list: List<VOHeroFlowHeroItem>) = setViews(list) { map(::inflateItemHeroItemFlow) }
+    fun setHeroItems(list: List<VOHeroFlowHeroItem>) = setViews(list) { map(::inflateItemStartingHeroItemFlow) }
 
-    fun setStartingHeroItems(list: List<VOHeroFlowStartingHeroItem>) = setViews(list) { map(::inflateItemHeroItemFlow) }
+    fun setStartingHeroItems(list: List<VOHeroFlowStartingHeroItem>) = setViews(list) { map(::inflateItemStartingHeroItemFlow) }
 
     fun setSkills(list: List<VOHeroFlowSpell>) = setViews(list) { map { inflateItemSpellFlow(it) } }
 
@@ -86,7 +86,7 @@ class HeroFlow(
 
     private fun clearFlowFromViews() = children.filter { it !is Flow }.map(::removeView)
 
-    private fun inflateItemHeroItemFlow(item: VOHeroFlowHeroItem): View {
+    private fun inflateItemStartingHeroItemFlow(item: VOHeroFlowHeroItem): View {
         val view = inflater.inflate(R.layout.flow_hero_item, this, false)
         view.findViewById<ImageView>(R.id.iv_item).load(item.urlHeroItem) { error(R.drawable.item_placeholder) }
         view.findViewById<TextView>(R.id.tv_time).text = item.itemTiming
@@ -94,10 +94,9 @@ class HeroFlow(
         return view
     }
 
-    private fun inflateItemHeroItemFlow(item: VOHeroFlowStartingHeroItem): View {
-        val view = inflater.inflate(R.layout.flow_hero_item, this, false)
+    private fun inflateItemStartingHeroItemFlow(item: VOHeroFlowStartingHeroItem): View {
+        val view = inflater.inflate(R.layout.flow_starting_hero_item, this, false)
         view.findViewById<ImageView>(R.id.iv_item).load(item.urlHeroItem) { error(R.drawable.item_placeholder) }
-        view.findViewById<TextView>(R.id.tv_time).visibility = View.INVISIBLE
         view.id = generateViewId()
         return view
     }
