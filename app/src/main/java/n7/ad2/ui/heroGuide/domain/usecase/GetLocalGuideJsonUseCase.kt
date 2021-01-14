@@ -64,7 +64,8 @@ class GetLocalGuideJsonUseCase @Inject constructor(
 
         for (spell in spells) {
             val spellOrder = spell.getOrNull(0)?.child(1)?.text() ?: throw Exception("could not parse spellOrder")
-            val spellName = spell.getOrNull(0)?.child(0)?.attr("title") ?: throw Exception("could not parse spellName")
+            var spellName = spell.getOrNull(0)?.child(0)?.attr("title") ?: throw Exception("could not parse spellName")
+            if (spellName.startsWith("Talent")) spellName = "Talent"
             if (!ignoredList.contains(spellName)) result.add(Spell(spellName, spellOrder))
         }
 
