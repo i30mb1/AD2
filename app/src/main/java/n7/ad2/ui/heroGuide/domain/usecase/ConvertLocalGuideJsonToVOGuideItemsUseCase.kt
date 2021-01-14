@@ -27,16 +27,16 @@ class ConvertLocalGuideJsonToVOGuideItemsUseCase @Inject constructor(
         buildList {
             add(VOGuideInfoLine(application.getString(R.string.hero_popularity, item.heroWinrate)))
             add(VOGuideInfoLine(application.getString(R.string.hero_pickrate, item.heroPopularity)))
-            add(VOGuideTitle(application.getString(R.string.easy_to_win_heroes)))
-            add(item.easyToWinHeroList.toVOEasyToWinHeroes())
-            add(VOGuideTitle(application.getString(R.string.hard_to_win_heroes)))
-            add(item.hardToWinHeroList.toVOHardToWinHeroes())
-            add(VOGuideTitle(application.getString(R.string.spell_build)))
-            add(item.detailedGuide[0].heroSpellsList.toVOGuideSpellBuild())
             add(VOGuideTitle(application.getString(R.string.starting_items)))
             add(item.detailedGuide[0].heroStartingHeroItemsList.toVOGuideStartingHeroItems())
             add(VOGuideTitle(application.getString(R.string.guide_items)))
             add(item.detailedGuide[0].heroItemsList.toVOGuideHeroItems())
+            add(VOGuideTitle(application.getString(R.string.spell_build)))
+            add(item.detailedGuide[0].heroSpellsList.toVOGuideSpellBuild())
+            add(VOGuideTitle(application.getString(R.string.easy_to_win_heroes)))
+            add(item.easyToWinHeroList.toVOEasyToWinHeroes())
+            add(VOGuideTitle(application.getString(R.string.hard_to_win_heroes)))
+            add(item.hardToWinHeroList.toVOHardToWinHeroes())
         }
     }
 }
