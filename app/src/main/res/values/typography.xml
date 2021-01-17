@@ -34,6 +34,14 @@
         <item name="android:includeFontPadding">false</item>
     </style>
 
+    <style name="TextAppearance.Title" parent="TextAppearance.MaterialComponents.Overline">
+        <item name="android:letterSpacing">0</item>
+        <item name="android:textColor">?myTextColorPrimary</item>
+        <item name="android:textSize">12sp</item>
+        <item name="android:textStyle">bold</item>
+        <item name="android:includeFontPadding">false</item>
+    </style>
+
     <style name="TextAppearance.Caption" parent="TextAppearance.MaterialComponents.Caption">
         <item name="android:textSize">10sp</item>
         <item name="android:textStyle">bold</item>

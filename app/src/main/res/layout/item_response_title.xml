@@ -11,21 +11,10 @@
 
     </data>
 
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:background="?colorAccent"
-        android:orientation="horizontal"
-        android:padding="4dp">
+    <TextView
+        android:id="@+id/tv_title"
+        style="?textStyleTitle"
+        android:text="@{item.title}"
+        tools:text="И даже если я разочарую тебя, я хочу, чтобы ты запомнил меня" />
 
-        <TextView
-            android:id="@+id/tv_title"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_gravity="center_vertical"
-            android:lines="1"
-            android:textAppearance="?textAppearanceOverline"
-            android:text="@{item.title}"
-            tools:text="И даже если я разочарую тебя, я хочу, чтобы ты запомнил меня" />
-    </LinearLayout>
 </layout>

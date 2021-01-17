@@ -13,4 +13,5 @@
     <attr name="textStyleHeroSignature" format="reference" />
     <attr name="textStyleItemSignature" format="reference" />
     <attr name="textStyleSpellSignature" format="reference" />
+    <attr name="textStyleTitle" format="reference" />
 </resources>

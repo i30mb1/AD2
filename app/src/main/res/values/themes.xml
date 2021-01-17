@@ -36,6 +36,7 @@
         <item name="textAppearanceTalent">@style/TextAppearance.Talent</item>
         <item name="textAppearanceHeroStatistics">@style/TextAppearance.HeroStatistics</item>
 
+        <item name="textStyleTitle">@style/Widget.TextView.Title</item>
         <item name="textStyleHeroAdvantage">@style/Widget.TextView.HeroAdvantage</item>
         <item name="textStyleHeroDisadvantage">@style/Widget.TextView.HeroDisadvantage</item>
         <item name="textStyleHeroSignature">@style/Widget.TextView.HeroSignature</item>
