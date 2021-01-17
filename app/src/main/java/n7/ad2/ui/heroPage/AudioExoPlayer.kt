@@ -4,14 +4,17 @@ import android.app.Application
 import android.net.Uri
 import android.os.Build
 import androidx.annotation.RawRes
-import androidx.databinding.ObservableBoolean
 import androidx.lifecycle.Lifecycle
 import androidx.lifecycle.LifecycleObserver
+import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.OnLifecycleEvent
-import com.google.android.exoplayer2.*
+import com.google.android.exoplayer2.C
+import com.google.android.exoplayer2.ExoPlaybackException
+import com.google.android.exoplayer2.ExoPlayer
+import com.google.android.exoplayer2.Player
+import com.google.android.exoplayer2.SimpleExoPlayer
 import com.google.android.exoplayer2.audio.AudioAttributes
 import com.google.android.exoplayer2.source.ProgressiveMediaSource
-import com.google.android.exoplayer2.trackselection.DefaultTrackSelector
 import com.google.android.exoplayer2.upstream.AssetDataSource
 import com.google.android.exoplayer2.upstream.DataSpec
 import com.google.android.exoplayer2.upstream.DefaultDataSourceFactory
@@ -20,18 +23,18 @@ import com.google.android.exoplayer2.util.Util
 import n7.ad2.R
 
 interface Playable {
-    val isPlaying: ObservableBoolean
+    val isPlaying: MutableLiveData<Boolean>
     val audioUrl: String?
 }
 
 class AudioExoPlayer(
-        private val application: Application,
-        private val lifecycle: Lifecycle
+    private val application: Application,
+    private val lifecycle: Lifecycle,
 ) : Player.EventListener, LifecycleObserver {
 
     private lateinit var exoPlayer: SimpleExoPlayer
     private var listener: ((errorMessage: Exception) -> Unit)? = null
-    private var isPlaying = ObservableBoolean(false)
+    private var isPlaying = MutableLiveData(false)
 
     init {
         lifecycle.addObserver(this)
@@ -39,24 +42,17 @@ class AudioExoPlayer(
 
     override fun onPlayerStateChanged(playWhenReady: Boolean, playbackState: Int) {
         when (playbackState) {
-            ExoPlayer.STATE_IDLE -> {
-            }
-            ExoPlayer.STATE_BUFFERING -> {
-            }
-            ExoPlayer.STATE_READY -> {
-            }
-            ExoPlayer.STATE_ENDED -> {
-                isPlaying.set(false)
-            }
-            else -> {
-                isPlaying.set(false)
-            }
+            ExoPlayer.STATE_IDLE -> Unit
+            ExoPlayer.STATE_BUFFERING -> Unit
+            ExoPlayer.STATE_READY -> Unit
+            ExoPlayer.STATE_ENDED -> isPlaying.value = false
+            else -> isPlaying.value = false
         }
     }
 
     override fun onPlayerError(error: ExoPlaybackException) {
         listener?.invoke(error)
-        isPlaying.set(false)
+        isPlaying.value = false
     }
 
     fun setErrorListener(listener: (Exception) -> Unit) {
@@ -75,7 +71,7 @@ class AudioExoPlayer(
     fun play(model: Playable) {
         if (isPlaying !== model.isPlaying) stop()
         isPlaying = model.isPlaying
-        if (isPlaying.get()) stop() else play(model.audioUrl!!)
+        if (isPlaying.value!!) stop() else play(model.audioUrl!!)
     }
 
     fun play(@RawRes id: Int) = play(RawResourceDataSource.buildRawResourceUri(id))
@@ -83,7 +79,7 @@ class AudioExoPlayer(
     fun play(url: String) = play(Uri.parse(url))
 
     fun play(uri: Uri) {
-        isPlaying.set(true)
+        isPlaying.value = true
         val source = buildMediaSource(uri)
 
         exoPlayer.prepare(source)
@@ -111,12 +107,12 @@ class AudioExoPlayer(
 
     @OnLifecycleEvent(Lifecycle.Event.ON_DESTROY)
     private fun onDestroy() {
-        if(::exoPlayer.isInitialized) exoPlayer.removeListener(this)
+        if (::exoPlayer.isInitialized) exoPlayer.removeListener(this)
         lifecycle.removeObserver(this)
     }
 
     private fun stop() {
-        isPlaying.set(false)
+        isPlaying.value = false
         exoPlayer.stop()
     }
 
@@ -143,7 +139,7 @@ class AudioExoPlayer(
         val dataSourceFactory = DefaultDataSourceFactory(application, userAgent)
 
         return ProgressiveMediaSource.Factory(dataSourceFactory)
-                .createMediaSource(uri)
+            .createMediaSource(uri)
     }
 
 }

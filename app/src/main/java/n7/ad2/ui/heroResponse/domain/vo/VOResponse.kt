@@ -1,7 +1,5 @@
 package n7.ad2.ui.heroResponse.domain.vo
 
-import androidx.databinding.ObservableBoolean
-import androidx.databinding.ObservableInt
 import androidx.lifecycle.MutableLiveData
 import n7.ad2.ui.heroPage.Playable
 
@@ -15,7 +13,7 @@ data class VOResponseBody(
     val titleForFile: String,
     val savedInMemory: Boolean,
 ) : VOResponse(), Playable {
-    override val isPlaying: ObservableBoolean = ObservableBoolean(false)
+    override val isPlaying = MutableLiveData(false)
     val currentProgress = MutableLiveData(0)
     val maxProgress = MutableLiveData(0)
 }

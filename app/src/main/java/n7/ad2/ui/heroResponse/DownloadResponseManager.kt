@@ -136,8 +136,8 @@ class DownloadResponseManager(
                     }
                     DownloadManager.STATUS_PAUSED, DownloadManager.STATUS_RUNNING, DownloadManager.STATUS_PENDING -> {
                         hashMap.get(downloadId)?.let { item ->
-                            if (totalBytes != null) item.first.maxProgress.set(totalBytes)
-                            if (downloadedBytes != null) item.first.currentProgress.set(downloadedBytes)
+                            if (totalBytes != null) item.first.maxProgress.value = totalBytes
+                            if (downloadedBytes != null) item.first.currentProgress.value = downloadedBytes
                         }
                     }
                     DownloadManager.STATUS_SUCCESSFUL -> {
@@ -151,7 +151,7 @@ class DownloadResponseManager(
     }
 
     private fun stopProgress(downloadId: Long) {
-        hashMap.get(downloadId)?.first?.maxProgress?.set(0)
+        hashMap.get(downloadId)?.first?.maxProgress?.value = 0
     }
 
     fun getFileDescription(downloadId: Long) {
