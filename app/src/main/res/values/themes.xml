@@ -35,8 +35,12 @@
         <item name="textAppearanceOverline">@style/TextAppearance.OverLine</item>
         <item name="textAppearanceTalent">@style/TextAppearance.Talent</item>
         <item name="textAppearanceHeroStatistics">@style/TextAppearance.HeroStatistics</item>
-        <item name="textAppearanceHeroAdvantage">@style/TextAppearance.HeroAdvantage</item>
-        <item name="textAppearanceHeroDisadvantage">@style/TextAppearance.HeroDisadvantage</item>
+
+        <item name="textStyleHeroAdvantage">@style/Widget.TextView.HeroAdvantage</item>
+        <item name="textStyleHeroDisadvantage">@style/Widget.TextView.HeroDisadvantage</item>
+        <item name="textStyleHeroSignature">@style/Widget.TextView.HeroSignature</item>
+        <item name="textStyleItemSignature">@style/Widget.TextView.ItemSignature</item>
+        <item name="textStyleSpellSignature">@style/Widget.TextView.SpellSignature</item>
 
         <item name="shapeAppearanceMediumComponent">@style/MyMediumComponent</item>
         <item name="materialAlertDialogTheme">@style/MyMaterialAlertDialogTheme</item>
