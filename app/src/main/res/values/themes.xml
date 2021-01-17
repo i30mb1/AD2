@@ -46,6 +46,7 @@
         <item name="shapeAppearanceMediumComponent">@style/MyMediumComponent</item>
         <item name="materialAlertDialogTheme">@style/MyMaterialAlertDialogTheme</item>
         <item name="materialCardViewStyle">@style/Widget.CardView</item>
+        <item name="tabStyle">@style/Widget.TabLayout</item>
     </style>
 
     <!--Black тема-->

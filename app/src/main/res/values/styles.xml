@@ -45,6 +45,14 @@
         <item name="fontFamily">@font/iceland_normal</item>
     </style>
 
+    <style name="Widget.TabLayout" parent="Widget.MaterialComponents.TabLayout">
+        <item name="tabTextAppearance">@style/Widget.TabLayout.Appearance</item>
+    </style>
+
+    <style name="Widget.TabLayout.Appearance" parent="TextAppearance.MaterialComponents.Button">
+        <item name="android:letterSpacing">0</item>
+    </style>
+
     <style name="Widget.TextView.Signature" parent="">
         <item name="android:layout_width">match_parent</item>
         <item name="android:layout_height">wrap_content</item>
