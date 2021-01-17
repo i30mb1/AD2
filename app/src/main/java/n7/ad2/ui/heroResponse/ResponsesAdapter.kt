@@ -7,15 +7,14 @@ import androidx.paging.PagedListAdapter
 import androidx.recyclerview.widget.DiffUtil
 import androidx.recyclerview.widget.GridLayoutManager
 import androidx.recyclerview.widget.RecyclerView
-import n7.ad2.BR
 import n7.ad2.R
 import n7.ad2.databinding.ItemResponseBodyBinding
-import n7.ad2.databinding.ItemResponseHeaderBinding
+import n7.ad2.databinding.ItemResponseTitleBinding
 import n7.ad2.ui.heroInfo.InfoPopupWindow
 import n7.ad2.ui.heroPage.AudioExoPlayer
 import n7.ad2.ui.heroResponse.domain.vo.VOResponse
 import n7.ad2.ui.heroResponse.domain.vo.VOResponseBody
-import n7.ad2.ui.heroResponse.domain.vo.VOResponseHeader
+import n7.ad2.ui.heroResponse.domain.vo.VOResponseTitle
 import n7.ad2.utils.StickyHeaderDecorator.StickyHeaderInterface
 
 class ResponsesAdapter(
@@ -26,7 +25,7 @@ class ResponsesAdapter(
 
     override fun onCreateViewHolder(viewGroup: ViewGroup, viewType: Int): RecyclerView.ViewHolder = when (viewType) {
         R.layout.item_response_body -> BodyViewHolder.from(viewGroup, audioExoPlayer, showDialogResponse, infoPopupWindow)
-        R.layout.item_response_header -> HeaderViewHolder.from(viewGroup)
+        R.layout.item_response_title -> HeaderViewHolder.from(viewGroup)
         else -> throw UnsupportedOperationException("could not find ViewHolder for $viewGroup")
     }
 
@@ -34,24 +33,24 @@ class ResponsesAdapter(
         val item = getItem(position)
         when (viewHolder) {
             is BodyViewHolder -> if (item != null) viewHolder.bind(item as VOResponseBody) else viewHolder.clear()
-            is HeaderViewHolder -> if (item != null) viewHolder.bind(item as VOResponseHeader) else viewHolder.clear()
+            is HeaderViewHolder -> if (item != null) viewHolder.bind(item as VOResponseTitle) else viewHolder.clear()
             else -> throw UnsupportedOperationException("could not bind for $viewHolder")
         }
     }
 
     override fun getItemViewType(position: Int): Int = when (getItem(position)) {
-        is VOResponseHeader -> R.layout.item_response_header
+        is VOResponseTitle -> R.layout.item_response_title
         is VOResponseBody -> R.layout.item_response_body
         else -> throw UnsupportedOperationException("could not get type for $position")
     }
 
-    override fun getHeaderLayout() = R.layout.item_response_header
+    override fun getHeaderLayout() = R.layout.item_response_title
 
     class HeaderViewHolder private constructor(
-        private val binding: ItemResponseHeaderBinding,
+        private val binding: ItemResponseTitleBinding,
     ) : RecyclerView.ViewHolder(binding.root) {
 
-        fun bind(item: VOResponseHeader) {
+        fun bind(item: VOResponseTitle) {
             binding.item = item
             binding.executePendingBindings()
         }
@@ -61,7 +60,7 @@ class ResponsesAdapter(
         companion object {
             fun from(parent: ViewGroup): HeaderViewHolder {
                 val layoutInflater = LayoutInflater.from(parent.context)
-                val binding = ItemResponseHeaderBinding.inflate(layoutInflater, parent, false)
+                val binding = ItemResponseTitleBinding.inflate(layoutInflater, parent, false)
                 return HeaderViewHolder(binding)
             }
         }

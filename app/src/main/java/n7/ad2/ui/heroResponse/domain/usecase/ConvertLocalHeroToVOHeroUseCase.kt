@@ -6,7 +6,7 @@ import n7.ad2.data.source.local.model.LocalHero
 import n7.ad2.ui.heroResponse.domain.model.LocalHeroResponsesItem
 import n7.ad2.ui.heroResponse.domain.vo.VOResponse
 import n7.ad2.ui.heroResponse.domain.vo.VOResponseBody
-import n7.ad2.ui.heroResponse.domain.vo.VOResponseHeader
+import n7.ad2.ui.heroResponse.domain.vo.VOResponseTitle
 import java.io.File
 import javax.inject.Inject
 
@@ -24,7 +24,7 @@ class ConvertLocalHeroToVOHeroUseCase @Inject constructor(
         var fileToRemoveFromSavedResponses: File? = null
 
         localHeroResponses.forEach {
-            result.add(VOResponseHeader(it.category))
+            result.add(VOResponseTitle(it.category))
             it.responses.forEach { response ->
                 val titleForSavedFile = response.audioUrl.substringBeforeLast(".mp3").substringAfterLast("/") + ".mp3"
 

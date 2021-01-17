@@ -24,8 +24,9 @@
             android:layout_marginStart="4dp"
             android:layout_marginEnd="4dp"
             android:layout_weight="1"
+            android:textAllCaps="true"
             android:textAppearance="?textAppearanceSubtitle1"
-            tools:text="Duel" />
+            tools:text="@string/easy_to_win_heroes" />
 
     </LinearLayout>
 </layout>
