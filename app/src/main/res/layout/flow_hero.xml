@@ -14,10 +14,11 @@
     <com.google.android.material.textview.MaterialTextView
         android:id="@+id/tv_winrate"
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:layout_gravity="center"
+        android:layout_height="wrap_content"
+        android:layout_gravity="bottom"
         android:background="@drawable/transparent_30"
-        android:gravity="center"
+        android:paddingStart="2dp"
+        android:paddingEnd="2dp"
         tools:text="50.3%"
         tools:textAppearance="?textAppearanceHeroAdvantage" />
 
