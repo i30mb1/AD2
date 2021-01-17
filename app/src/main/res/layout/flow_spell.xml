@@ -13,10 +13,6 @@
 
     <com.google.android.material.textview.MaterialTextView
         android:id="@+id/tv_lvl"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_gravity="bottom"
-        android:padding="2dp"
-        android:textAppearance="?textAppearanceCaption"
+        style="?textStyleSpellSignature"
         tools:text="1" />
 </FrameLayout>

@@ -29,21 +29,13 @@
 
         <TextView
             android:id="@+id/tv"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_gravity="bottom"
-            android:background="@drawable/transparent_30"
-            android:ellipsize="end"
-            android:lines="1"
-            android:paddingStart="@{@dimen/line_width * 2}"
-            android:paddingEnd="0dp"
+            style="?textStyleHeroSignature"
             asyncText="@{model.name}"
-            android:textAppearance="?textAppearanceCaption"
             tools:text="@sample/heroes.json/data/nameEng" />
 
         <View
-            android:layout_width="@dimen/line_width"
             isVisible="@{model.viewedByUser}"
+            android:layout_width="@dimen/line_width"
             android:layout_height="match_parent"
             android:background="?colorPrimary" />
     </com.google.android.material.card.MaterialCardView>

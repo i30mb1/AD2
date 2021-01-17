@@ -1,7 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <layout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:tools="http://schemas.android.com/tools"
-    xmlns:app="http://schemas.android.com/apk/res-auto">
+    xmlns:tools="http://schemas.android.com/tools">
 
     <data>
 
@@ -39,16 +38,8 @@
 
         <TextView
             android:id="@+id/tv"
+            style="?textStyleItemSignature"
             asyncText="@{model.name}"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_gravity="bottom"
-            android:background="@drawable/transparent_30"
-            android:ellipsize="end"
-            android:lines="1"
-            android:paddingStart="@{@dimen/line_width * 2}"
-            android:paddingEnd="@{@dimen/line_width * 2}"
-            android:textAppearance="?textAppearanceCaption"
             tools:text="@sample/heroes.json/data/nameEng" />
 
         <View
