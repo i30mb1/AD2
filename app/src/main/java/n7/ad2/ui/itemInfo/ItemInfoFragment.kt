@@ -18,7 +18,7 @@ class ItemInfoFragment : Fragment(R.layout.fragment_item_info) {
 
     private var _binding: FragmentItemInfoBinding? = null
     private val binding get() = _binding!!
-    lateinit var audioExoPlayer: AudioExoPlayer
+    private val audioExoPlayer: AudioExoPlayer by lazy { AudioExoPlayer(requireActivity().application, lifecycle, ::showDialogError) }
     private val infoPopupWindow: InfoPopupWindow by lazy { InfoPopupWindow(requireContext(), lifecycle) }
     private val itemName: String by lazy { requireArguments().getString(ITEM_NAME)!! }
     private val viewModel: ItemInfoViewModel by viewModels { ItemInfoViewModel.provideFactory(injector.itemInfoViewModel, itemName) }
@@ -38,7 +38,6 @@ class ItemInfoFragment : Fragment(R.layout.fragment_item_info) {
 
         loadItemInfo(itemName)
         setupToolbar(itemName)
-        setupAudioPlayer()
         setupItemInfoRecyclerView()
     }
 
@@ -54,11 +53,6 @@ class ItemInfoFragment : Fragment(R.layout.fragment_item_info) {
 
     private fun setupToolbar(title: String) {
         binding.toolbar.title = title
-    }
-
-    private fun setupAudioPlayer() {
-        audioExoPlayer = AudioExoPlayer(requireActivity().application, lifecycle)
-        audioExoPlayer.setErrorListener(::showDialogError)
     }
 
     private fun setupItemInfoRecyclerView() {

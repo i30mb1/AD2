@@ -30,10 +30,10 @@ interface Playable {
 class AudioExoPlayer(
     private val application: Application,
     private val lifecycle: Lifecycle,
+    private var listener: ((exception: Exception) -> Unit)? = null,
 ) : Player.EventListener, LifecycleObserver {
 
     private lateinit var exoPlayer: SimpleExoPlayer
-    private var listener: ((errorMessage: Exception) -> Unit)? = null
     private var isPlaying = MutableLiveData(false)
 
     init {
@@ -53,10 +53,6 @@ class AudioExoPlayer(
     override fun onPlayerError(error: ExoPlaybackException) {
         listener?.invoke(error)
         isPlaying.value = false
-    }
-
-    fun setErrorListener(listener: (Exception) -> Unit) {
-        this.listener = listener
     }
 
     fun playFromAssets(url: String) {
@@ -138,8 +134,7 @@ class AudioExoPlayer(
         val userAgent = Util.getUserAgent(application, application.getString(R.string.app_name))
         val dataSourceFactory = DefaultDataSourceFactory(application, userAgent)
 
-        return ProgressiveMediaSource.Factory(dataSourceFactory)
-            .createMediaSource(uri)
+        return ProgressiveMediaSource.Factory(dataSourceFactory).createMediaSource(uri)
     }
 
 }
