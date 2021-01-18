@@ -18,6 +18,7 @@ object Versions {
     const val moshi         = "1.9.2"
     const val room          = "2.2.5"
     const val kotlin        = "1.4.10"
+    const val dagger        = "2.31"
 }
 
 object Lib {
@@ -78,8 +79,8 @@ object Lib {
     const val moshiAdapter = "com.squareup.moshi:moshi-adapters:${Versions.moshi}"
 
     // --- Dagger ---
-    const val dagger                   = "com.google.dagger:dagger:2.25.2"
-    const val daggerAnnotation         = "com.google.dagger:dagger-compiler:2.25.2"
+    const val dagger                   = "com.google.dagger:dagger:${Versions.dagger}"
+    const val daggerAnnotation         = "com.google.dagger:dagger-compiler:${Versions.dagger}"
 
     object Test {
         const val coroutinesTest = "org.jetbrains.kotlinx:kotlinx-coroutines-test:1.3.2"
