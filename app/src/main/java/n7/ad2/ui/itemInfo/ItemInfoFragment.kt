@@ -24,7 +24,7 @@ class ItemInfoFragment : Fragment(R.layout.fragment_item_info) {
     private val viewModel: ItemInfoViewModel by viewModels { ItemInfoViewModel.provideFactory(injector.itemInfoViewModel, itemName) }
 
     companion object {
-        const val ITEM_NAME = "ITEM_NAME"
+        private const val ITEM_NAME = "ITEM_NAME"
         fun newInstance(itemName: String): ItemInfoFragment = ItemInfoFragment().apply {
             arguments = bundleOf(ITEM_NAME to itemName)
         }
