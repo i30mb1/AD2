@@ -14,10 +14,6 @@ import n7.ad2.ui.heroInfo.domain.vo.VODescription
 import n7.ad2.ui.heroPage.domain.usecase.GetLocalHeroByNameUseCase
 import javax.inject.Inject
 
-interface ViewModelAssistedFactory<T : ViewModel> {
-    fun create(handle: SavedStateHandle): T
-}
-
 class HeroInfoViewModel @Inject constructor(
     application: Application,
     private val getHeroDescriptionInteractor: GetHeroDescriptionInteractor,

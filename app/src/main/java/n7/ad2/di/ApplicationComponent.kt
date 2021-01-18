@@ -34,7 +34,7 @@ interface ApplicationComponent {
     val heroesViewModel: HeroesViewModel
     val itemsViewModel: ItemsViewModel
     val responsesViewModel: ResponsesViewModel
-    val itemInfoViewModel: ItemInfoViewModel
+    val itemInfoViewModel: ItemInfoViewModel.AssistedFactory
     val heroGuideViewModel: HeroGuideViewModel
     val heroInfoViewModel: HeroInfoViewModel
 

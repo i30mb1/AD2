@@ -4,6 +4,7 @@ import android.os.Bundle
 import android.view.View
 import androidx.core.os.bundleOf
 import androidx.fragment.app.Fragment
+import androidx.fragment.app.viewModels
 import n7.ad2.R
 import n7.ad2.data.source.local.Locale
 import n7.ad2.databinding.FragmentItemInfoBinding
@@ -12,7 +13,6 @@ import n7.ad2.ui.heroInfo.InfoPopupWindow
 import n7.ad2.ui.heroPage.AudioExoPlayer
 import n7.ad2.ui.heroPage.showDialogError
 import n7.ad2.utils.StickyHeaderDecorator
-import n7.ad2.utils.viewModel
 
 class ItemInfoFragment : Fragment(R.layout.fragment_item_info) {
 
@@ -20,7 +20,8 @@ class ItemInfoFragment : Fragment(R.layout.fragment_item_info) {
     private val binding get() = _binding!!
     lateinit var audioExoPlayer: AudioExoPlayer
     private val infoPopupWindow: InfoPopupWindow by lazy { InfoPopupWindow(requireContext(), lifecycle) }
-    private val viewModel: ItemInfoViewModel by viewModel { injector.itemInfoViewModel }
+    private val itemName: String by lazy { requireArguments().getString(ITEM_NAME)!! }
+    private val viewModel: ItemInfoViewModel by viewModels { ItemInfoViewModel.provideFactory(injector.itemInfoViewModel, itemName) }
 
     companion object {
         const val ITEM_NAME = "ITEM_NAME"
@@ -31,15 +32,11 @@ class ItemInfoFragment : Fragment(R.layout.fragment_item_info) {
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
-        _binding = FragmentItemInfoBinding.bind(view).also {
-            it.lifecycleOwner = viewLifecycleOwner
-        }
+        _binding = FragmentItemInfoBinding.bind(view)
 
-        val itemName = requireArguments().getString(ITEM_NAME)!!
         viewModel.error.observe(viewLifecycleOwner) { if (it != null) showDialogError(it) }
 
         loadItemInfo(itemName)
-
         setupToolbar(itemName)
         setupAudioPlayer()
         setupItemInfoRecyclerView()

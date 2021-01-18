@@ -13,7 +13,7 @@ import androidx.lifecycle.AbstractSavedStateViewModelFactory
 import androidx.lifecycle.SavedStateHandle
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.ViewModelProvider
-import n7.ad2.ui.heroInfo.ViewModelAssistedFactory
+import n7.ad2.ui.itemInfo.ItemInfoViewModel
 
 inline fun <reified T : ViewModel> FragmentActivity.viewModel(
         crossinline provider: () -> T
@@ -47,34 +47,23 @@ inline fun <reified T : ViewModel> Fragment.activityViewModel(
     }
 }
 
-/* Please work */
-inline fun <reified T : ViewModel> FragmentActivity.viewModelWithSavedStateHandle(
-        defaultArgs: Bundle? = null,
-        crossinline provider: () -> ViewModelAssistedFactory<T>
-) = viewModels<T> {
-    object : AbstractSavedStateViewModelFactory(this, defaultArgs) {
-        override fun <T : ViewModel?> create(
-                key: String,
-                modelClass: Class<T>,
-                handle: SavedStateHandle
-        ): T {
-            return provider().create(handle) as T
-        }
-    }
+interface AssistedFactory<T : ViewModel, Param1> {
+    fun create(handle: Param1): T
 }
 
 /* Please work */
-inline fun <reified T : ViewModel> Fragment.viewModelWithSavedStateHandle(
+inline fun <reified T : ViewModel, Param1> Fragment.viewModelWithParam(
         defaultArgs: Bundle? = null,
-        crossinline provider: () -> ViewModelAssistedFactory<T>
+        param1: Param1,
+        crossinline provider: () -> AssistedFactory<T, Param1>,
 ) = viewModels<T> {
     object : AbstractSavedStateViewModelFactory(this, defaultArgs) {
         override fun <T : ViewModel?> create(
                 key: String,
                 modelClass: Class<T>,
-                handle: SavedStateHandle
+                handle: SavedStateHandle,
         ): T {
-            return provider().create(handle) as T
+            return provider().create(param1) as T
         }
     }
 }

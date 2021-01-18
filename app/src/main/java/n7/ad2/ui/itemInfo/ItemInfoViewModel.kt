@@ -3,18 +3,38 @@ package n7.ad2.ui.itemInfo
 import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
+import androidx.lifecycle.ViewModelProvider
 import androidx.lifecycle.viewModelScope
+import dagger.assisted.Assisted
+import dagger.assisted.AssistedInject
 import kotlinx.coroutines.launch
 import n7.ad2.data.source.local.Locale
 import n7.ad2.ui.itemInfo.domain.interactor.GetVOItemInfoInteractor
 import n7.ad2.ui.itemInfo.domain.vo.ItemInfo
 import n7.ad2.utils.onFailure
 import n7.ad2.utils.onSuccess
-import javax.inject.Inject
 
-class ItemInfoViewModel @Inject constructor(
+class ItemInfoViewModel @AssistedInject constructor(
     private val getVOItemInfoInteractor: GetVOItemInfoInteractor,
+    @Assisted private val itemName: String,
 ) : ViewModel() {
+
+    @dagger.assisted.AssistedFactory
+    interface AssistedFactory {
+        fun create(itemName: String): ItemInfoViewModel
+    }
+
+    companion object {
+        fun provideFactory(
+            assistedFactory: AssistedFactory,
+            itemName: String,
+        ): ViewModelProvider.Factory = object : ViewModelProvider.Factory {
+            @Suppress("UNCHECKED_CAST")
+            override fun <T : ViewModel> create(modelClass: Class<T>): T {
+                return assistedFactory.create(itemName) as T
+            }
+        }
+    }
 
     private val _error = MutableLiveData<Throwable?>(null)
     val error: LiveData<Throwable?> = _error
