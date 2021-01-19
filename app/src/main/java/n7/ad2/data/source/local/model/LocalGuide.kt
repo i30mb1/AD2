@@ -1,6 +1,7 @@
 package n7.ad2.data.source.local.model
 
 import androidx.room.ColumnInfo
+import androidx.room.ColumnInfo.TEXT
 import androidx.room.Entity
 import androidx.room.PrimaryKey
 
@@ -13,6 +14,6 @@ class LocalGuide(
     val name: String,
     @ColumnInfo(name = "json")
     val json: String,
-    @ColumnInfo(name= "timestamp", defaultValue = "CURRENT_TIMESTAMP")
-    val timestamp: Long = 0
+    @ColumnInfo(typeAffinity = TEXT, name = "timestamp", defaultValue = "CURRENT_TIMESTAMP")
+    val timestamp: Long = 0,
 )
