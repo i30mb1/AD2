@@ -14,6 +14,6 @@ class LocalGuide(
     val name: String,
     @ColumnInfo(name = "json")
     val json: String,
-    @ColumnInfo(typeAffinity = TEXT, name = "timestamp", defaultValue = "CURRENT_TIMESTAMP")
+    @ColumnInfo(name = "timestamp", defaultValue = "CURRENT_TIMESTAMP")
     val timestamp: Long = 0,
 )
