@@ -73,7 +73,7 @@ class GetLocalGuideJsonUseCase @Inject constructor(
     }
 
     private fun getHeroItemsList(element: Element): List<HeroItem> {
-        val ignoreList = listOf("")
+        val ignoreList = listOf("Gem of True Sight")
         val result = mutableListOf<HeroItem>()
         val itemsGroup = element.getElementsByClass("kv r-none-mobile")
         for (i in 1 until itemsGroup.size) {
