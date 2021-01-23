@@ -30,7 +30,7 @@ interface Playable {
 class AudioExoPlayer(
     private val application: Application,
     private val lifecycle: Lifecycle,
-    private var listener: ((exception: Exception) -> Unit)? = null,
+    private var errorListener: ((exception: Exception) -> Unit)? = null,
 ) : Player.EventListener, LifecycleObserver {
 
     private lateinit var exoPlayer: SimpleExoPlayer
@@ -51,7 +51,7 @@ class AudioExoPlayer(
     }
 
     override fun onPlayerError(error: ExoPlaybackException) {
-        listener?.invoke(error)
+        errorListener?.invoke(error)
         isPlaying.value = false
     }
 
