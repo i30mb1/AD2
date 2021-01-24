@@ -40,6 +40,7 @@
         <item name="textStyleHeroAdvantage">@style/Widget.TextView.HeroAdvantage</item>
         <item name="textStyleHeroDisadvantage">@style/Widget.TextView.HeroDisadvantage</item>
         <item name="textStyleHeroSignature">@style/Widget.TextView.HeroSignature</item>
+        <item name="textStyleHeroGuideItemSignature">@style/Widget.TextView.HeroGuideItemSignature</item>
         <item name="textStyleItemSignature">@style/Widget.TextView.ItemSignature</item>
         <item name="textStyleSpellSignature">@style/Widget.TextView.SpellSignature</item>
 

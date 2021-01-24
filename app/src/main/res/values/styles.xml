@@ -79,6 +79,10 @@
         <item name="android:textSize">10sp</item>
     </style>
 
+    <style name="Widget.TextView.HeroGuideItemSignature" parent="Widget.TextView.Signature">
+
+    </style>
+
     <style name="Widget.TextView.SpellSignature" parent="Widget.TextView.Signature">
 
     </style>

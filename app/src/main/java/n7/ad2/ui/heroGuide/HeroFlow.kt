@@ -10,6 +10,7 @@ import androidx.annotation.StyleRes
 import androidx.constraintlayout.helper.widget.Flow
 import androidx.constraintlayout.widget.ConstraintLayout
 import androidx.core.view.children
+import androidx.core.view.isVisible
 import androidx.transition.TransitionManager
 import coil.load
 import com.google.android.material.textview.MaterialTextView
@@ -89,7 +90,12 @@ class HeroFlow(
     private fun inflateItemHeroItemFlow(item: VOHeroFlowHeroItem): View {
         val view = inflater.inflate(R.layout.flow_hero_item, this, false)
         view.findViewById<ImageView>(R.id.iv_item).load(item.urlHeroItem) { error(R.drawable.item_placeholder) }
-        view.findViewById<TextView>(R.id.tv_time).visibility = View.GONE
+        if (item.itemTiming != null) {
+            view.findViewById<TextView>(R.id.tv_time).text = item.itemTiming
+        } else {
+            view.findViewById<TextView>(R.id.iv_arrow_right).isVisible = false
+            view.findViewById<TextView>(R.id.tv_time).isVisible = false
+        }
         view.id = generateViewId()
         return view
     }
