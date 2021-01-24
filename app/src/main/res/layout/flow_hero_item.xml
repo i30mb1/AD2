@@ -5,21 +5,29 @@
     android:layout_height="wrap_content"
     android:orientation="horizontal">
 
-    <com.google.android.material.textview.MaterialTextView
-        android:id="@+id/tv_time"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_gravity="center_vertical"
-        android:includeFontPadding="false"
-        android:rotation="270"
-        android:textAppearance="?textAppearanceCaption"
-        tools:text="12:34" />
-
     <ImageView
-        android:id="@+id/iv_item"
+        android:id="@+id/iv_arrow_right"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:contentDescription="@string/desc_arrow_right"
+        android:src="@drawable/ic_arrow_right" />
+
+    <FrameLayout
         android:layout_width="44dp"
-        android:layout_height="32dp"
-        android:contentDescription="@string/desc_hero_item"
-        tools:src="@drawable/item_placeholder" />
+        android:layout_height="32dp">
+
+        <ImageView
+            android:id="@+id/iv_item"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:contentDescription="@string/desc_hero_item"
+            tools:src="@drawable/item_placeholder" />
+
+        <com.google.android.material.textview.MaterialTextView
+            android:id="@+id/tv_time"
+            style="?textStyleSpellSignature"
+            tools:text="11:00" />
+
+    </FrameLayout>
 
 </LinearLayout>
