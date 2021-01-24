@@ -39,7 +39,7 @@ class HeroFlow(
 ) : ConstraintLayout(context, attributeSet), CoroutineScope by MainScope() {
 
     private val inflater = LayoutInflater.from(context)
-    private val flow: Flow = Flow(context, attributeSet).apply {
+    private val flow: Flow = Flow(context).apply {
         setPadding(2.toPx)
         layoutParams = LayoutParams(LayoutParams.MATCH_PARENT, LayoutParams.MATCH_PARENT)
         setHorizontalGap(2.toPx)
