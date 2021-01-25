@@ -11,7 +11,7 @@ data class VOResponseBody(
     val title: String,
     val icons: List<String>,
     val titleForFile: String,
-    val savedInMemory: Boolean,
+    val isSavedInMemory: Boolean,
 ) : VOResponse(), Playable {
     override val isPlaying = MutableLiveData(false)
     val currentProgress = MutableLiveData(0)
