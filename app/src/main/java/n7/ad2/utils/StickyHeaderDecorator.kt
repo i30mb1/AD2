@@ -35,7 +35,7 @@ class StickyHeaderDecorator<T : RecyclerView.ViewHolder>(
 
     private var mStickyHeaderHeight = 0
     private val listener: StickyHeaderInterface = adapter as StickyHeaderInterface
-    private val header: RecyclerView.ViewHolder by lazy {
+    private val header: RecyclerView.ViewHolder by lazy(LazyThreadSafetyMode.NONE) {
         adapter.createViewHolder(recyclerView, listener.getHeaderLayout())
     }
 

@@ -16,7 +16,7 @@ class HeroInfoFragment : Fragment(R.layout.fragment_hero_info) {
 
     private lateinit var binding: FragmentHeroInfoBinding
     private val viewModel: HeroInfoViewModel by viewModel { injector.heroInfoViewModel }
-    private val infoPopupWindow: InfoPopupWindow by lazy { InfoPopupWindow(requireContext(), lifecycle) }
+    private val infoPopupWindow: InfoPopupWindow by lazy(LazyThreadSafetyMode.NONE) { InfoPopupWindow(requireContext(), lifecycle) }
 
     companion object {
         private const val HERO_NAME = "HERO_NAME"

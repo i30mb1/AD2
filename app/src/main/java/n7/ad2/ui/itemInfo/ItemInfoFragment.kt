@@ -18,9 +18,9 @@ class ItemInfoFragment : Fragment(R.layout.fragment_item_info) {
 
     private var _binding: FragmentItemInfoBinding? = null
     private val binding get() = _binding!!
-    private val audioExoPlayer: AudioExoPlayer by lazy { AudioExoPlayer(requireActivity().application, lifecycle, ::showDialogError) }
-    private val infoPopupWindow: InfoPopupWindow by lazy { InfoPopupWindow(requireContext(), lifecycle) }
-    private val itemName: String by lazy { requireArguments().getString(ITEM_NAME)!! }
+    private val audioExoPlayer: AudioExoPlayer by lazy(LazyThreadSafetyMode.NONE) { AudioExoPlayer(requireActivity().application, lifecycle, ::showDialogError) }
+    private val infoPopupWindow: InfoPopupWindow by lazy(LazyThreadSafetyMode.NONE) { InfoPopupWindow(requireContext(), lifecycle) }
+    private val itemName: String by lazy(LazyThreadSafetyMode.NONE) { requireArguments().getString(ITEM_NAME)!! }
     private val viewModel: ItemInfoViewModel by viewModels { ItemInfoViewModel.provideFactory(injector.itemInfoViewModel, itemName) }
 
     companion object {
