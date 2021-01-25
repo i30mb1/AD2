@@ -2,7 +2,7 @@ package n7.ad2.parseinfo.algorithm
 
 
 fun main() {
-    selectionSorting(intArrayOf(3, 2, 1, 0, 145, 34, 12)).forEach {
+    insertionSorting(intArrayOf(3, 2, 1, 0, 145, 34, 12)).forEach {
         println(it)
     }
 }
@@ -34,3 +34,15 @@ fun selectionSorting(array: IntArray): IntArray {
     return array
 }
 
+fun insertionSorting(array: IntArray): IntArray {
+    for (currentIndex in 0 until array.size) {
+        val value = array[currentIndex]
+        var previousIndex = currentIndex - 1
+        while (previousIndex >= 0 && value < array[previousIndex]) {
+            array[previousIndex + 1] = array[previousIndex]
+            previousIndex--
+        }
+        array[previousIndex + 1] = value
+    }
+    return array
+}
