@@ -59,6 +59,7 @@ class ResponsesFragment : Fragment(R.layout.fragment_hero_responses) {
     }
 
     private fun createDialogResponse(item: VOResponseBody) {
+        if (item.isSavedInMemory) return
         childFragmentManager.setFragmentResultListener(DialogResponse.REQUEST_KEY, this) { _: String, bundle: Bundle ->
             when (bundle.getString(DialogResponse.RESULT_KEY)) {
                 DialogResponse.ACTION_DOWNLOAD_RESPONSE -> downloadResponseManager.download(item)
@@ -76,7 +77,7 @@ class ResponsesFragment : Fragment(R.layout.fragment_hero_responses) {
         binding.rv.apply {
             setHasFixedSize(true)
             layoutManager = LinearLayoutManager(context, LinearLayoutManager.VERTICAL, false)
-            addItemDecoration(StickyHeaderDecorator(responsesPagedListAdapter,this))
+            addItemDecoration(StickyHeaderDecorator(responsesPagedListAdapter, this))
             adapter = responsesPagedListAdapter
         }
 
