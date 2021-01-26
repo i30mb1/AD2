@@ -21,9 +21,7 @@ class GetLocalGuideJsonUseCase @Inject constructor(
 ) {
 
     companion object {
-        private fun getHeroNameFormatted(heroName: String): HeroNameFormatted =
-            HeroNameFormatted(heroName.toLowerCase(Locale.ENGLISH).replace("_", "-").replace("'", "").replace("%20", "-").replace(" ", "-"))
-
+        private fun getHeroNameFormatted(heroName: String) = HeroNameFormatted(heroName.toLowerCase(Locale.ENGLISH).replace("_", "-").replace("'", "").replace("%20", "-").replace(" ", "-"))
         private fun getUrlForHeroPage(heroName: HeroNameFormatted) = "https://ru.dotabuff.com/heroes/${heroName.heroName}"
         private fun getUrlForHeroGuides(heroName: HeroNameFormatted) = "https://www.dotabuff.com/heroes/${heroName.heroName}/guides"
     }
