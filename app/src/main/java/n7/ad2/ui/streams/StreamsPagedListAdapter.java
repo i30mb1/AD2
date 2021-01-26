@@ -1,4 +1,4 @@
-package n7.ad2.streams;
+package n7.ad2.ui.streams;
 
 import androidx.paging.PagedListAdapter;
 import androidx.databinding.DataBindingUtil;
@@ -15,7 +15,7 @@ import java.util.Random;
 
 import n7.ad2.R;
 import n7.ad2.databinding.ItemListStreamBinding;
-import n7.ad2.streams.retrofit.Streams;
+import n7.ad2.ui.streams.retrofit.Streams;
 
 public class StreamsPagedListAdapter extends PagedListAdapter<Streams, StreamsPagedListAdapter.ViewHolder> {
 

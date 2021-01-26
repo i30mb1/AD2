@@ -9,7 +9,7 @@
 
         <variable
             name="viewModel"
-            type="n7.ad2.streams.StreamsViewModel" />
+            type="n7.ad2.ui.streams.StreamsViewModel" />
     </data>
 
     <FrameLayout

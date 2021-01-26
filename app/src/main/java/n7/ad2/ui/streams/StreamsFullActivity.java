@@ -1,4 +1,4 @@
-package n7.ad2.streams;
+package n7.ad2.ui.streams;
 
 import android.content.DialogInterface;
 import android.content.SharedPreferences;
@@ -45,9 +45,9 @@ import java.util.ArrayList;
 import java.util.List;
 
 import n7.ad2.R;
-import n7.ad2.streams.utilsTwitch.Element;
-import n7.ad2.streams.utilsTwitch.Playlist;
-import n7.ad2.streams.utilsTwitch.TappableSurfaceView;
+import n7.ad2.ui.streams.utilsTwitch.Element;
+import n7.ad2.ui.streams.utilsTwitch.Playlist;
+import n7.ad2.ui.streams.utilsTwitch.TappableSurfaceView;
 import n7.ad2.utils.AppExecutors;
 import n7.ad2.utils.BaseActivity;
 import n7.ad2.utils.SmoothScrollableLinearLayoutManager;

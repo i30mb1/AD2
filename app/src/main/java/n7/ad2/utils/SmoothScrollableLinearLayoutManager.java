@@ -6,7 +6,7 @@ import androidx.recyclerview.widget.LinearSmoothScroller;
 import androidx.recyclerview.widget.RecyclerView;
 import android.util.DisplayMetrics;
 
-import static n7.ad2.streams.StreamsFullActivity.speed;
+import static n7.ad2.ui.streams.StreamsFullActivity.speed;
 
 public class SmoothScrollableLinearLayoutManager extends LinearLayoutManager {
     private final Context context;

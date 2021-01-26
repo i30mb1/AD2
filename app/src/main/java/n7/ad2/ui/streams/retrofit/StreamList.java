@@ -1,4 +1,4 @@
-package n7.ad2.streams.retrofit;
+package n7.ad2.ui.streams.retrofit;
 
 import java.util.List;
 

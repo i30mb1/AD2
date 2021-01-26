@@ -7,7 +7,7 @@
 
         <variable
             name="stream"
-            type="n7.ad2.streams.retrofit.Streams" />
+            type="n7.ad2.ui.streams.retrofit.Streams" />
     </data>
 
     <com.google.android.material.card.MaterialCardView
@@ -79,10 +79,8 @@
                 android:id="@+id/tv_item_list_stream_viewers"
                 android:layout_width="0dp"
                 android:layout_height="0dp"
-                android:background="#4c000000"
                 android:elevation="2dp"
                 android:gravity="center_vertical|start"
-                android:textColor="#fff"
                 android:textSize="10sp"
                 app:layout_constraintBottom_toBottomOf="@+id/iv_item_list_stream_viewers"
                 app:layout_constraintLeft_toRightOf="@+id/iv_item_list_stream_viewers"

@@ -20,7 +20,7 @@
 -dontwarn javax.annotation.**
 -dontwarn retrofit2.***
 -dontwarn com.squareup.okhttp.**
--keep class n7.ad2.streams.retrofit.** { *; }
+-keep class n7.ad2.ui.streams.retrofit.** { *; }
 # Uncomment this to preserve the line number information for
 # debugging stack traces.
 #-keepattributes SourceFile,LineNumberTable

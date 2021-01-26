@@ -1,13 +1,13 @@
-package n7.ad2.streams.retrofit;
+package n7.ad2.ui.streams.retrofit;
 
 
 import android.content.Intent;
 import android.view.View;
 
-import n7.ad2.streams.StreamsFullActivity;
+import n7.ad2.ui.streams.StreamsFullActivity;
 
-import static n7.ad2.streams.StreamsFullActivity.CHANNEL_NAME;
-import static n7.ad2.streams.StreamsFullActivity.CHANNEL_TITLE;
+import static n7.ad2.ui.streams.StreamsFullActivity.CHANNEL_NAME;
+import static n7.ad2.ui.streams.StreamsFullActivity.CHANNEL_TITLE;
 
 public class Streams {
     private int viewers = 0;

@@ -64,7 +64,7 @@ import n7.ad2.ui.heroes.HeroesFragment;
 import n7.ad2.ui.items.ItemsFragment;
 import n7.ad2.main.MainViewModel;
 import n7.ad2.news.NewsFragment;
-import n7.ad2.streams.StreamsFragment;
+import n7.ad2.ui.streams.StreamsFragment;
 import n7.ad2.tournaments.TournamentsFragment;
 import n7.ad2.utils.BaseActivity;
 import n7.ad2.utils.PlainAdapter;

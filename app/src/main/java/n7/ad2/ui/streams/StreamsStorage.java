@@ -1,4 +1,4 @@
-package n7.ad2.streams;
+package n7.ad2.ui.streams;
 
 import android.app.Application;
 import androidx.databinding.ObservableBoolean;
@@ -8,12 +8,12 @@ import java.io.IOException;
 import java.util.ArrayList;
 import java.util.List;
 
-import n7.ad2.streams.retrofit.Channel;
-import n7.ad2.streams.retrofit.Preview;
-import n7.ad2.streams.retrofit.StreamList;
-import n7.ad2.streams.retrofit.StreamSingle;
-import n7.ad2.streams.retrofit.Streams;
-import n7.ad2.streams.retrofit.StreamsApi;
+import n7.ad2.ui.streams.retrofit.Channel;
+import n7.ad2.ui.streams.retrofit.Preview;
+import n7.ad2.ui.streams.retrofit.StreamList;
+import n7.ad2.ui.streams.retrofit.StreamSingle;
+import n7.ad2.ui.streams.retrofit.Streams;
+import n7.ad2.ui.streams.retrofit.StreamsApi;
 import retrofit2.Call;
 import retrofit2.Response;
 import retrofit2.Retrofit;

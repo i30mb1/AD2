@@ -1,4 +1,4 @@
-package n7.ad2.streams;
+package n7.ad2.ui.streams;
 
 import android.app.Application;
 import androidx.lifecycle.AndroidViewModel;
@@ -8,7 +8,7 @@ import androidx.paging.PagedList;
 import androidx.databinding.ObservableBoolean;
 import androidx.annotation.NonNull;
 
-import n7.ad2.streams.retrofit.Streams;
+import n7.ad2.ui.streams.retrofit.Streams;
 
 public class StreamsViewModel extends AndroidViewModel {
 

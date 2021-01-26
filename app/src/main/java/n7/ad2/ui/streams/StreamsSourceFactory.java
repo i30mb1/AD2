@@ -1,8 +1,8 @@
-package n7.ad2.streams;
+package n7.ad2.ui.streams;
 
 import androidx.paging.DataSource;
 
-import n7.ad2.streams.retrofit.Streams;
+import n7.ad2.ui.streams.retrofit.Streams;
 
 public class StreamsSourceFactory extends DataSource.Factory<Integer, Streams> {
 

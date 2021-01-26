@@ -1,4 +1,4 @@
-package n7.ad2.streams;
+package n7.ad2.ui.streams;
 
 import android.content.Intent;
 import android.os.Bundle;
@@ -29,10 +29,10 @@ import java.util.LinkedList;
 import n7.ad2.R;
 import n7.ad2.databinding.DialogOpenStreamBinding;
 import n7.ad2.databinding.FragmentStreamsBinding;
-import n7.ad2.streams.retrofit.Streams;
+import n7.ad2.ui.streams.retrofit.Streams;
 
-import static n7.ad2.streams.StreamsFullActivity.CHANNEL_NAME;
-import static n7.ad2.streams.StreamsFullActivity.CHANNEL_TITLE;
+import static n7.ad2.ui.streams.StreamsFullActivity.CHANNEL_NAME;
+import static n7.ad2.ui.streams.StreamsFullActivity.CHANNEL_TITLE;
 import static n7.ad2.ui.MainActivity.LOG_ON_RECEIVE;
 
 public class StreamsFragment extends Fragment {

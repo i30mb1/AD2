@@ -1,4 +1,4 @@
-package n7.ad2.streams;
+package n7.ad2.ui.streams;
 
 
 import android.animation.LayoutTransition;
@@ -23,8 +23,8 @@ import android.widget.LinearLayout;
 
 import n7.ad2.R;
 
-import static n7.ad2.streams.StreamsFragment.TAG_MULTI_TWITCH;
-import static n7.ad2.streams.StreamsFragment.TAG_ONE_TWITCH;
+import static n7.ad2.ui.streams.StreamsFragment.TAG_MULTI_TWITCH;
+import static n7.ad2.ui.streams.StreamsFragment.TAG_ONE_TWITCH;
 
 public class MultiStreamsFragment extends Fragment {
 

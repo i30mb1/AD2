@@ -50,7 +50,7 @@
             android:name=".ui.heroPage.HeroPageActivity"
             android:screenOrientation="portrait" />
         <activity
-            android:name=".streams.StreamsFullActivity"
+            android:name=".ui.streams.StreamsFullActivity"
             android:finishOnTaskLaunch="true"
             android:launchMode="singleTop"
             android:screenOrientation="sensorLandscape" />

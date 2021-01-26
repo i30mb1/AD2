@@ -1,4 +1,4 @@
-package n7.ad2.streams.utilsTwitch;
+package n7.ad2.ui.streams.utilsTwitch;
 
 import java.net.URI;
 

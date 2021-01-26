@@ -1,4 +1,4 @@
-package n7.ad2.streams;
+package n7.ad2.ui.streams;
 
 import androidx.paging.PositionalDataSource;
 import androidx.annotation.NonNull;
@@ -6,7 +6,7 @@ import androidx.annotation.NonNull;
 import java.util.ArrayList;
 import java.util.List;
 
-import n7.ad2.streams.retrofit.Streams;
+import n7.ad2.ui.streams.retrofit.Streams;
 
 public class PositionalStreamsDataSource extends PositionalDataSource<Streams> {
 
