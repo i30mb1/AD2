@@ -43,6 +43,7 @@
         <item name="textStyleHeroGuideItemSignature">@style/Widget.TextView.HeroGuideItemSignature</item>
         <item name="textStyleItemSignature">@style/Widget.TextView.ItemSignature</item>
         <item name="textStyleSpellSignature">@style/Widget.TextView.SpellSignature</item>
+        <item name="textStyleHeroGuideTabNumber">@style/Widget.TextView.HeroGuideTabNumber</item>
 
         <item name="shapeAppearanceMediumComponent">@style/MyMediumComponent</item>
         <item name="materialAlertDialogTheme">@style/MyMaterialAlertDialogTheme</item>

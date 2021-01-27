@@ -15,4 +15,5 @@
     <attr name="textStyleItemSignature" format="reference" />
     <attr name="textStyleSpellSignature" format="reference" />
     <attr name="textStyleTitle" format="reference" />
+    <attr name="textStyleHeroGuideTabNumber" format="reference" />
 </resources>

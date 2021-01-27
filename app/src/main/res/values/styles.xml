@@ -107,4 +107,9 @@
         <item name="android:textAppearance">@style/TextAppearance.Title</item>
     </style>
 
+
+    <style name="Widget.TextView.HeroGuideTabNumber" parent="">
+        <item name="android:textColor">@android:color/white</item>
+    </style>
+
 </resources>
