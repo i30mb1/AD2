@@ -1,17 +1,16 @@
 package n7.ad2.ui
 
 import android.app.Application
-import android.app.NotificationChannel
-import android.app.NotificationManager
-import android.content.Context
-import android.os.Build
 import android.os.Handler
+import android.os.Looper
 import android.os.StrictMode
+import android.provider.Settings
 import n7.ad2.BuildConfig
-import n7.ad2.R
 import n7.ad2.di.ApplicationComponent
 import n7.ad2.di.DaggerApplicationComponent
 import n7.ad2.di.DaggerComponentProvider
+
+const val ANDROID_ID = Settings.Secure.ANDROID_ID
 
 // “Code never lies, comments sometimes do” — Ron Jeffries
 class MyApplication : Application(), DaggerComponentProvider {
@@ -27,21 +26,21 @@ class MyApplication : Application(), DaggerComponentProvider {
 
     private fun enableStrictMode() {
         if (BuildConfig.DEBUG) {
-            Handler().postAtFrontOfQueue {
+            Handler(Looper.getMainLooper()).postAtFrontOfQueue {
                 StrictMode.setThreadPolicy(
-                        StrictMode.ThreadPolicy.Builder()
-                                .detectDiskWrites()
-                                .detectNetwork()
-                                .detectCustomSlowCalls()
-                                .detectResourceMismatches()
-                                .penaltyLog()
-                                .build()
+                    StrictMode.ThreadPolicy.Builder()
+                        .detectDiskWrites()
+                        .detectNetwork()
+                        .detectCustomSlowCalls()
+                        .detectResourceMismatches()
+                        .penaltyLog()
+                        .build()
                 )
                 StrictMode.setVmPolicy(
-                        StrictMode.VmPolicy.Builder()
-                                .detectAll()
-                                .penaltyLog()
-                                .build()
+                    StrictMode.VmPolicy.Builder()
+                        .detectAll()
+                        .penaltyLog()
+                        .build()
                 )
             }
         }
