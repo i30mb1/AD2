@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<vector xmlns:android="http://schemas.android.com/apk/res/android"
+    android:width="64dp"
+    android:height="64dp"
+    android:viewportWidth="64"
+    android:viewportHeight="64">
+
+    <group
+        android:name="group"
+        android:pivotX="32"
+        android:pivotY="32"
+        android:rotation="45">
+
+        <path
+            android:name="circle"
+            android:pathData="M32,8 A24,24 0 1 1 31.99,8 z"
+            android:strokeWidth="5"
+            android:strokeColor="@android:color/white"
+            android:strokeLineCap="round"
+            android:trimPathStart="0.125"
+            android:trimPathEnd="0.95" />
+
+        <path
+            android:name="tick"
+            android:pathData="M26,36 L36,36 L38,4"
+            android:strokeWidth="5"
+            android:strokeColor="@android:color/white"
+            android:strokeLineCap="round"
+            android:strokeLineJoin="round" />
+    </group>
+</vector>

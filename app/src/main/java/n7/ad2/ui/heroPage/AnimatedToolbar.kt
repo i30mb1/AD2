@@ -7,6 +7,7 @@ import android.view.OrientationEventListener
 import android.view.animation.AccelerateDecelerateInterpolator
 import android.widget.ImageView
 import androidx.appcompat.widget.Toolbar
+import androidx.core.content.ContextCompat
 import androidx.transition.Slide
 import androidx.transition.TransitionManager
 import coil.load
@@ -40,6 +41,13 @@ class AnimatedToolbar(context: Context, attr: AttributeSet) : Toolbar(context, a
             text = locale.name
             onChangeResponseLocaleListener?.invoke(locale)
         }
+        addView(this)
+    }
+    private val ivRefresh: ImageView = ImageView(context).apply {
+        layoutParams = params
+        visibility = GONE
+        setImageDrawable(ContextCompat.getDrawable(context, R.drawable.radio_button))
+        setOnClickListener { it.isSelected = !it.isSelected }
         addView(this)
     }
     private var oldPage = -1
@@ -82,6 +90,7 @@ class AnimatedToolbar(context: Context, attr: AttributeSet) : Toolbar(context, a
         when (page) {
             0 -> ivHero.visibility = visibility
             1 -> tvLocale.visibility = visibility
+            2 -> ivRefresh.visibility= visibility
         }
     }
 
