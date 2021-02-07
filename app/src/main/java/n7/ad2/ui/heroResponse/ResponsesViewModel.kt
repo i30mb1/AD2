@@ -2,15 +2,14 @@ package n7.ad2.ui.heroResponse
 
 import android.app.Application
 import androidx.lifecycle.AndroidViewModel
-import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.liveData
 import androidx.lifecycle.switchMap
 import androidx.lifecycle.viewModelScope
 import androidx.paging.PagedList
 import androidx.paging.toLiveData
-import kotlinx.coroutines.flow.MutableStateFlow
-import kotlinx.coroutines.flow.StateFlow
+import kotlinx.coroutines.channels.Channel
+import kotlinx.coroutines.flow.receiveAsFlow
 import kotlinx.coroutines.launch
 import n7.ad2.R
 import n7.ad2.data.source.local.Locale
@@ -24,11 +23,11 @@ import javax.inject.Inject
 class ResponsesViewModel @Inject constructor(
     application: Application,
     private val getHeroResponsesInteractor: GetHeroResponsesInteractor,
-    private val getLocalHeroByNameUseCase: GetLocalHeroByNameUseCase
+    private val getLocalHeroByNameUseCase: GetLocalHeroByNameUseCase,
 ) : AndroidViewModel(application) {
 
-    private val _error = MutableLiveData<Throwable?>(null)
-    val error: LiveData<Throwable?> = _error
+    private val _error = Channel<Throwable>()
+    val error = _error.receiveAsFlow()
     private val heroWithLocale = MutableLiveData<Pair<LocalHero, Locale>>()
     val voResponses = heroWithLocale.switchMap {
         liveData {
@@ -39,8 +38,7 @@ class ResponsesViewModel @Inject constructor(
                     emitSource(sourceFactory.toLiveData(config))
                 }
                 .onFailure {
-                    _error.value = it
-                    _error.value = null
+                    _error.send(it)
                 }
         }
     }
