@@ -66,8 +66,8 @@ class HeroGuideWorker(
             saveLocalGuideUseCase(localGuide)
             Result.success()
         } catch (e: Exception) {
-            val error = workDataOf(RESULT to e.toString())
-            Result.failure(error)
+            val data = workDataOf(RESULT to e.toString())
+            Result.failure(data)
         }
     }
 
