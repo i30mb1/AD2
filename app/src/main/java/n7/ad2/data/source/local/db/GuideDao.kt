@@ -2,6 +2,7 @@ package n7.ad2.data.source.local.db
 
 import androidx.room.Dao
 import androidx.room.Query
+import androidx.room.Transaction
 import n7.ad2.base.BaseDao
 import n7.ad2.data.source.local.model.LocalGuide
 
@@ -13,5 +14,11 @@ interface GuideDao : BaseDao<LocalGuide> {
 
     @Query("DELETE FROM LocalGuides WHERE name=:heroName")
     suspend fun deleteGuidesFor(heroName: String)
+
+    @Transaction
+    suspend fun insertGuideAndDeleteOldGuides(localGuide: LocalGuide) {
+        deleteGuidesFor(localGuide.name)
+        insert(localGuide)
+    }
 
 }
