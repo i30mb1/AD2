@@ -11,4 +11,7 @@ interface GuideDao : BaseDao<LocalGuide> {
     @Query("SELECT rowid,* FROM LocalGuides WHERE name =:heroName")
     suspend fun getGuide(heroName: String): LocalGuide
 
+    @Query("DELETE FROM LocalGuides WHERE name=:heroName")
+    suspend fun deleteGuidesFor(heroName: String)
+
 }
