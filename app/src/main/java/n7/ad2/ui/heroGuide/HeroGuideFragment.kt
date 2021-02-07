@@ -4,9 +4,11 @@ import android.os.Bundle
 import android.view.View
 import androidx.core.os.bundleOf
 import androidx.fragment.app.Fragment
+import androidx.lifecycle.lifecycleScope
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.work.WorkInfo
 import androidx.work.WorkManager
+import kotlinx.coroutines.flow.collect
 import n7.ad2.R
 import n7.ad2.databinding.FragmentHeroGuideBinding
 import n7.ad2.di.injector
@@ -47,6 +49,7 @@ class HeroGuideFragment : Fragment(R.layout.fragment_hero_guide) {
             layoutManager = linearLayoutManager
             addItemDecoration(StickyHeaderDecorator(heroGuideAdapter, this))
         }
+        lifecycleScope.launchWhenResumed { viewModel.error.collect(::showDialogError) }
         viewModel.loadHeroWithGuides(heroName).observe(viewLifecycleOwner, heroGuideAdapter::submitList)
     }
 
