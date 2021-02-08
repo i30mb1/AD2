@@ -12,7 +12,7 @@ class GuideRepository @Inject constructor(
         return appDatabase.guideDao.insert(localGuide)
     }
 
-    suspend fun insertGuideAndDeleteOldGuides(localGuide: LocalGuide) {
+    suspend fun insertGuideAndDeleteOldGuides(localGuide: List<LocalGuide>) {
         return appDatabase.guideDao.insertGuideAndDeleteOldGuides(localGuide)
     }
 

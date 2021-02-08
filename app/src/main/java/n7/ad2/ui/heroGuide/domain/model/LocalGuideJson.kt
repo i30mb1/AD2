@@ -17,7 +17,7 @@ class LocalGuideJson(
     @Json(name = "easyToWinHeroList")
     val easyToWinHeroList: List<HeroWithWinrate>,
     @Json(name = "detailedGuide")
-    val detailedGuide: List<DetailedGuide>,
+    val detailedGuide: DetailedGuide,
 )
 
 @JsonClass(generateAdapter = true)

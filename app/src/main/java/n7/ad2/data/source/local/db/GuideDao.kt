@@ -16,8 +16,8 @@ interface GuideDao : BaseDao<LocalGuide> {
     suspend fun deleteGuidesFor(heroName: String)
 
     @Transaction
-    suspend fun insertGuideAndDeleteOldGuides(localGuide: LocalGuide) {
-        deleteGuidesFor(localGuide.name)
+    suspend fun insertGuideAndDeleteOldGuides(localGuide: List<LocalGuide>) {
+        deleteGuidesFor(localGuide[0].name)
         insert(localGuide)
     }
 

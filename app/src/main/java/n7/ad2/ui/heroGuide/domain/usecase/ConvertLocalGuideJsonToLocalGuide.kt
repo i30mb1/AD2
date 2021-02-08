@@ -12,8 +12,10 @@ class ConvertLocalGuideJsonToLocalGuide @Inject constructor(
     private val moshi: Moshi,
 ) {
 
-    suspend operator fun invoke(localGuideJson: LocalGuideJson, heroName: String): LocalGuide = withContext(ioDispatcher) {
-        val json = moshi.adapter(LocalGuideJson::class.java).toJson(localGuideJson)
-        LocalGuide(name = heroName, json = json)
+    suspend operator fun invoke(localGuideJsonList: List<LocalGuideJson>, heroName: String): List<LocalGuide> = withContext(ioDispatcher) {
+        localGuideJsonList.map { localGuideJson ->
+            val json = moshi.adapter(LocalGuideJson::class.java).toJson(localGuideJson)
+            LocalGuide(name = heroName, json = json)
+        }
     }
 }

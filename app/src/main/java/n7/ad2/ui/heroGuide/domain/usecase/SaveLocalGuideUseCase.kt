@@ -11,7 +11,7 @@ class SaveLocalGuideUseCase @Inject constructor(
     private val ioDispatcher: CoroutineDispatcher,
 ) {
 
-    suspend operator fun invoke(localGuide: LocalGuide) = withContext(ioDispatcher) {
+    suspend operator fun invoke(localGuide: List<LocalGuide>) = withContext(ioDispatcher) {
         repository.insertGuideAndDeleteOldGuides(localGuide)
     }
 

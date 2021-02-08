@@ -27,7 +27,7 @@ class GetLocalGuideJsonUseCase @Inject constructor(
     }
 
     @Suppress("BlockingMethodInNonBlockingContext")
-    suspend operator fun invoke(heroName: String): LocalGuideJson = withContext(ioDispatcher) {
+    suspend operator fun invoke(heroName: String): List<LocalGuideJson> = withContext(ioDispatcher) {
 
         val heroNameFormatted = getHeroNameFormatted(heroName)
 
@@ -40,7 +40,11 @@ class GetLocalGuideJsonUseCase @Inject constructor(
         val documentWithHeroGuides = getDocumentFromUrl(getUrlForHeroGuides(heroNameFormatted))
         val heroGuides = getHeroGuides(documentWithHeroGuides)
 
-        LocalGuideJson(heroName, heroWinrate, heroPopularity, hardToWinHeroesList, easyToWinHeroesList, heroGuides)
+        buildList {
+            for(heroGuide in heroGuides) {
+                add(LocalGuideJson(heroName, heroWinrate, heroPopularity, hardToWinHeroesList, easyToWinHeroesList, heroGuide))
+            }
+        }
     }
 
     private fun getHeroGuides(document: Document): List<DetailedGuide> {
