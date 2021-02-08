@@ -29,8 +29,6 @@
     <string name="setting_contact_title">Contact us</string>
     <string name="setting_contact_key" translatable="false">contact_us_key</string>
     <string name="setting_contact_summary">Bugs? Errors? Contribution?</string>
-    <string name="setting_rate_me_title">Rate application</string>
-    <string name="setting_rate_me_key" translatable="false">rate_me_key</string>
     <string name="setting_theme_title">Change theme</string>
     <string name="setting_theme_key" translatable="false">setting_theme_key</string>
     <string name="setting_theme_default" translatable="false">GRAY</string>
@@ -212,6 +210,7 @@
     <string name="desc_hero_item" translatable="false">hero item</string>
     <string name="desc_arrow_left" translatable="false">arrow show to left</string>
     <string name="desc_arrow_right" translatable="false">arrow show to right</string>
+    <string name="desc_update_guide" translatable="false">update guide</string>
 
     <string name="hotkey" translatable="false">Hot Key</string>
     <string name="legacykey" translatable="false">Legacy Key</string>

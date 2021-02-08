@@ -29,26 +29,20 @@ class SettingsFragment : PreferenceFragmentCompat() {
         setupAbout()
         setupContact()
         setupTellFriends()
-        setupRateMe()
     }
 
     private fun setupRateMe() {
-        findPreference<Preference>(getString(R.string.setting_rate_me_key))?.apply {
-            onPreferenceClickListener = Preference.OnPreferenceClickListener {
-                val reviewManager = ReviewManagerFactory.create(requireContext())
-                val requestReviewFlow = reviewManager.requestReviewFlow()
-                requestReviewFlow.addOnCompleteListener { request ->
-                    if (request.isSuccessful) {
-                        val reviewInfo = request.result
-                        val flow = reviewManager.launchReviewFlow(requireActivity(), reviewInfo)
-                        flow.addOnCompleteListener {
-                           requireActivity().sendBroadcast(Intent(MainActivity.LOG_ON_RECEIVE).putExtra(MainActivity.LOG_ON_RECEIVE, "dialog_rate_is_successful"))
-                        }
-                    } else {
-                        requireActivity().sendBroadcast(Intent(MainActivity.LOG_ON_RECEIVE).putExtra(MainActivity.LOG_ON_RECEIVE, "dialog_rate_is_fail"))
-                    }
+        val reviewManager = ReviewManagerFactory.create(requireContext())
+        val requestReviewFlow = reviewManager.requestReviewFlow()
+        requestReviewFlow.addOnCompleteListener { request ->
+            if (request.isSuccessful) {
+                val reviewInfo = request.result
+                val flow = reviewManager.launchReviewFlow(requireActivity(), reviewInfo)
+                flow.addOnCompleteListener {
+                    requireActivity().sendBroadcast(Intent(MainActivity.LOG_ON_RECEIVE).putExtra(MainActivity.LOG_ON_RECEIVE, "dialog_rate_is_successful"))
                 }
-                true
+            } else {
+                requireActivity().sendBroadcast(Intent(MainActivity.LOG_ON_RECEIVE).putExtra(MainActivity.LOG_ON_RECEIVE, "dialog_rate_is_fail"))
             }
         }
     }
@@ -137,8 +131,8 @@ class SettingsFragment : PreferenceFragmentCompat() {
 
     private fun recreateActivity() {
         TaskStackBuilder.create(requireContext())
-                .addNextIntent(Intent(requireActivity(), MainActivity::class.java))
-                .addNextIntent(requireActivity().intent)
-                .startActivities()
+            .addNextIntent(Intent(requireActivity(), MainActivity::class.java))
+            .addNextIntent(requireActivity().intent)
+            .startActivities()
     }
 }
