@@ -4,7 +4,7 @@ import android.app.Application
 import android.text.SpannableString
 import n7.ad2.ui.heroInfo.HeroStatistics
 import n7.ad2.R
-import n7.ad2.data.source.local.Repository
+import n7.ad2.data.source.local.HeroRepository
 import n7.ad2.ui.heroInfo.domain.model.Ability
 import n7.ad2.ui.heroInfo.domain.model.LocalHeroDescription
 import n7.ad2.ui.heroInfo.domain.vo.VOBodyLine
@@ -21,7 +21,7 @@ import n7.ad2.utils.extension.toStringListWithDash
 
 @ExperimentalStdlibApi
 fun LocalHeroDescription.toVOHeroAttrs(application: Application, heroName: String): VOHeroMainInformation = VOHeroMainInformation(
-    Repository.getFullUrlHeroImage(heroName),
+    HeroRepository.getFullUrlHeroImage(heroName),
     HeroStatistics.Companion.Statistics(mainAttributes.attrStrength, mainAttributes.attrAgility, mainAttributes.attrIntelligence),
     buildList {
         add(VOTitle(application.getString(R.string.hero_fragment_description)))
@@ -41,7 +41,7 @@ fun LocalHeroDescription.toVOHeroSpells(application: Application) = VOHeroSpells
 @ExperimentalStdlibApi
 fun Ability.toVOSpell(application: Application) = VOSpell(
     this.spellName,
-    Repository.getFullUrlHeroSpell(this.spellName),
+    HeroRepository.getFullUrlHeroSpell(this.spellName),
     buildList {
         add(VOTitle(spellName, hotKey, legacyKey, audioUrl))
         effects.forEach { title -> add(VOBodyLine(SpannableString(title.spanWithDotaImages(application, true)))) }

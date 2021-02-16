@@ -7,9 +7,9 @@ import android.view.ViewGroup
 import androidx.databinding.DataBindingUtil
 import androidx.fragment.app.FragmentActivity
 import androidx.lifecycle.lifecycleScope
-import androidx.lifecycle.observe
 import androidx.preference.PreferenceManager
 import androidx.transition.TransitionManager
+import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.delay
 import kotlinx.coroutines.launch
 import n7.ad2.R
@@ -33,12 +33,15 @@ class SplashActivity : FragmentActivity() {
     private val viewModel: SplashViewModel by viewModel { injector.splashViewModel }
 
     override fun onCreate(savedInstanceState: Bundle?) {
+        viewModel.loadNews()
+        lifecycleScope.launch(Dispatchers.IO) {
+            if(!viewModel.shouldWeShowSplashScreen()) finishSplashActivityAndStartMainActivity()
+        }
         setMySplashTheme()
         super.onCreate(savedInstanceState)
+
         binding = DataBindingUtil.setContentView(this, R.layout.activity_splash)
         PreferenceManager.setDefaultValues(this, R.xml.setting, false)
-        viewModel.saveCurrentDate()
-        viewModel.loadNews()
 
         if (savedInstanceState == null) { fadeIn = true }
 
@@ -70,9 +73,13 @@ class SplashActivity : FragmentActivity() {
             TransitionManager.beginDelayedTransition(binding.root as ViewGroup)
             binding.tv.visibility = View.VISIBLE
             delay(DELAY_START_ACTIVITY)
-            startActivity(Intent(applicationContext, MainActivity::class.java))
-            finish()
+            finishSplashActivityAndStartMainActivity()
         }
+    }
+
+    private fun finishSplashActivityAndStartMainActivity() {
+        startActivity(Intent(applicationContext, MainActivity::class.java))
+        finish()
     }
 
 }

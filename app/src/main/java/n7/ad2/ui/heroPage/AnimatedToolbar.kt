@@ -15,7 +15,7 @@ import com.robinhood.ticker.TickerUtils
 import com.robinhood.ticker.TickerView
 import n7.ad2.R
 import n7.ad2.data.source.local.Locale
-import n7.ad2.data.source.local.Repository
+import n7.ad2.data.source.local.HeroRepository
 import n7.ad2.utils.extension.toPx
 
 class AnimatedToolbar(context: Context, attr: AttributeSet) : Toolbar(context, attr) {
@@ -76,7 +76,7 @@ class AnimatedToolbar(context: Context, attr: AttributeSet) : Toolbar(context, a
     }
 
     fun loadHero(heroName: String) {
-        ivHero.load(Repository.getFullUrlHeroMinimap(heroName))
+        ivHero.load(HeroRepository.getFullUrlHeroMinimap(heroName))
     }
 
     fun pageSelected(newPage: Int) {

@@ -1,7 +1,7 @@
 package n7.ad2.ui.heroGuide.domain.adapter
 
 import n7.ad2.data.source.local.ItemRepository
-import n7.ad2.data.source.local.Repository
+import n7.ad2.data.source.local.HeroRepository
 import n7.ad2.ui.heroGuide.VOHeroFlowHeroItem
 import n7.ad2.ui.heroGuide.VOHeroFlowItem
 import n7.ad2.ui.heroGuide.VOHeroFlowSpell
@@ -21,12 +21,12 @@ fun List<HeroWithWinrate>.toVOEasyToWinHeroes(): VOGuideEasyToWinHeroes = VOGuid
 
 private fun HeroWithWinrate.toVOHeroFlowItem(): VOHeroFlowItem = VOHeroFlowItem(
     heroName,
-    Repository.getFullUrlHeroImage(heroName),
+    HeroRepository.getFullUrlHeroImage(heroName),
     "${heroWinrate}%"
 )
 
 fun List<Spell>.toVOGuideSpellBuild(): VOGuideSpellBuild = VOGuideSpellBuild(
-    map { VOHeroFlowSpell(it.spellName, Repository.getFullUrlHeroSpell(it.spellName), it.spellOrder) }
+    map { VOHeroFlowSpell(it.spellName, HeroRepository.getFullUrlHeroSpell(it.spellName), it.spellOrder) }
 )
 
 fun List<HeroItem>.toVOGuideStartingHeroItems(): VOGuideStartingHeroItems = VOGuideStartingHeroItems(
