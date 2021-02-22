@@ -14,9 +14,11 @@ import dagger.Provides
 import dagger.Reusable
 import kotlinx.coroutines.CoroutineDispatcher
 import kotlinx.coroutines.Dispatchers
+import n7.ad2.AD2Logger
 import n7.ad2.data.source.local.db.AppDatabase
 import n7.ad2.workers.DatabaseWorker
 import java.util.*
+import javax.inject.Singleton
 
 @Module
 object ApplicationModule {
@@ -61,5 +63,9 @@ object ApplicationModule {
 
     @Provides
     fun provideCalendar(): Calendar = Calendar.getInstance()
+
+    @Provides
+    @Singleton
+    fun provideAD2Logger(): AD2Logger = AD2Logger()
 
 }
