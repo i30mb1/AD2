@@ -101,12 +101,12 @@ class MainActivity : BaseActivity() {
         }
     }
     private var modeSecretActivity = false
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         binding = DataBindingUtil.setContentView(this, R.layout.activity_main)
         currentDay = PreferenceManager.getDefaultSharedPreferences(this).getInt(getString(R.string.setting_current_day), 0)
         viewModel = ViewModelProvider(this).get(MainViewModel::class.java)
-        binding.setViewModel(viewModel)
         drawer = DataBindingUtil.inflate(layoutInflater, R.layout.drawer, null, false)
         drawer.setViewModel(viewModel)
         movementListX.addAll(Arrays.asList(*arrayOfNulls(10)))

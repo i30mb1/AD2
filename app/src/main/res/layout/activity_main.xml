@@ -4,16 +4,13 @@
 
     <data>
 
-        <variable
-            name="viewModel"
-            type="n7.ad2.main.MainViewModel" />
     </data>
 
     <androidx.drawerlayout.widget.DrawerLayout
         android:id="@+id/drawer"
-        android:background="?android:colorBackground"
         android:layout_width="match_parent"
-        android:layout_height="match_parent">
+        android:layout_height="match_parent"
+        android:background="?android:colorBackground">
 
         <androidx.coordinatorlayout.widget.CoordinatorLayout
             android:layout_width="match_parent"
@@ -31,7 +28,7 @@
                     app:layout_scrollFlags="scroll|enterAlways" />
             </com.google.android.material.appbar.AppBarLayout>
 
-            <FrameLayout
+            <androidx.fragment.app.FragmentContainerView
                 android:id="@+id/container"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
