@@ -65,13 +65,20 @@ import n7.ad2.databinding.DrawerBinding
 import java.util.Arrays
 
 class MainActivity : BaseActivity() {
+
+    companion object {
+        const val LAST_ITEM = "LAST_ITEM"
+        const val MILLIS_FOR_EXIT = 2000
+        const val GITHUB_LAST_APK_URL = "https://github.com/i30mb1/AD2/blob/master/app-release.apk?raw=true"
+        const val LOG_ON_RECEIVE = "log"
+        const val DIALOG_RATE_SHOW = "DIALOG_RATE_SHOW"
+        private const val MY_REQUEST_CODE_UPDATE = 17
+    }
+
     var observableLastItem = ObservableInt(1)
-    var rewardedVideoLoaded = ObservableBoolean(false)
-    var freeSubscriptionCounter = ObservableInt(0)
     var subscription = ObservableBoolean(false)
     var movementListX = ObservableArrayList<Float>()
     var movementListY = ObservableArrayList<Float>()
-    private val easter_egg_value = false
     private var timeCounter = -1
     private var doubleBackToExitPressedOnce = false
     private val constraintSetHidden = ConstraintSet()
@@ -80,12 +87,6 @@ class MainActivity : BaseActivity() {
     private var adapter: PlainAdapter? = null
     private lateinit var binding: ActivityMainBinding
     private lateinit var drawer: DrawerBinding
-    var broadcastReceiver: BroadcastReceiver? = object : BroadcastReceiver() {
-        override fun onReceive(context: Context, intent: Intent) {
-            val string = intent.getStringExtra(LOG_ON_RECEIVE)
-            log(string)
-        }
-    }
     private var shouldUpdateFromMarket = true
     private var viewModel: MainViewModel? = null
     private var currentDay = 0
@@ -114,7 +115,6 @@ class MainActivity : BaseActivity() {
         drawer.setArrayY(movementListY)
         drawer.setActivity(this)
         setupRecyclerView()
-        log("on_Create")
         setupToolbar()
         setupDrawer()
         setupListeners()
@@ -154,26 +154,12 @@ class MainActivity : BaseActivity() {
         setSupportActionBar(binding!!.toolbar)
     }
 
-    override fun onStart() {
-        super.onStart()
-        log("on_Start")
-    }
-
     private fun setupRecyclerView() {
         shouldDisplayLog = PreferenceManager.getDefaultSharedPreferences(this).getBoolean(getString(R.string.setting_log_key), true)
         if (shouldDisplayLog) {
             adapter = viewModel!!.adapter
             drawer!!.rvDrawer.adapter = adapter
             drawer!!.rvDrawer.layoutManager = UnscrollableLinearLayoutManager(this, LinearLayoutManager.VERTICAL, false)
-        }
-    }
-
-    fun log(text: String?) {
-        if (adapter != null) {
-            adapter!!.add(text)
-            adapter!!.notifyDataSetChanged()
-            //            adapter.notifyItemChanged(adapter.getItemCount());
-            drawer!!.rvDrawer.scrollToPosition(adapter!!.itemCount - 1)
         }
     }
 
@@ -251,7 +237,6 @@ class MainActivity : BaseActivity() {
                         this@MainActivity,  // Include a request code to later monitor this update request.
                         MY_REQUEST_CODE_UPDATE)
                 } catch (e: SendIntentException) {
-                    log("load_version_flexible = failed")
                     loadNewVersionFromMarket()
                 }
             }
@@ -264,8 +249,6 @@ class MainActivity : BaseActivity() {
         if (requestCode == MY_REQUEST_CODE_UPDATE) {
             if (resultCode == RESULT_OK) {
                 if (appUpdateManager != null) appUpdateManager!!.registerListener(UpdateListener)
-            } else {
-                log("Update flow failed! Result code: $resultCode")
             }
         }
     }
@@ -288,7 +271,6 @@ class MainActivity : BaseActivity() {
 
     private fun loadNewVersionFromGitHub() {
         try {
-            log("Loading latest version from GitHub")
             val request = DownloadManager.Request(Uri.parse(GITHUB_LAST_APK_URL))
             request.setDescription(getString(R.string.all_new_version))
             request.setTitle(getString(R.string.app_name))
@@ -400,27 +382,17 @@ class MainActivity : BaseActivity() {
         drawer.openMenu()
     }
 
-    override fun onPause() {
-        log("on_Pause")
-        super.onPause()
-    }
-
     override fun onStop() {
-        log("on_Stop")
         PreferenceManager.getDefaultSharedPreferences(this).edit().putInt(LAST_ITEM, observableLastItem.get()).apply()
         super.onStop()
     }
 
     override fun onDestroy() {
-        if (broadcastReceiver != null) unregisterReceiver(broadcastReceiver)
-        log("on_Destroy")
         super.onDestroy()
     }
 
     override fun onResume() {
-        log("on_Resume")
         incCountEnter()
-        regReceiverLog()
         //        checkInstallUpdate();
         super.onResume()
     }
@@ -437,14 +409,6 @@ class MainActivity : BaseActivity() {
         }
     }
 
-    private fun regReceiverLog() {
-        val filter = IntentFilter()
-        filter.addAction(LOG_ON_RECEIVE)
-        registerReceiver(broadcastReceiver, filter)
-        //можно затригерить ресивер этой командой
-//        getActivity().sendBroadcast(new Intent("setToolbarName"));
-    }
-
     override fun onBackPressed() {
         if (doubleBackToExitPressedOnce) {
             finish()
@@ -459,31 +423,4 @@ class MainActivity : BaseActivity() {
         Handler().postDelayed({ doubleBackToExitPressedOnce = false }, MILLIS_FOR_EXIT.toLong())
     }
 
-    override fun onAttachedToWindow() {
-        super.onAttachedToWindow()
-    }
-
-    companion object {
-        const val COUNTER_DIALOG_RATE = 10
-        const val COUNTER_DIALOG_DONATE = 15
-        const val FREE_SUBSCRIPTION_COUNTER = "FREE_SUBSCRIPTION_COUNTER"
-        const val FIREBASE_DIALOG_DONATE_SAW = "DIALOG_DONATE_SAW"
-        const val FIREBASE_DIALOG_PRE_DONATE_SAW = "DIALOG_PRE_DONATE_SAW"
-        const val FIREBASE_DIALOG_RATE_SAW = "DIALOG_RATE_SHOW"
-        const val FIREBASE_DIALOG_RATE_CLICK = "DIALOG_RATE_CLICK"
-        const val LAST_ITEM = "LAST_ITEM"
-        const val MILLIS_FOR_EXIT = 2000
-        const val GITHUB_LAST_APK_URL = "https://github.com/i30mb1/AD2/blob/master/app-release.apk?raw=true"
-        const val ADMOB_ID = "ca-app-pub-5742225922710304/8697652489"
-        const val ADMOB_ID_FAKE = "ca-app-pub-3940256099942544/5224354917"
-        const val ADMOB_ID_BACK = "ca-app-pub-5742225922710304/6328775876"
-        const val ADMOB_ID_BACK_FAKE = "ca-app-pub-3940256099942544/1033173712"
-        const val LOG_ON_RECEIVE = "log"
-        const val DIALOG_RATE_SHOW = "DIALOG_RATE_SHOW"
-        const val DIALOG_VIDEO_AD_SAW = "DIALOG_VIDEO_AD_SAW"
-        const val ACTION_BEFORE_SHOW_ADVERTISEMENT = 3
-        const val EASTER_EGG_ACTIVATED = "EASTER_EGG_ACTIVATED"
-        private const val DIALOG_PRE_DONATE_LAST_DAY = "DIALOG_PRE_DONATE_LAST_DAY"
-        private const val MY_REQUEST_CODE_UPDATE = 17
-    }
 }
