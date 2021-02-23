@@ -4,6 +4,9 @@
 
     <data>
 
+        <variable
+            name="item"
+            type="n7.ad2.AD2Log" />
     </data>
 
     <LinearLayout
@@ -12,22 +15,23 @@
         android:orientation="horizontal">
 
         <TextView
+            android:text="@{item.message}"
             android:id="@+id/tv_item_list_plain"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_weight="1"
-            style="@style/Widget.TextView.Log"
+            android:fontFamily="@font/roboto_thin"
             android:gravity="end"
             android:paddingStart="2dp"
             android:paddingEnd="2dp"
             android:textAllCaps="true"
-            android:textColor="?android:textColorSecondary"
+            android:textColor="?myTextColorSecondary"
             android:textSize="12sp"
             android:textStyle="bold"
             tools:text="@sample/heroes.json/data/nameEng" />
 
         <View
-            android:layout_width="2dp"
+            android:layout_width="@dimen/line_width"
             android:layout_height="match_parent"
             android:background="?colorAccent" />
     </LinearLayout>

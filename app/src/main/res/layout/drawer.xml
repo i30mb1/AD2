@@ -136,7 +136,7 @@
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:scrollTo="@{viewModel.scrollTo}"
-            tools:listitem="@layout/item_list_plain" />
+            tools:listitem="@layout/item_log" />
 
         <ImageView
             android:id="@+id/iv_drawer_setting"

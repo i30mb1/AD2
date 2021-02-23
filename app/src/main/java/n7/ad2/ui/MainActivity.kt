@@ -6,9 +6,7 @@ import androidx.databinding.ObservableInt
 import androidx.databinding.ObservableBoolean
 import androidx.databinding.ObservableArrayList
 import androidx.constraintlayout.widget.ConstraintSet
-import n7.ad2.utils.PlainAdapter
 import android.content.Intent
-import n7.ad2.ui.MainActivity
 import n7.ad2.main.MainViewModel
 import com.google.android.play.core.appupdate.AppUpdateManager
 import com.google.android.play.core.install.InstallStateUpdatedListener
@@ -17,9 +15,7 @@ import android.os.Bundle
 import androidx.databinding.DataBindingUtil
 import n7.ad2.R
 import androidx.lifecycle.ViewModelProvider
-import androidx.annotation.StringRes
 import n7.ad2.utils.SnackbarUtils
-import android.content.DialogInterface
 import n7.ad2.utils.UnscrollableLinearLayoutManager
 import androidx.recyclerview.widget.LinearLayoutManager
 import n7.ad2.ui.heroes.HeroesFragment
@@ -31,20 +27,14 @@ import n7.ad2.games.GameFragment
 import androidx.constraintlayout.widget.ConstraintLayout
 import android.view.animation.LinearInterpolator
 import com.google.android.play.core.appupdate.AppUpdateManagerFactory
-import com.google.android.play.core.appupdate.AppUpdateInfo
 import com.google.android.play.core.install.model.UpdateAvailability
 import com.google.android.play.core.install.model.AppUpdateType
 import android.content.IntentSender.SendIntentException
 import com.google.android.material.snackbar.Snackbar
 import android.content.ActivityNotFoundException
-import android.content.BroadcastReceiver
-import android.content.Context
-import com.google.firebase.analytics.FirebaseAnalytics
 import android.view.MotionEvent
-import com.yarolegovich.slidingrootnav.SlidingRootNav
 import com.yarolegovich.slidingrootnav.SlidingRootNavBuilder
 import com.yarolegovich.slidingrootnav.callback.DragStateListener
-import android.content.IntentFilter
 import android.net.Uri
 import android.os.Environment
 import android.os.Handler
@@ -84,7 +74,7 @@ class MainActivity : BaseActivity() {
     private val constraintSetHidden = ConstraintSet()
     private val constraintSetOrigin = ConstraintSet()
     private var currentSet: ConstraintSet? = null
-    private var adapter: PlainAdapter? = null
+    private var adapter: AD2LoggerAdapter? = null
     private lateinit var binding: ActivityMainBinding
     private lateinit var drawer: DrawerBinding
     private var shouldUpdateFromMarket = true

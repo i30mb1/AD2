@@ -20,7 +20,7 @@ import n7.ad2.main.db.N7MessageRoomDatabase;
 import n7.ad2.main.retrofit.Update;
 import n7.ad2.main.retrofit.UpdateApi;
 import n7.ad2.ui.setting.SettingActivity;
-import n7.ad2.utils.PlainAdapter;
+import n7.ad2.ui.AD2LoggerAdapter;
 import n7.ad2.utils.SingleLiveEvent;
 import n7.ad2.utils.SnackbarMessage;
 import retrofit2.Call;
@@ -38,7 +38,7 @@ public class MainViewModel extends AndroidViewModel {
     private static final String BASE_URL = "https://raw.githubusercontent.com/i30mb1/AD2/master/";
     public final SingleLiveEvent<Void> showDialogUpdate = new SingleLiveEvent<>();
     public final SnackbarMessage snackbarMessage = new SnackbarMessage();
-    private final PlainAdapter adapter;
+    private final AD2LoggerAdapter adapter;
     public ObservableBoolean isUpdating = new ObservableBoolean(false);
     public ObservableInt scrollTo = new ObservableInt();
     private Application application;
@@ -49,7 +49,7 @@ public class MainViewModel extends AndroidViewModel {
         super(application);
         this.application = application;
 
-        adapter = new PlainAdapter();
+        adapter = new AD2LoggerAdapter();
 
         diskIO.execute(new Runnable() {
             @Override
@@ -60,7 +60,7 @@ public class MainViewModel extends AndroidViewModel {
 
     }
 
-    public PlainAdapter getAdapter() {
+    public AD2LoggerAdapter getAdapter() {
         return adapter;
     }
 
@@ -75,11 +75,6 @@ public class MainViewModel extends AndroidViewModel {
             startUpdate(false);
             PreferenceManager.getDefaultSharedPreferences(application).edit().putInt(LAST_DAY_WHEN_CHECK_UPDATE, currentDay).apply();
         }
-    }
-
-    public void log(String text) {
-        adapter.add(text);
-        scrollTo.set(adapter.getItemCount() - 1);
     }
 
     private void saveMessageInDatabase(Update update) {

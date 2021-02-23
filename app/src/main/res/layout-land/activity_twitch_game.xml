@@ -23,7 +23,7 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="@+id/line"
         app:layout_constraintTop_toTopOf="parent"
-        tools:listitem="@layout/item_list_plain" />
+        tools:listitem="@layout/item_log" />
 
     <ProgressBar
         android:id="@+id/pb_activity_twitch_game"

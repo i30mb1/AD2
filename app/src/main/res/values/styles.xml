@@ -37,10 +37,6 @@
         <item name="android:foreground">?android:attr/selectableItemBackground</item>
     </style>
 
-    <style name="Widget.TextView.Log" parent="">
-        <item name="fontFamily">@font/roboto_thin</item>
-    </style>
-
     <style name="Widget.TextView.Coordinate" parent="">
         <item name="fontFamily">@font/iceland_normal</item>
     </style>

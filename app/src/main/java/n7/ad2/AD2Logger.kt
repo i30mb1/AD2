@@ -1,6 +1,6 @@
 package n7.ad2
 
-private data class AD2Log(val message: String)
+class AD2Log(val message: String)
 
 class AD2Logger {
 
