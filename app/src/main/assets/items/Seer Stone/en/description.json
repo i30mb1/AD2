@@ -1,0 +1,41 @@
+{
+  "abilities": [
+    {
+      "audioUrl": null,
+      "effects": [
+        "Ability Target Area",
+        "Affects Self \/ Enemies"
+      ],
+      "notes": [],
+      "mana": null,
+      "abilityName": "Reveal",
+      "cooldown": "70",
+      "description": "Reveal a target area of the map for seconds (enemies can see the area is revealed).",
+      "params": [
+        "Cast Range: Global",
+        "Reveal Area Radius: 800",
+        "Reveal Duration: 5",
+        "True Sight: No"
+      ],
+      "itemBehaviour": [],
+      "story": null
+    }
+  ],
+  "additionalInformation": [
+    "Seer Stones are fully sharable."
+  ],
+  "cost": "N\/A",
+  "lore": null,
+  "consistFrom": null,
+  "boughtFrom": "Neutral Drop Only",
+  "name": "Seer Stone",
+  "description": "The curious creation of a wizard who professed to hail from another time.",
+  "trivia": null,
+  "upgradeIn": null,
+  "bonuses": [
+    "+10 Mana regeneration",
+    "+350 Cast range",
+    "+350 vision"
+  ],
+  "tips": null
+}

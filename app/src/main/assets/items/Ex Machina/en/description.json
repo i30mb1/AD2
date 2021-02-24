@@ -1,0 +1,43 @@
+{
+  "abilities": [
+    {
+      "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/2\/23\/Ex_Machina_Reset_Item_Cooldowns.mp3\/revision\/latest?cb=20200116232656",
+      "effects": [
+        "Ability No Target",
+        "Affects Self"
+      ],
+      "notes": [
+        "Interrupts the user's channeling spells upon cast.",
+        "Only refreshes items in the user's inventory and backpack. Items in the stash, in other units' inventories or dropped items are unaffected.",
+        "Only refreshes items owned by the user. Allied items in the inventory are not refreshed.",
+        "Visually resets the cooldown of Tranquil Boots, but does not skip the broken state.",
+        "Does not reset the cooldowns of Refresher Shard, Refresher Orb, and Town Portal Scroll."
+      ],
+      "mana": null,
+      "abilityName": "Reset Item Cooldowns",
+      "cooldown": "30",
+      "description": "Reset the cooldowns on all items (except Refresher Orb).",
+      "params": [],
+      "itemBehaviour": [],
+      "story": null
+    }
+  ],
+  "additionalInformation": [
+    "Ex Machinas are fully sharable."
+  ],
+  "cost": "N\/A",
+  "lore": null,
+  "consistFrom": null,
+  "boughtFrom": "Neutral Drop Only",
+  "name": "Ex Machina",
+  "description": "The remains of an ancient universe, preserved within a single sphere.",
+  "trivia": null,
+  "upgradeIn": null,
+  "bonuses": [
+    "+25 Armor"
+  ],
+  "tips": [
+    "Ex Machina can be shared with Clockwerk once he has obtained his Aghanim's Scepter for Overclocking since Overclocking doesn't refresh items. It is also best shared on item-reliant heroes such as those who builds Black King Bar.",
+    "It is also best shared on item-reliant heroes such as those who builds Black King Bar."
+  ]
+}

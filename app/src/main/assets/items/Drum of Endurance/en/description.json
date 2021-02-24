@@ -1,0 +1,83 @@
+{
+  "abilities": [
+    {
+      "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/8\/83\/Drum_of_Endurance_Endurance.mp3\/revision\/latest?cb=20191227195410",
+      "effects": [
+        "Ability No Target",
+        "Affects Allies"
+      ],
+      "notes": [
+        "Interrupts the user's channeling spells upon cast.",
+        "Multiple casts of Endurance do not stack the buff, but refresh the duration instead.",
+        "Only affects player controlled units, including invulnerable units, excluding wards."
+      ],
+      "mana": null,
+      "abilityName": "Endurance",
+      "cooldown": "30",
+      "description": "Gives +45 attack speed and +13% movement speed to nearby allies for 6 seconds.",
+      "params": [
+        "Radius: 1200",
+        "Move Speed Bonus: 13%",
+        "Attack Speed Bonus: 45",
+        "Duration: 6"
+      ],
+      "itemBehaviour": [],
+      "story": null
+    },
+    {
+      "audioUrl": null,
+      "effects": [
+        "Ability Aura",
+        "Affects Allies"
+      ],
+      "notes": [
+        "The aura's buff lingers for 0.5 seconds.",
+        "Fully stacks with other sources of movement speed bonuses, except for Swiftness Auras of multiple Drums.",
+        "Affects invulnerable units."
+      ],
+      "mana": null,
+      "abilityName": "Swiftness Aura",
+      "cooldown": null,
+      "description": "Gives 20 movement speed to nearby allies.",
+      "params": [
+        "Radius: 1200",
+        "Move Speed Bonus: 20",
+        "Aura Linger Duration: 0.5"
+      ],
+      "itemBehaviour": [],
+      "story": null
+    }
+  ],
+  "additionalInformation": [
+    "For strength heroes, it grants 120 health, 0.6 health regen, 72 mana, 0.3 mana regen and 6 attack damage.",
+    "For agility heroes, it grants 120 health, 0.6 health regen, 72 mana and 0.3 mana regen.",
+    "For intelligence heroes, it grants 120 health, 0.6 health regen, 72 mana, 0.3 mana regen and 6 attack damage.",
+    "The item does not disappear upon using up all charges.",
+    "The charges can be replenished by purchasing the recipe again.",
+    "Movement speed bonuses from multiple Drums of Endurance fully stack.",
+    "Stacks with all other movement speed bonuses."
+  ],
+  "cost": "1700",
+  "lore": null,
+  "consistFrom": [
+    "Robe of the Magi",
+    "Belt of Strength",
+    "Wind Lace",
+    "Recipe"
+  ],
+  "boughtFrom": "Support",
+  "name": "Drum of Endurance",
+  "description": "A relic that enchants the bodies of those around it for swifter movement in times of crisis.",
+  "trivia": [
+    "In the original DotA, this item was called Ancient Janggo of Endurance."
+  ],
+  "upgradeIn": null,
+  "bonuses": [
+    "+6 Strength",
+    "+6 Intelligence"
+  ],
+  "tips": [
+    "Use the active while attacking buildings with your team to destroy them faster.",
+    "Works on controlled units like from Necronomicon or Helm of the Dominator."
+  ]
+}

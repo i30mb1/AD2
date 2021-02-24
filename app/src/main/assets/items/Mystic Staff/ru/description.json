@@ -1,0 +1,25 @@
+{
+  "abilities": [],
+  "additionalInformation": [
+    "Для героев силы, даёт 300 маны и 1,25 регенерации маны.",
+    "Для героев ловкости, даёт 300 маны и 1,25 регенерации маны.",
+    "Для героев интеллекта, даёт 300 маны, 1,25 регенерации маны и 25 урона от атаки."
+  ],
+  "cost": "2800",
+  "lore": null,
+  "consistFrom": null,
+  "boughtFrom": "Потайная лавка",
+  "name": "Mystic Staff",
+  "description": "Загадочный посох, сделанный исключительно из дорогих кристаллов.",
+  "trivia": null,
+  "upgradeIn": [
+    "Scythe of Vyse",
+    "Wind Waker",
+    "Shiva's Guard",
+    "Arcane Blink"
+  ],
+  "bonuses": [
+    "+25 к интеллекту"
+  ],
+  "tips": null
+}

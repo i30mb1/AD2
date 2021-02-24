@@ -1,0 +1,289 @@
+{
+  "abilities": [
+    {
+      "notes": [
+        "The cast range talent does not affect the jump distance of Fade Bolt.",
+        "The health talent increases maximum health capacity, and keeps the current health percentage.",
+        "This attack damage talent is added as base attack damage, so it does benefit illusions, and is affected by every percentage-based damage increasing or reducing effects."
+      ],
+      "spellName": "Talent",
+      "talents": [
+        {
+          "talentLvl": "25",
+          "talentLeft": "+40% Spell Amp For Stolen Spells",
+          "talentRight": "-12s Telekinesis Cooldown"
+        },
+        {
+          "talentLvl": "20",
+          "talentLeft": "+240 Telekinesis Land Distance",
+          "talentRight": "-4s Fade Bolt Cooldown"
+        },
+        {
+          "talentLvl": "15",
+          "talentLeft": "+100 Base Damage",
+          "talentRight": "+100 Cast Range"
+        },
+        {
+          "talentLvl": "10",
+          "talentLeft": "Fade Bolt Borrows Hero Damage",
+          "talentRight": "+150 Health"
+        }
+      ]
+    },
+    {
+      "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/a\/a2\/Rubick_Telekinesis_1.mp3\/revision\/latest?cb=20191216022735",
+      "effects": [
+        "Ability Target Unit",
+        "Affects Enemies (TagAghanim Allies)"
+      ],
+      "notes": [
+        "The lift duration consists of 0.5\/0.9\/1.3\/1.7 seconds static air time and 0.3 seconds landing time.",
+        "The lifted unit is stunned while in the air and is not affected by the area stun upon landing. The stun modifier is always placed as a debuff, while the main modifier is based on the alliance of the target. This means when cast on allies, the stun can be dispelled with strong dispels, while the lift itself cannot. Since the lift itself does not disable the target, allies can attack, turn, and cast abilities and items during the lift if the stun gets dispelled.",
+        "The stun modifier is always placed as a debuff, while the main modifier is based on the alliance of the target.",
+        "This means when cast on allies, the stun can be dispelled with strong dispels, while the lift itself cannot.",
+        "Since the lift itself does not disable the target, allies can attack, turn, and cast abilities and items during the lift if the stun gets dispelled.",
+        "While in the air, other units may pass below the lifted unit.",
+        "When the lift ends prematurely, the lifted unit instantly lands and applies the area stun.",
+        "Destroys trees within 325 radius of the lifted target upon landing.",
+        "Cannot lift Roshan, he will be stunned for the lift duration instead.",
+        "With Aghanim's Shard, uses the reduced cooldown when targeting self or allies, and the regular cooldown when targeting enemies.",
+        "Has the following cast ranges when combined with Arcane Supremacy: Level 1: 650\/700\/750\/800 (TagTalent 750\/800\/850\/900) Level 2: 675\/725\/775\/825 (TagTalent 775\/825\/875\/925) Level 3: 700\/750\/800\/850 (TagTalent 800\/850\/900\/950) Level 4: 725\/775\/825\/875 (TagTalent 825\/875\/925\/975)",
+        "Level 1: 650\/700\/750\/800 (TagTalent 750\/800\/850\/900)",
+        "Level 2: 675\/725\/775\/825 (TagTalent 775\/825\/875\/925)",
+        "Level 3: 700\/750\/800\/850 (TagTalent 800\/850\/900\/950)",
+        "Level 4: 725\/775\/825\/875 (TagTalent 825\/875\/925\/975)",
+        ""
+      ],
+      "mana": "125",
+      "hotKey": "Q",
+      "cooldown": "34\/30\/26\/22 (TagTalent 22\/18\/14\/10) (TagTalent 23.8\/21\/18.2\/15.4, 15.4\/12.6\/9.8\/7)",
+      "description": "Rubick uses his telekinetic powers to lift the enemy into the air briefly and then hurls them back at the ground. The unit lands on the ground with such force that it stuns nearby enemies.",
+      "spellName": "Telekinesis",
+      "params": [
+        "Cast Animation: 0.1+0.97",
+        "Cast Range: 550\/575\/600\/625 (TagTalent 650\/675\/700\/725)",
+        "Stun Radius: 325",
+        "Lift Duration: 0.8\/1.2\/1.6\/2",
+        "Stun Duration: 1\/1.25\/1.5\/1.75",
+        "Allows you to target yourself or allies with Telekinesis. Throw range is 60% longer and cooldown is reduced by 30% when targeting allies. Throw delay reduced to 0.5 seconds.",
+        "Lift persists if debuff was placed before spell immunity and when not dispelled.",
+        "Blocked fully only when primary target."
+      ],
+      "itemBehaviour": [],
+      "legacyKey": "Z",
+      "story": "Even the Grandest Magus may use his powers for enjoyment."
+    },
+    {
+      "audioUrl": null,
+      "effects": [
+        "Ability Target Area",
+        "Affects Enemies"
+      ],
+      "notes": [
+        "Replaces Telekinesis when it is cast on an enemy, and stays until the lifted unit lands.",
+        "Allows Rubick to determine where the lifted enemy will land after the lift duration. Does not prematurely end the lift.",
+        "Targeting further than the maximum allowed throw distance throws the enemy 375 (TagTalent 615) distance towards the targeted point.",
+        "The enemy moves towards the targeted point during the last 0.3 seconds of the lift duration, so the speed varies between 0 and 1250 (TagTalent 2050), depending on the chosen distance.",
+        "Can be cast multiple times during the lift. The enemy lands on the last chosen location.",
+        "The center of the targeted area is marked with green particles, which are visible to allies only."
+      ],
+      "mana": "0",
+      "hotKey": "Q",
+      "cooldown": "0",
+      "description": "Chooses the location the target will land when Telekinesis finishes.",
+      "spellName": "Telekinesis Land",
+      "params": [
+        "Cast Animation: 0.1+1.07",
+        "Cast Range: Global",
+        "Max Throw Distance: 375 (TagTalent 615)",
+        "Stun Radius: 325",
+        "Stun Duration: 1\/1.25\/1.5\/1.75"
+      ],
+      "itemBehaviour": [],
+      "legacyKey": "Z",
+      "story": null
+    },
+    {
+      "audioUrl": null,
+      "effects": [
+        "Ability Target Area",
+        "Affects Enemies"
+      ],
+      "notes": [
+        "Requires Aghanim's Shard to be unlocked.",
+        "Replaces Telekinesis when it is cast on an ally or on self, and stays until the lifted unit lands.",
+        "Allows Rubick to determine where the lifted ally or himself will land. Reduces the remaining lift duration to 0.5 when used.",
+        "Targeting further than the maximum allowed throw distance throws the ally 600 (TagTalent 984) distance towards the targeted point.",
+        "The ally moves towards the targeted point during the last 0.3 seconds of the lift duration, so the speed varies between 0 and 2000 (TagTalent 3280), depending on the chosen distance.",
+        "When cast, the ability turns inactive, so it can be only cast once.",
+        "Can be used while stunned, cycloned, slept, taunted, hidden, or during Forced Movement.",
+        "Cannot be used while silenced, hexed or prevented from acting. Cannot be shift-queued.",
+        "The center of the targeted area is marked with green particles, which are visible to allies only."
+      ],
+      "mana": "0",
+      "hotKey": "Q",
+      "cooldown": "0",
+      "description": "Chooses the location you will land when Telekinesis finishes.",
+      "spellName": "Telekinesis Land (Aghanim's Shard)",
+      "params": [
+        "Cast Animation: 0+0",
+        "Cast Range: Global",
+        "Max Throw Distance: 600 (TagTalent 984)",
+        "Stun Radius: 325",
+        "Throw Delay: 0.5",
+        "Stun Duration: 1\/1.25\/1.5\/1.75"
+      ],
+      "itemBehaviour": [],
+      "legacyKey": "Z",
+      "story": null
+    },
+    {
+      "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/6\/69\/Rubick_Fade_Bolt_1.mp3\/revision\/latest?cb=20191216022739",
+      "effects": [
+        "Ability Target Unit",
+        "Affects Enemies",
+        "Damage Magical"
+      ],
+      "notes": [
+        "Fade Bolt has no bounce limit. Bounces in 0.25 second intervals. Each bounce decreases the bolt's current damage by 8%.",
+        "Does not bounce on invisible units or units in the Fog of War.",
+        "Can never hit the same unit twice per cast.",
+        "Only reduced base damage and that given by the primary attribute of the targets. Raw bonus damage is not reduced. The level 10 talent causes Rubick to gain as much damage as the hero targets lost. Each hit enemy hero creates a new buff on Rubick. The buffs always use the default duration, no matter how long the debuffs on the enemies actually last. Only counts heroes, including clones, excluding illusions and creep-heroes.",
+        "The level 10 talent causes Rubick to gain as much damage as the hero targets lost.",
+        "Each hit enemy hero creates a new buff on Rubick. The buffs always use the default duration, no matter how long the debuffs on the enemies actually last.",
+        "Only counts heroes, including clones, excluding illusions and creep-heroes.",
+        "This is how much damage the first 15 bounces on each level deal (before reductions): Level 1: 100 \/ 92 \/ 84.6 \/ 77.9 \/ 71.6 \/ 65.9 \/ 60.6 \/ 55.8 \/ 51.3 \/ 47.2 \/ 43.4 \/ 40 \/ 36.8 \/ 33.8 \/ 31.1 damage, 892.1 total damage, 57 bounces to reach 1 damage Level 2: 175 \/ 161 \/ 148.1 \/ 136.3 \/ 125.4 \/ 115.3 \/ 106.1 \/ 97.6 \/ 89.8 \/ 82.6 \/ 76 \/ 69.9 \/ 64.3 \/ 59.2 \/ 54.5 damage, 1561.2 total damage, 63 bounces to reach 1 damage Level 3: 250 \/ 230 \/ 211.6 \/ 194.7 \/ 179.1 \/ 164.8 \/ 151.6 \/ 139.5 \/ 128.3 \/ 118 \/ 108.6 \/ 99.9 \/ 91.9 \/ 84.6 \/ 77.8 damage, 2230.3 total damage, 68 bounces to reach 1 damage Level 4: 325 \/ 299 \/ 275.1 \/ 253.1 \/ 232.8 \/ 214.2 \/ 197.1 \/ 181.3 \/ 166.8 \/ 153.5 \/ 141.2 \/ 129.9 \/ 119.5 \/ 109.9 \/ 101.1 damage, 2899.4 total damage, 71 bounces to reach 1 damage",
+        "Level 1: 100 \/ 92 \/ 84.6 \/ 77.9 \/ 71.6 \/ 65.9 \/ 60.6 \/ 55.8 \/ 51.3 \/ 47.2 \/ 43.4 \/ 40 \/ 36.8 \/ 33.8 \/ 31.1 damage, 892.1 total damage, 57 bounces to reach 1 damage",
+        "Level 2: 175 \/ 161 \/ 148.1 \/ 136.3 \/ 125.4 \/ 115.3 \/ 106.1 \/ 97.6 \/ 89.8 \/ 82.6 \/ 76 \/ 69.9 \/ 64.3 \/ 59.2 \/ 54.5 damage, 1561.2 total damage, 63 bounces to reach 1 damage",
+        "Level 3: 250 \/ 230 \/ 211.6 \/ 194.7 \/ 179.1 \/ 164.8 \/ 151.6 \/ 139.5 \/ 128.3 \/ 118 \/ 108.6 \/ 99.9 \/ 91.9 \/ 84.6 \/ 77.8 damage, 2230.3 total damage, 68 bounces to reach 1 damage",
+        "Level 4: 325 \/ 299 \/ 275.1 \/ 253.1 \/ 232.8 \/ 214.2 \/ 197.1 \/ 181.3 \/ 166.8 \/ 153.5 \/ 141.2 \/ 129.9 \/ 119.5 \/ 109.9 \/ 101.1 damage, 2899.4 total damage, 71 bounces to reach 1 damage",
+        "The bolt first applies the damage, then the debuff.",
+        "The Fade Bolt buff is a hidden buff required for the lightning to jump.",
+        "Has a cast range of 900\/950\/1000\/1050 (TagTalent 1000\/1050\/1100\/1150) with each level of Arcane Supremacy."
+      ],
+      "mana": "120\/130\/140\/150",
+      "hotKey": "W",
+      "cooldown": "16\/14\/12\/10 (TagTalent 12\/10\/8\/6)",
+      "description": "Rubick creates a powerful stream of arcane energy that travels between enemy units, dealing damage and reducing their attack damage. Each jump deals less damage.",
+      "spellName": "Fade Bolt",
+      "params": [
+        "Cast Animation: 0.1+0.93",
+        "Cast Range: 800 (TagTalent 900)",
+        "Bounce Distance: 440",
+        "Number of Bounces: Infinite",
+        "Base Damage: 100\/175\/250\/325",
+        "Bounce Damage Reduction: 8%",
+        "Attack Damage Reduction: 10%\/18%\/26%\/34%",
+        "Duration: 10",
+        "Attack Damage Steal: 10%\/18%\/26%\/34%",
+        "Attack damage reduction persists if debuff was placed before spell immunity and when not dispelled.",
+        "Blocked fully only when primary target."
+      ],
+      "itemBehaviour": [],
+      "legacyKey": "X",
+      "story": "Rubick's favorite spell for dispatching would-be assassins is a rather simple conjuration."
+    },
+    {
+      "audioUrl": null,
+      "effects": [
+        "Ability Passive",
+        "Affects Self"
+      ],
+      "notes": [
+        "Fully stacks with other sources of spell damage amplification."
+      ],
+      "mana": null,
+      "hotKey": "E",
+      "cooldown": null,
+      "description": "Rubick's mastery of the arcane allows him to deal more spell damage and create spells that last longer on enemies.",
+      "spellName": "Arcane Supremacy",
+      "params": [
+        "Cast Range Bonus: 100\/150\/200\/250",
+        "Spell Damage Amplification: 14%\/18%\/22%\/26%"
+      ],
+      "itemBehaviour": [],
+      "legacyKey": "N",
+      "story": "Not every magus can be a Grand Magus..."
+    },
+    {
+      "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/b\/b3\/Rubick_Spell_Steal_1.mp3\/revision\/latest?cb=20191216022733",
+      "effects": [
+        "Ability Target Unit",
+        "Affects Enemy Heroes \/ Self"
+      ],
+      "notes": [
+        "A full list of unique interactions with Spell Steal can be found here.",
+        "The stolen spell travels as a projectile towards Rubick at a speed of 900. Rubick gains the spell (and loses the previous stolen spell) as the projectile reaches him.",
+        "Cannot steal passive abilities, item abilities, or active attack modifiers (except for Walrus PUNCH!). Can only steal from heroes (including clones, excluding illusions).",
+        "Cannot steal the following spells: Stone Remnant, Quas, Wex, Exort, Invoke, Mischief, Morph, Minefield Sign, Stone Form, Walrus Kick, and Mortal Strike.",
+        "The stolen spell's level is based on its level on the enemy as it was stolen. The level only updates upon stealing it again.",
+        "Rubick has a cast time of 0.15, except for the spells listed in here.",
+        "Talent bonuses to any spell are not copied.",
+        "Cannot have more than 1 stolen spell at a time. Sub-spells from spells are automatically acquired and cannot be manually stolen. Sub-spells are spells which do not do anything on their own. The 3 Shadowrazes or the two Whirling Axes are not sub-spells. This also goes for spells provided by an Aghanim's Scepter (e.g. Eyes In The Forest, Unrefined Fireblast and Nimbus). Rubick's Aghanim's Scepter causes the stolen spell to be upgraded. Since the above-mentioned spells are not upgrades to existing spells, but rather just extra spells granted to the hero, they are treated as their own spells by Spell Steal. This means, for example, Rubick with an Aghanim's Scepter will not get both Fireblasts by stealing one of them, but he can steal Unrefined Fireblast by itself without having the Scepter.",
+        "Sub-spells are spells which do not do anything on their own. The 3 Shadowrazes or the two Whirling Axes are not sub-spells.",
+        "This also goes for spells provided by an Aghanim's Scepter (e.g. Eyes In The Forest, Unrefined Fireblast and Nimbus).",
+        "Rubick's Aghanim's Scepter causes the stolen spell to be upgraded. Since the above-mentioned spells are not upgrades to existing spells, but rather just extra spells granted to the hero, they are treated as their own spells by Spell Steal.",
+        "This means, for example, Rubick with an Aghanim's Scepter will not get both Fireblasts by stealing one of them, but he can steal Unrefined Fireblast by itself without having the Scepter.",
+        "The cooldown of all stolen spells is saved. When re-acquiring a lost spell which was used recently, it will not be instantly ready to use again. Cooldown reseting effects have no effect on the cooldowns of spells Rubick currently does not have.",
+        "Cooldown reseting effects have no effect on the cooldowns of spells Rubick currently does not have.",
+        "The debuff duration amplification only affects the duration of debuffs of stolen spells placed on enemies. A debuff is identified by the red border on the status icon. Follows the same rules as status resistance.",
+        "A debuff is identified by the red border on the status icon. Follows the same rules as status resistance.",
+        "The level 25 talent's spell damage amplification only affects the spell damage of stolen spells.",
+        "Using Spell Steal twice in a row on the same spell refreshes the duration and updates the level of the spell. The cooldown of the stolen spell is not affected.",
+        "The stolen spell is lost upon death.",
+        "Has a cast range of 1100\/1150\/1200\/1250 (TagTalent 1200\/1250\/1300\/1350) with each level of Arcane Supremacy.",
+        "This ability is not available in Ability Draft."
+      ],
+      "mana": "25",
+      "hotKey": "R",
+      "cooldown": "26\/20\/14 (TagTalent 6\/4\/2)",
+      "description": "Rubick studies the trace magical essence of one enemy hero, learning the secrets of the last spell the hero cast. Rubick can use this spell as his own for several minutes or until he dies.",
+      "spellName": "Spell Steal",
+      "params": [
+        "Cast Animation: 0.1+0.93",
+        "Cast Range: 1000 (TagTalent 1100) (TagTalent 1400, 1500)",
+        "Stolen Spell Cast Time: 0.15",
+        "Stolen Spell Debuff Duration Amplification: 10%\/20%\/30%",
+        "Spell Duration: 180\/240\/300",
+        "Stolen Spell Damage Amplification: 40%",
+        "Decreases cooldown, increases cast range and upgrades the spell to the Scepter level.",
+        "The debuff duration amplification is not disabled by Break."
+      ],
+      "itemBehaviour": [],
+      "legacyKey": "Q",
+      "story": "...but even their lesser magics can be a source of much utility."
+    }
+  ],
+  "mainAttributes": {
+    "attrStrengthInc": 2.0,
+    "attrStrength": 21.0,
+    "attrIntelligence": 25.0,
+    "attrIntelligenceInc": 3.1,
+    "attrAgilityInc": 2.5,
+    "attrAgility": 23.0
+  },
+  "description": "Rubick, the Grand Magus, is a ranged intelligence hero best known for his ability to copy the spells of his enemies and use them as his own. Although he is mostly played as a support and is extremely fragile the entire length of the game, he can still prove to be one of the most influential heroes if he utilizes good positioning and well-timed usage of his ultimate, Spell Steal. Spell Steal allows Rubick to cast an enemy hero's most recently used spell, giving him supreme versatility throughout the game. By stealing the right abilities, the Grand Magus can aid himself and allies by casting crippling disables, applying curses, unleashing powerful nukes, disorienting the enemy team, supporting his allies with buffs, escaping from rough situations, or even enhancing his own physical attacks. His other abilities are just as worthy of a Magus: Telekinesis lets Rubick magically lift an enemy into the air, rendering the target helpless and vulnerable, before hurling the lifted enemy to the ground up to a short distance away and stunning nearby foes on impact. Fade Bolt blasts enemies with a stream of arcane energy which bounces to all enemies nearby, dealing damage and reducing their attack damage. Arcane Supremacy is a passive ability, which increases cast range and amplifies the spell damage of Rubick's stolen spells. Rubick's versatile ability-set and his infamous Spell Steal make him a flexible and powerful hero that can work in any lineup although he does suffer from long cooldowns and the surfacing predictability of his ultimate.",
+  "history": "Any mage can cast a spell or two, and a few may even study long enough to become a wizard, but only the most talented are allowed to be recognized as a Magus. Yet as with any sorcerer\u2019s circle, a sense of community has never guaranteed competitive courtesy. Already a renowned duelist and scholar of the grander world of sorcery, it had never occurred to Rubick that he might perhaps be Magus material until he was in the midst of his seventh assassination attempt. As he casually tossed the twelfth of a string of would-be killers from a high balcony, it dawned on him how utterly unimaginative the attempts on his life had become. Where once the interruption of a fingersnap or firehand might have put a cheerful spring in his step, it had all become so very predictable. He craved greater competition. Therefore, donning his combat mask, he did what any wizard seeking to ascend the ranks would do: he announced his intention to kill a Magus. Rubick quickly discovered that to threaten one Magus is to threaten them all, and they fell upon him in force. Each antagonist's spell was an unstoppable torrent of energy, and every attack a calculated killing blow. But very soon something occurred that Rubick's foes found unexpected: their arts appeared to turn against them. Inside the magic maelstrom, Rubick chuckled, subtly reading and replicating the powers of one in order to cast it against another, sowing chaos among those who had allied against him. Accusations of betrayal began to fly, and soon the sorcerers turned one upon another without suspecting who was behind their undoing. When the battle finally drew to a close, all were singed and frozen, soaked and cut and pierced. More than one lay dead by an ally\u2019s craft. Rubick stood apart, sore but delighted in the week\u2019s festivities. None had the strength to argue when he presented his petition of assumption to the Hidden Council, and the Insubstantial Eleven agreed as one to grant him the title of Grand Magus.",
+  "talents": [
+    {
+      "talentLvl": "25",
+      "talentLeft": "+40% Spell Amp For Stolen Spells",
+      "talentRight": "-12s Telekinesis Cooldown"
+    },
+    {
+      "talentLvl": "20",
+      "talentLeft": "+240 Telekinesis Land Distance",
+      "talentRight": "-4s Fade Bolt Cooldown"
+    },
+    {
+      "talentLvl": "15",
+      "talentLeft": "+100 Base Damage",
+      "talentRight": "+100 Cast Range"
+    },
+    {
+      "talentLvl": "10",
+      "talentLeft": "Fade Bolt Borrows Hero Damage",
+      "talentRight": "+150 Health"
+    }
+  ]
+}

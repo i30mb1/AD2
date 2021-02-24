@@ -1,0 +1,75 @@
+{
+  "abilities": [
+    {
+      "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/2\/2a\/Solar_Crest_Shine_1.mp3\/revision\/latest?cb=20191227195536",
+      "effects": [
+        "Ability Target Unit",
+        "Affects Enemies \/ Allies"
+      ],
+      "notes": [
+        "Cannot be cast on self.",
+        "Shares cooldown with Medallion of Courage.",
+        "The effect on self and the modifier on the target are independent from each other. Dispelling the target does not remove the effect on the caster.",
+        "Unlike Medallion, Solar Crest does not place a debuff on the caster. Instead, its effects are directly bound to its cooldown. Its duration is always 12 seconds on the target, while the duration on self can vary when the cooldown gets manipulated. This means when the cooldown is reduced, the reduction effects on self are briefer. The reduction effects on self also disappear immediately when the cooldown is refreshed. This also means that the effects on self are applied when using Medallion of Courage, since they share a cooldown.",
+        "Its duration is always 12 seconds on the target, while the duration on self can vary when the cooldown gets manipulated.",
+        "This means when the cooldown is reduced, the reduction effects on self are briefer. The reduction effects on self also disappear immediately when the cooldown is refreshed.",
+        "This also means that the effects on self are applied when using Medallion of Courage, since they share a cooldown.",
+        "The armor reduction on self fully stacks. When having multiple Solar Crests, each of them reduce armor when on cooldown.",
+        "The target buff and target debuff fully stack with each other. The effects on self also stack with the target debuff. When a unit is targeted by an allied and an enemy Solar Crest, the modifiers effectively cancel each other out. When opposing heroes cast it on each other, they effectively have -16 armor, -10% movement speed, and -80 attack speed. Multiple target debuffs or target buffs do not stack, but refresh their durations. The target buff, target debuff and self-debuff fully stack with those applied by Medallion of Courage.",
+        "When a unit is targeted by an allied and an enemy Solar Crest, the modifiers effectively cancel each other out.",
+        "When opposing heroes cast it on each other, they effectively have -16 armor, -10% movement speed, and -80 attack speed.",
+        "Multiple target debuffs or target buffs do not stack, but refresh their durations.",
+        "The target buff, target debuff and self-debuff fully stack with those applied by Medallion of Courage.",
+        "Can be cast on any unit, except on wards and buildings."
+      ],
+      "mana": null,
+      "abilityName": "Shine",
+      "cooldown": "12",
+      "description": "When cast on an ally, grants them 8 armor, 80 attack speed, and 10% movement speed. When cast on an enemy, removes 8 armor, 80 attack speed, and 10% movement speed. Removes the armor from the caster when used. Cannot target spell immune enemies.",
+      "params": [
+        "Cast Range: 1000",
+        "Self Armor Reduction: 8",
+        "Ally Armor Bonus: 8",
+        "Ally Movement Speed Bonus: 10%",
+        "Ally Attack Speed Bonus: 80",
+        "Enemy Armor Reduction: 8",
+        "Enemy Movement Speed Slow: 10%",
+        "Enemy Attack Speed Slow: 80",
+        "Duration: 12"
+      ],
+      "itemBehaviour": [
+        "(Spell_immunity_block_partial_symbol)^Partially pierces spell immunity\nCan be cast on spell immune allies\nCannot be cast on spell immune enemies."
+      ],
+      "story": null
+    }
+  ],
+  "additionalInformation": [
+    "For strength heroes, it grants 200 health, 1 health regen, 9.67 armor, 10 attack speed, 120 mana, 2.25 mana regen and 10 attack damage.",
+    "For agility heroes, it grants 200 health, 1 health regen, 9.67 armor, 10 attack speed, 120 mana, 2.25 mana regen and 10 attack damage.",
+    "For intelligence heroes, it grants 200 health, 1 health regen, 9.67 armor, 10 attack speed, 120 mana, 2.25 mana regen and 10 attack damage.",
+    "Movement speed bonuses from multiple Solar Crests fully stack.",
+    "Stacks with all other movement speed bonuses."
+  ],
+  "cost": "3725",
+  "lore": null,
+  "consistFrom": [
+    "Medallion of Courage",
+    "Ultimate Orb",
+    "Wind Lace",
+    "Recipe"
+  ],
+  "boughtFrom": "Magical",
+  "name": "Solar Crest",
+  "description": "A talisman forged to honor the daytime sky.",
+  "trivia": null,
+  "upgradeIn": null,
+  "bonuses": [
+    "+10 Strength",
+    "+10 Agility",
+    "+10 Intelligence",
+    "+1.75 Mana regeneration",
+    "+8 Armor",
+    "+20 Movement speed"
+  ],
+  "tips": []
+}

@@ -1,0 +1,22 @@
+{
+  "abilities": [],
+  "additionalInformation": [
+    "The evasion stacks diminishingly with other sources of evasion.",
+    "The evasion uses pseudo-random distribution."
+  ],
+  "cost": "1400",
+  "lore": null,
+  "consistFrom": null,
+  "boughtFrom": "Secret Shop",
+  "name": "Talisman of Evasion",
+  "description": "A necklace that allows you to anticipate enemy attacks.",
+  "trivia": null,
+  "upgradeIn": [
+    "Butterfly",
+    "Heaven's Halberd"
+  ],
+  "bonuses": [
+    "+15% Evasion"
+  ],
+  "tips": null
+}

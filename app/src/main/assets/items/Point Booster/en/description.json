@@ -1,0 +1,20 @@
+{
+  "abilities": [],
+  "cost": "1200",
+  "lore": null,
+  "consistFrom": null,
+  "boughtFrom": "Secret Shop",
+  "name": "Point Booster",
+  "description": "A perfectly formed amethyst that nourishes body and mind when held.",
+  "trivia": null,
+  "upgradeIn": [
+    "Aghanim's Scepter",
+    "Soul Booster",
+    "Eye of Skadi"
+  ],
+  "bonuses": [
+    "+175 Health",
+    "+175 Mana"
+  ],
+  "tips": null
+}

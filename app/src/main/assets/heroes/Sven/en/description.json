@@ -1,0 +1,188 @@
+{
+  "abilities": [
+    {
+      "notes": [
+        "The strength talent effectively grants Sven 140 health, 0.7 health regeneration, and 7 attack damage.",
+        "The lifesteal talent stacks additively with other sources of lifesteal."
+      ],
+      "spellName": "Talent",
+      "talents": [
+        {
+          "talentLvl": "25",
+          "talentLeft": "+1s Storm Hammer Stun Duration",
+          "talentRight": "+50% God's Strength Damage"
+        },
+        {
+          "talentLvl": "20",
+          "talentLeft": "-5s Storm Hammer Cooldown",
+          "talentRight": "+25 Movement Speed"
+        },
+        {
+          "talentLvl": "15",
+          "talentLeft": "+4s Warcry Duration",
+          "talentRight": "15% Lifesteal"
+        },
+        {
+          "talentLvl": "10",
+          "talentLeft": "+2.5 Mana Regen",
+          "talentRight": "+7 Strength"
+        }
+      ]
+    },
+    {
+      "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/e\/ed\/Sven_Storm_Hammer_1.mp3\/revision\/latest?cb=20191216024629",
+      "effects": [
+        "Ability Target Unit",
+        "Affects Enemies",
+        "Damage Magical"
+      ],
+      "notes": [
+        "The targeting reticule must be centered over an enemy unit.",
+        "Storm Hammer travels at a speed of 1000.",
+        "Turning invulnerable or hidden does not prevent it from affecting the area around the target.",
+        "Storm Hammer first applies the damage, then the debuff. With Aghanim's Shard, the dispel is applied first.",
+        "With Aghanim's Shard, the dispel is applied first.",
+        "The projectile has 225 radius flying vision. This vision does not last.",
+        "Sven's sword emits some particles during the cast time, visible to everyone.",
+        "Storm Hammer can be cast on invulnerable enemies, but does not affect them.",
+        "With Aghanim's Scepter, Sven is moved along with the projectile. While being moved, Sven is fully disabled, untargetable and invulnerable. If the movement gets interrupted (with e.g. a teleport), Sven is no longer disabled, untargetable and invulnerable. Sven stops moving along with the projectile if Storm Hammer is disjointed, if the distance between him and the target exceeds 2200, or when Sven dies.",
+        "While being moved, Sven is fully disabled, untargetable and invulnerable.",
+        "If the movement gets interrupted (with e.g. a teleport), Sven is no longer disabled, untargetable and invulnerable.",
+        "Sven stops moving along with the projectile if Storm Hammer is disjointed, if the distance between him and the target exceeds 2200, or when Sven dies."
+      ],
+      "mana": "110\/120\/130\/140",
+      "hotKey": "Q",
+      "cooldown": "18\/16\/14\/12 (TagTalent 13\/11\/9\/7)",
+      "description": "Sven unleashes his magical gauntlet that deals damage and stuns enemy units in a small area around the target.",
+      "spellName": "Storm Hammer",
+      "params": [
+        "Cast Animation: 0.3+0",
+        "Cast Range: 600 (TagAghanim 950)",
+        "Effect Radius: 255",
+        "Damage: 110\/180\/250\/320",
+        "Stun Duration: 1.25\/1.5\/1.75\/2 (TagTalent 2.25\/2.5\/2.75\/3)",
+        "Increases cast range and transports Sven along the storm hammer.",
+        "Storm Hammer now applies a dispel on enemies.",
+        "Cannot target spell immune units. When the projectile connects with a spell immune unit, it still affects other units within the radius.",
+        "Blocked fully only when primary target. Blocked upon impact.",
+        "Disjointing the projectile still applies area effect."
+      ],
+      "itemBehaviour": [],
+      "legacyKey": "T",
+      "story": "The Rogue Knight's iron gauntlet, taken from the school of his father, strikes his foes to their core."
+    },
+    {
+      "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/4\/46\/Sven_Great_Cleave.mp3\/revision\/latest?cb=20191216024628",
+      "effects": [
+        "Ability Passive",
+        "Affects Enemies",
+        "Damage Physical"
+      ],
+      "notes": [
+        "Cleave damage cannot be amplified with outgoing spell damage amplification and cannot spell lifesteal. Can be amplified by incoming spell damage amplification.",
+        "Can be amplified by incoming spell damage amplification.",
+        "Cleave damage is reduced by Damage Block.",
+        "The complete area is shaped like an isosceles trapezoid in front of Sven.",
+        "Fully stacks with other sources of cleaves. Each source of cleave works completely independent.",
+        "Does not cleave upon attacking wards, buildings or allied units. Wards and buildings are unaffected by cleave.",
+        "Despite the visual effect, cleave damage is applied instantly in the whole area."
+      ],
+      "mana": null,
+      "hotKey": "W",
+      "cooldown": null,
+      "description": "Sven strikes with great force, cleaving all nearby enemy units with his attack.",
+      "spellName": "Great Cleave",
+      "params": [
+        "Starting Radius: 150",
+        "Distance: 700",
+        "End Radius: 360",
+        "Cleave Damage: 30%\/50%\/70%\/90%"
+      ],
+      "itemBehaviour": [],
+      "legacyKey": "C",
+      "story": "The Vigil Knights still seek to reclaim the stolen Outcast Blade from Sven, a weapon capable of cutting wide swaths through lesser warriors."
+    },
+    {
+      "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/f\/f1\/Sven_Warcry.mp3\/revision\/latest?cb=20191216024631",
+      "effects": [
+        "Ability No Target",
+        "Affects Allies"
+      ],
+      "notes": [
+        "Interrupts Sven's channeling spells upon cast.",
+        "Only affects allied heroes, including clones, illusions and creep-heroes."
+      ],
+      "mana": "30\/40\/50\/60",
+      "hotKey": "E",
+      "cooldown": "32\/28\/24\/20",
+      "description": "Sven's Warcry heartens his allied heroes for battle, increasing their armor and movement speed. Lasts 8 seconds.",
+      "spellName": "Warcry",
+      "params": [
+        "Cast Animation: 0+0",
+        "Effect Radius: 700",
+        "Move Speed Bonus: 8%\/12%\/16%\/20%",
+        "Armor Bonus: 6\/9\/12\/15",
+        "Duration: 8 (TagTalent 12)"
+      ],
+      "itemBehaviour": [],
+      "legacyKey": "W",
+      "story": "Calling a few lines from the Vigil Codex fortifies Sven's obedience to his rogue code. So poetic!"
+    },
+    {
+      "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/4\/4f\/Sven_God%27s_Strength.mp3\/revision\/latest?cb=20191216024643",
+      "effects": [
+        "Ability No Target",
+        "Affects Self"
+      ],
+      "notes": [
+        "Only increases base damage and that given by the primary attribute of Sven. Raw bonus damage is not increased.",
+        "Checks Sven's main attack damage periodically and adapts the attack damage bonus instantly."
+      ],
+      "mana": "100\/150\/200",
+      "hotKey": "R",
+      "cooldown": "110",
+      "description": "Sven channels his rogue strength, granting bonus damage for 40 seconds.",
+      "spellName": "God's Strength",
+      "params": [
+        "Cast Animation: 0.3+0",
+        "Attack Damage Bonus: 100%\/140%\/180% (TagTalent 150%\/190%\/230%)",
+        "Duration: 40"
+      ],
+      "itemBehaviour": [],
+      "legacyKey": "R",
+      "story": "With the strength that shattered the Sacred Helm, the Rogue Knight stands unopposed in melee combat."
+    }
+  ],
+  "mainAttributes": {
+    "attrStrengthInc": 3.2,
+    "attrStrength": 22.0,
+    "attrIntelligence": 16.0,
+    "attrIntelligenceInc": 1.3,
+    "attrAgilityInc": 2.0,
+    "attrAgility": 21.0
+  },
+  "description": "Sven, the Rogue Knight, is a versatile melee strength hero with superior physical power coupled with powerful utility abilities. He can fulfill various roles, but is often played as a semi-carry due to his high utility even without items. He possesses a versatile arsenal, from Warcry, which hastens allies and shields them from attacks, to the throwable Storm Hammer that stuns enemies around the targeted unit. With enough items, Sven has the potential to be a strong late-game carry due to his ultimate, which increases his damage, making him hit up to three times as hard, which can then be used in conjunction with his Great Cleave to secure multiple kills with just a few swings of his sword. This immense power granted to him solely by his ultimate makes him one of strongest late-game carries in the game, and arguably the strongest semi-carry of all, as his killing presence remains even if he decides to build more supportive and tanky utility items. A truly frightening enemy to go up against if farmed, strong and versatile, Sven is a solid addition to almost every team composition.",
+  "history": "Sven is the bastard son of a Vigil Knight, born of a Pallid Meranth, raised in the Shadeshore Ruins. With his father executed for violating the Vigil Codex, and his mother shunned by her wild race, Sven believes that honor is to be found in no social order, but only in himself. After tending his mother through a lingering death, he offered himself as a novice to the Vigil Knights, never revealing his identity. For thirteen years he studied in his father's school, mastering the rigid code that declared his existence an abomination. Then, on the day that should have been his In-Swearing, he seized the Outcast Blade, shattered the Sacred Helm, and burned the Codex in the Vigil's Holy Flame. He strode from Vigil Keep, forever solitary, following his private code to the last strict rune. Still a knight, yes...but a Rogue Knight. He answers only to himself.",
+  "talents": [
+    {
+      "talentLvl": "25",
+      "talentLeft": "+1s Storm Hammer Stun Duration",
+      "talentRight": "+50% God's Strength Damage"
+    },
+    {
+      "talentLvl": "20",
+      "talentLeft": "-5s Storm Hammer Cooldown",
+      "talentRight": "+25 Movement Speed"
+    },
+    {
+      "talentLvl": "15",
+      "talentLeft": "+4s Warcry Duration",
+      "talentRight": "15% Lifesteal"
+    },
+    {
+      "talentLvl": "10",
+      "talentLeft": "+2.5 Mana Regen",
+      "talentRight": "+7 Strength"
+    }
+  ]
+}

@@ -1,0 +1,59 @@
+{
+  "abilities": [
+    {
+      "audioUrl": null,
+      "effects": [
+        "Ability Passive",
+        "Affects Self"
+      ],
+      "notes": [
+        "Reduces Tranquil Boots stats to +45 movement speed and 0 health regeneration.",
+        "Breaks upon successfully landing an attack on an enemy hero, or when any enemy successfully lands an attack on you. This means when your or an enemy's attack misses or is disjointed, the boots do not break. The actual damage from the attack does not matter, even 0 damage attacks can break the boots. Only the secondary attacks of Flak Cannon and Split Shot can break the boots. Cleave, splash, Moon Glaives and Psi Blades cannot break the boots of secondary targets.",
+        "This means when your or an enemy's attack misses or is disjointed, the boots do not break.",
+        "The actual damage from the attack does not matter, even 0 damage attacks can break the boots.",
+        "Only the secondary attacks of Flak Cannon and Split Shot can break the boots.",
+        "Cleave, splash, Moon Glaives and Psi Blades cannot break the boots of secondary targets.",
+        "Does not break upon attacking non-hero units. Treats creep-heroes as creeps.",
+        "The cooldown is affected by the Cooldown Reduction of Octarine Core, Arcane Rune or talents. However refreshing it with (TagTalent Refresher Orb or Rearm) does not skip the broken state. The cooldown timer vanishes, but the boots stay disabled for the remaining duration.",
+        "However refreshing it with (TagTalent Refresher Orb or Rearm) does not skip the broken state. The cooldown timer vanishes, but the boots stay disabled for the remaining duration."
+      ],
+      "mana": null,
+      "abilityName": "Break",
+      "cooldown": "13",
+      "description": "Whenever you attack a hero or are attacked by any unit, the bonus 14 HP regen is lost and the movement speed bonus is reduced to 45 for 13 seconds.",
+      "params": [
+        "Movement Speed Reduction: 25",
+        "Health Regen Reduction: 14"
+      ],
+      "itemBehaviour": [],
+      "story": null
+    }
+  ],
+  "additionalInformation": [
+    "Movement speed bonuses from multiple pairs of boots do not stack.",
+    "Stacks with all other movement speed bonuses.",
+    "The health regeneration of multiple Tranquil Boots fully stacks."
+  ],
+  "cost": "925",
+  "lore": null,
+  "consistFrom": [
+    "Boots of Speed",
+    "Wind Lace",
+    "Ring of Regen"
+  ],
+  "boughtFrom": "Support",
+  "name": "Tranquil Boots",
+  "description": "",
+  "trivia": null,
+  "upgradeIn": null,
+  "bonuses": [
+    "+14 Health regeneration",
+    "+70 Movement speed"
+  ],
+  "tips": [
+    "Remember that the Tranquil Boot regen doesn't stop or reset the cooldown if you are casting a spell. You can get a Soul Ring and spam long range abilities and keep the regen active.",
+    "Right click attacks disable the regen, if you drop the boots you will keep it active or not reset their cooldown.",
+    "If you have invisibility you can stay in XP range while you regen your health safely. Be careful that the enemy doesn't have a Sentry or Dust.",
+    "It is good for roamers, rapidly restoring a hero's health while moving to another lane."
+  ]
+}

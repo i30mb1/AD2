@@ -1,0 +1,41 @@
+{
+  "abilities": [
+    {
+      "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/1\/12\/Minotaur_Horn_Lesser_Avatar.mp3\/revision\/latest?cb=20200116232659",
+      "effects": [
+        "Ability No Target",
+        "Affects Self"
+      ],
+      "notes": [
+        "Interrupts the user's channeling spells upon cast.",
+        "Applies spell immunity for the duration and a basic dispel upon cast.",
+        "During Lesser Avatar, the hero cannot be affected by Ghost Scepter. The buff gets removed immediately.",
+        "For more details, including a list of spells which are not blocked, see Spell immunity."
+      ],
+      "mana": null,
+      "abilityName": "Lesser Avatar",
+      "cooldown": "40",
+      "description": "Grants Spell Immunity for 2 seconds.",
+      "params": [
+        "Duration: 2"
+      ],
+      "itemBehaviour": [],
+      "story": null
+    }
+  ],
+  "additionalInformation": [
+    "Minotaur Horns are fully sharable."
+  ],
+  "cost": "N\/A",
+  "lore": null,
+  "consistFrom": null,
+  "boughtFrom": "Neutral Drop Only",
+  "name": "Minotaur Horn",
+  "description": "The trophy from a mighty beast ambushed and slain in the recesses of its own home.",
+  "trivia": null,
+  "upgradeIn": null,
+  "bonuses": [
+    "+20 Strength"
+  ],
+  "tips": null
+}

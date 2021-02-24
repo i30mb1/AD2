@@ -1,0 +1,48 @@
+{
+  "abilities": [
+    {
+      "audioUrl": null,
+      "effects": [
+        "Ability Aura",
+        "Affects Allies"
+      ],
+      "notes": [
+        "Can regenerate up to 84 mana in one minute.",
+        "The aura's buff lingers for 0.5 seconds.",
+        "Does not affect invulnerable units.",
+        "Stacks with the Basilius Aura from Veil of Discord."
+      ],
+      "mana": null,
+      "abilityName": "Basilius Aura",
+      "cooldown": null,
+      "description": "Grants 1.4 mana regeneration to allies.",
+      "params": [
+        "Radius: 1200",
+        "Mana Regeneration Bonus: 1.4",
+        "Aura Linger Duration: 0.5"
+      ],
+      "itemBehaviour": [],
+      "story": null
+    }
+  ],
+  "cost": "425",
+  "lore": null,
+  "consistFrom": [
+    "Sage's Mask",
+    "Recipe"
+  ],
+  "boughtFrom": "Support",
+  "name": "Ring of Basilius",
+  "description": "Ring given as a reward to the greatest mages.",
+  "trivia": [
+    "Basilius is derived from the Greek word Basileus, meaning \"king\" or \"emperor\"."
+  ],
+  "upgradeIn": [
+    "Veil of Discord",
+    "Vladmir's Offering"
+  ],
+  "bonuses": null,
+  "tips": [
+    "In the early game and even into the mid game, the boost of mana regen is extremely useful for heroes with low intelligence growth like Troll Warlord."
+  ]
+}

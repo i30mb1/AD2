@@ -1,0 +1,44 @@
+{
+  "abilities": [
+    {
+      "audioUrl": null,
+      "effects": [
+        "Ability Passive",
+        "Affects Enemies"
+      ],
+      "notes": [
+        "Only reacts on attack damage. Other sources of damage are ignored.",
+        "Returns incoming damage before all manipulations. However, damage manipulation on the enemy still affects the damage normally.",
+        "Reflected physical damage is affected by damage block as well.",
+        "The returned damage is always dealt right after the incoming damage.",
+        "Returned damage has the no-reflection flag, preventing its damage from interacting with other sources of damage with the same flag.",
+        "Returns damage back to the source. This means damage done by summons is reflected back to the summons, not to their owner.",
+        "Damage Return has a global range and affects units through the Fog of War or invisibility.",
+        "Returned damage cannot be amplified with spell damage amplification and cannot spell lifesteal.",
+        "Does not work against wards, buildings and allied units."
+      ],
+      "mana": null,
+      "abilityName": "Passive",
+      "cooldown": null,
+      "description": "Everytime you are attacked, you return 26 damage to heroes and 13 damage to creeps.",
+      "params": [
+        "Damage Return Hero: 26",
+        "Damage Return Creep: 13"
+      ],
+      "itemBehaviour": [],
+      "story": null
+    }
+  ],
+  "cost": "N\/A",
+  "lore": null,
+  "consistFrom": null,
+  "boughtFrom": "Neutral Drop Only",
+  "name": "Chipped Vest",
+  "description": "It doesn't look like much, but it's oddly comfy.",
+  "trivia": null,
+  "upgradeIn": null,
+  "bonuses": [
+    "+3.5 Health regeneration"
+  ],
+  "tips": null
+}

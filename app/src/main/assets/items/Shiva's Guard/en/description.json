@@ -1,0 +1,91 @@
+{
+  "abilities": [
+    {
+      "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/2\/2c\/Shiva%27s_Guard_Arctic_Blast.mp3\/revision\/latest?cb=20191227195533",
+      "effects": [
+        "Ability No Target",
+        "Affects Enemies",
+        "Damage Magical"
+      ],
+      "notes": [
+        "Does not interrupt the user's channeling spells upon cast.",
+        "The blast spreads at a speed of 350 and takes 2.57 seconds to reach maximum range and dissipate.",
+        "The area of effect is centered around the owner, so when moving or blinking, the radius moves along.",
+        "The blast is not a ring. It affects every enemy within the blast's expanding area of effect. This means that unlike Ravage, it is not possible to avoid the effect by blinking \"over\" the edge towards the caster.",
+        "This means that unlike Ravage, it is not possible to avoid the effect by blinking \"over\" the edge towards the caster.",
+        "Arctic Blast first applies the damage, then the debuff.",
+        "Provides 800 radius flying vision, following the caster and leaving a trail of vision which lasts for 2 seconds."
+      ],
+      "mana": "100",
+      "abilityName": "Arctic Blast",
+      "cooldown": null,
+      "description": "Emits a freezing wave that deals 200 magical damage to enemies and slows their movement by 40% for 4 seconds.",
+      "params": [
+        "Radius: 900",
+        "Damage: 200",
+        "Move Speed Slow: 40%",
+        "Slow Duration: 4"
+      ],
+      "itemBehaviour": [
+        "(Spell_immunity_block_symbol)^Does not pierce spell immunity\nSlow persists if debuff was placed before spell immunity and when not dispelled."
+      ],
+      "story": null
+    },
+    {
+      "audioUrl": null,
+      "effects": [
+        "Ability Aura",
+        "Affects Enemies"
+      ],
+      "notes": [
+        "Freezing Auras from multiple Shiva's Guards do not stack.",
+        "Applies heal reduction, health regen reduction, lifesteal reduction and spell lifesteal reduction on affected enemies.",
+        "The aura's debuff lingers for 0.5 seconds.",
+        "The status debuff icon on enemies only shows up when the affected unit has vision over the source. However, the attack speed slow in the HUD is always visible.",
+        "However, the attack speed slow in the HUD is always visible."
+      ],
+      "mana": null,
+      "abilityName": "Freezing Aura",
+      "cooldown": null,
+      "description": "Reduces the attack speed of all enemies by 45 and all heals, regeneration and lifesteal by 25%.",
+      "params": [
+        "Radius: 1200",
+        "Attack Speed Slow: 45",
+        "Health Restoration Reduction: 25%",
+        "Aura Linger Duration: 0.5"
+      ],
+      "itemBehaviour": [],
+      "story": null
+    }
+  ],
+  "additionalInformation": [
+    "For strength heroes, it grants 15 armor, 360 mana and 1.5 mana regen.",
+    "For agility heroes, it grants 15 armor, 360 mana and 1.5 mana regen.",
+    "For intelligence heroes, it grants 15 armor, 360 mana, 1.5 mana regen and 30 attack damage."
+  ],
+  "cost": "4850",
+  "lore": null,
+  "consistFrom": [
+    "Platemail",
+    "Mystic Staff",
+    "Recipe"
+  ],
+  "boughtFrom": "Armor",
+  "name": "Shiva's Guard",
+  "description": "Said to have belonged to a goddess, today it retains much of its former power.",
+  "trivia": [
+    "The name \"Shiva\" is a reference to the Shiva of the Final Fantasy series, an elemental summon with the power of ice."
+  ],
+  "upgradeIn": null,
+  "bonuses": [
+    "+30 Intelligence",
+    "+15 Armor"
+  ],
+  "tips": [
+    "Arctic Blast's effect hits every enemy once within its radius, even after its edge has expanded past the target. Because of its slow expansion time (taking about 2 seconds to reach max radius), it can be thought of as a moving area effect, centered on the hero. Use Arctic Blast before blinking or engaging an enemy to instantly deal area damage and movement slow upon initiation. This can be used to instantly disable enemy Blink Daggers by prematurely using Arctic Blast out of vision and then blinking onto an enemy.",
+    "Use Arctic Blast before blinking or engaging an enemy to instantly deal area damage and movement slow upon initiation.",
+    "This can be used to instantly disable enemy Blink Daggers by prematurely using Arctic Blast out of vision and then blinking onto an enemy.",
+    "Shiva's Guard is a useful item against enemies with mana burn. It greatly increases a hero's mana pool, and its aura slows the number of mana burning attacks made against its owner.",
+    "Shiva's Guard is good against heroes and creeps with low attack speed, causing them to attack even slower."
+  ]
+}

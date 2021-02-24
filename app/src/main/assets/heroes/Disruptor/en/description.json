@@ -1,0 +1,224 @@
+{
+  "abilities": [
+    {
+      "spellName": "Talent",
+      "talents": [
+        {
+          "talentLvl": "25",
+          "talentLeft": "+3s Kinetic Field Duration",
+          "talentRight": "-8s Glimpse Cooldown"
+        },
+        {
+          "talentLvl": "20",
+          "talentLeft": "+3 Thunder Strike Hits",
+          "talentRight": "Kinetic Field Grants True Sight"
+        },
+        {
+          "talentLvl": "15",
+          "talentLeft": "+1.5s Static Storm Duration",
+          "talentRight": "+125 Cast Range"
+        },
+        {
+          "talentLvl": "10",
+          "talentLeft": "+30 Thunder Strike Damage",
+          "talentRight": "-3s Kinetic Field Cooldown"
+        }
+      ]
+    },
+    {
+      "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/6\/66\/Disruptor_Thunder_Strike.mp3\/revision\/latest?cb=20191216012436",
+      "effects": [
+        "Ability Target Unit",
+        "Affects Enemies (TagAghanim Allies)",
+        "Damage Magical"
+      ],
+      "notes": [
+        "Turning invulnerable or hidden does not stop the strikes from hitting other units within the radius.",
+        "The ability exposes the target.",
+        "Strikes the target in 2 second intervals, starting immediately as the debuff is placed, resulting in 4 (TagTalent 7) strikes.",
+        "Can deal up to 180\/280\/380\/480 damage to a single unit (before reductions). Can deal up to 300\/400\/500\/600 damage when the damage increasing level 10 talent is chosen. Can deal up to 315\/490\/665\/840 damage when the number of strikes increasing level 20 talent is chosen. Can deal up to 525\/700\/875\/1050 damage when both talents are chosen.",
+        "Can deal up to 300\/400\/500\/600 damage when the damage increasing level 10 talent is chosen.",
+        "Can deal up to 315\/490\/665\/840 damage when the number of strikes increasing level 20 talent is chosen.",
+        "Can deal up to 525\/700\/875\/1050 damage when both talents are chosen.",
+        "The debuff persists through death. If the target dies, it continues to apply damage at its death location.",
+        "The strikes first apply the debuff, then the damage.",
+        "Provides 450 range flying vision for 3.34 seconds at the target's last location when the debuff expires or is removed.",
+        "Successive casts on the same unit do not stack, but only refresh the duration.",
+        "Choosing the damage upgrading talent immediately upgrades all of Disruptor's currently active Thunder Strike instances.",
+        "Choosing the strikes\/duration increasing talent does not update currently active instances."
+      ],
+      "mana": "130\/140\/150\/160",
+      "hotKey": "Q",
+      "cooldown": "18\/15\/12\/9",
+      "description": "Repeatedly strikes the targeted unit with lightning. Each strike damages nearby enemy units in a small radius and slows enemy movement speed and attack speed by 100 for seconds. Provides vision of its target.",
+      "spellName": "Thunder Strike",
+      "params": [
+        "Cast Animation: 0.05+0",
+        "Cast Range: 800 (TagTalent 925)",
+        "Damage Radius: 240 (TagTalent 500)",
+        "Number of Strikes: 4 (TagTalent 7)",
+        "Damage per Strike: 45\/70\/95\/120 (TagTalent 75\/100\/125\/150)",
+        "Enemy Move Speed Slow: 100%",
+        "Enemy Attack Speed Slow: 100",
+        "Slow Duration: 0.1",
+        "Thunder Strike Duration: 6 (TagTalent 12)",
+        "Ally Move Speed Bonus: 50%",
+        "Ally Attack Speed Bonus: 75",
+        "Ally Buff Duration: 1",
+        "Allows Thunder Strike to be cast on allies, follows the ally and deals damage around them. Each strike gives a short 1 second buff that provides +50% Movement Speed and +75 Attack Speed. Increases radius by 260 when used on allies.",
+        "Continues to apply area effect if debuff was placed before spell immunity and when not dispelled. Does not attempt to damage spell immune enemies. Can be cast on spell immune allies.",
+        "Blocked fully only when primary enemy target."
+      ],
+      "itemBehaviour": [],
+      "legacyKey": "C",
+      "story": "Disruptor's charged coils occasionally overload, and a singed armor plate or tuft of fur is the enemy's result."
+    },
+    {
+      "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/4\/42\/Disruptor_Glimpse.mp3\/revision\/latest?cb=20191216012442",
+      "effects": [
+        "Ability Target Unit",
+        "Affects Enemy Heroes",
+        "Damage Instant Kill"
+      ],
+      "notes": [
+        "Glimpse does not instantly move the target back. A projectile spawns from the target which travels towards the mark. The projectile travels at a speed of 600, or reaches the mark in 1.8 seconds, whichever is faster.",
+        "The projectile travels at a speed of 600, or reaches the mark in 1.8 seconds, whichever is faster.",
+        "If the target was dead for more than 4 seconds, the target gets moved to the team's fountain instead.",
+        "The location at which the target lands after Glimpse is marked with a blue visual effect which is visible to everyone.",
+        "The projectile provides 400 range flying vision while traveling, which lingers for 3.34 seconds at the marked location.",
+        "Does not move spell immune units, but can move invulnerable units. Following the general rule of position changing effects, it can cancel e.g. Time Walk or Ball Lightning. While Doppelganger, Sleight of Fist and Activate Fire Remnant reposition the caster, they cannot be interrupted, so it can be dodged with those spells. Does not move hidden units.",
+        "Following the general rule of position changing effects, it can cancel e.g. Time Walk or Ball Lightning.",
+        "While Doppelganger, Sleight of Fist and Activate Fire Remnant reposition the caster, they cannot be interrupted, so it can be dodged with those spells.",
+        "Does not move hidden units.",
+        "The target is given a stop command as soon as it is moved back, effectively canceling channeling spells.",
+        "Does not disjoint projectiles for the target upon teleporting them.",
+        "Cannot target creep-heroes."
+      ],
+      "mana": "100",
+      "hotKey": "W",
+      "cooldown": "60\/46\/32\/18 (TagTalent 52\/38\/24\/10)",
+      "description": "Teleports the target hero back to where it was 4 seconds ago. Instantly kills illusions.",
+      "spellName": "Glimpse",
+      "params": [
+        "Cast Animation: 0.05+0.83",
+        "Cast Range: 600\/1000\/1400\/1800 (TagTalent 725\/1125\/1525\/1925)",
+        "Backtracked Time: 4",
+        "Does not return enemies while spell immune."
+      ],
+      "itemBehaviour": [],
+      "legacyKey": "D",
+      "story": "Playing with electricity can have unexpected results."
+    },
+    {
+      "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/5\/56\/Disruptor_Kinetic_Field.mp3\/revision\/latest?cb=20191216012444",
+      "effects": [
+        "Ability Target Area",
+        "Affects Enemies"
+      ],
+      "notes": [
+        "The effect delay is not included in the field's duration. The actual duration starts right after the delay.",
+        "The visual and sound effects during the effect delay are visible and audible to everyone.",
+        "Stops enemies by slowing them with a slow aura. The aura has a radius of 408 and is centered on the field. The slow gets exponentially stronger towards the visible barrier, which has a 350 radius. This effectively causes enemy units touching the barrier to come to halt. The slow is only present when facing towards the barrier. Units at the barrier facing away from it are not slowed. The aura's effect lingers for 0.5 seconds, resulting in an effective duration of 3.1\/3.7\/4.3\/4.9 (TagTalent 6.1\/6.7\/7.3\/7.9) seconds. Since the slow is fluctuating a lot, it is not displayed in the HUD.",
+        "The slow gets exponentially stronger towards the visible barrier, which has a 350 radius.",
+        "This effectively causes enemy units touching the barrier to come to halt.",
+        "The slow is only present when facing towards the barrier. Units at the barrier facing away from it are not slowed.",
+        "The aura's effect lingers for 0.5 seconds, resulting in an effective duration of 3.1\/3.7\/4.3\/4.9 (TagTalent 6.1\/6.7\/7.3\/7.9) seconds.",
+        "Since the slow is fluctuating a lot, it is not displayed in the HUD.",
+        "The level 20 True Sight talent does not cause already existing fields to apply True Sight on units they already affect. However, it does make existing fields provide True Sight on units that run into it after the talent is chosen. The True Sight is applied by the same modifier as the slow, meaning it has a radius of 408 as well.",
+        "However, it does make existing fields provide True Sight on units that run into it after the talent is chosen.",
+        "The True Sight is applied by the same modifier as the slow, meaning it has a radius of 408 as well.",
+        "Besides preventing enemies from walking in or out of the area, the following movement spells are unable to pass the barrier either: Skewer, Leap, Pounce, Tree Dance, Primal Spring, Sun Ray, God's Rebuke, Force Staff, Hurricane Pike, Sinister Gaze, and Firesnap Cookie.",
+        "Skewer, Leap, Pounce, Tree Dance, Primal Spring, Sun Ray, God's Rebuke, Force Staff, Hurricane Pike, Sinister Gaze, and Firesnap Cookie.",
+        "Provides 350 range ground vision at the center of the area for 5.5 seconds upon cast"
+      ],
+      "mana": "70",
+      "hotKey": "E",
+      "cooldown": "19\/16\/13\/10 (TagTalent 16\/13\/10\/7)",
+      "description": "After a short formation time, creates a circular barrier of kinetic energy that enemies can't pass.",
+      "spellName": "Kinetic Field",
+      "params": [
+        "Cast Animation: 0.05+0",
+        "Cast Range: 900 (TagTalent 1025)",
+        "Field Radius: 350",
+        "Effect Delay: 1.2",
+        "Aura Linger Duration: 0.5",
+        "Duration: 2.6\/3.2\/3.8\/4.4 (TagTalent 5.6\/6.2\/6.8\/7.4)",
+        "The Barrier's modifier persists if it was placed before spell immunity."
+      ],
+      "itemBehaviour": [],
+      "legacyKey": "E",
+      "story": "The stryder is immune to the gale-force winds that will consume its adversaries."
+    },
+    {
+      "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/6\/68\/Disruptor_Static_Storm.mp3\/revision\/latest?cb=20191216012434",
+      "effects": [
+        "Ability Target Area",
+        "Affects Enemies",
+        "Damage Magical"
+      ],
+      "notes": [
+        "The silence (TagTalent and mute) is provided by an aura, its effects do not linger.",
+        "Silences (TagTalent and mutes) invulnerable units, but not hidden units.",
+        "Deals a total of 20 (TagTalent 26) damage instances over 5 (TagTalent 6.5), resulting in 0.25-second intervals.",
+        "The damage on each instance is determined by the given max damage per second, divided by max instance, then multiplied by the current instance count.",
+        "This is how much damage each interval deals (before reductions) on each level: Level 1: 2.5\/5\/7.5\/10\/12.5\/15\/17.5\/20\/22.5\/25\/27.5\/30\/32.5\/35\/37.5\/40\/42.5\/45\/47.5\/50 (TagTalent \/52.5\/55\/57.5\/60\/62.5\/65) damage Level 2: 3.4\/6.9\/10.3\/13.8\/17.2\/20.6\/24.1\/27.5\/30.9\/34.4\/37.8\/41.3\/44.7\/48.1\/51.6\/55\/58.4\/61.9\/65.3\/68.8 (TagTalent \/72.2\/75.6\/79.1\/82.5\/85.9\/89.4) damage Level 3: 4.4\/8.8\/13.1\/17.5\/21.9\/26.3\/30.6\/35\/39.4\/43.8\/48.1\/52.5\/56.9\/61.3\/65.6\/70\/74.4\/78.8\/83.1\/87.5 (TagTalent \/91.9\/96.3\/100.6\/105\/109.4\/113.8) damage",
+        "Level 1: 2.5\/5\/7.5\/10\/12.5\/15\/17.5\/20\/22.5\/25\/27.5\/30\/32.5\/35\/37.5\/40\/42.5\/45\/47.5\/50 (TagTalent \/52.5\/55\/57.5\/60\/62.5\/65) damage",
+        "Level 2: 3.4\/6.9\/10.3\/13.8\/17.2\/20.6\/24.1\/27.5\/30.9\/34.4\/37.8\/41.3\/44.7\/48.1\/51.6\/55\/58.4\/61.9\/65.3\/68.8 (TagTalent \/72.2\/75.6\/79.1\/82.5\/85.9\/89.4) damage",
+        "Level 3: 4.4\/8.8\/13.1\/17.5\/21.9\/26.3\/30.6\/35\/39.4\/43.8\/48.1\/52.5\/56.9\/61.3\/65.6\/70\/74.4\/78.8\/83.1\/87.5 (TagTalent \/91.9\/96.3\/100.6\/105\/109.4\/113.8) damage",
+        "Can deal up to 525\/721.875\/918.75 (TagTalent 877.5\/1206.5625\/1535.625) damage to a single unit (before reductions).",
+        "Provides 450 range flying vision at the center of the area for 5 (TagTalent 6.5) seconds."
+      ],
+      "mana": "125\/175\/225",
+      "hotKey": "R",
+      "cooldown": "90\/80\/70",
+      "description": "Creates a damaging static storm that also silences all enemy units in the area for the duration. The damage starts off weak, but increases in power over the duration.",
+      "spellName": "Static Storm",
+      "params": [
+        "Cast Animation: 0.05+0",
+        "Cast Range: 800 (TagTalent 925)",
+        "Storm Radius: 500",
+        "Number of Pulses: 20 (TagTalent 26)",
+        "Max Damage per Second: 200\/275\/350",
+        "Aura Linger Duration: 0",
+        "Duration: 5 (TagTalent 6.5)",
+        "Mutes items.",
+        "Silence (TagTalentand mute) persist if debuff was placed before spell immunity."
+      ],
+      "itemBehaviour": [],
+      "legacyKey": "R",
+      "story": "A summer squall in Druud is a hardship that only an Oglodi can survive."
+    }
+  ],
+  "mainAttributes": {
+    "attrStrengthInc": 2.4,
+    "attrStrength": 21.0,
+    "attrIntelligence": 20.0,
+    "attrIntelligenceInc": 2.9,
+    "attrAgilityInc": 1.4,
+    "attrAgility": 15.0
+  },
+  "description": "Disruptor, the Stormcrafter, is a ranged intelligence hero who requires good positioning to use his abilities effectively. His signature ability is Kinetic Field, a pseudo-disable that traps enemies within a small area for a long duration. Combined with his Static Storm, Disruptor can act as the initiator for a teamfight, or supplement his teammates' initiation very well. Glimpse is another powerful spell that forces enemies to watch their movements, as Disruptor can easily drag them back to a previous location to be focused down. Thunder Strike provides Disruptor with some reliable single-target damage, but more importantly grants vision on the target to prevent jukes and escapes.",
+  "history": "High on the wind-ravaged steppes of Druud, a gifted young stormcrafter called Disruptor was the first to unlock the secrets of the summer squalls. Constantly under assault from both seasonal storms and encroachment from civilized kingdoms to the South, the upland Oglodi have for centuries struggled to subsist atop the endless tablelands. They are the fractured remnant of a once-great civilization\u2014a fallen tribe, their stormcraft strange and inscrutable, cobbled together from scraps of lost knowledge which even they no longer fully understand. For those on the high plain, weather has become a kind of religion, worshiped as both the giver and taker of life. But the electrical storms that bring life-sustaining rains arrive at a cost, and many are the charred and smoking corpses left in their wake. Although small for his kind, Disruptor is fearless, and driven by an insatiable curiosity. As a youth, while still unblooded and without a stryder, he explored the ruins of the ancestral cities\u2014searching through collapsed and long-moldering libraries, rummaging through rusting manufactories. He took what he needed and returned to his tribe. Adapting a coil of ancient design, he harnessed the power of electrical differential and now calls down the thunder whenever he wishes. Part magic, part craftsmanship, his coils hold in their glowing plates the power of life and death\u2014a power wielded with precision against the landed castes to the South, and any interlopers who cross into ancient Oglodi lands.",
+  "talents": [
+    {
+      "talentLvl": "25",
+      "talentLeft": "+3s Kinetic Field Duration",
+      "talentRight": "-8s Glimpse Cooldown"
+    },
+    {
+      "talentLvl": "20",
+      "talentLeft": "+3 Thunder Strike Hits",
+      "talentRight": "Kinetic Field Grants True Sight"
+    },
+    {
+      "talentLvl": "15",
+      "talentLeft": "+1.5s Static Storm Duration",
+      "talentRight": "+125 Cast Range"
+    },
+    {
+      "talentLvl": "10",
+      "talentLeft": "+30 Thunder Strike Damage",
+      "talentRight": "-3s Kinetic Field Cooldown"
+    }
+  ]
+}

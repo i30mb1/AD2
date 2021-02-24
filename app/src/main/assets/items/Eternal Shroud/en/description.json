@@ -1,0 +1,75 @@
+{
+  "abilities": [
+    {
+      "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/2\/27\/Hood_of_Defiance_Barrier.mp3\/revision\/latest?cb=20191227195438",
+      "effects": [
+        "Ability No Target",
+        "Affects Self"
+      ],
+      "notes": [
+        "Interrupts the user's channeling spells upon cast.",
+        "Blocks damage before any reductions, except Mana Shield.",
+        "Recasting Barrier refreshes the buff and resets the barrier's absorb capacity.",
+        "Does not stack with other magical damage barriers. If multiple sources of barriers are active on a unit, all of them lose capacity from the same absorbed damage instance. However, if a damage instance is greater than the capacity of all barriers individually, the damage gets blocked as if the barriers were one barrier with combined capacity.",
+        "If multiple sources of barriers are active on a unit, all of them lose capacity from the same absorbed damage instance.",
+        "However, if a damage instance is greater than the capacity of all barriers individually, the damage gets blocked as if the barriers were one barrier with combined capacity.",
+        "Only blocks magical damage, coming from spells and attacks. Does not block any physical or pure damage.",
+        "Does not share cooldown with Pipe of Insight."
+      ],
+      "mana": "50",
+      "abilityName": "Shroud",
+      "cooldown": null,
+      "description": "Creates a spell shield that absorbs up to 400 magical damage, converting damage taken into mana. Lasts 12 seconds.",
+      "params": [
+        "Magical Damage Absorbed: 400",
+        "Duration: 12"
+      ],
+      "itemBehaviour": [],
+      "story": null
+    },
+    {
+      "audioUrl": null,
+      "effects": [
+        "Ability Passive",
+        "Affects Self"
+      ],
+      "notes": [
+        "Spell Lifesteal of multiple Eternal Shrouds does not stack.",
+        "Heals from any spell damage the owner deals (with a few exceptions) against enemy or allied units.",
+        "Does not heal from damage done against buildings, wards or self.",
+        "Heals from all three damage types and from many instantly killing effects.",
+        "Heals from damage dealt after all reductions.",
+        "In order for it to heal, the damage source must be the owner. Damage done by its summons (including wards) does not heal."
+      ],
+      "mana": null,
+      "abilityName": "Spell Lifesteal",
+      "cooldown": null,
+      "description": "20% of spell damage dealt to enemy heroes is returned to the caster as health, regardless of spell damage type. Lifesteal reduced to 4% against creeps.",
+      "params": [
+        "Hero Spell Lifesteal: 20%",
+        "Creep Spell Lifesteal: 4%"
+      ],
+      "itemBehaviour": [],
+      "story": null
+    }
+  ],
+  "additionalInformation": [
+    "Stacks multiplicatively with other sources of magic resistance."
+  ],
+  "cost": "3250",
+  "lore": null,
+  "consistFrom": [
+    "Hood of Defiance",
+    "Voodoo Mask",
+    "Recipe"
+  ],
+  "boughtFrom": "Armor",
+  "name": "Eternal Shroud",
+  "description": "A pristine hood that feeds upon strife to empower its owner.",
+  "trivia": null,
+  "upgradeIn": null,
+  "bonuses": [
+    "+20% Magic resistance"
+  ],
+  "tips": null
+}

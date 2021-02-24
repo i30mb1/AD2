@@ -1,0 +1,20 @@
+{
+  "abilities": [],
+  "cost": "550",
+  "lore": null,
+  "consistFrom": null,
+  "boughtFrom": "Equipment",
+  "name": "Chainmail",
+  "description": "A medium weave of metal chains.",
+  "trivia": null,
+  "upgradeIn": [
+    "Phase Boots",
+    "Blade Mail",
+    "Medallion of Courage",
+    "Witch Blade"
+  ],
+  "bonuses": [
+    "+4 Armor"
+  ],
+  "tips": null
+}

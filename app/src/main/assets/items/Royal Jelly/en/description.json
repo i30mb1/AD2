@@ -1,0 +1,44 @@
+{
+  "abilities": [
+    {
+      "audioUrl": null,
+      "effects": [
+        "Ability Target Unit",
+        "Affects Allied Heroes"
+      ],
+      "notes": [
+        "Double clicking the item casts it on self.",
+        "A hero cannot consume more than one Royal Jelly.",
+        "Can only target heroes and Meepo clones.",
+        "Cannot target illusions, creep-heroes and other clones. Illusions and Tempest Doubles copy the Royal Jelly buff, if the main hero has it. Wukong\u2019s Command clones do not copy the Royal Jelly buff.",
+        "Illusions and Tempest Doubles copy the Royal Jelly buff, if the main hero has it.",
+        "Wukong\u2019s Command clones do not copy the Royal Jelly buff."
+      ],
+      "mana": null,
+      "abilityName": "Consume",
+      "cooldown": "0",
+      "description": "Grants a target allied unit a permanent buff that provides +2.25 Health Regen and +1.25 Mana Regen.",
+      "params": [
+        "Cast Range: Global",
+        "Health Regeneration Bonus: 2.25",
+        "Mana Regeneration Bonus: 1.25"
+      ],
+      "itemBehaviour": [],
+      "story": null
+    }
+  ],
+  "additionalInformation": [
+    "Royal Jellies are fully sharable.",
+    "Royal Jelly may not drop if another consumable neutral item within the same tier dropped already."
+  ],
+  "cost": "N\/A",
+  "lore": null,
+  "consistFrom": null,
+  "boughtFrom": "Neutral Drop Only",
+  "name": "Royal Jelly",
+  "description": "",
+  "trivia": null,
+  "upgradeIn": null,
+  "bonuses": null,
+  "tips": null
+}

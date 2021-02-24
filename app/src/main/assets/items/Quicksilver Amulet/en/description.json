@@ -1,0 +1,36 @@
+{
+  "abilities": [
+    {
+      "audioUrl": null,
+      "effects": [
+        "Ability Passive",
+        "Affects Self"
+      ],
+      "notes": [
+        "Each spell cast refreshes the duration of the whole stack, making it theoretically possible to permanently have max stacks on."
+      ],
+      "mana": null,
+      "abilityName": "Quicksilver",
+      "cooldown": null,
+      "description": "Grants you bonus 5% movement speed and 15 attack speed anytime one of your abilities are on cooldown.",
+      "params": [
+        "Movement Speed Bonus: 5%",
+        "Attack Speed Bonus: 15"
+      ],
+      "itemBehaviour": [],
+      "story": null
+    }
+  ],
+  "cost": "N\/A",
+  "lore": null,
+  "consistFrom": null,
+  "boughtFrom": "Neutral Drop Only",
+  "name": "Quicksilver Amulet",
+  "description": "An enchanted talisman brimming with a mysterious substance.",
+  "trivia": null,
+  "upgradeIn": null,
+  "bonuses": [
+    "+10 Attack speed"
+  ],
+  "tips": null
+}

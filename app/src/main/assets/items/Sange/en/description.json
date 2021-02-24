@@ -1,0 +1,38 @@
+{
+  "abilities": [],
+  "additionalInformation": [
+    "For strength heroes, it grants 320 health, 1.6 health regen and 16 attack damage.",
+    "For agility heroes, it grants 320 health and 1.6 health regen.",
+    "For intelligence heroes, it grants 320 health and 1.6 health regen.",
+    "Sange and its upgrades' Status Resistances don\u2019t stack with each other.",
+    "Health regen amplification from multiple Sange-based items do not stack.",
+    "Lifesteal amplification from multiple Sange-based items do not stack."
+  ],
+  "cost": "2050",
+  "lore": null,
+  "consistFrom": [
+    "Ogre Axe",
+    "Belt of Strength",
+    "Recipe"
+  ],
+  "boughtFrom": "Artifacts",
+  "name": "Sange",
+  "description": "Sange is an unusually accurate weapon, seeking weak points automatically.",
+  "trivia": [
+    "This item is named after Sange, a weapon from the Phantasy Star Online series.",
+    "Riki's cosmetic item, Sange the Backseeker, is based on Sange."
+  ],
+  "upgradeIn": [
+    "Heaven's Halberd",
+    "Sange and Yasha",
+    "Kaya and Sange",
+    "Trident"
+  ],
+  "bonuses": [
+    "+16 Strength",
+    "+16% Status resistance",
+    "+24% Health regen amplification",
+    "+24% Lifesteal amplification"
+  ],
+  "tips": null
+}

@@ -1,0 +1,18 @@
+{
+  "abilities": [],
+  "cost": "1400",
+  "lore": null,
+  "consistFrom": null,
+  "boughtFrom": "Снаряжение",
+  "name": "Claymore",
+  "description": "Меч, способный пробить броню, \u2014 обычный выбор начинающих рыцарей.",
+  "trivia": null,
+  "upgradeIn": [
+    "Battle Fury",
+    "Satanic"
+  ],
+  "bonuses": [
+    "+21 к урону"
+  ],
+  "tips": null
+}

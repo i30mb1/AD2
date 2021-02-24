@@ -1,0 +1,20 @@
+{
+  "abilities": [],
+  "cost": "825",
+  "lore": null,
+  "consistFrom": null,
+  "boughtFrom": "Secret Shop",
+  "name": "Void Stone",
+  "description": "Jewelry that was once used to channel nether realm magic, this ring pulses with energy.",
+  "trivia": null,
+  "upgradeIn": [
+    "Perseverance",
+    "Scythe of Vyse",
+    "Eul's Scepter of Divinity",
+    "Aether Lens"
+  ],
+  "bonuses": [
+    "+2.25 Mana regeneration"
+  ],
+  "tips": null
+}

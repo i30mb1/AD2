@@ -1,0 +1,63 @@
+{
+  "abilities": [
+    {
+      "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/0\/08\/Rod_of_Atos_Cripple_1.mp3\/revision\/latest?cb=20191227195522",
+      "effects": [
+        "Ability Target Unit",
+        "Affects Enemies"
+      ],
+      "notes": [
+        "The projectile travels at a speed of 1500.",
+        "Roots the target, preventing it from moving and casting certain mobility spells. Provides True Sight over the target, but only when the target was not invisible or within a fade time upon hit.",
+        "Provides True Sight over the target, but only when the target was not invisible or within a fade time upon hit.",
+        "Successive casts on the same target do not stack, but refresh the duration instead."
+      ],
+      "mana": "50",
+      "abilityName": "Cripple",
+      "cooldown": null,
+      "description": "Roots the target for 2 seconds.",
+      "params": [
+        "Cast Range: 1100",
+        "Root Duration: 2"
+      ],
+      "itemBehaviour": [
+        "(Spell_immunity_block_symbol)^Does not pierce spell immunity\nRoot persists if debuff was placed before spell immunity and when not dispelled."
+      ],
+      "story": null
+    }
+  ],
+  "additionalInformation": [
+    "For strength heroes, it grants 200 health, 1 health regen, 1.67 armor, 10 attack speed, 240 mana, 1 mana regen and 10 attack damage.",
+    "For agility heroes, it grants 200 health, 1 health regen, 1.67 armor, 10 attack speed, 240 mana, 1 mana regen and 10 attack damage.",
+    "For intelligence heroes, it grants 200 health, 1 health regen, 1.67 armor, 10 attack speed, 240 mana, 1 mana regen and 20 attack damage."
+  ],
+  "cost": "2750",
+  "lore": null,
+  "consistFrom": [
+    "Staff of Wizardry",
+    "Crown",
+    "Crown",
+    "Recipe"
+  ],
+  "boughtFrom": "Magical",
+  "name": "Rod of Atos",
+  "description": "Atos, the Lord of Blight, has his essence stored in this deceptively simple wand.",
+  "trivia": [
+    "The particle effects of Cripple include runes resembling the Elvish scripts from The Lord of the Rings, a novel by J.R.R. Tolkien (specifically the alphabet bee or umbar in Tengwar)."
+  ],
+  "upgradeIn": [
+    "Gleipnir"
+  ],
+  "bonuses": [
+    "+10 Strength",
+    "+10 Agility",
+    "+20 Intelligence"
+  ],
+  "tips": [
+    "Root is a great disable to make a melee hero unable to reach his target and attack and later to force them to use their Black King Bar while out of position.",
+    "This item can be combined with a Bloodthorn and\/or a Necronomicon to get more attacks off.",
+    "Combine it with an Hurricane Pike to push away your target then root him for preventing your enemy from attacking or escaping.",
+    "The item can be used for ganking, chasing survivors after a team fight, or to escape.",
+    "The very long cast range makes the Rod of Atos an effective item to disable an enemy Linken's Sphere from afar, although it requires the projectile to connect."
+  ]
+}

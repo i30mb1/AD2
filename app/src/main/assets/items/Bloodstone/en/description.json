@@ -1,0 +1,116 @@
+{
+  "abilities": [
+    {
+      "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/0\/01\/Bloodstone_Bloodpact.mp3\/revision\/latest?cb=20191227195357",
+      "effects": [
+        "Ability No Target",
+        "Affects Self"
+      ],
+      "notes": [
+        "Interrupts the caster's channeling spells upon cast.",
+        "Checks the caster's mana once upon cast, and grants health regen accordingly. This means the health regen value does not update after cast, and stays the same throughout the entire duration. Recasting Bloodpact refreshes the duration, without updating health regen value.",
+        "This means the health regen value does not update after cast, and stays the same throughout the entire duration.",
+        "Recasting Bloodpact refreshes the duration, without updating health regen value.",
+        "Heals in the form of health regeneration, so it restores 1.5% of max mana as health in 0.1 second intervals."
+      ],
+      "mana": "30% of max mana",
+      "abilityName": "Bloodpact",
+      "cooldown": null,
+      "description": "Converts 30% of your max mana to health regeneration over 2 seconds.",
+      "params": [
+        "Duration: 2"
+      ],
+      "itemBehaviour": [],
+      "story": null
+    },
+    {
+      "audioUrl": null,
+      "effects": [
+        "Ability Passive",
+        "Affects Self"
+      ],
+      "notes": [
+        "When having multiple Bloodstones, the one in the higher inventory slot gains charges. The top left inventory slot has the highest priority, the bottom right one the lowest.",
+        "The top left inventory slot has the highest priority, the bottom right one the lowest.",
+        "The effects of Bloodstone charges from all Bloodstones a hero owns fully stack.",
+        "Gains a charge whenever an enemy hero dies (including Reincarnation) within the radius, or whenever the owner makes a kill from any distance.",
+        "When multiple heroes in a team have Bloodstones, each hero can gain a charge from the same enemy death.",
+        "Each charge can regenerate up to 12 mana in one minute.",
+        "The Bloodstone loses 3 charges upon dying. Cannot go below 0 charges.",
+        "Charges are not lost when the carrier dies with Reincarnation."
+      ],
+      "mana": null,
+      "abilityName": "Mana Battery",
+      "cooldown": null,
+      "description": "Each charge provides 0.2 MP regen and 0.35% Spell Amp. Nearby kills provide 1 charges. Dying causes you to lose 3 charges. Starts with 14 charges.",
+      "params": [
+        "Charge Gain Radius: 1600",
+        "Charge Gain per Enemy Hero Death: 1",
+        "Charge Loss per Death: 3",
+        "Mana Regen Bonus per Charge: 0.2",
+        "Spell Damage Bonus per Charge: 0.35%"
+      ],
+      "itemBehaviour": [],
+      "story": null
+    },
+    {
+      "audioUrl": null,
+      "effects": [
+        "Ability Passive",
+        "Affects Self"
+      ],
+      "notes": [
+        "Spell Lifesteal of multiple Bloodstones does not stack.",
+        "Heals from any spell damage the owner deals (with a few exceptions) against enemy or allied units.",
+        "Does not heal from damage done against buildings, wards or self.",
+        "Heals from all three damage types and from many instantly killing effects.",
+        "Heals from damage dealt after all reductions.",
+        "In order for it to heal, the damage source must be the owner. Damage done by its summons (including wards) does not heal."
+      ],
+      "mana": null,
+      "abilityName": "Spell Lifesteal",
+      "cooldown": null,
+      "description": "15% of spell damage dealt to enemy heroes is returned to the caster as health, regardless of spell damage type. Lifesteal reduced to 3% against creeps.",
+      "params": [
+        "Hero Spell Lifesteal: 15%",
+        "Creep Spell Lifesteal: 3%"
+      ],
+      "itemBehaviour": [],
+      "story": null
+    }
+  ],
+  "additionalInformation": [
+    "For strength heroes, it grants 425 health, 617 mana, 0.8 mana regen and 8% spell damage.",
+    "For agility heroes, it grants 425 health, 617 mana, 0.8 mana regen and 8% spell damage.",
+    "For intelligence heroes, it grants 425 health, 617 mana, 0.8 mana regen, 8% spell damage and 16 attack damage.",
+    "Spell damage amplification from multiple Kaya-based items ( Kaya, Kaya and Sange, Yasha and Kaya, Bloodstone) do not stack.",
+    "Mana regen amplification from multiple Kaya-based items fully stack additively, except for multiple Bloodstones.",
+    "Spell lifesteal amplification from multiple Kaya-based items fully stack diminishingly.",
+    "Bloodstone cannot be put into the backpack."
+  ],
+  "cost": "5950",
+  "lore": null,
+  "consistFrom": [
+    "Kaya",
+    "Soul Booster",
+    "Voodoo Mask"
+  ],
+  "boughtFrom": "Armor",
+  "name": "Bloodstone",
+  "description": "The Bloodstone's bright ruby color is unmistakable on the battlefield, as the owner seems to have infinite vitality and spirit.",
+  "trivia": null,
+  "upgradeIn": null,
+  "bonuses": [
+    "+16 Intelligence",
+    "+425 Health",
+    "+425 Mana",
+    "+8% Spell damage",
+    "+(15 hero\/3 creep)% Spell lifesteal",
+    "+100% Mana regen amplification",
+    "+30% Spell lifesteal amplification"
+  ],
+  "tips": [
+    "Most heroes who want to build Bloodstone can take advantage of the ability to Disassemble Arcane Boots to complete the Soul Booster.",
+    "Use Bloodpact should enemies try finishing you off with their powerful abilities such as Maledict, Assassinate, or Thundergod's Wrath."
+  ]
+}

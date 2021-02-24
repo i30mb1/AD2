@@ -1,0 +1,24 @@
+{
+  "abilities": [],
+  "cost": "1650",
+  "lore": null,
+  "consistFrom": [
+    "Ring of Health",
+    "Void Stone"
+  ],
+  "boughtFrom": "Аксессуары",
+  "name": "Perseverance",
+  "description": "Драгоценность, укрепляющая силы владельца",
+  "trivia": null,
+  "upgradeIn": [
+    "Refresher Orb",
+    "Linken's Sphere",
+    "Lotus Orb",
+    "Battle Fury"
+  ],
+  "bonuses": [
+    "+6,5 к регенерации здоровья",
+    "+2,25 к регенерации маны"
+  ],
+  "tips": null
+}

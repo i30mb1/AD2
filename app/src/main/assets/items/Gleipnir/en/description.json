@@ -1,0 +1,89 @@
+{
+  "abilities": [
+    {
+      "audioUrl": null,
+      "effects": [
+        "Ability Target Point",
+        "Affects Enemies"
+      ],
+      "notes": [
+        "The projectile travels at a speed of 1500.",
+        "Roots the target, preventing it from moving and casting certain mobility spells. Provides True Sight over the target, but only when the target was not invisible or within a fade time upon hit.",
+        "Provides True Sight over the target, but only when the target was not invisible or within a fade time upon hit.",
+        "Affect units in fog, but does not provide vision.",
+        "Successive casts on the same target do not stack, but refresh the duration instead."
+      ],
+      "mana": "200",
+      "abilityName": "Eternal Chains",
+      "cooldown": null,
+      "description": "Roots all enemies in a target 450 radius for 2 seconds and deals 220 damage.",
+      "params": [
+        "Cast Range: 1100",
+        "Root Duration: 2",
+        "AOE: 450",
+        "Damage: 220"
+      ],
+      "itemBehaviour": [
+        "(Spell_immunity_block_symbol)^Does not pierce spell immunity\nRoot persists if debuff was places before spell immunity and when not dispelled."
+      ],
+      "story": null
+    },
+    {
+      "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/6\/64\/Mjollnir_Chain_Lightning.mp3\/revision\/latest?cb=20191227195502",
+      "effects": [
+        "Ability Passive",
+        "Affects Enemies",
+        "Damage Magical"
+      ],
+      "notes": [
+        "Does not stack with the Chain Lightning of Maelstrom, Mjollnir or other Gleipnirs.",
+        "When obtaining multiple items with the Chain Lightning ability, only the one that has been continuously the longest in the inventory works.",
+        "The lightning bounces in 0.25 second intervals, so hitting max targets takes 0.75 seconds.",
+        "Can proc on fogged or invisible units, but will not bounce toward fogged or invisible units.",
+        "Can never hit the same unit more than once per proc.",
+        "All bounces together can deal up to 640 damage (before reductions).",
+        "Chain Lightning can proc while a previous chain lightning is still bouncing.",
+        "Chain Lightning will not proc if the attacker is dead. However, it can proc if the target is dead.",
+        "However, it can proc if the target is dead.",
+        "Chain Lightning uses pseudo-random distribution.",
+        "Attacks which proc Chain Lightning cannot miss.",
+        "The Gleipnir buff is a hidden buff required for the lightning to jump.",
+        "Chain Lightning does not use a regular cooldown. It is neither displayed on the item icon when proccing, nor is it affected by cooldown manipulating effects."
+      ],
+      "mana": null,
+      "abilityName": "Chain Lightning",
+      "cooldown": "0.2",
+      "description": "Grants a 30% chance on attack to release a bolt of electricity that leaps between 4 targets within a 650 radius, dealing 160 magical damage to each. Lightning proc pierces evasion.",
+      "params": [
+        "Proc Chance: 30%",
+        "Bounce Distance: 650",
+        "Number of Bounces: 4",
+        "Bounce Interval: 0.25",
+        "Damage: 160"
+      ],
+      "itemBehaviour": [],
+      "story": null
+    }
+  ],
+  "cost": "6150",
+  "lore": null,
+  "consistFrom": [
+    "Maelstrom",
+    "Rod of Atos",
+    "Recipe"
+  ],
+  "boughtFrom": "Magical",
+  "name": "Gleipnir",
+  "description": "Bindings forged by impossible means to leash an ancient evil.",
+  "trivia": [
+    "In Norse Mythology, Gleipnir is the chain that is used to bind Fenrir, a wolf that is the son of Loki and Angrboda."
+  ],
+  "upgradeIn": null,
+  "bonuses": [
+    "+12 Strength",
+    "+12 Agility",
+    "+20 Intelligence",
+    "+30 Attack damage"
+  ],
+  "tips": null
+}

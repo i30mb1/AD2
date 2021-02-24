@@ -1,0 +1,247 @@
+{
+  "abilities": [
+    {
+      "notes": [
+        "The all \/ \/ stats talent effectively grants Juggernaut 100 health, 0.5 health regeneration, 0.83 armor, 5 attack speed, 60 mana, 0.25 mana regeneration, and 5 attack damage.",
+        "The armor talent does not benefit illusions.",
+        "The health talent increases maximum health capacity, and keeps the current health percentage."
+      ],
+      "spellName": "Talent",
+      "talents": [
+        {
+          "talentLvl": "25",
+          "talentLeft": "+1s Omnislash Duration",
+          "talentRight": "+475 Health"
+        },
+        {
+          "talentLvl": "20",
+          "talentLeft": "+160 Blade Fury DPS",
+          "talentRight": "+8 Armor"
+        },
+        {
+          "talentLvl": "15",
+          "talentLeft": "+20 Attack Speed",
+          "talentRight": "-20s Healing Ward Cooldown"
+        },
+        {
+          "talentLvl": "10",
+          "talentLeft": "+20 Movement Speed",
+          "talentRight": "+5 All Stats"
+        }
+      ]
+    },
+    {
+      "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/e\/e5\/Juggernaut_Blade_Fury_1.mp3\/revision\/latest?cb=20191216014540",
+      "effects": [
+        "Ability No Target",
+        "Affects Enemies \/ Self",
+        "Damage Magical"
+      ],
+      "notes": [
+        "Does not interrupt Juggernaut's channeling spells upon cast.",
+        "Blade Fury cannot be cast during Omnislash and Swiftslash.",
+        "Applies spell immunity for the duration and a basic dispel upon cast.",
+        "During Blade Fury, Juggernaut cannot be affected by Ghost Scepter. The buff gets removed immediately.",
+        "Juggernaut can perform attacks, cast spells, and use items during Blade Fury, however, Omnislash and Swiftslash are inactive for the duration and cannot be cast.",
+        "During Blade Fury, Juggernaut's attacks deal 0 damage, except against wards and buildings. Attack modifiers like Monkey King Bar, Diffusal Blade or Skull Basher still apply their effects and damage on procs. This means critical strike and lifesteal have no effect (despite their visual effects), since they are based on the actual damage dealt. Cleave has no effect either (despite the visual effect), since Juggernaut's attack damage is 0 upon attacking.",
+        "Attack modifiers like Monkey King Bar, Diffusal Blade or Skull Basher still apply their effects and damage on procs.",
+        "This means critical strike and lifesteal have no effect (despite their visual effects), since they are based on the actual damage dealt.",
+        "Cleave has no effect either (despite the visual effect), since Juggernaut's attack damage is 0 upon attacking.",
+        "Deals 17\/22\/27\/32 (TagTalent 49\/54\/59\/64) damage in 0.2 second intervals, starting 0.2 seconds after cast, resulting in 25 damage instances.",
+        "Can deal up to 425\/550\/675\/800 (TagTalent 1225\/1350\/1475\/1600) damage to a single unit (before reductions).",
+        "With Aghanim's Shard, Juggernaut performs instant attacks on random enemies within the area, starting 0.2 seconds after cast, resulting in up to 5 attacks. The targets are chosen randomly, there are no priorities. Does not target buildings or wards. Unlike the regular attacks that can be performed during Blade Fury, these instant attacks deal 1 damage, instead of 0. These attacks do not have True Strike, but ignore disarms. Can trigger any attack modifier and on-hit effects normally.",
+        "The targets are chosen randomly, there are no priorities. Does not target buildings or wards.",
+        "Unlike the regular attacks that can be performed during Blade Fury, these instant attacks deal 1 damage, instead of 0.",
+        "These attacks do not have True Strike, but ignore disarms.",
+        "Can trigger any attack modifier and on-hit effects normally."
+      ],
+      "mana": "120\/110\/100\/90",
+      "hotKey": "Q",
+      "cooldown": "42\/34\/26\/18",
+      "description": "Causes a bladestorm of destructive force around Juggernaut, rendering him immune to magic and dealing damage to nearby enemy units.",
+      "spellName": "Blade Fury",
+      "params": [
+        "Cast Animation: 0+0",
+        "Radius: 260",
+        "Damage per Second: 85\/110\/135\/160 (TagTalent 245\/270\/295\/320)",
+        "Duration: 5",
+        "Move Speed Bonus: 100",
+        "Instant Attack Damage: 75%",
+        "Instant Attack Interval: 1",
+        "Increases movement speed during Blade Fury by and attacks a random nearby unit once per second dealing 1 damage."
+      ],
+      "itemBehaviour": [],
+      "legacyKey": "F",
+      "story": "Yurnero's renowned katana techniques are feared by warriors and sorcerers alike."
+    },
+    {
+      "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/8\/84\/Juggernaut_Healing_Ward.mp3\/revision\/latest?cb=20191216014542",
+      "effects": [
+        "Ability Target Area \/ Aura",
+        "Affects Allies"
+      ],
+      "notes": [
+        "After cast, the ward automatically follows Juggernaut, if no other order is given.",
+        "The heal is provided by an aura. Its healing buff lingers for 2.5 seconds.",
+        "Can regenerate up to 55%\/82.5%\/110%\/137.5% of a unit's max health over its full duration.",
+        "Can fully regenerate a unit's health within 50\/33.33\/25\/20 seconds.",
+        "The healing auras of multiple Healing Wards do not stack.",
+        "Does not affect wards, buildings, invulnerable or hidden units."
+      ],
+      "mana": "140",
+      "hotKey": "W",
+      "cooldown": "60 (TagTalent 40)",
+      "description": "Summons a Healing Ward which heals all nearby allied units, based on their max health. The Healing Ward moves at 350 movement speed after being summoned. Lasts 25 seconds.",
+      "spellName": "Healing Ward",
+      "params": [
+        "Cast Animation: 0.3+0.47",
+        "Cast Range: 350",
+        "Radius: 500",
+        "Max Health as Health Regen Bonus: 2%\/3%\/4%\/5%",
+        "Aura Linger Duration: 2.5",
+        "Duration: 25"
+      ],
+      "itemBehaviour": [],
+      "legacyKey": "G",
+      "story": "Of the rituals learned at the Isle of Masks, tending wounds with a bit of voodoo magic has proven to be quite useful."
+    },
+    {
+      "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/0\/09\/Juggernaut_Blade_Dance.mp3\/revision\/latest?cb=20191216014552",
+      "effects": [
+        "Ability Passive",
+        "Affects Enemies"
+      ],
+      "notes": [
+        "Increases attack damage by an average of 16%\/20%\/24%\/28%.",
+        "The proc chances of multiple crit sources stack. If two sources of critical strike proc at the same time, the higher multiplier has priority.",
+        "If two sources of critical strike proc at the same time, the higher multiplier has priority.",
+        "Blade Dance uses pseudo-random distribution.",
+        "The sound and particles play upon start of the attack, not when the attack lands."
+      ],
+      "mana": null,
+      "hotKey": "E",
+      "cooldown": null,
+      "description": "Gives Juggernaut a chance to deal critical damage on each attack.",
+      "spellName": "Blade Dance",
+      "params": [
+        "Proc Chance: 20%\/25%\/30%\/35%",
+        "Critical Damage: 180%",
+        "Red critical numbers are before illusion and armor reduction."
+      ],
+      "itemBehaviour": [],
+      "legacyKey": "C",
+      "story": "The last remnant of his heritage's commitment to bladework, Yurnero ensures that the style is remembered."
+    },
+    {
+      "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/c\/c5\/Juggernaut_Swiftslash.mp3\/revision\/latest?cb=20200419153429",
+      "effects": [
+        "Ability Target Unit",
+        "Affects Enemies \/ Self",
+        "Damage Instant Attack"
+      ],
+      "notes": [
+        "Requires Aghanim's Scepter to be unlocked. In Ability Draft, Swiftslash can be unlocked by the player that drafted Omnislash.",
+        "In Ability Draft, Swiftslash can be unlocked by the player that drafted Omnislash.",
+        "Does not require Omnislash to be leveled to be unlocked, once Aghanim's Scepter is acquired. However, it relies on Omnislash to work, since it directly uses its values. This means when Omnislash is not learned, Swiftslash does nothing on cast.",
+        "However, it relies on Omnislash to work, since it directly uses its values. This means when Omnislash is not learned, Swiftslash does nothing on cast.",
+        "All notes of Omnislash apply.",
+        "Swiftslash is distinguished by blue particles, as opposed to the orange particles of Omnislash."
+      ],
+      "mana": "100",
+      "hotKey": "D",
+      "cooldown": "20",
+      "description": "Performs a quick Omnislash.",
+      "spellName": "Swiftslash",
+      "params": [
+        "Cast Animation: 0.3+0",
+        "Cast Range: 600",
+        "Duration: 0.8",
+        "Only the very first slash of the cast is blocked."
+      ],
+      "itemBehaviour": [],
+      "legacyKey": "W",
+      "story": null
+    },
+    {
+      "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/a\/ab\/Juggernaut_Omnislash.mp3\/revision\/latest?cb=20191216014545",
+      "effects": [
+        "Ability Target Unit",
+        "Affects Enemies \/ Self",
+        "Damage Instant Attack"
+      ],
+      "notes": [
+        "Omnislash cannot be cast during Blade Fury.",
+        "Turns Juggernaut invulnerable and rooted for the whole duration, and applies a basic dispel on cast.",
+        "The slash interval equals Juggernaut's current attack rate, divided by 1.6. This means the maximum possible interval for Omnislash is 4.38 and the minimum is 0.13, considering minimum and maximum possible attack speeds. The interval is not set on cast. On each slash, the interval updates based on his current attack rate.",
+        "This means the maximum possible interval for Omnislash is 4.38 and the minimum is 0.13, considering minimum and maximum possible attack speeds.",
+        "The interval is not set on cast. On each slash, the interval updates based on his current attack rate.",
+        "Causes Juggernaut to perform instant attacks on enemies he slashes. These instant attacks are allowed to trigger attack modifiers normally. The instant attacks ignore disarms, but do not have True Strike.",
+        "These instant attacks are allowed to trigger attack modifiers normally.",
+        "The instant attacks ignore disarms, but do not have True Strike.",
+        "Can neither target nor jump on wards, couriers and buildings.",
+        "Can jump on invulnerable units, however, since Juggernaut attacks the targets, invulnerable (and ethereal) targets take no damage.",
+        "Cannot jump on units in the fog of war, invisible or hidden units, Tombstone Undying Zombie and on Astral Spirit.",
+        "If no valid targets can be found within range and within 0.15 seconds after the previous jump, Omnislash ends prematurely.",
+        "On each slash, Juggernaut is positioned at the opposite side of the target from Juggernaut's position, facing the target. The slash radius is centered around Juggernaut, not around the current target.",
+        "The slash radius is centered around Juggernaut, not around the current target.",
+        "Juggernaut can cast spells and use items during Omnislash. However, Blade Fury is inactive for the duration and cannot be cast. During Omnislash, Juggernaut does not need to turn in order to cast targeted spells or items.",
+        "During Omnislash, Juggernaut does not need to turn in order to cast targeted spells or items.",
+        "Provides 200 radius flying vision lasting 1 second on each slash around the current target.",
+        "Recasting Omnislash while the previous cast is still active cancels the previous cast and starts a new instance. This also applies when Swiftslash is cast during Omnislash, the former canceling the latter, and vice versa.",
+        "This also applies when Swiftslash is cast during Omnislash, the former canceling the latter, and vice versa.",
+        "Centers the player's camera perspective on Juggernaut on cast, following his position during Omnislash."
+      ],
+      "mana": "200\/275\/350",
+      "hotKey": "R",
+      "cooldown": "140",
+      "description": "Juggernaut leaps towards the target enemy units, and then slashes the target and other nearby enemy units at an increased attack rate. Juggernaut is invulnerable for the duration.",
+      "spellName": "Omnislash",
+      "params": [
+        "Cast Animation: 0.3+0",
+        "Cast Range: 350",
+        "Slash Radius: 425",
+        "Attack Rate Divisor: 1.6",
+        "Attack Damage Bonus: 30\/40\/50",
+        "Attack Speed Bonus: 40",
+        "Duration: 3\/3.25\/3.5 (TagTalent 4\/4.25\/4.5)",
+        "Grants a new ability: Swift Slash.",
+        "Only the very first slash of the cast is blocked."
+      ],
+      "itemBehaviour": [],
+      "legacyKey": "E",
+      "story": "\u2018The fruits of discipline; with practice comes strength.\u2019"
+    }
+  ],
+  "mainAttributes": {
+    "attrStrengthInc": 2.2,
+    "attrStrength": 20.0,
+    "attrIntelligence": 14.0,
+    "attrIntelligenceInc": 1.4,
+    "attrAgilityInc": 2.8,
+    "attrAgility": 34.0
+  },
+  "description": "Yurnero, the Juggernaut, is a melee agility hero whose abilities allow him to sprint into battle and recklessly devastate enemies in an impenetrable flurry of blades.",
+  "history": "No one has ever seen the face hidden beneath the mask of Yurnero the Juggernaut. It is only speculation that he even has one. For defying a corrupt lord, Yurnero was exiled from the ancient Isle of Masks--a punishment that saved his life. The isle soon after vanished beneath the waves in a night of vengeful magic. He alone remains to carry on the Isle's long Juggernaut tradition, one of ritual and swordplay. The last practitioner of the art, Yurnero's confidence and courage are the result of endless practice; his inventive bladework proves that he has never stopped challenging himself. Still, his motives are as unreadable as his expression. For a hero who has lost everything twice over, he fights as if victory is a foregone conclusion.",
+  "talents": [
+    {
+      "talentLvl": "25",
+      "talentLeft": "+1s Omnislash Duration",
+      "talentRight": "+475 Health"
+    },
+    {
+      "talentLvl": "20",
+      "talentLeft": "+160 Blade Fury DPS",
+      "talentRight": "+8 Armor"
+    },
+    {
+      "talentLvl": "15",
+      "talentLeft": "+20 Attack Speed",
+      "talentRight": "-20s Healing Ward Cooldown"
+    },
+    {
+      "talentLvl": "10",
+      "talentLeft": "+20 Movement Speed",
+      "talentRight": "+5 All Stats"
+    }
+  ]
+}

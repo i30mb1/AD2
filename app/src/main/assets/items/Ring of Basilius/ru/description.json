@@ -1,0 +1,43 @@
+{
+  "abilities": [
+    {
+      "audioUrl": null,
+      "effects": [
+        "Способность Аура",
+        "Действует на Союзников"
+      ],
+      "notes": [
+        "Восстанавливает до 84 маны в минуту.",
+        "Бафф ауры задерживается на 0,5 секунды.",
+        "Сочетается с Basilius Aura от Veil of Discord."
+      ],
+      "mana": null,
+      "abilityName": "Basilius Aura",
+      "cooldown": null,
+      "description": "Увеличивает восстановление маны союзников на 1,4.",
+      "params": [
+        "Радиус: 1200",
+        "Бонус к регенерации маны: 1,4",
+        "Длительность задержки ауры: 0,5"
+      ],
+      "itemBehaviour": [],
+      "story": null
+    }
+  ],
+  "cost": "425",
+  "lore": null,
+  "consistFrom": [
+    "Sage's Mask",
+    "Recipe"
+  ],
+  "boughtFrom": "Поддержка",
+  "name": "Ring of Basilius",
+  "description": "Кольцо, служившее наградой величайшим магам.",
+  "trivia": null,
+  "upgradeIn": [
+    "Veil of Discord",
+    "Vladmir's Offering"
+  ],
+  "bonuses": null,
+  "tips": null
+}

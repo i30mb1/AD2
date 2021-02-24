@@ -1,0 +1,47 @@
+{
+  "abilities": [
+    {
+      "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/1\/18\/Daedalus_Critical_Strike.mp3\/revision\/latest?cb=20191227195407",
+      "effects": [
+        "Ability Passive",
+        "Affects Enemies"
+      ],
+      "notes": [
+        "Increases attack damage by an average of 37.5%.",
+        "The proc chances of multiple crit sources stack. If two sources of critical strike proc at the same time, the higher multiplier has priority.",
+        "If two sources of critical strike proc at the same time, the higher multiplier has priority.",
+        "Critical Strike uses pseudo-random distribution.",
+        "Does not work against wards, buildings, and allied units."
+      ],
+      "mana": null,
+      "abilityName": "Critical Strike",
+      "cooldown": null,
+      "description": "Grants each attack a 30% chance to deal 225% damage.",
+      "params": [
+        "Proc Chance: 30%",
+        "Critical Damage: 225%"
+      ],
+      "itemBehaviour": [],
+      "story": null
+    }
+  ],
+  "cost": "5150",
+  "lore": null,
+  "consistFrom": [
+    "Crystalys",
+    "Demon Edge",
+    "Recipe"
+  ],
+  "boughtFrom": "Weapons",
+  "name": "Daedalus",
+  "description": "A weapon of incredible power that is difficult for even the strongest of warriors to control.",
+  "trivia": [
+    "In the original DotA, this item was called the \"Buriza-Do Kyanon\", a reference to a weapon (unique ballista) in Diablo II. \"Buriza-do Kyanon\" is the romaji transliteration of \"Blizzard Cannon\" when written in Japanese katakana.",
+    "Daedalus is the Latin transcription of the Greek \"Daidalos\" which means \"clever worker\" in Ancient Greek and Daedalus is also one of the characters in Ovid's \"Metamorphoses\" who was a skillful craftsman artisan, and the father of Icarus."
+  ],
+  "upgradeIn": null,
+  "bonuses": [
+    "+88 Attack damage"
+  ],
+  "tips": null
+}

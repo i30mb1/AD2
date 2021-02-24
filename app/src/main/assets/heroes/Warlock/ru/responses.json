@@ -1,0 +1,1169 @@
+[
+  {
+    "responses": [
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/c\/c9\/Vo_warlock_warl_spawn_01.mp3\/revision\/latest?cb=20201022222512",
+        "title": "Warlock!"
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/1\/17\/Vo_warlock_warl_spawn_02.mp3\/revision\/latest?cb=20201022222514",
+        "title": "You summon the Summoner?"
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/6\/6b\/Vo_warlock_warl_spawn_03.mp3\/revision\/latest?cb=20201022222516",
+        "title": "A new chapter in my Black Grimoire."
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/d\/de\/Vo_warlock_warl_spawn_04.mp3\/revision\/latest?cb=20201022222517",
+        "title": "I come and I command."
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/9\/94\/Vo_warlock_warl_move_10.mp3\/revision\/latest?cb=20201022222259",
+        "title": "By the power of Gorroth."
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/a\/a8\/Vo_warlock_warl_move_12.mp3\/revision\/latest?cb=20201022222305",
+        "title": "Summoned forth."
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/2\/29\/Vo_warlock_warl_incant_02.mp3\/revision\/latest?cb=20201022221922",
+        "title": "Zan karabos!"
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/1\/1f\/Vo_warlock_warl_incant_03.mp3\/revision\/latest?cb=20201022221925",
+        "title": "Kor karamord!"
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/c\/ca\/Vo_warlock_warl_incant_04.mp3\/revision\/latest?cb=20201022221927",
+        "title": "Kar kor!"
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/0\/0d\/Vo_warlock_warl_incant_06.mp3\/revision\/latest?cb=20201022221933",
+        "title": "Kor!"
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/6\/6e\/Vo_warlock_warl_incant_07.mp3\/revision\/latest?cb=20201022221936",
+        "title": "Morakan!"
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/3\/33\/Vo_warlock_warl_incant_08.mp3\/revision\/latest?cb=20201022221939",
+        "title": "Mordakar!"
+      }
+    ],
+    "category": "Снаряжение"
+  },
+  {
+    "responses": [
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/c\/c9\/Vo_warlock_warl_spawn_01.mp3\/revision\/latest?cb=20201022222512",
+        "title": "Warlock!"
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/f\/f6\/Vo_warlock_warl_anger_04.mp3\/revision\/latest?cb=20201022221613",
+        "title": "Huuh."
+      }
+    ],
+    "category": "Стадия планирования"
+  },
+  {
+    "responses": [
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/c\/c9\/Vo_warlock_warl_spawn_01.mp3\/revision\/latest?cb=20201022222512",
+        "title": "Warlock!"
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/1\/17\/Vo_warlock_warl_spawn_02.mp3\/revision\/latest?cb=20201022222514",
+        "title": "You summon the Summoner?"
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/6\/6b\/Vo_warlock_warl_spawn_03.mp3\/revision\/latest?cb=20201022222516",
+        "title": "A new chapter in my Black Grimoire."
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/d\/de\/Vo_warlock_warl_spawn_04.mp3\/revision\/latest?cb=20201022222517",
+        "title": "I come and I command."
+      }
+    ],
+    "category": "Вход в битву"
+  },
+  {
+    "responses": [
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/f\/f1\/Vo_warlock_warl_inthebag_01.mp3\/revision\/latest?cb=20201022222024",
+        "title": "My friends, I'm calling it: It's in the bag!"
+      }
+    ],
+    "category": "Насмешка"
+  },
+  {
+    "responses": [
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/8\/80\/Vo_warlock_warl_cast_01.mp3\/revision\/latest?cb=20201022221654",
+        "title": "Darkness stalks."
+      }
+    ],
+    "category": "Начало битвы"
+  },
+  {
+    "responses": [
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/9\/96\/Vo_warlock_warl_move_01.mp3\/revision\/latest?cb=20201022222234",
+        "title": "I go."
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/7\/76\/Vo_warlock_warl_move_02.mp3\/revision\/latest?cb=20201022222236",
+        "title": "Oh yes."
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/e\/e9\/Vo_warlock_warl_move_03.mp3\/revision\/latest?cb=20201022222239",
+        "title": "Indubitably."
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/3\/30\/Vo_warlock_warl_move_04.mp3\/revision\/latest?cb=20201022222242",
+        "title": "Mm hm."
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/e\/ed\/Vo_warlock_warl_move_05.mp3\/revision\/latest?cb=20201022222245",
+        "isArcane": true,
+        "title": "Mm hm."
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/e\/eb\/Vo_warlock_warl_move_06.mp3\/revision\/latest?cb=20201022222247",
+        "title": "Indeed."
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/4\/47\/Vo_warlock_warl_move_07.mp3\/revision\/latest?cb=20201022222250",
+        "isArcane": true,
+        "title": "Indeed."
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/8\/83\/Vo_warlock_warl_move_08.mp3\/revision\/latest?cb=20201022222253",
+        "title": "I command it."
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/c\/c7\/Vo_warlock_warl_move_09.mp3\/revision\/latest?cb=20201022222256",
+        "title": "Avowed."
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/9\/94\/Vo_warlock_warl_move_10.mp3\/revision\/latest?cb=20201022222259",
+        "title": "By the power of Gorroth."
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/3\/3f\/Vo_warlock_warl_move_11.mp3\/revision\/latest?cb=20201022222302",
+        "title": "Hear my word."
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/a\/a8\/Vo_warlock_warl_move_12.mp3\/revision\/latest?cb=20201022222305",
+        "title": "Summoned forth."
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/7\/70\/Vo_warlock_warl_move_13.mp3\/revision\/latest?cb=20201022222308",
+        "title": "Fear me."
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/6\/6a\/Vo_warlock_warl_move_14.mp3\/revision\/latest?cb=20201022222311",
+        "title": "At my command."
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/e\/e1\/Vo_warlock_warl_incant_01.mp3\/revision\/latest?cb=20201022221919",
+        "title": "Sha sha karakas!"
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/2\/29\/Vo_warlock_warl_incant_02.mp3\/revision\/latest?cb=20201022221922",
+        "title": "Zan karabos!"
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/1\/1f\/Vo_warlock_warl_incant_03.mp3\/revision\/latest?cb=20201022221925",
+        "title": "Kor karamord!"
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/c\/ca\/Vo_warlock_warl_incant_04.mp3\/revision\/latest?cb=20201022221927",
+        "title": "Kar kor!"
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/1\/19\/Vo_warlock_warl_incant_05.mp3\/revision\/latest?cb=20201022221930",
+        "title": "Zan!"
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/0\/0d\/Vo_warlock_warl_incant_06.mp3\/revision\/latest?cb=20201022221933",
+        "title": "Kor!"
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/6\/6e\/Vo_warlock_warl_incant_07.mp3\/revision\/latest?cb=20201022221936",
+        "title": "Morakan!"
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/3\/33\/Vo_warlock_warl_incant_08.mp3\/revision\/latest?cb=20201022221939",
+        "title": "Mordakar!"
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/5\/5e\/Vo_warlock_warl_incant_09.mp3\/revision\/latest?cb=20201022221941",
+        "title": "Mardakaramon!"
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/a\/af\/Vo_warlock_warl_incant_10.mp3\/revision\/latest?cb=20201022221944",
+        "title": "Karabos karakas!"
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/4\/4c\/Vo_warlock_warl_incant_11.mp3\/revision\/latest?cb=20201022221946",
+        "title": "So sah zan!"
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/c\/cc\/Vo_warlock_warl_incant_12.mp3\/revision\/latest?cb=20201022221949",
+        "title": "Woa!"
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/f\/fa\/Vo_warlock_warl_incant_13.mp3\/revision\/latest?cb=20201022221952",
+        "title": "Mor tor cheea!"
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/e\/eb\/Vo_warlock_warl_incant_14.mp3\/revision\/latest?cb=20201022221955",
+        "title": "Ha ka mor dor cheea!"
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/1\/10\/Vo_warlock_warl_incant_15.mp3\/revision\/latest?cb=20201022221958",
+        "title": "Ka ra ka!"
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/5\/56\/Vo_warlock_warl_incant_16.mp3\/revision\/latest?cb=20201022222000",
+        "title": "Ko!"
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/5\/5b\/Vo_warlock_warl_incant_17.mp3\/revision\/latest?cb=20201022222003",
+        "title": "Sha sha karakas shon!"
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/8\/85\/Vo_warlock_warl_incant_18.mp3\/revision\/latest?cb=20201022222006",
+        "title": "Zan korobos kor koramord!"
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/2\/2b\/Vo_warlock_warl_incant_19.mp3\/revision\/latest?cb=20201022222008",
+        "title": "Kar korzon!"
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/2\/2c\/Vo_warlock_warl_incant_20.mp3\/revision\/latest?cb=20201022222010",
+        "title": "Kor mordakar!"
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/9\/91\/Vo_warlock_warl_incant_21.mp3\/revision\/latest?cb=20201022222012",
+        "title": "Guah nakor!"
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/b\/b3\/Vo_warlock_warl_incant_22.mp3\/revision\/latest?cb=20201022222014",
+        "title": "Mordaka!"
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/1\/1a\/Vo_warlock_warl_incant_23.mp3\/revision\/latest?cb=20201022222016",
+        "title": "Karaka zan!"
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/9\/97\/Vo_warlock_warl_incant_24.mp3\/revision\/latest?cb=20201022222019",
+        "title": "Sha sha!"
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/3\/37\/Vo_warlock_warl_incant_25.mp3\/revision\/latest?cb=20201022222021",
+        "title": "Karabos kor koramond!"
+      }
+    ],
+    "category": "Передвижение"
+  },
+  {
+    "responses": [
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/b\/bb\/Vo_warlock_warl_attack_01.mp3\/revision\/latest?cb=20201022221617",
+        "title": "Attack!"
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/2\/20\/Vo_warlock_warl_attack_02.mp3\/revision\/latest?cb=20201022221620",
+        "title": "Gather, darkness!"
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/a\/ad\/Vo_warlock_warl_attack_03.mp3\/revision\/latest?cb=20201022221623",
+        "title": "Chaos crush you!"
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/a\/a3\/Vo_warlock_warl_attack_04.mp3\/revision\/latest?cb=20201022221625",
+        "title": "By my demon staff!"
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/a\/a2\/Vo_warlock_warl_attack_05.mp3\/revision\/latest?cb=20201022221627",
+        "title": "Fiends take you!"
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/d\/db\/Vo_warlock_warl_attack_06.mp3\/revision\/latest?cb=20201022221630",
+        "title": "From the shadows."
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/4\/41\/Vo_warlock_warl_attack_07.mp3\/revision\/latest?cb=20201022221632",
+        "title": "Your soul to crush."
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/9\/92\/Vo_warlock_warl_attack_08.mp3\/revision\/latest?cb=20201022221635",
+        "title": "Sworn of shadows."
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/d\/d0\/Vo_warlock_warl_attack_09.mp3\/revision\/latest?cb=20201022221637",
+        "title": "Dark litany."
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/5\/5f\/Vo_warlock_warl_attack_10.mp3\/revision\/latest?cb=20201022221640",
+        "title": "Astride the night!"
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/3\/3d\/Vo_warlock_warl_attack_11.mp3\/revision\/latest?cb=20201022221643",
+        "title": "Pitched battle!"
+      }
+    ],
+    "category": "Атака"
+  },
+  {
+    "responses": [
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/1\/13\/Vo_warlock_warl_cast_02.mp3\/revision\/latest?cb=20201022221657",
+        "title": "My flame lights your trail."
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/d\/d1\/Vo_warlock_warl_cast_03.mp3\/revision\/latest?cb=20201022221659",
+        "title": "Prepare yourself."
+      }
+    ],
+    "category": "Использование заклинания"
+  },
+  {
+    "responses": [
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/1\/19\/Vo_warlock_warl_ability_upheav_01.mp3\/revision\/latest?cb=20201022221557",
+        "title": "Unhallowed ground."
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/7\/78\/Vo_warlock_warl_ability_upheav_02.mp3\/revision\/latest?cb=20201022221559",
+        "title": "Encircling dark."
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/e\/ef\/Vo_warlock_warl_ability_upheav_03.mp3\/revision\/latest?cb=20201022221602",
+        "title": "The gyre of evil takes you."
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/0\/06\/Vo_warlock_warl_ability_upheav_04.mp3\/revision\/latest?cb=20201022221604",
+        "title": "Darkness heals you."
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/3\/3b\/Vo_warlock_warl_ability_reign_02.mp3\/revision\/latest?cb=20201022222535",
+        "title": "Arise!"
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/4\/4b\/Vo_warlock_warl_ability_reign_03.mp3\/revision\/latest?cb=20201022222536",
+        "title": "Chaos comes at my command!"
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/0\/03\/Vo_warlock_warl_ability_reign_04.mp3\/revision\/latest?cb=20201022222538",
+        "title": "I command you: Go forth!"
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/e\/ec\/Vo_warlock_warl_ability_reign_05.mp3\/revision\/latest?cb=20201022221552",
+        "title": "Chaos minion!"
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/e\/e7\/Vo_warlock_warl_ability_reign_06.mp3\/revision\/latest?cb=20201022221554",
+        "title": "Chaos, come!"
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/a\/a9\/Vo_warlock_warl_ability_reign_01.mp3\/revision\/latest?cb=20201022222532",
+        "title": "Best Fiends Forever!"
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/c\/c6\/Vo_warlock_warl_doubdemon_01.mp3\/revision\/latest?cb=20201022221826",
+        "title": "Double demon."
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/2\/2e\/Vo_warlock_warl_doubdemon_02.mp3\/revision\/latest?cb=20201022221829",
+        "title": "Double demon doubled!"
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/c\/c2\/Vo_warlock_warl_doubdemon_03.mp3\/revision\/latest?cb=20201022221832",
+        "title": "Double double demon!"
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/b\/bd\/Vo_warlock_warl_doubdemon_04.mp3\/revision\/latest?cb=20201022221835",
+        "title": "Double double demon doublified!"
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/6\/6f\/Vo_warlock_warl_doubdemon_05.mp3\/revision\/latest?cb=20201022221837",
+        "title": "Can you believe this?"
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/e\/e4\/Vo_warlock_warl_doubdemon_06.mp3\/revision\/latest?cb=20201022221840",
+        "title": "Can you believe this? Ah ha ha ha ha ha ha ha ha ha!"
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/9\/92\/Vo_warlock_warl_doubdemon_07.mp3\/revision\/latest?cb=20201022221843",
+        "title": "Have you ever seen this many demons?"
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/d\/d1\/Vo_warlock_warl_defusal_01.mp3\/revision\/latest?cb=20201022221736",
+        "title": "Damnable Diffusal Blade!"
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/1\/1b\/Vo_warlock_warl_defusal_02.mp3\/revision\/latest?cb=20201022221739",
+        "title": "You defused my demon!"
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/e\/e8\/Vo_warlock_warl_defusal_03.mp3\/revision\/latest?cb=20201022221742",
+        "title": "Curse that blade!"
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/d\/df\/Vo_warlock_warl_defusal_04.mp3\/revision\/latest?cb=20201022221744",
+        "title": "Really? You just did that?"
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/c\/ca\/Vo_warlock_warl_defusal_05.mp3\/revision\/latest?cb=20201022221747",
+        "title": "Curse that blade!"
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/8\/89\/Vo_warlock_warl_happy_02.mp3\/revision\/latest?cb=20201022221851",
+        "title": "Hm."
+      }
+    ],
+    "category": "Способности"
+  },
+  {
+    "responses": [
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/5\/5a\/Vo_warlock_warl_level_01.mp3\/revision\/latest?cb=20201022222153",
+        "title": "The coals brighten."
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/8\/86\/Vo_warlock_warl_level_02.mp3\/revision\/latest?cb=20201022222157",
+        "title": "The smoke thickens."
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/7\/7c\/Vo_warlock_warl_level_03.mp3\/revision\/latest?cb=20201022222200",
+        "title": "Power pour into me."
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/4\/46\/Vo_warlock_warl_level_04.mp3\/revision\/latest?cb=20201022222203",
+        "title": "Fiends, hear my voice: Ha ha ha ha ha ha ha ha ha!"
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/5\/59\/Vo_warlock_warl_level_08.mp3\/revision\/latest?cb=20201022222215",
+        "title": "New words of power!"
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/0\/07\/Vo_warlock_warl_level_09.mp3\/revision\/latest?cb=20201022222218",
+        "title": "My brazier smoulders!"
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/9\/91\/Vo_warlock_warl_level_10.mp3\/revision\/latest?cb=20201022222222",
+        "title": "More pages for my Black Grimoire!"
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/d\/d7\/Vo_warlock_warl_laugh_01.mp3\/revision\/latest?cb=20201022222137",
+        "title": "Ha ha ha ha ha ha."
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/5\/5c\/Vo_warlock_warl_laugh_02.mp3\/revision\/latest?cb=20201022222139",
+        "title": "Ho ho ho ho ho ho ho ho."
+      }
+    ],
+    "category": "Получение уровня"
+  },
+  {
+    "responses": [
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/1\/1e\/Vo_warlock_warl_level_05.mp3\/revision\/latest?cb=20201022222206",
+        "title": "Mwa ha ha ha ha ha ha ha ha ha ha ha!"
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/b\/b7\/Vo_warlock_warl_level_06.mp3\/revision\/latest?cb=20201022222209",
+        "title": "Ha ha ha ha ha ha ha ha ha ha ha ha!"
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/c\/c2\/Vo_warlock_warl_level_07.mp3\/revision\/latest?cb=20201022222212",
+        "isArcane": true,
+        "title": "Ha ha ha ha ha ha ha ha ha ha ha ha!"
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/f\/f0\/Vo_warlock_warl_kill_01.mp3\/revision\/latest?cb=20201022222032",
+        "title": "Ashes into ashes."
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/9\/9f\/Vo_warlock_warl_kill_02.mp3\/revision\/latest?cb=20201022222035",
+        "title": "Smoked."
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/9\/9d\/Vo_warlock_warl_kill_03.mp3\/revision\/latest?cb=20201022222038",
+        "title": "Burnt offerings."
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/7\/7a\/Vo_warlock_warl_kill_04.mp3\/revision\/latest?cb=20201022222041",
+        "title": "To the Darkest Vale with you."
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/c\/c3\/Vo_warlock_warl_kill_05.mp3\/revision\/latest?cb=20201022222044",
+        "title": "I feed you to my fiends."
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/9\/99\/Vo_warlock_warl_kill_06.mp3\/revision\/latest?cb=20201022222047",
+        "title": "Consort with shadows."
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/4\/49\/Vo_warlock_warl_kill_07.mp3\/revision\/latest?cb=20201022222050",
+        "title": "Another name in my grimoire."
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/e\/e3\/Vo_warlock_warl_kill_08.mp3\/revision\/latest?cb=20201022222053",
+        "title": "Go feed my demon spawn."
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/b\/b2\/Vo_warlock_warl_kill_09.mp3\/revision\/latest?cb=20201022222056",
+        "title": "You're but a blot in the Black Grimoire."
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/b\/b6\/Vo_warlock_warl_kill_10.mp3\/revision\/latest?cb=20201022222058",
+        "title": "You're fiend-food now."
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/d\/df\/Vo_warlock_warl_kill_11.mp3\/revision\/latest?cb=20201022222102",
+        "title": "You're of no account in my ledger."
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/c\/c0\/Vo_warlock_warl_kill_12.mp3\/revision\/latest?cb=20201022222106",
+        "title": "Ah ha ha ha ha ha ha ha ha ha!"
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/b\/b3\/Vo_warlock_warl_kill_13.mp3\/revision\/latest?cb=20201022222109",
+        "title": "Ah ha ha ha ha ha ha ha ha!"
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/a\/af\/Vo_warlock_warl_kill_14.mp3\/revision\/latest?cb=20201022222112",
+        "isArcane": true,
+        "title": "Ah ha ha ha ha ha ha ha ha!"
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/3\/3c\/Vo_warlock_warl_laugh_04.mp3\/revision\/latest?cb=20201022222144",
+        "title": "Ho ho ha ha ha ha ha ha ha ha ha!"
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/7\/7f\/Vo_warlock_warl_laugh_05.mp3\/revision\/latest?cb=20201022222147",
+        "title": "Ho ho ho ha ha ha ha ha!"
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/e\/e7\/Vo_warlock_warl_laugh_06.mp3\/revision\/latest?cb=20201022222150",
+        "title": "Ho ha ha ha ha ha ha ha ha!"
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/f\/f1\/Vo_warlock_warl_firstblood_01.mp3\/revision\/latest?cb=20201022221846",
+        "title": "First Blood. Ha ha ha ha ha ha ha ha ha ha."
+      }
+    ],
+    "category": "Убийство врага"
+  },
+  {
+    "responses": [
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/a\/a2\/Vo_warlock_warl_lasthit_01.mp3\/revision\/latest?cb=20201022222115",
+        "title": "Under pain of death."
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/3\/3f\/Vo_warlock_warl_lasthit_02.mp3\/revision\/latest?cb=20201022222118",
+        "title": "Pipsqueak."
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/0\/04\/Vo_warlock_warl_lasthit_03.mp3\/revision\/latest?cb=20201022222121",
+        "title": "Cry havoc."
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/9\/97\/Vo_warlock_warl_lasthit_04.mp3\/revision\/latest?cb=20201022222124",
+        "title": "My dominion."
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/e\/ec\/Vo_warlock_warl_lasthit_05.mp3\/revision\/latest?cb=20201022222128",
+        "title": "Wretch."
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/e\/ef\/Vo_warlock_warl_lasthit_06.mp3\/revision\/latest?cb=20201022222130",
+        "title": "Mine."
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/b\/ba\/Vo_warlock_warl_lasthit_07.mp3\/revision\/latest?cb=20201022222134",
+        "title": "Minion."
+      }
+    ],
+    "category": "Добивание"
+  },
+  {
+    "responses": [
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/8\/8e\/Vo_warlock_warl_deny_01.mp3\/revision\/latest?cb=20201022221750",
+        "title": "Denied."
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/3\/39\/Vo_warlock_warl_deny_02.mp3\/revision\/latest?cb=20201022221753",
+        "isArcane": true,
+        "title": "Denied."
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/5\/5a\/Vo_warlock_warl_deny_03.mp3\/revision\/latest?cb=20201022221755",
+        "title": "You shall not."
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/2\/21\/Vo_warlock_warl_deny_04.mp3\/revision\/latest?cb=20201022221758",
+        "title": "Defied."
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/a\/a6\/Vo_warlock_warl_deny_05.mp3\/revision\/latest?cb=20201022221800",
+        "title": "No."
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/2\/21\/Vo_warlock_warl_deny_06.mp3\/revision\/latest?cb=20201022221803",
+        "isArcane": true,
+        "title": "No."
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/e\/e7\/Vo_warlock_warl_deny_07.mp3\/revision\/latest?cb=20201022221806",
+        "title": "You'll receive no gold."
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/0\/02\/Vo_warlock_warl_deny_08.mp3\/revision\/latest?cb=20201022221809",
+        "title": "Mm mm."
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/0\/09\/Vo_warlock_warl_deny_09.mp3\/revision\/latest?cb=20201022221811",
+        "title": "Hm hm hm hm hm."
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/5\/56\/Vo_warlock_warl_deny_10.mp3\/revision\/latest?cb=20201022221814",
+        "title": "Hm ha ha ha ha ha ha ha ha ha!"
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/d\/d9\/Vo_warlock_warl_deny_11.mp3\/revision\/latest?cb=20201022221816",
+        "title": "Ho ha ha ha ha ha ha!"
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/e\/e7\/Vo_warlock_warl_deny_12.mp3\/revision\/latest?cb=20201022221818",
+        "title": "Hm hm hm hm!"
+      }
+    ],
+    "category": "Добивание союзного юнита"
+  },
+  {
+    "responses": [
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/9\/95\/Vo_warlock_warl_purch_01.mp3\/revision\/latest?cb=20201022222424",
+        "title": "I have waited long and long."
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/a\/a4\/Vo_warlock_warl_purch_02.mp3\/revision\/latest?cb=20201022222426",
+        "title": "Worth the price."
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/4\/4b\/Vo_warlock_warl_purch_03.mp3\/revision\/latest?cb=20201022222428",
+        "title": "Now my enemies pay."
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/7\/71\/Vo_warlock_warl_refresh_01.mp3\/revision\/latest?cb=20201022222443",
+        "title": "Ah, refresher.",
+        "icons": [
+          "items\/Refresher Orb\/full.png"
+        ]
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/5\/55\/Vo_warlock_warl_rapier_01.mp3\/revision\/latest?cb=20201022222429",
+        "title": "Divine Rapier!",
+        "icons": [
+          "items\/Divine Rapier\/full.png"
+        ]
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/3\/3c\/Vo_warlock_warl_rapier_02.mp3\/revision\/latest?cb=20201022222431",
+        "title": "Divine Rapier?",
+        "icons": [
+          "items\/Divine Rapier\/full.png"
+        ]
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/f\/f4\/Vo_warlock_warl_rapier_03.mp3\/revision\/latest?cb=20201022222433",
+        "title": "Sssss\u2026Divine Rapier?",
+        "icons": [
+          "items\/Divine Rapier\/full.png"
+        ]
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/b\/bc\/Vo_warlock_warl_rapier_04.mp3\/revision\/latest?cb=20201022222435",
+        "title": "Rapier? Really?",
+        "icons": [
+          "items\/Divine Rapier\/full.png"
+        ]
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/f\/f9\/Vo_warlock_warl_scepter_01.mp3\/revision\/latest?cb=20201022222507",
+        "title": "Ah, scepter!",
+        "icons": [
+          "items\/Aghanim's Scepter\/full.png"
+        ]
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/1\/16\/Vo_warlock_warl_scepter_02.mp3\/revision\/latest?cb=20201022222509",
+        "title": "Noble scepter!",
+        "icons": [
+          "items\/Aghanim's Scepter\/full.png"
+        ]
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/8\/86\/Vo_warlock_warl_immort_01.mp3\/revision\/latest?cb=20201022221913",
+        "title": "Immortality!",
+        "icons": [
+          "heroes\/Aegis of the Immortal\/minimap.png"
+        ]
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/b\/be\/Vo_warlock_warl_immort_02.mp3\/revision\/latest?cb=20201022221916",
+        "title": "Like my grimoire, I will live forever.",
+        "icons": [
+          "heroes\/Aegis of the Immortal\/minimap.png"
+        ]
+      }
+    ],
+    "category": "Получение предмета"
+  },
+  {
+    "responses": [
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/a\/a9\/Vo_warlock_warl_death_01.mp3\/revision\/latest?cb=20201022221705",
+        "title": "Nooooo!"
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/a\/a9\/Vo_warlock_warl_death_02.mp3\/revision\/latest?cb=20201022221707",
+        "title": "My fiends will avenge me!"
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/9\/97\/Vo_warlock_warl_death_03.mp3\/revision\/latest?cb=20201022221709",
+        "title": "The word\u2026is silence."
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/b\/b7\/Vo_warlock_warl_death_04.mp3\/revision\/latest?cb=20201022221712",
+        "title": "All in ashes\u2026"
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/4\/4c\/Vo_warlock_warl_death_05.mp3\/revision\/latest?cb=20201022221715",
+        "title": "Spawn of shadows\u2026"
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/7\/71\/Vo_warlock_warl_death_06.mp3\/revision\/latest?cb=20201022221717",
+        "title": "Embers\u2026going\u2026dark\u2026"
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/b\/be\/Vo_warlock_warl_death_07.mp3\/revision\/latest?cb=20201022221720",
+        "title": "My ashes grow cold."
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/c\/cd\/Vo_warlock_warl_death_08.mp3\/revision\/latest?cb=20201022221723",
+        "title": "My words of power go unheard."
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/1\/1d\/Vo_warlock_warl_death_09.mp3\/revision\/latest?cb=20201022221725",
+        "title": "You've torn a page from my grimoire\u2026"
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/9\/9d\/Vo_warlock_warl_death_10.mp3\/revision\/latest?cb=20201022221728",
+        "title": "My fiends will bring me back."
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/e\/e7\/Vo_warlock_warl_death_12.mp3\/revision\/latest?cb=20201022221734",
+        "title": "Shadows encircle you\u2026"
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/5\/5f\/Vo_warlock_warl_death_11.mp3\/revision\/latest?cb=20201022221731",
+        "title": "Just for that, I'm unfiending you."
+      }
+    ],
+    "category": "Смерть"
+  },
+  {
+    "responses": [
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/7\/70\/Vo_warlock_warl_respawn_01.mp3\/revision\/latest?cb=20201022222448",
+        "title": "Death has no command over me."
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/d\/d9\/Vo_warlock_warl_respawn_02.mp3\/revision\/latest?cb=20201022222450",
+        "title": "Prepare yourselves."
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/2\/2b\/Vo_warlock_warl_respawn_03.mp3\/revision\/latest?cb=20201022222451",
+        "title": "I step from the shadows."
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/9\/9c\/Vo_warlock_warl_respawn_04.mp3\/revision\/latest?cb=20201022222453",
+        "title": "The shadow passes."
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/4\/45\/Vo_warlock_warl_respawn_05.mp3\/revision\/latest?cb=20201022222455",
+        "title": "A new page in my Book of Shadows."
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/2\/26\/Vo_warlock_warl_respawn_06.mp3\/revision\/latest?cb=20201022222457",
+        "title": "A new fire from the embers."
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/1\/18\/Vo_warlock_warl_respawn_07.mp3\/revision\/latest?cb=20201022222458",
+        "title": "Dark interval."
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/5\/51\/Vo_warlock_warl_respawn_08.mp3\/revision\/latest?cb=20201022222500",
+        "title": "Twill be night for all soon enough."
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/e\/e8\/Vo_warlock_warl_respawn_09.mp3\/revision\/latest?cb=20201022222502",
+        "title": "The fiends will welcome me."
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/4\/4a\/Vo_warlock_warl_respawn_10.mp3\/revision\/latest?cb=20201022222503",
+        "title": "My grimoire opens again to a new page."
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/8\/81\/Vo_warlock_warl_respawn_11.mp3\/revision\/latest?cb=20201022222505",
+        "title": "Bloodied but unbowed."
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/e\/ee\/Vo_warlock_warl_laugh_03.mp3\/revision\/latest?cb=20201022222141",
+        "title": "Ha ha ha ha ha ha ha ha!"
+      }
+    ],
+    "category": "Возрождение"
+  },
+  {
+    "responses": [
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/4\/44\/Vo_warlock_warl_bottle_01.mp3\/revision\/latest?cb=20201022221646",
+        "title": "Saved for later."
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/2\/2d\/Vo_warlock_warl_bottle_02.mp3\/revision\/latest?cb=20201022221648",
+        "title": "Behind the spirit glass."
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/e\/e6\/Vo_warlock_warl_bottle_03.mp3\/revision\/latest?cb=20201022221651",
+        "title": "Into the bottle."
+      }
+    ],
+    "category": "Наполнение бутылки"
+  },
+  {
+    "responses": [
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/6\/65\/Vo_warlock_warl_ability_reign_07.mp3\/revision\/latest?cb=20201022221555",
+        "title": "Let chaos reign!"
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/e\/ef\/Vo_warlock_warl_lasthit_06.mp3\/revision\/latest?cb=20201022222130",
+        "title": "Mine."
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/0\/02\/Vo_warlock_warl_doubdam_01.mp3\/revision\/latest?cb=20201022221821",
+        "title": "Double damage!"
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/5\/58\/Vo_warlock_warl_doubdam_02.mp3\/revision\/latest?cb=20201022221824",
+        "title": "Double meaning."
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/2\/2d\/Vo_warlock_warl_haste_01.mp3\/revision\/latest?cb=20201022221902",
+        "title": "Haste!"
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/7\/73\/Vo_warlock_warl_haste_02.mp3\/revision\/latest?cb=20201022221905",
+        "title": "Swift as the runes are written."
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/3\/34\/Vo_warlock_warl_illus_01.mp3\/revision\/latest?cb=20201022221907",
+        "title": "Illusion!"
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/1\/18\/Vo_warlock_warl_illus_02.mp3\/revision\/latest?cb=20201022221910",
+        "title": "Written in triplicate."
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/6\/64\/Vo_warlock_warl_invis_01.mp3\/revision\/latest?cb=20201022222027",
+        "title": "Invisibility!"
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/4\/41\/Vo_warlock_warl_invis_02.mp3\/revision\/latest?cb=20201022222029",
+        "title": "Written with invisible ink."
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/0\/0c\/Vo_warlock_warl_regen_01.mp3\/revision\/latest?cb=20201022222444",
+        "title": "Regeneration!"
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/0\/0d\/Vo_warlock_warl_regen_02.mp3\/revision\/latest?cb=20201022222446",
+        "title": "Make do and mend."
+      }
+    ],
+    "category": "Активация рун"
+  },
+  {
+    "responses": [
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/c\/c7\/Vo_warlock_warl_notyet_01.mp3\/revision\/latest?cb=20201022222341",
+        "title": "Not yet."
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/3\/31\/Vo_warlock_warl_notyet_02.mp3\/revision\/latest?cb=20201022222345",
+        "title": "I'm not ready."
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/4\/4f\/Vo_warlock_warl_notyet_03.mp3\/revision\/latest?cb=20201022222348",
+        "title": "It's not time yet."
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/7\/79\/Vo_warlock_warl_notyet_04.mp3\/revision\/latest?cb=20201022222350",
+        "title": "Not yet."
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/3\/31\/Vo_warlock_warl_notyet_05.mp3\/revision\/latest?cb=20201022222354",
+        "title": "I'm not ready."
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/f\/f0\/Vo_warlock_warl_notyet_06.mp3\/revision\/latest?cb=20201022222357",
+        "title": "It's not time yet."
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/c\/c6\/Vo_warlock_warl_notyet_07.mp3\/revision\/latest?cb=20201022222400",
+        "title": "Not yet."
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/8\/88\/Vo_warlock_warl_notyet_08.mp3\/revision\/latest?cb=20201022222403",
+        "title": "I'm not ready."
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/e\/e3\/Vo_warlock_warl_notyet_09.mp3\/revision\/latest?cb=20201022222407",
+        "title": "It's not time yet."
+      }
+    ],
+    "category": "Способность на перезарядке"
+  },
+  {
+    "responses": [
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/d\/d1\/Vo_warlock_warl_nomana_01.mp3\/revision\/latest?cb=20201022222314",
+        "title": "Out of mana."
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/2\/2c\/Vo_warlock_warl_nomana_02.mp3\/revision\/latest?cb=20201022222317",
+        "title": "No mana."
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/2\/2f\/Vo_warlock_warl_nomana_03.mp3\/revision\/latest?cb=20201022222320",
+        "title": "Not enough mana."
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/e\/e2\/Vo_warlock_warl_nomana_04.mp3\/revision\/latest?cb=20201022222323",
+        "title": "Out of mana."
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/a\/af\/Vo_warlock_warl_nomana_05.mp3\/revision\/latest?cb=20201022222326",
+        "title": "No mana."
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/e\/e8\/Vo_warlock_warl_nomana_06.mp3\/revision\/latest?cb=20201022222329",
+        "title": "Not enough mana."
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/f\/f8\/Vo_warlock_warl_nomana_07.mp3\/revision\/latest?cb=20201022222332",
+        "title": "Out of mana."
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/7\/73\/Vo_warlock_warl_nomana_08.mp3\/revision\/latest?cb=20201022222335",
+        "title": "No mana."
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/2\/2d\/Vo_warlock_warl_nomana_09.mp3\/revision\/latest?cb=20201022222338",
+        "title": "Not enough mana."
+      }
+    ],
+    "category": "Нехватка маны"
+  },
+  {
+    "responses": [
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/a\/a9\/Vo_warlock_warl_pain_01.mp3\/revision\/latest?cb=20201022222410",
+        "title": "Uh!"
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/3\/38\/Vo_warlock_warl_pain_02.mp3\/revision\/latest?cb=20201022222412",
+        "title": "Oh!"
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/3\/3f\/Vo_warlock_warl_pain_03.mp3\/revision\/latest?cb=20201022222415",
+        "isArcane": true,
+        "title": "Oh!"
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/b\/b2\/Vo_warlock_warl_pain_04.mp3\/revision\/latest?cb=20201022222416",
+        "title": "Uh!"
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/6\/6e\/Vo_warlock_warl_pain_05.mp3\/revision\/latest?cb=20201022222418",
+        "isArcane": true,
+        "title": "Uh!"
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/1\/1c\/Vo_warlock_warl_pain_06.mp3\/revision\/latest?cb=20201022222420",
+        "isArcane": true,
+        "title": "Uh!"
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/0\/08\/Vo_warlock_warl_pain_07.mp3\/revision\/latest?cb=20201022222421",
+        "title": "Huh!"
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/4\/4e\/Vo_warlock_warl_pain_08.mp3\/revision\/latest?cb=20201022222423",
+        "title": "Oh!"
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/6\/6d\/Vo_warlock_warl_underattack_01.mp3\/revision\/latest?cb=20201022222523",
+        "title": "I'm under attack!"
+      }
+    ],
+    "category": "Получение урона"
+  },
+  {
+    "responses": [
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/e\/e8\/Vo_warlock_warl_rare_01.mp3\/revision\/latest?cb=20201022222437",
+        "title": "Oh creatures of chaos who come as I command, hear my voice cry down from dark eternities!"
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/4\/45\/Vo_warlock_warl_rare_02.mp3\/revision\/latest?cb=20201022222439",
+        "title": "Best Fiends Forever!"
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/4\/41\/Vo_warlock_warl_rare_03.mp3\/revision\/latest?cb=20201022222441",
+        "title": "The last word of power, ever receding. The final page, ever unwritten. I have devoured all the grammaries this world has to offer. Now I write my own grimoire."
+      }
+    ],
+    "category": "Редкие фразы"
+  },
+  {
+    "responses": [
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/c\/c0\/Vo_warlock_warl_thanks_01.mp3\/revision\/latest?cb=20201022222519",
+        "title": "My thanks."
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/3\/39\/Vo_warlock_warl_thanks_02.mp3\/revision\/latest?cb=20201022222521",
+        "isArcane": true,
+        "title": "My thanks."
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/d\/d7\/Vo_warlock_warl_laugh_01.mp3\/revision\/latest?cb=20201022222137",
+        "title": "Ha ha ha ha ha ha."
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/5\/5c\/Vo_warlock_warl_laugh_02.mp3\/revision\/latest?cb=20201022222139",
+        "title": "Ho ho ho ho ho ho ho ho."
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/e\/ee\/Vo_warlock_warl_laugh_03.mp3\/revision\/latest?cb=20201022222141",
+        "title": "Ha ha ha ha ha ha ha ha!"
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/3\/3c\/Vo_warlock_warl_laugh_04.mp3\/revision\/latest?cb=20201022222144",
+        "title": "Ho ho ha ha ha ha ha ha ha ha ha!"
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/7\/7f\/Vo_warlock_warl_laugh_05.mp3\/revision\/latest?cb=20201022222147",
+        "title": "Ho ho ho ha ha ha ha ha!"
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/e\/e7\/Vo_warlock_warl_laugh_06.mp3\/revision\/latest?cb=20201022222150",
+        "title": "Ho ha ha ha ha ha ha ha ha!"
+      }
+    ],
+    "category": "Реплики в чате"
+  },
+  {
+    "responses": [
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/5\/56\/Vo_warlock_warl_win_01.mp3\/revision\/latest?cb=20201022222524",
+        "title": "Yes! Ha ha ha ha!"
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/0\/0f\/Vo_warlock_warl_win_02.mp3\/revision\/latest?cb=20201022222526",
+        "title": "Victory!"
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/5\/52\/Vo_warlock_warl_win_03.mp3\/revision\/latest?cb=20201022222528",
+        "title": "A victory duly recorded!"
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/a\/a3\/Vo_warlock_warl_win_04.mp3\/revision\/latest?cb=20201022222529",
+        "title": "The victors write the grimoires of history!"
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/e\/e5\/Vo_warlock_warl_lose_01.mp3\/revision\/latest?cb=20201022222225",
+        "title": "Nooooo!"
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/5\/58\/Vo_warlock_warl_lose_02.mp3\/revision\/latest?cb=20201022222228",
+        "title": "Defeated!"
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/e\/ef\/Vo_warlock_warl_lose_03.mp3\/revision\/latest?cb=20201022222231",
+        "title": "Many will wear the widow's weaves."
+      }
+    ],
+    "category": "Окончание матча"
+  },
+  {
+    "responses": [
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/4\/42\/Vo_warlock_warl_happy_05.mp3\/revision\/latest?cb=20201022221859",
+        "title": "Mm."
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/7\/7b\/Vo_warlock_warl_happy_01.mp3\/revision\/latest?cb=20201022221849",
+        "title": "Oh."
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/4\/43\/Vo_warlock_warl_happy_04.mp3\/revision\/latest?cb=20201022221856",
+        "title": "Sss, ah!"
+      }
+    ],
+    "category": "Выпадение косметического предмета"
+  },
+  {
+    "responses": [
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/7\/7d\/Vo_warlock_warl_crumwiz_01.mp3\/revision\/latest?cb=20201022221702",
+        "title": "Crummy wizard."
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/6\/62\/Vo_warlock_warl_shitwiz_01.mp3\/revision\/latest?cb=20201022222510",
+        "title": "Shitty wizard."
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/8\/89\/Vo_warlock_warl_anger_01.mp3\/revision\/latest?cb=20201022221607",
+        "title": "Huh."
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/1\/12\/Vo_warlock_warl_anger_02.mp3\/revision\/latest?cb=20201022221609",
+        "title": "Hoo."
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/d\/d2\/Vo_warlock_warl_anger_03.mp3\/revision\/latest?cb=20201022221611",
+        "title": "Huh."
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/7\/70\/Vo_warlock_warl_anger_05.mp3\/revision\/latest?cb=20201022221614",
+        "title": "Hehewww."
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/c\/c7\/Vo_warlock_warl_happy_03.mp3\/revision\/latest?cb=20201022221854",
+        "title": "Ah."
+      }
+    ],
+    "category": "Разное"
+  }
+]

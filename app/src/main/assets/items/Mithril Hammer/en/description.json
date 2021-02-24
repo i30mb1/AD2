@@ -1,0 +1,22 @@
+{
+  "abilities": [],
+  "cost": "1600",
+  "lore": null,
+  "consistFrom": null,
+  "boughtFrom": "Equipment",
+  "name": "Mithril Hammer",
+  "description": "A hammer forged of pure mithril.",
+  "trivia": [
+    "Mithril is a fictional metal from J.R.R. Tolkien's Lord of the Rings book trilogy, known for its strength and light weight. It has grown incredibly popular and is now used in a wide array of other fantasy universes, including the one Dota 2 takes place in."
+  ],
+  "upgradeIn": [
+    "Black King Bar",
+    "Skull Basher",
+    "Maelstrom",
+    "Desolator"
+  ],
+  "bonuses": [
+    "+24 Attack damage"
+  ],
+  "tips": null
+}

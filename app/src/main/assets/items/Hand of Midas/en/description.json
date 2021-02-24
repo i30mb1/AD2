@@ -1,0 +1,60 @@
+{
+  "abilities": [
+    {
+      "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/d\/d8\/Hand_of_Midas_Transmute.mp3\/revision\/latest?cb=20191227195428",
+      "effects": [
+        "Ability Target Unit",
+        "Affects Enemy Units",
+        "Damage Instant Kill"
+      ],
+      "notes": [
+        "Upon cast, kills the target unit instantly and grants the caster 160 unreliable gold and 210% of the target's experience bounty.",
+        "The target's default bounties are not granted. This means that no hero nearby gains the default gold and experience from the death.",
+        "Despite the visual effects, the gold and experience are granted instantly.",
+        "Deals damage equal to the target's current health to kill it. This damage fully ignores any form of reduction or amplification. This means that it triggers most on-damage events like (neutral or lane) creep aggro.",
+        "This means that it triggers most on-damage events like (neutral or lane) creep aggro.",
+        "Cannot be cast on wards, buildings, ancient creeps, or Necronomicon summons."
+      ],
+      "mana": null,
+      "abilityName": "Transmute",
+      "cooldown": "90",
+      "description": "Kills a non-hero target for 160 gold and 2.1x experience. Cannot be used on Ancient Creeps.",
+      "params": [
+        "Cast Range: 600",
+        "Gold Bonus: 160",
+        "Experience Bonus Multiplier: 210%"
+      ],
+      "itemBehaviour": [],
+      "story": null
+    }
+  ],
+  "cost": "2200",
+  "lore": null,
+  "consistFrom": [
+    "Gloves of Haste",
+    "Recipe"
+  ],
+  "boughtFrom": "Accessories",
+  "name": "Hand of Midas",
+  "description": "Preserved through unknown magical means, the Hand of Midas is a weapon of greed, sacrificing animals to line the owner's pockets.",
+  "trivia": [
+    "Midas is based on Midas, a figure from Greek mythology who turned all he touched to gold."
+  ],
+  "upgradeIn": null,
+  "bonuses": [
+    "+40 Attack speed"
+  ],
+  "tips": [
+    "It should be noted that hand of midas active replaces the targeted units gold bounty, and therefore doesn't grant 160 total gold but instead 160 - the units gold bounty. This means that if you use it on big units you lose out almost half the gold, but you gain almost double the exp. This makes the item give you less gpm but more xpm.",
+    "The earlier Hand of Midas is purchased, the earlier it will pay it self off during the match and the earlier you will have an effective networth gain. Assuming it is always used when off cooldown and used on a unit with a gold bounty of 0, Hand of Midas increases the user's GPM by 106.67, meaning it takes a minimum of 19.5 minutes to pay for itself, or 15 minutes for the recipe (from the point on it was first used). This means you need to use Hand of Midas 14 times to pay for itself, or 11 times for just the recipe. Ogre Magi with his Multicast and Arc Warden Tempest Double will have their midas payed out effectively earlier than other heroes.",
+    "Assuming it is always used when off cooldown and used on a unit with a gold bounty of 0, Hand of Midas increases the user's GPM by 106.67, meaning it takes a minimum of 19.5 minutes to pay for itself, or 15 minutes for the recipe (from the point on it was first used).",
+    "This means you need to use Hand of Midas 14 times to pay for itself, or 11 times for just the recipe. Ogre Magi with his Multicast and Arc Warden Tempest Double will have their midas payed out effectively earlier than other heroes.",
+    "Ogre Magi with his Multicast and Arc Warden Tempest Double will have their midas payed out effectively earlier than other heroes.",
+    "Hand of Midas is an important item if you want to increase your level quickly and unlock talents, especially if you rely on your talents to counter enemy heroes in late game. For example, Wraith King's level 20 talent removes the mana cost for Reincarnation, which is useful if he is facing mana burning enemies like Anti-Mage.",
+    "For example, Wraith King's level 20 talent removes the mana cost for Reincarnation, which is useful if he is facing mana burning enemies like Anti-Mage.",
+    "To get the most out of the 2.1x experience bonus, use Transmute on: Large neutral creeps (189 + 3.78 every 7.5 minutes experience) - Centaur Conqueror, Satyr Tormenter, Hellbear Smasher, Wildwing Ripper, Dark Troll Summoner Ranged creeps (144.9 experience) Siege creeps (184.8 experience)",
+    "Large neutral creeps (189 + 3.78 every 7.5 minutes experience) - Centaur Conqueror, Satyr Tormenter, Hellbear Smasher, Wildwing Ripper, Dark Troll Summoner",
+    "Ranged creeps (144.9 experience)",
+    "Siege creeps (184.8 experience)"
+  ]
+}

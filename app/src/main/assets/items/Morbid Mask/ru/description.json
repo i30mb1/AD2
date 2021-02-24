@@ -1,0 +1,40 @@
+{
+  "abilities": [
+    {
+      "audioUrl": null,
+      "effects": [
+        "Способность Пассивная",
+        "Действует на Себя"
+      ],
+      "notes": [
+        "Складывается с другими источниками вампиризма и с вампиризмом от Morbid Mask.",
+        "Не даёт вампиризм при атаке вардов, строений и союзных существ."
+      ],
+      "mana": null,
+      "abilityName": "Lifesteal",
+      "cooldown": null,
+      "description": "Каждая атака восстанавливает владельцу здоровье в размере 15% от нанесённого урона.",
+      "params": [
+        "Вампиризм: 15%"
+      ],
+      "itemBehaviour": [],
+      "story": null
+    }
+  ],
+  "cost": "900",
+  "lore": null,
+  "consistFrom": null,
+  "boughtFrom": "Разное",
+  "name": "Morbid Mask",
+  "description": "Маска, поглощающая энергию тех, кто попался ей на глаза.",
+  "trivia": [
+    "В DotA, Morbid Mask назывался «Mask of Death»."
+  ],
+  "upgradeIn": [
+    "Satanic",
+    "Mask of Madness",
+    "Vladmir's Offering"
+  ],
+  "bonuses": null,
+  "tips": null
+}

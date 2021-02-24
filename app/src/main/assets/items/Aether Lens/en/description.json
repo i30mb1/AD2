@@ -1,0 +1,51 @@
+{
+  "abilities": [
+    {
+      "audioUrl": null,
+      "effects": [
+        "Ability Passive",
+        "Affects Self"
+      ],
+      "notes": [
+        "Cast range bonuses of multiple Aether Lenses do not stack.",
+        "Stacks with the cast range increases from talents.",
+        "Cast range doesn't stack with Octarine Core.",
+        "The cast range bonus only affects ability and item cast ranges. It does not affect the area of effect of any spell.",
+        "Some spells which affect a line or an area in front of the caster, have their reach increased as well (with some exceptions).",
+        "Blink and other blink-like spells also have their max distance increased.",
+        "Does not affect the range of active attack modifiers and Focus Fire."
+      ],
+      "mana": null,
+      "abilityName": "Aethereal Focus",
+      "cooldown": null,
+      "description": "Increases targeted spell and item cast range by 250.",
+      "params": [
+        "Cast Range Increase: 250"
+      ],
+      "itemBehaviour": [],
+      "story": null
+    }
+  ],
+  "cost": "2275",
+  "lore": null,
+  "consistFrom": [
+    "Energy Booster",
+    "Void Stone",
+    "Recipe"
+  ],
+  "boughtFrom": "Magical",
+  "name": "Aether Lens",
+  "description": "Polished with the incantation of his final breath, the gift of a dying mage to his sickly son.",
+  "trivia": null,
+  "upgradeIn": [
+    "Octarine Core"
+  ],
+  "bonuses": [
+    "+300 Mana",
+    "+3 Mana regeneration"
+  ],
+  "tips": [
+    "Useful to outrange enemies' damage and disable spells. The range allow you to spam your abilities while staying under the tower.",
+    "The range allow you to spam your abilities while staying under the tower."
+  ]
+}

@@ -1,0 +1,53 @@
+{
+  "abilities": [
+    {
+      "audioUrl": null,
+      "effects": [
+        "Ability Passive",
+        "Affects Self"
+      ],
+      "notes": [],
+      "mana": null,
+      "abilityName": "Dragon's Reach",
+      "cooldown": null,
+      "description": "Increases attack range of ranged heroes by 140.",
+      "params": [
+        "Attack Range Bonus: 140"
+      ],
+      "itemBehaviour": [],
+      "story": null
+    }
+  ],
+  "additionalInformation": [
+    "For strength heroes, it grants 240 health, 1.2 health regen, 2.33 armor, 14 attack speed and 12 attack damage.",
+    "For agility heroes, it grants 240 health, 1.2 health regen, 2.33 armor, 14 attack speed and 14 attack damage.",
+    "For intelligence heroes, it grants 240 health, 1.2 health regen, 2.33 armor and 14 attack speed.",
+    "Attack range bonuses from multiple Dragon Lance based items do not stack.",
+    "Stacks with all other attack range bonuses.",
+    "Affects the cast range of active attack modifiers as well."
+  ],
+  "cost": "1900",
+  "lore": null,
+  "consistFrom": [
+    "Ogre Axe",
+    "Band of Elvenskin",
+    "Band of Elvenskin"
+  ],
+  "boughtFrom": "Artifacts",
+  "name": "Dragon Lance",
+  "description": "The forward charge of the wyvern host grants no quarter.",
+  "trivia": null,
+  "upgradeIn": [
+    "Hurricane Pike"
+  ],
+  "bonuses": [
+    "+12 Strength",
+    "+14 Agility",
+    "+140 Attack range (ranged)"
+  ],
+  "tips": [
+    "Dragon Lance is great for ranged heroes that suffer from low attack range, like Luna or Templar Assassin. Those heroes' powerful attacks are mainly limited by their attack range, which Dragon Lance can fix.",
+    "Enchantress can throw out very painful Impetus attacks when combined with Aghanim's Scepter, reaching more than 800 attack range. The strength and attack speed bonus are great for her as well, as she is lacking all of that. It can also be built into Hurricane Pike, which is a very useful and complementary item for her.",
+    "Disassemble to build Sange and Yasha, leaving a Band of Elvenskin spare."
+  ]
+}

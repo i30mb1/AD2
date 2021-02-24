@@ -1,0 +1,45 @@
+{
+  "abilities": [
+    {
+      "audioUrl": null,
+      "effects": [
+        "Ability Passive",
+        "Affects Enemies"
+      ],
+      "notes": [
+        "Successive attacks with Blight Stone do not stack the debuff, but refresh the duration instead.",
+        "Attacks apply the debuff before dealing damage.",
+        "Works against wards and buildings, but does not work against allied units.",
+        "Fully stacks with Orb of Destruction. Does not Stack with Desolator, Orb of Corrosion or Stygian Desolator."
+      ],
+      "mana": null,
+      "abilityName": "Lesser Corruption",
+      "cooldown": null,
+      "description": "Your attacks reduce the target's armor by 2 for 8 seconds.",
+      "params": [
+        "Armor Reduction: 2",
+        "Duration: 8"
+      ],
+      "itemBehaviour": [],
+      "story": null
+    }
+  ],
+  "cost": "300",
+  "lore": null,
+  "consistFrom": null,
+  "boughtFrom": "Equipment",
+  "name": "Blight Stone",
+  "description": "An unnerving stone unearthed beneath the Fields of Endless Carnage.",
+  "trivia": null,
+  "upgradeIn": [
+    "Medallion of Courage",
+    "Desolator",
+    "Orb of Corrosion"
+  ],
+  "bonuses": null,
+  "tips": [
+    "Blight Stone is ideal for a ranged support or ranged carry to harass lanes during the early game.",
+    "Blight Stone is stronger if you can take advantage of how its armor reduction boosts all physical damage the target receives, such as that of your laning partner, lane creeps, or summoned units. It is less effective in more straightforward 1 vs 1 scenarios.",
+    "Blight Stone is useful for pushing towers early on, especially when used in tandem with the armor aura from Buckler and the assistance of additional allies."
+  ]
+}

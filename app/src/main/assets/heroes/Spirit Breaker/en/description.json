@@ -1,0 +1,230 @@
+{
+  "abilities": [
+    {
+      "notes": [
+        "The armor talent does not benefit illusions.",
+        "The night vision talent does not counter any vision reducing effect.",
+        "This attack damage talent is added as raw attack damage, so it does not benefit illusions, and is not affected by most percentage-based damage increasing or reducing effects.",
+        "The health talent increases maximum health capacity, and keeps the current health percentage."
+      ],
+      "spellName": "Talent",
+      "talents": [
+        {
+          "talentLvl": "25",
+          "talentLeft": "+650 Health",
+          "talentRight": "+20% Greater Bash Chance"
+        },
+        {
+          "talentLvl": "20",
+          "talentLeft": "-5.5s Bulldoze Cooldown",
+          "talentRight": "+12% Greater Bash Damage"
+        },
+        {
+          "talentLvl": "15",
+          "talentLeft": "+40 Damage",
+          "talentRight": "+10 Health Regen"
+        },
+        {
+          "talentLvl": "10",
+          "talentLeft": "+4 Armor",
+          "talentRight": "+500 Night Vision"
+        }
+      ]
+    },
+    {
+      "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/d\/db\/Spirit_Breaker_Charge_of_Darkness_1.mp3\/revision\/latest?cb=20191216024518",
+      "effects": [
+        "Ability Target Unit",
+        "Affects Self \/ Enemies"
+      ],
+      "notes": [
+        "Increases Spirit Breaker's movement speed by the given value, and allows his speed to bypass the movement speed limit during the charge. This means the Charge of Darkness bonus speed does affect the damage of Greater Bash.",
+        "This means the Charge of Darkness bonus speed does affect the damage of Greater Bash.",
+        "The charge speed is based on his current movement speed. The charge speed checks the movement speed periodically and adapts instantly.",
+        "Goes on cooldown once the charge ends or is cancelled, not upon cast.",
+        "The charge indicator above the target, as well as the target buff on the caster are visible to allies only. ALT-clicking the status buff announces in the team chat which hero is being charged.",
+        "ALT-clicking the status buff announces in the team chat which hero is being charged.",
+        "During Charge of Darkness, Spirit Breaker moves through other units and impassable terrain.",
+        "The charge is cancelled when Spirit Breaker gets stunned, cycloned, hexed, rooted, slept, hidden, feared, hypnotized or hit by Forced Movement.",
+        "The charge is not cancelled by taunts. Instead, Spirit Breaker starts attacking the taunting unit once the charge stops. Charge of Darkness cannot be manually canceled during taunts.",
+        "Charge of Darkness cannot be manually canceled during taunts.",
+        "The player can manually cancel the charge by giving the hero a stop, hold position, or any targeted order. Non-targeted ability and item casts do not cancel the charge.",
+        "Non-targeted ability and item casts do not cancel the charge.",
+        "Since it is not a channeling spell, shift-queuing orders does not work and causes the charge to get cancelled. Except for shift-queuing Patrol commands, in which case, the charge does not get cancelled. However, when the charge ends, Spirit Breaker is issued an attack order which overwrites the shift-queued orders.",
+        "Except for shift-queuing Patrol commands, in which case, the charge does not get cancelled.",
+        "However, when the charge ends, Spirit Breaker is issued an attack order which overwrites the shift-queued orders.",
+        "When auto-attack is enabled, Spirit Breaker can automatically attack units when close enough, without cancelling the charge.",
+        "Any unit which comes within 300 radius of Spirit Breaker during the charge gets hit by the current level of Greater Bash. A unit may only be bashed once per cast. so if an enemy enters the area a second time, they do not get bashed again. The bash radius is offset by 20 units in front of Spirit Breaker, so it can hit units 280 range behind and 320 range in front of him. The primary target is hit by the bash upon reaching it, not upon coming within range of the bash radius. In Ability Draft, Greater Bash must be drafted as well for Charge of Darkness to bash enemies.",
+        "A unit may only be bashed once per cast. so if an enemy enters the area a second time, they do not get bashed again.",
+        "The bash radius is offset by 20 units in front of Spirit Breaker, so it can hit units 280 range behind and 320 range in front of him.",
+        "The primary target is hit by the bash upon reaching it, not upon coming within range of the bash radius.",
+        "In Ability Draft, Greater Bash must be drafted as well for Charge of Darkness to bash enemies.",
+        "If the target dies during the charge, it is transferred to the nearest valid target within 4000 range of the previous target.",
+        "The charge provides shared vision over the targeted unit. This means it still continues when the target turns invisible.",
+        "Does not provide vision when targeting neutral creeps.",
+        "Destroys trees within a small radius around Spirit Breaker whenever the charge ends.",
+        "The modifier_spirit_breaker_special_attack buff is placed upon reaching the target and lasts for 0.1 seconds. It is responsible for the Greater Bash."
+      ],
+      "mana": "70\/80\/90\/100",
+      "hotKey": "Q",
+      "cooldown": "17\/15\/13\/11 (TagTalent 7)",
+      "description": "Spirit Breaker fixes his sight on an enemy unit and starts charging through all objects. All enemy units passed through and the targeted unit will be hit by a Greater Bash. If the targeted unit dies, Spirit Breaker will change his target to the nearest enemy unit to that location.",
+      "spellName": "Charge of Darkness",
+      "params": [
+        "Cast Animation: 0.3+0.5",
+        "Cast Range: Global",
+        "Greater Bash Radius: 300",
+        "Charge Speed Bonus: 300\/325\/350\/375 (TagAghanim 475\/500\/525\/550)",
+        "Stun Duration: 1.2\/1.6\/2\/2.4",
+        "Increases Charge of Darkness movement speed and reduces cooldown.",
+        "Greater Bash is still applied, since it pierces spell immunity.",
+        "Blocked fully only when primary target. Blocked upon cast. If the charge has already begun, its impact is not blocked."
+      ],
+      "itemBehaviour": [],
+      "legacyKey": "C",
+      "story": "Barathrum erupts from the darkness with unwieldy force."
+    },
+    {
+      "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/2\/25\/Spirit_Breaker_Bulldoze.mp3\/revision\/latest?cb=20191216024528",
+      "effects": [
+        "Ability No Target",
+        "Affects Self"
+      ],
+      "notes": [
+        "Bulldoze interrupts Spirit Breaker's channeling spells upon cast.",
+        "The status resistance stacks multiplicatively with other sources of status resistance."
+      ],
+      "mana": "30\/40\/50\/60",
+      "hotKey": "W",
+      "cooldown": "22\/20\/18\/16 (TagTalent 16.5\/14.5\/12.5\/10.5)",
+      "description": "Spirit Breaker gains movement speed and status resistance to ram through enemies. Can be used while charging.",
+      "spellName": "Bulldoze",
+      "params": [
+        "Cast Animation: 0+0",
+        "Move Speed Bonus: 12%\/18%\/24%\/30%",
+        "Status Resistance Bonus: 34%\/46%\/58%\/70%",
+        "Duration: 8"
+      ],
+      "itemBehaviour": [],
+      "legacyKey": "D",
+      "story": "Barathrum warps the fabric of reality around him, lessening its influence on his physical form."
+    },
+    {
+      "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/1\/16\/Spirit_Breaker_Greater_Bash_1.mp3\/revision\/latest?cb=20191216024523",
+      "effects": [
+        "Ability Passive",
+        "Affects Enemies \/ Self",
+        "Damage Magical"
+      ],
+      "notes": [
+        "Does not stack with other bashes. The bash from Skull Basher and Abyssal Blade is completely disabled for Spirit Breaker. In Ability Draft, Fully stacks with the bash from Skull Basher and Abyssal Blade.",
+        "In Ability Draft, Fully stacks with the bash from Skull Basher and Abyssal Blade.",
+        "Greater Bash first applies the debuff, then the damage, no matter whether it procs on attacks, or is applied by Spirit Breaker's abilities. Greater Bash's effects happen before the attack damage of the attack that procs it, and before Nether Strike's damage.",
+        "Greater Bash's effects happen before the attack damage of the attack that procs it, and before Nether Strike's damage.",
+        "Knocks back bashed units 143\/152\/158\/162 distance, over 0.5 seconds, resulting in a speed of 286\/304\/316\/324. Also knocks affected enemies 50 units upwards, resulting in a small arc. This has only visual purposes.",
+        "Also knocks affected enemies 50 units upwards, resulting in a small arc. This has only visual purposes.",
+        "With the movement speed limits of 100 to 550, min and max possible damage (before reductions) are 14\/20\/26\/32 and 77\/110\/143\/176 (TagTalent 26\/32\/38\/44 and 143\/176\/209\/242).",
+        "The bonus damage is dealt in a separate damage instance, and counts as spell damage. This means it is not affected or considered by anything that works with attack damage. This also means that it fully works with spell damage amplification and spell lifesteal.",
+        "This means it is not affected or considered by anything that works with attack damage.",
+        "This also means that it fully works with spell damage amplification and spell lifesteal.",
+        "Can proc on Roshan, putting it on cooldown and applying the damage, but Roshan is neither knocked back nor stunned.",
+        "Adds an average of 2.38%\/3.4%\/4.42%\/5.44% of Spirit Breaker's movement speed as magical damage to every attack. Adds an average of 4.42%\/5.44%\/6.46%\/7.48% of Spirit Breaker's movement speed as magical damage to every attack when the level 20 damage increasing talent is chosen. Adds an average of 5.18%\/7.4%\/9.62%\/11.84% of Spirit Breaker's movement speed as magical damage to every attack when the level 25 proc chance increasing talent is chosen. Adds an average of 9.62%\/11.84%\/14.06%\/16.28% of Spirit Breaker's movement speed as magical damage to every attack when both talents are chosen.",
+        "Adds an average of 4.42%\/5.44%\/6.46%\/7.48% of Spirit Breaker's movement speed as magical damage to every attack when the level 20 damage increasing talent is chosen.",
+        "Adds an average of 5.18%\/7.4%\/9.62%\/11.84% of Spirit Breaker's movement speed as magical damage to every attack when the level 25 proc chance increasing talent is chosen.",
+        "Adds an average of 9.62%\/11.84%\/14.06%\/16.28% of Spirit Breaker's movement speed as magical damage to every attack when both talents are chosen.",
+        "Does not go on cooldown when proccing from Charge of Darkness or Nether Strike.",
+        "Does not work against wards, buildings and allied units.",
+        "Greater Bash uses pseudo-random distribution."
+      ],
+      "mana": null,
+      "hotKey": "E",
+      "cooldown": null,
+      "description": "Gives a chance to stun and knockback an enemy unit on an attack. Deals a percentage of movement speed as damage.",
+      "spellName": "Greater Bash",
+      "params": [
+        "Proc Chance: 17% (TagTalent 37%)",
+        "Move Speed as Damage: 14%\/20%\/26%\/32% (TagTalent 26%\/32%\/38%\/44%)",
+        "Knockback Duration: 0.5",
+        "Stun Duration: 0.9\/1.2\/1.5\/1.8",
+        "Disables bash from attacks, but not the one from spells."
+      ],
+      "itemBehaviour": [],
+      "legacyKey": "T",
+      "story": "The signature strike of Barathrum's ghostly ball and chain."
+    },
+    {
+      "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/f\/ff\/Spirit_Breaker_Nether_Strike.mp3\/revision\/latest?cb=20191216024526",
+      "effects": [
+        "Ability Target Unit",
+        "Affects Enemies \/ Self",
+        "Damage Magical"
+      ],
+      "notes": [
+        "Nether Strike does not disjoint projectiles upon cast.",
+        "Places the modifier_spirit_breaker_nether_strike_vision debuff on the target during the cast time. This exposes the target, but it does not grant True Sight over it.",
+        "This exposes the target, but it does not grant True Sight over it.",
+        "Nether Strike instantly moves Spirit Breaker on the opposite side of the target, 54 range away from it.",
+        "Instantly applies Greater Bash on the target based on its current level. If it is not leveled, the bash does not occur. The knockback distance is doubled, knocking units 286\/304\/316\/324 distance, over 0.5 seconds, resulting in a speed of 572\/608\/632\/648. The knockback height stays the same at 50. The bash is applied before Nether Strike's own damage is. In Ability Draft, Greater Bash must be drafted as well for the bash to occur.",
+        "The knockback distance is doubled, knocking units 286\/304\/316\/324 distance, over 0.5 seconds, resulting in a speed of 572\/608\/632\/648.",
+        "The knockback height stays the same at 50.",
+        "The bash is applied before Nether Strike's own damage is.",
+        "In Ability Draft, Greater Bash must be drafted as well for the bash to occur.",
+        "Nether Strike first applies the Greater Bash (first the debuff, then the damage), (TagTalent then the modifier_spirit_greaterbash_break break modifier), and then its own damage. With Aghanim's Shard, Spirit Breaker first gains the spell immunity before the target is affected.",
+        "With Aghanim's Shard, Spirit Breaker first gains the spell immunity before the target is affected.",
+        "Spirit Breaker is ordered to attack the target. This attack order ignores the auto-attack settings.",
+        "Can be cast on couriers, applying all its effects.",
+        "The modifier_spirit_breaker_special_attack buff is placed upon reaching the target with Charge of Darkness and lasts for 0.1 seconds. It is responsible for the Greater Bash.",
+        "The modifier_spirit_breaker_nether_strike is responsible for a delay upon successfully casting Nether Strike, during which Spirit Breaker is spell immune. However, its duration is set to 0, so it effectively does nothing.",
+        "However, its duration is set to 0, so it effectively does nothing."
+      ],
+      "mana": "125\/150\/175",
+      "hotKey": "R",
+      "cooldown": "90\/70\/50",
+      "description": "Spirit Breaker slips into the nether realm, reappearing next to his hapless victim. Upon reappearing, a Greater Bash of the current level occurs and deals bonus damage. Knocks back for double the normal distance.",
+      "spellName": "Nether Strike",
+      "params": [
+        "Cast Animation: 1.2+0",
+        "Cast Range: 700",
+        "Damage: 100\/175\/250 (TagTalent 300\/375\/450)",
+        "Break Duration: 4",
+        "Spell Immunity Duration: 2",
+        "Causes Nether Strike to deal 200 damage, and apply a 4-second break. Grants you Spell Immunity for 2 seconds."
+      ],
+      "itemBehaviour": [],
+      "legacyKey": "E",
+      "story": "Barathrum temporarily returns to the realm from where he came, bringing with him the retribution of both worlds."
+    }
+  ],
+  "mainAttributes": {
+    "attrStrengthInc": 3.1,
+    "attrStrength": 29.0,
+    "attrIntelligence": 14.0,
+    "attrIntelligenceInc": 1.8,
+    "attrAgilityInc": 1.7,
+    "attrAgility": 17.0
+  },
+  "description": "Barathrum, the Spirit Breaker, is a powerful ganker-type melee strength hero that excels at focusing on and taking out lone targets in skirmishes, while lacking presence in larger team fights. His Charge of Darkness lets him charge rapidly towards any enemy visible on the map, while knocking off all enemies in his path. If you see the charge coming, it may already be too late. Bulldoze provides him with bonus movement speed and status resistance in order to easily chase his opponents while reducing the duration of most disables. He is picked mostly for his high damage given by his Greater Bash which crushes the life out of his helpless victims (and stuns them). Barathrum can instantly and quickly move to his enemy via Nether Strike and shock them with a soul-bashing blow. Tanky, mobile and with an array of high-damage knockbacks, including a passive one attached to his right clicks, Spirit Breaker's ganking capabilities are second to none.",
+  "history": "Barathrum the Spirit Breaker is a lordly and powerful being, a fierce and elemental intelligence which chose to plane-shift into the world of matter to take part in events with repercussions in the elemental realm that is his home. To that end, he assembled a form that would serve him well, both in our world and out of it. His physical form borrows from the strengths of this world, blending features both bovine and simian--horns, hooves and hands--as outward emblems of his inner qualities of strength, speed and cunning. He wears a ring in his nose, as a reminder that he serves a hidden master, and that this world in which he works is but a shadow of the real one.",
+  "talents": [
+    {
+      "talentLvl": "25",
+      "talentLeft": "+650 Health",
+      "talentRight": "+20% Greater Bash Chance"
+    },
+    {
+      "talentLvl": "20",
+      "talentLeft": "-5.5s Bulldoze Cooldown",
+      "talentRight": "+12% Greater Bash Damage"
+    },
+    {
+      "talentLvl": "15",
+      "talentLeft": "+40 Damage",
+      "talentRight": "+10 Health Regen"
+    },
+    {
+      "talentLvl": "10",
+      "talentLeft": "+4 Armor",
+      "talentRight": "+500 Night Vision"
+    }
+  ]
+}

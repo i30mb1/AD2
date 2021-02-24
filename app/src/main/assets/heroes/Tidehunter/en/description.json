@@ -1,0 +1,204 @@
+{
+  "abilities": [
+    {
+      "notes": [
+        "This attack damage talent is added as raw attack damage, so it does not benefit illusions, and is not affected by most percentage-based damage increasing or reducing effects.",
+        "The cooldown reduction talent stacks multiplicatively with other sources cooldown reduction."
+      ],
+      "spellName": "Talent",
+      "talents": [
+        {
+          "talentLvl": "25",
+          "talentLeft": "+200 Damage",
+          "talentRight": "20% Cooldown Reduction"
+        },
+        {
+          "talentLvl": "20",
+          "talentLeft": "-4 Gush Armor",
+          "talentRight": "+30 Kraken Shell Damage Block"
+        },
+        {
+          "talentLvl": "15",
+          "talentLeft": "-20% Anchor Smash Damage Reduction",
+          "talentRight": "+120 Gush Damage"
+        },
+        {
+          "talentLvl": "10",
+          "talentLeft": "+1.75 Mana Regen",
+          "talentRight": "+20 Movement Speed"
+        }
+      ]
+    },
+    {
+      "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/4\/40\/Tidehunter_Gush_1.mp3\/revision\/latest?cb=20191216025132",
+      "effects": [
+        "Ability Target Unit (TagAghanim Target Point)",
+        "Affects Enemies",
+        "Damage Magical"
+      ],
+      "notes": [
+        "Gush's projectile travels at a speed of 2500.",
+        "Gush first applies the debuff, then the damage.",
+        "When upgraded, Gush releases a big wave, instead of a single target projectile. The wave always travels its full distance. When targeting a unit, the wave is released towards its direction on cast. However, it does not home in on the target. The wave travels at a speed of 1500 instead of 2500 like the non-upgraded projectile, taking 1.47 seconds to travel the full distance. The wave can hit units up to 2460 range away (travel distance + radius). The wave fully affects invisible enemies and enemies inside the fog of war. Provides 200 radius ground vision around each hit enemy for 2 seconds. The wave does not provide any vision. The second sound is used by the wave.",
+        "When targeting a unit, the wave is released towards its direction on cast. However, it does not home in on the target.",
+        "The wave travels at a speed of 1500 instead of 2500 like the non-upgraded projectile, taking 1.47 seconds to travel the full distance.",
+        "The wave can hit units up to 2460 range away (travel distance + radius).",
+        "The wave fully affects invisible enemies and enemies inside the fog of war.",
+        "Provides 200 radius ground vision around each hit enemy for 2 seconds.",
+        "The wave does not provide any vision.",
+        "The second sound is used by the wave."
+      ],
+      "mana": "90\/100\/110\/120",
+      "hotKey": "Q",
+      "cooldown": "12 (TagTalent 9.6) (TagTalent 7, 5.6)",
+      "description": "Summons a gush of water to damage an enemy unit, reducing their movement speed and armor. Lasts seconds.",
+      "spellName": "Gush",
+      "params": [
+        "Cast Animation: 0.3+0.6",
+        "Cast Range: 700 (TagAghanim 2200)",
+        "Damage: 110\/160\/210\/260 (TagTalent 230\/280\/330\/380)",
+        "Armor Reduction: 4\/5\/6\/7 (TagTalent 8\/9\/10\/11)",
+        "Move Speed Slow: 40%",
+        "Debuff Duration: 4",
+        "Wave Travel Distance: 2200",
+        "Wave Radius: 260",
+        "Gush becomes a ground targeted wave ability that affects enemy units in a line. Decreases cooldown.",
+        "Slow and armor reduction persist if debuff was placed before spell immunity and when not dispelled.",
+        "Blocked upon impact. Not blocked when upgraded."
+      ],
+      "itemBehaviour": [],
+      "legacyKey": "G",
+      "story": "During his championship of the Sunken Isles, Leviathan gained mastery over the open sea."
+    },
+    {
+      "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/b\/bf\/Tidehunter_Kraken_Shell.mp3\/revision\/latest?cb=20191216025135",
+      "effects": [
+        "Ability Passive",
+        "Affects Self"
+      ],
+      "notes": [
+        "The damage reduction is Damage Block and the debuff removal is a strong dispel.",
+        "The damage reduction is always on and is not connected to the damage threshold for debuff removal.",
+        "The Damage Block does not work against wards (TagTalent Plague Ward, Mass Serpent Ward, Death Ward).",
+        "Does not reduce physical damage from spells, except from Moon Glaives and The Swarm.",
+        "Only damage from player owned sources (after reductions) is counted towards the debuff removal.",
+        "Damage counter for the debuff removal resets when Tidehunter does not take player based damage for 6 seconds.",
+        "When procced by a spell that deals damage before applying a debuff (e.g. Storm Hammer), Tidehunter is dispelled before the spell's debuff is applied.",
+        "A debuff removal proc is indicated by a sound effect and water particles on Tidehunter's skin."
+      ],
+      "mana": null,
+      "hotKey": "W",
+      "cooldown": null,
+      "description": "Thickens Tidehunter's hide to passively block a portion of any incoming physical attack damage. The hide also removes negative status effects if the damage taken crosses a threshold. Does not stack with items that provide Damage Block.",
+      "spellName": "Kraken Shell",
+      "params": [
+        "Damage Block Proc Chance: 100%",
+        "Damage Block: 18\/30\/42\/54 (TagTalent 48\/60\/72\/84)",
+        "Damage Threshold: 600\/550\/500\/450",
+        "Threshold Reset Timer: 6",
+        "Damage Block works for illusions. The dispel effect does not work."
+      ],
+      "itemBehaviour": [],
+      "legacyKey": "R",
+      "story": "Claddish navymen tell tales of a mighty sea-faring beast that suffered spear and sword but continued to lay waste to the fleet."
+    },
+    {
+      "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/e\/ed\/Tidehunter_Anchor_Smash.mp3\/revision\/latest?cb=20191216025130",
+      "effects": [
+        "Ability No Target",
+        "Affects Enemies",
+        "Damage Instant Attack"
+      ],
+      "notes": [
+        "Causes Tidehunter to perform instant attacks on enemies within the radius. These instant attacks are allowed to trigger attack modifiers, except cleave, normally. Has True Strike.",
+        "These instant attacks are allowed to trigger attack modifiers, except cleave, normally. Has True Strike.",
+        "Only reduces base damage and that given by the primary attribute of affected units. Raw bonus damage is not reduced.",
+        "The smash first applies the debuff, then the instant attack.",
+        "Affects ancient creeps, but not Roshan.",
+        "With Aghanim's Shard, fully affects buildings as well. Does not affect wards."
+      ],
+      "mana": "30\/40\/50\/60",
+      "hotKey": "E",
+      "cooldown": "7\/6\/5\/4 (TagTalent 5.6\/4.8\/4\/3.2) (TagTalent 6\/5\/4\/3, 4.8\/4\/3.2\/2.4)",
+      "description": "Tidehunter swings his mighty anchor to attack and deal bonus damage to nearby enemies and reduce their attack damage.",
+      "spellName": "Anchor Smash",
+      "params": [
+        "Cast Animation: 0.4+0.3",
+        "Radius: 375",
+        "Attack Damage Bonus: 45\/90\/135\/180 (TagTalent 135\/180\/225\/270)",
+        "Attack Damage Reduction: 30%\/40%\/50%\/60% (TagTalent 50%\/60%\/70%\/80%)",
+        "Duration: 6",
+        "Increases Anchor Smash damage by 90 and causes it to affect buildings. Reduces cooldown by 1 second."
+      ],
+      "itemBehaviour": [],
+      "legacyKey": "C",
+      "story": "Stolen from one of Admiral Kunkka's flagships, Leviathan's heavy anchor proves useful as a melee weapon."
+    },
+    {
+      "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/f\/f3\/Tidehunter_Ravage_1.mp3\/revision\/latest?cb=20191216025128",
+      "effects": [
+        "Ability No Target",
+        "Affects Enemies",
+        "Damage Magical"
+      ],
+      "notes": [
+        "The tentacles travel at a speed of 725.",
+        "Hit units are knocked up 350 range for the initial 0.5 seconds of the stun.",
+        "While in the air, other units may pass below hit airborne units.",
+        "The damage is applied upon landing, not upon getting hit.",
+        "Ravage's effect is caused by a 250 units wide ring, which expands around the cast location at the given speed. This means units within 250 radius upon cast are hit instantly. The ring takes exactly 1.38 seconds to cover the remaining distance. It also means that it is possible to evade the effects by blinking inside the expanding ring shortly after cast.",
+        "This means units within 250 radius upon cast are hit instantly.",
+        "The ring takes exactly 1.38 seconds to cover the remaining distance.",
+        "It also means that it is possible to evade the effects by blinking inside the expanding ring shortly after cast."
+      ],
+      "mana": "150\/225\/325",
+      "hotKey": "R",
+      "cooldown": "150 (TagTalent 120)",
+      "description": "Slams the ground, causing tentacles to erupt in all directions, damaging and stunning all nearby enemy units.",
+      "spellName": "Ravage",
+      "params": [
+        "Cast Animation: 0.3+0.57",
+        "Max Effect Radius: 1250",
+        "Effect Width: 250",
+        "Damage: 200\/300\/400",
+        "Stun Duration: 2.4\/2.6\/2.8",
+        "Attempts to damage if already hit enemies turn spell immune before landing."
+      ],
+      "itemBehaviour": [],
+      "legacyKey": "V",
+      "story": "Calling to the abyssal god Maelrawn has resulted in entire armadas being lost at sea."
+    }
+  ],
+  "mainAttributes": {
+    "attrStrengthInc": 3.5,
+    "attrStrength": 27.0,
+    "attrIntelligence": 18.0,
+    "attrIntelligenceInc": 1.7,
+    "attrAgilityInc": 1.5,
+    "attrAgility": 15.0
+  },
+  "description": "Leviathan, the Tidehunter, is a melee strength hero who is formidable due to his uncommonly tough hide and his ocean spells that sweep enemies upward. He can be played as a support or as an offlane hero whose greatest strengths lie in being able to take heavy amounts of damage in the early game and the disabling powers of his spells.",
+  "history": "The Tidehunter known as Leviathan was once the champion of the Sunken Isles, but his motives are as mysterious as those of his people. We all know the importance of the Drylanders' shipping lanes, how empires may rise and fall according to who controls the open water. Far less is known of the submarine lanes, and how the warring tribes of the Meranthic Diaspora have carved out habitations through endless undersea skirmishes. In the fragile treaties between the Mer and Men, we can glimpse the extent of the drowned empires, but their politics appear complex and opaque. It would seem that Leviathan tired of such petty strife, and set off on his own, loyal only to his abyssal god, Maelrawn the Tentacular. He stalks the shallows now in search of men or meranths who stray into his path, and with a particular loathing for Admiral Kunkka, who has long been his nemesis for reasons lost in the deepest trenches of the sea.",
+  "talents": [
+    {
+      "talentLvl": "25",
+      "talentLeft": "+200 Damage",
+      "talentRight": "20% Cooldown Reduction"
+    },
+    {
+      "talentLvl": "20",
+      "talentLeft": "-4 Gush Armor",
+      "talentRight": "+30 Kraken Shell Damage Block"
+    },
+    {
+      "talentLvl": "15",
+      "talentLeft": "-20% Anchor Smash Damage Reduction",
+      "talentRight": "+120 Gush Damage"
+    },
+    {
+      "talentLvl": "10",
+      "talentLeft": "+1.75 Mana Regen",
+      "talentRight": "+20 Movement Speed"
+    }
+  ]
+}

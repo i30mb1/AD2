@@ -1,0 +1,19 @@
+{
+  "abilities": [],
+  "cost": "250",
+  "lore": null,
+  "consistFrom": null,
+  "boughtFrom": "Miscellaneous",
+  "name": "Fluffy Hat",
+  "description": "Fine and functional foppery for the fashion-forward fighter.",
+  "trivia": null,
+  "upgradeIn": [
+    "Orb of Corrosion",
+    "Falcon Blade",
+    "Holy Locket"
+  ],
+  "bonuses": [
+    "+125 Health"
+  ],
+  "tips": null
+}

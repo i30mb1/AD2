@@ -1,0 +1,22 @@
+{
+  "abilities": [],
+  "cost": "900",
+  "lore": null,
+  "consistFrom": null,
+  "boughtFrom": "Secret Shop",
+  "name": "Energy Booster",
+  "description": "This lapis gemstone is commonly added to the collection of wizards seeking to improve their presence in combat.",
+  "trivia": null,
+  "upgradeIn": [
+    "Holy Locket",
+    "Aether Lens",
+    "Lotus Orb",
+    "Aeon Disk",
+    "Soul Booster",
+    "Arcane Boots"
+  ],
+  "bonuses": [
+    "+250 Mana"
+  ],
+  "tips": null
+}

@@ -1,0 +1,22 @@
+{
+  "abilities": [],
+  "cost": "1100",
+  "lore": null,
+  "consistFrom": [
+    "Sage's Mask",
+    "Blades of Attack",
+    "Fluffy Hat",
+    "Recipe"
+  ],
+  "boughtFrom": "Аксессуары",
+  "name": "Falcon Blade",
+  "description": "Зачарованный кинжал, который давным-давно вывел уличного оборванца из грязи в князи.",
+  "trivia": null,
+  "upgradeIn": null,
+  "bonuses": [
+    "+150 к здоровью",
+    "+1,6 к регенерации маны",
+    "+10 к урону"
+  ],
+  "tips": null
+}

@@ -1,0 +1,248 @@
+{
+  "abilities": [
+    {
+      "notes": [
+        "The magic resistance talent stacks multiplicatively with other sources of magic resistance.",
+        "The magic resistance talent increases Enchantress's magic resistance to 34%.",
+        "This attack damage talent is added as raw attack damage, so it does not benefit illusions, and is not affected by most percentage-based damage increasing or reducing effects."
+      ],
+      "spellName": "Talent",
+      "talents": [
+        {
+          "talentLvl": "25",
+          "talentLeft": "+20 Nature's Attendants Heal",
+          "talentRight": "+6.5% Impetus Damage"
+        },
+        {
+          "talentLvl": "20",
+          "talentLeft": "Enchant Affects Ancients",
+          "talentRight": "+65 Untouchable Slow"
+        },
+        {
+          "talentLvl": "15",
+          "talentLeft": "+6 Nature's Attendants Wisps",
+          "talentRight": "+40 Damage"
+        },
+        {
+          "talentLvl": "10",
+          "talentLeft": "+20 Movement Speed",
+          "talentRight": "+12% Magic Resistance"
+        }
+      ]
+    },
+    {
+      "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/c\/cf\/Enchantress_Impetus_1.mp3\/revision\/latest?cb=20191216013613",
+      "effects": [
+        "Ability Target Unit \/ Autocast",
+        "Affects Enemies",
+        "Damage Pure"
+      ],
+      "notes": [
+        "The distance is calculated as the projectile hits the target. This means moving away from the target causes it to deal more damage on impact, and moving closer decreases the damage.",
+        "This means moving away from the target causes it to deal more damage on impact, and moving closer decreases the damage.",
+        "The bonus damage is dealt in a separate damage instance, and counts as spell damage. This means it is not affected or considered by anything that works with attack damage. This also means that it fully works with spell damage amplification and spell lifesteal.",
+        "This means it is not affected or considered by anything that works with attack damage.",
+        "This also means that it fully works with spell damage amplification and spell lifesteal.",
+        "Impetus deals its damage before the attack damage is applied, but still depends on the attack hitting the target.",
+        "The damage is capped at 1750 distance, which equates to 140\/210\/280\/350 (TagTalent 253.75\/323.75\/393.75\/463.75) damage.",
+        "Works against everything except for wards and buildings."
+      ],
+      "mana": "65",
+      "hotKey": "Q",
+      "cooldown": "6\/4\/2\/0",
+      "description": "Places an enchantment on each attack while activated, causing it to deal additional damage based on how far away the target is. The farther the target, the greater the damage dealt.",
+      "spellName": "Impetus",
+      "params": [
+        "Cast Range: 575",
+        "Distance as Damage: 8%\/12%\/16%\/20% (TagTalent 14.5%\/18.5%\/22.5%\/26.5%)"
+      ],
+      "itemBehaviour": [],
+      "legacyKey": "T",
+      "story": "While Aiushtha favors peaceful means, she is capable of a magical onslaught from a distance, her spears gaining energy from the natural life around her."
+    },
+    {
+      "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/8\/8f\/Enchantress_Enchant_1.mp3\/revision\/latest?cb=20191216013612",
+      "effects": [
+        "Ability Target Unit",
+        "Affects Enemy Units \/ Enemy Heroes"
+      ],
+      "notes": [
+        "Casting Enchant on heroes (including clones and the Vengeance Aura illusion) or creep-heroes slows them and applies a basic dispel on them (long sound is played).",
+        "Enchant first applies the dispel, then the slow.",
+        "Slowed units leave behind a trail of flowers as they move, which is only visible when the unit itself is visible.",
+        "Casting Enchant on any other enemy unit which is not a ward or building converts it (short sound is played). This includes all other illusions. When converting, applies a basic dispel on the target which removes buffs and debuffs. The converted creep also gets fully healed. Its mana does not get restored.",
+        "When converting, applies a basic dispel on the target which removes buffs and debuffs.",
+        "The converted creep also gets fully healed. Its mana does not get restored.",
+        "Cannot be cast on ancient creeps, siege creeps, Necronomicon Warriors and Necronomicon Archers. With the level 20 talent, ancient creeps can be converted, but Roshan and creep-heroes tagged as ancient creeps are only slowed. With the level 20 talent, couriers can be targeted, but it has no effect on them, wasting the mana and cooldown.",
+        "With the level 20 talent, ancient creeps can be converted, but Roshan and creep-heroes tagged as ancient creeps are only slowed.",
+        "With the level 20 talent, couriers can be targeted, but it has no effect on them, wasting the mana and cooldown.",
+        "When enchanting a new creep while already having a creep, the old enchanted creep dies.",
+        "When a converted creep's duration ends, it dies instantly. The death is not credited to anyone so that no one gets experience from it."
+      ],
+      "mana": "40\/50\/60\/70",
+      "hotKey": "W",
+      "cooldown": "28\/24\/20\/16",
+      "description": "Enchantress charms an enemy. If the enemy is a hero, they are slowed. If the enemy is a creep, she brings it under her control.",
+      "spellName": "Enchant",
+      "params": [
+        "Cast Animation: 0.3+0.67",
+        "Cast Range: 700",
+        "Hero Move Speed Slow: 55%",
+        "Hero Slow Duration: 3.75\/4.5\/5.25\/6",
+        "Max Enchanted Creeps: 1",
+        "Creep Max Health Bonus: 200\/300\/400\/500",
+        "Creep Attack Damage Bonus: 10\/30\/50\/70",
+        "Creep Armor Bonus: 2\/4\/6\/8",
+        "Enchant Duration: 30\/60\/90\/120",
+        "Slow persists if debuff was placed before spell immunity and when not dispelled. Cannot convert spell immune units."
+      ],
+      "itemBehaviour": [],
+      "legacyKey": "C",
+      "story": "A true steward of the forest, Aiushtha befriends all within it - from lowly trolls to powerful centaurs."
+    },
+    {
+      "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/9\/96\/Enchantress_Nature%27s_Attendants.mp3\/revision\/latest?cb=20191216013606",
+      "effects": [
+        "Ability No Target (TagAghanim Passive)",
+        "Affects Allies"
+      ],
+      "notes": [
+        "Every 0.5 seconds, each wisp chooses a random allied unit to heal. So it is possible to heal up to 4\/6\/8\/10 (TagTalent 10\/12\/14\/16) allies at a time.",
+        "The heal targets are chosen completely random, without any priorities. Multiple wisps can randomly select the same unit. Each wisp will approach its chosen target, indicating the wisp is healing the target. However, when choosing the wisps increasing talent, the visual effect does not adapt. The numbers of wisps can be seen does not increase.",
+        "Each wisp will approach its chosen target, indicating the wisp is healing the target.",
+        "However, when choosing the wisps increasing talent, the visual effect does not adapt. The numbers of wisps can be seen does not increase.",
+        "Ignores ancient creeps and allies that already are at full health.",
+        "Wisps can heal invulnerable units, but not hidden units.",
+        "The area of effect is centered around Enchantress' current location, not where the spell was cast.",
+        "When Enchantress dies, the wisps still continue to heal units nearby her death's location.",
+        "Nature's Attendants does not stack with itself. Casting the ability while it is active refreshes the buff.",
+        "Can heal a total of 28\/54\/88\/130 health per second. Can heal a total of 70\/108\/154\/208 health per second if the number of wisps increasing talent is chosen. Can heal a total of 108\/174\/248\/330 health per second if heal per wisp talent is chosen. Can heal a total of 270\/348\/434\/528 health per second if both talents are chosen.",
+        "Can heal a total of 70\/108\/154\/208 health per second if the number of wisps increasing talent is chosen.",
+        "Can heal a total of 108\/174\/248\/330 health per second if heal per wisp talent is chosen.",
+        "Can heal a total of 270\/348\/434\/528 health per second if both talents are chosen.",
+        "Can heal a total of 308\/594\/968\/1430 health over its full duration. Can heal a total of 770\/1188\/1694\/2288 health over its full duration if the number of wisps increasing talent is chosen. Can heal a total of 1188\/1914\/2728\/3630 health over its full duration if heal per wisp talent is chosen. Can heal a total of 2970\/3828\/4774\/5808 health over its full duration if both talents are chosen.",
+        "Can heal a total of 770\/1188\/1694\/2288 health over its full duration if the number of wisps increasing talent is chosen.",
+        "Can heal a total of 1188\/1914\/2728\/3630 health over its full duration if heal per wisp talent is chosen.",
+        "Can heal a total of 2970\/3828\/4774\/5808 health over its full duration if both talents are chosen.",
+        "With Aghanim's Shard, the passive wisps can heal up to 21\/27\/33\/39 (TagTalent 81\/87\/93\/99) per second, 1260\/1620\/1980\/2340 (TagTalent 4860\/5220\/5580\/5940) per minute."
+      ],
+      "mana": "170\/160\/150\/140",
+      "hotKey": "E",
+      "cooldown": "35",
+      "description": "A cloud of wisps heals Enchantress and any friendly units nearby. Lasts seconds.",
+      "spellName": "Nature's Attendants",
+      "params": [
+        "Cast Animation: 0.3+0.93",
+        "Search Radius: 275",
+        "Active Number of Wisps: 4\/6\/8\/10 (TagTalent 10\/12\/14\/16)",
+        "Heal per Second per Wisp: 7\/9\/11\/13 (TagTalent 27\/29\/31\/33)",
+        "Duration: 11",
+        "Passive Number of Wisps: 3",
+        "Adds 3 permanent Nature's Attendants that follow Enchantress around."
+      ],
+      "itemBehaviour": [],
+      "legacyKey": "R",
+      "story": "Whimsical spirits of the woods possess a healing power that is quite subtle, but gains strength in numbers."
+    },
+    {
+      "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/8\/85\/Enchantress_Sproink.mp3\/revision\/latest?cb=20191216013606",
+      "effects": [
+        "Ability No Target",
+        "Affects Self \/ Enemies",
+        "Damage Instant Attack"
+      ],
+      "notes": [
+        "Requires Aghanim's Scepter to be unlocked. In Ability Draft, Sproink can be unlocked by the player that drafted Untouchable.",
+        "In Ability Draft, Sproink can be unlocked by the player that drafted Untouchable.",
+        "Sproink interrupts Enchantress' channeling spells upon cast.",
+        "Sproink disjoints projectiles upon cast.",
+        "Leaps at a speed of 1250 for up to 0.4 seconds.",
+        "Always leaps 180° away from the direction Enchantress is facing. Does not lock Enchantress' facing angle during the leap.",
+        "Can leap over other units and over impassable terrain.",
+        "During Sproink, Enchantress can attack, cast spells, and use items.",
+        "Halfway through the leap, at 0.2 seconds, Enchantress performs instant attacks on the furthest 3 enemies within her total attack range, plus the bonus. Searches for enemies all around her, meaning it may target enemies behind Enchantress as well. These attacks do not have True Strike and are prevented by disarms. Can trigger any attack modifier and on-hit effects normally.",
+        "Searches for enemies all around her, meaning it may target enemies behind Enchantress as well.",
+        "These attacks do not have True Strike and are prevented by disarms.",
+        "Can trigger any attack modifier and on-hit effects normally."
+      ],
+      "mana": "50",
+      "hotKey": "D",
+      "cooldown": "5",
+      "description": "Leaps backward and dodges incoming projectiles, and launches an Impetus attack on the furthest 3 enemy units within Enchantress' attack range + 200.",
+      "spellName": "Sproink",
+      "params": [
+        "Cast Animation: 0+0",
+        "Leap Distance: 500",
+        "Leap Duration: 0.4",
+        "Impetus Attacks Range Buffer: 200",
+        "Number of Impetus Attacks: 3"
+      ],
+      "itemBehaviour": [],
+      "legacyKey": "F",
+      "story": "Sproink is as Sproink does."
+    },
+    {
+      "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/8\/8a\/Enchantress_Untouchable.mp3\/revision\/latest?cb=20191216013607",
+      "effects": [
+        "Ability Passive",
+        "Affects Enemies"
+      ],
+      "notes": [
+        "Untouchable is triggered whenever a unit starts an attack on Enchantress, regardless of distance. This means it does not matter if the attack successfully hits or not, the slow is still applied.",
+        "This means it does not matter if the attack successfully hits or not, the slow is still applied.",
+        "When the attack was fully executed, then the slow debuff lasts as long as the remaining backswing duration of the attack. Canceling the attack backswing does not affect this duration, so it is not possible to reset the attack speed by canceling it. When switching attack targets, the debuff persists, but does not apply the slow against the new target. The debuff persists until the attack against the new target finishes or gets canceled. This means it is possible to skip the backswing-based slow duration by issuing an attack order on a new target within attack range between each attack. This also means, the debuff does not affect the idle animation in attack animation after the backswing.",
+        "Canceling the attack backswing does not affect this duration, so it is not possible to reset the attack speed by canceling it.",
+        "When switching attack targets, the debuff persists, but does not apply the slow against the new target.",
+        "The debuff persists until the attack against the new target finishes or gets canceled.",
+        "This means it is possible to skip the backswing-based slow duration by issuing an attack order on a new target within attack range between each attack.",
+        "This also means, the debuff does not affect the idle animation in attack animation after the backswing.",
+        "Does not work against buildings, allies, or invulnerable units. Works against vulnerable wards."
+      ],
+      "mana": null,
+      "hotKey": "R",
+      "cooldown": null,
+      "description": "Enchantress beguiles her enemies, slowing their attacks when she is attacked.",
+      "spellName": "Untouchable",
+      "params": [
+        "Attack Speed Slow: 100\/140\/180 (TagTalent 165\/205\/245)",
+        "Grants a new ability: Sproink.",
+        "Although the debuff is still placed on each attack, it does not slow during Break."
+      ],
+      "itemBehaviour": [],
+      "legacyKey": "N",
+      "story": "After attacking Aiushtha, most opponents are overwhelmed with guilt having attacked such a natural beauty."
+    }
+  ],
+  "mainAttributes": {
+    "attrStrengthInc": 1.7,
+    "attrStrength": 17.0,
+    "attrIntelligence": 22.0,
+    "attrIntelligenceInc": 3.8,
+    "attrAgilityInc": 1.8,
+    "attrAgility": 19.0
+  },
+  "description": "Aiushtha, the Enchantress, is a ranged intelligence hero who uses her abilities to push through lanes and gank with relative ease. Enchantress works well as a jungler in the early game, as it maximizes the effectiveness of her Enchant ability or, harass enemies in lane using Impetus that deals damage based on how far her target is. On first glance, she may be just a support, serving her allies with powerful heals, creep abilities and slows, but as time goes on, her power increases and once she is packed with good items, Enchantress' regular attacks are strong enough to kill most heroes with a couple of attacks if they stand far enough, while avoiding burst attacks with the help of Untouchable. This will make her a potential carry.",
+  "history": "Aiushtha appears to be an innocent, carefree creature of the woods, and while this is certainly true, it is hardly the sum of her story. She well understands the suffering of the natural world. She has wandered far, and fared through forests bright and drear, in every clime and every season, gathering friends, sharing news, bringing laughter and healing wherever she goes. For in worlds wracked by war, forests are leveled for the building of ships and siege engines; and even in places of peace, the woods are stripped for the building of homes, and as fuel for countless hearths. Aiushtha hears the pleas of the small creatures, the furtive folk who need green shade and a leafy canopy to thrive. She lends her ears to those who have no other listeners. She carries their stories from the wood to the world, believing that her own good cheer is a kind of Enchantment, that can itself fulfill the promise of a verdant future.",
+  "talents": [
+    {
+      "talentLvl": "25",
+      "talentLeft": "+20 Nature's Attendants Heal",
+      "talentRight": "+6.5% Impetus Damage"
+    },
+    {
+      "talentLvl": "20",
+      "talentLeft": "Enchant Affects Ancients",
+      "talentRight": "+65 Untouchable Slow"
+    },
+    {
+      "talentLvl": "15",
+      "talentLeft": "+6 Nature's Attendants Wisps",
+      "talentRight": "+40 Damage"
+    },
+    {
+      "talentLvl": "10",
+      "talentLeft": "+20 Movement Speed",
+      "talentRight": "+12% Magic Resistance"
+    }
+  ]
+}

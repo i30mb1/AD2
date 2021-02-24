@@ -1,0 +1,1322 @@
+[
+  {
+    "responses": [
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/a\/a4\/Vo_beastmaster_beas_spawn_01.mp3\/revision\/latest?cb=20201010172340",
+        "title": "Beastmaster!"
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/6\/6f\/Vo_beastmaster_beas_spawn_02.mp3\/revision\/latest?cb=20201010172342",
+        "title": "Master of beasts!"
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/3\/3f\/Vo_beastmaster_beas_spawn_03.mp3\/revision\/latest?cb=20201010172344",
+        "title": "Meet your master\u2026snuhg\u2026 beastmaster."
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/5\/56\/Vo_beastmaster_beas_spawn_04.mp3\/revision\/latest?cb=20201010172347",
+        "title": "My beasts and I hunt our prey."
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/8\/85\/Vo_beastmaster_beas_spawn_05.mp3\/revision\/latest?cb=20201010172350",
+        "title": "Unleash the beasts of war."
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/3\/30\/Vo_beastmaster_beas_spawn_06.mp3\/revision\/latest?cb=20201010172353",
+        "title": "I'm a natural disaster."
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/0\/08\/Vo_beastmaster_beas_ability_axes_02.mp3\/revision\/latest?cb=20201010171339",
+        "title": "Even my axes are trained."
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/3\/34\/Vo_beastmaster_beas_level_04.mp3\/revision\/latest?cb=20201010171958",
+        "title": "Feed the beast within!"
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/e\/e3\/Vo_beastmaster_beas_kill_02.mp3\/revision\/latest?cb=20201010171819",
+        "title": "Nature, red in tooth and talon."
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/f\/f9\/Vo_beastmaster_beas_kill_03.mp3\/revision\/latest?cb=20201010171822",
+        "title": "Welcome to the food chain."
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/d\/df\/Vo_beastmaster_beas_win_02.mp3\/revision\/latest?cb=20201010172407",
+        "title": "The dogs of war feast tonight!"
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/6\/6a\/Vo_beastmaster_beas_respawn_11.mp3\/revision\/latest?cb=20201010172326",
+        "title": "My wild friends welcome me."
+      }
+    ],
+    "category": "Снаряжение"
+  },
+  {
+    "responses": [
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/a\/a4\/Vo_beastmaster_beas_spawn_01.mp3\/revision\/latest?cb=20201010172340",
+        "title": "Beastmaster!"
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/1\/1d\/Vo_beastmaster_beas_anger_01.mp3\/revision\/latest?cb=20201010171432",
+        "title": "Heereh."
+      }
+    ],
+    "category": "Стадия планирования"
+  },
+  {
+    "responses": [
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/a\/a4\/Vo_beastmaster_beas_spawn_01.mp3\/revision\/latest?cb=20201010172340",
+        "title": "Beastmaster!"
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/6\/6f\/Vo_beastmaster_beas_spawn_02.mp3\/revision\/latest?cb=20201010172342",
+        "title": "Master of beasts!"
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/3\/3f\/Vo_beastmaster_beas_spawn_03.mp3\/revision\/latest?cb=20201010172344",
+        "title": "Meet your master\u2026snuhg\u2026 beastmaster."
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/5\/56\/Vo_beastmaster_beas_spawn_04.mp3\/revision\/latest?cb=20201010172347",
+        "title": "My beasts and I hunt our prey."
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/3\/30\/Vo_beastmaster_beas_spawn_06.mp3\/revision\/latest?cb=20201010172353",
+        "title": "I'm a natural disaster."
+      }
+    ],
+    "category": "Вход в битву"
+  },
+  {
+    "responses": [
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/d\/d9\/Vo_beastmaster_beas_inthebag_01.mp3\/revision\/latest?cb=20201010171808",
+        "title": "It's in the bag!"
+      }
+    ],
+    "category": "Насмешка"
+  },
+  {
+    "responses": [
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/8\/85\/Vo_beastmaster_beas_spawn_05.mp3\/revision\/latest?cb=20201010172350",
+        "title": "Unleash the beasts of war."
+      }
+    ],
+    "category": "Начало битвы"
+  },
+  {
+    "responses": [
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/8\/85\/Vo_beastmaster_beas_move_01.mp3\/revision\/latest?cb=20201010172019",
+        "title": "Yes."
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/b\/b4\/Vo_beastmaster_beas_move_02.mp3\/revision\/latest?cb=20201010172022",
+        "title": "Oh, yes."
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/4\/42\/Vo_beastmaster_beas_move_03.mp3\/revision\/latest?cb=20201010172024",
+        "title": "Em huh."
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/7\/7a\/Vo_beastmaster_beas_move_04.mp3\/revision\/latest?cb=20201010172027",
+        "title": "Hum-herrdrreh."
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/2\/2e\/Vo_beastmaster_beas_move_05.mp3\/revision\/latest?cb=20201010172030",
+        "title": "Emheh."
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/a\/aa\/Vo_beastmaster_beas_move_06.mp3\/revision\/latest?cb=20201010172032",
+        "title": "Fight or flight."
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/6\/66\/Vo_beastmaster_beas_move_07.mp3\/revision\/latest?cb=20201010172035",
+        "title": "I move!"
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/4\/41\/Vo_beastmaster_beas_move_08.mp3\/revision\/latest?cb=20201010172037",
+        "title": "Agreed!"
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/6\/6c\/Vo_beastmaster_beas_move_09.mp3\/revision\/latest?cb=20201010172040",
+        "title": "I run!"
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/e\/e7\/Vo_beastmaster_beas_move_10.mp3\/revision\/latest?cb=20201010172043",
+        "title": "To battle!"
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/7\/75\/Vo_beastmaster_beas_move_11.mp3\/revision\/latest?cb=20201010172045",
+        "title": "A short migration."
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/0\/08\/Vo_beastmaster_beas_move_12.mp3\/revision\/latest?cb=20201010172048",
+        "title": "On the trail."
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/3\/35\/Vo_beastmaster_beas_move_13.mp3\/revision\/latest?cb=20201010172051",
+        "title": "Nuff said."
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/d\/d9\/Vo_beastmaster_beas_move_14.mp3\/revision\/latest?cb=20201010172054",
+        "title": "On the track."
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/5\/5d\/Vo_beastmaster_beas_move_15.mp3\/revision\/latest?cb=20201010172056",
+        "title": "Whose spoor is this."
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/3\/34\/Vo_beastmaster_beas_move_16.mp3\/revision\/latest?cb=20201010172059",
+        "title": "This way!"
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/4\/47\/Vo_beastmaster_beas_ability_summonsbird_02.mp3\/revision\/latest?cb=20201010171415",
+        "title": "Fly my friend!"
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/5\/56\/Vo_beastmaster_beas_ability_summonsbird_03.mp3\/revision\/latest?cb=20201010171417",
+        "title": "Soar and swoop!"
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/4\/48\/Vo_beastmaster_beas_ability_summonsbird_04.mp3\/revision\/latest?cb=20201010171418",
+        "title": "Soar!"
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/b\/b9\/Vo_beastmaster_beas_ability_hawk_move_01.mp3\/revision\/latest?cb=20201010171411",
+        "title": "Ястребиный крик"
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/d\/d8\/Vo_beastmaster_beas_ability_summonsboar_02.mp3\/revision\/latest?cb=20201010171423",
+        "title": "Hoof it."
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/2\/25\/Vo_beastmaster_beas_ability_summonsboar_03.mp3\/revision\/latest?cb=20201010171425",
+        "title": "Fetch!"
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/9\/96\/Vo_beastmaster_beas_ability_boar_move_01.mp3\/revision\/latest?cb=20201010171352",
+        "title": "Фырканье кабана"
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/6\/69\/Vo_beastmaster_beas_ability_boar_move_02.mp3\/revision\/latest?cb=20201010171354",
+        "isArcane": true,
+        "title": "Фырканье кабана"
+      }
+    ],
+    "category": "Передвижение"
+  },
+  {
+    "responses": [
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/a\/af\/Vo_beastmaster_beas_attack_01.mp3\/revision\/latest?cb=20201010171443",
+        "title": "Attack!"
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/6\/6c\/Vo_beastmaster_beas_attack_02.mp3\/revision\/latest?cb=20201010171445",
+        "title": "A mauling."
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/6\/61\/Vo_beastmaster_beas_attack_03.mp3\/revision\/latest?cb=20201010171449",
+        "title": "Easy prey."
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/1\/1a\/Vo_beastmaster_beas_attack_04.mp3\/revision\/latest?cb=20201010171451",
+        "title": "Pounce."
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/3\/3f\/Vo_beastmaster_beas_attack_05.mp3\/revision\/latest?cb=20201010171454",
+        "title": "Swoop to battle."
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/f\/f7\/Vo_beastmaster_beas_attack_06.mp3\/revision\/latest?cb=20201010171456",
+        "title": "Forward."
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/3\/32\/Vo_beastmaster_beas_attack_07.mp3\/revision\/latest?cb=20201010171459",
+        "title": "I'm game."
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/8\/8f\/Vo_beastmaster_beas_attack_08.mp3\/revision\/latest?cb=20201010171502",
+        "title": "Blood sport."
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/5\/50\/Vo_beastmaster_beas_attack_09.mp3\/revision\/latest?cb=20201010171504",
+        "title": "Feel my bite!"
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/2\/2e\/Vo_beastmaster_beas_attack_10.mp3\/revision\/latest?cb=20201010171508",
+        "title": "Claws out!"
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/3\/34\/Vo_beastmaster_beas_attack_11.mp3\/revision\/latest?cb=20201010171511",
+        "title": "Mastery!"
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/6\/65\/Vo_beastmaster_beas_attack_12.mp3\/revision\/latest?cb=20201010171513",
+        "title": "Raaarharhr."
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/c\/cf\/Vo_beastmaster_beas_attack_13.mp3\/revision\/latest?cb=20201010171516",
+        "title": "Rahr uh ruaoreh."
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/d\/d3\/Vo_beastmaster_beas_attack_14.mp3\/revision\/latest?cb=20201010171519",
+        "title": "Rehr."
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/c\/cc\/Vo_beastmaster_beas_attack_15.mp3\/revision\/latest?cb=20201010171521",
+        "title": "Argh sneggeh."
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/3\/3d\/Vo_beastmaster_beas_cast_02.mp3\/revision\/latest?cb=20201010171602",
+        "title": "There you are."
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/7\/7c\/Vo_beastmaster_beas_cast_04.mp3\/revision\/latest?cb=20201010171607",
+        "title": "Mmm, on your scent."
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/a\/af\/Vo_beastmaster_beas_cast_06.mp3\/revision\/latest?cb=20201010171612",
+        "title": "You should pray. You are prey."
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/6\/62\/Vo_beastmaster_beas_ability_animalsound_03.mp3\/revision\/latest?cb=20201010172418",
+        "title": "Enarllehgh."
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/7\/73\/Vo_beastmaster_beas_ability_animalsound_04.mp3\/revision\/latest?cb=20201010172420",
+        "title": "Henerlehehe."
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/7\/72\/Vo_beastmaster_beas_ability_summonsboar_01.mp3\/revision\/latest?cb=20201010171422",
+        "title": "Pierce them with your quills."
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/0\/0b\/Vo_beastmaster_beas_ability_summonsboar_05.mp3\/revision\/latest?cb=20201010171429",
+        "title": "Go boy, go get um!"
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/3\/3c\/Vo_beastmaster_beas_ability_summonsboar_06.mp3\/revision\/latest?cb=20201010171431",
+        "title": "After them!"
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/4\/4c\/Vo_beastmaster_beas_ability_boar_attack_01.mp3\/revision\/latest?cb=20201010171348",
+        "title": "Ворчание кабана"
+      }
+    ],
+    "category": "Атака"
+  },
+  {
+    "responses": [
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/1\/1b\/Vo_beastmaster_beas_cast_01.mp3\/revision\/latest?cb=20201010171559",
+        "title": "Mmm, caught your scent."
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/a\/a1\/Vo_beastmaster_beas_cast_03.mp3\/revision\/latest?cb=20201010171605",
+        "title": "Can't evade me."
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/b\/ba\/Vo_beastmaster_beas_cast_05.mp3\/revision\/latest?cb=20201010171610",
+        "title": "I stalk my prey."
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/9\/97\/Vo_beastmaster_beas_cast_07.mp3\/revision\/latest?cb=20201010171614",
+        "title": "Mmm, mm, em."
+      }
+    ],
+    "category": "Использование заклинания"
+  },
+  {
+    "responses": [
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/f\/fc\/Vo_beastmaster_beas_ability_axes_01.mp3\/revision\/latest?cb=20201010171337",
+        "title": "Axes wild!"
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/4\/48\/Vo_beastmaster_beas_ability_axes_03.mp3\/revision\/latest?cb=20201010171341",
+        "title": "My blades fly!"
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/5\/5e\/Vo_beastmaster_beas_ability_axes_04.mp3\/revision\/latest?cb=20201010171343",
+        "title": "Boomeraxe."
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/5\/5d\/Vo_beastmaster_beas_ability_axes_05.mp3\/revision\/latest?cb=20201010171345",
+        "title": "Wingblade."
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/1\/16\/Vo_beastmaster_beas_ability_axes_06.mp3\/revision\/latest?cb=20201010171347",
+        "title": "Heyuhh!"
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/8\/8d\/Vo_beastmaster_beas_ability_callwild_05.mp3\/revision\/latest?cb=20201010171403",
+        "title": "My beasts!"
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/4\/4d\/Vo_beastmaster_beas_ability_summonsbird_01.mp3\/revision\/latest?cb=20201010171413",
+        "title": "Be my eyes."
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/7\/76\/Vo_beastmaster_beas_ability_summonsbird_05.mp3\/revision\/latest?cb=20201010171420",
+        "title": "Give me vision!"
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/4\/42\/Vo_beastmaster_beas_ability_callwild_04.mp3\/revision\/latest?cb=20201010171401",
+        "title": "To me!"
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/4\/45\/Vo_beastmaster_beas_ability_summonsboar_04.mp3\/revision\/latest?cb=20201010171427",
+        "title": "Sic 'Em!"
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/d\/d7\/Vo_beastmaster_beas_ability_callwild_01.mp3\/revision\/latest?cb=20201010171355",
+        "title": "Beasts, to me!"
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/4\/41\/Vo_beastmaster_beas_ability_callwild_02.mp3\/revision\/latest?cb=20201010171357",
+        "title": "Wild ones, come!"
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/5\/5c\/Vo_beastmaster_beas_ability_callwild_03.mp3\/revision\/latest?cb=20201010171359",
+        "title": "Come, my friends."
+      }
+    ],
+    "category": "Способности"
+  },
+  {
+    "responses": [
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/1\/16\/Vo_beastmaster_beas_level_01.mp3\/revision\/latest?cb=20201010171950",
+        "title": "My strength increases!"
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/0\/00\/Vo_beastmaster_beas_level_02.mp3\/revision\/latest?cb=20201010171953",
+        "title": "My power matures!"
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/6\/6c\/Vo_beastmaster_beas_level_03.mp3\/revision\/latest?cb=20201010171956",
+        "title": "The beast grows!"
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/3\/34\/Vo_beastmaster_beas_level_04.mp3\/revision\/latest?cb=20201010171958",
+        "title": "Feed the beast within!"
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/1\/13\/Vo_beastmaster_beas_level_05.mp3\/revision\/latest?cb=20201010172001",
+        "title": "Stronger!"
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/6\/6f\/Vo_beastmaster_beas_level_06.mp3\/revision\/latest?cb=20201010172003",
+        "title": "Sharper I bite."
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/9\/94\/Vo_beastmaster_beas_level_07.mp3\/revision\/latest?cb=20201010172005",
+        "title": "Greater mastery."
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/5\/55\/Vo_beastmaster_beas_level_08.mp3\/revision\/latest?cb=20201010172008",
+        "title": "Huh he he he heh huh heuhheh."
+      }
+    ],
+    "category": "Получение уровня"
+  },
+  {
+    "responses": [
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/1\/1a\/Vo_beastmaster_beas_kill_01.mp3\/revision\/latest?cb=20201010171816",
+        "title": "You've got to bite to eat."
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/e\/e3\/Vo_beastmaster_beas_kill_02.mp3\/revision\/latest?cb=20201010171819",
+        "title": "Nature, red in tooth and talon."
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/f\/f9\/Vo_beastmaster_beas_kill_03.mp3\/revision\/latest?cb=20201010171822",
+        "title": "Welcome to the food chain."
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/9\/99\/Vo_beastmaster_beas_kill_04.mp3\/revision\/latest?cb=20201010171825",
+        "title": "I made my kill."
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/d\/d4\/Vo_beastmaster_beas_kill_05.mp3\/revision\/latest?cb=20201010171827",
+        "title": "It's the nature of the beast."
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/7\/75\/Vo_beastmaster_beas_kill_06.mp3\/revision\/latest?cb=20201010171830",
+        "title": "Your life cycle ends."
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/8\/8b\/Vo_beastmaster_beas_kill_07.mp3\/revision\/latest?cb=20201010171833",
+        "title": "The worms will have you."
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/9\/9f\/Vo_beastmaster_beas_kill_08.mp3\/revision\/latest?cb=20201010171835",
+        "title": "My prey falls."
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/0\/0c\/Vo_beastmaster_beas_kill_09.mp3\/revision\/latest?cb=20201010171838",
+        "title": "Nature takes its course."
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/9\/91\/Vo_beastmaster_beas_kill_10.mp3\/revision\/latest?cb=20201010171841",
+        "title": "Your elements return to nature."
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/f\/f2\/Vo_beastmaster_beas_kill_11.mp3\/revision\/latest?cb=20201010171844",
+        "title": "Carrion's comfort food."
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/7\/79\/Vo_beastmaster_beas_kill_12.mp3\/revision\/latest?cb=20201010171846",
+        "title": "You're spoor."
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/9\/9f\/Vo_beastmaster_beas_kill_13.mp3\/revision\/latest?cb=20201010171849",
+        "title": "My masterpiece."
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/5\/58\/Vo_beastmaster_beas_kill_14.mp3\/revision\/latest?cb=20201010171852",
+        "title": "Har he he heh."
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/e\/e6\/Vo_beastmaster_beas_laugh_01.mp3\/revision\/latest?cb=20201010171926",
+        "title": "Heh he har he har"
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/c\/cb\/Vo_beastmaster_beas_laugh_02.mp3\/revision\/latest?cb=20201010171929",
+        "title": "Yeah, heh heh harhehheh."
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/6\/61\/Vo_beastmaster_beas_laugh_03.mp3\/revision\/latest?cb=20201010171932",
+        "title": "Heh he he heh."
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/a\/a4\/Vo_beastmaster_beas_laugh_04.mp3\/revision\/latest?cb=20201010171935",
+        "title": "Heh heh heh heh he heh."
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/7\/71\/Vo_beastmaster_beas_laugh_05.mp3\/revision\/latest?cb=20201010171937",
+        "title": "Heh heh heh heh."
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/a\/a1\/Vo_beastmaster_beas_laugh_06.mp3\/revision\/latest?cb=20201010171940",
+        "title": "Howe heh heh heh eah heh."
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/3\/35\/Vo_beastmaster_beas_laugh_09.mp3\/revision\/latest?cb=20201010171947",
+        "title": "Howeh heh heh eh hah heh heh heh."
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/f\/ff\/Vo_beastmaster_beas_killspecial_rattl_01.mp3\/revision\/latest?cb=20201010171854",
+        "title": "Calm your beard, Rattletrap.",
+        "icons": [
+          "heroes\/Clockwerk\/minimap.png"
+        ]
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/e\/ec\/Vo_beastmaster_beas_killspecial_rattl_02.mp3\/revision\/latest?cb=20201010171857",
+        "title": "Rattletrap, calm your beard.",
+        "icons": [
+          "heroes\/Clockwerk\/minimap.png"
+        ]
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/d\/da\/Vo_beastmaster_beas_killspecial_zuus_01.mp3\/revision\/latest?cb=20201010171900",
+        "title": "Calm your beard, Zuus.",
+        "icons": [
+          "heroes\/Zeus\/minimap.png"
+        ]
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/1\/1e\/Vo_beastmaster_beas_killspecial_zuus_02.mp3\/revision\/latest?cb=20201010171903",
+        "title": "Zuus, calm your beard.",
+        "icons": [
+          "heroes\/Zeus\/minimap.png"
+        ]
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/3\/33\/Vo_beastmaster_beas_firstblood_01.mp3\/revision\/latest?cb=20201010171736",
+        "title": "First blood, Hereaheh!"
+      }
+    ],
+    "category": "Убийство врага"
+  },
+  {
+    "responses": [
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/8\/89\/Vo_beastmaster_beas_lasthit_01.mp3\/revision\/latest?cb=20201010171905",
+        "title": "Nature's bounty."
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/9\/9b\/Vo_beastmaster_beas_lasthit_02.mp3\/revision\/latest?cb=20201010171908",
+        "title": "I'll take that."
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/d\/dd\/Vo_beastmaster_beas_lasthit_03.mp3\/revision\/latest?cb=20201010171911",
+        "title": "Pay the beast."
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/d\/d8\/Vo_beastmaster_beas_lasthit_04.mp3\/revision\/latest?cb=20201010171913",
+        "title": "Over mastered."
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/9\/94\/Vo_beastmaster_beas_lasthit_05.mp3\/revision\/latest?cb=20201010171916",
+        "title": "Bounty for your hide."
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/4\/48\/Vo_beastmaster_beas_lasthit_06.mp3\/revision\/latest?cb=20201010171919",
+        "title": "That's one life spent."
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/9\/9a\/Vo_beastmaster_beas_lasthit_07.mp3\/revision\/latest?cb=20201010171922",
+        "title": "Quick death."
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/f\/f6\/Vo_beastmaster_beas_lasthit_08.mp3\/revision\/latest?cb=20201010171924",
+        "title": "Heh hah heh heh!"
+      }
+    ],
+    "category": "Добивание"
+  },
+  {
+    "responses": [
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/d\/d3\/Vo_beastmaster_beas_deny_01.mp3\/revision\/latest?cb=20201010171656",
+        "title": "Denied!"
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/9\/93\/Vo_beastmaster_beas_deny_02.mp3\/revision\/latest?cb=20201010171659",
+        "isArcane": true,
+        "title": "Denied!"
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/2\/22\/Vo_beastmaster_beas_deny_03.mp3\/revision\/latest?cb=20201010171702",
+        "title": "Umm, uh."
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/c\/c3\/Vo_beastmaster_beas_deny_04.mp3\/revision\/latest?cb=20201010171704",
+        "title": "No!"
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/0\/01\/Vo_beastmaster_beas_deny_05.mp3\/revision\/latest?cb=20201010171706",
+        "title": "No."
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/d\/db\/Vo_beastmaster_beas_deny_06.mp3\/revision\/latest?cb=20201010171709",
+        "title": "Not while I'm around."
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/6\/6e\/Vo_beastmaster_beas_deny_07.mp3\/revision\/latest?cb=20201010171712",
+        "title": "Claimed by the beast."
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/2\/2e\/Vo_beastmaster_beas_deny_08.mp3\/revision\/latest?cb=20201010171714",
+        "title": "Neh heh heh harreh."
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/5\/53\/Vo_beastmaster_beas_deny_09.mp3\/revision\/latest?cb=20201010171717",
+        "title": "Marked my territory."
+      }
+    ],
+    "category": "Добивание союзного юнита"
+  },
+  {
+    "responses": [
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/0\/07\/Vo_beastmaster_beas_purch_01.mp3\/revision\/latest?cb=20201010172229",
+        "title": "Money well spent."
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/4\/44\/Vo_beastmaster_beas_purch_02.mp3\/revision\/latest?cb=20201010172232",
+        "title": "This will help."
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/6\/66\/Vo_beastmaster_beas_purch_03.mp3\/revision\/latest?cb=20201010172234",
+        "title": "Now, they pay."
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/d\/dd\/Vo_beastmaster_beas_purch_04.mp3\/revision\/latest?cb=20201010172237",
+        "title": "Possessions aren't all bad."
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/7\/7d\/Vo_beastmaster_beas_blink_01.mp3\/revision\/latest?cb=20201010171524",
+        "title": "Blink dagger.",
+        "icons": [
+          "items\/Blink Dagger\/full.png"
+        ]
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/2\/2a\/Vo_beastmaster_beas_blink_02.mp3\/revision\/latest?cb=20201010171527",
+        "title": "Blink dagger is mine.",
+        "icons": [
+          "items\/Blink Dagger\/full.png"
+        ]
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/b\/b0\/Vo_beastmaster_beas_scepter_01.mp3\/revision\/latest?cb=20201010172331",
+        "title": "Ah, scepter.",
+        "icons": [
+          "items\/Aghanim's Scepter\/full.png"
+        ]
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/a\/a9\/Vo_beastmaster_beas_scepter_02.mp3\/revision\/latest?cb=20201010172334",
+        "title": "Scepter!",
+        "icons": [
+          "items\/Aghanim's Scepter\/full.png"
+        ]
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/b\/b9\/Vo_beastmaster_beas_buysnecro_01.mp3\/revision\/latest?cb=20201010171540",
+        "title": "Necronomicon!",
+        "icons": [
+          "items\/Necronomicon\/full.png"
+        ]
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/5\/51\/Vo_beastmaster_beas_buysnecro_02.mp3\/revision\/latest?cb=20201010171542",
+        "title": "Your big book of creatures.",
+        "icons": [
+          "items\/Necronomicon\/full.png"
+        ]
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/9\/9a\/Vo_beastmaster_beas_buysnecro_03.mp3\/revision\/latest?cb=20201010171545",
+        "title": "More creatures for my pride.",
+        "icons": [
+          "items\/Necronomicon\/full.png"
+        ]
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/2\/2c\/Vo_beastmaster_beas_buysnecro_04.mp3\/revision\/latest?cb=20201010171548",
+        "title": "What book is this?",
+        "icons": [
+          "items\/Necronomicon\/full.png"
+        ]
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/7\/7c\/Vo_beastmaster_beas_buysnecro_05.mp3\/revision\/latest?cb=20201010171551",
+        "title": "What creatures will this call?",
+        "icons": [
+          "items\/Necronomicon\/full.png"
+        ]
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/0\/0f\/Vo_beastmaster_beas_buysnecro_06.mp3\/revision\/latest?cb=20201010171554",
+        "title": "Mm, mm, this smells unnatural.",
+        "icons": [
+          "items\/Necronomicon\/full.png"
+        ]
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/4\/42\/Vo_beastmaster_beas_buysnecro_07.mp3\/revision\/latest?cb=20201010171557",
+        "title": "Hmm, wish I'd learned how to read.",
+        "icons": [
+          "items\/Necronomicon\/full.png"
+        ]
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/6\/6d\/Vo_beastmaster_beas_immort_01.mp3\/revision\/latest?cb=20201010171803",
+        "title": "Immortality!",
+        "icons": [
+          "heroes\/Aegis of the Immortal\/minimap.png"
+        ]
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/8\/86\/Vo_beastmaster_beas_immort_02.mp3\/revision\/latest?cb=20201010171806",
+        "title": "A strict no-kill policy.",
+        "icons": [
+          "heroes\/Aegis of the Immortal\/minimap.png"
+        ]
+      }
+    ],
+    "category": "Получение предмета"
+  },
+  {
+    "responses": [
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/9\/9b\/Vo_beastmaster_beas_death_01.mp3\/revision\/latest?cb=20201010171619",
+        "title": "No!"
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/0\/0e\/Vo_beastmaster_beas_death_02.mp3\/revision\/latest?cb=20201010171621",
+        "title": "I free the beast in me."
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/6\/68\/Vo_beastmaster_beas_death_03.mp3\/revision\/latest?cb=20201010171624",
+        "title": "I fought tooth and nail."
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/d\/d6\/Vo_beastmaster_beas_death_04.mp3\/revision\/latest?cb=20201010171627",
+        "title": "A death not fit for man or beast."
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/c\/cc\/Vo_beastmaster_beas_death_05.mp3\/revision\/latest?cb=20201010171630",
+        "title": "I am\u2026put down."
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/2\/2c\/Vo_beastmaster_beas_death_06.mp3\/revision\/latest?cb=20201010171633",
+        "title": "I return to the soil."
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/b\/b2\/Vo_beastmaster_beas_death_07.mp3\/revision\/latest?cb=20201010171635",
+        "title": "I die feral, as I lived."
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/4\/48\/Vo_beastmaster_beas_death_08.mp3\/revision\/latest?cb=20201010171638",
+        "title": "Released into the wild."
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/c\/ca\/Vo_beastmaster_beas_death_09.mp3\/revision\/latest?cb=20201010171641",
+        "title": "Nature welcomes me home."
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/e\/e7\/Vo_beastmaster_beas_death_10.mp3\/revision\/latest?cb=20201010171643",
+        "title": "This will come back to bite you."
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/b\/b1\/Vo_beastmaster_beas_death_11.mp3\/revision\/latest?cb=20201010171646",
+        "title": "An unnatural death."
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/6\/64\/Vo_beastmaster_beas_death_12.mp3\/revision\/latest?cb=20201010171649",
+        "title": "Bit off more than I could\u2026chew."
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/d\/db\/Vo_beastmaster_beas_death_13.mp3\/revision\/latest?cb=20201010171651",
+        "title": "You will never tame me."
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/e\/ef\/Vo_beastmaster_beas_death_14.mp3\/revision\/latest?cb=20201010171654",
+        "title": "Unleashed."
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/0\/05\/Vo_beastmaster_beas_ability_hawk_death_01.mp3\/revision\/latest?cb=20201010171410",
+        "title": "Крик умирающего ястреба"
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/1\/10\/Vo_beastmaster_beas_ability_boar_death_01.mp3\/revision\/latest?cb=20201010171350",
+        "title": "Рёв умирающего кабана"
+      }
+    ],
+    "category": "Смерть"
+  },
+  {
+    "responses": [
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/e\/ea\/Vo_beastmaster_beas_respawn_01.mp3\/revision\/latest?cb=20201010172259",
+        "title": "I live to hunt again."
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/b\/bb\/Vo_beastmaster_beas_respawn_02.mp3\/revision\/latest?cb=20201010172301",
+        "title": "The beast is back."
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/8\/8e\/Vo_beastmaster_beas_respawn_03.mp3\/revision\/latest?cb=20201010172304",
+        "title": "The master returns."
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/b\/b9\/Vo_beastmaster_beas_respawn_04.mp3\/revision\/latest?cb=20201010172307",
+        "title": "My bite is worse than my bark."
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/4\/41\/Vo_beastmaster_beas_respawn_05.mp3\/revision\/latest?cb=20201010172310",
+        "title": "Endangered but far from extinct."
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/f\/f8\/Vo_beastmaster_beas_respawn_06.mp3\/revision\/latest?cb=20201010172312",
+        "title": "Back on the endangered list."
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/7\/7a\/Vo_beastmaster_beas_respawn_07.mp3\/revision\/latest?cb=20201010172315",
+        "title": "Can't fence me in."
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/6\/64\/Vo_beastmaster_beas_respawn_08.mp3\/revision\/latest?cb=20201010172318",
+        "title": "The cycle of life continues."
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/a\/ab\/Vo_beastmaster_beas_respawn_09.mp3\/revision\/latest?cb=20201010172321",
+        "title": "Again, I sink my teeth into life."
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/7\/7a\/Vo_beastmaster_beas_respawn_10.mp3\/revision\/latest?cb=20201010172323",
+        "title": "My jaws ache fo vengeance."
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/6\/6a\/Vo_beastmaster_beas_respawn_11.mp3\/revision\/latest?cb=20201010172326",
+        "title": "My wild friends welcome me."
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/e\/ef\/Vo_beastmaster_beas_respawn_12.mp3\/revision\/latest?cb=20201010172328",
+        "title": "I'm off the endangered list."
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/5\/57\/Vo_beastmaster_beas_laugh_07.mp3\/revision\/latest?cb=20201010171943",
+        "title": "Howah heh heh heh heh heh heh."
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/b\/ba\/Vo_beastmaster_beas_laugh_08.mp3\/revision\/latest?cb=20201010171946",
+        "title": "Hurawh eh heh eh eahgh ara he heh heh heh."
+      }
+    ],
+    "category": "Возрождение"
+  },
+  {
+    "responses": [
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/a\/a5\/Vo_beastmaster_beas_bottle_01.mp3\/revision\/latest?cb=20201010171529",
+        "title": "For when I need it."
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/9\/93\/Vo_beastmaster_beas_bottle_02.mp3\/revision\/latest?cb=20201010171532",
+        "title": "For later."
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/4\/4a\/Vo_beastmaster_beas_bottle_03.mp3\/revision\/latest?cb=20201010171535",
+        "title": "Into the specimen jar."
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/9\/97\/Vo_beastmaster_beas_bottle_04.mp3\/revision\/latest?cb=20201010171538",
+        "title": "I like to travel light, but I'll make an exception."
+      }
+    ],
+    "category": "Наполнение бутылки"
+  },
+  {
+    "responses": [
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/6\/6f\/Vo_beastmaster_beas_happy_05.mp3\/revision\/latest?cb=20201010171749",
+        "title": "He-har har."
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/1\/12\/Vo_beastmaster_beas_ability_animalsound_01.mp3\/revision\/latest?cb=20201010172412",
+        "title": "Hoo hoo hoo."
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/f\/f6\/Vo_beastmaster_beas_ability_animalsound_05.mp3\/revision\/latest?cb=20201010172423",
+        "title": "Wa-hoo!"
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/b\/b9\/Vo_beastmaster_beas_doubdam_01.mp3\/revision\/latest?cb=20201010171720",
+        "title": "Double damage!"
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/4\/46\/Vo_beastmaster_beas_doubdam_02.mp3\/revision\/latest?cb=20201010171723",
+        "title": "Twice the bite."
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/9\/98\/Vo_beastmaster_beas_haste_01.mp3\/revision\/latest?cb=20201010171752",
+        "title": "Haste!"
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/5\/59\/Vo_beastmaster_beas_haste_02.mp3\/revision\/latest?cb=20201010171755",
+        "title": "Fast as falcon wings."
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/6\/67\/Vo_beastmaster_beas_illus_01.mp3\/revision\/latest?cb=20201010171757",
+        "title": "Illusion!"
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/8\/87\/Vo_beastmaster_beas_illus_02.mp3\/revision\/latest?cb=20201010171800",
+        "title": "Running with the pack."
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/a\/a9\/Vo_beastmaster_beas_invis_01.mp3\/revision\/latest?cb=20201010171811",
+        "title": "Invisibility!"
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/4\/45\/Vo_beastmaster_beas_invis_02.mp3\/revision\/latest?cb=20201010171814",
+        "title": "Even eagle eyes couldn't see me."
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/0\/01\/Vo_beastmaster_beas_regen_01.mp3\/revision\/latest?cb=20201010172254",
+        "title": "Regeneration!"
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/8\/86\/Vo_beastmaster_beas_regen_02.mp3\/revision\/latest?cb=20201010172257",
+        "title": "I lick my wounds."
+      }
+    ],
+    "category": "Активация рун"
+  },
+  {
+    "responses": [
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/6\/6d\/Vo_beastmaster_beas_notyet_01.mp3\/revision\/latest?cb=20201010172126",
+        "title": "Not yet."
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/3\/3b\/Vo_beastmaster_beas_notyet_02.mp3\/revision\/latest?cb=20201010172128",
+        "title": "I'm not ready."
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/9\/9f\/Vo_beastmaster_beas_notyet_03.mp3\/revision\/latest?cb=20201010172131",
+        "title": "It's not time."
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/0\/0b\/Vo_beastmaster_beas_notyet_04.mp3\/revision\/latest?cb=20201010172134",
+        "title": "Not yet."
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/2\/2e\/Vo_beastmaster_beas_notyet_05.mp3\/revision\/latest?cb=20201010172136",
+        "title": "I'm not ready."
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/0\/05\/Vo_beastmaster_beas_notyet_06.mp3\/revision\/latest?cb=20201010172139",
+        "title": "It's not time."
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/e\/e2\/Vo_beastmaster_beas_notyet_07.mp3\/revision\/latest?cb=20201010172142",
+        "title": "Not yet!"
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/f\/f4\/Vo_beastmaster_beas_notyet_08.mp3\/revision\/latest?cb=20201010172145",
+        "title": "I'm not ready!"
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/6\/64\/Vo_beastmaster_beas_notyet_09.mp3\/revision\/latest?cb=20201010172148",
+        "title": "It's not time yet!"
+      }
+    ],
+    "category": "Способность на перезарядке"
+  },
+  {
+    "responses": [
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/f\/f9\/Vo_beastmaster_beas_nomana_01.mp3\/revision\/latest?cb=20201010172102",
+        "title": "Out of mana."
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/7\/7b\/Vo_beastmaster_beas_nomana_02.mp3\/revision\/latest?cb=20201010172104",
+        "title": "No mana."
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/7\/7a\/Vo_beastmaster_beas_nomana_03.mp3\/revision\/latest?cb=20201010172107",
+        "title": "Not enough mana."
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/b\/b5\/Vo_beastmaster_beas_nomana_04.mp3\/revision\/latest?cb=20201010172110",
+        "title": "Out of mana."
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/7\/74\/Vo_beastmaster_beas_nomana_05.mp3\/revision\/latest?cb=20201010172112",
+        "title": "No mana."
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/6\/62\/Vo_beastmaster_beas_nomana_06.mp3\/revision\/latest?cb=20201010172115",
+        "title": "Not enough mana."
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/3\/34\/Vo_beastmaster_beas_nomana_07.mp3\/revision\/latest?cb=20201010172118",
+        "title": "Out of mana."
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/5\/51\/Vo_beastmaster_beas_nomana_08.mp3\/revision\/latest?cb=20201010172120",
+        "title": "No mana!"
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/9\/97\/Vo_beastmaster_beas_nomana_09.mp3\/revision\/latest?cb=20201010172123",
+        "title": "Not enough mana!"
+      }
+    ],
+    "category": "Нехватка маны"
+  },
+  {
+    "responses": [
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/6\/6d\/Vo_beastmaster_beas_pain_01.mp3\/revision\/latest?cb=20201010172150",
+        "title": "Eugh."
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/b\/bd\/Vo_beastmaster_beas_pain_02.mp3\/revision\/latest?cb=20201010172153",
+        "title": "Ehh!"
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/2\/25\/Vo_beastmaster_beas_pain_03.mp3\/revision\/latest?cb=20201010172155",
+        "title": "Eh!"
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/5\/5c\/Vo_beastmaster_beas_pain_04.mp3\/revision\/latest?cb=20201010172158",
+        "title": "Eaghh!"
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/1\/1a\/Vo_beastmaster_beas_pain_05.mp3\/revision\/latest?cb=20201010172200",
+        "title": "Eah!"
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/1\/17\/Vo_beastmaster_beas_pain_06.mp3\/revision\/latest?cb=20201010172203",
+        "title": "Eugh!"
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/0\/08\/Vo_beastmaster_beas_pain_07.mp3\/revision\/latest?cb=20201010172205",
+        "title": "Arrgh."
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/f\/f9\/Vo_beastmaster_beas_pain_08.mp3\/revision\/latest?cb=20201010172208",
+        "title": "Oahh!"
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/a\/ac\/Vo_beastmaster_beas_pain_09.mp3\/revision\/latest?cb=20201010172211",
+        "title": "Eaow!"
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/1\/19\/Vo_beastmaster_beas_pain_10.mp3\/revision\/latest?cb=20201010172213",
+        "title": "Eauow!"
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/3\/33\/Vo_beastmaster_beas_pain_11.mp3\/revision\/latest?cb=20201010172216",
+        "title": "Heaa!"
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/8\/82\/Vo_beastmaster_beas_pain_12.mp3\/revision\/latest?cb=20201010172218",
+        "title": "Hooer!"
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/9\/97\/Vo_beastmaster_beas_pain_13.mp3\/revision\/latest?cb=20201010172220",
+        "title": "Owwwaeh!"
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/2\/2e\/Vo_beastmaster_beas_pain_14.mp3\/revision\/latest?cb=20201010172223",
+        "title": "Hey, you poked me!"
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/a\/ab\/Vo_beastmaster_beas_pain_15.mp3\/revision\/latest?cb=20201010172226",
+        "title": "Hererere!"
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/0\/08\/Vo_beastmaster_beas_underattack_01.mp3\/revision\/latest?cb=20201010172401",
+        "title": "I'm under attack!"
+      }
+    ],
+    "category": "Получение урона"
+  },
+  {
+    "responses": [
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/0\/08\/Vo_beastmaster_beas_ability_axes_02.mp3\/revision\/latest?cb=20201010171339",
+        "title": "Even my axes are trained."
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/7\/79\/Vo_beastmaster_beas_rare_01.mp3\/revision\/latest?cb=20201010172240",
+        "title": "I'll be creeping while you are sleeping."
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/4\/44\/Vo_beastmaster_beas_rare_02.mp3\/revision\/latest?cb=20201010172243",
+        "title": "I run with the rabbit and hunt with the hounds."
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/d\/de\/Vo_beastmaster_beas_rare_03.mp3\/revision\/latest?cb=20201010172246",
+        "title": "It's not the size of the beast in the fight\u2026well, actually, size kinda helps."
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/9\/9d\/Vo_beastmaster_beas_rare_04.mp3\/revision\/latest?cb=20201010172249",
+        "title": "Basshunter, on the hunt."
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/6\/63\/Vo_beastmaster_beas_rare_05.mp3\/revision\/latest?cb=20201010172251",
+        "isArcane": true,
+        "title": "Basshunter, on the hunt."
+      }
+    ],
+    "category": "Редкие фразы"
+  },
+  {
+    "responses": [
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/d\/dc\/Vo_beastmaster_beas_thanks_01.mp3\/revision\/latest?cb=20201010172355",
+        "title": "Thanks."
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/8\/83\/Vo_beastmaster_beas_thanks_02.mp3\/revision\/latest?cb=20201010172358",
+        "title": "The Beastmaster thanks you!"
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/e\/e6\/Vo_beastmaster_beas_laugh_01.mp3\/revision\/latest?cb=20201010171926",
+        "title": "Heh he har he har"
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/c\/cb\/Vo_beastmaster_beas_laugh_02.mp3\/revision\/latest?cb=20201010171929",
+        "title": "Yeah, heh heh harhehheh."
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/6\/61\/Vo_beastmaster_beas_laugh_03.mp3\/revision\/latest?cb=20201010171932",
+        "title": "Heh he he heh."
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/a\/a4\/Vo_beastmaster_beas_laugh_04.mp3\/revision\/latest?cb=20201010171935",
+        "title": "Heh heh heh heh he heh."
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/7\/71\/Vo_beastmaster_beas_laugh_05.mp3\/revision\/latest?cb=20201010171937",
+        "title": "Heh heh heh heh."
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/a\/a1\/Vo_beastmaster_beas_laugh_06.mp3\/revision\/latest?cb=20201010171940",
+        "title": "Howe heh heh heh eah heh."
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/5\/57\/Vo_beastmaster_beas_laugh_07.mp3\/revision\/latest?cb=20201010171943",
+        "title": "Howah heh heh heh heh heh heh."
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/b\/ba\/Vo_beastmaster_beas_laugh_08.mp3\/revision\/latest?cb=20201010171946",
+        "title": "Hurawh eh heh eh eahgh ara he heh heh heh."
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/3\/35\/Vo_beastmaster_beas_laugh_09.mp3\/revision\/latest?cb=20201010171947",
+        "title": "Howeh heh heh eh hah heh heh heh."
+      }
+    ],
+    "category": "Реплики в чате"
+  },
+  {
+    "responses": [
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/5\/51\/Vo_beastmaster_beas_win_01.mp3\/revision\/latest?cb=20201010172403",
+        "title": "Victory!"
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/d\/df\/Vo_beastmaster_beas_win_02.mp3\/revision\/latest?cb=20201010172407",
+        "title": "The dogs of war feast tonight!"
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/d\/dd\/Vo_beastmaster_beas_win_03.mp3\/revision\/latest?cb=20201010172410",
+        "title": "Eerr yes!"
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/5\/5b\/Vo_beastmaster_beas_lose_01.mp3\/revision\/latest?cb=20201010172011",
+        "title": "Noooo!"
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/7\/7e\/Vo_beastmaster_beas_lose_02.mp3\/revision\/latest?cb=20201010172013",
+        "title": "Defeated!"
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/9\/93\/Vo_beastmaster_beas_lose_03.mp3\/revision\/latest?cb=20201010172016",
+        "title": "A master no more."
+      }
+    ],
+    "category": "Окончание матча"
+  },
+  {
+    "responses": [
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/6\/6a\/Vo_beastmaster_beas_happy_02.mp3\/revision\/latest?cb=20201010171741",
+        "title": "Heah."
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/8\/8f\/Vo_beastmaster_beas_happy_03.mp3\/revision\/latest?cb=20201010171744",
+        "title": "Yeaah."
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/7\/72\/Vo_beastmaster_beas_happy_04.mp3\/revision\/latest?cb=20201010171746",
+        "title": "Howah!"
+      }
+    ],
+    "category": "Выпадение косметического предмета"
+  },
+  {
+    "responses": [
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/a\/ae\/Vo_beastmaster_beas_ability_failure_01.mp3\/revision\/latest?cb=20201010171404",
+        "title": "Herreh."
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/8\/87\/Vo_beastmaster_beas_ability_failure_02.mp3\/revision\/latest?cb=20201010171406",
+        "title": "Heh-noo!"
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/4\/40\/Vo_beastmaster_beas_ability_failure_03.mp3\/revision\/latest?cb=20201010171408",
+        "title": "Errehehehh."
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/c\/c3\/Vo_beastmaster_beas_shitwiz_01.mp3\/revision\/latest?cb=20201010172337",
+        "title": "Shitty wizard!"
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/5\/54\/Vo_beastmaster_beas_crumwiz_01.mp3\/revision\/latest?cb=20201010171616",
+        "title": "Crummy wizard!"
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/b\/bd\/Vo_beastmaster_beas_anger_02.mp3\/revision\/latest?cb=20201010171434",
+        "title": "Heararaeh."
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/5\/55\/Vo_beastmaster_beas_anger_03.mp3\/revision\/latest?cb=20201010171436",
+        "title": "Harreh."
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/6\/63\/Vo_beastmaster_beas_anger_04.mp3\/revision\/latest?cb=20201010171438",
+        "title": "Heranenen."
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/6\/65\/Vo_beastmaster_beas_anger_05.mp3\/revision\/latest?cb=20201010171440",
+        "title": "Heneneh."
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/8\/81\/Vo_beastmaster_beas_anger_06.mp3\/revision\/latest?cb=20201010171442",
+        "title": "Eurgh."
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/1\/13\/Vo_beastmaster_beas_happy_01.mp3\/revision\/latest?cb=20201010171738",
+        "title": "Heh."
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/7\/7b\/Vo_beastmaster_beas_ability_animalsound_02.mp3\/revision\/latest?cb=20201010172415",
+        "title": "Aroo arooew!"
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/b\/be\/Vo_beastmaster_beas_ability_animalsound_06.mp3\/revision\/latest?cb=20201010171326",
+        "title": "Hoo Hoooo"
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/c\/c3\/Vo_beastmaster_beas_ability_animalsound_07.mp3\/revision\/latest?cb=20201010171327",
+        "title": "Ha haaaa"
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/9\/9d\/Vo_beastmaster_beas_ability_animalsound_08.mp3\/revision\/latest?cb=20201010171329",
+        "title": "Aaaaaah"
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/7\/74\/Vo_beastmaster_beas_ability_animalsound_09.mp3\/revision\/latest?cb=20201010171331",
+        "title": "Aaaaaaaahh"
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/6\/6d\/Vo_beastmaster_beas_ability_animalsound_10.mp3\/revision\/latest?cb=20201010171332",
+        "title": "shiiee"
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/1\/1a\/Vo_beastmaster_beas_ability_animalsound_11.mp3\/revision\/latest?cb=20201010171334",
+        "title": "skhriii"
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/e\/e9\/Vo_beastmaster_beas_ability_animalsound_12.mp3\/revision\/latest?cb=20201010171336",
+        "title": "hriiiie"
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/2\/2e\/Vo_beastmaster_beas_exert_01.mp3\/revision\/latest?cb=20201010171725",
+        "title": "Hoaarr"
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/a\/a0\/Vo_beastmaster_beas_exert_02.mp3\/revision\/latest?cb=20201010171728",
+        "title": "Haar"
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/8\/85\/Vo_beastmaster_beas_exert_03.mp3\/revision\/latest?cb=20201010171731",
+        "title": "Hough"
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/7\/75\/Vo_beastmaster_beas_exert_04.mp3\/revision\/latest?cb=20201010171733",
+        "title": "Heeagh"
+      }
+    ],
+    "category": "Разное"
+  }
+]

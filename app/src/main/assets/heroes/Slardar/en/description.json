@@ -1,0 +1,200 @@
+{
+  "abilities": [
+    {
+      "notes": [
+        "This attack damage talent is added as raw attack damage, so it does not benefit illusions, and is not affected by most percentage-based damage increasing or reducing effects.",
+        "The health talent increases maximum health capacity, and keeps the current health percentage.",
+        "The lifesteal talent stacks additively with other sources of lifesteal."
+      ],
+      "spellName": "Talent",
+      "talents": [
+        {
+          "talentLvl": "25",
+          "talentLeft": "Corrosive Haze Undispellable",
+          "talentRight": "-4s Slithereen Crush Cooldown"
+        },
+        {
+          "talentLvl": "20",
+          "talentLeft": "-4 Corrosive Haze Armor",
+          "talentRight": "25% Lifesteal"
+        },
+        {
+          "talentLvl": "15",
+          "talentLeft": "+60 Bash Damage",
+          "talentRight": "+275 Health"
+        },
+        {
+          "talentLvl": "10",
+          "talentLeft": "+20 Damage",
+          "talentRight": "+6 Health Regen"
+        }
+      ]
+    },
+    {
+      "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/e\/ed\/Slardar_Guardian_Sprint.mp3\/revision\/latest?cb=20191216023816",
+      "effects": [
+        "Ability No Target",
+        "Affects Self"
+      ],
+      "notes": [
+        "Guardian Sprint does not interrupt Slardar's channeling spells upon cast.",
+        "Turns Slardar phased for the duration, allowing him to pass through other units and wards.",
+        "The river bonuses are applied when Slardar makes physical contact with the water of the river. This means if he is moved out of it vertically, the bonuses are lost as well, until he lands back in the water. The bonuses of the river do not linger at all.",
+        "This means if he is moved out of it vertically, the bonuses are lost as well, until he lands back in the water.",
+        "The bonuses of the river do not linger at all.",
+        "Multiple instances of the river bonus do not stack.",
+        "The status resistance from Aghanim's Scepter stacks multiplicatively with other sources of status resistance."
+      ],
+      "mana": "25",
+      "hotKey": "Q",
+      "cooldown": "17",
+      "description": "Slardar slithers ahead, moving significantly faster and passing through units. Slardar has unlocked max speed and grants movement speed while in the river.",
+      "spellName": "Guardian Sprint",
+      "params": [
+        "Cast Animation: 0+0",
+        "River Move Speed Bonus: 10%\/20%\/30%\/40%",
+        "Active Move Speed Bonus: 16%\/24%\/32%\/40%",
+        "Active Duration: 10",
+        "River Health Regen Bonus: 30",
+        "River Armor Bonus: 10",
+        "River Status Resistance Bonus: 40%",
+        "Provides additional HP Regen, Armor and Status Resistance while in a puddle or in the river."
+      ],
+      "itemBehaviour": [],
+      "legacyKey": "T",
+      "story": "As Slardar has made the transition from the Deeps, it has been necessary to use his powerful tail for sprinting instead of swimming."
+    },
+    {
+      "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/8\/86\/Slardar_Slithereen_Crush.mp3\/revision\/latest?cb=20191216023820",
+      "effects": [
+        "Ability No Target",
+        "Affects Enemies",
+        "Damage Physical"
+      ],
+      "notes": [
+        "The stun and slow are applied at the same time, so overall, the slow lasts for 4\/5\/6\/7 seconds.",
+        "The crush first applies the debuffs, then the damage.",
+        "With Aghanim's Scepter, the created puddles provide an aura which grants the caster the river bonuses. Unlike the river, the puddles do not grant the bonuses to any other unit, not even the caster's illusions. Also unlike the river, the river bonus from a puddle lingers for 0.5 seconds. Multiple instances of the river bonus do not stack.",
+        "Unlike the river, the puddles do not grant the bonuses to any other unit, not even the caster's illusions.",
+        "Also unlike the river, the river bonus from a puddle lingers for 0.5 seconds.",
+        "Multiple instances of the river bonus do not stack.",
+        "With Aghanim's Shard, the current level of Corrosive Haze gets applied to all enemies hit by Slithereen Crush. If Corrosive Haze is not learned, nothing happens.",
+        "If Corrosive Haze is not learned, nothing happens."
+      ],
+      "mana": "90\/100\/110\/120",
+      "hotKey": "W",
+      "cooldown": "8 (TagTalent 4)",
+      "description": "Slams the ground, stunning and damaging nearby enemy land units. After the stun, the affected units are slowed.",
+      "spellName": "Slithereen Crush",
+      "params": [
+        "Cast Animation: 0.35+0.6",
+        "Effect Radius: 350",
+        "Damage: 80\/140\/200\/260",
+        "Move Speed Slow: 20%\/25%\/30%\/35%",
+        "Attack Speed Slow: 20\/25\/30\/35",
+        "Stun Duration: 1",
+        "Slow Duration: 3\/4\/5\/6",
+        "Puddle Radius: 600",
+        "Puddle Duration: 25",
+        "Puddle Aura Linger Duration: 0.5",
+        "Corrosive Haze Duration: 5",
+        "Whenever Slardar casts Slithereen Crush, he creates a puddle of water that is considered a river for movement and bonuses.",
+        "Causes Corrosive Haze to be applied for 5 seconds to units hit with Slithereen Crush.",
+        "Slow persists if debuff was placed before spell immunity and when not dispelled."
+      ],
+      "itemBehaviour": [],
+      "legacyKey": "R",
+      "story": "A swift crush of might and water breaks even the toughest of defenses."
+    },
+    {
+      "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/5\/54\/Slardar_Bash_of_the_Deep.mp3\/revision\/latest?cb=20191216023822",
+      "effects": [
+        "Ability Passive",
+        "Affects Enemies",
+        "Damage Physical"
+      ],
+      "notes": [
+        "Does not stack with other bashes. The bash from Skull Basher and Abyssal Blade is completely disabled for Slardar. In Ability Draft, fully stacks with the bash from Skull Basher and Abyssal Blade.",
+        "In Ability Draft, fully stacks with the bash from Skull Basher and Abyssal Blade.",
+        "Each successful attack done on an enemy hero or creep adds one to the attack counting buff. The buff is always present, but turns invisible when at 0 charges.",
+        "The buff is always present, but turns invisible when at 0 charges.",
+        "Does not count attacks done against allies, wards or buildings, nor bashes them on the bashing attack.",
+        "The charges have no duration and last indefinitely.",
+        "When the charges reach 4, the bash is applied and the charges set back to 0.",
+        "The triggering attack first applies the debuff, then its own damage.",
+        "The bonus damage is dealt in one instance together with the attack damage, and counts as attack damage as well. It can be lifestealed off of and cleave, but it is not considered by crit. It is also not affected by percentage-based attack damage bonuses or reductions, but can be reduced with flat reductions.",
+        "It can be lifestealed off of and cleave, but it is not considered by crit.",
+        "It is also not affected by percentage-based attack damage bonuses or reductions, but can be reduced with flat reductions."
+      ],
+      "mana": null,
+      "hotKey": "E",
+      "cooldown": null,
+      "description": "After 3 attacks, your next attack will bash the target.",
+      "spellName": "Bash of the Deep",
+      "params": [
+        "Required Hits: 4",
+        "Damage: 50\/100\/150\/200 (TagTalent 110\/160\/210\/260)",
+        "Stun Duration: 1\/1.1\/1.2\/1.3"
+      ],
+      "itemBehaviour": [],
+      "legacyKey": "B",
+      "story": "Thieves of the wealth of the Deep Ones meet the brutality of the Slithereen Guard in melee combat."
+    },
+    {
+      "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/9\/93\/Slardar_Corrosive_Haze.mp3\/revision\/latest?cb=20191216023814",
+      "effects": [
+        "Ability Target Unit",
+        "Affects Enemies"
+      ],
+      "notes": [
+        "Provides shared vision and True Sight over the target."
+      ],
+      "mana": "25",
+      "hotKey": "R",
+      "cooldown": "5",
+      "description": "Reduces enemy armor to amplify physical damage and provides True Sight and vision of the targeted unit, revealing invisibility.",
+      "spellName": "Corrosive Haze",
+      "params": [
+        "Cast Animation: 0.3+0.67",
+        "Cast Range: 700\/800\/900",
+        "Armor Reduction: 10\/15\/20 (TagTalent 14\/19\/24)",
+        "Duration: 18"
+      ],
+      "itemBehaviour": [],
+      "legacyKey": "G",
+      "story": "Even the strongest armor counts for little when left to the brine of the sea."
+    }
+  ],
+  "mainAttributes": {
+    "attrStrengthInc": 3.6,
+    "attrStrength": 21.0,
+    "attrIntelligence": 15.0,
+    "attrIntelligenceInc": 1.5,
+    "attrAgilityInc": 2.4,
+    "attrAgility": 17.0
+  },
+  "description": "Slardar, the Slithereen Guard, is a melee strength hero who uses brute force, low cooldown spells, and high physical strength to bring his enemies to their knees. He excels and thrives in close combat situations, and has high mobility, strong initiation and ganking abilities, and good synergy between his abilities. Guardian Sprint greatly increases Slardar's movement speed for a lengthy duration, and allows him to chase down heroes, and escape with ease. Guardian Sprint can be used to get right next to enemies so Slardar can use Slithereen Crush, which delivers an area of effect (AoE) stun to nearby enemies followed by a minor slow afterwards, all on a very low cooldown. This allows Slardar to take on multiple opponents simultaneously and deliver a potent initiation. Bash of the Deep serves as a strong steroid ability, occasionally locking enemies in place while Slardar whacks at them with impunity. Finally, his ultimate Corrosive Haze is a great armor reduction modifier and allows him to reveal an enemy for its duration, making Slardar very potent against tanks and invisible heroes alike. It will also increase the damage dealt by his Crush and Bash, since they are physical. Although a strength hero, he has a high physical damage output, and an agility gain and armor value which rivals that of most agility heroes, allowing him to carry quite well if the situation calls for it. Chasing enemies relentlessly, pummeling them into the ground, and reducing their armor to shreds, Slardar is a fearsome opponent to face.",
+  "history": "Slardar is a Slithereen, one of the Deep Ones, guardian of a vast network of sunken cities and the ancient riches buried within them. In the lightless gulf of the deepest ocean abysses, the Slithereen Guard patrols secret treasure rooms, ever vigilant against the subaqueous thieves sent into the deeps by covetous dryland sorcerers. He is utterly loyal, and his taciturn nature hides deep knowledge of the most secret places of the sea. He rises to the shallows in spite of the pain caused him by brightness, to commit reconnaissance, to make sure no one is conspiring against the depths, and sometimes in relentless pursuit of the rare few who manage to steal off with an item from the Sunken Treasury. Because he has spent his whole life at great pressure, under tremendous weight of the sea, Slardar the Slithereen Guard is a creature of immense power.",
+  "talents": [
+    {
+      "talentLvl": "25",
+      "talentLeft": "Corrosive Haze Undispellable",
+      "talentRight": "-4s Slithereen Crush Cooldown"
+    },
+    {
+      "talentLvl": "20",
+      "talentLeft": "-4 Corrosive Haze Armor",
+      "talentRight": "25% Lifesteal"
+    },
+    {
+      "talentLvl": "15",
+      "talentLeft": "+60 Bash Damage",
+      "talentRight": "+275 Health"
+    },
+    {
+      "talentLvl": "10",
+      "talentLeft": "+20 Damage",
+      "talentRight": "+6 Health Regen"
+    }
+  ]
+}

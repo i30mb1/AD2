@@ -1,0 +1,37 @@
+{
+  "abilities": [
+    {
+      "audioUrl": null,
+      "effects": [
+        "Ability Target Unit",
+        "Affects Enemies \/ Allies"
+      ],
+      "notes": [],
+      "mana": null,
+      "abilityName": "Shadows",
+      "cooldown": null,
+      "description": "Target an enemy, ally or self. Cause the target to become untargetable but also silenced, muted and disarmed for 3 seconds. Applies basic dispell.",
+      "params": [],
+      "itemBehaviour": [
+        "(Spell_immunity_block_partial_symbol)^Partially pierces spell immunity\nCan be cast on self while spell immune\nCannot be cast on other spell immune units."
+      ],
+      "story": null
+    }
+  ],
+  "additionalInformation": [],
+  "cost": "N\/A",
+  "lore": null,
+  "consistFrom": null,
+  "boughtFrom": "Neutral Drop Only",
+  "name": "Book of Shadows",
+  "description": "An impossible tome filled with unreadable prose of unknowable thoughts.",
+  "trivia": null,
+  "upgradeIn": null,
+  "bonuses": [
+    "+12 Strength",
+    "+12 Agility",
+    "+12 Intelligence",
+    "+400 Night vision"
+  ],
+  "tips": null
+}

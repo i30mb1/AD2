@@ -1,0 +1,276 @@
+{
+  "abilities": [
+    {
+      "notes": [
+        "The magic resistance talent stacks multiplicatively with other sources of magic resistance.",
+        "The magic resistance talent increases Elder Titan's magic resistance to 36.25%.",
+        "The cleave has a starting radius of 150, distance of 650, and end radius of 360. For more information, see cleave.",
+        "Cleave from talents is not disabled by Break."
+      ],
+      "spellName": "Talent",
+      "talents": [
+        {
+          "talentLvl": "25",
+          "talentLeft": "+450 Echo Stomp Wake Damage",
+          "talentRight": "-60 Earth Splitter Cooldown"
+        },
+        {
+          "talentLvl": "20",
+          "talentLeft": "+100 Echo Stomp Damage",
+          "talentRight": "+100% Cleave"
+        },
+        {
+          "talentLvl": "15",
+          "talentLeft": "+25 Astral Spirit Hero Attack",
+          "talentRight": "+15% Magic Resistance"
+        },
+        {
+          "talentLvl": "10",
+          "talentLeft": "+20 Attack Speed",
+          "talentRight": "+15 Movement Speed"
+        }
+      ]
+    },
+    {
+      "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/6\/69\/Elder_Titan_Echo_Stomp.mp3\/revision\/latest?cb=20191216013436",
+      "effects": [
+        "Ability No Target \/ Channeled (TagAghanim Autocast)",
+        "Affects Enemies",
+        "Damage Physical \/ Magical"
+      ],
+      "notes": [
+        "Applies a sleep on affected units, preventing them from acting, until woken up.",
+        "If a unit is hit by both damage components of the stomp, it takes 140\/200\/260\/320 (TagTalent 340\/400\/460\/520) damage (before reductions).",
+        "The stomp first applies the damage, then the debuff.",
+        "When the Astral Spirit is summoned, it performs the stomp perfectly synchronized with Elder Titan. The sleep is applied in the radius around Elder Titan and the spirit. If the radii overlap, the duration does not stack up. If the spirit is not summoned or Astral Spirit is not learned, both magical and physical damage are centered around Elder Titan.",
+        "The sleep is applied in the radius around Elder Titan and the spirit. If the radii overlap, the duration does not stack up.",
+        "If the spirit is not summoned or Astral Spirit is not learned, both magical and physical damage are centered around Elder Titan.",
+        "The Astral Spirit has this ability as well (TagTalent Echo Stomp with a different icon). Ordering the spirit to cast it forces Elder Titan to cast his part. When being cast on the spirit while Elder Titan is disabled, it goes on cooldown for the spirit and does nothing. However, Elder Titan can still use it afterwards and the spirit still mimics, despite its own being on cooldown. When Elder Titan casts Echo Stomp while the Astral Spirit is disabled, it still casts its part. Echo Stomp cannot be cancelled by ordering the spirit to stop. During the Echo Stomp animation, the spirit cannot act.",
+        "When being cast on the spirit while Elder Titan is disabled, it goes on cooldown for the spirit and does nothing.",
+        "However, Elder Titan can still use it afterwards and the spirit still mimics, despite its own being on cooldown.",
+        "When Elder Titan casts Echo Stomp while the Astral Spirit is disabled, it still casts its part.",
+        "Echo Stomp cannot be cancelled by ordering the spirit to stop. During the Echo Stomp animation, the spirit cannot act.",
+        "Affected units cannot be woken up for the initial 0.2 seconds of the sleep. After the initial part, units wake up only after cumulatively taking 50\/100\/150\/200 (TagTalent 500\/550\/600\/650) damage. Starts counting damage during the initial stun part already. Counts damage after all reductions. This means if the unit took enough damage during the 0.2, it may instantly wake up on the next damage instance afterwards. Does not count Astral Spirit's damage, but does count Earth Splitter.",
+        "After the initial part, units wake up only after cumulatively taking 50\/100\/150\/200 (TagTalent 500\/550\/600\/650) damage.",
+        "Starts counting damage during the initial stun part already. Counts damage after all reductions.",
+        "This means if the unit took enough damage during the 0.2, it may instantly wake up on the next damage instance afterwards.",
+        "Does not count Astral Spirit's damage, but does count Earth Splitter.",
+        "Knocked out units are never automatically attacked, regardless of settings. A forced attack order is required to attack them. This means that knocked out units are never attacked by lane creeps, neutral creeps, towers and fountains. Players can normally force an attack on a knocked out unit still.",
+        "This means that knocked out units are never attacked by lane creeps, neutral creeps, towers and fountains.",
+        "Players can normally force an attack on a knocked out unit still.",
+        "With Aghanim's Shard, when the channeling succeeds while autocast is turned on, the caster gets teleported to the Astral Spirit's current location. Does not cause Elder Titan to mimic the spirit's facing angle. If the spirit is not summoned, nothing happens. Does not disjoint projectiles upon teleporting.",
+        "Does not cause Elder Titan to mimic the spirit's facing angle.",
+        "If the spirit is not summoned, nothing happens.",
+        "Does not disjoint projectiles upon teleporting."
+      ],
+      "mana": "85\/90\/95\/100",
+      "hotKey": "Q",
+      "cooldown": "14\/13\/12\/11",
+      "description": "Elder Titan and his Astral Spirit both stomp the ground, damaging and knocking nearby enemy units unconscious around their locations. The Elder Titan stomp deals physical damage, while the Spirit stomp deals magical damage.",
+      "spellName": "Echo Stomp",
+      "params": [
+        "Cast Animation: 0.4+0",
+        "Channel Time: 1.3",
+        "Radius: 500",
+        "Physical Damage: 70\/100\/130\/160 (TagTalent 170\/200\/230\/260)",
+        "Magical Damage: 70\/100\/130\/160 (TagTalent 170\/200\/230\/260)",
+        "Wake Up Damage Threshold: 50\/100\/150\/200 (TagTalent 500\/550\/600\/650)",
+        "Initial Stun Duration: 0.2",
+        "Sleep Duration: 2\/3\/4\/5",
+        "Allows you switch Echo Stomp to autocast. When cast while on autocast, Elder Titan will take place of the Astral Spirit as it completes its stomp.",
+        "Root does not prevent the teleport from happening."
+      ],
+      "itemBehaviour": [],
+      "legacyKey": "T",
+      "story": "The force of creation still echoes in the stomp of the Titan."
+    },
+    {
+      "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/a\/ae\/Elder_Titan_Astral_Spirit.mp3\/revision\/latest?cb=20191216013444",
+      "effects": [
+        "Ability Target Point",
+        "Affects Enemies",
+        "Damage Magical"
+      ],
+      "notes": [
+        "The spirit is controllable by Elder Titan until the end of its duration.",
+        "Other players cannot select the spirit, so it cannot be used to prevent selecting other units behind it.",
+        "The spirit cannot intercept any spell (e.g. Meat Hook, Sacred Arrow, Hookshot).",
+        "The spirit's movement speed is set equal to Elder Titan's movement speed once upon cast and does not adapt to it afterwards.",
+        "If Natural Order is learnt, the aura's debuff is always applied before the Astral Spirit's damage, effectively increasing it.",
+        "The Astral Spirit unites with Elder Titan when it comes within 100 range of him, meaning just walking through it returns it as well.",
+        "Casting Echo Stomp while the spirit returns forces the spirit to stop and cast his part. It continues returning once the cast finishes.",
+        "Upon having returned, Elder Titan receives the Ancestral Spirit Buff, which grants damage, movement speed, and armor based on hit enemies. Does not count illusions and couriers. Treats creep-heroes as creeps. If the buff is still present on a recast, it gets refreshed and updated based on the current level, and amount of enemies hit. If no enemies were hit, the buff is not placed, nor is an already existing buff getting refreshed.",
+        "Does not count illusions and couriers. Treats creep-heroes as creeps.",
+        "If the buff is still present on a recast, it gets refreshed and updated based on the current level, and amount of enemies hit.",
+        "If no enemies were hit, the buff is not placed, nor is an already existing buff getting refreshed.",
+        "The Astral Spirit does not block neutral creep camps.",
+        "With Aghanim's Scepter, Elder Titan gains spell immunity and a basic dispel is applied as soon as the spirit fully returns. For each hit enemy hero (including clones, excluding illusions and creep-heroes), Elder Titan turns spell immune for 2 seconds. If he already has the spell immunity buff from a previous cast, the duration of it gets extended by seconds for each hero hit by following casts.",
+        "For each hit enemy hero (including clones, excluding illusions and creep-heroes), Elder Titan turns spell immune for 2 seconds.",
+        "If he already has the spell immunity buff from a previous cast, the duration of it gets extended by seconds for each hero hit by following casts.",
+        "This is how much attack damage, movement speed, and armor Astral Spirit grants after hitting a certain amount of heroes: 1 hero: 20\/40\/60\/80 (TagTalent 45\/65\/85\/105) damage, 1.5\/3\/4.5\/6 armor, and 7% movement speed (TagTalent and 2 seconds spell immunity). 2 heroes: 40\/80\/120\/160 (TagTalent 90\/130\/170\/210) damage, 3\/6\/9\/12 armor, and 14% movement speed (TagTalent and 4 seconds spell immunity). 3 heroes: 60\/120\/180\/240 (TagTalent 135\/195\/255\/315) damage, 4.5\/9\/13.5\/18 armor, and 21% movement speed (TagTalent and 6 seconds spell immunity). 4 heroes: 80\/160\/240\/320 (TagTalent 180\/260\/340\/420) damage, 6\/12\/18\/24 armor, and 28% movement speed (TagTalent and 8 seconds spell immunity). 5 heroes: 100\/200\/300\/400 (TagTalent 225\/325\/425\/525) damage, 7.5\/15\/22.5\/30 armor, and 35% movement speed (TagTalent and 10 seconds spell immunity).",
+        "1 hero: 20\/40\/60\/80 (TagTalent 45\/65\/85\/105) damage, 1.5\/3\/4.5\/6 armor, and 7% movement speed (TagTalent and 2 seconds spell immunity).",
+        "2 heroes: 40\/80\/120\/160 (TagTalent 90\/130\/170\/210) damage, 3\/6\/9\/12 armor, and 14% movement speed (TagTalent and 4 seconds spell immunity).",
+        "3 heroes: 60\/120\/180\/240 (TagTalent 135\/195\/255\/315) damage, 4.5\/9\/13.5\/18 armor, and 21% movement speed (TagTalent and 6 seconds spell immunity).",
+        "4 heroes: 80\/160\/240\/320 (TagTalent 180\/260\/340\/420) damage, 6\/12\/18\/24 armor, and 28% movement speed (TagTalent and 8 seconds spell immunity).",
+        "5 heroes: 100\/200\/300\/400 (TagTalent 225\/325\/425\/525) damage, 7.5\/15\/22.5\/30 armor, and 35% movement speed (TagTalent and 10 seconds spell immunity)."
+      ],
+      "mana": "80\/90\/100\/110",
+      "hotKey": "W",
+      "cooldown": "23\/21\/19\/17",
+      "description": "Elder Titan sends forth his Astral Spirit, damaging any units it passes through. When the spirit rejoins the Titan, it grants bonus damage and movement speed for each unit it passed through. The Astral Spirit possesses the Echo Stomp, Return Spirit, and Natural Order abilities.",
+      "spellName": "Astral Spirit",
+      "params": [
+        "Cast Animation: 0.4+0",
+        "Cast Range: 1200",
+        "Damage Radius: 275",
+        "Damage: 50",
+        "Move Speed Bonus per Non-Hero Unit: 1%",
+        "Move Speed Bonus per Hero: 7%",
+        "Move Speed Cap: 40%",
+        "Attack Damage Bonus per Non-Hero Unit: 3\/7\/11\/15",
+        "Attack Damage Bonus per Hero: 20\/40\/60\/80 (TagTalent 45\/65\/85\/105)",
+        "Armor Bonus per Non-Hero Unit: 0.5",
+        "Armor Bonus per Hero: 1.5\/3\/4.5\/6",
+        "Spirit Duration: 8",
+        "Buff Duration: 10",
+        "Spell Immunity Duration per Hero: 2",
+        "Causes you to become Spell Immune for 2 seconds per affected enemy hero when the spirit returns to you.",
+        "Does not interact with spell immune enemies."
+      ],
+      "itemBehaviour": [],
+      "legacyKey": "C",
+      "story": "Like the four fundamentals, Elder Titan exists across all planes at once and can draw other aspects of himself to assist in times of need."
+    },
+    {
+      "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/0\/03\/Elder_Titan_Return_Astral_Spirit_1.mp3\/revision\/latest?cb=20191216013438",
+      "effects": [
+        "Ability No Target",
+        "Affects Self"
+      ],
+      "notes": [
+        "Replaces Astral Spirit until the spirit unites with Elder Titan again, or until Elder Titan dies.",
+        "Return Astral Spirit does not interrupt Elder Titan's channeling spells upon cast.",
+        "The Astral Spirit possesses this ability as well.",
+        "Elder Titan cannot cast this while disabled, however, the Astral Spirit can while Elder Titan is disabled.",
+        "The Astral Spirit moves back with a speed of 900."
+      ],
+      "mana": null,
+      "hotKey": "W",
+      "cooldown": null,
+      "description": "Returns the Astral Spirit to Elder Titan.",
+      "spellName": "Return Astral Spirit",
+      "params": [
+        "Cast Animation: 0+0"
+      ],
+      "itemBehaviour": [],
+      "legacyKey": "C",
+      "story": null
+    },
+    {
+      "audioUrl": null,
+      "effects": [
+        "Ability Aura",
+        "Affects Enemies"
+      ],
+      "notes": [
+        "Armor reduction is based on the affected units' base armor and armor granted by agility. Direct armor bonuses are ignored.",
+        "Magic resistance reduction is based on the affected units' base magic resistance. Magic resistance bonuses are ignored. This means, for heroes with 25% base magic resistance, it reduces magic resistance by 10%\/15%\/20%\/25%, down to 15%\/10%\/5%\/0%.",
+        "This means, for heroes with 25% base magic resistance, it reduces magic resistance by 10%\/15%\/20%\/25%, down to 15%\/10%\/5%\/0%.",
+        "Adapts the armor reduction based on how the affected units' armor changes due to agility loss or gain in 0.5 second intervals.",
+        "The magic resistance portion of the aura is always centered on the Astral Spirit, even if it is not summoned. While not summoned, the spirit is hidden and periodically moved along with Elder Titan, so that effectively, it is centered around him. Astral Spirit does not need to be leveled for the magic resistance portion to apply, the spirit is already created upon initial spawning of the hero, even at ability level 0. In Ability Draft, Astral Spirit must be drafted for Natural Order to apply the magic resistance portion of the aura.",
+        "While not summoned, the spirit is hidden and periodically moved along with Elder Titan, so that effectively, it is centered around him.",
+        "Astral Spirit does not need to be leveled for the magic resistance portion to apply, the spirit is already created upon initial spawning of the hero, even at ability level 0.",
+        "In Ability Draft, Astral Spirit must be drafted for Natural Order to apply the magic resistance portion of the aura.",
+        "The aura's debuff lingers for 1 second. However, if Astral Spirit gets cast, enemies around Elder Titan who are not within range of the spirit's aura immediately lose the magic resistance reducing debuff.",
+        "However, if Astral Spirit gets cast, enemies around Elder Titan who are not within range of the spirit's aura immediately lose the magic resistance reducing debuff.",
+        "Does not work against ancient creeps."
+      ],
+      "mana": null,
+      "hotKey": "E",
+      "cooldown": null,
+      "description": "Reduces all elements to their basic levels, removing base armor and magic damage resistance from nearby enemy units. The armor reduction is centered around the hero, while the magic armor reduction is centered around Astral Spirit.",
+      "spellName": "Natural Order",
+      "params": [
+        "Radius: 350",
+        "Base Armor Reduction: 40%\/60%\/80%\/100%",
+        "Base Magic Resistance Reduction: 40%\/60%\/80%\/100%",
+        "Aura Linger Duration: 1",
+        "Since Elder Titan only carries the armor reduction aura, only the armor reduction gets disabled. The magic resistance reduction still works.",
+        "Illusions apply both parts of the aura as well, regardless of the Astral Spirit."
+      ],
+      "itemBehaviour": [],
+      "legacyKey": "N",
+      "story": "As it was at the beginning, Elder Titan makes it so again."
+    },
+    {
+      "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/9\/9e\/Elder_Titan_Earth_Splitter.mp3\/revision\/latest?cb=20191216013435",
+      "effects": [
+        "Ability Target Point",
+        "Affects Enemies",
+        "Damage Physical \/ Magical"
+      ],
+      "notes": [
+        "Deals 15%\/20%\/25% of the affected units' max health as magical damage first, and then 15%\/20%\/25% as physical damage.",
+        "The crack extends at a speed of 910.",
+        "Can hit units up to 2415 range away (crack distance + crack radius).",
+        "Also affects units up to 315 range behind Elder Titan's cast position.",
+        "The crack visually extends up to 2600 distance, but the actual effects stop at 2100.",
+        "Earth Splitter first applies the debuff, then the damage.",
+        "Affected units are instantly pulled towards the crack once it implodes.",
+        "The pull interrupts channeling spells.",
+        "Forces a stop command onto the target upon pull, so that its current move, attack and spell cast orders get canceled.",
+        "Does not affect ancient creeps."
+      ],
+      "mana": "125\/175\/225",
+      "hotKey": "R",
+      "cooldown": "100 (TagTalent 40)",
+      "description": "Sends forth a jagged crack in front of Elder Titan. After 3 seconds, the crack implodes, slowing movement while dealing damage to each enemy based on their maximum life. Half of the damage dealt is Magical damage, while the other half is Physical damage.",
+      "spellName": "Earth Splitter",
+      "params": [
+        "Cast Animation: 0.4+0.73",
+        "Cast Range: 2400",
+        "Effect Delay: 3.14",
+        "Crack Width: 315",
+        "Crack Distance: 2100",
+        "Max Health as Damage: 30%\/40%\/50%",
+        "Move Speed Slow: 30%\/40%\/50%",
+        "Slow Duration: 3\/4\/5"
+      ],
+      "itemBehaviour": [],
+      "legacyKey": "E",
+      "story": "That which he created, the titan tears asunder."
+    }
+  ],
+  "mainAttributes": {
+    "attrStrengthInc": 3.0,
+    "attrStrength": 26.0,
+    "attrIntelligence": 23.0,
+    "attrIntelligenceInc": 1.6,
+    "attrAgilityInc": 1.8,
+    "attrAgility": 14.0
+  },
+  "description": "The Elder Titan is a melee strength hero who is renowned as a powerful area nuker and disabler.",
+  "history": "Well may you ask, \"How did this world take its form?\" Why of all the worlds in creation, has this one its strange properties, its diverse and motley collection of creatures, cultures and lore? \"The answer,\" One whispers, \"lies with the Titans.\" These original progenitors were there near the Beginning--if not actual witnesses to the creation, then born with it still echoing in their ears. Stamped with the earliest energies of the universe, they wished nothing more than to continue as creators themselves. Thus they bent to the task of shaping matter to their will: hammering and heating, bending and blasting. And when matter proved less challenging than they liked, they turned their tools upon themselves, reshaping their minds and reforging their spirits until they had become beings of great endurance. Reality itself became the ultimate object of their smithing. Yet, along the way, they sometimes erred. In cases of great ambition, mistakes are unavoidable. The one we know as the Elder Titan was a great innovator, one who studied at the forge of creation. In honing his skills, he shattered something that could never be repaired, only thrown aside. He fell into his own broken world, a shattered soul himself. There he dwelt among the jagged shards and fissured planes, along with other lost fragments that had sifted down through the cracks in the early universe. And this is why the world we know resembles an isle of castaways, survivors of a wreck now long forgotten. Forgotten, that is, by all but the One who blames himself. He spends his time forever seeking a way to accomplish the repairs, that he might rejoin the parts of his broken soul, that we and the world alike might all be mended. This is the One we know as Elder Titan.",
+  "talents": [
+    {
+      "talentLvl": "25",
+      "talentLeft": "+450 Echo Stomp Wake Damage",
+      "talentRight": "-60 Earth Splitter Cooldown"
+    },
+    {
+      "talentLvl": "20",
+      "talentLeft": "+100 Echo Stomp Damage",
+      "talentRight": "+100% Cleave"
+    },
+    {
+      "talentLvl": "15",
+      "talentLeft": "+25 Astral Spirit Hero Attack",
+      "talentRight": "+15% Magic Resistance"
+    },
+    {
+      "talentLvl": "10",
+      "talentLeft": "+20 Attack Speed",
+      "talentRight": "+15 Movement Speed"
+    }
+  ]
+}

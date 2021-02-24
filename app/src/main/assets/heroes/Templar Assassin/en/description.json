@@ -1,0 +1,325 @@
+{
+  "abilities": [
+    {
+      "notes": [
+        "The evasion talent stacks multiplicatively with other sources of evasion."
+      ],
+      "spellName": "Talent",
+      "talents": [
+        {
+          "talentLvl": "25",
+          "talentLeft": "+6 Refraction Instances",
+          "talentRight": "1s Meld Hit Bash"
+        },
+        {
+          "talentLvl": "20",
+          "talentLeft": "-3 Meld Armor Reduction",
+          "talentRight": "Meld Dispels"
+        },
+        {
+          "talentLvl": "15",
+          "talentLeft": "+160 Psionic Trap Damage",
+          "talentRight": "15% Evasion"
+        },
+        {
+          "talentLvl": "10",
+          "talentLeft": "+20 Movement Speed",
+          "talentRight": "+15 Attack Speed"
+        }
+      ]
+    },
+    {
+      "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/e\/e5\/Templar_Assassin_Refraction_1.mp3\/revision\/latest?cb=20191216025003",
+      "effects": [
+        "Ability No Target",
+        "Affects Self"
+      ],
+      "notes": [
+        "Refraction interrupts Templar Assassin's channeling spells upon cast.",
+        "Places 2 buffs on Templar Assassin, one granting instances of damage block and the other instances of bonus attack damage.",
+        "The number of remaining instances are visible on the buff icons. The buffs and the visual effects of the ability are visible to everyone.",
+        "The bonus damage is added as regular attack damage bonus, which is visible in the HUD. Loses a bonus damage instance when the attack projectile successfully lands on the target. Missed or disjointed attacks do not count. Neither loses instances upon attacking allies, nor applies the bonus damage to them. When casting Refraction while an attack projectile is traveling, the projectile does not get the bonus damage, but still uses up one instance upon landing.",
+        "Loses a bonus damage instance when the attack projectile successfully lands on the target. Missed or disjointed attacks do not count.",
+        "Neither loses instances upon attacking allies, nor applies the bonus damage to them.",
+        "When casting Refraction while an attack projectile is traveling, the projectile does not get the bonus damage, but still uses up one instance upon landing.",
+        "The damage absorb fully negates damage, causing several on-damage effects to not trigger. Has a higher priority than Aphotic Shield, but lower than False Promise. However, it still loses a charge when combined with the latter. Damage below 5 (after reductions) is completely ignored. It is neither blocked, nor wastes any block instances. Refraction negates all 3 damage types. It does not negate damage flagged as HP Removal.",
+        "Has a higher priority than Aphotic Shield, but lower than False Promise. However, it still loses a charge when combined with the latter.",
+        "Damage below 5 (after reductions) is completely ignored. It is neither blocked, nor wastes any block instances.",
+        "Refraction negates all 3 damage types. It does not negate damage flagged as HP Removal."
+      ],
+      "mana": "100",
+      "hotKey": "Q",
+      "cooldown": "17",
+      "description": "Templar Assassin becomes highly elusive, avoiding damage and gaining a bonus to her damage. The damage and avoidance effects are separate, and have a limited number of instances.",
+      "spellName": "Refraction",
+      "params": [
+        "Cast Animation: 0+0",
+        "Number of Instances: 3\/4\/5\/6 (TagTalent 9\/10\/11\/12)",
+        "Attack Damage Bonus: 25\/50\/75\/100",
+        "Duration: 17"
+      ],
+      "itemBehaviour": [],
+      "legacyKey": "R",
+      "story": "Manipulating her psionic veil, Lanaya bends nature's law to her will."
+    },
+    {
+      "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/a\/ab\/Templar_Assassin_Meld_1.mp3\/revision\/latest?cb=20191216025015",
+      "effects": [
+        "Ability No Target",
+        "Affects Self \/ Enemies",
+        "Damage Physical"
+      ],
+      "notes": [
+        "Meld interrupts Templar Assassin's channeling spells upon cast.",
+        "Turns Templar Assassin instantly invisible and orders her to stop.",
+        "Invisibility is lost upon reaching the cast point of spells or items, upon landing an attack, or upon moving. Forced movement also counts, and cancels Meld if moved horizontally. Vertical movement, and Teleporting effects do not cancel it. After an attack projectile has been launched, Templar Assassin can perform any action without losing the invisibility. However, when the projectile misses (evasion, blind or disjoint), the invisibility is lost at the moment it misses.",
+        "Forced movement also counts, and cancels Meld if moved horizontally. Vertical movement, and Teleporting effects do not cancel it.",
+        "After an attack projectile has been launched, Templar Assassin can perform any action without losing the invisibility.",
+        "However, when the projectile misses (evasion, blind or disjoint), the invisibility is lost at the moment it misses.",
+        "Turns Templar Assassin phased, so that other units may pass through her.",
+        "Templar Assassin can pick up, drop or attack items without breaking the invisibility, considering she does not move while doing so. She also can turn without breaking the invisibility.",
+        "She also can turn without breaking the invisibility.",
+        "The next attack of Templar Assassin which connects with a unit applies the damage and armor reduction (TagTalent and the bash). This does not necessarily have to be the first attack out of Meld. If somehow a following attack hits another target first (e.g. it teleports away), the new target is affected instead.",
+        "This does not necessarily have to be the first attack out of Meld. If somehow a following attack hits another target first (e.g. it teleports away), the new target is affected instead.",
+        "The bonus damage is dealt in a separate damage instance, and counts as attack damage. Since it is applied separately, it does not trigger crits, lifesteal, or Psi Blades.",
+        "Since it is applied separately, it does not trigger crits, lifesteal, or Psi Blades.",
+        "Meld first applies its armor debuff, then Templar Assassin's attack damage, and then the Meld damage (TagTalent and then the bash).",
+        "Neither the bonus damage nor the armor reduction from Meld affect buildings.",
+        "Multiple instances of the armor reduction debuff fully stack.",
+        "When the talent is chosen, applies a basic dispel on Templar Assassin upon cast.",
+        "The level 25 talent adds a bash to the Meld attack. Stacks with other bashes."
+      ],
+      "mana": "50",
+      "hotKey": "W",
+      "cooldown": "12\/10\/8\/6",
+      "description": "Templar Assassin conceals herself, becoming invisible as long as she remains still. If Meld's invisibility is broken by attacking an enemy, Lanaya will deal bonus damage to the enemy and reduce their armor for 12 seconds.",
+      "spellName": "Meld",
+      "params": [
+        "Cast Animation: 0+0.53",
+        "Fade Time: 0",
+        "Damage: 50\/100\/150\/200",
+        "Armor Reduction: 5\/6\/7\/8 (TagTalent 8\/9\/10\/11)",
+        "Debuff Duration: 12",
+        "Invis Duration: Permanent",
+        "Bash Duration: 1",
+        "The attack projectile out of Meld can be disjointed."
+      ],
+      "itemBehaviour": [],
+      "legacyKey": "D",
+      "story": "Lanaya is as elusive as her covenant with the Hidden Temple."
+    },
+    {
+      "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/1\/11\/Templar_Assassin_Psi_Blades.mp3\/revision\/latest?cb=20191216025000",
+      "effects": [
+        "Ability Passive",
+        "Affects Enemies",
+        "Damage Pure"
+      ],
+      "notes": [
+        "Psi Blades increases Templar Assassin's total attack range to 162.",
+        "The spill area has a rectangular shape, with a width of 90 and a length based on Templar Assassin's total attack range. With her default attack range and Psi Blade's own bonus, the spill area has a length of 480\/580\/680\/780.",
+        "With her default attack range and Psi Blade's own bonus, the spill area has a length of 480\/580\/680\/780.",
+        "The spill area starts at the attack target's location and extends beyond them. So from max attack range, it can hit units up to 640\/740\/840\/940 range away.",
+        "Spill damage is based on her attack damage after all reductions. This means the spill damage can be increased by reducing the armor of the primary target. It can also be increased by increasing Templar Assassin's attack damage with attack modifiers like crits or bashes.",
+        "This means the spill damage can be increased by reducing the armor of the primary target.",
+        "It can also be increased by increasing Templar Assassin's attack damage with attack modifiers like crits or bashes.",
+        "Attack modifiers are only applied to the primary target.",
+        "Templar Assassin's position is checked as the projectile hits the target, not upon launching.",
+        "Despite the visual effects, Psi Blades do not spill damage when attacking buildings.",
+        "Psi Blades spill damage when attacking allies or wards which use a regular health system. Does not spill when attacking wards that require x attacks to be destroyed.",
+        "Spill damage hits invisible units, but does not hit wards or buildings."
+      ],
+      "mana": null,
+      "hotKey": "E",
+      "cooldown": null,
+      "description": "Templar Assassin's psi blades slice through the attacked unit, splitting and damaging enemy units directly behind it, while gaining bonus attack range.",
+      "spellName": "Psi Blades",
+      "params": [
+        "Attack Range Bonus: 80\/130\/180\/230",
+        "Spill Area Width: 90",
+        "Spill Area Length Multiplier: 2",
+        "Attack Damage Spilled: 100%"
+      ],
+      "itemBehaviour": [],
+      "legacyKey": "B",
+      "story": "Her blades pierce the skin as much as the mind, furthering her understanding of the mystery that is reality."
+    },
+    {
+      "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/c\/c4\/Templar_Assassin_Trap.mp3\/revision\/latest?cb=20191216025009",
+      "effects": [
+        "Ability No Target",
+        "Affects Enemies",
+        "Damage Magical"
+      ],
+      "notes": [
+        "Trap is unlocked when Psionic Trap is learned.",
+        "Does not interrupt Templar Assassin's channeling spells upon cast.",
+        "Cannot be cast when the caster has no traps present.",
+        "The slow starts at 30% and increases by 0.25% in 0.03 second intervals.",
+        "With Aghanim's Shard, the silence duration starts at 0.5 and increases by 0.02 in 0.03 second intervals.",
+        "On each second after placement, the slow values (TagTalent and silence durations) are: 0 Seconds: 30% slow (TagTalent 0.5 silence duration) 1 Second: 37.5% slow (TagTalent 1.125 silence duration) 2 Seconds: 45% slow (TagTalent 1.75 silence duration) 3 Seconds: 52.5% slow (TagTalent 2.375 silence duration) 4 Seconds: 60% slow (TagTalent 3 silence duration)",
+        "0 Seconds: 30% slow (TagTalent 0.5 silence duration)",
+        "1 Second: 37.5% slow (TagTalent 1.125 silence duration)",
+        "2 Seconds: 45% slow (TagTalent 1.75 silence duration)",
+        "3 Seconds: 52.5% slow (TagTalent 2.375 silence duration)",
+        "",
+        "4 Seconds: 60% slow (TagTalent 3 silence duration)",
+        "The damage is only applied when the trap is fully charged. The trap visually changes once fully charged. Its outer ring starts black and turns white once fully charged.",
+        "The trap visually changes once fully charged. Its outer ring starts black and turns white once fully charged.",
+        "Deals damage in 1 second intervals, starting 1 second after the debuff is placed, resulting in 5 damage instances.",
+        "Can deal up to 200\/240\/280 (TagTalent 328\/368\/408) damage to a single unit (before reductions).",
+        "The source of the damage is the caster, and not the trap itself.",
+        "The damage values are always based on the current level upon triggering the trap, and are not set upon spawning the trap.",
+        "Multiple instances of the debuff do not stack, but get refreshed instead. When refreshed, the slow and damage get updated based on how long that trap was charged.",
+        "When refreshed, the slow and damage get updated based on how long that trap was charged."
+      ],
+      "mana": null,
+      "hotKey": "D",
+      "cooldown": null,
+      "description": "Springs the nearest trap, slowing nearby enemies.",
+      "spellName": "Trap",
+      "params": [
+        "Cast Animation: 0+0",
+        "Trap Search Radius: Global",
+        "Slow Radius: 400",
+        "Damage per Second: 50\/60\/70 (TagTalent 82\/92\/102)",
+        "Min Move Speed Slow: 30%",
+        "Max Move Speed Slow: 60%",
+        "Trap Charge Time: 4",
+        "Slow Duration: 5",
+        "Min Silence Duration: 0.5",
+        "Max Silence Duration: 3",
+        "Slow persists and attempts to damage if debuff was placed before spell immunity and when not dispelled."
+      ],
+      "itemBehaviour": [],
+      "legacyKey": "T",
+      "story": null
+    },
+    {
+      "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/a\/a5\/Templar_Assassin_Psionic_Projection.mp3\/revision\/latest?cb=20191216025000",
+      "effects": [
+        "Ability Target Point \/ Channeled",
+        "Affects Self \/ Enemies",
+        "Damage Magical"
+      ],
+      "notes": [
+        "Requires Aghanim's Scepter to be unlocked. Available in Ability Draft.",
+        "Teleports to the closest trap from the targeted point. The trap gets detonated upon teleporting. Same notes as for Trap apply.",
+        "Same notes as for Trap apply.",
+        "Casting this while traps are not present does nothing, wasting mana and cooldown."
+      ],
+      "mana": "100",
+      "hotKey": "F",
+      "cooldown": "15",
+      "description": "Allows Templar Assassin to teleport to any Psionic Trap after a brief channel. Does not break meld. Detonates the Psionic Trap on arrival.",
+      "spellName": "Psionic Projection",
+      "params": [
+        "Cast Animation: 0.2+0",
+        "Cast Range: Global",
+        "Slow Radius: 400",
+        "Channel Time: 1",
+        "Damage per Second: 50\/60\/70 (TagTalent 82\/92\/102)",
+        "Min Move Speed Slow: 30%",
+        "Max Move Speed Slow: 60%",
+        "Trap Charge Time: 4",
+        "Slow Duration: 5",
+        "Min Silence Duration: 0.5",
+        "Max Silence Duration: 3",
+        "Slow persists and attempts to damage if debuff was placed before spell immunity and when not dispelled."
+      ],
+      "itemBehaviour": [],
+      "legacyKey": "W",
+      "story": "In reward for her service, Lanaya has been granted access to secrets that unlock new techniques for her psionic gifts."
+    },
+    {
+      "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/a\/a1\/Templar_Assassin_Psionic_Trap.mp3\/revision\/latest?cb=20191216025002",
+      "effects": [
+        "Ability Target Point"
+      ],
+      "notes": [
+        "The traps only slow enemies when they get triggered, not when they are destroyed by attacks, or by exceeding the maximum allowed traps count.",
+        "Psionic Traps do not block neutral creep camps."
+      ],
+      "mana": "15",
+      "hotKey": "R",
+      "cooldown": "11\/8\/5",
+      "description": "Templar Assassin places mystical traps that invisibly monitor enemy movement. When sprung at her command, they exert a slowing influence of 30% in the area. Traps charge up to slow 60% after 4 seconds. Deals bonus damage when fully charged.",
+      "spellName": "Psionic Trap",
+      "params": [
+        "Cast Animation: 0.3+0",
+        "Cast Range: 2000",
+        "Max Traps: 5\/8\/11 (TagTalent 9\/12\/15)",
+        "Trap Fade Time: 2",
+        "Trap Duration: Permanent",
+        "Grants a new ability: Psionic Projection.",
+        "Causes Psionic Trap to silence enemies for up to seconds based on how long the trap has been charged. Increases max trap count by 4."
+      ],
+      "itemBehaviour": [],
+      "legacyKey": "C",
+      "story": "Calling upon the reach of the Hidden Temple, none escape the eye of the Templar."
+    },
+    {
+      "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/e\/eb\/Templar_Assassin_Self_Trap.mp3\/revision\/latest?cb=20191216025007",
+      "effects": [
+        "Ability No Target",
+        "Affects Enemies"
+      ],
+      "notes": [
+        "This is cast from the trap itself, allowing Templar Assassin to trigger traps from afar without having to trigger nearby traps first.",
+        "Same notes as for Trap on Templar Assasin apply."
+      ],
+      "mana": null,
+      "hotKey": "Q",
+      "cooldown": null,
+      "description": "Springs the trap, slowing nearby enemies.",
+      "spellName": "Trap",
+      "params": [
+        "Cast Animation: 0+0",
+        "Slow Radius: 400",
+        "Damage per Second: 50\/60\/70 (TagTalent 82\/92\/102)",
+        "Min Move Speed Slow: 30%",
+        "Max Move Speed Slow: 60%",
+        "Trap Charge Time: 4",
+        "Slow Duration: 5",
+        "Min Silence Duration: 0.5",
+        "Max Silence Duration: 3",
+        "Slow persists and attempts to damage if debuff was placed before spell immunity and when not dispelled."
+      ],
+      "itemBehaviour": [],
+      "legacyKey": "T",
+      "story": null
+    }
+  ],
+  "mainAttributes": {
+    "attrStrengthInc": 2.4,
+    "attrStrength": 21.0,
+    "attrIntelligence": 20.0,
+    "attrIntelligenceInc": 2.0,
+    "attrAgilityInc": 3.2,
+    "attrAgility": 23.0
+  },
+  "description": "Lanaya, the Templar Assassin, is a very short-ranged agility hero capable of dealing huge bursts of physical damage to swathes of enemies with expert positioning and timing. Unlike most physical damage dealers, Lanaya reaches her damage potential quite early and then scales up from that point with carry items, letting her gank with impunity throughout the mid-game, and her short attack range increases from being comparable to that of a melee hero to a ranged hero with short reach as she levels Psi Blades.",
+  "history": "Lanaya, the Templar Assassin, came to her calling by a path of curious inquiry. Possessed of a scientific bent, she spent her early years engaged in meticulous study of nature's laws--peering into grimoires of magic and alchemy, recreating experiments from charred fragments of the Violet Archives, and memorizing observations of the Keen recordkeepers. Already quiet and secretive by nature, the difficulty of acquiring these objects further reinforced her skills of stealth. Had she been less retiring, she might have become notorious among the guilds as a thief-scholar. Instead her investigations led her into far more obscure corners. As she devoted her furtive talents to unlocking the secrets of the universe, she instead unlocked a secret door that exists in nature itself: the entryway to the most Hidden Temple. The intelligences that waited beyond that portal, proved to be expecting her, and whatever mysteries they revealed in the moment of their discovery was nothing compared to the answers they held out to Lanaya should she continue in their service. She swore to protect the mysteries, but more to the point, in service to the Hidden Temple she satisfies her endless craving for understanding. In the eyes of each foe she expunges, a bit more of the mystery is revealed.",
+  "talents": [
+    {
+      "talentLvl": "25",
+      "talentLeft": "+6 Refraction Instances",
+      "talentRight": "1s Meld Hit Bash"
+    },
+    {
+      "talentLvl": "20",
+      "talentLeft": "-3 Meld Armor Reduction",
+      "talentRight": "Meld Dispels"
+    },
+    {
+      "talentLvl": "15",
+      "talentLeft": "+160 Psionic Trap Damage",
+      "talentRight": "15% Evasion"
+    },
+    {
+      "talentLvl": "10",
+      "talentLeft": "+20 Movement Speed",
+      "talentRight": "+15 Attack Speed"
+    }
+  ]
+}

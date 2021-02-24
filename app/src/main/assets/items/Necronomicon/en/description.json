@@ -1,0 +1,179 @@
+{
+  "abilities": [
+    {
+      "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/f\/fc\/Necronomicon_Demonic_Summoning.mp3\/revision\/latest?cb=20191227195510",
+      "effects": [
+        "Ability No Target"
+      ],
+      "notes": [
+        "Interrupts the user's channeling spells upon cast.",
+        "The summons always spawn in front of the caster.",
+        "Recasting this with the same Necronomicon replaces the summons from the previous cast, no matter under whose control they are. However, recasting it with a second Necronomicon (or the same with a different level) creates two new summons.",
+        "However, recasting it with a second Necronomicon (or the same with a different level) creates two new summons.",
+        "The summons cannot be targeted by Helm of the Dominator, and the warrior cannot be targeted by Hand of Midas. However, they can be targeted by other converting or instantly killing spells like Death Pact or Devour.",
+        "However, they can be targeted by other converting or instantly killing spells like Death Pact or Devour.",
+        "All 3 levels of Necronomicon share cooldown.",
+        "Does not share cooldown with Book of the Dead"
+      ],
+      "mana": "150",
+      "abilityName": "Demonic Summoning",
+      "cooldown": null,
+      "description": "Summons a Warrior and an Archer to fight for you for 60 seconds. Warrior: Burns mana every hit, and deals magical damage to whoever kills it. Gains True Sight at level 3. Archer: Gains Purge at level 3.",
+      "params": [
+        "Number of Warriors: 1",
+        "Number of Archers: 1",
+        "Duration: 60"
+      ],
+      "itemBehaviour": [],
+      "story": null
+    },
+    {
+      "audioUrl": null,
+      "effects": [
+        "Ability Passive",
+        "Affects Enemies"
+      ],
+      "notes": [
+        "The bonus damage is dealt in one instance together with the attack damage, and counts as attack damage as well. It can be lifestealed off of, but it is not considered by crit or cleave. It is also not affected by percentage-based attack damage bonuses or reductions, but can be reduced with flat reductions.",
+        "It can be lifestealed off of, but it is not considered by crit or cleave.",
+        "It is also not affected by percentage-based attack damage bonuses or reductions, but can be reduced with flat reductions.",
+        "Effectively increases the warrior's attack damage by 15\/20\/25 against units which have enough mana to burn.",
+        "Applies the mana loss first, and then the damage.",
+        "Works against allied units when attacking them.",
+        "Fully stacks with other sources of Mana Break."
+      ],
+      "mana": null,
+      "abilityName": "Mana Break",
+      "cooldown": null,
+      "description": "Mana burned per hit, a portion of which is dealt as damage.",
+      "params": [
+        "Mana Burned per Hit: 30\/40\/50",
+        "Burned Mana as Damage: 50%"
+      ],
+      "itemBehaviour": [],
+      "story": null
+    },
+    {
+      "audioUrl": null,
+      "effects": [
+        "Ability Passive",
+        "Affects Enemies"
+      ],
+      "notes": [
+        "Does not affect allied units, so it can be denied without taking damage.",
+        "The distance between the Necronomicon Warrrior and the killing unit does not matter.",
+        "The warrior\u2019s gold and experience bounty is granted first, the damage is applied afterwards.",
+        "Does not affect buildings."
+      ],
+      "mana": null,
+      "abilityName": "Last Will",
+      "cooldown": null,
+      "description": "Deals damage to the unit that kills the Necronomicon Warrior.",
+      "params": [
+        "Damage: 600\/700\/800"
+      ],
+      "itemBehaviour": [],
+      "story": null
+    },
+    {
+      "audioUrl": null,
+      "effects": [
+        "Ability Aura",
+        "Affects Enemies"
+      ],
+      "notes": [
+        "Available for level 3 Necronomicon Warriors only.",
+        "The True Sight is provided within the whole area, regardless of the warrior's actual vision. It is fully unobstructed.",
+        "The True Sight is provided by an aura which affects enemies. Its debuff lingers for 0.5 seconds.",
+        "Cannot detect units under the effect of Shadow Dance, Smoke of Deceit and Techies' mines under the effect of an Aghanim's Scepter upgraded Minefield Sign."
+      ],
+      "mana": null,
+      "abilityName": "True Sight",
+      "cooldown": null,
+      "description": "Reveals invisible units.",
+      "params": [
+        "Radius: 1000",
+        "Aura Linger Duration: 0.5"
+      ],
+      "itemBehaviour": [],
+      "story": null
+    },
+    {
+      "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/c\/cc\/Necronomicon_Archer_Purge.mp3\/revision\/latest?cb=20191227200433",
+      "effects": [
+        "Ability Target Unit",
+        "Affects Enemies"
+      ],
+      "notes": [
+        "Available for level 3 Necronomicon Archers only.",
+        "Applies a basic dispel on the target upon cast.",
+        "Purge first applies the dispel, then the slow.",
+        "The slow decreases in 0.8 second intervals, so it slows for 100%\/80%\/60%\/40%\/20%, going one step down every 0.8 seconds.",
+        "Can be cast on and fully affect invulnerable units."
+      ],
+      "mana": null,
+      "abilityName": "Purge",
+      "cooldown": "15",
+      "description": "Affects Enemies",
+      "params": [
+        "Cast Animation: 0.3+0.47",
+        "Cast Range: 600",
+        "Move Speed Slow: 100%",
+        "Slow Duration: 4"
+      ],
+      "itemBehaviour": [],
+      "story": null
+    },
+    {
+      "audioUrl": null,
+      "effects": [
+        "Ability Aura",
+        "Affects Allies"
+      ],
+      "notes": [
+        "Fully stacks with other sources of movement and attack speed, except for other Archer Auras.",
+        "The aura's buff lingers for 0.5 seconds."
+      ],
+      "mana": null,
+      "abilityName": "Archer Aura",
+      "cooldown": null,
+      "description": "Increases movement and attack speed of nearby units.",
+      "params": [
+        "Radius: 1200",
+        "Move Speed Bonus: 5%\/7%\/9%"
+      ],
+      "itemBehaviour": [],
+      "story": null
+    }
+  ],
+  "additionalInformation": [
+    "For strength heroes, it grants 120\/240\/360 health, 0.6\/1.2\/1.8 health regen, 2\/3\/4 mana regen and 6\/12\/18 attack damage.",
+    "For agility heroes, it grants 120\/240\/360 health, 0.6\/1.2\/1.8 health regen and 2\/3\/4 mana regen.",
+    "For intelligence heroes, it grants 120\/240\/360 health, 0.6\/1.2\/1.8 health regen and 2\/3\/4 mana regen.",
+    "Upgrading the item improves its stats and strengthens the summons from Demonic Summoning. Can be upgraded twice.",
+    "The total gold cost for each level is 2050\/3300\/4550."
+  ],
+  "cost": "2050",
+  "lore": null,
+  "consistFrom": [
+    "Sage's Mask",
+    "Sage's Mask",
+    "Belt of Strength",
+    "Recipe"
+  ],
+  "boughtFrom": "Magical",
+  "name": "Necronomicon",
+  "description": "",
+  "trivia": [
+    "This item is based on the Necronomicon, a fictional grimoire created by horror author H. P. Lovecraft. The summoning ability of the item is similar to the original book's role in summoning the ancient cosmic Old Ones in Lovecraft's Cthulhu Mythos.",
+    "The coloration of the two units may be a reference to the Japanese tradition of Oni being either Red or Blue, with the Red Oni traditionally more aggressive, emotional, and extroverted, while Blue Oni are traditionally more serene, intellectual, and introverted."
+  ],
+  "upgradeIn": [
+    "Necronomicon 2"
+  ],
+  "bonuses": [
+    "+6\/12\/18 Strength",
+    "+2\/3\/4 Mana regeneration"
+  ],
+  "tips": null
+}

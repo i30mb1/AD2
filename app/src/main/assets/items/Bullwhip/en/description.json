@@ -1,0 +1,38 @@
+{
+  "abilities": [
+    {
+      "audioUrl": null,
+      "effects": [
+        "Ability Target Unit",
+        "Affects Enemies \/ Self"
+      ],
+      "notes": [],
+      "mana": null,
+      "abilityName": "Whip",
+      "cooldown": "12",
+      "description": "Grants 16% movement speed when cast on allies, and slows by 16% when cast on enemies. Lasts 5 seconds.",
+      "params": [
+        "Cast Range: 800",
+        "Duration: 5",
+        "Slow: 16%",
+        "Bonus Speed: 16%"
+      ],
+      "itemBehaviour": [],
+      "story": null
+    }
+  ],
+  "additionalInformation": [],
+  "cost": "N\/A",
+  "lore": null,
+  "consistFrom": null,
+  "boughtFrom": "Neutral Drop Only",
+  "name": "Bullwhip",
+  "description": "Once the favored lash of an infamous broker of pit fighters and other live trade.",
+  "trivia": null,
+  "upgradeIn": null,
+  "bonuses": [
+    "+3 Health regeneration",
+    "+3 Mana regeneration"
+  ],
+  "tips": null
+}

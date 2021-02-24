@@ -1,0 +1,20 @@
+{
+  "abilities": [],
+  "additionalInformation": [
+    "Timeless Relics are fully sharable.",
+    "Stacks multiplicatively with other sources of debuff duration amplification."
+  ],
+  "cost": "N\/A",
+  "lore": null,
+  "consistFrom": null,
+  "boughtFrom": "Neutral Drop Only",
+  "name": "Timeless Relic",
+  "description": "An unmarred discovery from the excavated ruins of an ancient wizard's academy.",
+  "trivia": null,
+  "upgradeIn": null,
+  "bonuses": [
+    "+25% Debuff duration",
+    "+15% Spell damage"
+  ],
+  "tips": null
+}

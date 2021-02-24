@@ -1,0 +1,49 @@
+{
+  "abilities": [
+    {
+      "audioUrl": null,
+      "effects": [
+        "Ability Passive",
+        "Affects Enemies"
+      ],
+      "notes": [
+        "Increases attack damage by an average of 18%.",
+        "The proc chances of multiple crit sources stack. If two sources of critical strike proc at the same time, the higher multiplier has priority.",
+        "If two sources of critical strike proc at the same time, the higher multiplier has priority.",
+        "Critical Strike uses pseudo-random distribution.",
+        "Does not work against wards, buildings, and allied units."
+      ],
+      "mana": null,
+      "abilityName": "Critical Strike",
+      "cooldown": null,
+      "description": "Grants each attack a 30% chance to deal 160% damage.",
+      "params": [
+        "Proc Chance: 30%",
+        "Critical Damage: 160%"
+      ],
+      "itemBehaviour": [],
+      "story": null
+    }
+  ],
+  "cost": "1950",
+  "lore": null,
+  "consistFrom": [
+    "Broadsword",
+    "Blades of Attack",
+    "Recipe"
+  ],
+  "boughtFrom": "Weapons",
+  "name": "Crystalys",
+  "description": "A blade forged from rare crystals, it seeks weak points in enemy armor.",
+  "trivia": [
+    "Before 5.40, Crystalys was named \"Crystal Battlegear\" and before 5.31, it was named \"Crystal Defender\".",
+    "Crystalis is the titular sword of the 1990 NES game of the same name."
+  ],
+  "upgradeIn": [
+    "Daedalus"
+  ],
+  "bonuses": [
+    "+32 Attack damage"
+  ],
+  "tips": null
+}

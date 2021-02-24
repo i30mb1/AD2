@@ -1,0 +1,367 @@
+[
+  {
+    "responses": [
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/1\/14\/Vo_wisp_move03.mp3\/revision\/latest?cb=20120806224122",
+        "title": ""
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/b\/b9\/Vo_wisp_shitty_crummy_wizard.mp3\/revision\/latest?cb=20120806224130",
+        "isArcane": true,
+        "title": ""
+      }
+    ],
+    "category": "Drafting"
+  },
+  {
+    "responses": [
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/3\/3f\/Vo_wisp_spawn_respawn.mp3\/revision\/latest?cb=20120806224131",
+        "title": ""
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/a\/a1\/Vo_wisp_spawn_respawn_arcana.mp3\/revision\/latest?cb=20170518213118",
+        "isArcane": true,
+        "title": ""
+      }
+    ],
+    "category": "Entering battle"
+  },
+  {
+    "responses": [
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/f\/f6\/Vo_wisp_inthebag.mp3\/revision\/latest?cb=20120806224114",
+        "title": ""
+      }
+    ],
+    "category": "Taunting"
+  },
+  {
+    "responses": [
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/e\/ed\/Vo_wisp_battlebegins.mp3\/revision\/latest?cb=20120806224107",
+        "title": ""
+      }
+    ],
+    "category": "Beginning battle"
+  },
+  {
+    "responses": [
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/0\/0c\/Vo_wisp_move01.mp3\/revision\/latest?cb=20120806224120",
+        "title": ""
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/7\/70\/Vo_wisp_move02.mp3\/revision\/latest?cb=20120806224121",
+        "isArcane": true,
+        "title": ""
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/1\/14\/Vo_wisp_move03.mp3\/revision\/latest?cb=20120806224122",
+        "isArcane": true,
+        "title": ""
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/3\/33\/Vo_wisp_move04.mp3\/revision\/latest?cb=20120806224123",
+        "isArcane": true,
+        "title": ""
+      }
+    ],
+    "category": "Moving"
+  },
+  {
+    "responses": [
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/a\/a5\/Vo_wisp_attack.mp3\/revision\/latest?cb=20120806224106",
+        "title": ""
+      }
+    ],
+    "category": "Attacking"
+  },
+  {
+    "responses": [
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/9\/9a\/Vo_wisp_levelup.mp3\/revision\/latest?cb=20120806224118",
+        "title": ""
+      }
+    ],
+    "category": "Leveling up"
+  },
+  {
+    "responses": [
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/2\/24\/Vo_wisp_kill.mp3\/revision\/latest?cb=20120806224115",
+        "title": ""
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/0\/0c\/Vo_wisp_laugh.mp3\/revision\/latest?cb=20120806224117",
+        "isArcane": true,
+        "title": ""
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/e\/ea\/Vo_wisp_kill_arcana.mp3\/revision\/latest?cb=20201022224959",
+        "isArcane": true,
+        "title": ""
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/2\/2a\/Vo_wisp_firstblood.mp3\/revision\/latest?cb=20120806224112",
+        "isArcane": true,
+        "title": ""
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/7\/74\/Vo_wisp_firstblood_arcana.mp3\/revision\/latest?cb=20201022224952",
+        "isArcane": true,
+        "title": ""
+      }
+    ],
+    "category": "Killing an enemy"
+  },
+  {
+    "responses": [
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/9\/93\/Vo_wisp_ally.mp3\/revision\/latest?cb=20120806224103",
+        "title": "",
+        "icons": [
+          "heroes\/Enigma\/minimap.png",
+          "heroes\/Chaos Knight\/minimap.png",
+          "heroes\/Keeper of the Light\/minimap.png"
+        ]
+      }
+    ],
+    "category": "Meeting an ally"
+  },
+  {
+    "responses": [
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/8\/85\/Vo_wisp_lasthit.mp3\/revision\/latest?cb=20120806224116",
+        "title": ""
+      }
+    ],
+    "category": "Last hitting"
+  },
+  {
+    "responses": [
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/a\/a4\/Vo_wisp_deny.mp3\/revision\/latest?cb=20120806224109",
+        "title": ""
+      }
+    ],
+    "category": "Denying"
+  },
+  {
+    "responses": [
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/5\/5b\/Vo_wisp_purchase_expensive.mp3\/revision\/latest?cb=20120806224127",
+        "title": ""
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/5\/5b\/Vo_wisp_purchase_expensive.mp3\/revision\/latest?cb=20120806224127",
+        "isArcane": true,
+        "title": ""
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/5\/5b\/Vo_wisp_purchase_expensive.mp3\/revision\/latest?cb=20120806224127",
+        "isArcane": true,
+        "title": ""
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/c\/cf\/Vo_wisp_purchase_scepter.mp3\/revision\/latest?cb=20120806224128",
+        "isArcane": true,
+        "title": "",
+        "icons": [
+          "items\/Aghanim's Scepter\/full.png"
+        ]
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/c\/cf\/Vo_wisp_purchase_scepter.mp3\/revision\/latest?cb=20120806224128",
+        "isArcane": true,
+        "title": "",
+        "icons": [
+          "items\/Blink Dagger\/full.png"
+        ]
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/7\/7b\/Vo_wisp_imort.mp3\/revision\/latest?cb=20120806224113",
+        "isArcane": true,
+        "title": "",
+        "icons": [
+          "heroes\/Aegis of the Immortal\/minimap.png"
+        ]
+      }
+    ],
+    "category": "Acquiring an item"
+  },
+  {
+    "responses": [
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/4\/4d\/Vo_wisp_death.mp3\/revision\/latest?cb=20120806224109",
+        "title": ""
+      }
+    ],
+    "category": "Dying"
+  },
+  {
+    "responses": [
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/3\/3f\/Vo_wisp_spawn_respawn.mp3\/revision\/latest?cb=20120806224131",
+        "title": ""
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/a\/a1\/Vo_wisp_spawn_respawn_arcana.mp3\/revision\/latest?cb=20170518213118",
+        "isArcane": true,
+        "title": ""
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/e\/ef\/Vo_wisp_fastres.mp3\/revision\/latest?cb=20120806224111",
+        "isArcane": true,
+        "title": ""
+      }
+    ],
+    "category": "Respawning"
+  },
+  {
+    "responses": [
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/c\/cf\/Vo_wisp_purchase_scepter.mp3\/revision\/latest?cb=20120806224128",
+        "title": ""
+      }
+    ],
+    "category": "Bottling Runes"
+  },
+  {
+    "responses": [
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/e\/e9\/Vo_wisp_all_runes_pickup.mp3\/revision\/latest?cb=20120806224105",
+        "title": ""
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/e\/e9\/Vo_wisp_all_runes_pickup.mp3\/revision\/latest?cb=20120806224105",
+        "isArcane": true,
+        "title": ""
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/9\/9e\/Vo_wisp_all_runes_pickup_arcana01.mp3\/revision\/latest?cb=20170518213048",
+        "isArcane": true,
+        "title": ""
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/e\/ef\/Vo_wisp_all_runes_pickup_arcana02.mp3\/revision\/latest?cb=20170518213053",
+        "isArcane": true,
+        "title": ""
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/6\/67\/Vo_wisp_all_runes_pickup_arcana03.mp3\/revision\/latest?cb=20170518213059",
+        "isArcane": true,
+        "title": ""
+      }
+    ],
+    "category": "Activating runes"
+  },
+  {
+    "responses": [
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/8\/8c\/Vo_wisp_no_mana_not_yet01.mp3\/revision\/latest?cb=20120806224124",
+        "title": ""
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/8\/85\/Vo_wisp_no_mana_not_yet02.mp3\/revision\/latest?cb=20120806224125",
+        "isArcane": true,
+        "title": ""
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/2\/2e\/Vo_wisp_no_mana_not_yet03.mp3\/revision\/latest?cb=20120806224126",
+        "isArcane": true,
+        "title": ""
+      }
+    ],
+    "category": "Ability on cooldown"
+  },
+  {
+    "responses": [
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/8\/8c\/Vo_wisp_no_mana_not_yet01.mp3\/revision\/latest?cb=20120806224124",
+        "title": ""
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/8\/85\/Vo_wisp_no_mana_not_yet02.mp3\/revision\/latest?cb=20120806224125",
+        "isArcane": true,
+        "title": ""
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/2\/2e\/Vo_wisp_no_mana_not_yet03.mp3\/revision\/latest?cb=20120806224126",
+        "isArcane": true,
+        "title": ""
+      }
+    ],
+    "category": "Not enough mana"
+  },
+  {
+    "responses": [
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/3\/30\/Vo_wisp_under_attack.mp3\/revision\/latest?cb=20120806224133",
+        "title": ""
+      }
+    ],
+    "category": "Taking damage"
+  },
+  {
+    "responses": [
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/b\/b8\/Vo_wisp_thanks.mp3\/revision\/latest?cb=20120806224132",
+        "title": ""
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/e\/ed\/Vo_wisp_battlebegins.mp3\/revision\/latest?cb=20120806224107",
+        "isArcane": true,
+        "title": ""
+      }
+    ],
+    "category": "Selecting"
+  },
+  {
+    "responses": [
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/b\/b8\/Vo_wisp_thanks.mp3\/revision\/latest?cb=20120806224132",
+        "title": ""
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/0\/0c\/Vo_wisp_laugh.mp3\/revision\/latest?cb=20120806224117",
+        "isArcane": true,
+        "title": ""
+      }
+    ],
+    "category": "Chat responses"
+  },
+  {
+    "responses": [
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/d\/d0\/Vo_wisp_win.mp3\/revision\/latest?cb=20120806224134",
+        "title": ""
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/9\/90\/Vo_wisp_lose.mp3\/revision\/latest?cb=20120806224119",
+        "isArcane": true,
+        "title": ""
+      }
+    ],
+    "category": "Match end"
+  },
+  {
+    "responses": [
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/b\/b8\/Vo_wisp_thanks.mp3\/revision\/latest?cb=20120806224132",
+        "title": ""
+      }
+    ],
+    "category": "Cosmetic item drop"
+  },
+  {
+    "responses": [
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/b\/b9\/Vo_wisp_shitty_crummy_wizard.mp3\/revision\/latest?cb=20120806224130",
+        "title": ""
+      }
+    ],
+    "category": "Misc"
+  }
+]

@@ -1,0 +1,25 @@
+{
+  "abilities": [],
+  "additionalInformation": [
+    "For strength heroes, it grants 300 mana and 1.25 mana regen.",
+    "For agility heroes, it grants 300 mana and 1.25 mana regen.",
+    "For intelligence heroes, it grants 300 mana, 1.25 mana regen and 25 attack damage."
+  ],
+  "cost": "2800",
+  "lore": null,
+  "consistFrom": null,
+  "boughtFrom": "Secret Shop",
+  "name": "Mystic Staff",
+  "description": "Enigmatic staff made of only the most expensive crystals.",
+  "trivia": null,
+  "upgradeIn": [
+    "Scythe of Vyse",
+    "Wind Waker",
+    "Shiva's Guard",
+    "Arcane Blink"
+  ],
+  "bonuses": [
+    "+25 Intelligence"
+  ],
+  "tips": null
+}

@@ -1,0 +1,28 @@
+{
+  "abilities": [],
+  "additionalInformation": [
+    "For strength heroes, it grants 80 health, 0.4 health regen, 0.67 armor, 4 attack speed, 48 mana, 0.2 mana regen and 4 attack damage.",
+    "For agility heroes, it grants 80 health, 0.4 health regen, 0.67 armor, 4 attack speed, 48 mana, 0.2 mana regen and 4 attack damage.",
+    "For intelligence heroes, it grants 80 health, 0.4 health regen, 0.67 armor, 4 attack speed, 48 mana, 0.2 mana regen and 4 attack damage."
+  ],
+  "cost": "450",
+  "lore": null,
+  "consistFrom": null,
+  "boughtFrom": "Attributes",
+  "name": "Crown",
+  "description": "A stately crown created to ensure a well-meaning but ungifted heir could fend off usurpers and govern with a strong hand.",
+  "trivia": null,
+  "upgradeIn": [
+    "Dagon 1",
+    "Meteor Hammer",
+    "Helm of the Dominator",
+    "Veil of Discord",
+    "Rod of Atos"
+  ],
+  "bonuses": [
+    "+4 Strength",
+    "+4 Agility",
+    "+4 Intelligence"
+  ],
+  "tips": null
+}

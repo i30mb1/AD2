@@ -1,0 +1,251 @@
+{
+  "abilities": [
+    {
+      "spellName": "Talent",
+      "talents": [
+        {
+          "talentLvl": "25",
+          "talentLeft": "+4% Ice Blast Kill Threshold",
+          "talentRight": "500 AoE Cold Feet"
+        },
+        {
+          "talentLvl": "20",
+          "talentLeft": "+70 Chilling Touch Damage",
+          "talentRight": "+6% Ice Vortex Slow\/Resistance"
+        },
+        {
+          "talentLvl": "15",
+          "talentLeft": "+12 Health Regen",
+          "talentRight": "-2s Ice Vortex Cooldown"
+        },
+        {
+          "talentLvl": "10",
+          "talentLeft": "+8% Spell Amplification",
+          "talentRight": "175 Chilling Touch Attack Range"
+        }
+      ]
+    },
+    {
+      "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/1\/13\/Ancient_Apparition_Cold_Feet.mp3\/revision\/latest?cb=20191216010624",
+      "effects": [
+        "Ability Target Unit (TagAghanim Target Area)",
+        "Affects Enemies",
+        "Damage Magical"
+      ],
+      "notes": [
+        "Cold Feet places an initial debuff on the target and places an icy marker at its current position upon cast.",
+        "As long as the target stays within 715 radius of the mark, it takes damage from the debuff and after 4 seconds it is stunned.",
+        "If the target moves 715 range away from the mark at any point during the initial debuff, the spell completely stops, removing the debuff and the marker. This means even when the target moves back within range, it is not frozen or damaged further. Also considers the target's vertical position, so getting moved far up enough can stop Cold Feet as well.",
+        "This means even when the target moves back within range, it is not frozen or damaged further.",
+        "Also considers the target's vertical position, so getting moved far up enough can stop Cold Feet as well.",
+        "When cast on units which already have the Cold Feet modifier, nothing happens.",
+        "Deals damage in 1 second intervals, starting immediately upon cast, resulting in 4 instances.",
+        "The stun is applied 1 second after the last instance.",
+        "Can deal up to 120\/200\/280\/360 damage to the target (before reductions).",
+        "The talent turns Cold Feet into an area-targeted ability with 500 radius, so that it cannot directly target units anymore. The break distances are individual for each hit enemy. They do not share it. Can target invisible enemies and enemies inside the fog of war.",
+        "The break distances are individual for each hit enemy. They do not share it.",
+        "Can target invisible enemies and enemies inside the fog of war."
+      ],
+      "mana": "125",
+      "hotKey": "Q",
+      "cooldown": "10\/9\/8\/7",
+      "description": "Places a frozen hex on an enemy unit that deals damage over time, but can be dispelled by moving away from the initial cast point. If the enemy unit doesn't move out of the given range, it will be stunned and frozen in place after 2\/2.5\/3\/3.5 seconds.",
+      "spellName": "Cold Feet",
+      "params": [
+        "Cast Animation: 0.01+0",
+        "Cast Range: 700\/800\/900\/1000",
+        "Break Distance: 715",
+        "Damage per Tick: 30\/50\/70\/90",
+        "Damage Duration: 4",
+        "Stun Duration: 2\/2.5\/3\/3.5",
+        "Radius: 500",
+        "Attempts to damage, but does not stun if debuff was placed before spell immunity and when not dispelled.",
+        "Blocked as a single-target ability. Not blocked when turned into an area-targeted ability."
+      ],
+      "itemBehaviour": [],
+      "legacyKey": "C",
+      "story": "Kaldr's presence draws those around him into a frozen void, threatening to lock them in an icy prison for eternity."
+    },
+    {
+      "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/e\/e7\/Ancient_Apparition_Ice_Vortex.mp3\/revision\/latest?cb=20191216010618",
+      "effects": [
+        "Ability Target Area",
+        "Affects Enemies"
+      ],
+      "notes": [
+        "All effects are provided by an aura, including the effects from Aghanim's Shard. The modifier lingers for 16 seconds.",
+        "Reduces most heroes' total magic resistance to 14%\/10%\/6%\/2% (TagTalent 9%\/5%\/2%\/-2%), assuming basic 25% magic resistance and no other sources of magic resistance.",
+        "Successive casts of Ice Vortex do not stack. A unit can only be affected by one of them even when multiple of them are overlapping.",
+        "Provides 200 radius ground vision at the targeted point for its duration.",
+        "With Aghanim's Shard, deals damage in 1 second intervals, starting 1 second after receiving the debuff, resulting in up to 16 possible instances. Can deal up to 640 damage to a single unit (before reductions). Acquiring Aghanim's Shard immediately upgrades all currently active Ice Vortexes, including already placed debuffs.",
+        "Can deal up to 640 damage to a single unit (before reductions).",
+        "Acquiring Aghanim's Shard immediately upgrades all currently active Ice Vortexes, including already placed debuffs.",
+        "Choosing the slow and resistance reduction increasing talent immediately upgrades all currently active Ice Vortexes, including already placed debuffs."
+      ],
+      "mana": "40\/55\/70\/85",
+      "hotKey": "W",
+      "cooldown": "4 (TagTalent 2)",
+      "description": "Creates a vortex of icy energy that slows movement speed and increases magic damage done to enemies in its range.",
+      "spellName": "Ice Vortex",
+      "params": [
+        "Cast Animation: 0.01+0",
+        "Cast Range: 1500",
+        "Effect Radius: 275",
+        "Move Speed Slow: 15%\/20%\/25%\/30% (TagTalent 21%\/26%\/31%\/36%)",
+        "Magic Resistance Reduction: 15%\/20%\/25%\/30% (TagTalent 21%\/26%\/31%\/36%)",
+        "Aura Linger Duration: 0.5",
+        "Duration: 16",
+        "Attack Speed Slow: 20",
+        "Damage per Second: 40",
+        "Causes Ice Vortex to deal 40 DPS and reduces attack speed by 20.",
+        "Slow and magic resistance reduction persist if debuff was placed before spell immunity."
+      ],
+      "itemBehaviour": [],
+      "legacyKey": "E",
+      "story": "Frozen, caustic winds are at the whim of Kaldr, chilling the field of battle."
+    },
+    {
+      "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/5\/53\/Ancient_Apparition_Chilling_Touch_1.mp3\/revision\/latest?cb=20191216010622",
+      "effects": [
+        "Ability Target Unit \/ Autocast",
+        "Affects Enemies",
+        "Damage Magical"
+      ],
+      "notes": [
+        "The cast range equals the caster's attack range + the bonus range. For Ancient Apparition, the range is 735\/795\/855\/915 (TagTalent 910\/970\/1030\/1090).",
+        "The bonus damage is dealt in a separate damage instance, and counts as spell damage. This means it is not affected or considered by anything that works with attack damage. This also means that it fully works with spell damage amplification and spell lifesteal.",
+        "This means it is not affected or considered by anything that works with attack damage.",
+        "This also means that it fully works with spell damage amplification and spell lifesteal.",
+        "The debuffs from successive casts fully stack, with each instance creating its own debuff.",
+        "The attacks first apply the debuff, then their own damage."
+      ],
+      "mana": "30\/45\/60\/75",
+      "hotKey": "E",
+      "cooldown": "15\/11\/7\/3 (TagTalent 0)",
+      "description": "Enhances Ancient Apparition's attack with increased range, heavy magic damage, and movement slow.",
+      "spellName": "Chilling Touch",
+      "params": [
+        "Attack Range Bonus: 60\/120\/180\/240 (TagTalent 235\/295\/355\/415)",
+        "Damage: 50\/90\/130\/170 (TagTalent 120\/160\/200\/240)",
+        "Move Speed Slow: 100%",
+        "Slow Duration: 0.5",
+        "Removes cooldown.",
+        "Slow persists if debuff was placed before spell immunity and when not dispelled."
+      ],
+      "itemBehaviour": [],
+      "legacyKey": "G",
+      "story": "The Ancient Apparition's eternal knowledge brings a frigid enchantment to his attacks."
+    },
+    {
+      "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/b\/ba\/Ancient_Apparition_Ice_Blast_1.mp3\/revision\/latest?cb=20191216010624",
+      "effects": [
+        "Ability Target Point",
+        "Affects Enemies \/ Enemy Heroes",
+        "Damage Magical \/ Instant Kill"
+      ],
+      "notes": [
+        "Upon cast, Ice Blast is replaced by the sub-skill Release.",
+        "The tracer projectile travels at a speed of 1500 until Release is cast, Ancient Apparition dies, or it reaches the map boundaries. The tracer is visible to allies only. The initial cast sound is also only audible to allies. The tracer projectile itself is harmless. It neither deals damage, nor places the debuff.",
+        "The tracer is visible to allies only. The initial cast sound is also only audible to allies.",
+        "The tracer projectile itself is harmless. It neither deals damage, nor places the debuff.",
+        "The explosion radius starts at 275 and increases by 50 for every second the tracer has traveled, capped at 1000 radius. Thus, it takes at least 15 seconds to reach the maximum radius, equaling 22500 units traveled.",
+        "Thus, it takes at least 15 seconds to reach the maximum radius, equaling 22500 units traveled.",
+        "The tracer provides 500 radius flying vision around itself as it travels. This vision does not last.",
+        "The debuff is only placed on heroes, clones and creep-heroes, but not on illusions.",
+        "The debuff can also be placed on spell immune or invulnerable, but not on hidden units.",
+        "Unlike the debuff, the explosion damage hits all enemy units, including creeps, excluding buildings and wards.",
+        "The debuff prevents the current health of affected units from increasing. Does not prevent the following spells from increasing the hero's health: True Form, Supernova, Soul Catcher, Sunder, Whirling Death, Decay, Time Lapse and Essence Ring.",
+        "Does not prevent the following spells from increasing the hero's health: True Form, Supernova, Soul Catcher, Sunder, Whirling Death, Decay, Time Lapse and Essence Ring.",
+        "Units with the debuff on die instantly when their health drops below the threshold. The kill is credited to the source of the damage which brought them below the threshold. The debuff checks the unit's health upon taking damage, excluding the damage flagged by HP removal. However, if it was caused by self-inflicted damage, Ancient Apparition is credited for the kill.",
+        "The debuff checks the unit's health upon taking damage, excluding the damage flagged by HP removal.",
+        "However, if it was caused by self-inflicted damage, Ancient Apparition is credited for the kill.",
+        "Min health prevents affected units from dying to the shatter for its duration. Invulnerable units cannot shatter.",
+        "The debuff deals damage in 1 second intervals, starting 1 second after the debuff is applied, resulting in 10\/11\/12 instances.",
+        "The debuff itself can deal up to 125\/220\/384 damage (before reductions).",
+        "Together with the explosion, Ice Blast can deal up to 375\/570\/834 damage (before reductions)."
+      ],
+      "mana": "175",
+      "hotKey": "R",
+      "cooldown": "40",
+      "description": "Launches a tracer towards any location of the battlefield, which must be triggered again to mark the area to be blasted by a damaging explosion of hail. The further the tracer travels, the larger the explosion will be. Enemies caught in the explosion, or who touched the icy ball of hail as it travels, are frostbitten, taking damage and prevented from regenerating or healing. If a frostbitten unit's health drops below a certain percentage, they will instantly shatter.",
+      "spellName": "Ice Blast",
+      "params": [
+        "Cast Animation: 0.01+1.07",
+        "Cast Range: Global",
+        "Projectile Radius: 275",
+        "Min Explosion Radius: 275",
+        "Max Explosion Radius: 1000",
+        "Explosion Damage: 250\/350\/450",
+        "Damage per Second: 12.5\/20\/32",
+        "Percentage Health Kill Threshold: 12%\/13%\/14% (TagTalent 16%\/17%\/18%)",
+        "Duration: 10\/11\/12"
+      ],
+      "itemBehaviour": [],
+      "legacyKey": "T",
+      "story": "Ice storms from ages past flow through Kaldr's frosty limbs, crashing into the world and turning its inhabitants into monuments to his eternal power."
+    },
+    {
+      "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/0\/00\/Ancient_Apparition_Ice_Blast_2.mp3\/revision\/latest?cb=20191216010625",
+      "effects": [
+        "Ability No Target"
+      ],
+      "notes": [
+        "Replaces Ice Blast until the sub-spell is cast or the tracer disappears.",
+        "Upon cast, the tracer stops travelling and marks the total area hit by the explosion once the icy ball of hail reaches its position.",
+        "It also provides 650 radius flying vision at that position for 4 seconds.",
+        "The icy ball of hail travels at a speed of , or reaches the targeted point 1.75 seconds after launch, whichever is faster.",
+        "The icy ball is only released when Release is cast, or when Ancient Apparition dies while the tracer is still travelling.",
+        "It is not released when the tracer reaches the map boundary. In this case, the spell is wasted.",
+        "Every enemy unit which comes within 275 radius of the icy ball as it travels, or is hit by the explosion gets the Frostbitten debuff. The debuff starts expiring only once outside of range of the icy ball. Getting within range again immediately refreshes the duration.",
+        "The debuff starts expiring only once outside of range of the icy ball. Getting within range again immediately refreshes the duration.",
+        "The icy ball is fully visible to enemies. But unlike the tracer, it is not visible on the minimap.",
+        "The icy ball provides 500 radius flying vision as it travels, which lasts for 3 seconds."
+      ],
+      "mana": null,
+      "hotKey": "R",
+      "cooldown": null,
+      "description": "Releases the ice blast to explode at the tracer's current location.",
+      "spellName": "Release",
+      "params": [
+        "Cast Animation: 0.01+1.1",
+        "Min Projectile Speed: 750",
+        "Max Travel Time: 1.75"
+      ],
+      "itemBehaviour": [],
+      "legacyKey": "T",
+      "story": null
+    }
+  ],
+  "mainAttributes": {
+    "attrStrengthInc": 1.9,
+    "attrStrength": 20.0,
+    "attrIntelligence": 23.0,
+    "attrIntelligenceInc": 3.4,
+    "attrAgilityInc": 2.2,
+    "attrAgility": 20.0
+  },
+  "description": "Kaldr, the Ancient Apparition, is a ranged intelligence hero who is usually played as a support. Though frail, this icy elemental caster possesses strong semi-spammable spells and a painful global ultimate. Cold Feet harms enemies and will also stun them unless they move away from the cast area, making the spell dangerous when used in conjunction with disables from allies. Ice Vortex is a low-cooldown zoning ability, applying a heavy slow and magic damage amplification to nearby enemies. This combines effectively with Chilling Touch, which endows Kaldr with enhanced magic damage from great range. His ultimate Ice Blast is one of the game's most devastating spells, with a global range and a radius that increases the further the blast travels. All enemies struck by it endure hefty damage, are temporarily prevented from healing or regenerating, and instantly perish if their health falls too low. Ancient Apparition can be devastating in team fights, and makes an excellent counter to heroes who rely on healing and regeneration.",
+  "history": "Kaldr, the Ancient Apparition, is an image projected from outside time. He springs from the cold, infinite void that both predates the universe and awaits its end. Kaldr is, Kaldr was, Kaldr shall be\u2026 and what we perceive, powerful as it appears to us, is but the faintest faded echo of the true, eternal Kaldr. Some believe that as the cosmos ages and approaches its final moments, the brightness and power of Kaldr will also intensify\u2014that the Ancient Apparition will grow younger and stronger as eternity's end draws nigh. His grip of ice will bring all matter to a stop, his image will cast a light too terrible to behold. An Apparition no longer!",
+  "talents": [
+    {
+      "talentLvl": "25",
+      "talentLeft": "+4% Ice Blast Kill Threshold",
+      "talentRight": "500 AoE Cold Feet"
+    },
+    {
+      "talentLvl": "20",
+      "talentLeft": "+70 Chilling Touch Damage",
+      "talentRight": "+6% Ice Vortex Slow\/Resistance"
+    },
+    {
+      "talentLvl": "15",
+      "talentLeft": "+12 Health Regen",
+      "talentRight": "-2s Ice Vortex Cooldown"
+    },
+    {
+      "talentLvl": "10",
+      "talentLeft": "+8% Spell Amplification",
+      "talentRight": "175 Chilling Touch Attack Range"
+    }
+  ]
+}

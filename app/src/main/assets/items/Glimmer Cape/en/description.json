@@ -1,0 +1,61 @@
+{
+  "abilities": [
+    {
+      "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/e\/ec\/Glimmer_Cape_Glimmer.mp3\/revision\/latest?cb=20191227195421",
+      "effects": [
+        "Ability Target Unit",
+        "Affects Allies"
+      ],
+      "notes": [
+        "Does not interrupt the user's channeling spells upon cast, neither when cast on self, nor when cast on allies.",
+        "If the target is more than 800 range away, the caster moves to the target until it is within 550 range before casting. If a cast order is given on a target which is within 800 range already, the caster does not need to move closer and casts it right away.",
+        "If a cast order is given on a target which is within 800 range already, the caster does not need to move closer and casts it right away.",
+        "When casting on allies, the user does not have to face the targeted ally to cast it. Does not interrupt the target's channeling spells.",
+        "Places a buff on an allied hero. As long as this buff stays on it, the hero keeps on turning invisible.",
+        "The fade time is reset and invisibility is lost upon reaching the cast point of spells or items or upon performing an attack.",
+        "While invisible, the unit can pick up or drop items without having to go through the fade time again.",
+        "While invisible, the unit is phased, meaning other units can walk through it without getting blocked.",
+        "The magic resistance is only applied when fully invisible. It is not applied during the fade time.",
+        "Increases most heroes' total magic resistance to 58.75%, assuming basic 25% magic resistance and no other sources of magic resistance. Together with the passive, this is further increased to 64.94% for most heroes.",
+        "Together with the passive, this is further increased to 64.94% for most heroes.",
+        "Can be cast on couriers."
+      ],
+      "mana": "90",
+      "abilityName": "Glimmer",
+      "cooldown": null,
+      "description": "After a 0.6 second delay, grants invisibility and 45% magic resistance to you or a target allied unit for 5 seconds. Can be cast while channelling.",
+      "params": [
+        "Default Cast Range: 550",
+        "Buffer Cast Range: 800",
+        "Fade Time: 0.6",
+        "Magic Resistance Bonus: 45%",
+        "Duration: 5"
+      ],
+      "itemBehaviour": [],
+      "story": null
+    }
+  ],
+  "additionalInformation": [
+    "The magic resistance stacks multiplicatively with other sources of magic resistance.",
+    "Increases most heroes' total magic resistance to 36.25%, assuming basic 25% magic resistance and no other sources of magic resistance."
+  ],
+  "cost": "1900",
+  "lore": null,
+  "consistFrom": [
+    "Shadow Amulet",
+    "Cloak",
+    "Recipe"
+  ],
+  "boughtFrom": "Magical",
+  "name": "Glimmer Cape",
+  "description": "The stolen cape of a master illusionist.",
+  "trivia": null,
+  "upgradeIn": null,
+  "bonuses": [
+    "+15% Magic resistance"
+  ],
+  "tips": [
+    "Assuming no sources of magic resistance other than the wearer's Glimmer Cape itself and base magic resistance, the Glimmer active ability reduces the amount of magic damage taken to 35.06% if used on the wearer and 41.25% if used on an ally.",
+    "You can use the glimmer cape while teleporting away. This helps the wearer against disables which will interrupt the channeling."
+  ]
+}

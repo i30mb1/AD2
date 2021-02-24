@@ -1,0 +1,41 @@
+{
+  "abilities": [
+    {
+      "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/f\/f3\/Flicker_Flicker.mp3\/revision\/latest?cb=20191227195703",
+      "effects": [
+        "Ability No Target",
+        "Affects Self"
+      ],
+      "notes": [
+        "Disjoints projectiles upon cast.",
+        "Applies a basic dispel upon cast.",
+        "The dispel is applied after the teleport."
+      ],
+      "mana": null,
+      "abilityName": "Flicker",
+      "cooldown": "4",
+      "description": "Dispells debuffs and blinks you to a random spot within 450 range. Does not get disabled on incoming damage.",
+      "params": [
+        "Min Blink Range: 200",
+        "Max Blink Range: 450"
+      ],
+      "itemBehaviour": [],
+      "story": null
+    }
+  ],
+  "additionalInformation": [
+    "Flickers are fully sharable."
+  ],
+  "cost": "N\/A",
+  "lore": null,
+  "consistFrom": null,
+  "boughtFrom": "Neutral Drop Only",
+  "name": "Flicker",
+  "description": "The technically-true-to-his-word 'teleportation device' crafted by a notorious fae trickster.",
+  "trivia": null,
+  "upgradeIn": null,
+  "bonuses": [
+    "+40 Movement speed"
+  ],
+  "tips": null
+}

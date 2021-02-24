@@ -1,0 +1,2400 @@
+[
+  {
+    "responses": [
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_ru_gamepedia\/images\/f\/ff\/Phass_spawn_01_ru.mp3\/revision\/latest?cb=20170413120246",
+        "title": "Phantom Assassin!"
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_ru_gamepedia\/images\/1\/1a\/Phass_arc_spawn_01_ru.mp3\/revision\/latest?cb=20170413063439",
+        "isArcane": true,
+        "title": "Phantom Assassin!"
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_ru_gamepedia\/images\/0\/09\/Phass_spawn_02_ru.mp3\/revision\/latest?cb=20170413120251",
+        "title": "Невидимая и бесшумная."
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_ru_gamepedia\/images\/9\/99\/Phass_arc_spawn_02_ru.mp3\/revision\/latest?cb=20170413063444",
+        "isArcane": true,
+        "title": "Невидимая и бесшумная."
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_ru_gamepedia\/images\/a\/a7\/Phass_spawn_03_ru.mp3\/revision\/latest?cb=20170413120257",
+        "title": "Появляется фантом."
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_ru_gamepedia\/images\/5\/5e\/Phass_arc_spawn_03_ru.mp3\/revision\/latest?cb=20170413063448",
+        "isArcane": true,
+        "title": "Появляется фантом."
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_ru_gamepedia\/images\/2\/25\/Phass_spawn_04_ru.mp3\/revision\/latest?cb=20170413120302",
+        "title": "Меня послали Сёстры Вуали."
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_ru_gamepedia\/images\/b\/bf\/Phass_arc_spawn_04_ru.mp3\/revision\/latest?cb=20170413063453",
+        "isArcane": true,
+        "title": "Меня послали Сёстры Вуали."
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_ru_gamepedia\/images\/d\/d8\/Phass_spawn_05_ru.mp3\/revision\/latest?cb=20170413120306",
+        "title": "Я размою черту между жизнью и смертью."
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_ru_gamepedia\/images\/3\/35\/Phass_arc_spawn_05_ru.mp3\/revision\/latest?cb=20170413063458",
+        "isArcane": true,
+        "title": "Я размою черту между жизнью и смертью."
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_ru_gamepedia\/images\/d\/d1\/Phass_move_14_ru.mp3\/revision\/latest?cb=20170413115738",
+        "title": "Где моя тень, там мой клинок."
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_ru_gamepedia\/images\/7\/72\/Phass_arc_move_14_ru.mp3\/revision\/latest?cb=20170413062935",
+        "isArcane": true,
+        "title": "Где моя тень, там мой клинок."
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_ru_gamepedia\/images\/6\/6d\/Phass_move_09_ru.mp3\/revision\/latest?cb=20170413115714",
+        "title": "Не моргай, а то меня не заметишь."
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_ru_gamepedia\/images\/f\/f4\/Phass_arc_move_09_ru.mp3\/revision\/latest?cb=20170413062912",
+        "isArcane": true,
+        "title": "Не моргай, а то меня не заметишь."
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_ru_gamepedia\/images\/e\/ec\/Phass_move_10_ru.mp3\/revision\/latest?cb=20170413115719",
+        "title": "В мгновение ока."
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_ru_gamepedia\/images\/9\/93\/Phass_arc_move_10_ru.mp3\/revision\/latest?cb=20170413062916",
+        "isArcane": true,
+        "title": "В мгновение ока."
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_ru_gamepedia\/images\/8\/8c\/Phass_cast_01_ru.mp3\/revision\/latest?cb=20170413114847",
+        "title": "Метра смерти!"
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_ru_gamepedia\/images\/0\/0d\/Phass_arc_cast_01_ru.mp3\/revision\/latest?cb=20170413062054",
+        "isArcane": true,
+        "title": "Метра смерти!"
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_ru_gamepedia\/images\/5\/57\/Phass_cast_04_ru.mp3\/revision\/latest?cb=20170413114903",
+        "title": "Я жалю из теней"
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_ru_gamepedia\/images\/c\/c5\/Phass_arc_cast_04_ru.mp3\/revision\/latest?cb=20170413062108",
+        "isArcane": true,
+        "title": "Я жалю из теней"
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_ru_gamepedia\/images\/4\/4e\/Phass_kill_10_ru.mp3\/revision\/latest?cb=20170413115353",
+        "title": "Смерть от моих рук \u2014 это честь."
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_ru_gamepedia\/images\/6\/66\/Phass_arc_kill_10_ru.mp3\/revision\/latest?cb=20170413062544",
+        "isArcane": true,
+        "title": "Смерть от моих рук \u2014 это честь."
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_ru_gamepedia\/images\/0\/0e\/Phass_kill_03_ru.mp3\/revision\/latest?cb=20170413115320",
+        "title": "Оракул выбрал тебя."
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_ru_gamepedia\/images\/2\/27\/Phass_arc_kill_03_ru.mp3\/revision\/latest?cb=20170413062510",
+        "isArcane": true,
+        "title": "Оракул выбрал тебя."
+      }
+    ],
+    "category": "Снаряжение"
+  },
+  {
+    "responses": [
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_ru_gamepedia\/images\/f\/ff\/Phass_spawn_01_ru.mp3\/revision\/latest?cb=20170413120246",
+        "title": "Phantom Assassin!"
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_ru_gamepedia\/images\/3\/3b\/Phass_anger_08_ru.mp3\/revision\/latest?cb=20170413114659",
+        "title": "Хм-м-м!"
+      }
+    ],
+    "category": "Стадия планирования"
+  },
+  {
+    "responses": [
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_ru_gamepedia\/images\/f\/ff\/Phass_spawn_01_ru.mp3\/revision\/latest?cb=20170413120246",
+        "title": "Phantom Assassin."
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_ru_gamepedia\/images\/1\/1a\/Phass_arc_spawn_01_ru.mp3\/revision\/latest?cb=20170413063439",
+        "isArcane": true,
+        "title": "Phantom Assassin."
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_ru_gamepedia\/images\/0\/09\/Phass_spawn_02_ru.mp3\/revision\/latest?cb=20170413120251",
+        "title": "Невидимая и бесшумная."
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_ru_gamepedia\/images\/9\/99\/Phass_arc_spawn_02_ru.mp3\/revision\/latest?cb=20170413063444",
+        "isArcane": true,
+        "title": "Невидимая и бесшумная."
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_ru_gamepedia\/images\/a\/a7\/Phass_spawn_03_ru.mp3\/revision\/latest?cb=20170413120257",
+        "title": "Появляется фантом."
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_ru_gamepedia\/images\/5\/5e\/Phass_arc_spawn_03_ru.mp3\/revision\/latest?cb=20170413063448",
+        "isArcane": true,
+        "title": "Появляется фантом."
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_ru_gamepedia\/images\/2\/25\/Phass_spawn_04_ru.mp3\/revision\/latest?cb=20170413120302",
+        "title": "Меня послали Сестры Вуали."
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_ru_gamepedia\/images\/b\/bf\/Phass_arc_spawn_04_ru.mp3\/revision\/latest?cb=20170413063453",
+        "isArcane": true,
+        "title": "Меня послали Сестры Вуали."
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_ru_gamepedia\/images\/d\/d8\/Phass_spawn_05_ru.mp3\/revision\/latest?cb=20170413120306",
+        "title": "Я размою черту между жизнью и смертью."
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_ru_gamepedia\/images\/3\/35\/Phass_arc_spawn_05_ru.mp3\/revision\/latest?cb=20170413063458",
+        "isArcane": true,
+        "title": "Я размою черту между жизнью и смертью."
+      }
+    ],
+    "category": "Появление"
+  },
+  {
+    "responses": [
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_ru_gamepedia\/images\/2\/2f\/Phass_inthebag_01_ru.mp3\/revision\/latest?cb=20170413115247",
+        "title": "Дело в шляпе!"
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_ru_gamepedia\/images\/5\/5e\/Phass_arc_inthebag_01_ru.mp3\/revision\/latest?cb=20170413062437",
+        "isArcane": true,
+        "title": "Дело в шляпе!"
+      }
+    ],
+    "category": "Насмешка"
+  },
+  {
+    "responses": [
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_ru_gamepedia\/images\/f\/f3\/Phass_battlebegins_01_ru.mp3\/revision\/latest?cb=20170413114807",
+        "title": "В моём списке 5 имён."
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_ru_gamepedia\/images\/8\/86\/Phass_arc_battlebegins_01_ru.mp3\/revision\/latest?cb=20170413062016",
+        "isArcane": true,
+        "title": "В моём списке 5 имён."
+      }
+    ],
+    "category": "Начало битвы"
+  },
+  {
+    "responses": [
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_ru_gamepedia\/images\/c\/c6\/Phass_move_01_ru.mp3\/revision\/latest?cb=20170413115637",
+        "title": "Да."
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_ru_gamepedia\/images\/a\/af\/Phass_arc_move_01_ru.mp3\/revision\/latest?cb=20170413062832",
+        "isArcane": true,
+        "title": "Да."
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_ru_gamepedia\/images\/4\/4c\/Phass_move_02_ru.mp3\/revision\/latest?cb=20170413115641",
+        "title": "Ура."
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_ru_gamepedia\/images\/2\/24\/Phass_arc_move_02_ru.mp3\/revision\/latest?cb=20170413062837",
+        "isArcane": true,
+        "title": "Ура."
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_ru_gamepedia\/images\/9\/9a\/Phass_move_03_ru.mp3\/revision\/latest?cb=20170413115646",
+        "title": "Угу."
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_ru_gamepedia\/images\/4\/41\/Phass_arc_move_03_ru.mp3\/revision\/latest?cb=20170413062842",
+        "isArcane": true,
+        "title": "Угу."
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_ru_gamepedia\/images\/4\/4c\/Phass_move_04_ru.mp3\/revision\/latest?cb=20170413115651",
+        "title": "О, да."
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_ru_gamepedia\/images\/1\/18\/Phass_arc_move_04_ru.mp3\/revision\/latest?cb=20170413062847",
+        "isArcane": true,
+        "title": "О, да."
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_ru_gamepedia\/images\/5\/57\/Phass_move_05_ru.mp3\/revision\/latest?cb=20170413115655",
+        "title": "Ха!"
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_ru_gamepedia\/images\/6\/6a\/Phass_arc_move_05_ru.mp3\/revision\/latest?cb=20170413062852",
+        "isArcane": true,
+        "title": "Ха!"
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_ru_gamepedia\/images\/b\/b6\/Phass_move_06_ru.mp3\/revision\/latest?cb=20170413115700",
+        "title": "Выдвигаюсь."
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_ru_gamepedia\/images\/c\/c4\/Phass_arc_move_06_ru.mp3\/revision\/latest?cb=20170413062857",
+        "isArcane": true,
+        "title": "Выдвигаюсь."
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_ru_gamepedia\/images\/f\/f0\/Phass_move_07_ru.mp3\/revision\/latest?cb=20170413115705",
+        "title": "Крадусь."
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_ru_gamepedia\/images\/6\/69\/Phass_arc_move_07_ru.mp3\/revision\/latest?cb=20170413062902",
+        "isArcane": true,
+        "title": "Крадусь."
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_ru_gamepedia\/images\/2\/24\/Phass_move_08_ru.mp3\/revision\/latest?cb=20170413115709",
+        "title": "Подобно тени."
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_ru_gamepedia\/images\/f\/f4\/Phass_arc_move_08_ru.mp3\/revision\/latest?cb=20170413062907",
+        "isArcane": true,
+        "title": "Подобно тени."
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_ru_gamepedia\/images\/6\/6d\/Phass_move_09_ru.mp3\/revision\/latest?cb=20170413115714",
+        "title": "Не моргай, а то меня не заметишь."
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_ru_gamepedia\/images\/f\/f4\/Phass_arc_move_09_ru.mp3\/revision\/latest?cb=20170413062912",
+        "isArcane": true,
+        "title": "Не моргай, а то меня не заметишь."
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_ru_gamepedia\/images\/e\/ec\/Phass_move_10_ru.mp3\/revision\/latest?cb=20170413115719",
+        "title": "В мгновение ока."
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_ru_gamepedia\/images\/9\/93\/Phass_arc_move_10_ru.mp3\/revision\/latest?cb=20170413062916",
+        "isArcane": true,
+        "title": "В мгновение ока."
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_ru_gamepedia\/images\/f\/fc\/Phass_move_11_ru.mp3\/revision\/latest?cb=20170413115724",
+        "title": "Бесшумно."
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_ru_gamepedia\/images\/8\/84\/Phass_arc_move_11_ru.mp3\/revision\/latest?cb=20170413062921",
+        "isArcane": true,
+        "title": "Бесшумно."
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_ru_gamepedia\/images\/f\/f1\/Phass_move_12_ru.mp3\/revision\/latest?cb=20170413115729",
+        "title": "Хорошо."
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_ru_gamepedia\/images\/2\/26\/Phass_arc_move_12_ru.mp3\/revision\/latest?cb=20170413062925",
+        "isArcane": true,
+        "title": "Хорошо."
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_ru_gamepedia\/images\/d\/da\/Phass_move_13_ru.mp3\/revision\/latest?cb=20170413115733",
+        "title": "Я тень."
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_ru_gamepedia\/images\/6\/67\/Phass_arc_move_13_ru.mp3\/revision\/latest?cb=20170413062930",
+        "isArcane": true,
+        "title": "Я тень."
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_ru_gamepedia\/images\/d\/d1\/Phass_move_14_ru.mp3\/revision\/latest?cb=20170413115738",
+        "title": "Где моя тень, там мой клинок."
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_ru_gamepedia\/images\/7\/72\/Phass_arc_move_14_ru.mp3\/revision\/latest?cb=20170413062935",
+        "isArcane": true,
+        "title": "Где моя тень, там мой клинок."
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_ru_gamepedia\/images\/8\/8c\/Phass_move_15_ru.mp3\/revision\/latest?cb=20170413115743",
+        "title": "Они меня не увидят."
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_ru_gamepedia\/images\/1\/1a\/Phass_arc_move_15_ru.mp3\/revision\/latest?cb=20170413062939",
+        "isArcane": true,
+        "title": "Они меня не увидят."
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_ru_gamepedia\/images\/0\/05\/Phass_move_16_ru.mp3\/revision\/latest?cb=20170413115747",
+        "title": "Броня им не поможет."
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_ru_gamepedia\/images\/2\/21\/Phass_arc_move_16_ru.mp3\/revision\/latest?cb=20170413062944",
+        "isArcane": true,
+        "title": "Броня им не поможет."
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_ru_gamepedia\/images\/5\/55\/Phass_move_17_ru.mp3\/revision\/latest?cb=20170413115752",
+        "title": "Словно ветерок."
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_ru_gamepedia\/images\/7\/72\/Phass_arc_move_17_ru.mp3\/revision\/latest?cb=20170413062949",
+        "isArcane": true,
+        "title": "Словно ветерок."
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_ru_gamepedia\/images\/9\/9e\/Phass_move_18_ru.mp3\/revision\/latest?cb=20170413115757",
+        "title": "Я захожу."
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_ru_gamepedia\/images\/7\/7e\/Phass_arc_move_18_ru.mp3\/revision\/latest?cb=20170413062953",
+        "isArcane": true,
+        "title": "Я захожу."
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_ru_gamepedia\/images\/9\/99\/Phass_move_19_ru.mp3\/revision\/latest?cb=20170413115801",
+        "title": "Исподтишка."
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_ru_gamepedia\/images\/3\/30\/Phass_arc_move_19_ru.mp3\/revision\/latest?cb=20170413062958",
+        "isArcane": true,
+        "title": "Исподтишка."
+      }
+    ],
+    "category": "Передвижение"
+  },
+  {
+    "responses": [
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_ru_gamepedia\/images\/b\/b3\/Phass_attack_01_ru.mp3\/revision\/latest?cb=20170413114704",
+        "title": "В атаку!"
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_ru_gamepedia\/images\/1\/1d\/Phass_arc_attack_01_ru.mp3\/revision\/latest?cb=20170413061928",
+        "isArcane": true,
+        "title": "В атаку!"
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_ru_gamepedia\/images\/1\/18\/Phass_attack_02_ru.mp3\/revision\/latest?cb=20170413114709",
+        "title": "Быстрый удар!"
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_ru_gamepedia\/images\/e\/e1\/Phass_arc_attack_02_ru.mp3\/revision\/latest?cb=20170413061933",
+        "isArcane": true,
+        "title": "Быстрый удар!"
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_ru_gamepedia\/images\/4\/49\/Phass_attack_03_ru.mp3\/revision\/latest?cb=20170413114714",
+        "title": "Тихо."
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_ru_gamepedia\/images\/f\/f7\/Phass_arc_attack_03_ru.mp3\/revision\/latest?cb=20170413061939",
+        "isArcane": true,
+        "title": "Тихо."
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_ru_gamepedia\/images\/e\/e1\/Phass_attack_04_ru.mp3\/revision\/latest?cb=20170413114719",
+        "title": "Там, где не ждали."
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_ru_gamepedia\/images\/c\/c3\/Phass_arc_attack_04_ru.mp3\/revision\/latest?cb=20170413061943",
+        "isArcane": true,
+        "title": "Там, где не ждали."
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_ru_gamepedia\/images\/f\/ff\/Phass_attack_05_ru.mp3\/revision\/latest?cb=20170413114728",
+        "title": "Вот и я."
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_ru_gamepedia\/images\/8\/81\/Phass_arc_attack_05_ru.mp3\/revision\/latest?cb=20170413061948",
+        "isArcane": true,
+        "title": "Вот и я."
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_ru_gamepedia\/images\/7\/79\/Phass_attack_06_ru.mp3\/revision\/latest?cb=20170413114735",
+        "title": "Получи клинка!"
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_ru_gamepedia\/images\/5\/51\/Phass_arc_attack_06_ru.mp3\/revision\/latest?cb=20170413061953",
+        "isArcane": true,
+        "title": "Получи клинка!"
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_ru_gamepedia\/images\/8\/82\/Phass_attack_07_ru.mp3\/revision\/latest?cb=20170413114741",
+        "title": "Из засады."
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_ru_gamepedia\/images\/6\/66\/Phass_arc_attack_07_ru.mp3\/revision\/latest?cb=20170413061957",
+        "isArcane": true,
+        "title": "Из засады."
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_ru_gamepedia\/images\/c\/c1\/Phass_attack_08_ru.mp3\/revision\/latest?cb=20170413114752",
+        "title": "Без пощады."
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_ru_gamepedia\/images\/7\/7d\/Phass_arc_attack_08_ru.mp3\/revision\/latest?cb=20170413062002",
+        "isArcane": true,
+        "title": "Без пощады."
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_ru_gamepedia\/images\/9\/91\/Phass_attack_09_ru.mp3\/revision\/latest?cb=20170413114757",
+        "title": "Стремительно!"
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_ru_gamepedia\/images\/b\/bf\/Phass_arc_attack_09_ru.mp3\/revision\/latest?cb=20170413062007",
+        "isArcane": true,
+        "title": "Стремительно!"
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_ru_gamepedia\/images\/5\/59\/Phass_attack_10_ru.mp3\/revision\/latest?cb=20170413114802",
+        "title": "Держи ухо востро."
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_ru_gamepedia\/images\/5\/56\/Phass_arc_attack_10_ru.mp3\/revision\/latest?cb=20170413062011",
+        "isArcane": true,
+        "title": "Держи ухо востро."
+      }
+    ],
+    "category": "Атака"
+  },
+  {
+    "responses": [
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_ru_gamepedia\/images\/8\/8c\/Phass_cast_01_ru.mp3\/revision\/latest?cb=20170413114847",
+        "title": "Метка смерти."
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_ru_gamepedia\/images\/0\/0d\/Phass_arc_cast_01_ru.mp3\/revision\/latest?cb=20170413062054",
+        "isArcane": true,
+        "title": "Метка смерти."
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_ru_gamepedia\/images\/9\/92\/Phass_cast_02_ru.mp3\/revision\/latest?cb=20170413114853",
+        "title": "Близится твоя смерть."
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_ru_gamepedia\/images\/5\/59\/Phass_arc_cast_02_ru.mp3\/revision\/latest?cb=20170413062059",
+        "isArcane": true,
+        "title": "Близится твоя смерть."
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_ru_gamepedia\/images\/f\/fc\/Phass_cast_03_ru.mp3\/revision\/latest?cb=20170413114858",
+        "title": "Не ждали меня?"
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_ru_gamepedia\/images\/1\/1a\/Phass_arc_cast_03_ru.mp3\/revision\/latest?cb=20170413062104",
+        "isArcane": true,
+        "title": "Не ждали меня?"
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_ru_gamepedia\/images\/5\/57\/Phass_cast_04_ru.mp3\/revision\/latest?cb=20170413114903",
+        "title": "Я жалю из теней."
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_ru_gamepedia\/images\/c\/c5\/Phass_arc_cast_04_ru.mp3\/revision\/latest?cb=20170413062108",
+        "isArcane": true,
+        "title": "Я жалю из теней."
+      }
+    ],
+    "category": "Использование заклинания"
+  },
+  {
+    "responses": [
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_ru_gamepedia\/images\/d\/da\/Phass_ability_stiflingdagger_01_ru.mp3\/revision\/latest?cb=20170413114605",
+        "title": "Плащ и кинжал..."
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_ru_gamepedia\/images\/3\/34\/Phass_arc_ability_stiflingdagger_01_ru.mp3\/revision\/latest?cb=20170413061831",
+        "isArcane": true,
+        "title": "Плащ и кинжал..."
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_ru_gamepedia\/images\/7\/72\/Phass_ability_stiflingdagger_02_ru.mp3\/revision\/latest?cb=20170413114610",
+        "title": "Кинжал тебе к лицу..."
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_ru_gamepedia\/images\/3\/38\/Phass_arc_ability_stiflingdagger_02_ru.mp3\/revision\/latest?cb=20170413061837",
+        "isArcane": true,
+        "title": "Кинжал тебе к лицу..."
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_ru_gamepedia\/images\/c\/c2\/Phass_ability_stiflingdagger_03_ru.mp3\/revision\/latest?cb=20170413114615",
+        "title": "Попробуй увернись!"
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_ru_gamepedia\/images\/7\/78\/Phass_arc_ability_stiflingdagger_03_ru.mp3\/revision\/latest?cb=20170413061842",
+        "isArcane": true,
+        "title": "Попробуй увернись!"
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_ru_gamepedia\/images\/a\/aa\/Phass_ability_stiflingdagger_04_ru.mp3\/revision\/latest?cb=20170413114620",
+        "title": "Кинжал, кинжал."
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_ru_gamepedia\/images\/3\/3a\/Phass_arc_ability_stiflingdagger_04_ru.mp3\/revision\/latest?cb=20170413061846",
+        "isArcane": true,
+        "title": "Кинжал, кинжал."
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_ru_gamepedia\/images\/9\/93\/Phass_ability_blur_01_ru.mp3\/revision\/latest?cb=20170413120357",
+        "title": "С глаз долой."
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_ru_gamepedia\/images\/1\/1f\/Phass_arc_ability_blur_01_ru.mp3\/revision\/latest?cb=20170413063550",
+        "isArcane": true,
+        "title": "С глаз долой."
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_ru_gamepedia\/images\/4\/48\/Phass_ability_blur_03_ru.mp3\/revision\/latest?cb=20170413120406",
+        "title": "Размытый клинок."
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_ru_gamepedia\/images\/2\/2e\/Phass_arc_ability_blur_03_ru.mp3\/revision\/latest?cb=20170413063559",
+        "isArcane": true,
+        "title": "Размытый клинок."
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_ru_gamepedia\/images\/7\/71\/Phass_ability_coupdegrace_01_ru.mp3\/revision\/latest?cb=20170413120411",
+        "title": "Жестокий удар."
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_ru_gamepedia\/images\/2\/2c\/Phass_arc_ability_coupdegrace_01_ru.mp3\/revision\/latest?cb=20170413063604",
+        "isArcane": true,
+        "title": "Жестокий удар."
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_ru_gamepedia\/images\/4\/4c\/Phass_ability_coupdegrace_02_ru.mp3\/revision\/latest?cb=20170413120416",
+        "title": "Режу."
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_ru_gamepedia\/images\/a\/aa\/Phass_arc_ability_coupdegrace_02_ru.mp3\/revision\/latest?cb=20170413063608",
+        "isArcane": true,
+        "title": "Режу."
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_ru_gamepedia\/images\/9\/91\/Phass_ability_coupdegrace_03_ru.mp3\/revision\/latest?cb=20170413120420",
+        "title": "Милосердие."
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_ru_gamepedia\/images\/a\/a5\/Phass_arc_ability_coupdegrace_03_ru.mp3\/revision\/latest?cb=20170413063613",
+        "isArcane": true,
+        "title": "Милосердие."
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_ru_gamepedia\/images\/6\/6b\/Phass_ability_coupdegrace_04_ru.mp3\/revision\/latest?cb=20170413120425",
+        "title": "Коронный приём."
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_ru_gamepedia\/images\/9\/98\/Phass_arc_ability_coupdegrace_04_ru.mp3\/revision\/latest?cb=20170413063617",
+        "isArcane": true,
+        "title": "Коронный приём."
+      }
+    ],
+    "category": "Способности"
+  },
+  {
+    "responses": [
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_ru_gamepedia\/images\/3\/3d\/Phass_level_01_ru.mp3\/revision\/latest?cb=20170413115530",
+        "title": "Сливаюсь с окружением."
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_ru_gamepedia\/images\/b\/bf\/Phass_arc_level_01_ru.mp3\/revision\/latest?cb=20170413062722",
+        "isArcane": true,
+        "title": "Сливаюсь с окружением."
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_ru_gamepedia\/images\/7\/76\/Phass_level_02_ru.mp3\/revision\/latest?cb=20170413115535",
+        "title": "Я неуловима."
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_ru_gamepedia\/images\/d\/d0\/Phass_arc_level_02_ru.mp3\/revision\/latest?cb=20170413062727",
+        "isArcane": true,
+        "title": "Я неуловима."
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_ru_gamepedia\/images\/2\/24\/Phass_level_03_ru.mp3\/revision\/latest?cb=20170413115540",
+        "title": "Я неприметна."
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_ru_gamepedia\/images\/4\/49\/Phass_arc_level_03_ru.mp3\/revision\/latest?cb=20170413062731",
+        "isArcane": true,
+        "title": "Я неприметна."
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_ru_gamepedia\/images\/f\/f3\/Phass_level_04_ru.mp3\/revision\/latest?cb=20170413115544",
+        "title": "Меня нелегко заметить."
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_ru_gamepedia\/images\/7\/71\/Phass_arc_level_04_ru.mp3\/revision\/latest?cb=20170413062736",
+        "isArcane": true,
+        "title": "Меня нелегко заметить."
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_ru_gamepedia\/images\/1\/15\/Phass_level_05_ru.mp3\/revision\/latest?cb=20170413115549",
+        "title": "Теперь я стану незаметнее."
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_ru_gamepedia\/images\/c\/cb\/Phass_arc_level_05_ru.mp3\/revision\/latest?cb=20170413062741",
+        "isArcane": true,
+        "title": "Теперь я стану незаметнее."
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_ru_gamepedia\/images\/2\/25\/Phass_level_06_ru.mp3\/revision\/latest?cb=20170413115554",
+        "title": "Я словно призрак."
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_ru_gamepedia\/images\/9\/97\/Phass_arc_level_06_ru.mp3\/revision\/latest?cb=20170413062745",
+        "isArcane": true,
+        "title": "Я словно призрак."
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_ru_gamepedia\/images\/a\/a5\/Phass_level_07_ru.mp3\/revision\/latest?cb=20170413115558",
+        "title": "Я лишь тень."
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_ru_gamepedia\/images\/8\/87\/Phass_arc_level_07_ru.mp3\/revision\/latest?cb=20170413062751",
+        "isArcane": true,
+        "title": "Я лишь тень."
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_ru_gamepedia\/images\/6\/6f\/Phass_level_08_ru.mp3\/revision\/latest?cb=20170413115603",
+        "title": "Я стала сильнее и незаметнее."
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_ru_gamepedia\/images\/c\/cd\/Phass_arc_level_08_ru.mp3\/revision\/latest?cb=20170413062757",
+        "isArcane": true,
+        "title": "Я стала сильнее и незаметнее."
+      }
+    ],
+    "category": "Получение уровня"
+  },
+  {
+    "responses": [
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_ru_gamepedia\/images\/b\/b4\/Phass_ability_phantomstrike_01_ru.mp3\/revision\/latest?cb=20170413120430",
+        "title": "Нападаю!"
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_ru_gamepedia\/images\/f\/f8\/Phass_arc_ability_phantomstrike_01_ru.mp3\/revision\/latest?cb=20170413063622",
+        "isArcane": true,
+        "title": "Нападаю!"
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_ru_gamepedia\/images\/3\/32\/Phass_ability_phantomstrike_02_ru.mp3\/revision\/latest?cb=20170413120434",
+        "title": "Враг сражён."
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_ru_gamepedia\/images\/1\/17\/Phass_arc_ability_phantomstrike_02_ru.mp3\/revision\/latest?cb=20170413063627",
+        "isArcane": true,
+        "title": "Враг сражён."
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_ru_gamepedia\/images\/7\/71\/Phass_ability_phantomstrike_03_ru.mp3\/revision\/latest?cb=20170413120442",
+        "title": "Из темноты."
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_ru_gamepedia\/images\/5\/5e\/Phass_arc_ability_phantomstrike_03_ru.mp3\/revision\/latest?cb=20170413061827",
+        "isArcane": true,
+        "title": "Из темноты."
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_ru_gamepedia\/images\/a\/a7\/Phass_kill_01_ru.mp3\/revision\/latest?cb=20170413115311",
+        "title": "Я довольна."
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_ru_gamepedia\/images\/1\/10\/Phass_arc_kill_01_ru.mp3\/revision\/latest?cb=20170413062501",
+        "isArcane": true,
+        "title": "Я довольна."
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_ru_gamepedia\/images\/8\/80\/Phass_kill_02_ru.mp3\/revision\/latest?cb=20170413115315",
+        "title": "Всё согласно плану."
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_ru_gamepedia\/images\/9\/98\/Phass_arc_kill_02_ru.mp3\/revision\/latest?cb=20170413062505",
+        "isArcane": true,
+        "title": "Всё согласно плану."
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_ru_gamepedia\/images\/0\/0e\/Phass_kill_03_ru.mp3\/revision\/latest?cb=20170413115320",
+        "title": "Оракул выбрал тебя."
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_ru_gamepedia\/images\/2\/27\/Phass_arc_kill_03_ru.mp3\/revision\/latest?cb=20170413062510",
+        "isArcane": true,
+        "title": "Оракул выбрал тебя."
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_ru_gamepedia\/images\/5\/5c\/Phass_kill_04_ru.mp3\/revision\/latest?cb=20170413115325",
+        "title": "Ты \u2013 священная цель."
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_ru_gamepedia\/images\/8\/8f\/Phass_arc_kill_04_ru.mp3\/revision\/latest?cb=20170413062515",
+        "isArcane": true,
+        "title": "Ты \u2013 священная цель."
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_ru_gamepedia\/images\/2\/21\/Phass_kill_05_ru.mp3\/revision\/latest?cb=20170413115329",
+        "title": "Убийство \u2013 это наше естество."
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_ru_gamepedia\/images\/6\/6e\/Phass_arc_kill_05_ru.mp3\/revision\/latest?cb=20170413062519",
+        "isArcane": true,
+        "title": "Убийство \u2013 это наше естество."
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_ru_gamepedia\/images\/5\/57\/Phass_kill_06_ru.mp3\/revision\/latest?cb=20170413115334",
+        "title": "Идеальное убийство."
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_ru_gamepedia\/images\/2\/2b\/Phass_arc_kill_06_ru.mp3\/revision\/latest?cb=20170413062524",
+        "isArcane": true,
+        "title": "Идеальное убийство."
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_ru_gamepedia\/images\/5\/5c\/Phass_kill_07_ru.mp3\/revision\/latest?cb=20170413115339",
+        "title": "Смерть \u2013 это почёт."
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_ru_gamepedia\/images\/f\/f3\/Phass_arc_kill_07_ru.mp3\/revision\/latest?cb=20170413062529",
+        "isArcane": true,
+        "title": "Смерть \u2013 это почёт."
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_ru_gamepedia\/images\/a\/a4\/Phass_kill_08_ru.mp3\/revision\/latest?cb=20170413115343",
+        "title": "Не стоит верить своим глазам."
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_ru_gamepedia\/images\/7\/76\/Phass_arc_kill_08_ru.mp3\/revision\/latest?cb=20170413062533",
+        "isArcane": true,
+        "title": "Не стоит верить своим глазам."
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_ru_gamepedia\/images\/4\/40\/Phass_kill_09_ru.mp3\/revision\/latest?cb=20170413115348",
+        "title": "Сёстры Вуали чтят твою смерть."
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_ru_gamepedia\/images\/8\/89\/Phass_arc_kill_09_ru.mp3\/revision\/latest?cb=20170413062539",
+        "isArcane": true,
+        "title": "Сёстры Вуали чтят твою смерть."
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_ru_gamepedia\/images\/4\/4e\/Phass_kill_10_ru.mp3\/revision\/latest?cb=20170413115353",
+        "title": "Смерть от моих рук \u2013 это честь."
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_ru_gamepedia\/images\/6\/66\/Phass_arc_kill_10_ru.mp3\/revision\/latest?cb=20170413062544",
+        "isArcane": true,
+        "title": "Смерть от моих рук \u2013 это честь."
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_ru_gamepedia\/images\/0\/03\/Phass_kill_11_ru.mp3\/revision\/latest?cb=20170413115357",
+        "title": "Один готов, осталось четверо."
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_ru_gamepedia\/images\/f\/f6\/Phass_arc_kill_11_ru.mp3\/revision\/latest?cb=20170413062548",
+        "isArcane": true,
+        "title": "Один готов, осталось четверо."
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_ru_gamepedia\/images\/3\/3d\/Phass_kill_12_ru.mp3\/revision\/latest?cb=20170413115402",
+        "title": "Что-то в глаз попало?"
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_ru_gamepedia\/images\/d\/da\/Phass_arc_kill_12_ru.mp3\/revision\/latest?cb=20170413062553",
+        "isArcane": true,
+        "title": "Что-то в глаз попало?"
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_ru_gamepedia\/images\/8\/84\/Phass_kill_13_ru.mp3\/revision\/latest?cb=20170413115407",
+        "title": "Даже после смерти ты не заглянешь за вуаль."
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_ru_gamepedia\/images\/b\/bd\/Phass_arc_kill_13_ru.mp3\/revision\/latest?cb=20170413062558",
+        "isArcane": true,
+        "title": "Даже после смерти ты не заглянешь за вуаль."
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_ru_gamepedia\/images\/8\/8c\/Phass_laugh_01_ru.mp3\/revision\/latest?cb=20170413115457",
+        "title": "Мха-ха-ха-ха-ха."
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_ru_gamepedia\/images\/4\/40\/Phass_arc_laugh_01_ru.mp3\/revision\/latest?cb=20170413062649",
+        "isArcane": true,
+        "title": "Мха-ха-ха-ха-ха."
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_ru_gamepedia\/images\/a\/af\/Phass_laugh_02_ru.mp3\/revision\/latest?cb=20170413115502",
+        "title": "Мх-хм-хм-хм-хм."
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_ru_gamepedia\/images\/3\/39\/Phass_arc_laugh_02_ru.mp3\/revision\/latest?cb=20170413062654",
+        "isArcane": true,
+        "title": "Мх-хм-хм-хм-хм."
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_ru_gamepedia\/images\/e\/e3\/Phass_laugh_03_ru.mp3\/revision\/latest?cb=20170413115507",
+        "title": "Ха-ха-ха-ха-ха-ха-ха."
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_ru_gamepedia\/images\/5\/52\/Phass_arc_laugh_03_ru.mp3\/revision\/latest?cb=20170413062659",
+        "isArcane": true,
+        "title": "Ха-ха-ха-ха-ха-ха-ха."
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_ru_gamepedia\/images\/2\/2c\/Phass_laugh_04_ru.mp3\/revision\/latest?cb=20170413115511",
+        "title": "О-хо-хо-хо-хо-хо."
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_ru_gamepedia\/images\/6\/69\/Phass_arc_laugh_04_ru.mp3\/revision\/latest?cb=20170413062703",
+        "isArcane": true,
+        "title": "О-хо-хо-хо-хо-хо."
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_ru_gamepedia\/images\/8\/85\/Phass_laugh_05_ru.mp3\/revision\/latest?cb=20170413115516",
+        "title": "Ах-ха-ха-ха-ха-ха-ха-ха."
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_ru_gamepedia\/images\/9\/97\/Phass_arc_laugh_05_ru.mp3\/revision\/latest?cb=20170413062708",
+        "isArcane": true,
+        "title": "Ах-ха-ха-ха-ха-ха-ха-ха."
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_ru_gamepedia\/images\/a\/ae\/Phass_laugh_06_ru.mp3\/revision\/latest?cb=20170413115521",
+        "title": "Ах-ха-ха-ха-ха-ха-ха."
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_ru_gamepedia\/images\/7\/78\/Phass_arc_laugh_06_ru.mp3\/revision\/latest?cb=20170413062712",
+        "isArcane": true,
+        "title": "Ах-ха-ха-ха-ха-ха-ха."
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_ru_gamepedia\/images\/f\/f5\/Phass_laugh_07_ru.mp3\/revision\/latest?cb=20170413115526",
+        "title": "Ох-хо-хо-хо-хо-хо-хо."
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_ru_gamepedia\/images\/3\/35\/Phass_arc_laugh_07_ru.mp3\/revision\/latest?cb=20170413062717",
+        "isArcane": true,
+        "title": "Ох-хо-хо-хо-хо-хо-хо."
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_ru_gamepedia\/images\/8\/8c\/Phass_ability_blur_02_ru.mp3\/revision\/latest?cb=20170413120402",
+        "title": "Сколько видишь кинжалов?"
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_ru_gamepedia\/images\/d\/df\/Phass_arc_ability_blur_02_ru.mp3\/revision\/latest?cb=20170413063554",
+        "isArcane": true,
+        "title": "Сколько видишь кинжалов?"
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_ru_gamepedia\/images\/e\/e6\/Phass_firstblood_01_ru.mp3\/revision\/latest?cb=20170413115128",
+        "title": "Первая кровь."
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_ru_gamepedia\/images\/c\/c8\/Phass_arc_firstblood_01_ru.mp3\/revision\/latest?cb=20170413062318",
+        "isArcane": true,
+        "title": "Первая кровь."
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_ru_gamepedia\/images\/5\/5e\/Phass_firstblood_02_ru.mp3\/revision\/latest?cb=20170413115132",
+        "title": "Первая жертва."
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_ru_gamepedia\/images\/e\/e2\/Phass_arc_firstblood_02_ru.mp3\/revision\/latest?cb=20170413062323",
+        "isArcane": true,
+        "title": "Первая жертва."
+      }
+    ],
+    "category": "Убийство врага"
+  },
+  {
+    "responses": [
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_ru_gamepedia\/images\/9\/96\/Phass_lasthit_01_ru.mp3\/revision\/latest?cb=20170413115411",
+        "title": "За пределами понимания."
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_ru_gamepedia\/images\/d\/d9\/Phass_arc_lasthit_01_ru.mp3\/revision\/latest?cb=20170413062602",
+        "isArcane": true,
+        "title": "За пределами понимания."
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_ru_gamepedia\/images\/6\/6a\/Phass_lasthit_02_ru.mp3\/revision\/latest?cb=20170413115416",
+        "title": "Это фантому."
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_ru_gamepedia\/images\/1\/13\/Phass_arc_lasthit_02_ru.mp3\/revision\/latest?cb=20170413062607",
+        "isArcane": true,
+        "title": "Это фантому."
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_ru_gamepedia\/images\/2\/2b\/Phass_lasthit_03_ru.mp3\/revision\/latest?cb=20170413115420",
+        "title": "Боец невидимого фронта."
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_ru_gamepedia\/images\/9\/93\/Phass_arc_lasthit_03_ru.mp3\/revision\/latest?cb=20170413062612",
+        "isArcane": true,
+        "title": "Боец невидимого фронта."
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_ru_gamepedia\/images\/7\/75\/Phass_lasthit_04_ru.mp3\/revision\/latest?cb=20170413115425",
+        "title": "Зря противишься."
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_ru_gamepedia\/images\/a\/a3\/Phass_arc_lasthit_04_ru.mp3\/revision\/latest?cb=20170413062617",
+        "isArcane": true,
+        "title": "Зря противишься."
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_ru_gamepedia\/images\/c\/c4\/Phass_lasthit_05_ru.mp3\/revision\/latest?cb=20170413115430",
+        "title": "Ты что, не видел меня?"
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_ru_gamepedia\/images\/d\/d0\/Phass_arc_lasthit_05_ru.mp3\/revision\/latest?cb=20170413062621",
+        "isArcane": true,
+        "title": "Ты что, не видел меня?"
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_ru_gamepedia\/images\/c\/cc\/Phass_lasthit_06_ru.mp3\/revision\/latest?cb=20170413115434",
+        "title": "Запущу-ка руку."
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_ru_gamepedia\/images\/0\/09\/Phass_arc_lasthit_06_ru.mp3\/revision\/latest?cb=20170413062626",
+        "isArcane": true,
+        "title": "Запущу-ка руку."
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_ru_gamepedia\/images\/5\/5f\/Phass_lasthit_07_ru.mp3\/revision\/latest?cb=20170413115439",
+        "title": "Не смотри."
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_ru_gamepedia\/images\/e\/e8\/Phass_arc_lasthit_07_ru.mp3\/revision\/latest?cb=20170413062631",
+        "isArcane": true,
+        "title": "Не смотри."
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_ru_gamepedia\/images\/b\/ba\/Phass_lasthit_08_ru.mp3\/revision\/latest?cb=20170413115444",
+        "title": "За скрытых Вуалью."
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_ru_gamepedia\/images\/3\/3a\/Phass_arc_lasthit_08_ru.mp3\/revision\/latest?cb=20170413062635",
+        "isArcane": true,
+        "title": "За скрытых Вуалью."
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_ru_gamepedia\/images\/4\/43\/Phass_lasthit_09_ru.mp3\/revision\/latest?cb=20170413115448",
+        "title": "Собираю плату."
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_ru_gamepedia\/images\/e\/ef\/Phass_arc_lasthit_09_ru.mp3\/revision\/latest?cb=20170413062640",
+        "isArcane": true,
+        "title": "Собираю плату."
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_ru_gamepedia\/images\/5\/5b\/Phass_lasthit_10_ru.mp3\/revision\/latest?cb=20170413115453",
+        "title": "Я не жадная."
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_ru_gamepedia\/images\/f\/fd\/Phass_arc_lasthit_10_ru.mp3\/revision\/latest?cb=20170413062645",
+        "isArcane": true,
+        "title": "Я не жадная."
+      }
+    ],
+    "category": "Добивание"
+  },
+  {
+    "responses": [
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_ru_gamepedia\/images\/7\/73\/Phass_deny_01_ru.mp3\/revision\/latest?cb=20170413115001",
+        "title": "Вот и нет."
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_ru_gamepedia\/images\/3\/38\/Phass_arc_deny_01_ru.mp3\/revision\/latest?cb=20170413062200",
+        "isArcane": true,
+        "title": "Вот и нет."
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_ru_gamepedia\/images\/e\/e0\/Phass_deny_02_ru.mp3\/revision\/latest?cb=20170413115006",
+        "title": "Нельзя."
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_ru_gamepedia\/images\/9\/95\/Phass_arc_deny_02_ru.mp3\/revision\/latest?cb=20170413062204",
+        "isArcane": true,
+        "title": "Нельзя."
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_ru_gamepedia\/images\/f\/fb\/Phass_deny_03_ru.mp3\/revision\/latest?cb=20170413115011",
+        "title": "Не-а."
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_ru_gamepedia\/images\/d\/d4\/Phass_arc_deny_03_ru.mp3\/revision\/latest?cb=20170413062209",
+        "isArcane": true,
+        "title": "Не-а."
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_ru_gamepedia\/images\/9\/98\/Phass_deny_04_ru.mp3\/revision\/latest?cb=20170413115016",
+        "title": "А вот и нет."
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_ru_gamepedia\/images\/c\/c2\/Phass_arc_deny_04_ru.mp3\/revision\/latest?cb=20170413062213",
+        "isArcane": true,
+        "title": "А вот и нет."
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_ru_gamepedia\/images\/6\/65\/Phass_deny_05_ru.mp3\/revision\/latest?cb=20170413115021",
+        "title": "Нет-нет."
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_ru_gamepedia\/images\/9\/98\/Phass_arc_deny_05_ru.mp3\/revision\/latest?cb=20170413062218",
+        "isArcane": true,
+        "title": "Нет-нет."
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_ru_gamepedia\/images\/5\/54\/Phass_deny_06_ru.mp3\/revision\/latest?cb=20170413115026",
+        "title": "Ну уж нет."
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_ru_gamepedia\/images\/c\/c1\/Phass_arc_deny_06_ru.mp3\/revision\/latest?cb=20170413062222",
+        "isArcane": true,
+        "title": "Ну уж нет."
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_ru_gamepedia\/images\/a\/a9\/Phass_deny_07_ru.mp3\/revision\/latest?cb=20170413115031",
+        "title": "Я первая."
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_ru_gamepedia\/images\/b\/b2\/Phass_arc_deny_07_ru.mp3\/revision\/latest?cb=20170413062227",
+        "isArcane": true,
+        "title": "Я первая."
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_ru_gamepedia\/images\/3\/31\/Phass_deny_08_ru.mp3\/revision\/latest?cb=20170413115038",
+        "title": "Нет уж."
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_ru_gamepedia\/images\/1\/14\/Phass_arc_deny_08_ru.mp3\/revision\/latest?cb=20170413062231",
+        "isArcane": true,
+        "title": "Нет уж."
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_ru_gamepedia\/images\/8\/80\/Phass_deny_09_ru.mp3\/revision\/latest?cb=20170413115043",
+        "title": "Стой."
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_ru_gamepedia\/images\/f\/fa\/Phass_arc_deny_09_ru.mp3\/revision\/latest?cb=20170413062236",
+        "isArcane": true,
+        "title": "Стой."
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_ru_gamepedia\/images\/b\/bb\/Phass_deny_10_ru.mp3\/revision\/latest?cb=20170413115047",
+        "title": "Вот уж нет."
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_ru_gamepedia\/images\/6\/6f\/Phass_arc_deny_10_ru.mp3\/revision\/latest?cb=20170413062241",
+        "isArcane": true,
+        "title": "Вот уж нет."
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_ru_gamepedia\/images\/4\/4c\/Phass_deny_11_ru.mp3\/revision\/latest?cb=20170413115052",
+        "title": "Ха-ха-ха-ха."
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_ru_gamepedia\/images\/d\/d3\/Phass_arc_deny_11_ru.mp3\/revision\/latest?cb=20170413062245",
+        "isArcane": true,
+        "title": "Ха-ха-ха-ха."
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_ru_gamepedia\/images\/c\/c5\/Phass_deny_12_ru.mp3\/revision\/latest?cb=20170413115057",
+        "title": "Ха-ха-ха-ха-ха."
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_ru_gamepedia\/images\/1\/19\/Phass_arc_deny_12_ru.mp3\/revision\/latest?cb=20170413062250",
+        "isArcane": true,
+        "title": "Ха-ха-ха-ха-ха."
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_ru_gamepedia\/images\/6\/6e\/Phass_deny_13_ru.mp3\/revision\/latest?cb=20170413115101",
+        "title": "А-ха-ха-ха-ха-ха."
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_ru_gamepedia\/images\/f\/f0\/Phass_arc_deny_13_ru.mp3\/revision\/latest?cb=20170413062255",
+        "isArcane": true,
+        "title": "А-ха-ха-ха-ха-ха."
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_ru_gamepedia\/images\/4\/40\/Phass_deny_14_ru.mp3\/revision\/latest?cb=20170413115109",
+        "title": "Ааа-ха-ха-ха, нет."
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_ru_gamepedia\/images\/c\/c5\/Phass_arc_deny_14_ru.mp3\/revision\/latest?cb=20170413062259",
+        "isArcane": true,
+        "title": "Ааа-ха-ха-ха, нет."
+      }
+    ],
+    "category": "Добивание союзного юнита"
+  },
+  {
+    "responses": [
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_ru_gamepedia\/images\/a\/ab\/Phass_purch_01_ru.mp3\/revision\/latest?cb=20170413120106",
+        "title": "Станет попроще."
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_ru_gamepedia\/images\/7\/72\/Phass_arc_purch_01_ru.mp3\/revision\/latest?cb=20170413063300",
+        "isArcane": true,
+        "title": "Станет попроще."
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_ru_gamepedia\/images\/c\/c4\/Phass_purch_02_ru.mp3\/revision\/latest?cb=20170413120112",
+        "title": "Подходящий инструмент."
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_ru_gamepedia\/images\/b\/b0\/Phass_arc_purch_02_ru.mp3\/revision\/latest?cb=20170413063304",
+        "isArcane": true,
+        "title": "Подходящий инструмент."
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_ru_gamepedia\/images\/1\/17\/Phass_purch_03_ru.mp3\/revision\/latest?cb=20170413120116",
+        "title": "Запас карман не тянет, а золото \u2013 очень даже."
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_ru_gamepedia\/images\/a\/a1\/Phass_arc_purch_03_ru.mp3\/revision\/latest?cb=20170413063309",
+        "isArcane": true,
+        "title": "Запас карман не тянет, а золото \u2013 очень даже."
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_ru_gamepedia\/images\/b\/b0\/Phass_blink_01_ru.mp3\/revision\/latest?cb=20170413114822",
+        "title": "Blink Dagger."
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_ru_gamepedia\/images\/a\/a4\/Phass_arc_blink_01_ru.mp3\/revision\/latest?cb=20170413062030",
+        "isArcane": true,
+        "title": "Blink Dagger."
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_ru_gamepedia\/images\/3\/3e\/Phass_blink_02_ru.mp3\/revision\/latest?cb=20170413114827",
+        "title": "Венец моей коллекции."
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_ru_gamepedia\/images\/4\/47\/Phass_arc_blink_02_ru.mp3\/revision\/latest?cb=20170413062035",
+        "isArcane": true,
+        "title": "Венец моей коллекции."
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_ru_gamepedia\/images\/f\/f1\/Phass_scepter_01_ru.mp3\/revision\/latest?cb=20170413120232",
+        "title": "Ооо, скипетр."
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_ru_gamepedia\/images\/a\/a4\/Phass_arc_scepter_01_ru.mp3\/revision\/latest?cb=20170413063424",
+        "isArcane": true,
+        "title": "Ооо, скипетр."
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_ru_gamepedia\/images\/c\/cd\/Phass_scepter_02_ru.mp3\/revision\/latest?cb=20170413120237",
+        "title": "Скипетр, наконец-то!"
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_ru_gamepedia\/images\/9\/94\/Phass_arc_scepter_02_ru.mp3\/revision\/latest?cb=20170413063430",
+        "isArcane": true,
+        "title": "Скипетр, наконец-то!"
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_ru_gamepedia\/images\/9\/97\/Phass_bfury_01_ru.mp3\/revision\/latest?cb=20170413114812",
+        "title": "Battle Fury."
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_ru_gamepedia\/images\/e\/e7\/Phass_arc_bfury_01_ru.mp3\/revision\/latest?cb=20170413062021",
+        "isArcane": true,
+        "title": "Battle Fury."
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_ru_gamepedia\/images\/d\/d4\/Phass_bfury_02_ru.mp3\/revision\/latest?cb=20170413114817",
+        "title": "Battle Fury, ты мой."
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_ru_gamepedia\/images\/f\/f6\/Phass_arc_bfury_02_ru.mp3\/revision\/latest?cb=20170413062026",
+        "isArcane": true,
+        "title": "Battle Fury, ты мой."
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_ru_gamepedia\/images\/7\/75\/Phass_item_01_ru.mp3\/revision\/latest?cb=20170413115301",
+        "title": "Black King Bar. Теперь меня не остановят."
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_ru_gamepedia\/images\/3\/3b\/Phass_arc_item_01_ru.mp3\/revision\/latest?cb=20170413062452",
+        "isArcane": true,
+        "title": "Black King Bar. Теперь меня не остановят."
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_ru_gamepedia\/images\/7\/7b\/Phass_item_02_ru.mp3\/revision\/latest?cb=20170413115306",
+        "title": "Butterfly."
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_ru_gamepedia\/images\/7\/79\/Phass_arc_item_02_ru.mp3\/revision\/latest?cb=20170413062456",
+        "isArcane": true,
+        "title": "Butterfly."
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_ru_gamepedia\/images\/5\/5a\/Phass_immort_01_ru.mp3\/revision\/latest?cb=20170413115238",
+        "title": "Бессмертие."
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_ru_gamepedia\/images\/f\/fc\/Phass_arc_immort_01_ru.mp3\/revision\/latest?cb=20170413062428",
+        "isArcane": true,
+        "title": "Бессмертие."
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_ru_gamepedia\/images\/2\/25\/Phass_immort_02_ru.mp3\/revision\/latest?cb=20170413115243",
+        "title": "Фантом навсегда."
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_ru_gamepedia\/images\/9\/9d\/Phass_arc_immort_02_ru.mp3\/revision\/latest?cb=20170413062433",
+        "isArcane": true,
+        "title": "Фантом навсегда."
+      }
+    ],
+    "category": "Получение предмета"
+  },
+  {
+    "responses": [
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_ru_gamepedia\/images\/6\/6c\/Phass_death_01_ru.mp3\/revision\/latest?cb=20170413114913",
+        "title": "Нет!"
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_ru_gamepedia\/images\/8\/8b\/Phass_arc_death_01_ru.mp3\/revision\/latest?cb=20170413062118",
+        "isArcane": true,
+        "title": "Нет!"
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_ru_gamepedia\/images\/6\/65\/Phass_death_02_ru.mp3\/revision\/latest?cb=20170413114918",
+        "title": "Не люблю когда меня видно."
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_ru_gamepedia\/images\/8\/86\/Phass_arc_death_02_ru.mp3\/revision\/latest?cb=20170413062122",
+        "isArcane": true,
+        "title": "Не люблю когда меня видно."
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_ru_gamepedia\/images\/4\/4a\/Phass_death_03_ru.mp3\/revision\/latest?cb=20170413114923",
+        "title": "Отвернись."
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_ru_gamepedia\/images\/2\/23\/Phass_arc_death_03_ru.mp3\/revision\/latest?cb=20170413062127",
+        "isArcane": true,
+        "title": "Отвернись."
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_ru_gamepedia\/images\/5\/54\/Phass_death_04_ru.mp3\/revision\/latest?cb=20170413114931",
+        "title": "Не может быть."
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_ru_gamepedia\/images\/b\/b4\/Phass_arc_death_04_ru.mp3\/revision\/latest?cb=20170413062132",
+        "isArcane": true,
+        "title": "Не может быть."
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_ru_gamepedia\/images\/e\/e2\/Phass_death_05_ru.mp3\/revision\/latest?cb=20170413114936",
+        "title": "Ухожу по тёмной дороге."
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_ru_gamepedia\/images\/c\/c8\/Phass_arc_death_05_ru.mp3\/revision\/latest?cb=20170413062136",
+        "isArcane": true,
+        "title": "Ухожу по тёмной дороге."
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_ru_gamepedia\/images\/8\/8e\/Phass_death_06_ru.mp3\/revision\/latest?cb=20170413114941",
+        "title": "Призрачный лим."
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_ru_gamepedia\/images\/4\/40\/Phass_arc_death_06_ru.mp3\/revision\/latest?cb=20170413062141",
+        "isArcane": true,
+        "title": "Призрачный лим."
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_ru_gamepedia\/images\/f\/f8\/Phass_death_07_ru.mp3\/revision\/latest?cb=20170413114946",
+        "title": "Я подвела Вуаль."
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_ru_gamepedia\/images\/0\/03\/Phass_arc_death_07_ru.mp3\/revision\/latest?cb=20170413062146",
+        "isArcane": true,
+        "title": "Я подвела Вуаль."
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_ru_gamepedia\/images\/7\/72\/Phass_death_08_ru.mp3\/revision\/latest?cb=20170413114951",
+        "title": "Око за око."
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_ru_gamepedia\/images\/b\/b0\/Phass_arc_death_08_ru.mp3\/revision\/latest?cb=20170413062150",
+        "isArcane": true,
+        "title": "Око за око."
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_ru_gamepedia\/images\/7\/71\/Phass_death_09_ru.mp3\/revision\/latest?cb=20170413114956",
+        "title": "Отойди от меня, убийца."
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_ru_gamepedia\/images\/a\/ab\/Phass_arc_death_09_ru.mp3\/revision\/latest?cb=20170413062155",
+        "isArcane": true,
+        "title": "Отойди от меня, убийца."
+      }
+    ],
+    "category": "Смерть"
+  },
+  {
+    "responses": [
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_ru_gamepedia\/images\/4\/48\/Phass_respawn_01_ru.mp3\/revision\/latest?cb=20170413120144",
+        "title": "В следующий раз проведу разведку."
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_ru_gamepedia\/images\/3\/3b\/Phass_arc_respawn_01_ru.mp3\/revision\/latest?cb=20170413063337",
+        "isArcane": true,
+        "title": "В следующий раз проведу разведку."
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_ru_gamepedia\/images\/f\/f4\/Phass_respawn_02_ru.mp3\/revision\/latest?cb=20170413120149",
+        "title": "Все снова обретает очертания..."
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_ru_gamepedia\/images\/5\/58\/Phass_arc_respawn_02_ru.mp3\/revision\/latest?cb=20170413063342",
+        "isArcane": true,
+        "title": "Все снова обретает очертания..."
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_ru_gamepedia\/images\/0\/09\/Phass_respawn_03_ru.mp3\/revision\/latest?cb=20170413120154",
+        "title": "Полагаю, меня рады видеть вновь."
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_ru_gamepedia\/images\/f\/fb\/Phass_arc_respawn_03_ru.mp3\/revision\/latest?cb=20170413063347",
+        "isArcane": true,
+        "title": "Полагаю, меня рады видеть вновь."
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_ru_gamepedia\/images\/2\/2c\/Phass_respawn_04_ru.mp3\/revision\/latest?cb=20170413120158",
+        "title": "Я тебя вижу!"
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_ru_gamepedia\/images\/3\/35\/Phass_arc_respawn_04_ru.mp3\/revision\/latest?cb=20170413063352",
+        "isArcane": true,
+        "title": "Я тебя вижу!"
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_ru_gamepedia\/images\/0\/0e\/Phass_respawn_05_ru.mp3\/revision\/latest?cb=20170413120203",
+        "title": "Позволь, я отодвину завесу тайны."
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_ru_gamepedia\/images\/5\/58\/Phass_arc_respawn_05_ru.mp3\/revision\/latest?cb=20170413063356",
+        "isArcane": true,
+        "title": "Позволь, я отодвину завесу тайны."
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_ru_gamepedia\/images\/1\/17\/Phass_respawn_06_ru.mp3\/revision\/latest?cb=20170413120208",
+        "title": "Я не остановлюсь, пока не выполню контракт."
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_ru_gamepedia\/images\/a\/af\/Phass_arc_respawn_06_ru.mp3\/revision\/latest?cb=20170413063401",
+        "isArcane": true,
+        "title": "Я не остановлюсь, пока не выполню контракт."
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_ru_gamepedia\/images\/b\/bc\/Phass_respawn_07_ru.mp3\/revision\/latest?cb=20170413120214",
+        "title": "Я вернулась из тени."
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_ru_gamepedia\/images\/2\/23\/Phass_arc_respawn_07_ru.mp3\/revision\/latest?cb=20170413063406",
+        "isArcane": true,
+        "title": "Я вернулась из тени."
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_ru_gamepedia\/images\/c\/c0\/Phass_respawn_08_ru.mp3\/revision\/latest?cb=20170413120218",
+        "title": "Я вернулась и ищу новые жертвы."
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_ru_gamepedia\/images\/d\/dc\/Phass_arc_respawn_08_ru.mp3\/revision\/latest?cb=20170413063410",
+        "isArcane": true,
+        "title": "Я вернулась и ищу новые жертвы."
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_ru_gamepedia\/images\/7\/7f\/Phass_respawn_09_ru.mp3\/revision\/latest?cb=20170413120223",
+        "title": "Знаю, меня видеть всегда приятно."
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_ru_gamepedia\/images\/9\/94\/Phass_arc_respawn_09_ru.mp3\/revision\/latest?cb=20170413063415",
+        "isArcane": true,
+        "title": "Знаю, меня видеть всегда приятно."
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_ru_gamepedia\/images\/c\/c8\/Phass_respawn_10_ru.mp3\/revision\/latest?cb=20170413120228",
+        "title": "Я видела нечто странное..."
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_ru_gamepedia\/images\/d\/d7\/Phass_arc_respawn_10_ru.mp3\/revision\/latest?cb=20170413063420",
+        "isArcane": true,
+        "title": "Я видела нечто странное..."
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_ru_gamepedia\/images\/2\/28\/Phass_fastres_01_ru.mp3\/revision\/latest?cb=20170413115123",
+        "title": "Не думай, что со мной покончено."
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_ru_gamepedia\/images\/4\/45\/Phass_arc_fastres_01_ru.mp3\/revision\/latest?cb=20170413062313",
+        "isArcane": true,
+        "title": "Не думай, что со мной покончено."
+      }
+    ],
+    "category": "Возрождение"
+  },
+  {
+    "responses": [
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_ru_gamepedia\/images\/d\/de\/Phass_bottle_01_ru.mp3\/revision\/latest?cb=20170413114832",
+        "title": "Я это спрячу."
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_ru_gamepedia\/images\/f\/f0\/Phass_arc_bottle_01_ru.mp3\/revision\/latest?cb=20170413062040",
+        "isArcane": true,
+        "title": "Я это спрячу."
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_ru_gamepedia\/images\/2\/2d\/Phass_bottle_02_ru.mp3\/revision\/latest?cb=20170413114837",
+        "title": "Это мне."
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_ru_gamepedia\/images\/0\/05\/Phass_arc_bottle_02_ru.mp3\/revision\/latest?cb=20170413062044",
+        "isArcane": true,
+        "title": "Это мне."
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_ru_gamepedia\/images\/d\/d3\/Phass_bottle_03_ru.mp3\/revision\/latest?cb=20170413114842",
+        "title": "Мне в радость."
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_ru_gamepedia\/images\/5\/55\/Phass_arc_bottle_03_ru.mp3\/revision\/latest?cb=20170413062049",
+        "isArcane": true,
+        "title": "Мне в радость."
+      }
+    ],
+    "category": "Наполнение бутылки"
+  },
+  {
+    "responses": [
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_ru_gamepedia\/images\/f\/f4\/Phass_happy_02_ru.mp3\/revision\/latest?cb=20170413115142",
+        "title": "Охх..."
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_ru_gamepedia\/images\/7\/76\/Phass_arc_happy_02_ru.mp3\/revision\/latest?cb=20170413062332",
+        "isArcane": true,
+        "title": "Охх..."
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_ru_gamepedia\/images\/a\/ab\/Phass_purch_01_ru.mp3\/revision\/latest?cb=20170413120106",
+        "title": "Станет попроще."
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_ru_gamepedia\/images\/7\/72\/Phass_arc_purch_01_ru.mp3\/revision\/latest?cb=20170413063300",
+        "isArcane": true,
+        "title": "Станет попроще."
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_ru_gamepedia\/images\/5\/50\/Phass_doubdam_01_ru.mp3\/revision\/latest?cb=20170413115114",
+        "title": "Двойной урон!"
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_ru_gamepedia\/images\/7\/78\/Phass_arc_doubdam_01_ru.mp3\/revision\/latest?cb=20170413062304",
+        "isArcane": true,
+        "title": "Двойной урон!"
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_ru_gamepedia\/images\/0\/0c\/Phass_doubdam_02_ru.mp3\/revision\/latest?cb=20170413115118",
+        "title": "Разить снова и снова."
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_ru_gamepedia\/images\/3\/36\/Phass_arc_doubdam_02_ru.mp3\/revision\/latest?cb=20170413062309",
+        "isArcane": true,
+        "title": "Разить снова и снова."
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_ru_gamepedia\/images\/1\/1d\/Phass_haste_01_ru.mp3\/revision\/latest?cb=20170413115220",
+        "title": "Ускорение!"
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_ru_gamepedia\/images\/0\/0f\/Phass_arc_haste_01_ru.mp3\/revision\/latest?cb=20170413062410",
+        "isArcane": true,
+        "title": "Ускорение!"
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_ru_gamepedia\/images\/f\/f5\/Phass_haste_02_ru.mp3\/revision\/latest?cb=20170413115224",
+        "title": "Фантом стремителен."
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_ru_gamepedia\/images\/0\/08\/Phass_arc_haste_02_ru.mp3\/revision\/latest?cb=20170413062414",
+        "isArcane": true,
+        "title": "Фантом стремителен."
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_ru_gamepedia\/images\/b\/bd\/Phass_illus_01_ru.mp3\/revision\/latest?cb=20170413115229",
+        "title": "Иллюзия!"
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_ru_gamepedia\/images\/4\/42\/Phass_arc_illus_01_ru.mp3\/revision\/latest?cb=20170413062419",
+        "isArcane": true,
+        "title": "Иллюзия!"
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_ru_gamepedia\/images\/0\/0e\/Phass_illus_02_ru.mp3\/revision\/latest?cb=20170413115234",
+        "title": "Мои сестры Вуали."
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_ru_gamepedia\/images\/d\/d4\/Phass_arc_illus_02_ru.mp3\/revision\/latest?cb=20170413062424",
+        "isArcane": true,
+        "title": "Мои сестры Вуали."
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_ru_gamepedia\/images\/a\/a6\/Phass_invis_01_ru.mp3\/revision\/latest?cb=20170413115252",
+        "title": "Невидимость!"
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_ru_gamepedia\/images\/0\/04\/Phass_arc_invis_01_ru.mp3\/revision\/latest?cb=20170413062442",
+        "isArcane": true,
+        "title": "Невидимость!"
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_ru_gamepedia\/images\/1\/18\/Phass_invis_02_ru.mp3\/revision\/latest?cb=20170413115257",
+        "title": "Смертные не увидят меня."
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_ru_gamepedia\/images\/f\/f5\/Phass_arc_invis_02_ru.mp3\/revision\/latest?cb=20170413062447",
+        "isArcane": true,
+        "title": "Смертные не увидят меня."
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_ru_gamepedia\/images\/9\/96\/Phass_regen_01_ru.mp3\/revision\/latest?cb=20170413120130",
+        "title": "Регенерация!"
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_ru_gamepedia\/images\/1\/1b\/Phass_arc_regen_01_ru.mp3\/revision\/latest?cb=20170413063323",
+        "isArcane": true,
+        "title": "Регенерация!"
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_ru_gamepedia\/images\/c\/cb\/Phass_regen_02_ru.mp3\/revision\/latest?cb=20170413120135",
+        "title": "Фантом не угаснет."
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_ru_gamepedia\/images\/e\/ea\/Phass_arc_regen_02_ru.mp3\/revision\/latest?cb=20170413063328",
+        "isArcane": true,
+        "title": "Фантом не угаснет."
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_ru_gamepedia\/images\/0\/03\/Phass_regen_03_ru.mp3\/revision\/latest?cb=20170413120140",
+        "title": "Неугасима."
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_ru_gamepedia\/images\/2\/2a\/Phass_arc_regen_03_ru.mp3\/revision\/latest?cb=20170413063333",
+        "isArcane": true,
+        "title": "Неугасима."
+      }
+    ],
+    "category": "Активация рун"
+  },
+  {
+    "responses": [
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_ru_gamepedia\/images\/c\/cf\/Phass_notyet_01_ru.mp3\/revision\/latest?cb=20170413115903",
+        "title": "Не сейчас."
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_ru_gamepedia\/images\/8\/89\/Phass_arc_notyet_01_ru.mp3\/revision\/latest?cb=20170413063059",
+        "isArcane": true,
+        "title": "Не сейчас."
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_ru_gamepedia\/images\/f\/fd\/Phass_notyet_04_ru.mp3\/revision\/latest?cb=20170413115917",
+        "title": "Я не готова."
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_ru_gamepedia\/images\/b\/b0\/Phass_arc_notyet_04_ru.mp3\/revision\/latest?cb=20170413063113",
+        "isArcane": true,
+        "title": "Я не готова."
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_ru_gamepedia\/images\/e\/ec\/Phass_notyet_07_ru.mp3\/revision\/latest?cb=20170413115931",
+        "title": "Еще не время."
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_ru_gamepedia\/images\/d\/d9\/Phass_arc_notyet_07_ru.mp3\/revision\/latest?cb=20170413063127",
+        "isArcane": true,
+        "title": "Еще не время."
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_ru_gamepedia\/images\/2\/24\/Phass_notyet_02_ru.mp3\/revision\/latest?cb=20170413115908",
+        "title": "Не сейчас."
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_ru_gamepedia\/images\/d\/d1\/Phass_arc_notyet_02_ru.mp3\/revision\/latest?cb=20170413063103",
+        "isArcane": true,
+        "title": "Не сейчас."
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_ru_gamepedia\/images\/1\/18\/Phass_notyet_05_ru.mp3\/revision\/latest?cb=20170413115921",
+        "title": "Я не готова."
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_ru_gamepedia\/images\/8\/82\/Phass_arc_notyet_05_ru.mp3\/revision\/latest?cb=20170413063117",
+        "isArcane": true,
+        "title": "Я не готова."
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_ru_gamepedia\/images\/b\/be\/Phass_notyet_08_ru.mp3\/revision\/latest?cb=20170413115935",
+        "title": "Еще не время."
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_ru_gamepedia\/images\/d\/d7\/Phass_arc_notyet_08_ru.mp3\/revision\/latest?cb=20170413063131",
+        "isArcane": true,
+        "title": "Еще не время."
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_ru_gamepedia\/images\/f\/f4\/Phass_notyet_03_ru.mp3\/revision\/latest?cb=20170413115912",
+        "title": "Не сейчас!"
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_ru_gamepedia\/images\/0\/01\/Phass_arc_notyet_03_ru.mp3\/revision\/latest?cb=20170413063108",
+        "isArcane": true,
+        "title": "Не сейчас!"
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_ru_gamepedia\/images\/a\/ae\/Phass_notyet_06_ru.mp3\/revision\/latest?cb=20170413115926",
+        "title": "Я не готова!"
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_ru_gamepedia\/images\/b\/b6\/Phass_arc_notyet_06_ru.mp3\/revision\/latest?cb=20170413063122",
+        "isArcane": true,
+        "title": "Я не готова!"
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_ru_gamepedia\/images\/7\/7e\/Phass_notyet_09_ru.mp3\/revision\/latest?cb=20170413115940",
+        "title": "Еще не время!"
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_ru_gamepedia\/images\/2\/2a\/Phass_arc_notyet_09_ru.mp3\/revision\/latest?cb=20170413063136",
+        "isArcane": true,
+        "title": "Еще не время!"
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_ru_gamepedia\/images\/e\/e1\/Phass_notyet_10_ru.mp3\/revision\/latest?cb=20170413115945",
+        "title": "Не сейчас!"
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_ru_gamepedia\/images\/e\/e4\/Phass_arc_notyet_10_ru.mp3\/revision\/latest?cb=20170413063140",
+        "isArcane": true,
+        "title": "Не сейчас!"
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_ru_gamepedia\/images\/1\/10\/Phass_notyet_11_ru.mp3\/revision\/latest?cb=20170413115949",
+        "title": "Я не готова!"
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_ru_gamepedia\/images\/7\/7d\/Phass_arc_notyet_11_ru.mp3\/revision\/latest?cb=20170413063145",
+        "isArcane": true,
+        "title": "Я не готова!"
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_ru_gamepedia\/images\/a\/aa\/Phass_notyet_12_ru.mp3\/revision\/latest?cb=20170413115954",
+        "title": "Еще не время!"
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_ru_gamepedia\/images\/7\/76\/Phass_arc_notyet_12_ru.mp3\/revision\/latest?cb=20170413063150",
+        "isArcane": true,
+        "title": "Еще не время!"
+      }
+    ],
+    "category": "Способность на перезарядке"
+  },
+  {
+    "responses": [
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_ru_gamepedia\/images\/f\/f7\/Phass_nomana_01_ru.mp3\/revision\/latest?cb=20170413115806",
+        "title": "Маны нет."
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_ru_gamepedia\/images\/9\/9a\/Phass_arc_nomana_01_ru.mp3\/revision\/latest?cb=20170413063003",
+        "isArcane": true,
+        "title": "Маны нет."
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_ru_gamepedia\/images\/4\/4e\/Phass_nomana_04_ru.mp3\/revision\/latest?cb=20170413115820",
+        "title": "Нет маны."
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_ru_gamepedia\/images\/2\/23\/Phass_arc_nomana_04_ru.mp3\/revision\/latest?cb=20170413063017",
+        "isArcane": true,
+        "title": "Нет маны."
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_ru_gamepedia\/images\/8\/82\/Phass_nomana_07_ru.mp3\/revision\/latest?cb=20170413115834",
+        "title": "Недостаточно маны."
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_ru_gamepedia\/images\/b\/b6\/Phass_arc_nomana_07_ru.mp3\/revision\/latest?cb=20170413063031",
+        "isArcane": true,
+        "title": "Недостаточно маны."
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_ru_gamepedia\/images\/e\/e9\/Phass_nomana_02_ru.mp3\/revision\/latest?cb=20170413115810",
+        "title": "Маны нет."
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_ru_gamepedia\/images\/8\/85\/Phass_arc_nomana_02_ru.mp3\/revision\/latest?cb=20170413063007",
+        "isArcane": true,
+        "title": "Маны нет."
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_ru_gamepedia\/images\/3\/35\/Phass_nomana_05_ru.mp3\/revision\/latest?cb=20170413115824",
+        "title": "Нет маны."
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_ru_gamepedia\/images\/2\/20\/Phass_arc_nomana_05_ru.mp3\/revision\/latest?cb=20170413063022",
+        "isArcane": true,
+        "title": "Нет маны."
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_ru_gamepedia\/images\/b\/b2\/Phass_nomana_08_ru.mp3\/revision\/latest?cb=20170413115839",
+        "title": "Маны недостаточно."
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_ru_gamepedia\/images\/6\/6d\/Phass_arc_nomana_08_ru.mp3\/revision\/latest?cb=20170413063035",
+        "isArcane": true,
+        "title": "Маны недостаточно."
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_ru_gamepedia\/images\/1\/1d\/Phass_nomana_03_ru.mp3\/revision\/latest?cb=20170413115815",
+        "title": "Маны нет!"
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_ru_gamepedia\/images\/6\/61\/Phass_arc_nomana_03_ru.mp3\/revision\/latest?cb=20170413063012",
+        "isArcane": true,
+        "title": "Маны нет!"
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_ru_gamepedia\/images\/8\/81\/Phass_nomana_06_ru.mp3\/revision\/latest?cb=20170413115829",
+        "title": "Нет маны!"
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_ru_gamepedia\/images\/a\/ab\/Phass_arc_nomana_06_ru.mp3\/revision\/latest?cb=20170413063026",
+        "isArcane": true,
+        "title": "Нет маны!"
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_ru_gamepedia\/images\/2\/28\/Phass_nomana_09_ru.mp3\/revision\/latest?cb=20170413115843",
+        "title": "Маны недостаточно!"
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_ru_gamepedia\/images\/b\/bc\/Phass_arc_nomana_09_ru.mp3\/revision\/latest?cb=20170413063040",
+        "isArcane": true,
+        "title": "Маны недостаточно!"
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_ru_gamepedia\/images\/b\/bc\/Phass_nomana_10_ru.mp3\/revision\/latest?cb=20170413115849",
+        "title": "Маны нет!"
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_ru_gamepedia\/images\/0\/07\/Phass_arc_nomana_10_ru.mp3\/revision\/latest?cb=20170413063045",
+        "isArcane": true,
+        "title": "Маны нет!"
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_ru_gamepedia\/images\/b\/b2\/Phass_nomana_11_ru.mp3\/revision\/latest?cb=20170413115854",
+        "title": "Нет маны!"
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_ru_gamepedia\/images\/2\/28\/Phass_arc_nomana_11_ru.mp3\/revision\/latest?cb=20170413063049",
+        "isArcane": true,
+        "title": "Нет маны!"
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_ru_gamepedia\/images\/0\/0c\/Phass_nomana_12_ru.mp3\/revision\/latest?cb=20170413115858",
+        "title": "Маны недостаточно!"
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_ru_gamepedia\/images\/5\/5a\/Phass_arc_nomana_12_ru.mp3\/revision\/latest?cb=20170413063054",
+        "isArcane": true,
+        "title": "Маны недостаточно!"
+      }
+    ],
+    "category": "Нехватка маны"
+  },
+  {
+    "responses": [
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_ru_gamepedia\/images\/1\/12\/Phass_pain_01_ru.mp3\/revision\/latest?cb=20170413115959",
+        "title": "Ох!"
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_ru_gamepedia\/images\/4\/4e\/Phass_arc_pain_01_ru.mp3\/revision\/latest?cb=20170413063155",
+        "isArcane": true,
+        "title": "Ох!"
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_ru_gamepedia\/images\/1\/11\/Phass_pain_02_ru.mp3\/revision\/latest?cb=20170413120003",
+        "title": "Ха-а!"
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_ru_gamepedia\/images\/0\/01\/Phass_arc_pain_02_ru.mp3\/revision\/latest?cb=20170413063159",
+        "isArcane": true,
+        "title": "Ха-а!"
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_ru_gamepedia\/images\/3\/3c\/Phass_pain_03_ru.mp3\/revision\/latest?cb=20170413120010",
+        "title": "Ох!"
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_ru_gamepedia\/images\/a\/aa\/Phass_arc_pain_03_ru.mp3\/revision\/latest?cb=20170413063204",
+        "isArcane": true,
+        "title": "Ох!"
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_ru_gamepedia\/images\/a\/af\/Phass_pain_04_ru.mp3\/revision\/latest?cb=20170413120015",
+        "title": "О-ох!"
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_ru_gamepedia\/images\/0\/02\/Phass_arc_pain_04_ru.mp3\/revision\/latest?cb=20170413063208",
+        "isArcane": true,
+        "title": "О-ох!"
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_ru_gamepedia\/images\/2\/22\/Phass_pain_05_ru.mp3\/revision\/latest?cb=20170413120020",
+        "isArcane": true,
+        "title": "О-ох!"
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_ru_gamepedia\/images\/6\/64\/Phass_arc_pain_05_ru.mp3\/revision\/latest?cb=20170413063213",
+        "isArcane": true,
+        "title": "О-ох!"
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_ru_gamepedia\/images\/4\/46\/Phass_pain_06_ru.mp3\/revision\/latest?cb=20170413120024",
+        "title": "Ух!"
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_ru_gamepedia\/images\/4\/4b\/Phass_arc_pain_06_ru.mp3\/revision\/latest?cb=20170413063218",
+        "isArcane": true,
+        "title": "Ух!"
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_ru_gamepedia\/images\/c\/c8\/Phass_pain_07_ru.mp3\/revision\/latest?cb=20170413120029",
+        "title": "О!"
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_ru_gamepedia\/images\/b\/b4\/Phass_arc_pain_07_ru.mp3\/revision\/latest?cb=20170413063223",
+        "isArcane": true,
+        "title": "О!"
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_ru_gamepedia\/images\/b\/b7\/Phass_pain_08_ru.mp3\/revision\/latest?cb=20170413120034",
+        "title": "О-о-о!"
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_ru_gamepedia\/images\/9\/9d\/Phass_arc_pain_08_ru.mp3\/revision\/latest?cb=20170413063227",
+        "isArcane": true,
+        "title": "О-о-о!"
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_ru_gamepedia\/images\/d\/d8\/Phass_pain_09_ru.mp3\/revision\/latest?cb=20170413120039",
+        "title": "Ох!"
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_ru_gamepedia\/images\/f\/fb\/Phass_arc_pain_09_ru.mp3\/revision\/latest?cb=20170413063232",
+        "isArcane": true,
+        "title": "Ох!"
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_ru_gamepedia\/images\/0\/01\/Phass_pain_10_ru.mp3\/revision\/latest?cb=20170413120043",
+        "title": "Ух!"
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_ru_gamepedia\/images\/7\/7f\/Phass_arc_pain_10_ru.mp3\/revision\/latest?cb=20170413063237",
+        "isArcane": true,
+        "title": "Ух!"
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_ru_gamepedia\/images\/1\/1c\/Phass_pain_11_ru.mp3\/revision\/latest?cb=20170413120048",
+        "title": "Ах..."
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_ru_gamepedia\/images\/2\/23\/Phass_arc_pain_11_ru.mp3\/revision\/latest?cb=20170413063241",
+        "isArcane": true,
+        "title": "Ах..."
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_ru_gamepedia\/images\/2\/2a\/Phass_pain_12_ru.mp3\/revision\/latest?cb=20170413120052",
+        "title": "Ах!"
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_ru_gamepedia\/images\/2\/2a\/Phass_arc_pain_12_ru.mp3\/revision\/latest?cb=20170413063246",
+        "isArcane": true,
+        "title": "Ах!"
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_ru_gamepedia\/images\/b\/b1\/Phass_pain_13_ru.mp3\/revision\/latest?cb=20170413120057",
+        "title": "Аха!"
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_ru_gamepedia\/images\/e\/ea\/Phass_arc_pain_13_ru.mp3\/revision\/latest?cb=20170413063251",
+        "isArcane": true,
+        "title": "Аха!"
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_ru_gamepedia\/images\/2\/2a\/Phass_pain_14_ru.mp3\/revision\/latest?cb=20170413120101",
+        "title": "Ох!"
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_ru_gamepedia\/images\/4\/47\/Phass_arc_pain_14_ru.mp3\/revision\/latest?cb=20170413063255",
+        "isArcane": true,
+        "title": "Ох!"
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_ru_gamepedia\/images\/5\/52\/Phass_underattack_01_ru.mp3\/revision\/latest?cb=20170413120330",
+        "title": "На меня напали!"
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_ru_gamepedia\/images\/d\/dd\/Phass_arc_underattack_01_ru.mp3\/revision\/latest?cb=20170413063522",
+        "isArcane": true,
+        "title": "На меня напали!"
+      }
+    ],
+    "category": "Получение урона"
+  },
+  {
+    "responses": [
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_ru_gamepedia\/images\/1\/1a\/Phass_rare_01_ru.mp3\/revision\/latest?cb=20170413120121",
+        "title": "Сёстры Вуали едины. Где падет одна, восстанет другая."
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_ru_gamepedia\/images\/a\/a3\/Phass_arc_rare_01_ru.mp3\/revision\/latest?cb=20170413063314",
+        "isArcane": true,
+        "title": "Сёстры Вуали едины. Где падет одна, восстанет другая."
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_ru_gamepedia\/images\/5\/52\/Phass_rare_02_ru.mp3\/revision\/latest?cb=20170413120126",
+        "title": "Оракул называет цель, и я забираю её жизнь. Того требует узор Вуали."
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_ru_gamepedia\/images\/e\/e3\/Phass_arc_rare_02_ru.mp3\/revision\/latest?cb=20170413063319",
+        "isArcane": true,
+        "title": "Оракул называет цель, и я забираю её жизнь. Того требует узор Вуали."
+      }
+    ],
+    "category": "Редкие фразы"
+  },
+  {
+    "responses": [
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_ru_gamepedia\/images\/0\/09\/Phass_missing_lane_01_ru.mp3\/revision\/latest?cb=20170413115622",
+        "title": "Врага нет на верхней линии!"
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_ru_gamepedia\/images\/0\/04\/Phass_arc_missing_lane_01_ru.mp3\/revision\/latest?cb=20170413062817",
+        "isArcane": true,
+        "title": "Врага нет на верхней линии!"
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_ru_gamepedia\/images\/c\/ce\/Phass_missing_lane_02_ru.mp3\/revision\/latest?cb=20170413115628",
+        "title": "Врага нет на центральной линии!"
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_ru_gamepedia\/images\/d\/d5\/Phass_arc_missing_lane_02_ru.mp3\/revision\/latest?cb=20170413062822",
+        "isArcane": true,
+        "title": "Врага нет на центральной линии!"
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_ru_gamepedia\/images\/b\/b9\/Phass_missing_lane_03_ru.mp3\/revision\/latest?cb=20170413115632",
+        "title": "Врага нет на нижней линии!"
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_ru_gamepedia\/images\/d\/dd\/Phass_arc_missing_lane_03_ru.mp3\/revision\/latest?cb=20170413062827",
+        "isArcane": true,
+        "title": "Врага нет на нижней линии!"
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_ru_gamepedia\/images\/7\/7b\/Phass_thanks_01_ru.mp3\/revision\/latest?cb=20170413120311",
+        "title": "Очень признательна."
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_ru_gamepedia\/images\/b\/b5\/Phass_arc_thanks_01_ru.mp3\/revision\/latest?cb=20170413063503",
+        "isArcane": true,
+        "title": "Очень признательна."
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_ru_gamepedia\/images\/e\/ea\/Phass_thanks_02_ru.mp3\/revision\/latest?cb=20170413120315",
+        "title": "Я благодарна."
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_ru_gamepedia\/images\/e\/eb\/Phass_arc_thanks_02_ru.mp3\/revision\/latest?cb=20170413063507",
+        "isArcane": true,
+        "title": "Я благодарна."
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_ru_gamepedia\/images\/1\/1d\/Phass_thanks_03_ru.mp3\/revision\/latest?cb=20170413120320",
+        "title": "Прими благодарность."
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_ru_gamepedia\/images\/1\/1b\/Phass_arc_thanks_03_ru.mp3\/revision\/latest?cb=20170413063512",
+        "isArcane": true,
+        "title": "Прими благодарность."
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_ru_gamepedia\/images\/d\/d8\/Phass_thanks_04_ru.mp3\/revision\/latest?cb=20170413120325",
+        "title": "С благодарностью."
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_ru_gamepedia\/images\/6\/6c\/Phass_arc_thanks_04_ru.mp3\/revision\/latest?cb=20170413063517",
+        "isArcane": true,
+        "title": "С благодарностью."
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_ru_gamepedia\/images\/8\/8c\/Phass_laugh_01_ru.mp3\/revision\/latest?cb=20170413115457",
+        "title": "Мх-мх-мх!"
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_ru_gamepedia\/images\/4\/40\/Phass_arc_laugh_01_ru.mp3\/revision\/latest?cb=20170413062649",
+        "isArcane": true,
+        "title": "Мх-мх-мх!"
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_ru_gamepedia\/images\/a\/af\/Phass_laugh_02_ru.mp3\/revision\/latest?cb=20170413115502",
+        "title": "Ах-хм-хм!"
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_ru_gamepedia\/images\/3\/39\/Phass_arc_laugh_02_ru.mp3\/revision\/latest?cb=20170413062654",
+        "isArcane": true,
+        "title": "Ах-хм-хм!"
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_ru_gamepedia\/images\/e\/e3\/Phass_laugh_03_ru.mp3\/revision\/latest?cb=20170413115507",
+        "title": "Ха-ха-ха-ха!"
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_ru_gamepedia\/images\/5\/52\/Phass_arc_laugh_03_ru.mp3\/revision\/latest?cb=20170413062659",
+        "isArcane": true,
+        "title": "Ха-ха-ха-ха!"
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_ru_gamepedia\/images\/2\/2c\/Phass_laugh_04_ru.mp3\/revision\/latest?cb=20170413115511",
+        "title": "Охо-хо-хо-хо!"
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_ru_gamepedia\/images\/6\/69\/Phass_arc_laugh_04_ru.mp3\/revision\/latest?cb=20170413062703",
+        "isArcane": true,
+        "title": "Охо-хо-хо-хо!"
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_ru_gamepedia\/images\/8\/85\/Phass_laugh_05_ru.mp3\/revision\/latest?cb=20170413115516",
+        "title": "Ох-ха-ха-ха!"
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_ru_gamepedia\/images\/9\/97\/Phass_arc_laugh_05_ru.mp3\/revision\/latest?cb=20170413062708",
+        "isArcane": true,
+        "title": "Ох-ха-ха-ха!"
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_ru_gamepedia\/images\/a\/ae\/Phass_laugh_06_ru.mp3\/revision\/latest?cb=20170413115521",
+        "title": "Ах-ха-ха-ха-ха!"
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_ru_gamepedia\/images\/7\/78\/Phass_arc_laugh_06_ru.mp3\/revision\/latest?cb=20170413062712",
+        "isArcane": true,
+        "title": "Ах-ха-ха-ха-ха!"
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_ru_gamepedia\/images\/f\/f5\/Phass_laugh_07_ru.mp3\/revision\/latest?cb=20170413115526",
+        "title": "Хо-хо-хо-хо-ха!"
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_ru_gamepedia\/images\/3\/35\/Phass_arc_laugh_07_ru.mp3\/revision\/latest?cb=20170413062717",
+        "isArcane": true,
+        "title": "Хо-хо-хо-хо-ха!"
+      }
+    ],
+    "category": "Реплики в чате"
+  },
+  {
+    "responses": [
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_ru_gamepedia\/images\/5\/57\/Phass_win_01_ru.mp3\/revision\/latest?cb=20170413120334",
+        "title": "Победа!"
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_ru_gamepedia\/images\/6\/65\/Phass_arc_win_01_ru.mp3\/revision\/latest?cb=20170413063526",
+        "isArcane": true,
+        "title": "Победа!"
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_ru_gamepedia\/images\/c\/c0\/Phass_win_02_ru.mp3\/revision\/latest?cb=20170413120339",
+        "title": "Ну, вот и все."
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_ru_gamepedia\/images\/9\/93\/Phass_arc_win_02_ru.mp3\/revision\/latest?cb=20170413063531",
+        "isArcane": true,
+        "title": "Ну, вот и все."
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_ru_gamepedia\/images\/0\/01\/Phass_win_03_ru.mp3\/revision\/latest?cb=20170413120343",
+        "title": "Да!"
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_ru_gamepedia\/images\/1\/1b\/Phass_arc_win_03_ru.mp3\/revision\/latest?cb=20170413063535",
+        "isArcane": true,
+        "title": "Да!"
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_ru_gamepedia\/images\/1\/10\/Phass_win_04_ru.mp3\/revision\/latest?cb=20170413120348",
+        "title": "Победа!"
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_ru_gamepedia\/images\/0\/08\/Phass_arc_win_04_ru.mp3\/revision\/latest?cb=20170413063540",
+        "isArcane": true,
+        "title": "Победа!"
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_ru_gamepedia\/images\/1\/17\/Phass_win_05_ru.mp3\/revision\/latest?cb=20170413120353",
+        "title": "Да!"
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_ru_gamepedia\/images\/7\/74\/Phass_arc_win_05_ru.mp3\/revision\/latest?cb=20170413063545",
+        "isArcane": true,
+        "title": "Да!"
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_ru_gamepedia\/images\/3\/3e\/Phass_lose_01_ru.mp3\/revision\/latest?cb=20170413115608",
+        "title": "Нет!"
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_ru_gamepedia\/images\/7\/78\/Phass_arc_lose_01_ru.mp3\/revision\/latest?cb=20170413062802",
+        "isArcane": true,
+        "title": "Нет!"
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_ru_gamepedia\/images\/b\/b8\/Phass_lose_02_ru.mp3\/revision\/latest?cb=20170413115612",
+        "title": "Я проиграла!"
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_ru_gamepedia\/images\/f\/fb\/Phass_arc_lose_02_ru.mp3\/revision\/latest?cb=20170413062807",
+        "isArcane": true,
+        "title": "Я проиграла!"
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_ru_gamepedia\/images\/d\/dd\/Phass_lose_03_ru.mp3\/revision\/latest?cb=20170413115617",
+        "title": "Фантом увядает..."
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_ru_gamepedia\/images\/9\/93\/Phass_arc_lose_03_ru.mp3\/revision\/latest?cb=20170413062812",
+        "isArcane": true,
+        "title": "Фантом увядает..."
+      }
+    ],
+    "category": "Окончание матча"
+  },
+  {
+    "responses": [
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_ru_gamepedia\/images\/1\/1d\/Phass_happy_03_ru.mp3\/revision\/latest?cb=20170413115146",
+        "title": "Ах..."
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_ru_gamepedia\/images\/9\/94\/Phass_arc_happy_03_ru.mp3\/revision\/latest?cb=20170413062337",
+        "isArcane": true,
+        "title": "Ах..."
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_ru_gamepedia\/images\/e\/e7\/Phass_happy_06_ru.mp3\/revision\/latest?cb=20170413115200",
+        "title": "Ах!"
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_ru_gamepedia\/images\/5\/5f\/Phass_arc_happy_06_ru.mp3\/revision\/latest?cb=20170413062351",
+        "isArcane": true,
+        "title": "Ах!"
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_ru_gamepedia\/images\/0\/0f\/Phass_happy_05_ru.mp3\/revision\/latest?cb=20170413115156",
+        "title": "Ах, божественно!"
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_ru_gamepedia\/images\/f\/f0\/Phass_arc_happy_05_ru.mp3\/revision\/latest?cb=20170413062347",
+        "isArcane": true,
+        "title": "Ах, божественно!"
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_ru_gamepedia\/images\/9\/9b\/Phass_happy_09_ru.mp3\/revision\/latest?cb=20170413115215",
+        "title": "М-м-м, божественно!"
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_ru_gamepedia\/images\/f\/fc\/Phass_arc_happy_09_ru.mp3\/revision\/latest?cb=20170413062405",
+        "isArcane": true,
+        "title": "М-м-м, божественно!"
+      }
+    ],
+    "category": "Выпадение косметического предмета"
+  },
+  {
+    "responses": [
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_ru_gamepedia\/images\/7\/7f\/Phass_shiwiz_01_ru.mp3\/revision\/latest?cb=20170413120242",
+        "title": "Сраный волшебник!"
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_ru_gamepedia\/images\/5\/55\/Phass_arc_shiwiz_01_ru.mp3\/revision\/latest?cb=20170413063434",
+        "isArcane": true,
+        "title": "Сраный волшебник!"
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_ru_gamepedia\/images\/2\/26\/Phass_crumwiz_01_ru.mp3\/revision\/latest?cb=20170413114908",
+        "title": "Паршивый волшебник!"
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_ru_gamepedia\/images\/c\/c5\/Phass_arc_crumwiz_01_ru.mp3\/revision\/latest?cb=20170413062113",
+        "isArcane": true,
+        "title": "Паршивый волшебник!"
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_ru_gamepedia\/images\/d\/d0\/Phass_anger_01_ru.mp3\/revision\/latest?cb=20170413114625",
+        "title": "Агх!"
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_ru_gamepedia\/images\/8\/81\/Phass_arc_anger_01_ru.mp3\/revision\/latest?cb=20170413061851",
+        "isArcane": true,
+        "title": "Агх!"
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_ru_gamepedia\/images\/f\/f6\/Phass_anger_02_ru.mp3\/revision\/latest?cb=20170413114630",
+        "title": "Угх!"
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_ru_gamepedia\/images\/c\/ce\/Phass_arc_anger_02_ru.mp3\/revision\/latest?cb=20170413061856",
+        "isArcane": true,
+        "title": "Угх!"
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_ru_gamepedia\/images\/d\/d9\/Phass_anger_03_ru.mp3\/revision\/latest?cb=20170413114635",
+        "title": "Ургх!"
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_ru_gamepedia\/images\/6\/6e\/Phass_arc_anger_03_ru.mp3\/revision\/latest?cb=20170413061900",
+        "isArcane": true,
+        "title": "Ургх!"
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_ru_gamepedia\/images\/8\/8e\/Phass_anger_04_ru.mp3\/revision\/latest?cb=20170413114640",
+        "title": "Хах!"
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_ru_gamepedia\/images\/d\/d9\/Phass_arc_anger_04_ru.mp3\/revision\/latest?cb=20170413061905",
+        "isArcane": true,
+        "title": "Хах!"
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_ru_gamepedia\/images\/9\/97\/Phass_anger_05_ru.mp3\/revision\/latest?cb=20170413114645",
+        "title": "Мгх!"
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_ru_gamepedia\/images\/e\/e4\/Phass_arc_anger_05_ru.mp3\/revision\/latest?cb=20170413061909",
+        "isArcane": true,
+        "title": "Мгх!"
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_ru_gamepedia\/images\/8\/89\/Phass_anger_06_ru.mp3\/revision\/latest?cb=20170413114650",
+        "title": "Кх!"
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_ru_gamepedia\/images\/6\/65\/Phass_arc_anger_06_ru.mp3\/revision\/latest?cb=20170413061914",
+        "isArcane": true,
+        "title": "Кх!"
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_ru_gamepedia\/images\/a\/ae\/Phass_anger_07_ru.mp3\/revision\/latest?cb=20170413114655",
+        "title": "Хм!"
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_ru_gamepedia\/images\/9\/93\/Phass_arc_anger_07_ru.mp3\/revision\/latest?cb=20170413061919",
+        "isArcane": true,
+        "title": "Хм!"
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_ru_gamepedia\/images\/3\/3b\/Phass_anger_08_ru.mp3\/revision\/latest?cb=20170413114659",
+        "title": "Хм-м-м!"
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_ru_gamepedia\/images\/f\/fc\/Phass_arc_anger_08_ru.mp3\/revision\/latest?cb=20170413061923",
+        "isArcane": true,
+        "title": "Хм-м-м!"
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_ru_gamepedia\/images\/a\/a0\/Phass_happy_01_ru.mp3\/revision\/latest?cb=20170413115137",
+        "title": "Ах..."
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_ru_gamepedia\/images\/f\/f4\/Phass_arc_happy_01_ru.mp3\/revision\/latest?cb=20170413062328",
+        "isArcane": true,
+        "title": "Ах..."
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_ru_gamepedia\/images\/f\/f4\/Phass_happy_02_ru.mp3\/revision\/latest?cb=20170413115142",
+        "title": "Ох..."
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_ru_gamepedia\/images\/7\/76\/Phass_arc_happy_02_ru.mp3\/revision\/latest?cb=20170413062332",
+        "isArcane": true,
+        "title": "Ох..."
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_ru_gamepedia\/images\/4\/42\/Phass_happy_04_ru.mp3\/revision\/latest?cb=20170413115151",
+        "title": "Ух..."
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_ru_gamepedia\/images\/7\/7d\/Phass_arc_happy_04_ru.mp3\/revision\/latest?cb=20170413062342",
+        "isArcane": true,
+        "title": "Ух..."
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_ru_gamepedia\/images\/8\/84\/Phass_happy_07_ru.mp3\/revision\/latest?cb=20170413115205",
+        "title": "Ах, божественно..."
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_ru_gamepedia\/images\/7\/7b\/Phass_arc_happy_07_ru.mp3\/revision\/latest?cb=20170413062356",
+        "isArcane": true,
+        "title": "Ах, божественно..."
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_ru_gamepedia\/images\/0\/03\/Phass_happy_08_ru.mp3\/revision\/latest?cb=20170413115209",
+        "title": "О-о, божественно..."
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_ru_gamepedia\/images\/6\/6d\/Phass_arc_happy_08_ru.mp3\/revision\/latest?cb=20170413062400",
+        "isArcane": true,
+        "title": "О-о, божественно..."
+      }
+    ],
+    "category": "Разное"
+  }
+]

@@ -1,0 +1,91 @@
+{
+  "abilities": [
+    {
+      "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/3\/37\/Guardian_Greaves_Mend.mp3\/revision\/latest?cb=20191227195426",
+      "effects": [
+        "Ability No Target",
+        "Affects Allies"
+      ],
+      "notes": [
+        "Interrupts the user's channeling spells upon cast.",
+        "Applies a basic dispel on the user upon cast, removing many debuffs.",
+        "Applies the heal before the dispel.",
+        "Affects every allied unit, including illusions, invulnerable units and hidden units, excluding wards and buildings.",
+        "Does not heal units that have been healed by Mend in the last 39 seconds, or by Mekansm's Restore in the last 64 seconds. The mana restore has no stack limit and always works. Only the heal is restricted. A status buff icon on affected units shows how much time is left for it to be able to get affected again. The stack limit duration equals the cooldown (after all reductions), minus one. The duration is set upon cast and cannot be altered afterwards. Resetting the item's cooldown does not affect the stack limit duration.",
+        "The mana restore has no stack limit and always works. Only the heal is restricted.",
+        "A status buff icon on affected units shows how much time is left for it to be able to get affected again.",
+        "The stack limit duration equals the cooldown (after all reductions), minus one.",
+        "The duration is set upon cast and cannot be altered afterwards. Resetting the item's cooldown does not affect the stack limit duration.",
+        "Meepo clones cannot cast Mend."
+      ],
+      "mana": null,
+      "abilityName": "Mend",
+      "cooldown": "40",
+      "description": "Restores 300 health and 200 mana to nearby allies, and removes most negative effects from the caster.",
+      "params": [
+        "Radius: 1200",
+        "Health Restored: 300",
+        "Mana Restored: 200",
+        "Heal Stack Limit Duration: 39"
+      ],
+      "itemBehaviour": [],
+      "story": null
+    },
+    {
+      "audioUrl": null,
+      "effects": [
+        "Ability Aura",
+        "Affects Allies"
+      ],
+      "notes": [
+        "Bonuses stack with all other sources of health regeneration and armor, except with Guardian Aura from multiple Guardian Greaves.",
+        "The boost only affects heroes (including illusions). Non-hero units only benefit from the base values.",
+        "Can regenerate up to 150 (960 while boosted) health in one minute.",
+        "Does not affect wards, buildings and invulnerable units.",
+        "The aura's buff lingers for 0.5 seconds."
+      ],
+      "mana": null,
+      "abilityName": "Guardian Aura",
+      "cooldown": null,
+      "description": "Provides 2.5 health regeneration and 3 armor to allied units. If an allied hero's health falls below 20%, they receive 16 health regeneration and 10 armor.",
+      "params": [
+        "Radius: 1200",
+        "Health Regeneration Bonus: 2.5",
+        "Armor Bonus: 3",
+        "Boost Health Threshold: 20%",
+        "Boosted Health Regeneration Bonus: 16",
+        "Boosted Armor Bonus: 10",
+        "Aura Linger Duration: 0.5"
+      ],
+      "itemBehaviour": [],
+      "story": null
+    }
+  ],
+  "additionalInformation": [
+    "Movement speed bonuses from multiple pairs of boots do not stack.",
+    "Stacks with all other movement speed bonuses."
+  ],
+  "cost": "5250",
+  "lore": null,
+  "consistFrom": [
+    "Mekansm",
+    "Arcane Boots",
+    "Buckler",
+    "Recipe"
+  ],
+  "boughtFrom": "Support",
+  "name": "Guardian Greaves",
+  "description": "One of many holy instruments constructed to honor the Omniscience.",
+  "trivia": null,
+  "upgradeIn": null,
+  "bonuses": [
+    "+250 Mana",
+    "+4 Armor",
+    "+50 Movement speed"
+  ],
+  "tips": [
+    "Meepo clones get double stats and armor from the item, which can offer high survivability against physical damage.",
+    "Tinker's Rearm can refresh Greaves as well, offering high mana return for Tinker himself and the heal for heroes that are not having the Mend buff.",
+    "Since the boosted armor is only granted when the HP are under 20 percent, Heart of Tarrasque is an excellent item to combine with Greaves."
+  ]
+}

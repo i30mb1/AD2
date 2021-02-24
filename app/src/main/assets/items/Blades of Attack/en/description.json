@@ -1,0 +1,21 @@
+{
+  "abilities": [],
+  "cost": "450",
+  "lore": null,
+  "consistFrom": null,
+  "boughtFrom": "Equipment",
+  "name": "Blades of Attack",
+  "description": "The damage of these small, concealable blades should not be underestimated.",
+  "trivia": null,
+  "upgradeIn": [
+    "Phase Boots",
+    "Crystalys",
+    "Armlet of Mordiggian",
+    "Vladmir's Offering",
+    "Falcon Blade"
+  ],
+  "bonuses": [
+    "+9 Attack damage"
+  ],
+  "tips": null
+}

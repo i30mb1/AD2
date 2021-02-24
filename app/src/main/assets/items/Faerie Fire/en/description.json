@@ -1,0 +1,44 @@
+{
+  "abilities": [
+    {
+      "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/d\/d2\/Faerie_Fire_Imbue.mp3\/revision\/latest?cb=20191227195415",
+      "effects": [
+        "Ability No Target",
+        "Affects Self"
+      ],
+      "notes": [
+        "Interrupts the user's channeling spells upon cast."
+      ],
+      "mana": null,
+      "abilityName": "Imbue",
+      "cooldown": "5",
+      "description": "Instantly restores 85 health.",
+      "params": [
+        "Health Restored: 85"
+      ],
+      "itemBehaviour": [],
+      "story": null
+    }
+  ],
+  "additionalInformation": [
+    "When randoming a hero, the hero starts with a free, unsellable Faerie Fire.",
+    "Faerie Fires do not stack in the inventory. Each bought instance requires its own slot. The attack damage from multiple instances fully stacks.",
+    "The attack damage from multiple instances fully stacks.",
+    "Faerie Fire is not shareable and cannot be used on allies."
+  ],
+  "cost": "70",
+  "lore": null,
+  "consistFrom": null,
+  "boughtFrom": "Consumables",
+  "name": "Faerie Fire",
+  "description": "The ethereal flames from the ever-burning ruins of Kindertree ignite across realities.",
+  "trivia": null,
+  "upgradeIn": null,
+  "bonuses": [
+    "+2 Attack damage"
+  ],
+  "tips": [
+    "For the mid-laner, Faerie Fire can create an advantage over the enemy, as well as save him from a gank.",
+    "When diving past a tier 1 tower in the laning phase, a Fairie Fire can restore enough health to withstand one more tower hit, which can help you get the kill or retreat if need be."
+  ]
+}

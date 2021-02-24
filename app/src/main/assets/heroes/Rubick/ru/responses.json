@@ -1,0 +1,2332 @@
+[
+  {
+    "responses": [
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_ru_gamepedia\/images\/e\/e1\/Rubick_spawn_01_ru.mp3\/revision\/latest?cb=20170413141806",
+        "title": "Мою жажду знаний невозможно утолить."
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_ru_gamepedia\/images\/2\/2a\/Rubick_spawn_02_ru.mp3\/revision\/latest?cb=20170413141811",
+        "title": "Посмотрим, что они умеют."
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_ru_gamepedia\/images\/1\/12\/Rubick_spawn_03_ru.mp3\/revision\/latest?cb=20170413141816",
+        "title": "Какие чудеса узрею я сегодня?"
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_ru_gamepedia\/images\/7\/78\/Rubick_spawn_04_ru.mp3\/revision\/latest?cb=20170413141822",
+        "title": "Rubick!"
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_ru_gamepedia\/images\/c\/c5\/Rubick_spawn_05_ru.mp3\/revision\/latest?cb=20170413141827",
+        "title": "Я Rubick, Великий маг."
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_ru_gamepedia\/images\/f\/f7\/Rubick_spawn_06_ru.mp3\/revision\/latest?cb=20170413141832",
+        "title": "Великий маг!"
+      }
+    ],
+    "category": "Появление"
+  },
+  {
+    "responses": [
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_ru_gamepedia\/images\/d\/d1\/Rubick_inthebag_01_ru.mp3\/revision\/latest?cb=20170413140449",
+        "title": "Друзья, я думаю, все согласны: дело в шляпе!"
+      }
+    ],
+    "category": "Насмешка"
+  },
+  {
+    "responses": [
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_ru_gamepedia\/images\/d\/d0\/Rubick_begin_01_ru.mp3\/revision\/latest?cb=20170413135501",
+        "title": "М-м-м, славное будет испытание!"
+      }
+    ],
+    "category": "Начало битвы"
+  },
+  {
+    "responses": [
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_ru_gamepedia\/images\/e\/e3\/Rubick_move_01_ru.mp3\/revision\/latest?cb=20170413140957",
+        "title": "Н-н, да."
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_ru_gamepedia\/images\/3\/34\/Rubick_move_02_ru.mp3\/revision\/latest?cb=20170413141002",
+        "title": "Да!"
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_ru_gamepedia\/images\/b\/bc\/Rubick_move_03_ru.mp3\/revision\/latest?cb=20170413141006",
+        "title": "Сделаю."
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_ru_gamepedia\/images\/f\/f1\/Rubick_move_04_ru.mp3\/revision\/latest?cb=20170413141011",
+        "title": "Сделаю!"
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_ru_gamepedia\/images\/c\/c6\/Rubick_move_05_ru.mp3\/revision\/latest?cb=20170413141016",
+        "title": "Непременно!"
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_ru_gamepedia\/images\/2\/29\/Rubick_move_06_ru.mp3\/revision\/latest?cb=20170413141020",
+        "title": "Непременно."
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_ru_gamepedia\/images\/5\/54\/Rubick_move_07_ru.mp3\/revision\/latest?cb=20170413141025",
+        "title": "Я понял."
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_ru_gamepedia\/images\/3\/35\/Rubick_move_08_ru.mp3\/revision\/latest?cb=20170413141029",
+        "title": "Отлично!"
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_ru_gamepedia\/images\/1\/13\/Rubick_move_09_ru.mp3\/revision\/latest?cb=20170413141034",
+        "title": "Что это там?"
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_ru_gamepedia\/images\/d\/d5\/Rubick_move_10_ru.mp3\/revision\/latest?cb=20170413141039",
+        "isArcane": true,
+        "title": "Что это там?"
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_ru_gamepedia\/images\/3\/3f\/Rubick_move_11_ru.mp3\/revision\/latest?cb=20170413141043",
+        "title": "Понятно."
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_ru_gamepedia\/images\/3\/36\/Rubick_move_12_ru.mp3\/revision\/latest?cb=20170413141048",
+        "title": "Отличная идея!"
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_ru_gamepedia\/images\/0\/00\/Rubick_move_13_ru.mp3\/revision\/latest?cb=20170413141053",
+        "title": "Согласен!"
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_ru_gamepedia\/images\/7\/70\/Rubick_move_14_ru.mp3\/revision\/latest?cb=20170413141057",
+        "title": "Потрясающая энергия!"
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_ru_gamepedia\/images\/d\/d5\/Rubick_move_15_ru.mp3\/revision\/latest?cb=20170413141102",
+        "title": "Интересно."
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_ru_gamepedia\/images\/a\/ab\/Rubick_move_16_ru.mp3\/revision\/latest?cb=20170413141107",
+        "isArcane": true,
+        "title": "Интересно."
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_ru_gamepedia\/images\/e\/ee\/Rubick_move_17_ru.mp3\/revision\/latest?cb=20170413141111",
+        "title": "Хм, любопытно."
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_ru_gamepedia\/images\/7\/7a\/Rubick_move_18_ru.mp3\/revision\/latest?cb=20170413141116",
+        "title": "Я и сам не против."
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_ru_gamepedia\/images\/7\/70\/Rubick_move_19_ru.mp3\/revision\/latest?cb=20170413141120",
+        "title": "С удовольствием."
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_ru_gamepedia\/images\/f\/fc\/Rubick_move_20_ru.mp3\/revision\/latest?cb=20170413141125",
+        "title": "Хм-хм, с удовольствием!"
+      }
+    ],
+    "category": "Передвижение"
+  },
+  {
+    "responses": [
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_ru_gamepedia\/images\/6\/6b\/Rubick_attack_01_ru.mp3\/revision\/latest?cb=20170413135338",
+        "title": "В бой!"
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_ru_gamepedia\/images\/a\/a5\/Rubick_attack_02_ru.mp3\/revision\/latest?cb=20170413135343",
+        "isArcane": true,
+        "title": "В бой!"
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_ru_gamepedia\/images\/3\/33\/Rubick_attack_03_ru.mp3\/revision\/latest?cb=20170413135348",
+        "title": "Ощути мою магию!"
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_ru_gamepedia\/images\/0\/0f\/Rubick_attack_04_ru.mp3\/revision\/latest?cb=20170413135353",
+        "title": "Смотри же!"
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_ru_gamepedia\/images\/f\/f4\/Rubick_attack_05_ru.mp3\/revision\/latest?cb=20170413135407",
+        "title": "В стороны!"
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_ru_gamepedia\/images\/f\/f6\/Rubick_attack_06_ru.mp3\/revision\/latest?cb=20170413135412",
+        "title": "Начнём же."
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_ru_gamepedia\/images\/e\/e9\/Rubick_attack_07_ru.mp3\/revision\/latest?cb=20170413135417",
+        "title": "О, испытание!"
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_ru_gamepedia\/images\/7\/70\/Rubick_attack_08_ru.mp3\/revision\/latest?cb=20170413135423",
+        "title": "Будет интересно!"
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_ru_gamepedia\/images\/6\/63\/Rubick_attack_09_ru.mp3\/revision\/latest?cb=20170413135428",
+        "title": "Маг наносит удар"
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_ru_gamepedia\/images\/1\/12\/Rubick_attack_10_ru.mp3\/revision\/latest?cb=20170413135434",
+        "title": "Готовься к испытанию!"
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_ru_gamepedia\/images\/7\/7a\/Rubick_attack_11_ru.mp3\/revision\/latest?cb=20170413135439",
+        "title": "Проверь свою смелость."
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_ru_gamepedia\/images\/6\/62\/Rubick_attack_12_ru.mp3\/revision\/latest?cb=20170413135444",
+        "title": "В атаку!"
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_ru_gamepedia\/images\/9\/97\/Rubick_attack_13_ru.mp3\/revision\/latest?cb=20170413135451",
+        "title": "Ощути мои знания!"
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_ru_gamepedia\/images\/7\/78\/Rubick_attack_14_ru.mp3\/revision\/latest?cb=20170413135456",
+        "title": "Сразись с Магом!"
+      }
+    ],
+    "category": "Атака"
+  },
+  {
+    "responses": [
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_ru_gamepedia\/images\/4\/42\/Rubick_cast_01_ru.mp3\/revision\/latest?cb=20170413135531",
+        "title": "Посмотрим, что получится."
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_ru_gamepedia\/images\/3\/3c\/Rubick_cast_02_ru.mp3\/revision\/latest?cb=20170413135536",
+        "title": "Начнём!"
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_ru_gamepedia\/images\/f\/fb\/Rubick_cast_03_ru.mp3\/revision\/latest?cb=20170413135541",
+        "title": "Начали!"
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_ru_gamepedia\/images\/1\/19\/Rubick_cast_04_ru.mp3\/revision\/latest?cb=20170413135546",
+        "title": "Узрите!"
+      }
+    ],
+    "category": "Использование заклинания"
+  },
+  {
+    "responses": [
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_ru_gamepedia\/images\/1\/1d\/Rubick_telekinesis_up_01_ru.mp3\/revision\/latest?cb=20170413142047",
+        "title": "Вверх!"
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_ru_gamepedia\/images\/4\/45\/Rubick_telekinesis_up_02_ru.mp3\/revision\/latest?cb=20170413142052",
+        "isArcane": true,
+        "title": "Вверх!"
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_ru_gamepedia\/images\/9\/92\/Rubick_telekinesis_up_03_ru.mp3\/revision\/latest?cb=20170413142057",
+        "title": "Высоты боишься?"
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_ru_gamepedia\/images\/b\/bb\/Rubick_telekinesis_down_01_ru.mp3\/revision\/latest?cb=20170413142027",
+        "title": "И вниз!"
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_ru_gamepedia\/images\/a\/af\/Rubick_telekinesis_down_02_ru.mp3\/revision\/latest?cb=20170413142032",
+        "title": "В грязь лицом!"
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_ru_gamepedia\/images\/5\/59\/Rubick_telekinesis_down_03_ru.mp3\/revision\/latest?cb=20170413142037",
+        "title": "Поберегись!"
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_ru_gamepedia\/images\/2\/23\/Rubick_telekinesis_down_04_ru.mp3\/revision\/latest?cb=20170413142042",
+        "title": "В грязь лицом!"
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_ru_gamepedia\/images\/1\/1e\/Rubick_fadebolt_02_ru.mp3\/revision\/latest?cb=20170413140244",
+        "title": "Волшебство!"
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_ru_gamepedia\/images\/1\/15\/Rubick_fadebolt_03_ru.mp3\/revision\/latest?cb=20170413140249",
+        "title": "Летучие искры!"
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_ru_gamepedia\/images\/3\/31\/Rubick_fadebolt_04_ru.mp3\/revision\/latest?cb=20170413140254",
+        "title": "Fade Bolt!"
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_ru_gamepedia\/images\/a\/a3\/Rubick_fadebolt_05_ru.mp3\/revision\/latest?cb=20170413140259",
+        "isArcane": true,
+        "title": "Fade Bolt!"
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_ru_gamepedia\/images\/9\/97\/Rubick_fadebolt_06_ru.mp3\/revision\/latest?cb=20170413140303",
+        "title": "Искры летят!"
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_ru_gamepedia\/images\/6\/69\/Rubick_spellsteal_01_ru.mp3\/revision\/latest?cb=20170413141837",
+        "title": "Так вот как это делается!"
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_ru_gamepedia\/images\/f\/f2\/Rubick_spellsteal_02_ru.mp3\/revision\/latest?cb=20170413141842",
+        "title": "Обязательно пригодится!"
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_ru_gamepedia\/images\/b\/b0\/Rubick_spellsteal_03_ru.mp3\/revision\/latest?cb=20170413141847",
+        "title": "Теперь мой черёд!"
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_ru_gamepedia\/images\/5\/5a\/Rubick_spellsteal_04_ru.mp3\/revision\/latest?cb=20170413141852",
+        "title": "Дай ка попробую!"
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_ru_gamepedia\/images\/e\/e5\/Rubick_spellsteal_05_ru.mp3\/revision\/latest?cb=20170413141857",
+        "title": "А это что такое?"
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_ru_gamepedia\/images\/f\/fd\/Rubick_spellsteal_06_ru.mp3\/revision\/latest?cb=20170413141902",
+        "title": "Ага-а!"
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_ru_gamepedia\/images\/6\/6f\/Rubick_spellsteal_07_ru.mp3\/revision\/latest?cb=20170413141907",
+        "title": "Ага!"
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_ru_gamepedia\/images\/7\/7f\/Rubick_spellsteal_08_ru.mp3\/revision\/latest?cb=20170413141912",
+        "title": "Как необычно!"
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_ru_gamepedia\/images\/f\/f8\/Rubick_spellsteal_09_ru.mp3\/revision\/latest?cb=20170413141917",
+        "title": "Опа!"
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_ru_gamepedia\/images\/e\/e9\/Rubick_spellsteal_10_ru.mp3\/revision\/latest?cb=20170413141922",
+        "title": "Опля!"
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_ru_gamepedia\/images\/4\/47\/Rubick_spellsteal_11_ru.mp3\/revision\/latest?cb=20170413141927",
+        "title": "Как необычно!"
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_ru_gamepedia\/images\/a\/ac\/Rubick_spellsteal_12_ru.mp3\/revision\/latest?cb=20170413141932",
+        "isArcane": true,
+        "title": "Как необычно!"
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_ru_gamepedia\/images\/1\/1a\/Rubick_spellsteal_14_ru.mp3\/revision\/latest?cb=20170413141942",
+        "title": "Подражать можно кому угодно."
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_ru_gamepedia\/images\/c\/cf\/Rubick_castsstolenspell_29_ru.mp3\/revision\/latest?cb=20170413135813",
+        "title": ""
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_ru_gamepedia\/images\/f\/f8\/Rubick_castsstolenspell_05_ru.mp3\/revision\/latest?cb=20170413135611",
+        "isArcane": true,
+        "title": ""
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_ru_gamepedia\/images\/d\/d8\/Rubick_castsstolenspell_17_ru.mp3\/revision\/latest?cb=20170413135712",
+        "isArcane": true,
+        "title": ""
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_ru_gamepedia\/images\/c\/c4\/Rubick_castsstolenspell_28_ru.mp3\/revision\/latest?cb=20170413135808",
+        "isArcane": true,
+        "title": ""
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_ru_gamepedia\/images\/2\/22\/Rubick_castsstolenspell_26_ru.mp3\/revision\/latest?cb=20170413135758",
+        "isArcane": true,
+        "title": ""
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_ru_gamepedia\/images\/6\/60\/Rubick_castsstolenspell_22_ru.mp3\/revision\/latest?cb=20170413135738",
+        "isArcane": true,
+        "title": ""
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_ru_gamepedia\/images\/7\/78\/Rubick_castsstolenspell_36_ru.mp3\/revision\/latest?cb=20170413135848",
+        "isArcane": true,
+        "title": ""
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_ru_gamepedia\/images\/6\/68\/Rubick_castsstolenspell_06_ru.mp3\/revision\/latest?cb=20170413135616",
+        "isArcane": true,
+        "title": ""
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_ru_gamepedia\/images\/a\/ac\/Rubick_castsstolenspell_07_ru.mp3\/revision\/latest?cb=20170413135621",
+        "isArcane": true,
+        "title": ""
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_ru_gamepedia\/images\/3\/30\/Rubick_castsstolenspell_30_ru.mp3\/revision\/latest?cb=20170413135818",
+        "isArcane": true,
+        "title": ""
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_ru_gamepedia\/images\/1\/10\/Rubick_castsstolenspell_33_ru.mp3\/revision\/latest?cb=20170413135833",
+        "isArcane": true,
+        "title": ""
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_ru_gamepedia\/images\/5\/51\/Rubick_castsstolenspell_16_ru.mp3\/revision\/latest?cb=20170413135707",
+        "isArcane": true,
+        "title": ""
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_ru_gamepedia\/images\/0\/00\/Rubick_castsstolenspell_31_ru.mp3\/revision\/latest?cb=20170413135823",
+        "isArcane": true,
+        "title": ""
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_ru_gamepedia\/images\/b\/bb\/Rubick_castsstolenspell_21_ru.mp3\/revision\/latest?cb=20170413135733",
+        "isArcane": true,
+        "title": ""
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_ru_gamepedia\/images\/7\/7b\/Rubick_castsstolenspell_25_ru.mp3\/revision\/latest?cb=20170413135753",
+        "isArcane": true,
+        "title": ""
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_ru_gamepedia\/images\/b\/b0\/Rubick_castsstolenspell_15_ru.mp3\/revision\/latest?cb=20170413135702",
+        "isArcane": true,
+        "title": ""
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_ru_gamepedia\/images\/9\/94\/Rubick_castsstolenspell_38_ru.mp3\/revision\/latest?cb=20170413135858",
+        "isArcane": true,
+        "title": ""
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_ru_gamepedia\/images\/d\/d5\/Rubick_castsstolenspell_19_ru.mp3\/revision\/latest?cb=20170413135723",
+        "isArcane": true,
+        "title": ""
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_ru_gamepedia\/images\/c\/c8\/Rubick_castsstolenspell_10_ru.mp3\/revision\/latest?cb=20170413135636",
+        "isArcane": true,
+        "title": ""
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_ru_gamepedia\/images\/0\/02\/Rubick_castsstolenspell_09_ru.mp3\/revision\/latest?cb=20170413135631",
+        "isArcane": true,
+        "title": ""
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_ru_gamepedia\/images\/d\/d2\/Rubick_castsstolenspell_12_ru.mp3\/revision\/latest?cb=20170413135646",
+        "isArcane": true,
+        "title": ""
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_ru_gamepedia\/images\/8\/85\/Rubick_castsstolenspell_35_ru.mp3\/revision\/latest?cb=20170413135843",
+        "isArcane": true,
+        "title": ""
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_ru_gamepedia\/images\/e\/ee\/Rubick_castsstolenspell_23_ru.mp3\/revision\/latest?cb=20170413135743",
+        "isArcane": true,
+        "title": ""
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_ru_gamepedia\/images\/4\/44\/Rubick_castsstolenspell_20_ru.mp3\/revision\/latest?cb=20170413135728",
+        "isArcane": true,
+        "title": ""
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_ru_gamepedia\/images\/e\/e3\/Rubick_castsstolenspell_24_ru.mp3\/revision\/latest?cb=20170413135748",
+        "isArcane": true,
+        "title": ""
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_ru_gamepedia\/images\/5\/52\/Rubick_castsstolenspell_08_ru.mp3\/revision\/latest?cb=20170413135626",
+        "isArcane": true,
+        "title": ""
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_ru_gamepedia\/images\/4\/40\/Rubick_castsstolenspell_34_ru.mp3\/revision\/latest?cb=20170413135838",
+        "isArcane": true,
+        "title": ""
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_ru_gamepedia\/images\/3\/3c\/Rubick_castsstolenspell_37_ru.mp3\/revision\/latest?cb=20170413135853",
+        "isArcane": true,
+        "title": ""
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_ru_gamepedia\/images\/c\/c7\/Rubick_castsstolenspell_11_ru.mp3\/revision\/latest?cb=20170413135641",
+        "isArcane": true,
+        "title": ""
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_ru_gamepedia\/images\/e\/e0\/Rubick_castsstolenspell_14_ru.mp3\/revision\/latest?cb=20170413135656",
+        "isArcane": true,
+        "title": ""
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_ru_gamepedia\/images\/9\/93\/Rubick_castsstolenspell_13_ru.mp3\/revision\/latest?cb=20170413135651",
+        "isArcane": true,
+        "title": ""
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_ru_gamepedia\/images\/c\/ca\/Rubick_castsstolenspell_18_ru.mp3\/revision\/latest?cb=20170413135718",
+        "title": "У грома новый бог!",
+        "icons": [
+          "heroes\/Zeus#Thundergod's Wrath\/minimap.png"
+        ]
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_ru_gamepedia\/images\/e\/e6\/Rubick_castsstolenspell_27_ru.mp3\/revision\/latest?cb=20170413135803",
+        "title": "Ву-уду!",
+        "icons": [
+          "heroes\/Lion#Hex\/minimap.png",
+          "heroes\/Shadow Shaman#Hex\/minimap.png"
+        ]
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_ru_gamepedia\/images\/d\/d4\/Rubick_castsstolenspell_32_ru.mp3\/revision\/latest?cb=20170413135828",
+        "title": "Властью Хаоса!",
+        "icons": [
+          "heroes\/Warlock#Chaotic Offering\/minimap.png"
+        ]
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_ru_gamepedia\/images\/3\/38\/Rubick_spellstealends_01_ru.mp3\/revision\/latest?cb=20170413141952",
+        "title": "Хм-м-м, как там было?"
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_ru_gamepedia\/images\/0\/05\/Rubick_spellstealends_02_ru.mp3\/revision\/latest?cb=20170413141957",
+        "title": "Ох! Забыл!"
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_ru_gamepedia\/images\/8\/8d\/Rubick_spellstealends_03_ru.mp3\/revision\/latest?cb=20170413142002",
+        "title": "Я\u2026кое-что забыл!"
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_ru_gamepedia\/images\/5\/54\/Rubick_spellstealends_04_ru.mp3\/revision\/latest?cb=20170413142007",
+        "title": "Память что решето!"
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_ru_gamepedia\/images\/1\/19\/Rubick_spellstealends_05_ru.mp3\/revision\/latest?cb=20170413142012",
+        "title": "Надо было записывать."
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_ru_gamepedia\/images\/5\/53\/Rubick_spellstealends_06_ru.mp3\/revision\/latest?cb=20170413142017",
+        "title": "Память - штука ненадёжная."
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_ru_gamepedia\/images\/1\/17\/Rubick_spellstealends_07_ru.mp3\/revision\/latest?cb=20170413142022",
+        "title": "Память не лучшее хранилище."
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_ru_gamepedia\/images\/8\/82\/Rubick_castsstolenspell_01_ru.mp3\/revision\/latest?cb=20170413135551",
+        "title": "М-м, да!"
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_ru_gamepedia\/images\/f\/fe\/Rubick_castsstolenspell_02_ru.mp3\/revision\/latest?cb=20170413135556",
+        "title": "М-м, м!"
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_ru_gamepedia\/images\/5\/54\/Rubick_castsstolenspell_03_ru.mp3\/revision\/latest?cb=20170413135601",
+        "title": "Хо!"
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_ru_gamepedia\/images\/1\/1d\/Rubick_castsstolenspell_04_ru.mp3\/revision\/latest?cb=20170413135606",
+        "title": "У, ха!"
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_ru_gamepedia\/images\/e\/ee\/Rubick_castsstolenspell_39_ru.mp3\/revision\/latest?cb=20170413135903",
+        "title": "М-м!"
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_ru_gamepedia\/images\/1\/10\/Rubick_castsstolenspell_40_ru.mp3\/revision\/latest?cb=20170413135908",
+        "title": "М-ма!"
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_ru_gamepedia\/images\/1\/16\/Rubick_castsstolenspell_41_ru.mp3\/revision\/latest?cb=20170413135913",
+        "title": "Э-э-эя!"
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_ru_gamepedia\/images\/9\/9d\/Rubick_castsstolenspell_42_ru.mp3\/revision\/latest?cb=20170413135918",
+        "title": "Ауо!"
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_ru_gamepedia\/images\/5\/54\/Rubick_castsstolenspell_43_ru.mp3\/revision\/latest?cb=20170413135923",
+        "title": "Ха-а-а!"
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_ru_gamepedia\/images\/4\/4a\/Rubick_castsstolenspell_44_ru.mp3\/revision\/latest?cb=20170413135928",
+        "title": "М-м!"
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_ru_gamepedia\/images\/8\/8b\/Rubick_castsstolenspell_45_ru.mp3\/revision\/latest?cb=20170413135933",
+        "title": "Фа!"
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_ru_gamepedia\/images\/b\/b8\/Rubick_castsstolenspell_46_ru.mp3\/revision\/latest?cb=20170413135938",
+        "title": "У-ху-ху!"
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_ru_gamepedia\/images\/0\/0e\/Rubick_castsstolenspell_47_ru.mp3\/revision\/latest?cb=20170413135943",
+        "title": "Хо!"
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_ru_gamepedia\/images\/b\/b4\/Rubick_castsstolenspell_49_ru.mp3\/revision\/latest?cb=20170413135952",
+        "title": "Ха!"
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_ru_gamepedia\/images\/e\/e5\/Rubick_failure_01_ru.mp3\/revision\/latest?cb=20170413140308",
+        "title": "О-ох. Надеюсь, никто не видел."
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_ru_gamepedia\/images\/6\/69\/Rubick_failure_02_ru.mp3\/revision\/latest?cb=20170413140313",
+        "title": "О-ой!"
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_ru_gamepedia\/images\/a\/a4\/Rubick_failure_03_ru.mp3\/revision\/latest?cb=20170413140317",
+        "title": "Ой!"
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_ru_gamepedia\/images\/e\/e0\/Rubick_failure_04_ru.mp3\/revision\/latest?cb=20170413140322",
+        "title": "Ох! Нехорошо получилось."
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_ru_gamepedia\/images\/3\/3c\/Rubick_cast_02_ru.mp3\/revision\/latest?cb=20170413135536",
+        "title": "Начнём!"
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_ru_gamepedia\/images\/f\/fb\/Rubick_cast_03_ru.mp3\/revision\/latest?cb=20170413135541",
+        "title": "Начали!"
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_ru_gamepedia\/images\/6\/69\/Rubick_failure_02_ru.mp3\/revision\/latest?cb=20170413140313",
+        "title": "О-ой!"
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_ru_gamepedia\/images\/a\/a4\/Rubick_failure_03_ru.mp3\/revision\/latest?cb=20170413140317",
+        "title": "Ой!"
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_ru_gamepedia\/images\/e\/e5\/Rubick_failure_01_ru.mp3\/revision\/latest?cb=20170413140308",
+        "title": "О-ох. Надеюсь, никто не видел."
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_ru_gamepedia\/images\/6\/69\/Rubick_failure_02_ru.mp3\/revision\/latest?cb=20170413140313",
+        "title": "О-ой!"
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_ru_gamepedia\/images\/a\/a4\/Rubick_failure_03_ru.mp3\/revision\/latest?cb=20170413140317",
+        "title": "Ой!"
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_ru_gamepedia\/images\/e\/e0\/Rubick_failure_04_ru.mp3\/revision\/latest?cb=20170413140322",
+        "title": "Ох! Нехорошо получилось."
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_ru_gamepedia\/images\/5\/54\/Rubick_castsstolenspell_03_ru.mp3\/revision\/latest?cb=20170413135601",
+        "title": "Хо!"
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_ru_gamepedia\/images\/e\/ee\/Rubick_castsstolenspell_39_ru.mp3\/revision\/latest?cb=20170413135903",
+        "title": "М-м!"
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_ru_gamepedia\/images\/1\/10\/Rubick_castsstolenspell_40_ru.mp3\/revision\/latest?cb=20170413135908",
+        "title": "М-ма!"
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_ru_gamepedia\/images\/8\/8b\/Rubick_castsstolenspell_45_ru.mp3\/revision\/latest?cb=20170413135933",
+        "title": "Фа!"
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_ru_gamepedia\/images\/b\/b8\/Rubick_castsstolenspell_46_ru.mp3\/revision\/latest?cb=20170413135938",
+        "title": "У-ху-ху!"
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_ru_gamepedia\/images\/0\/0e\/Rubick_castsstolenspell_47_ru.mp3\/revision\/latest?cb=20170413135943",
+        "title": "Хо!"
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_ru_gamepedia\/images\/5\/54\/Rubick_castsstolenspell_03_ru.mp3\/revision\/latest?cb=20170413135601",
+        "isArcane": true,
+        "title": "Хо!"
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_ru_gamepedia\/images\/e\/ee\/Rubick_castsstolenspell_39_ru.mp3\/revision\/latest?cb=20170413135903",
+        "title": "М-м!"
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_ru_gamepedia\/images\/1\/10\/Rubick_castsstolenspell_40_ru.mp3\/revision\/latest?cb=20170413135908",
+        "title": "М-ма!"
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_ru_gamepedia\/images\/8\/8b\/Rubick_castsstolenspell_45_ru.mp3\/revision\/latest?cb=20170413135933",
+        "title": "Фа!"
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_ru_gamepedia\/images\/b\/b8\/Rubick_castsstolenspell_46_ru.mp3\/revision\/latest?cb=20170413135938",
+        "title": "У-ху-ху!"
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_ru_gamepedia\/images\/0\/0e\/Rubick_castsstolenspell_47_ru.mp3\/revision\/latest?cb=20170413135943",
+        "title": "Хо!"
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_ru_gamepedia\/images\/e\/e5\/Rubick_failure_01_ru.mp3\/revision\/latest?cb=20170413140308",
+        "title": "О-ох. Надеюсь, никто не видел."
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_ru_gamepedia\/images\/6\/69\/Rubick_failure_02_ru.mp3\/revision\/latest?cb=20170413140313",
+        "title": "О-ой!"
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_ru_gamepedia\/images\/a\/a4\/Rubick_failure_03_ru.mp3\/revision\/latest?cb=20170413140317",
+        "title": "Ой!"
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_ru_gamepedia\/images\/e\/e0\/Rubick_failure_04_ru.mp3\/revision\/latest?cb=20170413140322",
+        "title": "Ох! Нехорошо получилось."
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_ru_gamepedia\/images\/e\/e5\/Rubick_failure_01_ru.mp3\/revision\/latest?cb=20170413140308",
+        "title": "О-ох. Надеюсь, никто не видел."
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_ru_gamepedia\/images\/6\/69\/Rubick_failure_02_ru.mp3\/revision\/latest?cb=20170413140313",
+        "title": "О-ой!"
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_ru_gamepedia\/images\/a\/a4\/Rubick_failure_03_ru.mp3\/revision\/latest?cb=20170413140317",
+        "title": "Ой!"
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_ru_gamepedia\/images\/e\/e0\/Rubick_failure_04_ru.mp3\/revision\/latest?cb=20170413140322",
+        "title": "Ох! Нехорошо получилось."
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_ru_gamepedia\/images\/5\/54\/Rubick_castsstolenspell_03_ru.mp3\/revision\/latest?cb=20170413135601",
+        "title": "Хо!"
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_ru_gamepedia\/images\/e\/ee\/Rubick_castsstolenspell_39_ru.mp3\/revision\/latest?cb=20170413135903",
+        "title": "М-м!"
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_ru_gamepedia\/images\/1\/10\/Rubick_castsstolenspell_40_ru.mp3\/revision\/latest?cb=20170413135908",
+        "title": "М-ма!"
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_ru_gamepedia\/images\/8\/8b\/Rubick_castsstolenspell_45_ru.mp3\/revision\/latest?cb=20170413135933",
+        "title": "Фа!"
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_ru_gamepedia\/images\/b\/b8\/Rubick_castsstolenspell_46_ru.mp3\/revision\/latest?cb=20170413135938",
+        "title": "У-ху-ху!"
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_ru_gamepedia\/images\/0\/0e\/Rubick_castsstolenspell_47_ru.mp3\/revision\/latest?cb=20170413135943",
+        "title": "Хо!"
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_ru_gamepedia\/images\/e\/e5\/Rubick_failure_01_ru.mp3\/revision\/latest?cb=20170413140308",
+        "title": "О-ох. Надеюсь, никто не видел."
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_ru_gamepedia\/images\/6\/69\/Rubick_failure_02_ru.mp3\/revision\/latest?cb=20170413140313",
+        "title": "О-ой!"
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_ru_gamepedia\/images\/a\/a4\/Rubick_failure_03_ru.mp3\/revision\/latest?cb=20170413140317",
+        "title": "Ой!"
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_ru_gamepedia\/images\/e\/e0\/Rubick_failure_04_ru.mp3\/revision\/latest?cb=20170413140322",
+        "title": "Ох! Нехорошо получилось."
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_ru_gamepedia\/images\/5\/54\/Rubick_castsstolenspell_03_ru.mp3\/revision\/latest?cb=20170413135601",
+        "title": "Хо!"
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_ru_gamepedia\/images\/e\/ee\/Rubick_castsstolenspell_39_ru.mp3\/revision\/latest?cb=20170413135903",
+        "title": "М-м!"
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_ru_gamepedia\/images\/1\/10\/Rubick_castsstolenspell_40_ru.mp3\/revision\/latest?cb=20170413135908",
+        "title": "М-ма!"
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_ru_gamepedia\/images\/8\/8b\/Rubick_castsstolenspell_45_ru.mp3\/revision\/latest?cb=20170413135933",
+        "title": "Фа!"
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_ru_gamepedia\/images\/b\/b8\/Rubick_castsstolenspell_46_ru.mp3\/revision\/latest?cb=20170413135938",
+        "title": "У-ху-ху!"
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_ru_gamepedia\/images\/0\/0e\/Rubick_castsstolenspell_47_ru.mp3\/revision\/latest?cb=20170413135943",
+        "title": "Хо!"
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_ru_gamepedia\/images\/c\/ca\/Rubick_castsstolenspell_48_ru.mp3\/revision\/latest?cb=20170413135947",
+        "title": "Отведай своего же кушанья!"
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_ru_gamepedia\/images\/e\/e5\/Rubick_failure_01_ru.mp3\/revision\/latest?cb=20170413140308",
+        "title": "О-ох. Надеюсь, никто не видел."
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_ru_gamepedia\/images\/e\/e0\/Rubick_failure_04_ru.mp3\/revision\/latest?cb=20170413140322",
+        "title": "Ох! Нехорошо получилось."
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_ru_gamepedia\/images\/5\/54\/Rubick_castsstolenspell_03_ru.mp3\/revision\/latest?cb=20170413135601",
+        "title": "Хо!"
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_ru_gamepedia\/images\/e\/ee\/Rubick_castsstolenspell_39_ru.mp3\/revision\/latest?cb=20170413135903",
+        "title": "М-м!"
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_ru_gamepedia\/images\/1\/10\/Rubick_castsstolenspell_40_ru.mp3\/revision\/latest?cb=20170413135908",
+        "title": "М-ма!"
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_ru_gamepedia\/images\/8\/8b\/Rubick_castsstolenspell_45_ru.mp3\/revision\/latest?cb=20170413135933",
+        "title": "Фа!"
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_ru_gamepedia\/images\/b\/b8\/Rubick_castsstolenspell_46_ru.mp3\/revision\/latest?cb=20170413135938",
+        "title": "У-ху-ху!"
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_ru_gamepedia\/images\/0\/0e\/Rubick_castsstolenspell_47_ru.mp3\/revision\/latest?cb=20170413135943",
+        "title": "Хо!"
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_ru_gamepedia\/images\/e\/e5\/Rubick_failure_01_ru.mp3\/revision\/latest?cb=20170413140308",
+        "title": "О-ох. Надеюсь, никто не видел."
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_ru_gamepedia\/images\/6\/69\/Rubick_failure_02_ru.mp3\/revision\/latest?cb=20170413140313",
+        "title": "О-ой!"
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_ru_gamepedia\/images\/a\/a4\/Rubick_failure_03_ru.mp3\/revision\/latest?cb=20170413140317",
+        "title": "Ой!"
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_ru_gamepedia\/images\/e\/e0\/Rubick_failure_04_ru.mp3\/revision\/latest?cb=20170413140322",
+        "title": "Ох! Нехорошо получилось."
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_ru_gamepedia\/images\/e\/e5\/Rubick_failure_01_ru.mp3\/revision\/latest?cb=20170413140308",
+        "title": "О-ох. Надеюсь, никто не видел."
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_ru_gamepedia\/images\/6\/69\/Rubick_failure_02_ru.mp3\/revision\/latest?cb=20170413140313",
+        "title": "О-ой!"
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_ru_gamepedia\/images\/a\/a4\/Rubick_failure_03_ru.mp3\/revision\/latest?cb=20170413140317",
+        "title": "Ой!"
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_ru_gamepedia\/images\/e\/e0\/Rubick_failure_04_ru.mp3\/revision\/latest?cb=20170413140322",
+        "title": "Ох! Нехорошо получилось."
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_ru_gamepedia\/images\/b\/b8\/Rubick_castsstolenspell_46_ru.mp3\/revision\/latest?cb=20170413135938",
+        "title": "У-ху-ху!"
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_ru_gamepedia\/images\/5\/51\/Rubick_deny_16_ru.mp3\/revision\/latest?cb=20170413140211",
+        "title": "Ха-ха!"
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_ru_gamepedia\/images\/e\/e5\/Rubick_failure_01_ru.mp3\/revision\/latest?cb=20170413140308",
+        "title": "О-ох. Надеюсь, никто не видел."
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_ru_gamepedia\/images\/6\/69\/Rubick_failure_02_ru.mp3\/revision\/latest?cb=20170413140313",
+        "title": "О-ой!"
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_ru_gamepedia\/images\/a\/a4\/Rubick_failure_03_ru.mp3\/revision\/latest?cb=20170413140317",
+        "title": "Ой!"
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_ru_gamepedia\/images\/e\/e0\/Rubick_failure_04_ru.mp3\/revision\/latest?cb=20170413140322",
+        "title": "Ох! Нехорошо получилось."
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_ru_gamepedia\/images\/8\/87\/Rubick_anger_15_ru.mp3\/revision\/latest?cb=20170413135328",
+        "title": "Что за болван! Гха!"
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_ru_gamepedia\/images\/5\/54\/Rubick_castsstolenspell_03_ru.mp3\/revision\/latest?cb=20170413135601",
+        "title": "Хо!"
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_ru_gamepedia\/images\/e\/ee\/Rubick_castsstolenspell_39_ru.mp3\/revision\/latest?cb=20170413135903",
+        "title": "М-м!"
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_ru_gamepedia\/images\/1\/10\/Rubick_castsstolenspell_40_ru.mp3\/revision\/latest?cb=20170413135908",
+        "title": "М-ма!"
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_ru_gamepedia\/images\/8\/8b\/Rubick_castsstolenspell_45_ru.mp3\/revision\/latest?cb=20170413135933",
+        "title": "Фа!"
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_ru_gamepedia\/images\/b\/b8\/Rubick_castsstolenspell_46_ru.mp3\/revision\/latest?cb=20170413135938",
+        "title": "У-ху-ху!"
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_ru_gamepedia\/images\/0\/0e\/Rubick_castsstolenspell_47_ru.mp3\/revision\/latest?cb=20170413135943",
+        "title": "Хо!"
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_ru_gamepedia\/images\/e\/e5\/Rubick_failure_01_ru.mp3\/revision\/latest?cb=20170413140308",
+        "title": "О-ох. Надеюсь, никто не видел."
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_ru_gamepedia\/images\/6\/69\/Rubick_failure_02_ru.mp3\/revision\/latest?cb=20170413140313",
+        "title": "О-ой!"
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_ru_gamepedia\/images\/a\/a4\/Rubick_failure_03_ru.mp3\/revision\/latest?cb=20170413140317",
+        "title": "Ой!"
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_ru_gamepedia\/images\/e\/e0\/Rubick_failure_04_ru.mp3\/revision\/latest?cb=20170413140322",
+        "title": "Ох! Нехорошо получилось."
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_ru_gamepedia\/images\/6\/69\/Rubick_failure_02_ru.mp3\/revision\/latest?cb=20170413140313",
+        "title": "О-ой!"
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_ru_gamepedia\/images\/a\/a4\/Rubick_failure_03_ru.mp3\/revision\/latest?cb=20170413140317",
+        "title": "Ой!"
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_ru_gamepedia\/images\/5\/54\/Rubick_castsstolenspell_03_ru.mp3\/revision\/latest?cb=20170413135601",
+        "title": "Хо!"
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_ru_gamepedia\/images\/e\/ee\/Rubick_castsstolenspell_39_ru.mp3\/revision\/latest?cb=20170413135903",
+        "title": "М-м!"
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_ru_gamepedia\/images\/1\/10\/Rubick_castsstolenspell_40_ru.mp3\/revision\/latest?cb=20170413135908",
+        "title": "М-ма!"
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_ru_gamepedia\/images\/8\/8b\/Rubick_castsstolenspell_45_ru.mp3\/revision\/latest?cb=20170413135933",
+        "title": "Фа!"
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_ru_gamepedia\/images\/b\/b8\/Rubick_castsstolenspell_46_ru.mp3\/revision\/latest?cb=20170413135938",
+        "title": "У-ху-ху!"
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_ru_gamepedia\/images\/0\/0e\/Rubick_castsstolenspell_47_ru.mp3\/revision\/latest?cb=20170413135943",
+        "title": "Хо!"
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_ru_gamepedia\/images\/5\/54\/Rubick_castsstolenspell_03_ru.mp3\/revision\/latest?cb=20170413135601",
+        "isArcane": true,
+        "title": "Хо!"
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_ru_gamepedia\/images\/e\/ee\/Rubick_castsstolenspell_39_ru.mp3\/revision\/latest?cb=20170413135903",
+        "title": "М-м!"
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_ru_gamepedia\/images\/1\/10\/Rubick_castsstolenspell_40_ru.mp3\/revision\/latest?cb=20170413135908",
+        "title": "М-ма!"
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_ru_gamepedia\/images\/8\/8b\/Rubick_castsstolenspell_45_ru.mp3\/revision\/latest?cb=20170413135933",
+        "title": "Фа!"
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_ru_gamepedia\/images\/b\/b8\/Rubick_castsstolenspell_46_ru.mp3\/revision\/latest?cb=20170413135938",
+        "title": "У-ху-ху!"
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_ru_gamepedia\/images\/0\/0e\/Rubick_castsstolenspell_47_ru.mp3\/revision\/latest?cb=20170413135943",
+        "title": "Хо!"
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_ru_gamepedia\/images\/5\/54\/Rubick_castsstolenspell_03_ru.mp3\/revision\/latest?cb=20170413135601",
+        "isArcane": true,
+        "title": "Хо!"
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_ru_gamepedia\/images\/e\/ee\/Rubick_castsstolenspell_39_ru.mp3\/revision\/latest?cb=20170413135903",
+        "title": "М-м!"
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_ru_gamepedia\/images\/1\/10\/Rubick_castsstolenspell_40_ru.mp3\/revision\/latest?cb=20170413135908",
+        "title": "М-ма!"
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_ru_gamepedia\/images\/8\/8b\/Rubick_castsstolenspell_45_ru.mp3\/revision\/latest?cb=20170413135933",
+        "title": "Фа!"
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_ru_gamepedia\/images\/b\/b8\/Rubick_castsstolenspell_46_ru.mp3\/revision\/latest?cb=20170413135938",
+        "title": "У-ху-ху!"
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_ru_gamepedia\/images\/0\/0e\/Rubick_castsstolenspell_47_ru.mp3\/revision\/latest?cb=20170413135943",
+        "title": "Хо!"
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_ru_gamepedia\/images\/5\/54\/Rubick_castsstolenspell_03_ru.mp3\/revision\/latest?cb=20170413135601",
+        "isArcane": true,
+        "title": "Хо!"
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_ru_gamepedia\/images\/e\/ee\/Rubick_castsstolenspell_39_ru.mp3\/revision\/latest?cb=20170413135903",
+        "title": "М-м!"
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_ru_gamepedia\/images\/1\/10\/Rubick_castsstolenspell_40_ru.mp3\/revision\/latest?cb=20170413135908",
+        "title": "М-ма!"
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_ru_gamepedia\/images\/8\/8b\/Rubick_castsstolenspell_45_ru.mp3\/revision\/latest?cb=20170413135933",
+        "title": "Фа!"
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_ru_gamepedia\/images\/b\/b8\/Rubick_castsstolenspell_46_ru.mp3\/revision\/latest?cb=20170413135938",
+        "title": "У-ху-ху!"
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_ru_gamepedia\/images\/0\/0e\/Rubick_castsstolenspell_47_ru.mp3\/revision\/latest?cb=20170413135943",
+        "title": "Хо!"
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_ru_gamepedia\/images\/5\/54\/Rubick_castsstolenspell_03_ru.mp3\/revision\/latest?cb=20170413135601",
+        "isArcane": true,
+        "title": "Хо!"
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_ru_gamepedia\/images\/e\/ee\/Rubick_castsstolenspell_39_ru.mp3\/revision\/latest?cb=20170413135903",
+        "title": "М-м!"
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_ru_gamepedia\/images\/1\/10\/Rubick_castsstolenspell_40_ru.mp3\/revision\/latest?cb=20170413135908",
+        "title": "М-ма!"
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_ru_gamepedia\/images\/8\/8b\/Rubick_castsstolenspell_45_ru.mp3\/revision\/latest?cb=20170413135933",
+        "title": "Фа!"
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_ru_gamepedia\/images\/b\/b8\/Rubick_castsstolenspell_46_ru.mp3\/revision\/latest?cb=20170413135938",
+        "title": "У-ху-ху!"
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_ru_gamepedia\/images\/0\/0e\/Rubick_castsstolenspell_47_ru.mp3\/revision\/latest?cb=20170413135943",
+        "title": "Хо!"
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_ru_gamepedia\/images\/c\/ca\/Rubick_castsstolenspell_48_ru.mp3\/revision\/latest?cb=20170413135947",
+        "title": "Отведай своего же кушанья!"
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_ru_gamepedia\/images\/5\/54\/Rubick_castsstolenspell_03_ru.mp3\/revision\/latest?cb=20170413135601",
+        "title": "Хо!"
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_ru_gamepedia\/images\/e\/ee\/Rubick_castsstolenspell_39_ru.mp3\/revision\/latest?cb=20170413135903",
+        "title": "М-м!"
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_ru_gamepedia\/images\/1\/10\/Rubick_castsstolenspell_40_ru.mp3\/revision\/latest?cb=20170413135908",
+        "title": "М-ма!"
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_ru_gamepedia\/images\/8\/8b\/Rubick_castsstolenspell_45_ru.mp3\/revision\/latest?cb=20170413135933",
+        "title": "Фа!"
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_ru_gamepedia\/images\/b\/b8\/Rubick_castsstolenspell_46_ru.mp3\/revision\/latest?cb=20170413135938",
+        "title": "У-ху-ху!"
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_ru_gamepedia\/images\/0\/0e\/Rubick_castsstolenspell_47_ru.mp3\/revision\/latest?cb=20170413135943",
+        "title": "Хо!"
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_ru_gamepedia\/images\/5\/54\/Rubick_castsstolenspell_03_ru.mp3\/revision\/latest?cb=20170413135601",
+        "isArcane": true,
+        "title": "Хо!"
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_ru_gamepedia\/images\/e\/ee\/Rubick_castsstolenspell_39_ru.mp3\/revision\/latest?cb=20170413135903",
+        "title": "М-м!"
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_ru_gamepedia\/images\/1\/10\/Rubick_castsstolenspell_40_ru.mp3\/revision\/latest?cb=20170413135908",
+        "title": "М-ма!"
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_ru_gamepedia\/images\/8\/8b\/Rubick_castsstolenspell_45_ru.mp3\/revision\/latest?cb=20170413135933",
+        "title": "Фа!"
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_ru_gamepedia\/images\/b\/b8\/Rubick_castsstolenspell_46_ru.mp3\/revision\/latest?cb=20170413135938",
+        "title": "У-ху-ху!"
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_ru_gamepedia\/images\/0\/0e\/Rubick_castsstolenspell_47_ru.mp3\/revision\/latest?cb=20170413135943",
+        "title": "Хо!"
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_ru_gamepedia\/images\/3\/3c\/Rubick_cast_02_ru.mp3\/revision\/latest?cb=20170413135536",
+        "title": "Начнём!"
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_ru_gamepedia\/images\/f\/fb\/Rubick_cast_03_ru.mp3\/revision\/latest?cb=20170413135541",
+        "title": "Начали!"
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_ru_gamepedia\/images\/e\/e5\/Rubick_failure_01_ru.mp3\/revision\/latest?cb=20170413140308",
+        "title": "О-ох. Надеюсь, никто не видел."
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_ru_gamepedia\/images\/6\/69\/Rubick_failure_02_ru.mp3\/revision\/latest?cb=20170413140313",
+        "title": "О-ой!"
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_ru_gamepedia\/images\/a\/a4\/Rubick_failure_03_ru.mp3\/revision\/latest?cb=20170413140317",
+        "title": "Ой!"
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_ru_gamepedia\/images\/e\/e0\/Rubick_failure_04_ru.mp3\/revision\/latest?cb=20170413140322",
+        "title": "Ох! Нехорошо получилось."
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_ru_gamepedia\/images\/8\/87\/Rubick_anger_15_ru.mp3\/revision\/latest?cb=20170413135328",
+        "title": "Что за болван! Гха!"
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_ru_gamepedia\/images\/5\/54\/Rubick_castsstolenspell_03_ru.mp3\/revision\/latest?cb=20170413135601",
+        "title": "Хо!"
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_ru_gamepedia\/images\/e\/ee\/Rubick_castsstolenspell_39_ru.mp3\/revision\/latest?cb=20170413135903",
+        "title": "М-м!"
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_ru_gamepedia\/images\/1\/10\/Rubick_castsstolenspell_40_ru.mp3\/revision\/latest?cb=20170413135908",
+        "title": "М-ма!"
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_ru_gamepedia\/images\/8\/8b\/Rubick_castsstolenspell_45_ru.mp3\/revision\/latest?cb=20170413135933",
+        "title": "Фа!"
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_ru_gamepedia\/images\/b\/b8\/Rubick_castsstolenspell_46_ru.mp3\/revision\/latest?cb=20170413135938",
+        "title": "У-ху-ху!"
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_ru_gamepedia\/images\/0\/0e\/Rubick_castsstolenspell_47_ru.mp3\/revision\/latest?cb=20170413135943",
+        "title": "Хо!"
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_ru_gamepedia\/images\/e\/e5\/Rubick_failure_01_ru.mp3\/revision\/latest?cb=20170413140308",
+        "title": "О-ох. Надеюсь, никто не видел."
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_ru_gamepedia\/images\/6\/69\/Rubick_failure_02_ru.mp3\/revision\/latest?cb=20170413140313",
+        "title": "О-ой!"
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_ru_gamepedia\/images\/a\/a4\/Rubick_failure_03_ru.mp3\/revision\/latest?cb=20170413140317",
+        "title": "Ой!"
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_ru_gamepedia\/images\/e\/e0\/Rubick_failure_04_ru.mp3\/revision\/latest?cb=20170413140322",
+        "title": "Ох! Нехорошо получилось."
+      }
+    ],
+    "category": "Способности"
+  },
+  {
+    "responses": [
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_ru_gamepedia\/images\/c\/c5\/Rubick_nullfield_01_ru.mp3\/revision\/latest?cb=20170413141319",
+        "title": "Будет полегче!"
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_ru_gamepedia\/images\/b\/ba\/Rubick_nullfield_03_ru.mp3\/revision\/latest?cb=20170413141330",
+        "title": "Куда лучше!"
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_ru_gamepedia\/images\/d\/de\/Rubick_levelup_01_ru.mp3\/revision\/latest?cb=20170413140856",
+        "title": "Я всё ещё маг, но куда величавее!"
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_ru_gamepedia\/images\/9\/97\/Rubick_levelup_02_ru.mp3\/revision\/latest?cb=20170413140900",
+        "title": "Растёт моя сила и\u2026жажда знаний тоже!"
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_ru_gamepedia\/images\/9\/92\/Rubick_levelup_03_ru.mp3\/revision\/latest?cb=20170413140905",
+        "title": "Похвалюсь своей силой."
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_ru_gamepedia\/images\/1\/18\/Rubick_levelup_04_ru.mp3\/revision\/latest?cb=20170413140910",
+        "title": "Стал чуточку сильнее!"
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_ru_gamepedia\/images\/8\/8c\/Rubick_levelup_05_ru.mp3\/revision\/latest?cb=20170413140914",
+        "title": "Сколько тайн открылось сразу."
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_ru_gamepedia\/images\/7\/78\/Rubick_levelup_06_ru.mp3\/revision\/latest?cb=20170413140919",
+        "title": "Испытайте меня. Ну же!"
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_ru_gamepedia\/images\/3\/3f\/Rubick_levelup_07_ru.mp3\/revision\/latest?cb=20170413140924",
+        "title": "У меня появилась идея!"
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_ru_gamepedia\/images\/4\/44\/Rubick_levelup_08_ru.mp3\/revision\/latest?cb=20170413140928",
+        "title": "М-хм-хм-ха-ха-ха-ха-ха-ха!"
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_ru_gamepedia\/images\/5\/55\/Rubick_levelup_09_ru.mp3\/revision\/latest?cb=20170413140933",
+        "title": "А-ха-ха-ха-ха-ха-ха-а!"
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_ru_gamepedia\/images\/1\/13\/Rubick_levelup_10_ru.mp3\/revision\/latest?cb=20170413140938",
+        "title": "Новые силы!"
+      }
+    ],
+    "category": "Получение уровня"
+  },
+  {
+    "responses": [
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_ru_gamepedia\/images\/b\/b2\/Rubick_move_21_ru.mp3\/revision\/latest?cb=20170413141130",
+        "title": "Я заполучу ключ к любой магии."
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_ru_gamepedia\/images\/1\/13\/Rubick_kill_01_ru.mp3\/revision\/latest?cb=20170413140601",
+        "title": "Неплохо. Хотя нет: это было ужасно."
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_ru_gamepedia\/images\/6\/64\/Rubick_kill_02_ru.mp3\/revision\/latest?cb=20170413140606",
+        "title": "Тебе не хватает дисциплины."
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_ru_gamepedia\/images\/9\/9e\/Rubick_kill_03_ru.mp3\/revision\/latest?cb=20170413140611",
+        "title": "Моё волшебство неудержимо."
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_ru_gamepedia\/images\/1\/13\/Rubick_kill_04_ru.mp3\/revision\/latest?cb=20170413140616",
+        "title": "Следующий!"
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_ru_gamepedia\/images\/4\/41\/Rubick_kill_05_ru.mp3\/revision\/latest?cb=20170413140620",
+        "title": "Уноси готовенького!"
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_ru_gamepedia\/images\/4\/4c\/Rubick_kill_06_ru.mp3\/revision\/latest?cb=20170413140625",
+        "title": "Такой талант впустую!"
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_ru_gamepedia\/images\/9\/92\/Rubick_kill_07_ru.mp3\/revision\/latest?cb=20170413140630",
+        "title": "Это всё? Я разочарован."
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_ru_gamepedia\/images\/8\/89\/Rubick_kill_08_ru.mp3\/revision\/latest?cb=20170413140634",
+        "title": "Может, в другой раз."
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_ru_gamepedia\/images\/7\/78\/Rubick_kill_09_ru.mp3\/revision\/latest?cb=20170413140639",
+        "isArcane": true,
+        "title": "Может, в другой раз."
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_ru_gamepedia\/images\/0\/0b\/Rubick_kill_10_ru.mp3\/revision\/latest?cb=20170413140644",
+        "title": "И это всё?"
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_ru_gamepedia\/images\/f\/fb\/Rubick_kill_11_ru.mp3\/revision\/latest?cb=20170413140649",
+        "title": "На что тут можно рассчитывать?"
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_ru_gamepedia\/images\/c\/ce\/Rubick_kill_12_ru.mp3\/revision\/latest?cb=20170413140653",
+        "title": "Жалкое зрелище."
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_ru_gamepedia\/images\/8\/86\/Rubick_kill_13_ru.mp3\/revision\/latest?cb=20170413140658",
+        "isArcane": true,
+        "title": "Жалкое зрелище."
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_ru_gamepedia\/images\/e\/e6\/Rubick_kill_14_ru.mp3\/revision\/latest?cb=20170413140703",
+        "title": "Хм-хм-хм-хм-хм-хе-хе-хе-хе-хе-хе-хе-хе-хе!"
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_ru_gamepedia\/images\/f\/f2\/Rubick_kill_15_ru.mp3\/revision\/latest?cb=20170413140707",
+        "title": "А, ха-ха-ха, ха-ха-ха-ха-ха-ха-ха!"
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_ru_gamepedia\/images\/9\/95\/Rubick_kill_16_ru.mp3\/revision\/latest?cb=20170413140712",
+        "title": "Хо-хо-хо-ха-ха-ха-ха-ха-ха!"
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_ru_gamepedia\/images\/2\/23\/Rubick_kill_17_ru.mp3\/revision\/latest?cb=20170413140717",
+        "title": "Кто лучший маг? Я - лучший маг."
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_ru_gamepedia\/images\/0\/02\/Rubick_deny_10_ru.mp3\/revision\/latest?cb=20170413140143",
+        "title": "Хм-хм, ха-ха-ха-ха-ха-ха-ха-ха!"
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_ru_gamepedia\/images\/4\/42\/Rubick_deny_11_ru.mp3\/revision\/latest?cb=20170413140148",
+        "title": "Ха-а, ха-ха-ха-ха-ха-ха-а!"
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_ru_gamepedia\/images\/d\/dd\/Rubick_laugh_01_ru.mp3\/revision\/latest?cb=20170413140818",
+        "title": "Хе-хе-хе!"
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_ru_gamepedia\/images\/b\/b6\/Rubick_laugh_02_ru.mp3\/revision\/latest?cb=20170413140823",
+        "title": "Ха-ха!"
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_ru_gamepedia\/images\/3\/3c\/Rubick_laugh_03_ru.mp3\/revision\/latest?cb=20170413140828",
+        "title": "Ху-ху-ху-ху!"
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_ru_gamepedia\/images\/8\/84\/Rubick_laugh_04_ru.mp3\/revision\/latest?cb=20170413140832",
+        "title": "Ха!"
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_ru_gamepedia\/images\/f\/fc\/Rubick_laugh_05_ru.mp3\/revision\/latest?cb=20170413140837",
+        "title": "М-ма! Ха-ха-ха!"
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_ru_gamepedia\/images\/7\/77\/Rubick_laugh_06_ru.mp3\/revision\/latest?cb=20170413140841",
+        "title": "Ха-ха-ха! Ах, хи-хи-хи-хи-хи-хи-хи-хи-хи!"
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_ru_gamepedia\/images\/d\/dd\/Rubick_laugh_07_ru.mp3\/revision\/latest?cb=20170413140846",
+        "title": "Аха-ха-ха-ха-ха-ха-ха-ха-ха-ха-ха-ха-ха!"
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_ru_gamepedia\/images\/2\/27\/Rubick_rival_05_ru.mp3\/revision\/latest?cb=20170413141635",
+        "title": "Я заставлю тебя замолчать\u2026навсегда.",
+        "icons": [
+          "heroes\/Silencer\/minimap.png"
+        ]
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_ru_gamepedia\/images\/c\/c8\/Rubick_rival_06_ru.mp3\/revision\/latest?cb=20170413141640",
+        "title": "Что ты имеешь против меня?",
+        "icons": [
+          "heroes\/Anti-Mage\/minimap.png"
+        ]
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_ru_gamepedia\/images\/3\/3f\/Rubick_rival_07_ru.mp3\/revision\/latest?cb=20170413141645",
+        "title": "Твоё прозвище оскорбительно для меня.",
+        "icons": [
+          "heroes\/Anti-Mage\/minimap.png"
+        ]
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_ru_gamepedia\/images\/9\/95\/Rubick_rival_08_ru.mp3\/revision\/latest?cb=20170413141650",
+        "title": "Твой гримуар теперь в моих руках.",
+        "icons": [
+          "heroes\/Warlock\/minimap.png"
+        ]
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_ru_gamepedia\/images\/6\/6a\/Rubick_rival_09_ru.mp3\/revision\/latest?cb=20170413141655",
+        "title": "Записываешь заклинания в книгу? Хорошая мысль.",
+        "icons": [
+          "heroes\/Warlock\/minimap.png"
+        ]
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_ru_gamepedia\/images\/5\/53\/Rubick_rival_10_ru.mp3\/revision\/latest?cb=20170413141701",
+        "title": "Холод огрубил тебя, Lich.",
+        "icons": [
+          "heroes\/Lich\/minimap.png"
+        ]
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_ru_gamepedia\/images\/0\/0f\/Rubick_rival_11_ru.mp3\/revision\/latest?cb=20170413141706",
+        "title": "Печально лицезреть конец столь редкой магии.",
+        "icons": [
+          "heroes\/Lion\/minimap.png"
+        ]
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_ru_gamepedia\/images\/7\/79\/Rubick_rival_12_ru.mp3\/revision\/latest?cb=20170413141711",
+        "title": "Твои заклинания для меня - гниль.",
+        "icons": [
+          "heroes\/Necrophos\/minimap.png"
+        ]
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_ru_gamepedia\/images\/b\/b5\/Rubick_rival_13_ru.mp3\/revision\/latest?cb=20170413141716",
+        "title": "Уходи в забвение, Pugna.",
+        "icons": [
+          "heroes\/Pugna\/minimap.png"
+        ]
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_ru_gamepedia\/images\/7\/79\/Rubick_rival_14_ru.mp3\/revision\/latest?cb=20170413141721",
+        "title": "Я польщён, что узрел умения шамана.",
+        "icons": [
+          "heroes\/Shadow Shaman\/minimap.png"
+        ]
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_ru_gamepedia\/images\/b\/bb\/Rubick_rival_15_ru.mp3\/revision\/latest?cb=20170413141726",
+        "title": "Я и не знал, что ты паришь лишь благодаря магии.",
+        "icons": [
+          "heroes\/Skywrath Mage\/minimap.png"
+        ]
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_ru_gamepedia\/images\/8\/80\/Rubick_rival_16_ru.mp3\/revision\/latest?cb=20170413141731",
+        "title": "Любой свет когда-то, да гаснет.",
+        "icons": [
+          "heroes\/Keeper of the Light\/minimap.png"
+        ]
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_ru_gamepedia\/images\/7\/7d\/Rubick_rival_17_ru.mp3\/revision\/latest?cb=20170413141736",
+        "title": "О-о, звенит капель.",
+        "icons": [
+          "heroes\/Crystal Maiden\/minimap.png",
+          "heroes\/Ancient Apparition\/minimap.png"
+        ]
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_ru_gamepedia\/images\/4\/44\/Rubick_rival_18_ru.mp3\/revision\/latest?cb=20170413141741",
+        "title": "И развеет тебя по ветру.",
+        "icons": [
+          "heroes\/Lina\/minimap.png",
+          "heroes\/Ember Spirit\/minimap.png"
+        ]
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_ru_gamepedia\/images\/a\/a2\/Rubick_rival_01_ru.mp3\/revision\/latest?cb=20170413141614",
+        "title": "Тс-с-с. Плохо, очень плохо, Invoker.",
+        "icons": [
+          "heroes\/Invoker\/minimap.png"
+        ]
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_ru_gamepedia\/images\/5\/5a\/Rubick_rival_02_ru.mp3\/revision\/latest?cb=20170413141619",
+        "title": "Даже гений не устоял передо мной.",
+        "icons": [
+          "heroes\/Invoker\/minimap.png"
+        ]
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_ru_gamepedia\/images\/8\/8d\/Rubick_rival_03_ru.mp3\/revision\/latest?cb=20170413141624",
+        "title": "Invoker, чем выше взлетишь, тем больнее падать.",
+        "icons": [
+          "heroes\/Invoker\/minimap.png"
+        ]
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_ru_gamepedia\/images\/1\/1e\/Rubick_rival_04_ru.mp3\/revision\/latest?cb=20170413141630",
+        "title": "Ничего, вылечишься.",
+        "icons": [
+          "heroes\/Witch Doctor\/minimap.png"
+        ]
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_ru_gamepedia\/images\/0\/0a\/Rubick_spellsteal_15_ru.mp3\/revision\/latest?cb=20170413141947",
+        "title": "Какой интересный ульт!"
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_ru_gamepedia\/images\/c\/ca\/Rubick_castsstolenspell_48_ru.mp3\/revision\/latest?cb=20170413135947",
+        "title": "Отведай своего же кушанья!"
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_ru_gamepedia\/images\/1\/13\/Rubick_firstblood_01_ru.mp3\/revision\/latest?cb=20170413140331",
+        "title": "Первая кровь? Не испытание, а смех какой-то!"
+      }
+    ],
+    "category": "Убийство врага"
+  },
+  {
+    "responses": [
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_ru_gamepedia\/images\/d\/d9\/Rubick_ally_01_ru.mp3\/revision\/latest?cb=20170413142137",
+        "title": "Ты теперь Invoker? А ведь раньше тебя звали по-другому.",
+        "icons": [
+          "heroes\/Invoker\/minimap.png"
+        ]
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_ru_gamepedia\/images\/4\/46\/Rubick_ally_02_ru.mp3\/revision\/latest?cb=20170413142142",
+        "title": "Anti-Mage, всё бы ничего, но вот твоё имя\u2026",
+        "icons": [
+          "heroes\/Anti-Mage\/minimap.png"
+        ]
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_ru_gamepedia\/images\/8\/8d\/Rubick_ally_03_ru.mp3\/revision\/latest?cb=20170413142147",
+        "title": "Драгонус, ты приносишь магию с неба? Как чудесно!",
+        "icons": [
+          "heroes\/Skywrath Mage\/minimap.png"
+        ]
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_ru_gamepedia\/images\/5\/5e\/Rubick_ally_04_ru.mp3\/revision\/latest?cb=20170413142152",
+        "title": "Решил бы ты жить, Lich, что за маг мог бы получиться!",
+        "icons": [
+          "heroes\/Lich\/minimap.png"
+        ]
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_ru_gamepedia\/images\/7\/7a\/Rubick_ally_05_ru.mp3\/revision\/latest?cb=20170413142157",
+        "title": "Покажи мне свою демоническую магию, Lion.",
+        "icons": [
+          "heroes\/Lion\/minimap.png"
+        ]
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_ru_gamepedia\/images\/3\/38\/Rubick_ally_06_ru.mp3\/revision\/latest?cb=20170413135208",
+        "title": "Яви мне милость природы, Enchantress.",
+        "icons": [
+          "heroes\/Enchantress\/minimap.png"
+        ]
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_ru_gamepedia\/images\/f\/f6\/Rubick_ally_07_ru.mp3\/revision\/latest?cb=20170413135212",
+        "title": "Освети мой путь, Эзалор.",
+        "icons": [
+          "heroes\/Keeper of the Light\/minimap.png"
+        ]
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_ru_gamepedia\/images\/d\/d5\/Rubick_ally_08_ru.mp3\/revision\/latest?cb=20170413135217",
+        "title": "Что за чудное ты создание, Puck!",
+        "icons": [
+          "heroes\/Puck\/minimap.png"
+        ]
+      }
+    ],
+    "category": "Встреча союзника"
+  },
+  {
+    "responses": [
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_ru_gamepedia\/images\/a\/ac\/Rubick_lasthit_01_ru.mp3\/revision\/latest?cb=20170413140735",
+        "title": "Жаль."
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_ru_gamepedia\/images\/8\/83\/Rubick_lasthit_02_ru.mp3\/revision\/latest?cb=20170413140740",
+        "title": "Это всё?"
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_ru_gamepedia\/images\/5\/5e\/Rubick_lasthit_03_ru.mp3\/revision\/latest?cb=20170413140745",
+        "title": "Ну, покажи хоть что-то!"
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_ru_gamepedia\/images\/6\/64\/Rubick_lasthit_04_ru.mp3\/revision\/latest?cb=20170413140749",
+        "title": "Будь же полезен!"
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_ru_gamepedia\/images\/7\/76\/Rubick_lasthit_05_ru.mp3\/revision\/latest?cb=20170413140754",
+        "title": "Жаль!"
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_ru_gamepedia\/images\/c\/c6\/Rubick_lasthit_06_ru.mp3\/revision\/latest?cb=20170413140759",
+        "title": "Даже жаль немного."
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_ru_gamepedia\/images\/c\/c9\/Rubick_lasthit_07_ru.mp3\/revision\/latest?cb=20170413140803",
+        "title": "Так себе плата."
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_ru_gamepedia\/images\/b\/b2\/Rubick_lasthit_08_ru.mp3\/revision\/latest?cb=20170413140809",
+        "title": "Я заберу!"
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_ru_gamepedia\/images\/0\/08\/Rubick_lasthit_09_ru.mp3\/revision\/latest?cb=20170413140814",
+        "title": "Завтра тебя забудут."
+      }
+    ],
+    "category": "Добивание"
+  },
+  {
+    "responses": [
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_ru_gamepedia\/images\/d\/dc\/Rubick_deny_01_ru.mp3\/revision\/latest?cb=20170413140102",
+        "title": "Ну, нет!"
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_ru_gamepedia\/images\/4\/4c\/Rubick_deny_02_ru.mp3\/revision\/latest?cb=20170413140106",
+        "isArcane": true,
+        "title": "Ну, нет!"
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_ru_gamepedia\/images\/6\/65\/Rubick_deny_03_ru.mp3\/revision\/latest?cb=20170413140111",
+        "title": "А-а!"
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_ru_gamepedia\/images\/f\/f7\/Rubick_deny_04_ru.mp3\/revision\/latest?cb=20170413140116",
+        "isArcane": true,
+        "title": "А-а!"
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_ru_gamepedia\/images\/e\/ef\/Rubick_deny_05_ru.mp3\/revision\/latest?cb=20170413140120",
+        "title": "Не так быстро!"
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_ru_gamepedia\/images\/8\/88\/Rubick_deny_06_ru.mp3\/revision\/latest?cb=20170413140125",
+        "title": "М-м, нет уж!"
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_ru_gamepedia\/images\/b\/ba\/Rubick_deny_07_ru.mp3\/revision\/latest?cb=20170413140129",
+        "title": "Слишком медленно."
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_ru_gamepedia\/images\/1\/18\/Rubick_deny_08_ru.mp3\/revision\/latest?cb=20170413140134",
+        "title": "Маг решает за тебя."
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_ru_gamepedia\/images\/1\/1b\/Rubick_deny_09_ru.mp3\/revision\/latest?cb=20170413140139",
+        "title": "Жалкая попытка."
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_ru_gamepedia\/images\/0\/09\/Rubick_deny_12_ru.mp3\/revision\/latest?cb=20170413140153",
+        "title": "Жалкое зрелище!"
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_ru_gamepedia\/images\/b\/b2\/Rubick_deny_13_ru.mp3\/revision\/latest?cb=20170413140157",
+        "title": "Ну нет!"
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_ru_gamepedia\/images\/a\/a7\/Rubick_deny_14_ru.mp3\/revision\/latest?cb=20170413140202",
+        "title": "Ну не-ет!"
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_ru_gamepedia\/images\/7\/76\/Rubick_deny_15_ru.mp3\/revision\/latest?cb=20170413140207",
+        "title": "Ну нет."
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_ru_gamepedia\/images\/9\/99\/Rubick_deny_17_ru.mp3\/revision\/latest?cb=20170413140216",
+        "title": "Хм-хм-ха-ха!"
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_ru_gamepedia\/images\/5\/5e\/Rubick_deny_18_ru.mp3\/revision\/latest?cb=20170413140221",
+        "title": "Э-э, ха-ха-ха-ха!"
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_ru_gamepedia\/images\/4\/47\/Rubick_deny_19_ru.mp3\/revision\/latest?cb=20170413140225",
+        "title": "М-м-ах!"
+      }
+    ],
+    "category": "Добивание союзного юнита"
+  },
+  {
+    "responses": [
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_ru_gamepedia\/images\/a\/af\/Rubick_purch_01_ru.mp3\/revision\/latest?cb=20170413141438",
+        "title": "Небольшая безделушка на память."
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_ru_gamepedia\/images\/8\/83\/Rubick_purch_02_ru.mp3\/revision\/latest?cb=20170413141443",
+        "title": "Хм-м, какая аура!"
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_ru_gamepedia\/images\/c\/cb\/Rubick_purch_03_ru.mp3\/revision\/latest?cb=20170413141449",
+        "title": "О-о, славно!"
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_ru_gamepedia\/images\/9\/9e\/Rubick_purch_04_ru.mp3\/revision\/latest?cb=20170413141454",
+        "title": "Так, где мой кубик?"
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_ru_gamepedia\/images\/1\/11\/Rubick_scepter_01_ru.mp3\/revision\/latest?cb=20170413141746",
+        "title": "А-а, скипетр.",
+        "icons": [
+          "items\/Aghanim's Scepter\/full.png"
+        ]
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_ru_gamepedia\/images\/7\/7e\/Rubick_scepter_02_ru.mp3\/revision\/latest?cb=20170413141751",
+        "title": "Шедевр моего отца.",
+        "icons": [
+          "items\/Aghanim's Scepter\/full.png"
+        ]
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_ru_gamepedia\/images\/e\/ef\/Rubick_scepter_03_ru.mp3\/revision\/latest?cb=20170413141756",
+        "title": "Как давно я его не держал.",
+        "icons": [
+          "items\/Aghanim's Scepter\/full.png"
+        ]
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_ru_gamepedia\/images\/d\/de\/Rubick_blink_01_ru.mp3\/revision\/latest?cb=20170413135506",
+        "title": "Blink Dagger!",
+        "icons": [
+          "items\/Blink Dagger\/full.png"
+        ]
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_ru_gamepedia\/images\/2\/2f\/Rubick_blink_02_ru.mp3\/revision\/latest?cb=20170413135511",
+        "title": "Драгоценнейший клинок.",
+        "icons": [
+          "items\/Blink Dagger\/full.png"
+        ]
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_ru_gamepedia\/images\/b\/b4\/Rubick_items_01_ru.mp3\/revision\/latest?cb=20170413140526",
+        "title": "Scythe of Vyse!",
+        "icons": [
+          "items\/Scythe of Vyse\/full.png"
+        ]
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_ru_gamepedia\/images\/5\/50\/Rubick_items_02_ru.mp3\/revision\/latest?cb=20170413140531",
+        "title": "Eul's Scepter of Divinity",
+        "icons": [
+          "items\/Eul's Scepter of Divinity\/full.png"
+        ]
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_ru_gamepedia\/images\/7\/7f\/Rubick_items_03_ru.mp3\/revision\/latest?cb=20170413140536",
+        "title": "Orchid Malevolence!",
+        "icons": [
+          "items\/Orchid Malevolence\/full.png"
+        ]
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_ru_gamepedia\/images\/c\/cb\/Rubick_items_04_ru.mp3\/revision\/latest?cb=20170413140540",
+        "title": "Shiva's Guard!",
+        "icons": [
+          "items\/Shiva's Guard\/full.png"
+        ]
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_ru_gamepedia\/images\/f\/f4\/Rubick_items_05_ru.mp3\/revision\/latest?cb=20170413140545",
+        "title": "Veil of Discord!",
+        "icons": [
+          "items\/Veil of Discord\/full.png"
+        ]
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_ru_gamepedia\/images\/7\/78\/Rubick_items_06_ru.mp3\/revision\/latest?cb=20170413140551",
+        "title": "Black King Bar!",
+        "icons": [
+          "items\/Black King Bar\/full.png"
+        ]
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_ru_gamepedia\/images\/3\/3b\/Rubick_items_07_ru.mp3\/revision\/latest?cb=20170413140556",
+        "title": "Linken's Sphere!",
+        "icons": [
+          "items\/Linken's Sphere\/full.png"
+        ]
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_ru_gamepedia\/images\/c\/ca\/Rubick_immort_01_ru.mp3\/revision\/latest?cb=20170413140440",
+        "title": "Бессмертие!",
+        "icons": [
+          "heroes\/Aegis of the Immortal\/minimap.png"
+        ]
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_ru_gamepedia\/images\/4\/44\/Rubick_immort_02_ru.mp3\/revision\/latest?cb=20170413140444",
+        "title": "Неудержимый Маг? Ха!",
+        "icons": [
+          "heroes\/Aegis of the Immortal\/minimap.png"
+        ]
+      }
+    ],
+    "category": "Получение предмета"
+  },
+  {
+    "responses": [
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_ru_gamepedia\/images\/3\/34\/Rubick_death_01_ru.mp3\/revision\/latest?cb=20170413140006",
+        "title": "О-оу, нет!"
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_ru_gamepedia\/images\/d\/dc\/Rubick_death_02_ru.mp3\/revision\/latest?cb=20170413140010",
+        "title": "Нет!"
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_ru_gamepedia\/images\/a\/ab\/Rubick_death_03_ru.mp3\/revision\/latest?cb=20170413140015",
+        "title": "Дост\u2026тойно\u2026"
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_ru_gamepedia\/images\/5\/5f\/Rubick_death_04_ru.mp3\/revision\/latest?cb=20170413140021",
+        "title": "Какое мастерство!"
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_ru_gamepedia\/images\/5\/56\/Rubick_death_05_ru.mp3\/revision\/latest?cb=20170413140026",
+        "title": "О-о\u2026как же\u2026"
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_ru_gamepedia\/images\/f\/fd\/Rubick_death_06_ru.mp3\/revision\/latest?cb=20170413140031",
+        "title": "Ну\u2026молодцы\u2026"
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_ru_gamepedia\/images\/c\/ca\/Rubick_death_07_ru.mp3\/revision\/latest?cb=20170413140038",
+        "title": "Я познаю смерть."
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_ru_gamepedia\/images\/0\/0a\/Rubick_death_08_ru.mp3\/revision\/latest?cb=20170413140043",
+        "title": "Запомните меня."
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_ru_gamepedia\/images\/2\/20\/Rubick_death_09_ru.mp3\/revision\/latest?cb=20170413140047",
+        "title": "Поставьте мне памятник."
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_ru_gamepedia\/images\/d\/d1\/Rubick_death_10_ru.mp3\/revision\/latest?cb=20170413140052",
+        "title": "Такое никогда не забудут."
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_ru_gamepedia\/images\/9\/9e\/Rubick_death_11_ru.mp3\/revision\/latest?cb=20170413140057",
+        "title": "Я проиграл?"
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_ru_gamepedia\/images\/6\/69\/Rubick_failure_02_ru.mp3\/revision\/latest?cb=20170413140313",
+        "title": "О-ой!",
+        "icons": [
+          "heroes\/Rubick\/minimap.png"
+        ]
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_ru_gamepedia\/images\/a\/a4\/Rubick_failure_03_ru.mp3\/revision\/latest?cb=20170413140317",
+        "title": "Ой!",
+        "icons": [
+          "heroes\/Rubick\/minimap.png"
+        ]
+      }
+    ],
+    "category": "Смерть"
+  },
+  {
+    "responses": [
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_ru_gamepedia\/images\/9\/93\/Rubick_spellsteal_13_ru.mp3\/revision\/latest?cb=20170413141937",
+        "title": "Я не краду: я беру взаймы."
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_ru_gamepedia\/images\/f\/f7\/Rubick_respawn_01_ru.mp3\/revision\/latest?cb=20170413141524",
+        "title": "Я снова в деле."
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_ru_gamepedia\/images\/8\/80\/Rubick_respawn_02_ru.mp3\/revision\/latest?cb=20170413141529",
+        "title": "А-а! Жду не дождусь, что же будет дальше."
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_ru_gamepedia\/images\/4\/4d\/Rubick_respawn_03_ru.mp3\/revision\/latest?cb=20170413141534",
+        "title": "Так это была смерть? Интересно."
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_ru_gamepedia\/images\/e\/e5\/Rubick_respawn_04_ru.mp3\/revision\/latest?cb=20170413141539",
+        "title": "Так, какие можно сделать выводы? Хм-м."
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_ru_gamepedia\/images\/c\/c4\/Rubick_respawn_05_ru.mp3\/revision\/latest?cb=20170413141544",
+        "title": "Теперь у меня есть новые идеи!"
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_ru_gamepedia\/images\/2\/24\/Rubick_respawn_06_ru.mp3\/revision\/latest?cb=20170413141549",
+        "title": "Это поле боя полно чудес."
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_ru_gamepedia\/images\/0\/05\/Rubick_respawn_07_ru.mp3\/revision\/latest?cb=20170413141554",
+        "title": "Я с вами, друзья мои! Подождите!"
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_ru_gamepedia\/images\/b\/b4\/Rubick_respawn_08_ru.mp3\/revision\/latest?cb=20170413141559",
+        "title": "Меня не сбить с толку!"
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_ru_gamepedia\/images\/8\/8c\/Rubick_respawn_09_ru.mp3\/revision\/latest?cb=20170413141604",
+        "title": "Мага убить не так уж и просто."
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_ru_gamepedia\/images\/1\/1d\/Rubick_respawn_10_ru.mp3\/revision\/latest?cb=20170413141609",
+        "title": "Великий Маг возвращается!"
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_ru_gamepedia\/images\/f\/f2\/Rubick_fastres_01_ru.mp3\/revision\/latest?cb=20170413140326",
+        "title": "Мага так просто не убить."
+      }
+    ],
+    "category": "Возрождение"
+  },
+  {
+    "responses": [
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_ru_gamepedia\/images\/8\/82\/Rubick_bottle_01_ru.mp3\/revision\/latest?cb=20170413135516",
+        "title": "Пожалуй, оставлю себе."
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_ru_gamepedia\/images\/0\/03\/Rubick_bottle_02_ru.mp3\/revision\/latest?cb=20170413135521",
+        "title": "Пригодится\u2026потом."
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_ru_gamepedia\/images\/3\/37\/Rubick_bottle_03_ru.mp3\/revision\/latest?cb=20170413135526",
+        "title": "Потрясающий артефакт!"
+      }
+    ],
+    "category": "Наполнение бутылки"
+  },
+  {
+    "responses": [
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_ru_gamepedia\/images\/9\/92\/Rubick_fadebolt_01_ru.mp3\/revision\/latest?cb=20170413140239",
+        "title": "Волшебство!"
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_ru_gamepedia\/images\/6\/6d\/Rubick_nullfield_02_ru.mp3\/revision\/latest?cb=20170413141325",
+        "title": "Должно помочь!"
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_ru_gamepedia\/images\/1\/19\/Rubick_doubdam_01_ru.mp3\/revision\/latest?cb=20170413140230",
+        "title": "Двойной урон!"
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_ru_gamepedia\/images\/7\/74\/Rubick_doubdam_02_ru.mp3\/revision\/latest?cb=20170413140235",
+        "title": "Какая мощь!"
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_ru_gamepedia\/images\/b\/bb\/Rubick_haste_01_ru.mp3\/revision\/latest?cb=20170413140414",
+        "title": "Ускорение!"
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_ru_gamepedia\/images\/5\/53\/Rubick_haste_02_ru.mp3\/revision\/latest?cb=20170413140419",
+        "title": "Скорей в новый бой!"
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_ru_gamepedia\/images\/e\/ed\/Rubick_illus_01_ru.mp3\/revision\/latest?cb=20170413140423",
+        "title": "Иллюзия!"
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_ru_gamepedia\/images\/3\/37\/Rubick_illus_02_ru.mp3\/revision\/latest?cb=20170413140428",
+        "title": "Мастерство подражания!"
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_ru_gamepedia\/images\/2\/24\/Rubick_illus_03_ru.mp3\/revision\/latest?cb=20170413140435",
+        "title": "Пропала моя уникальность."
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_ru_gamepedia\/images\/0\/03\/Rubick_invis_01_ru.mp3\/revision\/latest?cb=20170413140454",
+        "title": "Невидимость!"
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_ru_gamepedia\/images\/6\/63\/Rubick_invis_02_ru.mp3\/revision\/latest?cb=20170413140458",
+        "title": "Rubick Незримый! Звучит неплохо\u2026"
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_ru_gamepedia\/images\/6\/66\/Rubick_regen_01_ru.mp3\/revision\/latest?cb=20170413141514",
+        "title": "Регенерация!"
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_ru_gamepedia\/images\/0\/0b\/Rubick_regen_02_ru.mp3\/revision\/latest?cb=20170413141519",
+        "title": "Целебные заклинания мне известны слабо."
+      }
+    ],
+    "category": "Активация рун"
+  },
+  {
+    "responses": [
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_ru_gamepedia\/images\/f\/fe\/Rubick_notyet_01_ru.mp3\/revision\/latest?cb=20170413141234",
+        "title": "Не сейчас."
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_ru_gamepedia\/images\/c\/c8\/Rubick_notyet_04_ru.mp3\/revision\/latest?cb=20170413141249",
+        "title": "Я не готов."
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_ru_gamepedia\/images\/f\/f1\/Rubick_notyet_07_ru.mp3\/revision\/latest?cb=20170413141304",
+        "title": "Ещё не время."
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_ru_gamepedia\/images\/f\/f6\/Rubick_notyet_02_ru.mp3\/revision\/latest?cb=20170413141239",
+        "title": "Не сейчас."
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_ru_gamepedia\/images\/7\/71\/Rubick_notyet_05_ru.mp3\/revision\/latest?cb=20170413141254",
+        "title": "Я не готов."
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_ru_gamepedia\/images\/e\/e6\/Rubick_notyet_08_ru.mp3\/revision\/latest?cb=20170413141309",
+        "title": "Ещё не время."
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_ru_gamepedia\/images\/0\/07\/Rubick_notyet_03_ru.mp3\/revision\/latest?cb=20170413141244",
+        "title": "Не сейчас!"
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_ru_gamepedia\/images\/b\/ba\/Rubick_notyet_06_ru.mp3\/revision\/latest?cb=20170413141259",
+        "title": "Я не готов!"
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_ru_gamepedia\/images\/7\/7f\/Rubick_notyet_09_ru.mp3\/revision\/latest?cb=20170413141314",
+        "title": "Ещё не время!"
+      }
+    ],
+    "category": "Способность на перезарядке"
+  },
+  {
+    "responses": [
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_ru_gamepedia\/images\/9\/9a\/Rubick_nomana_01_ru.mp3\/revision\/latest?cb=20170413141135",
+        "title": "Закончилась мана."
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_ru_gamepedia\/images\/a\/af\/Rubick_nomana_04_ru.mp3\/revision\/latest?cb=20170413141151",
+        "title": "Нет маны."
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_ru_gamepedia\/images\/2\/24\/Rubick_nomana_07_ru.mp3\/revision\/latest?cb=20170413141219",
+        "title": "Недостаточно маны."
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_ru_gamepedia\/images\/0\/02\/Rubick_nomana_02_ru.mp3\/revision\/latest?cb=20170413141139",
+        "title": "Закончилась мана."
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_ru_gamepedia\/images\/a\/a8\/Rubick_nomana_05_ru.mp3\/revision\/latest?cb=20170413141208",
+        "title": "Нет маны."
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_ru_gamepedia\/images\/f\/f8\/Rubick_nomana_08_ru.mp3\/revision\/latest?cb=20170413141224",
+        "title": "Недостаточно маны."
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_ru_gamepedia\/images\/0\/0f\/Rubick_nomana_03_ru.mp3\/revision\/latest?cb=20170413141145",
+        "title": "Закончилась мана!"
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_ru_gamepedia\/images\/7\/72\/Rubick_nomana_06_ru.mp3\/revision\/latest?cb=20170413141214",
+        "title": "Нет маны!"
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_ru_gamepedia\/images\/3\/38\/Rubick_nomana_09_ru.mp3\/revision\/latest?cb=20170413141229",
+        "title": "Недостаточно маны!"
+      }
+    ],
+    "category": "Нехватка маны"
+  },
+  {
+    "responses": [
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_ru_gamepedia\/images\/7\/72\/Rubick_pain_01_ru.mp3\/revision\/latest?cb=20170413141340",
+        "title": "Мхм-м!"
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_ru_gamepedia\/images\/9\/9d\/Rubick_pain_02_ru.mp3\/revision\/latest?cb=20170413141345",
+        "title": "А!"
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_ru_gamepedia\/images\/f\/fd\/Rubick_pain_03_ru.mp3\/revision\/latest?cb=20170413141350",
+        "title": "Ху-у!"
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_ru_gamepedia\/images\/5\/56\/Rubick_pain_04_ru.mp3\/revision\/latest?cb=20170413141355",
+        "title": "М-м!"
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_ru_gamepedia\/images\/a\/a6\/Rubick_pain_05_ru.mp3\/revision\/latest?cb=20170413141400",
+        "title": "Хо-о!"
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_ru_gamepedia\/images\/8\/81\/Rubick_pain_06_ru.mp3\/revision\/latest?cb=20170413141405",
+        "title": "Ух!"
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_ru_gamepedia\/images\/e\/ef\/Rubick_pain_07_ru.mp3\/revision\/latest?cb=20170413141410",
+        "title": "А-ах!"
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_ru_gamepedia\/images\/f\/f0\/Rubick_pain_08_ru.mp3\/revision\/latest?cb=20170413141415",
+        "title": "Ох!"
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_ru_gamepedia\/images\/e\/e1\/Rubick_pain_09_ru.mp3\/revision\/latest?cb=20170413141421",
+        "title": "Хо-о!"
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_ru_gamepedia\/images\/8\/8c\/Rubick_pain_10_ru.mp3\/revision\/latest?cb=20170413141426",
+        "title": "И!"
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_ru_gamepedia\/images\/4\/48\/Rubick_pain_11_ru.mp3\/revision\/latest?cb=20170413141433",
+        "title": "Иэ-э!"
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_ru_gamepedia\/images\/8\/8b\/Rubick_underattack_01_ru.mp3\/revision\/latest?cb=20170413142117",
+        "title": "Ах, на меня напали!"
+      }
+    ],
+    "category": "Получение урона"
+  },
+  {
+    "responses": [
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_ru_gamepedia\/images\/b\/b8\/Rubick_rare_01_ru.mp3\/revision\/latest?cb=20170413141459",
+        "title": "Куда же пойти потом? Университет Ультимира? Йама Раскав? Хм-м."
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_ru_gamepedia\/images\/c\/cd\/Rubick_rare_02_ru.mp3\/revision\/latest?cb=20170413141504",
+        "title": "Хотел бы я творить как мой отец когда-то."
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_ru_gamepedia\/images\/a\/ad\/Rubick_rare_03_ru.mp3\/revision\/latest?cb=20170413141509",
+        "title": "Путешествие того стоило!"
+      }
+    ],
+    "category": "Редкие фразы"
+  },
+  {
+    "responses": [
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_ru_gamepedia\/images\/1\/13\/Rubick_lane_missing_01_ru.mp3\/revision\/latest?cb=20170413140721",
+        "title": "Врага нет на верхней линии!"
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_ru_gamepedia\/images\/4\/4c\/Rubick_lane_missing_02_ru.mp3\/revision\/latest?cb=20170413140726",
+        "title": "Врага нет на центральной линии!"
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_ru_gamepedia\/images\/7\/71\/Rubick_lane_missing_03_ru.mp3\/revision\/latest?cb=20170413140731",
+        "title": "Врага нет на нижней линии!"
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_ru_gamepedia\/images\/9\/9b\/Rubick_thanks_01_ru.mp3\/revision\/latest?cb=20170413142102",
+        "title": "Спасибо!"
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_ru_gamepedia\/images\/5\/5d\/Rubick_thanks_02_ru.mp3\/revision\/latest?cb=20170413142107",
+        "title": "Ну, спасибо!"
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_ru_gamepedia\/images\/0\/05\/Rubick_thanks_03_ru.mp3\/revision\/latest?cb=20170413142112",
+        "title": "Какая щедрость!"
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_ru_gamepedia\/images\/d\/dd\/Rubick_laugh_01_ru.mp3\/revision\/latest?cb=20170413140818",
+        "title": "Хе-хе-хе!"
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_ru_gamepedia\/images\/b\/b6\/Rubick_laugh_02_ru.mp3\/revision\/latest?cb=20170413140823",
+        "title": "Ха-ха!"
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_ru_gamepedia\/images\/3\/3c\/Rubick_laugh_03_ru.mp3\/revision\/latest?cb=20170413140828",
+        "title": "Ху-ху-ху-ху!"
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_ru_gamepedia\/images\/8\/84\/Rubick_laugh_04_ru.mp3\/revision\/latest?cb=20170413140832",
+        "title": "Ха!"
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_ru_gamepedia\/images\/f\/fc\/Rubick_laugh_05_ru.mp3\/revision\/latest?cb=20170413140837",
+        "title": "М-ма! Ха-ха-ха!"
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_ru_gamepedia\/images\/7\/77\/Rubick_laugh_06_ru.mp3\/revision\/latest?cb=20170413140841",
+        "title": "Ха-ха-ха! Ах, хи-хи-хи-хи-хи-хи-хи-хи-хи!"
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_ru_gamepedia\/images\/d\/dd\/Rubick_laugh_07_ru.mp3\/revision\/latest?cb=20170413140846",
+        "title": "Аха-ха-ха-ха-ха-ха-ха-ха-ха-ха-ха-ха-ха!"
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_ru_gamepedia\/images\/1\/15\/Rubick_laugh_08_ru.mp3\/revision\/latest?cb=20170413140851",
+        "title": "А-а-а, а!"
+      }
+    ],
+    "category": "Реплики в чате"
+  },
+  {
+    "responses": [
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_ru_gamepedia\/images\/8\/8e\/Rubick_win_01_ru.mp3\/revision\/latest?cb=20170413142122",
+        "title": "Да!"
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_ru_gamepedia\/images\/f\/fd\/Rubick_win_02_ru.mp3\/revision\/latest?cb=20170413142127",
+        "title": "Победа!"
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_ru_gamepedia\/images\/9\/9f\/Rubick_win_03_ru.mp3\/revision\/latest?cb=20170413142132",
+        "title": "Какой талант! Какая магия! Какая радость!"
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_ru_gamepedia\/images\/3\/35\/Rubick_lose_01_ru.mp3\/revision\/latest?cb=20170413140943",
+        "title": "Не-ет!"
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_ru_gamepedia\/images\/5\/55\/Rubick_lose_02_ru.mp3\/revision\/latest?cb=20170413140948",
+        "title": "Поражение!"
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_ru_gamepedia\/images\/8\/80\/Rubick_lose_03_ru.mp3\/revision\/latest?cb=20170413140952",
+        "title": "Такие потери! И ради чего?"
+      }
+    ],
+    "category": "Окончание матча"
+  },
+  {
+    "responses": [
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_ru_gamepedia\/images\/8\/80\/Rubick_itemcommon_01_ru.mp3\/revision\/latest?cb=20170413140503",
+        "title": "Экспонат в коллекцию."
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_ru_gamepedia\/images\/9\/93\/Rubick_itemcommon_02_ru.mp3\/revision\/latest?cb=20170413140508",
+        "title": "Какой сюрприз!"
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_ru_gamepedia\/images\/a\/ae\/Rubick_itemmoderate_01_ru.mp3\/revision\/latest?cb=20170413140512",
+        "title": "М-м, произведение искусства!"
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_ru_gamepedia\/images\/3\/39\/Rubick_itemmoderate_02_ru.mp3\/revision\/latest?cb=20170413140517",
+        "title": "Вот так сувенир!"
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_ru_gamepedia\/images\/b\/bb\/Rubick_nullfield_04_ru.mp3\/revision\/latest?cb=20170413141335",
+        "title": "Вот так-то!"
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_ru_gamepedia\/images\/2\/23\/Rubick_itemrare_01_ru.mp3\/revision\/latest?cb=20170413140522",
+        "title": "Потрясающе! Абсолютно потрясающе!"
+      }
+    ],
+    "category": "Выпадение косметического предмета"
+  },
+  {
+    "responses": [
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_ru_gamepedia\/images\/c\/c7\/Rubick_crumwiz_01_ru.mp3\/revision\/latest?cb=20170413140001",
+        "title": "Паршивый волшебник!"
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_ru_gamepedia\/images\/8\/8d\/Rubick_shiwiz_01_ru.mp3\/revision\/latest?cb=20170413141801",
+        "title": "О-ох, сраный волшебник!"
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_ru_gamepedia\/images\/a\/aa\/Rubick_anger_01_ru.mp3\/revision\/latest?cb=20170413135222",
+        "title": "М-мх!"
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_ru_gamepedia\/images\/0\/07\/Rubick_anger_02_ru.mp3\/revision\/latest?cb=20170413135226",
+        "title": "А-ах!"
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_ru_gamepedia\/images\/3\/30\/Rubick_anger_03_ru.mp3\/revision\/latest?cb=20170413135231",
+        "title": "Хм!"
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_ru_gamepedia\/images\/e\/ee\/Rubick_anger_04_ru.mp3\/revision\/latest?cb=20170413135236",
+        "title": "М-м-ма!"
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_ru_gamepedia\/images\/d\/d2\/Rubick_anger_05_ru.mp3\/revision\/latest?cb=20170413135240",
+        "title": "Эах!"
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_ru_gamepedia\/images\/c\/c2\/Rubick_anger_06_ru.mp3\/revision\/latest?cb=20170413135245",
+        "title": "М-м-м."
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_ru_gamepedia\/images\/c\/cf\/Rubick_anger_07_ru.mp3\/revision\/latest?cb=20170413135250",
+        "title": "Ха!"
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_ru_gamepedia\/images\/8\/80\/Rubick_anger_08_ru.mp3\/revision\/latest?cb=20170413135254",
+        "title": "Р-р-рар!"
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_ru_gamepedia\/images\/0\/06\/Rubick_anger_09_ru.mp3\/revision\/latest?cb=20170413135259",
+        "title": "Хах!"
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_ru_gamepedia\/images\/5\/5b\/Rubick_anger_10_ru.mp3\/revision\/latest?cb=20170413135304",
+        "title": "Ох!"
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_ru_gamepedia\/images\/a\/a6\/Rubick_anger_11_ru.mp3\/revision\/latest?cb=20170413135308",
+        "title": "Р-р-рх."
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_ru_gamepedia\/images\/c\/c8\/Rubick_anger_12_ru.mp3\/revision\/latest?cb=20170413135313",
+        "isArcane": true,
+        "title": "Р-р-рх."
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_ru_gamepedia\/images\/2\/20\/Rubick_anger_13_ru.mp3\/revision\/latest?cb=20170413135318",
+        "title": "Ар-р-рх."
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_ru_gamepedia\/images\/c\/cd\/Rubick_anger_14_ru.mp3\/revision\/latest?cb=20170413135322",
+        "title": "Тх-кх-тхт."
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_ru_gamepedia\/images\/f\/fe\/Rubick_anger_16_ru.mp3\/revision\/latest?cb=20170413135333",
+        "title": "Тха-а, не мешайся."
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_ru_gamepedia\/images\/d\/d2\/Rubick_happy_01_ru.mp3\/revision\/latest?cb=20170413140341",
+        "title": "О-ох."
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_ru_gamepedia\/images\/2\/2c\/Rubick_happy_02_ru.mp3\/revision\/latest?cb=20170413140345",
+        "title": "О-о-о."
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_ru_gamepedia\/images\/c\/c6\/Rubick_happy_03_ru.mp3\/revision\/latest?cb=20170413140350",
+        "title": "О-ох."
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_ru_gamepedia\/images\/4\/4e\/Rubick_happy_04_ru.mp3\/revision\/latest?cb=20170413140355",
+        "title": "О-о-о-о."
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_ru_gamepedia\/images\/d\/d2\/Rubick_happy_05_ru.mp3\/revision\/latest?cb=20170413140400",
+        "title": "Хе-хе-хе-хе-хе."
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_ru_gamepedia\/images\/c\/ca\/Rubick_happy_06_ru.mp3\/revision\/latest?cb=20170413140404",
+        "title": "Ум-м-м."
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_ru_gamepedia\/images\/1\/10\/Rubick_happy_07_ru.mp3\/revision\/latest?cb=20170413140409",
+        "title": "Ум-м-м!"
+      }
+    ],
+    "category": "Разное"
+  }
+]

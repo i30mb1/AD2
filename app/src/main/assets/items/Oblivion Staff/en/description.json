@@ -1,0 +1,31 @@
+{
+  "abilities": [],
+  "additionalInformation": [
+    "For strength heroes, it grants 10 attack speed, 120 mana, 1.75 mana regen and 15 attack damage.",
+    "For agility heroes, it grants 10 attack speed, 120 mana, 1.75 mana regen and 15 attack damage.",
+    "For intelligence heroes, it grants 10 attack speed, 120 mana, 1.75 mana regen and 25 attack damage."
+  ],
+  "cost": "1500",
+  "lore": null,
+  "consistFrom": [
+    "Quarterstaff",
+    "Robe of the Magi",
+    "Sage's Mask"
+  ],
+  "boughtFrom": "Accessories",
+  "name": "Oblivion Staff",
+  "description": "Deceptively hidden as an ordinary quarterstaff, it is actually very powerful, much like the Eldritch who originally possessed it.",
+  "trivia": null,
+  "upgradeIn": [
+    "Orchid Malevolence",
+    "Echo Sabre",
+    "Silver Edge"
+  ],
+  "bonuses": [
+    "+10 Intelligence",
+    "+1.25 Mana regeneration",
+    "+15 Attack damage",
+    "+10 Attack speed"
+  ],
+  "tips": null
+}

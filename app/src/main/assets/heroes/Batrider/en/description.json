@@ -1,0 +1,242 @@
+{
+  "abilities": [
+    {
+      "notes": [
+        "The armor talent does not benefit illusions.",
+        "The health talent increases maximum health capacity, and keeps the current health percentage."
+      ],
+      "spellName": "Talent",
+      "talents": [
+        {
+          "talentLvl": "25",
+          "talentLeft": "-35s Flaming Lasso Cooldown",
+          "talentRight": "+6.5s Firefly Duration"
+        },
+        {
+          "talentLvl": "20",
+          "talentLeft": "+30 Movement Speed",
+          "talentRight": "2 Flamebreak Charges"
+        },
+        {
+          "talentLvl": "15",
+          "talentLeft": "+250 Health",
+          "talentRight": "+5 Sticky Napalm Damage"
+        },
+        {
+          "talentLvl": "10",
+          "talentLeft": "+4 Armor",
+          "talentRight": "+5% Spell Amplification"
+        }
+      ]
+    },
+    {
+      "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/c\/cf\/Batrider_Sticky_Napalm.mp3\/revision\/latest?cb=20191216011155",
+      "effects": [
+        "Ability Target Area",
+        "Affects Enemies",
+        "Damage Magical"
+      ],
+      "notes": [
+        "Sticky Napalm can be cast without having to face towards the targeted area.",
+        "Applies a debuff to enemies inside the area. Leaving or entering the area afterwards has no effect.",
+        "Each cast refreshes the duration of the whole stack while adding one more instance.",
+        "The debuff slows and causes the damage. It also shows the amount of current Sticky Napalm stacks on the target.",
+        "Affected units also have a number above them, showing the amount of stacks. This number is only visible to Batrider and his allies, however, they require vision over the target to see it.",
+        "Can slow movement speed for up to 20%\/40%\/60%\/80%. One stack is enough to apply the full turn rate slow.",
+        "Can deal up to 60\/120\/180\/240 (TagTalent 110\/170\/230\/290) damage per triggering damage instance (before reductions). Deals 50% less damage against creeps, dealing up to 30\/60\/90\/120 (TagTalent 55\/85\/115\/145) damage. Treats creep-heroes as creeps",
+        "Deals 50% less damage against creeps, dealing up to 30\/60\/90\/120 (TagTalent 55\/85\/115\/145) damage.",
+        "Treats creep-heroes as creeps",
+        "Sticky Napalm triggers on any damage instance caused by Batrider, except from Orb of Venom, Orb of Corrosion, Radiance, Spirit Vessel, Urn of Shadows, Cloak of Flames, and damage with the no-reflection flag.",
+        "Batrider himself has to cause the damage. Other units under his control do not trigger Sticky Napalm.",
+        "Sticky Napalm deals its damage in a separate damage instance, right after the triggering damage.",
+        "Provides 450 radius flying vision at the targeted point upon cast for 2 seconds."
+      ],
+      "mana": "20",
+      "hotKey": "Q",
+      "cooldown": "3",
+      "description": "Drenches an area in sticky oil, amplifying damage from Batrider's attacks and abilities and slowing the movement speed and turn rate of enemies in the area. Additional casts of Sticky Napalm continue to increase damage, up to 10 stacks.",
+      "spellName": "Sticky Napalm",
+      "params": [
+        "Cast Animation: 0+0",
+        "Cast Range: 550\/600\/650\/700",
+        "Effect Radius: 375\/400\/425\/450",
+        "Max Stacks: 10",
+        "Damage per Stack: 6\/12\/18\/24 (TagTalent 11\/17\/23\/29)",
+        "Creep Damage Percentage: 50%",
+        "Move Speed Slow per Stack: 2%\/4%\/6%\/8%",
+        "Turn Rate Slow: 10%\/30%\/50%\/70%",
+        "Stack Duration: 8",
+        "Slow persists and attempts to damage if debuff was placed before spell immunity and when not dispelled."
+      ],
+      "itemBehaviour": [],
+      "legacyKey": "C",
+      "story": "It's not uncommon to hear the Rider cackle while he increases the flammability of his opponents."
+    },
+    {
+      "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/e\/ea\/Batrider_Flamebreak_1.mp3\/revision\/latest?cb=20191216011159",
+      "effects": [
+        "Ability Target Area",
+        "Affects Enemies",
+        "Damage Magical"
+      ],
+      "notes": [
+        "Flamebreak travels at a speed of 1200 until reaching the targeted point.",
+        "The projectile has 175 radius flying vision. This vision does not last.",
+        "Knocks units back at a speed of 857.14285714286. Knockback distance is always 300, no matter how far the unit is from the center. Also knocks affected enemies 100 units upwards, resulting in a small arc.",
+        "Also knocks affected enemies 100 units upwards, resulting in a small arc.",
+        "Units are not disabled during the knockback. They can still turn, attack, cast spells and use items. Channeling spells are not interrupted.",
+        "Can push units over impassable terrain. Any tree a knocked back unit collides with gets destroyed.",
+        "Applies a debuff on enemies upon projectile impact which deals damage in 1 second intervals, starting 1 second after it is placed, resulting in 2\/4\/6\/8 instances.",
+        "Can deal up to 70\/140\/210\/280 damage (before reductions).",
+        "Flamebreak first applies the impact damage, then the debuff, then the knockback.",
+        "The burn debuff from successive casts fully stacks.",
+        "Does not affect Roshan."
+      ],
+      "mana": "110\/120\/130\/140",
+      "hotKey": "W",
+      "cooldown": "18\/17\/16\/15 (TagTalent 0)",
+      "description": "Hurls an explosive cocktail that explodes when it reaches the target location, knocking back, and dealing damage over time to enemies in the area.",
+      "spellName": "Flamebreak",
+      "params": [
+        "Cast Animation: 0.2+0.63",
+        "Cast Range: 1500",
+        "Effect Radius: 500",
+        "Impact Damage: 30\/60\/90\/120",
+        "Damage per Second: 20",
+        "Knockback Distance: 300",
+        "Knockback Duration: 0.35",
+        "Damage Duration: 2\/4\/6\/8",
+        "Number of Charges: 2",
+        "Charge Replenish Time: 18\/17\/16\/15",
+        "Damages if debuff was placed before spell immunity and when not dispelled."
+      ],
+      "itemBehaviour": [],
+      "legacyKey": "R",
+      "story": "A molotov cocktail is the weapon of choice for Batrider."
+    },
+    {
+      "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/a\/a6\/Batrider_Firefly.mp3\/revision\/latest?cb=20191216011158",
+      "effects": [
+        "Ability No Target",
+        "Affects Enemies \/ Self",
+        "Damage Magical"
+      ],
+      "notes": [
+        "Firefly interrupts Batrider's channeling spells upon cast.",
+        "Temporarily grants Batrider unobstructed movement, allowing him to path over impassable terrain, units, buildings, and trees.",
+        "The entire spell effect lasts 15 (TagTalent 21.5) seconds, meaning when the duration ends, the entire flame trail disappears at once as well.",
+        "Damage is dealt to every enemy unit which comes within 200 radius of the fire trail.",
+        "Deals 5\/15\/25\/35 damage per interval, starting 0.1 seconds after cast, the first interval is 0.4 seconds, the rest are 0.5 seconds, resulting in 31 (TagTalent 44) damage instances.",
+        "Can deal up to 155\/465\/775\/1085 (TagTalent 220\/660\/1100\/1540) damage to a single unit (before reductions) when it stays in range for the full duration.",
+        "During Firefly, every tree within 100 radius of Batrider is destroyed.",
+        "The fire trails from successive casts fully stack. Each cast creates its buff with its own fire trail.",
+        "When Batrider dies during Firefly, the already existing fire on the ground still stays for the remaining duration. The buffs remain visible in the HUD, and are now only responsible for keeping the already existing fire up. This means when respawning before they expire, they do not make Batrider fly again or make him leave fire behind again.",
+        "The buffs remain visible in the HUD, and are now only responsible for keeping the already existing fire up.",
+        "This means when respawning before they expire, they do not make Batrider fly again or make him leave fire behind again.",
+        "Choosing the duration upgrading talent does not affect any of Batrider's currently ongoing Firefly instances.",
+        "Does not affect Roshan."
+      ],
+      "mana": "125",
+      "hotKey": "E",
+      "cooldown": "40\/38\/36\/34",
+      "description": "Batrider takes to the skies, laying down a trail of flames from the air. The fire damages any enemies it touches, and destroys trees below Batrider. Batrider has bonus day\/night vision while Firefly is active.",
+      "spellName": "Firefly",
+      "params": [
+        "Cast Animation: 0+0",
+        "Damage Radius: 200",
+        "Damage per Second: 10\/30\/50\/70",
+        "Move Speed Bonus: 3%\/6%\/9%\/12%",
+        "Vision Bonus: 200\/400\/600\/800",
+        "Duration: 15 (TagTalent 21.5)",
+        "Illusions created during Firely do not fly."
+      ],
+      "itemBehaviour": [],
+      "legacyKey": "E",
+      "story": "When an enemy escapes into the Yama Raskav Jungle, most would cut through the brush to find the fugitive. Batrider just chooses to destroy the jungle along with his foes."
+    },
+    {
+      "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/5\/50\/Batrider_Flaming_Lasso.mp3\/revision\/latest?cb=20191216011151",
+      "effects": [
+        "Ability Target Unit",
+        "Affects Enemies (TagAghanim Allies)",
+        "Damage Magical"
+      ],
+      "notes": [
+        "Flaming Lasso fully disables the target for its duration.",
+        "Drags the targeted unit with a 300 distance behind Batrider. Despite the description, can drag the target over impassable terrain.",
+        "If Batrider teleports a distance greater than 425, the lasso breaks.",
+        "If the target gets teleported any distance (even a 0 range teleport is enough), the lasso breaks.",
+        "Flaming Lasso overrides every other position changing effect, making only teleports able to break the lasso.",
+        "The lasso also breaks when either Batrider or the target dies. Casting Dismember or Walrus Kick on the lasso target breaks the lasso as well.",
+        "Batrider is disarmed during Flaming Lasso. The disarm either lasts 3\/3.5\/4 seconds, or until the lasso is broken, whichever is shorter.",
+        "Deals damage in 1 second intervals, starting immediately upon cast, with a total of 3\/3\/4 instances. Can deal up to 60\/120\/240 damage per target (before reductions).",
+        "Can deal up to 60\/120\/240 damage per target (before reductions).",
+        "Cannot be cast on, but can drag invulnerable and hidden units.",
+        "Can be cast on Roshan, but he is neither disabled nor dragged (TagTalent nor damaged). Batrider is still disarmed.",
+        "It is possible to have multiple units lassoed at the same time (e.g. by using Refresher Orb).",
+        "Aghanim's Scepter causes the closest allied hero (including creep-heroes and illusions) of the enemy target within a 600 range to get lassoed as well. The secondary target is bound to the first, so it is dragged after it, at the same distance as the primary target is dragged behind Batrider. This means the secondary target is dragged 600 distance behind Batrider. The secondary lasso is independent from the primary. When the primary lasso is broken, its target can act freely while the secondary target remains being dragged by it.",
+        "The secondary target is bound to the first, so it is dragged after it, at the same distance as the primary target is dragged behind Batrider.",
+        "This means the secondary target is dragged 600 distance behind Batrider.",
+        "The secondary lasso is independent from the primary. When the primary lasso is broken, its target can act freely while the secondary target remains being dragged by it.",
+        "Aghanim's Shard allied targeted lasso works identical to when enemies are targeted, including the self-disarm. Despite the description, can target any allied unit, not just heroes. It uses the same modifiers as when targeting enemies, including the damage modifier, but it does not deal damage if it is an ally. Compatible with the Aghanim's Scepter upgrade. It still searches for nearby enemy heroes when targeting allies. The Aghanim's Shard upgrade does not cause the Aghanim's Scepter upgrade to search for allies as secondary targets. Flaming Lasso's cooldown reduction talent does not apply to Aghanim's Shard upgrade.",
+        "Despite the description, can target any allied unit, not just heroes.",
+        "It uses the same modifiers as when targeting enemies, including the damage modifier, but it does not deal damage if it is an ally.",
+        "Compatible with the Aghanim's Scepter upgrade. It still searches for nearby enemy heroes when targeting allies.",
+        "The Aghanim's Shard upgrade does not cause the Aghanim's Scepter upgrade to search for allies as secondary targets.",
+        "Flaming Lasso's cooldown reduction talent does not apply to Aghanim's Shard upgrade."
+      ],
+      "mana": "225",
+      "hotKey": "R",
+      "cooldown": "120\/115\/110 (TagTalent 85\/80\/75) (TagTalent 20)",
+      "description": "Lassoes an enemy and drags them in Batrider's wake. Victims cannot be dragged over impassable terrain. Dragged units cannot move, attack, or use abilities. Teleporting or blinking will break the lasso.",
+      "spellName": "Flaming Lasso",
+      "params": [
+        "Cast Animation: 0.2+0.63",
+        "Cast Range: 175",
+        "Break Distance: 425",
+        "Damage per Second: 20\/40\/60",
+        "Duration: 3\/3.5\/4",
+        "Secondary Target Search Radius: 600",
+        "Ally Incoming Damage Reduction: 80%",
+        "Flaming Lasso grabs both its target, as well as the target's nearest allied hero within range. The secondary target is tethered to the first.",
+        "Allows Flaming Lasso to be cast on an allied hero, granting them damage reduction. Has 20 second cooldown when used on allies.",
+        "Blocked fully only when primary target. When blocked, Batrider is not disarmed either."
+      ],
+      "itemBehaviour": [],
+      "legacyKey": "F",
+      "story": "Few dare to ask to ride on the bat, as Batrider gives them free of charge."
+    }
+  ],
+  "mainAttributes": {
+    "attrStrengthInc": 2.9,
+    "attrStrength": 28.0,
+    "attrIntelligence": 22.0,
+    "attrIntelligenceInc": 2.9,
+    "attrAgilityInc": 1.8,
+    "attrAgility": 15.0
+  },
+  "description": "Batrider is a ranged intelligence hero who excels at initiation and harassing enemies. He is a mobile raider capable of dealing enormous amounts of damage, though he must close in on targets to pull it off. Batrider begins by spraying areas with Sticky Napalm, a stacking debuff useful for hindering enemies or gaining vision. In order to get a better view he activates Firefly, leaving a burning trail of liquid fire that scorches those who dare cross his path. Now able to cross through previously impassable terrain Batrider has free reign to decide how to continue his reign of terror. If he's feeling generous he'll hurl an explosive clocktail as a parting shot. More often, he seizes victims with Flaming Lasso and drags them back through his burning trail to the clutches of merciless allies. Used properly, Batrider is a fearsome hero constantly risking his own safety to incite fiery chaos and destruction.",
+  "history": "There is no such thing as harmony among the creatures of the Yama Raskav Jungle. By bite, or claw, or pincer, or hoof, even the slightest sign of weakness means a swift death. They say the Rider was just a lad cutting chaff in his family's field when he was taken, swept up by a massive morde-bat looking for take-out. But this boy had a better idea, and wriggled his way from his captor's grip, onto the beast's back, and hacked it down with his tools. Emerging from the bloody wreckage and intoxicated by the thrill of flight, the boy realized he'd found his calling. The boy grew, and every summer he'd return to his family's field, often setting out into the bush seeking to reclaim that first thrill of facing death in the form of jaws or a fatal fall. The years went on, but his fire only grew stronger. He studied the overgrowth, plunging deeper with each expedition, until finally he found his way to the caves at the heart of hostility. They say the Rider, on the eve of a scorching summer night, had nothing but a rope, a bottle of liquid courage and a burning determination to feel the skies once more, when he plunged inside....",
+  "talents": [
+    {
+      "talentLvl": "25",
+      "talentLeft": "-35s Flaming Lasso Cooldown",
+      "talentRight": "+6.5s Firefly Duration"
+    },
+    {
+      "talentLvl": "20",
+      "talentLeft": "+30 Movement Speed",
+      "talentRight": "2 Flamebreak Charges"
+    },
+    {
+      "talentLvl": "15",
+      "talentLeft": "+250 Health",
+      "talentRight": "+5 Sticky Napalm Damage"
+    },
+    {
+      "talentLvl": "10",
+      "talentLeft": "+4 Armor",
+      "talentRight": "+5% Spell Amplification"
+    }
+  ]
+}

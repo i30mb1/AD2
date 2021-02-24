@@ -1,0 +1,25 @@
+{
+  "abilities": [],
+  "additionalInformation": [
+    "Movement speed bonuses from multiple pairs of boots do not stack.",
+    "Stacks with all other movement speed bonuses."
+  ],
+  "cost": "500",
+  "lore": null,
+  "consistFrom": null,
+  "boughtFrom": "Miscellaneous",
+  "name": "Boots of Speed",
+  "description": "Fleet footwear, increasing movement.",
+  "trivia": null,
+  "upgradeIn": [
+    "Boots of Travel",
+    "Phase Boots",
+    "Power Treads",
+    "Arcane Boots",
+    "Tranquil Boots"
+  ],
+  "bonuses": [
+    "+45 Movement speed"
+  ],
+  "tips": null
+}

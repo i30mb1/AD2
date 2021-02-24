@@ -1,0 +1,244 @@
+{
+  "abilities": [
+    {
+      "notes": [
+        "This attack damage talent is added as raw attack damage, so it does not benefit illusions, and is not affected by most percentage-based damage increasing or reducing effects."
+      ],
+      "spellName": "Talent",
+      "talents": [
+        {
+          "talentLvl": "25",
+          "talentLeft": "Dissimilate Stuns for 2.5s",
+          "talentRight": "Astral Step 160% Crit"
+        },
+        {
+          "talentLvl": "20",
+          "talentLeft": "-5 Astral Step Charge Restore Time",
+          "talentRight": "+14% Spell Amplification"
+        },
+        {
+          "talentLvl": "15",
+          "talentLeft": "+80 Resonant Pulse Damage",
+          "talentRight": "Remnant Provides 475 Truesight"
+        },
+        {
+          "talentLvl": "10",
+          "talentLeft": "+15 Damage",
+          "talentRight": "+2.5 Mana Regen"
+        }
+      ]
+    },
+    {
+      "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/4\/4e\/Void_Spirit_Aether_Remnant_1.mp3\/revision\/latest?cb=20191215162220",
+      "effects": [
+        "Ability Target Point \/ Vector Targeting",
+        "Affects Enemies",
+        "Damage Magical"
+      ],
+      "notes": [
+        "The remnant moves towards the targeted point at a speed of 900.",
+        "Upon reaching the targeted point, the remnant faces towards the targeted direction, and then remains inactive for 80\/130\/180\/230 seconds.",
+        "After the activation delay, the remnant provides flying vision in front of it. The vision is provided by 2 vision cells, each with a radius of 200. The first vision cell is positioned 225 range in front of the remnant, the second one 450 range in front of it. The remnant itself also has 250 radius ground vision. This is the dummy's vision, and is provided at all times around the remnant. Together with the remnant's own vision, the total vision area has a length of 925, and a width of 450.",
+        "The vision is provided by 2 vision cells, each with a radius of 200.",
+        "The first vision cell is positioned 225 range in front of the remnant, the second one 450 range in front of it.",
+        "The remnant itself also has 250 radius ground vision. This is the dummy's vision, and is provided at all times around the remnant.",
+        "Together with the remnant's own vision, the total vision area has a length of 925, and a width of 450.",
+        "After the delay, the remnant searches for enemies within a path in front of it. The search path has a length of 450 and width of 130. When multiple enemies are within the area, it grabs the one furthest away closest to the center line.",
+        "The search path has a length of 450 and width of 130.",
+        "When multiple enemies are within the area, it grabs the one furthest away closest to the center line.",
+        "Hypnotizes the target, forcing it to move towards the the remnant, and preventing it from acting. Sets the target's movement speed to 44%\/50%\/56%\/62% of the distance between Remnant and the target. If the target is too close, it stops moving once within 100 range of the remnant.",
+        "Sets the target's movement speed to 44%\/50%\/56%\/62% of the distance between Remnant and the target.",
+        "If the target is too close, it stops moving once within 100 range of the remnant.",
+        "The speed is set once upon cast. If the target gets moved or teleported, the speed does not adapt.",
+        "Aether Remnant first applies the damage, then the pull debuff.",
+        "Destroys trees within a 200 radius around the target at the end of the hypnosis.",
+        "The level 15 talent adds 475 radius True Sight around the remnant's location."
+      ],
+      "mana": "85\/90\/95\/100",
+      "hotKey": "Q",
+      "cooldown": "17\/15\/13\/11",
+      "description": "Vector targeted. Void Spirit dispatches a remnant to the target location. The remnant stands watch over the region, facing the direction of his vector. When a unit crosses its gaze, the remnant pulls it in and damages it.",
+      "spellName": "Aether Remnant",
+      "params": [
+        "Cast Animation: 0+0.53",
+        "Cast Range: 1000",
+        "Remnant Search Range: 450",
+        "Remnant Watch Width: 130",
+        "Watch Path Vision Radius: 200",
+        "Activation Delay: 0.4",
+        "Damage: 80\/130\/180\/230",
+        "Distance Moved: 44%\/50%\/56%\/62%",
+        "Pull Duration: 1.2\/1.4\/1.6\/1.8",
+        "Remnant Duration: 20",
+        "True Sight Radius: 475",
+        "Debuff persist if placed before spell immunity and when not dispelled."
+      ],
+      "itemBehaviour": [],
+      "legacyKey": "R",
+      "story": "Inai exists far beyond the scope of a single point in space and time."
+    },
+    {
+      "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/a\/a4\/Void_Spirit_Dissimilate_1.mp3\/revision\/latest?cb=20191215162213",
+      "effects": [
+        "Ability No Target",
+        "Affects Self \/ Enemies",
+        "Damage Magical"
+      ],
+      "notes": [
+        "Creates 7 (TagTalent 13) portals, with one of them being at the cast location. The following 6 portals form a ring around the center portal, with their center being 520 range far away from it. One portal is created in front of Void Spirit, while the other 5 are adapted to it, with 60° angles between them, forming a hexagon. With Aghanim's Shard, the last 6 portals are placed in line behind the portals of the first ring. With Aghanim's Shard, the last portals are 6 range away from the center portal and are placed using the same angles as for the portals of the first ring.",
+        "The following 6 portals form a ring around the center portal, with their center being 520 range far away from it.",
+        "One portal is created in front of Void Spirit, while the other 5 are adapted to it, with 60° angles between them, forming a hexagon.",
+        "With Aghanim's Shard, the last 6 portals are placed in line behind the portals of the first ring.",
+        "With Aghanim's Shard, the last portals are 6 range away from the center portal and are placed using the same angles as for the portals of the first ring.",
+        "The player can decide at which portal to re-appear, by issuing a move order. A move order is given by right-clicking, or by pressing the move hotkey and selecting a target point. Directly clicking on the portals is not required, a directional order is enough. The closest portal to the right-clicked location gets selected. The player can change the selected portals as many time as they want during the phase duration. A selected portal is highlighted for Void Spirit and his allies. For enemies, all portals look the same.",
+        "Directly clicking on the portals is not required, a directional order is enough. The closest portal to the right-clicked location gets selected.",
+        "The player can change the selected portals as many time as they want during the phase duration.",
+        "A selected portal is highlighted for Void Spirit and his allies. For enemies, all portals look the same.",
+        "Turns the caster invulnerable and hidden for its duration.",
+        "Fully disables, silences, mutes, and disarms Void Spirit, making him unable to do anything. Attack orders behave like move orders during disarms, so right-clicking an enemy selects the closest portal to the enemy as well.",
+        "Attack orders behave like move orders during disarms, so right-clicking an enemy selects the closest portal to the enemy as well.",
+        "Does not provide phased movement, so Void Spirit can still block other units during Dissimilate.",
+        "Does not disjoint projectiles upon teleporting.",
+        "The damage is dealt around the selected portal upon re-appearing. The level 25 talent also adds a 2.5 stun to this. Applies the damage first, then the stun.",
+        "The level 25 talent also adds a 2.5 stun to this. Applies the damage first, then the stun."
+      ],
+      "mana": "100\/110\/120\/130",
+      "hotKey": "W",
+      "cooldown": "20\/17\/14\/11",
+      "description": "Void Spirit temporarily fades into the aether, creating a number of portals through which he can reassemble himself. Upon exiting a portal, he damages all enemies in the area.",
+      "spellName": "Dissimilate",
+      "params": [
+        "Cast Animation: 0.2+0",
+        "Portals Radius: 275",
+        "First Ring Radius: 520",
+        "Number of First Ring Portals: 6",
+        "Damage: 100\/180\/260\/340 (TagTalent 225\/305\/385\/465)",
+        "Phase Duration: 1.3",
+        "Stun Duration: 2.5",
+        "Second Ring Radius: 1040",
+        "Number of Second Ring Portals: 6",
+        "Adds a partial outer ring to Dissimilate. Increases damage by 125.",
+        "Debuff persist if placed before spell immunity and when not dispelled."
+      ],
+      "itemBehaviour": [],
+      "legacyKey": "D",
+      "story": "Inai much prefers to observe our plane free from the confines of corporeal form."
+    },
+    {
+      "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/c\/c9\/Void_Spirit_Resonant_Pulse_1.mp3\/revision\/latest?cb=20191215162216",
+      "effects": [
+        "Ability No Target",
+        "Affects Self \/ Enemies",
+        "Damage Magical"
+      ],
+      "notes": [
+        "Interrupts Void Spirit's channeling spells upon cast.",
+        "The pulse spreads at a speed of 1200 and takes 0.42 seconds to reach maximum range and dissipate.",
+        "The pulse is a thin ring expanding outwards. This means it can be avoided by teleporting towards Void Spirit over the ring.",
+        "Any enemy hit by the ring gets damaged, and release a projectile that moves towards Void Spirit at a speed of 900. Once these projectiles reaches Void Spirit, they increase the shield's capacity by the given amount. If the base shield got depleted before these projectiles reach, they create a new shield, with their own capacity. These projectiles cannot be disjointed.",
+        "Once these projectiles reaches Void Spirit, they increase the shield's capacity by the given amount.",
+        "If the base shield got depleted before these projectiles reach, they create a new shield, with their own capacity.",
+        "These projectiles cannot be disjointed.",
+        "The pulse is bound to a modifier. Multiple instances of the modifier stack, so that each cast releases a ring. The modifier is lost on death, so dying stops the ring.",
+        "The modifier is lost on death, so dying stops the ring.",
+        "The shield only works against physical attack damage. Magical or pure attack damage, and spell damage of any kind is not blocked.",
+        "Blocks after armor reduction, but before any other reductions.",
+        "Multiple instances of the shield do not stack, recasting refreshes the duration and resets the absorption value.",
+        "With Aghanim's Scepter, the pulse first applies the damage, then the silence debuff."
+      ],
+      "mana": "100\/110\/120\/130",
+      "hotKey": "E",
+      "cooldown": "16 (TagTalent 0.25)",
+      "description": "Void Spirit wraps himself in a protective shield that absorbs physical damage and emits a single damaging pulse around him. The shield gains increased damage absorption for each enemy hero the pulse hits.",
+      "spellName": "Resonant Pulse",
+      "params": [
+        "Cast Animation: 0+0",
+        "Radius: 500",
+        "Damage: 70\/120\/170\/220 (TagTalent 150\/200\/250\/300)",
+        "Physical Attack Damage Blocked: 40\/80\/120\/160",
+        "Absorption Bonus per Hit Hero: 30\/45\/60\/70",
+        "Shield Duration: 10",
+        "Silence Duration: 2",
+        "Number of Charges: 2",
+        "Charge Replenish Time: 18",
+        "Causes Resonant Pulse to silence and gain two charges."
+      ],
+      "itemBehaviour": [],
+      "legacyKey": "E",
+      "story": "Inai never hesitates to shroud himself in the essence of his true self when forced to interact with the mortal plane."
+    },
+    {
+      "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/7\/77\/Void_Spirit_Astral_Step_1.mp3\/revision\/latest?cb=20191215162210",
+      "effects": [
+        "Ability Target Point",
+        "Affects Enemies \/ Self",
+        "Damage Instant Attack \/ Magical"
+      ],
+      "notes": [
+        "Void Spirit is teleported instantly towards the targeted point upon cast.",
+        "Does not disjoint projectiles upon teleporting.",
+        "Performs an instant attack on every enemy unit along the path. These attacks have True Strike and ignore disarms. Can trigger any attack modifier, except for cleave. Can trigger on-hit effects as well. The level 25 talent also adds critical strike to the instant attack.",
+        "These attacks have True Strike and ignore disarms.",
+        "Can trigger any attack modifier, except for cleave. Can trigger on-hit effects as well.",
+        "The level 25 talent also adds critical strike to the instant attack.",
+        "All hit enemies also receive the slow debuff. This debuff deals damage upon losing it. This means dispelling it causes the damage to happen earlier. Multiple instances of the debuff fully stack and work independently from each other.",
+        "This means dispelling it causes the damage to happen earlier.",
+        "Multiple instances of the debuff fully stack and work independently from each other.",
+        "Astral Step first applies the instant attack, then the debuff."
+      ],
+      "mana": "100",
+      "hotKey": "R",
+      "cooldown": "0",
+      "description": "Void Spirit tears a rift through the astral plane to appear at the target location, attacking all enemies along the path. This attack inflicts a void mark that slows for 1.25 seconds and then detonates.",
+      "spellName": "Astral Step",
+      "params": [
+        "Cast Animation: 0.2+0",
+        "Cast Range: Global",
+        "Min Distance: 200",
+        "Max Distance: 700\/900\/1100",
+        "Path Width: 170",
+        "Move Speed Slow: 40%\/60%\/80%",
+        "Critical Damage: 100% (TagTalent 160%)",
+        "Debuff Damage: 150\/200\/250",
+        "Debuff Duration: 1.25",
+        "Number of Charges: 2",
+        "Charge Replenish Time: 30\/25\/20 (TagTalent 25\/20\/15)"
+      ],
+      "itemBehaviour": [],
+      "legacyKey": "T",
+      "story": "A small step for Inai creates great devastation on the mortal plane."
+    }
+  ],
+  "mainAttributes": {
+    "attrStrengthInc": 2.6,
+    "attrStrength": 22.0,
+    "attrIntelligence": 24.0,
+    "attrIntelligenceInc": 3.1,
+    "attrAgilityInc": 2.2,
+    "attrAgility": 19.0
+  },
+  "description": "Inai, the Void Spirit, is a melee intelligence hero that relies on the element of surprise to blast apart foes with the power of the void. He plays like no other hero, relying on a wide variety of skills that allow him to put his enemies out of position while quickly jumping in and out of combat. Using his Aether Remnants, Inai can start and end any fight in seconds by forcing enemies to attack remnants of himself that guard from all angles. The void is both sword and shield for Void Spirit, whether he takes a quick repose in the aether to teleport to an area of his choice with explosive force, or shields himself in volatile energy that slays the weak and nullifies the attacks of the mighty. Should anything manage to survive the Void Spirit's onslaught, he calls upon his mastery of the ultimate Astral Step technique, dashing through space and time to attack and mark enemies for death not once, but twice.",
+  "history": "Not even the other spirits claim to understand the mind and machinations of the eldest amongst them, Inai the Void Spirit. Privy to secrets that would shatter a mortal mind, the Void Spirit observes the workings of the universe from an unknowable vantage, choosing to let carefully groomed servants do his bidding -- only emerging from his Hidden Temple into the material plane when he deems that he alone can steer the course of reality along its proper path. With an expansive perspective on existence, Inai is focused intently on a point in time beyond which he cannot see, when the fabrics of multiple realities are fated to collide. Now he steps from the aether to personally resolve the battle of the Ancients and prepare his allies for what he views as a greater conflict to come.",
+  "talents": [
+    {
+      "talentLvl": "25",
+      "talentLeft": "Dissimilate Stuns for 2.5s",
+      "talentRight": "Astral Step 160% Crit"
+    },
+    {
+      "talentLvl": "20",
+      "talentLeft": "-5 Astral Step Charge Restore Time",
+      "talentRight": "+14% Spell Amplification"
+    },
+    {
+      "talentLvl": "15",
+      "talentLeft": "+80 Resonant Pulse Damage",
+      "talentRight": "Remnant Provides 475 Truesight"
+    },
+    {
+      "talentLvl": "10",
+      "talentLeft": "+15 Damage",
+      "talentRight": "+2.5 Mana Regen"
+    }
+  ]
+}

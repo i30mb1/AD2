@@ -1,0 +1,271 @@
+{
+  "abilities": [
+    {
+      "notes": [
+        "The health talent increases maximum health capacity, and keeps the current health percentage.",
+        "The agility talent effectively grants Hoodwink 2.33 armor, 14 attack speed, and 14 attack damage.",
+        "The armor corruption lasts 10 seconds, and stacks with the Armor Corruption talents of other heroes.",
+        "Armor Corruption from talents is not disabled by Break."
+      ],
+      "spellName": "Talent",
+      "talents": [
+        {
+          "talentLvl": "25",
+          "talentLeft": "Sharpshooter Pure Damage and Pierces Spell Immunity",
+          "talentRight": "2 Acorn Shot Charges"
+        },
+        {
+          "talentLvl": "20",
+          "talentLeft": "-3 Armor Corruption",
+          "talentRight": "25% Sharpshooter Faster Projectile \/ Charge Time"
+        },
+        {
+          "talentLvl": "15",
+          "talentLeft": "+14 Agility",
+          "talentRight": "Scurry Camouflage"
+        },
+        {
+          "talentLvl": "10",
+          "talentLeft": "-3s Bushwhack Cooldown",
+          "talentRight": "+175 Health"
+        }
+      ]
+    },
+    {
+      "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/a\/a0\/Hoodwink_Acorn_Shot_1.mp3\/revision\/latest?cb=20201219182025",
+      "effects": [
+        "Ability Target Point \/ Target Unit",
+        "Affects Enemies",
+        "Damage Instant Attack"
+      ],
+      "notes": [
+        "The cast range of Acorn Shot is based on the attack range of the caster. Together with the ability's own bonus, Acorn Shot effectively has a cast range of 1100. The cast range can be further increased by other attack range bonuses, and is also affected by cast range bonuses.",
+        "Together with the ability's own bonus, Acorn Shot effectively has a cast range of 1100.",
+        "The cast range can be further increased by other attack range bonuses, and is also affected by cast range bonuses.",
+        "The acorn travels at a speed of 2000.",
+        "The projectile bounces in 0.1-second intervals.",
+        "Can bounce on the same unit multiple times, but only when another target was hit between the bounces.",
+        "Cannot bounce on invisible, invulnerable or hidden units, but can bounce on units in the Fog of War.",
+        "When targeting a unit, the initial hit is not counted towards the bounce limit, so that up to 3\/4\/5\/6 hits can be achieved.",
+        "Makes Hoodwink perform an instant attack on the enemies upon projectile hit. These attacks do not have True Strike, but ignore disarms. Can trigger any attack modifier and on-hit effects normally.",
+        "These attacks do not have True Strike, but ignore disarms.",
+        "Can trigger any attack modifier and on-hit effects normally.",
+        "The slow is independent from the instant attack, and is placed even when the instant attack misses.",
+        "The projectile first performs the instant attack, and then applies the debuff.",
+        "The projectile provides 200 radius flying vision around itself as it travels. This vision does not last.",
+        "When targeting the ground, a tree gets planted upon reaching that point. Planted trees have a smaller collision size and block less vision than regular trees. Tango heals for twice as long when targeting a Acorn Shot tree, using the iron branch duration instead of the tree duration.",
+        "Tango heals for twice as long when targeting a Acorn Shot tree, using the iron branch duration instead of the tree duration.",
+        "When targeting the ground, the planted tree provides 200 radius ground vision around itself, that lasts for 20 seconds or until the tree is destroyed."
+      ],
+      "mana": "75\/85\/95\/105",
+      "hotKey": "Q",
+      "cooldown": "16\/14\/12\/10 (TagTalent 0)",
+      "description": "Fires Hoodwink's attack with an acorn at the target unit. The acorn bounces to nearby targets, slowing them and dealing bonus damage. If point targeted, a tree is created at the target position and the acorn will bounce to nearby targets.",
+      "spellName": "Acorn Shot",
+      "params": [
+        "Cast Animation: 0.2+1.37",
+        "Bounce Distance: 525",
+        "Attack Range Bonus: 125\/200\/275\/350",
+        "Attack Damage Bonus: 20\/40\/60\/80",
+        "Number of Bounces: 2\/3\/4\/5",
+        "Move Speed Slow: 100%",
+        "Slow Duration: 0.25",
+        "Tree Duration: 20",
+        "Number of Charges: 2",
+        "Charge Replenish Time: 16\/14\/12\/10",
+        "Can target spell immune enemies. Instant attack pierces spell immunity. Slow does not pierce spell immunity.",
+        "Blocked fully only when primary target. Not blocked when ground-targeted or as secondary target.",
+        "When directly targeted, disjointing makes it place a tree instead, and continue bouncing from there. As a secondary target, disjointing stops the bouncing as well."
+      ],
+      "itemBehaviour": [],
+      "legacyKey": "C",
+      "story": "Though she'll make do with almost anything, Oak and Ironwood acorns make the most effective projectiles -- and the bulk of Hoodwink's stash."
+    },
+    {
+      "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/d\/db\/Hoodwink_Bushwhack_1.mp3\/revision\/latest?cb=20201219182032",
+      "effects": [
+        "Ability Target Area",
+        "Affects Enemies",
+        "Damage Magical"
+      ],
+      "notes": [
+        "The projectile travels at a speed of 1000.",
+        "Bushwhack can hit units up to 1275 range away (maximum cast range + radius).",
+        "If there are no trees within the area, nothing happens.",
+        "Hit enemies are stunned and moved towards the tree closest to the center of the targeted point. However, if there is another tree in the way, the unit is bound to that tree instead. Moves units towards the tree at a speed of 1000.",
+        "However, if there is another tree in the way, the unit is bound to that tree instead.",
+        "Moves units towards the tree at a speed of 1000.",
+        "Bound units can be freed by destroying the tree they are bound to.",
+        "Bound units are also freed when any form of forced movement is applied on them.",
+        "If Bushwhack binds a unit to a planted tree with an expiration timer, that planted tree cannot expire until Bushwhack ends.",
+        "Exposes hit enemies for the debuff duration, revealing their exact location.",
+        "Provides 275 radius flying vision at the target location upon reaching it, lasting for 1.3\/1.6\/1.9\/2.2 seconds.",
+        "Affects units inside the Fog of War, but not invisible units."
+      ],
+      "mana": "90\/100\/110\/120",
+      "hotKey": "W",
+      "cooldown": "14 (TagTalent 11)",
+      "description": "Tosses a net trap that stuns enemy heroes if they are near a tree in the area. Affected enemies take damage and are pulled towards the tree nearest to them, and have their vision reduced to 0 for the duration of the stun.",
+      "spellName": "Bushwhack",
+      "params": [
+        "Cast Animation: 0.2+1.07",
+        "Cast Range: 1000",
+        "Radius: 275",
+        "Damage: 90\/180\/270\/360",
+        "Stun Duration: 1.3\/1.6\/1.9\/2.2"
+      ],
+      "itemBehaviour": [],
+      "legacyKey": "W",
+      "story": "Hoodwink favors Ironwood groves for ambushes, but the wary step carefully in all areas of the mistwoods."
+    },
+    {
+      "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/5\/53\/Hoodwink_Scurry_1.mp3\/revision\/latest?cb=20201219182019",
+      "effects": [
+        "Ability No Target \/ Passive",
+        "Affects Self"
+      ],
+      "notes": [
+        "Hoodwink gets all 2 charges immediately upon learning Scurry.",
+        "Interrupts Hoodwink's channeling spells upon cast.",
+        "Grants phased movement and tree-walking to Hoodwink.",
+        "Scurry's evasion stacks multiplicatively with other sources of evasion.",
+        "Scurry's evasion uses pseudo-random distribution.",
+        "The modifier_hoodwink_scurry_passive modifier is hidden by default, and turns visible when near a tree.",
+        "When the level 15 talent is chosen, Hoodwink turns invisible and phased when standing still within range of a tree for 1.2 seconds. The invisibility is broken upon reaching the cast point of spells or items, or upon launching an attack. Other orders do not break it. The invisibility is also lost upon position changes. This means Forced movement breaks it as well. This also means that when given move commands, the invisibility is not broken while turning, but breaks when the actual moving starts.",
+        "The invisibility is broken upon reaching the cast point of spells or items, or upon launching an attack. Other orders do not break it.",
+        "The invisibility is also lost upon position changes. This means Forced movement breaks it as well.",
+        "This also means that when given move commands, the invisibility is not broken while turning, but breaks when the actual moving starts."
+      ],
+      "mana": "35",
+      "hotKey": "E",
+      "cooldown": "0",
+      "description": "Hoodwink passively has a chance to evade physical attacks while near trees. When activated, Hoodwink gains bonus movement speed, phased collision, and tree-walking for a brief time.",
+      "spellName": "Scurry",
+      "params": [
+        "Cast Animation: 0+0",
+        "Passive Tree Search Radius: 275",
+        "Passive Evasion: 8%\/16%\/24%\/32%",
+        "Active Move Speed Bonus: 25%\/30%\/35%\/40%",
+        "Active Duration: 4",
+        "Number of Charges: 2",
+        "Charge Replenish Time: 30\/25\/20\/15",
+        "Passive Invisibility Fade Delay: 1.2",
+        "The passive evasion as well as the invisibility from the talent are disabled by Break.",
+        "Passive evasion, as well as the invisibility from the talent work for illusions."
+      ],
+      "itemBehaviour": [],
+      "legacyKey": "R",
+      "story": "There's not a nook or cranny in the Wood Tomo'kan out of reach of Hoodwink's paws."
+    },
+    {
+      "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/d\/d2\/Hoodwink_Sharpshooter_1.mp3\/revision\/latest?cb=20201219182022",
+      "effects": [
+        "Ability Target Point",
+        "Affects Enemy Heroes",
+        "Damage Magical (TagAghanim Pure)"
+      ],
+      "notes": [
+        "For better readability, the turn rate during Sharpshooter is given as degrees per second, instead of radians per 0.03 seconds. 60 degrees per second equal a turn rate of 0.031.",
+        "60 degrees per second equal a turn rate of 0.031.",
+        "A timer above Hoodwink's head shows how much time is left before the bolt releases. This timer is visible to everyone.",
+        "The direction can be changed with a move order. A move order is given by right-clicking, or by pressing the move hotkey and selecting a target point. A line indicator is cast in front of Hoodwink while aiming the shot, showing the path it will take once released. The indicator also shows for how long it is being charged, starting out green, slowly turning red over 5 seconds. Provides 100 radius flying vision along the indactor while charging up. This vision moves along with the indicator and does not linger. The indicator is visible to the player only. Neither allies nor enemies can see it.",
+        "A line indicator is cast in front of Hoodwink while aiming the shot, showing the path it will take once released.",
+        "The indicator also shows for how long it is being charged, starting out green, slowly turning red over 5 seconds.",
+        "Provides 100 radius flying vision along the indactor while charging up. This vision moves along with the indicator and does not linger.",
+        "The indicator is visible to the player only. Neither allies nor enemies can see it.",
+        "Hoodwink can still perform other actions during Sharpshooter. Non-targeted spells and items are used normally. However, targeted items that require facing can only be cast when targeted within her current facing direction. Targeting outside her facing direction causes her to get locked in position until the stop or hold command are used.",
+        "However, targeted items that require facing can only be cast when targeted within her current facing direction.",
+        "Targeting outside her facing direction causes her to get locked in position until the stop or hold command are used.",
+        "Hoodwink is disarmed during Sharpshooter. Attack orders behave like move orders during disarms, so right-clicking an enemy sets a new location as well.",
+        "Sharpshooter cannot be canceled by anything besides the own sub-spell and death. It cannot be interrupted by disables.",
+        "Once released, Hoodwink gets knocked back in an arc with a height of 75 and distance of up to 350 over up to 0.4 seconds, or until touching the ground again. This means the knockback distance and duration can be reduced\/increased by jumping up\/down a cliff or a ramp.",
+        "This means the knockback distance and duration can be reduced\/increased by jumping up\/down a cliff or a ramp.",
+        "The damage starts at 0 and increases by 20\/33.33\/46.67 (TagTalent 26.67\/44.44\/62.22) for each 0.03 seconds charged, reaching the full damage in 3 seconds.",
+        "The debuff duration starts at 0 and increases by 0.2 (TagTalent 0.27) for each 0.03 seconds charged, reaching the full duration in 3 seconds.",
+        "The bolt travels at a speed of 2200 (TagTalent 2750), and travels for the full distance, or until hitting a valid target.",
+        "The bolt starts on Hoodwink's position. It can hit units up to 3125 range away. It does not search for units behind the starting location.",
+        "Can only hit heroes and creep-heroes. Does not hit invulnerable or hidden units, flying right through them.",
+        "The bolt first applies the debuff, and then the damage.",
+        "The bolt provides 350 radius flying vision as it travel. This vision does not linger.",
+        "The cast backswing starts the moment the cast begins, so the effective backswing depends on when the shot was released. This means the backswing can range from 4.5 to 9.5 seconds.",
+        "This means the backswing can range from 4.5 to 9.5 seconds."
+      ],
+      "mana": "150",
+      "hotKey": "R",
+      "cooldown": "45",
+      "description": "Hoodwink charges up and fires a deadly bolt from her crossbow, dealing heavy damage, slow, and Break to an enemy Hero. The damage and debuff duration scale up to max after 3 seconds, and the bolt is fired automatically after 5 seconds. Hoodwink is knocked backwards for a distance of 350 from the force of the shot.",
+      "spellName": "Sharpshooter",
+      "params": [
+        "Cast Animation: 0+9.5",
+        "Cast Range: 3000",
+        "Max Travel Distance: 3000",
+        "Bolt Collision Radius: 125",
+        "Turn Rate in Degrees per Second: 60",
+        "Max Charge Time: 3 (TagTalent 2.25)",
+        "Max Aim Time: 5",
+        "Self Knockback Distance: 350",
+        "Max Damage: 600\/1000\/1400",
+        "Move Speed Slow: 50%",
+        "Max Slow Duration: 6",
+        "Self Knockback Duration: 0.4",
+        "Does not collide with spell immune units. Fully pierces spell immunity."
+      ],
+      "itemBehaviour": [],
+      "legacyKey": "T",
+      "story": "While her first arbalest was a chance discovery, Hoodwink now takes great care in carving and caring for her own -- of course with some necessary components pilfered or otherwise cleverly procured."
+    },
+    {
+      "audioUrl": null,
+      "effects": [
+        "Ability No Target"
+      ],
+      "notes": [
+        "Replaces Sharpshooter until the bolt is released.",
+        "Interrupts Hoodwink's channeling spells upon cast."
+      ],
+      "mana": "0",
+      "hotKey": "R",
+      "cooldown": "0",
+      "description": "Release the charged shot, regain ability to move and attack.",
+      "spellName": "End Sharpshooter",
+      "params": [
+        "Cast Animation: 0+0"
+      ],
+      "itemBehaviour": [],
+      "legacyKey": "T",
+      "story": "Fire!"
+    }
+  ],
+  "mainAttributes": {
+    "attrStrengthInc": 1.8,
+    "attrStrength": 17.0,
+    "attrIntelligence": 21.0,
+    "attrIntelligenceInc": 2.9,
+    "attrAgilityInc": 3.6,
+    "attrAgility": 24.0
+  },
+  "description": "Hoodwink is a tricky ranged agility hero who runs wild through the trees of Mistwoods. Firing Acorn Shots from her arbalest, she creates new forests through which to Scurry. For her foes, the woods are a dangerous place, full of Bushwhack traps and vantage points for the Sharpshooter to aim the ultimate crossbow shot. This crafty critter should never be underestimated.",
+  "history": "Hoodwink's earliest years were spent in the idyllic expanse of green that once filled the edges of Krimwohl. But as that kingdom grew, and the needs of both her citizens and her armies became ravenous, rival ore and timber barons scratched and clawed to outpace each other in devouring the natural beauty of the border forests, gorging themselves to meet the demands of the changing land. To those living in the ancient timberlands, the choice came down to following the line of refugees into the pacified zones, falling to Krimwohl's black powder and steel while defending their homes, or fleeing further north to tempt fate in the haunted glens and groves of the misty Wood Tomo'kan. So it was in those treacherous northern mistwoods that Hoodwink came of age, dodging the horrific predators of the Tomo'kan, ingratiating herself with some of the local banditry whilst antagonizing others, and finding absolutely every which way to be underfoot whenever some interesting mischief arose--often allegedly the cause of it. But when the faintest whiff of Krimwohl's fires eventually drifted into her adopted home, Hoodwink's thoughts turned to any family and friends who might have survived the invasion--now made to eke out lives in the razed lands whose wounds scarred her very soul--and she couldn't help but approach the edges of civilization to get a glimpse of the devils that had destroyed her old life. There, she saw that the monsters from her childhood weren't monsters at all. They were just...people. Soldiers, laborers, merchants...and refugees. And the soldiers, even with their black powder and steel, were nothing compared to the dangers of the Tomo'kan--real dangers with tentacles and teeth--dangers she danced around like a twirling maple seed. Knowing she can always find safe passage in the tangles of the Tomo'kan, where most warm-blooded folk wisely fear to tread, Hoodwink now strikes out against those who dare try to further pacify the wilds, happily taking what she likes from their belongings, destroying what she has no use for, and helping guide any kindred survivors back to a life in the green once again.",
+  "talents": [
+    {
+      "talentLvl": "25",
+      "talentLeft": "Sharpshooter Pure Damage and Pierces Spell Immunity",
+      "talentRight": "2 Acorn Shot Charges"
+    },
+    {
+      "talentLvl": "20",
+      "talentLeft": "-3 Armor Corruption",
+      "talentRight": "25% Sharpshooter Faster Projectile \/ Charge Time"
+    },
+    {
+      "talentLvl": "15",
+      "talentLeft": "+14 Agility",
+      "talentRight": "Scurry Camouflage"
+    },
+    {
+      "talentLvl": "10",
+      "talentLeft": "-3s Bushwhack Cooldown",
+      "talentRight": "+175 Health"
+    }
+  ]
+}

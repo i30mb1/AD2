@@ -1,0 +1,47 @@
+{
+  "abilities": [
+    {
+      "audioUrl": null,
+      "effects": [
+        "Ability No Target",
+        "Affects Self"
+      ],
+      "notes": [
+        "Interrupts the user's channeling spells upon cast.",
+        "Switches attributes as follows: Strength > Intelligence Intelligence > Agility Agility > Strength",
+        "Strength > Intelligence",
+        "Intelligence > Agility",
+        "Agility > Strength",
+        "Current health and mana percentages stay unchanged upon switching attributes."
+      ],
+      "mana": null,
+      "abilityName": "Switch Attribute",
+      "cooldown": "0",
+      "description": "There is no description for this ability.",
+      "params": [
+        "Selected Attribute Bonus: 10",
+        "Other Attributes Bonus: 5",
+        "Strength Magic Resistance Bonus: 10%",
+        "Agility Attack Speed Bonus: 10",
+        "Intelligence Spell Damage Bonus: 6%"
+      ],
+      "itemBehaviour": [],
+      "story": null
+    }
+  ],
+  "additionalInformation": [
+    "Vambraces are fully sharable.",
+    "The Vambrace's initial status is always strength.",
+    "One Vambrace grants a total of:"
+  ],
+  "cost": "N\/A",
+  "lore": null,
+  "consistFrom": null,
+  "boughtFrom": "Neutral Drop Only",
+  "name": "Vambrace",
+  "description": "",
+  "trivia": null,
+  "upgradeIn": null,
+  "bonuses": null,
+  "tips": null
+}

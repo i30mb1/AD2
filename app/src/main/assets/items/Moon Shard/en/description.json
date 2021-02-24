@@ -1,0 +1,76 @@
+{
+  "abilities": [
+    {
+      "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/a\/aa\/Moon_Shard_Consume.mp3\/revision\/latest?cb=20191227195508",
+      "effects": [
+        "Ability Target Unit",
+        "Affects Allied Heroes"
+      ],
+      "notes": [
+        "Double clicking the item casts it on self.",
+        "A hero cannot consume more than one Moon Shard.",
+        "Once consumed the item remains factored into the hero's net worth and GPM.",
+        "Can target Spirit Bear as well, but not other creep-heroes.",
+        "Cannot target illusions, Tempest Doubles or Meepo clones. Illusions and Tempest Doubles copy the Moon Shard buff, if the main hero has it. However, the buff is not copied by Divided We Stand clones or Wukong's Command clones.",
+        "Illusions and Tempest Doubles copy the Moon Shard buff, if the main hero has it.",
+        "However, the buff is not copied by Divided We Stand clones or Wukong's Command clones.",
+        "Applies its vision before Nightmare reduces it.",
+        "Does not stack with the vision bonus of Shade Sight."
+      ],
+      "mana": null,
+      "abilityName": "Consume",
+      "cooldown": "0",
+      "description": "Consume the Moon Shard to permanently gain 60 attack speed and 200 bonus night vision. Max 1 use.",
+      "params": [
+        "Cast Range: Global",
+        "Attack Speed Bonus: 60",
+        "Night Vision Bonus: 200"
+      ],
+      "itemBehaviour": [],
+      "story": null
+    },
+    {
+      "audioUrl": null,
+      "effects": [
+        "Ability Passive",
+        "Affects Self"
+      ],
+      "notes": [
+        "Applies its vision after Nightmare reduces it.",
+        "Night vision bonuses from multiple shards do not stack.",
+        "Does not stack with the vision bonus of the buff from a consumed Moon Shard, but has precedence over it."
+      ],
+      "mana": null,
+      "abilityName": "Shade Sight",
+      "cooldown": null,
+      "description": "Grants 400 bonus night vision.",
+      "params": [
+        "Night Vision Bonus: 400"
+      ],
+      "itemBehaviour": [],
+      "story": null
+    }
+  ],
+  "cost": "4000",
+  "lore": null,
+  "consistFrom": [
+    "Hyperstone",
+    "Hyperstone"
+  ],
+  "boughtFrom": "Accessories",
+  "name": "Moon Shard",
+  "description": "Said to be a tear from the lunar goddess Selemene.",
+  "trivia": [
+    "Prior to the July 14, 2017 Patch, Moon Shard's active ability, Consume, did not have an official name. The name was taken from the Dota 2 Wiki and officially implemented into Dota 2."
+  ],
+  "upgradeIn": null,
+  "bonuses": [
+    "+140 Attack speed"
+  ],
+  "tips": [
+    "The item works very well with illusions especially with mana burn, critical hits and low base attack time.",
+    "In games where a player finds themselves with more gold than they can spend, due to having all 6 item slots filled out, it may be worth considering purchasing a Moon Shard to consume immediately.",
+    "It may be prudent for players to purchase the Moon Shard as their sixth item, to fill in an inventory slot and gain its full benefits while they farm a seventh item to replace Moon Shard, which only provides half the attack speed and night vision after consumption.",
+    "In very extreme late-game scenarios, heroes that have nothing better to do with their gold should consider buying moonshards to give to their teammates."
+  ]
+}

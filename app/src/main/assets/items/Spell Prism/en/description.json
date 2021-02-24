@@ -1,0 +1,41 @@
+{
+  "abilities": [
+    {
+      "audioUrl": null,
+      "effects": [
+        "Ability Passive",
+        "Affects Self"
+      ],
+      "notes": [
+        "Stacks multiplicatively with other sources of cooldown reduction."
+      ],
+      "mana": null,
+      "abilityName": "Cooldown Reduction",
+      "cooldown": null,
+      "description": "Reduces the cooldown time of all spells and items by 18%.",
+      "params": [
+        "Cooldown Reduction: 18%"
+      ],
+      "itemBehaviour": [],
+      "story": null
+    }
+  ],
+  "additionalInformation": [
+    "Spell Prisms are fully sharable."
+  ],
+  "cost": "N\/A",
+  "lore": null,
+  "consistFrom": null,
+  "boughtFrom": "Neutral Drop Only",
+  "name": "Spell Prism",
+  "description": "Even the slightest flaw in the components of a spell prism can result in the death of its user.",
+  "trivia": null,
+  "upgradeIn": null,
+  "bonuses": [
+    "+12 Strength",
+    "+12 Agility",
+    "+12 Intelligence",
+    "+4 Mana regeneration"
+  ],
+  "tips": null
+}

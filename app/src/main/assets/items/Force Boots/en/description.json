@@ -1,0 +1,66 @@
+{
+  "abilities": [
+    {
+      "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/7\/7a\/Force_Boots_Force.mp3\/revision\/latest?cb=20191227195705",
+      "effects": [
+        "Ability Target Unit",
+        "Affects Enemies \/ Allies"
+      ],
+      "notes": [
+        "Does not interrupt the user's channeling spells upon cast.",
+        "Applies a basic dispel on the user upon cast.",
+        "Pushes the user at a speed of 1.",
+        "The user is not disabled during the push, so they still can cast spells or items, attack and turn during the push.",
+        "Cannot push the user through Kinetic Fields or Arenas of Blood.",
+        "If the user is affected by Soulbind, it cannot push them further than its max stretch distance allows.",
+        "If the user is leashed by Pounce, the leash gets instantly broken upon cast. However, if the user gets leashed after cast, it cannot push them further than the max stretch distance of Pounce allows.",
+        "However, if the user gets leashed after cast, it cannot push them further than the max stretch distance of Pounce allows.",
+        "Can move the user over impassable terrain. Trees within 100 radius around them get destroyed during the push.",
+        "Does not share cooldown with Force Staff or Hurricane Pike."
+      ],
+      "mana": "75",
+      "abilityName": "Force",
+      "cooldown": null,
+      "description": "Dispels the user and pushes them 750 units in the direction they are facing.",
+      "params": [
+        "Cast Range: 750",
+        "Push Distance: 750",
+        "Push Duration: 0.5"
+      ],
+      "itemBehaviour": [],
+      "story": null
+    },
+    {
+      "audioUrl": null,
+      "effects": [
+        "Ability Passive",
+        "Affects Self"
+      ],
+      "notes": [],
+      "mana": null,
+      "abilityName": "Speed Unlock",
+      "cooldown": null,
+      "description": "Completely removes the speed limit for the wearer",
+      "params": [],
+      "itemBehaviour": [],
+      "story": null
+    }
+  ],
+  "additionalInformation": [
+    "Force Boots are fully sharable.",
+    "Movement speed bonuses from multiple pairs of boots do not stack.",
+    "Stacks with all other movement speed bonuses."
+  ],
+  "cost": "N\/A",
+  "lore": null,
+  "consistFrom": null,
+  "boughtFrom": "Neutral Drop Only",
+  "name": "Force Boots",
+  "description": "Elusive marvels never successfully studied for proper classification in the archives.",
+  "trivia": null,
+  "upgradeIn": null,
+  "bonuses": [
+    "+115 Movement speed"
+  ],
+  "tips": null
+}

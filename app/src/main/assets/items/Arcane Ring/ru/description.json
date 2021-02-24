@@ -1,0 +1,44 @@
+{
+  "abilities": [
+    {
+      "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/f\/f0\/Arcane_Ring_Replenish_Mana.mp3\/revision\/latest?cb=20200116232656",
+      "effects": [
+        "Способность Ненаправленная",
+        "Действует на Союзников"
+      ],
+      "notes": [
+        "При использовании прерывает произносимые заклинания владельца.",
+        "Действует на всех союзных юнитов, включая иллюзии, неуязвимых и спрятанных юнитов, но исключая варды и строения.",
+        "Не делит перезарядку с Arcane Boots."
+      ],
+      "mana": null,
+      "abilityName": "Replenish Mana",
+      "cooldown": "45",
+      "description": "Восстанавливает 75 маны всем окружающим союзникам.",
+      "params": [
+        "Радиус: 1200",
+        "Восстанавливает маны: 75"
+      ],
+      "itemBehaviour": [],
+      "story": null
+    }
+  ],
+  "additionalInformation": [
+    "Arcane Ring \u2014 полностью передаваемый предмет."
+  ],
+  "cost": "Н\/Д",
+  "lore": null,
+  "consistFrom": null,
+  "boughtFrom": "нейтральных крипов",
+  "name": "Arcane Ring",
+  "description": "Реликвия, которую некогда оберегал род мелкого лорда.",
+  "trivia": [
+    "Изначально предмет был добавлен в DotA в версии 6.38, но затем его переработали в Arcane Boots. Предмет вновь добавили в Dota 2 в версии 7.23."
+  ],
+  "upgradeIn": null,
+  "bonuses": [
+    "+10 к интеллекту",
+    "+2 к броне"
+  ],
+  "tips": null
+}

@@ -1,0 +1,83 @@
+{
+  "abilities": [
+    {
+      "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/6\/68\/Veil_of_Discord_Magic_Weakness.mp3\/revision\/latest?cb=20191227195544",
+      "effects": [
+        "Ability Target Area",
+        "Affects Enemies"
+      ],
+      "notes": [
+        "Places a debuff on enemy units in the area upon cast. Leaving or entering the area afterwards has no effect.",
+        "Multiple casts on the same targets do not stack, but refresh the duration instead.",
+        "Affects invulnerable, invisible units and units in the Fog of War, but not hidden units.",
+        "Affects magical, physical, and pure spell damage."
+      ],
+      "mana": "50",
+      "abilityName": "Magic Weakness",
+      "cooldown": null,
+      "description": "Cast a 600 radius blast that causes enemies to take 18% increased damage from spells.",
+      "params": [
+        "Cast Range: 1000",
+        "Radius: 600",
+        "Spell Damage Amplification: 18%",
+        "Duration: 16"
+      ],
+      "itemBehaviour": [],
+      "story": null
+    },
+    {
+      "audioUrl": null,
+      "effects": [
+        "Ability Aura",
+        "Affects Allies"
+      ],
+      "notes": [
+        "Can regenerate up to 90 mana in one minute.",
+        "The aura's buff lingers for 0.5 seconds.",
+        "Does not affect invulnerable units.",
+        "Stacks with the Basilius Aura from Ring of Basilius."
+      ],
+      "mana": null,
+      "abilityName": "Basilius Aura",
+      "cooldown": null,
+      "description": "Grants 1.5 mana regeneration to allies.",
+      "params": [
+        "Radius: 1200",
+        "Mana Regeneration Bonus: 1.5",
+        "Aura Linger Duration: 0.5"
+      ],
+      "itemBehaviour": [],
+      "story": null
+    }
+  ],
+  "additionalInformation": [
+    "For strength heroes, it grants 80 health, 0.4 health regen, 0.67 armor, 4 attack speed, 48 mana, 0.2 mana regen and 4 attack damage.",
+    "For agility heroes, it grants 80 health, 0.4 health regen, 0.67 armor, 4 attack speed, 48 mana, 0.2 mana regen and 4 attack damage.",
+    "For intelligence heroes, it grants 80 health, 0.4 health regen, 0.67 armor, 4 attack speed, 48 mana, 0.2 mana regen and 4 attack damage."
+  ],
+  "cost": "1525",
+  "lore": null,
+  "consistFrom": [
+    "Ring of Basilius",
+    "Crown",
+    "Recipe"
+  ],
+  "boughtFrom": "Magical",
+  "name": "Veil of Discord",
+  "description": "The headwear of corrupt magi.",
+  "trivia": null,
+  "upgradeIn": null,
+  "bonuses": [
+    "+4 Strength",
+    "+4 Agility",
+    "+4 Intelligence"
+  ],
+  "tips": [
+    "Consider how much spell damage your team produces when deciding whether or not to buy Veil.",
+    "Veil can be a good purchase if your team overall outputs a good amount of spell damage, even if your own hero doesn't. Due to changes to Spell immunity and improved range of the Veil's debuff, it can be a reliable item by all means.",
+    "It compliments nicely for armor reducing debuffs for casters that deal physical damage with their spells. Also benefits as pure and magical damage.",
+    "Knowing the potentials about magic resistance and armor of the enemy is the main allure of this item. Early game, before anyone can buy a magic resistance artifact or armor, reach their defensive talents or stack enough strength or agility to resist the spell effects lategame; is when Veil of Discord is most destructive.",
+    "Thinking standard 25-30% magic resistance of heroes and no other sources to amplify it further; Veil's debuff treats target as 10-15% magic resistance lost. All inflicted targets incur magical damage at 85-90% efficiency along the duration depends on their stats.",
+    "For physical damage spells, it is roughly equivalent to reducing armor by 3.5 points."
+  ]
+}

@@ -1,0 +1,46 @@
+{
+  "abilities": [
+    {
+      "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/e\/ee\/Sange_Maim.mp3\/revision\/latest?cb=20201008183216",
+      "effects": [
+        "Ability Passive",
+        "Affects Enemies"
+      ],
+      "notes": [
+        "Successive procs on the same target do not stack, but refresh the duration instead.",
+        "The proc chances of Maim from multiple Sange and Sange derived items work fully independently from each other.",
+        "The proccing attack first applies the debuff, then its own damage.",
+        "Does not work against wards and buildings. Works against allied units.",
+        "Maim uses pseudo-random distribution."
+      ],
+      "mana": null,
+      "abilityName": "Maim",
+      "cooldown": null,
+      "description": "Each attack has a 20% chance to reduce enemy hero movement speed by 20% and attack speed by 60 when used by a melee hero. Effect lasts 3 seconds.",
+      "params": [
+        "Proc Chance: 20%",
+        "Move Speed Slow: 20%",
+        "Attack Speed Slow (Melee): 60",
+        "Slow Duration: 3"
+      ],
+      "itemBehaviour": [
+        "(Spell_immunity_block_symbol)^Does not pierce spell immunity\nSlow persists if debuff was placed before spell immunity and when not dispelled."
+      ],
+      "story": null
+    }
+  ],
+  "additionalInformation": [],
+  "cost": "N\/A",
+  "lore": null,
+  "consistFrom": null,
+  "boughtFrom": "Neutral Drop Only",
+  "name": "Penta-Edged Sword",
+  "description": "The final, twisted work of a severely pious blacksmith, completed immediately before the taking of his own life.",
+  "trivia": null,
+  "upgradeIn": null,
+  "bonuses": [
+    "+45 Attack damage",
+    "+80 Attack range (melee)"
+  ],
+  "tips": null
+}

@@ -1,0 +1,19 @@
+{
+  "abilities": [],
+  "cost": "250",
+  "lore": null,
+  "consistFrom": null,
+  "boughtFrom": "Разное",
+  "name": "Fluffy Hat",
+  "description": "Мягчайшие меха для модного молодца.",
+  "trivia": null,
+  "upgradeIn": [
+    "Orb of Corrosion",
+    "Falcon Blade",
+    "Holy Locket"
+  ],
+  "bonuses": [
+    "+125 к здоровью"
+  ],
+  "tips": null
+}

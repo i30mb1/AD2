@@ -1,0 +1,66 @@
+{
+  "abilities": [
+    {
+      "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/4\/4e\/Magic_Stick_Energy_Charge.mp3\/revision\/latest?cb=20191227195452",
+      "effects": [
+        "Ability No Target",
+        "Affects Self"
+      ],
+      "notes": [
+        "Interrupts the user's channeling spells upon cast.",
+        "Gains 1 charge whenever a visible enemy unit, including neutral creeps, uses an ability within the radius.",
+        "Does not gain charges from toggle abilities, active attack modifiers and the abilities listed here.",
+        "Clones, illusions and creep-heroes cannot gain charges.",
+        "Passively triggered spells (e.g. Quill Spray, Borrowed Time, Multicast, Reincarnation) do not add charges.",
+        "When an enemy casts a spell out of the invisibility from the Invisibility Rune, Shadow Walk, Sand Storm, Moonlight Shadow, or Shukuchi, it does not give a charge.",
+        "Can restore up to 300 health and mana when having the maximum amount of charges.",
+        "Shares cooldown with Magic Stick and Holy Locket.",
+        "When having multiple Magic Wands or Magic Sticks in the inventory, the oldest one gains charges first. If it is full, the second oldest one starts to gain charges.",
+        "Upon upgrading a Magic Stick into a Magic Wand, all its current charges are carried over. Upon upgrading a Magic Wand into a Holy Locket, all its current charges are carried over.",
+        "Upon upgrading a Magic Wand into a Holy Locket, all its current charges are carried over."
+      ],
+      "mana": null,
+      "abilityName": "Energy Charge",
+      "cooldown": "13",
+      "description": "Instantly restores 15 health and mana per charge stored. Max 20 charges. Gains a charge whenever a visible enemy within 1200 range uses an ability.",
+      "params": [
+        "Radius: 1200",
+        "Charges per Cast Spell: 1",
+        "Max Charges: 20",
+        "Health and Mana Restored per Charge: 15"
+      ],
+      "itemBehaviour": [],
+      "story": null
+    }
+  ],
+  "additionalInformation": [
+    "For strength heroes, it grants 60 health, 0.3 health regen, 0.5 armor, 3 attack speed, 36 mana, 0.15 mana regen and 3 attack damage.",
+    "For agility heroes, it grants 60 health, 0.3 health regen, 0.5 armor, 3 attack speed, 36 mana, 0.15 mana regen and 3 attack damage.",
+    "For intelligence heroes, it grants 60 health, 0.3 health regen, 0.5 armor, 3 attack speed, 36 mana, 0.15 mana regen and 3 attack damage."
+  ],
+  "cost": "450",
+  "lore": null,
+  "consistFrom": [
+    "Magic Stick",
+    "Iron Branch",
+    "Iron Branch",
+    "Recipe"
+  ],
+  "boughtFrom": "Accessories",
+  "name": "Magic Wand",
+  "description": "A simple wand used to channel magic energies, it is favored by apprentice wizards and great warlocks alike.",
+  "trivia": null,
+  "upgradeIn": [
+    "Holy Locket"
+  ],
+  "bonuses": [
+    "+3 Strength",
+    "+3 Agility",
+    "+3 Intelligence"
+  ],
+  "tips": [
+    "Magic Wand allows you to get a quick burst of healing in dire situations, or to use one last ability in a fight. Even during the midgame, when the boost is less noticeable, a Magic Wand can still save your life if you are in danger.",
+    "The Magic Wand makes an excellent item against heroes that spam abilities while in the lane, as the charges can help to mitigate damage you take, or to cast more of your own abilities.",
+    "The Iron Branches needed to build Magic Wand are common to buy early on in the game, giving a suitable route of making a cost effective build, and emptying up the inventory space without having to sell items."
+  ]
+}

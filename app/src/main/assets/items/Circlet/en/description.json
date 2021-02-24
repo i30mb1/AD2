@@ -1,0 +1,27 @@
+{
+  "abilities": [],
+  "additionalInformation": [
+    "For strength heroes, it grants 40 health, 0.2 health regen, 0.33 armor, 2 attack speed, 24 mana, 0.1 mana regen and 2 attack damage.",
+    "For agility heroes, it grants 40 health, 0.2 health regen, 0.33 armor, 2 attack speed, 24 mana, 0.1 mana regen and 2 attack damage.",
+    "For intelligence heroes, it grants 40 health, 0.2 health regen, 0.33 armor, 2 attack speed, 24 mana, 0.1 mana regen and 2 attack damage."
+  ],
+  "cost": "155",
+  "lore": null,
+  "consistFrom": null,
+  "boughtFrom": "Attributes",
+  "name": "Circlet",
+  "description": "An elegant circlet designed for human princesses.",
+  "trivia": null,
+  "upgradeIn": [
+    "Bracer",
+    "Wraith Band",
+    "Null Talisman",
+    "Urn of Shadows"
+  ],
+  "bonuses": [
+    "+2 Strength",
+    "+2 Agility",
+    "+2 Intelligence"
+  ],
+  "tips": null
+}

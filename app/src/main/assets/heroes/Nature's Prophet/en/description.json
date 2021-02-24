@@ -1,0 +1,218 @@
+{
+  "abilities": [
+    {
+      "notes": [
+        "This attack damage talent is added as raw attack damage, so it does not benefit illusions, and is not affected by most percentage-based damage increasing or reducing effects.",
+        "The cooldown reduction talent stacks multiplicatively with other sources cooldown reduction.",
+        "The armor talent does not benefit illusions."
+      ],
+      "spellName": "Talent",
+      "talents": [
+        {
+          "talentLvl": "25",
+          "talentLeft": "2x Treant HP\/Damage",
+          "talentRight": "Removed Teleportation Cooldown"
+        },
+        {
+          "talentLvl": "20",
+          "talentLeft": "20% Cooldown Reduction",
+          "talentRight": "+8 Armor"
+        },
+        {
+          "talentLvl": "15",
+          "talentLeft": "+5 Treants Summoned",
+          "talentRight": "+25 Attack Speed"
+        },
+        {
+          "talentLvl": "10",
+          "talentLeft": "+25 Wrath of Nature Base Damage",
+          "talentRight": "+20 Damage"
+        }
+      ]
+    },
+    {
+      "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/5\/55\/Nature%27s_Prophet_Sprout_1.mp3\/revision\/latest?cb=20191216020912",
+      "effects": [
+        "Ability Target Point \/ Target Unit"
+      ],
+      "notes": [
+        "Can directly be cast on any unit which is not a building or a ward and not invulnerable or hidden.",
+        "Creates a planted tree on every 45th degree of a 150 radius circle, resulting in 8 trees forming a ring and trapping the targeted unit.",
+        "Destroying one tree is enough to allow units to walk in and out of the ring of trees.",
+        "Trees created with Sprout act exactly like the other trees on the map. They block vision, pathing and interact with spells the same way.",
+        "Sprout grants 500 range flying vision around the targeted point for its duration.",
+        "Cannot be directly cast on ancient creeps and creep-heroes.",
+        "Units not controlled by any player do not try to path around the Sprout trees, but simply walk against them as if they are not there. This effectively causes them to get stuck, until they change directions (e.g. when aggro-ing them).",
+        "This effectively causes them to get stuck, until they change directions (e.g. when aggro-ing them).",
+        "Sprout trees have a different model and are smaller than other trees on the map and they do not have a dying animation.",
+        "Tango heals for twice as long when targeting a Sprout tree.",
+        "With Aghanim's Shard, Sprout trees summon Greater Treants upon getting destroyed. Only the first 2 trees of Sprout that get destroyed summon the treants. All remaining trees of that cast do not. It does not matter how they get destroyed. Expiring Sprout trees summon them as well. If there are Greater Treants alive from a previous cast, they get instantly killed if new ones are summoned. If Nature's Call is not learnt, the treants do not spawn. In Ability Draft, Nature's Call must be drafted as well for the Greater Treants to spawn.",
+        "Only the first 2 trees of Sprout that get destroyed summon the treants. All remaining trees of that cast do not.",
+        "It does not matter how they get destroyed. Expiring Sprout trees summon them as well.",
+        "If there are Greater Treants alive from a previous cast, they get instantly killed if new ones are summoned.",
+        "If Nature's Call is not learnt, the treants do not spawn.",
+        "In Ability Draft, Nature's Call must be drafted as well for the Greater Treants to spawn."
+      ],
+      "mana": "70\/90\/110\/130",
+      "hotKey": "Q",
+      "cooldown": "11\/10\/9\/8 (TagTalent 8.8\/8\/7.2\/6.4)",
+      "description": "Sprouts a ring of trees around a unit, trapping it in place, and providing vision in a 500 radius.",
+      "spellName": "Sprout",
+      "params": [
+        "Cast Animation: 0.35+0.44",
+        "Cast Range: 625\/700\/775\/850",
+        "Trees Spawn Radius: 150",
+        "Duration: 3\/4\/5\/6",
+        "Number of Greater Treants: 2",
+        "Causes the first two trees destroyed with Sprout to summon Greater Treants. Can only have two Greater Treants alive.",
+        "Cannot directly target spell immune enemies, targets ground instead. Can target spell immune allies.",
+        "Blocked fully only when directly targeted. Does not block when ground targeted."
+      ],
+      "itemBehaviour": [],
+      "legacyKey": "T",
+      "story": "Verdant overgrowth is a common ailment reported by Nature's Prophet's attackers."
+    },
+    {
+      "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/d\/d4\/Nature%27s_Prophet_Teleportation_1.mp3\/revision\/latest?cb=20191216020913",
+      "effects": [
+        "Ability Target Point",
+        "Affects Self"
+      ],
+      "notes": [
+        "Disjoints projectiles upon teleporting.",
+        "Double-tapping the ability automatically targets the team's Fountain.",
+        "Unlike the teleports from Town Portal Scroll and Boots of Travel, canceling this one does not consume the cooldown and mana.",
+        "During the cast time, a visual effect is created around Nature's Prophet and at the target location. These visual effects are visible to everyone.",
+        "Also plays a sound at the target location, however, this is only audible to enemies when Nature's Prophet is visible to them."
+      ],
+      "mana": "50",
+      "hotKey": "W",
+      "cooldown": "50\/40\/30\/20 (TagTalent 40\/32\/24\/16)",
+      "description": "Teleports to any point on the map.",
+      "spellName": "Teleportation",
+      "params": [
+        "Cast Animation: 3+0",
+        "Cast Range: Global"
+      ],
+      "itemBehaviour": [],
+      "legacyKey": "R",
+      "story": "The Prophet keeps his sentinel over the forest, protecting it when in need."
+    },
+    {
+      "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/f\/f4\/Nature%27s_Prophet_Nature%27s_Call.mp3\/revision\/latest?cb=20191216020911",
+      "effects": [
+        "Ability Target Area",
+        "Affects Trees"
+      ],
+      "notes": [
+        "Nature's Call can only create as many treants as there are trees in the targeted area.",
+        "Destroys all trees in the target area, regardless of how many treants are created.",
+        "Treants always spawn at the center of the area.",
+        "Must have at least 1 tree within its area to be castable. Targeting an area without trees gives an error message. However, if trees within the targeted area disappear during the cast time, the spell is not canceled, wasting mana and cooldown.",
+        "However, if trees within the targeted area disappear during the cast time, the spell is not canceled, wasting mana and cooldown.",
+        "Despite the description, the level 25 talent does not multiply the health and damage values by 2. Instead, it adds 550 health and 22\/26\/30\/34 min\/max attack damage to the Treants and Greater Treants. This effectively doubles the health and attack damage for the regular Treants, but not that of Greater Treants. This also causes the attack damage of Greater Treants to start scaling with the ability's level.",
+        "Instead, it adds 550 health and 22\/26\/30\/34 min\/max attack damage to the Treants and Greater Treants.",
+        "This effectively doubles the health and attack damage for the regular Treants, but not that of Greater Treants.",
+        "This also causes the attack damage of Greater Treants to start scaling with the ability's level."
+      ],
+      "mana": "130\/140\/150\/160",
+      "hotKey": "E",
+      "cooldown": "37 (TagTalent 29.6)",
+      "description": "Converts an area of trees into Treants under the command of Nature's Prophet.",
+      "spellName": "Nature's Call",
+      "params": [
+        "Cast Animation: 0.5+1.23",
+        "Cast Range: 750",
+        "Radius: 150\/225\/300\/375 (TagTalent 275\/350\/425\/500)",
+        "Number of Treants: 2\/3\/4\/5 (TagTalent 7\/8\/9\/10)",
+        "Treant Duration: 60"
+      ],
+      "itemBehaviour": [],
+      "legacyKey": "F",
+      "story": "Verodicia bestowed the Prophet with the ability to summon the Treant Guard, a mythical sentient army of the wild."
+    },
+    {
+      "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/7\/7a\/Nature%27s_Prophet_Wrath_of_Nature_1.mp3\/revision\/latest?cb=20191216020919",
+      "effects": [
+        "Ability Target Point \/ Target Unit",
+        "Affects Enemies",
+        "Damage Magical"
+      ],
+      "notes": [
+        "Wrath of Nature can be cast on the ground. It automatically jumps on the closest visible enemy.",
+        "Bounces in 0.25-second intervals, so hitting all targets takes 4.25 seconds. Each bounce increases the current damage by 11%.",
+        "Does not bounce on couriers, invisible units or units in the Fog of War.",
+        "Can never hit the same unit twice per cast.",
+        "This is how much damage each bounce deals on each level (before reductions):",
+        "This is how much damage each bounce deals with the base damage increasing talent on each level (before reductions):",
+        "All bounces together can collectively deal up to 5543.6\/7055.4\/8567.3 (TagTalent 6803.5\/8315.3\/9827.2) damage (before reductions).",
+        "The caster receives one stack of attack damage for each enemy killed by Wrath of Nature. To gain a stack, enemies have to die to the damage. Killing an enemy with the Wrath of Nature debuff does not grant a stack. Each instance has its own independent duration. The status buff shows the current amount of damage the stack provides. There is no stack limit.",
+        "To gain a stack, enemies have to die to the damage. Killing an enemy with the Wrath of Nature debuff does not grant a stack.",
+        "Each instance has its own independent duration.",
+        "The status buff shows the current amount of damage the stack provides. There is no stack limit.",
+        "This is how much attack damage Wrath of Nature can grant with a certain amount of stacks on each level: Level 1: 4 \/ 8 \/ 12 \/ 16 \/ 20 \/ 24 \/ 28 \/ 32 \/ 36 \/ 40 \/ 44 \/ 48 \/ 52 \/ 56 \/ 60 \/ 64 \/ 68 \/ 72 Level 2: 5 \/ 10 \/ 15 \/ 20 \/ 25 \/ 30 \/ 35 \/ 40 \/ 45 \/ 50 \/ 55 \/ 60 \/ 65 \/ 70 \/ 75 \/ 80 \/ 85 \/ 90 Level 3: 6 \/ 12 \/ 18 \/ 24 \/ 30 \/ 36 \/ 42 \/ 48 \/ 54 \/ 60 \/ 66 \/ 72 \/ 78 \/ 84 \/ 90 \/ 96 \/ 102 \/ 108",
+        "Level 1: 4 \/ 8 \/ 12 \/ 16 \/ 20 \/ 24 \/ 28 \/ 32 \/ 36 \/ 40 \/ 44 \/ 48 \/ 52 \/ 56 \/ 60 \/ 64 \/ 68 \/ 72",
+        "Level 2: 5 \/ 10 \/ 15 \/ 20 \/ 25 \/ 30 \/ 35 \/ 40 \/ 45 \/ 50 \/ 55 \/ 60 \/ 65 \/ 70 \/ 75 \/ 80 \/ 85 \/ 90",
+        "Level 3: 6 \/ 12 \/ 18 \/ 24 \/ 30 \/ 36 \/ 42 \/ 48 \/ 54 \/ 60 \/ 66 \/ 72 \/ 78 \/ 84 \/ 90 \/ 96 \/ 102 \/ 108",
+        "",
+        "With Aghanim's Scepter, roots and disarms all hit enemies and provides True Sight over them. The duration starts at 1.6 and increases by 0.094 seconds per bounce. This results in a duration of 1.6\/1.69\/1.79\/1.88\/1.98\/2.07\/2.16\/2.26\/2.35\/2.45\/2.54\/2.64\/2.73\/2.82\/2.92\/3.01\/3.11\/3.2 seconds from the first to the 18th bounce.",
+        "The duration starts at 1.6 and increases by 0.094 seconds per bounce.",
+        "This results in a duration of 1.6\/1.69\/1.79\/1.88\/1.98\/2.07\/2.16\/2.26\/2.35\/2.45\/2.54\/2.64\/2.73\/2.82\/2.92\/3.01\/3.11\/3.2 seconds from the first to the 18th bounce."
+      ],
+      "mana": "175\/225\/275",
+      "hotKey": "R",
+      "cooldown": "85 (TagTalent 68) (TagTalent 60, 48)",
+      "description": "Damaging energy bounces around the map, striking enemies close to the cast point that are in vision. Each enemy hit beyond the first adds damage. Enemies that die under this spell grant you bonus damage for 50 seconds.",
+      "spellName": "Wrath of Nature",
+      "params": [
+        "Cast Animation: 0.5+0.97",
+        "Cast Range: Global",
+        "Bounce Distance: Global",
+        "Number of Bounces: 18",
+        "Damage Increment per Bounce: 11%",
+        "Base Damage: 110\/140\/170 (TagTalent 135\/165\/195)",
+        "Attack Damage Bonus per Kill: 4\/5\/6",
+        "Attack Damage Bonus Duration: 50",
+        "Min Root Duration: 1.6",
+        "Max Root Duration: 3.2",
+        "Lowers cooldown from 85 to 60. Entangles all enemies it hits. Duration scales from 1.6 up to 3.2 seconds at max bounce.",
+        "Blocked fully only when directly targeted. Does not block when ground targeted."
+      ],
+      "itemBehaviour": [],
+      "legacyKey": "W",
+      "story": "Nature's Prophet calls Verodicia's fury to strike down those who might ravage the wilderness."
+    }
+  ],
+  "mainAttributes": {
+    "attrStrengthInc": 2.6,
+    "attrStrength": 21.0,
+    "attrIntelligence": 23.0,
+    "attrIntelligenceInc": 3.7,
+    "attrAgilityInc": 3.6,
+    "attrAgility": 22.0
+  },
+  "description": "Nature's Prophet is a ranged intelligence hero, whose play style is different from most intelligence heroes, because he can be almost anywhere at any given time with his Teleportation. This ability allows him to participate in most ganks and pushes at a moment's notice. With Sprout, he creates a ring of trees, trapping anyone within them in place, serving to disable anyone caught within them. The trees around him serve as his objects of power; using them, he summons sentient tree beings known as Treants from trees on the map with his Nature's Call ability. Wrath of Nature is the main and only directly damaging spell in his arsenal, but it can potentially be very powerful, as it can inflict increased damage with each bounce off subsequent enemies and can clear out multiple creep waves with its moderate cooldown and mana cost. Commonly played as a ganker, offlaner and jungler and known as a strong pusher, Nature's Prophet has superb farming capabilities and global presence, giving him the power to be anywhere on the map. Late-game, Nature's Prophet makes himself useful by constantly distracting and annoying the enemy team by pushing. If attention is not given to him, he can single-handedly win the game by constantly taking several towers or even the Ancient.",
+  "history": "When Verodicia, Goddess of the Woods, had finished filling in the green places, having planted the coiled-up spirit in the seed, having lured the twining waters from deep within the rock, having sworn the sun its full attention to the growing things, she realized that her own time had reached its end, and like one of the leaves whose fate she had imprinted in the seed, she would fall without seeing the fruiting of her dream. It pained her to leave the world bereft, for the sprouts had not yet broken through the soil--and they would be tender and vulnerable to every sort of harm. She found in her seed pouch one last seed that she had missed in the sowing. She spoke a single word into the seed and swallowed it as she fell. Her vast body decomposed throughout the long winter, becoming the humus that would feed the seedlings in the spring. And on the morning of the vernal equinox, before the rest of the forest had begun to wake, that last seed ripened and burst in an instant. From it stepped Nature's Prophet, in full leaf, strong and wise, possessing Verodicia's power to foresee where he would be needed most in defense of the green places--and any who might be fortunate enough to call him an ally.",
+  "talents": [
+    {
+      "talentLvl": "25",
+      "talentLeft": "2x Treant HP\/Damage",
+      "talentRight": "Removed Teleportation Cooldown"
+    },
+    {
+      "talentLvl": "20",
+      "talentLeft": "20% Cooldown Reduction",
+      "talentRight": "+8 Armor"
+    },
+    {
+      "talentLvl": "15",
+      "talentLeft": "+5 Treants Summoned",
+      "talentRight": "+25 Attack Speed"
+    },
+    {
+      "talentLvl": "10",
+      "talentLeft": "+25 Wrath of Nature Base Damage",
+      "talentRight": "+20 Damage"
+    }
+  ]
+}

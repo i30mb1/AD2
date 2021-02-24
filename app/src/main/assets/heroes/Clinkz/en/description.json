@@ -1,0 +1,244 @@
+{
+  "abilities": [
+    {
+      "notes": [
+        "The attack range talent also affects the cast range of Searing Arrows.",
+        "The agility talent effectively grants Clinkz 1.33 armor, 8 attack speed, and 8 attack damage."
+      ],
+      "spellName": "Talent",
+      "talents": [
+        {
+          "talentLvl": "25",
+          "talentLeft": "Searing Arrows Multishot",
+          "talentRight": "+50\/5% Death Pact Health\/Damage"
+        },
+        {
+          "talentLvl": "20",
+          "talentLeft": "-10s Strafe Cooldown",
+          "talentRight": "+125 Attack Range"
+        },
+        {
+          "talentLvl": "15",
+          "talentLeft": "+25 Searing Arrows Damage",
+          "talentRight": "-7s Skeleton Walk Cooldown"
+        },
+        {
+          "talentLvl": "10",
+          "talentLeft": "+1.75 Mana Regen",
+          "talentRight": "+8 Agility"
+        }
+      ]
+    },
+    {
+      "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/d\/d4\/Strafe.mp3\/revision\/latest?cb=20140424025306",
+      "effects": [
+        "Ability No Target",
+        "Affects Self"
+      ],
+      "notes": [
+        "Strafe does not interrupt Clinkz' channeling spells upon cast.",
+        "The evasion works against ranged attacks only.",
+        "Successive casts of Strafe do not stack, but refresh the duration, and update the attack speed to the current level."
+      ],
+      "mana": "40\/50\/60\/70",
+      "hotKey": "Q",
+      "cooldown": "34\/30\/26\/22 (TagTalent 24\/20\/16\/12)",
+      "description": "Clinkz nimbly attacks with a barrage of arrows. Gains 100% evasion against ranged attackers and dramatically increases attack speed for a short time.",
+      "spellName": "Strafe",
+      "params": [
+        "Cast Animation: 0+0",
+        "Attack Speed Bonus: 90\/120\/150\/180",
+        "Ranged Evasion: 100%",
+        "Duration: 3\/4\/5\/6"
+      ],
+      "itemBehaviour": [],
+      "legacyKey": "T",
+      "story": "It's hard to say whether the blur around the Bone Fletcher is from his flaming heart or his speed with the quiver."
+    },
+    {
+      "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/8\/84\/Clinkz_Searing_Arrows_1.mp3\/revision\/latest?cb=20191216012119",
+      "effects": [
+        "Ability Target Unit \/ Autocast",
+        "Affects Enemies",
+        "Damage Physical (TagAghanim Instant Attack)"
+      ],
+      "notes": [
+        "The bonus damage is dealt in a separate damage instance, and counts as spell damage. This means it is not affected or considered by anything that works with attack damage. This also means that it fully works with spell damage amplification and spell lifesteal.",
+        "This means it is not affected or considered by anything that works with attack damage.",
+        "This also means that it fully works with spell damage amplification and spell lifesteal.",
+        "Can be cast on buildings but not on wards and allied units.",
+        "Choosing the damage upgrading talent immediately upgrades all of Clinkz's currently flying Searing Arrows.",
+        "When choosing the level 25 talent, whenever Searing Arrows is used, a different random target within its cast range is also targeted by a second Searing Arrow. Causes Clinkz to perform an instant attack on the chosen target whenever he launches a Searing Arrow. This instant attack can proc any attack modifier or on-hit effect like a regular attack. Since it uses the spell's cast range, effects which increase its cast range increase the secondary arrows' range as well. The secondary arrow has no target priorities. It simply chooses a random valid target within cast range. Since Searing Arrows affects buildings, the secondary arrows can target buildings as well.",
+        "Causes Clinkz to perform an instant attack on the chosen target whenever he launches a Searing Arrow.",
+        "This instant attack can proc any attack modifier or on-hit effect like a regular attack.",
+        "Since it uses the spell's cast range, effects which increase its cast range increase the secondary arrows' range as well.",
+        "The secondary arrow has no target priorities. It simply chooses a random valid target within cast range.",
+        "Since Searing Arrows affects buildings, the secondary arrows can target buildings as well."
+      ],
+      "mana": "12",
+      "hotKey": "W",
+      "cooldown": "0",
+      "description": "Imbues Clinkz's arrows with fire for extra damage.",
+      "spellName": "Searing Arrows",
+      "params": [
+        "Cast Range: 625 (TagTalent 750)",
+        "Damage: 24\/36\/48\/60 (TagTalent 49\/61\/73\/85)",
+        "Arrows per Cast: 1 (TagTalent 2)"
+      ],
+      "itemBehaviour": [],
+      "legacyKey": "R",
+      "story": "Clinkz simply lights his arrows from his flaming essence for quite the destructive effect."
+    },
+    {
+      "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/7\/7d\/Clinkz_Skeleton_Walk.mp3\/revision\/latest?cb=20191216012121",
+      "effects": [
+        "Ability No Target",
+        "Affects Self"
+      ],
+      "notes": [
+        "Skeleton Walk does not interrupt Clinkz' channeling spells upon cast.",
+        "During the fade time, Clinkz can cast spells, use items and perform attacks without breaking the invisibility.",
+        "Invisibility is broken upon launching an attack, or upon reaching the cast point of items and spells, except for Strafe, Death Pact, and Burning Army. This means re-casting Skeleton Walk while already invisible does break it, so that the fade time applies again. This also means any other spell cast during it does break it. This goes for Rubick, Morphling, and Ability Draft.",
+        "This means re-casting Skeleton Walk while already invisible does break it, so that the fade time applies again.",
+        "This also means any other spell cast during it does break it. This goes for Rubick, Morphling, and Ability Draft.",
+        "Allows Clinkz to path through other units, including wards, but not through buildings.",
+        "Clinkz can pick up or drop items without breaking the invisibility.",
+        "With Aghanim's Shard, the 2 Skeleton Archers spawn 250 range away from Clinkz, to his right and left side, facing the same direction. The archers only spawn upon losing the Skeleton Walk buff, no matter how. The archer is the same as the ones summoned by Burning Army. See below for their stats.",
+        "The archers only spawn upon losing the Skeleton Walk buff, no matter how.",
+        "The archer is the same as the ones summoned by Burning Army. See below for their stats."
+      ],
+      "mana": "75",
+      "hotKey": "E",
+      "cooldown": "20\/19\/18\/17 (TagTalent 13\/12\/11\/10)",
+      "description": "Clinkz moves invisibly through units until the moment he attacks or uses items.",
+      "spellName": "Skeleton Walk",
+      "params": [
+        "Cast Animation: 0+0",
+        "Fade Time: 0.6",
+        "Move Speed Bonus: 15%\/30%\/45%\/60%",
+        "Invisibility Duration: 25\/30\/35\/40",
+        "Number of Archers: 2",
+        "Archers Duration: 60",
+        "Causes Skeleton Walk to create two Burning Army Skeletons."
+      ],
+      "itemBehaviour": [],
+      "legacyKey": "W",
+      "story": "With a burst of fire and puff of smoke, the Bone Fletcher was nowhere to be seen."
+    },
+    {
+      "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/9\/9f\/Clinkz_Burning_Army.mp3\/revision\/latest?cb=20191216012126",
+      "effects": [
+        "Ability Target Point \/ Vector Targeting",
+        "Affects Enemy Heroes"
+      ],
+      "notes": [
+        "Requires Aghanim's Scepter to be unlocked. In Ability Draft, Burning Army can be unlocked by the player that drafted Death Pact.",
+        "In Ability Draft, Burning Army can be unlocked by the player that drafted Death Pact.",
+        "Burning Army can be cast without having to face towards the targeted area.",
+        "Spawns the archers in the given line one after another, starting immediately upon cast. It takes 2.8 seconds for all archers to spawn.",
+        "It takes 2.8 seconds for all archers to spawn.",
+        "The first archer spawns at the initial targeted location. Following archers spawn with 312.5 in between each. The archers spawn facing the same direction as Clinkz does as they spawn.",
+        "The archers spawn facing the same direction as Clinkz does as they spawn.",
+        "The spawned archers cannot be controlled. They automatically attack nearby enemy heroes, regardless of auto-attack settings. However, it is possible to turn the autocast of their Searing Arrows off.",
+        "However, it is possible to turn the autocast of their Searing Arrows off.",
+        "The archers' base attack damage is periodically set equal to Clinkz' main attack damage. The archers also gain bonus damage for raw damage bonuses Clinkz has.",
+        "The archers also gain bonus damage for raw damage bonuses Clinkz has.",
+        "The attack range of the archers is also periodically set equal to Clinkz' attack range.",
+        "The archers only attack heroes, including illusions and clones, excluding creep-heroes. The archers follow default auto-attack rules. However, they only switch targets when their current target cannot be attacked anymore.",
+        "The archers follow default auto-attack rules. However, they only switch targets when their current target cannot be attacked anymore.",
+        "The archers have Searing Arrows, with the same level as on Clinkz. The level for it is set for each archer as it spawns. Leveling it afterwards does not update its level on the archers. Although being identical to Clinkz's Searing Arrows, and having a mana pool, the archers do not need mana to cast it. The archers fully benefit from the Searing Arrows damage and Searing Arrows multishot talents. In Ability Draft, Searing Arrows must be drafted as well for the archers to gain them.",
+        "The level for it is set for each archer as it spawns. Leveling it afterwards does not update its level on the archers.",
+        "Although being identical to Clinkz's Searing Arrows, and having a mana pool, the archers do not need mana to cast it.",
+        "The archers fully benefit from the Searing Arrows damage and Searing Arrows multishot talents.",
+        "In Ability Draft, Searing Arrows must be drafted as well for the archers to gain them.",
+        "The archers do not block neutral creep camps.",
+        "The Skeleton Archers' attack damage is not reduced by Damage Block."
+      ],
+      "mana": "150",
+      "hotKey": "D",
+      "cooldown": "90",
+      "description": "Clinkz summons an army of fiery ranged skeleton archers. Archers are immobile and die with 2 attacks from a hero. Skeletons deal a percentage of Clinkz' damage, use his current Searing Arrows ability and attack only heroes. Attack range is equal to Clinkz's attack range.",
+      "spellName": "Burning Army",
+      "params": [
+        "Cast Animation: 0+0.67",
+        "Cast Range: 1200",
+        "Spawn Range: 1300",
+        "Number of Archers: 5",
+        "Archers Spawn Interval: 0.7",
+        "Hero Attacks to Destroy: 2",
+        "Non-Hero Attacks to Destroy: 8",
+        "Archers Attack Interval: 1.6",
+        "Archers Attack Damage: 30%",
+        "Duration: 20"
+      ],
+      "itemBehaviour": [],
+      "legacyKey": "E",
+      "story": "Existing on the brink of life and death, Clinkz has learned to temporarily bridge the gap between the two."
+    },
+    {
+      "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/7\/75\/Clinkz_Death_Pact.mp3\/revision\/latest?cb=20200502135132",
+      "effects": [
+        "Ability Target Unit",
+        "Affects Enemy Units \/ Self",
+        "Damage Instant Kill"
+      ],
+      "notes": [
+        "Despite the description, the bonuses are based on the target's maximum health, not current health.",
+        "The targeted unit is instantly killed, counting as a regular last hit or deny.",
+        "Increases Clinkz' maximum health without keeping the current health percentage, then heals Clinkz for the same amount.",
+        "When the Death Pact buff expires, Clinkz' maximum health returns to normal, but his current health is kept, without exceeding his maximum health.",
+        "The attack damage bonus is added as raw attack damage, so it is not affected by most percentage-based damage increasing or reducing effects.",
+        "Successive casts of Death Pact do not stack, but refresh the duration and update the values.",
+        "Cannot be cast on ancient creeps and creep-heroes."
+      ],
+      "mana": "100",
+      "hotKey": "R",
+      "cooldown": "80\/70\/60",
+      "description": "Clinkz consumes the target enemy unit or friendly unit, gaining max health and damage based on its current health.",
+      "spellName": "Death Pact",
+      "params": [
+        "Cast Animation: 0.2+0.47",
+        "Cast Range: 900",
+        "Target Max Health as Health Bonus: 40%\/70%\/100% (TagTalent 90%\/120%\/150%)",
+        "Target Max Health as Attack Damage Bonus: 4%\/8%\/12% (TagTalent 9%\/13%\/17%)",
+        "Duration: 65",
+        "Grants a new ability: Burning Army."
+      ],
+      "itemBehaviour": [],
+      "legacyKey": "C",
+      "story": "Sutherex' bond of life and death has become a part of Clinkz, and his old bones are refreshed with repetition of the pact on lesser beings."
+    }
+  ],
+  "mainAttributes": {
+    "attrStrengthInc": 2.2,
+    "attrStrength": 14.0,
+    "attrIntelligence": 18.0,
+    "attrIntelligenceInc": 2.2,
+    "attrAgilityInc": 2.7,
+    "attrAgility": 22.0
+  },
+  "description": "Clinkz, the Bone Fletcher, is a ranged agility hero specializing in ambushing lone enemies due to his high physical damage and incredible speed. Though frail and easy to kill, Skeleton Walk grants Clinkz stealth and haste to escape and re-position himself. This skill is also what makes Clinkz such an incredible ganker. This assassin is also equipped with Death Pact which consumes an enemy unit or creep for bonus health and an armor debuff. Searing Arrows provide huge bonus damage, greatly injuring enemies. To aid his assault, Clinkz can summon a Burning Army of fiery bone archers who cut down his foes with powerful arrows.",
+  "history": "At the base of the Bleeding Hills stretches a thousand-league wood\u2014a place called The Hoven, where black pools gather the tarry blood of the uplands, and the king-mage Sutherex sits in benevolent rule. Once a sworn protector of the Hoven lands, Clinkz earned a reputation for his skill with a bow. In the three-hundredth year of the king-mage, the demon Maraxiform rose from sixth hell to lay claim to the forest. In response, the king-mage decreed an unbreakable spell: to any who slew the demon would be granted Life Without End. Unaware of the spell, Clinkz waded into battle, defending his lands against the demon\u2019s fiery onslaught. Clinkz drove Maraxiform back to the gates of sixth-hell itself, where on that fiery threshold the two locked in a mortal conflict. Grievously wounded, the demon let out a blast of hellfire as Clinkz loosed his final arrow. The arrow struck the demon true as hellfire poured out across the land, lighting the black pools and burning Clinkz alive at the instant of the demon\u2019s death. Thus, the mage\u2019s spell took effect at the very moment of the archer\u2019s conflagration, preserving him in this unholy state, leaving him a being of bones and rage, caught in the very act of dying, carrying hell\u2019s breath with him on his journey into eternity.",
+  "talents": [
+    {
+      "talentLvl": "25",
+      "talentLeft": "Searing Arrows Multishot",
+      "talentRight": "+50\/5% Death Pact Health\/Damage"
+    },
+    {
+      "talentLvl": "20",
+      "talentLeft": "-10s Strafe Cooldown",
+      "talentRight": "+125 Attack Range"
+    },
+    {
+      "talentLvl": "15",
+      "talentLeft": "+25 Searing Arrows Damage",
+      "talentRight": "-7s Skeleton Walk Cooldown"
+    },
+    {
+      "talentLvl": "10",
+      "talentLeft": "+1.75 Mana Regen",
+      "talentRight": "+8 Agility"
+    }
+  ]
+}

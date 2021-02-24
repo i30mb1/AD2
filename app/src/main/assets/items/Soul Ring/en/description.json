@@ -1,0 +1,64 @@
+{
+  "abilities": [
+    {
+      "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/a\/a9\/Soul_Ring_Sacrifice.mp3\/revision\/latest?cb=20191227195538",
+      "effects": [
+        "Ability No Target",
+        "Affects Self"
+      ],
+      "notes": [
+        "Interrupts the user's channeling spells upon cast.",
+        "If the mana bonus would exceed the user's current mana pool, its max mana pool is temporarily increased by the exceeding amount.",
+        "At the end of the duration, the user loses any unused mana of the 150 mana bonus. If its maximum mana pool was increased, it goes back to normal if it was exceeded. Only counts actual spent mana. Mana lost in other ways (like Nether Ward, Mana Break or Mana Burn) does not count.",
+        "If its maximum mana pool was increased, it goes back to normal if it was exceeded.",
+        "Only counts actual spent mana. Mana lost in other ways (like Nether Ward, Mana Break or Mana Burn) does not count.",
+        "The lost health is not gained back when the gained mana was unused or partly unused.",
+        "The 170 health lost upon cast is never lethal. When casting with 170 health or less, the user's health goes down to 1."
+      ],
+      "mana": null,
+      "abilityName": "Sacrifice",
+      "cooldown": "25",
+      "description": "Consume 170 health to temporarily gain 150 mana. Lasts 10 seconds. If the mana gained cannot fit in your mana pool, it creates a buffer of mana that will be used before your mana pool.",
+      "params": [
+        "Health Cost: 170",
+        "Temporary Mana Bonus: 150",
+        "Duration: 10"
+      ],
+      "itemBehaviour": [],
+      "story": null
+    }
+  ],
+  "additionalInformation": [
+    "For strength heroes, it grants 120 health, 0.6 health regen, 2 armor and 6 attack damage.",
+    "For agility heroes, it grants 120 health, 0.6 health regen and 2 armor.",
+    "For intelligence heroes, it grants 120 health, 0.6 health regen and 2 armor."
+  ],
+  "cost": "740",
+  "lore": null,
+  "consistFrom": [
+    "Ring of Protection",
+    "Gauntlets of Strength",
+    "Gauntlets of Strength",
+    "Recipe"
+  ],
+  "boughtFrom": "Accessories",
+  "name": "Soul Ring",
+  "description": "A ring that feeds on the souls of those who wear it.",
+  "trivia": [
+    "Soul Ring was the only item not allowed in The International 2013 Solo Championship."
+  ],
+  "upgradeIn": null,
+  "bonuses": [
+    "+6 Strength",
+    "+2 Armor"
+  ],
+  "tips": [
+    "You can keep the bonus mana for 10 seconds so you can use the item even if you don't cast your spell immediately to put your item on cooldown. Using the item each time it is ready is equivalent of having 6 mana regeneration per second, making it by far the most cost-effective mana regeneration item of the game.",
+    "Using the item each time it is ready is equivalent of having 6 mana regeneration per second, making it by far the most cost-effective mana regeneration item of the game.",
+    "Make sure you are safe before using Soul Ring, as the reduced health can make your hero much more vulnerable. If your hero has low health or no means of regenerating health, consider picking up Tranquil Boots too in order to refill health after using the active a lot. By the same token, this item is very good on strength heroes due to their larger health pools and health regeneration rates. Heroes with increased base health regeneration rates may benefit more from this item as well.",
+    "If your hero has low health or no means of regenerating health, consider picking up Tranquil Boots too in order to refill health after using the active a lot.",
+    "By the same token, this item is very good on strength heroes due to their larger health pools and health regeneration rates. Heroes with increased base health regeneration rates may benefit more from this item as well.",
+    "Against heroes with mana burning abilities, Soul Ring can give you enough mana to get an important spell off in a fight.",
+    "When the cooldown goes off (25 seconds) the health regenerated is Expression error: Missing operand for *., i.e. Expression error: Unexpected \/ operator.% from the original 170 health consumed, so the value of health used for the Sacrifice ability is Expression error: Unexpected \/ operator. health, only the Expression error: Unexpected \/ operator.% of the total used."
+  ]
+}

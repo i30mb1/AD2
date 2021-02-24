@@ -1,0 +1,59 @@
+{
+  "abilities": [
+    {
+      "audioUrl": null,
+      "effects": [
+        "Ability Passive",
+        "Affects Enemies"
+      ],
+      "notes": [
+        "Successive attacks with Eye of Skadi do not stack, but refresh the duration instead.",
+        "Does not work against wards and buildings, but works against couriers and allied units.",
+        "Applies heal reduction, health regen reduction, lifesteal reduction, and spell lifesteal reduction on the target."
+      ],
+      "mana": null,
+      "abilityName": "Cold Attack",
+      "cooldown": null,
+      "description": "Attacks lower enemy movement and attack speed and reduces heals, health regeneration and lifesteal by 40% for 3 seconds. Slows enemy ranged units by 50% movement speed and 50 attack speed. Slows enemy melee units by 25% movement speed and 25 attack speed.",
+      "params": [
+        "Movement Speed Slow (Against Melee): 25%",
+        "Movement Speed Slow (Against Ranged): 50%",
+        "Attack Speed Slow (Against Melee): 25",
+        "Attack Speed Slow (Against Ranged): 50",
+        "Health Restoration Reduction: 40%",
+        "Duration: 3"
+      ],
+      "itemBehaviour": [],
+      "story": null
+    }
+  ],
+  "additionalInformation": [
+    "For strength heroes, it grants 700 health, 2.5 health regen, 4.17 armor, 25 attack speed, 500 mana, 1.25 mana regen and 25 attack damage.",
+    "For agility heroes, it grants 700 health, 2.5 health regen, 4.17 armor, 25 attack speed, 500 mana, 1.25 mana regen and 25 attack damage.",
+    "For intelligence heroes, it grants 700 health, 2.5 health regen, 4.17 armor, 25 attack speed, 500 mana, 1.25 mana regen and 25 attack damage."
+  ],
+  "cost": "5300",
+  "lore": null,
+  "consistFrom": [
+    "Ultimate Orb",
+    "Ultimate Orb",
+    "Point Booster"
+  ],
+  "boughtFrom": "Artifacts",
+  "name": "Eye of Skadi",
+  "description": "Extremely rare artifact, guarded by the azure dragons.",
+  "trivia": [
+    "Skaði (Skadi) is the Goddess of Winter in Norse mythology.",
+    "Skaði (Skadi) means \"damage\" or \"harm\" in Old Norse and Icelandic, pronounced \"Skathi\".",
+    "Þjazi (Thiazi), Skadi's father in Norse mythology, had his eyes placed in the night sky as stars."
+  ],
+  "upgradeIn": null,
+  "bonuses": [
+    "+25 Strength",
+    "+25 Agility",
+    "+25 Intelligence",
+    "+200 Health",
+    "+200 Mana"
+  ],
+  "tips": null
+}

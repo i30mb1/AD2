@@ -1,0 +1,250 @@
+{
+  "abilities": [
+    {
+      "notes": [
+        "The cast range talent does not affect the jump distance of Laser.",
+        "The armor talent does not benefit illusions."
+      ],
+      "spellName": "Talent",
+      "talents": [
+        {
+          "talentLvl": "25",
+          "talentLeft": "+0.25s Heat-Seeking Missile Ministun",
+          "talentRight": "+80 Laser Damage"
+        },
+        {
+          "talentLvl": "20",
+          "talentLeft": "+8 March of the Machines Damage",
+          "talentRight": "+8 Armor"
+        },
+        {
+          "talentLvl": "15",
+          "talentLeft": "+9% Manacost\/Manaloss Reduction",
+          "talentRight": "+2.5s March of the Machines Duration"
+        },
+        {
+          "talentLvl": "10",
+          "talentLeft": "+125 Cast Range",
+          "talentRight": "+8% Spell Amplification"
+        }
+      ]
+    },
+    {
+      "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/2\/25\/Tinker_Laser.mp3\/revision\/latest?cb=20191216025246",
+      "effects": [
+        "Ability Target Unit",
+        "Affects Enemies",
+        "Damage Pure"
+      ],
+      "notes": [
+        "Plays a sound effect during the cast time, which is audible to everyone.",
+        "Uses the creep duration for creep-heroes.",
+        "The laser first applies the damage, then the debuff.",
+        "Laser's blind uses pseudo-random distribution.",
+        "With Aghanim's Scepter, the Laser bounces to the furthest enemy within a 700 radius of its current target. Laser has no bounce delay, so all targets are hit at the same time. Can only bounce to heroes (including clones), illusions and creep-heroes. When the primary target is a regular creep\/summon, it still bounces to valid targets within range. Does not bounce on invisible units or units in the Fog of War.",
+        "Laser has no bounce delay, so all targets are hit at the same time.",
+        "Can only bounce to heroes (including clones), illusions and creep-heroes. When the primary target is a regular creep\/summon, it still bounces to valid targets within range.",
+        "Does not bounce on invisible units or units in the Fog of War.",
+        "Multiple instances of the debuff do not stack. With Aghanim's Scepter, multiple instances of the debuff fully stack.",
+        "With Aghanim's Scepter, multiple instances of the debuff fully stack."
+      ],
+      "mana": "110\/130\/150\/170 (TagTalent 100.1\/118.3\/136.5\/154.7)",
+      "hotKey": "Q",
+      "cooldown": "20\/18\/16\/14",
+      "description": "Fires an intense energy beam, dealing damage and blinding the target, causing it to miss all physical attacks.",
+      "spellName": "Laser",
+      "params": [
+        "Cast Animation: 0.4+1",
+        "Cast Range: 650 (TagTalent 775) (TagTalent 1050, 1175)",
+        "Damage: 80\/160\/240\/320 (TagTalent 160\/240\/320\/400)",
+        "Miss Chance: 100%",
+        "Hero Duration: 3\/3.5\/4\/4.5",
+        "Creep Duration: 6",
+        "Bounce Radius: 700",
+        "Current Health and Model Size Reduction: 20%",
+        "Upgrades Tinker's Laser into a Shrink Ray, granting +400 cast range and reducing enemy hero's size and current health by 20% (TagAghanimstacking). The laser bounces once on the farthest target up to 700 range from the primary one, prioritizing heroes.",
+        "Blind effect persists if debuff was placed before spell immunity and when not dispelled.",
+        "Blocked fully only when primary target."
+      ],
+      "itemBehaviour": [],
+      "legacyKey": "E",
+      "story": "Boush perfected this rock cutting laser in his subterranean laboratory, never considering its combat utility."
+    },
+    {
+      "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/4\/4e\/Tinker_Heat-Seeking_Missile_1.mp3\/revision\/latest?cb=20191216025258",
+      "effects": [
+        "Ability No Target",
+        "Affects Enemy Heroes",
+        "Damage Magical"
+      ],
+      "notes": [
+        "Heat-Seeking Missile interrupts Tinker's channeling spells upon cast.",
+        "The missiles travel at a speed of 700.",
+        "When all missiles hit, they collectively can deal up to 250\/400\/550\/700 damage (before reductions).",
+        "Does not target units which are out of vision (e.g. invisible), invulnerable or hidden.",
+        "Does target hero clones and illusions.",
+        "When no valid targets were in range, the rockets are released and fall on the ground, showing that the cast failed.",
+        "When choosing the level 25 talent, the rockets also inflict a short stun on enemies they hit. The rockets first apply their damage, then the debuff.",
+        "The rockets first apply their damage, then the debuff."
+      ],
+      "mana": "80\/100\/120\/140 (TagTalent 72.8\/91\/109.2\/127.4)",
+      "hotKey": "W",
+      "cooldown": "18",
+      "description": "Launches rockets at the nearest visible enemy heroes within 2500 range.",
+      "spellName": "Heat-Seeking Missile",
+      "params": [
+        "Cast Animation: 0+1.2",
+        "Search Radius: 2500",
+        "Number of Targets: 2",
+        "Damage per Rocket: 125\/200\/275\/350",
+        "Stun Duration: 0.25",
+        "Does not target spell immune units."
+      ],
+      "itemBehaviour": [],
+      "legacyKey": "T",
+      "story": "The last contraption Boush was able to save was a retrofitted rocket launcher with a homing mechanism."
+    },
+    {
+      "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/3\/33\/Tinker_March_of_the_Machines.mp3\/revision\/latest?cb=20191216025247",
+      "effects": [
+        "Ability Target Point",
+        "Affects Enemies",
+        "Damage Magical"
+      ],
+      "notes": [
+        "The robots move at a speed of 400 and move a distance up to 1800 forwards, taking 4.5 seconds to travel the full distance.",
+        "The 900 spawn radius is centered and fixed around the cast point, not on Tinker's location.",
+        "The spawn area is a line with 1800 length, which is centered 900 range behind the targeted cast point.",
+        "So the overall affected area is rather square-shaped, with 1800 side lengths.",
+        "Robots spawn in 0.0417 second intervals at a random point of the line, which is 24 robots per second, for a total of 144 (TagTalent 204) robots.",
+        "Robots do not spawn at points of the spawning line which are outside of the map boundaries.",
+        "When an enemy comes within 50 radius of a robot, or the robot reaches max distance, it deals damage in 150 radius around itself and then disappears.",
+        "If a lone enemy stands still within the area for the full duration, they would take an average of 189.44\/284.16\/378.88\/473.6 damage (before reductions). Would take an average of 284.16\/378.88\/473.6\/568.32 damage when the damage increasing talent is chosen. Would take an average of 268.37\/402.56\/536.75\/670.93 damage when the duration increasing talent is chosen. Would take an average of 402.56\/536.75\/670.93\/805.12 damage when both talents are chosen.",
+        "Would take an average of 284.16\/378.88\/473.6\/568.32 damage when the damage increasing talent is chosen.",
+        "Would take an average of 268.37\/402.56\/536.75\/670.93 damage when the duration increasing talent is chosen.",
+        "Would take an average of 402.56\/536.75\/670.93\/805.12 damage when both talents are chosen.",
+        "If each explosion could hit a single target, it would deal up to 2304\/3456\/4608\/5760 damage (before reductions). Would deal up to 3456\/4608\/5760\/6912 damage when the damage increasing talent is chosen. Would deal up to 3264\/4896\/6528\/8160 damage when the duration increasing talent is chosen. Would deal up to 4896\/6528\/8160\/9792 damage when both talents are chosen.",
+        "Would deal up to 3456\/4608\/5760\/6912 damage when the damage increasing talent is chosen.",
+        "Would deal up to 3264\/4896\/6528\/8160 damage when the duration increasing talent is chosen.",
+        "Would deal up to 4896\/6528\/8160\/9792 damage when both talents are chosen.",
+        "The robots do not explode and deal area damage when colliding with couriers.",
+        "The sound effect upon cast is not audible by enemies. The marching sounds are."
+      ],
+      "mana": "130\/150\/170\/190 (TagTalent 118.3\/136.5\/154.7\/172.9)",
+      "hotKey": "E",
+      "cooldown": "35",
+      "description": "Enlists an army of robotic minions to destroy enemy units in an area around Tinker.",
+      "spellName": "March of the Machines",
+      "params": [
+        "Cast Animation: 0.53+0.63",
+        "Cast Range: 300 (TagTalent 425)",
+        "Robot Spawn Radius: 900",
+        "Robot Collision Radius: 50",
+        "Robot Explosion Radius: 150",
+        "Robot Explosion Damage: 16\/24\/32\/40 (TagTalent 24\/32\/40\/48)",
+        "Spawn Duration: 6 (TagTalent 8.5)",
+        "Robots do not collide with spell immune enemies."
+      ],
+      "itemBehaviour": [],
+      "legacyKey": "C",
+      "story": "Even though the laboratory has since been sealed off, the ability to radio in robotic drones is still in working order."
+    },
+    {
+      "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/2\/2e\/Tinker_Defense_Matrix.mp3\/revision\/latest?cb=20210103154706",
+      "effects": [
+        "Ability Target Unit",
+        "Affects Allies"
+      ],
+      "notes": [
+        "Requires Aghanim's Shard to be unlocked.",
+        "Defense Matrix fully negates damage (after all reductions), causing several on-damage effects to not trigger.",
+        "Negates damage after all reductions, except the following ones: Shield Crash, Aphotic Shield, Mischief, Ghostship.",
+        "Shield Crash, Aphotic Shield, Mischief, Ghostship.",
+        "Multiple instances of the shield do not stack. Re-casting it refreshes the duration and resets the shield capacity.",
+        "The status resistance stacks multiplicatively with other sources of status resistance."
+      ],
+      "mana": "100 (TagTalent 91)",
+      "hotKey": "D",
+      "cooldown": "30",
+      "description": "Targets an allied unit, applying a barrier to them that blocks the next damage and provides Status Resistance. Barrier lasts up to seconds.",
+      "spellName": "Defense Matrix",
+      "params": [
+        "Cast Animation: 0.2+0.6",
+        "Cast Range: 400",
+        "Shield Capacity: 275",
+        "Status Resistance Bonus: 40%",
+        "Duration: 12"
+      ],
+      "itemBehaviour": [],
+      "legacyKey": "D",
+      "story": null
+    },
+    {
+      "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/b\/b9\/Tinker_Rearm_1.mp3\/revision\/latest?cb=20191216025250",
+      "effects": [
+        "Ability No Target \/ Channeled",
+        "Affects Self"
+      ],
+      "notes": [
+        "The following items cannot be rearmed: Aeon Disk, Arcane Boots, Black King Bar, Hand of Midas, Helm of the Dominator, Linken's Sphere, Meteor Hammer, Necronomicon, Pipe of Insight, Refresher Orb, and Refresher Shard. Does not refresh the cooldowns of neutral items. Visually resets the cooldown of Tranquil Boots, but does not skip the broken state. Does not reset charges on charge-based items (TagTalent Bottle, Drum of Endurance). Only refreshes items in Tinker's inventory and backpack. Items in stash, in other units' (e.g. couriers) inventories or dropped items are unaffected. Only refreshes items owned by Tinker. Allied items in his inventory or backpack are not refreshed. When the channeling is interrupted, nothing is rearmed.",
+        "Aeon Disk, Arcane Boots, Black King Bar, Hand of Midas, Helm of the Dominator, Linken's Sphere, Meteor Hammer, Necronomicon, Pipe of Insight, Refresher Orb, and Refresher Shard.",
+        "Does not refresh the cooldowns of neutral items.",
+        "Visually resets the cooldown of Tranquil Boots, but does not skip the broken state.",
+        "Does not reset charges on charge-based items (TagTalent Bottle, Drum of Endurance).",
+        "Only refreshes items in Tinker's inventory and backpack. Items in stash, in other units' (e.g. couriers) inventories or dropped items are unaffected.",
+        "Only refreshes items owned by Tinker. Allied items in his inventory or backpack are not refreshed.",
+        "When the channeling is interrupted, nothing is rearmed.",
+        "Can rearm Crimson Guard and Mekansm, but does not reset their stack restriction timer. The same rule applies when rearming Guardian Greaves, but Mend still restores mana.",
+        "The same rule applies when rearming Guardian Greaves, but Mend still restores mana.",
+        "In Ability Draft, Rearm grants charge-based a single charge back when used, and does not reset Devour's cooldown.",
+        "Rearm's sound gets shorter with each level to match the decreasing channel time.",
+        "The Rearm modifier has only informational purpose."
+      ],
+      "mana": "100\/200\/300 (TagTalent 91\/182\/273)",
+      "hotKey": "R",
+      "cooldown": "0",
+      "description": "Resets the cooldown on most of Tinker's items and abilities.",
+      "spellName": "Rearm",
+      "params": [
+        "Cast Animation: 0.53+0",
+        "Channel Time: 3\/1.5\/0.75",
+        "Grants a new ability: Defense Matrix."
+      ],
+      "itemBehaviour": [],
+      "legacyKey": "R",
+      "story": "A new battery here, another set of rockets there, Boush continually improves on existing technology."
+    }
+  ],
+  "mainAttributes": {
+    "attrStrengthInc": 2.5,
+    "attrStrength": 18.0,
+    "attrIntelligence": 30.0,
+    "attrIntelligenceInc": 3.3,
+    "attrAgilityInc": 1.2,
+    "attrAgility": 13.0
+  },
+  "description": "Boush, the Tinker, is a ranged intelligence hero who leverages great mobility and blistering nukes to push lanes and gank his enemies. Tinker's ultimate Rearm resets the cooldown on his items and abilities, allowing him to deal prodigious damage with his Laser, Heat-Seeking Missiles and with items such as Dagon. By refreshing Blink Dagger, Rearm also grants Tinker vast mobility, enabling him to pressure multiple lanes with his March of the Machines. Tinker's mana costs are very high, however, so to remain a global threat he must regularly regenerate at his fountain. His mana dependency and modest stat gain make quickly acquiring Boots of Travel a key to success. When played with the right items, good mana management and mechanical skill, there are few heroes Tinker will not evaporate.",
+  "history": "Boush the Tinker's diminutive race is known for its intelligence, its cunning, and its prickly relationship with magic. As a matter of pride, they survive by their wits, and use only those powers of nature that may be unlocked through rational methodologies. Even this forbearance has led to a great deal of trouble, as Boush can attest. Once a key investigator of natural law, Boush the Tinker led a vast intellectual investigation into the workings of nature, founding a subterranean laboratory in the rumored, mist-wreathed wastes of the Violet Plateau. While scorning mages for the dangers they visit upon the world, Boush and his Tinker associates haughtily wrenched open a portal to some realm beyond comprehension and ushered in some nightmares of their own. A black mist rose from the cavernous interior of the Violet Plateau, shrouding it in permanent darkness from which sounds of horror perpetually emanate. Boush escaped with only his wits and the contraptions he carried, the sole Tinker to survive the Violet Plateau Incident.",
+  "talents": [
+    {
+      "talentLvl": "25",
+      "talentLeft": "+0.25s Heat-Seeking Missile Ministun",
+      "talentRight": "+80 Laser Damage"
+    },
+    {
+      "talentLvl": "20",
+      "talentLeft": "+8 March of the Machines Damage",
+      "talentRight": "+8 Armor"
+    },
+    {
+      "talentLvl": "15",
+      "talentLeft": "+9% Manacost\/Manaloss Reduction",
+      "talentRight": "+2.5s March of the Machines Duration"
+    },
+    {
+      "talentLvl": "10",
+      "talentLeft": "+125 Cast Range",
+      "talentRight": "+8% Spell Amplification"
+    }
+  ]
+}

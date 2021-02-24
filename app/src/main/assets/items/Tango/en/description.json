@@ -1,0 +1,59 @@
+{
+  "abilities": [
+    {
+      "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/7\/7d\/Tango_Devour.mp3\/revision\/latest?cb=20191227195540",
+      "effects": [
+        "Ability Target Unit",
+        "Affects Trees \/ Self"
+      ],
+      "notes": [
+        "When cast on a tree, it destroys the tree instantly and increases the caster's health regeneration. When targeting trees planted by Iron Branch, Ironwood Tree, Mango Tree, Acorn Shot, or Sprout, the heal duration is doubled. Can regenerate up to 115 (230 when targeting planted trees) health over its full duration. All 3 charges together can regenerate up to 345 (690 when targeting planted trees) health. Successive uses with the same unit do not stack, but refresh the duration instead.",
+        "When targeting trees planted by Iron Branch, Ironwood Tree, Mango Tree, Acorn Shot, or Sprout, the heal duration is doubled.",
+        "Can regenerate up to 115 (230 when targeting planted trees) health over its full duration.",
+        "All 3 charges together can regenerate up to 345 (690 when targeting planted trees) health.",
+        "Successive uses with the same unit do not stack, but refresh the duration instead.",
+        "When targeting an allied hero, it creates a Tango (Shared) in the targeted ally's inventory, instead of healing the user. If the targeted ally's inventory is full, the item is dropped on the ground. Can also be cast on creep-heroes, only giving Spirit Bear a charge, otherwise having no effect. Can also be cast on Meepo clones and Tempest Doubles, but doing so has no effect. Cannot be cast on illusions.",
+        "If the targeted ally's inventory is full, the item is dropped on the ground.",
+        "Can also be cast on creep-heroes, only giving Spirit Bear a charge, otherwise having no effect.",
+        "Can also be cast on Meepo clones and Tempest Doubles, but doing so has no effect.",
+        "Cannot be cast on illusions."
+      ],
+      "mana": null,
+      "abilityName": "Devour",
+      "cooldown": "0",
+      "description": "Consumes a target tree to gain 7 health regeneration for 16 seconds. Consuming an Ironwood Tree doubles the heal amount. Comes with 3 charges. Can be used on an allied hero to give them one Tango.",
+      "params": [
+        "Cast Range: 165",
+        "Health Regen Bonus: 7.1875",
+        "Duration (Regular Tree): 16",
+        "Duration (Planted Tree): 32"
+      ],
+      "itemBehaviour": [],
+      "story": null
+    }
+  ],
+  "additionalInformation": [
+    "Stacks with itself in inventory, there is no stack limit. The sell-back price adapts based on the number of Tangos in a stack.",
+    "A set of Tangos is not shareable. However, it is possible to give allies a Tango (Shared) by casting it on them.",
+    "The sell value of the item is based on the number of charges remaining. A single instance has a sell value of 15 gold."
+  ],
+  "cost": "90",
+  "lore": null,
+  "consistFrom": null,
+  "boughtFrom": "Consumables",
+  "name": "Tango",
+  "description": "Forage to survive on the battlefield.",
+  "trivia": [
+    "In the original DotA, Tango's full name was \"Ancient Tango of Essifation\".",
+    "Tango's active ability was called \"Eat a Tree or Ward\" before July 19, 2017 Patch."
+  ],
+  "upgradeIn": null,
+  "bonuses": null,
+  "tips": [
+    "Tangos are a very effective source of combat heal in the early-game, as they do not dispel upon taking damage. When an engagement seems even or against you, using a Tango can tilt the balance in your favor.",
+    "Although one Tango charge heals much less and does so slower than a Healing Salve, one set of Tangos provides slightly more HP per gold spent. Also, the fact that it is not dispelled by damage and its secondary effect of destroying trees makes it more versatile than Healing Salves. So if no quick and strong healing is required, Tangos are usually more valuable.",
+    "Since using Tangos on a tree destroys the tree, it can be used to create alternate pathways between some trees, making it easier to escape or chase enemies. Sometimes it is worth it to use a Tango just for this purpose.",
+    "Unlike other restoring consumables, it is possible to give allies one charge of the Tangos stack. This allows players to grant lane healing to another hero without having to be there. Giving the mid-laner 1 or 2 charges can be a deciding factor for doing well in the lane.",
+    "Can be used to control certain heroes, by destroying trees. For example, Monkey King will fall and suffer a long duration stun if the tree below him is broken, and Nature's Prophet may not be able to teleport away safely if you cut a tree to gain vision against his Sprout."
+  ]
+}

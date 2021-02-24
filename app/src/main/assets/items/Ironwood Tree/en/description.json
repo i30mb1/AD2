@@ -1,0 +1,47 @@
+{
+  "abilities": [
+    {
+      "audioUrl": null,
+      "effects": [
+        "Ability Target Point"
+      ],
+      "notes": [
+        "The Ironwood Tree is not consumed in the process.",
+        "Cannot be placed inside the fountain area (including a small area in front of the ramp), or in Roshan's pit.",
+        "Creates a planted tree at the target point. This tree is a hedge that spells \"GG\" and has a smaller collision size than other trees.",
+        "This means it blocks vision and is treated like any other tree by all abilities which interact with trees.",
+        "Tango heals for twice as long when targeting an Ironwood Tree.",
+        "The particles around the tree are visible to everyone, making it clear that it is a planted tree."
+      ],
+      "mana": null,
+      "abilityName": "Plant Tree",
+      "cooldown": "15",
+      "description": "Targets the ground to plant a happy little tree that lasts for 20 seconds.",
+      "params": [
+        "Cast Range: 800",
+        "Duration: 20"
+      ],
+      "itemBehaviour": [],
+      "story": null
+    }
+  ],
+  "additionalInformation": [
+    "Ironwood Trees are fully sharable."
+  ],
+  "cost": "N\/A",
+  "lore": null,
+  "consistFrom": null,
+  "boughtFrom": "Neutral Drop Only",
+  "name": "Ironwood Tree",
+  "description": "Precious. And hearty as a weed.",
+  "trivia": [
+    "\"Happy little tree\" is a phrase once frequently said by Bob Ross, a popular landscape painter."
+  ],
+  "upgradeIn": null,
+  "bonuses": [
+    "+6 Strength",
+    "+6 Agility",
+    "+6 Intelligence"
+  ],
+  "tips": null
+}

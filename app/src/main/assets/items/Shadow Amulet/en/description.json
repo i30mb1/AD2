@@ -1,0 +1,47 @@
+{
+  "abilities": [
+    {
+      "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/3\/34\/Shadow_Amulet_Fade.mp3\/revision\/latest?cb=20191227195530",
+      "effects": [
+        "Ability Target Unit",
+        "Affects Allies"
+      ],
+      "notes": [
+        "Does not interrupt the user's channeling spells upon cast, neither when cast on self, nor when cast on allies.",
+        "If the target is more than 850 range away, the caster moves to the target until it is within 600 range before casting. If a cast order is given on a target which is within 850 range already, the caster does not need to move closer and casts it right away.",
+        "If a cast order is given on a target which is within 850 range already, the caster does not need to move closer and casts it right away.",
+        "When casting on allies, the user does not have to face the targeted ally to cast it. Does not interrupt the target's channeling spells.",
+        "During the fade time, the unit can still cast spells, use items and perform attacks.",
+        "After the fade time, the unit automatically stops moving or attacking, but it does not stop spell casts.",
+        "While invisible, the unit can turn and pick up or drop items without breaking the invisibility.",
+        "While invisible, the unit is phased, meaning other units can walk through it without getting blocked.",
+        "The invisibility is lost upon reaching the cast point of spells or items or upon performing an attack.",
+        "It also gets lost when getting forcefully moved, except when the movement is only upwards."
+      ],
+      "mana": null,
+      "abilityName": "Fade",
+      "cooldown": "7 \/ 0",
+      "description": "Grants invisibility to you or a target allied hero as long as the target unit remains still. Has a 1.25 second fade time, and breaks instantly upon moving. There is no cooldown when using this item on yourself.",
+      "params": [
+        "Default Cast Range: 600",
+        "Buffer Cast Range: 850",
+        "Fade Time: 1.25"
+      ],
+      "itemBehaviour": [],
+      "story": null
+    }
+  ],
+  "cost": "1000",
+  "lore": null,
+  "consistFrom": null,
+  "boughtFrom": "Miscellaneous",
+  "name": "Shadow Amulet",
+  "description": "A small talisman that clouds the senses of one's enemies when held perfectly still.",
+  "trivia": null,
+  "upgradeIn": [
+    "Glimmer Cape",
+    "Shadow Blade"
+  ],
+  "bonuses": null,
+  "tips": null
+}

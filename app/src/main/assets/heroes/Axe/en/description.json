@@ -1,0 +1,212 @@
+{
+  "abilities": [
+    {
+      "notes": [
+        "The health talent increases maximum health capacity, and keeps the current health percentage."
+      ],
+      "spellName": "Talent",
+      "talents": [
+        {
+          "talentLvl": "25",
+          "talentLeft": "+100 Battle Hunger DPS",
+          "talentRight": "+100 Berserker's Call AoE"
+        },
+        {
+          "talentLvl": "20",
+          "talentLeft": "+20 Health Regen",
+          "talentRight": "+150 Culling Blade Threshold"
+        },
+        {
+          "talentLvl": "15",
+          "talentLeft": "+300 Health",
+          "talentRight": "+25 Movement Speed"
+        },
+        {
+          "talentLvl": "10",
+          "talentLeft": "+1.75 Mana Regen",
+          "talentRight": "+25 Attack Speed"
+        }
+      ]
+    },
+    {
+      "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/b\/bf\/Axe_Berserker%27s_Call.mp3\/revision\/latest?cb=20191216010834",
+      "effects": [
+        "Ability No Target",
+        "Affects Enemies \/ Self"
+      ],
+      "notes": [
+        "Taunts affected enemies, forcing them to attack Axe. Does not silence, so active attack modifiers with autocast on are still applied.",
+        "Does not silence, so active attack modifiers with autocast on are still applied.",
+        "Affects invisible units and units in the Fog of War. Does not affect towers, wards, invulnerable or hidden units.",
+        "Re-casting on a unit under the taunt effect of Berserker's Call refreshes the duration.",
+        "When Axe dies, the taunt ends immediately.",
+        "Does not affect lane creeps from the very first creep wave that spawns, until they meet the opposing creeps in the lane.",
+        "When having Aghanim's Scepter, Battle Hunger is applied to all enemies caught by the call."
+      ],
+      "mana": "80\/90\/100\/110",
+      "hotKey": "Q",
+      "cooldown": "16\/14\/12\/10 (TagTalent 14\/12\/10\/8)",
+      "description": "Axe taunts nearby enemy units, forcing them to attack him, while he gains bonus armor during the duration.",
+      "spellName": "Berserker's Call",
+      "params": [
+        "Cast Animation: 0.4+0.5",
+        "Radius: 300 (TagTalent 400)",
+        "Armor Bonus: 30",
+        "Duration: 2\/2.4\/2.8\/3.2",
+        "Berserker's Call applies Battle Hunger to affected units. Reduces Berserker's Call cooldown by 2."
+      ],
+      "itemBehaviour": [],
+      "legacyKey": "E",
+      "story": "Mogul Khan's warcry taunts opponents into engaging in an unconquerable battle with the Axe."
+    },
+    {
+      "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/2\/21\/Axe_Battle_Hunger.mp3\/revision\/latest?cb=20191216010833",
+      "effects": [
+        "Ability Target Unit",
+        "Affects Enemies \/ Self",
+        "Damage Magical"
+      ],
+      "notes": [
+        "Reduces non-hero units' movement speed by 6% (TagTalent and armor by 3.5). Treats creep-heroes as creeps.",
+        "Battle Hunger has a passive modifier that is present at all times, but hidden when the stack count is at 0. This modifier gains 1 stack for every affected creep (treats creep-heroes as creeps), and 2 for every affected hero. Each stack grants Axe 6% movement speed (TagTalent and 3.5 armor). This means each affected hero effectively grants Axe 12% movement speed (TagTalent and 7 armor). This modifier has no stack limit.",
+        "This modifier gains 1 stack for every affected creep (treats creep-heroes as creeps), and 2 for every affected hero.",
+        "Each stack grants Axe 6% movement speed (TagTalent and 3.5 armor).",
+        "This means each affected hero effectively grants Axe 12% movement speed (TagTalent and 7 armor).",
+        "This modifier has no stack limit.",
+        "Casting Battle Hunger multiple times on the same target does not stack, but refreshes the duration instead.",
+        "Deals damage in 1 second intervals, starting 1 second after the debuff is placed, resulting in 12 instances.",
+        "Can deal up to 192\/288\/384\/480 (TagTalent 1392\/1488\/1584\/1680) damage (before reductions) when lasting its full duration.",
+        "The debuff can be removed by killing any unit that is not an illusion, in any way. This includes buildings, wards, and denying allied units. The affected unit itself has to make the kill to remove the debuff. Summons or illusions owned by the same player do not remove it when they make a kill.",
+        "The affected unit itself has to make the kill to remove the debuff. Summons or illusions owned by the same player do not remove it when they make a kill.",
+        "Leveling up Battle Hunger does not update the damage of already placed debuffs. However, choosing the damage upgrading talent immediately upgrades all of Axe's currently active Battle Hunger debuffs.",
+        "However, choosing the damage upgrading talent immediately upgrades all of Axe's currently active Battle Hunger debuffs."
+      ],
+      "mana": "50\/60\/70\/80",
+      "hotKey": "W",
+      "cooldown": "20\/15\/10\/5",
+      "description": "Enrages an enemy unit, causing it to be slowed and take damage over time until it kills another unit or the duration ends. Axe gains movement speed for each unit affected with Battle Hunger, half speed from creeps.",
+      "spellName": "Battle Hunger",
+      "params": [
+        "Cast Animation: 0.3+0.5",
+        "Cast Range: 700\/775\/850\/925",
+        "Damage per Second: 16\/24\/32\/40 (TagTalent 116\/124\/132\/140)",
+        "Enemy Move Speed Slow: 12%",
+        "Self Move Speed Bonus per Affected Enemy: 12%",
+        "Non-Hero Multiplier: 0.5",
+        "Duration: 12",
+        "Enemy Armor Reduction: 7",
+        "Self Armor Bonus per Affected Enemy: 7",
+        "Battle Hunger also reduces enemy armor by 7 and grants Axe 7 armor per affected targeted.",
+        "Slow persists, and attempts to damage if debuff was placed before spell immunity and when not dispelled."
+      ],
+      "itemBehaviour": [],
+      "legacyKey": "R",
+      "story": "Ordinary heroes cannot withstand Mogul Khan's rage for battle, such that it injures them until it is satisfied."
+    },
+    {
+      "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/8\/8e\/Axe_Counter_Helix.mp3\/revision\/latest?cb=20191216010823",
+      "effects": [
+        "Ability Passive",
+        "Affects Enemies",
+        "Damage Pure"
+      ],
+      "notes": [
+        "Can only proc when an enemy unit lands an attack on Axe, regardless of distance. This means it cannot proc on missed attacks.",
+        "Secondary attacks from Moon Glaives, Death Ward, Split Shot and Flak Cannon cannot trigger Counter Helix.",
+        "Can proc on the secondary attacks from other instant attacks.",
+        "Cannot proc on attacks from buildings, wards and allies.",
+        "Despite the visual effects, the damage is applied instantly within the radius.",
+        "Counter Helix uses pseudo-random distribution.",
+        "Counter Helix does not use a regular cooldown. It is neither displayed on the ability icon when proccing, nor is it affected by cooldown manipulating effects.",
+        "With Aghanim's Shard, Counter Helix can proc on Axe's attacks as well. These procs are independent from the regular procs and even work while the ability is on cooldown.",
+        "These procs are independent from the regular procs and even work while the ability is on cooldown."
+      ],
+      "mana": null,
+      "hotKey": "E",
+      "cooldown": null,
+      "description": "When attacked, Axe has a chance to perform a helix counter attack, dealing pure damage to all nearby enemies.",
+      "spellName": "Counter Helix",
+      "params": [
+        "Radius: 275",
+        "Proc Chance: 17%\/18%\/19%\/20%",
+        "Damage: 60\/100\/140\/180",
+        "Attack Speed Bonus: 35",
+        "Causes Axe's attacks to have a chance to proc a Counter Helix. Attack procs ignore Counter Helix cooldown. Increases attack speed by 35.",
+        "If Break is applied by an attack, Counter Helix may trigger first on that attack before getting disabled.",
+        "Axe illusions have a fully functional Counter Helix."
+      ],
+      "itemBehaviour": [],
+      "legacyKey": "X",
+      "story": "Axe is the only reinforcement this army needs."
+    },
+    {
+      "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/7\/71\/Axe_Culling_Blade_1.mp3\/revision\/latest?cb=20191216010823",
+      "effects": [
+        "Ability Target Unit",
+        "Affects Enemies \/ Allies",
+        "Damage Magical \/ Instant Kill"
+      ],
+      "notes": [
+        "When the target's health is above the threshold, it only applies its regular damage (magical) and plays a different sound. Even when the target dies to the regular damage (possible with damage amplifications), the other effects of Culling Blade are not applied.",
+        "Even when the target dies to the regular damage (possible with damage amplifications), the other effects of Culling Blade are not applied.",
+        "When the target's health is below the threshold, it does the following: It deals damage to the target equal to the health threshold value, in the form of pure damage (flagged as HP Removal). It applies the speed bonus to Axe and nearby allies. If the target was a hero, clone or illusion, its cooldown gets reset.",
+        "It deals damage to the target equal to the health threshold value, in the form of pure damage (flagged as HP Removal).",
+        "It applies the speed bonus to Axe and nearby allies.",
+        "If the target was a hero, clone or illusion, its cooldown gets reset.",
+        "The target's health is checked upon reaching the cast point, so if it gained health during that time so it exceeds the health threshold, the cull fails.",
+        "Culling Blade is able to kill targets affected by Shallow Grave, False Promise, Borrowed Time and Battle Trance but not Wraith Delay.",
+        "The modifier_axe_culling_blade_jungle_weapon_gesture modifier is used by the Fists of Axe Unleashed and is responsible for the sound and animation."
+      ],
+      "mana": "60\/120\/180",
+      "hotKey": "R",
+      "cooldown": "75\/65\/55",
+      "description": "Axe spots a weakness and strikes, instantly killing an enemy unit with low health, or dealing moderate damage otherwise. When an enemy hero is killed with Culling Blade, its cooldown is reset, and Axe and nearby allied units gain bonus movement speed.",
+      "spellName": "Culling Blade",
+      "params": [
+        "Cast Animation: 0.3+0.5",
+        "Cast Range: 150",
+        "Kill Move Speed Bonus Radius: 900",
+        "Damage: 150\/250\/300",
+        "Kill Health Threshold: 250\/350\/450 (TagTalent 400\/500\/600)",
+        "Kill Move Speed Bonus: 30%",
+        "Kill Attack Speed Bonus: 30",
+        "Kill Bonus Buff Duration: 6"
+      ],
+      "itemBehaviour": [],
+      "legacyKey": "C",
+      "story": "Mogul Khan is the embodiment of battle and fury, launching into a gruesome fatality against those who dare engage the Axe in combat."
+    }
+  ],
+  "mainAttributes": {
+    "attrStrengthInc": 3.4,
+    "attrStrength": 25.0,
+    "attrIntelligence": 18.0,
+    "attrIntelligenceInc": 1.6,
+    "attrAgilityInc": 2.2,
+    "attrAgility": 20.0
+  },
+  "description": "Mogul Khan, the Axe, is a melee strength hero, infamous for creating chaos in battle and thriving off of it.",
+  "history": "As a grunt in the Army of Red Mist, Mogul Khan set his sights on the rank of Red Mist General. In battle after battle he proved his worth through gory deed. His rise through the ranks was helped by the fact that he never hesitated to decapitate a superior. Through the seven year Campaign of the Thousand Tarns, he distinguished himself in glorious carnage, his star of fame shining ever brighter, while the number of comrades in arms steadily dwindled. On the night of ultimate victory, Axe declared himself the new Red Mist General, and took on the ultimate title of 'Axe.' But his troops now numbered zero. Of course, many had died in battle, but a significant number had also fallen to Axe's blade. Needless to say, most soldiers now shun his leadership. But this matters not a whit to Axe, who knows that a one-man army is by far the best.",
+  "talents": [
+    {
+      "talentLvl": "25",
+      "talentLeft": "+100 Battle Hunger DPS",
+      "talentRight": "+100 Berserker's Call AoE"
+    },
+    {
+      "talentLvl": "20",
+      "talentLeft": "+20 Health Regen",
+      "talentRight": "+150 Culling Blade Threshold"
+    },
+    {
+      "talentLvl": "15",
+      "talentLeft": "+300 Health",
+      "talentRight": "+25 Movement Speed"
+    },
+    {
+      "talentLvl": "10",
+      "talentLeft": "+1.75 Mana Regen",
+      "talentRight": "+25 Attack Speed"
+    }
+  ]
+}

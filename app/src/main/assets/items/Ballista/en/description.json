@@ -1,0 +1,54 @@
+{
+  "abilities": [
+    {
+      "audioUrl": null,
+      "effects": [
+        "Ability Passive",
+        "Affects Enemies",
+        "Damage Pure"
+      ],
+      "notes": [
+        "The bonus damage is dealt in a separate damage instance, and counts as spell damage. This means it is not affected or considered by anything that works with attack damage. This also means that it fully works with spell damage amplification and spell lifesteal.",
+        "This means it is not affected or considered by anything that works with attack damage.",
+        "This also means that it fully works with spell damage amplification and spell lifesteal.",
+        "Successive attacks with Ballista do not stack the debuff, but refresh the duration and knockback instead.",
+        "The attacks first apply the debuff, then the knockback damage, then their own damage.",
+        "The target is not disabled during the knockback, so they still can cast spells or items, attack and turn during the push. This means it does not cancel channeling spells of the target.",
+        "This means it does not cancel channeling spells of the target."
+      ],
+      "mana": null,
+      "abilityName": "Knockback",
+      "cooldown": null,
+      "description": "Knocks back enemies 50 distance and deals 50 pure damage with every attack.",
+      "params": [
+        "Knockback Distance: 50",
+        "Knockback Duration: 0.2",
+        "Damage: 50"
+      ],
+      "itemBehaviour": [],
+      "story": null
+    }
+  ],
+  "additionalInformation": [
+    "Ballistas are fully sharable.",
+    "Stacks with all other attack range bonuses.",
+    "Affects the cast range of active attack modifiersdama as well."
+  ],
+  "cost": "N\/A",
+  "lore": null,
+  "consistFrom": null,
+  "boughtFrom": "Neutral Drop Only",
+  "name": "Ballista",
+  "description": "A simple design much improved by a master smith's loving hand.",
+  "trivia": null,
+  "upgradeIn": null,
+  "bonuses": [
+    "+250 Attack range (ranged)"
+  ],
+  "tips": [
+    "Ballista is best shared with ranged carry heroes who rely on physical damage: Sharing a Ballista to an allied Sniper helps boost his already high damage and attack range. The passive deals bonus damage and knockback to prevent the enemies from coming near him. Sharing it to an allied Windranger allows her to continuously knockback the enemies during Focus Fire. Sharing it with a Level 25 Medusa with the Split shoot talent will apply it to every hero Medusa is attacking.",
+    "Sharing a Ballista to an allied Sniper helps boost his already high damage and attack range. The passive deals bonus damage and knockback to prevent the enemies from coming near him.",
+    "Sharing it to an allied Windranger allows her to continuously knockback the enemies during Focus Fire.",
+    "Sharing it with a Level 25 Medusa with the Split shoot talent will apply it to every hero Medusa is attacking."
+  ]
+}

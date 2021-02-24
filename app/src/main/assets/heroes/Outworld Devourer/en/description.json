@@ -1,0 +1,198 @@
+{
+  "abilities": [
+    {
+      "notes": [
+        "The health talent increases maximum health capacity, and keeps the current health percentage.",
+        "The armor talent does not benefit illusions.",
+        "The mana talent increases maximum mana capacity, and keeps the current mana percentage.",
+        "The strength talent effectively grants Outworld Devourer 400 health and 2 health regen.",
+        "The spell lifesteal talent stacks additively with other sources of spell lifesteal.",
+        "The spell lifesteal talent heals for 4% from non-hero units. Treats creep-heroes as creeps and does not heal off of illusions."
+      ],
+      "spellName": "Talent",
+      "talents": [
+        {
+          "talentLvl": "25",
+          "talentLeft": "20% Spell Lifesteal",
+          "talentRight": "+1.6% Arcane Orb Damage"
+        },
+        {
+          "talentLvl": "20",
+          "talentLeft": "+0.1 Sanity's Eclipse Mana Difference Multiplier",
+          "talentRight": "+20 Strength"
+        },
+        {
+          "talentLvl": "15",
+          "talentLeft": "+6 Armor",
+          "talentRight": "+250 Mana"
+        },
+        {
+          "talentLvl": "10",
+          "talentLeft": "+15 Attack Speed",
+          "talentRight": "+200 Health"
+        }
+      ]
+    },
+    {
+      "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/6\/69\/Outworld_Devourer_Arcane_Orb_1.mp3\/revision\/latest?cb=20191216021430",
+      "effects": [
+        "Ability Target Unit \/ Autocast",
+        "Affects Enemies",
+        "Damage Pure"
+      ],
+      "notes": [
+        "The bonus damage is dealt in a separate damage instance, and counts as spell damage. This means it is not affected or considered by anything that works with attack damage. This also means that it fully works with spell damage amplification and spell lifesteal.",
+        "This means it is not affected or considered by anything that works with attack damage.",
+        "This also means that it fully works with spell damage amplification and spell lifesteal.",
+        "Deals its damage before the attack damage is applied, but still depends on the attack hitting the target.",
+        "Checks Outworld Devourer's mana pool upon projectile hit, so increasing or decreasing his mana pool while the projectile flies does affect its damage."
+      ],
+      "mana": "80\/120\/160\/200",
+      "hotKey": "Q",
+      "cooldown": "0",
+      "description": "Adds extra pure damage to Outworld Devourer's attacks, based on his remaining mana pool.",
+      "spellName": "Arcane Orb",
+      "params": [
+        "Cast Range: 450",
+        "Current Mana as Damage: 7.5%\/9%\/10.5%\/12% (TagTalent 9.1%\/10.6%\/12.1%\/13.6%)"
+      ],
+      "itemBehaviour": [],
+      "legacyKey": "R",
+      "story": "Harbinger's outworldly knowledge allows it to tap into the ebb and flow of all spiritual energy, infusing it into his being."
+    },
+    {
+      "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/8\/88\/Outworld_Devourer_Astral_Imprisonment.mp3\/revision\/latest?cb=20191216021424",
+      "effects": [
+        "Ability Target Unit",
+        "Affects Enemies \/ Allies",
+        "Damage Magical"
+      ],
+      "notes": [
+        "The targeting reticule must be centered over a unit.",
+        "Astral Imprisonment fully disables the target and turns it invulnerable and hidden for its duration.",
+        "The damage is applied at the end of the duration and affects the imprisoned unit as well, if it was an enemy.",
+        "The red ring expanding at the center of the visual effects indicates the default duration of the imprisonment. The red ring is visible to allies only. The ring does not adapt to duration changes caused by status resistance.",
+        "The ring does not adapt to duration changes caused by status resistance.",
+        "The -disablehelp command prevents an allied Outworld Devourer from casting this spell on you."
+      ],
+      "mana": "140\/160\/180\/200",
+      "hotKey": "W",
+      "cooldown": "24\/20\/16\/12 (TagTalent 0)",
+      "description": "Places a target unit into an astral prison. The hidden unit is invulnerable and disabled. When the astral prison implodes, it deals damage to the target and nearby enemies with 400 range.",
+      "spellName": "Astral Imprisonment",
+      "params": [
+        "Cast Animation: 0.25+0.4",
+        "Cast Range: 300\/350\/400\/450 (TagAghanim 525\/600\/675\/750)",
+        "Damage Radius: 400",
+        "Damage: 100\/175\/250\/325",
+        "Imprison Duration: 4",
+        "Number of Charges: 0 (TagAghanim 2)",
+        "Charge Replenish Time: 0 (TagAghanim 12)"
+      ],
+      "itemBehaviour": [
+        "(Aghanim%27s_Scepter_symbol)^Upgradable by Aghanim's Scepter\nGrants charges to Astral Imprisonment\nDamage areas stack."
+      ],
+      "legacyKey": "T",
+      "story": "Locked away in the pocket between this world and the Outworld, victims realize their infantile knowledge and mortality."
+    },
+    {
+      "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/b\/bd\/Outworld_Devourer_Essence_Flux_1.mp3\/revision\/latest?cb=20191216021426",
+      "effects": [
+        "Ability No Target \/ Passive",
+        "Affects Self \/ Enemies"
+      ],
+      "notes": [
+        "Interrupts Outworld Devourer's channeling spells upon cast.",
+        "Places the slow debuff after the triggering damage.",
+        "The passive restores the mana after the spell is cast.",
+        "Essence Flux does not proc on any item abilities.",
+        "Essence Flux uses pseudo-random distribution.",
+        "On average, restores 5%\/7.5%\/10%\/12.5% of caster's maximum mana per cast."
+      ],
+      "mana": "50",
+      "hotKey": "E",
+      "cooldown": "25",
+      "description": "Passively grants you a chance to restore a percentage of your max mana each time you cast an ability. When activated, causes all abilities to slow enemies when they deal damage.",
+      "spellName": "Essence Flux",
+      "params": [
+        "Passive Proc Chance: 25%",
+        "Passive Max Mana Restored: 20%\/30%\/40%\/50%",
+        "Active Movement Speed Slow: 20%\/30%\/40%\/50%",
+        "Slow Duration: 2",
+        "Active Duration: 8"
+      ],
+      "itemBehaviour": [],
+      "legacyKey": "E",
+      "story": "The Outworld is awash in arcane energy, inclined to diffuse through any of Harbinger's rifts."
+    },
+    {
+      "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/5\/54\/Outworld_Devourer_Sanity%27s_Eclipse.mp3\/revision\/latest?cb=20191216021429",
+      "effects": [
+        "Ability Target Area",
+        "Affects Enemy Heroes",
+        "Damage Magical"
+      ],
+      "notes": [
+        "Gains 1 charge whenever Arcane Orb hits an enemy hero or illusion",
+        "Gains 3 charges whenever Astral Imprisonment is cast on an enemy hero or illusion.",
+        "The amount of charges are visible as a number on the status buff on Outworld Devourer. The buff's description tells how much mana it currently grants.",
+        "Gaining a new charge refreshes the duration of the entire stack.",
+        "Outworld Devourer keeps his current mana percentage upon gaining or losing the charges.",
+        "When cast, the damage is based on the maximum mana pool of Outworld Devourer and the hit enemies, not the current mana.",
+        "The damage only affects enemy heroes and illusions. All other units are completely unaffected.",
+        "Affects units under the effect of Astral Imprisonment as well, but not other invulnerable or hidden units."
+      ],
+      "mana": "200\/325\/450",
+      "hotKey": "R",
+      "cooldown": "160",
+      "description": "Unleashes a psychic blast that deals to enemies based on the difference between your mana and the target's mana. Sanity's Eclipse can hit units trapped by Astral Imprisonment. Charge Counter Eclipse increases Outworld Devourer's max mana with each charge of it's buff. 1 charge is gained per arcane orb hit, and 3 per astral imprisonment, against heroes. Each charge replenishes the existing duration.",
+      "spellName": "Sanity's Eclipse",
+      "params": [
+        "Cast Animation: 0.25+0.4",
+        "Cast Range: 700",
+        "Effect Radius: 375\/475\/575",
+        "Base Damage: 150\/250\/350",
+        "Mana Difference Damage Multiplier: 0.4 (TagTalent 0.5)",
+        "Charge Per Arcane Orb Hit: 1",
+        "Charge Per Astral Imprisonment Cast: 3",
+        "Mana Per Charge: 40\/50\/60",
+        "Charge Duration: 35"
+      ],
+      "itemBehaviour": [],
+      "legacyKey": "C",
+      "story": "When an Outworld crystal ruptures, cataclysmic energies are released, and the reverberations of this power are felt interdimensionally."
+    }
+  ],
+  "mainAttributes": {
+    "attrStrengthInc": 2.9,
+    "attrStrength": 21.0,
+    "attrIntelligence": 30.0,
+    "attrIntelligenceInc": 4.2,
+    "attrAgilityInc": 2.0,
+    "attrAgility": 24.0
+  },
+  "description": "Harbinger, the Outworld Devourer, is a ranged intelligence hero who qualifies as a carry, though unlike traditional carries, he excels against high-armor targets whilst being crippled by spell immunity. With Arcane Orb, his damage output is reliant on his intelligence attribute and the size of his mana pool, so he must focus more or less exclusively on items which augment them. Though he lacks somewhat in range and has no innate mobility skills, Arcane Orb deals Pure damage, meaning that if he gains an advantage in a match he deals constant, colossal damage which cannot be decreased or resisted except with total spell immunity and gets stronger with each hit. He enjoys more-or-less unlimited mana because of his Essence Flux, which can be activated to augment his abilities with a powerful slow when they deal damage. With Astral Imprisonment, Harbinger can render himself or an ally invulnerable for a short period of time, or disable the target enemy. His ultimate, Sanity's Eclipse, can instantly deal colossal area-of-effect damage against his enemies based on how much greater his mana pool is than theirs.",
+  "history": "One of a lordly and magisterial race, Harbinger prowls the edge of the Void, sole surviving sentry of an outpost on the world at the rim of the abyss. From this jagged crystalline Outworld, forever on guard, he has gazed for eternities into the heavens, alert for any stirring in the bottomless night beyond the stars. Imprinted deep in the shining lattices of his intellect lies a resonant pattern akin to prophecy, a dark music implying that eventually some evil will wake out there, beyond the edges of creation, and turn its attention to our world. With his whole being focused on his vigil, Outworld Devourer paid little attention to events closer in to the sun. But at last the clamor of the Ancients, and a sense of growing threat from within as well as without, sent him winging sunward to visit the plains of war. Harbinger's place in our own prophecies is unambiguous: he must be considered an omen of worse things to come. But his arrival in itself is bad enough.",
+  "talents": [
+    {
+      "talentLvl": "25",
+      "talentLeft": "20% Spell Lifesteal",
+      "talentRight": "+1.6% Arcane Orb Damage"
+    },
+    {
+      "talentLvl": "20",
+      "talentLeft": "+0.1 Sanity's Eclipse Mana Difference Multiplier",
+      "talentRight": "+20 Strength"
+    },
+    {
+      "talentLvl": "15",
+      "talentLeft": "+6 Armor",
+      "talentRight": "+250 Mana"
+    },
+    {
+      "talentLvl": "10",
+      "talentLeft": "+15 Attack Speed",
+      "talentRight": "+200 Health"
+    }
+  ]
+}

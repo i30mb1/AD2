@@ -1,0 +1,37 @@
+{
+  "abilities": [],
+  "additionalInformation": [
+    "For strength heroes, it grants 2.67 armor, 28 attack speed and 8% movement speed.",
+    "For agility heroes, it grants 2.67 armor, 28 attack speed, 8% movement speed and 16 attack damage.",
+    "For intelligence heroes, it grants 2.67 armor, 28 attack speed and 8% movement speed.",
+    "Movement speed bonus from multiple Yasha-based items (Yasha, Yasha and Kaya, Sange and Yasha, Manta Style, Trident) do not stack.",
+    "Attack speed bonus from multiple Yasha-based items fully stack."
+  ],
+  "cost": "2050",
+  "lore": null,
+  "consistFrom": [
+    "Blade of Alacrity",
+    "Band of Elvenskin",
+    "Recipe"
+  ],
+  "boughtFrom": "Artifacts",
+  "name": "Yasha",
+  "description": "Yasha is regarded as the swiftest weapon ever created.",
+  "trivia": [
+    "Reference to a katana from the game Phantasy Star Online.",
+    "Yasha is a Japanese word for supernatural spirits; those akin to demons.",
+    "Riki's cosmetic item, Yasha the Quickblade, is based on Yasha."
+  ],
+  "upgradeIn": [
+    "Manta Style",
+    "Sange and Yasha",
+    "Yasha and Kaya",
+    "Trident"
+  ],
+  "bonuses": [
+    "+16 Agility",
+    "+8% Movement speed",
+    "+12 Attack speed"
+  ],
+  "tips": null
+}

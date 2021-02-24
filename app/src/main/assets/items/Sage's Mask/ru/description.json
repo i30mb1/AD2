@@ -1,0 +1,24 @@
+{
+  "abilities": [],
+  "cost": "175",
+  "lore": null,
+  "consistFrom": null,
+  "boughtFrom": "Разное",
+  "name": "Sage's Mask",
+  "description": "Маска, которую зачастую используют в своих ритуалах маги и колдуны.",
+  "trivia": [
+    "В DotA, Sage's Mask назывался «Sobi Mask», отсылаясь на предмет из Warcraft III с похожим названием."
+  ],
+  "upgradeIn": [
+    "Oblivion Staff",
+    "Ring of Basilius",
+    "Urn of Shadows",
+    "Necronomicon",
+    "Drum of Endurance",
+    "Medallion of Courage"
+  ],
+  "bonuses": [
+    "+0,6 к регенерации маны"
+  ],
+  "tips": null
+}

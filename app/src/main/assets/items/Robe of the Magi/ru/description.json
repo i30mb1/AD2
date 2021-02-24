@@ -1,0 +1,26 @@
+{
+  "abilities": [],
+  "additionalInformation": [
+    "Для героев силы, даёт 72 маны и 0,3 регенерации маны.",
+    "Для героев ловкости, даёт 72 маны и 0,3 регенерации маны.",
+    "Для героев интеллекта, даёт 72 маны, 0,3 регенерации маны и 6 урона от атаки."
+  ],
+  "cost": "450",
+  "lore": null,
+  "consistFrom": null,
+  "boughtFrom": "Атрибуты",
+  "name": "Robe of the Magi",
+  "description": "Эта роба пятнает душу владельца, но в обмен дарует мудрость.",
+  "trivia": null,
+  "upgradeIn": [
+    "Power Treads",
+    "Oblivion Staff",
+    "Dagon",
+    "Kaya",
+    "Diffusal Blade"
+  ],
+  "bonuses": [
+    "+6 к интеллекту"
+  ],
+  "tips": null
+}

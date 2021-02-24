@@ -1,0 +1,22 @@
+{
+  "abilities": [],
+  "cost": "2000",
+  "lore": null,
+  "consistFrom": null,
+  "boughtFrom": "Потайная лавка",
+  "name": "Hyperstone",
+  "description": "Загадочный резной камень, который повышает прыть владельца.",
+  "trivia": [
+    "Hyperstone показан в трейлере Dota 2 на Gamescom 2011 как предмет для «быстрых» героев, который даёт вам «запредельную скорость»."
+  ],
+  "upgradeIn": [
+    "Bloodthorn",
+    "Assault Cuirass",
+    "Moon Shard",
+    "Mjollnir"
+  ],
+  "bonuses": [
+    "+60 к скорости атаки"
+  ],
+  "tips": null
+}

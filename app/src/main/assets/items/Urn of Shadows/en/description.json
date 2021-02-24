@@ -1,0 +1,81 @@
+{
+  "abilities": [
+    {
+      "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/1\/18\/Urn_of_Shadows_Soul_Release.mp3\/revision\/latest?cb=20191227195544",
+      "effects": [
+        "Ability Target Unit",
+        "Affects Allied Heroes \/ Enemy Heroes",
+        "Damage Magical"
+      ],
+      "notes": [
+        "Double clicking the item uses it on self.",
+        "Successive casts on the same target do not stack, but refresh the duration instead. The buff and debuff are independent and stack with each other, although the heal gets canceled as soon as the damage ticks. Urn of Shadow's heal does not stack with that of Spirit Vessel. Neither do their damage debuffs stack. Spirit Vessel overrides the heal buff and damage debuff of Urn of Shadows, but the urn cannot override the vessel's modifiers. When attempting to do so, Urn of Shadows only goes on cooldown, without losing charges.",
+        "The buff and debuff are independent and stack with each other, although the heal gets canceled as soon as the damage ticks.",
+        "Urn of Shadow's heal does not stack with that of Spirit Vessel. Neither do their damage debuffs stack.",
+        "Spirit Vessel overrides the heal buff and damage debuff of Urn of Shadows, but the urn cannot override the vessel's modifiers.",
+        "When attempting to do so, Urn of Shadows only goes on cooldown, without losing charges.",
+        "Can regenerate up to 240 health over its full duration.",
+        "Deals 25 damage in 1 second intervals, starting 1 second after cast, resulting in 8 damage instances.",
+        "Can deal a total of 200 damage to the target (before reductions).",
+        "Damage greater than 0 from any player (including allies, excluding self) or Roshan dispels the effect. Does not get dispelled by damage flagged as HP Removal.",
+        "Does not get dispelled by damage flagged as HP Removal.",
+        "Can only be cast on heroes (including illusions and clones) and creep-heroes.",
+        "Urn charges cannot be gathered by clones, illusions and creep-heroes.",
+        "Shares cooldown with Spirit Vessel.",
+        "When having multiple Urns of Shadows, the one in the higher inventory slot gains charges. Slot priority order: Top left, top middle, top right, bottom left, bottom middle, bottom right. Cannot gain charges while inside the backpack. The item must be in one of the 6 slots to gain charges. When having no charges left, the urn gains 2 charges from the next enemy hero's death, instead of 1. When there are multiple Urns of Shadows in the team, the hero who is closest to the dying enemy gets charges. Urn of Shadows and Spirit Vessels are treated equally. When having both, the one in the higher inventory slot gets charges.",
+        "Slot priority order: Top left, top middle, top right, bottom left, bottom middle, bottom right.",
+        "Cannot gain charges while inside the backpack. The item must be in one of the 6 slots to gain charges.",
+        "When having no charges left, the urn gains 2 charges from the next enemy hero's death, instead of 1.",
+        "When there are multiple Urns of Shadows in the team, the hero who is closest to the dying enemy gets charges.",
+        "Urn of Shadows and Spirit Vessels are treated equally. When having both, the one in the higher inventory slot gets charges.",
+        "Upon upgrading an Urn of Shadows into a Spirit Vessel, all its current charges are carried over."
+      ],
+      "mana": null,
+      "abilityName": "Soul Release",
+      "cooldown": "7",
+      "description": "Provides 30 health regeneration when cast on allies, and deals 25 damage per second when cast on enemies. Lasts 8 seconds. Gains charges every time an enemy hero dies within 1400 units. Only the closest Urn to the dying hero will gain a charge.",
+      "params": [
+        "Cast Range: 950",
+        "Charge Gain Radius: 1400",
+        "Ally Health Regen Bonus: 30",
+        "Enemy Damage per Second: 25",
+        "Heal\/Damage Duration: 8"
+      ],
+      "itemBehaviour": [
+        "(Spell_immunity_block_partial_symbol)^Partially pierces spell immunity\nCan be cast on spell immune allies\nCannot be cast on spell immune enemies\nAttempts to damage if debuff was placed before spell immunity and when not dispelled."
+      ],
+      "story": null
+    }
+  ],
+  "additionalInformation": [
+    "For strength heroes, it grants 40 health, 0.2 health regen, 2.33 armor, 2 attack speed, 24 mana, 1.6 mana regen and 2 attack damage.",
+    "For agility heroes, it grants 40 health, 0.2 health regen, 2.33 armor, 2 attack speed, 24 mana, 1.6 mana regen and 2 attack damage.",
+    "For intelligence heroes, it grants 40 health, 0.2 health regen, 2.33 armor, 2 attack speed, 24 mana, 1.6 mana regen and 2 attack damage.",
+    "Unlike other combined items, Urn of Shadows cannot be disassembled within 10 seconds after assembling it."
+  ],
+  "cost": "840",
+  "lore": null,
+  "consistFrom": [
+    "Sage's Mask",
+    "Circlet",
+    "Ring of Protection",
+    "Recipe"
+  ],
+  "boughtFrom": "Support",
+  "name": "Urn of Shadows",
+  "description": "Contains the ashes of powerful demons.",
+  "trivia": null,
+  "upgradeIn": [
+    "Spirit Vessel"
+  ],
+  "bonuses": [
+    "+2 Strength",
+    "+2 Agility",
+    "+2 Intelligence",
+    "+1.5 Mana regeneration",
+    "+2 Armor"
+  ],
+  "tips": [
+    "Urn of Shadows is a great item to have when going for a heavy ganking lineup, as it helps heal any damage taken while finishing off any low health enemies."
+  ]
+}

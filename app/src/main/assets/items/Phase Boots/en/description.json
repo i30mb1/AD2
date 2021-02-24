@@ -1,0 +1,54 @@
+{
+  "abilities": [
+    {
+      "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/9\/9c\/Phase_Boots_Phase.mp3\/revision\/latest?cb=20191227195518",
+      "effects": [
+        "Ability No Target",
+        "Affects Self"
+      ],
+      "notes": [
+        "Does not interrupt the user's channeling spells upon cast.",
+        "Allows the user to pass through other units, including wards, but not through buildings.",
+        "Checks the user's range type periodically and updates the speed bonus immediately if the range type changes.",
+        "When used constantly, increases the user's average movement speed by 7.5% if melee, and by 3.75% if ranged.",
+        "If used by a melee hero, increases the user's base turn rate to 1 for its duration. Turn rate slowing effects still affect it normally.",
+        "The Phase buff is immediately removed, if the item is sold, dropped or moved into the backpack."
+      ],
+      "mana": null,
+      "abilityName": "Phase",
+      "cooldown": "8",
+      "description": "Gives 20% increased movement speed on melee heroes, and 10% on ranged heroes, and lets you move through units and turn more quickly for 3 seconds.",
+      "params": [
+        "Move Speed Bonus (Melee): 20%",
+        "Move Speed Bonus (Ranged): 10%",
+        "Turn Rate (Melee): 1",
+        "Duration: 3"
+      ],
+      "itemBehaviour": [],
+      "story": null
+    }
+  ],
+  "additionalInformation": [
+    "Movement speed bonuses from multiple pairs of boots do not stack.",
+    "Stacks with all other movement speed bonuses."
+  ],
+  "cost": "1500",
+  "lore": null,
+  "consistFrom": [
+    "Boots of Speed",
+    "Chainmail",
+    "Blades of Attack"
+  ],
+  "boughtFrom": "Accessories",
+  "name": "Phase Boots",
+  "description": "Boots that allow the wearer to travel between the ether.",
+  "trivia": null,
+  "upgradeIn": null,
+  "bonuses": [
+    "+4 Armor",
+    "+45 Movement speed",
+    "+18 Attack damage (Melee)",
+    "+12 Attack damage (Ranged)"
+  ],
+  "tips": []
+}

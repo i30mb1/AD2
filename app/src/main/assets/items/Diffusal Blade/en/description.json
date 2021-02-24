@@ -1,0 +1,87 @@
+{
+  "abilities": [
+    {
+      "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/e\/e9\/Diffusal_Blade_Inhibit.mp3\/revision\/latest?cb=20191227195409",
+      "effects": [
+        "Ability Target Unit",
+        "Affects Enemies"
+      ],
+      "notes": [
+        "The slow decreases in 0.8 second intervals, so it slows for 100%\/80%\/60%\/40%\/20%, going one step down every 0.8 seconds.",
+        "When cast on non-hero units, it roots the target for the initial 3 seconds, preventing it from moving and casting certain mobility spells. The slow is still applied to the target, so that it still is slowed for the remaining duration once the root wears off. Does not provide True Sight over the target.",
+        "The slow is still applied to the target, so that it still is slowed for the remaining duration once the root wears off.",
+        "Does not provide True Sight over the target.",
+        "Treats ancient creeps and creep-heroes as heroes."
+      ],
+      "mana": null,
+      "abilityName": "Inhibit",
+      "cooldown": "15",
+      "description": "Targets an enemy, slowing it for 4 seconds.",
+      "params": [
+        "Cast Range: 600",
+        "Move Speed Slow: 100%",
+        "Non-Hero Root Duration: 3",
+        "Slow Duration: 4"
+      ],
+      "itemBehaviour": [],
+      "story": null
+    },
+    {
+      "audioUrl": null,
+      "effects": [
+        "Ability Passive",
+        "Affects Enemies",
+        "Damage Physical"
+      ],
+      "notes": [
+        "The bonus damage is dealt in one instance together with the attack damage, and counts as attack damage as well. It can be lifestealed off of and cleave, but it is not considered by crit. It is also not affected by percentage-based attack damage bonuses or reductions, but can be reduced with flat reductions.",
+        "It can be lifestealed off of and cleave, but it is not considered by crit.",
+        "It is also not affected by percentage-based attack damage bonuses or reductions, but can be reduced with flat reductions.",
+        "Effectively increases the owner's attack damage by 32 against units which have enough mana to burn. Effectively increases the attack damage of an illusion by 12.8\/6.4 (melee\/ranged) against units which have enough mana to burn.",
+        "Effectively increases the attack damage of an illusion by 12.8\/6.4 (melee\/ranged) against units which have enough mana to burn.",
+        "Applies the mana loss first, and then the damage.",
+        "Does not work against allied units when attacking them.",
+        "Mana Break from multiple Diffusal Blades does not stack. Does not stack with Anti-Mage's Mana Break, but does stack with other sources."
+      ],
+      "mana": null,
+      "abilityName": "Manabreak",
+      "cooldown": null,
+      "description": "Each attack burns 40 mana from the target, and deals 0.8 physical damage per burned mana. Burns 16 mana per attack from melee illusions and 8 mana per attack from ranged illusions.",
+      "params": [
+        "Mana Burned per Hit (Hero): 40",
+        "Mana Burned per Hit (Melee Illusion): 16",
+        "Mana Burned per Hit (Ranged Illusion): 8",
+        "Burned Mana as Damage: 80%"
+      ],
+      "itemBehaviour": [],
+      "story": null
+    }
+  ],
+  "additionalInformation": [
+    "For strength heroes, it grants 3.33 armor, 20 attack speed, 120 mana and 0.5 mana regen.",
+    "For agility heroes, it grants 3.33 armor, 20 attack speed, 120 mana, 0.5 mana regen and 20 attack damage.",
+    "For intelligence heroes, it grants 3.33 armor, 20 attack speed, 120 mana, 0.5 mana regen and 10 attack damage."
+  ],
+  "cost": "3150",
+  "lore": null,
+  "consistFrom": [
+    "Blade of Alacrity",
+    "Blade of Alacrity",
+    "Robe of the Magi",
+    "Recipe"
+  ],
+  "boughtFrom": "Artifacts",
+  "name": "Diffusal Blade",
+  "description": "An enchanted blade that allows the user to cut straight into the enemy's soul.",
+  "trivia": [
+    "The Manabreak passive used to be called Feedback and got changed at some point without notification."
+  ],
+  "upgradeIn": null,
+  "bonuses": [
+    "+20 Agility",
+    "+10 Intelligence"
+  ],
+  "tips": [
+    "Because of the way Manabreak interacts with illusions, Diffusal Blade is most common and most effective on heroes with easy access to them, such as Phantom Lancer."
+  ]
+}

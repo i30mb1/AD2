@@ -1,0 +1,45 @@
+{
+  "abilities": [
+    {
+      "audioUrl": null,
+      "effects": [
+        "Ability Passive",
+        "Affects Enemies",
+        "Damage Physical"
+      ],
+      "notes": [
+        "Increases the owner's total attack damage against buildings, including raw damage bonuses.",
+        "The bonus damage is only applied when attacking buildings."
+      ],
+      "mana": null,
+      "abilityName": "Demolish",
+      "cooldown": null,
+      "description": "Deals bonus damage to buildings.",
+      "params": [
+        "Building Attack Damage Bonus: 25%"
+      ],
+      "itemBehaviour": [],
+      "story": null
+    }
+  ],
+  "additionalInformation": [
+    "The Levellers are fully sharable."
+  ],
+  "cost": "N\/A",
+  "lore": null,
+  "consistFrom": null,
+  "boughtFrom": "Neutral Drop Only",
+  "name": "The Leveller",
+  "description": "A demonic blade that struck the final blow to crack the gates of the Sanctum of Solanas.",
+  "trivia": [
+    "An early version of The Leveller was revealed in the version 6.60 beta (46), but was never added to the release version."
+  ],
+  "upgradeIn": null,
+  "bonuses": [
+    "+60 Attack speed"
+  ],
+  "tips": [
+    "Best shared on heroes with powerful pushing potential such as Tiny, Dragon Knight, or Lycan.",
+    "You can also share this to heroes with attack modifiers such as bash or critical hit due to the attack speed bonus."
+  ]
+}

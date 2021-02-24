@@ -1,0 +1,48 @@
+{
+  "abilities": [
+    {
+      "audioUrl": null,
+      "effects": [
+        "Ability Passive",
+        "Affects Enemies"
+      ],
+      "notes": [
+        "Stacks multiplicatively with other sources of spell amplification."
+      ],
+      "mana": null,
+      "abilityName": "Mage Slayer",
+      "cooldown": null,
+      "description": "Places a debuff when you attack enemies, causing them to do 35% less spell damage for 4 seconds.",
+      "params": [
+        "Spell Damage Reduction: 35",
+        "Duration: 4"
+      ],
+      "itemBehaviour": [],
+      "story": null
+    }
+  ],
+  "additionalInformation": [
+    "Mage Slayer does not work with illusions"
+  ],
+  "cost": "3400",
+  "lore": null,
+  "consistFrom": [
+    "Cloak",
+    "Blade of Alacrity",
+    "Claymore",
+    "Recipe"
+  ],
+  "boughtFrom": "Artifacts",
+  "name": "Mage Slayer",
+  "description": "Forged by a secret order in The Third Age of Praxa'cia to fell the False King.",
+  "trivia": null,
+  "upgradeIn": null,
+  "bonuses": [
+    "+20 Agility",
+    "+20% Magic resistance",
+    "+20 Attack damage"
+  ],
+  "tips": [
+    "Very effective against spellcasters due to its ability to reduce spell damage."
+  ]
+}

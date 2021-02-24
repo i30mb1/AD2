@@ -1,0 +1,43 @@
+{
+  "abilities": [
+    {
+      "audioUrl": null,
+      "effects": [
+        "Ability Passive",
+        "Affects Enemies"
+      ],
+      "notes": [
+        "Successive attacks with Orb of Destruction do not stack, but refresh the duration instead.",
+        "The attacks first apply the debuff, then their own damage.",
+        "When a melee and a ranged hero with Orb of Destruction attack one target, the slow of the first applied debuff is used and refreshed.",
+        "Fully stacks with Blight Stone, Desolator, Orb of Corrosion and Stygian Desolator.",
+        "Works against every unit, including wards, buildings and allied units."
+      ],
+      "mana": null,
+      "abilityName": "Impeding Corruption",
+      "cooldown": null,
+      "description": "Attacks reduce the target's armor and movement speed. Slow amount varies based on whether the wearer is melee or ranged.",
+      "params": [
+        "Move Speed Slow (Melee): 25%",
+        "Move Speed Slow (Ranged): 15%",
+        "Armor Reduction: 4",
+        "Duration: 4"
+      ],
+      "itemBehaviour": [],
+      "story": null
+    }
+  ],
+  "additionalInformation": [
+    "Orbs of Destruction are fully sharable."
+  ],
+  "cost": "N\/A",
+  "lore": null,
+  "consistFrom": null,
+  "boughtFrom": "Neutral Drop Only",
+  "name": "Orb of Destruction",
+  "description": "An ingot of chaos suspended in wizard's ether, housed within an arcanist's orb.",
+  "trivia": null,
+  "upgradeIn": null,
+  "bonuses": null,
+  "tips": null
+}

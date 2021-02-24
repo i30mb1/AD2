@@ -1,0 +1,250 @@
+{
+  "abilities": [
+    {
+      "notes": [
+        "The health talent increases maximum health capacity, and keeps the current health percentage.",
+        "This attack damage talent is added as raw attack damage, so it does not benefit illusions, and is not affected by most percentage-based damage increasing or reducing effects.",
+        "The strength talent effectively grants Dragon Knight 400 health, 2 health regeneration, and 20 attack damage.",
+        "The cooldown reduction talent stacks multiplicatively with other sources cooldown reduction."
+      ],
+      "spellName": "Talent",
+      "talents": [
+        {
+          "talentLvl": "25",
+          "talentLeft": "+1.6s Dragon Tail",
+          "talentRight": "1.8x Dragon Blood HP Regen\/Armor"
+        },
+        {
+          "talentLvl": "20",
+          "talentLeft": "+20 Strength",
+          "talentRight": "15% Cooldown Reduction"
+        },
+        {
+          "talentLvl": "15",
+          "talentLeft": "+400 Health",
+          "talentRight": "+25 Damage"
+        },
+        {
+          "talentLvl": "10",
+          "talentLeft": "-24% Breathe Fire Damage Reduction",
+          "talentRight": "+2 Mana Regen"
+        }
+      ]
+    },
+    {
+      "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/1\/15\/Dragon_Knight_Breathe_Fire.mp3\/revision\/latest?cb=20191216012628",
+      "effects": [
+        "Ability Target Point \/ Target Unit",
+        "Affects Enemies",
+        "Damage Magical"
+      ],
+      "notes": [
+        "Breathe Fire travels at a speed of 1050.",
+        "Can hit units up to 1000 range away (travel distance + end radius).",
+        "The complete area is shaped like a cone.",
+        "Reduces hit targets' total attack damage, including raw damage bonuses.",
+        "The fire first applies the damage, then the debuff.",
+        "Has a cast backswing of 0.53 seconds while in Elder Dragon Form."
+      ],
+      "mana": "90\/100\/110\/120",
+      "hotKey": "Q",
+      "cooldown": "14\/13\/12\/11 (TagTalent 11.9\/11.05\/10.2\/9.35)",
+      "description": "Unleashes a breath of fire in front of Dragon Knight that burns enemies and reduces the damage their attacks deal.",
+      "spellName": "Breathe Fire",
+      "params": [
+        "Cast Animation: 0.2+0.47",
+        "Cast Range: 600",
+        "Starting Radius: 150",
+        "Travel Distance: 750",
+        "End Radius: 250",
+        "Damage: 90\/170\/240\/300",
+        "Attack Damage Reduction: 25% (TagTalent 49%)",
+        "Reduction Duration: 11",
+        "Attack damage reduction persists if debuff was placed before spell immunity and when not dispelled. Can directly target spell immune units, launching the fire in their direction."
+      ],
+      "itemBehaviour": [],
+      "legacyKey": "F",
+      "story": "Knight Davion's breath has become that of the mighty Eldwurm Slyrak, remembered for burning numerous other knights to a crisp."
+    },
+    {
+      "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/b\/bc\/Dragon_Knight_Dragon_Tail_1.mp3\/revision\/latest?cb=20191216012629",
+      "effects": [
+        "Ability Target Unit",
+        "Affects Enemies",
+        "Damage Magical"
+      ],
+      "notes": [
+        "While in Elder Dragon Form, Dragon Tail has a cast range of 400 and uses a projectile, instead of being instant. The projectile travels at a speed of 1600.",
+        "The projectile travels at a speed of 1600.",
+        "In human form, the spell does not rely on a projectile, meaning it cannot be disjointed.",
+        "Dragon Tail first applies the damage, then the debuff."
+      ],
+      "mana": "100",
+      "hotKey": "W",
+      "cooldown": "12\/11\/10\/9 (TagTalent 10.2\/9.35\/8.5\/7.65)",
+      "description": "Dragon Knight smites an enemy unit in melee range with his shield, stunning it while dealing minor damage. When in Elder Dragon Form, the cast range increases to 400.",
+      "spellName": "Dragon Tail",
+      "params": [
+        "Cast Animation: 0+0.5",
+        "Cast Range: 150",
+        "Damage: 50\/75\/100\/125",
+        "Stun Duration: 2.5\/2.75\/3\/3.25 (TagTalent 4.1\/4.35\/4.6\/4.85)",
+        "The projectile used during Elder Dragon Form can be disjointed."
+      ],
+      "itemBehaviour": [],
+      "legacyKey": "T",
+      "story": "Davion's combination of dragon talents and knightly skills makes him a vicious opponent in melee combat."
+    },
+    {
+      "audioUrl": null,
+      "effects": [
+        "Ability Passive",
+        "Affects Self"
+      ],
+      "notes": [
+        "Can regenerate up to 240\/480\/720\/960 (TagTalent 432\/864\/1296\/1728) health in one minute."
+      ],
+      "mana": null,
+      "hotKey": "E",
+      "cooldown": null,
+      "description": "The life blood of the Dragon improves health regeneration and strengthens armor.",
+      "spellName": "Dragon Blood",
+      "params": [
+        "Health Regen Bonus: 4\/8\/12\/16 (TagTalent 7.2\/14.4\/21.6\/28.8)",
+        "Armor Bonus: 3\/6\/9\/12 (TagTalent 5.4\/10.8\/16.2\/21.6)",
+        "Illusions benefit from the health regeneration, but not from the armor."
+      ],
+      "itemBehaviour": [],
+      "legacyKey": "D",
+      "story": "Slyrak's blood still courses through Davion's veins, giving him twice the vitality of an ordinary knight."
+    },
+    {
+      "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/1\/11\/Dragon_Knight_Fireball.mp3\/revision\/latest?cb=20201225162937",
+      "effects": [
+        "Ability Target Area",
+        "Affects Enemies",
+        "Damage Magical"
+      ],
+      "notes": [
+        "Requires Aghanim's Shard to be unlocked.",
+        "Only available during Elder Dragon Form.",
+        "Deals 40 damage in 0.5 second intervals, immediately upon cast, resulting in 21 damage instances.",
+        "Can deal up to 840 damage to a single unit (before reductions).",
+        "Multiple instances of Fireball on the same area stack, with each cast dealing damage to units within range."
+      ],
+      "mana": "100",
+      "hotKey": "D",
+      "cooldown": "20 (TagTalent 17)",
+      "description": "Provided to Elder Dragon Form. Ignites a 450 AoE area for 10 seconds, dealing 80 damage per second to enemies in it.",
+      "spellName": "Fireball",
+      "params": [
+        "Cast Animation: 0.2+0.53",
+        "Cast Range: 1400",
+        "Radius: 450",
+        "Damage per Second: 80",
+        "Duration: 10"
+      ],
+      "itemBehaviour": [],
+      "legacyKey": "B",
+      "story": null
+    },
+    {
+      "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/5\/59\/Dragon_Knight_Elder_Dragon_Form.mp3\/revision\/latest?cb=20191216012624",
+      "effects": [
+        "Ability No Target",
+        "Affects Self \/ Enemies",
+        "Damage Magical \/ Physical"
+      ],
+      "notes": [
+        "Level 4 is only available while having Aghanim's Scepter. The spell can still only be leveled 3 times, the Scepter automatically increases the level by 1.",
+        "Increases Dragon Knight's movement speed to 335, attack range to 500, and magic resistance to 25%\/25%\/25% (TagTalent \/55%).",
+        "Also gives Dragon Knight ranged attack properties. His attack projectiles travel at a speed of 900.",
+        "On level 4, also grants Dragon Knight unobstructed movement, allowing him to path over impassable terrain, units, buildings, and trees. However, Elder Dragon Form doesn't grants Dragon Knight phased movement, means other unit cannot pass him.",
+        "However, Elder Dragon Form doesn't grants Dragon Knight phased movement, means other unit cannot pass him.",
+        "Level 1 transforms him into a Green Dragon, level 2 into a Red Dragon, level 3 into a Blue Dragon and level 4 into a Black Dragon. The black dragon form is 30% larger than the other forms.",
+        "The black dragon form is 30% larger than the other forms.",
+        "Elder Dragon Form is fully canceled on death. The Dragon Form buff is hidden, only the 3 attack modifier buffs are displayed.",
+        "Successive casts of Elder Dragon Form refresh the duration and update the form, adapting to the current level of the spell.",
+        "While in Elder Dragon Form, Dragon Knight gains the following attack modifiers through undispellable buffs:",
+        "Corrosive Breath: (Available for Level 1 and higher levels of Elder Dragon Form) Places a debuff, which deals magical damage in 1 second intervals, starting 1 second after the debuff is applied, resulting in 5 instances. When on level 2 or higher, the debuff is applied to all enemies within the splash radius. Can deal up to 100\/100\/100 (TagTalent \/150) damage to a unit (before reductions). Does not work against wards, works against allied units. Corrosive Breath fully affects buildings, meaning it can also be used to deny allied towers. However, buildings are only debuffed when directly attacked. Successive hits do not stack, but refresh the duration. The attacks first apply the debuff, then their own attack damage. However, on secondary targets, it first applies the splash damage, then the debuff. When an attack misses or is disjointed, the debuff is not applied within the radius.",
+        "Places a debuff, which deals magical damage in 1 second intervals, starting 1 second after the debuff is applied, resulting in 5 instances.",
+        "When on level 2 or higher, the debuff is applied to all enemies within the splash radius.",
+        "Can deal up to 100\/100\/100 (TagTalent \/150) damage to a unit (before reductions).",
+        "Does not work against wards, works against allied units.",
+        "Corrosive Breath fully affects buildings, meaning it can also be used to deny allied towers. However, buildings are only debuffed when directly attacked.",
+        "Successive hits do not stack, but refresh the duration.",
+        "The attacks first apply the debuff, then their own attack damage. However, on secondary targets, it first applies the splash damage, then the debuff.",
+        "When an attack misses or is disjointed, the debuff is not applied within the radius.",
+        "Splash Attack: (Available for Level 2 and higher levels of Elder Dragon Form) When an attack misses or is disjointed, no splash damage is dealt. The splash damage is physical damage, and is affected by Damage Block. Does not work against wards or buildings.",
+        "When an attack misses or is disjointed, no splash damage is dealt.",
+        "The splash damage is physical damage, and is affected by Damage Block.",
+        "Does not work against wards or buildings.",
+        "Frost Breath: (Available for Level 3 and higher levels of Elder Dragon Form) Does not work against wards, buildings, or allied units. Successive hits do not stack, but refresh the duration. The attacks first apply the debuff, then their own attack damage. The splash damage is applied after the debuff as well. When an attack misses or is disjointed, the slow is not applied within the radius.",
+        "Does not work against wards, buildings, or allied units.",
+        "Successive hits do not stack, but refresh the duration.",
+        "The attacks first apply the debuff, then their own attack damage. The splash damage is applied after the debuff as well. When an attack misses or is disjointed, the slow is not applied within the radius.",
+        "When an attack misses or is disjointed, the slow is not applied within the radius."
+      ],
+      "mana": "50",
+      "hotKey": "R",
+      "cooldown": "115 (TagTalent 97.75)",
+      "description": "Dragon Knight takes the form of one of three powerful elder dragons, increasing his speed, and Dragon Tail's range, while granting him new powers. LEVEL 1 Green Dragon - Corrosive Breath: attacks deal 20 poison damage per second for 5 seconds. Works on structures. LEVEL 2 Red Dragon - Splash Attack: attacks damage all enemy units in a 350 radius for 0%\/75%\/75%\/115%, with Corrosive Breath added to the targets. LEVEL 3 Blue Dragon - Frost Breath: slows movement speed by 40% and attack speed by 40 of enemy units in Splash Attack range for 3 seconds, with Corrosive Breath added to the targets.",
+      "spellName": "Elder Dragon Form",
+      "params": [
+        "Cast Animation: 0+0.5",
+        "Attack Range Bonus: 350",
+        "Move Speed Bonus: 25",
+        "Magic Resistance Bonus: 0%\/0%\/0% (TagAghanim \/40%)",
+        "Dragon Tail Cast Range Bonus: 250",
+        "Dragon Form Duration: 60",
+        "Corrosive Breath Damage per Second: 20\/20\/20 (TagAghanim \/30)",
+        "Corrosive Breath Debuff Duration: 5",
+        "Splash Attack Radius: 350",
+        "Splash Attack Damage: 0%\/75%\/75% (TagAghanim \/115%)",
+        "Frost Breath Radius: 300",
+        "Frost Breath Move Speed Slow: 0%\/0%\/40% (TagAghanim \/60%)",
+        "Frost Breath Attack Speed Slow: 0\/0\/40 (TagAghanim \/60)",
+        "Frost Breath Debuff Duration: 3",
+        "Increases the level of your ultimate. Adds a 4th level, Black Dragon. Black Dragon has bonus Corrosive Damage, Splash Damage, and Slow amount, free pathing and grants additional Magic resistance.",
+        "Grants a new ability during Elder Dragon Form: Fireball",
+        "Poison and frost breath do not pierce spell immunity. Splash pierces spell immunity. Corrosive Breath attempts to damage spell immune enemies when placed before spell immunity and when not dispelled.",
+        "Illusions get their own Elder Dragon Form buff lasting its regular duration."
+      ],
+      "itemBehaviour": [],
+      "legacyKey": "R",
+      "story": "The dormant dragon power springs forth from within Davion, combining the powers of a legendary knight with a legendary Eldwurm."
+    }
+  ],
+  "mainAttributes": {
+    "attrStrengthInc": 3.4,
+    "attrStrength": 21.0,
+    "attrIntelligence": 18.0,
+    "attrIntelligenceInc": 1.7,
+    "attrAgilityInc": 2.0,
+    "attrAgility": 19.0
+  },
+  "description": "Davion, the Dragon Knight, is a durable melee strength hero with a relatively straightforward and yet versatile skill set. He has both an area-of-effect nuke and a lengthy single-target stun, giving him excellent farming and ganking capabilities. Though he has no real escape ability, his Dragon Blood provides him a hefty amount of armor and regen, making him capable of withstanding strong physical hits and recovering quickly. He is still very vulnerable in the early game, however, and needs to farm and stay alive in order to be effective in later stages. If he has enough levels and farm, Dragon Knight is very formidable in the late game due to his strong ultimate, Elder Dragon Form, which transforms him into a legendary dragon with a ranged attack, capable of eliminating multiple enemies at once.",
+  "history": "After years on the trail of a legendary Eldwurm, the skilled dragon-slayer found himself facing a disappointing foe: the dreaded Slyrak had grown ancient and frail, its wings tattered, its few remaining scales stricken with scale-rot, its fangs ground to nubs, and its fire-gouts no more threatening than a pack of wet matchsticks. Seeing no honor to be gained in dragon-murder, the young knight prepared to turn away and leave his old foe to die in peace. But a voice crept into his thoughts, and Slyrak gave a whispered plea that the knight might honor him with death in combat. The knight agreed, and found himself rewarded beyond expectation for his act of mercy: As he sank his blade in Slyrak's breast, the dragon sank a claw into his throat. As their blood mingled, Slyrak sent his power out along the Blood Route, offering all its strength and centuries of wisdom to the knight. The dragon's death sealed their bond, and Dragon Knight was born. The ancient power slumbers in the knight, waking when he calls it; or perhaps it is the Dragon that calls the Knight...",
+  "talents": [
+    {
+      "talentLvl": "25",
+      "talentLeft": "+1.6s Dragon Tail",
+      "talentRight": "1.8x Dragon Blood HP Regen\/Armor"
+    },
+    {
+      "talentLvl": "20",
+      "talentLeft": "+20 Strength",
+      "talentRight": "15% Cooldown Reduction"
+    },
+    {
+      "talentLvl": "15",
+      "talentLeft": "+400 Health",
+      "talentRight": "+25 Damage"
+    },
+    {
+      "talentLvl": "10",
+      "talentLeft": "-24% Breathe Fire Damage Reduction",
+      "talentRight": "+2 Mana Regen"
+    }
+  ]
+}

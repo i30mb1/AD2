@@ -1,0 +1,40 @@
+{
+  "abilities": [
+    {
+      "audioUrl": null,
+      "effects": [
+        "Ability Toggle \/ Aura",
+        "Affects Enemies",
+        "Damage Magical"
+      ],
+      "notes": [
+        "Ceremonial Robe is an aura and its buff\/debuff lingers for 0.5 seconds.",
+        "Reduces most heroes' total magic resistance to 18%, assuming basic 25% magic resistance and no other sources of magic resistance."
+      ],
+      "mana": null,
+      "abilityName": "Passive",
+      "cooldown": null,
+      "description": "Lowers enemy Status Resistance by and Magic Resistance by .",
+      "params": [
+        "Radius: 1200",
+        "Reduced magic resistance: 10%",
+        "Reduced status resistance: 10%"
+      ],
+      "itemBehaviour": [],
+      "story": null
+    }
+  ],
+  "additionalInformation": [],
+  "cost": "N\/A",
+  "lore": null,
+  "consistFrom": null,
+  "boughtFrom": "Neutral Drop Only",
+  "name": "Ceremonial Robe",
+  "description": "One of many items lost in the looting of Zelenwyr's sacred reliquary.",
+  "trivia": null,
+  "upgradeIn": null,
+  "bonuses": [
+    "+350 Mana"
+  ],
+  "tips": null
+}

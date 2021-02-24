@@ -1,0 +1,27 @@
+{
+  "abilities": [],
+  "additionalInformation": [
+    "For strength heroes, it grants 4.17 armor and 25 attack speed.",
+    "For agility heroes, it grants 4.17 armor, 25 attack speed and 25 attack damage.",
+    "For intelligence heroes, it grants 4.17 armor and 25 attack speed."
+  ],
+  "cost": "2800",
+  "lore": null,
+  "consistFrom": null,
+  "boughtFrom": "Secret Shop",
+  "name": "Eaglesong",
+  "description": "Capturing the majestic call of an eagle, this mystical horn brings limitless dexterity to those who hear it.",
+  "trivia": [
+    "Eaglesong is referenced in the \"Tales from the secret shop\" comic.[1]",
+    "In the original DotA, this item was named Eaglehorn, a reference to a unique bow in Diablo II."
+  ],
+  "upgradeIn": [
+    "Ethereal Blade",
+    "Butterfly",
+    "Swift Blink"
+  ],
+  "bonuses": [
+    "+25 Agility"
+  ],
+  "tips": null
+}

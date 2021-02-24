@@ -1,0 +1,238 @@
+[
+  {
+    "responses": [
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/9\/93\/Vo_phoenix_phoenix_bird_respawn.mp3\/revision\/latest?cb=20201018134733",
+        "title": ""
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/c\/c1\/Vo_phoenix_phoenix_bird_moving01.mp3\/revision\/latest?cb=20201018134716",
+        "isArcane": true,
+        "title": ""
+      }
+    ],
+    "category": "Drafting"
+  },
+  {
+    "responses": [
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/9\/93\/Vo_phoenix_phoenix_bird_respawn.mp3\/revision\/latest?cb=20201018134733",
+        "title": ""
+      }
+    ],
+    "category": "Entering battle"
+  },
+  {
+    "responses": [
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/1\/13\/Vo_phoenix_phoenix_bird_inthebag.mp3\/revision\/latest?cb=20201018134749",
+        "title": ""
+      }
+    ],
+    "category": "Taunting"
+  },
+  {
+    "responses": [
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/6\/65\/Vo_phoenix_phoenix_bird_victory.mp3\/revision\/latest?cb=20201018134738",
+        "title": ""
+      }
+    ],
+    "category": "Beginning battle"
+  },
+  {
+    "responses": [
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/c\/c1\/Vo_phoenix_phoenix_bird_moving01.mp3\/revision\/latest?cb=20201018134716",
+        "title": ""
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/4\/4a\/Vo_phoenix_phoenix_bird_moving02.mp3\/revision\/latest?cb=20201018134718",
+        "isArcane": true,
+        "title": ""
+      }
+    ],
+    "category": "Moving"
+  },
+  {
+    "responses": [
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/f\/f4\/Vo_phoenix_phoenix_bird_attack.mp3\/revision\/latest?cb=20201018134740",
+        "title": ""
+      }
+    ],
+    "category": "Attacking"
+  },
+  {
+    "responses": [
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/4\/46\/Vo_phoenix_phoenix_bird_level_up.mp3\/revision\/latest?cb=20201018134714",
+        "title": ""
+      }
+    ],
+    "category": "Leveling up"
+  },
+  {
+    "responses": [
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/4\/4e\/Vo_phoenix_phoenix_bird_kill.mp3\/revision\/latest?cb=20201018134750",
+        "title": ""
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/7\/71\/Vo_phoenix_phoenix_bird_emote_bad.mp3\/revision\/latest?cb=20201018134745",
+        "isArcane": true,
+        "title": "",
+        "icons": [
+          "heroes\/Alchemist\/minimap.png",
+          "heroes\/Ancient Apparition\/minimap.png",
+          "heroes\/Elder Titan\/minimap.png",
+          "heroes\/Enigma\/minimap.png",
+          "heroes\/Invoker\/minimap.png",
+          "heroes\/Keeper of the Light\/minimap.png",
+          "heroes\/Lina\/minimap.png",
+          "heroes\/Skywrath Mage\/minimap.png",
+          "heroes\/Terrorblade\/minimap.png",
+          "heroes\/Underlord\/minimap.png"
+        ]
+      }
+    ],
+    "category": "Killing an enemy"
+  },
+  {
+    "responses": [
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/6\/6c\/Vo_phoenix_phoenix_bird_last_hit.mp3\/revision\/latest?cb=20201018134752",
+        "title": ""
+      }
+    ],
+    "category": "Last hitting"
+  },
+  {
+    "responses": [
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/c\/cd\/Vo_phoenix_phoenix_bird_denied.mp3\/revision\/latest?cb=20201018134744",
+        "title": ""
+      }
+    ],
+    "category": "Denying"
+  },
+  {
+    "responses": [
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/f\/f1\/Vo_phoenix_phoenix_bird_rune.mp3\/revision\/latest?cb=20201018134735",
+        "title": "",
+        "icons": [
+          "heroes\/Aegis of the Immortal\/minimap.png"
+        ]
+      }
+    ],
+    "category": "Acquiring an item"
+  },
+  {
+    "responses": [
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/7\/70\/Vo_phoenix_phoenix_bird_death_defeat.mp3\/revision\/latest?cb=20201018134742",
+        "title": ""
+      }
+    ],
+    "category": "Dying"
+  },
+  {
+    "responses": [
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/9\/93\/Vo_phoenix_phoenix_bird_respawn.mp3\/revision\/latest?cb=20201018134733",
+        "title": ""
+      }
+    ],
+    "category": "Respawning"
+  },
+  {
+    "responses": [
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/f\/f1\/Vo_phoenix_phoenix_bird_rune.mp3\/revision\/latest?cb=20201018134735",
+        "title": ""
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/f\/f1\/Vo_phoenix_phoenix_bird_rune.mp3\/revision\/latest?cb=20201018134735",
+        "isArcane": true,
+        "title": ""
+      }
+    ],
+    "category": "Activating runes"
+  },
+  {
+    "responses": [
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/d\/d2\/Vo_phoenix_phoenix_bird_no01.mp3\/revision\/latest?cb=20201018134721",
+        "title": ""
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/9\/9e\/Vo_phoenix_phoenix_bird_no02.mp3\/revision\/latest?cb=20201018134723",
+        "isArcane": true,
+        "title": ""
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/5\/5b\/Vo_phoenix_phoenix_bird_no03.mp3\/revision\/latest?cb=20201018134726",
+        "isArcane": true,
+        "title": ""
+      }
+    ],
+    "category": "Ability on cooldown"
+  },
+  {
+    "responses": [
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/d\/d2\/Vo_phoenix_phoenix_bird_no01.mp3\/revision\/latest?cb=20201018134721",
+        "title": ""
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/9\/9e\/Vo_phoenix_phoenix_bird_no02.mp3\/revision\/latest?cb=20201018134723",
+        "isArcane": true,
+        "title": ""
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/5\/5b\/Vo_phoenix_phoenix_bird_no03.mp3\/revision\/latest?cb=20201018134726",
+        "isArcane": true,
+        "title": ""
+      }
+    ],
+    "category": "Not enough mana"
+  },
+  {
+    "responses": [
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/a\/a7\/Vo_phoenix_phoenix_bird_under_attack.mp3\/revision\/latest?cb=20201018134737",
+        "title": ""
+      }
+    ],
+    "category": "Taking damage"
+  },
+  {
+    "responses": [
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/a\/a7\/Vo_phoenix_phoenix_bird_emote_good.mp3\/revision\/latest?cb=20201018134747",
+        "title": ""
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/2\/2a\/Vo_phoenix_phoenix_bird_laugh.mp3\/revision\/latest?cb=20201018134713",
+        "isArcane": true,
+        "title": ""
+      }
+    ],
+    "category": "Chat responses"
+  },
+  {
+    "responses": [
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/6\/65\/Vo_phoenix_phoenix_bird_victory.mp3\/revision\/latest?cb=20201018134738",
+        "title": ""
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/7\/70\/Vo_phoenix_phoenix_bird_death_defeat.mp3\/revision\/latest?cb=20201018134742",
+        "isArcane": true,
+        "title": ""
+      }
+    ],
+    "category": "Match end"
+  }
+]

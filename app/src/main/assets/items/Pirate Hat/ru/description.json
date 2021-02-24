@@ -1,0 +1,37 @@
+{
+  "abilities": [
+    {
+      "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/5\/55\/Trusty_Shovel_Dig.mp3\/revision\/latest?cb=20191227195721",
+      "effects": [
+        "Способность Направленная на точку"
+      ],
+      "notes": [
+        "Выкапывает руну богатства, которую может подобрать кто угодно."
+      ],
+      "mana": null,
+      "abilityName": "Dig",
+      "cooldown": "40",
+      "description": "Выкапывает руну богатства.",
+      "params": [
+        "Время применения: 1"
+      ],
+      "itemBehaviour": [],
+      "story": null
+    }
+  ],
+  "additionalInformation": [
+    "Pirate Hat \u2014 полностью передаваемый предмет."
+  ],
+  "cost": "Н\/Д",
+  "lore": null,
+  "consistFrom": null,
+  "boughtFrom": "нейтральных крипов",
+  "name": "Pirate Hat",
+  "description": "Стоимость Н\/Д Выпадает из нейтральных крипов",
+  "trivia": null,
+  "upgradeIn": null,
+  "bonuses": [
+    "+150 к скорости атаки"
+  ],
+  "tips": null
+}

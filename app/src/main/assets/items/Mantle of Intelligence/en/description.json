@@ -1,0 +1,22 @@
+{
+  "abilities": [],
+  "additionalInformation": [
+    "For strength heroes, it grants 36 mana and 0.15 mana regen.",
+    "For agility heroes, it grants 36 mana and 0.15 mana regen.",
+    "For intelligence heroes, it grants 36 mana, 0.15 mana regen and 3 attack damage."
+  ],
+  "cost": "145",
+  "lore": null,
+  "consistFrom": null,
+  "boughtFrom": "Attributes",
+  "name": "Mantle of Intelligence",
+  "description": "A beautiful sapphire mantle worn by generations of queens.",
+  "trivia": null,
+  "upgradeIn": [
+    "Null Talisman"
+  ],
+  "bonuses": [
+    "+3 Intelligence"
+  ],
+  "tips": null
+}

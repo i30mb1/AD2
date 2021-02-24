@@ -1,0 +1,31 @@
+{
+  "abilities": [],
+  "additionalInformation": [
+    "For strength heroes, it grants 5 armor, 60 attack speed and 25 attack damage.",
+    "For agility heroes, it grants 5 armor, 60 attack speed and 55 attack damage.",
+    "For intelligence heroes, it grants 5 armor, 60 attack speed and 25 attack damage.",
+    "The evasion stacks diminishingly with other sources of evasion.",
+    "The evasion uses pseudo-random distribution."
+  ],
+  "cost": "5075",
+  "lore": null,
+  "consistFrom": [
+    "Eaglesong",
+    "Talisman of Evasion",
+    "Quarterstaff"
+  ],
+  "boughtFrom": "Weapons",
+  "name": "Butterfly",
+  "description": "Only the mightiest and most experienced of warriors can wield the Butterfly, but it provides incredible dexterity in combat.",
+  "trivia": null,
+  "upgradeIn": null,
+  "bonuses": [
+    "+30 Agility",
+    "+35% Evasion",
+    "+25 Attack damage",
+    "+30 Attack speed"
+  ],
+  "tips": [
+    "If someone in your team already has evasion like Phantom Assassin or another Butterfly, decide if increasing evasion will be a good idea as the enemy team will generally rush a Monkey King Bar. The more evasion a team has, the more valuable Monkey King Bar gets for the enemy team. However, if the enemy team is greatly suppressed and underfarmed, increasing evasion could be a good decision."
+  ]
+}

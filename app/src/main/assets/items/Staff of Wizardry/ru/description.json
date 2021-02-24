@@ -1,0 +1,27 @@
+{
+  "abilities": [],
+  "additionalInformation": [
+    "Для героев силы, даёт 120 маны и 0,5 регенерации маны.",
+    "Для героев ловкости, даёт 120 маны и 0,5 регенерации маны.",
+    "Для героев интеллекта, даёт 120 маны, 0,5 регенерации маны и 10 урона от атаки."
+  ],
+  "cost": "1000",
+  "lore": null,
+  "consistFrom": null,
+  "boughtFrom": "Атрибуты",
+  "name": "Staff of Wizardry",
+  "description": "Магический посох, которым когда-то владели древние маги.",
+  "trivia": null,
+  "upgradeIn": [
+    "Eul's Scepter of Divinity",
+    "Force Staff",
+    "Dagon",
+    "Aghanim's Scepter",
+    "Kaya",
+    "Rod of Atos"
+  ],
+  "bonuses": [
+    "+10 к интеллекту"
+  ],
+  "tips": null
+}

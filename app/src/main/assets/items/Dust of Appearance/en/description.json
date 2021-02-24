@@ -1,0 +1,51 @@
+{
+  "abilities": [
+    {
+      "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/8\/8a\/Dust_of_Appearance_Reveal.mp3\/revision\/latest?cb=20191227195411",
+      "effects": [
+        "Ability No Target",
+        "Affects Enemies"
+      ],
+      "notes": [
+        "Interrupts the user's channeling spells upon using.",
+        "Places a debuff on enemies (including visible ones) within the radius upon cast. Leaving or entering the area afterwards has no effect.",
+        "Unlike the visual effect, the Reveal debuff is applied within the entire radius instantly upon cast.",
+        "Multiple debuffs do not stack, but refresh the duration instead.",
+        "Can place the debuff on units in the Fog of War and invulnerable units, but not on hidden units or on wards.",
+        "Cannot detect units under the effect of Shadow Dance and Smoke of Deceit (although the debuff is still placed on them).",
+        "Only slows units when they actually are invisible. This means during the fade time or fade delay of invisibility, the unit is not slowed."
+      ],
+      "mana": null,
+      "abilityName": "Reveal",
+      "cooldown": "30",
+      "description": "Reveals and slows invisible heroes by 20% in a 1050 radius around the caster for 12 seconds.",
+      "params": [
+        "Radius: 1050",
+        "Move Speed Slow: 20%",
+        "Duration: 12"
+      ],
+      "itemBehaviour": [],
+      "story": null
+    }
+  ],
+  "additionalInformation": [
+    "Stacks with itself in the inventory.",
+    "Dust of Appearance is completely shareable.",
+    "The sell value of the item is based on the number of charges remaining. A single instance has a sell value of 40 gold."
+  ],
+  "cost": "80",
+  "lore": null,
+  "consistFrom": null,
+  "boughtFrom": "Consumables",
+  "name": "Dust of Appearance",
+  "description": "One may hide visage, but never volume.",
+  "trivia": [
+    "Prior to the July 14, 2017 Patch, Dust of Appearance's active ability, Reveal, did not have an official name. The name was taken from the Dota 2 Wiki and officially implemented into Dota 2."
+  ],
+  "upgradeIn": null,
+  "bonuses": null,
+  "tips": [
+    "The debuff can be easily dispelled by some heroes, such as Weaver.",
+    "Items like Black King Bar, Lotus Orb, Eul's Scepter of Divinity and Manta Style can also remove the debuff, so plan accordingly and consider other detection items, like Sentry Wards or a Gem of True Sight."
+  ]
+}

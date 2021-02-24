@@ -1,0 +1,332 @@
+{
+  "abilities": [
+    {
+      "notes": [
+        "This attack damage talent is added as raw attack damage, so it does not benefit illusions, and is not affected by most percentage-based damage increasing or reducing effects.",
+        "The strength talent effectively grants Tiny 360 health, 1.8 health regeneration, and 18 attack damage."
+      ],
+      "spellName": "Talent",
+      "talents": [
+        {
+          "talentLvl": "25",
+          "talentLeft": "3 Toss Charges",
+          "talentRight": "-8s Avalanche Cooldown"
+        },
+        {
+          "talentLvl": "20",
+          "talentLeft": "Toss Requires No Target",
+          "talentRight": "+18 Strength"
+        },
+        {
+          "talentLvl": "15",
+          "talentLeft": "+80 Avalanche Damage",
+          "talentRight": "+5 Tree Grab Attack Charges"
+        },
+        {
+          "talentLvl": "10",
+          "talentLeft": "+25 Damage",
+          "talentRight": "+15 Movement Speed"
+        }
+      ]
+    },
+    {
+      "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/f\/fb\/Tiny_Avalanche.mp3\/revision\/latest?cb=20191216025433",
+      "effects": [
+        "Ability Target Area",
+        "Affects Enemies",
+        "Damage Magical"
+      ],
+      "notes": [
+        "Avalanche's projectile travels at a speed of 1200.",
+        "Deals 15\/30\/45\/60 (TagTalent 31\/46\/61\/76) damage in 0.3 second intervals, starting once the projectile reaches the targeted point, resulting in 5 instances. This results in a total duration of 1.2 seconds, counting after projectile arrival. The in-game tooltip includes the stun duration as well, showing a total duration of 1.4 seconds.",
+        "This results in a total duration of 1.2 seconds, counting after projectile arrival.",
+        "The in-game tooltip includes the stun duration as well, showing a total duration of 1.4 seconds.",
+        "If a unit is affected by Toss, it takes 2.5 times the damage from Avalanche, which is 37.5\/75\/112.5\/150 (TagTalent 77.5\/115\/152.5\/190) per instance. Can deal up to 187.5\/375\/562.5\/750 (TagTalent 387.5\/575\/762.5\/950) damage if perfectly combined with Toss.",
+        "Can deal up to 187.5\/375\/562.5\/750 (TagTalent 387.5\/575\/762.5\/950) damage if perfectly combined with Toss.",
+        "On each instance, Avalanche first applies the damage, then the debuff."
+      ],
+      "mana": "120",
+      "hotKey": "Q",
+      "cooldown": "26\/22\/18\/14 (TagTalent 18\/14\/10\/6)",
+      "description": "Bombards an area with rocks, continuously doing small intervals of damage and stun to enemy units. Avalanche does 2.5x damage to units being tossed.",
+      "spellName": "Avalanche",
+      "params": [
+        "Cast Animation: 0+0.53",
+        "Cast Range: 600",
+        "Effect Radius: 325\/350\/375\/400",
+        "Number of Instances: 5",
+        "Instances Interval: 0.3",
+        "Total Damage: 75\/150\/225\/300 (TagTalent 155\/230\/305\/380)",
+        "Stun Duration: 0.2",
+        "Avalanche Duration: 1.4"
+      ],
+      "itemBehaviour": [],
+      "legacyKey": "V",
+      "story": "Inanimate rock becomes animate when called by the Stone Giant."
+    },
+    {
+      "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/7\/76\/Tiny_Toss_1.mp3\/revision\/latest?cb=20191216025438",
+      "effects": [
+        "Ability Target Unit (TagAghanim Target Point)",
+        "Affects Enemies \/ Allies",
+        "Damage Magical"
+      ],
+      "notes": [
+        "The tossed unit travels at a speed based on the distance between it and the target, capped at 2308. The speed does not instantly adapt if the distance changes, but rather accelerates or decelerates at a slow rate.",
+        "The speed does not instantly adapt if the distance changes, but rather accelerates or decelerates at a slow rate.",
+        "The tossed unit can be avoided by blinking or moving rapidly, but cannot technically be disjointed. This means the tossed unit can fly up to 3000 range away when the target teleports far enough away.",
+        "This means the tossed unit can fly up to 3000 range away when the target teleports far enough away.",
+        "If the tossed unit dies in mid-air, it still deals the area damage upon landing.",
+        "Forcefully moves the unit, disabling it and canceling channeling spells and other position changing effects.",
+        "Buildings cannot be targeted, but take 33.33% damage (30\/53\/77\/100) from a tossed unit landing near them.",
+        "The 30% extra damage is only applied to the tossed enemy unit, increasing the damage it takes to 117\/208\/299\/390. Other enemy units (including buildings) within the radius only take the basic damage.",
+        "Other enemy units (including buildings) within the radius only take the basic damage.",
+        "Can toss any unit, except for ancient creeps and wards.",
+        "Invisible enemy units cannot be tossed, but still take damage from a unit being tossed onto or near them.",
+        "Units in the Fog of War can be tossed if they are within a 275 radius of Tiny, but cannot be selected as a target.",
+        "While in the air, other units may pass below the tossed unit.",
+        "Can directly target and toss towards runes, but cannot toss runes.",
+        "The buff or debuff of Toss is hidden, means it is not visible in the HUD.",
+        "When the talent is chosen, Toss can target the ground, throwing the unit towards the targeted point. Runes can no longer be directly targeted when this talent is chosen, but other units still can.",
+        "Runes can no longer be directly targeted when this talent is chosen, but other units still can."
+      ],
+      "mana": "90\/100\/110\/120",
+      "hotKey": "W",
+      "cooldown": "17\/15\/13\/11 (TagTalent 0)",
+      "description": "Grabs the nearest unit in a 275 radius around Tiny, ally or enemy, and launches it at the target unit or rune to deal damage where they land. If the tossed unit is an enemy, it will take an extra 30% damage.",
+      "spellName": "Toss",
+      "params": [
+        "Cast Animation: 0+0.53",
+        "Cast Range: 850\/1000\/1150\/1300",
+        "Grab Radius: 275",
+        "Damage Radius: 275",
+        "Damage: 90\/160\/230\/300",
+        "Tossed Unit Bonus Damage: 30%",
+        "Building Damage Percentage: 33.33%",
+        "Avalanche Damage Multiplier: 2.5",
+        "Toss Duration: 1.4",
+        "Number of Charges: 3",
+        "Charge Replenish Time: 17\/15\/13\/11",
+        "Cannot toss spell immune enemies. Can toss spell immune allies. Can toss towards spell immune units. Does not attempt to damage spell immune enemies within the area."
+      ],
+      "itemBehaviour": [],
+      "legacyKey": "T",
+      "story": "Tiny's gargantuan stature allows him to catapult even the sturdiest of warriors."
+    },
+    {
+      "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/0\/00\/Tiny_Tree_Grab.mp3\/revision\/latest?cb=20191216025446",
+      "effects": [
+        "Ability Target Unit",
+        "Affects Trees \/ Enemies",
+        "Damage Physical"
+      ],
+      "notes": [
+        "Has no set duration. The buff lasts until the charges are used up, Tree Throw is used, or until death.",
+        "The cooldown of Tree Grab only starts upon losing the tree in any way. Does not go on cooldown upon cast. The mana is expended upon cast.",
+        "Sets the caster's base attack range to 350, meaning if used by other heroes than Tiny, they may have their range reduced. Attack range bonuses are not overriden and still work normally.",
+        "Attack range bonuses are not overriden and still work normally.",
+        "Only increases base damage and that given by the primary attribute of Tiny. Raw bonus damage is not increased.",
+        "The bonus damage is not applied when attacking allied units.",
+        "Checks Tiny's main attack damage periodically and adapts the attack damage bonus instantly.",
+        "Cleave damage cannot be amplified with outgoing spell damage amplification and cannot spell lifesteal. Can be amplified by incoming spell damage amplification.",
+        "Can be amplified by incoming spell damage amplification.",
+        "Cleave damage is reduced by Damage Block.",
+        "The area has a rectangular shape with a semi-circle at the side away from Tiny. Like cleave, the area always starts in front of the attacking unit. The rectangle has a length of 400 and a width of 400. The semi-circle has a radius of 200. This means the area damage can reach up to 600 range away from Tiny.",
+        "The rectangle has a length of 400 and a width of 400. The semi-circle has a radius of 200.",
+        "This means the area damage can reach up to 600 range away from Tiny.",
+        "Fully stacks with other sources of cleaves. Each source of cleave works completely independent.",
+        "Applies the area damage upon attacking wards, or buildings, but not on allies and items. Wards and buildings are unaffected by the area damage.",
+        "Despite the visual effect, cleave damage is applied instantly in the whole area."
+      ],
+      "mana": "50",
+      "hotKey": "E",
+      "cooldown": "16\/14\/12\/10",
+      "description": "Grabs a tree to whack enemies on the head for a limited number of attacks. Grants bonus attack range. Attacks deal more damage and fully splash on units along the way. The tree can be thrown, to deal your attack to a unit at a distance.",
+      "spellName": "Tree Grab",
+      "params": [
+        "Cast Animation: 0.2+1.24",
+        "Cast Range: 165",
+        "Area Damage Length: 400",
+        "Area Damage Radius: 200",
+        "Number of Attacks: 5 (TagTalent 10)",
+        "Attack Range: 350",
+        "Unit Attack Damage Bonus: 25%",
+        "Building Attack Damage Bonus: 90%\/120%\/150%\/180%",
+        "Attack Damage as Area Damage: 40%\/60%\/80%\/100%",
+        "Grants new ability: Tree Volley. Tiny throws random trees within range towards the targeted aoe.",
+        "Illusions do not spawn with trees when created while having a tree equipped."
+      ],
+      "itemBehaviour": [],
+      "legacyKey": "C",
+      "story": "Sticks and stones break all the bones, with structures sure to follow."
+    },
+    {
+      "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/a\/a1\/Tiny_Tree_Throw_1.mp3\/revision\/latest?cb=20200521124741",
+      "effects": [
+        "Ability Target Point \/ Target Unit",
+        "Affects Enemies",
+        "Damage Instant Attack"
+      ],
+      "notes": [
+        "Replaces Tree Grab until Tiny loses the tree.",
+        "The tree travels at a speed of 900.",
+        "When targeting a unit, the projectile homes in on the target. This way, the tree hits the target upon fully reaching it.",
+        "When targeting the ground, the tree travels in a straight line up to 1300 range before it disappears. This way, the tree uses a 300 radius collision size. This means this way, the tree may hit the intended target earlier. Can hit units up to 1600 (travel distance + collision radius). The splash damage is centered around the first unit it hits, and not around where the tree was as it hit.",
+        "This way, the tree uses a 300 radius collision size. This means this way, the tree may hit the intended target earlier.",
+        "Can hit units up to 1600 (travel distance + collision radius).",
+        "The splash damage is centered around the first unit it hits, and not around where the tree was as it hit.",
+        "Applies an instant attack on the targeted unit, or the first enemy it finds. This instant attack deals 25% bonus damage, like the attacks with Tree Grab do. It also applies splash damage around the target. The instant attack can proc attack modifier and on-hit effects on the primary target normally. Since the area damage is splash, no modifiers are applied here. Splash damage cannot be amplified with outgoing spell damage amplification and cannot spell lifesteal. Can be amplified by incoming spell damage amplification. Cleave effects are based on the target's position, damaging a trapezoid area the opposite direction where the tree came from. Although the tree may make it look like a ranged attack, the attack still counts as melee. This means all abilities which differentiate between ranged and melee, use their melee effects\/values, not ranged. The performed instant-attack has True Strike, so it cannot miss. However, when the tree is avoided, no attack is performed.",
+        "This instant attack deals 25% bonus damage, like the attacks with Tree Grab do. It also applies splash damage around the target.",
+        "The instant attack can proc attack modifier and on-hit effects on the primary target normally. Since the area damage is splash, no modifiers are applied here.",
+        "Splash damage cannot be amplified with outgoing spell damage amplification and cannot spell lifesteal. Can be amplified by incoming spell damage amplification.",
+        "Cleave effects are based on the target's position, damaging a trapezoid area the opposite direction where the tree came from.",
+        "Although the tree may make it look like a ranged attack, the attack still counts as melee.",
+        "This means all abilities which differentiate between ranged and melee, use their melee effects\/values, not ranged.",
+        "The performed instant-attack has True Strike, so it cannot miss. However, when the tree is avoided, no attack is performed.",
+        "When targeting the ground, the tree provides 200 radius flying vision around itself while traveling. Does not provide vision when directly targeting a unit. When the tree hits a unit, no matter if ground or directly targeted, it grants the same vision at its location for 2 seconds.",
+        "Does not provide vision when directly targeting a unit.",
+        "When the tree hits a unit, no matter if ground or directly targeted, it grants the same vision at its location for 2 seconds."
+      ],
+      "mana": "0",
+      "hotKey": "E",
+      "cooldown": "0",
+      "description": "Throws the tree at the target unit, proccing your attack on it and splashing damage around the target.",
+      "spellName": "Tree Throw",
+      "params": [
+        "Cast Animation: 0.2+1.13",
+        "Cast Range: 1300",
+        "Tree Collision Radius: 300",
+        "Splash Radius: 275",
+        "Splash Damage: 150%",
+        "Cannot directly target spell immune enemies. Fully hits spell immune enemies otherwise.",
+        "Can be disjointed when directly targeted."
+      ],
+      "itemBehaviour": [],
+      "legacyKey": "C",
+      "story": "Even enemies can share in Tiny's arbor ardor."
+    },
+    {
+      "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/6\/63\/Tiny_Tree_Volley_1.mp3\/revision\/latest?cb=20191216025449",
+      "effects": [
+        "Ability Target Area \/ Channeled",
+        "Affects Enemies",
+        "Damage Instant Attack"
+      ],
+      "notes": [
+        "Requires Aghanim's Scepter to be unlocked.",
+        "Throws trees in 0.4-second intervals, starting immediately upon cast begin, resulting in up to 6 trees being thrown. Checks for trees in the same intervals. If no tree is found within the area, the channeling ends prematurely.",
+        "Checks for trees in the same intervals. If no tree is found within the area, the channeling ends prematurely.",
+        "The trees within the area are chosen randomly.",
+        "Performs an instant attack on all enemies within the damage area. Despite the tooltip, the instant attacks do not deal any bonus damage. They apply Tiny's regular attack damage. The instant attack can proc attack modifier and on-hit effects on normally. Cleave effects are based on the target's position, damaging a trapezoid area the opposite direction where the tree came from. Although the trees may make it look like a ranged attacks, the attack still counts as melee. This means all abilities which differentiate between ranged and melee, use their melee effects\/values, not ranged. The performed instant-attacks have True Strike, so they cannot miss.",
+        "Despite the tooltip, the instant attacks do not deal any bonus damage. They apply Tiny's regular attack damage.",
+        "The instant attack can proc attack modifier and on-hit effects on normally.",
+        "Cleave effects are based on the target's position, damaging a trapezoid area the opposite direction where the tree came from.",
+        "Although the trees may make it look like a ranged attacks, the attack still counts as melee.",
+        "This means all abilities which differentiate between ranged and melee, use their melee effects\/values, not ranged.",
+        "The performed instant-attacks have True Strike, so they cannot miss."
+      ],
+      "mana": "200",
+      "hotKey": "D",
+      "cooldown": "15",
+      "description": "Tiny throws random trees within range towards the targeted aoe. Deals Tiny's attack damage plus a bonus to enemies in that area with each tree thrown.",
+      "spellName": "Tree Volley",
+      "params": [
+        "Cast Animation: 0.2+2.4",
+        "Cast Range: 1300",
+        "Tree Grab Radius: 525",
+        "Damage Radius: 400",
+        "Max Channel Time: 2.4",
+        "Tree Throw Interval: 0.4"
+      ],
+      "itemBehaviour": [],
+      "legacyKey": "R",
+      "story": "Sticks thrown from stones are like to shatter many bones."
+    },
+    {
+      "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/8\/8f\/Tiny_Craggy_Exterior.mp3\/revision\/latest?cb=20210103163100",
+      "effects": [
+        "Ability Passive",
+        "Affects Enemies",
+        "Damage Magical"
+      ],
+      "notes": [
+        "Requires Aghanim's Shard to be unlocked.",
+        "Procs only when a unit lands an attack (regular and instant attacks) on Tiny from within the radius. This means it cannot proc on missed attacks.",
+        "Fully works against allied units, resulting in a deny if the damage kills the ally.",
+        "Craggy Exterior uses pseudo-random distribution."
+      ],
+      "mana": null,
+      "hotKey": null,
+      "cooldown": null,
+      "description": "Proc Chance: 20%",
+      "spellName": "Craggy Exterior",
+      "params": [
+        "Proc Chance: 20%",
+        "Radius: 400",
+        "Damage: 100",
+        "Stun Duration: 1"
+      ],
+      "itemBehaviour": [],
+      "legacyKey": null,
+      "story": null
+    },
+    {
+      "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/b\/b2\/Tiny_Grow.mp3\/revision\/latest?cb=20200521124743",
+      "effects": [
+        "Ability Passive",
+        "Affects Self"
+      ],
+      "notes": [
+        "Each level changes Tiny's appearance, making him bigger and making his voice deeper.",
+        "The attack damage bonus is directly added to the main attack damage value, and therefore does not count as a raw attack damage bonus. This means it fully benefits from percentage-based attack damage bonuses. This also means that Tiny's illusion benefit from it as well.",
+        "This means it fully benefits from percentage-based attack damage bonuses.",
+        "This also means that Tiny's illusion benefit from it as well."
+      ],
+      "mana": null,
+      "hotKey": "R",
+      "cooldown": null,
+      "description": "Tiny gains craggy mass, increasing his attack damage, and armor, while slowing his attack speed.",
+      "spellName": "Grow",
+      "params": [
+        "Attack Damage Bonus: 30\/70\/110",
+        "Attack Speed Loss: 20\/35\/50",
+        "Armor Bonus: 10\/16\/22"
+      ],
+      "itemBehaviour": [],
+      "legacyKey": "W",
+      "story": "Watching a hill become a mountain is awe-inspiring - especially if the mountain begins laying waste to adversaries."
+    }
+  ],
+  "mainAttributes": {
+    "attrStrengthInc": 3.8,
+    "attrStrength": 28.0,
+    "attrIntelligence": 17.0,
+    "attrIntelligenceInc": 2.2,
+    "attrAgilityInc": 0.0,
+    "attrAgility": 0.0
+  },
+  "description": "Tiny, the Stone Giant, is a melee strength hero with powerful ganking and killing potential. Although he starts off vulnerable in lane with his pitiful mana pool and non-existent armor, with a few levels, he gets considerably stronger. His killing power in the early and midgame comes from combo-ing his two active abilities. Avalanche engulfs an area in a wave of stones, dealing respectable damage and stunning enemies, while Toss allows Tiny to pick up the closest unit near himself and launch it at the designated location, dealing damage to all enemies at the location as well as additional damage to the thrown unit if an enemy. It can be used to displace an ally within the enemy team, but is mostly used on enemies themselves to deliver massive damage. If chained immediately with Avalanche, it also triples the damage the target takes from Avalanche, allowing Tiny to easily dispatch fragile enemy heroes in a matter of seconds. Tree Grab lets Tiny use a tree to smack his enemies, dealing splash damage and makes Tiny a formidable pusher with its bonus damage against buildings. Furthermore, should his weakened enemies attempt to escape, Tiny can simply use his Tree Throw to finish them off. Although his nuking potential with his active abilities is already considerable, his ultimate Grow turns Tiny into a formidable physical combatant as well. Grow increases Tiny's size and provides him with a massive boost to his attack damage and armor at the cost of some attack speed. Although Tiny initially lives up to his name by starting off small and weak, much like an avalanche, he quickly grows in size and strength until he becomes a hulking behemoth with enormous health and damage output. This gives Tiny the potential to become one of the strongest carries in late game situations.",
+  "history": "Coming to life as a chunk of stone, Tiny's origins are a mystery on which he continually speculates. He is a Stone Giant now, but what did he used to be? A splinter broken from a Golem's heel? A shard swept from a gargoyle-sculptor's workshop? A fragment of the Oracular Visage of Garthos? A deep curiosity drives him, and he travels the world tirelessly seeking his origins, his parentage, his people. As he roams, he gathers weight and size; the forces that weather lesser rocks, instead cause Tiny to grow and ever grow.",
+  "talents": [
+    {
+      "talentLvl": "25",
+      "talentLeft": "3 Toss Charges",
+      "talentRight": "-8s Avalanche Cooldown"
+    },
+    {
+      "talentLvl": "20",
+      "talentLeft": "Toss Requires No Target",
+      "talentRight": "+18 Strength"
+    },
+    {
+      "talentLvl": "15",
+      "talentLeft": "+80 Avalanche Damage",
+      "talentRight": "+5 Tree Grab Attack Charges"
+    },
+    {
+      "talentLvl": "10",
+      "talentLeft": "+25 Damage",
+      "talentRight": "+15 Movement Speed"
+    }
+  ]
+}

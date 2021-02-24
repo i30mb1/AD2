@@ -1,0 +1,226 @@
+{
+  "abilities": [
+    {
+      "notes": [
+        "The cast range talent also affects the max distance of Earth Spike and the link break distance of Mana Drain.",
+        "The Finger of Death damage per kill talent is retroactive, adding damage to all already existing stacks, not just the ones made after the talent was taken.",
+        "This attack damage talent is added as raw attack damage, so it does not benefit illusions, and is not affected by most percentage-based damage increasing or reducing effects."
+      ],
+      "spellName": "Talent",
+      "talents": [
+        {
+          "talentLvl": "25",
+          "talentLeft": "+250 AoE Hex",
+          "talentRight": "+800 Earth Spike Range"
+        },
+        {
+          "talentLvl": "20",
+          "talentLeft": "+2 Mana Drain Multi Target",
+          "talentRight": "+20 Finger of Death Damage Per Kill"
+        },
+        {
+          "talentLvl": "15",
+          "talentLeft": "+125 Cast Range",
+          "talentRight": "-2s Earth Spike Cooldown"
+        },
+        {
+          "talentLvl": "10",
+          "talentLeft": "+70 Damage",
+          "talentRight": "+15% Mana Drain Slow"
+        }
+      ]
+    },
+    {
+      "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/4\/4d\/Lion_Earth_Spike_1.mp3\/revision\/latest?cb=20191216015624",
+      "effects": [
+        "Ability Target Point \/ Target Unit",
+        "Affects Enemies",
+        "Damage Magical"
+      ],
+      "notes": [
+        "The spikes travel at a speed of 1600.",
+        "When targeting a unit, the spikes are released towards its current location upon cast. Spikes do not home and thus can be evaded.",
+        "Hit units are knocked up 350 range for the initial 0.5 seconds of the stun.",
+        "While in the air, other units may pass below hit airborne units.",
+        "The damage is applied upon landing, not upon getting hit.",
+        "The spikes take 0.56 seconds to reach max distance and can hit units up to 1025 range away (travel distance + spikes radius). They take up to 0.64 seconds and can hit units up to 1150 range away when the general cast range increasing talent is chosen. They take up to 1.06 seconds and can hit units up to 1825 range away when Earth Spike's own range increasing talent is chosen. They take up to 1.14 seconds and can hit units up to 1950 range away when both talents are chosen.",
+        "They take up to 0.64 seconds and can hit units up to 1150 range away when the general cast range increasing talent is chosen.",
+        "They take up to 1.06 seconds and can hit units up to 1825 range away when Earth Spike's own range increasing talent is chosen.",
+        "They take up to 1.14 seconds and can hit units up to 1950 range away when both talents are chosen.",
+        "Only the cast range and distance increase from the level 25 talent is displayed. The level 15 talent can further increase the cast range to 1500 and the distance 1825. The level 10 talent alone increases the cast range to 700 and the distance to 1025.",
+        "The level 10 talent alone increases the cast range to 700 and the distance to 1025.",
+        "When Earth Spike hits invisible units, the visual effects below the hit unit are still visible."
+      ],
+      "mana": "70\/100\/130\/160",
+      "hotKey": "Q",
+      "cooldown": "12 (TagTalent 10)",
+      "description": "Rock spikes burst from the earth along a straight path. Enemy units are hurled into the air, then are stunned and take damage when they fall.",
+      "spellName": "Earth Spike",
+      "params": [
+        "Cast Animation: 0.3+0",
+        "Cast Range: 575 (TagTalent 1375)",
+        "Spikes Travel Distance: 900 (TagTalent 1700)",
+        "Spikes Radius: 125",
+        "Damage: 80\/140\/200\/260",
+        "Stun Duration: 1.4\/1.8\/2.2\/2.6",
+        "Attempts to damage if already hit enemies turn spell immune before landing.",
+        "Blocked upon impact by everyone within range of the spikes."
+      ],
+      "itemBehaviour": [],
+      "legacyKey": "E",
+      "story": "The Demon Witch exercises his demonic covenant, opening a fissure from hell."
+    },
+    {
+      "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/4\/43\/Lion_Hex_1.mp3\/revision\/latest?cb=20191216015630",
+      "effects": [
+        "Ability Target Unit (TagAghanim Target Area)",
+        "Affects Enemies",
+        "Damage Instant Kill"
+      ],
+      "notes": [
+        "Applies a hex on the target, setting its base movement speed to 120, silencing, muting and disarming it. However, the target's movement speed is still affected by movement speed bonuses from items and abilities.",
+        "However, the target's movement speed is still affected by movement speed bonuses from items and abilities.",
+        "Since hex changes base movement speed and does not actually apply a slow, all speed effects are calculated using the 2.5\/3\/3.5\/4 base speed.",
+        "Hex instantly destroys illusions.",
+        "Lion's hex transforms the target into a frog. The Fin King's Charm and Fin King's Charm of Eminent Revival change the model into a fish.",
+        "The Fin King's Charm and Fin King's Charm of Eminent Revival change the model into a fish.",
+        "The level 15 talent turns Hex into an area-targeted ability, so that it cannot directly target units anymore. Affects every valid target within the area. Does not affect invulnerable or hidden units but fully affects invisible units.",
+        "Affects every valid target within the area. Does not affect invulnerable or hidden units but fully affects invisible units."
+      ],
+      "mana": "125\/150\/175\/200",
+      "hotKey": "W",
+      "cooldown": "30\/24\/18\/12",
+      "description": "Transforms an enemy unit into a harmless beast, with all special abilities disabled.",
+      "spellName": "Hex",
+      "params": [
+        "Cast Animation: 0+0.53",
+        "Cast Range: 500 (TagTalent 625)",
+        "Set Move Speed: 120",
+        "Duration: 2.5\/3\/3.5\/4",
+        "Radius: 250",
+        "Effects persist if debuff was placed before spell immunity.",
+        "Blocked normally upon cast. Not blocked when turned into an area spell."
+      ],
+      "itemBehaviour": [],
+      "legacyKey": "D",
+      "story": "Lion is compelled to share his transfiguration, twisting the essence of those who oppose him."
+    },
+    {
+      "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/9\/9b\/Lion_Mana_Drain.mp3\/revision\/latest?cb=20191216015631",
+      "effects": [
+        "Ability Target Unit \/ Channeled",
+        "Affects Enemies \/ Self",
+        "Damage Instant Kill"
+      ],
+      "notes": [
+        "Can only be cast on units which have a mana pool.",
+        "The link breaks when the target gets out of vision, turns invulnerable, exceeds the break distance, or runs out of mana.",
+        "Drains 2\/4\/6\/12 mana in 0.1 second intervals, starting 0.1 seconds after cast, resulting in up to 50 instances.",
+        "Can drain up to 24000\/48000\/72000\/144000 mana when fully channeled.",
+        "Instantly destroys targeted illusions on the first interval.",
+        "When choosing the level 20 talent, the spell automatically targets 1 additional enemies within range, using the same targeting rules. The search range is based on the cast range, plus the buffer, resulting in a search range of 1150 (TagTalent 1275). Since the additional links use the spell's cast range, cast range increasing effects increase their range as well. The secondary targets are chosen randomly within the area. There are no priorities. The secondary links do not break and continue to drain mana, even if their targets turn invulnerable or run out of mana. They do break when exceeding the link break distance. The secondary links stop draining mana if their targets turn invisible or get out of vision, but continue to slow them. All links break as soon as the primary target cannot be affected anymore.",
+        "The search range is based on the cast range, plus the buffer, resulting in a search range of 1150 (TagTalent 1275).",
+        "Since the additional links use the spell's cast range, cast range increasing effects increase their range as well.",
+        "The secondary targets are chosen randomly within the area. There are no priorities.",
+        "The secondary links do not break and continue to drain mana, even if their targets turn invulnerable or run out of mana. They do break when exceeding the link break distance.",
+        "The secondary links stop draining mana if their targets turn invisible or get out of vision, but continue to slow them.",
+        "All links break as soon as the primary target cannot be affected anymore.",
+        "With Aghanim's Shard, Mana Drain slows attack speed and provides True Sight over affected enemies."
+      ],
+      "mana": "10",
+      "hotKey": "E",
+      "cooldown": "16\/12\/8\/4",
+      "description": "Absorbs the magical energies of a target enemy unit by taking mana from it every second.",
+      "spellName": "Mana Drain",
+      "params": [
+        "Cast Animation: 0.3+0",
+        "Cast Range: 850 (TagTalent 975)",
+        "Max Targets: 1 (TagTalent 2)",
+        "Link Break Distance: 1200 (TagTalent 125)",
+        "Mana Drain per Second: 20\/40\/60\/120",
+        "Move Speed Slow: 20%\/25%\/30%\/35% (TagTalent 35%\/40%\/45%\/50%)",
+        "Max Channel Time: 5",
+        "Secondary Target Range Buffer: 300",
+        "Attack Speed Slow: 120",
+        "Causes Mana Drain grants true sight over the enemy and reduces their attack speed by 120.",
+        "Effect does not persist and immediately ends if debuff was placed before spell immunity. Effect persists on secondary targets if debuff was placed before spell immunity.",
+        "Blocked normally upon cast. Blocked fully only when primary target."
+      ],
+      "itemBehaviour": [],
+      "legacyKey": "R",
+      "story": "Lesser magi are nothing more than a source of magical restoration for the Demon Witch."
+    },
+    {
+      "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/3\/32\/Lion_Finger_of_Death_1.mp3\/revision\/latest?cb=20191216015627",
+      "effects": [
+        "Ability Target Unit",
+        "Affects Enemies",
+        "Damage Magical"
+      ],
+      "notes": [
+        "Places a debuff on the target upon cast, which applies the damage and the second debuff upon expiring. The debuff lasts 0.25 seconds. This means the damage can be avoided by being invulnerable, hidden or spell immune as the debuff expires.",
+        "This means the damage can be avoided by being invulnerable, hidden or spell immune as the debuff expires.",
+        "If the target dies while having the second debuff, Finger Of Death gains a permanent damage bonus. The status buff on Lion keeps track of how many heroes died with the debuff. The bonus damage debuff stacks, meaning that if Finger Of Death is cast on the same target twice within the 3 second time frame and the target dies, the bonus damage is granted twice.",
+        "The status buff on Lion keeps track of how many heroes died with the debuff.",
+        "The bonus damage debuff stacks, meaning that if Finger Of Death is cast on the same target twice within the 3 second time frame and the target dies, the bonus damage is granted twice.",
+        "Although only gaining damage from hero kills, the debuff is placed on every target. Gains damage from dying Meepo Clones as well, but not from Tempest Doubles, illusions or creep-heroes.",
+        "Gains damage from dying Meepo Clones as well, but not from Tempest Doubles, illusions or creep-heroes.",
+        "Aghanim's Scepter causes Finger of Death to be cast on all enemy units within 325 radius of the target. This includes invisible enemies and enemies in the fog of war. An area indicator is added to the mouse pointer, to make easier to tell whether or not enemies are within range.",
+        "This includes invisible enemies and enemies in the fog of war.",
+        "An area indicator is added to the mouse pointer, to make easier to tell whether or not enemies are within range."
+      ],
+      "mana": "200\/420\/650",
+      "hotKey": "R",
+      "cooldown": "160\/100\/40 (TagTalent 100\/60\/20)",
+      "description": "Rips at an enemy unit, trying to turn it inside-out. Deals massive damage and grows stronger with each life it consumes.",
+      "spellName": "Finger of Death",
+      "params": [
+        "Cast Animation: 0.3+0.5",
+        "Cast Range: 900 (TagTalent 1025)",
+        "Effect Delay: 0.25",
+        "Base Damage: 600\/725\/850 (TagAghanim 725\/875\/1025)",
+        "Damage Bonus per Kill: 40 (TagTalent 60)",
+        "Kill Grace Duration: 3",
+        "Radius: 325",
+        "Increases damage. Decreases cooldown. Finger of Death hits all units in a small area.",
+        "Cannot be cast on spell immune enemies. Attempts to damage, and places the debuff if target turns spell immune during the delay.",
+        "Blocked fully only when primary target. Blocked upon cast. Particles still visually appear."
+      ],
+      "itemBehaviour": [],
+      "legacyKey": "F",
+      "story": "Lion's disfigured hand is also the source of his greatest power, capable of flooding victims with malefic force."
+    }
+  ],
+  "mainAttributes": {
+    "attrStrengthInc": 2.2,
+    "attrStrength": 18.0,
+    "attrIntelligence": 18.0,
+    "attrIntelligenceInc": 3.5,
+    "attrAgilityInc": 1.5,
+    "attrAgility": 18.0
+  },
+  "description": "Lion, the Demon Witch, is a ranged intelligence hero, most commonly played as a support, who serves as a powerful offensive spellcaster. While exceptionally frail and vulnerable at all stages of the game due to his low health pool, armor, and movement speed, he has a tremendous amount of disabling and nuking power, allowing him to provide the necessary lockdown and burst damage to his team to bring down elusive and shifty enemies. Earth Spike is an area-of-effect line-based stun that also deals a moderate amount of damage. If Lion uses it at max level combined with his Hex, which briefly transfigures an enemy into a harmless critter, he can disable a single opponent for almost 7 seconds, more than enough time to bring down a lone enemy, especially if an ally is present. His ultimate, Finger of Death, serves as a powerful nuke and his primary source of burst damage to aid him in his endeavors. To offset the high mana cost of his abilities, he has Mana Drain, which provides him the sustenance he needs to continuously provide his disabling prowess in a skirmish. A team facing a Lion would do well to eliminate him first in a fight, lest it fall prey to his potent and disruptive spells.",
+  "history": "Once a Grandmaster of the Demon Witch tradition of sorcery, Lion earned fame among his brethren for fighting on the side of light and righteousness. But adulation corrupts. With powers surpassed only by his ambition, the mage was seduced by a demon and turned to evil, trading his soul for prestige. After committing horrible crimes that marred his soul, he was abandoned. The demon betrayed him, striking better deals with his enemies. Such was Lion\u2019s rage that he followed the demon back to hell and slew it, ripping it limb from limb, taking its demonic hand for his own. However, such demonoplasty comes at a cost. Lion was transfigured by the process, his body transformed into something unrecognizable. He rose from hell, rage incarnate, slaying even those who had once called him master, and laying waste to the lands where he had once been so adored. He survives now as the sole practitioner of the Demon Witch tradition, and those who present themselves as acolytes or students are soon relieved of their mana and carried off by the faintest gust of wind.",
+  "talents": [
+    {
+      "talentLvl": "25",
+      "talentLeft": "+250 AoE Hex",
+      "talentRight": "+800 Earth Spike Range"
+    },
+    {
+      "talentLvl": "20",
+      "talentLeft": "+2 Mana Drain Multi Target",
+      "talentRight": "+20 Finger of Death Damage Per Kill"
+    },
+    {
+      "talentLvl": "15",
+      "talentLeft": "+125 Cast Range",
+      "talentRight": "-2s Earth Spike Cooldown"
+    },
+    {
+      "talentLvl": "10",
+      "talentLeft": "+70 Damage",
+      "talentRight": "+15% Mana Drain Slow"
+    }
+  ]
+}

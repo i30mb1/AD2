@@ -1,0 +1,50 @@
+{
+  "abilities": [
+    {
+      "audioUrl": null,
+      "effects": [
+        "Ability Passive",
+        "Affects Enemies",
+        "Damage Magical"
+      ],
+      "notes": [
+        "Successive attacks with Witch Blade do not stack, but refresh the duration instead.",
+        "The attacks first apply the debuff, the damage start ticking after 1 second.",
+        "Deals magic damage in 1 second intervals, starting 1 second after the debuff is applied, resulting in 3 instances.",
+        "Does not work against wards and buildings. Works against couriers.",
+        "The damage over time is lethal."
+      ],
+      "mana": null,
+      "abilityName": "Witch Blade",
+      "cooldown": "9",
+      "description": "Causes your next attack to apply a poison for 3 seconds, slowing by 25% and dealing 1 times Intelligence as damage every second.",
+      "params": [
+        "Move Speed Slow: 25%",
+        "Damage per Second: 1 times Intelligence",
+        "Duration: 3"
+      ],
+      "itemBehaviour": [],
+      "story": null
+    }
+  ],
+  "cost": "2600",
+  "lore": null,
+  "consistFrom": [
+    "Blitz Knuckles",
+    "Robe of the Magi",
+    "Chainmail",
+    "Recipe"
+  ],
+  "boughtFrom": "Magical",
+  "name": "Witch Blade",
+  "description": "A spiteful blade inadvertently possessed by the soul of its incautious creator.",
+  "trivia": null,
+  "upgradeIn": null,
+  "bonuses": [
+    "+12 Intelligence",
+    "+6 Armor",
+    "+35 Attack speed",
+    "+300 Projectile speed"
+  ],
+  "tips": null
+}

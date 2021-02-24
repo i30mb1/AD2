@@ -1,0 +1,20 @@
+{
+  "abilities": [],
+  "additionalInformation": [
+    "Nether Shawls are fully sharable.",
+    "Increases most heroes' total magic resistance to 43.75%, assuming basic 25% magic resistance and no other sources of magic resistance."
+  ],
+  "cost": "N\/A",
+  "lore": null,
+  "consistFrom": null,
+  "boughtFrom": "Neutral Drop Only",
+  "name": "Nether Shawl",
+  "description": "An otherworldly garment tethered to our plane by unknown means.",
+  "trivia": null,
+  "upgradeIn": null,
+  "bonuses": [
+    "+25% Magic resistance",
+    "+8% Spell damage"
+  ],
+  "tips": null
+}

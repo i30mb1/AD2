@@ -1,0 +1,46 @@
+{
+  "abilities": [
+    {
+      "audioUrl": null,
+      "effects": [
+        "Способность Аура \/ Переключаемая",
+        "Действует на Союзников"
+      ],
+      "notes": [
+        "При переключении не прерывает произносимые заклинания.",
+        "Бафф ауры задерживается на 0,5 секунды.",
+        "Считает крипов-героев за героев."
+      ],
+      "mana": null,
+      "abilityName": "Buckler Aura",
+      "cooldown": null,
+      "description": "Даёт союзным существам 2 брони. Если выключить этот предмет, он будет действовать только на героев.",
+      "params": [
+        "Радиус: 1200",
+        "Доп. броня: 2",
+        "Длительность задержки ауры: 0,5"
+      ],
+      "itemBehaviour": [],
+      "story": null
+    }
+  ],
+  "cost": "375",
+  "lore": null,
+  "consistFrom": [
+    "Ring of Protection",
+    "Recipe"
+  ],
+  "boughtFrom": "Поддержка",
+  "name": "Buckler",
+  "description": "",
+  "trivia": [
+    "В связи с авторскими правами, некоторые предметы в Dota 2 имеют другие названия по сравнению с оригинальной DotA. Так Buckler в Defense of the Ancients назывался Nathrezim Buckler. Nethrezim - раса демонов, называемых Лордами Страха (Dread Lords) в истории Warcraft.",
+    "Так Buckler в Defense of the Ancients назывался Nathrezim Buckler. Nethrezim - раса демонов, называемых Лордами Страха (Dread Lords) в истории Warcraft."
+  ],
+  "upgradeIn": [
+    "Assault Cuirass",
+    "Mekansm"
+  ],
+  "bonuses": null,
+  "tips": null
+}

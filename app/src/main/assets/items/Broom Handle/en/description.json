@@ -1,0 +1,22 @@
+{
+  "abilities": [],
+  "additionalInformation": [
+    "Broom Handles are fully sharable.",
+    "Stacks with all other attack range bonuses.",
+    "Affects the cast range of active attack modifiers as well."
+  ],
+  "cost": "N\/A",
+  "lore": null,
+  "consistFrom": null,
+  "boughtFrom": "Neutral Drop Only",
+  "name": "Broom Handle",
+  "description": "The surprisingly dangerous creation of an apprentice sorcerer with a strange fondness for brooms.",
+  "trivia": null,
+  "upgradeIn": null,
+  "bonuses": [
+    "+3 Armor",
+    "+12 Attack damage",
+    "+50 Attack range (melee)"
+  ],
+  "tips": null
+}

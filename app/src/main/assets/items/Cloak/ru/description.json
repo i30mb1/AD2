@@ -1,0 +1,25 @@
+{
+  "abilities": [],
+  "additionalInformation": [
+    "Складывается с другими источниками сопротивления магии.",
+    "Увеличивает сопротивление магии всех героев до 36.25%, учитывая базовое сопротивление в 25% и не учитывая другие источники сопротивления."
+  ],
+  "cost": "450",
+  "lore": null,
+  "consistFrom": null,
+  "boughtFrom": "Разное",
+  "name": "Cloak",
+  "description": "Мантия, сотканная из магического материала, который развеивает любое заклинание.",
+  "trivia": [
+    "В DotA, Cloak назывался «Planewalker's Cloak». Изначально предмет назывался «Magus' Cloak», потом «Cloak of the Magus», и только затем «Planewalker's Cloak».",
+    "Изначально предмет назывался «Magus' Cloak», потом «Cloak of the Magus», и только затем «Planewalker's Cloak»."
+  ],
+  "upgradeIn": [
+    "Hood of Defiance",
+    "Glimmer Cape"
+  ],
+  "bonuses": [
+    "+15% к сопротивлению магии"
+  ],
+  "tips": null
+}

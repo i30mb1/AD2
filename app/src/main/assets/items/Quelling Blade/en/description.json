@@ -1,0 +1,63 @@
+{
+  "abilities": [
+    {
+      "audioUrl": null,
+      "effects": [
+        "Ability Target Unit",
+        "Affects Trees"
+      ],
+      "notes": [
+        "Can target any tree.",
+        "Does not share cooldown with Battle Fury or Iron Talon."
+      ],
+      "mana": null,
+      "abilityName": "Chop Tree",
+      "cooldown": "4",
+      "description": "Destroy a target tree.",
+      "params": [
+        "Cast Range: 350"
+      ],
+      "itemBehaviour": [],
+      "story": null
+    },
+    {
+      "audioUrl": null,
+      "effects": [
+        "Ability Passive",
+        "Affects Enemy Units"
+      ],
+      "notes": [
+        "Stacks with the Quell of Battle Fury, but not with additional Quelling Blades.",
+        "When the owner's attack type changes to ranged or melee, the attack damage bonus adapts immediately.",
+        "Quell fully works with crits, cleave, splash, and lifesteal.",
+        "When attacking creeps, Quell also causes cleave, splash, Psi Blades, and Moon Glaives to deal more damage to every unit they hit.",
+        "Does not work against wards, buildings, illusions, Spirit Bear, and allied units. Works against Roshan."
+      ],
+      "mana": null,
+      "abilityName": "Quell",
+      "cooldown": null,
+      "description": "Increases attack damage against non-hero units by 13 for melee heroes, and 6 for ranged.",
+      "params": [
+        "Attack Damage Bonus (Melee): 13",
+        "Attack Damage Bonus (Ranged): 6"
+      ],
+      "itemBehaviour": [],
+      "story": null
+    }
+  ],
+  "cost": "130",
+  "lore": null,
+  "consistFrom": null,
+  "boughtFrom": "Equipment",
+  "name": "Quelling Blade",
+  "description": "The axe of a fallen gnome, it allows you to effectively maneuver the forest.",
+  "trivia": null,
+  "upgradeIn": [
+    "Battle Fury"
+  ],
+  "bonuses": null,
+  "tips": [
+    "As its active can chop down trees . It is a perfect escape plan from Sprout.",
+    "It also can help escape in the woods by carving own paths and juke."
+  ]
+}

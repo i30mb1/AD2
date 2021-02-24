@@ -1,0 +1,60 @@
+{
+  "abilities": [
+    {
+      "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/2\/27\/Hood_of_Defiance_Barrier.mp3\/revision\/latest?cb=20191227195438",
+      "effects": [
+        "Ability No Target",
+        "Affects Self"
+      ],
+      "notes": [
+        "Interrupts the user's channeling spells upon cast.",
+        "Blocks damage before any reductions, except Mana Shield.",
+        "Recasting Barrier refreshes the buff and resets the barrier's absorb capacity.",
+        "Does not stack with other magical damage barriers. If multiple sources of barriers are active on a unit, all of them lose capacity from the same absorbed damage instance. However, if a damage instance is greater than the capacity of all barriers individually, the damage gets blocked as if the barriers were one barrier with combined capacity.",
+        "If multiple sources of barriers are active on a unit, all of them lose capacity from the same absorbed damage instance.",
+        "However, if a damage instance is greater than the capacity of all barriers individually, the damage gets blocked as if the barriers were one barrier with combined capacity.",
+        "Only blocks magical damage, coming from spells and attacks. Does not block any physical or pure damage.",
+        "Does not share cooldown with Pipe of Insight."
+      ],
+      "mana": "75",
+      "abilityName": "Barrier",
+      "cooldown": null,
+      "description": "Creates a spell shield that absorbs up to 325 magical damage. Lasts 12 seconds.",
+      "params": [
+        "Magical Damage Absorbed: 325",
+        "Duration: 12"
+      ],
+      "itemBehaviour": [],
+      "story": null
+    }
+  ],
+  "additionalInformation": [
+    "Stacks multiplicatively with other sources of magic resistance.",
+    "Increases most heroes' total magic resistance to 40%, assuming basic 25% magic resistance and no other sources of magic resistance."
+  ],
+  "cost": "1450",
+  "lore": null,
+  "consistFrom": [
+    "Ring of Health",
+    "Cloak",
+    "Ring of Regen"
+  ],
+  "boughtFrom": "Armor",
+  "name": "Hood of Defiance",
+  "description": "A furred, magic resistant headpiece that is feared by wizards.",
+  "trivia": [
+    "Prior to the July 14, 2017 Patch, Hood of Defiance's active ability, Barrier, did not have an official name. The name was taken from the Dota 2 Wiki and officially implemented into Dota 2."
+  ],
+  "upgradeIn": [
+    "Pipe of Insight",
+    "Eternal Shroud"
+  ],
+  "bonuses": [
+    "+8.5 Health regeneration",
+    "+20% Magic resistance"
+  ],
+  "tips": [
+    "This item can be purchased by a nuker against enemies carrying a Blade Mail.",
+    "The Barrier can be used to keep your Blink Dagger active. It is useful for an initiator against an enemy team with a radiance or to escape if caught in a gank."
+  ]
+}

@@ -1,0 +1,212 @@
+{
+  "abilities": [
+    {
+      "notes": [
+        "The health talent increases maximum health capacity, and keeps the current health percentage.",
+        "The evasion talent stacks multiplicatively with other sources of evasion."
+      ],
+      "spellName": "Talent",
+      "talents": [
+        {
+          "talentLvl": "25",
+          "talentLeft": "+250 Track Gold",
+          "talentRight": "40% Evasion"
+        },
+        {
+          "talentLvl": "20",
+          "talentLeft": "+50 Jinada Gold Steal",
+          "talentRight": "+50 Attack Speed"
+        },
+        {
+          "talentLvl": "15",
+          "talentLeft": "+275 Health",
+          "talentRight": "+50 Shuriken Toss Damage"
+        },
+        {
+          "talentLvl": "10",
+          "talentLeft": "+40 Jinada Damage",
+          "talentRight": "+20 Movement Speed"
+        }
+      ]
+    },
+    {
+      "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/3\/32\/Bounty_Hunter_Shuriken_Toss_1.mp3\/revision\/latest?cb=20191216011325",
+      "effects": [
+        "Ability Target Unit",
+        "Affects Enemies",
+        "Damage Magical"
+      ],
+      "notes": [
+        "The shuriken travels at a speed of 1000.",
+        "The shuriken first applies the damage, then the debuff (TagTalent and then Jinada).",
+        "The initial target does not have to be Tracked for the shuriken to bounce.",
+        "Can only bounce to each unit once.",
+        "Cannot bounce to, but can bounce off of invulnerable or hidden units.",
+        "When upgraded by Aghanim's Scepter, the shuriken applies the current level of Jinada on its target upon projectile impact. The shuriken's Jinada is independent from the Jinada applied by attacks, ignoring its cooldown, and working even when dead. Does not use instant attacks to apply the Jinada. The effects are applied by Shuriken Toss itself. The Jinada damage is applied as spell damage in a separate damage instance, meaning it works with spell lifesteal and spell damage amplification.",
+        "The shuriken's Jinada is independent from the Jinada applied by attacks, ignoring its cooldown, and working even when dead.",
+        "Does not use instant attacks to apply the Jinada. The effects are applied by Shuriken Toss itself.",
+        "The Jinada damage is applied as spell damage in a separate damage instance, meaning it works with spell lifesteal and spell damage amplification.",
+        "Choosing the damage upgrading talent immediately upgrades all of Bounty Hunter's currently flying shurikens."
+      ],
+      "mana": "120\/125\/130\/135",
+      "hotKey": "Q",
+      "cooldown": "8 (TagTalent 6)",
+      "description": "Hurls a deadly shuriken at an enemy unit, dealing damage and mini-stunning the target. The shuriken will bounce to any Tracked units who are within a 1200 radius of each other.",
+      "spellName": "Shuriken Toss",
+      "params": [
+        "Cast Animation: 0.3+0.43",
+        "Cast Range: 400 (TagAghanim 650)",
+        "Bounce Search Radius: 1200",
+        "Damage: 150\/225\/300\/375 (TagTalent 200\/275\/350\/425)",
+        "Stun Duration: 0.1",
+        "Upgrades Shuriken Toss. Applies Jinada to it, reduces cooldown and increases cast range.",
+        "Cannot be cast on spell immune units. Does not stun or attempt to damage spell immune units. Can jump to and off of spell immune units.",
+        "Blocked upon impact as primary or secondary target. When blocked, it continues to bounce.",
+        "Can be disjointed by primary and secondary targets. Once disjointed, it stops bouncing."
+      ],
+      "itemBehaviour": [],
+      "legacyKey": "T",
+      "story": "While the shuriken may be small, Gondar's precise aim can cause critical damage."
+    },
+    {
+      "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/d\/df\/Bounty_Hunter_Jinada.mp3\/revision\/latest?cb=20191216011329",
+      "effects": [
+        "Ability Passive",
+        "Affects Enemies"
+      ],
+      "notes": [
+        "When off cooldown, Bounty Hunter's weapons emit particle effects.",
+        "Checks its cooldown on attack begin, not on attack hit. This means Jinada does not apply when it went off cooldown during the attack animation.",
+        "This means Jinada does not apply when it went off cooldown during the attack animation.",
+        "The bonus damage is granted as an attack damage bonus whenever the ability goes off cooldown, and is removed when going on cooldown.",
+        "Only steals unreliable gold, removing it from the target and adding it to his own unreliable gold. Bounty Hunter gains exactly how much the target loses.",
+        "Bounty Hunter gains exactly how much the target loses.",
+        "Only steals gold when attacking enemy heroes, including clones, excluding illusions.",
+        "When attacking any other unit (including buildings and wards), only the damage is applied, triggering the cooldown.",
+        "Does not work against allies, neither the gold steal, nor the damage bonus."
+      ],
+      "mana": null,
+      "hotKey": "W",
+      "cooldown": null,
+      "description": "Bounty Hunter plans his next hit, dealing bonus damage and stealing some unreliable gold.",
+      "spellName": "Jinada",
+      "params": [
+        "Attack Damage Bonus: 70\/100\/130\/160 (TagTalent 110\/140\/170\/200)",
+        "Gold Stolen: 12\/20\/28\/36 (TagTalent 62\/70\/78\/86)",
+        "Prevents attacks from triggering Jinada. Does not stop Shuriken Toss from triggering Jinada.",
+        "Illusions permanently emit Jinada's weapon particles."
+      ],
+      "itemBehaviour": [],
+      "legacyKey": "J",
+      "story": "Gondar's vast experience ensures he never walks away from a transaction empty-handed."
+    },
+    {
+      "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/6\/69\/Bounty_Hunter_Shadow_Walk.mp3\/revision\/latest?cb=20191216011331",
+      "effects": [
+        "Ability No Target",
+        "Affects Self \/ Enemies"
+      ],
+      "notes": [
+        "Does not interrupt Bounty Hunter's channeling spells upon cast.",
+        "The attack first applies its own damage, and then the Shadow Walk debuff.",
+        "During the fade time, Bounty Hunter can cast spells, use items and perform attacks without breaking the invisibility. Those attacks apply the Shadow Walk slow as well.",
+        "Those attacks apply the Shadow Walk slow as well.",
+        "The invisibility is broken upon reaching the cast point of spells or items, or upon landing an attack. Missed attacks do not break it. Casting Track does not break the invisibility of Shadow Walk.",
+        "Casting Track does not break the invisibility of Shadow Walk.",
+        "Shadow Walk allows Bounty Hunter to pass through other units, including wards, but not through buildings.",
+        "Bounty Hunter can pick up, drop or attack items without breaking the invisibility."
+      ],
+      "mana": "65",
+      "hotKey": "E",
+      "cooldown": "15",
+      "description": "Bounty Hunter becomes invisible and gains the ability to move through other units until he attacks or uses an ability. If he breaks the invisibility with an attack, that attack will slow the target's movement speed.",
+      "spellName": "Shadow Walk",
+      "params": [
+        "Cast Animation: 0+0",
+        "Fade Time: 1\/0.75\/0.5\/0.25",
+        "Move Speed Slow: 16%\/24%\/32%\/40%",
+        "Invisibility Duration: 20\/25\/30\/35",
+        "Slow Duration: 4"
+      ],
+      "itemBehaviour": [],
+      "legacyKey": "W",
+      "story": "The court jesters present during King Goff's assassination can recount no other image than a dancing shadow."
+    },
+    {
+      "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/2\/2a\/Bounty_Hunter_Track.mp3\/revision\/latest?cb=20191216011326",
+      "effects": [
+        "Ability Target Unit",
+        "Affects Enemy Heroes"
+      ],
+      "notes": [
+        "Despite the visual effect, the Track debuff is applied instantly on the target.",
+        "Provides True Sight over the target and makes both their hero model and minimap icon visible through the Fog of War.",
+        "Grants the gold to Bounty Hunter and his allies around the target as unreliable gold when the target dies, no matter how it dies.",
+        "Track can be cast on illusions and Tempest Doubles, but does not grant any gold when they die.",
+        "When multiple Meepoes are tracked and one of them dies, each Meepo grants the Track gold around them.",
+        "Allies only get the bonus gold if they are within 1200 range of the tracked hero while alive. Bounty Hunter himself gets the gold regardless of distance, even while dead.",
+        "The move speed is provided by an aura on the target. Its buff lingers for 0.5 seconds. Multiple instances of the aura do not stack.",
+        "The aura does not affect invulnerable or hidden units.",
+        "The visual effects and sound of Track are only visible and audible to Bounty Hunter and his allies. However, the debuff is visible to everyone.",
+        "The visual effects on Bounty Hunter given by the move speed buff is visible to everyone as well.",
+        "The debuff icon on the target shows how much gold it currently has.",
+        "Alt-clicking the debuff also announces their current gold in the chat."
+      ],
+      "mana": "60",
+      "hotKey": "R",
+      "cooldown": "4",
+      "description": "Tracks an enemy hero, granting True Sight of the target, and information on how much gold it is carrying. You move fast when near the tracked unit and deal critical strikes when attacking it. If the target dies, Bounty Hunter and nearby heroes collect a bonus bounty of gold. Casting Track does not take you out of invisibility.",
+      "spellName": "Track",
+      "params": [
+        "Cast Animation: 0.3+0.43",
+        "Cast Range: 1000",
+        "Ally Gold Radius: 1200",
+        "Speed Radius: 1200",
+        "Self Move Speed Bonus: 16%\/20%\/24%",
+        "Self Critical Damage Against Target: 140%\/170%\/200%",
+        "Self Bonus Gold: 130\/225\/320 (TagTalent 380\/475\/570)",
+        "Ally Bonus Gold: 40\/80\/120 (TagTalent 290\/330\/370)",
+        "Aura Linger Duration: 0.5",
+        "Duration: 30",
+        "Vision Radius: 600",
+        "Ally Move Speed Bonus: 8%\/10%\/12%",
+        "Allies now gain 50% of Track Speed boost. Provides 600 vision around the target for Bounty Hunter's team."
+      ],
+      "itemBehaviour": [],
+      "legacyKey": "R",
+      "story": "Using his elevated senses of sight and smell, Gondar's hits have quite a good chance of success."
+    }
+  ],
+  "mainAttributes": {
+    "attrStrengthInc": 2.5,
+    "attrStrength": 20.0,
+    "attrIntelligence": 22.0,
+    "attrIntelligenceInc": 1.9,
+    "attrAgilityInc": 2.6,
+    "attrAgility": 21.0
+  },
+  "description": "Gondar, the Bounty Hunter, is a melee agility hero that excels at hunting, chasing down and killing single targets. His skill set allows him to roam and gank very effectively, as his Shadow Walk allows him to sneak up to unsuspecting targets to initiate. Shadow Walk is also an effective escape and mobility spell, as he can run from dangerous situations and roam invisibly around the map to keep the enemy guessing even if they have Observer Wards active. His ability to deal medium amounts of damage with Jinada, interrupt their Town Portal Scrolls with Shuriken Toss, and keep perfect tabs on their location and movements with Track all make him a powerful and ruthless ganker who is all but impossible to escape once he has his sights locked in. Bounty Hunter's ability to roam, scout and get important kills for his team while bolstering their gold gain with Track can secure his team a strong gold advantage, and give his foes no safe place to hide.",
+  "history": "When the hunted tell tales of Gondar the Bounty Hunter, none are sure of which are true. In whispered tones they say he was abandoned as a kit, learning his skill in tracking as a matter of simple survival. Others hear he was an orphan of war, taken in by the great Soruq the Hunter to learn the master's skill with a blade as they plumbed the dark forests for big game. Still others believe he was a lowly street urchin raised among a guild of cutpurses and thieves, trained in the arts of stealth and misdirection. Around campfires in the wild countryside his quarry speaks the rumors of Gondar's work, growing ever more fearful: they say it was he who tracked down the tyrant King Goff years after the mad regent went into hiding, delivering his head and scepter as proof. That it was he who infiltrated the rebel camps at Highseat, finally bringing the legendary thief White Cape to be judged for his crimes. And that it was he who ended the career of Soruq the Hunter, condemned as a criminal for killing the Prince's prized hellkite. The tales of Gondar's incredible skill stretch on, with each daring feat more unbelievable than the last, each target more elusive. For the right price, the hunted know, anyone can be found. For the right price, even the mightiest may find fear in the shadows.",
+  "talents": [
+    {
+      "talentLvl": "25",
+      "talentLeft": "+250 Track Gold",
+      "talentRight": "40% Evasion"
+    },
+    {
+      "talentLvl": "20",
+      "talentLeft": "+50 Jinada Gold Steal",
+      "talentRight": "+50 Attack Speed"
+    },
+    {
+      "talentLvl": "15",
+      "talentLeft": "+275 Health",
+      "talentRight": "+50 Shuriken Toss Damage"
+    },
+    {
+      "talentLvl": "10",
+      "talentLeft": "+40 Jinada Damage",
+      "talentRight": "+20 Movement Speed"
+    }
+  ]
+}

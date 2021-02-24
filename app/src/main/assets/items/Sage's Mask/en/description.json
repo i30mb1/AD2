@@ -1,0 +1,24 @@
+{
+  "abilities": [],
+  "cost": "175",
+  "lore": null,
+  "consistFrom": null,
+  "boughtFrom": "Miscellaneous",
+  "name": "Sage's Mask",
+  "description": "A mask commonly used by mages and warlocks for various rituals.",
+  "trivia": [
+    "In the original DotA, this item was called Sobi Mask, a reference to a Warcraft III item of a same name."
+  ],
+  "upgradeIn": [
+    "Oblivion Staff",
+    "Ring of Basilius",
+    "Urn of Shadows",
+    "Necronomicon",
+    "Falcon Blade",
+    "Medallion of Courage"
+  ],
+  "bonuses": [
+    "+0.7 Mana regeneration"
+  ],
+  "tips": null
+}

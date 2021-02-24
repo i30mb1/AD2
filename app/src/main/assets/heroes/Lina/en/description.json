@@ -1,0 +1,190 @@
+{
+  "abilities": [
+    {
+      "notes": [
+        "The cast range talent also affects the max distance of Dragon Slave.",
+        "This attack damage talent is added as raw attack damage, so it does not benefit illusions, and is not affected by most percentage-based damage increasing or reducing effects.",
+        "The health talent increases maximum health capacity, and keeps the current health percentage."
+      ],
+      "spellName": "Talent",
+      "talents": [
+        {
+          "talentLvl": "25",
+          "talentLeft": "+150 Attack Range",
+          "talentRight": "-5s Dragon Slave Cooldown"
+        },
+        {
+          "talentLvl": "20",
+          "talentLeft": "+30\/2% Fiery Soul Per Stack",
+          "talentRight": "+11% Spell Amplification"
+        },
+        {
+          "talentLvl": "15",
+          "talentLeft": "+130 Light Strike Array Damage",
+          "talentRight": "+350 Health"
+        },
+        {
+          "talentLvl": "10",
+          "talentLeft": "+75 Cast Range",
+          "talentRight": "+30 Damage"
+        }
+      ]
+    },
+    {
+      "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/6\/66\/Lina_Dragon_Slave_1.mp3\/revision\/latest?cb=20191216015459",
+      "effects": [
+        "Ability Target Point \/ Target Unit",
+        "Affects Enemies",
+        "Damage Magical"
+      ],
+      "notes": [
+        "Dragon Slave travels at a speed of 1200, taking 0.9 (TagTalent 0.96) seconds to travel the full distance.",
+        "Can hit units up to 1275 (TagTalent 1350) range away (travel distance + end radius).",
+        "The complete area is shaped like a cone."
+      ],
+      "mana": "100\/115\/130\/145",
+      "hotKey": "Q",
+      "cooldown": "8 (TagTalent 3)",
+      "description": "Lina channels the breath of a dragon, sending out a wave of fire that scorches every enemy in its path.",
+      "spellName": "Dragon Slave",
+      "params": [
+        "Cast Animation: 0.45+0.38",
+        "Cast Range: 800 (TagTalent 875)",
+        "Starting Radius: 275",
+        "Travel Distance: 1075 (TagTalent 1150)",
+        "End Radius: 200",
+        "Damage: 85\/160\/235\/310"
+      ],
+      "itemBehaviour": [],
+      "legacyKey": "D",
+      "story": "In the scorched barren of Misrule, Lina learned to manipulate the fiery breath of the Desert Wyrm as a form of entertainment."
+    },
+    {
+      "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/b\/ba\/Lina_Light_Strike_Array_1.mp3\/revision\/latest?cb=20191216015451",
+      "effects": [
+        "Ability Target Area",
+        "Affects Enemies",
+        "Damage Magical"
+      ],
+      "notes": [
+        "Light Strike Array destroys trees within the affected radius.",
+        "Light Strike Array first applies the debuff, then the damage.",
+        "The visual effects and the sound during the 0.5 second effect delay are only visible and audible to allies.",
+        "Lina has two different animations for this spell, leading to two possible cast backswing durations."
+      ],
+      "mana": "100\/110\/120\/130",
+      "hotKey": "W",
+      "cooldown": "10\/9\/8\/7",
+      "description": "Summons a column of flames that damages and stuns enemies.",
+      "spellName": "Light Strike Array",
+      "params": [
+        "Cast Animation: 0.45+0.67\/0.43",
+        "Cast Range: 625 (TagTalent 700)",
+        "Effect Radius: 225",
+        "Effect Delay: 0.5",
+        "Damage: 80\/120\/160\/200 (TagTalent 210\/250\/290\/330)",
+        "Stun Duration: 1.6\/1.9\/2.2\/2.5"
+      ],
+      "itemBehaviour": [],
+      "legacyKey": "T",
+      "story": "Lina's essence allows her to focus the sun's energies, causing air to combust at will."
+    },
+    {
+      "audioUrl": null,
+      "effects": [
+        "Ability Passive",
+        "Affects Self"
+      ],
+      "notes": [
+        "Using items does not trigger Fiery Soul.",
+        "Each spell cast refreshes the duration of the whole stack, making it theoretically possible to permanently have max stacks on.",
+        "At 2 stacks the buff grants 10%\/12%\/14%\/16% (TagTalent 14%\/16%\/18%\/20%) movement speed and 80\/120\/160\/200 (TagTalent 140\/180\/220\/260) attack speed.",
+        "At 3 stacks the buff grants 15%\/18%\/21%\/24% (TagTalent 21%\/24%\/27%\/30%) movement speed and 120\/180\/240\/300 (TagTalent 210\/270\/330\/390) attack speed."
+      ],
+      "mana": null,
+      "hotKey": "E",
+      "cooldown": null,
+      "description": "Grants bonus attack and movement speed each time Lina casts a spell. Stacks with itself. Lasts 10 seconds.",
+      "spellName": "Fiery Soul",
+      "params": [
+        "Max Stacks: 3",
+        "Move Speed Bonus per Stack: 5%\/6%\/7%\/8% (TagTalent 7%\/8%\/9%\/10%)",
+        "Attack Speed Bonus per Stack: 40\/60\/80\/100 (TagTalent 70\/90\/110\/130)",
+        "Stack Duration: 10",
+        "Prevents gaining new stacks. Already existing stacks still provide bonus attack and movement speed."
+      ],
+      "itemBehaviour": [],
+      "legacyKey": "F",
+      "story": "Dancing flames embody Lina's playful nature, bringing out her true blazing self."
+    },
+    {
+      "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/f\/f0\/Lina_Laguna_Blade_1.mp3\/revision\/latest?cb=20191216015450",
+      "effects": [
+        "Ability Target Unit (TagAghanim Target Point)",
+        "Affects Enemies",
+        "Damage Magical (TagAghanim Pure)"
+      ],
+      "notes": [
+        "Places a debuff on the target, which applies the damage upon expiring. The debuff lasts 0.25 seconds. This means the spell can be avoided by being invulnerable or hidden (or spell immune when not upgraded) as the debuff expires.",
+        "This means the spell can be avoided by being invulnerable or hidden (or spell immune when not upgraded) as the debuff expires.",
+        "With Aghanim's Shard, Laguna Blade always affects a line in front of Lina, no matter how it is targeted. When targeting a unit, the lightning is released towards its current location upon cast and still goes the full length. Places a buff on Lina upon cast, which applies the damage on all enemies within range of the lightning upon expiring. The buff lasts seconds. This means directly targeting a unit does not guarantee a hit on them, since it does not place the debuff on enemies. Can hit units up to 875 (TagTalent 950) range away (travel distance + damage width).",
+        "When targeting a unit, the lightning is released towards its current location upon cast and still goes the full length.",
+        "Places a buff on Lina upon cast, which applies the damage on all enemies within range of the lightning upon expiring. The buff lasts seconds.",
+        "This means directly targeting a unit does not guarantee a hit on them, since it does not place the debuff on enemies.",
+        "Can hit units up to 875 (TagTalent 950) range away (travel distance + damage width)."
+      ],
+      "mana": "250\/400\/550",
+      "hotKey": "R",
+      "cooldown": "70\/60\/50",
+      "description": "Fires off a bolt of lightning at a single enemy unit, dealing massive damage.",
+      "spellName": "Laguna Blade",
+      "params": [
+        "Cast Animation: 0.45+0.7",
+        "Cast Range: 600 (TagTalent 675) (TagTalent 750, 825)",
+        "Effect Delay: 0.25",
+        "Damage: 500\/700\/900",
+        "Damage Length: 750 (TagTalent 825)",
+        "Damage Width: 125",
+        "Changes Laguna Blade's damage type to Pure, and allows it to slice through spell immunity.",
+        "Increases Laguna Blade's cast range by 150 and causes it to go the full cast length and hit all units along the way. Can be ground targeted.",
+        "Cannot be cast on spell immune enemies. Attempts to damage if target turns spell immune during the delay. Can be cast on spell immune enemies when upgraded.",
+        "Blocked upon cast. Particles still visually appear. Fully ignores Spell Block."
+      ],
+      "itemBehaviour": [],
+      "legacyKey": "G",
+      "story": "The air around Lina becomes so intensely torrid that it scorches a foe that came too close with white-hot lightning."
+    }
+  ],
+  "mainAttributes": {
+    "attrStrengthInc": 2.4,
+    "attrStrength": 20.0,
+    "attrIntelligence": 30.0,
+    "attrIntelligenceInc": 3.7,
+    "attrAgilityInc": 1.8,
+    "attrAgility": 23.0
+  },
+  "description": "Lina, the Slayer, is a ranged intelligence hero, adept at destroying enemy heroes quickly by delivering massive bursts of magical damage, making her one of the most effective gankers in the game. She possesses immense damaging capabilities all throughout the game, but is very fragile. Two of her fiery spells are her main source of damage, Dragon Slave sends a wave of fire to burn enemies in her path while Light Strike Array stuns them with a concentrated pillar of solar flame. Each of her spells deals great damage early on and has a low cooldown. Her Fiery Soul bolsters her attack and movement speed every time she casts a spell, which gives her scaling damage for the later game. Laguna Blade, her ultimate, is her ace in the hole. Lina fires off a huge bolt of lightning at a single target, dealing colossal damage. Laguna Blade's damage is staggering in early-mid game, and late game is still enough to destroy frail enemy heroes. Dragon Slave, Light Strike Array, and Laguna Blade are incredible flaming nukes that can incinerate her target instantly, and Fiery Soul allows her to transition into a strong and fast physical attacker. Though her power falls from its peak late game, mana-boosting and damage-increasing items can be purchased to keep herself up.",
+  "history": "The sibling rivalries between Lina the Slayer, and her younger sister Rylai, the Crystal Maiden, were the stuff of legend in the temperate region where they spent their quarrelsome childhoods together. Lina always had the advantage, however, for while Crystal was guileless and naive, Lina's fiery ardor was tempered by cleverness and conniving. The exasperated parents of these incompatible offspring went through half a dozen homesteads, losing one to fire, the next to ice, before they realized life would be simpler if the children were separated. As the oldest, Lina was sent far south to live with a patient aunt in the blazing Desert of Misrule, a climate that proved more than comfortable for the fiery Slayer. Her arrival made quite an impression on the somnolent locals, and more than one would-be suitor scorched his fingers or went away with singed eyebrows, his advances spurned. Lina is proud and confident, and nothing can dampen her flame.",
+  "talents": [
+    {
+      "talentLvl": "25",
+      "talentLeft": "+150 Attack Range",
+      "talentRight": "-5s Dragon Slave Cooldown"
+    },
+    {
+      "talentLvl": "20",
+      "talentLeft": "+30\/2% Fiery Soul Per Stack",
+      "talentRight": "+11% Spell Amplification"
+    },
+    {
+      "talentLvl": "15",
+      "talentLeft": "+130 Light Strike Array Damage",
+      "talentRight": "+350 Health"
+    },
+    {
+      "talentLvl": "10",
+      "talentLeft": "+75 Cast Range",
+      "talentRight": "+30 Damage"
+    }
+  ]
+}

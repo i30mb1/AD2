@@ -1,0 +1,207 @@
+{
+  "abilities": [
+    {
+      "notes": [
+        "The magic resistance talent stacks multiplicatively with other sources of magic resistance.",
+        "The magic resistance talent increases Vengeful Spirit's magic resistance to 34%.",
+        "The agility talent effectively grants Vengeful Spirit 2 armor, 12 attack speed, and 12 attack damage."
+      ],
+      "spellName": "Talent",
+      "talents": [
+        {
+          "talentLvl": "25",
+          "talentLeft": "Magic Missile Pierces Spell Immunity",
+          "talentRight": "+16% Vengeance Aura Base Damage Bonus"
+        },
+        {
+          "talentLvl": "20",
+          "talentLeft": "+125 Cast Range",
+          "talentRight": "+200 Magic Missile Damage"
+        },
+        {
+          "talentLvl": "15",
+          "talentLeft": "-2.75s Magic Missile Cooldown",
+          "talentRight": "+12 Agility"
+        },
+        {
+          "talentLvl": "10",
+          "talentLeft": "-1 Wave of Terror Armor",
+          "talentRight": "+12% Magic Resistance"
+        }
+      ]
+    },
+    {
+      "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/6\/6f\/Vengeful_Spirit_Magic_Missile_1.mp3\/revision\/latest?cb=20191216030141",
+      "effects": [
+        "Ability Target Unit",
+        "Affects Enemies",
+        "Damage Magical"
+      ],
+      "notes": [
+        "The projectile travels at a speed of 1350.",
+        "The missile first applies the debuff, then the damage."
+      ],
+      "mana": "100\/110\/120\/130",
+      "hotKey": "Q",
+      "cooldown": "12\/11\/10\/9 (TagTalent 9.25\/8.25\/7.25\/6.25)",
+      "description": "Fires a magic missile at an enemy unit, stunning and dealing damage.",
+      "spellName": "Magic Missile",
+      "params": [
+        "Cast Animation: 0.3+0.5",
+        "Cast Range: 575\/600\/625\/650 (TagTalent 700\/725\/750\/775)",
+        "Damage: 90\/180\/270\/360 (TagTalent 290\/380\/470\/560)",
+        "Stun Duration: 1.4\/1.5\/1.6\/1.7",
+        "Cannot target or affect spell immune units. (TagTalent Can target and affect spell immune units.)",
+        "Blocked upon impact."
+      ],
+      "itemBehaviour": [],
+      "legacyKey": "C",
+      "story": "A simple Skywrath technique, the magic missile is Shendel's primary tool for vengeance."
+    },
+    {
+      "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/6\/6c\/Vengeful_Spirit_Wave_of_Terror.mp3\/revision\/latest?cb=20191216030144",
+      "effects": [
+        "Ability Target Point",
+        "Affects Enemies",
+        "Damage Magical"
+      ],
+      "notes": [
+        "The wave travels at a speed of 2000, taking 0.7 seconds to travel the full distance.",
+        "Can hit units up to 1700 range away (travel distance + radius).",
+        "The wave provides 350 radius flying vision as it travels, which lasts for 4 seconds. This vision starts 100 range away from Vengeful Spirit and reaches for up to 2000 range away (starting distance + travel distance + vision radius).",
+        "This vision starts 100 range away from Vengeful Spirit and reaches for up to 2000 range away (starting distance + travel distance + vision radius).",
+        "The debuff from successive casts does not stack, only the duration gets refreshed.",
+        "The wave first applies the debuff, then the damage.",
+        "Does not affect couriers.",
+        "With Aghanim's Shard, only reduces base damage and that given by the primary attribute of affected units. Raw bonus damage is not reduced. The attack damage reduction adapts to any changes to the hero's base attack damage immediately. Vengeful Spirit gains a buff for each enemy hero hit with Wave of Terror. Multiple instances of the buff stack. Unlike the debuff, the buff increases Vengeful Spirit's base attack damage. The damage is not granted as a raw damage bonus. The amount of damage gained equals the exact amount of attack damage the target lost upon gaining the debuff. Unlike the debuff, the buff's damage value is set once upon gaining the buff, and does not adapt to changes like the debuff. The debuff reduces damage of every unit it affects. However, Vengeful Spirit only gains the buff from affected heroes, including clones, excluding illusions and creep-heroes.",
+        "The attack damage reduction adapts to any changes to the hero's base attack damage immediately.",
+        "Vengeful Spirit gains a buff for each enemy hero hit with Wave of Terror. Multiple instances of the buff stack.",
+        "Unlike the debuff, the buff increases Vengeful Spirit's base attack damage. The damage is not granted as a raw damage bonus.",
+        "The amount of damage gained equals the exact amount of attack damage the target lost upon gaining the debuff.",
+        "Unlike the debuff, the buff's damage value is set once upon gaining the buff, and does not adapt to changes like the debuff.",
+        "The debuff reduces damage of every unit it affects.",
+        "However, Vengeful Spirit only gains the buff from affected heroes, including clones, excluding illusions and creep-heroes."
+      ],
+      "mana": "25\/30\/35\/40",
+      "hotKey": "W",
+      "cooldown": "16\/14\/12\/10",
+      "description": "Vengeful Spirit lets loose a wicked cry, weakening the armor of enemies and giving vision of the path ahead.",
+      "spellName": "Wave of Terror",
+      "params": [
+        "Cast Animation: 0.3+0.5",
+        "Cast Range: 1400 (TagTalent 1525)",
+        "Wave Travel Distance: 1400 (TagTalent 1525)",
+        "Effect Radius: 300",
+        "Damage: 70\/90\/110\/130",
+        "Armor Reduction: 3\/4\/5\/6 (TagTalent 4\/5\/6\/7)",
+        "Duration: 8",
+        "Attack Damage Steal: 25%",
+        "Wave of Terror steals 25% of enemy hero base damage and grants it to Vengeful Spirit for the debuff duration."
+      ],
+      "itemBehaviour": [],
+      "legacyKey": "E",
+      "story": "Shendel's haunting voice hints at her approaching vindication."
+    },
+    {
+      "audioUrl": null,
+      "effects": [
+        "Ability Aura",
+        "Affects Allies"
+      ],
+      "notes": [
+        "The aura's buff lingers for 0.5 seconds.",
+        "Only increases base damage and that given by the primary attribute of affected units. Raw bonus damage is not increased.",
+        "The aura affects invulnerable, but not hidden allies.",
+        "With Aghanim's Scepter, The illusion spawns 108 range away from Vengeful Spirit's death location. It appears either north, east, south or west from that spot. The illusion is a strong illusion, meaning it cannot be instantly killed by abilities which normally kill illusions instantly. The illusion always spawns with full mana and health and all abilities off cooldown, regardless of their status on Vengeful Spirit. The illusion does not get a set duration upon spawning. It disappears once Vengeful Spirit respawns. The illusion spawns on every death, including on the short deaths with reincarnation. The created illusion is visually distinguishable from the real Vengeful Spirit for the enemies. Unlike other illusions, this illusion does not have a gold bounty. This illusion cannot be converted by Enchant. It gets slowed instead.",
+        "The illusion is a strong illusion, meaning it cannot be instantly killed by abilities which normally kill illusions instantly.",
+        "The illusion always spawns with full mana and health and all abilities off cooldown, regardless of their status on Vengeful Spirit.",
+        "The illusion does not get a set duration upon spawning. It disappears once Vengeful Spirit respawns.",
+        "The illusion spawns on every death, including on the short deaths with reincarnation.",
+        "The created illusion is visually distinguishable from the real Vengeful Spirit for the enemies.",
+        "Unlike other illusions, this illusion does not have a gold bounty.",
+        "This illusion cannot be converted by Enchant. It gets slowed instead.",
+        "With Aghanim's Scepter, Vengeful Spirit can gain experience even while dead. While dead, she is periodically moved along with the Vengeance Illusion, allowing her to gain experience around the illusion. This also allows her to respawn at the illusion's location, instead of at the fountain. However, these effects require the illusion to be alive. If it dies, she no longer gains experience, and stops moving along with it.",
+        "While dead, she is periodically moved along with the Vengeance Illusion, allowing her to gain experience around the illusion.",
+        "This also allows her to respawn at the illusion's location, instead of at the fountain.",
+        "However, these effects require the illusion to be alive. If it dies, she no longer gains experience, and stops moving along with it."
+      ],
+      "mana": null,
+      "hotKey": "E",
+      "cooldown": null,
+      "description": "Vengeful Spirit's presence increases the damage of nearby friendly heroes.",
+      "spellName": "Vengeance Aura",
+      "params": [
+        "Radius: 1200",
+        "Attack Damage Bonus: 11%\/18%\/25%\/32% (TagTalent 27%\/34%\/41%\/48%)",
+        "Aura Linger Duration: 0.5",
+        "Number of Illusions on Death: 1",
+        "Illusion Damage Dealt: 100%",
+        "Illusion Damage Taken: 100%",
+        "Illusion Move Speed Bonus: 30%",
+        "Upon death, creates a strong illusion of Vengeful Spirit that deals and takes 100% damage and can cast all of her spells. Illusion has 30% movement speed bonus. If the illusion is alive when Vengeful Spirit respawns, she will take its place. XP earned by her illusion is given to her.",
+        "Illusions bestow the aura. Illusions do not spawn a Vengeance illusion on their death."
+      ],
+      "itemBehaviour": [],
+      "legacyKey": "D",
+      "story": "Although they may not share her undying passion for revenge, allies do draw on her fanaticism in combat."
+    },
+    {
+      "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/a\/ab\/Vengeful_Spirit_Nether_Swap.mp3\/revision\/latest?cb=20191216030143",
+      "effects": [
+        "Ability Target Unit",
+        "Affects Heroes"
+      ],
+      "notes": [
+        "The target is given a stop command as soon as it is teleported back, effectively canceling channeling spells.",
+        "Does not disjoint projectiles upon teleporting, neither for the caster, nor for the target.",
+        "Destroys trees within 300 radius around Vengeful Spirit and the Nether Swap target.",
+        "Can be cast on illusions and Spirit Bear.",
+        "Can be cast on invulnerable units."
+      ],
+      "mana": "100\/150\/200",
+      "hotKey": "R",
+      "cooldown": "50\/40\/30",
+      "description": "Instantaneously swaps positions with a target Hero, friend or enemy. Nether Swap interrupts channeling abilities on the target.",
+      "spellName": "Nether Swap",
+      "params": [
+        "Cast Animation: 0.4+0",
+        "Cast Range: 800\/950\/1100 (TagTalent 925\/1075\/1225)"
+      ],
+      "itemBehaviour": [],
+      "legacyKey": "W",
+      "story": "Martyrdom is a small price to pay for vengeance."
+    }
+  ],
+  "mainAttributes": {
+    "attrStrengthInc": 2.6,
+    "attrStrength": 19.0,
+    "attrIntelligence": 19.0,
+    "attrIntelligenceInc": 1.5,
+    "attrAgilityInc": 3.8,
+    "attrAgility": 20.0
+  },
+  "description": "Shendelzare, the Vengeful Spirit, is a ranged agility hero who excels at ganking, disabling, and kill hunts. She is one of the most well-rounded supports in the game, possessing a skill set that allows her to set up kills for her team during ganks and teamfights, strengthening her team and weakening the enemy in large-scale engagements, and saving allies from certain death if they are caught by the enemy.",
+  "history": "Even the most contented Skywrath is an ill-tempered creature, naturally inclined to seek revenge for the slightest insult. But Vengeful Spirit is the essence of vengeance. Once a proud and savage Skywrath scion, Shendelzare was first in succession for the Ghastly Eyrie until a sister's treachery robbed her of her birthright. Snared in an assassin's net, Shendelzare tore free only at the cost of her wings, limping away in the ultimate humiliation: On foot. With her wings broken, she knew the Skywrath would never accept her as ruler; and in the highest roost of the Eyrie, inaccessible except by winged flight, her sister was untouchable. Unwilling to live as a flightless cripple, and desiring revenge far more than earthly power, the fallen princess drove a bargain with the goddess Scree'auk: She surrendered her broken body for an imperishable form of spirit energy, driven by vengeance, capable of doing great damage in the material plane. She may spend eternity flightless, but she will have her revenge.",
+  "talents": [
+    {
+      "talentLvl": "25",
+      "talentLeft": "Magic Missile Pierces Spell Immunity",
+      "talentRight": "+16% Vengeance Aura Base Damage Bonus"
+    },
+    {
+      "talentLvl": "20",
+      "talentLeft": "+125 Cast Range",
+      "talentRight": "+200 Magic Missile Damage"
+    },
+    {
+      "talentLvl": "15",
+      "talentLeft": "-2.75s Magic Missile Cooldown",
+      "talentRight": "+12 Agility"
+    },
+    {
+      "talentLvl": "10",
+      "talentLeft": "-1 Wave of Terror Armor",
+      "talentRight": "+12% Magic Resistance"
+    }
+  ]
+}

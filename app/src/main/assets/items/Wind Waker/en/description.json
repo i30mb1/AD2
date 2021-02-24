@@ -1,0 +1,64 @@
+{
+  "abilities": [
+    {
+      "audioUrl": null,
+      "effects": [
+        "Ability Target Unit",
+        "Affects Enemies \/ Self",
+        "Damage Magical"
+      ],
+      "notes": [
+        "Double clicking the item casts it on self.",
+        "Applies a cyclone effect on the target upon cast, turning it invulnerable and fully disabled.",
+        "Unlike other Cyclone abilities, the duration of Wind Waker's cyclone is not affected by status resistance.",
+        "Applies a basic dispel on the target upon cast.",
+        "Cyclone first applies the invulnerable, then the dispel.",
+        "Unlike Euls, Wind Waker's Cyclone can target any unit, excluding wards, or buildings.",
+        "When targeting self, when in the air, the caster may move the cyclone at 350 movement speed, while maintaining invulnerability and vertical displacement.",
+        "While in the air, the cycloned unit has no collision. However, a pathing blocker is created at the base of the cyclone within a 24 radius.",
+        "The damage is applied at the end of the duration. If the cyclone gets dispelled, it still applies the damage as soon as the target lands.",
+        "The damage is only applied to enemy targets.",
+        "Can be cast on Roshan, but has no effect, since Roshan is immune to forced movement. The damage is still applied."
+      ],
+      "mana": "175",
+      "abilityName": "Cyclone",
+      "cooldown": null,
+      "description": "Sweeps a target unit up into a cyclone, making them invulnerable for 2.5 seconds. Cyclone can only be cast on enemy units or allied units. Enemy units take 50 magical damage upon landing.",
+      "params": [
+        "Cast Range: 575",
+        "Cyclone Radius: 24",
+        "Damage: 50",
+        "Duration: 2.5"
+      ],
+      "itemBehaviour": [
+        "(Spell_immunity_block_partial_symbol)^Partially pierces spell immunity\nCan be cast on self while spell immune\nCannot be cast on spell immune enemies."
+      ],
+      "story": null
+    }
+  ],
+  "additionalInformation": [
+    "For strength heroes, it grants 420 mana and 7.75 mana regen.",
+    "For agility heroes, it grants 420 mana and 7.75 mana regen.",
+    "For intelligence heroes, it grants 420 mana, 7.75 mana regen and 35 attack damage.",
+    "Movement speed bonuses from multiple Wind Waker fully stack.",
+    "Stacks with all other movement speed bonuses."
+  ],
+  "cost": "7125",
+  "lore": null,
+  "consistFrom": [
+    "Mystic Staff",
+    "Eul's Scepter of Divinity",
+    "Recipe"
+  ],
+  "boughtFrom": "Magical",
+  "name": "Wind Waker",
+  "description": "Proof enough to some that unseen forces manipulate the happenings of the material plane.",
+  "trivia": null,
+  "upgradeIn": null,
+  "bonuses": [
+    "+35 Intelligence",
+    "+6 Mana regeneration",
+    "+50 Movement speed"
+  ],
+  "tips": null
+}

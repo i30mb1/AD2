@@ -1,0 +1,39 @@
+{
+  "abilities": [
+    {
+      "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/4\/46\/Refresher_Orb.mp3\/revision\/latest?cb=20141214200918",
+      "effects": [
+        "Способность Ненаправленная",
+        "Действует на Себя"
+      ],
+      "notes": [
+        "При применении прерывает произносимые заклинания владельца.",
+        "Сбрасывает перезарядку только тех предметов, что находятся в инвентаре и ранце владельца. На предметы в тайнике, в инвентарях других существ или выброшенные предметы способность не действует.",
+        "Визуально сбрасывает перезарядку Tranquil Boots, но не пропускает сломанное состояние.",
+        "Не сбрасывает перезарядку Refresher Shard, Refresher Orb и Town Portal Scroll."
+      ],
+      "mana": "100",
+      "abilityName": "Reset Item Cooldowns",
+      "cooldown": null,
+      "description": "Сбрасывает время перезарядки всех предметов, кроме Refresher Orb.",
+      "params": [],
+      "itemBehaviour": [],
+      "story": null
+    }
+  ],
+  "additionalInformation": [
+    "Ex Machina \u2014 полностью передаваемый предмет."
+  ],
+  "cost": "Н\/Д",
+  "lore": null,
+  "consistFrom": null,
+  "boughtFrom": "нейтральных крипов",
+  "name": "Ex Machina",
+  "description": "Стоимость Н\/Д Выпадает из нейтральных крипов",
+  "trivia": null,
+  "upgradeIn": null,
+  "bonuses": [
+    "+25 к броне"
+  ],
+  "tips": null
+}

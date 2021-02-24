@@ -1,0 +1,88 @@
+{
+  "abilities": [
+    {
+      "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/b\/b2\/Blade_Mail_Damage_Return_1.mp3\/revision\/latest?cb=20191227195353",
+      "effects": [
+        "Ability No Target",
+        "Affects Enemies"
+      ],
+      "notes": [
+        "Interrupts the user's channeling spells upon cast.",
+        "Causes Blade Mail to reflect 100% of attack damage taken, plus the flat value.",
+        "Causes Blade Mail to also react on other instances of damage besides attack damage, returning 80% of the damage taken.",
+        "Returns the same damage type as received.",
+        "Fully ignores self-inflicted damage, and damage flagged as HP Removal."
+      ],
+      "mana": "25",
+      "abilityName": "Damage Return",
+      "cooldown": null,
+      "description": "For 4.5 seconds, the damage returned from all sources is increased by 80%.",
+      "params": [
+        "Damage Returned: 80%",
+        "Duration: 4.5"
+      ],
+      "itemBehaviour": [],
+      "story": null
+    },
+    {
+      "audioUrl": null,
+      "effects": [
+        "Ability Passive",
+        "Affects Enemies"
+      ],
+      "notes": [
+        "Only reacts on attack damage. Other sources of damage are ignored.",
+        "Returns incoming damage before all manipulations. However, damage manipulation on the enemy still affects the damage normally.",
+        "Reflected physical damage is affected by damage block as well.",
+        "The returned damage is always dealt right after the incoming damage.",
+        "Returned damage has the no-reflection flag, preventing its damage from interacting with other sources of damage with the same flag.",
+        "Returns damage back to the source. This means damage done by summons is reflected back to the summons, not to their owner.",
+        "Damage Return has a global range and affects units through the Fog of War or invisibility.",
+        "Returned damage cannot be amplified with spell damage amplification and cannot spell lifesteal.",
+        "Does not work against wards, buildings and allied units."
+      ],
+      "mana": null,
+      "abilityName": "Damage Return (Passive)",
+      "cooldown": null,
+      "description": "Everytime you are attacked, you return 20 damage plus 20% of the attack damage dealt to you.",
+      "params": [
+        "Base Return Damage: 20",
+        "Damage Taken as Return Damage: 20%"
+      ],
+      "itemBehaviour": [],
+      "story": null
+    }
+  ],
+  "additionalInformation": [
+    "Multiple instances of Damage Return do not stack."
+  ],
+  "cost": "2225",
+  "lore": null,
+  "consistFrom": [
+    "Broadsword",
+    "Chainmail",
+    "Recipe"
+  ],
+  "boughtFrom": "Armor",
+  "name": "Blade Mail",
+  "description": "A razor-sharp coat of mail, it is the choice of selfless martyrs in combat.",
+  "trivia": null,
+  "upgradeIn": null,
+  "bonuses": [
+    "+6 Armor",
+    "+28 Attack damage"
+  ],
+  "tips": [
+    "It is a powerful counter against Bloodthorn and Silver Edge to prevent enemies from attacking you while under the debuff.",
+    "Enemies with copious amounts of damage resistance or high health could very easily ignore Blade Mail's ability. Heroes like Ursa, Spectre, and Abaddon are good examples of said resistant heroes, as are items such as Pipe of Insight or Heart of Tarrasque.",
+    "It can be useful to get Blade Mail if you get outcarried, to counter the DPS and turn the enemy's damage against them.",
+    "Buy it as a counter if the opposing team has high damage (crits, nukes or attack speed) and have low health. If timed properly, some heroes can get killed just from their own damage. And even if you cannot do that, it could make the enemy hesitant to attack you for 4.5 seconds.",
+    "A good situation to use Blade Mail is if you're inflicted with a heavy damage over time ability. For example, you can kill (or severely damage) Bloodseeker by walking around with Rupture, or Tinker by staying under his March of the Machines. However, do make sure that you yourself can take the damage you'll be receiving, else you'll just be helping the enemy instead.",
+    "The return damage is only dealt to the unit who attacks. Therefore, Techies' mines, Witch Doctor's Death Ward and Shadow Shaman's Mass Serpent Ward won't affect their main hero as they are considered separate units. Since the Blade Mail returns damage on the unit that attacks the owner, you can use Necronomicon units to attack and the melee Necronomicon Warrior will die quicker to return 800 damage.",
+    "Since the Blade Mail returns damage on the unit that attacks the owner, you can use Necronomicon units to attack and the melee Necronomicon Warrior will die quicker to return 800 damage.",
+    "This is a commonly bought item for initiator heroes that can soak up some damage (commonly Strength heroes), such as Clockwerk or Spirit Breaker.",
+    "Blade Mail is less effective with evasion and attack slow because it reduces the hits you receive, and thus the damage you can return.",
+    "It also loses effectiveness against enemies who can turn themselves or their allies invulnerable with abilities like Phase Shift or Astral Imprisonment, or with Eul's Scepter of Divinity, as Blade Mail cannot damage invulnerable units.",
+    "It is an ultimate counter against heroes who rely on critical strikes such as Phantom Assassin, Bounty Hunter, Wraith King, etc. Also against Crystalys or its upgrade Daedalus."
+  ]
+}

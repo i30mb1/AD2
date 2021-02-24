@@ -1,0 +1,38 @@
+{
+  "abilities": [
+    {
+      "audioUrl": null,
+      "effects": [
+        "Ability No Target",
+        "Affects Self"
+      ],
+      "notes": [],
+      "mana": null,
+      "abilityName": "Giant's Foot",
+      "cooldown": null,
+      "description": "Can path over any terrain and deals 100% of your strength per second to units you are standing on top of.",
+      "params": [
+        "Strengh as Damage: 100%"
+      ],
+      "itemBehaviour": [],
+      "story": null
+    }
+  ],
+  "additionalInformation": [
+    "Deals damage as spell damage. This means it is affected by modifiers such as spell amp and spell lifesteal and is reduced by magic resistance.",
+    "This means it is affected by modifiers such as spell amp and spell lifesteal and is reduced by magic resistance."
+  ],
+  "cost": "N\/A",
+  "lore": null,
+  "consistFrom": null,
+  "boughtFrom": "Neutral Drop Only",
+  "name": "Giant's Ring",
+  "description": "Prized procurement of an otherwise unremarkable ruler of Elze who abdicated his position and vanished.",
+  "trivia": null,
+  "upgradeIn": null,
+  "bonuses": [
+    "+40 Strength",
+    "+60 Movement speed"
+  ],
+  "tips": null
+}

@@ -1,0 +1,26 @@
+{
+  "abilities": [],
+  "additionalInformation": [
+    "For strength heroes, it grants 120 mana and 0.5 mana regen.",
+    "For agility heroes, it grants 120 mana and 0.5 mana regen.",
+    "For intelligence heroes, it grants 120 mana, 0.5 mana regen and 10 attack damage."
+  ],
+  "cost": "1000",
+  "lore": null,
+  "consistFrom": null,
+  "boughtFrom": "Attributes",
+  "name": "Staff of Wizardry",
+  "description": "A staff of magical powers passed down from the eldest mages.",
+  "trivia": null,
+  "upgradeIn": [
+    "Eul's Scepter of Divinity",
+    "Force Staff",
+    "Aghanim's Scepter",
+    "Kaya",
+    "Rod of Atos"
+  ],
+  "bonuses": [
+    "+10 Intelligence"
+  ],
+  "tips": null
+}

@@ -1,0 +1,45 @@
+{
+  "abilities": [
+    {
+      "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/f\/f0\/Arcane_Ring_Replenish_Mana.mp3\/revision\/latest?cb=20200116232656",
+      "effects": [
+        "Ability No Target",
+        "Affects Allies"
+      ],
+      "notes": [
+        "Interrupts the user's channeling spells upon cast.",
+        "Affects every allied unit, including illusions, invulnerable units and hidden units, excluding wards and buildings.",
+        "Does not share cooldown with Arcane Boots."
+      ],
+      "mana": null,
+      "abilityName": "Replenish Mana",
+      "cooldown": "45",
+      "description": "Restores 75 mana to all nearby allies.",
+      "params": [
+        "Radius: 1200",
+        "Mana Restored: 75"
+      ],
+      "itemBehaviour": [],
+      "story": null
+    }
+  ],
+  "additionalInformation": [
+    "Arcane Rings are fully sharable."
+  ],
+  "cost": "N\/A",
+  "lore": null,
+  "consistFrom": null,
+  "boughtFrom": "Neutral Drop Only",
+  "name": "Arcane Ring",
+  "description": "Once a prized heirloom of a minor lord's house.",
+  "trivia": [
+    "This item was originally created in Version 6.38 during the DotA era, and later reworked into Arcane Boots. It was re-added to Dota 2 in Version 7.23. Arcane Ring's appearance is designed after this as well, sharing aesthetics with Arcane Boots.",
+    "Arcane Ring's appearance is designed after this as well, sharing aesthetics with Arcane Boots."
+  ],
+  "upgradeIn": null,
+  "bonuses": [
+    "+10 Intelligence",
+    "+2 Armor"
+  ],
+  "tips": null
+}

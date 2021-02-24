@@ -1,0 +1,2165 @@
+[
+  {
+    "responses": [
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/e\/ec\/Vo_dragon_knight_drag_spawn_01.mp3\/revision\/latest?cb=20201010215925",
+        "title": "Dragon Knight."
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/9\/96\/Vo_dragon_knight_drag_spawn_02.mp3\/revision\/latest?cb=20201010215927",
+        "title": "The dragon comes for war."
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/b\/b9\/Vo_dragon_knight_drag_spawn_03.mp3\/revision\/latest?cb=20201010215929",
+        "title": "I unsheathe the Wyrmblade."
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/e\/ec\/Vo_dragon_knight_drag_spawn_04.mp3\/revision\/latest?cb=20201010215931",
+        "title": "A Knight in dragon's armor."
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/6\/6c\/Vo_dragon_knight_drag_battlebegins_01.mp3\/revision\/latest?cb=20201010215316",
+        "title": "On your guard."
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/9\/9c\/Vo_dragon_knight_drag_move_04.mp3\/revision\/latest?cb=20201010215738",
+        "title": "Compelled to battle."
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/d\/d5\/Vo_dragon_knight_drag_move_09.mp3\/revision\/latest?cb=20201010215751",
+        "title": "The dragon wakes."
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/b\/bf\/Vo_dragon_knight_drag_move_10.mp3\/revision\/latest?cb=20201010215754",
+        "title": "Who calls the dragon knight?"
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/1\/1b\/Vo_dragon_knight_drag_move_11.mp3\/revision\/latest?cb=20201010215757",
+        "title": "Dragon to the fray."
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/0\/08\/Vo_dragon_knight_drag_attack_02.mp3\/revision\/latest?cb=20201010215251",
+        "title": "By the honor of the ancients."
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/2\/28\/Vo_dragon_knight_drag_attack_06.mp3\/revision\/latest?cb=20201010215302",
+        "title": "Our shields shall clash."
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/4\/49\/Vo_dragon_knight_drag_level_05.mp3\/revision\/latest?cb=20201010215710",
+        "title": "In strength is victory."
+      }
+    ],
+    "category": "Loadout"
+  },
+  {
+    "responses": [
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/e\/ec\/Vo_dragon_knight_drag_spawn_01.mp3\/revision\/latest?cb=20201010215925",
+        "title": "Dragon Knight."
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/9\/91\/Vo_dragon_knight_drag_anger_06.mp3\/revision\/latest?cb=20201010215243",
+        "title": "Ohweh."
+      }
+    ],
+    "category": "Drafting"
+  },
+  {
+    "responses": [
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/e\/ec\/Vo_dragon_knight_drag_spawn_01.mp3\/revision\/latest?cb=20201010215925",
+        "title": "Dragon Knight."
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/0\/02\/Vo_dragon_knight_dragon_spawn_01.mp3\/revision\/latest?cb=20201010220743",
+        "isArcane": true,
+        "title": "Dragon Knight."
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/9\/96\/Vo_dragon_knight_drag_spawn_02.mp3\/revision\/latest?cb=20201010215927",
+        "title": "The dragon comes for war."
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/2\/22\/Vo_dragon_knight_dragon_spawn_02.mp3\/revision\/latest?cb=20201010220746",
+        "isArcane": true,
+        "title": "The dragon comes for war."
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/b\/b9\/Vo_dragon_knight_drag_spawn_03.mp3\/revision\/latest?cb=20201010215929",
+        "title": "I unsheathe the Wyrmblade."
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/c\/cb\/Vo_dragon_knight_dragon_spawn_03.mp3\/revision\/latest?cb=20201010220748",
+        "isArcane": true,
+        "title": "I unsheathe the Wyrmblade."
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/e\/ec\/Vo_dragon_knight_drag_spawn_04.mp3\/revision\/latest?cb=20201010215931",
+        "title": "A Knight in dragon's armor."
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/8\/80\/Vo_dragon_knight_dragon_spawn_04.mp3\/revision\/latest?cb=20201010220751",
+        "isArcane": true,
+        "title": "A Knight in dragon's armor."
+      }
+    ],
+    "category": "Entering battle"
+  },
+  {
+    "responses": [
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/9\/9d\/Vo_dragon_knight_drag_inthebag_02.mp3\/revision\/latest?cb=20201010215517",
+        "title": "This my friends, is in the bag."
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/e\/ef\/Vo_dragon_knight_dragon_inthebag_02.mp3\/revision\/latest?cb=20201010220303",
+        "isArcane": true,
+        "title": "This my friends, is in the bag."
+      }
+    ],
+    "category": "Taunting"
+  },
+  {
+    "responses": [
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/6\/6c\/Vo_dragon_knight_drag_battlebegins_01.mp3\/revision\/latest?cb=20201010215316",
+        "title": "On your guard."
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/8\/8e\/Vo_dragon_knight_dragon_battlebegins_01.mp3\/revision\/latest?cb=20201010220100",
+        "isArcane": true,
+        "title": "On your guard."
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/0\/05\/Vo_dragon_knight_drag_battlebegins_02.mp3\/revision\/latest?cb=20201010215318",
+        "title": "The tournament commences."
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/3\/39\/Vo_dragon_knight_dragon_battlebegins_02.mp3\/revision\/latest?cb=20201010220103",
+        "isArcane": true,
+        "title": "The tournament commences."
+      }
+    ],
+    "category": "Beginning battle"
+  },
+  {
+    "responses": [
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/b\/bc\/Vo_dragon_knight_drag_move_01.mp3\/revision\/latest?cb=20201010215730",
+        "title": "Yes!"
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/e\/ef\/Vo_dragon_knight_dragon_move_01.mp3\/revision\/latest?cb=20201010220511",
+        "isArcane": true,
+        "title": "Yes!"
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/3\/3a\/Vo_dragon_knight_drag_move_02.mp3\/revision\/latest?cb=20201010215733",
+        "isArcane": true,
+        "title": "Yes!"
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/6\/65\/Vo_dragon_knight_dragon_move_02.mp3\/revision\/latest?cb=20201010220513",
+        "isArcane": true,
+        "title": "Yes!"
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/4\/4a\/Vo_dragon_knight_drag_move_03.mp3\/revision\/latest?cb=20201010215735",
+        "title": "Forward."
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/5\/50\/Vo_dragon_knight_dragon_move_03.mp3\/revision\/latest?cb=20201010220515",
+        "isArcane": true,
+        "title": "Forward."
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/9\/9c\/Vo_dragon_knight_drag_move_04.mp3\/revision\/latest?cb=20201010215738",
+        "title": "Compelled to battle."
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/8\/86\/Vo_dragon_knight_dragon_move_04.mp3\/revision\/latest?cb=20201010220518",
+        "isArcane": true,
+        "title": "Compelled to battle."
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/7\/78\/Vo_dragon_knight_drag_move_05.mp3\/revision\/latest?cb=20201010215741",
+        "title": "Of course."
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/e\/ea\/Vo_dragon_knight_dragon_move_05.mp3\/revision\/latest?cb=20201010220521",
+        "isArcane": true,
+        "title": "Of course."
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/5\/51\/Vo_dragon_knight_drag_move_06.mp3\/revision\/latest?cb=20201010215743",
+        "title": "I need no steed."
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/7\/79\/Vo_dragon_knight_dragon_move_06.mp3\/revision\/latest?cb=20201010220523",
+        "isArcane": true,
+        "title": "I need no steed."
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/0\/0a\/Vo_dragon_knight_drag_move_07.mp3\/revision\/latest?cb=20201010215746",
+        "title": "Onward."
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/9\/90\/Vo_dragon_knight_dragon_move_07.mp3\/revision\/latest?cb=20201010220526",
+        "isArcane": true,
+        "title": "Onward."
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/8\/8d\/Vo_dragon_knight_drag_move_08.mp3\/revision\/latest?cb=20201010215749",
+        "title": "By my blade."
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/0\/08\/Vo_dragon_knight_dragon_move_08.mp3\/revision\/latest?cb=20201010220528",
+        "isArcane": true,
+        "title": "By my blade."
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/d\/d5\/Vo_dragon_knight_drag_move_09.mp3\/revision\/latest?cb=20201010215751",
+        "title": "The dragon wakes."
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/e\/e0\/Vo_dragon_knight_dragon_move_09.mp3\/revision\/latest?cb=20201010220531",
+        "isArcane": true,
+        "title": "The dragon wakes."
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/b\/bf\/Vo_dragon_knight_drag_move_10.mp3\/revision\/latest?cb=20201010215754",
+        "title": "Who calls the dragon knight?"
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/f\/f8\/Vo_dragon_knight_dragon_move_10.mp3\/revision\/latest?cb=20201010220534",
+        "isArcane": true,
+        "title": "Who calls the dragon knight?"
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/1\/1b\/Vo_dragon_knight_drag_move_11.mp3\/revision\/latest?cb=20201010215757",
+        "title": "Dragon to the fray."
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/d\/da\/Vo_dragon_knight_dragon_move_11.mp3\/revision\/latest?cb=20201010220536",
+        "isArcane": true,
+        "title": "Dragon to the fray."
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/b\/bb\/Vo_dragon_knight_drag_move_12.mp3\/revision\/latest?cb=20201010215759",
+        "title": "Swiftly."
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/c\/c5\/Vo_dragon_knight_dragon_move_12.mp3\/revision\/latest?cb=20201010220538",
+        "isArcane": true,
+        "title": "Swiftly."
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/b\/ba\/Vo_dragon_knight_dragon_ability_eldrag_02.mp3\/revision\/latest?cb=20201010215954",
+        "title": "Fly-by-night."
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/7\/7a\/Vo_dragon_knight_drag_ability_eldrag_02.mp3\/revision\/latest?cb=20201010220823",
+        "isArcane": true,
+        "title": "Fly-by-night."
+      }
+    ],
+    "category": "Moving"
+  },
+  {
+    "responses": [
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/7\/7a\/Vo_dragon_knight_drag_attack_01.mp3\/revision\/latest?cb=20201010215249",
+        "title": "Attack!"
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/5\/58\/Vo_dragon_knight_dragon_attack_01.mp3\/revision\/latest?cb=20201010220033",
+        "isArcane": true,
+        "title": "Attack!"
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/0\/08\/Vo_dragon_knight_drag_attack_02.mp3\/revision\/latest?cb=20201010215251",
+        "title": "By the honor of the ancients."
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/b\/b4\/Vo_dragon_knight_dragon_attack_02.mp3\/revision\/latest?cb=20201010220036",
+        "isArcane": true,
+        "title": "By the honor of the ancients."
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/a\/a2\/Vo_dragon_knight_drag_attack_03.mp3\/revision\/latest?cb=20201010215254",
+        "title": "I'll notch your skull."
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/f\/f6\/Vo_dragon_knight_dragon_attack_03.mp3\/revision\/latest?cb=20201010220038",
+        "isArcane": true,
+        "title": "I'll notch your skull."
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/e\/ec\/Vo_dragon_knight_drag_attack_04.mp3\/revision\/latest?cb=20201010215257",
+        "title": "Dragon charred."
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/3\/3d\/Vo_dragon_knight_dragon_attack_04.mp3\/revision\/latest?cb=20201010220041",
+        "isArcane": true,
+        "title": "Dragon charred."
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/b\/b6\/Vo_dragon_knight_drag_attack_05.mp3\/revision\/latest?cb=20201010215259",
+        "title": "We cross swords."
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/d\/df\/Vo_dragon_knight_dragon_attack_05.mp3\/revision\/latest?cb=20201010220044",
+        "isArcane": true,
+        "title": "We cross swords."
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/2\/28\/Vo_dragon_knight_drag_attack_06.mp3\/revision\/latest?cb=20201010215302",
+        "title": "Our shields shall clash."
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/7\/7d\/Vo_dragon_knight_dragon_attack_06.mp3\/revision\/latest?cb=20201010220047",
+        "isArcane": true,
+        "title": "Our shields shall clash."
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/d\/d8\/Vo_dragon_knight_drag_attack_07.mp3\/revision\/latest?cb=20201010215305",
+        "title": "Wyrmblade cuts deep!"
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/f\/f0\/Vo_dragon_knight_dragon_attack_07.mp3\/revision\/latest?cb=20201010220049",
+        "isArcane": true,
+        "title": "Wyrmblade cuts deep!"
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/f\/fe\/Vo_dragon_knight_drag_attack_08.mp3\/revision\/latest?cb=20201010215308",
+        "title": "By the shield of Slyrak!"
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/5\/5c\/Vo_dragon_knight_dragon_attack_08.mp3\/revision\/latest?cb=20201010220052",
+        "isArcane": true,
+        "title": "By the shield of Slyrak!"
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/9\/98\/Vo_dragon_knight_drag_attack_09.mp3\/revision\/latest?cb=20201010215310",
+        "title": "Dragonnade!"
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/2\/24\/Vo_dragon_knight_dragon_attack_09.mp3\/revision\/latest?cb=20201010220055",
+        "isArcane": true,
+        "title": "Dragonnade!"
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/1\/19\/Vo_dragon_knight_drag_attack_10.mp3\/revision\/latest?cb=20201010215313",
+        "title": "This will only hurt a lot."
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/a\/a5\/Vo_dragon_knight_dragon_attack_10.mp3\/revision\/latest?cb=20201010220057",
+        "isArcane": true,
+        "title": "This will only hurt a lot."
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/4\/4c\/Vo_dragon_knight_dragon_ability_eldrag_01.mp3\/revision\/latest?cb=20201010215952",
+        "title": "Into a rage, I fly."
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/f\/f7\/Vo_dragon_knight_drag_ability_eldrag_01.mp3\/revision\/latest?cb=20201010220821",
+        "isArcane": true,
+        "title": "Into a rage, I fly."
+      }
+    ],
+    "category": "Attacking"
+  },
+  {
+    "responses": [
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/d\/d6\/Vo_dragon_knight_drag_cast_01.mp3\/revision\/latest?cb=20201010215337",
+        "title": "Enjoy your last moments."
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/2\/2f\/Vo_dragon_knight_dragon_cast_01.mp3\/revision\/latest?cb=20201010220119",
+        "isArcane": true,
+        "title": "Enjoy your last moments."
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/b\/b0\/Vo_dragon_knight_drag_cast_02.mp3\/revision\/latest?cb=20201010215339",
+        "title": "Can't escape the dragon."
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/5\/57\/Vo_dragon_knight_dragon_cast_02.mp3\/revision\/latest?cb=20201010220122",
+        "isArcane": true,
+        "title": "Can't escape the dragon."
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/7\/79\/Vo_dragon_knight_drag_cast_03.mp3\/revision\/latest?cb=20201010215342",
+        "title": "Soon, you end."
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/a\/ad\/Vo_dragon_knight_dragon_cast_03.mp3\/revision\/latest?cb=20201010220125",
+        "isArcane": true,
+        "title": "Soon, you end."
+      }
+    ],
+    "category": "Ordering a spell cast"
+  },
+  {
+    "responses": [
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/3\/3d\/Vo_dragon_knight_drag_ability_eldrag_04.mp3\/revision\/latest?cb=20201010220828",
+        "title": "The inner dragon wakes."
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/3\/3e\/Vo_dragon_knight_dragon_ability_eldrag_04.mp3\/revision\/latest?cb=20201010215958",
+        "isArcane": true,
+        "title": "The inner dragon wakes."
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/6\/62\/Vo_dragon_knight_drag_ability_eldrag_05.mp3\/revision\/latest?cb=20201010220830",
+        "title": "The world shall end in fire."
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/c\/cf\/Vo_dragon_knight_dragon_ability_eldrag_05.mp3\/revision\/latest?cb=20201010220000",
+        "isArcane": true,
+        "title": "The world shall end in fire."
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/3\/3f\/Vo_dragon_knight_drag_ability_eldrag_06.mp3\/revision\/latest?cb=20201010220832",
+        "title": "Face the knight, face the dragon."
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/6\/61\/Vo_dragon_knight_dragon_ability_eldrag_06.mp3\/revision\/latest?cb=20201010220002",
+        "isArcane": true,
+        "title": "Face the knight, face the dragon."
+      }
+    ],
+    "category": "Abilities"
+  },
+  {
+    "responses": [
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/f\/fc\/Vo_dragon_knight_drag_level_01.mp3\/revision\/latest?cb=20201010215659",
+        "title": "I soar higher."
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/b\/b1\/Vo_dragon_knight_dragon_level_01.mp3\/revision\/latest?cb=20201010220440",
+        "isArcane": true,
+        "title": "I soar higher."
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/b\/ba\/Vo_dragon_knight_drag_level_02.mp3\/revision\/latest?cb=20201010215701",
+        "title": "Higher honor."
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/e\/ee\/Vo_dragon_knight_dragon_level_02.mp3\/revision\/latest?cb=20201010220442",
+        "isArcane": true,
+        "title": "Higher honor."
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/6\/62\/Vo_dragon_knight_drag_level_03.mp3\/revision\/latest?cb=20201010215704",
+        "title": "My armor grows stronger."
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/5\/51\/Vo_dragon_knight_dragon_level_03.mp3\/revision\/latest?cb=20201010220445",
+        "isArcane": true,
+        "title": "My armor grows stronger."
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/d\/d3\/Vo_dragon_knight_drag_level_04.mp3\/revision\/latest?cb=20201010215707",
+        "title": "Powers abounding."
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/2\/2f\/Vo_dragon_knight_dragon_level_04.mp3\/revision\/latest?cb=20201010220448",
+        "isArcane": true,
+        "title": "Powers abounding."
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/4\/49\/Vo_dragon_knight_drag_level_05.mp3\/revision\/latest?cb=20201010215710",
+        "title": "In strength is victory."
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/4\/41\/Vo_dragon_knight_dragon_level_05.mp3\/revision\/latest?cb=20201010220450",
+        "isArcane": true,
+        "title": "In strength is victory."
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/2\/25\/Vo_dragon_knight_drag_level_06.mp3\/revision\/latest?cb=20201010215712",
+        "title": "He heh heh heh hah."
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/1\/11\/Vo_dragon_knight_dragon_level_06.mp3\/revision\/latest?cb=20201010220452",
+        "isArcane": true,
+        "title": "He heh heh heh hah."
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/d\/d5\/Vo_dragon_knight_drag_level_07.mp3\/revision\/latest?cb=20201010215715",
+        "title": "Heheheheheehhheh."
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/b\/be\/Vo_dragon_knight_dragon_level_07.mp3\/revision\/latest?cb=20201010220455",
+        "isArcane": true,
+        "title": "Heheheheheehhheh."
+      }
+    ],
+    "category": "Leveling up"
+  },
+  {
+    "responses": [
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/c\/c7\/Vo_dragon_knight_drag_kill_01.mp3\/revision\/latest?cb=20201010215530",
+        "title": "Live by the sword, die by the dragon."
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/d\/d1\/Vo_dragon_knight_dragon_kill_01.mp3\/revision\/latest?cb=20201010220316",
+        "isArcane": true,
+        "title": "Live by the sword, die by the dragon."
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/8\/83\/Vo_dragon_knight_drag_kill_02.mp3\/revision\/latest?cb=20201010215533",
+        "title": "You, I smite."
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/a\/a5\/Vo_dragon_knight_dragon_kill_02.mp3\/revision\/latest?cb=20201010220319",
+        "isArcane": true,
+        "title": "You, I smite."
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/9\/93\/Vo_dragon_knight_drag_kill_03.mp3\/revision\/latest?cb=20201010215536",
+        "title": "You've been dragooned."
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/2\/2e\/Vo_dragon_knight_dragon_kill_03.mp3\/revision\/latest?cb=20201010220321",
+        "isArcane": true,
+        "title": "You've been dragooned."
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/2\/26\/Vo_dragon_knight_drag_kill_04.mp3\/revision\/latest?cb=20201010215539",
+        "title": "Welcome to the dead of night."
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/2\/2f\/Vo_dragon_knight_dragon_kill_04.mp3\/revision\/latest?cb=20201010220324",
+        "isArcane": true,
+        "title": "Welcome to the dead of night."
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/d\/d5\/Vo_dragon_knight_drag_kill_05.mp3\/revision\/latest?cb=20201010215541",
+        "title": "Let my face be the last thing you see."
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/3\/31\/Vo_dragon_knight_dragon_kill_05.mp3\/revision\/latest?cb=20201010220327",
+        "isArcane": true,
+        "title": "Let my face be the last thing you see."
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/d\/dd\/Vo_dragon_knight_drag_kill_06.mp3\/revision\/latest?cb=20201010215544",
+        "title": "You fought with honor."
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/b\/b1\/Vo_dragon_knight_dragon_kill_06.mp3\/revision\/latest?cb=20201010220329",
+        "isArcane": true,
+        "title": "You fought with honor."
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/1\/1d\/Vo_dragon_knight_drag_kill_07.mp3\/revision\/latest?cb=20201010215547",
+        "title": "I'll char your bones."
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/5\/51\/Vo_dragon_knight_dragon_kill_07.mp3\/revision\/latest?cb=20201010220331",
+        "isArcane": true,
+        "title": "I'll char your bones."
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/a\/ac\/Vo_dragon_knight_drag_kill_08.mp3\/revision\/latest?cb=20201010215549",
+        "title": "May the eldwyrms carry you to rest."
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/9\/94\/Vo_dragon_knight_dragon_kill_08.mp3\/revision\/latest?cb=20201010220333",
+        "isArcane": true,
+        "title": "May the eldwyrms carry you to rest."
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/b\/b8\/Vo_dragon_knight_drag_kill_09.mp3\/revision\/latest?cb=20201010215552",
+        "title": "An honorable demise."
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/4\/4d\/Vo_dragon_knight_dragon_kill_09.mp3\/revision\/latest?cb=20201010220336",
+        "isArcane": true,
+        "title": "An honorable demise."
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/2\/2a\/Vo_dragon_knight_drag_kill_10.mp3\/revision\/latest?cb=20201010215555",
+        "title": "I've killed dragons less deserving of death."
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/2\/25\/Vo_dragon_knight_dragon_kill_10.mp3\/revision\/latest?cb=20201010220339",
+        "isArcane": true,
+        "title": "I've killed dragons less deserving of death."
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/6\/6e\/Vo_dragon_knight_drag_kill_11.mp3\/revision\/latest?cb=20201010215557",
+        "title": "You fought and died with honor."
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/3\/3c\/Vo_dragon_knight_dragon_kill_11.mp3\/revision\/latest?cb=20201010220341",
+        "isArcane": true,
+        "title": "You fought and died with honor."
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/a\/af\/Vo_dragon_knight_drag_kill_12.mp3\/revision\/latest?cb=20201010215559",
+        "title": "I sheathe Wyrmblade in the scabbard of your bowels."
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/d\/d2\/Vo_dragon_knight_dragon_kill_12.mp3\/revision\/latest?cb=20201010220344",
+        "isArcane": true,
+        "title": "I sheathe Wyrmblade in the scabbard of your bowels."
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/d\/d7\/Vo_dragon_knight_drag_kill_13.mp3\/revision\/latest?cb=20201010215602",
+        "title": "Heh heh heh."
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/0\/08\/Vo_dragon_knight_dragon_kill_13.mp3\/revision\/latest?cb=20201010220347",
+        "isArcane": true,
+        "title": "Heh heh heh."
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/9\/90\/Vo_dragon_knight_drag_laugh_01.mp3\/revision\/latest?cb=20201010215632",
+        "title": "Heh huh heh heh huh heh hah."
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/d\/d9\/Vo_dragon_knight_dragon_laugh_01.mp3\/revision\/latest?cb=20201010220414",
+        "isArcane": true,
+        "title": "Heh huh heh heh huh heh hah."
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/f\/fe\/Vo_dragon_knight_drag_laugh_02.mp3\/revision\/latest?cb=20201010215635",
+        "title": "Heuh huh huh huh heh heh huh heh hah heh heh."
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/9\/91\/Vo_dragon_knight_dragon_laugh_02.mp3\/revision\/latest?cb=20201010220417",
+        "isArcane": true,
+        "title": "Heuh huh huh huh heh heh huh heh hah heh heh."
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/1\/1e\/Vo_dragon_knight_drag_laugh_09.mp3\/revision\/latest?cb=20201010215653",
+        "title": "Heehehah hehhehhah."
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/c\/cb\/Vo_dragon_knight_dragon_laugh_09.mp3\/revision\/latest?cb=20201010220434",
+        "isArcane": true,
+        "title": "Heehehah hehhehhah."
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/4\/47\/Vo_dragon_knight_drag_laugh_10.mp3\/revision\/latest?cb=20201010215656",
+        "title": "Heh uhuh."
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/1\/17\/Vo_dragon_knight_dragon_laugh_10.mp3\/revision\/latest?cb=20201010220437",
+        "isArcane": true,
+        "title": "Heh uhuh."
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/c\/ce\/Vo_dragon_knight_dragon_ability_eldrag_03.mp3\/revision\/latest?cb=20201010215956",
+        "title": "Dragon nature unleashed."
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/5\/5d\/Vo_dragon_knight_drag_ability_eldrag_03.mp3\/revision\/latest?cb=20201010220825",
+        "isArcane": true,
+        "title": "Dragon nature unleashed."
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/0\/02\/Vo_dragon_knight_drag_jakiro_01.mp3\/revision\/latest?cb=20201010215525",
+        "title": "Even as a part time dragon, I have bested you Jakiro.",
+        "icons": [
+          "heroes\/Jakiro\/minimap.png"
+        ]
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/6\/69\/Vo_dragon_knight_dragon_jakiro_01.mp3\/revision\/latest?cb=20201010220310",
+        "isArcane": true,
+        "icons": [
+          "heroes\/Jakiro\/minimap.png"
+        ],
+        "title": "Even as a part time dragon, I have bested you Jakiro."
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/4\/4d\/Vo_dragon_knight_drag_lina_03.mp3\/revision\/latest?cb=20201010215720",
+        "title": "Lina, what know you of dragons?",
+        "icons": [
+          "heroes\/Lina\/minimap.png"
+        ]
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/2\/2a\/Vo_dragon_knight_dragon_lina_03.mp3\/revision\/latest?cb=20201010220501",
+        "isArcane": true,
+        "icons": [
+          "heroes\/Lina\/minimap.png"
+        ],
+        "title": "Lina, what know you of dragons?"
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/d\/d4\/Vo_dragon_knight_drag_lina_02.mp3\/revision\/latest?cb=20201010215718",
+        "title": "That's what you get, Lina, for enslaving dragons.",
+        "icons": [
+          "heroes\/Lina\/minimap.png"
+        ]
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/b\/b6\/Vo_dragon_knight_dragon_lina_02.mp3\/revision\/latest?cb=20201010220458",
+        "isArcane": true,
+        "icons": [
+          "heroes\/Lina\/minimap.png"
+        ],
+        "title": "That's what you get, Lina, for enslaving dragons."
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/d\/db\/Vo_dragon_knight_drag_sven_01.mp3\/revision\/latest?cb=20201010215932",
+        "title": "Sven, you have much to learn about fighting dragons.",
+        "icons": [
+          "heroes\/Sven\/minimap.png"
+        ]
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/0\/00\/Vo_dragon_knight_dragon_sven_01.mp3\/revision\/latest?cb=20201010220753",
+        "isArcane": true,
+        "icons": [
+          "heroes\/Sven\/minimap.png"
+        ],
+        "title": "Sven, you have much to learn about fighting dragons."
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/9\/93\/Vo_dragon_knight_drag_sven_02.mp3\/revision\/latest?cb=20201010215934",
+        "title": "Good night, Sven. I mean bad knight.",
+        "icons": [
+          "heroes\/Sven\/minimap.png"
+        ]
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/6\/65\/Vo_dragon_knight_dragon_sven_02.mp3\/revision\/latest?cb=20201010220756",
+        "isArcane": true,
+        "icons": [
+          "heroes\/Sven\/minimap.png"
+        ],
+        "title": "Good night, Sven. I mean bad knight."
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/9\/9e\/Vo_dragon_knight_drag_sven_03.mp3\/revision\/latest?cb=20201010215936",
+        "title": "I'm the better Knight, Sven.",
+        "icons": [
+          "heroes\/Sven\/minimap.png"
+        ]
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/c\/c3\/Vo_dragon_knight_dragon_sven_03.mp3\/revision\/latest?cb=20201010220758",
+        "isArcane": true,
+        "icons": [
+          "heroes\/Sven\/minimap.png"
+        ],
+        "title": "I'm the better Knight, Sven."
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/9\/9b\/Vo_dragon_knight_drag_firstblood_01.mp3\/revision\/latest?cb=20201010215445",
+        "title": "First blood, heh heh heh he heh hah."
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/5\/5f\/Vo_dragon_knight_dragon_firstblood_01.mp3\/revision\/latest?cb=20201010220230",
+        "isArcane": true,
+        "title": "First blood, heh heh heh he heh hah."
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/0\/0d\/Vo_dragon_knight_drag_firstblood_02.mp3\/revision\/latest?cb=20201010215447",
+        "title": "The dragon draws first blood."
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/6\/6e\/Vo_dragon_knight_dragon_firstblood_02.mp3\/revision\/latest?cb=20201010220233",
+        "isArcane": true,
+        "title": "The dragon draws first blood."
+      }
+    ],
+    "category": "Killing an enemy"
+  },
+  {
+    "responses": [
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/7\/7b\/Vo_dragon_knight_drag_lasthit_01.mp3\/revision\/latest?cb=20201010215605",
+        "title": "I'll melt this down for armor."
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/b\/b4\/Vo_dragon_knight_dragon_lasthit_01.mp3\/revision\/latest?cb=20201010220350",
+        "isArcane": true,
+        "title": "I'll melt this down for armor."
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/d\/d4\/Vo_dragon_knight_drag_lasthit_02.mp3\/revision\/latest?cb=20201010215608",
+        "title": "Put you out of misery."
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/b\/bb\/Vo_dragon_knight_dragon_lasthit_02.mp3\/revision\/latest?cb=20201010220352",
+        "isArcane": true,
+        "title": "Put you out of misery."
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/b\/b3\/Vo_dragon_knight_drag_lasthit_03.mp3\/revision\/latest?cb=20201010215610",
+        "title": "More gold for my hoard."
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/d\/d2\/Vo_dragon_knight_dragon_lasthit_03.mp3\/revision\/latest?cb=20201010220355",
+        "isArcane": true,
+        "title": "More gold for my hoard."
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/7\/73\/Vo_dragon_knight_drag_lasthit_04.mp3\/revision\/latest?cb=20201010215613",
+        "title": "Ah, dragon's gold."
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/b\/be\/Vo_dragon_knight_dragon_lasthit_04.mp3\/revision\/latest?cb=20201010220357",
+        "isArcane": true,
+        "title": "Ah, dragon's gold."
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/0\/0f\/Vo_dragon_knight_drag_lasthit_05.mp3\/revision\/latest?cb=20201010215616",
+        "title": "A worthy tribute."
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/f\/f7\/Vo_dragon_knight_dragon_lasthit_05.mp3\/revision\/latest?cb=20201010220400",
+        "isArcane": true,
+        "title": "A worthy tribute."
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/0\/08\/Vo_dragon_knight_drag_lasthit_06.mp3\/revision\/latest?cb=20201010215618",
+        "title": "You'll need no gold where you go."
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/9\/99\/Vo_dragon_knight_dragon_lasthit_06.mp3\/revision\/latest?cb=20201010220402",
+        "isArcane": true,
+        "title": "You'll need no gold where you go."
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/1\/16\/Vo_dragon_knight_drag_lasthit_07.mp3\/revision\/latest?cb=20201010215621",
+        "title": "Steel wins battles, gold wins wars."
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/2\/21\/Vo_dragon_knight_dragon_lasthit_07.mp3\/revision\/latest?cb=20201010220404",
+        "isArcane": true,
+        "title": "Steel wins battles, gold wins wars."
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/0\/0f\/Vo_dragon_knight_drag_lasthit_08.mp3\/revision\/latest?cb=20201010215624",
+        "title": "Mine."
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/4\/4f\/Vo_dragon_knight_dragon_lasthit_08.mp3\/revision\/latest?cb=20201010220407",
+        "isArcane": true,
+        "title": "Mine."
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/c\/c3\/Vo_dragon_knight_drag_lasthit_09.mp3\/revision\/latest?cb=20201010215627",
+        "title": "I'll take that."
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/d\/dd\/Vo_dragon_knight_dragon_lasthit_09.mp3\/revision\/latest?cb=20201010220410",
+        "isArcane": true,
+        "title": "I'll take that."
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/e\/e3\/Vo_dragon_knight_drag_lasthit_10.mp3\/revision\/latest?cb=20201010215629",
+        "title": "Heh heh heheh."
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/d\/d1\/Vo_dragon_knight_dragon_lasthit_10.mp3\/revision\/latest?cb=20201010220412",
+        "isArcane": true,
+        "title": "Heh heh heheh."
+      }
+    ],
+    "category": "Last hitting"
+  },
+  {
+    "responses": [
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/f\/f0\/Vo_dragon_knight_drag_deny_01.mp3\/revision\/latest?cb=20201010215418",
+        "title": "Denied."
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/f\/fd\/Vo_dragon_knight_dragon_deny_01.mp3\/revision\/latest?cb=20201010220201",
+        "isArcane": true,
+        "title": "Denied."
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/c\/cf\/Vo_dragon_knight_drag_deny_02.mp3\/revision\/latest?cb=20201010215421",
+        "isArcane": true,
+        "title": "Denied."
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/1\/18\/Vo_dragon_knight_dragon_deny_02.mp3\/revision\/latest?cb=20201010220203",
+        "isArcane": true,
+        "title": "Denied."
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/3\/33\/Vo_dragon_knight_drag_deny_03.mp3\/revision\/latest?cb=20201010215424",
+        "title": "I can't let you have that."
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/3\/3b\/Vo_dragon_knight_dragon_deny_03.mp3\/revision\/latest?cb=20201010220205",
+        "isArcane": true,
+        "title": "I can't let you have that."
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/4\/49\/Vo_dragon_knight_drag_deny_04.mp3\/revision\/latest?cb=20201010215426",
+        "title": "Uh-uh."
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/c\/c1\/Vo_dragon_knight_dragon_deny_04.mp3\/revision\/latest?cb=20201010220208",
+        "isArcane": true,
+        "title": "Uh-uh."
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/e\/e3\/Vo_dragon_knight_drag_deny_05.mp3\/revision\/latest?cb=20201010215429",
+        "title": "Nay."
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/a\/a6\/Vo_dragon_knight_dragon_deny_05.mp3\/revision\/latest?cb=20201010220210",
+        "isArcane": true,
+        "title": "Nay."
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/a\/a1\/Vo_dragon_knight_drag_deny_06.mp3\/revision\/latest?cb=20201010215432",
+        "title": "Not on my watch."
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/a\/a9\/Vo_dragon_knight_dragon_deny_06.mp3\/revision\/latest?cb=20201010220213",
+        "isArcane": true,
+        "title": "Not on my watch."
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/a\/a9\/Vo_dragon_knight_drag_deny_07.mp3\/revision\/latest?cb=20201010215434",
+        "title": "No."
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/6\/60\/Vo_dragon_knight_dragon_deny_07.mp3\/revision\/latest?cb=20201010220215",
+        "isArcane": true,
+        "title": "No."
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/b\/bb\/Vo_dragon_knight_drag_deny_08.mp3\/revision\/latest?cb=20201010215436",
+        "title": "No money for you."
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/e\/ea\/Vo_dragon_knight_dragon_deny_08.mp3\/revision\/latest?cb=20201010220218",
+        "isArcane": true,
+        "title": "No money for you."
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/6\/60\/Vo_dragon_knight_drag_deny_09.mp3\/revision\/latest?cb=20201010215438",
+        "title": "You wanted that? He he heh."
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/8\/87\/Vo_dragon_knight_dragon_deny_09.mp3\/revision\/latest?cb=20201010220220",
+        "isArcane": true,
+        "title": "You wanted that? He he heh."
+      }
+    ],
+    "category": "Denying"
+  },
+  {
+    "responses": [
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/8\/85\/Vo_dragon_knight_drag_purch_01.mp3\/revision\/latest?cb=20201010215847",
+        "title": "Just what I've been waiting for."
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/3\/3e\/Vo_dragon_knight_dragon_purch_01.mp3\/revision\/latest?cb=20201010220647",
+        "isArcane": true,
+        "title": "Just what I've been waiting for."
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/a\/af\/Vo_dragon_knight_drag_purch_02.mp3\/revision\/latest?cb=20201010215848",
+        "title": "Worth its weight in gold."
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/b\/bd\/Vo_dragon_knight_dragon_purch_02.mp3\/revision\/latest?cb=20201010220650",
+        "isArcane": true,
+        "title": "Worth its weight in gold."
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/f\/f6\/Vo_dragon_knight_drag_purch_03.mp3\/revision\/latest?cb=20201010215850",
+        "title": "Worth all the gold in my lair."
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/3\/36\/Vo_dragon_knight_dragon_purch_03.mp3\/revision\/latest?cb=20201010220652",
+        "isArcane": true,
+        "title": "Worth all the gold in my lair."
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/f\/fb\/Vo_dragon_knight_drag_blink_01.mp3\/revision\/latest?cb=20201010215324",
+        "title": "Blink dagger.",
+        "icons": [
+          "items\/Blink Dagger\/full.png"
+        ]
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/3\/30\/Vo_dragon_knight_dragon_blink_01.mp3\/revision\/latest?cb=20201010220107",
+        "isArcane": true,
+        "icons": [
+          "items\/Blink Dagger\/full.png"
+        ],
+        "title": "Blink dagger."
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/2\/25\/Vo_dragon_knight_drag_blink_02.mp3\/revision\/latest?cb=20201010215326",
+        "title": "Ah, a blink dagger.",
+        "icons": [
+          "items\/Blink Dagger\/full.png"
+        ]
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/3\/3e\/Vo_dragon_knight_dragon_blink_02.mp3\/revision\/latest?cb=20201010220109",
+        "isArcane": true,
+        "icons": [
+          "items\/Blink Dagger\/full.png"
+        ],
+        "title": "Ah, a blink dagger."
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/a\/ad\/Vo_dragon_knight_drag_scepter_01.mp3\/revision\/latest?cb=20201010215920",
+        "title": "Ah, scepter.",
+        "icons": [
+          "items\/Aghanim's Scepter\/full.png"
+        ]
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/a\/a9\/Vo_dragon_knight_dragon_scepter_01.mp3\/revision\/latest?cb=20201010220735",
+        "isArcane": true,
+        "icons": [
+          "items\/Aghanim's Scepter\/full.png"
+        ],
+        "title": "Ah, scepter."
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/3\/3c\/Vo_dragon_knight_drag_scepter_02.mp3\/revision\/latest?cb=20201010215921",
+        "title": "Scepter.",
+        "icons": [
+          "items\/Aghanim's Scepter\/full.png"
+        ]
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/2\/2f\/Vo_dragon_knight_dragon_scepter_02.mp3\/revision\/latest?cb=20201010220738",
+        "isArcane": true,
+        "icons": [
+          "items\/Aghanim's Scepter\/full.png"
+        ],
+        "title": "Scepter."
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/2\/2a\/Vo_dragon_knight_drag_satanic_01.mp3\/revision\/latest?cb=20201010215918",
+        "title": "Satanic.",
+        "icons": [
+          "items\/Satanic\/full.png"
+        ]
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/8\/89\/Vo_dragon_knight_dragon_satanic_01.mp3\/revision\/latest?cb=20201010220733",
+        "isArcane": true,
+        "icons": [
+          "items\/Satanic\/full.png"
+        ],
+        "title": "Satanic."
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/f\/fb\/Vo_dragon_knight_drag_assaultcuirass_01.mp3\/revision\/latest?cb=20201010215246",
+        "title": "Assault Cuirass!",
+        "icons": [
+          "items\/Assault Cuirass\/full.png"
+        ]
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/8\/80\/Vo_dragon_knight_dragon_assaultcuirass_01.mp3\/revision\/latest?cb=20201010220030",
+        "isArcane": true,
+        "icons": [
+          "items\/Assault Cuirass\/full.png"
+        ],
+        "title": "Assault Cuirass!"
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/d\/dd\/Vo_dragon_knight_drag_blackkingbar_01.mp3\/revision\/latest?cb=20201010215321",
+        "title": "Black King Bar.",
+        "icons": [
+          "items\/Black King Bar\/full.png"
+        ]
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/f\/f5\/Vo_dragon_knight_dragon_blackkingbar_01.mp3\/revision\/latest?cb=20201010220105",
+        "isArcane": true,
+        "icons": [
+          "items\/Black King Bar\/full.png"
+        ],
+        "title": "Black King Bar."
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/2\/2b\/Vo_dragon_knight_drag_immort_01.mp3\/revision\/latest?cb=20201010215510",
+        "title": "Immortality!",
+        "icons": [
+          "heroes\/Aegis of the Immortal\/minimap.png"
+        ]
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/8\/8c\/Vo_dragon_knight_dragon_immort_01.mp3\/revision\/latest?cb=20201010220258",
+        "isArcane": true,
+        "icons": [
+          "heroes\/Aegis of the Immortal\/minimap.png"
+        ],
+        "title": "Immortality!"
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/4\/47\/Vo_dragon_knight_drag_immort_02.mp3\/revision\/latest?cb=20201010215513",
+        "title": "Dragons live forever."
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/3\/3e\/Vo_dragon_knight_dragon_immort_02.mp3\/revision\/latest?cb=20201010220300",
+        "isArcane": true,
+        "title": "Dragons live forever."
+      }
+    ],
+    "category": "Acquiring an item"
+  },
+  {
+    "responses": [
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/9\/91\/Vo_dragon_knight_drag_death_01.mp3\/revision\/latest?cb=20201010215348",
+        "title": "No!"
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/e\/ee\/Vo_dragon_knight_dragon_death_01.mp3\/revision\/latest?cb=20201010220130",
+        "isArcane": true,
+        "title": "No!"
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/0\/0a\/Vo_dragon_knight_drag_death_02.mp3\/revision\/latest?cb=20201010215350",
+        "title": "Valorous death."
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/4\/44\/Vo_dragon_knight_dragon_death_02.mp3\/revision\/latest?cb=20201010220132",
+        "isArcane": true,
+        "title": "Valorous death."
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/6\/60\/Vo_dragon_knight_drag_death_03.mp3\/revision\/latest?cb=20201010215353",
+        "title": "Night falls."
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/8\/87\/Vo_dragon_knight_dragon_death_03.mp3\/revision\/latest?cb=20201010220135",
+        "isArcane": true,
+        "title": "Night falls."
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/8\/8c\/Vo_dragon_knight_drag_death_04.mp3\/revision\/latest?cb=20201010215355",
+        "title": "I die with honor."
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/5\/54\/Vo_dragon_knight_dragon_death_04.mp3\/revision\/latest?cb=20201010220138",
+        "isArcane": true,
+        "title": "I die with honor."
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/a\/a5\/Vo_dragon_knight_drag_death_05.mp3\/revision\/latest?cb=20201010215358",
+        "title": "My fire\u2026goes out."
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/6\/6c\/Vo_dragon_knight_dragon_death_05.mp3\/revision\/latest?cb=20201010220140",
+        "isArcane": true,
+        "title": "My fire\u2026goes out."
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/0\/0f\/Vo_dragon_knight_drag_death_06.mp3\/revision\/latest?cb=20201010215401",
+        "title": "The dragon is slain."
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/3\/30\/Vo_dragon_knight_dragon_death_06.mp3\/revision\/latest?cb=20201010220143",
+        "isArcane": true,
+        "title": "The dragon is slain."
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/5\/56\/Vo_dragon_knight_drag_death_07.mp3\/revision\/latest?cb=20201010215403",
+        "title": "Lay scales\u2026on my eyes."
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/a\/af\/Vo_dragon_knight_dragon_death_07.mp3\/revision\/latest?cb=20201010220145",
+        "isArcane": true,
+        "title": "Lay scales\u2026on my eyes."
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/9\/9e\/Vo_dragon_knight_drag_death_08.mp3\/revision\/latest?cb=20201010215406",
+        "title": "I join the Eldwurms."
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/9\/92\/Vo_dragon_knight_dragon_death_08.mp3\/revision\/latest?cb=20201010220148",
+        "isArcane": true,
+        "title": "I join the Eldwurms."
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/4\/4c\/Vo_dragon_knight_drag_death_09.mp3\/revision\/latest?cb=20201010215409",
+        "title": "The scales fall away."
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/f\/f5\/Vo_dragon_knight_dragon_death_09.mp3\/revision\/latest?cb=20201010220150",
+        "isArcane": true,
+        "title": "The scales fall away."
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/1\/10\/Vo_dragon_knight_drag_death_10.mp3\/revision\/latest?cb=20201010215411",
+        "title": "Bury me on my shield."
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/3\/33\/Vo_dragon_knight_dragon_death_10.mp3\/revision\/latest?cb=20201010220153",
+        "isArcane": true,
+        "title": "Bury me on my shield."
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/3\/36\/Vo_dragon_knight_drag_death_11.mp3\/revision\/latest?cb=20201010215413",
+        "title": "Slyrak\u2026fails me."
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/1\/1a\/Vo_dragon_knight_dragon_death_11.mp3\/revision\/latest?cb=20201010220156",
+        "isArcane": true,
+        "title": "Slyrak\u2026fails me."
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/8\/8e\/Vo_dragon_knight_drag_death_12.mp3\/revision\/latest?cb=20201010215416",
+        "title": "Death has swift wings."
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/8\/8e\/Vo_dragon_knight_dragon_death_12.mp3\/revision\/latest?cb=20201010220158",
+        "isArcane": true,
+        "title": "Death has swift wings."
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/d\/db\/Vo_dragon_knight_drag_jakiro_02.mp3\/revision\/latest?cb=20201010215528",
+        "title": "Jakiro!",
+        "icons": [
+          "heroes\/Jakiro\/minimap.png"
+        ]
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/6\/67\/Vo_dragon_knight_dragon_jakiro_02.mp3\/revision\/latest?cb=20201010220313",
+        "isArcane": true,
+        "icons": [
+          "heroes\/Jakiro\/minimap.png"
+        ],
+        "title": "Jakiro!"
+      }
+    ],
+    "category": "Dying"
+  },
+  {
+    "responses": [
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/a\/a8\/Vo_dragon_knight_drag_respawn_01.mp3\/revision\/latest?cb=20201010215901",
+        "title": "Ah, a chance to redeem my honor."
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/6\/67\/Vo_dragon_knight_dragon_respawn_01.mp3\/revision\/latest?cb=20201010220707",
+        "isArcane": true,
+        "title": "Ah, a chance to redeem my honor."
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/8\/86\/Vo_dragon_knight_drag_respawn_02.mp3\/revision\/latest?cb=20201010215903",
+        "title": "My valor shall be proven this day."
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/9\/90\/Vo_dragon_knight_dragon_respawn_02.mp3\/revision\/latest?cb=20201010220710",
+        "isArcane": true,
+        "title": "My valor shall be proven this day."
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/f\/fa\/Vo_dragon_knight_drag_respawn_03.mp3\/revision\/latest?cb=20201010215904",
+        "title": "The shield of scale protects me."
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/7\/70\/Vo_dragon_knight_dragon_respawn_03.mp3\/revision\/latest?cb=20201010220712",
+        "isArcane": true,
+        "title": "The shield of scale protects me."
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/3\/35\/Vo_dragon_knight_drag_respawn_04.mp3\/revision\/latest?cb=20201010215906",
+        "title": "The dragon rises from the ashes it has sown."
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/6\/6b\/Vo_dragon_knight_dragon_respawn_04.mp3\/revision\/latest?cb=20201010220715",
+        "isArcane": true,
+        "title": "The dragon rises from the ashes it has sown."
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/2\/27\/Vo_dragon_knight_drag_respawn_05.mp3\/revision\/latest?cb=20201010215908",
+        "title": "I draw Wyrmblade once more from its scabbard."
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/9\/98\/Vo_dragon_knight_dragon_respawn_05.mp3\/revision\/latest?cb=20201010220718",
+        "isArcane": true,
+        "title": "I draw Wyrmblade once more from its scabbard."
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/d\/d1\/Vo_dragon_knight_drag_respawn_06.mp3\/revision\/latest?cb=20201010215909",
+        "title": "Another transformation."
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/7\/77\/Vo_dragon_knight_dragon_respawn_06.mp3\/revision\/latest?cb=20201010220720",
+        "isArcane": true,
+        "title": "Another transformation."
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/6\/6d\/Vo_dragon_knight_drag_respawn_07.mp3\/revision\/latest?cb=20201010215911",
+        "title": "I'll not sheathe Wyrmblade 'til it's been blooded."
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/f\/f0\/Vo_dragon_knight_dragon_respawn_07.mp3\/revision\/latest?cb=20201010220723",
+        "isArcane": true,
+        "title": "I'll not sheathe Wyrmblade 'til it's been blooded."
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/8\/86\/Vo_dragon_knight_drag_respawn_08.mp3\/revision\/latest?cb=20201010215913",
+        "title": "The sleeping dragon wakes."
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/b\/b6\/Vo_dragon_knight_dragon_respawn_08.mp3\/revision\/latest?cb=20201010220725",
+        "isArcane": true,
+        "title": "The sleeping dragon wakes."
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/7\/7e\/Vo_dragon_knight_drag_respawn_09.mp3\/revision\/latest?cb=20201010215915",
+        "title": "Valor calls to valor."
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/1\/1f\/Vo_dragon_knight_dragon_respawn_09.mp3\/revision\/latest?cb=20201010220728",
+        "isArcane": true,
+        "title": "Valor calls to valor."
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/1\/11\/Vo_dragon_knight_drag_respawn_10.mp3\/revision\/latest?cb=20201010215916",
+        "title": "Armored and dangerous."
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/c\/c7\/Vo_dragon_knight_dragon_respawn_10.mp3\/revision\/latest?cb=20201010220730",
+        "isArcane": true,
+        "title": "Armored and dangerous."
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/5\/5a\/Vo_dragon_knight_drag_aegis_01.mp3\/revision\/latest?cb=20201010215227",
+        "title": "T'hah hah, hah hah hah, you're not done with me yet!"
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/4\/4e\/Vo_dragon_knight_dragon_aegis_01.mp3\/revision\/latest?cb=20201010220012",
+        "isArcane": true,
+        "title": "T'hah hah, hah hah hah, you're not done with me yet!"
+      }
+    ],
+    "category": "Respawning"
+  },
+  {
+    "responses": [
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/8\/86\/Vo_dragon_knight_drag_bottle_01.mp3\/revision\/latest?cb=20201010215329",
+        "title": "Saved for later."
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/3\/37\/Vo_dragon_knight_dragon_bottle_01.mp3\/revision\/latest?cb=20201010220112",
+        "isArcane": true,
+        "title": "Saved for later."
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/2\/21\/Vo_dragon_knight_drag_bottle_02.mp3\/revision\/latest?cb=20201010215331",
+        "title": "Into the bottle."
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/3\/3f\/Vo_dragon_knight_dragon_bottle_02.mp3\/revision\/latest?cb=20201010220114",
+        "isArcane": true,
+        "title": "Into the bottle."
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/0\/01\/Vo_dragon_knight_drag_bottle_03.mp3\/revision\/latest?cb=20201010215334",
+        "title": "I'll bottle this for now."
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/f\/fc\/Vo_dragon_knight_dragon_bottle_03.mp3\/revision\/latest?cb=20201010220117",
+        "isArcane": true,
+        "title": "I'll bottle this for now."
+      }
+    ],
+    "category": "Bottling Runes"
+  },
+  {
+    "responses": [
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/8\/85\/Vo_dragon_knight_drag_purch_01.mp3\/revision\/latest?cb=20201010215847",
+        "title": "Just what I've been waiting for."
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/3\/3e\/Vo_dragon_knight_dragon_purch_01.mp3\/revision\/latest?cb=20201010220647",
+        "isArcane": true,
+        "title": "Just what I've been waiting for."
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/c\/c3\/Vo_dragon_knight_drag_lasthit_09.mp3\/revision\/latest?cb=20201010215627",
+        "title": "I'll take that."
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/d\/dd\/Vo_dragon_knight_dragon_lasthit_09.mp3\/revision\/latest?cb=20201010220410",
+        "isArcane": true,
+        "title": "I'll take that."
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/d\/db\/Vo_dragon_knight_drag_doubdam_01.mp3\/revision\/latest?cb=20201010215439",
+        "title": "Double damage!"
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/4\/49\/Vo_dragon_knight_dragon_doubdam_01.mp3\/revision\/latest?cb=20201010220223",
+        "isArcane": true,
+        "title": "Double damage!"
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/7\/7f\/Vo_dragon_knight_drag_doubdam_02.mp3\/revision\/latest?cb=20201010215441",
+        "title": "Double dragon, twice the slice."
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/d\/db\/Vo_dragon_knight_dragon_doubdam_02.mp3\/revision\/latest?cb=20201010220225",
+        "isArcane": true,
+        "title": "Double dragon, twice the slice."
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/7\/74\/Vo_dragon_knight_drag_haste_01.mp3\/revision\/latest?cb=20201010215459",
+        "title": "Haste!"
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/1\/1d\/Vo_dragon_knight_dragon_haste_01.mp3\/revision\/latest?cb=20201010220248",
+        "isArcane": true,
+        "title": "Haste!"
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/1\/11\/Vo_dragon_knight_drag_haste_02.mp3\/revision\/latest?cb=20201010215502",
+        "title": "Fast as a diving dragon."
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/d\/d3\/Vo_dragon_knight_dragon_haste_02.mp3\/revision\/latest?cb=20201010220250",
+        "isArcane": true,
+        "title": "Fast as a diving dragon."
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/8\/86\/Vo_dragon_knight_drag_illus_01.mp3\/revision\/latest?cb=20201010215505",
+        "title": "Illusion!"
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/9\/93\/Vo_dragon_knight_dragon_illus_01.mp3\/revision\/latest?cb=20201010220253",
+        "isArcane": true,
+        "title": "Illusion!"
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/d\/d4\/Vo_dragon_knight_drag_illus_02.mp3\/revision\/latest?cb=20201010215507",
+        "title": "Thrice the knight."
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/4\/4c\/Vo_dragon_knight_dragon_illus_02.mp3\/revision\/latest?cb=20201010220255",
+        "isArcane": true,
+        "title": "Thrice the knight."
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/1\/1c\/Vo_dragon_knight_drag_invis_01.mp3\/revision\/latest?cb=20201010215520",
+        "title": "Invisibility!"
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/7\/7a\/Vo_dragon_knight_dragon_invis_01.mp3\/revision\/latest?cb=20201010220306",
+        "isArcane": true,
+        "title": "Invisibility!"
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/f\/f4\/Vo_dragon_knight_drag_invis_02.mp3\/revision\/latest?cb=20201010215522",
+        "title": "What you can't see, will kill you."
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/f\/fd\/Vo_dragon_knight_dragon_invis_02.mp3\/revision\/latest?cb=20201010220307",
+        "isArcane": true,
+        "title": "What you can't see, will kill you."
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/1\/19\/Vo_dragon_knight_drag_regen_01.mp3\/revision\/latest?cb=20201010215857",
+        "title": "Regeneration!"
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/6\/66\/Vo_dragon_knight_dragon_regen_01.mp3\/revision\/latest?cb=20201010220702",
+        "isArcane": true,
+        "title": "Regeneration!"
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/0\/0c\/Vo_dragon_knight_drag_regen_02.mp3\/revision\/latest?cb=20201010215859",
+        "title": "My scales shine like new."
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/c\/c3\/Vo_dragon_knight_dragon_regen_02.mp3\/revision\/latest?cb=20201010220705",
+        "isArcane": true,
+        "title": "My scales shine like new."
+      }
+    ],
+    "category": "Activating runes"
+  },
+  {
+    "responses": [
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/8\/8a\/Vo_dragon_knight_drag_notyet_01.mp3\/revision\/latest?cb=20201010215818",
+        "title": "Not yet."
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/5\/55\/Vo_dragon_knight_dragon_notyet_01.mp3\/revision\/latest?cb=20201010220605",
+        "isArcane": true,
+        "title": "Not yet."
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/b\/ba\/Vo_dragon_knight_drag_notyet_02.mp3\/revision\/latest?cb=20201010215819",
+        "title": "I'm not ready."
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/0\/0c\/Vo_dragon_knight_dragon_notyet_02.mp3\/revision\/latest?cb=20201010220608",
+        "isArcane": true,
+        "title": "I'm not ready."
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/0\/07\/Vo_dragon_knight_drag_notyet_03.mp3\/revision\/latest?cb=20201010215821",
+        "title": "It's not time yet."
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/3\/3a\/Vo_dragon_knight_dragon_notyet_03.mp3\/revision\/latest?cb=20201010220610",
+        "isArcane": true,
+        "title": "It's not time yet."
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/1\/1d\/Vo_dragon_knight_drag_notyet_04.mp3\/revision\/latest?cb=20201010215823",
+        "title": "Not yet."
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/7\/72\/Vo_dragon_knight_dragon_notyet_04.mp3\/revision\/latest?cb=20201010220613",
+        "isArcane": true,
+        "title": "Not yet."
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/d\/df\/Vo_dragon_knight_drag_notyet_05.mp3\/revision\/latest?cb=20201010215825",
+        "title": "I'm not ready."
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/7\/75\/Vo_dragon_knight_dragon_notyet_05.mp3\/revision\/latest?cb=20201010220616",
+        "isArcane": true,
+        "title": "I'm not ready."
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/9\/94\/Vo_dragon_knight_drag_notyet_06.mp3\/revision\/latest?cb=20201010215827",
+        "title": "It's not time yet."
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/d\/d4\/Vo_dragon_knight_dragon_notyet_06.mp3\/revision\/latest?cb=20201010220618",
+        "isArcane": true,
+        "title": "It's not time yet."
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/5\/50\/Vo_dragon_knight_drag_notyet_07.mp3\/revision\/latest?cb=20201010215829",
+        "title": "Not yet."
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/0\/0d\/Vo_dragon_knight_dragon_notyet_07.mp3\/revision\/latest?cb=20201010220620",
+        "isArcane": true,
+        "title": "Not yet."
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/b\/bc\/Vo_dragon_knight_drag_notyet_08.mp3\/revision\/latest?cb=20201010215831",
+        "title": "I'm not ready."
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/3\/33\/Vo_dragon_knight_dragon_notyet_08.mp3\/revision\/latest?cb=20201010220622",
+        "isArcane": true,
+        "title": "I'm not ready."
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/a\/a7\/Vo_dragon_knight_drag_notyet_09.mp3\/revision\/latest?cb=20201010215832",
+        "title": "It's not time yet!"
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/d\/d2\/Vo_dragon_knight_dragon_notyet_09.mp3\/revision\/latest?cb=20201010220624",
+        "isArcane": true,
+        "title": "It's not time yet!"
+      }
+    ],
+    "category": "Ability on cooldown"
+  },
+  {
+    "responses": [
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/0\/01\/Vo_dragon_knight_drag_nomana_01.mp3\/revision\/latest?cb=20201010215802",
+        "title": "Out of mana."
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/5\/5c\/Vo_dragon_knight_dragon_nomana_01.mp3\/revision\/latest?cb=20201010220541",
+        "isArcane": true,
+        "title": "Out of mana."
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/c\/cc\/Vo_dragon_knight_drag_nomana_02.mp3\/revision\/latest?cb=20201010215803",
+        "title": "No mana."
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/6\/63\/Vo_dragon_knight_dragon_nomana_02.mp3\/revision\/latest?cb=20201010220543",
+        "isArcane": true,
+        "title": "No mana."
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/e\/e7\/Vo_dragon_knight_drag_nomana_03.mp3\/revision\/latest?cb=20201010215805",
+        "title": "Not enough mana."
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/e\/e1\/Vo_dragon_knight_dragon_nomana_03.mp3\/revision\/latest?cb=20201010220546",
+        "isArcane": true,
+        "title": "Not enough mana."
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/f\/fd\/Vo_dragon_knight_drag_nomana_04.mp3\/revision\/latest?cb=20201010215807",
+        "title": "Out of mana."
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/3\/3b\/Vo_dragon_knight_dragon_nomana_04.mp3\/revision\/latest?cb=20201010220549",
+        "isArcane": true,
+        "title": "Out of mana."
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/8\/80\/Vo_dragon_knight_drag_nomana_05.mp3\/revision\/latest?cb=20201010215809",
+        "title": "No mana."
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/0\/04\/Vo_dragon_knight_dragon_nomana_05.mp3\/revision\/latest?cb=20201010220552",
+        "isArcane": true,
+        "title": "No mana."
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/0\/0d\/Vo_dragon_knight_drag_nomana_06.mp3\/revision\/latest?cb=20201010215811",
+        "title": "Not enough mana."
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/1\/12\/Vo_dragon_knight_dragon_nomana_06.mp3\/revision\/latest?cb=20201010220554",
+        "isArcane": true,
+        "title": "Not enough mana."
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/1\/16\/Vo_dragon_knight_drag_nomana_07.mp3\/revision\/latest?cb=20201010215812",
+        "title": "Out of mana."
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/1\/18\/Vo_dragon_knight_dragon_nomana_07.mp3\/revision\/latest?cb=20201010220557",
+        "isArcane": true,
+        "title": "Out of mana."
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/6\/6d\/Vo_dragon_knight_drag_nomana_08.mp3\/revision\/latest?cb=20201010215814",
+        "title": "No mana!"
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/7\/7a\/Vo_dragon_knight_dragon_nomana_08.mp3\/revision\/latest?cb=20201010220600",
+        "isArcane": true,
+        "title": "No mana!"
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/3\/35\/Vo_dragon_knight_drag_nomana_09.mp3\/revision\/latest?cb=20201010215816",
+        "title": "Not enough mana."
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/d\/d1\/Vo_dragon_knight_dragon_nomana_09.mp3\/revision\/latest?cb=20201010220602",
+        "isArcane": true,
+        "title": "Not enough mana."
+      }
+    ],
+    "category": "Not enough mana"
+  },
+  {
+    "responses": [
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/7\/71\/Vo_dragon_knight_drag_pain_01.mp3\/revision\/latest?cb=20201010215834",
+        "title": "Ugh."
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/8\/84\/Vo_dragon_knight_dragon_pain_01.mp3\/revision\/latest?cb=20201010220626",
+        "isArcane": true,
+        "title": "Ugh."
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/3\/30\/Vo_dragon_knight_drag_pain_02.mp3\/revision\/latest?cb=20201010215835",
+        "title": "ehg."
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/9\/9b\/Vo_dragon_knight_dragon_pain_02.mp3\/revision\/latest?cb=20201010220628",
+        "isArcane": true,
+        "title": "ehg."
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/d\/da\/Vo_dragon_knight_drag_pain_03.mp3\/revision\/latest?cb=20201010215837",
+        "title": "Egh."
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/0\/06\/Vo_dragon_knight_dragon_pain_03.mp3\/revision\/latest?cb=20201010220631",
+        "isArcane": true,
+        "title": "Egh."
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/c\/c6\/Vo_dragon_knight_drag_pain_04.mp3\/revision\/latest?cb=20201010215839",
+        "title": "Eheh."
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/0\/05\/Vo_dragon_knight_dragon_pain_04.mp3\/revision\/latest?cb=20201010220633",
+        "isArcane": true,
+        "title": "Eheh."
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/4\/4e\/Vo_dragon_knight_drag_pain_05.mp3\/revision\/latest?cb=20201010215840",
+        "title": "Eagheh."
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/7\/7f\/Vo_dragon_knight_dragon_pain_05.mp3\/revision\/latest?cb=20201010220636",
+        "isArcane": true,
+        "title": "Eagheh."
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/d\/dc\/Vo_dragon_knight_drag_pain_06.mp3\/revision\/latest?cb=20201010215842",
+        "title": "Bphff."
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/6\/67\/Vo_dragon_knight_dragon_pain_06.mp3\/revision\/latest?cb=20201010220638",
+        "isArcane": true,
+        "title": "Bphff."
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/7\/76\/Vo_dragon_knight_drag_pain_07.mp3\/revision\/latest?cb=20201010215843",
+        "title": "Agheh."
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/f\/f6\/Vo_dragon_knight_dragon_pain_07.mp3\/revision\/latest?cb=20201010220641",
+        "isArcane": true,
+        "title": "Agheh."
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/0\/08\/Vo_dragon_knight_drag_pain_08.mp3\/revision\/latest?cb=20201010215845",
+        "title": "Agh."
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/0\/01\/Vo_dragon_knight_dragon_pain_08.mp3\/revision\/latest?cb=20201010220644",
+        "isArcane": true,
+        "title": "Agh."
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/2\/2c\/Vo_dragon_knight_drag_underattack_01.mp3\/revision\/latest?cb=20201010215943",
+        "title": "I'm under attack!"
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/d\/dc\/Vo_dragon_knight_dragon_underattack_01.mp3\/revision\/latest?cb=20201010220809",
+        "isArcane": true,
+        "title": "I'm under attack!"
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/1\/1c\/Vo_dragon_knight_drag_underattack_02.mp3\/revision\/latest?cb=20201010215945",
+        "title": "Requesting reinforcements."
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/0\/0e\/Vo_dragon_knight_dragon_underattack_02.mp3\/revision\/latest?cb=20201010220812",
+        "isArcane": true,
+        "title": "Requesting reinforcements."
+      }
+    ],
+    "category": "Taking damage"
+  },
+  {
+    "responses": [
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/f\/f7\/Vo_dragon_knight_drag_rare_01.mp3\/revision\/latest?cb=20201010215852",
+        "title": "Never make a deal with a dragon, unless you're prepared to keep your end of it."
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/d\/d3\/Vo_dragon_knight_dragon_rare_01.mp3\/revision\/latest?cb=20201010220655",
+        "isArcane": true,
+        "title": "Never make a deal with a dragon, unless you're prepared to keep your end of it."
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/0\/0f\/Vo_dragon_knight_drag_rare_02.mp3\/revision\/latest?cb=20201010215854",
+        "title": "The dragon Slyrak sleeps within this armor, and the knight within the Dragon waits. Beware you do not wake them both."
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/9\/95\/Vo_dragon_knight_dragon_rare_02.mp3\/revision\/latest?cb=20201010220657",
+        "isArcane": true,
+        "title": "The dragon Slyrak sleeps within this armor, and the knight within the Dragon waits. Beware you do not wake them both."
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/0\/05\/Vo_dragon_knight_drag_rare_03.mp3\/revision\/latest?cb=20201010215856",
+        "title": "The wisdom of the Eldwurms, fused with the valor of the ageless knight: this is the source of my nobility."
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/6\/6d\/Vo_dragon_knight_dragon_rare_03.mp3\/revision\/latest?cb=20201010220700",
+        "isArcane": true,
+        "title": "The wisdom of the Eldwurms, fused with the valor of the ageless knight: this is the source of my nobility."
+      }
+    ],
+    "category": "Selecting"
+  },
+  {
+    "responses": [
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/6\/6a\/Vo_dragon_knight_drag_thanks_01.mp3\/revision\/latest?cb=20201010215937",
+        "title": "Thanks!"
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/9\/9b\/Vo_dragon_knight_dragon_thanks_01.mp3\/revision\/latest?cb=20201010220802",
+        "isArcane": true,
+        "title": "Thanks!"
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/e\/eb\/Vo_dragon_knight_drag_thanks_02.mp3\/revision\/latest?cb=20201010215940",
+        "title": "With thanks."
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/6\/6a\/Vo_dragon_knight_dragon_thanks_02.mp3\/revision\/latest?cb=20201010220804",
+        "isArcane": true,
+        "title": "With thanks."
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/c\/c6\/Vo_dragon_knight_drag_thanks_03.mp3\/revision\/latest?cb=20201010215942",
+        "title": "My gratitude."
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/1\/1f\/Vo_dragon_knight_dragon_thanks_03.mp3\/revision\/latest?cb=20201010220807",
+        "isArcane": true,
+        "title": "My gratitude."
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/9\/90\/Vo_dragon_knight_drag_laugh_01.mp3\/revision\/latest?cb=20201010215632",
+        "title": "Heh huh heh heh huh heh hah."
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/d\/d9\/Vo_dragon_knight_dragon_laugh_01.mp3\/revision\/latest?cb=20201010220414",
+        "isArcane": true,
+        "title": "Heh huh heh heh huh heh hah."
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/f\/fe\/Vo_dragon_knight_drag_laugh_02.mp3\/revision\/latest?cb=20201010215635",
+        "title": "Heuh huh huh huh heh heh huh heh hah heh heh."
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/9\/91\/Vo_dragon_knight_dragon_laugh_02.mp3\/revision\/latest?cb=20201010220417",
+        "isArcane": true,
+        "title": "Heuh huh huh huh heh heh huh heh hah heh heh."
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/5\/5c\/Vo_dragon_knight_drag_laugh_03.mp3\/revision\/latest?cb=20201010215637",
+        "title": "Heuh huh huh huh heh heh."
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/6\/6f\/Vo_dragon_knight_dragon_laugh_03.mp3\/revision\/latest?cb=20201010220419",
+        "isArcane": true,
+        "title": "Heuh huh huh huh heh heh."
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/2\/23\/Vo_dragon_knight_drag_laugh_04.mp3\/revision\/latest?cb=20201010215640",
+        "title": "Heh huh heh heh huh heh hah."
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/4\/4f\/Vo_dragon_knight_dragon_laugh_04.mp3\/revision\/latest?cb=20201010220422",
+        "isArcane": true,
+        "title": "Heh huh heh heh huh heh hah."
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/3\/37\/Vo_dragon_knight_drag_laugh_05.mp3\/revision\/latest?cb=20201010215643",
+        "title": "Hah heh heh hah heh he."
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/4\/40\/Vo_dragon_knight_dragon_laugh_05.mp3\/revision\/latest?cb=20201010220424",
+        "isArcane": true,
+        "title": "Hah heh heh hah heh he."
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/0\/09\/Vo_dragon_knight_drag_laugh_06.mp3\/revision\/latest?cb=20201010215645",
+        "title": "Meh heh huh heh heh."
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/c\/ca\/Vo_dragon_knight_dragon_laugh_06.mp3\/revision\/latest?cb=20201010220427",
+        "isArcane": true,
+        "title": "Meh heh huh heh heh."
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/d\/d4\/Vo_dragon_knight_drag_laugh_07.mp3\/revision\/latest?cb=20201010215648",
+        "title": "Tehh, heh he huh heh heh huh."
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/6\/6e\/Vo_dragon_knight_dragon_laugh_07.mp3\/revision\/latest?cb=20201010220429",
+        "isArcane": true,
+        "title": "Tehh, heh he huh heh heh huh."
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/8\/85\/Vo_dragon_knight_drag_laugh_08.mp3\/revision\/latest?cb=20201010215651",
+        "title": "Tehheh hahha."
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/7\/76\/Vo_dragon_knight_dragon_laugh_08.mp3\/revision\/latest?cb=20201010220432",
+        "isArcane": true,
+        "title": "Tehheh hahha."
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/1\/1e\/Vo_dragon_knight_drag_laugh_09.mp3\/revision\/latest?cb=20201010215653",
+        "title": "Heehehah hehhehhah."
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/c\/cb\/Vo_dragon_knight_dragon_laugh_09.mp3\/revision\/latest?cb=20201010220434",
+        "isArcane": true,
+        "title": "Heehehah hehhehhah."
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/4\/47\/Vo_dragon_knight_drag_laugh_10.mp3\/revision\/latest?cb=20201010215656",
+        "title": "Heh uhuh."
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/1\/17\/Vo_dragon_knight_dragon_laugh_10.mp3\/revision\/latest?cb=20201010220437",
+        "isArcane": true,
+        "title": "Heh uhuh."
+      }
+    ],
+    "category": "Chat responses"
+  },
+  {
+    "responses": [
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/7\/7b\/Vo_dragon_knight_drag_win_01.mp3\/revision\/latest?cb=20201010215947",
+        "title": "Yes!"
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/6\/6d\/Vo_dragon_knight_dragon_win_01.mp3\/revision\/latest?cb=20201010220814",
+        "isArcane": true,
+        "title": "Yes!"
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/7\/7b\/Vo_dragon_knight_drag_win_02.mp3\/revision\/latest?cb=20201010215949",
+        "title": "Victory!"
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/e\/e1\/Vo_dragon_knight_dragon_win_02.mp3\/revision\/latest?cb=20201010220817",
+        "isArcane": true,
+        "title": "Victory!"
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/c\/c5\/Vo_dragon_knight_drag_win_03.mp3\/revision\/latest?cb=20201010215950",
+        "title": "The dragon will not be denied!"
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/4\/4e\/Vo_dragon_knight_dragon_win_03.mp3\/revision\/latest?cb=20201010220819",
+        "isArcane": true,
+        "title": "The dragon will not be denied!"
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/9\/91\/Vo_dragon_knight_drag_lose_01.mp3\/revision\/latest?cb=20201010215723",
+        "title": "No!"
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/4\/40\/Vo_dragon_knight_dragon_lose_01.mp3\/revision\/latest?cb=20201010220503",
+        "isArcane": true,
+        "title": "No!"
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/6\/61\/Vo_dragon_knight_drag_lose_02.mp3\/revision\/latest?cb=20201010215725",
+        "title": "Defffeated."
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/6\/69\/Vo_dragon_knight_dragon_lose_02.mp3\/revision\/latest?cb=20201010220506",
+        "isArcane": true,
+        "title": "Defffeated."
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/a\/ad\/Vo_dragon_knight_drag_lose_03.mp3\/revision\/latest?cb=20201010215728",
+        "title": "Snuffed out."
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/1\/13\/Vo_dragon_knight_dragon_lose_03.mp3\/revision\/latest?cb=20201010220508",
+        "isArcane": true,
+        "title": "Snuffed out."
+      }
+    ],
+    "category": "Match end"
+  },
+  {
+    "responses": [
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/7\/78\/Vo_dragon_knight_drag_happy_05.mp3\/revision\/latest?cb=20201010215457",
+        "title": "Heh heheheh."
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/b\/bb\/Vo_dragon_knight_dragon_happy_05.mp3\/revision\/latest?cb=20201010220245",
+        "isArcane": true,
+        "title": "Heh heheheh."
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/6\/6f\/Vo_dragon_knight_dragon_laugh_03.mp3\/revision\/latest?cb=20201010220419",
+        "title": "Heuh huh huh huh heh heh."
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/5\/5c\/Vo_dragon_knight_drag_laugh_03.mp3\/revision\/latest?cb=20201010215637",
+        "isArcane": true,
+        "title": "Heuh huh huh huh heh heh."
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/3\/37\/Vo_dragon_knight_drag_laugh_05.mp3\/revision\/latest?cb=20201010215643",
+        "title": "Hah heh heh hah heh he."
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/4\/40\/Vo_dragon_knight_dragon_laugh_05.mp3\/revision\/latest?cb=20201010220424",
+        "isArcane": true,
+        "title": "Hah heh heh hah heh he."
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/2\/23\/Vo_dragon_knight_drag_laugh_04.mp3\/revision\/latest?cb=20201010215640",
+        "title": "Heh huh heh heh huh heh hah."
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/4\/4f\/Vo_dragon_knight_dragon_laugh_04.mp3\/revision\/latest?cb=20201010220422",
+        "isArcane": true,
+        "title": "Heh huh heh heh huh heh hah."
+      }
+    ],
+    "category": "Cosmetic item drop"
+  },
+  {
+    "responses": [
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/2\/21\/Vo_dragon_knight_drag_ability_failure_01.mp3\/revision\/latest?cb=20201010220834",
+        "title": "Fails!"
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/6\/6b\/Vo_dragon_knight_dragon_ability_failure_01.mp3\/revision\/latest?cb=20201010220005",
+        "isArcane": true,
+        "title": "Fails!"
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/e\/eb\/Vo_dragon_knight_drag_ability_failure_02.mp3\/revision\/latest?cb=20201010215223",
+        "title": "Ahhh."
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/9\/9f\/Vo_dragon_knight_dragon_ability_failure_02.mp3\/revision\/latest?cb=20201010220007",
+        "isArcane": true,
+        "title": "Ahhh."
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/a\/ad\/Vo_dragon_knight_drag_ability_failure_03.mp3\/revision\/latest?cb=20201010215225",
+        "title": "Ahhhhh."
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/0\/01\/Vo_dragon_knight_dragon_ability_failure_03.mp3\/revision\/latest?cb=20201010220010",
+        "isArcane": true,
+        "title": "Ahhhhh."
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/4\/4c\/Vo_dragon_knight_drag_shitwiz_01.mp3\/revision\/latest?cb=20201010215923",
+        "title": "Shitty wizard!"
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/4\/40\/Vo_dragon_knight_dragon_shitwiz_01.mp3\/revision\/latest?cb=20201010220741",
+        "isArcane": true,
+        "title": "Shitty wizard!"
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/5\/5b\/Vo_dragon_knight_drag_crumwiz_01.mp3\/revision\/latest?cb=20201010215345",
+        "title": "Crummy wizard!"
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/f\/fd\/Vo_dragon_knight_dragon_crumwiz_01.mp3\/revision\/latest?cb=20201010220127",
+        "isArcane": true,
+        "title": "Crummy wizard!"
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/2\/24\/Vo_dragon_knight_drag_anger_01.mp3\/revision\/latest?cb=20201010215229",
+        "title": "Haehhhh."
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/3\/37\/Vo_dragon_knight_dragon_anger_01.mp3\/revision\/latest?cb=20201010220015",
+        "isArcane": true,
+        "title": "Haehhhh."
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/e\/e6\/Vo_dragon_knight_drag_anger_02.mp3\/revision\/latest?cb=20201010215232",
+        "title": "Haerrrh."
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/5\/5c\/Vo_dragon_knight_dragon_anger_02.mp3\/revision\/latest?cb=20201010220017",
+        "isArcane": true,
+        "title": "Haerrrh."
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/5\/5c\/Vo_dragon_knight_drag_anger_03.mp3\/revision\/latest?cb=20201010215235",
+        "title": "Braerr."
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/0\/0c\/Vo_dragon_knight_dragon_anger_03.mp3\/revision\/latest?cb=20201010220020",
+        "isArcane": true,
+        "title": "Braerr."
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/8\/81\/Vo_dragon_knight_drag_anger_04.mp3\/revision\/latest?cb=20201010215238",
+        "title": "Bahhh!"
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/3\/31\/Vo_dragon_knight_dragon_anger_04.mp3\/revision\/latest?cb=20201010220022",
+        "isArcane": true,
+        "title": "Bahhh!"
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/9\/95\/Vo_dragon_knight_drag_anger_05.mp3\/revision\/latest?cb=20201010215241",
+        "title": "Ahhh."
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/c\/c6\/Vo_dragon_knight_dragon_anger_05.mp3\/revision\/latest?cb=20201010220025",
+        "isArcane": true,
+        "title": "Ahhh."
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/f\/f0\/Vo_dragon_knight_dragon_anger_06.mp3\/revision\/latest?cb=20201010220028",
+        "title": "Ohweh."
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/5\/59\/Vo_dragon_knight_drag_happy_01.mp3\/revision\/latest?cb=20201010215448",
+        "title": "Ahuehhh"
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/a\/a1\/Vo_dragon_knight_dragon_happy_01.mp3\/revision\/latest?cb=20201010220235",
+        "isArcane": true,
+        "title": "Ahuehhh"
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/8\/8f\/Vo_dragon_knight_drag_happy_02.mp3\/revision\/latest?cb=20201010215450",
+        "title": "Ehuhhh."
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/9\/96\/Vo_dragon_knight_dragon_happy_02.mp3\/revision\/latest?cb=20201010220238",
+        "isArcane": true,
+        "title": "Ehuhhh."
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/2\/2d\/Vo_dragon_knight_drag_happy_03.mp3\/revision\/latest?cb=20201010215453",
+        "title": "Ughheh."
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/e\/e0\/Vo_dragon_knight_dragon_happy_03.mp3\/revision\/latest?cb=20201010220240",
+        "isArcane": true,
+        "title": "Ughheh."
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/f\/f4\/Vo_dragon_knight_drag_happy_04.mp3\/revision\/latest?cb=20201010215454",
+        "title": "Huh."
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/2\/25\/Vo_dragon_knight_dragon_happy_04.mp3\/revision\/latest?cb=20201010220243",
+        "isArcane": true,
+        "title": "Huh."
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/a\/af\/Vo_dragon_knight_drag_dragonsound_01.mp3\/revision\/latest?cb=20201010215443",
+        "title": "Uhhh."
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/5\/58\/Vo_dragon_knight_dragon_dragonsound_01.mp3\/revision\/latest?cb=20201010220228",
+        "isArcane": true,
+        "title": "Uhhh."
+      }
+    ],
+    "category": "Misc"
+  }
+]

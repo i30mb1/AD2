@@ -1,0 +1,2172 @@
+[
+  {
+    "responses": [
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_ru_gamepedia\/images\/1\/17\/DK_drag_spawn_01_ru.mp3\/revision\/latest?cb=20170410114948",
+        "title": "Dragon Knight."
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_ru_gamepedia\/images\/f\/f6\/DK_drag_spawn_02_ru.mp3\/revision\/latest?cb=20170410114953",
+        "title": "Дракон идёт на войну."
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_ru_gamepedia\/images\/e\/e3\/DK_drag_spawn_03_ru.mp3\/revision\/latest?cb=20170410114958",
+        "title": "Клинок Дракона жаждет крови."
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_ru_gamepedia\/images\/e\/ea\/DK_drag_spawn_04_ru.mp3\/revision\/latest?cb=20170410115003",
+        "title": "Рыцарь в броне дракона."
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_ru_gamepedia\/images\/b\/b4\/DK_drag_battlebegins_01_ru.mp3\/revision\/latest?cb=20170410113620",
+        "title": "Защищайтесь."
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_ru_gamepedia\/images\/a\/aa\/DK_drag_move_04_ru.mp3\/revision\/latest?cb=20170410114453",
+        "title": "К бою готов."
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_ru_gamepedia\/images\/f\/f4\/DK_drag_move_09_ru.mp3\/revision\/latest?cb=20170410114518",
+        "title": "Дракон пробуждается."
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_ru_gamepedia\/images\/0\/0b\/DK_drag_move_10_ru.mp3\/revision\/latest?cb=20170410114523",
+        "title": "Кто звал Dragon Knight?"
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_ru_gamepedia\/images\/1\/10\/DK_drag_move_11_ru.mp3\/revision\/latest?cb=20170410114528",
+        "title": "Дракон идёт в бой."
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_ru_gamepedia\/images\/8\/85\/DK_drag_attack_02_ru.mp3\/revision\/latest?cb=20170410113538",
+        "title": "Во имя древних."
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_ru_gamepedia\/images\/a\/aa\/DK_drag_attack_06_ru.mp3\/revision\/latest?cb=20170410113556",
+        "title": "Столкнёмся щитами."
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_ru_gamepedia\/images\/0\/0d\/DK_drag_level_05_ru.mp3\/revision\/latest?cb=20170410114359",
+        "title": "У кого сила, тот и победит."
+      }
+    ],
+    "category": "Снаряжение"
+  },
+  {
+    "responses": [
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_ru_gamepedia\/images\/1\/17\/DK_drag_spawn_01_ru.mp3\/revision\/latest?cb=20170410114948",
+        "title": "Dragon Knight."
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_ru_gamepedia\/images\/9\/90\/DK_drag_anger_06_ru.mp3\/revision\/latest?cb=20170410113524",
+        "title": "Охх."
+      }
+    ],
+    "category": "Стадия планирования"
+  },
+  {
+    "responses": [
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_ru_gamepedia\/images\/1\/17\/DK_drag_spawn_01_ru.mp3\/revision\/latest?cb=20170410114948",
+        "title": "Dragon Knight."
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_ru_gamepedia\/images\/f\/f1\/DK_dragon_spawn_01_ru.mp3\/revision\/latest?cb=20170410120635",
+        "isArcane": true,
+        "title": "Dragon Knight."
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_ru_gamepedia\/images\/f\/f6\/DK_drag_spawn_02_ru.mp3\/revision\/latest?cb=20170410114953",
+        "title": "Дракон идёт на войну."
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_ru_gamepedia\/images\/b\/b6\/DK_dragon_spawn_02_ru.mp3\/revision\/latest?cb=20170410120640",
+        "isArcane": true,
+        "title": "Дракон идёт на войну."
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_ru_gamepedia\/images\/e\/e3\/DK_drag_spawn_03_ru.mp3\/revision\/latest?cb=20170410114958",
+        "title": "Клинок Дракона жаждет крови."
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_ru_gamepedia\/images\/e\/ea\/DK_dragon_spawn_03_ru.mp3\/revision\/latest?cb=20170410120645",
+        "isArcane": true,
+        "title": "Клинок Дракона жаждет крови."
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_ru_gamepedia\/images\/e\/ea\/DK_drag_spawn_04_ru.mp3\/revision\/latest?cb=20170410115003",
+        "title": "Рыцарь в броне дракона."
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_ru_gamepedia\/images\/a\/ab\/DK_dragon_spawn_04_ru.mp3\/revision\/latest?cb=20170410120649",
+        "isArcane": true,
+        "title": "Рыцарь в броне дракона."
+      }
+    ],
+    "category": "Появление"
+  },
+  {
+    "responses": [
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_ru_gamepedia\/images\/1\/1d\/DK_drag_inthebag_02_ru.mp3\/revision\/latest?cb=20170410114026",
+        "title": "Друзья, да дело в шляпе."
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_ru_gamepedia\/images\/0\/0a\/DK_dragon_inthebag_02_ru.mp3\/revision\/latest?cb=20170410115726",
+        "isArcane": true,
+        "title": "Друзья, да дело в шляпе."
+      }
+    ],
+    "category": "Насмешка"
+  },
+  {
+    "responses": [
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_ru_gamepedia\/images\/b\/b4\/DK_drag_battlebegins_01_ru.mp3\/revision\/latest?cb=20170410113620",
+        "title": "Защищайтесь."
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_ru_gamepedia\/images\/8\/87\/DK_dragon_battlebegins_01_ru.mp3\/revision\/latest?cb=20170410115322",
+        "isArcane": true,
+        "title": "Защищайтесь."
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_ru_gamepedia\/images\/1\/13\/DK_drag_battlebegins_02_ru.mp3\/revision\/latest?cb=20170410113625",
+        "title": "Да начнётся турнир."
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_ru_gamepedia\/images\/f\/fa\/DK_dragon_battlebegins_02_ru.mp3\/revision\/latest?cb=20170410115327",
+        "isArcane": true,
+        "title": "Да начнётся турнир."
+      }
+    ],
+    "category": "Начало битвы"
+  },
+  {
+    "responses": [
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_ru_gamepedia\/images\/0\/05\/DK_drag_move_01_ru.mp3\/revision\/latest?cb=20170410114438",
+        "title": "Да!"
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_ru_gamepedia\/images\/2\/28\/DK_dragon_move_01_ru.mp3\/revision\/latest?cb=20170410120141",
+        "isArcane": true,
+        "title": "Да!"
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_ru_gamepedia\/images\/5\/50\/DK_drag_move_02_ru.mp3\/revision\/latest?cb=20170410114443",
+        "isArcane": true,
+        "title": "Да!"
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_ru_gamepedia\/images\/1\/19\/DK_dragon_move_02_ru.mp3\/revision\/latest?cb=20170410120145",
+        "isArcane": true,
+        "title": "Да!"
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_ru_gamepedia\/images\/8\/82\/DK_drag_move_03_ru.mp3\/revision\/latest?cb=20170410114448",
+        "title": "Вперёд."
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_ru_gamepedia\/images\/1\/1c\/DK_dragon_move_03_ru.mp3\/revision\/latest?cb=20170410120150",
+        "isArcane": true,
+        "title": "Вперёд."
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_ru_gamepedia\/images\/a\/aa\/DK_drag_move_04_ru.mp3\/revision\/latest?cb=20170410114453",
+        "title": "К бою готов."
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_ru_gamepedia\/images\/7\/76\/DK_dragon_move_04_ru.mp3\/revision\/latest?cb=20170410120155",
+        "isArcane": true,
+        "title": "К бою готов."
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_ru_gamepedia\/images\/8\/85\/DK_drag_move_05_ru.mp3\/revision\/latest?cb=20170410114458",
+        "title": "Разумеется."
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_ru_gamepedia\/images\/f\/fa\/DK_dragon_move_05_ru.mp3\/revision\/latest?cb=20170410120159",
+        "isArcane": true,
+        "title": "Разумеется."
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_ru_gamepedia\/images\/7\/7e\/DK_drag_move_06_ru.mp3\/revision\/latest?cb=20170410114503",
+        "title": "И без коня управлюсь."
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_ru_gamepedia\/images\/8\/8c\/DK_dragon_move_06_ru.mp3\/revision\/latest?cb=20170410120204",
+        "isArcane": true,
+        "title": "И без коня управлюсь."
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_ru_gamepedia\/images\/3\/34\/DK_drag_move_07_ru.mp3\/revision\/latest?cb=20170410114508",
+        "title": "Двигаюсь."
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_ru_gamepedia\/images\/f\/ff\/DK_dragon_move_07_ru.mp3\/revision\/latest?cb=20170410120211",
+        "isArcane": true,
+        "title": "Двигаюсь."
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_ru_gamepedia\/images\/5\/5e\/DK_drag_move_08_ru.mp3\/revision\/latest?cb=20170410114513",
+        "title": "Во имя клинка."
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_ru_gamepedia\/images\/c\/c9\/DK_dragon_move_08_ru.mp3\/revision\/latest?cb=20170410120216",
+        "isArcane": true,
+        "title": "Во имя клинка."
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_ru_gamepedia\/images\/f\/f4\/DK_drag_move_09_ru.mp3\/revision\/latest?cb=20170410114518",
+        "title": "Дракон пробуждается."
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_ru_gamepedia\/images\/3\/30\/DK_dragon_move_09_ru.mp3\/revision\/latest?cb=20170410120221",
+        "isArcane": true,
+        "title": "Дракон пробуждается."
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_ru_gamepedia\/images\/0\/0b\/DK_drag_move_10_ru.mp3\/revision\/latest?cb=20170410114523",
+        "title": "Кто звал Dragon Knight?"
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_ru_gamepedia\/images\/6\/65\/DK_dragon_move_10_ru.mp3\/revision\/latest?cb=20170410120225",
+        "isArcane": true,
+        "title": "Кто звал Dragon Knight?"
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_ru_gamepedia\/images\/1\/10\/DK_drag_move_11_ru.mp3\/revision\/latest?cb=20170410114528",
+        "title": "Дракон идёт в бой."
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_ru_gamepedia\/images\/f\/f6\/DK_dragon_move_11_ru.mp3\/revision\/latest?cb=20170410120231",
+        "isArcane": true,
+        "title": "Дракон идёт в бой."
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_ru_gamepedia\/images\/0\/08\/DK_drag_move_12_ru.mp3\/revision\/latest?cb=20170410114533",
+        "title": "Быстрее."
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_ru_gamepedia\/images\/b\/b8\/DK_dragon_move_12_ru.mp3\/revision\/latest?cb=20170410120236",
+        "isArcane": true,
+        "title": "Быстрее."
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_ru_gamepedia\/images\/b\/b8\/DK_dragon_ability_eldrag_02_ru.mp3\/revision\/latest?cb=20170410115109",
+        "title": "Крылья в ночи."
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_ru_gamepedia\/images\/1\/1e\/DK_drag_ability_eldrag_02_ru.mp3\/revision\/latest?cb=20170410113417",
+        "isArcane": true,
+        "title": "Крылья в ночи."
+      }
+    ],
+    "category": "Передвижение"
+  },
+  {
+    "responses": [
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_ru_gamepedia\/images\/3\/35\/DK_drag_attack_01_ru.mp3\/revision\/latest?cb=20170410113533",
+        "title": "В атаку!"
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_ru_gamepedia\/images\/7\/74\/DK_dragon_attack_01_ru.mp3\/revision\/latest?cb=20170410115231",
+        "isArcane": true,
+        "title": "В атаку!"
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_ru_gamepedia\/images\/8\/85\/DK_drag_attack_02_ru.mp3\/revision\/latest?cb=20170410113538",
+        "title": "Во имя древних."
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_ru_gamepedia\/images\/2\/2f\/DK_dragon_attack_02_ru.mp3\/revision\/latest?cb=20170410115236",
+        "isArcane": true,
+        "title": "Во имя древних."
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_ru_gamepedia\/images\/7\/79\/DK_drag_attack_03_ru.mp3\/revision\/latest?cb=20170410113542",
+        "title": "Я выщерблю тебе череп."
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_ru_gamepedia\/images\/3\/3d\/DK_dragon_attack_03_ru.mp3\/revision\/latest?cb=20170410115241",
+        "isArcane": true,
+        "title": "Я выщерблю тебе череп."
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_ru_gamepedia\/images\/b\/b7\/DK_drag_attack_04_ru.mp3\/revision\/latest?cb=20170410113547",
+        "title": "Дракон испепелит тебя."
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_ru_gamepedia\/images\/c\/c1\/DK_dragon_attack_04_ru.mp3\/revision\/latest?cb=20170410115246",
+        "isArcane": true,
+        "title": "Дракон испепелит тебя."
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_ru_gamepedia\/images\/7\/7e\/DK_drag_attack_05_ru.mp3\/revision\/latest?cb=20170410113552",
+        "title": "Скрестим клинки."
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_ru_gamepedia\/images\/c\/c3\/DK_dragon_attack_05_ru.mp3\/revision\/latest?cb=20170410115251",
+        "isArcane": true,
+        "title": "Скрестим клинки."
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_ru_gamepedia\/images\/a\/aa\/DK_drag_attack_06_ru.mp3\/revision\/latest?cb=20170410113556",
+        "title": "Столкнёмся щитами."
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_ru_gamepedia\/images\/4\/47\/DK_dragon_attack_06_ru.mp3\/revision\/latest?cb=20170410115256",
+        "isArcane": true,
+        "title": "Столкнёмся щитами."
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_ru_gamepedia\/images\/5\/50\/DK_drag_attack_07_ru.mp3\/revision\/latest?cb=20170410113601",
+        "title": "Драконий Клинок рубит глубоко!"
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_ru_gamepedia\/images\/b\/b2\/DK_dragon_attack_07_ru.mp3\/revision\/latest?cb=20170410115301",
+        "isArcane": true,
+        "title": "Драконий Клинок рубит глубоко!"
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_ru_gamepedia\/images\/c\/c1\/DK_drag_attack_08_ru.mp3\/revision\/latest?cb=20170410113606",
+        "title": "Во имя щита Слайрака!"
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_ru_gamepedia\/images\/5\/55\/DK_dragon_attack_08_ru.mp3\/revision\/latest?cb=20170410115306",
+        "isArcane": true,
+        "title": "Во имя щита Слайрака!"
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_ru_gamepedia\/images\/4\/49\/DK_drag_attack_09_ru.mp3\/revision\/latest?cb=20170410113611",
+        "title": "Дракон!"
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_ru_gamepedia\/images\/6\/69\/DK_dragon_attack_09_ru.mp3\/revision\/latest?cb=20170410115311",
+        "isArcane": true,
+        "title": "Дракон!"
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_ru_gamepedia\/images\/4\/46\/DK_drag_attack_10_ru.mp3\/revision\/latest?cb=20170410113615",
+        "title": "Будет очень больно."
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_ru_gamepedia\/images\/3\/33\/DK_dragon_attack_10_ru.mp3\/revision\/latest?cb=20170410115316",
+        "isArcane": true,
+        "title": "Будет очень больно."
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_ru_gamepedia\/images\/4\/47\/DK_dragon_ability_eldrag_01_ru.mp3\/revision\/latest?cb=20170410115104",
+        "title": "На крыльях ярости."
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_ru_gamepedia\/images\/7\/7a\/DK_drag_ability_eldrag_01_ru.mp3\/revision\/latest?cb=20170410113412",
+        "isArcane": true,
+        "title": "На крыльях ярости."
+      }
+    ],
+    "category": "Атака"
+  },
+  {
+    "responses": [
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_ru_gamepedia\/images\/b\/b9\/DK_drag_cast_01_ru.mp3\/revision\/latest?cb=20170410113658",
+        "title": "Твоя жизнь скоро оборвётся."
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_ru_gamepedia\/images\/2\/2e\/DK_dragon_cast_01_ru.mp3\/revision\/latest?cb=20170410115402",
+        "isArcane": true,
+        "title": "Твоя жизнь скоро оборвётся."
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_ru_gamepedia\/images\/a\/a0\/DK_drag_cast_02_ru.mp3\/revision\/latest?cb=20170410113703",
+        "title": "От дракона не спрячешься."
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_ru_gamepedia\/images\/e\/eb\/DK_dragon_cast_02_ru.mp3\/revision\/latest?cb=20170410115407",
+        "isArcane": true,
+        "title": "От дракона не спрячешься."
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_ru_gamepedia\/images\/3\/3f\/DK_drag_cast_03_ru.mp3\/revision\/latest?cb=20170410113708",
+        "title": "Твой конец уже близок."
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_ru_gamepedia\/images\/2\/28\/DK_dragon_cast_03_ru.mp3\/revision\/latest?cb=20170410115412",
+        "isArcane": true,
+        "title": "Твой конец уже близок."
+      }
+    ],
+    "category": "Использование заклинания"
+  },
+  {
+    "responses": [
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_ru_gamepedia\/images\/a\/ab\/DK_drag_ability_eldrag_04_ru.mp3\/revision\/latest?cb=20170410113426",
+        "title": "Мой внутренний дракон проснулся."
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_ru_gamepedia\/images\/a\/a9\/DK_dragon_ability_eldrag_04_ru.mp3\/revision\/latest?cb=20170410115120",
+        "isArcane": true,
+        "title": "Мой внутренний дракон проснулся."
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_ru_gamepedia\/images\/a\/ad\/DK_drag_ability_eldrag_05_ru.mp3\/revision\/latest?cb=20170410113431",
+        "title": "Мир сгорит в огне."
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_ru_gamepedia\/images\/e\/ef\/DK_dragon_ability_eldrag_05_ru.mp3\/revision\/latest?cb=20170410115125",
+        "isArcane": true,
+        "title": "Мир сгорит в огне."
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_ru_gamepedia\/images\/a\/a8\/DK_drag_ability_eldrag_06_ru.mp3\/revision\/latest?cb=20170410113435",
+        "title": "Сразись с рыцарем, сразись с драконом."
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_ru_gamepedia\/images\/3\/3d\/DK_dragon_ability_eldrag_06_ru.mp3\/revision\/latest?cb=20170410115130",
+        "isArcane": true,
+        "title": "Сразись с рыцарем, сразись с драконом."
+      }
+    ],
+    "category": "Способности"
+  },
+  {
+    "responses": [
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_ru_gamepedia\/images\/3\/3d\/DK_drag_level_01_ru.mp3\/revision\/latest?cb=20170410114339",
+        "title": "Я взлетаю всё выше."
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_ru_gamepedia\/images\/d\/d3\/DK_dragon_level_01_ru.mp3\/revision\/latest?cb=20170410120042",
+        "isArcane": true,
+        "title": "Я взлетаю всё выше."
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_ru_gamepedia\/images\/1\/19\/DK_drag_level_02_ru.mp3\/revision\/latest?cb=20170410114344",
+        "title": "Величайшая честь."
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_ru_gamepedia\/images\/c\/c1\/DK_dragon_level_02_ru.mp3\/revision\/latest?cb=20170410120047",
+        "isArcane": true,
+        "title": "Величайшая честь."
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_ru_gamepedia\/images\/e\/ea\/DK_drag_level_03_ru.mp3\/revision\/latest?cb=20170410114349",
+        "title": "Моя броня стала прочнее."
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_ru_gamepedia\/images\/f\/fc\/DK_dragon_level_03_ru.mp3\/revision\/latest?cb=20170410120052",
+        "isArcane": true,
+        "title": "Моя броня стала прочнее."
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_ru_gamepedia\/images\/2\/20\/DK_drag_level_04_ru.mp3\/revision\/latest?cb=20170410114354",
+        "title": "Я стал сильнее."
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_ru_gamepedia\/images\/f\/fb\/DK_dragon_level_04_ru.mp3\/revision\/latest?cb=20170410120057",
+        "isArcane": true,
+        "title": "Я стал сильнее."
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_ru_gamepedia\/images\/0\/0d\/DK_drag_level_05_ru.mp3\/revision\/latest?cb=20170410114359",
+        "title": "У кого сила, тот и победит."
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_ru_gamepedia\/images\/8\/87\/DK_dragon_level_05_ru.mp3\/revision\/latest?cb=20170410120101",
+        "isArcane": true,
+        "title": "У кого сила, тот и победит."
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_ru_gamepedia\/images\/d\/d7\/DK_drag_level_06_ru.mp3\/revision\/latest?cb=20170410114404",
+        "title": "Ха-ха-ха-ха-ха."
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_ru_gamepedia\/images\/3\/38\/DK_dragon_level_06_ru.mp3\/revision\/latest?cb=20170410120106",
+        "isArcane": true,
+        "title": "Ха-ха-ха-ха-ха."
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_ru_gamepedia\/images\/9\/92\/DK_drag_level_07_ru.mp3\/revision\/latest?cb=20170410114409",
+        "title": "Хе-хе-хе-хе-хе-хе-хе-хе-хе."
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_ru_gamepedia\/images\/0\/03\/DK_dragon_level_07_ru.mp3\/revision\/latest?cb=20170410120111",
+        "isArcane": true,
+        "title": "Хе-хе-хе-хе-хе-хе-хе-хе-хе."
+      }
+    ],
+    "category": "Получение уровня"
+  },
+  {
+    "responses": [
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_ru_gamepedia\/images\/2\/2e\/DK_drag_kill_01_ru.mp3\/revision\/latest?cb=20170410114051",
+        "title": "Кто с мечом придёт, тот от дракона погибнет."
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_ru_gamepedia\/images\/e\/e6\/DK_dragon_kill_01_ru.mp3\/revision\/latest?cb=20170410115751",
+        "isArcane": true,
+        "title": "Кто с мечом придёт, тот от дракона погибнет."
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_ru_gamepedia\/images\/6\/64\/DK_drag_kill_02_ru.mp3\/revision\/latest?cb=20170410114056",
+        "title": "Ты раздавлен."
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_ru_gamepedia\/images\/b\/bf\/DK_dragon_kill_02_ru.mp3\/revision\/latest?cb=20170410115756",
+        "isArcane": true,
+        "title": "Ты раздавлен."
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_ru_gamepedia\/images\/1\/11\/DK_drag_kill_03_ru.mp3\/revision\/latest?cb=20170410114101",
+        "title": "На корм дракону."
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_ru_gamepedia\/images\/3\/38\/DK_dragon_kill_03_ru.mp3\/revision\/latest?cb=20170410115801",
+        "isArcane": true,
+        "title": "На корм дракону."
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_ru_gamepedia\/images\/0\/09\/DK_drag_kill_04_ru.mp3\/revision\/latest?cb=20170410114108",
+        "title": "Тебя ждёт вечная ночь."
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_ru_gamepedia\/images\/f\/fa\/DK_dragon_kill_04_ru.mp3\/revision\/latest?cb=20170410115807",
+        "isArcane": true,
+        "title": "Тебя ждёт вечная ночь."
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_ru_gamepedia\/images\/5\/58\/DK_drag_kill_05_ru.mp3\/revision\/latest?cb=20170410114114",
+        "title": "Моё лицо - последнее, что ты увидишь."
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_ru_gamepedia\/images\/4\/46\/DK_dragon_kill_05_ru.mp3\/revision\/latest?cb=20170410115812",
+        "isArcane": true,
+        "title": "Моё лицо - последнее, что ты увидишь."
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_ru_gamepedia\/images\/2\/26\/DK_drag_kill_06_ru.mp3\/revision\/latest?cb=20170410114119",
+        "title": "Ты сражался с честью."
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_ru_gamepedia\/images\/6\/64\/DK_dragon_kill_06_ru.mp3\/revision\/latest?cb=20170410115817",
+        "isArcane": true,
+        "title": "Ты сражался с честью."
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_ru_gamepedia\/images\/5\/56\/DK_drag_kill_07_ru.mp3\/revision\/latest?cb=20170410114124",
+        "title": "Твои кости сгорят."
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_ru_gamepedia\/images\/b\/b6\/DK_dragon_kill_07_ru.mp3\/revision\/latest?cb=20170410115822",
+        "isArcane": true,
+        "title": "Твои кости сгорят."
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_ru_gamepedia\/images\/0\/07\/DK_drag_kill_08_ru.mp3\/revision\/latest?cb=20170410114129",
+        "title": "И пусть древние драконы даруют тебе покой."
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_ru_gamepedia\/images\/3\/33\/DK_dragon_kill_08_ru.mp3\/revision\/latest?cb=20170410115827",
+        "isArcane": true,
+        "title": "И пусть древние драконы даруют тебе покой."
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_ru_gamepedia\/images\/2\/29\/DK_drag_kill_09_ru.mp3\/revision\/latest?cb=20170410114134",
+        "title": "Достойная смерть."
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_ru_gamepedia\/images\/e\/e0\/DK_dragon_kill_09_ru.mp3\/revision\/latest?cb=20170410115832",
+        "isArcane": true,
+        "title": "Достойная смерть."
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_ru_gamepedia\/images\/0\/08\/DK_drag_kill_10_ru.mp3\/revision\/latest?cb=20170410114139",
+        "title": "Моя рука разила драконов и за меньшее."
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_ru_gamepedia\/images\/7\/76\/DK_dragon_kill_10_ru.mp3\/revision\/latest?cb=20170410115837",
+        "isArcane": true,
+        "title": "Моя рука разила драконов и за меньшее."
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_ru_gamepedia\/images\/2\/22\/DK_drag_kill_11_ru.mp3\/revision\/latest?cb=20170410114143",
+        "title": "Ты сражался и погиб с честью."
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_ru_gamepedia\/images\/0\/00\/DK_dragon_kill_11_ru.mp3\/revision\/latest?cb=20170410115842",
+        "isArcane": true,
+        "title": "Ты сражался и погиб с честью."
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_ru_gamepedia\/images\/3\/34\/DK_drag_kill_12_ru.mp3\/revision\/latest?cb=20170410114149",
+        "title": "Клинок Дракона отведал твоей крови."
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_ru_gamepedia\/images\/d\/da\/DK_dragon_kill_12_ru.mp3\/revision\/latest?cb=20170410115847",
+        "isArcane": true,
+        "title": "Клинок Дракона отведал твоей крови."
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_ru_gamepedia\/images\/e\/ea\/DK_drag_kill_13_ru.mp3\/revision\/latest?cb=20170410114154",
+        "title": "Ха-ха-ха."
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_ru_gamepedia\/images\/4\/4a\/DK_dragon_kill_13_ru.mp3\/revision\/latest?cb=20170410115852",
+        "isArcane": true,
+        "title": "Ха-ха-ха."
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_ru_gamepedia\/images\/6\/61\/DK_drag_laugh_01_ru.mp3\/revision\/latest?cb=20170410114248",
+        "title": "Ха-ха-ха-ха-ха-ха-ха-ха-ха-ха."
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_ru_gamepedia\/images\/7\/7b\/DK_dragon_laugh_01_ru.mp3\/revision\/latest?cb=20170410115951",
+        "isArcane": true,
+        "title": "Ха-ха-ха-ха-ха-ха-ха-ха-ха-ха."
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_ru_gamepedia\/images\/1\/19\/DK_drag_laugh_02_ru.mp3\/revision\/latest?cb=20170410114253",
+        "isArcane": true,
+        "title": "Ха-ха-ха-ха-ха-ха-ха-ха-ха-ха."
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_ru_gamepedia\/images\/9\/98\/DK_dragon_laugh_02_ru.mp3\/revision\/latest?cb=20170410115956",
+        "isArcane": true,
+        "title": "Ха-ха-ха-ха-ха-ха-ха-ха-ха-ха."
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_ru_gamepedia\/images\/d\/d6\/DK_drag_laugh_09_ru.mp3\/revision\/latest?cb=20170410114329",
+        "title": "Ха-ха-ха-ха-ха, ха-ха-ха."
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_ru_gamepedia\/images\/d\/d9\/DK_dragon_laugh_09_ru.mp3\/revision\/latest?cb=20170410120031",
+        "isArcane": true,
+        "title": "Ха-ха-ха-ха-ха, ха-ха-ха."
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_ru_gamepedia\/images\/9\/96\/DK_drag_laugh_10_ru.mp3\/revision\/latest?cb=20170410114334",
+        "title": "А-ха-ха-ха-ха."
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_ru_gamepedia\/images\/5\/5d\/DK_dragon_laugh_10_ru.mp3\/revision\/latest?cb=20170410120036",
+        "isArcane": true,
+        "title": "А-ха-ха-ха-ха."
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_ru_gamepedia\/images\/9\/9d\/DK_dragon_ability_eldrag_03_ru.mp3\/revision\/latest?cb=20170410115114",
+        "title": "Вот она - сущность дракона."
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_ru_gamepedia\/images\/5\/5f\/DK_drag_ability_eldrag_03_ru.mp3\/revision\/latest?cb=20170410113421",
+        "isArcane": true,
+        "title": "Вот она - сущность дракона."
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_ru_gamepedia\/images\/7\/73\/DK_drag_jakiro_01_ru.mp3\/revision\/latest?cb=20170410114041",
+        "title": "Я дракон лишь наполовину, но я всё равно лучше тебя, Jakiro.",
+        "icons": [
+          "heroes\/Jakiro\/minimap.png"
+        ]
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_ru_gamepedia\/images\/0\/0b\/DK_dragon_jakiro_01_ru.mp3\/revision\/latest?cb=20170410115741",
+        "isArcane": true,
+        "icons": [
+          "heroes\/Jakiro\/minimap.png"
+        ],
+        "title": "Я дракон лишь наполовину, но я всё равно лучше тебя, Jakiro."
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_ru_gamepedia\/images\/0\/0d\/DK_drag_lina_03_ru.mp3\/revision\/latest?cb=20170410114419",
+        "title": "Lina, да что ты знаешь о драконах?",
+        "icons": [
+          "heroes\/Lina\/minimap.png"
+        ]
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_ru_gamepedia\/images\/7\/74\/DK_dragon_lina_03_ru.mp3\/revision\/latest?cb=20170410120120",
+        "isArcane": true,
+        "icons": [
+          "heroes\/Lina\/minimap.png"
+        ],
+        "title": "Lina, да что ты знаешь о драконах?"
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_ru_gamepedia\/images\/1\/16\/DK_drag_lina_02_ru.mp3\/revision\/latest?cb=20170410114414",
+        "title": "Lina, это твоя кара за поимку драконов.",
+        "icons": [
+          "heroes\/Lina\/minimap.png"
+        ]
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_ru_gamepedia\/images\/c\/c2\/DK_dragon_lina_02_ru.mp3\/revision\/latest?cb=20170410120115",
+        "isArcane": true,
+        "icons": [
+          "heroes\/Lina\/minimap.png"
+        ],
+        "title": "Lina, это твоя кара за поимку драконов."
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_ru_gamepedia\/images\/9\/96\/DK_drag_sven_01_ru.mp3\/revision\/latest?cb=20170410115008",
+        "title": "Sven, тебе ещё многое стоит узнать об охоте на драконов.",
+        "icons": [
+          "heroes\/Sven\/minimap.png"
+        ]
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_ru_gamepedia\/images\/e\/e5\/DK_dragon_sven_01_ru.mp3\/revision\/latest?cb=20170410120654",
+        "isArcane": true,
+        "icons": [
+          "heroes\/Sven\/minimap.png"
+        ],
+        "title": "Sven, тебе ещё многое стоит узнать об охоте на драконов."
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_ru_gamepedia\/images\/0\/02\/DK_drag_sven_02_ru.mp3\/revision\/latest?cb=20170410115013",
+        "title": "Спокойной ночи, Sven. Точнее, беспокойной.",
+        "icons": [
+          "heroes\/Sven\/minimap.png"
+        ]
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_ru_gamepedia\/images\/7\/7e\/DK_dragon_sven_02_ru.mp3\/revision\/latest?cb=20170410120659",
+        "isArcane": true,
+        "icons": [
+          "heroes\/Sven\/minimap.png"
+        ],
+        "title": "Спокойной ночи, Sven. Точнее, беспокойной."
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_ru_gamepedia\/images\/5\/5a\/DK_drag_sven_03_ru.mp3\/revision\/latest?cb=20170410115018",
+        "title": "Из меня Рыцарь будет получше, Sven.",
+        "icons": [
+          "heroes\/Sven\/minimap.png"
+        ]
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_ru_gamepedia\/images\/7\/7d\/DK_dragon_sven_03_ru.mp3\/revision\/latest?cb=20170410120703",
+        "isArcane": true,
+        "icons": [
+          "heroes\/Sven\/minimap.png"
+        ],
+        "title": "Из меня Рыцарь будет получше, Sven."
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_ru_gamepedia\/images\/1\/1a\/DK_drag_firstblood_01_ru.mp3\/revision\/latest?cb=20170410113920",
+        "title": "Первая кровь, ха-ха-ха-ха-ха-ха-ха."
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_ru_gamepedia\/images\/5\/56\/DK_dragon_firstblood_01_ru.mp3\/revision\/latest?cb=20170410115621",
+        "isArcane": true,
+        "title": "Первая кровь, ха-ха-ха-ха-ха-ха-ха."
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_ru_gamepedia\/images\/9\/92\/DK_drag_firstblood_02_ru.mp3\/revision\/latest?cb=20170410113925",
+        "title": "Дракон пролил первую кровь."
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_ru_gamepedia\/images\/8\/82\/DK_dragon_firstblood_02_ru.mp3\/revision\/latest?cb=20170410115626",
+        "isArcane": true,
+        "title": "Дракон пролил первую кровь."
+      }
+    ],
+    "category": "Убийство врага"
+  },
+  {
+    "responses": [
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_ru_gamepedia\/images\/4\/4b\/DK_drag_lasthit_01_ru.mp3\/revision\/latest?cb=20170410114159",
+        "title": "Я переплавлю это на броню."
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_ru_gamepedia\/images\/b\/b0\/DK_dragon_lasthit_01_ru.mp3\/revision\/latest?cb=20170410115856",
+        "isArcane": true,
+        "title": "Я переплавлю это на броню."
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_ru_gamepedia\/images\/a\/af\/DK_drag_lasthit_02_ru.mp3\/revision\/latest?cb=20170410114203",
+        "title": "Твои страдания окончены."
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_ru_gamepedia\/images\/a\/a7\/DK_dragon_lasthit_02_ru.mp3\/revision\/latest?cb=20170410115901",
+        "isArcane": true,
+        "title": "Твои страдания окончены."
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_ru_gamepedia\/images\/0\/03\/DK_drag_lasthit_03_ru.mp3\/revision\/latest?cb=20170410114208",
+        "title": "Золото для моей кучи."
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_ru_gamepedia\/images\/1\/16\/DK_dragon_lasthit_03_ru.mp3\/revision\/latest?cb=20170410115906",
+        "isArcane": true,
+        "title": "Золото для моей кучи."
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_ru_gamepedia\/images\/a\/a2\/DK_drag_lasthit_04_ru.mp3\/revision\/latest?cb=20170410114213",
+        "title": "Ах, золото для дракона."
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_ru_gamepedia\/images\/a\/a7\/DK_dragon_lasthit_04_ru.mp3\/revision\/latest?cb=20170410115911",
+        "isArcane": true,
+        "title": "Ах, золото для дракона."
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_ru_gamepedia\/images\/f\/f6\/DK_drag_lasthit_05_ru.mp3\/revision\/latest?cb=20170410114218",
+        "title": "Достойное подношение."
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_ru_gamepedia\/images\/0\/0e\/DK_dragon_lasthit_05_ru.mp3\/revision\/latest?cb=20170410115915",
+        "isArcane": true,
+        "title": "Достойное подношение."
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_ru_gamepedia\/images\/f\/f8\/DK_drag_lasthit_06_ru.mp3\/revision\/latest?cb=20170410114223",
+        "title": "В загробной жизни золото ни к чему."
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_ru_gamepedia\/images\/e\/e3\/DK_dragon_lasthit_06_ru.mp3\/revision\/latest?cb=20170410115920",
+        "isArcane": true,
+        "title": "В загробной жизни золото ни к чему."
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_ru_gamepedia\/images\/f\/fb\/DK_drag_lasthit_07_ru.mp3\/revision\/latest?cb=20170410114228",
+        "title": "Битвы выигрываются сталью, войны - золотом."
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_ru_gamepedia\/images\/7\/78\/DK_dragon_lasthit_07_ru.mp3\/revision\/latest?cb=20170410115925",
+        "isArcane": true,
+        "title": "Битвы выигрываются сталью, войны - золотом."
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_ru_gamepedia\/images\/0\/04\/DK_drag_lasthit_08_ru.mp3\/revision\/latest?cb=20170410114233",
+        "title": "Моё."
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_ru_gamepedia\/images\/8\/85\/DK_dragon_lasthit_08_ru.mp3\/revision\/latest?cb=20170410115930",
+        "isArcane": true,
+        "title": "Моё."
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_ru_gamepedia\/images\/a\/a9\/DK_drag_lasthit_09_ru.mp3\/revision\/latest?cb=20170410114238",
+        "title": "Это мне."
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_ru_gamepedia\/images\/6\/61\/DK_dragon_lasthit_09_ru.mp3\/revision\/latest?cb=20170410115940",
+        "isArcane": true,
+        "title": "Это мне."
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_ru_gamepedia\/images\/a\/aa\/DK_drag_lasthit_10_ru.mp3\/revision\/latest?cb=20170410114243",
+        "title": "Ха-ха-ха-ха."
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_ru_gamepedia\/images\/e\/e0\/DK_dragon_lasthit_10_ru.mp3\/revision\/latest?cb=20170410115946",
+        "isArcane": true,
+        "title": "Ха-ха-ха-ха."
+      }
+    ],
+    "category": "Добивание"
+  },
+  {
+    "responses": [
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_ru_gamepedia\/images\/f\/f2\/DK_drag_deny_01_ru.mp3\/revision\/latest?cb=20170410113819",
+        "title": "Не получишь."
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_ru_gamepedia\/images\/9\/92\/DK_dragon_deny_01_ru.mp3\/revision\/latest?cb=20170410115521",
+        "isArcane": true,
+        "title": "Не получишь."
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_ru_gamepedia\/images\/c\/c0\/DK_drag_deny_02_ru.mp3\/revision\/latest?cb=20170410113824",
+        "title": "Не смей."
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_ru_gamepedia\/images\/5\/55\/DK_dragon_deny_02_ru.mp3\/revision\/latest?cb=20170410115526",
+        "isArcane": true,
+        "title": "Не смей."
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_ru_gamepedia\/images\/f\/f3\/DK_drag_deny_03_ru.mp3\/revision\/latest?cb=20170410113829",
+        "title": "Это не твоё."
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_ru_gamepedia\/images\/5\/57\/DK_dragon_deny_03_ru.mp3\/revision\/latest?cb=20170410115531",
+        "isArcane": true,
+        "title": "Это не твоё."
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_ru_gamepedia\/images\/4\/45\/DK_drag_deny_04_ru.mp3\/revision\/latest?cb=20170410113834",
+        "title": "О, нет."
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_ru_gamepedia\/images\/d\/da\/DK_dragon_deny_04_ru.mp3\/revision\/latest?cb=20170410115536",
+        "isArcane": true,
+        "title": "О, нет."
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_ru_gamepedia\/images\/4\/47\/DK_drag_deny_05_ru.mp3\/revision\/latest?cb=20170410113839",
+        "title": "Нет."
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_ru_gamepedia\/images\/4\/4e\/DK_dragon_deny_05_ru.mp3\/revision\/latest?cb=20170410115541",
+        "isArcane": true,
+        "title": "Нет."
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_ru_gamepedia\/images\/c\/c6\/DK_drag_deny_06_ru.mp3\/revision\/latest?cb=20170410113844",
+        "title": "Не дождёшься."
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_ru_gamepedia\/images\/9\/93\/DK_dragon_deny_06_ru.mp3\/revision\/latest?cb=20170410115546",
+        "isArcane": true,
+        "title": "Не дождёшься."
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_ru_gamepedia\/images\/2\/26\/DK_drag_deny_07_ru.mp3\/revision\/latest?cb=20170410113849",
+        "title": "Нет."
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_ru_gamepedia\/images\/3\/32\/DK_dragon_deny_07_ru.mp3\/revision\/latest?cb=20170410115551",
+        "isArcane": true,
+        "title": "Нет."
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_ru_gamepedia\/images\/1\/16\/DK_drag_deny_08_ru.mp3\/revision\/latest?cb=20170410113854",
+        "title": "Это не твоё золото."
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_ru_gamepedia\/images\/6\/6a\/DK_dragon_deny_08_ru.mp3\/revision\/latest?cb=20170410115556",
+        "isArcane": true,
+        "title": "Это не твоё золото."
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_ru_gamepedia\/images\/8\/88\/DK_drag_deny_09_ru.mp3\/revision\/latest?cb=20170410113859",
+        "title": "Ты чего-то хотел? Прости."
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_ru_gamepedia\/images\/b\/b8\/DK_dragon_deny_09_ru.mp3\/revision\/latest?cb=20170410115601",
+        "isArcane": true,
+        "title": "Ты чего-то хотел? Прости."
+      }
+    ],
+    "category": "Добивание союзного юнита"
+  },
+  {
+    "responses": [
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_ru_gamepedia\/images\/d\/d0\/DK_drag_purch_01_ru.mp3\/revision\/latest?cb=20170410114756",
+        "title": "То, что нужно."
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_ru_gamepedia\/images\/b\/b4\/DK_dragon_purch_01_ru.mp3\/revision\/latest?cb=20170410120447",
+        "isArcane": true,
+        "title": "То, что нужно."
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_ru_gamepedia\/images\/c\/c1\/DK_drag_purch_02_ru.mp3\/revision\/latest?cb=20170410114801",
+        "title": "На вес золота."
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_ru_gamepedia\/images\/b\/b3\/DK_dragon_purch_02_ru.mp3\/revision\/latest?cb=20170410120452",
+        "isArcane": true,
+        "title": "На вес золота."
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_ru_gamepedia\/images\/f\/f0\/DK_drag_purch_03_ru.mp3\/revision\/latest?cb=20170410114806",
+        "title": "За такое всего моего золота не жалко."
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_ru_gamepedia\/images\/c\/c0\/DK_dragon_purch_03_ru.mp3\/revision\/latest?cb=20170410120458",
+        "isArcane": true,
+        "title": "За такое всего моего золота не жалко."
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_ru_gamepedia\/images\/8\/82\/DK_drag_blink_01_ru.mp3\/revision\/latest?cb=20170410113634",
+        "title": "Blink Dagger.",
+        "icons": [
+          "items\/Blink Dagger\/full.png"
+        ]
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_ru_gamepedia\/images\/3\/36\/DK_dragon_blink_01_ru.mp3\/revision\/latest?cb=20170410115337",
+        "isArcane": true,
+        "icons": [
+          "items\/Blink Dagger\/full.png"
+        ],
+        "title": "Blink Dagger."
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_ru_gamepedia\/images\/e\/e9\/DK_drag_blink_02_ru.mp3\/revision\/latest?cb=20170410113639",
+        "title": "Ах, Blink Dagger.",
+        "icons": [
+          "items\/Blink Dagger\/full.png"
+        ]
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_ru_gamepedia\/images\/f\/f8\/DK_dragon_blink_02_ru.mp3\/revision\/latest?cb=20170410115342",
+        "isArcane": true,
+        "icons": [
+          "items\/Blink Dagger\/full.png"
+        ],
+        "title": "Ах, Blink Dagger."
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_ru_gamepedia\/images\/e\/e6\/DK_drag_scepter_01_ru.mp3\/revision\/latest?cb=20170410114933",
+        "title": "Ах, скипетр.",
+        "icons": [
+          "items\/Aghanim's Scepter\/full.png"
+        ]
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_ru_gamepedia\/images\/a\/a4\/DK_dragon_scepter_01_ru.mp3\/revision\/latest?cb=20170410120621",
+        "isArcane": true,
+        "icons": [
+          "items\/Aghanim's Scepter\/full.png"
+        ],
+        "title": "Ах, скипетр."
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_ru_gamepedia\/images\/1\/18\/DK_drag_scepter_02_ru.mp3\/revision\/latest?cb=20170410114938",
+        "title": "Скипетр.",
+        "icons": [
+          "items\/Aghanim's Scepter\/full.png"
+        ]
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_ru_gamepedia\/images\/8\/89\/DK_dragon_scepter_02_ru.mp3\/revision\/latest?cb=20170410120626",
+        "isArcane": true,
+        "icons": [
+          "items\/Aghanim's Scepter\/full.png"
+        ],
+        "title": "Скипетр."
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_ru_gamepedia\/images\/f\/f5\/DK_drag_satanic_01_ru.mp3\/revision\/latest?cb=20170410114928",
+        "title": "Satanic.",
+        "icons": [
+          "items\/Satanic\/full.png"
+        ]
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_ru_gamepedia\/images\/5\/59\/DK_dragon_satanic_01_ru.mp3\/revision\/latest?cb=20170410120617",
+        "isArcane": true,
+        "icons": [
+          "items\/Satanic\/full.png"
+        ],
+        "title": "Satanic."
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_ru_gamepedia\/images\/d\/d2\/DK_drag_assaultcuirass_01_ru.mp3\/revision\/latest?cb=20170410113528",
+        "title": "Assault Cuirass!",
+        "icons": [
+          "items\/Assault Cuirass\/full.png"
+        ]
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_ru_gamepedia\/images\/3\/32\/DK_dragon_assaultcuirass_01_ru.mp3\/revision\/latest?cb=20170410115226",
+        "isArcane": true,
+        "icons": [
+          "items\/Assault Cuirass\/full.png"
+        ],
+        "title": "Assault Cuirass!"
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_ru_gamepedia\/images\/1\/19\/DK_drag_blackkingbar_01_ru.mp3\/revision\/latest?cb=20170410113629",
+        "title": "Black King Bar.",
+        "icons": [
+          "items\/Black King Bar\/full.png"
+        ]
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_ru_gamepedia\/images\/9\/9e\/DK_dragon_blackkingbar_01_ru.mp3\/revision\/latest?cb=20170410115332",
+        "isArcane": true,
+        "icons": [
+          "items\/Black King Bar\/full.png"
+        ],
+        "title": "Black King Bar."
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_ru_gamepedia\/images\/b\/b4\/DK_drag_immort_01_ru.mp3\/revision\/latest?cb=20170410114016",
+        "title": "Бессмертие!",
+        "icons": [
+          "heroes\/Aegis of the Immortal\/minimap.png"
+        ]
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_ru_gamepedia\/images\/f\/f1\/DK_dragon_immort_01_ru.mp3\/revision\/latest?cb=20170410115716",
+        "isArcane": true,
+        "icons": [
+          "heroes\/Aegis of the Immortal\/minimap.png"
+        ],
+        "title": "Бессмертие!"
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_ru_gamepedia\/images\/9\/93\/DK_drag_immort_02_ru.mp3\/revision\/latest?cb=20170410114021",
+        "title": "Драконы живут вечно."
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_ru_gamepedia\/images\/6\/6c\/DK_dragon_immort_02_ru.mp3\/revision\/latest?cb=20170410115721",
+        "isArcane": true,
+        "title": "Драконы живут вечно."
+      }
+    ],
+    "category": "Получение предмета"
+  },
+  {
+    "responses": [
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_ru_gamepedia\/images\/8\/80\/DK_drag_death_01_ru.mp3\/revision\/latest?cb=20170410113718",
+        "title": "Нет!"
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_ru_gamepedia\/images\/f\/fa\/DK_dragon_death_01_ru.mp3\/revision\/latest?cb=20170410115422",
+        "isArcane": true,
+        "title": "Нет!"
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_ru_gamepedia\/images\/c\/c5\/DK_drag_death_02_ru.mp3\/revision\/latest?cb=20170410113723",
+        "title": "Смерть героя."
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_ru_gamepedia\/images\/d\/d2\/DK_dragon_death_02_ru.mp3\/revision\/latest?cb=20170410115427",
+        "isArcane": true,
+        "title": "Смерть героя."
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_ru_gamepedia\/images\/3\/37\/DK_drag_death_03_ru.mp3\/revision\/latest?cb=20170410113729",
+        "title": "Опускается ночь."
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_ru_gamepedia\/images\/9\/93\/DK_dragon_death_03_ru.mp3\/revision\/latest?cb=20170410115432",
+        "isArcane": true,
+        "title": "Опускается ночь."
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_ru_gamepedia\/images\/8\/80\/DK_drag_death_04_ru.mp3\/revision\/latest?cb=20170410113734",
+        "title": "Я погиб с честью."
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_ru_gamepedia\/images\/5\/51\/DK_dragon_death_04_ru.mp3\/revision\/latest?cb=20170410115437",
+        "isArcane": true,
+        "title": "Я погиб с честью."
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_ru_gamepedia\/images\/6\/66\/DK_drag_death_05_ru.mp3\/revision\/latest?cb=20170410113739",
+        "title": "Мой огонь\u2026 потух."
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_ru_gamepedia\/images\/c\/c6\/DK_dragon_death_05_ru.mp3\/revision\/latest?cb=20170410115442",
+        "isArcane": true,
+        "title": "Мой огонь\u2026 потух."
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_ru_gamepedia\/images\/2\/2c\/DK_drag_death_06_ru.mp3\/revision\/latest?cb=20170410113744",
+        "title": "Дракон убит."
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_ru_gamepedia\/images\/b\/b6\/DK_dragon_death_06_ru.mp3\/revision\/latest?cb=20170410115447",
+        "isArcane": true,
+        "title": "Дракон убит."
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_ru_gamepedia\/images\/1\/1f\/DK_drag_death_07_ru.mp3\/revision\/latest?cb=20170410113749",
+        "title": "Я закрываю\u2026 глаза."
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_ru_gamepedia\/images\/3\/3c\/DK_dragon_death_07_ru.mp3\/revision\/latest?cb=20170410115452",
+        "isArcane": true,
+        "title": "Я закрываю\u2026 глаза."
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_ru_gamepedia\/images\/5\/5a\/DK_drag_death_08_ru.mp3\/revision\/latest?cb=20170410113754",
+        "title": "Древние Драконы ждут."
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_ru_gamepedia\/images\/6\/60\/DK_dragon_death_08_ru.mp3\/revision\/latest?cb=20170410115457",
+        "isArcane": true,
+        "title": "Древние Драконы ждут."
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_ru_gamepedia\/images\/6\/60\/DK_drag_death_09_ru.mp3\/revision\/latest?cb=20170410113759",
+        "title": "Всё кончено."
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_ru_gamepedia\/images\/8\/8d\/DK_dragon_death_09_ru.mp3\/revision\/latest?cb=20170410115502",
+        "isArcane": true,
+        "title": "Всё кончено."
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_ru_gamepedia\/images\/c\/c1\/DK_drag_death_10_ru.mp3\/revision\/latest?cb=20170410113804",
+        "title": "Похороните меня на щите."
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_ru_gamepedia\/images\/e\/eb\/DK_dragon_death_10_ru.mp3\/revision\/latest?cb=20170410115507",
+        "isArcane": true,
+        "title": "Похороните меня на щите."
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_ru_gamepedia\/images\/d\/d9\/DK_drag_death_11_ru.mp3\/revision\/latest?cb=20170410113809",
+        "title": "Слайрак\u2026 подвёл меня."
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_ru_gamepedia\/images\/f\/fe\/DK_dragon_death_11_ru.mp3\/revision\/latest?cb=20170410115512",
+        "isArcane": true,
+        "title": "Слайрак\u2026 подвёл меня."
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_ru_gamepedia\/images\/6\/65\/DK_drag_death_12_ru.mp3\/revision\/latest?cb=20170410113814",
+        "title": "Смерть оказалась быстрее."
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_ru_gamepedia\/images\/3\/31\/DK_dragon_death_12_ru.mp3\/revision\/latest?cb=20170410115517",
+        "isArcane": true,
+        "title": "Смерть оказалась быстрее."
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_ru_gamepedia\/images\/1\/1a\/DK_drag_jakiro_02_ru.mp3\/revision\/latest?cb=20170410114046",
+        "title": "Jakiro!",
+        "icons": [
+          "heroes\/Jakiro\/minimap.png"
+        ]
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_ru_gamepedia\/images\/8\/8c\/DK_dragon_jakiro_02_ru.mp3\/revision\/latest?cb=20170410115746",
+        "isArcane": true,
+        "icons": [
+          "heroes\/Jakiro\/minimap.png"
+        ],
+        "title": "Jakiro!"
+      }
+    ],
+    "category": "Смерть"
+  },
+  {
+    "responses": [
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_ru_gamepedia\/images\/1\/18\/DK_drag_respawn_01_ru.mp3\/revision\/latest?cb=20170410114838",
+        "title": "Ох, возможность вернуть мою честь."
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_ru_gamepedia\/images\/9\/90\/DK_dragon_respawn_01_ru.mp3\/revision\/latest?cb=20170410120526",
+        "title": "Ох, возможность вернуть мою честь"
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_ru_gamepedia\/images\/e\/ef\/DK_drag_respawn_02_ru.mp3\/revision\/latest?cb=20170410114843",
+        "title": "В моей отваге никто не будет сомневаться."
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_ru_gamepedia\/images\/d\/db\/DK_dragon_respawn_02_ru.mp3\/revision\/latest?cb=20170410120531",
+        "isArcane": true,
+        "title": "В моей отваге никто не будет сомневаться."
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_ru_gamepedia\/images\/f\/f8\/DK_drag_respawn_03_ru.mp3\/revision\/latest?cb=20170410114848",
+        "title": "Чешуйчатый щит защищает меня."
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_ru_gamepedia\/images\/6\/65\/DK_dragon_respawn_03_ru.mp3\/revision\/latest?cb=20170410120539",
+        "isArcane": true,
+        "title": "Чешуйчатый щит защищает меня."
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_ru_gamepedia\/images\/3\/30\/DK_drag_respawn_04_ru.mp3\/revision\/latest?cb=20170410114853",
+        "title": "Дракон восстал из пепла."
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_ru_gamepedia\/images\/a\/ad\/DK_dragon_respawn_04_ru.mp3\/revision\/latest?cb=20170410120544",
+        "isArcane": true,
+        "title": "Дракон восстал из пепла."
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_ru_gamepedia\/images\/5\/57\/DK_drag_respawn_05_ru.mp3\/revision\/latest?cb=20170410114858",
+        "title": "Клинок Дракона вернулся в бой."
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_ru_gamepedia\/images\/6\/67\/DK_dragon_respawn_05_ru.mp3\/revision\/latest?cb=20170410120549",
+        "isArcane": true,
+        "title": "Клинок Дракона вернулся в бой."
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_ru_gamepedia\/images\/9\/96\/DK_drag_respawn_06_ru.mp3\/revision\/latest?cb=20170410114903",
+        "title": "Очередная трансформация."
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_ru_gamepedia\/images\/8\/87\/DK_dragon_respawn_06_ru.mp3\/revision\/latest?cb=20170410120553",
+        "isArcane": true,
+        "title": "Очередная трансформация."
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_ru_gamepedia\/images\/5\/59\/DK_drag_respawn_07_ru.mp3\/revision\/latest?cb=20170410114908",
+        "title": "Клинок Дракона не вернётся в ножны, пока не напьётся крови."
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_ru_gamepedia\/images\/5\/5d\/DK_dragon_respawn_07_ru.mp3\/revision\/latest?cb=20170410120558",
+        "isArcane": true,
+        "title": "Клинок Дракона не вернётся в ножны, пока не напьётся крови."
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_ru_gamepedia\/images\/6\/66\/DK_drag_respawn_08_ru.mp3\/revision\/latest?cb=20170410114913",
+        "title": "Дремлющий дракон пробудился."
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_ru_gamepedia\/images\/e\/e5\/DK_dragon_respawn_08_ru.mp3\/revision\/latest?cb=20170410120603",
+        "isArcane": true,
+        "title": "Дремлющий дракон пробудился."
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_ru_gamepedia\/images\/0\/0f\/DK_drag_respawn_09_ru.mp3\/revision\/latest?cb=20170410114918",
+        "title": "Героев без отваги не бывает."
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_ru_gamepedia\/images\/0\/02\/DK_dragon_respawn_09_ru.mp3\/revision\/latest?cb=20170410120607",
+        "isArcane": true,
+        "title": "Героев без отваги не бывает."
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_ru_gamepedia\/images\/3\/3e\/DK_drag_respawn_10_ru.mp3\/revision\/latest?cb=20170410114923",
+        "title": "Бронирован и опасен."
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_ru_gamepedia\/images\/4\/47\/DK_dragon_respawn_10_ru.mp3\/revision\/latest?cb=20170410120612",
+        "isArcane": true,
+        "title": "Бронирован и опасен."
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_ru_gamepedia\/images\/5\/58\/DK_drag_aegis_01_ru.mp3\/revision\/latest?cb=20170410113454",
+        "title": "Ха-ха-ха-ха-ха-ха-ха, думали от меня так просто избавиться?"
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_ru_gamepedia\/images\/1\/15\/DK_dragon_aegis_01_ru.mp3\/revision\/latest?cb=20170410115150",
+        "isArcane": true,
+        "title": "Ха-ха-ха-ха-ха-ха-ха, думали от меня так просто избавиться?"
+      }
+    ],
+    "category": "Возрождение"
+  },
+  {
+    "responses": [
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_ru_gamepedia\/images\/f\/f7\/DK_drag_bottle_01_ru.mp3\/revision\/latest?cb=20170410113643",
+        "title": "Сохраню на потом."
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_ru_gamepedia\/images\/6\/6c\/DK_dragon_bottle_01_ru.mp3\/revision\/latest?cb=20170410115347",
+        "isArcane": true,
+        "title": "Сохраню на потом."
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_ru_gamepedia\/images\/d\/d2\/DK_drag_bottle_02_ru.mp3\/revision\/latest?cb=20170410113648",
+        "title": "Полезай в бутыль."
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_ru_gamepedia\/images\/b\/b0\/DK_dragon_bottle_02_ru.mp3\/revision\/latest?cb=20170410115352",
+        "isArcane": true,
+        "title": "Полезай в бутыль."
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_ru_gamepedia\/images\/2\/20\/DK_drag_bottle_03_ru.mp3\/revision\/latest?cb=20170410113653",
+        "title": "Положу на время в бутыль."
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_ru_gamepedia\/images\/3\/3c\/DK_dragon_bottle_03_ru.mp3\/revision\/latest?cb=20170410115357",
+        "isArcane": true,
+        "title": "Положу на время в бутыль."
+      }
+    ],
+    "category": "Наполнение бутылки"
+  },
+  {
+    "responses": [
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_ru_gamepedia\/images\/d\/d0\/DK_drag_purch_01_ru.mp3\/revision\/latest?cb=20170410114756",
+        "title": "То, что нужно."
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_ru_gamepedia\/images\/b\/b4\/DK_dragon_purch_01_ru.mp3\/revision\/latest?cb=20170410120447",
+        "isArcane": true,
+        "title": "То, что нужно."
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_ru_gamepedia\/images\/a\/a9\/DK_drag_lasthit_09_ru.mp3\/revision\/latest?cb=20170410114238",
+        "title": "Это мне."
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_ru_gamepedia\/images\/6\/61\/DK_dragon_lasthit_09_ru.mp3\/revision\/latest?cb=20170410115940",
+        "isArcane": true,
+        "title": "Это мне."
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_ru_gamepedia\/images\/6\/6b\/DK_drag_doubdam_01_ru.mp3\/revision\/latest?cb=20170410113904",
+        "title": "Двойной урон!"
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_ru_gamepedia\/images\/c\/c0\/DK_dragon_doubdam_01_ru.mp3\/revision\/latest?cb=20170410115606",
+        "isArcane": true,
+        "title": "Двойной урон!"
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_ru_gamepedia\/images\/4\/44\/DK_drag_doubdam_02_ru.mp3\/revision\/latest?cb=20170410113909",
+        "title": "Могучий дракон, двойной урон."
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_ru_gamepedia\/images\/5\/57\/DK_dragon_doubdam_02_ru.mp3\/revision\/latest?cb=20170410115611",
+        "isArcane": true,
+        "title": "Могучий дракон, двойной урон."
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_ru_gamepedia\/images\/a\/a1\/DK_drag_haste_01_ru.mp3\/revision\/latest?cb=20170410113956",
+        "title": "Ускорение!"
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_ru_gamepedia\/images\/b\/b2\/DK_dragon_haste_01_ru.mp3\/revision\/latest?cb=20170410115656",
+        "isArcane": true,
+        "title": "Ускорение!"
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_ru_gamepedia\/images\/b\/bf\/DK_drag_haste_02_ru.mp3\/revision\/latest?cb=20170410114001",
+        "title": "Со скоростью пикирующего дракона."
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_ru_gamepedia\/images\/3\/39\/DK_dragon_haste_02_ru.mp3\/revision\/latest?cb=20170410115701",
+        "isArcane": true,
+        "title": "Со скоростью пикирующего дракона."
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_ru_gamepedia\/images\/7\/7c\/DK_drag_illus_01_ru.mp3\/revision\/latest?cb=20170410114006",
+        "title": "Иллюзия!"
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_ru_gamepedia\/images\/1\/19\/DK_dragon_illus_01_ru.mp3\/revision\/latest?cb=20170410115706",
+        "isArcane": true,
+        "title": "Иллюзия!"
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_ru_gamepedia\/images\/5\/5a\/DK_drag_illus_02_ru.mp3\/revision\/latest?cb=20170410114011",
+        "title": "В три раза больше рыцаря."
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_ru_gamepedia\/images\/9\/9a\/DK_dragon_illus_02_ru.mp3\/revision\/latest?cb=20170410115711",
+        "isArcane": true,
+        "title": "В три раза больше рыцаря."
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_ru_gamepedia\/images\/c\/c9\/DK_drag_invis_01_ru.mp3\/revision\/latest?cb=20170410114031",
+        "title": "Невидимость!"
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_ru_gamepedia\/images\/4\/4a\/DK_dragon_invis_01_ru.mp3\/revision\/latest?cb=20170410115731",
+        "isArcane": true,
+        "title": "Невидимость!"
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_ru_gamepedia\/images\/a\/a3\/DK_drag_invis_02_ru.mp3\/revision\/latest?cb=20170410114036",
+        "title": "Незримое убивает."
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_ru_gamepedia\/images\/a\/a7\/DK_dragon_invis_02_ru.mp3\/revision\/latest?cb=20170410115736",
+        "isArcane": true,
+        "title": "Незримое убивает."
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_ru_gamepedia\/images\/7\/7f\/DK_drag_regen_01_ru.mp3\/revision\/latest?cb=20170410114828",
+        "title": "Регенерация!"
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_ru_gamepedia\/images\/4\/48\/DK_dragon_regen_01_ru.mp3\/revision\/latest?cb=20170410120517",
+        "isArcane": true,
+        "title": "Регенерация!"
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_ru_gamepedia\/images\/d\/d6\/DK_drag_regen_02_ru.mp3\/revision\/latest?cb=20170410114833",
+        "title": "Чешуя как новая."
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_ru_gamepedia\/images\/c\/c2\/DK_dragon_regen_02_ru.mp3\/revision\/latest?cb=20170410120522",
+        "isArcane": true,
+        "title": "Чешуя как новая."
+      }
+    ],
+    "category": "Активация рун"
+  },
+  {
+    "responses": [
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_ru_gamepedia\/images\/c\/c1\/DK_drag_notyet_01_ru.mp3\/revision\/latest?cb=20170410114629",
+        "title": "Ещё рано."
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_ru_gamepedia\/images\/d\/db\/DK_dragon_notyet_01_ru.mp3\/revision\/latest?cb=20170410120324",
+        "isArcane": true,
+        "title": "Ещё рано."
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_ru_gamepedia\/images\/0\/0c\/DK_drag_notyet_02_ru.mp3\/revision\/latest?cb=20170410114634",
+        "title": "Я не готов."
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_ru_gamepedia\/images\/c\/c0\/DK_dragon_notyet_02_ru.mp3\/revision\/latest?cb=20170410120329",
+        "isArcane": true,
+        "title": "Я не готов."
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_ru_gamepedia\/images\/2\/26\/DK_drag_notyet_03_ru.mp3\/revision\/latest?cb=20170410114639",
+        "title": "Ещё не время."
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_ru_gamepedia\/images\/7\/7d\/DK_dragon_notyet_03_ru.mp3\/revision\/latest?cb=20170410120333",
+        "isArcane": true,
+        "title": "Ещё не время."
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_ru_gamepedia\/images\/2\/29\/DK_drag_notyet_04_ru.mp3\/revision\/latest?cb=20170410114644",
+        "title": "Ещё рано."
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_ru_gamepedia\/images\/3\/3e\/DK_dragon_notyet_04_ru.mp3\/revision\/latest?cb=20170410120338",
+        "isArcane": true,
+        "title": "Ещё рано."
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_ru_gamepedia\/images\/8\/84\/DK_drag_notyet_05_ru.mp3\/revision\/latest?cb=20170410114649",
+        "title": "Я не готов."
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_ru_gamepedia\/images\/2\/25\/DK_dragon_notyet_05_ru.mp3\/revision\/latest?cb=20170410120343",
+        "isArcane": true,
+        "title": "Я не готов."
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_ru_gamepedia\/images\/5\/55\/DK_drag_notyet_06_ru.mp3\/revision\/latest?cb=20170410114654",
+        "title": "Ещё не время."
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_ru_gamepedia\/images\/0\/08\/DK_dragon_notyet_06_ru.mp3\/revision\/latest?cb=20170410120348",
+        "isArcane": true,
+        "title": "Ещё не время."
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_ru_gamepedia\/images\/a\/a3\/DK_drag_notyet_07_ru.mp3\/revision\/latest?cb=20170410114700",
+        "title": "Ещё рано!"
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_ru_gamepedia\/images\/c\/cd\/DK_dragon_notyet_07_ru.mp3\/revision\/latest?cb=20170410120356",
+        "isArcane": true,
+        "title": "Ещё рано!"
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_ru_gamepedia\/images\/e\/ea\/DK_drag_notyet_08_ru.mp3\/revision\/latest?cb=20170410114705",
+        "title": "Я не готов!"
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_ru_gamepedia\/images\/f\/fa\/DK_dragon_notyet_08_ru.mp3\/revision\/latest?cb=20170410120401",
+        "isArcane": true,
+        "title": "Я не готов!"
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_ru_gamepedia\/images\/5\/58\/DK_drag_notyet_09_ru.mp3\/revision\/latest?cb=20170410114711",
+        "title": "Ещё не время!"
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_ru_gamepedia\/images\/d\/dd\/DK_dragon_notyet_09_ru.mp3\/revision\/latest?cb=20170410120405",
+        "isArcane": true,
+        "title": "Ещё не время!"
+      }
+    ],
+    "category": "Способность на перезарядке"
+  },
+  {
+    "responses": [
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_ru_gamepedia\/images\/1\/16\/DK_drag_nomana_01_ru.mp3\/revision\/latest?cb=20170410114543",
+        "title": "Мана кончилась."
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_ru_gamepedia\/images\/7\/76\/DK_dragon_nomana_01_ru.mp3\/revision\/latest?cb=20170410120241",
+        "isArcane": true,
+        "title": "Мана кончилась."
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_ru_gamepedia\/images\/b\/b3\/DK_drag_nomana_02_ru.mp3\/revision\/latest?cb=20170410114548",
+        "title": "Нет маны."
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_ru_gamepedia\/images\/2\/21\/DK_dragon_nomana_02_ru.mp3\/revision\/latest?cb=20170410120245",
+        "isArcane": true,
+        "title": "Нет маны."
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_ru_gamepedia\/images\/a\/ac\/DK_drag_nomana_03_ru.mp3\/revision\/latest?cb=20170410114553",
+        "title": "Недостаточно маны."
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_ru_gamepedia\/images\/5\/5a\/DK_dragon_nomana_03_ru.mp3\/revision\/latest?cb=20170410120251",
+        "isArcane": true,
+        "title": "Недостаточно маны."
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_ru_gamepedia\/images\/9\/96\/DK_drag_nomana_04_ru.mp3\/revision\/latest?cb=20170410114558",
+        "title": "Мана кончилась."
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_ru_gamepedia\/images\/d\/db\/DK_dragon_nomana_04_ru.mp3\/revision\/latest?cb=20170410120256",
+        "isArcane": true,
+        "title": "Мана кончилась."
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_ru_gamepedia\/images\/3\/3c\/DK_drag_nomana_05_ru.mp3\/revision\/latest?cb=20170410114603",
+        "title": "Нет маны."
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_ru_gamepedia\/images\/a\/a5\/DK_dragon_nomana_05_ru.mp3\/revision\/latest?cb=20170410120300",
+        "isArcane": true,
+        "title": "Нет маны."
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_ru_gamepedia\/images\/8\/8e\/DK_drag_nomana_06_ru.mp3\/revision\/latest?cb=20170410114608",
+        "title": "Недостаточно маны."
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_ru_gamepedia\/images\/3\/33\/DK_dragon_nomana_06_ru.mp3\/revision\/latest?cb=20170410120305",
+        "isArcane": true,
+        "title": "Недостаточно маны."
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_ru_gamepedia\/images\/c\/ca\/DK_drag_nomana_07_ru.mp3\/revision\/latest?cb=20170410114613",
+        "title": "Мана кончилась!"
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_ru_gamepedia\/images\/c\/c4\/DK_dragon_nomana_07_ru.mp3\/revision\/latest?cb=20170410120310",
+        "isArcane": true,
+        "title": "Мана кончилась!"
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_ru_gamepedia\/images\/5\/5e\/DK_drag_nomana_08_ru.mp3\/revision\/latest?cb=20170410114618",
+        "title": "Нет маны!"
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_ru_gamepedia\/images\/f\/fe\/DK_dragon_nomana_08_ru.mp3\/revision\/latest?cb=20170410120315",
+        "isArcane": true,
+        "title": "Нет маны!"
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_ru_gamepedia\/images\/b\/be\/DK_drag_nomana_09_ru.mp3\/revision\/latest?cb=20170410114623",
+        "title": "Недостаточно маны!"
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_ru_gamepedia\/images\/f\/fc\/DK_dragon_nomana_09_ru.mp3\/revision\/latest?cb=20170410120319",
+        "isArcane": true,
+        "title": "Недостаточно маны!"
+      }
+    ],
+    "category": "Нехватка маны"
+  },
+  {
+    "responses": [
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_ru_gamepedia\/images\/d\/db\/DK_drag_pain_01_ru.mp3\/revision\/latest?cb=20170410114716",
+        "title": "Ах."
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_ru_gamepedia\/images\/c\/c6\/DK_dragon_pain_01_ru.mp3\/revision\/latest?cb=20170410120410",
+        "isArcane": true,
+        "title": "Ах."
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_ru_gamepedia\/images\/5\/5c\/DK_drag_pain_02_ru.mp3\/revision\/latest?cb=20170410114721",
+        "title": "О."
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_ru_gamepedia\/images\/e\/e8\/DK_dragon_pain_02_ru.mp3\/revision\/latest?cb=20170410120415",
+        "isArcane": true,
+        "title": "О."
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_ru_gamepedia\/images\/e\/e1\/DK_drag_pain_03_ru.mp3\/revision\/latest?cb=20170410114726",
+        "title": "Ай."
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_ru_gamepedia\/images\/2\/21\/DK_dragon_pain_03_ru.mp3\/revision\/latest?cb=20170410120419",
+        "isArcane": true,
+        "title": "Ай."
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_ru_gamepedia\/images\/0\/08\/DK_drag_pain_04_ru.mp3\/revision\/latest?cb=20170410114731",
+        "title": "Ах."
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_ru_gamepedia\/images\/e\/e4\/DK_dragon_pain_04_ru.mp3\/revision\/latest?cb=20170410120424",
+        "isArcane": true,
+        "title": "Ах."
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_ru_gamepedia\/images\/e\/e3\/DK_drag_pain_05_ru.mp3\/revision\/latest?cb=20170410114736",
+        "isArcane": true,
+        "title": "Ах."
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_ru_gamepedia\/images\/c\/cc\/DK_dragon_pain_05_ru.mp3\/revision\/latest?cb=20170410120429",
+        "isArcane": true,
+        "title": "Ах."
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_ru_gamepedia\/images\/7\/77\/DK_drag_pain_06_ru.mp3\/revision\/latest?cb=20170410114741",
+        "title": "Умф."
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_ru_gamepedia\/images\/b\/b8\/DK_dragon_pain_06_ru.mp3\/revision\/latest?cb=20170410120433",
+        "isArcane": true,
+        "title": "Умф."
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_ru_gamepedia\/images\/d\/d0\/DK_drag_pain_07_ru.mp3\/revision\/latest?cb=20170410114746",
+        "title": "Ах."
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_ru_gamepedia\/images\/4\/40\/DK_dragon_pain_07_ru.mp3\/revision\/latest?cb=20170410120438",
+        "isArcane": true,
+        "title": "Ах."
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_ru_gamepedia\/images\/8\/8c\/DK_drag_pain_08_ru.mp3\/revision\/latest?cb=20170410114751",
+        "isArcane": true,
+        "title": "Ах."
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_ru_gamepedia\/images\/4\/40\/DK_dragon_pain_08_ru.mp3\/revision\/latest?cb=20170410120443",
+        "isArcane": true,
+        "title": "Ах."
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_ru_gamepedia\/images\/1\/1c\/DK_drag_underattack_01_ru.mp3\/revision\/latest?cb=20170410115039",
+        "title": "Меня атакуют!"
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_ru_gamepedia\/images\/5\/58\/DK_dragon_underattack_01_ru.mp3\/revision\/latest?cb=20170410113347",
+        "isArcane": true,
+        "title": "Меня атакуют!"
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_ru_gamepedia\/images\/8\/81\/DK_drag_underattack_02_ru.mp3\/revision\/latest?cb=20170410115044",
+        "title": "Требуется подкрепление."
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_ru_gamepedia\/images\/f\/f5\/DK_dragon_underattack_02_ru.mp3\/revision\/latest?cb=20170410113352",
+        "isArcane": true,
+        "title": "Требуется подкрепление."
+      }
+    ],
+    "category": "Получение урона"
+  },
+  {
+    "responses": [
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_ru_gamepedia\/images\/8\/87\/DK_drag_rare_01_ru.mp3\/revision\/latest?cb=20170410114811",
+        "title": "Заключай сделку с драконом только тогда, когда ты готов сдержать своё слово."
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_ru_gamepedia\/images\/4\/45\/DK_dragon_rare_01_ru.mp3\/revision\/latest?cb=20170410120503",
+        "isArcane": true,
+        "title": "Заключай сделку с драконом только тогда, когда ты готов сдержать своё слово."
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_ru_gamepedia\/images\/e\/ef\/DK_drag_rare_02_ru.mp3\/revision\/latest?cb=20170410114816",
+        "title": "В этой броне спит дракон Слайрак. А в нём своего часа ждет рыцарь. Осторожнее, не пробуди их обоих."
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_ru_gamepedia\/images\/6\/6e\/DK_dragon_rare_02_ru.mp3\/revision\/latest?cb=20170410120507",
+        "isArcane": true,
+        "title": "В этой броне спит дракон Слайрак. А в нём своего часа ждет рыцарь. Осторожнее, не пробуди их обоих."
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_ru_gamepedia\/images\/3\/30\/DK_drag_rare_03_ru.mp3\/revision\/latest?cb=20170410114821",
+        "title": "Мудрость Древних Драконов и отвага бессмертного рыцаря - вот источники моего благородства."
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_ru_gamepedia\/images\/7\/7b\/DK_dragon_rare_03_ru.mp3\/revision\/latest?cb=20170410120512",
+        "isArcane": true,
+        "title": "Мудрость Древних Драконов и отвага бессмертного рыцаря - вот источники моего благородства."
+      }
+    ],
+    "category": "Редкие фразы"
+  },
+  {
+    "responses": [
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_ru_gamepedia\/images\/e\/e4\/DK_drag_thanks_01_ru.mp3\/revision\/latest?cb=20170410115023",
+        "title": "Благодарю!"
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_ru_gamepedia\/images\/1\/13\/DK_dragon_thanks_01_ru.mp3\/revision\/latest?cb=20170410120708",
+        "isArcane": true,
+        "title": "Благодарю!"
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_ru_gamepedia\/images\/d\/d0\/DK_drag_thanks_02_ru.mp3\/revision\/latest?cb=20170410115028",
+        "title": "Спасибо тебе."
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_ru_gamepedia\/images\/b\/b3\/DK_dragon_thanks_02_ru.mp3\/revision\/latest?cb=20170410120713",
+        "isArcane": true,
+        "title": "Спасибо тебе."
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_ru_gamepedia\/images\/c\/c1\/DK_drag_thanks_03_ru.mp3\/revision\/latest?cb=20170410115033",
+        "title": "Моя благодарность."
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_ru_gamepedia\/images\/6\/6d\/DK_dragon_thanks_03_ru.mp3\/revision\/latest?cb=20170410120717",
+        "isArcane": true,
+        "title": "Моя благодарность."
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_ru_gamepedia\/images\/6\/61\/DK_drag_laugh_01_ru.mp3\/revision\/latest?cb=20170410114248",
+        "title": "Ха-ха-ха-ха-ха-ха-ха-ха-ха-ха."
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_ru_gamepedia\/images\/7\/7b\/DK_dragon_laugh_01_ru.mp3\/revision\/latest?cb=20170410115951",
+        "isArcane": true,
+        "title": "Ха-ха-ха-ха-ха-ха-ха-ха-ха-ха."
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_ru_gamepedia\/images\/1\/19\/DK_drag_laugh_02_ru.mp3\/revision\/latest?cb=20170410114253",
+        "title": "Ха-ха-ха-ха-ха-ха-ха-ха-ха-ха"
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_ru_gamepedia\/images\/9\/98\/DK_dragon_laugh_02_ru.mp3\/revision\/latest?cb=20170410115956",
+        "isArcane": true,
+        "title": "Ха-ха-ха-ха-ха-ха-ха-ха-ха-ха"
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_ru_gamepedia\/images\/4\/44\/DK_drag_laugh_03_ru.mp3\/revision\/latest?cb=20170410114259",
+        "title": "Ха-а-ха-ха-ха-ха-ха-ха."
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_ru_gamepedia\/images\/2\/2d\/DK_dragon_laugh_03_ru.mp3\/revision\/latest?cb=20170410120001",
+        "isArcane": true,
+        "title": "Ха-а-ха-ха-ха-ха-ха-ха."
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_ru_gamepedia\/images\/b\/b9\/DK_drag_laugh_04_ru.mp3\/revision\/latest?cb=20170410114304",
+        "title": "Хе-хе-хе-хе-ха-ха-ха-ха-ха."
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_ru_gamepedia\/images\/4\/4e\/DK_dragon_laugh_04_ru.mp3\/revision\/latest?cb=20170410120005",
+        "isArcane": true,
+        "title": "Хе-хе-хе-хе-ха-ха-ха-ха-ха."
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_ru_gamepedia\/images\/4\/43\/DK_drag_laugh_05_ru.mp3\/revision\/latest?cb=20170410114309",
+        "title": "Ха-ха-ха-ха-ха-ха-ха."
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_ru_gamepedia\/images\/7\/78\/DK_dragon_laugh_05_ru.mp3\/revision\/latest?cb=20170410120010",
+        "isArcane": true,
+        "title": "Ха-ха-ха-ха-ха-ха-ха."
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_ru_gamepedia\/images\/6\/68\/DK_drag_laugh_06_ru.mp3\/revision\/latest?cb=20170410114314",
+        "title": "Мха-ха-ха-ха-ха-ха-ха."
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_ru_gamepedia\/images\/5\/5b\/DK_dragon_laugh_06_ru.mp3\/revision\/latest?cb=20170410120016",
+        "isArcane": true,
+        "title": "Мха-ха-ха-ха-ха-ха-ха."
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_ru_gamepedia\/images\/8\/82\/DK_drag_laugh_07_ru.mp3\/revision\/latest?cb=20170410114319",
+        "title": "Тха-ха-ха-ха-ха-ха-ха."
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_ru_gamepedia\/images\/7\/76\/DK_dragon_laugh_07_ru.mp3\/revision\/latest?cb=20170410120020",
+        "isArcane": true,
+        "title": "Тха-ха-ха-ха-ха-ха-ха."
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_ru_gamepedia\/images\/9\/96\/DK_drag_laugh_08_ru.mp3\/revision\/latest?cb=20170410114324",
+        "title": "Ха-ха-ха-ха, ха-ха."
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_ru_gamepedia\/images\/d\/db\/DK_dragon_laugh_08_ru.mp3\/revision\/latest?cb=20170410120026",
+        "isArcane": true,
+        "title": "Ха-ха-ха-ха, ха-ха."
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_ru_gamepedia\/images\/d\/d6\/DK_drag_laugh_09_ru.mp3\/revision\/latest?cb=20170410114329",
+        "title": "Ха-ха-ха-ха-ха, ха-ха-ха."
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_ru_gamepedia\/images\/d\/d9\/DK_dragon_laugh_09_ru.mp3\/revision\/latest?cb=20170410120031",
+        "isArcane": true,
+        "title": "Ха-ха-ха-ха-ха, ха-ха-ха."
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_ru_gamepedia\/images\/9\/96\/DK_drag_laugh_10_ru.mp3\/revision\/latest?cb=20170410114334",
+        "title": "А-ха-ха-ха-ха."
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_ru_gamepedia\/images\/5\/5d\/DK_dragon_laugh_10_ru.mp3\/revision\/latest?cb=20170410120036",
+        "isArcane": true,
+        "title": "А-ха-ха-ха-ха."
+      }
+    ],
+    "category": "Реплики в чате"
+  },
+  {
+    "responses": [
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_ru_gamepedia\/images\/f\/fe\/DK_drag_win_01_ru.mp3\/revision\/latest?cb=20170410115049",
+        "title": "Да!"
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_ru_gamepedia\/images\/9\/98\/DK_dragon_win_01_ru.mp3\/revision\/latest?cb=20170410113357",
+        "isArcane": true,
+        "title": "Да!"
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_ru_gamepedia\/images\/3\/3a\/DK_drag_win_02_ru.mp3\/revision\/latest?cb=20170410115054",
+        "title": "Победа!"
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_ru_gamepedia\/images\/6\/64\/DK_dragon_win_02_ru.mp3\/revision\/latest?cb=20170410113402",
+        "isArcane": true,
+        "title": "Победа!"
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_ru_gamepedia\/images\/d\/dc\/DK_drag_win_03_ru.mp3\/revision\/latest?cb=20170410115059",
+        "title": "Дракон получил своё!"
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_ru_gamepedia\/images\/8\/84\/DK_dragon_win_03_ru.mp3\/revision\/latest?cb=20170410113407",
+        "isArcane": true,
+        "title": "Дракон получил своё!"
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_ru_gamepedia\/images\/1\/1b\/DK_drag_lose_01_ru.mp3\/revision\/latest?cb=20170410114424",
+        "title": "Нет!"
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_ru_gamepedia\/images\/a\/a5\/DK_dragon_lose_01_ru.mp3\/revision\/latest?cb=20170410120125",
+        "isArcane": true,
+        "title": "Нет!"
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_ru_gamepedia\/images\/a\/a3\/DK_drag_lose_02_ru.mp3\/revision\/latest?cb=20170410114429",
+        "title": "Поражение."
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_ru_gamepedia\/images\/3\/3c\/DK_dragon_lose_02_ru.mp3\/revision\/latest?cb=20170410120130",
+        "isArcane": true,
+        "title": "Поражение."
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_ru_gamepedia\/images\/6\/6f\/DK_drag_lose_03_ru.mp3\/revision\/latest?cb=20170410114434",
+        "title": "Огонь затух."
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_ru_gamepedia\/images\/b\/bc\/DK_dragon_lose_03_ru.mp3\/revision\/latest?cb=20170410120136",
+        "isArcane": true,
+        "title": "Огонь затух."
+      }
+    ],
+    "category": "Окончание матча"
+  },
+  {
+    "responses": [
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_ru_gamepedia\/images\/5\/5e\/DK_drag_happy_05_ru.mp3\/revision\/latest?cb=20170410113951",
+        "title": "Ха-а, ха-ха."
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_ru_gamepedia\/images\/9\/9b\/DK_dragon_happy_05_ru.mp3\/revision\/latest?cb=20170410115651",
+        "isArcane": true,
+        "title": "Ха-а, ха-ха."
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_ru_gamepedia\/images\/2\/2d\/DK_dragon_laugh_03_ru.mp3\/revision\/latest?cb=20170410120001",
+        "title": "Ха-а-ха-ха-ха-ха-ха-ха."
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_ru_gamepedia\/images\/4\/44\/DK_drag_laugh_03_ru.mp3\/revision\/latest?cb=20170410114259",
+        "isArcane": true,
+        "title": "Ха-а-ха-ха-ха-ха-ха-ха."
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_ru_gamepedia\/images\/4\/43\/DK_drag_laugh_05_ru.mp3\/revision\/latest?cb=20170410114309",
+        "title": "Ха-ха-ха-ха-ха-ха-ха."
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_ru_gamepedia\/images\/7\/78\/DK_dragon_laugh_05_ru.mp3\/revision\/latest?cb=20170410120010",
+        "isArcane": true,
+        "title": "Ха-ха-ха-ха-ха-ха-ха."
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_ru_gamepedia\/images\/b\/b9\/DK_drag_laugh_04_ru.mp3\/revision\/latest?cb=20170410114304",
+        "title": "Хе-хе-хе-хе-ха-ха-ха-ха-ха."
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_ru_gamepedia\/images\/4\/4e\/DK_dragon_laugh_04_ru.mp3\/revision\/latest?cb=20170410120005",
+        "isArcane": true,
+        "title": "Хе-хе-хе-хе-ха-ха-ха-ха-ха."
+      }
+    ],
+    "category": "Выпадение косметического предмета"
+  },
+  {
+    "responses": [
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_ru_gamepedia\/images\/0\/0e\/DK_drag_ability_failure_01_ru.mp3\/revision\/latest?cb=20170410113440",
+        "title": "Неудача!"
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_ru_gamepedia\/images\/d\/d2\/DK_dragon_ability_failure_01_ru.mp3\/revision\/latest?cb=20170410115135",
+        "isArcane": true,
+        "title": "Неудача!"
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_ru_gamepedia\/images\/5\/57\/DK_drag_ability_failure_02_ru.mp3\/revision\/latest?cb=20170410113445",
+        "title": "Ах-х."
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_ru_gamepedia\/images\/0\/0b\/DK_dragon_ability_failure_02_ru.mp3\/revision\/latest?cb=20170410115140",
+        "isArcane": true,
+        "title": "Ах-х."
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_ru_gamepedia\/images\/0\/05\/DK_drag_ability_failure_03_ru.mp3\/revision\/latest?cb=20170410113449",
+        "title": "А-а-а-х-х."
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_ru_gamepedia\/images\/6\/63\/DK_dragon_ability_failure_03_ru.mp3\/revision\/latest?cb=20170410115145",
+        "isArcane": true,
+        "title": "А-а-а-х-х."
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_ru_gamepedia\/images\/0\/08\/DK_drag_shitwiz_01_ru.mp3\/revision\/latest?cb=20170410114943",
+        "title": "Чёртов волшебник!"
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_ru_gamepedia\/images\/8\/87\/DK_dragon_shitwiz_01_ru.mp3\/revision\/latest?cb=20170410120631",
+        "isArcane": true,
+        "title": "Чёртов волшебник!"
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_ru_gamepedia\/images\/9\/98\/DK_drag_crumwiz_01_ru.mp3\/revision\/latest?cb=20170410113713",
+        "title": "Глупый волшебник!"
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_ru_gamepedia\/images\/b\/bc\/DK_dragon_crumwiz_01_ru.mp3\/revision\/latest?cb=20170410115417",
+        "isArcane": true,
+        "title": "Глупый волшебник!"
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_ru_gamepedia\/images\/f\/ff\/DK_drag_anger_01_ru.mp3\/revision\/latest?cb=20170410113459",
+        "title": "Э-х-х-х."
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_ru_gamepedia\/images\/4\/4e\/DK_dragon_anger_01_ru.mp3\/revision\/latest?cb=20170410115155",
+        "isArcane": true,
+        "title": "Э-х-х-х."
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_ru_gamepedia\/images\/6\/69\/DK_drag_anger_02_ru.mp3\/revision\/latest?cb=20170410113505",
+        "title": "О-а."
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_ru_gamepedia\/images\/7\/7b\/DK_dragon_anger_02_ru.mp3\/revision\/latest?cb=20170410115200",
+        "isArcane": true,
+        "title": "О-а."
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_ru_gamepedia\/images\/3\/3d\/DK_drag_anger_03_ru.mp3\/revision\/latest?cb=20170410113510",
+        "title": "Ба-а."
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_ru_gamepedia\/images\/0\/05\/DK_dragon_anger_03_ru.mp3\/revision\/latest?cb=20170410115205",
+        "isArcane": true,
+        "title": "Ба-а."
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_ru_gamepedia\/images\/d\/d6\/DK_drag_anger_04_ru.mp3\/revision\/latest?cb=20170410113514",
+        "title": "Арх-х!"
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_ru_gamepedia\/images\/7\/7f\/DK_dragon_anger_04_ru.mp3\/revision\/latest?cb=20170410115211",
+        "isArcane": true,
+        "title": "Арх-х!"
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_ru_gamepedia\/images\/5\/58\/DK_drag_anger_05_ru.mp3\/revision\/latest?cb=20170410113519",
+        "title": "Оах."
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_ru_gamepedia\/images\/2\/2a\/DK_dragon_anger_05_ru.mp3\/revision\/latest?cb=20170410115216",
+        "isArcane": true,
+        "title": "Оах."
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_ru_gamepedia\/images\/9\/90\/DK_drag_anger_06_ru.mp3\/revision\/latest?cb=20170410113524",
+        "title": "Ух."
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_ru_gamepedia\/images\/0\/02\/DK_dragon_anger_06_ru.mp3\/revision\/latest?cb=20170410115221",
+        "isArcane": true,
+        "title": "Ух."
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_ru_gamepedia\/images\/d\/d6\/DK_drag_happy_01_ru.mp3\/revision\/latest?cb=20170410113930",
+        "title": "Ха-а-ах."
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_ru_gamepedia\/images\/3\/32\/DK_dragon_happy_01_ru.mp3\/revision\/latest?cb=20170410115631",
+        "isArcane": true,
+        "title": "Ха-а-ах."
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_ru_gamepedia\/images\/d\/da\/DK_drag_happy_02_ru.mp3\/revision\/latest?cb=20170410113936",
+        "title": "О-о-ох."
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_ru_gamepedia\/images\/7\/7b\/DK_dragon_happy_02_ru.mp3\/revision\/latest?cb=20170410115636",
+        "isArcane": true,
+        "title": "О-о-ох."
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_ru_gamepedia\/images\/c\/c8\/DK_drag_happy_03_ru.mp3\/revision\/latest?cb=20170410113941",
+        "isArcane": true,
+        "title": "О-о-ох."
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_ru_gamepedia\/images\/0\/0d\/DK_dragon_happy_03_ru.mp3\/revision\/latest?cb=20170410115641",
+        "isArcane": true,
+        "title": "О-о-ох."
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_ru_gamepedia\/images\/8\/85\/DK_drag_happy_04_ru.mp3\/revision\/latest?cb=20170410113946",
+        "title": "Хах."
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_ru_gamepedia\/images\/c\/c1\/DK_dragon_happy_04_ru.mp3\/revision\/latest?cb=20170410115646",
+        "isArcane": true,
+        "title": "Хах."
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_ru_gamepedia\/images\/1\/14\/DK_drag_dragonsound_01_ru.mp3\/revision\/latest?cb=20170410113914",
+        "title": "Ух-х-х."
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_ru_gamepedia\/images\/8\/81\/DK_dragon_dragonsound_01_ru.mp3\/revision\/latest?cb=20170410115616",
+        "isArcane": true,
+        "title": "Ух-х-х."
+      }
+    ],
+    "category": "Разное"
+  }
+]

@@ -1,0 +1,19 @@
+{
+  "abilities": [],
+  "cost": "1400",
+  "lore": null,
+  "consistFrom": null,
+  "boughtFrom": "Secret Shop",
+  "name": "Platemail",
+  "description": "Thick metal plates that protect the entire upper body. Avoid dropping on feet.",
+  "trivia": null,
+  "upgradeIn": [
+    "Assault Cuirass",
+    "Shiva's Guard",
+    "Lotus Orb"
+  ],
+  "bonuses": [
+    "+10 Armor"
+  ],
+  "tips": null
+}

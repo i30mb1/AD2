@@ -1,0 +1,40 @@
+{
+  "abilities": [
+    {
+      "audioUrl": null,
+      "effects": [
+        "Ability Passive",
+        "Affects Self"
+      ],
+      "notes": [
+        "Stacks additively with other sources of lifesteal and with itself.",
+        "Cannot lifesteal off of wards, buildings and allied units."
+      ],
+      "mana": null,
+      "abilityName": "Lifesteal",
+      "cooldown": null,
+      "description": "Heals the attacker for 15% of attack damage dealt",
+      "params": [
+        "Lifesteal: 15%"
+      ],
+      "itemBehaviour": [],
+      "story": null
+    }
+  ],
+  "cost": "900",
+  "lore": null,
+  "consistFrom": null,
+  "boughtFrom": "Miscellaneous",
+  "name": "Morbid Mask",
+  "description": "A mask that drains the energy of those caught in its gaze.",
+  "trivia": [
+    "In DotA, this item was called Mask of Death."
+  ],
+  "upgradeIn": [
+    "Satanic",
+    "Mask of Madness",
+    "Vladmir's Offering"
+  ],
+  "bonuses": null,
+  "tips": null
+}

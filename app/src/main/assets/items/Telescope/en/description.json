@@ -1,0 +1,49 @@
+{
+  "abilities": [
+    {
+      "audioUrl": null,
+      "effects": [
+        "Ability Aura",
+        "Affects Allies"
+      ],
+      "notes": [
+        "The attack range bonus works for ranged units only.",
+        "Affects the cast range of active attack modifiers as well.",
+        "The aura's buff lingers for 0.5 seconds.",
+        "Does not affect invulnerable units.",
+        "The Scan cooldown reduction is granted by the aura, not the item itself. This means using Scan while no one is affected by the aura (i.e. item owner is invulnerable and has no allies nearby), the cooldown is not reduced.",
+        "This means using Scan while no one is affected by the aura (i.e. item owner is invulnerable and has no allies nearby), the cooldown is not reduced.",
+        "Causes the Scan's cooldown to skip the first 105 seconds upon cast.",
+        "The Scan's cooldown gets reduced even when the player who activated it is not affected by the aura, as long as another ally is affected.",
+        "Multiple instances of Prescient Aura do not stack. This means a second Telescope does not reduce the cooldown any further.",
+        "This means a second Telescope does not reduce the cooldown any further."
+      ],
+      "mana": null,
+      "abilityName": "Prescient Aura",
+      "cooldown": null,
+      "description": "Lowers Scan cooldown by 50%. Increases attack and cast range of allies in a 1200 unit radius.",
+      "params": [
+        "Radius: 1200",
+        "Scan Cooldown Reduction: 50%",
+        "Attack Range Bonus (Ranged): 135",
+        "Cast Range Bonus: 135",
+        "Aura Linger Duration: 0.5"
+      ],
+      "itemBehaviour": [],
+      "story": null
+    }
+  ],
+  "additionalInformation": [
+    "Telescopes are fully sharable."
+  ],
+  "cost": "N\/A",
+  "lore": null,
+  "consistFrom": null,
+  "boughtFrom": "Neutral Drop Only",
+  "name": "Telescope",
+  "description": "A handy tool that manages to make close what once was far.",
+  "trivia": null,
+  "upgradeIn": null,
+  "bonuses": null,
+  "tips": null
+}

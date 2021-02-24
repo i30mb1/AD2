@@ -1,0 +1,1641 @@
+[
+  {
+    "responses": [
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/8\/8e\/Vo_brewmaster_brew_spawn_01.mp3\/revision\/latest?cb=20201010183122",
+        "title": "Brewmaster."
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/4\/47\/Vo_brewmaster_brew_spawn_02.mp3\/revision\/latest?cb=20201010183124",
+        "title": "The master arrives."
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/c\/ca\/Vo_brewmaster_brew_spawn_03.mp3\/revision\/latest?cb=20201010183126",
+        "title": "This one's on me."
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/5\/59\/Vo_brewmaster_brew_spawn_04.mp3\/revision\/latest?cb=20201010183127",
+        "title": "I'll drink to that."
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/e\/e1\/Vo_brewmaster_brew_spawn_05.mp3\/revision\/latest?cb=20201010183129",
+        "title": "What kind of pub is this?"
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/9\/98\/Vo_brewmaster_brew_spawn_06.mp3\/revision\/latest?cb=20201010183131",
+        "title": "Were you wanting to see some identification?"
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/f\/f9\/Vo_brewmaster_brew_battlebegins_01.mp3\/revision\/latest?cb=20201010183217",
+        "title": "There's trouble abrewing."
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/2\/27\/Vo_brewmaster_brew_ability_drunkenbrawler_02.mp3\/revision\/latest?cb=20201010183148",
+        "title": "It's brawlin' time."
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/9\/90\/Vo_brewmaster_brew_ability_drunkenbrawler_04.mp3\/revision\/latest?cb=20201010183152",
+        "title": "I fight any thing in the house."
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/7\/7d\/Vo_brewmaster_brew_ability_drunkenhaze_01.mp3\/revision\/latest?cb=20201010183153",
+        "title": "Here's beer in your eye."
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/1\/17\/Vo_brewmaster_brew_level_02.mp3\/revision\/latest?cb=20201010182628",
+        "title": "Raise em high, friends!"
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/1\/15\/Vo_brewmaster_brew_respawn_06.mp3\/revision\/latest?cb=20201010182936",
+        "title": "I'm coming out swinging."
+      }
+    ],
+    "category": "Loadout"
+  },
+  {
+    "responses": [
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/8\/8e\/Vo_brewmaster_brew_spawn_01.mp3\/revision\/latest?cb=20201010183122",
+        "title": "Brewmaster."
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/1\/1e\/Vo_brewmaster_brew_anger_01.mp3\/revision\/latest?cb=20201010182138",
+        "title": "Nerah."
+      }
+    ],
+    "category": "Drafting"
+  },
+  {
+    "responses": [
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/8\/8e\/Vo_brewmaster_brew_spawn_01.mp3\/revision\/latest?cb=20201010183122",
+        "title": "Brewmaster."
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/4\/47\/Vo_brewmaster_brew_spawn_02.mp3\/revision\/latest?cb=20201010183124",
+        "title": "The master arrives."
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/c\/ca\/Vo_brewmaster_brew_spawn_03.mp3\/revision\/latest?cb=20201010183126",
+        "title": "This one's on me."
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/5\/59\/Vo_brewmaster_brew_spawn_04.mp3\/revision\/latest?cb=20201010183127",
+        "title": "I'll drink to that."
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/e\/e1\/Vo_brewmaster_brew_spawn_05.mp3\/revision\/latest?cb=20201010183129",
+        "title": "What kind of pub is this?"
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/9\/98\/Vo_brewmaster_brew_spawn_06.mp3\/revision\/latest?cb=20201010183131",
+        "title": "Were you wanting to see some identification?"
+      }
+    ],
+    "category": "Entering battle"
+  },
+  {
+    "responses": [
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/a\/a6\/Vo_brewmaster_brew_inthebag_01.mp3\/revision\/latest?cb=20201010182405",
+        "title": "This one, my friends, is in the bag, much like myself."
+      }
+    ],
+    "category": "Taunting"
+  },
+  {
+    "responses": [
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/f\/f9\/Vo_brewmaster_brew_battlebegins_01.mp3\/revision\/latest?cb=20201010183217",
+        "title": "There's trouble abrewing."
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/4\/4f\/Vo_brewmaster_brew_ability_drunkenbrawler_01.mp3\/revision\/latest?cb=20201010183146",
+        "title": "Time to brawl."
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/2\/27\/Vo_brewmaster_brew_ability_drunkenbrawler_02.mp3\/revision\/latest?cb=20201010183148",
+        "title": "It's brawlin' time."
+      }
+    ],
+    "category": "Beginning battle"
+  },
+  {
+    "responses": [
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/8\/8e\/Vo_brewmaster_brew_move_01.mp3\/revision\/latest?cb=20201010182704",
+        "title": "Yes."
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/5\/50\/Vo_brewmaster_brew_move_02.mp3\/revision\/latest?cb=20201010182706",
+        "isArcane": true,
+        "title": "Yes."
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/c\/cc\/Vo_brewmaster_brew_move_03.mp3\/revision\/latest?cb=20201010182709",
+        "title": "As good as another."
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/3\/3a\/Vo_brewmaster_brew_move_04.mp3\/revision\/latest?cb=20201010182712",
+        "title": "I suppose."
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/4\/49\/Vo_brewmaster_brew_move_05.mp3\/revision\/latest?cb=20201010182715",
+        "title": "Dah, what's this?"
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/6\/60\/Vo_brewmaster_brew_move_06.mp3\/revision\/latest?cb=20201010182717",
+        "title": "Hic! Hic!"
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/1\/1e\/Vo_brewmaster_brew_move_07.mp3\/revision\/latest?cb=20201010182720",
+        "title": "I barrel along."
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/7\/75\/Vo_brewmaster_brew_move_08.mp3\/revision\/latest?cb=20201010182723",
+        "title": "Just a bit tipsy."
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/f\/f8\/Vo_brewmaster_brew_move_09.mp3\/revision\/latest?cb=20201010182725",
+        "title": "Most assuredly."
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/4\/4b\/Vo_brewmaster_brew_move_10.mp3\/revision\/latest?cb=20201010182728",
+        "title": "What? Over there?"
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/0\/02\/Vo_brewmaster_brew_move_11.mp3\/revision\/latest?cb=20201010182730",
+        "title": "For Yoy and Oyo."
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/6\/62\/Vo_brewmaster_brew_move_12.mp3\/revision\/latest?cb=20201010182732",
+        "title": "The spirits move me."
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/a\/a1\/Vo_brewmaster_brew_move_13.mp3\/revision\/latest?cb=20201010182735",
+        "title": "Onward."
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/e\/ed\/Vo_brewmaster_brew_move_14.mp3\/revision\/latest?cb=20201010182737",
+        "title": "Absolutely.."
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/6\/63\/Vo_brewmaster_brew_move_15.mp3\/revision\/latest?cb=20201010182740",
+        "title": "I'm a bit in my cups at the moment."
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/5\/57\/Vo_brewmaster_brew_move_16.mp3\/revision\/latest?cb=20201010182743",
+        "title": "I trundle on."
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/d\/dd\/Vo_brewmaster_brew_move_17.mp3\/revision\/latest?cb=20201010182746",
+        "title": "In a straight line."
+      }
+    ],
+    "category": "Moving"
+  },
+  {
+    "responses": [
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/2\/29\/Vo_brewmaster_brew_attack_01.mp3\/revision\/latest?cb=20201010182148",
+        "title": "Attack!"
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/7\/79\/Vo_brewmaster_brew_attack_02.mp3\/revision\/latest?cb=20201010182149",
+        "title": "Drink it in!"
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/8\/84\/Vo_brewmaster_brew_attack_03.mp3\/revision\/latest?cb=20201010182151",
+        "title": "Belt one down."
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/7\/71\/Vo_brewmaster_brew_attack_04.mp3\/revision\/latest?cb=20201010182153",
+        "title": "Punch drunk."
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/a\/a3\/Vo_brewmaster_brew_attack_05.mp3\/revision\/latest?cb=20201010182154",
+        "title": "Your comeuppance."
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/6\/6f\/Vo_brewmaster_brew_attack_06.mp3\/revision\/latest?cb=20201010182156",
+        "title": "Dregs!"
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/9\/9a\/Vo_brewmaster_brew_attack_07.mp3\/revision\/latest?cb=20201010182158",
+        "title": "Out my way!"
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/d\/d7\/Vo_brewmaster_brew_attack_08.mp3\/revision\/latest?cb=20201010182159",
+        "title": "Put up a fight."
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/8\/80\/Vo_brewmaster_brew_attack_09.mp3\/revision\/latest?cb=20201010182201",
+        "title": "You\u2026still there?"
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/b\/b8\/Vo_brewmaster_brew_attack_10.mp3\/revision\/latest?cb=20201010183205",
+        "title": "One for luck."
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/4\/41\/Vo_brewmaster_brew_attack_11.mp3\/revision\/latest?cb=20201010182205",
+        "title": "Bah!"
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/a\/ab\/Vo_brewmaster_brew_attack_12.mp3\/revision\/latest?cb=20201010183208",
+        "title": "Step aside or fall dead."
+      }
+    ],
+    "category": "Attacking"
+  },
+  {
+    "responses": [
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/3\/39\/Vo_brewmaster_brew_cast_01.mp3\/revision\/latest?cb=20201010183210",
+        "title": "Barreling in!"
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/6\/62\/Vo_brewmaster_brew_cast_02.mp3\/revision\/latest?cb=20201010182219",
+        "title": "Oh ho, now it's on."
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/2\/25\/Vo_brewmaster_brew_cast_03.mp3\/revision\/latest?cb=20201010182221",
+        "title": "Now you're in for it!"
+      }
+    ],
+    "category": "Ordering a spell cast"
+  },
+  {
+    "responses": [
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/5\/51\/Vo_brewmaster_brew_ability_thunderclap_01.mp3\/revision\/latest?cb=20201010182130",
+        "title": "It's a kegger!"
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/c\/ce\/Vo_brewmaster_brew_ability_thunderclap_02.mp3\/revision\/latest?cb=20201010182132",
+        "title": "A barrel of laughs!"
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/6\/6d\/Vo_brewmaster_brew_ability_thunderclap_03.mp3\/revision\/latest?cb=20201010182133",
+        "title": "Hiya!"
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/4\/4f\/Vo_brewmaster_brew_ability_primalsplit_02.mp3\/revision\/latest?cb=20201010182051",
+        "title": "Woah!"
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/1\/17\/Vo_brewmaster_brew_ability_primalsplit_03.mp3\/revision\/latest?cb=20201010182054",
+        "title": "Ooya!"
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/7\/7d\/Vo_brewmaster_brew_ability_drunkenhaze_01.mp3\/revision\/latest?cb=20201010183153",
+        "title": "Here's beer in your eye."
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/9\/9d\/Vo_brewmaster_brew_ability_drunkenhaze_02.mp3\/revision\/latest?cb=20201010183155",
+        "title": "Drinks are on you!"
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/a\/a0\/Vo_brewmaster_brew_ability_drunkenhaze_03.mp3\/revision\/latest?cb=20201010183158",
+        "title": "Bottoms up!"
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/9\/9f\/Vo_brewmaster_brew_ability_drunkenhaze_04.mp3\/revision\/latest?cb=20201010183200",
+        "title": "Have another, I insist."
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/7\/7f\/Vo_brewmaster_brew_ability_drunkenhaze_05.mp3\/revision\/latest?cb=20201010183202",
+        "title": "Just a mite under the influence."
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/e\/e4\/Vo_brewmaster_brew_ability_drunkenhaze_06.mp3\/revision\/latest?cb=20201010183204",
+        "title": "How many times are you gonna miss?"
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/5\/5d\/Vo_brewmaster_brew_ability_drunkenhaze_07.mp3\/revision\/latest?cb=20201010182035",
+        "title": "Can't you hit anything?"
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/8\/8c\/Vo_brewmaster_brew_ability_drunkenhaze_08.mp3\/revision\/latest?cb=20201010182038",
+        "title": "Having trouble seeing straight?"
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/f\/fe\/Vo_brewmaster_brew_ability_drunkenbrawler_03.mp3\/revision\/latest?cb=20201010183150",
+        "title": "Why I'll fight ya."
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/b\/b0\/Vo_brewmaster_brew_ability_primalsplit_01.mp3\/revision\/latest?cb=20201010182048",
+        "title": "Manneh."
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/a\/a4\/Vo_brewmaster_brew_ability_primalsplit_04.mp3\/revision\/latest?cb=20201010182056",
+        "title": "By Yoy."
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/1\/1c\/Vo_brewmaster_brew_ability_primalsplit_05.mp3\/revision\/latest?cb=20201010182059",
+        "title": "By Oyo."
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/5\/54\/Vo_brewmaster_brew_ability_primalsplit_06.mp3\/revision\/latest?cb=20201010182102",
+        "title": "Primal split!"
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/4\/4e\/Vo_brewmaster_brew_ability_primalsplit_07.mp3\/revision\/latest?cb=20201010182104",
+        "title": "I'm seeing triple!"
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/9\/98\/Vo_brewmaster_brew_ability_primalsplit_08.mp3\/revision\/latest?cb=20201010182107",
+        "title": "Three of me!"
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/2\/28\/Vo_brewmaster_brew_ability_primalsplit_09.mp3\/revision\/latest?cb=20201010182110",
+        "title": "Anytime you're ready guys."
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/3\/31\/Vo_brewmaster_brew_ability_primalsplit_13.mp3\/revision\/latest?cb=20201010182120",
+        "title": "Ah, my boozin' buddies."
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/c\/ce\/Vo_brewmaster_brew_ability_primalsplit_14.mp3\/revision\/latest?cb=20201010182123",
+        "title": "Jump in any time guys. Guys!"
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/9\/9d\/Vo_brewmaster_brew_ability_primalsplit_10.mp3\/revision\/latest?cb=20201010182112",
+        "title": "I love you guys."
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/1\/16\/Vo_brewmaster_brew_ability_primalsplit_11.mp3\/revision\/latest?cb=20201010182115",
+        "title": "Ah, I love you guys."
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/9\/92\/Vo_brewmaster_brew_ability_primalsplit_12.mp3\/revision\/latest?cb=20201010182118",
+        "title": "Three cheers!"
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/0\/09\/Vo_brewmaster_brew_ability_primalsplit_15.mp3\/revision\/latest?cb=20201010182125",
+        "title": "I'll take it from here."
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/0\/0a\/Vo_brewmaster_brew_ability_primalsplit_16.mp3\/revision\/latest?cb=20201010182126",
+        "title": "Back in the action."
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/d\/dd\/Vo_brewmaster_brew_ability_primalsplit_17.mp3\/revision\/latest?cb=20201010182128",
+        "title": "You guys go get more booze."
+      }
+    ],
+    "category": "Abilities"
+  },
+  {
+    "responses": [
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/d\/db\/Vo_brewmaster_brew_level_01.mp3\/revision\/latest?cb=20201010182626",
+        "title": "My cup runneth over."
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/1\/17\/Vo_brewmaster_brew_level_02.mp3\/revision\/latest?cb=20201010182628",
+        "title": "Raise em high, friends!"
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/d\/d2\/Vo_brewmaster_brew_level_03.mp3\/revision\/latest?cb=20201010182630",
+        "title": "Spirits rising!"
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/6\/63\/Vo_brewmaster_brew_level_04.mp3\/revision\/latest?cb=20201010182632",
+        "title": "Top me off!"
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/8\/8b\/Vo_brewmaster_brew_level_05.mp3\/revision\/latest?cb=20201010182634",
+        "title": "This calls for a drinking song!"
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/6\/66\/Vo_brewmaster_brew_level_06.mp3\/revision\/latest?cb=20201010182635",
+        "title": "Let's celebrate with another round."
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/c\/c2\/Vo_brewmaster_brew_level_07.mp3\/revision\/latest?cb=20201010182638",
+        "title": "Now I'm feeling it."
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/a\/a7\/Vo_brewmaster_brew_level_08.mp3\/revision\/latest?cb=20201010182641",
+        "title": "Oh, so bubbly!"
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/f\/fb\/Vo_brewmaster_brew_level_09.mp3\/revision\/latest?cb=20201010182644",
+        "title": "Liquored up!"
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/c\/cb\/Vo_brewmaster_brew_level_10.mp3\/revision\/latest?cb=20201010182646",
+        "title": "That goes down smooth."
+      }
+    ],
+    "category": "Leveling up"
+  },
+  {
+    "responses": [
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/4\/4c\/Vo_brewmaster_brew_kill_01.mp3\/revision\/latest?cb=20201010182443",
+        "title": "Sorry friend, just trying to help."
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/a\/ab\/Vo_brewmaster_brew_kill_02.mp3\/revision\/latest?cb=20201010182446",
+        "title": "What happened to you?"
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/6\/67\/Vo_brewmaster_brew_kill_03.mp3\/revision\/latest?cb=20201010182449",
+        "title": "What's wrong? Can't hold your liquor? . . Hello?"
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/c\/cc\/Vo_brewmaster_brew_kill_04.mp3\/revision\/latest?cb=20201010182452",
+        "title": "I hoist a brew in your honor."
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/b\/b3\/Vo_brewmaster_brew_kill_05.mp3\/revision\/latest?cb=20201010182455",
+        "title": "Why are you so fragile?"
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/d\/d5\/Vo_brewmaster_brew_kill_06.mp3\/revision\/latest?cb=20201010182457",
+        "title": "Did I do that?"
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/4\/44\/Vo_brewmaster_brew_kill_07.mp3\/revision\/latest?cb=20201010182500",
+        "title": "What? That killed you?"
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/7\/74\/Vo_brewmaster_brew_kill_08.mp3\/revision\/latest?cb=20201010182503",
+        "title": "They break so easily."
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/f\/f8\/Vo_brewmaster_brew_kill_09.mp3\/revision\/latest?cb=20201010182506",
+        "title": "I'll drink to your memory."
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/4\/4e\/Vo_brewmaster_brew_kill_10.mp3\/revision\/latest?cb=20201010182509",
+        "title": "You should have come to me for instruction."
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/0\/03\/Vo_brewmaster_brew_kill_11.mp3\/revision\/latest?cb=20201010182511",
+        "title": "That wasn't even a strong one."
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/f\/f8\/Vo_brewmaster_brew_kill_12.mp3\/revision\/latest?cb=20201010182513",
+        "title": "Cheers!"
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/e\/e9\/Vo_brewmaster_brew_laugh_01.mp3\/revision\/latest?cb=20201010182545",
+        "title": "Hehehehahah!"
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/2\/26\/Vo_brewmaster_brew_laugh_02.mp3\/revision\/latest?cb=20201010182546",
+        "title": "Hehahahahaheh."
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/2\/25\/Vo_brewmaster_brew_laugh_03.mp3\/revision\/latest?cb=20201010182548",
+        "title": "Hehehehehhe oops."
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/0\/0d\/Vo_brewmaster_brew_laugh_04.mp3\/revision\/latest?cb=20201010182550",
+        "title": "Hehehehahah!"
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/e\/e7\/Vo_brewmaster_brew_laugh_05.mp3\/revision\/latest?cb=20201010182551",
+        "title": "Heheaha!"
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/4\/4e\/Vo_brewmaster_brew_laugh_06.mp3\/revision\/latest?cb=20201010182553",
+        "title": "Hehahaha!"
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/2\/2c\/Vo_brewmaster_brew_laugh_10.mp3\/revision\/latest?cb=20201010182600",
+        "title": "Haahahahahaahha."
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/e\/ef\/Vo_brewmaster_brew_laugh_11.mp3\/revision\/latest?cb=20201010182601",
+        "title": "Heheheh."
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/f\/f9\/Vo_brewmaster_brew_laugh_12.mp3\/revision\/latest?cb=20201010182603",
+        "title": "Ohohohoho."
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/7\/7a\/Vo_brewmaster_brew_laugh_13.mp3\/revision\/latest?cb=20201010182605",
+        "title": "Hehah!"
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/9\/9c\/Vo_brewmaster_brew_laugh_14.mp3\/revision\/latest?cb=20201010182606",
+        "title": "Hah!"
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/c\/c7\/Vo_brewmaster_brew_laugh_15.mp3\/revision\/latest?cb=20201010182609",
+        "title": "Hhohah!"
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/6\/67\/Vo_brewmaster_brew_laugh_16.mp3\/revision\/latest?cb=20201010182610",
+        "title": "Hahahehehahah."
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/8\/8b\/Vo_brewmaster_brew_laugh_17.mp3\/revision\/latest?cb=20201010182612",
+        "title": "Oohohouhuho."
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/8\/80\/Vo_brewmaster_brew_laugh_18.mp3\/revision\/latest?cb=20201010182614",
+        "title": "Hahahahahugheheh."
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/6\/6d\/Vo_brewmaster_brew_laugh_19.mp3\/revision\/latest?cb=20201010182616",
+        "title": "Hahahahahaha."
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/1\/1f\/Vo_brewmaster_brew_laugh_20.mp3\/revision\/latest?cb=20201010182617",
+        "title": "Hehehem."
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/2\/26\/Vo_brewmaster_brew_laugh_21.mp3\/revision\/latest?cb=20201010182619",
+        "title": "Heheheh."
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/0\/03\/Vo_brewmaster_brew_laugh_22.mp3\/revision\/latest?cb=20201010182621",
+        "title": "Heheheheheh."
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/1\/1e\/Vo_brewmaster_brew_laugh_23.mp3\/revision\/latest?cb=20201010182623",
+        "title": "Hemehehm."
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/b\/bd\/Vo_brewmaster_brew_laugh_24.mp3\/revision\/latest?cb=20201010182625",
+        "title": "Yehehehehhehehehheh."
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/7\/7b\/Vo_brewmaster_brew_rival_01.mp3\/revision\/latest?cb=20201010182953",
+        "title": "Nothing wrong with water a bit of hops and malt couldn't fix.",
+        "icons": [
+          "heroes\/Morphling\/minimap.png"
+        ]
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/1\/1d\/Vo_brewmaster_brew_rival_02.mp3\/revision\/latest?cb=20201010182956",
+        "title": "What you need, Morphling, is a nice foamy head.",
+        "icons": [
+          "heroes\/Morphling\/minimap.png"
+        ]
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/e\/ea\/Vo_brewmaster_brew_rival_03.mp3\/revision\/latest?cb=20201010182959",
+        "title": "Morphling, you're making me thirsty.",
+        "icons": [
+          "heroes\/Morphling\/minimap.png"
+        ]
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/a\/a5\/Vo_brewmaster_brew_rival_04.mp3\/revision\/latest?cb=20201010183002",
+        "title": "Water water everywhere, but I wouldn't drink you.",
+        "icons": [
+          "heroes\/Morphling\/minimap.png"
+        ]
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/c\/c5\/Vo_brewmaster_brew_rival_05.mp3\/revision\/latest?cb=20201010183004",
+        "title": "Water\u2026yick.",
+        "icons": [
+          "heroes\/Morphling\/minimap.png"
+        ]
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/9\/9d\/Vo_brewmaster_brew_rival_06.mp3\/revision\/latest?cb=20201010183007",
+        "title": "Slardar, you drink like a fish.",
+        "icons": [
+          "heroes\/Slardar\/minimap.png"
+        ]
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/d\/d3\/Vo_brewmaster_brew_rival_07.mp3\/revision\/latest?cb=20201010183009",
+        "title": "I've no use for spirits of the non-drinkable variety.",
+        "icons": [
+          "heroes\/Vengeful Spirit\/minimap.png"
+        ]
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/a\/a9\/Vo_brewmaster_brew_rival_08.mp3\/revision\/latest?cb=20201010183011",
+        "title": "I prefer my spirits in liquid form.",
+        "icons": [
+          "heroes\/Ancient Apparition\/minimap.png"
+        ]
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/b\/be\/Vo_brewmaster_brew_rival_20.mp3\/revision\/latest?cb=20201010183046",
+        "title": "Time for a cold one.",
+        "icons": [
+          "heroes\/Ancient Apparition\/minimap.png"
+        ]
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/7\/7e\/Vo_brewmaster_brew_rival_09.mp3\/revision\/latest?cb=20201010183014",
+        "title": "Spirits, eh? Show me some proof. Heheheh, that's a pun.",
+        "icons": [
+          "heroes\/Spectre\/minimap.png"
+        ]
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/2\/22\/Vo_brewmaster_brew_rival_10.mp3\/revision\/latest?cb=20201010183017",
+        "title": "Who's hammered now, huh? Heheh.",
+        "icons": [
+          "heroes\/Omniknight\/minimap.png"
+        ]
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/8\/80\/Vo_brewmaster_brew_rival_11.mp3\/revision\/latest?cb=20201010183020",
+        "title": "How about a little hair of the dog?",
+        "icons": [
+          "heroes\/Lycan\/minimap.png"
+        ]
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/b\/b8\/Vo_brewmaster_brew_rival_12.mp3\/revision\/latest?cb=20201010183023",
+        "title": "Your blood alcohol level was insufficient.",
+        "icons": [
+          "heroes\/Bloodseeker\/minimap.png"
+        ]
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/1\/17\/Vo_brewmaster_brew_rival_14.mp3\/revision\/latest?cb=20201010183028",
+        "title": "You can buy the next round.",
+        "icons": [
+          "heroes\/Kunkka\/minimap.png"
+        ]
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/0\/04\/Vo_brewmaster_brew_rival_15.mp3\/revision\/latest?cb=20201010183031",
+        "title": "Rum is for sissies.",
+        "icons": [
+          "heroes\/Kunkka\/minimap.png"
+        ]
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/c\/c8\/Vo_brewmaster_brew_rival_17.mp3\/revision\/latest?cb=20201010183037",
+        "title": "I drank you under the table, and the ground.",
+        "icons": [
+          "heroes\/Kunkka\/minimap.png"
+        ]
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/f\/f6\/Vo_brewmaster_brew_rival_16.mp3\/revision\/latest?cb=20201010183034",
+        "title": "Tide, I think you're the only one here who drinks more than I do.",
+        "icons": [
+          "heroes\/Tidehunter\/minimap.png"
+        ]
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/a\/ad\/Vo_brewmaster_brew_rival_22.mp3\/revision\/latest?cb=20201010183051",
+        "title": "Our ancestors welcome you home, cousin.",
+        "icons": [
+          "heroes\/Storm Spirit\/minimap.png"
+        ]
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/c\/c8\/Vo_brewmaster_brew_rival_23.mp3\/revision\/latest?cb=20201010183053",
+        "title": "The wailing mountains will grieve your name tonight, my cousin.",
+        "icons": [
+          "heroes\/Storm Spirit\/minimap.png"
+        ]
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/f\/f3\/Vo_brewmaster_brew_rival_25.mp3\/revision\/latest?cb=20201010183059",
+        "title": "Your ember may burn out, but your spirit returns to our ancestors.",
+        "icons": [
+          "heroes\/Ember Spirit\/minimap.png"
+        ]
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/c\/ca\/Vo_brewmaster_brew_rival_26.mp3\/revision\/latest?cb=20201010183102",
+        "title": "You rejoin the spirit plane.",
+        "icons": [
+          "heroes\/Storm Spirit\/minimap.png",
+          "heroes\/Ember Spirit\/minimap.png",
+          "heroes\/Earth Spirit\/minimap.png"
+        ]
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/9\/9d\/Vo_brewmaster_brew_rival_28.mp3\/revision\/latest?cb=20201010183107",
+        "title": "That knocked you off your high horse.",
+        "icons": [
+          "heroes\/Chaos Knight\/minimap.png"
+        ]
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/3\/39\/Vo_brewmaster_brew_rival_29.mp3\/revision\/latest?cb=20201010183110",
+        "title": "I'll use your helmet for a chalice.",
+        "icons": [
+          "heroes\/Chaos Knight\/minimap.png"
+        ]
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/8\/83\/Vo_brewmaster_brew_rival_31.mp3\/revision\/latest?cb=20201010183115",
+        "title": "Teetotalled ya!",
+        "icons": [
+          "heroes\/Anti-Mage\/minimap.png"
+        ]
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/8\/84\/Vo_brewmaster_brew_firstblood_01.mp3\/revision\/latest?cb=20201010182316",
+        "title": "Shall we call this off and have a friendly round?"
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/a\/a6\/Vo_brewmaster_brew_firstblood_02.mp3\/revision\/latest?cb=20201010182319",
+        "title": "First blood. Well, that was quick."
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/6\/64\/Vo_brewmaster_brew_firstblood_03.mp3\/revision\/latest?cb=20201010182322",
+        "title": "First blood! I'll drink to that."
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/a\/af\/Vo_brewmaster_brew_firstblood_04.mp3\/revision\/latest?cb=20201010182324",
+        "title": "Who is that? Show yourself!"
+      }
+    ],
+    "category": "Killing an enemy"
+  },
+  {
+    "responses": [
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/a\/a2\/Vo_brewmaster_brew_ally_01.mp3\/revision\/latest?cb=20201010182136",
+        "title": "Let's raise a cup before battle!",
+        "icons": [
+          "heroes\/Tusk\/minimap.png"
+        ]
+      }
+    ],
+    "category": "Meeting an ally"
+  },
+  {
+    "responses": [
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/d\/db\/Vo_brewmaster_brew_lasthit_01.mp3\/revision\/latest?cb=20201010182524",
+        "title": "Gold for my tab."
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/0\/02\/Vo_brewmaster_brew_lasthit_02.mp3\/revision\/latest?cb=20201010182527",
+        "title": "Punch drunk."
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/1\/11\/Vo_brewmaster_brew_lasthit_03.mp3\/revision\/latest?cb=20201010182530",
+        "title": "Bottom of the barrel."
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/e\/ea\/Vo_brewmaster_brew_lasthit_04.mp3\/revision\/latest?cb=20201010182532",
+        "title": "Down the hatch."
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/8\/8a\/Vo_brewmaster_brew_lasthit_05.mp3\/revision\/latest?cb=20201010182535",
+        "title": "You're buying."
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/7\/7e\/Vo_brewmaster_brew_lasthit_06.mp3\/revision\/latest?cb=20201010182538",
+        "title": "You forgot your gold."
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/0\/0e\/Vo_brewmaster_brew_lasthit_07.mp3\/revision\/latest?cb=20201010182539",
+        "title": "Eh he heh heh."
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/9\/9e\/Vo_brewmaster_brew_lasthit_08.mp3\/revision\/latest?cb=20201010182541",
+        "title": "Hic uh, heh eh eh."
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/b\/b5\/Vo_brewmaster_brew_lasthit_09.mp3\/revision\/latest?cb=20201010182543",
+        "title": "Eh he heh heh he eh."
+      }
+    ],
+    "category": "Last hitting"
+  },
+  {
+    "responses": [
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/6\/67\/Vo_brewmaster_brew_deny_01.mp3\/revision\/latest?cb=20201010182238",
+        "title": "Denied."
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/7\/75\/Vo_brewmaster_brew_deny_02.mp3\/revision\/latest?cb=20201010182240",
+        "title": "Uh uh."
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/a\/a8\/Vo_brewmaster_brew_deny_03.mp3\/revision\/latest?cb=20201010182244",
+        "isArcane": true,
+        "title": "Uh uh."
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/b\/b3\/Vo_brewmaster_brew_deny_04.mp3\/revision\/latest?cb=20201010182245",
+        "title": "Not so fast."
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/6\/6f\/Vo_brewmaster_brew_deny_05.mp3\/revision\/latest?cb=20201010182247",
+        "isArcane": true,
+        "title": "Not so fast."
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/b\/b0\/Vo_brewmaster_brew_deny_06.mp3\/revision\/latest?cb=20201010182250",
+        "title": "Too slow."
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/b\/b6\/Vo_brewmaster_brew_deny_07.mp3\/revision\/latest?cb=20201010182253",
+        "title": "Beat you to it."
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/d\/d7\/Vo_brewmaster_brew_deny_08.mp3\/revision\/latest?cb=20201010182255",
+        "isArcane": true,
+        "title": "Beat you to it."
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/4\/4c\/Vo_brewmaster_brew_deny_09.mp3\/revision\/latest?cb=20201010182257",
+        "title": "Denied."
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/a\/ab\/Vo_brewmaster_brew_deny_10.mp3\/revision\/latest?cb=20201010182300",
+        "isArcane": true,
+        "title": "Denied."
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/4\/4e\/Vo_brewmaster_brew_deny_11.mp3\/revision\/latest?cb=20201010182303",
+        "title": "Ah ah hic\u2026ah."
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/5\/54\/Vo_brewmaster_brew_deny_12.mp3\/revision\/latest?cb=20201010182306",
+        "title": "Hic, I\u2026I don't think so."
+      }
+    ],
+    "category": "Denying"
+  },
+  {
+    "responses": [
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/d\/d8\/Vo_brewmaster_brew_purch_01.mp3\/revision\/latest?cb=20201010182857",
+        "title": "Worth its weight in gold."
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/f\/fe\/Vo_brewmaster_brew_purch_02.mp3\/revision\/latest?cb=20201010182900",
+        "title": "Finally."
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/c\/c1\/Vo_brewmaster_brew_purch_03.mp3\/revision\/latest?cb=20201010182903",
+        "title": "Now balance will be achieved."
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/c\/c6\/Vo_brewmaster_brew_blink_01.mp3\/revision\/latest?cb=20201010183219",
+        "title": "I'll use the pointy end.",
+        "icons": [
+          "items\/Blink Dagger\/full.png"
+        ]
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/8\/8b\/Vo_brewmaster_brew_blink_02.mp3\/revision\/latest?cb=20201010182208",
+        "title": "Blink Stagger!",
+        "icons": [
+          "items\/Blink Dagger\/full.png"
+        ]
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/0\/01\/Vo_brewmaster_brew_blink_03.mp3\/revision\/latest?cb=20201010182211",
+        "title": "Blink dagger, blink stagger!",
+        "icons": [
+          "items\/Blink Dagger\/full.png"
+        ]
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/f\/f5\/Vo_brewmaster_brew_scepter_01.mp3\/revision\/latest?cb=20201010183117",
+        "title": "Oh, scepter!",
+        "icons": [
+          "items\/Aghanim's Scepter\/full.png"
+        ]
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/9\/96\/Vo_brewmaster_brew_scepter_02.mp3\/revision\/latest?cb=20201010183119",
+        "title": "Exceptional!",
+        "icons": [
+          "items\/Aghanim's Scepter\/full.png"
+        ]
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/f\/f7\/Vo_brewmaster_brew_item_01.mp3\/revision\/latest?cb=20201010182413",
+        "title": "A bottle. Now we're talking!",
+        "icons": [
+          "items\/Bottle\/full.png"
+        ]
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/c\/c9\/Vo_brewmaster_brew_item_02.mp3\/revision\/latest?cb=20201010182415",
+        "title": "Battle Fury!",
+        "icons": [
+          "items\/Battle Fury\/full.png"
+        ]
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/4\/42\/Vo_brewmaster_brew_item_03.mp3\/revision\/latest?cb=20201010182418",
+        "title": "Heart of Tarrasque.",
+        "icons": [
+          "items\/Heart of Tarrasque\/full.png"
+        ]
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/7\/74\/Vo_brewmaster_brew_item_04.mp3\/revision\/latest?cb=20201010182421",
+        "title": "Satanic!",
+        "icons": [
+          "items\/Satanic\/full.png"
+        ]
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/2\/28\/Vo_brewmaster_brew_item_05.mp3\/revision\/latest?cb=20201010182423",
+        "title": "Assault Cuirass!",
+        "icons": [
+          "items\/Assault Cuirass\/full.png"
+        ]
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/8\/8c\/Vo_brewmaster_brew_item_06.mp3\/revision\/latest?cb=20201010182426",
+        "title": "Monkey King Bar!",
+        "icons": [
+          "items\/Monkey King Bar\/full.png"
+        ]
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/2\/2a\/Vo_brewmaster_brew_item_07.mp3\/revision\/latest?cb=20201010182429",
+        "title": "Sange and Yasha.",
+        "icons": [
+          "items\/Sange and Yasha\/full.png"
+        ]
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/6\/6c\/Vo_brewmaster_brew_item_08.mp3\/revision\/latest?cb=20201010182432",
+        "title": "Necronamacon, or something.",
+        "icons": [
+          "items\/Necronomicon\/full.png"
+        ]
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/7\/7a\/Vo_brewmaster_brew_item_09.mp3\/revision\/latest?cb=20201010182435",
+        "title": "Necronomicon.",
+        "icons": [
+          "items\/Necronomicon\/full.png"
+        ]
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/0\/0f\/Vo_brewmaster_brew_item_10.mp3\/revision\/latest?cb=20201010182438",
+        "title": "Radiance!",
+        "icons": [
+          "items\/Radiance\/full.png"
+        ]
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/8\/8c\/Vo_brewmaster_brew_item_11.mp3\/revision\/latest?cb=20201010182440",
+        "title": "Drum of Endurance.",
+        "icons": [
+          "items\/Drum of Endurance\/full.png"
+        ]
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/e\/e0\/Vo_brewmaster_brew_immort_01.mp3\/revision\/latest?cb=20201010182359",
+        "title": "Immortality!",
+        "icons": [
+          "heroes\/Aegis of the Immortal\/minimap.png"
+        ]
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/1\/17\/Vo_brewmaster_brew_immort_02.mp3\/revision\/latest?cb=20201010182401",
+        "title": "May the draft of life flow freely.",
+        "icons": [
+          "heroes\/Aegis of the Immortal\/minimap.png"
+        ]
+      }
+    ],
+    "category": "Acquiring an item"
+  },
+  {
+    "responses": [
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/6\/63\/Vo_brewmaster_brew_death_01.mp3\/revision\/latest?cb=20201010182225",
+        "title": "No."
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/f\/f4\/Vo_brewmaster_brew_death_02.mp3\/revision\/latest?cb=20201010183212",
+        "title": "Couldn't hold my liquor."
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/3\/35\/Vo_brewmaster_brew_death_03.mp3\/revision\/latest?cb=20201010183213",
+        "title": "Wasted."
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/2\/25\/Vo_brewmaster_brew_death_04.mp3\/revision\/latest?cb=20201010183215",
+        "title": "Old habits die hard."
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/7\/73\/Vo_brewmaster_brew_death_05.mp3\/revision\/latest?cb=20201010182227",
+        "title": "My\u2026liver."
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/a\/af\/Vo_brewmaster_brew_death_06.mp3\/revision\/latest?cb=20201010182229",
+        "title": "Last call."
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/4\/42\/Vo_brewmaster_brew_death_07.mp3\/revision\/latest?cb=20201010182231",
+        "title": "I've been cut off."
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/1\/1b\/Vo_brewmaster_brew_death_08.mp3\/revision\/latest?cb=20201010182233",
+        "title": "It's closing time."
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/d\/da\/Vo_brewmaster_brew_death_09.mp3\/revision\/latest?cb=20201010182235",
+        "title": "Wait\u2026I'll never touch the stuff again."
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/d\/d1\/Vo_brewmaster_brew_death_10.mp3\/revision\/latest?cb=20201010182236",
+        "title": "Dead drunk."
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/1\/11\/Vo_brewmaster_brew_rival_21.mp3\/revision\/latest?cb=20201010183048",
+        "title": "You froze my barrel.",
+        "icons": [
+          "heroes\/Crystal Maiden\/minimap.png"
+        ]
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/b\/b7\/Vo_brewmaster_brew_rival_18.mp3\/revision\/latest?cb=20201010183040",
+        "title": "I should have stayed away from the hard stuff.",
+        "icons": [
+          "heroes\/Tiny\/minimap.png"
+        ]
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/3\/3c\/Vo_brewmaster_brew_rival_24.mp3\/revision\/latest?cb=20201010183056",
+        "title": "Bury me beneath the Ruined City.",
+        "icons": [
+          "heroes\/Storm Spirit\/minimap.png"
+        ]
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/2\/2d\/Vo_brewmaster_brew_rival_13.mp3\/revision\/latest?cb=20201010183025",
+        "title": "Careful, my blood alcohol level is fatal.",
+        "icons": [
+          "heroes\/Bloodseeker\/minimap.png"
+        ]
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/1\/1d\/Vo_brewmaster_brew_rival_19.mp3\/revision\/latest?cb=20201010183043",
+        "title": "Spear before liquor, never sicker.",
+        "icons": [
+          "heroes\/Huskar\/minimap.png"
+        ]
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/2\/24\/Vo_brewmaster_brew_rival_27.mp3\/revision\/latest?cb=20201010183104",
+        "title": "The mountains shall wail my name.",
+        "icons": [
+          "heroes\/Earth Spirit\/minimap.png"
+        ]
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/f\/f0\/Vo_brewmaster_brew_rival_30.mp3\/revision\/latest?cb=20201010183113",
+        "title": "I used to like horses.",
+        "icons": [
+          "heroes\/Chaos Knight\/minimap.png"
+        ]
+      }
+    ],
+    "category": "Dying"
+  },
+  {
+    "responses": [
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/a\/a9\/Vo_brewmaster_brew_respawn_01.mp3\/revision\/latest?cb=20201010182922",
+        "title": "It's happy hour!"
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/5\/51\/Vo_brewmaster_brew_respawn_02.mp3\/revision\/latest?cb=20201010182924",
+        "title": "Next round is on me."
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/5\/5b\/Vo_brewmaster_brew_respawn_03.mp3\/revision\/latest?cb=20201010182928",
+        "title": "Oh, my aching head."
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/5\/59\/Vo_brewmaster_brew_respawn_04.mp3\/revision\/latest?cb=20201010182930",
+        "title": "Need coffee."
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/1\/1c\/Vo_brewmaster_brew_respawn_05.mp3\/revision\/latest?cb=20201010182933",
+        "title": "The battle is meat and drink to me! More so drink than the meat part."
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/1\/15\/Vo_brewmaster_brew_respawn_06.mp3\/revision\/latest?cb=20201010182936",
+        "title": "I'm coming out swinging."
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/7\/7c\/Vo_brewmaster_brew_respawn_07.mp3\/revision\/latest?cb=20201010182938",
+        "title": "I'm not in fighting trim, but I'll do."
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/1\/15\/Vo_brewmaster_brew_respawn_08.mp3\/revision\/latest?cb=20201010182940",
+        "title": "Yoy and Oyo return me to life."
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/1\/18\/Vo_brewmaster_brew_respawn_09.mp3\/revision\/latest?cb=20201010182942",
+        "title": "Contrary forces give rise to my existence."
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/1\/11\/Vo_brewmaster_brew_respawn_10.mp3\/revision\/latest?cb=20201010182945",
+        "title": "I live to drink another day! Hehaha!"
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/1\/1d\/Vo_brewmaster_brew_respawn_11.mp3\/revision\/latest?cb=20201010182948",
+        "title": "How about another round!"
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/3\/39\/Vo_brewmaster_brew_respawn_12.mp3\/revision\/latest?cb=20201010182950",
+        "title": "Let's take it outside."
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/3\/3d\/Vo_brewmaster_brew_fastres_01.mp3\/revision\/latest?cb=20201010182313",
+        "title": "Hehah! Wait for it."
+      }
+    ],
+    "category": "Respawning"
+  },
+  {
+    "responses": [
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/d\/d2\/Vo_brewmaster_brew_bottle_01.mp3\/revision\/latest?cb=20201010182212",
+        "title": "I'll empty this bottle soon enough."
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/0\/00\/Vo_brewmaster_brew_bottle_02.mp3\/revision\/latest?cb=20201010182216",
+        "title": "Into my trusty bottle."
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/c\/cd\/Vo_brewmaster_brew_bottle_03.mp3\/revision\/latest?cb=20201010183220",
+        "title": "One for the road."
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/0\/06\/Vo_brewmaster_brew_bottle_04.mp3\/revision\/latest?cb=20201010183222",
+        "title": "This rune is ninety proof."
+      }
+    ],
+    "category": "Bottling Runes"
+  },
+  {
+    "responses": [
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/3\/3e\/Vo_brewmaster_brew_happy_08.mp3\/revision\/latest?cb=20201010182345",
+        "title": "Ohhah."
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/b\/b5\/Vo_brewmaster_brew_lasthit_09.mp3\/revision\/latest?cb=20201010182543",
+        "title": "Eh he heh heh he eh."
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/d\/db\/Vo_brewmaster_brew_lasthit_01.mp3\/revision\/latest?cb=20201010182524",
+        "title": "Gold for my tab."
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/9\/9e\/Vo_brewmaster_brew_doubdam_01.mp3\/revision\/latest?cb=20201010182309",
+        "title": "Double damage!"
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/d\/de\/Vo_brewmaster_brew_doubdam_02.mp3\/revision\/latest?cb=20201010182311",
+        "title": "Heh, seeing double."
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/d\/db\/Vo_brewmaster_brew_level_01.mp3\/revision\/latest?cb=20201010182626",
+        "title": "My cup runneth over."
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/a\/ac\/Vo_brewmaster_brew_haste_01.mp3\/revision\/latest?cb=20201010182348",
+        "title": "Haste!"
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/6\/60\/Vo_brewmaster_brew_haste_02.mp3\/revision\/latest?cb=20201010182350",
+        "title": "Hasten me to battle."
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/b\/b6\/Vo_brewmaster_brew_illus_01.mp3\/revision\/latest?cb=20201010182353",
+        "title": "Illusion!"
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/9\/97\/Vo_brewmaster_brew_illus_02.mp3\/revision\/latest?cb=20201010182356",
+        "title": "Ah, the more the merrier. There I am."
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/c\/cc\/Vo_brewmaster_brew_invis_01.mp3\/revision\/latest?cb=20201010182407",
+        "title": "Invisibility!"
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/7\/7c\/Vo_brewmaster_brew_invis_02.mp3\/revision\/latest?cb=20201010182410",
+        "title": "What happened to me?"
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/8\/89\/Vo_brewmaster_brew_regen_01.mp3\/revision\/latest?cb=20201010182916",
+        "title": "Regeneration!"
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/1\/12\/Vo_brewmaster_brew_regen_02.mp3\/revision\/latest?cb=20201010182919",
+        "title": "Feeling no pain."
+      }
+    ],
+    "category": "Activating runes"
+  },
+  {
+    "responses": [
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/5\/57\/Vo_brewmaster_brew_notyet_01.mp3\/revision\/latest?cb=20201010182812",
+        "title": "Not yet."
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/0\/01\/Vo_brewmaster_brew_notyet_02.mp3\/revision\/latest?cb=20201010182815",
+        "title": "I'm not ready."
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/8\/8a\/Vo_brewmaster_brew_notyet_03.mp3\/revision\/latest?cb=20201010182818",
+        "title": "It's not time yet."
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/4\/48\/Vo_brewmaster_brew_notyet_04.mp3\/revision\/latest?cb=20201010182820",
+        "title": "Not yet."
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/4\/43\/Vo_brewmaster_brew_notyet_05.mp3\/revision\/latest?cb=20201010182823",
+        "title": "I'm not ready."
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/d\/dd\/Vo_brewmaster_brew_notyet_06.mp3\/revision\/latest?cb=20201010182825",
+        "title": "It's not time yet."
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/4\/4d\/Vo_brewmaster_brew_notyet_07.mp3\/revision\/latest?cb=20201010182827",
+        "title": "Not yet."
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/f\/fb\/Vo_brewmaster_brew_notyet_08.mp3\/revision\/latest?cb=20201010182831",
+        "title": "I'm not ready."
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/f\/f1\/Vo_brewmaster_brew_notyet_09.mp3\/revision\/latest?cb=20201010182833",
+        "title": "It's not time yet."
+      }
+    ],
+    "category": "Ability on cooldown"
+  },
+  {
+    "responses": [
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/1\/15\/Vo_brewmaster_brew_nomana_01.mp3\/revision\/latest?cb=20201010182748",
+        "title": "Out of mana."
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/8\/8c\/Vo_brewmaster_brew_nomana_02.mp3\/revision\/latest?cb=20201010182751",
+        "title": "No mana."
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/c\/c1\/Vo_brewmaster_brew_nomana_03.mp3\/revision\/latest?cb=20201010182754",
+        "title": "Not enough mana."
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/a\/af\/Vo_brewmaster_brew_nomana_04.mp3\/revision\/latest?cb=20201010182756",
+        "title": "Out of mana."
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/7\/7d\/Vo_brewmaster_brew_nomana_05.mp3\/revision\/latest?cb=20201010182759",
+        "title": "No mana."
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/a\/a1\/Vo_brewmaster_brew_nomana_06.mp3\/revision\/latest?cb=20201010182801",
+        "title": "Not enough mana!"
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/5\/53\/Vo_brewmaster_brew_nomana_07.mp3\/revision\/latest?cb=20201010182804",
+        "title": "Out of mana."
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/e\/ea\/Vo_brewmaster_brew_nomana_08.mp3\/revision\/latest?cb=20201010182806",
+        "title": "No mana."
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/1\/10\/Vo_brewmaster_brew_nomana_09.mp3\/revision\/latest?cb=20201010182810",
+        "title": "Not enough mana!"
+      }
+    ],
+    "category": "Not enough mana"
+  },
+  {
+    "responses": [
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/4\/44\/Vo_brewmaster_brew_pain_01.mp3\/revision\/latest?cb=20201010182836",
+        "title": "Dugh."
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/c\/c6\/Vo_brewmaster_brew_pain_02.mp3\/revision\/latest?cb=20201010182839",
+        "title": "Bagh."
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/5\/58\/Vo_brewmaster_brew_pain_03.mp3\/revision\/latest?cb=20201010182841",
+        "title": "Bough."
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/c\/cd\/Vo_brewmaster_brew_pain_04.mp3\/revision\/latest?cb=20201010182844",
+        "title": "Ooghh."
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/f\/f4\/Vo_brewmaster_brew_pain_05.mp3\/revision\/latest?cb=20201010182846",
+        "title": "Daogh."
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/2\/29\/Vo_brewmaster_brew_pain_06.mp3\/revision\/latest?cb=20201010182849",
+        "title": "Ough."
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/6\/6c\/Vo_brewmaster_brew_pain_07.mp3\/revision\/latest?cb=20201010182851",
+        "title": "Oogh."
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/7\/73\/Vo_brewmaster_brew_pain_08.mp3\/revision\/latest?cb=20201010182855",
+        "title": "Huhuh!"
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/a\/a3\/Vo_brewmaster_brew_underattack_01.mp3\/revision\/latest?cb=20201010183136",
+        "title": "I'm under attack!"
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/7\/78\/Vo_brewmaster_brew_underattack_02.mp3\/revision\/latest?cb=20201010183138",
+        "title": "They're trying to kill me!"
+      }
+    ],
+    "category": "Taking damage"
+  },
+  {
+    "responses": [
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/c\/cb\/Vo_brewmaster_brew_rare_01.mp3\/revision\/latest?cb=20201010182905",
+        "title": "Drink and be bleary, for tomorrow we die."
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/2\/27\/Vo_brewmaster_brew_rare_02.mp3\/revision\/latest?cb=20201010182908",
+        "title": "My Oyo forebears speed my staff."
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/0\/00\/Vo_brewmaster_brew_rare_03.mp3\/revision\/latest?cb=20201010182911",
+        "title": "My Yoy ancestors strengthen my abilities."
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/f\/fd\/Vo_brewmaster_brew_rare_04.mp3\/revision\/latest?cb=20201010182913",
+        "title": "I will one day return to the Ruined City and again hear the wheel books' song."
+      }
+    ],
+    "category": "Selecting"
+  },
+  {
+    "responses": [
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/6\/6c\/Vo_brewmaster_brew_lane_missing_01.mp3\/revision\/latest?cb=20201010182516",
+        "title": "Missing top."
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/2\/21\/Vo_brewmaster_brew_missing_lane_01.mp3\/revision\/latest?cb=20201010182657",
+        "isArcane": true,
+        "title": "Missing top."
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/f\/f5\/Vo_brewmaster_brew_lane_missing_02.mp3\/revision\/latest?cb=20201010182519",
+        "title": "Missing middle."
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/9\/90\/Vo_brewmaster_brew_missing_lane_02.mp3\/revision\/latest?cb=20201010182659",
+        "isArcane": true,
+        "title": "Missing middle."
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/8\/8d\/Vo_brewmaster_brew_lane_missing_03.mp3\/revision\/latest?cb=20201010182522",
+        "title": "Missing bottom."
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/9\/9f\/Vo_brewmaster_brew_missing_lane_03.mp3\/revision\/latest?cb=20201010182701",
+        "isArcane": true,
+        "title": "Missing bottom."
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/7\/72\/Vo_brewmaster_brew_thanks_01.mp3\/revision\/latest?cb=20201010183132",
+        "title": "To your health."
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/1\/15\/Vo_brewmaster_brew_thanks_02.mp3\/revision\/latest?cb=20201010183134",
+        "title": "Much obliged."
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/e\/e9\/Vo_brewmaster_brew_laugh_01.mp3\/revision\/latest?cb=20201010182545",
+        "title": "Hehehehahah!"
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/2\/26\/Vo_brewmaster_brew_laugh_02.mp3\/revision\/latest?cb=20201010182546",
+        "title": "Hehahahahaheh."
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/2\/25\/Vo_brewmaster_brew_laugh_03.mp3\/revision\/latest?cb=20201010182548",
+        "title": "Hehehehehhe oops."
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/0\/0d\/Vo_brewmaster_brew_laugh_04.mp3\/revision\/latest?cb=20201010182550",
+        "title": "Hehehehahah!"
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/e\/e7\/Vo_brewmaster_brew_laugh_05.mp3\/revision\/latest?cb=20201010182551",
+        "title": "Heheaha!"
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/4\/4e\/Vo_brewmaster_brew_laugh_06.mp3\/revision\/latest?cb=20201010182553",
+        "title": "Hehahaha!"
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/1\/1f\/Vo_brewmaster_brew_laugh_07.mp3\/revision\/latest?cb=20201010182555",
+        "title": "Hehaahehah."
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/0\/0c\/Vo_brewmaster_brew_laugh_08.mp3\/revision\/latest?cb=20201010182557",
+        "title": "Hahahahah!"
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/f\/f3\/Vo_brewmaster_brew_laugh_09.mp3\/revision\/latest?cb=20201010182558",
+        "title": "Ahah!"
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/2\/2c\/Vo_brewmaster_brew_laugh_10.mp3\/revision\/latest?cb=20201010182600",
+        "title": "Haahahahahaahha."
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/e\/ef\/Vo_brewmaster_brew_laugh_11.mp3\/revision\/latest?cb=20201010182601",
+        "title": "Heheheh."
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/f\/f9\/Vo_brewmaster_brew_laugh_12.mp3\/revision\/latest?cb=20201010182603",
+        "title": "Ohohohoho."
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/7\/7a\/Vo_brewmaster_brew_laugh_13.mp3\/revision\/latest?cb=20201010182605",
+        "title": "Hehah!"
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/9\/9c\/Vo_brewmaster_brew_laugh_14.mp3\/revision\/latest?cb=20201010182606",
+        "title": "Hah!"
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/c\/c7\/Vo_brewmaster_brew_laugh_15.mp3\/revision\/latest?cb=20201010182609",
+        "title": "Hhohah!"
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/6\/67\/Vo_brewmaster_brew_laugh_16.mp3\/revision\/latest?cb=20201010182610",
+        "title": "Hahahehehahah."
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/8\/8b\/Vo_brewmaster_brew_laugh_17.mp3\/revision\/latest?cb=20201010182612",
+        "title": "Oohohouhuho."
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/8\/80\/Vo_brewmaster_brew_laugh_18.mp3\/revision\/latest?cb=20201010182614",
+        "title": "Hahahahahugheheh."
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/6\/6d\/Vo_brewmaster_brew_laugh_19.mp3\/revision\/latest?cb=20201010182616",
+        "title": "Hahahahahaha."
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/1\/1f\/Vo_brewmaster_brew_laugh_20.mp3\/revision\/latest?cb=20201010182617",
+        "title": "Hehehem."
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/2\/26\/Vo_brewmaster_brew_laugh_21.mp3\/revision\/latest?cb=20201010182619",
+        "title": "Heheheh."
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/0\/03\/Vo_brewmaster_brew_laugh_22.mp3\/revision\/latest?cb=20201010182621",
+        "title": "Heheheheheh."
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/1\/1e\/Vo_brewmaster_brew_laugh_23.mp3\/revision\/latest?cb=20201010182623",
+        "title": "Hemehehm."
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/b\/bd\/Vo_brewmaster_brew_laugh_24.mp3\/revision\/latest?cb=20201010182625",
+        "title": "Yehehehehhehehehheh."
+      }
+    ],
+    "category": "Chat responses"
+  },
+  {
+    "responses": [
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/b\/b0\/Vo_brewmaster_brew_win_01.mp3\/revision\/latest?cb=20201010183139",
+        "title": "Yes!"
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/a\/ac\/Vo_brewmaster_brew_win_02.mp3\/revision\/latest?cb=20201010183141",
+        "title": "Victory!"
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/5\/54\/Vo_brewmaster_brew_win_03.mp3\/revision\/latest?cb=20201010183143",
+        "title": "They'll raise their cups for years to come!"
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/0\/01\/Vo_brewmaster_brew_win_04.mp3\/revision\/latest?cb=20201010183145",
+        "title": "Enlightenment is mine."
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/5\/54\/Vo_brewmaster_brew_lose_01.mp3\/revision\/latest?cb=20201010182649",
+        "title": "No."
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/7\/74\/Vo_brewmaster_brew_lose_02.mp3\/revision\/latest?cb=20201010182652",
+        "title": "Defeated."
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/9\/90\/Vo_brewmaster_brew_lose_03.mp3\/revision\/latest?cb=20201010182654",
+        "title": "My cup runneth empty."
+      }
+    ],
+    "category": "Match end"
+  },
+  {
+    "responses": [
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/2\/2f\/Vo_brewmaster_brew_happy_01.mp3\/revision\/latest?cb=20201010182327",
+        "title": "Eahhh."
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/5\/53\/Vo_brewmaster_brew_happy_04.mp3\/revision\/latest?cb=20201010182334",
+        "title": "Oheh."
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/b\/b2\/Vo_brewmaster_brew_happy_02.mp3\/revision\/latest?cb=20201010182330",
+        "title": "Oooh."
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/7\/75\/Vo_brewmaster_brew_happy_03.mp3\/revision\/latest?cb=20201010182332",
+        "title": "Aeh."
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/1\/1f\/Vo_brewmaster_brew_laugh_07.mp3\/revision\/latest?cb=20201010182555",
+        "title": "Hehaahehah."
+      }
+    ],
+    "category": "Cosmetic item drop"
+  },
+  {
+    "responses": [
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/b\/b0\/Vo_brewmaster_brew_ability_failure_01.mp3\/revision\/latest?cb=20201010182041",
+        "title": "Many a slip twixt the cup and lip."
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/0\/0a\/Vo_brewmaster_brew_ability_failure_02.mp3\/revision\/latest?cb=20201010182043",
+        "title": "Ah, well."
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/7\/7f\/Vo_brewmaster_brew_ability_failure_03.mp3\/revision\/latest?cb=20201010182045",
+        "title": "Better luck next time."
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/3\/3f\/Vo_brewmaster_brew_shitwiz_01.mp3\/revision\/latest?cb=20201010183120",
+        "title": "Shitty wizard!"
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/3\/3a\/Vo_brewmaster_brew_crumwiz_01.mp3\/revision\/latest?cb=20201010182223",
+        "title": "Crummy wizard!"
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/b\/b6\/Vo_brewmaster_brew_anger_02.mp3\/revision\/latest?cb=20201010182139",
+        "title": "Arhgh."
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/a\/a6\/Vo_brewmaster_brew_anger_03.mp3\/revision\/latest?cb=20201010182141",
+        "title": "Rearh."
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/c\/cf\/Vo_brewmaster_brew_anger_04.mp3\/revision\/latest?cb=20201010182143",
+        "title": "Reereh."
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/4\/4d\/Vo_brewmaster_brew_anger_05.mp3\/revision\/latest?cb=20201010182144",
+        "title": "Regh."
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/e\/ed\/Vo_brewmaster_brew_anger_06.mp3\/revision\/latest?cb=20201010182146",
+        "title": "Argh."
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/9\/9f\/Vo_brewmaster_brew_happy_05.mp3\/revision\/latest?cb=20201010182337",
+        "title": "Oooh."
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/6\/60\/Vo_brewmaster_brew_happy_06.mp3\/revision\/latest?cb=20201010182340",
+        "title": "Ahhheheh."
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/c\/cc\/Vo_brewmaster_brew_happy_07.mp3\/revision\/latest?cb=20201010182342",
+        "title": "Eagh."
+      }
+    ],
+    "category": "Misc"
+  }
+]

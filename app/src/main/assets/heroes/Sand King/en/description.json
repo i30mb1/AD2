@@ -1,0 +1,224 @@
+{
+  "abilities": [
+    {
+      "notes": [
+        "The health talent increases maximum health capacity, and keeps the current health percentage."
+      ],
+      "spellName": "Talent",
+      "talents": [
+        {
+          "talentLvl": "25",
+          "talentLeft": "40% Sand Storm Slow and Blind",
+          "talentRight": "+4 Epicenter Pulses"
+        },
+        {
+          "talentLvl": "20",
+          "talentLeft": "+20 Health Regen",
+          "talentRight": "-2s Burrowstrike Cooldown"
+        },
+        {
+          "talentLvl": "15",
+          "talentLeft": "+15% Caustic Finale Slow",
+          "talentRight": "+30 Sand Storm DPS"
+        },
+        {
+          "talentLvl": "10",
+          "talentLeft": "+175 Health",
+          "talentRight": "+20 Epicenter Damage Per Pulse"
+        }
+      ]
+    },
+    {
+      "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/f\/f0\/Sand_King_Burrowstrike.mp3\/revision\/latest?cb=20191216022824",
+      "effects": [
+        "Ability Target Point \/ Target Unit",
+        "Affects Enemies \/ Self",
+        "Damage Magical"
+      ],
+      "notes": [
+        "The spikes travel at a speed of 2000 (TagTalent 3000), reaching max range in 0.2\/0.25\/0.3\/0.35 (TagTalent 0.27\/0.33\/0.4\/0.47) seconds.",
+        "Sand King is teleported instantly towards the targeted point once the spikes reach it.",
+        "Does not disjoint projectiles upon cast or upon teleporting.",
+        "Sand King is disabled during the cast backswing of Burrowstrike.",
+        "When targeting a unit, Sand King chases the target until it is within range and casts Burrowstrike towards its direction. The spikes still do not home in on the target, thus can be evaded. Targeting a unit only determines the direction upon cast.",
+        "The spikes still do not home in on the target, thus can be evaded. Targeting a unit only determines the direction upon cast.",
+        "Hit units are knocked up 350 range for the initial 0.52 seconds of the stun.",
+        "While in the air, other units may pass below hit airborne units.",
+        "The damage is applied upon landing, not upon getting hit.",
+        "Can hit units up to 550\/650\/750\/850 (TagTalent 950\/1150\/1350\/1550) range away (max range + radius).",
+        "The burrowing and reappearing takes 0.53 seconds from the moment the spell is cast, during which Sand King cannot do anything.",
+        "The spikes do not travel the full distance when targeting closer than the max range.",
+        "When upgraded, Burrowstrike applies Caustic Finale on all hit heroes, excluding illusions. Treats creep-heroes as creeps."
+      ],
+      "mana": "110\/120\/130\/140",
+      "hotKey": "Q",
+      "cooldown": "14\/13\/12\/11 (TagTalent 12\/11\/10\/9)",
+      "description": "Sand King burrows into the ground and tunnels forward, damaging and stunning enemy units above him as he resurfaces.",
+      "spellName": "Burrowstrike",
+      "params": [
+        "Cast Animation: 0+0.53",
+        "Cast Range: 400\/500\/600\/700 (TagAghanim 800\/1000\/1200\/1400)",
+        "Spikes Radius: 150",
+        "Damage: 100\/160\/220\/280",
+        "Stun Duration: 1.6\/1.8\/2\/2.2",
+        "Adds Caustic Finale poison to heroes hit by your Burrowstrike and increases its cast range. Does not apply Caustic Finale to illusions.",
+        "Attempts to damage if already hit enemies turn spell immune before landing.",
+        "Blocked upon impact by everyone within range of the spikes."
+      ],
+      "itemBehaviour": [],
+      "legacyKey": "E",
+      "story": "Crixalis often lies in wait, burrowing under the surface to ambush his adversaries."
+    },
+    {
+      "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/2\/27\/Sand_King_Sand_Storm.mp3\/revision\/latest?cb=20191216022822",
+      "effects": [
+        "Ability No Target",
+        "Affects Enemies \/ Self",
+        "Damage Magical"
+      ],
+      "notes": [
+        "The fade delay is not used upon cast. Sand King turns invisible instantly on cast.",
+        "The fade delay takes effect when breaking the invisibility by attacking, or casting spells or items. However, since casting Sand Storm applies the invisibility instantly, the fade delay effectively does not take effect when re-casting it while inside the previous cast's area.",
+        "However, since casting Sand Storm applies the invisibility instantly, the fade delay effectively does not take effect when re-casting it while inside the previous cast's area.",
+        "Sand Storm deals 10\/22.5\/35\/47.5 (TagTalent 25\/37.5\/50\/62.5) damage in 0.5 second intervals, starting immediately upon cast, resulting in a total of 40\/50\/60\/70 instances.",
+        "Can deal up to 400\/1125\/2100\/3325 (TagTalent 1000\/1875\/3000\/4375) damage to a single unit (before reductions) if it stays in range for the whole duration.",
+        "The movement speed slow and blind granted by the level 25 talent are aura-based. The aura's debuff lingers for 0.5 seconds. Sand Storm's blind uses pseudo-random distribution.",
+        "Sand Storm's blind uses pseudo-random distribution."
+      ],
+      "mana": "75",
+      "hotKey": "W",
+      "cooldown": "40\/34\/28\/22",
+      "description": "Sand King creates a fearsome sandstorm that damages enemy units while hiding him from vision. The effect ends when Sand King leaves the area.",
+      "spellName": "Sand Storm",
+      "params": [
+        "Cast Animation: 0+0.5",
+        "Radius: 425\/500\/575\/650",
+        "Fade Delay: 0.7",
+        "Damage per Second: 20\/45\/70\/95 (TagTalent 50\/75\/100\/125)",
+        "Sand Storm Duration: 20\/25\/30\/35",
+        "Aura Linger Duration: 0.5",
+        "Enemy Miss Chance: 40%",
+        "Move Speed Slow: 40%",
+        "Slow and blind persists if debuff was placed before spell immunity."
+      ],
+      "itemBehaviour": [],
+      "legacyKey": "R",
+      "story": "Some say Crixalis is a mirage; his carapace appearing then vanishing between the whirling sands of the Scintillant Waste."
+    },
+    {
+      "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/2\/20\/Sand_King_Caustic_Finale.mp3\/revision\/latest?cb=20191216022819",
+      "effects": [
+        "Ability Passive",
+        "Affects Enemies",
+        "Damage Magical"
+      ],
+      "notes": [
+        "The area damage triggers only when the target dies while having the debuff on.",
+        "The area damage is only applied when the unit is killed by one of its enemies. This means the unit does not explode when it gets denied, expires (e.g. summons and illusions), or killed without a creditted source (e.g. multiple Meepoes).",
+        "This means the unit does not explode when it gets denied, expires (e.g. summons and illusions), or killed without a creditted source (e.g. multiple Meepoes).",
+        "When an illusion dies with the debuff, only the base damage is applied within the area, the health-based extra damage is not applied.",
+        "Successive attacks on the same target do not stack, but refresh the duration instead. However, the debuff does not get updated. All its values are set upon initial placement.",
+        "However, the debuff does not get updated. All its values are set upon initial placement.",
+        "The debuff is not placed on allies, buildings and wards."
+      ],
+      "mana": null,
+      "hotKey": "E",
+      "cooldown": null,
+      "description": "Sand King's attacks inject a venom that causes enemy units to move more slowly and to violently explode when it dies.",
+      "spellName": "Caustic Finale",
+      "params": [
+        "Damage Radius: 500",
+        "Base Damage: 70\/90\/110\/130",
+        "Max Health as Damage: 10%\/14%\/18%\/22%",
+        "Move Speed Slow: 10%\/15%\/20%\/25% (TagTalent 25%\/30%\/35%\/40%)",
+        "Debuff Duration: 5"
+      ],
+      "itemBehaviour": [],
+      "legacyKey": "L",
+      "story": "An injection from Crixalis makes one brittle and as dry as the arid wastes, subject to implosive demise."
+    },
+    {
+      "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/3\/3f\/Sand_King_Epicenter_1.mp3\/revision\/latest?cb=20191216022820",
+      "effects": [
+        "Ability No Target",
+        "Affects Enemies",
+        "Damage Magical"
+      ],
+      "notes": [
+        "Once cast, the damage pulses cannot be canceled in any way, not even by Sand King's death.",
+        "The pulse radii are all centered at Sand King's current location, not at the cast location.",
+        "The pulses happen in 0.5\/0.375\/0.3 (TagTalent 0.3\/0.25\/0.21) second intervals, starting 0.5\/0.375\/0.3 (TagTalent 0.3\/0.25\/0.21) seconds after cast. This means it takes 3 seconds for the spell to release all pulses after the initial delay.",
+        "This means it takes 3 seconds for the spell to release all pulses after the initial delay.",
+        "Can deal a total of 660\/960\/1300 damage without any talents (before reductions). Can deal a total of 1100\/1440\/1820 damage when the number of pulses increasing talent is chosen. Can deal a total of 780\/1120\/1500 damage when the damage per pulse increasing talent is chosen. Can deal a total of 1300\/1680\/2100 damage when both talents are chosen.",
+        "Can deal a total of 1100\/1440\/1820 damage when the number of pulses increasing talent is chosen.",
+        "Can deal a total of 780\/1120\/1500 damage when the damage per pulse increasing talent is chosen.",
+        "Can deal a total of 1300\/1680\/2100 damage when both talents are chosen.",
+        "The slow is applied to enemies on each pulse. Multiple instances of the slow on a unit do not stack, but refresh the duration. Can slow a single unit for up to 6 seconds (total duration of pulses + debuff duration).",
+        "Can slow a single unit for up to 6 seconds (total duration of pulses + debuff duration).",
+        "Each pulse first applies the damage, then the debuff.",
+        "Multiple casts of Epicenter fully stack, with each cast creating its own independent instance.",
+        "With Aghanim's Shard, Epicenter passively releases a single pulse when Sand King collectively moves a distance of 700. The pulse applies damage based on Epicenter's current level, and applies the slow as well. Teleporting effects (which includes blinking) may only add up to range to the distance counter, no matter how big the actual teleported distance was. This means long distance teleports may only release one pulse, and not multiple pulses based on the entire distance. The distance counter has no time limit. It only resets upon releasing a passive pulse. Passive pulses are not released in Epicenter is not learned. However, the counter does still count distance, and then instantly releases a pulse once Epicenter gets learned.",
+        "The pulse applies damage based on Epicenter's current level, and applies the slow as well.",
+        "Teleporting effects (which includes blinking) may only add up to range to the distance counter, no matter how big the actual teleported distance was.",
+        "This means long distance teleports may only release one pulse, and not multiple pulses based on the entire distance.",
+        "The distance counter has no time limit. It only resets upon releasing a passive pulse.",
+        "Passive pulses are not released in Epicenter is not learned.",
+        "However, the counter does still count distance, and then instantly releases a pulse once Epicenter gets learned."
+      ],
+      "mana": "150\/225\/300",
+      "hotKey": "R",
+      "cooldown": "120\/110\/100",
+      "description": "After channeling for seconds, Sand King sends a disturbance into the earth, causing it to shudder violently. All enemies caught within range will take damage and become slowed. Each subsequent pulse increases the radius of damage dealt.",
+      "spellName": "Epicenter",
+      "params": [
+        "Cast Animation: 2+0",
+        "Radius per Pulse: 500\/525\/550\/575\/600\/625\/650\/675\/700\/725 (TagTalent \/750\/775\/800\/825)",
+        "Number of Pulses: 6\/8\/10 (TagTalent 10\/12\/14)",
+        "Damage per Pulse: 110\/120\/130 (TagTalent 130\/140\/150)",
+        "Move Speed Slow: 30%",
+        "Attack Speed Slow: 30",
+        "Slow Duration: 3",
+        "Epicenter Duration: 3",
+        "Passive Distance Required for Pulse: 700",
+        "Passive Pulse Radius: 400",
+        "Every 700 units moved causes an Epicenter Pulse around Sand King in 400 AoE.",
+        "The passive pulses are not disabled by Break."
+      ],
+      "itemBehaviour": [],
+      "legacyKey": "C",
+      "story": "Many an explorer was lost to the quicksands of the Scintillant Waste."
+    }
+  ],
+  "mainAttributes": {
+    "attrStrengthInc": 3.0,
+    "attrStrength": 22.0,
+    "attrIntelligence": 19.0,
+    "attrIntelligenceInc": 1.8,
+    "attrAgilityInc": 1.8,
+    "attrAgility": 19.0
+  },
+  "description": "Crixalis, the Sand King, is a melee strength hero with one of the highest area of effect (AoE) damage outputs in the entire game. All four of his abilities can affect multiple enemy units, and can combo quite well with each other. He is one of the most versatile Heroes in the game as he can push, initiate, support, gank, and even semi-carry if he does well. Late game his effectiveness diminishes as none of his abilities scale, but he can still function to support carries with Burrowstrike and Epicenter's slow. He is also versatile enough to be able to go to any lane with at least moderate success. He works well as a participant in a dual lane or trilane, but can also solo very effectively against melee enemies, since Caustic Finale discourages enemies from approaching the creeps. His main role in the team is to deliver a devastating initiation, delivering both stuns and slows to the enemy team. Crixalis is also very effective at escaping and dodging with two low cost, low cooldown abilities that disjoint projectiles and can escape enemy damage. Burrowstrike allows him to tunnel underground and resurface in a short line, dealing damage and stunning all targets it hits. Sand Storm is used as an escape mechanism and to do AoE damage. Caustic Finale serves as a strong harassing tool against enemy melee heroes or as a followup after he Burrowstrikes a creep wave, allowing him to farm quite effectively. Finally, his ultimate delivers a vast amount of AoE damage and slow centered around himself, though it necessitates a safe way to cast it due to its long cast time, like a Blink Dagger.",
+  "history": "The sands of the Scintillant Waste are alive and sentient--the whole vast desert speaks to itself, thinking thoughts only such a vastness can conceive. But when it needs to find a form to communicate with those of more limited scope, it frees a fragment of itself, and fills a carapace of magic armor formed by the cunning Djinn of Qaldin. This essential identity calls itself Crixalis, meaning 'Soul of the Sand,' but others know it as Sand King. Sand King takes the form of a huge arachnid, inspired by the Scintillant Waste's small but ubiquitous denizens; and this is a true outward expression of his ferocious nature. Guardian, warrior, ambassador--Sand King is all of these things, inseparable from the endless desert that gave him life.",
+  "talents": [
+    {
+      "talentLvl": "25",
+      "talentLeft": "40% Sand Storm Slow and Blind",
+      "talentRight": "+4 Epicenter Pulses"
+    },
+    {
+      "talentLvl": "20",
+      "talentLeft": "+20 Health Regen",
+      "talentRight": "-2s Burrowstrike Cooldown"
+    },
+    {
+      "talentLvl": "15",
+      "talentLeft": "+15% Caustic Finale Slow",
+      "talentRight": "+30 Sand Storm DPS"
+    },
+    {
+      "talentLvl": "10",
+      "talentLeft": "+175 Health",
+      "talentRight": "+20 Epicenter Damage Per Pulse"
+    }
+  ]
+}

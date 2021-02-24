@@ -1,0 +1,22 @@
+{
+  "abilities": [],
+  "additionalInformation": [
+    "When having a Demon Edge and a Radiance recipe in the inventory, buying Sacred Relic results in a finished Radiance, and not a Divine Rapier. Similarly, having a Helm of Iron Will and a Demon Edge in the inventory will result in a finished Nullifier."
+  ],
+  "cost": "3800",
+  "lore": null,
+  "consistFrom": null,
+  "boughtFrom": "Secret Shop",
+  "name": "Sacred Relic",
+  "description": "An ancient weapon that often turns the tides of war.",
+  "trivia": null,
+  "upgradeIn": [
+    "Nullifier",
+    "Divine Rapier",
+    "Radiance"
+  ],
+  "bonuses": [
+    "+60 Attack damage"
+  ],
+  "tips": null
+}

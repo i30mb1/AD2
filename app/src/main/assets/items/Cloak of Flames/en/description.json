@@ -1,0 +1,45 @@
+{
+  "abilities": [
+    {
+      "audioUrl": null,
+      "effects": [
+        "Ability Toggle \/ Aura",
+        "Affects Enemies",
+        "Damage Magical"
+      ],
+      "notes": [
+        "The burn damage are provided by an aura. Its debuff lingers for seconds. This means during this linger period, enemies can still be damaged by up to one tick.",
+        "This means during this linger period, enemies can still be damaged by up to one tick.",
+        "Deals damage in 1 second intervals, starting 1 second after the debuff is placed.",
+        "Illusions deal 30 damage per second instead of 45.",
+        "Does not affect buildings."
+      ],
+      "mana": null,
+      "abilityName": "Passive",
+      "cooldown": null,
+      "description": "When active, scorches enemies for magical damage per second.",
+      "params": [
+        "Radius: 400",
+        "Damage per Second: 45"
+      ],
+      "itemBehaviour": [
+        "(Spell_immunity_block_symbol)^Does not pierce spell immunity\nBlinds and attempts to damage if debuff was placed before spell immunity."
+      ],
+      "story": null
+    }
+  ],
+  "additionalInformation": [],
+  "cost": "N\/A",
+  "lore": null,
+  "consistFrom": null,
+  "boughtFrom": "Neutral Drop Only",
+  "name": "Cloak of Flames",
+  "description": "A very fine cloak that plays host to an overly-protective living flame",
+  "trivia": null,
+  "upgradeIn": null,
+  "bonuses": [
+    "+5 Armor",
+    "+10% Magic resistance"
+  ],
+  "tips": null
+}

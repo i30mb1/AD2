@@ -1,0 +1,40 @@
+{
+  "abilities": [
+    {
+      "audioUrl": null,
+      "effects": [
+        "Ability No Target",
+        "Affects Self"
+      ],
+      "notes": [
+        "Does interrupt the user's channeling spells upon cast.",
+        "Does not allows the user to pass through other units.",
+        "The user can pick up and drop items without breaking the invisibility."
+      ],
+      "mana": null,
+      "abilityName": "Cloak",
+      "cooldown": "25",
+      "description": "Makes you invisible for 6 seconds.",
+      "params": [
+        "Fade Time: 0",
+        "Duration: 6"
+      ],
+      "itemBehaviour": [],
+      "story": null
+    }
+  ],
+  "additionalInformation": [],
+  "cost": "N\/A",
+  "lore": null,
+  "consistFrom": null,
+  "boughtFrom": "Neutral Drop Only",
+  "name": "Trickster Cloak",
+  "description": "A fantastic garment immediately misplaced by its creator upon completion.",
+  "trivia": null,
+  "upgradeIn": null,
+  "bonuses": [
+    "+20% Evasion",
+    "+20% Magic resistance"
+  ],
+  "tips": null
+}

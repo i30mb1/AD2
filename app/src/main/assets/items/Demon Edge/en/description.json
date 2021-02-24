@@ -1,0 +1,19 @@
+{
+  "abilities": [],
+  "cost": "2200",
+  "lore": null,
+  "consistFrom": null,
+  "boughtFrom": "Secret Shop",
+  "name": "Demon Edge",
+  "description": "One of the oldest weapons forged by the Demon-Smith Abzidian, it killed its maker when he tested its edge.",
+  "trivia": null,
+  "upgradeIn": [
+    "Divine Rapier",
+    "Monkey King Bar",
+    "Daedalus"
+  ],
+  "bonuses": [
+    "+40 Attack damage"
+  ],
+  "tips": null
+}

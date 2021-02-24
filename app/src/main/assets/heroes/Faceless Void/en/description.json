@@ -1,0 +1,270 @@
+{
+  "abilities": [
+    {
+      "notes": [
+        "The strength talent effectively grants Faceless Void 160 health and 0.8 health regeneration.",
+        "This attack damage talent is added as raw attack damage, so it does not benefit illusions, and is not affected by most percentage-based damage increasing or reducing effects."
+      ],
+      "spellName": "Talent",
+      "talents": [
+        {
+          "talentLvl": "25",
+          "talentLeft": "+140 Chronosphere AoE",
+          "talentRight": "+20% Backtrack"
+        },
+        {
+          "talentLvl": "20",
+          "talentLeft": "-1.75s Time Walk",
+          "talentRight": "+40 Attack Speed"
+        },
+        {
+          "talentLvl": "15",
+          "talentLeft": "+250 Time Walk Cast Range",
+          "talentRight": "+55 Time Lock Damage"
+        },
+        {
+          "talentLvl": "10",
+          "talentLeft": "+8 Strength",
+          "talentRight": "+12 Damage"
+        }
+      ]
+    },
+    {
+      "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/1\/1d\/Faceless_Void_Time_Walk.mp3\/revision\/latest?cb=20191216013832",
+      "effects": [
+        "Ability Target Point",
+        "Affects Self (TagAghanim Enemies)"
+      ],
+      "notes": [
+        "Time Walk moves Faceless Void with a speed of 3000.",
+        "Faceless Void is invulnerable during Time Walk.",
+        "Does not disjoint projectiles upon cast.",
+        "Does not travel the full distance, when targeting closer than the max distance.",
+        "Upon cast, any damage Faceless Void took in the last 2 seconds gets healed back up. This includes damage dealt by allies.",
+        "Since it is a heal, it is fully affected by heal manipulation.",
+        "Only backtracks the 3 damage types. Heals and HP Removal are not backtracked. This means it cannot backtrack e.g. Sunder, False Promise, Soul Ring and Armlet of Mordiggian.",
+        "This means it cannot backtrack e.g. Sunder, False Promise, Soul Ring and Armlet of Mordiggian.",
+        "Status buffs and debuffs, cooldowns and mana are completely unaffected.",
+        "With Aghanim's Scepter, Time Lock triggers on every enemy within radius at the destination point. Does not perform instant attacks to trigger the Time Lock. Instead, the modifier_faceless_void_time_lock_force_proc modifier is placed on enemies, which makes Time Lock trigger on them. Dispelling this debuff does not remove the Time Lock stun, but it prevents the Time Lock instant attack from occuring.",
+        "Does not perform instant attacks to trigger the Time Lock. Instead, the modifier_faceless_void_time_lock_force_proc modifier is placed on enemies, which makes Time Lock trigger on them.",
+        "Dispelling this debuff does not remove the Time Lock stun, but it prevents the Time Lock instant attack from occuring."
+      ],
+      "mana": "40",
+      "hotKey": "Q",
+      "cooldown": "24\/18\/12\/6 (TagTalent 22.25\/16.25\/10.25\/4.25)",
+      "description": "Rushes to a target location while backtracking any damage taken in the last seconds.",
+      "spellName": "Time Walk",
+      "params": [
+        "Cast Animation: 0.3+0",
+        "Cast Range: Global",
+        "Max Travel Distance: 675 (TagTalent 925) (TagTalent 875, 1125)",
+        "Backtracked Time: 2",
+        "Time Lock Radius: 350",
+        "Applies a Time Lock proc to all units at the landing destination.",
+        "Increases Time Walk cast range by 200. Grants a new ability: Reverse Time Walk.",
+        "Does not apply Time Lock on spell immune enemies."
+      ],
+      "itemBehaviour": [],
+      "legacyKey": "W",
+      "story": "Darkterror tears a hole in time, passing through Claszureme, and appearing back in an instant."
+    },
+    {
+      "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/1\/1d\/Faceless_Void_Time_Walk.mp3\/revision\/latest?cb=20191216013832",
+      "effects": [
+        "Ability No Target",
+        "Affects Self"
+      ],
+      "notes": [
+        "Requires Aghanim's Shard to be unlocked.",
+        "Replaced Time Walk upon reaching the destination point, and lasts until used, or up to 1.5 seconds.",
+        "When used, moves Faceless Void back to where he was as he cast Time Walk, using the same travel speed.",
+        "Does not reverse anything else. The health change are not reversed (TagTalent and the Time Lock bash will not proc)."
+      ],
+      "mana": "0",
+      "hotKey": "Q",
+      "cooldown": "0.5",
+      "description": "Replaces Time Walk with Reverse Time Walk for 1.5 seconds after landing. If used in this time period, you will reverse your time walk back to your previous cast location. Does not affect health or proc scepter hits.",
+      "spellName": "Reverse Time Walk",
+      "params": [
+        "Cast Animation: 0+0",
+        "Reversal Time Window: 1.5"
+      ],
+      "itemBehaviour": [],
+      "legacyKey": "W",
+      "story": null
+    },
+    {
+      "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/a\/a3\/Faceless_Void_Time_Dilation_1.mp3\/revision\/latest?cb=20191216013829",
+      "effects": [
+        "Ability No Target",
+        "Affects Enemies"
+      ],
+      "notes": [
+        "Affects units in the fog of war and invisible units, but not invulnerable and hidden units.",
+        "Causes enemy cooldowns and charges of charge-based spells to recharge 75% slower while they have the debuff.",
+        "Does not affect the cooldown of items. Does affect cooldowns of passive abilities.",
+        "The slow has no stack limit. Each ability on cooldown adds a stack. Also counts the cooldown of hidden abilities, like Invoker's uninvoked spells or Morph, and abilities granted by Aghanim's Scepter and Aghanim's Shard. Rubick's stolen spells which are on cooldown and already lost do not count, as they are not hidden, but removed.",
+        "Also counts the cooldown of hidden abilities, like Invoker's uninvoked spells or Morph, and abilities granted by Aghanim's Scepter and Aghanim's Shard.",
+        "Rubick's stolen spells which are on cooldown and already lost do not count, as they are not hidden, but removed.",
+        "The slow debuff checks all cooldowns continuously, and adapts the slow value and stack count immediately.",
+        "Abilities can still be reset (e.g. Refresher Orb) while affected by Time Dilation.",
+        "Multiple instances of Time Dilation do not stack, but refresh the duration."
+      ],
+      "mana": "75",
+      "hotKey": "W",
+      "cooldown": "40\/34\/28\/22",
+      "description": "Faceless Void traps all nearby enemies in a time dilation field for 8\/10\/12\/14 seconds, extending their cooldowns and slowing their movement and attack speed by 10% for each cooldown extended.",
+      "spellName": "Time Dilation",
+      "params": [
+        "Cast Animation: 0.1+0.77",
+        "Radius: 775",
+        "Cooldown Rate Reduction: 75%",
+        "Slow per Extended Cooldown: 10%",
+        "Duration: 8\/10\/12\/14",
+        "Effects persist if debuff was placed before spell immunity and when not dispelled."
+      ],
+      "itemBehaviour": [],
+      "legacyKey": "R",
+      "story": "For those facing off against Darkterror, each moment seems to stretch into eternity."
+    },
+    {
+      "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/3\/36\/Faceless_Void_Time_Lock.mp3\/revision\/latest?cb=20191216013831",
+      "effects": [
+        "Ability Passive",
+        "Affects Enemies",
+        "Damage Magical \/ Instant Attack"
+      ],
+      "notes": [
+        "Does not stack with other bashes. The bash from Skull Basher and Abyssal Blade is completely disabled for Faceless Void. In Ability Draft, fully stacks with the bash from Skull Basher and Abyssal Blade.",
+        "In Ability Draft, fully stacks with the bash from Skull Basher and Abyssal Blade.",
+        "The proccing attack first applies the debuff, then its own damage.",
+        "Time Lock works against allied units, but not against wards and buildings.",
+        "Upon proccing, the stun debuff gets applied. 0.33 seconds later, the second attack, and the damage applies. The bash damage is dealt in a separate instance and is spell damage. It is not added as attack damage. This means the damage works with spell lifesteal and spell damage amplification, but not with lifesteal, crit, or cleave. The second attack is an instant attack, which is allowed to trigger attack modifiers normally. This means it can trigger itself as well. Applies the instant attack first, then Time Lock's own damage.",
+        "The bash damage is dealt in a separate instance and is spell damage. It is not added as attack damage.",
+        "This means the damage works with spell lifesteal and spell damage amplification, but not with lifesteal, crit, or cleave.",
+        "The second attack is an instant attack, which is allowed to trigger attack modifiers normally. This means it can trigger itself as well.",
+        "Applies the instant attack first, then Time Lock's own damage.",
+        "Despite the visual effect, the angle of the second attack is still based on Faceless Void's position, so cleave hits towards where he is facing, and not the image that appears.",
+        "Adds an average of 1.2\/2.4\/4\/6 (TagTalent 7.8\/11.2\/15\/19.2) damage to every attack.",
+        "Time Lock uses pseudo-random distribution."
+      ],
+      "mana": null,
+      "hotKey": "E",
+      "cooldown": null,
+      "description": "Adds the chance for an attack to lock an enemy unit in time while attacking it a second time.",
+      "spellName": "Time Lock",
+      "params": [
+        "Proc Chance: 12%\/16%\/20%\/24%",
+        "Damage: 10\/15\/20\/25 (TagTalent 65\/70\/75\/80)",
+        "Second Attack Delay: 0.33",
+        "Hero Duration: 0.65",
+        "Non-Hero Duration: 2"
+      ],
+      "itemBehaviour": [],
+      "legacyKey": "E",
+      "story": "The strike of the Faceless Void lands with dimension shifting force."
+    },
+    {
+      "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/0\/03\/Faceless_Void_Chronosphere.mp3\/revision\/latest?cb=20191216013838",
+      "effects": [
+        "Ability Target Area",
+        "Affects Enemies \/ Allies"
+      ],
+      "notes": [
+        "Chronosphere affects all units which are not owned by Faceless Void, including buildings, wards and allies.",
+        "Does not affect couriers, hidden units and invulnerable heroes. All other invulnerable units are fully affected.",
+        "Instantly destroys Homing Missile and The Swarm beetles.",
+        "Instantly causes already latched Phantoms to return to their caster, and freezes traveling phantoms.",
+        "While in the Chronosphere, Faceless Void and any units he controls are phased and hasted, meaning they cannot be slowed below the set value.",
+        "Faceless Void and illusions of him (be it his own, enemy or allied illusions) cannot be frozen by Chronospheres, regardless of source. This is innate to Faceless Void. However, the haste and phased movement is only provided to the caster and their units. In Ability Draft, Faceless Void keeps his innate immunity to Chronospheres, even when not drafting it.",
+        "However, the haste and phased movement is only provided to the caster and their units.",
+        "In Ability Draft, Faceless Void keeps his innate immunity to Chronospheres, even when not drafting it.",
+        "Provides flying vision and True Sight over the whole affected area for its duration.",
+        "Affected units are stunned. When other units walk inside the area, they also get affected for its remaining duration.",
+        "Cancels most sources of Forced Movement upon applying the disabling debuff on a unit.",
+        "Units inside Chronosphere can be pulled out by various spells. Force Staff, Hurricane Pike, Psychic Headband, Snowball and Geomagnetic Grip cannot move units out of Chronosphere.",
+        "Despite its visual effects, the effective area is a cylinder not a sphere."
+      ],
+      "mana": "150\/225\/300",
+      "hotKey": "R",
+      "cooldown": "160",
+      "description": "Creates a blister in spacetime, trapping all units caught in its sphere of influence and causes you to move very quickly inside it. Only Faceless Void and any units he controls are unaffected. Invisible enemies in the sphere will be revealed.",
+      "spellName": "Chronosphere",
+      "params": [
+        "Cast Animation: 0.35+0.7",
+        "Cast Range: 600",
+        "Radius: 450 (TagTalent 590)",
+        "Haste Speed: 1000",
+        "Duration: 4\/4.5\/5",
+        "Faceless Void's immunity to Chronospheres is not disabled by Break."
+      ],
+      "itemBehaviour": [],
+      "legacyKey": "C",
+      "story": "When a rift opens to Claszureme, all poor souls caught within will likely never return."
+    },
+    {
+      "audioUrl": null,
+      "effects": [
+        "Ability Passive",
+        "Affects Self"
+      ],
+      "notes": [
+        "Grants Faceless Void a chance to avoid damage completely.",
+        "Backtrack belongs to the group of damage negating effects. It is not evasion. This means it only negates damage, it does not evade any side effects of spells or attacks, like disables. When an attack has e.g. Mana Break and Backtrack triggers on the attack, the damage is avoided, but the mana burn still takes effect. This also means that True Strike or Accuracy does not stop Backtrack from avoiding attack damage. Evasion has priority over Backtrack. When evasion procs, Backtrack cannot proc on that attack.",
+        "This means it only negates damage, it does not evade any side effects of spells or attacks, like disables.",
+        "When an attack has e.g. Mana Break and Backtrack triggers on the attack, the damage is avoided, but the mana burn still takes effect.",
+        "This also means that True Strike or Accuracy does not stop Backtrack from avoiding attack damage.",
+        "Evasion has priority over Backtrack. When evasion procs, Backtrack cannot proc on that attack.",
+        "Backtrack has the third highest priority in the group of damage negating effects. This means when combined with e.g. Aphotic Shield or Refraction, Backtrack negates damage while the other sources do not.",
+        "This means when combined with e.g. Aphotic Shield or Refraction, Backtrack negates damage while the other sources do not.",
+        "As with all damage manipulating effects, Backtrack can negate all 3 damage types. Increases Faceless Void's effective health by an average of 25% against those.",
+        "Increases Faceless Void's effective health by an average of 25% against those.",
+        "Fully ignores damage which is flagged as HP Removal.",
+        "Backtrack uses pseudo-random distribution."
+      ],
+      "mana": null,
+      "hotKey": null,
+      "cooldown": null,
+      "description": "Proc Chance: 20%",
+      "spellName": "Backtrack",
+      "params": [
+        "Proc Chance: 20%"
+      ],
+      "itemBehaviour": [],
+      "legacyKey": null,
+      "story": null
+    }
+  ],
+  "mainAttributes": {
+    "attrStrengthInc": 2.4,
+    "attrStrength": 22.0,
+    "attrIntelligence": 15.0,
+    "attrIntelligenceInc": 1.5,
+    "attrAgilityInc": 3.0,
+    "attrAgility": 19.0
+  },
+  "description": "Darkterror, the Faceless Void, is a melee agility hero played as an offlaner or carry. Given a little time, he becomes a terrifying hero capable of destroying entire enemy teams in seconds.",
+  "history": "Darkterror the Faceless Void is a visitor from Claszureme, a realm outside of time. It remains a mystery why this being from another dimension believes the struggle for the Nemesis Stones is worth entering our physical plane, but apparently an upset in the balance of power in this world has repercussions in adjacent dimensions. Time means nothing to Darkterror, except as a way to thwart his foes and aid his allies. His long-view of the cosmos has given him a remote, disconnected quality, although in battle he is quite capable of making it personal.",
+  "talents": [
+    {
+      "talentLvl": "25",
+      "talentLeft": "+140 Chronosphere AoE",
+      "talentRight": "+20% Backtrack"
+    },
+    {
+      "talentLvl": "20",
+      "talentLeft": "-1.75s Time Walk",
+      "talentRight": "+40 Attack Speed"
+    },
+    {
+      "talentLvl": "15",
+      "talentLeft": "+250 Time Walk Cast Range",
+      "talentRight": "+55 Time Lock Damage"
+    },
+    {
+      "talentLvl": "10",
+      "talentLeft": "+8 Strength",
+      "talentRight": "+12 Damage"
+    }
+  ]
+}

@@ -1,0 +1,21 @@
+{
+  "abilities": [],
+  "additionalInformation": [
+    "Apexes are fully sharable.",
+    "For strength heroes, it grants 1500 health, 7.5 health regen, and 75 attack damage.",
+    "For agility heroes, it grants 12.5 armor, 75 attack speed, and 75 attack damage.",
+    "For intelligence heroes, it grants 900 mana, 3.75 mana regen, and 75 attack damage."
+  ],
+  "cost": "N\/A",
+  "lore": null,
+  "consistFrom": null,
+  "boughtFrom": "Neutral Drop Only",
+  "name": "Apex",
+  "description": "Three orbs of remarkable power bound within a single scepter.",
+  "trivia": null,
+  "upgradeIn": null,
+  "bonuses": [
+    "+75 Primary attribute"
+  ],
+  "tips": null
+}

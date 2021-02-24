@@ -1,0 +1,120 @@
+{
+  "abilities": [
+    {
+      "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/4\/4e\/Magic_Stick_Energy_Charge.mp3\/revision\/latest?cb=20191227195452",
+      "effects": [
+        "Ability Target Unit",
+        "Affects Allied Heroes"
+      ],
+      "notes": [
+        "Double clicking the item casts it on self.",
+        "If the target is more than 750 range away, the caster moves to the target until it is within 500 range before casting. If a cast order is given on a target which is within 750 range already, the caster does not need to move closer and casts it right away.",
+        "If a cast order is given on a target which is within 750 range already, the caster does not need to move closer and casts it right away.",
+        "Can only target heroes (including illusions) and creep-heroes.",
+        "The owner does not have to face the target to use this on it.",
+        "Gains 1 charge whenever a visible enemy unit, including neutral creeps, uses an ability within the radius, as well as passively every 15 seconds. The automatic charge increment happens even while dead.",
+        "The automatic charge increment happens even while dead.",
+        "Does not gain charges from toggle abilities, active attack modifiers and the abilities listed here.",
+        "Clones, illusions and creep-heroes cannot gain charges.",
+        "Passively triggered spells (e.g. Quill Spray, Borrowed Time, Multicast, Reincarnation) do not add charges.",
+        "When an enemy casts a spell out of the invisibility from the Invisibility Rune, Shadow Walk, Sand Storm, Moonlight Shadow, or Shukuchi, it does not give a charge.",
+        "Can restore up to 300 health and mana when having the maximum amount of charges.",
+        "Shares cooldown with Magic Stick and Magic Wand.",
+        "When having multiple Magic Sticks-based items in the inventory, only the oldest one will gain charges from cast abilities. If it is full, the second oldest one starts to gain charges. Each Holy Locket have their own 15 second timers and all will automatically gain charges passively.",
+        "Each Holy Locket have their own 15 second timers and all will automatically gain charges passively.",
+        "Upon upgrading a Magic Wand into a Holy Locket, all its current charges are carried over."
+      ],
+      "mana": null,
+      "abilityName": "Energy Charge",
+      "cooldown": "13",
+      "description": "Target an allied unit to instantly restore 15 health and mana per charge stored. Max 20 charges. Gains a charge every 15 seconds and whenever a visible enemy within 1200 range uses an ability.",
+      "params": [
+        "Default Cast Range: 500",
+        "Buffer Cast Range: 750",
+        "Radius: 1200",
+        "Charges per Cast Spell: 1",
+        "Max Charges: 20",
+        "Health and Mana Restored per Charge: 15"
+      ],
+      "itemBehaviour": [],
+      "story": null
+    },
+    {
+      "audioUrl": null,
+      "effects": [
+        "Ability Passive",
+        "Affects Self"
+      ],
+      "notes": [
+        "Unlike regular heal amplification, Holy Blessing amplifies outgoing healing, not incoming healing. This means any healing provided by the owner gets ampified, regardless of who the target is. Vice versa, other sources of healing applied to the owner are not amplified.",
+        "This means any healing provided by the owner gets ampified, regardless of who the target is.",
+        "Vice versa, other sources of healing applied to the owner are not amplified.",
+        "Only grants heal amplification. Does not grant health regen amplification, lifesteal amplification, or spell lifesteal amplification.",
+        "Multiple instances of Holy Blessing do not stack.",
+        "Stacks diminishingly with other sources of heal amplification."
+      ],
+      "mana": null,
+      "abilityName": "Holy Blessing",
+      "cooldown": null,
+      "description": "Amplifies heals you provide by 35%.",
+      "params": [
+        "Heal Amplification: 35%"
+      ],
+      "itemBehaviour": [],
+      "story": null
+    },
+    {
+      "audioUrl": null,
+      "effects": [
+        "Ability Aura",
+        "Affects Allies"
+      ],
+      "notes": [
+        "Stacks with all other sources of flat health regeneration, except with Regeneration Aura from multiple Holy Lockets.",
+        "Can regenerate up to 180 health in one minute.",
+        "Does not affect wards, buildings and invulnerable units.",
+        "The aura's buff lingers for 0.5 seconds."
+      ],
+      "mana": null,
+      "abilityName": "Regeneration Aura",
+      "cooldown": null,
+      "description": "Grants 3 health regeneration to allies.",
+      "params": [
+        "Radius: 1200",
+        "Health Regeneration Bonus: 3",
+        "Aura Linger Duration: 0.5"
+      ],
+      "itemBehaviour": [],
+      "story": null
+    }
+  ],
+  "additionalInformation": [
+    "For strength heroes, it grants 310 health, 0.3 health regen, 0.5 armor, 3 attack speed, 361 mana, 0.15 mana regen and 3 attack damage.",
+    "For agility heroes, it grants 310 health, 0.3 health regen, 0.5 armor, 3 attack speed, 361 mana, 0.15 mana regen and 3 attack damage.",
+    "For intelligence heroes, it grants 310 health, 0.3 health regen, 0.5 armor, 3 attack speed, 361 mana, 0.15 mana regen and 3 attack damage."
+  ],
+  "cost": "2500",
+  "lore": null,
+  "consistFrom": [
+    "Headdress",
+    "Fluffy Hat",
+    "Energy Booster",
+    "Magic Wand",
+    "Recipe"
+  ],
+  "boughtFrom": "Support",
+  "name": "Holy Locket",
+  "description": "A prized relic long thought lost forever in a failed crusade.",
+  "trivia": null,
+  "upgradeIn": null,
+  "bonuses": [
+    "+3 Strength",
+    "+3 Agility",
+    "+3 Intelligence",
+    "+250 Health",
+    "+325 Mana"
+  ],
+  "tips": [
+    "Holy Locket synergizes great with Mekansm, Guardian Greaves, Urn of Shadows and Spirit Vessel. Since it amplifies outgoing healing, all affected allies get healed for more."
+  ]
+}

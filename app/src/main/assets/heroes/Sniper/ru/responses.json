@@ -1,0 +1,1281 @@
+[
+  {
+    "responses": [
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_ru_gamepedia\/images\/e\/ec\/Snip_spawn_01_ru.mp3\/revision\/latest?cb=20170413154639",
+        "title": "Sniper!"
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_ru_gamepedia\/images\/9\/9a\/Snip_spawn_02_ru.mp3\/revision\/latest?cb=20170413154644",
+        "title": "Это Sniper!"
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_ru_gamepedia\/images\/2\/25\/Snip_spawn_04_ru.mp3\/revision\/latest?cb=20170413154653",
+        "title": "Целься лучше. Как я."
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_ru_gamepedia\/images\/1\/1e\/Snip_spawn_05_ru.mp3\/revision\/latest?cb=20170413154658",
+        "title": "Прицел, курок - врага валим с ног."
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_ru_gamepedia\/images\/a\/ad\/Snip_spawn_06_ru.mp3\/revision\/latest?cb=20170413154703",
+        "title": "Вокруг меня всегда свистят пули."
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_ru_gamepedia\/images\/7\/75\/Snip_spawn_07_ru.mp3\/revision\/latest?cb=20170413154707",
+        "title": "Привет, я Sniper! Добро пожаловать на стрельбище."
+      }
+    ],
+    "category": "Появление"
+  },
+  {
+    "responses": [
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_ru_gamepedia\/images\/d\/d9\/Snip_inthebag_01_ru.mp3\/revision\/latest?cb=20170413153416",
+        "title": "Лежит в сумке!"
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_ru_gamepedia\/images\/6\/6c\/Snip_inthebag_02_ru.mp3\/revision\/latest?cb=20170413153421",
+        "title": "В сумке!"
+      }
+    ],
+    "category": "Насмешка"
+  },
+  {
+    "responses": [
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_ru_gamepedia\/images\/f\/f6\/Snip_spawn_03_ru.mp3\/revision\/latest?cb=20170413154648",
+        "title": "Время пострелять."
+      }
+    ],
+    "category": "Начало битвы"
+  },
+  {
+    "responses": [
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_ru_gamepedia\/images\/0\/00\/Snip_move_01_ru.mp3\/revision\/latest?cb=20170413153930",
+        "title": "О, да! Хе-хе-хе-хе-хе."
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_ru_gamepedia\/images\/1\/1c\/Snip_move_02_ru.mp3\/revision\/latest?cb=20170413153935",
+        "title": "Да!"
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_ru_gamepedia\/images\/2\/26\/Snip_move_03_ru.mp3\/revision\/latest?cb=20170413153940",
+        "title": "Мгм."
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_ru_gamepedia\/images\/5\/57\/Snip_move_04_ru.mp3\/revision\/latest?cb=20170413153945",
+        "title": "Ага."
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_ru_gamepedia\/images\/0\/05\/Snip_move_05_ru.mp3\/revision\/latest?cb=20170413153950",
+        "title": "Ага!"
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_ru_gamepedia\/images\/0\/09\/Snip_move_07_ru.mp3\/revision\/latest?cb=20170413153955",
+        "isArcane": true,
+        "title": "Ага!"
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_ru_gamepedia\/images\/3\/35\/Snip_move_08_ru.mp3\/revision\/latest?cb=20170413154000",
+        "title": "Да."
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_ru_gamepedia\/images\/e\/e7\/Snip_move_09_ru.mp3\/revision\/latest?cb=20170413154005",
+        "title": "Да!"
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_ru_gamepedia\/images\/c\/c3\/Snip_move_10_ru.mp3\/revision\/latest?cb=20170413154010",
+        "isArcane": true,
+        "title": "Да!"
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_ru_gamepedia\/images\/4\/42\/Snip_move_11_ru.mp3\/revision\/latest?cb=20170413154015",
+        "title": "Ага."
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_ru_gamepedia\/images\/a\/a3\/Snip_move_12_ru.mp3\/revision\/latest?cb=20170413154020",
+        "title": "Мгм."
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_ru_gamepedia\/images\/7\/71\/Snip_move_13_ru.mp3\/revision\/latest?cb=20170413154025",
+        "title": "О, да."
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_ru_gamepedia\/images\/a\/a0\/Snip_move_14_ru.mp3\/revision\/latest?cb=20170413154030",
+        "title": "Хм-хм-хе-хе-хе."
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_ru_gamepedia\/images\/7\/73\/Snip_move_15_ru.mp3\/revision\/latest?cb=20170413154035",
+        "title": "Заказ принят!"
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_ru_gamepedia\/images\/9\/94\/Snip_move_16_ru.mp3\/revision\/latest?cb=20170413154040",
+        "title": "Новая траектория."
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_ru_gamepedia\/images\/5\/54\/Snip_move_17_ru.mp3\/revision\/latest?cb=20170413154045",
+        "title": "Вижу цель."
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_ru_gamepedia\/images\/d\/d8\/Snip_move_18_ru.mp3\/revision\/latest?cb=20170413154050",
+        "title": "Цель обнаружена!"
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_ru_gamepedia\/images\/c\/c2\/Snip_move_19_ru.mp3\/revision\/latest?cb=20170413154055",
+        "title": "Наводчик укажет мне цель."
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_ru_gamepedia\/images\/1\/18\/Snip_move_20_ru.mp3\/revision\/latest?cb=20170413154100",
+        "title": "Точно по линии прицела!"
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_ru_gamepedia\/images\/1\/15\/Snip_move_21_ru.mp3\/revision\/latest?cb=20170413154105",
+        "title": "Как скажете."
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_ru_gamepedia\/images\/a\/a1\/Snip_move_22_ru.mp3\/revision\/latest?cb=20170413154110",
+        "title": "Охота началась!"
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_ru_gamepedia\/images\/a\/ac\/Snip_move_23_ru.mp3\/revision\/latest?cb=20170413154115",
+        "title": "Крупным калибром!"
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_ru_gamepedia\/images\/7\/7e\/Snip_move_24_ru.mp3\/revision\/latest?cb=20170413154120",
+        "title": "В прорыв!"
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_ru_gamepedia\/images\/b\/b2\/Snip_move_25_ru.mp3\/revision\/latest?cb=20170413154125",
+        "title": "Вперед и с песней!"
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_ru_gamepedia\/images\/7\/71\/Snip_move_26_ru.mp3\/revision\/latest?cb=20170413154130",
+        "title": "Конечно!"
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_ru_gamepedia\/images\/0\/05\/Snip_move_27_ru.mp3\/revision\/latest?cb=20170413154135",
+        "title": "Конечно."
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_ru_gamepedia\/images\/0\/07\/Snip_move_28_ru.mp3\/revision\/latest?cb=20170413154140",
+        "title": "Следую наводке."
+      }
+    ],
+    "category": "Передвижение"
+  },
+  {
+    "responses": [
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_ru_gamepedia\/images\/f\/fc\/Snip_move_29_ru.mp3\/revision\/latest?cb=20170413154145",
+        "title": "Вижу цель."
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_ru_gamepedia\/images\/6\/6e\/Snip_attack_01_ru.mp3\/revision\/latest?cb=20170413152943",
+        "title": "Атакую!"
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_ru_gamepedia\/images\/a\/a1\/Snip_attack_02_ru.mp3\/revision\/latest?cb=20170413152947",
+        "title": "Лихой выстрел!"
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_ru_gamepedia\/images\/1\/14\/Snip_attack_03_ru.mp3\/revision\/latest?cb=20170413152952",
+        "title": "Сдохни!"
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_ru_gamepedia\/images\/0\/0b\/Snip_attack_04_ru.mp3\/revision\/latest?cb=20170413152957",
+        "title": "Скорострел."
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_ru_gamepedia\/images\/1\/12\/Snip_attack_05_ru.mp3\/revision\/latest?cb=20170413153001",
+        "title": "Будет больно!"
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_ru_gamepedia\/images\/c\/c1\/Snip_attack_06_ru.mp3\/revision\/latest?cb=20170413153006",
+        "title": "Баллистический подход."
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_ru_gamepedia\/images\/a\/af\/Snip_attack_07_ru.mp3\/revision\/latest?cb=20170413153010",
+        "title": "Легкая мишень!"
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_ru_gamepedia\/images\/3\/3b\/Snip_attack_08_ru.mp3\/revision\/latest?cb=20170413153015",
+        "title": "Стреляй!"
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_ru_gamepedia\/images\/e\/e8\/Snip_attack_09_ru.mp3\/revision\/latest?cb=20170413153020",
+        "title": "Выкуси!"
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_ru_gamepedia\/images\/e\/e8\/Snip_attack_10_ru.mp3\/revision\/latest?cb=20170413153026",
+        "title": "Пороховое возмездие."
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_ru_gamepedia\/images\/f\/fa\/Snip_attack_11_ru.mp3\/revision\/latest?cb=20170413153031",
+        "title": "Держись, мишень."
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_ru_gamepedia\/images\/b\/b7\/Snip_attack_12_ru.mp3\/revision\/latest?cb=20170413153035",
+        "title": "Снял!"
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_ru_gamepedia\/images\/6\/61\/Snip_tf2_05_ru.mp3\/revision\/latest?cb=20170413154731",
+        "title": "Ну что, попробуем?"
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_ru_gamepedia\/images\/f\/fe\/Snip_lasthit_04_ru.mp3\/revision\/latest?cb=20170413153653",
+        "title": "Не в бровь, а в глаз!"
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_ru_gamepedia\/images\/2\/21\/Snip_lasthit_06_ru.mp3\/revision\/latest?cb=20170413153703",
+        "title": "Получай свинцовый завтрак!"
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_ru_gamepedia\/images\/d\/dc\/Snip_lasthit_10_ru.mp3\/revision\/latest?cb=20170413153723",
+        "title": "Отведай свинца!"
+      }
+    ],
+    "category": "Атака"
+  },
+  {
+    "responses": [
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_ru_gamepedia\/images\/1\/14\/Snip_cast_01_ru.mp3\/revision\/latest?cb=20170413153108",
+        "title": "Прицел наведён!"
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_ru_gamepedia\/images\/9\/9c\/Snip_cast_02_ru.mp3\/revision\/latest?cb=20170413153113",
+        "title": "Готовсь, цельсь."
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_ru_gamepedia\/images\/0\/00\/Snip_cast_03_ru.mp3\/revision\/latest?cb=20170413153118",
+        "title": "Прощайся с жизнью!"
+      }
+    ],
+    "category": "Использование заклинания"
+  },
+  {
+    "responses": [
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_ru_gamepedia\/images\/2\/28\/Snip_ability_shrapnel_01_ru.mp3\/revision\/latest?cb=20170413152842",
+        "title": "Шрапнель!"
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_ru_gamepedia\/images\/4\/4d\/Snip_ability_shrapnel_03_ru.mp3\/revision\/latest?cb=20170413152852",
+        "title": "О-хо-хо, а-ха-ха!"
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_ru_gamepedia\/images\/7\/70\/Snip_ability_shrapnel_02_ru.mp3\/revision\/latest?cb=20170413152847",
+        "title": "Потанцуй-ка!"
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_ru_gamepedia\/images\/a\/ad\/Snip_ability_shrapnel_04_ru.mp3\/revision\/latest?cb=20170413152856",
+        "title": "Бодрячком!"
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_ru_gamepedia\/images\/7\/79\/Snip_ability_shrapnel_05_ru.mp3\/revision\/latest?cb=20170413152901",
+        "title": "Хе-хе-хе, ха-ха! Хе-хе-хе-хе."
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_ru_gamepedia\/images\/7\/7b\/Snip_ability_shrapnel_06_ru.mp3\/revision\/latest?cb=20170413152905",
+        "title": "Танцуй, ха-ха-ха-ха! Танцуй!"
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_ru_gamepedia\/images\/3\/39\/Snip_ability_shrapnel_07_ru.mp3\/revision\/latest?cb=20170413152910",
+        "title": "Ну, попрыгай! Давай же, хе, попрыгай! Хе-хе-хе-хе-хе. А-ха-ха-ха-ха! Хе-хе-хе-хе!"
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_ru_gamepedia\/images\/3\/35\/Snip_ability_assass_02_ru.mp3\/revision\/latest?cb=20170413154822",
+        "title": "Как по мошкам стрелять."
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_ru_gamepedia\/images\/6\/6d\/Snip_ability_assass_06_ru.mp3\/revision\/latest?cb=20170413152723",
+        "title": "Вижу цель."
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_ru_gamepedia\/images\/f\/ff\/Snip_ability_assass_07_ru.mp3\/revision\/latest?cb=20170413152728",
+        "title": "В списке смертников!"
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_ru_gamepedia\/images\/5\/52\/Snip_ability_assass_08_ru.mp3\/revision\/latest?cb=20170413152733",
+        "title": "Зацени!"
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_ru_gamepedia\/images\/4\/49\/Snip_ability_assass_03_ru.mp3\/revision\/latest?cb=20170413154827",
+        "title": "Тыщ! Headshot!"
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_ru_gamepedia\/images\/2\/2b\/Snip_ability_assass_04_ru.mp3\/revision\/latest?cb=20170413152714",
+        "title": "Вас высмотрели!"
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_ru_gamepedia\/images\/b\/b4\/Snip_ability_assass_05_ru.mp3\/revision\/latest?cb=20170413152719",
+        "title": "Беги-беги, а спрятаться не получится!"
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_ru_gamepedia\/images\/0\/09\/Snip_ability_assass_12_ru.mp3\/revision\/latest?cb=20170413152753",
+        "title": "Глянь-ка!"
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_ru_gamepedia\/images\/d\/d1\/Snip_kill_03_ru.mp3\/revision\/latest?cb=20170413153444",
+        "title": "В яблочко!"
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_ru_gamepedia\/images\/4\/4f\/Snip_kill_08_ru.mp3\/revision\/latest?cb=20170413153507",
+        "title": "Вот он - всемогущий ствол!"
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_ru_gamepedia\/images\/e\/e3\/Snip_kill_10_ru.mp3\/revision\/latest?cb=20170413153517",
+        "title": "На поражение!"
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_ru_gamepedia\/images\/0\/04\/Snip_kill_13_ru.mp3\/revision\/latest?cb=20170413153531",
+        "title": "Последнее слово? Бум!"
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_ru_gamepedia\/images\/3\/3f\/Snip_tf2_01_ru.mp3\/revision\/latest?cb=20170413154712",
+        "title": "Спасибо что не двигался, балбес!"
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_ru_gamepedia\/images\/f\/ff\/Snip_tf2_02_ru.mp3\/revision\/latest?cb=20170413154717",
+        "title": "Спасибо что не двигался, дуралей!"
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_ru_gamepedia\/images\/7\/7f\/Snip_ability_fail_01_ru.mp3\/revision\/latest?cb=20170413152803",
+        "title": "О-ой!"
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_ru_gamepedia\/images\/a\/ac\/Snip_ability_fail_02_ru.mp3\/revision\/latest?cb=20170413152808",
+        "title": "О-о!"
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_ru_gamepedia\/images\/c\/c2\/Snip_ability_fail_03_ru.mp3\/revision\/latest?cb=20170413152813",
+        "title": "Что за кретин!"
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_ru_gamepedia\/images\/e\/e1\/Snip_ability_fail_04_ru.mp3\/revision\/latest?cb=20170413152818",
+        "title": "Какого...?"
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_ru_gamepedia\/images\/d\/d6\/Snip_ability_fail_05_ru.mp3\/revision\/latest?cb=20170413152823",
+        "title": "Ах ты, осечка!"
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_ru_gamepedia\/images\/4\/47\/Snip_ability_fail_06_ru.mp3\/revision\/latest?cb=20170413152828",
+        "title": "Как это промахнулся?"
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_ru_gamepedia\/images\/c\/c9\/Snip_ability_fail_07_ru.mp3\/revision\/latest?cb=20170413152833",
+        "title": "Но, я был уверен, что не промажу!"
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_ru_gamepedia\/images\/5\/52\/Snip_ability_fail_08_ru.mp3\/revision\/latest?cb=20170413152838",
+        "title": "Да я же точно целился!"
+      }
+    ],
+    "category": "Способности"
+  },
+  {
+    "responses": [
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_ru_gamepedia\/images\/8\/85\/Snip_level_01_ru.mp3\/revision\/latest?cb=20170413153815",
+        "title": "У меня глаз как у орла!"
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_ru_gamepedia\/images\/5\/5c\/Snip_level_02_ru.mp3\/revision\/latest?cb=20170413153820",
+        "title": "Приготовились."
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_ru_gamepedia\/images\/a\/ae\/Snip_level_03_ru.mp3\/revision\/latest?cb=20170413153825",
+        "title": "Хах, воу, больше пороху!"
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_ru_gamepedia\/images\/3\/33\/Snip_level_04_ru.mp3\/revision\/latest?cb=20170413153830",
+        "title": "Больше калибр!"
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_ru_gamepedia\/images\/3\/31\/Snip_level_05_ru.mp3\/revision\/latest?cb=20170413153835",
+        "title": "О-о, обострились чувства!"
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_ru_gamepedia\/images\/f\/f6\/Snip_level_06_ru.mp3\/revision\/latest?cb=20170413153840",
+        "title": "Тренировки окупились!"
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_ru_gamepedia\/images\/c\/c6\/Snip_level_07_ru.mp3\/revision\/latest?cb=20170413153845",
+        "title": "Ха-ха-ха!"
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_ru_gamepedia\/images\/1\/16\/Snip_level_08_ru.mp3\/revision\/latest?cb=20170413153850",
+        "title": "О-хо!"
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_ru_gamepedia\/images\/f\/f4\/Snip_level_09_ru.mp3\/revision\/latest?cb=20170413153855",
+        "title": "Хи-хи, ха-ха!"
+      }
+    ],
+    "category": "Получение уровня"
+  },
+  {
+    "responses": [
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_ru_gamepedia\/images\/f\/f0\/Snip_ability_assass_01_ru.mp3\/revision\/latest?cb=20170413154818",
+        "title": "Этих снял."
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_ru_gamepedia\/images\/b\/b5\/Snip_ability_assass_09_ru.mp3\/revision\/latest?cb=20170413152738",
+        "title": "Ю-ху-у!"
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_ru_gamepedia\/images\/5\/5b\/Snip_ability_assass_13_ru.mp3\/revision\/latest?cb=20170413152758",
+        "title": "А-а!"
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_ru_gamepedia\/images\/2\/21\/Snip_kill_01_ru.mp3\/revision\/latest?cb=20170413153435",
+        "title": "Расстрелять!"
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_ru_gamepedia\/images\/7\/7f\/Snip_kill_02_ru.mp3\/revision\/latest?cb=20170413153439",
+        "title": "Хе-хе, один выстрел - один труп."
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_ru_gamepedia\/images\/a\/a7\/Snip_kill_04_ru.mp3\/revision\/latest?cb=20170413153449",
+        "title": "О нет, ну не надо так!"
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_ru_gamepedia\/images\/4\/48\/Snip_kill_05_ru.mp3\/revision\/latest?cb=20170413153453",
+        "title": "Что за дурачина!"
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_ru_gamepedia\/images\/3\/3f\/Snip_kill_06_ru.mp3\/revision\/latest?cb=20170413153458",
+        "title": "Твоя морда просит пули."
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_ru_gamepedia\/images\/e\/e6\/Snip_kill_07_ru.mp3\/revision\/latest?cb=20170413153503",
+        "title": "Твоя жизнь - всего лишь вспышка боли."
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_ru_gamepedia\/images\/f\/f4\/Snip_kill_09_ru.mp3\/revision\/latest?cb=20170413153512",
+        "title": "Это был предупредительный выстрел."
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_ru_gamepedia\/images\/1\/1a\/Snip_kill_11_ru.mp3\/revision\/latest?cb=20170413153521",
+        "title": "Ха-ха-ха-ха!"
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_ru_gamepedia\/images\/8\/8a\/Snip_kill_12_ru.mp3\/revision\/latest?cb=20170413153526",
+        "title": "Хе-хе-хе-хе-хе-хе-хе-хе-хе!"
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_ru_gamepedia\/images\/d\/d5\/Snip_kill_14_ru.mp3\/revision\/latest?cb=20170413153536",
+        "title": "Тяжко в перестрелке без огнестрела, а? Хе."
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_ru_gamepedia\/images\/d\/de\/Snip_tf2_03_ru.mp3\/revision\/latest?cb=20170413154721",
+        "title": "Спасибо что не двигался."
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_ru_gamepedia\/images\/1\/10\/Snip_tf2_04_ru.mp3\/revision\/latest?cb=20170413154726",
+        "title": "Попрощайся с черепушкой!"
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_ru_gamepedia\/images\/1\/1d\/Snip_tf2_07_ru.mp3\/revision\/latest?cb=20170413154740",
+        "title": "Я вежлив и эффективен."
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_ru_gamepedia\/images\/3\/3e\/Snip_laugh_01_ru.mp3\/revision\/latest?cb=20170413153728",
+        "title": "Мха-ха-ха!"
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_ru_gamepedia\/images\/5\/57\/Snip_laugh_02_ru.mp3\/revision\/latest?cb=20170413153735",
+        "title": "Хе-хе-хе!"
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_ru_gamepedia\/images\/a\/ad\/Snip_laugh_03_ru.mp3\/revision\/latest?cb=20170413153740",
+        "title": "Ха-ха-ха!"
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_ru_gamepedia\/images\/1\/12\/Snip_laugh_04_ru.mp3\/revision\/latest?cb=20170413153745",
+        "title": "Хе-хе-хе-хе-хе-хе."
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_ru_gamepedia\/images\/c\/ce\/Snip_laugh_05_ru.mp3\/revision\/latest?cb=20170413153750",
+        "title": "Хо-хо-хо!"
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_ru_gamepedia\/images\/a\/a4\/Snip_laugh_06_ru.mp3\/revision\/latest?cb=20170413153755",
+        "title": "Ха-ха!"
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_ru_gamepedia\/images\/9\/9e\/Snip_laugh_07_ru.mp3\/revision\/latest?cb=20170413153800",
+        "title": "Ха-ха-ха-ха-ха!"
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_ru_gamepedia\/images\/1\/1d\/Snip_laugh_09_ru.mp3\/revision\/latest?cb=20170413153810",
+        "title": "О-хо-хо-хо!"
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_ru_gamepedia\/images\/b\/be\/Snip_kill_arrow_02_ru.mp3\/revision\/latest?cb=20170413153545",
+        "title": "Ух ты, перьевые пульки!",
+        "icons": [
+          "heroes\/Windranger\/minimap.png"
+        ]
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_ru_gamepedia\/images\/a\/a6\/Snip_kill_arrow_07_ru.mp3\/revision\/latest?cb=20170413153609",
+        "title": "За огнестрелом будущее, мой друг!",
+        "icons": [
+          "heroes\/Windranger\/minimap.png"
+        ]
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_ru_gamepedia\/images\/b\/bd\/Snip_kill_arrow_03_ru.mp3\/revision\/latest?cb=20170413153550",
+        "title": "Хех, отстойнее ствола я ещё не видел.",
+        "icons": [
+          "heroes\/Clinkz\/minimap.png"
+        ]
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_ru_gamepedia\/images\/3\/39\/Snip_kill_arrow_04_ru.mp3\/revision\/latest?cb=20170413153555",
+        "title": "Что случилось, тетива порвалась?",
+        "icons": [
+          "heroes\/Drow Ranger\/minimap.png"
+        ]
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_ru_gamepedia\/images\/6\/64\/Snip_kill_arrow_06_ru.mp3\/revision\/latest?cb=20170413153604",
+        "title": "Заведи себе пушку, дольше проживёшь!",
+        "icons": [
+          "heroes\/Lina\/minimap.png"
+        ]
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_ru_gamepedia\/images\/4\/41\/Snip_kill_blade_01_ru.mp3\/revision\/latest?cb=20170413153618",
+        "title": "Ты что ж, с ножом против пули!",
+        "icons": [
+          "heroes\/Juggernaut\/minimap.png"
+        ]
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_ru_gamepedia\/images\/7\/74\/Snip_kill_blade_02_ru.mp3\/revision\/latest?cb=20170413153623",
+        "title": "Вытащишь нож - я вытащу ствол.",
+        "icons": [
+          "heroes\/Riki\/minimap.png"
+        ]
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_ru_gamepedia\/images\/a\/a0\/Snip_kill_blade_03_ru.mp3\/revision\/latest?cb=20170413153628",
+        "title": "Кто-то пришёл на перестрелку с ножом!",
+        "icons": [
+          "heroes\/Riki\/minimap.png"
+        ]
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_ru_gamepedia\/images\/5\/50\/Snip_kill_arrow_05_ru.mp3\/revision\/latest?cb=20170413153559",
+        "title": "О, посмотрите раритет."
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_ru_gamepedia\/images\/6\/65\/Snip_kill_arrow_08_ru.mp3\/revision\/latest?cb=20170413153614",
+        "title": "А я быстрей!"
+      }
+    ],
+    "category": "Убийство врага"
+  },
+  {
+    "responses": [
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_ru_gamepedia\/images\/c\/c1\/Snip_lasthit_01_ru.mp3\/revision\/latest?cb=20170413153638",
+        "title": "Ха-ха!"
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_ru_gamepedia\/images\/1\/15\/Snip_lasthit_02_ru.mp3\/revision\/latest?cb=20170413153643",
+        "title": "Горстка пуль."
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_ru_gamepedia\/images\/c\/c2\/Snip_lasthit_03_ru.mp3\/revision\/latest?cb=20170413153648",
+        "title": "О, ещё пули?"
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_ru_gamepedia\/images\/9\/92\/Snip_lasthit_05_ru.mp3\/revision\/latest?cb=20170413153658",
+        "title": "Золото за свинец."
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_ru_gamepedia\/images\/3\/31\/Snip_lasthit_07_ru.mp3\/revision\/latest?cb=20170413153708",
+        "title": "Будет немножечко щипать."
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_ru_gamepedia\/images\/2\/21\/Snip_lasthit_08_ru.mp3\/revision\/latest?cb=20170413153713",
+        "title": "На поражение!"
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_ru_gamepedia\/images\/9\/99\/Snip_lasthit_09_ru.mp3\/revision\/latest?cb=20170413153718",
+        "title": "В яблочко!"
+      }
+    ],
+    "category": "Добивание"
+  },
+  {
+    "responses": [
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_ru_gamepedia\/images\/4\/4c\/Snip_ability_assass_10_ru.mp3\/revision\/latest?cb=20170413152743",
+        "title": "Ха-ха!"
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_ru_gamepedia\/images\/c\/ce\/Snip_ability_assass_11_ru.mp3\/revision\/latest?cb=20170413152748",
+        "title": "Хо-хо-хо!"
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_ru_gamepedia\/images\/9\/9a\/Snip_deny_01_ru.mp3\/revision\/latest?cb=20170413153224",
+        "title": "Не получишь!"
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_ru_gamepedia\/images\/2\/25\/Snip_deny_02_ru.mp3\/revision\/latest?cb=20170413153228",
+        "isArcane": true,
+        "title": "Не получишь!"
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_ru_gamepedia\/images\/7\/75\/Snip_deny_03_ru.mp3\/revision\/latest?cb=20170413153233",
+        "title": "Не-а!"
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_ru_gamepedia\/images\/8\/8f\/Snip_deny_04_ru.mp3\/revision\/latest?cb=20170413153237",
+        "title": "Ни за что!"
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_ru_gamepedia\/images\/6\/60\/Snip_deny_05_ru.mp3\/revision\/latest?cb=20170413153242",
+        "title": "Даже за золотые горы!"
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_ru_gamepedia\/images\/6\/62\/Snip_deny_06_ru.mp3\/revision\/latest?cb=20170413153247",
+        "title": "Не для тебя!"
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_ru_gamepedia\/images\/c\/c4\/Snip_deny_07_ru.mp3\/revision\/latest?cb=20170413153251",
+        "title": "Нет-нет-нет."
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_ru_gamepedia\/images\/e\/e8\/Snip_deny_08_ru.mp3\/revision\/latest?cb=20170413153256",
+        "title": "Ха-ха-ха-ха-ха-ха!"
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_ru_gamepedia\/images\/0\/00\/Snip_deny_09_ru.mp3\/revision\/latest?cb=20170413153301",
+        "title": "Хи-хи-хи-хи-хи!"
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_ru_gamepedia\/images\/3\/30\/Snip_deny_10_ru.mp3\/revision\/latest?cb=20170413153305",
+        "title": "А-ха-ха-ха-ха-ха-ха-ха-ха-ха!"
+      }
+    ],
+    "category": "Добивание союзного юнита"
+  },
+  {
+    "responses": [
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_ru_gamepedia\/images\/3\/3b\/Snip_purch_01_ru.mp3\/revision\/latest?cb=20170413154443",
+        "title": "Не продешевить бы."
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_ru_gamepedia\/images\/c\/cb\/Snip_purch_02_ru.mp3\/revision\/latest?cb=20170413154448",
+        "title": "Стоит своего веса в пулях."
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_ru_gamepedia\/images\/8\/8b\/Snip_purch_03_ru.mp3\/revision\/latest?cb=20170413154453",
+        "title": "О, это мне пригодится."
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_ru_gamepedia\/images\/f\/f5\/Snip_blink_01_ru.mp3\/revision\/latest?cb=20170413153040",
+        "title": "Blink Dagger!",
+        "icons": [
+          "items\/Blink Dagger\/full.png"
+        ]
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_ru_gamepedia\/images\/d\/d3\/Snip_blink_02_ru.mp3\/revision\/latest?cb=20170413153045",
+        "title": "Чуть не ускользнул от моего взора!",
+        "icons": [
+          "items\/Blink Dagger\/full.png"
+        ]
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_ru_gamepedia\/images\/1\/1d\/Snip_scepter_01_ru.mp3\/revision\/latest?cb=20170413154625",
+        "title": "А скипетр!",
+        "icons": [
+          "items\/Aghanim's Scepter\/full.png"
+        ]
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_ru_gamepedia\/images\/d\/d6\/Snip_scepter_02_ru.mp3\/revision\/latest?cb=20170413154630",
+        "title": "Скипетр для Снайпера.",
+        "icons": [
+          "items\/Aghanim's Scepter\/full.png"
+        ]
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_ru_gamepedia\/images\/7\/76\/Snip_manta_01_ru.mp3\/revision\/latest?cb=20170413153915",
+        "title": "Ух-ты, Manta! Хе-хе-хе-хе-хе!",
+        "icons": [
+          "items\/Manta Style\/full.png"
+        ]
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_ru_gamepedia\/images\/3\/37\/Snip_manta_02_ru.mp3\/revision\/latest?cb=20170413153920",
+        "title": "Ох, Manta! Ха-ха-ха-ха!",
+        "icons": [
+          "items\/Manta Style\/full.png"
+        ]
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_ru_gamepedia\/images\/f\/fe\/Snip_manta_03_ru.mp3\/revision\/latest?cb=20170413153925",
+        "title": "Расстрельная команда!",
+        "icons": [
+          "items\/Manta Style\/full.png"
+        ]
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_ru_gamepedia\/images\/8\/84\/Snip_deso_01_ru.mp3\/revision\/latest?cb=20170413153310",
+        "title": "О-о, Desolator!",
+        "icons": [
+          "items\/Desolator\/full.png"
+        ]
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_ru_gamepedia\/images\/1\/16\/Snip_deso_02_ru.mp3\/revision\/latest?cb=20170413153315",
+        "title": "Ха-а, Desolator!",
+        "icons": [
+          "items\/Desolator\/full.png"
+        ]
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_ru_gamepedia\/images\/9\/98\/Snip_deso_03_ru.mp3\/revision\/latest?cb=20170413153319",
+        "title": "Хм-хм, бронебойная штучка!",
+        "icons": [
+          "items\/Desolator\/full.png"
+        ]
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_ru_gamepedia\/images\/7\/73\/Snip_purch_armor_01_ru.mp3\/revision\/latest?cb=20170413154458",
+        "title": "Цельнометаллическая оболочка какая-то.",
+        "icons": [
+          "items\/Assault Cuirass\/full.png"
+        ]
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_ru_gamepedia\/images\/c\/c5\/Snip_immort_01_ru.mp3\/revision\/latest?cb=20170413153406",
+        "title": "Бессмертие!",
+        "icons": [
+          "heroes\/Aegis of the Immortal\/minimap.png"
+        ]
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_ru_gamepedia\/images\/e\/e8\/Snip_immort_02_ru.mp3\/revision\/latest?cb=20170413153411",
+        "title": "Ха-ха, пуленепробиваемый!",
+        "icons": [
+          "heroes\/Aegis of the Immortal\/minimap.png"
+        ]
+      }
+    ],
+    "category": "Получение предмета"
+  },
+  {
+    "responses": [
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_ru_gamepedia\/images\/f\/f5\/Snip_kill_blade_04_ru.mp3\/revision\/latest?cb=20170413153633",
+        "title": "Уму не постижимо!"
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_ru_gamepedia\/images\/3\/30\/Snip_death_01_ru.mp3\/revision\/latest?cb=20170413153127",
+        "title": "Нет!.. Ох..."
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_ru_gamepedia\/images\/e\/e2\/Snip_death_02_ru.mp3\/revision\/latest?cb=20170413153132",
+        "title": "Подстава... ах..."
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_ru_gamepedia\/images\/5\/58\/Snip_death_03_ru.mp3\/revision\/latest?cb=20170413153136",
+        "title": "От смерти не убежишь..."
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_ru_gamepedia\/images\/0\/01\/Snip_death_04_ru.mp3\/revision\/latest?cb=20170413153141",
+        "title": "Не думал, что тебе хватит наглости..."
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_ru_gamepedia\/images\/7\/76\/Snip_death_05_ru.mp3\/revision\/latest?cb=20170413153146",
+        "title": "Пороховой ожог! Ах..."
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_ru_gamepedia\/images\/0\/03\/Snip_death_06_ru.mp3\/revision\/latest?cb=20170413153151",
+        "title": "Смертельное ранение!"
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_ru_gamepedia\/images\/b\/b6\/Snip_death_07_ru.mp3\/revision\/latest?cb=20170413153155",
+        "title": "Патроны... кончились..."
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_ru_gamepedia\/images\/9\/94\/Snip_death_08_ru.mp3\/revision\/latest?cb=20170413153200",
+        "title": "Предсмертный выстрел..."
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_ru_gamepedia\/images\/0\/0d\/Snip_death_09_ru.mp3\/revision\/latest?cb=20170413153205",
+        "title": "Уйду из жизни... под звуки выстрелов..."
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_ru_gamepedia\/images\/e\/e6\/Snip_death_10_ru.mp3\/revision\/latest?cb=20170413153209",
+        "title": "Всё больше и больше..."
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_ru_gamepedia\/images\/d\/da\/Snip_death_11_ru.mp3\/revision\/latest?cb=20170413153214",
+        "title": "Оу... подстрелили..."
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_ru_gamepedia\/images\/9\/9b\/Snip_death_12_ru.mp3\/revision\/latest?cb=20170413153219",
+        "title": "Рана... навылет..."
+      }
+    ],
+    "category": "Смерть"
+  },
+  {
+    "responses": [
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_ru_gamepedia\/images\/0\/0e\/Snip_respawn_01_ru.mp3\/revision\/latest?cb=20170413154533",
+        "title": "Ни черта себе отдача!"
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_ru_gamepedia\/images\/a\/af\/Snip_respawn_02_ru.mp3\/revision\/latest?cb=20170413154538",
+        "title": "Ах, перезарядился."
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_ru_gamepedia\/images\/6\/62\/Snip_respawn_03_ru.mp3\/revision\/latest?cb=20170413154543",
+        "title": "Ещё на выстрел ближе к победе."
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_ru_gamepedia\/images\/c\/ce\/Snip_respawn_04_ru.mp3\/revision\/latest?cb=20170413154548",
+        "title": "Ха! Я снова в строю."
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_ru_gamepedia\/images\/a\/a6\/Snip_respawn_05_ru.mp3\/revision\/latest?cb=20170413154552",
+        "title": "Главное - не расставаться с пушками."
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_ru_gamepedia\/images\/8\/88\/Snip_respawn_06_ru.mp3\/revision\/latest?cb=20170413154557",
+        "title": "Возвращение огненной звезды!"
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_ru_gamepedia\/images\/f\/f7\/Snip_respawn_07_ru.mp3\/revision\/latest?cb=20170413154602",
+        "title": "Не стреляй! Это я."
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_ru_gamepedia\/images\/2\/21\/Snip_respawn_08_ru.mp3\/revision\/latest?cb=20170413154606",
+        "title": "Веду ответный огонь!"
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_ru_gamepedia\/images\/f\/f1\/Snip_respawn_09_ru.mp3\/revision\/latest?cb=20170413154611",
+        "title": "Хм-хм-хм, палец на курке так и чешется."
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_ru_gamepedia\/images\/1\/10\/Snip_respawn_10_ru.mp3\/revision\/latest?cb=20170413154616",
+        "title": "Не могу удержаться от выстрела наудачу."
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_ru_gamepedia\/images\/a\/a9\/Snip_respawn_11_ru.mp3\/revision\/latest?cb=20170413154620",
+        "title": "Снайпер перезарядился!"
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_ru_gamepedia\/images\/b\/be\/Snip_laugh_08_ru.mp3\/revision\/latest?cb=20170413153805",
+        "title": "Хи-хи-хи-хи-хи-хи-хи, а-ха-ха!"
+      }
+    ],
+    "category": "Возрождение"
+  },
+  {
+    "responses": [
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_ru_gamepedia\/images\/2\/23\/Snip_bottle_01_ru.mp3\/revision\/latest?cb=20170413153050",
+        "title": "В копилочку."
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_ru_gamepedia\/images\/3\/3e\/Snip_bottle_02_ru.mp3\/revision\/latest?cb=20170413153054",
+        "title": "Потом пригодится."
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_ru_gamepedia\/images\/6\/6c\/Snip_bottle_03_ru.mp3\/revision\/latest?cb=20170413153059",
+        "title": "На всякий пожарный."
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_ru_gamepedia\/images\/4\/43\/Snip_bottle_04_ru.mp3\/revision\/latest?cb=20170413153103",
+        "title": "Парам-пам-пам-пам."
+      }
+    ],
+    "category": "Наполнение бутылки"
+  },
+  {
+    "responses": [
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_ru_gamepedia\/images\/8\/8b\/Snip_purch_03_ru.mp3\/revision\/latest?cb=20170413154453",
+        "title": "О, это мне пригодится."
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_ru_gamepedia\/images\/3\/37\/Snip_doubdam_01_ru.mp3\/revision\/latest?cb=20170413153324",
+        "title": "Двойной урон!"
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_ru_gamepedia\/images\/0\/0b\/Snip_doubdam_02_ru.mp3\/revision\/latest?cb=20170413153329",
+        "title": "Дуплет!"
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_ru_gamepedia\/images\/1\/15\/Snip_haste_01_ru.mp3\/revision\/latest?cb=20170413153348",
+        "title": "Ускорение!"
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_ru_gamepedia\/images\/0\/0e\/Snip_haste_02_ru.mp3\/revision\/latest?cb=20170413153352",
+        "title": "Двигаюсь быстрее пули!"
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_ru_gamepedia\/images\/e\/e7\/Snip_illus_01_ru.mp3\/revision\/latest?cb=20170413153357",
+        "title": "Иллюзия!"
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_ru_gamepedia\/images\/0\/03\/Snip_illus_02_ru.mp3\/revision\/latest?cb=20170413153402",
+        "title": "Фокусируем!"
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_ru_gamepedia\/images\/0\/0a\/Snip_invis_01_ru.mp3\/revision\/latest?cb=20170413153425",
+        "title": "Невидимость!"
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_ru_gamepedia\/images\/c\/cc\/Snip_invis_02_ru.mp3\/revision\/latest?cb=20170413153430",
+        "title": "Вне зоны видимости! Хе-хе-хе-хе!"
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_ru_gamepedia\/images\/c\/c4\/Snip_regen_01_ru.mp3\/revision\/latest?cb=20170413154523",
+        "title": "Регенерация!"
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_ru_gamepedia\/images\/7\/77\/Snip_regen_02_ru.mp3\/revision\/latest?cb=20170413154528",
+        "title": "Навёл прицел!"
+      }
+    ],
+    "category": "Активация рун"
+  },
+  {
+    "responses": [
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_ru_gamepedia\/images\/7\/70\/Snip_notyet_01_ru.mp3\/revision\/latest?cb=20170413154256",
+        "title": "Нет ещё."
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_ru_gamepedia\/images\/b\/b2\/Snip_notyet_01a_ru.mp3\/revision\/latest?cb=20170413154301",
+        "title": "Ещё нет."
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_ru_gamepedia\/images\/a\/a4\/Snip_notyet_02_ru.mp3\/revision\/latest?cb=20170413154306",
+        "title": "Я не готов."
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_ru_gamepedia\/images\/2\/2e\/Snip_notyet_02a_ru.mp3\/revision\/latest?cb=20170413154311",
+        "title": "Не готов я."
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_ru_gamepedia\/images\/8\/81\/Snip_notyet_03_ru.mp3\/revision\/latest?cb=20170413154316",
+        "title": "Пока рано."
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_ru_gamepedia\/images\/5\/57\/Snip_notyet_03a_ru.mp3\/revision\/latest?cb=20170413154321",
+        "title": "Ещё рано."
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_ru_gamepedia\/images\/8\/85\/Snip_notyet_04_ru.mp3\/revision\/latest?cb=20170413154326",
+        "title": "Пока нет."
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_ru_gamepedia\/images\/b\/b9\/Snip_notyet_05_ru.mp3\/revision\/latest?cb=20170413154331",
+        "title": "Я ещё не собрался."
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_ru_gamepedia\/images\/1\/1a\/Snip_notyet_06_ru.mp3\/revision\/latest?cb=20170413154336",
+        "title": "Поспешишь - людей насмешишь!"
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_ru_gamepedia\/images\/f\/f3\/Snip_notyet_07_ru.mp3\/revision\/latest?cb=20170413154341",
+        "title": "Ещё нет!"
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_ru_gamepedia\/images\/d\/d3\/Snip_notyet_08_ru.mp3\/revision\/latest?cb=20170413154346",
+        "title": "Я не готов!"
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_ru_gamepedia\/images\/d\/df\/Snip_notyet_09_ru.mp3\/revision\/latest?cb=20170413154351",
+        "title": "Рано ещё!"
+      }
+    ],
+    "category": "Способность на перезарядке"
+  },
+  {
+    "responses": [
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_ru_gamepedia\/images\/c\/cd\/Snip_nomana_01_ru.mp3\/revision\/latest?cb=20170413154150",
+        "title": "Мана кончается."
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_ru_gamepedia\/images\/a\/ad\/Snip_nomana_01a_ru.mp3\/revision\/latest?cb=20170413154155",
+        "title": "Мана заканчивается."
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_ru_gamepedia\/images\/1\/14\/Snip_nomana_02_ru.mp3\/revision\/latest?cb=20170413154200",
+        "title": "Маны нет."
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_ru_gamepedia\/images\/d\/d1\/Snip_nomana_02a_ru.mp3\/revision\/latest?cb=20170413154205",
+        "title": "Нет маны."
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_ru_gamepedia\/images\/a\/af\/Snip_nomana_03_ru.mp3\/revision\/latest?cb=20170413154210",
+        "title": "Маны не достаточно."
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_ru_gamepedia\/images\/c\/cd\/Snip_nomana_03a_ru.mp3\/revision\/latest?cb=20170413154215",
+        "title": "Мана почти на нуле."
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_ru_gamepedia\/images\/1\/18\/Snip_nomana_04_ru.mp3\/revision\/latest?cb=20170413154220",
+        "title": "Мана закончилась!"
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_ru_gamepedia\/images\/7\/77\/Snip_nomana_05_ru.mp3\/revision\/latest?cb=20170413154225",
+        "title": "Маны нет!"
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_ru_gamepedia\/images\/b\/b0\/Snip_nomana_06_ru.mp3\/revision\/latest?cb=20170413154230",
+        "title": "Недостаточно маны!"
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_ru_gamepedia\/images\/9\/9c\/Snip_nomana_10_ru.mp3\/revision\/latest?cb=20170413154251",
+        "title": "Фальшстарт!"
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_ru_gamepedia\/images\/7\/7d\/Snip_nomana_07_ru.mp3\/revision\/latest?cb=20170413154235",
+        "title": "Мана вся вышла!"
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_ru_gamepedia\/images\/a\/ab\/Snip_nomana_08_ru.mp3\/revision\/latest?cb=20170413154241",
+        "title": "Нет маны!"
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_ru_gamepedia\/images\/c\/c3\/Snip_nomana_09_ru.mp3\/revision\/latest?cb=20170413154246",
+        "title": "Маны не хватает!"
+      }
+    ],
+    "category": "Нехватка маны"
+  },
+  {
+    "responses": [
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_ru_gamepedia\/images\/7\/77\/Snip_pain_01_ru.mp3\/revision\/latest?cb=20170413154357",
+        "title": "Агх!"
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_ru_gamepedia\/images\/9\/9e\/Snip_pain_02_ru.mp3\/revision\/latest?cb=20170413154402",
+        "title": "Оу!"
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_ru_gamepedia\/images\/b\/b7\/Snip_pain_03_ru.mp3\/revision\/latest?cb=20170413154407",
+        "title": "Ах!"
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_ru_gamepedia\/images\/1\/15\/Snip_pain_04_ru.mp3\/revision\/latest?cb=20170413154412",
+        "isArcane": true,
+        "title": "Ах!"
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_ru_gamepedia\/images\/a\/aa\/Snip_pain_05_ru.mp3\/revision\/latest?cb=20170413154417",
+        "title": "Оу!"
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_ru_gamepedia\/images\/d\/dc\/Snip_pain_06_ru.mp3\/revision\/latest?cb=20170413154422",
+        "title": "Агх!"
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_ru_gamepedia\/images\/8\/8d\/Snip_pain_07_ru.mp3\/revision\/latest?cb=20170413154427",
+        "title": "Оу!"
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_ru_gamepedia\/images\/3\/36\/Snip_pain_08_ru.mp3\/revision\/latest?cb=20170413154432",
+        "title": "Ах-х."
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_ru_gamepedia\/images\/e\/e6\/Snip_pain_09_ru.mp3\/revision\/latest?cb=20170413154438",
+        "title": "И-и-и."
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_ru_gamepedia\/images\/0\/05\/Snip_underattack_01_ru.mp3\/revision\/latest?cb=20170413154759",
+        "title": "На меня напали!"
+      }
+    ],
+    "category": "Получение урона"
+  },
+  {
+    "responses": [
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_ru_gamepedia\/images\/5\/53\/Snip_tf2_06_ru.mp3\/revision\/latest?cb=20170413154735",
+        "title": "У профессионалов есть стандарты."
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_ru_gamepedia\/images\/f\/f1\/Snip_tf2_08_ru.mp3\/revision\/latest?cb=20170413154745",
+        "title": "Когда на поле битвы два героя, один другого явно хочет замочить."
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_ru_gamepedia\/images\/6\/6d\/Snip_rare_01_ru.mp3\/revision\/latest?cb=20170413154503",
+        "title": "Твоя смерть многим пойдет на пользу. Почти всем."
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_ru_gamepedia\/images\/1\/10\/Snip_rare_02_ru.mp3\/revision\/latest?cb=20170413154508",
+        "title": "Убийство - это крайняя мера, согласен. Я мерю пролитую кровь ведрами."
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_ru_gamepedia\/images\/4\/45\/Snip_rare_03_ru.mp3\/revision\/latest?cb=20170413154513",
+        "title": "Умирать легко. Сейчас продемонстрирую."
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_ru_gamepedia\/images\/6\/66\/Snip_rare_04_ru.mp3\/revision\/latest?cb=20170413154518",
+        "title": "Почему я улыбаюсь? Потому, что люблю свою работу!"
+      }
+    ],
+    "category": "Редкие фразы"
+  },
+  {
+    "responses": [
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_ru_gamepedia\/images\/f\/fb\/Snip_thanks_01_ru.mp3\/revision\/latest?cb=20170413154749",
+        "title": "Спасибо!"
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_ru_gamepedia\/images\/7\/78\/Snip_thanks_02_ru.mp3\/revision\/latest?cb=20170413154754",
+        "title": "С меня ништяки."
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_ru_gamepedia\/images\/3\/3e\/Snip_laugh_01_ru.mp3\/revision\/latest?cb=20170413153728",
+        "title": "Мха-ха-ха!"
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_ru_gamepedia\/images\/5\/57\/Snip_laugh_02_ru.mp3\/revision\/latest?cb=20170413153735",
+        "title": "Хе-хе-хе!"
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_ru_gamepedia\/images\/a\/ad\/Snip_laugh_03_ru.mp3\/revision\/latest?cb=20170413153740",
+        "title": "Ха-ха-ха!"
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_ru_gamepedia\/images\/1\/12\/Snip_laugh_04_ru.mp3\/revision\/latest?cb=20170413153745",
+        "title": "Хе-хе-хе-хе-хе-хе."
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_ru_gamepedia\/images\/c\/ce\/Snip_laugh_05_ru.mp3\/revision\/latest?cb=20170413153750",
+        "title": "Хо-хо-хо!"
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_ru_gamepedia\/images\/a\/a4\/Snip_laugh_06_ru.mp3\/revision\/latest?cb=20170413153755",
+        "title": "Ха-ха!"
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_ru_gamepedia\/images\/9\/9e\/Snip_laugh_07_ru.mp3\/revision\/latest?cb=20170413153800",
+        "title": "Ха-ха-ха-ха-ха!"
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_ru_gamepedia\/images\/b\/be\/Snip_laugh_08_ru.mp3\/revision\/latest?cb=20170413153805",
+        "title": "Хи-хи-хи-хи-хи-хи-хи, а-ха-ха!"
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_ru_gamepedia\/images\/1\/1d\/Snip_laugh_09_ru.mp3\/revision\/latest?cb=20170413153810",
+        "title": "О-хо-хо-хо!"
+      }
+    ],
+    "category": "Реплики в чате"
+  },
+  {
+    "responses": [
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_ru_gamepedia\/images\/c\/c7\/Snip_win_01_ru.mp3\/revision\/latest?cb=20170413154803",
+        "title": "Да-а-ха-ха-ха!"
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_ru_gamepedia\/images\/f\/f5\/Snip_win_02_ru.mp3\/revision\/latest?cb=20170413154808",
+        "title": "Победа за мной!"
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_ru_gamepedia\/images\/e\/e6\/Snip_win_03_ru.mp3\/revision\/latest?cb=20170413154813",
+        "title": "Точно в яблочко!"
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_ru_gamepedia\/images\/5\/5a\/Snip_lose_01_ru.mp3\/revision\/latest?cb=20170413153900",
+        "title": "Не-е-е-ет!"
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_ru_gamepedia\/images\/8\/8e\/Snip_lose_02_ru.mp3\/revision\/latest?cb=20170413153905",
+        "title": "Я побеждён!"
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_ru_gamepedia\/images\/3\/30\/Snip_lose_03_ru.mp3\/revision\/latest?cb=20170413153910",
+        "title": "Чёрт! Вся стрельба псу под хвост!"
+      }
+    ],
+    "category": "Окончание матча"
+  },
+  {
+    "responses": [
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_ru_gamepedia\/images\/4\/4d\/Snip_happy_01_ru.mp3\/revision\/latest?cb=20170413153333",
+        "title": "Ах!"
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_ru_gamepedia\/images\/c\/cb\/Snip_kill_arrow_01_ru.mp3\/revision\/latest?cb=20170413153541",
+        "title": "Ох, как мило!"
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_ru_gamepedia\/images\/a\/af\/Snip_happy_03_ru.mp3\/revision\/latest?cb=20170413153343",
+        "title": "Е-е-еха!"
+      }
+    ],
+    "category": "Выпадение косметического предмета"
+  },
+  {
+    "responses": [
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_ru_gamepedia\/images\/f\/f6\/Snip_shitwiz_01_ru.mp3\/revision\/latest?cb=20170413154634",
+        "title": "Чёртов колдунишка!"
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_ru_gamepedia\/images\/d\/d7\/Snip_crumwiz_01_ru.mp3\/revision\/latest?cb=20170413153122",
+        "title": "Проклятый колдунишка!"
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_ru_gamepedia\/images\/0\/0b\/Snip_anger_01_ru.mp3\/revision\/latest?cb=20170413152915",
+        "title": "Уа."
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_ru_gamepedia\/images\/5\/5d\/Snip_anger_02_ru.mp3\/revision\/latest?cb=20170413152920",
+        "title": "Фу!"
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_ru_gamepedia\/images\/7\/77\/Snip_anger_03_ru.mp3\/revision\/latest?cb=20170413152924",
+        "title": "Га!"
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_ru_gamepedia\/images\/2\/2f\/Snip_anger_04_ru.mp3\/revision\/latest?cb=20170413152929",
+        "title": "Д-т-т-к-а!"
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_ru_gamepedia\/images\/b\/b8\/Snip_anger_05_ru.mp3\/revision\/latest?cb=20170413152933",
+        "title": "Ах!"
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_ru_gamepedia\/images\/b\/b7\/Snip_anger_06_ru.mp3\/revision\/latest?cb=20170413152938",
+        "title": "Ур-рх!"
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_ru_gamepedia\/images\/a\/a8\/Snip_happy_02_ru.mp3\/revision\/latest?cb=20170413153338",
+        "title": "А-а-ах!"
+      }
+    ],
+    "category": "Разное"
+  }
+]

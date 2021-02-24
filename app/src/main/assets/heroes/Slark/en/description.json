@@ -1,0 +1,251 @@
+{
+  "abilities": [
+    {
+      "notes": [
+        "The agility talent effectively grants Slark 1.17 armor, 7 attack speed, and 7 attack damage.",
+        "The strength talent effectively grants Slark 180 health and 0.9 health regeneration.",
+        "The lifesteal talent stacks additively with other sources of lifesteal."
+      ],
+      "spellName": "Talent",
+      "talents": [
+        {
+          "talentLvl": "25",
+          "talentLeft": "+65s Essence Shift Duration",
+          "talentRight": "+1s Shadow Dance Duration"
+        },
+        {
+          "talentLvl": "20",
+          "talentLeft": "+0.8s Pounce Leash",
+          "talentRight": "+120 Dark Pact Damage"
+        },
+        {
+          "talentLvl": "15",
+          "talentLeft": "15% Lifesteal",
+          "talentRight": "+20 Attack Speed"
+        },
+        {
+          "talentLvl": "10",
+          "talentLeft": "+7 Agility",
+          "talentRight": "+9 Strength"
+        }
+      ]
+    },
+    {
+      "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/5\/52\/Slark_Dark_Pact_1.mp3\/revision\/latest?cb=20191216023918",
+      "effects": [
+        "Ability No Target",
+        "Affects Enemies \/ Self",
+        "Damage Magical"
+      ],
+      "notes": [
+        "Dark Pact interrupts Slark's channeling spells upon cast.",
+        "Deals 7.5\/15\/22.5\/30 (TagTalent 19.5\/27\/34.5\/42) damage within a 325 radius in 0.1 second intervals, starting 1.5 seconds after cast for a total of 10 instances.",
+        "Slark takes 3.75\/7.5\/11.25\/15 (TagTalent 9.75\/13.5\/17.25\/21) damage in the same intervals, resulting in 37.5\/75\/112.5\/150 (TagTalent 97.5\/135\/172.5\/210) total damage.",
+        "Applies a strong dispel on Slark in the same intervals, before each of its damage instances.",
+        "The self-inflicted damage can be reduced or amplified, but can never kill Slark.",
+        "The visual effects and sounds during the 1.5 seconds delay is only visible and audible to allies.",
+        "The visual effect of the damaging pulses are visible even when Slark is invisible.",
+        "Dark Pact ends 2.5 seconds after cast, but ends instantly when Slark dies.",
+        "Re-casting Dark Pact during the effect delay cancels the previous cast and starts a new one instead."
+      ],
+      "mana": "60",
+      "hotKey": "Q",
+      "cooldown": "9\/8\/7\/6",
+      "description": "After a short delay, Slark sacrifices some of his life blood, purging most negative debuffs and dealing damage to enemy units around him and to himself. Slark only takes 50% of the damage.",
+      "spellName": "Dark Pact",
+      "params": [
+        "Cast Animation: 0+0",
+        "Damage Radius: 325",
+        "Effect Delay: 1.5",
+        "Total Damage: 75\/150\/225\/300 (TagTalent 195\/270\/345\/420)",
+        "Self Damage Percentage: 50%"
+      ],
+      "itemBehaviour": [],
+      "legacyKey": "C",
+      "story": "Slithereen are capable of quickly regrowing appendages, in case of critical injury, to save their own lives."
+    },
+    {
+      "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/8\/8c\/Slark_Pounce_1.mp3\/revision\/latest?cb=20191216023921",
+      "effects": [
+        "Ability No Target",
+        "Affects Enemy Heroes \/ Self"
+      ],
+      "notes": [
+        "Slark leaps forward at a speed of 933.33 (TagTalent 1599.99) for up to 0.75 seconds.",
+        "Always jumps for the full distance, unless an enemy hero gets within 95 radius of Slark during the jump.",
+        "Leashes the hit enemy hero, preventing them from casting certain mobility spells.",
+        "Can latch on enemy heroes up to 795 range away (max distance + latch radius).",
+        "Slark can turn, cast spells, and use items during Pounce, but cannot attack.",
+        "Pounce can latch on invisible units, but not on invulnerable\/hidden units, or on illusions.",
+        "When latching on a unit, Slark is automatically ordered to attack the target.",
+        "The more the leash gets stretched, the slower the affected unit can walk away from the center, eventually coming to a full stop. It directly affects the target's movement speed.",
+        "If cast before getting leashed, the following spells are not able to break the leash: Skewer, Leap, Pounce, Tree Dance, Primal Spring, Toggle Movement, and Hurricane Pike when targeting an enemy.",
+        "Every other position changing effect, including spells like Primal Roar and Blinding Light, can break the leash.",
+        "Force Staff and a self-targeted Hurricane Pike instantly break the leash when cast, while other sources of forced movement only break it when stretched beyond the max radius.",
+        "When the leash expires while a position changing effect is ongoing, it instantly cancels the position changing effect. This goes for the following spells: Flamebreak, Primal Roar, Power Cogs, Hookshot, Vacuum, Gust, Boulder Smash, Rolling Boulder, Geomagnetic Grip, Deafening Blast, Tether, Blinding Light, Adaptive Strike (Strength), Blast Off!, Charge of Darkness, Greater Bash, Timber Chain, Walrus PUNCH!, Force Staff and Hurricane Pike.",
+        "This goes for the following spells: Flamebreak, Primal Roar, Power Cogs, Hookshot, Vacuum, Gust, Boulder Smash, Rolling Boulder, Geomagnetic Grip, Deafening Blast, Tether, Blinding Light, Adaptive Strike (Strength), Blast Off!, Charge of Darkness, Greater Bash, Timber Chain, Walrus PUNCH!, Force Staff and Hurricane Pike.",
+        "Pounce destroys trees within 100 radius around Slark upon landing.",
+        "Pounce cannot be cast during Pounce. During the leap, Pounce is on an unrefreshable cooldown which is bound to the leap buff."
+      ],
+      "mana": "75",
+      "hotKey": "W",
+      "cooldown": "20\/16\/12\/8 (TagTalent 0)",
+      "description": "Slark leaps forward, grabbing the first hero he connects with. That unit is leashed, and can only move a limited distance away from Slark's landing position.",
+      "spellName": "Pounce",
+      "params": [
+        "Cast Animation: 0+0.53",
+        "Leap Distance: 700 (TagAghanim 1200)",
+        "Latch Radius: 95",
+        "Leash Radius: 400",
+        "Leash Duration: 2.5\/2.75\/3\/3.25 (TagTalent 3.3\/3.55\/3.8\/4.05)",
+        "Number of Charges: 2",
+        "Charge Replenish Time: 10",
+        "Provides 2 charges and increases pounce range.",
+        "Leash persists if debuff was placed before spell immunity and when not dispelled. Leash can be dispelled by spell immunity only.",
+        "Getting rooted during the leap does not cancel the leap."
+      ],
+      "itemBehaviour": [],
+      "legacyKey": "E",
+      "story": "Time in the Dark Reef made Slark a dangerous assassin; aggressive and fearless."
+    },
+    {
+      "audioUrl": null,
+      "effects": [
+        "Ability Passive",
+        "Affects Enemy Heroes \/ Self"
+      ],
+      "notes": [
+        "Essence Shift steals \/ \/ attributes before attack damage is applied.",
+        "Successive attacks do not refresh the duration of all stolen\/lost attributes. Each stack has its own duration.",
+        "The status buff and debuff icon show the number of current stacks and show the duration of the last stack.",
+        "Effective stats loss per stack of essence shift: 1 attack damage, 20 health, 0.1 health regeneration, 0.17 armor, 1 attack speed, 12 mana, 0.05 mana regeneration.",
+        "Effectively grants Slark 0.5 armor, 3 attack speed, and 3 attack damage per stack.",
+        "Essence Shift cannot reduce any attribute below 0. However, Slark continues to gain agility, both temporarily and permanently, even when the attacked hero has no more attributes left to steal.",
+        "When Slark dies, he loses all temporarily stolen attributes, but the affected enemies do not get theirs back, and vice versa.",
+        "Cannot steal attributes from illusions, but can steal from hero clones.",
+        "Cannot steal permanent attributes from Tempest Double, but can steal from Meepo Clones.",
+        "Can steal attributes from allies.",
+        "To permanently steal agility, an enemy hero has to die within 300 range of Slark while having the Essence Shift debuff. Alternatively, Slark also steals agility when he kills a debuffed enemy hero from any distance.",
+        "Alternatively, Slark also steals agility when he kills a debuffed enemy hero from any distance."
+      ],
+      "mana": null,
+      "hotKey": "E",
+      "cooldown": null,
+      "description": "Slark steals the life essence of enemy heroes with his attacks, draining each of their attributes and converting them to bonus Agility. If Slark kills an affected enemy hero, he permanently steals 1 Agility.",
+      "spellName": "Essence Shift",
+      "params": [
+        "Permanent Steal Radius: 300",
+        "Permanent Agility Steal: 1",
+        "All Attributes Lost per Attack: 1",
+        "Agility Gained per Attack: 3",
+        "Duration: 15\/30\/60\/100 (TagTalent 80\/95\/125\/165)",
+        "Prevents gaining new stacks. Already existing stacks still provide bonus agility. Does not prevent permanently stealing agility."
+      ],
+      "itemBehaviour": [],
+      "legacyKey": "N",
+      "story": "With each strike at his adversaries, Slark's knowledge of their weaknesses improves."
+    },
+    {
+      "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/b\/bb\/Slark_Fish_Bait.mp3\/revision\/latest?cb=20210103154843",
+      "effects": [
+        "Ability Target Unit",
+        "Affects Enemies \/ Self"
+      ],
+      "notes": [
+        "Requires Aghanim's Shard to be unlocked.",
+        "The projectile travels at a speed of 1250.",
+        "Exposes the target, revealing their model through the fog of war, and provides True Sight over them.",
+        "Leashing the targeted enemy with Pounce grants Slark the attack speed buff, matching Pounce's duration. There is no limit for how often this can be done. Each Pounce landed on the target grants the buff.",
+        "There is no limit for how often this can be done. Each Pounce landed on the target grants the buff."
+      ],
+      "mana": "50",
+      "hotKey": "D",
+      "cooldown": "9",
+      "description": "Reduce movement speed of an enemy by 30% for 6 seconds and provide true sight vision over them. If Slark pounces on the enemy during that time, he will be rewarded with 75 Attack Speed for the duration of the Leash.",
+      "spellName": "Fish Bait",
+      "params": [
+        "Cast Animation: 0.2+0.67",
+        "Cast Range: 1100",
+        "Move Speed Slow: 30%",
+        "Pounce Attack Speed Bonus: 75",
+        "Duration: 6",
+        "Blocked upon impact."
+      ],
+      "itemBehaviour": [],
+      "legacyKey": "F",
+      "story": null
+    },
+    {
+      "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/8\/84\/Slark_Shadow_Dance.mp3\/revision\/latest?cb=20191216023923",
+      "effects": [
+        "Ability No Target \/ Passive",
+        "Affects Self"
+      ],
+      "notes": [
+        "Shadow Dance interrupts Slark's channeling spells upon cast.",
+        "Slark gains or loses the health regen and movement speed bonus 0.5 seconds after getting in or out of enemy vision, or casting Shadow Dance.",
+        "If Slark is damaged by a neutral creep, the health regen and movement speed bonus are lost for 2 seconds.",
+        "When casting Shadow Dance, he turns invisible and cannot be revealed by anything. However, the black cloud created is visible to enemies.",
+        "The invisibility is granted by an aura, however, its buff does not linger. The aura does not affect invulnerable units, so if Slark turns invulnerable during it, he gets revealed.",
+        "The aura does not affect invulnerable units, so if Slark turns invulnerable during it, he gets revealed.",
+        "Can regenerate up to 20%\/25.5%\/31.5% (TagTalent 25%\/31.5%\/38.5%) of Slark's max health over its full duration.",
+        "Can regenerate up to 300%\/360%\/420% of Slark's max health in one minute.",
+        "Can fully regenerate Slark's health within 20\/16.67\/14.29 seconds.",
+        "Shadow Dance does not allow Slark to walk through units."
+      ],
+      "mana": "120",
+      "hotKey": "R",
+      "cooldown": "80\/65\/50",
+      "description": "When used, Slark hides himself in a cloud of shadows, becoming immune to detection. Attacking, casting spells, and using items will not reveal Slark. Passively, when not visible to the enemy team, Slark gains bonus movement speed and health regeneration.",
+      "spellName": "Shadow Dance",
+      "params": [
+        "Cast Animation: 0+0",
+        "Aura Radius: 0",
+        "Fade Time: 0",
+        "Move Speed Bonus: 20%\/35%\/50%",
+        "Max Health as Regen per Second: 5%\/6%\/7%",
+        "Passive Activation Delay: 0.5",
+        "Neutral Creep Damage Deactivate Duration: 2",
+        "Active Duration: 4\/4.25\/4.5 (TagTalent 5\/5.25\/5.5)",
+        "Grants a new ability: Fish Bait.",
+        "Regeneration and movement speed bonus are disabled, active invisibility is not.",
+        "Illusions get the buff, but it does not grant them the health regen and movement speed."
+      ],
+      "itemBehaviour": [],
+      "legacyKey": "D",
+      "story": "The hidden Thirteenth is a slippery foe."
+    }
+  ],
+  "mainAttributes": {
+    "attrStrengthInc": 1.9,
+    "attrStrength": 21.0,
+    "attrIntelligence": 16.0,
+    "attrIntelligenceInc": 1.7,
+    "attrAgilityInc": 1.7,
+    "attrAgility": 21.0
+  },
+  "description": "Slark, the Nightcrawler, is a melee agility hero that utilizes his abilities to spring onto enemy heroes and slip out unhindered. He is a very mobile ganker, but remains attribute-wise below most other carries unless he is able to steal away attributes with his abilities. Once he does, though, only a few heroes can hope to be as fearsome as the Nightcrawler - extremely mobile to the point of ever-presence, his strikes only hitting harder and faster.",
+  "history": "Little known to the inhabitants of the dry world, Dark Reef is a sunken prison where the worst of the sea-breed are sent for crimes against their fellows. It is a razor barbed warren full of murderous slithereen, treacherous Deep Ones, and sociopathic meranths. In this dim labyrinth, patrolled by eels and guarded by enormous anemones, only the vicious survive. Pitched into Dark Reef for crimes unknown, Slark spent half a lifetime without kin or kindness, trusting no one, surviving through a combination of stealth and ruthlessness, keeping his thoughts and his plans to himself. When the infamous Dark Reef Dozen plotted their ill-fated breakout, they kept their plans a perfect secret, murdering anyone who could have put the pieces together--but somehow Slark discovered their scheme and made a place for himself in it. Ten of the Dozen died in the escape attempt, and two were captured, hauled back to Dark Reef, then executed for the entertainment of their fellow inmates. But Slark, the unsung thirteenth, used the commotion as cover and slipped away, never to be caught. Now a furtive resident of the carnivorous mangrove scrub that grips the southern reach of Shadeshore, Slark remains the only successful escapee from Dark Reef.",
+  "talents": [
+    {
+      "talentLvl": "25",
+      "talentLeft": "+65s Essence Shift Duration",
+      "talentRight": "+1s Shadow Dance Duration"
+    },
+    {
+      "talentLvl": "20",
+      "talentLeft": "+0.8s Pounce Leash",
+      "talentRight": "+120 Dark Pact Damage"
+    },
+    {
+      "talentLvl": "15",
+      "talentLeft": "15% Lifesteal",
+      "talentRight": "+20 Attack Speed"
+    },
+    {
+      "talentLvl": "10",
+      "talentLeft": "+7 Agility",
+      "talentRight": "+9 Strength"
+    }
+  ]
+}

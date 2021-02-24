@@ -1,0 +1,56 @@
+{
+  "abilities": [
+    {
+      "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/2\/22\/Enchanted_Mango_Eat_Mango.mp3\/revision\/latest?cb=20191227195412",
+      "effects": [
+        "Ability No Target \/ Target Unit",
+        "Affects Self \/ Allied Heroes"
+      ],
+      "notes": [
+        "Interrupts the user's channeling spells upon cast.",
+        "When casting without the Control key, it always casts on self in one click. When holding the Control key, a target has to be selected.",
+        "If the target is more than 650 range away, the caster moves to the target until it is within 400 range before casting. If a cast order is given on a target which is within 650 range already, the caster does not need to move closer and casts it right away.",
+        "If a cast order is given on a target which is within 650 range already, the caster does not need to move closer and casts it right away.",
+        "Can only target heroes (including illusions) and creep-heroes.",
+        "The owner does not have to face the target to use this on it."
+      ],
+      "mana": null,
+      "abilityName": "Eat Mango",
+      "cooldown": "0",
+      "description": "Instantly restores 100 mana.",
+      "params": [
+        "Default Cast Range: 400",
+        "Buffer Cast Range: 650",
+        "Mana Restored: 100"
+      ],
+      "itemBehaviour": [],
+      "story": null
+    }
+  ],
+  "additionalInformation": [
+    "Enchanted Mangoes can be stacked up to 3 times in an inventory slot. The health regeneration from multiple instances fully stacks.",
+    "The health regeneration from multiple instances fully stacks.",
+    "Enchanted Mangoes are not shareable, however, they can be cast on allies.",
+    "Enchanted Mangoes cannot be sold after the preparation phase or after the 10 seconds refund time.",
+    "Enchanted Mangoes dropped on the ground have an increased pick-up range of 300, compared to the 150 range of all other items."
+  ],
+  "cost": "70",
+  "lore": null,
+  "consistFrom": null,
+  "boughtFrom": "Consumables",
+  "name": "Enchanted Mango",
+  "description": "The bittersweet flavors of Jidi Isle are irresistible to amphibians.",
+  "trivia": [
+    "Enchanted Mango's description is a reference to an old Weibo post by Icefrog, in which he mentioned that he loves mangoes.",
+    "It is believed that the item idea came from a Reddit thread where someone suggested a Tango that restores mana \u2014 and a user jokingly suggested that the item be named Mango.",
+    "Prior to the July 14, 2017 Patch, Enchanted Mango's active ability, Eat Mango, did not have an official name. The name was taken from the Dota 2 Wiki and officially implemented into Dota 2."
+  ],
+  "upgradeIn": null,
+  "bonuses": [
+    "+0.6 Health regeneration"
+  ],
+  "tips": [
+    "Enchanted Mangoes are a great source of quick burst of mana. One mango usually restores enough mana for most spells in the early game, allowing heroes to use a spell immediately.",
+    "Although a Clarity restores more mana for much less gold, the fact that mangoes restore instantly makes them more valuable in combat than clarities. This makes Enchanted Mangoes a better option for aggressive heroes who want to fight as much as possible."
+  ]
+}

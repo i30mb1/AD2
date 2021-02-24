@@ -1,0 +1,21 @@
+{
+  "abilities": [],
+  "cost": "925",
+  "lore": null,
+  "consistFrom": null,
+  "boughtFrom": "Equipment",
+  "name": "Helm of Iron Will",
+  "description": "The helmet of a legendary warrior who fell in battle.",
+  "trivia": null,
+  "upgradeIn": [
+    "Nullifier",
+    "Crimson Guard",
+    "Armlet of Mordiggian",
+    "Helm of the Dominator"
+  ],
+  "bonuses": [
+    "+5 Health regeneration",
+    "+5 Armor"
+  ],
+  "tips": null
+}

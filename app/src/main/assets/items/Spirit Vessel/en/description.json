@@ -1,0 +1,85 @@
+{
+  "abilities": [
+    {
+      "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/1\/1f\/Spirit_Vessel_Soul_Release_1.mp3\/revision\/latest?cb=20191227195539",
+      "effects": [
+        "Ability Target Unit",
+        "Affects Allied Heroes \/ Enemy Heroes",
+        "Damage Magical"
+      ],
+      "notes": [
+        "Double clicking the item uses it on self.",
+        "Successive casts on the same target do not stack, but refresh the duration instead. The buff and debuff are independent and stack with each other, although the heal gets canceled as soon as the damage ticks. Spirit Vessel's heal does not stack with that of Urn of Shadows. Neither do their damage debuffs stack. Spirit Vessel overrides the heal buff and damage debuff of Urn of Shadows, but the urn cannot override the vessel's modifiers. When attempting to do so, Urn of Shadows only goes on cooldown, without losing charges.",
+        "The buff and debuff are independent and stack with each other, although the heal gets canceled as soon as the damage ticks.",
+        "Spirit Vessel's heal does not stack with that of Urn of Shadows. Neither do their damage debuffs stack.",
+        "Spirit Vessel overrides the heal buff and damage debuff of Urn of Shadows, but the urn cannot override the vessel's modifiers.",
+        "When attempting to do so, Urn of Shadows only goes on cooldown, without losing charges.",
+        "Can regenerate up to 320 health over its full duration.",
+        "Deals 35 + 4% of current health as damage in 1 second intervals, starting 1 second after cast, resulting in 8 damage instances. The flat damage is calculated first (after all reductions), followed by the damage based on current health. Can deal a total of 280 + 27.86% of current health as damage to the target enemy (before reductions).",
+        "The flat damage is calculated first (after all reductions), followed by the damage based on current health.",
+        "Can deal a total of 280 + 27.86% of current health as damage to the target enemy (before reductions).",
+        "Damage greater than 0 from any player (including allies, excluding self) or Roshan dispels the effect. Does not get dispelled by damage flagged as HP Removal.",
+        "Does not get dispelled by damage flagged as HP Removal.",
+        "Applies heal reduction, health regen reduction, lifesteal reduction, and spell lifesteal reduction on the target.",
+        "Can only be cast on heroes (including illusions and clones) and creep-heroes.",
+        "Spirit Vessel charges cannot be gathered by clones, illusions and creep-heroes.",
+        "Shares cooldown with Urn of Shadows.",
+        "When having multiple Spirit Vessels, the one in the higher inventory slot gains charges. Slot priority order: Top left, top middle, top right, bottom left, bottom middle, bottom right. Cannot gain charges while inside the backpack. The item must be in one of the 6 slots to gain charges. When having no charges left, the vessel gains 2 charges from the next enemy hero's death, instead of 1. When there are multiple Spirit Vessels in the team, the hero who is closest to the dying enemy gets charges. Spirit Vessels and Urns of Shadows are treated equally. When having both, the one in the higher inventory slot gets charges.",
+        "Slot priority order: Top left, top middle, top right, bottom left, bottom middle, bottom right.",
+        "Cannot gain charges while inside the backpack. The item must be in one of the 6 slots to gain charges.",
+        "When having no charges left, the vessel gains 2 charges from the next enemy hero's death, instead of 1.",
+        "When there are multiple Spirit Vessels in the team, the hero who is closest to the dying enemy gets charges.",
+        "Spirit Vessels and Urns of Shadows are treated equally. When having both, the one in the higher inventory slot gets charges.",
+        "Upon upgrading an Urn of Shadows into a Spirit Vessel, all its current charges are carried over."
+      ],
+      "mana": null,
+      "abilityName": "Soul Release",
+      "cooldown": "7",
+      "description": "When used against enemies, it reduces health by 4% of current health per second, and reduces HP regeneration and healing by 45%. Deals 35 damage per second. When used on allies, it provides 40 health regeneration per second. Lasts 8 seconds. Gains charges every time an enemy hero dies within 1400 units. Only the closest Spirit Vessel to the dying hero will gain a charge.",
+      "params": [
+        "Cast Range: 950",
+        "Charge Gain Radius: 1400",
+        "Ally Health Regen Bonus: 40",
+        "Enemy Damage per Second: 35",
+        "Enemy Current Health as Damage per Second: 4%",
+        "Enemy Health Restoration Reduction: 45%",
+        "Duration: 8"
+      ],
+      "itemBehaviour": [
+        "(Spell_immunity_block_partial_symbol)^Partially pierces spell immunity\nCan be cast on spell immune allies\nCannot be cast on spell immune enemies\nAttempts to damage if debuff was placed before spell immunity and when not dispelled."
+      ],
+      "story": null
+    }
+  ],
+  "additionalInformation": [
+    "For strength heroes, it grants 290 health, 0.2 health regen, 2.33 armor, 2 attack speed, 24 mana, 1.85 mana regen and 2 attack damage.",
+    "For agility heroes, it grants 290 health, 0.2 health regen, 2.33 armor, 2 attack speed, 24 mana, 1.85 mana regen and 2 attack damage.",
+    "For intelligence heroes, it grants 290 health, 0.2 health regen, 2.33 armor, 2 attack speed, 24 mana, 1.85 mana regen and 2 attack damage."
+  ],
+  "cost": "2940",
+  "lore": null,
+  "consistFrom": [
+    "Urn of Shadows",
+    "Vitality Booster",
+    "Recipe"
+  ],
+  "boughtFrom": "Support",
+  "name": "Spirit Vessel",
+  "description": "Forged by a god to entrap the soul of another.",
+  "trivia": null,
+  "upgradeIn": null,
+  "bonuses": [
+    "+2 Strength",
+    "+2 Agility",
+    "+2 Intelligence",
+    "+250 Health",
+    "+1.75 Mana regeneration",
+    "+2 Armor"
+  ],
+  "tips": [
+    "Offensively it can be used for two reasons - to damage heroes that have high health regeneration and decrease it.",
+    "As it is long duration damage-over-time it can be a good counter against Blink Dagger-reliant initiators.",
+    "Also it not only decreases but completely disables Heart of Tarrasque for a long duration if not dispelled.",
+    "When an enemy has Spirit Vessel it's better to have at least one dispel in your team. And if your allies have no dispels it would be a good idea to build Lotus Orb, Eul's Scepter of Divinity, Guardian Greaves, or Manta Style."
+  ]
+}

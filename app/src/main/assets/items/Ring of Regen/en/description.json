@@ -1,0 +1,20 @@
+{
+  "abilities": [],
+  "cost": "175",
+  "lore": null,
+  "consistFrom": null,
+  "boughtFrom": "Miscellaneous",
+  "name": "Ring of Regen",
+  "description": "This ring is considered a good luck charm among the Gnomes.",
+  "trivia": null,
+  "upgradeIn": [
+    "Headdress",
+    "Force Staff",
+    "Hood of Defiance",
+    "Tranquil Boots"
+  ],
+  "bonuses": [
+    "+1.25 Health regeneration"
+  ],
+  "tips": null
+}

@@ -1,0 +1,190 @@
+{
+  "abilities": [
+    {
+      "notes": [
+        "The armor talent does not benefit illusions.",
+        "The strength talent effectively grants Night Stalker 240 health, 1.2 health regeneration, and 12 attack damage.",
+        "This attack damage talent is added as raw attack damage, so it does not benefit illusions, and is not affected by most percentage-based damage increasing or reducing effects."
+      ],
+      "spellName": "Talent",
+      "talents": [
+        {
+          "talentLvl": "25",
+          "talentLeft": "-60s Dark Ascension Cooldown",
+          "talentRight": "+80 Hunter In The Night Attack Speed"
+        },
+        {
+          "talentLvl": "20",
+          "talentLeft": "+35 Damage",
+          "talentRight": "+30 Movement Speed"
+        },
+        {
+          "talentLvl": "15",
+          "talentLeft": "+10% Hunter In The Night Movement Speed",
+          "talentRight": "+12 Strength"
+        },
+        {
+          "talentLvl": "10",
+          "talentLeft": "+4 Armor",
+          "talentRight": "+45 Void Damage"
+        }
+      ]
+    },
+    {
+      "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/d\/d8\/Night_Stalker_Void.mp3\/revision\/latest?cb=20191216021028",
+      "effects": [
+        "Ability Target Unit (TagAghanim No Target)",
+        "Affects Enemies",
+        "Damage Magical"
+      ],
+      "notes": [
+        "Also uses the night values during the night from Eclipse.",
+        "Void first applies the slow debuff, then the damage, then the stun debuff.",
+        "Has a cast backswing of 0.57 during Hunter in the Night.",
+        "The Aghanim's Scepter upgraded version still uses the same cast time. Does not target invisible units, and units inside the Fog of War.",
+        "Does not target invisible units, and units inside the Fog of War."
+      ],
+      "mana": "80\/90\/100\/110",
+      "hotKey": "Q",
+      "cooldown": "11\/10\/9\/8",
+      "description": "Creates a damaging void that slows an enemy unit and deals damage. Void also mini-stuns, interrupting channeling abilities. The slowing effect lasts longer at night.",
+      "spellName": "Void",
+      "params": [
+        "Cast Animation: 0.3+0.33",
+        "Cast Range: 525 (TagAghanim 0)",
+        "Damage: 80\/160\/240\/320 (TagTalent 125\/205\/285\/365)",
+        "Move Speed Slow: 50%",
+        "Attack Speed Slow: 50",
+        "Day Slow Duration: 1.25",
+        "Night Slow Duration: 2.5\/3\/3.5\/4",
+        "Day Stun Duration: 0",
+        "Night Stun Duration: 0.1 (TagAghanim 0.5)",
+        "Radius: 900",
+        "Causes Void to be an AoE ability. Increases the ministun duration.",
+        "Slow persists if debuff was placed before spell immunity and when not dispelled.",
+        "Not blocked when upgraded with Aghanim's Scepter."
+      ],
+      "itemBehaviour": [],
+      "legacyKey": "V",
+      "story": "Balanar creates a vortex of infinite night, tearing opponents violently into the eternal darkness that once was."
+    },
+    {
+      "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/e\/ee\/Night_Stalker_Crippling_Fear_1.mp3\/revision\/latest?cb=20191216021032",
+      "effects": [
+        "Ability No Target",
+        "Affects Enemies"
+      ],
+      "notes": [
+        "The silence is provided by an aura, its debuff lingers for 0.5 seconds.",
+        "The aura's duration does not update when it turns day or night while the buff is on.",
+        "Also uses the night values during the night from Eclipse.",
+        "Has a cast backswing of 0.67 during Hunter in the Night."
+      ],
+      "mana": "50",
+      "hotKey": "W",
+      "cooldown": "30\/25\/20\/15",
+      "description": "Night Stalker horrifies all nearby enemies, causing them to become silenced while near him. The effect lasts longer at night.",
+      "spellName": "Crippling Fear",
+      "params": [
+        "Cast Animation: 0.2+0.43",
+        "Radius: 375",
+        "Day Duration: 3",
+        "Night Duration: 4\/5\/6\/7",
+        "Aura Linger Duration: 0.5",
+        "Debuff persists if it was placed before spell immunity."
+      ],
+      "itemBehaviour": [],
+      "legacyKey": "F",
+      "story": "A vision of the twisted maw of Balanar etches itself into the minds of the poor souls unlucky enough to cross his path."
+    },
+    {
+      "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/2\/23\/Night_Stalker_Hunter_in_the_Night_move.mp3\/revision\/latest?cb=20191216021026",
+      "effects": [
+        "Ability Passive (TagAghanim Target Unit)",
+        "Affects Self (TagAghanim Units)",
+        "Damage Instant Kill"
+      ],
+      "notes": [
+        "Also works during the night from Eclipse.",
+        "With Aghanim's Shard, can be cast on allied and enemy lane creeps, and on neutral creeps, as long as they are not controlled by any player. Neutral creeps include ancient creeps as well, but exclude Roshan. The targeted creep is instantly killed, granting its gold and experience bounties like a regular last hit.",
+        "Neutral creeps include ancient creeps as well, but exclude Roshan.",
+        "The targeted creep is instantly killed, granting its gold and experience bounties like a regular last hit.",
+        "Despite the visual effect, the heal and mana restore are applied instantly on cast."
+      ],
+      "mana": null,
+      "hotKey": "E",
+      "cooldown": null,
+      "description": "Night Stalker is in his element at night, attacking and moving with great swiftness.",
+      "spellName": "Hunter in the Night",
+      "params": [
+        "Cast Animation: 0+1.07",
+        "Passive Move Speed Bonus: 22%\/28%\/34%\/40% (TagTalent 32%\/38%\/44%\/50%)",
+        "Passive Attack Speed Bonus: 20\/40\/60\/80 (TagTalent 100\/120\/140\/160)",
+        "Cast Range: 150",
+        "Active Max Health as Heal: 25%",
+        "Active Max Mana as Mana Restore: 25%",
+        "During night time, Night Stalker can cast Hunter in the Night. Consumes a lesser creature, instantly killing it and restoring 25% of Night Stalker's maximum HP and mana. Can only be cast on non-player units. Cooldown: 20"
+      ],
+      "itemBehaviour": [],
+      "legacyKey": "G",
+      "story": "The hunting prowess of Balanar improves as the night beckons."
+    },
+    {
+      "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/8\/86\/Night_Stalker_Dark_Ascension.mp3\/revision\/latest?cb=20191216021025",
+      "effects": [
+        "Ability No Target",
+        "Affects Self"
+      ],
+      "notes": [
+        "Dark Ascension has a lower priority than the daytime caused by Supernova. During it, Night Stalker still flies, has the damage bonus and unobstructed vision, but the vision is limited to his default daytime vision.",
+        "During it, Night Stalker still flies, has the damage bonus and unobstructed vision, but the vision is limited to his default daytime vision.",
+        "Has a cast backswing of 0.5 seconds when cast during the night."
+      ],
+      "mana": "125\/175\/225",
+      "hotKey": "R",
+      "cooldown": "140\/130\/120 (TagTalent 80\/70\/60)",
+      "description": "Night Stalker smothers the sun and summons instant darkness, so that he might use his powers at their fullest. Nightstalker gains flight and bonus damage during this time. Has unobstructed vision.",
+      "spellName": "Dark Ascension",
+      "params": [
+        "Cast Animation: 0.3+0",
+        "Attack Damage Bonus: 50\/100\/150",
+        "Duration: 30"
+      ],
+      "itemBehaviour": [],
+      "legacyKey": "R",
+      "story": "It is a humbling sight to see when the mightiest of warriors become afraid of the dark."
+    }
+  ],
+  "mainAttributes": {
+    "attrStrengthInc": 3.0,
+    "attrStrength": 23.0,
+    "attrIntelligence": 15.0,
+    "attrIntelligenceInc": 1.6,
+    "attrAgilityInc": 2.3,
+    "attrAgility": 18.0
+  },
+  "description": "Balanar, the Night Stalker, is a melee strength hero, renowned for being a very potent ganker once night falls.",
+  "history": "Of the Night Stalker, there is no history, only stories. There are ancient tales woven into the lore of every race and every culture, of an impossible time before sunlight and daytime, when night reigned alone and the world was covered with the creatures of darkness--creatures like Balanar the Night Stalker. It is said that on the dawn of the First Day, all the night creatures perished. All, that is, save one. Evil's embodiment, Night Stalker delights in his malevolence. He created the primal role of the Night Terror, the Boogeyman, and as long as there have been younglings, his is the specter summoned to terrify them. This is a role he relishes; nor are these empty theatrics. He does indeed stalk the unwary, the defenseless, those who have strayed beyond the lighted paths or denied the warnings of their communities. Night Stalker serves as living proof that every child's worst nightmare....is true.",
+  "talents": [
+    {
+      "talentLvl": "25",
+      "talentLeft": "-60s Dark Ascension Cooldown",
+      "talentRight": "+80 Hunter In The Night Attack Speed"
+    },
+    {
+      "talentLvl": "20",
+      "talentLeft": "+35 Damage",
+      "talentRight": "+30 Movement Speed"
+    },
+    {
+      "talentLvl": "15",
+      "talentLeft": "+10% Hunter In The Night Movement Speed",
+      "talentRight": "+12 Strength"
+    },
+    {
+      "talentLvl": "10",
+      "talentLeft": "+4 Armor",
+      "talentRight": "+45 Void Damage"
+    }
+  ]
+}

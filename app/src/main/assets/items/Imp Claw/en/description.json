@@ -1,0 +1,40 @@
+{
+  "abilities": [
+    {
+      "audioUrl": null,
+      "effects": [
+        "Ability Passive",
+        "Affects Enemies"
+      ],
+      "notes": [
+        "The cooldown triggers upon attack begin, not upon attack launch or hit.",
+        "If two sources of critical strike proc at the same time, the higher multiplier has priority.",
+        "Does not work against wards, buildings, and allied units."
+      ],
+      "mana": null,
+      "abilityName": "Critical Strike",
+      "cooldown": "7",
+      "description": "Empowers your next attack, causing it to be a critical strike dealing 130% damage.",
+      "params": [
+        "Critical Damage: 130%"
+      ],
+      "itemBehaviour": [],
+      "story": null
+    }
+  ],
+  "additionalInformation": [
+    "Imp Claws are fully sharable."
+  ],
+  "cost": "N\/A",
+  "lore": null,
+  "consistFrom": null,
+  "boughtFrom": "Neutral Drop Only",
+  "name": "Imp Claw",
+  "description": "Though their tasks are largely thankless, demon hunters can often turn a profit bartering parts in Weeping Rose.",
+  "trivia": null,
+  "upgradeIn": null,
+  "bonuses": [
+    "+24 Attack damage"
+  ],
+  "tips": null
+}

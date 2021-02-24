@@ -1,0 +1,237 @@
+{
+  "abilities": [
+    {
+      "notes": [
+        "Talents are fully copied by the Tempest Double.",
+        "The health talent increases maximum health capacity, and keeps the current health percentage.",
+        "The cooldown reduction talent stacks multiplicatively with other sources cooldown reduction.",
+        "The lifesteal talent stacks additively with other sources of lifesteal."
+      ],
+      "spellName": "Talent",
+      "talents": [
+        {
+          "talentLvl": "25",
+          "talentLeft": "+12s Tempest Double Duration",
+          "talentRight": "25% Lifesteal"
+        },
+        {
+          "talentLvl": "20",
+          "talentLeft": "+100 Attack Range",
+          "talentRight": "+125 Spark Wraith Damage"
+        },
+        {
+          "talentLvl": "15",
+          "talentLeft": "12% Cooldown Reduction",
+          "talentRight": "+40 Attack Speed"
+        },
+        {
+          "talentLvl": "10",
+          "talentLeft": "+200 Health",
+          "talentRight": "+200 Flux Cast Range"
+        }
+      ]
+    },
+    {
+      "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/c\/c4\/Arc_Warden_Flux.mp3\/revision\/latest?cb=20191216010757",
+      "effects": [
+        "Ability Target Unit",
+        "Affects Enemies",
+        "Damage Magical"
+      ],
+      "notes": [
+        "If the target has allies or neutral creeps within a 225 radius, the spell temporarily stops slowing and damaging the target, until it is alone again.",
+        "Checks for enemies and neutrals in 0.5 second intervals, beginning instantly upon cast. The slow updates based on the result of the checks.",
+        "Also deals damage in the same intervals, based on the checks, dealing 7.5\/15\/22.5\/30 damage, resulting in 13 possible instances.",
+        "While Flux is muted, the particle effects on the target vanish, with only a red glow remaining on the unit, indicating the debuff is still there.",
+        "Nearby buildings, wards and hidden units are ignored and do not mute the effects. Invulnerable units, however, are not ignored.",
+        "Can deal up to 97.5\/195\/292.5\/390 damage to the target if all instances are applied (before reductions).",
+        "Multiple casts on the same target fully stack, with all instances working independently from each other."
+      ],
+      "mana": "75",
+      "hotKey": "Q",
+      "cooldown": "16 (TagTalent 14.08)",
+      "description": "Infuses a lone enemy unit with swirling, volatile energy, slowing its movement speed and dealing damage over time. The effect is muted if another enemy unit is near the target.",
+      "spellName": "Flux",
+      "params": [
+        "Cast Animation: 0.3+0.77",
+        "Cast Range: 500\/600\/700\/800 (TagTalent 700\/800\/900\/1000)",
+        "Search Radius: 225",
+        "Damage per Second: 15\/30\/45\/60",
+        "Move Speed Slow: 20%\/30%\/40%\/50%",
+        "Duration: 6",
+        "Slow persists and attempts to deal damage if debuff was placed before spell immunity and when not dispelled."
+      ],
+      "itemBehaviour": [],
+      "legacyKey": "C",
+      "story": "An infinitesimal fraction of the power which imprisoned the Ancients."
+    },
+    {
+      "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/2\/2c\/Arc_Warden_Magnetic_Field.mp3\/revision\/latest?cb=20191216010749",
+      "effects": [
+        "Ability Target Area",
+        "Affects Allies"
+      ],
+      "notes": [
+        "Applies an attack speed bonus and evasion to allies within the radius.",
+        "The effects are provided by an aura. Its buff lingers for 0.1 seconds.",
+        "Does not evade attacks landing on allies when the source of the attack is within the field.",
+        "The evasion effect of fields from Arc Warden and its Tempest Double works independently. This means when an ally is within the intersection of two fields, attacks are evaded unless their source is also within the intersection.",
+        "This means when an ally is within the intersection of two fields, attacks are evaded unless their source is also within the intersection.",
+        "Affects heroes (including illusions and clones), creep-heroes and buildings. All other units are completely unaffected.",
+        "Does not affect invulnerable units, so buildings are only affected when attackable.",
+        "The attack speed bonus of multiple Magnetic Fields does not stack. The magic resistance bonus of multiple fields stack multiplicatively with each and with other sources of magic resistance.",
+        "The magic resistance bonus of multiple fields stack multiplicatively with each and with other sources of magic resistance.",
+        "With Aghanim's Shard, Magnetic Field pushes every enemy within its 300 radius out of it. The knockback is not a set distance. It pushes every enemy so that they are 350 range away from the center of the targeted area. So the minimum knockback distance is 50 and the maximum is 350. The knockback duration is always 0.3, so the speed varies between 1166.67 and 166.67, depending on the knockback distance. Enemies are not disabled during the knockback, and are, besides moving, able to act freely during it. Can push units over impassable terrain. Any tree a knocked back unit collides with gets destroyed.",
+        "The knockback is not a set distance. It pushes every enemy so that they are 350 range away from the center of the targeted area. So the minimum knockback distance is 50 and the maximum is 350.",
+        "The knockback duration is always 0.3, so the speed varies between 1166.67 and 166.67, depending on the knockback distance.",
+        "Enemies are not disabled during the knockback, and are, besides moving, able to act freely during it.",
+        "Can push units over impassable terrain. Any tree a knocked back unit collides with gets destroyed.",
+        "With Aghanim's Shard, Magnetic Field increases both heroes and buildings' magic resistance within its 300 effect radius. Increases most heroes' total magic resistance to 40% (to 52% by stacking two instances), assuming basic 25% magic resistance and no other sources of magic resistance. Increases all buildings' total magic resistance to 20% (to 36% by stacking two instances), assuming basic 0% magic resistance and no other sources of magic resistance.",
+        "Increases most heroes' total magic resistance to 40% (to 52% by stacking two instances), assuming basic 25% magic resistance and no other sources of magic resistance.",
+        "Increases all buildings' total magic resistance to 20% (to 36% by stacking two instances), assuming basic 0% magic resistance and no other sources of magic resistance."
+      ],
+      "mana": "50\/70\/90\/110",
+      "hotKey": "W",
+      "cooldown": "20 (TagTalent 17.6)",
+      "description": "Generates a circular distortion field of magnetic energy that protects allied heroes and buildings within it by evading attacks coming from outside the field.",
+      "spellName": "Magnetic Field",
+      "params": [
+        "Cast Animation: 0.3+0",
+        "Cast Range: 900",
+        "Effect Radius: 300",
+        "Evasion: 100%",
+        "Attack Speed Bonus: 50\/60\/70\/80",
+        "Aura Linger Duration: 0.1",
+        "Duration: 3.5\/4.5\/5.5\/6.5",
+        "Magic Resistance Bonus: 20%",
+        "Enemy Max Knockback Distance: 350",
+        "Enemy Knockback Duration: 0.3",
+        "Magnetic Field now pushes enemies out of the area at cast time, and provides allies in it with +20% Magic Resistance.",
+        "Fully affects spell immune allies and self. Knockback does not affect spell immune enemies."
+      ],
+      "itemBehaviour": [],
+      "legacyKey": "F",
+      "story": "Time and space are of little consequence to one as old as Zet."
+    },
+    {
+      "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/9\/96\/Arc_Warden_Spark_Wraith_1.mp3\/revision\/latest?cb=20191216010752",
+      "effects": [
+        "Ability Target Area",
+        "Affects Enemies",
+        "Damage Magical"
+      ],
+      "notes": [
+        "The Spark Wraith travels at a speed of 400.",
+        "Once the activation delay is over, it checks for enemies (including neutral creeps) in 0.2 second intervals and launches towards the first registered enemy.",
+        "If multiple enemies are within range after the delay, the closest enemy is targeted.",
+        "Deals damage based on the level upon cast of the ability. Leveling up Spark Wraith does not update the damage of already placed Spark Wraiths.",
+        "The wraith first applies the damage, then the debuff.",
+        "The Spark Wraith is fully visible to the enemy.",
+        "Fully affects invisible units. Can target units inside the Fog of War, but not invulnerable or hidden units.",
+        "The activation delay is not included in the wraith's duration.",
+        "Provides 300 radius ground vision for its full duration. The vision does not linger.",
+        "The launched projectile also provides the same vision, which lingers for 3.34 seconds after reaching the target.",
+        "With Aghanim's Scepter, Spark Wraiths create a secondary wraith immediately upon hitting the enemy. These secondary wraiths have to go through a 3 seconds activation delay. This effect only occurs once per Spark Wraith. Secondary Spark Wraiths cannot spawn new wraiths.",
+        "These secondary wraiths have to go through a 3 seconds activation delay.",
+        "This effect only occurs once per Spark Wraith. Secondary Spark Wraiths cannot spawn new wraiths.",
+        "Choosing the damage upgrading talent immediately upgrades all already placed wraiths, including ones which already seek a target."
+      ],
+      "mana": "80",
+      "hotKey": "E",
+      "cooldown": "4 (TagTalent 3.52)",
+      "description": "Summons a Spark Wraith that slowly materializes and patrols a targeted area until an enemy comes within its range. Once a target has been found the wraith fuses with them, dealing magical damage and slowing the unit.",
+      "spellName": "Spark Wraith",
+      "params": [
+        "Cast Animation: 0.3+0.77",
+        "Cast Range: 2000",
+        "Search Radius: 375",
+        "Activation Delay: 2",
+        "Move Speed Slow: 100%",
+        "Damage: 100\/170\/240\/310 (TagTalent 225\/295\/365\/435)",
+        "Slow Duration: 0.4\/0.5\/0.6\/0.7",
+        "Wraith Duration: 45",
+        "Second Activation Delay: 3",
+        "Causes Spark Wraiths to spawn a new Spark Wraith after impacting an enemy, which then starts its 3 activation period.",
+        "Attempts to deal damage if target turns spell immune before impact."
+      ],
+      "itemBehaviour": [],
+      "legacyKey": "R",
+      "story": "Lesser fragments of Zet's original self."
+    },
+    {
+      "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/2\/2b\/Arc_Warden_Tempest_Double.mp3\/revision\/latest?cb=20191216010755",
+      "effects": [
+        "Ability No Target",
+        "Affects The Self"
+      ],
+      "notes": [
+        "The Tempest Double always spawns with Arc Warden's current mana and health.",
+        "On the first cast of Tempest Double, the double is actually summoned. On every following cast, it is just healed or revived. The double gets dispelled as if it died, removing all modifiers which are removed by death. This means most modifiers which persist through death are not removed. Its cooldowns are not refreshed upon getting re-summoned, so all cooldowns from the previous cast carry over. Resummoning the Tempest Double does not disjoint projectiles.",
+        "The double gets dispelled as if it died, removing all modifiers which are removed by death. This means most modifiers which persist through death are not removed.",
+        "Its cooldowns are not refreshed upon getting re-summoned, so all cooldowns from the previous cast carry over.",
+        "Resummoning the Tempest Double does not disjoint projectiles.",
+        "Arc Warden and his clone are represented by an icon with health and mana bars for each on the top left corner of the screen. When a Zet is selected, its icon becomes brighter. When a Zet takes damage, its icon blinks red.",
+        "When a Zet is selected, its icon becomes brighter. When a Zet takes damage, its icon blinks red.",
+        "The Tempest Double is visually distinguishable from the original Zet for enemies, just like how it is for allies, except for its minimap icon.",
+        "The buffs of a consumed Moon Shard, Aghanim's Blessing, Aghanim's Shard, and Royal Jelly are copied as well. However, other permanent buffs (e.g. Duel, Intelligence Steal) are not. Any Duel victory damage the double gains during its uptime is lost upon death.",
+        "However, other permanent buffs (e.g. Duel, Intelligence Steal) are not.",
+        "Any Duel victory damage the double gains during its uptime is lost upon death.",
+        "The double is a clone and therefore treated exactly like a hero by all spells, since it is not an illusion.",
+        "The double has a 180\/240\/300 and a 180\/240\/300XP bounty. The gold is granted to the killing player, the experience is distributed like any other experience.",
+        "However, if the double is killed by creeps or buildings, the gold gets distributed as well, similar to how hero kills do when not killed by players.",
+        "However, if the double is killed by creeps or buildings, the gold gets distributed as well, similar to how hero kills do when not killed by players.",
+        "Spell effects, that grant bonuses when an enemy unit dies (such as Heartstopper Aura), do not grant any bonuses for killing the double. This non-crediting also prevents Duel from granting damage when the double loses. It does not grant any Track bounty either when it dies while tracked.",
+        "This non-crediting also prevents Duel from granting damage when the double loses.",
+        "It does not grant any Track bounty either when it dies while tracked.",
+        "The Tempest Double does not gain any experience like heroes usually do, so it does not leech experience.",
+        "This ability is not available in Ability Draft."
+      ],
+      "mana": null,
+      "hotKey": "R",
+      "cooldown": null,
+      "description": "Briefly refocusing its fractured elements into a single form, the Arc Warden is able to create a perfect electrical duplication of itself. The duplicate can use all of Arc Warden's current items and spells, except most consumables and items that drop on death. The duplicate has separate item and ability cooldowns. The Tempest Double gives bounty gold to enemies when killed.",
+      "spellName": "Tempest Double",
+      "params": [
+        "Cast Animation: 0.15+0.5",
+        "Number of Doubles: 1",
+        "Duration: 18\/22\/26 (TagTalent 30\/34\/38)",
+        "Bounty: 180\/240\/300"
+      ],
+      "itemBehaviour": [],
+      "legacyKey": "D",
+      "story": "Warped by the power of its peers, Arc Warden becomes what it despises most: disharmony."
+    }
+  ],
+  "mainAttributes": {
+    "attrStrengthInc": 2.8,
+    "attrStrength": 23.0,
+    "attrIntelligence": 24.0,
+    "attrIntelligenceInc": 2.6,
+    "attrAgilityInc": 2.5,
+    "attrAgility": 16.0
+  },
+  "description": "Zet, the Arc Warden, is a ranged agility hero that requires micromanagement and farm to spiral out of control. In the early stages of the game, it is a very powerful nuker. Its first ability, Flux, allows Arc Warden to cripple an enemy down and deal large amounts of damage. It and other allied heroes or buildings can be protected from physical attacks with its second ability Magnetic Field, while gaining swift attack speed. Similar to Techies' Proximity Mines, Arc Warden's third ability, Spark Wraith, allows it to place wraiths that attack when an enemy goes near them, potentially dealing large amounts of magical damage. Finally, thanks to its ultimate, Tempest Double, which allows it to make a perfect copy of itself that can use all of Arc Warden's spells and item abilities, it can spam all of its other abilities and most items twice and easily take down fragile heroes in the early game, or keep itself or its team doubly sustained through certain buffing or healing items. This makes Arc Warden very powerful in both early and late game if given enough farm, from magical nuker to physical carry, or if the time calls it, a very potent support.",
+  "history": "Before the beginning of all, there existed a presence: a primordial mind, infinite, awesome, and set to inscrutable purpose. As the universe thundered into being, this mind was fragmented and scattered. Two among its greater fragments--who would come to be named Radiant and Dire--found themselves locked in vicious opposition, and began twisting all of creation to serve their conflict. As war and cataclysm threatened the nascent cosmos, the will of a third fragment made itself known. Naming itself Zet, this intellect sought to resolve the disharmony and return all to perfect unity. Appalled by its kin's conflicting nature, Zet gathered the sum of its power. In a sudden flash, it overwhelmed its siblings, and fused the warring aspects into a stellar sphere before hurling them into the darkness to orbit a nondescript world. Harmony was restored, though only the barest fraction of Zet's strength remained. Setting its gaze on the prison, Zet chose to use its weakened power to serve as watchful warden until time's end. For uncounted aeons, this vigil stood. Life flourished upon the world below, oblivious to the dangers imprisoned within the softly glowing moon, or of Zet's struggles to contain them. As the captives' eternal clash reverberated within, the surface of the prison shuddered, over time beginning to crack. Ultimately, Zet's depleted power proved insufficient to contain the breach, and at last the moon was shattered. The prison's ancient inhabitants had escaped to sow their conflict anew. Flung to the farthest reaches by the prison's explosion, Zet was transformed by the dissonant energies of its former captives. No longer of single form and thought, its presence had become split among many--some lesser, some greater--each connected by a fleeting arc of consciousness. Struggling to suppress its own disunity, Zet sped toward the burgeoning conflict of its siblings, bending its fractured wills toward a singular conclusion: the aspects of the primordial mind must be made to reunite, or all must be destroyed lest the conflict spread further\u2026",
+  "talents": [
+    {
+      "talentLvl": "25",
+      "talentLeft": "+12s Tempest Double Duration",
+      "talentRight": "25% Lifesteal"
+    },
+    {
+      "talentLvl": "20",
+      "talentLeft": "+100 Attack Range",
+      "talentRight": "+125 Spark Wraith Damage"
+    },
+    {
+      "talentLvl": "15",
+      "talentLeft": "12% Cooldown Reduction",
+      "talentRight": "+40 Attack Speed"
+    },
+    {
+      "talentLvl": "10",
+      "talentLeft": "+200 Health",
+      "talentRight": "+200 Flux Cast Range"
+    }
+  ]
+}

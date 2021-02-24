@@ -1,0 +1,1512 @@
+[
+  {
+    "responses": [
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/6\/68\/Vo_pudge_pud_spawn_01.mp3\/revision\/latest?cb=20200821222340",
+        "title": "Pudge!"
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/9\/9c\/Vo_pudge_pud_spawn_02.mp3\/revision\/latest?cb=20200821222342",
+        "title": "The Butcher!"
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/2\/20\/Vo_pudge_pud_spawn_03.mp3\/revision\/latest?cb=20200821222344",
+        "title": "They call me the Butcher."
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/1\/1c\/Vo_pudge_pud_spawn_04.mp3\/revision\/latest?cb=20200821222346",
+        "title": "Pudge is here."
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/1\/15\/Vo_pudge_pud_spawn_06.mp3\/revision\/latest?cb=20200821222348",
+        "title": "Someone needed a Butcher?"
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/5\/57\/Vo_pudge_pud_spawn_07.mp3\/revision\/latest?cb=20200821222350",
+        "title": "Make room for Pudge!"
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/4\/4f\/Vo_pudge_pud_spawn_08.mp3\/revision\/latest?cb=20200821222352",
+        "title": "Butcher's in business."
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/e\/e9\/Vo_pudge_pud_spawn_10.mp3\/revision\/latest?cb=20200821222355",
+        "title": "Pudge!"
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/7\/7e\/Vo_pudge_pud_spawn_11.mp3\/revision\/latest?cb=20200821222356",
+        "title": "Make room!"
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/8\/88\/Vo_pudge_pud_attack_08.mp3\/revision\/latest?cb=20200821221816",
+        "title": "Time for a little butchery!"
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/f\/f7\/Vo_pudge_pud_ability_hook_10.mp3\/revision\/latest?cb=20200821215417",
+        "title": "Look who's coming for dinner!"
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/a\/a3\/Vo_pudge_pud_kill_01.mp3\/revision\/latest?cb=20200821222014",
+        "title": "Oh, I love a good slaughter."
+      }
+    ],
+    "category": "Loadout"
+  },
+  {
+    "responses": [
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/e\/e9\/Vo_pudge_pud_spawn_10.mp3\/revision\/latest?cb=20200821222355",
+        "title": "Pudge!"
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/7\/70\/Vo_pudge_pud_anger_01.mp3\/revision\/latest?cb=20200821215512",
+        "title": "Rehhhaa!"
+      }
+    ],
+    "category": "Drafting"
+  },
+  {
+    "responses": [
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/2\/20\/Vo_pudge_pud_spawn_03.mp3\/revision\/latest?cb=20200821222344",
+        "title": "They call me the Butcher."
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/1\/1c\/Vo_pudge_pud_spawn_04.mp3\/revision\/latest?cb=20200821222346",
+        "title": "Pudge is here."
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/1\/15\/Vo_pudge_pud_spawn_06.mp3\/revision\/latest?cb=20200821222348",
+        "title": "Someone needed a Butcher?"
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/5\/57\/Vo_pudge_pud_spawn_07.mp3\/revision\/latest?cb=20200821222350",
+        "title": "Make room for Pudge!"
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/4\/4f\/Vo_pudge_pud_spawn_08.mp3\/revision\/latest?cb=20200821222352",
+        "title": "Butcher's in business."
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/7\/7e\/Vo_pudge_pud_spawn_11.mp3\/revision\/latest?cb=20200821222356",
+        "title": "Make room!"
+      }
+    ],
+    "category": "Entering battle"
+  },
+  {
+    "responses": [
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/a\/ab\/Vo_pudge_pud_inthebag_01.mp3\/revision\/latest?cb=20200821221958",
+        "title": "It's in the bag!"
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/a\/aa\/Vo_pudge_pud_inthebag_02.mp3\/revision\/latest?cb=20200821222000",
+        "isArcane": true,
+        "title": "It's in the bag!"
+      }
+    ],
+    "category": "Taunting"
+  },
+  {
+    "responses": [
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/4\/46\/Vo_pudge_pud_spawn_09.mp3\/revision\/latest?cb=20200821222353",
+        "title": "So much meat, so little time."
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/4\/4a\/Vo_pudge_pud_battlebegins_01.mp3\/revision\/latest?cb=20200821221834",
+        "title": "Look at all that meat just waiting to be carved."
+      }
+    ],
+    "category": "Beginning battle"
+  },
+  {
+    "responses": [
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/f\/f5\/Vo_pudge_pud_move_01.mp3\/revision\/latest?cb=20200821222137",
+        "title": "Coming through!"
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/2\/29\/Vo_pudge_pud_move_03.mp3\/revision\/latest?cb=20200821222139",
+        "title": "Aye-aye!"
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/8\/80\/Vo_pudge_pud_move_04.mp3\/revision\/latest?cb=20200821222141",
+        "title": "Right."
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/6\/63\/Vo_pudge_pud_move_05.mp3\/revision\/latest?cb=20200821222142",
+        "title": "Ayyup."
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/f\/fb\/Vo_pudge_pud_move_06.mp3\/revision\/latest?cb=20200821222143",
+        "title": "Oh, good idea."
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/9\/9d\/Vo_pudge_pud_move_07.mp3\/revision\/latest?cb=20200821222145",
+        "title": "Wadin' in!"
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/9\/91\/Vo_pudge_pud_move_09.mp3\/revision\/latest?cb=20200821222147",
+        "title": "Right to it."
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/c\/ca\/Vo_pudge_pud_move_10.mp3\/revision\/latest?cb=20200821222149",
+        "title": "Oh yes."
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/0\/0d\/Vo_pudge_pud_move_11.mp3\/revision\/latest?cb=20200821222150",
+        "title": "Forward."
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/9\/94\/Vo_pudge_pud_move_12.mp3\/revision\/latest?cb=20200821222151",
+        "title": "Headin' out."
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/8\/80\/Vo_pudge_pud_move_13.mp3\/revision\/latest?cb=20200821222153",
+        "title": "You got it."
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/3\/3b\/Vo_pudge_pud_move_15.mp3\/revision\/latest?cb=20200821222158",
+        "title": "Oh yes."
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/0\/07\/Vo_pudge_pud_move_16.mp3\/revision\/latest?cb=20200821222159",
+        "title": "Here I come."
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/6\/65\/Vo_pudge_pud_move_17.mp3\/revision\/latest?cb=20200821222201",
+        "title": "Oh yes."
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/a\/ab\/Vo_pudge_pud_acknow_01.mp3\/revision\/latest?cb=20200821215457",
+        "title": "Hm."
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/7\/7e\/Vo_pudge_pud_acknow_02.mp3\/revision\/latest?cb=20200821215459",
+        "title": "Huh."
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/6\/6a\/Vo_pudge_pud_acknow_03.mp3\/revision\/latest?cb=20200821215501",
+        "title": "Ah."
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/1\/10\/Vo_pudge_pud_acknow_04.mp3\/revision\/latest?cb=20200821215503",
+        "title": "Right."
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/e\/e3\/Vo_pudge_pud_acknow_05.mp3\/revision\/latest?cb=20200821215504",
+        "title": "Whateva."
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/b\/b7\/Vo_pudge_pud_acknow_06.mp3\/revision\/latest?cb=20200821215506",
+        "title": "Yeh."
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/1\/1a\/Vo_pudge_pud_acknow_07.mp3\/revision\/latest?cb=20200821215507",
+        "title": "Uh."
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/e\/e0\/Vo_pudge_pud_acknow_08.mp3\/revision\/latest?cb=20200821215508",
+        "title": "Uh huh."
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/5\/5a\/Vo_pudge_pud_acknow_09.mp3\/revision\/latest?cb=20200821215510",
+        "isArcane": true,
+        "title": "Uh huh."
+      }
+    ],
+    "category": "Moving"
+  },
+  {
+    "responses": [
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/f\/fc\/Vo_pudge_pud_attack_01.mp3\/revision\/latest?cb=20200821221805",
+        "title": "Chopper time!"
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/0\/08\/Vo_pudge_pud_attack_02.mp3\/revision\/latest?cb=20200821221806",
+        "title": "Cut to the chase!"
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/c\/c8\/Vo_pudge_pud_attack_03.mp3\/revision\/latest?cb=20200821221808",
+        "title": "It's cleaver time!"
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/6\/69\/Vo_pudge_pud_attack_04.mp3\/revision\/latest?cb=20200821221810",
+        "title": "This edge is nice and sharp."
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/b\/b7\/Vo_pudge_pud_attack_05.mp3\/revision\/latest?cb=20200821221813",
+        "title": "Carnage!"
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/e\/e3\/Vo_pudge_pud_attack_06.mp3\/revision\/latest?cb=20200821221814",
+        "title": "I will devour you!"
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/8\/88\/Vo_pudge_pud_attack_08.mp3\/revision\/latest?cb=20200821221816",
+        "title": "Time for a little butchery!"
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/d\/dd\/Vo_pudge_pud_attack_09.mp3\/revision\/latest?cb=20200821221818",
+        "title": "Get some!"
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/f\/f7\/Vo_pudge_pud_attack_10.mp3\/revision\/latest?cb=20200821221821",
+        "title": "Fresh chops!"
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/2\/2c\/Vo_pudge_pud_attack_11.mp3\/revision\/latest?cb=20200821221823",
+        "title": "Chop-chop!"
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/2\/2e\/Vo_pudge_pud_attack_12.mp3\/revision\/latest?cb=20200821221824",
+        "title": "Fresh meat!"
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/a\/ae\/Vo_pudge_pud_attack_13.mp3\/revision\/latest?cb=20200821221825",
+        "title": "You won't feel a thing!"
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/7\/7e\/Vo_pudge_pud_attack_14.mp3\/revision\/latest?cb=20200821221829",
+        "title": "I'll bring the slaughter to the lambs!"
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/0\/09\/Vo_pudge_pud_attack_15.mp3\/revision\/latest?cb=20200821221830",
+        "title": "You're mincemeat now!"
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/9\/9e\/Vo_pudge_pud_attack_16.mp3\/revision\/latest?cb=20200821221832",
+        "title": "This edge is nice and sharp."
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/8\/80\/Vo_pudge_pud_move_14.mp3\/revision\/latest?cb=20200821222155",
+        "title": "Clear the chopping block!"
+      }
+    ],
+    "category": "Attacking"
+  },
+  {
+    "responses": [
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/2\/23\/Vo_pudge_pud_cast_01.mp3\/revision\/latest?cb=20200821221844",
+        "title": "About time!"
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/b\/bf\/Vo_pudge_pud_cast_02.mp3\/revision\/latest?cb=20200821221847",
+        "title": "About bloody time!"
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/1\/1d\/Vo_pudge_pud_cast_03.mp3\/revision\/latest?cb=20200821221848",
+        "title": "My cleaver's gettin' itchy!"
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/b\/bc\/Vo_pudge_pud_cast_04.mp3\/revision\/latest?cb=20200821221851",
+        "title": "About bloody time!"
+      }
+    ],
+    "category": "Ordering a spell cast"
+  },
+  {
+    "responses": [
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/e\/ef\/Vo_pudge_pud_ability_hook_01.mp3\/revision\/latest?cb=20200821215400",
+        "title": "Reel 'em in!"
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/7\/71\/Vo_pudge_pud_ability_hook_02.mp3\/revision\/latest?cb=20200821215402",
+        "title": "Hooked 'em!"
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/0\/03\/Vo_pudge_pud_ability_hook_03.mp3\/revision\/latest?cb=20200821215404",
+        "title": "Come to Pudge!"
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/d\/de\/Vo_pudge_pud_ability_hook_04.mp3\/revision\/latest?cb=20200821215406",
+        "title": "Get over here!"
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/7\/74\/Vo_pudge_pud_ability_hook_05.mp3\/revision\/latest?cb=20200821215407",
+        "title": "Cleave to me!"
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/a\/a9\/Vo_pudge_pud_ability_hook_06.mp3\/revision\/latest?cb=20200821215409",
+        "title": "Get over here!"
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/c\/cc\/Vo_pudge_pud_ability_hook_07.mp3\/revision\/latest?cb=20200821215411",
+        "title": "Come to Pudge!"
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/b\/bd\/Vo_pudge_pud_ability_hook_08.mp3\/revision\/latest?cb=20200821215413",
+        "title": "Get over here!"
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/f\/f1\/Vo_pudge_pud_ability_hook_09.mp3\/revision\/latest?cb=20200821215415",
+        "title": "Let's get intimate."
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/f\/f7\/Vo_pudge_pud_ability_hook_10.mp3\/revision\/latest?cb=20200821215417",
+        "title": "Look who's coming for dinner!"
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/2\/26\/Vo_pudge_pud_ability_hook_miss_01.mp3\/revision\/latest?cb=20200821215420",
+        "title": "I meant to do that\u2026"
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/7\/71\/Vo_pudge_pud_ability_hook_miss_02.mp3\/revision\/latest?cb=20200821215422",
+        "title": "Hey!"
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/2\/23\/Vo_pudge_pud_ability_hook_miss_03.mp3\/revision\/latest?cb=20200821215423",
+        "title": "Bloody creeps!"
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/c\/c8\/Vo_pudge_pud_ability_hook_miss_04.mp3\/revision\/latest?cb=20200821215425",
+        "title": "Blast yeh!"
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/b\/b1\/Vo_pudge_pud_ability_hook_miss_05.mp3\/revision\/latest?cb=20200821215427",
+        "title": "I'll skin you for that!"
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/9\/9a\/Vo_pudge_pud_ability_hook_miss_06.mp3\/revision\/latest?cb=20200821215431",
+        "title": "Out of my way!"
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/3\/32\/Vo_pudge_pud_ability_hook_miss_08.mp3\/revision\/latest?cb=20200821215433",
+        "title": "Hey!"
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/8\/8f\/Vo_pudge_pud_ability_hook_miss_09.mp3\/revision\/latest?cb=20200821215435",
+        "title": "Oy!"
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/7\/7b\/Vo_pudge_pud_ability_hook_miss_10.mp3\/revision\/latest?cb=20200821215438",
+        "isArcane": true,
+        "title": "Oy!"
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/0\/03\/Vo_pudge_pud_ability_hook_03.mp3\/revision\/latest?cb=20200821215404",
+        "title": "Come to Pudge!"
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/7\/7f\/Vo_pudge_pud_nomnom_01.mp3\/revision\/latest?cb=20200821222207",
+        "title": "Um num num num."
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/e\/e6\/Vo_pudge_pud_level_04.mp3\/revision\/latest?cb=20200821222109",
+        "title": "More like that!"
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/8\/8f\/Vo_pudge_pud_thanks_02.mp3\/revision\/latest?cb=20200821222400",
+        "title": "That's a bit of all right."
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/8\/88\/Vo_pudge_pud_attack_08.mp3\/revision\/latest?cb=20200821221816",
+        "title": "Time for a little butchery!"
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/7\/70\/Vo_pudge_pud_anger_01.mp3\/revision\/latest?cb=20200821215512",
+        "title": "Rehhhaa!"
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/6\/62\/Vo_pudge_pud_anger_02.mp3\/revision\/latest?cb=20200821215513",
+        "title": "Raah!"
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/4\/40\/Vo_pudge_pud_anger_03.mp3\/revision\/latest?cb=20200821215515",
+        "title": "Ah!"
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/4\/43\/Vo_pudge_pud_anger_04.mp3\/revision\/latest?cb=20200821215517",
+        "title": "Yahh!"
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/b\/b2\/Vo_pudge_pud_anger_05.mp3\/revision\/latest?cb=20200821215520",
+        "title": "Gah!"
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/d\/da\/Vo_pudge_pud_ability_rot_02.mp3\/revision\/latest?cb=20200821215440",
+        "title": "Something's rotten!"
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/c\/ce\/Vo_pudge_pud_ability_rot_07.mp3\/revision\/latest?cb=20200821215442",
+        "title": "Oops. Was that me?"
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/4\/48\/Vo_pudge_pud_ability_rot_08.mp3\/revision\/latest?cb=20200821215443",
+        "title": "Take a deep breath."
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/1\/19\/Vo_pudge_pud_ability_rot_09.mp3\/revision\/latest?cb=20200821215445",
+        "title": "Deep breath, boys!"
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/f\/fc\/Vo_pudge_pud_ability_rot_10.mp3\/revision\/latest?cb=20200821215447",
+        "title": "Mmm. Smell the fresh air."
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/2\/28\/Vo_pudge_pud_ability_rot_11.mp3\/revision\/latest?cb=20200821215449",
+        "title": "Mmm. Fill yer lungs up!"
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/7\/74\/Vo_pudge_pud_ability_rot_12.mp3\/revision\/latest?cb=20200821215451",
+        "title": "Smells good don't it?"
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/6\/6d\/Vo_pudge_pud_ability_rot_13.mp3\/revision\/latest?cb=20200821215455",
+        "title": "Breathe your last!"
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/8\/83\/Vo_pudge_pud_ability_heap_01.mp3\/revision\/latest?cb=20200821215356",
+        "title": "Piles of flesh"
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/4\/43\/Vo_pudge_pud_ability_heap_02.mp3\/revision\/latest?cb=20200821215358",
+        "title": "Heap it on!"
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/0\/08\/Vo_pudge_pud_ability_devour_01.mp3\/revision\/latest?cb=20200821215315",
+        "title": "Devour!"
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/3\/34\/Vo_pudge_pud_ability_devour_02.mp3\/revision\/latest?cb=20200821215318",
+        "title": "Ahhh\u2026fresh meat!"
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/0\/0d\/Vo_pudge_pud_ability_devour_03.mp3\/revision\/latest?cb=20200821215319",
+        "title": "Ha ha ha ha! Fresh meat!"
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/b\/b9\/Vo_pudge_pud_ability_devour_04.mp3\/revision\/latest?cb=20200821215322",
+        "title": "Ahhh\u2026fresh meat!"
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/8\/89\/Vo_pudge_pud_ability_devour_05.mp3\/revision\/latest?cb=20200821215324",
+        "title": "He he he he, fresh meat!"
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/3\/31\/Vo_pudge_pud_ability_devour_06.mp3\/revision\/latest?cb=20200821215327",
+        "title": "Ha ha ha ha! Fresh meat!"
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/b\/b1\/Vo_pudge_pud_ability_devour_07.mp3\/revision\/latest?cb=20200821215330",
+        "title": "Fresh meat!"
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/f\/fa\/Vo_pudge_pud_ability_devour_10.mp3\/revision\/latest?cb=20200821215342",
+        "isArcane": true,
+        "title": "Fresh meat!"
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/5\/55\/Vo_pudge_pud_ability_devour_11.mp3\/revision\/latest?cb=20200821215344",
+        "title": "Ha ha ha ha ha ha! Fresh meat!"
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/2\/26\/Vo_pudge_pud_ability_devour_12.mp3\/revision\/latest?cb=20200821215347",
+        "title": "Oy, fresh meat!"
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/2\/2a\/Vo_pudge_pud_ability_devour_13.mp3\/revision\/latest?cb=20200821215349",
+        "title": "Oh, fresh meat!"
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/5\/5b\/Vo_pudge_pud_ability_devour_15.mp3\/revision\/latest?cb=20200821215352",
+        "title": "Ha ha ha ha! Fresh meat!"
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/9\/93\/Vo_pudge_pud_ability_devour_16.mp3\/revision\/latest?cb=20200821215354",
+        "title": "Fresh meat!"
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/c\/cc\/Vo_pudge_pud_ability_devour_08.mp3\/revision\/latest?cb=20200821215334",
+        "title": "Huh huh huh, fresh meat!"
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/6\/6e\/Vo_pudge_pud_ability_devour_09.mp3\/revision\/latest?cb=20200821215339",
+        "title": "Fresh meat!"
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/6\/63\/Vo_pudge_pud_ability_devour_14.mp3\/revision\/latest?cb=20200821215351",
+        "title": "He he he he. Fresh meat."
+      }
+    ],
+    "category": "Abilities"
+  },
+  {
+    "responses": [
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/0\/05\/Vo_pudge_pud_level_01.mp3\/revision\/latest?cb=20200821222103",
+        "title": "I'm growing!"
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/e\/ed\/Vo_pudge_pud_level_02.mp3\/revision\/latest?cb=20200821222106",
+        "title": "More power, yes!"
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/0\/00\/Vo_pudge_pud_level_03.mp3\/revision\/latest?cb=20200821222108",
+        "title": "Oh, yeah!"
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/e\/e6\/Vo_pudge_pud_level_04.mp3\/revision\/latest?cb=20200821222109",
+        "title": "More like that!"
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/3\/36\/Vo_pudge_pud_level_05.mp3\/revision\/latest?cb=20200821222111",
+        "title": "I'm gonna need bigger pants."
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/4\/41\/Vo_pudge_pud_level_06.mp3\/revision\/latest?cb=20200821222113",
+        "title": "I need a new pair of pants!"
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/1\/18\/Vo_pudge_pud_level_07.mp3\/revision\/latest?cb=20200821222114",
+        "title": "Just popped the last of me buttons."
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/f\/fe\/Vo_pudge_pud_level_08.mp3\/revision\/latest?cb=20200821222117",
+        "title": "Ho, my blades are nice and sharp now."
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/d\/dd\/Vo_pudge_pud_level_09.mp3\/revision\/latest?cb=20200821222118",
+        "title": "Time for a choppin block party!"
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/2\/21\/Vo_pudge_pud_level_10.mp3\/revision\/latest?cb=20200821222119",
+        "title": "My choppers are lookin sharp!"
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/4\/43\/Vo_pudge_pud_level_11.mp3\/revision\/latest?cb=20200821222121",
+        "title": "Have you seen my right hook?"
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/7\/7f\/Vo_pudge_pud_nomnom_01.mp3\/revision\/latest?cb=20200821222207",
+        "title": "Um num num num."
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/7\/7e\/Vo_pudge_pud_laugh_07.mp3\/revision\/latest?cb=20200821222102",
+        "title": "Hm hm hm hm hm."
+      }
+    ],
+    "category": "Leveling up"
+  },
+  {
+    "responses": [
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/a\/a3\/Vo_pudge_pud_kill_01.mp3\/revision\/latest?cb=20200821222014",
+        "title": "Oh, I love a good slaughter."
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/f\/ff\/Vo_pudge_pud_kill_02.mp3\/revision\/latest?cb=20200821222015",
+        "title": "Aw, slice o' life!"
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/8\/88\/Vo_pudge_pud_kill_03.mp3\/revision\/latest?cb=20200821222017",
+        "title": "You cut quite a figure!"
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/8\/82\/Vo_pudge_pud_kill_04.mp3\/revision\/latest?cb=20200821222019",
+        "title": "Serves you right."
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/b\/bf\/Vo_pudge_pud_kill_05.mp3\/revision\/latest?cb=20200821222020",
+        "title": "I'll flay you now."
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/2\/29\/Vo_pudge_pud_kill_06.mp3\/revision\/latest?cb=20200821222021",
+        "title": "Nice bit o' creep filet."
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/4\/46\/Vo_pudge_pud_kill_07.mp3\/revision\/latest?cb=20200821222023",
+        "title": "You'll look good with an apple in yer mouth!"
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/d\/d8\/Vo_pudge_pud_kill_08.mp3\/revision\/latest?cb=20200821222024",
+        "title": "Bit of a hack-job, that."
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/f\/f1\/Vo_pudge_pud_kill_09.mp3\/revision\/latest?cb=20200821222028",
+        "title": "I just cut yer losses."
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/0\/0a\/Vo_pudge_pud_kill_10.mp3\/revision\/latest?cb=20200821222029",
+        "title": "Ha ha ha I'm just ribbin' ya!"
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/5\/58\/Vo_pudge_pud_kill_11.mp3\/revision\/latest?cb=20200821222030",
+        "title": "Look, a spare rib!"
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/3\/3a\/Vo_pudge_pud_laugh_01.mp3\/revision\/latest?cb=20200821222052",
+        "title": "He he he he heh."
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/0\/04\/Vo_pudge_pud_laugh_02.mp3\/revision\/latest?cb=20200821222054",
+        "title": "Ha ha!"
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/4\/45\/Vo_pudge_pud_laugh_03.mp3\/revision\/latest?cb=20200821222055",
+        "title": "Ha ha ha!"
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/e\/ea\/Vo_pudge_pud_laugh_05.mp3\/revision\/latest?cb=20200821222059",
+        "title": "Hm hm hm hm ha ha ha."
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/b\/bf\/Vo_pudge_pud_laugh_06.mp3\/revision\/latest?cb=20200821222101",
+        "title": "Ha ha ha ha ha ha ha ha ha."
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/8\/84\/Vo_pudge_pud_rival_01.mp3\/revision\/latest?cb=20200821222305",
+        "title": "No choice cuts here, this meat's gone a bit off.",
+        "icons": [
+          "heroes\/Undying\/minimap.png"
+        ]
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/d\/d9\/Vo_pudge_pud_rival_02.mp3\/revision\/latest?cb=20200821222306",
+        "title": "Spare ribs? Not what I had in mind.",
+        "icons": [
+          "heroes\/Clinkz\/minimap.png"
+        ]
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/8\/81\/Vo_pudge_pud_rival_03.mp3\/revision\/latest?cb=20200821222308",
+        "title": "Hm hm hm hm hm. You need some meat on them bones, Clinkz.",
+        "icons": [
+          "heroes\/Clinkz\/minimap.png"
+        ]
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/4\/4d\/Vo_pudge_pud_rival_04.mp3\/revision\/latest?cb=20200821222309",
+        "title": "You call him Prophet. I call him roughage.",
+        "icons": [
+          "heroes\/Nature's Prophet\/minimap.png"
+        ]
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/b\/b7\/Vo_pudge_pud_rival_05.mp3\/revision\/latest?cb=20200821222310",
+        "title": "Boiling you up with drawn butter!",
+        "icons": [
+          "heroes\/Weaver\/minimap.png"
+        ]
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/1\/1b\/Vo_pudge_pud_rival_06.mp3\/revision\/latest?cb=20200821222312",
+        "title": "Hm, I always liked red meat.",
+        "icons": [
+          "heroes\/Windranger\/minimap.png"
+        ]
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/b\/b1\/Vo_pudge_pud_rival_07.mp3\/revision\/latest?cb=20200821222313",
+        "title": "Hey, bottom feeder, I likes my meat fresh.",
+        "icons": [
+          "heroes\/Slardar\/minimap.png"
+        ]
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/9\/97\/Vo_pudge_pud_rival_08.mp3\/revision\/latest?cb=20200821222314",
+        "title": "Eh, fish don't hardly count as meat.",
+        "icons": [
+          "heroes\/Tidehunter\/minimap.png"
+        ]
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/4\/4a\/Vo_pudge_pud_rival_09.mp3\/revision\/latest?cb=20200821222316",
+        "title": "The only thing you broke was my fast, Spirit Breaker.",
+        "icons": [
+          "heroes\/Spirit Breaker\/minimap.png"
+        ]
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/4\/4c\/Vo_pudge_pud_rival_10.mp3\/revision\/latest?cb=20200821222317",
+        "title": "I do all me own dirty work, Al.",
+        "icons": [
+          "heroes\/Alchemist\/minimap.png"
+        ]
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/2\/2f\/Vo_pudge_pud_rival_11.mp3\/revision\/latest?cb=20200821222319",
+        "title": "Mm, canned ham.",
+        "icons": [
+          "heroes\/Clockwerk\/minimap.png"
+        ]
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/e\/ea\/Vo_pudge_pud_rival_12.mp3\/revision\/latest?cb=20200821222321",
+        "title": "Can't silence mah belly.",
+        "icons": [
+          "heroes\/Silencer\/minimap.png"
+        ]
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/5\/5f\/Vo_pudge_pud_rival_13.mp3\/revision\/latest?cb=20200821222322",
+        "title": "Winner, winner, Riki dinner.",
+        "icons": [
+          "heroes\/Riki\/minimap.png"
+        ]
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/3\/33\/Vo_pudge_pud_rival_14.mp3\/revision\/latest?cb=20200821222323",
+        "title": "That's what you get, taking a bite out of my turf.",
+        "icons": [
+          "heroes\/Lifestealer\/minimap.png"
+        ]
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/e\/ec\/Vo_pudge_pud_rival_15.mp3\/revision\/latest?cb=20200821222324",
+        "title": "Falls right off the bone.",
+        "icons": [
+          "heroes\/Pugna\/minimap.png"
+        ]
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/4\/48\/Vo_pudge_pud_rival_17.mp3\/revision\/latest?cb=20200821222327",
+        "title": "Mm, short ribs.",
+        "icons": [
+          "heroes\/Pugna\/minimap.png"
+        ]
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/7\/77\/Vo_pudge_pud_rival_16.mp3\/revision\/latest?cb=20200821222326",
+        "title": "Butterflied already.",
+        "icons": [
+          "heroes\/Puck\/minimap.png"
+        ]
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/a\/a2\/Vo_pudge_pud_rival_18.mp3\/revision\/latest?cb=20200821222328",
+        "title": "Ah, choice cut of wolf steak.",
+        "icons": [
+          "heroes\/Lycan\/minimap.png"
+        ]
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/f\/f7\/Vo_pudge_pud_rival_19.mp3\/revision\/latest?cb=20200821222330",
+        "title": "Hm, a bit of venison oughta hit the spot.",
+        "icons": [
+          "heroes\/Enchantress\/minimap.png"
+        ]
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/2\/25\/Vo_pudge_pud_firstblood_01.mp3\/revision\/latest?cb=20200821221935",
+        "title": "First Blood! Have I got juice on me chins?"
+      }
+    ],
+    "category": "Killing an enemy"
+  },
+  {
+    "responses": [
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/e\/e8\/Vo_pudge_pud_lasthit_01.mp3\/revision\/latest?cb=20200821222035",
+        "title": "Yes!"
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/1\/1b\/Vo_pudge_pud_lasthit_02.mp3\/revision\/latest?cb=20200821222037",
+        "title": "Nice little morsel!"
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/8\/80\/Vo_pudge_pud_lasthit_03.mp3\/revision\/latest?cb=20200821222038",
+        "title": "Lip smackin'!"
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/a\/ab\/Vo_pudge_pud_lasthit_04.mp3\/revision\/latest?cb=20200821222039",
+        "title": "You can't chop a chopper!"
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/5\/59\/Vo_pudge_pud_lasthit_06.mp3\/revision\/latest?cb=20200821222043",
+        "title": "Lovely\u2026"
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/c\/c9\/Vo_pudge_pud_lasthit_07.mp3\/revision\/latest?cb=20200821222045",
+        "title": "Delicious\u2026"
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/1\/13\/Vo_pudge_pud_lasthit_08.mp3\/revision\/latest?cb=20200821222047",
+        "title": "Yes!"
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/6\/66\/Vo_pudge_pud_lasthit_09.mp3\/revision\/latest?cb=20200821222049",
+        "isArcane": true,
+        "title": "Yes!"
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/4\/41\/Vo_pudge_pud_lasthit_05.mp3\/revision\/latest?cb=20200821222041",
+        "title": "That's a butcher's dozen!"
+      }
+    ],
+    "category": "Last hitting"
+  },
+  {
+    "responses": [
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/8\/83\/Vo_pudge_pud_deny_01.mp3\/revision\/latest?cb=20200821221913",
+        "title": "Ha ha ha ha denied!"
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/3\/38\/Vo_pudge_pud_deny_02.mp3\/revision\/latest?cb=20200821221914",
+        "title": "Butcher BLOCK!"
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/7\/76\/Vo_pudge_pud_deny_03.mp3\/revision\/latest?cb=20200821221917",
+        "title": "Snatched it right outta yer mouth!"
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/e\/e6\/Vo_pudge_pud_deny_04.mp3\/revision\/latest?cb=20200821221918",
+        "title": "Denied!"
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/7\/73\/Vo_pudge_pud_deny_05.mp3\/revision\/latest?cb=20200821221920",
+        "isArcane": true,
+        "title": "Denied!"
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/3\/39\/Vo_pudge_pud_deny_06.mp3\/revision\/latest?cb=20200821221922",
+        "title": "Nah!"
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/e\/eb\/Vo_pudge_pud_deny_07.mp3\/revision\/latest?cb=20200821221924",
+        "title": "Denied!"
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/4\/43\/Vo_pudge_pud_deny_08.mp3\/revision\/latest?cb=20200821221926",
+        "title": "No you don't."
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/b\/be\/Vo_pudge_pud_deny_09.mp3\/revision\/latest?cb=20200821221927",
+        "title": "I'm a greedy guts, I admit it."
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/f\/f4\/Vo_pudge_pud_deny_10.mp3\/revision\/latest?cb=20200821221928",
+        "title": "Didn't want to waste it."
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/9\/9c\/Vo_pudge_pud_deny_12.mp3\/revision\/latest?cb=20200821221931",
+        "title": "Couldn't resist."
+      }
+    ],
+    "category": "Denying"
+  },
+  {
+    "responses": [
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/3\/3b\/Vo_pudge_pud_purch_01.mp3\/revision\/latest?cb=20200821222229",
+        "title": "Been saving up for you."
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/9\/9b\/Vo_pudge_pud_purch_02.mp3\/revision\/latest?cb=20200821222231",
+        "title": "Ooh, straight outta the chop-shop!"
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/b\/b5\/Vo_pudge_pud_purch_03.mp3\/revision\/latest?cb=20200821222232",
+        "title": "Mine at last."
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/5\/5b\/Vo_pudge_pud_purch_04.mp3\/revision\/latest?cb=20200821222233",
+        "title": "Nice!"
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/4\/48\/Vo_pudge_pud_purch_05.mp3\/revision\/latest?cb=20200821222235",
+        "title": "It slices and dices!"
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/b\/b2\/Vo_pudge_pud_scepter_01.mp3\/revision\/latest?cb=20200821222334",
+        "title": "Ah, scepter!",
+        "icons": [
+          "items\/Aghanim's Scepter\/full.png"
+        ]
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/f\/f8\/Vo_pudge_pud_scepter_02.mp3\/revision\/latest?cb=20200821222336",
+        "title": "Not as nasty as me hooks but it'll do.",
+        "icons": [
+          "items\/Aghanim's Scepter\/full.png"
+        ]
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/e\/e4\/Vo_pudge_pud_happy_01.mp3\/revision\/latest?cb=20200821221940",
+        "title": "He he he.",
+        "icons": [
+          "items\/Aghanim's Scepter\/full.png"
+        ]
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/9\/92\/Vo_pudge_pud_blink_01.mp3\/revision\/latest?cb=20200821221836",
+        "title": "Blink Dagger!",
+        "icons": [
+          "items\/Blink Dagger\/full.png"
+        ]
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/3\/3f\/Vo_pudge_pud_blink_02.mp3\/revision\/latest?cb=20200821221838",
+        "title": "Always handy in a scrape.",
+        "icons": [
+          "items\/Blink Dagger\/full.png"
+        ]
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/f\/f7\/Vo_pudge_pud_item_01.mp3\/revision\/latest?cb=20200821222005",
+        "title": "Hood of Defiance!",
+        "icons": [
+          "items\/Hood of Defiance\/full.png"
+        ]
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/4\/43\/Vo_pudge_pud_item_02.mp3\/revision\/latest?cb=20200821222006",
+        "title": "Vanguard!",
+        "icons": [
+          "items\/Vanguard\/full.png"
+        ]
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/5\/55\/Vo_pudge_pud_item_03.mp3\/revision\/latest?cb=20200821222007",
+        "title": "Force Staff!",
+        "icons": [
+          "items\/Force Staff\/full.png"
+        ]
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/8\/8b\/Vo_pudge_pud_item_04.mp3\/revision\/latest?cb=20200821222008",
+        "title": "Heart of Tarrasque!",
+        "icons": [
+          "items\/Heart of Tarrasque\/full.png"
+        ]
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/8\/83\/Vo_pudge_pud_item_05.mp3\/revision\/latest?cb=20200821222010",
+        "title": "Shiva's Guard!",
+        "icons": [
+          "items\/Shiva's Guard\/full.png"
+        ]
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/1\/1e\/Vo_pudge_pud_item_06.mp3\/revision\/latest?cb=20200821222011",
+        "title": "Urn of Shadows!",
+        "icons": [
+          "items\/Urn of Shadows\/full.png"
+        ]
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/3\/3b\/Vo_pudge_pud_item_07.mp3\/revision\/latest?cb=20200821222012",
+        "title": "Pipe of Insight!",
+        "icons": [
+          "items\/Pipe of Insight\/full.png"
+        ]
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/f\/f5\/Vo_pudge_pud_immort_01.mp3\/revision\/latest?cb=20200821221954",
+        "title": "Immortality!",
+        "icons": [
+          "heroes\/Aegis of the Immortal\/minimap.png"
+        ]
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/8\/88\/Vo_pudge_pud_immort_03.mp3\/revision\/latest?cb=20200821221956",
+        "title": "Ha ha immortality!",
+        "icons": [
+          "heroes\/Aegis of the Immortal\/minimap.png"
+        ]
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/6\/60\/Vo_pudge_pud_immort_02.mp3\/revision\/latest?cb=20200821221955",
+        "title": "I'll live to chop another day!",
+        "icons": [
+          "heroes\/Aegis of the Immortal\/minimap.png"
+        ]
+      }
+    ],
+    "category": "Acquiring an item"
+  },
+  {
+    "responses": [
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/3\/3c\/Vo_pudge_pud_death_01.mp3\/revision\/latest?cb=20200821221856",
+        "title": "So\u2026weak\u2026"
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/d\/d5\/Vo_pudge_pud_death_02.mp3\/revision\/latest?cb=20200821221857",
+        "title": "No!"
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/8\/83\/Vo_pudge_pud_death_03.mp3\/revision\/latest?cb=20200821221858",
+        "title": "Don't mean to cut and run\u2026"
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/9\/98\/Vo_pudge_pud_death_04.mp3\/revision\/latest?cb=20200821221900",
+        "title": "Was it something I\u2026ate?"
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/4\/45\/Vo_pudge_pud_death_05.mp3\/revision\/latest?cb=20200821221901",
+        "title": "It's either feast or famine\u2026"
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/a\/a3\/Vo_pudge_pud_death_06.mp3\/revision\/latest?cb=20200821221902",
+        "title": "Death devours me\u2026"
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/9\/9b\/Vo_pudge_pud_death_07.mp3\/revision\/latest?cb=20200821221904",
+        "title": "Bloody\u2026hell\u2026"
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/d\/d3\/Vo_pudge_pud_death_08.mp3\/revision\/latest?cb=20200821221906",
+        "title": "Time to cut my losses."
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/a\/af\/Vo_pudge_pud_death_09.mp3\/revision\/latest?cb=20200821221908",
+        "title": "Cut off in me prime\u2026"
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/f\/f1\/Vo_pudge_pud_death_10.mp3\/revision\/latest?cb=20200821221910",
+        "title": "Chop me up small\u2026I'd do the same for you!"
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/a\/a7\/Vo_pudge_pud_death_11.mp3\/revision\/latest?cb=20200821221912",
+        "title": "No!"
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/7\/73\/Vo_pudge_pud_deny_05.mp3\/revision\/latest?cb=20200821221920",
+        "title": "Denied!",
+        "icons": [
+          "heroes\/Pudge\/minimap.png",
+          "heroes\/Rot\/minimap.png"
+        ]
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/c\/ca\/Vo_pudge_pud_deny_11.mp3\/revision\/latest?cb=20200821221930",
+        "title": "Last bite for me.",
+        "icons": [
+          "heroes\/Pudge\/minimap.png",
+          "heroes\/Rot\/minimap.png"
+        ]
+      }
+    ],
+    "category": "Dying"
+  },
+  {
+    "responses": [
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/f\/f4\/Vo_pudge_pud_respawn_01.mp3\/revision\/latest?cb=20200821222249",
+        "title": "Uh\u2026 what happened?"
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/8\/8a\/Vo_pudge_pud_respawn_02.mp3\/revision\/latest?cb=20200821222252",
+        "title": "Well, whet my stones!"
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/f\/fc\/Vo_pudge_pud_respawn_03.mp3\/revision\/latest?cb=20200821222253",
+        "title": "Knives\u2014sharp!"
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/9\/9a\/Vo_pudge_pud_respawn_04.mp3\/revision\/latest?cb=20200821222254",
+        "title": "I'm like a bad meal. Ya can't keep me down."
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/8\/87\/Vo_pudge_pud_respawn_05.mp3\/revision\/latest?cb=20200821222256",
+        "title": "Chin-chopper-chin-chopper!"
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/a\/a3\/Vo_pudge_pud_respawn_06.mp3\/revision\/latest?cb=20200821222257",
+        "title": "Knives\u2014sharp!"
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/1\/1c\/Vo_pudge_pud_respawn_07.mp3\/revision\/latest?cb=20200821222259",
+        "title": "Never happen again."
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/5\/55\/Vo_pudge_pud_respawn_08.mp3\/revision\/latest?cb=20200821222300",
+        "title": "Well, I needed to sharpen me cutlery anyway."
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/2\/24\/Vo_pudge_pud_respawn_09.mp3\/revision\/latest?cb=20200821222302",
+        "title": "What happened?"
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/e\/e6\/Vo_pudge_pud_respawn_10.mp3\/revision\/latest?cb=20200821222303",
+        "title": "Well, whet my stones!"
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/1\/1d\/Vo_pudge_pud_rival_20.mp3\/revision\/latest?cb=20200821222332",
+        "title": "Keep calm and carrion!"
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/7\/73\/Vo_pudge_pud_laugh_04.mp3\/revision\/latest?cb=20200821222058",
+        "title": "Ha ha ha ha ha ha ha ha ha."
+      }
+    ],
+    "category": "Respawning"
+  },
+  {
+    "responses": [
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/3\/33\/Vo_pudge_pud_bottle_01.mp3\/revision\/latest?cb=20200821221840",
+        "title": "Don't want to use it all at once."
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/3\/32\/Vo_pudge_pud_bottle_02.mp3\/revision\/latest?cb=20200821221842",
+        "title": "Leave this bit for later."
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/9\/90\/Vo_pudge_pud_bottle_03.mp3\/revision\/latest?cb=20200821221843",
+        "title": "I'll just tuck this under here for later."
+      }
+    ],
+    "category": "Bottling Runes"
+  },
+  {
+    "responses": [
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/5\/5b\/Vo_pudge_pud_purch_04.mp3\/revision\/latest?cb=20200821222233",
+        "title": "Nice!"
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/5\/59\/Vo_pudge_pud_lasthit_06.mp3\/revision\/latest?cb=20200821222043",
+        "title": "Lovely\u2026"
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/2\/2c\/Vo_pudge_pud_doubdam_01.mp3\/revision\/latest?cb=20200821221932",
+        "title": "Double damage!"
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/1\/1b\/Vo_pudge_pud_doubdam_02.mp3\/revision\/latest?cb=20200821221934",
+        "title": "I'll be chopping up double damage!"
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/a\/a3\/Vo_pudge_pud_haste_01.mp3\/revision\/latest?cb=20200821221947",
+        "title": "Haste!"
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/2\/27\/Vo_pudge_pud_haste_02.mp3\/revision\/latest?cb=20200821221948",
+        "title": "My choppers are faster than ever!"
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/3\/3e\/Vo_pudge_pud_illus_01.mp3\/revision\/latest?cb=20200821221950",
+        "title": "Illusion!"
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/c\/c9\/Vo_pudge_pud_illus_02.mp3\/revision\/latest?cb=20200821221952",
+        "title": "As if one of me wasn't already more than enough."
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/e\/e4\/Vo_pudge_pud_invis_01.mp3\/revision\/latest?cb=20200821222002",
+        "title": "Invisibility!"
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/b\/b2\/Vo_pudge_pud_invis_02.mp3\/revision\/latest?cb=20200821222003",
+        "title": "I'm a shadow of my former self."
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/6\/6c\/Vo_pudge_pud_regen_01.mp3\/revision\/latest?cb=20200821222247",
+        "title": "Regeneration!"
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/5\/51\/Vo_pudge_pud_regen_02.mp3\/revision\/latest?cb=20200821222248",
+        "title": "My cleaver's edge will never dull!"
+      }
+    ],
+    "category": "Activating runes"
+  },
+  {
+    "responses": [
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/6\/64\/Vo_pudge_pud_notyet_03.mp3\/revision\/latest?cb=20200821222217",
+        "title": "It's not ready."
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/5\/57\/Vo_pudge_pud_notyet_01.mp3\/revision\/latest?cb=20200821222214",
+        "title": "Not yet."
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/0\/05\/Vo_pudge_pud_notyet_02.mp3\/revision\/latest?cb=20200821222215",
+        "title": "I'm not ready yet!"
+      }
+    ],
+    "category": "Ability on cooldown"
+  },
+  {
+    "responses": [
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/3\/3f\/Vo_pudge_pud_nomana_02.mp3\/revision\/latest?cb=20200821222204",
+        "title": "Need mana."
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/e\/e6\/Vo_pudge_pud_nomana_01.mp3\/revision\/latest?cb=20200821222203",
+        "title": "No mana."
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/a\/a6\/Vo_pudge_pud_nomana_03.mp3\/revision\/latest?cb=20200821222205",
+        "title": "Not enough mana."
+      }
+    ],
+    "category": "Not enough mana"
+  },
+  {
+    "responses": [
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/7\/7c\/Vo_pudge_pud_pain_01.mp3\/revision\/latest?cb=20200821222218",
+        "title": "Eh."
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/2\/2e\/Vo_pudge_pud_pain_02.mp3\/revision\/latest?cb=20200821222219",
+        "title": "Uh."
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/2\/2e\/Vo_pudge_pud_pain_03.mp3\/revision\/latest?cb=20200821222221",
+        "title": "Ah!"
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/7\/77\/Vo_pudge_pud_pain_04.mp3\/revision\/latest?cb=20200821222223",
+        "title": "Uh."
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/f\/f8\/Vo_pudge_pud_pain_05.mp3\/revision\/latest?cb=20200821222225",
+        "isArcane": true,
+        "title": "Uh."
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/4\/49\/Vo_pudge_pud_pain_06.mp3\/revision\/latest?cb=20200821222226",
+        "title": "Brrruh."
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/0\/09\/Vo_pudge_pud_pain_07.mp3\/revision\/latest?cb=20200821222228",
+        "title": "Urr."
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/4\/4c\/Vo_pudge_pud_underattack_01.mp3\/revision\/latest?cb=20200821222404",
+        "title": "I'm under attack!"
+      }
+    ],
+    "category": "Taking damage"
+  },
+  {
+    "responses": [
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/a\/ac\/Vo_pudge_pud_rare_01.mp3\/revision\/latest?cb=20200821222236",
+        "title": "Sweetbreads ain't sweet and they ain't bread\u2026and they need a butcher, not a baker."
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/6\/69\/Vo_pudge_pud_rare_02.mp3\/revision\/latest?cb=20200821222238",
+        "title": "When I'm through with these vermin, they'll be fit for a pie."
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/1\/13\/Vo_pudge_pud_rare_03.mp3\/revision\/latest?cb=20200821222239",
+        "title": "Only trouble with carrion\u2026an hour after eating you're hungry again!"
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/5\/51\/Vo_pudge_pud_rare_04.mp3\/revision\/latest?cb=20200821222240",
+        "title": "Oh, giblets\u2026lovely\u2026"
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/f\/f5\/Vo_pudge_pud_rare_05.mp3\/revision\/latest?cb=20200821222241",
+        "title": "Nothing better than a nice raw liver."
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/8\/8d\/Vo_pudge_pud_rare_06.mp3\/revision\/latest?cb=20200821222243",
+        "title": "Oh, kidneys. Kidneys is nice."
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/d\/d6\/Vo_pudge_pud_rare_07.mp3\/revision\/latest?cb=20200821222244",
+        "title": "Oh, a battlefield is truly a wonderland!"
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/1\/1c\/Vo_pudge_pud_rare_08.mp3\/revision\/latest?cb=20200821222245",
+        "title": "Meat is sweet."
+      }
+    ],
+    "category": "Selecting"
+  },
+  {
+    "responses": [
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/7\/7c\/Vo_pudge_pud_lane_missing_01.mp3\/revision\/latest?cb=20200821222031",
+        "title": "Missing Top."
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/2\/2b\/Vo_pudge_pud_lane_missing_02.mp3\/revision\/latest?cb=20200821222033",
+        "title": "Missing Middle."
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/0\/05\/Vo_pudge_pud_lane_missing_03.mp3\/revision\/latest?cb=20200821222034",
+        "title": "Missing Bottom."
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/a\/a1\/Vo_pudge_pud_thanks_01.mp3\/revision\/latest?cb=20200821222359",
+        "title": "Ah lovely."
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/8\/8f\/Vo_pudge_pud_thanks_02.mp3\/revision\/latest?cb=20200821222400",
+        "title": "That's a bit of all right."
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/8\/8f\/Vo_pudge_pud_thanks_03.mp3\/revision\/latest?cb=20200821222402",
+        "title": "Thanks meat, uh, I mean mate."
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/3\/3a\/Vo_pudge_pud_laugh_01.mp3\/revision\/latest?cb=20200821222052",
+        "title": "He he he he heh."
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/0\/04\/Vo_pudge_pud_laugh_02.mp3\/revision\/latest?cb=20200821222054",
+        "title": "Ha ha!"
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/4\/45\/Vo_pudge_pud_laugh_03.mp3\/revision\/latest?cb=20200821222055",
+        "title": "Ha ha ha!"
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/7\/73\/Vo_pudge_pud_laugh_04.mp3\/revision\/latest?cb=20200821222058",
+        "title": "Ha ha ha ha ha ha ha ha ha."
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/e\/ea\/Vo_pudge_pud_laugh_05.mp3\/revision\/latest?cb=20200821222059",
+        "title": "Hm hm hm hm ha ha ha."
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/b\/bf\/Vo_pudge_pud_laugh_06.mp3\/revision\/latest?cb=20200821222101",
+        "title": "Ha ha ha ha ha ha ha ha ha."
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/7\/7e\/Vo_pudge_pud_laugh_07.mp3\/revision\/latest?cb=20200821222102",
+        "title": "Hm hm hm hm hm."
+      }
+    ],
+    "category": "Chat responses"
+  },
+  {
+    "responses": [
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/3\/3b\/Vo_pudge_pud_win_01.mp3\/revision\/latest?cb=20200821222405",
+        "title": "Yes!"
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/c\/c5\/Vo_pudge_pud_win_02.mp3\/revision\/latest?cb=20200821222407",
+        "title": "Victory!"
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/d\/d7\/Vo_pudge_pud_win_03.mp3\/revision\/latest?cb=20200821222408",
+        "title": "The spoils of war! Nice 'n fresh!"
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/f\/f0\/Vo_pudge_pud_win_04.mp3\/revision\/latest?cb=20200821222410",
+        "title": "Hehyeh heh heh hess!"
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/7\/74\/Vo_pudge_pud_win_05.mp3\/revision\/latest?cb=20200821222411",
+        "title": "Ha ha ha victory!"
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/d\/d9\/Vo_pudge_pud_lose_01.mp3\/revision\/latest?cb=20200821222123",
+        "title": "No!"
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/5\/52\/Vo_pudge_pud_lose_02.mp3\/revision\/latest?cb=20200821222125",
+        "title": "Defeated!"
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/6\/6b\/Vo_pudge_pud_lose_03.mp3\/revision\/latest?cb=20200821222130",
+        "title": "It was a hack-job!"
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/a\/a6\/Vo_pudge_pud_lose_04.mp3\/revision\/latest?cb=20200821222132",
+        "title": "Bloody Hell!"
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/9\/9d\/Vo_pudge_pud_lose_06.mp3\/revision\/latest?cb=20200821222133",
+        "isArcane": true,
+        "title": "Bloody Hell!"
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/c\/c6\/Vo_pudge_pud_lose_07.mp3\/revision\/latest?cb=20200821222135",
+        "isArcane": true,
+        "title": "Bloody Hell!"
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/e\/e4\/Vo_pudge_pud_lose_08.mp3\/revision\/latest?cb=20200821222136",
+        "title": "No!"
+      }
+    ],
+    "category": "Match end"
+  },
+  {
+    "responses": [
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/a\/a7\/Vo_pudge_pud_happy_02.mp3\/revision\/latest?cb=20200821221942",
+        "title": "Uh ha ha ha ha."
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/8\/8e\/Vo_pudge_pud_happy_03.mp3\/revision\/latest?cb=20200821221943",
+        "title": "Mm hm."
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/b\/b1\/Vo_pudge_pud_happy_04.mp3\/revision\/latest?cb=20200821221944",
+        "title": "Mm ha."
+      }
+    ],
+    "category": "Cosmetic item drop"
+  },
+  {
+    "responses": [
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/0\/05\/Vo_pudge_pud_shitwiz_01.mp3\/revision\/latest?cb=20200821222338",
+        "title": "Shitty wizard!"
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/b\/be\/Vo_pudge_pud_crumwiz_01.mp3\/revision\/latest?cb=20200821221852",
+        "title": "Crummy wizard!"
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/d\/d0\/Vo_pudge_pud_crumwiz_02.mp3\/revision\/latest?cb=20200821221855",
+        "isArcane": true,
+        "title": "Crummy wizard!"
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/8\/84\/Vo_pudge_pud_happy_05.mp3\/revision\/latest?cb=20200821221946",
+        "title": "Mm hm."
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/5\/5b\/Vo_pudge_pud_nomnom_02.mp3\/revision\/latest?cb=20200821222208",
+        "title": "Um num num num num."
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/c\/c9\/Vo_pudge_pud_nomnom_03.mp3\/revision\/latest?cb=20200821222210",
+        "title": "Um num num ah."
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/6\/6a\/Vo_pudge_pud_nomnom_04.mp3\/revision\/latest?cb=20200821222211",
+        "title": "Um num num num num num num urrp."
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/6\/64\/Vo_pudge_pud_nomnom_05.mp3\/revision\/latest?cb=20200821222213",
+        "title": "Ah mmm uh."
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/0\/0f\/Vo_pudge_pud_getoff_01.mp3\/revision\/latest?cb=20200821221936",
+        "title": "Hey!"
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/3\/3d\/Vo_pudge_pud_getoff_02.mp3\/revision\/latest?cb=20200821221938",
+        "title": "Get off!"
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/9\/99\/Vo_pudge_pudge_background.mp3\/revision\/latest?cb=20111125100958",
+        "title": "Background noise"
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/4\/46\/Vo_pudge_pud_spawn_09.mp3\/revision\/latest?cb=20200821222353",
+        "title": "So much meat, so little time."
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/d\/da\/Vo_pudge_pud_ability_rot_02.mp3\/revision\/latest?cb=20200821215440",
+        "title": "Something's rotten!"
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/2\/21\/Vo_pudge_pud_level_10.mp3\/revision\/latest?cb=20200821222119",
+        "title": "My choppers are lookin sharp!"
+      }
+    ],
+    "category": "Misc"
+  }
+]

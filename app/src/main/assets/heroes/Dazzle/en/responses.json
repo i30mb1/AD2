@@ -1,0 +1,1203 @@
+[
+  {
+    "responses": [
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/f\/f8\/Vo_dazzle_dazz_spawn_01.mp3\/revision\/latest?cb=20201010210229",
+        "title": "Dazzle!"
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/d\/d7\/Vo_dazzle_dazz_spawn_02.mp3\/revision\/latest?cb=20201010210232",
+        "title": "Shadow Priest!"
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/2\/21\/Vo_dazzle_dazz_spawn_03.mp3\/revision\/latest?cb=20201010210235",
+        "title": "I cast a long shadow."
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/e\/ec\/Vo_dazzle_dazz_spawn_04.mp3\/revision\/latest?cb=20201010210238",
+        "title": "The enemy pales when they see the face of Dazzle!"
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/4\/44\/Vo_dazzle_dazz_spawn_05.mp3\/revision\/latest?cb=20201010210240",
+        "title": "Take a care when my shadow falls upon the foe."
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/8\/8b\/Vo_dazzle_dazz_level_05.mp3\/revision\/latest?cb=20201010205911",
+        "title": "I cast a long shadow."
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/4\/4c\/Vo_dazzle_dazz_move_09.mp3\/revision\/latest?cb=20201010205946",
+        "title": "From shadow to shallow."
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/c\/c6\/Vo_dazzle_dazz_kill_04.mp3\/revision\/latest?cb=20201010205750",
+        "title": "Where my shadow falls, there falls my foe."
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/4\/43\/Vo_dazzle_dazz_respawn_04.mp3\/revision\/latest?cb=20201010210154",
+        "title": "Up to my old tricks again."
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/f\/f3\/Vo_dazzle_dazz_move_17.mp3\/revision\/latest?cb=20201010210007",
+        "title": "Who needs healing?"
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/f\/fe\/Vo_dazzle_dazz_win_03.mp3\/revision\/latest?cb=20201010210256",
+        "title": "My shadow shall darken all creation."
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/a\/aa\/Vo_dazzle_dazz_ability_sfx_14.mp3\/revision\/latest?cb=20201010205329",
+        "title": "Dazzle!"
+      }
+    ],
+    "category": "Loadout"
+  },
+  {
+    "responses": [
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/f\/f8\/Vo_dazzle_dazz_spawn_01.mp3\/revision\/latest?cb=20201010210229",
+        "title": "Dazzle!"
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/7\/7d\/Vo_dazzle_dazz_anger_05.mp3\/revision\/latest?cb=20201010205445",
+        "title": "Grrr."
+      }
+    ],
+    "category": "Drafting"
+  },
+  {
+    "responses": [
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/f\/f8\/Vo_dazzle_dazz_spawn_01.mp3\/revision\/latest?cb=20201010210229",
+        "title": "Dazzle!"
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/d\/d7\/Vo_dazzle_dazz_spawn_02.mp3\/revision\/latest?cb=20201010210232",
+        "title": "Shadow Priest!"
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/2\/21\/Vo_dazzle_dazz_spawn_03.mp3\/revision\/latest?cb=20201010210235",
+        "title": "I cast a long shadow."
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/e\/ec\/Vo_dazzle_dazz_spawn_04.mp3\/revision\/latest?cb=20201010210238",
+        "title": "The enemy pales when they see the face of Dazzle!"
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/4\/44\/Vo_dazzle_dazz_spawn_05.mp3\/revision\/latest?cb=20201010210240",
+        "title": "Take a care when my shadow falls upon the foe."
+      }
+    ],
+    "category": "Entering battle"
+  },
+  {
+    "responses": [
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/8\/8e\/Vo_dazzle_dazz_inthebag_01.mp3\/revision\/latest?cb=20201010205726",
+        "title": "It's in the bag!"
+      }
+    ],
+    "category": "Taunting"
+  },
+  {
+    "responses": [
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/a\/af\/Vo_dazzle_dazz_battlebegins_01.mp3\/revision\/latest?cb=20201010205524",
+        "title": "My shadow leaps ahead!"
+      }
+    ],
+    "category": "Beginning battle"
+  },
+  {
+    "responses": [
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/a\/ac\/Vo_dazzle_dazz_move_01.mp3\/revision\/latest?cb=20201010205925",
+        "title": "Yes!"
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/4\/44\/Vo_dazzle_dazz_move_02.mp3\/revision\/latest?cb=20201010205927",
+        "title": "Mm hm!"
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/d\/d9\/Vo_dazzle_dazz_move_03.mp3\/revision\/latest?cb=20201010205930",
+        "title": "Ha ha ha ha!"
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/b\/b3\/Vo_dazzle_dazz_move_04.mp3\/revision\/latest?cb=20201010205933",
+        "title": "Travel on."
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/7\/7a\/Vo_dazzle_dazz_move_05.mp3\/revision\/latest?cb=20201010205935",
+        "title": "A spiritual journey."
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/3\/32\/Vo_dazzle_dazz_move_06.mp3\/revision\/latest?cb=20201010205938",
+        "title": "Confirmed."
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/d\/d3\/Vo_dazzle_dazz_move_07.mp3\/revision\/latest?cb=20201010205941",
+        "title": "Rite of passage."
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/8\/89\/Vo_dazzle_dazz_move_08.mp3\/revision\/latest?cb=20201010205943",
+        "title": "Of course."
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/4\/4c\/Vo_dazzle_dazz_move_09.mp3\/revision\/latest?cb=20201010205946",
+        "title": "From shadow to shallow."
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/3\/38\/Vo_dazzle_dazz_move_10.mp3\/revision\/latest?cb=20201010205949",
+        "title": "Indeed."
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/2\/20\/Vo_dazzle_dazz_move_11.mp3\/revision\/latest?cb=20201010205951",
+        "title": "I go where I'm needed."
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/d\/de\/Vo_dazzle_dazz_move_12.mp3\/revision\/latest?cb=20201010205954",
+        "title": "On my way."
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/8\/8a\/Vo_dazzle_dazz_move_13.mp3\/revision\/latest?cb=20201010205957",
+        "title": "Wait for me!"
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/b\/b9\/Vo_dazzle_dazz_move_14.mp3\/revision\/latest?cb=20201010205959",
+        "title": "I'm with you."
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/a\/ab\/Vo_dazzle_dazz_move_15.mp3\/revision\/latest?cb=20201010210001",
+        "title": "Healing here!"
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/4\/4a\/Vo_dazzle_dazz_move_16.mp3\/revision\/latest?cb=20201010210004",
+        "title": "Shadows come."
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/f\/f3\/Vo_dazzle_dazz_move_17.mp3\/revision\/latest?cb=20201010210007",
+        "title": "Who needs healing?"
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/4\/44\/Vo_dazzle_dazz_ability_shalgrave_05.mp3\/revision\/latest?cb=20201010205400",
+        "title": "Shadows keep you."
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/0\/0b\/Vo_dazzle_dazz_ability_shadowave_11.mp3\/revision\/latest?cb=20201010205349",
+        "title": "Ask and you'll receive!"
+      }
+    ],
+    "category": "Moving"
+  },
+  {
+    "responses": [
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/6\/6f\/Vo_dazzle_dazz_attack_01.mp3\/revision\/latest?cb=20201010205450",
+        "title": "Attack!"
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/e\/ec\/Vo_dazzle_dazz_attack_02.mp3\/revision\/latest?cb=20201010205452",
+        "title": "Come, comrades!"
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/4\/4a\/Vo_dazzle_dazz_attack_03.mp3\/revision\/latest?cb=20201010205455",
+        "title": "Strikedown!"
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/a\/ad\/Vo_dazzle_dazz_attack_04.mp3\/revision\/latest?cb=20201010205458",
+        "title": "We fight!"
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/c\/c8\/Vo_dazzle_dazz_attack_05.mp3\/revision\/latest?cb=20201010205501",
+        "title": "For the shadows!"
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/0\/03\/Vo_dazzle_dazz_attack_06.mp3\/revision\/latest?cb=20201010205503",
+        "title": "Heal or harm!"
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/5\/5e\/Vo_dazzle_dazz_attack_07.mp3\/revision\/latest?cb=20201010205506",
+        "title": "Stave them off!"
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/8\/84\/Vo_dazzle_dazz_attack_08.mp3\/revision\/latest?cb=20201010205509",
+        "title": "Dazzle them!"
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/6\/65\/Vo_dazzle_dazz_attack_09.mp3\/revision\/latest?cb=20201010205512",
+        "title": "Bringing the pain!"
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/f\/f6\/Vo_dazzle_dazz_attack_10.mp3\/revision\/latest?cb=20201010205514",
+        "title": "Priest of pain!"
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/a\/ae\/Vo_dazzle_dazz_attack_11.mp3\/revision\/latest?cb=20201010205517",
+        "title": "Into my shadow!"
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/3\/3f\/Vo_dazzle_dazz_attack_12.mp3\/revision\/latest?cb=20201010205520",
+        "title": "For the order!"
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/2\/2e\/Vo_dazzle_dazz_attack_13.mp3\/revision\/latest?cb=20201010205522",
+        "title": "Ha ha!"
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/8\/85\/Vo_dazzle_dazz_ability_poistouch_03.mp3\/revision\/latest?cb=20201010210305",
+        "title": "A touch of the old magic."
+      }
+    ],
+    "category": "Attacking"
+  },
+  {
+    "responses": [
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/d\/dc\/Vo_dazzle_dazz_cast_01.mp3\/revision\/latest?cb=20201010205540",
+        "title": "The shadow's cast!"
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/9\/92\/Vo_dazzle_dazz_cast_02.mp3\/revision\/latest?cb=20201010205543",
+        "title": "I follow like a shadow!"
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/b\/bc\/Vo_dazzle_dazz_cast_03.mp3\/revision\/latest?cb=20201010205545",
+        "title": "Power of a priest!"
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/3\/39\/Vo_dazzle_dazz_ability_shalgrave_08.mp3\/revision\/latest?cb=20201010205407",
+        "title": "Not while I'm around."
+      }
+    ],
+    "category": "Ordering a spell cast"
+  },
+  {
+    "responses": [
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/3\/31\/Vo_dazzle_dazz_ability_poistouch_01.mp3\/revision\/latest?cb=20201010210259",
+        "title": "Feeling stricken?"
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/6\/67\/Vo_dazzle_dazz_ability_sfx_01.mp3\/revision\/latest?cb=20201010210307",
+        "title": "Ngah!"
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/2\/23\/Vo_dazzle_dazz_ability_sfx_02.mp3\/revision\/latest?cb=20201010210310",
+        "title": "Ya!"
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/6\/63\/Vo_dazzle_dazz_ability_sfx_03.mp3\/revision\/latest?cb=20201010210313",
+        "title": "Hrraarr!"
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/3\/36\/Vo_dazzle_dazz_ability_sfx_04.mp3\/revision\/latest?cb=20201010210315",
+        "title": "Gra Ng!"
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/3\/34\/Vo_dazzle_dazz_ability_sfx_05.mp3\/revision\/latest?cb=20201010210318",
+        "title": "Guh!"
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/1\/17\/Vo_dazzle_dazz_ability_sfx_06.mp3\/revision\/latest?cb=20201010210321",
+        "title": "Hruh!"
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/7\/76\/Vo_dazzle_dazz_ability_sfx_07.mp3\/revision\/latest?cb=20201010210323",
+        "title": "Hu-shaa!"
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/a\/ae\/Vo_dazzle_dazz_ability_sfx_09.mp3\/revision\/latest?cb=20201010205320",
+        "title": "Mmeh!"
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/e\/ea\/Vo_dazzle_dazz_ability_sfx_10.mp3\/revision\/latest?cb=20201010205322",
+        "title": "Yes!"
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/5\/53\/Vo_dazzle_dazz_ability_sfx_11.mp3\/revision\/latest?cb=20201010205323",
+        "title": "Heh ha!"
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/f\/fd\/Vo_dazzle_dazz_ability_sfx_12.mp3\/revision\/latest?cb=20201010205325",
+        "title": "Ha ha!"
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/3\/3b\/Vo_dazzle_dazz_ability_sfx_13.mp3\/revision\/latest?cb=20201010205327",
+        "title": "Arr!"
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/a\/aa\/Vo_dazzle_dazz_ability_sfx_14.mp3\/revision\/latest?cb=20201010205329",
+        "title": "Dazzle!"
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/5\/59\/Vo_dazzle_dazz_ability_sfx_15.mp3\/revision\/latest?cb=20201010205330",
+        "title": "Hey oh!"
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/5\/59\/Vo_dazzle_dazz_ability_shalgrave_01.mp3\/revision\/latest?cb=20201010205353",
+        "title": "Safe word!"
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/2\/21\/Vo_dazzle_dazz_ability_shalgrave_02.mp3\/revision\/latest?cb=20201010205355",
+        "title": "You're safe!"
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/a\/a5\/Vo_dazzle_dazz_ability_shalgrave_03.mp3\/revision\/latest?cb=20201010205356",
+        "title": "Not so fast!"
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/2\/23\/Vo_dazzle_dazz_ability_shalgrave_04.mp3\/revision\/latest?cb=20201010205358",
+        "title": "Bless you!"
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/9\/96\/Vo_dazzle_dazz_ability_shalgrave_06.mp3\/revision\/latest?cb=20201010205402",
+        "title": "You're under my protection."
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/c\/c8\/Vo_dazzle_dazz_ability_shalgrave_07.mp3\/revision\/latest?cb=20201010205404",
+        "title": "You're safe with me."
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/3\/38\/Vo_dazzle_dazz_ability_shalgrave_09.mp3\/revision\/latest?cb=20201010205410",
+        "title": "No grave for you."
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/5\/59\/Vo_dazzle_dazz_ability_shalgrave_01.mp3\/revision\/latest?cb=20201010205353",
+        "title": "Safe word!"
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/a\/a5\/Vo_dazzle_dazz_ability_shalgrave_03.mp3\/revision\/latest?cb=20201010205356",
+        "title": "Not so fast!"
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/1\/16\/Vo_dazzle_dazz_ability_shalgrave_10.mp3\/revision\/latest?cb=20201010205413",
+        "title": "Gravely mistaken."
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/7\/7e\/Vo_dazzle_dazz_ability_shadowave_01.mp3\/revision\/latest?cb=20201010205332",
+        "title": "Zap!"
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/2\/26\/Vo_dazzle_dazz_ability_shadowave_02.mp3\/revision\/latest?cb=20201010205334",
+        "title": "Jzap!"
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/9\/96\/Vo_dazzle_dazz_ability_shadowave_03.mp3\/revision\/latest?cb=20201010205336",
+        "title": "Dazzle!"
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/b\/ba\/Vo_dazzle_dazz_ability_shadowave_04.mp3\/revision\/latest?cb=20201010205337",
+        "title": "Darklight!"
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/f\/fb\/Vo_dazzle_dazz_ability_shadowave_05.mp3\/revision\/latest?cb=20201010205339",
+        "title": "Healing!"
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/5\/54\/Vo_dazzle_dazz_ability_shadowave_06.mp3\/revision\/latest?cb=20201010205341",
+        "title": "You're in the pink!"
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/b\/bf\/Vo_dazzle_dazz_ability_shadowave_07.mp3\/revision\/latest?cb=20201010205342",
+        "title": "A healing glow!"
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/c\/c1\/Vo_dazzle_dazz_ability_shadowave_08.mp3\/revision\/latest?cb=20201010205344",
+        "title": "Absolved!"
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/6\/67\/Vo_dazzle_dazz_ability_shadowave_09.mp3\/revision\/latest?cb=20201010205346",
+        "title": "Shadow wave!"
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/7\/7f\/Vo_dazzle_dazz_ability_shadowave_10.mp3\/revision\/latest?cb=20201010205348",
+        "title": "Do the wave!"
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/9\/96\/Vo_dazzle_dazz_ability_weave_01.mp3\/revision\/latest?cb=20201010205415",
+        "title": "Ha ha ha ha yes!"
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/1\/15\/Vo_dazzle_dazz_ability_weave_04.mp3\/revision\/latest?cb=20201010205424",
+        "title": "Zizzap!"
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/4\/45\/Vo_dazzle_dazz_ability_weave_05.mp3\/revision\/latest?cb=20201010205426",
+        "title": "Buyap!"
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/c\/c0\/Vo_dazzle_dazz_ability_weave_06.mp3\/revision\/latest?cb=20201010205429",
+        "title": "Ha ha!"
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/a\/a1\/Vo_dazzle_dazz_ability_weave_07.mp3\/revision\/latest?cb=20201010205432",
+        "title": "Rrrah! Ha ha ha!"
+      }
+    ],
+    "category": "Abilities"
+  },
+  {
+    "responses": [
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/a\/a5\/Vo_dazzle_dazz_ability_shadowave_12.mp3\/revision\/latest?cb=20201010205351",
+        "title": "So blessed!"
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/5\/58\/Vo_dazzle_dazz_level_01.mp3\/revision\/latest?cb=20201010205901",
+        "title": "Oh yes!"
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/c\/ce\/Vo_dazzle_dazz_level_02.mp3\/revision\/latest?cb=20201010205904",
+        "title": "Canonized!"
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/e\/ed\/Vo_dazzle_dazz_level_03.mp3\/revision\/latest?cb=20201010205906",
+        "title": "A sacrament!"
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/5\/5a\/Vo_dazzle_dazz_level_04.mp3\/revision\/latest?cb=20201010205909",
+        "title": "I renew my shady vows."
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/8\/8b\/Vo_dazzle_dazz_level_05.mp3\/revision\/latest?cb=20201010205911",
+        "title": "I cast a long shadow."
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/8\/80\/Vo_dazzle_dazz_level_06.mp3\/revision\/latest?cb=20201010205914",
+        "title": "Nga ah ha ha ha!"
+      }
+    ],
+    "category": "Leveling up"
+  },
+  {
+    "responses": [
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/a\/aa\/Vo_dazzle_dazz_kill_01.mp3\/revision\/latest?cb=20201010205741",
+        "title": "My congregation shrinks by one."
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/8\/82\/Vo_dazzle_dazz_kill_02.mp3\/revision\/latest?cb=20201010205744",
+        "title": "I convey your spirit to the Nothl realm."
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/4\/4a\/Vo_dazzle_dazz_kill_03.mp3\/revision\/latest?cb=20201010205747",
+        "title": "I speak your final rites."
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/c\/c6\/Vo_dazzle_dazz_kill_04.mp3\/revision\/latest?cb=20201010205750",
+        "title": "Where my shadow falls, there falls my foe."
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/f\/fc\/Vo_dazzle_dazz_kill_05.mp3\/revision\/latest?cb=20201010205752",
+        "title": "A dazzling death."
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/7\/77\/Vo_dazzle_dazz_kill_06.mp3\/revision\/latest?cb=20201010205755",
+        "title": "If killing you is wrong, I don't want to be right."
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/a\/ac\/Vo_dazzle_dazz_kill_07.mp3\/revision\/latest?cb=20201010205758",
+        "title": "Sacrificed to shadows."
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/6\/69\/Vo_dazzle_dazz_kill_08.mp3\/revision\/latest?cb=20201010205801",
+        "title": "Sanctioned by the order."
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/5\/50\/Vo_dazzle_dazz_kill_09.mp3\/revision\/latest?cb=20201010205803",
+        "title": "Your death ennobles us all."
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/2\/29\/Vo_dazzle_dazz_kill_10.mp3\/revision\/latest?cb=20201010205805",
+        "title": "Tricked you."
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/6\/6a\/Vo_dazzle_dazz_kill_11.mp3\/revision\/latest?cb=20201010205808",
+        "title": "You cast no shadow now."
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/9\/9a\/Vo_dazzle_dazz_kill_12.mp3\/revision\/latest?cb=20201010205811",
+        "title": "Ha ha!"
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/5\/5d\/Vo_dazzle_dazz_laugh_01.mp3\/revision\/latest?cb=20201010205837",
+        "title": "Uh ha ha ha ha ho!"
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/7\/78\/Vo_dazzle_dazz_laugh_06.mp3\/revision\/latest?cb=20201010205850",
+        "title": "Ho ho ha ha ha ha."
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/9\/91\/Vo_dazzle_dazz_laugh_07.mp3\/revision\/latest?cb=20201010205853",
+        "title": "Uh he he he he ha!"
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/0\/09\/Vo_dazzle_dazz_laugh_08.mp3\/revision\/latest?cb=20201010205855",
+        "title": "Uh huh ha ha ha!"
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/3\/39\/Vo_dazzle_dazz_laugh_09.mp3\/revision\/latest?cb=20201010205858",
+        "title": "Ha ha ha ha ha!"
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/2\/28\/Vo_dazzle_dazz_rival_01.mp3\/revision\/latest?cb=20201010210213",
+        "title": "Heal yourself, doctor.",
+        "icons": [
+          "heroes\/Witch Doctor\/minimap.png"
+        ]
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/2\/2a\/Vo_dazzle_dazz_rival_02.mp3\/revision\/latest?cb=20201010210216",
+        "title": "Curse you, Axe!",
+        "icons": [
+          "heroes\/Axe\/minimap.png"
+        ]
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/6\/62\/Vo_dazzle_dazz_rival_03.mp3\/revision\/latest?cb=20201010210219",
+        "title": "Shadow Shaman, over the hills with you!",
+        "icons": [
+          "heroes\/Shadow Shaman\/minimap.png"
+        ]
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/f\/fb\/Vo_dazzle_dazz_firstblood_01.mp3\/revision\/latest?cb=20201010205659",
+        "title": "First Blood! Ha ha ha ha!"
+      }
+    ],
+    "category": "Killing an enemy"
+  },
+  {
+    "responses": [
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/b\/bb\/Vo_dazzle_dazz_lasthit_01.mp3\/revision\/latest?cb=20201010205813",
+        "title": "Dazzled!"
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/c\/cd\/Vo_dazzle_dazz_lasthit_02.mp3\/revision\/latest?cb=20201010205816",
+        "title": "Huh huh pretty!"
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/a\/a8\/Vo_dazzle_dazz_lasthit_03.mp3\/revision\/latest?cb=20201010205819",
+        "title": "Saved!"
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/d\/df\/Vo_dazzle_dazz_lasthit_04.mp3\/revision\/latest?cb=20201010205821",
+        "title": "Shiny!"
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/9\/97\/Vo_dazzle_dazz_lasthit_05.mp3\/revision\/latest?cb=20201010205823",
+        "title": "A weak offering!"
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/9\/9a\/Vo_dazzle_dazz_lasthit_06.mp3\/revision\/latest?cb=20201010205826",
+        "title": "Alms from the dead!"
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/5\/55\/Vo_dazzle_dazz_lasthit_07.mp3\/revision\/latest?cb=20201010205829",
+        "title": "Collected!"
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/f\/ff\/Vo_dazzle_dazz_lasthit_08.mp3\/revision\/latest?cb=20201010205831",
+        "title": "Charitable of you."
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/2\/23\/Vo_dazzle_dazz_lasthit_09.mp3\/revision\/latest?cb=20201010205834",
+        "title": "Pretty!"
+      }
+    ],
+    "category": "Last hitting"
+  },
+  {
+    "responses": [
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/e\/e0\/Vo_dazzle_dazz_deny_01.mp3\/revision\/latest?cb=20201010205626",
+        "title": "Denied!"
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/c\/c3\/Vo_dazzle_dazz_deny_02.mp3\/revision\/latest?cb=20201010205628",
+        "isArcane": true,
+        "title": "Denied!"
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/6\/64\/Vo_dazzle_dazz_deny_03.mp3\/revision\/latest?cb=20201010205631",
+        "title": "Uh uh."
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/5\/5d\/Vo_dazzle_dazz_deny_04.mp3\/revision\/latest?cb=20201010205634",
+        "title": "Get back."
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/1\/1b\/Vo_dazzle_dazz_deny_05.mp3\/revision\/latest?cb=20201010205637",
+        "title": "No way."
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/c\/c8\/Vo_dazzle_dazz_deny_06.mp3\/revision\/latest?cb=20201010205639",
+        "title": "Wrong!"
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/8\/80\/Vo_dazzle_dazz_deny_07.mp3\/revision\/latest?cb=20201010205641",
+        "title": "You've no right!"
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/1\/12\/Vo_dazzle_dazz_deny_08.mp3\/revision\/latest?cb=20201010205643",
+        "title": "That's not right."
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/8\/82\/Vo_dazzle_dazz_deny_09.mp3\/revision\/latest?cb=20201010205645",
+        "title": "Hm hm ha ha ha ha!"
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/0\/07\/Vo_dazzle_dazz_deny_10.mp3\/revision\/latest?cb=20201010205647",
+        "title": "Ha ha ha!"
+      }
+    ],
+    "category": "Denying"
+  },
+  {
+    "responses": [
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/1\/19\/Vo_dazzle_dazz_purch_01.mp3\/revision\/latest?cb=20201010210127",
+        "title": "I'd set aside funds for this."
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/7\/75\/Vo_dazzle_dazz_purch_02.mp3\/revision\/latest?cb=20201010210130",
+        "title": "Ah, my order is in!"
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/6\/6c\/Vo_dazzle_dazz_purch_03.mp3\/revision\/latest?cb=20201010210133",
+        "title": "Oh, what a beauty!"
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/e\/e2\/Vo_dazzle_dazz_blink_01.mp3\/revision\/latest?cb=20201010205526",
+        "title": "Blink dagger!",
+        "icons": [
+          "items\/Blink Dagger\/full.png"
+        ]
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/1\/1b\/Vo_dazzle_dazz_blink_02.mp3\/revision\/latest?cb=20201010205529",
+        "title": "The dagger that dazzles.",
+        "icons": [
+          "items\/Blink Dagger\/full.png"
+        ]
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/1\/18\/Vo_dazzle_dazz_scepter_01.mp3\/revision\/latest?cb=20201010210221",
+        "title": "Ah, Scepter!",
+        "icons": [
+          "items\/Aghanim's Scepter\/full.png"
+        ]
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/c\/c1\/Vo_dazzle_dazz_scepter_02.mp3\/revision\/latest?cb=20201010210224",
+        "title": "Sacred scepter!",
+        "icons": [
+          "items\/Aghanim's Scepter\/full.png"
+        ]
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/c\/cf\/Vo_dazzle_dazz_item_01.mp3\/revision\/latest?cb=20201010205733",
+        "title": "Oh, sacred Mekansm!",
+        "icons": [
+          "items\/Mekansm\/full.png"
+        ]
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/e\/ed\/Vo_dazzle_dazz_item_02.mp3\/revision\/latest?cb=20201010205736",
+        "title": "Shiva's Guard, to guard us well!",
+        "icons": [
+          "items\/Shiva's Guard\/full.png"
+        ]
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/2\/22\/Vo_dazzle_dazz_item_03.mp3\/revision\/latest?cb=20201010205739",
+        "title": "Ah, Desolator!",
+        "icons": [
+          "items\/Desolator\/full.png"
+        ]
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/5\/5a\/Vo_dazzle_dazz_immort_01.mp3\/revision\/latest?cb=20201010205720",
+        "title": "Immortality!",
+        "icons": [
+          "heroes\/Aegis of the Immortal\/minimap.png"
+        ]
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/7\/78\/Vo_dazzle_dazz_immort_02.mp3\/revision\/latest?cb=20201010205723",
+        "title": "Death shall not shadow me.",
+        "icons": [
+          "heroes\/Aegis of the Immortal\/minimap.png"
+        ]
+      }
+    ],
+    "category": "Acquiring an item"
+  },
+  {
+    "responses": [
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/e\/ee\/Vo_dazzle_dazz_death_01.mp3\/revision\/latest?cb=20201010205549",
+        "title": "No!"
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/8\/88\/Vo_dazzle_dazz_death_02.mp3\/revision\/latest?cb=20201010205551",
+        "title": "My shadow falls."
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/0\/0c\/Vo_dazzle_dazz_death_03.mp3\/revision\/latest?cb=20201010205552",
+        "title": "By what right?"
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/d\/d5\/Vo_dazzle_dazz_death_04.mp3\/revision\/latest?cb=20201010205554",
+        "title": "My dazzle darkens."
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/c\/cc\/Vo_dazzle_dazz_death_05.mp3\/revision\/latest?cb=20201010205556",
+        "title": "Dazzling no more."
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/b\/b8\/Vo_dazzle_dazz_death_06.mp3\/revision\/latest?cb=20201010205559",
+        "title": "Death casts no shadow."
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/a\/a9\/Vo_dazzle_dazz_death_07.mp3\/revision\/latest?cb=20201010205601",
+        "title": "Should have healed myself."
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/3\/3a\/Vo_dazzle_dazz_death_08.mp3\/revision\/latest?cb=20201010205604",
+        "title": "I was under orders."
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/d\/d4\/Vo_dazzle_dazz_death_09.mp3\/revision\/latest?cb=20201010205613",
+        "title": "Excommunicated."
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/5\/56\/Vo_dazzle_dazz_death_10.mp3\/revision\/latest?cb=20201010205620",
+        "title": "Shadows take me."
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/9\/94\/Vo_dazzle_dazz_death_11.mp3\/revision\/latest?cb=20201010205623",
+        "title": "My shadow lost."
+      }
+    ],
+    "category": "Dying"
+  },
+  {
+    "responses": [
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/0\/0a\/Vo_dazzle_dazz_respawn_01.mp3\/revision\/latest?cb=20201010210146",
+        "title": "That's no simple ordination."
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/9\/90\/Vo_dazzle_dazz_respawn_02.mp3\/revision\/latest?cb=20201010210149",
+        "title": "I never miss a trick."
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/9\/9a\/Vo_dazzle_dazz_respawn_03.mp3\/revision\/latest?cb=20201010210152",
+        "title": "I've been to the place where darkness is light."
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/4\/43\/Vo_dazzle_dazz_respawn_04.mp3\/revision\/latest?cb=20201010210154",
+        "title": "Up to my old tricks again."
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/6\/64\/Vo_dazzle_dazz_respawn_05.mp3\/revision\/latest?cb=20201010210157",
+        "title": "Returned from Nothl's realm."
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/0\/07\/Vo_dazzle_dazz_respawn_06.mp3\/revision\/latest?cb=20201010210200",
+        "title": "I await new orders."
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/2\/26\/Vo_dazzle_dazz_respawn_07.mp3\/revision\/latest?cb=20201010210202",
+        "title": "Reordained."
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/f\/f7\/Vo_dazzle_dazz_respawn_08.mp3\/revision\/latest?cb=20201010210205",
+        "title": "More dazzling than ever."
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/e\/ea\/Vo_dazzle_dazz_respawn_09.mp3\/revision\/latest?cb=20201010210208",
+        "title": "That was almost a disaster."
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/6\/64\/Vo_dazzle_dazz_respawn_10.mp3\/revision\/latest?cb=20201010210211",
+        "title": "Resurrection comes easily to a Shadow Priest!"
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/7\/7e\/Vo_dazzle_dazz_fastres_01.mp3\/revision\/latest?cb=20201010205656",
+        "title": "This death means nothing to me!"
+      }
+    ],
+    "category": "Respawning"
+  },
+  {
+    "responses": [
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/e\/e7\/Vo_dazzle_dazz_bottle_01.mp3\/revision\/latest?cb=20201010205532",
+        "title": "Zip it up!"
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/5\/5f\/Vo_dazzle_dazz_bottle_02.mp3\/revision\/latest?cb=20201010205534",
+        "title": "Caught the buzz!"
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/a\/a4\/Vo_dazzle_dazz_bottle_03.mp3\/revision\/latest?cb=20201010205537",
+        "title": "Corked it."
+      }
+    ],
+    "category": "Bottling Runes"
+  },
+  {
+    "responses": [
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/8\/8a\/Vo_dazzle_dazz_ability_poistouch_02.mp3\/revision\/latest?cb=20201010210302",
+        "title": "Just a touch."
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/8\/8a\/Vo_dazzle_dazz_ability_sfx_08.mp3\/revision\/latest?cb=20201010205318",
+        "title": "Dazzle!"
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/0\/08\/Vo_dazzle_dazz_doubdam_01.mp3\/revision\/latest?cb=20201010205650",
+        "title": "Double damage!"
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/d\/d0\/Vo_dazzle_dazz_doubdam_02.mp3\/revision\/latest?cb=20201010205653",
+        "title": "Double deity."
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/6\/60\/Vo_dazzle_dazz_haste_01.mp3\/revision\/latest?cb=20201010205710",
+        "title": "Haste!"
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/c\/c7\/Vo_dazzle_dazz_haste_02.mp3\/revision\/latest?cb=20201010205712",
+        "title": "The shadow speeds along!"
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/b\/bd\/Vo_dazzle_dazz_illus_01.mp3\/revision\/latest?cb=20201010205715",
+        "title": "Illusion!"
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/5\/59\/Vo_dazzle_dazz_illus_02.mp3\/revision\/latest?cb=20201010205718",
+        "title": "The threefold shadow."
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/8\/89\/Vo_dazzle_dazz_invis_01.mp3\/revision\/latest?cb=20201010205729",
+        "title": "Invisibility!"
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/b\/b4\/Vo_dazzle_dazz_invis_02.mp3\/revision\/latest?cb=20201010205731",
+        "title": "Shadows unseen!"
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/4\/40\/Vo_dazzle_dazz_regen_01.mp3\/revision\/latest?cb=20201010210141",
+        "title": "Regeneration!"
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/a\/ad\/Vo_dazzle_dazz_regen_02.mp3\/revision\/latest?cb=20201010210144",
+        "title": "Healing for the healer."
+      }
+    ],
+    "category": "Activating runes"
+  },
+  {
+    "responses": [
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/e\/e8\/Vo_dazzle_dazz_notyet_01.mp3\/revision\/latest?cb=20201010210034",
+        "title": "Not yet."
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/0\/06\/Vo_dazzle_dazz_notyet_02.mp3\/revision\/latest?cb=20201010210037",
+        "title": "I'm not ready."
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/6\/62\/Vo_dazzle_dazz_notyet_03.mp3\/revision\/latest?cb=20201010210039",
+        "title": "It's not time yet."
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/6\/6e\/Vo_dazzle_dazz_notyet_04.mp3\/revision\/latest?cb=20201010210042",
+        "title": "Not yet."
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/2\/24\/Vo_dazzle_dazz_notyet_05.mp3\/revision\/latest?cb=20201010210045",
+        "title": "I'm not ready."
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/0\/02\/Vo_dazzle_dazz_notyet_06.mp3\/revision\/latest?cb=20201010210047",
+        "title": "It's not time yet."
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/d\/d8\/Vo_dazzle_dazz_notyet_07.mp3\/revision\/latest?cb=20201010210050",
+        "title": "Not yet."
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/c\/ce\/Vo_dazzle_dazz_notyet_08.mp3\/revision\/latest?cb=20201010210053",
+        "title": "I'm not ready."
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/a\/af\/Vo_dazzle_dazz_notyet_09.mp3\/revision\/latest?cb=20201010210055",
+        "title": "It's not time yet."
+      }
+    ],
+    "category": "Ability on cooldown"
+  },
+  {
+    "responses": [
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/f\/f3\/Vo_dazzle_dazz_nomana_01.mp3\/revision\/latest?cb=20201010210010",
+        "title": "Out of mana."
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/8\/8c\/Vo_dazzle_dazz_nomana_02.mp3\/revision\/latest?cb=20201010210012",
+        "title": "No mana."
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/f\/f5\/Vo_dazzle_dazz_nomana_03.mp3\/revision\/latest?cb=20201010210015",
+        "title": "Not enough mana."
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/c\/c6\/Vo_dazzle_dazz_nomana_04.mp3\/revision\/latest?cb=20201010210018",
+        "title": "Out of mana."
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/6\/6a\/Vo_dazzle_dazz_nomana_05.mp3\/revision\/latest?cb=20201010210021",
+        "title": "No mana."
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/a\/a5\/Vo_dazzle_dazz_nomana_06.mp3\/revision\/latest?cb=20201010210023",
+        "title": "Not enough mana."
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/1\/1d\/Vo_dazzle_dazz_nomana_07.mp3\/revision\/latest?cb=20201010210026",
+        "title": "Out of mana."
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/1\/1f\/Vo_dazzle_dazz_nomana_08.mp3\/revision\/latest?cb=20201010210029",
+        "title": "No mana."
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/5\/5d\/Vo_dazzle_dazz_nomana_09.mp3\/revision\/latest?cb=20201010210031",
+        "title": "Not enough mana."
+      }
+    ],
+    "category": "Not enough mana"
+  },
+  {
+    "responses": [
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/3\/3d\/Vo_dazzle_dazz_pain_01.mp3\/revision\/latest?cb=20201010210058",
+        "title": "Uh!"
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/1\/14\/Vo_dazzle_dazz_pain_02.mp3\/revision\/latest?cb=20201010210100",
+        "title": "Ow!"
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/8\/83\/Vo_dazzle_dazz_pain_03.mp3\/revision\/latest?cb=20201010210103",
+        "title": "Ooh!"
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/1\/1a\/Vo_dazzle_dazz_pain_04.mp3\/revision\/latest?cb=20201010210105",
+        "title": "Oowa ah!"
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/5\/5c\/Vo_dazzle_dazz_pain_05.mp3\/revision\/latest?cb=20201010210108",
+        "title": "Ah!"
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/a\/a9\/Vo_dazzle_dazz_pain_06.mp3\/revision\/latest?cb=20201010210110",
+        "isArcane": true,
+        "title": "Ah!"
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/1\/19\/Vo_dazzle_dazz_pain_07.mp3\/revision\/latest?cb=20201010210113",
+        "title": "Eh!"
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/f\/fe\/Vo_dazzle_dazz_pain_08.mp3\/revision\/latest?cb=20201010210115",
+        "title": "Hwat!"
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/1\/18\/Vo_dazzle_dazz_pain_09.mp3\/revision\/latest?cb=20201010210118",
+        "title": "Tah!"
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/e\/e0\/Vo_dazzle_dazz_pain_10.mp3\/revision\/latest?cb=20201010210121",
+        "title": "Ko-ah!"
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/3\/3e\/Vo_dazzle_dazz_pain_11.mp3\/revision\/latest?cb=20201010210123",
+        "title": "Kah!"
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/7\/70\/Vo_dazzle_dazz_pain_12.mp3\/revision\/latest?cb=20201010210125",
+        "title": "Uh ah!"
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/6\/60\/Vo_dazzle_dazz_underattack_01.mp3\/revision\/latest?cb=20201010210248",
+        "title": "I'm under attack!"
+      }
+    ],
+    "category": "Taking damage"
+  },
+  {
+    "responses": [
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/c\/cb\/Vo_dazzle_dazz_rare_01.mp3\/revision\/latest?cb=20201010210136",
+        "title": "I've seen the blinding darkness at the center of all light."
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/6\/6d\/Vo_dazzle_dazz_rare_02.mp3\/revision\/latest?cb=20201010210138",
+        "title": "In the Nothl realm, brightness is dark, and the touch that heals a friend will fell a foe."
+      }
+    ],
+    "category": "Selecting"
+  },
+  {
+    "responses": [
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/5\/50\/Vo_dazzle_dazz_thanks_01.mp3\/revision\/latest?cb=20201010210243",
+        "title": "Thanks."
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/a\/a5\/Vo_dazzle_dazz_thanks_02.mp3\/revision\/latest?cb=20201010210246",
+        "title": "My gratitude."
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/5\/5d\/Vo_dazzle_dazz_laugh_01.mp3\/revision\/latest?cb=20201010205837",
+        "title": "Uh ha ha ha ha ho!"
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/3\/3e\/Vo_dazzle_dazz_laugh_02.mp3\/revision\/latest?cb=20201010205839",
+        "title": "Ha ha har ha ha ha!"
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/e\/e3\/Vo_dazzle_dazz_laugh_03.mp3\/revision\/latest?cb=20201010205842",
+        "title": "He he he he he he he!"
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/2\/25\/Vo_dazzle_dazz_laugh_04.mp3\/revision\/latest?cb=20201010205845",
+        "title": "He he he he he he he he he!"
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/2\/2b\/Vo_dazzle_dazz_laugh_05.mp3\/revision\/latest?cb=20201010205848",
+        "title": "Ho ho ho ho yeah."
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/7\/78\/Vo_dazzle_dazz_laugh_06.mp3\/revision\/latest?cb=20201010205850",
+        "title": "Ho ho ha ha ha ha."
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/9\/91\/Vo_dazzle_dazz_laugh_07.mp3\/revision\/latest?cb=20201010205853",
+        "title": "Uh he he he he ha!"
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/0\/09\/Vo_dazzle_dazz_laugh_08.mp3\/revision\/latest?cb=20201010205855",
+        "title": "Uh huh ha ha ha!"
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/3\/39\/Vo_dazzle_dazz_laugh_09.mp3\/revision\/latest?cb=20201010205858",
+        "title": "Ha ha ha ha ha!"
+      }
+    ],
+    "category": "Chat responses"
+  },
+  {
+    "responses": [
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/4\/49\/Vo_dazzle_dazz_win_01.mp3\/revision\/latest?cb=20201010210251",
+        "title": "Yes!"
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/7\/71\/Vo_dazzle_dazz_win_02.mp3\/revision\/latest?cb=20201010210254",
+        "title": "Victory!"
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/f\/fe\/Vo_dazzle_dazz_win_03.mp3\/revision\/latest?cb=20201010210256",
+        "title": "My shadow shall darken all creation."
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/8\/8f\/Vo_dazzle_dazz_lose_01.mp3\/revision\/latest?cb=20201010205917",
+        "title": "No!"
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/c\/cf\/Vo_dazzle_dazz_lose_02.mp3\/revision\/latest?cb=20201010205919",
+        "title": "Defeated!"
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/f\/f9\/Vo_dazzle_dazz_lose_03.mp3\/revision\/latest?cb=20201010205923",
+        "title": "The order will have my shadow for this!"
+      }
+    ],
+    "category": "Match end"
+  },
+  {
+    "responses": [
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/9\/9b\/Vo_dazzle_dazz_happy_03.mp3\/revision\/latest?cb=20201010205707",
+        "title": "Haa."
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/f\/f1\/Vo_dazzle_dazz_ability_weave_02.mp3\/revision\/latest?cb=20201010205418",
+        "title": "Yes!"
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/1\/1e\/Vo_dazzle_dazz_ability_weave_03.mp3\/revision\/latest?cb=20201010205421",
+        "title": "Ha ha!"
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/3\/3e\/Vo_dazzle_dazz_laugh_02.mp3\/revision\/latest?cb=20201010205839",
+        "title": "Ha ha har ha ha ha!"
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/2\/2b\/Vo_dazzle_dazz_laugh_05.mp3\/revision\/latest?cb=20201010205848",
+        "title": "Ho ho ho ho yeah."
+      }
+    ],
+    "category": "Cosmetic item drop"
+  },
+  {
+    "responses": [
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/7\/7a\/Vo_dazzle_dazz_shitwiz_01.mp3\/revision\/latest?cb=20201010210227",
+        "title": "Shitty wizard!"
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/9\/90\/Vo_dazzle_dazz_crumwiz_01.mp3\/revision\/latest?cb=20201010205547",
+        "title": "Crummy wizard!"
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/6\/66\/Vo_dazzle_dazz_anger_01.mp3\/revision\/latest?cb=20201010205434",
+        "title": "Numm."
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/f\/fa\/Vo_dazzle_dazz_anger_02.mp3\/revision\/latest?cb=20201010205437",
+        "title": "Urrruh."
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/e\/e3\/Vo_dazzle_dazz_anger_03.mp3\/revision\/latest?cb=20201010205440",
+        "title": "Hrrrrr."
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/9\/94\/Vo_dazzle_dazz_anger_04.mp3\/revision\/latest?cb=20201010205442",
+        "title": "Mrruuf."
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/d\/d1\/Vo_dazzle_dazz_anger_06.mp3\/revision\/latest?cb=20201010205448",
+        "title": "Hrruf."
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/e\/e5\/Vo_dazzle_dazz_happy_01.mp3\/revision\/latest?cb=20201010205702",
+        "title": "Ahhh."
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/0\/04\/Vo_dazzle_dazz_happy_02.mp3\/revision\/latest?cb=20201010205704",
+        "isArcane": true,
+        "title": "Ahhh."
+      }
+    ],
+    "category": "Misc"
+  }
+]

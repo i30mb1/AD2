@@ -1,0 +1,60 @@
+{
+  "abilities": [
+    {
+      "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/3\/34\/Heaven%27s_Halberd_Disarm.mp3\/revision\/latest?cb=20191227195432",
+      "effects": [
+        "Ability Target Unit",
+        "Affects Enemies"
+      ],
+      "notes": [],
+      "mana": "100",
+      "abilityName": "Disarm",
+      "cooldown": null,
+      "description": "Prevents a target from attacking for 3 seconds on melee targets, and 5 seconds on ranged targets.",
+      "params": [
+        "Cast Range: 600",
+        "Duration (Melee): 3",
+        "Duration (Ranged): 5"
+      ],
+      "itemBehaviour": [
+        "(Spell_immunity_block_symbol)^Does not pierce spell immunity\nDisarm persists if debuff was placed before spell immunity."
+      ],
+      "story": null
+    }
+  ],
+  "additionalInformation": [
+    "For strength heroes, it grants 400 health, 2 health regen and 20 attack damage.",
+    "For agility heroes, it grants 400 health and 2 health regen.",
+    "For intelligence heroes, it grants 400 health and 2 health regen.",
+    "The evasion stacks multiplicatively with other sources of evasion.",
+    "The evasion uses pseudo-random distribution.",
+    "Health regen amplification from multiple Sange-based items do not stack, except for Trident.",
+    "Lifesteal amplification from multiple Sange-based items do not stack, except for Trident.",
+    "Status resistance from multiple Sange-based items do not stack."
+  ],
+  "cost": "3650",
+  "lore": null,
+  "consistFrom": [
+    "Sange",
+    "Talisman of Evasion",
+    "Recipe"
+  ],
+  "boughtFrom": "Artifacts",
+  "name": "Heaven's Halberd",
+  "description": "This halberd moves with the speed of a smaller weapon, allowing the bearer to win duels that a heavy edge would not.",
+  "trivia": null,
+  "upgradeIn": null,
+  "bonuses": [
+    "+20 Strength",
+    "+20% Evasion",
+    "+16% Status resistance",
+    "+24% Health regen amplification",
+    "+30% Lifesteal amplification"
+  ],
+  "tips": [
+    "Very strong against heroes whose main source of damage are their right-clicks, making them unable to attack for 5 seconds.",
+    "Because the disarm displays an icon and can't be dispelled, you can use it to reveal your enemy before it uses a Manta Style or ability to create illusions. It can be very useful against Phantom Lancer.",
+    "Try to anticipate to use the disarm just before the spell immunity is used.",
+    "An Ethereal Blade can be an alternative to disarm and amplify the magic damage for a spell caster (however it can be dispelled)."
+  ]
+}

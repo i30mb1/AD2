@@ -1,0 +1,20 @@
+{
+  "abilities": [],
+  "additionalInformation": [
+    "Philosopher's Stone \u2014 полностью передаваемый предмет.",
+    "Дает ненадёжное золото."
+  ],
+  "cost": "Н\/Д",
+  "lore": null,
+  "consistFrom": null,
+  "boughtFrom": "нейтральных крипов",
+  "name": "Philosopher's Stone",
+  "description": "Стоимость Н\/Д Выпадает из нейтральных крипов",
+  "trivia": null,
+  "upgradeIn": null,
+  "bonuses": [
+    "+200 к мане -30 к урону",
+    "+70 к золоту в минуту"
+  ],
+  "tips": null
+}

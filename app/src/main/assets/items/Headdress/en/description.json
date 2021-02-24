@@ -1,0 +1,47 @@
+{
+  "abilities": [
+    {
+      "audioUrl": null,
+      "effects": [
+        "Ability Aura",
+        "Affects Allies"
+      ],
+      "notes": [
+        "Stacks with all other sources of flat health regeneration, except with Regeneration Aura from multiple Headdresses.",
+        "Can regenerate up to 120 health in one minute.",
+        "Does not affect wards, buildings and invulnerable units.",
+        "The aura's buff lingers for 0.5 seconds."
+      ],
+      "mana": null,
+      "abilityName": "Regeneration Aura",
+      "cooldown": null,
+      "description": "Grants 2 health regeneration to allies.",
+      "params": [
+        "Radius: 1200",
+        "Health Regeneration Bonus: 2",
+        "Aura Linger Duration: 0.5"
+      ],
+      "itemBehaviour": [],
+      "story": null
+    }
+  ],
+  "cost": "425",
+  "lore": null,
+  "consistFrom": [
+    "Ring of Regen",
+    "Recipe"
+  ],
+  "boughtFrom": "Support",
+  "name": "Headdress",
+  "description": "Creates a soothing aura that restores allies in battle.",
+  "trivia": [
+    "In DotA, Headdress was known as Headdress of Rejuvenation."
+  ],
+  "upgradeIn": [
+    "Mekansm",
+    "Holy Locket",
+    "Pipe of Insight"
+  ],
+  "bonuses": null,
+  "tips": null
+}

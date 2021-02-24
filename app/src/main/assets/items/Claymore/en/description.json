@@ -1,0 +1,19 @@
+{
+  "abilities": [],
+  "cost": "1350",
+  "lore": null,
+  "consistFrom": null,
+  "boughtFrom": "Equipment",
+  "name": "Claymore",
+  "description": "A sword that can cut through armor, it's a commonly chosen first weapon for budding swordsmen.",
+  "trivia": null,
+  "upgradeIn": [
+    "Battle Fury",
+    "Satanic",
+    "Mage Slayer"
+  ],
+  "bonuses": [
+    "+20 Attack damage"
+  ],
+  "tips": null
+}

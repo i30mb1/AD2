@@ -1,0 +1,74 @@
+{
+  "abilities": [
+    {
+      "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/1\/1f\/Mekansm_Restore.mp3\/revision\/latest?cb=20191227195457",
+      "effects": [
+        "Ability No Target",
+        "Affects Allies"
+      ],
+      "notes": [
+        "Interrupts the user's channeling spells upon cast.",
+        "Affects every allied unit, including illusions, invulnerable units and hidden units, excluding wards and buildings.",
+        "Does not heal units that have been healed by Restore in the last 64 seconds, or by Mend in the last 39 seconds. A status buff icon on affected units shows how much time is left for it to be able to get affected again. The stack limit duration equals the cooldown (after all reductions), minus one. The duration is set upon cast and cannot be altered afterwards. Resetting the item's cooldown does not affect the stack limit duration.",
+        "A status buff icon on affected units shows how much time is left for it to be able to get affected again.",
+        "The stack limit duration equals the cooldown (after all reductions), minus one.",
+        "The duration is set upon cast and cannot be altered afterwards. Resetting the item's cooldown does not affect the stack limit duration."
+      ],
+      "mana": "200",
+      "abilityName": "Restore",
+      "cooldown": null,
+      "description": "Heals 275 health to allied units in a 1200 radius.",
+      "params": [
+        "Radius: 1200",
+        "Health Restored: 275",
+        "Heal Stack Limit Duration: 64"
+      ],
+      "itemBehaviour": [],
+      "story": null
+    },
+    {
+      "audioUrl": null,
+      "effects": [
+        "Ability Aura",
+        "Affects Allies"
+      ],
+      "notes": [
+        "Stacks with all other sources of flat health regeneration, except with Mekansm Aura from multiple Mekansms.",
+        "Can regenerate up to 120 health in one minute.",
+        "Does not affect wards, buildings and invulnerable units.",
+        "The aura's buff lingers for seconds."
+      ],
+      "mana": null,
+      "abilityName": "Mekansm Aura",
+      "cooldown": null,
+      "description": "Grants 2 health regeneration to allied units in a 1200 radius.",
+      "params": [
+        "Radius: 1200",
+        "Health Regeneration Bonus: 2",
+        "Aura Linger Duration: 0.5"
+      ],
+      "itemBehaviour": [],
+      "story": null
+    }
+  ],
+  "cost": "1875",
+  "lore": null,
+  "consistFrom": [
+    "Headdress",
+    "Chainmail",
+    "Recipe"
+  ],
+  "boughtFrom": "Support",
+  "name": "Mekansm",
+  "description": "A glowing jewel formed out of assorted parts that somehow fit together perfectly.",
+  "trivia": null,
+  "upgradeIn": [
+    "Guardian Greaves"
+  ],
+  "bonuses": [
+    "+4 Armor"
+  ],
+  "tips": [
+    "If the player drops items which provides a large amount of health (e.g. Vanguard or Eye of Skadi), then uses Mekansm, and then picks up the dropped items again, the player will overall heal for more than 250 health. This is because upon dropping the health granting items, the player's maximum health drops while the current health percentage stays the same, but Mekansm still heals for the full amount. After picking up the items again, its maximum health raises, and its current health percentage stays the same."
+  ]
+}

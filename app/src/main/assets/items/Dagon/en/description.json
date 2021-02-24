@@ -1,0 +1,65 @@
+{
+  "abilities": [
+    {
+      "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/8\/89\/Dagon_Energy_Burst.mp3\/revision\/latest?cb=20191227195407",
+      "effects": [
+        "Ability Target Unit",
+        "Affects Enemies",
+        "Damage Magical \/ Instant Kill"
+      ],
+      "notes": [
+        "Places a debuff on the target, which applies the damage upon expiring. The debuff lasts 0 seconds. Due to server tick rates, the debuff effectively lasts 0.033 seconds. A true 0 second duration for modifiers is not possible. This means the damage can be avoided by being invulnerable or hidden as the debuff expires.",
+        "Due to server tick rates, the debuff effectively lasts 0.033 seconds. A true 0 second duration for modifiers is not possible.",
+        "This means the damage can be avoided by being invulnerable or hidden as the debuff expires.",
+        "Instantly kills regular illusions, regardless of any status effects, except for Shallow Grave."
+      ],
+      "mana": "120\/140\/160\/180\/200",
+      "abilityName": "Energy Burst",
+      "cooldown": null,
+      "description": "Emits a powerful burst of magical damage upon a targeted enemy unit. Upgradable.",
+      "params": [
+        "Cast Range: 600\/650\/700\/750\/800",
+        "Effect Delay: 0",
+        "Damage: 400\/500\/600\/700\/800"
+      ],
+      "itemBehaviour": [
+        "(Spell_immunity_block_symbol)^Does not pierce spell immunity\nAttempts to damage if debuff was placed before spell immunity."
+      ],
+      "story": null
+    }
+  ],
+  "additionalInformation": [
+    "For strength heroes, it grants 120\/160\/200\/240\/280 health, 0.6\/0.8\/1\/1.2\/1.4 health regen, 1\/1.33\/1.67\/2\/2.33 armor, 6\/8\/10\/12\/14 attack speed, 168\/192\/216\/240\/264 mana, 0.7\/0.8\/0.9\/1\/1.1 mana regen and 6\/8\/10\/12\/14 attack damage.",
+    "For agility heroes, it grants 120\/160\/200\/240\/280 health, 0.6\/0.8\/1\/1.2\/1.4 health regen, 1\/1.33\/1.67\/2\/2.33 armor, 6\/8\/10\/12\/14 attack speed, 168\/192\/216\/240\/264 mana, 0.7\/0.8\/0.9\/1\/1.1 mana regen and 6\/8\/10\/12\/14 attack damage.",
+    "For intelligence heroes, it grants 120\/160\/200\/240\/280 health, 0.6\/0.8\/1\/1.2\/1.4 health regen, 1\/1.33\/1.67\/2\/2.33 armor, 6\/8\/10\/12\/14 attack speed, 168\/192\/216\/240\/264 mana, 0.7\/0.8\/0.9\/1\/1.1 mana regen and 14\/16\/18\/20\/22 attack damage.",
+    "Upgrading the item improves its stats and the damage, range and cooldown of Energy Burst. Can be upgraded four times.",
+    "The total gold cost for each level is 2750\/4050\/5350\/6650\/7950."
+  ],
+  "cost": "2750",
+  "lore": null,
+  "consistFrom": [
+    "Staff of Wizardry",
+    "Crown",
+    "Recipe"
+  ],
+  "boughtFrom": "Magical",
+  "name": "Dagon",
+  "description": "",
+  "trivia": [
+    "Dagon is the name of an ancient Mesopotamian god. Dagon's active ability, Energy Burst, may be a reference to the Bible's Samson where he prayed to the Abrahamic god for power to destroy his enemies at Dagon's Temple.",
+    "Dagon's active ability, Energy Burst, may be a reference to the Bible's Samson where he prayed to the Abrahamic god for power to destroy his enemies at Dagon's Temple.",
+    "Nyx Assassin's cosmetic item, Nyx Assassin's Dagon, is based on Dagon."
+  ],
+  "upgradeIn": [
+    "Dagon 2"
+  ],
+  "bonuses": [
+    "+6\/8\/10\/12\/14 Strength",
+    "+6\/8\/10\/12\/14 Agility",
+    "+14\/16\/18\/20\/22 Intelligence"
+  ],
+  "tips": [
+    "Most heroes have 25% magic resistance by default, causing Energy Burst to deal 300\/375\/450\/525\/600 damage to them, considering no other sources of reduction or amplification.",
+    "Powerful against high armored enemies, damage block and evasion."
+  ]
+}

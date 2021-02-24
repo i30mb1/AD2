@@ -1,0 +1,29 @@
+{
+  "abilities": [],
+  "additionalInformation": [
+    "For strength heroes, it grants 200 health, 1 health regen and 10 attack damage.",
+    "For agility heroes, it grants 200 health and 1 health regen.",
+    "For intelligence heroes, it grants 200 health and 1 health regen."
+  ],
+  "cost": "1000",
+  "lore": null,
+  "consistFrom": null,
+  "boughtFrom": "Attributes",
+  "name": "Ogre Axe",
+  "description": "You grow stronger just by holding it.",
+  "trivia": [
+    "In Dota 2, this item was initially named \"Ogre Club\" until it was renamed to \"Ogre Axe\" in the 7.07 patch. Ogre Axe was the item's original name in DotA as well. The reason why it was named differently in Dota 2 is unknown.",
+    "Ogre Axe was the item's original name in DotA as well. The reason why it was named differently in Dota 2 is unknown."
+  ],
+  "upgradeIn": [
+    "Echo Sabre",
+    "Aghanim's Scepter",
+    "Black King Bar",
+    "Dragon Lance",
+    "Sange"
+  ],
+  "bonuses": [
+    "+10 Strength"
+  ],
+  "tips": null
+}

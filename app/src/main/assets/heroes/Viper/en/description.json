@@ -1,0 +1,228 @@
+{
+  "abilities": [
+    {
+      "notes": [
+        "The attack range talent also affects the cast range of Poison Attack.",
+        "The spell lifesteal talent stacks additively with other sources of spell lifesteal.",
+        "The spell lifesteal talent heals for 1.6% from non-hero units. Treats creep-heroes as creeps and does not heal off of illusions.",
+        "This attack damage talent is added as raw attack damage, so it does not benefit illusions, and is not affected by most percentage-based damage increasing or reducing effects."
+      ],
+      "spellName": "Talent",
+      "talents": [
+        {
+          "talentLvl": "25",
+          "talentLeft": "Poison Attack Affects Buildings",
+          "talentRight": "-11s Nethertoxin Cooldown"
+        },
+        {
+          "talentLvl": "20",
+          "talentLeft": "+70 Damage",
+          "talentRight": "+80 Viper Strike DPS"
+        },
+        {
+          "talentLvl": "15",
+          "talentLeft": "+5 Corrosive Skin Stats",
+          "talentRight": "+100 Attack Range"
+        },
+        {
+          "talentLvl": "10",
+          "talentLeft": "8% Spell Lifesteal",
+          "talentRight": "+20 Attack Speed"
+        }
+      ]
+    },
+    {
+      "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/2\/25\/Viper_Poison_Attack_1.mp3\/revision\/latest?cb=20191216030223",
+      "effects": [
+        "Ability Target Unit \/ Autocast",
+        "Affects Enemies",
+        "Damage Magical"
+      ],
+      "notes": [
+        "Both autocast and manually casting it uses the 600\/640\/680\/720 (TagTalent 700\/740\/780\/820) cast range.",
+        "Poison Attack places one debuff on the target. Following attacks increase its stack count. A number on the icon reveals the amount of stacks. The number is visible to everyone. Each attack resets the duration of the entire stack.",
+        "A number on the icon reveals the amount of stacks. The number is visible to everyone.",
+        "Each attack resets the duration of the entire stack.",
+        "This is how much movement speed and magic resistance Poison Attack reduces with certain amount of stacks on each level: Level 1: 6% \/ 12% \/ 18% \/ 24% \/ 30% (TagTalent 36% \/ 42% \/ 48%) movement speed and 3% \/ 6% \/ 9% \/ 12% \/ 15% (TagTalent 18% \/ 21% \/ 24%) magic resistance. Level 2: 8% \/ 16% \/ 24% \/ 32% \/ 40% (TagTalent 48% \/ 56% \/ 64%) movement speed and 5% \/ 10% \/ 15% \/ 20% \/ 25% (TagTalent 30% \/ 35% \/ 40%) magic resistance. Level 3: 10% \/ 20% \/ 30% \/ 40% \/ 50% (TagTalent 60% \/ 70% \/ 80%) movement speed and 7% \/ 14% \/ 21% \/ 28% \/ 35% (TagTalent 42% \/ 49% \/ 56%) magic resistance. Level 4: 12% \/ 24% \/ 36% \/ 48% \/ 60% (TagTalent 72% \/ 84% \/ 96%) movement speed and 9% \/ 18% \/ 27% \/ 36% \/ 45% (TagTalent 54% \/ 63% \/ 72%) magic resistance. With Aghanim's Shard, also reduces armor by 1.5 \/ 3 \/ 4.5 \/ 6 \/ 7.5 \/ 9 \/ 10.5 \/ 12.",
+        "Level 1: 6% \/ 12% \/ 18% \/ 24% \/ 30% (TagTalent 36% \/ 42% \/ 48%) movement speed and 3% \/ 6% \/ 9% \/ 12% \/ 15% (TagTalent 18% \/ 21% \/ 24%) magic resistance.",
+        "Level 2: 8% \/ 16% \/ 24% \/ 32% \/ 40% (TagTalent 48% \/ 56% \/ 64%) movement speed and 5% \/ 10% \/ 15% \/ 20% \/ 25% (TagTalent 30% \/ 35% \/ 40%) magic resistance.",
+        "Level 3: 10% \/ 20% \/ 30% \/ 40% \/ 50% (TagTalent 60% \/ 70% \/ 80%) movement speed and 7% \/ 14% \/ 21% \/ 28% \/ 35% (TagTalent 42% \/ 49% \/ 56%) magic resistance.",
+        "Level 4: 12% \/ 24% \/ 36% \/ 48% \/ 60% (TagTalent 72% \/ 84% \/ 96%) movement speed and 9% \/ 18% \/ 27% \/ 36% \/ 45% (TagTalent 54% \/ 63% \/ 72%) magic resistance.",
+        "With Aghanim's Shard, also reduces armor by 1.5 \/ 3 \/ 4.5 \/ 6 \/ 7.5 \/ 9 \/ 10.5 \/ 12.",
+        "Deals damage in 1 second intervals, starting 1 second after the debuff is applied, resulting in 4 damage instances.",
+        "This is how much damage per second and total damage Poison Attack deals with certain amount of stacks on each level: Level 1: 4 \/ 8 \/ 12 \/ 16 \/ 20 (TagTalent 24 \/ 28 \/ 32) damage per second and 16 \/ 32 \/ 48 \/ 64 \/ 80 (TagTalent 96 \/ 112 \/ 128) total damage. Level 2: 8 \/ 16 \/ 24 \/ 32 \/ 40 (TagTalent 48 \/ 56 \/ 64) damage per second and 32 \/ 64 \/ 96 \/ 128 \/ 160 (TagTalent 192 \/ 224 \/ 256) total damage. Level 3: 12 \/ 24 \/ 36 \/ 48 \/ 60 (TagTalent 72 \/ 84 \/ 96) damage per second and 48 \/ 96 \/ 144 \/ 192 \/ 240 (TagTalent 288 \/ 336 \/ 384) total damage. Level 4: 16 \/ 32 \/ 48 \/ 64 \/ 80 (TagTalent 96 \/ 112 \/ 128) damage per second and 64 \/ 128 \/ 192 \/ 256 \/ 320 (TagTalent 384 \/ 448 \/ 512) total damage.",
+        "Level 1: 4 \/ 8 \/ 12 \/ 16 \/ 20 (TagTalent 24 \/ 28 \/ 32) damage per second and 16 \/ 32 \/ 48 \/ 64 \/ 80 (TagTalent 96 \/ 112 \/ 128) total damage.",
+        "Level 2: 8 \/ 16 \/ 24 \/ 32 \/ 40 (TagTalent 48 \/ 56 \/ 64) damage per second and 32 \/ 64 \/ 96 \/ 128 \/ 160 (TagTalent 192 \/ 224 \/ 256) total damage.",
+        "Level 3: 12 \/ 24 \/ 36 \/ 48 \/ 60 (TagTalent 72 \/ 84 \/ 96) damage per second and 48 \/ 96 \/ 144 \/ 192 \/ 240 (TagTalent 288 \/ 336 \/ 384) total damage.",
+        "Level 4: 16 \/ 32 \/ 48 \/ 64 \/ 80 (TagTalent 96 \/ 112 \/ 128) damage per second and 64 \/ 128 \/ 192 \/ 256 \/ 320 (TagTalent 384 \/ 448 \/ 512) total damage.",
+        "The attacks first apply the debuff, then their own damage.",
+        "The level 25 talent allows Poison Attack to target buildings, damaging, slowing, and reducing their magic resistance (TagTalent and their armor)."
+      ],
+      "mana": "25",
+      "hotKey": "Q",
+      "cooldown": "0",
+      "description": "Intensifies Viper's venom, adding an effect to his normal attack that applies a stacking movement speed slow and magic resistance deduction while dealing damage over time. Stacks up to 5 times.",
+      "spellName": "Poison Attack",
+      "params": [
+        "Cast Range: 600\/640\/680\/720 (TagTalent 700\/740\/780\/820)",
+        "Max Stacks: 5 (TagTalent 8)",
+        "Damage per Second per Stack: 4\/8\/12\/16",
+        "Move Speed Slow per Stack: 6%\/8%\/10%\/12%",
+        "Magic Resistance Reduction per Stack: 3%\/5%\/7%\/9%",
+        "Duration: 4",
+        "Armor Reduction per Stack: 1.5",
+        "Causes Poison Attack to lower armor by 1.5 per stack and increases max stacks by 3.",
+        "Debuff persists if it was placed before spell immunity and when not dispelled."
+      ],
+      "itemBehaviour": [],
+      "legacyKey": "C",
+      "story": "The Netherdrake's inborn toxic breath quickly drains the vitality of its afflicted."
+    },
+    {
+      "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/8\/8b\/Viper_Nethertoxin_1.mp3\/revision\/latest?cb=20191216030219",
+      "effects": [
+        "Ability Target Area",
+        "Affects Enemies",
+        "Damage Magical"
+      ],
+      "notes": [
+        "Nethertoxin's projectile travels at a speed of 2000.",
+        "All effects of Nethertoxin (including the damage) are provided by an aura. Its debuff lingers for 0.5 seconds.",
+        "Deals damage in 0.5-second intervals, starting 0.5 seconds after receiving the debuff, resulting in up to 17 instances.",
+        "The damage increases by 4.06\/5\/5.94\/6.88 for each 0.5 seconds spent within the area, resulting in the following values per instance. Level 1: 7.5 \/ 11.56 \/ 15.63 \/ 19.69 \/ 23.75 \/ 27.81 \/ 31.88 \/ 35.94 \/ 40 \/ 40 \/ 40 \/ 40 \/ 40 \/ 40 \/ 40 \/ 40 \/ 40 Level 2: 10 \/ 15 \/ 20 \/ 25 \/ 30 \/ 35 \/ 40 \/ 45 \/ 50 \/ 50 \/ 50 \/ 50 \/ 50 \/ 50 \/ 50 \/ 50 \/ 50 Level 3: 12.5 \/ 18.44 \/ 24.38 \/ 30.31 \/ 36.25 \/ 42.19 \/ 48.13 \/ 54.06 \/ 60 \/ 60 \/ 60 \/ 60 \/ 60 \/ 60 \/ 60 \/ 60 \/ 60 Level 4: 15 \/ 21.88 \/ 28.75 \/ 35.63 \/ 42.5 \/ 49.38 \/ 56.25 \/ 63.13 \/ 70 \/ 70 \/ 70 \/ 70 \/ 70 \/ 70 \/ 70 \/ 70 \/ 70",
+        "Level 1: 7.5 \/ 11.56 \/ 15.63 \/ 19.69 \/ 23.75 \/ 27.81 \/ 31.88 \/ 35.94 \/ 40 \/ 40 \/ 40 \/ 40 \/ 40 \/ 40 \/ 40 \/ 40 \/ 40",
+        "Level 2: 10 \/ 15 \/ 20 \/ 25 \/ 30 \/ 35 \/ 40 \/ 45 \/ 50 \/ 50 \/ 50 \/ 50 \/ 50 \/ 50 \/ 50 \/ 50 \/ 50",
+        "Level 3: 12.5 \/ 18.44 \/ 24.38 \/ 30.31 \/ 36.25 \/ 42.19 \/ 48.13 \/ 54.06 \/ 60 \/ 60 \/ 60 \/ 60 \/ 60 \/ 60 \/ 60 \/ 60 \/ 60",
+        "Level 4: 15 \/ 21.88 \/ 28.75 \/ 35.63 \/ 42.5 \/ 49.38 \/ 56.25 \/ 63.13 \/ 70 \/ 70 \/ 70 \/ 70 \/ 70 \/ 70 \/ 70 \/ 70 \/ 70",
+        "Can deal up to 533.75\/670\/806.25\/942.5 damage, considering the enemy stays within the area for the whole duration.",
+        "The damage value for an enemy resets whenever the enemy leaves the area and enters it again. It does not count accumulated time spent within the area.",
+        "Multiple instances of Nethertoxin's debuff do not stack.",
+        "When leveling up the ability, the damage on already affected units do not update. However, if an enemy receives the debuff after leveling it up, that enemy receives the new damage values.",
+        "However, if an enemy receives the debuff after leveling it up, that enemy receives the new damage values."
+      ],
+      "mana": "85",
+      "hotKey": "W",
+      "cooldown": "14 (TagTalent 3)",
+      "description": "Viper releases a Nethertoxin at the targeted area. Units in that area take an increasing damage over time based on how long they remain in it. Disables passives of affected units.",
+      "spellName": "Nethertoxin",
+      "params": [
+        "Cast Animation: 0.2+0.5",
+        "Cast Range: 900",
+        "Radius: 400",
+        "Min Damage per Second: 15\/20\/25\/30",
+        "Max Damage per Second: 80\/100\/120\/140",
+        "Max Damage Duration: 4",
+        "Damage Interval: 0.5",
+        "Aura Linger Duration: 0.5",
+        "Duration: 8"
+      ],
+      "itemBehaviour": [],
+      "legacyKey": "R",
+      "story": "Poison from the Nether Reaches turns wounds into fatalities, and fatigue into death."
+    },
+    {
+      "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/9\/9e\/Viper_Corrosive_Skin.mp3\/revision\/latest?cb=20191216030233",
+      "effects": [
+        "Ability Passive",
+        "Affects Self \/ Enemies",
+        "Damage Magical"
+      ],
+      "notes": [
+        "Magic resistance stacks multiplicatively with other sources of magic resistance.",
+        "Increases Viper's total magic resistance to 33%\/36%\/40%\/44% (TagTalent 36%\/40%\/44%\/48%), assuming his basic 25% magic resistance and no other sources of magic resistance.",
+        "The damage and slow debuff is applied to whoever damages Viper within 1400 range of him.",
+        "Corrosive Skin's damage has the no-reflection flag, preventing its damage from interacting with other sources of damage with the same flag.",
+        "Only reacts on the 3 damage types. Does not react on damage flagged as HP Removal.",
+        "Damage dealt by abilities that use an independent source of damage (e.g. Proximity Mines, Death Ward) does not trigger Corrosive Skin on the caster.",
+        "Deals damage in 1 second intervals, starting 1 second after the debuff is applied, resulting in 4 damage instances.",
+        "Can deal a total of 32\/64\/96\/128 (TagTalent 52\/84\/116\/148) damage (before reductions).",
+        "Successive procs of Corrosive Skin on the same target do not stack, only the debuff gets refreshed.",
+        "Does not affect buildings, wards or invulnerable units."
+      ],
+      "mana": null,
+      "hotKey": "E",
+      "cooldown": null,
+      "description": "Viper exudes an infectious toxin that damages and slows the attack speed of any enemy that damages it in a 1400 radius. The acid exudate also increases Viper's resistance to magic.",
+      "spellName": "Corrosive Skin",
+      "params": [
+        "Max Proc Distance: 1400",
+        "Magic Resistance Bonus: 10%\/15%\/20%\/25% (TagTalent 15%\/20%\/25%\/30%)",
+        "Damage per Second: 8\/16\/24\/32 (TagTalent 13\/21\/29\/37)",
+        "Attack Speed Slow: 8\/16\/24\/32 (TagTalent 13\/21\/29\/37)",
+        "Duration: 4",
+        "Slow persists and attempts to damage if debuff was placed before spell immunity and when not dispelled.",
+        "Everything but the magic resistance bonus works for illusions."
+      ],
+      "itemBehaviour": [],
+      "legacyKey": "E",
+      "story": "It is not unusual for sword and shield alike to corrode in the very hands of those who attack the Netherdrake."
+    },
+    {
+      "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/0\/03\/Viper_Viper_Strike_1.mp3\/revision\/latest?cb=20191216030226",
+      "effects": [
+        "Ability Target Unit",
+        "Affects Enemies",
+        "Damage Magical"
+      ],
+      "notes": [
+        "Viper Strike's projectile travels at a speed of 1200.",
+        "The slow decreases over time. Hit units regain 0.3%\/0.4%\/0.5% of their movement speed and 0.267\/0.4\/0.533 attack speed on each server tick. This translates to 8%\/12%\/16% movement speed and 8\/12\/16 attack speed regained per second.",
+        "This translates to 8%\/12%\/16% movement speed and 8\/12\/16 attack speed regained per second.",
+        "Deals damage in 1 second intervals, starting immediately as the debuff is applied, resulting in 5 damage instances.",
+        "Can deal up to 400\/600\/800 (TagTalent 800\/1000\/1200) damage (before reductions).",
+        "Successive casts of Viper Strike on the same target do not stack, only the debuff gets refreshed.",
+        "The particle effects on Viper's wings during the cast time are visible to everyone, showing that the spell is being cast."
+      ],
+      "mana": "125\/175\/250 (TagTalent 125)",
+      "hotKey": "R",
+      "cooldown": "50\/40\/30 (TagTalent 10)",
+      "description": "Viper slows the targeted enemy unit's movement and attack speed while also dealing poison damage over time. The slowing effect reduces over the duration of the poison.",
+      "spellName": "Viper Strike",
+      "params": [
+        "Cast Animation: 0.3+0.53",
+        "Cast Range: 500 (TagAghanim 900)",
+        "Damage per Second: 80\/120\/160 (TagTalent 160\/200\/240)",
+        "Move Speed Slow: 40%\/60%\/80%",
+        "Attack Speed Slow: 40\/60\/80",
+        "Duration: 5",
+        "Decreases mana cost and cooldown, and increases cast range.",
+        "Blocked upon impact."
+      ],
+      "itemBehaviour": [],
+      "legacyKey": "V",
+      "story": "Once used to slay his sadistic summoner, the most powerful of Netherdrake infections spreads through the veins of those foolish enough to cross Viper."
+    }
+  ],
+  "mainAttributes": {
+    "attrStrengthInc": 2.4,
+    "attrStrength": 21.0,
+    "attrIntelligence": 17.0,
+    "attrIntelligenceInc": 2.0,
+    "attrAgilityInc": 2.5,
+    "attrAgility": 21.0
+  },
+  "description": "Viper, the Netherdrake, is a ranged agility hero who functions as an excellent nuker, ganker and carry due to his assortment of low-cooldown spells and debilitating attacks. His modus operandi is to whittle away his opponents' vitality over long stretches of time while they fail to inflict fatal damage. To that end Viper wields magic-based abilities focused on inhibiting speed and defenses. He infects his quarry with Poison Attack, a seemingly innocuous liquid that rapidly burns away more health as they became sicker, while drowning them in noxious pools which block their innate powers. Meanwhile Corrosive Skin fortifies him against magic damage and poisons those who dare strike him. For impervious foes he reserves his most powerful venom, Viper Strike, as a surprise gift. A slow tank that dominates the early stages of a game, Viper depends on consolidating that advantage before opponents can afford to exploit his weaknesses.",
+  "history": "The malevolent familiar of a sadistic wizard who captured and hoped to tame him, Viper was curiously glad to have been sprung from the sealed and unchanging subterranean Nether Reaches where his race had lived for millions of years, after tectonic slippage had sealed off the Netherdrakes in luminous caverns. Viper spent some time appearing to submit to the wizard's enchainments, hoping to learn what he could of the dark magics the mage practiced. But he soon realized that few spells were as deadly as the toxins that were his birthright. Exuding an acid that swiftly ate away the bars of his cage, the Netherdrake slipped free of his confines, spit poison in the old spellcaster's eyes, and soared out to let the world know that it had a new master.",
+  "talents": [
+    {
+      "talentLvl": "25",
+      "talentLeft": "Poison Attack Affects Buildings",
+      "talentRight": "-11s Nethertoxin Cooldown"
+    },
+    {
+      "talentLvl": "20",
+      "talentLeft": "+70 Damage",
+      "talentRight": "+80 Viper Strike DPS"
+    },
+    {
+      "talentLvl": "15",
+      "talentLeft": "+5 Corrosive Skin Stats",
+      "talentRight": "+100 Attack Range"
+    },
+    {
+      "talentLvl": "10",
+      "talentLeft": "8% Spell Lifesteal",
+      "talentRight": "+20 Attack Speed"
+    }
+  ]
+}

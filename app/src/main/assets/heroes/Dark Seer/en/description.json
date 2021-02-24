@@ -1,0 +1,267 @@
+{
+  "abilities": [
+    {
+      "notes": [
+        "The armor talent does not benefit illusions."
+      ],
+      "spellName": "Talent",
+      "talents": [
+        {
+          "talentLvl": "25",
+          "talentLeft": "320 AoE Surge",
+          "talentRight": "Parallel Wall"
+        },
+        {
+          "talentLvl": "20",
+          "talentLeft": "+60 Ion Shell Damage",
+          "talentRight": "+1s Wall of Replica Slow"
+        },
+        {
+          "talentLvl": "15",
+          "talentLeft": "+25% Wall of Replica Illusion Damage",
+          "talentRight": "+6 Armor"
+        },
+        {
+          "talentLvl": "10",
+          "talentLeft": "+60 Vacuum AoE",
+          "talentRight": "+75 Ion Shell Radius"
+        }
+      ]
+    },
+    {
+      "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/2\/2e\/Dark_Seer_Vacuum.mp3\/revision\/latest?cb=20191216012246",
+      "effects": [
+        "Ability Target Area",
+        "Affects Enemies",
+        "Damage Magical"
+      ],
+      "notes": [
+        "The pull duration always takes 0.3\/0.4\/0.5\/0.6 seconds, no matter how far or close the units are from the center, so the speed varies.",
+        "The damage is applied upon losing the debuff, so that dispelling it causes it to happen earlier.",
+        "Affected units are fully disabled during the pull.",
+        "Can pull units over impassable terrain.",
+        "Fully affects invisible and invulnerable units (except for units affected by Eul's Scepter of Divinity's Cyclone), but not hidden units.",
+        "Does not affect ancient creeps.",
+        "Vacuum destroys trees within 275 radius at the targeted point upon cast, after placing the debuff on enemies."
+      ],
+      "mana": "60\/90\/120\/150",
+      "hotKey": "Q",
+      "cooldown": "60\/50\/40\/30",
+      "description": "Dark Seer creates a vacuum over the target area that sucks in enemy units, disrupting them and dealing damage.",
+      "spellName": "Vacuum",
+      "params": [
+        "Cast Animation: 0.4+0.7",
+        "Cast Range: 450\/500\/550\/600",
+        "Effect Radius: 400\/450\/500\/550 (TagTalent 460\/510\/560\/610)",
+        "Damage: 100\/150\/200\/250",
+        "Pull Duration: 0.3\/0.4\/0.5\/0.6",
+        "Attempts to deal damage if enemy turns spell immune before the pull ends."
+      ],
+      "itemBehaviour": [],
+      "legacyKey": "C",
+      "story": "Ish'Kafel modifies the center of gravity to a place of his choosing."
+    },
+    {
+      "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/8\/81\/Dark_Seer_Ion_Shell.mp3\/revision\/latest?cb=20191216012241",
+      "effects": [
+        "Ability Target Unit",
+        "Affects Enemies",
+        "Damage Magical"
+      ],
+      "notes": [
+        "The shell can be put on enemy and allied units, damaging only enemy units. The unit with the shell itself is not damaged.",
+        "Successive casts on the same unit do not stack, but refresh the duration and update the damage to the current level instead. When two opposing heroes cast it on the same target, the modifier updates and starts damaging the enemies of the latest caster. The modifier status, however, does not update. Whether it is treated as a buff or debuff is determined by the first cast, and not updated on refresh.",
+        "When two opposing heroes cast it on the same target, the modifier updates and starts damaging the enemies of the latest caster.",
+        "The modifier status, however, does not update. Whether it is treated as a buff or debuff is determined by the first cast, and not updated on refresh.",
+        "Deals 2.4\/4.6\/6.8\/9 (TagTalent 8.4\/10.6\/12.8\/15) damage in 0.1 second intervals, starting 0.1 seconds after the cast, resulting in 250 damage instances.",
+        "Can deal up to 600\/1150\/1700\/2250 (TagTalent 2100\/2650\/3200\/3750) damage to a single unit (before reductions), if it stays in range for the full duration. With Aghanim's Scepter, Ion Shell can deal up to 480\/920\/1360\/1800 (TagTalent 1680\/2120\/2560\/3000) damage to a single unit (before reductions), if it stays in range for the full duration.",
+        "With Aghanim's Scepter, Ion Shell can deal up to 480\/920\/1360\/1800 (TagTalent 1680\/2120\/2560\/3000) damage to a single unit (before reductions), if it stays in range for the full duration.",
+        "Affects invisible units that go close to the shell wearer, however, the visual effects do not appear.",
+        "Cannot be cast on creep-heroes or couriers.",
+        "Choosing the damage upgrading talent immediately upgrades all of Dark Seer's currently active Ion Shell modifiers.",
+        "Aghanim's Scepter also increases maximum health of targeted allies by 350, keeping the current health percentage the same."
+      ],
+      "mana": "100\/110\/120\/130",
+      "hotKey": "W",
+      "cooldown": "9 (TagTalent 0)",
+      "description": "Surrounds the target unit with a bristling shield that damages enemy units in an area around it.",
+      "spellName": "Ion Shell",
+      "params": [
+        "Cast Animation: 0.4+0.7",
+        "Cast Range: 600",
+        "Damage Radius: 275 (TagTalent 350)",
+        "Damage per Second: 24\/46\/68\/90 (TagTalent 84\/106\/128\/150)",
+        "Duration: 25 (TagAghanim 20)",
+        "Max Health Bonus: 350",
+        "Number of Charges: 2",
+        "Charge Replenish Time: 9",
+        "Causes Ion Shell to have 2 charges, increases duration by -5 and provides +350 Health.",
+        "Can be cast on spell immune allies. Cannot be cast on spell immune enemies. Shell persists if debuff was placed before spell immunity and when not dispelled."
+      ],
+      "itemBehaviour": [],
+      "legacyKey": "E",
+      "story": "The Dark Seer slices holes into the 'Land Behind the Wall,' causing prismatic energy to seep forth."
+    },
+    {
+      "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/e\/e0\/Dark_Seer_Surge.mp3\/revision\/latest?cb=20191216012245",
+      "effects": [
+        "Ability Target Unit (TagAghanim Target Area)",
+        "Affects Allies"
+      ],
+      "notes": [
+        "Applies a haste on the target, meaning it cannot be slowed while affected.",
+        "Also grants the target phased movement while affected.",
+        "The talent turns Surge into an area-targeted spell, so that it cannot directly target units anymore. Self-casting the ability still targets Dark Seer, centering the AoE around him.",
+        "Self-casting the ability still targets Dark Seer, centering the AoE around him."
+      ],
+      "mana": "50",
+      "hotKey": "E",
+      "cooldown": "19\/16\/13\/10",
+      "description": "Charges a target friendly unit with power, giving it a brief burst of movement speed and removes unit collisions. Allows the unit to reach maximum movement speed and cannot be slowed.",
+      "spellName": "Surge",
+      "params": [
+        "Cast Animation: 0.4+0.57",
+        "Cast Range: 600",
+        "Haste Speed: 550",
+        "Duration: 3\/4\/5\/6",
+        "Radius: 320"
+      ],
+      "itemBehaviour": [],
+      "legacyKey": "R",
+      "story": "Ish'Kafel once used his speed of mind to navigate the maze between the walls."
+    },
+    {
+      "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/2\/27\/Dark_Seer_Normal_Punch_1.mp3\/revision\/latest?cb=20201224202126",
+      "effects": [
+        "Ability Passive",
+        "Affects Enemy Heroes",
+        "Damage Magical"
+      ],
+      "notes": [
+        "Requires Aghanim's Shard to be unlocked.",
+        "The cooldown only triggers upon successfully hitting an enemy. Missed attacks do not waste the ability.",
+        "The bonus damage is dealt in a separate damage instance, and counts as spell damage. This means it is not affected or considered by anything that works with attack damage. This also means that it fully works with spell damage amplification and spell lifesteal.",
+        "This means it is not affected or considered by anything that works with attack damage.",
+        "This also means that it fully works with spell damage amplification and spell lifesteal.",
+        "Constantly checks the distance Dark Seer moves and calculates the damage, knockback distance, knockback duration, and stun duration accordingly. For every 10 distance moved, the damage increases by 1.6, knockback distance by 2, knockback duration by 0.00683, and stun duration by 0.01367. Teleporting effects (which includes blinking) may only add up to 600 range to the distance counter, no matter how big the actual teleported distance was. The distance counter never resets, so it is possible to perform multiple full power punches in a row, with the help of cooldown resetting effects.",
+        "For every 10 distance moved, the damage increases by 1.6, knockback distance by 2, knockback duration by 0.00683, and stun duration by 0.01367.",
+        "Teleporting effects (which includes blinking) may only add up to 600 range to the distance counter, no matter how big the actual teleported distance was.",
+        "The distance counter never resets, so it is possible to perform multiple full power punches in a row, with the help of cooldown resetting effects.",
+        "These are the damage, knockback distance, and stun duration values at certain distances moved in the last 3 seconds (before reductions): 0 distance moved: 10 damage, 50 knockback distance, 0.1s knockback duration, 0.2s stun duration. 300 distance moved: 58 damage, 110 knockback distance, 0.305s knockback duration, 0.61s stun duration. 600 distance moved: 106 damage, 170 knockback distance, 0.51s knockback duration, 1.02s stun duration. 900 distance moved: 154 damage, 230 knockback distance, 0.715s knockback duration, 1.43s stun duration. 1200 distance moved: 202 damage, 290 knockback distance, 0.92s knockback duration, 1.84s stun duration. 1500 distance moved: 250 damage, 350 knockback distance, 1.125s knockback duration, 2.25s stun duration.",
+        "0 distance moved: 10 damage, 50 knockback distance, 0.1s knockback duration, 0.2s stun duration.",
+        "300 distance moved: 58 damage, 110 knockback distance, 0.305s knockback duration, 0.61s stun duration.",
+        "600 distance moved: 106 damage, 170 knockback distance, 0.51s knockback duration, 1.02s stun duration.",
+        "900 distance moved: 154 damage, 230 knockback distance, 0.715s knockback duration, 1.43s stun duration.",
+        "1200 distance moved: 202 damage, 290 knockback distance, 0.92s knockback duration, 1.84s stun duration.",
+        "1500 distance moved: 250 damage, 350 knockback distance, 1.125s knockback duration, 2.25s stun duration.",
+        "Normal Punch first applies the stun, then the damage, then the knockback, then the attack damage.",
+        "The illusion is spawned 350 range behind the enemy's determined landing position, 0.7 seconds after the punch was delivered. The illusion can be controlled normally. It is initially ordered to attack the punch target.",
+        "The illusion can be controlled normally. It is initially ordered to attack the punch target.",
+        "The punch particle and sound effects upgrade when the distance counter is at 600, and upgrade again when at 1500."
+      ],
+      "mana": null,
+      "hotKey": null,
+      "cooldown": null,
+      "description": "Recent Movement Time Window: 3",
+      "spellName": "Normal Punch",
+      "params": [
+        "Recent Movement Time Window: 3",
+        "Distance Required for Max Values: 1500",
+        "Min Knockback Distance: 50",
+        "Max Knockback Distance: 350",
+        "Min Damage: 10",
+        "Max Damage: 250",
+        "Min Stun Duration: 0.2",
+        "Max Stun Duration: 2.25",
+        "Number of Illusions: 1",
+        "Illusion Damage Dealt: 40%",
+        "Illusion Damage Taken: 300%",
+        "Illusion Spawn Delay: 0.7",
+        "Illusion Duration: 5"
+      ],
+      "itemBehaviour": [],
+      "legacyKey": null,
+      "story": null
+    },
+    {
+      "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/1\/14\/Dark_Seer_Wall_of_Replica.mp3\/revision\/latest?cb=20191216012247",
+      "effects": [
+        "Ability Target Point \/ Vector Targeting",
+        "Affects Enemy Heroes"
+      ],
+      "notes": [
+        "The values of the wall are set upon creation, and do not update upon leveling the spell further up after having placed the wall.",
+        "A wall can only create one illusion per player. There cannot be more than one illusion per player per wall. This means when there are multiple walls up (with the talent, or with multiple casts), each wall can create an illusion for each enemy. This also means that when an enemy has multiple heroes (TagTalent Meepo clones and Tempest Double clones), they are still limited to one illusion per wall. Even if the illusion gets Enchanted, the wall still cannot create a new illusion until the old one is killed.",
+        "This means when there are multiple walls up (with the talent, or with multiple casts), each wall can create an illusion for each enemy.",
+        "This also means that when an enemy has multiple heroes (TagTalent Meepo clones and Tempest Double clones), they are still limited to one illusion per wall.",
+        "Even if the illusion gets Enchanted, the wall still cannot create a new illusion until the old one is killed.",
+        "Only creates illusions of real heroes. Does not create illusions of illusions pathing through the wall. Can create illusions of Divided We Stand and Tempest Double clones as well, but not of Wukong's Command clones. Can create the illusions of invulnerable enemies, but not hidden ones. The slow, however, is not placed on invulnerable units.",
+        "Can create illusions of Divided We Stand and Tempest Double clones as well, but not of Wukong's Command clones.",
+        "Can create the illusions of invulnerable enemies, but not hidden ones. The slow, however, is not placed on invulnerable units.",
+        "Upon spawning, the illusions are automatically ordered to attack the heroes they are based on.",
+        "When the illusion dies, the wall can create a new illusion of that hero as soon as it comes in range.",
+        "Illusions created by Wall of Replica have a static 5 and 5 bounty which does not scale with levels.",
+        "The illusions' duration is based on the remaining duration of the wall from which they originate.",
+        "The illusion spawns 108 range away from the hero if the hero has a collision size of 24, and 72 if the collision size is 8. It appears either north, east, south or west from the target.",
+        "Wall of Replica illusions are visually distinguishable for the enemies.",
+        "The slow is applied constantly within the wall's area. When walls overlap with each, their slows do not stack.",
+        "When choosing the level 25 parallel wall talent, a second wall is placed 600 range behind the cast location of first wall, parallel to it."
+      ],
+      "mana": "125\/250\/375",
+      "hotKey": "R",
+      "cooldown": "100",
+      "description": "Raises a wall of warping light that slows and creates replicas of any enemy hero who crosses it. Enemy replicas serve at the Dark Seer's will. Replicas last until they are destroyed, or until the wall's duration ends.",
+      "spellName": "Wall of Replica",
+      "params": [
+        "Cast Animation: 0.2+0.73",
+        "Cast Range: 1300",
+        "Number of Walls: 1 (TagTalent 2)",
+        "Wall Length: 1300",
+        "Wall Width: 50",
+        "Move Speed Slow: 50%\/60%\/70%",
+        "Illusion Damage Dealt: 70%\/85%\/100% (TagTalent 95%\/110%\/125%)",
+        "Illusion Damage Taken: 200%",
+        "Duration: 45",
+        "Slow Duration: 1 (TagTalent 2)",
+        "Parallel Wall Distance: 600",
+        "Grants a new ability: Normal Punch.",
+        "Creates illusions of spell immune enemies, but does not slow them."
+      ],
+      "itemBehaviour": [],
+      "legacyKey": "W",
+      "story": "The Dark Seer, while unable to return to his natural realm, can channel part of the prismatic wall with powerful strength of mind, sowing confusion amongst enemy ranks."
+    }
+  ],
+  "mainAttributes": {
+    "attrStrengthInc": 3.1,
+    "attrStrength": 20.0,
+    "attrIntelligence": 21.0,
+    "attrIntelligenceInc": 3.1,
+    "attrAgilityInc": 1.8,
+    "attrAgility": 18.0
+  },
+  "description": "Ish'kafel, the Dark Seer, is a melee intelligence hero who relies on his abilities' potent utility and synergy. In lane he is sustained by high armor and enabled by his Ion Shell and Surge. Surge boosts his or an ally's speed, helping them to escape or pursue opponents. Ion Shell wraps a unit in a spiky shield that rapidly damages nearby enemies, enabling Ish'kafel to harass and gain last hits. These abilities also make him an efficient jungler and therefore a natural semi-carry, usually focused on building utility items.",
+  "history": "Fast when he needs to be, and a cunning strategist, Ish'Kafel the Dark Seer requires no edged weapons to vanquish his enemies, relying instead on the strength of his powerful mind. His talent lies in his ability to maneuver the fight to his advantage. Hailing from a place he calls 'The Land behind the wall,' Dark Seer remains an outsider here\u2014a warrior from a realm beyond the veil of this reality. Once a great general among his people, and a valiant defender of the god-king Damathryx, Dark Seer\u2019s army was wiped out by a much larger force in the final days of the Great Boundaries War. Facing certain defeat, he made one last desperate act: he led the enemy forces into the maze between the walls. At the last moment, just before capture, he crossed over\u2014then sealed the walls forever in an explosive release of dark energy. When the dust settled, he saw that he had saved his people but found himself blinking at the sun of a different world, with no way to return. Now he is committed to proving his worth as a military strategist, and vows to show that he\u2019s the greatest tactician this strange new world has ever seen.",
+  "talents": [
+    {
+      "talentLvl": "25",
+      "talentLeft": "320 AoE Surge",
+      "talentRight": "Parallel Wall"
+    },
+    {
+      "talentLvl": "20",
+      "talentLeft": "+60 Ion Shell Damage",
+      "talentRight": "+1s Wall of Replica Slow"
+    },
+    {
+      "talentLvl": "15",
+      "talentLeft": "+25% Wall of Replica Illusion Damage",
+      "talentRight": "+6 Armor"
+    },
+    {
+      "talentLvl": "10",
+      "talentLeft": "+60 Vacuum AoE",
+      "talentRight": "+75 Ion Shell Radius"
+    }
+  ]
+}

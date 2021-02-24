@@ -1,0 +1,30 @@
+{
+  "abilities": [],
+  "additionalInformation": [
+    "For strength heroes, it grants 40 health, 0.2 health regen, 0.33 armor, 2 attack speed, 60 mana, 0.85 mana regen, 3% spell damage and 2 attack damage.",
+    "For agility heroes, it grants 40 health, 0.2 health regen, 0.33 armor, 2 attack speed, 60 mana, 0.85 mana regen, 3% spell damage and 2 attack damage.",
+    "For intelligence heroes, it grants 40 health, 0.2 health regen, 0.33 armor, 2 attack speed, 60 mana, 0.85 mana regen, 3% spell damage and 5 attack damage."
+  ],
+  "cost": "510",
+  "lore": null,
+  "consistFrom": [
+    "Circlet",
+    "Mantle of Intelligence",
+    "Recipe"
+  ],
+  "boughtFrom": "Accessories",
+  "name": "Null Talisman",
+  "description": "A small gemstone attached to several chains.",
+  "trivia": null,
+  "upgradeIn": null,
+  "bonuses": [
+    "+2 Strength",
+    "+2 Agility",
+    "+5 Intelligence",
+    "+0.6 Mana regeneration",
+    "+3% Spell damage"
+  ],
+  "tips": [
+    "For intelligence heroes, a Bracer grants just as much attack damage as a Null Talisman."
+  ]
+}

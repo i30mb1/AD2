@@ -1,0 +1,977 @@
+[
+  {
+    "responses": [
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/a\/a5\/Vo_lion_lion_spawn_01.mp3\/revision\/latest?cb=20201017004457",
+        "title": "Lion."
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/c\/c5\/Vo_lion_lion_spawn_02.mp3\/revision\/latest?cb=20201017004459",
+        "title": "I am Lion."
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/6\/61\/Vo_lion_lion_spawn_03.mp3\/revision\/latest?cb=20201017004501",
+        "title": "Demon witch."
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/c\/cd\/Vo_lion_lion_spawn_04.mp3\/revision\/latest?cb=20201017004503",
+        "title": "You summon the demon witch."
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/a\/af\/Vo_lion_lion_spawn_05.mp3\/revision\/latest?cb=20201017004504",
+        "title": "Hell hath no fury like me."
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/a\/a8\/Vo_lion_lion_spawn_06.mp3\/revision\/latest?cb=20201017004506",
+        "title": "All hell's broken loose, and I hold the pieces."
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/a\/a9\/Vo_lion_lion_move_11.mp3\/revision\/latest?cb=20201017004333",
+        "title": "Where's the fight?"
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/c\/cc\/Vo_lion_lion_move_12.mp3\/revision\/latest?cb=20201017004335",
+        "title": "Oh, hell yes."
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/4\/41\/Vo_lion_lion_move_10.mp3\/revision\/latest?cb=20201017004331",
+        "title": "To Hell and back."
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/7\/77\/Vo_lion_lion_attack_10.mp3\/revision\/latest?cb=20201017003950",
+        "title": "Hell's fury burns!"
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/4\/41\/Vo_lion_lion_attack_11.mp3\/revision\/latest?cb=20201017003953",
+        "title": "Battle rages!"
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/7\/74\/Vo_lion_lion_attack_12.mp3\/revision\/latest?cb=20201017003955",
+        "title": "Feel my claw!"
+      }
+    ],
+    "category": "Снаряжение"
+  },
+  {
+    "responses": [
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/a\/a5\/Vo_lion_lion_spawn_01.mp3\/revision\/latest?cb=20201017004457",
+        "title": "Lion."
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/5\/51\/Vo_lion_lion_anger_03.mp3\/revision\/latest?cb=20201017003919",
+        "title": "Errehe!"
+      }
+    ],
+    "category": "Стадия планирования"
+  },
+  {
+    "responses": [
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/a\/a5\/Vo_lion_lion_spawn_01.mp3\/revision\/latest?cb=20201017004457",
+        "title": "Lion."
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/6\/61\/Vo_lion_lion_spawn_03.mp3\/revision\/latest?cb=20201017004501",
+        "title": "Demon witch."
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/c\/cd\/Vo_lion_lion_spawn_04.mp3\/revision\/latest?cb=20201017004503",
+        "title": "You summon the demon witch."
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/a\/af\/Vo_lion_lion_spawn_05.mp3\/revision\/latest?cb=20201017004504",
+        "title": "Hell hath no fury like me."
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/a\/a8\/Vo_lion_lion_spawn_06.mp3\/revision\/latest?cb=20201017004506",
+        "title": "All hell's broken loose, and I hold the pieces."
+      }
+    ],
+    "category": "Появление"
+  },
+  {
+    "responses": [
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/e\/e6\/Vo_lion_lion_inthebag_01.mp3\/revision\/latest?cb=20201017004139",
+        "title": "It's in the bag!"
+      }
+    ],
+    "category": "Насмешка"
+  },
+  {
+    "responses": [
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/b\/b0\/Vo_lion_lion_cast_01.mp3\/revision\/latest?cb=20201017004011",
+        "title": "Ooooh, time for strong-arm tactics."
+      }
+    ],
+    "category": "Начало битвы"
+  },
+  {
+    "responses": [
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/a\/a3\/Vo_lion_lion_move_01.mp3\/revision\/latest?cb=20201017004315",
+        "title": "Yes."
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/3\/32\/Vo_lion_lion_move_02.mp3\/revision\/latest?cb=20201017004317",
+        "isArcane": true,
+        "title": "Yes."
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/b\/b2\/Vo_lion_lion_move_03.mp3\/revision\/latest?cb=20201017004318",
+        "title": "Oh, yes."
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/c\/c4\/Vo_lion_lion_move_04.mp3\/revision\/latest?cb=20201017004320",
+        "title": "Yesss."
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/0\/07\/Vo_lion_lion_move_05.mp3\/revision\/latest?cb=20201017004322",
+        "title": "Forward."
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/b\/bd\/Vo_lion_lion_move_06.mp3\/revision\/latest?cb=20201017004324",
+        "title": "I go like the devil."
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/9\/96\/Vo_lion_lion_move_07.mp3\/revision\/latest?cb=20201017004326",
+        "title": "Onward."
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/c\/c4\/Vo_lion_lion_move_08.mp3\/revision\/latest?cb=20201017004327",
+        "title": "Why not."
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/2\/2f\/Vo_lion_lion_move_09.mp3\/revision\/latest?cb=20201017004330",
+        "title": "Verily."
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/4\/41\/Vo_lion_lion_move_10.mp3\/revision\/latest?cb=20201017004331",
+        "title": "To Hell and back."
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/c\/cc\/Vo_lion_lion_move_12.mp3\/revision\/latest?cb=20201017004335",
+        "title": "Oh, hell yes."
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/7\/73\/Vo_lion_lion_move_13.mp3\/revision\/latest?cb=20201017004337",
+        "title": "Prowling."
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/a\/a9\/Vo_lion_lion_move_11.mp3\/revision\/latest?cb=20201017004333",
+        "title": "Where's the fight?"
+      }
+    ],
+    "category": "Передвижение"
+  },
+  {
+    "responses": [
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/8\/85\/Vo_lion_lion_attack_01.mp3\/revision\/latest?cb=20201017003927",
+        "title": "Attack!"
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/1\/1c\/Vo_lion_lion_attack_02.mp3\/revision\/latest?cb=20201017003929",
+        "title": "The devil to pay!"
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/5\/51\/Vo_lion_lion_attack_03.mp3\/revision\/latest?cb=20201017003932",
+        "title": "Die at my hand!"
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/6\/6d\/Vo_lion_lion_attack_04.mp3\/revision\/latest?cb=20201017003934",
+        "title": "Cower!"
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/c\/c7\/Vo_lion_lion_attack_05.mp3\/revision\/latest?cb=20201017003936",
+        "title": "I'll put the squeeze on you!"
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/6\/64\/Vo_lion_lion_attack_06.mp3\/revision\/latest?cb=20201017003939",
+        "title": "To hell with you!"
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/2\/2e\/Vo_lion_lion_attack_07.mp3\/revision\/latest?cb=20201017003942",
+        "title": "After them!"
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/3\/30\/Vo_lion_lion_attack_08.mp3\/revision\/latest?cb=20201017003944",
+        "title": "You will pay."
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/2\/24\/Vo_lion_lion_attack_09.mp3\/revision\/latest?cb=20201017003947",
+        "title": "Knuckle under!"
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/7\/77\/Vo_lion_lion_attack_10.mp3\/revision\/latest?cb=20201017003950",
+        "title": "Hell's fury burns!"
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/4\/41\/Vo_lion_lion_attack_11.mp3\/revision\/latest?cb=20201017003953",
+        "title": "Battle rages!"
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/7\/74\/Vo_lion_lion_attack_12.mp3\/revision\/latest?cb=20201017003955",
+        "title": "Feel my claw!"
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/f\/fe\/Vo_lion_lion_attack_13.mp3\/revision\/latest?cb=20201017003958",
+        "title": "Heah!"
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/d\/d4\/Vo_lion_lion_attack_14.mp3\/revision\/latest?cb=20201017004001",
+        "title": "Haya!"
+      }
+    ],
+    "category": "Атака"
+  },
+  {
+    "responses": [
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/3\/32\/Vo_lion_lion_cast_02.mp3\/revision\/latest?cb=20201017004014",
+        "title": "Here's all you need of hell!"
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/1\/18\/Vo_lion_lion_cast_03.mp3\/revision\/latest?cb=20201017004017",
+        "title": "Feel the rage of a mage!"
+      }
+    ],
+    "category": "Использование заклинания"
+  },
+  {
+    "responses": [
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/b\/b7\/Vo_lion_lion_ability_spike_01.mp3\/revision\/latest?cb=20201017004523",
+        "title": "Spike!"
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/c\/c7\/Vo_lion_lion_ability_spike_02.mp3\/revision\/latest?cb=20201017004525",
+        "title": "Grow a spine."
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/d\/d9\/Vo_lion_lion_ability_spike_03.mp3\/revision\/latest?cb=20201017003855",
+        "title": "Impaled!"
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/f\/fe\/Vo_lion_lion_ability_voodoo_01.mp3\/revision\/latest?cb=20201017003858",
+        "title": "Croak."
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/7\/76\/Vo_lion_lion_ability_voodoo_02.mp3\/revision\/latest?cb=20201017003900",
+        "title": "Hop frog."
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/6\/67\/Vo_lion_lion_ability_voodoo_03.mp3\/revision\/latest?cb=20201017003902",
+        "title": "Nice legs."
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/1\/1c\/Vo_lion_lion_ability_voodoo_04.mp3\/revision\/latest?cb=20201017003903",
+        "title": "Hop to it."
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/2\/2c\/Vo_lion_lion_ability_voodoo_05.mp3\/revision\/latest?cb=20201017003905",
+        "title": "Look at you!"
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/d\/d5\/Vo_lion_lion_ability_voodoo_06.mp3\/revision\/latest?cb=20201017003907",
+        "title": "The real you."
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/2\/2e\/Vo_lion_lion_ability_voodoo_07.mp3\/revision\/latest?cb=20201017003908",
+        "title": "Puny."
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/f\/f0\/Vo_lion_lion_ability_voodoo_08.mp3\/revision\/latest?cb=20201017003910",
+        "title": "Puny little thing."
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/c\/c7\/Vo_lion_lion_ability_voodoo_09.mp3\/revision\/latest?cb=20201017003912",
+        "title": "That's a good look for you."
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/e\/e3\/Vo_lion_lion_ability_voodoo_10.mp3\/revision\/latest?cb=20201017003914",
+        "title": "Not feeling yourself?"
+      }
+    ],
+    "category": "Способности"
+  },
+  {
+    "responses": [
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/8\/82\/Vo_lion_lion_level_01.mp3\/revision\/latest?cb=20201017004258",
+        "title": "Oh, such strength is mine!"
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/6\/64\/Vo_lion_lion_level_02.mp3\/revision\/latest?cb=20201017004300",
+        "title": "More power."
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/c\/cb\/Vo_lion_lion_level_03.mp3\/revision\/latest?cb=20201017004302",
+        "title": "I've got a power grip!"
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/1\/19\/Vo_lion_lion_level_04.mp3\/revision\/latest?cb=20201017004303",
+        "title": "Lionize me!"
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/4\/47\/Vo_lion_lion_level_05.mp3\/revision\/latest?cb=20201017004305",
+        "title": "Power pours into me."
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/0\/0d\/Vo_lion_lion_level_06.mp3\/revision\/latest?cb=20201017004307",
+        "title": "Ho-ha-ha-ha-huh."
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/6\/6a\/Vo_lion_lion_level_07.mp3\/revision\/latest?cb=20201017004308",
+        "title": "Heh-hah!"
+      }
+    ],
+    "category": "Получение уровня"
+  },
+  {
+    "responses": [
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/e\/ec\/Vo_lion_lion_kill_01.mp3\/revision\/latest?cb=20201017004145",
+        "title": "Here you die."
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/c\/c3\/Vo_lion_lion_kill_02.mp3\/revision\/latest?cb=20201017004147",
+        "title": "To hell with you!"
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/a\/a0\/Vo_lion_lion_kill_03.mp3\/revision\/latest?cb=20201017004150",
+        "title": "When you get to hell, tell them I sent you."
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/d\/d2\/Vo_lion_lion_kill_04.mp3\/revision\/latest?cb=20201017004153",
+        "title": "I've got the magic touch."
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/3\/3e\/Vo_lion_lion_kill_05.mp3\/revision\/latest?cb=20201017004155",
+        "title": "You thought to tame the lion?"
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/d\/d5\/Vo_lion_lion_kill_06.mp3\/revision\/latest?cb=20201017004157",
+        "title": "My pride, your fall."
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/0\/06\/Vo_lion_lion_kill_07.mp3\/revision\/latest?cb=20201017004200",
+        "title": "Death to all betrayers!"
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/7\/78\/Vo_lion_lion_kill_08.mp3\/revision\/latest?cb=20201017004203",
+        "title": "By my horns, you'll not live to see the dawn!"
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/f\/f8\/Vo_lion_lion_kill_09.mp3\/revision\/latest?cb=20201017004205",
+        "title": "Death is only the start of your suffering."
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/4\/41\/Vo_lion_lion_kill_10.mp3\/revision\/latest?cb=20201017004208",
+        "title": "I'll let you go now."
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/3\/36\/Vo_lion_lion_kill_11.mp3\/revision\/latest?cb=20201017004211",
+        "title": "Hwa-ha-ha-ha-ha-ha-ha!"
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/1\/1f\/Vo_lion_lion_laugh_02.mp3\/revision\/latest?cb=20201017004249",
+        "title": "Who-ha-heh-heh-heheha."
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/e\/e4\/Vo_lion_lion_laugh_03.mp3\/revision\/latest?cb=20201017004251",
+        "title": "Hah!"
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/b\/b3\/Vo_lion_lion_laugh_04.mp3\/revision\/latest?cb=20201017004252",
+        "title": "Ho-ho-ha-ha-ha-ha-he-heh."
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/c\/c8\/Vo_lion_lion_laugh_05.mp3\/revision\/latest?cb=20201017004255",
+        "title": "Ohhh, he-he-heh-he-he-he-heh."
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/3\/39\/Vo_lion_lion_laugh_06.mp3\/revision\/latest?cb=20201017004256",
+        "title": "Ahh, he-he-he-he-huh-hah-huh-heh-heh-ha!"
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/b\/b4\/Vo_lion_lion_killspecial_01.mp3\/revision\/latest?cb=20201017004213",
+        "title": "All we need now is a wardrobe.",
+        "icons": [
+          "heroes\/Witch Doctor\/minimap.png"
+        ]
+      }
+    ],
+    "category": "Убийство врага"
+  },
+  {
+    "responses": [
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/7\/76\/Vo_lion_lion_lasthit_01.mp3\/revision\/latest?cb=20201017004224",
+        "title": "Cash in hand."
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/e\/e9\/Vo_lion_lion_lasthit_02.mp3\/revision\/latest?cb=20201017004226",
+        "title": "Hell to pay."
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/8\/8d\/Vo_lion_lion_lasthit_03.mp3\/revision\/latest?cb=20201017004229",
+        "title": "Money changes hands."
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/b\/b7\/Vo_lion_lion_lasthit_04.mp3\/revision\/latest?cb=20201017004232",
+        "title": "Hand it over."
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/d\/da\/Vo_lion_lion_lasthit_05.mp3\/revision\/latest?cb=20201017004235",
+        "title": "Paid handsomely."
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/d\/d9\/Vo_lion_lion_lasthit_06.mp3\/revision\/latest?cb=20201017004237",
+        "title": "Punched your ticket."
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/7\/76\/Vo_lion_lion_lasthit_07.mp3\/revision\/latest?cb=20201017004240",
+        "title": "Cross my palm."
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/7\/76\/Vo_lion_lion_lasthit_08.mp3\/revision\/latest?cb=20201017004242",
+        "title": "Mine."
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/2\/28\/Vo_lion_lion_lasthit_09.mp3\/revision\/latest?cb=20201017004245",
+        "title": "I'll take that."
+      }
+    ],
+    "category": "Добивание"
+  },
+  {
+    "responses": [
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/3\/33\/Vo_lion_lion_deny_01.mp3\/revision\/latest?cb=20201017004047",
+        "title": "Denied!"
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/f\/f4\/Vo_lion_lion_deny_02.mp3\/revision\/latest?cb=20201017004050",
+        "title": "Uh-uh."
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/d\/d6\/Vo_lion_lion_deny_03.mp3\/revision\/latest?cb=20201017004052",
+        "isArcane": true,
+        "title": "Uh-uh."
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/0\/03\/Vo_lion_lion_deny_04.mp3\/revision\/latest?cb=20201017004055",
+        "title": "Hands off."
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/9\/9c\/Vo_lion_lion_deny_05.mp3\/revision\/latest?cb=20201017004058",
+        "title": "I like to keep my hand in."
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/4\/4a\/Vo_lion_lion_deny_06.mp3\/revision\/latest?cb=20201017004100",
+        "title": "Ah, sorry to disappoint you."
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/6\/64\/Vo_lion_lion_deny_07.mp3\/revision\/latest?cb=20201017004103",
+        "title": "Ah he he ha ha ha ha."
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/7\/7a\/Vo_lion_lion_deny_08.mp3\/revision\/latest?cb=20201017004106",
+        "title": "Hah-ha-he-heh-heh-heh-heh-ha."
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/0\/01\/Vo_lion_lion_deny_09.mp3\/revision\/latest?cb=20201017004108",
+        "title": "Not today."
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/3\/3b\/Vo_lion_lion_deny_10.mp3\/revision\/latest?cb=20201017004111",
+        "title": "No way."
+      }
+    ],
+    "category": "Добивание союзного юнита"
+  },
+  {
+    "responses": [
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/a\/a1\/Vo_lion_lion_purch_01.mp3\/revision\/latest?cb=20201017004424",
+        "title": "That nearly cost me an arm and a leg."
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/6\/65\/Vo_lion_lion_purch_02.mp3\/revision\/latest?cb=20201017004426",
+        "title": "Hells, yes!"
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/d\/d0\/Vo_lion_lion_purch_03.mp3\/revision\/latest?cb=20201017004427",
+        "title": "I would have pawned my golden glove for this."
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/5\/59\/Vo_lion_lion_immort_01.mp3\/revision\/latest?cb=20201017004136",
+        "title": "Immortality!",
+        "icons": [
+          "heroes\/Aegis of the Immortal\/minimap.png"
+        ]
+      }
+    ],
+    "category": "Получение предмета"
+  },
+  {
+    "responses": [
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/2\/2d\/Vo_lion_lion_death_02.mp3\/revision\/latest?cb=20201017004024",
+        "title": "No!"
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/8\/84\/Vo_lion_lion_death_03.mp3\/revision\/latest?cb=20201017004027",
+        "title": "My hands are tied."
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/8\/8f\/Vo_lion_lion_death_04.mp3\/revision\/latest?cb=20201017004029",
+        "title": "Death transfigures once again."
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/f\/f5\/Vo_lion_lion_death_05.mp3\/revision\/latest?cb=20201017004032",
+        "title": "I will have my revenge."
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/d\/dc\/Vo_lion_lion_death_06.mp3\/revision\/latest?cb=20201017004034",
+        "title": "To hell with me."
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/2\/21\/Vo_lion_lion_death_07.mp3\/revision\/latest?cb=20201017004037",
+        "title": "You wound my pride."
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/e\/e3\/Vo_lion_lion_death_08.mp3\/revision\/latest?cb=20201017004039",
+        "title": "Hells gates swing wide."
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/4\/40\/Vo_lion_lion_death_09.mp3\/revision\/latest?cb=20201017004042",
+        "title": "The lion's heart beats no more."
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/1\/18\/Vo_lion_lion_death_10.mp3\/revision\/latest?cb=20201017004045",
+        "title": "My rage will bring me back."
+      }
+    ],
+    "category": "Смерть"
+  },
+  {
+    "responses": [
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/6\/6a\/Vo_lion_lion_death_01.mp3\/revision\/latest?cb=20201017004022",
+        "title": "I've already been to Hell; what else can they do to me."
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/1\/12\/Vo_lion_lion_respawn_01.mp3\/revision\/latest?cb=20201017004438",
+        "title": "I've been to hell and back, and back to hell\u2026and back."
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/0\/0a\/Vo_lion_lion_respawn_02.mp3\/revision\/latest?cb=20201017004439",
+        "title": "Time to take matters into my own hand."
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/c\/c6\/Vo_lion_lion_respawn_03.mp3\/revision\/latest?cb=20201017004441",
+        "title": "I don't fear Hell; Hell fears me."
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/e\/ef\/Vo_lion_lion_respawn_04.mp3\/revision\/latest?cb=20201017004442",
+        "title": "Ohh, armed and dangerous."
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/f\/f9\/Vo_lion_lion_respawn_05.mp3\/revision\/latest?cb=20201017004444",
+        "title": "I've still got my pride."
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/a\/ac\/Vo_lion_lion_respawn_06.mp3\/revision\/latest?cb=20201017004446",
+        "title": "With grim resolve."
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/6\/6e\/Vo_lion_lion_respawn_07.mp3\/revision\/latest?cb=20201017004448",
+        "title": "Hell cannot hold me."
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/d\/d9\/Vo_lion_lion_respawn_08.mp3\/revision\/latest?cb=20201017004451",
+        "title": "My rage returns me to the living."
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/0\/05\/Vo_lion_lion_respawn_09.mp3\/revision\/latest?cb=20201017004452",
+        "title": "I'll not be tricked again."
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/4\/4c\/Vo_lion_lion_respawn_10.mp3\/revision\/latest?cb=20201017004454",
+        "title": "This time, I've brought Hell back with me."
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/5\/50\/Vo_lion_lion_laugh_01.mp3\/revision\/latest?cb=20201017004247",
+        "title": "Who-ha-ha-ha-ha-ha-ha-he-hawha!"
+      }
+    ],
+    "category": "Возрождение"
+  },
+  {
+    "responses": [
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/6\/69\/Vo_lion_lion_bottle_01.mp3\/revision\/latest?cb=20201017004003",
+        "title": "Who needs a bottle opener?"
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/a\/ac\/Vo_lion_lion_bottle_02.mp3\/revision\/latest?cb=20201017004006",
+        "title": "Little bit of hell in a bottle."
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/8\/88\/Vo_lion_lion_bottle_03.mp3\/revision\/latest?cb=20201017004009",
+        "title": "I'll put this by for a cold day in Hell."
+      }
+    ],
+    "category": "Наполнение бутылки"
+  },
+  {
+    "responses": [
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/6\/65\/Vo_lion_lion_purch_02.mp3\/revision\/latest?cb=20201017004426",
+        "title": "Hells, yes!"
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/8\/8d\/Vo_lion_lion_lasthit_03.mp3\/revision\/latest?cb=20201017004229",
+        "title": "Money changes hands."
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/2\/24\/Vo_lion_lion_doubdam_01.mp3\/revision\/latest?cb=20201017004113",
+        "title": "Double damage!"
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/8\/88\/Vo_lion_lion_doubdam_02.mp3\/revision\/latest?cb=20201017004116",
+        "title": "Give em the old one two."
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/0\/0b\/Vo_lion_lion_haste_01.mp3\/revision\/latest?cb=20201017004126",
+        "title": "Haste!"
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/7\/71\/Vo_lion_lion_haste_02.mp3\/revision\/latest?cb=20201017004128",
+        "title": "The flames of hell lap at my heels."
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/c\/c0\/Vo_lion_lion_illus_01.mp3\/revision\/latest?cb=20201017004131",
+        "title": "Illusion!"
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/6\/6f\/Vo_lion_lion_illus_02.mp3\/revision\/latest?cb=20201017004134",
+        "title": "Parallel lions!"
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/0\/09\/Vo_lion_lion_invis_01.mp3\/revision\/latest?cb=20201017004141",
+        "title": "Invisibility!"
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/c\/c6\/Vo_lion_lion_invis_02.mp3\/revision\/latest?cb=20201017004143",
+        "title": "Can't see my hand in front of my face."
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/1\/13\/Vo_lion_lion_regen_01.mp3\/revision\/latest?cb=20201017004434",
+        "title": "Regeneration!"
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/8\/8d\/Vo_lion_lion_regen_02.mp3\/revision\/latest?cb=20201017004436",
+        "title": "Revenge ever renewing."
+      }
+    ],
+    "category": "Активация рун"
+  },
+  {
+    "responses": [
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/8\/85\/Vo_lion_lion_notyet_01.mp3\/revision\/latest?cb=20201017004353",
+        "title": "Not yet."
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/0\/02\/Vo_lion_lion_notyet_02.mp3\/revision\/latest?cb=20201017004354",
+        "title": "I'm not ready."
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/d\/d0\/Vo_lion_lion_notyet_03.mp3\/revision\/latest?cb=20201017004356",
+        "title": "It's not time yet."
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/c\/c3\/Vo_lion_lion_notyet_05.mp3\/revision\/latest?cb=20201017004358",
+        "title": "Not yet."
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/8\/8e\/Vo_lion_lion_notyet_06.mp3\/revision\/latest?cb=20201017004359",
+        "title": "I'm not ready."
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/f\/fd\/Vo_lion_lion_notyet_07.mp3\/revision\/latest?cb=20201017004401",
+        "title": "It's not time yet."
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/f\/f5\/Vo_lion_lion_notyet_08.mp3\/revision\/latest?cb=20201017004403",
+        "title": "Not yet!"
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/9\/93\/Vo_lion_lion_notyet_09.mp3\/revision\/latest?cb=20201017004405",
+        "title": "I'm not ready!"
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/0\/04\/Vo_lion_lion_notyet_10.mp3\/revision\/latest?cb=20201017004407",
+        "title": "It's not time yet!"
+      }
+    ],
+    "category": "Способность на перезарядке"
+  },
+  {
+    "responses": [
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/8\/85\/Vo_lion_lion_nomana_01.mp3\/revision\/latest?cb=20201017004338",
+        "title": "Out of mana."
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/6\/65\/Vo_lion_lion_nomana_02.mp3\/revision\/latest?cb=20201017004340",
+        "title": "No mana."
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/2\/25\/Vo_lion_lion_nomana_03.mp3\/revision\/latest?cb=20201017004342",
+        "title": "Not enough mana."
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/d\/d8\/Vo_lion_lion_nomana_04.mp3\/revision\/latest?cb=20201017004343",
+        "title": "Out of mana."
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/e\/e1\/Vo_lion_lion_nomana_05.mp3\/revision\/latest?cb=20201017004345",
+        "title": "No mana."
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/5\/54\/Vo_lion_lion_nomana_06.mp3\/revision\/latest?cb=20201017004347",
+        "title": "Not enough mana."
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/a\/ac\/Vo_lion_lion_nomana_07.mp3\/revision\/latest?cb=20201017004348",
+        "title": "Out of mana."
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/f\/f1\/Vo_lion_lion_nomana_08.mp3\/revision\/latest?cb=20201017004350",
+        "title": "No mana!"
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/6\/6b\/Vo_lion_lion_nomana_09.mp3\/revision\/latest?cb=20201017004351",
+        "title": "Not enough mana."
+      }
+    ],
+    "category": "Нехватка маны"
+  },
+  {
+    "responses": [
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/7\/78\/Vo_lion_lion_pain_01.mp3\/revision\/latest?cb=20201017004408",
+        "title": "Arrehh!"
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/1\/1f\/Vo_lion_lion_pain_02.mp3\/revision\/latest?cb=20201017004410",
+        "title": "Umph!"
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/4\/49\/Vo_lion_lion_pain_03.mp3\/revision\/latest?cb=20201017004411",
+        "title": "Eyaha!"
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/6\/61\/Vo_lion_lion_pain_04.mp3\/revision\/latest?cb=20201017004413",
+        "title": "Eyeah"
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/5\/5e\/Vo_lion_lion_pain_05.mp3\/revision\/latest?cb=20201017004414",
+        "title": "Hoowah."
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/7\/71\/Vo_lion_lion_pain_06.mp3\/revision\/latest?cb=20201017004416",
+        "title": "Oowuh."
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/5\/54\/Vo_lion_lion_pain_07.mp3\/revision\/latest?cb=20201017004418",
+        "title": "Erahhh."
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/c\/c6\/Vo_lion_lion_pain_08.mp3\/revision\/latest?cb=20201017004419",
+        "title": "Eahhh"
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/2\/21\/Vo_lion_lion_pain_09.mp3\/revision\/latest?cb=20201017004421",
+        "title": "Oowuh."
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/3\/39\/Vo_lion_lion_pain_10.mp3\/revision\/latest?cb=20201017004422",
+        "title": "Eyeh"
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/c\/cb\/Vo_lion_lion_underattack_01.mp3\/revision\/latest?cb=20201017004511",
+        "title": "I'm under attack!"
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/c\/c8\/Vo_lion_lion_underattack_02.mp3\/revision\/latest?cb=20201017004513",
+        "isArcane": true,
+        "title": "I'm under attack!"
+      }
+    ],
+    "category": "Получение урона"
+  },
+  {
+    "responses": [
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/f\/f6\/Vo_lion_lion_rare_01.mp3\/revision\/latest?cb=20201017004429",
+        "title": "When the demon betrayed me, I took its very arm. Imagine what I'll do to a mere hero."
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/a\/a2\/Vo_lion_lion_rare_02.mp3\/revision\/latest?cb=20201017004431",
+        "title": "Betray me, and I'll chase you into Hell."
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/f\/f2\/Vo_lion_lion_rare_03.mp3\/revision\/latest?cb=20201017004432",
+        "title": "Behold, I am what remains when you burn away everything but rage and revenge."
+      }
+    ],
+    "category": "Редкие фразы"
+  },
+  {
+    "responses": [
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/4\/4c\/Vo_lion_lion_lane_missing_01.mp3\/revision\/latest?cb=20201017004216",
+        "title": "Top is missing."
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/4\/46\/Vo_lion_lion_lane_missing_02.mp3\/revision\/latest?cb=20201017004218",
+        "title": "Middle is missing."
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/f\/f5\/Vo_lion_lion_lane_missing_03.mp3\/revision\/latest?cb=20201017004221",
+        "title": "Bottom is missing."
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/1\/1c\/Vo_lion_lion_thanks_01.mp3\/revision\/latest?cb=20201017004508",
+        "title": "My thanks."
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/a\/a4\/Vo_lion_lion_thanks_02.mp3\/revision\/latest?cb=20201017004510",
+        "title": "I am grateful."
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/5\/50\/Vo_lion_lion_laugh_01.mp3\/revision\/latest?cb=20201017004247",
+        "title": "Who-ha-ha-ha-ha-ha-ha-he-hawha!"
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/1\/1f\/Vo_lion_lion_laugh_02.mp3\/revision\/latest?cb=20201017004249",
+        "title": "Who-ha-heh-heh-heheha."
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/e\/e4\/Vo_lion_lion_laugh_03.mp3\/revision\/latest?cb=20201017004251",
+        "title": "Hah!"
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/b\/b3\/Vo_lion_lion_laugh_04.mp3\/revision\/latest?cb=20201017004252",
+        "title": "Ho-ho-ha-ha-ha-ha-he-heh."
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/c\/c8\/Vo_lion_lion_laugh_05.mp3\/revision\/latest?cb=20201017004255",
+        "title": "Ohhh, he-he-heh-he-he-he-heh."
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/3\/39\/Vo_lion_lion_laugh_06.mp3\/revision\/latest?cb=20201017004256",
+        "title": "Ahh, he-he-he-he-huh-hah-huh-heh-heh-ha!"
+      }
+    ],
+    "category": "Реплики в чате"
+  },
+  {
+    "responses": [
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/9\/90\/Vo_lion_lion_win_01.mp3\/revision\/latest?cb=20201017004515",
+        "title": "Yes!"
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/e\/e3\/Vo_lion_lion_win_02.mp3\/revision\/latest?cb=20201017004516",
+        "title": "Victory!"
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/c\/c2\/Vo_lion_lion_win_03.mp3\/revision\/latest?cb=20201017004518",
+        "title": "Retribution in action!"
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/3\/34\/Vo_lion_lion_lose_01.mp3\/revision\/latest?cb=20201017004310",
+        "title": "Noooo!"
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/2\/2d\/Vo_lion_lion_lose_02.mp3\/revision\/latest?cb=20201017004312",
+        "title": "Defeated!"
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/6\/6e\/Vo_lion_lion_lose_03.mp3\/revision\/latest?cb=20201017004313",
+        "title": "Next time I will have my revenge!"
+      }
+    ],
+    "category": "Окончание матча"
+  },
+  {
+    "responses": [
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/1\/18\/Vo_lion_lion_happy_01.mp3\/revision\/latest?cb=20201017004118",
+        "title": "Eahhew."
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/6\/61\/Vo_lion_lion_happy_02.mp3\/revision\/latest?cb=20201017004121",
+        "title": "Waahha."
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/1\/11\/Vo_lion_lion_happy_03.mp3\/revision\/latest?cb=20201017004123",
+        "title": "Eaheeea"
+      }
+    ],
+    "category": "Выпадение косметического предмета"
+  },
+  {
+    "responses": [
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/c\/c3\/Vo_lion_lion_ability_failure_01.mp3\/revision\/latest?cb=20201017004520",
+        "title": "Arhhh."
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/9\/9d\/Vo_lion_lion_ability_failure_02.mp3\/revision\/latest?cb=20201017004522",
+        "title": "Ahooow."
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/9\/9c\/Vo_lion_lion_shitwiz_01.mp3\/revision\/latest?cb=20201017004456",
+        "title": "Shitty wizard!"
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/8\/84\/Vo_lion_lion_crumwiz_01.mp3\/revision\/latest?cb=20201017004020",
+        "title": "Crummy wizard!"
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/1\/10\/Vo_lion_lion_anger_01.mp3\/revision\/latest?cb=20201017003915",
+        "title": "Arrrr."
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/8\/86\/Vo_lion_lion_anger_02.mp3\/revision\/latest?cb=20201017003917",
+        "title": "Arreh."
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/6\/6d\/Vo_lion_lion_anger_04.mp3\/revision\/latest?cb=20201017003920",
+        "title": "Reh!"
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/0\/04\/Vo_lion_lion_anger_05.mp3\/revision\/latest?cb=20201017003922",
+        "title": "Ruhhh."
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/d\/d2\/Vo_lion_lion_anger_06.mp3\/revision\/latest?cb=20201017003924",
+        "title": "Eahreh!"
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/f\/f4\/Vo_lion_lion_anger_07.mp3\/revision\/latest?cb=20201017003925",
+        "title": "rehhh."
+      }
+    ],
+    "category": "Разное"
+  }
+]

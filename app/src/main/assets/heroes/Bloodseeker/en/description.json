@@ -1,0 +1,232 @@
+{
+  "abilities": [
+    {
+      "notes": [
+        "The armor talent does not benefit illusions.",
+        "The lifesteal talent stacks additively with other sources of lifesteal.",
+        "The health talent increases maximum health capacity, and keeps the current health percentage."
+      ],
+      "spellName": "Talent",
+      "talents": [
+        {
+          "talentLvl": "25",
+          "talentLeft": "+14 Max Thirst MS",
+          "talentRight": "-4s Blood Rite Cooldown"
+        },
+        {
+          "talentLvl": "20",
+          "talentLeft": "+400 Health",
+          "talentRight": "+475 Rupture Cast Range"
+        },
+        {
+          "talentLvl": "15",
+          "talentLeft": "+75 Blood Rite Damage",
+          "talentRight": "15% Lifesteal"
+        },
+        {
+          "talentLvl": "10",
+          "talentLeft": "+6 Armor",
+          "talentRight": "+30 Bloodrage Attack Speed"
+        }
+      ]
+    },
+    {
+      "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/0\/01\/Bloodseeker_Bloodrage.mp3\/revision\/latest?cb=20191216011308",
+      "effects": [
+        "Ability Target Unit",
+        "Affects Allied Heroes",
+        "Damage Pure (TagAghanimHP Removal)"
+      ],
+      "notes": [
+        "If the target is more than 1050 range away, Bloodseeker moves to the target until it is within 800 range before casting. If a cast order is given on a target which is within 1050 range already, Bloodseeker does not need to move closer and casts it right away.",
+        "If a cast order is given on a target which is within 1050 range already, Bloodseeker does not need to move closer and casts it right away.",
+        "Deals 1% of max health as damage in 0.5 second intervals, starting 0.5 seconds after cast, resulting in 16 instances. The damage is flagged as HP Removal, so it does not trigger any on-damage effects. Does not drain health while invulnerable. Health drain cannot bring the target's health below 1.",
+        "The damage is flagged as HP Removal, so it does not trigger any on-damage effects.",
+        "Does not drain health while invulnerable. Health drain cannot bring the target's health below 1.",
+        "Successive casts with different levels on a same target only refresh the duration, but do not update the attack speed and spell damage amplification.",
+        "Aghanim's Shard adds pure damage to Bloodseeker's attacks based on the target's maximum health. The damage is directly added to Bloodseeker's attack damage, however, it is ignored by percentage-based damage bonus or reductions. The damage cannot crit, cleave, or lifesteal with other sources of lifesteal than its own. Bloodrage's lifesteal is affected by lifesteal manipulation. Effectively deals 2.3%\/2.4%\/2.5%\/2.6% of max health as damage, considering Bloodrage's own outgoing damage amplification. Does not work against Roshan.",
+        "The damage is directly added to Bloodseeker's attack damage, however, it is ignored by percentage-based damage bonus or reductions.",
+        "The damage cannot crit, cleave, or lifesteal with other sources of lifesteal than its own.",
+        "Bloodrage's lifesteal is affected by lifesteal manipulation.",
+        "Effectively deals 2.3%\/2.4%\/2.5%\/2.6% of max health as damage, considering Bloodrage's own outgoing damage amplification.",
+        "Does not work against Roshan."
+      ],
+      "mana": "25",
+      "hotKey": "Q",
+      "cooldown": "14\/12\/10\/8",
+      "description": "Drives you into a bloodthirsty rage during which causes you to attack faster and deal more spell damage at the cost of a percentage of your health per second. Provides half attack speed to allied heroes.",
+      "spellName": "Bloodrage",
+      "params": [
+        "Cast Animation: 0+0\/0.5",
+        "Default Cast Range: 800",
+        "Buffer Cast Range: 1050",
+        "Max Health as Cost Per Second: 2%",
+        "Self Attack Speed Bonus: 60\/90\/120\/150 (TagTalent 90\/120\/150\/180)",
+        "Allied Attack Speed Bonus: 30\/45\/60\/75 (TagTalent 45\/60\/75\/90)",
+        "Outgoing Spell Damage Amplification: 15%\/20%\/25%\/30%",
+        "Duration: 8",
+        "Enemy Max Health as Damage\/Lifesteal: 2%",
+        "Bloodrage attacks now deal 2% of the target's max health as pure damage and heals Bloodseeker for that amount. Only works for Bloodseeker."
+      ],
+      "itemBehaviour": [],
+      "legacyKey": "D",
+      "story": "Strygwyr shares his animalistic thirst for bloodshed."
+    },
+    {
+      "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/6\/6e\/Bloodseeker_Blood_Rite_1.mp3\/revision\/latest?cb=20191216011313",
+      "effects": [
+        "Ability Target Area",
+        "Affects Enemies",
+        "Damage Pure"
+      ],
+      "notes": [
+        "The affected area is visible to enemies.",
+        "Applies a silence within the targeted area after the 2.6-second delay.",
+        "Blood Rite first applies the damage, then the debuff.",
+        "With max level Bloodrage on Bloodseeker, Blood Rite deals 156\/208\/260\/312 (TagTalent 253.5\/305.5\/357.5\/409.5) damage (before reductions).",
+        "Choosing the damage upgrading talent immediately upgrades all of Bloodseeker's currently active Blood Rite casts when chosen during the delay.",
+        "Grants 600 radius ground vision at the center of the affected area for 6 seconds after cast."
+      ],
+      "mana": "90\/100\/110\/120",
+      "hotKey": "W",
+      "cooldown": "15\/14\/13\/12 (TagTalent 11\/10\/9\/8)",
+      "description": "Bloodseeker baptizes an area in sacred blood. After 2.9 seconds the ritual completes, causing any enemies caught in the area to take damage and become silenced.",
+      "spellName": "Blood Rite",
+      "params": [
+        "Cast Animation: 0.3+0.63",
+        "Cast Range: 1500",
+        "Effect Radius: 600",
+        "Effect Delay: 2.6",
+        "Damage: 120\/160\/200\/240 (TagTalent 195\/235\/275\/315)",
+        "Silence Duration: 3\/4\/5\/6",
+        "Silence persists if debuff was placed before spell immunity and when not dispelled."
+      ],
+      "itemBehaviour": [],
+      "legacyKey": "B",
+      "story": "The Flayed Twins are ever willing to aid those who spill blood upon the field of battle."
+    },
+    {
+      "audioUrl": null,
+      "effects": [
+        "Ability Passive",
+        "Affects Self \/ Enemies"
+      ],
+      "notes": [
+        "Learning Thirst removes the 550 movement speed cap for Bloodseeker.",
+        "The first stack is applied when an enemy hero is below 75% health and the last when below 26%.",
+        "Grants 0.28%\/0.48%\/0.68%\/0.88% (TagTalent 0.56%\/0.76%\/0.96%\/1.16%) movement speed for each percent of missing health between 75% and 25%. However, since the HUD does not show decimals, movement speed increases by 1% for every missing 3.57%\/2.08%\/1.47%\/1.14% (TagTalent 1.79%\/1.32%\/1.04%\/0.86%) health.",
+        "However, since the HUD does not show decimals, movement speed increases by 1% for every missing 3.57%\/2.08%\/1.47%\/1.14% (TagTalent 1.79%\/1.32%\/1.04%\/0.86%) health.",
+        "When an enemy hero drops below 25% health, Thirst provides True Sight over the target and makes both their hero model and minimap icon visible through the Fog of War.",
+        "When enemies are revealed by Thirst, a debuff and particle effects are placed on them, which is visible to everyone.",
+        "Bloodseeker himself also gets a status buff and particle effects and speaks certain lines, making it clear that an enemy is currently being revealed by Thirst.",
+        "Thirst is not triggered by enemy illusions, but is triggered by hero clones.",
+        "Is not triggered by hidden enemy heroes, but does react on invulnerable ones.",
+        "The bonuses linger for 4 seconds if the enemy dies. However, it does not linger, and disappears immediately if the enemy has Aegis of the Immortal or Reincarnation. The bonuses are always the maximum values, despite the health percentage the enemy had right before the killing blow.",
+        "The bonuses are always the maximum values, despite the health percentage the enemy had right before the killing blow.",
+        "This is how much movement speed Bloodseeker gains from Thirst with a certain amount of heroes being below 25% of their maximum health: 1 Hero: 14%\/24%\/34%\/44% (TagTalent 28%\/38%\/48%\/58%) movement speed 2 Heroes: 28%\/48%\/68%\/88% (TagTalent 56%\/76%\/96%\/116%) movement speed 3 Heroes: 42%\/72%\/102%\/132% (TagTalent 84%\/114%\/144%\/174%) movement speed 4 Heroes: 56%\/96%\/136%\/176% (TagTalent 112%\/152%\/192%\/232%) movement speed 5 Heroes: 70%\/120%\/170%\/220% (TagTalent 140%\/190%\/240%\/290%) movement speed",
+        "1 Hero: 14%\/24%\/34%\/44% (TagTalent 28%\/38%\/48%\/58%) movement speed",
+        "2 Heroes: 28%\/48%\/68%\/88% (TagTalent 56%\/76%\/96%\/116%) movement speed",
+        "3 Heroes: 42%\/72%\/102%\/132% (TagTalent 84%\/114%\/144%\/174%) movement speed",
+        "4 Heroes: 56%\/96%\/136%\/176% (TagTalent 112%\/152%\/192%\/232%) movement speed",
+        "5 Heroes: 70%\/120%\/170%\/220% (TagTalent 140%\/190%\/240%\/290%) movement speed",
+        "The heal is based on the dying unit's maximum health, and not on Bloodseeker's health.",
+        "Heals from any non-hero unit killed, and from heroes killed. Also heals from heroes that die within 300 radius of Bloodseeker.",
+        "Does not heal upon killing illusions, Tempest Doubles, Roshan, wards, buildings, or allied units.",
+        "Enemies dying within 300 range of Bloodseeker always trigger the heal, no matter how they die."
+      ],
+      "mana": null,
+      "hotKey": "E",
+      "cooldown": null,
+      "description": "Bloodseeker is invigorated by the wounds of his enemies, restoring some life when he kills an enemy unit. Also gains bonus movement speed when an enemy hero's health falls below 75%, with the bonuses increasing as their health falls further. If an enemy hero's health falls below 25%, he will also gain vision and True Sight of that hero. Bonuses stack per hero. Unlocks max movement speed for Bloodseeker.",
+      "spellName": "Thirst",
+      "params": [
+        "Detection Radius: Global",
+        "Enemy Hero Death Heal Radius: 300",
+        "Thirst Health Threshold: 75%",
+        "Visibility Health Threshold: 25%",
+        "Max Move Speed Bonus per Hero: 14%\/24%\/34%\/44% (TagTalent 28%\/38%\/48%\/58%)",
+        "Hero's Max Health as Heal: 10%\/15%\/20%\/25%",
+        "Non-Hero Max Health as Heal: 11%\/14%\/17%\/20%",
+        "Speed Linger Duration: 4",
+        "Completely ignores spell immune enemies.",
+        "Disables the detection, movement speed bonus, and the movement speed limit removal, but not the heal on kill or nearby death.",
+        "Heal and speed limit removal work for illusions, movement speed bonus and detection do not."
+      ],
+      "itemBehaviour": [],
+      "legacyKey": "T",
+      "story": "Strygwyr becomes frenzied when blood is spilled."
+    },
+    {
+      "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/c\/c6\/Bloodseeker_Rupture_1.mp3\/revision\/latest?cb=20191216011310",
+      "effects": [
+        "Ability Target Unit",
+        "Affects Enemies",
+        "Damage Pure"
+      ],
+      "notes": [
+        "Checks the distance the affected unit moved every 0.25 seconds, starting immediately upon cast, resulting in 41\/45\/49 checks. If the unit's position changed between checks, it takes damage based on the distance. If the unit did not move, or moved a distance greater than 1300 between a check, no damage is applied. If the unit is invulnerable as a check occurs, the value is set nil, so that it does not take damage on the next check, regardless of distance.",
+        "If the unit's position changed between checks, it takes damage based on the distance.",
+        "If the unit did not move, or moved a distance greater than 1300 between a check, no damage is applied.",
+        "If the unit is invulnerable as a check occurs, the value is set nil, so that it does not take damage on the next check, regardless of distance.",
+        "This is how much damage Rupture deals (before reductions) when the affected unit travels certain distances: 300 Distance: 108\/144\/180 damage 600 Distance: 216\/288\/360 damage 900 Distance: 324\/432\/540 damage 1200 Distance: 432\/576\/720 damage 1500 Distance: 540\/720\/900 damage",
+        "300 Distance: 108\/144\/180 damage",
+        "600 Distance: 216\/288\/360 damage",
+        "900 Distance: 324\/432\/540 damage",
+        "1200 Distance: 432\/576\/720 damage",
+        "1500 Distance: 540\/720\/900 damage",
+        "Multiple casts on the same target do not stack, but refresh the duration instead.",
+        "Despite the sounds, affected units take no damage when moving upwards (with e.g. Torrent or Impale).",
+        "Can be cast on, but cannot damage couriers."
+      ],
+      "mana": "100\/150\/200",
+      "hotKey": "R",
+      "cooldown": "70 (TagTalent 0.25)",
+      "description": "Causes an enemy unit's skin to rupture. If the unit moves, it takes damage based on the distance moved. The damage is dealt through spell immunity.",
+      "spellName": "Rupture",
+      "params": [
+        "Cast Animation: 0.4+0.53",
+        "Cast Range: 800 (TagTalent 1275)",
+        "Moved Distance as Damage: 36%\/48%\/60%",
+        "Duration: 10\/11\/12",
+        "Number of Charges: 2",
+        "Charge Replenish Time: 40",
+        "Grants 2 charges to Rupture with a 40 seconds replenish time."
+      ],
+      "itemBehaviour": [],
+      "legacyKey": "R",
+      "story": "When the Bloodseeker hunts you, injuries become fatalities."
+    }
+  ],
+  "mainAttributes": {
+    "attrStrengthInc": 2.7,
+    "attrStrength": 24.0,
+    "attrIntelligence": 17.0,
+    "attrIntelligenceInc": 2.0,
+    "attrAgilityInc": 3.4,
+    "attrAgility": 22.0
+  },
+  "description": "Strygwyr, the Bloodseeker, is a melee agility hero imbued with dreadful powers to fuel violence and rip enemies apart in the heat of close combat.",
+  "history": "Strygwyr the Bloodseeker is a ritually sanctioned hunter, Hound of the Flayed Twins, sent down from the mist-shrouded peaks of Xhacatocatl in search of blood. The Flayed Ones require oceanic amounts of blood to keep them sated and placated, and would soon drain their mountain empire of its populace if the priests of the high plateaus did not appease them. Strygwyr therefore goes out in search of carnage. The vital energy of any blood he lets, flows immediately to the Twins through the sacred markings on his weapons and armor. Over the years, he has come to embody the energy of a vicious hound; in battle he is savage as a jackal. Beneath the Mask of the Bloodseeker, in the rush of bloody quenching, it is said that you can sometime see the features of the Flayers taking direct possession of their Hound.",
+  "talents": [
+    {
+      "talentLvl": "25",
+      "talentLeft": "+14 Max Thirst MS",
+      "talentRight": "-4s Blood Rite Cooldown"
+    },
+    {
+      "talentLvl": "20",
+      "talentLeft": "+400 Health",
+      "talentRight": "+475 Rupture Cast Range"
+    },
+    {
+      "talentLvl": "15",
+      "talentLeft": "+75 Blood Rite Damage",
+      "talentRight": "15% Lifesteal"
+    },
+    {
+      "talentLvl": "10",
+      "talentLeft": "+6 Armor",
+      "talentRight": "+30 Bloodrage Attack Speed"
+    }
+  ]
+}

@@ -1,0 +1,45 @@
+{
+  "abilities": [
+    {
+      "audioUrl": null,
+      "effects": [
+        "Ability Passive",
+        "Affects Enemies",
+        "Damage Magical"
+      ],
+      "notes": [
+        "Successive attacks with Dragon Scale do not stack, but refresh the duration instead.",
+        "The attacks first apply the debuff, then their own damage.",
+        "Deals damage in 1 second intervals, starting 1 second after the debuff is applied, resulting in 3 instances.",
+        "Can deal up to 54 damage (before reductions).",
+        "Does not work against wards. Works against buildings."
+      ],
+      "mana": null,
+      "abilityName": "Afterburn",
+      "cooldown": null,
+      "description": "Causes attacks to burn the enemy, dealing 18 damage per second for 3 seconds. Affects buildings.",
+      "params": [
+        "Damage per Second: 18",
+        "Duration: 3"
+      ],
+      "itemBehaviour": [],
+      "story": null
+    }
+  ],
+  "additionalInformation": [
+    "Dragon Scales are fully sharable."
+  ],
+  "cost": "N\/A",
+  "lore": null,
+  "consistFrom": null,
+  "boughtFrom": "Neutral Drop Only",
+  "name": "Dragon Scale",
+  "description": "The remains of a dragon always outvalue the wealth of even the most prodigious hoard.",
+  "trivia": null,
+  "upgradeIn": null,
+  "bonuses": [
+    "+5 Health regeneration",
+    "+5 Armor"
+  ],
+  "tips": null
+}

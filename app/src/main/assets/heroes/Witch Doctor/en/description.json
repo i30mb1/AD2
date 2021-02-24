@@ -1,0 +1,250 @@
+{
+  "abilities": [
+    {
+      "notes": [
+        "The armor talent does not benefit illusions.",
+        "This attack damage talent is added as raw attack damage, so it does not benefit illusions, and is not affected by most percentage-based damage increasing or reducing effects."
+      ],
+      "spellName": "Talent",
+      "talents": [
+        {
+          "talentLvl": "25",
+          "talentLeft": "+60 Death Ward Damage",
+          "talentRight": "+1.2% Max Health Voodoo Restoration"
+        },
+        {
+          "talentLvl": "20",
+          "talentLeft": "+15% Maledict Burst Damage",
+          "talentRight": "+100 Death Ward Attack Range"
+        },
+        {
+          "talentLvl": "15",
+          "talentLeft": "+80 Maledict AoE",
+          "talentRight": "+2 Cask Bounces"
+        },
+        {
+          "talentLvl": "10",
+          "talentLeft": "+5 Armor",
+          "talentRight": "+60 Damage"
+        }
+      ]
+    },
+    {
+      "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/d\/d6\/Witch_Doctor_Paralyzing_Cask_1.mp3\/revision\/latest?cb=20191216030754",
+      "effects": [
+        "Ability Target Unit",
+        "Affects Enemies",
+        "Damage Magical"
+      ],
+      "notes": [
+        "The cask travels at a speed of 1000.",
+        "The projectile bounces in 0.3 second intervals.",
+        "Can bounce on the same unit multiple times, but only when another target was hit between the bounces.",
+        "Cannot bounce on invisible, invulnerable or hidden units, but can bounce on units in the Fog of War.",
+        "Can deal up to 150\/300\/500\/750 (TagTalent 225\/400\/625\/900) (100\/150\/200\/250 (TagTalent 150\/200\/250\/300) to heroes) damage to a single unit (before reductions).",
+        "All bounces together can deal up to 225\/500\/875\/1350 (TagTalent 375\/700\/1125\/1650) (150\/250\/350\/450 (TagTalent 250\/350\/450\/550) to heroes) damage (before reductions).",
+        "The cask first applies the debuff, then the damage.",
+        "Illusions are treated as creeps, while Roshan and creep-heroes are treated as heroes.",
+        "Multiple casks from the same hero both reset and share the remaining number of bounces between all instances."
+      ],
+      "mana": "80\/100\/120\/140",
+      "hotKey": "Q",
+      "cooldown": "20\/18\/16\/14",
+      "description": "Launches a cask of paralyzing powder that ricochets between enemy units, stunning and damaging those it hits.",
+      "spellName": "Paralyzing Cask",
+      "params": [
+        "Cast Animation: 0.35+0.37",
+        "Cast Range: 700",
+        "Bounce Distance: 575",
+        "Number of Bounces: 2\/4\/6\/8 (TagTalent 4\/6\/8\/10)",
+        "Hero Damage: 50",
+        "Creep Damage: 75\/100\/125\/150",
+        "Hero Stun Duration: 1",
+        "Creep Stun Duration: 5",
+        "Cannot directly target spell immune enemies. Can bounce to spell immune enemies. Does not stun or attempt to damage spell immune enemies.",
+        "Blocked fully when primary or secondary target. Blocked upon impact. Does not stop bouncing when blocked."
+      ],
+      "itemBehaviour": [],
+      "legacyKey": "C",
+      "story": "The Witch Doctor recycles the bones of fallen friends and foes, using the powder as part of his arsenal of charms and alchemy."
+    },
+    {
+      "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/e\/ea\/Witch_Doctor_Voodoo_Restoration_1.mp3\/revision\/latest?cb=20191216030758",
+      "effects": [
+        "Ability Toggle \/ Aura",
+        "Affects Allies"
+      ],
+      "notes": [
+        "Voodoo Restoration does not interrupt channeling spells upon toggling.",
+        "Disabling Witch Doctor does not turn Voodoo Restoration off. However, he cannot turn it off himself while disabled either.",
+        "Heals for 5.28\/7.92\/10.56\/13.2 (TagTalent +0.396% of max health) health and costs 2.64\/3.96\/5.28\/6.6 mana in 0.33 second intervals, starting 0.33 seconds after toggled on.",
+        "The heal is provided by an aura. The mana cost is also depending on the aura. The buff lingers for 0.5 seconds. This means when toggled off, the spell still heals and drains mana for 0.5 seconds before stopping. If Witch Doctor does not have enough mana to support another heal instance, the spell toggles itself off. However, the lingering buff continues healing, despite the lack of mana, giving up to 2 possible heal instances for free. It does not affect invulnerable or hidden units.",
+        "This means when toggled off, the spell still heals and drains mana for 0.5 seconds before stopping.",
+        "If Witch Doctor does not have enough mana to support another heal instance, the spell toggles itself off.",
+        "However, the lingering buff continues healing, despite the lack of mana, giving up to 2 possible heal instances for free.",
+        "It does not affect invulnerable or hidden units."
+      ],
+      "mana": "35\/40\/45\/50",
+      "hotKey": "W",
+      "cooldown": "0",
+      "description": "Witch Doctor focuses his magic to heal nearby allied units, costing Witch Doctor mana every second Voodoo restoration is active.",
+      "spellName": "Voodoo Restoration",
+      "params": [
+        "Cast Animation: 0+0",
+        "Heal Radius: 500",
+        "Base Heal per Second: 16\/24\/32\/40",
+        "Mana Cost per Second: 8\/12\/16\/20",
+        "Aura Linger Duration: 0.5",
+        "Max Health as Heal per Second: 1.2%"
+      ],
+      "itemBehaviour": [],
+      "legacyKey": "V",
+      "story": "Zharvakko's hocus pocus is not limited only hexxing his opponents and is quite adept at curing ailments."
+    },
+    {
+      "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/a\/af\/Witch_Doctor_Maledict_1.mp3\/revision\/latest?cb=20191216030750",
+      "effects": [
+        "Ability Target Area",
+        "Affects Enemy Heroes",
+        "Damage Magical"
+      ],
+      "notes": [
+        "Checks the affected units' current health 4 times, once as the curse is applied, and then every 4 seconds for the duration.",
+        "The burst damage is entirely based on the difference between the hero's current health and its health as the curse got applied. This means the bigger the difference of current health and health upon receiving the debuff gets, the more damage the bursts do. Vice versa, the lower the difference gets, the lower is the damage of the bursts, so getting healed during it reduces its damage. It also means it does not matter how affected units lose health, as it directly compares its health values, not damage values. This is how much of the lost health is re-dealt as damage by the curse, depending on when the health was lost during the curse on each level (before reductions): 0\u20133.9 Seconds: 48%\/72%\/97%\/121% (TagTalent 94%\/118%\/142%\/166%) 3.9\u20137.9 Seconds: 32%\/48%\/64%\/80% (TagTalent 62%\/78%\/94%\/111%) 7.9\u201311.9 Seconds: 16%\/24%\/32%\/40% (TagTalent 31%\/39%\/47%\/55%)",
+        "This means the bigger the difference of current health and health upon receiving the debuff gets, the more damage the bursts do.",
+        "Vice versa, the lower the difference gets, the lower is the damage of the bursts, so getting healed during it reduces its damage.",
+        "It also means it does not matter how affected units lose health, as it directly compares its health values, not damage values.",
+        "This is how much of the lost health is re-dealt as damage by the curse, depending on when the health was lost during the curse on each level (before reductions): 0\u20133.9 Seconds: 48%\/72%\/97%\/121% (TagTalent 94%\/118%\/142%\/166%) 3.9\u20137.9 Seconds: 32%\/48%\/64%\/80% (TagTalent 62%\/78%\/94%\/111%) 7.9\u201311.9 Seconds: 16%\/24%\/32%\/40% (TagTalent 31%\/39%\/47%\/55%)",
+        "Deals its own damage in 1 second intervals, starting 1 second after the debuff is applied, resulting in 12 damage instances.",
+        "Together with the bursts, it deals a total of 15 damage instances.",
+        "The bursts happen 0.1 seconds before each 4th damage tick, so the bursts happen after the 3rd, 7th, and 11th damage tick.",
+        "With no other sources of health loss or heals, Maledict can deal up to 109.9\/249.6\/423.1\/634.8 (TagTalent 138.9\/312.8\/526.1\/783.5) damage to a unit (before reductions).",
+        "The debuff can be placed on illusions and creep-heroes.",
+        "Does not affect invulnerable and hidden units. Affects invisible units."
+      ],
+      "mana": "105\/110\/115\/120",
+      "hotKey": "E",
+      "cooldown": "30\/26\/22\/18",
+      "description": "Curses all enemy Heroes in a small area, causing them to take a set amount of damage each second, as well as bursts of damage every 4 seconds based on how much health they have lost since the curse began.",
+      "spellName": "Maledict",
+      "params": [
+        "Cast Animation: 0.35+0",
+        "Cast Range: 575",
+        "Radius: 180 (TagTalent 260)",
+        "Damage per Second: 7\/14\/21\/28",
+        "Lost Health as Burst Damage: 16%\/24%\/32%\/40% (TagTalent 31%\/39%\/47%\/55%)",
+        "Burst Damage Interval: 4",
+        "Curse Duration: 12",
+        "Cannot place the debuff on spell immune units. If already placed, the debuff stops applying the damage over time if the unit turns spell immune. The burst damage pierces spell immunity."
+      ],
+      "itemBehaviour": [],
+      "legacyKey": "E",
+      "story": "Certain voodoo magics can make an enemy regret engaging the Witch Doctor."
+    },
+    {
+      "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/1\/19\/Witch_Doctor_Voodoo_Switcheroo.mp3\/revision\/latest?cb=20210103153444",
+      "effects": [
+        "Ability No Target",
+        "Affects Self \/ Enemy Heroes"
+      ],
+      "notes": [
+        "Requires Aghanim's Shard to be unlocked.",
+        "Turns Witch Doctor invulnerable, hidden, and unable to act for the duration.",
+        "The Death Ward is summoned at Witch Doctor's location. It is based on Death Ward's current level. If Death Ward is not learned, Voodoo Switcheroo does nothing on cast. Death Ward's note fully apply.",
+        "If Death Ward is not learned, Voodoo Switcheroo does nothing on cast.",
+        "Death Ward's note fully apply.",
+        "Voodoo Switcheroo cannot be canceled earlier.",
+        "The Death Ward has its attack speed reduced by 30, attacking slower than a regular Death Ward cast.",
+        "With its 0.22 second attack rate and the 30 attack speed slow, it can attack up to 7 times.",
+        "With the current attack rate and damage, it can deal up to 270.45\/429.55\/588.64 (TagTalent 461.36\/620.45\/779.55) damage per second to a single hero.",
+        "Can deal up to 595\/945\/1295 (TagTalent 1015\/1365\/1715) damage to a single hero (before reductions)."
+      ],
+      "mana": "250",
+      "hotKey": "D",
+      "cooldown": "70",
+      "description": "Turns Witch Doctor into a Death Ward for 2 seconds. Death Ward has -30 Attack Speed. He is hidden during this time.",
+      "spellName": "Voodoo Switcheroo",
+      "params": [
+        "Cast Animation: 0.1+0.73",
+        "Death Ward Attack Speed Reduction: 30",
+        "Duration: 2"
+      ],
+      "itemBehaviour": [],
+      "legacyKey": "W",
+      "story": null
+    },
+    {
+      "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/f\/fa\/Witch_Doctor_Death_Ward.mp3\/revision\/latest?cb=20191216030749",
+      "effects": [
+        "Ability Target Point \/ Channeled",
+        "Affects Enemy Heroes"
+      ],
+      "notes": [
+        "The Death Ward automatically attacks enemy heroes within its attack range, using default auto-attack rules. Upon being created, the ward attacks the closest enemy hero to it. After that, it follows default auto-attack rules. It is possible to manually give the ward an attack target by just right-clicking an enemy hero in range. Giving an attack order while having Witch Doctor and the ward selected, does not cause the channeling to be canceled. It is also possible to stop the ward from attacking by ordering it to stop (only works when the auto-attack option is turned off).",
+        "Upon being created, the ward attacks the closest enemy hero to it. After that, it follows default auto-attack rules.",
+        "It is possible to manually give the ward an attack target by just right-clicking an enemy hero in range.",
+        "Giving an attack order while having Witch Doctor and the ward selected, does not cause the channeling to be canceled.",
+        "It is also possible to stop the ward from attacking by ordering it to stop (only works when the auto-attack option is turned off).",
+        "Can only attack or bounce to heroes (including Meepo Clones, Tempest Double) and illusions.",
+        "The damage source is the ward itself, meaning certain on-damage effects react on the ward rather than on Witch Doctor (e.g. Blade Mail).",
+        "The primary attack can be disjointed and can miss, doing so prevents the projectile from bouncing. Cannot miss when upgraded.",
+        "However, after having bounced at least once, it can no longer miss, but can still be disjointed. When disjointed, it does continue to bounce and can even bounce back to the disjointing hero.",
+        "When disjointed, it does continue to bounce and can even bounce back to the disjointing hero.",
+        "Does not bounce on invisible units or units in the fog of war. One projectile can never hit the same unit twice.",
+        "With its 0.22 second attack rate, it can attack up to 37 times.",
+        "With the current attack rate and damage, it can deal up to 386.36\/613.64\/840.91 (TagTalent 659.09\/886.36\/1113.64) damage per second to a single hero.",
+        "Can deal up to 3145\/4995\/6845 (TagTalent 5365\/7215\/9065) damage to a single hero (before reductions).",
+        "Death Ward's attack damage is not reduced by Damage Block.",
+        "Provides 1200\/800 range ground vision for 5 seconds at its location after the channeling stops."
+      ],
+      "mana": "200",
+      "hotKey": "R",
+      "cooldown": "80",
+      "description": "Summons a deadly ward to attack enemy heroes within it's attack range. Lasts a maximum of 8 seconds.",
+      "spellName": "Death Ward",
+      "params": [
+        "Cast Animation: 0.35+0",
+        "Cast Range: 600",
+        "Max Channel Time: 8",
+        "Bounce Distance: 650",
+        "Death Ward attacks have True Strike and bounce between nearby enemies.",
+        "Grants a new ability: Voodoo Switcheroo."
+      ],
+      "itemBehaviour": [],
+      "legacyKey": "D",
+      "story": "Witch Doctor performs a ritualistic dance, one that haunts the dreams of those who live to recount it."
+    }
+  ],
+  "mainAttributes": {
+    "attrStrengthInc": 2.3,
+    "attrStrength": 18.0,
+    "attrIntelligence": 22.0,
+    "attrIntelligenceInc": 3.3,
+    "attrAgilityInc": 1.4,
+    "attrAgility": 13.0
+  },
+  "description": "Zharvakko, the Witch Doctor, is a ranged intelligence hero who can take on the role of a support or a ganker. A master of voodoo curses and healing arts, he possesses several positioning-dependent crowd control\/damage spells as well as a heal that scales well into the late game. Maledict is one of the most powerful damaging spells in the game, and is fittingly enough quite hard to hit properly \u2013 but when applied at the right time, Malediction can curse someone to suffer a slow, humiliating death as they limp back towards safety. Paralyzing Cask is a somewhat-unreliable stun that requires multiple enemies to bounce between to be effective, but can provide a barrage of stuns to the enemy team if they are grouped together. Death Ward has the potential to be one of the most damaging ultimates in the game as long as he is able to channel the spell uninterrupted.",
+  "history": "A wiry silhouette hitches forward\u2014uneven of feature and limb, bizarre of gait, relentlessly criss-crossing the battlefield in search of that vital weak point where his talents can do most good, and most harm. Whether broken or mismade it is not clear, but still, none can doubt the power carried in his twisted physique. A long staff thumps the earth as the Witch Doctor advances, deploying a terrifying arsenal of fetishes, hexes and spells. It is a body of magical knowledge learned over several lifetimes in the island highlands of Prefectura, now wielded with precise accuracy against his enemies. Witch Doctor is your best friend, or your worst enemy--healing allies and laying waste to all who oppose him.",
+  "talents": [
+    {
+      "talentLvl": "25",
+      "talentLeft": "+60 Death Ward Damage",
+      "talentRight": "+1.2% Max Health Voodoo Restoration"
+    },
+    {
+      "talentLvl": "20",
+      "talentLeft": "+15% Maledict Burst Damage",
+      "talentRight": "+100 Death Ward Attack Range"
+    },
+    {
+      "talentLvl": "15",
+      "talentLeft": "+80 Maledict AoE",
+      "talentRight": "+2 Cask Bounces"
+    },
+    {
+      "talentLvl": "10",
+      "talentLeft": "+5 Armor",
+      "talentRight": "+60 Damage"
+    }
+  ]
+}

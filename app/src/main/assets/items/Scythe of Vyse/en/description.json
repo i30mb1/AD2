@@ -1,0 +1,67 @@
+{
+  "abilities": [
+    {
+      "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/5\/58\/Scythe_of_Vyse_Hex_1.mp3\/revision\/latest?cb=20191227195526",
+      "effects": [
+        "Ability Target Unit",
+        "Affects Enemies",
+        "Damage Instant Kill"
+      ],
+      "notes": [
+        "Applies a hex on the target, setting its base movement speed to 140, silencing, muting and disarming it. However the target's movement speed is still affected by movement speed bonuses from items and abilities.",
+        "However the target's movement speed is still affected by movement speed bonuses from items and abilities.",
+        "Since hex changes base movement speed and does not actually apply a slow, all speed effects are calculated using the 140 base speed.",
+        "Hex instantly destroys illusions.",
+        "Scythe of Vyse's hex transforms the target into a pig."
+      ],
+      "mana": "250",
+      "abilityName": "Hex",
+      "cooldown": null,
+      "description": "Turns a target unit into a harmless critter for 3.5 seconds. The target has a base movement speed of 140 and will be silenced, muted, and disarmed. Instantly destroys illusions.",
+      "params": [
+        "Cast Range: 800",
+        "Set Movement Speed: 140",
+        "Duration: 3.5"
+      ],
+      "itemBehaviour": [
+        "(Spell_immunity_block_symbol)^Does not pierce spell immunity\nEffects persist if debuff was placed before spell immunity and when not dispelled."
+      ],
+      "story": null
+    }
+  ],
+  "additionalInformation": [
+    "For strength heroes, it grants 200 health, 1 health regen, 1.67 armor, 10 attack speed, 420 mana, 10.75 mana regen and 10 attack damage.",
+    "For agility heroes, it grants 200 health, 1 health regen, 1.67 armor, 10 attack speed, 420 mana, 10.75 mana regen and 10 attack damage.",
+    "For intelligence heroes, it grants 200 health, 1 health regen, 1.67 armor, 10 attack speed, 420 mana, 10.75 mana regen and 35 attack damage."
+  ],
+  "cost": "5675",
+  "lore": null,
+  "consistFrom": [
+    "Mystic Staff",
+    "Ultimate Orb",
+    "Void Stone"
+  ],
+  "boughtFrom": "Magical",
+  "name": "Scythe of Vyse",
+  "description": "The most guarded relic among the cult of Vyse, it is the most coveted weapon among magi.",
+  "trivia": [
+    "In the original DotA, this item was known as Guinsoo's Scythe of Vyse, as a tribute to one of the developers of DotA: Allstars, who went on to co-create League of Legends.",
+    "This item is known by many players (and referred to by several in-game Heroes) as \"Sheepstick\" due to turning targeted heroes into sheep in DotA. However, in Dota 2, targeted units turn into a pig. The shop's search bar also accepts \"sheepstick\" or just \"sheep\" as a search term for Scythe of Vyse.",
+    "The shop's search bar also accepts \"sheepstick\" or just \"sheep\" as a search term for Scythe of Vyse.",
+    "The item's name may be a reference to the Sega RPG Skies of Arcadia. The main character, Vyse, has been depicted wielding a scythe in early concept art."
+  ],
+  "upgradeIn": null,
+  "bonuses": [
+    "+10 Strength",
+    "+10 Agility",
+    "+35 Intelligence",
+    "+9 Mana regeneration"
+  ],
+  "tips": [
+    "Combine it with a blink or invisibility to surprise your target and approach and hit him while he is hexed. You can also use those items to catch an enemy that is running away.",
+    "Useful against enemies that have items to dispel debuffs like Eul's Scepter of Divinity, Manta Style, Guardian Greaves to use a Bloodthorn in combination.",
+    "Extremely powerful against heroes with high DPS, escape abilities, disablers, debuffs and carrying initiation or escape items like Black King Bar, Blade Mail, Blink Dagger, Shadow Blade, Town Portal Scroll. Alternatively a Heaven's Halberd and Ethereal Blade can put an enemy carry out of a fight, unable to attack, it is useful against heroes hard to reach with high attack range.",
+    "Alternatively a Heaven's Halberd and Ethereal Blade can put an enemy carry out of a fight, unable to attack, it is useful against heroes hard to reach with high attack range.",
+    "As a support it can be worth to use hex on an enemy carry using Lotus Orb."
+  ]
+}

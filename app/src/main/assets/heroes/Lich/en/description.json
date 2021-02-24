@@ -1,0 +1,262 @@
+{
+  "abilities": [
+    {
+      "notes": [
+        "The cast range talent does not affect the jump distance of Chain Frost.",
+        "This attack damage talent is added as raw attack damage, so it does not benefit illusions, and is not affected by most percentage-based damage increasing or reducing effects."
+      ],
+      "spellName": "Talent",
+      "talents": [
+        {
+          "talentLvl": "25",
+          "talentLeft": "Chain Frost Unlimited Bounces",
+          "talentRight": "Frost Shield Provides +50 HP Regen"
+        },
+        {
+          "talentLvl": "20",
+          "talentLeft": "+4s Frost Shield Duration",
+          "talentRight": "+100 Chain Frost Damage"
+        },
+        {
+          "talentLvl": "15",
+          "talentLeft": "-3s Frost Blast Cooldown",
+          "talentRight": "+100 Damage"
+        },
+        {
+          "talentLvl": "10",
+          "talentLeft": "+90 Frost Blast AoE Damage",
+          "talentRight": "+100 Cast Range"
+        }
+      ]
+    },
+    {
+      "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/b\/bf\/Lich_Frost_Blast.mp3\/revision\/latest?cb=20191216015318",
+      "effects": [
+        "Ability Target Unit",
+        "Affects Enemies",
+        "Damage Magical"
+      ],
+      "notes": [
+        "The targeting reticule must be centered over an enemy unit.",
+        "The area damage is dealt before the primary damage.",
+        "The primary target takes the primary damage and the area damage, resulting in 125\/200\/275\/350 (TagTalent 215\/290\/365\/440) damage (before reductions).",
+        "Frost Blast first applies the damage, then the debuff."
+      ],
+      "mana": "115\/140\/165\/190",
+      "hotKey": "Q",
+      "cooldown": "7 (TagTalent 4)",
+      "description": "Blasts the target enemy unit with damaging frost, dealing area damage and slowing movement and attack rates for 4 seconds. The primary target receives both base and area damage.",
+      "spellName": "Frost Blast",
+      "params": [
+        "Cast Animation: 0.4+0.93",
+        "Cast Range: 600 (TagTalent 700)",
+        "Effect Radius: 200",
+        "Primary Damage: 50\/100\/150\/200",
+        "Area Damage: 75\/100\/125\/150 (TagTalent 165\/190\/215\/240)",
+        "Move Speed Slow: 30%",
+        "Attack Speed Slow: 30",
+        "Slow Duration: 4",
+        "Slow persists if debuff was placed before spell immunity and when not dispelled.",
+        "Blocked fully only when primary target. Particles still visually appear."
+      ],
+      "itemBehaviour": [],
+      "legacyKey": "V",
+      "story": "Frost-mage Ethreain has not forgotten even the simplest of ice manipulation."
+    },
+    {
+      "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/5\/59\/Lich_Frost_Shield_1.mp3\/revision\/latest?cb=20191216015320",
+      "effects": [
+        "Ability Target Unit",
+        "Affects Allies \/ Enemies"
+      ],
+      "notes": [
+        "Can be cast on any allied unit which is not a ward. This includes buildings and invulnerable allies.",
+        "The buffed ally gains resistance against attack damage. It does not gain physical damage resistance. This means it reduces incoming attack damage of any damage type, but does not affect physical spell damage.",
+        "This means it reduces incoming attack damage of any damage type, but does not affect physical spell damage.",
+        "Despite the description, the damage pulses hit every enemy within the area, not only the closest enemy. However, Frost Shield does not hit invisible units or units in the fog of war.",
+        "However, Frost Shield does not hit invisible units or units in the fog of war.",
+        "Pulses in 1-second intervals, starting 1 second after cast, resulting in 6 (TagTalent 10) pulses.",
+        "All pulses together deal up to 120\/180\/240\/300 (TagTalent 200\/300\/400\/500) per enemy (before reductions).",
+        "The pulses first apply their damage, then the slow debuff.",
+        "Recasting Frost Shield on the same target does not stack, but refreshes the duration, and resets the pulse interval.",
+        "The level 25 talent adds 50 health regeneration to Frost Shield. The regeneration works for targeted buildings as well. Can regenerate up to 300 (TagTalent 100) health over its full duration.",
+        "Can regenerate up to 300 (TagTalent 100) health over its full duration."
+      ],
+      "mana": "100\/110\/120\/130",
+      "hotKey": "W",
+      "cooldown": "30\/25\/20\/15",
+      "description": "Applies a magical frost shield around the target, reducing damage from attacks against you. While the shield is active, ice magic will affect nearby enemy units every 20\/30\/40\/50 second, dealing minor damage and slowing them.",
+      "spellName": "Frost Shield",
+      "params": [
+        "Cast Animation: 0.2+0.93",
+        "Cast Range: 1000 (TagTalent 1100)",
+        "Attack Damage Resistance: 30%\/40%\/50%\/60%",
+        "Pulse Radius: 600",
+        "Pulse Interval: 1",
+        "Pulse Damage: 20\/30\/40\/50",
+        "Pulse Move Speed Slow: 20%\/25%\/30%\/35%",
+        "Pulse Slow Duration: 0.5",
+        "Shield Duration: 6 (TagTalent 10)",
+        "Health Regeneration Bonus: 50",
+        "Can be cast on spell immune allies. Does not affect spell immune enemies. Slow persists if debuff was placed before spell immunity and when not dispelled."
+      ],
+      "itemBehaviour": [],
+      "legacyKey": "F",
+      "story": "First conceived of to protect him in his mortal years, the frost magic that Ethreain weaves around himself has only grown colder with time."
+    },
+    {
+      "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/3\/3e\/Lich_Sinister_Gaze.mp3\/revision\/latest?cb=20191216015322",
+      "effects": [
+        "Ability Target Unit \/ Channeled",
+        "Affects Enemies"
+      ],
+      "notes": [
+        "Hypnotizes the target, forcing it to move towards the Lich, and preventing it from acting.",
+        "Sets the target's movement speed to 32%\/38%\/44%\/50% of the distance between Lich and the target. When cast at max cast range, this results in a speed of 114.29\/117.35\/121\/125 (TagTalent 137.14\/139.71\/143\/146.74).",
+        "When cast at max cast range, this results in a speed of 114.29\/117.35\/121\/125 (TagTalent 137.14\/139.71\/143\/146.74).",
+        "The speed is set once upon cast. If the target gets moved or teleported, the speed does not adapt.",
+        "Drains 0.714%\/0.882%\/1%\/1.087% of current mana in 0.1-second intervals, starting immediately upon channel begin, resulting in 15\/18\/21\/24 instances. Can drain up to 10.19%\/14.75%\/19.03%\/23.07% of the target's current mana, assuming nothing else affects the target's mana.",
+        "Can drain up to 10.19%\/14.75%\/19.03%\/23.07% of the target's current mana, assuming nothing else affects the target's mana.",
+        "Does not provide any form of vision over the target. However, the target turning invisible or entering the fog of war does not cancel Sinister Gaze.",
+        "Grants the target unobstructed pathing, so it can move through cliffs, trees, and other units.",
+        "Destroys trees within a 200 radius around the target at the end of the channeling.",
+        "With Aghanim's Scepter, Sinister Gaze becomes an area-targeted ability, so that it cannot directly target units anymore. Does not target invisible or fogged units.",
+        "Does not target invisible or fogged units."
+      ],
+      "mana": "120\/130\/140\/150",
+      "hotKey": "E",
+      "cooldown": "24\/22\/20\/18",
+      "description": "Hypnotizes an enemy unit, causing it to move towards a point between the two of you and drains a percentage of its current mana.",
+      "spellName": "Sinister Gaze",
+      "params": [
+        "Cast Animation: 0+0",
+        "Cast Range: 500\/525\/550\/575 (TagTalent 600\/625\/650\/675)",
+        "Distance Moved: 32%\/38%\/44%\/50%",
+        "Current Mana Drained: 10%\/15%\/20%\/25%",
+        "Duration: 1.4\/1.7\/2.0\/2.3",
+        "Radius: 400",
+        "Casts Sinister Gaze in a target area.",
+        "Not blocked when upgraded."
+      ],
+      "itemBehaviour": [],
+      "legacyKey": "R",
+      "story": "Mind the cold..."
+    },
+    {
+      "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/6\/6f\/Lich_Ice_Spire_1.mp3\/revision\/latest?cb=20201230173953",
+      "effects": [
+        "Ability Target Point",
+        "Affects Enemies"
+      ],
+      "notes": [
+        "Requires Aghanim's Shard to be unlocked.",
+        "Chain Frost can bounce on, but cannot directly target Ice Spires. It may only bounce to the spire if no other valid targets are within range. The bounces still fully count towards the bounce limit. Can only bounce on allied spires. Enemy spires are ignored. If multiple spires are within range, it chooses one at random. Can bounce back and forth between multiple spires if no enemies are within range.",
+        "It may only bounce to the spire if no other valid targets are within range.",
+        "The bounces still fully count towards the bounce limit.",
+        "Can only bounce on allied spires. Enemy spires are ignored.",
+        "If multiple spires are within range, it chooses one at random.",
+        "Can bounce back and forth between multiple spires if no enemies are within range.",
+        "Frost Shield fully works for the Ice Spire, applying all its effects.",
+        "The spire gains its spell immunity through a buff, so it is possible for enemies to check the buff and ping-out how long the ward will last."
+      ],
+      "mana": "150",
+      "hotKey": "D",
+      "cooldown": "25",
+      "description": "Creates an icicle at the target spot for 15 seconds, slowing enemies within 600 range by 20%. Has 600 health. Chain Frost can bounce to the Icicle if there are no other enemies in range. Can cast Frost Shield on it.",
+      "spellName": "Ice Spire",
+      "params": [
+        "Cast Animation: 0.3+0",
+        "Cast Range: 750",
+        "Radius: 600",
+        "Move Speed Slow: 20%",
+        "Aura Linger Duration: 0.5",
+        "Duration: 15",
+        "Slow persists if debuff was placed before spell immunity."
+      ],
+      "itemBehaviour": [],
+      "legacyKey": "E",
+      "story": null
+    },
+    {
+      "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/d\/d3\/Lich_Chain_Frost_1.mp3\/revision\/latest?cb=20191216015315",
+      "effects": [
+        "Ability Target Unit",
+        "Affects Enemies",
+        "Damage Magical"
+      ],
+      "notes": [
+        "Chain Frost travels at a speed of 850.",
+        "The projectile bounces with a 0.2 second delay.",
+        "Can bounce on the same unit multiple times, but only when another target was hit between the bounces.",
+        "Cannot bounce on Undying Zombies and units which are out of vision (e.g. invisible), invulnerable or hidden.",
+        "Can bounce on, but cannot damage or slow Roshan. Only the initial hit can damage and slow him.",
+        "Chain Frost first applies the debuff, then the damage.",
+        "This is how much damage each bounce deals on each level (before reductions): Level 1: 250 \/ 265 \/ 280 \/ 295 \/ 310 \/ 325 \/ 340 \/ 355 \/ 370 \/ 385 \/ 400 Level 2: 400 \/ 420 \/ 440 \/ 460 \/ 480 \/ 500 \/ 520 \/ 540 \/ 560 \/ 580 \/ 600 Level 3: 550 \/ 575 \/ 600 \/ 625 \/ 650 \/ 675 \/ 700 \/ 725 \/ 750 \/ 775 \/ 800",
+        "Level 1: 250 \/ 265 \/ 280 \/ 295 \/ 310 \/ 325 \/ 340 \/ 355 \/ 370 \/ 385 \/ 400",
+        "Level 2: 400 \/ 420 \/ 440 \/ 460 \/ 480 \/ 500 \/ 520 \/ 540 \/ 560 \/ 580 \/ 600",
+        "Level 3: 550 \/ 575 \/ 600 \/ 625 \/ 650 \/ 675 \/ 700 \/ 725 \/ 750 \/ 775 \/ 800",
+        "This is how much damage each bounce deals on each level with the damage talent (before reductions): Level 1: 350 \/ 365 \/ 380 \/ 395 \/ 410 \/ 425 \/ 440 \/ 455 \/ 470 \/ 485 \/ 500 Level 2: 500 \/ 520 \/ 540 \/ 560 \/ 580 \/ 600 \/ 620 \/ 640 \/ 660 \/ 680 \/ 700 Level 3: 650 \/ 675 \/ 700 \/ 725 \/ 750 \/ 775 \/ 800 \/ 825 \/ 850 \/ 875 \/ 900",
+        "Level 1: 350 \/ 365 \/ 380 \/ 395 \/ 410 \/ 425 \/ 440 \/ 455 \/ 470 \/ 485 \/ 500",
+        "Level 2: 500 \/ 520 \/ 540 \/ 560 \/ 580 \/ 600 \/ 620 \/ 640 \/ 660 \/ 680 \/ 700",
+        "Level 3: 650 \/ 675 \/ 700 \/ 725 \/ 750 \/ 775 \/ 800 \/ 825 \/ 850 \/ 875 \/ 900",
+        "The projectile has 800 range flying vision. The vision is not provided during the 0.2 second bounce delay.",
+        "Chain Frost stops providing vision and stops playing a sound upon hitting non-hero units when bouncing more than 60 times."
+      ],
+      "mana": "200\/325\/500",
+      "hotKey": "R",
+      "cooldown": "100\/80\/60",
+      "description": "Releases an orb of frost that bounces between nearby enemy units up to 10 times, slowing and damaging each time it hits. Each bounce increases the damage for the subsequent bounces.",
+      "spellName": "Chain Frost",
+      "params": [
+        "Cast Animation: 0.3+1.03",
+        "Cast Range: 750 (TagTalent 850)",
+        "Bounce Distance: 600",
+        "Number of Bounces: 10 (TagTalent Infinite)",
+        "Bounce Delay: 0.2",
+        "Initial Damage: 250\/400\/550 (TagTalent 350\/500\/650)",
+        "Damage Increment per Bounce: 15\/20\/25",
+        "Move Speed Slow: 65%",
+        "Attack Speed Slow: 65",
+        "Slow Duration: 2.5",
+        "Grants a new ability: Ice Spire.",
+        "Can target and bounce to spell immune enemies. Does not slow or attempt to damage spell immune enemies. Slow persists if debuff was placed before spell immunity and when not dispelled.",
+        "Blocked upon cast or impact only as primary target. When blocked upon cast, it fully affects the primary target and continues to bounce. When blocked upon impact, it continues to bounce without affecting the primary target."
+      ],
+      "itemBehaviour": [],
+      "legacyKey": "C",
+      "story": "Almost universally considered the ultimate in frost magic, Ethreain's orb of frozen death strikes fear into those who dare stand against him."
+    }
+  ],
+  "mainAttributes": {
+    "attrStrengthInc": 2.1,
+    "attrStrength": 20.0,
+    "attrIntelligence": 24.0,
+    "attrIntelligenceInc": 4.1,
+    "attrAgilityInc": 2.0,
+    "attrAgility": 15.0
+  },
+  "description": "Ethreain, the Lich, is a ranged intelligence hero that uses his abilities to slow his enemies down with his ice-based attacks, as well as giving a boost to ally defenses, and serves as a great teamfight ganker with his powerful ultimate. His Frost Shield bolsters his team's defenses with a damage-absorbing shield while releasing slowing pulses of ice to either deter enemies or catch up to them in a chase. Lone enemies he can disable and pull closer to himself with his Sinister Gaze, potentially pulling the target to their own demise. But his foes will find no safety in strength in numbers, as Lich's ultimate, Chain Frost deals massive damage to enemy heroes who dare stick together. While a relatively frail hero and mostly known as a support, Lich is a powerful crowd controller and can easily turn any teamfight or dominate in a lane.",
+  "history": "In life, the frost-mage Ethreain (not yet a Lich) had used the threat of destructive ice to enslave entire kingdoms. His subjects, aided by a few desperate magicians, eventually grew bold enough to ambush him. Armed with enough charmed rope to bind him forever, they tied the frost mage to adamant weights and dropped him in a pool known chiefly for being bottomless. It wasn't. He only fell for a year or so before an outcrop snagged him. There he rested, dead but undecaying, until the geomancer Anhil thought to verify the legend of the supposedly bottomless Black Pool. Anhil's plumbline snarled with the ropes that bound the drowned magician, and up he hauled an unexpected prize. Thinking that by rendering the dead undead, he could question the Lich about the properties of the pool, he removed the bindings and commenced a simple rite of resurrection. Even the descendants of Ethreain's enemies were long forgotten by time, so there were none to warn Anhil against imprudence. But he learned the error of his judgment almost immediately, as Lich threw off the shackles and consumed him.",
+  "talents": [
+    {
+      "talentLvl": "25",
+      "talentLeft": "Chain Frost Unlimited Bounces",
+      "talentRight": "Frost Shield Provides +50 HP Regen"
+    },
+    {
+      "talentLvl": "20",
+      "talentLeft": "+4s Frost Shield Duration",
+      "talentRight": "+100 Chain Frost Damage"
+    },
+    {
+      "talentLvl": "15",
+      "talentLeft": "-3s Frost Blast Cooldown",
+      "talentRight": "+100 Damage"
+    },
+    {
+      "talentLvl": "10",
+      "talentLeft": "+90 Frost Blast AoE Damage",
+      "talentRight": "+100 Cast Range"
+    }
+  ]
+}

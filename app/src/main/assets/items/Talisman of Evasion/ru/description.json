@@ -1,0 +1,22 @@
+{
+  "abilities": [],
+  "additionalInformation": [
+    "Складывается с другими источниками уклонения с убыванием.",
+    "Уклонение использует псевдослучайное распределение."
+  ],
+  "cost": "1400",
+  "lore": null,
+  "consistFrom": null,
+  "boughtFrom": "Потайная лавка",
+  "name": "Talisman of Evasion",
+  "description": "Ожерелье, позволяющее предвидеть вражеские удары.",
+  "trivia": null,
+  "upgradeIn": [
+    "Butterfly",
+    "Heaven's Halberd"
+  ],
+  "bonuses": [
+    "+15% к уклонению"
+  ],
+  "tips": null
+}

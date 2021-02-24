@@ -1,0 +1,20 @@
+{
+  "abilities": [],
+  "cost": "1000",
+  "lore": null,
+  "consistFrom": null,
+  "boughtFrom": "Снаряжение",
+  "name": "Broadsword",
+  "description": "Этот прочный клинок, что испокон веков носили рыцари, не подведёт в жестоком бою.",
+  "trivia": null,
+  "upgradeIn": [
+    "Blade Mail",
+    "Battle Fury",
+    "Crystalys",
+    "Shadow Blade"
+  ],
+  "bonuses": [
+    "+15 к урону"
+  ],
+  "tips": null
+}

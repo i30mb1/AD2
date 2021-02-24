@@ -1,0 +1,22 @@
+{
+  "abilities": [],
+  "cost": "2000",
+  "lore": null,
+  "consistFrom": null,
+  "boughtFrom": "Secret Shop",
+  "name": "Hyperstone",
+  "description": "A mystical, carved stone that boosts the fervor of the holder.",
+  "trivia": [
+    "Hyperstone is featured in the Dota 2 Gamescom trailer as an item for \"swift\" heroes that gives you \"speed beyond measure\"."
+  ],
+  "upgradeIn": [
+    "Bloodthorn",
+    "Assault Cuirass",
+    "Moon Shard",
+    "Mjollnir"
+  ],
+  "bonuses": [
+    "+60 Attack speed"
+  ],
+  "tips": null
+}
