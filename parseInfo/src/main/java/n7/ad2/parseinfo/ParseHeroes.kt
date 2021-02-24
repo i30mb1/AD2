@@ -503,8 +503,8 @@ fun main() = runBlocking {
     parser {
         loadRusDescription = true
         loadEngDescription = true
-        loadRusResponses = false
-        loadEngResponses = false
+        loadRusResponses = true
+        loadEngResponses = true
         loadHeroFullImage = false
         loadHeroSpellImage = false
     }.start()
