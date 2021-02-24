@@ -82,7 +82,4 @@ fastlane/readme.md
 
 src/main/res/anim/
 /.idea/vcs.xml
-/app/src/main/assets/*/**/full.webp
-/app/src/main/assets/heroes.json
-/app/src/main/assets/items.json
-/app/src/main/assets/**/*
+/app/src/main/assets/**/*.png
