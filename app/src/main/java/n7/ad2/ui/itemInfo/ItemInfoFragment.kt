@@ -6,7 +6,6 @@ import androidx.core.os.bundleOf
 import androidx.fragment.app.Fragment
 import androidx.fragment.app.viewModels
 import n7.ad2.R
-import n7.ad2.data.source.local.Locale
 import n7.ad2.databinding.FragmentItemInfoBinding
 import n7.ad2.di.injector
 import n7.ad2.ui.heroInfo.InfoPopupWindow
@@ -36,14 +35,8 @@ class ItemInfoFragment : Fragment(R.layout.fragment_item_info) {
 
         viewModel.error.observe(viewLifecycleOwner) { if (it != null) showDialogError(it) }
 
-        loadItemInfo(itemName)
         setupToolbar(itemName)
         setupItemInfoRecyclerView()
-    }
-
-    private fun loadItemInfo(itemName: String) {
-        val locale = Locale.valueOf(getString(R.string.locale))
-        viewModel.loadItemInfo(itemName, locale)
     }
 
     override fun onDestroyView() {
