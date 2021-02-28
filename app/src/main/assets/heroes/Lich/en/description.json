@@ -70,7 +70,8 @@
         "Affects Allies \/ Enemies"
       ],
       "notes": [
-        "Can be cast on any allied unit which is not a ward. This includes buildings and invulnerable allies.",
+        "Can be cast on any allied unit which is not a ward. This includes buildings and invulnerable allies. ↓↓ Double-tapping automatically targets self.",
+        "↓↓ Double-tapping automatically targets self.",
         "The buffed ally gains resistance against attack damage. It does not gain physical damage resistance. This means it reduces incoming attack damage of any damage type, but does not affect physical spell damage.",
         "This means it reduces incoming attack damage of any damage type, but does not affect physical spell damage.",
         "Despite the description, the damage pulses hit every enemy within the area, not only the closest enemy. However, Frost Shield does not hit invisible units or units in the fog of war.",

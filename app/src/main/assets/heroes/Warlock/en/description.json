@@ -83,12 +83,14 @@
         "Damage Magical"
       ],
       "notes": [
+        "↓↓ Double-tapping automatically targets self.",
         "Deals damage or heals in 1 second intervals, starting 1 second after cast, resulting in instances.",
         "Can deal up to 180\/300\/420\/540 damage to the target (before reductions), or heal for the same amount if cast on an ally.",
         "Successive casts of Shadow Word fully stack and work independently from each other.",
-        "Can be cast on allied couriers.",
         "The first sound is played when the target is an ally, the second sound when it is an enemy.",
-        "The level 20 talent turns Shadow Word into an area-targeted ability, so that it cannot directly target units anymore."
+        "Can be cast on allied couriers.",
+        "The level 20 talent turns Shadow Word into an area-targeted ability, so that it cannot directly target units anymore. Self-casting the ability still targets Warlock, centering the radius around him.",
+        "Self-casting the ability still targets Warlock, centering the radius around him."
       ],
       "mana": "120\/130\/140\/150",
       "hotKey": "W",
@@ -149,7 +151,7 @@
         "Affects Enemies"
       ],
       "notes": [
-        "Golems are always summoned at the center of the targeted area.",
+        "Warlock Golems are always summoned at the center of the targeted area.",
         "The golems are creep-heroes and ancient creeps, making them interact differently with several spells. For detailed interactions follow the two links.",
         "With Aghanim's Scepter, Chaotic Offering summons the second golem 0.4 seconds after the first golem. This effectively extends the total stun duration to 1.4 seconds.",
         "This effectively extends the total stun duration to 1.4 seconds.",
@@ -216,7 +218,6 @@
       "notes": [
         "Permanent Immolation is an aura. The debuff lingers for 0.5 seconds.",
         "Deals damage in 1 second intervals, starting 1 second after the debuff is placed.",
-        "Can deal up to 1800\/3000\/4200 damage to a single unit (before reductions) when it stays within range for its whole duration.",
         "Permanent Immolation of multiple golems fully stacks with each other."
       ],
       "mana": null,

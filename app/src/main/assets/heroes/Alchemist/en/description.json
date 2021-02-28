@@ -179,6 +179,7 @@
       ],
       "notes": [
         "Requires Aghanim's Shard to be unlocked.",
+        "↓↓ Double-tapping automatically targets self.",
         "The projectile travels at a speed of 900."
       ],
       "mana": "125",
@@ -237,8 +238,9 @@
         "Affects Allied Heroes"
       ],
       "notes": [
-        "Aghanim's Scepter has an active ability for Alchemist, allowing him to cast it on allied heroes (excluding hero clones and illusions). Once cast, the Scepter is consumed and the targeted ally passively receives all of Aghanim's Scepter's effects. This includes all Aghanim's Scepter upgrades, as well as the item's attributes, 10 strength, 10 agility, 10 intelligence, 175 health, and 175 mana. The net worth of the Scepter transfers from Alchemist to the target hero. Self-casting does not change the net worth. Doing so does not change Alchemist's or the target's GPM. A hero can only be targeted once by Aghanim's Scepter Synth.",
+        "Aghanim's Scepter has an active ability for Alchemist, allowing him to cast it on allied heroes (excluding hero clones and illusions). Once cast, the Scepter is consumed and the targeted ally passively receives all of Aghanim's Scepter's effects. ↓↓ Double-tapping Aghanim's Scepter in the inventory automatically targets self. This includes all Aghanim's Scepter upgrades, as well as the item's attributes, 10 strength, 10 agility, 10 intelligence, 175 health, and 175 mana. The net worth of the Scepter transfers from Alchemist to the target hero. Self-casting does not change the net worth. Doing so does not change Alchemist's or the target's GPM. A hero can only be targeted once by Aghanim's Scepter Synth.",
         "Once cast, the Scepter is consumed and the targeted ally passively receives all of Aghanim's Scepter's effects.",
+        "↓↓ Double-tapping Aghanim's Scepter in the inventory automatically targets self.",
         "This includes all Aghanim's Scepter upgrades, as well as the item's attributes, 10 strength, 10 agility, 10 intelligence, 175 health, and 175 mana.",
         "The net worth of the Scepter transfers from Alchemist to the target hero. Self-casting does not change the net worth.",
         "Doing so does not change Alchemist's or the target's GPM.",

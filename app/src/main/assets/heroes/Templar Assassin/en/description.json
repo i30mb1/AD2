@@ -86,7 +86,7 @@
         "Meld first applies its armor debuff, then Templar Assassin's attack damage, and then the Meld damage (TagTalent and then the bash).",
         "Neither the bonus damage nor the armor reduction from Meld affect buildings.",
         "Multiple instances of the armor reduction debuff fully stack.",
-        "When the talent is chosen, applies a basic dispel on Templar Assassin upon cast.",
+        "When the level 20 talent is chosen, applies a basic dispel on Templar Assassin upon cast.",
         "The level 25 talent adds a bash to the Meld attack. Stacks with other bashes."
       ],
       "mana": "50",

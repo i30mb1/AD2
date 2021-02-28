@@ -69,13 +69,14 @@
         "Damage Magical"
       ],
       "notes": [
-        "The shell can be put on enemy and allied units, damaging only enemy units. The unit with the shell itself is not damaged.",
+        "The shell can be put on enemy and allied units, damaging only enemy units. The unit with the shell itself is not damaged. ↓↓ Double-tapping automatically targets self.",
+        "↓↓ Double-tapping automatically targets self.",
         "Successive casts on the same unit do not stack, but refresh the duration and update the damage to the current level instead. When two opposing heroes cast it on the same target, the modifier updates and starts damaging the enemies of the latest caster. The modifier status, however, does not update. Whether it is treated as a buff or debuff is determined by the first cast, and not updated on refresh.",
         "When two opposing heroes cast it on the same target, the modifier updates and starts damaging the enemies of the latest caster.",
         "The modifier status, however, does not update. Whether it is treated as a buff or debuff is determined by the first cast, and not updated on refresh.",
         "Deals 2.4\/4.6\/6.8\/9 (TagTalent 8.4\/10.6\/12.8\/15) damage in 0.1 second intervals, starting 0.1 seconds after the cast, resulting in 250 damage instances.",
-        "Can deal up to 600\/1150\/1700\/2250 (TagTalent 2100\/2650\/3200\/3750) damage to a single unit (before reductions), if it stays in range for the full duration. With Aghanim's Scepter, Ion Shell can deal up to 480\/920\/1360\/1800 (TagTalent 1680\/2120\/2560\/3000) damage to a single unit (before reductions), if it stays in range for the full duration.",
-        "With Aghanim's Scepter, Ion Shell can deal up to 480\/920\/1360\/1800 (TagTalent 1680\/2120\/2560\/3000) damage to a single unit (before reductions), if it stays in range for the full duration.",
+        "Can deal up to 600\/1150\/1700\/2250 (TagTalent 2100\/2650\/3200\/3750) damage to a single unit (before reductions), if it stays in range for the full duration. With Aghanim's Scepter, Ion Shell can deal up to 1080\/2070\/3060\/4050 (TagTalent 3780\/4770\/5760\/6750) damage to a single unit (before reductions), if it stays in range for the full duration.",
+        "With Aghanim's Scepter, Ion Shell can deal up to 1080\/2070\/3060\/4050 (TagTalent 3780\/4770\/5760\/6750) damage to a single unit (before reductions), if it stays in range for the full duration.",
         "Affects invisible units that go close to the shell wearer, however, the visual effects do not appear.",
         "Cannot be cast on creep-heroes or couriers.",
         "Choosing the damage upgrading talent immediately upgrades all of Dark Seer's currently active Ion Shell modifiers.",
@@ -91,11 +92,11 @@
         "Cast Range: 600",
         "Damage Radius: 275 (TagTalent 350)",
         "Damage per Second: 24\/46\/68\/90 (TagTalent 84\/106\/128\/150)",
-        "Duration: 25 (TagAghanim 20)",
+        "Duration: 25 (TagAghanim 45)",
         "Max Health Bonus: 350",
         "Number of Charges: 2",
         "Charge Replenish Time: 9",
-        "Causes Ion Shell to have 2 charges, increases duration by -5 and provides +350 Health.",
+        "Causes Ion Shell to have 2 charges, increases duration by 20 and provides +350 Health.",
         "Can be cast on spell immune allies. Cannot be cast on spell immune enemies. Shell persists if debuff was placed before spell immunity and when not dispelled."
       ],
       "itemBehaviour": [],
@@ -111,8 +112,9 @@
       "notes": [
         "Applies a haste on the target, meaning it cannot be slowed while affected.",
         "Also grants the target phased movement while affected.",
-        "The talent turns Surge into an area-targeted spell, so that it cannot directly target units anymore. Self-casting the ability still targets Dark Seer, centering the AoE around him.",
-        "Self-casting the ability still targets Dark Seer, centering the AoE around him."
+        "↓↓ Double-tapping automatically targets self.",
+        "The level 25 talent turns Surge into an area-targeted spell, so that it cannot directly target units anymore. Self-casting the ability still targets Dark Seer, centering the radius around him.",
+        "Self-casting the ability still targets Dark Seer, centering the radius around him."
       ],
       "mana": "50",
       "hotKey": "E",
@@ -200,7 +202,7 @@
         "Can create the illusions of invulnerable enemies, but not hidden ones. The slow, however, is not placed on invulnerable units.",
         "Upon spawning, the illusions are automatically ordered to attack the heroes they are based on.",
         "When the illusion dies, the wall can create a new illusion of that hero as soon as it comes in range.",
-        "Illusions created by Wall of Replica have a static 5 and 5 bounty which does not scale with levels.",
+        "Illusions created by Wall of Replica have a static 5 and 5XP bounty which does not scale with levels.",
         "The illusions' duration is based on the remaining duration of the wall from which they originate.",
         "The illusion spawns 108 range away from the hero if the hero has a collision size of 24, and 72 if the collision size is 8. It appears either north, east, south or west from the target.",
         "Wall of Replica illusions are visually distinguishable for the enemies.",

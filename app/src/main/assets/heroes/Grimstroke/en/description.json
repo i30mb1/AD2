@@ -138,7 +138,8 @@
         "However, if the ink swelled unit dies, the area expire damage and stun will not apply.",
         "The expire damage and stun only apply when there is at least one enemy hero within the area.",
         "Recasting Ink Swell on the same target refreshes the duration, without resetting the damage instance counter.",
-        "Has a longer cast backswing when cast on self, due to a different animation.",
+        "Has a longer cast backswing when cast on self, due to a different animation. ↓↓ Double-tapping automatically targets self.",
+        "↓↓ Double-tapping automatically targets self.",
         "Ink Swell first applies the damage, then the debuff."
       ],
       "mana": "120\/130\/140\/150",

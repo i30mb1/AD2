@@ -126,6 +126,7 @@
         "Number of Bounces: 1",
         "Bounce Attack Damage as Damage: 50%",
         "Causes Glaives to bounce once towards the closest enemy unit, dealing 50% of Silencer's attack damage. Bounce range is 600.",
+        "When disjointed by the primary attack target, it does not bounce. When disjointed by a secondary target, the disjointing unit is not registered as hit, meaning the attack can immediately bounce on it again if within range. A disjointed bounce still counts towards the max bounces.",
         "Illusions cannot steal intelligence. Although the status buff is copied by illusions, the stolen intelligence is not copied."
       ],
       "itemBehaviour": [],

@@ -36,7 +36,8 @@
         "Ability Target Point \/ Target Unit"
       ],
       "notes": [
-        "Can directly be cast on any unit which is not a building or a ward and not invulnerable or hidden.",
+        "Can directly be cast on any unit which is not a building or a ward and not invulnerable or hidden. ↓↓ Double-tapping automatically targets self.",
+        "↓↓ Double-tapping automatically targets self.",
         "Creates a planted tree on every 45th degree of a 150 radius circle, resulting in 8 trees forming a ring and trapping the targeted unit.",
         "Destroying one tree is enough to allow units to walk in and out of the ring of trees.",
         "Trees created with Sprout act exactly like the other trees on the map. They block vision, pathing and interact with spells the same way.",
@@ -80,7 +81,7 @@
       ],
       "notes": [
         "Disjoints projectiles upon teleporting.",
-        "Double-tapping the ability automatically targets the team's Fountain.",
+        "↓↓ Double-tapping automatically targets the team's fountain.",
         "Unlike the teleports from Town Portal Scroll and Boots of Travel, canceling this one does not consume the cooldown and mana.",
         "During the cast time, a visual effect is created around Nature's Prophet and at the target location. These visual effects are visible to everyone.",
         "Also plays a sound at the target location, however, this is only audible to enemies when Nature's Prophet is visible to them."

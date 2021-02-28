@@ -87,7 +87,7 @@
     {
       "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/f\/fc\/Earthshaker_Enchant_Totem_1.mp3\/revision\/latest?cb=20191216013148",
       "effects": [
-        "Ability No Target (TagAghanim Target Area)",
+        "Ability No Target (TagAghanim Target Unit \/ Target Area)",
         "Affects Self"
       ],
       "notes": [

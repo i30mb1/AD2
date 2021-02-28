@@ -127,10 +127,11 @@
         "Affects Allies"
       ],
       "notes": [
-        "Despite the visual effect, the buff is applied instantly on the target upon cast. The projectile has only a visual purpose.",
+        "Despite the visual effect, the buff is applied instantly on the target upon cast. The projectile has only a visual purpose. Can be cast on any allied unit which is not a ward. This includes buildings and invulnerable allies. ↓↓ Double-tapping automatically targets self.",
+        "Can be cast on any allied unit which is not a ward. This includes buildings and invulnerable allies.",
+        "↓↓ Double-tapping automatically targets self.",
         "When multicast, instantly applies the Bloodlust buff on random allies within the radius.",
         "Causes the target's model size to increase by 25% for its duration. This has no impact on its collision size.",
-        "Can be cast on any allied unit which is not a ward. This includes buildings and invulnerable allies.",
         "Can be set to autocast. When on autocast, Ogre Magi automatically casts this spell on the closest allied hero that does not have the Bloodlust buff on. This includes hero clones, creep-heroes, but not illusions. Does not automatically target lane creeps, spell immune creep-heroes and other allied or own summons. Interrupts Ogre Magi's current order and makes him forget queued commands. This cannot occur while channeling a spell, though.",
         "When on autocast, Ogre Magi automatically casts this spell on the closest allied hero that does not have the Bloodlust buff on.",
         "This includes hero clones, creep-heroes, but not illusions.",
@@ -201,8 +202,9 @@
       ],
       "notes": [
         "Requires Aghanim's Shard to be unlocked.",
+        "Can be cast on any allied unit which is not a ward. This includes buildings. ↓↓ Double-tapping automatically targets self.",
+        "↓↓ Double-tapping automatically targets self.",
         "When multicast, instantly applies the Fire Shield buff on random allies within the radius.",
-        "Can be cast on any allied unit which is not a ward. This includes buildings.",
         "Cannot be cast on invulnerable units, however, Multicast can target invulnerable units.",
         "The shield only reacts on attacks, meaning the damage reduction only applies to the attack damage dealt from attacks it reacts to.",
         "Can only trigger when an enemy unit lands an attack, regardless of distance. This means it cannot trigger on missed attacks.",

@@ -138,8 +138,7 @@
       ],
       "notes": [
         "Requires Aghanim's Shard to be unlocked.",
-        "The health cost (TagTalent of current health) is direct HP Removal.",
-        "Despite the tooltip, both, the movement and attack speed bonuses are flat bonuses, not percentage-based bonuses.",
+        "The health cost (20% of current health) is direct HP Removal.",
         "Grants 100 movement speed and 100 attack speed when not in Metamorphosis form.",
         "The buff constantly checks for the Metamorphosis buff and updates its values immediately."
       ],

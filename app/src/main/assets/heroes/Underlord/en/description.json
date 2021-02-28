@@ -48,10 +48,10 @@
         "Heals Underlord for 3.75\/6\/8.25\/10.5 health per wave.",
         "The burn buff heals for 0.15%\/0.3%\/0.45%\/0.6% of max health as health per second.",
         "Can heal for up to 22.5\/36\/49.5\/63 + 1.2%\/2.4%\/3.6%\/4.8% (TagTalent 30\/48\/66\/84 + 1.5%\/3%\/4.5%\/6%) of max health as health when all waves hit and the buff is not dispelled.",
-        "With Aghanim's Shard, Firestorm may directly target Underlord. It cannot target other units. When done, the waves area created at Underlord's current location, instead of staying at the original cast location. Double-clicking the ability automatically targets self.",
+        "With Aghanim's Shard, Firestorm may directly target Underlord. It cannot target other units. When done, the waves area created at Underlord's current location, instead of staying at the original cast location. ↓↓ Double-tapping automatically targets self.",
         "When done, the waves area created at Underlord's current location, instead of staying at the original cast location.",
-        "Double-clicking the ability automatically targets self.",
-        "When the talent is chosen, Firestorm fully affects buildings, but deals less damage to them. Deals 3.75\/6\/8.25\/10.5 damage per wave to buildings. The burn debuff is placed as well, dealing 0.15%\/0.3%\/0.45%\/0.6% of max health as damage per second. Can deal up to 22.5\/36\/49.5\/63 + 1.2%\/2.4%\/3.6%\/4.8% (TagTalent 30\/48\/66\/84 + 1.5%\/3%\/4.5%\/6%) of max health as damage (before reductions) when all waves hit and the debuff is not dispelled.",
+        "↓↓ Double-tapping automatically targets self.",
+        "When the level 25 talent is chosen, Firestorm fully affects buildings, but deals less damage to them. Deals 3.75\/6\/8.25\/10.5 damage per wave to buildings. The burn debuff is placed as well, dealing 0.15%\/0.3%\/0.45%\/0.6% of max health as damage per second. Can deal up to 22.5\/36\/49.5\/63 + 1.2%\/2.4%\/3.6%\/4.8% (TagTalent 30\/48\/66\/84 + 1.5%\/3%\/4.5%\/6%) of max health as damage (before reductions) when all waves hit and the debuff is not dispelled.",
         "Deals 3.75\/6\/8.25\/10.5 damage per wave to buildings.",
         "The burn debuff is placed as well, dealing 0.15%\/0.3%\/0.45%\/0.6% of max health as damage per second.",
         "Can deal up to 22.5\/36\/49.5\/63 + 1.2%\/2.4%\/3.6%\/4.8% (TagTalent 30\/48\/66\/84 + 1.5%\/3%\/4.5%\/6%) of max health as damage (before reductions) when all waves hit and the debuff is not dispelled."
@@ -62,7 +62,7 @@
       "description": "Calls down waves of fire that damage enemy units in the target area, burning for additional damage over time.",
       "spellName": "Firestorm",
       "params": [
-        "Cast Animation: 0.5+0.6 (TagTalent 0.25+0.87)",
+        "Cast Animation: 0.5+0.6 (TagTalent 0.25+0.85)",
         "Cast Range: 600\/625\/650\/675",
         "Effect Radius: 400\/430\/460\/490",
         "Number of Waves: 6 (TagTalent 8)",
@@ -165,7 +165,7 @@
       ],
       "notes": [
         "Upon cast, Dark Rift is replaced by Cancel Dark Rift for its duration.",
-        "Double-clicking the ability automatically targets the team's fountain.",
+        "↓↓ Double-tapping automatically targets the team's fountain.",
         "Can be cast on any allied unit which is not a hero (or illusion) or a ward. Can target creep-heroes. With Aghanim's Scepter, can be cast on any allied unit that is not a ward.",
         "With Aghanim's Scepter, can be cast on any allied unit that is not a ward.",
         "Can target and teleport to invulnerable units. Cannot target hidden units, but the teleport still happens if the target turns hidden after being targeted.",

@@ -67,7 +67,9 @@
         "Damage Magical"
       ],
       "notes": [
-        "Astral Imprisonment fully disables the target and turns it invulnerable and hidden for its duration.",
+        "Astral Imprisonment fully disables the target and turns it invulnerable and hidden for its duration. Cannot be cast on allies who have □ Disabled Help from Outworld Destroyer. ↓↓ Double-tapping automatically targets self.",
+        "Cannot be cast on allies who have □ Disabled Help from Outworld Destroyer.",
+        "↓↓ Double-tapping automatically targets self.",
         "Targeted allies are only put in the prison, without any of the other effects being applied on them.",
         "If the target was an enemy, they get damaged at the end of the prison's duration.",
         "If the target was an enemy hero (including illusions and clones, excluding creep-heroes), they also get a portion of their maximum mana stolen. Only reduces the target's maximum mana value. Their current mana value stays unchanged. This also goes for when the target gains their mana back. Only their max mana value is increased, the current mana value stays unchanged. This also goes for Outworld Destroyer. Only his max mana gets changed, with current mana staying the same. Outworld Destroyer gains a status buff that shows how much mana he currently acquired with Astral Imprisonment.",
@@ -75,8 +77,7 @@
         "This also goes for when the target gains their mana back. Only their max mana value is increased, the current mana value stays unchanged.",
         "This also goes for Outworld Destroyer. Only his max mana gets changed, with current mana staying the same.",
         "Outworld Destroyer gains a status buff that shows how much mana he currently acquired with Astral Imprisonment.",
-        "The red ring expanding at the center of the visual effects indicates a fixed 4-second duration. The red ring is visible to allies only.",
-        "The -disablehelp command prevents an allied Outworld Destroyer from casting this spell on you."
+        "The red ring expanding at the center of the visual effects indicates a fixed 4-second duration. The red ring is visible to allies only."
       ],
       "mana": "150",
       "hotKey": "W",

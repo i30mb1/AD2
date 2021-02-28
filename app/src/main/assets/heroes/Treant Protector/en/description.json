@@ -120,10 +120,12 @@
         "Affects Allies"
       ],
       "notes": [
-        "When targeting the ground, the closest unit to the target point is targeted instead.",
+        "When targeting the ground, the closest unit to the target point is targeted instead. ↓↓ Double-tapping automatically targets self (TagTalent 450 radius centered around Treant Protector).",
+        "↓↓ Double-tapping automatically targets self (TagTalent 450 radius centered around Treant Protector).",
         "Can be cast on buildings, providing all its effects to them.",
         "Heals 5\/8.33\/11.67\/15 (TagTalent 9\/12.33\/15.67\/19) health in 1 second intervals, starting 1 second after the buff is placed, resulting in 12 instances.",
-        "The level 25 talent turns Living Armor into an area-targeted spell, so that it cannot directly target units anymore. In this form, it only affects heroes (including illusions and clones, excluding creep-heroes) and buildings (excluding effigy buildings). It can no longer be used on creeps.",
+        "The level 25 talent turns Living Armor into an area-targeted spell, so that it cannot directly target units anymore. Self-casting the ability still targets Treant Protector, centering the radius around him. In this form, it only affects heroes (including illusions and clones, excluding creep-heroes) and buildings (excluding effigy buildings). It can no longer be used on creeps.",
+        "Self-casting the ability still targets Treant Protector, centering the radius around him.",
         "In this form, it only affects heroes (including illusions and clones, excluding creep-heroes) and buildings (excluding effigy buildings). It can no longer be used on creeps."
       ],
       "mana": "50",
@@ -242,7 +244,7 @@
         "Forces a stop command onto affected units upon placing the debuff, canceling ability casts and interrupting channeling abilities.",
         "Deals damage in 1-second intervals, starting 1 second after cast, resulting in 3\/4\/5 instances.",
         "Can deal up to 225\/300\/375 (TagTalent 525\/700\/875) damage (before reductions).",
-        "When upgraded, also affects enemies which are within 800 range of a tree enchanted by Eyes In The Forest."
+        "With Aghanim's Scepter, Overgrowth also affects enemies within 800 range of a tree enchanted by Eyes In The Forest."
       ],
       "mana": "200\/250\/300",
       "hotKey": "R",

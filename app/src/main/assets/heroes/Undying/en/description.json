@@ -90,10 +90,11 @@
         "Damage Magical"
       ],
       "notes": [
-        "Can be cast on Tombstone, but not on any other ward type unit.",
+        "Can be cast on Tombstone, but not on any other ward type unit. When cast on an allied Tombstone, it always heals it for the given amount, regardless of unit count. Can target enemy Tombstone, but does not damage or heal it.",
         "When cast on an allied Tombstone, it always heals it for the given amount, regardless of unit count.",
         "Can target enemy Tombstone, but does not damage or heal it.",
         "Cannot be cast on Undying Zombie.",
+        "↓↓ Double-tapping automatically targets self.",
         "The 1300 search radius is centered around Undying, not the target.",
         "Units within the area are selected randomly and have to pay 19\/26\/33\/40 (TagTalent 29\/36\/43\/50) health as part of the health cost. This health loss is never lethal.",
         "Does not count Undying, the target, wards, buildings, invisible enemies and units in the Fog of War.",
@@ -113,7 +114,7 @@
         "Cast Range: 750 (TagTalent 875)",
         "Search Radius: 1300",
         "Damage\/Heal per Unit: 19\/26\/33\/40 (TagTalent 29\/36\/43\/50)",
-        "Maximum Units: 8\/9\/10\/11",
+        "Max Units: 8\/9\/10\/11",
         "Tombstone Heal: 4\/8\/12\/16",
         "Can be cast on and counts nearby spell immune allies. Cannot be cast on and does not count nearby spell immune enemies.",
         "Units counted towards damage still lose health."
@@ -245,10 +246,10 @@
       "mana": null,
       "hotKey": null,
       "cooldown": null,
-      "description": "Health Threshold: 40%",
+      "description": "Enemy Health Threshold: 40%",
       "spellName": "Deathlust",
       "params": [
-        "Health Threshold: 40%",
+        "Enemy Health Threshold: 40%",
         "Threshold Move Speed Bonus: 35%\/40%\/45%\/50%",
         "Threshold Attack Speed Bonus: 50\/60\/70\/80",
         "Move Speed Slow: 7%",

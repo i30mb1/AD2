@@ -202,6 +202,7 @@
         "Affects Allies"
       ],
       "notes": [
+        "↓↓ Double-tapping automatically targets self.",
         "Only reduces cooldowns of every non-ultimate ability, including passive abilities. Also reduces the recharge time of currently recharging charge-based spells.",
         "Also reduces the recharge time of currently recharging charge-based spells.",
         "Has a cast range of 1025\/1150\/1275 (TagTalent 1225\/1350\/1475) during Spirit Form."

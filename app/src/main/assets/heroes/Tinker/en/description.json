@@ -39,14 +39,19 @@
       "notes": [
         "Plays a sound effect during the cast time, which is audible to everyone.",
         "Uses the creep duration for creep-heroes.",
-        "The laser first applies the damage, then the debuff.",
+        "The laser first applies the debuff, then the damage.",
         "Laser's blind uses pseudo-random distribution.",
         "With Aghanim's Scepter, the Laser bounces to the furthest enemy within a 700 radius of its current target. Laser has no bounce delay, so all targets are hit at the same time. Can only bounce to heroes (including clones), illusions and creep-heroes. When the primary target is a regular creep\/summon, it still bounces to valid targets within range. Does not bounce on invisible units or units in the Fog of War.",
         "Laser has no bounce delay, so all targets are hit at the same time.",
         "Can only bounce to heroes (including clones), illusions and creep-heroes. When the primary target is a regular creep\/summon, it still bounces to valid targets within range.",
         "Does not bounce on invisible units or units in the Fog of War.",
-        "Multiple instances of the debuff do not stack. With Aghanim's Scepter, multiple instances of the debuff fully stack.",
-        "With Aghanim's Scepter, multiple instances of the debuff fully stack."
+        "With Aghanim's Scepter, Laser reduces the targets' maximum health by 20% of their current health, without keeping the current health percentage. This means the target's current health stays the same, unless their current health was above 80%, in which case it gets reduced so that it does not exceed their maximum health. Since the debuff is placed before the damage is applied, the health reduction takes place before the damage. Upon losing the debuff, the target's maximum health is reverted, while their current health is kept the same.",
+        "This means the target's current health stays the same, unless their current health was above 80%, in which case it gets reduced so that it does not exceed their maximum health.",
+        "Since the debuff is placed before the damage is applied, the health reduction takes place before the damage.",
+        "Upon losing the debuff, the target's maximum health is reverted, while their current health is kept the same.",
+        "Multiple instances of the debuff do not stack. With Aghanim's Scepter, multiple instances of the debuff fully stack. With Aghanim's Scepter, the model size reduction stacks additively with each cast.",
+        "With Aghanim's Scepter, multiple instances of the debuff fully stack.",
+        "With Aghanim's Scepter, the model size reduction stacks additively with each cast."
       ],
       "mana": "110\/130\/150\/170 (TagTalent 100.1\/118.3\/136.5\/154.7)",
       "hotKey": "Q",
@@ -60,9 +65,10 @@
         "Miss Chance: 100%",
         "Hero Duration: 3\/3.5\/4\/4.5",
         "Creep Duration: 6",
-        "Bounce Radius: 700",
+        "Bounce Search Radius: 700",
+        "Number of Bounces: 1",
         "Current Health and Model Size Reduction: 20%",
-        "Upgrades Tinker's Laser into a Shrink Ray, granting +400 cast range and reducing enemy hero's size and current health by 20% (TagAghanimstacking). The laser bounces once on the farthest target up to 700 range from the primary one, prioritizing heroes.",
+        "Upgrades Tinker's Laser into a Shrink Ray, granting +400 cast range and reducing enemy hero's size and current health by 1 (TagAghanimstacking). The laser bounces once on the farthest target up to 700 range from the primary one, prioritizing heroes.",
         "Blind effect persists if debuff was placed before spell immunity and when not dispelled.",
         "Blocked fully only when primary target."
       ],
@@ -84,7 +90,7 @@
         "Does not target units which are out of vision (e.g. invisible), invulnerable or hidden.",
         "Does target hero clones and illusions.",
         "When no valid targets were in range, the rockets are released and fall on the ground, showing that the cast failed.",
-        "When choosing the level 25 talent, the rockets also inflict a short stun on enemies they hit. The rockets first apply their damage, then the debuff.",
+        "When choosing the level 25 talent, the rockets also inflict a short 0.25-second stun on enemies they hit. The rockets first apply their damage, then the debuff.",
         "The rockets first apply their damage, then the debuff."
       ],
       "mana": "80\/100\/120\/140 (TagTalent 72.8\/91\/109.2\/127.4)",
@@ -157,6 +163,7 @@
       ],
       "notes": [
         "Requires Aghanim's Shard to be unlocked.",
+        "↓↓ Double-tapping automatically targets self.",
         "Defense Matrix fully negates damage (after all reductions), causing several on-damage effects to not trigger.",
         "Negates damage after all reductions, except the following ones: Shield Crash, Aphotic Shield, Mischief, Ghostship.",
         "Shield Crash, Aphotic Shield, Mischief, Ghostship.",
@@ -186,9 +193,8 @@
         "Affects Self"
       ],
       "notes": [
-        "The following items cannot be rearmed: Aeon Disk, Arcane Boots, Black King Bar, Hand of Midas, Helm of the Dominator, Linken's Sphere, Meteor Hammer, Necronomicon, Pipe of Insight, Refresher Orb, and Refresher Shard. Does not refresh the cooldowns of neutral items. Visually resets the cooldown of Tranquil Boots, but does not skip the broken state. Does not reset charges on charge-based items (TagTalent Bottle, Drum of Endurance). Only refreshes items in Tinker's inventory and backpack. Items in stash, in other units' (e.g. couriers) inventories or dropped items are unaffected. Only refreshes items owned by Tinker. Allied items in his inventory or backpack are not refreshed. When the channeling is interrupted, nothing is rearmed.",
-        "Aeon Disk, Arcane Boots, Black King Bar, Hand of Midas, Helm of the Dominator, Linken's Sphere, Meteor Hammer, Necronomicon, Pipe of Insight, Refresher Orb, and Refresher Shard.",
-        "Does not refresh the cooldowns of neutral items.",
+        "The following items cannot be rearmed: Aeon Disk, Arcane Boots, Black King Bar, Hand of Midas, Helm of the Dominator, Linken's Sphere, Meteor Hammer, Necronomicon, Pipe of Insight, Refresher Orb, Refresher Shard and neutral items. Visually resets the cooldown of Tranquil Boots, but does not skip the broken state. Does not reset charges on charge-based items (TagTalent Bottle, Drum of Endurance). Only refreshes items in Tinker's inventory and backpack. Items in stash, in other units' (e.g. couriers) inventories or dropped items are unaffected. Only refreshes items owned by Tinker. Allied items in his inventory or backpack are not refreshed. When the channeling is interrupted, nothing is rearmed.",
+        "Aeon Disk, Arcane Boots, Black King Bar, Hand of Midas, Helm of the Dominator, Linken's Sphere, Meteor Hammer, Necronomicon, Pipe of Insight, Refresher Orb, Refresher Shard and neutral items.",
         "Visually resets the cooldown of Tranquil Boots, but does not skip the broken state.",
         "Does not reset charges on charge-based items (TagTalent Bottle, Drum of Endurance).",
         "Only refreshes items in Tinker's inventory and backpack. Items in stash, in other units' (e.g. couriers) inventories or dropped items are unaffected.",

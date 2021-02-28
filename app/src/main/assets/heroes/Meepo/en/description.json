@@ -71,7 +71,8 @@
       ],
       "notes": [
         "Poof does not disjoint projectiles.",
-        "Poof can only target self, clones and illusions of the caster.",
+        "Poof can only target self, clones and illusions of the caster. ↓↓ Double-tapping automatically targets self.",
+        "↓↓ Double-tapping automatically targets self.",
         "Cannot directly target, but can still poof to invulnerable clones and illusions. Cannot Poof to hidden targets at all.",
         "When targeting ground, the Meepo closest to the target point is chosen upon cast (which can be the same Meepo who casts it).",
         "Poof deals its damage twice, once at the cast location and once at the destination point.",

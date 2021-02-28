@@ -87,7 +87,7 @@
         "While in the air, other units may pass below the tossed unit.",
         "Can directly target and toss towards runes, but cannot toss runes.",
         "The buff or debuff of Toss is hidden, means it is not visible in the HUD.",
-        "When the talent is chosen, Toss can target the ground, throwing the unit towards the targeted point. Runes can no longer be directly targeted when this talent is chosen, but other units still can.",
+        "When the level 20 talent is chosen, Toss can target the ground, throwing the unit towards the targeted point. Runes can no longer be directly targeted when this talent is chosen, but other units still can.",
         "Runes can no longer be directly targeted when this talent is chosen, but other units still can."
       ],
       "mana": "90\/100\/110\/120",
@@ -278,9 +278,9 @@
       ],
       "notes": [
         "Each level changes Tiny's appearance, making him bigger and making his voice deeper.",
-        "The attack damage bonus is directly added to the main attack damage value, and therefore does not count as a raw attack damage bonus. This means it fully benefits from percentage-based attack damage bonuses. This also means that Tiny's illusion benefit from it as well.",
+        "The attack damage bonus is directly added to the main attack damage value, and therefore does not count as a raw attack damage bonus. This means it fully benefits from percentage-based attack damage bonuses. This also means that Tiny's illusions benefit from it as well.",
         "This means it fully benefits from percentage-based attack damage bonuses.",
-        "This also means that Tiny's illusion benefit from it as well."
+        "This also means that Tiny's illusions benefit from it as well."
       ],
       "mana": null,
       "hotKey": "R",

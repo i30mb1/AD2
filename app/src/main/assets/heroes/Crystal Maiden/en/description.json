@@ -73,7 +73,7 @@
         "Deals 0.025 damage in 0.25 second intervals, starting 0.25 seconds after cast, resulting in 6\/8\/10\/12 (TagTalent 11\/13\/15\/17) damage instances to heroes and 40 (TagTalent 45) to creeps. Can deal up to 150\/200\/250\/300 (TagTalent 275\/325\/375\/425) damage to heroes and 1000 (TagTalent 1125) damage to creeps (before reductions).",
         "Can deal up to 150\/200\/250\/300 (TagTalent 275\/325\/375\/425) damage to heroes and 1000 (TagTalent 1125) damage to creeps (before reductions).",
         "Treats illusions, creep-heroes, ancient creeps and Roshan as heroes.",
-        "With Aghanim's Shard, Frostbite can be cast on self. Doing so places the same modifier as it does on enemies. However, instead of damaging, the modifier provides damage reduction. It still roots and disarms. Since it uses the same modifier, it does not stack with an enemy cast. If an enemy refreshes the modifier, it starts dealing damage and stops providing damage reduction, and vice versa.",
+        "With Aghanim's Shard, ↓↓ Double-tapping automatically targets self. Doing so places the same modifier as it does on enemies. However, instead of damaging, the modifier provides damage reduction. It still roots and disarms. Since it uses the same modifier, it does not stack with an enemy cast. If an enemy refreshes the modifier, it starts dealing damage and stops providing damage reduction, and vice versa.",
         "However, instead of damaging, the modifier provides damage reduction. It still roots and disarms.",
         "Since it uses the same modifier, it does not stack with an enemy cast.",
         "If an enemy refreshes the modifier, it starts dealing damage and stops providing damage reduction, and vice versa.",

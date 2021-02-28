@@ -159,8 +159,8 @@
         "The brewlings are creep-heroes and ancient creeps, making them interact differently with several spells. For detailed interactions follow the two links.",
         "With Aghanim's Scepter, the brewlings gain the Primal Split Cancel sub-ability. Casting the ability immediately ends Primal Split. Brewmaster re-appears at the location of the brewling which used the sub-spell.",
         "Casting the ability immediately ends Primal Split. Brewmaster re-appears at the location of the brewling which used the sub-spell.",
-        "The level 25 talent grants the modifier_brewmaster_drunken_brawler_passive modifier to all brewlings, which grants them the passive evasion and critical strike. Since the ability itself is not granged, they cannot use the active ability to enhance the values.",
-        "Since the ability itself is not granged, they cannot use the active ability to enhance the values."
+        "The level 25 talent grants the modifier_brewmaster_drunken_brawler_passive modifier to all brewlings, which grants them the passive evasion and critical strike. Since the ability itself is not granted, they cannot use the active ability to enhance the values.",
+        "Since the ability itself is not granted, they cannot use the active ability to enhance the values."
       ],
       "mana": "125\/150\/175",
       "hotKey": "R",

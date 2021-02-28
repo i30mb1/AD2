@@ -35,7 +35,9 @@
         "Affects Enemy Heroes \/ Allied Heroes"
       ],
       "notes": [
-        "Disruption fully disables the target and turns it invulnerable and hidden for its duration.",
+        "Disruption fully disables the target and turns it invulnerable and hidden for its duration. ↓↓ Double-tapping automatically targets self. Cannot be cast on allies who have □ Disabled Help from Shadow Demon.",
+        "↓↓ Double-tapping automatically targets self.",
+        "Cannot be cast on allies who have □ Disabled Help from Shadow Demon.",
         "When the target turns invisible during Disruption, the visual effects turn invisible as well.",
         "Always creates the illusions, even when cast on allies or self.",
         "The targeted unit's position is not shuffled with the possible illusion's position. It always reappears between the 2 illusions. The illusions spawn 108 range away from the hero if the hero has a collision size of 24, and 72 if the collision size is 8. Each illusion appears either north, east, south or west from the hero and face the same direction as the hero does.",
@@ -45,8 +47,7 @@
         "The current health of the illusions is determined upon casting Disruption. This means any health loss caused by Shadow Demon's spells during Disruption do not affect the health of the illusions that are about to spawn.",
         "This means any health loss caused by Shadow Demon's spells during Disruption do not affect the health of the illusions that are about to spawn.",
         "Can be cast on illusions, creating illusions based on the original hero.",
-        "When the targeted unit dies during Disruption, no illusions are created.",
-        "The disablehelp option prevents an allied Shadow Demon from casting this spell on you."
+        "When the targeted unit dies during Disruption, no illusions are created."
       ],
       "mana": "120",
       "hotKey": "Q",
@@ -175,9 +176,9 @@
       "notes": [
         "Applies a basic dispel on the target upon cast and over its entire duration. The damage (TagTalent or heal) is applied after the end of the duration.",
         "Demonic Purge first applies the dispel, then the debuff.",
-        "Can be cast on invulnerable units, applying the initial dispel and the debuff if the invulnerability can be dispelled. However, if the target is an enemy and if the invulnerability cannot be dispelled, only the dispel is applied, and the debuff is not. With Aghanim's Shard, if the target is an ally, it can place the modifier on them even while invulnerable.",
+        "Can be cast on invulnerable units, applying the initial dispel and the debuff if the invulnerability can be dispelled. However, if the target is an enemy and if the invulnerability cannot be dispelled, only the dispel is applied, and the debuff is not. With Aghanim's Shard, if the target is an ally, it can place the modifier on them even while invulnerable. ↓↓ Double-tapping automatically targets self.",
         "However, if the target is an enemy and if the invulnerability cannot be dispelled, only the dispel is applied, and the debuff is not.",
-        "With Aghanim's Shard, if the target is an ally, it can place the modifier on them even while invulnerable.",
+        "With Aghanim's Shard, if the target is an ally, it can place the modifier on them even while invulnerable. ↓↓ Double-tapping automatically targets self.",
         "The slow starts at 100% decreases over time to 20%. Hit units regain 0.381% of their movement speed on each server tick. This translates to 11.43% movement speed regained per second.",
         "This translates to 11.43% movement speed regained per second.",
         "The damage (TagTalent and heal) is bound to the modifier, and applied whenever it is removed in any way. The damage (TagTalent and heal) starts at 0 and increases by 1.43\/1.9\/2.38 (TagTalent 3.33\/3.81\/4.29) for each 0.03 seconds affected, reaching the max values in 7 seconds.",
@@ -203,7 +204,7 @@
         "Number of Charges: 3",
         "Charge Replenish Time: 60",
         "Min Heal: 0",
-        "Max Heal: 300\/400\/500",
+        "Max Heal: 300\/400\/500 (TagTalent 700\/800\/900)",
         "Cooldown is removed, replaced with 3 charges that replenish every 60 seconds. Also causes Demonic Purge to break its target's passive abilities while active.",
         "Allows Demonic Purge to be cast on allies, continuously dispelling them and healing for its damage values. Does not slow allies."
       ],

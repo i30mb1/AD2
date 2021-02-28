@@ -96,7 +96,7 @@
         "Search Radius: 500",
         "Number of Bounces: 3\/4\/5\/6",
         "Damage Reduction per Bounce: 50%\/44%\/38%\/32%",
-        "When disjointed, the disjointing unit is not registered as hit, meaning the glaive can immediately bounce on it again if within range. A disjointed bounce still counts towards the max bounces."
+        "When disjointed by the primary attack target, it does not bounce. When disjointed by a secondary target, the disjointing unit is not registered as hit, meaning the attack can immediately bounce on it again if within range. A disjointed bounce still counts towards the max bounces."
       ],
       "itemBehaviour": [],
       "legacyKey": "G",
@@ -154,7 +154,7 @@
         "Lucent Beam Level 2: 750 (TagTalent 1250) (TagTalent 900\/1800\/2700, 1500\/3000\/4500)",
         "Lucent Beam Level 3: 1125 (TagTalent 1625) (TagTalent 1350\/2700\/4050, 1950\/3900\/5850)",
         "Lucent Beam Level 4: 1500 (TagTalent 2000) (TagTalent 1800\/3600\/5400, 2400\/4800\/7200)",
-        "With Aghanim's Scepter, double-clicking the ability targets self. Can target any allied units, except for wards and buildings. Provides 675 radius ground vision for its duration when not targeting a unit.",
+        "With Aghanim's Scepter, ↓↓ Double-tapping automatically targets self. Can target any allied units, except for wards and buildings. Provides 675 radius ground vision for its duration when not targeting a unit.",
         "Can target any allied units, except for wards and buildings.",
         "Provides 675 radius ground vision for its duration when not targeting a unit.",
         "When choosing the level 25 talent, each beam also stuns hit enemies for 0.2 seconds. Unlike the damage, the stun is applied regardless of Lucent Beam's level, since it is not based on Lucent Beam's stun. The talent immediately takes effect, causing the already active casts to stun as well. The beams first apply their damage, then the debuff.",

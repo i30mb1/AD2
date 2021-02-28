@@ -44,7 +44,7 @@
         "The self damage is applied instantly upon cast.",
         "The self-inflicted damage is never lethal, so it cannot be used to deny oneself.",
         "If the target ally turns invulnerable or hidden before projectile impact, it still gets healed by it.",
-        "When upgraded with Aghanim's Shard, Mist Coil first applies its damage, then the Curse of Avernus stack.",
+        "With Aghanim's Shard, Mist Coil first applies its damage, then the Curse of Avernus stack.",
         "Choosing the damage\/heal upgrading talent immediately upgrades all of Abaddon's currently flying Mist Coil projectiles.",
         "The level 25 talent adds a 425 radius to this spell. The ability must be centered over a unit still. Upon cast, Abaddon sends coils towards every ally and enemy within the radius, excluding himself. These behave just like a regular cast, and can be disjointed normally. Also targets units inside the fog of war and invisible units. However, invisible targets instantly disjoint it. The self-damage stays the same, regardless of how many targets got coiled.",
         "Upon cast, Abaddon sends coils towards every ally and enemy within the radius, excluding himself.",
@@ -62,7 +62,7 @@
         "Cast Range: 575",
         "Self Damage: 75\/100\/125\/150 (TagTalent 125\/150\/175\/200)",
         "Enemy Target Damage: 120\/165\/210\/255 (TagTalent 170\/215\/260\/305)",
-        "Allied Target Heal: 120\/165\/210\/255 (TagTalent 170\/215\/260\/305)",
+        "Ally Target Heal: 120\/165\/210\/255 (TagTalent 170\/215\/260\/305)",
         "Radius: 425",
         "Causes Mist Coil to apply a Curse of Avernus stack on enemies.",
         "Can be cast on Spell Immune allies. Cannot be cast on spell immune enemies. Self damage pierces spell immunity.",
@@ -81,7 +81,8 @@
         "Damage Magical"
       ],
       "notes": [
-        "Applies a strong dispel on the target upon cast.",
+        "Applies a strong dispel on the target upon cast. ↓↓ Double-tapping automatically targets self.",
+        "↓↓ Double-tapping automatically targets self.",
         "Aphotic Shield fully negates damage (after all reductions), causing several on-damage effects to not trigger.",
         "Aphotic Shield has the second lowest priority in the group of damage negating spells. This means when combined with e.g. Borrowed Time or Refraction, the shield does not absorb any damage until the other sources are gone.",
         "This means when combined with e.g. Borrowed Time or Refraction, the shield does not absorb any damage until the other sources are gone.",

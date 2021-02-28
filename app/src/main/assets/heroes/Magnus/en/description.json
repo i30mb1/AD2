@@ -88,7 +88,8 @@
         "Damage Physical"
       ],
       "notes": [
-        "When cast on self, grants 17.5%\/35%\/52.5%\/70% (TagTalent 35%\/52.5%\/70%\/87.5%) cleave damage and 19.25%\/31.5%\/43.75%\/56% (TagTalent 36.75%\/49%\/61.25%\/73.5%) attack damage instead.",
+        "When cast on self, grants 17.5%\/35%\/52.5%\/70% (TagTalent 35%\/52.5%\/70%\/87.5%) cleave damage and 19.25%\/31.5%\/43.75%\/56% (TagTalent 36.75%\/49%\/61.25%\/73.5%) attack damage instead. ↓↓ Double-tapping automatically targets self.",
+        "↓↓ Double-tapping automatically targets self.",
         "Only increases base damage and that given by the primary attribute of affected units. Raw bonus damage is not increased.",
         "The unit's current main damage is periodically checked, and the bonuses adapted instantly.",
         "Grants melee targets cleave and attack damage, and ranged targets only attack damage.",

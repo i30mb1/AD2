@@ -367,6 +367,7 @@
       ],
       "notes": [
         "Ability invokes when Invoker has 2 Wex and 1 Exort instances.",
+        "↓↓ Double-tapping automatically targets self.",
         "Ability formulas: Attack speed bonus: -5 + (15 * Wex) (TagTalent -5 + 50 + (15 * Wex)) Attack damage bonus: -5 + (15 * Exort) (TagTalent -5 + 50 + (15 * Exort))",
         "Attack speed bonus: -5 + (15 * Wex) (TagTalent -5 + 50 + (15 * Wex))",
         "Attack damage bonus: -5 + (15 * Exort) (TagTalent -5 + 50 + (15 * Exort))"
@@ -390,7 +391,7 @@
     {
       "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/b\/b0\/Invoker_Sun_Strike_1.mp3\/revision\/latest?cb=20191216014156",
       "effects": [
-        "Ability Target Area",
+        "Ability Target Area (TagAghanim Target Unit \/ Target Area)",
         "Affects Enemies",
         "Damage Pure"
       ],
@@ -406,7 +407,7 @@
         "Does not affect wards, buildings, invulnerable or hidden units.",
         "Provides 300 radius flying vision at the targeted point for 5.5 seconds upon cast.",
         "The visual effects and the sound during the seconds effect delay are visible and audible to allies only.",
-        "With Aghanim's Scepter, self-casting Sun Strike causes it to send two strikes to every hero (including Tempest Double, excluding other clones and illusions) on the map. These Sun Strikes are fully visible and audible to the enemy during their delays. The strikes are placed randomly around the target, using the given minimum and maximum distances.",
+        "With Aghanim's Scepter, ↓↓ Double-tapping send two Sun Strikes to every hero (including Tempest Double, excluding other clones and illusions) on the map. These Sun Strikes are fully visible and audible to the enemy during their delays. The strikes are placed randomly around the target, using the given minimum and maximum distances.",
         "These Sun Strikes are fully visible and audible to the enemy during their delays.",
         "The strikes are placed randomly around the target, using the given minimum and maximum distances.",
         "Ability formulas: Damage: 37.5 + (62.5 * Exort)",

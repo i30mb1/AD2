@@ -15,7 +15,7 @@ class ItemRepository @Inject constructor(
     companion object {
         const val ASSETS_PATH_ITEMS = "items.json"
         const val ASSETS_PATH_ITEM_DESC = "description.json"
-        fun getFullUrlItemImage(itemName: String) = "file:///android_asset/items/$itemName/full.png"
+        fun getFullUrlItemImage(itemName: String) = "file:///android_asset/items/$itemName/full.webp"
     }
 
     suspend fun insertItems(list: List<LocalItem>) {
@@ -35,8 +35,8 @@ class ItemRepository @Inject constructor(
 
     suspend fun getAssetsItems(): String {
         return application.assets.open(ASSETS_PATH_ITEMS).bufferedReader().use {
-                it.readText()
-            }
+            it.readText()
+        }
     }
 
 }

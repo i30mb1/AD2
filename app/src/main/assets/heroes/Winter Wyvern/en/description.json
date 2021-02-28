@@ -125,10 +125,11 @@
         "Affects Allies"
       ],
       "notes": [
-        "Stuns the target and turns it immune to physical damage. The target can still be attacked and affected by magical and pure damage.",
+        "Stuns the target and turns it immune to physical damage. The target can still be attacked and affected by magical and pure damage. Cannot be cast on allies who have □ Disabled Help from Winter Wyvern. ↓↓ Double-tapping automatically targets self.",
+        "Cannot be cast on allies who have □ Disabled Help from Winter Wyvern.",
+        "↓↓ Double-tapping automatically targets self.",
         "Heals 7.5\/8.75\/10\/11.25 + 0.5%\/0.75%\/1%\/1.25% (TagTalent 7.5\/8.75\/10\/11.25 + 0.75%\/1%\/1.25%\/1.5%) health in 0.25-second intervals, starting 0.25 seconds after the buff is placed, resulting in 16 instances.",
         "Can heal up to 120\/140\/160\/180 + 8%\/12%\/16%\/20% (TagTalent 120\/140\/160\/180 + 12%\/16%\/20%\/24%) of a unit's max health over its full duration.",
-        "Cannot be cast on allies who have disabled help from Winter Wyvern.",
         "With Aghanim's Shard, losing the buff in any way causes Splinter Blast secondary projectiles to be released. Does not require vision. Can target invisible units and units inside the fog of war. However, unlike the projectiles of a regular cast, these projectiles are disjointed by invisibility. The projectiles are based on Splinter Blast's current level, if it is not learned, no projectiles are released.",
         "Does not require vision. Can target invisible units and units inside the fog of war.",
         "However, unlike the projectiles of a regular cast, these projectiles are disjointed by invisibility.",

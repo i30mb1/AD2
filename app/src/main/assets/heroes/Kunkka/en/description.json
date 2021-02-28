@@ -114,6 +114,7 @@
         "Affects Enemy Heroes \/ Allied Heroes"
       ],
       "notes": [
+        "↓↓ Double-tapping automatically targets self.",
         "The target is given a stop command as soon as it is teleported back, effectively canceling channeling spells.",
         "Does not disjoint projectiles for the target upon getting teleported back.",
         "Marks the target's current location with a red X. This X is visible to enemies only when they have vision over the unit, or the X itself.",

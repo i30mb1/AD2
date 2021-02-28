@@ -49,7 +49,7 @@
         "When illusions are moving or attacking, they continue to do so and do not face the target. They still play the cast animation, overriding their move or attack animations.",
         "When canceling the cast, the illusions still play the full cast animation, but do not release fake lances.",
         "The fake lances do not interact with anything, deal no damage, do not slow and spawn no illusions.",
-        "Illusions created by Spirit Lance have a static 5 and 5 bounty which does not scale with levels.",
+        "Illusions created by Spirit Lance have a static 5 and 5XP bounty which does not scale with levels.",
         "With Aghanim's Shard, the projectile bounces. Does not bounce on invisible units or units in the Fog of War. Can never hit the same unit twice per cast. If the current target turns invulnerable or hidden, it does not bounce upon reaching them.",
         "Does not bounce on invisible units or units in the Fog of War.",
         "Can never hit the same unit twice per cast.",

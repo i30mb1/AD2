@@ -189,7 +189,7 @@
       "mana": "100",
       "hotKey": "R",
       "cooldown": "0",
-      "description": "Void Spirit tears a rift through the astral plane to appear at the target location, attacking all enemies along the path. This attack inflicts a void mark that slows for 1.25 seconds and then detonates.",
+      "description": "Void Spirit tears a rift through the astral plane to appear at the target location, attacking all enemies along the path. This attack inflicts a void mark that slows for 2 seconds and then detonates.",
       "spellName": "Astral Step",
       "params": [
         "Cast Animation: 0.2+0",
@@ -198,11 +198,11 @@
         "Max Distance: 700\/900\/1100",
         "Path Width: 170",
         "Move Speed Slow: 40%\/60%\/80%",
-        "Critical Damage: 100% (TagTalent 160%)",
         "Debuff Damage: 150\/200\/250",
         "Debuff Duration: 1.25",
         "Number of Charges: 2",
-        "Charge Replenish Time: 30\/25\/20 (TagTalent 25\/20\/15)"
+        "Charge Replenish Time: 30\/25\/20 (TagTalent 25\/20\/15)",
+        "Critical Damage: 160%"
       ],
       "itemBehaviour": [],
       "legacyKey": "T",

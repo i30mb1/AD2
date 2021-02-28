@@ -141,7 +141,8 @@
         "Bounce Attack Damage as Damage: 50%",
         "Grants a new ability: Electric Rave.",
         "Procs and applies area effect when attacking spell immune enemies. Does not slow and does not attempt to damage spell immune enemies. Slow persists if debuff was placed before spell immunity and when not dispelled.",
-        "Prevents gaining a new charge. An already existing charge still fully works."
+        "Prevents gaining a new charge. An already existing charge still fully works.",
+        "When disjointed by the primary attack target, it does not bounce. When disjointed by a secondary target, the disjointing unit is not registered as hit, meaning the attack can immediately bounce on it again if within range. A disjointed bounce still counts towards the max bounces."
       ],
       "itemBehaviour": [],
       "legacyKey": "V",
@@ -212,7 +213,7 @@
         "2500 Distance: 200\/300\/400 damage (280 + 24.25% of max mana)",
         "5000 Distance: 400\/600\/800 damage (530 + 40.5% of max mana)",
         "10000 Distance: 800\/1200\/1600 damage (1030 + 73% of max mana)",
-        "When the talent is chosen, a Static Remnant is automatically dropped every 600 range Storm Spirit travels. These remnants do not cost any mana and do not prevent Storm Spirit from manually casting Static Remnant during Ball Lightning.",
+        "With the level 25 talent, a Static Remnant is automatically dropped every 600 range Storm Spirit travels. These remnants do not cost any mana and do not prevent Storm Spirit from manually casting Static Remnant during Ball Lightning.",
         "These remnants do not cost any mana and do not prevent Storm Spirit from manually casting Static Remnant during Ball Lightning."
       ],
       "mana": "30 + 8% of max mana",

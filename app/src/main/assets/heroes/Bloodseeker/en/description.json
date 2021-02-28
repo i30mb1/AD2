@@ -38,8 +38,9 @@
         "Damage Pure (TagAghanimHP Removal)"
       ],
       "notes": [
-        "If the target is more than 1050 range away, Bloodseeker moves to the target until it is within 800 range before casting. If a cast order is given on a target which is within 1050 range already, Bloodseeker does not need to move closer and casts it right away.",
+        "If the target is more than 1050 range away, Bloodseeker moves to the target until it is within 800 range before casting. If a cast order is given on a target which is within 1050 range already, Bloodseeker does not need to move closer and casts it right away. ↓↓ Double-tapping automatically targets self.",
         "If a cast order is given on a target which is within 1050 range already, Bloodseeker does not need to move closer and casts it right away.",
+        "↓↓ Double-tapping automatically targets self.",
         "Deals 1% of max health as damage in 0.5 second intervals, starting 0.5 seconds after cast, resulting in 16 instances. The damage is flagged as HP Removal, so it does not trigger any on-damage effects. Does not drain health while invulnerable. Health drain cannot bring the target's health below 1.",
         "The damage is flagged as HP Removal, so it does not trigger any on-damage effects.",
         "Does not drain health while invulnerable. Health drain cannot bring the target's health below 1.",
@@ -145,7 +146,7 @@
         "Thirst Health Threshold: 75%",
         "Visibility Health Threshold: 25%",
         "Max Move Speed Bonus per Hero: 14%\/24%\/34%\/44% (TagTalent 28%\/38%\/48%\/58%)",
-        "Hero's Max Health as Heal: 10%\/15%\/20%\/25%",
+        "Hero Max Health as Heal: 10%\/15%\/20%\/25%",
         "Non-Hero Max Health as Heal: 11%\/14%\/17%\/20%",
         "Speed Linger Duration: 4",
         "Completely ignores spell immune enemies.",

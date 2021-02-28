@@ -21,21 +21,21 @@ import javax.imageio.ImageIO
 
 // Builder Pattern https://medium.com/mindorks/builder-pattern-vs-kotlin-dsl-c3ebaca6bc3b
 class ParseHeroes private constructor(
-        private val loadRusDescription: Boolean,
-        private val loadEngDescription: Boolean,
-        private val loadRusResponses: Boolean,
-        private val loadEngResponses: Boolean,
-        private val loadHeroFullImage: Boolean,
-        private val loadHeroSpellImage: Boolean
+    private val loadRusDescription: Boolean,
+    private val loadEngDescription: Boolean,
+    private val loadRusResponses: Boolean,
+    private val loadEngResponses: Boolean,
+    private val loadHeroFullImage: Boolean,
+    private val loadHeroSpellImage: Boolean,
 ) : CoroutineScope by (CoroutineScope(Dispatchers.IO)) {
 
     private constructor(builder: Builder) : this(
-            builder.loadRusDescription,
-            builder.loadEngDescription,
-            builder.loadRusResponses,
-            builder.loadEngResponses,
-            builder.loadHeroFullImage,
-            builder.loadHeroSpellImage
+        builder.loadRusDescription,
+        builder.loadEngDescription,
+        builder.loadRusResponses,
+        builder.loadEngResponses,
+        builder.loadHeroFullImage,
+        builder.loadHeroSpellImage
     )
 
     enum class LOCALE(val urlAllHeroes: String, val baseUrl: String, val directory: String, val response: String) {
@@ -76,84 +76,85 @@ class ParseHeroes private constructor(
         heroList
 //            .filter { it == "Legion Commander" }
             .forEach { hero ->
-            val root = connectTo("${locale.baseUrl}/${hero}/${locale.response}")
-            val allResponsesWithCategories = JSONArray()
+                val root = connectTo("${locale.baseUrl}/${hero}/${locale.response}")
+                val allResponsesWithCategories = JSONArray()
 
-            JSONArray().apply {
-                var count = 0
-                val children = root.getElementsByAttributeValue("class", "mw-parser-output")[0].children()
-                var category = JSONObject()
-                var responses = JSONArray()
-                var response: JSONObject
+                JSONArray().apply {
+                    var count = 0
+                    val children = root.getElementsByAttributeValue("class", "mw-parser-output")[0].children()
+                    var category = JSONObject()
+                    var responses = JSONArray()
+                    var response: JSONObject
 
-                for (child in children) {
-                    if (child.tag().toString() == "h2") {
-                        if(category.size != 0) allResponsesWithCategories.add(category)
-                        category = JSONObject()
-                        responses = JSONArray()
+                    for (child in children) {
+                        if (child.tag().toString() == "h2") {
+                            if (category.size != 0) allResponsesWithCategories.add(category)
+                            category = JSONObject()
+                            responses = JSONArray()
 
-                        count++
-                        if (child.children().size > 1) {
-                            category["category"] = child.child(1).text().trim()
-                        } else {
-                            category["category"] = child.child(0).text().trim()
+                            count++
+                            if (child.children().size > 1) {
+                                category["category"] = child.child(1).text().trim()
+                            } else {
+                                category["category"] = child.child(0).text().trim()
+                            }
                         }
-                    }
-                    if (child.tag().toString() == "ul") {
+                        if (child.tag().toString() == "ul") {
 //                        if(child.child(0).children().size == 0) continue // реплики без URL
 //                        if(child.children().size >1) // cекция без реплик
 
-                        child.children().forEach node@{ node ->
-                            response = JSONObject()
-                            val audioUrl = node.getElementsByTag("a").getOrNull(0) ?: return@node
-                            val audioUrl2 = node.getElementsByTag("a").getOrNull(2)?.attr("href")?.toString()
-                            response["audioUrl"] = audioUrl.attr("href").toString()
-                            response["title"] = node.let { innerNode ->
-                                innerNode.getElementsByTag("span").forEach { span -> span.remove() }
-                                innerNode.text()
-                            }
-                            if (node.getElementsByTag("img").size > 0) {
-                                response["icons"] = JSONArray().apply {
-                                    node.let { innerNode ->
-                                        innerNode.getElementsByTag("span").forEach { span -> span.remove() }
-                                        innerNode.getElementsByTag("a").forEach { image ->
-                                            val regex = Regex(" \\(.+?\\)")
-                                            var title = image.attr("title")
-                                            val matches = regex.containsMatchIn(title)
-                                            if (matches) {
-                                                title = "items/" + title.replace(regex, "") + "/full.png"
-                                                add(title)
-                                            } else {
-                                                title = "heroes/$title/minimap.png"
-                                                add(title)
+                            child.children().forEach node@{ node ->
+                                response = JSONObject()
+                                val audioUrl = node.getElementsByTag("a").getOrNull(0) ?: return@node
+                                val audioUrl2 = node.getElementsByTag("a").getOrNull(2)?.attr("href")?.toString()
+                                response["audioUrl"] = audioUrl.attr("href").toString()
+                                response["title"] = node.let { innerNode ->
+                                    innerNode.getElementsByTag("span").forEach { span -> span.remove() }
+                                    innerNode.text()
+                                }
+                                if (node.getElementsByTag("img").size > 0) {
+                                    response["icons"] = JSONArray().apply {
+                                        node.let { innerNode ->
+                                            innerNode.getElementsByTag("span").forEach { span -> span.remove() }
+                                            innerNode.getElementsByTag("a").forEach { image ->
+                                                val regex = Regex(" \\(.+?\\)")
+                                                var title = image.attr("title")
+                                                val matches = regex.containsMatchIn(title)
+                                                if (matches) {
+                                                    title = "items/" + title.replace(regex, "") + "/full.png"
+                                                    add(title)
+                                                } else {
+                                                    title = "heroes/$title/minimap.png"
+                                                    add(title)
+                                                }
                                             }
                                         }
                                     }
                                 }
-                            }
-                            val previousTitle = (responses.getOrNull(responses.size - 1) as? JSONObject)?.getOrDefault("title","-")
-                            if(previousTitle == response["title"]) response["isArcane"] = true
-                            responses.add(response)
-
-                            if (audioUrl2 != null && !audioUrl2.startsWith("/")) {
-                                val oldCopy = response
-                                response = JSONObject()
-                                if (oldCopy.containsKey("icons")) response["icons"] = oldCopy.get("icons")
-                                response["audioUrl"] = audioUrl2
-                                response["title"] = oldCopy["title"]
-                                response["isArcane"] = true
+                                val previousTitle = (responses.getOrNull(responses.size - 1) as? JSONObject)?.getOrDefault("title", "-")
+                                if (previousTitle == response["title"]) response["isArcane"] = true
                                 responses.add(response)
-                            }
-                        }
-                        category["responses"] = responses
-                    }
-                }
-                allResponsesWithCategories.add(category)
-            }
 
-            println("response in ${locale.directory} for hero $hero saved (${allResponsesWithCategories.toString().length} bytes)")
-            File(assets + File.separator + ASSETS_FOLDER_HEROES + File.separator + hero + File.separator + locale.directory + File.separator + "responses.json").writeText(allResponsesWithCategories.toString())
-        }
+                                if (audioUrl2 != null && !audioUrl2.startsWith("/")) {
+                                    val oldCopy = response
+                                    response = JSONObject()
+                                    if (oldCopy.containsKey("icons")) response["icons"] = oldCopy.get("icons")
+                                    response["audioUrl"] = audioUrl2
+                                    response["title"] = oldCopy["title"]
+                                    response["isArcane"] = true
+                                    responses.add(response)
+                                }
+                            }
+                            category["responses"] = responses
+                        }
+                    }
+                    allResponsesWithCategories.add(category)
+                }
+
+                println("response in ${locale.directory} for hero $hero saved (${allResponsesWithCategories.toString().length} bytes)")
+                File(assets + File.separator + ASSETS_FOLDER_HEROES + File.separator + hero + File.separator + locale.directory + File.separator + "responses.json").writeText(
+                    allResponsesWithCategories.toString())
+            }
     }
 
     private fun getHeroes(document: Document): Elements {
@@ -236,7 +237,7 @@ class ParseHeroes private constructor(
         val root = connectTo(heroUrlEng)
 
         if (loadHeroFullImage) loadHeroImageFull(root, heroDirectory)
-        if (loadHeroFullImage) loadHeroImageMinimap(root, heroDirectory)
+        if (true) loadHeroImageMinimap(root, heroDirectory)
         loadHeroInformation(root, heroLocalizedDirectory)
     }
 
@@ -268,20 +269,20 @@ class ParseHeroes private constructor(
         val mainAttributesElements = mainAttributes.getElementsByTag("div")
 
         val attrStrength = (mainAttributesElements[4].childNode(0) as Element).text().toDouble()
-        val attrStrengthInc = (mainAttributesElements[4].childNode(1) as TextNode).text().split(" ").last().replace(",",".").toDouble()
+        val attrStrengthInc = (mainAttributesElements[4].childNode(1) as TextNode).text().split(" ").last().replace(",", ".").toDouble()
         val attrAgility = (mainAttributesElements[5].childNode(0) as Element).text().toDouble()
-        val attrAgilityInc = (mainAttributesElements[5].childNode(1) as TextNode).text().split(" ").last().replace(",",".").toDouble()
+        val attrAgilityInc = (mainAttributesElements[5].childNode(1) as TextNode).text().split(" ").last().replace(",", ".").toDouble()
         val attrIntelligence = (mainAttributesElements[6].childNode(0) as Element).text().toDouble()
-        val attrIntelligenceInc = (mainAttributesElements[6].childNode(1) as TextNode).text().split(" ").last().replace(",",".").toDouble()
+        val attrIntelligenceInc = (mainAttributesElements[6].childNode(1) as TextNode).text().split(" ").last().replace(",", ".").toDouble()
 
-           val attrs = JSONObject().apply {
-               put("attrStrength", attrStrength)
-               put("attrStrengthInc", attrStrengthInc)
-               put("attrAgility", attrAgility)
-               put("attrAgilityInc", attrAgilityInc)
-               put("attrIntelligence", attrIntelligence)
-               put("attrIntelligenceInc", attrIntelligenceInc)
-           }
+        val attrs = JSONObject().apply {
+            put("attrStrength", attrStrength)
+            put("attrStrengthInc", attrStrengthInc)
+            put("attrAgility", attrAgility)
+            put("attrAgilityInc", attrAgilityInc)
+            put("attrIntelligence", attrIntelligence)
+            put("attrIntelligenceInc", attrIntelligenceInc)
+        }
         put("mainAttributes", attrs)
     }
 
@@ -305,7 +306,7 @@ class ParseHeroes private constructor(
             put("talents", this)
         }
 
-       val notes = JSONArray().apply {
+        val notes = JSONArray().apply {
             val talentTips = talentBlock.getElementsByTag("li")
             for (talentTip in talentTips) {
                 add(talentTip.text())
@@ -313,7 +314,7 @@ class ParseHeroes private constructor(
         }
         val abilityTalent = JSONObject().apply {
             put("spellName", "Talent")
-            if(notes.size > 0) put("notes", notes)
+            if (notes.size > 0) put("notes", notes)
             put("talents", talents)
         }
         abilities.add(0, abilityTalent)
@@ -364,7 +365,7 @@ class ParseHeroes private constructor(
                     }
 
                     var audioUrl = it.getElementsByTag("source").attr("src")
-                    if(audioUrl.isNullOrEmpty()) audioUrl = null
+                    if (audioUrl.isNullOrEmpty()) audioUrl = null
                     put("audioUrl", audioUrl)
 
                     val hotKey = it.getElementsByAttributeValue("class", "tooltip").getOrNull(0)?.text()?.takeIf { it.length == 1 }
@@ -501,10 +502,10 @@ class ParseHeroes private constructor(
 
 fun main() = runBlocking {
     parser {
-        loadRusDescription = true
+        loadRusDescription = false
         loadEngDescription = true
-        loadRusResponses = true
-        loadEngResponses = true
+        loadRusResponses = false
+        loadEngResponses = false
         loadHeroFullImage = false
         loadHeroSpellImage = false
     }.start()

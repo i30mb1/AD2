@@ -79,7 +79,8 @@
         "Affects Allies"
       ],
       "notes": [
-        "Applies a strong dispel on the target upon cast.",
+        "Applies a strong dispel on the target upon cast. ↓↓ Double-tapping automatically targets self.",
+        "↓↓ Double-tapping automatically targets self.",
         "Can regenerate up to 150\/200\/250\/300 health over its full duration.",
         "The level 25 talent turns Press the Attack into an area-targeted ability, so that it cannot directly target units anymore. Self-casting the ability still targets Legion Commander, centering the radius around her. The radius talent does not apply to the Press The Attack buff applied on self after winning a Duel.",
         "Self-casting the ability still targets Legion Commander, centering the radius around her.",

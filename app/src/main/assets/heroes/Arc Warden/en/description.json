@@ -39,7 +39,7 @@
         "Damage Magical"
       ],
       "notes": [
-        "If the target has allies or neutral creeps within a 225 radius, the spell temporarily stops slowing and damaging the target, until it is alone again.",
+        "If the target has allies or neutral creeps within a 225 radius, the ability temporarily stops slowing and damaging the target, until it is alone again.",
         "Checks for enemies and neutrals in 0.5 second intervals, beginning instantly upon cast. The slow updates based on the result of the checks.",
         "Also deals damage in the same intervals, based on the checks, dealing 7.5\/15\/22.5\/30 damage, resulting in 13 possible instances.",
         "While Flux is muted, the particle effects on the target vanish, with only a red glow remaining on the unit, indicating the debuff is still there.",
@@ -134,7 +134,7 @@
         "With Aghanim's Scepter, Spark Wraiths create a secondary wraith immediately upon hitting the enemy. These secondary wraiths have to go through a 3 seconds activation delay. This effect only occurs once per Spark Wraith. Secondary Spark Wraiths cannot spawn new wraiths.",
         "These secondary wraiths have to go through a 3 seconds activation delay.",
         "This effect only occurs once per Spark Wraith. Secondary Spark Wraiths cannot spawn new wraiths.",
-        "Choosing the damage upgrading talent immediately upgrades all already placed wraiths, including ones which already seek a target."
+        "Choosing the level 20 damage upgrading talent immediately upgrades all already placed wraiths, including ones which already seek a target."
       ],
       "mana": "80",
       "hotKey": "E",
@@ -176,11 +176,10 @@
         "The buffs of a consumed Moon Shard, Aghanim's Blessing, Aghanim's Shard, and Royal Jelly are copied as well. However, other permanent buffs (e.g. Duel, Intelligence Steal) are not. Any Duel victory damage the double gains during its uptime is lost upon death.",
         "However, other permanent buffs (e.g. Duel, Intelligence Steal) are not.",
         "Any Duel victory damage the double gains during its uptime is lost upon death.",
-        "The double is a clone and therefore treated exactly like a hero by all spells, since it is not an illusion.",
-        "The double has a 180\/240\/300 and a 180\/240\/300XP bounty. The gold is granted to the killing player, the experience is distributed like any other experience.",
+        "The double is a clone and therefore treated exactly like a hero by all abilities, since it is not an illusion.",
+        "The double has a 180\/240\/300 and a 180\/240\/300XP bounty. The gold is granted to the killing player, the experience is distributed like any other experience. However, if the double is killed by creeps or buildings, the gold gets distributed as well, similar to how hero kills do when not killed by players.",
         "However, if the double is killed by creeps or buildings, the gold gets distributed as well, similar to how hero kills do when not killed by players.",
-        "However, if the double is killed by creeps or buildings, the gold gets distributed as well, similar to how hero kills do when not killed by players.",
-        "Spell effects, that grant bonuses when an enemy unit dies (such as Heartstopper Aura), do not grant any bonuses for killing the double. This non-crediting also prevents Duel from granting damage when the double loses. It does not grant any Track bounty either when it dies while tracked.",
+        "Ability effects, that grant bonuses when an enemy unit dies (such as Heartstopper Aura), do not grant any bonuses for killing the double. This non-crediting also prevents Duel from granting damage when the double loses. It does not grant any Track bounty either when it dies while tracked.",
         "This non-crediting also prevents Duel from granting damage when the double loses.",
         "It does not grant any Track bounty either when it dies while tracked.",
         "The Tempest Double does not gain any experience like heroes usually do, so it does not leech experience.",

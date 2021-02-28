@@ -140,7 +140,7 @@
         "The attacks first place the debuff, then apply their own damage.",
         "Successive casts do not stack, but refresh the buff instead, resetting the amount of attacks and updating the range bonus.",
         "Leveling up Lil' Shredder, or choosing the talent that makes it use regular attack damage, does not update the damage of an already existing instance from a previous cast.",
-        "With the level 25 talent, whenever attacking during Lil' Shredder, 3 different random targets within attack range are also attacked. Causes Snapfire to perform an instant attack on the chosen targets whenever she attacks. This instant attack can proc any attack modifier or on-hit effect like a regular attack. The secondary attacks have no target priorities. They simply choose random valid targets within range.",
+        "With the level 25 talent, whenever attacking during Lil' Shredder, different random targets within attack range are also attacked. Causes Snapfire to perform an instant attack on the chosen targets whenever she attacks. This instant attack can proc any attack modifier or on-hit effect like a regular attack. The secondary attacks have no target priorities. They simply choose random valid targets within range.",
         "Causes Snapfire to perform an instant attack on the chosen targets whenever she attacks.",
         "This instant attack can proc any attack modifier or on-hit effect like a regular attack.",
         "The secondary attacks have no target priorities. They simply choose random valid targets within range."
@@ -157,10 +157,10 @@
         "Base Attack Time: 1",
         "Fixed Attack Damage: 20\/40\/60\/80 (TagTalent 0)",
         "Number of Attacks: 6",
-        "Bonus Attack Targets: 0 (TagTalent 3)",
         "Armor Reduction per Attack: 1",
         "Armor Reduction Duration: 4",
         "Buff Duration: 8",
+        "Bonus Attack Targets: 3",
         "Debuff persists if placed before spell immunity and when not dispelled."
       ],
       "itemBehaviour": [],
@@ -177,7 +177,8 @@
       "notes": [
         "Requires Aghanim's Scepter to be unlocked. In Ability Draft, Gobble Up can be unlocked by the player that drafted Mortimer Kisses.",
         "In Ability Draft, Gobble Up can be unlocked by the player that drafted Mortimer Kisses.",
-        "Can be cast on any unit, except for enemy heroes and creep-heroes.",
+        "Can be cast on any unit, except for enemy heroes and creep-heroes. Cannot be cast on allies who have □ Disabled Help from Snapfire.",
+        "Cannot be cast on allies who have □ Disabled Help from Snapfire.",
         "Disjoints projectiles for the target unit upon cast.",
         "The target unit is invulnerable, hidden, silenced, muted, and disarmed while swallowed.",
         "During Gobble Up, the unit is periodically moved to Snapfire's current position. This periodic movement cannot be interrupted. This means their auras are effectively bestowed around Snapfire until spat out.",

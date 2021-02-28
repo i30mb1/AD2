@@ -9,7 +9,7 @@
         {
           "talentLvl": "25",
           "talentLeft": "Срабатывание Reincarnation применяет Wraithfire Blast",
-          "talentRight": "-2s перезарядки Mortal Strike"
+          "talentRight": "\u20132 сек. перезарядки Mortal Strike"
         },
         {
           "talentLvl": "20",
@@ -207,7 +207,7 @@
     {
       "talentLvl": "25",
       "talentLeft": "Срабатывание Reincarnation применяет Wraithfire Blast",
-      "talentRight": "-2s перезарядки Mortal Strike"
+      "talentRight": "\u20132 сек. перезарядки Mortal Strike"
     },
     {
       "talentLvl": "20",

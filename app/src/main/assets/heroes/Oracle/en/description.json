@@ -37,8 +37,9 @@
       ],
       "notes": [
         "The projectile travels at a speed of 1000.",
-        "When targeting allies, the area effect is still applied to surrounding enemies. The ally only gets dispelled. Can target self as well. Enemies in the area always get dispelled, while allies only get dispelled when targeted, so only one ally can be dispelled per cast.",
+        "When targeting allies, the area effect is still applied to surrounding enemies. The ally only gets dispelled. Can target self as well. Enemies in the area always get dispelled, while allies only get dispelled when targeted, so only one ally can be dispelled per cast. ↓↓ Double-tapping automatically targets self.",
         "Enemies in the area always get dispelled, while allies only get dispelled when targeted, so only one ally can be dispelled per cast.",
+        "↓↓ Double-tapping automatically targets self.",
         "Always removes Fate's Edict on affected targets (with Aghanim's Scepter only on enemies).",
         "Fortune's End first applies the dispel, then the debuff, then the damage.",
         "Can directly be cast on invulnerable units, fully affecting them, though the damage gets negated by the invulnerability. Does not affect hidden targets.",
@@ -80,7 +81,8 @@
         "Affects Enemies \/ Allies"
       ],
       "notes": [
-        "Applies a disarm on the target and sets its magic resistance to 100%.",
+        "Applies a disarm on the target and sets its magic resistance to 100%. ↓↓ Double-tapping automatically targets self.",
+        "↓↓ Double-tapping automatically targets self.",
         "With Aghanim's Scepter, applies disarm to enemy targets only, and the magic resistance to allied targets only.",
         "Fate's Edict always places a debuff on the target, no matter it is an enemy or an ally. This means if cast on self or an ally, allies can dispel it, while enemies cannot. Vice versa, if cast on enemies, enemies can dispel it, while allies cannot. With Aghanim's Scepter, it is placed as a buff on allies instead. This means allies can no longer dispel it, but enemies now can.",
         "This means if cast on self or an ally, allies can dispel it, while enemies cannot.",
@@ -118,7 +120,9 @@
         "Damage Magical"
       ],
       "notes": [
-        "The damage is applied instantly upon cast, followed by the heal over time. The damage is lethal to enemies, but not to allies.",
+        "The damage is applied instantly upon cast, followed by the heal over time. The damage is lethal to enemies, but not to allies. Cannot be cast on allies who have □ Disabled Help from Oracle. ↓↓ Double-tapping automatically targets self.",
+        "Cannot be cast on allies who have □ Disabled Help from Oracle.",
+        "↓↓ Double-tapping automatically targets self.",
         "Heals in 1 second intervals, starting 1 second after cast, resulting in 9 instances of heal.",
         "Can heal up to 99\/198\/297\/396 health per cast, 9\/18\/27\/36 (TagTalent 54\/108\/162\/216) when considering the initial damage before reductions.",
         "Multiple casts on the same target fully stack."
@@ -149,7 +153,8 @@
         "Damage Pure (TagAghanimHP Removal)"
       ],
       "notes": [
-        "Applies a strong dispel on the target upon cast. Can be cast on illusions and creep-heroes.",
+        "Applies a strong dispel on the target upon cast. Can be cast on illusions and creep-heroes. ↓↓ Double-tapping automatically targets self.",
+        "↓↓ Double-tapping automatically targets self.",
         "False Promise fully negates damage after all reductions, causing several on-damage effects to not trigger.",
         "False Promise has the second highest priority in the group of damage negating spells. It also negates healing effects. This means when combined with e.g. Aphotic Shield or Refraction, False Promise negates damage while the other sources do not. It has a lower priority than Borrowed Time, means Borrowed Time first turns damage into heal, and then it is blocked as heal by False Promise.",
         "This means when combined with e.g. Aphotic Shield or Refraction, False Promise negates damage while the other sources do not.",

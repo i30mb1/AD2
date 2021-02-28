@@ -127,7 +127,8 @@
         "Affects Self"
       ],
       "notes": [
-        "Mirana gets all 3 charges immediately upon learning Leap.",
+        "Mirana gets all 3 charges immediately upon learning Leap. When acquiring Aghanim's Shard, Mirana immediately gains 1 extra charge as well.",
+        "When acquiring Aghanim's Shard, Mirana immediately gains 1 extra charge as well.",
         "Leap interrupts Mirana's channeling spells upon cast.",
         "Leaps at a speed of 1300 for up to 0.44 seconds.",
         "Always leaps towards the direction Mirana is facing. Locks Mirana's facing angle during the leap.",
@@ -141,17 +142,17 @@
       "mana": "40",
       "hotKey": "E",
       "cooldown": "0",
-      "description": "Mirana leaps forward into battle, empowering herself with a ferocious roar that grants bonus attack and movement speed. Speed bonus lasts 2.5 seconds.",
+      "description": "Mirana leaps forward into battle, empowering herself with a ferocious roar that grants bonus attack and movement speed. Speed bonus lasts 3 seconds.",
       "spellName": "Leap",
       "params": [
         "Cast Animation: 0+0",
         "Leap Distance: 575",
         "Move Speed Bonus: 8%\/16%\/24%\/32%",
         "Attack Speed Bonus: 25\/50\/75\/100 (TagTalent 100\/125\/150\/175)",
-        "Critical Damage: 100% (TagTalent 150%)",
         "Buff Duration: 2.5",
         "Number of Charges: 3 (TagTalent 4)",
         "Charge Replenish Time: 45\/40\/35\/30",
+        "Critical Damage: 150%",
         "Grants +1 Leap Charge. Leap buff grants Mirana 1.5x Critical Strike attacks for its duration.",
         "Getting rooted during the leap does not cancel the leap."
       ],

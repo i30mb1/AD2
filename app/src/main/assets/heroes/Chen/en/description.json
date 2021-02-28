@@ -166,7 +166,7 @@
         "Does not heal any allied non-hero units or illusions, except for hero clones.",
         "Can heal allies while they are invulnerable and while hidden.",
         "The voice line upon cast is global for allies and not audible for enemies.",
-        "Aghanim's Scepter upgraded Holy Persuasion allows 1\/2\/3 ancient creeps to be persuaded per level of Hand of God."
+        "With Aghanim's Scepter, Holy Persuasion allows 1\/2\/3 ancient creeps to be persuaded per level of Hand of God."
       ],
       "mana": "250\/350\/450",
       "hotKey": "R",

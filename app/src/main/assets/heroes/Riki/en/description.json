@@ -125,7 +125,8 @@
         "With Aghanim's Scepter, Tricks of the Trade can be cast on an allied hero, including illusions and clones, excluding creep-heroes. Riki and all of the spell's effects then follow the allied hero. He still remains hidden. Does not end when the target dies. The ability continues at its corpse's location. It is still bound to the ally, so when it resurrects, it follows it still.",
         "Riki and all of the spell's effects then follow the allied hero. He still remains hidden.",
         "Does not end when the target dies. The ability continues at its corpse's location. It is still bound to the ally, so when it resurrects, it follows it still.",
-        "Riki reappears at the center of the skill."
+        "Riki reappears at the center of the ability after the max channel time. ↓↓ Double-tapping automatically moves Riki to the targeted location within the cast range. Riki reappears at the center of the ability.",
+        "↓↓ Double-tapping automatically moves Riki to the targeted location within the cast range. Riki reappears at the center of the ability."
       ],
       "mana": "50",
       "hotKey": "E",
