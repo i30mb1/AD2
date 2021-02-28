@@ -11,8 +11,8 @@ class GetJsonHeroDescriptionUseCase @Inject constructor(
     private val ioDispatcher: CoroutineDispatcher
 ) {
 
-    suspend operator fun invoke(heroAssetsPath: String, locale: Locale) = withContext(ioDispatcher) {
-       heroRepository.getHeroDescription(heroAssetsPath, locale)
+    suspend operator fun invoke(heroName: String, locale: Locale) = withContext(ioDispatcher) {
+        heroRepository.getHeroDescription(heroName, locale)
     }
 
 }

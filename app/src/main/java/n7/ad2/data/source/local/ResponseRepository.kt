@@ -5,16 +5,15 @@ import java.io.File
 import javax.inject.Inject
 
 class ResponseRepository @Inject constructor(
-    private val application: Application
+    private val application: Application,
 ) {
 
     companion object {
-        private const val ASSETS_PATH_HERO_RESPONSES = "responses.json"
         val DIRECTORY_RESPONSES: String = android.os.Environment.DIRECTORY_RINGTONES
     }
 
     fun getHeroResponses(assetsPath: String, locale: Locale): String {
-        return application.assets.open("$assetsPath/${locale.folderName}/${ASSETS_PATH_HERO_RESPONSES}").bufferedReader().use {
+        return application.assets.open("heroes/$assetsPath/${locale.folderName}/responses.json").bufferedReader().use {
             it.readText()
         }
     }

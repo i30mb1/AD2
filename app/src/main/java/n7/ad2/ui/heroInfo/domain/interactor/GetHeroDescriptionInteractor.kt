@@ -17,7 +17,7 @@ class GetHeroDescriptionInteractor @Inject constructor(
 
     @ExperimentalStdlibApi
     suspend operator fun invoke(localHero: LocalHero, locale: Locale): List<VODescription> {
-        val json = getJsonHeroDescriptionUseCase(localHero.assetsPath, locale)
+        val json = getJsonHeroDescriptionUseCase(localHero.name, locale)
         val localHeroDescription = getLocalHeroDescriptionFromJsonUseCase(json)
         return getVOHeroDescriptionUseCase(localHeroDescription, localHero)
     }

@@ -6,8 +6,7 @@ import n7.ad2.ui.splash.domain.model.AssetsHero
 fun AssetsHero.toLocalHero(): LocalHero {
     return LocalHero(
         name = this.name,
-        assetsPath = this.assetsPath,
         mainAttr = this.mainAttr,
-        viewedByUser = false
+        viewedByUser = false,
     )
 }

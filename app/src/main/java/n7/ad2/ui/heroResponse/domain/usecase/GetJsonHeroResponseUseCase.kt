@@ -7,12 +7,12 @@ import n7.ad2.data.source.local.ResponseRepository
 import javax.inject.Inject
 
 class GetJsonHeroResponseUseCase @Inject constructor(
-        private val repository: ResponseRepository,
-        private val ioDispatcher: CoroutineDispatcher
+    private val repository: ResponseRepository,
+    private val ioDispatcher: CoroutineDispatcher,
 ) {
 
-    suspend operator fun invoke(heroAssetsPath: String, locale: Locale) = withContext(ioDispatcher) {
-        repository.getHeroResponses(heroAssetsPath, locale)
+    suspend operator fun invoke(heroName: String, locale: Locale) = withContext(ioDispatcher) {
+        repository.getHeroResponses(heroName, locale)
     }
 
 }

@@ -11,13 +11,13 @@ import java.io.File
 import javax.inject.Inject
 
 class ConvertLocalHeroToVOHeroUseCase @Inject constructor(
-    private val ioDispatcher: CoroutineDispatcher
+    private val ioDispatcher: CoroutineDispatcher,
 ) {
 
     suspend operator fun invoke(
         localHero: LocalHero,
         localHeroResponses: List<LocalHeroResponsesItem>,
-        savedHeroResponses: List<File>
+        savedHeroResponses: List<File>,
     ): List<VOResponse> = withContext(ioDispatcher) {
         val result = mutableListOf<VOResponse>()
         val savedResponses = savedHeroResponses as? MutableList ?: mutableListOf()
@@ -45,7 +45,7 @@ class ConvertLocalHeroToVOHeroUseCase @Inject constructor(
                     "file:///android_asset/$iconPath"
                 }
                 if (response.isArcane) {
-                    (icons as MutableList).add(0, "file:///android_asset/${localHero.assetsPath}/arcane.png")
+                    (icons as MutableList).add(0, "file:///android_asset/heroes/${localHero.name}/arcane.png")
                 }
 
                 result.add(VOResponseBody(audioUrl, localHero.name, response.title, icons, titleForSavedFile, savedInMemory))
