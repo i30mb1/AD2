@@ -5,9 +5,9 @@ import n7.ad2.data.source.local.model.LocalHero
 import n7.ad2.ui.heroes.domain.vo.VOHero
 
 fun LocalHero.toVo(): VOHero {
-    return VOHero().also {
-        it.name = name
-        it.image = HeroRepository.getFullUrlHeroImage(name)
-        it.viewedByUser = viewedByUser
-    }
+    return VOHero(
+        name,
+        HeroRepository.getFullUrlHeroImage(name),
+        viewedByUser,
+    )
 }
