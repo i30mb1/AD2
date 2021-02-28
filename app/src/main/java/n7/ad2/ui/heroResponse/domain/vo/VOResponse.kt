@@ -10,7 +10,7 @@ data class VOResponseBody(
     override val audioUrl: String?,
     val heroName: String,
     val title: String,
-    val icons: List<String>,
+    val icons: List<VOResponseImage>,
     val titleForFile: String,
     val isSavedInMemory: Boolean,
 ) : VOResponse(), Playable {

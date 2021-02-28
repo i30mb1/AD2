@@ -101,7 +101,7 @@ class ResponsesAdapter(
                     it.infoPopupWindow = infoPopupWindow
                     it.audioExoPlayer = audioExoPlayer
                 }
-                val responsesImagesAdapter = ResponsesImagesAdapter()
+                val responsesImagesAdapter = ResponsesImagesAdapter(infoPopupWindow)
                 val gridLayoutManager = GridLayoutManager(parent.context, MAX_ICONS_IN_ROW).apply { recycleChildrenOnDetach = true }
                 binding.rv.apply {
                     setRecycledViewPool(viewPool)

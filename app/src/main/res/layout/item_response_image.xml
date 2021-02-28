@@ -5,16 +5,21 @@
     <data>
 
         <variable
-            name="url"
-            type="String" />
+            name="infoPopupWindow"
+            type="n7.ad2.ui.heroInfo.InfoPopupWindow" />
+
+        <variable
+            name="model"
+            type="n7.ad2.ui.heroResponse.domain.vo.VOResponseImage" />
     </data>
 
     <ImageView
-        loadImageUrl="@{url}"
+        loadImageUrl="@{model.url}"
         onError="@{@drawable/ic_error_response}"
+        android:contentDescription="@{model.heroName}"
         android:layout_width="20dp"
         android:layout_height="20dp"
-        android:contentDescription="@{url}"
+        android:onClick="@{(view)-> infoPopupWindow.show(view, model.heroName)}"
         android:padding="2dp"
         android:scaleType="centerCrop"
         tools:src="@drawable/ic_error_response" />

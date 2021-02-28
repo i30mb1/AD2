@@ -6,6 +6,7 @@ import n7.ad2.data.source.local.model.LocalHero
 import n7.ad2.ui.heroResponse.domain.model.LocalHeroResponsesItem
 import n7.ad2.ui.heroResponse.domain.vo.VOResponse
 import n7.ad2.ui.heroResponse.domain.vo.VOResponseBody
+import n7.ad2.ui.heroResponse.domain.vo.VOResponseImage
 import n7.ad2.ui.heroResponse.domain.vo.VOResponseTitle
 import java.io.File
 import javax.inject.Inject
@@ -42,10 +43,11 @@ class ConvertLocalHeroToVOHeroUseCase @Inject constructor(
 
 //                savedResponses.remove(fileToRemoveFromSavedResponses)
                 val icons = response.icons.map { iconPath ->
-                    "file:///android_asset/$iconPath"
+                    VOResponseImage(localHero.name, "file:///android_asset/$iconPath")
                 }
                 if (response.isArcane) {
-                    (icons as MutableList).add(0, "file:///android_asset/heroes/${localHero.name}/arcane.png")
+                    val arcaneItem = VOResponseImage("arcane", "file:///android_asset/heroes/${localHero.name}/arcane.png")
+                    (icons as MutableList).add(0, arcaneItem)
                 }
 
                 result.add(VOResponseBody(audioUrl, localHero.name, response.title, icons, titleForSavedFile, savedInMemory))
