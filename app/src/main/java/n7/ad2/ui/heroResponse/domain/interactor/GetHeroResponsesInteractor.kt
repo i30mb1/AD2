@@ -2,7 +2,7 @@ package n7.ad2.ui.heroResponse.domain.interactor
 
 import n7.ad2.data.source.local.Locale
 import n7.ad2.data.source.local.model.LocalHero
-import n7.ad2.ui.heroResponse.domain.usecase.ConvertLocalHeroToVOHeroUseCase
+import n7.ad2.ui.heroResponse.domain.usecase.ConvertLocalHeroToVOResponseUseCase
 import n7.ad2.ui.heroResponse.domain.usecase.GetJsonHeroResponseUseCase
 import n7.ad2.ui.heroResponse.domain.usecase.GetLocalHeroResponsesFromJsonUseCase
 import n7.ad2.ui.heroResponse.domain.usecase.GetSavedHeroResponseUseCase
@@ -13,7 +13,7 @@ import javax.inject.Inject
 class GetHeroResponsesInteractor @Inject constructor(
     private val getJsonHeroResponseUseCase: GetJsonHeroResponseUseCase,
     private val getLocalHeroResponsesFromJsonUseCase: GetLocalHeroResponsesFromJsonUseCase,
-    private val convertLocalHeroToVOHeroUseCase: ConvertLocalHeroToVOHeroUseCase,
+    private val convertLocalHeroToVOResponseUseCase: ConvertLocalHeroToVOResponseUseCase,
     private val getSavedHeroResponseUseCase: GetSavedHeroResponseUseCase,
 ) {
 
@@ -22,7 +22,7 @@ class GetHeroResponsesInteractor @Inject constructor(
             val json = getJsonHeroResponseUseCase(localHero.name, locale)
             val localHeroResponses = getLocalHeroResponsesFromJsonUseCase(json)
             val savedHeroResponses = getSavedHeroResponseUseCase(localHero.name)
-            Result.success(convertLocalHeroToVOHeroUseCase.invoke(localHero, localHeroResponses, savedHeroResponses))
+            Result.success(convertLocalHeroToVOResponseUseCase.invoke(localHero, localHeroResponses, savedHeroResponses))
         } catch (e: Exception) {
             Result.failure(e)
         }

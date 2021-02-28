@@ -11,7 +11,7 @@ import n7.ad2.ui.heroResponse.domain.vo.VOResponseTitle
 import java.io.File
 import javax.inject.Inject
 
-class ConvertLocalHeroToVOHeroUseCase @Inject constructor(
+class ConvertLocalHeroToVOResponseUseCase @Inject constructor(
     private val ioDispatcher: CoroutineDispatcher,
 ) {
 
