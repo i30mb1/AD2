@@ -13,9 +13,6 @@ app/schemas/
 .gradle/
 build/
 
-app/src/main/assets_Anim/*
-
-
 # Local configuration file (sdk path, etc)
 local.properties
 
@@ -80,6 +77,4 @@ fastlane/readme.md
 *.tar.gz
 *.rar
 
-src/main/res/anim/
 /.idea/vcs.xml
-/app/src/main/assets/**/*.png
