@@ -14,10 +14,12 @@
             name="activity"
             type="n7.ad2.ui.MainActivity" />
 
-        <import type="java.util.ArrayList"/>
+        <import type="java.util.ArrayList" />
+
         <variable
             name="arrayX"
             type="ArrayList&lt;Float&gt;" />
+
         <variable
             name="arrayY"
             type="ArrayList&lt;Float&gt;" />
@@ -31,98 +33,98 @@
 
         <LinearLayout
             android:id="@+id/ll_drawer_vertical_xy"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent"
-            android:orientation="vertical"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content">
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
 
             <TextView
                 android:id="@+id/tv_drawer_touch1"
+                style="@style/Widget.TextView.Coordinate"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                style="@style/Widget.TextView.Coordinate"
                 android:text='@{"[x"+String.valueOf((int) arrayX.get(0))+"][y"+String.valueOf((int) arrayY.get(0))+"]"}'
                 android:visibility="@{arrayX.get(0)>0.0f ? View.VISIBLE:View.GONE}"
                 tools:text="[x100][y200]" />
 
             <TextView
                 android:id="@+id/tv_drawer_touch2"
+                style="@style/Widget.TextView.Coordinate"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                style="@style/Widget.TextView.Coordinate"
                 android:text='@{"[x"+String.valueOf((int) arrayX.get(1))+"][y"+String.valueOf((int) arrayY.get(1))+"]"}'
                 android:visibility="@{arrayX.get(1)>0.0f ? View.VISIBLE:View.GONE}"
                 tools:text="[x100][y200]" />
 
             <TextView
                 android:id="@+id/tv_drawer_touch3"
+                style="@style/Widget.TextView.Coordinate"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                style="@style/Widget.TextView.Coordinate"
                 android:text='@{"[x"+String.valueOf((int) arrayX.get(2))+"][y"+String.valueOf((int) arrayY.get(2))+"]"}'
                 android:visibility="@{arrayX.get(2)>0.0f ? View.VISIBLE:View.GONE}"
                 tools:text="[x100][y200]" />
 
             <TextView
                 android:id="@+id/tv_drawer_touch4"
+                style="@style/Widget.TextView.Coordinate"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                style="@style/Widget.TextView.Coordinate"
                 android:text='@{"[x"+String.valueOf((int) arrayX.get(3))+"][y"+String.valueOf((int) arrayY.get(3))+"]"}'
                 android:visibility="@{arrayX.get(3)>0.0f ? View.VISIBLE:View.GONE}"
                 tools:text="[x100][y200]" />
 
             <TextView
                 android:id="@+id/tv_drawer_touch5"
+                style="@style/Widget.TextView.Coordinate"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                style="@style/Widget.TextView.Coordinate"
                 android:text='@{"[x"+String.valueOf((int) arrayX.get(4))+"][y"+String.valueOf((int) arrayY.get(4))+"]"}'
                 android:visibility="@{arrayX.get(4)>0.0f ? View.VISIBLE:View.GONE}"
                 tools:text="[x100][y200]" />
 
             <TextView
                 android:id="@+id/tv_drawer_touch6"
+                style="@style/Widget.TextView.Coordinate"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                style="@style/Widget.TextView.Coordinate"
                 android:text='@{"[x"+String.valueOf((int) arrayX.get(5))+"][y"+String.valueOf((int) arrayY.get(5))+"]"}'
                 android:visibility="@{arrayX.get(5)>0.0f ? View.VISIBLE:View.GONE}"
                 tools:text="[x100][y200]" />
 
             <TextView
                 android:id="@+id/tv_drawer_touch7"
+                style="@style/Widget.TextView.Coordinate"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                style="@style/Widget.TextView.Coordinate"
                 android:text='@{"[x"+String.valueOf((int) arrayX.get(6))+"][y"+String.valueOf((int) arrayY.get(6))+"]"}'
                 android:visibility="@{arrayX.get(6)>0.0f ? View.VISIBLE:View.GONE}"
                 tools:text="[x100][y200]" />
 
             <TextView
                 android:id="@+id/tv_drawer_touch8"
+                style="@style/Widget.TextView.Coordinate"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                style="@style/Widget.TextView.Coordinate"
                 android:text='@{"[x"+String.valueOf((int) arrayX.get(7))+"][y"+String.valueOf((int) arrayY.get(7))+"]"}'
                 android:visibility="@{arrayX.get(7)>0.0f ? View.VISIBLE:View.GONE}"
                 tools:text="[x100][y200]" />
 
             <TextView
                 android:id="@+id/tv_drawer_touch9"
+                style="@style/Widget.TextView.Coordinate"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                style="@style/Widget.TextView.Coordinate"
                 android:text='@{"[x"+String.valueOf((int) arrayX.get(8))+"][y"+String.valueOf((int) arrayY.get(8))+"]"}'
                 android:visibility="@{arrayX.get(8)>0.0f ? View.VISIBLE:View.GONE}"
                 tools:text="[x100][y200]" />
 
             <TextView
                 android:id="@+id/tv_drawer_touch10"
+                style="@style/Widget.TextView.Coordinate"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                style="@style/Widget.TextView.Coordinate"
                 android:text='@{"[x"+String.valueOf((int) arrayX.get(9))+"][y"+String.valueOf((int) arrayY.get(9))+"]"}'
                 android:visibility="@{arrayX.get(9)>0.0f ? View.VISIBLE:View.GONE}"
                 tools:text="[x100][y200]" />
@@ -135,7 +137,6 @@
             android:layout_height="0dp"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
-            app:scrollTo="@{viewModel.scrollTo}"
             tools:listitem="@layout/item_log" />
 
         <ImageView
@@ -146,10 +147,9 @@
             android:layout_marginBottom="8dp"
             android:background="?attr/selectableItemBackground"
             android:contentDescription="@string/setting_tell_friend_title"
-            android:onClick="@{()->viewModel.startActivityOptions(context)}"
+            android:onClick="@{()->activity.startActivityOptions()}"
             android:onLongClick="@{activity::toggleSecretActivity}"
             android:scaleType="center"
-            android:tint="?android:textColorPrimary"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintRight_toRightOf="parent"
             app:srcCompat="@drawable/ic_setting" />
@@ -157,32 +157,15 @@
 
         <ImageView
             android:id="@+id/iv_drawer_update"
-            isBusy="@{viewModel.isUpdating}"
             android:layout_width="50dp"
             android:layout_height="50dp"
             android:layout_centerVertical="true"
             android:layout_marginStart="8dp"
             android:layout_marginBottom="8dp"
-            android:contentDescription="@string/setting_tell_friend_title"
-            android:onClick="@{()->viewModel.startUpdate(true)}"
             android:scaleType="center"
-            android:tint="?android:textColorPrimary"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintLeft_toLeftOf="parent"
             app:srcCompat="@drawable/ic_update" />
-
-        <TextView
-            android:id="@+id/tv_drawer_message"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginStart="8dp"
-            android:layout_marginEnd="8dp"
-            android:textSize="18sp"
-            android:textStyle="bold"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent" />
-        <!--android:text="@{String.valueOf(activity.observableLastItem)}"-->
-        <!--android:textColor="?android:colorAccent"-->
 
         <LinearLayout
             android:id="@+id/ll_drawer_vertical"
@@ -201,12 +184,13 @@
 
                 <View
                     android:id="@+id/view1"
+                    setMyBackground="@{activity.observableLastItem==1}"
                     android:layout_width="3dp"
-                    android:layout_height="match_parent"
-                    setMyBackground="@{activity.observableLastItem==1}" />
+                    android:layout_height="match_parent" />
 
                 <TextView
                     android:id="@+id/textView1"
+                    setMyTextColor="@{activity.observableLastItem==1}"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:foreground="?android:attr/selectableItemBackground"
@@ -214,7 +198,6 @@
                     android:onClick="@{()-> activity.setFragment(1,true)}"
                     android:padding="6dp"
                     android:text="@string/heroes"
-                    setMyTextColor="@{activity.observableLastItem==1}"
                     android:textSize="14sp"
                     tools:targetApi="m" />
 
@@ -228,12 +211,13 @@
 
                 <View
                     android:id="@+id/view2"
+                    setMyBackground="@{activity.observableLastItem==2}"
                     android:layout_width="3dp"
-                    android:layout_height="match_parent"
-                    setMyBackground="@{activity.observableLastItem==2}" />
+                    android:layout_height="match_parent" />
 
                 <TextView
                     android:id="@+id/textView2"
+                    setMyTextColor="@{activity.observableLastItem==2}"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:foreground="?android:attr/selectableItemBackground"
@@ -241,7 +225,6 @@
                     android:onClick="@{()-> activity.setFragment(2,true)}"
                     android:padding="6dp"
                     android:text="@string/items"
-                    setMyTextColor="@{activity.observableLastItem==2}"
                     android:textSize="14sp"
                     tools:targetApi="m" />
             </LinearLayout>
@@ -255,12 +238,13 @@
 
                 <View
                     android:id="@+id/view3"
+                    setMyBackground="@{activity.observableLastItem==3}"
                     android:layout_width="3dp"
-                    android:layout_height="match_parent"
-                    setMyBackground="@{activity.observableLastItem==3}" />
+                    android:layout_height="match_parent" />
 
                 <TextView
                     android:id="@+id/textView3"
+                    setMyTextColor="@{activity.observableLastItem==3}"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:foreground="?android:attr/selectableItemBackground"
@@ -268,7 +252,6 @@
                     android:onClick="@{()-> activity.setFragment(3,true)}"
                     android:padding="6dp"
                     android:text="@string/news"
-                    setMyTextColor="@{activity.observableLastItem==3}"
                     android:textSize="14sp"
                     tools:targetApi="m" />
             </LinearLayout>
@@ -281,13 +264,14 @@
 
                 <View
                     android:id="@+id/view4"
+                    setMyBackground="@{activity.observableLastItem==4}"
                     android:layout_width="3dp"
-                    android:layout_height="match_parent"
-                    setMyBackground="@{activity.observableLastItem==4}"/>
+                    android:layout_height="match_parent" />
 
 
                 <TextView
                     android:id="@+id/textView4"
+                    setMyTextColor="@{activity.observableLastItem==4}"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:foreground="?android:attr/selectableItemBackground"
@@ -295,7 +279,6 @@
                     android:onClick="@{()-> activity.setFragment(4,true)}"
                     android:padding="6dp"
                     android:text="@string/tournaments"
-                    setMyTextColor="@{activity.observableLastItem==4}"
                     android:textSize="14sp"
                     tools:targetApi="m" />
             </LinearLayout>
@@ -309,12 +292,13 @@
 
                 <View
                     android:id="@+id/view5"
+                    setMyBackground="@{activity.observableLastItem==5}"
                     android:layout_width="3dp"
-                    android:layout_height="match_parent"
-                    setMyBackground="@{activity.observableLastItem==5}" />
+                    android:layout_height="match_parent" />
 
                 <TextView
                     android:id="@+id/textView5"
+                    setMyTextColor="@{activity.observableLastItem==5}"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:foreground="?android:attr/selectableItemBackground"
@@ -323,7 +307,6 @@
                     android:padding="6dp"
                     android:text="@string/streams"
                     android:textAllCaps="false"
-                    setMyTextColor="@{activity.observableLastItem==5}"
                     android:textSize="14sp"
                     tools:targetApi="m" />
             </LinearLayout>
@@ -336,12 +319,13 @@
 
                 <View
                     android:id="@+id/view6"
+                    setMyBackground="@{activity.observableLastItem==6}"
                     android:layout_width="3dp"
-                    android:layout_height="match_parent"
-                    setMyBackground="@{activity.observableLastItem==6}" />
+                    android:layout_height="match_parent" />
 
                 <TextView
                     android:id="@+id/textView6"
+                    setMyTextColor="@{activity.observableLastItem==6}"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:foreground="?android:attr/selectableItemBackground"
@@ -349,7 +333,6 @@
                     android:onClick="@{()-> activity.setFragment(6,true)}"
                     android:padding="6dp"
                     android:text="@string/games"
-                    setMyTextColor="@{activity.observableLastItem==6}"
                     android:textSize="14sp"
                     tools:targetApi="m" />
             </LinearLayout>

@@ -1,58 +1,59 @@
 package n7.ad2.ui
 
 import android.app.DownloadManager
-import n7.ad2.utils.BaseActivity
-import androidx.databinding.ObservableInt
-import androidx.databinding.ObservableBoolean
-import androidx.databinding.ObservableArrayList
-import androidx.constraintlayout.widget.ConstraintSet
-import android.content.Intent
-import n7.ad2.main.MainViewModel
-import com.google.android.play.core.appupdate.AppUpdateManager
-import com.google.android.play.core.install.InstallStateUpdatedListener
-import com.google.android.play.core.install.InstallState
-import android.os.Bundle
-import androidx.databinding.DataBindingUtil
-import n7.ad2.R
-import androidx.lifecycle.ViewModelProvider
-import n7.ad2.utils.SnackbarUtils
-import n7.ad2.utils.UnscrollableLinearLayoutManager
-import androidx.recyclerview.widget.LinearLayoutManager
-import n7.ad2.ui.heroes.HeroesFragment
-import n7.ad2.ui.items.ItemsFragment
-import n7.ad2.news.NewsFragment
-import n7.ad2.tournaments.TournamentsFragment
-import n7.ad2.ui.streams.StreamsFragment
-import n7.ad2.games.GameFragment
-import androidx.constraintlayout.widget.ConstraintLayout
-import android.view.animation.LinearInterpolator
-import com.google.android.play.core.appupdate.AppUpdateManagerFactory
-import com.google.android.play.core.install.model.UpdateAvailability
-import com.google.android.play.core.install.model.AppUpdateType
-import android.content.IntentSender.SendIntentException
-import com.google.android.material.snackbar.Snackbar
 import android.content.ActivityNotFoundException
-import android.view.MotionEvent
-import com.yarolegovich.slidingrootnav.SlidingRootNavBuilder
-import com.yarolegovich.slidingrootnav.callback.DragStateListener
+import android.content.Intent
+import android.content.IntentSender.SendIntentException
+import android.content.SharedPreferences
 import android.net.Uri
+import android.os.Bundle
 import android.os.Environment
 import android.os.Handler
 import android.preference.PreferenceManager
+import android.view.MotionEvent
 import android.view.View
 import android.view.ViewGroup
+import android.view.animation.LinearInterpolator
 import android.view.inputmethod.InputMethodManager
 import androidx.appcompat.app.AlertDialog
-import androidx.lifecycle.Observer
+import androidx.constraintlayout.widget.ConstraintLayout
+import androidx.constraintlayout.widget.ConstraintSet
+import androidx.databinding.DataBindingUtil
+import androidx.databinding.ObservableArrayList
+import androidx.databinding.ObservableBoolean
+import androidx.databinding.ObservableInt
+import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.transition.ChangeBounds
 import androidx.transition.TransitionManager
 import androidx.transition.TransitionSet
+import com.google.android.material.snackbar.Snackbar
+import com.google.android.play.core.appupdate.AppUpdateManager
+import com.google.android.play.core.appupdate.AppUpdateManagerFactory
+import com.google.android.play.core.install.InstallState
+import com.google.android.play.core.install.InstallStateUpdatedListener
+import com.google.android.play.core.install.model.AppUpdateType
 import com.google.android.play.core.install.model.InstallStatus
+import com.google.android.play.core.install.model.UpdateAvailability
+import com.yarolegovich.slidingrootnav.SlidingRootNavBuilder
+import com.yarolegovich.slidingrootnav.callback.DragStateListener
+import n7.ad2.R
 import n7.ad2.databinding.ActivityMainBinding
 import n7.ad2.databinding.DialogRateBinding
 import n7.ad2.databinding.DialogUpdateBinding
 import n7.ad2.databinding.DrawerBinding
+import n7.ad2.di.injector
+import n7.ad2.games.GameFragment
+import n7.ad2.main.MainViewModel
+import n7.ad2.news.NewsFragment
+import n7.ad2.tournaments.TournamentsFragment
+import n7.ad2.ui.heroes.HeroesFragment
+import n7.ad2.ui.items.ItemsFragment
+import n7.ad2.ui.setting.SettingActivity
+import n7.ad2.ui.streams.StreamsFragment
+import n7.ad2.utils.BaseActivity
+import n7.ad2.utils.viewModel
 import java.util.Arrays
+import javax.inject.Inject
 
 class MainActivity : BaseActivity() {
 
@@ -64,6 +65,9 @@ class MainActivity : BaseActivity() {
         const val DIALOG_RATE_SHOW = "DIALOG_RATE_SHOW"
         private const val MY_REQUEST_CODE_UPDATE = 17
     }
+
+    @Inject
+    lateinit var preferences: SharedPreferences
 
     var observableLastItem = ObservableInt(1)
     var subscription = ObservableBoolean(false)
@@ -78,8 +82,7 @@ class MainActivity : BaseActivity() {
     private lateinit var binding: ActivityMainBinding
     private lateinit var drawer: DrawerBinding
     private var shouldUpdateFromMarket = true
-    private var viewModel: MainViewModel? = null
-    private var currentDay = 0
+    private val viewModel: MainViewModel by viewModel { injector.mainViewModel }
     private var shouldDisplayLog = false
     private var appUpdateManager: AppUpdateManager? = null
     var UpdateListener: InstallStateUpdatedListener = object : InstallStateUpdatedListener {
@@ -92,11 +95,14 @@ class MainActivity : BaseActivity() {
     }
     private var modeSecretActivity = false
 
+    fun startActivityOptions() {
+        startActivity(Intent(this, SettingActivity::class.java))
+    }
+
     override fun onCreate(savedInstanceState: Bundle?) {
+        (applicationContext as MyApplication).component.inject(this)
         super.onCreate(savedInstanceState)
         binding = DataBindingUtil.setContentView(this, R.layout.activity_main)
-        currentDay = PreferenceManager.getDefaultSharedPreferences(this).getInt(getString(R.string.setting_current_day), 0)
-        viewModel = ViewModelProvider(this).get(MainViewModel::class.java)
         drawer = DataBindingUtil.inflate(layoutInflater, R.layout.drawer, null, false)
         drawer.setViewModel(viewModel)
         movementListX.addAll(Arrays.asList(*arrayOfNulls(10)))
@@ -104,19 +110,11 @@ class MainActivity : BaseActivity() {
         drawer.setArrayX(movementListX)
         drawer.setArrayY(movementListY)
         drawer.setActivity(this)
-        setupRecyclerView()
+        setupLoggerAdapter()
         setupToolbar()
         setupDrawer()
-        setupListeners()
         setupSecretActivity()
         setLastFragment()
-    }
-
-    private fun setupListeners() {
-        viewModel!!.snackbarMessage.observe(this, Observer { redId -> SnackbarUtils.showSnackbar(binding!!.root, getString(redId!!)) })
-        viewModel!!.showDialogUpdate.observe(this, {
-            //                showDialogUpdate();
-        })
     }
 
     fun setLastFragment() {
@@ -136,20 +134,20 @@ class MainActivity : BaseActivity() {
             dialog.dismiss()
             loadNewVersion()
         }
-        shouldUpdateFromMarket = PreferenceManager.getDefaultSharedPreferences(this).getBoolean(MainViewModel.SHOULD_UPDATE_FROM_MARKET, true)
-        dialog.setOnCancelListener { PreferenceManager.getDefaultSharedPreferences(this@MainActivity).edit().putInt(MainViewModel.LAST_DAY_WHEN_CHECK_UPDATE, currentDay).apply() }
     }
 
     private fun setupToolbar() {
-        setSupportActionBar(binding!!.toolbar)
+        setSupportActionBar(binding.toolbar)
     }
 
-    private fun setupRecyclerView() {
-        shouldDisplayLog = PreferenceManager.getDefaultSharedPreferences(this).getBoolean(getString(R.string.setting_log_key), true)
+    private fun setupLoggerAdapter() {
+        shouldDisplayLog = preferences.getBoolean(getString(R.string.setting_log_key), true)
         if (shouldDisplayLog) {
-            adapter = viewModel!!.adapter
-            drawer!!.rvDrawer.adapter = adapter
-            drawer!!.rvDrawer.layoutManager = UnscrollableLinearLayoutManager(this, LinearLayoutManager.VERTICAL, false)
+            adapter = AD2LoggerAdapter()
+            drawer.rvDrawer.adapter = adapter
+            drawer.rvDrawer.layoutManager = object : LinearLayoutManager(this, VERTICAL, false) {
+                override fun canScrollVertically(): Boolean = false
+            }
         }
     }
 
@@ -157,13 +155,13 @@ class MainActivity : BaseActivity() {
         observableLastItem.set(fragmentID)
         val ft = supportFragmentManager.beginTransaction()
         when (fragmentID) {
-            1 -> ft.replace(binding!!.container.id, HeroesFragment()).commit()
-            2 -> ft.replace(binding!!.container.id, ItemsFragment()).commit()
-            3 -> ft.replace(binding!!.container.id, NewsFragment()).commit()
-            4 -> ft.replace(binding!!.container.id, TournamentsFragment()).commit()
-            5 -> ft.replace(binding!!.container.id, StreamsFragment()).commit()
-            6 -> ft.replace(binding!!.container.id, GameFragment()).commit()
-            else -> ft.replace(binding!!.container.id, HeroesFragment()).commit()
+            1 -> ft.replace(binding.container.id, HeroesFragment()).commit()
+            2 -> ft.replace(binding.container.id, ItemsFragment()).commit()
+            3 -> ft.replace(binding.container.id, NewsFragment()).commit()
+            4 -> ft.replace(binding.container.id, TournamentsFragment()).commit()
+            5 -> ft.replace(binding.container.id, StreamsFragment()).commit()
+            6 -> ft.replace(binding.container.id, GameFragment()).commit()
+            else -> ft.replace(binding.container.id, HeroesFragment()).commit()
         }
         //        if (closeDrawer)
 //            new Handler().postDelayed(new Runnable() {
@@ -175,7 +173,7 @@ class MainActivity : BaseActivity() {
     }
 
     private fun setupSecretActivity() {
-        constraintSetOrigin.clone(drawer!!.root as ConstraintLayout)
+        constraintSetOrigin.clone(drawer.root as ConstraintLayout)
         constraintSetHidden.clone(this, R.layout.drawer_hidden)
         currentSet = constraintSetOrigin
     }
@@ -245,7 +243,7 @@ class MainActivity : BaseActivity() {
 
     /* Displays the snackbar notification and call to action. */
     private fun popupSnackbarForCompleteUpdate() {
-        val snackbar = Snackbar.make(binding!!.root, R.string.main_activity_update_me, Snackbar.LENGTH_INDEFINITE)
+        val snackbar = Snackbar.make(binding.root, R.string.main_activity_update_me, Snackbar.LENGTH_INDEFINITE)
         snackbar.setAction(R.string.main_activity_okay) { if (appUpdateManager != null) appUpdateManager!!.completeUpdate() }
         snackbar.setActionTextColor(resources.getColor(R.color.red_500))
         snackbar.show()
@@ -342,13 +340,10 @@ class MainActivity : BaseActivity() {
                     movementListY[id] = ev.getY(index)
                     i++
                 }
-                if (count > 9) {
-//                    showDialogCongratulations();
-                }
             }
         }
-        drawer!!.arrayX = movementListX
-        drawer!!.arrayY = movementListY
+        drawer.arrayX = movementListX
+        drawer.arrayY = movementListY
         return super.dispatchTouchEvent(ev)
     }
 

@@ -3,6 +3,8 @@ package n7.ad2.di
 import android.app.Application
 import dagger.BindsInstance
 import dagger.Component
+import n7.ad2.main.MainViewModel
+import n7.ad2.ui.MainActivity
 import n7.ad2.ui.heroGuide.HeroGuideViewModel
 import n7.ad2.ui.heroGuide.HeroGuideWorker
 import n7.ad2.ui.heroInfo.HeroInfoViewModel
@@ -28,8 +30,10 @@ interface ApplicationComponent {
     }
 
     fun inject(databaseWorker: DatabaseWorker)
+    fun inject(mainActivity: MainActivity)
     fun inject(heroGuideWorker: HeroGuideWorker)
 
+    val mainViewModel: MainViewModel
     val splashViewModel: SplashViewModel
     val heroesViewModel: HeroesViewModel
     val itemsViewModel: ItemsViewModel
