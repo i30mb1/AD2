@@ -648,63 +648,63 @@
         "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_ru_gamepedia\/images\/6\/61\/Pain_blink_01_ru.mp3\/revision\/latest?cb=20170413115005",
         "title": "Blink dagger? Хм, какая ненужная вещь!",
         "icons": [
-          "items\/Blink Dagger\/full.png"
+          "items\/Blink Dagger\/full.webp"
         ]
       },
       {
         "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_ru_gamepedia\/images\/7\/70\/Pain_blink_02_ru.mp3\/revision\/latest?cb=20170413115009",
         "title": "Какой мне от этого прок?",
         "icons": [
-          "items\/Blink Dagger\/full.png"
+          "items\/Blink Dagger\/full.webp"
         ]
       },
       {
         "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_ru_gamepedia\/images\/a\/a7\/Pain_scepter_01_ru.mp3\/revision\/latest?cb=20170413120701",
         "title": "Королевский скипетр!",
         "icons": [
-          "items\/Aghanim's Scepter\/full.png"
+          "items\/Aghanim's Scepter\/full.webp"
         ]
       },
       {
         "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_ru_gamepedia\/images\/e\/e5\/Pain_scepter_02_ru.mp3\/revision\/latest?cb=20170413120706",
         "title": "Со скипетром намного лучше!",
         "icons": [
-          "items\/Aghanim's Scepter\/full.png"
+          "items\/Aghanim's Scepter\/full.webp"
         ]
       },
       {
         "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_ru_gamepedia\/images\/5\/51\/Pain_scepter_03_ru.mp3\/revision\/latest?cb=20170413120711",
         "title": "Поразительный скипетр!",
         "icons": [
-          "items\/Aghanim's Scepter\/full.png"
+          "items\/Aghanim's Scepter\/full.webp"
         ]
       },
       {
         "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_ru_gamepedia\/images\/0\/05\/Pain_scepter_04_ru.mp3\/revision\/latest?cb=20170413120716",
         "title": "Звучный скипетр!",
         "icons": [
-          "items\/Aghanim's Scepter\/full.png"
+          "items\/Aghanim's Scepter\/full.webp"
         ]
       },
       {
         "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_ru_gamepedia\/images\/1\/1a\/Pain_relic_01_ru.mp3\/revision\/latest?cb=20170413120443",
         "title": "Scythe of Vyse.",
         "icons": [
-          "items\/Scythe of Vyse\/full.png"
+          "items\/Scythe of Vyse\/full.webp"
         ]
       },
       {
         "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_ru_gamepedia\/images\/c\/c2\/Pain_relic_02_ru.mp3\/revision\/latest?cb=20170413120448",
         "title": "Сфера Линекса!",
         "icons": [
-          "items\/Linken's Sphere\/full.png"
+          "items\/Linken's Sphere\/full.webp"
         ]
       },
       {
         "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_ru_gamepedia\/images\/4\/46\/Pain_relic_03_ru.mp3\/revision\/latest?cb=20170413120453",
         "title": "Skadi!",
         "icons": [
-          "items\/Eye of Skadi\/full.png"
+          "items\/Eye of Skadi\/full.webp"
         ]
       },
       {
@@ -725,7 +725,7 @@
         "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_ru_gamepedia\/images\/b\/bf\/Pain_bottle_02_ru.mp3\/revision\/latest?cb=20170413115019",
         "title": "Настоящее болеутоляющее!",
         "icons": [
-          "items\/Bottle\/full.png"
+          "items\/Bottle\/full.webp"
         ]
       }
     ],

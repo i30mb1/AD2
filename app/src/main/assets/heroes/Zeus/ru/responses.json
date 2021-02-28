@@ -913,7 +913,7 @@
         "title": "Even the fae must bow!",
         "icons": [
           "heroes\/Dark Willow\/minimap.png",
-          "items\/Fae\/full.png"
+          "items\/Fae\/full.webp"
         ]
       },
       {
@@ -921,7 +921,7 @@
         "isArcane": true,
         "icons": [
           "heroes\/Dark Willow\/minimap.png",
-          "items\/Fae\/full.png"
+          "items\/Fae\/full.webp"
         ],
         "title": "Even the fae must bow!"
       },
@@ -2163,14 +2163,14 @@
         "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_ru_gamepedia\/images\/2\/2b\/Zuus_scepter_01_ru.mp3\/revision\/latest?cb=20170413200431",
         "title": "Ооо, скипетр!",
         "icons": [
-          "items\/Aghanim's Scepter\/full.png"
+          "items\/Aghanim's Scepter\/full.webp"
         ]
       },
       {
         "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_ru_gamepedia\/images\/c\/c9\/Zuus_arc_scepter_01_ru.mp3\/revision\/latest?cb=20170413193921",
         "isArcane": true,
         "icons": [
-          "items\/Aghanim's Scepter\/full.png"
+          "items\/Aghanim's Scepter\/full.webp"
         ],
         "title": "Ооо, скипетр!"
       },
@@ -2178,14 +2178,14 @@
         "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_ru_gamepedia\/images\/4\/49\/Zuus_scepter_02_ru.mp3\/revision\/latest?cb=20170413200436",
         "title": "Скипетру посчастливилось попасть в руки Бога!",
         "icons": [
-          "items\/Aghanim's Scepter\/full.png"
+          "items\/Aghanim's Scepter\/full.webp"
         ]
       },
       {
         "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_ru_gamepedia\/images\/e\/e1\/Zuus_arc_scepter_02_ru.mp3\/revision\/latest?cb=20170413193926",
         "isArcane": true,
         "icons": [
-          "items\/Aghanim's Scepter\/full.png"
+          "items\/Aghanim's Scepter\/full.webp"
         ],
         "title": "Скипетру посчастливилось попасть в руки Бога!"
       },
@@ -2193,14 +2193,14 @@
         "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_ru_gamepedia\/images\/c\/cd\/Zuus_blink_01_ru.mp3\/revision\/latest?cb=20170413195203",
         "title": "Ооо, Blink Dagger!",
         "icons": [
-          "items\/Blink Dagger\/full.png"
+          "items\/Blink Dagger\/full.webp"
         ]
       },
       {
         "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_ru_gamepedia\/images\/a\/a5\/Zuus_arc_blink_01_ru.mp3\/revision\/latest?cb=20170413192544",
         "isArcane": true,
         "icons": [
-          "items\/Blink Dagger\/full.png"
+          "items\/Blink Dagger\/full.webp"
         ],
         "title": "Ооо, Blink Dagger!"
       },
@@ -2208,14 +2208,14 @@
         "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_ru_gamepedia\/images\/b\/b3\/Zuus_blink_02_ru.mp3\/revision\/latest?cb=20170413195207",
         "title": "Надеюсь, Blink Dagger мне поможет.",
         "icons": [
-          "items\/Blink Dagger\/full.png"
+          "items\/Blink Dagger\/full.webp"
         ]
       },
       {
         "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_ru_gamepedia\/images\/2\/29\/Zuus_arc_blink_02_ru.mp3\/revision\/latest?cb=20170413192549",
         "isArcane": true,
         "icons": [
-          "items\/Blink Dagger\/full.png"
+          "items\/Blink Dagger\/full.webp"
         ],
         "title": "Надеюсь, Blink Dagger мне поможет."
       },
@@ -2223,14 +2223,14 @@
         "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_ru_gamepedia\/images\/a\/a9\/Zuus_item_01_ru.mp3\/revision\/latest?cb=20170413195522",
         "title": "Scythe of Vyse.",
         "icons": [
-          "items\/Scythe of Vyse\/full.png"
+          "items\/Scythe of Vyse\/full.webp"
         ]
       },
       {
         "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_ru_gamepedia\/images\/7\/7c\/Zuus_arc_item_01_ru.mp3\/revision\/latest?cb=20170413192921",
         "isArcane": true,
         "icons": [
-          "items\/Scythe of Vyse\/full.png"
+          "items\/Scythe of Vyse\/full.webp"
         ],
         "title": "Scythe of Vyse."
       },
@@ -2238,14 +2238,14 @@
         "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_ru_gamepedia\/images\/1\/10\/Zuus_item_02_ru.mp3\/revision\/latest?cb=20170413195527",
         "title": "Force Staff!",
         "icons": [
-          "items\/Force Staff\/full.png"
+          "items\/Force Staff\/full.webp"
         ]
       },
       {
         "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_ru_gamepedia\/images\/c\/ce\/Zuus_arc_item_02_ru.mp3\/revision\/latest?cb=20170413192926",
         "isArcane": true,
         "icons": [
-          "items\/Force Staff\/full.png"
+          "items\/Force Staff\/full.webp"
         ],
         "title": "Force Staff!"
       },
@@ -2253,14 +2253,14 @@
         "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_ru_gamepedia\/images\/d\/d0\/Zuus_item_03_ru.mp3\/revision\/latest?cb=20170413195531",
         "title": "Ха-ха-ха-ха-ха, Veil of Discord!",
         "icons": [
-          "items\/Veil of Discord\/full.png"
+          "items\/Veil of Discord\/full.webp"
         ]
       },
       {
         "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_ru_gamepedia\/images\/5\/54\/Zuus_arc_item_03_ru.mp3\/revision\/latest?cb=20170413192931",
         "isArcane": true,
         "icons": [
-          "items\/Veil of Discord\/full.png"
+          "items\/Veil of Discord\/full.webp"
         ],
         "title": "Ха-ха-ха-ха-ха, Veil of Discord!"
       },
@@ -2268,14 +2268,14 @@
         "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_ru_gamepedia\/images\/c\/c1\/Zuus_item_04_ru.mp3\/revision\/latest?cb=20170413195536",
         "title": "Хмм, освежает!",
         "icons": [
-          "items\/Refresher Orb\/full.png"
+          "items\/Refresher Orb\/full.webp"
         ]
       },
       {
         "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_ru_gamepedia\/images\/b\/b2\/Zuus_arc_item_04_ru.mp3\/revision\/latest?cb=20170413192936",
         "isArcane": true,
         "icons": [
-          "items\/Refresher Orb\/full.png"
+          "items\/Refresher Orb\/full.webp"
         ],
         "title": "Хмм, освежает!"
       },

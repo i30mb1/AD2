@@ -730,42 +730,42 @@
         "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/8\/8e\/Vo_lich_lich_scepter_01.mp3\/revision\/latest?cb=20201017001608",
         "title": "Ah, scepter!",
         "icons": [
-          "items\/Aghanim's Scepter\/full.png"
+          "items\/Aghanim's Scepter\/full.webp"
         ]
       },
       {
         "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/9\/90\/Vo_lich_lich_blink_01.mp3\/revision\/latest?cb=20201017000809",
         "title": "Hm hm hm hm, Blink Dagger!",
         "icons": [
-          "items\/Blink Dagger\/full.png"
+          "items\/Blink Dagger\/full.webp"
         ]
       },
       {
         "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/d\/d9\/Vo_lich_lich_mechanism_01.mp3\/revision\/latest?cb=20201017001301",
         "title": "Ah ha, Mekansm!",
         "icons": [
-          "items\/Mekansm\/full.png"
+          "items\/Mekansm\/full.webp"
         ]
       },
       {
         "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/9\/96\/Vo_lich_lich_mechanism_02.mp3\/revision\/latest?cb=20201017001303",
         "title": "Mekansm!",
         "icons": [
-          "items\/Mekansm\/full.png"
+          "items\/Mekansm\/full.webp"
         ]
       },
       {
         "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/9\/90\/Vo_lich_lich_mechanism_03.mp3\/revision\/latest?cb=20201017001311",
         "title": "Gather round\u2014Mekansm!",
         "icons": [
-          "items\/Mekansm\/full.png"
+          "items\/Mekansm\/full.webp"
         ]
       },
       {
         "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/a\/ac\/Vo_lich_lich_mechanism_04.mp3\/revision\/latest?cb=20201017001314",
         "title": "I have Mekansm! Gather round!",
         "icons": [
-          "items\/Mekansm\/full.png"
+          "items\/Mekansm\/full.webp"
         ]
       },
       {
@@ -773,14 +773,14 @@
         "isArcane": true,
         "title": "I have Mekansm! Gather round!",
         "icons": [
-          "items\/Mekansm\/full.png"
+          "items\/Mekansm\/full.webp"
         ]
       },
       {
         "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/e\/e4\/Vo_lich_lich_mechanism_06.mp3\/revision\/latest?cb=20201017001318",
         "title": "Mekansm! Gather round!",
         "icons": [
-          "items\/Mekansm\/full.png"
+          "items\/Mekansm\/full.webp"
         ]
       },
       {
@@ -794,14 +794,14 @@
         "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/0\/01\/Vo_lich_lich_wards_01.mp3\/revision\/latest?cb=20201017001629",
         "title": "Ah, wards!",
         "icons": [
-          "items\/Observer Ward\/full.png"
+          "items\/Observer Ward\/full.webp"
         ]
       },
       {
         "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/b\/b5\/Vo_lich_lich_wards_02.mp3\/revision\/latest?cb=20201017001632",
         "title": "I'll keep an eye out.",
         "icons": [
-          "items\/Observer Ward\/full.png"
+          "items\/Observer Ward\/full.webp"
         ]
       },
       {

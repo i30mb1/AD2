@@ -1745,7 +1745,7 @@
         "title": "Selemene has poor taste in protectors.",
         "icons": [
           "heroes\/Luna\/minimap.png",
-          "items\/Селемине\/full.png"
+          "items\/Селемине\/full.webp"
         ]
       },
       {
@@ -1826,7 +1826,7 @@
         "title": "Night falls on the reign of Selemene's royal protector.",
         "icons": [
           "heroes\/Mirana\/minimap.png",
-          "items\/Селемине\/full.png"
+          "items\/Селемине\/full.webp"
         ]
       },
       {
@@ -1862,7 +1862,7 @@
         "title": "If your people weren't so uptight, you might have died amongst them.",
         "icons": [
           "heroes\/Naga Siren\/minimap.png",
-          "items\/Слизеринские стражи\/full.png"
+          "items\/Слизеринские стражи\/full.webp"
         ]
       },
       {
@@ -1891,7 +1891,7 @@
         "title": "You are an abomination to the Rumusque Faithful.",
         "icons": [
           "heroes\/Necrophos\/minimap.png",
-          "items\/Rumusque Faithful\/full.png"
+          "items\/Rumusque Faithful\/full.webp"
         ]
       },
       {
@@ -2816,7 +2816,7 @@
         "title": "I will try not to upstage you in front of the bard, Axe. Not too much, anyway.",
         "icons": [
           "heroes\/Axe\/minimap.png",
-          "items\/Goodkind\/full.png"
+          "items\/Goodkind\/full.webp"
         ]
       },
       {
@@ -3438,7 +3438,7 @@
         "title": "The Desert of Misrule is a lonely place to live... perhaps when the battle is over you'd like some company? Hm?",
         "icons": [
           "heroes\/Lina\/minimap.png",
-          "items\/Пустыня Мирзула\/full.png"
+          "items\/Пустыня Мирзула\/full.webp"
         ]
       },
       {
@@ -3491,8 +3491,8 @@
         "title": "Let me get this straight. You named your group after the thing you fight to stop? Does that not get confusing?",
         "icons": [
           "heroes\/Luna\/minimap.png",
-          "items\/Dark Moon Order\/full.png",
-          "items\/Dark Moon Horde\/full.png"
+          "items\/Dark Moon Order\/full.webp",
+          "items\/Dark Moon Horde\/full.webp"
         ]
       },
       {
@@ -3757,7 +3757,7 @@
         "title": "You got to Vorn before I had my chance, Azwraith. But in light of your current situation, I cannot say the grudge has held.",
         "icons": [
           "heroes\/Phantom Lancer\/minimap.png",
-          "items\/Ворн\/full.png"
+          "items\/Ворн\/full.webp"
         ]
       },
       {
@@ -3808,7 +3808,7 @@
         "icons": [
           "heroes\/Pudge\/minimap.png",
           "heroes\/Поля Вечной бойни\/minimap.png",
-          "items\/Rumusque Pilgrimage\/full.png"
+          "items\/Rumusque Pilgrimage\/full.webp"
         ]
       },
       {
@@ -4569,266 +4569,266 @@
         "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/5\/55\/Vo_pangolin_pangolin_scepter_01.mp3\/revision\/latest?cb=20200524132422",
         "title": "Everyone should get one of these.",
         "icons": [
-          "items\/Aghanim's Scepter\/full.png"
+          "items\/Aghanim's Scepter\/full.webp"
         ]
       },
       {
         "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/5\/51\/Vo_pangolin_pangolin_scepter_02.mp3\/revision\/latest?cb=20200524132423",
         "title": "Oh, Scepter!",
         "icons": [
-          "items\/Aghanim's Scepter\/full.png"
+          "items\/Aghanim's Scepter\/full.webp"
         ]
       },
       {
         "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/7\/76\/Vo_pangolin_pangolin_scepter_03.mp3\/revision\/latest?cb=20200524132424",
         "title": "At last, something special.",
         "icons": [
-          "items\/Aghanim's Scepter\/full.png"
+          "items\/Aghanim's Scepter\/full.webp"
         ]
       },
       {
         "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/9\/90\/Vo_pangolin_pangolin_blink_01.mp3\/revision\/latest?cb=20200524131359",
         "title": "Blink Dagger.",
         "icons": [
-          "items\/Blink Dagger\/full.png"
+          "items\/Blink Dagger\/full.webp"
         ]
       },
       {
         "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/e\/e6\/Vo_pangolin_pangolin_item_01.mp3\/revision\/latest?cb=20200524131539",
         "title": "Scythe of Vyse.",
         "icons": [
-          "items\/Scythe of Vyse\/full.png"
+          "items\/Scythe of Vyse\/full.webp"
         ]
       },
       {
         "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/e\/e7\/Vo_pangolin_pangolin_item_02.mp3\/revision\/latest?cb=20200524131540",
         "title": "Linken's Sphere.",
         "icons": [
-          "items\/Linken's Sphere\/full.png"
+          "items\/Linken's Sphere\/full.webp"
         ]
       },
       {
         "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/8\/82\/Vo_pangolin_pangolin_item_03.mp3\/revision\/latest?cb=20200524131542",
         "title": "Dagon.",
         "icons": [
-          "items\/Dagon\/full.png"
+          "items\/Dagon\/full.webp"
         ]
       },
       {
         "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/5\/5b\/Vo_pangolin_pangolin_item_04.mp3\/revision\/latest?cb=20200524131544",
         "title": "Divine Scepter.",
         "icons": [
-          "items\/Eul's Scepter of Divinity\/full.png"
+          "items\/Eul's Scepter of Divinity\/full.webp"
         ]
       },
       {
         "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/8\/8e\/Vo_pangolin_pangolin_item_05.mp3\/revision\/latest?cb=20200524131545",
         "title": "Orchid Malevolence.",
         "icons": [
-          "items\/Orchid Malevolence\/full.png"
+          "items\/Orchid Malevolence\/full.webp"
         ]
       },
       {
         "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/6\/6c\/Vo_pangolin_pangolin_item_06.mp3\/revision\/latest?cb=20200524131546",
         "title": "Shiva's Guard.",
         "icons": [
-          "items\/Shiva's Guard\/full.png"
+          "items\/Shiva's Guard\/full.webp"
         ]
       },
       {
         "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/b\/bc\/Vo_pangolin_pangolin_item_07.mp3\/revision\/latest?cb=20200524131547",
         "title": "Force Staff.",
         "icons": [
-          "items\/Force Staff\/full.png"
+          "items\/Force Staff\/full.webp"
         ]
       },
       {
         "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/5\/5c\/Vo_pangolin_pangolin_item_08.mp3\/revision\/latest?cb=20200524131548",
         "title": "Satanic.",
         "icons": [
-          "items\/Satanic\/full.png"
+          "items\/Satanic\/full.webp"
         ]
       },
       {
         "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/b\/b2\/Vo_pangolin_pangolin_item_09.mp3\/revision\/latest?cb=20200524131549",
         "title": "Heart of Tarrasque.",
         "icons": [
-          "items\/Heart of Tarrasque\/full.png"
+          "items\/Heart of Tarrasque\/full.webp"
         ]
       },
       {
         "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/d\/da\/Vo_pangolin_pangolin_item_10.mp3\/revision\/latest?cb=20200524131550",
         "title": "Bloodthorn.",
         "icons": [
-          "items\/Bloodthorn\/full.png"
+          "items\/Bloodthorn\/full.webp"
         ]
       },
       {
         "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/c\/c6\/Vo_pangolin_pangolin_item_11.mp3\/revision\/latest?cb=20200524131551",
         "title": "Octarine Core.",
         "icons": [
-          "items\/Octarine Core\/full.png"
+          "items\/Octarine Core\/full.webp"
         ]
       },
       {
         "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/2\/26\/Vo_pangolin_pangolin_item_12.mp3\/revision\/latest?cb=20200524131552",
         "title": "Mjollnir.",
         "icons": [
-          "items\/Mjollnir\/full.png"
+          "items\/Mjollnir\/full.webp"
         ]
       },
       {
         "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/3\/35\/Vo_pangolin_pangolin_item_13.mp3\/revision\/latest?cb=20200524131553",
         "title": "Assault Cuirass.",
         "icons": [
-          "items\/Assault Cuirass\/full.png"
+          "items\/Assault Cuirass\/full.webp"
         ]
       },
       {
         "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/8\/8d\/Vo_pangolin_pangolin_item_14.mp3\/revision\/latest?cb=20200524131554",
         "title": "Abyssal Blade.",
         "icons": [
-          "items\/Abyssal Blade\/full.png"
+          "items\/Abyssal Blade\/full.webp"
         ]
       },
       {
         "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/b\/b0\/Vo_pangolin_pangolin_item_15.mp3\/revision\/latest?cb=20200524131555",
         "title": "Basher.",
         "icons": [
-          "items\/Skull Basher\/full.png"
+          "items\/Skull Basher\/full.webp"
         ]
       },
       {
         "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/c\/cb\/Vo_pangolin_pangolin_item_16.mp3\/revision\/latest?cb=20200524131557",
         "title": "Radiance.",
         "icons": [
-          "items\/Radiance\/full.png"
+          "items\/Radiance\/full.webp"
         ]
       },
       {
         "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/c\/c1\/Vo_pangolin_pangolin_item_17.mp3\/revision\/latest?cb=20200524131559",
         "title": "Eye of Skadi.",
         "icons": [
-          "items\/Eye of Skadi\/full.png"
+          "items\/Eye of Skadi\/full.webp"
         ]
       },
       {
         "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/d\/da\/Vo_pangolin_pangolin_item_18.mp3\/revision\/latest?cb=20200524131600",
         "title": "Hurricane Pike, for some reason...",
         "icons": [
-          "items\/Hurricane Pike\/full.png"
+          "items\/Hurricane Pike\/full.webp"
         ]
       },
       {
         "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/6\/61\/Vo_pangolin_pangolin_item_19.mp3\/revision\/latest?cb=20200524131601",
         "title": "Divine Rapier.",
         "icons": [
-          "items\/Divine Rapier\/full.png"
+          "items\/Divine Rapier\/full.webp"
         ]
       },
       {
         "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/6\/6a\/Vo_pangolin_pangolin_item_39.mp3\/revision\/latest?cb=20200524131622",
         "title": "Ha ha! Rapier!",
         "icons": [
-          "items\/Divine Rapier\/full.png"
+          "items\/Divine Rapier\/full.webp"
         ]
       },
       {
         "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/0\/06\/Vo_pangolin_pangolin_item_20.mp3\/revision\/latest?cb=20200524131602",
         "title": "Refresher Orb.",
         "icons": [
-          "items\/Refresher Orb\/full.png"
+          "items\/Refresher Orb\/full.webp"
         ]
       },
       {
         "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/1\/15\/Vo_pangolin_pangolin_item_21.mp3\/revision\/latest?cb=20200524131603",
         "title": "Butterfly.",
         "icons": [
-          "items\/Butterfly\/full.png"
+          "items\/Butterfly\/full.webp"
         ]
       },
       {
         "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/7\/7b\/Vo_pangolin_pangolin_item_22.mp3\/revision\/latest?cb=20200524131604",
         "title": "Hand of Midas.",
         "icons": [
-          "items\/Hand of Midas\/full.png"
+          "items\/Hand of Midas\/full.webp"
         ]
       },
       {
         "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/f\/f7\/Vo_pangolin_pangolin_item_23.mp3\/revision\/latest?cb=20200524131605",
         "title": "Manta Style.",
         "icons": [
-          "items\/Manta Style\/full.png"
+          "items\/Manta Style\/full.webp"
         ]
       },
       {
         "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/4\/43\/Vo_pangolin_pangolin_item_24.mp3\/revision\/latest?cb=20200524131607",
         "title": "Daedalus.",
         "icons": [
-          "items\/Daedalus\/full.png"
+          "items\/Daedalus\/full.webp"
         ]
       },
       {
         "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/1\/15\/Vo_pangolin_pangolin_item_25.mp3\/revision\/latest?cb=20200524131609",
         "title": "Desolator.",
         "icons": [
-          "items\/Desolator\/full.png"
+          "items\/Desolator\/full.webp"
         ]
       },
       {
         "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/b\/b2\/Vo_pangolin_pangolin_item_26.mp3\/revision\/latest?cb=20200524131609",
         "title": "Diffusal Blade.",
         "icons": [
-          "items\/Diffusal Blade\/full.png"
+          "items\/Diffusal Blade\/full.webp"
         ]
       },
       {
         "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/4\/49\/Vo_pangolin_pangolin_item_27.mp3\/revision\/latest?cb=20200524131610",
         "title": "Echo Sabre.",
         "icons": [
-          "items\/Echo Sabre\/full.png"
+          "items\/Echo Sabre\/full.webp"
         ]
       },
       {
         "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/5\/52\/Vo_pangolin_pangolin_item_28.mp3\/revision\/latest?cb=20200524131611",
         "title": "Shadow Blade.",
         "icons": [
-          "items\/Shadow Blade\/full.png"
+          "items\/Shadow Blade\/full.webp"
         ]
       },
       {
         "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/b\/bb\/Vo_pangolin_pangolin_item_29.mp3\/revision\/latest?cb=20200524131613",
         "title": "Heaven's Halberd.",
         "icons": [
-          "items\/Heaven's Halberd\/full.png"
+          "items\/Heaven's Halberd\/full.webp"
         ]
       },
       {
         "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/d\/db\/Vo_pangolin_pangolin_item_30.mp3\/revision\/latest?cb=20200524131613",
         "title": "Monkey King Bar.",
         "icons": [
-          "items\/Monkey King Bar\/full.png"
+          "items\/Monkey King Bar\/full.webp"
         ]
       },
       {
         "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/1\/1e\/Vo_pangolin_pangolin_item_34.mp3\/revision\/latest?cb=20200524131615",
         "title": "Black King Bar.",
         "icons": [
-          "items\/Black King Bar\/full.png"
+          "items\/Black King Bar\/full.webp"
         ]
       },
       {
         "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/d\/d2\/Vo_pangolin_pangolin_item_35.mp3\/revision\/latest?cb=20200524131617",
         "title": "Gem of True Sight.",
         "icons": [
-          "items\/Gem of True Sight\/full.png"
+          "items\/Gem of True Sight\/full.webp"
         ]
       },
       {
         "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/4\/49\/Vo_pangolin_pangolin_item_37.mp3\/revision\/latest?cb=20200524131618",
         "title": "Sange and Yasha.",
         "icons": [
-          "items\/Sange and Yasha\/full.png"
+          "items\/Sange and Yasha\/full.webp"
         ]
       },
       {
@@ -4842,77 +4842,77 @@
         "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/c\/c8\/Vo_pangolin_pangolin_blink_02.mp3\/revision\/latest?cb=20200524131400",
         "title": "Where can't I be?",
         "icons": [
-          "items\/Blink Dagger\/full.png"
+          "items\/Blink Dagger\/full.webp"
         ]
       },
       {
         "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/d\/d8\/Vo_pangolin_pangolin_item_02_b.mp3\/revision\/latest?cb=20200524131541",
         "title": "A lovely shape.",
         "icons": [
-          "items\/Linken's Sphere\/full.png"
+          "items\/Linken's Sphere\/full.webp"
         ]
       },
       {
         "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/0\/04\/Vo_pangolin_pangolin_item_03_b.mp3\/revision\/latest?cb=20200524131543",
         "title": "A bit cheap, no?",
         "icons": [
-          "items\/Dagon\/full.png"
+          "items\/Dagon\/full.webp"
         ]
       },
       {
         "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/1\/11\/Vo_pangolin_pangolin_item_15_b.mp3\/revision\/latest?cb=20200524131556",
         "title": "Who needs finesse?",
         "icons": [
-          "items\/Skull Basher\/full.png"
+          "items\/Skull Basher\/full.webp"
         ]
       },
       {
         "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/7\/7b\/Vo_pangolin_pangolin_item_16_b.mp3\/revision\/latest?cb=20200524131558",
         "title": "I've heard tales of this blade of light.",
         "icons": [
-          "items\/Radiance\/full.png"
+          "items\/Radiance\/full.webp"
         ]
       },
       {
         "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/f\/fc\/Vo_pangolin_pangolin_item_23_b.mp3\/revision\/latest?cb=20200524131606",
         "title": "Hm. I like the style...",
         "icons": [
-          "items\/Manta Style\/full.png"
+          "items\/Manta Style\/full.webp"
         ]
       },
       {
         "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/8\/82\/Vo_pangolin_pangolin_item_31.mp3\/revision\/latest?cb=20200524131614",
         "title": "As if my aim weren't true enough.",
         "icons": [
-          "items\/Monkey King Bar\/full.png"
+          "items\/Monkey King Bar\/full.webp"
         ]
       },
       {
         "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/6\/66\/Vo_pangolin_pangolin_item_36.mp3\/revision\/latest?cb=20200524131617",
         "title": "There's always more than the naked eye reveals.",
         "icons": [
-          "items\/Gem of True Sight\/full.png"
+          "items\/Gem of True Sight\/full.webp"
         ]
       },
       {
         "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/4\/49\/Vo_pangolin_pangolin_item_38.mp3\/revision\/latest?cb=20200524131619",
         "title": "Never thought I'd be paying for these.",
         "icons": [
-          "items\/Observer Ward\/full.png"
+          "items\/Observer Ward\/full.webp"
         ]
       },
       {
         "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/4\/45\/Vo_pangolin_pangolin_item_38_b.mp3\/revision\/latest?cb=20200524131620",
         "title": "How can we plan without intelligence?",
         "icons": [
-          "items\/Observer Ward\/full.png"
+          "items\/Observer Ward\/full.webp"
         ]
       },
       {
         "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/6\/62\/Vo_pangolin_pangolin_item_41.mp3\/revision\/latest?cb=20200524131624",
         "title": "The bottle has its time and place.",
         "icons": [
-          "items\/Bottle\/full.png"
+          "items\/Bottle\/full.webp"
         ]
       },
       {
@@ -4940,7 +4940,7 @@
         "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/5\/5d\/Vo_pangolin_pangolin_item_40.mp3\/revision\/latest?cb=20200524131623",
         "title": "Rapier! My favorite.",
         "icons": [
-          "items\/Divine Rapier\/full.png"
+          "items\/Divine Rapier\/full.webp"
         ]
       }
     ],

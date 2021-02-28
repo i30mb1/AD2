@@ -2081,14 +2081,14 @@
         "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/9\/9e\/Vo_undying_undying_scepter_01.mp3\/revision\/latest?cb=20201022204527",
         "title": "Ah, scepter.",
         "icons": [
-          "items\/Aghanim's Scepter\/full.png"
+          "items\/Aghanim's Scepter\/full.webp"
         ]
       },
       {
         "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/b\/bb\/Vo_undying_undying_big_scepter_01.mp3\/revision\/latest?cb=20201022203556",
         "isArcane": true,
         "icons": [
-          "items\/Aghanim's Scepter\/full.png"
+          "items\/Aghanim's Scepter\/full.webp"
         ],
         "title": "Ah, scepter."
       },
@@ -2096,14 +2096,14 @@
         "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/0\/0d\/Vo_undying_undying_scepter_02.mp3\/revision\/latest?cb=20201022204528",
         "title": "Tank scepter.",
         "icons": [
-          "items\/Aghanim's Scepter\/full.png"
+          "items\/Aghanim's Scepter\/full.webp"
         ]
       },
       {
         "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/a\/ac\/Vo_undying_undying_big_scepter_02.mp3\/revision\/latest?cb=20201022203558",
         "isArcane": true,
         "icons": [
-          "items\/Aghanim's Scepter\/full.png"
+          "items\/Aghanim's Scepter\/full.webp"
         ],
         "title": "Tank scepter."
       },
@@ -2111,14 +2111,14 @@
         "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/4\/40\/Vo_undying_undying_blink_01.mp3\/revision\/latest?cb=20201022203722",
         "title": "Blink dagger!",
         "icons": [
-          "items\/Blink Dagger\/full.png"
+          "items\/Blink Dagger\/full.webp"
         ]
       },
       {
         "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/0\/0b\/Vo_undying_undying_big_blink_01.mp3\/revision\/latest?cb=20201022202737",
         "isArcane": true,
         "icons": [
-          "items\/Blink Dagger\/full.png"
+          "items\/Blink Dagger\/full.webp"
         ],
         "title": "Blink dagger!"
       },
@@ -2126,14 +2126,14 @@
         "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/0\/0a\/Vo_undying_undying_blink_02.mp3\/revision\/latest?cb=20201022203724",
         "title": "Dead ahead.",
         "icons": [
-          "items\/Blink Dagger\/full.png"
+          "items\/Blink Dagger\/full.webp"
         ]
       },
       {
         "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/8\/86\/Vo_undying_undying_big_blink_02.mp3\/revision\/latest?cb=20201022202739",
         "isArcane": true,
         "icons": [
-          "items\/Blink Dagger\/full.png"
+          "items\/Blink Dagger\/full.webp"
         ],
         "title": "Dead ahead."
       },
@@ -2141,14 +2141,14 @@
         "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/a\/a1\/Vo_undying_undying_items_01.mp3\/revision\/latest?cb=20201022204027",
         "title": "Necronomicon? I know this.",
         "icons": [
-          "items\/Necronomicon\/full.png"
+          "items\/Necronomicon\/full.webp"
         ]
       },
       {
         "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/5\/5c\/Vo_undying_undying_big_items_01.mp3\/revision\/latest?cb=20201022203042",
         "isArcane": true,
         "icons": [
-          "items\/Necronomicon\/full.png"
+          "items\/Necronomicon\/full.webp"
         ],
         "title": "Necronomicon? I know this."
       },
@@ -2156,14 +2156,14 @@
         "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/4\/4b\/Vo_undying_undying_items_03.mp3\/revision\/latest?cb=20201022204031",
         "title": "Black King Bar.",
         "icons": [
-          "items\/Black King Bar\/full.png"
+          "items\/Black King Bar\/full.webp"
         ]
       },
       {
         "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/b\/b1\/Vo_undying_undying_big_items_03.mp3\/revision\/latest?cb=20201022203048",
         "isArcane": true,
         "icons": [
-          "items\/Black King Bar\/full.png"
+          "items\/Black King Bar\/full.webp"
         ],
         "title": "Black King Bar."
       },
@@ -2180,14 +2180,14 @@
         "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/0\/0e\/Vo_undying_undying_items_05.mp3\/revision\/latest?cb=20201022204035",
         "title": "Pipe of Insight!",
         "icons": [
-          "items\/Pipe of Insight\/full.png"
+          "items\/Pipe of Insight\/full.webp"
         ]
       },
       {
         "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/7\/71\/Vo_undying_undying_big_items_05.mp3\/revision\/latest?cb=20201022203051",
         "isArcane": true,
         "icons": [
-          "items\/Pipe of Insight\/full.png"
+          "items\/Pipe of Insight\/full.webp"
         ],
         "title": "Pipe of Insight!"
       },
@@ -2195,14 +2195,14 @@
         "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/2\/22\/Vo_undying_undying_items_06.mp3\/revision\/latest?cb=20201022204036",
         "title": "Radiance.",
         "icons": [
-          "items\/Radiance\/full.png"
+          "items\/Radiance\/full.webp"
         ]
       },
       {
         "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/9\/91\/Vo_undying_undying_big_items_06.mp3\/revision\/latest?cb=20201022203053",
         "isArcane": true,
         "icons": [
-          "items\/Radiance\/full.png"
+          "items\/Radiance\/full.webp"
         ],
         "title": "Radiance."
       },
@@ -2210,14 +2210,14 @@
         "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/0\/09\/Vo_undying_undying_items_07.mp3\/revision\/latest?cb=20201022204038",
         "title": "Heart of Tarrasque.",
         "icons": [
-          "items\/Heart of Tarrasque\/full.png"
+          "items\/Heart of Tarrasque\/full.webp"
         ]
       },
       {
         "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/5\/51\/Vo_undying_undying_big_items_07.mp3\/revision\/latest?cb=20201022203055",
         "isArcane": true,
         "icons": [
-          "items\/Heart of Tarrasque\/full.png"
+          "items\/Heart of Tarrasque\/full.webp"
         ],
         "title": "Heart of Tarrasque."
       },
@@ -2225,14 +2225,14 @@
         "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/9\/94\/Vo_undying_undying_items_08.mp3\/revision\/latest?cb=20201022204040",
         "title": "Shiva's guard!",
         "icons": [
-          "items\/Shiva's Guard\/full.png"
+          "items\/Shiva's Guard\/full.webp"
         ]
       },
       {
         "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/d\/d4\/Vo_undying_undying_big_items_08.mp3\/revision\/latest?cb=20201022203057",
         "isArcane": true,
         "icons": [
-          "items\/Shiva's Guard\/full.png"
+          "items\/Shiva's Guard\/full.webp"
         ],
         "title": "Shiva's guard!"
       },
@@ -2240,14 +2240,14 @@
         "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/6\/65\/Vo_undying_undying_items_09.mp3\/revision\/latest?cb=20201022204042",
         "title": "Blade Mail!",
         "icons": [
-          "items\/Blade Mail\/full.png"
+          "items\/Blade Mail\/full.webp"
         ]
       },
       {
         "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/9\/93\/Vo_undying_undying_big_items_09.mp3\/revision\/latest?cb=20201022203059",
         "isArcane": true,
         "icons": [
-          "items\/Blade Mail\/full.png"
+          "items\/Blade Mail\/full.webp"
         ],
         "title": "Blade Mail!"
       },
@@ -2255,14 +2255,14 @@
         "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/a\/a8\/Vo_undying_undying_items_12.mp3\/revision\/latest?cb=20201022204047",
         "title": "Vladmir's Offering.",
         "icons": [
-          "items\/Vladmir's Offering\/full.png"
+          "items\/Vladmir's Offering\/full.webp"
         ]
       },
       {
         "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/3\/3e\/Vo_undying_undying_big_items_12.mp3\/revision\/latest?cb=20201022203104",
         "isArcane": true,
         "icons": [
-          "items\/Vladmir's Offering\/full.png"
+          "items\/Vladmir's Offering\/full.webp"
         ],
         "title": "Vladmir's Offering."
       },
@@ -2270,14 +2270,14 @@
         "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/d\/de\/Vo_undying_undying_items_13.mp3\/revision\/latest?cb=20201022204049",
         "title": "Ghost scepter.",
         "icons": [
-          "items\/Ghost Scepter\/full.png"
+          "items\/Ghost Scepter\/full.webp"
         ]
       },
       {
         "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/f\/f4\/Vo_undying_undying_big_items_13.mp3\/revision\/latest?cb=20201022203106",
         "isArcane": true,
         "icons": [
-          "items\/Ghost Scepter\/full.png"
+          "items\/Ghost Scepter\/full.webp"
         ],
         "title": "Ghost scepter."
       },
@@ -2333,14 +2333,14 @@
         "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/e\/e4\/Vo_undying_undying_items_02.mp3\/revision\/latest?cb=20201022204029",
         "title": "Wards here.",
         "icons": [
-          "items\/Observer Ward\/full.png"
+          "items\/Observer Ward\/full.webp"
         ]
       },
       {
         "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/3\/33\/Vo_undying_undying_big_items_02.mp3\/revision\/latest?cb=20201022203046",
         "isArcane": true,
         "icons": [
-          "items\/Observer Ward\/full.png"
+          "items\/Observer Ward\/full.webp"
         ],
         "title": "Wards here."
       }

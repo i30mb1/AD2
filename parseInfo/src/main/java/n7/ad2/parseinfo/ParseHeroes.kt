@@ -2,12 +2,12 @@
 
 package n7.ad2.parseinfo
 
-import n7.ad2.parseinfo.ParseHeroes.Companion.parser
 import kotlinx.coroutines.CoroutineScope
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.async
 import kotlinx.coroutines.launch
 import kotlinx.coroutines.runBlocking
+import n7.ad2.parseinfo.ParseHeroes.Companion.parser
 import org.json.simple.JSONArray
 import org.json.simple.JSONObject
 import org.jsoup.Jsoup
@@ -121,7 +121,7 @@ class ParseHeroes private constructor(
                                                 var title = image.attr("title")
                                                 val matches = regex.containsMatchIn(title)
                                                 if (matches) {
-                                                    title = "items/" + title.replace(regex, "") + "/full.png"
+                                                    title = "items/" + title.replace(regex, "") + "/full.webp"
                                                     add(title)
                                                 } else {
                                                     title = "heroes/$title/minimap.png"
@@ -503,9 +503,9 @@ class ParseHeroes private constructor(
 fun main() = runBlocking {
     parser {
         loadRusDescription = false
-        loadEngDescription = true
-        loadRusResponses = false
-        loadEngResponses = false
+        loadEngDescription = false
+        loadRusResponses = true
+        loadEngResponses = true
         loadHeroFullImage = false
         loadHeroSpellImage = false
     }.start()

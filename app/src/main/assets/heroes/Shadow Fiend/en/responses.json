@@ -1737,14 +1737,14 @@
         "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/e\/e1\/Vo_nevermore_nev_scepter_01.mp3\/revision\/latest?cb=20201017153248",
         "title": "Ah, scepter.",
         "icons": [
-          "items\/Aghanim's Scepter\/full.png"
+          "items\/Aghanim's Scepter\/full.webp"
         ]
       },
       {
         "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/f\/f7\/Vo_nevermore_nev_arc_scepter_01.mp3\/revision\/latest?cb=20201017152348",
         "isArcane": true,
         "icons": [
-          "items\/Aghanim's Scepter\/full.png"
+          "items\/Aghanim's Scepter\/full.webp"
         ],
         "title": "Ah, scepter."
       },
@@ -1752,14 +1752,14 @@
         "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/0\/05\/Vo_nevermore_nev_scepter_02.mp3\/revision\/latest?cb=20201017153250",
         "title": "Oh wondrous scepter of souls!",
         "icons": [
-          "items\/Aghanim's Scepter\/full.png"
+          "items\/Aghanim's Scepter\/full.webp"
         ]
       },
       {
         "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/6\/6f\/Vo_nevermore_nev_arc_scepter_02.mp3\/revision\/latest?cb=20201017152351",
         "isArcane": true,
         "icons": [
-          "items\/Aghanim's Scepter\/full.png"
+          "items\/Aghanim's Scepter\/full.webp"
         ],
         "title": "Oh wondrous scepter of souls!"
       },
@@ -1767,14 +1767,14 @@
         "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/3\/30\/Vo_nevermore_nev_blink_01.mp3\/revision\/latest?cb=20201017152529",
         "title": "Blink Dagger!",
         "icons": [
-          "items\/Blink Dagger\/full.png"
+          "items\/Blink Dagger\/full.webp"
         ]
       },
       {
         "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/6\/6a\/Vo_nevermore_nev_arc_blink_01.mp3\/revision\/latest?cb=20201017151642",
         "isArcane": true,
         "icons": [
-          "items\/Blink Dagger\/full.png"
+          "items\/Blink Dagger\/full.webp"
         ],
         "title": "Blink Dagger!"
       },
@@ -1782,14 +1782,14 @@
         "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/a\/a4\/Vo_nevermore_nev_blink_02.mp3\/revision\/latest?cb=20201017152531",
         "title": "The eyes of the soul never blink.",
         "icons": [
-          "items\/Blink Dagger\/full.png"
+          "items\/Blink Dagger\/full.webp"
         ]
       },
       {
         "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/3\/31\/Vo_nevermore_nev_arc_blink_02.mp3\/revision\/latest?cb=20201017151644",
         "isArcane": true,
         "icons": [
-          "items\/Blink Dagger\/full.png"
+          "items\/Blink Dagger\/full.webp"
         ],
         "title": "The eyes of the soul never blink."
       },
@@ -1797,14 +1797,14 @@
         "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/6\/65\/Vo_nevermore_nev_item_01.mp3\/revision\/latest?cb=20201017152812",
         "title": "Black King Bar!",
         "icons": [
-          "items\/Black King Bar\/full.png"
+          "items\/Black King Bar\/full.webp"
         ]
       },
       {
         "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/2\/21\/Vo_nevermore_nev_arc_item_01.mp3\/revision\/latest?cb=20201017151906",
         "isArcane": true,
         "icons": [
-          "items\/Black King Bar\/full.png"
+          "items\/Black King Bar\/full.webp"
         ],
         "title": "Black King Bar!"
       },
@@ -1812,14 +1812,14 @@
         "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/2\/23\/Vo_nevermore_nev_item_02.mp3\/revision\/latest?cb=20201017152815",
         "title": "Shadow Blade!",
         "icons": [
-          "items\/Shadow Blade\/full.png"
+          "items\/Shadow Blade\/full.webp"
         ]
       },
       {
         "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/e\/ef\/Vo_nevermore_nev_arc_item_02.mp3\/revision\/latest?cb=20201017151909",
         "isArcane": true,
         "icons": [
-          "items\/Shadow Blade\/full.png"
+          "items\/Shadow Blade\/full.webp"
         ],
         "title": "Shadow Blade!"
       },
@@ -1827,14 +1827,14 @@
         "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/3\/39\/Vo_nevermore_nev_item_03.mp3\/revision\/latest?cb=20201017152817",
         "title": "Manta Style!",
         "icons": [
-          "items\/Manta Style\/full.png"
+          "items\/Manta Style\/full.webp"
         ]
       },
       {
         "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/9\/90\/Vo_nevermore_nev_arc_item_03.mp3\/revision\/latest?cb=20201017151911",
         "isArcane": true,
         "icons": [
-          "items\/Manta Style\/full.png"
+          "items\/Manta Style\/full.webp"
         ],
         "title": "Manta Style!"
       },
@@ -1842,14 +1842,14 @@
         "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/4\/4b\/Vo_nevermore_nev_item_04.mp3\/revision\/latest?cb=20201017152820",
         "title": "Butterfly!",
         "icons": [
-          "items\/Butterfly\/full.png"
+          "items\/Butterfly\/full.webp"
         ]
       },
       {
         "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/2\/26\/Vo_nevermore_nev_arc_item_04.mp3\/revision\/latest?cb=20201017151914",
         "isArcane": true,
         "icons": [
-          "items\/Butterfly\/full.png"
+          "items\/Butterfly\/full.webp"
         ],
         "title": "Butterfly!"
       },
@@ -1857,14 +1857,14 @@
         "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/c\/c8\/Vo_nevermore_nev_item_05.mp3\/revision\/latest?cb=20201017152823",
         "title": "Eye of Skadi!",
         "icons": [
-          "items\/Eye of Skadi\/full.png"
+          "items\/Eye of Skadi\/full.webp"
         ]
       },
       {
         "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/c\/c7\/Vo_nevermore_nev_arc_item_05.mp3\/revision\/latest?cb=20201017151917",
         "isArcane": true,
         "icons": [
-          "items\/Eye of Skadi\/full.png"
+          "items\/Eye of Skadi\/full.webp"
         ],
         "title": "Eye of Skadi!"
       },
@@ -1872,14 +1872,14 @@
         "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/6\/6e\/Vo_nevermore_nev_item_06.mp3\/revision\/latest?cb=20201017152825",
         "title": "Desolator!",
         "icons": [
-          "items\/Desolator\/full.png"
+          "items\/Desolator\/full.webp"
         ]
       },
       {
         "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/3\/3c\/Vo_nevermore_nev_arc_item_06.mp3\/revision\/latest?cb=20201017151920",
         "isArcane": true,
         "icons": [
-          "items\/Desolator\/full.png"
+          "items\/Desolator\/full.webp"
         ],
         "title": "Desolator!"
       },
@@ -1887,14 +1887,14 @@
         "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/1\/10\/Vo_nevermore_nev_item_07.mp3\/revision\/latest?cb=20201017152828",
         "title": "Satanic!",
         "icons": [
-          "items\/Satanic\/full.png"
+          "items\/Satanic\/full.webp"
         ]
       },
       {
         "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/f\/f7\/Vo_nevermore_nev_arc_item_07.mp3\/revision\/latest?cb=20201017151923",
         "isArcane": true,
         "icons": [
-          "items\/Satanic\/full.png"
+          "items\/Satanic\/full.webp"
         ],
         "title": "Satanic!"
       },
@@ -1902,14 +1902,14 @@
         "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/5\/54\/Vo_nevermore_nev_item_08.mp3\/revision\/latest?cb=20201017152831",
         "title": "Assault Cuirass!",
         "icons": [
-          "items\/Assault Cuirass\/full.png"
+          "items\/Assault Cuirass\/full.webp"
         ]
       },
       {
         "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/b\/b5\/Vo_nevermore_nev_arc_item_08.mp3\/revision\/latest?cb=20201017151925",
         "isArcane": true,
         "icons": [
-          "items\/Assault Cuirass\/full.png"
+          "items\/Assault Cuirass\/full.webp"
         ],
         "title": "Assault Cuirass!"
       },

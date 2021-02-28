@@ -745,56 +745,56 @@
         "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/c\/c9\/Vo_jakiro_jak_blink_01.mp3\/revision\/latest?cb=20201013203740",
         "title": "Blink dagger!",
         "icons": [
-          "items\/Blink Dagger\/full.png"
+          "items\/Blink Dagger\/full.webp"
         ]
       },
       {
         "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/a\/ae\/Vo_jakiro_jak_blink_02.mp3\/revision\/latest?cb=20201013203743",
         "title": "Dragon dagger!",
         "icons": [
-          "items\/Blink Dagger\/full.png"
+          "items\/Blink Dagger\/full.webp"
         ]
       },
       {
         "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/5\/5b\/Vo_jakiro_jak_scepter_01.mp3\/revision\/latest?cb=20201013204638",
         "title": "Ah, scepter!",
         "icons": [
-          "items\/Aghanim's Scepter\/full.png"
+          "items\/Aghanim's Scepter\/full.webp"
         ]
       },
       {
         "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/5\/5a\/Vo_jakiro_jak_scepter_02.mp3\/revision\/latest?cb=20201013204639",
         "title": "I'll hold the scepter. No, I will!",
         "icons": [
-          "items\/Aghanim's Scepter\/full.png"
+          "items\/Aghanim's Scepter\/full.webp"
         ]
       },
       {
         "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/e\/e9\/Vo_jakiro_jak_item_01.mp3\/revision\/latest?cb=20201013204051",
         "title": "Mekansm.",
         "icons": [
-          "items\/Mekansm\/full.png"
+          "items\/Mekansm\/full.webp"
         ]
       },
       {
         "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/4\/43\/Vo_jakiro_jak_item_02.mp3\/revision\/latest?cb=20201013204054",
         "title": "Ah, the Scythe of Vyse.",
         "icons": [
-          "items\/Scythe of Vyse\/full.png"
+          "items\/Scythe of Vyse\/full.webp"
         ]
       },
       {
         "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/7\/78\/Vo_jakiro_jak_item_03.mp3\/revision\/latest?cb=20201013204729",
         "title": "Eul's Divine Scepter!",
         "icons": [
-          "items\/Eul's Scepter of Divinity\/full.png"
+          "items\/Eul's Scepter of Divinity\/full.webp"
         ]
       },
       {
         "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/0\/05\/Vo_jakiro_jak_item_04.mp3\/revision\/latest?cb=20201013204059",
         "title": "Fear fire, and ice, and wind!",
         "icons": [
-          "items\/Eul's Scepter of Divinity\/full.png"
+          "items\/Eul's Scepter of Divinity\/full.webp"
         ]
       },
       {
@@ -819,7 +819,7 @@
         "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/9\/90\/Vo_jakiro_jak_item_05.mp3\/revision\/latest?cb=20201013204105",
         "title": "It takes two to tango.",
         "icons": [
-          "items\/Tango\/full.png"
+          "items\/Tango\/full.webp"
         ]
       }
     ],

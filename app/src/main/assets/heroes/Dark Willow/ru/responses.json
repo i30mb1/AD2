@@ -1082,7 +1082,7 @@
         "title": "You and your little pet should've stayed in the jungle.",
         "icons": [
           "heroes\/Batrider\/minimap.png",
-          "items\/Yama Raskav\/full.png"
+          "items\/Yama Raskav\/full.webp"
         ]
       },
       {
@@ -1623,7 +1623,7 @@
         "title": "Selemene never should have chosen you.",
         "icons": [
           "heroes\/Luna\/minimap.png",
-          "items\/Селемине\/full.png"
+          "items\/Селемине\/full.webp"
         ]
       },
       {
@@ -1688,7 +1688,7 @@
         "title": "Selemene deserves better protectors.",
         "icons": [
           "heroes\/Mirana\/minimap.png",
-          "items\/Селемине\/full.png"
+          "items\/Селемине\/full.webp"
         ]
       },
       {
@@ -2090,7 +2090,7 @@
         "title": "Better death than Dark Reef!",
         "icons": [
           "heroes\/Slardar\/minimap.png",
-          "items\/Темный Риф\/full.png"
+          "items\/Темный Риф\/full.webp"
         ]
       },
       {
@@ -2568,7 +2568,7 @@
         "title": "My father sent you, didn't he?",
         "icons": [
           "heroes\/Bounty Hunter\/minimap.png",
-          "items\/Mireska's Father\/full.png"
+          "items\/Mireska's Father\/full.webp"
         ]
       },
       {
@@ -2768,7 +2768,7 @@
         "title": "Oh I've been to Yama Raskav. Awful place. Good on ya for leaving!",
         "icons": [
           "heroes\/Batrider\/minimap.png",
-          "items\/Yama Raskav Jungle\/full.png"
+          "items\/Yama Raskav Jungle\/full.webp"
         ]
       },
       {
@@ -2819,7 +2819,7 @@
         "title": "I'm never going back to Revtel, Gondar. Try to force me, and you're a dead man.",
         "icons": [
           "heroes\/Bounty Hunter\/minimap.png",
-          "items\/Revtel\/full.png"
+          "items\/Revtel\/full.webp"
         ]
       },
       {
@@ -2876,7 +2876,7 @@
         "title": "So, how much is the purse you got for winning in Omexe?",
         "icons": [
           "heroes\/Centaur Warrunner\/minimap.png",
-          "items\/Omexe\/full.png"
+          "items\/Omexe\/full.webp"
         ]
       },
       {
@@ -2898,7 +2898,7 @@
         "title": "I'm not trying to tell a Fundamental how to do their job, but you really need to step up your chaos game.",
         "icons": [
           "heroes\/Chaos Knight\/minimap.png",
-          "items\/Fundamental\/full.png"
+          "items\/Fundamental\/full.webp"
         ]
       },
       {
@@ -2974,7 +2974,7 @@
         "title": "You're a tactician, what did you make of the Vhoul Rebellion?",
         "icons": [
           "heroes\/Dark Seer\/minimap.png",
-          "items\/Vhoul Rebellion\/full.png"
+          "items\/Vhoul Rebellion\/full.webp"
         ]
       },
       {
@@ -3010,7 +3010,7 @@
         "title": "You're much more reasonable than Sorla.",
         "icons": [
           "heroes\/Disruptor\/minimap.png",
-          "items\/Sorla\/full.png"
+          "items\/Sorla\/full.webp"
         ]
       },
       {
@@ -3026,7 +3026,7 @@
         "title": "Don't take it the wrong way, but I try not to traffic with demons.",
         "icons": [
           "heroes\/Doom\/minimap.png",
-          "items\/Demons\/full.png"
+          "items\/Demons\/full.webp"
         ]
       },
       {
@@ -3232,8 +3232,8 @@
         "title": "You know in Revtel, Pyrexae is a great delicacy.",
         "icons": [
           "heroes\/Jakiro\/minimap.png",
-          "items\/Revtel\/full.png",
-          "items\/Pyrexae\/full.png"
+          "items\/Revtel\/full.webp",
+          "items\/Pyrexae\/full.webp"
         ]
       },
       {
@@ -3425,7 +3425,7 @@
         "title": "I heard the rumor there are some gorgons being moved through Weeping Rose.",
         "icons": [
           "heroes\/Medusa\/minimap.png",
-          "items\/Gorgons\/full.png",
+          "items\/Gorgons\/full.webp",
           "heroes\/Weeping Rose\/minimap.png"
         ]
       },
@@ -3642,7 +3642,7 @@
         "title": "I don't think your little sorority is for me.",
         "icons": [
           "heroes\/Phantom Assassin\/minimap.png",
-          "items\/Sisters of the Veil\/full.png"
+          "items\/Sisters of the Veil\/full.webp"
         ]
       },
       {
@@ -3742,7 +3742,7 @@
         "title": "Just promise me if I die you'll let me out of the Narrow Maze.",
         "icons": [
           "heroes\/Razor\/minimap.png",
-          "items\/Narrow Maze\/full.png"
+          "items\/Narrow Maze\/full.webp"
         ]
       },
       {
@@ -3765,7 +3765,7 @@
         "title": "How's Lasan doing?",
         "icons": [
           "heroes\/Riki\/minimap.png",
-          "items\/Lasan\/full.png"
+          "items\/Lasan\/full.webp"
         ]
       },
       {
@@ -3885,7 +3885,7 @@
         "title": "You got to tell me about Dark Reef sometime.",
         "icons": [
           "heroes\/Slark\/minimap.png",
-          "items\/Dark Reef\/full.png"
+          "items\/Dark Reef\/full.webp"
         ]
       },
       {
@@ -4290,7 +4290,7 @@
         "title": "You would have fit right in at Revtel.",
         "icons": [
           "heroes\/Wraith King\/minimap.png",
-          "items\/Revtel\/full.png"
+          "items\/Revtel\/full.webp"
         ]
       },
       {
@@ -4494,273 +4494,273 @@
         "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/8\/8d\/Vo_dark_willow_sylph_scepter_01.mp3\/revision\/latest?cb=20201010204956",
         "title": "Aghanim's Scepter.",
         "icons": [
-          "items\/Aghanim's Scepter\/full.png"
+          "items\/Aghanim's Scepter\/full.webp"
         ]
       },
       {
         "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/3\/3b\/Vo_dark_willow_sylph_scepter_02.mp3\/revision\/latest?cb=20201010204958",
         "title": "I can feel the power!",
         "icons": [
-          "items\/Aghanim's Scepter\/full.png"
+          "items\/Aghanim's Scepter\/full.webp"
         ]
       },
       {
         "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/b\/b9\/Vo_dark_willow_sylph_scepter_03.mp3\/revision\/latest?cb=20201010204959",
         "title": "The power, it's intoxicating!",
         "icons": [
-          "items\/Aghanim's Scepter\/full.png"
+          "items\/Aghanim's Scepter\/full.webp"
         ]
       },
       {
         "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/1\/13\/Vo_dark_willow_sylph_blink_01.mp3\/revision\/latest?cb=20201010202821",
         "title": "Blink Dagger.",
         "icons": [
-          "items\/Blink Dagger\/full.png"
+          "items\/Blink Dagger\/full.webp"
         ]
       },
       {
         "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/8\/87\/Vo_dark_willow_sylph_blink_02.mp3\/revision\/latest?cb=20201010202823",
         "title": "When need to stay mobile.",
         "icons": [
-          "items\/Blink Dagger\/full.png"
+          "items\/Blink Dagger\/full.webp"
         ]
       },
       {
         "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/2\/2d\/Vo_dark_willow_sylph_item_01.mp3\/revision\/latest?cb=20201010203112",
         "title": "Ohh, this is going to be hilarious.",
         "icons": [
-          "items\/Scythe of Vyse\/full.png"
+          "items\/Scythe of Vyse\/full.webp"
         ]
       },
       {
         "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/c\/cf\/Vo_dark_willow_sylph_item_02.mp3\/revision\/latest?cb=20201010203113",
         "title": "Linken's Sphere.",
         "icons": [
-          "items\/Linken's Sphere\/full.png"
+          "items\/Linken's Sphere\/full.webp"
         ]
       },
       {
         "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/a\/a2\/Vo_dark_willow_sylph_item_03.mp3\/revision\/latest?cb=20201010203115",
         "title": "Dagon.",
         "icons": [
-          "items\/Dagon\/full.png"
+          "items\/Dagon\/full.webp"
         ]
       },
       {
         "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/c\/c6\/Vo_dark_willow_sylph_item_04.mp3\/revision\/latest?cb=20201010203116",
         "title": "Ohh, they're really going to hate us now, Jex.",
         "icons": [
-          "items\/Eul's Scepter of Divinity\/full.png"
+          "items\/Eul's Scepter of Divinity\/full.webp"
         ]
       },
       {
         "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/7\/7b\/Vo_dark_willow_sylph_item_05.mp3\/revision\/latest?cb=20201010203118",
         "title": "Orchid Malevolence.",
         "icons": [
-          "items\/Orchid Malevolence\/full.png"
+          "items\/Orchid Malevolence\/full.webp"
         ]
       },
       {
         "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/c\/c0\/Vo_dark_willow_sylph_item_06.mp3\/revision\/latest?cb=20201010203120",
         "title": "If they thought we were annoying before, wait till they see us now.",
         "icons": [
-          "items\/Shiva's Guard\/full.png"
+          "items\/Shiva's Guard\/full.webp"
         ]
       },
       {
         "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/6\/69\/Vo_dark_willow_sylph_item_07.mp3\/revision\/latest?cb=20201010203121",
         "title": "Force Staff.",
         "icons": [
-          "items\/Force Staff\/full.png"
+          "items\/Force Staff\/full.webp"
         ]
       },
       {
         "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/e\/e9\/Vo_dark_willow_sylph_item_08.mp3\/revision\/latest?cb=20201010203123",
         "title": "Satanic.",
         "icons": [
-          "items\/Satanic\/full.png"
+          "items\/Satanic\/full.webp"
         ]
       },
       {
         "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/f\/f1\/Vo_dark_willow_sylph_item_09.mp3\/revision\/latest?cb=20201010203124",
         "title": "Heart of Tarrasque.",
         "icons": [
-          "items\/Heart of Tarrasque\/full.png"
+          "items\/Heart of Tarrasque\/full.webp"
         ]
       },
       {
         "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/1\/1d\/Vo_dark_willow_sylph_item_10.mp3\/revision\/latest?cb=20201010203126",
         "title": "Bloodthorn.",
         "icons": [
-          "items\/Bloodthorn\/full.png"
+          "items\/Bloodthorn\/full.webp"
         ]
       },
       {
         "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/7\/76\/Vo_dark_willow_sylph_item_11.mp3\/revision\/latest?cb=20201010203128",
         "title": "Octarine Core.",
         "icons": [
-          "items\/Octarine Core\/full.png"
+          "items\/Octarine Core\/full.webp"
         ]
       },
       {
         "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/f\/f6\/Vo_dark_willow_sylph_item_12.mp3\/revision\/latest?cb=20201010203129",
         "title": "Mjollnir.",
         "icons": [
-          "items\/Mjollnir\/full.png"
+          "items\/Mjollnir\/full.webp"
         ]
       },
       {
         "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/f\/f7\/Vo_dark_willow_sylph_item_13.mp3\/revision\/latest?cb=20201010203131",
         "title": "Got to keep them on their toes.",
         "icons": [
-          "items\/Assault Cuirass\/full.png"
+          "items\/Assault Cuirass\/full.webp"
         ]
       },
       {
         "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/4\/44\/Vo_dark_willow_sylph_item_14.mp3\/revision\/latest?cb=20201010203132",
         "title": "A wicked blade for a naughty little lady.",
         "icons": [
-          "items\/Abyssal Blade\/full.png"
+          "items\/Abyssal Blade\/full.webp"
         ]
       },
       {
         "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/2\/28\/Vo_dark_willow_sylph_item_15.mp3\/revision\/latest?cb=20201010203134",
         "title": "Time to bash a few skulls.",
         "icons": [
-          "items\/Skull Basher\/full.png"
+          "items\/Skull Basher\/full.webp"
         ]
       },
       {
         "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/a\/a9\/Vo_dark_willow_sylph_item_16.mp3\/revision\/latest?cb=20201010203136",
         "title": "Radiance.",
         "icons": [
-          "items\/Radiance\/full.png"
+          "items\/Radiance\/full.webp"
         ]
       },
       {
         "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/9\/99\/Vo_dark_willow_sylph_item_17.mp3\/revision\/latest?cb=20201010203137",
         "title": "Eye of Skadi.",
         "icons": [
-          "items\/Eye of Skadi\/full.png"
+          "items\/Eye of Skadi\/full.webp"
         ]
       },
       {
         "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/4\/43\/Vo_dark_willow_sylph_item_18.mp3\/revision\/latest?cb=20201010203139",
         "title": "Let's try to keep our distance.",
         "icons": [
-          "items\/Hurricane Pike\/full.png"
+          "items\/Hurricane Pike\/full.webp"
         ]
       },
       {
         "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/6\/66\/Vo_dark_willow_sylph_item_20.mp3\/revision\/latest?cb=20201010203142",
         "title": "Refresher Orb.",
         "icons": [
-          "items\/Refresher Orb\/full.png"
+          "items\/Refresher Orb\/full.webp"
         ]
       },
       {
         "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/e\/e2\/Vo_dark_willow_sylph_item_21.mp3\/revision\/latest?cb=20201010203143",
         "title": "Butterfly. A beautiful name for a deadly little thing. They could've called it Mireska.",
         "icons": [
-          "items\/Butterfly\/full.png"
+          "items\/Butterfly\/full.webp"
         ]
       },
       {
         "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/f\/fc\/Vo_dark_willow_sylph_item_22.mp3\/revision\/latest?cb=20201010203145",
         "title": "Hello, money!",
         "icons": [
-          "items\/Hand of Midas\/full.png"
+          "items\/Hand of Midas\/full.webp"
         ]
       },
       {
         "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/6\/6e\/Vo_dark_willow_sylph_item_23.mp3\/revision\/latest?cb=20201010203147",
         "title": "Manta Style.",
         "icons": [
-          "items\/Manta Style\/full.png"
+          "items\/Manta Style\/full.webp"
         ]
       },
       {
         "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/6\/6a\/Vo_dark_willow_sylph_item_24.mp3\/revision\/latest?cb=20201010203148",
         "title": "Daedalus.",
         "icons": [
-          "items\/Daedalus\/full.png"
+          "items\/Daedalus\/full.webp"
         ]
       },
       {
         "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/1\/1b\/Vo_dark_willow_sylph_item_25.mp3\/revision\/latest?cb=20201010203150",
         "title": "Ooh, Desolator.",
         "icons": [
-          "items\/Desolator\/full.png"
+          "items\/Desolator\/full.webp"
         ]
       },
       {
         "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/b\/b8\/Vo_dark_willow_sylph_item_26.mp3\/revision\/latest?cb=20201010203152",
         "title": "Diffusal Blade.",
         "icons": [
-          "items\/Diffusal Blade\/full.png"
+          "items\/Diffusal Blade\/full.webp"
         ]
       },
       {
         "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/6\/63\/Vo_dark_willow_sylph_item_27.mp3\/revision\/latest?cb=20201010203153",
         "title": "Echo Sabre.",
         "icons": [
-          "items\/Echo Sabre\/full.png"
+          "items\/Echo Sabre\/full.webp"
         ]
       },
       {
         "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/4\/4f\/Vo_dark_willow_sylph_item_28.mp3\/revision\/latest?cb=20201010203155",
         "title": "Shadow Blade.",
         "icons": [
-          "items\/Shadow Blade\/full.png"
+          "items\/Shadow Blade\/full.webp"
         ]
       },
       {
         "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/7\/76\/Vo_dark_willow_sylph_item_29.mp3\/revision\/latest?cb=20201010203157",
         "title": "Heaven's Halberd.",
         "icons": [
-          "items\/Heaven's Halberd\/full.png"
+          "items\/Heaven's Halberd\/full.webp"
         ]
       },
       {
         "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/6\/6e\/Vo_dark_willow_sylph_item_30.mp3\/revision\/latest?cb=20201010203158",
         "title": "Ah, Wukong won't even miss it.",
         "icons": [
-          "items\/Monkey King Bar\/full.png"
+          "items\/Monkey King Bar\/full.webp"
         ]
       },
       {
         "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/4\/44\/Vo_dark_willow_sylph_item_31.mp3\/revision\/latest?cb=20201010203200",
         "title": "Black King Bar.",
         "icons": [
-          "items\/Black King Bar\/full.png"
+          "items\/Black King Bar\/full.webp"
         ]
       },
       {
         "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/a\/a1\/Vo_dark_willow_sylph_item_32.mp3\/revision\/latest?cb=20201010203202",
         "title": "No one sneaks up on us.",
         "icons": [
-          "items\/Gem of True Sight\/full.png"
+          "items\/Gem of True Sight\/full.webp"
         ]
       },
       {
         "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/1\/14\/Vo_dark_willow_sylph_item_33.mp3\/revision\/latest?cb=20201010203203",
         "title": "No Jex, you can't carry Yasha.",
         "icons": [
-          "items\/Sange and Yasha\/full.png"
+          "items\/Sange and Yasha\/full.webp"
         ]
       },
       {
         "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/b\/b5\/Vo_dark_willow_sylph_item_34.mp3\/revision\/latest?cb=20201010203205",
         "title": "Let's keep a look out.",
         "icons": [
-          "items\/Observer Ward\/full.png"
+          "items\/Observer Ward\/full.webp"
         ]
       },
       {
         "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/c\/c2\/Vo_dark_willow_sylph_item_35.mp3\/revision\/latest?cb=20201010203207",
         "title": "Divine Rapier!",
         "icons": [
-          "items\/Divine Rapier\/full.png"
+          "items\/Divine Rapier\/full.webp"
         ]
       },
       {
@@ -4795,14 +4795,14 @@
         "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/c\/ca\/Vo_dark_willow_sylph_item_36.mp3\/revision\/latest?cb=20201010203208",
         "title": "We'll be holding onto this for a long time.",
         "icons": [
-          "items\/Divine Rapier\/full.png"
+          "items\/Divine Rapier\/full.webp"
         ]
       },
       {
         "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/2\/2a\/Vo_dark_willow_sylph_item_19.mp3\/revision\/latest?cb=20201010203140",
         "title": "I've wanted to steal this forever.",
         "icons": [
-          "items\/Divine Rapier\/full.png"
+          "items\/Divine Rapier\/full.webp"
         ]
       }
     ],
@@ -5750,8 +5750,8 @@
           "heroes\/Legion Commander\/minimap.png",
           "heroes\/Bullsnake Flag\/minimap.png",
           "heroes\/Roseleaf\/minimap.png",
-          "items\/Bronze Legion\/full.png",
-          "items\/Red Mist\/full.png"
+          "items\/Bronze Legion\/full.webp",
+          "items\/Red Mist\/full.webp"
         ]
       },
       {

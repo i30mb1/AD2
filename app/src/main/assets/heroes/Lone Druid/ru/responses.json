@@ -1954,14 +1954,14 @@
         "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/c\/c2\/Vo_lone_druid_lone_druid_blink_01.mp3\/revision\/latest?cb=20201017005720",
         "title": "Blink Dagger!",
         "icons": [
-          "items\/Blink Dagger\/full.png"
+          "items\/Blink Dagger\/full.webp"
         ]
       },
       {
         "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/9\/9e\/Vo_lone_druid_lone_druid_bearform_blink_01.mp3\/revision\/latest?cb=20201017004919",
         "isArcane": true,
         "icons": [
-          "items\/Blink Dagger\/full.png"
+          "items\/Blink Dagger\/full.webp"
         ],
         "title": "Blink Dagger!"
       },
@@ -1969,14 +1969,14 @@
         "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/d\/d8\/Vo_lone_druid_lone_druid_blink_02.mp3\/revision\/latest?cb=20201017005721",
         "title": "This dagger lacks the heft of my blade.",
         "icons": [
-          "items\/Blink Dagger\/full.png"
+          "items\/Blink Dagger\/full.webp"
         ]
       },
       {
         "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/9\/97\/Vo_lone_druid_lone_druid_bearform_blink_02.mp3\/revision\/latest?cb=20201017004921",
         "isArcane": true,
         "icons": [
-          "items\/Blink Dagger\/full.png"
+          "items\/Blink Dagger\/full.webp"
         ],
         "title": "This dagger lacks the heft of my blade."
       },
@@ -1984,14 +1984,14 @@
         "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/9\/9a\/Vo_lone_druid_lone_druid_scepter_01.mp3\/revision\/latest?cb=20201017010433",
         "title": "Ah, Scepter!",
         "icons": [
-          "items\/Aghanim's Scepter\/full.png"
+          "items\/Aghanim's Scepter\/full.webp"
         ]
       },
       {
         "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/c\/c6\/Vo_lone_druid_lone_druid_bearform_scepter_01.mp3\/revision\/latest?cb=20201017005644",
         "isArcane": true,
         "icons": [
-          "items\/Aghanim's Scepter\/full.png"
+          "items\/Aghanim's Scepter\/full.webp"
         ],
         "title": "Ah, Scepter!"
       },
@@ -1999,14 +1999,14 @@
         "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/e\/e2\/Vo_lone_druid_lone_druid_scepter_02.mp3\/revision\/latest?cb=20201017010434",
         "title": "A Scepter fit for the high clan lords.",
         "icons": [
-          "items\/Aghanim's Scepter\/full.png"
+          "items\/Aghanim's Scepter\/full.webp"
         ]
       },
       {
         "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/8\/8f\/Vo_lone_druid_lone_druid_bearform_scepter_02.mp3\/revision\/latest?cb=20201017005648",
         "isArcane": true,
         "icons": [
-          "items\/Aghanim's Scepter\/full.png"
+          "items\/Aghanim's Scepter\/full.webp"
         ],
         "title": "A Scepter fit for the high clan lords."
       },
@@ -2014,14 +2014,14 @@
         "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/c\/ca\/Vo_lone_druid_lone_druid_item_01.mp3\/revision\/latest?cb=20201017005928",
         "title": "Radiance!",
         "icons": [
-          "items\/Radiance\/full.png"
+          "items\/Radiance\/full.webp"
         ]
       },
       {
         "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/e\/e5\/Vo_lone_druid_lone_druid_bearform_item_01.mp3\/revision\/latest?cb=20201017005128",
         "isArcane": true,
         "icons": [
-          "items\/Radiance\/full.png"
+          "items\/Radiance\/full.webp"
         ],
         "title": "Radiance!"
       },
@@ -2029,14 +2029,14 @@
         "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/c\/c5\/Vo_lone_druid_lone_druid_item_02.mp3\/revision\/latest?cb=20201017005930",
         "title": "Scythe of Vyse!",
         "icons": [
-          "items\/Scythe of Vyse\/full.png"
+          "items\/Scythe of Vyse\/full.webp"
         ]
       },
       {
         "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/f\/f1\/Vo_lone_druid_lone_druid_bearform_item_02.mp3\/revision\/latest?cb=20201017005129",
         "isArcane": true,
         "icons": [
-          "items\/Scythe of Vyse\/full.png"
+          "items\/Scythe of Vyse\/full.webp"
         ],
         "title": "Scythe of Vyse!"
       },
@@ -2044,7 +2044,7 @@
         "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/e\/ed\/Vo_lone_druid_lone_druid_item_03.mp3\/revision\/latest?cb=20201017005932",
         "title": "Assault Cuirass!",
         "icons": [
-          "items\/Assault Cuirass\/full.png"
+          "items\/Assault Cuirass\/full.webp"
         ]
       },
       {
@@ -2052,14 +2052,14 @@
         "isArcane": true,
         "title": "Assault Cuirass!",
         "icons": [
-          "items\/Assault Cuirass\/full.png"
+          "items\/Assault Cuirass\/full.webp"
         ]
       },
       {
         "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/0\/02\/Vo_lone_druid_lone_druid_item_04.mp3\/revision\/latest?cb=20201017005934",
         "title": "A cuirass to cover my bear ass, ha ha!",
         "icons": [
-          "items\/Assault Cuirass\/full.png"
+          "items\/Assault Cuirass\/full.webp"
         ]
       },
       {
@@ -2067,21 +2067,21 @@
         "isArcane": true,
         "title": "A cuirass to cover my bear ass, ha ha!",
         "icons": [
-          "items\/Assault Cuirass\/full.png"
+          "items\/Assault Cuirass\/full.webp"
         ]
       },
       {
         "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/f\/fa\/Vo_lone_druid_lone_druid_item_05.mp3\/revision\/latest?cb=20201017005936",
         "title": "Daedalus!",
         "icons": [
-          "items\/Daedalus\/full.png"
+          "items\/Daedalus\/full.webp"
         ]
       },
       {
         "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/9\/9b\/Vo_lone_druid_lone_druid_bearform_item_05.mp3\/revision\/latest?cb=20201017005134",
         "isArcane": true,
         "icons": [
-          "items\/Daedalus\/full.png"
+          "items\/Daedalus\/full.webp"
         ],
         "title": "Daedalus!"
       },
@@ -2089,14 +2089,14 @@
         "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/b\/b7\/Vo_lone_druid_lone_druid_item_06.mp3\/revision\/latest?cb=20201017005937",
         "title": "Heart of Tarrasque!",
         "icons": [
-          "items\/Heart of Tarrasque\/full.png"
+          "items\/Heart of Tarrasque\/full.webp"
         ]
       },
       {
         "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/7\/77\/Vo_lone_druid_lone_druid_bearform_item_06.mp3\/revision\/latest?cb=20201017005136",
         "isArcane": true,
         "icons": [
-          "items\/Heart of Tarrasque\/full.png"
+          "items\/Heart of Tarrasque\/full.webp"
         ],
         "title": "Heart of Tarrasque!"
       },
@@ -2104,7 +2104,7 @@
         "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/5\/5c\/Vo_lone_druid_lone_druid_item_08.mp3\/revision\/latest?cb=20201017005941",
         "title": "Hand of Midas!",
         "icons": [
-          "items\/Hand of Midas\/full.png"
+          "items\/Hand of Midas\/full.webp"
         ]
       },
       {
@@ -2112,14 +2112,14 @@
         "isArcane": true,
         "title": "Hand of Midas!",
         "icons": [
-          "items\/Hand of Midas\/full.png"
+          "items\/Hand of Midas\/full.webp"
         ]
       },
       {
         "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/3\/37\/Vo_lone_druid_lone_druid_item_07.mp3\/revision\/latest?cb=20201017005939",
         "title": "Paw of Midas!",
         "icons": [
-          "items\/Hand of Midas\/full.png"
+          "items\/Hand of Midas\/full.webp"
         ]
       },
       {
@@ -2127,21 +2127,21 @@
         "isArcane": true,
         "title": "Paw of Midas!",
         "icons": [
-          "items\/Hand of Midas\/full.png"
+          "items\/Hand of Midas\/full.webp"
         ]
       },
       {
         "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/5\/54\/Vo_lone_druid_lone_druid_item_09.mp3\/revision\/latest?cb=20201017005942",
         "title": "Hyperstone!",
         "icons": [
-          "items\/Hyperstone\/full.png"
+          "items\/Hyperstone\/full.webp"
         ]
       },
       {
         "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/f\/f0\/Vo_lone_druid_lone_druid_bearform_item_09.mp3\/revision\/latest?cb=20201017005141",
         "isArcane": true,
         "icons": [
-          "items\/Hyperstone\/full.png"
+          "items\/Hyperstone\/full.webp"
         ],
         "title": "Hyperstone!"
       },
@@ -2149,42 +2149,42 @@
         "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/a\/ac\/Vo_lone_druid_lone_druid_item_10.mp3\/revision\/latest?cb=20201017005944",
         "title": "Black King Bar!",
         "icons": [
-          "items\/Black King Bar\/full.png"
+          "items\/Black King Bar\/full.webp"
         ]
       },
       {
         "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/9\/91\/Vo_lone_druid_lone_druid_bearform_item_11.mp3\/revision\/latest?cb=20201017005145",
         "title": "Black King Bear!",
         "icons": [
-          "items\/Black King Bar\/full.png"
+          "items\/Black King Bar\/full.webp"
         ]
       },
       {
         "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/f\/f5\/Vo_lone_druid_lone_druid_bearform_item_10.mp3\/revision\/latest?cb=20201017005143",
         "title": "Black King Bar!",
         "icons": [
-          "items\/Black King Bar\/full.png"
+          "items\/Black King Bar\/full.webp"
         ]
       },
       {
         "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/9\/99\/Vo_lone_druid_lone_druid_item_11.mp3\/revision\/latest?cb=20201017005946",
         "title": "Black King Bear!",
         "icons": [
-          "items\/Black King Bar\/full.png"
+          "items\/Black King Bar\/full.webp"
         ]
       },
       {
         "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/2\/2f\/Vo_lone_druid_lone_druid_item_12.mp3\/revision\/latest?cb=20201017005947",
         "title": "Mask of Madness! He he he ha ha ha ha!",
         "icons": [
-          "items\/Mask of Madness\/full.png"
+          "items\/Mask of Madness\/full.webp"
         ]
       },
       {
         "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/c\/c5\/Vo_lone_druid_lone_druid_bearform_item_12.mp3\/revision\/latest?cb=20201017005146",
         "isArcane": true,
         "icons": [
-          "items\/Mask of Madness\/full.png"
+          "items\/Mask of Madness\/full.webp"
         ],
         "title": "Mask of Madness! He he he ha ha ha ha!"
       },

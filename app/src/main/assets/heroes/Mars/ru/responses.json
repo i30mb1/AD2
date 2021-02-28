@@ -1614,7 +1614,7 @@
         "title": "What I'll do to you is nothing to what I have in store for your masters!",
         "icons": [
           "heroes\/Bloodseeker\/minimap.png",
-          "items\/Flayed Twins\/full.png"
+          "items\/Flayed Twins\/full.webp"
         ]
       },
       {
@@ -1643,7 +1643,7 @@
         "title": "Your old arena title means nothing.",
         "icons": [
           "heroes\/Centaur Warrunner\/minimap.png",
-          "items\/Omexe\/full.png"
+          "items\/Omexe\/full.webp"
         ]
       },
       {
@@ -1771,7 +1771,7 @@
         "title": "Dragons make a fine mount, but you don't have the temperament.",
         "icons": [
           "heroes\/Dragon Knight\/minimap.png",
-          "items\/Dragons\/full.png"
+          "items\/Dragons\/full.webp"
         ]
       },
       {
@@ -1983,7 +1983,7 @@
         "title": "Your mistress is next.",
         "icons": [
           "heroes\/Luna\/minimap.png",
-          "items\/Selemene\/full.png"
+          "items\/Selemene\/full.webp"
         ]
       },
       {
@@ -2026,7 +2026,7 @@
         "title": "You chose the wrong god, princess.",
         "icons": [
           "heroes\/Mirana\/minimap.png",
-          "items\/Selemene\/full.png"
+          "items\/Selemene\/full.webp"
         ]
       },
       {
@@ -2111,7 +2111,7 @@
         "title": "I had no quarrel with your worthless god...only with you!",
         "icons": [
           "heroes\/Omniknight\/minimap.png",
-          "items\/Omniscience\/full.png"
+          "items\/Omniscience\/full.webp"
         ]
       },
       {
@@ -2570,7 +2570,7 @@
         "title": "It is with a heart of stone I lay you to rest, Gorgon...",
         "icons": [
           "heroes\/Medusa\/minimap.png",
-          "items\/Gorgons\/full.png"
+          "items\/Gorgons\/full.webp"
         ]
       },
       {
@@ -2592,7 +2592,7 @@
         "title": "Of all the demons, you should have known better, Shadow Fiend.",
         "icons": [
           "heroes\/Shadow Fiend\/minimap.png",
-          "items\/Demons\/full.png"
+          "items\/Demons\/full.webp"
         ]
       },
       {
@@ -2614,7 +2614,7 @@
         "title": "Power dependent upon allegiance is no power at all!",
         "icons": [
           "heroes\/Skywrath Mage\/minimap.png",
-          "items\/Scree'auk\/full.png"
+          "items\/Scree'auk\/full.webp"
         ]
       },
       {
@@ -2987,7 +2987,7 @@
         "title": "This is going to be fun. Oh, and when we're done here, tell the Flayed Twins I'm coming for them. Happy hunting!",
         "icons": [
           "heroes\/Bloodseeker\/minimap.png",
-          "items\/Flayed Twins\/full.png"
+          "items\/Flayed Twins\/full.webp"
         ]
       },
       {
@@ -3128,7 +3128,7 @@
         "title": "The petty politics of your people are of little interest to me, faerie.",
         "icons": [
           "heroes\/Dark Willow\/minimap.png",
-          "items\/Fae\/full.png"
+          "items\/Fae\/full.webp"
         ]
       },
       {
@@ -3472,7 +3472,7 @@
         "title": "Most Gallants are complete idiots. You're not so bad!",
         "icons": [
           "heroes\/Pangolier\/minimap.png",
-          "items\/Nivan Gallants\/full.png"
+          "items\/Nivan Gallants\/full.webp"
         ]
       },
       {
@@ -3614,7 +3614,7 @@
         "title": "A troll spellcaster? Huh! What will they think of next?",
         "icons": [
           "heroes\/Shadow Shaman\/minimap.png",
-          "items\/Trolls\/full.png"
+          "items\/Trolls\/full.webp"
         ]
       },
       {
@@ -4377,616 +4377,616 @@
         "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/1\/10\/Vo_mars_mars_scepter_01.mp3\/revision\/latest?cb=20201017102753",
         "title": "I don't know why, but I want this.",
         "icons": [
-          "items\/Aghanim's Scepter\/full.png"
+          "items\/Aghanim's Scepter\/full.webp"
         ]
       },
       {
         "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/d\/df\/Vo_mars_mars_scepter_02.mp3\/revision\/latest?cb=20201017102755",
         "title": "I'll figure something out.",
         "icons": [
-          "items\/Aghanim's Scepter\/full.png"
+          "items\/Aghanim's Scepter\/full.webp"
         ]
       },
       {
         "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/b\/b6\/Vo_mars_mars_scepter_03.mp3\/revision\/latest?cb=20201017102757",
         "title": "It kind of looks like a spear...",
         "icons": [
-          "items\/Aghanim's Scepter\/full.png"
+          "items\/Aghanim's Scepter\/full.webp"
         ]
       },
       {
         "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/5\/5e\/Vo_mars_mars_blink_01.mp3\/revision\/latest?cb=20201017094835",
         "title": "Blink Dagger!",
         "icons": [
-          "items\/Blink Dagger\/full.png"
+          "items\/Blink Dagger\/full.webp"
         ]
       },
       {
         "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/7\/7b\/Vo_mars_mars_blink_02.mp3\/revision\/latest?cb=20201017094838",
         "title": "We'll go far together, little knife!",
         "icons": [
-          "items\/Blink Dagger\/full.png"
+          "items\/Blink Dagger\/full.webp"
         ]
       },
       {
         "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/0\/00\/Vo_mars_mars_item_01.mp3\/revision\/latest?cb=20201017100312",
         "title": "Scythe of Vyse!",
         "icons": [
-          "items\/Scythe of Vyse\/full.png"
+          "items\/Scythe of Vyse\/full.webp"
         ]
       },
       {
         "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/7\/7d\/Vo_mars_mars_item_02.mp3\/revision\/latest?cb=20201017100314",
         "title": "Linkin's Sphere!",
         "icons": [
-          "items\/Linken's Sphere\/full.png"
+          "items\/Linken's Sphere\/full.webp"
         ]
       },
       {
         "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/e\/eb\/Vo_mars_mars_item_03.mp3\/revision\/latest?cb=20201017100325",
         "title": "Does it come in red?",
         "icons": [
-          "items\/Linken's Sphere\/full.png"
+          "items\/Linken's Sphere\/full.webp"
         ]
       },
       {
         "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/a\/a7\/Vo_mars_mars_item_04.mp3\/revision\/latest?cb=20201017100329",
         "title": "Dagon!",
         "icons": [
-          "items\/Dagon\/full.png"
+          "items\/Dagon\/full.webp"
         ]
       },
       {
         "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/8\/8f\/Vo_mars_mars_item_05.mp3\/revision\/latest?cb=20201017100341",
         "title": "Red Lightning? Hmm....",
         "icons": [
-          "items\/Dagon\/full.png"
+          "items\/Dagon\/full.webp"
         ]
       },
       {
         "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/1\/11\/Vo_mars_mars_item_06.mp3\/revision\/latest?cb=20201017100346",
         "title": "Divine Scepter!",
         "icons": [
-          "items\/Eul's Scepter of Divinity\/full.png"
+          "items\/Eul's Scepter of Divinity\/full.webp"
         ]
       },
       {
         "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/6\/6c\/Vo_mars_mars_item_07.mp3\/revision\/latest?cb=20201017100347",
         "title": "Orchid Malevolence!",
         "icons": [
-          "items\/Orchid Malevolence\/full.png"
+          "items\/Orchid Malevolence\/full.webp"
         ]
       },
       {
         "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/0\/0c\/Vo_mars_mars_item_08.mp3\/revision\/latest?cb=20201017100349",
         "title": "Shiva's Guard!",
         "icons": [
-          "items\/Shiva's Guard\/full.png"
+          "items\/Shiva's Guard\/full.webp"
         ]
       },
       {
         "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/d\/d9\/Vo_mars_mars_item_09.mp3\/revision\/latest?cb=20201017100351",
         "title": "Force Staff!",
         "icons": [
-          "items\/Force Staff\/full.png"
+          "items\/Force Staff\/full.webp"
         ]
       },
       {
         "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/8\/80\/Vo_mars_mars_item_10.mp3\/revision\/latest?cb=20201017100403",
         "title": "Satanic.",
         "icons": [
-          "items\/Satanic\/full.png"
+          "items\/Satanic\/full.webp"
         ]
       },
       {
         "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/3\/37\/Vo_mars_mars_item_65.mp3\/revision\/latest?cb=20201017100853",
         "title": "They'll beg me to stop!",
         "icons": [
-          "items\/Satanic\/full.png"
+          "items\/Satanic\/full.webp"
         ]
       },
       {
         "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/c\/c2\/Vo_mars_mars_item_66.mp3\/revision\/latest?cb=20201017100901",
         "title": "Invigorating slaughter!",
         "icons": [
-          "items\/Satanic\/full.png"
+          "items\/Satanic\/full.webp"
         ]
       },
       {
         "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/6\/62\/Vo_mars_mars_item_11.mp3\/revision\/latest?cb=20201017100404",
         "title": "Heart of Tarrasque.",
         "icons": [
-          "items\/Heart of Tarrasque\/full.png"
+          "items\/Heart of Tarrasque\/full.webp"
         ]
       },
       {
         "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/9\/93\/Vo_mars_mars_item_71.mp3\/revision\/latest?cb=20201017100927",
         "title": "It's almost as good as MY heart!",
         "icons": [
-          "items\/Heart of Tarrasque\/full.png"
+          "items\/Heart of Tarrasque\/full.webp"
         ]
       },
       {
         "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/e\/e3\/Vo_mars_mars_item_72.mp3\/revision\/latest?cb=20201017100932",
         "title": "Tarrasque? I thought I took care of those...",
         "icons": [
-          "items\/Heart of Tarrasque\/full.png"
+          "items\/Heart of Tarrasque\/full.webp"
         ]
       },
       {
         "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/7\/75\/Vo_mars_mars_item_12.mp3\/revision\/latest?cb=20201017100408",
         "title": "Bloodthorn!",
         "icons": [
-          "items\/Bloodthorn\/full.png"
+          "items\/Bloodthorn\/full.webp"
         ]
       },
       {
         "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/9\/96\/Vo_mars_mars_item_13.mp3\/revision\/latest?cb=20201017100416",
         "title": "Octarine Core.",
         "icons": [
-          "items\/Octarine Core\/full.png"
+          "items\/Octarine Core\/full.webp"
         ]
       },
       {
         "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/7\/74\/Vo_mars_mars_item_14.mp3\/revision\/latest?cb=20201017100419",
         "title": "Mjollnir.",
         "icons": [
-          "items\/Mjollnir\/full.png"
+          "items\/Mjollnir\/full.webp"
         ]
       },
       {
         "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/9\/9f\/Vo_mars_mars_item_15.mp3\/revision\/latest?cb=20201017100428",
         "title": "Assault Cuirass.",
         "icons": [
-          "items\/Assault Cuirass\/full.png"
+          "items\/Assault Cuirass\/full.webp"
         ]
       },
       {
         "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/b\/bd\/Vo_mars_mars_item_16.mp3\/revision\/latest?cb=20201017100430",
         "title": "Abyssal Blade.",
         "icons": [
-          "items\/Abyssal Blade\/full.png"
+          "items\/Abyssal Blade\/full.webp"
         ]
       },
       {
         "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/2\/29\/Vo_mars_mars_item_17.mp3\/revision\/latest?cb=20201017100432",
         "title": "Basher!",
         "icons": [
-          "items\/Skull Basher\/full.png"
+          "items\/Skull Basher\/full.webp"
         ]
       },
       {
         "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/a\/a4\/Vo_mars_mars_item_18.mp3\/revision\/latest?cb=20201017100440",
         "title": "Bashing!",
         "icons": [
-          "items\/Skull Basher\/full.png"
+          "items\/Skull Basher\/full.webp"
         ]
       },
       {
         "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/2\/2b\/Vo_mars_mars_item_19.mp3\/revision\/latest?cb=20201017100452",
         "title": "Radiance!",
         "icons": [
-          "items\/Radiance\/full.png"
+          "items\/Radiance\/full.webp"
         ]
       },
       {
         "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/2\/27\/Vo_mars_mars_item_20.mp3\/revision\/latest?cb=20201017100456",
         "title": "Aww, does it burn?",
         "icons": [
-          "items\/Radiance\/full.png"
+          "items\/Radiance\/full.webp"
         ]
       },
       {
         "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/a\/a7\/Vo_mars_mars_item_79.mp3\/revision\/latest?cb=20201017100955",
         "title": "Ooh, crispy.",
         "icons": [
-          "items\/Radiance\/full.png"
+          "items\/Radiance\/full.webp"
         ]
       },
       {
         "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/7\/7b\/Vo_mars_mars_item_80.mp3\/revision\/latest?cb=20201017100957",
         "title": "The tingling means it's working!",
         "icons": [
-          "items\/Radiance\/full.png"
+          "items\/Radiance\/full.webp"
         ]
       },
       {
         "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/a\/a1\/Vo_mars_mars_item_21.mp3\/revision\/latest?cb=20201017100507",
         "title": "Eye of Skadi.",
         "icons": [
-          "items\/Eye of Skadi\/full.png"
+          "items\/Eye of Skadi\/full.webp"
         ]
       },
       {
         "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/1\/17\/Vo_mars_mars_item_22.mp3\/revision\/latest?cb=20201017100512",
         "title": "Hurricane Pike?",
         "icons": [
-          "items\/Hurricane Pike\/full.png"
+          "items\/Hurricane Pike\/full.webp"
         ]
       },
       {
         "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/0\/02\/Vo_mars_mars_item_23.mp3\/revision\/latest?cb=20201017100524",
         "title": "Divine Rapier...",
         "icons": [
-          "items\/Divine Rapier\/full.png"
+          "items\/Divine Rapier\/full.webp"
         ]
       },
       {
         "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/1\/19\/Vo_mars_mars_item_43.mp3\/revision\/latest?cb=20201017100715",
         "title": "Rapier!",
         "icons": [
-          "items\/Divine Rapier\/full.png"
+          "items\/Divine Rapier\/full.webp"
         ]
       },
       {
         "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/f\/f8\/Vo_mars_mars_item_24.mp3\/revision\/latest?cb=20201017100533",
         "title": "Refresher Orb.",
         "icons": [
-          "items\/Refresher Orb\/full.png"
+          "items\/Refresher Orb\/full.webp"
         ]
       },
       {
         "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/a\/a4\/Vo_mars_mars_item_25.mp3\/revision\/latest?cb=20201017100536",
         "title": "Butterfly.",
         "icons": [
-          "items\/Butterfly\/full.png"
+          "items\/Butterfly\/full.webp"
         ]
       },
       {
         "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/e\/e8\/Vo_mars_mars_item_26.mp3\/revision\/latest?cb=20201017100539",
         "title": "Hand of Midas.",
         "icons": [
-          "items\/Hand of Midas\/full.png"
+          "items\/Hand of Midas\/full.webp"
         ]
       },
       {
         "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/0\/06\/Vo_mars_mars_item_27.mp3\/revision\/latest?cb=20201017100551",
         "title": "Manta Style.",
         "icons": [
-          "items\/Manta Style\/full.png"
+          "items\/Manta Style\/full.webp"
         ]
       },
       {
         "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/9\/9b\/Vo_mars_mars_item_28.mp3\/revision\/latest?cb=20201017100554",
         "title": "Dodge? What for?",
         "icons": [
-          "items\/Manta Style\/full.png"
+          "items\/Manta Style\/full.webp"
         ]
       },
       {
         "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/1\/1d\/Vo_mars_mars_item_29.mp3\/revision\/latest?cb=20201017100557",
         "title": "Daedalus.",
         "icons": [
-          "items\/Daedalus\/full.png"
+          "items\/Daedalus\/full.webp"
         ]
       },
       {
         "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/c\/c0\/Vo_mars_mars_item_30.mp3\/revision\/latest?cb=20201017100608",
         "title": "Desolator.",
         "icons": [
-          "items\/Desolator\/full.png"
+          "items\/Desolator\/full.webp"
         ]
       },
       {
         "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/1\/1c\/Vo_mars_mars_item_73.mp3\/revision\/latest?cb=20201017100935",
         "title": "This'll get right to the point...",
         "icons": [
-          "items\/Desolator\/full.png"
+          "items\/Desolator\/full.webp"
         ]
       },
       {
         "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/e\/e0\/Vo_mars_mars_item_74.mp3\/revision\/latest?cb=20201017100937",
         "title": "Politics aside, I like it!",
         "icons": [
-          "items\/Desolator\/full.png"
+          "items\/Desolator\/full.webp"
         ]
       },
       {
         "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/6\/63\/Vo_mars_mars_item_31.mp3\/revision\/latest?cb=20201017100611",
         "title": "Diffusal Blade.",
         "icons": [
-          "items\/Diffusal Blade\/full.png"
+          "items\/Diffusal Blade\/full.webp"
         ]
       },
       {
         "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/2\/2d\/Vo_mars_mars_item_32.mp3\/revision\/latest?cb=20201017100614",
         "title": "Echo Sabre.",
         "icons": [
-          "items\/Echo Sabre\/full.png"
+          "items\/Echo Sabre\/full.webp"
         ]
       },
       {
         "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/a\/a2\/Vo_mars_mars_item_33.mp3\/revision\/latest?cb=20201017100624",
         "title": "Shadow Blade.",
         "icons": [
-          "items\/Shadow Blade\/full.png"
+          "items\/Shadow Blade\/full.webp"
         ]
       },
       {
         "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/9\/9b\/Vo_mars_mars_item_34.mp3\/revision\/latest?cb=20201017100627",
         "title": "Heaven's Halberd.",
         "icons": [
-          "items\/Heaven's Halberd\/full.png"
+          "items\/Heaven's Halberd\/full.webp"
         ]
       },
       {
         "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/0\/07\/Vo_mars_mars_item_35.mp3\/revision\/latest?cb=20201017100630",
         "title": "Monkey King Bar.",
         "icons": [
-          "items\/Monkey King Bar\/full.png"
+          "items\/Monkey King Bar\/full.webp"
         ]
       },
       {
         "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/1\/10\/Vo_mars_mars_item_36.mp3\/revision\/latest?cb=20201017100639",
         "title": "Are you sure this is even a weapon? Looks like some sort of measuring stick...",
         "icons": [
-          "items\/Monkey King Bar\/full.png"
+          "items\/Monkey King Bar\/full.webp"
         ]
       },
       {
         "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/8\/82\/Vo_mars_mars_item_37.mp3\/revision\/latest?cb=20201017100650",
         "title": "Black King Bar.",
         "icons": [
-          "items\/Black King Bar\/full.png"
+          "items\/Black King Bar\/full.webp"
         ]
       },
       {
         "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/e\/ed\/Vo_mars_mars_item_75.mp3\/revision\/latest?cb=20201017100942",
         "title": "I thought this came standard...",
         "icons": [
-          "items\/Black King Bar\/full.png"
+          "items\/Black King Bar\/full.webp"
         ]
       },
       {
         "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/4\/42\/Vo_mars_mars_item_76.mp3\/revision\/latest?cb=20201017100945",
         "title": "It isn't glamorous...but it does the trick!",
         "icons": [
-          "items\/Black King Bar\/full.png"
+          "items\/Black King Bar\/full.webp"
         ]
       },
       {
         "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/d\/d6\/Vo_mars_mars_item_38.mp3\/revision\/latest?cb=20201017100653",
         "title": "Gem of Truesight.",
         "icons": [
-          "items\/Gem of True Sight\/full.png"
+          "items\/Gem of True Sight\/full.webp"
         ]
       },
       {
         "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/e\/e3\/Vo_mars_mars_item_39.mp3\/revision\/latest?cb=20201017100656",
         "title": "I would have seen them anyway...",
         "icons": [
-          "items\/Gem of True Sight\/full.png"
+          "items\/Gem of True Sight\/full.webp"
         ]
       },
       {
         "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/4\/47\/Vo_mars_mars_item_40.mp3\/revision\/latest?cb=20201017100659",
         "title": "Sange & Yasha.",
         "icons": [
-          "items\/Sange and Yasha\/full.png"
+          "items\/Sange and Yasha\/full.webp"
         ]
       },
       {
         "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/4\/4e\/Vo_mars_mars_item_41.mp3\/revision\/latest?cb=20201017100709",
         "title": "Everyone! Look! I bought... Wards!",
         "icons": [
-          "items\/Observer Ward\/full.png"
+          "items\/Observer Ward\/full.webp"
         ]
       },
       {
         "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/f\/f1\/Vo_mars_mars_item_42.mp3\/revision\/latest?cb=20201017100712",
         "title": "Ahah! They'll never expect these.",
         "icons": [
-          "items\/Observer Ward\/full.png"
+          "items\/Observer Ward\/full.webp"
         ]
       },
       {
         "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/9\/91\/Vo_mars_mars_item_45.mp3\/revision\/latest?cb=20201017100727",
         "title": "Drinks on me!",
         "icons": [
-          "items\/Bottle\/full.png"
+          "items\/Bottle\/full.webp"
         ]
       },
       {
         "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/d\/d6\/Vo_mars_mars_item_46.mp3\/revision\/latest?cb=20201017100734",
         "title": "Kaya",
         "icons": [
-          "items\/Kaya\/full.png"
+          "items\/Kaya\/full.webp"
         ]
       },
       {
         "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/7\/78\/Vo_mars_mars_item_47.mp3\/revision\/latest?cb=20201017100738",
         "title": "Sange & Kaya",
         "icons": [
-          "items\/Kaya and Sange\/full.png"
+          "items\/Kaya and Sange\/full.webp"
         ]
       },
       {
         "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/9\/9c\/Vo_mars_mars_item_48.mp3\/revision\/latest?cb=20201017100741",
         "title": "Kaya & Yasha",
         "icons": [
-          "items\/Yasha and Kaya\/full.png"
+          "items\/Yasha and Kaya\/full.webp"
         ]
       },
       {
         "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/6\/67\/Vo_mars_mars_item_49.mp3\/revision\/latest?cb=20201017100744",
         "title": "Rod of Atos",
         "icons": [
-          "items\/Rod of Atos\/full.png"
+          "items\/Rod of Atos\/full.webp"
         ]
       },
       {
         "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/2\/2f\/Vo_mars_mars_item_50.mp3\/revision\/latest?cb=20201017100746",
         "title": "Nullifier.",
         "icons": [
-          "items\/Nullifier\/full.png"
+          "items\/Nullifier\/full.webp"
         ]
       },
       {
         "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/3\/33\/Vo_mars_mars_item_51.mp3\/revision\/latest?cb=20201017100749",
         "title": "Aeon Disk.",
         "icons": [
-          "items\/Aeon Disk\/full.png"
+          "items\/Aeon Disk\/full.webp"
         ]
       },
       {
         "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/4\/46\/Vo_mars_mars_item_52.mp3\/revision\/latest?cb=20201017100759",
         "title": "Spirit Vessel.",
         "icons": [
-          "items\/Spirit Vessel\/full.png"
+          "items\/Spirit Vessel\/full.webp"
         ]
       },
       {
         "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/3\/37\/Vo_mars_mars_item_53.mp3\/revision\/latest?cb=20201017100804",
         "title": "Silver Edge.",
         "icons": [
-          "items\/Silver Edge\/full.png"
+          "items\/Silver Edge\/full.webp"
         ]
       },
       {
         "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/9\/9c\/Vo_mars_mars_item_54.mp3\/revision\/latest?cb=20201017100810",
         "title": "Meteor Hammer.",
         "icons": [
-          "items\/Meteor Hammer\/full.png"
+          "items\/Meteor Hammer\/full.webp"
         ]
       },
       {
         "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/b\/b8\/Vo_mars_mars_item_55.mp3\/revision\/latest?cb=20201017100814",
         "title": "Ghost Scepter.",
         "icons": [
-          "items\/Ghost Scepter\/full.png"
+          "items\/Ghost Scepter\/full.webp"
         ]
       },
       {
         "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/8\/85\/Vo_mars_mars_item_56.mp3\/revision\/latest?cb=20201017100817",
         "title": "Ethereal Blade.",
         "icons": [
-          "items\/Ethereal Blade\/full.png"
+          "items\/Ethereal Blade\/full.webp"
         ]
       },
       {
         "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/8\/8f\/Vo_mars_mars_item_57.mp3\/revision\/latest?cb=20201017100819",
         "title": "Solar Crest.",
         "icons": [
-          "items\/Solar Crest\/full.png"
+          "items\/Solar Crest\/full.webp"
         ]
       },
       {
         "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/e\/e7\/Vo_mars_mars_item_58.mp3\/revision\/latest?cb=20201017100822",
         "title": "Lotus Orb.",
         "icons": [
-          "items\/Lotus Orb\/full.png"
+          "items\/Lotus Orb\/full.webp"
         ]
       },
       {
         "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/f\/f1\/Vo_mars_mars_item_59.mp3\/revision\/latest?cb=20201017100825",
         "title": "Necronomicon.",
         "icons": [
-          "items\/Necronomicon\/full.png"
+          "items\/Necronomicon\/full.webp"
         ]
       },
       {
         "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/3\/39\/Vo_mars_mars_item_60.mp3\/revision\/latest?cb=20201017100831",
         "title": "Glimmer Cape.",
         "icons": [
-          "items\/Glimmer Cape\/full.png"
+          "items\/Glimmer Cape\/full.webp"
         ]
       },
       {
         "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/5\/59\/Vo_mars_mars_item_61.mp3\/revision\/latest?cb=20201017100837",
         "title": "Bloodstone.",
         "icons": [
-          "items\/Bloodstone\/full.png"
+          "items\/Bloodstone\/full.webp"
         ]
       },
       {
         "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/0\/09\/Vo_mars_mars_item_62.mp3\/revision\/latest?cb=20201017100840",
         "title": "Aether Lens",
         "icons": [
-          "items\/Aether Lens\/full.png"
+          "items\/Aether Lens\/full.webp"
         ]
       },
       {
         "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/b\/b0\/Vo_mars_mars_item_63.mp3\/revision\/latest?cb=20201017100847",
         "title": "Crystalys",
         "icons": [
-          "items\/Crystalys\/full.png"
+          "items\/Crystalys\/full.webp"
         ]
       },
       {
         "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/1\/14\/Vo_mars_mars_item_64.mp3\/revision\/latest?cb=20201017100850",
         "title": "Hmm, smoke. Prudent.",
         "icons": [
-          "items\/Smoke of Deceit\/full.png"
+          "items\/Smoke of Deceit\/full.webp"
         ]
       },
       {
         "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/c\/cf\/Vo_mars_mars_item_67.mp3\/revision\/latest?cb=20201017100904",
         "title": "This'll bring the team together.",
         "icons": [
-          "items\/Vladmir's Offering\/full.png"
+          "items\/Vladmir's Offering\/full.webp"
         ]
       },
       {
         "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/4\/41\/Vo_mars_mars_item_68.mp3\/revision\/latest?cb=20201017100908",
         "title": "I've always liked a good scary mask.",
         "icons": [
-          "items\/Vladmir's Offering\/full.png"
+          "items\/Vladmir's Offering\/full.webp"
         ]
       },
       {
         "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/1\/1f\/Vo_mars_mars_item_69.mp3\/revision\/latest?cb=20201017100915",
         "title": "More shields the better!",
         "icons": [
-          "items\/Vanguard\/full.png"
+          "items\/Vanguard\/full.webp"
         ]
       },
       {
         "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/6\/63\/Vo_mars_mars_item_70.mp3\/revision\/latest?cb=20201017100919",
         "title": "They don't call it rear guard. Let's go!",
         "icons": [
-          "items\/Vanguard\/full.png"
+          "items\/Vanguard\/full.webp"
         ]
       },
       {
         "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/c\/c8\/Vo_mars_mars_item_77.mp3\/revision\/latest?cb=20201017100950",
         "title": "I can hear the pulped brains already!",
         "icons": [
-          "items\/Skull Basher\/full.png"
+          "items\/Skull Basher\/full.webp"
         ]
       },
       {
         "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/7\/75\/Vo_mars_mars_item_78.mp3\/revision\/latest?cb=20201017100952",
         "title": "Anyone have any fruit? For testing!",
         "icons": [
-          "items\/Skull Basher\/full.png"
+          "items\/Skull Basher\/full.webp"
         ]
       },
       {
         "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/0\/05\/Vo_mars_mars_item_81.mp3\/revision\/latest?cb=20201017100959",
         "title": "No arcanery holds sway over the gods!",
         "icons": [
-          "items\/Hood of Defiance\/full.png"
+          "items\/Hood of Defiance\/full.webp"
         ]
       },
       {
         "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/4\/4c\/Vo_mars_mars_item_82.mp3\/revision\/latest?cb=20201017101000",
         "title": "Do your worst, wizards! My spear will find you!",
         "icons": [
-          "items\/Hood of Defiance\/full.png"
+          "items\/Hood of Defiance\/full.webp"
         ]
       },
       {
         "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/b\/bf\/Vo_mars_mars_item_83.mp3\/revision\/latest?cb=20201017101002",
         "title": "This thing proves magic's all in your head.",
         "icons": [
-          "items\/Pipe of Insight\/full.png"
+          "items\/Pipe of Insight\/full.webp"
         ]
       },
       {
         "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/9\/9c\/Vo_mars_mars_item_84.mp3\/revision\/latest?cb=20201017101003",
         "title": "Is that incense I smell?",
         "icons": [
-          "items\/Pipe of Insight\/full.png"
+          "items\/Pipe of Insight\/full.webp"
         ]
       },
       {
@@ -5021,7 +5021,7 @@
         "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/b\/bb\/Vo_mars_mars_item_44.mp3\/revision\/latest?cb=20201017100717",
         "title": "Prepare for pain!",
         "icons": [
-          "items\/Divine Rapier\/full.png"
+          "items\/Divine Rapier\/full.webp"
         ]
       }
     ],

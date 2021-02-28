@@ -7336,7 +7336,7 @@
         "title": "Где же твоё родное деревце, Puck? я бы по нему полазал.",
         "icons": [
           "heroes\/Puck\/minimap.png",
-          "items\/Undertree\/full.png"
+          "items\/Undertree\/full.webp"
         ]
       },
       {
@@ -7344,7 +7344,7 @@
         "isArcane": true,
         "icons": [
           "heroes\/Puck\/minimap.png",
-          "items\/Undertree\/full.png"
+          "items\/Undertree\/full.webp"
         ],
         "title": "Где же твоё родное деревце, Puck? я бы по нему полазал."
       },
@@ -9146,14 +9146,14 @@
         "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_ru_gamepedia\/images\/3\/30\/Monkey_scepter_01_ru.mp3\/revision\/latest?cb=20170409151022",
         "title": "Посох чужой, но\u2026тоже сгодится.",
         "icons": [
-          "items\/Aghanim's Scepter\/full.png"
+          "items\/Aghanim's Scepter\/full.webp"
         ]
       },
       {
         "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_ru_gamepedia\/images\/d\/d0\/Monkey_crown_scepter_01_ru.mp3\/revision\/latest?cb=20170409135705",
         "isArcane": true,
         "icons": [
-          "items\/Aghanim's Scepter\/full.png"
+          "items\/Aghanim's Scepter\/full.webp"
         ],
         "title": "Посох чужой, но\u2026тоже сгодится."
       },
@@ -9161,14 +9161,14 @@
         "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_ru_gamepedia\/images\/4\/44\/Monkey_scepter_02_ru.mp3\/revision\/latest?cb=20170409151027",
         "title": "Привет, радость моя.",
         "icons": [
-          "items\/Aghanim's Scepter\/full.png"
+          "items\/Aghanim's Scepter\/full.webp"
         ]
       },
       {
         "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_ru_gamepedia\/images\/a\/af\/Monkey_crown_scepter_02_ru.mp3\/revision\/latest?cb=20170409135710",
         "isArcane": true,
         "icons": [
-          "items\/Aghanim's Scepter\/full.png"
+          "items\/Aghanim's Scepter\/full.webp"
         ],
         "title": "Привет, радость моя."
       },
@@ -9176,14 +9176,14 @@
         "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_ru_gamepedia\/images\/f\/f5\/Monkey_scepter_03_ru.mp3\/revision\/latest?cb=20170409151032",
         "title": "У-у, скипетр!",
         "icons": [
-          "items\/Aghanim's Scepter\/full.png"
+          "items\/Aghanim's Scepter\/full.webp"
         ]
       },
       {
         "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_ru_gamepedia\/images\/3\/36\/Monkey_crown_scepter_03_ru.mp3\/revision\/latest?cb=20170409135715",
         "isArcane": true,
         "icons": [
-          "items\/Aghanim's Scepter\/full.png"
+          "items\/Aghanim's Scepter\/full.webp"
         ],
         "title": "У-у, скипетр!"
       },
@@ -9191,14 +9191,14 @@
         "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_ru_gamepedia\/images\/6\/6b\/Monkey_blink_01_ru.mp3\/revision\/latest?cb=20170409142051",
         "title": "Blink Dagger!",
         "icons": [
-          "items\/Blink Dagger\/full.png"
+          "items\/Blink Dagger\/full.webp"
         ]
       },
       {
         "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_ru_gamepedia\/images\/b\/b4\/Monkey_crown_blink_01_ru.mp3\/revision\/latest?cb=20170409130530",
         "isArcane": true,
         "icons": [
-          "items\/Blink Dagger\/full.png"
+          "items\/Blink Dagger\/full.webp"
         ],
         "title": "Blink Dagger!"
       },
@@ -9206,14 +9206,14 @@
         "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_ru_gamepedia\/images\/5\/53\/Monkey_blink_02_ru.mp3\/revision\/latest?cb=20170409142056",
         "title": "Ох, как меня будут проклинать!",
         "icons": [
-          "items\/Blink Dagger\/full.png"
+          "items\/Blink Dagger\/full.webp"
         ]
       },
       {
         "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_ru_gamepedia\/images\/4\/45\/Monkey_crown_blink_02_ru.mp3\/revision\/latest?cb=20170409130535",
         "isArcane": true,
         "icons": [
-          "items\/Blink Dagger\/full.png"
+          "items\/Blink Dagger\/full.webp"
         ],
         "title": "Ох, как меня будут проклинать!"
       },
@@ -9221,14 +9221,14 @@
         "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_ru_gamepedia\/images\/1\/15\/Monkey_item_01_ru.mp3\/revision\/latest?cb=20170409142808",
         "title": "Scythe of Vyse!",
         "icons": [
-          "items\/Scythe of Vyse\/full.png"
+          "items\/Scythe of Vyse\/full.webp"
         ]
       },
       {
         "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_ru_gamepedia\/images\/c\/c7\/Monkey_crown_item_01_ru.mp3\/revision\/latest?cb=20170409131253",
         "isArcane": true,
         "icons": [
-          "items\/Scythe of Vyse\/full.png"
+          "items\/Scythe of Vyse\/full.webp"
         ],
         "title": "Scythe of Vyse!"
       },
@@ -9236,14 +9236,14 @@
         "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_ru_gamepedia\/images\/b\/b8\/Monkey_item_02_ru.mp3\/revision\/latest?cb=20170409142813",
         "title": "Linken's Sphere!",
         "icons": [
-          "items\/Linken's Sphere\/full.png"
+          "items\/Linken's Sphere\/full.webp"
         ]
       },
       {
         "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_ru_gamepedia\/images\/9\/9c\/Monkey_crown_item_02_ru.mp3\/revision\/latest?cb=20170409131258",
         "isArcane": true,
         "icons": [
-          "items\/Linken's Sphere\/full.png"
+          "items\/Linken's Sphere\/full.webp"
         ],
         "title": "Linken's Sphere!"
       },
@@ -9251,14 +9251,14 @@
         "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_ru_gamepedia\/images\/d\/dc\/Monkey_item_03_ru.mp3\/revision\/latest?cb=20170409142818",
         "title": "Dagon!",
         "icons": [
-          "items\/Dagon\/full.png"
+          "items\/Dagon\/full.webp"
         ]
       },
       {
         "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_ru_gamepedia\/images\/7\/72\/Monkey_crown_item_03_ru.mp3\/revision\/latest?cb=20170409131303",
         "isArcane": true,
         "icons": [
-          "items\/Dagon\/full.png"
+          "items\/Dagon\/full.webp"
         ],
         "title": "Dagon!"
       },
@@ -9266,14 +9266,14 @@
         "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_ru_gamepedia\/images\/6\/65\/Monkey_item_04_ru.mp3\/revision\/latest?cb=20170409142823",
         "title": "Будет легче отправлять врагов на небеса!",
         "icons": [
-          "items\/Eul's Scepter of Divinity\/full.png"
+          "items\/Eul's Scepter of Divinity\/full.webp"
         ]
       },
       {
         "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_ru_gamepedia\/images\/5\/56\/Monkey_crown_item_04_ru.mp3\/revision\/latest?cb=20170409131308",
         "isArcane": true,
         "icons": [
-          "items\/Eul's Scepter of Divinity\/full.png"
+          "items\/Eul's Scepter of Divinity\/full.webp"
         ],
         "title": "Будет легче отправлять врагов на небеса!"
       },
@@ -9281,14 +9281,14 @@
         "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_ru_gamepedia\/images\/6\/64\/Monkey_item_05_ru.mp3\/revision\/latest?cb=20170409142829",
         "title": "Orchid Malevolence!",
         "icons": [
-          "items\/Orchid Malevolence\/full.png"
+          "items\/Orchid Malevolence\/full.webp"
         ]
       },
       {
         "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_ru_gamepedia\/images\/9\/99\/Monkey_crown_item_05_ru.mp3\/revision\/latest?cb=20170409131313",
         "isArcane": true,
         "icons": [
-          "items\/Orchid Malevolence\/full.png"
+          "items\/Orchid Malevolence\/full.webp"
         ],
         "title": "Orchid Malevolence!"
       },
@@ -9296,14 +9296,14 @@
         "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_ru_gamepedia\/images\/2\/2d\/Monkey_item_06_ru.mp3\/revision\/latest?cb=20170409142834",
         "title": "Shiva's Guard!",
         "icons": [
-          "items\/Shiva's Guard\/full.png"
+          "items\/Shiva's Guard\/full.webp"
         ]
       },
       {
         "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_ru_gamepedia\/images\/6\/6c\/Monkey_crown_item_06_ru.mp3\/revision\/latest?cb=20170409131318",
         "isArcane": true,
         "icons": [
-          "items\/Shiva's Guard\/full.png"
+          "items\/Shiva's Guard\/full.webp"
         ],
         "title": "Shiva's Guard!"
       },
@@ -9311,14 +9311,14 @@
         "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_ru_gamepedia\/images\/e\/e6\/Monkey_item_07_ru.mp3\/revision\/latest?cb=20170409142839",
         "title": "Force Staff!",
         "icons": [
-          "items\/Force Staff\/full.png"
+          "items\/Force Staff\/full.webp"
         ]
       },
       {
         "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_ru_gamepedia\/images\/d\/d1\/Monkey_crown_item_07_ru.mp3\/revision\/latest?cb=20170409131323",
         "isArcane": true,
         "icons": [
-          "items\/Force Staff\/full.png"
+          "items\/Force Staff\/full.webp"
         ],
         "title": "Force Staff!"
       },
@@ -9326,14 +9326,14 @@
         "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_ru_gamepedia\/images\/5\/55\/Monkey_item_08_ru.mp3\/revision\/latest?cb=20170409142844",
         "title": "Satanic.",
         "icons": [
-          "items\/Satanic\/full.png"
+          "items\/Satanic\/full.webp"
         ]
       },
       {
         "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_ru_gamepedia\/images\/9\/9f\/Monkey_crown_item_08_ru.mp3\/revision\/latest?cb=20170409131328",
         "isArcane": true,
         "icons": [
-          "items\/Satanic\/full.png"
+          "items\/Satanic\/full.webp"
         ],
         "title": "Satanic."
       },
@@ -9341,14 +9341,14 @@
         "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_ru_gamepedia\/images\/a\/a9\/Monkey_item_09_ru.mp3\/revision\/latest?cb=20170409142849",
         "title": "Heart of Tarrasque.",
         "icons": [
-          "items\/Heart of Tarrasque\/full.png"
+          "items\/Heart of Tarrasque\/full.webp"
         ]
       },
       {
         "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_ru_gamepedia\/images\/6\/6a\/Monkey_crown_item_09_ru.mp3\/revision\/latest?cb=20170409131333",
         "isArcane": true,
         "icons": [
-          "items\/Heart of Tarrasque\/full.png"
+          "items\/Heart of Tarrasque\/full.webp"
         ],
         "title": "Heart of Tarrasque."
       },
@@ -9356,14 +9356,14 @@
         "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_ru_gamepedia\/images\/c\/c6\/Monkey_item_10_ru.mp3\/revision\/latest?cb=20170409142854",
         "title": "Bloodthorn. Будет больно!",
         "icons": [
-          "items\/Bloodthorn\/full.png"
+          "items\/Bloodthorn\/full.webp"
         ]
       },
       {
         "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_ru_gamepedia\/images\/3\/35\/Monkey_crown_item_10_ru.mp3\/revision\/latest?cb=20170409131338",
         "isArcane": true,
         "icons": [
-          "items\/Bloodthorn\/full.png"
+          "items\/Bloodthorn\/full.webp"
         ],
         "title": "Bloodthorn. Будет больно!"
       },
@@ -9371,14 +9371,14 @@
         "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_ru_gamepedia\/images\/d\/df\/Monkey_item_11_ru.mp3\/revision\/latest?cb=20170409142859",
         "title": "Octarine Core.",
         "icons": [
-          "items\/Octarine Core\/full.png"
+          "items\/Octarine Core\/full.webp"
         ]
       },
       {
         "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_ru_gamepedia\/images\/2\/22\/Monkey_crown_item_11_ru.mp3\/revision\/latest?cb=20170409131343",
         "isArcane": true,
         "icons": [
-          "items\/Octarine Core\/full.png"
+          "items\/Octarine Core\/full.webp"
         ],
         "title": "Octarine Core."
       },
@@ -9386,14 +9386,14 @@
         "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_ru_gamepedia\/images\/b\/b7\/Monkey_item_12_ru.mp3\/revision\/latest?cb=20170409142904",
         "title": "Mjollnir.",
         "icons": [
-          "items\/Mjollnir\/full.png"
+          "items\/Mjollnir\/full.webp"
         ]
       },
       {
         "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_ru_gamepedia\/images\/9\/94\/Monkey_crown_item_12_ru.mp3\/revision\/latest?cb=20170409131348",
         "isArcane": true,
         "icons": [
-          "items\/Mjollnir\/full.png"
+          "items\/Mjollnir\/full.webp"
         ],
         "title": "Mjollnir."
       },
@@ -9401,14 +9401,14 @@
         "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_ru_gamepedia\/images\/6\/69\/Monkey_item_13_ru.mp3\/revision\/latest?cb=20170409142909",
         "title": "Assault Cuirass.",
         "icons": [
-          "items\/Assault Cuirass\/full.png"
+          "items\/Assault Cuirass\/full.webp"
         ]
       },
       {
         "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_ru_gamepedia\/images\/3\/3e\/Monkey_crown_item_13_ru.mp3\/revision\/latest?cb=20170409131353",
         "isArcane": true,
         "icons": [
-          "items\/Assault Cuirass\/full.png"
+          "items\/Assault Cuirass\/full.webp"
         ],
         "title": "Assault Cuirass."
       },
@@ -9416,14 +9416,14 @@
         "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_ru_gamepedia\/images\/9\/9b\/Monkey_item_14_ru.mp3\/revision\/latest?cb=20170409142914",
         "title": "У-у-у\u2026Abyssal Blade.",
         "icons": [
-          "items\/Abyssal Blade\/full.png"
+          "items\/Abyssal Blade\/full.webp"
         ]
       },
       {
         "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_ru_gamepedia\/images\/b\/bb\/Monkey_crown_item_14_ru.mp3\/revision\/latest?cb=20170409131358",
         "isArcane": true,
         "icons": [
-          "items\/Abyssal Blade\/full.png"
+          "items\/Abyssal Blade\/full.webp"
         ],
         "title": "У-у-у\u2026Abyssal Blade."
       },
@@ -9431,14 +9431,14 @@
         "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_ru_gamepedia\/images\/9\/9c\/Monkey_item_15_ru.mp3\/revision\/latest?cb=20170409142919",
         "title": "Skull\u2026ха-ха-ха\u2026Basher.",
         "icons": [
-          "items\/Skull Basher\/full.png"
+          "items\/Skull Basher\/full.webp"
         ]
       },
       {
         "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_ru_gamepedia\/images\/b\/b3\/Monkey_crown_item_15_ru.mp3\/revision\/latest?cb=20170409131403",
         "isArcane": true,
         "icons": [
-          "items\/Skull Basher\/full.png"
+          "items\/Skull Basher\/full.webp"
         ],
         "title": "Skull\u2026ха-ха-ха\u2026Basher."
       },
@@ -9446,14 +9446,14 @@
         "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_ru_gamepedia\/images\/f\/fd\/Monkey_item_16_ru.mp3\/revision\/latest?cb=20170409142924",
         "title": "Radiance!",
         "icons": [
-          "items\/Radiance\/full.png"
+          "items\/Radiance\/full.webp"
         ]
       },
       {
         "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_ru_gamepedia\/images\/0\/0c\/Monkey_crown_item_16_ru.mp3\/revision\/latest?cb=20170409131408",
         "isArcane": true,
         "icons": [
-          "items\/Radiance\/full.png"
+          "items\/Radiance\/full.webp"
         ],
         "title": "Radiance!"
       },
@@ -9461,14 +9461,14 @@
         "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_ru_gamepedia\/images\/9\/96\/Monkey_item_17_ru.mp3\/revision\/latest?cb=20170409142929",
         "title": "Eye of Skadi.",
         "icons": [
-          "items\/Eye of Skadi\/full.png"
+          "items\/Eye of Skadi\/full.webp"
         ]
       },
       {
         "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_ru_gamepedia\/images\/8\/86\/Monkey_crown_item_17_ru.mp3\/revision\/latest?cb=20170409131413",
         "isArcane": true,
         "icons": [
-          "items\/Eye of Skadi\/full.png"
+          "items\/Eye of Skadi\/full.webp"
         ],
         "title": "Eye of Skadi."
       },
@@ -9476,14 +9476,14 @@
         "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_ru_gamepedia\/images\/6\/67\/Monkey_item_18_ru.mp3\/revision\/latest?cb=20170409142934",
         "title": "Hurricane Pike? Прокачусь с ветерком!",
         "icons": [
-          "items\/Hurricane Pike\/full.png"
+          "items\/Hurricane Pike\/full.webp"
         ]
       },
       {
         "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_ru_gamepedia\/images\/1\/1b\/Monkey_crown_item_18_ru.mp3\/revision\/latest?cb=20170409131418",
         "isArcane": true,
         "icons": [
-          "items\/Hurricane Pike\/full.png"
+          "items\/Hurricane Pike\/full.webp"
         ],
         "title": "Hurricane Pike? Прокачусь с ветерком!"
       },
@@ -9491,14 +9491,14 @@
         "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_ru_gamepedia\/images\/4\/45\/Monkey_item_21_ru.mp3\/revision\/latest?cb=20170409142944",
         "title": "Refresher Orb.",
         "icons": [
-          "items\/Refresher Orb\/full.png"
+          "items\/Refresher Orb\/full.webp"
         ]
       },
       {
         "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_ru_gamepedia\/images\/2\/26\/Monkey_crown_item_21_ru.mp3\/revision\/latest?cb=20170409131428",
         "isArcane": true,
         "icons": [
-          "items\/Refresher Orb\/full.png"
+          "items\/Refresher Orb\/full.webp"
         ],
         "title": "Refresher Orb."
       },
@@ -9506,14 +9506,14 @@
         "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_ru_gamepedia\/images\/e\/ec\/Monkey_item_23_ru.mp3\/revision\/latest?cb=20170409142949",
         "title": "Butterfly.",
         "icons": [
-          "items\/Butterfly\/full.png"
+          "items\/Butterfly\/full.webp"
         ]
       },
       {
         "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_ru_gamepedia\/images\/4\/42\/Monkey_crown_item_23_ru.mp3\/revision\/latest?cb=20170409131433",
         "isArcane": true,
         "icons": [
-          "items\/Butterfly\/full.png"
+          "items\/Butterfly\/full.webp"
         ],
         "title": "Butterfly."
       },
@@ -9521,14 +9521,14 @@
         "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_ru_gamepedia\/images\/4\/4a\/Monkey_item_24_ru.mp3\/revision\/latest?cb=20170409142954",
         "title": "Такая вещица меня озолотит.",
         "icons": [
-          "items\/Hand of Midas\/full.png"
+          "items\/Hand of Midas\/full.webp"
         ]
       },
       {
         "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_ru_gamepedia\/images\/4\/4c\/Monkey_crown_item_24_ru.mp3\/revision\/latest?cb=20170409131438",
         "isArcane": true,
         "icons": [
-          "items\/Hand of Midas\/full.png"
+          "items\/Hand of Midas\/full.webp"
         ],
         "title": "Такая вещица меня озолотит."
       },
@@ -9536,14 +9536,14 @@
         "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_ru_gamepedia\/images\/3\/38\/Monkey_item_25_ru.mp3\/revision\/latest?cb=20170409142959",
         "title": "Manta Style.",
         "icons": [
-          "items\/Manta Style\/full.png"
+          "items\/Manta Style\/full.webp"
         ]
       },
       {
         "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_ru_gamepedia\/images\/c\/cd\/Monkey_crown_item_25_ru.mp3\/revision\/latest?cb=20170409131442",
         "isArcane": true,
         "icons": [
-          "items\/Manta Style\/full.png"
+          "items\/Manta Style\/full.webp"
         ],
         "title": "Manta Style."
       },
@@ -9551,14 +9551,14 @@
         "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_ru_gamepedia\/images\/8\/8b\/Monkey_item_26_ru.mp3\/revision\/latest?cb=20170409143004",
         "title": "Daedalus.",
         "icons": [
-          "items\/Daedalus\/full.png"
+          "items\/Daedalus\/full.webp"
         ]
       },
       {
         "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_ru_gamepedia\/images\/4\/4a\/Monkey_crown_item_26_ru.mp3\/revision\/latest?cb=20170409131447",
         "isArcane": true,
         "icons": [
-          "items\/Daedalus\/full.png"
+          "items\/Daedalus\/full.webp"
         ],
         "title": "Daedalus."
       },
@@ -9566,14 +9566,14 @@
         "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_ru_gamepedia\/images\/4\/43\/Monkey_item_27_ru.mp3\/revision\/latest?cb=20170409143009",
         "title": "Desolator.",
         "icons": [
-          "items\/Desolator\/full.png"
+          "items\/Desolator\/full.webp"
         ]
       },
       {
         "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_ru_gamepedia\/images\/3\/3c\/Monkey_crown_item_27_ru.mp3\/revision\/latest?cb=20170409131452",
         "isArcane": true,
         "icons": [
-          "items\/Desolator\/full.png"
+          "items\/Desolator\/full.webp"
         ],
         "title": "Desolator."
       },
@@ -9581,14 +9581,14 @@
         "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_ru_gamepedia\/images\/c\/c7\/Monkey_item_28_ru.mp3\/revision\/latest?cb=20170409143014",
         "title": "Diffusal Blade.",
         "icons": [
-          "items\/Diffusal Blade\/full.png"
+          "items\/Diffusal Blade\/full.webp"
         ]
       },
       {
         "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_ru_gamepedia\/images\/4\/42\/Monkey_crown_item_28_ru.mp3\/revision\/latest?cb=20170409131457",
         "isArcane": true,
         "icons": [
-          "items\/Diffusal Blade\/full.png"
+          "items\/Diffusal Blade\/full.webp"
         ],
         "title": "Diffusal Blade."
       },
@@ -9596,14 +9596,14 @@
         "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_ru_gamepedia\/images\/7\/71\/Monkey_item_29_ru.mp3\/revision\/latest?cb=20170409143019",
         "title": "Два удара по цене одного.",
         "icons": [
-          "items\/Echo Sabre\/full.png"
+          "items\/Echo Sabre\/full.webp"
         ]
       },
       {
         "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_ru_gamepedia\/images\/8\/8b\/Monkey_crown_item_29_ru.mp3\/revision\/latest?cb=20170409131501",
         "isArcane": true,
         "icons": [
-          "items\/Echo Sabre\/full.png"
+          "items\/Echo Sabre\/full.webp"
         ],
         "title": "Два удара по цене одного."
       },
@@ -9611,14 +9611,14 @@
         "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_ru_gamepedia\/images\/5\/5a\/Monkey_item_30_ru.mp3\/revision\/latest?cb=20170409143024",
         "title": "М-м-м\u2026Shadow Blade.",
         "icons": [
-          "items\/Shadow Blade\/full.png"
+          "items\/Shadow Blade\/full.webp"
         ]
       },
       {
         "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_ru_gamepedia\/images\/4\/4c\/Monkey_crown_item_30_ru.mp3\/revision\/latest?cb=20170409131506",
         "isArcane": true,
         "icons": [
-          "items\/Shadow Blade\/full.png"
+          "items\/Shadow Blade\/full.webp"
         ],
         "title": "М-м-м\u2026Shadow Blade."
       },
@@ -9626,14 +9626,14 @@
         "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_ru_gamepedia\/images\/2\/2d\/Monkey_item_31_ru.mp3\/revision\/latest?cb=20170409143029",
         "title": "Heaven's Halberd.",
         "icons": [
-          "items\/Heaven's Halberd\/full.png"
+          "items\/Heaven's Halberd\/full.webp"
         ]
       },
       {
         "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_ru_gamepedia\/images\/5\/52\/Monkey_crown_item_31_ru.mp3\/revision\/latest?cb=20170409131511",
         "isArcane": true,
         "icons": [
-          "items\/Heaven's Halberd\/full.png"
+          "items\/Heaven's Halberd\/full.webp"
         ],
         "title": "Heaven's Halberd."
       },
@@ -9641,14 +9641,14 @@
         "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_ru_gamepedia\/images\/e\/e5\/Monkey_item_32_ru.mp3\/revision\/latest?cb=20170409143034",
         "title": "Ху-ху - мой жезл!",
         "icons": [
-          "items\/Monkey King Bar\/full.png"
+          "items\/Monkey King Bar\/full.webp"
         ]
       },
       {
         "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_ru_gamepedia\/images\/c\/c8\/Monkey_crown_item_32_ru.mp3\/revision\/latest?cb=20170409131516",
         "isArcane": true,
         "icons": [
-          "items\/Monkey King Bar\/full.png"
+          "items\/Monkey King Bar\/full.webp"
         ],
         "title": "Ху-ху - мой жезл!"
       },
@@ -9656,14 +9656,14 @@
         "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_ru_gamepedia\/images\/c\/cf\/Monkey_item_33_ru.mp3\/revision\/latest?cb=20170409143039",
         "title": "Оу - мой посох!",
         "icons": [
-          "items\/Monkey King Bar\/full.png"
+          "items\/Monkey King Bar\/full.webp"
         ]
       },
       {
         "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_ru_gamepedia\/images\/f\/f3\/Monkey_crown_item_33_ru.mp3\/revision\/latest?cb=20170409131520",
         "isArcane": true,
         "icons": [
-          "items\/Monkey King Bar\/full.png"
+          "items\/Monkey King Bar\/full.webp"
         ],
         "title": "Оу - мой посох!"
       },
@@ -9671,14 +9671,14 @@
         "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_ru_gamepedia\/images\/7\/76\/Monkey_item_34_ru.mp3\/revision\/latest?cb=20170409143044",
         "title": "Ар-р-р\u2026и мне надо за него платить?!",
         "icons": [
-          "items\/Monkey King Bar\/full.png"
+          "items\/Monkey King Bar\/full.webp"
         ]
       },
       {
         "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_ru_gamepedia\/images\/2\/29\/Monkey_crown_item_34_ru.mp3\/revision\/latest?cb=20170409131525",
         "isArcane": true,
         "icons": [
-          "items\/Monkey King Bar\/full.png"
+          "items\/Monkey King Bar\/full.webp"
         ],
         "title": "Ар-р-р\u2026и мне надо за него платить?!"
       },
@@ -9686,14 +9686,14 @@
         "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_ru_gamepedia\/images\/f\/fe\/Monkey_item_35_ru.mp3\/revision\/latest?cb=20170409143049",
         "title": "Мы снова вместе.",
         "icons": [
-          "items\/Monkey King Bar\/full.png"
+          "items\/Monkey King Bar\/full.webp"
         ]
       },
       {
         "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_ru_gamepedia\/images\/0\/0a\/Monkey_crown_item_35_ru.mp3\/revision\/latest?cb=20170409131530",
         "isArcane": true,
         "icons": [
-          "items\/Monkey King Bar\/full.png"
+          "items\/Monkey King Bar\/full.webp"
         ],
         "title": "Мы снова вместе."
       },
@@ -9701,14 +9701,14 @@
         "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_ru_gamepedia\/images\/1\/10\/Monkey_item_36_ru.mp3\/revision\/latest?cb=20170409143054",
         "title": "Black King Bar.",
         "icons": [
-          "items\/Black King Bar\/full.png"
+          "items\/Black King Bar\/full.webp"
         ]
       },
       {
         "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_ru_gamepedia\/images\/f\/f6\/Monkey_crown_item_36_ru.mp3\/revision\/latest?cb=20170409131534",
         "isArcane": true,
         "icons": [
-          "items\/Black King Bar\/full.png"
+          "items\/Black King Bar\/full.webp"
         ],
         "title": "Black King Bar."
       },
@@ -9716,14 +9716,14 @@
         "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_ru_gamepedia\/images\/4\/48\/Monkey_item_37_ru.mp3\/revision\/latest?cb=20170409143101",
         "title": "Gem of True Sight.",
         "icons": [
-          "items\/Gem of True Sight\/full.png"
+          "items\/Gem of True Sight\/full.webp"
         ]
       },
       {
         "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_ru_gamepedia\/images\/d\/d5\/Monkey_crown_item_37_ru.mp3\/revision\/latest?cb=20170409131539",
         "isArcane": true,
         "icons": [
-          "items\/Gem of True Sight\/full.png"
+          "items\/Gem of True Sight\/full.webp"
         ],
         "title": "Gem of True Sight."
       },
@@ -9731,14 +9731,14 @@
         "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_ru_gamepedia\/images\/5\/54\/Monkey_item_38_ru.mp3\/revision\/latest?cb=20170409143106",
         "title": "Сколько можно?",
         "icons": [
-          "items\/Gem of True Sight\/full.png"
+          "items\/Gem of True Sight\/full.webp"
         ]
       },
       {
         "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_ru_gamepedia\/images\/2\/21\/Monkey_crown_item_38_ru.mp3\/revision\/latest?cb=20170409131544",
         "isArcane": true,
         "icons": [
-          "items\/Gem of True Sight\/full.png"
+          "items\/Gem of True Sight\/full.webp"
         ],
         "title": "Сколько можно?"
       },
@@ -9746,14 +9746,14 @@
         "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_ru_gamepedia\/images\/0\/0c\/Monkey_item_39_ru.mp3\/revision\/latest?cb=20170409143111",
         "title": "Sange and Yasha.",
         "icons": [
-          "items\/Sange and Yasha\/full.png"
+          "items\/Sange and Yasha\/full.webp"
         ]
       },
       {
         "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_ru_gamepedia\/images\/8\/8a\/Monkey_crown_item_39_ru.mp3\/revision\/latest?cb=20170409131549",
         "isArcane": true,
         "icons": [
-          "items\/Sange and Yasha\/full.png"
+          "items\/Sange and Yasha\/full.webp"
         ],
         "title": "Sange and Yasha."
       },
@@ -9761,14 +9761,14 @@
         "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_ru_gamepedia\/images\/7\/7f\/Monkey_item_40_ru.mp3\/revision\/latest?cb=20170409143116",
         "title": "Варды! Мое великодушие не знает границ.",
         "icons": [
-          "items\/Observer Ward\/full.png"
+          "items\/Observer Ward\/full.webp"
         ]
       },
       {
         "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_ru_gamepedia\/images\/d\/db\/Monkey_crown_item_40_ru.mp3\/revision\/latest?cb=20170409131554",
         "isArcane": true,
         "icons": [
-          "items\/Observer Ward\/full.png"
+          "items\/Observer Ward\/full.webp"
         ],
         "title": "Варды! Мое великодушие не знает границ."
       },
@@ -9776,14 +9776,14 @@
         "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_ru_gamepedia\/images\/e\/e9\/Monkey_item_41_ru.mp3\/revision\/latest?cb=20170409143121",
         "title": "Divine Rapier.",
         "icons": [
-          "items\/Divine Rapier\/full.png"
+          "items\/Divine Rapier\/full.webp"
         ]
       },
       {
         "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_ru_gamepedia\/images\/7\/7d\/Monkey_crown_item_41_ru.mp3\/revision\/latest?cb=20170409131559",
         "isArcane": true,
         "icons": [
-          "items\/Divine Rapier\/full.png"
+          "items\/Divine Rapier\/full.webp"
         ],
         "title": "Divine Rapier."
       },
@@ -9791,14 +9791,14 @@
         "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_ru_gamepedia\/images\/f\/f8\/Monkey_smoke_01_ru.mp3\/revision\/latest?cb=20170409151054",
         "title": "Это что - дым?! А-арх\u2026только не в глаза!",
         "icons": [
-          "items\/Smoke of Deceit\/full.png"
+          "items\/Smoke of Deceit\/full.webp"
         ]
       },
       {
         "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_ru_gamepedia\/images\/0\/04\/Monkey_crown_smoke_01_ru.mp3\/revision\/latest?cb=20170409135725",
         "isArcane": true,
         "icons": [
-          "items\/Smoke of Deceit\/full.png"
+          "items\/Smoke of Deceit\/full.webp"
         ],
         "title": "Это что - дым?! А-арх\u2026только не в глаза!"
       },
@@ -9806,14 +9806,14 @@
         "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_ru_gamepedia\/images\/5\/52\/Monkey_grunts_07_ru.mp3\/revision\/latest?cb=20170409142622",
         "title": "Эа!",
         "icons": [
-          "items\/Smoke of Deceit\/full.png"
+          "items\/Smoke of Deceit\/full.webp"
         ]
       },
       {
         "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_ru_gamepedia\/images\/0\/07\/Monkey_crown_grunts_07_ru.mp3\/revision\/latest?cb=20170409131108",
         "isArcane": true,
         "icons": [
-          "items\/Smoke of Deceit\/full.png"
+          "items\/Smoke of Deceit\/full.webp"
         ],
         "title": "Эа!"
       },
@@ -9881,14 +9881,14 @@
         "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_ru_gamepedia\/images\/c\/c6\/Monkey_item_42_ru.mp3\/revision\/latest?cb=20170409143126",
         "title": "Хм-хм-хм, Divine Rapier.",
         "icons": [
-          "items\/Divine Rapier\/full.png"
+          "items\/Divine Rapier\/full.webp"
         ]
       },
       {
         "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_ru_gamepedia\/images\/2\/2a\/Monkey_crown_item_42_ru.mp3\/revision\/latest?cb=20170409131604",
         "isArcane": true,
         "icons": [
-          "items\/Divine Rapier\/full.png"
+          "items\/Divine Rapier\/full.webp"
         ],
         "title": "Хм-хм-хм, Divine Rapier."
       },
@@ -9896,14 +9896,14 @@
         "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_ru_gamepedia\/images\/0\/0a\/Monkey_item_19_ru.mp3\/revision\/latest?cb=20170409142939",
         "title": "Divine Rapier. О-хо-хо\u2026такое лучше не терять.",
         "icons": [
-          "items\/Divine Rapier\/full.png"
+          "items\/Divine Rapier\/full.webp"
         ]
       },
       {
         "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_ru_gamepedia\/images\/4\/4d\/Monkey_crown_item_19_ru.mp3\/revision\/latest?cb=20170409131423",
         "isArcane": true,
         "icons": [
-          "items\/Divine Rapier\/full.png"
+          "items\/Divine Rapier\/full.webp"
         ],
         "title": "Divine Rapier. О-хо-хо\u2026такое лучше не терять."
       }
