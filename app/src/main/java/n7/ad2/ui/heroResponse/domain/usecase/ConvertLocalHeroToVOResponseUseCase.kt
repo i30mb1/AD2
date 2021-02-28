@@ -43,10 +43,12 @@ class ConvertLocalHeroToVOResponseUseCase @Inject constructor(
 
 //                savedResponses.remove(fileToRemoveFromSavedResponses)
                 val icons = response.icons.map { iconPath ->
-                    VOResponseImage(localHero.name, "file:///android_asset/$iconPath")
+                    val heroName = iconPath.substringBeforeLast("/").substringAfter("/")
+                    val url = "file:///android_asset/$iconPath"
+                    VOResponseImage(heroName, url)
                 }
                 if (response.isArcane) {
-                    val arcaneItem = VOResponseImage("arcane", "file:///android_asset/heroes/${localHero.name}/arcane.png")
+                    val arcaneItem = VOResponseImage("Arcane", "file:///android_asset/heroes/${localHero.name}/arcane.png")
                     (icons as MutableList).add(0, arcaneItem)
                 }
 
