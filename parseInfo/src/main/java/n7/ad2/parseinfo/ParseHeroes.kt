@@ -214,7 +214,6 @@ class ParseHeroes private constructor(
 //                        if (withZh) put("nameZh", getHeroName(heroesZh[index]))
 //                        if (withZh) put("hrefZh", getHeroHref(heroesZh[index]))
                         val directory = "heroes/$heroName"
-                        put("assetsPath", directory)
                         if (loadEngDescription || loadEngResponses) createHeroFolderInAssets("$directory/en")
                         if (loadRusDescription || loadRusResponses) createHeroFolderInAssets("$directory/ru")
 

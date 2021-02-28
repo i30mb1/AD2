@@ -2,602 +2,482 @@
   "heroes": [
     {
       "nameEng": "Abaddon",
-      "assetsPath": "heroes\/Abaddon",
       "mainAttr": "Strength"
     },
     {
       "nameEng": "Alchemist",
-      "assetsPath": "heroes\/Alchemist",
       "mainAttr": "Strength"
     },
     {
       "nameEng": "Axe",
-      "assetsPath": "heroes\/Axe",
       "mainAttr": "Strength"
     },
     {
       "nameEng": "Beastmaster",
-      "assetsPath": "heroes\/Beastmaster",
       "mainAttr": "Strength"
     },
     {
       "nameEng": "Brewmaster",
-      "assetsPath": "heroes\/Brewmaster",
       "mainAttr": "Strength"
     },
     {
       "nameEng": "Bristleback",
-      "assetsPath": "heroes\/Bristleback",
       "mainAttr": "Strength"
     },
     {
       "nameEng": "Centaur Warrunner",
-      "assetsPath": "heroes\/Centaur Warrunner",
       "mainAttr": "Strength"
     },
     {
       "nameEng": "Chaos Knight",
-      "assetsPath": "heroes\/Chaos Knight",
       "mainAttr": "Strength"
     },
     {
       "nameEng": "Clockwerk",
-      "assetsPath": "heroes\/Clockwerk",
       "mainAttr": "Strength"
     },
     {
       "nameEng": "Doom",
-      "assetsPath": "heroes\/Doom",
       "mainAttr": "Strength"
     },
     {
       "nameEng": "Dragon Knight",
-      "assetsPath": "heroes\/Dragon Knight",
       "mainAttr": "Strength"
     },
     {
       "nameEng": "Earth Spirit",
-      "assetsPath": "heroes\/Earth Spirit",
       "mainAttr": "Strength"
     },
     {
       "nameEng": "Earthshaker",
-      "assetsPath": "heroes\/Earthshaker",
       "mainAttr": "Strength"
     },
     {
       "nameEng": "Elder Titan",
-      "assetsPath": "heroes\/Elder Titan",
       "mainAttr": "Strength"
     },
     {
       "nameEng": "Huskar",
-      "assetsPath": "heroes\/Huskar",
       "mainAttr": "Strength"
     },
     {
       "nameEng": "Io",
-      "assetsPath": "heroes\/Io",
       "mainAttr": "Strength"
     },
     {
       "nameEng": "Kunkka",
-      "assetsPath": "heroes\/Kunkka",
       "mainAttr": "Strength"
     },
     {
       "nameEng": "Legion Commander",
-      "assetsPath": "heroes\/Legion Commander",
       "mainAttr": "Strength"
     },
     {
       "nameEng": "Lifestealer",
-      "assetsPath": "heroes\/Lifestealer",
       "mainAttr": "Strength"
     },
     {
       "nameEng": "Lycan",
-      "assetsPath": "heroes\/Lycan",
       "mainAttr": "Strength"
     },
     {
       "nameEng": "Magnus",
-      "assetsPath": "heroes\/Magnus",
       "mainAttr": "Strength"
     },
     {
       "nameEng": "Mars",
-      "assetsPath": "heroes\/Mars",
       "mainAttr": "Strength"
     },
     {
       "nameEng": "Night Stalker",
-      "assetsPath": "heroes\/Night Stalker",
       "mainAttr": "Strength"
     },
     {
       "nameEng": "Omniknight",
-      "assetsPath": "heroes\/Omniknight",
       "mainAttr": "Strength"
     },
     {
       "nameEng": "Phoenix",
-      "assetsPath": "heroes\/Phoenix",
       "mainAttr": "Strength"
     },
     {
       "nameEng": "Pudge",
-      "assetsPath": "heroes\/Pudge",
       "mainAttr": "Strength"
     },
     {
       "nameEng": "Sand King",
-      "assetsPath": "heroes\/Sand King",
       "mainAttr": "Strength"
     },
     {
       "nameEng": "Slardar",
-      "assetsPath": "heroes\/Slardar",
       "mainAttr": "Strength"
     },
     {
       "nameEng": "Snapfire",
-      "assetsPath": "heroes\/Snapfire",
       "mainAttr": "Strength"
     },
     {
       "nameEng": "Spirit Breaker",
-      "assetsPath": "heroes\/Spirit Breaker",
       "mainAttr": "Strength"
     },
     {
       "nameEng": "Sven",
-      "assetsPath": "heroes\/Sven",
       "mainAttr": "Strength"
     },
     {
       "nameEng": "Tidehunter",
-      "assetsPath": "heroes\/Tidehunter",
       "mainAttr": "Strength"
     },
     {
       "nameEng": "Timbersaw",
-      "assetsPath": "heroes\/Timbersaw",
       "mainAttr": "Strength"
     },
     {
       "nameEng": "Tiny",
-      "assetsPath": "heroes\/Tiny",
       "mainAttr": "Strength"
     },
     {
       "nameEng": "Treant Protector",
-      "assetsPath": "heroes\/Treant Protector",
       "mainAttr": "Strength"
     },
     {
       "nameEng": "Tusk",
-      "assetsPath": "heroes\/Tusk",
       "mainAttr": "Strength"
     },
     {
       "nameEng": "Underlord",
-      "assetsPath": "heroes\/Underlord",
       "mainAttr": "Strength"
     },
     {
       "nameEng": "Undying",
-      "assetsPath": "heroes\/Undying",
       "mainAttr": "Strength"
     },
     {
       "nameEng": "Wraith King",
-      "assetsPath": "heroes\/Wraith King",
       "mainAttr": "Strength"
     },
     {
       "nameEng": "Anti-Mage",
-      "assetsPath": "heroes\/Anti-Mage",
       "mainAttr": "Agility"
     },
     {
       "nameEng": "Arc Warden",
-      "assetsPath": "heroes\/Arc Warden",
       "mainAttr": "Agility"
     },
     {
       "nameEng": "Bloodseeker",
-      "assetsPath": "heroes\/Bloodseeker",
       "mainAttr": "Agility"
     },
     {
       "nameEng": "Bounty Hunter",
-      "assetsPath": "heroes\/Bounty Hunter",
       "mainAttr": "Agility"
     },
     {
       "nameEng": "Broodmother",
-      "assetsPath": "heroes\/Broodmother",
       "mainAttr": "Agility"
     },
     {
       "nameEng": "Clinkz",
-      "assetsPath": "heroes\/Clinkz",
       "mainAttr": "Agility"
     },
     {
       "nameEng": "Drow Ranger",
-      "assetsPath": "heroes\/Drow Ranger",
       "mainAttr": "Agility"
     },
     {
       "nameEng": "Ember Spirit",
-      "assetsPath": "heroes\/Ember Spirit",
       "mainAttr": "Agility"
     },
     {
       "nameEng": "Faceless Void",
-      "assetsPath": "heroes\/Faceless Void",
       "mainAttr": "Agility"
     },
     {
       "nameEng": "Gyrocopter",
-      "assetsPath": "heroes\/Gyrocopter",
       "mainAttr": "Agility"
     },
     {
       "nameEng": "Hoodwink",
-      "assetsPath": "heroes\/Hoodwink",
       "mainAttr": "Agility"
     },
     {
       "nameEng": "Juggernaut",
-      "assetsPath": "heroes\/Juggernaut",
       "mainAttr": "Agility"
     },
     {
       "nameEng": "Lone Druid",
-      "assetsPath": "heroes\/Lone Druid",
       "mainAttr": "Agility"
     },
     {
       "nameEng": "Luna",
-      "assetsPath": "heroes\/Luna",
       "mainAttr": "Agility"
     },
     {
       "nameEng": "Medusa",
-      "assetsPath": "heroes\/Medusa",
       "mainAttr": "Agility"
     },
     {
       "nameEng": "Meepo",
-      "assetsPath": "heroes\/Meepo",
       "mainAttr": "Agility"
     },
     {
       "nameEng": "Mirana",
-      "assetsPath": "heroes\/Mirana",
       "mainAttr": "Agility"
     },
     {
       "nameEng": "Monkey King",
-      "assetsPath": "heroes\/Monkey King",
       "mainAttr": "Agility"
     },
     {
       "nameEng": "Morphling",
-      "assetsPath": "heroes\/Morphling",
       "mainAttr": "Agility"
     },
     {
       "nameEng": "Naga Siren",
-      "assetsPath": "heroes\/Naga Siren",
       "mainAttr": "Agility"
     },
     {
       "nameEng": "Nyx Assassin",
-      "assetsPath": "heroes\/Nyx Assassin",
       "mainAttr": "Agility"
     },
     {
       "nameEng": "Pangolier",
-      "assetsPath": "heroes\/Pangolier",
       "mainAttr": "Agility"
     },
     {
       "nameEng": "Phantom Assassin",
-      "assetsPath": "heroes\/Phantom Assassin",
       "mainAttr": "Agility"
     },
     {
       "nameEng": "Phantom Lancer",
-      "assetsPath": "heroes\/Phantom Lancer",
       "mainAttr": "Agility"
     },
     {
       "nameEng": "Razor",
-      "assetsPath": "heroes\/Razor",
       "mainAttr": "Agility"
     },
     {
       "nameEng": "Riki",
-      "assetsPath": "heroes\/Riki",
       "mainAttr": "Agility"
     },
     {
       "nameEng": "Shadow Fiend",
-      "assetsPath": "heroes\/Shadow Fiend",
       "mainAttr": "Agility"
     },
     {
       "nameEng": "Slark",
-      "assetsPath": "heroes\/Slark",
       "mainAttr": "Agility"
     },
     {
       "nameEng": "Sniper",
-      "assetsPath": "heroes\/Sniper",
       "mainAttr": "Agility"
     },
     {
       "nameEng": "Spectre",
-      "assetsPath": "heroes\/Spectre",
       "mainAttr": "Agility"
     },
     {
       "nameEng": "Templar Assassin",
-      "assetsPath": "heroes\/Templar Assassin",
       "mainAttr": "Agility"
     },
     {
       "nameEng": "Terrorblade",
-      "assetsPath": "heroes\/Terrorblade",
       "mainAttr": "Agility"
     },
     {
       "nameEng": "Troll Warlord",
-      "assetsPath": "heroes\/Troll Warlord",
       "mainAttr": "Agility"
     },
     {
       "nameEng": "Ursa",
-      "assetsPath": "heroes\/Ursa",
       "mainAttr": "Agility"
     },
     {
       "nameEng": "Vengeful Spirit",
-      "assetsPath": "heroes\/Vengeful Spirit",
       "mainAttr": "Agility"
     },
     {
       "nameEng": "Venomancer",
-      "assetsPath": "heroes\/Venomancer",
       "mainAttr": "Agility"
     },
     {
       "nameEng": "Viper",
-      "assetsPath": "heroes\/Viper",
       "mainAttr": "Agility"
     },
     {
       "nameEng": "Weaver",
-      "assetsPath": "heroes\/Weaver",
       "mainAttr": "Agility"
     },
     {
       "nameEng": "Ancient Apparition",
-      "assetsPath": "heroes\/Ancient Apparition",
       "mainAttr": "Intelligence"
     },
     {
       "nameEng": "Bane",
-      "assetsPath": "heroes\/Bane",
       "mainAttr": "Intelligence"
     },
     {
       "nameEng": "Batrider",
-      "assetsPath": "heroes\/Batrider",
       "mainAttr": "Intelligence"
     },
     {
       "nameEng": "Chen",
-      "assetsPath": "heroes\/Chen",
       "mainAttr": "Intelligence"
     },
     {
       "nameEng": "Crystal Maiden",
-      "assetsPath": "heroes\/Crystal Maiden",
       "mainAttr": "Intelligence"
     },
     {
       "nameEng": "Dark Seer",
-      "assetsPath": "heroes\/Dark Seer",
       "mainAttr": "Intelligence"
     },
     {
       "nameEng": "Dark Willow",
-      "assetsPath": "heroes\/Dark Willow",
       "mainAttr": "Intelligence"
     },
     {
       "nameEng": "Dazzle",
-      "assetsPath": "heroes\/Dazzle",
       "mainAttr": "Intelligence"
     },
     {
       "nameEng": "Death Prophet",
-      "assetsPath": "heroes\/Death Prophet",
       "mainAttr": "Intelligence"
     },
     {
       "nameEng": "Disruptor",
-      "assetsPath": "heroes\/Disruptor",
       "mainAttr": "Intelligence"
     },
     {
       "nameEng": "Enchantress",
-      "assetsPath": "heroes\/Enchantress",
       "mainAttr": "Intelligence"
     },
     {
       "nameEng": "Enigma",
-      "assetsPath": "heroes\/Enigma",
       "mainAttr": "Intelligence"
     },
     {
       "nameEng": "Grimstroke",
-      "assetsPath": "heroes\/Grimstroke",
       "mainAttr": "Intelligence"
     },
     {
       "nameEng": "Invoker",
-      "assetsPath": "heroes\/Invoker",
       "mainAttr": "Intelligence"
     },
     {
       "nameEng": "Jakiro",
-      "assetsPath": "heroes\/Jakiro",
       "mainAttr": "Intelligence"
     },
     {
       "nameEng": "Keeper of the Light",
-      "assetsPath": "heroes\/Keeper of the Light",
       "mainAttr": "Intelligence"
     },
     {
       "nameEng": "Leshrac",
-      "assetsPath": "heroes\/Leshrac",
       "mainAttr": "Intelligence"
     },
     {
       "nameEng": "Lich",
-      "assetsPath": "heroes\/Lich",
       "mainAttr": "Intelligence"
     },
     {
       "nameEng": "Lina",
-      "assetsPath": "heroes\/Lina",
       "mainAttr": "Intelligence"
     },
     {
       "nameEng": "Lion",
-      "assetsPath": "heroes\/Lion",
       "mainAttr": "Intelligence"
     },
     {
       "nameEng": "Nature's Prophet",
-      "assetsPath": "heroes\/Nature's Prophet",
       "mainAttr": "Intelligence"
     },
     {
       "nameEng": "Necrophos",
-      "assetsPath": "heroes\/Necrophos",
       "mainAttr": "Intelligence"
     },
     {
       "nameEng": "Ogre Magi",
-      "assetsPath": "heroes\/Ogre Magi",
       "mainAttr": "Intelligence"
     },
     {
       "nameEng": "Oracle",
-      "assetsPath": "heroes\/Oracle",
       "mainAttr": "Intelligence"
     },
     {
       "nameEng": "Outworld Destroyer",
-      "assetsPath": "heroes\/Outworld Destroyer",
       "mainAttr": "Intelligence"
     },
     {
       "nameEng": "Puck",
-      "assetsPath": "heroes\/Puck",
       "mainAttr": "Intelligence"
     },
     {
       "nameEng": "Pugna",
-      "assetsPath": "heroes\/Pugna",
       "mainAttr": "Intelligence"
     },
     {
       "nameEng": "Queen of Pain",
-      "assetsPath": "heroes\/Queen of Pain",
       "mainAttr": "Intelligence"
     },
     {
       "nameEng": "Rubick",
-      "assetsPath": "heroes\/Rubick",
       "mainAttr": "Intelligence"
     },
     {
       "nameEng": "Shadow Demon",
-      "assetsPath": "heroes\/Shadow Demon",
       "mainAttr": "Intelligence"
     },
     {
       "nameEng": "Shadow Shaman",
-      "assetsPath": "heroes\/Shadow Shaman",
       "mainAttr": "Intelligence"
     },
     {
       "nameEng": "Silencer",
-      "assetsPath": "heroes\/Silencer",
       "mainAttr": "Intelligence"
     },
     {
       "nameEng": "Skywrath Mage",
-      "assetsPath": "heroes\/Skywrath Mage",
       "mainAttr": "Intelligence"
     },
     {
       "nameEng": "Storm Spirit",
-      "assetsPath": "heroes\/Storm Spirit",
       "mainAttr": "Intelligence"
     },
     {
       "nameEng": "Techies",
-      "assetsPath": "heroes\/Techies",
       "mainAttr": "Intelligence"
     },
     {
       "nameEng": "Tinker",
-      "assetsPath": "heroes\/Tinker",
       "mainAttr": "Intelligence"
     },
     {
       "nameEng": "Visage",
-      "assetsPath": "heroes\/Visage",
       "mainAttr": "Intelligence"
     },
     {
       "nameEng": "Void Spirit",
-      "assetsPath": "heroes\/Void Spirit",
       "mainAttr": "Intelligence"
     },
     {
       "nameEng": "Warlock",
-      "assetsPath": "heroes\/Warlock",
       "mainAttr": "Intelligence"
     },
     {
       "nameEng": "Windranger",
-      "assetsPath": "heroes\/Windranger",
       "mainAttr": "Intelligence"
     },
     {
       "nameEng": "Winter Wyvern",
-      "assetsPath": "heroes\/Winter Wyvern",
       "mainAttr": "Intelligence"
     },
     {
       "nameEng": "Witch Doctor",
-      "assetsPath": "heroes\/Witch Doctor",
       "mainAttr": "Intelligence"
     },
     {
       "nameEng": "Zeus",
-      "assetsPath": "heroes\/Zeus",
       "mainAttr": "Intelligence"
     }
   ]
