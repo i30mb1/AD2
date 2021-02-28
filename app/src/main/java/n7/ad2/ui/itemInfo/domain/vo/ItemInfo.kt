@@ -3,11 +3,13 @@ package n7.ad2.ui.itemInfo.domain.vo
 import android.text.SpannableString
 import androidx.annotation.DrawableRes
 import androidx.databinding.ObservableBoolean
-import androidx.lifecycle.MutableLiveData
 import n7.ad2.ui.heroPage.Playable
 
 sealed class ItemInfo
-data class VOItemInfoTitle(val title: String, override val audioUrl: String? = null) : ItemInfo(), Playable { override val isPlaying = MutableLiveData(false) }
+data class VOItemInfoTitle(val title: String, override val audioUrl: String? = null) : ItemInfo(), Playable {
+    override val isPlaying = ObservableBoolean(false)
+}
+
 data class VOItemInfoLine(val title: String) : ItemInfo()
 data class VOItemInfoLineImage(val body: SpannableString, @DrawableRes val drawable: Int) : ItemInfo()
 data class VOItemInfoRecipe(val urlItemImage: String, val recipes: List<VORecipe>) : ItemInfo()

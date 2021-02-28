@@ -4,9 +4,9 @@ import android.app.Application
 import android.net.Uri
 import android.os.Build
 import androidx.annotation.RawRes
+import androidx.databinding.ObservableBoolean
 import androidx.lifecycle.Lifecycle
 import androidx.lifecycle.LifecycleObserver
-import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.OnLifecycleEvent
 import com.google.android.exoplayer2.C
 import com.google.android.exoplayer2.ExoPlaybackException
@@ -23,7 +23,7 @@ import com.google.android.exoplayer2.util.Util
 import n7.ad2.R
 
 interface Playable {
-    val isPlaying: MutableLiveData<Boolean>
+    val isPlaying: ObservableBoolean
     val audioUrl: String?
 }
 
@@ -34,7 +34,7 @@ class AudioExoPlayer(
 ) : Player.EventListener, LifecycleObserver {
 
     private lateinit var exoPlayer: SimpleExoPlayer
-    private var isPlaying = MutableLiveData(false)
+    private var isPlaying = ObservableBoolean(false)
 
     init {
         lifecycle.addObserver(this)
@@ -45,14 +45,14 @@ class AudioExoPlayer(
             ExoPlayer.STATE_IDLE -> Unit
             ExoPlayer.STATE_BUFFERING -> Unit
             ExoPlayer.STATE_READY -> Unit
-            ExoPlayer.STATE_ENDED -> isPlaying.value = false
-            else -> isPlaying.value = false
+            ExoPlayer.STATE_ENDED -> isPlaying.set(false)
+            else -> isPlaying.set(false)
         }
     }
 
     override fun onPlayerError(error: ExoPlaybackException) {
         errorListener?.invoke(error)
-        isPlaying.value = false
+        isPlaying.set(false)
     }
 
     fun playFromAssets(url: String) {
@@ -67,7 +67,7 @@ class AudioExoPlayer(
     fun play(model: Playable) {
         if (isPlaying !== model.isPlaying) stop()
         isPlaying = model.isPlaying
-        if (isPlaying.value!!) stop() else play(model.audioUrl!!)
+        if (isPlaying.get()) stop() else play(model.audioUrl!!)
     }
 
     fun play(@RawRes id: Int) = play(RawResourceDataSource.buildRawResourceUri(id))
@@ -75,7 +75,7 @@ class AudioExoPlayer(
     fun play(url: String) = play(Uri.parse(url))
 
     fun play(uri: Uri) {
-        isPlaying.value = true
+        isPlaying.set(true)
         val source = buildMediaSource(uri)
 
         exoPlayer.prepare(source)
@@ -108,7 +108,7 @@ class AudioExoPlayer(
     }
 
     private fun stop() {
-        isPlaying.value = false
+        isPlaying.set(false)
         exoPlayer.stop()
     }
 
