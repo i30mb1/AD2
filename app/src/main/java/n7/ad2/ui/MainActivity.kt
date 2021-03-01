@@ -20,7 +20,6 @@ import androidx.appcompat.app.AlertDialog
 import androidx.constraintlayout.widget.ConstraintLayout
 import androidx.constraintlayout.widget.ConstraintSet
 import androidx.databinding.DataBindingUtil
-import androidx.databinding.ObservableArrayList
 import androidx.databinding.ObservableBoolean
 import androidx.databinding.ObservableInt
 import androidx.recyclerview.widget.LinearLayoutManager
@@ -37,6 +36,7 @@ import com.google.android.play.core.install.model.InstallStatus
 import com.google.android.play.core.install.model.UpdateAvailability
 import com.yarolegovich.slidingrootnav.SlidingRootNavBuilder
 import com.yarolegovich.slidingrootnav.callback.DragStateListener
+import n7.ad2.FingerCoordinate
 import n7.ad2.R
 import n7.ad2.databinding.ActivityMainBinding
 import n7.ad2.databinding.DialogRateBinding
@@ -53,7 +53,6 @@ import n7.ad2.ui.setting.SettingActivity
 import n7.ad2.ui.streams.StreamsFragment
 import n7.ad2.utils.BaseActivity
 import n7.ad2.utils.viewModel
-import java.util.Arrays
 import javax.inject.Inject
 
 class MainActivity : BaseActivity() {
@@ -70,10 +69,13 @@ class MainActivity : BaseActivity() {
     @Inject
     lateinit var preferences: SharedPreferences
 
+    private val fingerCoordinate: FingerCoordinate by lazy {
+        FingerCoordinate()
+    }
+
     var observableLastItem = ObservableInt(1)
     var subscription = ObservableBoolean(false)
-    var movementListX = ObservableArrayList<Float>()
-    var movementListY = ObservableArrayList<Float>()
+
     private var timeCounter = -1
     private var doubleBackToExitPressedOnce = false
     private val constraintSetHidden = ConstraintSet()
@@ -106,10 +108,7 @@ class MainActivity : BaseActivity() {
         binding = DataBindingUtil.setContentView(this, R.layout.activity_main)
         drawer = DataBindingUtil.inflate(layoutInflater, R.layout.drawer, null, false)
         drawer.setViewModel(viewModel)
-        movementListX.addAll(Arrays.asList(*arrayOfNulls(10)))
-        movementListY.addAll(Arrays.asList(*arrayOfNulls(10)))
-        drawer.setArrayX(movementListX)
-        drawer.setArrayY(movementListY)
+        drawer.fingerCoordinate(fingerCoordinate)
         drawer.setActivity(this)
         setupLoggerAdapter()
         setupToolbar()
@@ -312,40 +311,9 @@ class MainActivity : BaseActivity() {
         imm?.hideSoftInputFromWindow(binding!!.toolbar.windowToken, 0)
     }
 
-    override fun dispatchTouchEvent(ev: MotionEvent): Boolean {
-        if (!shouldDisplayLog) return super.dispatchTouchEvent(ev)
-        // событие
-        val action = ev.actionMasked
-        // индекс косания
-        var index = ev.actionIndex
-        // id косания
-        var id = ev.getPointerId(index)
-        when (action) {
-            MotionEvent.ACTION_DOWN, MotionEvent.ACTION_POINTER_DOWN -> {
-                movementListX[id] = ev.getX(index)
-                movementListY[id] = ev.getY(index)
-            }
-            MotionEvent.ACTION_UP, MotionEvent.ACTION_POINTER_UP, MotionEvent.ACTION_CANCEL -> {
-                movementListX[id] = 0f
-                movementListY[id] = 0f
-            }
-            MotionEvent.ACTION_MOVE -> {
-                // число косаний
-                val count = ev.pointerCount
-                //                log("fingers = " +count);
-                var i = 0
-                while (i < count) {
-                    index = i
-                    id = ev.getPointerId(index)
-                    movementListX[id] = ev.getX(index)
-                    movementListY[id] = ev.getY(index)
-                    i++
-                }
-            }
-        }
-        drawer.arrayX = movementListX
-        drawer.arrayY = movementListY
-        return super.dispatchTouchEvent(ev)
+    override fun dispatchTouchEvent(event: MotionEvent): Boolean {
+        if (shouldDisplayLog) return fingerCoordinate.dispatchTouchEvent(event)
+        return super.dispatchTouchEvent(event)
     }
 
     private fun setupDrawer() {

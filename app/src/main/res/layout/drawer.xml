@@ -17,12 +17,8 @@
         <import type="java.util.ArrayList" />
 
         <variable
-            name="arrayX"
-            type="ArrayList&lt;Float&gt;" />
-
-        <variable
-            name="arrayY"
-            type="ArrayList&lt;Float&gt;" />
+            name="fingerCoordinate"
+            type="n7.ad2.FingerCoordinate" />
     </data>
 
     <androidx.constraintlayout.widget.ConstraintLayout
