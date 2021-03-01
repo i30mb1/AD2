@@ -9,6 +9,7 @@ import android.net.Uri
 import android.os.Bundle
 import android.os.Environment
 import android.os.Handler
+import android.os.Looper
 import android.preference.PreferenceManager
 import android.view.MotionEvent
 import android.view.View
@@ -400,12 +401,12 @@ class MainActivity : BaseActivity() {
             return
         }
         if (currentSet === constraintSetHidden) {
-            toggleSecretActivity(binding!!.root)
+            toggleSecretActivity(binding.root)
             return
         }
         doubleBackToExitPressedOnce = true
-        Snackbar.make(binding!!.root, R.string.main_press_again_to_exit, Snackbar.LENGTH_SHORT).show()
-        Handler().postDelayed({ doubleBackToExitPressedOnce = false }, MILLIS_FOR_EXIT.toLong())
+        Snackbar.make(binding.root, R.string.main_press_again_to_exit, Snackbar.LENGTH_SHORT).show()
+        Handler(Looper.getMainLooper()).postDelayed({ doubleBackToExitPressedOnce = false }, MILLIS_FOR_EXIT.toLong())
     }
 
 }
