@@ -108,7 +108,7 @@ class MainActivity : BaseActivity() {
         binding = DataBindingUtil.setContentView(this, R.layout.activity_main)
         drawer = DataBindingUtil.inflate(layoutInflater, R.layout.drawer, null, false)
         drawer.setViewModel(viewModel)
-        drawer.fingerCoordinate(fingerCoordinate)
+        drawer.fingerCoordinate = fingerCoordinate
         drawer.setActivity(this)
         setupLoggerAdapter()
         setupToolbar()
