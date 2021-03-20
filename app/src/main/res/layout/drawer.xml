@@ -16,9 +16,6 @@
 
         <import type="java.util.ArrayList" />
 
-        <variable
-            name="fingerCoordinate"
-            type="n7.ad2.FingerCoordinate" />
     </data>
 
     <androidx.constraintlayout.widget.ConstraintLayout
@@ -26,6 +23,13 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:background="?myBackgroundAD2">
+
+        <n7.ad2.FingerCoordinate
+            android:id="@+id/finger_coordinator"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
 
         <LinearLayout
             android:id="@+id/ll_drawer_vertical_xy"

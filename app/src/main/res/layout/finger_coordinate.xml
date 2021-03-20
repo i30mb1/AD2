@@ -1,0 +1,115 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+        <import type="java.util.ArrayList" />
+
+        <variable
+            name="arrayX"
+            type="ArrayList&lt;Float&gt;" />
+
+        <variable
+            name="arrayY"
+            type="ArrayList&lt;Float&gt;" />
+    </data>
+
+    <merge
+        android:id="@+id/ll_drawer_vertical_xy"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        tools:orientation="vertical"
+        tools:parentTag="android.widget.LinearLayout">
+
+        <com.google.android.material.textview.MaterialTextView
+            android:id="@+id/tv1"
+            style="@style/Widget.TextView.Coordinate"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text='@{"[x"+String.valueOf((int) arrayX.get(0))+"][y"+String.valueOf((int) arrayY.get(0))+"]"}'
+            android:visibility="@{arrayX.get(0)>0.0f}"
+            tools:text="[x100][y200]" />
+
+        <com.google.android.material.textview.MaterialTextView
+            android:id="@+id/tv2"
+            style="@style/Widget.TextView.Coordinate"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text='@{"[x"+String.valueOf((int) arrayX.get(1))+"][y"+String.valueOf((int) arrayY.get(1))+"]"}'
+            android:visibility="@{arrayX.get(1)>0.0f}"
+            tools:text="[x100][y200]" />
+
+        <com.google.android.material.textview.MaterialTextView
+            android:id="@+id/tv3"
+            style="@style/Widget.TextView.Coordinate"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text='@{"[x"+String.valueOf((int) arrayX.get(2))+"][y"+String.valueOf((int) arrayY.get(2))+"]"}'
+            android:visibility="@{arrayX.get(2)>0.0f}"
+            tools:text="[x100][y200]" />
+
+        <com.google.android.material.textview.MaterialTextView
+            android:id="@+id/tv4"
+            style="@style/Widget.TextView.Coordinate"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text='@{"[x"+String.valueOf((int) arrayX.get(3))+"][y"+String.valueOf((int) arrayY.get(3))+"]"}'
+            android:visibility="@{arrayX.get(3)>0.0f}"
+            tools:text="[x100][y200]" />
+
+        <com.google.android.material.textview.MaterialTextView
+            android:id="@+id/tv5"
+            style="@style/Widget.TextView.Coordinate"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text='@{"[x"+String.valueOf((int) arrayX.get(4))+"][y"+String.valueOf((int) arrayY.get(4))+"]"}'
+            android:visibility="@{arrayX.get(4)>0.0f}"
+            tools:text="[x100][y200]" />
+
+        <com.google.android.material.textview.MaterialTextView
+            android:id="@+id/tv6"
+            style="@style/Widget.TextView.Coordinate"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text='@{"[x"+String.valueOf((int) arrayX.get(5))+"][y"+String.valueOf((int) arrayY.get(5))+"]"}'
+            android:visibility="@{arrayX.get(5)>0.0f}"
+            tools:text="[x100][y200]" />
+
+        <com.google.android.material.textview.MaterialTextView
+            android:id="@+id/tv7"
+            style="@style/Widget.TextView.Coordinate"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text='@{"[x"+String.valueOf((int) arrayX.get(6))+"][y"+String.valueOf((int) arrayY.get(6))+"]"}'
+            android:visibility="@{arrayX.get(6)>0.0f}"
+            tools:text="[x100][y200]" />
+
+        <com.google.android.material.textview.MaterialTextView
+            android:id="@+id/tv8"
+            style="@style/Widget.TextView.Coordinate"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text='@{"[x"+String.valueOf((int) arrayX.get(7))+"][y"+String.valueOf((int) arrayY.get(7))+"]"}'
+            android:visibility="@{arrayX.get(7)>0.0f}"
+            tools:text="[x100][y200]" />
+
+        <com.google.android.material.textview.MaterialTextView
+            android:id="@+id/tv9"
+            style="@style/Widget.TextView.Coordinate"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text='@{"[x"+String.valueOf((int) arrayX.get(8))+"][y"+String.valueOf((int) arrayY.get(8))+"]"}'
+            android:visibility="@{arrayX.get(8)>0.0f}"
+            tools:text="[x100][y200]" />
+
+        <com.google.android.material.textview.MaterialTextView
+            android:id="@+id/tv10"
+            style="@style/Widget.TextView.Coordinate"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text='@{"[x"+String.valueOf((int) arrayX.get(9))+"][y"+String.valueOf((int) arrayY.get(9))+"]"}'
+            android:visibility="@{arrayX.get(9)>0.0f}"
+            tools:text="[x100][y200]" />
+    </merge>
+</layout>

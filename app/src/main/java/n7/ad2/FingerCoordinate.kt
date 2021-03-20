@@ -1,20 +1,26 @@
 package n7.ad2
 
+import android.content.Context
+import android.util.AttributeSet
+import android.view.LayoutInflater
 import android.view.MotionEvent
-import androidx.databinding.BaseObservable
+import android.widget.LinearLayout
 import androidx.databinding.ObservableArrayList
+import n7.ad2.databinding.FingerCoordinateBinding
 
-class FingerCoordinate(
-    val movementListX: ObservableArrayList<Float> = ObservableArrayList<Float>(),
-    val movementListY: ObservableArrayList<Float> = ObservableArrayList<Float>(),
-) : BaseObservable() {
+class FingerCoordinate(context: Context, attrs: AttributeSet) : LinearLayout(context, attrs) {
+
+    private val movementListX: ObservableArrayList<Float> = ObservableArrayList<Float>()
+    private val movementListY: ObservableArrayList<Float> = ObservableArrayList<Float>()
+    private var binding: FingerCoordinateBinding = FingerCoordinateBinding.inflate(LayoutInflater.from(context), this, true)
 
     init {
+        orientation = VERTICAL
         movementListX.addAll(arrayOfNulls(10))
         movementListY.addAll(arrayOfNulls(10))
     }
 
-    fun dispatchTouchEvent(event: MotionEvent): Boolean {
+    fun handleGlobalEvent(event: MotionEvent) {
         val action = event.actionMasked
         var index = event.actionIndex
         var pointerID = event.getPointerId(index)
@@ -39,7 +45,8 @@ class FingerCoordinate(
                 }
             }
         }
-        return false
+        binding.arrayX = movementListX
+        binding.arrayY = movementListY
     }
 
 }

@@ -6,6 +6,7 @@ import android.widget.ImageView
 import android.widget.TextView
 import androidx.appcompat.widget.AppCompatTextView
 import androidx.core.text.PrecomputedTextCompat
+import androidx.core.view.isVisible
 import androidx.core.widget.TextViewCompat
 import androidx.databinding.BindingAdapter
 import androidx.recyclerview.widget.ListAdapter
@@ -41,6 +42,11 @@ fun View.isVisible(isVisible: Boolean, withSpace: Boolean) {
         false -> this.visibility = if (isVisible) View.VISIBLE else View.GONE
     }
 
+}
+
+@BindingAdapter("android:visibility")
+fun View.setVisibility(newState: Boolean) {
+    isVisible = newState
 }
 
 @BindingAdapter("isSelected")

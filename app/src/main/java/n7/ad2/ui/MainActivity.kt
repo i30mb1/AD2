@@ -36,7 +36,6 @@ import com.google.android.play.core.install.model.InstallStatus
 import com.google.android.play.core.install.model.UpdateAvailability
 import com.yarolegovich.slidingrootnav.SlidingRootNavBuilder
 import com.yarolegovich.slidingrootnav.callback.DragStateListener
-import n7.ad2.FingerCoordinate
 import n7.ad2.R
 import n7.ad2.databinding.ActivityMainBinding
 import n7.ad2.databinding.DialogRateBinding
@@ -68,10 +67,6 @@ class MainActivity : BaseActivity() {
 
     @Inject
     lateinit var preferences: SharedPreferences
-
-    private val fingerCoordinate: FingerCoordinate by lazy {
-        FingerCoordinate()
-    }
 
     var observableLastItem = ObservableInt(1)
     var subscription = ObservableBoolean(false)
@@ -108,7 +103,6 @@ class MainActivity : BaseActivity() {
         binding = DataBindingUtil.setContentView(this, R.layout.activity_main)
         drawer = DataBindingUtil.inflate(layoutInflater, R.layout.drawer, null, false)
         drawer.setViewModel(viewModel)
-        drawer.fingerCoordinate = fingerCoordinate
         drawer.setActivity(this)
         setupLoggerAdapter()
         setupToolbar()
@@ -312,7 +306,7 @@ class MainActivity : BaseActivity() {
     }
 
     override fun dispatchTouchEvent(event: MotionEvent): Boolean {
-        if (shouldDisplayLog) return fingerCoordinate.dispatchTouchEvent(event)
+        drawer.fingerCoordinator.handleGlobalEvent(event)
         return super.dispatchTouchEvent(event)
     }
 
