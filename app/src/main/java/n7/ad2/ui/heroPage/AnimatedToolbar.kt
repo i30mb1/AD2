@@ -7,15 +7,14 @@ import android.view.OrientationEventListener
 import android.view.animation.AccelerateDecelerateInterpolator
 import android.widget.ImageView
 import androidx.appcompat.widget.Toolbar
-import androidx.core.content.ContextCompat
 import androidx.transition.Slide
 import androidx.transition.TransitionManager
 import coil.load
 import com.robinhood.ticker.TickerUtils
 import com.robinhood.ticker.TickerView
 import n7.ad2.R
-import n7.ad2.data.source.local.Locale
 import n7.ad2.data.source.local.HeroRepository
+import n7.ad2.data.source.local.Locale
 import n7.ad2.utils.extension.toPx
 
 class AnimatedToolbar(context: Context, attr: AttributeSet) : Toolbar(context, attr) {
@@ -43,13 +42,14 @@ class AnimatedToolbar(context: Context, attr: AttributeSet) : Toolbar(context, a
         }
         addView(this)
     }
-    private val ivRefresh: ImageView = ImageView(context).apply {
-        layoutParams = params
-        visibility = GONE
-        setImageDrawable(ContextCompat.getDrawable(context, R.drawable.radio_button))
-        setOnClickListener { it.isSelected = !it.isSelected }
-        addView(this)
-    }
+
+    //    private val ivRefresh: ImageView = ImageView(context).apply {
+//        layoutParams = params
+//        visibility = GONE
+//        setImageDrawable(ContextCompat.getDrawable(context, R.drawable.radio_button))
+//        setOnClickListener { it.isSelected = !it.isSelected }
+//        addView(this)
+//    }
     private var oldPage = -1
     private val transition = Slide().apply {
         duration = resources.getInteger(R.integer.animation_medium).toLong()
@@ -90,7 +90,7 @@ class AnimatedToolbar(context: Context, attr: AttributeSet) : Toolbar(context, a
         when (page) {
             0 -> ivHero.visibility = visibility
             1 -> tvLocale.visibility = visibility
-            2 -> ivRefresh.visibility= visibility
+//            2 -> ivRefresh.visibility= visibility
         }
     }
 

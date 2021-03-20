@@ -35,7 +35,7 @@ class SplashActivity : FragmentActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         viewModel.loadNews()
         lifecycleScope.launch(Dispatchers.IO) {
-            if(!viewModel.shouldWeShowSplashScreen()) finishSplashActivityAndStartMainActivity()
+//            if(!viewModel.shouldWeShowSplashScreen()) finishSplashActivityAndStartMainActivity()
         }
         setMySplashTheme()
         super.onCreate(savedInstanceState)

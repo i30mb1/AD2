@@ -10,10 +10,10 @@ import android.graphics.Shader
 import android.graphics.drawable.Drawable
 import android.util.AttributeSet
 import androidx.appcompat.widget.AppCompatImageView
+import androidx.core.content.res.ResourcesCompat
 import androidx.core.graphics.drawable.toBitmap
 import androidx.core.graphics.toRectF
-import coil.ImageLoader
-import coil.request.ImageRequest
+import n7.ad2.R
 import n7.ad2.utils.extension.toPx
 
 class CircleImageView(
@@ -36,23 +36,25 @@ class CircleImageView(
     private val avatarPaint = Paint(Paint.ANTI_ALIAS_FLAG).apply {
         color = borderColor
     }
+    var initialsOffsetY = 0F
     private val initialsPaint = Paint(Paint.ANTI_ALIAS_FLAG).apply {
         color = Color.BLACK
         textAlign = Paint.Align.CENTER
     }
     private val viewRect = Rect()
-    private var drawInitials = true
+    private val iconRect = Rect()
+    private val groupIcon = ResourcesCompat.getDrawable(resources, R.drawable.creep, null)!!
+    private val personIcon = ResourcesCompat.getDrawable(resources, R.drawable.creep2, null)!!
 
     init {
         scaleType = ScaleType.CENTER_CROP
     }
 
     override fun onDraw(canvas: Canvas) {
-        if (drawInitials) {
-            drawInitials(canvas)
-        } else {
-            drawAvatar(canvas)
-        }
+        super.onDraw(canvas)
+        drawBackground(canvas)
+//        drawInitials(canvas)
+        drawGroupIcon(canvas)
     }
 
     override fun onMeasure(widthMeasureSpec: Int, heightMeasureSpec: Int) {
@@ -64,35 +66,39 @@ class CircleImageView(
         super.onSizeChanged(width, height, oldWidth, oldHeight)
         if (width == 0) return
         viewRect.set(0, 0, width, height)
+        val desiredWidth = height / 2
+        val iconOffset = (height - desiredWidth) / 2
+        iconRect.set(iconOffset, iconOffset, width - iconOffset, height - iconOffset)
         initialsPaint.textSize = height * 0.5F
+        initialsOffsetY = (initialsPaint.descent() + initialsPaint.ascent()) / 2
 //        prepareShader(width, height)
     }
 
     fun avatar(initials: String, avatarPath: String) {
-        val imageLoader = ImageLoader(context)
-        val request = ImageRequest.Builder(context)
-            .data(avatarPath)
-            .target { drawable -> prepareShader(drawable) }
-            .build()
-        val disposable = imageLoader.enqueue(request)
+        this.initials = initials
+    }
+
+    private fun drawGroupIcon(canvas: Canvas) {
+        groupIcon.bounds = iconRect
+        groupIcon.draw(canvas)
     }
 
     private fun drawAvatar(canvas: Canvas) {
+        drawable.toBitmap()
         canvas.drawOval(viewRect.toRectF(), avatarPaint)
     }
 
-    private fun drawInitials(canvas: Canvas) {
+    private fun drawBackground(canvas: Canvas) {
         canvas.drawOval(viewRect.toRectF(), backgroundPaint)
-
-        val offsetY = (initialsPaint.descent() + initialsPaint.ascent()) / 2
-        canvas.drawText(initials, viewRect.exactCenterX(), viewRect.exactCenterY() - offsetY, initialsPaint)
     }
 
-    private fun prepareShader(drawable: Drawable) {
+    private fun drawInitials(canvas: Canvas) {
+        canvas.drawText(initials, viewRect.exactCenterX(), viewRect.exactCenterY() - initialsOffsetY, initialsPaint)
+    }
+
+    private fun prepareAvatarShader(drawable: Drawable) {
         val srcBm = drawable.toBitmap()
         avatarPaint.shader = BitmapShader(srcBm, Shader.TileMode.REPEAT, Shader.TileMode.REPEAT)
-        drawInitials = false
-        invalidate()
     }
 
     private fun resolveDefaultSize(spec: Int): Int {
