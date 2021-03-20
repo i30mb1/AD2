@@ -5,19 +5,16 @@ import android.util.AttributeSet
 import android.view.LayoutInflater
 import android.view.MotionEvent
 import android.widget.LinearLayout
-import androidx.databinding.ObservableArrayList
 import n7.ad2.databinding.FingerCoordinateBinding
 
 class FingerCoordinate(context: Context, attrs: AttributeSet) : LinearLayout(context, attrs) {
 
-    private val movementListX: ObservableArrayList<Float> = ObservableArrayList<Float>()
-    private val movementListY: ObservableArrayList<Float> = ObservableArrayList<Float>()
+    private val coordinatesXY = ArrayList<String>().apply { repeat(10) { add("") } }
     private var binding: FingerCoordinateBinding = FingerCoordinateBinding.inflate(LayoutInflater.from(context), this, true)
+    private val builder = StringBuilder(14)
 
     init {
         orientation = VERTICAL
-        movementListX.addAll(arrayOfNulls(10))
-        movementListY.addAll(arrayOfNulls(10))
     }
 
     fun handleGlobalEvent(event: MotionEvent) {
@@ -25,28 +22,30 @@ class FingerCoordinate(context: Context, attrs: AttributeSet) : LinearLayout(con
         var index = event.actionIndex
         var pointerID = event.getPointerId(index)
         when (action) {
-            MotionEvent.ACTION_DOWN, MotionEvent.ACTION_POINTER_DOWN -> {
-                movementListX[pointerID] = event.getX(index)
-                movementListY[pointerID] = event.getY(index)
-            }
-            MotionEvent.ACTION_UP, MotionEvent.ACTION_POINTER_UP, MotionEvent.ACTION_CANCEL -> {
-                movementListX[pointerID] = 0F
-                movementListY[pointerID] = 0F
-            }
+            MotionEvent.ACTION_DOWN, MotionEvent.ACTION_POINTER_DOWN -> setCoordinateForPoint(pointerID, event.getX(index), event.getY(index))
+            MotionEvent.ACTION_UP, MotionEvent.ACTION_POINTER_UP, MotionEvent.ACTION_CANCEL -> coordinatesXY[pointerID] = ""
             MotionEvent.ACTION_MOVE -> {
                 val pointerCount = event.pointerCount
-                var i = 0
-                while (i < pointerCount) {
-                    index = i
+                index = 0
+                while (index < pointerCount) {
                     pointerID = event.getPointerId(index)
-                    movementListX[pointerID] = event.getX(index)
-                    movementListY[pointerID] = event.getY(index)
-                    i++
+                    setCoordinateForPoint(pointerID, event.getX(index), event.getY(index))
+                    index++
                 }
             }
         }
-        binding.arrayX = movementListX
-        binding.arrayY = movementListY
+        binding.coordinates = coordinatesXY
+    }
+
+    private fun setCoordinateForPoint(pointerID: Int, y: Float, x: Float) {
+        builder.clear()
+            .append("x[")
+            .append(x.toInt())
+            .append("]y[")
+            .append(y.toInt())
+            .append("]")
+
+        coordinatesXY[pointerID] = builder.toString()
     }
 
 }
