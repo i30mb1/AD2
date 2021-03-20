@@ -56,7 +56,7 @@ class HeroGuideWorker(
     override suspend fun doWork(): Result = coroutineScope {
         (context as MyApplication).component.inject(this@HeroGuideWorker)
 
-        startForegroundIfNotificationEnabled()
+//        startForegroundIfNotificationEnabled()
 
         val heroName = inputData.getString(HERO_NAME)!!
 
