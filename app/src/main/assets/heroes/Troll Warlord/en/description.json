@@ -116,7 +116,7 @@
       "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/f\/fc\/Troll_Warlord_Whirling_Axes_%28Melee%29_1.mp3\/revision\/latest?cb=20191216025518",
       "effects": [
         "Ability No Target",
-        "Affects Enemies",
+        "Affects Enemies (TagAghanim Self)",
         "Damage Magical"
       ],
       "notes": [
@@ -195,7 +195,7 @@
       "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/6\/6f\/Troll_Warlord_Battle_Trance_1.mp3\/revision\/latest?cb=20191216025526",
       "effects": [
         "Ability No Target",
-        "Affects Self"
+        "Affects Self (TagAghanim Allied Heroes)"
       ],
       "notes": [
         "Battle Trance interrupts Troll Warlord's channeling spells upon cast.",

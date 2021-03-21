@@ -140,7 +140,7 @@
         "The closer the units are to the center, the stronger they get pulled to the center, with almost no pull, but only rotation at max distance.",
         "Can pull affected units over impassable terrain and through trees without destroying them.",
         "Units inside Black Hole can be pulled out by various spells. Force Staff, Hurricane Pike, Snowball and Geomagnetic Grip cannot move units out of Black Hole.",
-        "The pull and disable are provided by an aura, which lingers for seconds, or until the channeling stops, whichever is shorter.",
+        "The pull and disable are provided by an aura, which lingers for 0.5 seconds, or until the channeling stops, whichever is shorter.",
         "Deals damage in 1 second intervals, starting 1 second after cast, resulting in 4 instances.",
         "Can deal up to 400\/600\/800 (TagTalent + 19%\/22%\/25%\/28% of maximum health) damage (before reductions).",
         "Does not affect wards or buildings. Fully affects couriers.",

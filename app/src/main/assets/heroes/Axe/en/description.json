@@ -107,7 +107,7 @@
       "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/8\/8e\/Axe_Counter_Helix.mp3\/revision\/latest?cb=20191216010823",
       "effects": [
         "Ability Passive",
-        "Affects Enemies",
+        "Affects Enemies (TagAghanim Self)",
         "Damage Pure"
       ],
       "notes": [
@@ -149,8 +149,8 @@
       "notes": [
         "When the target's health is above the threshold, it only applies its regular damage (magical) and plays a different sound. Even when the target dies to the regular damage (possible with damage amplifications), the other effects of Culling Blade are not applied.",
         "Even when the target dies to the regular damage (possible with damage amplifications), the other effects of Culling Blade are not applied.",
-        "When the target's health is below the threshold, it does the following: It deals damage to the target equal to the health threshold value, in the form of pure damage (flagged as HP Removal). It applies the speed bonus to Axe and nearby allies. If the target was a hero, clone or illusion, its cooldown gets reset.",
-        "It deals damage to the target equal to the health threshold value, in the form of pure damage (flagged as HP Removal).",
+        "When the target's health is below the threshold, it does the following: It deals pure damage to the target equal to the health threshold value (flagged as HP Removal). It applies the speed bonus to Axe and nearby allies. If the target was a hero, clone or illusion, its cooldown gets reset.",
+        "It deals pure damage to the target equal to the health threshold value (flagged as HP Removal).",
         "It applies the speed bonus to Axe and nearby allies.",
         "If the target was a hero, clone or illusion, its cooldown gets reset.",
         "The target's health is checked upon reaching the cast point, so if it gained health during that time so it exceeds the health threshold, the cull fails.",

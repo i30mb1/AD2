@@ -975,7 +975,10 @@
       },
       {
         "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/2\/2f\/Vo_ogre_magi_ogmag_item_03.mp3\/revision\/latest?cb=20191220000539",
-        "title": "[[\u200E|20px|link=Bloodstone| ]] Bloodstone!"
+        "title": "Bloodstone!",
+        "icons": [
+          "items\/Bloodstone\/full.webp"
+        ]
       },
       {
         "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/9\/9d\/Vo_ogre_magi_ogmag_immort_01.mp3\/revision\/latest?cb=20191220000528",

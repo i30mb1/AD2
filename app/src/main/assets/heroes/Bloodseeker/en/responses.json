@@ -707,7 +707,10 @@
       },
       {
         "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/1\/15\/Vo_bloodseeker_blod_purch_04.mp3\/revision\/latest?cb=20201010175856",
-        "title": "[[\u200E|20px|link=Bloodstone| ]] I'm only buying this because it has blood in it."
+        "title": "I'm only buying this because it has blood in it.",
+        "icons": [
+          "items\/Bloodstone\/full.webp"
+        ]
       },
       {
         "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/c\/cc\/Vo_bloodseeker_blod_purch_scepter_01.mp3\/revision\/latest?cb=20201010175859",

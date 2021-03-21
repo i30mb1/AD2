@@ -86,7 +86,7 @@
       "mana": "100\/110\/120\/130",
       "hotKey": "W",
       "cooldown": "30\/25\/20\/15",
-      "description": "Applies a magical frost shield around the target, reducing damage from attacks against you. While the shield is active, ice magic will affect nearby enemy units every 20\/30\/40\/50 second, dealing minor damage and slowing them.",
+      "description": "Applies a magical frost shield around the target, reducing damage from attacks against you. While the shield is active, ice magic will affect nearby enemy units every 1 second, dealing minor damage and slowing them.",
       "spellName": "Frost Shield",
       "params": [
         "Cast Animation: 0.2+0.93",
@@ -200,6 +200,7 @@
         "Level 1: 350 \/ 365 \/ 380 \/ 395 \/ 410 \/ 425 \/ 440 \/ 455 \/ 470 \/ 485 \/ 500",
         "Level 2: 500 \/ 520 \/ 540 \/ 560 \/ 580 \/ 600 \/ 620 \/ 640 \/ 660 \/ 680 \/ 700",
         "Level 3: 650 \/ 675 \/ 700 \/ 725 \/ 750 \/ 775 \/ 800 \/ 825 \/ 850 \/ 875 \/ 900",
+        "Can potentially deal up to 3575\/5500\/7425 (TagTalent 4675\/6600\/8525) damage total if all bounces hit (before reductions).",
         "The projectile has 800 range flying vision. The vision is not provided during the 0.2 second bounce delay.",
         "Chain Frost stops providing vision and stops playing a sound upon hitting non-hero units when bouncing more than 60 times."
       ],

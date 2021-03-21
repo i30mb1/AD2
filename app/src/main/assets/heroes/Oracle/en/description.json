@@ -120,8 +120,8 @@
         "Damage Magical"
       ],
       "notes": [
-        "The damage is applied instantly upon cast, followed by the heal over time. The damage is lethal to enemies, but not to allies. Cannot be cast on allies who have □ Disabled Help from Oracle. ↓↓ Double-tapping automatically targets self.",
-        "Cannot be cast on allies who have □ Disabled Help from Oracle.",
+        "The damage is applied instantly upon cast, followed by the heal over time. The damage is lethal to enemies, but not to allies. Cannot be cast on allies who have ☐ Disabled Help from Oracle. ↓↓ Double-tapping automatically targets self.",
+        "Cannot be cast on allies who have ☐ Disabled Help from Oracle.",
         "↓↓ Double-tapping automatically targets self.",
         "Heals in 1 second intervals, starting 1 second after cast, resulting in 9 instances of heal.",
         "Can heal up to 99\/198\/297\/396 health per cast, 9\/18\/27\/36 (TagTalent 54\/108\/162\/216) when considering the initial damage before reductions.",
@@ -176,7 +176,7 @@
         "If the target is invulnerable as False Promise expires, the delayed heal and damage wait for it to become vulnerable again.",
         "Successive casts on the same target do not stack, but refresh the duration. The blocked heal and damage counters are not reset.",
         "If the accumulated damage exceeds the accumulated heal, the orb above the target glows red and emits fire, indicating it will receive damage.",
-        "With Aghanim's Shard, grants the target invisibility with a -second fade delay. Attacking or casting spells or items breaks the invisibility and resets the fade delay.",
+        "With Aghanim's Shard, grants the target invisibility with a 0.3-second fade delay. Attacking or casting spells or items breaks the invisibility and resets the fade delay.",
         "Attacking or casting spells or items breaks the invisibility and resets the fade delay."
       ],
       "mana": "100\/150\/200",

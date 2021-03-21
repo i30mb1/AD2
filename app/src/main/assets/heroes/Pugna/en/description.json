@@ -50,7 +50,7 @@
         "Blast Radius: 400",
         "Effect Delay: 0.9",
         "Damage: 100\/175\/250\/325 (TagTalent 260\/335\/410\/485)",
-        "Damage Against Buildings: 50%"
+        "Building Damage Percentage: 50%"
       ],
       "itemBehaviour": [],
       "legacyKey": "B",

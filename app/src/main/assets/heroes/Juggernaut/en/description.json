@@ -68,7 +68,7 @@
         "Move Speed Bonus: 100",
         "Instant Attack Damage: 75%",
         "Instant Attack Interval: 1",
-        "Increases movement speed during Blade Fury by and attacks a random nearby unit once per second dealing 1 damage."
+        "Increases movement speed during Blade Fury by and attacks a random nearby unit once per second dealing 75% damage."
       ],
       "itemBehaviour": [],
       "legacyKey": "F",
@@ -175,9 +175,8 @@
         "The slash interval equals Juggernaut's current attack rate, divided by 1.6. This means the maximum possible interval for Omnislash is 4.38 and the minimum is 0.13, considering minimum and maximum possible attack speeds. The interval is not set on cast. On each slash, the interval updates based on his current attack rate.",
         "This means the maximum possible interval for Omnislash is 4.38 and the minimum is 0.13, considering minimum and maximum possible attack speeds.",
         "The interval is not set on cast. On each slash, the interval updates based on his current attack rate.",
-        "Causes Juggernaut to perform instant attacks on enemies he slashes. These instant attacks are allowed to trigger attack modifiers normally. The instant attacks ignore disarms, but do not have True Strike.",
-        "These instant attacks are allowed to trigger attack modifiers normally.",
-        "The instant attacks ignore disarms, but do not have True Strike.",
+        "Causes Juggernaut to perform instant attacks on enemies he slashes. These instant attacks can proc any attack modifiers and on-hit effects normally. They do not have True Strike, but completely ignore disarms.",
+        "These instant attacks can proc any attack modifiers and on-hit effects normally. They do not have True Strike, but completely ignore disarms.",
         "Can neither target nor jump on wards, couriers and buildings.",
         "Can jump on invulnerable units, however, since Juggernaut attacks the targets, invulnerable (and ethereal) targets take no damage.",
         "Cannot jump on units in the fog of war, invisible or hidden units, Tombstone Undying Zombie and on Astral Spirit.",
@@ -204,7 +203,7 @@
         "Attack Damage Bonus: 30\/40\/50",
         "Attack Speed Bonus: 40",
         "Duration: 3\/3.25\/3.5 (TagTalent 4\/4.25\/4.5)",
-        "Grants a new ability: Swift Slash.",
+        "Grants a new ability: Swiftslash.",
         "Only the very first slash of the cast is blocked."
       ],
       "itemBehaviour": [],

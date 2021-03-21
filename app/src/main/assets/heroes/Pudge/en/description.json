@@ -121,8 +121,8 @@
         "Does not grant strength if the dying hero has Reincarnation, or is an illusion or Tempest Double, or if Pudge is dead as the kill happens. Does grant strength for Meepo Clones, but only one stack, regardless of how many clones were nearby.",
         "Does grant strength for Meepo Clones, but only one stack, regardless of how many clones were nearby.",
         "To gain strength from outside the vicinity radius, Pudge has to make the killing blow himself. His summons or illusions do not count.",
-        "Each stack effectively grants 30\/40\/50\/60 health, 0.15\/0.2\/0.25\/0.3 health regeneration, and 1.5\/2\/2.5\/3 attack damage. The talent increases these to 60\/70\/80\/90 health, 0.3\/0.35\/0.4\/0.45 health regen, and 3\/3.5\/4\/4.5 attack damage.",
-        "The talent increases these to 60\/70\/80\/90 health, 0.3\/0.35\/0.4\/0.45 health regen, and 3\/3.5\/4\/4.5 attack damage.",
+        "Each stack effectively grants 30\/40\/50\/60 health, 0.15\/0.2\/0.25\/0.3 health regeneration, and 1.5\/2\/2.5\/3 attack damage. The level 25 talent increases these to 60\/70\/80\/90 health, 0.3\/0.35\/0.4\/0.45 health regen, and 3\/3.5\/4\/4.5 attack damage.",
+        "The level 25 talent increases these to 60\/70\/80\/90 health, 0.3\/0.35\/0.4\/0.45 health regen, and 3\/3.5\/4\/4.5 attack damage.",
         "The number of stacks and amount of strength gained can be seen on the status buff icon.",
         "Upon leveling Flesh Heap, all stacks adapt to its new level.",
         "Upon gaining a stack, a +1 appears above Pudge's head, indicating that he gained a stack."

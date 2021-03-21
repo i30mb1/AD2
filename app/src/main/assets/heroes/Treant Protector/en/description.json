@@ -69,7 +69,7 @@
         "Vines Radius: 135",
         "Damage per Second: 30\/40\/50\/60 (TagTalent 54\/64\/74\/84)",
         "Tree Contact Damage Increase: 50%",
-        "Creep Damage Decrease: 50%",
+        "Creep Damage Percentage: 50%",
         "Move Speed Slow: 25%\/30%\/35%\/40%",
         "Vines Duration: 12",
         "Aura Linger Duration: 0.5"
@@ -86,7 +86,7 @@
         "Damage Magical"
       ],
       "notes": [
-        "Deals damage and sends healing projectiles in 400-second intervals, starting 400 seconds after cast, resulting in 5 pulses.",
+        "Deals damage and sends healing projectiles in 1-second intervals, starting 1 second after the cast, resulting in 5 pulses.",
         "Can deal up to 80\/160\/240\/320 (TagTalent 280\/360\/440\/520) damage (before reductions) and heal a single unit for the same amount.",
         "The heal is independent from the damage and always heals for the same amount, regardless of how much damage the target takes.",
         "Healing projectiles travel at a speed of 450.",
@@ -104,7 +104,7 @@
         "Cast Range: 400",
         "Radius: 650",
         "Pulse Interval: 1",
-        "Damage\/Heal per Pulse\/Projectile: 16\/32\/48\/64 (TagTalent 56\/72\/88\/104)",
+        "Damage\/Heal per Pulse: 16\/32\/48\/64 (TagTalent 56\/72\/88\/104)",
         "Move Speed Slow: 8%\/14%\/20%\/26%",
         "Duration: 5",
         "Can heal spell immune allies. Slow persists, attempts to damage and continues to pulse, if debuff was placed before spell immunity and when not dispelled."
@@ -271,7 +271,7 @@
     "attrAgilityInc": 2.0,
     "attrAgility": 15.0
   },
-  "description": "Rooftrellen, the Treant Protector, is a melee strength hero who excels in supporting and strengthening his allies with his beneficial set of spells, which use the power of nature. He is a natural tank, offensively and defensively, having both the highest natural attack damage and the third highest overall strength in the game. Manipulating the power of the plants to his will, he can grant invisibility and stealth to himself with Nature's Guise and move quickier, being a good ganking skill and rather efficient for scouting, provided that he remains within close proximity to a tree. He can use Leech Seed to sap the life from a target, slowing and dealing moderate damage over time to it while nearby allies are replenished by the same amount. His signature Living Armor makes him truly live up his title, as he is able to provide allies and even friendly buildings with increased health regeneration and a massive damage block from anywhere on the map. Finally, his ultimate Overgrowth roots nearby enemies with vines, branches, and roots, it immobilizes them and renders them unable to attack for several crucial seconds while also damaging them over time. Although Rooftrellen is not able to dish out much damage outside of his regular attacks, he is able to provide an enormous amount of defensive utility and survivability to himself and his teammates, thereby planting the seeds for a decisive victory",
+  "description": "Rooftrellen, the Treant Protector, is a melee strength hero who excels in supporting and strengthening his allies with his beneficial set of spells, which use the power of nature. He is a natural tank, offensively and defensively, having both the highest natural attack damage and the third highest overall strength in the game. Manipulating the power of the plants to his will, he can grant invisibility and stealth to himself with Nature's Guise and move quickier, being a good ganking skill and rather efficient for scouting, provided that he remains within close proximity to a tree. He can use Leech Seed to sap the life from a target, slowing and dealing moderate damage over time to it while nearby allies are replenished by the same amount. His signature Living Armor makes him truly live up his title, as he is able to provide allies and even friendly buildings with increased health regeneration and armour from anywhere on the map. Finally, his ultimate Overgrowth roots nearby enemies with vines, branches, and roots, it immobilizes them and renders them unable to attack for several crucial seconds while also damaging them over time. Although Rooftrellen is not able to dish out much damage outside of his regular attacks, he is able to provide an enormous amount of defensive utility and survivability to himself and his teammates, thereby planting the seeds for a decisive victory",
   "history": "Far to the west, in the mountains beyond the Vale of Augury, lie the remains of an ancient power, a fount of eldritch energy nestled deep in the high woods. It is said that the things that grow here, grow strangely. To the forces of nature this is a sacred place, made to stay hidden and unknown. Many are the traps and dangers of this land--all-consuming grasses and crossbred fauna and poisonous flowers--but none are so fierce as the mighty Treant Protectors. These ageless, titanic beings, charged with keeping the peace in this dangerous land, ensure that none within encroach without reason, and none without poach their secrets. For time untold they tended to their holy ground, uninterrupted, only dimly aware of the changing world beyond. Yet inevitably the wider world grew aware of this untamed land, and with each passing winter the outsiders grew bolder. Soon they arrived with tools to cut and with flames to burn, and often the Treants would ponder: who are these fragile, industrious creatures? What now had become of the wild, green world? There came and went an age of questions and of doubts, a thousand summers of long traditions set to scrutiny, while more and more the outsiders died and fed their earth. When all that bloomed had finally finished their stay, curiosity had overcome caution. It was decided: a lone Protector would be sent into the wider world, and instructed to wander until the glaciers arose once more, to observe the changing land and its creatures, and to discover what unknown dangers could threaten their sacred ground.",
   "talents": [
     {

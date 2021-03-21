@@ -143,7 +143,7 @@
       "spellName": "Blur",
       "params": [
         "Cast Animation: 0.4+0.57 (TagAghanim 0+0)",
-        "Evasion: 15%\/25%\/35%\/45% (TagTalent 50%\/60%\/70%\/80%)",
+        "Passive Evasion: 15%\/25%\/35%\/45% (TagTalent 50%\/60%\/70%\/80%)",
         "Vanish Dispel Radius: 600",
         "Vanish Fade Time: 0",
         "Vanish Dispel Delay: 0.5 (TagAghanim 0.75)",

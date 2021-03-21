@@ -1386,7 +1386,10 @@
       },
       {
         "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/3\/3a\/Vo_ember_spirit_embr_items_13.mp3\/revision\/latest?cb=20201011125548",
-        "title": "[[\u200E|20px|link=Bloodstone| ]] Empowered by the Bloodstone!"
+        "title": "Empowered by the Bloodstone!",
+        "icons": [
+          "items\/Bloodstone\/full.webp"
+        ]
       },
       {
         "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/2\/2f\/Vo_ember_spirit_embr_items_14.mp3\/revision\/latest?cb=20201011125549",

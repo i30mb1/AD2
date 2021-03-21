@@ -2989,7 +2989,10 @@
       },
       {
         "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/e\/e5\/Vo_void_spirit_voidspir_item_13.mp3\/revision\/latest?cb=20191202231022",
-        "title": "[[\u200E|20px|link=Bloodstone| ]] Bloodstone"
+        "title": "Bloodstone",
+        "icons": [
+          "items\/Bloodstone\/full.webp"
+        ]
       },
       {
         "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/2\/2d\/Vo_void_spirit_voidspir_item_14.mp3\/revision\/latest?cb=20191202231023",

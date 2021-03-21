@@ -42,8 +42,8 @@
         "This means the Charge of Darkness bonus speed does affect the damage of Greater Bash.",
         "The charge speed is based on his current movement speed. The charge speed checks the movement speed periodically and adapts instantly.",
         "Goes on cooldown once the charge ends or is cancelled, not upon cast.",
-        "The charge indicator above the target, as well as the target buff on the caster are visible to allies only. ALT-clicking the status buff announces in the team chat which hero is being charged.",
-        "ALT-clicking the status buff announces in the team chat which hero is being charged.",
+        "The charge indicator above the target, as well as the target buff on the caster are visible to allies only. Alt+ Left Click the status buff announces in the team chat which hero is being charged.",
+        "Alt+ Left Click the status buff announces in the team chat which hero is being charged.",
         "During Charge of Darkness, Spirit Breaker moves through other units and impassable terrain.",
         "The charge is cancelled when Spirit Breaker gets stunned, cycloned, hexed, rooted, slept, hidden, feared, hypnotized or hit by Forced Movement.",
         "The charge is not cancelled by taunts. Instead, Spirit Breaker starts attacking the taunting unit once the charge stops. Charge of Darkness cannot be manually canceled during taunts.",
@@ -113,7 +113,7 @@
       "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/1\/16\/Spirit_Breaker_Greater_Bash_1.mp3\/revision\/latest?cb=20191216024523",
       "effects": [
         "Ability Passive",
-        "Affects Enemies \/ Self",
+        "Affects Enemies",
         "Damage Magical"
       ],
       "notes": [

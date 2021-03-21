@@ -35,9 +35,9 @@
         "Affects Enemy Heroes \/ Allied Heroes"
       ],
       "notes": [
-        "Disruption fully disables the target and turns it invulnerable and hidden for its duration. ↓↓ Double-tapping automatically targets self. Cannot be cast on allies who have □ Disabled Help from Shadow Demon.",
+        "Disruption fully disables the target and turns it invulnerable and hidden for its duration. ↓↓ Double-tapping automatically targets self. Cannot be cast on allies who have ☐ Disabled Help from Shadow Demon.",
         "↓↓ Double-tapping automatically targets self.",
-        "Cannot be cast on allies who have □ Disabled Help from Shadow Demon.",
+        "Cannot be cast on allies who have ☐ Disabled Help from Shadow Demon.",
         "When the target turns invisible during Disruption, the visual effects turn invisible as well.",
         "Always creates the illusions, even when cast on allies or self.",
         "The targeted unit's position is not shuffled with the possible illusion's position. It always reappears between the 2 illusions. The illusions spawn 108 range away from the hero if the hero has a collision size of 24, and 72 if the collision size is 8. Each illusion appears either north, east, south or west from the hero and face the same direction as the hero does.",

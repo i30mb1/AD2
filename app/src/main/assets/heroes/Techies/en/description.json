@@ -129,7 +129,7 @@
         "Damage Magical (TagAghanimHP Removal)"
       ],
       "notes": [
-        "The leap always takes 4\/5\/6\/7 seconds, so the horizontal speed varies between 0 and 1333.33.",
+        "The leap always takes 0.75 seconds, so the horizontal speed varies between 0 and 1333.33.",
         "Leaps in an arc up to 281.108 range high, so that other units can pass below them.",
         "The self damage is lethal, so that Techies can deny themselves with this ability.",
         "The self damage is magic damage flagged as HP Removal and therefore ignores most sources of damage manipulation (except for magic resistance and magical damage barriers). Borrowed Time, Aphotic Shield, Ghostship, and False Promise are the only ones able to interact with the self damage. Shallow Grave prevents dying to the self damage.",
@@ -145,7 +145,7 @@
       "mana": "100\/125\/150\/175",
       "hotKey": "E",
       "cooldown": "35 (TagTalent 13)",
-      "description": "Techies hurtle themselves into the enemy's midst, detonating charges upon impact which deal massive area of effect damage and silence enemies. Upon landing, the assault deals Techies damage equal to 300\/400\/500\/600 of their max health.",
+      "description": "Techies hurtle themselves into the enemy's midst, detonating charges upon impact which deal massive area of effect damage and silence enemies. Upon landing, the assault deals Techies damage equal to 50% of their max health.",
       "spellName": "Blast Off!",
       "params": [
         "Cast Animation: 1+0.9",

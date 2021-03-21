@@ -4918,7 +4918,10 @@
       },
       {
         "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/5\/59\/Vo_mars_mars_item_61.mp3\/revision\/latest?cb=20201017100837",
-        "title": "[[\u200E|20px|link=Bloodstone| ]] Bloodstone."
+        "title": "Bloodstone.",
+        "icons": [
+          "items\/Bloodstone\/full.webp"
+        ]
       },
       {
         "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/0\/09\/Vo_mars_mars_item_62.mp3\/revision\/latest?cb=20201017100840",

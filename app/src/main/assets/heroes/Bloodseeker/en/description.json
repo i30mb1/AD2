@@ -61,7 +61,7 @@
         "Cast Animation: 0+0\/0.5",
         "Default Cast Range: 800",
         "Buffer Cast Range: 1050",
-        "Max Health as Cost Per Second: 2%",
+        "Max Health as Cost per Second: 2%",
         "Self Attack Speed Bonus: 60\/90\/120\/150 (TagTalent 90\/120\/150\/180)",
         "Allied Attack Speed Bonus: 30\/45\/60\/75 (TagTalent 45\/60\/75\/90)",
         "Outgoing Spell Damage Amplification: 15%\/20%\/25%\/30%",
@@ -113,7 +113,7 @@
         "Affects Self \/ Enemies"
       ],
       "notes": [
-        "Learning Thirst removes the 550 movement speed cap for Bloodseeker.",
+        "Learning Thirst unlocks maximum movement speed and removes the 550 movement speed cap for Bloodseeker.",
         "The first stack is applied when an enemy hero is below 75% health and the last when below 26%.",
         "Grants 0.28%\/0.48%\/0.68%\/0.88% (TagTalent 0.56%\/0.76%\/0.96%\/1.16%) movement speed for each percent of missing health between 75% and 25%. However, since the HUD does not show decimals, movement speed increases by 1% for every missing 3.57%\/2.08%\/1.47%\/1.14% (TagTalent 1.79%\/1.32%\/1.04%\/0.86%) health.",
         "However, since the HUD does not show decimals, movement speed increases by 1% for every missing 3.57%\/2.08%\/1.47%\/1.14% (TagTalent 1.79%\/1.32%\/1.04%\/0.86%) health.",

@@ -115,8 +115,9 @@
       ],
       "notes": [
         "Flak Cannon interrupts Gyrocopter's channeling spells upon cast.",
-        "Causes Gyrocopter to perform instant attacks on all nearby enemies whenever he launches an attack projectile. The instant attacks of Flak Cannot do not trigger attack modifier or any on-hit effects.",
-        "The instant attacks of Flak Cannot do not trigger attack modifier or any on-hit effects.",
+        "Causes Gyrocopter to perform instant attacks on all nearby enemies whenever he launches an attack projectile. The instant attacks of Flak Cannon do not trigger attack modifier or any on-hit effects. These attacks do not have True Strike, and they are affected by disarms.",
+        "The instant attacks of Flak Cannon do not trigger attack modifier or any on-hit effects.",
+        "These attacks do not have True Strike, and they are affected by disarms.",
         "The projectiles from the instant attacks travel at a speed of 800.",
         "The flaks have no count limit. All valid nearby targets get targeted. The primary attack target is not affected by Flak Cannon. It is only hit by the primary attack. Does not target couriers, wards, buildings, invisible units, or units inside the Fog of War. However, attacking couriers, wards, buildings, or allied units still causes flaks to hit all valid targets within the radius.",
         "The primary attack target is not affected by Flak Cannon. It is only hit by the primary attack.",
@@ -130,7 +131,7 @@
         "Does not target wards, couriers, and attack immune enemies, but does target buildings. Only targets units Gyrocopter has vision over.",
         "The Side Gunner does not attack when Gyrocopter is hidden or invisible.",
         "However, the gunner ignores fade times and fade delays of spells. It only does not attack when fully invisible.",
-        "Flak Cannot does not need to learned to unlock the Side Gunner. It works even at ability level 0.",
+        "Flak Cannon does not need to learned to unlock the Side Gunner. It works even at ability level 0.",
         "Side Gunner is only available to Gyrocopter. Other heroes such as Morphling and Rubick who get hold on Flak Cannon cannot unlock the Side Gunner. In Ability Draft, it is available to anyone who drafts Flak Cannon, but needs to be leveled at least once to work.",
         "In Ability Draft, it is available to anyone who drafts Flak Cannon, but needs to be leveled at least once to work."
       ],

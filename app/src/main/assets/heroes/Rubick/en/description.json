@@ -46,6 +46,7 @@
         "When the lift ends prematurely, the lifted unit instantly lands and applies the area stun.",
         "Destroys trees within 325 radius of the lifted target upon landing.",
         "Cannot lift Roshan, he will be stunned for the lift duration instead.",
+        "Casting Telekinesis on units affected by Black Hole, Chronosphere, or Duel does nothing, wasting the mana and cooldown.",
         "With Aghanim's Shard, uses the reduced cooldown when targeting self or allies, and the regular cooldown when targeting enemies. ↓↓ Double-tapping automatically targets self.",
         "↓↓ Double-tapping automatically targets self.",
         "Has the following cast ranges when combined with Arcane Supremacy: Level 1: 650\/700\/750\/800 (TagTalent 750\/800\/850\/900) Level 2: 675\/725\/775\/825 (TagTalent 775\/825\/875\/925) Level 3: 700\/750\/800\/850 (TagTalent 800\/850\/900\/950) Level 4: 725\/775\/825\/875 (TagTalent 825\/875\/925\/975)",
@@ -108,7 +109,7 @@
       "audioUrl": null,
       "effects": [
         "Ability Target Area",
-        "Affects Enemies"
+        "Affects Enemies \/ Allies"
       ],
       "notes": [
         "Requires Aghanim's Shard to be unlocked.",

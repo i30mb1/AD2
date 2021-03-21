@@ -150,7 +150,7 @@
         "Last Word does trigger on Phase Shift. However, it only applies its effects when Phase Shift is canceled by the player prematurely.",
         "When the initial debuff expires, it still damages and silences the target.",
         "If the target has no intelligence, only the base damage is applied.",
-        "The curse first applies the debuffs, then the damage.",
+        "The curse first applies the debuff, then the damage.",
         "Grants shared vision as long as the 3\/4\/5\/6 second initial debuff is on.",
         "With Aghanim's Scepter, Last Word turns into an area-targeted spell, and it cannot directly target units anymore."
       ],

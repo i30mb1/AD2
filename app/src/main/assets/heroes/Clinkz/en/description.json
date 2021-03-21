@@ -68,9 +68,9 @@
         "This also means that it fully works with spell damage amplification and spell lifesteal.",
         "Can be cast on buildings but not on wards and allied units.",
         "Choosing the damage upgrading talent immediately upgrades all of Clinkz's currently flying Searing Arrows.",
-        "When choosing the level 25 talent, whenever Searing Arrows is used, a different random target within its cast range is also targeted by a second Searing Arrow. Causes Clinkz to perform an instant attack on the chosen target whenever he launches a Searing Arrow. This instant attack can proc any attack modifier or on-hit effect like a regular attack. Since it uses the spell's cast range, effects which increase its cast range increase the secondary arrows' range as well. The secondary arrow has no target priorities. It simply chooses a random valid target within cast range. Since Searing Arrows affects buildings, the secondary arrows can target buildings as well.",
+        "When choosing the level 25 talent, whenever Searing Arrows is used, a different random target within its cast range is also targeted by a second Searing Arrow. Causes Clinkz to perform an instant attack on the chosen target whenever he launches a Searing Arrow. These instant attacks can proc any attack modifiers and on-hit effects normally. They do not have True Strike. Since it uses the spell's cast range, effects which increase its cast range increase the secondary arrows' range as well. The secondary arrow has no target priorities. It simply chooses a random valid target within cast range. Since Searing Arrows affects buildings, the secondary arrows can target buildings as well.",
         "Causes Clinkz to perform an instant attack on the chosen target whenever he launches a Searing Arrow.",
-        "This instant attack can proc any attack modifier or on-hit effect like a regular attack.",
+        "These instant attacks can proc any attack modifiers and on-hit effects normally. They do not have True Strike.",
         "Since it uses the spell's cast range, effects which increase its cast range increase the secondary arrows' range as well.",
         "The secondary arrow has no target priorities. It simply chooses a random valid target within cast range.",
         "Since Searing Arrows affects buildings, the secondary arrows can target buildings as well."

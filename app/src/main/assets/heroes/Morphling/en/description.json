@@ -44,8 +44,8 @@
         "Can hit units up to 900\/1000\/1100\/1200 (TagTalent 1175\/1275\/1375\/1475) distance away (travel distance + radius).",
         "Morphling can turn, attack, cast abilities, and use items during Waveform.",
         "Does not travel the full distance, when targeting closer than the max distance.",
-        "When the level 20 talent is chosen, Morphling performs instant attacks on every enemy hit by Waveform. These instant attacks can proc every attack modifier normally. The attacks have no True Strike, but completely ignore disarms.",
-        "These instant attacks can proc every attack modifier normally. The attacks have no True Strike, but completely ignore disarms."
+        "When the level 20 talent is chosen, Morphling performs instant attacks on every enemy hit by Waveform. These instant attacks can proc any attack modifiers and on-hit effects normally. They do not have True Strike, but completely ignore disarms.",
+        "These instant attacks can proc any attack modifiers and on-hit effects normally. They do not have True Strike, but completely ignore disarms."
       ],
       "mana": "150\/155\/160\/165",
       "hotKey": "Q",

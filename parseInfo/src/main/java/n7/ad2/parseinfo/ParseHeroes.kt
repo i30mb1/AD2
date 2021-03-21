@@ -236,7 +236,7 @@ class ParseHeroes private constructor(
         val root = connectTo(heroUrlEng)
 
         if (loadHeroFullImage) loadHeroImageFull(root, heroDirectory)
-        if (true) loadHeroImageMinimap(root, heroDirectory)
+        if (loadHeroFullImage) loadHeroImageMinimap(root, heroDirectory)
         loadHeroInformation(root, heroLocalizedDirectory)
     }
 
@@ -501,8 +501,8 @@ class ParseHeroes private constructor(
 
 fun main() = runBlocking {
     parser {
-        loadRusDescription = false
-        loadEngDescription = false
+        loadRusDescription = true
+        loadEngDescription = true
         loadRusResponses = true
         loadEngResponses = true
         loadHeroFullImage = false

@@ -182,7 +182,7 @@
         "Provides flying vision and True Sight over the whole affected area for its duration.",
         "Affected units are stunned. When other units walk inside the area, they also get affected for its remaining duration.",
         "Cancels most sources of Forced Movement upon applying the disabling debuff on a unit.",
-        "Units inside Chronosphere can be pulled out by various spells. Force Staff, Hurricane Pike, Psychic Headband, Snowball and Geomagnetic Grip cannot move units out of Chronosphere.",
+        "Units inside Chronosphere can be pulled out by various spells. Force Staff, Hurricane Pike, Psychic Headband, Telekinesis, Snowball and Geomagnetic Grip cannot move units out of Chronosphere.",
         "Despite its visual effects, the effective area is a cylinder not a sphere."
       ],
       "mana": "150\/225\/300",

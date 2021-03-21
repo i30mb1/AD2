@@ -189,7 +189,7 @@
         "Radius: 1600",
         "Effect Delay: 0.6",
         "Metamorphosis Duration: 10",
-        "Fear Duration: 3.75"
+        "Fear Duration: 2.5"
       ],
       "itemBehaviour": [],
       "legacyKey": "D",
@@ -219,7 +219,7 @@
         "Min Health: 35%\/30%\/25%",
         "Grants a new ability: Terror Wave.",
         "Grants a new ability: Demon Zeal.",
-        "Can be cast on spell immune allies. Cannot be cast on spell immune enemies. When reflected, pierces spell immunity."
+        "Can be cast on spell immune allies. Cannot be cast on spell immune enemies. When reflected, pierces spell immunity [?]."
       ],
       "itemBehaviour": [],
       "legacyKey": "R",

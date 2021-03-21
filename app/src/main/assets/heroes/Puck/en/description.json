@@ -96,7 +96,7 @@
         "Damage Magical"
       ],
       "notes": [
-        "Double-clicking the ability automatically targets 25 range in front of Puck.",
+        "↓↓ Double-tapping automatically targets 25 range in front of Puck.",
         "Does not disjoint projectiles upon cast.",
         "Despite the visual effects, the silence and damage are applied instantly in the entire radius.",
         "Waning Rift first applies the damage, then the silence debuff (TagTalent then the knockback, then the True Sight debuff).",
@@ -142,9 +142,10 @@
         "Turns the caster invulnerable and hidden for its duration.",
         "Does not provide phased movement, so the caster can still block other units during Phase Shift.",
         "The buff lingers for one server tick once the channeling ends or is interrupted, which allows using items while still invulnerable and hidden.",
-        "When the level 15 talent is chosen, the caster performs instant attacks on all enemies within attack range, plus 200. These attacks can proc any attack modifier and on hit effects normally. Every visible and attackable enemy nearby is attacked. This includes buildings, but not wards and Undying Zombies.",
-        "These attacks can proc any attack modifier and on hit effects normally.",
-        "Every visible and attackable enemy nearby is attacked. This includes buildings, but not wards and Undying Zombies."
+        "When the level 15 talent is chosen, the caster performs instant attacks on all enemies within attack range, plus 200. These instant attacks can proc any attack modifiers and on-hit effects normally. They do not have True Strike, but completely ignore disarms. Every visible and attackable enemy nearby is attacked. This includes buildings, but not wards and Undying Zombies. The total instant attack radius is 750, assuming Puck's basic attack range and no other sources of attack range increase.",
+        "These instant attacks can proc any attack modifiers and on-hit effects normally. They do not have True Strike, but completely ignore disarms.",
+        "Every visible and attackable enemy nearby is attacked. This includes buildings, but not wards and Undying Zombies.",
+        "The total instant attack radius is 750, assuming Puck's basic attack range and no other sources of attack range increase."
       ],
       "mana": null,
       "hotKey": "E",
@@ -175,10 +176,10 @@
         "The leash snap first applies the damage, then the debuff.",
         "Dream Coil leashes invisible units and on units in the fog of war as well, but it does not provide vision over them. The link visually draws to their last known location.",
         "Multiple instances of Dream Coil fully stack, with each cast placing its own separate leash.",
-        "When the level 25 talent is chosen, the caster performs instant attacks on all leashed enemies, as long as Puck stays within 775 radius of the targeted area. These attacks can proc any attack modifier and on hit effects normally. The attacks are performed even while the caster is disabled, or hidden. This means the attacks happen even during Phase Shift. Since the rapid fire is bound to the leash, snapping it, or dispelling it with spell immunity causes the attacks to stop. Multiple instances of Dream Coil on enemies causes the caster to attack multiple times, for each instance, with the interval based on when the debuffs were received.",
-        "These attacks can proc any attack modifier and on hit effects normally.",
+        "When the level 25 talent is chosen, the caster performs instant attacks on all leashed enemies, as long as Puck stays within 775 radius of the targeted area. These instant attacks can proc any attack modifiers and on-hit effects normally. They do not have True Strike, but completely ignore disarms. The attacks are performed even while the caster is disabled, or hidden. This means the attacks happen even during Phase Shift. Since Rapid Fire is bound to the leash, snapping it, or dispelling it with spell immunity causes the attacks to stop. Multiple instances of Dream Coil on enemies causes the caster to attack multiple times, for each instance, with the interval based on when the debuffs were received.",
+        "These instant attacks can proc any attack modifiers and on-hit effects normally. They do not have True Strike, but completely ignore disarms.",
         "The attacks are performed even while the caster is disabled, or hidden. This means the attacks happen even during Phase Shift.",
-        "Since the rapid fire is bound to the leash, snapping it, or dispelling it with spell immunity causes the attacks to stop.",
+        "Since Rapid Fire is bound to the leash, snapping it, or dispelling it with spell immunity causes the attacks to stop.",
         "Multiple instances of Dream Coil on enemies causes the caster to attack multiple times, for each instance, with the interval based on when the debuffs were received."
       ],
       "mana": "100\/150\/200",

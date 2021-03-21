@@ -159,7 +159,7 @@
         "Cast Animation: 0.1+0.67",
         "Cast Range: 900",
         "Damage per Second: 75",
-        "Duration: 2.5"
+        "Root Duration: 2.5"
       ],
       "itemBehaviour": [],
       "legacyKey": "D",
@@ -238,7 +238,7 @@
         "Damage per Second: 8",
         "Move Speed Slow: 8%",
         "Hero Duration: 2",
-        "Creep Duration: 6"
+        "Non-Hero Duration: 6"
       ],
       "itemBehaviour": [],
       "legacyKey": null,

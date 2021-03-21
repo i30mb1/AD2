@@ -165,7 +165,8 @@
         "For each 10 distance moved, the slow value increases by 1.5%\/2%\/2.5%\/3%.",
         "On each check, it compares the target's current position with its position on the last check and updates the slow value if the accumulated distance exceeds 10.",
         "If the target moved a distance greater than 1300 between a check, the slow value is not increased.",
-        "This is how strong the movement speed slow is when the affected unit travels certain distances: 300 Distance: 12%\/16.5%\/21%\/25.5% movement speed. 600 Distance: 24%\/33%\/42%\/51% movement speed. 900 Distance: 36%\/49.5%\/63%\/76.5% movement speed. 1200 Distance: 48%\/66%\/84%\/102% movement speed. 1500 Distance: 60%\/82.5%\/105%\/127.5% movement speed.",
+        "This is how strong the movement speed slow is when the affected unit travels certain distances: 100 Distance: 4%\/5.5%\/7%\/8.5% movement speed. 300 Distance: 12%\/16.5%\/21%\/25.5% movement speed. 600 Distance: 24%\/33%\/42%\/51% movement speed. 900 Distance: 36%\/49.5%\/63%\/76.5% movement speed. 1200 Distance: 48%\/66%\/84%\/102% movement speed. 1500 Distance: 60%\/82.5%\/105%\/127.5% movement speed.",
+        "100 Distance: 4%\/5.5%\/7%\/8.5% movement speed.",
         "300 Distance: 12%\/16.5%\/21%\/25.5% movement speed.",
         "600 Distance: 24%\/33%\/42%\/51% movement speed.",
         "900 Distance: 36%\/49.5%\/63%\/76.5% movement speed.",
@@ -188,7 +189,7 @@
         "Cast Animation: 0.2+1.24",
         "Cast Range: 700\/750\/800\/850 (TagTalent 900\/950\/1000\/1050)",
         "Magic Resistance Reduction: 15%\/20%\/25%\/30%",
-        "Move Speed Slow per 100 Moved Distance: 4%\/5.5%\/7%\/8.5%",
+        "Moved Distance as Move Speed Slow: 4%\/5.5%\/7%\/8.5%",
         "Duration: 7"
       ],
       "itemBehaviour": [],

@@ -64,7 +64,7 @@
       "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/8\/8f\/Enchantress_Enchant_1.mp3\/revision\/latest?cb=20191216013612",
       "effects": [
         "Ability Target Unit",
-        "Affects Enemy Units \/ Enemy Heroes"
+        "Affects Enemies"
       ],
       "notes": [
         "Casting Enchant on heroes (including clones and the Vengeance Aura illusion) or creep-heroes slows them and applies a basic dispel on them (long sound is played).",

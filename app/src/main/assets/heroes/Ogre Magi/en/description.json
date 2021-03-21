@@ -5,7 +5,7 @@
         "The health talent increases maximum health capacity, and keeps the current health percentage.",
         "This attack damage talent is added as raw attack damage, so it does not benefit illusions, and is not affected by most percentage-based damage increasing or reducing effects.",
         "The strength talent effectively grants Ogre Magi 600 health and 3 health regeneration.",
-        "Bash from talents is not disabled by Break. For more information, see bash."
+        "Bash from talents pierces spell immunity and is not disabled by Break. For more information, see bash."
       ],
       "spellName": "Talent",
       "talents": [

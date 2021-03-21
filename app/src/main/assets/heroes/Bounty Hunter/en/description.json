@@ -136,7 +136,7 @@
       "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/2\/2a\/Bounty_Hunter_Track.mp3\/revision\/latest?cb=20191216011326",
       "effects": [
         "Ability Target Unit",
-        "Affects Enemy Heroes"
+        "Affects Enemy Heroes \/ Allied Heroes"
       ],
       "notes": [
         "Despite the visual effect, the Track debuff is applied instantly on the target.",

@@ -2169,12 +2169,18 @@
       },
       {
         "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/3\/38\/Vo_undying_undying_items_04.mp3\/revision\/latest?cb=20201022204033",
-        "title": "[[\u200E|20px|link=Bloodstone| ]] Bloodstone."
+        "title": "Bloodstone.",
+        "icons": [
+          "items\/Bloodstone\/full.webp"
+        ]
       },
       {
         "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/a\/ad\/Vo_undying_undying_big_items_04.mp3\/revision\/latest?cb=20201022203050",
         "isArcane": true,
-        "title": "[[\u200E|20px|link=Bloodstone| ]] Bloodstone."
+        "icons": [
+          "items\/Bloodstone\/full.webp"
+        ],
+        "title": "Bloodstone."
       },
       {
         "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/0\/0e\/Vo_undying_undying_items_05.mp3\/revision\/latest?cb=20201022204035",

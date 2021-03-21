@@ -35,7 +35,7 @@
       "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/a\/ad\/Io_Tether_1.mp3\/revision\/latest?cb=20191216014349",
       "effects": [
         "Ability Target Unit",
-        "Affects Allies",
+        "Affects Allies (TagAghanim Enemies)",
         "Damage Instant Attack (TagAghanim Magical)"
       ],
       "notes": [
@@ -50,7 +50,7 @@
         "Taunts, leashes, and silences do not interrupt the pulling.",
         "If the distance between Io and the target gets greater than 900 (or 2150 during the pull), the Tether breaks.",
         "When the distance between Io and the tethered target gets greater than 700, the link's visual appearance changes.",
-        "Tether has no set duration. It breaks only when exceeding the break distances, when Io or the target die, when Io gets assimilated or when using the sub-spell.",
+        "Tether has no set duration. It breaks only when exceeding the break distances, when Io or the target die, when Io gets swallowed by an allied Pudge, or when using the sub-ability.",
         "The movement speed bonus is only applied to the tethered ally, while Io copies the target's speed. Io only copies the base speed of the target and any speed bonuses it has, flat and percentage. If the target gets slowed, Io's speed does not copy the movement speed loss caused by the slow. However, Io can be slowed directly by slowing effects, but cannot have its movement speed increased by other sources.",
         "Io only copies the base speed of the target and any speed bonuses it has, flat and percentage.",
         "If the target gets slowed, Io's speed does not copy the movement speed loss caused by the slow.",
@@ -123,7 +123,7 @@
       ],
       "notes": [
         "Interrupts Io's channeling spells upon cast.",
-        "Upon use, this spell gets replaced by a sub-spell which allows moving the spirits in or out.",
+        "Upon use, this spell gets replaced by a sub-ability which allows moving the spirits in or out.",
         "5 spirits are summoned over the course of four seconds (in 0.8 second intervals) so that the distance between each spirit is equal. The first spirit is always spawned to the north of Io, with the following spirits spawning in one second interval behind the previous spirit. The spirits expand automatically to their maximum distance upon cast. The spirits always rotate clockwise and are locked to Io's location, following it wherever it goes. Moving the spirits in or out does not break their formatting. They always rotate in a circle and keep equal distance from each other.",
         "The first spirit is always spawned to the north of Io, with the following spirits spawning in one second interval behind the previous spirit.",
         "The spirits expand automatically to their maximum distance upon cast.",
@@ -141,11 +141,11 @@
         "The spirits are invisible to the enemy if Io is invisible.",
         "Can deal up to 150\/250\/350\/450 (TagTalent 450\/550\/650\/750) damage to a single unit when all 5 spirits explode on a target (before reductions).",
         "Treats creep-heroes as heroes and illusions as creeps.",
-        "Acquiring Aghanim's Scepter turns Spirits into a passive ability, and makes it constantly spawn spirits around Io. When acquiring Aghanim's Scepter while a spirits cast is already active, the spirits from that cast disappear without exploding. When losing Aghanim's Scepter, the spirits from it do not disappear, and last until colliding with an enemy or until Io dies. Despite the tooltip, the spirits still spawn in 0.8-second intervals, not in 1-second intevals. The sub-spells are permanently active while holding Aghanim's Scepter.",
+        "Acquiring Aghanim's Scepter turns Spirits into a passive ability, and makes it constantly spawn spirits around Io. When acquiring Aghanim's Scepter while a spirits cast is already active, the spirits from that cast disappear without exploding. When losing Aghanim's Scepter, the spirits from it do not disappear, and last until colliding with an enemy or until Io dies. Despite the tooltip, the spirits still spawn in 0.8-second intervals, not in 1-second intevals. Both sub-abilities are permanently active while holding Aghanim's Scepter.",
         "When acquiring Aghanim's Scepter while a spirits cast is already active, the spirits from that cast disappear without exploding.",
         "When losing Aghanim's Scepter, the spirits from it do not disappear, and last until colliding with an enemy or until Io dies.",
         "Despite the tooltip, the spirits still spawn in 0.8-second intervals, not in 1-second intevals.",
-        "The sub-spells are permanently active while holding Aghanim's Scepter."
+        "Both sub-abilities are permanently active while holding Aghanim's Scepter."
       ],
       "mana": "120\/130\/140\/150",
       "hotKey": "W",

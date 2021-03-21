@@ -81,7 +81,8 @@
       "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/2\/28\/Queen_of_Pain_Blink_1.mp3\/revision\/latest?cb=20191216022215",
       "effects": [
         "Ability Target Point",
-        "Affects Self"
+        "Affects Self (TagAghanim Enemies)",
+        "Damage Magical"
       ],
       "notes": [
         "Disjoints projectiles upon cast.",

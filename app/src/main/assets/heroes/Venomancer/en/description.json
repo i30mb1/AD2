@@ -115,7 +115,7 @@
         "However, the debuff placed by a ward is muted (does not damage or slow) if the enemy is also affected by Venomancer's debuff.",
         "The damage source of the wards' Poison Sting is set to be Venomancer, not the wards themselves.",
         "Plague Wards have a lower target priority than units and heroes, so they are attacked by towers and lane creeps last.",
-        "The wards gain their spell immunity through a buff, so it is possible for enemies to check the buff and ping-out how long the ward will last.",
+        "The wards gain their spell immunity through a buff, so it is possible for enemies to check the buff and \u203C Ping (Alt+ Left Click) how long the ward will last.",
         "The wards' attack damage is not reduced by damage block abilities."
       ],
       "mana": "20\/22\/24\/26",

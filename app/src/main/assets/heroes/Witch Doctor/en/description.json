@@ -77,7 +77,7 @@
       "notes": [
         "Voodoo Restoration does not interrupt channeling spells upon toggling.",
         "Disabling Witch Doctor does not turn Voodoo Restoration off. However, he cannot turn it off himself while disabled either.",
-        "Heals for 5.28\/7.92\/10.56\/13.2 (TagTalent +0.396% of max health) health and costs 2.64\/3.96\/5.28\/6.6 mana in 0.33 second intervals, starting 0.33 seconds after toggled on.",
+        "Heals for 5.28\/7.92\/10.56\/13.2 health (TagTalent +0.396% of max health) and costs 2.64\/3.96\/5.28\/6.6 mana in 0.33 second intervals, starting 0.33 seconds after toggled on.",
         "The heal is provided by an aura. The mana cost is also depending on the aura. The buff lingers for 0.5 seconds. This means when toggled off, the spell still heals and drains mana for 0.5 seconds before stopping. If Witch Doctor does not have enough mana to support another heal instance, the spell toggles itself off. However, the lingering buff continues healing, despite the lack of mana, giving up to 2 possible heal instances for free. It does not affect invulnerable or hidden units.",
         "This means when toggled off, the spell still heals and drains mana for 0.5 seconds before stopping.",
         "If Witch Doctor does not have enough mana to support another heal instance, the spell toggles itself off.",

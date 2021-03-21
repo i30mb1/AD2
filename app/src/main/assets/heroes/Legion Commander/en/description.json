@@ -116,11 +116,10 @@
         "Can proc on attacks from any unit, regardless of team or unit type (including wards and buildings).",
         "Upon proccing, Legion Commander receives a buff, which grants her 1000 attack speed and lifesteal. This buff lasts for 1 second, or until she lands an attack on an enemy, whichever is shorter. Missed attacks do not count.",
         "This buff lasts for 1 second, or until she lands an attack on an enemy, whichever is shorter. Missed attacks do not count.",
-        "If the ability procs while Tresdin is already attacking, she performs an instant attack on the current attack target. This instant attack does not interfere with the ongoing attack and uses no animation. The instant attack can proc any attack modifier or any on-hit effect like a regular attack. This means the instant attack also uses up the 1000 attack speed and lifesteal buff immediately. If Legion Commander is blinded, the instant attack can miss, unless she has True Strike. It can also miss to evasion.",
+        "If the ability procs while Tresdin is already attacking, she performs an instant attack on the current attack target. This instant attack does not interfere with the ongoing attack and uses no animation. The instant attack can proc any attack modifiers and on-hit effects normally. They do not have True Strike. This means the instant attack also uses up the 1000 attack speed and lifesteal buff immediately.",
         "This instant attack does not interfere with the ongoing attack and uses no animation.",
-        "The instant attack can proc any attack modifier or any on-hit effect like a regular attack.",
+        "The instant attack can proc any attack modifiers and on-hit effects normally. They do not have True Strike.",
         "This means the instant attack also uses up the 1000 attack speed and lifesteal buff immediately.",
-        "If Legion Commander is blinded, the instant attack can miss, unless she has True Strike. It can also miss to evasion.",
         "Stacks additively with other sources of lifesteal.",
         "Cannot lifesteal off of wards, buildings and allied units.",
         "Moment of Courage uses pseudo-random distribution."

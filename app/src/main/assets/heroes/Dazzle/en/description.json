@@ -152,7 +152,8 @@
       "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/f\/fb\/Dazzle_Bad_Juju_1.mp3\/revision\/latest?cb=20191216012358",
       "effects": [
         "Ability Passive",
-        "Affects Self \/ Enemies"
+        "Affects Self \/ Enemies",
+        "Damage Instant Attack"
       ],
       "notes": [
         "Stacks multiplicatively with other sources cooldown reduction.",
@@ -162,10 +163,10 @@
         "Does not trigger on active item abilities, on spells with 0 cooldown, or on spells which do not trigger on-cast effects.",
         "Places one debuff on enemies. This debuff gets stronger when it gets refreshed with successive casts. A number on the icon shows how many times the debuff was refreshed, including the first cast.",
         "A number on the icon shows how many times the debuff was refreshed, including the first cast.",
-        "With Aghanim's Shard, causes Dazzle to perform instant attacks on 3 enemies within 1200 radius around him whenever he casts an ability (compatible with Ability Draft). Does not target wards, buildings, invisible units, or units inside the fog of war, but does target attack immune units, and couriers. Chooses the closest targets to Dazzle, prioritizing heroes. Treats creep-heroes as heroes. These instant attacks can proc any attack modifiers and on-hit effects normally.",
+        "With Aghanim's Shard, causes Dazzle to perform instant attacks on 3 enemies within 1200 radius around him whenever he casts an ability (compatible with Ability Draft). Does not target wards, buildings, invisible units, or units inside the fog of war, but does target attack immune units, and couriers. Chooses the closest targets to Dazzle, prioritizing heroes. Treats creep-heroes as heroes. These instant attacks can proc any attack modifiers and on-hit effects normally. They do not have True Strike, but completely ignore disarms.",
         "Does not target wards, buildings, invisible units, or units inside the fog of war, but does target attack immune units, and couriers.",
         "Chooses the closest targets to Dazzle, prioritizing heroes. Treats creep-heroes as heroes.",
-        "These instant attacks can proc any attack modifiers and on-hit effects normally."
+        "These instant attacks can proc any attack modifiers and on-hit effects normally. They do not have True Strike, but completely ignore disarms."
       ],
       "mana": null,
       "hotKey": "R",

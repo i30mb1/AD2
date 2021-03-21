@@ -49,7 +49,7 @@
       "mana": "125",
       "hotKey": "Q",
       "cooldown": "10\/9\/8\/7",
-      "description": "Places a frozen hex on an enemy unit that deals damage over time, but can be dispelled by moving away from the initial cast point. If the enemy unit doesn't move out of the given range, it will be stunned and frozen in place after 2\/2.5\/3\/3.5 seconds.",
+      "description": "Places a frozen hex on an enemy unit that deals damage over time, but can be dispelled by moving away from the initial cast point. If the enemy unit doesn't move out of the given range, it will be stunned and frozen in place after 4 seconds.",
       "spellName": "Cold Feet",
       "params": [
         "Cast Animation: 0.01+0",

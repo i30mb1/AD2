@@ -89,7 +89,7 @@
         "Losing the Aphotic Shield buff always causes it to burst and deal area damage, no matter how the shield was lost.",
         "The area damage is independent from the amount of absorbed damage. It always deals the full 110\/140\/170\/200 (TagTalent 290\/320\/350\/380) damage.",
         "Successive casts on the same unit do not stack. Upon recast, the previous shield gets destroyed (dealing area damage) and a new one gets applied.",
-        "When upgraded with Aghanim's Shard, Aphotic Shield first applies its damage, then the Curse of Avernus stack.",
+        "With Aghanim's Shard, Aphotic Shield first applies its damage, then the Curse of Avernus stack.",
         "Choosing the shield capacity and damage upgrading talent does not affect any of Abaddon's currently active Aphotic Shields.",
         "Does not deal damage to invisible units or units in the Fog of War."
       ],

@@ -67,8 +67,8 @@
         "Damage Magical"
       ],
       "notes": [
-        "Astral Imprisonment fully disables the target and turns it invulnerable and hidden for its duration. Cannot be cast on allies who have □ Disabled Help from Outworld Destroyer. ↓↓ Double-tapping automatically targets self.",
-        "Cannot be cast on allies who have □ Disabled Help from Outworld Destroyer.",
+        "Astral Imprisonment fully disables the target and turns it invulnerable and hidden for its duration. Cannot be cast on allies who have ☐ Disabled Help from Outworld Destroyer. ↓↓ Double-tapping automatically targets self.",
+        "Cannot be cast on allies who have ☐ Disabled Help from Outworld Destroyer.",
         "↓↓ Double-tapping automatically targets self.",
         "Targeted allies are only put in the prison, without any of the other effects being applied on them.",
         "If the target was an enemy, they get damaged at the end of the prison's duration.",

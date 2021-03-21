@@ -889,19 +889,31 @@
       },
       {
         "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/8\/8b\/Vo_death_prophet_dpro_items_01.mp3\/revision\/latest?cb=20201010211323",
-        "title": "[[\u200E|20px|link=Bloodstone| ]] Beautiful, beautiful Bloodstone!"
+        "title": "Beautiful, beautiful Bloodstone!",
+        "icons": [
+          "items\/Bloodstone\/full.webp"
+        ]
       },
       {
         "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/8\/87\/Vo_death_prophet_dpro_items_02.mp3\/revision\/latest?cb=20201010211325",
-        "title": "[[\u200E|20px|link=Bloodstone| ]] Bloodstone, filled to brimming!"
+        "title": "Bloodstone, filled to brimming!",
+        "icons": [
+          "items\/Bloodstone\/full.webp"
+        ]
       },
       {
         "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/c\/c2\/Vo_death_prophet_dpro_items_03.mp3\/revision\/latest?cb=20201010211327",
-        "title": "[[\u200E|20px|link=Bloodstone| ]] Bloodstone spills over with lives!"
+        "title": "Bloodstone spills over with lives!",
+        "icons": [
+          "items\/Bloodstone\/full.webp"
+        ]
       },
       {
         "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/b\/b4\/Vo_death_prophet_dpro_items_04.mp3\/revision\/latest?cb=20201010211329",
-        "title": "[[\u200E|20px|link=Bloodstone| ]] Bloodstone, you are positively beaming."
+        "title": "Bloodstone, you are positively beaming.",
+        "icons": [
+          "items\/Bloodstone\/full.webp"
+        ]
       },
       {
         "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/b\/bc\/Vo_death_prophet_dpro_items_05.mp3\/revision\/latest?cb=20201010211330",

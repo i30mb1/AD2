@@ -38,7 +38,7 @@
       ],
       "notes": [
         "Reduces the target's total total attack damage, including raw attack damage bonuses.",
-        "Applies heal reduction, health regeneration reduction, lifesteal reduction, and spell lifesteal reduction on the target.",
+        "Applies heal reduction, health regen reduction, lifesteal reduction, and spell lifesteal reduction on the target.",
         "The cast time increase affects the cast point of spells. Channeling times are unaffected.",
         "Multiple casts on the same target do not stack the debuff, only refreshes the duration."
       ],
@@ -95,8 +95,8 @@
         "Affects Enemies \/ Allies"
       ],
       "notes": [
-        "Applies a sleep on affected units, preventing them from acting. ↓↓ Double-tapping automatically targets self.",
         "↓↓ Double-tapping automatically targets self.",
+        "Applies a sleep on affected units, preventing them from acting.",
         "Nightmare turns affected targets invulnerable for 1 second, preventing affected units from waking up.",
         "Nightmare reduces affected enemy unit's vision to 200.",
         "The target wakes up when a unit starts attacking it (including manual casting of active attack modifiers), or when the target takes damage.",

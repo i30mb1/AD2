@@ -173,7 +173,6 @@
         "5 Heroes: 6.25\/9.79\/13.33 (TagTalent 10.25\/13.79\/17.33) per interval, 150\/235\/320 (TagTalent 246\/331\/416) total",
         "The Mystic Flare Effect debuff is responsible for the particle effects on hit enemies. It has only visual purposes. The debuff is placed by an aura, and lingers for 0.5 seconds.",
         "The debuff is placed by an aura, and lingers for 0.5 seconds.",
-        "Skywrath Mage's Aghanim's Scepter upgrade does not require Mystic Flare to be learned. It works for each of his abilities individually.",
         "With Aghanim's Scepter, casting Mystic Flare automatically casts a second Mystic Flare centered on a random enemy within the search radius but outside the 170 effect radius. The search radius is centered around the targeted area, not around Skywrath Mage. Heroes and illusions have a higher priority than other units. Treats creep-heroes as creeps. Ignores spell immune or invulnerable units within the search radius. If no other valid targets are found within the search radius, second Mystic Flare is not cast.",
         "The search radius is centered around the targeted area, not around Skywrath Mage.",
         "Heroes and illusions have a higher priority than other units. Treats creep-heroes as creeps.",

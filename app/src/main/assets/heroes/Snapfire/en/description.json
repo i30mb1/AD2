@@ -177,8 +177,8 @@
       "notes": [
         "Requires Aghanim's Scepter to be unlocked. In Ability Draft, Gobble Up can be unlocked by the player that drafted Mortimer Kisses.",
         "In Ability Draft, Gobble Up can be unlocked by the player that drafted Mortimer Kisses.",
-        "Can be cast on any unit, except for enemy heroes and creep-heroes. Cannot be cast on allies who have □ Disabled Help from Snapfire.",
-        "Cannot be cast on allies who have □ Disabled Help from Snapfire.",
+        "Can be cast on any unit, except for enemy heroes and creep-heroes. Cannot be cast on allies who have ☐ Disabled Help from Snapfire.",
+        "Cannot be cast on allies who have ☐ Disabled Help from Snapfire.",
         "Disjoints projectiles for the target unit upon cast.",
         "The target unit is invulnerable, hidden, silenced, muted, and disarmed while swallowed.",
         "During Gobble Up, the unit is periodically moved to Snapfire's current position. This periodic movement cannot be interrupted. This means their auras are effectively bestowed around Snapfire until spat out.",

@@ -49,8 +49,7 @@
         "Cast Animation: 0.2+1.4",
         "Cast Range: 550",
         "Damage Radius: 260",
-        "Damage: 90\/160\/230\/300 (TagTalent 250\/320\/390\/460)",
-        "Heal: 90\/160\/230\/300 (TagTalent 250\/320\/390\/460)",
+        "Damage\/Heal: 90\/160\/230\/300 (TagTalent 250\/320\/390\/460)",
         "Can be cast on spell immune allies. Does not affect spell immune enemies."
       ],
       "itemBehaviour": [],

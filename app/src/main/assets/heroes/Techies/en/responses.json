@@ -1511,7 +1511,10 @@
       },
       {
         "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/2\/28\/Vo_techies_tech_items_09.mp3\/revision\/latest?cb=20201020203535",
-        "title": "[[\u200E|20px|link=Bloodstone| ]] Bloodstone!"
+        "title": "Bloodstone!",
+        "icons": [
+          "items\/Bloodstone\/full.webp"
+        ]
       },
       {
         "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/4\/4b\/Vo_techies_tech_items_10.mp3\/revision\/latest?cb=20201020203538",

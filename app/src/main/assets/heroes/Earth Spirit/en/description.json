@@ -284,7 +284,7 @@
         "Stone Refresh Radius: 600",
         "Damage per Second: 40\/80\/120",
         "Duration: 6",
-        "Places debuff on and attempts to damage spell immune enemies. Can spread to and refresh debuff on spell immune enemies. Does not silence or slow spell immune enemies when another magnetized enemy is hit by Rolling Boulder or Geomagnetic Grip."
+        "Places debuff on and attempts to damage spell immune enemies. Can spread to and refresh debuff on spell immune enemies. Does not silence or slow spell immune enemies when another magnetized enemy is hit by Boulder Smash or Geomagnetic Grip."
       ],
       "itemBehaviour": [],
       "legacyKey": "T",
