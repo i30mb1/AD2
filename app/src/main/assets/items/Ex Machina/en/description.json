@@ -13,7 +13,7 @@
         "Visually resets the cooldown of Tranquil Boots, but does not skip the broken state.",
         "Does not reset the cooldowns of Refresher Shard, Refresher Orb, and Town Portal Scroll."
       ],
-      "mana": null,
+      "mana": "0",
       "abilityName": "Reset Item Cooldowns",
       "cooldown": "30",
       "description": "Reset the cooldowns on all items (except Refresher Orb).",

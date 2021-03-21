@@ -103,7 +103,8 @@ private fun JSONObject.loadRecipe(root: Document) {
 
 private fun JSONObject.loadCostAndBoughtFrom(root: Document) {
     val table = root.getElementsByClass("infobox")[0]
-    val cost = (table.getElementsByAttributeValue("style", "width:50%; background-color:#DAA520;")[0].childNodes().lastOrNull() as? TextNode)?.text()?.removeBrackets()
+    var cost = (table.getElementsByAttributeValue("style", "width:50%; background-color:#DAA520;")[0].childNodes().lastOrNull() as? TextNode)?.text()?.removeBrackets()
+    if (cost == ")") cost = (table.getElementsByAttributeValue("style", "width:50%; background-color:#DAA520;")[0].childNodes().get(2) as? TextNode)?.text()?.removeBrackets()?.split(" ")?.get(0)
     put("cost", cost)
     val place = (table.getElementsByAttributeValue("style", "width:50%;")[0].childNodes().lastOrNull() as? TextNode)?.text()?.trim()
     put("boughtFrom", place)
@@ -209,7 +210,8 @@ private fun JSONObject.loadAbilities(root: Document) {
                     }
                 }
 
-                val cooldown = it.getElementsByAttributeValue("style", "display:inline-block; margin:8px 0px 0px 50px; width:370px; vertical-align:top;").getOrNull(0)
+                var cooldown = it.getElementsByAttributeValue("style", "display:inline-block; margin:8px 0px 0px 50px; width:370px; vertical-align:top;").getOrNull(0)
+                if (cooldown == null) cooldown = it.getElementsByAttributeValue("style", "display:inline-block; margin:8px 0px 0px 50px; width:190px; vertical-align:top;").getOrNull(0)
                 if (cooldown?.getElementsByAttribute("href")?.getOrNull(0)?.attr("href").equals("/Aghanim%27s_Scepter")) {
                     put("cooldown", cooldown?.text()?.replace("(", "(TagAghanim"))
                 } else {
@@ -217,6 +219,7 @@ private fun JSONObject.loadAbilities(root: Document) {
                 }
 
                 val mana = it.getElementsByAttributeValue("style", "display:inline-block; margin:8px 0px 0px; width:190px; vertical-align:top;").getOrNull(0)
+//                if (mana == null) mana =
                 if (mana?.getElementsByAttribute("href")?.getOrNull(0)?.attr("href").equals("/Aghanim%27s_Scepter")) {
                     put("mana", mana?.text()?.replace("(", "(TagAghanim"))
                 } else {
@@ -276,7 +279,7 @@ private fun JSONObject.loadAdditionalInformation(root: Document) {
         }
         if (child.tag().toString() == "h2") {
             when (child.child(0).id()) {
-                "Additional_information", "Дополнительная_информация" -> {
+                "Additional_Information", "Дополнительная_информация" -> {
                     nextSectionIsAdditionalInformation = true
                 }
             }
@@ -318,7 +321,7 @@ private fun getItems(root: Document): List<HeroItem> {
     val elements = root.getElementById("mw-content-text")?.allElements ?: throw Exception("could find elements")
     for (element in elements) {
         if (element.tag().toString() == "h2" && element.children().size > 0 && element.child(0).id().toString() == "Items") findItemSection = true
-        if (element.tag().toString() == "h2" && element.children().size > 0 && element.child(0).id().toString() == "Event_items") findItemSection = false
+        if (element.tag().toString() == "h2" && element.children().size > 0 && element.child(0).id().toString() == "Event_Items") findItemSection = false
         if (element.tag().toString() == "h3") itemSection = element.text()
         if (findItemSection) {
             if (element.tag().toString() == "div") {

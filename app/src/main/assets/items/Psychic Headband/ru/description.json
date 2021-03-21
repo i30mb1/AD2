@@ -22,7 +22,7 @@
       ],
       "mana": null,
       "abilityName": "Psychic Push",
-      "cooldown": "24",
+      "cooldown": "20",
       "description": "Отталкивает выбранного врага от владельца на расстояние в .",
       "params": [
         "Дальность применения: 750",

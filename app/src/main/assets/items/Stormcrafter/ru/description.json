@@ -9,7 +9,7 @@
       "notes": [],
       "mana": "50",
       "abilityName": "Активная",
-      "cooldown": null,
+      "cooldown": "25",
       "description": "Поднимает владельца в воздух на 0,75 сек.",
       "params": [
         "Длительность: 0,75"

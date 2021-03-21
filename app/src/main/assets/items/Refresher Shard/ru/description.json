@@ -34,7 +34,7 @@
     "Несколько Refresher Shard не собираются вместе, каждый занимает отдельную ячейку инвентаря.",
     "В отличии от Aegis of the Immortal, Refresher Shard не забирается Рошаном."
   ],
-  "cost": "Н\/Д",
+  "cost": "500",
   "lore": null,
   "consistFrom": null,
   "boughtFrom": "Выпадает из Рошана",

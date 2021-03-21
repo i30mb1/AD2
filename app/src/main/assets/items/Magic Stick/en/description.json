@@ -15,7 +15,7 @@
         "When an enemy casts a spell out of the invisibility from the Invisibility Rune, Shadow Walk, Sand Storm, or Moonlight Shadow, it does not give a charge.",
         "Can restore up to 150 health and mana when having the maximum amount of charges.",
         "Shares cooldown with Magic Wand and Holy Locket.",
-        "When having multiple Magic Sticks or Magic Wands in the inventory, the oldest one gains charges first. If it is full, the second oldest one starts to gain charges.",
+        "When having multiple {Magic Stick-based items in the inventory, only the oldest one will gain charges from cast abilities. If it is full, the second oldest one starts to gain charges.",
         "Upon upgrading a Magic Stick into a Magic Wand, all its current charges are carried over."
       ],
       "mana": null,

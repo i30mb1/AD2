@@ -7,14 +7,15 @@
         "Affects Self"
       ],
       "notes": [
-        "Does interrupt the user's channeling spells upon cast.",
-        "Does not allows the user to pass through other units.",
-        "The user can pick up and drop items without breaking the invisibility."
+        "Interrupts the user's channeling spells upon cast.",
+        "The invisibility is lost upon reaching the cast point of spells, or upon finishing an attack (for ranged heroes upon projectile launch). This means when the attack misses, the invisibility is still lost.",
+        "This means when the attack misses, the invisibility is still lost.",
+        "Does not grant the user phased movement."
       ],
-      "mana": null,
+      "mana": "0",
       "abilityName": "Cloak",
       "cooldown": "25",
-      "description": "Makes you invisible for 6 seconds.",
+      "description": "Causes you to become invisible for 6 seconds.",
       "params": [
         "Fade Time: 0",
         "Duration: 6"
@@ -23,7 +24,13 @@
       "story": null
     }
   ],
-  "additionalInformation": [],
+  "additionalInformation": [
+    "Trickster Cloaks are fully sharable.",
+    "Stacks multiplicatively with other sources of magic resistance.",
+    "Increases all heroes' total magic resistance to 40%, assuming basic 25% magic resistance and no other sources of magic resistance.",
+    "The evasion stacks diminishingly with other sources of evasion.",
+    "The evasion uses pseudo-random distribution."
+  ],
   "cost": "N\/A",
   "lore": null,
   "consistFrom": null,
@@ -34,7 +41,7 @@
   "upgradeIn": null,
   "bonuses": [
     "+20% Evasion",
-    "+20% Magic resistance"
+    "+20% Magic Resistance"
   ],
   "tips": null
 }

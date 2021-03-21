@@ -8,7 +8,7 @@
         "Damage Magical"
       ],
       "notes": [
-        "Double clicking the item uses it on self.",
+        "↓↓ Double-tapping automatically target self.",
         "Successive casts on the same target do not stack, but refresh the duration instead. The buff and debuff are independent and stack with each other, although the heal gets canceled as soon as the damage ticks. Urn of Shadow's heal does not stack with that of Spirit Vessel. Neither do their damage debuffs stack. Spirit Vessel overrides the heal buff and damage debuff of Urn of Shadows, but the urn cannot override the vessel's modifiers. When attempting to do so, Urn of Shadows only goes on cooldown, without losing charges.",
         "The buff and debuff are independent and stack with each other, although the heal gets canceled as soon as the damage ticks.",
         "Urn of Shadow's heal does not stack with that of Spirit Vessel. Neither do their damage debuffs stack.",
@@ -30,7 +30,7 @@
         "Urn of Shadows and Spirit Vessels are treated equally. When having both, the one in the higher inventory slot gets charges.",
         "Upon upgrading an Urn of Shadows into a Spirit Vessel, all its current charges are carried over."
       ],
-      "mana": null,
+      "mana": "0",
       "abilityName": "Soul Release",
       "cooldown": "7",
       "description": "Provides 30 health regeneration when cast on allies, and deals 25 damage per second when cast on enemies. Lasts 8 seconds. Gains charges every time an enemy hero dies within 1400 units. Only the closest Urn to the dying hero will gain a charge.",
@@ -39,11 +39,10 @@
         "Charge Gain Radius: 1400",
         "Ally Health Regen Bonus: 30",
         "Enemy Damage per Second: 25",
-        "Heal\/Damage Duration: 8"
+        "Heal\/Damage Duration: 8",
+        "Can be cast on spell immune allies. Cannot be cast on spell immune enemies. Attempts to damage if debuff was placed before spell immunity and when not dispelled."
       ],
-      "itemBehaviour": [
-        "(Spell_immunity_block_partial_symbol)^Partially pierces spell immunity\nCan be cast on spell immune allies\nCannot be cast on spell immune enemies\nAttempts to damage if debuff was placed before spell immunity and when not dispelled."
-      ],
+      "itemBehaviour": [],
       "story": null
     }
   ],
@@ -72,7 +71,7 @@
     "+2 Strength",
     "+2 Agility",
     "+2 Intelligence",
-    "+1.5 Mana regeneration",
+    "+1.5 Mana Regeneration",
     "+2 Armor"
   ],
   "tips": [

@@ -18,7 +18,7 @@
         "However, if the owner has above 70% health, it is negated so that their health does not drop below 70%.",
         "Does not protect against instantly killing effects."
       ],
-      "mana": null,
+      "mana": "0",
       "abilityName": "Combo Breaker",
       "cooldown": "105",
       "description": "When you take damage and your health falls below 70% a strong dispel is applied and you gain a 2.5 second buff that provides +75% Status Resistance and causes all damage you deal and are dealt to be reduced to zero. Only triggers on player based damage.",

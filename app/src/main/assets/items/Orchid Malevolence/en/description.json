@@ -19,16 +19,15 @@
       ],
       "mana": "100",
       "abilityName": "Soul Burn",
-      "cooldown": null,
+      "cooldown": "18",
       "description": "Silences the target unit for 5 seconds. At the end of the silence, 30% of the damage received while silenced is inflicted as bonus magical damage.",
       "params": [
         "Cast Range: 900",
         "Damage Amplification: 30%",
-        "Duration: 5"
+        "Duration: 5",
+        "Effect persists and attempts to deal damage when expiring while spell immune if debuff was placed before spell immunity and when not dispelled."
       ],
-      "itemBehaviour": [
-        "(Spell_immunity_block_symbol)^Does not pierce spell immunity\nEffect persists and attempts to deal damage when expiring while spell immune if debuff was placed before spell immunity and when not dispelled."
-      ],
+      "itemBehaviour": [],
       "story": null
     }
   ],
@@ -55,9 +54,12 @@
   ],
   "bonuses": [
     "+20 Intelligence",
-    "+4 Mana regeneration",
-    "+30 Attack damage",
-    "+25 Attack speed"
+    "+4 Mana Regeneration",
+    "+30 Attack Damage",
+    "+25 Attack Speed"
   ],
-  "tips": null
+  "tips": [
+    "Orchid is great against Intelligence heroes as they are dependent on their abilities to deal damage, but it is also effective against heroes with escape abilities like Anti-Mage or Weaver and strong initiation like Faceless Void or Enigma.",
+    "Get the item quickly before the enemy team gets items able to dispel the silence."
+  ]
 }

@@ -16,8 +16,8 @@
       "cooldown": null,
       "description": "Attacks lower enemy movement and attack speed and reduces heals, health regeneration and lifesteal by 40% for 3 seconds. Slows enemy ranged units by 50% movement speed and 50 attack speed. Slows enemy melee units by 25% movement speed and 25 attack speed.",
       "params": [
-        "Movement Speed Slow (Against Melee): 25%",
-        "Movement Speed Slow (Against Ranged): 50%",
+        "Move Speed Slow (Against Melee): 25%",
+        "Move Speed Slow (Against Ranged): 50%",
         "Attack Speed Slow (Against Melee): 25",
         "Attack Speed Slow (Against Ranged): 50",
         "Health Restoration Reduction: 40%",

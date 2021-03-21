@@ -13,7 +13,7 @@
         "Does not provide True Sight over the target.",
         "Treats ancient creeps and creep-heroes as heroes."
       ],
-      "mana": null,
+      "mana": "0",
       "abilityName": "Inhibit",
       "cooldown": "15",
       "description": "Targets an enemy, slowing it for 4 seconds.",
@@ -51,7 +51,8 @@
         "Mana Burned per Hit (Hero): 40",
         "Mana Burned per Hit (Melee Illusion): 16",
         "Mana Burned per Hit (Ranged Illusion): 8",
-        "Burned Mana as Damage: 80%"
+        "Burned Mana as Damage: 80%",
+        "The amount of mana burned is reduced for illusions."
       ],
       "itemBehaviour": [],
       "story": null

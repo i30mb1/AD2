@@ -8,7 +8,9 @@
         "Damage Physical"
       ],
       "notes": [
-        "Skull Basher's bash does not stack with the bash of Abyssal Blade and other Skull Bashers.",
+        "Skull Basher's bash does not stack with the bash of Abyssal Blade and other Skull Bashers. Does not stack with Bash of the Deep, Greater Bash and Time Lock either. If any of these are present, Bash cannot proc. In Ability Draft, fully stacks with all non-item based bashes.",
+        "Does not stack with Bash of the Deep, Greater Bash and Time Lock either. If any of these are present, Bash cannot proc.",
+        "In Ability Draft, fully stacks with all non-item based bashes.",
         "When obtaining multiple items with the bash ability, only the one that has been continuously the longest in the inventory works.",
         "The proccing attack first applies the debuff, then its own damage.",
         "The bonus damage is dealt in one instance together with the attack damage, and counts as attack damage as well. It can be lifestealed off of, but it is not considered by crit or cleave. It is also not affected by percentage-based attack damage bonuses or reductions, but can be reduced with flat reductions.",
@@ -35,9 +37,7 @@
   "additionalInformation": [
     "For strength heroes, it grants 200 health, 1 health regen and 35 attack damage.",
     "For agility heroes, it grants 200 health, 1 health regen and 25 attack damage.",
-    "For intelligence heroes, it grants 200 health, 1 health regen and 25 attack damage.",
-    "When held by Slardar, Spirit Breaker, or Faceless Void, Bash cannot proc.",
-    "When held by a hero that has the Time Lock passive (e.g. in Ability Draft), Bash cannot proc either."
+    "For intelligence heroes, it grants 200 health, 1 health regen and 25 attack damage."
   ],
   "cost": "2950",
   "lore": null,
@@ -57,7 +57,7 @@
   ],
   "bonuses": [
     "+10 Strength",
-    "+25 Attack damage"
+    "+25 Attack Damage"
   ],
   "tips": []
 }

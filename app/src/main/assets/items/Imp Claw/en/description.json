@@ -16,7 +16,8 @@
       "cooldown": "7",
       "description": "Empowers your next attack, causing it to be a critical strike dealing 130% damage.",
       "params": [
-        "Critical Damage: 130%"
+        "Critical Damage: 130%",
+        "Red critical numbers are before illusion and armor reduction."
       ],
       "itemBehaviour": [],
       "story": null
@@ -34,7 +35,7 @@
   "trivia": null,
   "upgradeIn": null,
   "bonuses": [
-    "+24 Attack damage"
+    "+24 Attack Damage"
   ],
   "tips": null
 }

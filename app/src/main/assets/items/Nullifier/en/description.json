@@ -21,17 +21,16 @@
       ],
       "mana": "75",
       "abilityName": "Nullify",
-      "cooldown": null,
+      "cooldown": "11",
       "description": "Dispels the target and applies a debuff for 5 seconds. Continuously dispels the target. Anytime the target is attacked, it will be slowed by 80% for 0.5 seconds.",
       "params": [
         "Cast Range: 900",
-        "Movement Speed Slow: 80%",
+        "Move Speed Slow: 80%",
         "Slow Duration: 0.5",
-        "Duration: 5"
+        "Duration: 5",
+        "Continuous dispel persists if debuff was placed before spell immunity."
       ],
-      "itemBehaviour": [
-        "(Spell_immunity_block_symbol)^Does not pierce spell immunity\nContinuous dispel persists if debuff was placed before spell immunity."
-      ],
+      "itemBehaviour": [],
       "story": null
     }
   ],
@@ -47,9 +46,9 @@
   "trivia": null,
   "upgradeIn": null,
   "bonuses": [
-    "+6 Health regeneration",
+    "+6 Health Regeneration",
     "+8 Armor",
-    "+80 Attack damage"
+    "+80 Attack Damage"
   ],
   "tips": [
     "Because this item has a short range and slow projectile speed, it is easier to land from a melee hero with a Blink Dagger, Shadow Blade or ability to close the distance.",

@@ -9,16 +9,15 @@
       "notes": [],
       "mana": "100",
       "abilityName": "Disarm",
-      "cooldown": null,
+      "cooldown": "18",
       "description": "Prevents a target from attacking for 3 seconds on melee targets, and 5 seconds on ranged targets.",
       "params": [
         "Cast Range: 600",
         "Duration (Melee): 3",
-        "Duration (Ranged): 5"
+        "Duration (Ranged): 5",
+        "Disarm persists if debuff was placed before spell immunity."
       ],
-      "itemBehaviour": [
-        "(Spell_immunity_block_symbol)^Does not pierce spell immunity\nDisarm persists if debuff was placed before spell immunity."
-      ],
+      "itemBehaviour": [],
       "story": null
     }
   ],
@@ -28,9 +27,9 @@
     "For intelligence heroes, it grants 400 health and 2 health regen.",
     "The evasion stacks multiplicatively with other sources of evasion.",
     "The evasion uses pseudo-random distribution.",
-    "Health regen amplification from multiple Sange-based items do not stack, except for Trident.",
-    "Lifesteal amplification from multiple Sange-based items do not stack, except for Trident.",
-    "Status resistance from multiple Sange-based items do not stack."
+    "Status resistance from multiple Sange-based items ( Sange, Sange and Yasha, Kaya and Sange, Heaven's Halberd) do not stack.",
+    "Health regen amplification from multiple Sange-based items do not stack.",
+    "Lifesteal amplification from multiple Sange-based items do not stack."
   ],
   "cost": "3650",
   "lore": null,
@@ -47,12 +46,12 @@
   "bonuses": [
     "+20 Strength",
     "+20% Evasion",
-    "+16% Status resistance",
-    "+24% Health regen amplification",
-    "+30% Lifesteal amplification"
+    "+16% Status Resistance",
+    "+24% Health Regen Amplification",
+    "+24% Lifesteal Amplification"
   ],
   "tips": [
-    "Very strong against heroes whose main source of damage are their right-clicks, making them unable to attack for 5 seconds.",
+    "Very strong against ranged heroes whose main source of damage are their right-clicks, making them unable to attack for 5 seconds.",
     "Because the disarm displays an icon and can't be dispelled, you can use it to reveal your enemy before it uses a Manta Style or ability to create illusions. It can be very useful against Phantom Lancer.",
     "Try to anticipate to use the disarm just before the spell immunity is used.",
     "An Ethereal Blade can be an alternative to disarm and amplify the magic damage for a spell caster (however it can be dispelled)."

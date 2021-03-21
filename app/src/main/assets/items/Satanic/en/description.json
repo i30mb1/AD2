@@ -15,7 +15,8 @@
       "cooldown": null,
       "description": "Heals the attacker for 25% of attack damage dealt.",
       "params": [
-        "Lifesteal: 25%"
+        "Lifesteal: 25%",
+        "Lifesteal particles are visible on illusions, but they do not gain health from their attacks."
       ],
       "itemBehaviour": [],
       "story": null
@@ -30,7 +31,7 @@
         "Interrupts the user's channeling spells upon cast.",
         "Directly increases the lifesteal granted by its passive part by 175%, resulting in 200% lifesteal."
       ],
-      "mana": null,
+      "mana": "0",
       "abilityName": "Unholy Rage",
       "cooldown": "35",
       "description": "Increases Lifesteal percentage to 200% for 6 seconds.",
@@ -43,9 +44,9 @@
     }
   ],
   "additionalInformation": [
-    "For strength heroes, it grants 500 health, 2.5 health regen and 70 attack damage.",
-    "For agility heroes, it grants 500 health, 2.5 health regen and 45 attack damage.",
-    "For intelligence heroes, it grants 500 health, 2.5 health regen and 45 attack damage."
+    "For strength heroes, it grants 500 health, 2.5 health regen and 80 attack damage.",
+    "For agility heroes, it grants 500 health, 2.5 health regen and 55 attack damage.",
+    "For intelligence heroes, it grants 500 health, 2.5 health regen and 55 attack damage."
   ],
   "cost": "5050",
   "lore": null,
@@ -61,7 +62,7 @@
   "upgradeIn": null,
   "bonuses": [
     "+25 Strength",
-    "+45 Attack damage"
+    "+55 Attack Damage"
   ],
   "tips": [
     "Satanic's active ability, Unholy Rage, has quite a short duration. If the enemy has many disables, it is recommended to get a Black King Bar first and use them together, or wait for the main disables to get used first and then join the fight.",

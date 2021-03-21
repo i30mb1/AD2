@@ -1,10 +1,5 @@
 {
   "abilities": [],
-  "additionalInformation": [
-    "For strength heroes, it grants 40 health, 0.2 health regen, 2.33 armor, 10 attack speed, 24 mana, 0.1 mana regen and 2 attack damage.",
-    "For agility heroes, it grants 40 health, 0.2 health regen, 2.33 armor, 10 attack speed, 24 mana, 0.1 mana regen and 5 attack damage.",
-    "For intelligence heroes, it grants 40 health, 0.2 health regen, 2.33 armor, 10 attack speed, 24 mana, 0.1 mana regen and 2 attack damage."
-  ],
   "cost": "510",
   "lore": null,
   "consistFrom": [
@@ -22,7 +17,7 @@
     "+5 Agility",
     "+2 Intelligence",
     "+1.5 Armor",
-    "+5 Attack speed"
+    "+5 Attack Speed"
   ],
   "tips": [
     "For agility heroes, a Bracer grants just as much damage as a Wraith Band."

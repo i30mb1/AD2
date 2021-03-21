@@ -19,7 +19,7 @@
         "Does not refresh Refresher Orb, Ex Machina or the cooldown of other Refresher Shards.",
         "Does not share cooldown with Refresher Orb."
       ],
-      "mana": null,
+      "mana": "0",
       "abilityName": "Reset Cooldowns",
       "cooldown": "200",
       "description": "Resets the cooldowns of all your items and abilities.",
@@ -29,22 +29,22 @@
     }
   ],
   "additionalInformation": [
-    "Refresher Shard is completely sharable. Although Refresher Shard cannot be bought, it can be sold for 500 gold. However, only the hero whose main inventory it enters first can sell it. If a courier is the first unit to pick up the shard, it cannot be sold by anyone, even if it remains on the courier or is given to a hero afterwards. If a Refresher Shard directly enters a backpack when picked up, it remains sellable by anyone until it enters any unit's main inventory.",
-    "Although Refresher Shard cannot be bought, it can be sold for 500 gold. However, only the hero whose main inventory it enters first can sell it.",
+    "Refresher Shard is completely sharable. Although Refresher Shard cannot be bought, it can be sold for 500 . However, only the hero whose main inventory it enters first can sell it. If a courier is the first unit to pick up the shard, it cannot be sold by anyone, even if it remains on the courier or is given to a hero afterwards. If a Refresher Shard directly enters a backpack when picked up, it remains sellable by anyone until it enters any unit's main inventory.",
+    "Although Refresher Shard cannot be bought, it can be sold for 500 . However, only the hero whose main inventory it enters first can sell it.",
     "If a courier is the first unit to pick up the shard, it cannot be sold by anyone, even if it remains on the courier or is given to a hero afterwards.",
     "If a Refresher Shard directly enters a backpack when picked up, it remains sellable by anyone until it enters any unit's main inventory.",
     "Refresher Shards do not stack in the inventory. Each acquired instance requires its own slot.",
     "Unlike the Aegis of the Immortal, Refresher Shard is not reclaimed by Roshan."
   ],
-  "cost": "N\/A",
+  "cost": "500",
   "lore": null,
   "consistFrom": null,
   "boughtFrom": "Roshan Drop",
   "name": "Refresher Shard",
   "description": "Across an epoch of endless battle, the Immortal's will to triumph never faltered.",
   "trivia": [
-    "The Refresher Shard's icon and in-game model are based on the Refresher Orb. Its active uses the same sound and visual effect as Refresher Orb.",
-    "The pop-up that appears when you hover over the item on the ground shows a buying price of 1000 gold, but when you pick it up, the pop-up shows the selling price of 500 gold."
+    "The Refresher Shard's icon and in-game model are based on Refresher Orb. Its active uses the same sound and visual effect as Refresher Orb.",
+    "The pop-up that appears when you hover over the item on the ground shows a buying price of 1000 , but when you pick it up, the pop-up shows the selling price of 500 ."
   ],
   "upgradeIn": null,
   "bonuses": null,

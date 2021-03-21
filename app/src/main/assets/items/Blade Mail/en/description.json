@@ -15,7 +15,7 @@
       ],
       "mana": "25",
       "abilityName": "Damage Return",
-      "cooldown": null,
+      "cooldown": "25",
       "description": "For 4.5 seconds, the damage returned from all sources is increased by 80%.",
       "params": [
         "Damage Returned: 80%",
@@ -38,7 +38,8 @@
         "Returned damage has the no-reflection flag, preventing its damage from interacting with other sources of damage with the same flag.",
         "Returns damage back to the source. This means damage done by summons is reflected back to the summons, not to their owner.",
         "Damage Return has a global range and affects units through the Fog of War or invisibility.",
-        "Returned damage cannot be amplified with spell damage amplification and cannot spell lifesteal.",
+        "Returned damage cannot be amplified with outgoing spell damage amplification and cannot spell lifesteal. Can be amplified by incoming spell damage amplification.",
+        "Can be amplified by incoming spell damage amplification.",
         "Does not work against wards, buildings and allied units."
       ],
       "mana": null,
@@ -70,7 +71,7 @@
   "upgradeIn": null,
   "bonuses": [
     "+6 Armor",
-    "+28 Attack damage"
+    "+28 Attack Damage"
   ],
   "tips": [
     "It is a powerful counter against Bloodthorn and Silver Edge to prevent enemies from attacking you while under the debuff.",

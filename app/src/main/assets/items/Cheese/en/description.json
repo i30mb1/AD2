@@ -9,7 +9,7 @@
       "notes": [
         "Interrupts the user's channeling spells upon cast."
       ],
-      "mana": null,
+      "mana": "0",
       "abilityName": "Fondue",
       "cooldown": "40",
       "description": "Instantly restores 2500 health and 1500 mana.",
@@ -21,15 +21,7 @@
       "story": null
     }
   ],
-  "additionalInformation": [
-    "Cheese is completely sharable. Although Cheese cannot be bought, it can be sold for 500 gold. However, only the hero whose main inventory it enters first can sell it. If a courier is the first unit to pick up the Cheese, it cannot be sold by anyone, even if it remains on the courier or is given to a hero afterwards. If a Cheese directly enters a backpack when picked up, it remains sellable by anyone until it enters any unit's main inventory.",
-    "Although Cheese cannot be bought, it can be sold for 500 gold. However, only the hero whose main inventory it enters first can sell it.",
-    "If a courier is the first unit to pick up the Cheese, it cannot be sold by anyone, even if it remains on the courier or is given to a hero afterwards.",
-    "If a Cheese directly enters a backpack when picked up, it remains sellable by anyone until it enters any unit's main inventory.",
-    "Cheese stacks with itself in the inventory.",
-    "Unlike the Aegis of the Immortal, Cheese is not reclaimed by Roshan."
-  ],
-  "cost": "N\/A",
+  "cost": "500",
   "lore": null,
   "consistFrom": null,
   "boughtFrom": "Roshan Drop",

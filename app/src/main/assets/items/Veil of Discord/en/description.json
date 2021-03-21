@@ -8,18 +8,19 @@
       ],
       "notes": [
         "Places a debuff on enemy units in the area upon cast. Leaving or entering the area afterwards has no effect.",
+        "Applies incoming spell damage amplification on enemies, causing them to take increased spell damage of any kind. Since it uses incoming amplification, it does affect the damage of abilities that ignore outgoing amplification, like Damage Return and Moon Glaives.",
+        "Since it uses incoming amplification, it does affect the damage of abilities that ignore outgoing amplification, like Damage Return and Moon Glaives.",
         "Multiple casts on the same targets do not stack, but refresh the duration instead.",
-        "Affects invulnerable, invisible units and units in the Fog of War, but not hidden units.",
-        "Affects magical, physical, and pure spell damage."
+        "Affects invulnerable, invisible units and units in the Fog of War, but not hidden units."
       ],
       "mana": "50",
       "abilityName": "Magic Weakness",
-      "cooldown": null,
+      "cooldown": "25",
       "description": "Cast a 600 radius blast that causes enemies to take 18% increased damage from spells.",
       "params": [
         "Cast Range: 1000",
         "Radius: 600",
-        "Spell Damage Amplification: 18%",
+        "Incoming Spell Damage Amplification: 18%",
         "Duration: 16"
       ],
       "itemBehaviour": [],
@@ -32,10 +33,11 @@
         "Affects Allies"
       ],
       "notes": [
+        "Multiple instances of Veil of Discord's Basilius Aura do not stack. Fully stacks with other sources of mana regeneration, including Ring of Basilius and its other upgrades.",
+        "Fully stacks with other sources of mana regeneration, including Ring of Basilius and its other upgrades.",
         "Can regenerate up to 90 mana in one minute.",
         "The aura's buff lingers for 0.5 seconds.",
-        "Does not affect invulnerable units.",
-        "Stacks with the Basilius Aura from Ring of Basilius."
+        "Does not affect invulnerable units."
       ],
       "mana": null,
       "abilityName": "Basilius Aura",
@@ -73,11 +75,11 @@
     "+4 Intelligence"
   ],
   "tips": [
-    "Consider how much spell damage your team produces when deciding whether or not to buy Veil.",
-    "Veil can be a good purchase if your team overall outputs a good amount of spell damage, even if your own hero doesn't. Due to changes to Spell immunity and improved range of the Veil's debuff, it can be a reliable item by all means.",
+    "Consider how much spell damage your team produces when deciding whether or not to buy Veil of Discord.",
+    "Veil of Discord can be a good purchase if your team overall outputs a good amount of spell damage, even if your own hero doesn't. Due to changes to Spell immunity and improved range of Magic Weakness, it can be a reliable item by all means.",
     "It compliments nicely for armor reducing debuffs for casters that deal physical damage with their spells. Also benefits as pure and magical damage.",
     "Knowing the potentials about magic resistance and armor of the enemy is the main allure of this item. Early game, before anyone can buy a magic resistance artifact or armor, reach their defensive talents or stack enough strength or agility to resist the spell effects lategame; is when Veil of Discord is most destructive.",
-    "Thinking standard 25-30% magic resistance of heroes and no other sources to amplify it further; Veil's debuff treats target as 10-15% magic resistance lost. All inflicted targets incur magical damage at 85-90% efficiency along the duration depends on their stats.",
+    "Thinking standard 25-30% magic resistance of heroes and no other sources to amplify it further; Magic Weakness treats target as 10-15% magic resistance lost. All inflicted targets incur magical damage at 85-90% efficiency along the duration depends on their stats.",
     "For physical damage spells, it is roughly equivalent to reducing armor by 3.5 points."
   ]
 }

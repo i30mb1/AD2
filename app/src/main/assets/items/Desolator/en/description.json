@@ -8,10 +8,11 @@
       ],
       "notes": [
         "Successive attacks with Desolator do not stack the debuff, but refresh the duration instead.",
-        "Attacks apply the debuff before dealing damage.",
-        "Works against every unit, including wards, buildings and allied units.",
+        "The attacks first apply the debuff, then their own damage.",
+        "Works against wards, buildings, and allied units.",
         "Replaces the projectile particle of ranged heroes with a red projectile.",
-        "Fully stacks with Orb of Corrosion, Orb of Destruction and Stygian Desolator. Does not Stack with Blight Stone."
+        "Does not stack with the armor reduction of Blight Stone. If both debuffs are present, Blight Stone's debuff does not reduce armor.",
+        "Fully stacks with any other item."
       ],
       "mana": null,
       "abilityName": "Corruption",
@@ -40,7 +41,7 @@
   ],
   "upgradeIn": null,
   "bonuses": [
-    "+55 Attack damage"
+    "+55 Attack Damage"
   ],
   "tips": [
     "Corruption works against buildings, making it a great pushing tool. Split-pushing heroes can benefit a lot from it, allowing them to take towers down much quicker.",

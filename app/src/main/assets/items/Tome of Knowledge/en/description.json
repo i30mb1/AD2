@@ -8,13 +8,13 @@
       ],
       "notes": [
         "Interrupts the user's channeling spells on cast.",
-        "The first two Tomes used only grant the 700 base experience. Each subsequent Tome used by that team grants 135 more exp than the previous Tome. This growth effect has no upper limit, so the exp bonus keeps growing bigger and bigger with each Tome of Knowledge consumed by that team.",
-        "This growth effect has no upper limit, so the exp bonus keeps growing bigger and bigger with each Tome of Knowledge consumed by that team.",
+        "The first two Tomes used only grant the 700XP base experience. Each subsequent Tome used by that team grants a bonus 135XP than the previous Tome. This growth effect has no upper limit, so the experience bonus keeps growing bigger and bigger with each Tome of Knowledge consumed by that team.",
+        "This growth effect has no upper limit, so the experience bonus keeps growing bigger and bigger with each Tome of Knowledge consumed by that team.",
         "Grants the experience instantly.",
-        "Cannot be used by Spirit Bear or couriers.",
+        "Cannot be used by Spirit Bear or Courier.",
         "Can be used even when already at max level, effectively wasting the item."
       ],
-      "mana": null,
+      "mana": "0",
       "abilityName": "Enlighten",
       "cooldown": "0",
       "description": "Grants you 700 experience plus 135 per tome consumed by your team after the first two.",
@@ -25,10 +25,6 @@
       "itemBehaviour": [],
       "story": null
     }
-  ],
-  "additionalInformation": [
-    "Tomes of Knowledge do not stack in the inventory. Each bought instance requires its own slot.",
-    "Tomes of Knowledge are fully sharable."
   ],
   "cost": "75",
   "lore": null,

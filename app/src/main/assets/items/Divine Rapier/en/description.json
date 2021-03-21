@@ -44,7 +44,7 @@
   "trivia": null,
   "upgradeIn": null,
   "bonuses": [
-    "+300 Attack damage"
+    "+300 Attack Damage"
   ],
   "tips": [
     "The components of Divine Rapier can be stored separately by locking one of the components to prevent disassembly. This can be used to purchase both parts with the courier without risking the loss of the item before delivery or to save the item until the owner judges the time is right.",
@@ -53,6 +53,6 @@
     "Some heroes can utilize Divine Rapier much better than others by dealing splash damage or having better output environment. Even if enemy carry manages to get the Rapier, depending on their hero, they may not be able to use it just as effectively.",
     "Rapier-holders should consider buying a second Rapier (when possible) to keep in their stash as a backup so that after a possible death they still have another Rapier to use.",
     "If a Rapier is picked up from the ground by a hero that can't use it effectively, it is possible to transfer it to an ally by having them pick it up after the carrier denies themselves.",
-    "Because Divine Rapier gives 254 more extra damage than Daedalus, and Daedalus' Critical strike gives 40.5% extra DPS, Divine Rapier gives more damage than Daedalus when the hero deals less than 627 damage without crits."
+    "Because Divine Rapier gives 212 more extra damage than Daedalus, and Daedalus' Critical strike gives 37.5% extra DPS, Divine Rapier gives more damage than Daedalus when the hero deals less than 565 damage without crits."
   ]
 }

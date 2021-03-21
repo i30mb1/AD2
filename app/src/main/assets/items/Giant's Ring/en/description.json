@@ -3,24 +3,31 @@
     {
       "audioUrl": null,
       "effects": [
-        "Ability No Target",
-        "Affects Self"
+        "Ability Passive",
+        "Affects Self \/ Enemies",
+        "Damage Magical"
       ],
-      "notes": [],
+      "notes": [
+        "The model size increase has no impact on the collision size.",
+        "Grants the wielder unobstructed movement, allowing them to path through cliffs and trees.",
+        "The area damage is applied in 0.5-second intervals, starting 0.5 seconds after equipping the item."
+      ],
       "mana": null,
       "abilityName": "Giant's Foot",
       "cooldown": null,
-      "description": "Can path over any terrain and deals 100% of your strength per second to units you are standing on top of.",
+      "description": "Can path over any terrain and deals 100% of your strength per second to units you are standing ontop of.",
       "params": [
-        "Strengh as Damage: 100%"
+        "Model Size Increase: 60%",
+        "Damage Radius: 100",
+        "Strength as Damage per Second: 100%",
+        "The illusions gain the size and unobstructed pathing. The particle effects of the area damage appear, but deals no damage."
       ],
       "itemBehaviour": [],
       "story": null
     }
   ],
   "additionalInformation": [
-    "Deals damage as spell damage. This means it is affected by modifiers such as spell amp and spell lifesteal and is reduced by magic resistance.",
-    "This means it is affected by modifiers such as spell amp and spell lifesteal and is reduced by magic resistance."
+    "Giant's Rings are fully sharable."
   ],
   "cost": "N\/A",
   "lore": null,
@@ -32,7 +39,7 @@
   "upgradeIn": null,
   "bonuses": [
     "+40 Strength",
-    "+60 Movement speed"
+    "+60 Movement Speed"
   ],
   "tips": null
 }

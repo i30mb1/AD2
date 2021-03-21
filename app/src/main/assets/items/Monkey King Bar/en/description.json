@@ -10,8 +10,8 @@
       "notes": [
         "The proc chances of Pierce from multiple Monkey King Bars do not stack. However, Monkey King Bar's pierce works completely independent from Javelin's pierce, fully stacking with it.",
         "However, Monkey King Bar's pierce works completely independent from Javelin's pierce, fully stacking with it.",
-        "The bonus damage is dealt in one instance together with the attack damage, and counts as attack damage as well. It is not considered by crit, cleave or lifesteal. It is also not affected by percentage-based attack damage bonuses or reductions, but can be reduced with flat reductions.",
-        "It is not considered by crit, cleave or lifesteal.",
+        "The bonus damage is dealt in one instance together with the attack damage, and counts as attack damage as well. However, it is not considered by lifesteal, crit or cleave. It is also not affected by percentage-based attack damage bonuses or reductions, but can be reduced with flat reductions.",
+        "However, it is not considered by lifesteal, crit or cleave.",
         "It is also not affected by percentage-based attack damage bonuses or reductions, but can be reduced with flat reductions.",
         "Does not work against buildings, but works against wards and allied units.",
         "Adds an average of 52.5 magical damage to every attack.",
@@ -24,7 +24,8 @@
       "description": "Grants each attack a 75% chance to pierce through evasion and deal 70 bonus magical damage.",
       "params": [
         "Proc Chance: 75%",
-        "Damage: 70"
+        "Damage: 70",
+        "Can proc for illusions, allowing them to bypass evasion, but does not apply the bonus damage."
       ],
       "itemBehaviour": [],
       "story": null
@@ -47,8 +48,8 @@
   ],
   "upgradeIn": null,
   "bonuses": [
-    "+40 Attack damage",
-    "+35 Attack speed"
+    "+40 Attack Damage",
+    "+35 Attack Speed"
   ],
   "tips": [
     "Monkey King Bar's Pierce works against every form of miss chance, not only evasion. This means it is also a viable pickup when the enemy has sources of blind."

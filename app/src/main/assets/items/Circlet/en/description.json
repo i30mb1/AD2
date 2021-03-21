@@ -1,17 +1,14 @@
 {
   "abilities": [],
-  "additionalInformation": [
-    "For strength heroes, it grants 40 health, 0.2 health regen, 0.33 armor, 2 attack speed, 24 mana, 0.1 mana regen and 2 attack damage.",
-    "For agility heroes, it grants 40 health, 0.2 health regen, 0.33 armor, 2 attack speed, 24 mana, 0.1 mana regen and 2 attack damage.",
-    "For intelligence heroes, it grants 40 health, 0.2 health regen, 0.33 armor, 2 attack speed, 24 mana, 0.1 mana regen and 2 attack damage."
-  ],
   "cost": "155",
   "lore": null,
   "consistFrom": null,
   "boughtFrom": "Attributes",
   "name": "Circlet",
   "description": "An elegant circlet designed for human princesses.",
-  "trivia": null,
+  "trivia": [
+    "In the original DotA, Circlet's full name was \"Circlet of Nobility\"."
+  ],
   "upgradeIn": [
     "Bracer",
     "Wraith Band",

@@ -22,7 +22,7 @@
         "Does not get disabled by damage flagged as HP Removal.",
         "Does not share cooldowns with Blink Dagger or Meteor Hammer."
       ],
-      "mana": null,
+      "mana": "0",
       "abilityName": "Fallen Sky",
       "cooldown": "15",
       "description": "Transforms into a meteor that strikes down at the target area after 0.5 seconds in a 315 AoE, stunning enemies for 2 seconds and dealing impact damage. Continues to deal damage every 1 seconds to enemy units and buildings for 6 seconds.",
@@ -56,8 +56,8 @@
   "bonuses": [
     "+20 Strength",
     "+20 Intelligence",
-    "+15 Health regeneration",
-    "+10 Mana regeneration"
+    "+15 Health Regeneration",
+    "+10 Mana Regeneration"
   ],
   "tips": [
     "Fallen Sky is best used as both initiation and escape tool, as it works like a combination of Meteor Hammer and Blink Dagger.",

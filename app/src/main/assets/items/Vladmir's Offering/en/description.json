@@ -7,24 +7,29 @@
         "Affects Allies"
       ],
       "notes": [
-        "Stacks additively with other sources of lifesteal.",
+        "Multiple instances of Vladmir's Aura do not stack. Fully stacks with other sources of armor, including Buckler and its other upgrades. Fully stacks with other sources of mana regeneration, including Ring of Basilius and its other upgrades. Fully stacks with other sources of attack damage. Fully stacks additively with other sources of lifesteal.",
+        "Fully stacks with other sources of armor, including Buckler and its other upgrades.",
+        "Fully stacks with other sources of mana regeneration, including Ring of Basilius and its other upgrades.",
+        "Fully stacks with other sources of attack damage.",
+        "Fully stacks additively with other sources of lifesteal.",
         "Cannot lifesteal off of wards, buildings and allied units.",
         "Only increases base damage and that given by the primary attribute of affected units. Raw bonus damage is not increased.",
         "Can regenerate up to 84 mana in one minute.",
-        "The aura's buff lingers for 3 seconds.",
-        "Affects invulnerable units."
+        "The aura's buff lingers for 0.5 seconds.",
+        "Affects invulnerable, but not hidden units."
       ],
       "mana": null,
       "abilityName": "Vladmir's Aura",
       "cooldown": null,
-      "description": "Grants 15% lifesteal, 18% bonus damage, 1.4 mana regeneration and 3 armor to nearby allies.",
+      "description": "Grants 15% lifesteal, 18% bonus damage, 1.4 mana regeneration, and 3 armor to nearby allies.",
       "params": [
         "Radius: 1200",
         "Lifesteal: 15%",
         "Mana Regeneration Bonus: 1.4",
         "Attack Damage Bonus: 18%",
         "Armor Bonus: 3",
-        "Aura Linger Duration: 0.5"
+        "Aura Linger Duration: 0.5",
+        "Illusions bestow the aura and benefit from all except the damage bonus."
       ],
       "itemBehaviour": [],
       "story": null

@@ -8,13 +8,13 @@
       ],
       "notes": [
         "Interrupts the user's channeling spells upon cast.",
-        "When casting without the Control key, it always casts on self in one click. When holding the Control key, a target has to be selected.",
+        "Always casts on self in one click. When holding the Ctrl key, a target has to be selected.",
         "If the target is more than 650 range away, the caster moves to the target until it is within 400 range before casting. If a cast order is given on a target which is within 650 range already, the caster does not need to move closer and casts it right away.",
         "If a cast order is given on a target which is within 650 range already, the caster does not need to move closer and casts it right away.",
         "Can only target heroes (including illusions) and creep-heroes.",
         "The owner does not have to face the target to use this on it."
       ],
-      "mana": null,
+      "mana": "0",
       "abilityName": "Eat Mango",
       "cooldown": "0",
       "description": "Instantly restores 100 mana.",
@@ -30,7 +30,7 @@
   "additionalInformation": [
     "Enchanted Mangoes can be stacked up to 3 times in an inventory slot. The health regeneration from multiple instances fully stacks.",
     "The health regeneration from multiple instances fully stacks.",
-    "Enchanted Mangoes are not shareable, however, they can be cast on allies.",
+    "Enchanted Mangoes are not shareable, however, they can be cast on allies by holding down the Ctrl key.",
     "Enchanted Mangoes cannot be sold after the preparation phase or after the 10 seconds refund time.",
     "Enchanted Mangoes dropped on the ground have an increased pick-up range of 300, compared to the 150 range of all other items."
   ],
@@ -47,10 +47,10 @@
   ],
   "upgradeIn": null,
   "bonuses": [
-    "+0.6 Health regeneration"
+    "+0.6 Health Regeneration"
   ],
   "tips": [
     "Enchanted Mangoes are a great source of quick burst of mana. One mango usually restores enough mana for most spells in the early game, allowing heroes to use a spell immediately.",
-    "Although a Clarity restores more mana for much less gold, the fact that mangoes restore instantly makes them more valuable in combat than clarities. This makes Enchanted Mangoes a better option for aggressive heroes who want to fight as much as possible."
+    "Although a Clarity restores more mana for much less gold, the fact that mangoes restore instantly makes them more valuable in combat than Clarities. This makes Enchanted Mangoes a better option for aggressive heroes who want to fight as much as possible."
   ]
 }

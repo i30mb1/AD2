@@ -7,7 +7,9 @@
         "Affects Allies \/ Enemies"
       ],
       "notes": [
-        "Fully stacks with other attack speed increasing, armor increasing and armor decreasing effects.",
+        "Multiple instances of Assault Aura do not stack. Fully stacks with other sources of armor, including Buckler and its other upgrades. Fully stacks with other sources of attack speed.",
+        "Fully stacks with other sources of armor, including Buckler and its other upgrades.",
+        "Fully stacks with other sources of attack speed.",
         "A unit can be affected by the positive and the negative aura at the same time.",
         "The aura's buff and debuff linger for 0.5 seconds.",
         "The status debuff icon on enemies only shows up when the affected unit has vision over the source. However, the armor reduction in the HUD is always visible.",
@@ -24,11 +26,10 @@
         "Allies Attack Speed Bonus: 30",
         "Allies Armor Bonus: 5",
         "Enemy Armor Reduction: 5",
-        "Aura Linger Duration: 0.5"
+        "Aura Linger Duration: 0.5",
+        "Does not affect spell immune enemies. Affects spell immune allies."
       ],
-      "itemBehaviour": [
-        "(Spell_immunity_block_partial_symbol)^Partially pierces spell immunity\nDoes not affect spell immune enemies\nAffects spell immune allies."
-      ],
+      "itemBehaviour": [],
       "story": null
     }
   ],
@@ -50,7 +51,7 @@
   "upgradeIn": null,
   "bonuses": [
     "+10 Armor",
-    "+30 Attack speed"
+    "+30 Attack Speed"
   ],
   "tips": [
     "The Assault Aura is a great tool for pushing enemy towers, as it provides reliable attack speed and armor. In addition to that, it also reduces the nearby structure and enemies' armor which can help the nearby ally heroes take them down."

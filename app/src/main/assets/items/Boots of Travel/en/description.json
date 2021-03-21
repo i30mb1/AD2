@@ -6,7 +6,10 @@
         "Ability Passive"
       ],
       "notes": [
-        "On level 1, allows targeting allied non-hero units. On level 2, additionally allows targeting allied heroes."
+        "On level 1, allows targeting allied non-hero units. On level 2, additionally allows targeting allied heroes. Treats creep-heroes as creeps.",
+        "Upon initially equipping the item, automatically sells all currently owned Town Portal Scrolls in the dedicated slot After that, grants a free Town Portal Scroll to the hero. Also works for hero clones. These effects only occur upon initially equipping the item. Re-equipping it (e.g. moving from backpack) does not repeat these effects.",
+        "After that, grants a free Town Portal Scroll to the hero. Also works for hero clones.",
+        "These effects only occur upon initially equipping the item. Re-equipping it (e.g. moving from backpack) does not repeat these effects."
       ],
       "mana": null,
       "abilityName": "Upgrade: Town Portal Scroll",
@@ -21,12 +24,12 @@
   ],
   "additionalInformation": [
     "Upgrading the item improves the passive Teleport upgrade. Can be upgraded only once.",
-    "The total gold cost for each level is 2500\/4500.",
-    "Movement speed bonuses from multiple pairs of boots do not stack.",
+    "The total gold cost for each level is 2500\/4500 .",
+    "Movement speed bonuses from multiple pairs of boots or items based on Boots of Speed do not stack..",
     "Stacks with all other movement speed bonuses.",
-    "Holding ALT causes an icon to appear below every allied heroes' portrait below the top bar of the HUD, showing the allies' teleport status. The icon shows their current cooldown on their teleport. If the ally has no teleport item, no icon appears. If it is in the backpack, it appears grey. The display prioritizes Boots of Travel over Town Portal Scrolls and Boots of Travel level 2 over level 1. It does not show other teleport abilities.",
+    "Holding Alt causes an icon to appear below every allied heroes' portrait below the top bar of the HUD, showing the allies' teleport status. The icon shows their current cooldown on their teleport. If the ally has no teleport item, no icon appears. If it is in the backpack, it appears grey. The display prioritizes Boots of Travel over Town Portal Scroll and Boots of Travel level 2 over level 1. It does not show other teleport abilities.",
     "The icon shows their current cooldown on their teleport. If the ally has no teleport item, no icon appears. If it is in the backpack, it appears grey.",
-    "The display prioritizes Boots of Travel over Town Portal Scrolls and Boots of Travel level 2 over level 1. It does not show other teleport abilities."
+    "The display prioritizes Boots of Travel over Town Portal Scroll and Boots of Travel level 2 over level 1. It does not show other teleport abilities."
   ],
   "cost": "2500",
   "lore": null,
@@ -42,7 +45,7 @@
     "Boots of Travel 2"
   ],
   "bonuses": [
-    "+110\/130 Movement speed"
+    "+110\/130 Movement Speed"
   ],
   "tips": [
     "Boots of Travels is useful on all heroes during the late game, where it is needed to make desperate pushes or defenses, especially if one or both teams are dead or away from their bases.",

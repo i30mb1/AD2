@@ -16,7 +16,7 @@
         "However, the buff and the debuff fully stack with those applied by Solar Crest.",
         "Can be cast on any unit, except on wards and buildings."
       ],
-      "mana": null,
+      "mana": "0",
       "abilityName": "Valor",
       "cooldown": "12",
       "description": "If cast on an ally, grants them the 5 armor, and removing it from the caster. If cast on an enemy, reduces 5 armor on both the enemy and the caster. Cannot target spell immune enemies.",
@@ -25,16 +25,12 @@
         "Self Armor Reduction: 5",
         "Enemy Armor Reduction: 5",
         "Ally Armor Bonus: 5",
-        "Duration: 12"
+        "Duration: 12",
+        "Can be cast on spell immune allies. Cannot be cast on spell immune enemies."
       ],
-      "itemBehaviour": [
-        "(Spell_immunity_block_partial_symbol)^Partially pierces spell immunity\nCan be cast on spell immune allies\nCannot be cast on spell immune enemies."
-      ],
+      "itemBehaviour": [],
       "story": null
     }
-  ],
-  "additionalInformation": [
-    "Medallion of Courage does not inherit the passive armor reduction from Blight Stone."
   ],
   "cost": "1025",
   "lore": null,
@@ -51,7 +47,7 @@
     "Solar Crest"
   ],
   "bonuses": [
-    "+1.5 Mana regeneration",
+    "+1.5 Mana Regeneration",
     "+5 Armor"
   ],
   "tips": [

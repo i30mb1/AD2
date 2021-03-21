@@ -10,6 +10,7 @@
         "The attack range bonus works for ranged units only.",
         "Affects the cast range of active attack modifiers as well.",
         "The aura's buff lingers for 0.5 seconds.",
+        "Only affects player-controlled units. AI-controlled lane creeps are not affected.",
         "Does not affect invulnerable units.",
         "The Scan cooldown reduction is granted by the aura, not the item itself. This means using Scan while no one is affected by the aura (i.e. item owner is invulnerable and has no allies nearby), the cooldown is not reduced.",
         "This means using Scan while no one is affected by the aura (i.e. item owner is invulnerable and has no allies nearby), the cooldown is not reduced.",

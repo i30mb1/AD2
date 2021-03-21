@@ -9,13 +9,11 @@
   "boughtFrom": "Neutral Drop Only",
   "name": "Faded Broach",
   "description": "A life-saving jewel bestowed upon a young queen by a kindly vizier.",
-  "trivia": [
-    "There is a typographic error in the name of the item, the correct spelling is \"brooch\"."
-  ],
+  "trivia": null,
   "upgradeIn": null,
   "bonuses": [
     "+200 Mana",
-    "+20 Movement speed"
+    "+20 Movement Speed"
   ],
   "tips": null
 }

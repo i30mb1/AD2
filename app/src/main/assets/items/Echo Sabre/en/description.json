@@ -20,8 +20,7 @@
         "Echo Strike triggers on instant attacks as well, applying the slow. The attack speed is wasted, though, since they are instant attacks.",
         "The attack speed bonus works for hero clones, but clones cannot apply the slow.",
         "The slow of multiple instances does not stack, but refreshes the duration instead.",
-        "Procs on anything, including buildings, wards and allies. The slow fully applies to allies, but not to buildings and wards.",
-        "Attack speed bonus stacks with the bonus of Silver Edge's Echo Strike, but the slow debuffs do not stack."
+        "Procs on anything, including buildings, wards and allies. The slow fully applies to allies, but not to buildings and wards."
       ],
       "mana": null,
       "abilityName": "Echo Strike",
@@ -31,11 +30,10 @@
         "Attack Speed Bonus: 490",
         "Number of Attacks: 1",
         "Move Speed Slow: 100%",
-        "Slow Duration: 0.8"
+        "Slow Duration: 0.8",
+        "Can proc on spell immune enemies. Cannot slow spell immune enemies. Slow persists if debuff was placed before spell immunity and when not dispelled."
       ],
-      "itemBehaviour": [
-        "(Spell_immunity_block_partial_symbol)^Partially pierces spell immunity\nCan proc on spell immune enemies\nCannot slow spell immune enemies\nSlow persists if debuff was placed before spell immunity and when not dispelled."
-      ],
+      "itemBehaviour": [],
       "story": null
     }
   ],
@@ -60,9 +58,9 @@
   "bonuses": [
     "+12 Strength",
     "+10 Intelligence",
-    "+2.25 Mana regeneration",
-    "+15 Attack damage",
-    "+10 Attack speed"
+    "+2.25 Mana Regeneration",
+    "+15 Attack Damage",
+    "+10 Attack Speed"
   ],
   "tips": [
     "The best items in combination to increase your damage are those who grant critical hit and armor reduction. A Skull Basher is also good to get a chance to bash from the two quick attacks. You can combine the echo sabre with a Daedalus and Satanic's active to instantly restore your HP.",

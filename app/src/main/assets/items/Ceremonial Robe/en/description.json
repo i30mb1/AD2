@@ -3,28 +3,34 @@
     {
       "audioUrl": null,
       "effects": [
-        "Ability Toggle \/ Aura",
+        "Ability Aura",
         "Affects Enemies",
         "Damage Magical"
       ],
       "notes": [
-        "Ceremonial Robe is an aura and its buff\/debuff lingers for 0.5 seconds.",
-        "Reduces most heroes' total magic resistance to 18%, assuming basic 25% magic resistance and no other sources of magic resistance."
+        "Ceremonial Auras from multiple Ceremonial Robes do not stack.",
+        "The aura's debuff lingers for seconds.",
+        "Does not affect invulnerable units.",
+        "Stacks multiplicatively with other sources of magic resistance.",
+        "Reduces most heroes' total magic resistance to 17.5%, assuming basic 25% magic resistance and no other sources of magic resistance."
       ],
       "mana": null,
-      "abilityName": "Passive",
+      "abilityName": "Ceremonial Aura",
       "cooldown": null,
-      "description": "Lowers enemy Status Resistance by and Magic Resistance by .",
+      "description": "Lowers enemy Status Resistance by 10% and Magic Resistance by 10%.",
       "params": [
         "Radius: 1200",
-        "Reduced magic resistance: 10%",
-        "Reduced status resistance: 10%"
+        "Status Resistance Reduction: 10%",
+        "Magic Resistance Reduction: 10%",
+        "Aura Linger Duration: 0.5"
       ],
       "itemBehaviour": [],
       "story": null
     }
   ],
-  "additionalInformation": [],
+  "additionalInformation": [
+    "Ceremonial Robes are fully shareable."
+  ],
   "cost": "N\/A",
   "lore": null,
   "consistFrom": null,

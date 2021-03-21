@@ -41,11 +41,11 @@
   "trivia": null,
   "upgradeIn": null,
   "bonuses": [
-    "+20 Attack damage",
+    "+20 Attack Damage",
     "+16% Lifesteal",
-    "+14% Health regen amplification",
-    "+14% Lifesteal amplification",
-    "+14% Spell lifesteal amplification"
+    "+14% Health Regen Amplification",
+    "+14% Lifesteal Amplification",
+    "+14% Spell Lifesteal Amplification"
   ],
   "tips": null
 }

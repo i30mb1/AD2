@@ -8,13 +8,11 @@
       ],
       "notes": [
         "Interrupts the user's channeling spells upon cast.",
-        "Switches attributes as follows: Strength > Intelligence Intelligence > Agility Agility > Strength",
-        "Strength > Intelligence",
-        "Intelligence > Agility",
-        "Agility > Strength",
+        "Switches attributes as follows: Strength ➜ Intelligence ➜ Agility ➜ Strength.",
+        "Strength ➜ Intelligence ➜ Agility ➜ Strength.",
         "Current health and mana percentages stay unchanged upon switching attributes."
       ],
-      "mana": null,
+      "mana": "0",
       "abilityName": "Switch Attribute",
       "cooldown": "0",
       "description": "There is no description for this ability.",

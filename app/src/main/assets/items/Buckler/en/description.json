@@ -7,6 +7,8 @@
         "Affects Allies"
       ],
       "notes": [
+        "Multiple instances of Buckler Aura do not stack. Fully stacks with other sources of armor, including Buckler's upgrades.",
+        "Fully stacks with other sources of armor, including Buckler's upgrades.",
         "The aura's buff lingers for 0.5 seconds.",
         "Only affects player-controlled units.",
         "Does not affect invulnerable units."

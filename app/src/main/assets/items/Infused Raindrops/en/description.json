@@ -23,11 +23,10 @@
       "params": [
         "Minimum Damage Threshold: 50",
         "Magical Damage Blocked: 120",
-        "Number of Charges: 6"
+        "Number of Charges: 6",
+        "While spell immune, Infused Raindrops does not react on magical damage."
       ],
-      "itemBehaviour": [
-        "(Spell_immunity_block_symbol)^Does not pierce spell immunity\nWhile spell immune, Infused Raindrops does not react on magical damage."
-      ],
+      "itemBehaviour": [],
       "story": null
     }
   ],
@@ -35,7 +34,7 @@
     "Becomes available for purchase at the 3 minute mark.",
     "Infused Raindrops do not stack in the inventory. Each bought instance requires its own slot. The mana regeneration from multiple instances fully stacks.",
     "The mana regeneration from multiple instances fully stacks.",
-    "The sell value of the item is based on the number of charges remaining. A single instance has a sell value of 18.75 gold."
+    "The sell value of the item is based on the number of charges remaining. A single instance has a sell value of 18.75 ."
   ],
   "cost": "225",
   "lore": null,
@@ -46,7 +45,7 @@
   "trivia": null,
   "upgradeIn": null,
   "bonuses": [
-    "+0.8 Mana regeneration"
+    "+0.8 Mana Regeneration"
   ],
   "tips": [
     "Infused Raindrops absorbs the damage of Eul's Scepter of Divinity's Cyclone, so that the Cyclone cannot disable Blink Dagger, allowing the holder to blink away after Cyclone ends.",
@@ -56,7 +55,6 @@
     "Infused Raindrops is also not very effective against damage over time which deals just high enough damage to proc it, as one such spell can proc Raindrop multiple times throughout its duration, wasting charges on rather low damage ticks, as compared to burst damage. Spells like Venomous Gale and Shadow Strike are long lasting damage over time spells which can easily use up 2 charges per cast, with just minimal damage getting blocked.",
     "Shorter effects like Frostbite, or enough stacks of Burning Spear (with just a few stacks) are also able to waste charges, as they deal the minimum required damage to proc it, allowing enemies to throw higher damage nukes while the item is on cooldown.",
     "In the later game, Radiance burns Raindrops' charges away without any effort and with the minimum amount of damage getting blocked, making it very ineffective against Radiance.",
-    "The item should not be used in combination with any other form of damage negation, like Aphotic Shield or Refraction, because it stills lose a charge and block the damage before the spell blocks them, basically wasting a charge for damage which would have already been blocked by the spells.",
-    "Very good item when laning against Bane since he only has very high mana cost Brain Sap ability to proc raindrops, negating most of it's damage while reducing amount of heal Bane himself receives."
+    "The item should not be used in combination with any other form of damage negation, like Aphotic Shield or Refraction, because it stills lose a charge and block the damage before the spell blocks them, basically wasting a charge for damage which would have already been blocked by the spells."
   ]
 }

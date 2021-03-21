@@ -1,10 +1,5 @@
 {
   "abilities": [],
-  "additionalInformation": [
-    "For strength heroes, it grants 4.17 armor and 25 attack speed.",
-    "For agility heroes, it grants 4.17 armor, 25 attack speed and 25 attack damage.",
-    "For intelligence heroes, it grants 4.17 armor and 25 attack speed."
-  ],
   "cost": "2800",
   "lore": null,
   "consistFrom": null,

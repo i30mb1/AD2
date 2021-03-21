@@ -7,18 +7,19 @@
         "Affects Allied Heroes"
       ],
       "notes": [
-        "Double clicking the item automatically targets self. Multiple casts on the same target do not stack, but refresh the duration.",
+        "↓↓ Double-tapping automatically target self.",
+        "Multiple casts on the same target do not stack, but refresh the duration.",
         "Can be cast on creep-heroes, however, it does not reflect any spell on them.",
         "Applies a basic dispel on the target upon cast.",
         "When a spell is blocked by Linken's Sphere, it still gets reflected.",
         "Does not reflect spells cast by allies.",
-        "Does not reflect Ion Shell, Morph, Spell Steal, Soulbind, Spectral Dagger, Urn of Shadows, Spirit Vessel, Medallion of Courage, and Solar Crest.",
+        "Does not reflect Ion Shell, Morph, Spell Steal, Soulbind, Spectral Dagger, Urn of Shadows, Spirit Vessel, Medallion of Courage and Solar Crest.",
         "Does not reflect spells reflected by Anti-Mage's Counterspell or by another Echo Shell.",
         "For a list of reflected spells, see Spell Reflection."
       ],
       "mana": "175",
       "abilityName": "Echo Shell",
-      "cooldown": null,
+      "cooldown": "15",
       "description": "Applies a shield to the target unit for 6 seconds which re-casts most targeted spells back to their caster. The shielded unit will still take damage from the spell.",
       "params": [
         "Cast Range: 900",
@@ -43,9 +44,9 @@
   ],
   "upgradeIn": null,
   "bonuses": [
-    "+6.5 Health regeneration",
+    "+6.5 Health Regeneration",
     "+250 Mana",
-    "+4 Mana regeneration",
+    "+4 Mana Regeneration",
     "+10 Armor"
   ],
   "tips": [

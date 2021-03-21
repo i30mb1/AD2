@@ -1,43 +1,51 @@
 {
   "abilities": [
     {
-      "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/0\/07\/Blink_Dagger_Blink_1.mp3\/revision\/latest?cb=20191227195354",
+      "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/0\/08\/Overwhelming_Blink_Overwhelming_Blink_1.mp3\/revision\/latest?cb=20210120233510",
       "effects": [
         "Ability Target Point",
-        "Affects Self"
+        "Affects Self \/ Enemies",
+        "Damage Magical"
       ],
       "notes": [
-        "Double clicking the item automatically casts it on your team's fountain, blinking towards its direction, using the penalty distance.",
         "Disjoints projectiles upon cast.",
         "Does not blink for the full distance when targeting closer than the max distance.",
-        "When targeting beyond the max blink distance, it blinks for range towards the targeted direction, instead of .",
-        "The second sound only plays when the blinked distance is greater than . It is audible to everyone.",
-        "Damage greater than 0 from any player (including allies, excluding self) or Roshan puts Blink on a 3 second cooldown. Since it is a cooldown and not actually disabled, it can be refreshed with Refresher Orb, Refresher Shard and Rearm. However, this cooldown is not affected by Octarine Core or Arcane Rune. Does not get disabled by damage flagged as HP Removal.",
+        "When targeting beyond the max blink distance, it blinks for 960 range, using the penalty distance, towards the targeted direction instead of 1200. ↓↓ Double-tapping automatically casts it on the team's fountain, blinking towards its direction using the penalty distance.",
+        "↓↓ Double-tapping automatically casts it on the team's fountain, blinking towards its direction using the penalty distance.",
+        "The second sound only plays when the blinked distance is greater than 960. It is audible to everyone.",
+        "The area effect first applies the debuff, then the damage.",
+        "Damage greater than 0 from any player (including allies, excluding self) or Roshan puts Blink on a 3 second cooldown. Since it is a cooldown and not actually disabled, it can be refreshed with Refresher Orb, Refresher Shard and Rearm. However, this cooldown is not affected by percentage-based cooldown reductions. Does not get disabled by damage flagged as HP Removal.",
         "Since it is a cooldown and not actually disabled, it can be refreshed with Refresher Orb, Refresher Shard and Rearm.",
-        "However, this cooldown is not affected by Octarine Core or Arcane Rune.",
+        "However, this cooldown is not affected by percentage-based cooldown reductions.",
         "Does not get disabled by damage flagged as HP Removal.",
+        "Shares cooldown with Blink Dagger, Swift Blink, and Arcane Blink. Does not share cooldown with Fallen Sky.",
         "Does not share cooldown with Fallen Sky."
       ],
-      "mana": null,
+      "mana": "0",
       "abilityName": "Overwhelming Blink",
       "cooldown": "15",
-      "description": "Teleport to a target point up to 1200 units away. After teleporting, all enemies in an 800 AoE have 50% movement slow and 50 attack speed slow for 6 seconds and take damage equal to Hero strength + 200. Blink Dagger cannot be used for 3 seconds after taking damage from an enemy hero or Roshan.",
+      "description": "Teleport to a target point up to 1200 units away. After teleportation, all enemies in a 800 AoE have 50% movement speed slow and 50 attack speed slow for 6 seconds, and take damage equal to 200 + 100% of your strength. Overwhelming Blink cannot be used for 3 seconds after taking damage from an enemy hero or Roshan.",
       "params": [
         "Cast Range: Global",
         "Max Blink Distance: 1200",
         "Penalty Blink Distance: 960",
-        "Damage Cooldown: 3",
-        "AOE: 800",
-        "Movement slow: 50%",
-        "Attack speed slow: 50",
-        "Debuff duration: 6",
-        "Damage: Hero strength + 200"
+        "Radius: 800",
+        "Base Damage: 200",
+        "Strength as Damage: 100%",
+        "Move Speed Slow: 50%",
+        "Attack Speed Slow: 50",
+        "Slow Duration: 6",
+        "Damage Cooldown: 3"
       ],
       "itemBehaviour": [],
       "story": null
     }
   ],
-  "additionalInformation": [],
+  "additionalInformation": [
+    "For strength heroes, it grants 500 health, 2.5 health regen and 25 attack damage.",
+    "For agility heroes, it grants 500 health and 2.5 health regen.",
+    "For intelligence heroes, it grants 500 health and 2.5 health regen."
+  ],
   "cost": "6800",
   "lore": null,
   "consistFrom": [
@@ -53,5 +61,11 @@
   "bonuses": [
     "+25 Strength"
   ],
-  "tips": null
+  "tips": [
+    "Blink requires heroes to face the direction in which they are blinking. This means that heroes facing away from their blink destination will have to turn first, causing a slight delay depending on their turn rate.",
+    "Hood of Defiance's barrier blocks damage over time, meaning that it will prevent items like Radiance from resetting Blink Dagger's cooldown.",
+    "Use Blink to dodge incoming projectile-based spells such as Storm Hammer or Spirit Lance, and from items like Rod of Atos.",
+    "When Blink dagger go into cooldown upon taking damage on an escape, a quick self-cast with Eul's Scepter of Divinity will allow you to wait the short cooldown relatively safely and blink out the moment you land on the ground.",
+    "Blink Dagger can turn into a very strong escape tool if you are affected by False Promise."
+  ]
 }

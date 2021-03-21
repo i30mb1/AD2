@@ -7,34 +7,33 @@
         "Affects Enemies \/ Allies"
       ],
       "notes": [
-        "Double clicking the item casts it on self.",
+        "↓↓ Double-tapping automatically target self.",
         "Pushes the target at a speed of 1200.",
         "The target is not disabled during the push, so they still can cast spells or items, attack and turn during the push. This means it does not cancel channeling spells of the target. However, it interrupts the user's channeling spells upon cast, since it is a single target spell. It is not the push itself canceling them.",
         "This means it does not cancel channeling spells of the target.",
         "However, it interrupts the user's channeling spells upon cast, since it is a single target spell. It is not the push itself canceling them.",
-        "Does not push units affected by Black Hole, Chronosphere, Duel, or Flaming Lasso.",
-        "Cannot push units through Kinetic Fields or Arenas of Blood.",
-        "If the target is affected by Soulbind, it cannot push the unit further than its max stretch distance allows.",
-        "If the target is leashed by Pounce, the leash gets instantly broken upon cast. However, if the target gets leashed after cast, it cannot push the unit further than the max stretch distance of Pounce allows.",
-        "However, if the target gets leashed after cast, it cannot push the unit further than the max stretch distance of Pounce allows.",
+        "Does not push the target if they are affected by Black Hole, Chronosphere, Duel, or Flaming Lasso.",
+        "Cannot push the target through Kinetic Fields or Arenas of Blood.",
+        "If the target is affected by Soulbind, it cannot push them further than its max stretch distance allows.",
+        "If the target is leashed by Pounce, the leash gets instantly broken upon cast. However, if the target gets leashed after cast, it cannot push them further than the max stretch distance of Pounce allows.",
+        "However, if the target gets leashed after cast, it cannot push them further than the max stretch distance of Pounce allows.",
         "Cannot be cast on wards or buildings. Can be cast on Homing Missiles.",
-        "Can move units over impassable terrain. Trees within 100 radius around the pushed target get destroyed during the push.",
+        "Can move the target over impassable terrain. Trees within 100 radius around them get destroyed during the push.",
         "Can be cast on Roshan but without any effect, since Roshan is immune to forced movement.",
         "Shares cooldown with Hurricane Pike. Does not share cooldown with Force Boots."
       ],
       "mana": "100",
       "abilityName": "Force",
-      "cooldown": null,
+      "cooldown": "23",
       "description": "Pushes any target unit 600 units in the direction it is facing.",
       "params": [
         "Cast Range (Ally\/Self): 550",
         "Cast Range (Enemy): 850",
         "Push Distance: 600",
-        "Push Duration: 0.5"
+        "Push Duration: 0.5",
+        "Can be cast on self while spell immune. Cannot be cast on other spell immune units."
       ],
-      "itemBehaviour": [
-        "(Spell_immunity_block_partial_symbol)^Partially pierces spell immunity\nCan be cast on self while spell immune\nCannot be cast on other spell immune units."
-      ],
+      "itemBehaviour": [],
       "story": null
     }
   ],
@@ -61,7 +60,7 @@
   ],
   "bonuses": [
     "+10 Intelligence",
-    "+2.5 Health regeneration"
+    "+2.5 Health Regeneration"
   ],
   "tips": [
     "This is an overall good and cheap utility item for saving allies and messing up enemy positioning.",

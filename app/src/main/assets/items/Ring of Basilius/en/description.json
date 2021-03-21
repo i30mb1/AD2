@@ -7,10 +7,11 @@
         "Affects Allies"
       ],
       "notes": [
+        "Multiple instances of Ring of Basilius's Basilius Aura do not stack. Fully stacks with other sources of mana regeneration, including Ring of Basilius's upgrades.",
+        "Fully stacks with other sources of mana regeneration, including Ring of Basilius's upgrades.",
         "Can regenerate up to 84 mana in one minute.",
         "The aura's buff lingers for 0.5 seconds.",
-        "Does not affect invulnerable units.",
-        "Stacks with the Basilius Aura from Veil of Discord."
+        "Does not affect invulnerable units."
       ],
       "mana": null,
       "abilityName": "Basilius Aura",

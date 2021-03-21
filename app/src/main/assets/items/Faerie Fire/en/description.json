@@ -9,7 +9,7 @@
       "notes": [
         "Interrupts the user's channeling spells upon cast."
       ],
-      "mana": null,
+      "mana": "0",
       "abilityName": "Imbue",
       "cooldown": "5",
       "description": "Instantly restores 85 health.",
@@ -35,7 +35,7 @@
   "trivia": null,
   "upgradeIn": null,
   "bonuses": [
-    "+2 Attack damage"
+    "+2 Attack Damage"
   ],
   "tips": [
     "For the mid-laner, Faerie Fire can create an advantage over the enemy, as well as save him from a gank.",

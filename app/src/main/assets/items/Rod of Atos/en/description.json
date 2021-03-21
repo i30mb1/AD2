@@ -10,19 +10,20 @@
         "The projectile travels at a speed of 1500.",
         "Roots the target, preventing it from moving and casting certain mobility spells. Provides True Sight over the target, but only when the target was not invisible or within a fade time upon hit.",
         "Provides True Sight over the target, but only when the target was not invisible or within a fade time upon hit.",
-        "Successive casts on the same target do not stack, but refresh the duration instead."
+        "Successive casts on the same target do not stack, but refresh the duration instead.",
+        "Shares cooldown with Gleipnir."
       ],
       "mana": "50",
       "abilityName": "Cripple",
-      "cooldown": null,
+      "cooldown": "18",
       "description": "Roots the target for 2 seconds.",
       "params": [
         "Cast Range: 1100",
-        "Root Duration: 2"
+        "Root Duration: 2",
+        "Root persists if debuff was placed before spell immunity and when not dispelled.",
+        "Blocked upon impact."
       ],
-      "itemBehaviour": [
-        "(Spell_immunity_block_symbol)^Does not pierce spell immunity\nRoot persists if debuff was placed before spell immunity and when not dispelled."
-      ],
+      "itemBehaviour": [],
       "story": null
     }
   ],

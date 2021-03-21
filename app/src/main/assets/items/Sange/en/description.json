@@ -3,10 +3,7 @@
   "additionalInformation": [
     "For strength heroes, it grants 320 health, 1.6 health regen and 16 attack damage.",
     "For agility heroes, it grants 320 health and 1.6 health regen.",
-    "For intelligence heroes, it grants 320 health and 1.6 health regen.",
-    "Sange and its upgrades' Status Resistances don\u2019t stack with each other.",
-    "Health regen amplification from multiple Sange-based items do not stack.",
-    "Lifesteal amplification from multiple Sange-based items do not stack."
+    "For intelligence heroes, it grants 320 health and 1.6 health regen."
   ],
   "cost": "2050",
   "lore": null,
@@ -25,14 +22,13 @@
   "upgradeIn": [
     "Heaven's Halberd",
     "Sange and Yasha",
-    "Kaya and Sange",
-    "Trident"
+    "Kaya and Sange"
   ],
   "bonuses": [
     "+16 Strength",
-    "+16% Status resistance",
-    "+24% Health regen amplification",
-    "+24% Lifesteal amplification"
+    "+16% Status Resistance",
+    "+24% Health Regen Amplification",
+    "+24% Lifesteal Amplification"
   ],
   "tips": null
 }

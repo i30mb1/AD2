@@ -14,7 +14,7 @@
         "Recasting this does not replace the illusions from the previous casts. However, removing the item from the neutral item slot destroys all illusions created by it.",
         "However, removing the item from the neutral item slot destroys all illusions created by it."
       ],
-      "mana": null,
+      "mana": "0",
       "abilityName": "Create Illusion",
       "cooldown": "30",
       "description": "Creates an image under your control.",

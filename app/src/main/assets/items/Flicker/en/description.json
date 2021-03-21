@@ -11,7 +11,7 @@
         "Applies a basic dispel upon cast.",
         "The dispel is applied after the teleport."
       ],
-      "mana": null,
+      "mana": "0",
       "abilityName": "Flicker",
       "cooldown": "4",
       "description": "Dispells debuffs and blinks you to a random spot within 450 range. Does not get disabled on incoming damage.",
@@ -35,7 +35,7 @@
   "trivia": null,
   "upgradeIn": null,
   "bonuses": [
-    "+40 Movement speed"
+    "+40 Movement Speed"
   ],
   "tips": null
 }

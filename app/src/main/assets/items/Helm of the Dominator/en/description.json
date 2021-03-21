@@ -8,6 +8,8 @@
         "Damage Instant Kill"
       ],
       "notes": [
+        "Cannot dominate Necronomicon summons, siege creeps, creep-heroes, and Roshan. On level 1, cannot be cast on ancient creeps. On level 2, can be cast on ancient creeps.",
+        "On level 1, cannot be cast on ancient creeps. On level 2, can be cast on ancient creeps.",
         "Applies a basic dispel on the target which removes buffs and debuffs.",
         "Dominating a creep while already having one dominated causes the previous dominated creep to die.",
         "The number of max allowed units is bound to the player. Buying a new Helm of the Dominator does not allow dominating an additional unit. This also goes for the Tempest Double's copied Helm of the Dominator. When an enemy steals the dominated creep (e.g. Enchant), dominating a new creep does not cause the previous one to die. When the item gets sold or destroyed, the dominated creep dies. The death is not credited to anyone so that no one gets experience from it.",
@@ -16,28 +18,28 @@
         "When the item gets sold or destroyed, the dominated creep dies.",
         "The death is not credited to anyone so that no one gets experience from it.",
         "Sets the target's movement speed to 425, regardless of its default movement speed.",
-        "Sets the target's gold bounty to 200, regardless of its default bounty. The target's default gold bounty is not granted upon killing it, only the set value is. Its experience bounty is unchanged.",
+        "Sets the target's gold bounty to 200 , regardless of its default bounty. The target's default gold bounty is not granted upon killing it, only the set value is. Its experience bounty is unchanged.",
         "The target's default gold bounty is not granted upon killing it, only the set value is. Its experience bounty is unchanged.",
         "When the unit's maximum health is below the minimum health threshold, its maximum and current health are increased by the difference. This current health increase does not count as a heal. The unit has its health set to a value.",
         "This current health increase does not count as a heal. The unit has its health set to a value.",
         "The attack damage bonus is added directly to the unit's base attack damage. It is not added as a raw attack damage bonus.",
-        "Does not restore the creep's mana.",
-        "Cannot dominate Necronomicon summons, siege creeps and creep-heroes. Cannot dominate ancient creeps on level 1, but can do so at level 2."
+        "Does not restore the creep's mana."
       ],
-      "mana": null,
+      "mana": "0",
       "abilityName": "Dominate",
       "cooldown": "45",
-      "description": "Takes control of one neutral, non-ancient target unit and sets its movement speed to 425 and max health to a minimum of 1000\/1800. Also provides the unit with +25 base attack damage, +12 health regen, +4 mana regen and +4 armor. Dominated units with a max health of greater than 1000\/1800 retain their original max health. Dominated unit's bounty is set to 200 gold.",
+      "description": "Takes control of one neutral target unit and sets its movement speed to 425 and max health to a minimum of 1000\/1800. Also provides the unit with +25 base attack damage, +12 health regen, +4 mana regen and +4 armor. Dominated units with a max health of greater than 1000\/1800 retain their original max health. Dominated unit's bounty is set to 200 gold.",
       "params": [
         "Cast Range: 700",
         "Max Units: 1",
-        "Minimum Base Health: 1000\/1800",
-        "Set Movement Speed: 425",
+        "Min Base Health: 1000\/1800",
+        "Set Move Speed: 425",
         "Set Gold Bounty: 200",
         "Base Attack Damage Bonus: 25",
         "Health Regen Bonus: 12",
         "Mana Regen Bonus: 4",
-        "Armor Bonus: 4"
+        "Armor Bonus: 4",
+        "Can dominate spell immune units."
       ],
       "itemBehaviour": [],
       "story": null
@@ -46,7 +48,11 @@
   "additionalInformation": [
     "For strength heroes, it grants 120\/400 health, 6.6\/10 health regen, 7\/11.33 armor, 6\/20 attack speed, 72\/240 mana, 0.3\/1 mana regen and 6\/20 attack damage.",
     "For agility heroes, it grants 120\/400 health, 6.6\/10 health regen, 7\/11.33 armor, 6\/20 attack speed, 72\/240 mana, 0.3\/1 mana regen and 6\/20 attack damage.",
-    "For intelligence heroes, it grants 120\/400 health, 6.6\/10 health regen, 7\/11.33 armor, 6\/20 attack speed, 72\/240 mana, 0.3\/1 mana regen and 6\/20 attack damage."
+    "For intelligence heroes, it grants 120\/400 health, 6.6\/10 health regen, 7\/11.33 armor, 6\/20 attack speed, 72\/240 mana, 0.3\/1 mana regen and 6\/20 attack damage.",
+    "Unlike other items with upgradable levels, Helm of the Dominator has a separate recipe for its higher level. It requires an extra item, and has a separate recipe item. It cannot be upgraded using the level 1 recipe like how other items with levels can.",
+    "It requires an extra item, and has a separate recipe item. It cannot be upgraded using the level 1 recipe like how other items with levels can.",
+    "Upgrading the item improves its stats, increases Dominate creep minimum health, and allows it to target ancient creeps. Can be upgraded only once.",
+    "The total gold cost for each level is 2350\/3650."
   ],
   "cost": "2350",
   "lore": null,
@@ -66,7 +72,7 @@
     "+6\/20 Strength",
     "+6\/20 Agility",
     "+6\/20 Intelligence",
-    "+6\/8 Health regeneration",
+    "+6\/8 Health Regeneration",
     "+6\/8 Armor"
   ],
   "tips": [

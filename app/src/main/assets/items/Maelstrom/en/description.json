@@ -11,12 +11,12 @@
         "Does not stack with the Chain Lightning of Mjollnir, Gleipnir or other Maelstroms.",
         "When obtaining multiple items with the Chain Lightning ability, only the one that has been continuously the longest in the inventory works.",
         "The lightning bounces in 0.25 second intervals, so hitting max targets takes 0.75 seconds.",
-        "Can proc on fogged or invisible units, but will not bounce toward fogged or invisible units.",
+        "Can proc on fogged or invisible units, but does not bounce toward fogged or invisible units.",
         "Can never hit the same unit more than once per proc.",
         "All bounces together can deal up to 560 damage (before reductions).",
+        "Against a lone target, adds an average of 42 magical damage to every attack.",
         "Chain Lightning can proc while a previous chain lightning is still bouncing.",
-        "Chain Lightning will not proc if the attacker is dead. However, it can proc if the target is dead.",
-        "However, it can proc if the target is dead.",
+        "Chain Lightning does not proc if the attacker is dead. However, it can proc if the target is dead.",
         "Chain Lightning uses pseudo-random distribution.",
         "Attacks which proc Chain Lightning cannot miss.",
         "The Maelstrom Chain buff is a hidden buff required for the lightning to jump.",
@@ -52,7 +52,7 @@
     "Mjollnir"
   ],
   "bonuses": [
-    "+24 Attack damage"
+    "+24 Attack Damage"
   ],
   "tips": [
     "Maelstrom is a very good item for speeding up farming. If the extra experience is not needed, it is a good alternative to Hand of Midas.",

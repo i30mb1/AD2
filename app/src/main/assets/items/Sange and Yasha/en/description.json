@@ -3,12 +3,7 @@
   "additionalInformation": [
     "For strength heroes, it grants 320 health, 1.6 health regen, 2.67 armor, 32 attack speed, 10% movement speed and 16 attack damage.",
     "For agility heroes, it grants 320 health, 1.6 health regen, 2.67 armor, 32 attack speed, 10% movement speed and 16 attack damage.",
-    "For intelligence heroes, it grants 320 health, 1.6 health regen, 2.67 armor, 32 attack speed and 10% movement speed.",
-    "Status resistance from multiple Sange-based items ( Sange, Sange and Yasha, Kaya and Sange, Heaven's Halberd, does not stack.",
-    "Health regen amplification from multiple Sange-based items do not stack.",
-    "Lifesteal amplification from multiple Sange-based items do not stack.",
-    "Movement speed bonus from multiple Yasha-based items ( Yasha, Yasha and Kaya, Sange and Yasha, Manta Style do not stack.",
-    "Attack speed bonus from multiple Yasha-based items fully stack."
+    "For intelligence heroes, it grants 320 health, 1.6 health regen, 2.67 armor, 32 attack speed and 10% movement speed."
   ],
   "cost": "4100",
   "lore": null,
@@ -28,11 +23,11 @@
   "bonuses": [
     "+16 Strength",
     "+16 Agility",
-    "+25% Status resistance",
-    "+10% Movement speed",
-    "+16 Attack speed",
-    "+30% Health regen amplification",
-    "+30% Lifesteal amplification"
+    "+25% Status Resistance",
+    "+10% Movement Speed",
+    "+16 Attack Speed",
+    "+30% Health Regen Amplification",
+    "+30% Lifesteal Amplification"
   ],
   "tips": [
     "This item is particularly strong in boosting your midgame. Plenty of stats, movement speed, and status resistance it is very strong on most melee carries.",

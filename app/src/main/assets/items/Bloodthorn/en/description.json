@@ -22,18 +22,18 @@
       ],
       "mana": "100",
       "abilityName": "Soul Rend",
-      "cooldown": null,
+      "cooldown": "15",
       "description": "Silences a target for 5 seconds. At the end of the silence, an additional 30% of all damage taken during the silence will be dealt to the target as magical damage. All attacks on the silenced target will have True Strike and 100% chance to crit for 130% damage.",
       "params": [
         "Cast Range: 900",
         "Damage Amplification: 30%",
         "Critical Proc Chance: 100%",
         "Critical Damage: 130%",
-        "Duration: 5"
+        "Duration: 5",
+        "Effect persists and attempts to deal damage when expiring while spell immune if debuff was placed before spell immunity and when not dispelled.",
+        "Red critical numbers are before illusion and armor reduction."
       ],
-      "itemBehaviour": [
-        "(Spell_immunity_block_symbol)^Does not pierce spell immunity\nEffect persists and attempts to deal damage when expiring while spell immune if debuff was placed before spell immunity and when not dispelled."
-      ],
+      "itemBehaviour": [],
       "story": null
     }
   ],
@@ -58,9 +58,9 @@
   "upgradeIn": null,
   "bonuses": [
     "+25 Intelligence",
-    "+5.5 Mana regeneration",
-    "+30 Attack damage",
-    "+90 Attack speed"
+    "+5.5 Mana Regeneration",
+    "+30 Attack Damage",
+    "+90 Attack Speed"
   ],
   "tips": null
 }

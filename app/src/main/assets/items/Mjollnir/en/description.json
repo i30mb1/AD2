@@ -8,7 +8,7 @@
         "Damage Magical"
       ],
       "notes": [
-        "Double clicking the item casts it on self.",
+        "↓↓ Double-tapping automatically target self.",
         "Successive casts on the same target do not stack, but refresh the duration.",
         "The radius is centered around the shielded unit.",
         "Upon proccing, the proccing unit and 4 random enemy units within the radius are hit. If the damage source is more than 900 range away, then only the 4 random enemies within range will be hit.",
@@ -23,7 +23,7 @@
       ],
       "mana": "50",
       "abilityName": "Static Charge",
-      "cooldown": null,
+      "cooldown": "35",
       "description": "Places a charged shield on a target unit for 15 seconds which has a 20% chance to release a 200 magical damage shocking bolt at a nearby attacker and 4 additional enemies.",
       "params": [
         "Cast Range: 800",
@@ -32,11 +32,10 @@
         "Search Radius: 900",
         "Max Number of Targets: 5",
         "Damage: 200",
-        "Shield Duration: 15"
+        "Shield Duration: 15",
+        "Can be cast on spell immune allies. Pierces spell immunity on the triggering enemy. Does not target spell immune secondary enemies."
       ],
-      "itemBehaviour": [
-        "(Spell_immunity_block_partial_symbol)^Partially pierces spell immunity\nCan be cast on spell immune allies\nPierces spell immunity on the triggering enemy\nDoes not target spell immune secondary enemies."
-      ],
+      "itemBehaviour": [],
       "story": null
     },
     {
@@ -50,12 +49,12 @@
         "Does not stack with the Chain Lightning of Maelstrom, Gleipnir or other Mjollnirs.",
         "When obtaining multiple items with the Chain Lightning ability, only the one that has been continuously the longest in the inventory works.",
         "The lightning bounces in 0.25 second intervals, so hitting max targets takes 2.75 seconds.",
-        "Can proc on fogged or invisible units, but will not bounce toward fogged or invisible units.",
+        "Can proc on fogged or invisible units, but does not bounce toward fogged or invisible units.",
         "Can never hit the same unit more than once per proc.",
         "All bounces together can deal up to 2040 damage (before reductions).",
+        "Against a lone target, adds an average of 51 magical damage to every attack.",
         "Chain Lightning can proc while a previous chain lightning is still bouncing.",
-        "Chain Lightning will not proc if the attacker is dead. However, it can proc if the target is dead.",
-        "However, it can proc if the target is dead.",
+        "Chain Lightning does not proc if the attacker is dead. However, it can proc if the target is dead.",
         "Chain Lightning uses pseudo-random distribution.",
         "Attacks which proc Chain Lightning cannot miss.",
         "The Mjollnir Chain buff is a hidden buff required for the lightning to jump.",
@@ -91,11 +90,11 @@
   ],
   "upgradeIn": null,
   "bonuses": [
-    "+24 Attack damage",
-    "+65 Attack speed"
+    "+24 Attack Damage",
+    "+65 Attack Speed"
   ],
   "tips": [
-    "Mjollnir is very effective against heroes with illusions like Naga Siren, Spectre and particularly Phantom Lancer and Chaos Knight that can surround you because the lightning goes all around you compared to cleave and the static charge has more chance to be triggered.",
+    "Mjollnir is very effective against heroes with illusions like Naga Siren, Spectre and particularly Phantom Lancer and Chaos Knight that can surround you because the lightning goes all around you compared to cleave and the Static Charge has more chance to be triggered.",
     "This item is very good for pushing, you can apply the Static Charge on a creep to push a lane safely while you jungle and get extra gold.",
     "This is the most effective item to push back mega creeps."
   ]

@@ -1,12 +1,5 @@
 {
   "abilities": [],
-  "additionalInformation": [
-    "Pupil's Gifts are fully sharable.",
-    "Only increases the hero's secondary attributes. The primary attribute is not increased.",
-    "For strength heroes, it grants 2.17 armor, 13 attack speed, 156 mana, and 0.65 mana regen.",
-    "For agility heroes, it grants 260 health, 1.3 health regen, 156 mana, and 0.65 mana regen.",
-    "For intelligence heroes, it grants 260 health, 1.3 health regen, 2.17 armor, and 13 attack speed."
-  ],
   "cost": "N\/A",
   "lore": null,
   "consistFrom": null,
@@ -16,7 +9,7 @@
   "trivia": null,
   "upgradeIn": null,
   "bonuses": [
-    "+13 Secondary attributes"
+    "+13 Secondary Attributes"
   ],
   "tips": null
 }

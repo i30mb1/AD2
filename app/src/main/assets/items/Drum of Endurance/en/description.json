@@ -11,7 +11,7 @@
         "Multiple casts of Endurance do not stack the buff, but refresh the duration instead.",
         "Only affects player controlled units, including invulnerable units, excluding wards."
       ],
-      "mana": null,
+      "mana": "0",
       "abilityName": "Endurance",
       "cooldown": "30",
       "description": "Gives +45 attack speed and +13% movement speed to nearby allies for 6 seconds.",
@@ -31,14 +31,14 @@
         "Affects Allies"
       ],
       "notes": [
-        "The aura's buff lingers for 0.5 seconds.",
-        "Fully stacks with other sources of movement speed bonuses, except for Swiftness Auras of multiple Drums.",
-        "Affects invulnerable units."
+        "Multiple instances of Swiftness Aura from Drum of Endurance do not stack.",
+        "Does not affects invulnerable units.",
+        "The aura's buff lingers for 0.5 seconds."
       ],
       "mana": null,
       "abilityName": "Swiftness Aura",
       "cooldown": null,
-      "description": "Gives 20 movement speed to nearby allies.",
+      "description": "Grants 20 movement speed to allies.",
       "params": [
         "Radius: 1200",
         "Move Speed Bonus: 20",

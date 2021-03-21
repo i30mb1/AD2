@@ -34,12 +34,13 @@
       "story": null
     }
   ],
-  "cost": "825",
+  "cost": "925",
   "lore": null,
   "consistFrom": [
     "Orb of Venom",
     "Blight Stone",
-    "Fluffy Hat"
+    "Fluffy Hat",
+    "Recipe"
   ],
   "boughtFrom": "Аксессуары",
   "name": "Orb of Corrosion",

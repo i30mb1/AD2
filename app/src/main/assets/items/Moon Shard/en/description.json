@@ -7,24 +7,26 @@
         "Affects Allied Heroes"
       ],
       "notes": [
-        "Double clicking the item casts it on self.",
+        "↓↓ Double-tapping automatically target self.",
         "A hero cannot consume more than one Moon Shard.",
         "Once consumed the item remains factored into the hero's net worth and GPM.",
         "Can target Spirit Bear as well, but not other creep-heroes.",
-        "Cannot target illusions, Tempest Doubles or Meepo clones. Illusions and Tempest Doubles copy the Moon Shard buff, if the main hero has it. However, the buff is not copied by Divided We Stand clones or Wukong's Command clones.",
+        "Cannot target illusions, Tempest Double or Meepo Clones. In Ability Draft, any other hero\u2019s Divided We Stand clones can be targeted. Illusions and Tempest Doubles copy the Moon Shard buff, if the main hero has it. However, the buff is not copied by Meepo Clones or Wukong's Command clones.",
+        "In Ability Draft, any other hero\u2019s Divided We Stand clones can be targeted.",
         "Illusions and Tempest Doubles copy the Moon Shard buff, if the main hero has it.",
-        "However, the buff is not copied by Divided We Stand clones or Wukong's Command clones.",
+        "However, the buff is not copied by Meepo Clones or Wukong's Command clones.",
         "Applies its vision before Nightmare reduces it.",
         "Does not stack with the vision bonus of Shade Sight."
       ],
-      "mana": null,
+      "mana": "0",
       "abilityName": "Consume",
       "cooldown": "0",
       "description": "Consume the Moon Shard to permanently gain 60 attack speed and 200 bonus night vision. Max 1 use.",
       "params": [
         "Cast Range: Global",
         "Attack Speed Bonus: 60",
-        "Night Vision Bonus: 200"
+        "Night Vision Bonus: 200",
+        "Illusions copy the Moon Shard buff. However, unlike the item itself, illusions are not granted the attack speed bonus. Only the bonus night vision is applied."
       ],
       "itemBehaviour": [],
       "story": null
@@ -51,6 +53,10 @@
       "story": null
     }
   ],
+  "additionalInformation": [
+    "Moon Shards do not stack in the inventory. Each bought instance requires its own slot. The attack speed from multiple instances fully stacks.",
+    "The attack speed from multiple instances fully stacks."
+  ],
   "cost": "4000",
   "lore": null,
   "consistFrom": [
@@ -65,7 +71,7 @@
   ],
   "upgradeIn": null,
   "bonuses": [
-    "+140 Attack speed"
+    "+140 Attack Speed"
   ],
   "tips": [
     "The item works very well with illusions especially with mana burn, critical hits and low base attack time.",

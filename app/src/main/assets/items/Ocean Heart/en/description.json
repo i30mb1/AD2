@@ -18,8 +18,8 @@
       "cooldown": null,
       "description": "Provides you with 8 HP regen and 4 mana regen while in the river.",
       "params": [
-        "River Health Regeneration Bonus: 8",
-        "River Mana Regeneration Bonus: 4"
+        "River Health Regen Bonus: 8",
+        "River Mana Regen Bonus: 4"
       ],
       "itemBehaviour": [],
       "story": null

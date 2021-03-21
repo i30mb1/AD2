@@ -15,7 +15,7 @@
         "Cannot detect units under the effect of Shadow Dance and Smoke of Deceit (although the debuff is still placed on them).",
         "Only slows units when they actually are invisible. This means during the fade time or fade delay of invisibility, the unit is not slowed."
       ],
-      "mana": null,
+      "mana": "0",
       "abilityName": "Reveal",
       "cooldown": "30",
       "description": "Reveals and slows invisible heroes by 20% in a 1050 radius around the caster for 12 seconds.",
@@ -31,7 +31,7 @@
   "additionalInformation": [
     "Stacks with itself in the inventory.",
     "Dust of Appearance is completely shareable.",
-    "The sell value of the item is based on the number of charges remaining. A single instance has a sell value of 40 gold."
+    "The sell value of the item is based on the number of charges remaining. A single instance has a sell value of 40 ."
   ],
   "cost": "80",
   "lore": null,

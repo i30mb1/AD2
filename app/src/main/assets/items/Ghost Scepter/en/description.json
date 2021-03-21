@@ -13,17 +13,16 @@
         "Ghost Form's magic resistance reduction does not stack with other ethereal effects, the one with higher value takes priority.",
         "Shares cooldown with Ethereal Blade."
       ],
-      "mana": null,
+      "mana": "0",
       "abilityName": "Ghost Form",
       "cooldown": "20",
       "description": "You enter ghost form for 4 seconds, becoming immune to physical damage, but are unable to attack and 40% more vulnerable to magic damage.",
       "params": [
         "Magic Resistance Reduction: 40%",
-        "Duration: 4"
+        "Duration: 4",
+        "Can be cast while spell immune. However, the buff gets immediately removed if spell immunity is detected."
       ],
-      "itemBehaviour": [
-        "(Spell_immunity_block_symbol)^Does not pierce spell immunity\nCan be cast while spell immune\nHowever, the buff gets immediately removed if spell immunity is detected."
-      ],
+      "itemBehaviour": [],
       "story": null
     }
   ],

@@ -9,8 +9,8 @@
       ],
       "notes": [
         "Only the attack range bonus is limited to ranged attacks. Melee attacks only apply the damage.",
-        "The bonus damage is dealt in one instance together with the attack damage, and counts as attack damage as well. It can be lifestealed off of, but it is not considered by crit or cleave. It is also not affected by percentage-based attack damage bonuses or reductions, but can be reduced with flat reductions.",
-        "It can be lifestealed off of, but it is not considered by crit or cleave.",
+        "The bonus damage is dealt in one instance together with the attack damage, and counts as attack damage as well. However, it is not considered by lifesteal, crit or cleave. It is also not affected by percentage-based attack damage bonuses or reductions, but can be reduced with flat reductions.",
+        "However, it is not considered by lifesteal, crit or cleave.",
         "It is also not affected by percentage-based attack damage bonuses or reductions, but can be reduced with flat reductions.",
         "Triggers against any attack target, but the damage and True Strike are not applied if the target is a building.",
         "Certain Strike cannot miss.",
@@ -22,7 +22,8 @@
       "description": "Empowers your next attack with 300 bonus magical damage and True Strike. Ranged Attackers have +400 bonus range for the attack.",
       "params": [
         "Attack Range Bonus: 400",
-        "Damage: 300"
+        "Damage: 300",
+        "Illusions do not apply the damage, but get the extra range and True Strike."
       ],
       "itemBehaviour": [],
       "story": null
@@ -36,7 +37,7 @@
   "consistFrom": null,
   "boughtFrom": "Neutral Drop Only",
   "name": "Enchanted Quiver",
-  "description": "Valuable equipment recovered by a young explorer sifting through the flotsam and detritus drifting in the void.",
+  "description": "A graceful gift blessed by the goddess of the hunt.",
   "trivia": null,
   "upgradeIn": null,
   "bonuses": null,

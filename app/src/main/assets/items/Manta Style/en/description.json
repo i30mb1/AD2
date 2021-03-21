@@ -22,7 +22,7 @@
       ],
       "mana": "125",
       "abilityName": "Mirror Image",
-      "cooldown": null,
+      "cooldown": "30\/45",
       "description": "Creates 2 images of your hero that last 20 seconds. Melee images deal 33% damage and take 350% damage, while Ranged images deal 28% and take 400% damage. Cooldown increased by 15 seconds on ranged heroes.",
       "params": [
         "Split Time: 0.1",
@@ -40,9 +40,7 @@
   "additionalInformation": [
     "For strength heroes, it grants 200 health, 1 health regen, 4.33 armor, 38 attack speed, 8% movement speed, 120 mana, 0.5 mana regen and 10 attack damage.",
     "For agility heroes, it grants 200 health, 1 health regen, 4.33 armor, 38 attack speed, 8% movement speed, 120 mana, 0.5 mana regen and 26 attack damage.",
-    "For intelligence heroes, it grants 200 health, 1 health regen, 4.33 armor, 38 attack speed, 8% movement speed, 120 mana, 0.5 mana regen and 10 attack damage.",
-    "Movement speed bonus from multiple Yasha-based items ( Yasha, Yasha and Kaya, Sange and Yasha, Manta Style, Trident) do not stack.",
-    "Attack speed bonus from multiple Yasha-based items fully stack."
+    "For intelligence heroes, it grants 200 health, 1 health regen, 4.33 armor, 38 attack speed, 8% movement speed, 120 mana, 0.5 mana regen and 10 attack damage."
   ],
   "cost": "4600",
   "lore": null,
@@ -60,8 +58,8 @@
     "+10 Strength",
     "+26 Agility",
     "+10 Intelligence",
-    "+8% Movement speed",
-    "+12 Attack speed"
+    "+8% Movement Speed",
+    "+12 Attack Speed"
   ],
   "tips": [
     "The Manta Style is not effective on ranged heroes excepted with heroes with attack modifiers that works on illusions like Luna Moon Glaives bounce, Drow Ranger's high agility and Morphling which mostly buy stats items that benefits illusions.",

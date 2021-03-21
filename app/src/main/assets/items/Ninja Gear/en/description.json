@@ -16,10 +16,10 @@
         "See shared vision for the full list of abilities that reveal unit models.",
         "Smoked units that become visible this way are still hidden from the mini-map.",
         "Smoked units do not provide vision from shared vision abilities unless they also have their unit model revealed by a different shared vision ability that specifically reveals unit models.",
-        "The effect is only dispelled when approaching enemy heroes (including Meepo clones, excluding other clones and illusions) or towers. However, upon cast, Ninja Gear does not affect allies who have any enemy clone near them, including clones that otherwise do not dispel it.",
+        "The effect is only dispelled when approaching enemy heroes (including Meepo Clones, excluding other clones and illusions) or towers. However, upon cast, Ninja Gear does not affect allies who have any enemy clone near them, including clones that otherwise do not dispel it.",
         "However, upon cast, Ninja Gear does not affect allies who have any enemy clone near them, including clones that otherwise do not dispel it."
       ],
-      "mana": null,
+      "mana": "0",
       "abilityName": "Solitary Disguise",
       "cooldown": "45",
       "description": "Casts Smoke of Deceit on yourself only.",
@@ -46,7 +46,7 @@
   "upgradeIn": null,
   "bonuses": [
     "+20 Agility",
-    "+30 Movement speed"
+    "+30 Movement Speed"
   ],
   "tips": null
 }

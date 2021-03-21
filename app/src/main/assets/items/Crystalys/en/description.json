@@ -19,7 +19,8 @@
       "description": "Grants each attack a 30% chance to deal 160% damage.",
       "params": [
         "Proc Chance: 30%",
-        "Critical Damage: 160%"
+        "Critical Damage: 160%",
+        "Red critical numbers are before illusion and armor reduction."
       ],
       "itemBehaviour": [],
       "story": null
@@ -43,7 +44,7 @@
     "Daedalus"
   ],
   "bonuses": [
-    "+32 Attack damage"
+    "+32 Attack Damage"
   ],
   "tips": null
 }

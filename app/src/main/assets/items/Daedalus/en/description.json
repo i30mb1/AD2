@@ -19,7 +19,8 @@
       "description": "Grants each attack a 30% chance to deal 225% damage.",
       "params": [
         "Proc Chance: 30%",
-        "Critical Damage: 225%"
+        "Critical Damage: 225%",
+        "Red critical numbers are before illusion and armor reduction."
       ],
       "itemBehaviour": [],
       "story": null
@@ -41,7 +42,7 @@
   ],
   "upgradeIn": null,
   "bonuses": [
-    "+88 Attack damage"
+    "+88 Attack Damage"
   ],
   "tips": null
 }

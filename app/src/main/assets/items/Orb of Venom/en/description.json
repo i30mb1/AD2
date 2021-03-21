@@ -8,15 +8,15 @@
         "Damage Magical (TagAghanimHP Removal)"
       ],
       "notes": [
-        "The damage from Poison Attack is flagged as HP Removal, so it does not trigger any on-damage effects.",
         "Successive attacks with Orb of Venom do not stack, but refresh the duration instead.",
         "The attacks first apply the debuff, then their own damage.",
         "When a melee and a ranged hero with Orb of Venoms attack one target, the slow of the first applied debuff is used and refreshed.",
         "Deals damage in 1 second intervals, starting 1 second after the debuff is applied, resulting in 2 instances.",
         "Can deal up to 4 damage (before reductions).",
-        "Does not work against wards and buildings. Works against couriers.",
-        "Does not stack with Orb of Corrosion.",
-        "The damage over time is lethal."
+        "The damage from Poison Attack is flagged as HP Removal, so it does not trigger any on-damage effects.",
+        "Does not work against wards, buildings or allied units.",
+        "Does not stack with the slow and damage over time of Orb of Corrosion. If both debuffs are present, Orb of Venom's debuff does not slow or deal damage.",
+        "Fully stacks with any other item."
       ],
       "mana": null,
       "abilityName": "Poison Attack",

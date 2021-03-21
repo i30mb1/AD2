@@ -3,9 +3,7 @@
   "additionalInformation": [
     "For strength heroes, it grants 2.67 armor, 28 attack speed and 8% movement speed.",
     "For agility heroes, it grants 2.67 armor, 28 attack speed, 8% movement speed and 16 attack damage.",
-    "For intelligence heroes, it grants 2.67 armor, 28 attack speed and 8% movement speed.",
-    "Movement speed bonus from multiple Yasha-based items (Yasha, Yasha and Kaya, Sange and Yasha, Manta Style, Trident) do not stack.",
-    "Attack speed bonus from multiple Yasha-based items fully stack."
+    "For intelligence heroes, it grants 2.67 armor, 28 attack speed and 8% movement speed."
   ],
   "cost": "2050",
   "lore": null,
@@ -25,13 +23,12 @@
   "upgradeIn": [
     "Manta Style",
     "Sange and Yasha",
-    "Yasha and Kaya",
-    "Trident"
+    "Yasha and Kaya"
   ],
   "bonuses": [
     "+16 Agility",
-    "+8% Movement speed",
-    "+12 Attack speed"
+    "+8% Movement Speed",
+    "+12 Attack Speed"
   ],
   "tips": null
 }

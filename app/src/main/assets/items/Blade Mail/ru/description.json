@@ -20,7 +20,7 @@
       ],
       "mana": "25",
       "abilityName": "Damage Return",
-      "cooldown": null,
+      "cooldown": "25",
       "description": "Увеличивает возвращение урона от всех источников на 80%. Длится 4,5 сек.",
       "params": [
         "Возвращает урона: 80%",

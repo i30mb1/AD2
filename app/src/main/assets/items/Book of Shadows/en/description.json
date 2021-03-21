@@ -1,24 +1,40 @@
 {
   "abilities": [
     {
-      "audioUrl": null,
+      "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/f\/fe\/Book_of_Shadows_Shadows.mp3\/revision\/latest?cb=20210120232104",
       "effects": [
         "Ability Target Unit",
-        "Affects Enemies \/ Allies"
+        "Affects Units"
       ],
-      "notes": [],
-      "mana": null,
+      "notes": [
+        "Applies a basic dispel on the target upon cast. ↓↓ Double-tapping automatically target self.",
+        "↓↓ Double-tapping automatically target self.",
+        "Silences, mutes, and disarms the target for the duration.",
+        "During Shadows, the target is phased and attack immune. The target is still selectable, however, targeted orders get canceled immediately once coming within range. The target cannot target themselves with most of their own items either. They can target themselves with Glimmer Cape, Healing Salve, Moon Shard, Royal Jelly and Shadow Amulet. Does not prevent Spell Reflection from reflecting spells back at them.",
+        "The target is still selectable, however, targeted orders get canceled immediately once coming within range.",
+        "The target cannot target themselves with most of their own items either.",
+        "They can target themselves with Glimmer Cape, Healing Salve, Moon Shard, Royal Jelly and Shadow Amulet.",
+        "Does not prevent Spell Reflection from reflecting spells back at them.",
+        "Almost every spell treats the target as if they were invisible. Spells which do not treat them as invisible are: Heat-Seeking Missile, Concussive Shot, Wrath of Nature, Omnislash, Mana Drain, Exorcism, and Thundergod's Wrath. Unlike with invisibility, Beetles, Phantoms and Undying Zombies do not instanly die when Shadows is cast on the target.",
+        "Heat-Seeking Missile, Concussive Shot, Wrath of Nature, Omnislash, Mana Drain, Exorcism, and Thundergod's Wrath.",
+        "Unlike with invisibility, Beetles, Phantoms and Undying Zombies do not instanly die when Shadows is cast on the target."
+      ],
+      "mana": "0",
       "abilityName": "Shadows",
-      "cooldown": null,
-      "description": "Target an enemy, ally or self. Cause the target to become untargetable but also silenced, muted and disarmed for 3 seconds. Applies basic dispell.",
-      "params": [],
-      "itemBehaviour": [
-        "(Spell_immunity_block_partial_symbol)^Partially pierces spell immunity\nCan be cast on self while spell immune\nCannot be cast on other spell immune units."
+      "cooldown": "15",
+      "description": "Target an enemy, ally or self. Causes the target to become untargetable but also silenced, muted and disarmed for 3 seconds. Applies a basic dispel.",
+      "params": [
+        "Cast Range: 700",
+        "Duration: 3",
+        "Can be cast on, and can place the modifier on self while spell immune. Can be cast on, but cannot place the modifier on spell immune allies. Cannot be cast on spell immune enemies."
       ],
+      "itemBehaviour": [],
       "story": null
     }
   ],
-  "additionalInformation": [],
+  "additionalInformation": [
+    "Books of Shadows are fully sharable."
+  ],
   "cost": "N\/A",
   "lore": null,
   "consistFrom": null,
@@ -31,7 +47,7 @@
     "+12 Strength",
     "+12 Agility",
     "+12 Intelligence",
-    "+400 Night vision"
+    "+400 Night Vision"
   ],
   "tips": null
 }

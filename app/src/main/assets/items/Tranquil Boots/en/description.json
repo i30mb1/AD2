@@ -22,8 +22,9 @@
       "cooldown": "13",
       "description": "Whenever you attack a hero or are attacked by any unit, the bonus 14 HP regen is lost and the movement speed bonus is reduced to 45 for 13 seconds.",
       "params": [
-        "Movement Speed Reduction: 25",
-        "Health Regen Reduction: 14"
+        "Move Speed Reduction: 25",
+        "Health Regen Reduction: 14",
+        "Illusions always have the broken version in their inventory."
       ],
       "itemBehaviour": [],
       "story": null
@@ -47,8 +48,8 @@
   "trivia": null,
   "upgradeIn": null,
   "bonuses": [
-    "+14 Health regeneration",
-    "+70 Movement speed"
+    "+14 Health Regeneration",
+    "+70 Movement Speed"
   ],
   "tips": [
     "Remember that the Tranquil Boot regen doesn't stop or reset the cooldown if you are casting a spell. You can get a Soul Ring and spam long range abilities and keep the regen active.",

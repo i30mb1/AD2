@@ -8,9 +8,9 @@
       ],
       "notes": [
         "Can target any tree.",
-        "Does not share cooldown with Quelling Blade or Iron Talon."
+        "Does not share cooldown with Quelling Blade."
       ],
-      "mana": null,
+      "mana": "0",
       "abilityName": "Chop Tree",
       "cooldown": "4",
       "description": "Destroy a target tree.",
@@ -52,7 +52,8 @@
         "Damage Physical"
       ],
       "notes": [
-        "Cleave damage cannot be amplified with spell damage amplification and cannot spell lifesteal.",
+        "Cleave damage cannot be amplified with outgoing spell damage amplification and cannot spell lifesteal. Can be amplified by incoming spell damage amplification.",
+        "Can be amplified by incoming spell damage amplification.",
         "Cleave damage is reduced by Damage Block.",
         "The complete area is shaped like an isosceles trapezoid in front of the attacking hero.",
         "Fully stacks with other sources of cleaves. Each source of cleave works completely independent.",
@@ -69,7 +70,8 @@
         "Distance: 650",
         "End Radius: 360",
         "Cleave Damage (Heroes): 70%",
-        "Cleave Damage (Creeps): 50%"
+        "Cleave Damage (Creeps): 50%",
+        "Visual effects and sounds still play when illusions attack."
       ],
       "itemBehaviour": [],
       "story": null
@@ -91,9 +93,9 @@
   ],
   "upgradeIn": null,
   "bonuses": [
-    "+7.5 Health regeneration",
-    "+3.25 Mana regeneration",
-    "+55 Attack damage"
+    "+7.5 Health Regeneration",
+    "+3.25 Mana Regeneration",
+    "+55 Attack Damage"
   ],
   "tips": [
     "The Battle Fury is great tool for farming but a poor choice for mid game skirmishes owing to its lack of primary attributes. Avoid it if the enemy team plays aggressively and your presence is required in team fights early.",

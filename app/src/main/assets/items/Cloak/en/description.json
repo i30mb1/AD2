@@ -1,10 +1,6 @@
 {
   "abilities": [],
-  "additionalInformation": [
-    "Stacks multiplicatively with other sources of magic resistance.",
-    "Increases all heroes' total magic resistance to 36.25%, assuming basic 25% magic resistance and no other sources of magic resistance."
-  ],
-  "cost": "450",
+  "cost": "500",
   "lore": null,
   "consistFrom": null,
   "boughtFrom": "Miscellaneous",
@@ -16,11 +12,11 @@
   ],
   "upgradeIn": [
     "Hood of Defiance",
-    "Glimmer Cape",
-    "Mage Slayer"
+    "Mage Slayer",
+    "Glimmer Cape"
   ],
   "bonuses": [
-    "+15% Magic resistance"
+    "+15% Magic Resistance"
   ],
   "tips": null
 }

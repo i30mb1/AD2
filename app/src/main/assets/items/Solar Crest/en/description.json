@@ -22,7 +22,7 @@
         "The target buff, target debuff and self-debuff fully stack with those applied by Medallion of Courage.",
         "Can be cast on any unit, except on wards and buildings."
       ],
-      "mana": null,
+      "mana": "0",
       "abilityName": "Shine",
       "cooldown": "12",
       "description": "When cast on an ally, grants them 8 armor, 80 attack speed, and 10% movement speed. When cast on an enemy, removes 8 armor, 80 attack speed, and 10% movement speed. Removes the armor from the caster when used. Cannot target spell immune enemies.",
@@ -35,11 +35,10 @@
         "Enemy Armor Reduction: 8",
         "Enemy Movement Speed Slow: 10%",
         "Enemy Attack Speed Slow: 80",
-        "Duration: 12"
+        "Duration: 12",
+        "Can be cast on spell immune allies. Cannot be cast on spell immune enemies."
       ],
-      "itemBehaviour": [
-        "(Spell_immunity_block_partial_symbol)^Partially pierces spell immunity\nCan be cast on spell immune allies\nCannot be cast on spell immune enemies."
-      ],
+      "itemBehaviour": [],
       "story": null
     }
   ],
@@ -50,7 +49,7 @@
     "Movement speed bonuses from multiple Solar Crests fully stack.",
     "Stacks with all other movement speed bonuses."
   ],
-  "cost": "3725",
+  "cost": "3775",
   "lore": null,
   "consistFrom": [
     "Medallion of Courage",
@@ -67,9 +66,9 @@
     "+10 Strength",
     "+10 Agility",
     "+10 Intelligence",
-    "+1.75 Mana regeneration",
+    "+1.75 Mana Regeneration",
     "+8 Armor",
-    "+20 Movement speed"
+    "+20 Movement Speed"
   ],
   "tips": []
 }

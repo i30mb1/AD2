@@ -7,25 +7,31 @@
         "Affects Enemies \/ Allies"
       ],
       "notes": [
-        "Does not interrupt the user's channeling spells upon cast.",
-        "Applies a basic dispel on the user upon cast.",
-        "Pushes the user at a speed of 1.",
-        "The user is not disabled during the push, so they still can cast spells or items, attack and turn during the push.",
-        "Cannot push the user through Kinetic Fields or Arenas of Blood.",
-        "If the user is affected by Soulbind, it cannot push them further than its max stretch distance allows.",
-        "If the user is leashed by Pounce, the leash gets instantly broken upon cast. However, if the user gets leashed after cast, it cannot push them further than the max stretch distance of Pounce allows.",
-        "However, if the user gets leashed after cast, it cannot push them further than the max stretch distance of Pounce allows.",
-        "Can move the user over impassable terrain. Trees within 100 radius around them get destroyed during the push.",
+        "↓↓ Double-tapping automatically target self.",
+        "Applies a basic dispel on the target upon cast.",
+        "Pushes the target at a speed of 1500.",
+        "The target is not disabled during the push, so they still can cast spells or items, attack and turn during the push. This means it does not cancel channeling spells of the target. However, it interrupts the user's channeling spells upon cast, since it is a single target spell. It is not the push itself canceling them.",
+        "This means it does not cancel channeling spells of the target.",
+        "However, it interrupts the user's channeling spells upon cast, since it is a single target spell. It is not the push itself canceling them.",
+        "Does not push the target if they are affected by Black Hole, Chronosphere, Duel, or Flaming Lasso.",
+        "Cannot push the target through Kinetic Fields or Arenas of Blood.",
+        "If the target is affected by Soulbind, it cannot push them further than its max stretch distance allows.",
+        "If the target is leashed by Pounce, the leash gets instantly broken upon cast. However, if the target gets leashed after cast, it cannot push them further than the max stretch distance of Pounce allows.",
+        "However, if the target gets leashed after cast, it cannot push them further than the max stretch distance of Pounce allows.",
+        "Cannot be cast on wards or buildings. Can be cast on Homing Missiles.",
+        "Can move the target over impassable terrain. Trees within 100 radius around them get destroyed during the push.",
+        "Can be cast on Roshan but without any effect, since Roshan is immune to forced movement.",
         "Does not share cooldown with Force Staff or Hurricane Pike."
       ],
       "mana": "75",
       "abilityName": "Force",
-      "cooldown": null,
+      "cooldown": "8",
       "description": "Dispels the user and pushes them 750 units in the direction they are facing.",
       "params": [
         "Cast Range: 750",
         "Push Distance: 750",
-        "Push Duration: 0.5"
+        "Push Duration: 0.5",
+        "Can be cast on self while spell immune. Cannot be cast on other spell immune units."
       ],
       "itemBehaviour": [],
       "story": null
@@ -60,7 +66,7 @@
   "trivia": null,
   "upgradeIn": null,
   "bonuses": [
-    "+115 Movement speed"
+    "+115 Movement Speed"
   ],
   "tips": null
 }

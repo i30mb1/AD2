@@ -1,7 +1,7 @@
 {
   "abilities": [],
   "additionalInformation": [
-    "Movement speed bonuses from multiple pairs of boots do not stack.",
+    "Movement speed bonuses from multiple pairs of boots or items based on Boots of Speed do not stack.",
     "Stacks with all other movement speed bonuses."
   ],
   "cost": "500",
@@ -19,7 +19,7 @@
     "Tranquil Boots"
   ],
   "bonuses": [
-    "+45 Movement speed"
+    "+45 Movement Speed"
   ],
   "tips": null
 }

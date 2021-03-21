@@ -7,15 +7,16 @@
         "Affects Enemies \/ Self"
       ],
       "notes": [
-        "Moves the user next to the target, positioning them randomly around the target.",
+        "Moves the user next to the target, with the position based on the caster's facing angle upon cast.",
         "Does not disjoint projectiles upon teleporting.",
         "The user is ordered to attack the target.",
         "Can be cast on couriers.",
+        "Triggers Bash's cooldown upon cast.",
         "Despite the visual effects, the effect is instant and does not need to travel."
       ],
       "mana": "75",
       "abilityName": "Overwhelm",
-      "cooldown": null,
+      "cooldown": "35",
       "description": "Blinks to and stuns a target enemy unit for 2 seconds. Pierces Spell Immunity.",
       "params": [
         "Cast Range: 550",
@@ -32,7 +33,9 @@
         "Damage Physical"
       ],
       "notes": [
-        "Abyssal Blade's bash does not stack with the bash of Skull Basher and other Abyssal Blades.",
+        "Abyssal Blade's bash does not stack with the bash of Skull Basher and other Abyssal Blades. Does not stack with Bash of the Deep, Greater Bash and Time Lock either. If any of these are present, Bash cannot proc. In Ability Draft, fully stacks with all non-item based bashes.",
+        "Does not stack with Bash of the Deep, Greater Bash and Time Lock either. If any of these are present, Bash cannot proc.",
+        "In Ability Draft, fully stacks with all non-item based bashes.",
         "When obtaining multiple items with the bash ability, only the one that has been continuously the longest in the inventory works.",
         "The proccing attack first applies the debuff, then its own damage.",
         "The bonus damage is dealt in one instance together with the attack damage, and counts as attack damage as well. It can be lifestealed off of, but it is not considered by crit or cleave. It is also not affected by percentage-based attack damage bonuses or reductions, but can be reduced with flat reductions.",
@@ -41,6 +44,7 @@
         "Adds an average of 25 damage to every attack for melee heroes, and 10 damage for ranged heroes.",
         "Does not work against wards and buildings, but works against allied units.",
         "Bash uses pseudo-random distribution.",
+        "Goes on cooldown when Overwhelm is cast.",
         "Abyssal Blade's Bash does not use a regular cooldown. It is neither displayed on the item icon when proccing, nor is it affected by cooldown manipulating effects."
       ],
       "mana": null,
@@ -84,9 +88,7 @@
   "additionalInformation": [
     "For strength heroes, it grants 450 health, 11 health regen and 35 attack damage.",
     "For agility heroes, it grants 450 health, 11 health regen and 25 attack damage.",
-    "For intelligence heroes, it grants 450 health, 11 health regen and 25 attack damage.",
-    "When held by Slardar, Spirit Breaker, Faceless Void, Bash cannot proc.",
-    "When held by a hero that has the Time Lock passive (e.g. in Ability Draft), Bash cannot proc either."
+    "For intelligence heroes, it grants 450 health, 11 health regen and 25 attack damage."
   ],
   "cost": "6625",
   "lore": null,
@@ -103,8 +105,8 @@
   "bonuses": [
     "+10 Strength",
     "+250 Health",
-    "+10 Health regeneration",
-    "+25 Attack damage"
+    "+10 Health Regeneration",
+    "+25 Attack Damage"
   ],
   "tips": [
     "Use Overwhelm to interrupt the enemy heroes' channeling such as Town Portal Scroll or any channeled abilities like Freezing Field.",

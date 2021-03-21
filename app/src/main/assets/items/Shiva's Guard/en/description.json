@@ -18,17 +18,16 @@
       ],
       "mana": "100",
       "abilityName": "Arctic Blast",
-      "cooldown": null,
+      "cooldown": "30",
       "description": "Emits a freezing wave that deals 200 magical damage to enemies and slows their movement by 40% for 4 seconds.",
       "params": [
         "Radius: 900",
         "Damage: 200",
         "Move Speed Slow: 40%",
-        "Slow Duration: 4"
+        "Slow Duration: 4",
+        "Slow persists if debuff was placed before spell immunity and when not dispelled."
       ],
-      "itemBehaviour": [
-        "(Spell_immunity_block_symbol)^Does not pierce spell immunity\nSlow persists if debuff was placed before spell immunity and when not dispelled."
-      ],
+      "itemBehaviour": [],
       "story": null
     },
     {

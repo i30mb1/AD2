@@ -15,16 +15,16 @@
       ],
       "mana": "120\/140\/160\/180\/200",
       "abilityName": "Energy Burst",
-      "cooldown": null,
+      "cooldown": "35\/30\/25\/20\/15",
       "description": "Emits a powerful burst of magical damage upon a targeted enemy unit. Upgradable.",
       "params": [
         "Cast Range: 600\/650\/700\/750\/800",
         "Effect Delay: 0",
-        "Damage: 400\/500\/600\/700\/800"
+        "Damage: 400\/500\/600\/700\/800",
+        "Attempts to damage if debuff was placed before spell immunity.",
+        "Particles still visually appear."
       ],
-      "itemBehaviour": [
-        "(Spell_immunity_block_symbol)^Does not pierce spell immunity\nAttempts to damage if debuff was placed before spell immunity."
-      ],
+      "itemBehaviour": [],
       "story": null
     }
   ],

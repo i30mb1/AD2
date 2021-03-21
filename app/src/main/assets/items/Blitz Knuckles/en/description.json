@@ -8,12 +8,12 @@
   "description": "An underground arcanist's update of a back-alley classic.",
   "trivia": null,
   "upgradeIn": [
+    "Witch Blade",
     "Monkey King Bar",
-    "Shadow Blade",
-    "Witch Blade"
+    "Shadow Blade"
   ],
   "bonuses": [
-    "+35 Attack speed"
+    "+35 Attack Speed"
   ],
   "tips": [
     "Blitz Knuckles boost overall damage output from attacks and speed up the acquisition of items that give cores a mid-game power spike."

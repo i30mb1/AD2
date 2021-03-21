@@ -4,7 +4,7 @@
     "Philosopher's Stones are fully sharable.",
     "The gold gained is reliable gold.",
     "The passive gold gain works while dead as well.",
-    "Illusions and clones cannot utilise the passive gold gain."
+    "Illusions and clones cannot utilize the passive gold gain."
   ],
   "cost": "N\/A",
   "lore": null,
@@ -15,8 +15,8 @@
   "trivia": null,
   "upgradeIn": null,
   "bonuses": [
-    "+200 Mana -30 Attack damage",
-    "+70 Gold per minute"
+    "+200 Mana -30 Attack Damage",
+    "+70 Gold Per Minute"
   ],
   "tips": null
 }

@@ -14,7 +14,7 @@
       ],
       "mana": "225",
       "abilityName": "Restore",
-      "cooldown": null,
+      "cooldown": "65",
       "description": "Восстанавливает 275 здоровья всем союзникам в радиусе 1200.",
       "params": [
         "Радиус: 1200",

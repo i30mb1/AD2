@@ -24,18 +24,17 @@
       ],
       "mana": "75",
       "abilityName": "Shadow Walk",
-      "cooldown": null,
+      "cooldown": "18",
       "description": "Makes you invisible for 14 seconds, or until you attack or cast a spell. While invisible, you move 25% faster and can move through units. Attacking to end the invisibility will deal 175 bonus physical damage to the target, and disable their passive abilities for 4.",
       "params": [
         "Fade Time: 0.3",
         "Damage: 175",
         "Move Speed Bonus: 25%",
         "Invisibility Duration: 14",
-        "Break Duration: 4"
+        "Break Duration: 4",
+        "Applies damage on spell immune enemies. Does not apply debuff on spell immune enemies."
       ],
-      "itemBehaviour": [
-        "(Spell_immunity_block_partial_symbol)^Partially pierces spell immunity\nApplies damage on spell immune enemies\nDoes not apply debuff on spell immune enemies."
-      ],
+      "itemBehaviour": [],
       "story": null
     }
   ],
@@ -58,9 +57,9 @@
   "upgradeIn": null,
   "bonuses": [
     "+10 Intelligence",
-    "+3 Mana regeneration",
-    "+40 Attack damage",
-    "+45 Attack speed"
+    "+3 Mana Regeneration",
+    "+40 Attack Damage",
+    "+45 Attack Speed"
   ],
   "tips": [
     "Be aware that the Break mechanic has no effect on your opponents' items. If they have a Daedalus or Butterfly, for example, they will still receive the full benefits of these items.",

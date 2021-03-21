@@ -11,7 +11,7 @@
         "Affects every allied unit, including illusions, invulnerable units and hidden units, excluding wards and buildings.",
         "Does not share cooldown with Arcane Boots."
       ],
-      "mana": null,
+      "mana": "0",
       "abilityName": "Replenish Mana",
       "cooldown": "45",
       "description": "Restores 75 mana to all nearby allies.",
@@ -33,8 +33,9 @@
   "name": "Arcane Ring",
   "description": "Once a prized heirloom of a minor lord's house.",
   "trivia": [
-    "This item was originally created in Version 6.38 during the DotA era, and later reworked into Arcane Boots. It was re-added to Dota 2 in Version 7.23. Arcane Ring's appearance is designed after this as well, sharing aesthetics with Arcane Boots.",
-    "Arcane Ring's appearance is designed after this as well, sharing aesthetics with Arcane Boots."
+    "Arcane Boots was originally created as Arcane Ring, being built out of Ring of Protection, Energy Booster, and a recipe. Its recipe got changed and its theme reworked into Arcane Boots in the 6.68 gameplay patch. Arcane Ring's appearance is designed after this as well, sharing aesthetics with Arcane Boots.",
+    "Arcane Ring's appearance is designed after this as well, sharing aesthetics with Arcane Boots.",
+    "Using Replenish Mana every time it is off cooldown is equivalent to ~1.65 mana per second. Plus 0.5 mana regen from int gives 2.15 mana regen."
   ],
   "upgradeIn": null,
   "bonuses": [

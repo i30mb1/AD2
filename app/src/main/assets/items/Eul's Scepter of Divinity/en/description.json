@@ -8,30 +8,30 @@
         "Damage Magical"
       ],
       "notes": [
-        "Double clicking the item casts it on self.",
-        "Applies a cyclone effect on the target upon cast, turning it invulnerable and fully disabled.",
-        "Unlike other Cyclone abilities, the duration of Eul's cyclone is not affected by status resistance.",
+        "↓↓ Double-tapping automatically target self.",
+        "Applies a Cyclone effect on the target upon cast, turning it invulnerable and fully disabled.",
+        "Unlike other Cyclone abilities, the duration of Cyclone is not affected by status resistance.",
         "Applies a basic dispel on the target upon cast.",
         "Cyclone first applies the invulnerable, then the dispel.",
-        "Can only target enemies, self or own Meepo clones and Tempest Doubles. Cannot target other allies, wards, or buildings.",
+        "Can only target enemies, self or own Meepo Clones and Tempest Doubles. Cannot target other allies, wards, or buildings.",
         "While in the air, the cycloned unit has no collision. However, a pathing blocker is created at the base of the cyclone within a 24 radius.",
         "The damage is applied at the end of the duration. If the cyclone gets dispelled, it still applies the damage as soon as the target lands.",
         "The damage is only applied to enemy targets.",
-        "Can be cast on Roshan, but has no effect, since Roshan is immune to forced movement. The damage is still applied."
+        "Can be cast on Roshan, but has no effect, since Roshan is immune to forced movement. The damage is still applied.",
+        "Shares cooldown with Wind Waker."
       ],
       "mana": "175",
       "abilityName": "Cyclone",
-      "cooldown": null,
+      "cooldown": "23",
       "description": "Sweeps a target unit up into a cyclone, making them invulnerable for 2.5 seconds. Cyclone can only be cast on enemy units or yourself. Enemy units take 50 magical damage upon landing.",
       "params": [
         "Cast Range: 575",
         "Cyclone Radius: 24",
         "Damage: 50",
-        "Duration: 2.5"
+        "Duration: 2.5",
+        "Can be cast on self while spell immune. Cannot be cast on spell immune enemies."
       ],
-      "itemBehaviour": [
-        "(Spell_immunity_block_partial_symbol)^Partially pierces spell immunity\nCan be cast on self while spell immune\nCannot be cast on spell immune enemies."
-      ],
+      "itemBehaviour": [],
       "story": null
     }
   ],
@@ -62,8 +62,8 @@
   ],
   "bonuses": [
     "+10 Intelligence",
-    "+3.5 Mana regeneration",
-    "+20 Movement speed"
+    "+3.5 Mana Regeneration",
+    "+20 Movement Speed"
   ],
   "tips": [
     "Use the Cyclone offensively by disabling an enemy before a gank, giving you the time to set up your abilities.",

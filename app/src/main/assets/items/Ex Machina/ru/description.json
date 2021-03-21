@@ -14,7 +14,7 @@
       ],
       "mana": "100",
       "abilityName": "Reset Item Cooldowns",
-      "cooldown": null,
+      "cooldown": "40",
       "description": "Сбрасывает время перезарядки всех предметов, кроме Refresher Orb.",
       "params": [],
       "itemBehaviour": [],

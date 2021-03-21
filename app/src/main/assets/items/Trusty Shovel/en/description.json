@@ -12,7 +12,7 @@
         "Dug up items cannot be sold and are fully shareable.",
         "The same Trusty Shovel cannot spawn the same reward twice in a row."
       ],
-      "mana": null,
+      "mana": "0",
       "abilityName": "Dig",
       "cooldown": "55",
       "description": "Channel for 1 second. Can find a Bounty Rune, a Flask, a TP Scroll, or an enemy Kobold.",
@@ -26,9 +26,6 @@
       "itemBehaviour": [],
       "story": null
     }
-  ],
-  "additionalInformation": [
-    "Trusty Shovels are fully sharable."
   ],
   "cost": "N\/A",
   "lore": null,

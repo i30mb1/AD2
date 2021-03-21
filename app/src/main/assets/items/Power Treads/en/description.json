@@ -8,15 +8,15 @@
       ],
       "notes": [
         "Interrupts the user's channeling spells upon cast.",
-        "Switches attributes as follows: Strength > Intelligence Intelligence > Agility Agility > Strength",
-        "Strength > Intelligence",
-        "Intelligence > Agility",
-        "Agility > Strength",
+        "Switches attributes as follows: Strength ➜ Intelligence Intelligence ➜ Agility Agility ➜ Strength",
+        "Strength ➜ Intelligence",
+        "Intelligence ➜ Agility",
+        "Agility ➜ Strength",
         "Current health and mana percentages stay unchanged upon switching attributes.",
         "When having multiple Power Treads, each of them can be switched individually. The attribute bonuses fully stack.",
-        "Meepo clones cannot cast Switch Attributes, but they instantly update their treads when the original switches."
+        "Meepo Clones cannot cast Switch Attribute, but they instantly update their treads when the Meepo Prime switches."
       ],
-      "mana": null,
+      "mana": "0",
       "abilityName": "Switch Attribute",
       "cooldown": "0",
       "description": "Switches between +10 Strength, +10 Agility, or +10 Intelligence.",
@@ -47,8 +47,8 @@
   "trivia": null,
   "upgradeIn": null,
   "bonuses": [
-    "+45 Movement speed",
-    "+25 Attack speed"
+    "+45 Movement Speed",
+    "+25 Attack Speed"
   ],
   "tips": [
     "The regular stats bonuses (health, mana, armor and regen) are applied to all heroes. Attack damage is based on the hero's primary attribute. For example, agility heroes cannot make use of Strength Treads' extra health and the attack damage bonus at once, since they only have their damage increased when the Power Treads are set to agility.",

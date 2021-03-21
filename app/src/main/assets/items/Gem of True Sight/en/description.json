@@ -32,7 +32,7 @@
     "Gem of True Sight is partially shareable.",
     "The stock takes 10 minutes to replenish.",
     "This item drops when its wielder dies, unless it has Reincarnation.",
-    "Gem of True Sight cannot be destroyed or sold.",
+    "Gem of True Sight cannot be sold or destroyed.",
     "Gem of True Sight cannot be put into the backpack."
   ],
   "cost": "900",
@@ -51,6 +51,7 @@
     "Although often purchased by supports, Gem of True Sight is better carried by more resilient tanks and initiators, who are less likely to die and lose it.",
     "In the early game, when heroes are more stationary farming the lanes, Sentries are a far more efficient way to avoid being ganked by invisible heroes.",
     "Due to the True Sight being a passive aura, it constantly reveals nearby invisible enemies, making it the most cost effective revealing item, hence the heavy drawback.",
-    "Gem of True Sight can still sometime be a worthwhile investment when the enemy has no invisible heroes. It is ideal to reliably remove enemy wards over a long term, as the only alternative item to do this are Sentry Wards, but they can be easily wasted if the enemy ward locations are unknown."
+    "Gem of True Sight can still sometime be a worthwhile investment when the enemy has no invisible heroes. It is ideal to reliably remove enemy wards over a long term, as the only alternative item to do this are Sentry Wards, but they can be easily wasted if the enemy ward locations are unknown.",
+    "Gem of True Sight can be dropped to provide flying vision to detect Observer Wards and Sentries on cliffs."
   ]
 }

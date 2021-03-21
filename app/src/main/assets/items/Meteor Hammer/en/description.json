@@ -26,7 +26,7 @@
       ],
       "mana": "125",
       "abilityName": "Meteor Hammer",
-      "cooldown": null,
+      "cooldown": "24",
       "description": "After a successful channel, summons a meteor that strikes a 315 AoE, stunning enemies for 1.75 seconds and dealing impact damage. Continues to deal damage over time to enemy units and buildings for 6 seconds.",
       "params": [
         "Cast Range: 600",
@@ -65,8 +65,8 @@
     "+8 Strength",
     "+8 Agility",
     "+8 Intelligence",
-    "+6.5 Health regeneration",
-    "+2.5 Mana regeneration"
+    "+6.5 Health Regeneration",
+    "+2.5 Mana Regeneration"
   ],
   "tips": [
     "Meteor Hammer can be hard to aim, as the long and obvious casting allows most opponents to interrupt or dodge the ability. Use the active in conjunction with disables, or after the target has expended their escape abilities.",

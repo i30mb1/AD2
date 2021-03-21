@@ -21,7 +21,8 @@
         "Radius: 1200",
         "Mana Regeneration Bonus: 1.25",
         "Armor Bonus: 2",
-        "Aura Linger Duration: 0.5"
+        "Aura Linger Duration: 0.5",
+        "Illusions bestow the aura, but do not benefit from the armor."
       ],
       "itemBehaviour": [],
       "story": null
@@ -45,10 +46,10 @@
     "+3 Strength",
     "+9 Agility",
     "+3 Intelligence",
-    "+7 Attack damage"
+    "+7 Attack Damage"
   ],
   "tips": [
     "When the Aquila Aura is on, allied creeps gain an armor, which is useful if you want to push the creep advantage in a lane. The aura should be turned off if you do not want the lane to get pushed.",
-    "In the early game and even into the mid game, the boost of mana regen is extremely useful for heroes with low intelligence growth like Troll Warlord."
+    "In the early game and even into the mid game, the boost of mana regeneration is extremely useful for heroes with low intelligence growth like Troll Warlord."
   ]
 }

@@ -14,7 +14,7 @@
         "Increases current health by a total of 500 once all the strength is gained.",
         "This health bonus does not count as a heal, so it is unaffected by amplifications, but still does not bypass Ice Blast.",
         "However, while Doomed, it does not increase the current health, but keeps the current health percentage instead.",
-        "Drains 5.5555555555556 health in 0.11 second intervals, starting 0.11-second after toggled on.",
+        "Drains 5.56 health in 0.11 second intervals, starting 0.11-second after toggled on.",
         "Does not drain health while invulnerable. Health drain cannot bring the user's health below 1. Does not toggle itself off when reaching 1 health.",
         "When toggling off, all bonuses are lost instantly. The strength loss works like the gain, and only affects the maximum health. However, also like upon toggling on, the user loses 20 health per strength, instantly losing up to 500 of current health. This health loss is not lethal either, and cannot drop the user's health below 1.",
         "However, also like upon toggling on, the user loses 20 health per strength, instantly losing up to 500 of current health.",
@@ -24,7 +24,7 @@
         "If multiple Armlets are toggled on, turning off any Armlet removes the Unholy Strength buff.",
         "Assuming no other factors, it takes 11.11 seconds for the health cost to overcome the bonus health on the active."
       ],
-      "mana": null,
+      "mana": "0",
       "abilityName": "Unholy Strength",
       "cooldown": "0",
       "description": "When active, Unholy Strength grants +35 damage, +25 strength and +4 armor, but drains 50 health per second. You cannot die from the health drain when Unholy Strength is activated, nor from the strength loss when Unholy Strength is deactivated.",
@@ -33,7 +33,8 @@
         "Strength Bonus: 25",
         "Armor Bonus: 4",
         "Health Cost per Second: 50",
-        "Full Bonuses Delay: 0.6"
+        "Full Bonuses Delay: 0.6",
+        "Illusions do not benefit from the attack damage and armor and do not lose health per second. Illusions gain the strength over 0.6 seconds and copy the original's current health, resulting in them having 500 current health more than the hero if it was not at full health as the illusion was created."
       ],
       "itemBehaviour": [],
       "story": null
@@ -62,10 +63,10 @@
   ],
   "upgradeIn": null,
   "bonuses": [
-    "+5 Health regeneration",
+    "+5 Health Regeneration",
     "+5 Armor",
-    "+15 Attack damage",
-    "+25 Attack speed"
+    "+15 Attack Damage",
+    "+25 Attack Speed"
   ],
   "tips": [
     "The Armlet is the most cost-effective item to build, especially on strength heroes that benefit most from its DPS increase. It is also useful on heroes with illusions or abilities that increase their base damage (like Sven's ultimate).",

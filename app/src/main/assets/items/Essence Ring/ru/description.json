@@ -15,7 +15,7 @@
       ],
       "mana": "200",
       "abilityName": "Life Essence",
-      "cooldown": null,
+      "cooldown": "25",
       "description": "Увеличивает текущее и максимальное здоровье на 400. Действует 15 сек.",
       "params": [
         "Доп. здоровье: 400",

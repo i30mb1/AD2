@@ -7,7 +7,7 @@
         "Affects Enemies \/ Allies"
       ],
       "notes": [
-        "Double clicking the item casts it on self.",
+        "↓↓ Double-tapping automatically target self.",
         "Pushes the target at a speed of 1200, if the target is self or an ally. Pushes the caster and target at a speed of 2250, if the target is an enemy.",
         "Targeting allies pushes them based on their facing direction. Targeting enemies pushes them based on the caster's facing direction. The caster is pushed into the opposite direction, adding a 900 range distance between the caster and targeted enemy. The caster is only pushed when the target was an enemy, not an ally.",
         "The caster is pushed into the opposite direction, adding a 900 range distance between the caster and targeted enemy.",
@@ -31,7 +31,7 @@
       ],
       "mana": "100",
       "abilityName": "Hurricane Thrust",
-      "cooldown": null,
+      "cooldown": "23",
       "description": "Pushes you and target enemy 450 units away from each other, and for 5 seconds, allows you to make 4 attacks against the target without range restrictions and with +100 attack speed. Works like Force Staff when used on self or allies.",
       "params": [
         "Cast Range (Ally\/Self): 550",
@@ -42,11 +42,10 @@
         "Push Duration (Enemy): 0.2",
         "Number of Attacks: 4",
         "Attack Speed Bonus: 100",
-        "Buff Duration: 5"
+        "Buff Duration: 5",
+        "Can be cast on self while spell immune. Cannot be cast on other spell immune units."
       ],
-      "itemBehaviour": [
-        "(Spell_immunity_block_partial_symbol)^Partially pierces spell immunity\nCan be cast on self while spell immune\nCannot be cast on other spell immune units."
-      ],
+      "itemBehaviour": [],
       "story": null
     },
     {
@@ -95,8 +94,8 @@
     "+15 Strength",
     "+20 Agility",
     "+13 Intelligence",
-    "+2.5 Health regeneration",
-    "+140 Attack range (ranged)"
+    "+2.5 Health Regeneration",
+    "+140 Attack Range (Ranged)"
   ],
   "tips": [
     "Make sure to have Ward, tower or cliff vision or you will lose sight of your target, rendering the unlimited range useless. Alternatively, you either need a spell of your own to give you vision over the enemy (such as Weaver's The Swarm), or work with an ally to keep vision over him ( Bounty Hunter's Track is the obvious choice, Thundergod's Wrath, Corrosive Haze, Thunder Strike, Haunt also work, to name a few).",

@@ -8,9 +8,11 @@
       ],
       "notes": [
         "Successive attacks with Blight Stone do not stack the debuff, but refresh the duration instead.",
-        "Attacks apply the debuff before dealing damage.",
-        "Works against wards and buildings, but does not work against allied units.",
-        "Fully stacks with Orb of Destruction. Does not Stack with Desolator, Orb of Corrosion or Stygian Desolator."
+        "The attacks first apply the debuff, then their own damage.",
+        "Works against wards, buildings, and allied units.",
+        "Does not stack with the armor reduction of Orb of Corrosion, Desolator, and Stygian Desolator. If their debuffs are present, Blight Stone's debuff does not reduce armor.",
+        "If their debuffs are present, Blight Stone's debuff does not reduce armor.",
+        "Fully stacks with any other item."
       ],
       "mana": null,
       "abilityName": "Lesser Corruption",
@@ -32,9 +34,9 @@
   "description": "An unnerving stone unearthed beneath the Fields of Endless Carnage.",
   "trivia": null,
   "upgradeIn": [
+    "Orb of Corrosion",
     "Medallion of Courage",
-    "Desolator",
-    "Orb of Corrosion"
+    "Desolator"
   ],
   "bonuses": null,
   "tips": [

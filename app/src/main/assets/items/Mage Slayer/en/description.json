@@ -7,14 +7,17 @@
         "Affects Enemies"
       ],
       "notes": [
-        "Stacks multiplicatively with other sources of spell amplification."
+        "Successive attacks with Mage Slayer do not stack the debuff, but refresh the duration instead.",
+        "The attacks first apply the debuff, then their own damage.",
+        "Does not work against wards, buildings, and allied units.",
+        "Stacks multiplicatively with other sources of spell damage reduction and amplification."
       ],
       "mana": null,
       "abilityName": "Mage Slayer",
       "cooldown": null,
       "description": "Places a debuff when you attack enemies, causing them to do 35% less spell damage for 4 seconds.",
       "params": [
-        "Spell Damage Reduction: 35",
+        "Spell Damage Reduction: 35%",
         "Duration: 4"
       ],
       "itemBehaviour": [],
@@ -22,9 +25,11 @@
     }
   ],
   "additionalInformation": [
-    "Mage Slayer does not work with illusions"
+    "For strength heroes, it grants 20% magic resistance, 3.33 armor, 20 attack speed and 20 attack damage.",
+    "For agility heroes, it grants 20% magic resistance, 3.33 armor, 20 attack speed and 40 attack damage.",
+    "For intelligence heroes, it grants 20% magic resistance, 3.33 armor, 20 attack speed and 20 attack damage."
   ],
-  "cost": "3400",
+  "cost": "3450",
   "lore": null,
   "consistFrom": [
     "Cloak",
@@ -39,10 +44,8 @@
   "upgradeIn": null,
   "bonuses": [
     "+20 Agility",
-    "+20% Magic resistance",
-    "+20 Attack damage"
+    "+20% Magic Resistance",
+    "+20 Attack Damage"
   ],
-  "tips": [
-    "Very effective against spellcasters due to its ability to reduce spell damage."
-  ]
+  "tips": []
 }

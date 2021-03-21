@@ -11,7 +11,7 @@
         "Allows the user to walk through units, buildings, cliffs, and trees.",
         "Destroys trees within 100 radius around the user while active."
       ],
-      "mana": null,
+      "mana": "0",
       "abilityName": "Scurry",
       "cooldown": "12",
       "description": "Grants you 24% movement speed and free pathing for 3 seconds. Walking over trees causes them to be destroyed.",
@@ -37,8 +37,8 @@
   "trivia": null,
   "upgradeIn": null,
   "bonuses": [
-    "+65 Movement speed",
-    "+50% Turn rate"
+    "+65 Movement Speed",
+    "+50% Turn Rate"
   ],
   "tips": null
 }

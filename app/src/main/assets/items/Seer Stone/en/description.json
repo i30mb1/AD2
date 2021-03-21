@@ -1,21 +1,23 @@
 {
   "abilities": [
     {
-      "audioUrl": null,
+      "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/3\/3f\/Seer_Stone_Reveal.mp3\/revision\/latest?cb=20210120232105",
       "effects": [
-        "Ability Target Area",
-        "Affects Self \/ Enemies"
+        "Ability Target Area"
       ],
-      "notes": [],
-      "mana": null,
+      "notes": [
+        "Only provides vision within the area. Does not provide True Sight.",
+        "The visual effect created at the target area is visible to both teams.",
+        "The sound is audible to both teams through the fog of war."
+      ],
+      "mana": "0",
       "abilityName": "Reveal",
       "cooldown": "70",
-      "description": "Reveal a target area of the map for seconds (enemies can see the area is revealed).",
+      "description": "Reveal a target 800 area of the map for 5 seconds.",
       "params": [
         "Cast Range: Global",
-        "Reveal Area Radius: 800",
-        "Reveal Duration: 5",
-        "True Sight: No"
+        "Radius: 800",
+        "Duration: 5"
       ],
       "itemBehaviour": [],
       "story": null
@@ -33,9 +35,9 @@
   "trivia": null,
   "upgradeIn": null,
   "bonuses": [
-    "+10 Mana regeneration",
-    "+350 Cast range",
-    "+350 vision"
+    "+10 Mana Regeneration",
+    "+350 Cast Range",
+    "+350 Vision"
   ],
   "tips": null
 }

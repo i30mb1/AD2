@@ -14,7 +14,7 @@
         "If used by a melee hero, increases the user's base turn rate to 1 for its duration. Turn rate slowing effects still affect it normally.",
         "The Phase buff is immediately removed, if the item is sold, dropped or moved into the backpack."
       ],
-      "mana": null,
+      "mana": "0",
       "abilityName": "Phase",
       "cooldown": "8",
       "description": "Gives 20% increased movement speed on melee heroes, and 10% on ranged heroes, and lets you move through units and turn more quickly for 3 seconds.",
@@ -46,9 +46,9 @@
   "upgradeIn": null,
   "bonuses": [
     "+4 Armor",
-    "+45 Movement speed",
-    "+18 Attack damage (Melee)",
-    "+12 Attack damage (Ranged)"
+    "+45 Movement Speed",
+    "+18 Attack Damage (Melee)",
+    "+12 Attack Damage (Ranged)"
   ],
-  "tips": []
+  "tips": null
 }

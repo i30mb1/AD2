@@ -14,7 +14,7 @@
         "The radiuses of already placed Sentry Wards is shown as well, allowing to see how they overlap.",
         "Illusions and creep-heroes are treated as creeps when attacking the ward, so they take 8 attacks to destroy it, instead of 2 like heroes."
       ],
-      "mana": null,
+      "mana": "0",
       "abilityName": "Plant",
       "cooldown": "1",
       "description": "Plants a Sentry Ward, an invisible watcher that grants True Sight, the ability to see invisible enemy units and wards, to any existing allied vision within a radius. Lasts 8 minutes. Does not grant ground vision. Hold Control to give one Sentry Ward to an allied hero.",
@@ -53,14 +53,19 @@
     {
       "audioUrl": null,
       "effects": [
-        "Ability N\/A"
+        "Ability Passive",
+        "Affects Self"
       ],
-      "notes": [],
+      "notes": [
+        "The ability and modifier are not displayed in-game."
+      ],
       "mana": null,
-      "abilityName": "<div style=\"float:right;\"> \n<\/div>",
+      "abilityName": "Invisibility",
       "cooldown": null,
-      "description": "There is no description for this ability.",
-      "params": [],
+      "description": "This unit is permanently invisible.",
+      "params": [
+        "Fade Time: 0"
+      ],
       "itemBehaviour": [],
       "story": null
     }

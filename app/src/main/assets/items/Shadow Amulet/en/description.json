@@ -10,7 +10,8 @@
         "Does not interrupt the user's channeling spells upon cast, neither when cast on self, nor when cast on allies.",
         "If the target is more than 850 range away, the caster moves to the target until it is within 600 range before casting. If a cast order is given on a target which is within 850 range already, the caster does not need to move closer and casts it right away.",
         "If a cast order is given on a target which is within 850 range already, the caster does not need to move closer and casts it right away.",
-        "When casting on allies, the user does not have to face the targeted ally to cast it. Does not interrupt the target's channeling spells.",
+        "When casting on allies, the user does not have to face the targeted ally to cast it. Does not interrupt the target's channeling spells. ↓↓ Double-tapping automatically target self.",
+        "↓↓ Double-tapping automatically target self.",
         "During the fade time, the unit can still cast spells, use items and perform attacks.",
         "After the fade time, the unit automatically stops moving or attacking, but it does not stop spell casts.",
         "While invisible, the unit can turn and pick up or drop items without breaking the invisibility.",
@@ -18,7 +19,7 @@
         "The invisibility is lost upon reaching the cast point of spells or items or upon performing an attack.",
         "It also gets lost when getting forcefully moved, except when the movement is only upwards."
       ],
-      "mana": null,
+      "mana": "0",
       "abilityName": "Fade",
       "cooldown": "7 \/ 0",
       "description": "Grants invisibility to you or a target allied hero as long as the target unit remains still. Has a 1.25 second fade time, and breaks instantly upon moving. There is no cooldown when using this item on yourself.",

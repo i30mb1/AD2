@@ -16,7 +16,7 @@
       ],
       "mana": "200",
       "abilityName": "Restore",
-      "cooldown": null,
+      "cooldown": "65",
       "description": "Heals 275 health to allied units in a 1200 radius.",
       "params": [
         "Radius: 1200",
@@ -33,7 +33,8 @@
         "Affects Allies"
       ],
       "notes": [
-        "Stacks with all other sources of flat health regeneration, except with Mekansm Aura from multiple Mekansms.",
+        "Multiple instances of Mekansm Aura do not stack. Fully stacks with other sources of health regeneration, including Headdress and its other upgrades.",
+        "Fully stacks with other sources of health regeneration, including Headdress and its other upgrades.",
         "Can regenerate up to 120 health in one minute.",
         "Does not affect wards, buildings and invulnerable units.",
         "The aura's buff lingers for seconds."
@@ -44,7 +45,7 @@
       "description": "Grants 2 health regeneration to allied units in a 1200 radius.",
       "params": [
         "Radius: 1200",
-        "Health Regeneration Bonus: 2",
+        "Health Regen Bonus: 2",
         "Aura Linger Duration: 0.5"
       ],
       "itemBehaviour": [],

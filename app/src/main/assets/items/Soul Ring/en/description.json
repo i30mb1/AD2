@@ -15,7 +15,7 @@
         "The lost health is not gained back when the gained mana was unused or partly unused.",
         "The 170 health lost upon cast is never lethal. When casting with 170 health or less, the user's health goes down to 1."
       ],
-      "mana": null,
+      "mana": "0",
       "abilityName": "Sacrifice",
       "cooldown": "25",
       "description": "Consume 170 health to temporarily gain 150 mana. Lasts 10 seconds. If the mana gained cannot fit in your mana pool, it creates a buffer of mana that will be used before your mana pool.",
@@ -58,7 +58,6 @@
     "Make sure you are safe before using Soul Ring, as the reduced health can make your hero much more vulnerable. If your hero has low health or no means of regenerating health, consider picking up Tranquil Boots too in order to refill health after using the active a lot. By the same token, this item is very good on strength heroes due to their larger health pools and health regeneration rates. Heroes with increased base health regeneration rates may benefit more from this item as well.",
     "If your hero has low health or no means of regenerating health, consider picking up Tranquil Boots too in order to refill health after using the active a lot.",
     "By the same token, this item is very good on strength heroes due to their larger health pools and health regeneration rates. Heroes with increased base health regeneration rates may benefit more from this item as well.",
-    "Against heroes with mana burning abilities, Soul Ring can give you enough mana to get an important spell off in a fight.",
-    "When the cooldown goes off (25 seconds) the health regenerated is Expression error: Missing operand for *., i.e. Expression error: Unexpected \/ operator.% from the original 170 health consumed, so the value of health used for the Sacrifice ability is Expression error: Unexpected \/ operator. health, only the Expression error: Unexpected \/ operator.% of the total used."
+    "Against heroes with mana burning abilities, Soul Ring can give you enough mana to get an important spell off in a fight."
   ]
 }

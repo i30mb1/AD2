@@ -22,8 +22,7 @@
     }
   ],
   "additionalInformation": [
-    "Stacks additively with other sources of cast range.",
-    "Cast range doesn't stack with Aether Lens."
+    "Does not stack with the cast range bonus of Aether Lens or other Octarine Cores."
   ],
   "cost": "5475",
   "lore": null,
@@ -43,8 +42,8 @@
   "bonuses": [
     "+425 Health",
     "+725 Mana",
-    "+3 Mana regeneration",
-    "+250 Cast range"
+    "+3 Mana Regeneration",
+    "+250 Cast Range"
   ],
   "tips": [
     "If you have a hero with short cooldowns on your abilities, consider this item; casting your spells more often in a single fight is a major boon, and the increased casting range allows you to do so without having to stay in the middle of the fight for an extended duration."

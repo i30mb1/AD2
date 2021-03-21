@@ -3,10 +3,7 @@
   "additionalInformation": [
     "For strength heroes, it grants 192 mana, 0.8 mana regen and 8% spell damage.",
     "For agility heroes, it grants 192 mana, 0.8 mana regen and 8% spell damage.",
-    "For intelligence heroes, it grants 192 mana, 0.8 mana regen, 8% spell damage and 16 attack damage.",
-    "Spell damage amplification from multiple Kaya-based items (Kaya, Kaya and Sange, Yasha and Kaya, Bloodstone, Trident) do not stack.",
-    "Mana regen amplification from multiple Kaya-based items fully stack additively, except for multiple Bloodstones.",
-    "spell lifesteal amplification from multiple Kaya-based items fully stack diminishingly."
+    "For intelligence heroes, it grants 192 mana, 0.8 mana regen, 8% spell damage and 16 attack damage."
   ],
   "cost": "2050",
   "lore": null,
@@ -24,14 +21,13 @@
   "upgradeIn": [
     "Yasha and Kaya",
     "Bloodstone",
-    "Kaya and Sange",
-    "Trident"
+    "Kaya and Sange"
   ],
   "bonuses": [
     "+16 Intelligence",
-    "+8% Spell damage",
-    "+24% Mana regen amplification",
-    "+24% Spell lifesteal amplification"
+    "+8% Spell Damage",
+    "+24% Mana Regen Amplification",
+    "+24% Spell Lifesteal Amplification"
   ],
   "tips": null
 }

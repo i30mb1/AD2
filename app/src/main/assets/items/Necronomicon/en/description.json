@@ -17,8 +17,8 @@
       ],
       "mana": "150",
       "abilityName": "Demonic Summoning",
-      "cooldown": null,
-      "description": "Summons a Warrior and an Archer to fight for you for 60 seconds. Warrior: Burns mana every hit, and deals magical damage to whoever kills it. Gains True Sight at level 3. Archer: Gains Purge at level 3.",
+      "cooldown": "80",
+      "description": "Summons a Warrior and an Archer to fight for you for 60 seconds. Warrior: Burns mana every hit, and deals magical damage to whoever kills it. Gains True Sight at level 3. Archer: Has a passive movement and attack speed aura. Gains Purge at level 3.",
       "params": [
         "Number of Warriors: 1",
         "Number of Archers: 1",
@@ -131,16 +131,18 @@
         "Affects Allies"
       ],
       "notes": [
-        "Fully stacks with other sources of movement and attack speed, except for other Archer Auras.",
+        "Multiple instances of Archer Aura do not stack.",
+        "Does not affect invulnerable units.",
         "The aura's buff lingers for 0.5 seconds."
       ],
       "mana": null,
       "abilityName": "Archer Aura",
       "cooldown": null,
-      "description": "Increases movement and attack speed of nearby units.",
+      "description": "Increases movement of nearby units.",
       "params": [
         "Radius: 1200",
-        "Move Speed Bonus: 5%\/7%\/9%"
+        "Move Speed Bonus: 5%\/7%\/9%",
+        "Aura Linger Duration: 0.5"
       ],
       "itemBehaviour": [],
       "story": null
@@ -173,7 +175,7 @@
   ],
   "bonuses": [
     "+6\/12\/18 Strength",
-    "+2\/3\/4 Mana regeneration"
+    "+2\/3\/4 Mana Regeneration"
   ],
   "tips": null
 }

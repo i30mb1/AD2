@@ -9,16 +9,16 @@
       "notes": [
         "Interrupts the user's channeling spells upon cast.",
         "Blocks damage before any reductions, except Mana Shield.",
+        "Only blocks magical damage, coming from spells and attacks. Does not block any physical or pure damage.",
         "Recasting Barrier refreshes the buff and resets the barrier's absorb capacity.",
         "Does not stack with other magical damage barriers. If multiple sources of barriers are active on a unit, all of them lose capacity from the same absorbed damage instance. However, if a damage instance is greater than the capacity of all barriers individually, the damage gets blocked as if the barriers were one barrier with combined capacity.",
         "If multiple sources of barriers are active on a unit, all of them lose capacity from the same absorbed damage instance.",
         "However, if a damage instance is greater than the capacity of all barriers individually, the damage gets blocked as if the barriers were one barrier with combined capacity.",
-        "Only blocks magical damage, coming from spells and attacks. Does not block any physical or pure damage.",
-        "Does not share cooldown with Pipe of Insight."
+        "Does not share cooldown with Pipe of Insight or Eternal Shroud."
       ],
       "mana": "75",
       "abilityName": "Barrier",
-      "cooldown": null,
+      "cooldown": "60",
       "description": "Creates a spell shield that absorbs up to 325 magical damage. Lasts 12 seconds.",
       "params": [
         "Magical Damage Absorbed: 325",
@@ -32,7 +32,7 @@
     "Stacks multiplicatively with other sources of magic resistance.",
     "Increases most heroes' total magic resistance to 40%, assuming basic 25% magic resistance and no other sources of magic resistance."
   ],
-  "cost": "1450",
+  "cost": "1500",
   "lore": null,
   "consistFrom": [
     "Ring of Health",
@@ -46,12 +46,12 @@
     "Prior to the July 14, 2017 Patch, Hood of Defiance's active ability, Barrier, did not have an official name. The name was taken from the Dota 2 Wiki and officially implemented into Dota 2."
   ],
   "upgradeIn": [
-    "Pipe of Insight",
-    "Eternal Shroud"
+    "Eternal Shroud",
+    "Pipe of Insight"
   ],
   "bonuses": [
-    "+8.5 Health regeneration",
-    "+20% Magic resistance"
+    "+8.5 Health Regeneration",
+    "+20% Magic Resistance"
   ],
   "tips": [
     "This item can be purchased by a nuker against enemies carrying a Blade Mail.",

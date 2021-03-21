@@ -13,7 +13,7 @@
         "Tango heals for twice as long when targeting an Ironwood Tree.",
         "The particles around the tree are visible to everyone, making it clear that it is a planted tree."
       ],
-      "mana": null,
+      "mana": "0",
       "abilityName": "Plant Tree",
       "cooldown": "15",
       "description": "Targets the ground to plant a happy little tree that lasts for 20 seconds.",
@@ -24,9 +24,6 @@
       "itemBehaviour": [],
       "story": null
     }
-  ],
-  "additionalInformation": [
-    "Ironwood Trees are fully sharable."
   ],
   "cost": "N\/A",
   "lore": null,

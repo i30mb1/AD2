@@ -1,17 +1,24 @@
 {
   "abilities": [
     {
-      "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/4\/4d\/Eul%27s_Scepter_of_Divinity_Cyclone.mp3\/revision\/latest?cb=20191227195415",
+      "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/d\/d1\/Stormcrafter_Active.mp3\/revision\/latest?cb=20210120232107",
       "effects": [
         "Ability No Target",
         "Affects Self"
       ],
-      "notes": [],
+      "notes": [
+        "Applies a cyclone effect on the caster, turning them invulnerable and fully disabled.",
+        "The duration of Stormcrafter's cyclone is not affected by status resistance.",
+        "Applies a basic dispel on the caster upon cast.",
+        "Cyclone first applies the invulnerability, then the dispel.",
+        "While in the air, the caster has no collision. However, a pathing blocker is created at the base of the cyclone within a radius."
+      ],
       "mana": "50",
       "abilityName": "Active",
-      "cooldown": null,
-      "description": "Cyclones you for 0.75 seconds.",
+      "cooldown": "25",
+      "description": "Cyclones your hero for 0.75 seconds.",
       "params": [
+        "Cyclone Radius: 24",
         "Duration: 0.75"
       ],
       "itemBehaviour": [],
@@ -20,26 +27,35 @@
     {
       "audioUrl": null,
       "effects": [
-        "Ability No Target",
-        "Affects Enemies"
+        "Ability Passive",
+        "Affects Enemies",
+        "Damage Magical"
       ],
-      "notes": [],
+      "notes": [
+        "The target is choosen randomly within the area. There are no priorities.",
+        "Does not target invisible units or units inside the fog of war.",
+        "The passive still works even while invisible. The lightning appears at the owner's current location, revealing their position to the enemy.",
+        "The bolt first applies the debuff, then the damage.",
+        "If no valid targets are within range, the effect waits until a valid target comes within range, striking them immediately."
+      ],
       "mana": null,
       "abilityName": "Passive",
       "cooldown": null,
-      "description": "Zaps an enemy with 700 range, dealing 200 damage and a 40% slow for 0.3 seconds. Strikes every 3 seconds.",
+      "description": "Zaps an enemy within 700 range, dealing 200 damage and a 40% slow for 0.3 seconds. Strikes every 3 seconds.",
       "params": [
-        "Zap Range: 700",
+        "Search Radius: 700",
+        "Strike Recharge Time: 3",
         "Damage: 200",
-        "slow: 40%",
-        "Slow duration: 0.3",
-        "Zap interval: 3"
+        "Move Speed Slow: 40%",
+        "Slow Duration: 0.3"
       ],
       "itemBehaviour": [],
       "story": null
     }
   ],
-  "additionalInformation": [],
+  "additionalInformation": [
+    "Stormcrafters are fully sharable."
+  ],
   "cost": "N\/A",
   "lore": null,
   "consistFrom": null,
@@ -48,6 +64,8 @@
   "description": "The accidental byproduct of a spell conjured to entrap a lesser god.",
   "trivia": null,
   "upgradeIn": null,
-  "bonuses": null,
+  "bonuses": [
+    "+4 Mana Regeneration"
+  ],
   "tips": null
 }

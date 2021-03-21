@@ -7,7 +7,7 @@
         "Affects Allied Heroes"
       ],
       "notes": [
-        "Double clicking the item casts it on self.",
+        "↓↓ Double-tapping automatically targets self.",
         "If the target is more than 500 range away, the caster moves to the target until it is within 250 range before casting. If a cast order is given on a target which is within 500 range already, the caster does not need to move closer and casts it right away.",
         "If a cast order is given on a target which is within 500 range already, the caster does not need to move closer and casts it right away.",
         "Can only target heroes (including illusions) and creep-heroes.",
@@ -17,7 +17,7 @@
         "Damage greater than 0 from any player (including allies, excluding self) or Roshan dispels the effect. Does not get dispelled by damage flagged as HP Removal.",
         "Does not get dispelled by damage flagged as HP Removal."
       ],
-      "mana": null,
+      "mana": "0",
       "abilityName": "Salve",
       "cooldown": "0",
       "description": "Grants 40 health regeneration to the target for 10 seconds. If the unit is attacked by an enemy hero or Roshan, the effect is lost.",
@@ -33,7 +33,7 @@
   ],
   "additionalInformation": [
     "Stacks with itself in the inventory, there is no stack limit. The sell value adapts based on the number of instances in a stack.",
-    "Healing Salves are not shareable, however, they can be cast on allies."
+    "Healing Salves are not shareable, however, they can be cast on allies by holding down the Ctrl key."
   ],
   "cost": "110",
   "lore": null,

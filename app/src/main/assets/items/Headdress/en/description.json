@@ -7,7 +7,8 @@
         "Affects Allies"
       ],
       "notes": [
-        "Stacks with all other sources of flat health regeneration, except with Regeneration Aura from multiple Headdresses.",
+        "Multiple instances of Headress's Regeneration Aura do not stack. Fully stacks with other sources of health regeneration, including Headdress's upgrades.",
+        "Fully stacks with other sources of health regeneration, including Headdress's upgrades.",
         "Can regenerate up to 120 health in one minute.",
         "Does not affect wards, buildings and invulnerable units.",
         "The aura's buff lingers for 0.5 seconds."
@@ -18,7 +19,7 @@
       "description": "Grants 2 health regeneration to allies.",
       "params": [
         "Radius: 1200",
-        "Health Regeneration Bonus: 2",
+        "Health Regen Bonus: 2",
         "Aura Linger Duration: 0.5"
       ],
       "itemBehaviour": [],

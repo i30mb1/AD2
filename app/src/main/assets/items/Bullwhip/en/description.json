@@ -1,27 +1,33 @@
 {
   "abilities": [
     {
-      "audioUrl": null,
+      "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/9\/97\/Bullwhip_Whip_1.mp3\/revision\/latest?cb=20210120232121",
       "effects": [
         "Ability Target Unit",
-        "Affects Enemies \/ Self"
+        "Affects Allies \/ Enemies"
       ],
-      "notes": [],
-      "mana": null,
+      "notes": [
+        "↓↓ Double-tapping automatically target self.",
+        "Uses the same modifier on enemies as it does on allies. The modifier does not stack. The modifier updates its source on refresh, either slowing or increasing movement speed based on the last caster's alliance.",
+        "The modifier updates its source on refresh, either slowing or increasing movement speed based on the last caster's alliance."
+      ],
+      "mana": "0",
       "abilityName": "Whip",
       "cooldown": "12",
-      "description": "Grants 16% movement speed when cast on allies, and slows by 16% when cast on enemies. Lasts 5 seconds.",
+      "description": "Grants movement speed when cast on allies, and slows by when cast on enemies. Lasts seconds.",
       "params": [
-        "Cast Range: 800",
-        "Duration: 5",
-        "Slow: 16%",
-        "Bonus Speed: 16%"
+        "Cast Range: 850",
+        "Move Speed Change: 20%",
+        "Duration: 4",
+        "Can be cast on spell immune allies. Cannot be cast on spell immune enemies."
       ],
       "itemBehaviour": [],
       "story": null
     }
   ],
-  "additionalInformation": [],
+  "additionalInformation": [
+    "Bullwhips are fully sharable."
+  ],
   "cost": "N\/A",
   "lore": null,
   "consistFrom": null,
@@ -31,8 +37,8 @@
   "trivia": null,
   "upgradeIn": null,
   "bonuses": [
-    "+3 Health regeneration",
-    "+3 Mana regeneration"
+    "+3 Health Regeneration",
+    "+3 Mana Regeneration"
   ],
   "tips": null
 }

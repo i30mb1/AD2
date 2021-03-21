@@ -11,13 +11,14 @@
       ],
       "mana": "25",
       "abilityName": "Berserk",
-      "cooldown": null,
+      "cooldown": "16",
       "description": "Gives 110 attack speed and 30 movement speed, but reduces your armor by 8 and silences you. Lasts 6 seconds.",
       "params": [
         "Attack Speed Bonus: 110",
         "Move Speed Bonus: 30",
         "Armor Reduction: 8",
-        "Duration: 6"
+        "Duration: 6",
+        "Silence and armor reduction persists if debuff was placed before spell immunity and when not dispelled."
       ],
       "itemBehaviour": [],
       "story": null
@@ -37,7 +38,8 @@
       "cooldown": null,
       "description": "Heals the attacker for 20% of attack damage dealt.",
       "params": [
-        "Lifesteal: 20%"
+        "Lifesteal: 20%",
+        "Lifesteal particles are visible on illusions, but they do not gain health from their attacks."
       ],
       "itemBehaviour": [],
       "story": null
@@ -55,8 +57,8 @@
   "trivia": null,
   "upgradeIn": null,
   "bonuses": [
-    "+10 Attack damage",
-    "+10 Attack speed"
+    "+10 Attack Damage",
+    "+10 Attack Speed"
   ],
   "tips": [
     "Mask of Madness is the most cost-effective DPS and Attack Speed item in the game, costing only 14.79 gold per point of attack speed. The second best DPS item is the Diffusal Blade for an agility hero.",

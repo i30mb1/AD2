@@ -16,7 +16,7 @@
       ],
       "mana": "200",
       "abilityName": "Life Essence",
-      "cooldown": null,
+      "cooldown": "25",
       "description": "Increases your current and maximum health by 400 for 15 seconds.",
       "params": [
         "Health Bonus: 400",
@@ -39,7 +39,7 @@
   "upgradeIn": null,
   "bonuses": [
     "+6 Intelligence",
-    "+2.5 Mana regeneration"
+    "+2.5 Mana Regeneration"
   ],
   "tips": null
 }

@@ -15,7 +15,8 @@
       "cooldown": null,
       "description": "Heals the attacker for 15% of attack damage dealt",
       "params": [
-        "Lifesteal: 15%"
+        "Lifesteal: 15%",
+        "Lifesteal particles are visible on illusions, but they do not gain health from their attacks."
       ],
       "itemBehaviour": [],
       "story": null

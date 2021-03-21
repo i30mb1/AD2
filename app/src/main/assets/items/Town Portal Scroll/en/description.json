@@ -7,7 +7,7 @@
         "Affects Self"
       ],
       "notes": [
-        "Double clicking the item while being at least 1500 range away from the team's fountain, automatically targets the fountain's location.",
+        "↓↓ Double-tapping the item while being at least 1500 range away from the team's fountain, automatically targets the fountain.",
         "When targeting the ground, it automatically searches for the closest valid target to teleport to. By default, it only targets buildings. With Boots of Travel, it targets non-hero units as well, and with Boots of Travel 2, it targets heroes as well. Cannot directly target buildings. Instead, it uses the minimum teleport distance. When upgraded, can directly target units.",
         "By default, it only targets buildings. With Boots of Travel, it targets non-hero units as well, and with Boots of Travel 2, it targets heroes as well.",
         "Cannot directly target buildings. Instead, it uses the minimum teleport distance. When upgraded, can directly target units.",
@@ -30,7 +30,7 @@
       ],
       "mana": "75",
       "abilityName": "Teleport",
-      "cooldown": null,
+      "cooldown": "80",
       "description": "After channeling for 3 seconds, teleports you to a target friendly building. Double-click to teleport to your team's base fountain.",
       "params": [
         "Cast Range: Global",
@@ -41,7 +41,8 @@
         "Second Channel Time Increase: 2",
         "Following Channel Time Increase: 0.5",
         "Recent Teleport Check Radius: 1150",
-        "Recent Teleport Check Duration: 25"
+        "Recent Teleport Check Duration: 25",
+        "Prevents casting, and cancels the teleport if already channeling."
       ],
       "itemBehaviour": [],
       "story": null
@@ -52,9 +53,9 @@
     "Heroes start with three free, unsellable Town Portal Scrolls. The item starts on a 100 seconds cooldown at the beginning of the game.",
     "Stacks with itself in the inventory, there is no stack limit. The sell value adapts based on the number of instances in a stack.",
     "Town Portal Scroll is completely shareable.",
-    "Holding ALT causes an icon to appear below every allied heroes' portrait below the top bar of the HUD, showing the allies' teleport status. The icon shows their current cooldown on their teleport. If the ally has no teleport item, no icon appears. If it is in the backpack, it appears grey. The display prioritizes Boots of Travel over Town Portal Scrolls and Boots of Travel level 2 over level 1. It does not show other teleport abilities.",
+    "Holding Alt causes an icon to appear below every allied heroes' portrait below the top bar of the HUD, showing the allies' teleport status. The icon shows their current cooldown on their teleport. If the ally has no teleport item, no icon appears. If it is in the backpack, it appears grey. The display prioritizes Boots of Travel over Town Portal Scrolls and Boots of Travel 2 over Boots of Travel. It does not show other teleport abilities.",
     "The icon shows their current cooldown on their teleport. If the ally has no teleport item, no icon appears. If it is in the backpack, it appears grey.",
-    "The display prioritizes Boots of Travel over Town Portal Scrolls and Boots of Travel level 2 over level 1. It does not show other teleport abilities."
+    "The display prioritizes Boots of Travel over Town Portal Scrolls and Boots of Travel 2 over Boots of Travel. It does not show other teleport abilities."
   ],
   "cost": "90",
   "lore": null,
@@ -64,15 +65,16 @@
   "description": "What a hero truly needs.",
   "trivia": [
     "In the original DotA, this item was called \"Scroll of Town Portal\".",
-    "On the August 13, 2018 Patch, a new Town Portal Scroll with a green icon made its way into the main game. The item's active worked like the teleport of Boots of Travel 2, and costed only 50 gold. The item was available in every game mode until it was fixed\/removed one hour later in a hotfix patch. The item's purpose is unknown, but it was most likely intended to be part of Mutation Mode, due to being added in the same patch that added the Pocket Roshan item.",
-    "The description of the item is a reference to the very first Dota 2 Gamescom trailer."
+    "On the August 13, 2018 Patch, a new Town Portal Scroll with a green icon made its way into the main game. The item's active worked like the teleport of Boots of Travel 2, and costed only 50 . The item was available in every game mode until it was fixed\/removed one hour later in a hotfix patch. The item's purpose is unknown, but it was most likely intended to be part of Mutation Mode, due to being added in the same patch that added the Pocket Roshan item.",
+    "The description of the item is a reference to the very first Dota 2 Gamescom trailer.",
+    "Activating a Town Portal Scroll appears to require the casting hero's blood. This can be seen in the trailer of Dota: Dragon's Blood."
   ],
   "upgradeIn": null,
   "bonuses": null,
   "tips": [
-    "Town Portal Scrolls are arguably the most important mobility items in the game and should be carried by every hero. They can easily prevent deaths or make kills possible when used correctly. When getting ganked, the teleport can be used to escape. However, one has to make sure first that the enemy cannot interrupt the teleport, by either waiting until they use their disables first, or by hiding\/obstructing vision in case of single-target disables and teleport while they have no vision. Inversely, they can also be used to teleport to help an ally who is getting ganked. The incoming teleport may cause enemies to retreat and give up chasing the ally and thus not get a kill, or they still go for it and risk losing some of their heroes in return. It is well worth to cancel the teleport if the enemy decides to give up chasing, costing the player 90 gold, but preventing the enemy from gaining gold and the ally from losing gold and time.",
+    "Town Portal Scrolls are arguably the most important mobility items in the game and should be carried by every hero. They can easily prevent deaths or make kills possible when used correctly. When getting ganked, the teleport can be used to escape. However, one has to make sure first that the enemy cannot interrupt the teleport, by either waiting until they use their disables first, or by hiding\/obstructing vision in case of single-target disables and teleport while they have no vision. Inversely, they can also be used to teleport to help an ally who is getting ganked. The incoming teleport may cause enemies to retreat and give up chasing the ally and thus not get a kill, or they still go for it and risk losing some of their heroes in return. It is well worth to cancel the teleport if the enemy decides to give up chasing, costing the player 90 , but preventing the enemy from gaining gold and the ally from losing gold and time.",
     "When getting ganked, the teleport can be used to escape. However, one has to make sure first that the enemy cannot interrupt the teleport, by either waiting until they use their disables first, or by hiding\/obstructing vision in case of single-target disables and teleport while they have no vision.",
-    "Inversely, they can also be used to teleport to help an ally who is getting ganked. The incoming teleport may cause enemies to retreat and give up chasing the ally and thus not get a kill, or they still go for it and risk losing some of their heroes in return. It is well worth to cancel the teleport if the enemy decides to give up chasing, costing the player 90 gold, but preventing the enemy from gaining gold and the ally from losing gold and time.",
+    "Inversely, they can also be used to teleport to help an ally who is getting ganked. The incoming teleport may cause enemies to retreat and give up chasing the ally and thus not get a kill, or they still go for it and risk losing some of their heroes in return. It is well worth to cancel the teleport if the enemy decides to give up chasing, costing the player 90 , but preventing the enemy from gaining gold and the ally from losing gold and time.",
     "Their cheap cost makes it very easy to buy them frequently, which is fully worth it, even in the very late game.",
     "As a carry, Town Portal Scrolls can be used to speed up farming, by teleporting from lane to lane after clearing the waves through to the enemy's next tower. Instead of having to walk to another place to farm, the teleport can be used to instantly get to the next farm location and keep on farming.",
     "In the lategame, teleport scrolls are crucial to fight against split-pushing enemies. When being far away from a tower which is getting pushed, a teleport is the only way to get there fast and defend the tower. This also goes for base-racing. When the enemy team is faster, teleporting back to base to defend can be the game-winning move."

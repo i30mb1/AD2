@@ -9,9 +9,10 @@
       "notes": [
         "Successive attacks with Stygian Desolator do not stack the debuff, but refresh the duration instead.",
         "The attacks first apply the debuff, then their own damage.",
-        "Works against every unit, including wards, buildings and allied units.",
+        "Works against wards, buildings, and allied units.",
         "Replaces the projectile particle of ranged heroes with a red projectile.",
-        "Fully stacks with Orb of Corrosion, Orb of Destruction and Desolator. Does not Stack with Blight Stone."
+        "Does not stack with the armor reduction of Blight Stone. If both debuffs are present, Blight Stone's debuff does not reduce armor.",
+        "Fully stacks with any other item."
       ],
       "mana": null,
       "abilityName": "Greater Corruption",
@@ -39,7 +40,7 @@
   ],
   "upgradeIn": null,
   "bonuses": [
-    "+60 Attack damage"
+    "+60 Attack Damage"
   ],
   "tips": null
 }

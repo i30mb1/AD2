@@ -21,7 +21,7 @@
       ],
       "mana": "300",
       "abilityName": "Reset Cooldowns",
-      "cooldown": null,
+      "cooldown": "160",
       "description": "Resets the cooldowns of all your items and abilities.",
       "params": [],
       "itemBehaviour": [],
@@ -41,10 +41,12 @@
   "trivia": null,
   "upgradeIn": null,
   "bonuses": [
-    "+13 Health regeneration",
-    "+12 Mana regeneration"
+    "+13 Health Regeneration",
+    "+12 Mana Regeneration"
   ],
   "tips": [
-    "Refresher Orb can be an ideal item to buy when you have ultimate abilities with extremely high cooldowns such as Ravage, Black Hole or Doom so you are able to use these skills twice."
+    "Using Refresher Orb allows some skills to have two instances running simultaneously; for example, Eye of the Storm, Chaotic Offering. Note though that some spells are specifically coded to not be able to run multiple instances at the same time (e.g. Exorcism). Before building Refresher Orb, be sure that the ability you aim to use it with supports multiple instances at the same time or is worth having its duration doubled.",
+    "Note though that some spells are specifically coded to not be able to run multiple instances at the same time (e.g. Exorcism). Before building Refresher Orb, be sure that the ability you aim to use it with supports multiple instances at the same time or is worth having its duration doubled.",
+    "If the game goes on for a very long time and you end up with gold to spare, consider picking up a Refresher Orb to refresh items such as Satanic and Black King Bar. Put Refresher Orb in your stash when it is on cooldown to make room for an item with better passive bonuses."
   ]
 }

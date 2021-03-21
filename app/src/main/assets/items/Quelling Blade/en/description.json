@@ -8,9 +8,9 @@
       ],
       "notes": [
         "Can target any tree.",
-        "Does not share cooldown with Battle Fury or Iron Talon."
+        "Does not share cooldown with Battle Fury."
       ],
-      "mana": null,
+      "mana": "0",
       "abilityName": "Chop Tree",
       "cooldown": "4",
       "description": "Destroy a target tree.",

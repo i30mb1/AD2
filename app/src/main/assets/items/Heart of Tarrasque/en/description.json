@@ -4,7 +4,9 @@
     "For strength heroes, it grants 1150 health, 4.5 health regen and 45 attack damage.",
     "For agility heroes, it grants 1150 health and 4.5 health regen.",
     "For intelligence heroes, it grants 1150 health and 4.5 health regen.",
-    "The max-health-based health regen bonus from multiple Hearts of Tarrasque does not stack."
+    "The max-health-based health regen bonus from multiple Hearts of Tarrasque does not stack. Can regenerate up to 96% of the wielder's max health in one minute. Can fully regenerate the wielder's health within 62.5 seconds.",
+    "Can regenerate up to 96% of the wielder's max health in one minute.",
+    "Can fully regenerate the wielder's health within 62.5 seconds."
   ],
   "cost": "4800",
   "lore": null,
@@ -23,12 +25,11 @@
   "bonuses": [
     "+45 Strength",
     "+250 Health",
-    "+1.6% Max HP health regen"
+    "+1.6% Max HP Health Regen"
   ],
   "tips": [
     "Heart of Tarrasque is effective against teams with a lot of burst damage.",
-    "Heart of Tarrasque's strength bonus mostly benefits Strength heroes. Agility or Intelligence heroes can consider an Eye of Skadi instead for tankiness.",
-    "Heart of Tarrasque can quickly regenerate health, allowing wielders to briefly disengage then re-enter fights if necessary.",
-    "Heart of Tarrasque is very valuable item when you have Oracle in your team as False Promise enables passive regeneration even while fighting enemy heroes."
+    "Heart of Tarrasque's strength bonus mostly benefits strength heroes. Agility or Intelligence heroes can consider an Eye of Skadi instead for tankiness.",
+    "Heart of Tarrasque can quickly regenerate health after a team fight, allowing wielders to continue with other deeds without having to visit the Fountain to refill their health."
   ]
 }

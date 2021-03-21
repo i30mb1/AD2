@@ -16,16 +16,15 @@
       ],
       "mana": "250",
       "abilityName": "Hex",
-      "cooldown": null,
+      "cooldown": "22",
       "description": "Turns a target unit into a harmless critter for 3.5 seconds. The target has a base movement speed of 140 and will be silenced, muted, and disarmed. Instantly destroys illusions.",
       "params": [
         "Cast Range: 800",
         "Set Movement Speed: 140",
-        "Duration: 3.5"
+        "Duration: 3.5",
+        "Effects persist if debuff was placed before spell immunity and when not dispelled."
       ],
-      "itemBehaviour": [
-        "(Spell_immunity_block_symbol)^Does not pierce spell immunity\nEffects persist if debuff was placed before spell immunity and when not dispelled."
-      ],
+      "itemBehaviour": [],
       "story": null
     }
   ],
@@ -55,7 +54,7 @@
     "+10 Strength",
     "+10 Agility",
     "+35 Intelligence",
-    "+9 Mana regeneration"
+    "+9 Mana Regeneration"
   ],
   "tips": [
     "Combine it with a blink or invisibility to surprise your target and approach and hit him while he is hexed. You can also use those items to catch an enemy that is running away.",

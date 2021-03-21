@@ -23,7 +23,7 @@
       ],
       "mana": "75",
       "abilityName": "Shadow Walk",
-      "cooldown": null,
+      "cooldown": "28",
       "description": "Makes you invisible for 14 seconds, or until you attack or cast a spell. While Shadow Walk is active, you move 20% faster and can move through units. If attacking to end the invisibility, you gain 175 bonus physical damage on that attack.",
       "params": [
         "Fade Time: 0.3",
@@ -53,8 +53,8 @@
     "Silver Edge"
   ],
   "bonuses": [
-    "+25 Attack damage",
-    "+35 Attack speed"
+    "+25 Attack Damage",
+    "+35 Attack Speed"
   ],
   "tips": null
 }

@@ -26,9 +26,6 @@
       "story": null
     }
   ],
-  "additionalInformation": [
-    "Dragon Scales are fully sharable."
-  ],
   "cost": "N\/A",
   "lore": null,
   "consistFrom": null,
@@ -38,7 +35,7 @@
   "trivia": null,
   "upgradeIn": null,
   "bonuses": [
-    "+5 Health regeneration",
+    "+5 Health Regeneration",
     "+5 Armor"
   ],
   "tips": null

@@ -7,31 +7,33 @@
         "Affects Allied Heroes"
       ],
       "notes": [
-        "Double clicking the item casts it on self.",
+        "↓↓ Double-tapping automatically target self.",
         "If the target is more than 750 range away, the caster moves to the target until it is within 500 range before casting. If a cast order is given on a target which is within 750 range already, the caster does not need to move closer and casts it right away.",
         "If a cast order is given on a target which is within 750 range already, the caster does not need to move closer and casts it right away.",
         "Can only target heroes (including illusions) and creep-heroes.",
         "The owner does not have to face the target to use this on it.",
-        "Gains 1 charge whenever a visible enemy unit, including neutral creeps, uses an ability within the radius, as well as passively every 15 seconds. The automatic charge increment happens even while dead.",
-        "The automatic charge increment happens even while dead.",
+        "Passively gains a charge every 15, starting 15 after entering the inventory. Works even while dead.",
+        "Gains 1 charge whenever a visible enemy unit, including neutral creeps, uses an ability within the radius.",
+        "The item must be in the owner's inventory to gain any charges. Does not gain charges while in the backpack, on the ground, in the stash, or on the courier.",
         "Does not gain charges from toggle abilities, active attack modifiers and the abilities listed here.",
         "Clones, illusions and creep-heroes cannot gain charges.",
         "Passively triggered spells (e.g. Quill Spray, Borrowed Time, Multicast, Reincarnation) do not add charges.",
         "When an enemy casts a spell out of the invisibility from the Invisibility Rune, Shadow Walk, Sand Storm, Moonlight Shadow, or Shukuchi, it does not give a charge.",
         "Can restore up to 300 health and mana when having the maximum amount of charges.",
         "Shares cooldown with Magic Stick and Magic Wand.",
-        "When having multiple Magic Sticks-based items in the inventory, only the oldest one will gain charges from cast abilities. If it is full, the second oldest one starts to gain charges. Each Holy Locket have their own 15 second timers and all will automatically gain charges passively.",
-        "Each Holy Locket have their own 15 second timers and all will automatically gain charges passively.",
+        "When having multiple Magic Stick-based items in the inventory, only the oldest one will gain charges from cast abilities. If it is full, the second oldest one starts to gain charges. Each owned Holy Locket has its own timer for gaining passive charges and do not interfere with each other.",
+        "Each owned Holy Locket has its own timer for gaining passive charges and do not interfere with each other.",
         "Upon upgrading a Magic Wand into a Holy Locket, all its current charges are carried over."
       ],
-      "mana": null,
+      "mana": "0",
       "abilityName": "Energy Charge",
       "cooldown": "13",
-      "description": "Target an allied unit to instantly restore 15 health and mana per charge stored. Max 20 charges. Gains a charge every 15 seconds and whenever a visible enemy within 1200 range uses an ability.",
+      "description": "Target an allied unit to instantly restore 15 health and mana per charge stored. Max 20 charges. Automatically gains a charge every 15 seconds and whenever a visible enemy within 1200 range uses an ability.",
       "params": [
         "Default Cast Range: 500",
         "Buffer Cast Range: 750",
         "Radius: 1200",
+        "Passive Charge Gain Interval: 15",
         "Charges per Cast Spell: 1",
         "Max Charges: 20",
         "Health and Mana Restored per Charge: 15"
@@ -70,7 +72,8 @@
         "Affects Allies"
       ],
       "notes": [
-        "Stacks with all other sources of flat health regeneration, except with Regeneration Aura from multiple Holy Lockets.",
+        "Multiple instances of Holy Locket's Regeneration Aura do not stack. Fully stacks with other sources of health regeneration, including Headdress and its other upgrades.",
+        "Fully stacks with other sources of health regeneration, including Headdress and its other upgrades.",
         "Can regenerate up to 180 health in one minute.",
         "Does not affect wards, buildings and invulnerable units.",
         "The aura's buff lingers for 0.5 seconds."
@@ -81,7 +84,7 @@
       "description": "Grants 3 health regeneration to allies.",
       "params": [
         "Radius: 1200",
-        "Health Regeneration Bonus: 3",
+        "Health Regen Bonus: 3",
         "Aura Linger Duration: 0.5"
       ],
       "itemBehaviour": [],
