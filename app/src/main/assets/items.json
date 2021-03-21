@@ -1,1127 +1,902 @@
 [
   {
     "name": "Observer Ward",
-    "path": "items\/Observer Ward",
     "section": "Basics"
   },
   {
     "name": "Clarity",
-    "path": "items\/Clarity",
     "section": "Basics"
   },
   {
     "name": "Smoke of Deceit",
-    "path": "items\/Smoke of Deceit",
     "section": "Basics"
   },
   {
     "name": "Enchanted Mango",
-    "path": "items\/Enchanted Mango",
     "section": "Basics"
   },
   {
     "name": "Faerie Fire",
-    "path": "items\/Faerie Fire",
     "section": "Basics"
   },
   {
     "name": "Sentry Ward",
-    "path": "items\/Sentry Ward",
     "section": "Basics"
   },
   {
     "name": "Tome of Knowledge",
-    "path": "items\/Tome of Knowledge",
     "section": "Basics"
   },
   {
     "name": "Dust of Appearance",
-    "path": "items\/Dust of Appearance",
     "section": "Basics"
   },
   {
     "name": "Tango",
-    "path": "items\/Tango",
     "section": "Basics"
   },
   {
     "name": "Town Portal Scroll",
-    "path": "items\/Town Portal Scroll",
     "section": "Basics"
   },
   {
     "name": "Healing Salve",
-    "path": "items\/Healing Salve",
     "section": "Basics"
   },
   {
     "name": "Bottle",
-    "path": "items\/Bottle",
     "section": "Basics"
   },
   {
     "name": "Aghanim's Shard",
-    "path": "items\/Aghanim's Shard",
     "section": "Basics"
   },
   {
     "name": "Iron Branch",
-    "path": "items\/Iron Branch",
     "section": "Basics"
   },
   {
     "name": "Gauntlets of Strength",
-    "path": "items\/Gauntlets of Strength",
     "section": "Basics"
   },
   {
     "name": "Mantle of Intelligence",
-    "path": "items\/Mantle of Intelligence",
     "section": "Basics"
   },
   {
     "name": "Slippers of Agility",
-    "path": "items\/Slippers of Agility",
     "section": "Basics"
   },
   {
     "name": "Circlet",
-    "path": "items\/Circlet",
     "section": "Basics"
   },
   {
     "name": "Band of Elvenskin",
-    "path": "items\/Band of Elvenskin",
     "section": "Basics"
   },
   {
     "name": "Belt of Strength",
-    "path": "items\/Belt of Strength",
     "section": "Basics"
   },
   {
     "name": "Crown",
-    "path": "items\/Crown",
     "section": "Basics"
   },
   {
     "name": "Robe of the Magi",
-    "path": "items\/Robe of the Magi",
     "section": "Basics"
   },
   {
     "name": "Blade of Alacrity",
-    "path": "items\/Blade of Alacrity",
     "section": "Basics"
   },
   {
     "name": "Ogre Axe",
-    "path": "items\/Ogre Axe",
     "section": "Basics"
   },
   {
     "name": "Staff of Wizardry",
-    "path": "items\/Staff of Wizardry",
     "section": "Basics"
   },
   {
     "name": "Quelling Blade",
-    "path": "items\/Quelling Blade",
     "section": "Basics"
   },
   {
     "name": "Ring of Protection",
-    "path": "items\/Ring of Protection",
     "section": "Basics"
   },
   {
     "name": "Infused Raindrops",
-    "path": "items\/Infused Raindrops",
     "section": "Basics"
   },
   {
     "name": "Orb of Venom",
-    "path": "items\/Orb of Venom",
     "section": "Basics"
   },
   {
     "name": "Blight Stone",
-    "path": "items\/Blight Stone",
     "section": "Basics"
   },
   {
     "name": "Blades of Attack",
-    "path": "items\/Blades of Attack",
     "section": "Basics"
   },
   {
     "name": "Gloves of Haste",
-    "path": "items\/Gloves of Haste",
     "section": "Basics"
   },
   {
     "name": "Chainmail",
-    "path": "items\/Chainmail",
     "section": "Basics"
   },
   {
     "name": "Quarterstaff",
-    "path": "items\/Quarterstaff",
     "section": "Basics"
   },
   {
     "name": "Helm of Iron Will",
-    "path": "items\/Helm of Iron Will",
     "section": "Basics"
   },
   {
     "name": "Blitz Knuckles",
-    "path": "items\/Blitz Knuckles",
     "section": "Basics"
   },
   {
     "name": "Broadsword",
-    "path": "items\/Broadsword",
     "section": "Basics"
   },
   {
     "name": "Javelin",
-    "path": "items\/Javelin",
     "section": "Basics"
   },
   {
     "name": "Claymore",
-    "path": "items\/Claymore",
     "section": "Basics"
   },
   {
     "name": "Mithril Hammer",
-    "path": "items\/Mithril Hammer",
     "section": "Basics"
   },
   {
     "name": "Ring of Regen",
-    "path": "items\/Ring of Regen",
     "section": "Basics"
   },
   {
     "name": "Sage's Mask",
-    "path": "items\/Sage's Mask",
     "section": "Basics"
   },
   {
     "name": "Magic Stick",
-    "path": "items\/Magic Stick",
     "section": "Basics"
   },
   {
     "name": "Fluffy Hat",
-    "path": "items\/Fluffy Hat",
     "section": "Basics"
   },
   {
     "name": "Wind Lace",
-    "path": "items\/Wind Lace",
-    "section": "Basics"
-  },
-  {
-    "name": "Cloak",
-    "path": "items\/Cloak",
     "section": "Basics"
   },
   {
     "name": "Boots of Speed",
-    "path": "items\/Boots of Speed",
+    "section": "Basics"
+  },
+  {
+    "name": "Cloak",
     "section": "Basics"
   },
   {
     "name": "Voodoo Mask",
-    "path": "items\/Voodoo Mask",
     "section": "Basics"
   },
   {
     "name": "Gem of True Sight",
-    "path": "items\/Gem of True Sight",
     "section": "Basics"
   },
   {
     "name": "Morbid Mask",
-    "path": "items\/Morbid Mask",
     "section": "Basics"
   },
   {
     "name": "Shadow Amulet",
-    "path": "items\/Shadow Amulet",
     "section": "Basics"
   },
   {
     "name": "Ghost Scepter",
-    "path": "items\/Ghost Scepter",
     "section": "Basics"
   },
   {
     "name": "Blink Dagger",
-    "path": "items\/Blink Dagger",
     "section": "Basics"
   },
   {
     "name": "Ring of Health",
-    "path": "items\/Ring of Health",
     "section": "Basics"
   },
   {
     "name": "Void Stone",
-    "path": "items\/Void Stone",
     "section": "Basics"
   },
   {
     "name": "Energy Booster",
-    "path": "items\/Energy Booster",
     "section": "Basics"
   },
   {
     "name": "Vitality Booster",
-    "path": "items\/Vitality Booster",
     "section": "Basics"
   },
   {
     "name": "Point Booster",
-    "path": "items\/Point Booster",
     "section": "Basics"
   },
   {
     "name": "Platemail",
-    "path": "items\/Platemail",
     "section": "Basics"
   },
   {
     "name": "Talisman of Evasion",
-    "path": "items\/Talisman of Evasion",
     "section": "Basics"
   },
   {
     "name": "Hyperstone",
-    "path": "items\/Hyperstone",
     "section": "Basics"
   },
   {
     "name": "Ultimate Orb",
-    "path": "items\/Ultimate Orb",
     "section": "Basics"
   },
   {
     "name": "Demon Edge",
-    "path": "items\/Demon Edge",
     "section": "Basics"
   },
   {
     "name": "Eaglesong",
-    "path": "items\/Eaglesong",
     "section": "Basics"
   },
   {
     "name": "Mystic Staff",
-    "path": "items\/Mystic Staff",
     "section": "Basics"
   },
   {
     "name": "Reaver",
-    "path": "items\/Reaver",
     "section": "Basics"
   },
   {
     "name": "Sacred Relic",
-    "path": "items\/Sacred Relic",
     "section": "Basics"
   },
   {
     "name": "Magic Wand",
-    "path": "items\/Magic Wand",
     "section": "Upgrades"
   },
   {
     "name": "Bracer",
-    "path": "items\/Bracer",
     "section": "Upgrades"
   },
   {
     "name": "Null Talisman",
-    "path": "items\/Null Talisman",
     "section": "Upgrades"
   },
   {
     "name": "Wraith Band",
-    "path": "items\/Wraith Band",
     "section": "Upgrades"
   },
   {
     "name": "Soul Ring",
-    "path": "items\/Soul Ring",
     "section": "Upgrades"
   },
   {
     "name": "Orb of Corrosion",
-    "path": "items\/Orb of Corrosion",
     "section": "Upgrades"
   },
   {
     "name": "Falcon Blade",
-    "path": "items\/Falcon Blade",
     "section": "Upgrades"
   },
   {
     "name": "Power Treads",
-    "path": "items\/Power Treads",
     "section": "Upgrades"
   },
   {
     "name": "Oblivion Staff",
-    "path": "items\/Oblivion Staff",
     "section": "Upgrades"
   },
   {
     "name": "Phase Boots",
-    "path": "items\/Phase Boots",
     "section": "Upgrades"
   },
   {
     "name": "Perseverance",
-    "path": "items\/Perseverance",
     "section": "Upgrades"
   },
   {
     "name": "Mask of Madness",
-    "path": "items\/Mask of Madness",
     "section": "Upgrades"
   },
   {
     "name": "Hand of Midas",
-    "path": "items\/Hand of Midas",
     "section": "Upgrades"
   },
   {
     "name": "Helm of the Dominator",
-    "path": "items\/Helm of the Dominator",
     "section": "Upgrades"
   },
   {
     "name": "Boots of Travel",
-    "path": "items\/Boots of Travel",
     "section": "Upgrades"
   },
   {
     "name": "Moon Shard",
-    "path": "items\/Moon Shard",
     "section": "Upgrades"
   },
   {
     "name": "Buckler",
-    "path": "items\/Buckler",
     "section": "Upgrades"
   },
   {
     "name": "Headdress",
-    "path": "items\/Headdress",
     "section": "Upgrades"
   },
   {
     "name": "Ring of Basilius",
-    "path": "items\/Ring of Basilius",
     "section": "Upgrades"
   },
   {
     "name": "Urn of Shadows",
-    "path": "items\/Urn of Shadows",
     "section": "Upgrades"
   },
   {
     "name": "Tranquil Boots",
-    "path": "items\/Tranquil Boots",
     "section": "Upgrades"
   },
   {
     "name": "Medallion of Courage",
-    "path": "items\/Medallion of Courage",
     "section": "Upgrades"
   },
   {
     "name": "Arcane Boots",
-    "path": "items\/Arcane Boots",
     "section": "Upgrades"
   },
   {
     "name": "Drum of Endurance",
-    "path": "items\/Drum of Endurance",
     "section": "Upgrades"
   },
   {
     "name": "Mekansm",
-    "path": "items\/Mekansm",
     "section": "Upgrades"
   },
   {
     "name": "Holy Locket",
-    "path": "items\/Holy Locket",
     "section": "Upgrades"
   },
   {
     "name": "Vladmir's Offering",
-    "path": "items\/Vladmir's Offering",
     "section": "Upgrades"
   },
   {
     "name": "Spirit Vessel",
-    "path": "items\/Spirit Vessel",
     "section": "Upgrades"
   },
   {
     "name": "Pipe of Insight",
-    "path": "items\/Pipe of Insight",
     "section": "Upgrades"
   },
   {
     "name": "Guardian Greaves",
-    "path": "items\/Guardian Greaves",
     "section": "Upgrades"
   },
   {
     "name": "Veil of Discord",
-    "path": "items\/Veil of Discord",
     "section": "Upgrades"
   },
   {
     "name": "Glimmer Cape",
-    "path": "items\/Glimmer Cape",
     "section": "Upgrades"
   },
   {
     "name": "Necronomicon",
-    "path": "items\/Necronomicon",
     "section": "Upgrades"
   },
   {
     "name": "Force Staff",
-    "path": "items\/Force Staff",
     "section": "Upgrades"
   },
   {
     "name": "Aether Lens",
-    "path": "items\/Aether Lens",
     "section": "Upgrades"
   },
   {
     "name": "Witch Blade",
-    "path": "items\/Witch Blade",
     "section": "Upgrades"
   },
   {
     "name": "Eul's Scepter of Divinity",
-    "path": "items\/Eul's Scepter of Divinity",
     "section": "Upgrades"
   },
   {
     "name": "Dagon",
-    "path": "items\/Dagon",
     "section": "Upgrades"
   },
   {
     "name": "Rod of Atos",
-    "path": "items\/Rod of Atos",
     "section": "Upgrades"
   },
   {
     "name": "Orchid Malevolence",
-    "path": "items\/Orchid Malevolence",
     "section": "Upgrades"
   },
   {
     "name": "Solar Crest",
-    "path": "items\/Solar Crest",
     "section": "Upgrades"
   },
   {
     "name": "Aghanim's Scepter",
-    "path": "items\/Aghanim's Scepter",
     "section": "Upgrades"
   },
   {
     "name": "Refresher Orb",
-    "path": "items\/Refresher Orb",
     "section": "Upgrades"
   },
   {
     "name": "Octarine Core",
-    "path": "items\/Octarine Core",
     "section": "Upgrades"
   },
   {
     "name": "Scythe of Vyse",
-    "path": "items\/Scythe of Vyse",
     "section": "Upgrades"
   },
   {
     "name": "Aghanim's Blessing",
-    "path": "items\/Aghanim's Blessing",
     "section": "Upgrades"
   },
   {
     "name": "Gleipnir",
-    "path": "items\/Gleipnir",
     "section": "Upgrades"
   },
   {
     "name": "Wind Waker",
-    "path": "items\/Wind Waker",
     "section": "Upgrades"
   },
   {
     "name": "Hood of Defiance",
-    "path": "items\/Hood of Defiance",
     "section": "Upgrades"
   },
   {
     "name": "Vanguard",
-    "path": "items\/Vanguard",
     "section": "Upgrades"
   },
   {
     "name": "Blade Mail",
-    "path": "items\/Blade Mail",
     "section": "Upgrades"
   },
   {
     "name": "Aeon Disk",
-    "path": "items\/Aeon Disk",
     "section": "Upgrades"
   },
   {
     "name": "Soul Booster",
-    "path": "items\/Soul Booster",
     "section": "Upgrades"
   },
   {
     "name": "Eternal Shroud",
-    "path": "items\/Eternal Shroud",
     "section": "Upgrades"
   },
   {
     "name": "Crimson Guard",
-    "path": "items\/Crimson Guard",
     "section": "Upgrades"
   },
   {
     "name": "Lotus Orb",
-    "path": "items\/Lotus Orb",
     "section": "Upgrades"
   },
   {
     "name": "Black King Bar",
-    "path": "items\/Black King Bar",
     "section": "Upgrades"
   },
   {
     "name": "Hurricane Pike",
-    "path": "items\/Hurricane Pike",
     "section": "Upgrades"
   },
   {
     "name": "Linken's Sphere",
-    "path": "items\/Linken's Sphere",
     "section": "Upgrades"
   },
   {
     "name": "Manta Style",
-    "path": "items\/Manta Style",
     "section": "Upgrades"
   },
   {
     "name": "Heart of Tarrasque",
-    "path": "items\/Heart of Tarrasque",
     "section": "Upgrades"
   },
   {
     "name": "Shiva's Guard",
-    "path": "items\/Shiva's Guard",
     "section": "Upgrades"
   },
   {
     "name": "Assault Cuirass",
-    "path": "items\/Assault Cuirass",
     "section": "Upgrades"
   },
   {
     "name": "Bloodstone",
-    "path": "items\/Bloodstone",
     "section": "Upgrades"
   },
   {
     "name": "Crystalys",
-    "path": "items\/Crystalys",
     "section": "Upgrades"
   },
   {
     "name": "Meteor Hammer",
-    "path": "items\/Meteor Hammer",
     "section": "Upgrades"
   },
   {
     "name": "Armlet of Mordiggian",
-    "path": "items\/Armlet of Mordiggian",
     "section": "Upgrades"
   },
   {
     "name": "Skull Basher",
-    "path": "items\/Skull Basher",
     "section": "Upgrades"
   },
   {
     "name": "Shadow Blade",
-    "path": "items\/Shadow Blade",
     "section": "Upgrades"
   },
   {
     "name": "Desolator",
-    "path": "items\/Desolator",
     "section": "Upgrades"
   },
   {
     "name": "Battle Fury",
-    "path": "items\/Battle Fury",
     "section": "Upgrades"
   },
   {
     "name": "Ethereal Blade",
-    "path": "items\/Ethereal Blade",
     "section": "Upgrades"
   },
   {
     "name": "Nullifier",
-    "path": "items\/Nullifier",
     "section": "Upgrades"
   },
   {
     "name": "Monkey King Bar",
-    "path": "items\/Monkey King Bar",
-    "section": "Upgrades"
-  },
-  {
-    "name": "Daedalus",
-    "path": "items\/Daedalus",
-    "section": "Upgrades"
-  },
-  {
-    "name": "Radiance",
-    "path": "items\/Radiance",
     "section": "Upgrades"
   },
   {
     "name": "Butterfly",
-    "path": "items\/Butterfly",
+    "section": "Upgrades"
+  },
+  {
+    "name": "Daedalus",
+    "section": "Upgrades"
+  },
+  {
+    "name": "Radiance",
     "section": "Upgrades"
   },
   {
     "name": "Silver Edge",
-    "path": "items\/Silver Edge",
     "section": "Upgrades"
   },
   {
     "name": "Divine Rapier",
-    "path": "items\/Divine Rapier",
     "section": "Upgrades"
   },
   {
     "name": "Bloodthorn",
-    "path": "items\/Bloodthorn",
     "section": "Upgrades"
   },
   {
     "name": "Abyssal Blade",
-    "path": "items\/Abyssal Blade",
     "section": "Upgrades"
   },
   {
     "name": "Dragon Lance",
-    "path": "items\/Dragon Lance",
     "section": "Upgrades"
   },
   {
     "name": "Kaya",
-    "path": "items\/Kaya",
     "section": "Upgrades"
   },
   {
     "name": "Sange",
-    "path": "items\/Sange",
     "section": "Upgrades"
   },
   {
     "name": "Yasha",
-    "path": "items\/Yasha",
     "section": "Upgrades"
   },
   {
     "name": "Echo Sabre",
-    "path": "items\/Echo Sabre",
     "section": "Upgrades"
   },
   {
     "name": "Maelstrom",
-    "path": "items\/Maelstrom",
     "section": "Upgrades"
   },
   {
     "name": "Diffusal Blade",
-    "path": "items\/Diffusal Blade",
     "section": "Upgrades"
   },
   {
     "name": "Mage Slayer",
-    "path": "items\/Mage Slayer",
     "section": "Upgrades"
   },
   {
     "name": "Heaven's Halberd",
-    "path": "items\/Heaven's Halberd",
     "section": "Upgrades"
   },
   {
     "name": "Kaya and Sange",
-    "path": "items\/Kaya and Sange",
     "section": "Upgrades"
   },
   {
     "name": "Sange and Yasha",
-    "path": "items\/Sange and Yasha",
     "section": "Upgrades"
   },
   {
     "name": "Yasha and Kaya",
-    "path": "items\/Yasha and Kaya",
     "section": "Upgrades"
   },
   {
     "name": "Satanic",
-    "path": "items\/Satanic",
     "section": "Upgrades"
   },
   {
     "name": "Eye of Skadi",
-    "path": "items\/Eye of Skadi",
     "section": "Upgrades"
   },
   {
     "name": "Mjollnir",
-    "path": "items\/Mjollnir",
     "section": "Upgrades"
   },
   {
     "name": "Arcane Blink",
-    "path": "items\/Arcane Blink",
     "section": "Upgrades"
   },
   {
     "name": "Overwhelming Blink",
-    "path": "items\/Overwhelming Blink",
     "section": "Upgrades"
   },
   {
     "name": "Swift Blink",
-    "path": "items\/Swift Blink",
     "section": "Upgrades"
   },
   {
     "name": "Aegis of the Immortal",
-    "path": "items\/Aegis of the Immortal",
     "section": "Roshan Drop"
   },
   {
     "name": "Cheese",
-    "path": "items\/Cheese",
     "section": "Roshan Drop"
   },
   {
     "name": "Refresher Shard",
-    "path": "items\/Refresher Shard",
     "section": "Roshan Drop"
   },
   {
     "name": "Arcane Ring",
-    "path": "items\/Arcane Ring",
     "section": "Neutral Items"
   },
   {
     "name": "Broom Handle",
-    "path": "items\/Broom Handle",
     "section": "Neutral Items"
   },
   {
     "name": "Chipped Vest",
-    "path": "items\/Chipped Vest",
     "section": "Neutral Items"
   },
   {
     "name": "Faded Broach",
-    "path": "items\/Faded Broach",
     "section": "Neutral Items"
   },
   {
     "name": "Fairy's Trinket",
-    "path": "items\/Fairy's Trinket",
     "section": "Neutral Items"
   },
   {
     "name": "Ironwood Tree",
-    "path": "items\/Ironwood Tree",
     "section": "Neutral Items"
   },
   {
     "name": "Keen Optic",
-    "path": "items\/Keen Optic",
     "section": "Neutral Items"
   },
   {
     "name": "Ocean Heart",
-    "path": "items\/Ocean Heart",
     "section": "Neutral Items"
   },
   {
     "name": "Possessed Mask",
-    "path": "items\/Possessed Mask",
     "section": "Neutral Items"
   },
   {
     "name": "Royal Jelly",
-    "path": "items\/Royal Jelly",
     "section": "Neutral Items"
   },
   {
     "name": "Trusty Shovel",
-    "path": "items\/Trusty Shovel",
     "section": "Neutral Items"
   },
   {
     "name": "Bullwhip",
-    "path": "items\/Bullwhip",
     "section": "Neutral Items"
   },
   {
     "name": "Dragon Scale",
-    "path": "items\/Dragon Scale",
     "section": "Neutral Items"
   },
   {
     "name": "Essence Ring",
-    "path": "items\/Essence Ring",
     "section": "Neutral Items"
   },
   {
     "name": "Grove Bow",
-    "path": "items\/Grove Bow",
     "section": "Neutral Items"
   },
   {
     "name": "Imp Claw",
-    "path": "items\/Imp Claw",
     "section": "Neutral Items"
   },
   {
     "name": "Nether Shawl",
-    "path": "items\/Nether Shawl",
     "section": "Neutral Items"
   },
   {
     "name": "Philosopher's Stone",
-    "path": "items\/Philosopher's Stone",
     "section": "Neutral Items"
   },
   {
     "name": "Pupil's Gift",
-    "path": "items\/Pupil's Gift",
     "section": "Neutral Items"
   },
   {
     "name": "Quicksilver Amulet",
-    "path": "items\/Quicksilver Amulet",
     "section": "Neutral Items"
   },
   {
     "name": "Ring of Aquila",
-    "path": "items\/Ring of Aquila",
     "section": "Neutral Items"
   },
   {
     "name": "Vambrace",
-    "path": "items\/Vambrace",
     "section": "Neutral Items"
   },
   {
     "name": "Ceremonial Robe",
-    "path": "items\/Ceremonial Robe",
     "section": "Neutral Items"
   },
   {
     "name": "Cloak of Flames",
-    "path": "items\/Cloak of Flames",
     "section": "Neutral Items"
   },
   {
     "name": "Elven Tunic",
-    "path": "items\/Elven Tunic",
     "section": "Neutral Items"
   },
   {
     "name": "Enchanted Quiver",
-    "path": "items\/Enchanted Quiver",
     "section": "Neutral Items"
   },
   {
     "name": "Mind Breaker",
-    "path": "items\/Mind Breaker",
     "section": "Neutral Items"
   },
   {
     "name": "Orb of Destruction",
-    "path": "items\/Orb of Destruction",
     "section": "Neutral Items"
   },
   {
     "name": "Paladin Sword",
-    "path": "items\/Paladin Sword",
     "section": "Neutral Items"
   },
   {
     "name": "Psychic Headband",
-    "path": "items\/Psychic Headband",
     "section": "Neutral Items"
   },
   {
     "name": "Quickening Charm",
-    "path": "items\/Quickening Charm",
     "section": "Neutral Items"
   },
   {
     "name": "Spider Legs",
-    "path": "items\/Spider Legs",
     "section": "Neutral Items"
   },
   {
     "name": "Titan Sliver",
-    "path": "items\/Titan Sliver",
     "section": "Neutral Items"
   },
   {
     "name": "Flicker",
-    "path": "items\/Flicker",
     "section": "Neutral Items"
   },
   {
     "name": "Illusionist's Cape",
-    "path": "items\/Illusionist's Cape",
     "section": "Neutral Items"
   },
   {
     "name": "Minotaur Horn",
-    "path": "items\/Minotaur Horn",
     "section": "Neutral Items"
   },
   {
     "name": "Ninja Gear",
-    "path": "items\/Ninja Gear",
     "section": "Neutral Items"
   },
   {
     "name": "Penta-Edged Sword",
-    "path": "items\/Penta-Edged Sword",
     "section": "Neutral Items"
   },
   {
     "name": "Spell Prism",
-    "path": "items\/Spell Prism",
     "section": "Neutral Items"
   },
   {
     "name": "Stormcrafter",
-    "path": "items\/Stormcrafter",
     "section": "Neutral Items"
   },
   {
     "name": "Telescope",
-    "path": "items\/Telescope",
     "section": "Neutral Items"
   },
   {
     "name": "The Leveller",
-    "path": "items\/The Leveller",
     "section": "Neutral Items"
   },
   {
     "name": "Timeless Relic",
-    "path": "items\/Timeless Relic",
     "section": "Neutral Items"
   },
   {
     "name": "Trickster Cloak",
-    "path": "items\/Trickster Cloak",
     "section": "Neutral Items"
   },
   {
     "name": "Apex",
-    "path": "items\/Apex",
     "section": "Neutral Items"
   },
   {
     "name": "Ballista",
-    "path": "items\/Ballista",
     "section": "Neutral Items"
   },
   {
     "name": "Book of Shadows",
-    "path": "items\/Book of Shadows",
     "section": "Neutral Items"
   },
   {
     "name": "Book of the Dead",
-    "path": "items\/Book of the Dead",
     "section": "Neutral Items"
   },
   {
     "name": "Ex Machina",
-    "path": "items\/Ex Machina",
     "section": "Neutral Items"
   },
   {
     "name": "Fallen Sky",
-    "path": "items\/Fallen Sky",
     "section": "Neutral Items"
   },
   {
     "name": "Force Boots",
-    "path": "items\/Force Boots",
     "section": "Neutral Items"
   },
   {
     "name": "Giant's Ring",
-    "path": "items\/Giant's Ring",
     "section": "Neutral Items"
   },
   {
     "name": "Mirror Shield",
-    "path": "items\/Mirror Shield",
     "section": "Neutral Items"
   },
   {
     "name": "Pirate Hat",
-    "path": "items\/Pirate Hat",
     "section": "Neutral Items"
   },
   {
     "name": "Seer Stone",
-    "path": "items\/Seer Stone",
     "section": "Neutral Items"
   },
   {
     "name": "Stygian Desolator",
-    "path": "items\/Stygian Desolator",
     "section": "Neutral Items"
   }
 ]
