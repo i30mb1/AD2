@@ -20,6 +20,7 @@ import javax.inject.Singleton
 @Component(
     modules = [
         ApplicationModule::class,
+        CoroutineModule::class,
     ]
 )
 interface ApplicationComponent {

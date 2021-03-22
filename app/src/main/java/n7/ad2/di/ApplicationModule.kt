@@ -12,12 +12,11 @@ import com.squareup.moshi.Moshi
 import dagger.Module
 import dagger.Provides
 import dagger.Reusable
-import kotlinx.coroutines.CoroutineDispatcher
-import kotlinx.coroutines.Dispatchers
+import kotlinx.coroutines.CoroutineScope
 import n7.ad2.AD2Logger
 import n7.ad2.data.source.local.db.AppDatabase
 import n7.ad2.workers.DatabaseWorker
-import java.util.*
+import java.util.Calendar
 import javax.inject.Singleton
 
 @Module
@@ -26,46 +25,38 @@ object ApplicationModule {
     @Reusable
     @Provides
     fun provideDatabase(application: Application): AppDatabase {
+        fun fillInDatabase() {
+            val request = OneTimeWorkRequestBuilder<DatabaseWorker>().build()
+            WorkManager.getInstance(application).enqueue(request)
+        }
         return Room.databaseBuilder(
-                application,
-                AppDatabase::class.java,
-                AppDatabase.DB_NAME
+            application,
+            AppDatabase::class.java,
+            AppDatabase.DB_NAME
         )
-                .addCallback(object : RoomDatabase.Callback() {
-                    override fun onCreate(db: SupportSQLiteDatabase) {
-                        super.onCreate(db)
-                        fillInDatabase(application)
-                    }
-                })
-                .fallbackToDestructiveMigration()
-                .build()
-    }
-
-    private fun fillInDatabase(application: Application) {
-        val request = OneTimeWorkRequestBuilder<DatabaseWorker>().build()
-        WorkManager.getInstance(application).enqueue(request)
-    }
-
-    @Reusable
-    @Provides
-    fun moshi(): Moshi = Moshi.Builder()
+            .addCallback(object : RoomDatabase.Callback() {
+                override fun onCreate(db: SupportSQLiteDatabase) {
+                    super.onCreate(db)
+                    fillInDatabase()
+                }
+            })
+            .fallbackToDestructiveMigration()
             .build()
-
-    @Reusable
-    @Provides
-    fun provideIoDispatcher(): CoroutineDispatcher = Dispatchers.IO
-
-    @Reusable
-    @Provides
-    fun provideSharedPreferences(application: Application): SharedPreferences {
-        return PreferenceManager.getDefaultSharedPreferences(application)
     }
+
+    @Reusable
+    @Provides
+    fun moshi(): Moshi = Moshi.Builder().build()
+
+    @Reusable
+    @Provides
+    fun provideSharedPreferences(application: Application): SharedPreferences = PreferenceManager.getDefaultSharedPreferences(application)
 
     @Provides
     fun provideCalendar(): Calendar = Calendar.getInstance()
 
     @Provides
     @Singleton
-    fun provideAD2Logger(): AD2Logger = AD2Logger()
+    fun provideAD2Logger(coroutineScope: CoroutineScope): AD2Logger = AD2Logger(coroutineScope)
 
 }
