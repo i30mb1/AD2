@@ -72,6 +72,7 @@ class HeroGuideWorker(
     }
 
     private suspend fun startForegroundIfNotificationEnabled() {
+        //  https://proandroiddev.com/android-foreground-service-restrictions-d3baa93b2f70 not all foreground works
         if (NotificationManagerCompat.from(applicationContext).areNotificationsEnabled()) {
             if (applicationContext.isChannelNotCreated(channelId)) applicationContext.createNotificationChannel(channelId, channelName)
 
