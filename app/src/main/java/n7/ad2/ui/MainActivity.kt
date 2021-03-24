@@ -22,6 +22,7 @@ import androidx.constraintlayout.widget.ConstraintSet
 import androidx.databinding.DataBindingUtil
 import androidx.databinding.ObservableBoolean
 import androidx.databinding.ObservableInt
+import androidx.lifecycle.lifecycleScope
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.transition.ChangeBounds
 import androidx.transition.TransitionManager
@@ -36,6 +37,9 @@ import com.google.android.play.core.install.model.InstallStatus
 import com.google.android.play.core.install.model.UpdateAvailability
 import com.yarolegovich.slidingrootnav.SlidingRootNavBuilder
 import com.yarolegovich.slidingrootnav.callback.DragStateListener
+import kotlinx.coroutines.flow.collect
+import n7.ad2.AD2Log
+import n7.ad2.AD2Logger
 import n7.ad2.R
 import n7.ad2.databinding.ActivityMainBinding
 import n7.ad2.databinding.DialogRateBinding
@@ -68,6 +72,9 @@ class MainActivity : BaseActivity() {
     @Inject
     lateinit var preferences: SharedPreferences
 
+    @Inject
+    lateinit var logger: AD2Logger
+
     var observableLastItem = ObservableInt(1)
     var subscription = ObservableBoolean(false)
 
@@ -76,7 +83,7 @@ class MainActivity : BaseActivity() {
     private val constraintSetHidden = ConstraintSet()
     private val constraintSetOrigin = ConstraintSet()
     private var currentSet: ConstraintSet? = null
-    private var adapter: AD2LoggerAdapter? = null
+    private val loggerAdapter: AD2LoggerAdapter by lazy { AD2LoggerAdapter() }
     private lateinit var binding: ActivityMainBinding
     private lateinit var drawer: DrawerBinding
     private var shouldUpdateFromMarket = true
@@ -137,8 +144,11 @@ class MainActivity : BaseActivity() {
     private fun setupLoggerAdapter() {
         shouldDisplayLog = preferences.getBoolean(getString(R.string.setting_log_key), true)
         if (shouldDisplayLog) {
-            adapter = AD2LoggerAdapter()
-            drawer.rvDrawer.adapter = adapter
+            lifecycleScope.launchWhenCreated {
+                logger.getLogFlow().collect(loggerAdapter::add)
+            }
+
+            drawer.rvDrawer.adapter = loggerAdapter
             drawer.rvDrawer.layoutManager = object : LinearLayoutManager(this, VERTICAL, false) {
                 override fun canScrollVertically(): Boolean = false
             }

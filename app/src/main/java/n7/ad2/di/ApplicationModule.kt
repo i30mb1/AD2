@@ -12,12 +12,9 @@ import com.squareup.moshi.Moshi
 import dagger.Module
 import dagger.Provides
 import dagger.Reusable
-import kotlinx.coroutines.CoroutineScope
-import n7.ad2.AD2Logger
 import n7.ad2.data.source.local.db.AppDatabase
 import n7.ad2.workers.DatabaseWorker
 import java.util.Calendar
-import javax.inject.Singleton
 
 @Module
 object ApplicationModule {
@@ -54,9 +51,5 @@ object ApplicationModule {
 
     @Provides
     fun provideCalendar(): Calendar = Calendar.getInstance()
-
-    @Provides
-    @Singleton
-    fun provideAD2Logger(coroutineScope: CoroutineScope): AD2Logger = AD2Logger(coroutineScope)
 
 }

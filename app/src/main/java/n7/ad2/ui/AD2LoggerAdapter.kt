@@ -18,7 +18,10 @@ class AD2LoggerAdapter : RecyclerView.Adapter<TextViewHolder>() {
 
     override fun getItemCount(): Int = list.size
 
-    fun add(item: AD2Log) = list.add(item)
+    fun add(item: AD2Log) {
+        list.add(item)
+        notifyItemInserted(list.lastIndex)
+    }
 
     class TextViewHolder private constructor(
         private val binding: ItemLogBinding,

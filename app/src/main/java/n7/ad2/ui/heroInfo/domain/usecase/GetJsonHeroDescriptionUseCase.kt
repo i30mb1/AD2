@@ -8,7 +8,7 @@ import javax.inject.Inject
 
 class GetJsonHeroDescriptionUseCase @Inject constructor(
     private val heroRepository: HeroRepository,
-    private val ioDispatcher: CoroutineDispatcher
+    private val ioDispatcher: CoroutineDispatcher,
 ) {
 
     suspend operator fun invoke(heroName: String, locale: Locale) = withContext(ioDispatcher) {
