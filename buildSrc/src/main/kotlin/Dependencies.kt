@@ -19,6 +19,7 @@ object Versions {
     const val room = "2.2.5"
     const val kotlin = "1.4.10"
     const val dagger = "2.31"
+    const val lifecycle = "2.4.0-alpha01"
 }
 
 object Lib {
@@ -65,10 +66,10 @@ object Lib {
     // --- Coroutines ---
     const val coroutines = "org.jetbrains.kotlinx:kotlinx-coroutines-core:1.4.0"
     const val coroutinesAndroid = "org.jetbrains.kotlinx:kotlinx-coroutines-android:1.4.0" // for testing coroutines
-    const val coroutinesLifecycle = "androidx.lifecycle:lifecycle-runtime-ktx:2.2.0" // lifecycleScope + launchWhenResumed and ets.
-    const val coroutinesLivedata = "androidx.lifecycle:lifecycle-livedata-ktx:2.2.0" // liveData (LiveData + coroutines)
-    const val coroutinesViewmodel = "androidx.lifecycle:lifecycle-viewmodel-ktx:2.2.0" // viewModelScope + savedStateHandle
-    const val lifecycleAnnotation = "androidx.lifecycle:lifecycle-common-java8:2.2.0" // that's only needed if you have lifecycle-related annotations in your code, specifically @OnLifecycleEvent
+    const val coroutinesLifecycle = "androidx.lifecycle:lifecycle-runtime-ktx:${Versions.lifecycle}" // lifecycleScope + launchWhenResumed and ets.
+    const val coroutinesLivedata = "androidx.lifecycle:lifecycle-livedata-ktx:${Versions.lifecycle}" // liveData (LiveData + coroutines)
+    const val coroutinesViewmodel = "androidx.lifecycle:lifecycle-viewmodel-ktx:${Versions.lifecycle}" // viewModelScope + savedStateHandle
+    const val lifecycleAnnotation = "androidx.lifecycle:lifecycle-common-java8:${Versions.lifecycle}" // that's only needed if you have lifecycle-related annotations in your code, specifically @OnLifecycleEvent
     const val fragmentKtx = "androidx.fragment:fragment-ktx:1.3.0-alpha06" // easy fragment transaction + by viewModels()
     const val activityKtx = "androidx.activity:activity-ktx:1.1.0" // on BackPress support for Fragment
 
