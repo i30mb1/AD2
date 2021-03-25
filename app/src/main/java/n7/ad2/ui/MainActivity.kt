@@ -22,6 +22,8 @@ import androidx.constraintlayout.widget.ConstraintSet
 import androidx.databinding.DataBindingUtil
 import androidx.databinding.ObservableBoolean
 import androidx.databinding.ObservableInt
+import androidx.lifecycle.Lifecycle
+import androidx.lifecycle.flowWithLifecycle
 import androidx.lifecycle.lifecycleScope
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.transition.ChangeBounds
@@ -37,8 +39,8 @@ import com.google.android.play.core.install.model.InstallStatus
 import com.google.android.play.core.install.model.UpdateAvailability
 import com.yarolegovich.slidingrootnav.SlidingRootNavBuilder
 import com.yarolegovich.slidingrootnav.callback.DragStateListener
-import kotlinx.coroutines.flow.collect
-import n7.ad2.AD2Log
+import kotlinx.coroutines.flow.launchIn
+import kotlinx.coroutines.flow.onEach
 import n7.ad2.AD2Logger
 import n7.ad2.R
 import n7.ad2.databinding.ActivityMainBinding
@@ -144,9 +146,11 @@ class MainActivity : BaseActivity() {
     private fun setupLoggerAdapter() {
         shouldDisplayLog = preferences.getBoolean(getString(R.string.setting_log_key), true)
         if (shouldDisplayLog) {
-            lifecycleScope.launchWhenCreated {
-                logger.getLogFlow().collect(loggerAdapter::add)
-            }
+
+            logger.getLogFlow()
+                .flowWithLifecycle(lifecycle, Lifecycle.State.STARTED)
+                .onEach(loggerAdapter::add)
+                .launchIn(lifecycleScope)
 
             drawer.rvDrawer.adapter = loggerAdapter
             drawer.rvDrawer.layoutManager = object : LinearLayoutManager(this, VERTICAL, false) {
