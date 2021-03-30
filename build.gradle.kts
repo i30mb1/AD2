@@ -30,6 +30,7 @@ subprojects {
                 kotlinOptions {
                     noStdlib = true
                     jvmTarget = JavaVersion.VERSION_1_8.toString()
+//                    allWarningsAsErrors = true
                 }
             }
         }
