@@ -4,6 +4,7 @@ import android.app.Application
 import dagger.BindsInstance
 import dagger.Component
 import n7.ad2.main.MainViewModel
+import n7.ad2.news.NewsViewModel
 import n7.ad2.ui.MainActivity
 import n7.ad2.ui.heroGuide.HeroGuideViewModel
 import n7.ad2.ui.heroGuide.HeroGuideWorker
@@ -41,6 +42,7 @@ interface ApplicationComponent {
     val responsesViewModel: ResponsesViewModel
     val itemInfoViewModel: ItemInfoViewModel.AssistedFactory
     val heroGuideViewModel: HeroGuideViewModel
+    val newsViewModel: NewsViewModel
     val heroInfoViewModel: HeroInfoViewModel
 
 }

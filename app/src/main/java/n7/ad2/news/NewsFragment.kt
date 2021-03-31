@@ -1,73 +1,49 @@
-package n7.ad2.news;
+package n7.ad2.news
 
+import android.os.Bundle
+import android.view.LayoutInflater
+import android.view.View
+import android.view.ViewGroup
+import androidx.databinding.DataBindingUtil
+import androidx.fragment.app.Fragment
+import androidx.recyclerview.widget.GridLayoutManager
+import n7.ad2.R
+import n7.ad2.databinding.FragmentNewsBinding
+import n7.ad2.di.injector
+import n7.ad2.utils.viewModel
 
-import android.content.Intent;
-import android.os.Bundle;
-import android.preference.PreferenceManager;
-import android.view.LayoutInflater;
-import android.view.View;
-import android.view.ViewGroup;
+class NewsFragment : Fragment() {
 
-import androidx.annotation.NonNull;
-import androidx.annotation.Nullable;
-import androidx.databinding.DataBindingUtil;
-import androidx.fragment.app.Fragment;
-import androidx.lifecycle.Observer;
-import androidx.lifecycle.ViewModelProvider;
-import androidx.paging.PagedList;
-import androidx.recyclerview.widget.GridLayoutManager;
+    private var _binding: FragmentNewsBinding? = null
+    private val binding: FragmentNewsBinding get() = _binding!!
+    private val viewModel: NewsViewModel by viewModel { injector.newsViewModel }
 
-import n7.ad2.R;
-import n7.ad2.databinding.FragmentNewsBinding;
-import n7.ad2.news.db.NewsModel;
-
-import static n7.ad2.ui.MainActivity.LOG_ON_RECEIVE;
-
-public class NewsFragment extends Fragment {
-
-    private FragmentNewsBinding binding;
-    private NewsViewModel viewModel;
-
-    public NewsFragment() {
+    companion object {
+        fun newInstance(): NewsFragment = NewsFragment()
     }
 
-    @Override
-    public View onCreateView(@NonNull LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
-        binding = DataBindingUtil.inflate(inflater, R.layout.fragment_news, container, false);
-        return binding.getRoot();
+    override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?, savedInstanceState: Bundle?): View {
+        _binding = DataBindingUtil.inflate(inflater, R.layout.fragment_news, container, false)
+        return binding.root
     }
 
-    @Override
-    public void onActivityCreated(@Nullable Bundle savedInstanceState) {
-        super.onActivityCreated(savedInstanceState);
-
-        viewModel = new ViewModelProvider(this).get(NewsViewModel.class);
-        binding.setViewModel(viewModel);
-        binding.executePendingBindings();
-
-        getActivity().setTitle(R.string.news);
-        getActivity().sendBroadcast(new Intent(LOG_ON_RECEIVE).putExtra(LOG_ON_RECEIVE, "news_activity_created"));
-        setRetainInstance(true);
-
-        setupRecyclerView();
+    override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
+        super.onViewCreated(view, savedInstanceState)
+        binding.viewModel = viewModel
+        requireActivity().setTitle(R.string.news)
+        setupRecyclerView()
     }
 
-    private void setupRecyclerView() {
-        GridLayoutManager gridLayoutManager = new GridLayoutManager(getContext(), 1);
-        binding.rvFragmentNews.setLayoutManager(gridLayoutManager);
-//        binding.rvFragmentNews.setHasFixedSize(true);
-
-        boolean withImage = PreferenceManager.getDefaultSharedPreferences(getContext()).getBoolean(getString(R.string.setting_news_key), true);
-
-        final NewsPagedListAdapter adapter = new NewsPagedListAdapter(withImage);
-        binding.rvFragmentNews.setAdapter(adapter);
-
-        viewModel.getNews().observe(getViewLifecycleOwner(), new Observer<PagedList<NewsModel>>() {
-            @Override
-            public void onChanged(@Nullable PagedList<NewsModel> newsModels) {
-                adapter.submitList(newsModels);
-            }
-        });
+    override fun onDestroyView() {
+        super.onDestroyView()
+        _binding = null
     }
 
+    private fun setupRecyclerView() {
+        val gridLayoutManager = GridLayoutManager(context, 1)
+        binding.rvFragmentNews.layoutManager = gridLayoutManager
+        val adapter = NewsPagedListAdapter(true)
+        binding.rvFragmentNews.adapter = adapter
+        viewModel.news?.observe(viewLifecycleOwner, { newsModels -> adapter.submitList(newsModels) })
+    }
 }

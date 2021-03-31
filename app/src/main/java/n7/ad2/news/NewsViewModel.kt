@@ -1,80 +1,60 @@
-package n7.ad2.news;
+package n7.ad2.news
 
-import android.app.Application;
-import androidx.lifecycle.AndroidViewModel;
-import androidx.lifecycle.LiveData;
-import androidx.lifecycle.Observer;
-import androidx.paging.DataSource;
-import androidx.paging.LivePagedListBuilder;
-import androidx.paging.PagedList;
-import androidx.databinding.ObservableBoolean;
-import androidx.annotation.NonNull;
-import androidx.annotation.Nullable;
+import android.app.Application
+import androidx.databinding.ObservableBoolean
+import androidx.lifecycle.LiveData
+import androidx.lifecycle.ViewModel
+import androidx.paging.LivePagedListBuilder
+import androidx.paging.PagedList
+import androidx.paging.PagedList.BoundaryCallback
+import androidx.work.Data
+import androidx.work.OneTimeWorkRequest
+import androidx.work.WorkManager
+import n7.ad2.news.db.NewsDao
+import n7.ad2.news.db.NewsModel
+import n7.ad2.news.db.NewsRoomDatabase
+import javax.inject.Inject
 
-import androidx.work.Data;
-import androidx.work.OneTimeWorkRequest;
-import androidx.work.WorkInfo;
-import androidx.work.WorkManager;
-import n7.ad2.news.db.NewsDao;
-import n7.ad2.news.db.NewsModel;
-import n7.ad2.news.db.NewsRoomDatabase;
+class NewsViewModel @Inject constructor(
+    private val application: Application,
+) : ViewModel() {
 
-import static n7.ad2.news.NewsWorker.PAGE;
+    var isLoading = ObservableBoolean(false)
+    private lateinit var newsDao: NewsDao
+    var news: LiveData<PagedList<NewsModel>>? = null
+        private set
+    private var pageNews = 1
 
-public class NewsViewModel extends AndroidViewModel {
-
-    public ObservableBoolean isLoading = new ObservableBoolean(false);
-    private Application application;
-    private NewsDao newsDao;
-    private LiveData<PagedList<NewsModel>> news;
-    private int pageNews = 1;
-
-    public NewsViewModel(@NonNull Application application) {
-        super(application);
-        this.application = application;
-
-        setupLiveDataNews();
+    init {
+        setupLiveDataNews()
     }
 
-    private void setupLiveDataNews() {
-        newsDao = NewsRoomDatabase.getDatabase(application).steamNewsDao();
-
-        DataSource.Factory<Integer, NewsModel> dataSource = newsDao.getDataSourceNews();
-
-        PagedList.Config config = new PagedList.Config.Builder()
-                .setPageSize(12)
-                .setInitialLoadSizeHint(12)
-                .setPrefetchDistance(3)
-                .setEnablePlaceholders(true)
-                .build();
-
-        news = new LivePagedListBuilder<>(dataSource, config).setBoundaryCallback(new PagedList.BoundaryCallback<NewsModel>() {
-            @Override
-            public void onItemAtEndLoaded(@NonNull NewsModel itemAtEnd) {
-                super.onItemAtEndLoaded(itemAtEnd);
-                pageNews++;
-                Data data = new Data.Builder().putInt(PAGE, pageNews).build();
-                final OneTimeWorkRequest worker = new OneTimeWorkRequest.Builder(NewsWorker.class).setInputData(data).build();
-                WorkManager.getInstance().enqueue(worker);
-                WorkManager.getInstance().getWorkInfoByIdLiveData(worker.getId()).observeForever(new Observer<WorkInfo>() {
-                    @Override
-                    public void onChanged(@Nullable WorkInfo workInfo) {
-                        if (workInfo != null) {
-
-                            if (workInfo.getState().isFinished()) {
-                                isLoading.set(false);
-                            } else {
-                                isLoading.set(true);
-                            }
-
+    private fun setupLiveDataNews() {
+        newsDao = NewsRoomDatabase.getDatabase(application).steamNewsDao()
+        val dataSource = newsDao.dataSourceNews
+        val config = PagedList.Config.Builder()
+            .setPageSize(12)
+            .setInitialLoadSizeHint(12)
+            .setPrefetchDistance(3)
+            .setEnablePlaceholders(true)
+            .build()
+        news = LivePagedListBuilder(dataSource, config).setBoundaryCallback(object : BoundaryCallback<NewsModel>() {
+            override fun onItemAtEndLoaded(itemAtEnd: NewsModel) {
+                super.onItemAtEndLoaded(itemAtEnd)
+                pageNews++
+                val data = Data.Builder().putInt(NewsWorker.PAGE, pageNews).build()
+                val worker = OneTimeWorkRequest.Builder(NewsWorker::class.java).setInputData(data).build()
+                WorkManager.getInstance(application).enqueue(worker)
+                WorkManager.getInstance(application).getWorkInfoByIdLiveData(worker.id).observeForever { workInfo ->
+                    if (workInfo != null) {
+                        if (workInfo.state.isFinished) {
+                            isLoading.set(false)
+                        } else {
+                            isLoading.set(true)
                         }
                     }
-                });
+                }
             }
-        }).build();
-    }
-
-    public LiveData<PagedList<NewsModel>> getNews() {
-        return news;
+        }).build()
     }
 }
