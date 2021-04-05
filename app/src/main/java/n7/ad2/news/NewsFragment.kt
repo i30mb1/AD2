@@ -6,7 +6,7 @@ import android.view.View
 import android.view.ViewGroup
 import androidx.databinding.DataBindingUtil
 import androidx.fragment.app.Fragment
-import androidx.recyclerview.widget.GridLayoutManager
+import androidx.recyclerview.widget.LinearLayoutManager
 import n7.ad2.R
 import n7.ad2.databinding.FragmentNewsBinding
 import n7.ad2.di.injector
@@ -40,10 +40,11 @@ class NewsFragment : Fragment() {
     }
 
     private fun setupRecyclerView() {
-        val gridLayoutManager = GridLayoutManager(context, 1)
-        binding.rvFragmentNews.layoutManager = gridLayoutManager
         val adapter = NewsPagedListAdapter(true)
-        binding.rvFragmentNews.adapter = adapter
-        viewModel.news?.observe(viewLifecycleOwner, { newsModels -> adapter.submitList(newsModels) })
+        binding.rvFragmentNews.apply {
+            layoutManager = LinearLayoutManager(context, LinearLayoutManager.HORIZONTAL, false)
+            this.adapter = adapter
+        }
+        viewModel.news?.observe(viewLifecycleOwner, adapter::submitList)
     }
 }
