@@ -12,9 +12,7 @@ class ConvertLocalHeroListToVoListUseCase @Inject constructor(
 ) {
 
     suspend operator fun invoke(list: List<LocalHero>): List<VOHero> = withContext(ioDispatcher) {
-        list.map {
-            it.toVo()
-        }
+        list.map(LocalHero::toVo)
     }
 
 }
