@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <data>
+
+        <variable
+            name="itemListener"
+            type="kotlin.jvm.functions.Function1" />
+
+        <variable
+            name="item"
+            type="n7.ad2.ui.MenuItem" />
+    </data>
+
+    <LinearLayout
+        asyncText="@{item.title}"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:onClick="@{() -> itemListener.invoke(item)}">
+
+    </LinearLayout>
+</layout>
