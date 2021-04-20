@@ -8,9 +8,7 @@ import androidx.fragment.app.DialogFragment
 import androidx.preference.EditTextPreference
 import com.google.android.material.dialog.MaterialAlertDialogBuilder
 import n7.ad2.databinding.DialogThemeBinding
-import n7.ad2.ui.setting.SettingsFragment.Companion.THEME_DARK
-import n7.ad2.ui.setting.SettingsFragment.Companion.THEME_GRAY
-import n7.ad2.ui.setting.SettingsFragment.Companion.THEME_WHITE
+import n7.ad2.ui.setting.domain.model.Theme
 
 class DialogTheme : DialogFragment() {
 
@@ -18,9 +16,9 @@ class DialogTheme : DialogFragment() {
         val settingsFragment = parentFragment as SettingsFragment
 
         val dialogView = DialogThemeBinding.inflate(layoutInflater).apply {
-            bDark.setOnClickListener { settingsFragment.applyTheme(THEME_DARK) }
-            bGray.setOnClickListener { settingsFragment.applyTheme(THEME_GRAY) }
-            bWhite.setOnClickListener { settingsFragment.applyTheme(THEME_WHITE) }
+            bDark.setOnClickListener { settingsFragment.applyTheme(Theme.PURPLE) }
+            bGray.setOnClickListener { settingsFragment.applyTheme(Theme.RED) }
+            bWhite.setOnClickListener { settingsFragment.applyTheme(Theme.BLUE) }
         }
 
         val dialogBuilder = MaterialAlertDialogBuilder(requireContext())

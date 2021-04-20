@@ -1,36 +1,23 @@
-package n7.ad2.utils;
+package n7.ad2.utils
 
-import android.annotation.SuppressLint;
-import android.os.Bundle;
-import android.preference.PreferenceManager;
-import androidx.annotation.Nullable;
-import androidx.appcompat.app.AppCompatActivity;
-
-import n7.ad2.R;
+import android.annotation.SuppressLint
+import android.os.Bundle
+import android.preference.PreferenceManager
+import androidx.appcompat.app.AppCompatActivity
+import n7.ad2.R
+import n7.ad2.ui.setting.domain.model.Theme
 
 @SuppressLint("Registered")
-public class BaseActivity extends AppCompatActivity {
-    public static final String THEME_GRAY = "GRAY";
-    public static final String THEME_WHITE = "WHITE";
-    public static final String THEME_DARK = "DARK";
+open class BaseActivity : AppCompatActivity() {
 
-    @Override
-    protected void onCreate(@Nullable Bundle savedInstanceState) {
-        switch (PreferenceManager.getDefaultSharedPreferences(this).getString(getString(R.string.setting_theme_key), THEME_GRAY)) {
-            default:
-            case THEME_GRAY:
-                setTheme(R.style.AD2Theme);
-                break;
-            case THEME_WHITE:
-                setTheme(R.style.AD2Theme_White);
-                break;
-            case THEME_DARK:
-                setTheme(R.style.AD2Theme_Black);
-                break;
+    override fun onCreate(savedInstanceState: Bundle?) {
+        when (PreferenceManager.getDefaultSharedPreferences(this).getString(getString(R.string.setting_theme_key), "")) {
+            Theme.RED.key -> setTheme(R.style.AD2Theme)
+            Theme.BLUE.key -> setTheme(R.style.AD2Theme_White)
+            Theme.PURPLE.key -> setTheme(R.style.AD2Theme_Black)
+            else -> setTheme(R.style.AD2Theme)
         }
-        super.onCreate(savedInstanceState);
+        super.onCreate(savedInstanceState)
     }
 
 }
-
-

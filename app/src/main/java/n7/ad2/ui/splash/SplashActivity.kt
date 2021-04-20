@@ -16,8 +16,7 @@ import n7.ad2.R
 import n7.ad2.databinding.ActivitySplashBinding
 import n7.ad2.di.injector
 import n7.ad2.ui.MainActivity
-import n7.ad2.ui.setting.SettingsFragment.Companion.THEME_DARK
-import n7.ad2.ui.setting.SettingsFragment.Companion.THEME_WHITE
+import n7.ad2.ui.setting.domain.model.Theme
 import n7.ad2.utils.viewModel
 
 class SplashActivity : FragmentActivity() {
@@ -50,8 +49,8 @@ class SplashActivity : FragmentActivity() {
 
     private fun setMySplashTheme() {
         when (PreferenceManager.getDefaultSharedPreferences(this).getString(getString(R.string.setting_theme_key), null)) {
-            THEME_WHITE -> setTheme(R.style.SplashTheme_White)
-            THEME_DARK -> setTheme(R.style.SplashTheme_Dark)
+            Theme.BLUE.key -> setTheme(R.style.SplashTheme_White)
+            Theme.PURPLE.key -> setTheme(R.style.SplashTheme_Dark)
             else -> setTheme(R.style.SplashTheme)
         }
     }

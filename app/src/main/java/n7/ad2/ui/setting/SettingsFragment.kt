@@ -1,6 +1,8 @@
 package n7.ad2.ui.setting
 
+import android.content.ComponentName
 import android.content.Intent
+import android.content.pm.PackageManager
 import android.net.Uri
 import android.os.Build
 import android.os.Build.VERSION
@@ -12,14 +14,13 @@ import com.google.android.play.core.review.ReviewManagerFactory
 import n7.ad2.BuildConfig
 import n7.ad2.R
 import n7.ad2.ui.MainActivity
+import n7.ad2.ui.setting.domain.model.Theme
+
+class LauncherRed
+class LauncherPurple
+class LauncherBlue
 
 class SettingsFragment : PreferenceFragmentCompat() {
-
-    companion object {
-        const val THEME_GRAY = "GRAY"
-        const val THEME_WHITE = "WHITE"
-        const val THEME_DARK = "DARK"
-    }
 
     override fun onCreatePreferences(savedInstanceState: Bundle?, rootKey: String?) {
         setPreferencesFromResource(R.xml.setting, rootKey)
@@ -111,8 +112,18 @@ class SettingsFragment : PreferenceFragmentCompat() {
         }
     }
 
-    fun applyTheme(key: String) {
-        preferenceManager.sharedPreferences.edit().putString(getString(R.string.setting_theme_key), key).apply()
+    fun applyTheme(theme: Theme) {
+        preferenceManager.sharedPreferences.edit().putString(getString(R.string.setting_theme_key), theme.key).apply()
+        requireContext().packageManager.apply {
+            setComponentEnabledSetting(ComponentName(requireContext(), LauncherRed::class.java), PackageManager.COMPONENT_ENABLED_STATE_DISABLED, PackageManager.DONT_KILL_APP)
+            setComponentEnabledSetting(ComponentName(requireContext(), LauncherBlue::class.java), PackageManager.COMPONENT_ENABLED_STATE_DISABLED, PackageManager.DONT_KILL_APP)
+            setComponentEnabledSetting(ComponentName(requireContext(), LauncherPurple::class.java), PackageManager.COMPONENT_ENABLED_STATE_DISABLED, PackageManager.DONT_KILL_APP)
+            when (theme) {
+                Theme.RED -> setComponentEnabledSetting(ComponentName(requireContext(), LauncherRed::class.java), PackageManager.COMPONENT_ENABLED_STATE_ENABLED, PackageManager.DONT_KILL_APP)
+                Theme.PURPLE -> setComponentEnabledSetting(ComponentName(requireContext(), LauncherPurple::class.java), PackageManager.COMPONENT_ENABLED_STATE_ENABLED, PackageManager.DONT_KILL_APP)
+                Theme.BLUE -> setComponentEnabledSetting(ComponentName(requireContext(), LauncherBlue::class.java), PackageManager.COMPONENT_ENABLED_STATE_ENABLED, PackageManager.DONT_KILL_APP)
+            }
+        }
         recreateActivity()
     }
 
