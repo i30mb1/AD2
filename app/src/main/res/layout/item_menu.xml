@@ -13,7 +13,6 @@
     </data>
 
     <LinearLayout
-        asyncText="@{item.title}"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:onClick="@{() -> itemListener.invoke(item)}">
