@@ -7,11 +7,12 @@ import android.content.Intent;
 import android.graphics.Bitmap;
 import android.graphics.BitmapFactory;
 import android.net.Uri;
+
 import androidx.annotation.NonNull;
 import androidx.core.app.NotificationCompat;
-
 import androidx.work.Worker;
 import androidx.work.WorkerParameters;
+
 import n7.ad2.R;
 import n7.ad2.ui.MainActivity;
 
@@ -31,7 +32,7 @@ public class ScheduleGameWorker extends Worker {
         PendingIntent pendingIntent = PendingIntent.getActivity(getApplicationContext(), 0, notificationIntent, 0);
 
         BitmapFactory.Options options = new BitmapFactory.Options();
-        Bitmap largeIcon = BitmapFactory.decodeResource(getApplicationContext().getResources(), R.mipmap.ic_launcher, options);
+        Bitmap largeIcon = BitmapFactory.decodeResource(getApplicationContext().getResources(), R.mipmap.ic_launcher_red, options);
 
 //        Vibrator v = (Vibrator) getApplicationContext().getSystemService(Context.VIBRATOR_SERVICE);
 //        v.vibrate(1000);
@@ -47,7 +48,7 @@ public class ScheduleGameWorker extends Worker {
                 .setVisibility(NotificationCompat.VISIBILITY_PUBLIC)
                 .setPriority(NotificationCompat.PRIORITY_HIGH)
                 .setSound(Uri.parse("android.resource://" + getApplicationContext().getPackageName() + "/" + R.raw.does_this_unit_have_a_soul))
-                .setSmallIcon(R.mipmap.ic_launcher)
+                .setSmallIcon(R.mipmap.ic_launcher_red)
                 .setLargeIcon(largeIcon);
 
         NotificationManager notificationManager = (NotificationManager) getApplicationContext().getSystemService(NOTIFICATION_SERVICE);

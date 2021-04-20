@@ -77,7 +77,7 @@ class HeroGuideWorker(
             if (applicationContext.isChannelNotCreated(channelId)) applicationContext.createNotificationChannel(channelId, channelName)
 
             val notification = NotificationCompat.Builder(applicationContext, channelId)
-                .setSmallIcon(R.mipmap.ic_launcher)
+                .setSmallIcon(R.mipmap.ic_launcher_red)
                 .setContentTitle(notificationTitle)
                 .build()
             setForeground(ForegroundInfo(notificationId, notification))

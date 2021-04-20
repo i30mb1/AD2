@@ -22,7 +22,7 @@
                 android:layout_height="wrap_content"
                 android:layout_gravity="center_horizontal"
                 android:contentDescription="@string/desc_application_logo"
-                android:src="@mipmap/ic_launcher" />
+                android:src="@mipmap/ic_launcher_red" />
 
             <TextView
                 style="@style/Widget.TextView.License"
