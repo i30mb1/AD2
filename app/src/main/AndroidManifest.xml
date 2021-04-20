@@ -5,14 +5,16 @@
     package="n7.ad2"
     android:installLocation="auto"
     android:targetSandboxVersion="2"
-    tools:ignore="UnusedAttribute" >
+    tools:ignore="UnusedAttribute">
 
     <dist:module dist:instant="true" />
 
     <uses-permission android:name="android.permission.DOWNLOAD_WITHOUT_NOTIFICATION" />
     <uses-permission android:name="android.permission.INTERNET" />
     <uses-permission android:name="android.permission.MODIFY_AUDIO_SETTINGS" />
-    <uses-permission android:name="android.permission.WRITE_SETTINGS" tools:ignore="ProtectedPermissions" />
+    <uses-permission
+        android:name="android.permission.WRITE_SETTINGS"
+        tools:ignore="ProtectedPermissions" />
 
     <application
         android:name=".ui.MyApplication"
@@ -24,12 +26,12 @@
         android:supportsRtl="true"
         android:theme="@style/AD2Theme"
         android:usesCleartextTraffic="true"
-        tools:ignore="GoogleAppIndexingWarning" >
-        <activity android:name=".ui.itemInfo.ItemInfoActivity" >
-        </activity>
+        tools:ignore="GoogleAppIndexingWarning">
+        <activity android:name=".ui.itemInfo.ItemInfoActivity"></activity>
         <activity
             android:name=".ui.splash.SplashActivity"
-            android:theme="@style/SplashTheme" >
+            android:exported="true"
+            android:theme="@style/SplashTheme">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
@@ -38,34 +40,43 @@
         </activity>
         <activity
             android:name=".ui.MainActivity"
+            android:exported="false"
             android:screenOrientation="portrait" />
         <activity
             android:name=".ui.setting.LicensesActivity"
+            android:exported="false"
             android:label="Open Source Licenses"
             android:screenOrientation="portrait" />
         <activity
             android:name=".ui.setting.SettingActivity"
+            android:exported="false"
             android:screenOrientation="portrait" />
         <activity
             android:name=".ui.heroPage.HeroPageActivity"
+            android:exported="false"
             android:screenOrientation="portrait" />
         <activity
             android:name=".ui.streams.StreamsFullActivity"
+            android:exported="false"
             android:finishOnTaskLaunch="true"
             android:launchMode="singleTop"
             android:screenOrientation="sensorLandscape" />
         <activity
             android:name=".news.NewsActivity"
+            android:exported="false"
             android:screenOrientation="portrait" />
         <activity
             android:name=".tournaments.GameFullActivity"
+            android:exported="false"
             android:parentActivityName=".ui.MainActivity"
             android:screenOrientation="portrait" />
         <activity
             android:name=".games.Game2p1"
+            android:exported="false"
             android:screenOrientation="portrait" />
         <activity
             android:name=".games.Game1p1"
+            android:exported="false"
             android:screenOrientation="portrait" />
 
         <meta-data
@@ -77,17 +88,12 @@
 
         <activity
             android:name=".games.Game1p2"
+            android:exported="false"
             android:screenOrientation="portrait" />
         <activity
             android:name=".games.Game2p2"
+            android:exported="false"
             android:screenOrientation="portrait" />
-        <activity
-            android:name=".games.Game3p1"
-            android:screenOrientation="portrait" >
-            <intent-filter>
-                <action android:name="android.intent.action.MAIN" />
-            </intent-filter>
-        </activity>
     </application>
 
 </manifest>
