@@ -34,7 +34,7 @@
             android:theme="@style/SplashTheme" />
 
         <activity-alias
-            android:name="n7.ad2.ui.setting.LauncherRed"
+            android:name=".ui.setting.domain.model.Red"
             android:enabled="true"
             android:icon="@mipmap/ic_launcher_red"
             android:roundIcon="@mipmap/ic_launcher_red_round"
@@ -46,8 +46,8 @@
         </activity-alias>
 
         <activity-alias
-            android:name="n7.ad2.ui.setting.LauncherPurple"
-            android:enabled="true"
+            android:name=".ui.setting.domain.model.Purple"
+            android:enabled="false"
             android:icon="@mipmap/ic_launcher_purple"
             android:roundIcon="@mipmap/ic_launcher_purple_round"
             android:targetActivity=".ui.splash.SplashActivity">
@@ -58,8 +58,8 @@
         </activity-alias>
 
         <activity-alias
-            android:name="n7.ad2.ui.setting.LauncherBlue"
-            android:enabled="true"
+            android:name=".ui.setting.domain.model.Blue"
+            android:enabled="false"
             android:icon="@mipmap/ic_launcher_blue"
             android:roundIcon="@mipmap/ic_launcher_blue_round"
             android:targetActivity=".ui.splash.SplashActivity">

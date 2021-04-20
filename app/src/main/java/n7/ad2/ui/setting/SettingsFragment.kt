@@ -16,10 +16,6 @@ import n7.ad2.R
 import n7.ad2.ui.MainActivity
 import n7.ad2.ui.setting.domain.model.Theme
 
-class LauncherRed
-class LauncherPurple
-class LauncherBlue
-
 class SettingsFragment : PreferenceFragmentCompat() {
 
     override fun onCreatePreferences(savedInstanceState: Bundle?, rootKey: String?) {
@@ -115,14 +111,11 @@ class SettingsFragment : PreferenceFragmentCompat() {
     fun applyTheme(theme: Theme) {
         preferenceManager.sharedPreferences.edit().putString(getString(R.string.setting_theme_key), theme.key).apply()
         requireContext().packageManager.apply {
-            setComponentEnabledSetting(ComponentName(requireContext(), LauncherRed::class.java), PackageManager.COMPONENT_ENABLED_STATE_DISABLED, PackageManager.DONT_KILL_APP)
-            setComponentEnabledSetting(ComponentName(requireContext(), LauncherBlue::class.java), PackageManager.COMPONENT_ENABLED_STATE_DISABLED, PackageManager.DONT_KILL_APP)
-            setComponentEnabledSetting(ComponentName(requireContext(), LauncherPurple::class.java), PackageManager.COMPONENT_ENABLED_STATE_DISABLED, PackageManager.DONT_KILL_APP)
-            when (theme) {
-                Theme.RED -> setComponentEnabledSetting(ComponentName(requireContext(), LauncherRed::class.java), PackageManager.COMPONENT_ENABLED_STATE_ENABLED, PackageManager.DONT_KILL_APP)
-                Theme.PURPLE -> setComponentEnabledSetting(ComponentName(requireContext(), LauncherPurple::class.java), PackageManager.COMPONENT_ENABLED_STATE_ENABLED, PackageManager.DONT_KILL_APP)
-                Theme.BLUE -> setComponentEnabledSetting(ComponentName(requireContext(), LauncherBlue::class.java), PackageManager.COMPONENT_ENABLED_STATE_ENABLED, PackageManager.DONT_KILL_APP)
-            }
+            Theme.values()
+                .forEach {
+                    val newState = if (it.key == theme.key) PackageManager.COMPONENT_ENABLED_STATE_ENABLED else PackageManager.COMPONENT_ENABLED_STATE_DISABLED
+                    setComponentEnabledSetting(ComponentName(requireContext(), it.componentClass), newState, PackageManager.DONT_KILL_APP)
+                }
         }
         recreateActivity()
     }
