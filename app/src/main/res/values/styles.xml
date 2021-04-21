@@ -34,6 +34,8 @@
 
     <style name="Widget.CardView" parent="Widget.MaterialComponents.CardView">
         <item name="cardUseCompatPadding">true</item>
+        <item name="cardBackgroundColor">@android:color/transparent</item>
+        <item name="elevation">0dp</item>
         <item name="android:foreground">?android:attr/selectableItemBackground</item>
     </style>
 
@@ -103,6 +105,10 @@
         <item name="android:textAppearance">@style/TextAppearance.Title</item>
     </style>
 
+    <style name="Widget.TextView.MainMenu" parent="">
+        <item name="android:textAppearance">@style/TextAppearance.BasicThemeText</item>
+        <item name="android:padding">6dp</item>
+    </style>
 
     <style name="Widget.TextView.HeroGuideTabNumber" parent="">
         <item name="android:textColor">@android:color/white</item>

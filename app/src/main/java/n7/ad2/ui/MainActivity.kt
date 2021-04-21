@@ -118,6 +118,19 @@ class MainActivity : BaseActivity() {
         setupDrawer()
         setupSecretActivity()
         setLastFragment()
+        setupMenuRecyclerView()
+    }
+
+    private fun setupMenuRecyclerView() {
+        val linearLayoutManager = LinearLayoutManager(this, LinearLayoutManager.VERTICAL, false)
+        val mainMenuAdapter = MainMenuAdapter(layoutInflater) { _ ->
+
+        }
+        drawer.rv.apply {
+            overScrollMode = View.OVER_SCROLL_NEVER
+            layoutManager = linearLayoutManager
+            adapter = mainMenuAdapter
+        }
     }
 
     fun setLastFragment() {

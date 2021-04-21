@@ -1,6 +1,11 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
 
+    <style name="TextAppearance.BasicThemeText" parent="">
+        <item name="android:textColor">?myTextColorPrimary</item>
+        <item name="android:textSize">14sp</item>
+    </style>
+
     <style name="Headline5" parent="TextAppearance.MaterialComponents.Headline5">
         <item name="android:textColor">?myTextColorPrimary</item>
     </style>

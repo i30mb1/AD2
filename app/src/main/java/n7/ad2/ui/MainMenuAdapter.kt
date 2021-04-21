@@ -17,10 +17,10 @@ class NewsMenuItem(title: String) : MenuItem(title)
 class StreamsMenuItem(title: String) : MenuItem(title)
 class GamesMenuItem(title: String) : MenuItem(title)
 
-class MainMenuItemRecyclerView(
+class MainMenuAdapter(
     private val layoutInflater: LayoutInflater,
     itemListener: (menuItem: MenuItem) -> Unit,
-) : RecyclerView.Adapter<MainMenuItemRecyclerView.MenuItemHolder>() {
+) : RecyclerView.Adapter<MainMenuAdapter.MenuItemHolder>() {
 
     private val itemListener: (menuItem: MenuItem) -> Unit = { menuItem ->
         menuList.forEach { it.isSelected.set(false) }
