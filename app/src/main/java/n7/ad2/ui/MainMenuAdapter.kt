@@ -14,6 +14,7 @@ sealed class MenuItem(val title: String) {
 class HeroesMenuItem(title: String) : MenuItem(title)
 class ItemsMenuItem(title: String) : MenuItem(title)
 class NewsMenuItem(title: String) : MenuItem(title)
+class TournamentsMenuItem(title: String) : MenuItem(title)
 class StreamsMenuItem(title: String) : MenuItem(title)
 class GamesMenuItem(title: String) : MenuItem(title)
 
@@ -31,6 +32,7 @@ class MainMenuAdapter(
         HeroesMenuItem(layoutInflater.context.getString(R.string.heroes)),
         ItemsMenuItem(layoutInflater.context.getString(R.string.items)),
         NewsMenuItem(layoutInflater.context.getString(R.string.news)),
+        TournamentsMenuItem(layoutInflater.context.getString(R.string.tournaments)),
         StreamsMenuItem(layoutInflater.context.getString(R.string.streams)),
         GamesMenuItem(layoutInflater.context.getString(R.string.games)),
     )
