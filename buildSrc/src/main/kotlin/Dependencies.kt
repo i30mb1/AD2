@@ -11,12 +11,12 @@ object Apps {
 }
 
 object Versions {
-    const val gradlePlugin = "4.1.1"
-    const val lint = "27.1.0" // gradlePlugin + 23
+    const val gradlePlugin = "4.1.3"
+    const val lint = "27.1.3" // gradlePlugin + 23
     const val workManager = "2.3.4"
     const val moshi = "1.9.2"
     const val room = "2.3.0"
-    const val kotlin = "1.4.10"
+    const val kotlin = "1.4.30"
     const val dagger = "2.31"
     const val lifecycle = "2.4.0-alpha01"
 }
