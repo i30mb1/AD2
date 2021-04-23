@@ -3,14 +3,6 @@ import com.android.build.gradle.internal.plugins.DynamicFeaturePlugin
 import com.android.build.gradle.internal.plugins.LibraryPlugin
 import org.jetbrains.kotlin.gradle.tasks.KotlinCompile
 
-allprojects {
-    repositories {
-        jcenter()
-        google()
-        maven("https://maven.google.com")
-    }
-}
-
 subprojects {
     plugins.matching { it is AppPlugin || it is DynamicFeaturePlugin || it is LibraryPlugin }.whenPluginAdded {
         configure<com.android.build.gradle.BaseExtension> {
