@@ -41,7 +41,7 @@ object Lib {
     const val playCore = "com.google.android.play:core:1.8.0" // auto update + rateMe
     const val playCoreKtx = "com.google.android.play:core-ktx:1.8.1"
     const val exoPlayer = "com.google.android.exoplayer:exoplayer-core:2.11.4"
-    const val coreKtx = "androidx.core:core-ktx:1.2.0" // Write more concise, idiomatic Kotlin code.
+    const val coreKtx = "androidx.core:core-ktx:1.6.0-alpha02" // Write more concise, idiomatic Kotlin code.
     const val jsonSimple = "com.googlecode.json-simple:json-simple:1.1.1"
     const val springAnimation = "androidx.dynamicanimation:dynamicanimation:1.0.0"
     const val springAnimationKtx = "androidx.dynamicanimation:dynamicanimation-ktx:1.0.0-alpha03"

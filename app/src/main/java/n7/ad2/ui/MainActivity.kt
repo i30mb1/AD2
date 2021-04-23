@@ -15,10 +15,11 @@ import android.view.MotionEvent
 import android.view.View
 import android.view.ViewGroup
 import android.view.animation.LinearInterpolator
-import android.view.inputmethod.InputMethodManager
 import androidx.appcompat.app.AlertDialog
 import androidx.constraintlayout.widget.ConstraintLayout
 import androidx.constraintlayout.widget.ConstraintSet
+import androidx.core.view.ViewCompat
+import androidx.core.view.WindowInsetsCompat
 import androidx.databinding.DataBindingUtil
 import androidx.databinding.ObservableBoolean
 import androidx.databinding.ObservableInt
@@ -184,13 +185,6 @@ class MainActivity : BaseActivity() {
             6 -> ft.replace(binding.container.id, GameFragment()).commit()
             else -> ft.replace(binding.container.id, HeroesFragment()).commit()
         }
-        //        if (closeDrawer)
-//            new Handler().postDelayed(new Runnable() {
-//                @Override
-//                public void run() {
-//                    drawer.closeMenu();
-//                }
-//            }, 50);
     }
 
     private fun setupSecretActivity() {
@@ -328,8 +322,8 @@ class MainActivity : BaseActivity() {
     }
 
     private fun hideKeyboard() {
-        val imm = getSystemService(INPUT_METHOD_SERVICE) as InputMethodManager
-        imm?.hideSoftInputFromWindow(binding!!.toolbar.windowToken, 0)
+        val insetsController = ViewCompat.getWindowInsetsController(drawer.root)
+        insetsController?.hide(WindowInsetsCompat.Type.ime())
     }
 
     override fun dispatchTouchEvent(event: MotionEvent): Boolean {
