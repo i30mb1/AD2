@@ -22,7 +22,7 @@ import androidx.core.view.ViewCompat
 import androidx.core.view.WindowInsetsCompat
 import androidx.databinding.DataBindingUtil
 import androidx.databinding.ObservableBoolean
-import androidx.databinding.ObservableInt
+import androidx.fragment.app.commit
 import androidx.lifecycle.Lifecycle
 import androidx.lifecycle.flowWithLifecycle
 import androidx.lifecycle.lifecycleScope
@@ -64,7 +64,6 @@ import javax.inject.Inject
 class MainActivity : BaseActivity() {
 
     companion object {
-        const val LAST_ITEM = "LAST_ITEM"
         const val MILLIS_FOR_EXIT = 2000
         const val GITHUB_LAST_APK_URL = "https://github.com/i30mb1/AD2/blob/master/app-release.apk?raw=true"
         const val LOG_ON_RECEIVE = "log"
@@ -78,10 +77,8 @@ class MainActivity : BaseActivity() {
     @Inject
     lateinit var logger: AD2Logger
 
-    var observableLastItem = ObservableInt(1)
     var subscription = ObservableBoolean(false)
 
-    private var timeCounter = -1
     private var doubleBackToExitPressedOnce = false
     private val constraintSetHidden = ConstraintSet()
     private val constraintSetOrigin = ConstraintSet()
@@ -118,8 +115,8 @@ class MainActivity : BaseActivity() {
         setupToolbar()
         setupDrawer()
         setupSecretActivity()
-        setLastFragment()
         setupMenuRecyclerView()
+        setLastFragment()
     }
 
     private fun setupMenuRecyclerView() {
@@ -135,9 +132,22 @@ class MainActivity : BaseActivity() {
     }
 
     fun setLastFragment() {
-        val lastItem = PreferenceManager.getDefaultSharedPreferences(this).getInt(LAST_ITEM, 1)
-        observableLastItem.set(lastItem)
-        setFragment(lastItem, false)
+        supportFragmentManager.commit {
+            replace(binding.container.id, HeroesFragment())
+        }
+    }
+
+    fun setFragment(fragmentID: Int, closeDrawer: Boolean) {
+        val ft = supportFragmentManager.beginTransaction()
+        when (fragmentID) {
+            1 -> ft.replace(binding.container.id, HeroesFragment()).commit()
+            2 -> ft.replace(binding.container.id, ItemsFragment()).commit()
+            3 -> ft.replace(binding.container.id, NewsFragment()).commit()
+            4 -> ft.replace(binding.container.id, TournamentsFragment()).commit()
+            5 -> ft.replace(binding.container.id, StreamsFragment()).commit()
+            6 -> ft.replace(binding.container.id, GameFragment()).commit()
+            else -> ft.replace(binding.container.id, HeroesFragment()).commit()
+        }
     }
 
     private fun showDialogUpdate() {
@@ -173,20 +183,6 @@ class MainActivity : BaseActivity() {
         }
     }
 
-    fun setFragment(fragmentID: Int, closeDrawer: Boolean) {
-        observableLastItem.set(fragmentID)
-        val ft = supportFragmentManager.beginTransaction()
-        when (fragmentID) {
-            1 -> ft.replace(binding.container.id, HeroesFragment()).commit()
-            2 -> ft.replace(binding.container.id, ItemsFragment()).commit()
-            3 -> ft.replace(binding.container.id, NewsFragment()).commit()
-            4 -> ft.replace(binding.container.id, TournamentsFragment()).commit()
-            5 -> ft.replace(binding.container.id, StreamsFragment()).commit()
-            6 -> ft.replace(binding.container.id, GameFragment()).commit()
-            else -> ft.replace(binding.container.id, HeroesFragment()).commit()
-        }
-    }
-
     private fun setupSecretActivity() {
         constraintSetOrigin.clone(drawer.root as ConstraintLayout)
         constraintSetHidden.clone(this, R.layout.drawer_hidden)
@@ -199,17 +195,17 @@ class MainActivity : BaseActivity() {
             .setDuration(500)
             .addTransition(ChangeBounds().setInterpolator(LinearInterpolator()))
         //после этого метода все изменения внутри ViewGroup будут анимированы
-        TransitionManager.beginDelayedTransition((drawer!!.root as ViewGroup), transitionSet)
+        TransitionManager.beginDelayedTransition((drawer.root as ViewGroup), transitionSet)
         //        TransitionManager.beginDelayedTransition((ViewGroup) bindingDrawer.getRoot(), new AutoTransition());
         //применяет все изменения находящиеся в currentSet с анимациями из transitionSet
-        currentSet!!.applyTo(drawer!!.root as ConstraintLayout)
-        TransitionManager.beginDelayedTransition((binding!!.root as ViewGroup))
+        currentSet?.applyTo(drawer.root as ConstraintLayout)
+        TransitionManager.beginDelayedTransition((binding.root as ViewGroup))
         if (currentSet === constraintSetOrigin) {
             modeSecretActivity = false
-            binding!!.root.visibility = View.VISIBLE
+            binding.root.visibility = View.VISIBLE
         } else {
             modeSecretActivity = true
-            binding!!.root.visibility = View.INVISIBLE
+            binding.root.visibility = View.INVISIBLE
         }
         return true
     }
@@ -287,13 +283,6 @@ class MainActivity : BaseActivity() {
         }
     }
 
-    private fun incCountEnter() {
-        timeCounter++
-        //        if (timeCounter > COUNTER_DIALOG_RATE) showDialogRate();
-//        if (timeCounter > COUNTER_DIALOG_DONATE) showPreDialogDonate();
-//        if (timeCounter % ACTION_BEFORE_SHOW_ADVERTISEMENT == 0) ShowInterstitialAd();
-    }
-
     private fun showDialogRate() {
         val showDialogRate = PreferenceManager.getDefaultSharedPreferences(this).getBoolean(DIALOG_RATE_SHOW, true)
         if (showDialogRate && !subscription.get()) {
@@ -333,7 +322,7 @@ class MainActivity : BaseActivity() {
 
     private fun setupDrawer() {
         val drawer = SlidingRootNavBuilder(this)
-            .withToolbarMenuToggle(binding!!.toolbar)
+            .withToolbarMenuToggle(binding.toolbar)
             .withDragDistance(110)
             .withRootViewScale(0.65f)
             .withRootViewElevation(8)
@@ -346,24 +335,9 @@ class MainActivity : BaseActivity() {
 
                 override fun onDragEnd(isMenuOpened: Boolean) {}
             })
-            .withMenuView(drawer!!.root)
+            .withMenuView(drawer.root)
             .inject()
         drawer.openMenu()
-    }
-
-    override fun onStop() {
-        PreferenceManager.getDefaultSharedPreferences(this).edit().putInt(LAST_ITEM, observableLastItem.get()).apply()
-        super.onStop()
-    }
-
-    override fun onDestroy() {
-        super.onDestroy()
-    }
-
-    override fun onResume() {
-        incCountEnter()
-        //        checkInstallUpdate();
-        super.onResume()
     }
 
     private fun checkInstallUpdate() {

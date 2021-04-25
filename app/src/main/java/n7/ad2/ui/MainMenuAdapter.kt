@@ -29,7 +29,7 @@ class MainMenuAdapter(
         itemListener.invoke(menuItem)
     }
     private val menuList = listOf(
-        HeroesMenuItem(layoutInflater.context.getString(R.string.heroes)),
+        HeroesMenuItem(layoutInflater.context.getString(R.string.heroes)).apply { isSelected.set(true) },
         ItemsMenuItem(layoutInflater.context.getString(R.string.items)),
         NewsMenuItem(layoutInflater.context.getString(R.string.news)),
         TournamentsMenuItem(layoutInflater.context.getString(R.string.tournaments)),
