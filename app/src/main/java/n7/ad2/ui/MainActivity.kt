@@ -121,9 +121,7 @@ class MainActivity : BaseActivity() {
 
     private fun setupMenuRecyclerView() {
         val linearLayoutManager = LinearLayoutManager(this, LinearLayoutManager.VERTICAL, false)
-        val mainMenuAdapter = MainMenuAdapter(layoutInflater) { _ ->
-
-        }
+        val mainMenuAdapter = MainMenuAdapter(layoutInflater, ::setFragment)
         drawer.rv.apply {
             overScrollMode = View.OVER_SCROLL_NEVER
             layoutManager = linearLayoutManager
@@ -131,22 +129,23 @@ class MainActivity : BaseActivity() {
         }
     }
 
-    fun setLastFragment() {
-        supportFragmentManager.commit {
-            replace(binding.container.id, HeroesFragment())
-        }
-    }
+   private fun setLastFragment() {
+       supportFragmentManager.commit {
+           replace(binding.container.id, HeroesFragment())
+       }
+   }
 
-    fun setFragment(fragmentID: Int, closeDrawer: Boolean) {
-        val ft = supportFragmentManager.beginTransaction()
-        when (fragmentID) {
-            1 -> ft.replace(binding.container.id, HeroesFragment()).commit()
-            2 -> ft.replace(binding.container.id, ItemsFragment()).commit()
-            3 -> ft.replace(binding.container.id, NewsFragment()).commit()
-            4 -> ft.replace(binding.container.id, TournamentsFragment()).commit()
-            5 -> ft.replace(binding.container.id, StreamsFragment()).commit()
-            6 -> ft.replace(binding.container.id, GameFragment()).commit()
-            else -> ft.replace(binding.container.id, HeroesFragment()).commit()
+    private fun setFragment(menu: MenuItem) {
+        val fragment = when (menu) {
+            is GamesMenuItem -> GameFragment()
+            is HeroesMenuItem -> HeroesFragment()
+            is ItemsMenuItem -> ItemsFragment()
+            is NewsMenuItem -> NewsFragment()
+            is StreamsMenuItem -> StreamsFragment()
+            is TournamentsMenuItem -> TournamentsFragment()
+        }
+        supportFragmentManager.commit {
+            replace(binding.container.id, fragment)
         }
     }
 
