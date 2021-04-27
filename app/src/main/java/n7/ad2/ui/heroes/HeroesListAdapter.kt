@@ -4,19 +4,19 @@ import android.graphics.Rect
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import androidx.paging.PagedListAdapter
 import androidx.recyclerview.widget.DiffUtil
+import androidx.recyclerview.widget.ListAdapter
 import androidx.recyclerview.widget.RecyclerView
+import coil.clear
 import n7.ad2.R
-import n7.ad2.data.source.local.model.LocalHero
 import n7.ad2.databinding.ItemHeroBinding
-import n7.ad2.ui.heroes.domain.adapter.toVo
+import n7.ad2.ui.heroes.domain.vo.VOHero
 
-class HeroesPagedListAdapter internal constructor(fragment: HeroesFragment) : PagedListAdapter<LocalHero, HeroesPagedListAdapter.ViewHolder>(DiffCallback()) {
+class HeroesListAdapter internal constructor(fragment: HeroesFragment) : ListAdapter<VOHero, HeroesListAdapter.ViewHolder>(DiffCallback()) {
 
     private val listener = View.OnClickListener {
         fragment.startHeroFragment(
-            it.getTag(R.id.ViewHolderModel) as LocalHero,
+            it.getTag(R.id.ViewHolderModel) as VOHero,
             it.getTag(R.id.ViewHolderBinding) as ItemHeroBinding
         )
     }
@@ -44,21 +44,17 @@ class HeroesPagedListAdapter internal constructor(fragment: HeroesFragment) : Pa
 
     class ViewHolder(
         private val binding: ItemHeroBinding,
-        private val listener: View.OnClickListener,
-        private val longListener: View.OnLongClickListener
     ) : RecyclerView.ViewHolder(binding.root) {
 
-        fun bindTo(hero: LocalHero) = binding.apply {
-            model = hero.toVo()
-            root.setOnClickListener(listener)
-            root.setOnLongClickListener(longListener)
+        fun bindTo(hero: VOHero) = binding.apply {
+            binding.model = hero
+            executePendingBindings()
             root.setTag(R.id.ViewHolderBinding, binding)
             root.setTag(R.id.ViewHolderModel, hero)
-            executePendingBindings()
         }
 
         fun clear() = binding.apply {
-//            iv.clear()
+            iv.clear()
             tv.text = ""
         }
 
@@ -66,19 +62,22 @@ class HeroesPagedListAdapter internal constructor(fragment: HeroesFragment) : Pa
             fun from(
                 parent: ViewGroup,
                 listener: View.OnClickListener,
-                longListener: View.OnLongClickListener
+                longListener: View.OnLongClickListener,
             ): ViewHolder {
                 val layoutInflater = LayoutInflater.from(parent.context)
-                val binding = ItemHeroBinding.inflate(layoutInflater, parent, false)
-                return ViewHolder(binding, listener, longListener)
+                val binding = ItemHeroBinding.inflate(layoutInflater, parent, false).apply {
+                    root.setOnClickListener(listener)
+                    root.setOnLongClickListener(longListener)
+                }
+                return ViewHolder(binding)
             }
         }
     }
 
-    private class DiffCallback : DiffUtil.ItemCallback<LocalHero>() {
-        override fun areItemsTheSame(oldItem: LocalHero, newItem: LocalHero) = oldItem.name == newItem.name
+    private class DiffCallback : DiffUtil.ItemCallback<VOHero>() {
+        override fun areItemsTheSame(oldItem: VOHero, newItem: VOHero) = oldItem.name == newItem.name
 
-        override fun areContentsTheSame(oldItem: LocalHero, newItem: LocalHero) = oldItem.viewedByUser == newItem.viewedByUser
+        override fun areContentsTheSame(oldItem: VOHero, newItem: VOHero) = oldItem.viewedByUser == newItem.viewedByUser
     }
 }
 
