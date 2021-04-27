@@ -13,6 +13,7 @@ import kotlinx.coroutines.flow.map
 import kotlinx.coroutines.flow.onEach
 import kotlinx.coroutines.launch
 import n7.ad2.ui.heroes.domain.interactor.GetVOHeroesListInteractor
+import n7.ad2.ui.heroes.domain.usecase.FilterHeroesUseCase
 import n7.ad2.ui.heroes.domain.usecase.UpdateViewedByUserFieldUseCase
 import n7.ad2.ui.heroes.domain.vo.VOHero
 import javax.inject.Inject
@@ -20,6 +21,7 @@ import javax.inject.Inject
 class HeroesViewModel @Inject constructor(
     application: Application,
     getVOHeroesListInteractor: GetVOHeroesListInteractor,
+    private val filterHeroesUseCase: FilterHeroesUseCase,
     private val updateViewedByUserFieldUseCase: UpdateViewedByUserFieldUseCase,
 ) : AndroidViewModel(application) {
 
@@ -34,9 +36,9 @@ class HeroesViewModel @Inject constructor(
     }
 
     fun filterHeroes(filter: String) = viewModelScope.launch {
-        allHeroes.map { list ->
-            list.filter { it.name.contains(filter) }
-        }.collect { _filteredHeroes.emit(it) }
+        allHeroes
+            .map { list -> filterHeroesUseCase(list, filter) }
+            .collect { _filteredHeroes.emit(it) }
     }
 
     fun updateViewedByUserFieldForHero(name: String) {
