@@ -30,6 +30,10 @@ class HeroRepository @Inject constructor(
         }
     }
 
+    fun getHeroes(filter: String): Flow<List<LocalHero>> {
+        return appDatabase.heroesDao.getHeroes(filter)
+    }
+
     fun updateViewedByUserFieldForName(name: String) {
         appDatabase.heroesDao.updateViewedByUserFieldForName(name)
     }
