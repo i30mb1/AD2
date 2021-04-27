@@ -79,7 +79,7 @@ class HeroesFragment : Fragment(R.layout.fragment_heroes) {
             setItemViewCacheSize(15)
             recycledViewPool.setMaxRecycledViews(R.layout.item_hero, 30)
             layoutManager = GridLayoutManager(context, 3)
-            this.adapter = heroAdapter
+            adapter = heroAdapter
             postponeEnterTransition()
             doOnPreDraw { startPostponedEnterTransition() }
         }
