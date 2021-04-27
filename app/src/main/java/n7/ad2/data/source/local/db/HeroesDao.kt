@@ -18,8 +18,8 @@ interface HeroesDao : BaseDao<LocalHero> {
     @Query("SELECT rowid,* FROM LocalHeroes WHERE name=:name")
     fun getHeroWithGuides(name: String): Flow<LocalHeroWithGuides>
 
-    @Query("SELECT rowid,* FROM LocalHeroes WHERE name LIKE '%'||:filter||'%'")
-    fun getHeroes(filter: String): Flow<List<LocalHero>>
+    @Query("SELECT rowid,* FROM LocalHeroes")
+    fun getAllHeroes(): Flow<List<LocalHero>>
 
     @Query("SELECT rowid,* FROM LocalHeroes WHERE name =:name")
     suspend fun getHero(name: String): LocalHero

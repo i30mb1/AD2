@@ -23,12 +23,12 @@ class HeroesViewModel @Inject constructor(
     private val updateViewedByUserFieldUseCase: UpdateViewedByUserFieldUseCase,
 ) : AndroidViewModel(application) {
 
-    private val allHeroes: Flow<List<VOHero>> = getVOHeroesListInteractor("")
+    private val allHeroes: Flow<List<VOHero>> = getVOHeroesListInteractor()
     private val _filteredHeroes: MutableStateFlow<List<VOHero>> = MutableStateFlow(emptyList())
     val filteredHeroes: StateFlow<List<VOHero>> = _filteredHeroes.asStateFlow()
 
     init {
-        getVOHeroesListInteractor("")
+        getVOHeroesListInteractor()
             .onEach(_filteredHeroes::emit)
             .launchIn(viewModelScope)
     }
