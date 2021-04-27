@@ -19,8 +19,8 @@ class AD2Logger @Inject constructor(
 ) {
 
     private val dataFlow = MutableSharedFlow<AD2Log>(
-        replay = 0,
-        extraBufferCapacity = 1,
+        replay = 100,
+        extraBufferCapacity = 0,
         onBufferOverflow = BufferOverflow.DROP_OLDEST,
     )
 
