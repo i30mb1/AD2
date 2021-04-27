@@ -30,7 +30,7 @@ class HeroRepository @Inject constructor(
         }
     }
 
-    fun getAllHeroes(): Flow<List<LocalHero>> {
+    suspend fun getAllHeroes(): List<LocalHero> {
         return appDatabase.heroesDao.getAllHeroes()
     }
 
