@@ -28,22 +28,21 @@ class HeroesViewModel @Inject constructor(
     val filteredHeroes: StateFlow<List<VOHero>> = _filteredHeroes.asStateFlow()
 
     init {
-        viewModelScope.launch {
-            val heroesList = getVOHeroesListInteractor()
-            allHeroes.emit(heroesList)
-            _filteredHeroes.emit(heroesList)
-        }
+        getVOHeroesListInteractor()
+            .onEach(_filteredHeroes::emit)
+            .onEach(allHeroes::emit)
+            .launchIn(viewModelScope)
     }
 
     fun filterHeroes(filter: String) = allHeroes
         .map { list -> filterHeroesUseCase(list, filter) }
-        .onEach(_filteredHeroes::emit)
+        .onEach { _filteredHeroes.emit(it) }
         .launchIn(viewModelScope)
 
-    fun updateViewedByUserFieldForHero(name: String) {
-        viewModelScope.launch {
-            updateViewedByUserFieldUseCase(name)
-        }
+
+    fun updateViewedByUserFieldForHero(name: String) = viewModelScope.launch {
+        updateViewedByUserFieldUseCase(name)
     }
+
 
 }
