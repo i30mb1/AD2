@@ -267,12 +267,14 @@ class ParseHeroes private constructor(
         val mainAttributes = root.getElementsByAttributeValue("style", "width: 100%; padding: 4px 0; display: grid; grid-template-columns: auto auto auto; color: white; text-align: center;")[0]
         val mainAttributesElements = mainAttributes.getElementsByTag("div")
 
-        val attrStrength = (mainAttributesElements[4].childNode(0) as Element).text().toDouble()
-        val attrStrengthInc = (mainAttributesElements[4].childNode(1) as TextNode).text().split(" ").last().replace(",", ".").toDouble()
-        val attrAgility = (mainAttributesElements[5].childNode(0) as Element).text().toDouble()
-        val attrAgilityInc = (mainAttributesElements[5].childNode(1) as TextNode).text().split(" ").last().replace(",", ".").toDouble()
-        val attrIntelligence = (mainAttributesElements[6].childNode(0) as Element).text().toDouble()
-        val attrIntelligenceInc = (mainAttributesElements[6].childNode(1) as TextNode).text().split(" ").last().replace(",", ".").toDouble()
+        var index = 4
+        if (mainAttributesElements.size > 7) index = 7
+        val attrStrength = (mainAttributesElements[index].childNode(0) as TextNode).text().split(" ").first().toDouble()
+        val attrStrengthInc = (mainAttributesElements[index].childNode(0) as TextNode).text().split(" ").last().replace(",", ".").toDouble()
+        val attrAgility = (mainAttributesElements[index + 1].childNode(0) as TextNode).text().split(" ").first().toDouble()
+        val attrAgilityInc = (mainAttributesElements[index + 1].childNode(0) as TextNode).text().split(" ").last().replace(",", ".").toDouble()
+        val attrIntelligence = (mainAttributesElements[index + 2].childNode(0) as TextNode).text().split(" ").first().toDouble()
+        val attrIntelligenceInc = (mainAttributesElements[index + 2].childNode(0) as TextNode).text().split(" ").last().replace(",", ".").toDouble()
 
         val attrs = JSONObject().apply {
             put("attrStrength", attrStrength)
@@ -379,7 +381,7 @@ class ParseHeroes private constructor(
                         put("effects", this)
                     }
 
-                    val description = it.getElementsByTag("div")[14].text()
+                    val description = it.getElementsByTag("div")[12].text()
                     put("description", description)
 
                     val params = it.getElementsByAttributeValue("style", "vertical-align:top; padding: 3px 5px; display:inline-block;")[0].children()
@@ -401,6 +403,7 @@ class ParseHeroes private constructor(
                         put("cooldown", cooldown?.text()?.replace("(", "(TagAghanim"))
                     } else {
                         put("cooldown", cooldown?.text()?.replace("(", "(TagTalent"))
+                        // todo add AGHANIM SHARD ебучий
                     }
 
                     val mana = it.getElementsByAttributeValue("style", "display:inline-block; margin:8px 0px 0px; width:190px; vertical-align:top;").getOrNull(0)
@@ -426,7 +429,7 @@ class ParseHeroes private constructor(
                         put("itemBehaviour", this)
                     }
 
-                    val story = it.getElementsByAttributeValue("style", "margin-top: 5px; padding-top: 2px; border-top: 1px solid #C1C1C1;").getOrNull(0)
+                    val story = it.getElementsByAttributeValue("style", "margin-top: 5px; padding: 2px 10px 5px;text-align:center").getOrNull(0)
                     put("story", story?.text())
 
                     val notesBlock = it.getElementsByAttributeValue("style", "flex: 1 1 450px; word-wrap: break-word;").getOrNull(0)
@@ -505,8 +508,8 @@ fun main() = runBlocking {
         loadEngDescription = true
         loadRusResponses = true
         loadEngResponses = true
-        loadHeroFullImage = false
-        loadHeroSpellImage = false
+        loadHeroFullImage = true
+        loadHeroSpellImage = true
     }.start()
 }
 
