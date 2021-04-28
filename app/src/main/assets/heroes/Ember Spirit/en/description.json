@@ -18,7 +18,7 @@
         },
         {
           "talentLvl": "15",
-          "talentLeft": "+0.8s Searing Chains",
+          "talentLeft": "+1s Searing Chains Duration",
           "talentRight": "+50 Flame Guard DPS"
         },
         {
@@ -36,14 +36,14 @@
         "Damage Magical"
       ],
       "notes": [
-        "Searing Chains interrupts Ember Spirit's channeling spells upon cast.",
+        "Searing Chains interrupts Ember Spirit's channeling abilities upon cast.",
         "Despite the visual effects, the Searing Chains' effects are applied instantly and cannot be disjointed.",
-        "The units are selected randomly within its range. There are no priorities.",
-        "Roots the targets, preventing them from moving and casting certain mobility spells. Provides True Sight over the targets, but only when the targets were not invisible or within a fade time upon cast.",
+        "The units are selected randomly within its range. There are no priorities. Roots the targets, preventing them from moving and casting certain mobility spells. Provides True Sight over the targets, but only when the targets were not invisible or within a fade time upon cast.",
+        "Roots the targets, preventing them from moving and casting certain mobility spells.",
         "Provides True Sight over the targets, but only when the targets were not invisible or within a fade time upon cast.",
-        "Does not target invisible units or units inside the fog of war.",
-        "Deals damage in 0.5 second intervals, starting 0.5 seconds after cast, resulting in 3\/4\/5\/6 (TagTalent 4.6\/5.6\/6.6\/7.6) damage instances.",
-        "Can deal up to 75\/150\/225\/300 (TagTalent 115\/210\/297\/380) damage to each unit."
+        "Does not target invisible units or units inside the Fog of War.",
+        "Deals damage in 0.5-second intervals, starting 0.5 seconds after cast, resulting in 3\/4\/5\/6 (TagTalent 5\/6\/7\/8) damage instances. Can deal up to 75\/150\/225\/300 (TagTalent 125\/225\/315\/400) damage to each unit.",
+        "Can deal up to 75\/150\/225\/300 (TagTalent 125\/225\/315\/400) damage to each unit."
       ],
       "mana": "80\/90\/100\/110",
       "hotKey": "Q",
@@ -51,12 +51,13 @@
       "description": "Ember Spirit unleashes fiery bolas that wrap around nearby enemies, anchoring them in place and dealing damage each second.",
       "spellName": "Searing Chains",
       "params": [
-        "Cast Animation: 0+0.87",
+        "Cast Animation: 0+0.5",
         "Search Radius: 400",
         "Max Targets: 2",
         "Damage per Second: 50\/75\/90\/100",
-        "Duration: 1.5\/2\/2.5\/3 (TagTalent 2.3\/2.8\/3.3\/3.8)",
-        "Root effect persists and attempts to damage if debuff was placed before spell immunity and when not dispelled."
+        "Duration: 1.5\/2\/2.5\/3 (TagTalent 2.5\/3\/3.5\/4)",
+        "Root effect persists and attempts to damage if debuff was placed before spell immunity and when not dispelled.",
+        "Xin's harshest lessons often employed the use of red-hot chains."
       ],
       "itemBehaviour": [],
       "legacyKey": "C",
@@ -71,21 +72,23 @@
       ],
       "notes": [
         "Ember Spirit is invulnerable during Sleight of Fist. Does not disjoint projectiles upon cast.",
-        "During Sleight of Fist, this ability is inactive, so that it cannot be recast until the current cast finishes.",
+        "During Sleight of Fist, this ability is inactive, so that it cannot be recast until the current cast finishes. Ember Spirit is only disarmed during Sleight of Fist, so actions besides attacking can be performed normally during it.",
         "Ember Spirit is only disarmed during Sleight of Fist, so actions besides attacking can be performed normally during it.",
-        "Upon cast, all targets within the area are marked. A flaming sword appears above them as an indicator, which lasts until they get hit.",
+        "Upon cast, all targets within the area are marked. A flaming sword appears above them as an indicator, which lasts until they get hit. Sleight of Fist has no range limit. Once a target is marked, it cannot escape Sleight of Fist with distance. Does not affect invisible or attack immune units. When a marked unit turns invisible or attack immune, it gets fully skipped on its turn. Fully affects units in the Fog of War. Fogged units get marked on cast, and get hit as well.",
         "Sleight of Fist has no range limit. Once a target is marked, it cannot escape Sleight of Fist with distance.",
         "Does not affect invisible or attack immune units. When a marked unit turns invisible or attack immune, it gets fully skipped on its turn.",
-        "Fully affects units in the fog of war. Fogged units get marked on cast, and get hit as well.",
-        "Jumps in 0.2 second intervals. The jumps are random between all marked units, there are no priorities.",
+        "Fully affects units in the Fog of War. Fogged units get marked on cast, and get hit as well.",
+        "Jumps in 0.2-second intervals. The jumps are random between all marked units, there are no priorities. On each jump, Ember Spirit is positioned 50 range away from his target, on a line between the target and the cast location of Sleight of Fist.",
         "On each jump, Ember Spirit is positioned 50 range away from his target, on a line between the target and the cast location of Sleight of Fist.",
-        "Makes Ember Spirit perform an instant attack on each jump against the targets. The hits can proc any attack modifiers or on-hit effects like a regular attack. They do not have True Strike. When Ember Spirit is disarmed, no instant attack is performed on the jump. The instant attacks of Sleight of Fist do not break Smoke of Deceit's invisibility.",
-        "The hits can proc any attack modifiers or on-hit effects like a regular attack. They do not have True Strike.",
-        "When Ember Spirit is disarmed, no instant attack is performed on the jump.",
+        "Causes Ember Spirit perform an instant attack on each jump against the targets. These instant attacks can proc any attack modifiers and on-hit effects normally. They have True Strike. If Ember Spirit is disarmed, no instant attack is performed on the jump. The instant attacks of Sleight of Fist do not break Smoke of Deceit's invisibility.",
+        "These instant attacks can proc any attack modifiers and on-hit effects normally. They have True Strike.",
+        "If Ember Spirit is disarmed, no instant attack is performed on the jump.",
         "The instant attacks of Sleight of Fist do not break Smoke of Deceit's invisibility.",
-        "After all marked targets have been slashed, Ember Spirit returns to the position he had upon casting Sleight of Fist. That position is marked by a remnant for the duration.",
-        "That position is marked by a remnant for the duration.",
-        "Casting Activate Fire Remnant cancels Sleight of Fist. However, other sources of forced movement do not."
+        "After all marked targets have been slashed, Ember Spirit returns to the position he had upon casting Sleight of Fist. That position is marked by a Fire Remnant for the duration.",
+        "That position is marked by a Fire Remnant for the duration.",
+        "Casting Activate Fire Remnant cancels Sleight of Fist. However, other sources of Forced Movement do not.",
+        "However, other sources of Forced Movement do not.",
+        "With the level 25 talent, the cooldown is replaced with 2 charges that have a 18\/14\/10\/6-second charge replenish time."
       ],
       "mana": "50",
       "hotKey": "W",
@@ -98,9 +101,10 @@
         "Effect Radius: 250\/350\/450\/550",
         "Jump Interval: 0.2",
         "Hero Attack Damage Bonus: 40\/80\/120\/160 (TagTalent 105\/145\/185\/225)",
-        "Creep Attack Damage Reduction: 50%",
+        "Creep Attack Damage Reduction: 40%",
         "Number of Charges: 2",
-        "Charge Replenish Time: 18\/14\/10\/6"
+        "Charge Replenish Time: 18\/14\/10\/6",
+        "The studied warrior must whip and weave through its enemies, burning each without pause."
       ],
       "itemBehaviour": [],
       "legacyKey": "T",
@@ -114,11 +118,12 @@
         "Damage Magical"
       ],
       "notes": [
-        "Flame Guard interrupts Ember Spirit's channeling spells upon cast.",
-        "Deals 5\/7\/9\/11 (TagTalent 15\/17\/19\/21) damage in 0.2 second intervals, starting 0.2 seconds after cast.",
-        "Can deal a total of 200\/420\/720\/1100 (TagTalent 600\/1020\/1520\/2100) damage to a single unit (before reductions), assuming a max duration Flame Guard.",
+        "Flame Guard interrupts Ember Spirit's channeling abilities upon cast.",
+        "Deals 5\/7\/9\/11 (TagTalent 15\/17\/19\/21) damage in 0.2-second intervals, starting 0.2 seconds after cast. Can deal a total of 275\/490\/765\/1100 (TagTalent 825\/1190\/1615\/2100) damage to a single unit (before reductions), assuming a max duration Flame Guard.",
+        "Can deal a total of 275\/490\/765\/1100 (TagTalent 825\/1190\/1615\/2100) damage to a single unit (before reductions), assuming a max duration Flame Guard.",
         "Blocks damage before any reductions, except Mana Shield.",
-        "Only blocks magical damage, coming from spells and attacks. Does not block any physical or pure damage.",
+        "Only absorbs magical damage, coming from abilities and attacks. Does not block any physical or pure damage.",
+        "Does not block any physical or pure damage.",
         "Recasting Flame Guard refreshes the buff and resets the barrier's absorb capacity.",
         "Does not stack with other magical damage barriers. If multiple sources of barriers are active on a unit, all of them lose capacity from the same absorbed damage instance. However, if a damage instance is greater than the capacity of all barriers individually, the damage gets blocked as if the barriers were one barrier with combined capacity.",
         "If multiple sources of barriers are active on a unit, all of them lose capacity from the same absorbed damage instance.",
@@ -130,11 +135,12 @@
       "description": "Ember Spirit surrounds himself with a ring of fire that consumes incoming magic damage, leaving him unharmed. Flame Guard deals damage per second in an area around Ember Spirit while Flame Guard is active. If the shield is broken, the damage is also lost.",
       "spellName": "Flame Guard",
       "params": [
-        "Cast Animation: 0+1.07",
+        "Cast Animation: 0+0.6",
         "Damage Radius: 400",
         "Damage per Second: 25\/35\/45\/55 (TagTalent 75\/85\/95\/105)",
         "Magical Damage Absorbed: 80\/220\/360\/500 (TagTalent 360\/500\/640\/780)",
-        "Duration: 8\/12\/16\/20"
+        "Duration: 11\/14\/17\/20",
+        "An enemy should never be allowed to approach without difficulty."
       ],
       "itemBehaviour": [],
       "legacyKey": "E",
@@ -148,19 +154,19 @@
         "Damage Magical"
       ],
       "notes": [
-        "Activate Fire Remnant levels up whenever Fire Remnant is leveled up.",
-        "Ember Spirit moves to a Fire Remnant with a speed of 1300, or reaches it in 0.4 seconds, whichever is faster.",
+        "This ability level scales together with Fire Remnant's level.",
+        "Ember Spirit moves to a Fire Remnant with a speed of 1300, or reaches it in 0.4 seconds, whichever is faster. Ember Spirit is invulnerable while traveling to a Fire Remnant. Does not disjoint projectiles that are traveling towards Ember Spirit when he casts this ability.",
         "Ember Spirit is invulnerable while traveling to a Fire Remnant.",
+        "Does not disjoint projectiles that are traveling towards Ember Spirit when he casts this ability.",
         "The mana cost of Activate Fire Remnant is always the same, regardless of how many remnants he is traveling to with a single cast.",
-        "Does not disjoint projectiles that are traveling towards Ember Spirit when he casts this spell.",
-        "While traveling, Ember Spirit cannot turn, but can attack, cast spells, and use items (still requires facing his targets).",
-        "Forced movement cancels the movement of Activate Fire Remnant and removes its invulnerability. However, the remnants still get used up and Ember Spirit gets instantly moved to the last one's location once it explodes.",
+        "While traveling, Ember Spirit cannot turn, but can attack, cast abilities, and use items (still requires facing his targets).",
+        "Forced Movement cancels the movement of Activate Fire Remnant and removes its invulnerability. However, the remnants still get used up and Ember Spirit gets instantly moved to the last one's location once it explodes.",
         "However, the remnants still get used up and Ember Spirit gets instantly moved to the last one's location once it explodes.",
         "Always travels to the Fire Remnant furthest away from the targeted point first.",
         "Ember Spirit damages enemies within a 225 radius around him as he travels, and in a 450 radius around a remnant upon reaching it. Enemies may only be damaged once per remnant, either by Ember Spirit as he travels towards the remnant, or by him upon reaching the remnant.",
         "Enemies may only be damaged once per remnant, either by Ember Spirit as he travels towards the remnant, or by him upon reaching the remnant.",
-        "Destroys trees within 200 radius around Ember Spirit while traveling to a remnant. Though at high speeds, some trees may be skipped.",
-        "Though at high speeds, some trees may be skipped."
+        "Destroys trees within 200 radius around Ember Spirit while traveling to a remnant. Though at high traveling speeds, some trees may be skipped and not destroyed.",
+        "Though at high traveling speeds, some trees may be skipped and not destroyed."
       ],
       "mana": "150 (TagTalent 75)",
       "hotKey": "D",
@@ -172,7 +178,8 @@
         "Cast Range: Global",
         "Remnant Damage Radius: 450",
         "Remnant Damage: 100\/200\/300",
-        "Activate Fire Remnant costs less mana."
+        "Activate Fire Remnant costs less mana.",
+        "With blazing speed does a spirit fly!"
       ],
       "itemBehaviour": [],
       "legacyKey": "R",
@@ -185,21 +192,25 @@
         "Affects Enemies"
       ],
       "notes": [
-        "Ember Spirit gets all 3 charges immediately upon learning Fire Remnant. Acquiring Aghanim's Scepter the first time instantly grants 2 charges as well. This only happens once, so re-acquiring it does not grant them again.",
-        "Acquiring Aghanim's Scepter the first time instantly grants 2 charges as well. This only happens once, so re-acquiring it does not grant them again.",
-        "Fire Remnants move to their targeted location at a speed of 250% (TagTalent 500%) of Ember Spirit's movement speed. The speed is set upon cast and does not adapt.",
-        "The speed is set upon cast and does not adapt.",
-        "Since Fire Remnants last for 45 seconds and the replenish time is 38 (TagTalent 26) seconds, it is possible to have 4 (TagTalent 4) (TagTalent 6, 6) remnants up at a time.",
+        "Leveling this ability automatically levels Activate Fire Remnant as well.",
+        "Ember Spirit gets all 3 charges immediately upon learning Fire Remnant.",
+        "Fire Remnants move to their targeted location at a speed of 250%\/500% of Ember Spirit's movement speed. The movement speed is set upon cast and does not adapt.",
+        "The movement speed is set upon cast and does not adapt.",
+        "Since Fire Remnants last for 45 seconds and the replenish time is 38\/26 seconds, it is possible to have 4\/4 (or 6\/6) remnants up at a time.",
         "Every time a Fire Remnant is placed, Ember Spirit gets a status buff, showing the duration of the remnant. The status buff disappears once the Remnant expires or is used.",
         "Fire Remnants are visible to everyone. They do not grant any vision and cannot be seen when sent into the Fog of War.",
         "Fire Remnants deal no damage when they expire.",
-        "With Aghanim's Shard, Fire Remnants deal 22.5 damage in 0.5-second intervals, starting 0.5 seconds after receiving the debuff. The fire remnants start dealing as soon as they are created, so they already deal damage while traveling towards their destination. The damage from multiple remnants with overlapping areas do not stack. The damage is sourced to Ember Spirit, and not to the remnants themselves. The damage is provided by an aura, it's debuff lingers for 0.5 seconds.",
-        "The fire remnants start dealing as soon as they are created, so they already deal damage while traveling towards their destination.",
+        "With Aghanim's Scepter, increases the max number of charges up to 5. Instantly grants 2 charges as well. This only happens once, so re-acquiring it does not grant another 2 charges.",
+        "Instantly grants 2 charges as well. This only happens once, so re-acquiring it does not grant another 2 charges.",
+        "With Aghanim's Shard, Fire Remnants deal 22.5 damage in 0.5-second intervals, starting 0.5 seconds after the debuff. The fire remnants start dealing damage as soon as they are created, so it deals damage while traveling towards their destination. The damage from multiple remnants with overlapping areas do not stack. The damage is sourced to Ember Spirit, and not to the remnants themselves. Can deal up to 2047.5 damage within 600 radius centered around the remnant for the entire duration. The damage is provided by an aura, it's debuff lingers for 0.5 seconds.",
+        "The fire remnants start dealing damage as soon as they are created, so it deals damage while traveling towards their destination.",
         "The damage from multiple remnants with overlapping areas do not stack.",
-        "The damage is sourced to Ember Spirit, and not to the remnants themselves.",
+        "The damage is sourced to Ember Spirit, and not to the remnants themselves. Can deal up to 2047.5 damage within 600 radius centered around the remnant for the entire duration.",
+        "Can deal up to 2047.5 damage within 600 radius centered around the remnant for the entire duration.",
         "The damage is provided by an aura, it's debuff lingers for 0.5 seconds.",
-        "With Aghanim's Shard, any hero kill (including clones, excluding illusions) done by Ember Spirit causes him to launch a Fire Remnant towards the exact death location of the target. This also happens whenever an enemy hero dies within 400 range of him. Denied do not count. The fire remnants are created like the ones from a manual cast. They still have to travel towards their destination. Fire Remnants spawn even while Ember Spirit is dead, so if he gets a kill while dead, or an enemy dies within range of his corpse, the remnants still spawn. Fire Remannts spawn even if the killed hero has Reincarnation.",
-        "This also happens whenever an enemy hero dies within 400 range of him. Denied do not count.",
+        "Any hero kills (including clones, excluding illusions) done by Ember Spirit within 400 radius replenishes 1 Fire Remnant charge. Denies do not count. If Ember Spirit dies, a Fire Remnant spawns within the same 400 radius. If Ember Spirit dies, then kills an enemy hero within the radius, it causes him to launch a Fire Remnant towards the exact death location of the target. The fire remnants are created like the ones from a manual cast. They still have to travel towards their destination. Fire Remnants spawn even while Ember Spirit is dead, so if he gets a kill while dead, or an enemy dies within range of his corpse, the remnants still spawn. Fire Remannts spawn even if the killed hero has Reincarnation.",
+        "If Ember Spirit dies, a Fire Remnant spawns within the same 400 radius.",
+        "If Ember Spirit dies, then kills an enemy hero within the radius, it causes him to launch a Fire Remnant towards the exact death location of the target.",
         "The fire remnants are created like the ones from a manual cast. They still have to travel towards their destination.",
         "Fire Remnants spawn even while Ember Spirit is dead, so if he gets a kill while dead, or an enemy dies within range of his corpse, the remnants still spawn.",
         "Fire Remannts spawn even if the killed hero has Reincarnation."
@@ -211,17 +222,18 @@
       "spellName": "Fire Remnant",
       "params": [
         "Cast Animation: 0+0.53",
-        "Cast Range: 1500 (TagAghanim 4500)",
-        "Remnant Travel Speed: 250% (TagAghanim 500%)",
+        "Cast Range: 1400 (TagTalent 3500)",
+        "Remnant Travel Speed: 250% (TagTalent 500%)",
         "Remnant Duration: 45",
-        "Number of Charges: 3 (TagAghanim 5)",
+        "Number of Charges: 3 (TagTalent 5)",
         "Charge Replenish Time: 38 (TagTalent 26)",
         "Enemy Death Radius: 400",
         "Damage Radius: 600",
         "Damage per Second: 45",
         "Damage Aura Linger Duration: 0.5",
         "Increases cast range, initial remnant speed, and maximum charges.",
-        "Fire Remnants deal 45 damage per second in a 600 AoE around them. If Ember Spirit dies or kills an enemy hero within 400 range, a Fire Remnant appears nearby."
+        "Fire Remnants deal 45 damage per second in a 600 AoE around them. If Ember Spirit dies or kills an enemy hero within 400 range, a Fire Remnant charge will be replenished. If Ember Spirit dies then kills an enemy hero within 400 range, a Fire Remnant will appear nearby.",
+        "By the spirit's power are Xin's teachings spread anew."
       ],
       "itemBehaviour": [],
       "legacyKey": "F",
@@ -251,7 +263,7 @@
     },
     {
       "talentLvl": "15",
-      "talentLeft": "+0.8s Searing Chains",
+      "talentLeft": "+1s Searing Chains Duration",
       "talentRight": "+50 Flame Guard DPS"
     },
     {

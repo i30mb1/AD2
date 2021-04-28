@@ -13,18 +13,18 @@
         },
         {
           "talentLvl": "20",
-          "talentLeft": "+800 Holy Persuasion Minimum Health",
-          "talentRight": "-24s Hand of God Cooldown"
+          "talentLeft": "+1200 Holy Persuasion Minimum Health",
+          "talentRight": "-40s Hand of God Cooldown"
         },
         {
           "talentLvl": "15",
-          "talentLeft": "+16 Holy Persuasion Damage",
-          "talentRight": "+12% Penitence Slow"
+          "talentLeft": "+12% Penitence Slow",
+          "talentRight": "+16 Holy Persuasion Damage"
         },
         {
           "talentLvl": "10",
-          "talentLeft": "+175 Cast Range",
-          "talentRight": "+175 Health"
+          "talentLeft": "+175 Health",
+          "talentRight": "Penitence Deals 250 Damage"
         }
       ]
     },
@@ -32,13 +32,15 @@
       "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/6\/6b\/Chen_Penitence_1.mp3\/revision\/latest?cb=20191216012058",
       "effects": [
         "Ability Target Unit",
-        "Affects Enemies"
+        "Affects Enemies",
+        "Damage Magical"
       ],
       "notes": [
         "The projectile travels at a speed of 1400.",
-        "Any allied unit attacking the debuffed enemy gets the speed buff. The buff is granted upon starting an attack.",
-        "Once gained, the speed buff stays for its full duration, so it can be used against other targets.",
-        "The speed buff is granted to any allied unit, including buildings and wards."
+        "Any allied unit attacking the debuffed enemy gets the attack speed buff. The buff is granted upon starting an attack.",
+        "Once gained, the buff stays for its full duration, so it can be used against other targets.",
+        "The buff is granted to any allied unit, including buildings and wards.",
+        "With the level 10 talent, Penitence first applies the debuff, then the damage."
       ],
       "mana": "70\/80\/90\/100",
       "hotKey": "Q",
@@ -47,13 +49,15 @@
       "spellName": "Penitence",
       "params": [
         "Cast Animation: 0.3+0.77",
-        "Cast Range: 800 (TagTalent 975)",
+        "Cast Range: 800",
         "Target Move Speed Slow: 18%\/24%\/30%\/36% (TagTalent 30%\/36%\/42%\/48%)",
         "Allies Attack Speed Bonus: 30\/60\/90\/120",
         "Debuff Duration: 5\/6\/7\/8",
         "Buff Duration: 2",
+        "Damage: 250",
         "Slow and damage amplification persist if debuff was placed before spell immunity and when not dispelled.",
-        "Blocked upon cast."
+        "Blocked upon cast.",
+        "Although Chen's brand of animal enthrallment isn't quite strong enough to control the minds of enemy heroes, it still tests their resolve in combat."
       ],
       "itemBehaviour": [],
       "legacyKey": "E",
@@ -75,21 +79,20 @@
         "When the unit's maximum health is below the minimum health threshold, its maximum and current health are increased by the difference. This current health increase does not count as a heal. The unit has its health set to a value. The health of creeps that are currently persuaded does not increase further upon leveling up Holy Persuasion or upon choosing the minimum health upgrading talent.",
         "This current health increase does not count as a heal. The unit has its health set to a value.",
         "The health of creeps that are currently persuaded does not increase further upon leveling up Holy Persuasion or upon choosing the minimum health upgrading talent.",
-        "Fully restores the creep's mana.",
-        "Can only teleport units persuaded with Holy Persuasion. Cannot teleport any other unit under Chen's control. Disjoints projectiles upon teleporting. Cannot target invulnerable or hidden allies, but can teleport them if they turned invulnerable or hidden after cast. The teleport locations are based on Chen's position upon teleporting, with the persuaded unit appearing 120 range to his north, east, south, or west. The very first persuaded unit teleported to Chen teleports randomly north, south, east, or west, and following persuaded units continue counterclockwise. If Chen is dead as the buff expires, the teleport does not happen. Damage greater than 0 (before reductions) from any player (including allies, excluding self) or Roshan dispels the effect. Gives the target a stop command after teleporting it, canceling channeling spells and stopping queued orders. ↓↓ Double-tapping automatically teleport all units under the caster's control (excluding wards, illusions, clones and non-ancient creep-heroes) get teleport to the caster. Unlike directly targeting a creep to teleport, self-casting or ↓↓ Double-tapping does affect invulnerable and hidden units.",
+        "Fully restores the creep's mana upon persuading.",
+        "Can only teleport units persuaded with Holy Persuasion. Cannot teleport any other unit under Chen's control. Disjoints projectiles upon teleporting. Cannot target invulnerable or hidden allies, but can teleport them if they turned invulnerable or hidden after cast. The teleport locations are based on Chen's position upon teleporting, with the persuaded unit appearing 120 range to his north, east, south, or west. The very first persuaded unit teleported to Chen teleports randomly north, south, east, or west, and following persuaded units continue counterclockwise. If Chen is dead as the buff expires, the teleport does not happen. Damage greater than 0 (before reductions) from any player (including allies, excluding self) or Roshan dispels the effect. Gives the target a stop command after teleporting it, canceling channeling abilities and stopping queued orders. ↓↓ Double-tapping automatically teleport all units under the caster's control (excluding wards, illusions, clones and non-ancient creep-heroes) get teleport to the caster. Unlike directly targeting a creep to teleport, ↓↓ Double-tapping or Portrait-casting does affect invulnerable and hidden units.",
         "Disjoints projectiles upon teleporting.",
         "Cannot target invulnerable or hidden allies, but can teleport them if they turned invulnerable or hidden after cast.",
         "The teleport locations are based on Chen's position upon teleporting, with the persuaded unit appearing 120 range to his north, east, south, or west.",
         "The very first persuaded unit teleported to Chen teleports randomly north, south, east, or west, and following persuaded units continue counterclockwise.",
         "If Chen is dead as the buff expires, the teleport does not happen.",
         "Damage greater than 0 (before reductions) from any player (including allies, excluding self) or Roshan dispels the effect.",
-        "Gives the target a stop command after teleporting it, canceling channeling spells and stopping queued orders.",
+        "Gives the target a stop command after teleporting it, canceling channeling abilities and stopping queued orders.",
         "↓↓ Double-tapping automatically teleport all units under the caster's control (excluding wards, illusions, clones and non-ancient creep-heroes) get teleport to the caster.",
-        "Unlike directly targeting a creep to teleport, self-casting or ↓↓ Double-tapping does affect invulnerable and hidden units.",
-        "With Aghanim's Scepter, Holy Persuasion allows ancient creeps to be persuaded per level of Hand of God. Ancient creeps are included in the maximum allowed units, so it does not allow Chen to have more creeps persuaded. Can be cast on ancient creeps without having Hand of God leveled for no result, wasting the mana and cooldown. The upgrade does not increase the amount of ancient creeps Chen can persuade.",
+        "Unlike directly targeting a creep to teleport, ↓↓ Double-tapping or Portrait-casting does affect invulnerable and hidden units.",
+        "With Aghanim's Scepter, Holy Persuasion allows ancient creeps to be persuaded per level of Hand of God. Ancient creeps are included in the maximum allowed units, so it does not allow Chen to have more creeps persuaded. Can be cast on ancient creeps without having Hand of God leveled for no result, wasting the mana and cooldown.",
         "Ancient creeps are included in the maximum allowed units, so it does not allow Chen to have more creeps persuaded.",
-        "Can be cast on ancient creeps without having Hand of God leveled for no result, wasting the mana and cooldown.",
-        "The upgrade does not increase the amount of ancient creeps Chen can persuade."
+        "Can be cast on ancient creeps without having Hand of God leveled for no result, wasting the mana and cooldown."
       ],
       "mana": "90\/110\/130\/150",
       "hotKey": "W",
@@ -98,10 +101,10 @@
       "spellName": "Holy Persuasion",
       "params": [
         "Cast Animation: 0.3+0.77",
-        "Cast Range: 600 (TagTalent 775)",
+        "Cast Range: 600",
         "Teleport Cast Range: Global",
         "Max Units: 1\/2\/3\/4 (TagTalent 4\/5\/6\/7)",
-        "Creep Min Base Health: 700\/800\/900\/1000 (TagTalent 1500\/1600\/1700\/1800)",
+        "Creep Min Base Health: 700\/800\/900\/1000 (TagTalent 1900\/2000\/2100\/2200)",
         "Creep Move Speed Bonus: 10\/15\/20\/25",
         "Attack Damage Bonus: 8\/16\/24\/32 (TagTalent 24\/32\/40\/48)",
         "Persuasion Creep Max Level: 3\/4\/5\/6",
@@ -109,7 +112,8 @@
         "Max Charges: 3",
         "Charge Replenish Time: 15",
         "Allows Holy Persuasion to target Ancient Creeps, maximum one per level of Hand of God.",
-        "Can persuade spell immune units."
+        "Can persuade spell immune units.",
+        "Although they may not be knights, Chen incorporates beasts into the Fold in the same way he himself was converted."
       ],
       "itemBehaviour": [],
       "legacyKey": "T",
@@ -122,22 +126,23 @@
         "Affects Allies"
       ],
       "notes": [
-        "The aura only affects allied heroes (including illusions and clones, excluding creep-heroes), and all units under Chen's control.",
+        "The aura only affects allied heroes, including illusions and clones, excluding creep-heroes, and all units under Chen's control.",
         "Applies heal amplification and health regen amplification, but not lifesteal amplification or spell lifesteal amplification.",
-        "Can regenerate up to 75\/150\/225\/300 health in one minute (79.5\/165\/256.5\/354 if Divine Favor's own amplification is taken into account).",
+        "Can regenerate up to 75\/150\/225\/300 health in one minute. With Divine Favor's health regeneration amplification, it heals up to 79.5\/165\/256.5\/354.",
+        "With Divine Favor's health regeneration amplification, it heals up to 79.5\/165\/256.5\/354.",
         "The aura's buff lingers for 0.5 seconds.",
         "Does not affect invulnerable units.",
-        "Aghanim's Shard turns Divine Favor into an active ability. The passive aura is still present. Can teleport any allied unit, own units and lane creeps. Cannot be cast on self. Cannot target invulnerable or hidden allies, but can teleport them if they turned invulnerable or hidden after cast. Unlike Holy Persuasion's teleport, Divine Favor's teleport is not dispelled upon taking damage. The teleport location is a point right in front of the team's fountain. Gives the target a stop command after teleporting it, canceling channeling spells and stopping queued orders. Disjoints projectiles upon teleporting.",
+        "With Aghanim's Shard, Divine Favor turns into an active ability. The passive aura is still present. Can teleport any allied unit, own units and lane creeps. Cannot be cast on self. Cannot target invulnerable or hidden allies, but can teleport them if they turned invulnerable or hidden after cast. Unlike Holy Persuasion's teleport, Divine Favor's teleport is not dispelled upon taking damage. The teleport location is a point right in front of the team's fountain. Gives the target a stop command after teleporting it, canceling channeling abilities and stopping queued orders. Disjoints projectiles upon teleporting.",
         "Can teleport any allied unit, own units and lane creeps. Cannot be cast on self.",
         "Cannot target invulnerable or hidden allies, but can teleport them if they turned invulnerable or hidden after cast.",
         "Unlike Holy Persuasion's teleport, Divine Favor's teleport is not dispelled upon taking damage.",
         "The teleport location is a point right in front of the team's fountain.",
-        "Gives the target a stop command after teleporting it, canceling channeling spells and stopping queued orders.",
+        "Gives the target a stop command after teleporting it, canceling channeling abilities and stopping queued orders.",
         "Disjoints projectiles upon teleporting."
       ],
-      "mana": "200",
+      "mana": "100",
       "hotKey": "E",
-      "cooldown": "35",
+      "cooldown": "25",
       "description": "Passively provides an aura that grants increased health regeneration and amplifies all health restore by a percentage.",
       "spellName": "Divine Favor",
       "params": [
@@ -146,10 +151,11 @@
         "Health Regen Bonus: 1.25\/2.5\/3.75\/5",
         "Heal and Health Regen Amplification: 6%\/10%\/14%\/18%",
         "Aura Linger Duration: 0.5",
-        "Cast Range: 500 (TagTalent 675)",
+        "Cast Range: 600",
         "Teleport Delay: 6",
-        "Allows Divine Favor to be cast on allies, teleporting them back home after 6 seconds. Cannot target spell immune allies. Cast Range: 500",
-        "Aura pierces spell immunity. Cannot target spell immune allies."
+        "Allows Divine Favor to be cast on allies, teleporting them back home after 6 seconds. Cannot target spell immune allies. Cast Range: 600",
+        "Aura pierces spell immunity. Cannot target spell immune allies.",
+        "Chen's zeal is infectious, blessing his allies with vitality and compelling them to his side."
       ],
       "itemBehaviour": [],
       "legacyKey": "F",
@@ -165,19 +171,24 @@
         "All units owned by Chen are healed, including his illusions, summons (except for non-ancient creep-heroes) and persuaded or dominated units.",
         "Does not heal any allied non-hero units or illusions, except for hero clones.",
         "Can heal allies while they are invulnerable and while hidden.",
+        "With Divine Favor's heal amplification, Hand of God heals for the following values on each level: Level 1: 291.5\/302.5\/313.5\/324.5 (TagTalent 588.3\/610.5\/632.7\/654.9) Level 2: 477\/495\/513\/531 (TagTalent 773.8\/803\/832.2\/861.4) Level 3: 662.5\/687.5\/712.5\/737.5 (TagTalent 959.3\/995.5\/1031.7\/1067.9)",
+        "Level 1: 291.5\/302.5\/313.5\/324.5 (TagTalent 588.3\/610.5\/632.7\/654.9)",
+        "Level 2: 477\/495\/513\/531 (TagTalent 773.8\/803\/832.2\/861.4)",
+        "Level 3: 662.5\/687.5\/712.5\/737.5 (TagTalent 959.3\/995.5\/1031.7\/1067.9)",
         "The voice line upon cast is global for allies and not audible for enemies.",
         "With Aghanim's Scepter, Holy Persuasion allows 1\/2\/3 ancient creeps to be persuaded per level of Hand of God."
       ],
       "mana": "250\/350\/450",
       "hotKey": "R",
-      "cooldown": "160\/140\/120 (TagTalent 136\/116\/96)",
+      "cooldown": "160\/140\/120 (TagTalent 120\/100\/80)",
       "description": "Heals all allied heroes on the map as well as all units under Chen's control.",
       "spellName": "Hand of God",
       "params": [
         "Cast Animation: 0.3+0.93",
         "Radius: Global",
-        "Heal: 250\/425\/600 (TagTalent 530\/705\/880)",
-        "Max Ancient Creeps Count: 1\/2\/3"
+        "Heal: 275\/450\/625 (TagTalent 555\/730\/905)",
+        "Max Ancient Creeps Count: 1\/2\/3",
+        "Using the mental link with his thralls, Chen calls down restoration and well-being to those who share his fanaticism."
       ],
       "itemBehaviour": [],
       "legacyKey": "D",
@@ -193,7 +204,7 @@
     "attrAgility": 15.0
   },
   "description": "Chen, the Holy Knight, is a ranged intelligence hero, whose signature ability, Holy Persuasion, allows him to take control of creeps. Commanding them well requires adept micromanagement and map awareness, but once mastered Chen becomes an effective ganker and one of the game's strongest early pushers. His ability to convert creeps makes it natural for him to spend the laning phase as a jungler, emerging to pick off enemies with his creep army's array of disables. Chen's ultimate Hand of God heals all his creeps and allied heroes wherever they are on the map, allowing him to sustain pushes and secure objectives. And that he must, building up a strong lead before his creeps lose their threat in the late game.",
-  "history": "Born in the godless Hazhadal Barrens, Chen came of age among the outlaw tribes who eked out an existence in the shimmering heat of the desert. Using an ancient form of animal enthrallment, Chen\u2019s people husbanded the hardy desert locuthi, a stunted species of burrowing dragon that melted desert sands into tubes of glass where twice-a-year rains collected. Always on the edge of starvation and thirst, fighting amongst their neighbors and each other, Chen\u2019s clan made the mistake, one fateful day, of ambushing the wrong caravan. In the vicious battle that followed, Chen\u2019s clan was outmatched. The armored Knights of the Fold made short work of the enthralled locuthi, who attacked and died in waves. With their dragons dead, the tribesmen followed. Chen struggled, and slashed, and clawed, and perished\u2014or would have. Defeated, on his knees, he faced his execution with humility, offering his neck to the blade. Moved by Chen\u2019s obvious courage, the executioner halted his sword. Instead of the blade, Chen was given a choice: death or conversion. Chen took to the faith with a ferocity. He joined the Fold and earned his armor one bloody conversion at a time. Now, with the fanaticism of a convert, and with his powers of animal enthrallment at their peak, he seeks out unbelievers and introduces them to their final reward.",
+  "history": "Born in the godless Hazhadal Barrens, Chen came of age among the outlaw tribes who eked out an existence in the shimmering heat of the desert. Using an ancient form of animal enthrallment, Chen's people husbanded the hardy desert locuthi, a stunted species of burrowing dragon that melted desert sands into tubes of glass where twice-a-year rains collected. Always on the edge of starvation and thirst, fighting amongst their neighbors and each other, Chen's clan made the mistake, one fateful day, of ambushing the wrong caravan. In the vicious battle that followed, Chen's clan was outmatched. The armored Knights of the Fold made short work of the enthralled locuthi, who attacked and died in waves. With their dragons dead, the tribesmen followed. Chen struggled, and slashed, and clawed, and perished\u2014or would have. Defeated, on his knees, he faced his execution with humility, offering his neck to the blade. Moved by Chen's obvious courage, the executioner halted his sword. Instead of the blade, Chen was given a choice: death or conversion. Chen took to the faith with a ferocity. He joined the Fold and earned his armor one bloody conversion at a time. Now, with the fanaticism of a convert, and with his powers of animal enthrallment at their peak, he seeks out unbelievers and introduces them to their final reward.",
   "talents": [
     {
       "talentLvl": "25",
@@ -202,18 +213,18 @@
     },
     {
       "talentLvl": "20",
-      "talentLeft": "+800 Holy Persuasion Minimum Health",
-      "talentRight": "-24s Hand of God Cooldown"
+      "talentLeft": "+1200 Holy Persuasion Minimum Health",
+      "talentRight": "-40s Hand of God Cooldown"
     },
     {
       "talentLvl": "15",
-      "talentLeft": "+16 Holy Persuasion Damage",
-      "talentRight": "+12% Penitence Slow"
+      "talentLeft": "+12% Penitence Slow",
+      "talentRight": "+16 Holy Persuasion Damage"
     },
     {
       "talentLvl": "10",
-      "talentLeft": "+175 Cast Range",
-      "talentRight": "+175 Health"
+      "talentLeft": "+175 Health",
+      "talentRight": "Penitence Deals 250 Damage"
     }
   ]
 }

@@ -23,8 +23,8 @@
         },
         {
           "talentLvl": "10",
-          "talentLeft": "+15 Movement Speed",
-          "talentRight": "+4 Armor"
+          "talentLeft": "+20 Movement Speed",
+          "talentRight": "+5 Armor"
         }
       ]
     },
@@ -36,19 +36,19 @@
         "Damage Magical"
       ],
       "notes": [
-        "Interrupts Clockwerk's channeling spells upon cast.",
+        "Interrupts Clockwerk's channeling abilities upon cast.",
         "Remains active even if Clockwerk is disabled.",
         "Discharges a total of 16 (TagTalent 24) shrapnels, starting immediately upon cast.",
-        "Can deal a total of 320\/720\/1120\/1520 damage without any talents (before reductions). Can deal a total of 704\/1104\/1504\/1904 damage when the damage increasing talent is chosen. Can deal a total of 480\/1080\/1680\/2280 damage when the interval reducing talent is chosen. Can deal a total of 1056\/1656\/2256\/2856 damage when both talents are chosen.",
-        "Can deal a total of 704\/1104\/1504\/1904 damage when the damage increasing talent is chosen.",
-        "Can deal a total of 480\/1080\/1680\/2280 damage when the interval reducing talent is chosen.",
-        "Can deal a total of 1056\/1656\/2256\/2856 damage when both talents are chosen.",
+        "Can deal a total of 320\/720\/1120\/1520 damage without any talents (before reductions). With the level 15 damage increasing talent, it deals a total of 704\/1104\/1504\/1904 damage. With the level 25 interval reducing talent, it deals a total of 480\/1080\/1680\/2280 damage. With both talents, it deals a total of 1056\/1656\/2256\/2856 damage.",
+        "With the level 15 damage increasing talent, it deals a total of 704\/1104\/1504\/1904 damage.",
+        "With the level 25 interval reducing talent, it deals a total of 480\/1080\/1680\/2280 damage.",
+        "With both talents, it deals a total of 1056\/1656\/2256\/2856 damage.",
+        "The damage increasing talent immediately updates the currently running instance.",
+        "However, the interval reducing talent does not affect the currently running instance. It does not update the interval upon refreshing the current instance either. The current instance must expire first.",
+        "It does not update the interval upon refreshing the current instance either. The current instance must expire first.",
         "Each shrapnel first applies the damage, then the debuff.",
         "Hits units in the Fog of War, but not invisible, invulnerable and hidden units.",
-        "The buff from multiple casts of Battery Assault does not stack but gets refreshed instead.",
-        "Choosing the damage increasing talent immediately updates the currently running instance of Battery Assault.",
-        "Choosing the interval reducing talent does not affect the currently running instance of Battery Assault. Does not update the interval upon refreshing the current instance either. The current instance must expire first.",
-        "Does not update the interval upon refreshing the current instance either. The current instance must expire first."
+        "The buff from multiple casts of Battery Assault do not stack but gets refreshed instead."
       ],
       "mana": "100",
       "hotKey": "Q",
@@ -61,7 +61,8 @@
         "Shrapnel Interval: 0.7 (TagTalent 0.45)",
         "Damage per Shrapnel: 20\/45\/70\/95 (TagTalent 44\/69\/94\/119)",
         "Stun Duration: 0.1",
-        "Assault Duration: 10.5"
+        "Assault Duration: 10.5",
+        "Some of Rattletrap's contraptions don't quite work correctly, so detonating them proves useful as an offensive maneuver."
       ],
       "itemBehaviour": [],
       "legacyKey": "E",
@@ -82,19 +83,19 @@
         "This means that any unit trapped within the center of the circle cannot move out unless it has unobstructed movement.",
         "A cog shocks the first enemy unit which comes within 185 range of it from the outside. A cog can only shock a unit once.",
         "The cogs only shock units that have mana (e.g. ranged creeps). Units without a mana pool are not shocked (e.g. Roshan).",
-        "The shock requires no vision and can hit invisible enemies, or enemies in the fog of war.",
-        "The shock is a 300 distance knock back at a speed of 300, so it lasts exactly 1 second.",
+        "The shock requires no vision and can hit invisible enemies, or enemies in the Fog of War.",
+        "The shock is a 300 distance knockback at a speed of 300, so it lasts exactly 1 second.",
         "Knocks units back into the direction they approach the cog from.",
-        "During the knock back, the unit is fully disabled. The damage and mana loss are applied at the end of the knock back.",
-        "Does not shock units who are already under the effect of other sources of forced movement, except for Force Staff and Hurricane Pike.",
+        "During the knockback, the unit is fully disabled. The damage and mana loss are applied at the end of the knockback. Applies the damage first, and then the mana loss.",
+        "The damage and mana loss are applied at the end of the knockback. Applies the damage first, and then the mana loss.",
+        "Does not shock units who are already under the effect of other sources of Forced Movement, except for Force Staff and Hurricane Pike.",
         "Although the cogs deliver the shocks, the effects (damage, mana loss, knockback) are sourced to the caster, not the cog.",
-        "Applies the damage first, and then the mana loss.",
         "At the end of the knock back, trees within a 100 radius of the unit are destroyed.",
         "Despite having 100 health, attacking the cogs deals 0 damage. The cogs' health bar does not visually decrease when attacking them either.",
         "Units not controlled by any player do not try to path around the cogs, but simply walk against them as if they are not there. This effectively causes them to get stuck until they change directions (e.g. when aggro-ing them).",
         "This effectively causes them to get stuck until they change directions (e.g. when aggro-ing them).",
         "The cogs can also be attacked and destroyed\/denied by allies, however, taking the same amount of attacks as enemies.",
-        "With the level 25 talent chosen, an aura is created at the center of the cogs, with a radius of 225. The aura provides spell immunity to the caster. Other units under their control are not affected. The aura always lasts the full duration, even if all cogs get destroyed. The aura's buff lingers for 0.5 seconds.",
+        "With the level 25 talent, a 225 radius aura is created at the center of the cogs. The aura provides spell immunity to the caster. Other units under their control are not affected. The aura always lasts the full duration, even if all cogs get destroyed. The aura's buff lingers for 0.5 seconds.",
         "The aura provides spell immunity to the caster. Other units under their control are not affected.",
         "The aura always lasts the full duration, even if all cogs get destroyed.",
         "The aura's buff lingers for 0.5 seconds."
@@ -113,11 +114,12 @@
         "Shock Damage: 50\/125\/200\/275",
         "Shock Mana Loss: 50\/80\/110\/140",
         "Shock Knockback Distance: 300",
-        "Shock Knock Back Duration: 1",
+        "Shock Knockback Duration: 1",
         "Cogs Duration: 5\/6\/7\/8",
         "Spell Immunity Radius: 225",
         "Spell Immunity Linger Duration: 0.5",
-        "Burns mana and attempts to damage if debuff was placed before spell immunity and when not dispelled."
+        "Burns mana and attempts to damage if debuff was placed before spell immunity and when not dispelled.",
+        "One of Clockwerk's inventions of which he is most proud is the power cog - though it is sometimes despised by his allies."
       ],
       "itemBehaviour": [],
       "legacyKey": "C",
@@ -132,14 +134,13 @@
       ],
       "notes": [
         "The Rocket Flare travels at a speed of 2250.",
-        "Provides flying vision in a 600 radius for 1 second while traveling and for 6 seconds at the targeted area after reaching it. When choosing the talent, also provides 600 radius True Sight at the targeted area for 10 seconds. The True Sight is provided by an aura which affects enemies. Its debuff lingers for 0.5 seconds. The rockets can not reveal Eyes In The Forest.",
-        "When choosing the talent, also provides 600 radius True Sight at the targeted area for 10 seconds.",
+        "Provides flying vision in a 600 radius for 1 second while traveling and for 6 seconds at the targeted area after reaching it. With the level 20 talent, Rocket Flare also provides 600 radius True Sight at the targeted area for 10 seconds. The True Sight is provided by an aura which affects enemies. Its debuff lingers for 0.5 seconds. The rocket can not reveal Eyes In The Forest. However, it does not add True Sight to rockets which already reached their targeted point and exploded.",
+        "With the level 20 talent, Rocket Flare also provides 600 radius True Sight at the targeted area for 10 seconds.",
         "The True Sight is provided by an aura which affects enemies. Its debuff lingers for 0.5 seconds.",
-        "The rockets can not reveal Eyes In The Forest.",
-        "The rocket can be seen on the minimap. It appears green to allies and red to enemies (enemies require vision over it to see it).",
-        "Choosing the damage upgrading talent immediately upgrades all of Clockwerk's currently flying rockets.",
-        "Choosing the True Sight granting talent immediately grants it to Clockwerk's currently flying rockets. However, it does not add True Sight to rockets which already reached their targeted point and exploded.",
-        "However, it does not add True Sight to rockets which already reached their targeted point and exploded."
+        "The rocket can not reveal Eyes In The Forest.",
+        "However, it does not add True Sight to rockets which already reached their targeted point and exploded.",
+        "Both damage increasing and True Sight granting talents immediately upgrade all of Clockwerk's currently flying rockets.",
+        "The rocket can be seen on the minimap. It appears green to allies and red to enemies (enemies require vision over it to see it)."
       ],
       "mana": "35\/40\/45\/50",
       "hotKey": "E",
@@ -152,7 +153,9 @@
         "Radius: 600",
         "Damage: 80\/120\/160\/200 (TagTalent 180\/220\/260\/300)",
         "Vision Duration: 6",
-        "True Sight Linger Duration: 0.5"
+        "True Sight Duration: 10",
+        "True Sight Linger Duration: 0.5",
+        "What started as a festive display has become a useful scouting and bombardment tool."
       ],
       "itemBehaviour": [],
       "legacyKey": "R",
@@ -167,9 +170,9 @@
       "notes": [
         "Requires Aghanim's Scepter to be unlocked. In Ability Draft, Overclocking can be unlocked by the player that drafted Hookshot.",
         "In Ability Draft, Overclocking can be unlocked by the player that drafted Hookshot.",
-        "Interrupts Clockwerk's channeling spells upon cast.",
-        "Only resets ability cooldowns. Item cooldowns are not reset.",
-        "The stun at the end of the duration cannot be avoided. It is applied even when invulnerable or hidden.",
+        "Interrupts Clockwerk's channeling abilities upon cast.",
+        "Reset all of the caster's ability cooldowns. Item cooldowns are not reset.",
+        "The stun at the end of the duration cannot be avoided. It is applied even when invulnerable or hidden. The stun duration is unaffected by status resistance.",
         "The stun duration is unaffected by status resistance.",
         "Recasting Overclocking refreshes the debuff's duration, but does not reset cooldowns again."
       ],
@@ -183,7 +186,8 @@
         "Move Speed Bonus: 40%",
         "Attack Speed Bonus: 200",
         "Duration: 8",
-        "Stun Duration: 4"
+        "Stun Duration: 4",
+        "Rattletrap understands the limitations of his armor. Just as he understands the risks of pushing past them in times of need."
       ],
       "itemBehaviour": [],
       "legacyKey": "F",
@@ -196,25 +200,26 @@
         "Affects Self"
       ],
       "notes": [
-        "Requires Aghanim's Shard to be unlocked.",
+        "Requires Aghanim's Shard to be unlocked. In Ability Draft, Jetpack can be unlocked by the player that drafted Hookshot.",
+        "In Ability Draft, Jetpack can be unlocked by the player that drafted Hookshot.",
         "While Jetpack is active, the caster does not need to turn to cast spells or items.",
         "For better readability, the turn rate during the flight is given as degrees per second, instead of radians per 0.03 seconds. 75° per second equal a turn rate of 0.039.",
         "75° per second equal a turn rate of 0.039.",
-        "Clockwerk turns for a maximum of 1 seconds per issued move order. This means a single move order does not cause him to fly in a circle around the targeted point. Clockwerk's final path and direction pre move order depends on a vector from Clockwerk's position to targeted point, which is always parallel with the path.",
-        "Clockwerk's final path and direction pre move order depends on a vector from Clockwerk's position to targeted point, which is always parallel with the path.",
+        "Clockwerk turns for a maximum of 1 seconds per issued move order. This means a single move order does not cause him to fly in a circle around the targeted point. His final path and direction pre-move order depends on a vector from Clockwerk's position to targeted point, which is always parallel with the path.",
+        "His final path and direction pre-move order depends on a vector from Clockwerk's position to targeted point, which is always parallel with the path.",
         "Clockwerk is not disabled while flying and can use any items and abilities normally. Casting Hookshot ends Jetpack if it latches on a target and starts pulling. Does not end it if it misses.",
         "Casting Hookshot ends Jetpack if it latches on a target and starts pulling. Does not end it if it misses.",
         "The flight speed equals Clockwerk's movement speed."
       ],
       "mana": "75",
       "hotKey": "F",
-      "cooldown": "20",
-      "description": "Rises up, granting Clockwerk flying vision, flying movement, and a bonus movement speed. Clockwerk has a severely-limited turn rate during this time and cannot attack. Lasts up to seconds or until he casts Hookshot.",
+      "cooldown": "16",
+      "description": "Rises up, granting Clockwerk flying vision, flying movement, and a 20% bonus movement speed. Clockwerk has a severely-limited turn rate during this time and cannot attack. Lasts up to 6 seconds or until he casts Hookshot.",
       "spellName": "Jetpack",
       "params": [
         "Cast Animation: 0+0.53",
         "Turn Rate in Degrees per Second: 75°",
-        "Move Speed Bonus: 22%",
+        "Move Speed Bonus: 20%",
         "Duration: 6"
       ],
       "itemBehaviour": [],
@@ -232,7 +237,7 @@
         "The hook travels at a speed of 4000\/5000\/6000, taking a maximum of 0.5 seconds to reach max length.",
         "When the hook latches on a unit, Clockwerk gets pulled towards it at the same speed as the hook itself.",
         "Clockwerk is silenced and disarmed during the pull, preventing ability usage and attacking. Items can be used.",
-        "The pull gets canceled when Clockwerk gets affected by other sources of forced movement.",
+        "The pull gets canceled when Clockwerk gets affected by other sources of Forced Movement.",
         "Clockwerk gets pulled towards the latched unit's current location, and not towards the original location where the hook latched on it. This means when the target moves or gets moved, Clockwerk's trajectory adapts immediately. The pulling lasts a maximum of 0.5 seconds, so if the target moves away, Clockwerk may not fully reach it.",
         "This means when the target moves or gets moved, Clockwerk's trajectory adapts immediately.",
         "The pulling lasts a maximum of 0.5 seconds, so if the target moves away, Clockwerk may not fully reach it.",
@@ -244,7 +249,7 @@
         "The latched enemy is also hit by the area damage\/stun. This means the latched target is stunned up to 0.5 seconds longer than secondary targets, due to the initial latch stun.",
         "This means the latched target is stunned up to 0.5 seconds longer than secondary targets, due to the initial latch stun.",
         "Hookshot first applies the debuff, then the damage.",
-        "Fully ignores couriers."
+        "Fully ignores Couriers."
       ],
       "mana": "150",
       "hotKey": "R",
@@ -260,7 +265,8 @@
         "Damage: 75\/175\/275",
         "Stun Duration: 1.5\/1.75\/2",
         "Grants a new ability: Overclocking.",
-        "Grants a new ability: Jetpack."
+        "Grants a new ability: Jetpack.",
+        "A somewhat unwieldy device, the Hookshot sends the otherwise clunky Clockwerk armor flying through the air."
       ],
       "itemBehaviour": [],
       "legacyKey": "T",
@@ -276,7 +282,7 @@
     "attrAgility": 13.0
   },
   "description": "Rattletrap, the Clockwerk, is a melee strength hero known as being one of the most well-rounded initiator-gankers in the game. Rattletrap's wide array of disables and nukes allows him to cause chaos among the enemy team and break up their formation, giving his team a powerful advantage in any fight. Battery Assault allows Clockwerk to inflict repeated damage ticks and mini-stuns on nearby enemies, allowing him to constantly hinder any enemies he manages to get close to and single out. He can also disrupt enemy movement and pen in foes with his Power Cogs, which induces an electric shock to foes outside, stunning them while damaging them and burning their mana, and can render enemies caught inside helpless. His damage nuke, Rocket Flare, gives him global nuking power that also provides scouting vision for him and his team. Finally, his ultimate, Hookshot, allows Rattletrap to instantaneously latch onto and stun a foe from long range, making him a very strong ganker. Few can escape Clockwerk once he has his sights locked in, and his machinations make him a powerful ally to have on any team.",
-  "history": "Rattletrap descends from the same far-flung kindred as Sniper and Tinker, and like many of the Keen Folk, has offset his diminutive stature through the application of gadgetry and wit. The son of the son of a clockmaker, Rattletrap was many years apprenticed to that trade before war rode down from the mountains and swept the plains villages free of such innocent vocations. \u201CYour new trade is battle,\u201D his dying father told him as the village of their ancestors lay in charred and smoking ruins. It is a poor tradesman who blames his tools, and Rattletrap was never one to make excuses. After burying his father among the ruins of their village, he set about to transform himself into the greatest tool of warfare that any world had ever seen. He vowed to never again be caught unprepared, instead using his talents to assemble a suit of powered Clockwerk armor to make the knights of other lands look like tin cans by comparison. Now Rattletrap is alive with devices\u2014a small but deadly warrior whose skills at ambush and destruction have risen to near-automated levels of efficiency. An artisan of death, his mechanizations make short work of the unwary, heralding a new dawn in this age of warfare. What time is it? It's Clockwerk time!",
+  "history": "Rattletrap descends from the same far-flung kindred as Sniper and Tinker, and like many of the Keen Folk, has offset his diminutive stature through the application of gadgetry and wit. The son of the son of a clockmaker, Rattletrap was many years apprenticed to that trade before war rode down from the mountains and swept the plains villages free of such innocent vocations. \"Your new trade is battle,\" his dying father told him as the village of their ancestors lay in charred and smoking ruins. It is a poor tradesman who blames his tools, and Rattletrap was never one to make excuses. After burying his father among the ruins of their village, he set about to transform himself into the greatest tool of warfare that any world had ever seen. He vowed to never again be caught unprepared, instead using his talents to assemble a suit of powered Clockwerk armor to make the knights of other lands look like tin cans by comparison. Now Rattletrap is alive with devices, a small but deadly warrior whose skills at ambush and destruction have risen to near-automated levels of efficiency. An artisan of death, his mechanizations make short work of the unwary, heralding a new dawn in this age of warfare. What time is it? It's Clockwerk time!",
   "talents": [
     {
       "talentLvl": "25",
@@ -295,8 +301,8 @@
     },
     {
       "talentLvl": "10",
-      "talentLeft": "+15 Movement Speed",
-      "talentRight": "+4 Armor"
+      "talentLeft": "+20 Movement Speed",
+      "talentRight": "+5 Armor"
     }
   ]
 }

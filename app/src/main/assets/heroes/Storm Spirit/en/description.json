@@ -8,23 +8,23 @@
       "talents": [
         {
           "talentLvl": "25",
-          "talentLeft": "600 Distance Auto Remnant in Ball Lightning",
+          "talentLeft": "550 Distance Auto Remnant in Ball Lightning",
           "talentRight": "2x Overload Attack Bounce"
         },
         {
           "talentLvl": "20",
-          "talentLeft": "+25 Attack Speed",
+          "talentLeft": "-1.25s Static Remnant Cooldown",
           "talentRight": "+0.4s Electric Vortex"
         },
         {
           "talentLvl": "15",
-          "talentLeft": "+375 Health",
+          "talentLeft": "+25 Attack Speed",
           "talentRight": "+65 Static Remnant Damage"
         },
         {
           "talentLvl": "10",
           "talentLeft": "+2.5 Mana Regen",
-          "talentRight": "+24 Overload Damage"
+          "talentRight": "+200 Health"
         }
       ]
     },
@@ -36,16 +36,16 @@
         "Damage Magical"
       ],
       "notes": [
-        "Static Remnant interrupts Storm Spirit's channeling spells upon cast.",
-        "After a remnant is placed, it takes 1 second for it to be able to explode and deal damage.",
+        "Static Remnant interrupts Storm Spirit's channeling abilities upon cast.",
+        "After a remnant is placed, it takes 1 second for it to be able to explode and deal damage. When a remnant expires, it still explodes and deals damage around it.",
         "When a remnant expires, it still explodes and deals damage around it.",
         "Remnant can be triggered by invisible units and deal damage to them.",
-        "The remnants are visible on the minimap with the same color as Radiant\/Dire units, not the color of the player.",
-        "Remnants provide 500 range flying vision at their location for their duration or until detonating."
+        "The remnants are visible on the minimap with the same color as Radiant or Dire units, not the color of the player.",
+        "Remnants provide 500 range flying vision at their location for their duration or until exploding."
       ],
       "mana": "70\/80\/90\/100",
       "hotKey": "Q",
-      "cooldown": "3.5",
+      "cooldown": "3.5 (TagTalent 2.25)",
       "description": "Creates an explosively charged image of Storm Spirit that lasts 12 seconds and will detonate and deal damage if an enemy unit comes near it.",
       "spellName": "Static Remnant",
       "params": [
@@ -55,7 +55,8 @@
         "Activation Delay: 1",
         "Damage: 120\/175\/230\/285 (TagTalent 185\/240\/295\/350)",
         "Remnant Duration: 12",
-        "Procs on spell immune enemies. Does not attempt to damage spell immune enemies."
+        "Procs on spell immune enemies. Does not attempt to damage spell immune enemies.",
+        "Raijin Thunderkeg's duality allowed him to admire himself in shocking fashion."
       ],
       "itemBehaviour": [],
       "legacyKey": "R",
@@ -72,7 +73,7 @@
         "If the affected unit gets affected by another source of horizontal forced movement, it stops pulling, and continues as soon as the other source expires. This means, unlike other forced movement effects, Electric Vortex is not canceled by them, but temporarily stopped instead.",
         "This means, unlike other forced movement effects, Electric Vortex is not canceled by them, but temporarily stopped instead.",
         "If the target gets moved more than 1200 range away from the original cast location, the link breaks immediately.",
-        "The Aghanim's Scepter upgraded version still uses the same cast time. Does not hit invisible, invulnerable and hidden units as well as units in the fog of war within the radius. When cast while no enemies are within range, it still triggers Overload.",
+        "With Aghanim's Scepter, Electric Vortex turns into a 475 radius ability, affecting all enemy units around Storm Spirit and it cannot directly target units anymore. Does not hit invisible, invulnerable and hidden units as well as units in the fog of war within the radius. When cast while no enemies are within range, it still triggers Overload.",
         "Does not hit invisible, invulnerable and hidden units as well as units in the fog of war within the radius.",
         "When cast while no enemies are within range, it still triggers Overload.",
         "Multiple casts on the same target refresh the pull duration, and reset the pull distance, but do not update the pull location."
@@ -84,13 +85,14 @@
       "spellName": "Electric Vortex",
       "params": [
         "Cast Animation: 0.3+0.77",
-        "Cast Range: 300 (TagAghanim 0)",
+        "Cast Range: 300 (TagTalent 0)",
         "Pull Duration: 1.4\/1.8\/2.2\/2.6 (TagTalent 1.8\/2.2\/2.6\/3)",
         "Pull Distance: 180\/220\/260\/300",
         "Radius: 475",
         "Electric Vortex affects all enemies within a radius around Storm Spirit.",
         "Cannot be cast on spell immune enemies. Effect persists if debuff was placed before spell immunity and when not dispelled.",
-        "Not blocked when upgraded."
+        "Not blocked.",
+        "Raijin's thunderous, boisterous energy often draws others into an electrifying situation."
       ],
       "itemBehaviour": [],
       "legacyKey": "E",
@@ -99,8 +101,8 @@
     {
       "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/c\/c7\/Storm_Spirit_Overload.mp3\/revision\/latest?cb=20191216024538",
       "effects": [
-        "Ability Passive",
-        "Affects Enemies",
+        "Ability Passive (TagAghanim No Target)",
+        "Affects Enemies (TagAghanim Allies)",
         "Damage Magical"
       ],
       "notes": [
@@ -108,82 +110,62 @@
         "The bonus damage is dealt in a separate damage instance, and counts as spell damage. This means it is not affected or considered by anything that works with attack damage. This also means that it fully works with spell damage amplification and spell lifesteal.",
         "This means it is not affected or considered by anything that works with attack damage.",
         "This also means that it fully works with spell damage amplification and spell lifesteal.",
-        "The slow and damage are applied to all enemy units within the radius around the attacked target.",
-        "On the primary target, the attack first applies the debuff, then its own damage. On secondary targets, it first applies the damage, then the debuff.",
+        "The slow and damage are applied to all enemy units within 300 radius around the attacked target. On the primary target, the attack first applies the debuff, then its own damage. On secondary targets, it first applies the damage, then the debuff.",
+        "On the primary target, the attack first applies the debuff, then its own damage.",
         "On secondary targets, it first applies the damage, then the debuff.",
         "The charge is released upon successfully hitting a target. If the attack misses or is disjointed, nothing happens.",
         "Each attack checks for the buff on Storm Spirit upon successfully hitting the target. If the buff is present, the charge is released. This means when Storm Spirit gains the buff while an attack projectile is flying, that attack still releases the charge when it hits.",
         "This means when Storm Spirit gains the buff while an attack projectile is flying, that attack still releases the charge when it hits.",
         "Attacking buildings or allies does not release the charge, however attacking wards does.",
-        "With the level 25 talent, the attack bounces towards the closest enemy unit within 700 range of the attack target. The bouncing attack travels at a speed of 1100 (based on the caster's projectile speed). Does not perform instant attacks. The bouncing attack is entirely spell-based. This means they do not trigger any attack modifier or on-hit effects, and ignore evasion. However, damage block affects them. Their damage counts as spell damage, however, they ignore outgoing spell damage amplification and cannot spell lifesteal. The attacks deal damage based on the damage amount calculated for the leading attack. Attack damage amount is calculated upon attack begin. This means it works with Critical Strike and Quell, since these are included in the initial damage calculations. This also means that it does not matter how much damage the attack actually did to the target, since that part is being calculated on projectile hit. It also means that other conditional attack damage bonuses like a Javelin proc are not included, since these happen later as well.",
-        "The bouncing attack travels at a speed of 1100 (based on the caster's projectile speed).",
-        "Does not perform instant attacks. The bouncing attack is entirely spell-based.",
-        "This means they do not trigger any attack modifier or on-hit effects, and ignore evasion. However, damage block affects them.",
-        "Their damage counts as spell damage, however, they ignore outgoing spell damage amplification and cannot spell lifesteal.",
-        "The attacks deal damage based on the damage amount calculated for the leading attack. Attack damage amount is calculated upon attack begin.",
-        "This means it works with Critical Strike and Quell, since these are included in the initial damage calculations.",
+        "The Overload attack bounce talent causes the attack to bounce towards the closest enemy unit within 700 range of the attack target. The bouncing attack travels at a speed of 1100, based on Storm Spirit's projectile speed. It can be further increased by other projectile speed bonuses. The 75% bounce attack damage multiplier applies both to the attack damage, and the Overload damage value. Therefore, in total it deals 30\/45\/60\/75 Overload damage when it bounces. The bounce attack is entirely spell-based. They ignore evasion and damage block affects them. The damage counts as spell damage, however, they ignore outgoing spell damage amplification and cannot spell lifesteal. The attacks deal damage based on the damage amount calculated for the leading attack. Attack damage amount is calculated upon attack begin. This means it works with Crit and Quell, since these are included in the initial damage calculations. This also means that it does not matter how much damage the attack actually did to the target, since that part is being calculated on projectile hit. It also means that other conditional attack damage bonuses like a Javelin proc are not included, since these happen later as well.",
+        "The bouncing attack travels at a speed of 1100, based on Storm Spirit's projectile speed. It can be further increased by other projectile speed bonuses.",
+        "The 75% bounce attack damage multiplier applies both to the attack damage, and the Overload damage value. Therefore, in total it deals 30\/45\/60\/75 Overload damage when it bounces.",
+        "Therefore, in total it deals 30\/45\/60\/75 Overload damage when it bounces.",
+        "The bounce attack is entirely spell-based. They ignore evasion and damage block affects them.",
+        "The damage counts as spell damage, however, they ignore outgoing spell damage amplification and cannot spell lifesteal.",
+        "The attacks deal damage based on the damage amount calculated for the leading attack. Attack damage amount is calculated upon attack begin. This means it works with Crit and Quell, since these are included in the initial damage calculations. This also means that it does not matter how much damage the attack actually did to the target, since that part is being calculated on projectile hit. It also means that other conditional attack damage bonuses like a Javelin proc are not included, since these happen later as well.",
+        "This means it works with Crit and Quell, since these are included in the initial damage calculations.",
         "This also means that it does not matter how much damage the attack actually did to the target, since that part is being calculated on projectile hit.",
-        "It also means that other conditional attack damage bonuses like a Javelin proc are not included, since these happen later as well."
+        "It also means that other conditional attack damage bonuses like a Javelin proc are not included, since these happen later as well.",
+        "With Aghanim's Shard, Overload turns into an active ability. The passive component is still present. Interrupts Storm Spirit's channeling abilities upon cast. Triggers Overload upon cast as well, and fully stacks with it on the same attack. Grants 3 Overload buffs based on its current level to allied heroes, including clones and creep-heroes, excluding illusions. The buff is not placed on invulnerable or hidden units. The values for the buff are set upon cast, and does not update if it gets leveled up after cast. The number of charges is visible on the buff's icon. Recasting Overload refreshes the buff's duration and resets the charges. The Overload damage applied to the target is performed by the ally heroes themselves, and not Storm Spirit. Ally heroes do not get the Overload attack bounce talent bonus.",
+        "Interrupts Storm Spirit's channeling abilities upon cast.",
+        "Triggers Overload upon cast as well, and fully stacks with it on the same attack.",
+        "Grants 3 Overload buffs based on its current level to allied heroes, including clones and creep-heroes, excluding illusions. The buff is not placed on invulnerable or hidden units.",
+        "The buff is not placed on invulnerable or hidden units.",
+        "The values for the buff are set upon cast, and does not update if it gets leveled up after cast. The number of charges is visible on the buff's icon. Recasting Overload refreshes the buff's duration and resets the charges.",
+        "The number of charges is visible on the buff's icon.",
+        "Recasting Overload refreshes the buff's duration and resets the charges.",
+        "The Overload damage applied to the target is performed by the ally heroes themselves, and not Storm Spirit.",
+        "Ally heroes do not get the Overload attack bounce talent bonus."
       ],
-      "mana": null,
+      "mana": "150",
       "hotKey": "E",
-      "cooldown": null,
+      "cooldown": "30",
       "description": "Casting a spell creates an electrical charge, which is released in a burst on Storm's next attack, dealing damage and slowing nearby enemies.",
       "spellName": "Overload",
       "params": [
-        "Radius: 300",
-        "Damage: 40\/60\/80\/100 (TagTalent 64\/84\/104\/124)",
+        "Cast Animation: 0+0",
+        "Damage Radius: 300",
+        "Damage: 40\/60\/80\/100",
         "Move Speed Slow: 80%",
         "Attack Speed Slow: 80",
         "Slow Duration: 0.6",
-        "Bounce Search Radius: 700",
         "Number of Bounces: 2",
-        "Bounce Attack Damage as Damage: 50%",
-        "Grants a new ability: Electric Rave.",
+        "Bounce Search Radius: 700",
+        "Bounce Attack Damage: 75%",
+        "Radius: 750",
+        "Attack Speed Bonus: 40",
+        "Number of Charges: 3",
+        "Buff Duration: 12",
+        "Can be activated to grant Storm Spirit and allied heroes within 750 AoE of him 3 Overload charges. Provides 40 Attack Speed. Lasts up to 12 seconds or until the charges are depleted.",
         "Procs and applies area effect when attacking spell immune enemies. Does not slow and does not attempt to damage spell immune enemies. Slow persists if debuff was placed before spell immunity and when not dispelled.",
         "Prevents gaining a new charge. An already existing charge still fully works.",
-        "When disjointed by the primary attack target, it does not bounce. When disjointed by a secondary target, the disjointing unit is not registered as hit, meaning the attack can immediately bounce on it again if within range. A disjointed bounce still counts towards the max bounces."
+        "When disjointed by the primary attack target, it does not bounce. When disjointed by a secondary target, the disjointing unit is not registered as hit, meaning the attack can immediately bounce on it again if within range. A disjointed bounce still counts towards the max bounces.",
+        "Pow! Zip! Zap!"
       ],
       "itemBehaviour": [],
       "legacyKey": "V",
       "story": "Pow! Zip! Zap!"
-    },
-    {
-      "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/c\/c7\/Storm_Spirit_Electric_Rave.mp3\/revision\/latest?cb=20210103155241",
-      "effects": [
-        "Ability No Target",
-        "Affects Allies"
-      ],
-      "notes": [
-        "Requires Aghanim's Shard to be unlocked.",
-        "Electric Rave interrupts Storm Spirit's channeling spells upon cast.",
-        "Triggers Overload upon cast as well, and fully stacks with it on the same attack.",
-        "The buff is only placed on allied heroes, including clones, excluding illusions and creep-heroes. The buff is not placed on invulnerable or hidden units.",
-        "The buff is not placed on invulnerable or hidden units.",
-        "The Overload values for the buff are set upon cast, and do not adapt if it gets leveled up after cast. If Overload is not learnt, does nothing upon cast.",
-        "If Overload is not learnt, does nothing upon cast.",
-        "The Overload effect applied by an ally is creditted to that ally, and not to Storm Spirit.",
-        "The Overload talents fully affected Electric Rave as well, even when applied by an ally. This includes the level 25 talent, causing the ally's attack to bounce, using Storm Spirit's projectile speed. However, unlike the initial Overload, the bounces are always creditted to Storm Spirit, and not to the ally.",
-        "This includes the level 25 talent, causing the ally's attack to bounce, using Storm Spirit's projectile speed.",
-        "However, unlike the initial Overload, the bounces are always creditted to Storm Spirit, and not to the ally.",
-        "The number of charges is visible on the buff's icon.",
-        "Recasting Electric Rave refreshes the buff's duration and resets the charges."
-      ],
-      "mana": "150",
-      "hotKey": "D",
-      "cooldown": "30",
-      "description": "Grants Storm Spirit and allied heroes within 750 AoE of him 3 Overload charges. Provides 40 Attack Speed. Lasts up to 12 seconds or until the charges are depleted.",
-      "spellName": "Electric Rave",
-      "params": [
-        "Cast Animation: 0+0",
-        "Radius: 750",
-        "Attack Speed Bonus: 40",
-        "Number of Overload Charges: 3",
-        "Duration: 12"
-      ],
-      "itemBehaviour": [],
-      "legacyKey": "V",
-      "story": null
     },
     {
       "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/2\/21\/Storm_Spirit_Ball_Lightning.mp3\/revision\/latest?cb=20191216024543",
@@ -194,27 +176,28 @@
       ],
       "notes": [
         "Ball Lightning disjoints projectiles upon cast.",
-        "Storm Spirit is invulnerable during Ball Lightning.",
-        "Storm Spirit can turn, cast spells, use items and attack during Ball Lightning.",
-        "Recasting Ball Lightning during Ball Lightning has no effect, but is still registered as cast, proccing on-cast effects (the activation mana cost gets refunded).",
+        "Storm Spirit is invulnerable during Ball Lightning. He can turn, cast abilities, use items and attack during Ball Lightning.",
+        "He can turn, cast abilities, use items and attack during Ball Lightning.",
+        "Recasting Ball Lightning during Ball Lightning has no effect, but is still registered as cast, proccing on-cast effects and the activation mana cost is refunded.",
         "If Storm Spirit runs out of mana while traveling, he stops immediately.",
         "Ball Lightning destroys trees within 100 radius of Storm Spirit while traveling.",
         "Provides 400 radius flying vision around Storm Spirit during Ball Lightning.",
-        "Drains Storm Spirit's mana after every 100 range traveled, resulting in 0.08\/0.05\/0.04 second intervals.",
-        "The spell's tooltip mana cost shows the current initial mana cost of the spell based on Storm Spirit's current maximum mana pool.",
-        "The damage of Ball Lightning works identical to shockwave-based spells (like e.g. Magnus' Shockwave), with Storm Spirit acting as the projectile. This means it applies its damage instantly on enemies getting within range, and an enemy can only be damaged once per cast. Unlike a regular shockwave spell, Ball Lightning's damage increases based on how far the projectile (Storm Spirit) has traveled. The damage increases by 8\/12\/16 per 100 units, so for the first 99 units, it deals 0 damage within its entire radius. This means if Storm Spirit zips up to 99 range directly towards an enemy, it does not get damaged when within 299 range of the starting location (99 distance + damage radius).",
-        "This means it applies its damage instantly on enemies getting within range, and an enemy can only be damaged once per cast.",
-        "Unlike a regular shockwave spell, Ball Lightning's damage increases based on how far the projectile (Storm Spirit) has traveled.",
+        "Drains Storm Spirit's mana after every 100 range traveled, resulting the ability draining mana in 0.07\/0.05\/0.04-second intervals.",
+        "The ability's tooltip mana cost shows the current initial mana cost of the ability based on Storm Spirit's current maximum mana pool.",
+        "The damage of Ball Lightning works identical to shockwave-based spells (e.g. Shockwave), with Storm Spirit acting as the projectile. It applies damage instantly on enemies getting within range, and an enemy can only be damaged once per cast. Unlike a regular shockwave ability, Ball Lightning's damage increases based on how far the projectile, Storm Spirit, has traveled. The damage increases by 8\/12\/16 per 100 units, so for the first 99 units, it deals 0 damage within its entire radius. This means if Storm Spirit travels up to 99 range directly towards an enemy, it does not get damaged when within 299 range, of the starting location.",
+        "It applies damage instantly on enemies getting within range, and an enemy can only be damaged once per cast.",
+        "Unlike a regular shockwave ability, Ball Lightning's damage increases based on how far the projectile, Storm Spirit, has traveled.",
         "The damage increases by 8\/12\/16 per 100 units, so for the first 99 units, it deals 0 damage within its entire radius.",
-        "This means if Storm Spirit zips up to 99 range directly towards an enemy, it does not get damaged when within 299 range of the starting location (99 distance + damage radius).",
-        "This is how much damage Ball Lightning can deal around Storm Spirit at certain travel distances (before reductions): 500 Distance: 40\/60\/80 damage (80 + 11.25% of max mana) 1000 Distance: 80\/120\/160 damage (130 + 14.5% of max mana) 2500 Distance: 200\/300\/400 damage (280 + 24.25% of max mana) 5000 Distance: 400\/600\/800 damage (530 + 40.5% of max mana) 10000 Distance: 800\/1200\/1600 damage (1030 + 73% of max mana)",
-        "500 Distance: 40\/60\/80 damage (80 + 11.25% of max mana)",
-        "1000 Distance: 80\/120\/160 damage (130 + 14.5% of max mana)",
-        "2500 Distance: 200\/300\/400 damage (280 + 24.25% of max mana)",
-        "5000 Distance: 400\/600\/800 damage (530 + 40.5% of max mana)",
-        "10000 Distance: 800\/1200\/1600 damage (1030 + 73% of max mana)",
-        "With the level 25 talent, a Static Remnant is automatically dropped every 600 range Storm Spirit travels. These remnants do not cost any mana and do not prevent Storm Spirit from manually casting Static Remnant during Ball Lightning.",
-        "These remnants do not cost any mana and do not prevent Storm Spirit from manually casting Static Remnant during Ball Lightning."
+        "This means if Storm Spirit travels up to 99 range directly towards an enemy, it does not get damaged when within 299 range, of the starting location.",
+        "This is how much damage Ball Lightning can deal around Storm Spirit at certain travel distances (before reductions): 500 Distance: 40\/60\/80 damage, 80 + 11.25% max mana 1000 Distance: 80\/120\/160 damage, 130 + 14.5% max mana 2500 Distance: 200\/300\/400 damage, 280 + 24.25% max mana 5000 Distance: 400\/600\/800 damage, 530 + 40.5% max mana",
+        "500 Distance: 40\/60\/80 damage, 80 + 11.25% max mana",
+        "1000 Distance: 80\/120\/160 damage, 130 + 14.5% max mana",
+        "",
+        "2500 Distance: 200\/300\/400 damage, 280 + 24.25% max mana",
+        "5000 Distance: 400\/600\/800 damage, 530 + 40.5% max mana",
+        "",
+        "The auto remnant in Ball Lightning talent automatically casts a Static Remnant based on its current level every 550 distance Storm Spirit travels. These remnants do not cost mana and do not prevent Storm Spirit from manually casting Static Remnant during Ball Lightning.",
+        "These remnants do not cost mana and do not prevent Storm Spirit from manually casting Static Remnant during Ball Lightning."
       ],
       "mana": "30 + 8% of max mana",
       "hotKey": "R",
@@ -225,11 +208,12 @@
         "Cast Animation: 0.3+0",
         "Cast Range: Global",
         "Damage Radius: 200",
-        "Travel Speed: 1250\/1875\/2500",
+        "Travel Speed: 1400\/1850\/2300",
         "Damage per 100 Units: 8\/12\/16",
         "Base Mana Cost per 100 Units: 10",
         "Max Mana as Cost per 100 Units: 0.65%",
-        "Auto Static Remnant Drop Distance: 600"
+        "Auto Static Remnant Drop Distance: 550",
+        "The Storm is coming in."
       ],
       "itemBehaviour": [],
       "legacyKey": "G",
@@ -249,23 +233,23 @@
   "talents": [
     {
       "talentLvl": "25",
-      "talentLeft": "600 Distance Auto Remnant in Ball Lightning",
+      "talentLeft": "550 Distance Auto Remnant in Ball Lightning",
       "talentRight": "2x Overload Attack Bounce"
     },
     {
       "talentLvl": "20",
-      "talentLeft": "+25 Attack Speed",
+      "talentLeft": "-1.25s Static Remnant Cooldown",
       "talentRight": "+0.4s Electric Vortex"
     },
     {
       "talentLvl": "15",
-      "talentLeft": "+375 Health",
+      "talentLeft": "+25 Attack Speed",
       "talentRight": "+65 Static Remnant Damage"
     },
     {
       "talentLvl": "10",
       "talentLeft": "+2.5 Mana Regen",
-      "talentRight": "+24 Overload Damage"
+      "talentRight": "+200 Health"
     }
   ]
 }

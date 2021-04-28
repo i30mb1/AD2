@@ -2,7 +2,7 @@
   "abilities": [
     {
       "notes": [
-        "The armor talent does not benefit illusions.",
+        "The health talent increases maximum health capacity, and keeps the current health percentage.",
         "This attack damage talent is added as raw attack damage, so it does not benefit illusions, and is not affected by most percentage-based damage increasing or reducing effects."
       ],
       "spellName": "Talent",
@@ -10,7 +10,7 @@
         {
           "talentLvl": "25",
           "talentLeft": "+60 Death Ward Damage",
-          "talentRight": "+1.2% Max Health Voodoo Restoration"
+          "talentRight": "+1.5% Max Health Voodoo Restoration"
         },
         {
           "talentLvl": "20",
@@ -19,12 +19,12 @@
         },
         {
           "talentLvl": "15",
-          "talentLeft": "+80 Maledict AoE",
+          "talentLeft": "+100 Maledict AoE",
           "talentRight": "+2 Cask Bounces"
         },
         {
           "talentLvl": "10",
-          "talentLeft": "+5 Armor",
+          "talentLeft": "+200 Health",
           "talentRight": "+60 Damage"
         }
       ]
@@ -38,14 +38,14 @@
       ],
       "notes": [
         "The cask travels at a speed of 1000.",
-        "The projectile bounces in 0.3 second intervals.",
+        "The projectile bounces in 0.3-second intervals. Can bounce on the same unit multiple times, but only when another target was hit between the bounces. Cannot bounce on invisible, invulnerable or hidden units, but can bounce on units in the Fog of War.",
         "Can bounce on the same unit multiple times, but only when another target was hit between the bounces.",
         "Cannot bounce on invisible, invulnerable or hidden units, but can bounce on units in the Fog of War.",
-        "Can deal up to 150\/300\/500\/750 (TagTalent 225\/400\/625\/900) (100\/150\/200\/250 (TagTalent 150\/200\/250\/300) to heroes) damage to a single unit (before reductions).",
-        "All bounces together can deal up to 225\/500\/875\/1350 (TagTalent 375\/700\/1125\/1650) (150\/250\/350\/450 (TagTalent 250\/350\/450\/550) to heroes) damage (before reductions).",
+        "Multiple casks from the same hero both reset and share the remaining number of bounces between all instances.",
+        "Can deal up to 150\/300\/500\/750 (TagTalent 225\/400\/625\/900) damage to creeps, or 100\/180\/280\/400 (TagTalent 150\/240\/350\/480) damage to heroes (before reductions). All bounces together can deal up to 225\/500\/875\/1350 (TagTalent 375\/700\/1125\/1650) damage to creeps, or 150\/300\/490\/720 (TagTalent 250\/420\/630\/880) damage to heroes (before reductions).",
+        "All bounces together can deal up to 225\/500\/875\/1350 (TagTalent 375\/700\/1125\/1650) damage to creeps, or 150\/300\/490\/720 (TagTalent 250\/420\/630\/880) damage to heroes (before reductions).",
         "The cask first applies the debuff, then the damage.",
-        "Illusions are treated as creeps, while Roshan and creep-heroes are treated as heroes.",
-        "Multiple casks from the same hero both reset and share the remaining number of bounces between all instances."
+        "Illusions are treated as creeps, while Roshan and creep-heroes are treated as heroes."
       ],
       "mana": "80\/100\/120\/140",
       "hotKey": "Q",
@@ -57,12 +57,13 @@
         "Cast Range: 700",
         "Bounce Distance: 575",
         "Number of Bounces: 2\/4\/6\/8 (TagTalent 4\/6\/8\/10)",
-        "Hero Damage: 50",
+        "Hero Damage: 50\/60\/70\/80",
         "Creep Damage: 75\/100\/125\/150",
         "Hero Stun Duration: 1",
         "Creep Stun Duration: 5",
         "Cannot directly target spell immune enemies. Can bounce to spell immune enemies. Does not stun or attempt to damage spell immune enemies.",
-        "Blocked fully when primary or secondary target. Blocked upon impact. Does not stop bouncing when blocked."
+        "Blocked fully when primary or secondary target. Blocked upon impact. Does not stop bouncing when blocked.",
+        "The Witch Doctor recycles the bones of fallen friends and foes, using the powder as part of his arsenal of charms and alchemy."
       ],
       "itemBehaviour": [],
       "legacyKey": "C",
@@ -75,13 +76,14 @@
         "Affects Allies"
       ],
       "notes": [
-        "Voodoo Restoration does not interrupt channeling spells upon toggling.",
-        "Disabling Witch Doctor does not turn Voodoo Restoration off. However, he cannot turn it off himself while disabled either.",
-        "Heals for 5.28\/7.92\/10.56\/13.2 health (TagTalent +0.396% of max health) and costs 2.64\/3.96\/5.28\/6.6 mana in 0.33 second intervals, starting 0.33 seconds after toggled on.",
-        "The heal is provided by an aura. The mana cost is also depending on the aura. The buff lingers for 0.5 seconds. This means when toggled off, the spell still heals and drains mana for 0.5 seconds before stopping. If Witch Doctor does not have enough mana to support another heal instance, the spell toggles itself off. However, the lingering buff continues healing, despite the lack of mana, giving up to 2 possible heal instances for free. It does not affect invulnerable or hidden units.",
-        "This means when toggled off, the spell still heals and drains mana for 0.5 seconds before stopping.",
-        "If Witch Doctor does not have enough mana to support another heal instance, the spell toggles itself off.",
-        "However, the lingering buff continues healing, despite the lack of mana, giving up to 2 possible heal instances for free.",
+        "Voodoo Restoration does not interrupt Witch Doctor's channeling abilities upon toggling On \/ Off.",
+        "Disabling Witch Doctor does not toggle Off Voodoo Restoration. However, he cannot turn it off himself while disabled either.",
+        "Heals for 5.28\/7.92\/10.56\/13.2 health (+ 0.495% of max health) and costs 2.64\/3.96\/5.28\/6.6 mana in 0.33-second intervals, starting 0.33 seconds after toggled on.",
+        "The heal is provided by an aura. The buff lingers for 0.5 seconds. The mana cost is also depending on the aura. This means when toggled Off, the ability still heals and drains mana for 0.5 seconds before stopping. The ability toggles Off if Witch Doctor does not have enough mana to support another heal instance. However, the lingering buff continues healing, despite the lack of mana, providing up to 2 possible heal instances for free. It does not affect invulnerable or hidden units.",
+        "The mana cost is also depending on the aura.",
+        "This means when toggled Off, the ability still heals and drains mana for 0.5 seconds before stopping.",
+        "The ability toggles Off if Witch Doctor does not have enough mana to support another heal instance.",
+        "However, the lingering buff continues healing, despite the lack of mana, providing up to 2 possible heal instances for free.",
         "It does not affect invulnerable or hidden units."
       ],
       "mana": "35\/40\/45\/50",
@@ -95,7 +97,8 @@
         "Base Heal per Second: 16\/24\/32\/40",
         "Mana Cost per Second: 8\/12\/16\/20",
         "Aura Linger Duration: 0.5",
-        "Max Health as Heal per Second: 1.2%"
+        "Max Health as Heal per Second: 1.5%",
+        "Zharvakko's hocus pocus is not limited only hexxing his opponents and is quite adept at curing ailments."
       ],
       "itemBehaviour": [],
       "legacyKey": "V",
@@ -110,12 +113,12 @@
       ],
       "notes": [
         "Checks the affected units' current health 4 times, once as the curse is applied, and then every 4 seconds for the duration.",
-        "The burst damage is entirely based on the difference between the hero's current health and its health as the curse got applied. This means the bigger the difference of current health and health upon receiving the debuff gets, the more damage the bursts do. Vice versa, the lower the difference gets, the lower is the damage of the bursts, so getting healed during it reduces its damage. It also means it does not matter how affected units lose health, as it directly compares its health values, not damage values. This is how much of the lost health is re-dealt as damage by the curse, depending on when the health was lost during the curse on each level (before reductions): 0\u20133.9 Seconds: 48%\/72%\/97%\/121% (TagTalent 94%\/118%\/142%\/166%) 3.9\u20137.9 Seconds: 32%\/48%\/64%\/80% (TagTalent 62%\/78%\/94%\/111%) 7.9\u201311.9 Seconds: 16%\/24%\/32%\/40% (TagTalent 31%\/39%\/47%\/55%)",
+        "The burst damage is entirely based on the difference between the hero's current health and its health as the curse got applied. This means the bigger the difference of current health and health upon receiving the debuff gets, the more damage the bursts do. Vice versa, the lower the difference gets, the lower is the damage of the bursts, so getting healed during it reduces its damage. It also means it does not matter how affected units lose health, as it directly compares its health values, not damage values. This is how much of the lost health is re-dealt as damage by Maledict, depending on when the health was lost during the curse on each level (before reductions): 0\u20133.9 Seconds: 48%\/72%\/97%\/121% (TagTalent 94%\/118%\/142%\/166%) 3.9\u20137.9 Seconds: 32%\/48%\/64%\/80% (TagTalent 62%\/78%\/94%\/111%) 7.9\u201311.9 Seconds: 16%\/24%\/32%\/40% (TagTalent 31%\/39%\/47%\/55%)",
         "This means the bigger the difference of current health and health upon receiving the debuff gets, the more damage the bursts do.",
         "Vice versa, the lower the difference gets, the lower is the damage of the bursts, so getting healed during it reduces its damage.",
         "It also means it does not matter how affected units lose health, as it directly compares its health values, not damage values.",
-        "This is how much of the lost health is re-dealt as damage by the curse, depending on when the health was lost during the curse on each level (before reductions): 0\u20133.9 Seconds: 48%\/72%\/97%\/121% (TagTalent 94%\/118%\/142%\/166%) 3.9\u20137.9 Seconds: 32%\/48%\/64%\/80% (TagTalent 62%\/78%\/94%\/111%) 7.9\u201311.9 Seconds: 16%\/24%\/32%\/40% (TagTalent 31%\/39%\/47%\/55%)",
-        "Deals its own damage in 1 second intervals, starting 1 second after the debuff is applied, resulting in 12 damage instances.",
+        "This is how much of the lost health is re-dealt as damage by Maledict, depending on when the health was lost during the curse on each level (before reductions): 0\u20133.9 Seconds: 48%\/72%\/97%\/121% (TagTalent 94%\/118%\/142%\/166%) 3.9\u20137.9 Seconds: 32%\/48%\/64%\/80% (TagTalent 62%\/78%\/94%\/111%) 7.9\u201311.9 Seconds: 16%\/24%\/32%\/40% (TagTalent 31%\/39%\/47%\/55%)",
+        "Deals its own damage in 1-second intervals, starting 1 second after the debuff is applied, resulting in 12 damage instances. Together with the bursts, it deals a total of 15 damage instances. The bursts happen 0.1 seconds before each 4th damage tick, so the bursts happen after the 3rd, 7th, and 11th damage tick.",
         "Together with the bursts, it deals a total of 15 damage instances.",
         "The bursts happen 0.1 seconds before each 4th damage tick, so the bursts happen after the 3rd, 7th, and 11th damage tick.",
         "With no other sources of health loss or heals, Maledict can deal up to 109.9\/249.6\/423.1\/634.8 (TagTalent 138.9\/312.8\/526.1\/783.5) damage to a unit (before reductions).",
@@ -130,12 +133,13 @@
       "params": [
         "Cast Animation: 0.35+0",
         "Cast Range: 575",
-        "Radius: 180 (TagTalent 260)",
+        "Radius: 180 (TagTalent 280)",
         "Damage per Second: 7\/14\/21\/28",
         "Lost Health as Burst Damage: 16%\/24%\/32%\/40% (TagTalent 31%\/39%\/47%\/55%)",
         "Burst Damage Interval: 4",
         "Curse Duration: 12",
-        "Cannot place the debuff on spell immune units. If already placed, the debuff stops applying the damage over time if the unit turns spell immune. The burst damage pierces spell immunity."
+        "Cannot place the debuff on spell immune units. If already placed, the debuff stops applying the damage over time if the unit turns spell immune. The burst damage pierces spell immunity.",
+        "Certain voodoo magics can make an enemy regret engaging the Witch Doctor."
       ],
       "itemBehaviour": [],
       "legacyKey": "E",
@@ -150,13 +154,16 @@
       "notes": [
         "Requires Aghanim's Shard to be unlocked.",
         "Turns Witch Doctor invulnerable, hidden, and unable to act for the duration.",
-        "The Death Ward is summoned at Witch Doctor's location. It is based on Death Ward's current level. If Death Ward is not learned, Voodoo Switcheroo does nothing on cast. Same notes as for Death Ward (TagTalent and upgrade) fully apply.",
+        "The Death Ward is summoned at Witch Doctor's location. It is based on Death Ward's current level. If Death Ward is not learned, Voodoo Switcheroo does nothing on cast. Same notes as for Death Ward and its upgrades fully apply.",
         "If Death Ward is not learned, Voodoo Switcheroo does nothing on cast.",
-        "Same notes as for Death Ward (TagTalent and upgrade) fully apply.",
-        "Voodoo Switcheroo cannot be canceled earlier.",
+        "Same notes as for Death Ward and its upgrades fully apply.",
+        "Voodoo Switcheroo cannot be canceled earlier, but it is dispellable. However, since Witch Doctor is invulnerable and hidden for the duration, most dispels cannot target him. Only continuous dispels such as Demonic Purge and Nullify can remove the spell if the debuff was applied before Voodoo Switcheroo was casted. In these cases, the spell ends immediately, wasting its mana and cooldown.",
+        "However, since Witch Doctor is invulnerable and hidden for the duration, most dispels cannot target him.",
+        "Only continuous dispels such as Demonic Purge and Nullify can remove the spell if the debuff was applied before Voodoo Switcheroo was casted. In these cases, the spell ends immediately, wasting its mana and cooldown.",
+        "In these cases, the spell ends immediately, wasting its mana and cooldown.",
         "The Death Ward has its attack speed reduced by 30, attacking slower than a regular Death Ward cast.",
         "With its 0.22 second attack rate and the 30 attack speed slow, it can attack up to 7 times.",
-        "With the current attack rate and damage, it can deal up to 270.45\/429.55\/588.64 (TagTalent 461.36\/620.45\/779.55) damage per second to a single hero.",
+        "With the current attack rate and damage, it can deal up to 270.45\/429.55\/588.64 (TagTalent 461.36\/620.45\/779.55\/) damage per second to a single hero.",
         "Can deal up to 595\/945\/1295 (TagTalent 1015\/1365\/1715) damage to a single hero (before reductions)."
       ],
       "mana": "250",
@@ -180,24 +187,23 @@
         "Affects Enemy Heroes"
       ],
       "notes": [
-        "The Death Ward automatically attacks enemy heroes within its attack range, using default auto-attack rules. Upon being created, the ward attacks the closest enemy hero to it. After that, it follows default auto-attack rules. It is possible to manually give the ward an attack target by just right-clicking an enemy hero in range. Giving an attack order while having Witch Doctor and the ward selected, does not cause the channeling to be canceled. It is also possible to stop the ward from attacking by ordering it to stop (only works when the auto-attack option is turned off).",
-        "Upon being created, the ward attacks the closest enemy hero to it. After that, it follows default auto-attack rules.",
-        "It is possible to manually give the ward an attack target by just right-clicking an enemy hero in range.",
-        "Giving an attack order while having Witch Doctor and the ward selected, does not cause the channeling to be canceled.",
-        "It is also possible to stop the ward from attacking by ordering it to stop (only works when the auto-attack option is turned off).",
+        "Death Ward automatically attacks enemy heroes within its attack range, using ◉ Standard auto attack rules. Upon being created, the ward attacks the closest enemy hero to it. After that, it follows default auto attack rules. It is possible to manually give Death Ward an attack target with A or Right Click an enemy in range. With Unified Orders with Ctrl, Ctrl+ Right Click an enemy in range will command Death Ward to attack the target. It is also possible to stop the wards from attacking with S (only works when the auto-attack option is ◎ Never).",
+        "Upon being created, the ward attacks the closest enemy hero to it. After that, it follows default auto attack rules.",
+        "It is possible to manually give Death Ward an attack target with A or Right Click an enemy in range.",
+        "With Unified Orders with Ctrl, Ctrl+ Right Click an enemy in range will command Death Ward to attack the target.",
+        "It is also possible to stop the wards from attacking with S (only works when the auto-attack option is ◎ Never).",
         "Can only attack heroes, including clones and illusions, excluding creep-heroes.",
-        "The damage source is the ward itself, meaning certain on-damage effects react on the ward rather than on Witch Doctor (e.g. Blade Mail).",
+        "The damage source is the ward itself, meaning certain on-damage effects react on the ward rather than on Witch Doctor (e.g. Blade Mail). Death Ward's attack damage is not reduced by Damage Block.",
+        "Death Ward's attack damage is not reduced by Damage Block.",
         "With its 0.22 second attack rate, it can attack up to 37 times.",
         "With the current attack rate and damage, it can deal up to 386.36\/613.64\/840.91 (TagTalent 659.09\/886.36\/1113.64) damage per second to a single hero.",
         "Can deal up to 3145\/4995\/6845 (TagTalent 5365\/7215\/9065) damage to a single hero (before reductions).",
-        "Death Ward's attack damage is not reduced by Damage Block.",
         "Provides 1200\/800 range ground vision for 5 seconds at its location after the channeling stops.",
-        "With Aghanim's Scepter, attacks from Death Ward bounce towards the closest enemy heroes, including clones and illusions, excluding creep-heroes. Does not perform instant attacks. The bouncing projectiles are entirely spell-based. This means they do not trigger any attack modifier or on-hit effects, ignore evasion, and count as spell damage. However, damage block affects them. The bouncing attacks deal damage based on the damage amount calculated for the leading attack. Attack damage amount is calculated upon attack begin. Does not bounce on invisible units or units in the fog of war. One projectile can never hit the same unit twice.",
+        "With Aghanim's Scepter, attacks from Death Ward have True Strike and bounce towards the closest enemy heroes within 650 range, including clones and illusions, excluding creep-heroes. Does not perform instant attacks. The bouncing projectiles are entirely spell-based. This means they do not trigger any attack modifier or on-hit effects, ignore evasion, and count as spell damage. However, damage block affects them. The bouncing attacks deal damage based on the damage amount calculated for the leading attack. Attack damage amount is calculated upon attack begin. Does not bounce on invisible units or units in the Fog of War. One projectile can never hit the same unit twice.",
         "Does not perform instant attacks. The bouncing projectiles are entirely spell-based.",
         "This means they do not trigger any attack modifier or on-hit effects, ignore evasion, and count as spell damage. However, damage block affects them.",
         "The bouncing attacks deal damage based on the damage amount calculated for the leading attack. Attack damage amount is calculated upon attack begin.",
-        "Does not bounce on invisible units or units in the fog of war. One projectile can never hit the same unit twice.",
-        "With Aghanim's Scepter, the Death Ward gains True Strike, so that it can no longer miss."
+        "Does not bounce on invisible units or units in the Fog of War. One projectile can never hit the same unit twice."
       ],
       "mana": "200",
       "hotKey": "R",
@@ -211,7 +217,8 @@
         "Bounce Distance: 650",
         "Death Ward attacks have True Strike and bounce between nearby enemies.",
         "Grants a new ability: Voodoo Switcheroo.",
-        "When disjointed by the primary attack target, it does not bounce. When disjointed by a secondary target, the disjointing unit is not registered as hit, meaning the attack can immediately bounce on it again if within range."
+        "When disjointed by the primary attack target, it does not bounce. When disjointed by a secondary target, the disjointing unit is not registered as hit, meaning the attack can immediately bounce on it again if within range.",
+        "Witch Doctor performs a ritualistic dance, one that haunts the dreams of those who live to recount it."
       ],
       "itemBehaviour": [],
       "legacyKey": "D",
@@ -232,7 +239,7 @@
     {
       "talentLvl": "25",
       "talentLeft": "+60 Death Ward Damage",
-      "talentRight": "+1.2% Max Health Voodoo Restoration"
+      "talentRight": "+1.5% Max Health Voodoo Restoration"
     },
     {
       "talentLvl": "20",
@@ -241,12 +248,12 @@
     },
     {
       "talentLvl": "15",
-      "talentLeft": "+80 Maledict AoE",
+      "talentLeft": "+100 Maledict AoE",
       "talentRight": "+2 Cask Bounces"
     },
     {
       "talentLvl": "10",
-      "talentLeft": "+5 Armor",
+      "talentLeft": "+200 Health",
       "talentRight": "+60 Damage"
     }
   ]

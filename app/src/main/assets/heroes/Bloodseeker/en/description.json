@@ -20,12 +20,12 @@
         },
         {
           "talentLvl": "15",
-          "talentLeft": "+75 Blood Rite Damage",
+          "talentLeft": "+85 Blood Rite Damage",
           "talentRight": "15% Lifesteal"
         },
         {
           "talentLvl": "10",
-          "talentLeft": "+6 Armor",
+          "talentLeft": "+7 Armor",
           "talentRight": "+30 Bloodrage Attack Speed"
         }
       ]
@@ -38,18 +38,18 @@
         "Damage Pure (TagAghanimHP Removal)"
       ],
       "notes": [
-        "If the target is more than 1050 range away, Bloodseeker moves to the target until it is within 800 range before casting. If a cast order is given on a target which is within 1050 range already, Bloodseeker does not need to move closer and casts it right away. ↓↓ Double-tapping automatically targets self.",
-        "If a cast order is given on a target which is within 1050 range already, Bloodseeker does not need to move closer and casts it right away.",
+        "If the target is more than 1050 range away, Bloodseeker moves to the target until it is within 800 range before casting. If a cast order is given on a target which is within 1050 range already, Bloodseeker does not need to move closer and ignores the cast backswing as well. ↓↓ Double-tapping automatically targets self.",
+        "If a cast order is given on a target which is within 1050 range already, Bloodseeker does not need to move closer and ignores the cast backswing as well.",
         "↓↓ Double-tapping automatically targets self.",
-        "Deals 1% of max health as damage in 0.5 second intervals, starting 0.5 seconds after cast, resulting in 16 instances. The damage is flagged as HP Removal, so it does not trigger any on-damage effects. Does not drain health while invulnerable. Health drain cannot bring the target's health below 1.",
+        "Deals 1% of max health as damage in 0.5-second intervals, starting 0.5 seconds after cast, resulting in 16 instances. The damage is flagged as HP Removal, so it does not trigger any on-damage effects. Does not drain health while invulnerable. Health drain cannot bring the target's health below 1.",
         "The damage is flagged as HP Removal, so it does not trigger any on-damage effects.",
         "Does not drain health while invulnerable. Health drain cannot bring the target's health below 1.",
         "Successive casts with different levels on a same target only refresh the duration, but do not update the attack speed and spell damage amplification.",
-        "Aghanim's Shard adds pure damage to Bloodseeker's attacks based on the target's maximum health. The damage is directly added to Bloodseeker's attack damage, however, it is ignored by percentage-based damage bonus or reductions. The damage cannot crit, cleave, or lifesteal with other sources of lifesteal than its own. Bloodrage's lifesteal is affected by lifesteal manipulation. Effectively deals 2.3%\/2.4%\/2.5%\/2.6% of max health as damage, considering Bloodrage's own outgoing damage amplification. Does not work against Roshan.",
+        "With Aghanim's Shard, Bloodseeker's attacks deals pure damage based on the target's maximum health. The damage is directly added to Bloodseeker's attack damage, however, it is ignored by percentage-based damage bonus or reductions. The damage cannot crit, cleave, or lifesteal with other sources of lifesteal than its own. Bloodrage's lifesteal is affected by lifesteal manipulation. Bloodrage's own outgoing damage amplification does not affect the shard's percentage-based pure damage. Does not work against Roshan.",
         "The damage is directly added to Bloodseeker's attack damage, however, it is ignored by percentage-based damage bonus or reductions.",
         "The damage cannot crit, cleave, or lifesteal with other sources of lifesteal than its own.",
         "Bloodrage's lifesteal is affected by lifesteal manipulation.",
-        "Effectively deals 2.3%\/2.4%\/2.5%\/2.6% of max health as damage, considering Bloodrage's own outgoing damage amplification.",
+        "Bloodrage's own outgoing damage amplification does not affect the shard's percentage-based pure damage.",
         "Does not work against Roshan."
       ],
       "mana": "25",
@@ -58,7 +58,7 @@
       "description": "Drives you into a bloodthirsty rage during which causes you to attack faster and deal more spell damage at the cost of a percentage of your health per second. Provides half attack speed to allied heroes.",
       "spellName": "Bloodrage",
       "params": [
-        "Cast Animation: 0+0\/0.5",
+        "Cast Animation: 0+0.4",
         "Default Cast Range: 800",
         "Buffer Cast Range: 1050",
         "Max Health as Cost per Second: 2%",
@@ -67,7 +67,8 @@
         "Outgoing Spell Damage Amplification: 15%\/20%\/25%\/30%",
         "Duration: 8",
         "Enemy Max Health as Damage\/Lifesteal: 2%",
-        "Bloodrage attacks now deal 2% of the target's max health as pure damage and heals Bloodseeker for that amount. Only works for Bloodseeker."
+        "Bloodrage attacks now deal 2% of the target's max health as pure damage and heals Bloodseeker for that amount. Only works for Bloodseeker.",
+        "Strygwyr shares his animalistic thirst for bloodshed."
       ],
       "itemBehaviour": [],
       "legacyKey": "D",
@@ -84,8 +85,8 @@
         "The affected area is visible to enemies.",
         "Applies a silence within the targeted area after the 2.6-second delay.",
         "Blood Rite first applies the damage, then the debuff.",
-        "With max level Bloodrage on Bloodseeker, Blood Rite deals 156\/208\/260\/312 (TagTalent 253.5\/305.5\/357.5\/409.5) damage (before reductions).",
-        "Choosing the damage upgrading talent immediately upgrades all of Bloodseeker's currently active Blood Rite casts when chosen during the delay.",
+        "With level 4 Bloodrage on Bloodseeker, Blood Rite deals 156\/208\/260\/312 (TagTalent 266.5\/318.5\/370.5\/422.5) damage (before reductions). The damage upgrading talent immediately upgrades all of Bloodseeker's currently active Blood Rite casts when chosen during the delay.",
+        "The damage upgrading talent immediately upgrades all of Bloodseeker's currently active Blood Rite casts when chosen during the delay.",
         "Grants 600 radius ground vision at the center of the affected area for 6 seconds after cast."
       ],
       "mana": "90\/100\/110\/120",
@@ -98,9 +99,10 @@
         "Cast Range: 1500",
         "Effect Radius: 600",
         "Effect Delay: 2.6",
-        "Damage: 120\/160\/200\/240 (TagTalent 195\/235\/275\/315)",
+        "Damage: 120\/160\/200\/240 (TagTalent 205\/245\/285\/325)",
         "Silence Duration: 3\/4\/5\/6",
-        "Silence persists if debuff was placed before spell immunity and when not dispelled."
+        "Silence persists if debuff was placed before spell immunity and when not dispelled.",
+        "The Flayed Twins are ever willing to aid those who spill blood upon the field of battle."
       ],
       "itemBehaviour": [],
       "legacyKey": "B",
@@ -114,26 +116,26 @@
       ],
       "notes": [
         "Learning Thirst unlocks maximum movement speed and removes the 550 movement speed cap for Bloodseeker.",
+        "When an enemy hero drops below 25% health, Thirst provides True Sight over the target and makes both their hero model and minimap icon visible through the Fog of War. When enemies are revealed by Thirst, a debuff and particle effects are placed on them, which is visible to everyone. Bloodseeker himself also gets a status buff and particle effects and speaks certain lines, making it clear that an enemy is currently being revealed by Thirst.",
+        "When enemies are revealed by Thirst, a debuff and particle effects are placed on them, which is visible to everyone.",
+        "Bloodseeker himself also gets a status buff and particle effects and speaks certain lines, making it clear that an enemy is currently being revealed by Thirst.",
+        "Thirst is not triggered by enemy illusions, but is triggered by hero clones. It is not triggered by hidden enemy heroes, but does react on invulnerable ones.",
+        "It is not triggered by hidden enemy heroes, but does react on invulnerable ones.",
         "The first stack is applied when an enemy hero is below 75% health and the last when below 26%.",
         "Grants 0.28%\/0.48%\/0.68%\/0.88% (TagTalent 0.56%\/0.76%\/0.96%\/1.16%) movement speed for each percent of missing health between 75% and 25%. However, since the HUD does not show decimals, movement speed increases by 1% for every missing 3.57%\/2.08%\/1.47%\/1.14% (TagTalent 1.79%\/1.32%\/1.04%\/0.86%) health.",
         "However, since the HUD does not show decimals, movement speed increases by 1% for every missing 3.57%\/2.08%\/1.47%\/1.14% (TagTalent 1.79%\/1.32%\/1.04%\/0.86%) health.",
-        "When an enemy hero drops below 25% health, Thirst provides True Sight over the target and makes both their hero model and minimap icon visible through the Fog of War.",
-        "When enemies are revealed by Thirst, a debuff and particle effects are placed on them, which is visible to everyone.",
-        "Bloodseeker himself also gets a status buff and particle effects and speaks certain lines, making it clear that an enemy is currently being revealed by Thirst.",
-        "Thirst is not triggered by enemy illusions, but is triggered by hero clones.",
-        "Is not triggered by hidden enemy heroes, but does react on invulnerable ones.",
-        "The bonuses linger for 4 seconds if the enemy dies. However, it does not linger, and disappears immediately if the enemy has Aegis of the Immortal or Reincarnation. The bonuses are always the maximum values, despite the health percentage the enemy had right before the killing blow.",
+        "The bonuses linger for 4 seconds if the enemy dies. However, it does not linger, and disappears immediately if the enemy has Reincarnation. The bonuses are always the maximum values, despite the health percentage the enemy had right before the killing blow.",
         "The bonuses are always the maximum values, despite the health percentage the enemy had right before the killing blow.",
-        "This is how much movement speed Bloodseeker gains from Thirst with a certain amount of heroes being below 25% of their maximum health: 1 Hero: 14%\/24%\/34%\/44% (TagTalent 28%\/38%\/48%\/58%) movement speed 2 Heroes: 28%\/48%\/68%\/88% (TagTalent 56%\/76%\/96%\/116%) movement speed 3 Heroes: 42%\/72%\/102%\/132% (TagTalent 84%\/114%\/144%\/174%) movement speed 4 Heroes: 56%\/96%\/136%\/176% (TagTalent 112%\/152%\/192%\/232%) movement speed 5 Heroes: 70%\/120%\/170%\/220% (TagTalent 140%\/190%\/240%\/290%) movement speed",
-        "1 Hero: 14%\/24%\/34%\/44% (TagTalent 28%\/38%\/48%\/58%) movement speed",
-        "2 Heroes: 28%\/48%\/68%\/88% (TagTalent 56%\/76%\/96%\/116%) movement speed",
-        "3 Heroes: 42%\/72%\/102%\/132% (TagTalent 84%\/114%\/144%\/174%) movement speed",
-        "4 Heroes: 56%\/96%\/136%\/176% (TagTalent 112%\/152%\/192%\/232%) movement speed",
-        "5 Heroes: 70%\/120%\/170%\/220% (TagTalent 140%\/190%\/240%\/290%) movement speed",
+        "This is how much movement speed Bloodseeker gains from Thirst with a certain amount of heroes being below 25% of their maximum health: 2 Heroes: 28%\/48%\/68%\/88% (TagTalent 56%\/76%\/96%\/116%) movement speed. 3 Heroes: 42%\/72%\/102%\/132% (TagTalent 84%\/114%\/144%\/174%) movement speed. 4 Heroes: 56%\/96%\/136%\/176% (TagTalent 112%\/152%\/192%\/232%) movement speed. 5 Heroes: 70%\/120%\/170%\/220% (TagTalent 140%\/190%\/240%\/290%) movement speed.",
+        "2 Heroes: 28%\/48%\/68%\/88% (TagTalent 56%\/76%\/96%\/116%) movement speed.",
+        "3 Heroes: 42%\/72%\/102%\/132% (TagTalent 84%\/114%\/144%\/174%) movement speed.",
+        "4 Heroes: 56%\/96%\/136%\/176% (TagTalent 112%\/152%\/192%\/232%) movement speed.",
+        "5 Heroes: 70%\/120%\/170%\/220% (TagTalent 140%\/190%\/240%\/290%) movement speed.",
+        "",
         "The heal is based on the dying unit's maximum health, and not on Bloodseeker's health.",
-        "Heals from any non-hero unit killed, and from heroes killed. Also heals from heroes that die within 300 radius of Bloodseeker.",
-        "Does not heal upon killing illusions, Tempest Doubles, Roshan, wards, buildings, or allied units.",
-        "Enemies dying within 300 range of Bloodseeker always trigger the heal, no matter how they die."
+        "Heals from any non-hero unit killed, and from heroes killed. Always trigger the heal from heroes that die within 300 radius of Bloodseeker, no matter how they die.",
+        "Always trigger the heal from heroes that die within 300 radius of Bloodseeker, no matter how they die.",
+        "Does not heal upon killing illusions, Tempest Doubles, Roshan, wards, buildings, or allied units."
       ],
       "mana": null,
       "hotKey": "E",
@@ -151,7 +153,8 @@
         "Speed Linger Duration: 4",
         "Completely ignores spell immune enemies.",
         "Disables the detection, movement speed bonus, and the movement speed limit removal, but not the heal on kill or nearby death.",
-        "Heal and speed limit removal work for illusions, movement speed bonus and detection do not."
+        "Heal and speed limit removal work for illusions, movement speed bonus and detection do not.",
+        "Strygwyr becomes frenzied when blood is spilled."
       ],
       "itemBehaviour": [],
       "legacyKey": "T",
@@ -169,29 +172,33 @@
         "If the unit's position changed between checks, it takes damage based on the distance.",
         "If the unit did not move, or moved a distance greater than 1300 between a check, no damage is applied.",
         "If the unit is invulnerable as a check occurs, the value is set nil, so that it does not take damage on the next check, regardless of distance.",
-        "This is how much damage Rupture deals (before reductions) when the affected unit travels certain distances: 300 Distance: 108\/144\/180 damage 600 Distance: 216\/288\/360 damage 900 Distance: 324\/432\/540 damage 1200 Distance: 432\/576\/720 damage 1500 Distance: 540\/720\/900 damage",
-        "300 Distance: 108\/144\/180 damage",
-        "600 Distance: 216\/288\/360 damage",
-        "900 Distance: 324\/432\/540 damage",
-        "1200 Distance: 432\/576\/720 damage",
-        "1500 Distance: 540\/720\/900 damage",
+        "The initial damage is dealt upon placing the buff, but not again upon refreshing it.",
+        "This is how much damage Rupture deals (before reductions) when the affected unit travels certain distances: 300 Distance: 99\/132\/165 damage. 600 Distance: 198\/264\/330 damage. 900 Distance: 297\/396\/495 damage. 1200 Distance: 396\/528\/660 damage. 1500 Distance: 495\/660\/825 damage.",
+        "300 Distance: 99\/132\/165 damage.",
+        "600 Distance: 198\/264\/330 damage.",
+        "900 Distance: 297\/396\/495 damage.",
+        "1200 Distance: 396\/528\/660 damage.",
+        "1500 Distance: 495\/660\/825 damage.",
         "Multiple casts on the same target do not stack, but refresh the duration instead.",
         "Despite the sounds, affected units take no damage when moving upwards (with e.g. Torrent or Impale).",
-        "Can be cast on, but cannot damage couriers."
+        "Can be cast on, but cannot damage Couriers.",
+        "With Aghanim's Scepter, Rupture goes on a 0.25-second cooldown when cast, this is to prevent accidental double-casts on the same target."
       ],
       "mana": "100\/150\/200",
       "hotKey": "R",
       "cooldown": "70 (TagTalent 0.25)",
-      "description": "Causes an enemy unit's skin to rupture. If the unit moves, it takes damage based on the distance moved. The damage is dealt through spell immunity.",
+      "description": "Causes an enemy unit's skin to rupture, dealing initial damage based on its current health. If the unit moves, it takes damage based on the distance moved. The damage is dealt through spell immunity.",
       "spellName": "Rupture",
       "params": [
         "Cast Animation: 0.4+0.53",
         "Cast Range: 800 (TagTalent 1275)",
-        "Moved Distance as Damage: 36%\/48%\/60%",
+        "Initial Current Health as Damage: 10%",
+        "Moved Distance as Damage: 33%\/44%\/55%",
         "Duration: 10\/11\/12",
         "Number of Charges: 2",
         "Charge Replenish Time: 40",
-        "Grants 2 charges to Rupture with a 40 seconds replenish time."
+        "Grants 2 charges to Rupture with a 40 seconds replenish time.",
+        "When the Bloodseeker hunts you, injuries become fatalities."
       ],
       "itemBehaviour": [],
       "legacyKey": "R",
@@ -221,12 +228,12 @@
     },
     {
       "talentLvl": "15",
-      "talentLeft": "+75 Blood Rite Damage",
+      "talentLeft": "+85 Blood Rite Damage",
       "talentRight": "15% Lifesteal"
     },
     {
       "talentLvl": "10",
-      "talentLeft": "+6 Armor",
+      "talentLeft": "+7 Armor",
       "talentRight": "+30 Bloodrage Attack Speed"
     }
   ]

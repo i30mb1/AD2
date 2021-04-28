@@ -2,7 +2,7 @@
   "abilities": [
     {
       "notes": [
-        "The agility talent effectively grants Slark 1.17 armor, 7 attack speed, and 7 attack damage.",
+        "The agility talent effectively grants Slark 1.33 armor, 8 attack speed, and 8 attack damage.",
         "The strength talent effectively grants Slark 180 health and 0.9 health regeneration.",
         "The lifesteal talent stacks additively with other sources of lifesteal."
       ],
@@ -20,12 +20,12 @@
         },
         {
           "talentLvl": "15",
-          "talentLeft": "15% Lifesteal",
+          "talentLeft": "18% Lifesteal",
           "talentRight": "+20 Attack Speed"
         },
         {
           "talentLvl": "10",
-          "talentLeft": "+7 Agility",
+          "talentLeft": "+8 Agility",
           "talentRight": "+9 Strength"
         }
       ]
@@ -38,13 +38,13 @@
         "Damage Magical"
       ],
       "notes": [
-        "Dark Pact interrupts Slark's channeling spells upon cast.",
-        "Deals 7.5\/15\/22.5\/30 (TagTalent 19.5\/27\/34.5\/42) damage within a 325 radius in 0.1 second intervals, starting 1.5 seconds after cast for a total of 10 instances.",
-        "Slark takes 3.75\/7.5\/11.25\/15 (TagTalent 9.75\/13.5\/17.25\/21) damage in the same intervals, resulting in 37.5\/75\/112.5\/150 (TagTalent 97.5\/135\/172.5\/210) total damage.",
+        "Dark Pact interrupts Slark's channeling abilities upon cast.",
+        "Deals 7.5\/15\/22.5\/30 (TagTalent 19.5\/27\/34.5\/42) damage within a 325 radius in 0.1-second intervals, starting 1.5 seconds after cast for a total of 10 instances.",
+        "Slark takes 3.75\/7.5\/11.25\/15 (TagTalent 9.75\/13.5\/17.25\/21) damage in the same intervals, resulting in 37.5\/75\/112.5\/150 (TagTalent 97.5\/135\/172.5\/210) total damage. Applies a strong dispel on Slark in the same intervals, before each of its damage instances. The self-inflicted damage can be reduced or amplified, but can never kill Slark.",
         "Applies a strong dispel on Slark in the same intervals, before each of its damage instances.",
         "The self-inflicted damage can be reduced or amplified, but can never kill Slark.",
         "The visual effects and sounds during the 1.5 seconds delay is only visible and audible to allies.",
-        "The visual effect of the damaging pulses are visible even when Slark is invisible.",
+        "The visual effects of the damaging pulses are visible even when Slark is invisible.",
         "Dark Pact ends 2.5 seconds after cast, but ends instantly when Slark dies.",
         "Re-casting Dark Pact during the effect delay cancels the previous cast and starts a new one instead."
       ],
@@ -58,7 +58,8 @@
         "Damage Radius: 325",
         "Effect Delay: 1.5",
         "Total Damage: 75\/150\/225\/300 (TagTalent 195\/270\/345\/420)",
-        "Self Damage Percentage: 50%"
+        "Self Damage Percentage: 50%",
+        "Slithereen are capable of quickly regrowing appendages, in case of critical injury, to save their own lives."
       ],
       "itemBehaviour": [],
       "legacyKey": "C",
@@ -71,19 +72,19 @@
         "Affects Enemy Heroes \/ Self"
       ],
       "notes": [
-        "Slark leaps forward at a speed of 933.33 (TagTalent 1599.99) for up to 0.75 seconds.",
+        "Slark leaps forward at a speed of 933.33 (1599.99) for up to 0.75 seconds.",
         "Always jumps for the full distance, unless an enemy hero gets within 95 radius of Slark during the jump.",
-        "Leashes the hit enemy hero, preventing them from casting certain mobility spells.",
-        "Can latch on enemy heroes up to 795 range away (max distance + latch radius).",
-        "Slark can turn, cast spells, and use items during Pounce, but cannot attack.",
-        "Pounce can latch on invisible units, but not on invulnerable\/hidden units, or on illusions.",
+        "Leashes the hit enemy hero, preventing them from casting certain mobility spells. With the max distance and latch radius, Pounce can latch on enemy heroes up to 795 range away.",
+        "With the max distance and latch radius, Pounce can latch on enemy heroes up to 795 range away.",
+        "Slark can turn, cast abilities, and use items during Pounce, but cannot attack.",
+        "Pounce can latch on invisible units, but not on invulnerable, hidden units, or on illusions.",
         "When latching on a unit, Slark is automatically ordered to attack the target.",
         "The more the leash gets stretched, the slower the affected unit can walk away from the center, eventually coming to a full stop. It directly affects the target's movement speed.",
-        "If cast before getting leashed, the following spells are not able to break the leash: Skewer, Leap, Pounce, Tree Dance, Primal Spring, Toggle Movement, and Hurricane Pike when targeting an enemy.",
-        "Every other position changing effect, including spells like Primal Roar and Blinding Light, can break the leash.",
-        "Force Staff and a self-targeted Hurricane Pike instantly break the leash when cast, while other sources of forced movement only break it when stretched beyond the max radius.",
-        "When the leash expires while a position changing effect is ongoing, it instantly cancels the position changing effect. This goes for the following spells: Flamebreak, Primal Roar, Power Cogs, Hookshot, Vacuum, Gust, Boulder Smash, Rolling Boulder, Geomagnetic Grip, Deafening Blast, Tether, Blinding Light, Adaptive Strike (Strength), Blast Off!, Charge of Darkness, Greater Bash, Timber Chain, Walrus PUNCH!, Force Staff and Hurricane Pike.",
-        "This goes for the following spells: Flamebreak, Primal Roar, Power Cogs, Hookshot, Vacuum, Gust, Boulder Smash, Rolling Boulder, Geomagnetic Grip, Deafening Blast, Tether, Blinding Light, Adaptive Strike (Strength), Blast Off!, Charge of Darkness, Greater Bash, Timber Chain, Walrus PUNCH!, Force Staff and Hurricane Pike.",
+        "If cast before getting leashed, the following abilities are not able to break the leash Skewer, Leap, Pounce, Tree Dance, Primal Spring, Toggle Movement, and Hurricane Pike when targeting an enemy.",
+        "Every other position changing effect, including abilities like Primal Roar and Blinding Light, can break the leash only if it is stretched beyond the max leash radius. Force Staff and ↓↓ Double-tapping Hurricane Pike instantly break the leash when cast.",
+        "Force Staff and ↓↓ Double-tapping Hurricane Pike instantly break the leash when cast.",
+        "When the leash expires while a position changing effect is ongoing, it instantly cancels the position changing effect. This goes for the following abilities: Flamebreak, Primal Roar, Power Cogs, Hookshot, Vacuum, Gust, Boulder Smash, Rolling Boulder, Geomagnetic Grip, Deafening Blast, Tether, Blinding Light, Adaptive Strike (Strength), Blast Off!, Charge of Darkness, Greater Bash, Timber Chain, Walrus PUNCH!, Force Staff and Hurricane Pike.",
+        "This goes for the following abilities: Flamebreak, Primal Roar, Power Cogs, Hookshot, Vacuum, Gust, Boulder Smash, Rolling Boulder, Geomagnetic Grip, Deafening Blast, Tether, Blinding Light, Adaptive Strike (Strength), Blast Off!, Charge of Darkness, Greater Bash, Timber Chain, Walrus PUNCH!, Force Staff and Hurricane Pike.",
         "Pounce destroys trees within 100 radius around Slark upon landing.",
         "Pounce cannot be cast during Pounce. During the leap, Pounce is on an unrefreshable cooldown which is bound to the leap buff."
       ],
@@ -94,7 +95,7 @@
       "spellName": "Pounce",
       "params": [
         "Cast Animation: 0+0.53",
-        "Leap Distance: 700 (TagAghanim 1200)",
+        "Leap Distance: 700 (TagTalent 1200)",
         "Latch Radius: 95",
         "Leash Radius: 400",
         "Leash Duration: 2.5\/2.75\/3\/3.25 (TagTalent 3.3\/3.55\/3.8\/4.05)",
@@ -102,7 +103,8 @@
         "Charge Replenish Time: 10",
         "Provides 2 charges and increases pounce range.",
         "Leash persists if debuff was placed before spell immunity and when not dispelled. Leash can be dispelled by spell immunity only.",
-        "Getting rooted during the leap does not cancel the leap."
+        "Getting rooted during the leap does not cancel the leap.",
+        "Time in the Dark Reef made Slark a dangerous assassin; aggressive and fearless."
       ],
       "itemBehaviour": [],
       "legacyKey": "E",
@@ -115,14 +117,14 @@
         "Affects Enemy Heroes \/ Self"
       ],
       "notes": [
-        "Essence Shift steals \/ \/ attributes before attack damage is applied.",
-        "Successive attacks do not refresh the duration of all stolen\/lost attributes. Each stack has its own duration.",
-        "The status buff and debuff icon show the number of current stacks and show the duration of the last stack.",
-        "Effective stats loss per stack of essence shift: 1 attack damage, 20 health, 0.1 health regeneration, 0.17 armor, 1 attack speed, 12 mana, 0.05 mana regeneration.",
+        "Essence Shift steals 1 of \/ \/ all attributes before the attack damage is applied.",
+        "Effective stats loss per stack of Essence Shift: 1 attack damage, 20 health, 0.1 health regeneration, 0.17 armor, 1 attack speed, 12 mana, 0.05 mana regeneration. Effectively grants Slark 0.5 armor, 3 attack speed, and 3 attack damage per stack.",
         "Effectively grants Slark 0.5 armor, 3 attack speed, and 3 attack damage per stack.",
         "Essence Shift cannot reduce any attribute below 0. However, Slark continues to gain agility, both temporarily and permanently, even when the attacked hero has no more attributes left to steal.",
+        "Successive attacks do not refresh the duration of all stolen or lost attributes. Each stack has its own duration. The status buff and debuff icon show the number of current stacks and show the duration of the last stack.",
+        "The status buff and debuff icon show the number of current stacks and show the duration of the last stack.",
         "When Slark dies, he loses all temporarily stolen attributes, but the affected enemies do not get theirs back, and vice versa.",
-        "Cannot steal attributes from illusions, but can steal from hero clones.",
+        "Cannot steal attributes from illusions, but can steal from hero clones. Cannot steal permanent attributes from Tempest Double, but can steal from Meepo Clones. Can steal attributes from allies.",
         "Cannot steal permanent attributes from Tempest Double, but can steal from Meepo Clones.",
         "Can steal attributes from allies.",
         "To permanently steal agility, an enemy hero has to die within 300 range of Slark while having the Essence Shift debuff. Alternatively, Slark also steals agility when he kills a debuffed enemy hero from any distance.",
@@ -139,37 +141,43 @@
         "All Attributes Lost per Attack: 1",
         "Agility Gained per Attack: 3",
         "Duration: 15\/30\/60\/100 (TagTalent 80\/95\/125\/165)",
-        "Prevents gaining new stacks. Already existing stacks still provide bonus agility. Does not prevent permanently stealing agility."
+        "Prevents gaining new stacks. Already existing stacks still provide bonus agility. Does not prevent permanently stealing agility.",
+        "With each strike at his adversaries, Slark's knowledge of their weaknesses improves."
       ],
       "itemBehaviour": [],
       "legacyKey": "N",
       "story": "With each strike at his adversaries, Slark's knowledge of their weaknesses improves."
     },
     {
-      "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/b\/bb\/Slark_Fish_Bait.mp3\/revision\/latest?cb=20210103154843",
+      "audioUrl": null,
       "effects": [
-        "Ability Target Unit",
-        "Affects Enemies \/ Self"
+        "Ability Target Area",
+        "Affects Allies"
       ],
       "notes": [
         "Requires Aghanim's Shard to be unlocked.",
-        "The projectile travels at a speed of 1250.",
-        "Exposes the target, revealing their model through the fog of war, and provides True Sight over them.",
-        "Leashing the targeted enemy with Pounce grants Slark the attack speed buff, matching Pounce's duration. There is no limit for how often this can be done. Each Pounce landed on the target grants the buff.",
-        "There is no limit for how often this can be done. Each Pounce landed on the target grants the buff."
+        "The invisibility is granted by an aura. Its buff lingers for 0.5 seconds. The aura does not affect invulnerable units, so if a unit affected by Depth Shroud turns invulnerable, it gets revealed.",
+        "The aura does not affect invulnerable units, so if a unit affected by Depth Shroud turns invulnerable, it gets revealed.",
+        "Units affected by Depth Shroud turn invisible and cannot be revealed by anything (except for Chronosphere). However, the cloud created is visible to enemies.",
+        "The cloud created is based on the current level of Shadow Dance. It does not grant phased movement. The movement speed and max health as regeneration bonus of Depth Shroud and Shadow Dance stack independently. If Shadow Dance is not learned, nothing happens, wasting mana and cooldown.",
+        "It does not grant phased movement.",
+        "The movement speed and max health as regeneration bonus of Depth Shroud and Shadow Dance stack independently.",
+        "If Shadow Dance is not learned, nothing happens, wasting mana and cooldown.",
+        "Can regenerate up to 17.5%\/21%\/24.5% max health over its full duration."
       ],
-      "mana": "50",
+      "mana": "75",
       "hotKey": "D",
-      "cooldown": "9",
-      "description": "Reduce movement speed of an enemy by 30% for 6 seconds and provide true sight vision over them. If Slark pounces on the enemy during that time, he will be rewarded with 75 Attack Speed for the duration of the Leash.",
-      "spellName": "Fish Bait",
+      "cooldown": "75",
+      "description": "Creates a cloud at the target location. All allies inside the cloud are hidden and have increased regeneration and movement speed",
+      "spellName": "Depth Shroud",
       "params": [
-        "Cast Animation: 0.2+0.67",
-        "Cast Range: 1100",
-        "Move Speed Slow: 30%",
-        "Pounce Attack Speed Bonus: 75",
-        "Duration: 6",
-        "Blocked upon impact."
+        "Cast Animation: 0.1+?",
+        "Cast Range: 800",
+        "Radius: 300",
+        "Move Speed Bonus: 24%\/36%\/48%",
+        "Max Health as Regen per Second: 5%\/6%\/7%",
+        "Duration: 3",
+        "Aura Linger Duration: 0.5"
       ],
       "itemBehaviour": [],
       "legacyKey": "F",
@@ -182,16 +190,16 @@
         "Affects Self"
       ],
       "notes": [
-        "Shadow Dance interrupts Slark's channeling spells upon cast.",
-        "Slark gains or loses the health regen and movement speed bonus 0.5 seconds after getting in or out of enemy vision, or casting Shadow Dance.",
-        "If Slark is damaged by a neutral creep, the health regen and movement speed bonus are lost for 2 seconds.",
+        "Shadow Dance interrupts Slark's channeling abilities upon cast.",
+        "Slark gains or loses the health regeneration and movement speed bonus 0.5 seconds after getting in or out of enemy vision, or casting Shadow Dance.",
+        "If Slark is damaged by a neutral creep, the health regeneration and movement speed bonus are lost for 2 seconds.",
         "When casting Shadow Dance, he turns invisible and cannot be revealed by anything. However, the black cloud created is visible to enemies.",
-        "The invisibility is granted by an aura, however, its buff does not linger. The aura does not affect invulnerable units, so if Slark turns invulnerable during it, he gets revealed.",
+        "The invisibility is granted by an aura, however, its buff does not linger. The aura does not affect invulnerable units, so if Slark turns invulnerable during it, he gets revealed. Shadow Dance does not grant phased movement.",
         "The aura does not affect invulnerable units, so if Slark turns invulnerable during it, he gets revealed.",
-        "Can regenerate up to 20%\/25.5%\/31.5% (TagTalent 25%\/31.5%\/38.5%) of Slark's max health over its full duration.",
+        "Shadow Dance does not grant phased movement.",
+        "Can regenerate up to 20%\/25.5%\/31.5% of Slark's max health over its full duration. Can regenerate up to 300%\/360%\/420% of Slark's max health in one minute. Can fully regenerate Slark's health within 20\/16.67\/14.29 seconds.",
         "Can regenerate up to 300%\/360%\/420% of Slark's max health in one minute.",
-        "Can fully regenerate Slark's health within 20\/16.67\/14.29 seconds.",
-        "Shadow Dance does not allow Slark to walk through units."
+        "Can fully regenerate Slark's health within 20\/16.67\/14.29 seconds."
       ],
       "mana": "120",
       "hotKey": "R",
@@ -202,14 +210,15 @@
         "Cast Animation: 0+0",
         "Aura Radius: 0",
         "Fade Time: 0",
-        "Move Speed Bonus: 20%\/35%\/50%",
+        "Move Speed Bonus: 24%\/36%\/48%",
         "Max Health as Regen per Second: 5%\/6%\/7%",
         "Passive Activation Delay: 0.5",
         "Neutral Creep Damage Deactivate Duration: 2",
         "Active Duration: 4\/4.25\/4.5 (TagTalent 5\/5.25\/5.5)",
-        "Grants a new ability: Fish Bait.",
+        "Grants a new ability: Depth Shroud.",
         "Regeneration and movement speed bonus are disabled, active invisibility is not.",
-        "Illusions get the buff, but it does not grant them the health regen and movement speed."
+        "Illusions get the buff, but it does not grant them the health regen and movement speed.",
+        "The hidden Thirteenth is a slippery foe."
       ],
       "itemBehaviour": [],
       "legacyKey": "D",
@@ -239,12 +248,12 @@
     },
     {
       "talentLvl": "15",
-      "talentLeft": "15% Lifesteal",
+      "talentLeft": "18% Lifesteal",
       "talentRight": "+20 Attack Speed"
     },
     {
       "talentLvl": "10",
-      "talentLeft": "+7 Agility",
+      "talentLeft": "+8 Agility",
       "talentRight": "+9 Strength"
     }
   ]

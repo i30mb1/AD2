@@ -2,6 +2,7 @@
   "abilities": [
     {
       "notes": [
+        "The strength talent effectively grants Axe 180 health, 0.9 health regeneration, and 9 attack damage.",
         "The health talent increases maximum health capacity, and keeps the current health percentage."
       ],
       "spellName": "Talent",
@@ -23,8 +24,8 @@
         },
         {
           "talentLvl": "10",
-          "talentLeft": "+1.75 Mana Regen",
-          "talentRight": "+25 Attack Speed"
+          "talentLeft": "+1.5 Mana Regen",
+          "talentRight": "+9 Strength"
         }
       ]
     },
@@ -35,17 +36,17 @@
         "Affects Enemies \/ Self"
       ],
       "notes": [
-        "Taunts affected enemies, forcing them to attack Axe. Does not silence, so active attack modifiers with autocast on are still applied.",
+        "Taunts affected enemies, forcing them to attack Axe. Does not silence, so active attack modifiers with autocast on are still applied. Affects invisible units and units in the Fog of War. Does not affect towers, wards, invulnerable or hidden units. Does not affect lane creeps from the very first creep wave that spawns, until they meet the opposing creeps in the lane.",
         "Does not silence, so active attack modifiers with autocast on are still applied.",
         "Affects invisible units and units in the Fog of War. Does not affect towers, wards, invulnerable or hidden units.",
+        "Does not affect lane creeps from the very first creep wave that spawns, until they meet the opposing creeps in the lane.",
         "Re-casting on a unit under the taunt effect of Berserker's Call refreshes the duration.",
         "When Axe dies, the taunt ends immediately.",
-        "Does not affect lane creeps from the very first creep wave that spawns, until they meet the opposing creeps in the lane.",
-        "When having Aghanim's Scepter, Battle Hunger is applied to all enemies caught by the call."
+        "With Aghanim's Scepter, Battle Hunger of its current level is applied to all enemies within 300 (TagTalent 400) radius."
       ],
       "mana": "80\/90\/100\/110",
       "hotKey": "Q",
-      "cooldown": "16\/14\/12\/10 (TagTalent 14\/12\/10\/8)",
+      "cooldown": "16\/14\/12\/10 (TagTalent 13\/11\/9\/7)",
       "description": "Axe taunts nearby enemy units, forcing them to attack him, while he gains bonus armor during the duration.",
       "spellName": "Berserker's Call",
       "params": [
@@ -53,7 +54,8 @@
         "Radius: 300 (TagTalent 400)",
         "Armor Bonus: 30",
         "Duration: 2\/2.4\/2.8\/3.2",
-        "Berserker's Call applies Battle Hunger to affected units. Reduces Berserker's Call cooldown by 2."
+        "Berserker's Call applies Battle Hunger to affected units. Reduces Berserker's Call cooldown by 3.",
+        "Mogul Khan's warcry taunts opponents into engaging in an unconquerable battle with the Axe."
       ],
       "itemBehaviour": [],
       "legacyKey": "E",
@@ -67,19 +69,20 @@
         "Damage Magical"
       ],
       "notes": [
-        "Reduces non-hero units' movement speed by 6% (TagTalent and armor by 3.5). Treats creep-heroes as creeps.",
-        "Battle Hunger has a passive modifier that is present at all times, but hidden when the stack count is at 0. This modifier gains 1 stack for every affected creep (treats creep-heroes as creeps), and 2 for every affected hero. Each stack grants Axe 6% movement speed (TagTalent and 3.5 armor). This means each affected hero effectively grants Axe 12% movement speed (TagTalent and 7 armor). This modifier has no stack limit.",
-        "This modifier gains 1 stack for every affected creep (treats creep-heroes as creeps), and 2 for every affected hero.",
-        "Each stack grants Axe 6% movement speed (TagTalent and 3.5 armor).",
-        "This means each affected hero effectively grants Axe 12% movement speed (TagTalent and 7 armor).",
+        "Reduces non-hero units' movement speed by 6% (and armor by 3.5). Battle Hunger treats creep-heroes as creeps.",
+        "Battle Hunger treats creep-heroes as creeps.",
+        "Battle Hunger has a passive modifier that is present at all times, but hidden when the stack count is at 0. This modifier gains 1 stack for every affected creep, and 2 for every affected hero. Each stack grants Axe 6% movement speed (and 3.5 armor). This means each affected hero effectively grants Axe 12% movement speed (and 7 armor). This modifier has no stack limit.",
+        "This modifier gains 1 stack for every affected creep, and 2 for every affected hero.",
+        "Each stack grants Axe 6% movement speed (and 3.5 armor).",
+        "This means each affected hero effectively grants Axe 12% movement speed (and 7 armor).",
         "This modifier has no stack limit.",
         "Casting Battle Hunger multiple times on the same target does not stack, but refreshes the duration instead.",
-        "Deals damage in 1 second intervals, starting 1 second after the debuff is placed, resulting in 12 instances.",
+        "Deals damage in 1-second intervals, starting 1 second after the debuff is placed, resulting in 12 instances.",
         "Can deal up to 192\/288\/384\/480 (TagTalent 1392\/1488\/1584\/1680) damage (before reductions) when lasting its full duration.",
         "The debuff can be removed by killing any unit that is not an illusion, in any way. This includes buildings, wards, and denying allied units. The affected unit itself has to make the kill to remove the debuff. Summons or illusions owned by the same player do not remove it when they make a kill.",
         "The affected unit itself has to make the kill to remove the debuff. Summons or illusions owned by the same player do not remove it when they make a kill.",
-        "Leveling up Battle Hunger does not update the damage of already placed debuffs. However, choosing the damage upgrading talent immediately upgrades all of Axe's currently active Battle Hunger debuffs.",
-        "However, choosing the damage upgrading talent immediately upgrades all of Axe's currently active Battle Hunger debuffs."
+        "Leveling up Battle Hunger does not update the damage of already placed debuffs. However, the damage upgrading talent immediately upgrades all current active Battle Hunger debuffs.",
+        "However, the damage upgrading talent immediately upgrades all current active Battle Hunger debuffs."
       ],
       "mana": "50\/60\/70\/80",
       "hotKey": "W",
@@ -97,7 +100,8 @@
         "Enemy Armor Reduction: 7",
         "Self Armor Bonus per Affected Enemy: 7",
         "Battle Hunger also reduces enemy armor by 7 and grants Axe 7 armor per affected targeted.",
-        "Slow persists, and attempts to damage if debuff was placed before spell immunity and when not dispelled."
+        "Slow persists, and attempts to damage if debuff was placed before spell immunity and when not dispelled.",
+        "Ordinary heroes cannot withstand Mogul Khan's rage for battle, such that it injures them until it is satisfied."
       ],
       "itemBehaviour": [],
       "legacyKey": "R",
@@ -112,8 +116,8 @@
       ],
       "notes": [
         "Can only proc when an enemy unit lands an attack on Axe, regardless of distance. This means it cannot proc on missed attacks.",
+        "Can proc on the secondary attacks from other instant attacks. Secondary attacks from Moon Glaives, Death Ward, Split Shot and Flak Cannon cannot trigger Counter Helix. Cannot proc on attacks from buildings, wards and allies.",
         "Secondary attacks from Moon Glaives, Death Ward, Split Shot and Flak Cannon cannot trigger Counter Helix.",
-        "Can proc on the secondary attacks from other instant attacks.",
         "Cannot proc on attacks from buildings, wards and allies.",
         "Despite the visual effects, the damage is applied instantly within the radius.",
         "Counter Helix uses pseudo-random distribution.",
@@ -128,12 +132,13 @@
       "spellName": "Counter Helix",
       "params": [
         "Radius: 275",
-        "Proc Chance: 17%\/18%\/19%\/20%",
+        "Proc Chance: 17%\/18%\/19%\/20% (TagTalent 27%\/28%\/29%\/30%)",
         "Damage: 60\/100\/140\/180",
         "Attack Speed Bonus: 35",
-        "Causes Axe's attacks to have a chance to proc a Counter Helix. Attack procs ignore Counter Helix cooldown. Increases attack speed by 35.",
+        "Causes Axe's attacks to have a chance to proc a Counter Helix. Attack procs ignore Counter Helix cooldown. Increases attack speed by 35 and proc chance by 10%.",
         "If Break is applied by an attack, Counter Helix may trigger first on that attack before getting disabled.",
-        "Axe illusions have a fully functional Counter Helix."
+        "Axe illusions have a fully functional Counter Helix.",
+        "Axe is the only reinforcement this army needs."
       ],
       "itemBehaviour": [],
       "legacyKey": "X",
@@ -147,15 +152,15 @@
         "Damage Magical \/ Instant Kill"
       ],
       "notes": [
-        "When the target's health is above the threshold, it only applies its regular damage (magical) and plays a different sound. Even when the target dies to the regular damage (possible with damage amplifications), the other effects of Culling Blade are not applied.",
-        "Even when the target dies to the regular damage (possible with damage amplifications), the other effects of Culling Blade are not applied.",
-        "When the target's health is below the threshold, it does the following: It deals pure damage to the target equal to the health threshold value (flagged as HP Removal). It applies the speed bonus to Axe and nearby allies. If the target was a hero, clone or illusion, its cooldown gets reset.",
-        "It deals pure damage to the target equal to the health threshold value (flagged as HP Removal).",
-        "It applies the speed bonus to Axe and nearby allies.",
+        "When the target's health is above the threshold, it deals its regular magical damage to the target and plays a different sound. Even when the target dies to the regular damage (possible with damage amplifications), the other bonuses of Culling Blade are not granted.",
+        "Even when the target dies to the regular damage (possible with damage amplifications), the other bonuses of Culling Blade are not granted.",
+        "When the target's health is below the 250\/350\/450 (TagTalent 400\/500\/600) threshold, it does the following: It deals pure damage, flagged as HP Removal, to the target equal to the health threshold value. It applies the movement and attack speed bonus to Axe and nearby allies. If the target was a hero, clone or illusion, its cooldown gets reset.",
+        "It deals pure damage, flagged as HP Removal, to the target equal to the health threshold value.",
+        "It applies the movement and attack speed bonus to Axe and nearby allies.",
         "If the target was a hero, clone or illusion, its cooldown gets reset.",
-        "The target's health is checked upon reaching the cast point, so if it gained health during that time so it exceeds the health threshold, the cull fails.",
+        "The target's health is checked upon reaching the cast point, so if it gained health during that time so it exceeds the health threshold, Culling Blade fails.",
         "Culling Blade is able to kill targets affected by Shallow Grave, False Promise, Borrowed Time and Battle Trance but not Wraith Delay.",
-        "The modifier_axe_culling_blade_jungle_weapon_gesture modifier is used by the Fists of Axe Unleashed and is responsible for the sound and animation."
+        "The jungle weapon gesture modifier is responsible for the sound and animation used by Fists of Axe Unleashed."
       ],
       "mana": "60\/120\/180",
       "hotKey": "R",
@@ -170,7 +175,8 @@
         "Kill Health Threshold: 250\/350\/450 (TagTalent 400\/500\/600)",
         "Kill Move Speed Bonus: 30%",
         "Kill Attack Speed Bonus: 30",
-        "Kill Bonus Buff Duration: 6"
+        "Kill Bonus Buff Duration: 6",
+        "Mogul Khan is the embodiment of battle and fury, launching into a gruesome fatality against those who dare engage the Axe in combat."
       ],
       "itemBehaviour": [],
       "legacyKey": "C",
@@ -205,8 +211,8 @@
     },
     {
       "talentLvl": "10",
-      "talentLeft": "+1.75 Mana Regen",
-      "talentRight": "+25 Attack Speed"
+      "talentLeft": "+1.5 Mana Regen",
+      "talentRight": "+9 Strength"
     }
   ]
 }

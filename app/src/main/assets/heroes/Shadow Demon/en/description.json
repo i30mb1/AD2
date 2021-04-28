@@ -2,29 +2,29 @@
   "abilities": [
     {
       "notes": [
-        "The intelligence talent effectively grants Shadow Demon 180 mana, 0.75 mana regeneration, and 15 attack damage."
+        "The strength talent effectively grants Shadow Demon 200 health and 1 health regeneration."
       ],
       "spellName": "Talent",
       "talents": [
         {
           "talentLvl": "25",
           "talentLeft": "2 Charges of Disruption",
-          "talentRight": "+400 Demonic Purge Damage"
+          "talentRight": "-30s Demonic Purge Cooldown"
         },
         {
           "talentLvl": "20",
           "talentLeft": "-1.25s Shadow Poison Cooldown",
-          "talentRight": "-5s Soul Catcher Cooldown"
+          "talentRight": "-6s Soul Catcher Cooldown"
         },
         {
           "talentLvl": "15",
-          "talentLeft": "+20% Shadow Poison Damage",
-          "talentRight": "+20 Movement Speed"
+          "talentLeft": "+200 Demonic Purge Damage",
+          "talentRight": "+25 Movement Speed"
         },
         {
           "talentLvl": "10",
-          "talentLeft": "+75 Cast Range",
-          "talentRight": "+15 Intelligence"
+          "talentLeft": "+10 Strength",
+          "talentRight": "+15% Shadow Poison Damage"
         }
       ]
     },
@@ -38,15 +38,16 @@
         "Disruption fully disables the target and turns it invulnerable and hidden for its duration. ↓↓ Double-tapping automatically targets self. Cannot be cast on allies who have ☐ Disabled Help from Shadow Demon.",
         "↓↓ Double-tapping automatically targets self.",
         "Cannot be cast on allies who have ☐ Disabled Help from Shadow Demon.",
+        "Always creates the illusions, even when cast on allies or self. Can be cast on illusions, creating illusions based on the original hero.",
+        "Can be cast on illusions, creating illusions based on the original hero.",
+        "Creates the illusions upon exit out of the hero\/illusion. This means if the hero dies or the illusion expires during Disruption, no illusions are created.",
         "When the target turns invisible during Disruption, the visual effects turn invisible as well.",
-        "Always creates the illusions, even when cast on allies or self.",
         "The targeted unit's position is not shuffled with the possible illusion's position. It always reappears between the 2 illusions. The illusions spawn 108 range away from the hero if the hero has a collision size of 24, and 72 if the collision size is 8. Each illusion appears either north, east, south or west from the hero and face the same direction as the hero does.",
         "The illusions spawn 108 range away from the hero if the hero has a collision size of 24, and 72 if the collision size is 8.",
         "Each illusion appears either north, east, south or west from the hero and face the same direction as the hero does.",
         "The illusions carry the caster's name, not the targeted unit's player name, revealing that they are illusions when not cast on self.",
-        "The current health of the illusions is determined upon casting Disruption. This means any health loss caused by Shadow Demon's spells during Disruption do not affect the health of the illusions that are about to spawn.",
-        "This means any health loss caused by Shadow Demon's spells during Disruption do not affect the health of the illusions that are about to spawn.",
-        "Can be cast on illusions, creating illusions based on the original hero.",
+        "The current health of the illusions is determined upon casting Disruption. This means any health loss caused by Shadow Demon's abilities during Disruption do not affect the health of the illusions that are about to spawn.",
+        "This means any health loss caused by Shadow Demon's abilities during Disruption do not affect the health of the illusions that are about to spawn.",
         "When the targeted unit dies during Disruption, no illusions are created."
       ],
       "mana": "120",
@@ -56,14 +57,15 @@
       "spellName": "Disruption",
       "params": [
         "Cast Animation: 0.3+0.6",
-        "Cast Range: 600 (TagTalent 675)",
+        "Cast Range: 600",
         "Number of Illusions: 2",
         "Illusion Damage Dealt: 30%\/45%\/60%\/75%",
         "Illusion Damage Taken: 300%",
-        "Illusion Duration: 8\/10\/12\/14",
+        "Illusion Duration: 11\/12\/13\/14",
         "Disruption Duration: 2.75",
         "Number of Charges: 2",
-        "Charge Replenish Time: 27\/24\/21\/18"
+        "Charge Replenish Time: 27\/24\/21\/18",
+        "The pain of deception comes not while it happens, but when it is revealed."
       ],
       "itemBehaviour": [],
       "legacyKey": "D",
@@ -76,23 +78,24 @@
         "Affects Enemies"
       ],
       "notes": [
-        "Directly manipulates enemies' health. Does not deal damage. This means it bypasses every damage manipulating effect.",
-        "This means it bypasses every damage manipulating effect.",
+        "Directly manipulates enemies' health by taking away a percentage of health upon debuff. This ability does not deal damage, and therefore it bypasses every damage manipulating effect.",
+        "This ability does not deal damage, and therefore it bypasses every damage manipulating effect.",
         "The returned health at the end of the duration is based on how much health was removed initially. It is not based on the current health upon expiring.",
         "Does not affect invulnerable enemies, and ancient creeps."
       ],
       "mana": "80\/100\/120\/140",
       "hotKey": "W",
-      "cooldown": "26\/24\/22\/20 (TagTalent 21\/19\/17\/15)",
+      "cooldown": "26\/24\/22\/20 (TagTalent 20\/18\/16\/14)",
       "description": "Captures the soul of enemy units in an area, causing them to lose a percentage of their current health. When the debuff is removed, the units gain half of the lost health back. Units under the effect of Disruption can still be affected by Soul Catcher.",
       "spellName": "Soul Catcher",
       "params": [
         "Cast Animation: 0.3+0",
-        "Cast Range: 700 (TagTalent 775)",
+        "Cast Range: 700",
         "Radius: 175\/200\/225\/250",
         "Current Health Removed: 20%\/25%\/30%\/35%",
         "Duration: 10",
-        "Debuff persists if it was placed before spell immunity."
+        "Debuff persists if it was placed before spell immunity.",
+        "Trying to resist the Shadow Demon's corruption is mostly a useless endeavor."
       ],
       "itemBehaviour": [],
       "legacyKey": "C",
@@ -106,26 +109,27 @@
         "Damage Magical"
       ],
       "notes": [
+        "This ability is not available in Ability Draft, due to non-ultimate abilities being limited to one ability slot.",
         "Shadow Poison travels at a speed of 1000 and always travels the full distance, which takes 1.5 seconds.",
-        "Can hit units up to 1700 range away (travel distance + effect radius).",
-        "Fully affects invisible units and units under the effect of the most recent Disruption cast by Shadow Demon.",
+        "With the travel distance and effect radius, it can hit units up to 1700 range away.",
+        "Fully affects invisible units and units under the effect of the most recent Disruption cast by Shadow Demon. Fully ignores other invulnerable or hidden units.",
         "Fully ignores other invulnerable or hidden units.",
-        "Deals the initial damage instantly and adds 1 stack to all enemy units within 200 radius of it on each cast.",
-        "The poison first applies the debuff or adds a stack, then deals the initial damage.",
+        "Deals the initial damage instantly and adds 1 stack to all enemy units within 200 radius of it on each cast. The poison first applies the debuff and adds a stack, then deals the initial damage. Successive hits on the same unit fully refresh the whole stack's duration. The first 5 stacks multiply the stack damage by 1\/2\/4\/8\/16 depending on the amount of stacks. Every following stack adds 50 (TagTalent 57.5) damage on top of that, so the damage starts growing linearly after the 5th stack.",
+        "The poison first applies the debuff and adds a stack, then deals the initial damage.",
         "Successive hits on the same unit fully refresh the whole stack's duration.",
         "The first 5 stacks multiply the stack damage by 1\/2\/4\/8\/16 depending on the amount of stacks.",
-        "Every following stack adds 50 (TagTalent 60) damage on top of that, so the damage starts growing linearly after the 5th stack.",
-        "This is how much damage 1\/2\/3\/4\/5\/6 stacks can deal on each level (ignoring the initial damage): Level 1: 20\/40\/80\/160\/320\/370 (TagTalent 24\/48\/96\/192\/384\/444) damage Level 2: 35\/70\/140\/280\/560\/610 (TagTalent 42\/84\/168\/336\/672\/732) damage Level 3: 50\/100\/200\/400\/800\/850 (TagTalent 60\/120\/240\/480\/960\/1020) damage Level 4: 65\/130\/260\/520\/1040\/1090 (TagTalent 78\/156\/312\/624\/1248\/1308) damage",
-        "Level 1: 20\/40\/80\/160\/320\/370 (TagTalent 24\/48\/96\/192\/384\/444) damage",
-        "Level 2: 35\/70\/140\/280\/560\/610 (TagTalent 42\/84\/168\/336\/672\/732) damage",
-        "Level 3: 50\/100\/200\/400\/800\/850 (TagTalent 60\/120\/240\/480\/960\/1020) damage",
-        "Level 4: 65\/130\/260\/520\/1040\/1090 (TagTalent 78\/156\/312\/624\/1248\/1308) damage",
-        "The damage is dealt as soon as the Shadow Poison debuff is removed, no matter how.",
+        "Every following stack adds 50 (TagTalent 57.5) damage on top of that, so the damage starts growing linearly after the 5th stack.",
+        "This is how much damage 1\/2\/3\/4\/5\/6 stacks can deal on each level (without the initial damage): Level 1: 20\/40\/80\/160\/320\/370 (TagTalent 23\/46\/92\/184\/368\/425.5) damage. Level 2: 35\/70\/140\/280\/560\/610 (TagTalent 40.25\/80.5\/161\/322\/644\/701.5) damage. Level 3: 50\/100\/200\/400\/800\/850 (TagTalent 57.5\/115\/230\/460\/920\/977.5) damage. Level 4: 65\/130\/260\/520\/1040\/1090 (TagTalent 74.75\/149.5\/299\/598\/1196\/1253.5) damage.",
+        "Level 1: 20\/40\/80\/160\/320\/370 (TagTalent 23\/46\/92\/184\/368\/425.5) damage.",
+        "Level 2: 35\/70\/140\/280\/560\/610 (TagTalent 40.25\/80.5\/161\/322\/644\/701.5) damage.",
+        "Level 3: 50\/100\/200\/400\/800\/850 (TagTalent 57.5\/115\/230\/460\/920\/977.5) damage.",
+        "Level 4: 65\/130\/260\/520\/1040\/1090 (TagTalent 74.75\/149.5\/299\/598\/1196\/1253.5) damage.",
+        "",
+        "Casting Shadow Poison Release or losing the Shadow Poison debuff in any way causes the damage to be dealt.",
         "The current number of stacks is visible to Shadow Demon and his allies above the affected units. Enemies cannot see it. This number is visually capped at 19, however, the poison has no stack limit and can be stacked infinitely. The current number of stacks is also shown on the debuff icon, which is visible to everyone.",
         "This number is visually capped at 19, however, the poison has no stack limit and can be stacked infinitely.",
         "The current number of stacks is also shown on the debuff icon, which is visible to everyone.",
-        "The projectile provides 200 radius flying vision as it travels. This vision does not last.",
-        "In Ability Draft, since non-ultimate abilities are limited to one ability slot, this ability is not available in Ability Draft."
+        "The projectile provides 200 radius flying vision as it travels. This vision does not last."
       ],
       "mana": "35\/40\/45\/50",
       "hotKey": "E",
@@ -134,13 +138,15 @@
       "spellName": "Shadow Poison",
       "params": [
         "Cast Animation: 0.25+0",
-        "Cast Range: 1500 (TagTalent 1575)",
-        "Travel Distance: 1500 (TagTalent 1575)",
+        "Cast Range: 1500",
+        "Travel Distance: 1500",
         "Effect Radius: 200",
-        "Initial Damage: 26\/34\/42\/50 (TagTalent 31.2\/40.8\/50.4\/60)",
-        "Stack Damage: 20\/35\/50\/65 (TagTalent 24\/42\/60\/78)",
+        "Initial Damage: 26\/34\/42\/50 (TagTalent 29.9\/39.1\/48.3\/57.5)",
+        "Stack Damage: 20\/35\/50\/65 (TagTalent 23\/40.25\/57.5\/74.75)",
+        "Extra Damage per Stack: 50 (TagTalent 57.5)",
         "Stack Duration: 10",
-        "Attempts to deal damage if enemy turns spell immune before the poison is released."
+        "Attempts to deal damage if enemy turns spell immune before the poison is released.",
+        "The ever growing influence of the Shadow Demon can pollute the most valiant and pure of heroes."
       ],
       "itemBehaviour": [],
       "legacyKey": "W",
@@ -152,7 +158,8 @@
         "Ability No Target"
       ],
       "notes": [
-        "Shadow Poison Release is unlocked upon learning Shadow Poison and stays always active."
+        "Shadow Poison Release is unlocked upon learning Shadow Poison and stays always active. This ability is not available in Ability Draft, due non-ultimate abilities being limited to one ability slot.",
+        "This ability is not available in Ability Draft, due non-ultimate abilities being limited to one ability slot."
       ],
       "mana": null,
       "hotKey": "D",
@@ -174,39 +181,41 @@
         "Damage Magical"
       ],
       "notes": [
-        "Applies a basic dispel on the target upon cast and over its entire duration. The damage (TagTalent or heal) is applied after the end of the duration.",
-        "Demonic Purge first applies the dispel, then the debuff.",
-        "Can be cast on invulnerable units, applying the initial dispel and the debuff if the invulnerability can be dispelled. However, if the target is an enemy and if the invulnerability cannot be dispelled, only the dispel is applied, and the debuff is not. With Aghanim's Shard, if the target is an ally, it can place the modifier on them even while invulnerable. ↓↓ Double-tapping automatically targets self.",
-        "However, if the target is an enemy and if the invulnerability cannot be dispelled, only the dispel is applied, and the debuff is not.",
-        "With Aghanim's Shard, if the target is an ally, it can place the modifier on them even while invulnerable. ↓↓ Double-tapping automatically targets self.",
+        "Applies a basic dispel on the target upon cast, then the modifier over its entire duration. The damage\/heal is applied after the end of the duration. Recasting onto the same target removes the modifier from a previous cast, triggering the damage\/heal, and then applies a new instance.",
+        "Recasting onto the same target removes the modifier from a previous cast, triggering the damage\/heal, and then applies a new instance.",
+        "Demonic Purge can affect a unit under the effect of the most recent Disruption cast by Shadow Demon.",
+        "The damage\/heal is bound to the modifier, and applied whenever it is removed in any way. It starts at 0 and increases by 1.43\/1.9\/2.38 (TagTalent 2.38\/2.86\/3.33) for each 0.03 seconds affected, reaching the max values in 7 seconds.",
+        "It starts at 0 and increases by 1.43\/1.9\/2.38 (TagTalent 2.38\/2.86\/3.33) for each 0.03 seconds affected, reaching the max values in 7 seconds.",
         "The slow starts at 100% decreases over time to 20%. Hit units regain 0.381% of their movement speed on each server tick. This translates to 11.43% movement speed regained per second.",
         "This translates to 11.43% movement speed regained per second.",
-        "The damage (TagTalent and heal) is bound to the modifier, and applied whenever it is removed in any way. The damage (TagTalent and heal) starts at 0 and increases by 1.43\/1.9\/2.38 (TagTalent 3.33\/3.81\/4.29) for each 0.03 seconds affected, reaching the max values in 7 seconds.",
-        "The damage (TagTalent and heal) starts at 0 and increases by 1.43\/1.9\/2.38 (TagTalent 3.33\/3.81\/4.29) for each 0.03 seconds affected, reaching the max values in 7 seconds.",
-        "Recasting onto the same target removes the modifier from a previous cast, triggering the damage (TagTalent or heal), and then applies a new instance.",
-        "The damage can affect a unit under the effect of the most recent Disruption cast by Shadow Demon.",
-        "With Aghanim's Scepter, applies Break on the target as well. The break stops affecting the target before it deals its damage.",
-        "The break stops affecting the target before it deals its damage."
+        "Can be cast on invulnerable units, applying the initial dispel and the debuff if the invulnerability can be dispelled. However, if the target is an enemy and if the invulnerability cannot be dispelled, only the dispel is applied, and the debuff is not.",
+        "However, if the target is an enemy and if the invulnerability cannot be dispelled, only the dispel is applied, and the debuff is not.",
+        "With Aghanim's Scepter, applies Break on the enemy target as well. The break stops affecting the enemy target before it deals its damage.",
+        "The break stops affecting the enemy target before it deals its damage.",
+        "With Aghanim's Shard, if the target is an ally, it can place the modifier on them and heal them even while invulnerable. Does not apply movement speed slow or Break to allied units. ↓↓ Double-tapping automatically targets self.",
+        "Does not apply movement speed slow or Break to allied units.",
+        "↓↓ Double-tapping automatically targets self."
       ],
-      "mana": "200",
+      "mana": "150\/175\/200",
       "hotKey": "R",
-      "cooldown": "60 (TagTalent 0)",
+      "cooldown": "60 (TagTalent 30) (TagTalent 0)",
       "description": "Purges the target enemy unit, removing positive buffs, and slowing the target for the duration. The unit slowly regains its movement speed until the end of the duration, upon which damage is dealt. Units under the effect of Disruption can still be affected by Demonic Purge.",
       "spellName": "Demonic Purge",
       "params": [
         "Cast Animation: 0.3+0.6",
-        "Cast Range: 800 (TagTalent 875)",
+        "Cast Range: 800",
         "Min Damage: 0",
-        "Max Damage: 300\/400\/500 (TagTalent 700\/800\/900)",
+        "Max Damage: 300\/400\/500 (TagTalent 500\/600\/700)",
         "Min Move Speed Slow: 20%",
         "Max Move Speed Slow: 100%",
         "Enemy Slow Duration: 7",
         "Number of Charges: 3",
-        "Charge Replenish Time: 60",
+        "Charge Replenish Time: 60 (TagTalent 30)",
         "Min Heal: 0",
-        "Max Heal: 300\/400\/500 (TagTalent 700\/800\/900)",
+        "Max Heal: 300\/400\/500 (TagTalent 500\/600\/700)",
         "Cooldown is removed, replaced with 3 charges that replenish every 60 seconds. Also causes Demonic Purge to break its target's passive abilities while active.",
-        "Allows Demonic Purge to be cast on allies, continuously dispelling them and healing for its damage values. Does not slow allies."
+        "Allows Demonic Purge to be cast on allies, continuously dispelling them and healing for its damage values. Does not slow allies.",
+        "Once Shadow Demon no longer has any need for his collected cultist, he releases it from its subservience - and its life."
       ],
       "itemBehaviour": [],
       "legacyKey": "G",
@@ -216,33 +225,33 @@
   "mainAttributes": {
     "attrStrengthInc": 2.6,
     "attrStrength": 23.0,
-    "attrIntelligence": 21.0,
-    "attrIntelligenceInc": 3.3,
+    "attrIntelligence": 22.0,
+    "attrIntelligenceInc": 3.6,
     "attrAgilityInc": 2.2,
     "attrAgility": 18.0
   },
   "description": "Shadow Demon is a menacing ranged intelligence hero who is most powerful in the early game for his strong set of spells. Disruption takes an enemy or ally out of the fight, banishing them to a shadowy realm and returning them a short time later along with two hostile demonic illusions. Soul Catcher can curse his victims with vulnerability, instantly removing a fraction of their current health. His Shadow Poison can harass any unfortunate foe he encounters, gradually dealing more damage with each application until the Shadow Demon releases the poison from the target in a powerful, damaging burst. Demonic Purge, his ultimate, is key for securing kills: The Shadow Demon greatly slows his fleeing victim and removes all dispellable buffs, crippling and weakening them, while also (when upgraded with Aghanim's Scepter) applying a Break that disables almost all passive skills. Heavily reliant on the coordination and effectiveness of his own team, Shadow Demon proves to be incredibly strong as a defensive support by keeping his teammates alive reliably and as an offensive support by amplifying damage and endlessly slowing enemies until they're unable to escape. A formidable ally, who requires little farm to contribute greatly to his team, good positioning and timing from Shadow Demon's spells can make all the difference, and makes for one of the most potentially powerful supports well into the late game.",
-  "history": "Among the sovereign Demons with explicit access to this world, Doom scarcely bothers with the affairs of Noninfernals and Lesser Spectral Consorts, while Shadow Fiend passes through almost exclusively on collecting expeditions. The Shadow Demon, however, has always taken a deep and abiding interest in the material plane, as if sensing that mastery of this gritty dimensional nexus might be the key to total domination of all realities. Summoned first by minor wizards, the Shadow Demon granted every wish and put on increasingly impressive displays of power until he had the full attention of the greatest demonologists, and through them the various lords, tyrants, autarchs and hierophants who depended on sorcery to buttress their mundane power. So great was his deception that all his summoners considered themselves the master and Shadow Demon the servant; meanwhile, he eroded their identities and made their minds his own. In the end, most members of the cult were hollow puppets, extensions of his evil will. What Shadow Demon's next step would have been remains open to speculation, for around this time, Nevermore the Shadow Fiend bit into a particularly nasty-tasting soul and discovered that it held nothing but a foul nougat of Shadow Demon's essence. Alerted that a coup was underway, and that the ancient equilibrium of the Umbral Pact was about to be destabilized, Doom and Shadow Fiend briefly joined forces to destroy the burgeoning cult. Combining spells of incredible force, they undid Shadow Demon's centuries of patient work, reducing his cult to smithereens--and all its members to a bloody splatter. Nothing remained except a tiny speck of demon shadow. Immortal and irreducible, this mote of evil was enough to seed the Shadow Demon's next scheme, and in fits and starts, over further centuries, he began to regroup. Whatever that speck of shadow touched, it tainted, and its influence gradually grew. A chaos of damaged parts pulled together, reknit, and combined to give Shadow Demon a form even stronger than his former. He is all but complete now, and his plan for infinite dominion lacks all of its former weaknesses. It would seem that such a being of pure malice and malevolence, a threat to all creation, would be forever out of place in our world...yet Shadow Demon does not lack for followers.",
+  "history": "Among the sovereign Demons with explicit access to this world, Doom scarcely bothers with the affairs of Noninfernals and Lesser Spectral Consorts, while Shadow Fiend passes through almost exclusively on collecting expeditions. The Shadow Demon, however, has always taken a deep and abiding interest in the material plane, as if sensing that mastery of this gritty dimensional nexus might be the key to total domination of all realities. Summoned first by minor wizards, the Shadow Demon granted every wish and put on increasingly impressive displays of power until he had the full attention of the greatest demonologists, and through them the various lords, tyrants, autarchs and heirophants who depended on sorcery to buttress their mundane power. So great was his deception that all his summoners considered themselves the master and Shadow Demon the servant; meanwhile, he eroded their identities and made their minds his own. In the end, most members of the cult were hollow puppets, extensions of his evil will. What Shadow Demon's next step would have been remains open to speculation, for around this time, Nevermore the Shadow Fiend bit into a particularly nasty-tasting soul and discovered that it held nothing but a foul nougat of Shadow Demon's essence. Alerted that a coup was underway, and that the ancient equilibrium of the Umbral Pact was about to be destabilized, Doom and Shadow Fiend briefly joined forces to destroy the burgeoning cult. Combining spells of incredible force, they undid Shadow Demon's centuries of patient work, reducing his cult to smithereens\u2014and all its members to a bloody splatter. Nothing remained except a tiny speck of demon shadow. Immortal and irreducible, this mote of evil was enough to seed the Shadow Demon's next scheme, and in fits and starts, over further centuries, he began to regroup. Whatever that speck of shadow touched, it tainted, and its influence gradually grew. A chaos of damaged parts pulled together, reknit, and combined to give Shadow Demon a form even stronger than his former. He is all but complete now, and his plan for infinite dominion lacks all of its former weaknesses. It would seem that such a being of pure malice and malevolence, a threat to all creation, would be forever out of place in our world...yet Shadow Demon does not lack for followers.",
   "talents": [
     {
       "talentLvl": "25",
       "talentLeft": "2 Charges of Disruption",
-      "talentRight": "+400 Demonic Purge Damage"
+      "talentRight": "-30s Demonic Purge Cooldown"
     },
     {
       "talentLvl": "20",
       "talentLeft": "-1.25s Shadow Poison Cooldown",
-      "talentRight": "-5s Soul Catcher Cooldown"
+      "talentRight": "-6s Soul Catcher Cooldown"
     },
     {
       "talentLvl": "15",
-      "talentLeft": "+20% Shadow Poison Damage",
-      "talentRight": "+20 Movement Speed"
+      "talentLeft": "+200 Demonic Purge Damage",
+      "talentRight": "+25 Movement Speed"
     },
     {
       "talentLvl": "10",
-      "talentLeft": "+75 Cast Range",
-      "talentRight": "+15 Intelligence"
+      "talentLeft": "+10 Strength",
+      "talentRight": "+15% Shadow Poison Damage"
     }
   ]
 }

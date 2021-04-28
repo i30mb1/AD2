@@ -44,7 +44,7 @@
         "This means it is not affected or considered by anything that works with attack damage.",
         "This also means that it fully works with spell damage amplification and spell lifesteal.",
         "Deals its damage before the attack damage is applied, but still depends on the attack hitting the target.",
-        "Checks Outworld Destroyer's mana pool upon projectile hit, so increasing or decreasing his mana pool while the projectile flies does affect its damage."
+        "Checks Outworld Destroyer's current mana pool upon projectile hit, so increasing or decreasing his mana pool while the projectile flies does affect its damage."
       ],
       "mana": "20% of current mana",
       "hotKey": "Q",
@@ -53,7 +53,8 @@
       "spellName": "Arcane Orb",
       "params": [
         "Cast Range: 450",
-        "Current Mana as Damage: 16% (TagTalent 18%)"
+        "Current Mana as Damage: 16% (TagTalent 18%)",
+        "Harbinger's outworldly knowledge allows it to tap into the ebb and flow of all spiritual energy, infusing it into his being."
       ],
       "itemBehaviour": [],
       "legacyKey": "R",
@@ -70,9 +71,11 @@
         "Astral Imprisonment fully disables the target and turns it invulnerable and hidden for its duration. Cannot be cast on allies who have ☐ Disabled Help from Outworld Destroyer. ↓↓ Double-tapping automatically targets self.",
         "Cannot be cast on allies who have ☐ Disabled Help from Outworld Destroyer.",
         "↓↓ Double-tapping automatically targets self.",
-        "Targeted allies are only put in the prison, without any of the other effects being applied on them.",
-        "If the target was an enemy, they get damaged at the end of the prison's duration.",
-        "If the target was an enemy hero (including illusions and clones, excluding creep-heroes), they also get a portion of their maximum mana stolen. Only reduces the target's maximum mana value. Their current mana value stays unchanged. This also goes for when the target gains their mana back. Only their max mana value is increased, the current mana value stays unchanged. This also goes for Outworld Destroyer. Only his max mana gets changed, with current mana staying the same. Outworld Destroyer gains a status buff that shows how much mana he currently acquired with Astral Imprisonment.",
+        "Targeted allies are only put in the prison, without any of the other effects being applied on them. Targeted enemies are damaged at the end of the prison's duration. With Aghanim's Scepter, it adds a 400 damage radius to this ability. Does not damage targeted allies, but damage targeted enemies.",
+        "Targeted enemies are damaged at the end of the prison's duration.",
+        "With Aghanim's Scepter, it adds a 400 damage radius to this ability. Does not damage targeted allies, but damage targeted enemies.",
+        "Does not damage targeted allies, but damage targeted enemies.",
+        "If the target was an enemy hero (including illusions and clones, excluding creep-heroes), they get a portion of their maximum mana stolen. Only reduces the target's maximum mana value. Their current mana value stays unchanged. This also goes for when the target gains their mana back. Only their max mana value is increased, the current mana value stays unchanged. This also goes for Outworld Destroyer. Only his max mana gets changed, with current mana staying the same. Outworld Destroyer gains a status buff that shows how much mana he currently acquired with Astral Imprisonment.",
         "Only reduces the target's maximum mana value. Their current mana value stays unchanged.",
         "This also goes for when the target gains their mana back. Only their max mana value is increased, the current mana value stays unchanged.",
         "This also goes for Outworld Destroyer. Only his max mana gets changed, with current mana staying the same.",
@@ -85,15 +88,17 @@
       "description": "Places a target unit into an astral prison. The hidden unit is invulnerable and disabled. When the astral prison implodes, it deals damage to the target and steals a percentage of their max mana.",
       "spellName": "Astral Imprisonment",
       "params": [
-        "Cast Animation: 0.25+0.4",
-        "Cast Range: 650 (TagAghanim 800)",
-        "Damage: 120\/200\/280\/360",
+        "Cast Animation: 0.3+0.4",
+        "Cast Range: 650",
+        "Damage: 120\/200\/280\/360 (TagTalent 260\/340\/420\/500)",
         "Max Mana Steal: 16%\/18%\/20%\/22%",
         "Imprison Duration: 1.75\/2.5\/3.25\/4",
         "Mana Steal Duration: 30\/40\/50\/60",
+        "Damage Radius: 400",
         "Number of Charges: 2",
         "Charge Replenish Time: 12",
-        "Grants charges to Astral Imprisonment and increases cast range by 150."
+        "Grants 2 charges to Astral Imprisonment, increases damage by 140 and applies the damage around a 400 radius.",
+        "Locked away in the pocket between this world and the Outworld, victims realize their infantile knowledge and mortality."
       ],
       "itemBehaviour": [],
       "legacyKey": "T",
@@ -107,13 +112,13 @@
       ],
       "notes": [
         "Restores the mana after the spell is cast.",
-        "Essence Flux does not proc on any item abilities.",
-        "Essence Flux uses pseudo-random distribution.",
-        "On average, restores 6%\/9%\/12%\/15% of caster's maximum mana per cast.",
-        "Aghanim's Shard turns Essence Flux into an active ability. The passive component is still present. Sets the current health value equal to 75% of the current mana value and vice versa. This means, effectively, it costs 25% of current health and mana to cast. Directly manipulates health and mana, so it does not interact with any on-damage effect.",
-        "Sets the current health value equal to 75% of the current mana value and vice versa.",
-        "This means, effectively, it costs 25% of current health and mana to cast.",
-        "Directly manipulates health and mana, so it does not interact with any on-damage effect."
+        "Essence Flux uses pseudo-random distribution and does not proc on any item abilities.",
+        "On average, Essence Flux restores 6%\/9%\/12%\/15% of caster's maximum mana per cast.",
+        "With Aghanim's Shard, Essence Flux turns into an active ability. Sets the current health value equal to 100% of the current mana value and vice versa. This means, effectively, it costs 100% of current health and mana to cast. Directly manipulates health and mana, so it does not interact with any on-damage effect. The passive component continues to proc as usual.",
+        "Sets the current health value equal to 100% of the current mana value and vice versa.",
+        "This means, effectively, it costs 100% of current health and mana to cast.",
+        "Directly manipulates health and mana, so it does not interact with any on-damage effect.",
+        "The passive component continues to proc as usual."
       ],
       "mana": "0",
       "hotKey": "E",
@@ -121,12 +126,12 @@
       "description": "Passively grants you a chance to restore a percentage of your max mana each time you cast an ability.",
       "spellName": "Essence Flux",
       "params": [
-        "Cast Animation: 0+0",
+        "Cast Animation: 0.75+0",
         "Proc Chance: 30%",
-        "Max Mana Restored: 20%\/30%\/40%\/50%",
-        "Active Channel Time: 1.5",
-        "Active Health\/Mana Transfer: 75%",
-        "Essence Flux becomes 1.5 second channel ability. Swaps Outworld Destroyer's current Life and Mana totals. Only transfers 75% of the respective values. Cooldown: 45"
+        "Passive Max Mana Restored: 20%\/30%\/40%\/50%",
+        "Active Health\/Mana Transfer: 100%",
+        "Swaps Outworld Destroyer's current life and mana totals. Transfers 100% of the respective values. Cooldown: 45",
+        "The Outworld is awash in arcane energy, inclined to diffuse through any of Harbinger's rifts."
       ],
       "itemBehaviour": [],
       "legacyKey": "E",
@@ -154,7 +159,8 @@
         "Cast Range: 700",
         "Effect Radius: 400\/500\/600",
         "Base Damage: 200\/300\/400",
-        "Mana Difference Damage Multiplier: 0.4 (TagTalent 0.55)"
+        "Mana Difference Damage Multiplier: 0.4 (TagTalent 0.55)",
+        "When an Outworld crystal ruptures, cataclysmic energies are released, and the reverberations of this power are felt interdimensionally."
       ],
       "itemBehaviour": [],
       "legacyKey": "C",

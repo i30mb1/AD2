@@ -15,7 +15,7 @@
         {
           "talentLvl": "20",
           "talentLeft": "+80 Attack Speed",
-          "talentRight": "+1400 Health to Primal Split Units"
+          "talentRight": "+1400 Brewlings Health"
         },
         {
           "talentLvl": "15",
@@ -24,8 +24,8 @@
         },
         {
           "talentLvl": "10",
-          "talentLeft": "+1s Thunder Clap Slow",
-          "talentRight": "+12 Damage"
+          "talentLeft": "+200 Thunder Clap AoE",
+          "talentRight": "+15 Damage"
         }
       ]
     },
@@ -37,7 +37,7 @@
         "Damage Magical"
       ],
       "notes": [
-        "The clap first applies the debuff, then the damage."
+        "Thunder Clap first applies the debuff, then the damage."
       ],
       "mana": "90\/100\/110\/120",
       "hotKey": "Q",
@@ -46,12 +46,13 @@
       "spellName": "Thunder Clap",
       "params": [
         "Cast Animation: 0.4+0.4",
-        "Radius: 400",
+        "Radius: 400 (TagTalent 600)",
         "Damage: 90\/160\/230\/300",
         "Move Speed Slow: 25%\/35%\/45%\/55%",
         "Attack Speed Slow: 25\/35\/45\/55",
-        "Slow Duration: 4 (TagTalent 5)",
-        "Slow persists if debuff was placed before spell immunity and when not dispelled."
+        "Slow Duration: 4",
+        "Slow persists if debuff was placed before spell immunity and when not dispelled.",
+        "A slam of Mangix' mighty keg starts the festivities."
       ],
       "itemBehaviour": [],
       "legacyKey": "C",
@@ -67,7 +68,7 @@
         "Cinder Brew's projectile travels at a speed of 1600.",
         "Despite the visual effect, Cinder Brew does not affect all units simultaneously upon the projectile reaching the center of the area. Instead, it behaves like a wave that travels outwards, affecting every unit as it travels towards the point, but only units that are within the targeted area.",
         "Instead, it behaves like a wave that travels outwards, affecting every unit as it travels towards the point, but only units that are within the targeted area.",
-        "When an enemy with the Cinder Brew debuff takes any spell damage, the duration of the debuff gets extended by 3, and the damage starts.",
+        "When an enemy with the Cinder Brew debuff takes any spell damage, the duration of the debuff gets extended by 3, and the damage starts. The debuff may be ignited only once. The debuff still slows after getting ignited.",
         "The debuff may be ignited only once. The debuff still slows after getting ignited.",
         "The damage interval is based on the debuff's duration, so that it always deals 8 instances of damage. Each instance deals 9.38\/18.75\/28.13\/37.5 (TagTalent 12.19\/24.38\/36.56\/48.75) damage.",
         "Recasting onto the same units does not stack, but refreshes the duration instead. The debuff is not updated to the current level. When recasting on an already ignited enemy, it refreshes the ignited debuff. The ignition does not get reset. The damage interval does not update once ignited. The amount of intervals is hardcoded, so it continues to deal damage until the debuff expires.",
@@ -87,7 +88,8 @@
         "Ignition Total Damage: 75\/150\/225\/300 (TagTalent 97.5\/195\/292.5\/390)",
         "Duration: 5 (TagTalent 6.5)",
         "Ignite Duration Increase: 3",
-        "Slow persists if the debuff was placed before spell immunity and when not dispelled."
+        "Slow persists if the debuff was placed before spell immunity and when not dispelled.",
+        "The Order of the Oyo's solution to all problems - another round!"
       ],
       "itemBehaviour": [],
       "legacyKey": "D",
@@ -100,18 +102,18 @@
         "Affects Self \/ Enemies"
       ],
       "notes": [
-        "Interrupts Brewmaster's channeling spells on cast.",
-        "While active, has a 18%\/36%\/54%\/72% chance to evade attacks, and a 72% chance to deal critical damage.",
-        "Passively increases attack damage by an average of 10.8%\/14.4%\/18%\/21.6% (TagTalent 30%\/33.6%\/37.2%\/40.8%) and survivability versus attacks by 6%\/14%\/22%\/32%. While active, increases attack damage by an average of 32.4%\/43.2%\/54%\/64.8% (TagTalent 90%\/100.8%\/111.6%\/122.4%) and survivability versus attacks by 22%\/56%\/117%\/257%.",
-        "While active, increases attack damage by an average of 32.4%\/43.2%\/54%\/64.8% (TagTalent 90%\/100.8%\/111.6%\/122.4%) and survivability versus attacks by 22%\/56%\/117%\/257%.",
-        "The proc chances of multiple crit sources stack. If two sources of critical strike proc at the same time, the higher multiplier has priority.",
+        "Interrupts Brewmaster's channeling abilities on cast.",
+        "Passively increases attack damage by an average of 10.8%\/14.4%\/18%\/21.6% (TagTalent 30%\/33.6%\/37.2%\/40.8%) and survivability versus attacks by 11%\/18%\/25%\/33%.",
+        "While active, has a 30%\/45%\/60%\/75% chance to evade attacks, and a 72% chance to deal critical damage. Increases attack damage by an average of 32.4%\/43.2%\/54%\/64.8% (TagTalent 90%\/100.8%\/111.6%\/122.4%) and survivability versus attacks by 43%\/82%\/150%\/300% while active.",
+        "Increases attack damage by an average of 32.4%\/43.2%\/54%\/64.8% (TagTalent 90%\/100.8%\/111.6%\/122.4%) and survivability versus attacks by 43%\/82%\/150%\/300% while active.",
+        "The proc chances of multiple crit sources stack. If two sources of critical strike proc at the same time, the higher multiplier has priority. The sound effects and particles of the critical strike play upon finishing the attack.",
         "If two sources of critical strike proc at the same time, the higher multiplier has priority.",
+        "The sound effects and particles of the critical strike play upon finishing the attack.",
         "Drunken Brawler's evasion stacks multiplicatively with other sources of evasion.",
         "Drunken Brawler's crit and evasion use pseudo-random distribution.",
-        "The sound and particles of the critical strike play upon finishing the attack.",
-        "The movement speed change switches around every second, starting with the bonus. This results in a 40% movement speed bonus in the first, third and fifth second, and a 20% movement speed slow in the second and fourth second. The average movement speed over these 5 seconds is 116%.",
+        "The movement speed change switches around every second, starting with the bonus. This results in a 40% movement speed bonus in the first, third and fifth second, and a 20% movement speed slow in the second and fourth second. The average movement speed bonus over these 5 seconds is 116%.",
         "This results in a 40% movement speed bonus in the first, third and fifth second, and a 20% movement speed slow in the second and fourth second.",
-        "The average movement speed over these 5 seconds is 116%."
+        "The average movement speed bonus over these 5 seconds is 116%."
       ],
       "mana": "35\/40\/45\/50",
       "hotKey": "E",
@@ -120,20 +122,21 @@
       "spellName": "Drunken Brawler",
       "params": [
         "Cast Animation: 0+0",
-        "Passive Evasion: 6%\/12%\/18%\/24%",
+        "Passive Evasion: 10%\/15%\/20%\/25%",
         "Passive Critical Chance: 24%",
         "Passive Critical Damage: 145%\/160%\/175%\/190% (TagTalent 225%\/240%\/255%\/270%)",
         "Active Evasion & Crit Chance Multiplier: 3",
         "Move Speed Slow: 20%",
         "Move Speed Bonus: 40%",
-        "Duration: 5"
+        "Duration: 5",
+        "When Mangix won his title as the Brewmaster of the Order of Oyo, he also claimed his place in the mastery of inebriation."
       ],
       "itemBehaviour": [],
       "legacyKey": "B",
       "story": "When Mangix won his title as the Brewmaster of the Order of Oyo, he also claimed his place in the mastery of inebriation."
     },
     {
-      "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/b\/bf\/Brewmaster_Primal_Split_1.mp3\/revision\/latest?cb=20191216011358",
+      "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/b\/bf\/Brewmaster_Primal_Split_1.mp3\/revision\/latest?cb=20210424152727",
       "effects": [
         "Ability No Target",
         "Affects Self",
@@ -141,26 +144,26 @@
       ],
       "notes": [
         "Brewmaster is invulnerable and hidden during the split time and duration. Does not apply any form of dispel upon cast.",
-        "During Primal Split, Brewmaster is periodically moved to Earth's position. If Earth dies, to Storm's and if Storm dies, to Fire's. This affects multiple things such as: When Primal Split ends, Brewmaster appears at Earth's location. If Earth is dead, at Storm's and if Storm is dead, at Fire's location. Every aura Brewmaster has (including Gem of True Sight and Radiance) affects units around Earth, if Earth is dead, around Storm and if Storm is dead, around Fire. Effects which react on heroes' presence (TagTalent Smoke of Deceit, Marksmanship, Blur) react on Earth's presence, if Earth is dead, on Storm's and if Storm is dead, on Fire's. Teleporting effects like Holy Persuasion or Relocate cause the periodic moving of Brewmaster to get canceled, so that the 3 notes above do not apply anymore.",
+        "During Primal Split, Brewmaster is periodically moved to Earth's position. If Earth dies, to Storm's and if Storm dies, to Fire's. This affects multiple things such as: When Primal Split ends, Brewmaster appears at Earth's location. If Earth is dead, at Storm's and if Storm is dead, at Fire's location. Every aura Brewmaster has (including Gem of True Sight and Radiance) is bestowed around Earth, if Earth is dead, around Storm and if Storm is dead, around Fire. Effects which react on heroes' presence (TagTalent Smoke of Deceit, Marksmanship, Blur) react on Earth's presence, if Earth is dead, on Storm's and if Storm is dead, on Fire's. Teleporting effects like Divine Favor or Relocate cause the periodic moving of Brewmaster to get canceled, so that the 3 notes above do not apply anymore.",
         "When Primal Split ends, Brewmaster appears at Earth's location. If Earth is dead, at Storm's and if Storm is dead, at Fire's location.",
-        "Every aura Brewmaster has (including Gem of True Sight and Radiance) affects units around Earth, if Earth is dead, around Storm and if Storm is dead, around Fire.",
+        "Every aura Brewmaster has (including Gem of True Sight and Radiance) is bestowed around Earth, if Earth is dead, around Storm and if Storm is dead, around Fire.",
         "Effects which react on heroes' presence (TagTalent Smoke of Deceit, Marksmanship, Blur) react on Earth's presence, if Earth is dead, on Storm's and if Storm is dead, on Fire's.",
-        "Teleporting effects like Holy Persuasion or Relocate cause the periodic moving of Brewmaster to get canceled, so that the 3 notes above do not apply anymore.",
-        "The brewlings spawn always in the same formation, forming an equilateral triangle (TagTalent a square) which fits within a 100 radius circle. All brewlings' facing angle equals Brewmaster's facing angle on cast. Earth is always spawned 100 range in front of Brewmaster's cast location. Storm is always spawned 50 range behind and 86.603 range to the left of Brewmaster's cast location. Fire is always spawned 50 range behind and 86.603 range to the right of Brewmaster's cast location.",
+        "Teleporting effects like Divine Favor or Relocate cause the periodic moving of Brewmaster to get canceled, so that the 3 notes above do not apply anymore.",
+        "The brewlings spawn always in the same formation, forming an equilateral triangle (or a square) which fits within a 100 radius circle. All brewlings' facing angle equals Brewmaster's facing angle on cast. Earth is always spawned 100 range in front of Brewmaster's cast location. Storm is always spawned 50 range behind and 86.603 range to the left of Brewmaster's cast location. Fire is always spawned 50 range behind and 86.603 range to the right of Brewmaster's cast location.",
         "All brewlings' facing angle equals Brewmaster's facing angle on cast.",
         "Earth is always spawned 100 range in front of Brewmaster's cast location.",
         "Storm is always spawned 50 range behind and 86.603 range to the left of Brewmaster's cast location.",
         "Fire is always spawned 50 range behind and 86.603 range to the right of Brewmaster's cast location.",
-        "With Aghanim's Shard, the brewlings spawn in as square formation instead, that fits in a 100 radius circle. Earth is always spawned 100 range in front of Brewmaster's cast location. Storm is always spawned 100 range to the left of Brewmaster's cast location. Fire is always spawned 100 range to the right of Brewmaster's cast location. Void is always spawned 100 range behind Brewmaster's cast location.",
+        "With Aghanim's Shard, the brewlings spawn in a square formation instead, that fits in a 100 radius circle. Earth is always spawned 100 range in front of Brewmaster's cast location. Storm is always spawned 100 range to the left of Brewmaster's cast location. Fire is always spawned 100 range to the right of Brewmaster's cast location. Void is always spawned 100 range behind Brewmaster's cast location.",
         "Earth is always spawned 100 range in front of Brewmaster's cast location.",
         "Storm is always spawned 100 range to the left of Brewmaster's cast location.",
         "Fire is always spawned 100 range to the right of Brewmaster's cast location.",
         "Void is always spawned 100 range behind Brewmaster's cast location.",
         "The brewlings are creep-heroes and ancient creeps, making them interact differently with several spells. For detailed interactions follow the two links.",
-        "With Aghanim's Scepter, the brewlings gain the Primal Split Cancel sub-ability. Casting the ability immediately ends Primal Split. Brewmaster re-appears at the location of the brewling which used the sub-spell.",
-        "Casting the ability immediately ends Primal Split. Brewmaster re-appears at the location of the brewling which used the sub-spell.",
-        "The level 25 talent grants the modifier_brewmaster_drunken_brawler_passive modifier to all brewlings, which grants them the passive evasion and critical strike. Since the ability itself is not granted, they cannot use the active ability to enhance the values.",
-        "Since the ability itself is not granted, they cannot use the active ability to enhance the values."
+        "With Aghanim's Scepter, the brewlings gain the Primal Split Cancel sub-ability. Casting the ability immediately ends Primal Split. Brewmaster re-appears at the location of the brewling which used the sub-ability.",
+        "Casting the ability immediately ends Primal Split. Brewmaster re-appears at the location of the brewling which used the sub-ability.",
+        "The level 25 talent grants the drunken brawler modifier to all brewlings, which grants them the passive evasion and critical strike based on its current level. Since the ability itself is not granted, they cannot use the active component to enhance the values.",
+        "Since the ability itself is not granted, they cannot use the active component to enhance the values."
       ],
       "mana": "125\/150\/175",
       "hotKey": "R",
@@ -168,13 +171,14 @@
       "description": "Splits Brewmaster into elements, forming 3 specialized warriors, adept at survival, each with their own abilities. If any of them survive until the end of their summoned timer, the Brewmaster is reborn.",
       "spellName": "Primal Split",
       "params": [
-        "Cast Animation: 0.65+0",
+        "Cast Animation: 0.55+0",
         "Split Time: 0.6",
         "Duration: 16\/18\/20",
         "Number of Charges: 2",
         "Charge Replenish Time: 140\/130\/120",
         "Primal Split has 2 charges and can be canceled at any time. Charge replenish time is equal to the normal cooldown.",
-        "Primal Split now creates a Void brewling. Has Astral Pulse ability, affecting enemies in a 500 AoE. Applies 20%\/30%\/40% slow and disarm for 2.5 seconds."
+        "Primal Split now creates a Void brewling. Has Astral Pulse ability, affecting enemies in a 500 AoE. Applies 20%\/30%\/40% slow and disarm for 2.5 seconds.",
+        "It isn't clear whether Mangix is consciously aware of his potent bond with nature, as it often occurs in the midst of a drunken stupor."
       ],
       "itemBehaviour": [],
       "legacyKey": "R",
@@ -190,7 +194,7 @@
         "Requires Aghanim's Scepter to be unlocked.",
         "Granted to all brewlings.",
         "When used, prematurely ends Primal Split.",
-        "Brewmaster re-appears at the location of the brewling that used the sub-spell, instead of the order explain in Primal Split's notes."
+        "Brewmaster re-appears at the location of the brewling that used the sub-ability, instead of according to the order explain in Primal Split's notes."
       ],
       "mana": "0",
       "hotKey": "R",
@@ -240,7 +244,7 @@
       "mana": null,
       "hotKey": null,
       "cooldown": null,
-      "description": "Modifiers",
+      "description": "Immune to spells.",
       "spellName": "Spell Immunity",
       "params": [],
       "itemBehaviour": [],
@@ -259,7 +263,7 @@
       "mana": null,
       "hotKey": null,
       "cooldown": null,
-      "description": "Building Attack Damage Bonus: 90\/180\/270",
+      "description": "Deals bonus damage to buildings.",
       "spellName": "Demolish",
       "params": [
         "Building Attack Damage Bonus: 90\/180\/270"
@@ -373,7 +377,7 @@
       "mana": null,
       "hotKey": null,
       "cooldown": null,
-      "description": "Radius: 220",
+      "description": "Burns nearby enemy units.",
       "spellName": "Permanent Immolation",
       "params": [
         "Radius: 220",
@@ -396,11 +400,11 @@
       ],
       "mana": "0",
       "hotKey": "Q",
-      "cooldown": "20",
+      "cooldown": "12",
       "description": "There is no description for this ability.",
       "spellName": "Astral Pulse",
       "params": [
-        "Cast Animation: 0.25+0.85",
+        "Cast Animation: 0.15+0.95",
         "Radius: 500",
         "Move Speed Slow: 20%\/30%\/40%",
         "Duration: 2.5"
@@ -429,7 +433,7 @@
     {
       "talentLvl": "20",
       "talentLeft": "+80 Attack Speed",
-      "talentRight": "+1400 Health to Primal Split Units"
+      "talentRight": "+1400 Brewlings Health"
     },
     {
       "talentLvl": "15",
@@ -438,8 +442,8 @@
     },
     {
       "talentLvl": "10",
-      "talentLeft": "+1s Thunder Clap Slow",
-      "talentRight": "+12 Damage"
+      "talentLeft": "+200 Thunder Clap AoE",
+      "talentRight": "+15 Damage"
     }
   ]
 }

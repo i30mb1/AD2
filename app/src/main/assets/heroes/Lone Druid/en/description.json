@@ -14,7 +14,7 @@
         {
           "talentLvl": "20",
           "talentLeft": "0 Entangle Cooldown",
-          "talentRight": "-40s True Form Cooldown"
+          "talentRight": "-50s True Form Cooldown"
         },
         {
           "talentLvl": "15",
@@ -37,22 +37,26 @@
       ],
       "notes": [
         "For all of the Spirit Bear's stats, see here.",
-        "The bear is a creep-hero, making it interact differently with several spells. For detailed interactions follow the link.",
-        "The Spirit Bear levels up together with Lone Druid, gaining 5 attack damage and 75 health with each level. The bonuses are applied immediately, and do not require the Spirit Bear to be re-summoned. The attack damage bonus is added to the base attack damage, not as attack bonus damage.",
+        "Spirit Bear is a creep-hero, making it interact differently with several spells. Click here for a detailed ability interactions.",
+        "Click here for a detailed ability interactions.",
+        "Leveling this ability automatically levels Spirit Bear's Demolish and Entangling Claws.",
+        "The Spirit Bear levels up together with Lone Druid, gaining 5 attack damage and 90 health with each level. The bonuses are applied immediately, and do not require the Spirit Bear to be re-summoned. The attack damage bonus is added to the base attack damage, not as attack bonus damage.",
         "The bonuses are applied immediately, and do not require the Spirit Bear to be re-summoned.",
         "The attack damage bonus is added to the base attack damage, not as attack bonus damage.",
         "On the first cast of Summon Spirit Bear, the bear is actually summoned. On every following cast, it is just healed or revived. This means buffs and debuffs are not dispelled upon re-summoning it. Projectiles are not disjointed either.",
         "This means buffs and debuffs are not dispelled upon re-summoning it. Projectiles are not disjointed either.",
         "The backlash damage is dealt as pure damage from the unit that killed the Spirit Bear. Denying the Spirit Bear causes no damage, unless it is killed by neutral creeps.",
         "Denying the Spirit Bear causes no damage, unless it is killed by neutral creeps.",
-        "The Spirit Bear cannot be resummoned if it has taken damage from a player in the last 3 seconds. Has no minimum damage threshold. Damage is checked before any sort of reduction, so fully blocked damage also prevents resummoning it. If the Spirit Bear dies, it can be resummoned immediately.",
-        "Damage is checked before any sort of reduction, so fully blocked damage also prevents resummoning it.",
-        "If the Spirit Bear dies, it can be resummoned immediately.",
-        "The Spirit Bear can use every item, except for placing Observer Wards and Sentry Wards. It can also use runes.",
+        "The Spirit Bear cannot be re-summoned if it has taken damage from a player in the last 3 seconds. Has no minimum damage threshold. Damage is checked before any sort of reduction, so fully blocked damage also prevents re-summoning it. If the Spirit Bear dies, it can be re-summoned immediately.",
+        "Damage is checked before any sort of reduction, so fully blocked damage also prevents re-summoning it.",
+        "If the Spirit Bear dies, it can be re-summoned immediately.",
+        "The Spirit Bear can use every item, except for placing Observer and Sentry Wards. It can also use runes, except for Illusion Rune. The Spirit Bear cannot have illusions of itself, therefore Manta Style do not spawn illusions of the bear. Hand of Midas grants Lone Druid the gold and experience when the Spirit Bear uses it.",
+        "It can also use runes, except for Illusion Rune.",
+        "The Spirit Bear cannot have illusions of itself, therefore Manta Style do not spawn illusions of the bear.",
         "Hand of Midas grants Lone Druid the gold and experience when the Spirit Bear uses it.",
-        "The Spirit Bear cannot have illusions of itself, so the Illusion Rune and Manta Style do not spawn illusions of the bear.",
-        "When the Spirit Bear is 1100 range away from Lone Druid, it gets disarmed, turns slightly grey and uses different animations. The grey hue and disarm symbol are visible to allies only. The animations are visible to everyone.",
+        "When the Spirit Bear is 1100 range away from Lone Druid, it gets disarmed, turns slightly grey and uses different animations. The grey hue and disarm symbol are visible to allies only. The animations are visible to everyone. With Aghanim's Scepter, this restriction is removed, and allows Spirit Bear to attack at any range from Lone Druid, and to survive if Lone Druid dies.",
         "The grey hue and disarm symbol are visible to allies only. The animations are visible to everyone.",
+        "With Aghanim's Scepter, this restriction is removed, and allows Spirit Bear to attack at any range from Lone Druid, and to survive if Lone Druid dies.",
         "Has a cast backswing of 0.57 while in True Form."
       ],
       "mana": "75",
@@ -63,12 +67,13 @@
       "params": [
         "Cast Animation: 0.5+0.63",
         "Max Health as Backlash Damage: 20%",
-        "Attack Proximity Range: 1100 (TagAghanim Global)",
-        "Health Bonus per Level: 75",
+        "Attack Proximity Range: 1100 (TagTalent Global)",
+        "Health Bonus per Level: 90",
         "Attack Damage Bonus per Level: 5",
         "Duration: Permanent",
         "Allows Spirit Bear to attack at any range from Lone Druid, and to survive if Lone Druid dies.",
-        "Spell immunity does not block the pure backlash damage."
+        "Spell immunity does not block the pure backlash damage.",
+        "Sylla's lifelong companion is symbiotic with his spirit and heart, coming to aid him in any time of need."
       ],
       "itemBehaviour": [],
       "legacyKey": "B",
@@ -84,7 +89,7 @@
         "Uses lifesteal, but instead of healing the attacking Spirit Bear, it heals its owner instead. The lifesteal is affected by lifesteal amplification, but only if the amplification source is on Lone Druid.",
         "The lifesteal is affected by lifesteal amplification, but only if the amplification source is on Lone Druid.",
         "The visual effect upon leveling up only appears when the Spirit Bear is within 1500 range of Lone Druid.",
-        "Spirit Link only affects the hero who has the ability, and that hero's Spirit Bear. Other controlled units are not affected. This applies to Ability Draft as well."
+        "Spirit Link only affects the hero who has the ability, and Spirit Bear's owner. Other controlled units are not affected. This applies to Ability Draft as well."
       ],
       "mana": null,
       "hotKey": "W",
@@ -94,7 +99,8 @@
       "params": [
         "Attack Speed Bonus: 15\/30\/45\/60",
         "Shared Lifesteal: 20%\/35%\/50%\/65%",
-        "Lifesteal is disabled if Lone Druid is affected by Break. Attack speed is not disabled."
+        "Lifesteal is disabled if Lone Druid is affected by Break. Attack speed is not disabled.",
+        "Sylla is emboldened by the presence of his companion, his vitality replenished with each swipe of the Spirit Bear's claws."
       ],
       "itemBehaviour": [],
       "legacyKey": "R",
@@ -107,32 +113,34 @@
         "Affects Enemies (TagAghanim Allies)"
       ],
       "notes": [
-        "Savage Roar is always cast by Lone Druid and the Spirit Bear simultaniously, no matter who was given the order. However, if the other would normally not be able to cast it (e.g. stunned or silenced), the effect does not occur. The current cooldown status is ignored and does not prevent the roar from triggering if still on cooldown. The cooldown always triggers, regardless of any status.",
+        "Savage Roar is always cast by Lone Druid and the Spirit Bear simultaneously, no matter who was given the order. However, if the other would normally not be able to cast it (e.g. stunned or silenced), the effect does not occur. The current cooldown status is ignored and does not prevent the roar from triggering if still on cooldown. The cooldown always triggers, regardless of any status. With Aghanim's Shard, Savage Roar is always cast simultaneously regardless of current status effects on Lone Druid or Spirit Bear.",
         "However, if the other would normally not be able to cast it (e.g. stunned or silenced), the effect does not occur.",
         "The current cooldown status is ignored and does not prevent the roar from triggering if still on cooldown.",
         "The cooldown always triggers, regardless of any status.",
+        "With Aghanim's Shard, Savage Roar is always cast simultaneously regardless of current status effects on Lone Druid or Spirit Bear.",
         "Applies fear on all hit enemies within the radius, forcing them to run towards their team's fountain, while preventing them from acting.",
-        "Only affects enemy units controlled by a player. AI-controlled units (lane and neutral creeps) are unaffected.",
-        "The bonus attack speed and movement speed granted by Aghanim's Shard also affect the caster of Savage Roar.",
+        "Only affects enemy units controlled by a player. lane and neutral creeps are unaffected.",
+        "The bonus attack speed and movement speed granted also affects the caster of Savage Roar.",
         "Shares cooldown with the Spirit Bear's Savage Roar.",
         "In Ability Draft, Savage Roar must be drafted as well for the Spirit Bear to gain it."
       ],
       "mana": "50",
       "hotKey": "E",
       "cooldown": "38\/32\/26\/20 (TagTalent 28\/22\/16\/10)",
-      "description": "Lone Druid and the Spirit Bear roar fiercely causing nearby enemies to flee towards their base in terror. Their movement speed is increased by 1.2\/1.6\/2\/2.4.",
+      "description": "Lone Druid and the Spirit Bear roar fiercely causing nearby enemies to flee towards their base in terror. Their movement speed is increased by 1.4\/1.8\/2.2\/2.6.",
       "spellName": "Savage Roar",
       "params": [
         "Cast Animation: 0.1+0.57",
         "Enemy Radius: 375",
         "Enemy Move Speed Bonus: 20%",
-        "Enemy Duration: 1.2\/1.6\/2\/2.4",
+        "Enemy Duration: 1.4\/1.8\/2.2\/2.6",
         "Ally Radius: 700",
         "Ally Move Speed Bonus: 20%",
         "Ally Attack Speed Bonus: 60",
         "Ally Duration: 5",
-        "Savage Roar now empowers allies in 700 AoE with +20% Movement Speed and +60 Attack Speed for 5 seconds.",
-        "Does not affect spell immune enemies. Debuff persists if debuff was placed before spell immunity and when not dispelled. Fully affects spell immune allies."
+        "Savage Roar now empowers allies in 700 AoE with +20% Movement Speed and +60 Attack Speed for 5 seconds. Also applies a basic dispel on Lone Druid and the Spirit Bear on cast, and causes the roar to happen on both locations regardless of the casting state on the other side.",
+        "Does not affect spell immune enemies. Debuff persists if debuff was placed before spell immunity and when not dispelled. Fully affects spell immune allies.",
+        "Sylla studies and masters the arts of the lost Bear Clan, enhancing his attunement with the wild."
       ],
       "itemBehaviour": [],
       "legacyKey": "E",
@@ -148,15 +156,16 @@
         "During the transformation, Lone Druid cannot do anything. Cannot be interrupted.",
         "Reduces Lone Druid's attack range to 225 while giving him melee attack properties. This means items treat him as a melee hero (e.g. Manta Style, Skull Basher, etc).",
         "This means items treat him as a melee hero (e.g. Manta Style, Skull Basher, etc).",
-        "Lone Druid gets his maximum and current health increased by the given value. This does not count as a heal. Upon losing the buff, his current health stays the same and only the maximum health bonus gets reverted.",
+        "Lone Druid gets his maximum and current health increased by the given value. This does not count as a heal. Upon losing the buff, his current health stays the same and only the maximum health bonus gets reverted. The maximum health increasing talent does not upgrade the current active True Form instance, but it instantly upgrades Spirit Bear's health.",
         "Upon losing the buff, his current health stays the same and only the maximum health bonus gets reverted.",
-        "While active, Lone Druid gains Demolish and Entangling Claws, on the same level as on the Spirit Bear.",
+        "The maximum health increasing talent does not upgrade the current active True Form instance, but it instantly upgrades Spirit Bear's health.",
+        "While active, Lone Druid gains Demolish and Entangling Claws, based on the same level as the Spirit Bear's abilities.",
         "True Form persists through Lone Druid's death. If he dies during it, he respawns in True Form.",
         "Changes Lone Druid's model and alters his voice."
       ],
       "mana": "200",
       "hotKey": "R",
-      "cooldown": "100 (TagTalent 60)",
+      "cooldown": "100 (TagTalent 50)",
       "description": "Lone Druid learns to morph himself into a raging bear, losing his ranged advantage, but gaining increased resistance, Entangling Roots and Demolish.",
       "spellName": "True Form",
       "params": [
@@ -166,7 +175,8 @@
         "Health Bonus: 500\/1000\/1500 (TagTalent 1500\/2000\/2500)",
         "Attack Range Loss: 325",
         "Duration: 40",
-        "Illusions get their own True Form buff lasting its regular duration."
+        "Illusions get their own True Form buff lasting its regular duration.",
+        "The mighty bear is the king of the forest, possessing the throne through raw power."
       ],
       "itemBehaviour": [],
       "legacyKey": "F",
@@ -205,16 +215,16 @@
         "Affects Self \/ Enemies"
       ],
       "notes": [
-        "Levels up together with Summon Spirit Bear.",
-        "The magic resistance stacks multiplicatively with other sources of magic resistance.",
-        "Increases the Spirit Bear's total magic resistance to 33%, assuming basic 0% magic resistance and no other sources of magic resistance.",
+        "This ability automatically levels up together with Summon Spirit Bear.",
+        "The magic resistance stacks multiplicatively with other sources of magic resistance. Increases the Spirit Bear's total magic resistance to 33%.",
+        "Increases the Spirit Bear's total magic resistance to 33%.",
         "Increases the Spirit Bear's total attack damage against buildings, including raw damage bonuses.",
         "While True Form is active, Lone Druid gains the current level of Demolish."
       ],
       "mana": null,
       "hotKey": null,
       "cooldown": null,
-      "description": "Magic Resistance Bonus: 33%",
+      "description": "Increases the power of the Spirit Bear, causing it to deal more damage to buildings and have additional spell resistance.",
       "spellName": "Demolish",
       "params": [
         "Magic Resistance Bonus: 33%",
@@ -232,19 +242,19 @@
       ],
       "notes": [
         "Same notes as for Lone Druid's Savage Roar apply.",
-        "The Spirit Bear acquires this spell as soon as Lone Druid learns it.",
-        "Causes both Lone Druid and the Spirit Bear to cast Savage Roar at the same time and puts both Savage Roars on cooldown, regardless of who cast the spell."
+        "Spirit Bear acquires this ability as soon as Lone Druid learns it.",
+        "Causes both Lone Druid and the Spirit Bear to cast Savage Roar at the same time and puts both Savage Roars on cooldown, regardless of who cast the ability."
       ],
       "mana": "50",
       "hotKey": "E",
       "cooldown": "38\/32\/26\/20 (TagTalent 28\/22\/16\/10)",
-      "description": "Lone Druid and the Spirit Bear roar fiercely causing nearby enemies to flee towards their base in terror. Their movement speed is increased by 1.2\/1.6\/2\/2.4.",
+      "description": "Lone Druid and the Spirit Bear roar fiercely causing nearby enemies to flee towards their base in terror. Their movement speed is increased by 1.4\/1.8\/2.2\/2.6.",
       "spellName": "Savage Roar",
       "params": [
         "Cast Animation: 0.1+0.64",
         "Enemy Radius: 375",
         "Enemy Move Speed Bonus: 20%",
-        "Enemy Duration: 1.2\/1.6\/2\/2.4",
+        "Enemy Duration: 1.4\/1.8\/2.2\/2.6",
         "Ally Radius: 700",
         "Ally Move Speed Bonus: 20%",
         "Ally Attack Speed Bonus: 60",
@@ -262,7 +272,7 @@
         "Affects Enemies"
       ],
       "notes": [
-        "Levels up together with Summon Spirit Bear.",
+        "This ability automatically levels up together with Summon Spirit Bear.",
         "Roots the target, preventing it from moving and casting certain mobility spells. Provides True Sight over the target.",
         "Provides True Sight over the target.",
         "The proccing attack first applies the debuff, then its own damage.",
@@ -275,7 +285,7 @@
       "mana": null,
       "hotKey": null,
       "cooldown": null,
-      "description": "Proc Chance: 20%",
+      "description": "Attacks have a chance to cause roots to burst from the ground, immobilizing the attacked enemy unit, and dealing damage per second.",
       "spellName": "Entangling Claws",
       "params": [
         "Proc Chance: 20%",
@@ -306,7 +316,7 @@
     {
       "talentLvl": "20",
       "talentLeft": "0 Entangle Cooldown",
-      "talentRight": "-40s True Form Cooldown"
+      "talentRight": "-50s True Form Cooldown"
     },
     {
       "talentLvl": "15",

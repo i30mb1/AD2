@@ -37,25 +37,26 @@
         "Damage Magical"
       ],
       "notes": [
-        "Gush's projectile travels at a speed of 2500.",
+        "Gush's projectile travels at a speed of 2500. The projectile takes 0.28 seconds to travel at max cast range.",
+        "The projectile takes 0.28 seconds to travel at max cast range.",
         "Gush first applies the debuff, then the damage.",
-        "When upgraded, Gush releases a big wave, instead of a single target projectile. The wave always travels its full distance. When targeting a unit, the wave is released towards its direction on cast. However, it does not home in on the target. The wave travels at a speed of 1500 instead of 2500 like the non-upgraded projectile, taking 1.47 seconds to travel the full distance. The wave can hit units up to 2460 range away (travel distance + radius). The wave fully affects invisible enemies and enemies inside the fog of war. Provides 200 radius ground vision around each hit enemy for 2 seconds. The wave does not provide any vision. The second sound is used by the wave.",
+        "With Aghanim's Scepter, Gush releases a big wave, instead of a single target projectile. The wave always travels its full distance. When targeting a unit, the wave is released towards its direction on cast. However, it does not home in on the target. The wave travels at a speed of 1500 instead of 2500 like the non-upgraded projectile, taking 1.47 seconds to travel the full distance. With the travel distance and radius, the wave can hit units up to 2460 range away. The wave fully affects invisible enemies and enemies inside the fog of war. Provides 200 radius ground vision around each hit enemy for 2 seconds. The wave does not provide any vision. The second sound is used by the wave.",
         "When targeting a unit, the wave is released towards its direction on cast. However, it does not home in on the target.",
         "The wave travels at a speed of 1500 instead of 2500 like the non-upgraded projectile, taking 1.47 seconds to travel the full distance.",
-        "The wave can hit units up to 2460 range away (travel distance + radius).",
+        "With the travel distance and radius, the wave can hit units up to 2460 range away.",
         "The wave fully affects invisible enemies and enemies inside the fog of war.",
         "Provides 200 radius ground vision around each hit enemy for 2 seconds.",
         "The wave does not provide any vision.",
         "The second sound is used by the wave."
       ],
-      "mana": "90\/100\/110\/120",
+      "mana": "100\/105\/110\/115",
       "hotKey": "Q",
       "cooldown": "12 (TagTalent 9.6) (TagTalent 7, 5.6)",
       "description": "Summons a gush of water to damage an enemy unit, reducing their movement speed and armor. Lasts seconds.",
       "spellName": "Gush",
       "params": [
         "Cast Animation: 0.3+0.6",
-        "Cast Range: 700 (TagAghanim 2200)",
+        "Cast Range: 700 (TagTalent 2200)",
         "Damage: 110\/160\/210\/260 (TagTalent 230\/280\/330\/380)",
         "Armor Reduction: 4\/5\/6\/7 (TagTalent 8\/9\/10\/11)",
         "Move Speed Slow: 40%",
@@ -64,7 +65,8 @@
         "Wave Radius: 260",
         "Gush becomes a ground targeted wave ability that affects enemy units in a line. Decreases cooldown.",
         "Slow and armor reduction persist if debuff was placed before spell immunity and when not dispelled.",
-        "Blocked upon impact. Not blocked when upgraded."
+        "Blocked upon impact. Not blocked.",
+        "During his championship of the Sunken Isles, Leviathan gained mastery over the open sea."
       ],
       "itemBehaviour": [],
       "legacyKey": "G",
@@ -77,13 +79,13 @@
         "Affects Self"
       ],
       "notes": [
-        "The damage reduction is Damage Block and the debuff removal is a strong dispel.",
-        "The damage reduction is always on and is not connected to the damage threshold for debuff removal.",
-        "The Damage Block does not work against wards (TagTalent Plague Ward, Mass Serpent Ward, Death Ward).",
-        "Does not reduce physical damage from spells, except from Moon Glaives and The Swarm.",
+        "The damage reduction is damage block and the debuff removal is a strong dispel. The damage reduction is always active and is not connected to the damage threshold for debuff removal. The damage block does not work against wards (e.g. Plague Ward, Mass Serpent Ward, Death Ward etc.). Does not reduce physical damage from abilities, except from Moon Glaives and The Swarm.",
+        "The damage reduction is always active and is not connected to the damage threshold for debuff removal.",
+        "The damage block does not work against wards (e.g. Plague Ward, Mass Serpent Ward, Death Ward etc.).",
+        "Does not reduce physical damage from abilities, except from Moon Glaives and The Swarm.",
         "Only damage from player owned sources (after reductions) is counted towards the debuff removal.",
         "Damage counter for the debuff removal resets when Tidehunter does not take player based damage for 6 seconds.",
-        "When procced by a spell that deals damage before applying a debuff (e.g. Storm Hammer), Tidehunter is dispelled before the spell's debuff is applied.",
+        "When Kraken Shell is procced by an ability that deals damage before applying a debuff (e.g. Storm Hammer), Tidehunter is dispelled before the ability's debuff is applied.",
         "A debuff removal proc is indicated by a sound effect and water particles on Tidehunter's skin."
       ],
       "mana": null,
@@ -96,7 +98,8 @@
         "Damage Block: 18\/30\/42\/54 (TagTalent 48\/60\/72\/84)",
         "Damage Threshold: 600\/550\/500\/450",
         "Threshold Reset Timer: 6",
-        "Damage Block works for illusions. The dispel effect does not work."
+        "Damage Block works for illusions. The dispel effect does not work.",
+        "Claddish navymen tell tales of a mighty sea-faring beast that suffered spear and sword but continued to lay waste to the fleet."
       ],
       "itemBehaviour": [],
       "legacyKey": "R",
@@ -110,12 +113,13 @@
         "Damage Instant Attack"
       ],
       "notes": [
-        "Causes Tidehunter to perform instant attacks on enemies within the radius. These instant attacks are allowed to trigger attack modifiers, except cleave, normally. Has True Strike.",
-        "These instant attacks are allowed to trigger attack modifiers, except cleave, normally. Has True Strike.",
+        "Causes Tidehunter to perform instant attacks on enemies. These instant attacks can proc any attack modifiers and on-hit effects normally, with cleave being an exception. They have True Strike, but completely ignore disarms.",
+        "These instant attacks can proc any attack modifiers and on-hit effects normally, with cleave being an exception. They have True Strike, but completely ignore disarms.",
         "Only reduces base damage and that given by the primary attribute of affected units. Raw bonus damage is not reduced.",
         "The smash first applies the debuff, then the instant attack.",
         "Affects ancient creeps, but not Roshan.",
-        "With Aghanim's Shard, fully affects buildings as well. Does not affect wards."
+        "With Aghanim's Shard, Anchor Smash fully affects buildings as well. Does not affect wards.",
+        "Does not affect wards."
       ],
       "mana": "30\/40\/50\/60",
       "hotKey": "E",
@@ -128,7 +132,8 @@
         "Attack Damage Bonus: 45\/90\/135\/180 (TagTalent 135\/180\/225\/270)",
         "Attack Damage Reduction: 30%\/40%\/50%\/60% (TagTalent 50%\/60%\/70%\/80%)",
         "Duration: 6",
-        "Increases Anchor Smash damage by 90 and causes it to affect buildings. Reduces cooldown by 1 second."
+        "Increases Anchor Smash damage by 90 and causes it to affect buildings. Reduces cooldown by 1 second.",
+        "Stolen from one of Admiral Kunkka's flagships, Leviathan's heavy anchor proves useful as a melee weapon."
       ],
       "itemBehaviour": [],
       "legacyKey": "C",
@@ -162,7 +167,8 @@
         "Effect Width: 250",
         "Damage: 200\/300\/400",
         "Stun Duration: 2.4\/2.6\/2.8",
-        "Attempts to damage if already hit enemies turn spell immune before landing."
+        "Attempts to damage if already hit enemies turn spell immune before landing.",
+        "Calling to the abyssal god Maelrawn has resulted in entire armadas being lost at sea."
       ],
       "itemBehaviour": [],
       "legacyKey": "V",

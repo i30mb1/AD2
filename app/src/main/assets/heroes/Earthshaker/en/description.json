@@ -22,7 +22,7 @@
         },
         {
           "talentLvl": "15",
-          "talentLeft": "+6 Armor",
+          "talentLeft": "+7 Armor",
           "talentRight": "+25 Movement Speed"
         },
         {
@@ -41,20 +41,20 @@
       ],
       "notes": [
         "Fissure's effects are instantly applied within its whole area. There is no travel time.",
-        "The fissure is created using many segments lined up in front of Earthshaker. The amount of segments determines the total effective range of the Fissure. The segments have a collision size of 24, and a distance of 8.25 between each other, with the first one being placed 8.25 range in front of Earthshaker. This means the actual length of the Fissure can only be a factor of 56.25. It is defined as (2 * 24 + 8.25) so that it never exceeds the listed values. Therefore, default (TagTalent talent upgraded) Fissure consists of 24 (TagTalent 30) segments, resulting in an actual range of 1350 (TagTalent 1687.5). Every unit (except wards and buildings) which is within that area upon cast is pushed aside.",
+        "The fissure is created using many segments lined up in front of Earthshaker. The amount of segments determines the total effective range of the Fissure. The segments have a collision size of 24, and a distance of 8.25 between each other, with the first one being placed 8.25 range in front of Earthshaker. This means the actual length of the Fissure can only be a factor of 56.25. It is defined as (2 * 24 + 8.25) so that it never exceeds the listed values. Therefore, Fissure consists of 24 (TagTalent 30) segments, resulting in an actual range of 1350 (TagTalent 1687.5). Every unit (except wards and buildings) which is within that radius upon cast is pushed aside.",
         "The segments have a collision size of 24, and a distance of 8.25 between each other, with the first one being placed 8.25 range in front of Earthshaker.",
         "This means the actual length of the Fissure can only be a factor of 56.25. It is defined as (2 * 24 + 8.25) so that it never exceeds the listed values.",
-        "Therefore, default (TagTalent talent upgraded) Fissure consists of 24 (TagTalent 30) segments, resulting in an actual range of 1350 (TagTalent 1687.5).",
-        "Every unit (except wards and buildings) which is within that area upon cast is pushed aside.",
-        "The stun and damage are applied in a circular shape around each segment. This means the total damage\/stun area consists of multiple overlapping circles, and not a smooth line. A unit can only be hit by one instance per cast, even when within the damage\/stun radius of multiple segments. Can hit units up to 1575 (TagTalent 1912.5) range in front and 216.75 range behind Earthshaker.",
-        "A unit can only be hit by one instance per cast, even when within the damage\/stun radius of multiple segments.",
+        "Therefore, Fissure consists of 24 (TagTalent 30) segments, resulting in an actual range of 1350 (TagTalent 1687.5).",
+        "Every unit (except wards and buildings) which is within that radius upon cast is pushed aside.",
+        "The stun and damage are applied in a circular shape around each segment. This means the total damage\/stun radius consists of multiple overlapping circles, and not a smooth line. A unit can only be hit by one instance per cast, even when within the 225 damage\/stun radius of multiple segments. Can hit units up to 1575 (TagTalent 1912.5) range in front and 216.75 range behind Earthshaker.",
+        "A unit can only be hit by one instance per cast, even when within the 225 damage\/stun radius of multiple segments.",
         "Can hit units up to 1575 (TagTalent 1912.5) range in front and 216.75 range behind Earthshaker.",
         "Fissure first applies the debuff, then the damage.",
-        "Flying units and units with free pathing (TagTalent Spectral Dagger, Charge of Darkness, Spin Web) are not blocked by Fissure. They still are fully affected by it otherwise when hit. They are pushed aside, stunned and damaged.",
+        "Flying units and units with unobstructed movement (e.g. Spectral Dagger, Charge of Darkness, Spin Web) are not blocked by Fissure. They still are fully affected by it otherwise when hit. They are pushed aside, stunned and damaged.",
         "They still are fully affected by it otherwise when hit. They are pushed aside, stunned and damaged.",
         "Units not controlled by any player do not try to path around the Fissure, but simply walk against it as if it is not there. This effectively causes them to get stuck, until they change directions (e.g. when aggro-ing them), or until the Fissure dissipates.",
         "This effectively causes them to get stuck, until they change directions (e.g. when aggro-ing them), or until the Fissure dissipates.",
-        "With Aghanim's Shard, the Fissure segments provide the caster with unobstructed movement while within 150 range of them. The modifier lingers for 1 second. This means the caster can path through anything while standing on the Fissure and for a short time after leaving its area. Also, Aftershock gets applied around each of Fissure's segments whenever it gets triggered. Enemies may only be hit by one instance of Aftershock, so the overlapping areas along the Fissure do not stack the damage. The Aftershock uses a reduced stun duration of 0.3\/0.45\/0.6\/0.75 seconds.",
+        "With Aghanim's Shard, the Fissure segments provide the caster with unobstructed movement while within 150 range of the segments. The modifier lingers for 1 second. This means the caster can path through anything while standing on the Fissure and for a short time after leaving its area. Also, Aftershock gets applied around each of Fissure's segments whenever it gets triggered. Enemies may only be hit by one instance of Aftershock, so the overlapping areas along the Fissure do not stack the damage. The Aftershock uses a reduced stun duration of 0.3\/0.45\/0.6\/0.75 seconds.",
         "This means the caster can path through anything while standing on the Fissure and for a short time after leaving its area.",
         "Also, Aftershock gets applied around each of Fissure's segments whenever it gets triggered.",
         "Enemies may only be hit by one instance of Aftershock, so the overlapping areas along the Fissure do not stack the damage.",
@@ -78,7 +78,8 @@
         "Free Pathing Linger Duration: 1",
         "Aftershock Stun Duration Percentage: 50%",
         "Reduces Fissure cooldown by 2 seconds and allows Earthshaker to walk on it. When he casts an ability, an aftershock is released along its path.",
-        "Pushes aside and blocks path for all spell immune units. Does not stun or attempt to damage spell immune enemies."
+        "Pushes aside and blocks path for all spell immune units. Does not stun or attempt to damage spell immune enemies.",
+        "The Nishian totem splits the world to its core with tectonic force."
       ],
       "itemBehaviour": [],
       "legacyKey": "F",
@@ -91,21 +92,28 @@
         "Affects Self"
       ],
       "notes": [
-        "Only increases base damage and that given by the primary attribute of Earthshaker. Raw bonus damage is not increased.",
-        "The Enchant Totem buff grants True Strike, so the attack cannot miss.",
-        "With Aghanim's Scepter, the ability turns into an area-targeted ability. It may only target the ground or self. Double-clicking the ability automatically targets self. When targeting self, the upgraded ability behaves like the regular ability, using the cast point + cast backswing second cast animation and not leaping. When targeting the ground, it uses a cast point aghs second cast time and a cast backswing aghs second cast backswing, during which Earthshaker is disabled. The leap duration is always the same, so the speed adapts based on the targeted distance. The leap height is always 950 range. During the leap, Earthshaker is fully disabled, unable to move, turn, attack or cast spells or items. The spell counts as cast as soon as the leap starts. However, Aftershock and the totem buff are applied upon landing. Aftershock and the totem buff are applied even when Earthshaker gets disabled or dies during the leap. Getting hit by other sources of forced movement causes the leap's trajectory to change, but it is not interrupted. However, getting hit by forced movement causes the ability to not apply Aftershock or the totem buff upon landing. The spell is fully and immediately canceled when getting moved upwards or teleported by other spells. While in the air, other units may pass below Earthshaker. The targeting reticule shows the radius of Aftershock, even when it hasn't been learned yet.",
-        "Double-clicking the ability automatically targets self.",
-        "When targeting self, the upgraded ability behaves like the regular ability, using the cast point + cast backswing second cast animation and not leaping.",
-        "When targeting the ground, it uses a cast point aghs second cast time and a cast backswing aghs second cast backswing, during which Earthshaker is disabled.",
-        "The leap duration is always the same, so the speed adapts based on the targeted distance. The leap height is always 950 range.",
-        "During the leap, Earthshaker is fully disabled, unable to move, turn, attack or cast spells or items.",
-        "The spell counts as cast as soon as the leap starts. However, Aftershock and the totem buff are applied upon landing.",
-        "Aftershock and the totem buff are applied even when Earthshaker gets disabled or dies during the leap.",
-        "Getting hit by other sources of forced movement causes the leap's trajectory to change, but it is not interrupted.",
+        "Only increases base damage and that given by the primary attribute of the caster. Raw bonus damage is not increased.",
+        "The Enchant Totem buff does not grant True Strike. However the totem buff does not get used if the attack misses.",
+        "With Aghanim's Scepter, Enchant Totem turns into a 300 radius area-targeted ability with a cast range 950. It may only target the ground or self. ↓↓ Double-tapping automatically targets self. When targeting self, Enchant Totem uses the regular 1.07-second cast animation and not leaping. When targeting the ground, it uses a 0-second cast time and a 0.2-second cast backswing, during which Earthshaker is fully disabled, unable to move, turn, attack or cast abilities or items. Both targeting self and the ground also grants 40% cleave damage. The hidden leap buff duration is always 1 second, so the leap speed adapts based on the targeted distance within its cast range. The leap height is always 950 range. Enchant Totem counts as cast as soon as the leap starts. However, Aftershock and the totem buff are applied upon landing, even when Earthshaker gets disabled or dies during the leap. Getting hit by other sources of Forced Movement causes the leap's trajectory to change, but it is not interrupted. However, getting hit by forced movement causes the ability to not apply Aftershock or the totem buff upon landing. The ability is fully and immediately canceled when getting moved upwards or teleported by other abilities. While in the air, other units may pass below Earthshaker. The targeting reticule shows the 300 radius of Aftershock, even when it hasn't been learned yet.",
+        "↓↓ Double-tapping automatically targets self.",
+        "When targeting self, Enchant Totem uses the regular 1.07-second cast animation and not leaping.",
+        "When targeting the ground, it uses a 0-second cast time and a 0.2-second cast backswing, during which Earthshaker is fully disabled, unable to move, turn, attack or cast abilities or items.",
+        "Both targeting self and the ground also grants 40% cleave damage.",
+        "",
+        "The hidden leap buff duration is always 1 second, so the leap speed adapts based on the targeted distance within its cast range. The leap height is always 950 range.",
+        "Enchant Totem counts as cast as soon as the leap starts.",
+        "However, Aftershock and the totem buff are applied upon landing, even when Earthshaker gets disabled or dies during the leap.",
+        "Getting hit by other sources of Forced Movement causes the leap's trajectory to change, but it is not interrupted.",
         "However, getting hit by forced movement causes the ability to not apply Aftershock or the totem buff upon landing.",
-        "The spell is fully and immediately canceled when getting moved upwards or teleported by other spells.",
+        "The ability is fully and immediately canceled when getting moved upwards or teleported by other abilities.",
         "While in the air, other units may pass below Earthshaker.",
-        "The targeting reticule shows the radius of Aftershock, even when it hasn't been learned yet."
+        "The targeting reticule shows the 300 radius of Aftershock, even when it hasn't been learned yet.",
+        "Cleave damage cannot be amplified with outgoing spell damage amplification and cannot spell lifesteal. Can be amplified by incoming spell damage amplification. Cleave damage is reduced by Damage Block. Cleave damage depends on the attack damage value of the cleaving unit, not on how much their primary attack target took. The complete cleave area is shaped like an isosceles trapezoid in front of the attacking unit. Fully stacks with other sources of cleave. Each source of cleave works completely independent.",
+        "Can be amplified by incoming spell damage amplification.",
+        "Cleave damage is reduced by Damage Block.",
+        "Cleave damage depends on the attack damage value of the cleaving unit, not on how much their primary attack target took.",
+        "The complete cleave area is shaped like an isosceles trapezoid in front of the attacking unit.",
+        "Fully stacks with other sources of cleave. Each source of cleave works completely independent."
       ],
       "mana": "35\/40\/45\/50",
       "hotKey": "W",
@@ -113,15 +121,20 @@
       "description": "Empowers Earthshaker's totem, causing it to deal extra damage and have 75 bonus attack range on the next attack.",
       "spellName": "Enchant Totem",
       "params": [
-        "Cast Animation: 0.69+0.38 (TagAghanim 0+0.2)",
+        "Cast Animation: 0.69+0.38 (TagTalent 0+0.2)",
         "Attack Range Bonus: 75",
         "Attack Damage Bonus: 100%\/200%\/300%\/400%",
         "Damage Bonus Duration: 14",
-        "Cast Range: 1100",
-        "Max Leap Distance: 1100",
+        "Cast Range: 950",
+        "Max Leap Distance: 950",
+        "Cleave Starting Radius: 150",
+        "Cleave Distance: 650",
+        "Cleave End Radius: 360",
+        "Cleave Damage: 40%",
         "Leap Duration: 1",
-        "Enchant Totem becomes a 1100 range ground target ability, causing Earthshaker to jump in the air and land at the target spot, casting Enchant Totem there. Self-casting the ability will behave in the original form, without jumping.",
-        "When upgraded, can only be self-cast while rooted."
+        "Enchant Totem becomes a 950 range ground target ability, causing Earthshaker to jump in the air and land at the target spot, casting Enchant Totem there. Self-casting the ability will behave in the original form, without jumping.",
+        "Can only be self-cast while rooted.",
+        "Raigor's gorilla strength can destroy mountains."
       ],
       "itemBehaviour": [],
       "legacyKey": "E",
@@ -137,7 +150,7 @@
       "notes": [
         "Aftershock does not trigger upon using items.",
         "Aftershock first applies the stun debuff, then the damage.",
-        "Applies its own effects before the effects of the triggering spell are applied.",
+        "Applies its own effects before the effects of the triggering ability are applied.",
         "The stun does not stack with the stun of Fissure. It follows the regular rule of stuns \u2013 the longer stun overrides the shorter one."
       ],
       "mana": null,
@@ -148,7 +161,8 @@
       "params": [
         "Radius: 300",
         "Damage: 75\/100\/125\/150",
-        "Stun Duration: 0.6\/0.9\/1.2\/1.5"
+        "Stun Duration: 0.6\/0.9\/1.2\/1.5",
+        "The earth trembles beneath the mighty footsteps of Raigor."
       ],
       "itemBehaviour": [],
       "legacyKey": "T",
@@ -162,25 +176,25 @@
         "Damage Magical"
       ],
       "notes": [
-        "Echo Slam interrupts Earthshaker's channeling spells upon cast.",
-        "Each enemy within the initial search radius sends echo waves towards enemies within the echo search radius.",
+        "Echo Slam interrupts Earthshaker's channeling abilities upon cast.",
         "The echo waves travel at a speed of 600.",
+        "Each enemy within the initial search radius sends echo waves towards other enemies within the 600 echo search radius. Hit enemy heroes send two echoes to every valid target within the radius, and not only to other heroes.",
+        "Hit enemy heroes send two echoes to every valid target within the radius, and not only to other heroes.",
         "The echo search radii are centered around each unit hit by the initial damage. Echo waves are sent out to every enemy unit within the search radius, except to the unit itself. This means the echo waves targets can be up to 1200 range away from Earthshaker upon cast. This also means when only one enemy is within the radius, it takes no damage, since it cannot send echoes to itself.",
         "Echo waves are sent out to every enemy unit within the search radius, except to the unit itself.",
         "This means the echo waves targets can be up to 1200 range away from Earthshaker upon cast.",
         "This also means when only one enemy is within the radius, it takes no damage, since it cannot send echoes to itself.",
-        "Hit enemy heroes send two echoes to every valid target within the radius, and not only to other heroes.",
-        "Wards and buildings are completely ignored, meaning they do not release and are not targeted by echoes.",
-        "Fully affects invisible units and units in the fog of war.",
-        "Total damage when hitting a certain amount of heroes, with no other units nearby (before reductions): 1 Hero: 100\/140\/180 (TagTalent 100\/140\/180) total damage to the hero, since echoes do not deal damage to their source. 2 Heroes: 240\/320\/400 (TagTalent 320\/400\/480) damage to each hero, 480\/640\/800 (TagTalent 640\/800\/960) total damage. 3 Heroes: 380\/500\/620 (TagTalent 540\/660\/780) damage to each hero, 1140\/1500\/1860 (TagTalent 1620\/1980\/2340) total damage. 4 Heroes: 520\/680\/840 (TagTalent 760\/920\/1080) damage to each hero, 2080\/2720\/3360 (TagTalent 3040\/3680\/4320) total damage. 5 Heroes: 660\/860\/1060 (TagTalent 980\/1180\/1380) damage to each hero, 3300\/4300\/5300 (TagTalent 4900\/5900\/6900) total damage.",
-        "1 Hero: 100\/140\/180 (TagTalent 100\/140\/180) total damage to the hero, since echoes do not deal damage to their source.",
+        "Wards and buildings are completely ignored, they do not release and are not targeted by echoes.",
+        "Fully affects invisible units and units in the Fog of War.",
+        "Total damage when hitting a certain amount of heroes, with no other units nearby (before reductions): 2 Heroes: 240\/320\/400 (TagTalent 320\/400\/480) damage to each hero, 480\/640\/800 (TagTalent 640\/800\/960) total damage. 3 Heroes: 380\/500\/620 (TagTalent 540\/660\/780) damage to each hero, 1140\/1500\/1860 (TagTalent 1620\/1980\/2340) total damage. 4 Heroes: 520\/680\/840 (TagTalent 760\/920\/1080) damage to each hero, 2080\/2720\/3360 (TagTalent 3040\/3680\/4320) total damage. 5 Heroes: 660\/860\/1060 (TagTalent 980\/1180\/1380) damage to each hero, 3300\/4300\/5300 (TagTalent 4900\/5900\/6900) total damage.",
         "2 Heroes: 240\/320\/400 (TagTalent 320\/400\/480) damage to each hero, 480\/640\/800 (TagTalent 640\/800\/960) total damage.",
         "3 Heroes: 380\/500\/620 (TagTalent 540\/660\/780) damage to each hero, 1140\/1500\/1860 (TagTalent 1620\/1980\/2340) total damage.",
         "4 Heroes: 520\/680\/840 (TagTalent 760\/920\/1080) damage to each hero, 2080\/2720\/3360 (TagTalent 3040\/3680\/4320) total damage.",
         "5 Heroes: 660\/860\/1060 (TagTalent 980\/1180\/1380) damage to each hero, 3300\/4300\/5300 (TagTalent 4900\/5900\/6900) total damage.",
-        "The modifier_earthshaker_echoslam_delay modifier is placed on every enemy damaged by Echo Slam, and is used to [ Info Needed ]. It lasts for 10.5 seconds. The modifier_earthshaker_echoslam_heating_up modifier is placed on Earthshaker when hitting more than 4 heroes with Echo Slam, and is used to [ Info Needed ]. It lasts 2 seconds.",
-        "The modifier_earthshaker_echoslam_heating_up modifier is placed on Earthshaker when hitting more than 4 heroes with Echo Slam, and is used to [ Info Needed ]. It lasts 2 seconds.",
-        "The modifier_earthshaker_arcana_kill_effect modifier is placed on enemies killed by Echo Slam while having Planetfall equipped, and is responsible for the custom death effect."
+        "",
+        "The delay modifier is placed on every enemy damaged by Echo Slam, and is used to [ Info Needed ]. It lasts for 10.5 seconds. The heating up modifier is placed on Earthshaker when hitting more than 4 heroes with Echo Slam, and is used to [ Info Needed ]. It lasts 2 seconds.",
+        "The heating up modifier is placed on Earthshaker when hitting more than 4 heroes with Echo Slam, and is used to [ Info Needed ]. It lasts 2 seconds.",
+        "The kill effect modifier is placed on enemies killed by Echo Slam while having Planetfall equipped, and is responsible for the custom death effect."
       ],
       "mana": "145\/205\/265",
       "hotKey": "R",
@@ -193,7 +207,8 @@
         "Echo Search Radius: 600",
         "Base Damage: 100\/140\/180",
         "Echo Damage: 70\/90\/110 (TagTalent 110\/130\/150)",
-        "Spell immune enemies send echo waves towards nearby spell immune enemies. Echoes do not attempt to damage spell immune enemies."
+        "Spell immune enemies send echo waves towards nearby spell immune enemies. Echoes do not attempt to damage spell immune enemies.",
+        "Tectonic plates crack, mountains fold, and foes are crushed by the Echo Slam."
       ],
       "itemBehaviour": [],
       "legacyKey": "C",
@@ -223,7 +238,7 @@
     },
     {
       "talentLvl": "15",
-      "talentLeft": "+6 Armor",
+      "talentLeft": "+7 Armor",
       "talentRight": "+25 Movement Speed"
     },
     {

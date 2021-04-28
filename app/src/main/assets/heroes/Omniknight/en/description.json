@@ -23,7 +23,7 @@
         },
         {
           "talentLvl": "10",
-          "talentLeft": "+40 Base Damage",
+          "talentLeft": "+50 Base Damage",
           "talentRight": "+10 Heavenly Grace HP Regen"
         }
       ]
@@ -50,7 +50,8 @@
         "Cast Range: 550",
         "Damage Radius: 260",
         "Damage\/Heal: 90\/160\/230\/300 (TagTalent 250\/320\/390\/460)",
-        "Can be cast on spell immune allies. Does not affect spell immune enemies."
+        "Can be cast on spell immune allies. Does not affect spell immune enemies.",
+        "Priests of the Omniscience are adept at removing impurities from fellow warriors."
       ],
       "itemBehaviour": [],
       "legacyKey": "R",
@@ -63,10 +64,10 @@
         "Affects Allies"
       ],
       "notes": [
-        "Applies a strong dispel on the target upon cast. ↓↓ Double-tapping automatically targets self.",
+        "Heavenly Grace first applies the buff, then the dispel. Applies a strong dispel on the target upon cast. ↓↓ Double-tapping automatically targets self.",
+        "Applies a strong dispel on the target upon cast.",
         "↓↓ Double-tapping automatically targets self.",
-        "Heavenly Grace first applies the buff, then the dispel.",
-        "The strength bonus effectively grants the target 140\/280\/420\/560 health and 0.7\/1.4\/2.1\/2.8 health regeneration (and 7\/14\/21\/28 attack damage for strength heroes).",
+        "The strength bonus effectively grants the target 160\/320\/480\/640 health and 0.8\/1.6\/2.4\/3.2 health regeneration (and 8\/16\/24\/32 attack damage for strength heroes).",
         "Can regenerate up to 80\/120\/160\/200 (TagTalent 180\/220\/260\/300) health over its full duration.",
         "The status resistance stacks multiplicatively with other sources of status resistance."
       ],
@@ -78,10 +79,11 @@
       "params": [
         "Cast Animation: 0.25+1.27",
         "Cast Range: 500",
-        "Strength Bonus: 7\/14\/21\/28",
+        "Strength Bonus: 8\/16\/24\/32",
         "Status Resistance Bonus: 50%",
         "Health Regen Bonus: 8\/12\/16\/20 (TagTalent 18\/22\/26\/30)",
-        "Duration: 10"
+        "Duration: 10",
+        "When faced with the pit of sacrifice, Purist's resilience to magic was tested and affirmed."
       ],
       "itemBehaviour": [],
       "legacyKey": "E",
@@ -105,7 +107,8 @@
         "Radius: 375",
         "Move Speed Slow: 10%\/18%\/26%\/34% (TagTalent 25%\/33%\/41%\/49%)",
         "Aura Linger Duration: 1",
-        "Slow persists if debuff was placed before spell immunity."
+        "Slow persists if debuff was placed before spell immunity.",
+        "The holy embodiment of Purist Thunderwrath is enough to weaken those of lesser faith."
       ],
       "itemBehaviour": [],
       "legacyKey": "D",
@@ -120,21 +123,22 @@
       ],
       "notes": [
         "Requires Aghanim's Shard to be unlocked.",
-        "The cast range of Hammer of Purity always equals the caster's attack range.",
+        "The cast range of Hammer of Purity is based on the attack range of the caster. The cast range can be further increased by other attack range bonuses. However, it is not affected by cast range bonuses.",
+        "The cast range can be further increased by other attack range bonuses. However, it is not affected by cast range bonuses.",
         "The damage is dealt in a separate instance.",
-        "The damage is based on Omniknight's base attack damage, and damage granted from his primary attribute. Raw damage bonus are ignored.",
-        "The damage is independent from the actual damage dealt by the leading attack. Its values are calculated separately. Considers the minimum and maximum damage values of Omniknight, so the damage varies like how regular attacks do.",
-        "Considers the minimum and maximum damage values of Omniknight, so the damage varies like how regular attacks do.",
-        "Hammer of Purity first applies its own damage, then the heal, then the attack damage."
+        "The damage is based on the caster's base attack damage, and damage granted from their primary attribute. Raw damage bonus are ignored.",
+        "The damage is independent from the actual damage dealt by the leading attack. Its values are calculated separately. Considers the minimum and maximum damage values of the caster, so the damage varies like how regular attacks do.",
+        "Considers the minimum and maximum damage values of the caster, so the damage varies like how regular attacks do.",
+        "Hammer of Purity first applies its own damage, the heal, then the attack damage."
       ],
-      "mana": "30",
+      "mana": "20",
       "hotKey": "D",
-      "cooldown": "6",
-      "description": "Causes Omniknight's next attack to deal bonus pure damage based on 50 plus 150% of his base damage. He is healed for the same amount of pure damage. Cooldown: 6",
+      "cooldown": "4",
+      "description": "Causes Omniknight's next attack to deal bonus pure damage based on 60 plus 115% of his base damage. He is healed for the same amount of pure damage. Cooldown: 4",
       "spellName": "Hammer of Purity",
       "params": [
-        "Base Damage: 50",
-        "Main Attack Damage as Damage: 150%",
+        "Base Damage: 60",
+        "Main Attack Damage as Damage: 115%",
         "Damage as Heal: 100%",
         "Cannot target spell immune enemies. Can heal Omniknight while spell immune."
       ],
@@ -160,11 +164,12 @@
       "spellName": "Guardian Angel",
       "params": [
         "Cast Animation: 0.4+0.9",
-        "Radius: 1200 (TagAghanim Global)",
-        "Duration: 5\/6.5\/8 (TagAghanim 8\/9\/10)",
+        "Radius: 1200 (TagTalent Global)",
+        "Duration: 5\/6.5\/8 (TagTalent 8\/9\/10)",
         "Health Regen Bonus: 40",
         "Increases duration, provides HP regen, radius becomes global and affects buildings.",
-        "Grants a new ability: Hammer of Purity"
+        "Grants a new ability: Hammer of Purity",
+        "The All Seeing One casts down his protection over those that Purist calls friend."
       ],
       "itemBehaviour": [],
       "legacyKey": "G",
@@ -173,7 +178,7 @@
   ],
   "mainAttributes": {
     "attrStrengthInc": 3.4,
-    "attrStrength": 22.0,
+    "attrStrength": 24.0,
     "attrIntelligence": 15.0,
     "attrIntelligenceInc": 1.8,
     "attrAgilityInc": 1.8,
@@ -199,7 +204,7 @@
     },
     {
       "talentLvl": "10",
-      "talentLeft": "+40 Base Damage",
+      "talentLeft": "+50 Base Damage",
       "talentRight": "+10 Heavenly Grace HP Regen"
     }
   ]

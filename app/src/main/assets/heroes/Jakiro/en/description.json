@@ -2,24 +2,25 @@
   "abilities": [
     {
       "notes": [
-        "The attack range talent also affects the cast range of Liquid Fire and Liquid Frost."
+        "The attack range talent also affects the cast range of Liquid Fire and Liquid Frost.",
+        "The health talent increases maximum health capacity, and keeps the current health percentage."
       ],
       "spellName": "Talent",
       "talents": [
         {
           "talentLvl": "25",
-          "talentLeft": "+1s Ice Path Duration",
-          "talentRight": "Macropyre Pure and Pierces Immunity"
+          "talentLeft": "-2.5s Ice Path Cooldown",
+          "talentRight": "2x Dual Breath Damage and Range"
         },
         {
           "talentLvl": "20",
-          "talentLeft": "+325 Dual Breath Range",
-          "talentRight": "-50 Liquid Fire Attack Speed"
+          "talentLeft": "+30 Macropyre Damage",
+          "talentRight": "+0.5s Ice Path Duration"
         },
         {
           "talentLvl": "15",
-          "talentLeft": "+25 Dual Breath Burn Damage",
-          "talentRight": "-1.5s Ice Path Cooldown"
+          "talentLeft": "+325 Health",
+          "talentRight": "-50 Liquid Fire Attack Speed"
         },
         {
           "talentLvl": "10",
@@ -29,7 +30,7 @@
       ]
     },
     {
-      "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/f\/f6\/Jakiro_Dual_Breath.mp3\/revision\/latest?cb=20191216014435",
+      "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/f\/f6\/Jakiro_Dual_Breath.mp3\/revision\/latest?cb=20210424154928",
       "effects": [
         "Ability Target Point \/ Target Unit",
         "Affects Enemies",
@@ -37,14 +38,14 @@
       ],
       "notes": [
         "Targeting a unit causes the breaths to be released towards the unit's position.",
-        "Both the icy and fiery wave travel at a speed of 1050, taking 0.71 (TagTalent 1.02) seconds to travel the full distance.",
-        "The fiery breath is released 0.3 seconds after the icy breath is released. This means it is possible for enemies to be hit by only one of the breaths, by getting in or out of range of the second breath. Jakiro cannot move until both waves are released, but can use items and spells and turn a little bit between the first and the second breath.",
+        "Both the icy and fiery wave travel at a speed of 1050, taking 0.71 (TagTalent 1.43) seconds to travel the full distance.",
+        "The fiery breath is released 0.2 seconds after the icy breath is released. This means it is possible for enemies to be hit by only one of the breaths, by getting in or out of range of the second breath. Jakiro cannot move until both waves are released, but can use items and abilities, and turn a little bit between the first and the second breath.",
         "This means it is possible for enemies to be hit by only one of the breaths, by getting in or out of range of the second breath.",
-        "Jakiro cannot move until both waves are released, but can use items and spells and turn a little bit between the first and the second breath.",
-        "Can hit units up to 1025 (TagTalent 1350) range away (travel distance + end radius).",
+        "Jakiro cannot move until both waves are released, but can use items and abilities, and turn a little bit between the first and the second breath.",
+        "With the travel distance and end radius, Dual Breath can hit units up to 1025 (TagTalent 1775) range away. The complete area of both breaths is shaped like a cone.",
         "The complete area of both breaths is shaped like a cone.",
-        "Deals 10\/20\/30\/40 (TagTalent 22.5\/32.5\/42.5\/52.5) damage in 0.5 second intervals, starting immediately as the damaging debuff is placed, resulting in 11 instances.",
-        "Can deal up to 110\/220\/330\/440 (TagTalent 247.5\/357.5\/467.5\/577.5) damage to a single unit (before reductions)."
+        "Deals 10\/20\/30\/40 (TagTalent 20\/40\/60\/80) damage in 0.5-second intervals, starting immediately as the damaging debuff is placed, resulting in 11 instances. Can deal up to 110\/220\/330\/440 (TagTalent 220\/440\/660\/880) damage to a single unit (before reductions).",
+        "Can deal up to 110\/220\/330\/440 (TagTalent 220\/440\/660\/880) damage to a single unit (before reductions)."
       ],
       "mana": "140\/150\/160\/170",
       "hotKey": "Q",
@@ -53,15 +54,16 @@
       "spellName": "Dual Breath",
       "params": [
         "Cast Animation: 0.55+1.27",
-        "Cast Range: 750 (TagTalent 1075)",
+        "Cast Range: 750 (TagTalent 1500)",
         "Starting Radius: 225",
-        "Travel Distance: 750 (TagTalent 1075)",
+        "Travel Distance: 750 (TagTalent 1500)",
         "End Radius: 275",
         "Move Speed Slow: 28%\/32%\/36%\/40%",
         "Attack Speed Slow: 28\/32\/36\/40",
-        "Damage per Second: 20\/40\/60\/80 (TagTalent 45\/65\/85\/105)",
+        "Damage per Second: 20\/40\/60\/80 (TagTalent 40\/80\/120\/160)",
         "Duration: 5",
-        "Slow persists and attempts to deal damage if debuffs were placed before spell immunity and when not dispelled."
+        "Slow persists and attempts to deal damage if debuffs were placed before spell immunity and when not dispelled.",
+        "Pyrexae dragons have tremendously dangerous breath for each branch of the species; combining them is unimaginable."
       ],
       "itemBehaviour": [],
       "legacyKey": "D",
@@ -75,19 +77,19 @@
         "Damage Magical"
       ],
       "notes": [
-        "Despite the visual effects, the path's effects do not have to travel, and are instantly applied after the 0.5 second delay.",
-        "The Ice Path starts 12 range in front of Jakiro and has a length of 1200. It can hit units up to 1362 range away (starting distance + path length + path radius). It can also hit units 138 range behind Jakiro, due to its radius and starting position.",
-        "It can hit units up to 1362 range away (starting distance + path length + path radius).",
+        "Despite the visual effects, the path's effects do not have to travel, and are instantly applied after the 0.5-second delay.",
+        "The Ice Path starts 12 range in front of Jakiro and has a length of 1200. With the starting distance, path length and path radius, Ice Patch can hit units up to 1362 range away. It can also hit units 138 range behind Jakiro, due to its radius and starting position.",
+        "With the starting distance, path length and path radius, Ice Patch can hit units up to 1362 range away.",
         "It can also hit units 138 range behind Jakiro, due to its radius and starting position.",
         "Enemy units which come within 150 radius of the path while it is up get stunned and damaged by it.",
-        "The stun lasts as long as the remaining duration of the path itself.",
+        "The stun lasts as long as the remaining duration of the path itself. The path grants 150 range flying vision along the path for its duration.",
+        "The path grants 150 range flying vision along the path for its duration.",
         "Enemies may only be stunned once per cast, so if dispelled, they cannot get stunned by it again.",
-        "The ice first applies the debuff, then the damage.",
-        "The path grants 150 range flying vision along the path for its duration."
+        "Ice Path first applies the debuff, then the damage."
       ],
       "mana": "100",
       "hotKey": "W",
-      "cooldown": "12\/11\/10\/9 (TagTalent 10.5\/9.5\/8.5\/7.5)",
+      "cooldown": "12\/11\/10\/9 (TagTalent 9.5\/8.5\/7.5\/6.5)",
       "description": "Creates a path of ice that stuns and damages enemies that touch it.",
       "spellName": "Ice Path",
       "params": [
@@ -97,7 +99,8 @@
         "Path Radius: 150",
         "Effect Delay: 0.5",
         "Damage: 50",
-        "Path Duration: 1\/1.5\/2\/2.5 (TagTalent 2\/2.5\/3\/3.5)"
+        "Path Duration: 1\/1.5\/2\/2.5 (TagTalent 1.5\/2\/2.5\/3)",
+        "Jakiro's cunning right head calls upon its frozen heritage, glazing the earth with blistering cold."
       ],
       "itemBehaviour": [],
       "legacyKey": "T",
@@ -111,17 +114,18 @@
         "Damage Magical"
       ],
       "notes": [
-        "Casting Liquid Fire manually uses the 600 (TagTalent 925) cast range. Attacking normally with Liquid Fire on autocast uses Jakiro's default 400 (TagTalent 725) attack range.",
-        "When the attack misses or is disjointed, it still applies Liquid Fire around and on the target. However, when the target turns spell immune or invulnerable before impact, Liquid Fire is not applied at all.",
+        "Uses Jakiro's 400 (TagTalent 725) attack range when using Autocast. Manually casting it uses the 600 (TagTalent 925) cast range. The cast range can be further increased by other attack range bonuses. However, it is not affected by cast range bonuses.",
+        "The cast range can be further increased by other attack range bonuses. However, it is not affected by cast range bonuses.",
+        "Applies Liquid Fire around and on the target regardless if the attack misses or is disjointed. However, when the target turns spell immune or invulnerable before impact, Liquid Fire is not applied at all.",
         "However, when the target turns spell immune or invulnerable before impact, Liquid Fire is not applied at all.",
         "Successive casts of Liquid Fire do not stack, but refresh the debuff instead.",
         "The attack first applies the debuff, then its own damage.",
         "Fully affects buildings. Does not affect wards.",
-        "Deals 6\/8\/10\/12 damage in 0.5 second intervals (before reductions), starting 0.5 seconds after the debuff is applied, resulting in 10 damage instances.",
+        "Deals 6\/8\/10\/12 damage in 0.5-second intervals (before reductions), starting 0.5 seconds after the debuff is applied, resulting in 10 damage instances. Can deal up to 60\/80\/100\/120 damage to a single target (before reductions).",
         "Can deal up to 60\/80\/100\/120 damage to a single target (before reductions).",
         "When off cooldown, the fire head's mouth drools fire, visible to everyone.",
-        "If Liquid Fire is cast while Liquid Frost is on auto-cast, only Liquid Frost will be used. If Liquid Fire and Liquid Frost are both on auto-cast attacks, only Liquid Frost will be used.",
-        "If Liquid Fire and Liquid Frost are both on auto-cast attacks, only Liquid Frost will be used."
+        "If Liquid Fire is cast while Liquid Frost is on Autocast, only Liquid Frost will be used. If Liquid Fire and Liquid Frost are both on autocast attacks, only Liquid Frost will be used.",
+        "If Liquid Fire and Liquid Frost are both on autocast attacks, only Liquid Frost will be used."
       ],
       "mana": "0",
       "hotKey": "E",
@@ -137,7 +141,8 @@
         "Grants a new ability: Liquid Frost",
         "Can target spell immune enemies. Does not place debuff on spell immune enemies. Slows and attempts to deal damage if debuff was placed before spell immunity and when not dispelled.",
         "When disjointed, the area effect is instantly applied at the target's current location.",
-        "Illusions always have the fiery particles when Liquid Fire is leveled at least once before the illusions got created."
+        "Illusions always have the fiery particles when Liquid Fire is leveled at least once before the illusions got created.",
+        "The left maw of Jakiro opens, laying waste to any in its path."
       ],
       "itemBehaviour": [],
       "legacyKey": "Q",
@@ -152,31 +157,33 @@
       ],
       "notes": [
         "Requires Aghanim's Shard to be unlocked.",
-        "Casting Liquid Frost manually uses the 600 (TagTalent 925) cast range. Attacking normally with Liquid Frost on autocast uses Jakiro's default 400 (TagTalent 725) attack range.",
-        "When the attack misses or is disjointed, it still applies Liquid Frost around and on the target. However, when the target turns spell immune or invulnerable before impact, Liquid Frost is not applied at all.",
+        "Uses Jakiro's 400 (TagTalent 725) attack range when using Autocast. Manually casting it uses the 600 (TagTalent 925) cast range. The cast range can be further increased by other attack range bonuses. However, it is not affected by cast range bonuses.",
+        "The cast range can be further increased by other attack range bonuses. However, it is not affected by cast range bonuses.",
+        "Applies Liquid Frost around and on the target regardless if the attack misses or is disjointed. However, when the target turns spell immune or invulnerable before impact, Liquid Frost is not applied at all.",
         "However, when the target turns spell immune or invulnerable before impact, Liquid Frost is not applied at all.",
         "Successive casts of Liquid Frost do not stack, but refresh the debuff instead.",
-        "The attack first applies the debuff, then its own damage.",
+        "Liquid Frost first applies the debuff, then the stun (and then its own damage against the primary target).",
         "Fully affects buildings. Does not affect wards.",
-        "Deals damage in 1 second intervals, starting 1 second after the debuff is applied, resulting in 4 damage instances.",
+        "Deals damage in 1-second intervals, starting 1 second after the debuff is applied, resulting in 4 damage instances.",
         "Can deal up to 80 + 10% of max health as damage to a single target (before reductions).",
         "When off cooldown, the ice head's mouth glows and releases light blue smoke, visible to everyone.",
-        "If Liquid Frost is cast while Liquid Fire is on auto-cast, only Liquid Frost will be used. If Liquid Fire is cast while Liquid Frost is on auto-cast, only Liquid Frost will be used. If Liquid Fire and Liquid Frost are both on auto-cast attacks,only Liquid Frost will be used.",
-        "If Liquid Fire is cast while Liquid Frost is on auto-cast, only Liquid Frost will be used.",
-        "If Liquid Fire and Liquid Frost are both on auto-cast attacks,only Liquid Frost will be used."
+        "If Liquid Frost is manually cast while Liquid Fire is on Autocast, only Liquid Frost will be used. If Liquid Fire is manually cast while Liquid Frost is on Autocast, only Liquid Frost will be used. If Liquid Fire and Liquid Frost are both on autocast attacks, only Liquid Frost will be used.",
+        "If Liquid Fire is manually cast while Liquid Frost is on Autocast, only Liquid Frost will be used.",
+        "If Liquid Fire and Liquid Frost are both on autocast attacks, only Liquid Frost will be used."
       ],
       "mana": "0",
       "hotKey": "D",
       "cooldown": "12",
-      "description": "Applies a frost debuff that slows enemies movement speed by 30% and causes them to lose 20 plus 2.5% of their max health per second for 4 seconds.",
+      "description": "Stuns enemies for 0.4 seconds and applies a frost debuff that slows enemy movement speed by 20% and take 20 plus 2.5% of their max health per second as damage for 4 seconds.",
       "spellName": "Liquid Frost",
       "params": [
         "Cast Range: 600 (TagTalent 925)",
         "Radius: 300",
-        "Move Speed Slow: 30%",
+        "Move Speed Slow: 20%",
         "Base Damage per Second: 20",
         "Max Health as Damage per Second: 2.5%",
-        "Duration: 4",
+        "Debuff Duration: 4",
+        "Stun Duration: 0.4",
         "Can target spell immune enemies. Does not place debuff on spell immune enemies. Slows and attempts to deal damage if debuff was placed before spell immunity and when not dispelled.",
         "When disjointed, the area effect is instantly applied at the target's current location.",
         "Illusions always have the icy particles when Liquid Frost is unlocked before the illusions got created."
@@ -194,18 +201,19 @@
       ],
       "notes": [
         "Instantly applies its effects over the whole distance. Does not have any travel time.",
-        "The fire starts 234 range in front of Jakiro and has a length of 1166 (TagTalent 1566). It can hit units up to 1660 (TagTalent 2060) range away (starting distance + path length + path radius). It can also hit units 26 range behind Jakiro, due to its radius and starting position.",
-        "It can hit units up to 1660 (TagTalent 2060) range away (starting distance + path length + path radius).",
+        "Macropyre starts 234 range in front of Jakiro and has a length of 1166 (1566). With the starting distance, path length and path radius, Macropyre can hit units up to 1660 (2060) range away. It can also hit units 26 range behind Jakiro, due to its radius and starting position.",
+        "With the starting distance, path length and path radius, Macropyre can hit units up to 1660 (2060) range away.",
         "It can also hit units 26 range behind Jakiro, due to its radius and starting position.",
-        "Places a debuff on enemies within the area in 0.5 second intervals, starting 0.5 seconds after cast.",
-        "The debuff does not stack. When standing inside the fire, its duration gets refreshed. The debuff deals 50\/70\/90 (TagTalent 62.5\/87.5\/112.5) damage in 0.5 second intervals, starting 0.5 seconds after being placed, resulting in 4 damage instances. This results in a maximum of 23 (TagTalent 63) damage instances when standing within the area the full duration.",
-        "The debuff deals 50\/70\/90 (TagTalent 62.5\/87.5\/112.5) damage in 0.5 second intervals, starting 0.5 seconds after being placed, resulting in 4 damage instances.",
-        "This results in a maximum of 23 (TagTalent 63) damage instances when standing within the area the full duration.",
-        "One instance of the debuff can deal up to 200\/280\/360 (TagTalent 250\/350\/450) damage (before reductions).",
-        "Can deal up to 1150\/1610\/2070 (TagTalent 3937.5\/5512.5\/7087.5) damage to a single unit (before reductions).",
+        "Places a debuff on enemies within the area in 0.5-second intervals, starting 0.5 seconds after cast.",
+        "The debuff does not stack. When standing inside the fire, its duration gets refreshed. The debuff deals 50\/70\/90 (TagTalent 65\/85\/105) damage in 0.5-second intervals, starting 0.5 seconds after being placed, resulting in 4 damage instances. This results in a maximum of 23 (63) damage instances when standing within the area the full duration. One instance of the debuff can deal up to 200\/280\/360 (TagTalent 260\/340\/420) damage (before reductions).",
+        "The debuff deals 50\/70\/90 (TagTalent 65\/85\/105) damage in 0.5-second intervals, starting 0.5 seconds after being placed, resulting in 4 damage instances.",
+        "This results in a maximum of 23 (63) damage instances when standing within the area the full duration.",
+        "One instance of the debuff can deal up to 200\/280\/360 (TagTalent 260\/340\/420) damage (before reductions).",
+        "Can deal up to 1150\/1610\/2070 damage to a single unit (before reductions). With the level 20 talent, can deal up to 1495\/1955\/2415 damage to a single unit (before reductions).",
+        "With the level 20 talent, can deal up to 1495\/1955\/2415 damage to a single unit (before reductions).",
         "Multiple overlapping Macropyres do not stack. They refresh the same debuff on enemies.",
-        "The path destroys trees within 260 range along the path upon cast.",
-        "Aghanim's Scepter changes Macropyre's sound effect. This changed sound effect is audible through the fog of war."
+        "With Aghanim's Scepter, Macropyre can deal up to 3150\/4410\/5670 (TagTalent 4095\/5355\/6615) damage to a single unit (before reductions). It also changes Macropyre's sound effect, and it is now audible through the Fog of War.",
+        "It also changes Macropyre's sound effect, and it is now audible through the Fog of War."
       ],
       "mana": "220\/330\/440",
       "hotKey": "R",
@@ -214,14 +222,15 @@
       "spellName": "Macropyre",
       "params": [
         "Cast Animation: 0.55+1.07",
-        "Cast Range: 1400 (TagAghanim 1800)",
-        "Path Distance: 1400 (TagAghanim 1800)",
+        "Cast Range: 1400 (TagTalent 1800)",
+        "Path Distance: 1400 (TagTalent 1800)",
         "Path Radius: 260",
-        "Damage per Second: 100\/140\/180 (TagAghanim 125\/175\/225)",
+        "Damage per Second: 100\/140\/180 (TagTalent 130\/170\/210)",
         "Damage Linger Duration: 2",
-        "Path Duration: 10 (TagAghanim 30)",
-        "Increases flame length, duration, and damage.",
-        "Debuff is always placed on spell immune enemies, even without the talent. The talent merely changes the damage type."
+        "Path Duration: 10 (TagTalent 30)",
+        "Increases Macropyre distance by +400 range, duration by +20 seconds and causes it to become Pure damage and pierce Spell Immunity.",
+        "Debuff is always placed on spell immune enemies, even without the Aghanim's Scepter. The upgrade merely changes the damage type.",
+        "Ice and fire combine to rip the battlefield to shreds with extreme temperatures."
       ],
       "itemBehaviour": [],
       "legacyKey": "R",
@@ -234,25 +243,25 @@
     "attrIntelligence": 26.0,
     "attrIntelligenceInc": 3.2,
     "attrAgilityInc": 1.2,
-    "attrAgility": 10.0
+    "attrAgility": 15.0
   },
   "description": "Jakiro, the Twin Head Dragon, is a ranged intelligence hero who utilizes the powers of ice and fire with powerful linear area spells. He can freeze enemies in place with Ice Path, or slow them down with Dual Breath. He is capable of dealing heavy damage throughout the game by locking enemies inside his Macropyre, and provides great pushing power with Liquid Fire.",
   "history": "Even among magical beasts, a twin-headed dragon is a freak. Equal parts ice and fire, cunning and rage, the creature known as Jakiro glides over charred and ice-bound battlefields, laying waste to any who would bear arms against it. Pyrexae dragon clutches always contain two fledglings. Famous for their viciousness even from the first moments of life, newly hatched dragons of this species will try to kill their sibling while still in the nest. Only the strongest survive. In this way is the strength of the Pyrexae line ensured. By some accident of nature, the freak Jakiro hatches from a single egg, combining in a single individual the full range of abilities found within the diverse Pyrexae species. Trapped within the armature of its monstrous body, the powers of ice and fire combine, and now no enemy is safe.",
   "talents": [
     {
       "talentLvl": "25",
-      "talentLeft": "+1s Ice Path Duration",
-      "talentRight": "Macropyre Pure and Pierces Immunity"
+      "talentLeft": "-2.5s Ice Path Cooldown",
+      "talentRight": "2x Dual Breath Damage and Range"
     },
     {
       "talentLvl": "20",
-      "talentLeft": "+325 Dual Breath Range",
-      "talentRight": "-50 Liquid Fire Attack Speed"
+      "talentLeft": "+30 Macropyre Damage",
+      "talentRight": "+0.5s Ice Path Duration"
     },
     {
       "talentLvl": "15",
-      "talentLeft": "+25 Dual Breath Burn Damage",
-      "talentRight": "-1.5s Ice Path Cooldown"
+      "talentLeft": "+325 Health",
+      "talentRight": "-50 Liquid Fire Attack Speed"
     },
     {
       "talentLvl": "10",

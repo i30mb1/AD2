@@ -38,14 +38,16 @@
         "Damage Pure"
       ],
       "notes": [
+        "The cast range of Impetus is based on the attack range of the caster. The cast range can be further increased by other attack range bonuses. However, it is not affected by cast range bonuses.",
+        "The cast range can be further increased by other attack range bonuses. However, it is not affected by cast range bonuses.",
         "The distance is calculated as the projectile hits the target. This means moving away from the target causes it to deal more damage on impact, and moving closer decreases the damage.",
         "This means moving away from the target causes it to deal more damage on impact, and moving closer decreases the damage.",
         "The bonus damage is dealt in a separate damage instance, and counts as spell damage. This means it is not affected or considered by anything that works with attack damage. This also means that it fully works with spell damage amplification and spell lifesteal.",
         "This means it is not affected or considered by anything that works with attack damage.",
         "This also means that it fully works with spell damage amplification and spell lifesteal.",
-        "Impetus deals its damage before the attack damage is applied, but still depends on the attack hitting the target.",
-        "The damage is capped at 1750 distance, which equates to 140\/210\/280\/350 (TagTalent 253.75\/323.75\/393.75\/463.75) damage.",
-        "Works against everything except for wards and buildings."
+        "Impetus deals its damage before the attack damage is applied, but still depends on the attack hitting the target. Does not work against for wards and buildings.",
+        "Does not work against for wards and buildings.",
+        "The damage is capped at 1750 distance, which equates to 140\/210\/280\/350 (TagTalent 253.75\/323.75\/393.75\/463.75) damage."
       ],
       "mana": "65",
       "hotKey": "Q",
@@ -54,7 +56,8 @@
       "spellName": "Impetus",
       "params": [
         "Cast Range: 575",
-        "Distance as Damage: 8%\/12%\/16%\/20% (TagTalent 14.5%\/18.5%\/22.5%\/26.5%)"
+        "Distance as Damage: 8%\/12%\/16%\/20% (TagTalent 14.5%\/18.5%\/22.5%\/26.5%)",
+        "While Aiushtha favors peaceful means, she is capable of a magical onslaught from a distance, her spears gaining energy from the natural life around her."
       ],
       "itemBehaviour": [],
       "legacyKey": "T",
@@ -70,14 +73,14 @@
         "Casting Enchant on heroes (including clones and the Vengeance Aura illusion) or creep-heroes slows them and applies a basic dispel on them (long sound is played).",
         "Enchant first applies the dispel, then the slow.",
         "Slowed units leave behind a trail of flowers as they move, which is only visible when the unit itself is visible.",
-        "Casting Enchant on any other enemy unit which is not a ward or building converts it (short sound is played). This includes all other illusions. When converting, applies a basic dispel on the target which removes buffs and debuffs. The converted creep also gets fully healed. Its mana does not get restored.",
-        "When converting, applies a basic dispel on the target which removes buffs and debuffs.",
-        "The converted creep also gets fully healed. Its mana does not get restored.",
-        "Cannot be cast on ancient creeps, siege creeps, Necronomicon Warriors and Necronomicon Archers. With the level 20 talent, ancient creeps can be converted, but Roshan and creep-heroes tagged as ancient creeps are only slowed. With the level 20 talent, couriers can be targeted, but it has no effect on them, wasting the mana and cooldown.",
-        "With the level 20 talent, ancient creeps can be converted, but Roshan and creep-heroes tagged as ancient creeps are only slowed.",
-        "With the level 20 talent, couriers can be targeted, but it has no effect on them, wasting the mana and cooldown.",
-        "When enchanting a new creep while already having a creep, the old enchanted creep dies.",
-        "When a converted creep's duration ends, it dies instantly. The death is not credited to anyone so that no one gets experience from it."
+        "Casting Enchant on any other enemy unit which is not a ward or building enchants it (short sound is played). This includes all other illusions. Enchant applies a basic dispel on the target which removes buffs and debuffs. The enchanted creep also gets fully healed. Its mana does not get restored.",
+        "Enchant applies a basic dispel on the target which removes buffs and debuffs.",
+        "The enchanted creep also gets fully healed. Its mana does not get restored.",
+        "Cannot be cast on ancient creeps, siege creeps, Necronomicon Warriors and Necronomicon Archers. With the level 20 talent, Enchant can target ancient creeps, but Roshan and creep-heroes tagged as ancient creeps are only slowed. Although Couriers can be targeted, but it has no effect on them, wasting the mana and cooldown.",
+        "With the level 20 talent, Enchant can target ancient creeps, but Roshan and creep-heroes tagged as ancient creeps are only slowed. Although Couriers can be targeted, but it has no effect on them, wasting the mana and cooldown.",
+        "Although Couriers can be targeted, but it has no effect on them, wasting the mana and cooldown.",
+        "Enchanting a new creep kills the previous enchanted creep. When an enchanted creep's duration ends, it dies instantly. The death is not credited to anyone so that no one gets experience from it.",
+        "When an enchanted creep's duration ends, it dies instantly. The death is not credited to anyone so that no one gets experience from it."
       ],
       "mana": "40\/50\/60\/70",
       "hotKey": "W",
@@ -94,7 +97,8 @@
         "Creep Attack Damage Bonus: 10\/30\/50\/70",
         "Creep Armor Bonus: 2\/4\/6\/8",
         "Enchant Duration: 30\/60\/90\/120",
-        "Slow persists if debuff was placed before spell immunity and when not dispelled. Cannot convert spell immune units."
+        "Slow persists if debuff was placed before spell immunity and when not dispelled. Cannot convert spell immune units.",
+        "A true steward of the forest, Aiushtha befriends all within it - from lowly trolls to powerful centaurs."
       ],
       "itemBehaviour": [],
       "legacyKey": "C",
@@ -107,24 +111,20 @@
         "Affects Allies"
       ],
       "notes": [
-        "Every 0.5 seconds, each wisp chooses a random allied unit to heal. So it is possible to heal up to 4\/6\/8\/10 (TagTalent 10\/12\/14\/16) allies at a time.",
+        "Every 0.5 seconds, each wisp chooses a random allied unit to heal. So it is possible to heal up to 8\/14 allies at a time.",
         "The heal targets are chosen completely random, without any priorities. Multiple wisps can randomly select the same unit. Each wisp will approach its chosen target, indicating the wisp is healing the target. However, when choosing the wisps increasing talent, the visual effect does not adapt. The numbers of wisps can be seen does not increase.",
         "Each wisp will approach its chosen target, indicating the wisp is healing the target.",
         "However, when choosing the wisps increasing talent, the visual effect does not adapt. The numbers of wisps can be seen does not increase.",
         "Ignores ancient creeps and allies that already are at full health.",
         "Wisps can heal invulnerable units, but not hidden units.",
-        "The area of effect is centered around Enchantress' current location, not where the spell was cast.",
+        "The search radius is centered around and follows Enchantress, not where the ability was cast.",
         "When Enchantress dies, the wisps still continue to heal units nearby her death's location.",
         "Nature's Attendants does not stack with itself. Casting the ability while it is active refreshes the buff.",
-        "Can heal a total of 28\/54\/88\/130 health per second. Can heal a total of 70\/108\/154\/208 health per second if the number of wisps increasing talent is chosen. Can heal a total of 108\/174\/248\/330 health per second if heal per wisp talent is chosen. Can heal a total of 270\/348\/434\/528 health per second if both talents are chosen.",
-        "Can heal a total of 70\/108\/154\/208 health per second if the number of wisps increasing talent is chosen.",
-        "Can heal a total of 108\/174\/248\/330 health per second if heal per wisp talent is chosen.",
-        "Can heal a total of 270\/348\/434\/528 health per second if both talents are chosen.",
-        "Can heal a total of 308\/594\/968\/1430 health over its full duration. Can heal a total of 770\/1188\/1694\/2288 health over its full duration if the number of wisps increasing talent is chosen. Can heal a total of 1188\/1914\/2728\/3630 health over its full duration if heal per wisp talent is chosen. Can heal a total of 2970\/3828\/4774\/5808 health over its full duration if both talents are chosen.",
-        "Can heal a total of 770\/1188\/1694\/2288 health over its full duration if the number of wisps increasing talent is chosen.",
-        "Can heal a total of 1188\/1914\/2728\/3630 health over its full duration if heal per wisp talent is chosen.",
-        "Can heal a total of 2970\/3828\/4774\/5808 health over its full duration if both talents are chosen.",
-        "With Aghanim's Shard, the passive wisps can heal up to 21\/27\/33\/39 (TagTalent 81\/87\/93\/99) per second, 1260\/1620\/1980\/2340 (TagTalent 4860\/5220\/5580\/5940) per minute."
+        "Can heal a total of 32\/64\/96\/128 health per second or 384\/768\/1152\/1536 health over its full duration. The number of wisps increasing talent can heal a total of 56\/112\/168\/224 health per second or 672\/1344\/2016\/2688 health over its full duration. The bonus heal per wisp talent can heal a total of 192\/224\/256\/288 health per second or 2304\/2688\/3072\/3456 health over its full duration. With both talents, it can heal a total of 336\/392\/448\/504 health per second or 4032\/4704\/5376\/6048 health over its full duration.",
+        "The number of wisps increasing talent can heal a total of 56\/112\/168\/224 health per second or 672\/1344\/2016\/2688 health over its full duration.",
+        "The bonus heal per wisp talent can heal a total of 192\/224\/256\/288 health per second or 2304\/2688\/3072\/3456 health over its full duration.",
+        "With both talents, it can heal a total of 336\/392\/448\/504 health per second or 4032\/4704\/5376\/6048 health over its full duration.",
+        "With Aghanim's Shard, the passive wisps can heal up to 12\/24\/36\/48 (TagTalent 72\/84\/96\/108) health per second or 720\/1440\/2160\/2880 (TagTalent 4320\/5040\/5760\/6480) per minute."
       ],
       "mana": "170\/160\/150\/140",
       "hotKey": "E",
@@ -134,11 +134,12 @@
       "params": [
         "Cast Animation: 0.3+0.93",
         "Search Radius: 275",
-        "Active Number of Wisps: 4\/6\/8\/10 (TagTalent 10\/12\/14\/16)",
-        "Heal per Second per Wisp: 7\/9\/11\/13 (TagTalent 27\/29\/31\/33)",
-        "Duration: 11",
+        "Active Number of Wisps: 8 (TagTalent 14)",
+        "Heal per Second per Wisp: 4\/8\/12\/16 (TagTalent 24\/28\/32\/36)",
+        "Duration: 12",
         "Passive Number of Wisps: 3",
-        "Adds 3 permanent Nature's Attendants that follow Enchantress around."
+        "Adds 3 permanent Nature's Attendants that follow Enchantress around.",
+        "Whimsical spirits of the woods possess a healing power that is quite subtle, but gains strength in numbers."
       ],
       "itemBehaviour": [],
       "legacyKey": "R",
@@ -154,16 +155,16 @@
       "notes": [
         "Requires Aghanim's Scepter to be unlocked. In Ability Draft, Sproink can be unlocked by the player that drafted Untouchable.",
         "In Ability Draft, Sproink can be unlocked by the player that drafted Untouchable.",
-        "Sproink interrupts Enchantress' channeling spells upon cast.",
+        "Sproink interrupts Enchantress' channeling abilities upon cast.",
         "Sproink disjoints projectiles upon cast.",
         "Leaps at a speed of 1250 for up to 0.4 seconds.",
-        "Always leaps 180° away from the direction Enchantress is facing. Does not lock Enchantress' facing angle during the leap.",
+        "Always leaps 180° away from the direction Enchantress is facing. Does not lock Enchantress' facing angle during the leap. Can leap over other units and over impassable terrain.",
         "Can leap over other units and over impassable terrain.",
-        "During Sproink, Enchantress can attack, cast spells, and use items.",
-        "Halfway through the leap, at 0.2 seconds, Enchantress performs instant attacks on the furthest 3 enemies within her total attack range, plus the bonus. Searches for enemies all around her, meaning it may target enemies behind Enchantress as well. These attacks do not have True Strike and are prevented by disarms. Can trigger any attack modifier and on-hit effects normally.",
+        "During Sproink, Enchantress can attack, cast abilities, and use items.",
+        "Halfway through the leap, at 0.2 seconds, Enchantress performs instant attacks based on the current Impetus level on the furthest 3 enemies within her total attack range, plus the bonus. Searches for enemies all around her, meaning it may target enemies behind Enchantress as well. These instant attacks can proc any attack modifiers and on-hit effects normally. They do not have True Strike, and are prevented by disarms.",
         "Searches for enemies all around her, meaning it may target enemies behind Enchantress as well.",
-        "These attacks do not have True Strike and are prevented by disarms.",
-        "Can trigger any attack modifier and on-hit effects normally."
+        "These instant attacks can proc any attack modifiers and on-hit effects normally. They do not have True Strike, and are prevented by disarms.",
+        "Impetus notes fully apply."
       ],
       "mana": "50",
       "hotKey": "D",
@@ -175,7 +176,8 @@
         "Leap Distance: 500",
         "Leap Duration: 0.4",
         "Impetus Attacks Range Buffer: 200",
-        "Number of Impetus Attacks: 3"
+        "Number of Impetus Attacks: 3",
+        "Sproink is as Sproink does."
       ],
       "itemBehaviour": [],
       "legacyKey": "F",
@@ -190,11 +192,11 @@
       "notes": [
         "Untouchable is triggered whenever a unit starts an attack on Enchantress, regardless of distance. This means it does not matter if the attack successfully hits or not, the slow is still applied.",
         "This means it does not matter if the attack successfully hits or not, the slow is still applied.",
-        "When the attack was fully executed, then the slow debuff lasts as long as the remaining backswing duration of the attack. Canceling the attack backswing does not affect this duration, so it is not possible to reset the attack speed by canceling it. When switching attack targets, the debuff persists, but does not apply the slow against the new target. The debuff persists until the attack against the new target finishes or gets canceled. This means it is possible to skip the backswing-based slow duration by issuing an attack order on a new target within attack range between each attack. This also means, the debuff does not affect the idle animation in attack animation after the backswing.",
+        "When the attack was fully executed, then the slow debuff lasts as long as the remaining backswing duration of the attack. Canceling the attack backswing does not affect this duration, so it is not possible to reset the attack speed by canceling it. When switching attack targets, the debuff persists, but does not apply the slow against the new target. The debuff persists until the attack against the new target finishes or gets canceled. This means it is possible to skip the backswing-based slow duration by issuing an attack order (A) on a new target within attack range between each attack. This also means, the debuff does not affect the idle animation in attack animation after the backswing.",
         "Canceling the attack backswing does not affect this duration, so it is not possible to reset the attack speed by canceling it.",
         "When switching attack targets, the debuff persists, but does not apply the slow against the new target.",
         "The debuff persists until the attack against the new target finishes or gets canceled.",
-        "This means it is possible to skip the backswing-based slow duration by issuing an attack order on a new target within attack range between each attack.",
+        "This means it is possible to skip the backswing-based slow duration by issuing an attack order (A) on a new target within attack range between each attack.",
         "This also means, the debuff does not affect the idle animation in attack animation after the backswing.",
         "Does not work against buildings, allies, or invulnerable units. Works against vulnerable wards."
       ],
@@ -204,9 +206,10 @@
       "description": "Enchantress beguiles her enemies, slowing their attacks when she is attacked.",
       "spellName": "Untouchable",
       "params": [
-        "Attack Speed Slow: 100\/140\/180 (TagTalent 165\/205\/245)",
+        "Attack Speed Slow: 120\/160\/200 (TagTalent 185\/225\/265)",
         "Grants a new ability: Sproink.",
-        "Although the debuff is still placed on each attack, it does not slow during Break."
+        "Although the debuff is still placed on each attack, it does not slow during Break.",
+        "After attacking Aiushtha, most opponents are overwhelmed with guilt having attacked such a natural beauty."
       ],
       "itemBehaviour": [],
       "legacyKey": "N",

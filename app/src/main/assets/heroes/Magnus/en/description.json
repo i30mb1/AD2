@@ -3,7 +3,7 @@
     {
       "notes": [
         "This attack damage talent is added as raw attack damage, so it does not benefit illusions, and is not affected by most percentage-based damage increasing or reducing effects.",
-        "The strength talent effectively grants Magnus 200 health, 1 health regeneration, and 10 attack damage.",
+        "The strength talent effectively grants Magnus 240 health, 1.2 health regeneration, and 12 attack damage.",
         "The health talent increases maximum health capacity, and keeps the current health percentage."
       ],
       "spellName": "Talent",
@@ -20,12 +20,12 @@
         },
         {
           "talentLvl": "15",
-          "talentLeft": "-5s Skewer Cooldown",
-          "talentRight": "+10 Strength"
+          "talentLeft": "-7s Skewer Cooldown",
+          "talentRight": "+12 Strength"
         },
         {
           "talentLvl": "10",
-          "talentLeft": "+0.3s Shockwave Slow Duration",
+          "talentLeft": "+0.5s Shockwave Slow Duration",
           "talentRight": "+20 Damage"
         }
       ]
@@ -47,16 +47,15 @@
         "Plays an initial sound and particles upon start casting.",
         "The slow of multiple casts does not stack, it only refreshes the duration.",
         "Slows and damages Roshan but does not pull him.",
-        "With Aghanim's Scepter, the extra shockwaves are launched with a degree angle to the left and right of the centered shockwave. Although the areas of all three waves overlap heavily, an enemy may be hit by only one of them. Upon reaching max distance of 1200, the shockwaves return to the original cast location. The returning shockwaves act like separate casts, cast by invisible dummies. Therefore, enemies at the very tip may be hit only once. This is because Shockwave does not hit units behind the caster, so units hit by it 200 range beyond its max travel distance do not get hit upon returning. On the other side, units 200 range beyond the original cast point do get hit by the returning waves. On their way back, the shockwaves can hit previously already hit enemies a second time. The returning shockwaves pull enemies towards the cast location as well.",
-        "Although the areas of all three waves overlap heavily, an enemy may be hit by only one of them.",
-        "Upon reaching max distance of 1200, the shockwaves return to the original cast location.",
-        "The returning shockwaves act like separate casts, cast by invisible dummies. Therefore, enemies at the very tip may be hit only once.",
+        "With Aghanim's Scepter, the extra Shockwaves are launched with a 30° angle to the left and right of the centered Shockwave. Although the areas of all three waves overlap heavily, an enemy may be hit by only one of three outgoing waves. Upon reaching max distance of 1200, the Shockwaves return to the original cast location. The returning Shockwaves act like separate casts, cast by invisible dummies. Therefore, enemies at the very tip may only be hit only once. This is because Shockwave does not hit units behind the caster, so units hit by it 200 range beyond its max travel distance do not get hit upon returning. On the other side, units 200 range beyond the original cast point do get hit by the returning waves. The returning Shockwaves can hit previously already hit enemies a second time, and also pull enemies towards the cast location as well.",
+        "Although the areas of all three waves overlap heavily, an enemy may be hit by only one of three outgoing waves.",
+        "Upon reaching max distance of 1200, the Shockwaves return to the original cast location.",
+        "The returning Shockwaves act like separate casts, cast by invisible dummies. Therefore, enemies at the very tip may only be hit only once.",
         "This is because Shockwave does not hit units behind the caster, so units hit by it 200 range beyond its max travel distance do not get hit upon returning.",
         "On the other side, units 200 range beyond the original cast point do get hit by the returning waves.",
-        "On their way back, the shockwaves can hit previously already hit enemies a second time.",
-        "The returning shockwaves pull enemies towards the cast location as well."
+        "The returning Shockwaves can hit previously already hit enemies a second time, and also pull enemies towards the cast location as well."
       ],
-      "mana": "90\/100\/110\/120",
+      "mana": "80\/90\/100\/110",
       "hotKey": "Q",
       "cooldown": "13\/12\/11\/10",
       "description": "Magnus sends out a wave of force, damaging enemy units in a line, pulling them towards him and slowing them for a brief period.",
@@ -66,15 +65,16 @@
         "Cast Range: 1200",
         "Wave Distance: 1200",
         "Wave Radius: 200",
-        "Number of Shockwaves: 1 (TagAghanim 3)",
+        "Number of Shockwaves: 1 (TagTalent 3)",
         "Damage: 75\/150\/225\/300",
         "Move Speed Slow: 75%",
         "Pull Distance: 150",
         "Pull Duration: 0.2",
-        "Slow Duration: 0.9 (TagTalent 1.2)",
+        "Slow Duration: 0.9 (TagTalent 1.4)",
         "Shockwave Angle: 30°",
         "Returning Damage: 56.25\/112.5\/168.75\/225",
-        "Magnus releases 3 shockwaves traveling away from him at 30-degree angles. After reaching their limit, the Shockwaves return to their origin, dealing 75% damage and pulling a second time."
+        "Magnus releases 3 shockwaves traveling away from him at 30-degree angles. After reaching their limit, the Shockwaves return to their origin, dealing 75% damage and pulling a second time.",
+        "Mt. Joerlak was a somewhat unstable mass, and Magnus has learned to channel its reverberations."
       ],
       "itemBehaviour": [],
       "legacyKey": "W",
@@ -88,12 +88,13 @@
         "Damage Physical"
       ],
       "notes": [
-        "When cast on self, grants 17.5%\/35%\/52.5%\/70% (TagTalent 35%\/52.5%\/70%\/87.5%) cleave damage and 19.25%\/31.5%\/43.75%\/56% (TagTalent 36.75%\/49%\/61.25%\/73.5%) attack damage instead. ↓↓ Double-tapping automatically targets self.",
+        "Grants 17.5%\/35%\/52.5%\/70% (TagTalent 35%\/52.5%\/70%\/87.5%) cleave damage and 21%\/35%\/49%\/63% (TagTalent 38.5%\/52.5%\/66.5%\/80.5%) attack damage when cast on self. ↓↓ Double-tapping automatically targets self.",
         "↓↓ Double-tapping automatically targets self.",
         "Only increases base damage and that given by the primary attribute of affected units. Raw bonus damage is not increased.",
-        "The unit's current main damage is periodically checked, and the bonuses adapted instantly.",
+        "The unit's current main damage is periodically checked, and the bonuses adapted instantly. The damage and cleave increasing talent instantly upgrade the current instance as well.",
+        "The damage and cleave increasing talent instantly upgrade the current instance as well.",
         "Grants melee targets cleave and attack damage, and ranged targets only attack damage.",
-        "Cleave damage cannot be amplified with outgoing spell damage amplification and cannot spell lifesteal. Can be amplified by incoming spell damage amplification.",
+        "Cleave damage cannot be amplified with outgoing spell damage amplification and cannot spell lifesteal. Can be amplified by incoming spell damage amplification. Cleave damage is reduced by Damage Block. Cleave damage depends on the attack damage value of the cleaving unit, not on how much their primary attack target took. The complete cleave area is shaped like an isosceles trapezoid in front of the attacking unit. Fully stacks with other sources of cleave. Each source of cleave works completely independent.",
         "Can be amplified by incoming spell damage amplification.",
         "Cleave damage is reduced by Damage Block.",
         "Cleave damage depends on the attack damage value of the cleaving unit, not on how much their primary attack target took.",
@@ -114,9 +115,10 @@
         "Cleave Distance: 650",
         "Cleave End Radius: 360",
         "Cleave Damage: 10%\/20%\/30%\/40% (TagTalent 20%\/30%\/40%\/50%)",
-        "Attack Damage Bonus: 11%\/18%\/25%\/32% (TagTalent 21%\/28%\/35%\/42%)",
+        "Attack Damage Bonus: 12%\/20%\/28%\/36% (TagTalent 22%\/30%\/38%\/46%)",
         "Self Bonus Factor: 1.75",
-        "Duration: 40"
+        "Duration: 40",
+        "With a deep bellow, Magnus displays his true power."
       ],
       "itemBehaviour": [],
       "legacyKey": "E",
@@ -130,21 +132,20 @@
         "Damage Magical"
       ],
       "notes": [
-        "Magnus charges at a speed of 950.",
-        "Moves Magnus in 31.67 range instances. When targeting any distance which is not a multiplier of that number, it gets rounded down. This means the minimal possible distance is 31.67 and the maximum possible 887\/982\/1077\/1172 (TagTalent 1298\/1425\/1520\/1615), which amounts to a mulitplier of 28\/31\/34\/37 (TagTalent 41\/45\/48\/51).",
-        "This means the minimal possible distance is 31.67 and the maximum possible 887\/982\/1077\/1172 (TagTalent 1298\/1425\/1520\/1615), which amounts to a mulitplier of 28\/31\/34\/37 (TagTalent 41\/45\/48\/51).",
+        "Magnus charges at a speed of 900\/1000\/1100\/1200.",
+        "Moves Magnus in 31.67 range instances. When targeting any distance which is not a multiplier of that number, it gets rounded down. This means the minimal possible distance is 31.67 and the maximum possible 887\/982\/1077\/1172 (TagTalent 1298\/1425\/1520\/1615), which amounts to a multiplier of 28\/31\/34\/37 (TagTalent 41\/45\/48\/51).",
+        "This means the minimal possible distance is 31.67 and the maximum possible 887\/982\/1077\/1172 (TagTalent 1298\/1425\/1520\/1615), which amounts to a multiplier of 28\/31\/34\/37 (TagTalent 41\/45\/48\/51).",
         "During the Skewer, Magnus is fully disabled.",
         "Enemy heroes within 145 radius around Magnus get moved in front of him and dragged along.",
-        "Dragged heroes are stunned during the drag.",
-        "Dragged heroes land 200 range away in front of Magnus at the end of the charge.",
+        "Dragged heroes are stunned during the drag, and land 200 range away in front of Magnus at the end of the charge. Can charge through and drag enemies over impassable terrain. Can also drag illusions and creep-heroes.",
         "Can charge through and drag enemies over impassable terrain.",
+        "Can also drag illusions and creep-heroes.",
         "Skewer first applies the slow debuff, then the damage.",
-        "Destroys trees within 200 radius during the charge, and 400 radius at the destination point.",
-        "Can also drag illusions and creep-heroes."
+        "Destroys trees within 200 radius during the charge, and 400 radius at the destination point."
       ],
       "mana": "80",
       "hotKey": "E",
-      "cooldown": "22\/20\/18\/16 (TagTalent 17\/15\/13\/11)",
+      "cooldown": "22\/20\/18\/16 (TagTalent 15\/13\/11\/9)",
       "description": "Magnus rushes forward, goring enemy units on his massive tusk. Heroes hit on the way will be dragged to the destination, then damaged and affected by slowed movement and attack speed.",
       "spellName": "Skewer",
       "params": [
@@ -152,12 +153,13 @@
         "Cast Range: Global",
         "Max Skewer Distance: 887\/982\/1077\/1172 (TagTalent 1298\/1425\/1520\/1615)",
         "Skewer Radius: 145",
-        "Damage: 70\/140\/210\/280",
+        "Damage: 70\/150\/230\/310",
         "Move Speed Slow: 10%\/20%\/30%\/40%",
         "Attack Speed Slow: 25\/30\/35\/40",
         "Slow Duration: 3.25",
         "Cannot hit spell immune enemies. Slows and damages enemies when they turn spell immune while already hit.",
-        "Getting rooted while already charging does not cancel the charge."
+        "Getting rooted while already charging does not cancel the charge.",
+        "Magnoceros horns are valuable in direct proportion to their danger to prospective merchants."
       ],
       "itemBehaviour": [],
       "legacyKey": "D",
@@ -172,14 +174,14 @@
       ],
       "notes": [
         "Requires Aghanim's Shard to be unlocked.",
-        "Horn Toss's search area is a circular segment with a radius of 325, and cutting off and at a total angle of {{#xpr:115*2}}°. This means it affects units in front of Magnus, and to his left and right up to a certain degree.",
+        "Horn Toss's search area is a circular segment with a radius of 325, and cutting off and at a total angle of 230°. This means it affects units in front of Magnus, and to his left and right up to a certain degree.",
         "This means it affects units in front of Magnus, and to his left and right up to a certain degree.",
         "The center of the search area is located 75 range in front of Magnus, which approximately aligns with the position of his horn. This means Horn Toss can hit units up to 400 range in front of Magnus.",
         "This means Horn Toss can hit units up to 400 range in front of Magnus.",
         "Enemies are always tossed at a location between 180-210 range behind Magnus, varying based on where they were in front of him.",
         "Enemies are moved over Magnus' head, in an arc with a height of 300, and varying lengths. The toss always takes 0.6 seconds. Enemies are fully disabled during the toss.",
         "Enemies are fully disabled during the toss.",
-        "The damage and stun are applied upon landing. This means enemies are effectively stunned for 0.85 seconds.",
+        "The damage and stun are applied upon landing. This means enemies are effectively stunned for 1.35 seconds.",
         "Horn Toss first applies the damage and then the stun upon landing.",
         "Stuns and damages Roshan but does not toss him."
       ],
@@ -195,7 +197,7 @@
         "Search Area Offset: 75",
         "Landing Damage: 200",
         "Toss Duration: 0.6",
-        "Landing Stun Duration: 0.25"
+        "Landing Stun Duration: 0.75"
       ],
       "itemBehaviour": [],
       "legacyKey": "T",
@@ -215,7 +217,7 @@
         "Stuns and damages Roshan but does not pull him.",
         "The particle effects and a sound effect start playing at the beginning of the cast."
       ],
-      "mana": "200\/250\/300",
+      "mana": "150\/225\/300",
       "hotKey": "R",
       "cooldown": "130",
       "description": "Magnus changes properties of matter, sucking all nearby enemies in front of him and stunning them with a powerful slam and dealing damage.",
@@ -223,9 +225,10 @@
       "params": [
         "Cast Animation: 0.3+1.3",
         "Radius: 410",
-        "Damage: 50\/125\/200",
+        "Damage: 75\/150\/225",
         "Stun Duration: 2.75\/3.25\/3.75 (TagTalent 3.75\/4.25\/4.75)",
-        "Grants a new ability: Horn Toss."
+        "Grants a new ability: Horn Toss.",
+        "Magnus fights with the fury of the erupting Mt. Joerlak."
       ],
       "itemBehaviour": [],
       "legacyKey": "V",
@@ -241,7 +244,7 @@
     "attrAgility": 15.0
   },
   "description": "Magnus, the Magnoceros, is a monstrous melee strength hero who is usually played as a ganker, initiator, or semi-carry. His ability to battle multiple heroes at once gives him an excellent presence in team fights. In addition to his teamfight presence, he can buff allies or himself with bonus damage and cleave, capitalizing on his ability to group up multiple enemies. As a hero who possesses multiple area-of-effect abilities with a manageable mana cost, and a very powerful ultimate that serves as a great team fight initiation ability, Magnus is truly a force to be reckoned with.",
-  "history": "The master-smiths of Mt. Joerlak agree on only a single point: that the horn of a magnoceros is more precious than any alloy. And of all such horns, the largest and sharpest belongs to the beast they call Magnus. For half a generation, Magnus took easy sport goring hunters come to claim the treasures of his kin. Each time he would return to his cave with hooves and horns stained red, until his Matriarch urged him and all their kin to seek refuge to the north beyond the shadow of the mountain. But Magnus scoffed, having never failed to defend his people. The magnoceroi would stay, he decided, for a magnoceros does not believe in chance... nor does it ever change its mind. But when Mt. Joerlak erupted without warning, and half his kin perished in the fire and ash, Magnus changed his mind after all. The survivors pushed north, until they reached a blockade watched over by a hundred hunters armed with bow and steel. Magnus expected no less. He led his fiercest brothers and sisters in a charge against their enemies, and fought with a ferocity matched only by the fire-spewing mountain at his back. Meanwhile the magnoceros elders, mothers, and calves vanished into the drifts. The master-smiths are divided about what happened next. Some say Magnus reunited with his kin, while others claim he suffered mortal injuries and expired alongside the body of his Matriarch. Neither theory is correct. Magnus did vow to rejoin his kin...but only after seeking out those responsible for the eruption of Mt. Joerlak and watching them die upon his horn, for a magnoceros does not believe in chance.",
+  "history": "The master-smiths of Mt. Joerlak agree on only a single point: that the horn of a magnoceros is more precious than any alloy. And of all such horns, the largest and sharpest belongs to the beast they call Magnus. For half a generation, Magnus took easy sport goring hunters come to claim the treasures of his kin. Each time he would return to his cave with hooves and horns stained red, until his Matriarch urged him and all their kin to seek refuge to the north beyond the shadow of the mountain. But Magnus scoffed, having never failed to defend his people. The magnoceroi would stay, he decided, for a magnoceros does not believe in chance\u2026 nor does it ever change its mind. But when Mt. Joerlak erupted without warning, and half his kin perished in the fire and ash, Magnus changed his mind after all. The survivors pushed north, until they reached a blockade watched over by a hundred hunters armed with bow and steel. Magnus expected no less. He led his fiercest brothers and sisters in a charge against their enemies, and fought with a ferocity matched only by the fire-spewing mountain at his back. Meanwhile the magnoceros elders, mothers, and calves vanished into the drifts. The master-smiths are divided about what happened next. Some say Magnus reunited with his kin, while others claim he suffered mortal injuries and expired alongside the body of his Matriarch. Neither theory is correct. Magnus did vow to rejoin his kin\u2026but only after seeking out those responsible for the eruption of Mt. Joerlak and watching them die upon his horn, for a magnoceros does not believe in chance.",
   "talents": [
     {
       "talentLvl": "25",
@@ -255,12 +258,12 @@
     },
     {
       "talentLvl": "15",
-      "talentLeft": "-5s Skewer Cooldown",
-      "talentRight": "+10 Strength"
+      "talentLeft": "-7s Skewer Cooldown",
+      "talentRight": "+12 Strength"
     },
     {
       "talentLvl": "10",
-      "talentLeft": "+0.3s Shockwave Slow Duration",
+      "talentLeft": "+0.5s Shockwave Slow Duration",
       "talentRight": "+20 Damage"
     }
   ]

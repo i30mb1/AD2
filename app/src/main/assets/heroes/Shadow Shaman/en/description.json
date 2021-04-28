@@ -10,7 +10,7 @@
         {
           "talentLvl": "25",
           "talentLeft": "+25 Wards Attack Damage",
-          "talentRight": "+340 Ether Shock Damage"
+          "talentRight": "+370 Ether Shock Damage"
         },
         {
           "talentLvl": "20",
@@ -20,12 +20,12 @@
         {
           "talentLvl": "15",
           "talentLeft": "-5s Hex Cooldown",
-          "talentRight": "+100 Cast Range"
+          "talentRight": "+75 Serpent Wards Attack Range"
         },
         {
           "talentLvl": "10",
-          "talentLeft": "+140 Shackles Total Damage",
-          "talentRight": "+175 Health"
+          "talentLeft": "+175 Health",
+          "talentRight": "+140 Shackles Total Damage"
         }
       ]
     },
@@ -37,11 +37,11 @@
         "Damage Magical"
       ],
       "notes": [
-        "Can hit units up to 1000 range away (starting radius + distance + end radius).",
-        "The complete area is shaped like a cone in front of Shadow Shaman.",
+        "With the starting radius, max distance and end radius, Ether Shock can hit units up to 1000 range away.",
+        "The complete area is shaped like a cone in front of Shadow Shaman. The area starts in front of Shadow Shaman, and not at the primary target's position. Targets within the cone area are not chosen randomly. It chooses the closest valid targets to the primary target within the cone.",
         "The area starts in front of Shadow Shaman, and not at the primary target's position.",
         "Targets within the cone area are not chosen randomly. It chooses the closest valid targets to the primary target within the cone.",
-        "All strikes together can deal up to 140\/600\/1300\/2240 (TagTalent 480\/1620\/3000\/4620) damage (before reductions).",
+        "All strikes together can deal up to 140\/600\/1300\/2240 (TagTalent 510\/1710\/3150\/4830) damage (before reductions).",
         "The purpose of the modifier is unknown."
       ],
       "mana": "100\/120\/140\/160",
@@ -51,13 +51,14 @@
       "spellName": "Ether Shock",
       "params": [
         "Cast Animation: 0.3+1.23",
-        "Cast Range: 600 (TagTalent 700)",
+        "Cast Range: 600",
         "Starting Radius: 200",
         "Max Distance: 500",
         "End Radius: 300",
         "Number of Targets: 1\/3\/5\/7",
-        "Damage: 140\/200\/260\/320 (TagTalent 480\/540\/600\/660)",
-        "Blocked fully only when primary target."
+        "Damage: 140\/200\/260\/320 (TagTalent 510\/570\/630\/690)",
+        "Blocked fully only when primary target.",
+        "Originally used to open shows with the travelling con-man, Rhasta's lightning display shocks adversaries in more ways than one."
       ],
       "itemBehaviour": [],
       "legacyKey": "R",
@@ -73,7 +74,6 @@
       "notes": [
         "Applies a hex on the target, setting its base movement speed to 100, silencing, muting, and disarming it. However the target's movement speed is still affected by movement speed bonuses from items and abilities.",
         "However the target's movement speed is still affected by movement speed bonuses from items and abilities.",
-        "Since hex changes base movement speed and does not actually apply a slow, all speed effects are calculated using the 100 base speed.",
         "Hex instantly destroys illusions.",
         "Shadow Shaman's hex transforms the target into a chicken. The Lamb to the Slaughter and Golden Lamb to the Slaughter change the model into a lamb.",
         "The Lamb to the Slaughter and Golden Lamb to the Slaughter change the model into a lamb."
@@ -85,10 +85,11 @@
       "spellName": "Hex",
       "params": [
         "Cast Animation: 0+1.13",
-        "Cast Range: 500 (TagTalent 600)",
+        "Cast Range: 500",
         "Set Move Speed: 100",
         "Duration: 1.25\/2\/2.75\/3.5",
-        "Effects persist if debuff was placed before spell immunity."
+        "Effects persist if debuff was placed before spell immunity.",
+        "Rhasta often ended performances by turning himself into a chicken - now, the humiliation is shared."
       ],
       "itemBehaviour": [],
       "legacyKey": "D",
@@ -102,19 +103,19 @@
         "Damage Magical"
       ],
       "notes": [
-        "Shackles stuns the target as long as it is channeled.",
-        "Provides True Sight over the target, but only when the target was not invisible or within a fade time upon cast.",
+        "Shackles stuns the target as long as it is channeled. If the target turns invulnerable or hidden, the channeling stops instantly.",
         "If the target turns invulnerable or hidden, the channeling stops instantly.",
-        "Deals damage in 0.1 second intervals, starting immediately as the channeling begins, resulting in 28\/35\/43\/50 (TagTalent 48\/55\/63\/70) damage instances. The damage per tick is based on the total damage divided by its default duration of 2.75\/3.5\/4.25\/5, and then divided by 10. The duration bonus from the talent is ignored. This results in 2.182\/4.571\/6.118\/7.2 (TagTalent 7.273\/8.571\/9.412\/10) damage per tick (21.82\/45.71\/61.18\/72 (TagTalent 72.73\/85.71\/94.12\/100) damage per second). Therefore, the final damage dealt (before reductions) is 61.09\/160\/263.06\/360 (TagTalent 203.64\/300\/404.71\/500). With the duration increasing talent, the final damage is 104.73\/251.43\/385.41\/504 (TagTalent 349.09\/471.43\/592.94\/700).",
-        "The damage per tick is based on the total damage divided by its default duration of 2.75\/3.5\/4.25\/5, and then divided by 10. The duration bonus from the talent is ignored.",
-        "This results in 2.182\/4.571\/6.118\/7.2 (TagTalent 7.273\/8.571\/9.412\/10) damage per tick (21.82\/45.71\/61.18\/72 (TagTalent 72.73\/85.71\/94.12\/100) damage per second).",
-        "Therefore, the final damage dealt (before reductions) is 61.09\/160\/263.06\/360 (TagTalent 203.64\/300\/404.71\/500).",
-        "With the duration increasing talent, the final damage is 104.73\/251.43\/385.41\/504 (TagTalent 349.09\/471.43\/592.94\/700).",
+        "Provides True Sight over the target, but only when the target was not invisible or within a fade time upon cast.",
+        "Deals damage in 0.1-second intervals, starting immediately as the channeling begins, resulting in 28\/35\/43\/50 (TagTalent 48\/55\/63\/70) damage instances. The damage per tick is based on the total damage divided by its max channel time of 2.75\/3.5\/4.25\/5, and then divided by 10. The duration bonus from the talent is ignored. This translates to 21.82\/45.71\/61.18\/72 (TagTalent 85.45\/95.71\/102.35\/107) damage per second.",
+        "The damage per tick is based on the total damage divided by its max channel time of 2.75\/3.5\/4.25\/5, and then divided by 10. The duration bonus from the talent is ignored.",
+        "This translates to 21.82\/45.71\/61.18\/72 (TagTalent 85.45\/95.71\/102.35\/107) damage per second.",
+        "Therefore, the final damage dealt (before reductions) is 61.09\/160\/263.06\/360 (TagTalent 239.27\/335\/440.12\/535) damage per second. The duration increasing talent deals up to 104.73\/251.43\/385.41\/504 damage per second. With both talents, it can deal up to 410.18\/526.43\/644.82\/749 per second.",
+        "The duration increasing talent deals up to 104.73\/251.43\/385.41\/504 damage per second.",
+        "With both talents, it can deal up to 410.18\/526.43\/644.82\/749 per second.",
         "Unlike other targeted spells, the caster vision of Shackles lasts for the entire channel duration (even if it gets canceled), instead of just 2 seconds.",
-        "With Aghanim's Shard, places a Serpent Wards of the current level 100 range towards the target's north, east, south, and west. The wards' facing angle is set equal to Shadow Shaman's facing angle upon cast. The wards are ordered to attack the target upon creation, but they can be controlled by the player normally. These Serpent Wards benefit from the Aghanim's Scepter upgrade as well. If Mass Serpent Ward is not learnt, no wards are summoned.",
+        "With Aghanim's Shard, places a total of 4 Serpent Wards based on its current level 100 range towards the target's north, east, south, and west. The wards' facing angle is set equal to Shadow Shaman's facing angle upon cast. Same auto attack settings from Mass Serpent Wards and its Aghanim's Scepter upgrade fully apply as well. If Mass Serpent Ward is not learnt, no wards are summoned.",
         "The wards' facing angle is set equal to Shadow Shaman's facing angle upon cast.",
-        "The wards are ordered to attack the target upon creation, but they can be controlled by the player normally.",
-        "These Serpent Wards benefit from the Aghanim's Scepter upgrade as well.",
+        "Same auto attack settings from Mass Serpent Wards and its Aghanim's Scepter upgrade fully apply as well.",
         "If Mass Serpent Ward is not learnt, no wards are summoned."
       ],
       "mana": "140\/150\/160\/170",
@@ -124,13 +125,14 @@
       "spellName": "Shackles",
       "params": [
         "Cast Animation: 0.3+0",
-        "Cast Range: 400 (TagTalent 500) (TagTalent 525, 625)",
+        "Cast Range: 400 (TagTalent 525)",
         "Max Channel Time: 2.75\/3.5\/4.25\/5 (TagTalent 4.75\/5.5\/6.25\/7)",
-        "Total Damage: 60\/160\/260\/360 (TagTalent 200\/300\/400\/500)",
+        "Total Damage: 60\/160\/260\/360 (TagTalent 235\/335\/435\/535)",
         "Number of Serpent Wards: 4",
         "Wards Duration: 7",
         "Shackles creates Serpent Wards attacking the target. Increases Shackles cast range by 125. Lasts 7 seconds.",
-        "Effect does not persist and immediately ends if debuff was placed before spell immunity."
+        "Effect does not persist and immediately ends if debuff was placed before spell immunity.",
+        "A self-defense incantation, Rhasta developed shackles after his master was slain in the Bleeding Hills."
       ],
       "itemBehaviour": [],
       "legacyKey": "E",
@@ -143,22 +145,23 @@
         "Damage Physical (TagAghanim Instant Attack)"
       ],
       "notes": [
-        "Places a Serpent Ward on every 36th degree of a 150 radius circle, resulting in 10 wards forming a ring The wards form a perfect barrier, so that enemies inside cannot move out, unless they have phased movement. Destroying one ward is enough to allow units to walk in and out of the ring of wards. The wards' facing angle is set equal to Shadow Shaman's facing angle upon cast.",
+        "Places a Serpent Ward on every 36°th of a 150 radius circle, resulting in 10 wards forming a ring The wards form a perfect barrier, so that enemies inside cannot move out, unless they have phased movement. Destroying one ward is enough to allow units to walk in and out of the ring of wards. The wards' facing angle is set equal to Shadow Shaman's facing angle upon cast.",
         "The wards form a perfect barrier, so that enemies inside cannot move out, unless they have phased movement.",
         "Destroying one ward is enough to allow units to walk in and out of the ring of wards.",
         "The wards' facing angle is set equal to Shadow Shaman's facing angle upon cast.",
-        "Serpent Wards automatically attack enemies within their attack range, using default auto-attack rules. It is possible to manually give the wards an attack target with A or Right Click an enemy in range. It is also possible to stop the wards from attacking with S (only works when the auto-attack option is ◉ Never).",
+        "Serpent Wards automatically attack enemies within their attack range, using ◉ Standard auto attack rules. It is possible to manually give the wards an attack target with A or Right Click an enemy in range. With Unified Orders with Ctrl, Ctrl+ Right Click an enemy in range will commands to all wards to attack the target. It is also possible to stop the wards from attacking with S (only works when the auto-attack option is ◎ Never).",
         "It is possible to manually give the wards an attack target with A or Right Click an enemy in range.",
-        "It is also possible to stop the wards from attacking with S (only works when the auto-attack option is ◉ Never).",
+        "With Unified Orders with Ctrl, Ctrl+ Right Click an enemy in range will commands to all wards to attack the target.",
+        "It is also possible to stop the wards from attacking with S (only works when the auto-attack option is ◎ Never).",
         "Serpent Wards have a lower target priority than other units and heroes, so they are attacked by towers and creeps last.",
         "The serpent wards attack damage is not reduced by Damage Block.",
-        "With Aghanim's Scepter, the wards perform instant attacks on one enemy whenever they launch an attack projectile. This means the extra projectile is released at the same time together with the main attack. Therefore, it does not matter whether the primary attack misses or not, the extra projectile is still released. The extra projectile travels at the same speed as the primary projectile, and can be disjointed like regular attacks. These instant attacks do not proc any attack modifiers and on-hit effects normally. They do not have True Strike. However, they are affected by armor type and evasion. The extra attack does not target wards, invisible units, attack immune units, or units inside the fog of war. They do target buildings. The secondary target is chosen randomly. There are no priorities.",
+        "With Aghanim's Scepter, the wards perform instant attacks on enemy whenever they launch an attack projectile. This means the extra projectile is released at the same time together with the main attack. Therefore, it does not matter whether the primary attack misses or not, the extra projectile is still released. The extra projectile travels at the same speed as the primary projectile, and can be disjointed like regular attacks. These instant attacks do not proc any attack modifiers and on-hit effects normally. They do not have True Strike. However, they are affected by armor type and evasion. The extra attack does not target wards, invisible units, attack immune units, or units inside the Fog of War. They do target buildings. The secondary target is chosen randomly. There are no priorities.",
         "This means the extra projectile is released at the same time together with the main attack.",
         "Therefore, it does not matter whether the primary attack misses or not, the extra projectile is still released.",
         "The extra projectile travels at the same speed as the primary projectile, and can be disjointed like regular attacks.",
         "These instant attacks do not proc any attack modifiers and on-hit effects normally. They do not have True Strike.",
         "However, they are affected by armor type and evasion.",
-        "The extra attack does not target wards, invisible units, attack immune units, or units inside the fog of war. They do target buildings.",
+        "The extra attack does not target wards, invisible units, attack immune units, or units inside the Fog of War. They do target buildings.",
         "The secondary target is chosen randomly. There are no priorities."
       ],
       "mana": "200\/350\/600",
@@ -168,14 +171,15 @@
       "spellName": "Mass Serpent Ward",
       "params": [
         "Cast Animation: 0.3+0.97",
-        "Cast Range: 550 (TagTalent 650)",
+        "Cast Range: 550",
         "Spawn Radius: 150",
         "Number of Serpent Wards: 10",
         "Attacks to Destroy: 2 (TagTalent 3)",
         "Wards Duration: 45",
         "Split Shot Search Radius: 875",
         "Bonus Attack Targets: 1",
-        "Causes Serpent Wards to have split shot, attacking two units for full damage. Increases attack range of Serpent Wards."
+        "Causes Serpent Wards to have split shot, attacking two units for full damage. Increases attack range of Serpent Wards.",
+        "Snake charming was a big part of the Shadow Shaman's act; now Rhasta can empower the Snakes to do his bidding."
       ],
       "itemBehaviour": [],
       "legacyKey": "W",
@@ -191,12 +195,12 @@
     "attrAgility": 16.0
   },
   "description": "Rhasta, the Shadow Shaman, is a ranged intelligence hero mostly played as a pusher and disabler, wielding abilities that make pushing lanes more efficient. When his abilities are used in intelligent combos, he has one of the longest disables in game. He is also capable of disabling multiple enemy heroes, allowing him to initiate encounters as well. Though very supportive in nature, until the late game Rhasta is capable of killing lone enemy heroes with the use of his entire skill set; meaning he is more difficult to gank than most other supports. Playing Rhasta well requires good knowledge of target priority and timing; and some minor micromanagement. His peak is mid-game, but he can continue to wreak havoc on enemies all throughout the match.",
-  "history": "Born in the Bleeding Hills, Rhasta was just a starving youngling when picked up by a travelling con-man. For two pins of copper, the old con-man would tell your fortune. For three, he\u2019d castrate your pig, for five, he\u2019d circumcise your sons. For a good meal, he\u2019d don his shaman garb, read from his ancient books, and lay a curse upon your enemies. His strange new youngling, part hill troll, part\u2026something else, worked as assistant and lent an air of the exotic to the con-man\u2019s trade. Always one step ahead of cheated customers, one town ahead of a pursuing patronage, the two trekked across the blighted lands until one day the con-man realized that the little youngling could actually do what he only pretended at. His ward had a gift\u2014a gift that customers valued. And so the youngling Rhasta was thrust before the crowds, and the trade-name Shadow Shaman was born. The two continued from town to town, conjuring for money as Shadow Shaman\u2019s reputation grew. Eventually, the pair\u2019s duplicitous past caught up with them, and they were ambushed by a mob of swindled ex-clients. The con-man was slain, and for the first time, Rhasta used his powers for darkness, massacring the attackers. He buried his beloved master, and now uses his powers to destroy any who would seek to do him harm.",
+  "history": "Born in the Bleeding Hills, Rhasta was just a starving youngling when picked up by a travelling con-man. For two pins of copper, the old con-man would tell your fortune. For three, he'd castrate your pig, for five, he'd circumcise your sons. For a good meal, he'd don his shaman garb, read from his ancient books, and lay a curse upon your enemies. His strange new youngling, part hill troll, part\u2026something else, worked as assistant and lent an air of the exotic to the con-man's trade. Always one step ahead of cheated customers, one town ahead of a pursuing patronage, the two trekked across the blighted lands until one day the con-man realized that the little youngling could actually do what he only pretended at. His ward had a gift\u2014a gift that customers valued. And so the youngling Rhasta was thrust before the crowds, and the trade-name Shadow Shaman was born. The two continued from town to town, conjuring for money as Shadow Shaman's reputation grew. Eventually, the pair's duplicitous past caught up with them, and they were ambushed by a mob of swindled ex-clients. The con-man was slain, and for the first time, Rhasta used his powers for darkness, massacring the attackers. He buried his beloved master, and now uses his powers to destroy any who would seek to do him harm.",
   "talents": [
     {
       "talentLvl": "25",
       "talentLeft": "+25 Wards Attack Damage",
-      "talentRight": "+340 Ether Shock Damage"
+      "talentRight": "+370 Ether Shock Damage"
     },
     {
       "talentLvl": "20",
@@ -206,12 +210,12 @@
     {
       "talentLvl": "15",
       "talentLeft": "-5s Hex Cooldown",
-      "talentRight": "+100 Cast Range"
+      "talentRight": "+75 Serpent Wards Attack Range"
     },
     {
       "talentLvl": "10",
-      "talentLeft": "+140 Shackles Total Damage",
-      "talentRight": "+175 Health"
+      "talentLeft": "+175 Health",
+      "talentRight": "+140 Shackles Total Damage"
     }
   ]
 }

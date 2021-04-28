@@ -2,29 +2,29 @@
   "abilities": [
     {
       "notes": [
-        "This attack damage talent is added as raw attack damage, so it does not benefit illusions, and is not affected by most percentage-based damage increasing or reducing effects."
+        "The strength talent effectively grants Riki 160 health and 0.8 health regeneration."
       ],
       "spellName": "Talent",
       "talents": [
         {
           "talentLvl": "25",
-          "talentLeft": "+125 Smoke Screen AoE",
+          "talentLeft": "+175 Smoke Screen AoE",
           "talentRight": "-4 Tricks of the Trade Cooldown"
         },
         {
           "talentLvl": "20",
-          "talentLeft": "+475 Blink Strike Cast Range",
+          "talentLeft": "-4 Blink Strike Replenish Time",
           "talentRight": "+0.5 Backstab Multiplier"
         },
         {
           "talentLvl": "15",
           "talentLeft": "-4s Smoke Screen Cooldown",
-          "talentRight": "+20 Damage"
+          "talentRight": "+8% Cloak and Dagger Movement Speed While Invisible"
         },
         {
           "talentLvl": "10",
           "talentLeft": "+20 Attack Speed",
-          "talentRight": "+6 Health Regen"
+          "talentRight": "+8 Strength"
         }
       ]
     },
@@ -36,11 +36,11 @@
       ],
       "notes": [
         "All effects of Smoke Screen are provided by an aura. Its debuff lingers for 0.5 seconds.",
-        "Although the debuff lingers, its effects instantly stop if the target turns invulnerable.",
-        "Smoke Screen can be cast during Tricks of the Trade without interrupting it, as long as the targeted point is within cast range. This means during Tricks of the Trade, Smoke Screen has a cast point and backswing of 0 and does not require facing the targeted point to be cast. The channeling itself does get interrupted, but the ability continues with its effects. In this state, shift-queueing orders causes it to get completely canceled.",
-        "This means during Tricks of the Trade, Smoke Screen has a cast point and backswing of 0 and does not require facing the targeted point to be cast.",
+        "Although the debuff lingers, its effects instantly stop if the target turns spell immune or invulnerable.",
+        "Can be cast during Tricks of the Trade without interrupting it, as long as the targeted point is within cast range. During Tricks of the Trade, Smoke Screen has a cast point and backswing of 0 and does not require facing the targeted point to be cast. The channeling itself does get interrupted, but the ability continues with its effects. In this state, new ⇧ Shift-queue orders will cause Trick of the Trade to get completely canceled.",
+        "During Tricks of the Trade, Smoke Screen has a cast point and backswing of 0 and does not require facing the targeted point to be cast.",
         "The channeling itself does get interrupted, but the ability continues with its effects.",
-        "In this state, shift-queueing orders causes it to get completely canceled.",
+        "In this state, new ⇧ Shift-queue orders will cause Trick of the Trade to get completely canceled.",
         "Smoke Screen's blind uses pseudo-random distribution."
       ],
       "mana": "75",
@@ -51,11 +51,12 @@
       "params": [
         "Cast Animation: 0.2+0",
         "Cast Range: 550",
-        "Effect Radius: 300\/325\/350\/375 (TagTalent 425\/450\/475\/500)",
+        "Effect Radius: 300\/325\/350\/375 (TagTalent 475\/500\/525\/550)",
         "Miss Chance: 20%\/35%\/50%\/65%",
         "Aura Linger Duration: 0.5",
         "Duration: 6",
-        "Although the debuff lingers, it does nothing when the target turns spell immune."
+        "Although the debuff lingers, it does nothing when the target turns spell immune.",
+        "Since his escape during the night of his betrayal, Riki has valued the use of a simple smoke screen to confuse his opponents."
       ],
       "itemBehaviour": [],
       "legacyKey": "C",
@@ -71,17 +72,17 @@
       "notes": [
         "Riki gets all 2 charges immediately upon learning Blink Strike.",
         "The bonus damage is independent from Riki's attack damage and is instantly dealt to the target.",
-        "Always teleports Riki behind the target.",
-        "Does not disjoint projectiles upon teleporting.",
-        "When targeting an enemy, Riki receives the Blinkstrike buff. This buff makes his next attack apply an ensured backstab hit with Cloak and Dagger, regardless of angle. This means when the target manages to turn around before Riki's attack hits, it still applies the backstab. The buff lasts for 1 attack, or for up to 1 second, whichever happens first. The buff is used up upon starting an attack, not upon landing it, so canceling or missing the attack wastes it. The 1 second duration allows Riki to use the ensured backstab against other units than the Blink Strike target if quick enough.",
-        "This buff makes his next attack apply an ensured backstab hit with Cloak and Dagger, regardless of angle.",
-        "This means when the target manages to turn around before Riki's attack hits, it still applies the backstab.",
+        "Blink Strike always teleports Riki behind the target. However, it does not disjoint projectiles upon teleporting.",
+        "However, it does not disjoint projectiles upon teleporting.",
+        "Riki is ordered to attack the target if it is an enemy. Can be cast on allies without damaging them.",
+        "Can be cast on allies without damaging them.",
+        "When targeting an enemy, Riki receives a hidden buff. This buff makes his next attack apply an ensured backstab hit with Cloak and Dagger, regardless of facing angle. This means if the target manages to turn around before Riki's attack hits, it still applies the backstab. The buff lasts for 1 attack, or for up to 1 second, whichever happens first. The buff is used up upon starting an attack, not upon landing it, so canceling or missing the attack wastes it. Riki may use this 1-second duration buff to ensured the bonus backstab damage against other units other than the targeted unit if quick enough.",
+        "This buff makes his next attack apply an ensured backstab hit with Cloak and Dagger, regardless of facing angle.",
+        "This means if the target manages to turn around before Riki's attack hits, it still applies the backstab.",
         "The buff lasts for 1 attack, or for up to 1 second, whichever happens first.",
         "The buff is used up upon starting an attack, not upon landing it, so canceling or missing the attack wastes it.",
-        "The 1 second duration allows Riki to use the ensured backstab against other units than the Blink Strike target if quick enough.",
-        "Riki is ordered to attack the target if it is an enemy.",
-        "Can be cast on allies without damaging them.",
-        "Cannot be cast on couriers."
+        "Riki may use this 1-second duration buff to ensured the bonus backstab damage against other units other than the targeted unit if quick enough.",
+        "Cannot be cast on Couriers."
       ],
       "mana": "50",
       "hotKey": "W",
@@ -90,10 +91,12 @@
       "spellName": "Blink Strike",
       "params": [
         "Cast Animation: 0.3+0",
-        "Cast Range: 600\/700\/800\/900 (TagTalent 1075\/1175\/1275\/1375)",
+        "Cast Range: 600\/700\/800\/900",
         "Damage: 25\/50\/75\/100",
+        "Attack Animation Speed Bonus: 50%",
         "Number of Charges: 2",
-        "Charge Replenish Time: 25\/20\/15\/10"
+        "Charge Replenish Time: 25\/20\/15\/10 (TagTalent 21\/16\/11\/6)",
+        "The Stealth Assassin's agile movement makes him impossible to escape."
       ],
       "itemBehaviour": [],
       "legacyKey": "B",
@@ -108,24 +111,26 @@
       ],
       "notes": [
         "Tricks of the Trade disjoints projectiles upon cast.",
-        "Certain items which do not cancel channeling spells (e.g. Shadow Blade or Shiva's Guard) do cancel Tricks of the Trade.",
-        "Riki is invulnerable and hidden during Tricks of the Trade, turning him to an invalid target for every spell.",
-        "Riki is phased during Tricks of the Trade, so that other units can pass through.",
-        "Causes Riki to perform instant attacks on 1 (TagTalent 2) random enemy unit within range on each interval, starting immediately on cast. These instant attacks can proc any attack modifiers and on-hit effects normally. They do not have True Strike, but completely ignore disarms. The instant attacks do not break Cloak and Dagger's and Smoke of Deceit's invisibility, although Cloak and Dagger visually goes on cooldown. The instant attacks always trigger a backstab from Cloak and Dagger, regardless of facing angles.",
-        "These instant attacks can proc any attack modifiers and on-hit effects normally. They do not have True Strike, but completely ignore disarms.",
-        "The instant attacks do not break Cloak and Dagger's and Smoke of Deceit's invisibility, although Cloak and Dagger visually goes on cooldown.",
-        "The instant attacks always trigger a backstab from Cloak and Dagger, regardless of facing angles.",
-        "Performs instant attacks in 0.67-second intervals, starting immediately upon cast, resulting in 4 instances. With Aghanim's Scepter, attacks 2 enemies at once, resulting in up to 8 attacks over the same duration.",
-        "With Aghanim's Scepter, attacks 2 enemies at once, resulting in up to 8 attacks over the same duration.",
+        "Certain items which do not cancel channeling abilities (e.g. Shadow Blade or Shiva's Guard) do cancel Tricks of the Trade.",
+        "Riki is phased, invulnerable and hidden during Tricks of the Trade.",
+        "Causes Riki to perform instant attacks on 1 (2) random enemy units within range in 0.67-second intervals, starting immediately upon cast, resulting in 4 instances. These instant attacks can proc any attack modifiers (including Cloak and Dagger, regardless of facing angles) and on-hit effects normally. They do not have True Strike, but completely ignore disarms. These instant attacks do not break Cloak and Dagger's and Smoke of Deceit's invisibility, although Cloak and Dagger visually goes on cooldown.",
+        "These instant attacks can proc any attack modifiers (including Cloak and Dagger, regardless of facing angles) and on-hit effects normally. They do not have True Strike, but completely ignore disarms.",
+        "These instant attacks do not break Cloak and Dagger's and Smoke of Deceit's invisibility, although Cloak and Dagger visually goes on cooldown.",
         "Does not affect invisible units, but does affect units inside the Fog of War.",
-        "The visual effects indicating Tricks of the Trade's attack radius are visible to both allies and enemies.",
-        "The radius is always centered on Riki and follows him even when he gets moved (e.g. Glimpse). However, a part of the radius indicating visual effects on the ground do not follow Riki, and stay at the cast location.",
+        "The visual effects indicating Tricks of the Trade's attack radius are visible to both allies and enemies. The attack radius is always centered on Riki and follows him even when he gets moved (e.g. Glimpse). However, a part of the radius indicating visual effects on the ground do not follow Riki, and stay at the cast location.",
+        "The attack radius is always centered on Riki and follows him even when he gets moved (e.g. Glimpse).",
         "However, a part of the radius indicating visual effects on the ground do not follow Riki, and stay at the cast location.",
-        "With Aghanim's Scepter, Tricks of the Trade can be cast on an allied hero, including illusions and clones, excluding creep-heroes. Riki and all of the spell's effects then follow the allied hero. He still remains hidden. Does not end when the target dies. The ability continues at its corpse's location. It is still bound to the ally, so when it resurrects, it follows it still.",
-        "Riki and all of the spell's effects then follow the allied hero. He still remains hidden.",
-        "Does not end when the target dies. The ability continues at its corpse's location. It is still bound to the ally, so when it resurrects, it follows it still.",
         "Riki reappears at the center of the ability after the max channel time. ↓↓ Double-tapping automatically moves Riki to the targeted location within the cast range. Riki reappears at the center of the ability.",
-        "↓↓ Double-tapping automatically moves Riki to the targeted location within the cast range. Riki reappears at the center of the ability."
+        "↓↓ Double-tapping automatically moves Riki to the targeted location within the cast range. Riki reappears at the center of the ability.",
+        "Smoke Screen can be cast without interrupting it, as long as the targeted point is within cast range. During Tricks of the Trade, Smoke Screen has a cast point and backswing of 0 and does not require facing the targeted point to be cast. The channeling itself does get interrupted, but the ability continues with its effects. In this state, new ⇧ Shift-queue orders will cause Trick of the Trade to get completely canceled.",
+        "During Tricks of the Trade, Smoke Screen has a cast point and backswing of 0 and does not require facing the targeted point to be cast.",
+        "The channeling itself does get interrupted, but the ability continues with its effects.",
+        "In this state, new ⇧ Shift-queue orders will cause Trick of the Trade to get completely canceled.",
+        "With Aghanim's Scepter, Trick of the Trade attacks 2 enemies at once, resulting in up to 8 attacks over the same intervals and duration. Can be cast on an allied hero, including illusions and clones, excluding creep-heroes. Riki and all of Tricks of the Trade's effects are centered around and follow the allied hero. Riki still remains hidden. This means Riki's auras are effectively bestowed around the allied hero for the duration. Does not end when the target dies. The ability continues at its corpse's location. It is still bound to the ally, so when it reincarnates, it follows it still.",
+        "Can be cast on an allied hero, including illusions and clones, excluding creep-heroes.",
+        "Riki and all of Tricks of the Trade's effects are centered around and follow the allied hero. Riki still remains hidden. This means Riki's auras are effectively bestowed around the allied hero for the duration.",
+        "This means Riki's auras are effectively bestowed around the allied hero for the duration.",
+        "Does not end when the target dies. The ability continues at its corpse's location. It is still bound to the ally, so when it reincarnates, it follows it still."
       ],
       "mana": "50",
       "hotKey": "E",
@@ -134,13 +139,15 @@
       "spellName": "Tricks of the Trade",
       "params": [
         "Cast Animation: 0.3+0",
-        "Cast Range: 400 (TagAghanim 700)",
+        "Cast Range: 400 (TagTalent 700)",
         "Max Channel Time: 2",
         "Radius: 450",
-        "Attack Targets: 1 (TagAghanim 2)",
+        "Attack Targets: 1 (TagTalent 2)",
         "Attack Count: 4",
-        "Instant Attack Damage: 70%\/80%\/90%\/100%",
-        "Increases cast range and allows you to target an allied hero, hiding inside them for the duration."
+        "Bonus Agility: 55%\/70%\/85%\/100%",
+        "Instant Attack Damage: 50%",
+        "Increases cast range and allows you to target an allied hero, hiding inside them for the duration.",
+        "The Stealth Assassin is not afraid to fight dirty, and specializes in attacking his opponents from behind."
       ],
       "itemBehaviour": [],
       "legacyKey": "T",
@@ -156,22 +163,24 @@
       "notes": [
         "Requires Aghanim's Shard to be unlocked.",
         "The projectile travels at a speed of 1600.",
-        "The target is invulnerable while sleeping.",
-        "The damage and slow are applied upon losing the sleep debuff.",
-        "The debuff first applies the slow debuff, then the damage."
+        "The target wakes up only after cumulatively taking 200 damage. The counter starts counting damage during the sleep duration. Counts damage after all reductions.",
+        "The counter starts counting damage during the sleep duration. Counts damage after all reductions.",
+        "The damage and slow are applied upon losing the sleep debuff, either from the duration expiring or reaching the damage threshold. The debuff first applies the movement speed slow, then the damage.",
+        "The debuff first applies the movement speed slow, then the damage."
       ],
       "mana": "85",
       "hotKey": "D",
       "cooldown": "12",
-      "description": "Fires a dart at the target enemy, putting them to sleep for 3 seconds. At the end of the duration, the target wakes up and takes 120 damage and is slowed by 30% for 4 seconds.",
+      "description": "Fires a dart at the target enemy, putting them to sleep for 4 seconds or if they take 200 damage. The target takes 120 damage and is slowed by 30% for 4 seconds upon waking up.",
       "spellName": "Sleeping Dart",
       "params": [
         "Cast Animation: 0.2+0.57",
         "Cast Range: 1200",
         "Damage: 120",
+        "Wake Up Damage Threshold: 200",
         "Move Speed Slow: 30%",
         "Slow Duration: 4",
-        "Sleep Duration: 3",
+        "Sleep Duration: 4",
         "Blocked upon impact."
       ],
       "itemBehaviour": [],
@@ -186,9 +195,9 @@
         "Damage Physical"
       ],
       "notes": [
-        "Riki does not automatically attack enemies while invisible.",
+        "Riki does not auto attack enemies while invisible.",
         "When respawning or reincarnating, Riki starts off invisible and does not need to go through the fade delay.",
-        "Casting spells or using items does not break the invisibility.",
+        "Casting abilities or using items does not break the invisibility.",
         "The ability icon shows a cooldown whenever the invisibility is broken. However, this has only informative purposes. This means that using Refresher Orb does not refresh it. This also means it is not affected by the Cooldown Reduction of Octarine Core and Arcane Rune. Time Dilation and Chakra Magic affect the cooldown visually, but do not affect the fade delay in any way.",
         "This means that using Refresher Orb does not refresh it.",
         "This also means it is not affected by the Cooldown Reduction of Octarine Core and Arcane Rune.",
@@ -197,7 +206,8 @@
         "The bonus damage is dealt in one instance together with the attack damage, and counts as attack damage as well. It can be lifestealed off of, and is considered by crit or cleave. It is not affected by percentage-based attack damage bonuses or reductions, but can be reduced with flat reductions.",
         "It can be lifestealed off of, and is considered by crit or cleave.",
         "It is not affected by percentage-based attack damage bonuses or reductions, but can be reduced with flat reductions.",
-        "The sound effect plays at the start of the attack, but the damage is applied on hit."
+        "The sound effect plays at the start of the attack, but the damage is applied on hit.",
+        "The self movement speed talent is only granted while invisible, i.e. when the ability is not on cooldown."
       ],
       "mana": null,
       "hotKey": "R",
@@ -208,8 +218,10 @@
         "Fade Delay: 4\/3\/2",
         "Back Angle: 105°",
         "Backstab Damage per Agility: 1.4\/1.8\/2.2 (TagTalent 1.9\/2.3\/2.7)",
+        "Self Move Speed Bonus: 8%",
         "Grants a new ability: Sleeping Dart.",
-        "Invisibility part works for illusions. Illusions play the backstab sound upon attacking from behind, but do not deal any bonus damage."
+        "Invisibility part works for illusions. Illusions play the backstab sound upon attacking from behind, but do not deal any bonus damage.",
+        "Riki comes for you."
       ],
       "itemBehaviour": [],
       "legacyKey": "E",
@@ -229,23 +241,23 @@
   "talents": [
     {
       "talentLvl": "25",
-      "talentLeft": "+125 Smoke Screen AoE",
+      "talentLeft": "+175 Smoke Screen AoE",
       "talentRight": "-4 Tricks of the Trade Cooldown"
     },
     {
       "talentLvl": "20",
-      "talentLeft": "+475 Blink Strike Cast Range",
+      "talentLeft": "-4 Blink Strike Replenish Time",
       "talentRight": "+0.5 Backstab Multiplier"
     },
     {
       "talentLvl": "15",
       "talentLeft": "-4s Smoke Screen Cooldown",
-      "talentRight": "+20 Damage"
+      "talentRight": "+8% Cloak and Dagger Movement Speed While Invisible"
     },
     {
       "talentLvl": "10",
       "talentLeft": "+20 Attack Speed",
-      "talentRight": "+6 Health Regen"
+      "talentRight": "+8 Strength"
     }
   ]
 }

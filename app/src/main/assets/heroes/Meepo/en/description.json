@@ -3,7 +3,7 @@
     {
       "notes": [
         "Talents are fully copied by the Divided We Stand clones.",
-        "This attack damage talent is added as raw attack damage, so it does not benefit illusions, and is not affected by most percentage-based damage increasing or reducing effects.",
+        "This attack damage talent is added as base attack damage, so it does benefit illusions, and is affected by every percentage-based damage increasing or reducing effects.",
         "The strength talent effectively grants Meepo 120 health and 0.6 health regeneration.",
         "The evasion talent stacks multiplicatively with other sources of evasion.",
         "The health talent increases maximum health capacity, and keeps the current health percentage."
@@ -13,7 +13,7 @@
         {
           "talentLvl": "25",
           "talentLeft": "+1 Divided We Stand Clone",
-          "talentRight": "+325 Health"
+          "talentRight": "+375 Health"
         },
         {
           "talentLvl": "20",
@@ -22,12 +22,12 @@
         },
         {
           "talentLvl": "15",
-          "talentLeft": "+35 Poof Damage",
+          "talentLeft": "+50 Poof Damage",
           "talentRight": "15% Evasion"
         },
         {
           "talentLvl": "10",
-          "talentLeft": "+15 Damage",
+          "talentLeft": "+20 Base Damage",
           "talentRight": "+6 Strength"
         }
       ]
@@ -56,7 +56,8 @@
         "Cast Range: 500\/750\/1000\/1250",
         "Radius: 220",
         "Duration: 2",
-        "Root effect persists if debuff was placed before spell immunity and when not dispelled."
+        "Root effect persists if debuff was placed before spell immunity and when not dispelled.",
+        "Catching dinner in the Riftshadow Ruins can be quite the task."
       ],
       "itemBehaviour": [],
       "legacyKey": "E",
@@ -71,17 +72,19 @@
       ],
       "notes": [
         "Poof does not disjoint projectiles.",
-        "Poof can only target self, clones and illusions of the caster. ↓↓ Double-tapping automatically targets self.",
+        "Poof can only target self, clones or allied illusions of the caster. ↓↓ Double-tapping automatically targets self.",
         "↓↓ Double-tapping automatically targets self.",
         "Cannot directly target, but can still poof to invulnerable clones and illusions. Cannot Poof to hidden targets at all.",
         "When targeting ground, the Meepo closest to the target point is chosen upon cast (which can be the same Meepo who casts it).",
-        "Poof deals its damage twice, once at the cast location and once at the destination point.",
-        "This is how much damage Poof can deal (before reductions) when a certain number of Meepos casts it at the same spot: 1 Meepo: 140\/180\/220\/260 (TagTalent 210\/250\/290\/330) 2 Meepos: 280\/360\/440\/520 (TagTalent 420\/500\/580\/660) 3 Meepos: 420\/540\/660\/780 (TagTalent 630\/750\/870\/990) 4 Meepos: 560\/720\/880\/1040 (TagTalent 840\/1000\/1160\/1320) 5 Meepos: 700\/900\/1100\/1300 (TagTalent 1050\/1250\/1450\/1650)",
-        "1 Meepo: 140\/180\/220\/260 (TagTalent 210\/250\/290\/330)",
-        "2 Meepos: 280\/360\/440\/520 (TagTalent 420\/500\/580\/660)",
-        "3 Meepos: 420\/540\/660\/780 (TagTalent 630\/750\/870\/990)",
-        "4 Meepos: 560\/720\/880\/1040 (TagTalent 840\/1000\/1160\/1320)",
-        "5 Meepos: 700\/900\/1100\/1300 (TagTalent 1050\/1250\/1450\/1650)"
+        "Poof deals its damage once at the cast location and once at the destination point. The damage from Poof stacks, ↓↓ Double-tapping effectively deals twice the damage to enemies around Meepo.",
+        "The damage from Poof stacks, ↓↓ Double-tapping effectively deals twice the damage to enemies around Meepo.",
+        "This is how much damage Poof can deal (before reductions) when a certain number of Meepos casts it at the same spot: 1x - 120\/160\/200\/240 (TagTalent 220\/260\/300\/340) 2x - 240\/320\/400\/480 (TagTalent 440\/520\/600\/680) 3x - 360\/480\/600\/720 (TagTalent 660\/780\/900\/1020) 4x - 480\/640\/800\/960 (TagTalent 880\/1040\/1200\/1360) 5x - 600\/800\/1000\/1200 (TagTalent 1100\/1300\/1500\/1700)",
+        "1x - 120\/160\/200\/240 (TagTalent 220\/260\/300\/340)",
+        "2x - 240\/320\/400\/480 (TagTalent 440\/520\/600\/680)",
+        "3x - 360\/480\/600\/720 (TagTalent 660\/780\/900\/1020)",
+        "4x - 480\/640\/800\/960 (TagTalent 880\/1040\/1200\/1360)",
+        "5x - 600\/800\/1000\/1200 (TagTalent 1100\/1300\/1500\/1700)",
+        ""
       ],
       "mana": "80",
       "hotKey": "W",
@@ -91,8 +94,10 @@
       "params": [
         "Cast Animation: 1.5+0",
         "Cast Range: Global",
-        "Damage Radius: 375",
-        "Damage: 70\/90\/110\/130 (TagTalent 105\/125\/145\/165)"
+        "Damage Radius: 400",
+        "Damage: 60\/80\/100\/120 (TagTalent 110\/130\/150\/170)",
+        "Poof can be casted on allies within a max range of 2000 when directly targeting them.",
+        "Sometimes breaking one of the Riftshadow Crystals can be just the trick for getting yourself out of a bind. Or your other self."
       ],
       "itemBehaviour": [],
       "legacyKey": "F",
@@ -103,20 +108,14 @@
       "effects": [
         "Ability Passive",
         "Affects Enemies \/ Self",
-        "Damage Pure (TagAghanim Magical)"
+        "Damage Pure"
       ],
       "notes": [
         "Deals pure damage to enemies on attack. The damage is applied before the attack damage.",
-        "Heals all other Meepos by a set amount. The actual damage deal to the target does not matter.",
+        "Heals all other Meepos by a set amount. The actual damage deal to the target does not matter. The health steal is affected by lifesteal amplification, not affected by heal manipulation, only on Meepo prime since the clones may not pick up any items.",
+        "The health steal is affected by lifesteal amplification, not affected by heal manipulation, only on Meepo prime since the clones may not pick up any items.",
         "Does not work against Roshan.",
-        "Treats creep-heroes as creeps.",
-        "With Aghanim's Shard, attacks may apply the Geostrike debuff on enemies. Deals damages in 1 second intervals, starting 1 second after the debuff is placed, resulting in 4 damage instances. Successive attacks on the same target done by one Meepo do not stack, but refresh the duration. However, attacks from multiple Meepos (excluding illusions) fully stack with each other, each placing their own debuff. The attacks first apply the debuff, then their own damage. Both damage and slow go through spell immunity. Can deal a total of 80\/160\/240\/320\/400 damage with 1\/2\/3\/4\/5 Meepos.",
-        "Deals damages in 1 second intervals, starting 1 second after the debuff is placed, resulting in 4 damage instances.",
-        "Successive attacks on the same target done by one Meepo do not stack, but refresh the duration.",
-        "However, attacks from multiple Meepos (excluding illusions) fully stack with each other, each placing their own debuff.",
-        "The attacks first apply the debuff, then their own damage.",
-        "Both damage and slow go through spell immunity.",
-        "Can deal a total of 80\/160\/240\/320\/400 damage with 1\/2\/3\/4\/5 Meepos."
+        "Treats creep-heroes as creeps."
       ],
       "mana": null,
       "hotKey": "E",
@@ -125,13 +124,9 @@
       "spellName": "Ransack",
       "params": [
         "Hero Health Steal: 6\/10\/14\/18 (TagTalent 14\/18\/22\/26)",
-        "Creep Health Steal: 4\/6\/8\/10 (TagTalent 12\/14\/16\/18)",
-        "Geostrike Proc Chance: 30%",
-        "Geostrike Damage per Second: 20",
-        "Geostrike Move Speed Slow: 20%",
-        "Geostrike Duration: 4",
-        "Ransack now has a 30% chance on hit to apply a Geostrike debuff, slowing enemies by 20% and dealing 20 DPS for 4 seconds. Instances from multiple Meepos stack.",
-        "Illusions neither can steal health, nor get healed by Meepo or a clone attacking. Illusions cannot place the Geostrike debuff."
+        "Creep Health Steal: 4\/6\/8\/10",
+        "Illusions neither can steal health, nor get healed by Meepo or a clone attacking.",
+        "So you gonna need that, or...?"
       ],
       "itemBehaviour": [],
       "legacyKey": "G",
@@ -144,24 +139,25 @@
         "Affects Self"
       ],
       "notes": [
-        "Requires Aghanim's Scepter to be unlocked.",
+        "Requires Aghanim's Scepter to be unlocked. This ability is not available in Ability Draft, since Divided We Stand is unavailable and Dig is bound to it.",
+        "This ability is not available in Ability Draft, since Divided We Stand is unavailable and Dig is bound to it.",
         "Applies a basic dispel on the caster upon finishing the channeling.",
-        "Stuns the caster for the duration, and turns them invulnerable and unselectable. Any attack or spell targeting Meepo which is already in its attack or cast animation gets canceled. Does not prevent Spell Reflection from reflecting spells back at him.",
-        "Any attack or spell targeting Meepo which is already in its attack or cast animation gets canceled.",
-        "Does not prevent Spell Reflection from reflecting spells back at him.",
-        "Restores health in the form of health regeneration. Increases health regeneration by 7.14% of maximum health.",
-        "Increases health regeneration by 7.14% of maximum health."
+        "Stuns the caster for the duration, and turns them invulnerable and unselectable. Any attack or abilities targeting Meepo which is already in its attack or cast animation gets canceled. Does not prevent Spell Reflection from reflecting abilities back at Meepo.",
+        "Any attack or abilities targeting Meepo which is already in its attack or cast animation gets canceled.",
+        "Does not prevent Spell Reflection from reflecting abilities back at Meepo.",
+        "Restores health in the form of health regeneration in 1-second intervals. Increases health regeneration by 10% of maximum health per interval.",
+        "Increases health regeneration by 10% of maximum health per interval."
       ],
       "mana": "150",
       "hotKey": "D",
       "cooldown": "40",
-      "description": "Channels for 0.75 seconds and digs into the ground for seconds, dispelling Meepo and causing him to become invulnerable and untargetable for 3.5. Restores 25% of his max health over that duration. Can't be cast while rooted.",
+      "description": "Channels for 0.75 seconds and digs into the ground for 4 seconds, dispelling Meepo and causing him to become invulnerable and untargetable. Restores 40% of his max health over that duration. Can't be cast while rooted.",
       "spellName": "Dig",
       "params": [
         "Cast Animation: 0+0",
         "Channel Time: 0.75",
-        "Max Health Restored: 25%",
-        "Duration: 3.5",
+        "Max Health Restored: 40%",
+        "Duration: 4",
         "Root prevents casting Dig. Does not stop the channeling if it already started."
       ],
       "itemBehaviour": [],
@@ -177,26 +173,27 @@
       ],
       "notes": [
         "Unlike most other ultimates, Divided We Stand can be leveled up at level 4\/11\/18 instead of 6\/12\/18.",
-        "Upon leveling, the Meepo clones always spawn with full health and mana next to Meepo prime, even when leveling from a clone.",
+        "Upon leveling, the Meepo clones always spawn with full health and mana next to Meepo prime, even when leveling ability from a clone.",
         "Meepo and his clones are represented by an icon with health and mana bars for each on the top left corner of the screen. When a Meepo is selected, its icon becomes brighter. When a Meepo takes damage, its icon blinks red.",
         "When a Meepo is selected, its icon becomes brighter. When a Meepo takes damage, its icon blinks red.",
         "Meepo clones are treated exactly like heroes, except by Cataclysm and Thundergod's Wrath, which do not target his clones.",
-        "Clones benefit from talents bonuses, and from any attributes granted by items or buffs. However, they do not benefit from any other item bonuses (damage, health, armor, etc.). This also means the attribute bonus from Power Treads, as well as the +6 strength talent, are applied twice on Meepo clones.",
-        "However, they do not benefit from any other item bonuses (damage, health, armor, etc.).",
-        "This also means the attribute bonus from Power Treads, as well as the +6 strength talent, are applied twice on Meepo clones.",
+        "Clones benefit from talents bonuses, and only from \/ \/ all attributes granted by items or buffs. They do not benefit from any other item bonuses (damage, health, armor, etc.). This also means the attribute bonus from Power Treads, as well as the strength talent, are applied twice on Meepo clones. The strength talent effectively grants the clones 240 health and 1.2 health regeneration.",
+        "They do not benefit from any other item bonuses (damage, health, armor, etc.).",
+        "This also means the attribute bonus from Power Treads, as well as the strength talent, are applied twice on Meepo clones. The strength talent effectively grants the clones 240 health and 1.2 health regeneration.",
+        "The strength talent effectively grants the clones 240 health and 1.2 health regeneration.",
         "Meepo clones only gain 30% of all experience, even when alone. This means when alone, 70% of experience gets lost. When 1 ally is nearby, the clone gets 15%, the ally gets 85%, with 2 allies, the clone gets 10%, the allies get 90% each. Meepo prime still gets 100% experience like other heroes do. Only the clones have this penalty. Experience sharing for the Meepo Clones and their allies can be defined as:",
         "This means when alone, 70% of experience gets lost. When 1 ally is nearby, the clone gets 15%, the ally gets 85%, with 2 allies, the clone gets 10%, the allies get 90% each.",
         "Meepo prime still gets 100% experience like other heroes do. Only the clones have this penalty.",
         "Experience sharing for the Meepo Clones and their allies can be defined as:",
         "When Meepo prime loses attributes (to e.g. Decay or Intelligence Steal), the clones' attributes adapt. However, Meepo clones themselves are still subject to attribute loss and the other Meepos do not adapt to a clone losing attributes.",
         "However, Meepo clones themselves are still subject to attribute loss and the other Meepos do not adapt to a clone losing attributes.",
-        "Meepo clones cannot pick up or drop any items. They can pick up and benefit from runes. It is not possible to give the clones Tangoes or Observer and Sentry Wards. It is possible to heal them with e.g. Bottle. Meepo clones can only have a pair of boots in their inventory, copied from the original Meepo, with the following priorities: Boots of Travel 2 > Boots of Travel 1 > Guardian Greaves > Power Treads > Arcane Boots > Phase Boots > Tranquil Boots > Boots of Speed. The clones cannot cast Guardian Greaves, Arcane Boots and Power Treads. Phase Boots can be cast. If the original Meepo switches attributes of Power Treads, the treads of the clones switch as well. When Meepo respawns with Aegis of the Immortal, all clones respawn next to the Meepo prime, and not at their death location.",
-        "It is not possible to give the clones Tangoes or Observer and Sentry Wards. It is possible to heal them with e.g. Bottle.",
-        "Meepo clones can only have a pair of boots in their inventory, copied from the original Meepo, with the following priorities: Boots of Travel 2 > Boots of Travel 1 > Guardian Greaves > Power Treads > Arcane Boots > Phase Boots > Tranquil Boots > Boots of Speed.",
-        "The clones cannot cast Guardian Greaves, Arcane Boots and Power Treads. Phase Boots can be cast.",
+        "Meepo clones cannot pick up or drop any items. They can pick up and benefit from runes. It is not possible to give the clones Tangoes or Observer and Sentry Wards. It is possible to heal them using items (e.g. Bottle). Meepo clones can only have a pair of boots in their inventory, copied from Meepo prime, with the following priorities: Boots of Travel 2 ➤ Boots of Travel 1 ➤ Guardian Greaves ➤ Power Treads ➤ Arcane Boots ➤ Phase Boots ➤ Tranquil Boots ➤ Boots of Speed. The clones cannot cast the active ability of Guardian Greaves, Arcane Boots and Power Treads. However, Phase Boots can be cast. If the original Meepo switches attributes of Power Treads, the treads of the clones switch as well. When Meepo respawns with Aegis of the Immortal, all clones respawn next to the Meepo prime, and not at their death location.",
+        "It is not possible to give the clones Tangoes or Observer and Sentry Wards. It is possible to heal them using items (e.g. Bottle).",
+        "Meepo clones can only have a pair of boots in their inventory, copied from Meepo prime, with the following priorities: Boots of Travel 2 ➤ Boots of Travel 1 ➤ Guardian Greaves ➤ Power Treads ➤ Arcane Boots ➤ Phase Boots ➤ Tranquil Boots ➤ Boots of Speed.",
+        "The clones cannot cast the active ability of Guardian Greaves, Arcane Boots and Power Treads. However, Phase Boots can be cast.",
         "If the original Meepo switches attributes of Power Treads, the treads of the clones switch as well.",
         "When Meepo respawns with Aegis of the Immortal, all clones respawn next to the Meepo prime, and not at their death location.",
-        "The level 25 talent does not require Divided We Stand to be leveled and will always gives the extra Meepo.",
+        "The level 25 talent automatically grants the extra Meepo clone and does not require Divided We Stand to be leveled.",
         "This ability is not available in Ability Draft."
       ],
       "mana": null,
@@ -207,7 +204,8 @@
       "params": [
         "Number of Meepo Clones: 1\/2\/3 (TagTalent 2\/3\/4)",
         "Clone Experience Gain: 30%",
-        "Grants a new ability: Dig."
+        "Grants a new ability: Dig.",
+        "Do I know you?"
       ],
       "itemBehaviour": [],
       "legacyKey": "D",
@@ -228,7 +226,7 @@
     {
       "talentLvl": "25",
       "talentLeft": "+1 Divided We Stand Clone",
-      "talentRight": "+325 Health"
+      "talentRight": "+375 Health"
     },
     {
       "talentLvl": "20",
@@ -237,12 +235,12 @@
     },
     {
       "talentLvl": "15",
-      "talentLeft": "+35 Poof Damage",
+      "talentLeft": "+50 Poof Damage",
       "talentRight": "15% Evasion"
     },
     {
       "talentLvl": "10",
-      "talentLeft": "+15 Damage",
+      "talentLeft": "+20 Base Damage",
       "talentRight": "+6 Strength"
     }
   ]

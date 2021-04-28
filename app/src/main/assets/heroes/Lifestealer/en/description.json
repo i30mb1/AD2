@@ -15,18 +15,18 @@
         },
         {
           "talentLvl": "20",
-          "talentLeft": "+8% Ghoul Frenzy Slow",
+          "talentLeft": "+10% Ghoul Frenzy Slow",
           "talentRight": "16% Evasion"
         },
         {
           "talentLvl": "15",
-          "talentLeft": "+20 Movement Speed",
+          "talentLeft": "+325 Health",
           "talentRight": "+25 Damage"
         },
         {
           "talentLvl": "10",
-          "talentLeft": "+30 Attack Speed",
-          "talentRight": "+200 Health"
+          "talentLeft": "+20 Movement Speed",
+          "talentRight": "+30 Attack Speed"
         }
       ]
     },
@@ -37,7 +37,7 @@
         "Affects Self"
       ],
       "notes": [
-        "Interrupts Lifestealer's channeling spells upon cast.",
+        "Interrupts Lifestealer's channeling abilities upon cast.",
         "Applies spell immunity for the duration and a basic dispel upon cast.",
         "During Rage, Lifestealer cannot be affected by Ghost Scepter. The buff gets removed immediately."
       ],
@@ -49,7 +49,8 @@
       "params": [
         "Cast Animation: 0+0",
         "Move Speed Bonus: 15%\/16%\/17%\/18%",
-        "Duration: 3\/4\/5\/6 (TagTalent 4.5\/5.5\/6.5\/7.5)"
+        "Duration: 3\/4\/5\/6 (TagTalent 4.5\/5.5\/6.5\/7.5)",
+        "The madness and brutality of N'aix makes him a vicious and unrelenting foe in combat."
       ],
       "itemBehaviour": [],
       "legacyKey": "R",
@@ -73,7 +74,9 @@
       "description": "Lifestealer's attacks heal himself for a percentage of his target's max health.",
       "spellName": "Feast",
       "params": [
-        "Enemy Max Health as Lifesteal: 1.8%\/2.4%\/3%\/3.6% (TagTalent 3%\/3.6%\/4.2%\/4.8%)"
+        "Enemy Max Health as Lifesteal: 1.6%\/2.2%\/2.8%\/3.4% (TagTalent 2.8%\/3.4%\/4%\/4.6%)",
+        "Enemy Max Health as Damage: 0.6%\/0.8%\/1%\/1.2%",
+        "After escaping from his cell in Devarque, N'aix subsisted on flesh and bones of those unfortunate to cross his path."
       ],
       "itemBehaviour": [],
       "legacyKey": "F",
@@ -95,7 +98,7 @@
       "spellName": "Ghoul Frenzy",
       "params": [
         "Attack Speed Bonus: 20\/30\/40\/50",
-        "Move Speed Slow: 10%\/15%\/20%\/25% (TagTalent 18%\/23%\/28%\/33%)",
+        "Move Speed Slow: 10%\/15%\/20%\/25% (TagTalent 20%\/25%\/30%\/35%)",
         "Slow Duration: 1.5",
         "Slow persists if debuff was placed before spell immunity and when not dispelled.",
         "Slow on attack is disabled. Attack speed is not disabled."
@@ -120,7 +123,7 @@
       ],
       "mana": "75",
       "hotKey": "D",
-      "cooldown": "25",
+      "cooldown": "15",
       "description": "Lifestealer rends an enemy unit, slowing the victim's movement speed and allowing all allies to regain health for a percentage of the damage they deal to that unit. All damage dealt will steal life, including damage from spells. The victim recovers movement speed over the duration.",
       "spellName": "Open Wounds",
       "params": [
@@ -128,8 +131,10 @@
         "Cast Range: 800",
         "Lifesteal: 50%",
         "Max Move Speed Slow: 50%",
+        "Enemy Max Health as Damage: 2%",
         "Slow Duration: 8",
-        "Slow persists and heal works if debuff was placed before spell immunity and when not dispelled."
+        "Slow persists and heal works if debuff was placed before spell immunity and when not dispelled.",
+        "Fresh wounds and the scent of blood often draw out the scavengers to finish the job."
       ],
       "itemBehaviour": [],
       "legacyKey": "W",
@@ -144,17 +149,17 @@
       ],
       "notes": [
         "Applies a basic dispel on Lifestealer and disjoints projectiles upon cast.",
-        "Lifestealer is invulnerable and hidden during Infest.",
+        "Lifestealer is invulnerable and hidden during Infest. Lifestealer still gains experience and gold during Infest.",
         "Lifestealer still gains experience and gold during Infest.",
-        "During Infest, all three spells of Lifestealer are hidden, while Infest is replaced by Consume.",
-        "During Infest, Lifestealer is periodically moved to the host's current position. This affects multiple things such as: When Infest ends in any way, Lifestealer appears at the host's location. Every aura Lifestealer has (including Gem of True Sight and Radiance) affects units around the host. Effects which react on heroes' presence, such as Smoke of Deceit, Marksmanship or Blur, react on the host's presence. Relocate forces Lifestealer out of the infested unit, dealing area damage. Divine Favor and Recall get dispelled as soon as Lifestealer casts Infest.",
+        "Consume replaces Infest for its duration, and all of Lifestealer's abilities are hidden.",
+        "During Infest, Lifestealer is periodically moved to the host's current position. This affects multiple things such as: When Infest ends in any way, Lifestealer appears at the host's location. Every aura Lifestealer has (e.g. Gem of True Sight and Radiance) affects units around the host. Effects which react on heroes' presence, such as Smoke of Deceit, Marksmanship or Blur, react on the host's presence. Relocate forces Lifestealer out of the infested unit, dealing area damage. Divine Favor and Recall get dispelled as soon as Lifestealer casts Infest.",
         "When Infest ends in any way, Lifestealer appears at the host's location.",
-        "Every aura Lifestealer has (including Gem of True Sight and Radiance) affects units around the host.",
+        "Every aura Lifestealer has (e.g. Gem of True Sight and Radiance) affects units around the host.",
         "Effects which react on heroes' presence, such as Smoke of Deceit, Marksmanship or Blur, react on the host's presence.",
         "Relocate forces Lifestealer out of the infested unit, dealing area damage.",
         "Divine Favor and Recall get dispelled as soon as Lifestealer casts Infest.",
-        "Can regenerate up to 180%\/240%\/300% (TagTalent 360%\/480%\/600%) of the Lifestealer's max health in one minute.",
-        "Can fully regenerate the Lifestealer's health within 33.33\/25\/20 (TagTalent 16.67\/12.5\/10) seconds.",
+        "Can fully regenerate Lifestealer's health within 33.33\/25\/20 (16.67\/12.5\/10) seconds. Can regenerate up to 180%\/240%\/300% (360%\/480%\/600%) of Lifestealer's max health in one minute.",
+        "Can regenerate up to 180%\/240%\/300% (360%\/480%\/600%) of Lifestealer's max health in one minute.",
         "The infested unit gets its maximum and current health increased by the given value. The current health increase does not count as a heal and bypasses everything.",
         "The current health increase does not count as a heal and bypasses everything.",
         "The infested unit also gets its movement speed increased by the given value. If the target is not a hero or creep-hero, its base movement speed also gets set equal to Lifestealer's current movement speed.",
@@ -162,32 +167,33 @@
         "If the target is not a hero or a creep-hero, Lifestealer automatically takes control over it, turning it into his unit. If the target was an enemy, it retains its health bar colors, making it harder for enemies to tell that it got taken over.",
         "If the target was an enemy, it retains its health bar colors, making it harder for enemies to tell that it got taken over.",
         "Can be cast on, but cannot take control over allied heroes and allied creep-heroes.",
-        "When on level 2 or higher, can be cast on and take control over ancient creeps.",
-        "Cannot be cast on Roshan, couriers, wards, buildings, enemy heroes and enemy creep-heroes.",
-        "The infested unit receives the Infest Effect modifier, which creates the visual effect above it, visible to allies only.",
+        "Can be cast on and take control over ancient creeps on level 2 or above. Cannot be cast on Roshan, Couriers, wards, buildings, enemy heroes and enemy creep-heroes.",
+        "Cannot be cast on Roshan, Couriers, wards, buildings, enemy heroes and enemy creep-heroes.",
+        "The infested unit receives a hidden modifier, which creates the visual effect above it, visible to allies only.",
         "Infest's cooldown starts upon leaving the infested unit, not upon cast.",
-        "With Aghanim's Scepter, Infest can be cast on enemy heroes and creep-heroes. Does not increase health or movement speed of such targets. Although having a limited duration on these targets, Lifestealer still may use Consume to leave the host earlier. Causes Lifestealer to perform instant attacks on such targets every 1.25 seconds, starting 1.25 after cast, resulting in up to 3 attacks. These attacks do not have True Strike, but ignore disarms. Can trigger any attack modifier and on-hit effects normally.",
+        "With Aghanim's Scepter, Infest can be cast on enemy heroes and creep-heroes. Does not increase health or movement speed of such targets. Although having a limited duration on these targets, Lifestealer still may use Consume to leave the host earlier. Causes Lifestealer to perform instant attacks on an Infested enemy target in 1.25-second intervals, starting 1.25 after cast, resulting in up to 4 attacks. These instant attacks can proc any attack modifiers and on-hit effects normally. They do not have True Strike, but completely ignore disarms. Can regenerate up to 30%\/40%\/50% of Lifestealer's max health for its duration Infested in an enemy target.",
         "Does not increase health or movement speed of such targets.",
         "Although having a limited duration on these targets, Lifestealer still may use Consume to leave the host earlier.",
-        "Causes Lifestealer to perform instant attacks on such targets every 1.25 seconds, starting 1.25 after cast, resulting in up to 3 attacks.",
-        "These attacks do not have True Strike, but ignore disarms.",
-        "Can trigger any attack modifier and on-hit effects normally."
+        "Causes Lifestealer to perform instant attacks on an Infested enemy target in 1.25-second intervals, starting 1.25 after cast, resulting in up to 4 attacks.",
+        "These instant attacks can proc any attack modifiers and on-hit effects normally. They do not have True Strike, but completely ignore disarms.",
+        "Can regenerate up to 30%\/40%\/50% of Lifestealer's max health for its duration Infested in an enemy target."
       ],
       "mana": "100\/150\/200",
       "hotKey": "R",
-      "cooldown": "100\/75\/50 (TagTalent 25)",
+      "cooldown": "100\/75\/50 (TagTalent 20)",
       "description": "Lifestealer infests the body of a target unit, becoming undetectable, and healing for a portion of his max hitpoints every second while inside. He can then explode from the host body, dealing damage to nearby enemies. If the infested unit is an enemy creep or a neutral creep, he can take control of the unit's ability to move and attack. Does not work on enemy heroes.",
       "spellName": "Infest",
       "params": [
         "Cast Animation: 0.2+0",
-        "Cast Range: 150 (TagAghanim 500)",
+        "Cast Range: 150 (TagTalent 500)",
         "Target Max Health Bonus: 400\/800\/1200",
         "Target Move Speed Bonus: 15%\/20%\/25%",
-        "Self Max Health as Health Regen Bonus: 3%\/4%\/5% (TagAghanim 6%\/8%\/10%)",
+        "Self Max Health as Health Regen Bonus: 3%\/4%\/5% (TagTalent 6%\/8%\/10%)",
         "Enemy Hero Attack Interval: 1.25",
-        "Enemy Hero Duration: 4",
-        "Allows Infesting enemy heroes for 4 seconds, attacking their inside once every 1.25 seconds and doubling Lifestealer's regen rate. Increases cast range to 500 and reduces cooldown to 25 seconds.",
-        "Grants a new ability: Open Wounds."
+        "Enemy Hero Duration: 5",
+        "Allows Infesting enemy heroes for 5 seconds, attacking their inside once every 1.25 seconds and doubling Lifestealer's regen rate. Increases cast range to 500 and reduces cooldown to 20 seconds.",
+        "Grants a new ability: Open Wounds.",
+        "With this infestation, N'aix consumes the life blood of the host, restoring him back to full unholy power."
       ],
       "itemBehaviour": [],
       "legacyKey": "T",
@@ -201,12 +207,12 @@
         "Damage Magical \/ Instant Kill"
       ],
       "notes": [
-        "Appears when Infest is cast and stays until Lifestealer gets out of the host. If the infested target is a non-hero unit, and Lifestealer takes control over it, it also appears in the infested unit's UI, in the next available ability slot.",
-        "If the infested target is a non-hero unit, and Lifestealer takes control over it, it also appears in the infested unit's UI, in the next available ability slot.",
+        "Replaces Infest until the sub-ability is used, until the duration ends or until Lifestealer gets out of the host. If the infested target is a non-hero unit, and Lifestealer takes control over it, it also appears in the infested unit's HUD, in the next available ability slot.",
+        "If the infested target is a non-hero unit, and Lifestealer takes control over it, it also appears in the infested unit's HUD, in the next available ability slot.",
         "If the infested unit dies before Lifestealer consumes it, the area damage is still applied.",
         "Does not kill or harm an infested allied heroes or creep-heroes.",
         "The damage is applied instantly in the area, it does not have a travel time.",
-        "If the infested target gets taken over, Consume's hotkey may vary based on what unit got taken over."
+        "If the infested target gets taken over, Consume's Hotkey may vary based on what unit got taken over."
       ],
       "mana": null,
       "hotKey": null,
@@ -241,18 +247,18 @@
     },
     {
       "talentLvl": "20",
-      "talentLeft": "+8% Ghoul Frenzy Slow",
+      "talentLeft": "+10% Ghoul Frenzy Slow",
       "talentRight": "16% Evasion"
     },
     {
       "talentLvl": "15",
-      "talentLeft": "+20 Movement Speed",
+      "talentLeft": "+325 Health",
       "talentRight": "+25 Damage"
     },
     {
       "talentLvl": "10",
-      "talentLeft": "+30 Attack Speed",
-      "talentRight": "+200 Health"
+      "talentLeft": "+20 Movement Speed",
+      "talentRight": "+30 Attack Speed"
     }
   ]
 }

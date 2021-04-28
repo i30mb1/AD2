@@ -20,13 +20,13 @@
         },
         {
           "talentLvl": "15",
-          "talentLeft": "+15 Attack Speed",
+          "talentLeft": "+20 Attack Speed",
           "talentRight": "+200 Health"
         },
         {
           "talentLvl": "10",
-          "talentLeft": "+2.5 Mana Regen",
-          "talentRight": "+15 Movement Speed"
+          "talentLeft": "+2 Mana Regen",
+          "talentRight": "+20 Movement Speed"
         }
       ]
     },
@@ -40,13 +40,14 @@
         "The goo travels at a speed of 1000.",
         "Places one debuff on the enemy. This debuff gets stronger when it gets refreshed with successive casts. A number on the icon shows how many times the debuff was refreshed, including the first cast.",
         "A number on the icon shows how many times the debuff was refreshed, including the first cast.",
-        "This is how much armor and movement speed Viscous Nasal Goo reduces with certain amount of stacks on each level: Level 1: 3.4 \/ 4.8 \/ 6.2 \/ 7.6 (TagTalent 9 \/ 10.4 \/ 11.8 \/ 13.2) armor and 23% \/ 26% \/ 29% \/ 32% (TagTalent 35% \/ 38% \/ 41% \/ 44%) movement speed. Level 2: 3.9 \/ 5.8 \/ 7.7 \/ 9.6 (TagTalent 11.5 \/ 13.4 \/ 15.3 \/ 17.2) armor and 26% \/ 32% \/ 38% \/ 44% (TagTalent 50% \/ 56% \/ 62% \/ 68%) movement speed. Level 3: 4.4 \/ 6.8 \/ 9.2 \/ 11.6 (TagTalent 14 \/ 16.4 \/ 18.8 \/ 21.2) armor and 29% \/ 38% \/ 47% \/ 56% (TagTalent 65% \/ 74% \/ 83% \/ 92%) movement speed. Level 4: 4.9 \/ 7.8 \/ 10.7 \/ 13.6 (TagTalent 16.5 \/ 19.4 \/ 22.3 \/ 25.2) armor and 32% \/ 44% \/ 56% \/ 68% (TagTalent 80% \/ 92% \/ 104% \/ 116%) movement speed.",
-        "Level 1: 3.4 \/ 4.8 \/ 6.2 \/ 7.6 (TagTalent 9 \/ 10.4 \/ 11.8 \/ 13.2) armor and 23% \/ 26% \/ 29% \/ 32% (TagTalent 35% \/ 38% \/ 41% \/ 44%) movement speed.",
-        "Level 2: 3.9 \/ 5.8 \/ 7.7 \/ 9.6 (TagTalent 11.5 \/ 13.4 \/ 15.3 \/ 17.2) armor and 26% \/ 32% \/ 38% \/ 44% (TagTalent 50% \/ 56% \/ 62% \/ 68%) movement speed.",
-        "Level 3: 4.4 \/ 6.8 \/ 9.2 \/ 11.6 (TagTalent 14 \/ 16.4 \/ 18.8 \/ 21.2) armor and 29% \/ 38% \/ 47% \/ 56% (TagTalent 65% \/ 74% \/ 83% \/ 92%) movement speed.",
-        "Level 4: 4.9 \/ 7.8 \/ 10.7 \/ 13.6 (TagTalent 16.5 \/ 19.4 \/ 22.3 \/ 25.2) armor and 32% \/ 44% \/ 56% \/ 68% (TagTalent 80% \/ 92% \/ 104% \/ 116%) movement speed.",
+        "This is how much armor and movement speed Viscous Nasal Goo reduces with certain amount of stacks on each level: Level 1: 3.5\/5\/6.5\/8\/9.5\/11\/12.5\/14 armor and 23%\/26%\/29%\/32%\/35%\/38%\/41%\/44% movement speed. Level 2: 4\/6\/8\/10\/12\/14\/16\/18 armor and 26%\/32%\/38%\/44%\/50%\/56%\/62%\/68% movement speed. Level 3: 4.5\/7\/9.5\/12\/14.5\/17\/19.5\/22 armor and 29%\/38%\/47%\/56%\/65%\/74%\/83%\/92% movement speed. Level 4: 5\/8\/11\/14\/17\/20\/23\/26 armor and 32%\/44%\/56%\/68%\/80%\/92%\/104%\/116% movement speed.",
+        "Level 1: 3.5\/5\/6.5\/8\/9.5\/11\/12.5\/14 armor and 23%\/26%\/29%\/32%\/35%\/38%\/41%\/44% movement speed.",
+        "Level 2: 4\/6\/8\/10\/12\/14\/16\/18 armor and 26%\/32%\/38%\/44%\/50%\/56%\/62%\/68% movement speed.",
+        "Level 3: 4.5\/7\/9.5\/12\/14.5\/17\/19.5\/22 armor and 29%\/38%\/47%\/56%\/65%\/74%\/83%\/92% movement speed.",
+        "Level 4: 5\/8\/11\/14\/17\/20\/23\/26 armor and 32%\/44%\/56%\/68%\/80%\/92%\/104%\/116% movement speed.",
+        "",
         "Treats creep-heroes as heroes.",
-        "Aghanim's Scepter upgrade still uses the same cast time and disjointable projectiles. Does not target invisible, invulnerable and hidden units, or units inside the Fog of War within the radius.",
+        "With Aghanim's Scepter, Viscous Nasal Goo still uses the same cast time and disjointable projectiles, but different cast animation. Does not target invisible, invulnerable and hidden units, or units inside the Fog of War within the radius.",
         "Does not target invisible, invulnerable and hidden units, or units inside the Fog of War within the radius."
       ],
       "mana": "12\/16\/20\/24",
@@ -55,11 +56,11 @@
       "description": "Covers a target in snot, causing it to have reduced armor and movement speed. Multiple casts stack and refresh the duration.",
       "spellName": "Viscous Nasal Goo",
       "params": [
-        "Cast Animation: 0.3+0",
-        "Cast Range: 600 (TagAghanim 0)",
-        "Max Stacks: 4 (TagAghanim 8)",
+        "Cast Animation: 0.3+0 (TagTalent 0+0)",
+        "Cast Range: 600 (TagTalent 0)",
+        "Max Stacks: 4 (TagTalent 8)",
         "Base Armor Reduction: 2",
-        "Armor Reduction per Stack: 1.4\/1.9\/2.4\/2.9",
+        "Armor Reduction per Stack: 1.5\/2\/2.5\/3",
         "Base Move Speed Slow: 20%",
         "Move Speed Slow per Stack: 3%\/6%\/9%\/12%",
         "Hero Duration: 5",
@@ -68,7 +69,8 @@
         "Viscous Nasal Goo becomes a no target area of effect ability, applying to all enemies within range. Increases stack limit to 8.",
         "Grants a new ability: Hairball.",
         "Slow and armor reduction persist if debuff was placed before spell immunity and when not dispelled.",
-        "Blocked upon impact. Not blocked when upgraded."
+        "Blocked upon impact, not blocked when upgraded.",
+        "Having caught a cold while stuck in the snow, Bristleback turns it to his advantage."
       ],
       "itemBehaviour": [],
       "legacyKey": "G",
@@ -82,21 +84,21 @@
         "Damage Physical"
       ],
       "notes": [
-        "Interrupts Bristleback's channeling spells upon cast.",
+        "Interrupts Bristleback's channeling abilities upon cast.",
         "The quills spread at a speed of 2400 and take 0.29 seconds to reach maximum range.",
         "The quills do not form a ring. They affect every enemy within the expanding area of effect, so it cannot be avoided by blinking towards Bristleback.",
         "The effect is centered at the cast location, it does not follow Bristleback.",
-        "Places one debuff on each hit enemy and a stack debuff on each cast on each hit enemy. The first debuff shows the number of stack debuffs on the status icon. The stack debuffs are hidden. The stacks' durations are independent from each other. Successive casts do not refresh previous stacks' durations. With the current cooldown and stack duration, it can be stacked up to 5 times. To reach the cap, additional procs from Bristleback are required. The cap is reached with 19\/17\/16\/15 (TagTalent 12\/11\/11\/10) stacks. So to reach it, 14\/12\/11\/10 (TagTalent 7\/6\/6\/5) passive casts are required (not considering cooldown reductions).",
+        "Places one debuff on each hit enemy and a stack debuff on each cast on each hit enemy. The first debuff shows the number of stack debuffs on the status icon. The stack debuffs are hidden. The stacks' durations are independent from each other. Successive casts do not refresh previous stacks' durations. With the current cooldown and stack duration, it can be stacked up to 5 times. To reach the cap, additional procs from Bristleback are required. The cap is reached with 20\/18\/17\/15 (TagTalent 12\/12\/11\/10) stacks. So to reach it, 15\/13\/12\/10 (TagTalent 7\/7\/6\/5) passive casts are required (not considering cooldown reductions).",
         "The first debuff shows the number of stack debuffs on the status icon. The stack debuffs are hidden.",
         "The stacks' durations are independent from each other. Successive casts do not refresh previous stacks' durations.",
         "With the current cooldown and stack duration, it can be stacked up to 5 times. To reach the cap, additional procs from Bristleback are required.",
-        "The cap is reached with 19\/17\/16\/15 (TagTalent 12\/11\/11\/10) stacks. So to reach it, 14\/12\/11\/10 (TagTalent 7\/6\/6\/5) passive casts are required (not considering cooldown reductions).",
+        "The cap is reached with 20\/18\/17\/15 (TagTalent 12\/12\/11\/10) stacks. So to reach it, 15\/13\/12\/10 (TagTalent 7\/7\/6\/5) passive casts are required (not considering cooldown reductions).",
         "Checks how many stacks units have first and deals damage based on that, and then increases the number of stacks. This means the first hit only deals the base damage.",
-        "This is how much damage Quill Spray deals with a certain amount of stacks on each level (before reductions): Level 1: 20 \/ 50 \/ 80 \/ 110 \/ 140 \/ 170 \/ 200 \/ 230 \/ 260 \/ 290 \/ 320 \/ 350 \/ 380 \/ 410 \/ 440 \/ 470 \/ 500 \/ 530 \/ 550 (TagTalent 20 \/ 70 \/ 120 \/ 170 \/ 220 \/ 270 \/ 320 \/ 370 \/ 420 \/ 470 \/ 520 \/ 550) Level 2: 40 \/ 72 \/ 104 \/ 136 \/ 168 \/ 200 \/ 232 \/ 264 \/ 296 \/ 328 \/ 360 \/ 392 \/ 424 \/ 456 \/ 488 \/ 520 \/ 550 (TagTalent 40 \/ 92 \/ 144 \/ 196 \/ 248 \/ 300 \/ 352 \/ 404 \/ 456 \/ 508 \/ 550) Level 3: 60 \/ 94 \/ 128 \/ 162 \/ 196 \/ 230 \/ 264 \/ 298 \/ 332 \/ 366 \/ 400 \/ 434 \/ 468 \/ 502 \/ 536 \/ 550 (TagTalent 60 \/ 114 \/ 168 \/ 222 \/ 276 \/ 330 \/ 384 \/ 438 \/ 492 \/ 546 \/ 550) Level 4: 80 \/ 116 \/ 152 \/ 188 \/ 224 \/ 260 \/ 296 \/ 332 \/ 368 \/ 404 \/ 440 \/ 476 \/ 512 \/ 548 \/ 550 (TagTalent 80 \/ 136 \/ 192 \/ 248 \/ 304 \/ 360 \/ 416 \/ 472 \/ 528 \/ 550)",
-        "Level 1: 20 \/ 50 \/ 80 \/ 110 \/ 140 \/ 170 \/ 200 \/ 230 \/ 260 \/ 290 \/ 320 \/ 350 \/ 380 \/ 410 \/ 440 \/ 470 \/ 500 \/ 530 \/ 550 (TagTalent 20 \/ 70 \/ 120 \/ 170 \/ 220 \/ 270 \/ 320 \/ 370 \/ 420 \/ 470 \/ 520 \/ 550)",
-        "Level 2: 40 \/ 72 \/ 104 \/ 136 \/ 168 \/ 200 \/ 232 \/ 264 \/ 296 \/ 328 \/ 360 \/ 392 \/ 424 \/ 456 \/ 488 \/ 520 \/ 550 (TagTalent 40 \/ 92 \/ 144 \/ 196 \/ 248 \/ 300 \/ 352 \/ 404 \/ 456 \/ 508 \/ 550)",
-        "Level 3: 60 \/ 94 \/ 128 \/ 162 \/ 196 \/ 230 \/ 264 \/ 298 \/ 332 \/ 366 \/ 400 \/ 434 \/ 468 \/ 502 \/ 536 \/ 550 (TagTalent 60 \/ 114 \/ 168 \/ 222 \/ 276 \/ 330 \/ 384 \/ 438 \/ 492 \/ 546 \/ 550)",
-        "Level 4: 80 \/ 116 \/ 152 \/ 188 \/ 224 \/ 260 \/ 296 \/ 332 \/ 368 \/ 404 \/ 440 \/ 476 \/ 512 \/ 548 \/ 550 (TagTalent 80 \/ 136 \/ 192 \/ 248 \/ 304 \/ 360 \/ 416 \/ 472 \/ 528 \/ 550)"
+        "This is how much damage Quill Spray deals with a certain amount of stacks on each level (before reductions): Level 1: 25 \/ 53 \/ 81 \/ 109 \/ 137 \/ 165 \/ 193 \/ 221 \/ 249 \/ 277 \/ 305 \/ 333 \/ 361 \/ 389 \/ 417 \/ 445 \/ 473 \/ 501 \/ 529 \/ 550 (TagTalent 25 \/ 73 \/ 121 \/ 169 \/ 217 \/ 265 \/ 313 \/ 361 \/ 409 \/ 457 \/ 505 \/ 550) Level 2: 45 \/ 75 \/ 105 \/ 135 \/ 165 \/ 195 \/ 225 \/ 255 \/ 285 \/ 315 \/ 345 \/ 375 \/ 405 \/ 435 \/ 465 \/ 495 \/ 525 \/ 550 (TagTalent 45 \/ 95 \/ 145 \/ 195 \/ 245 \/ 295 \/ 345 \/ 395 \/ 445 \/ 495 \/ 545 \/ 550) Level 3: 65 \/ 97 \/ 129 \/ 161 \/ 193 \/ 225 \/ 257 \/ 289 \/ 321 \/ 353 \/ 385 \/ 417 \/ 449 \/ 481 \/ 513 \/ 545 \/ 550 (TagTalent 65 \/ 117 \/ 169 \/ 221 \/ 273 \/ 325 \/ 377 \/ 429 \/ 481 \/ 533 \/ 550) Level 4: 85 \/ 119 \/ 153 \/ 187 \/ 221 \/ 255 \/ 289 \/ 323 \/ 357 \/ 391 \/ 425 \/ 459 \/ 493 \/ 527 \/ 550 (TagTalent 85 \/ 139 \/ 193 \/ 247 \/ 301 \/ 355 \/ 409 \/ 463 \/ 517 \/ 550)",
+        "Level 1: 25 \/ 53 \/ 81 \/ 109 \/ 137 \/ 165 \/ 193 \/ 221 \/ 249 \/ 277 \/ 305 \/ 333 \/ 361 \/ 389 \/ 417 \/ 445 \/ 473 \/ 501 \/ 529 \/ 550 (TagTalent 25 \/ 73 \/ 121 \/ 169 \/ 217 \/ 265 \/ 313 \/ 361 \/ 409 \/ 457 \/ 505 \/ 550)",
+        "Level 2: 45 \/ 75 \/ 105 \/ 135 \/ 165 \/ 195 \/ 225 \/ 255 \/ 285 \/ 315 \/ 345 \/ 375 \/ 405 \/ 435 \/ 465 \/ 495 \/ 525 \/ 550 (TagTalent 45 \/ 95 \/ 145 \/ 195 \/ 245 \/ 295 \/ 345 \/ 395 \/ 445 \/ 495 \/ 545 \/ 550)",
+        "Level 3: 65 \/ 97 \/ 129 \/ 161 \/ 193 \/ 225 \/ 257 \/ 289 \/ 321 \/ 353 \/ 385 \/ 417 \/ 449 \/ 481 \/ 513 \/ 545 \/ 550 (TagTalent 65 \/ 117 \/ 169 \/ 221 \/ 273 \/ 325 \/ 377 \/ 429 \/ 481 \/ 533 \/ 550)",
+        "Level 4: 85 \/ 119 \/ 153 \/ 187 \/ 221 \/ 255 \/ 289 \/ 323 \/ 357 \/ 391 \/ 425 \/ 459 \/ 493 \/ 527 \/ 550 (TagTalent 85 \/ 139 \/ 193 \/ 247 \/ 301 \/ 355 \/ 409 \/ 463 \/ 517 \/ 550)"
       ],
       "mana": "35",
       "hotKey": "W",
@@ -106,11 +108,12 @@
       "params": [
         "Cast Animation: 0+0",
         "Radius: 700",
-        "Base Damage: 20\/40\/60\/80",
-        "Stack Damage: 30\/32\/34\/36 (TagTalent 50\/52\/54\/56)",
+        "Base Damage: 25\/45\/65\/85",
+        "Stack Damage: 28\/30\/32\/34 (TagTalent 48\/50\/52\/54)",
         "Damage Cap: 550",
         "Stack Duration: 14",
-        "Grants a new ability: Hairball."
+        "Grants a new ability: Hairball.",
+        "An enforcer's honor can be a prickly thing. So can his quills."
       ],
       "itemBehaviour": [],
       "legacyKey": "R",
@@ -123,19 +126,20 @@
         "Affects Self"
       ],
       "notes": [
-        "A visual effect and sound play whenever his back receives damage if Bristleback has learned Quill Sprays. Taking damage from the sides shows no effect.",
-        "Bristleback takes less damage from all damage types except from damage flagged as HP Removal. When taking rear damage, Bristleback's effective health increases by 19%\/32%\/47%\/67%. When taking side damage, Bristleback's effective health increases by 9%\/14%\/19%\/25%.",
-        "When taking rear damage, Bristleback's effective health increases by 19%\/32%\/47%\/67%.",
-        "When taking side damage, Bristleback's effective health increases by 9%\/14%\/19%\/25%.",
+        "A visual effect and sound plays whenever his back receives damage if Bristleback has learned Quill Spray. Taking damage from the sides shows no effect.",
+        "Taking damage from the sides shows no effect.",
+        "Bristleback takes less damage from all damage types except from damage flagged as HP Removal. When taking rear damage, his effective health increases by 19%\/32%\/47%\/67%. When taking side damage, his effective health increases by 9%\/14%\/19%\/25%.",
+        "When taking rear damage, his effective health increases by 19%\/32%\/47%\/67%.",
+        "When taking side damage, his effective health increases by 9%\/14%\/19%\/25%.",
         "Checks the damage source's current position and compares it to Bristleback's facing angle on each damage instance. This means on e.g. damage over time effects, damage of an instance is only reduced when within the right angle. Damage from e.g. Death Ward, Proximity Mines is reduced when facing away from them, since they are their own source.",
         "This means on e.g. damage over time effects, damage of an instance is only reduced when within the right angle.",
         "Damage from e.g. Death Ward, Proximity Mines is reduced when facing away from them, since they are their own source.",
-        "Passive Quill Sprays proc when Bristleback's back (not sides) collectively takes 210 damage (after all reductions). The damage counter has no time limit. It only resets once a passive spray occurs. Any exceeding damage is completely ignored, meaning that if an enemy deals an instance of e.g. 420 damage, the passive triggers only once. Does not count damage which has the HP removal or the no-reflection flag. Passive quills do not proc when Quill Spray is not learnt. Passive Quill Spray procs do not cost mana, have no cooldown and are independent from the active Quill Spray's cooldown. In Ability Draft, Quill Spray must be drafted as well for them to passively proc.",
+        "Passive Quill Sprays proc when Bristleback's back (not sides) collectively takes 210 damage (after all reductions). The damage counter has no time limit. It only resets once a passive spray occurs. Any exceeding damage is completely ignored, meaning that if an enemy deals an instance of e.g. 420 damage, the passive triggers only once. Does not count damage which has the HP removal or the no-reflection flag. Passive quills do not proc when Quill Spray is not learnt. Passive Quill Spray procs do not cost mana, have no cooldown, are independent from the active ability's cooldown, and do not trigger Warpath. In Ability Draft, Quill Spray must be drafted as well for them to passively proc.",
         "The damage counter has no time limit. It only resets once a passive spray occurs.",
         "Any exceeding damage is completely ignored, meaning that if an enemy deals an instance of e.g. 420 damage, the passive triggers only once.",
         "Does not count damage which has the HP removal or the no-reflection flag.",
         "Passive quills do not proc when Quill Spray is not learnt.",
-        "Passive Quill Spray procs do not cost mana, have no cooldown and are independent from the active Quill Spray's cooldown.",
+        "Passive Quill Spray procs do not cost mana, have no cooldown, are independent from the active ability's cooldown, and do not trigger Warpath.",
         "In Ability Draft, Quill Spray must be drafted as well for them to passively proc."
       ],
       "mana": null,
@@ -149,7 +153,8 @@
         "Rear Damage Reduction: 16%\/24%\/32%\/40%",
         "Side Damage Reduction: 8%\/12%\/16%\/20%",
         "Damage Threshold: 210",
-        "Illusions gain the damage reduction, but not the passive Quill Spray procs."
+        "Illusions gain the damage reduction, but not the passive Quill Spray procs.",
+        "Turning his back to a fight might be just the thing."
       ],
       "itemBehaviour": [],
       "legacyKey": "K",
@@ -163,15 +168,16 @@
         "Damage Physical"
       ],
       "notes": [
-        "Requires Aghanim's Shard to be unlocked.",
+        "Requires Aghanim's Shard to be unlocked. This ability is not available in Ability Draft, due to its reliance on multiple non-ultimate abilities, which are limited to one ability slot.",
+        "This ability is not available in Ability Draft, due to its reliance on multiple non-ultimate abilities, which are limited to one ability slot.",
         "The hairball travels at a speed of 1200.",
-        "The Viscous Nasal Goo and Quill Sprays are based on the current level respectively. If neither are leveled, the ball does nothing upon reaching the targeted area. Checks for their level upon projectile impact.",
+        "The Viscous Nasal Goo and Quill Spray released are based on the current level respectively. If neither are leveled, the ball does nothing upon reaching the targeted area. Checks for their level upon projectile impact.",
         "If neither are leveled, the ball does nothing upon reaching the targeted area.",
         "Checks for their level upon projectile impact.",
         "Once the hairball reaches the center of the area, every enemy within the radius gets targeted by Viscsous Nasal Goo. At the same time, a Quill Spray is released. The second Quill Spray is released 2 seconds later. The goo and spray work identical to regular casts.",
         "At the same time, a Quill Spray is released. The second Quill Spray is released 2 seconds later.",
         "The goo and spray work identical to regular casts.",
-        "Since Quill Spray travels faster than Viscous Nasal Goo, the quills always hit enemies before the goo does, so the quills do not benifit from the armor reduction."
+        "Since Quill Spray travels faster than Viscous Nasal Goo, the quills always hit enemies before the goo does, so the quills do not benefit from the armor reduction."
       ],
       "mana": "100",
       "hotKey": "D",
@@ -202,7 +208,7 @@
       "notes": [
         "Using items does not trigger Warpath.",
         "Bristleback's size increases and more particles fly around him the more stacks he has.",
-        "Stacks up to 5\/7\/9 times, meaning it can give at most 110\/196\/306 (TagTalent 230\/364\/522) attack damage and 15%\/28%\/45% movement speed.",
+        "Stacks up to 5\/7\/9 times, meaning it can give at most 125\/210\/315 (TagTalent 245\/378\/531) attack damage and 15%\/28%\/45% movement speed.",
         "Each stack has its own duration, successive spell casts do not refresh the duration of previous stacks. Only the first cast's buff is visible in the HUD. This buff has a number on it, showing the current amount of stacks.",
         "Only the first cast's buff is visible in the HUD. This buff has a number on it, showing the current amount of stacks.",
         "The passive Quill Spray procs from Bristleback do not trigger Warpath."
@@ -214,11 +220,12 @@
       "spellName": "Warpath",
       "params": [
         "Max Stacks: 5\/7\/9",
-        "Attack Damage Bonus per Stack: 22\/28\/34 (TagTalent 46\/52\/58)",
+        "Attack Damage Bonus per Stack: 25\/30\/35 (TagTalent 49\/54\/59)",
         "Move Speed Bonus per Stack: 3%\/4%\/5%",
         "Stack Duration: 14",
         "Prevents gaining new stacks. Already existing stacks still provide bonus movement speed and attack damage.",
-        "Whenever Bristleback gains a stack, all his illusions gain one as well. Illusions do not benefit from the raw damage bonuses."
+        "Whenever Bristleback gains a stack, all his illusions gain one as well. Illusions do not benefit from the raw damage bonuses.",
+        "'Temper, temper,' his mum always chided. But in a fight, a temper can come in handy."
       ],
       "itemBehaviour": [],
       "legacyKey": "W",
@@ -248,13 +255,13 @@
     },
     {
       "talentLvl": "15",
-      "talentLeft": "+15 Attack Speed",
+      "talentLeft": "+20 Attack Speed",
       "talentRight": "+200 Health"
     },
     {
       "talentLvl": "10",
-      "talentLeft": "+2.5 Mana Regen",
-      "talentRight": "+15 Movement Speed"
+      "talentLeft": "+2 Mana Regen",
+      "talentRight": "+20 Movement Speed"
     }
   ]
 }

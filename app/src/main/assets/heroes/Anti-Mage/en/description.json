@@ -14,13 +14,13 @@
         },
         {
           "talentLvl": "20",
-          "talentLeft": "-2s Blink Cooldown",
+          "talentLeft": "+1s Mana Void Stun",
           "talentRight": "+0.1 Mana Void Damage Multiplier"
         },
         {
           "talentLvl": "15",
           "talentLeft": "+8 Armor",
-          "talentRight": "+300 Blink Cast Range"
+          "talentRight": "+0.6% Max Mana Mana Burn"
         },
         {
           "talentLvl": "10",
@@ -37,12 +37,12 @@
         "Damage Physical"
       ],
       "notes": [
-        "Deals 14\/20\/26\/32 extra damage + 0.5%\/0.9%\/1.3%\/1.7% of the target's max mana as damage (before reductions). The bonus damage is dealt in one instance together with the attack damage, and counts as attack damage as well. It can be lifestealed off of and cleave, but it is not considered by crit. It is also not affected by percentage-based attack damage bonuses or reductions, but can be reduced with flat reductions.",
+        "Deals 14\/20\/26\/32 extra damage + 0.5%\/0.9%\/1.3%\/1.7% (TagTalent 0.8%\/1.2%\/1.6%\/2%) of the target's max mana as damage (before reductions). The bonus damage is dealt in one instance together with the attack damage, and counts as attack damage as well. It can be lifestealed off of and cleave, but it is not considered by crit. It is also not affected by percentage-based attack damage bonuses or reductions, but can be reduced with flat reductions.",
         "The bonus damage is dealt in one instance together with the attack damage, and counts as attack damage as well.",
         "It can be lifestealed off of and cleave, but it is not considered by crit.",
         "It is also not affected by percentage-based attack damage bonuses or reductions, but can be reduced with flat reductions.",
-        "Illusions burn a reduced amount of 14\/20\/26\/32 mana + 0.5%\/0.9%\/1.3%\/1.7% max mana per hit. Illusions also deal a reduced amount of bonus damage; 7\/10\/13\/16 extra damage + 0.25%\/0.45%\/0.65%\/0.85% of the target's max mana as damage (before reductions)",
-        "Illusions also deal a reduced amount of bonus damage; 7\/10\/13\/16 extra damage + 0.25%\/0.45%\/0.65%\/0.85% of the target's max mana as damage (before reductions)",
+        "Illusions burn a reduced amount of 14\/20\/26\/32 mana + 0.5%\/0.9%\/1.3%\/1.7% max mana per hit. Illusions also deal a reduced amount of bonus damage; 7\/10\/13\/16 extra damage + 0.25%\/0.45%\/0.65%\/0.85% (TagTalent 0.4%\/0.6%\/0.8%\/1%) of the target's max mana as damage (before reductions)",
+        "Illusions also deal a reduced amount of bonus damage; 7\/10\/13\/16 extra damage + 0.25%\/0.45%\/0.65%\/0.85% (TagTalent 0.4%\/0.6%\/0.8%\/1%) of the target's max mana as damage (before reductions)",
         "Applies the mana loss first, and then the damage.",
         "Does not work against allied units when attacking them.",
         "Does not stack with Diffusal Blade's Manabreak."
@@ -54,10 +54,11 @@
       "spellName": "Mana Break",
       "params": [
         "Mana Burned per Hit: 28\/40\/52\/64",
-        "Max Mana Burned per Hit: 1%\/1.8%\/2.6%\/3.4%",
+        "Max Mana Burned per Hit: 1%\/1.8%\/2.6%\/3.4% (TagTalent 1.6%\/2.4%\/3.2%\/4%)",
         "Burned Mana as Damage: 50%",
         "Illusion Percentage: 50%",
-        "Values are halved for illusions."
+        "Values are halved for illusions.",
+        "A modified technique of the Turstarkuri monks' peaceful ways is to turn magical energies on their owner."
       ],
       "itemBehaviour": [],
       "legacyKey": "R",
@@ -83,7 +84,9 @@
         "Cast Animation: 0.4+0.53",
         "Cast Range: Global",
         "Max Blink Distance: 925\/1000\/1075\/1150 (TagTalent 1225\/1300\/1375\/1450)",
-        "Grants a new ability: Blink Fragment."
+        "Grants a new ability: Blink Fragment.",
+        "Increases range by 300 and reduces cooldown by 2.",
+        "In his encounter with the Dead Gods, Anti-Mage learned the value of being elusive."
       ],
       "itemBehaviour": [],
       "legacyKey": "B",
@@ -96,17 +99,13 @@
         "Affects Self"
       ],
       "notes": [
+        "Interrupts Anti-Mage's channeling abilities on cast.",
         "Stacks multiplicatively with other sources of magic resistance.",
         "Increases Anti-Mage's total magic resistance to 36.25%\/43.75%\/51.25%\/58.75% (TagTalent 51.25%\/58.75%\/66.25%\/73.75%).",
-        "Interrupts Anti-Mage's channeling spells on cast.",
         "Linken's Sphere, Lotus Orb, and Mirror Shield do not trigger for Anti-Mage while Counterspell is active.",
-        "Unlike other sources of spell reflection, Counterspell does not reflect Phantom Strike and Blink Strike. They do get blocked still.",
-        "When upgraded with Aghanim's Shard, creates a controllable illusion of Anti-Mage whenever Counterspell gets triggered. The illusion is spawned exactly on the triggering enemy's location, and it automatically starts attacking that enemy. There is no limit for how often this effect can trigger. Each instance creates an illusion. This effect also works for the Blink Fragment illusion and its replicated Counterspell.",
-        "The illusion is spawned exactly on the triggering enemy's location, and it automatically starts attacking that enemy.",
-        "There is no limit for how often this effect can trigger. Each instance creates an illusion.",
-        "This effect also works for the Blink Fragment illusion and its replicated Counterspell."
+        "Unlike other sources of spell reflection, Counterspell does not reflect Phantom Strike and Blink Strike. They do get blocked still."
       ],
-      "mana": "45\/50\/55\/60 (TagTalent 0)",
+      "mana": "45\/50\/55\/60",
       "hotKey": "E",
       "cooldown": "15\/11\/7\/3",
       "description": "Passively grants you magic resistance. Can be activated to create an anti-magic shell around you that sends any targeted spells back towards enemies instead of affecting you.",
@@ -115,11 +114,8 @@
         "Cast Animation: 0+0",
         "Magic Resistance Bonus: 15%\/25%\/35%\/45% (TagTalent 35%\/45%\/55%\/65%)",
         "Shell Duration: 1.2",
-        "Illusion Damage Dealt: 50%",
-        "Illusion Damage Taken: 250%",
-        "Illusion Duration: 5",
-        "Successful Counterspell creates an illusion attacking the caster for 5 seconds. Removes Counterspell manacost.",
-        "The passive magic resistance bonus is disabled."
+        "The passive magic resistance bonus is disabled.",
+        "With the proper focus, Anti-Mage turns innate resistance into calculated retaliation."
       ],
       "itemBehaviour": [],
       "legacyKey": "C",
@@ -132,16 +128,17 @@
         "Affects Enemies"
       ],
       "notes": [
-        "Requires Aghanim's Scepter to be unlocked.",
+        "Requires Aghanim's Scepter to be unlocked. This ability is not available in Ability Draft, due to its reliance on a non-ultimate ability, which are limited to one ability slot.",
+        "This ability is not available in Ability Draft, due to its reliance on a non-ultimate ability, which are limited to one ability slot.",
         "The illusion is created facing the same direction as the caster, along with Blink's particles and sounds.",
         "The illusion cannot act, so it is completely uncontrollable.",
         "The illusion is not invulnerable, and can be attacked and killed normally.",
         "When targeting an enemy, the illusion attacks that enemy.",
-        "When targeting the ground, the illusion relies on default auto-attack rules. The illusion ignores the player's auto-attack settings and is always in auto-attack mode. When no enemies are nearby, the illusion just idles in place, only moving when getting aggroed.",
-        "The illusion ignores the player's auto-attack settings and is always in auto-attack mode.",
+        "When targeting the ground, the illusion relies on default auto attack rules. The illusion ignores the player's auto attack settings and is always in auto-attack mode. When no enemies are nearby, the illusion just idles in place, only moving when getting aggroed.",
+        "The illusion ignores the player's auto attack settings and is always in auto-attack mode.",
         "When no enemies are nearby, the illusion just idles in place, only moving when getting aggroed.",
         "The illusion is permanently phased.",
-        "The Blink Fragment illusion's replicated Counterspell benefits from the Aghanim's Shard upgrade as well, spawning illusions whenever it gets triggered."
+        "Counterspell is cast simultaneously by the illusion whenever Anti-Mage casts it."
       ],
       "mana": "50",
       "hotKey": "D",
@@ -151,8 +148,8 @@
       "params": [
         "Cast Animation: 0.2+0.84",
         "Cast Range: 925\/1000\/1075\/1150 (TagTalent 1225\/1300\/1375\/1450)",
-        "Illusion Damage Dealt: 50%",
-        "Illusion Damage Taken: 250%",
+        "Illusion Damage Dealt: 75%",
+        "Illusion Damage Taken: 200%",
         "Illusion Duration: 7",
         "Cannot be cast on spell immune units."
       ],
@@ -175,7 +172,7 @@
         "Can be cast on units without a mana pool, applying the mini-stun only.",
         "Plays a sound effect during the cast time, which is audible to everyone."
       ],
-      "mana": "125\/200\/275",
+      "mana": "100\/200\/300",
       "hotKey": "R",
       "cooldown": "70 (TagTalent 20)",
       "description": "For each point of mana missing by the target unit, damage is dealt to it and surrounding enemies. The main target is also mini-stunned.",
@@ -185,8 +182,9 @@
         "Cast Range: 600",
         "Radius: 500",
         "Damage per Missing Mana: 0.8\/0.95\/1.1 (TagTalent 0.9\/1.05\/1.2)",
-        "Stun Duration: 0.3",
-        "Blocked fully only when primary target."
+        "Stun Duration: 0.3 (TagTalent 1.3)",
+        "Blocked fully only when primary target.",
+        "After bringing enemies to their knees, Anti-Mage punishes them for their use of the arcane arts."
       ],
       "itemBehaviour": [],
       "legacyKey": "V",
@@ -211,13 +209,13 @@
     },
     {
       "talentLvl": "20",
-      "talentLeft": "-2s Blink Cooldown",
+      "talentLeft": "+1s Mana Void Stun",
       "talentRight": "+0.1 Mana Void Damage Multiplier"
     },
     {
       "talentLvl": "15",
       "talentLeft": "+8 Armor",
-      "talentRight": "+300 Blink Cast Range"
+      "talentRight": "+0.6% Max Mana Mana Burn"
     },
     {
       "talentLvl": "10",

@@ -56,7 +56,8 @@
         "Secondary Radius: 425",
         "Main Damage: 75\/150\/225\/300",
         "Secondary Damage: 56.25\/112.5\/168.75\/225",
-        "Attempts to damage if enemy turns spell immune before the meteors hitting. Does not re-select a new target for the second meteor if the closest enemy turns spell immune after cast."
+        "Attempts to damage if enemy turns spell immune before the meteors hitting. Does not re-select a new target for the second meteor if the closest enemy turns spell immune after cast.",
+        "The Goddess breaks the strata to empower her Princess in the time of need."
       ],
       "itemBehaviour": [],
       "legacyKey": "T",
@@ -73,13 +74,13 @@
         "The Sacred Arrow travels at a speed of 900.",
         "The arrow starts traveling 51 range in front of Mirana, and travels forward up to 3067 range. This means units within 50 range in front of Mirana cannot be hit, as it does not search for units right behind the arrow.",
         "This means units within 50 range in front of Mirana cannot be hit, as it does not search for units right behind the arrow.",
-        "Can hit units up to 1596 range away (travel distance + radius).",
-        "The stun increases by 0.07\/0.08\/0.09\/0.1 seconds and the damage by 0.003125 for each 30 distance traveled, resulting in the following values at certain distances (before reductions): 300 Distance: 0.7\/0.8\/0.9\/1 second stun, 96\/186\/276\/366 damage 600 Distance: 1.4\/1.6\/1.8\/2 seconds stun, 132\/222\/312\/402 damage 900 Distance: 2.1\/2.4\/2.7\/3 seconds stun, 168\/258\/348\/438 damage 1200 Distance: 2.8\/3.2\/3.6\/4 seconds stun, 204\/294\/384\/474 damage 1500 Distance: 3.5\/4\/4.5\/5 seconds stun, 240\/330\/420\/510 damage The arrow reaches its full potential after traveling for 1500 distance, which takes 1.67 seconds.",
-        "300 Distance: 0.7\/0.8\/0.9\/1 second stun, 96\/186\/276\/366 damage",
-        "600 Distance: 1.4\/1.6\/1.8\/2 seconds stun, 132\/222\/312\/402 damage",
-        "900 Distance: 2.1\/2.4\/2.7\/3 seconds stun, 168\/258\/348\/438 damage",
-        "1200 Distance: 2.8\/3.2\/3.6\/4 seconds stun, 204\/294\/384\/474 damage",
-        "1500 Distance: 3.5\/4\/4.5\/5 seconds stun, 240\/330\/420\/510 damage",
+        "With the travel distance and radius, Sacred Arrow can hit units up to 3163 range away.",
+        "The stun increases by 0.07\/0.08\/0.09\/0.1 seconds and the damage by 0.003125 for each 30 distance traveled, resulting in the following values at certain distances (before reductions): 300 Distance: 0.7\/0.8\/0.9\/1 second stun, 96\/186\/276\/366 damage. 600 Distance: 1.4\/1.6\/1.8\/2 second stun, 132\/222\/312\/402 damage. 900 Distance: 2.1\/2.4\/2.7\/3 second stun, 168\/258\/348\/438 damage. 1200 Distance: 2.8\/3.2\/3.6\/4 second stun, 204\/294\/384\/474 damage. 1500 Distance: 3.5\/4\/4.5\/5 second stun, 240\/330\/420\/510 damage. The arrow reaches its full potential after traveling for 1500 distance, which takes 1.67 seconds.",
+        "300 Distance: 0.7\/0.8\/0.9\/1 second stun, 96\/186\/276\/366 damage.",
+        "600 Distance: 1.4\/1.6\/1.8\/2 second stun, 132\/222\/312\/402 damage.",
+        "900 Distance: 2.1\/2.4\/2.7\/3 second stun, 168\/258\/348\/438 damage.",
+        "1200 Distance: 2.8\/3.2\/3.6\/4 second stun, 204\/294\/384\/474 damage.",
+        "1500 Distance: 3.5\/4\/4.5\/5 second stun, 240\/330\/420\/510 damage.",
         "The arrow reaches its full potential after traveling for 1500 distance, which takes 1.67 seconds.",
         "The arrow first applies the damage, then the debuff.",
         "The stun duration is shown above the target's head upon hit (visible to allies only). The shown value is rounded.",
@@ -87,13 +88,13 @@
         "The creep is killed by getting its health dealt as damage to it, in the form of HP Removal. Spell immune creeps are not killed.",
         "The arrow cannot collide with invulnerable or hidden units, it simply flies through them.",
         "The Sacred Arrow has 500 flying vision, which stays for 3 seconds at the point the arrow hits a target.",
-        "With Aghanim's Scepter, the primary arrow releases a Starstorm projectile at the current level onto every enemy that comes within 500 range as it travels. If the arrow lands on a unit, that unit is hit by a another Starstorm projectile that deals 37.5\/75\/112.5\/150 damage (before reductions). This results in a total damage of 112.5\/225\/337.5\/450 against that target, on top of the arrows own damage (before reductions).",
-        "If the arrow lands on a unit, that unit is hit by a another Starstorm projectile that deals 37.5\/75\/112.5\/150 damage (before reductions).",
-        "This results in a total damage of 112.5\/225\/337.5\/450 against that target, on top of the arrows own damage (before reductions).",
-        "When choosing the level 25 talent which adds extra arrows, the extra arrows are launched together with the main arrow. The extra arrows are launched with a 30° angle to the left and right of the centered arrow. Although all three arrows overlap in front of Mirana, they cannot hit the same target. Aghanim's Scepter does not upgrade the extra arrows from the talent, therefore the extra arrows do not have the Starstorm effect and bonus.",
-        "The extra arrows are launched with a 30° angle to the left and right of the centered arrow.",
-        "Although all three arrows overlap in front of Mirana, they cannot hit the same target.",
-        "Aghanim's Scepter does not upgrade the extra arrows from the talent, therefore the extra arrows do not have the Starstorm effect and bonus."
+        "With Aghanim's Scepter, Sacred Arrow releases a meteor based on the current level of Starstorm onto every enemy that comes within 500 range as it travels. If the arrow lands on a unit, that unit is hit by a secondary meteor that deals 37.5\/75\/112.5\/150 damage (before reductions). This results in a total damage of 112.5\/225\/337.5\/450 against that target, on top of Sacred Arrow's damage (before reductions).",
+        "If the arrow lands on a unit, that unit is hit by a secondary meteor that deals 37.5\/75\/112.5\/150 damage (before reductions).",
+        "This results in a total damage of 112.5\/225\/337.5\/450 against that target, on top of Sacred Arrow's damage (before reductions).",
+        "With the level 25 talent, the extra arrows are launched together with the primary arrow. The extra arrows are launched with a 30° angle to the left and right of the primary arrow in the center. Although all 3 arrows overlap in front of Mirana, they cannot hit the same target. Aghanim's Scepter does not upgrade the extra arrows from the talent.",
+        "The extra arrows are launched with a 30° angle to the left and right of the primary arrow in the center.",
+        "Although all 3 arrows overlap in front of Mirana, they cannot hit the same target.",
+        "Aghanim's Scepter does not upgrade the extra arrows from the talent."
       ],
       "mana": "100",
       "hotKey": "W",
@@ -114,7 +115,8 @@
         "Starstorm Radius: 500",
         "Secondary Starstorm Damage: 50%",
         "Causes Sacred Arrow to release a Starstorm on enemies within 500 AoE along the travel path of the primary arrow, releasing a second starfall that deals 50% damage to the impacted unit.",
-        "Can collide with spell immune enemies. Does not stun or attempt to damage spell immune enemies."
+        "Can collide with spell immune enemies. Does not stun or attempt to damage spell immune enemies.",
+        "Lunar energies make the Princess of the Moon's arrows more deadly than most."
       ],
       "itemBehaviour": [],
       "legacyKey": "R",
@@ -129,15 +131,15 @@
       "notes": [
         "Mirana gets all 3 charges immediately upon learning Leap. When acquiring Aghanim's Shard, Mirana immediately gains 1 extra charge as well.",
         "When acquiring Aghanim's Shard, Mirana immediately gains 1 extra charge as well.",
-        "Leap interrupts Mirana's channeling spells upon cast.",
+        "Leap interrupts Mirana's channeling abilities upon cast.",
         "Leaps at a speed of 1300 for up to 0.44 seconds.",
         "Always leaps towards the direction Mirana is facing. Locks Mirana's facing angle during the leap.",
         "Can leap over other units and over impassable terrain.",
-        "During Leap, Mirana can attack, cast spells, and use items. However, she cannot turn, so targeted spells and items may only be used in the direction she is facing.",
-        "However, she cannot turn, so targeted spells and items may only be used in the direction she is facing.",
+        "During Leap, Mirana can attack, use items and cast abilities, except recasting Leap. However, she cannot turn, so targeted abilities and items may only be used in the direction she is facing.",
+        "However, she cannot turn, so targeted abilities and items may only be used in the direction she is facing.",
         "The bonus movement and attack speed is applied instantly upon cast, and not upon landing.",
         "The buff from multiple casts does not stack, only its duration gets refreshed.",
-        "Leap cannot be cast during Leap. During the leap, Leap is on an unrefreshable cooldown which is bound to the leap buff."
+        "With Aghanim's Shard, Leap has an ensured critical strike, crits with a lower value have no effect if they proc, since the higher crit value takes priority."
       ],
       "mana": "40",
       "hotKey": "E",
@@ -154,7 +156,8 @@
         "Charge Replenish Time: 45\/40\/35\/30",
         "Critical Damage: 150%",
         "Grants +1 Leap Charge. Leap buff grants Mirana 1.5x Critical Strike attacks for its duration.",
-        "Getting rooted during the leap does not cancel the leap."
+        "Getting rooted during the leap does not cancel the leap.",
+        "None can fail to recognize Mirana's iconic white beast in the heat of battle."
       ],
       "itemBehaviour": [],
       "legacyKey": "E",
@@ -167,10 +170,10 @@
         "Affects Allies"
       ],
       "notes": [
-        "Places a buff on all allied heroes. As long as this buff stays on them, they keep on turning invisible.",
-        "The movement speed bonus is only applied when fully invisible. It is not applied during the fade delay.",
+        "Places a buff on all allied heroes. As long as this buff stays on them, they will keep turning invisible. Fully affects invulnerable and hidden allies, placing the buff on them and turning them invisible.",
         "Fully affects invulnerable and hidden allies, placing the buff on them and turning them invisible.",
-        "Attacking, casting spells or using items during the fade delay resets it."
+        "The movement speed bonus is only applied when fully invisible. It is not applied during the fade delay. Attacking, casting abilities or using items during the fade delay resets it.",
+        "Attacking, casting abilities or using items during the fade delay resets it."
       ],
       "mana": "125",
       "hotKey": "R",
@@ -183,7 +186,8 @@
         "Fade Delay: 2.5\/2\/1.5",
         "Move Speed Bonus: 9%\/12%\/15%",
         "Duration: 18",
-        "Illusions are not made invisible."
+        "Illusions are not made invisible.",
+        "Her tenure with Selemene allows Mirana to eclipse the ground, wrapping her allies in a cloak of shadows."
       ],
       "itemBehaviour": [],
       "legacyKey": "W",
@@ -210,7 +214,7 @@
       "mana": null,
       "hotKey": null,
       "cooldown": null,
-      "description": "Mana Burned per Hit: 20",
+      "description": "There is no description for this ability.",
       "spellName": "Mana Break",
       "params": [
         "Mana Burned per Hit: 20",

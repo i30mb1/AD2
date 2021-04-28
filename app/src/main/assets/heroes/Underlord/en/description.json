@@ -8,13 +8,13 @@
       "talents": [
         {
           "talentLvl": "25",
-          "talentLeft": "15% Firestorm Building Damage",
+          "talentLeft": "40% Atrophy Aura Allied Hero Bonus",
           "talentRight": "+0.65s Pit of Malice Root"
         },
         {
           "talentLvl": "20",
           "talentLeft": "+20 Health Regen",
-          "talentRight": "+50 Attack Speed"
+          "talentRight": "+60 Attack Speed"
         },
         {
           "talentLvl": "15",
@@ -23,7 +23,7 @@
         },
         {
           "talentLvl": "10",
-          "talentLeft": "+2 Firestorm Wave Count",
+          "talentLeft": "+125 Firestorm Radius",
           "talentRight": "+5 Armor"
         }
       ]
@@ -37,24 +37,16 @@
       ],
       "notes": [
         "The visual and audio effects at the targeted area during the cast time are visible and audible to allies only.",
-        "Creates waves in 1 second intervals, starting immediately upon cast, resulting in the effect lasting 5 (TagTalent 7) seconds.",
+        "Creates waves in 1-second intervals, starting immediately upon cast, resulting in the effect lasting 5 seconds.",
         "Despite the visual effects, the damage of the waves is applied instantly, and not upon landing.",
-        "The burn debuff deals damage in 1 second intervals, starting immediately as the debuff is applied, resulting in 3 instances.",
-        "The burn debuff does not stack per interval. Each interval refreshes its duration, resulting in 8 (TagTalent 10) possible instances.",
-        "On each wave, Firestorm first applies the damage, then the debuff .",
+        "On each wave, Firestorm first applies the damage, then the debuff . Does not place the burn debuff on Roshan, but does apply the wave damage.",
         "Does not place the burn debuff on Roshan, but does apply the wave damage.",
-        "Can deal up to 150\/240\/330\/420 + 8%\/16%\/24%\/32% (TagTalent 200\/320\/440\/560 + 10%\/20%\/30%\/40%) of max health as damage (before reductions) when all waves hit and the debuff is not dispelled.",
-        "With Aghanim's Shard, the modifier is placed on Underlord as a buff on each wave, healing in the same intervals. Heals Underlord for 3.75\/6\/8.25\/10.5 health per wave. The burn buff heals for 0.15%\/0.3%\/0.45%\/0.6% of max health as health per second. Can heal for up to 22.5\/36\/49.5\/63 + 1.2%\/2.4%\/3.6%\/4.8% (TagTalent 30\/48\/66\/84 + 1.5%\/3%\/4.5%\/6%) of max health as health when all waves hit and the buff is not dispelled.",
-        "Heals Underlord for 3.75\/6\/8.25\/10.5 health per wave.",
-        "The burn buff heals for 0.15%\/0.3%\/0.45%\/0.6% of max health as health per second.",
-        "Can heal for up to 22.5\/36\/49.5\/63 + 1.2%\/2.4%\/3.6%\/4.8% (TagTalent 30\/48\/66\/84 + 1.5%\/3%\/4.5%\/6%) of max health as health when all waves hit and the buff is not dispelled.",
-        "With Aghanim's Shard, Firestorm may directly target Underlord. It cannot target other units. When done, the waves area created at Underlord's current location, instead of staying at the original cast location. ↓↓ Double-tapping automatically targets self.",
-        "When done, the waves area created at Underlord's current location, instead of staying at the original cast location.",
-        "↓↓ Double-tapping automatically targets self.",
-        "When the level 25 talent is chosen, Firestorm fully affects buildings, but deals less damage to them. Deals 3.75\/6\/8.25\/10.5 damage per wave to buildings. The burn debuff is placed as well, dealing 0.15%\/0.3%\/0.45%\/0.6% of max health as damage per second. Can deal up to 22.5\/36\/49.5\/63 + 1.2%\/2.4%\/3.6%\/4.8% (TagTalent 30\/48\/66\/84 + 1.5%\/3%\/4.5%\/6%) of max health as damage (before reductions) when all waves hit and the debuff is not dispelled.",
-        "Deals 3.75\/6\/8.25\/10.5 damage per wave to buildings.",
-        "The burn debuff is placed as well, dealing 0.15%\/0.3%\/0.45%\/0.6% of max health as damage per second.",
-        "Can deal up to 22.5\/36\/49.5\/63 + 1.2%\/2.4%\/3.6%\/4.8% (TagTalent 30\/48\/66\/84 + 1.5%\/3%\/4.5%\/6%) of max health as damage (before reductions) when all waves hit and the debuff is not dispelled."
+        "The burn debuff deals damage in 1-second intervals, starting immediately as the debuff is applied, resulting in 3 instances.",
+        "The burn debuff does not stack per interval. Each interval refreshes its duration, resulting in 8 possible instances.",
+        "Can deal up to 150\/240\/330\/420 + 8%\/16%\/24%\/32% of max health as damage (before reductions) when all waves hit within the area for the entire duration and the debuff is not dispelled.",
+        "With Aghanim's Shard, ↓↓ Double-tapping automatically targets self. Firestorm's 425 (TagTalent 550) effect radius is now centered on and follows Underlord, instead of staying at the original cast location. However, Firestorm cannot target other units.",
+        "Firestorm's 425 (TagTalent 550) effect radius is now centered on and follows Underlord, instead of staying at the original cast location.",
+        "However, Firestorm cannot target other units."
       ],
       "mana": "100\/110\/120\/130",
       "hotKey": "Q",
@@ -64,16 +56,15 @@
       "params": [
         "Cast Animation: 0.5+0.6 (TagTalent 0.25+0.85)",
         "Cast Range: 600\/625\/650\/675",
-        "Effect Radius: 400\/430\/460\/490",
-        "Number of Waves: 6 (TagTalent 8)",
+        "Effect Radius: 425 (TagTalent 550)",
+        "Number of Waves: 6 (TagTalent 9)",
         "Wave Interval: 1",
         "Damage per Wave: 25\/40\/55\/70",
         "Max Health as Damage per Second: 1%\/2%\/3%\/4%",
         "Burn Duration: 2",
-        "Building Damage Percentage: 15%",
-        "Damage Values as Heal: 15%",
-        "Firestorm can be self-targeted. When used that way, the Firestorm follows Underlord around. Also causes Firestorm to heal him for 15% of the damage values. Reduced cast point by half.",
-        "Attempts to damage if debuff was placed before spell immunity."
+        "Firestorm can be self-targeted. When used that way, the Firestorm follows Underlord around. Increases the wave count by 3. Reduced cast point by half.",
+        "Attempts to damage if debuff was placed before spell immunity.",
+        "The flames of conquest blaze forth from the darkest depths of the abyss."
       ],
       "itemBehaviour": [],
       "legacyKey": "F",
@@ -89,13 +80,13 @@
         "The visual and audio effects at the targeted area during the cast time are visible and audible to allies only.",
         "Roots the targets, preventing them from moving and casting certain mobility spells. Provides True Sight over the targets.",
         "Provides True Sight over the targets.",
-        "The root is applied periodically on every enemy within the area. However, the Buff Placer modifier prevents them from being continuously rooted for the whole duration. This hidden modifier is applied on every unit within the area which does not have the modifier yet. The modifier lasts for 3.6 seconds. So whenever the modifier expires, enemies get instantly rooted again and then receive the hidden modifier again. This means that Pit of Malice does not root every unit within the area in set intervals. Each unit is rooted every 3.6 seconds based on when they entered the area. The hidden modifier does not disappear upon leaving the area. This means quickly leaving and re-entering does not result in an instant-root. All Pits share the same modifier, meaning they do not stack - once rooted, the unit becomes immune to all other pits until the modifier wears off.",
-        "However, the Buff Placer modifier prevents them from being continuously rooted for the whole duration.",
+        "The root is applied periodically on every enemy within the area. However, a hidden modifier prevents them from being continuously rooted for the whole duration. This hidden modifier is applied on every unit within the area which does not have the modifier yet. The modifier lasts for 3.6 seconds. So whenever the modifier expires, enemies get instantly rooted again and then receive the hidden modifier again. This means that Pit of Malice does not root every unit within the area in set intervals. Each unit is rooted every 3.6 seconds based on when they entered the area. The hidden modifier does not disappear upon leaving the area. This means quickly leaving and re-entering does not result in an instant-root. All pits share the same modifier, therefore the root do not stack - once rooted, the unit becomes immune to all other pits until the modifier wears off.",
+        "However, a hidden modifier prevents them from being continuously rooted for the whole duration.",
         "This hidden modifier is applied on every unit within the area which does not have the modifier yet. The modifier lasts for 3.6 seconds.",
         "So whenever the modifier expires, enemies get instantly rooted again and then receive the hidden modifier again.",
         "This means that Pit of Malice does not root every unit within the area in set intervals. Each unit is rooted every 3.6 seconds based on when they entered the area.",
         "The hidden modifier does not disappear upon leaving the area. This means quickly leaving and re-entering does not result in an instant-root.",
-        "All Pits share the same modifier, meaning they do not stack - once rooted, the unit becomes immune to all other pits until the modifier wears off.",
+        "All pits share the same modifier, therefore the root do not stack - once rooted, the unit becomes immune to all other pits until the modifier wears off.",
         "Fully affects invisible units and units inside the Fog of War.",
         "Can root a unit up to 4 times if it stays within the area for the full duration, resulting in a total root time of 4.8\/5.6\/6.4\/7.2 (TagTalent 7.4\/8.2\/9\/9.8) seconds.",
         "Creates a distinct visual effect around, and plays a distinct sound on affected heroes and illusions, but not around other affected units."
@@ -111,7 +102,8 @@
         "Effect Radius: 400 (TagTalent 475)",
         "Root Interval: 3.6",
         "Root Duration: 1.2\/1.4\/1.6\/1.8 (TagTalent 1.85\/2.05\/2.25\/2.45)",
-        "Pit Duration: 12"
+        "Pit Duration: 12",
+        "Twisting into the seams of reality itself, Vrogros' manifest hatred paralyzes those who defy his will."
       ],
       "itemBehaviour": [],
       "legacyKey": "T",
@@ -126,17 +118,23 @@
       "notes": [
         "Only reduces base damage and that given by the primary attribute of affected units. Raw bonus damage is not reduced.",
         "The aura's debuff lingers for 0.5 seconds.",
-        "It does not matter how an enemy dies, Underlord always gets the damage as long as it was affected by the debuff.",
+        "It does not matter how an enemy dies, Underlord always gets the damage as long as the enemy was affected by the debuff.",
         "Each damage increment per dying unit lasts for the set duration. Gaining more damage does not refresh the duration of the previous increments.",
         "The damage bonuses persist through Underlord's death.",
         "A status buff icon appears whenever Underlord gains damage from the aura. The buff shows how much damage the aura currently grants. Underlord's weapon also glows stronger with green particle effects the more damage stacks he has.",
         "Underlord's weapon also glows stronger with green particle effects the more damage stacks he has.",
-        "Does not gain attack damage from dying illusions, couriers, buildings, wards, Tempest Double and Undying Zombie.",
+        "Does not gain attack damage from dying illusions, Couriers, buildings, wards, Tempest Double and Undying Zombie. When there are multiple Meepo Clones within range, only one of them grants Underlord damage when they die. Treats creep-heroes as creeps.",
         "When there are multiple Meepo Clones within range, only one of them grants Underlord damage when they die.",
-        "Treats creep-heroes as creeps, gaining only the creep value when creep-heroes die within range.",
+        "Treats creep-heroes as creeps.",
         "The aura does not affect invulnerable or hidden units.",
-        "The attack damage reduction does not affect enemies which have no vision over Underlord. However, Underlord still gains damage from enemies within the aura's range, despite the debuff not being present.",
-        "However, Underlord still gains damage from enemies within the aura's range, despite the debuff not being present."
+        "The attack damage reduction does not affect enemies which have no vision over Underlord. However, Underlord still gains damage from enemies within the aura's radius, despite the debuff not being present.",
+        "However, Underlord still gains damage from enemies within the aura's radius, despite the debuff not being present.",
+        "The ally hero damage bonus talent adds a new aura to the ability, which affects allied heroes, illusions, clones and creep-heroes. This aura grants 40% of the current bonus attack damage Underlord currently gathered through dying units to his allies. The aura has a 900 radius, and it lingers for 0.5 seconds. The aura is only present when Underlord has attack damage charges. When having no charges, the aura is not bestowed, so no buff appears on allies. Does not affect Underlord himself, but does affect his illusions when near him. Does not affect invulnerable or hidden allies.",
+        "This aura grants 40% of the current bonus attack damage Underlord currently gathered through dying units to his allies.",
+        "The aura has a 900 radius, and it lingers for 0.5 seconds.",
+        "The aura is only present when Underlord has attack damage charges. When having no charges, the aura is not bestowed, so no buff appears on allies.",
+        "Does not affect Underlord himself, but does affect his illusions when near him.",
+        "Does not affect invulnerable or hidden allies."
       ],
       "mana": null,
       "hotKey": "E",
@@ -150,8 +148,10 @@
         "Attack Damage Bonus per Non-Hero Death: 2\/4\/6\/8",
         "Attack Damage Bonus Duration: 30\/45\/60\/75",
         "Aura Linger Duration: 0.5",
+        "Ally Hero Attack Damage Bonus: 40%",
         "Disables aura and prevents gaining new stacks. Already existing stacks still provide bonus attack damage.",
-        "Illusions carry the aura. When an enemy unit dies around an illusion which is or was under Underlord's control, the damage is granted to Underlord. If the source of the illusion is an enemy or allied ability, the damage is granted to the illusion, although the illusion cannot make use of it."
+        "Illusions carry the aura. When an enemy unit dies around an illusion which is or was under Underlord's control, the damage is granted to Underlord. If the source of the illusion is an enemy or allied ability, the damage is granted to the illusion, although the illusion cannot make use of it.",
+        "To merely stand in the presence of the Underlord is to feel the conviction of battle sapped from one's soul."
       ],
       "itemBehaviour": [],
       "legacyKey": "R",
@@ -166,27 +166,33 @@
       "notes": [
         "Upon cast, Dark Rift is replaced by Cancel Dark Rift for its duration.",
         "↓↓ Double-tapping automatically targets the team's fountain.",
-        "Can be cast on any allied unit which is not a hero (or illusion) or a ward. Can target creep-heroes. With Aghanim's Scepter, can be cast on any allied unit that is not a ward.",
-        "With Aghanim's Scepter, can be cast on any allied unit that is not a ward.",
+        "Can be cast on any allied unit, except heroes, illusions or wards. Can target creep-heroes. With Aghanim's Scepter, can be cast on any allied units except wards.",
+        "Can target creep-heroes.",
+        "With Aghanim's Scepter, can be cast on any allied units except wards.",
         "Can target and teleport to invulnerable units. Cannot target hidden units, but the teleport still happens if the target turns hidden after being targeted.",
         "When targeting the ground, it searches for the nearest valid target on the map and teleports towards it.",
         "The visual effects around Underlord and on the teleport target are visible to everyone.",
         "The targeted unit's priority is lowered, meaning it is attacked as the last auto attack target by other units.",
         "Disjoints projectiles upon teleporting for everyone who gets teleported.",
-        "Can only teleport heroes (including illusions and clones) and creep-heroes. Can teleport them even while invulnerable or hidden.",
-        "When Underlord or the teleport target dies during the delay, the spell is canceled. The spell is not canceled when the targeted creep changes ownership."
+        "Can only teleport heroes, illusions, clones and creep-heroes. Can teleport them even while invulnerable or hidden.",
+        "Can teleport them even while invulnerable or hidden.",
+        "When Underlord or the teleport target dies during the delay, Dark Rift is canceled. Dark Rift is not canceled when the targeted creep changes ownership (e.g. Holy Persuasion, Enchant, etc).",
+        "Dark Rift is not canceled when the targeted creep changes ownership (e.g. Holy Persuasion, Enchant, etc)."
       ],
       "mana": "100\/200\/300",
       "hotKey": "R",
-      "cooldown": "130\/115\/100 (TagTalent 80\/65\/50)",
+      "cooldown": "130\/115\/100 (TagTalent 0)",
       "description": "Opens a dark rift at the targeted friendly unit's or building's position. After a short delay, Underlord and all nearby friendly heroes are teleported to that unit's location. Dark Rift can be cancelled at anytime during the cast. If it is cancelled in this way or the target unit dies before the spell becomes active, Dark Rift goes into cooldown.",
       "spellName": "Dark Rift",
       "params": [
         "Cast Animation: 0.6+0.47",
         "Cast Range: Global",
-        "Radius: 600",
-        "Teleport Delay: 6\/5\/4 (TagAghanim 5\/4\/3)",
-        "Dark Rift can be cast on allied heroes. Reduces cast delay by -1 second and cooldown by 50 seconds."
+        "Radius: 600 (TagTalent 900)",
+        "Teleport Delay: 6\/5\/4 (TagTalent 5\/4\/3)",
+        "Number of Charges: 2",
+        "Charge Replenish Time: 130\/115\/100",
+        "Dark Rift has two charges and can be cast on allied heroes. Reduces cast delay by -1 second. Increases radius by 300.",
+        "They come without warning, leaving fire and blood where kingdoms once flourished."
       ],
       "itemBehaviour": [],
       "legacyKey": "D",
@@ -198,8 +204,8 @@
         "Ability No Target"
       ],
       "notes": [
-        "Replaces Dark Rift until the teleport finishes or this spell is cast.",
-        "Interrupts Underlord's channeling spells upon cast."
+        "Replaces Dark Rift until the sub-ability is used or the teleport completes.",
+        "Interrupts Underlord's channeling abilities upon cast."
       ],
       "mana": null,
       "hotKey": "R",
@@ -227,13 +233,13 @@
   "talents": [
     {
       "talentLvl": "25",
-      "talentLeft": "15% Firestorm Building Damage",
+      "talentLeft": "40% Atrophy Aura Allied Hero Bonus",
       "talentRight": "+0.65s Pit of Malice Root"
     },
     {
       "talentLvl": "20",
       "talentLeft": "+20 Health Regen",
-      "talentRight": "+50 Attack Speed"
+      "talentRight": "+60 Attack Speed"
     },
     {
       "talentLvl": "15",
@@ -242,7 +248,7 @@
     },
     {
       "talentLvl": "10",
-      "talentLeft": "+2 Firestorm Wave Count",
+      "talentLeft": "+125 Firestorm Radius",
       "talentRight": "+5 Armor"
     }
   ]

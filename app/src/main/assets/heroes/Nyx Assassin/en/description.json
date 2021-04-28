@@ -14,8 +14,8 @@
         },
         {
           "talentLvl": "20",
-          "talentLeft": "+140 Impale Damage",
-          "talentRight": "+75% Spiked Carapace Damage"
+          "talentLeft": "+130 Impale Damage",
+          "talentRight": "+0.6s Spiked Carapace Stun Duration"
         },
         {
           "talentLvl": "15",
@@ -37,13 +37,15 @@
         "Damage Magical"
       ],
       "notes": [
+        "With the travel distance and radius, Impale can hit units up to 825 range away.",
         "The spikes travel at a speed of 1600.",
-        "Hit units are knocked up 350 range for the initial 0.5 seconds of the stun.",
+        "Hit units are knocked up 350 range for the initial 0.5 seconds of the stun. While in the air, other units may pass below hit airborne units. When Impale hits invisible units, the visual effects below the hit unit are still visible.",
         "While in the air, other units may pass below hit airborne units.",
+        "When Impale hits invisible units, the visual effects below the hit unit are still visible.",
         "The damage is applied upon landing, not upon getting hit.",
-        "While burrowed, the cast range and travel distance increase to 1225, and the cooldown decreases to 7 seconds.",
-        "Impale can hit units up to 825 (TagTalent 1350) range away (travel distance + radius).",
-        "When Impale hits invisible units, the visual effects below the hit unit are still visible."
+        "While burrowed, Impale's cast range and the spikes travel distance is increased to 1225. Therefore, Impale now can hit units up to 1350 range away. The cooldown is reduced to 7 seconds.",
+        "Therefore, Impale now can hit units up to 1350 range away.",
+        "The cooldown is reduced to 7 seconds."
       ],
       "mana": "105\/120\/135\/150",
       "hotKey": "Q",
@@ -52,12 +54,13 @@
       "spellName": "Impale",
       "params": [
         "Cast Animation: 0.3+0",
-        "Cast Range: 700 (TagAghanim 1225)",
-        "Spikes Travel Distance: 700 (TagAghanim 1225)",
+        "Cast Range: 700 (TagTalent 1225)",
+        "Spikes Travel Distance: 700 (TagTalent 1225)",
         "Spikes Radius: 125",
-        "Damage: 100\/160\/220\/280 (TagTalent 240\/300\/360\/420)",
+        "Damage: 100\/160\/220\/280 (TagTalent 230\/290\/350\/410)",
         "Stun Duration: 1.4\/1.8\/2.2\/2.6 (TagTalent 1.65\/2.05\/2.45\/2.85)",
-        "Attempts to damage if already hit enemies turn spell immune before landing."
+        "Attempts to damage if already hit enemies turn spell immune before landing.",
+        "All zealot scarabs possess intimate knowledge of underground pathways, using them to their advantage."
       ],
       "itemBehaviour": [],
       "legacyKey": "E",
@@ -73,10 +76,10 @@
       "notes": [
         "Applies the damage first, and then the mana loss.",
         "Effectively burns 29%\/33%\/38%\/42% of the target's maximum mana pool if it has no flat mana bonus.",
-        "Despite dealing the damage first, the damage is based on how much mana the target actually lost from Mana Burn. This means, when cast on an enemy who has for example 5 mana left, it also deals only 5 damage (before reductions).",
-        "This means, when cast on an enemy who has for example 5 mana left, it also deals only 5 damage (before reductions).",
+        "Despite dealing the damage first, the damage is based on how much mana the target actually lost from Mana Burn. This means, when cast on an enemy who has 5 mana left, it also deals only 5 damage (before reductions).",
+        "This means, when cast on an enemy who has 5 mana left, it also deals only 5 damage (before reductions).",
         "Can be cast on creep-heroes, but has no effect on them, since they have no intelligence, wasting mana and cooldown.",
-        "While burrowed, the cast range increases to 1050."
+        "While burrowed, Mana Burn's cast range increases to 1050."
       ],
       "mana": "100",
       "hotKey": "W",
@@ -85,9 +88,10 @@
       "spellName": "Mana Burn",
       "params": [
         "Cast Animation: 0.4+0",
-        "Cast Range: 600 (TagAghanim 1050)",
+        "Cast Range: 600 (TagTalent 1050)",
         "Intelligence as Mana Burned: 350%\/400%\/450%\/500%",
-        "Mana Burned as Damage: 100%"
+        "Mana Burned as Damage: 100%",
+        "The tome in Ultimyr describes one scarab with the ability to eat away at the minds of lesser beings."
       ],
       "itemBehaviour": [],
       "legacyKey": "R",
@@ -100,25 +104,25 @@
         "Affects Enemies"
       ],
       "notes": [
-        "Spiked Carapace interrupts Nyx Assassin's channeling spells upon cast.",
+        "Spiked Carapace interrupts Nyx Assassin's channeling abilities upon cast.",
         "Can be cast during Vendetta, without breaking the invisibility. Breaks the invisibility of other sources.",
-        "Only reflects player based damage directly towards the damage dealer. A unit can only be affected once per buff.",
         "The buff from multiple casts of Spiked Carapace does not stack but gets refreshed instead.",
+        "Only reflects player based damage directly towards the damage dealer. A unit can only be affected once per buff. Reflects the same damage type as received. Reflects incoming damage before all manipulations. However, damage manipulation on the enemy still affects the damage normally. Reflected physical damage is affected by damage block as well. Reflected damage has the no-reflection flag, preventing its damage from interacting with other sources of damage with the same flag.",
         "Reflects the same damage type as received.",
         "Reflects incoming damage before all manipulations. However, damage manipulation on the enemy still affects the damage normally.",
         "Reflected physical damage is affected by damage block as well.",
         "Reflected damage has the no-reflection flag, preventing its damage from interacting with other sources of damage with the same flag.",
-        "Fully ignores self-inflicted damage, and damage flagged as HP Removal.",
-        "Spiked Carapace has a global range and affects units through the Fog of War or invisibility.",
         "Reflected damage cannot be amplified with outgoing spell damage amplification and cannot spell lifesteal. Can be amplified by incoming spell damage amplification.",
         "Can be amplified by incoming spell damage amplification.",
+        "Fully ignores self-inflicted damage, and damage flagged as HP Removal.",
+        "Spiked Carapace has a global range and affects units through the Fog of War or invisibility.",
         "Spiked Carapace first applies the debuff, then the reflected damage.",
-        "Does not work against wards, buildings and allied units.",
         "Spiked Carapace fully negates and reflects after all reductions, causing several on-damage effects to not trigger.",
         "Has a higher priority than Aphotic Shield, but lower than False Promise. It will still reflect and stun when combined with False Promise.",
         "Although the damage dealt to enemies is equal to the amount of damage blocked, the effects work independently from each other. This means Spiked Carapace always blocks one damage instance, even when the source is spell immune or invulnerable.",
         "This means Spiked Carapace always blocks one damage instance, even when the source is spell immune or invulnerable.",
-        "When cast while burrowed, the spell immediately applies its stun to all enemies within a radius. Since Spiked Carapace has no base damage, hit units are not damaged upon cast. Nyx Assassin still receives the cast buff normally, which can still reflect damage and stun enemies. However, the buff does not affect enemy units which have been hit by the stun upon cast. They can normally damage Nyx.",
+        "Does not work against wards, buildings and allied units.",
+        "While burrowed, casting Spiked Carapace immediately applies its stun to all enemies within 300 radius. Since Spiked Carapace has no base damage, hit units are not damaged upon cast. Nyx Assassin still receives the cast buff normally, which can still reflect damage and stun enemies. However, the buff does not affect enemy units which have been hit by the stun upon cast. They can normally damage Nyx.",
         "Since Spiked Carapace has no base damage, hit units are not damaged upon cast.",
         "Nyx Assassin still receives the cast buff normally, which can still reflect damage and stun enemies.",
         "However, the buff does not affect enemy units which have been hit by the stun upon cast. They can normally damage Nyx."
@@ -130,10 +134,11 @@
       "spellName": "Spiked Carapace",
       "params": [
         "Cast Animation: 0+0",
-        "Damage Reflected: 100% (TagTalent 175%)",
+        "Damage Reflected: 100%",
         "Carapace Duration: 2",
-        "Stun Duration: 0.6\/1.2\/1.8\/2.4",
-        "Stun Radius: 300"
+        "Stun Duration: 0.6\/1.2\/1.8\/2.4 (TagTalent 1.2\/1.8\/2.4\/3)",
+        "Stun Radius: 300",
+        "While their carapaces are relatively thin, they're guarded by a retractable field of razor-sharp spikes."
       ],
       "itemBehaviour": [],
       "legacyKey": "D",
@@ -148,11 +153,15 @@
       "notes": [
         "Requires Aghanim's Scepter to be unlocked. In Ability Draft, Burrow can be unlocked by the player that drafted Vendetta.",
         "In Ability Draft, Burrow can be unlocked by the player that drafted Vendetta.",
-        "Turns Nyx Assassin invisible and disarms as well as roots him, preventing him from moving, attacking and using Blink Dagger.",
+        "Nyx Assassin turns invisible, is disarmed and rooted, preventing him from moving, attacking and using blink-based abilities.",
+        "While burrowed, Nyx gains the following bonuses through undispellable buff: Can regenerate up to 90% of Nyx Assassin's max health and max mana in one minute. Increases Impale's cast range to 1225. Increases Mana Burn's cast range to 1050. Impale and Mana Burn can now be cast without having to face the targeted point or unit. Other targeted abilities and items still require facing the target. Spiked Carapace immediately applies its stun to all enemies within 300 radius.",
         "Can regenerate up to 90% of Nyx Assassin's max health and max mana in one minute.",
-        "Burrow lasts until unburrowing or using Vendetta.",
-        "Nyx Assassin can still be moved by spells while burrowed, without getting unburrowed.",
-        "While burrowed, Impale and Mana Burn can be cast without having to face the targeted point or unit, but other targeted spells and items still require facing.",
+        "Increases Impale's cast range to 1225.",
+        "Increases Mana Burn's cast range to 1050. Impale and Mana Burn can now be cast without having to face the targeted point or unit. Other targeted abilities and items still require facing the target.",
+        "Impale and Mana Burn can now be cast without having to face the targeted point or unit. Other targeted abilities and items still require facing the target.",
+        "Spiked Carapace immediately applies its stun to all enemies within 300 radius.",
+        "Burrow lasts until the Unburrow sub-ability is used, Vendetta is used or Nyx's death. Nyx can still be moved by abilities or Forced Movement while burrowed, without getting unburrowed. Losing Aghanim's Scepter instantly unburrows Nyx.",
+        "Nyx can still be moved by abilities or Forced Movement while burrowed, without getting unburrowed.",
         "Losing Aghanim's Scepter instantly unburrows Nyx."
       ],
       "mana": null,
@@ -164,11 +173,12 @@
         "Cast Animation: 1.5+0.1",
         "Fade Time: 0",
         "Max Health\/Mana Regen Bonus: 1.5%",
-        "Incoming Damage Reduction: 40%",
+        "Incoming Damage Reduction: 50%",
         "Impale Cast\/Travel Range Increase: 525",
         "Impale Cooldown Reduction: 7",
         "Mana Burn Cast Range Increase: 450",
-        "Spiked Carapace Stun Radius: 300"
+        "Spiked Carapace Stun Radius: 300",
+        "Some castes of Zealot scarab are known to create small burrows to lie in wait, ready to ambush their prey."
       ],
       "itemBehaviour": [],
       "legacyKey": "F",
@@ -180,8 +190,8 @@
         "Ability No Target"
       ],
       "notes": [
-        "Replaces Burrow until used or death.",
-        "Interrupts Nyx Assassin's channeling spells upon cast.",
+        "Replaces Burrow until the sub-ability is used, Vendetta is used or Nyx's death.",
+        "Interrupts Nyx Assassin's channeling abilities upon cast.",
         "Instantly reverts all bonuses provided by Burrow.",
         "Uses a different sound when unburrowing inside the river."
       ],
@@ -191,7 +201,8 @@
       "description": "Emerge from the burrow.",
       "spellName": "Unburrow",
       "params": [
-        "Cast Animation: 0+0"
+        "Cast Animation: 0+0",
+        "Some castes of Zealot scarab are known to create small burrows to lie in wait, ready to ambush their prey."
       ],
       "itemBehaviour": [],
       "legacyKey": "F",
@@ -205,19 +216,18 @@
         "Damage Pure"
       ],
       "notes": [
-        "Vendetta does not interrupt Nyx Assassin's channeling spells upon cast.",
-        "The attack out of Vendetta cannot miss.",
-        "The bonus damage is dealt in a separate damage instance, and counts as spell damage. This means it is not affected or considered by anything that works with attack damage. This also means that it fully works with spell damage amplification and spell lifesteal.",
+        "Vendetta does not interrupt Nyx Assassin's channeling abilities upon cast.",
+        "The attack out of Vendetta cannot miss. It first applies the Vendetta damage, the debuff, then the attack damage.",
+        "It first applies the Vendetta damage, the debuff, then the attack damage.",
+        "The bonus damage is dealt in a separate damage instance, and counts as spell damage. This means it is not affected or considered by anything that works with attack damage. This also means that it fully works with spell damage amplification and spell lifesteal. The damage and the debuff are not applied when attacking wards or buildings.",
         "This means it is not affected or considered by anything that works with attack damage.",
         "This also means that it fully works with spell damage amplification and spell lifesteal.",
-        "The attack out of Vendetta first applies the Vendetta damage, (TagTalent then the debuff), then the attack damage.",
-        "The invisibility is broken upon reaching the cast point of spells or items, or upon landing an attack.",
-        "The damage (TagTalent and debuff) are not applied when attacking wards or buildings.",
-        "Vendetta allows Nyx to pass through other units, including wards, but not through buildings.",
+        "The damage and the debuff are not applied when attacking wards or buildings.",
+        "The invisibility is broken upon reaching the cast point of abilities or items, or upon landing an attack. Nyx can pick up, drop or attack items and runes without breaking the invisibility.",
         "Nyx can pick up, drop or attack items and runes without breaking the invisibility.",
-        "With Aghanim's Shard, reduces most heroes' total magic resistance to 10%, assuming basic 25% magic resistance and no other sources of magic resistance.",
-        "Aghanim's Shard also removes the movement speed limit during Vendetta.",
-        "The level 25 talent grants fully unobstructed movement during Vendetta, allowing to path through cliffs and trees."
+        "Vendetta allows Nyx to phase through other units, including wards, but not through buildings.",
+        "The level 25 talent grants fully unobstructed movement during Vendetta, allowing to path through cliffs and trees.",
+        "With Aghanim's Shard, reduces most heroes' total magic resistance to 10% and it removes the movement speed limit during Vendetta."
       ],
       "mana": "180\/240\/300",
       "hotKey": "R",
@@ -229,11 +239,13 @@
         "Fade Time: 0",
         "Damage: 300\/450\/600",
         "Self Move Speed Bonus: 16%\/18%\/20% (TagTalent 41%\/43%\/45%)",
+        "Attack Animation Amplification: 50%",
         "Vendetta Duration: 40\/50\/60",
         "Enemy Magic Resistance Reduction: 20%",
         "Magic Resistance Reduction Duration: 4",
         "Grants a new ability: Burrow.",
-        "Causes Nyx's Vendetta attack to reduce enemy magic resistance by 20% for 4 seconds. Also increases Vendetta movement speed by 25%, unlocking max speed."
+        "Causes Nyx's Vendetta attack to reduce enemy magic resistance by 20% for 4 seconds. Also increases Vendetta movement speed by 25%, unlocking max speed.",
+        "The scarab kills for the glory of his queen."
       ],
       "itemBehaviour": [],
       "legacyKey": "V",
@@ -249,7 +261,7 @@
     "attrAgility": 19.0
   },
   "description": "Nyx Assassin, is a melee agility hero who is feared as one of the most effective gankers and solo-killers in the game. With his powerful burst damage nukes, Nyx Assassin specializes in disabling and killing lone and fragile enemies with little to no warning. He possesses an area nuke and stun ability in Impale, allowing him to disable enemies in a straight line in front of him while dealing damage. His Mana Burn ability can destroy a significant fraction of a target hero's mana pool while dealing the same amount as damage, making him the bane of weak intelligence heroes with lots of mana but very little health. Should the enemy attempt to attack him, Nyx Assassin can dissuade them with Spiked Carapace, stunning any heroes that attack him while reflecting their damage back at them. His ultimate, Vendetta, turns Nyx invisible, allowing him to deal tremendous pure damage to the next target that he strikes out of invisibility. Stalking from the shadows, Nyx Assassin can strike without warning and lay low his foes before they realize that their death is upon them.",
-  "history": "Deep in the Archive of Ultimyr, shelved between scholarly treatises on dragon cladistics and books of untranslatable spells, there is an ancient tome of entomological curiosities. Compiled by scholars, the book describes the telepathic talents of the zealot scarab, a strange species of social insect with abilities unique to all the seven planes. Unlike most grubs of his colony, Nyx Assassin did not arise from metamorphosis with the plodding thoughts and blunted appendages common to the worker caste of his kind. For his was a special transformation, guided by the grace of Nyx. He was the chosen one, selected from the many and anointed with an extract of the queen goddess herself. Not all survive the dark blessing of the queen\u2019s chamber, but he emerged with a penetrating mind, and dagger-like claws\u2013his razor sharp mandibles raking the air while his thoughts projected directly into the minds of those around him. Of all zealot scarabs, he alone was selected for the highest calling. After his metamorphosis, he was reborn, by grace of Nyx, with abilities which shaped him for one thing and one thing only: to kill in the name of his goddess.",
+  "history": "Deep in the Archive of Ultimyr, shelved between scholarly treatises on dragon cladistics and books of untranslatable spells, there is an ancient tome of entomological curiosities. Compiled by scholars, the book describes the telepathic talents of the zealot scarab, a strange species of social insect with abilities unique to all the seven planes. Unlike most grubs of his colony, Nyx Assassin did not arise from metamorphosis with the plodding thoughts and blunted appendages common to the worker caste of his kind. For his was a special transformation, guided by the grace of Nyx. He was the chosen one, selected from the many and anointed with an extract of the queen goddess herself. Not all survive the dark blessing of the queen's chamber, but he emerged with a penetrating mind, and dagger-like claws\u2013his razor sharp mandibles raking the air while his thoughts projected directly into the minds of those around him. Of all zealot scarabs, he alone was selected for the highest calling. After his metamorphosis, he was reborn, by grace of Nyx, with abilities which shaped him for one thing and one thing only: to kill in the name of his goddess.",
   "talents": [
     {
       "talentLvl": "25",
@@ -258,8 +270,8 @@
     },
     {
       "talentLvl": "20",
-      "talentLeft": "+140 Impale Damage",
-      "talentRight": "+75% Spiked Carapace Damage"
+      "talentLeft": "+130 Impale Damage",
+      "talentRight": "+0.6s Spiked Carapace Stun Duration"
     },
     {
       "talentLvl": "15",

@@ -2,7 +2,6 @@
   "abilities": [
     {
       "notes": [
-        "The cast range talent also affects the max distance of Crypt Swarm and the link break distance of Spirit Siphon.",
         "The magic resistance talent stacks multiplicatively with other sources of magic resistance.",
         "The magic resistance talent increases Death Prophet's magic resistance to 34%.",
         "This attack damage talent is added as raw attack damage, so it does not benefit illusions, and is not affected by most percentage-based damage increasing or reducing effects.",
@@ -17,12 +16,12 @@
         },
         {
           "talentLvl": "20",
-          "talentLeft": "-3s Crypt Swarm Cooldown",
+          "talentLeft": "-3.5s Crypt Swarm Cooldown",
           "talentRight": "+400 Health"
         },
         {
           "talentLvl": "15",
-          "talentLeft": "+150 Cast Range",
+          "talentLeft": "+6% Movement Speed",
           "talentRight": "+0.8% Max Health Spirit Siphon"
         },
         {
@@ -41,22 +40,23 @@
       ],
       "notes": [
         "When targeting a unit, the Crypt Swarm is released towards its current location upon cast.",
-        "Crypt Swarm travels at a speed of 1100, taking 0.74 (TagTalent 0.87) seconds to travel the full distance.",
-        "Can hit units up to 1110 (TagTalent 1260) range away (travel distance + end radius).",
+        "Crypt Swarm travels at a speed of 1100, taking 0.74 seconds to travel the full distance.",
+        "With the travel distance and end radius, Crypt Swarm can hit units up to 1110 range away. The complete area is shaped like a cone.",
         "The complete area is shaped like a cone."
       ],
-      "mana": "85\/110\/135\/160",
+      "mana": "80\/95\/110\/125",
       "hotKey": "Q",
-      "cooldown": "8\/7\/6\/5 (TagTalent 5\/4\/3\/2)",
+      "cooldown": "8\/7\/6\/5 (TagTalent 4.5\/3.5\/2.5\/1.5)",
       "description": "Sends a swarm of winged beasts to savage enemy units in front of Death Prophet.",
       "spellName": "Crypt Swarm",
       "params": [
-        "Cast Animation: 0.2+0.87",
-        "Cast Range: 600 (TagTalent 750)",
+        "Cast Animation: 0.2+0.5",
+        "Cast Range: 600",
         "Starting Radius: 110",
-        "Travel Distance: 810 (TagTalent 960)",
+        "Travel Distance: 810",
         "End Radius: 300",
-        "Damage: 75\/150\/225\/300"
+        "Damage: 75\/150\/225\/300",
+        "Krobelus' many trips to the grave gather a flock of the damned."
       ],
       "itemBehaviour": [],
       "legacyKey": "R",
@@ -69,7 +69,8 @@
         "Affects Enemies"
       ],
       "notes": [
-        "Applies a debuff on enemies within the area on cast. Entering or leaving the area afterwards has no effect."
+        "Applies a debuff on enemies within the area on cast. Entering or leaving the area afterwards has no effect.",
+        "Entering or leaving the area afterwards has no effect."
       ],
       "mana": "80\/90\/100\/110",
       "hotKey": "W",
@@ -78,10 +79,11 @@
       "spellName": "Silence",
       "params": [
         "Cast Animation: 0.4+0.87",
-        "Cast Range: 900 (TagTalent 1050)",
+        "Cast Range: 900",
         "Radius: 425",
         "Duration: 3\/4\/5\/6",
-        "Silence persists if debuff was placed before spell immunity and when not dispelled."
+        "Silence persists if debuff was placed before spell immunity and when not dispelled.",
+        "Peering into the veil of her opponent's demise, Krobelus sees a silent future."
       ],
       "itemBehaviour": [],
       "legacyKey": "E",
@@ -95,42 +97,42 @@
         "Damage Magical"
       ],
       "notes": [
-        "Upon learning, Death Prophet instantly gains charges. However, leveling it up further does not instantly grant the other charges.",
-        "The link breaks only when the target gets out of range or dies.",
-        "The health restored on Death Prophet is independent from the actual amount of damage dealt. This means even if the target takes no damage at all, Death Prophet still gets healed.",
+        "Upon learning Spirit Siphon, Death Prophet instantly gains charges. However, leveling it up further does not instantly grant the other charges.",
+        "The link breaks only when the target gets out of 750 range or dies.",
+        "The health restored on Death Prophet is independent from the actual amount of damage dealt. This means even if the target takes no damage at all, Death Prophet still gets healed. Does not damage invulnerable or hidden targets.",
         "This means even if the target takes no damage at all, Death Prophet still gets healed.",
-        "Drains 3.5 + 0.25%\/0.625%\/1%\/1.375% (TagTalent 0.45%\/0.825%\/1.2%\/1.575%) of the enemy's max health in 0.25 second intervals, starting 0.25 seconds after cast, resulting in 24 instances. Can drain up to 84 + 6%\/15%\/24%\/33% (TagTalent 10.8%\/19.8%\/28.8%\/37.8%) of the enemy's max health when the link lasts its full duration (before reductions).",
+        "Does not damage invulnerable or hidden targets.",
+        "Drains 3.5 + 0.25%\/0.625%\/1%\/1.375% (TagTalent 0.45%\/0.825%\/1.2%\/1.575%) of the enemy's max health in 0.25-second intervals, starting 0.25 seconds after cast, resulting in 24 instances. Can drain up to 84 + 6%\/15%\/24%\/33% (TagTalent 10.8%\/19.8%\/28.8%\/37.8%) of the enemy's max health when the link lasts its full duration (before reductions). The max health drain talent does not increase the draining of any currently active Spirit Siphon links.",
         "Can drain up to 84 + 6%\/15%\/24%\/33% (TagTalent 10.8%\/19.8%\/28.8%\/37.8%) of the enemy's max health when the link lasts its full duration (before reductions).",
-        "With Aghanim's Shard, Spirit Siphon drains 0.19 armor from the target in 0.25 second intervals, starting 0.25 seconds after cast, resulting in 24 instances. Can drain up to 4.5 armor from the target when the link lasts its full duration. The buff and debuff are placed once upon cast and the armor values updated on each tick. This means dispelling the modifier stops the armor gain\/loss for the dispelled unit. The buff and debuff are independent from each other. Dispelling one does not dispel the other. Multiple instances of the armor buff and debuff fully stack.",
-        "Can drain up to 4.5 armor from the target when the link lasts its full duration.",
-        "The buff and debuff are placed once upon cast and the armor values updated on each tick.",
-        "This means dispelling the modifier stops the armor gain\/loss for the dispelled unit.",
-        "The buff and debuff are independent from each other. Dispelling one does not dispel the other.",
-        "Multiple instances of the armor buff and debuff fully stack.",
-        "Cannot be cast on units which already are affected by Spirit Siphon.",
+        "The max health drain talent does not increase the draining of any currently active Spirit Siphon links.",
+        "Cannot be cast on units which already are affected by Spirit Siphon. Cannot be cast on Roshan.",
+        "Cannot be cast on Roshan.",
         "Does not provide vision over the target. However, the link does not break upon losing vision. When losing vision over the target, the link visually draws to the location where the target was seen last time.",
         "When losing vision over the target, the link visually draws to the location where the target was seen last time.",
-        "Cannot be cast on Roshan.",
-        "Choosing the health drain increasing talent does not increase the draining of any currently active Spirit Siphon links."
+        "With Aghanim's Shard, applies fear on units if it is affected by Spirit Siphon for 4 seconds in any way. For example, if an enemy unit is affected Spirit Siphon, and it is hidden during its drain duration, the enemy unit will still be feared upon returning because it is affected by Spirit Siphon for 4 seconds (or more). However if the target is hidden exactly at the 4th second, fear is not applied. Enemies affected by fear run away from the caster, rather than make them run towards their team's fountain.",
+        "For example, if an enemy unit is affected Spirit Siphon, and it is hidden during its drain duration, the enemy unit will still be feared upon returning because it is affected by Spirit Siphon for 4 seconds (or more).",
+        "However if the target is hidden exactly at the 4th second, fear is not applied.",
+        "Enemies affected by fear run away from the caster, rather than make them run towards their team's fountain."
       ],
       "mana": "80",
       "hotKey": "E",
       "cooldown": "0",
-      "description": "Creates a spirit link between Death Prophet and an enemy unit, draining 14 + 1%\/2.5%\/4%\/5.5% Max HP per second and steal 6 movement speed from the enemy.",
+      "description": "Creates a spirit link between Death Prophet and an enemy unit, draining 14 + 1%\/2.5%\/4%\/5.5% Max HP per second from the enemy.",
       "spellName": "Spirit Siphon",
       "params": [
         "Cast Animation: 0.1+0",
-        "Cast Range: 500 (TagTalent 650)",
-        "Link Break Distance: 750 (TagTalent 900)",
+        "Cast Range: 500",
+        "Link Break Distance: 750",
         "Base Health Drain per Second: 14",
         "Max Health Drain per Second: 1%\/2.5%\/4%\/5.5% (TagTalent 1.8%\/3.3%\/4.8%\/6.3%)",
         "Drain Duration: 6",
-        "Number of Charges: 1\/2\/3\/4",
+        "Number of Charges: 1\/2\/3\/4 (TagTalent 2\/3\/4\/5)",
         "Charge Replenish Time: 36\/34\/32\/30 (TagTalent 16\/14\/12\/10)",
-        "Armor Change per Second: 0.75",
-        "Armor Duration: 14",
-        "Drains 0.75 armor per second and gives it to Death Prophet. Armor gain\/loss lasts for 14 seconds.",
-        "Slow does not persist, but attempts to deal damage if debuff was placed before spell immunity."
+        "Fear Timer: 4",
+        "Fear Duration: 2",
+        "Increases Spirit Siphon charges by 1 and causes enemies to be feared for 2 seconds if they are siphoned for 4 seconds consecutively.",
+        "Slow and fear does not persist, but attempts to deal damage if debuff was placed before spell immunity.",
+        "Krobelus willingly shows others the path she alone cannot follow."
       ],
       "itemBehaviour": [],
       "legacyKey": "C",
@@ -144,35 +146,35 @@
         "Damage Physical"
       ],
       "notes": [
-        "Spirits spawn from Death Prophet in 0.35 second intervals, starting immediately on cast, taking 2.45\/5.25\/8.05 (TagTalent 5.25\/8.05\/10.85) seconds for all spirits to be released.",
+        "The spirits are spawned from Death Prophet in 0.35-second intervals, starting immediately on cast, taking 2.45\/5.25\/8.05 (TagTalent 5.25\/8.05\/10.85) seconds for all spirits to be released.",
         "The spirits are not units and cannot be interacted with, or affected by anything in any way.",
-        "The spirits move at a speed of 525, roaming around Death Prophet within a 700 radius. They can only turn by moving in approximately 150 radius arcs.",
-        "Spirits automatically attack nearby enemies within the 700 radius around Death Prophet. They choose their target randomly, but prioritize units Death Prophet is attacking currently. Once having chosen a target, a spirit usually sticks to that target until it dies, gets out of range, or until Death Prophet attacks a new target. A spirit's ongoing chase cannot be canceled. A spirit only stops chasing its target after reaching it, or when the distance gets greater than 1900. This means when giving Death Prophet an attack order, already attacking spirits do not switch targets. Although chasing for much further, the spirits cannot damage units which are 1200 range away from Death Prophet. After each attack, the spirits need to return to Death Prophet before being able to attack again.",
+        "Spirits move at a speed of 525, roam around and automatically attack nearby enemies within the 700 radius around Death Prophet. They can only turn by moving in approximately 150 radius arcs. They choose their target randomly, but prioritize units Death Prophet is attacking currently. Once having chosen a target, a spirit usually sticks to that target until the target dies, gets out of range, or until Death Prophet issues a new attack order. A spirit's ongoing chase cannot be canceled. A spirit only stops chasing its target after reaching it, or when the distance gets greater than 1900. This means when giving Death Prophet an attack order (A or Right Click), already attacking spirits do not switch targets. Although chasing for much further, the spirits cannot damage units which are 1200 range away from Death Prophet. After each attack, the spirits need to return to Death Prophet before being able to attack again.",
+        "They can only turn by moving in approximately 150 radius arcs.",
         "They choose their target randomly, but prioritize units Death Prophet is attacking currently.",
-        "Once having chosen a target, a spirit usually sticks to that target until it dies, gets out of range, or until Death Prophet attacks a new target.",
+        "Once having chosen a target, a spirit usually sticks to that target until the target dies, gets out of range, or until Death Prophet issues a new attack order.",
         "A spirit's ongoing chase cannot be canceled. A spirit only stops chasing its target after reaching it, or when the distance gets greater than 1900.",
-        "This means when giving Death Prophet an attack order, already attacking spirits do not switch targets.",
+        "This means when giving Death Prophet an attack order (A or Right Click), already attacking spirits do not switch targets.",
         "Although chasing for much further, the spirits cannot damage units which are 1200 range away from Death Prophet.",
         "After each attack, the spirits need to return to Death Prophet before being able to attack again.",
-        "The spirits can attack every attackable enemy unit, including buildings, wards, and units inside the fog of war, but not invisible units. Spirits do not choose invulnerable or ethereal units as their attack targets, but will continue to attack a unit if turns invulnerable or ethereal after already acquired as a target.",
-        "Spirits do not choose invulnerable or ethereal units as their attack targets, but will continue to attack a unit if turns invulnerable or ethereal after already acquired as a target.",
-        "The spirits do not actually attack their targets, but rather the spell simply deals damage to spirits' targets upon reaching them. This means the damage is affected by spell lifesteal and spell damage amplification, does not trigger any on-attack effects, and ignores evasion and damage block.",
+        "The spirits can attack every attackable enemy unit, including buildings, wards, and units inside the Fog of War, but not invisible units. Spirits do not choose invulnerable or ethereal units as their attack targets, but will continue to attack the target if it turns invulnerable or ethereal after being acquired as a target.",
+        "Spirits do not choose invulnerable or ethereal units as their attack targets, but will continue to attack the target if it turns invulnerable or ethereal after being acquired as a target.",
+        "The spirits do not actually attack their targets, but rather Exorcism simply deals damage to the targets upon reaching them. This means the damage is affected by spell lifesteal and spell damage amplification, does not trigger any on-attack effects, and ignores evasion and damage block.",
         "This means the damage is affected by spell lifesteal and spell damage amplification, does not trigger any on-attack effects, and ignores evasion and damage block.",
         "When a spirit gets 2000 range away from Death Prophet, it disappears and then respawns from Death Prophet. Reappearing spirits are still bound to the spawn interval, so when multiple spirits disappear, they do not reappear simultaneously on Death Prophet.",
         "Reappearing spirits are still bound to the spawn interval, so when multiple spirits disappear, they do not reappear simultaneously on Death Prophet.",
-        "The spirits heal Death Prophet upon returning once the duration is up. They do not heal her upon returning after each attack. The heal amount per spirit is based on their damage value, and not on how much damage they actually dealt. This means upon having fully returned, a spirit heals Death Prophet for 14.75-16 for each attack it did, regardless of how much damage the enemies actually took.",
+        "The spirits heal Death Prophet upon returning once the Exorcism duration is up. They do not heal her upon returning after each attack. The heal amount per spirit is based on their damage value, and not on how much damage they actually dealt. This means upon having fully returned, a spirit heals Death Prophet for 14.75-16 health for each attack it did, regardless of how much damage the enemies actually took.",
         "The heal amount per spirit is based on their damage value, and not on how much damage they actually dealt.",
-        "This means upon having fully returned, a spirit heals Death Prophet for 14.75-16 for each attack it did, regardless of how much damage the enemies actually took.",
+        "This means upon having fully returned, a spirit heals Death Prophet for 14.75-16 health for each attack it did, regardless of how much damage the enemies actually took.",
         "Recasting Exorcism causes the previous cast to end prematurely, making the spirits start returning to Death Prophet and heal her.",
-        "With Aghanim's Scepter, the spirits spawned behave like the spirits from a regular cast, meaning they still obey the max distances, and have the same move behaviors. A spirit spawns for every unit hit by Crypt Swarm, and Silence, for the Spirit Siphon target, and for every unit hit by Death Prophet's regular attacks. If Spirit Siphon is blocked with Spell Block, or if her attack is evaded or disjointed, no spirit spawns. Spirits also spawn for buildings when attacking them, but not for wards or allies. These spirits deal 88.5-96 damage, and therefore also heal for 22.125-24 health upon returning. These spirits can chase their targets for up to seconds before giving up and returning to Death Prophet. In Ability Draft, spirits still only spawn for enemies hit by Crypt Swarm, Silence and Spirit Siphon, but not for other spells. They do spawn on regular attacks for any hero. The upgrade requires Exorcism to work. This means Morphling cannot use the upgrade, while Rubick can, but mainly with his attacks. With proper timing, Rubick can also use the spawn spirits upgrade with Crypt Swarm by using the projectile's travel time.",
-        "A spirit spawns for every unit hit by Crypt Swarm, and Silence, for the Spirit Siphon target, and for every unit hit by Death Prophet's regular attacks.",
+        "With Aghanim's Scepter, the spirits spawned behave like the spirits from a regular cast, meaning they still use the same max distances, and have the same move behaviors. A spirit spawns for every unit hit by Death Prophet's basic abilities (TagTalent Crypt Swarm, Silence, each Spirit Siphon target) and for every unit hit by Death Prophet's regular attacks. In Ability Draft, spirits only spawn for enemies hit by Crypt Swarm, Silence and Spirit Siphon, but not for other abilities. They do spawn on regular attacks for any hero. If Spirit Siphon is blocked with Spell Block, or if her attack is evaded or disjointed, no spirit spawns. These spirits also spawn when attacking buildings, but not for wards or allies. These spirits deal 88.5-96 damage, and therefore also heal for 22.13-24 health upon returning. These spirits can chase their targets for up to 20 seconds before giving up and returning to Death Prophet.",
+        "A spirit spawns for every unit hit by Death Prophet's basic abilities (TagTalent Crypt Swarm, Silence, each Spirit Siphon target) and for every unit hit by Death Prophet's regular attacks. In Ability Draft, spirits only spawn for enemies hit by Crypt Swarm, Silence and Spirit Siphon, but not for other abilities. They do spawn on regular attacks for any hero.",
+        "In Ability Draft, spirits only spawn for enemies hit by Crypt Swarm, Silence and Spirit Siphon, but not for other abilities. They do spawn on regular attacks for any hero.",
         "If Spirit Siphon is blocked with Spell Block, or if her attack is evaded or disjointed, no spirit spawns.",
-        "Spirits also spawn for buildings when attacking them, but not for wards or allies.",
-        "These spirits deal 88.5-96 damage, and therefore also heal for 22.125-24 health upon returning.",
-        "These spirits can chase their targets for up to seconds before giving up and returning to Death Prophet.",
-        "In Ability Draft, spirits still only spawn for enemies hit by Crypt Swarm, Silence and Spirit Siphon, but not for other spells. They do spawn on regular attacks for any hero.",
-        "The upgrade requires Exorcism to work. This means Morphling cannot use the upgrade, while Rubick can, but mainly with his attacks.",
-        "With proper timing, Rubick can also use the spawn spirits upgrade with Crypt Swarm by using the projectile's travel time."
+        "These spirits also spawn when attacking buildings, but not for wards or allies.",
+        "These spirits deal 88.5-96 damage, and therefore also heal for 22.13-24 health upon returning.",
+        "These spirits can chase their targets for up to 20 seconds before giving up and returning to Death Prophet.",
+        "These upgraded effects are bounded to Exorcism. This means Morphling cannot use the upgrade, while Rubick can, but mainly with his attacks. With proper timing, it is possible for Rubick to spawn Exorcism's spirits with Crypt Swarm by using the projectile's travel time.",
+        "With proper timing, it is possible for Rubick to spawn Exorcism's spirits with Crypt Swarm by using the projectile's travel time."
       ],
       "mana": "250\/350\/450",
       "hotKey": "R",
@@ -190,12 +192,13 @@
         "Life Drain: 25%",
         "Self Move Speed Bonus: 16%\/18%\/20%",
         "Exorcism Duration: 35",
-        "Spirit Damage Multiplier: 1 (TagAghanim 1.5)",
+        "Secondary Spirit Damage Multiplier: 1.5",
         "Spirit Move Speed Slow: 100%",
         "Spirit Slow Duration: 0.3",
         "Spirit Max Duration: 20",
         "Whenever an enemy is affected by your spells or when you attack an enemy, a ghost will fly out, slow and hit the enemy for bonus its usual damage then return to you with life.",
-        "The slow from the Aghanim's Scepter upgrade pierces spell immunity as well."
+        "The slow pierces spell immunity.",
+        "Over time, the banshee remnants of her previous lives return to haunt the present."
       ],
       "itemBehaviour": [],
       "legacyKey": "X",
@@ -211,7 +214,7 @@
     "attrAgility": 14.0
   },
   "description": "Krobelus, the Death Prophet, is a ranged intelligence hero who excels at pushing lanes. She is often played in the mid lane, since her Crypt Swarm gives her strong magic damage that can be spammed to her heart's content. As she levels her ultimate, Exorcism, Death Prophet can deal a huge amount of damage to towers and heroes alike, while healing at the end of the duration. If Exorcism's own heal isn't enough, she still has Spirit Siphon which drains health based on the target's health and can even be used on multiple targets at the same time. Finally, her Silence gives her a powerful tool to disable enemy casters and heroes that rely on escape abilities. Because she can deal large amounts of damage over time with her ultimate and Crypt Swarm, Death Prophet is mostly built as a tank, to ensure she can continue to stay in the fight.",
-  "history": "Krobelus was a Death Prophet\u2014which is one way of saying she told fortunes for the wealthiest of those who wished to look beyond the veil. But after years of inquiring on behalf of others, she began to seek clues on her own fate. When death refused to yield its secrets, she tried to buy them with her life. But the ultimate price proved insufficient. Death disgorged her again and again, always holding back its deepest mysteries. Her jealousy grew. Others could die for eternity\u2014why not she? Why must she alone be cast back on the shores of life with such tiresome regularity? Why was she not worthy of the one thing all other living creatures took for granted? Still, she would not be discouraged. Each time she returned from the grave, she brought a bit of death back with her. Wraiths followed her like fragments of her shattered soul; her blood grew thin and ectoplasmic; the feasting creatures of twilight took her for their kin. She gave a little of her life with every demise, and it began to seem as if her end was in sight. With her dedication to death redoubled, and no client other than herself, Krobelus threw herself ever more fervently into death's abyss, intent on fulfilling the one prophecy that eluded her: That someday the Death Prophet would return from death no more.",
+  "history": "Krobelus was a Death Prophet\u2014which is one way of saying she told fortunes for the wealthiest of those who wished to look beyond the veil. But after years of inquiring on behalf of others, she began to seek clues on her own fate. When death refused to yield its secrets, she tried to buy them with her life. But the ultimate price proved insufficient. Death disgorged her again and again, always holding back its deepest mysteries. Her jealousy grew. Others could die for eternity\u2014why not she? Why must she alone be cast back on the shores of life with such tiresome regularity? Why was she not worthy of the one thing all other living creatures took for granted? Still, she would not be discouraged. Each time she returned from the grave, she brought a bit of death back with her. Wraiths followed her like fragments of her shattered soul; her blood grew thin and ectoplasmic; the feasting creatures of twilight took her for their kin.. She gave a little of her life with every demise, and it began to seem as if her end was in sight. With her dedication to death redoubled, and no client other than herself, Krobelus threw herself ever more fervently into death's abyss, intent on fulfilling the one prophecy that eluded her: That someday the Death Prophet would return from death no more.",
   "talents": [
     {
       "talentLvl": "25",
@@ -220,12 +223,12 @@
     },
     {
       "talentLvl": "20",
-      "talentLeft": "-3s Crypt Swarm Cooldown",
+      "talentLeft": "-3.5s Crypt Swarm Cooldown",
       "talentRight": "+400 Health"
     },
     {
       "talentLvl": "15",
-      "talentLeft": "+150 Cast Range",
+      "talentLeft": "+6% Movement Speed",
       "talentRight": "+0.8% Max Health Spirit Siphon"
     },
     {

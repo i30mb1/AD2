@@ -3,28 +3,28 @@
     {
       "notes": [
         "This attack damage talent is added as raw attack damage, so it does not benefit illusions, and is not affected by most percentage-based damage increasing or reducing effects.",
-        "The strength talent effectively grants Kunkka 400 health, 2 health regeneration, and 20 attack damage."
+        "The strength talent effectively grants Kunkka 320 health, 1.6 health regeneration, and 16 attack damage."
       ],
       "spellName": "Talent",
       "talents": [
         {
           "talentLvl": "25",
-          "talentLeft": "+140% Tidebringer Cleave",
+          "talentLeft": "-2s Tidebringer Cooldown",
           "talentRight": "Ghostship Fleet"
         },
         {
           "talentLvl": "20",
-          "talentLeft": "+20 Strength",
+          "talentLeft": "+70% Tidebringer Cleave",
           "talentRight": "+80 Torrent AoE"
         },
         {
           "talentLvl": "15",
           "talentLeft": "+100 Torrent Damage",
-          "talentRight": "+8 Health Regen"
+          "talentRight": "+16 Strength"
         },
         {
           "talentLvl": "10",
-          "talentLeft": "+150 Cast Range",
+          "talentLeft": "+0.4s Torrent Knock Up\/Stun Duration",
           "talentRight": "+30 Damage"
         }
       ]
@@ -37,16 +37,17 @@
         "Damage Magical"
       ],
       "notes": [
-        "The total delay is 2 seconds at all levels (cast time + effect delay).",
+        "With the cast time and effect delay, the total delay is 2 seconds at all levels.",
         "Torrent can be cast without having to face towards the targeted area.",
         "Units tossed in the air are stunned and still able to be attacked.",
         "While in the air, other units may pass below hit airborne units.",
         "The stun and slow are applied at the same time, so overall, the slow lasts for 2.6\/3.6\/4.6\/5.6 seconds.",
-        "The knockup itself lasts 1.53 seconds, so hit units are on the ground for the remaining 0.07 seconds of the stun.",
+        "The knockup itself lasts 1.53 (TagTalent 1.93) seconds, so hit units are on the ground for the remaining 0.07 seconds of the stun. With the level 10 talent, since both stun and knockup duration is increased by 0.4 seconds, the remaining duration of the stun stays the same.",
+        "With the level 10 talent, since both stun and knockup duration is increased by 0.4 seconds, the remaining duration of the stun stays the same.",
         "After casting, a visual effect appears at the targeted area and a sound effect plays for the delay period. These effects are visible and audible to allies only.",
         "These effects are visible and audible to allies only.",
-        "Deals 9.375\/18.75\/28.125\/37.5 (TagTalent 21.875\/31.25\/40.625\/50) damage in 0.2 second intervals, starting 0.2 seconds after the effect delay, resulting in 8 damage instances.",
-        "Provides 350 radius ground vision over the targeted area upon cast for 3.13 seconds."
+        "Deals 9.38\/18.75\/28.13\/37.5 (TagTalent 21.88\/31.25\/40.63\/50) damage in 0.2-second intervals, starting 0.2 seconds after the effect delay, resulting in 8 (TagTalent 10) damage instances.",
+        "Provides 350 radius ground vision over the targeted area upon cast for 3.13 (TagTalent 3.93) seconds."
       ],
       "mana": "90\/100\/110\/120",
       "hotKey": "Q",
@@ -55,16 +56,17 @@
       "spellName": "Torrent",
       "params": [
         "Cast Animation: 0.4+0",
-        "Cast Range: 1500 (TagTalent 1650)",
+        "Cast Range: 1300",
         "Effect Radius: 225 (TagTalent 305)",
         "Effect Delay: 1.6",
         "Total Damage: 75\/150\/225\/300 (TagTalent 175\/250\/325\/400)",
         "Move Speed Slow: 35%",
         "Slow Duration: 1\/2\/3\/4",
-        "Stun Duration: 1.6",
-        "Knockup Duration: 1.53",
-        "Adds a new ability: Torrent Storm.",
-        "Slow persists, and attempts to damage if debuff was placed before spell immunity and when not dispelled."
+        "Stun Duration: 1.6 (TagTalent 2)",
+        "Knockup Duration: 1.53 (TagTalent 1.93)",
+        "Grants a new ability: Torrent Storm.",
+        "Slow persists, and attempts to damage if debuff was placed before spell immunity and when not dispelled.",
+        "An ancestral rush of water explodes from the center of the world, called upon by the Admiral."
       ],
       "itemBehaviour": [],
       "legacyKey": "E",
@@ -78,12 +80,14 @@
         "Damage Physical"
       ],
       "notes": [
-        "Upon leveling Tidebringer the first time, it has autocast active by default.",
-        "Cleave damage cannot be amplified with outgoing spell damage amplification and cannot spell lifesteal. Can be amplified by incoming spell damage amplification.",
+        "Upon leveling Tidebringer the first time, it has Autocast on by default.",
+        "Cleave damage cannot be amplified with outgoing spell damage amplification and cannot spell lifesteal. Can be amplified by incoming spell damage amplification. Cleave damage is reduced by Damage Block. Cleave damage depends on the attack damage value of the cleaving unit, not on how much their primary attack target took. The complete cleave area is shaped like an isosceles trapezoid in front of the attacking unit. Fully stacks with other sources of cleave. Each source of cleave works completely independent.",
         "Can be amplified by incoming spell damage amplification.",
         "Cleave damage is reduced by Damage Block.",
-        "The complete area is shaped like an isosceles trapezoid in front of Kunkka.",
+        "Cleave damage depends on the attack damage value of the cleaving unit, not on how much their primary attack target took.",
+        "The complete cleave area is shaped like an isosceles trapezoid in front of the attacking unit.",
         "Fully stacks with other sources of cleave. Each source of cleave works completely independent.",
+        "The complete area is shaped like an isosceles trapezoid in front of Kunkka.",
         "The particle effects on hit enemies are visible on invisible enemies and through the Fog of War.",
         "Does not work against wards, buildings, and allied units.",
         "Plays an audio effect when going off cooldown, audible to the player only.",
@@ -99,9 +103,10 @@
         "Starting Radius: 150",
         "Distance: 650\/800\/950\/1100",
         "End Radius: 500\/550\/600\/650",
-        "Cleave Damage: 165% (TagTalent 305%)",
+        "Cleave Damage: 165% (TagTalent 235%)",
         "Attack Damage Bonus: 25\/50\/75\/100",
-        "Illusions gain the visual effects and the attack sounds, but they neither gain the damage nor can cleave."
+        "Illusions gain the visual effects and the attack sounds, but they neither gain the damage nor can cleave.",
+        "A lost Claddish soul inhabits Kunkka's trusty Tidebringer, empowering it to destroy demons of the Cataract."
       ],
       "itemBehaviour": [],
       "legacyKey": "D",
@@ -115,34 +120,35 @@
       ],
       "notes": [
         "↓↓ Double-tapping automatically targets self.",
-        "The target is given a stop command as soon as it is teleported back, effectively canceling channeling spells.",
+        "The target is given a stop command as soon as it is teleported back, effectively canceling channeling abilities.",
         "Does not disjoint projectiles for the target upon getting teleported back.",
         "Marks the target's current location with a red X. This X is visible to enemies only when they have vision over the unit, or the X itself.",
         "The affected unit leaves behind a red dotted line while walking, showing which direction it went. These lines stop drawing for the enemies if the unit is not visible. However, already drawn lines stay visible. Once the unit turns visible again, a straight line of red lines is drawn towards their last known location. These red lines ignore the actual path the unit took. They simply draw from its current to its previously last known location.",
         "These lines stop drawing for the enemies if the unit is not visible. However, already drawn lines stay visible.",
         "Once the unit turns visible again, a straight line of red lines is drawn towards their last known location.",
         "These red lines ignore the actual path the unit took. They simply draw from its current to its previously last known location.",
-        "Multiple instances of X Marks the Spot on the same target do not stack. Only the duration gets visually refreshed. Although refreshed, the return timer is unaffected, so that the unit still returns based on the first cast. Every cast creates its own X below the target. If the modifier expires, it returns to the X of the first cast. If any of the casters use the Return sub-spell, the unit returns to the X that caster created. Once the unit returned to any of the X's, all other instances get completely canceled, although not visually.",
+        "Multiple instances of X Marks the Spot on the same target do not stack. Only the duration gets visually refreshed. Although refreshed, the return timer is unaffected, so that the unit still returns based on the first cast. Every cast creates its own X below the target. If the modifier expires, it returns to the X of the first cast. If any of the casters use the Return sub-ability, the unit returns to the X that caster created. Once the unit returned to any of the X's, all other instances get completely canceled, although not visually.",
         "Although refreshed, the return timer is unaffected, so that the unit still returns based on the first cast.",
         "Every cast creates its own X below the target. If the modifier expires, it returns to the X of the first cast.",
-        "If any of the casters use the Return sub-spell, the unit returns to the X that caster created.",
+        "If any of the casters use the Return sub-ability, the unit returns to the X that caster created.",
         "Once the unit returned to any of the X's, all other instances get completely canceled, although not visually.",
         "Despite the visual effects, the target does not return to the X after dying and respawning during it.",
-        "When the target is invulnerable, it does not get returned to the X, causing the spell to get wasted.",
+        "When the target is invulnerable, it does not get returned to the X, causing the ability to get wasted.",
         "Provides 300 radius ground vision around the X mark for 5.94 seconds."
       ],
       "mana": "50",
       "hotKey": "E",
-      "cooldown": "38\/30\/22\/14",
+      "cooldown": "24\/20\/16\/12",
       "description": "Targets a friendly or enemy Hero, marks their position with an X, and returns them to it after several seconds. Kunkka can trigger the return at any time during the duration. Lasts twice as long on allied heroes.",
       "spellName": "X Marks the Spot",
       "params": [
         "Cast Animation: 0.4+0",
-        "Cast Range: 400\/600\/800\/1000 (TagTalent 550\/750\/950\/1150)",
+        "Cast Range: 400\/600\/800\/1000",
         "Enemy Duration: 4",
         "Allies Duration: 8",
         "Can target and return spell immune allies. Cannot target or return spell immune enemies.",
-        "Blocked upon cast. Not blocked upon returning."
+        "Blocked upon cast. Not blocked upon returning.",
+        "The Admiral's set of arcane abilities includes some that can be used for battle as well as entertainment."
       ],
       "itemBehaviour": [],
       "legacyKey": "X",
@@ -155,8 +161,8 @@
         "Affects Enemy Heroes \/ Allied Heroes"
       ],
       "notes": [
-        "Replaces X Marks the Spot until the X disappears on the target.",
-        "Despite being a sub-spell, Return does proc all on-cast effects like a regular spell."
+        "Replaces X Marks the Spot until the sub-ability is used or the X disappears on the target.",
+        "Despite being a sub-ability, Return does proc all on-cast effects like a regular ability."
       ],
       "mana": null,
       "hotKey": "E",
@@ -179,16 +185,17 @@
         "Damage Magical"
       ],
       "notes": [
-        "Requires Aghanim's Scepter to be unlocked.",
-        "Creates a Torrent immediately upon cast, and then one every 0.25 seconds, for a total of 21 Torrents.",
+        "Requires Aghanim's Scepter to be unlocked. This ability is not available in Ability Draft, due to its reliance on a non-ultimate ability, which are limited to one ability slot.",
+        "This ability is not available in Ability Draft, due to its reliance on a non-ultimate ability, which are limited to one ability slot.",
+        "Torrent Storm's radius is centered on and follows Kunkka.",
+        "Creates a Torrent based on its current level immediately upon cast, and then one every 0.25 seconds, for a total of 21 Torrents. If Torrent is not learned, nothing spawns.",
+        "If Torrent is not learned, nothing spawns.",
         "Each Torrent can spawn within a random distance of 300 to 1100 away from Kunkka.",
         "The Torrent spawn radius is divided into four 90° segments (0°\u201390°, 90°\u2013180°, 180°\u2013270°, 270°\u2013360°).",
         "The first Torrent occurs within the north-east segment of the circle, following Torrents proceed counterclockwise.",
-        "The radius is always centered on Kunkka, following him wherever he goes.",
-        "The Torrents are based on the current level of Torrent on Kunkka. If it is not learned, no Torrents spawn.",
-        "Unlike a manually cast Torrent, the particle effect and the sound during the Torrents' delay are completely visible and audible to enemies.",
+        "Unlike a manually cast Torrent, the particle effect and the sound during the torrents' delay are completely visible and audible to enemies.",
         "Multiple casts of Torrent Storm fully stack, with each cast creating its own independent instance.",
-        "When Kunkka dies, the Torrents still occur at his location."
+        "When Kunkka dies, the torrents still occur at his location."
       ],
       "mana": "250",
       "hotKey": "D",
@@ -201,7 +208,8 @@
         "Max Spawn Radius: 1100",
         "Spawn Interval: 0.25",
         "Storm Duration: 5",
-        "Slow persists, and attempts to damage if debuff was placed before spell immunity and when not dispelled."
+        "Slow persists, and attempts to damage if debuff was placed before spell immunity and when not dispelled.",
+        "A hundred leagues of dry land couldn't keep these seas at bay."
       ],
       "itemBehaviour": [],
       "legacyKey": "R",
@@ -216,24 +224,24 @@
       ],
       "notes": [
         "Requires Aghanim's Shard to be unlocked.",
-        "The wave travels at a speed of 700, taking 2.86 (TagTalent 3.07) seconds to travel the full distance.",
-        "The wave spawns 600 range away from the targeted point, from the opposite direction where Kunkka is facing.",
-        "The wave can hit units up to 2150 (TagTalent 2300) range away (travel distance + radius).",
-        "Moves hit enemies towards the direction the wave is traveling. Enemies are not disabled during the knockback. They can still turn, attack and use abilities and items. Channeling abilities are not interrupted.",
-        "Enemies are not disabled during the knockback. They can still turn, attack and use abilities and items. Channeling abilities are not interrupted.",
-        "The wave first applies the debuff , then the damage."
+        "With the travel distance and radius, the wave can hit units up to 2150 range away.",
+        "The wave travels at a speed of 700, taking 3.29 seconds to travel the full distance.",
+        "The wave spawns 900 range away from the targeted point, from the opposite direction where Kunkka is facing.",
+        "Moves hit enemies towards the direction the wave is traveling. Enemies are not disabled during the knockback. They can still turn and use abilities and items. Channeling abilities are not interrupted. However they are disarmed.",
+        "Enemies are not disabled during the knockback. They can still turn and use abilities and items. Channeling abilities are not interrupted. However they are disarmed.",
+        "The wave first applies the debuff, then the damage."
       ],
       "mana": "75",
       "hotKey": "F",
-      "cooldown": "14",
-      "description": "Releases a Tidal Wave that spawns behind Kunkka. Deals 225 damage and drags enemies along it for 600 distance.",
+      "cooldown": "12",
+      "description": "Releases a Tidal Wave that spawns behind Kunkka. Deals 250 damage and drags enemies along it for 600 distance.",
       "spellName": "Tidal Wave",
       "params": [
         "Cast Animation: 0.2+1",
-        "Cast Range: 1400 (TagTalent 1550)",
-        "Travel Distance: 2000 (TagTalent 2150)",
+        "Cast Range: 1400",
+        "Travel Distance: 2300",
         "Radius: 750",
-        "Damage: 225",
+        "Damage: 250",
         "Knockback Distance: 600",
         "Knockback Duration: 1.25"
       ],
@@ -253,18 +261,18 @@
         "The ship spawns 2000 range away from the targeted point, from the opposite direction where Kunkka is facing, and crashes at the targeted point.",
         "The ship first applies the damage, then the debuff.",
         "A visual indicator appears at the location, showing the ship's destination point and radius. The indicator is only visible to allies.",
-        "The Ghost Ship Damage Absorb buff applies to allied heroes that come within 425 range of the ship at any time during its travel.",
-        "Once the absorb buff expires, the Ghost Ship Damage Delay buff is placed, which lasts 1.4 seconds. This buff deals 5% of the previously reduced damage as damage in 1 second intervals until all the reduced damage is returned.",
-        "This buff deals 5% of the previously reduced damage as damage in 1 second intervals until all the reduced damage is returned.",
+        "The Admiral's Rum buff applies to allied heroes that come within 425 range of the ship at any time during its travel.",
+        "Once the absorb buff expires, the Rum Hangover buff is placed, which lasts 1.4 seconds. This buff deals 5% of the previously reduced damage as damage in 1-second intervals until all the reduced damage is returned.",
+        "This buff deals 5% of the previously reduced damage as damage in 1-second intervals until all the reduced damage is returned.",
         "The delayed damage dealt after the Rum wears off is flagged as HP Removal. It does not interact with any on-damage effects. Therefore, the delayed damage cannot be avoided by anything. However, it is not lethal.",
         "Therefore, the delayed damage cannot be avoided by anything. However, it is not lethal.",
         "The Rum does not reduce damage for units under the effect of any damage negating effect.",
         "Rums from multiple casts do not stack, but refresh the duration instead. This delays the Rum wear-off buff.",
         "The Rum buff and Rum hangover buff do not interact with each other when having both (by recasting while having the hangover buff).",
         "The ship provides 300 radius flying vision around itself as it travels. This vision does not last.",
-        "When choosing the fleet talent on level 25, 3 ships spawn at the same location, traveling towards the same destination. The ships spawn in 3.35 second intervals, starting immediately on cast, so that the last ship spawns 6.7 seconds after cast. The ships's spawn location is set upon cast and does not adapt to the caster's current position as they spawn.",
-        "The ships spawn in 3.35 second intervals, starting immediately on cast, so that the last ship spawns 6.7 seconds after cast.",
-        "The ships's spawn location is set upon cast and does not adapt to the caster's current position as they spawn."
+        "The Ghostship Fleet talent spawns 3 ships at the same location, traveling towards the same destination. The ships spawn in 3.35-second intervals, starting immediately on cast, so that the last ship spawns 6.7 seconds after cast. Ghostship's spawn location is set upon cast and does not adapt to the caster's current position as they spawn.",
+        "The ships spawn in 3.35-second intervals, starting immediately on cast, so that the last ship spawns 6.7 seconds after cast.",
+        "Ghostship's spawn location is set upon cast and does not adapt to the caster's current position as they spawn."
       ],
       "mana": "125\/175\/225",
       "hotKey": "R",
@@ -273,7 +281,7 @@
       "spellName": "Ghostship",
       "params": [
         "Cast Animation: 0.3+0",
-        "Cast Range: 1000 (TagTalent 1150)",
+        "Cast Range: 1000",
         "Ship Radius: 425",
         "Travel Distance: 2000",
         "Number of Ships: 1 (TagTalent 3)",
@@ -286,7 +294,8 @@
         "Stun Duration: 1.4",
         "Grants a new ability: Tidal Wave.",
         "Fully affects spell immune allies. Does not affect spell immune enemies.",
-        "Illusions do not get the Rum buff nor its visual effect."
+        "Illusions do not get the Rum buff nor its visual effect.",
+        "The final ship of the Claddish Navy is nothing but a phantom, but it is all too real to the enemies of the Admiral."
       ],
       "itemBehaviour": [],
       "legacyKey": "T",
@@ -298,30 +307,30 @@
     "attrStrength": 24.0,
     "attrIntelligence": 18.0,
     "attrIntelligenceInc": 1.8,
-    "attrAgilityInc": 1.3,
+    "attrAgilityInc": 1.6,
     "attrAgility": 14.0
   },
   "description": "Kunkka, the Admiral, is a versatile melee strength hero built with an arsenal of powerful area-of-effect (AoE) spells. Two of his active spells are nukes that have long delay times, but can disable and disrupt the enemies' position. He is mostly played as a carry, initiator, or even as a ganking support. Kunkka is known for his Tidebringer sword, giving him the ability to cleave a large area around him with heavy potential damage on his next attack, which refreshes at a given period of time. Torrent calls upon the element of water to rise and burst out, dealing damage, disabling them up high, and slowing them on impact. There's a delay on this ability before it activates, so Kunkka must be wise in using this ability. X Marks the Spot targets any hero or Kunkka himself to be marked on their current position, and after a given time delay, instantly returns to the marked spot. Useful in setting up tricky spells, escape prevention, or even saving allies, X Marks the Spot makes the Admiral a great battle strategist. His ultimate lets him summon a Ghostship, which travels on ground, until it crashes a set distance away, stunning and damaging enemies on that location \u2013 potentially crippling the enemy team. The Ghostship also bolsters allies with Kunkka's Rum, granting them bonus movement speed and temporary numbness to damage. Capable of inflicting high burst damage with his spells, controlling their position while being able to survive the mayhem when his spells are used properly, Kunkka is a mighty offensive team fighter, built with strong physical and magical damage output, who can indeed turn the tide of a battle.",
-  "history": "As Admiral of the mighty Claddish Navy, Kunkka was charged with protecting the isles of his homeland when the Demons of the Cataract made a concerted grab at the lands of men. After years of small sorties, and increasingly bold and devastating attacks, the Demon Fleet flung all its carnivorous ships at the Trembling Isle. Desperate, the Suicide-Mages of Cladd committed their ultimate rite, summoning a host of ancestral spirits to protect the fleet. Against the Demons, this was just barely enough to turn the tide. As Kunkka watched the Demons take his ships down one by one, he had the satisfaction of wearing away their fleet with his ancestral magic. But at the battle's peak, something in the clash of demons, men and atavistic spirits must have stirred a fourth power that had been slumbering in the depths. The waves rose up in towering spouts around the few remaining ships, and Maelrawn the Tentacular appeared amid the fray. His tendrils wove among the ships, drawing demon and human craft together, churning the water and wind into a raging chaos. What happened in the crucible of that storm, none may truly say. The Cataract roars off into the void, deserted by its former denizens. Kunkka is now Admiral of but one ship, a ghostly rig which endlessly replays the final seconds of its destruction. Whether he died in that crash is anyone's guess. Not even Tidehunter, who summoned Maelrawn, knows for sure.",
+  "history": "As The Admiral of the mighty Claddish Navy, Kunkka was charged with protecting the isles of his homeland when the demons of the Cataract made a concerted grab at the lands of men. After years of small sorties, and increasingly bold and devastating attacks, the demon fleet flung all its carnivorous ships at the Trembling Isle. Desperate, the Suicide-Mages of Cladd committed their ultimate rite, summoning a host of ancestral spirits to protect the fleet. Against the demons, this was just barely enough to turn the tide. As Kunkka watched the demons take his ships down one by one, he had the satisfaction of wearing away their fleet with his ancestral magic. But at the battle's peak, something in the clash of demons, men and atavistic spirits must have stirred a fourth power that had been slumbering in the depths. The waves rose up in towering spouts around the few remaining ships, and Maelrawn the Tentacular appeared amid the fray. His tendrils wove among the ships, drawing demon and human craft together, churning the water and wind into a raging chaos. What happened in the crucible of that storm, none may truly say. The Cataract roars off into the void, deserted by its former denizens. Kunkka is now The Admiral of but one ship, a ghostly rig which endlessly replays the final seconds of its destruction. Whether he died in that crash is anyone's guess. Not even Tidehunter, who summoned Maelrawn, knows for sure.",
   "talents": [
     {
       "talentLvl": "25",
-      "talentLeft": "+140% Tidebringer Cleave",
+      "talentLeft": "-2s Tidebringer Cooldown",
       "talentRight": "Ghostship Fleet"
     },
     {
       "talentLvl": "20",
-      "talentLeft": "+20 Strength",
+      "talentLeft": "+70% Tidebringer Cleave",
       "talentRight": "+80 Torrent AoE"
     },
     {
       "talentLvl": "15",
       "talentLeft": "+100 Torrent Damage",
-      "talentRight": "+8 Health Regen"
+      "talentRight": "+16 Strength"
     },
     {
       "talentLvl": "10",
-      "talentLeft": "+150 Cast Range",
+      "talentLeft": "+0.4s Torrent Knock Up\/Stun Duration",
       "talentRight": "+30 Damage"
     }
   ]

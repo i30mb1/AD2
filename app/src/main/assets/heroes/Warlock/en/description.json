@@ -1,9 +1,6 @@
 {
   "abilities": [
     {
-      "notes": [
-        "The armor talent does not benefit illusions."
-      ],
       "spellName": "Talent",
       "talents": [
         {
@@ -13,17 +10,17 @@
         },
         {
           "talentLvl": "20",
-          "talentLeft": "500 Shadow Word AoE",
+          "talentLeft": "+25 Shadow Word Heal\/Damage",
           "talentRight": "Summons a Golem on Death"
         },
         {
           "talentLvl": "15",
-          "talentLeft": "-5.5s Shadow Word Cooldown",
-          "talentRight": "+8 Armor"
+          "talentLeft": "-5s Shadow Word Cooldown",
+          "talentRight": "+40 Upheaval DPS"
         },
         {
           "talentLvl": "10",
-          "talentLeft": "+150 Cast Range",
+          "talentLeft": "+50 Movement Speed for Chaotic Offering Golem",
           "talentRight": "+3% Fatal Bonds Damage"
         }
       ]
@@ -36,25 +33,25 @@
       ],
       "notes": [
         "Fatal Bonds has no bounce delay, so all targets are bound at the same time.",
-        "The binding prioritises units that do not have the Fatal Bonds debuff yet, and goes for the closest units. This means when cast multiple times, it goes for enemies which were not debuffed by the first cast, but can still stack on the same units if no unbound units are nearby.",
+        "The binding prioritises units that do not have the Fatal Bonds debuff yet, and goes for the closest units. This means when cast multiple times, it goes for enemies which were not debuffed by the first cast, but can still stack on the same units if no unbound units are nearby. Successive casts of Fatal Bonds fully stack and work independently from each other.",
         "This means when cast multiple times, it goes for enemies which were not debuffed by the first cast, but can still stack on the same units if no unbound units are nearby.",
-        "Can bind units inside the fog of war, but cannot bind invisible units.",
+        "Successive casts of Fatal Bonds fully stack and work independently from each other.",
+        "Can bind units inside the Fog of War, but cannot bind invisible units. Cannot bind or be cast on Roshan.",
         "Cannot bind or be cast on Roshan.",
-        "Shared damage is the same damage type as the source of the damage. This means physical damage is spread as physical damage, magical damage as magical and pure damage as pure. Because of that, the shared damage does interact with every on-damage effect like disabling Blink Dagger. This also means it is fully affected by damage manipulation, like Warlock's spell damage amplification.",
+        "Shared damage is the same damage type as the source of the damage. This means physical damage is spread as physical damage, magical damage as magical and pure damage as pure. Because of that, the shared damage does interact with every on-damage effect like disabling Blink Dagger. This also means it is fully affected by damage manipulation, e.g. the spell damage amplification is sourced from Warlock.",
         "This means physical damage is spread as physical damage, magical damage as magical and pure damage as pure.",
         "Because of that, the shared damage does interact with every on-damage effect like disabling Blink Dagger.",
-        "This also means it is fully affected by damage manipulation, like Warlock's spell damage amplification.",
+        "This also means it is fully affected by damage manipulation, e.g. the spell damage amplification is sourced from Warlock.",
         "Fatal Bonds' damage has the no-reflection flag, preventing its damage from interacting with other sources of damage with the same flag.",
-        "Spreads the damage before it is reduced or amplified in any way on the receiving target. When, for example, Abaddon gets damaged while under the effect of Borrowed Time, the bonds still spread the damage, before Borrowed Time turns it into heals. This also goes for illusions. When damaging a bonded illusion, the damage is spread before it gets amplified for the illusions. This also goes for finishing blows. When, for example, a unit at 10 health is hit by e.g. 1000 damage, the bonds still spread based on the 1000 damage.",
-        "When, for example, Abaddon gets damaged while under the effect of Borrowed Time, the bonds still spread the damage, before Borrowed Time turns it into heals.",
+        "Spreads the damage before it is reduced or amplified in any way on the receiving target. For example, if Abaddon gets damaged while under the effect of Borrowed Time, the bonds still spread the damage, before Borrowed Time heals Abaddon. This also goes for illusions. When damaging a bonded illusion, the damage is spread before it gets amplified for the illusions. This also goes for finishing blows. When, for example, a unit at 10 health is hit by 1000 damage, the bonds still spread based on the 1000 damage.",
+        "For example, if Abaddon gets damaged while under the effect of Borrowed Time, the bonds still spread the damage, before Borrowed Time heals Abaddon.",
         "This also goes for illusions. When damaging a bonded illusion, the damage is spread before it gets amplified for the illusions.",
-        "This also goes for finishing blows. When, for example, a unit at 10 health is hit by e.g. 1000 damage, the bonds still spread based on the 1000 damage.",
+        "This also goes for finishing blows. When, for example, a unit at 10 health is hit by 1000 damage, the bonds still spread based on the 1000 damage.",
         "Does not spread damage flagged as HP Removal.",
         "The distance between the bonded units does not matter. Once bonded, they always spread or receive the spread damage.",
         "The spread damage is always sourced to Warlock. If a unit dies to the damage done by Fatal Bonds, Warlock is always credited.",
         "The damage caused by Fatal Bonds does not cause aggro. Bonded neutral creeps do not react on the damage.",
-        "Increases the total damage output of every damage by 60%\/80%\/100%\/120% (TagTalent 75%\/95%\/115%\/135%) when the maximum amount of units is bonded.",
-        "Successive casts of Fatal Bonds fully stack and work independently from each other."
+        "Increases the total damage output of every damage by 60%\/80%\/100%\/120% (TagTalent 75%\/95%\/115%\/135%) when the maximum amount of units is bonded."
       ],
       "mana": "140",
       "hotKey": "Q",
@@ -63,13 +60,14 @@
       "spellName": "Fatal Bonds",
       "params": [
         "Cast Animation: 0.2+0",
-        "Cast Range: 1000 (TagTalent 1150)",
+        "Cast Range: 1000",
         "Bounce Distance: 700",
         "Number of Bounces: 6",
         "Damage Shared: 12%\/16%\/20%\/24% (TagTalent 15%\/19%\/23%\/27%)",
         "Bonds Duration: 25",
         "Cannot be cast on spell immune enemies. Does not bind spell immune enemies. Damages bond enemies if debuff was placed before spell immunity (TagTalentmagical damage gets reduced to 0).",
-        "Blocked fully only when primary target."
+        "Blocked fully only when primary target.",
+        "An ancient incantation that links the vital energies of multiple lifeforms into one collective body."
       ],
       "itemBehaviour": [],
       "legacyKey": "F",
@@ -83,31 +81,32 @@
         "Damage Magical"
       ],
       "notes": [
-        "↓↓ Double-tapping automatically targets self.",
-        "Deals damage or heals in 1 second intervals, starting 1 second after cast, resulting in instances.",
-        "Can deal up to 180\/300\/420\/540 damage to the target (before reductions), or heal for the same amount if cast on an ally.",
+        "↓↓ Double-tapping automatically targets self. Can be cast on allied Couriers.",
+        "Can be cast on allied Couriers.",
+        "Deals damage or heals in 1-second intervals, starting 1 second after cast, resulting in instances.",
+        "Can deal up to 180\/300\/420\/540 (TagTalent 480\/600\/720\/840) damage to the target (before reductions), or heal for the same amount if cast on an ally.",
         "Successive casts of Shadow Word fully stack and work independently from each other.",
         "The first sound is played when the target is an ally, the second sound when it is an enemy.",
-        "Can be cast on allied couriers.",
-        "The level 20 talent turns Shadow Word into an area-targeted ability, so that it cannot directly target units anymore. Self-casting the ability still targets Warlock, centering the radius around him.",
+        "With Aghanim's Shard, Shadow Word turns into a 450 radius area-targeted ability, so that it cannot directly target units anymore. Self-casting the ability still targets Warlock, centering the radius around him.",
         "Self-casting the ability still targets Warlock, centering the radius around him."
       ],
       "mana": "120\/130\/140\/150",
       "hotKey": "W",
-      "cooldown": "14 (TagTalent 8.5)",
+      "cooldown": "14 (TagTalent 9)",
       "description": "Warlock whispers an incantation, healing a friendly unit or damaging an enemy unit over time.",
       "spellName": "Shadow Word",
       "params": [
         "Cast Animation: 0.4+0.76",
-        "Cast Range: 450\/600\/750\/900 (TagTalent 600\/750\/900\/1050)",
-        "Damage per Second: 15\/25\/35\/45",
-        "Heal per Second: 15\/25\/35\/45",
+        "Cast Range: 450\/600\/750\/900",
+        "Damage per Second: 15\/25\/35\/45 (TagTalent 40\/50\/60\/70)",
+        "Heal per Second: 15\/25\/35\/45 (TagTalent 40\/50\/60\/70)",
         "Duration: 12",
-        "Radius: 500",
-        "Move Speed Change: 20%",
-        "Shadow Word grants 20% movement speed bonus to allies and slows enemies by .",
+        "Radius: 450",
+        "Move Speed Change: 10%",
+        "Shadow Word grants 10% movement speed bonus to allies and slows enemies by 10%.",
         "Can be cast on spell immune allies. Cannot be cast on spell immune enemies. Attempts to damage if debuff was placed before spell immunity and when not dispelled.",
-        "Blocked as a single-target spell. Not blocked when turned into an AoE spell."
+        "Blocked as a single-target ability. Not blocked when turned into a radius ability.",
+        "Warlock arcane arts have a myriad of uses, allowing them to be powerful friendly enchantments or damaging curses."
       ],
       "itemBehaviour": [],
       "legacyKey": "W",
@@ -120,25 +119,33 @@
         "Affects Enemies"
       ],
       "notes": [
-        "The strength of the slow is based on the channel duration, not on how long a unit stands in the affected area.",
-        "The slow percentage increases by 3.5%\/7%\/10.5%\/14% in 0.5 second intervals, starting 0.5 seconds after spell cast.",
-        "So it takes 12\/6\/4\/3 seconds for the slow to reach the 84% slow cap.",
-        "The slow debuff is applied or refreshed in the same intervals."
+        "The longer the channel duration, the slower the movement speed. The movement speed slow is based on the channel duration, not on how long a unit stands in the affected area.",
+        "The movement speed slow is based on the channel duration, not on how long a unit stands in the affected area.",
+        "The slow percentage increases by 6%\/8.5%\/11%\/13.5% in 0.5 second intervals, starting 0.5 seconds after spell cast. So it takes 3.33\/3.53\/3.64\/3.7 seconds for the slow to reach the 40%\/60%\/80%\/100% slow cap. The slow debuff is applied or refreshed in the same intervals.",
+        "So it takes 3.33\/3.53\/3.64\/3.7 seconds for the slow to reach the 40%\/60%\/80%\/100% slow cap.",
+        "The slow debuff is applied or refreshed in the same intervals.",
+        "The damage per second talent immediately updates the current instance. The damage is dealt in 0.5-second intervals, starting 0.5 seconds after the ability is cast. It deals 20 damage per tick. The debuff lingers for 3 seconds, therefore it will deal at least 120 damage (before reductions). Can deal up to 520\/600\/680\/760 damage. There is currently a small error which removes one tick of damage from Upheaval at levels 1 and 2, resulting in only 500\/580 total damage.",
+        "The damage is dealt in 0.5-second intervals, starting 0.5 seconds after the ability is cast. It deals 20 damage per tick.",
+        "The debuff lingers for 3 seconds, therefore it will deal at least 120 damage (before reductions).",
+        "Can deal up to 520\/600\/680\/760 damage. There is currently a small error which removes one tick of damage from Upheaval at levels 1 and 2, resulting in only 500\/580 total damage.",
+        "There is currently a small error which removes one tick of damage from Upheaval at levels 1 and 2, resulting in only 500\/580 total damage."
       ],
       "mana": "70\/90\/110\/130",
       "hotKey": "E",
       "cooldown": "50\/46\/42\/38",
-      "description": "A powerful slowing current that grows stronger as it's channelled. Lasts up to 16 seconds. Enemies are slowed for 3 seconds after leaving the area or the spell ends.",
+      "description": "A powerful slowing current that grows stronger as it's channelled. Lasts up to 10\/12\/14\/16 seconds. Enemies are slowed for 3 seconds after leaving the area or the spell ends.",
       "spellName": "Upheaval",
       "params": [
-        "Cast Animation: 0.5+0",
-        "Cast Range: 1200 (TagTalent 1350)",
-        "Radius: 650",
-        "Max Channel Time: 16",
-        "Move Speed Slow per Second: 7%\/14%\/21%\/28%",
-        "Move Speed Slow Cap: 84%",
+        "Cast Animation: 0.4+0",
+        "Cast Range: 1200",
+        "Radius: 500\/550\/600\/650",
+        "Max Channel Time: 10\/12\/14\/16",
+        "Move Speed Slow per Second: 12%\/17%\/22%\/27%",
+        "Move Speed Slow Cap: 40%\/60%\/80%\/100%",
         "Slow Duration: 3",
-        "Slow persists if debuff was placed before spell immunity and when not dispelled."
+        "Damage per Second: 40",
+        "Slow persists if debuff was placed before spell immunity and when not dispelled.",
+        "Demnok manipulates space-time, impairing entire armies."
       ],
       "itemBehaviour": [],
       "legacyKey": "E",
@@ -151,18 +158,20 @@
         "Affects Enemies"
       ],
       "notes": [
-        "Warlock Golems are always summoned at the center of the targeted area.",
-        "The golems are creep-heroes and ancient creeps, making them interact differently with several spells. For detailed interactions follow the two links.",
-        "With Aghanim's Scepter, Chaotic Offering summons the second golem 0.4 seconds after the first golem. This effectively extends the total stun duration to 1.4 seconds.",
-        "This effectively extends the total stun duration to 1.4 seconds.",
-        "Upon spawning, the golems destroy all trees within a 600 radius around them.",
+        "Warlock Golems is always summoned at the center of the targeted area.",
+        "The golems are creep-heroes and ancient creeps, making them interact differently with several abilities. For detailed interactions follow the two links.",
+        "Upon spawning, Warlock Golems destroy all trees within a 600 radius around them.",
         "The visual effect and sounds during the effect delay are visible and audible to everyone.",
         "Also plays a sound effect during the cast time, which is audible to everyone as well.",
-        "When the level 20 talent is chosen, one golem is summoned whenever Warlock dies, on his death location. This golem's stats are based on the current level of Chaotic Offering. The level 25 talents are applied as well, whichever is chosen. Aghanim's Scepter neither affects the golem's stats, nor does it make death summon 2 golems. It is always one golem. The golem is not summoned when Warlock dies while holding the Aegis of the Immortal. Unlike a regular cast, the golem is summoned instantly upon Warlock's death. The area stun of Chaotic Offering is also applied around Warlock.",
-        "This golem's stats are based on the current level of Chaotic Offering. The level 25 talents are applied as well, whichever is chosen.",
-        "Aghanim's Scepter neither affects the golem's stats, nor does it make death summon 2 golems. It is always one golem.",
-        "The golem is not summoned when Warlock dies while holding the Aegis of the Immortal.",
-        "Unlike a regular cast, the golem is summoned instantly upon Warlock's death. The area stun of Chaotic Offering is also applied around Warlock."
+        "Both the movement speed increasing and magic resistance increasing talent does not affect the current summoned Warlock Golem. Sets Warlock Golems' magic resistance to 86%, instead of stacking multiplicatively like other sources.",
+        "Sets Warlock Golems' magic resistance to 86%, instead of stacking multiplicatively like other sources.",
+        "With the level 20 talent, 1 golem is summoned based on its current level instantly whenever Warlock dies, on his death location. Both talents fully affects the summoned golem on death, if they are learned. Aghanim's Scepter does not upgrade this talent. The golem is not summoned when Warlock dies while having Reincarnation. The 600 stun radius is also applied around Warlock.",
+        "Both talents fully affects the summoned golem on death, if they are learned.",
+        "Aghanim's Scepter does not upgrade this talent.",
+        "The golem is not summoned when Warlock dies while having Reincarnation.",
+        "The 600 stun radius is also applied around Warlock.",
+        "With Aghanim's Scepter, Chaotic Offering summons the 2nd golem 0.2 seconds after the first golem. This effectively extends the total stun duration to 1.2 seconds.",
+        "This effectively extends the total stun duration to 1.2 seconds."
       ],
       "mana": "250\/375\/500",
       "hotKey": "R",
@@ -170,15 +179,16 @@
       "description": "Summons a Golem from the depths, stunning enemies for one second. The Golem lives seconds, takes reduced damage from spells, has Permanent Immolation and Flaming Fists on attack.",
       "spellName": "Chaotic Offering",
       "params": [
-        "Cast Animation: 0.5+0.7",
-        "Cast Range: 1200 (TagTalent 1350)",
+        "Cast Animation: 0.2+0.7",
+        "Cast Range: 1200",
         "Stun Radius: 600",
         "Effect Delay: 0.5",
-        "Number of Golems: 1 (TagAghanim 2)",
+        "Number of Golems: 1 (TagTalent 2)",
         "Stun Duration: 1",
         "Golem Duration: 60",
-        "Golem Spawn Interval: 0.4",
-        "Calls 2 golems with reduced stats and bounty."
+        "Golem Spawn Interval: 0.2",
+        "Calls 2 golems with reduced stats and bounty.",
+        "Demnok unleashes the captive spirit in his Dreadwood staff, causing destruction in enemy ranks."
       ],
       "itemBehaviour": [],
       "legacyKey": "R",
@@ -199,7 +209,7 @@
       "mana": null,
       "hotKey": null,
       "cooldown": null,
-      "description": "Radius: 300",
+      "description": "Deals extra damage to nearby units when attacking.",
       "spellName": "Flaming Fists",
       "params": [
         "Radius: 300",
@@ -223,7 +233,7 @@
       "mana": null,
       "hotKey": null,
       "cooldown": null,
-      "description": "Radius: 300",
+      "description": "Burns the Golem's nearby enemy units, with damage per second.",
       "spellName": "Permanent Immolation",
       "params": [
         "Radius: 300",
@@ -254,17 +264,17 @@
     },
     {
       "talentLvl": "20",
-      "talentLeft": "500 Shadow Word AoE",
+      "talentLeft": "+25 Shadow Word Heal\/Damage",
       "talentRight": "Summons a Golem on Death"
     },
     {
       "talentLvl": "15",
-      "talentLeft": "-5.5s Shadow Word Cooldown",
-      "talentRight": "+8 Armor"
+      "talentLeft": "-5s Shadow Word Cooldown",
+      "talentRight": "+40 Upheaval DPS"
     },
     {
       "talentLvl": "10",
-      "talentLeft": "+150 Cast Range",
+      "talentLeft": "+50 Movement Speed for Chaotic Offering Golem",
       "talentRight": "+3% Fatal Bonds Damage"
     }
   ]

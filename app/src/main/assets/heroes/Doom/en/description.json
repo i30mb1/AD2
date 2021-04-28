@@ -2,8 +2,9 @@
   "abilities": [
     {
       "notes": [
-        "The cleave has a starting radius of 150, distance of 650, and end radius of 360. For more information, see cleave.",
-        "Cleave from talents is not disabled by Break."
+        "The magic resistance talent stacks multiplicatively with other sources of magic resistance.",
+        "The magic resistance talent increases Doom's magic resistance to 34%.",
+        "Cleave from talents is not disabled by Break. For more information, see cleave."
       ],
       "spellName": "Talent",
       "talents": [
@@ -14,18 +15,18 @@
         },
         {
           "talentLvl": "20",
-          "talentLeft": "Devour Can Target Ancients",
+          "talentLeft": "+15% Scorched Earth Movement Speed",
           "talentRight": "+30 Doom DPS"
         },
         {
           "talentLvl": "15",
-          "talentLeft": "+120 Devour Bonus Gold",
-          "talentRight": "+30 Scorched Earth Damage"
+          "talentLeft": "Devour Can Target Ancients",
+          "talentRight": "-10s Scorched Earth Cooldown"
         },
         {
           "talentLvl": "10",
-          "talentLeft": "+10% Scorched Earth Movement Speed",
-          "talentRight": "+3s Doom Duration"
+          "talentLeft": "+20 Scorched Earth Damage",
+          "talentRight": "+12% Magic Resistance"
         }
       ]
     },
@@ -37,33 +38,32 @@
         "Damage Instant Kill"
       ],
       "notes": [
-        "The autocast is just to enable acquiring spells of neutral creeps. It does not make Doom cast the spell automatically.",
-        "Can target all neutral creeps and summons, except for couriers, ancient creeps and creep-heroes. Can target ancient creeps (excluding couriers and Roshan) when the talent for it is chosen.",
-        "Can target ancient creeps (excluding couriers and Roshan) when the talent for it is chosen.",
+        "Can target all neutral creeps and summons, with the exception of Couriers, Roshan, ancient creeps and creep-heroes. With the level 15 talent, Devour can target ancient creeps. The targeted creep is instantly killed, granting its bounty and experience like a regular last hit.",
+        "With the level 15 talent, Devour can target ancient creeps.",
         "The targeted creep is instantly killed, granting its bounty and experience like a regular last hit.",
-        "Doom acquires neutral creep abilities only when casting Devour while its autocast is turned on. Can only gain abilities from neutral creeps. Other units' abilities cannot be gained. Abilities are gained instantly upon devouring the creep. The abilities use the original cast point of the neutral creeps they come from, however, the cast backswing differs depending on the spell (see chart). Abilities from neutral creeps are kept permanently, even through death, until another neutral creep with abilities is devoured with autocast on. When autocast is on, devouring a creep with no abilities does not remove the already acquired abilities. When devouring Ancient Black Dragons, Doom gets Fireball and Splash Attack, but not Dragonhide Aura. In Ability Draft, Devour only grants passive abilities of devoured neutral creeps. Active abilities are not gained. Devour's cooldown is not reset by Rearm.",
-        "Can only gain abilities from neutral creeps. Other units' abilities cannot be gained. Abilities are gained instantly upon devouring the creep.",
-        "The abilities use the original cast point of the neutral creeps they come from, however, the cast backswing differs depending on the spell (see chart).",
-        "Abilities from neutral creeps are kept permanently, even through death, until another neutral creep with abilities is devoured with autocast on.",
+        "Autocast enables acquiring abilities of neutral creeps and ancient creeps. It does not cast the ability automatically. When autocast is on, devouring a creep with no abilities does not remove the already acquired abilities. Can only gain abilities from neutral creeps. Other units' abilities (e.g. Melting Strike) cannot be gained. Abilities are gained instantly upon devouring the creep. The abilities use the original cast point of the neutral creeps they come from, however, the cast backswing differs depending on the ability acquired (see chart). The cast animation formula for Devoured abilities: OriginalCastPoint + (1.1 - OriginalCastPoint) Abilities from neutral creeps are kept permanently, even through death, until another neutral creep with abilities is devoured with Autocast on. When devouring Ancient Black Dragons, Doom gets Fireball and Splash Attack, but not Dragonhide Aura. In Ability Draft, Devour only grants passive abilities of devoured neutral creeps. Active abilities are not gained. Devour's cooldown is not reset by Rearm.",
         "When autocast is on, devouring a creep with no abilities does not remove the already acquired abilities.",
+        "Can only gain abilities from neutral creeps. Other units' abilities (e.g. Melting Strike) cannot be gained. Abilities are gained instantly upon devouring the creep.",
+        "The abilities use the original cast point of the neutral creeps they come from, however, the cast backswing differs depending on the ability acquired (see chart). The cast animation formula for Devoured abilities: OriginalCastPoint + (1.1 - OriginalCastPoint)",
+        "The cast animation formula for Devoured abilities: OriginalCastPoint + (1.1 - OriginalCastPoint)",
+        "Abilities from neutral creeps are kept permanently, even through death, until another neutral creep with abilities is devoured with Autocast on.",
         "When devouring Ancient Black Dragons, Doom gets Fireball and Splash Attack, but not Dragonhide Aura.",
         "In Ability Draft, Devour only grants passive abilities of devoured neutral creeps. Active abilities are not gained. Devour's cooldown is not reset by Rearm.",
         "The bonus gold is unreliable and granted when the buff expires. Losing it upon death does not grant the gold.",
-        "Can regenerate up to 70\/350\/630\/910 health over its full duration.",
         "Multiple instances of the modifier fully stack with each cast."
       ],
       "mana": "40\/50\/60\/70",
       "hotKey": "Q",
-      "cooldown": "70",
-      "description": "Consumes an enemy or neutral creep, acquiring any special abilities that it possessed. If autocast is deactivated, Doom will not acquire the creep's abilities. Provides bonus health regeneration for the duration of the spell. Duration is equal to the cooldown.",
+      "cooldown": "60",
+      "description": "Consumes an enemy or neutral creep, acquiring any special abilities that it possessed. If autocast is deactivated, Doom will not acquire the creep's abilities. Duration is equal to the cooldown.",
       "spellName": "Devour",
       "params": [
-        "Cast Animation: 0.3+0.93",
+        "Cast Animation: 0.3+0.5",
         "Cast Range: 300",
-        "Gold Bonus: 50\/100\/150\/200 (TagTalent 170\/220\/270\/320)",
-        "Health Regen Bonus: 1\/5\/9\/13",
+        "Gold Bonus: 60\/120\/180\/240",
         "Max Creep Level: 4\/5\/6\/6",
-        "Digest Duration: 70"
+        "Digest Duration: 60",
+        "Lucifer's appetite and greed are never sated."
       ],
       "itemBehaviour": [],
       "legacyKey": "E",
@@ -77,29 +77,31 @@
         "Damage Magical"
       ],
       "notes": [
-        "Scorched Earth interrupts Doom's channeling spells upon cast.",
-        "Scorched Earth's radius is centered on Doom for the full duration.",
+        "Scorched Earth interrupts Doom's channeling abilities upon cast.",
+        "The 600 radius is centered on Doom for the full duration.",
         "The movement speed bonus is provided by an aura, which lingers for 0.5 seconds.",
-        "The damage is independent from the aura.",
+        "The damage is independent from the aura. Deals damage in 1-second intervals, starting 1 second after cast, resulting in up to 15 possible instances.",
         "Deals damage in 1-second intervals, starting 1 second after cast, resulting in up to 15 possible instances.",
-        "Can deal up to 225\/450\/675\/900 (TagTalent 22.5\/30\/37.5\/45) damage to a single enemy when within range for the entire duration (before reductions).",
-        "Scorched Earth does not stack with itself. Casting the ability while it is active refreshes the buff.",
-        "Choosing the damage talent immediately upgrades damage of the current cast, however, leveling the spell up does not update it.",
-        "Choosing the movement speed talent or leveling up the spell does not update the speed of the current cast."
+        "Can deal up to 225\/450\/675\/900 (TagTalent 525\/750\/975\/1200) damage to a single enemy when within range for the entire duration (before reductions).",
+        "The damage increasing talent immediately upgrades damage of the current cast. However, leveling the ability up does not update the current cast.",
+        "However, leveling the ability up does not update the current cast.",
+        "The movement speed increasing talent or leveling up the ability does not update the movement speed of the current cast.",
+        "Scorched Earth from multiple successive cast does not stack. Recasting the ability while it is active refreshes the buff."
       ],
       "mana": "60\/70\/80\/90",
       "hotKey": "W",
-      "cooldown": "50\/45\/40\/35",
+      "cooldown": "50\/45\/40\/35 (TagTalent 40\/35\/30\/25)",
       "description": "Carpets the nearby earth in flames which damage enemies, while also granting him increased movement speed.",
       "spellName": "Scorched Earth",
       "params": [
-        "Cast Animation: 0+0.83",
+        "Cast Animation: 0+0.5",
         "Radius: 600",
-        "Damage per Second: 15\/30\/45\/60 (TagTalent 45\/60\/75\/90)",
-        "Move Speed Bonus: 9%\/11%\/13%\/15% (TagTalent 19%\/21%\/23%\/25%)",
+        "Damage per Second: 15\/30\/45\/60 (TagTalent 35\/50\/65\/80)",
+        "Move Speed Bonus: 9%\/11%\/13%\/15% (TagTalent 24%\/26%\/28%\/30%)",
         "Aura Linger Duration: 0.5",
         "Duration: 15",
-        "Affects Doom while spell immune."
+        "Affects Doom while spell immune.",
+        "The Fallen One spreads destruction in his wake, sparing none from the flame which sustains him."
       ],
       "itemBehaviour": [],
       "legacyKey": "T",
@@ -113,17 +115,17 @@
         "Damage Magical"
       ],
       "notes": [
-        "Deals damage in 1-second intervals, starting 1 second after the debuff is applied, resulting in 0.6 instances.",
-        "Can deal up to 64\/80\/96\/112 + 5%\/10%\/15%\/20% (TagTalent 14.6%\/19.6%\/24.6%\/29.6%) of the target's maximum health as damage (before reductions).",
-        "Multiple instances on the same target fully stack and work independently.",
-        "The stun is provided by a bash, which fully stacks with other bash abilities.",
-        "With Aghanim's Shard, if the target's level is 3\/6\/9\/12\/15\/18\/21\/24\/25\/26\/27\/28\/29\/30, the bonus damage is applied and the stun duration is increased. Works against non-hero units as well, so the following units are always hit by the bonus damage and bash duration. Ancient Black Dragon, Ancient Black Drake, Ancient Granite Golem, Ancient Thunderhide, Dark Troll Summoner, Forged Spirit, Ghost, Giant Wolf, Harpy Stormcrafter, Hill Troll, Lycan Lane Wolf, Melee Creep, Ogre Frostmage, Satyr Tormenter, Spiderling,",
-        "Works against non-hero units as well, so the following units are always hit by the bonus damage and bash duration. Ancient Black Dragon, Ancient Black Drake, Ancient Granite Golem, Ancient Thunderhide, Dark Troll Summoner, Forged Spirit, Ghost, Giant Wolf, Harpy Stormcrafter, Hill Troll, Lycan Lane Wolf, Melee Creep, Ogre Frostmage, Satyr Tormenter, Spiderling,",
-        "The attack first applies the bash, then the burn debuffs, then its own damage. If the target has the right level, the initial damage is dealt before the debuffs are placed.",
-        "If the target has the right level, the initial damage is dealt before the debuffs are placed.",
+        "Deals damage in 1-second intervals, starting 1 second after the debuff is applied, resulting in 0.6 instances. Does not trigger for instant attacks. Does not work against Roshan.",
         "Does not trigger for instant attacks.",
         "Does not work against Roshan.",
-        "Choosing the damage talent or leveling up the spell does not update the damage of already existing instances."
+        "Can deal up to 64\/80\/96\/112 + 5%\/10%\/15%\/20% (TagTalent 14.6%\/19.6%\/24.6%\/29.6%) of the target's maximum health as damage (before reductions).",
+        "Multiple instances on the same target fully stack and work independently. The max health as damage increasing talent or leveling up the ability does not update the damage of the current instances.",
+        "The max health as damage increasing talent or leveling up the ability does not update the damage of the current instances.",
+        "The attack first applies the bash, the burn debuff, then the damage. The bash fully stacks with other bash sources.",
+        "The bash fully stacks with other bash sources.",
+        "With Aghanim's Shard, if the target's level is 3\/6\/9\/12\/15\/18\/21\/24\/25\/26\/27\/28\/29\/30, 150 bonus damage is applied and the stun duration is increased to 1.8. If the target's level is one of the multiplier values, the attack first applies the damage and bonus damage, the bash, then the damage. Works against non-hero units as well, so the following units are always hit by the bonus damage and bash duration. Ancient Black Dragon, Ancient Black Drake, Ancient Granite Golem, Ancient Thunderhide, Dark Troll Summoner, Forged Spirit, Ghost, Giant Wolf, Harpy Stormcrafter, Hill Troll, Lycan Lane Wolf, Melee Creep, Ogre Frostmage, Satyr Tormenter, Spiderling,",
+        "If the target's level is one of the multiplier values, the attack first applies the damage and bonus damage, the bash, then the damage.",
+        "Works against non-hero units as well, so the following units are always hit by the bonus damage and bash duration. Ancient Black Dragon, Ancient Black Drake, Ancient Granite Golem, Ancient Thunderhide, Dark Troll Summoner, Forged Spirit, Ghost, Giant Wolf, Harpy Stormcrafter, Hill Troll, Lycan Lane Wolf, Melee Creep, Ogre Frostmage, Satyr Tormenter, Spiderling,"
       ],
       "mana": "40",
       "hotKey": "E",
@@ -138,9 +140,10 @@
         "Bash Duration: 0.6 (TagTalent 1.2)",
         "Level Multiplier: 3",
         "Level Multiplier Damage Bonus: 150",
-        "Level Multiplier Bash Duration Bonus: 0.6",
+        "Level Multiplier Bash Duration: 1.8",
         "Infernal Blade stun duration is increased from 0.6 to 1.2 seconds. If the enemy's level is a multiple of 3, or above level 24, they will be stunned for an additional 0.6 seconds and take 150 bonus damage.",
-        "Attempts to deal damage if debuff was placed before spell immunity and when not dispelled."
+        "Attempts to deal damage if debuff was placed before spell immunity and when not dispelled.",
+        "Lucifer shares the fire branding bestowed upon him at the time of his exile."
       ],
       "itemBehaviour": [],
       "legacyKey": "V",
@@ -155,30 +158,29 @@
       ],
       "notes": [
         "Applies a basic dispel on the target upon cast, removing most buffs in the process.",
-        "Silences and mutes the target, preventing it from casting spells and using items. Applies a break on the target when upgraded with Aghanim's Scepter, disabling passive abilities.",
-        "Applies a break on the target when upgraded with Aghanim's Scepter, disabling passive abilities.",
+        "Silences, mutes, and breaks the target, preventing it from casting abilities and using items.",
         "Cannot be cast on ancient creeps. Can be cast on creep-heroes and illusions. In the case of a unit being both a creep-hero and ancient creep, the ancient unit tag takes priority, disallowing it to be targeted.",
         "In the case of a unit being both a creep-hero and ancient creep, the ancient unit tag takes priority, disallowing it to be targeted.",
-        "Deals damage in 1-second intervals, starting immediately upon cast, resulting in 16 (TagTalent 19) instances.",
-        "Can deal a total of 400\/640\/880 damage without any talents (before reductions). Can deal a total of 880\/1120\/1360 damage when the damage increasing talent is chosen. Can deal a total of 475\/760\/1045 damage when the duration increasing talent is chosen. Can deal a total of 1045\/1330\/1615 damage when both talents are chosen.",
-        "Can deal a total of 880\/1120\/1360 damage when the damage increasing talent is chosen.",
-        "Can deal a total of 475\/760\/1045 damage when the duration increasing talent is chosen.",
-        "Can deal a total of 1045\/1330\/1615 damage when both talents are chosen.",
+        "Deals damage in 1-second intervals, starting immediately upon cast, resulting in 16\/22 instances. Leveling up the ability does not update the damage of currrent instances. However, the damage increasing talent does update the damage of the current instances.",
+        "Leveling up the ability does not update the damage of currrent instances.",
+        "However, the damage increasing talent does update the damage of the current instances.",
+        "Can deal a total of 400\/640\/880 (TagTalent 880\/1120\/1360) damage (before reductions).",
         "Heroes afflicted by Doom can be denied when their health drops below 25%.",
-        "Multiple casts on the same unit do not stack, but only refresh the duration.",
-        "Leveling up the spell does not update the damage of already existing instances, but choosing the damage talent does."
+        "Multiple successive casts on the same unit do not stack, but only refresh the duration.",
+        "With Aghanim's Scepter, Doom applies a break on the target for its duration, disabling passive abilities."
       ],
       "mana": "150\/200\/250",
       "hotKey": "R",
-      "cooldown": "145 (TagTalent 100)",
+      "cooldown": "145",
       "description": "Inflicts a curse that dispels an enemy Hero and prevents them from casting spells or using items, while taking damage over time.",
       "spellName": "Doom",
       "params": [
-        "Cast Animation: 0.5+0.73",
+        "Cast Animation: 0.5+0.4",
         "Cast Range: 550",
         "Damage per Second: 25\/40\/55 (TagTalent 55\/70\/85)",
-        "Duration: 16 (TagTalent 19)",
-        "Doom applies Break and reduces cooldown."
+        "Duration: 16 (TagTalent 22)",
+        "Doom applies Break and increases duration.",
+        "When a name is tolled from the bell of Vashundol, doom is sure to follow."
       ],
       "itemBehaviour": [],
       "legacyKey": "D",
@@ -203,18 +205,18 @@
     },
     {
       "talentLvl": "20",
-      "talentLeft": "Devour Can Target Ancients",
+      "talentLeft": "+15% Scorched Earth Movement Speed",
       "talentRight": "+30 Doom DPS"
     },
     {
       "talentLvl": "15",
-      "talentLeft": "+120 Devour Bonus Gold",
-      "talentRight": "+30 Scorched Earth Damage"
+      "talentLeft": "Devour Can Target Ancients",
+      "talentRight": "-10s Scorched Earth Cooldown"
     },
     {
       "talentLvl": "10",
-      "talentLeft": "+10% Scorched Earth Movement Speed",
-      "talentRight": "+3s Doom Duration"
+      "talentLeft": "+20 Scorched Earth Damage",
+      "talentRight": "+12% Magic Resistance"
     }
   ]
 }

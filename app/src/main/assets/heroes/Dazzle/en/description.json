@@ -19,8 +19,8 @@
         },
         {
           "talentLvl": "15",
-          "talentLeft": "+35 Attack Speed",
-          "talentRight": "+150 Cast Range"
+          "talentLeft": "+60 Attack Speed",
+          "talentRight": "+225 Heal On Shallow Grave End"
         },
         {
           "talentLvl": "10",
@@ -38,18 +38,25 @@
       ],
       "notes": [
         "Poison Touch's projectiles travel at a speed of 1300.",
-        "Can hit units up to 1000 range away (starting radius + distance + end radius).",
+        "With the starting radius, distance, and end radius, Poison Touch can hit units up to 1000 range away. The complete area is shaped like a cone in front of Dazzle. The area starts in front of Dazzle, and not at the primary target's position.",
         "The complete area is shaped like a cone in front of Dazzle.",
         "The area starts in front of Dazzle, and not at the primary target's position.",
         "Targets within the cone area are not chosen randomly. It chooses the closest valid targets to the primary target within the cone.",
-        "Deals damage in 1 second intervals, starting 1 second after the debuff is placed, resulting in 4\/5\/6\/7 damage instances.",
-        "Can deal up to 64\/140\/240\/364 (TagTalent 208\/320\/456\/616) damage to each target when not refreshed (before reductions).",
+        "Poison Touch applies the debuff, the hex, then the damage. Deals damage in 1-second intervals, starting immediately after the debuff is placed, resulting in 5\/6\/7\/8 damage instances.",
+        "Deals damage in 1-second intervals, starting immediately after the debuff is placed, resulting in 5\/6\/7\/8 damage instances.",
+        "Can deal up to 64\/140\/240\/364 (TagTalent 208\/320\/456\/616) damage to each target when the duration is not refreshed (before reductions).",
         "The duration gets refreshed whenever a player or Roshan lands an attack on the debuffed unit. This means it does not get refreshed on missed attacks.",
         "Multiple instances of Poison Touch fully stack.",
         "Bad Juju effectively reduces cooldown to: Level 1: 19.98\/17.76\/15.54\/13.32 Level 2: 16.74\/14.88\/13.02\/11.16 Level 3: 13.5\/12\/10.5\/9",
         "Level 1: 19.98\/17.76\/15.54\/13.32",
         "Level 2: 16.74\/14.88\/13.02\/11.16",
-        "Level 3: 13.5\/12\/10.5\/9"
+        "Level 3: 13.5\/12\/10.5\/9",
+        "",
+        "With Aghanim's Shard, enemy targets affected by Poison Touch are hexed. Affected targets are hexed for the first 1.25 seconds of the debuff, then they are slowed as usual for the remaining 2.75\/3.75\/4.75\/5.75 seconds. The damage duration remains the same. Sets the affected targets' movement speed to 100 for the hexed duration. Does not hex the affected targets again when Poison Touch's duration is refreshed.",
+        "Affected targets are hexed for the first 1.25 seconds of the debuff, then they are slowed as usual for the remaining 2.75\/3.75\/4.75\/5.75 seconds.",
+        "The damage duration remains the same.",
+        "Sets the affected targets' movement speed to 100 for the hexed duration.",
+        "Does not hex the affected targets again when Poison Touch's duration is refreshed."
       ],
       "mana": "110\/120\/130\/140",
       "hotKey": "Q",
@@ -58,7 +65,7 @@
       "spellName": "Poison Touch",
       "params": [
         "Cast Animation: 0.3+0.57",
-        "Cast Range: 500\/600\/700\/800 (TagTalent 650\/750\/850\/950)",
+        "Cast Range: 500\/600\/700\/800",
         "Starting Radius: 200",
         "Max Distance: 500",
         "End Radius: 300",
@@ -66,8 +73,12 @@
         "Damage per Second: 16\/28\/40\/52 (TagTalent 52\/64\/76\/88)",
         "Move Speed Slow: 14%\/16%\/18%\/20% (TagTalent 46%\/48%\/50%\/52%)",
         "Duration: 4\/5\/6\/7",
+        "Hex Set Move Speed: 100",
+        "Hex Duration: 1.25",
+        "Causes Poison Touch to hex affected targets for 1.25 seconds.",
         "Slow persists and deals damage if debuff was placed before spell immunity and when not dispelled.",
-        "Blocked upon cast fully only when primary target."
+        "Blocked upon cast fully only when primary target.",
+        "One of the few Dezun rites used for offensive purposes, the paralytic enchantment often proves useful."
       ],
       "itemBehaviour": [],
       "legacyKey": "T",
@@ -80,27 +91,32 @@
         "Affects Allied Heroes"
       ],
       "notes": [
-        "Prevents the target from dying by setting its minimum health to 1. This means the target cannot die to damage, not even damage flagged as HP removal, so that it prevents the target from dying to False Promise's delayed damage. Does not protect the target against a lethal Culling Blade, or the expiring of Wraith Delay. Stops Ice Blast from shattering the target when graved while below the shatter threshold.",
+        "Prevents the target from dying by setting its minimum health to 1. This means the target cannot die to damage, not even damage flagged as HP removal, so that it prevents the target from dying to False Promise's delayed damage. Does not protect the target against Culling Blade's kill threshold, or Reincarnation's Wraith Delay expiring. Stops Ice Blast from shattering the target when graved while below the shatter threshold.",
         "This means the target cannot die to damage, not even damage flagged as HP removal, so that it prevents the target from dying to False Promise's delayed damage.",
-        "Does not protect the target against a lethal Culling Blade, or the expiring of Wraith Delay.",
+        "Does not protect the target against Culling Blade's kill threshold, or Reincarnation's Wraith Delay expiring.",
         "Stops Ice Blast from shattering the target when graved while below the shatter threshold.",
-        "Damage taken is technically not reduced, so any damage event still registers the full damage.",
+        "Incoming damage of all kinds are not reduced, so any damage event still registers the full damage.",
         "Can be cast on illusions and creep-heroes. ↓↓ Double-tapping automatically targets self.",
         "↓↓ Double-tapping automatically targets self.",
-        "Bad Juju effectively reduces cooldown to: Level 1: 31.08\/25.16\/19.24\/13.32 Level 2: 26.04\/21.08\/16.12\/11.16 Level 3: 21\/17\/13\/9",
-        "Level 1: 31.08\/25.16\/19.24\/13.32",
-        "Level 2: 26.04\/21.08\/16.12\/11.16",
-        "Level 3: 21\/17\/13\/9"
+        "With the level 15 talent, losing the initial buff in any way heals the target for 225 health. The heal value itself is still subjected to heal manipulation.",
+        "The heal value itself is still subjected to heal manipulation.",
+        "Bad Juju effectively reduces cooldown to: Level 1: 26.64\/22.2\/17.76\/13.32 Level 2: 22.32\/18.6\/14.88\/11.16 Level 3: 18\/15\/12\/9",
+        "Level 1: 26.64\/22.2\/17.76\/13.32",
+        "Level 2: 22.32\/18.6\/14.88\/11.16",
+        "Level 3: 18\/15\/12\/9",
+        ""
       ],
       "mana": "150",
       "hotKey": "W",
-      "cooldown": "42\/34\/26\/18",
+      "cooldown": "36\/30\/24\/18",
       "description": "An ally blessed with Shallow Grave, no matter how close to death, cannot die while under its protection.",
       "spellName": "Shallow Grave",
       "params": [
-        "Cast Animation: 0.4+0",
-        "Cast Range: 700\/800\/900\/1000 (TagTalent 850\/950\/1050\/1150)",
-        "Duration: 4\/4.5\/5\/5.5"
+        "Cast Animation: 0.3+0",
+        "Cast Range: 700\/800\/900\/1000",
+        "Duration: 4\/4.5\/5\/5.5",
+        "Heal: 225",
+        "Only a seasoned acolyte of the Shadow can properly perform the rite of preventing death."
       ],
       "itemBehaviour": [],
       "legacyKey": "G",
@@ -114,20 +130,21 @@
         "Damage Physical"
       ],
       "notes": [
-        "Shadow Wave has no bounce delay, so all targets are healed at the same time.",
-        "Priority order: Hurt allied heroes > hurt allied non-hero units (includes illusions) > allied heroes > non-hero units. The lower the health of nearby allies, the higher their priority gets. This means the lowest health units get healed first. If multiple units hit the exact same criteria (e.g. only full health non-hero units are nearby), it chooses between them randomly.",
-        "The lower the health of nearby allies, the higher their priority gets. This means the lowest health units get healed first.",
-        "If multiple units hit the exact same criteria (e.g. only full health non-hero units are nearby), it chooses between them randomly.",
+        "Shadow Wave has no bounce delay, so all targets within the 475 bounce distance are healed at the same time.",
+        "Shadow Wave has the following priorites: Hurt allied heroes ➤ hurt allied non-hero units (includes illusions) ➤ allied heroes ➤ non-hero units. The lower the health of nearby allies, the higher their priority. This means the lowest health units get healed first. If multiple units meets the exact same criteria (e.g. only full health non-hero units are within range), it chooses between them randomly.",
+        "Hurt allied heroes ➤ hurt allied non-hero units (includes illusions) ➤ allied heroes ➤ non-hero units.",
+        "The lower the health of nearby allies, the higher their priority. This means the lowest health units get healed first.",
+        "If multiple units meets the exact same criteria (e.g. only full health non-hero units are within range), it chooses between them randomly.",
         "Regardless of the target, Dazzle is always healed without counting towards the number of bounces, effectively healing 4\/5\/6\/7 units. ↓↓ Double-tapping automatically targets self.",
         "↓↓ Double-tapping automatically targets self.",
-        "In total, can heal up to 320\/500\/720\/980 (TagTalent 560\/800\/1080\/1400) health when all bounces hit.",
+        "Can heal and damage up to 320\/500\/720\/980 (720\/1000\/1320\/1680) health when all bounces hit (before reductions). The damage radius is centered around each healed unit. An enemy unit can get damaged by all healed units per cast.",
         "The damage radius is centered around each healed unit. An enemy unit can get damaged by all healed units per cast.",
-        "Can deal up to 320\/500\/720\/980 (TagTalent 640\/900\/1200\/1540) damage to a single unit (before reductions).",
-        "With Aghanim's Scepter, applies a basic dispel on all hit allies.",
         "Bad Juju effectively reduces cooldown to: Level 1: 10.36\/8.88\/7.4\/5.92 Level 2: 8.68\/7.44\/6.2\/4.96 Level 3: 7\/6\/5\/4",
         "Level 1: 10.36\/8.88\/7.4\/5.92",
         "Level 2: 8.68\/7.44\/6.2\/4.96",
-        "Level 3: 7\/6\/5\/4"
+        "Level 3: 7\/6\/5\/4",
+        "",
+        "With Aghanim's Scepter, Shadow Wave applies a basic dispel on himself and all hit allies."
       ],
       "mana": "90\/100\/110\/120",
       "hotKey": "E",
@@ -136,13 +153,14 @@
       "spellName": "Shadow Wave",
       "params": [
         "Cast Animation: 0.3+0.57",
-        "Cast Range: 800 (TagTalent 950)",
+        "Cast Range: 800",
         "Damage Radius: 185",
         "Bounce Distance: 475",
         "Number of Bounces: 3\/4\/5\/6",
-        "Heal: 80\/100\/120\/140 (TagAghanim 140\/160\/180\/200)",
-        "Damage: 80\/100\/120\/140 (TagAghanim 160\/180\/200\/220)",
-        "Causes Shadow Wave to dispel allies. Increases heal by +60 and damage by +80"
+        "Heal: 80\/100\/120\/140 (TagTalent 180\/200\/220\/240)",
+        "Damage: 80\/100\/120\/140 (TagTalent 180\/200\/220\/240)",
+        "Causes Shadow Wave to dispel allies. Increases heal by +100 and damage by +100",
+        "While it is a simplistic and routine rite among Shadow Priests, the Shadow Wave is also the most critical for success."
       ],
       "itemBehaviour": [],
       "legacyKey": "D",
@@ -152,21 +170,16 @@
       "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/f\/fb\/Dazzle_Bad_Juju_1.mp3\/revision\/latest?cb=20191216012358",
       "effects": [
         "Ability Passive",
-        "Affects Self \/ Enemies",
-        "Damage Instant Attack"
+        "Affects Self \/ Enemies"
       ],
       "notes": [
         "Stacks multiplicatively with other sources cooldown reduction.",
-        "Reduces armor of enemies before the triggering spell resolves.",
-        "Affects invisible units and units in the fog of war. Does not affect invulnerable or hidden enemies.",
-        "Does not affect Roshan.",
-        "Does not trigger on active item abilities, on spells with 0 cooldown, or on spells which do not trigger on-cast effects.",
+        "Reduces enemies' armor before the triggering abilities.",
         "Places one debuff on enemies. This debuff gets stronger when it gets refreshed with successive casts. A number on the icon shows how many times the debuff was refreshed, including the first cast.",
         "A number on the icon shows how many times the debuff was refreshed, including the first cast.",
-        "With Aghanim's Shard, causes Dazzle to perform instant attacks on 3 enemies within 1200 radius around him whenever he casts an ability (compatible with Ability Draft). Does not target wards, buildings, invisible units, or units inside the fog of war, but does target attack immune units, and couriers. Chooses the closest targets to Dazzle, prioritizing heroes. Treats creep-heroes as heroes. These instant attacks can proc any attack modifiers and on-hit effects normally. They do not have True Strike, but completely ignore disarms.",
-        "Does not target wards, buildings, invisible units, or units inside the fog of war, but does target attack immune units, and couriers.",
-        "Chooses the closest targets to Dazzle, prioritizing heroes. Treats creep-heroes as heroes.",
-        "These instant attacks can proc any attack modifiers and on-hit effects normally. They do not have True Strike, but completely ignore disarms."
+        "Affects invisible units and units in the Fog of War. Does not affect invulnerable or hidden enemies. Does not affect Roshan. Does not trigger on active item abilities, on abilities with 0 cooldown, or on abilities which do not trigger on-cast effects.",
+        "Does not affect Roshan.",
+        "Does not trigger on active item abilities, on abilities with 0 cooldown, or on abilities which do not trigger on-cast effects."
       ],
       "mana": null,
       "hotKey": "R",
@@ -178,9 +191,7 @@
         "Debuff Radius: 1200",
         "Armor Reduction per Cast: 2\/2.25\/2.5 (TagTalent 2.5\/2.75\/3)",
         "Duration: 8",
-        "Instant Attack Radius: 1200",
-        "Number of Attack Targets per Cast: 3",
-        "Causes Dazzle to launch an attack at the three closest enemies within 1200 range each time he casts an ability."
+        "Each invocation of the Nothl realm helps it further permeate the surroundings of our own."
       ],
       "itemBehaviour": [],
       "legacyKey": "W",
@@ -196,7 +207,7 @@
     "attrAgility": 21.0
   },
   "description": "Dazzle, the Shadow Priest, is a ranged intelligence hero who conjures dazzling dark light to heal his allies and prevent their deaths. His Shadow Wave is a low-cooldown nuke and chain healing ability, dealing more damage to nearby enemies for each ally the wave heals. Shallow Grave makes an ally temporarily unkillable, allowing Dazzle's teammates to survive impossible situations. Poison Touch is a spammable ability that slows its target and deals damage over time. His ultimate, Bad Juju, allows for all of his spells and items to be used more frequently, while also causing his spells to temporarily reduce his enemies' armor.",
-  "history": "Each young acolyte to the Dezun order must complete a series of rites before becoming a shadow priest. The final rite, the rite of shades, is a harrowing spiritual journey through the Nothl Realm, an unpredictable domain from which not all visitants return. Of those who do, some return mad. Others return with strange aptitudes. But all who go there are changed by their experiences. Driven by the need for enlightenment, Dazzle was the youngest of his tribe ever to request the sacred ritual. At first the order refused him, saying he was too young. But Dazzle was not to be dissuaded. Sensing something special in the headstrong young acolyte, the elders relented. Dazzle drank down the sacred potion and sat by the fire while the rest of his tribe danced through the night. In this ethereal dimension of the Nothl Realm, the properties of light and dark are inverted. Thus his brilliant healing light, beautiful to our eye, is actually a sinister kind of evil; and the darkest deeds are done in a dazzling glow. The elders' intuition was prophetic: Dazzle returned to his people as a Shadow Priest like none seen before, with the power to heal as well as to destroy. Now he uses his gift to fight his enemies and help his friends.",
+  "history": "Each young acolyte to the Dezun order must complete a series of rites before becoming a shadow priest. The final rite, the rite of shades, is a harrowing spiritual journey through the Nothl Realm, an unpredictable domain from which not all visitants return. Of those who do, some return mad. Others return with strange aptitudes. But all who go there are changed by their experiences. Driven by the need for enlightenment, Dazzle was the youngest of his tribe ever to request the sacred ritual. At first the order refused him, saying he was too young. But Dazzle was not to be dissuaded. Sensing something special in the headstrong young acolyte, the elders relented. Dazzle drank down the sacred potion and sat by the fire while the rest of his tribe danced through the night. In this ethereal dimension of the Nothl Realm, the properties of light and dark are inverted. Thus his brilliant healing light, beautiful to our eye, is actually a sinister kind of evil; and the darkest deeds are done in a dazzling glow. The elders' intuition was prophetic: Dazzle returned to his people as a Shadow Priest like none seen before, with the power to heal as well as to destroy. Now he uses his gift to cut down his enemies and mend his friends.",
   "talents": [
     {
       "talentLvl": "25",
@@ -210,8 +221,8 @@
     },
     {
       "talentLvl": "15",
-      "talentLeft": "+35 Attack Speed",
-      "talentRight": "+150 Cast Range"
+      "talentLeft": "+60 Attack Speed",
+      "talentRight": "+225 Heal On Shallow Grave End"
     },
     {
       "talentLvl": "10",

@@ -18,7 +18,7 @@
         },
         {
           "talentLvl": "15",
-          "talentLeft": "+125 Cast Range",
+          "talentLeft": "+160 Cursed Crown AoE",
           "talentRight": "+32 Bedlam Damage"
         },
         {
@@ -36,22 +36,22 @@
         "Damage Magical"
       ],
       "notes": [
-        "The visual effects and the sound during the 0.5 second effect delay are only visible and audible to allies.",
+        "The visual effects and the sound during the 0.5-second bramble spawn delay are only visible and audible to allies.",
         "The projectile launched upon cast has only cosmetic purposes, and does not affect the delay.",
-        "The brambles are always placed in the same formation. 4 brambles are placed 200 range away from the center of the target area, towards north, east, south, and west. 4 brambles are placed 500 range away from the center of the target area, towards north-east, south-east, south-west, and north-west. The brambles spawn in 0.075 second intervals, starting 0.5 seconds after cast, so it takes 1.025 seconds for all brambles to spawn. The inner circle spawns first, starting with the east bramble, going counter-clockwise. The outer circle starts with the north-east bramble.",
+        "The brambles are always placed in the same formation. 4 brambles are placed 200 range away from the center of the target area, towards north, east, south, and west. 4 brambles are placed 500 range away from the center of the target area, towards north-east, south-east, south-west, and north-west. The brambles spawn in 0.075-second intervals, starting 0.5 seconds after cast, so it takes 1.025 seconds for all brambles to spawn. The inner circle spawns first, starting with the east bramble, going counter-clockwise. The outer circle starts with the north-east bramble.",
         "4 brambles are placed 200 range away from the center of the target area, towards north, east, south, and west.",
         "4 brambles are placed 500 range away from the center of the target area, towards north-east, south-east, south-west, and north-west.",
-        "The brambles spawn in 0.075 second intervals, starting 0.5 seconds after cast, so it takes 1.025 seconds for all brambles to spawn.",
+        "The brambles spawn in 0.075-second intervals, starting 0.5 seconds after cast, so it takes 1.025 seconds for all brambles to spawn.",
         "The inner circle spawns first, starting with the east bramble, going counter-clockwise. The outer circle starts with the north-east bramble.",
         "Each bramble is inactive for 0.1 seconds after spawning.",
-        "A bramble roots the first enemy unit which comes within 90 range of it, after which it then disappears. Does not provide True Sight over rooted enemies.",
-        "Does not provide True Sight over rooted enemies.",
+        "A bramble roots the first enemy unit which comes within 90 range of it, after which it then disappears. The brambles require no vision and can hit invisible enemies, or enemies in the Fog of War. Does not provide True Sight over rooted enemies.",
         "The brambles require no vision and can hit invisible enemies, or enemies in the Fog of War.",
-        "Deals 62.5\/50\/43.75\/40 damage in 0.5 second intervals, starting 0.5 seconds after the buff is applied, resulting in 2\/3\/4\/5 instances. Can deal a total of 125\/150\/175\/200 damage to the target (before reductions).",
-        "Can deal a total of 125\/150\/175\/200 damage to the target (before reductions).",
-        "The Brambles' duration starts running after the initial creation delay. This means the last bramble disappears 16.025 seconds after cast.",
+        "Does not provide True Sight over rooted enemies.",
+        "Deals 60\/53.33\/50\/48 damage in 0.5-second intervals, starting 0.5 seconds after the buff is applied, resulting in 2\/3\/4\/5 instances. Can deal a total of 120\/160\/200\/240 damage to the target (before reductions).",
+        "Can deal a total of 120\/160\/200\/240 damage to the target (before reductions).",
+        "The brambles' duration starts after the initial creation delay. This means the last bramble disappears 16.025 seconds after cast.",
         "Multiple instances of the debuff fully stack. Each bramble places its own independent debuff.",
-        "Leveling the spell up while there are still brambles on the field does not update the root duration of those brambles."
+        "Leveling the ability up while there are other active brambles does not update the root duration."
       ],
       "mana": "100\/120\/140\/160",
       "hotKey": "Q",
@@ -60,16 +60,17 @@
       "spellName": "Bramble Maze",
       "params": [
         "Cast Animation: 0.3+0.8",
-        "Cast Range: 1100\/1200\/1300\/1400 (TagTalent 1225\/1325\/1425\/1525)",
+        "Cast Range: 1000\/1100\/1200\/1300",
         "Bramble Spawn Radius: 500",
         "Root Search Radius: 90",
         "Bramble Spawn Delay: 0.5",
         "Bramble Spawn Interval: 0.075",
         "Bramble Activation Delay: 0.1",
         "Number of Brambles: 8",
-        "Damage per Second: 125\/100\/87.5\/80",
+        "Total Damage: 120\/160\/200\/240",
         "Root Duration: 1\/1.5\/2\/2.5",
-        "Bramble Duration: 15"
+        "Bramble Duration: 15",
+        "The fae realm exists all around you, merely waiting to draw you in\u2026"
       ],
       "itemBehaviour": [],
       "legacyKey": "B",
@@ -83,20 +84,18 @@
         "Damage Magical"
       ],
       "notes": [
-        "Does not interrupt channeling spells upon cast.",
+        "Does not interrupt channeling abilities upon cast.",
         "Shadow Realm disjoints projectiles upon cast.",
-        "During Shadow Realm, Dark Willow is phased, attack immune and unselectable. Any attack or spell targeting Dark Willow which is already in its attack or cast animation gets canceled. Due to this, Dark Willow cannot target herself with most of her own items either. She can target herself with Glimmer Cape, Healing Salve, Moon Shard, Royal Jelly and Shadow Amulet. Does not prevent Spell Reflection from reflecting spells back at her.",
-        "Any attack or spell targeting Dark Willow which is already in its attack or cast animation gets canceled.",
-        "Due to this, Dark Willow cannot target herself with most of her own items either.",
-        "She can target herself with Glimmer Cape, Healing Salve, Moon Shard, Royal Jelly and Shadow Amulet.",
-        "Does not prevent Spell Reflection from reflecting spells back at her.",
-        "Due to the unselectability, almost every spell treats Dark Willow as if she were invisible. Spells which do not treat her as invisible are: Heat-Seeking Missile, Concussive Shot, Wrath of Nature, Omnislash, Mana Drain, Exorcism, and Thundergod's Wrath. Unlike with invisibility, Beetles, Phantoms and Undying Zombies do not instanly die when Shadow Realm is cast.",
+        "During Shadow Realm, Dark Willow is phased, attack immune and unselectable. Any attack or ability targeting Dark Willow which is already in its attack or cast animation gets canceled. Due to this, Dark Willow (or ↓↓ Double-tapping) cannot target herself with most of her own items either, with the following exceptions: Glimmer Cape, Healing Salve, Moon Shard, Royal Jelly and Shadow Amulet. Does not prevent Spell Reflection from reflecting abilities back at her.",
+        "Any attack or ability targeting Dark Willow which is already in its attack or cast animation gets canceled.",
+        "Due to this, Dark Willow (or ↓↓ Double-tapping) cannot target herself with most of her own items either, with the following exceptions: Glimmer Cape, Healing Salve, Moon Shard, Royal Jelly and Shadow Amulet.",
+        "Does not prevent Spell Reflection from reflecting abilities back at her.",
+        "Due to the unselectability, almost every ability treats Dark Willow as if she were invisible. Abilities which do not treat her as invisible are: Heat-Seeking Missile, Concussive Shot, Wrath of Nature, Omnislash, Mana Drain, Exorcism, and Thundergod's Wrath. Unlike with invisibility, Beetles, Phantoms and Undying Zombies do not instanly die when Shadow Realm is cast.",
         "Heat-Seeking Missile, Concussive Shot, Wrath of Nature, Omnislash, Mana Drain, Exorcism, and Thundergod's Wrath.",
         "Unlike with invisibility, Beetles, Phantoms and Undying Zombies do not instanly die when Shadow Realm is cast.",
-        "When cast while attacking an enemy, Dark Willow is ordered to stop, so that the attack out of Shadow Realm is not wasted. However, when she is given an attack order while outside attack range, casting Shadow Realm while she moves does not stop her from attacking immediately.",
-        "However, when she is given an attack order while outside attack range, casting Shadow Realm while she moves does not stop her from attacking immediately.",
-        "Casting spells or items during Shadow Realm does not end it, only attacking does. With Aghanim's Scepter upgrade, attacking does not end it either.",
-        "With Aghanim's Scepter upgrade, attacking does not end it either.",
+        "When cast while attacking an enemy, Dark Willow is ordered to stop, so that the attack out of Shadow Realm is not wasted. However, when she is given an attack order (A) while outside attack range, casting Shadow Realm while she moves does not stop her from attacking immediately.",
+        "However, when she is given an attack order (A) while outside attack range, casting Shadow Realm while she moves does not stop her from attacking immediately.",
+        "Casting abilities or items during Shadow Realm does not end it, only attacking does.",
         "The Shadow Realm buff is lost upon launching an attack. Upon launch, Dark Willow gets the attack logic buff, which is responsible for the damage. This buff disappears upon hitting the target, or within 3 seconds, whichever is shorter. This means if the projectile flies for more than 3 seconds, the damage is not applied. The buff responsible for the damage is lost on death, so when dying before projectile hit negates the damage. The buff only works for the attack that created it. Any other projectiles launched afterwards do not apply the bonus damage.",
         "This buff disappears upon hitting the target, or within 3 seconds, whichever is shorter.",
         "This means if the projectile flies for more than 3 seconds, the damage is not applied.",
@@ -105,11 +104,13 @@
         "The damage increases by 0.77\/1.54\/2.31\/3.09 on each server tick (0.03 seconds), reaching its maximum in 3.5 seconds.",
         "The damage stops growing as soon as the attack is launched. It does not continue to grow while flying towards the target.",
         "The damage is dealt in a separate instance and is not added to Dark Willow's attack damage.",
-        "The bonus damage of Shadow Realm does not work against buildings and wards, but works on allies."
+        "The bonus damage of Shadow Realm does not work against buildings and wards, but works on allies.",
+        "With Aghanim's Scepter, attacking no longer ends Shadow Realm. The damage continues to grow until it reaches the 3.5 max damage duration, and Shadow Realm ends after the 5 second ability duration.",
+        "The damage continues to grow until it reaches the 3.5 max damage duration, and Shadow Realm ends after the 5 second ability duration."
       ],
       "mana": "70\/80\/90\/100",
       "hotKey": "W",
-      "cooldown": "32\/26\/20\/14 (TagTalent 30\/24\/18\/12)",
+      "cooldown": "26\/22\/18\/14 (TagTalent 24\/20\/16\/12)",
       "description": "Dark Willow recedes into the shadows, becoming untargetable. Her next attack has increased attack range and deals bonus magic damage, and will end Shadow Realm. Damage scales based on how long she remains under the effects of Shadow Realm, the maximum being reached after 3.5 seconds.",
       "spellName": "Shadow Realm",
       "params": [
@@ -119,7 +120,8 @@
         "Max Damage Duration: 3.5",
         "Duration: 5",
         "Attacking no longer takes you out of Shadow Realm. Each attack still has bonus damage based on the duration of the buff.",
-        "Does not attempt to damage spell immune enemies."
+        "Does not attempt to damage spell immune enemies.",
+        "What you can't see will most definitely hurt you."
       ],
       "itemBehaviour": [],
       "legacyKey": "R",
@@ -135,8 +137,8 @@
         "The sound and visual effect during the delay on the target is audible and visible to everyone. The visual effect indicates the area to be affected on each second.",
         "The visual effect indicates the area to be affected on each second.",
         "Turning invulnerable or hidden does not prevent the debuff from affecting the area around the target.",
-        "With Aghanim's Shard, losing the initial debuff in any way causes 4 Brambles to spawn around the target. The bramble are based on the current level of Bramble Maze and work identical. If it is not leveled, no bramble spawn. The brambles are always placed 175 range away from the target, towards north, east, south, and west. Unlike the brambles from a regular cast, these brambles spawn simultaneously.",
-        "The bramble are based on the current level of Bramble Maze and work identical. If it is not leveled, no bramble spawn.",
+        "With Aghanim's Shard, losing the initial debuff in any way causes 4 Brambles based on the current level to spawn around the target. Bramble Maze's notes fully apply. If it is not leveled, no brambles spawn. The brambles are always placed 175 range away from the target, towards north, east, south, and west. Unlike the brambles from a regular cast, these brambles spawn simultaneously.",
+        "Bramble Maze's notes fully apply. If it is not leveled, no brambles spawn.",
         "The brambles are always placed 175 range away from the target, towards north, east, south, and west.",
         "Unlike the brambles from a regular cast, these brambles spawn simultaneously."
       ],
@@ -147,13 +149,14 @@
       "spellName": "Cursed Crown",
       "params": [
         "Cast Animation: 0.2+0.83",
-        "Cast Range: 600\/625\/650\/675 (TagTalent 725\/750\/775\/800)",
-        "Stun Radius: 360",
-        "Delay: 4",
+        "Cast Range: 600\/625\/650\/675",
+        "Stun Radius: 360 (TagTalent 520)",
+        "Delay: 4 (TagTalent 3)",
         "Stun Duration: 1.75\/2.25\/2.75\/3.25 (TagTalent 2.35\/2.85\/3.35\/3.85)",
         "Bramble Spawn Radius: 175",
-        "Cursed Crown creates four brambles around the target after the counter ends. Triggers even upon dispel. Reduces cooldown by 3 seconds.",
-        "Blocked upon cast."
+        "Cursed Crown creates four brambles around the target after the counter ends. Triggers even upon dispel. Reduces cooldown by 3 seconds and stun delay by 1 second.",
+        "Blocked upon cast.",
+        "Didn't anyone ever tell you? Never strike a deal with a fairy\u2026"
       ],
       "itemBehaviour": [],
       "legacyKey": "C",
@@ -167,24 +170,25 @@
         "Damage Magical"
       ],
       "notes": [
-        "Bedlam and Terrorize are linked abilities; leveling up one automatically levels up the other as well. This applies to Ability Draft as well.",
-        "Interrupts Dark Willow's channeling spells upon cast.",
+        "Leveling this ability automatically levels Terrorize as well. This applies to Ability Draft as well.",
+        "This applies to Ability Draft as well.",
+        "Interrupts Dark Willow's channeling abilities upon cast.",
         "While active, Terrorize is inactive and cannot be cast.",
-        "Bedlam is inactive during Terrorirze's cast time, and stays inactive until Jex fully returned to Dark Willow after terrorizing enemies.",
+        "Bedlam is inactive during Terrorize's cast time, and stays inactive until Jex fully returns to Dark Willow after terrorizing enemies.",
         "On cast, Jex always appears on the west side and rotates clockwise around Dark Willow.",
         "Jex rotates around Dark Willow at a speed of 698.13, taking 1.8 seconds to finish a revolution. This results in 2.78 revolutions over the whole duration.",
         "This results in 2.78 revolutions over the whole duration.",
-        "On each attack, Jex chooses a visible random target within range. There are no priorities. Does not attack buildings or wards. The attack radius is centered on Jex. A light pink glow surrounds it, indicating the attack area. Jex continues attacking even when Dark Willow is disabled. It stops only when she dies, or when expiring. Jex' attacks are not regular attacks. They are treated like a spell, and thus do not interact with any on attack effects. This means that spell damage amplification and spell lifesteal does work with it. Dark Willow is the damage source. The attack projectiles traveling at a speed of 1400.",
+        "On each attack, Jex chooses a visible random target within range. There are no priorities. Does not attack buildings or wards. The attack radius is centered on Jex. A light pink glow surrounds it, indicating the attack area. Jex continues attacking even when Dark Willow is disabled. It stops only when she dies, or when expiring. Jex' attacks are not regular attacks. They are treated like an ability, and thus do not interact with any on attack effects. This means that both spell damage amplification and spell lifesteal does work with it. Dark Willow is the damage source. The attack projectiles traveling at a speed of 1400.",
         "The attack radius is centered on Jex. A light pink glow surrounds it, indicating the attack area.",
         "Jex continues attacking even when Dark Willow is disabled. It stops only when she dies, or when expiring.",
-        "Jex' attacks are not regular attacks. They are treated like a spell, and thus do not interact with any on attack effects.",
-        "This means that spell damage amplification and spell lifesteal does work with it. Dark Willow is the damage source.",
+        "Jex' attacks are not regular attacks. They are treated like an ability, and thus do not interact with any on attack effects.",
+        "This means that both spell damage amplification and spell lifesteal does work with it. Dark Willow is the damage source.",
         "The attack projectiles traveling at a speed of 1400.",
-        "With its 0.25 second attack rate, it can attack up to 20 times.",
+        "With its 0.25-second attack rate, it can attack up to 20 times.",
         "With the current attack rate and damage, it can deal up to 300\/500\/700 (TagTalent 428\/628\/828) damage per second to a single unit.",
         "Can deal up to 1500\/2500\/3500 (TagTalent 2140\/3140\/4140) damage to a single unit (before reductions).",
         "Recasting Bedlam before the previous cast finishes refreshes the duration.",
-        "The spell itself provides no vision, but Jex has 600 ground vision which he provides the whole time."
+        "The ability itself provides no vision, but Jex has 600 ground vision which he provides for the duration."
       ],
       "mana": "100\/150\/200",
       "hotKey": "D",
@@ -198,7 +202,8 @@
         "Attack Interval: 0.25",
         "Damage per Attack: 75\/125\/175 (TagTalent 107\/157\/207)",
         "Seconds per Revolution: 1.8",
-        "Duration: 5"
+        "Duration: 5",
+        "You'll have to excuse my friend Jex. He's really into murder."
       ],
       "itemBehaviour": [],
       "legacyKey": "D",
@@ -211,16 +216,17 @@
         "Affects Enemies"
       ],
       "notes": [
-        "Terrorize and Bedlam are linked abilities; leveling up one automatically levels up the other as well. This applies to Ability Draft as well.",
+        "Leveling this ability automatically levels Bedlam as well. This applies to Ability Draft as well. In Ability Draft, Terrorize can be unlocked with Aghanim's Scepter by the player that drafted Bedlam.",
+        "In Ability Draft, Terrorize can be unlocked with Aghanim's Scepter by the player that drafted Bedlam.",
         "Terrorize is inactive during Bedlam.",
-        "Terrorize is also inactive during its cast time, and stays inactive until Jex fully returned to Dark Willow after terrorizing enemies. This means Terrorize cannot be cast again until Jex returned from a previous cast.",
+        "Terrorize is also inactive during its cast time, and stays inactive until Jex fully returns to Dark Willow after terrorizing enemies. This means Terrorize cannot be cast again until Jex returned from a previous cast.",
         "This means Terrorize cannot be cast again until Jex returned from a previous cast.",
         "Jex travels to the target point at a speed of 2000, and returns to Dark Willow at a speed of 600.",
         "The visual effect at the target area during the cast time\/effect delay is visible to allies only. The sound is audible to everyone.",
         "Applies fear on all hit enemies within the radius, forcing them to run towards their team's fountain, while preventing them from acting. When hitting neutral creeps, they retreat to their camps instead.",
         "When hitting neutral creeps, they retreat to their camps instead.",
         "Provides shared vision over all hit enemies for its duration. Affects invisible units, but does not provide True Sight.",
-        "The spell itself provides no vision, but Jex has 600 ground vision which he provides the whole time."
+        "The ability itself provides no vision, but Jex has 600 ground vision which he provides during the duration."
       ],
       "mana": "150",
       "hotKey": "R",
@@ -229,9 +235,10 @@
       "spellName": "Terrorize",
       "params": [
         "Cast Animation: 1+2.57",
-        "Cast Range: 1300 (TagTalent 1425)",
+        "Cast Range: 1200",
         "Radius: 400",
-        "Duration: 3.5\/3.75\/4 (TagTalent 5\/5.25\/5.5)"
+        "Duration: 3.5\/3.75\/4 (TagTalent 5\/5.25\/5.5)",
+        "You think you know the first thing about fear? Jex'll show you what that word truly means\u2026"
       ],
       "itemBehaviour": [],
       "legacyKey": "F",
@@ -261,7 +268,7 @@
     },
     {
       "talentLvl": "15",
-      "talentLeft": "+125 Cast Range",
+      "talentLeft": "+160 Cursed Crown AoE",
       "talentRight": "+32 Bedlam Damage"
     },
     {

@@ -4,7 +4,7 @@
       "notes": [
         "The health talent increases maximum health capacity, and keeps the current health percentage.",
         "This attack damage talent is added as raw attack damage, so it does not benefit illusions, and is not affected by most percentage-based damage increasing or reducing effects.",
-        "The strength talent effectively grants Ogre Magi 600 health and 3 health regeneration.",
+        "The strength talent effectively grants Ogre Magi 500 health and 2.5 health regeneration.",
         "Bash from talents pierces spell immunity and is not disabled by Break. For more information, see bash."
       ],
       "spellName": "Talent",
@@ -16,8 +16,8 @@
         },
         {
           "talentLvl": "20",
-          "talentLeft": "+40 Bloodlust AS",
-          "talentRight": "+30 Strength"
+          "talentLeft": "+30 Bloodlust AS",
+          "talentRight": "+25 Strength"
         },
         {
           "talentLvl": "15",
@@ -26,7 +26,7 @@
         },
         {
           "talentLvl": "10",
-          "talentLeft": "+75 Cast Range",
+          "talentLeft": "-1s Fireblast Cooldown",
           "talentRight": "+16 Ignite DPS"
         }
       ]
@@ -39,27 +39,28 @@
         "Damage Magical"
       ],
       "notes": [
-        "When multicast, Fireblast hits the same target several times in 0.6 second intervals.",
+        "Each blast first applies the damage, then the debuff.",
+        "When Multicast procs, Fireblast hits the same target several times in 0.6 second intervals.",
         "This is how much damage a multicast Fireblast deals (before reductions) and how long it stuns on each level: 2x Multicast: 120\/240\/360\/480 (TagTalent 600\/720\/840\/960) damage, 2.1 seconds stun. 3x Multicast: 180\/360\/540\/720 (TagTalent 900\/1080\/1260\/1440) damage, 2.7 seconds stun. 4x Multicast: 240\/480\/720\/960 (TagTalent 1200\/1440\/1680\/1920) damage, 3.3 seconds stun.",
         "2x Multicast: 120\/240\/360\/480 (TagTalent 600\/720\/840\/960) damage, 2.1 seconds stun.",
         "3x Multicast: 180\/360\/540\/720 (TagTalent 900\/1080\/1260\/1440) damage, 2.7 seconds stun.",
         "4x Multicast: 240\/480\/720\/960 (TagTalent 1200\/1440\/1680\/1920) damage, 3.3 seconds stun.",
-        "",
-        "Each blast first applies the damage, then the debuff."
+        ""
       ],
       "mana": "70\/80\/90\/100",
       "hotKey": "Q",
-      "cooldown": "11\/10\/9\/8",
+      "cooldown": "11\/10\/9\/8 (TagTalent 10\/9\/8\/7)",
       "description": "Blasts an enemy unit with a wave of fire, dealing damage and stunning the target.",
       "spellName": "Fireblast",
       "params": [
         "Cast Animation: 0.45+0.53",
-        "Cast Range: 475 (TagTalent 550)",
+        "Cast Range: 475",
         "Multicast Interval: 0.6",
         "Damage: 60\/120\/180\/240 (TagTalent 300\/360\/420\/480)",
         "Stun Duration: 1.5",
         "Grants a new ability: Unrefined Fireblast",
-        "When blocked, ends Multicast, no matter if the initial cast or a multicast instance was blocked."
+        "When blocked, ends Multicast, no matter if the initial cast or a multicast instance was blocked.",
+        "The Ogre Magi is easily amused, entertained for hours by playing with fire."
       ],
       "itemBehaviour": [],
       "legacyKey": "F",
@@ -75,15 +76,15 @@
       "notes": [
         "Ignite travels at a speed of 1000.",
         "The second projectile only targets enemies which do not have the Ignite debuff yet.",
-        "If multiple enemies which are not ignited yet are within range, chooses the closer target for the second projectile. Cannot target invisible, invulnerable, or hidden units, or units inside the fog of war.",
-        "Cannot target invisible, invulnerable, or hidden units, or units inside the fog of war.",
-        "When multicast, launches Ignite projectiles in 0.6 second intervals at random enemy or neutral units within 1600 range of Ogre Magi. The multicasts launch 2 projectiles per cast as well, just like a regular cast. Cannot target invisible, invulnerable, or hidden units, or units inside the fog of war. Prioritizes units which do not have the Ignite debuff already. Can hit the same unit multiple times.",
+        "If multiple enemies which are not ignited yet are within range, chooses the closer target for the second projectile. Cannot target invisible, invulnerable, or hidden units, or units inside the Fog of War.",
+        "Cannot target invisible, invulnerable, or hidden units, or units inside the Fog of War.",
+        "When Multicast procs, launches Ignite projectiles in 0.6-second intervals at random enemy or neutral units within 1600 range of Ogre Magi. The multicasts launch 2 projectiles per cast as well, just like a regular cast. Cannot target invisible, invulnerable, or hidden units, or units inside the Fog of War. Prioritizes units which do not have the Ignite debuff already. Can hit the same unit multiple times.",
         "The multicasts launch 2 projectiles per cast as well, just like a regular cast.",
-        "Cannot target invisible, invulnerable, or hidden units, or units inside the fog of war.",
+        "Cannot target invisible, invulnerable, or hidden units, or units inside the Fog of War.",
         "Prioritizes units which do not have the Ignite debuff already.",
         "Can hit the same unit multiple times.",
         "The debuff from Ignite does not stack with itself. However, a new instance adds its duration to the existing debuff, instead of refreshing it.",
-        "Deals damage in 1 second intervals, starting immediately as the debuff is placed. When multicast onto the same target, each projectile applies a damage tick on impact. However, the tick timer gets reset on each impact as well, so that all but 1 of the ticks on impact get canceled out, resulting in avarage up to: No Multicast: 6\/7\/8\/9 damage instances. 2x Multicast: 11\/13\/15\/17 damage instances. 3x Multicast: 16\/19\/22\/25 damage instances. 4x Multicast: 21\/25\/29\/33 damage instances.",
+        "Deals damage in 1-second intervals, starting immediately as the debuff is placed. When multicast onto the same target, each projectile applies a damage tick on impact. However, the tick timer gets reset on each impact as well, so that all but 1 of the ticks on impact get canceled out, resulting in avarage up to: No Multicast: 6\/7\/8\/9 damage instances. 2x Multicast: 11\/13\/15\/17 damage instances. 3x Multicast: 16\/19\/22\/25 damage instances. 4x Multicast: 21\/25\/29\/33 damage instances.",
         "When multicast onto the same target, each projectile applies a damage tick on impact.",
         "However, the tick timer gets reset on each impact as well, so that all but 1 of the ticks on impact get canceled out, resulting in avarage up to:",
         "No Multicast: 6\/7\/8\/9 damage instances.",
@@ -104,8 +105,8 @@
       "description": "Drenches the target and another random unit in volatile chemicals, causing it to burst into flames. The target is in immense pain, taking damage and moving more slowly.",
       "spellName": "Ignite",
       "params": [
-        "Cast Animation: 0.45+0.43",
-        "Cast Range: 700\/800\/900\/1000 (TagTalent 775\/875\/975\/1075)",
+        "Cast Animation: 0.35+0.43",
+        "Cast Range: 700\/800\/900\/1000",
         "Secondary Target Search Radius: 900\/1000\/1100\/1200",
         "Multicast Radius: 1600",
         "Multicast Interval: 0.6",
@@ -114,7 +115,8 @@
         "Move Speed Slow: 20%\/22%\/24%\/26%",
         "Duration: 5\/6\/7\/8",
         "Slow persists and attempts to damage if debuff was placed before spell immunity and when not dispelled.",
-        "Blocked upon impact, for any target. Does not end Multicast."
+        "Blocked upon impact, for any target. Does not end Multicast.",
+        "Batter up!"
       ],
       "itemBehaviour": [],
       "legacyKey": "G",
@@ -130,27 +132,27 @@
         "Despite the visual effect, the buff is applied instantly on the target upon cast. The projectile has only a visual purpose. Can be cast on any allied unit which is not a ward. This includes buildings and invulnerable allies. ↓↓ Double-tapping automatically targets self.",
         "Can be cast on any allied unit which is not a ward. This includes buildings and invulnerable allies.",
         "↓↓ Double-tapping automatically targets self.",
-        "When multicast, instantly applies the Bloodlust buff on random allies within the radius.",
+        "When Multicast procs, instantly applies the Bloodlust buff on random allies within the radius.",
         "Causes the target's model size to increase by 25% for its duration. This has no impact on its collision size.",
-        "Can be set to autocast. When on autocast, Ogre Magi automatically casts this spell on the closest allied hero that does not have the Bloodlust buff on. This includes hero clones, creep-heroes, but not illusions. Does not automatically target lane creeps, spell immune creep-heroes and other allied or own summons. Interrupts Ogre Magi's current order and makes him forget queued commands. This cannot occur while channeling a spell, though.",
-        "When on autocast, Ogre Magi automatically casts this spell on the closest allied hero that does not have the Bloodlust buff on.",
-        "This includes hero clones, creep-heroes, but not illusions.",
+        "With Autocast, Ogre Magi automatically casts this ability on the closest ally hero that does not have the Bloodlust buff on. This includes clones, creep-heroes, but not illusions. Does not automatically target lane creeps, spell immune creep-heroes and other allied or own summons. Interrupts Ogre Magi's current order and makes him forget queued commands. This cannot occur while channeling an ability, though.",
+        "This includes clones, creep-heroes, but not illusions.",
         "Does not automatically target lane creeps, spell immune creep-heroes and other allied or own summons.",
-        "Interrupts Ogre Magi's current order and makes him forget queued commands. This cannot occur while channeling a spell, though."
+        "Interrupts Ogre Magi's current order and makes him forget queued commands. This cannot occur while channeling an ability, though."
       ],
-      "mana": "65",
+      "mana": "50\/55\/60\/65",
       "hotKey": "E",
       "cooldown": "20\/18\/16\/14",
       "description": "Incites a frenzy in a friendly unit, increasing its movement speed and attack speed. Gives bonus attack speed if cast on Ogre himself. Can be cast on towers.",
       "spellName": "Bloodlust",
       "params": [
         "Cast Animation: 0.45+0.67",
-        "Cast Range: 600 (TagTalent 675)",
+        "Cast Range: 600",
         "Multicast Radius: 700",
         "Move Speed Bonus: 7%\/9%\/11%\/13%",
-        "Allies Attack Speed Bonus: 30\/40\/50\/60 (TagTalent 70\/80\/90\/100)",
-        "Self Attack Speed Bonus: 30\/50\/70\/90 (TagTalent 70\/90\/110\/130)",
-        "Duration: 30"
+        "Allies Attack Speed Bonus: 30\/40\/50\/60 (TagTalent 60\/70\/80\/90)",
+        "Self Attack Speed Bonus: 30\/50\/70\/90 (TagTalent 60\/80\/100\/120)",
+        "Duration: 30",
+        "'Running's not as fun as hitting... Not one bit fun.'"
       ],
       "itemBehaviour": [],
       "legacyKey": "B",
@@ -164,17 +166,17 @@
         "Damage Magical"
       ],
       "notes": [
-        "Requires Aghanim's Scepter to be unlocked.",
-        "Ogre Magi can never be out of mana to cast this spell, since it always costs 30% of his current mana pool (rounded down).",
+        "Requires Aghanim's Scepter to be unlocked. This ability is not available in Ability Draft, since Multicast is unavailable and Unrefined Fireblast is bound to it.",
+        "This ability is not available in Ability Draft, since Multicast is unavailable and Unrefined Fireblast is bound to it.",
+        "Each blast first applies the damage, then the debuff.",
+        "Ogre Magi can never be out of mana to cast this spell, since it always costs 30% of his current mana pool (rounded down). The tooltip shows the momentary mana cost and updates whenever the mouse cursor is moved over the ability icon.",
         "The tooltip shows the momentary mana cost and updates whenever the mouse cursor is moved over the ability icon.",
-        "When multicast, Unrefined Fireblast hits the same target several times in 0.6 second intervals.",
+        "When Multicast procs, Unrefined Fireblast hits the same target several times in 0.6-second intervals.",
         "This is how much damage a multicast Unrefined Fireblast deals (before reductions) and how long it stuns on each level: 2x Multicast: 550 damage, 2.1 seconds stun. 3x Multicast: 825 damage, 2.7 seconds stun. 4x Multicast: 1100 damage, 3.3 seconds stun.",
         "2x Multicast: 550 damage, 2.1 seconds stun.",
         "3x Multicast: 825 damage, 2.7 seconds stun.",
         "4x Multicast: 1100 damage, 3.3 seconds stun.",
-        "",
-        "Each blast first applies the damage, then the debuff.",
-        "In Ability Draft, since Aghanim's Scepter-granted spells are bound to the ultimates, This ability is not available in Ability Draft."
+        ""
       ],
       "mana": "30% of current mana",
       "hotKey": "D",
@@ -183,11 +185,12 @@
       "spellName": "Unrefined Fireblast",
       "params": [
         "Cast Animation: 0.45+0.53",
-        "Cast Range: 475 (TagTalent 550)",
+        "Cast Range: 475",
         "Multicast Interval: 0.6",
         "Damage: 275",
         "Stun Duration: 1.5",
-        "When blocked, ends Multicast, no matter if the initial cast or a multicast instance was blocked."
+        "When blocked, ends Multicast, no matter if the initial cast or a multicast instance was blocked.",
+        "The 'who-casts-spell-first' argument between himself is solved simply by both casting at once."
       ],
       "itemBehaviour": [],
       "legacyKey": "D",
@@ -201,22 +204,23 @@
         "Damage Magical"
       ],
       "notes": [
-        "Requires Aghanim's Shard to be unlocked.",
+        "Requires Aghanim's Shard to be unlocked. This ability is not available in Ability Draft, since Multicast is unavailable and Fire Shield is bound to it.",
+        "This ability is not available in Ability Draft, since Multicast is unavailable and Fire Shield is bound to it.",
         "Can be cast on any allied unit which is not a ward. This includes buildings. ↓↓ Double-tapping automatically targets self.",
         "↓↓ Double-tapping automatically targets self.",
-        "When multicast, instantly applies the Fire Shield buff on random allies within the radius.",
-        "Cannot be cast on invulnerable units, however, Multicast can target invulnerable units.",
-        "The shield only reacts on attacks, meaning the damage reduction only applies to the attack damage dealt from attacks it reacts to.",
+        "When Multicast procs, instantly applies the Fire Shield buff on random allies within the radius.",
+        "Cannot be cast on invulnerable units. However, Multicast can target invulnerable units.",
+        "The shield only reacts on attacks, meaning the damage reduction only applies to the attack damage dealt from attacks it reacts to. Can only trigger when an enemy unit lands an attack, regardless of distance. This means it cannot trigger on missed attacks. Does not react on attacks from buildings and wards. Fully works against allied attacks.",
         "Can only trigger when an enemy unit lands an attack, regardless of distance. This means it cannot trigger on missed attacks.",
         "Does not react on attacks from buildings and wards. Fully works against allied attacks.",
         "The fireballs travel at a speed of 1400.",
         "The damage source of the fireballs is always the caster of Fire Shield, and not the buffed unit.",
         "All fireballs together can deal 375 damage (before reductions).",
-        "The number of remaining attacks is visualised by the visual effect, with 1 fire orb orbiting the unit for each remaining instance. A number on the status buff shows the remaining charges as well.",
+        "The number of remaining attacks is visualized by the visual effect, with 1 fire orb orbiting the unit for each remaining instance. A number on the status buff shows the remaining charges as well.",
         "A number on the status buff shows the remaining charges as well.",
         "Recasting Fire Shield on the same target does not reset the number of attacks. It only refreshes the duration."
       ],
-      "mana": "75",
+      "mana": "50",
       "hotKey": "F",
       "cooldown": "16",
       "description": "Creates a shield around the target ally, absorbing of the damage of next attacks. Launches fireballs at the attacker, dealing damage.",
@@ -226,7 +230,7 @@
         "Cast Range: 600",
         "Multicast Radius: 1000",
         "Number of Attacks: 3",
-        "Incoming Attack Damage Reduction: 70%",
+        "Incoming Attack Damage Reduction: 85%",
         "Fireball Damage: 125",
         "Shield Duration: 25",
         "Can be cast on spell immune allies. Releases fireballs on spell immune enemies, but does not damage them.",
@@ -243,20 +247,17 @@
         "Affects Self"
       ],
       "notes": [
-        "Besides his own spells, Multicast can only proc on single-target items when targeting enemies. The following items can be multicast: Force Staff, Heaven's Halberd, Abyssal Blade, Diffusal Blade, Bloodthorn, Hurricane Pike, Ethereal Blade, Eul's Scepter of Divinity, Medallion of Courage, Dagon, Hand of Midas, Rod of Atos, Solar Crest, Nullifier, Orchid Malevolence, Scythe of Vyse, Clumsy Net, Iron Talon. The following items trigger Multicast, but are not multiplied: Spirit Vessel, Urn of Shadows. The following items cannot be multicast: Helm of the Dominator.",
-        "The following items can be multicast: Force Staff, Heaven's Halberd, Abyssal Blade, Diffusal Blade, Bloodthorn, Hurricane Pike, Ethereal Blade, Eul's Scepter of Divinity, Medallion of Courage, Dagon, Hand of Midas, Rod of Atos, Solar Crest, Nullifier, Orchid Malevolence, Scythe of Vyse, Clumsy Net, Iron Talon.",
-        "The following items trigger Multicast, but are not multiplied: Spirit Vessel, Urn of Shadows.",
-        "The following items cannot be multicast: Helm of the Dominator.",
-        "Multicast items only target enemies, even when the item itself can target allies by default. If no other enemies are nearby, Multicast does nothing. It cannot target the same units multiple times. The items are still restricted to their own targeting rules. For example, an item that only targets creeps cannot multicast onto enemy heroes.",
+        "Besides his own abilities, Multicast can only proc on single-target items when targeting enemies (see chart). Multicast items only target enemies, even when the item itself can target allies by default. If no other enemies are nearby, Multicast does nothing. It cannot target the same units multiple times. The items are still restricted to their own targeting rules. For example, an item that only targets creeps cannot multicast onto enemy heroes.",
+        "Multicast items only target enemies, even when the item itself can target allies by default.",
         "If no other enemies are nearby, Multicast does nothing. It cannot target the same units multiple times.",
         "The items are still restricted to their own targeting rules. For example, an item that only targets creeps cannot multicast onto enemy heroes.",
         "The range of multicast items is based on the item's cast range + cast range bonuses + the 600 buffer range.",
-        "Multicast is resolved in a single roll, rolling from the highest chance to the lowest. This results in the following distribution for each level No Multicast: 25%\/25%\/25% 2x Multicast: 75%\/45%\/45% 3x Multicast: 0%\/30%\/15% 4x Multicast: 0%\/0%\/15%. This means each spell is cast 175%\/205%\/220% times on average.",
+        "Multicast is resolved in a single roll, rolling from the highest chance to the lowest. This results in the following distribution for each level: No Multicast: 25%\/25%\/25% 2x Multicast: 75%\/45%\/45% 3x Multicast: 0%\/30%\/15% 4x Multicast: 0%\/0%\/15%. This means each ability is cast 1.75\/2.05\/2.2 times on average.",
         "No Multicast: 25%\/25%\/25%",
         "2x Multicast: 75%\/45%\/45%",
         "3x Multicast: 0%\/30%\/15%",
         "4x Multicast: 0%\/0%\/15%.",
-        "This means each spell is cast 175%\/205%\/220% times on average.",
+        "This means each ability is cast 1.75\/2.05\/2.2 times on average.",
         "This ability is not available in Ability Draft."
       ],
       "mana": null,
@@ -272,7 +273,9 @@
         "2x Multicast Chance: 75%\/75%\/75%",
         "3x Multicast Chance: 0%\/30%\/30%",
         "4x Multicast Chance: 0%\/0%\/15%",
-        "Grants a new ability: Fire Shield"
+        "Grants a new ability: Unrefined Fireblast.",
+        "Grants a new ability: Fire Shield",
+        "Despite being largely incapacitated by his IQ, the Ogre Magi's success in battle is attributed to pure skill."
       ],
       "itemBehaviour": [],
       "legacyKey": "C",
@@ -288,7 +291,7 @@
     "attrAgility": 14.0
   },
   "description": "Aggron Stonebreak, the Ogre Magi, is a melee intelligence hero, famous for his random potential for extreme burst damage and his enormous health pool for an intelligence hero. He has good base attributes, and some of the best attributes gain in the game, having a very high base strength, as well as the highest strength gain of any intelligence hero by far. Coupled with his high base armor and high health regeneration, Ogre Magi is very hard to take down in the early game. He is a powerful ganker and disabler, slowing his enemies first with an Ignite, then proceeding to eliminate his opponents with Fireblast. Later in the game he takes on the role of a buffer\/debuffer with his powerful Bloodlust buff, buffing his carry's damage potential enormously. And if you happen to be skilled enough, his ultimate Multicast gives him the opportunity to randomly cast his spells multiple times, allowing for great burst potential. Ogre Magi is a very strong disabler, requiring nothing but a bit of luck to successfully pull off his powerful Multicasts.",
-  "history": "The ordinary ogre is the creature for whom the phrase 'As dumb as a bag of rock hammers' was coined. In his natural state, an ogre is supremely incapable of doing or deciding anything. Clothed in dirt, he sometimes finds himself accidentally draped in animal skins after eating lanekill. Not an especially social creature, he is most often found affectionately consorting with the boulders or tree-stumps he has mistaken for kin (a factor that may explain the ogre's low rate of reproduction). However, once every generation or so, the ogre race is blessed with the birth of a two-headed Ogre Magi, who is immediately given the traditional name of Aggron Stonebreak, the name of the first and perhaps only wise ogre in their line's history. With two heads, Ogre Magi finds it possible to function at a level most other creatures manage with one. And while the Ogre Magi will win no debates (even with itself), it is graced with a divine quality known as Dumb Luck--a propensity for serendipitous strokes of fortune which have allowed the ogre race to flourish in spite of enemies, harsh weather, and an inability to feed itself. It's as if the Goddess of Luck, filled with pity for the sadly inept species, has taken Ogre Magi under her wing. And who could blame her? Poor things.",
+  "history": "The ordinary ogre is the creature for whom the phrase 'As dumb as a bag of rock hammers' was coined. In his natural state, an ogre is supremely incapable of doing or deciding anything. Clothed in dirt, he sometimes finds himself accidentally draped in animal skins after eating lanekill. Not an especially social creature, he is most often found affectionately consorting with the boulders or tree-stumps he has mistaken for kin (a factor that may explain the ogre's low rate of reproduction). However, once every generation or so, the ogre race is blessed with the birth of a two-headed Ogre Magi, who is immediately given the traditional name of Aggron Stonebreak, the name of the first and perhaps only wise ogre in their line's history. With two heads, Ogre Magi finds it possible to function at a level most other creatures manage with one. And while the Ogre Magi will win no debates (even with itself), it is graced with a divine quality known as Dumb Luck\u2014a propensity for serendipitous strokes of fortune which have allowed the ogre race to flourish in spite of enemies, harsh weather, and an inability to feed itself. It's as if the Goddess of Luck, filled with pity for the sadly inept species, has taken Ogre Magi under her wing. And who could blame her? Poor things.",
   "talents": [
     {
       "talentLvl": "25",
@@ -297,8 +300,8 @@
     },
     {
       "talentLvl": "20",
-      "talentLeft": "+40 Bloodlust AS",
-      "talentRight": "+30 Strength"
+      "talentLeft": "+30 Bloodlust AS",
+      "talentRight": "+25 Strength"
     },
     {
       "talentLvl": "15",
@@ -307,7 +310,7 @@
     },
     {
       "talentLvl": "10",
-      "talentLeft": "+75 Cast Range",
+      "talentLeft": "-1s Fireblast Cooldown",
       "talentRight": "+16 Ignite DPS"
     }
   ]

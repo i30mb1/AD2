@@ -39,12 +39,12 @@
         "This means even when the target moves back within range, it is not frozen or damaged further.",
         "Also considers the target's vertical position, so getting moved far up enough can stop Cold Feet as well.",
         "When cast on units which already have the Cold Feet modifier, nothing happens.",
-        "Deals damage in 1 second intervals, starting immediately upon cast, resulting in 4 instances.",
+        "Deals damage in 1-second intervals, starting immediately upon cast, resulting in 4 instances.",
         "The stun is applied 1 second after the last instance.",
         "Can deal up to 120\/200\/280\/360 damage to the target (before reductions).",
-        "The level 25 talent turns Cold Feet into an area-targeted ability with 500 radius, so that it cannot directly target units anymore. The break distances are individual for each hit enemy. They do not share it. Can target invisible enemies and enemies inside the fog of war.",
-        "The break distances are individual for each hit enemy. They do not share it.",
-        "Can target invisible enemies and enemies inside the fog of war."
+        "The level 25 talent turns Cold Feet into an area-targeted ability with 500 radius, so that it cannot directly target units anymore. The break distances are different for each hit enemy. They do not share it. Can target invisible enemies and enemies inside the Fog of War.",
+        "The break distances are different for each hit enemy. They do not share it.",
+        "Can target invisible enemies and enemies inside the Fog of War."
       ],
       "mana": "125",
       "hotKey": "Q",
@@ -60,7 +60,8 @@
         "Stun Duration: 2\/2.5\/3\/3.5",
         "Radius: 500",
         "Attempts to damage, but does not stun if debuff was placed before spell immunity and when not dispelled.",
-        "Blocked as a single-target ability. Not blocked when turned into an area-targeted ability."
+        "Blocked as a single-target ability, not blocked when turned into an area-targeted ability.",
+        "Kaldr's presence draws those around him into a frozen void, threatening to lock them in an icy prison for eternity."
       ],
       "itemBehaviour": [],
       "legacyKey": "C",
@@ -73,18 +74,18 @@
         "Affects Enemies"
       ],
       "notes": [
-        "All effects are provided by an aura, including the effects from Aghanim's Shard. The modifier lingers for 16 seconds.",
-        "Reduces most heroes' total magic resistance to 14%\/10%\/6%\/2% (TagTalent 9%\/5%\/2%\/-2%), assuming basic 25% magic resistance and no other sources of magic resistance.",
+        "All effects are provided by an aura, (including the attack speed slow and damage per second debuff). The aura lingers for 0.5 seconds.",
+        "Reduces most heroes' total magic resistance to 14%\/10%\/6%\/2% (TagTalent 9%\/5%\/2%\/-2%), assuming basic 25% magic resistance and no other sources of magic resistance. The movement speed slow and magic resistance reduction increasing talent immediately upgrades all currently active Ice Vortexes, including already placed debuffs.",
+        "The movement speed slow and magic resistance reduction increasing talent immediately upgrades all currently active Ice Vortexes, including already placed debuffs.",
         "Successive casts of Ice Vortex do not stack. A unit can only be affected by one of them even when multiple of them are overlapping.",
         "Provides 200 radius ground vision at the targeted point for its duration.",
-        "With Aghanim's Shard, deals damage in 1 second intervals, starting 1 second after receiving the debuff, resulting in up to 16 possible instances. Can deal up to 640 damage to a single unit (before reductions). Acquiring Aghanim's Shard immediately upgrades all currently active Ice Vortexes, including already placed debuffs.",
+        "With Aghanim's Shard, deals damage in 1-second intervals, starting 1 second after receiving the debuff, resulting in up to 16 possible instances. Can deal up to 640 damage to a single unit (before reductions). Acquiring Aghanim's Shard immediately upgrades all currently active Ice Vortexes, including already placed debuffs.",
         "Can deal up to 640 damage to a single unit (before reductions).",
-        "Acquiring Aghanim's Shard immediately upgrades all currently active Ice Vortexes, including already placed debuffs.",
-        "Choosing the slow and resistance reduction increasing talent immediately upgrades all currently active Ice Vortexes, including already placed debuffs."
+        "Acquiring Aghanim's Shard immediately upgrades all currently active Ice Vortexes, including already placed debuffs."
       ],
-      "mana": "40\/55\/70\/85",
+      "mana": "40\/50\/60\/70",
       "hotKey": "W",
-      "cooldown": "4 (TagTalent 2)",
+      "cooldown": "7\/6\/5\/4 (TagTalent 5\/4\/3\/2)",
       "description": "Creates a vortex of icy energy that slows movement speed and increases magic damage done to enemies in its range.",
       "spellName": "Ice Vortex",
       "params": [
@@ -98,7 +99,8 @@
         "Attack Speed Slow: 20",
         "Damage per Second: 40",
         "Causes Ice Vortex to deal 40 DPS and reduces attack speed by 20.",
-        "Slow and magic resistance reduction persist if debuff was placed before spell immunity."
+        "Slow, damage per second and magic resistance reduction persist if debuff was placed before spell immunity.",
+        "Frozen, caustic winds are at the whim of Kaldr, chilling the field of battle."
       ],
       "itemBehaviour": [],
       "legacyKey": "E",
@@ -112,14 +114,17 @@
         "Damage Magical"
       ],
       "notes": [
-        "The cast range equals the caster's attack range + the bonus range. For Ancient Apparition, the range is 735\/795\/855\/915 (TagTalent 910\/970\/1030\/1090).",
+        "The cast range equals the caster's attack range and the bonus attack range from the ability. For Ancient Apparition, the range is 735\/795\/855\/915. The cast range can be further increased by other attack range bonuses. However, it is not affected by cast range bonuses. The level 10 talent increases the total cast range to 910\/970\/1030\/1090.",
+        "For Ancient Apparition, the range is 735\/795\/855\/915.",
+        "The cast range can be further increased by other attack range bonuses. However, it is not affected by cast range bonuses.",
+        "The level 10 talent increases the total cast range to 910\/970\/1030\/1090.",
         "The bonus damage is dealt in a separate damage instance, and counts as spell damage. This means it is not affected or considered by anything that works with attack damage. This also means that it fully works with spell damage amplification and spell lifesteal.",
         "This means it is not affected or considered by anything that works with attack damage.",
         "This also means that it fully works with spell damage amplification and spell lifesteal.",
         "The debuffs from successive casts fully stack, with each instance creating its own debuff.",
         "The attacks first apply the debuff, then their own damage."
       ],
-      "mana": "30\/45\/60\/75",
+      "mana": "30\/45\/60\/75 (TagTalent 15\/22.5\/30\/37.5)",
       "hotKey": "E",
       "cooldown": "15\/11\/7\/3 (TagTalent 0)",
       "description": "Enhances Ancient Apparition's attack with increased range, heavy magic damage, and movement slow.",
@@ -129,8 +134,9 @@
         "Damage: 50\/90\/130\/170 (TagTalent 120\/160\/200\/240)",
         "Move Speed Slow: 100%",
         "Slow Duration: 0.5",
-        "Removes cooldown.",
-        "Slow persists if debuff was placed before spell immunity and when not dispelled."
+        "Removes cooldown and reduces mana cost by 50%.",
+        "Slow persists if debuff was placed before spell immunity and when not dispelled.",
+        "The Ancient Apparition's eternal knowledge brings a frigid enchantment to his attacks."
       ],
       "itemBehaviour": [],
       "legacyKey": "G",
@@ -144,18 +150,18 @@
         "Damage Magical \/ Instant Kill"
       ],
       "notes": [
-        "Upon cast, Ice Blast is replaced by the sub-skill Release.",
-        "The tracer projectile travels at a speed of 1500 until Release is cast, Ancient Apparition dies, or it reaches the map boundaries. The tracer is visible to allies only. The initial cast sound is also only audible to allies. The tracer projectile itself is harmless. It neither deals damage, nor places the debuff.",
-        "The tracer is visible to allies only. The initial cast sound is also only audible to allies.",
+        "Upon cast, Ice Blast is replaced by the sub-ability Release. The tracer projectile travels at a speed of 1500 until Release is cast, Ancient Apparition dies, or it reaches the map boundaries. The tracer projectile itself is harmless. It neither deals damage, nor places the debuff. The tracer is visible to allies only. The initial cast sound is also only audible to allies.",
+        "The tracer projectile travels at a speed of 1500 until Release is cast, Ancient Apparition dies, or it reaches the map boundaries.",
         "The tracer projectile itself is harmless. It neither deals damage, nor places the debuff.",
+        "The tracer is visible to allies only. The initial cast sound is also only audible to allies.",
         "The explosion radius starts at 275 and increases by 50 for every second the tracer has traveled, capped at 1000 radius. Thus, it takes at least 15 seconds to reach the maximum radius, equaling 22500 units traveled.",
         "Thus, it takes at least 15 seconds to reach the maximum radius, equaling 22500 units traveled.",
         "The tracer provides 500 radius flying vision around itself as it travels. This vision does not last.",
         "The debuff is only placed on heroes, clones and creep-heroes, but not on illusions.",
         "The debuff can also be placed on spell immune or invulnerable, but not on hidden units.",
         "Unlike the debuff, the explosion damage hits all enemy units, including creeps, excluding buildings and wards.",
-        "The debuff prevents the current health of affected units from increasing. Does not prevent the following abilities from increasing the hero's health: True Form, Supernova, Soul Catcher, Sunder, Whirling Death, Decay, Time Lapse and Essence Ring.",
-        "Does not prevent the following abilities from increasing the hero's health: True Form, Supernova, Soul Catcher, Sunder, Whirling Death, Decay, Time Lapse and Essence Ring.",
+        "The debuff freezes health, it prevents the current health of affected units from increasing. However, it does not prevent the following abilities from increasing the hero's health: True Form, Supernova, Soul Catcher, Sunder, Whirling Death, Decay, Time Lapse and Essence Ring.",
+        "However, it does not prevent the following abilities from increasing the hero's health: True Form, Supernova, Soul Catcher, Sunder, Whirling Death, Decay, Time Lapse and Essence Ring.",
         "Units with the debuff on die instantly when their health drops below the threshold. The kill is credited to the source of the damage which brought them below the threshold. The debuff checks the unit's health upon taking damage, excluding the damage flagged by HP removal. However, if it was caused by self-inflicted damage, Ancient Apparition is credited for the kill.",
         "The debuff checks the unit's health upon taking damage, excluding the damage flagged by HP removal.",
         "However, if it was caused by self-inflicted damage, Ancient Apparition is credited for the kill.",
@@ -178,7 +184,8 @@
         "Explosion Damage: 250\/350\/450",
         "Damage per Second: 12.5\/20\/32",
         "Percentage Health Kill Threshold: 12%\/13%\/14% (TagTalent 16%\/17%\/18%)",
-        "Duration: 10\/11\/12"
+        "Duration: 10\/11\/12",
+        "Ice storms from ages past flow through Kaldr's frosty limbs, crashing into the world and turning its inhabitants into monuments to his eternal power."
       ],
       "itemBehaviour": [],
       "legacyKey": "T",

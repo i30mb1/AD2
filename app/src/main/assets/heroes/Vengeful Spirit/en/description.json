@@ -2,9 +2,9 @@
   "abilities": [
     {
       "notes": [
+        "The agility talent effectively grants Vengeful Spirit 1.67 armor, 10 attack speed, and 10 attack damage.",
         "The magic resistance talent stacks multiplicatively with other sources of magic resistance.",
-        "The magic resistance talent increases Vengeful Spirit's magic resistance to 34%.",
-        "The agility talent effectively grants Vengeful Spirit 2 armor, 12 attack speed, and 12 attack damage."
+        "The magic resistance talent increases Vengeful Spirit's magic resistance to 34%."
       ],
       "spellName": "Talent",
       "talents": [
@@ -15,17 +15,17 @@
         },
         {
           "talentLvl": "20",
-          "talentLeft": "+125 Cast Range",
+          "talentLeft": "-15s Nether Swap Cooldown",
           "talentRight": "+200 Magic Missile Damage"
         },
         {
           "talentLvl": "15",
           "talentLeft": "-2.75s Magic Missile Cooldown",
-          "talentRight": "+12 Agility"
+          "talentRight": "-2 Wave of Terror Armor"
         },
         {
           "talentLvl": "10",
-          "talentLeft": "-1 Wave of Terror Armor",
+          "talentLeft": "+10 Agility",
           "talentRight": "+12% Magic Resistance"
         }
       ]
@@ -39,7 +39,7 @@
       ],
       "notes": [
         "The projectile travels at a speed of 1350.",
-        "The missile first applies the debuff, then the damage."
+        "Magic Missile first applies the debuff, then the damage."
       ],
       "mana": "100\/110\/120\/130",
       "hotKey": "Q",
@@ -48,11 +48,12 @@
       "spellName": "Magic Missile",
       "params": [
         "Cast Animation: 0.3+0.5",
-        "Cast Range: 575\/600\/625\/650 (TagTalent 700\/725\/750\/775)",
+        "Cast Range: 575\/600\/625\/650",
         "Damage: 90\/180\/270\/360 (TagTalent 290\/380\/470\/560)",
         "Stun Duration: 1.4\/1.5\/1.6\/1.7",
-        "Cannot target or affect spell immune units. (TagTalent Can target and affect spell immune units.)",
-        "Blocked upon impact."
+        "Cannot target or affect spell immune units. Can target and affect spell immune units.",
+        "Blocked upon impact.",
+        "A simple Skywrath technique, the magic missile is Shendel's primary tool for vengeance."
       ],
       "itemBehaviour": [],
       "legacyKey": "C",
@@ -67,19 +68,18 @@
       ],
       "notes": [
         "The wave travels at a speed of 2000, taking 0.7 seconds to travel the full distance.",
-        "Can hit units up to 1700 range away (travel distance + radius).",
-        "The wave provides 350 radius flying vision as it travels, which lasts for 4 seconds. This vision starts 100 range away from Vengeful Spirit and reaches for up to 2000 range away (starting distance + travel distance + vision radius).",
-        "This vision starts 100 range away from Vengeful Spirit and reaches for up to 2000 range away (starting distance + travel distance + vision radius).",
+        "With the travel distance and effect radius, Wave of Terror can hit units up to 1725 range away.",
+        "The wave provides 350 radius flying vision as it travels, which lasts for 4 seconds. With the starting distance, travel distance and vision radius, the vision reaches up to 2000 range away.",
+        "With the starting distance, travel distance and vision radius, the vision reaches up to 2000 range away.",
         "The debuff from successive casts does not stack, only the duration gets refreshed.",
         "The wave first applies the debuff, then the damage.",
-        "Does not affect couriers.",
-        "With Aghanim's Shard, only reduces base damage and that given by the primary attribute of affected units. Raw bonus damage is not reduced. The attack damage reduction adapts to any changes to the hero's base attack damage immediately. Vengeful Spirit gains a buff for each enemy hero hit with Wave of Terror. Multiple instances of the buff stack. Unlike the debuff, the buff increases Vengeful Spirit's base attack damage. The damage is not granted as a raw damage bonus. The amount of damage gained equals the exact amount of attack damage the target lost upon gaining the debuff. Unlike the debuff, the buff's damage value is set once upon gaining the buff, and does not adapt to changes like the debuff. The debuff reduces damage of every unit it affects. However, Vengeful Spirit only gains the buff from affected heroes, including clones, excluding illusions and creep-heroes.",
-        "The attack damage reduction adapts to any changes to the hero's base attack damage immediately.",
+        "Does not affect Couriers.",
+        "With Aghanim's Shard, Wave of Terror reduces the base damage of affected units. Raw bonus damage is not reduced. The attack damage reduction adapts to any changes to the affected heroes' base attack damage immediately. Vengeful Spirit gains a buff for each enemy hero hit with Wave of Terror. Multiple instances of the buff stack. The buff increases Vengeful Spirit's base attack damage. The damage is not granted as a raw damage bonus. The amount of damage gained equals the exact amount of attack damage the target lost upon gaining the debuff. Unlike the debuff, the buff's damage value is set once upon gaining the buff, and does not adapt to changes like the debuff. However, Vengeful Spirit only gains the buff from affected heroes, including clones, excluding illusions and creep-heroes.",
+        "The attack damage reduction adapts to any changes to the affected heroes' base attack damage immediately.",
         "Vengeful Spirit gains a buff for each enemy hero hit with Wave of Terror. Multiple instances of the buff stack.",
-        "Unlike the debuff, the buff increases Vengeful Spirit's base attack damage. The damage is not granted as a raw damage bonus.",
+        "The buff increases Vengeful Spirit's base attack damage. The damage is not granted as a raw damage bonus.",
         "The amount of damage gained equals the exact amount of attack damage the target lost upon gaining the debuff.",
         "Unlike the debuff, the buff's damage value is set once upon gaining the buff, and does not adapt to changes like the debuff.",
-        "The debuff reduces damage of every unit it affects.",
         "However, Vengeful Spirit only gains the buff from affected heroes, including clones, excluding illusions and creep-heroes."
       ],
       "mana": "25\/30\/35\/40",
@@ -89,14 +89,16 @@
       "spellName": "Wave of Terror",
       "params": [
         "Cast Animation: 0.3+0.5",
-        "Cast Range: 1400 (TagTalent 1525)",
-        "Wave Travel Distance: 1400 (TagTalent 1525)",
-        "Effect Radius: 300",
+        "Cast Range: 1400",
+        "Wave Travel Distance: 1400",
+        "Effect Radius: 325",
         "Damage: 70\/90\/110\/130",
-        "Armor Reduction: 3\/4\/5\/6 (TagTalent 4\/5\/6\/7)",
+        "Armor Reduction: 3\/4\/5\/6 (TagTalent 5\/6\/7\/8)",
         "Duration: 8",
-        "Attack Damage Steal: 25%",
-        "Wave of Terror steals 25% of enemy hero base damage and grants it to Vengeful Spirit for the debuff duration."
+        "Attack Damage Steal: 20%",
+        "Base Armor Steal: 20%",
+        "Wave of Terror steals 20% of enemy hero base damage and base armor, granting it to Vengeful Spirit for the debuff duration.",
+        "Shendel's haunting voice hints at her approaching vindication."
       ],
       "itemBehaviour": [],
       "legacyKey": "E",
@@ -112,14 +114,14 @@
         "The aura's buff lingers for 0.5 seconds.",
         "Only increases base damage and that given by the primary attribute of affected units. Raw bonus damage is not increased.",
         "The aura affects invulnerable, but not hidden allies.",
-        "With Aghanim's Scepter, The illusion spawns 108 range away from Vengeful Spirit's death location. It appears either north, east, south or west from that spot. The illusion is a strong illusion, meaning it cannot be instantly killed by abilities which normally kill illusions instantly. The illusion always spawns with full mana and health and all abilities off cooldown, regardless of their status on Vengeful Spirit. The illusion does not get a set duration upon spawning. It disappears once Vengeful Spirit respawns. The illusion spawns on every death, including on the short deaths with reincarnation. The created illusion is visually distinguishable from the real Vengeful Spirit for the enemies. Unlike other illusions, this illusion does not have a gold bounty. This illusion cannot be converted by Enchant. It gets slowed instead.",
+        "With Aghanim's Scepter, The illusion spawns 108 range away either north, east, south or west from Vengeful Spirit's death location. The illusion is a strong illusion, meaning it cannot be instantly killed by abilities which normally kill illusions instantly. The illusion always spawns with full mana and health and all abilities off cooldown, regardless of their status on Vengeful Spirit. The illusion does not get a set duration upon spawning. It disappears once Vengeful Spirit respawns. The illusion spawns on every death, including on the short deaths with reincarnation. The created illusion is visually distinguishable from the real Vengeful Spirit for the enemies. Unlike other illusions, this illusion does not have a gold bounty. This illusion cannot be Enchanted. It gets slowed instead.",
         "The illusion is a strong illusion, meaning it cannot be instantly killed by abilities which normally kill illusions instantly.",
         "The illusion always spawns with full mana and health and all abilities off cooldown, regardless of their status on Vengeful Spirit.",
         "The illusion does not get a set duration upon spawning. It disappears once Vengeful Spirit respawns.",
         "The illusion spawns on every death, including on the short deaths with reincarnation.",
         "The created illusion is visually distinguishable from the real Vengeful Spirit for the enemies.",
         "Unlike other illusions, this illusion does not have a gold bounty.",
-        "This illusion cannot be converted by Enchant. It gets slowed instead.",
+        "This illusion cannot be Enchanted. It gets slowed instead.",
         "With Aghanim's Scepter, Vengeful Spirit can gain experience even while dead. While dead, she is periodically moved along with the Vengeance Illusion, allowing her to gain experience around the illusion. This also allows her to respawn at the illusion's location, instead of at the fountain. However, these effects require the illusion to be alive. If it dies, she no longer gains experience, and stops moving along with it.",
         "While dead, she is periodically moved along with the Vengeance Illusion, allowing her to gain experience around the illusion.",
         "This also allows her to respawn at the illusion's location, instead of at the fountain.",
@@ -137,9 +139,10 @@
         "Number of Illusions on Death: 1",
         "Illusion Damage Dealt: 100%",
         "Illusion Damage Taken: 100%",
-        "Illusion Move Speed Bonus: 30%",
-        "Upon death, creates a strong illusion of Vengeful Spirit that deals and takes 100% damage and can cast all of her spells. Illusion has 30% movement speed bonus. If the illusion is alive when Vengeful Spirit respawns, she will take its place. XP earned by her illusion is given to her.",
-        "Illusions bestow the aura. Illusions do not spawn a Vengeance illusion on their death."
+        "Illusion Move Speed Bonus: 25%",
+        "Upon death, creates a strong illusion of Vengeful Spirit that deals and takes 100% damage and can cast all of her spells. Illusion has 25% movement speed bonus. If the illusion is alive when Vengeful Spirit respawns, she will take its place. XP earned by her illusion is given to her.",
+        "Illusions bestow the aura. Illusions do not spawn a Vengeance illusion on their death.",
+        "Although they may not share her undying passion for revenge, allies do draw on her fanaticism in combat."
       ],
       "itemBehaviour": [],
       "legacyKey": "D",
@@ -152,20 +155,20 @@
         "Affects Heroes"
       ],
       "notes": [
-        "The target is given a stop command as soon as it is teleported back, effectively canceling channeling spells.",
+        "The target is given a stop command as soon as it is teleported back, effectively canceling channeling abilities.",
         "Does not disjoint projectiles upon teleporting, neither for the caster, nor for the target.",
         "Destroys trees within 300 radius around Vengeful Spirit and the Nether Swap target.",
-        "Can be cast on illusions and Spirit Bear.",
-        "Can be cast on invulnerable units."
+        "Can be cast on illusions, Spirit Bear, and on invulnerable units."
       ],
       "mana": "100\/150\/200",
       "hotKey": "R",
-      "cooldown": "50\/40\/30",
+      "cooldown": "50\/40\/30 (TagTalent 35\/25\/15)",
       "description": "Instantaneously swaps positions with a target Hero, friend or enemy. Nether Swap interrupts channeling abilities on the target.",
       "spellName": "Nether Swap",
       "params": [
         "Cast Animation: 0.4+0",
-        "Cast Range: 800\/950\/1100 (TagTalent 925\/1075\/1225)"
+        "Cast Range: 800\/950\/1100",
+        "Martyrdom is a small price to pay for vengeance."
       ],
       "itemBehaviour": [],
       "legacyKey": "W",
@@ -190,17 +193,17 @@
     },
     {
       "talentLvl": "20",
-      "talentLeft": "+125 Cast Range",
+      "talentLeft": "-15s Nether Swap Cooldown",
       "talentRight": "+200 Magic Missile Damage"
     },
     {
       "talentLvl": "15",
       "talentLeft": "-2.75s Magic Missile Cooldown",
-      "talentRight": "+12 Agility"
+      "talentRight": "-2 Wave of Terror Armor"
     },
     {
       "talentLvl": "10",
-      "talentLeft": "-1 Wave of Terror Armor",
+      "talentLeft": "+10 Agility",
       "talentRight": "+12% Magic Resistance"
     }
   ]

@@ -36,18 +36,18 @@
         "Damage Magical"
       ],
       "notes": [
-        "The three Shadowraze spells are linked together and are always on the same level. Leveling one of them automatically levels the others as well.",
+        "Leveling one of the Shadowraze abilities levels the others (Medium and Far) as well. This ability is not available in Ability Draft.",
+        "This ability is not available in Ability Draft.",
         "Shadowraze (Near) blasts a 250 radius area 200 range in front of Nevermore upon cast. This means that it can hit units up to 50 range behind Shadow Fiend, and up to 450 range in front of him.",
         "This means that it can hit units up to 50 range behind Shadow Fiend, and up to 450 range in front of him.",
-        "Places one debuff on the enemy. This debuff counts how many razes hit the target within its duration. Shadowraze first sets its damage based on current stacks, then applies the debuff\/increases the stack count, and then deals the damage. This means the stack added by the raze does not affect the raze's damage. A number on the icon shows how many times the debuff was refreshed, including the first cast. The debuff has no stack limit and can be increased infinitely.",
-        "Shadowraze first sets its damage based on current stacks, then applies the debuff\/increases the stack count, and then deals the damage.",
-        "This means the stack added by the raze does not affect the raze's damage.",
+        "Places one hidden debuff on the enemy. This debuff counts how many Shadowrazes hit the target within its duration. Shadowraze first sets its damage based on current stacks, then applies the debuff or increases the stack count, and then deals the damage. This means the stack added by the raze does not affect the ability's damage. A number on the icon shows how many times the debuff was refreshed, including the first cast. The debuff has no stack limit and can be increased infinitely.",
+        "Shadowraze first sets its damage based on current stacks, then applies the debuff or increases the stack count, and then deals the damage.",
+        "This means the stack added by the raze does not affect the ability's damage.",
         "A number on the icon shows how many times the debuff was refreshed, including the first cast.",
         "The debuff has no stack limit and can be increased infinitely.",
         "Hitting all three razes consecutively can deal up to 420\/660\/900\/1140 (TagTalent 780\/1020\/1260\/1500) damage to a single unit (before reductions).",
-        "The Shadowraze Counter debuff placed on heroes is used to count successive Shadowraze hits. It lasts for 3 seconds. Although only the Demon Eater cosmetic item makes use of it, the counter is always placed.",
-        "Although only the Demon Eater cosmetic item makes use of it, the counter is always placed.",
-        "This ability is not available in Ability Draft."
+        "A hidden debuff is placed on heroes is used to count successive Shadowraze hits. It lasts for 3 seconds. Although only the Demon Eater cosmetic item makes use of it, the counter is always placed.",
+        "Although only the Demon Eater cosmetic item makes use of it, the counter is always placed."
       ],
       "mana": "75\/80\/85\/90",
       "hotKey": "Q",
@@ -61,7 +61,8 @@
         "Base Damage: 90\/160\/230\/300 (TagTalent 210\/280\/350\/420)",
         "Damage Increase per Stack: 50\/60\/70\/80",
         "Stack Duration: 8",
-        "Debuff persists if placed before spell immunity and when not dispelled."
+        "Debuff persists if placed before spell immunity and when not dispelled.",
+        "Nevermore's trademark for harvesting souls."
       ],
       "itemBehaviour": [],
       "legacyKey": "Z",
@@ -75,9 +76,11 @@
         "Damage Magical"
       ],
       "notes": [
+        "Leveling one of the Shadowraze abilities levels the others (Near and Far) as well.",
+        "In Ability Draft, Shadowraze (Medium) is a stand-alone ability that comes with 3 charges, and does not come with the other Shadowraze abilities.",
         "Shadowraze (Medium) blasts a 250 radius area 450 range in front of Nevermore upon cast. This means that it can hit units from 200 to 700 range in front of Shadow Fiend.",
         "This means that it can hit units from 200 to 700 range in front of Shadow Fiend.",
-        "In Ability Draft Shadowraze (Medium) is a stand-alone spell with 3 Charges, and does not come with the other Shadowraze abilities."
+        "Other notes from Shadowraze (Near) fully apply."
       ],
       "mana": "75\/80\/85\/90",
       "hotKey": "W",
@@ -91,7 +94,8 @@
         "Base Damage: 90\/160\/230\/300 (TagTalent 210\/280\/350\/420)",
         "Damage Increase per Stack: 50\/60\/70\/80",
         "Stack Duration: 8",
-        "Debuff persists if placed before spell immunity and when not dispelled."
+        "Debuff persists if placed before spell immunity and when not dispelled.",
+        "Nevermore's trademark for harvesting souls."
       ],
       "itemBehaviour": [],
       "legacyKey": "X",
@@ -105,9 +109,11 @@
         "Damage Magical"
       ],
       "notes": [
+        "Leveling one of the Shadowraze abilities levels the others (Near and Medium) as well. This ability is not available in Ability Draft.",
+        "This ability is not available in Ability Draft.",
         "Shadowraze (Far) blasts a 250 radius area 700 range in front of Nevermore upon cast. This means that it can hit units from 450 to 950 range in front of Shadow Fiend.",
         "This means that it can hit units from 450 to 950 range in front of Shadow Fiend.",
-        "This ability is not available in Ability Draft."
+        "Other notes from Shadowraze (Near) fully apply."
       ],
       "mana": "75\/80\/85\/90",
       "hotKey": "E",
@@ -121,7 +127,8 @@
         "Base Damage: 90\/160\/230\/300 (TagTalent 210\/280\/350\/420)",
         "Damage Increase per Stack: 50\/60\/70\/80",
         "Stack Duration: 8",
-        "Debuff persists if placed before spell immunity and when not dispelled."
+        "Debuff persists if placed before spell immunity and when not dispelled.",
+        "Nevermore's trademark for harvesting souls."
       ],
       "itemBehaviour": [],
       "legacyKey": "C",
@@ -134,19 +141,19 @@
         "Affects Self"
       ],
       "notes": [
-        "Can get souls from every unit, including wards and allies, excluding allied Observer and Sentry Wards, illusions, Tempest Doubles and buildings.",
-        "Despite the visual effects, Shadow Fiend instantly gains the soul and thus the damage of killed units.",
+        "Can get souls from every unit, including wards and allies, excluding allied Observer and Sentry Wards, illusions, Tempest Doubles and buildings. The number of current souls is visible on the status buff icon.",
         "The number of current souls is visible on the status buff icon.",
-        "If Shadow Fiend has an odd number of souls upon death, the number of lost souls is rounded down. This means that he never can lose all his souls. He still keeps 1 soul, even when dying while only having 1 soul.",
+        "If Shadow Fiend has an odd number of souls upon death, the number of lost souls is rounded down. This means that he never can lose all his souls. He still keeps 1 soul, even when dying while only having 1 soul. No souls are lost while reincarnating.",
         "This means that he never can lose all his souls. He still keeps 1 soul, even when dying while only having 1 soul.",
+        "No souls are lost while reincarnating.",
+        "Despite the visual effects, Shadow Fiend instantly gains the soul and thus the damage of killed units. The more souls Shadow Fiend has, the more red particles fly around his chest area.",
         "The more souls Shadow Fiend has, the more red particles fly around his chest area.",
-        "Can grant a total of 11\/28\/51\/80 (TagTalent 44\/70\/102\/140) (TagTalent 25\/50\/75\/100, 100\/125\/150\/175) attack damage with maximum amount of souls. With Aghanim's Shard, can grant a total 8.25%\/10.5%\/12.75%\/15% (TagTalent 18.75%) spell damage amplification with maximum amount of souls.",
-        "With Aghanim's Shard, can grant a total 8.25%\/10.5%\/12.75%\/15% (TagTalent 18.75%) spell damage amplification with maximum amount of souls.",
-        "When dying while holding Aegis of the Immortal no souls are lost.",
-        "The extra souls from Aghanim's Scepter do affect the number of lines created by Requiem of Souls. When dropping Aghanim's Scepter, Shadow Fiend keeps his souls even when having more than the default allowed amount. This means Requiem of Souls still releases more lines even when not holding the Scepter. However, the attack damage bonus adapts immediately and does not account the extra souls when not holding the Scepter.",
+        "Can grant a total of 11\/28\/51\/80 (TagTalent 44\/70\/102\/140) attack damage with maximum amount of souls..",
+        "With Aghanim's Scepter, grants a total of 25\/50\/75\/100 (TagTalent 100\/125\/150\/175) attack damage with maximum amount of souls. The extra souls from Aghanim's Scepter affect the number of lines created by Requiem of Souls. When dropping Aghanim's Scepter, Shadow Fiend keeps his souls even when having more than the default allowed amount. Requiem of Souls still releases more lines even when not holding Aghanim's Scepter in this case. However, the attack damage bonus adapts immediately and does not account the extra souls when not having the item equipped.",
+        "The extra souls from Aghanim's Scepter affect the number of lines created by Requiem of Souls.",
         "When dropping Aghanim's Scepter, Shadow Fiend keeps his souls even when having more than the default allowed amount.",
-        "This means Requiem of Souls still releases more lines even when not holding the Scepter.",
-        "However, the attack damage bonus adapts immediately and does not account the extra souls when not holding the Scepter."
+        "Requiem of Souls still releases more lines even when not holding Aghanim's Scepter in this case.",
+        "However, the attack damage bonus adapts immediately and does not account the extra souls when not having the item equipped."
       ],
       "mana": null,
       "hotKey": "D",
@@ -154,15 +161,14 @@
       "description": "Shadow Fiend steals the soul from units he kills, gaining bonus damage. On death, he releases half of them from bondage.",
       "spellName": "Necromastery",
       "params": [
-        "Max Souls: 11\/14\/17\/20 (TagAghanim 25)",
+        "Max Souls: 11\/14\/17\/20 (TagTalent 25)",
         "Soul Gain Kill: 1",
         "Attack Damage Bonus per Soul: 1\/2\/3\/4 (TagTalent 4\/5\/6\/7)",
-        "Soul Loss on Death: 50%",
-        "Spell Damage Amplification per Soul: 0.75%",
+        "Soul Loss on Death: 40%",
         "Increases Necromastery Max Souls.",
-        "Necromastery provides 0.75% Spell Amp per soul.",
         "Prevents gaining new stacks. Already existing stacks still provide their bonuses.",
-        "Illusions start with 0 souls. Illusions can gather souls for themselves, but cannot make use of the raw bonus damage."
+        "Illusions start with 0 souls. Illusions can gather souls for themselves, but cannot make use of the raw bonus damage.",
+        "Harvested souls swirl in and out of the Abysm, empowering the Shadow Fiend to increase the size of his collection."
       ],
       "itemBehaviour": [],
       "legacyKey": "N",
@@ -175,9 +181,9 @@
         "Affects Enemies"
       ],
       "notes": [
-        "The armor reduction is provided by an aura. Its debuff lingers for 0.5 seconds.",
-        "Does not affect enemies which have no vision over Shadow Fiend.",
-        "Affects buildings, if the talent for it is chosen."
+        "The armor and magic resistance reduction is provided by an aura. Its debuff lingers for 0.5 seconds.",
+        "Does not affect enemies which have no vision over Shadow Fiend. With the level 15 talent, the aura affects buildings.",
+        "With the level 15 talent, the aura affects buildings."
       ],
       "mana": null,
       "hotKey": "F",
@@ -187,7 +193,10 @@
       "params": [
         "Radius: 1200",
         "Armor Reduction: 4\/5\/6\/7 (TagTalent 8\/9\/10\/11)",
-        "Aura Linger Duration: 0.5"
+        "Aura Linger Duration: 0.5",
+        "Magic Resistance Reduction: 14%",
+        "Presence of the Dark Lord also reduces enemies' magic resistance by 14%.",
+        "Even being near Nevermore eats away at one's soul."
       ],
       "itemBehaviour": [],
       "legacyKey": "P",
@@ -204,36 +213,34 @@
         "Shadow Fiend becomes phased while casting this ability.",
         "The damage is entirely based on the amount of souls gathered with Necromastery. In Ability Draft, Necromastery must be drafted as well for Requiem of Souls to work.",
         "In Ability Draft, Necromastery must be drafted as well for Requiem of Souls to work.",
-        "The damaging lines have the following mechanics: The area of every single damaging line is shaped like a cone. The distance between the damaging lines is always even. One line is always released towards east and the others adapt accordingly. The damaging lines travel at a speed of 700, taking 1.43 seconds to reach the max distance. Damaging lines can hit units up to 1350 range away (travel distance + end width). Each damaging line cannot hit the same unit more than once per cast (TagTalent upon expanding and returning respectively).",
+        "The damaging lines have the following mechanics: The area of every single damaging line is shaped like a cone. The distance between the damaging lines is always even. One line is always released towards east and the others adapt accordingly. The damaging lines travel at a speed of 700, taking 1.43 seconds to reach the max distance. With the travel distance and end width, the damaging lines can hit units up to 1350 range away. Each damaging line cannot hit the same unit more than once per cast upon expanding and returning respectively.",
         "The area of every single damaging line is shaped like a cone.",
         "The distance between the damaging lines is always even. One line is always released towards east and the others adapt accordingly.",
         "The damaging lines travel at a speed of 700, taking 1.43 seconds to reach the max distance.",
-        "Damaging lines can hit units up to 1350 range away (travel distance + end width).",
-        "Each damaging line cannot hit the same unit more than once per cast (TagTalent upon expanding and returning respectively).",
-        "Fears and reduces the movement speed of all enemy units hit by the damaging lines of Requiem of Souls. The duration increases by 0.8 per each line hit, but is capped at seconds.",
-        "The duration increases by 0.8 per each line hit, but is capped at seconds.",
-        "Requiem of Souls makes affected enemies run away from the caster, rather than make them run towards their team's fountain.",
-        "The expanding lines can deal up to 1600\/2400\/3200 (TagTalent 2000\/3000\/4000) damage to a single unit (before reductions), if all lines hit.",
+        "With the travel distance and end width, the damaging lines can hit units up to 1350 range away.",
+        "Each damaging line cannot hit the same unit more than once per cast upon expanding and returning respectively.",
+        "Fears and reduces the movement speed of all enemy units hit by the damaging lines of Requiem of Souls. The duration increases by 0.8 per each line hit, but is capped at 2.4 seconds. Requiem of Souls's fear makes affected enemies run away from the caster, rather than make them run towards their team's fountain.",
+        "The duration increases by 0.8 per each line hit, but is capped at 2.4 seconds.",
+        "Requiem of Souls's fear makes affected enemies run away from the caster, rather than make them run towards their team's fountain.",
+        "The expanding lines can deal up to 1600\/2400\/3200 damage to a single unit (before reductions), with max souls if all lines hit.",
         "The lines first apply the damage, then the debuff.",
-        "Upon death, Requiem of Souls is cast automatically and instantly, regardless of mana and cooldown. Shadow Fiend first loses 50% of his souls before this happens. So this passive requiem can only have 5\/7\/8\/10 (TagTalent 12) lines at max. This on-death Requiem of Souls does not apply fear, but does apply the movement speed slow. When dying while holding Aegis of the Immortal no passive Requiem of Souls is released.",
-        "Shadow Fiend first loses 50% of his souls before this happens. So this passive requiem can only have 5\/7\/8\/10 (TagTalent 12) lines at max.",
+        "Upon death, Requiem of Souls is cast automatically and instantly, regardless of mana and cooldown. Shadow Fiend first loses 40% of his souls before this happens. So this passive requiem can only have 4\/5\/6\/8\/10 lines at max. This on-death Requiem of Souls does not apply fear, but does apply the movement speed slow. Reincarnation does not trigger on-death Requiem of Souls this way. Also, Aghanim's Scepter does not upgrade the on-death Requiem of Souls.",
+        "Shadow Fiend first loses 40% of his souls before this happens. So this passive requiem can only have 4\/5\/6\/8\/10 lines at max.",
         "This on-death Requiem of Souls does not apply fear, but does apply the movement speed slow.",
-        "When dying while holding Aegis of the Immortal no passive Requiem of Souls is released.",
-        "When having Aghanim's Scepter, after reaching their max distance, each line starts moving back to Shadow Fiend. Despite the visual effects, the lines do not \"respawn\" around Shadow Fiend. They start moving back exactly where they stopped. The lines return to Shadow Fiend's current location, not to the location he originally cast the spell from. The lines do not adapt to new locations if Shadow Fiend moves. Once they started to return, their path cannot be further altered. The max travel distance applies to the lines also upon returning, meaning they travel a total distance of 2000. The width of the lines is reversed upon returning: They start with maximum width and get thinner towards the end. The returning lines deal 40% damage. They hit all units regularly like the expanding lines and also apply the debuff. The returning lines apply the fear and the slow as well. Aghanim's Scepter only affects manual casts. The passive cast upon death is not affected.",
+        "Reincarnation does not trigger on-death Requiem of Souls this way.",
+        "Also, Aghanim's Scepter does not upgrade the on-death Requiem of Souls.",
+        "With Aghanim's Scepter, after the lines reach their max distance, each line starts moving back to Shadow Fiend. Despite the visual effects, the lines do not \"respawn\" around Shadow Fiend. They start moving back exactly where they stopped. The lines return to Shadow Fiend's current location, not to the location he originally cast the spell from. The lines do not follow if Shadow Fiend moves. Once they started to return, their path cannot be further altered. The max travel distance applies to the lines also upon returning, meaning they travel a total distance of 2000. The width of the lines is reversed upon returning: They start with maximum width and get thinner towards the end. The returning lines deal 40% damage. They hit all units regularly like the expanding lines and also apply the movement speed slow and fear debuff.",
         "Despite the visual effects, the lines do not \"respawn\" around Shadow Fiend. They start moving back exactly where they stopped.",
         "The lines return to Shadow Fiend's current location, not to the location he originally cast the spell from.",
-        "The lines do not adapt to new locations if Shadow Fiend moves. Once they started to return, their path cannot be further altered.",
+        "The lines do not follow if Shadow Fiend moves. Once they started to return, their path cannot be further altered.",
         "The max travel distance applies to the lines also upon returning, meaning they travel a total distance of 2000.",
         "The width of the lines is reversed upon returning: They start with maximum width and get thinner towards the end.",
-        "The returning lines deal 40% damage. They hit all units regularly like the expanding lines and also apply the debuff.",
-        "The returning lines apply the fear and the slow as well.",
-        "Aghanim's Scepter only affects manual casts. The passive cast upon death is not affected.",
-        "The returning lines can deal up to 800\/1200\/1600 damage to a single unit (before reductions), if all lines hit. Together with the expanding lines, Requiem of Souls can deal up to 2800\/4200\/5600 damage to a single unit (before reductions).",
-        "Together with the expanding lines, Requiem of Souls can deal up to 2800\/4200\/5600 damage to a single unit (before reductions).",
-        "The heal is only based on the damage dealt by the returning lines, not by the initial expanding lines. The heal is applied as soon as the lines stop moving. Only heals from damage dealt to heroes, including illusions. Always heals for 32\/48\/64 health per hit, regardless of how much damage the lines actually dealt.",
+        "The returning lines deal 40% damage. They hit all units regularly like the expanding lines and also apply the movement speed slow and fear debuff.",
+        "The returning lines can deal up to 800\/1200\/1600 damage to a single unit (before reductions), if all lines hit. Together with the expanding lines, it can deal up to 2800\/4200\/5600 damage to a single unit (before reductions).",
+        "Together with the expanding lines, it can deal up to 2800\/4200\/5600 damage to a single unit (before reductions).",
+        "The heal is based on the damage dealt by the returning lines, not by the initial expanding lines. The heal is applied as soon as the lines stop moving. Only and will always heal for 32\/48\/64 per hero hit regardless of how much damage is actually dealt to heroes, including illusions.",
         "The heal is applied as soon as the lines stop moving.",
-        "Only heals from damage dealt to heroes, including illusions.",
-        "Always heals for 32\/48\/64 health per hit, regardless of how much damage the lines actually dealt."
+        "Only and will always heal for 32\/48\/64 per hero hit regardless of how much damage is actually dealt to heroes, including illusions."
       ],
       "mana": "150\/175\/200",
       "hotKey": "R",
@@ -253,7 +260,8 @@
         "Damage per Line on Return: 32\/48\/64",
         "Heal per Hit Hero on Return: 32\/48\/64",
         "Increases Necromastery Max Souls and causes Requiem of Souls to return back to Shadow Fiend. The wave back to Shadow Fiend deals less damage, but heals Shadow Fiend for all the damage it dealt.",
-        "The passive cast upon death is not disabled by Break."
+        "The passive cast upon death is not disabled by Break.",
+        "The captured souls of those past slain are released to ravage their former allies."
       ],
       "itemBehaviour": [],
       "legacyKey": "R",

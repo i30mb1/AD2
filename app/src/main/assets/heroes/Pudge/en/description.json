@@ -39,24 +39,24 @@
       ],
       "notes": [
         "The Meat Hook travels at a speed of 1450, taking 0.9 seconds to reach maximum distance.",
-        "Pudge receives the Followthrough buff upon cast, which disables Pudge. The duration of this modifier equals the time it takes for the hook to reach 66% of its max travel distance. This means with the default max distance of 1300, the self-disabling modifier lasts 0.59 seconds. The duration is based on the max distance (including range bonuses). It does not matter for how far the hook actually travels. This means when latching on a unit directly in front of Pudge, the self-disable still lasts its full duration.",
+        "Pudge receives a hidden modifier upon cast, which disables Pudge. The duration of this modifier equals the time it takes for the hook to reach 66% of its max travel distance. This means with the default max distance of 1300, the self-disabling modifier lasts 0.59 seconds. The duration is based on the max distance (including range bonuses). It does not matter for how far the hook actually travels. This means when latching on a unit directly in front of Pudge, the self-disable still lasts its full duration.",
         "The duration of this modifier equals the time it takes for the hook to reach 66% of its max travel distance.",
         "This means with the default max distance of 1300, the self-disabling modifier lasts 0.59 seconds.",
         "The duration is based on the max distance (including range bonuses). It does not matter for how far the hook actually travels.",
         "This means when latching on a unit directly in front of Pudge, the self-disable still lasts its full duration.",
-        "The hook can hit units up to 1400 range away (max travel distance + search radius).",
+        "The hook can hit units up to 1400 range away (max travel distance + search radius). The search radius is centered around the hook's tip. Getting close to other parts of the hook has no effect.",
         "The search radius is centered around the hook's tip. Getting close to other parts of the hook has no effect.",
-        "Can only affect units while extending, not while retracting. Fully affects invisible units.",
+        "Can only affect units while extending, not while retracting. Fully affects invisible units. Cannot hit ancient creeps and invulnerable or hidden units. The hook flies through impassable terrain and trees. It also can drag units over them. Hooked enemies are fully disabled for the entire pull duration. Allies are not disabled. They can act freely while being pulled by the hook. When the hook hits a unit, it provides 500 radius flying vision at the unit's location upon hit for 4 seconds.",
         "Cannot hit ancient creeps and invulnerable or hidden units.",
         "The hook flies through impassable terrain and trees. It also can drag units over them.",
-        "Hooked enemies are fully disabled for the entire pull duration. Allies are not disabled. They can act freely while being pulled by the hook.",
+        "Hooked enemies are fully disabled for the entire pull duration.",
         "Allies are not disabled. They can act freely while being pulled by the hook.",
         "When the hook hits a unit, it provides 500 radius flying vision at the unit's location upon hit for 4 seconds.",
         "Runes can be hooked as well. Doing so refunds the mana spent on the hook."
       ],
       "mana": "125\/130\/135\/140",
       "hotKey": "Q",
-      "cooldown": "21\/18\/15\/12 (TagTalent 17\/14\/11\/8)",
+      "cooldown": "18\/16\/14\/12 (TagTalent 14\/12\/10\/8)",
       "description": "Launches a bloody hook toward a unit or location. The hook will snag the first unit it encounters, dragging the unit back to Pudge and dealing damage if it is an enemy.",
       "spellName": "Meat Hook",
       "params": [
@@ -65,7 +65,8 @@
         "Max Travel Distance: 1300",
         "Hook Search Radius: 100",
         "Damage: 150\/220\/290\/360 (TagTalent 270\/340\/410\/480)",
-        "Can hit and drag spell immune allies. Can damage and drag spell immune enemies. Cannot disable spell immune enemies."
+        "Can hit and drag spell immune allies. Can damage and drag spell immune enemies. Cannot disable spell immune enemies.",
+        "The Butcher's hook is a symbolic nightmare, its curved blade a frightening reminder of his slaughterous intent."
       ],
       "itemBehaviour": [],
       "legacyKey": "T",
@@ -79,14 +80,15 @@
         "Damage Magical"
       ],
       "notes": [
-        "Rot does not interrupt Pudge's channeling spells upon toggling.",
+        "Rot does not interrupt Pudge's channeling abilities upon toggling On \/ Off.",
         "The self-inflicted damage is never lethal, so it cannot be used to deny oneself.",
         "The area damage and self-damage are independent from each other, so when the self-damage is blocked, the area damage is still applied.",
-        "The slow and damage are provided by an aura. This aura debuff lingers for 0.5 seconds. When an enemy leaves the area, the lingering debuff continues slowing and damaging until expiring. When Rot gets toggled off, the lingering debuff only slows, but stops dealing damage.",
+        "The slow and damage are provided by an aura. This aura debuff lingers for 0.5 seconds. When an enemy leaves the area, the lingering debuff continues slowing and damaging until expiring. When Rot is toggled Off, the lingering debuff only slows, but stops dealing damage.",
         "When an enemy leaves the area, the lingering debuff continues slowing and damaging until expiring.",
-        "When Rot gets toggled off, the lingering debuff only slows, but stops dealing damage.",
-        "Deals 6\/12\/18\/24 (TagTalent 22\/28\/34\/40) damage in 0.2 second intervals. The time intervals are set for the whole game when Rot is toggled the first time.",
-        "Silencing or disabling Pudge does not turn Rot off, not even when hidden.",
+        "When Rot is toggled Off, the lingering debuff only slows, but stops dealing damage.",
+        "Deals 6\/12\/18\/24 (26\/32\/38\/44) damage in 0.2-second intervals. The time intervals are set for the whole game when Rot is toggled On the first time. Rot does not toggle Off when Pudge is silenced, disabled or hidden.",
+        "The time intervals are set for the whole game when Rot is toggled On the first time.",
+        "Rot does not toggle Off when Pudge is silenced, disabled or hidden.",
         "With Aghanim's Scepter, the debuff also applies heal reduction, health regeneration reduction, lifesteal reduction, and spell lifesteal reduction."
       ],
       "mana": "0",
@@ -96,13 +98,14 @@
       "spellName": "Rot",
       "params": [
         "Cast Animation: 0+0",
-        "Radius: 250 (TagAghanim 450)",
-        "Damage per Second: 30\/60\/90\/120 (TagAghanim 110\/140\/170\/200)",
+        "Radius: 250 (TagTalent 475)",
+        "Damage per Second: 30\/60\/90\/120 (TagTalent 130\/160\/190\/220)",
         "Move Speed Slow: 14%\/20%\/26%\/32% (TagTalent 28%\/34%\/40%\/46%)",
         "Aura Linger Duration: 0.5",
         "Health Restoration Reduction: 25%",
-        "Increases Rot radius by 200 and damage by 80. Reduces health regen on affected enemies by .",
-        "Slow persists and attempts to damage if debuff was placed before spell immunity."
+        "Increases Rot radius by 225 and damage by 100. Reduces health regen on affected enemies by .",
+        "Slow persists and attempts to damage if debuff was placed before spell immunity.",
+        "A foul odor precedes a toxic, choking gas, emanating from the Butcher's putrid, ever-swelling mass."
       ],
       "itemBehaviour": [],
       "legacyKey": "R",
@@ -115,17 +118,17 @@
         "Affects Self"
       ],
       "notes": [
-        "Stacks multiplicatively with other sources of magic resistance.",
+        "Stacks multiplicatively with other sources of magic resistance. Increases Pudge's total magic resistance to 34%\/35.5%\/37%\/38.5%.",
         "Increases Pudge's total magic resistance to 34%\/35.5%\/37%\/38.5%.",
         "Denied enemy heroes grant a stack as well, as long as it happens within 450 range of Pudge.",
-        "Does not grant strength if the dying hero has Reincarnation, or is an illusion or Tempest Double, or if Pudge is dead as the kill happens. Does grant strength for Meepo Clones, but only one stack, regardless of how many clones were nearby.",
-        "Does grant strength for Meepo Clones, but only one stack, regardless of how many clones were nearby.",
-        "To gain strength from outside the vicinity radius, Pudge has to make the killing blow himself. His summons or illusions do not count.",
-        "Each stack effectively grants 30\/40\/50\/60 health, 0.15\/0.2\/0.25\/0.3 health regeneration, and 1.5\/2\/2.5\/3 attack damage. The level 25 talent increases these to 60\/70\/80\/90 health, 0.3\/0.35\/0.4\/0.45 health regen, and 3\/3.5\/4\/4.5 attack damage.",
-        "The level 25 talent increases these to 60\/70\/80\/90 health, 0.3\/0.35\/0.4\/0.45 health regen, and 3\/3.5\/4\/4.5 attack damage.",
+        "Does not grant strength if the dying hero has Reincarnation, or is an illusion or Tempest Double, or if Pudge is dead as the kill happens. Does grant one stack of strength for Meepo Clones, regardless of how many clones were nearby. To gain strength from outside the kill radius, Pudge has to make the killing blow himself. His summons or illusions do not count. The number of stacks and amount of strength gained can be seen on the status buff icon. Upon gaining a stack, a +1 appears above Pudge's head, indicating that he gained a stack.",
+        "Does grant one stack of strength for Meepo Clones, regardless of how many clones were nearby.",
+        "To gain strength from outside the kill radius, Pudge has to make the killing blow himself. His summons or illusions do not count.",
         "The number of stacks and amount of strength gained can be seen on the status buff icon.",
-        "Upon leveling Flesh Heap, all stacks adapt to its new level.",
-        "Upon gaining a stack, a +1 appears above Pudge's head, indicating that he gained a stack."
+        "Upon gaining a stack, a +1 appears above Pudge's head, indicating that he gained a stack.",
+        "Each stack effectively grants 30\/40\/50\/60 health, 0.15\/0.2\/0.25\/0.3 health regeneration, and 1.5\/2\/2.5\/3 attack damage. The talent increases these bonuses to 60\/70\/80\/90 health, 0.3\/0.35\/0.4\/0.45 health regeneration, and 3\/3.5\/4\/4.5 attack damage.",
+        "The talent increases these bonuses to 60\/70\/80\/90 health, 0.3\/0.35\/0.4\/0.45 health regeneration, and 3\/3.5\/4\/4.5 attack damage.",
+        "Upon leveling Flesh Heap, all stacks adapt to its new level."
       ],
       "mana": null,
       "hotKey": "E",
@@ -136,7 +139,8 @@
         "Enemy Death Radius: 450",
         "Kill Radius: 1600",
         "Magic Resistance Bonus: 12%\/14%\/16%\/18%",
-        "Strength Bonus per Death: 1.5\/2\/2.5\/3 (TagTalent 3\/3.5\/4\/4.5)"
+        "Strength Bonus per Death: 1.5\/2\/2.5\/3 (TagTalent 3\/3.5\/4\/4.5)",
+        "The Butcher gives new meaning to the words 'meat shield'."
       ],
       "itemBehaviour": [],
       "legacyKey": "F",
@@ -148,9 +152,10 @@
         "Ability No Target"
       ],
       "notes": [
-        "Requires Aghanim's Shard to be unlocked. Available in Ability Draft.",
+        "Requires Aghanim's Shard to be unlocked. In Ability Draft, Eject is bound to Dismember, and is granted to the player that drafts it.",
+        "In Ability Draft, Eject is bound to Dismember, and is granted to the player that drafts it.",
         "Appears in the 4th ability slot when Dismember is cast on an allied hero.",
-        "Interrupts Pudge's channeling spells upon cast.",
+        "Interrupts Pudge's channeling abilities upon cast.",
         "If Pudge dies, the ally gets automatically ejected."
       ],
       "mana": "0",
@@ -159,7 +164,8 @@
       "description": "Ejects the swallowed allied hero inside of you.",
       "spellName": "Eject",
       "params": [
-        "Cast Animation: 0+0"
+        "Cast Animation: 0+0",
+        "Allies emerge forever changed."
       ],
       "itemBehaviour": [],
       "legacyKey": "E",
@@ -174,29 +180,29 @@
       ],
       "notes": [
         "Fully disables the target as long as it is channeled.",
-        "Pulls the target closer to Pudge at a speed of 75. The pull debuff disappears when the target gets within 125 range of Pudge.",
+        "Pulls the target closer to Pudge at a speed of 75. The pull debuff disappears when the target gets within 125 range of Pudge. Provides True Sight over the target, but only when the target was not invisible or within a fade time upon cast. If the target turns invulnerable or hidden, the channeling stops instantly. Treats creep-heroes as heroes.",
         "Provides True Sight over the target, but only when the target was not invisible or within a fade time upon cast.",
         "If the target turns invulnerable or hidden, the channeling stops instantly.",
-        "Deals in 0.5 second intervals, starting immediately upon cast, resulting in up to 6 (TagTalent 7.6) (12, 13.6 against non-heroes) damage instances.",
-        "Can deal up to 180\/270\/360 + 90%\/180%\/270% (360\/540\/720 + 180%\/360%\/540% to non-heroes) damage without any talents (before reductions). Can deal up to 324\/486\/648 + 162%\/324%\/486% (648\/972\/1296 + 324%\/648%\/972% to non-heroes) damage when the damage increasing talent is chosen. Can deal up to 228\/342\/456 + 114%\/228%\/342% (408\/612\/816 + 204%\/408%\/612% to non-heroes) damage when the duration increasing talent is chosen. Can deal up to 410.4\/615.6\/820.8 + 205.2%\/410.4%\/615.6% (734.4\/1101.6\/1468.8 + 367.2%\/734.4%\/1101.6% to non-heroes) damage when both talents are chosen. Also heals Pudge for the same amount when fully channeled.",
-        "Can deal up to 324\/486\/648 + 162%\/324%\/486% (648\/972\/1296 + 324%\/648%\/972% to non-heroes) damage when the damage increasing talent is chosen.",
-        "Can deal up to 228\/342\/456 + 114%\/228%\/342% (408\/612\/816 + 204%\/408%\/612% to non-heroes) damage when the duration increasing talent is chosen.",
-        "Can deal up to 410.4\/615.6\/820.8 + 205.2%\/410.4%\/615.6% (734.4\/1101.6\/1468.8 + 367.2%\/734.4%\/1101.6% to non-heroes) damage when both talents are chosen.",
+        "Treats creep-heroes as heroes.",
+        "Deals in 0.5-second intervals, starting immediately upon cast, resulting in up to 6\/7.6 (or 12\/13.6 against non-heroes) damage instances.",
+        "Without any talents, it can deal up to 180\/270\/360 + 90%\/180%\/270% (360\/540\/720 + 180%\/360%\/540% to non-heroes) damage (before reductions). With the duration increasing talent, it can deal up to 228\/342\/456 + 114%\/228%\/342% (or 408\/612\/816 + 204%\/408%\/612% to non-heroes) damage. With the damage increasing talent, it can deal up to 324\/486\/648 + 162%\/324%\/486% (or 648\/972\/1296 + 324%\/648%\/972% to non-heroes) damage. With both talents, it can deal up to 410.4\/615.6\/820.8 + 205.2%\/410.4%\/615.6% (or 734.4\/1101.6\/1468.8 + 367.2%\/734.4%\/1101.6% to non-heroes) damage. Also heals Pudge for the same amount when fully channeled.",
+        "With the duration increasing talent, it can deal up to 228\/342\/456 + 114%\/228%\/342% (or 408\/612\/816 + 204%\/408%\/612% to non-heroes) damage.",
+        "With the damage increasing talent, it can deal up to 324\/486\/648 + 162%\/324%\/486% (or 648\/972\/1296 + 324%\/648%\/972% to non-heroes) damage.",
+        "With both talents, it can deal up to 410.4\/615.6\/820.8 + 205.2%\/410.4%\/615.6% (or 734.4\/1101.6\/1468.8 + 367.2%\/734.4%\/1101.6% to non-heroes) damage.",
         "Also heals Pudge for the same amount when fully channeled.",
         "The damage and heal work independently from each other, meaning it always heals for the full amount per interval, regardless of how much damage the target takes.",
-        "Treats creep-heroes as heroes.",
         "Pudge's Dismember responses are global and audible to everyone, even through the Fog of War.",
-        "With Aghanim's Shard, Dismember can be cast on allied heroes, including clones and illusions, excluding creep-heroes. Applies a strong dispel on the target and disjoints projectiles upon cast. The allied hero is invulnerable, hidden and spell immune while swallowed. The hero can simply get out of Pudge themself, by issuing any order 3 seconds after being swallowed. Swallowing an ally grants Pudge the Eject ability, allowing him to eject the ally at any time. This ignores the order lock duration. Only one hero may be swallowed at a time. Swallowing a second hero automatically ejects the previous ally. During Dismember, the allied hero is periodically moved to Pudge's current position. This means their auras are effectively bestowed around Pudge until ejected. The periodic movement gets interrupted by teleport effects, without the ally getting ejected. They stay swallowed at the location they got teleported to. Can regenerate up to 360% of the swallowed ally's max health in one minute. Can fully regenerate the swallowed ally's health within 16.67 seconds. Pudge receives the Swallow Effect buff, which creates the visual effect above him, visible to allies only.",
-        "Applies a strong dispel on the target and disjoints projectiles upon cast.",
+        "With Aghanim's Shard, Dismember can be cast on allied heroes, including clones and illusions, excluding creep-heroes. Disjoints projectiles and applies a strong dispel on the target upon cast. The allied hero is invulnerable, hidden and spell immune while swallowed. The hero can simply get out of Pudge themself, by issuing any order 3 seconds after being swallowed. Swallowing an ally grants Pudge the Eject sub-ability, allowing him to eject the ally at any time. This ignores the order lock duration. Only one hero may be swallowed at a time. Swallowing a second hero automatically ejects the previous ally. During Dismember, the allied hero is periodically moved to Pudge's current position. This means their auras are effectively bestowed around Pudge until ejected. The periodic movement gets interrupted by teleport effects, without the ally getting ejected. They stay swallowed at the location they got teleported to. Fully regenerate the swallowed ally's health within 16.67 seconds. Dismember can regenerate up to 360% of the swallowed ally's max health in one minute. Pudge receives a hidden modifier upon cast, which creates the visual effect above him, visible to allies only.",
+        "Disjoints projectiles and applies a strong dispel on the target upon cast.",
         "The allied hero is invulnerable, hidden and spell immune while swallowed.",
         "The hero can simply get out of Pudge themself, by issuing any order 3 seconds after being swallowed.",
-        "Swallowing an ally grants Pudge the Eject ability, allowing him to eject the ally at any time. This ignores the order lock duration.",
+        "Swallowing an ally grants Pudge the Eject sub-ability, allowing him to eject the ally at any time. This ignores the order lock duration.",
         "Only one hero may be swallowed at a time. Swallowing a second hero automatically ejects the previous ally.",
         "During Dismember, the allied hero is periodically moved to Pudge's current position. This means their auras are effectively bestowed around Pudge until ejected.",
         "The periodic movement gets interrupted by teleport effects, without the ally getting ejected. They stay swallowed at the location they got teleported to.",
-        "Can regenerate up to 360% of the swallowed ally's max health in one minute.",
-        "Can fully regenerate the swallowed ally's health within 16.67 seconds.",
-        "Pudge receives the Swallow Effect buff, which creates the visual effect above him, visible to allies only."
+        "Fully regenerate the swallowed ally's health within 16.67 seconds. Dismember can regenerate up to 360% of the swallowed ally's max health in one minute.",
+        "Dismember can regenerate up to 360% of the swallowed ally's max health in one minute.",
+        "Pudge receives a hidden modifier upon cast, which creates the visual effect above him, visible to allies only."
       ],
       "mana": "100\/130\/170",
       "hotKey": "R",
@@ -205,7 +211,7 @@
       "spellName": "Dismember",
       "params": [
         "Cast Animation: 0.3+0",
-        "Cast Range: 160",
+        "Cast Range: 160 (TagTalent 400)",
         "Hero Max Channel Time: 3 (TagTalent 3.8)",
         "Non-Hero Max Channel Time: 6 (TagTalent 6.8)",
         "Base Damage\/Heal per Second: 60\/90\/120 (TagTalent 108\/162\/216)",
@@ -213,7 +219,8 @@
         "Pull Speed: 75",
         "Ally Max Health as Health Regen: 6%",
         "Ally Order Lock Duration: 3",
-        "Allows targeting an ally to swallow them and heal them for 6% of their max health per second. Reduces cooldown by 10 seconds."
+        "Allows targeting an ally to swallow them and heal them for 6% of their max health per second. Reduces cooldown by 10 seconds.",
+        "'When I'm through with these vermin, they'll be fit for a pie!'"
       ],
       "itemBehaviour": [],
       "legacyKey": "D",
