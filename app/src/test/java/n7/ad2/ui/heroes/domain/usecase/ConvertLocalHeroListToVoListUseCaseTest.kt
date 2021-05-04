@@ -9,7 +9,6 @@ import n7.ad2.runBlockingTest
 import n7.ad2.ui.heroes.domain.vo.VOHero
 import org.junit.Rule
 import org.junit.Test
-import kotlin.reflect.full.declaredMembers
 
 @ExperimentalCoroutinesApi
 @SmallTest
@@ -22,7 +21,7 @@ class ConvertLocalHeroListToVoListUseCaseTest {
 
     @Test
     fun `fields of final object not empty`() = coroutineTestRule.runBlockingTest {
-        val hero = LocalHero(0,"Naruto", "path", "agility", false)
+        val hero = LocalHero(0, "Naruto", "agility", false)
         val list = listOf(hero, hero)
 
         val voList: List<VOHero> = convertLocalHeroListToVoListUseCase.invoke(list)
