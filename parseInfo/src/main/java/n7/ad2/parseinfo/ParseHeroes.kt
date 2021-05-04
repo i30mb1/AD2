@@ -39,8 +39,8 @@ class ParseHeroes private constructor(
     )
 
     enum class LOCALE(val urlAllHeroes: String, val baseUrl: String, val directory: String, val response: String) {
-        RU("https://dota2-ru.gamepedia.com/%D0%93%D0%B5%D1%80%D0%BE%D0%B8", "https://dota2-ru.gamepedia.com", "ru", "Реплики"),
-        EN("https://dota2.gamepedia.com/Heroes", "https://dota2.gamepedia.com", "en", "Responses")
+        RU("https://dota2.fandom.com/ru/wiki/%D0%93%D0%B5%D1%80%D0%BE%D0%B8", "https://dota2.fandom.com/ru/wiki/", "ru", "Реплики"),
+        EN("https://dota2.fandom.com/wiki/Heroes", "https://dota2.fandom.com/wiki/", "en", "Responses")
     }
 
 
@@ -76,7 +76,7 @@ class ParseHeroes private constructor(
         heroList
 //            .filter { it == "Legion Commander" }
             .forEach { hero ->
-                val root = connectTo("${locale.baseUrl}/${hero}/${locale.response}")
+                val root = connectTo("${locale.baseUrl}/${hero}/")
                 val allResponsesWithCategories = JSONArray()
 
                 JSONArray().apply {
@@ -182,7 +182,7 @@ class ParseHeroes private constructor(
             val heroName = getHeroName(heroes[index])
             val heroDescriptionUrl = getHeroHref(heroes[index])
 
-            loadHero(locale, heroDescriptionUrl, "$ASSETS_FOLDER_HEROES/$heroName/${locale.directory}", "$ASSETS_FOLDER_HEROES/$heroName")
+            loadHero(locale, heroName, "$ASSETS_FOLDER_HEROES/$heroName/${locale.directory}", "$ASSETS_FOLDER_HEROES/$heroName")
         }
     }
 
@@ -229,8 +229,7 @@ class ParseHeroes private constructor(
         heroList
     }
 
-    private fun loadHero(locale: LOCALE, heroPath: String, heroLocalizedDirectory: String, heroDirectory: String) {
-        val heroUrlEng = "${locale.baseUrl}$heroPath"
+    private fun loadHero(locale: LOCALE, heroPath: String, heroLocalizedDirectory: String, heroDirectory: String) { val heroUrlEng = "${locale.baseUrl}$heroPath"
         if (!checkConnectToHero(heroUrlEng)) return
 
         val root = connectTo(heroUrlEng)
@@ -505,11 +504,11 @@ class ParseHeroes private constructor(
 fun main() = runBlocking {
     parser {
         loadRusDescription = true
-        loadEngDescription = true
-        loadRusResponses = true
-        loadEngResponses = true
-        loadHeroFullImage = true
-        loadHeroSpellImage = true
+        loadEngDescription = false
+        loadRusResponses = false
+        loadEngResponses = false
+        loadHeroFullImage = false
+        loadHeroSpellImage = false
     }.start()
 }
 
