@@ -107,7 +107,11 @@ class DescriptionsListAdapter(
                 val layoutInflater = LayoutInflater.from(parent.context)
                 val binding: ViewDataBinding = when (viewType) {
                     R.layout.item_title -> ItemTitleBinding.inflate(layoutInflater, parent, false).also { it.audioExoPlayer = audioExoPlayer; it.popupListener = popupListener }
-                    R.layout.item_body_hero_spells -> ItemBodyHeroSpellsBinding.inflate(layoutInflater, parent, false).apply { rv.adapter = SpellsListAdapter(descriptionsListener) }
+                    R.layout.item_body_hero_spells -> ItemBodyHeroSpellsBinding.inflate(layoutInflater, parent, false).apply {
+                        val spellsListAdapter = SpellsListAdapter(descriptionsListener)
+                        spellsListAdapter.stateRestorationPolicy = StateRestorationPolicy.PREVENT_WHEN_EMPTY
+                        rv.adapter = spellsListAdapter
+                    }
                     R.layout.item_body_with_image -> ItemBodyWithImageBinding.inflate(layoutInflater, parent, false).also { it.popupListener = popupListener }
                     R.layout.item_hero_main_information -> ItemHeroMainInformationBinding.inflate(layoutInflater, parent, false).also { it.descriptionListener = descriptionsListener }
                     else -> DataBindingUtil.inflate(layoutInflater, viewType, parent, false)
