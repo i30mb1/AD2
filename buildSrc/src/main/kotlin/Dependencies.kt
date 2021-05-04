@@ -22,6 +22,7 @@ object Versions {
 }
 
 object Lib {
+    const val recyclerView = "androidx.recyclerview:recyclerview:1.2.0-beta02"
     const val kotlinReflection = "org.jetbrains.kotlin:kotlin-reflect:${Versions.kotlin}"
     const val ticker = "com.robinhood.ticker:ticker:1.2.2"
     const val sliding = "com.yarolegovich:sliding-root-nav:1.1.0"
@@ -137,6 +138,7 @@ fun DependencyHandler.addBaseDependencies() {
     api(Lib.springAnimation)
     api(Lib.springAnimationKtx)
     api(Lib.exoPlayer)
+    api(Lib.recyclerView)
 
     api(Lib.coroutinesLifecycle)
     api(Lib.coroutinesLivedata)
