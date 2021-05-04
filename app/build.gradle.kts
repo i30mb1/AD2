@@ -15,7 +15,8 @@ android {
 
         javaCompileOptions {
             annotationProcessorOptions {
-                argument("room.incremental","true")
+                argument("room.incremental", "true")
+                argument("room.expandProjection", "true")
             }
         }
     }
