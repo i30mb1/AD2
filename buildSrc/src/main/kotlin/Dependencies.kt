@@ -11,7 +11,7 @@ object Apps {
 }
 
 object Versions {
-    const val gradlePlugin = "4.1.3"
+    const val gradlePlugin = "4.2.0"
     const val lint = "27.1.3" // gradlePlugin + 23
     const val workManager = "2.3.4"
     const val moshi = "1.9.2"
@@ -30,7 +30,7 @@ object Lib {
     const val retrofit = "com.squareup.retrofit2:retrofit:2.7.1"
     const val gsonConverter = "com.squareup.retrofit2:converter-gson:2.6.2"
     const val paging = "androidx.paging:paging-runtime-ktx:2.1.2"
-    const val paging3 = "androidx.paging:paging-runtime:3.0.0-alpha09"
+    const val paging3 = "androidx.paging:paging-runtime:3.0.0"
     const val material = "com.google.android.material:material:1.2.0"
     const val constraintLayout = "androidx.constraintlayout:constraintlayout:2.0.4"
     const val coil = "io.coil-kt:coil:0.13.0"
