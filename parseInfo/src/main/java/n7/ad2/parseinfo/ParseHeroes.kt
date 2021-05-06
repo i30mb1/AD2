@@ -384,10 +384,10 @@ class ParseHeroes private constructor(
                     put("description", description)
 
                     val params = it.getElementsByAttributeValue("style", "vertical-align:top; padding: 3px 5px; display:inline-block;")[0].children()
-                    params.filter { it.attr("style").isEmpty() }.also {
+                    params.filter { it.attr("style").isEmpty() && !it.attr("class").equals("ability-lore") }.also {
                         JSONArray().apply {
                             it.forEach {
-                                if (it.getElementsByAttribute("href").getOrNull(0)?.attr("href").equals("/Aghanim%27s_Scepter")) {
+                                if (it.getElementsByAttribute("href").getOrNull(0)?.attr("href")?.endsWith("/Aghanim%27s_Scepter") ?: false) {
                                     add(it.text().replace("(", "(TagAghanim"))
                                 } else {
                                     add(it.text().replace("(", "(TagTalent"))
