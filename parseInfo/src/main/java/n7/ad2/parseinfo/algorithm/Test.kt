@@ -1,15 +1,10 @@
 package n7.ad2.parseinfo.algorithm
 
-import kotlinx.coroutines.coroutineScope
-import kotlinx.coroutines.launch
-import kotlinx.coroutines.runBlocking
+import java.io.File
 
-fun main() = runBlocking {
-    println("1")
-    coroutineScope {
-        launch { println(".") }
-        launch { println("..") }
-        launch { println("...") }
-    }
-    println("3")
+fun main() {
+    val text = File("input.txt").readText()
+    var result = true
+
+    File("output.txt").writeText(result.toString())
 }
