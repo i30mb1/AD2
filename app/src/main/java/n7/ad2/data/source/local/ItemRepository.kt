@@ -3,6 +3,7 @@
 package n7.ad2.data.source.local
 
 import android.app.Application
+import kotlinx.coroutines.flow.Flow
 import n7.ad2.data.source.local.db.AppDatabase
 import n7.ad2.data.source.local.model.LocalItem
 import javax.inject.Inject
@@ -16,6 +17,10 @@ class ItemRepository @Inject constructor(
         const val ASSETS_PATH_ITEMS = "items.json"
         const val ASSETS_PATH_ITEM_DESC = "description.json"
         fun getFullUrlItemImage(itemName: String) = "file:///android_asset/items/$itemName/full.webp"
+    }
+
+    fun getAllItems(): Flow<List<LocalItem>> {
+        return appDatabase.itemsDao.getAllItems()
     }
 
     suspend fun insertItems(list: List<LocalItem>) {
