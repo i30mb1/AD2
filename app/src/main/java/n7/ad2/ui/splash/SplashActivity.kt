@@ -32,13 +32,12 @@ class SplashActivity : FragmentActivity() {
     private val viewModel: SplashViewModel by viewModel { injector.splashViewModel }
 
     override fun onCreate(savedInstanceState: Bundle?) {
-        viewModel.loadNews()
-        lifecycleScope.launch(Dispatchers.IO) {
-//            if(!viewModel.shouldWeShowSplashScreen()) finishSplashActivityAndStartMainActivity()
+        lifecycleScope.launch(Dispatchers.Main) {
+            if(!viewModel.shouldWeShowSplashScreen()) finishSplashActivityAndStartMainActivity()
         }
         setMySplashTheme()
         super.onCreate(savedInstanceState)
-
+        viewModel.loadNews()
         binding = DataBindingUtil.setContentView(this, R.layout.activity_splash)
         PreferenceManager.setDefaultValues(this, R.xml.setting, false)
 
