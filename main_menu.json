@@ -1,0 +1,29 @@
+{
+  "version": "1",
+  "main_menu": [
+    {
+      "name": "Heroes",
+      "enabled": true
+    },
+    {
+      "name": "Items",
+      "enabled": true
+    },
+    {
+      "name": "News",
+      "enabled": true
+    },
+    {
+      "name": "Tournaments",
+      "enabled": true
+    },
+    {
+      "name": "Streams",
+      "enabled": true
+    },
+    {
+      "name": "Games",
+      "enabled": true
+    }
+  ]
+}
