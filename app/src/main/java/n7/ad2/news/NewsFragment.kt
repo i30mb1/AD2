@@ -42,7 +42,7 @@ class NewsFragment : Fragment() {
     private fun setupRecyclerView() {
         val adapter = NewsPagedListAdapter(true)
         binding.rvFragmentNews.apply {
-            layoutManager = LinearLayoutManager(context, LinearLayoutManager.HORIZONTAL, false)
+            layoutManager = LinearLayoutManager(context, LinearLayoutManager.VERTICAL, false)
             this.adapter = adapter
         }
         viewModel.news?.observe(viewLifecycleOwner, adapter::submitList)
