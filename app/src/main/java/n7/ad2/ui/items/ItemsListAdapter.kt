@@ -2,8 +2,8 @@ package n7.ad2.ui.items
 
 import android.view.LayoutInflater
 import android.view.ViewGroup
-import androidx.paging.PagedListAdapter
 import androidx.recyclerview.widget.DiffUtil
+import androidx.recyclerview.widget.ListAdapter
 import androidx.recyclerview.widget.RecyclerView
 import coil.clear
 import n7.ad2.R
@@ -13,15 +13,16 @@ import n7.ad2.ui.items.domain.vo.VOItem
 import n7.ad2.ui.items.domain.vo.VOItemBody
 import n7.ad2.ui.items.domain.vo.VOItemHeader
 
-class ItemsPagedListAdapter(
+class ItemsListAdapter(
     fragment: ItemsFragment,
-) : PagedListAdapter<VOItem, RecyclerView.ViewHolder>(DiffCallback()) {
+) : ListAdapter<VOItem, RecyclerView.ViewHolder>(DiffCallback()) {
 
     private val itemClickListener = { model: ItemItemBodyBinding -> fragment.startItemInfoFragment(model.model!!, model) }
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): RecyclerView.ViewHolder = when (viewType) {
         R.layout.item_item_header -> HeaderViewHolder.from(parent)
-        else -> ItemViewHolder.from(parent, itemClickListener)
+        R.layout.item_item_body -> ItemViewHolder.from(parent, itemClickListener)
+        else -> super.createViewHolder(parent, viewType)
     }
 
     override fun onBindViewHolder(holder: RecyclerView.ViewHolder, position: Int) {

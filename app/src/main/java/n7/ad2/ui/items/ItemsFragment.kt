@@ -2,6 +2,8 @@ package n7.ad2.ui.items
 
 import android.content.Intent
 import android.os.Bundle
+import android.view.Menu
+import android.view.MenuInflater
 import android.view.View
 import androidx.fragment.app.Fragment
 import androidx.lifecycle.Lifecycle
@@ -50,7 +52,7 @@ class ItemsFragment : Fragment(R.layout.fragment_items) {
         val spanSizeItem = 1
         val spanSizeItemHeader = 4
 
-        val itemsAdapter = ItemsPagedListAdapter(this)
+        val itemsAdapter = ItemsListAdapter(this)
         val gridLayoutManager = GridLayoutManager(context, spanSizeItemHeader).apply {
             spanSizeLookup = object : GridLayoutManager.SpanSizeLookup() {
                 override fun getSpanSize(position: Int) = when (itemsAdapter.getItemViewType(position)) {
