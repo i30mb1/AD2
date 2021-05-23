@@ -11,7 +11,7 @@ import n7.ad2.data.source.local.model.LocalItem
 interface ItemsDao: BaseDao<LocalItem> {
 
     @Query("SELECT rowid,* FROM LocalItems")
-    fun getAll(): Flow<List<LocalItem>>
+    fun getAllItems(): Flow<List<LocalItem>>
 
     @Query("SELECT rowid,* FROM LocalItems WHERE name LIKE '%'||:filter||'%'")
     fun getItemsFilter(filter: String): DataSource.Factory<Int, LocalItem>
