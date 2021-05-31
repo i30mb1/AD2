@@ -28,14 +28,9 @@ class ItemsFragment : Fragment(R.layout.fragment_items) {
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
-        binding = FragmentItemsBinding.bind(view).also {
-            it.lifecycleOwner = viewLifecycleOwner
-        }
+        binding = FragmentItemsBinding.bind(view)
 
-        requireActivity().apply {
-            setTitle(R.string.items)
-            sendBroadcast(Intent(MainActivity.LOG_ON_RECEIVE).putExtra(MainActivity.LOG_ON_RECEIVE, "item_fragment_created"))
-        }
+        requireActivity().setTitle(R.string.items)
         setHasOptionsMenu(true)
         setupAdapter()
     }
