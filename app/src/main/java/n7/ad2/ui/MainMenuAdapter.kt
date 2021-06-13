@@ -7,7 +7,7 @@ import androidx.recyclerview.widget.RecyclerView
 import n7.ad2.R
 import n7.ad2.databinding.ItemMenuBinding
 
-sealed class MenuItem(val title: String) {
+sealed class MenuItem(val title: String, val isEnable: Boolean = true) {
     val isSelected = ObservableBoolean(false)
 }
 
@@ -15,18 +15,20 @@ class HeroesMenuItem(title: String) : MenuItem(title)
 class ItemsMenuItem(title: String) : MenuItem(title)
 class NewsMenuItem(title: String) : MenuItem(title)
 class TournamentsMenuItem(title: String) : MenuItem(title)
-class StreamsMenuItem(title: String) : MenuItem(title)
-class GamesMenuItem(title: String) : MenuItem(title)
+class StreamsMenuItem(title: String) : MenuItem(title, false)
+class GamesMenuItem(title: String) : MenuItem(title, false)
 
 class MainMenuAdapter(
     private val layoutInflater: LayoutInflater,
-    itemListener: (menuItem: MenuItem) -> Unit,
+    itemListener: (menuItem: MenuItem) -> Boolean,
 ) : RecyclerView.Adapter<MainMenuAdapter.MenuItemHolder>() {
 
     private val itemListener: (menuItem: MenuItem) -> Unit = { menuItem ->
-        menuList.forEach { it.isSelected.set(false) }
-        menuList.find { it == menuItem }!!.isSelected.set(true)
-        itemListener.invoke(menuItem)
+        val handled = itemListener.invoke(menuItem)
+        if (handled) {
+            menuList.forEach { it.isSelected.set(false) }
+            menuList.find { it == menuItem }!!.isSelected.set(true)
+        }
     }
     private val menuList = listOf(
         HeroesMenuItem(layoutInflater.context.getString(R.string.heroes)).apply { isSelected.set(true) },

@@ -140,4 +140,7 @@
     <string name="popup_talent">улучшается при выборе таланта</string>
     <string name="popup_aghanim">улучшается при покупке аганима</string>
     <string name="popup_saved">сохранён в памяти</string>
+
+    <string name="item_disabled">Этот пункт меню временно отключен!</string>
+
 </resources>

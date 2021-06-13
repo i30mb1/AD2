@@ -16,7 +16,7 @@
     <FrameLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:foreground="@drawable/background_ripple"
+        android:foreground="@{item.isEnable() ? @drawable/background_ripple : @drawable/transparent_30}"
         android:onClick="@{() -> itemListener.invoke(item)}">
 
         <View

@@ -234,4 +234,6 @@
     <string name="popup_aghanim">improves when buying aghanim</string>
     <string name="popup_saved">saved in memory</string>
 
+    <string name="item_disabled">This item currently disabled!</string>
+
 </resources>

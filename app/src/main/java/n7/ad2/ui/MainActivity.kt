@@ -129,13 +129,17 @@ class MainActivity : BaseActivity() {
         }
     }
 
-   private fun setLastFragment() {
-       supportFragmentManager.commit {
-           replace(binding.container.id, HeroesFragment())
-       }
-   }
+    private fun setLastFragment() {
+        supportFragmentManager.commit {
+            replace(binding.container.id, HeroesFragment())
+        }
+    }
 
-    private fun setFragment(menu: MenuItem) {
+    private fun setFragment(menu: MenuItem): Boolean {
+        if (!menu.isEnable) {
+            Snackbar.make(binding.root, getString(R.string.item_disabled), Snackbar.LENGTH_SHORT).show()
+            return false
+        }
         val fragment = when (menu) {
             is GamesMenuItem -> GameFragment()
             is HeroesMenuItem -> HeroesFragment()
@@ -147,6 +151,7 @@ class MainActivity : BaseActivity() {
         supportFragmentManager.commit {
             replace(binding.container.id, fragment)
         }
+        return true
     }
 
     private fun showDialogUpdate() {
