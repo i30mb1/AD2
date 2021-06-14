@@ -32,13 +32,6 @@ public class CustomsDataBinding {
                 .into(view);
     }
 
-    @BindingAdapter({"srcPath", "withImage"})
-    public static void loadUrl(ImageView view, String srcPath, Boolean withImage) {
-        if (withImage != null && withImage) {
-            Picasso.get().load(srcPath).into(view);
-        }
-    }
-
     @BindingAdapter("scrollTo")
     public static void scrollTo(RecyclerView recyclerView, int position) {
         if (recyclerView != null) {
