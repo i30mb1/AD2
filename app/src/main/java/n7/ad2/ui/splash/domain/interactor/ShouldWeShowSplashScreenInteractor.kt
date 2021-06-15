@@ -18,7 +18,7 @@ class ShouldWeShowSplashScreenInteractor @Inject constructor(
     suspend operator fun invoke(): Boolean {
         val currentDayInYear = getCurrentDateUseCase()
         val lastDayShownSplashScreen = getLastDayShownSplashScreenUseCase(LAST_DAY_SHOWN_SPLASH_SCREEN_KEY)
-        if (currentDayInYear < lastDayShownSplashScreen) {
+        if (lastDayShownSplashScreen < currentDayInYear) {
             saveLastDayShownSplashScreenUseCase(LAST_DAY_SHOWN_SPLASH_SCREEN_KEY, currentDayInYear)
             return true
         }
