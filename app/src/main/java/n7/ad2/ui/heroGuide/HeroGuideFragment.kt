@@ -6,10 +6,13 @@ import androidx.core.os.bundleOf
 import androidx.fragment.app.Fragment
 import androidx.lifecycle.Lifecycle
 import androidx.lifecycle.addRepeatingJob
+import androidx.lifecycle.lifecycleScope
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.work.WorkInfo
 import androidx.work.WorkManager
+import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.flow.collect
+import kotlinx.coroutines.launch
 import n7.ad2.R
 import n7.ad2.databinding.FragmentHeroGuideBinding
 import n7.ad2.di.injector
@@ -56,14 +59,16 @@ class HeroGuideFragment : Fragment(R.layout.fragment_hero_guide) {
         viewModel.loadHeroWithGuides(heroName).observe(viewLifecycleOwner, heroGuideAdapter::submitList)
     }
 
-    private fun loadNewHeroGuide(heroName: String) {
-        val request = HeroGuideWorker.getRequest(heroName)
+    private fun loadNewHeroGuide(heroName: String) = lifecycleScope.launch(Dispatchers.Main) {
+        if (viewModel.shouldWeLoadNewHeroGuides(heroName)) {
+            val request = HeroGuideWorker.getRequest(heroName)
 
-        WorkManager.getInstance(requireContext()).enqueue(request)
-        WorkManager.getInstance(requireContext()).getWorkInfoByIdLiveData(request.id).observe(viewLifecycleOwner) {
-            when (it.state) {
-                WorkInfo.State.FAILED -> showDialogError(it.outputData.getString(HeroGuideWorker.RESULT)!!)
-                else -> Unit
+            WorkManager.getInstance(requireContext()).enqueue(request)
+            WorkManager.getInstance(requireContext()).getWorkInfoByIdLiveData(request.id).observe(viewLifecycleOwner) {
+                when (it.state) {
+                    WorkInfo.State.FAILED -> showDialogError(it.outputData.getString(HeroGuideWorker.RESULT)!!)
+                    else -> Unit
+                }
             }
         }
     }

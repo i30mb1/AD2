@@ -8,7 +8,7 @@ import javax.inject.Inject
 
 class GetCurrentDateInYearUseCase @Inject constructor(
         private val ioDispatcher: CoroutineDispatcher,
-        private val calendar: Calendar
+        private val calendar: Calendar,
 ) {
 
     suspend operator fun invoke(date: Date = calendar.time, locale: Locale = Locale.getDefault()) = withContext(ioDispatcher) {
