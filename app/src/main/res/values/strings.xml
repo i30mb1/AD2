@@ -211,6 +211,7 @@
     <string name="desc_arrow_left" translatable="false">arrow show to left</string>
     <string name="desc_arrow_right" translatable="false">arrow show to right</string>
     <string name="desc_update_guide" translatable="false">update guide</string>
+    <string name="desc_news_image" translatable="false">news image</string>
 
     <string name="hotkey" translatable="false">Hot Key</string>
     <string name="legacykey" translatable="false">Legacy Key</string>
