@@ -12,6 +12,7 @@ import androidx.work.OneTimeWorkRequestBuilder
 import androidx.work.WorkerParameters
 import androidx.work.workDataOf
 import kotlinx.coroutines.coroutineScope
+import n7.ad2.AD2Logger
 import n7.ad2.R
 import n7.ad2.createNotificationChannel
 import n7.ad2.isChannelNotCreated
@@ -53,6 +54,9 @@ class HeroGuideWorker(
     @Inject
     lateinit var getLocalGuideJson: GetLocalGuideJsonUseCase
 
+    @Inject
+    lateinit var aD2Logger: AD2Logger
+
     override suspend fun doWork(): Result = coroutineScope {
         (context as MyApplication).component.inject(this@HeroGuideWorker)
 
@@ -64,9 +68,12 @@ class HeroGuideWorker(
             val localGuideJson = getLocalGuideJson(heroName)
             val localGuide = convertLocalGuideJsonToLocalGuide(localGuideJson, heroName)
             saveLocalGuideUseCase(localGuide)
+
+            aD2Logger.log("guide loaded for $heroName")
             Result.success()
         } catch (e: Exception) {
             val data = workDataOf(RESULT to e.toString())
+            aD2Logger.log("guide load fails for $heroName")
             Result.failure(data)
         }
     }
