@@ -14,20 +14,20 @@ import com.robinhood.ticker.TickerUtils;
 import java.util.Random;
 
 import n7.ad2.R;
+import n7.ad2.data.source.remote.model.Stream;
 import n7.ad2.databinding.ItemListStreamBinding;
-import n7.ad2.ui.streams.retrofit.Streams;
 
-public class StreamsPagedListAdapter extends PagedListAdapter<Streams, StreamsPagedListAdapter.ViewHolder> {
+public class StreamsPagedListAdapter extends PagedListAdapter<Stream, StreamsPagedListAdapter.ViewHolder> {
 
-    private static final DiffUtil.ItemCallback<Streams> DIFF_CALLBACK = new DiffUtil.ItemCallback<Streams>() {
+    private static final DiffUtil.ItemCallback<Stream> DIFF_CALLBACK = new DiffUtil.ItemCallback<Stream>() {
         @Override
-        public boolean areItemsTheSame(@NonNull Streams streams, @NonNull Streams t1) {
+        public boolean areItemsTheSame(@NonNull Stream streams, @NonNull Stream t1) {
             return true;
         }
 
         @Override
-        public boolean areContentsTheSame(@NonNull Streams streams, @NonNull Streams t1) {
-            return streams.getChannel().getDisplay_name().equals(t1.getChannel().getDisplay_name());
+        public boolean areContentsTheSame(@NonNull Stream streams, @NonNull Stream t1) {
+            return false;
         }
     };
     private final int[] view = {-2, -1, 0, 1, 2, 3};
@@ -49,12 +49,7 @@ public class StreamsPagedListAdapter extends PagedListAdapter<Streams, StreamsPa
 
     @Override
     public void onBindViewHolder(@NonNull ViewHolder viewHolder, int i) {
-        Streams streams = getItem(i);
-        if (streams != null) {
-            viewHolder.bindTo(streams);
-        } else {
-            viewHolder.clear();
-        }
+
     }
 
     class ViewHolder extends RecyclerView.ViewHolder {
@@ -83,9 +78,7 @@ public class StreamsPagedListAdapter extends PagedListAdapter<Streams, StreamsPa
             });
         }
 
-        private void bindTo(final Streams streams) {
-            binding.tvItemListStreamViewers.setText(String.valueOf(streams.getViewers()));
-            binding.setStream(streams);
+        private void bindTo() {
         }
 
         private void clear() {

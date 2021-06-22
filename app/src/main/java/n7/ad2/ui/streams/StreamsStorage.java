@@ -4,17 +4,11 @@ import android.app.Application;
 
 import androidx.databinding.ObservableBoolean;
 
-import java.io.IOException;
 import java.util.ArrayList;
 import java.util.List;
 
-import n7.ad2.ui.streams.retrofit.StreamList;
-import n7.ad2.ui.streams.retrofit.Streams;
-import n7.ad2.ui.streams.retrofit.StreamsApi;
-import retrofit2.Call;
-import retrofit2.Response;
-import retrofit2.Retrofit;
-import retrofit2.converter.gson.GsonConverterFactory;
+import n7.ad2.data.source.remote.model.Stream;
+import n7.ad2.data.source.remote.model.Streams;
 
 public class StreamsStorage {
 
@@ -26,9 +20,9 @@ public class StreamsStorage {
         this.isLoading = isLoading;
     }
 
-    public List<Streams> getSubscribersStreams() {
+    public List<Stream> getSubscribersStreams() {
         isLoading.set(true);
-        List<Streams> list = new ArrayList<>();
+        List<Stream> list = new ArrayList<>();
 //        String accounts[] = PreferenceManager.getDefaultSharedPreferences(application).getString(ACCOUNTS_FOR_TOP_TWITCH, "").split("\\+");
 //        if (accounts.length > 0) for (String account : accounts) {
 //            String parts[] = account.split("\\^");
@@ -65,25 +59,25 @@ public class StreamsStorage {
         return list;
     }
 
-    public List<Streams> getData(int offset, int limit) {
+    public List<Stream> getData(int offset, int limit) {
         isLoading.set(true);
-        List<Streams> list = new ArrayList<>();
+        List<Stream> list = new ArrayList<>();
 
         String BASE_URL = "https://api.twitch.tv/kraken/";
-        Retrofit retrofit = new Retrofit.Builder().baseUrl(BASE_URL).addConverterFactory(GsonConverterFactory.create()).build();
-        StreamsApi streamsApi = retrofit.create(StreamsApi.class);
-        Call<StreamList> streamListCall = streamsApi.getStreams(limit, offset);
-        try {
-            Response response = streamListCall.execute();
-            if (response.isSuccessful()) {
-                StreamList streamList = (StreamList) response.body();
-//                total = streamList.get_total();
-                list = streamList.getStreams();
-            }
-        } catch (IOException e) {
-            e.printStackTrace();
-        }
-        isLoading.set(false);
+//        Retrofit retrofit = new Retrofit.Builder().baseUrl(BASE_URL).addConverterFactory(GsonConverterFactory.create()).build();
+//        TwitchApi streamsApi = retrofit.create(TwitchApi.class);
+//        Call<Streams> streamListCall = streamsApi.getStreams(limit, offset);
+//        try {
+//            Response response = streamListCall.execute();
+//            if (response.isSuccessful()) {
+//                Streams streamList = (Streams) response.body();
+////                total = streamList.get_total();
+//                list = streamList.getStreams();
+//            }
+//        } catch (IOException e) {
+//            e.printStackTrace();
+//        }
+//        isLoading.set(false);
         return list;
     }
 }

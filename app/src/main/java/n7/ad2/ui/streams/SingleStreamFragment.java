@@ -19,12 +19,9 @@ import android.widget.ProgressBar;
 import android.widget.TextView;
 
 import androidx.annotation.NonNull;
-import androidx.annotation.Nullable;
 import androidx.appcompat.app.AlertDialog;
 import androidx.fragment.app.Fragment;
-import androidx.lifecycle.Observer;
 import androidx.lifecycle.ViewModelProvider;
-import androidx.paging.PagedList;
 import androidx.paging.PagedListAdapter;
 import androidx.recyclerview.widget.DiffUtil;
 import androidx.recyclerview.widget.LinearLayoutManager;
@@ -35,7 +32,6 @@ import com.gikk.twirk.TwirkBuilder;
 import com.gikk.twirk.events.TwirkListenerBaseImpl;
 import com.gikk.twirk.types.twitchMessage.TwitchMessage;
 import com.gikk.twirk.types.users.TwitchUser;
-import com.squareup.picasso.Picasso;
 
 import org.json.JSONObject;
 
@@ -51,7 +47,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 import n7.ad2.R;
-import n7.ad2.ui.streams.retrofit.Streams;
+import n7.ad2.data.source.remote.model.Stream;
 import n7.ad2.ui.streams.utilsTwitch.Element;
 import n7.ad2.ui.streams.utilsTwitch.Playlist;
 import n7.ad2.ui.streams.utilsTwitch.TappableSurfaceView;
@@ -62,14 +58,14 @@ import okhttp3.Response;
 
 public class SingleStreamFragment extends Fragment implements SurfaceHolder.Callback {
 
-    private final DiffUtil.ItemCallback<Streams> DIFF_CALLBACK = new DiffUtil.ItemCallback<Streams>() {
+    private final DiffUtil.ItemCallback<Stream> DIFF_CALLBACK = new DiffUtil.ItemCallback<Stream>() {
         @Override
-        public boolean areItemsTheSame(@NonNull Streams streams, @NonNull Streams t1) {
-            return streams.getChannel().getDisplay_name().equals(t1.getChannel().getDisplay_name());
+        public boolean areItemsTheSame(@NonNull Stream streams, @NonNull Stream t1) {
+            return false;
         }
 
         @Override
-        public boolean areContentsTheSame(@NonNull Streams streams, @NonNull Streams t1) {
+        public boolean areContentsTheSame(@NonNull Stream streams, @NonNull Stream t1) {
             return false;
         }
     };
@@ -250,12 +246,7 @@ public class SingleStreamFragment extends Fragment implements SurfaceHolder.Call
 //                }
 //            }
 //        });
-        streamsViewModel.getStreams().observe(this, new Observer<PagedList<Streams>>() {
-            @Override
-            public void onChanged(@Nullable PagedList<Streams> streams) {
-                streamsAdapter.submitList(streams);
-            }
-        });
+
     }
 
     private void initViews() {
@@ -448,7 +439,7 @@ public class SingleStreamFragment extends Fragment implements SurfaceHolder.Call
         return typedValue.data;
     }
 
-    public class StreamsAdapter extends PagedListAdapter<Streams, StreamsAdapter.ViewHolder> {
+    public class StreamsAdapter extends PagedListAdapter<Stream, StreamsAdapter.ViewHolder> {
 
         StreamsAdapter() {
             super(DIFF_CALLBACK);
@@ -463,29 +454,29 @@ public class SingleStreamFragment extends Fragment implements SurfaceHolder.Call
 
         @Override
         public void onBindViewHolder(@NonNull final ViewHolder viewHolder, int i) {
-            final Streams streams = getItem(i);
-            if (streams != null) {
-                viewHolder.tv.setTextColor(getResources().getColor(R.color.gray_100));
-                viewHolder.tv.setText(streams.getChannel().getDisplay_name());
-                viewHolder.tv.setOnClickListener(new View.OnClickListener() {
-                    @Override
-                    public void onClick(View v) {
-                        if (oldView != null)
-                            ((TextView) oldView).setTextColor(getResources().getColor(R.color.gray_100));
-                        oldView = v;
-                        viewHolder.tv.setTextColor(getColorAccentTheme());
-                        startStream(streams.getChannel().getDisplay_name().toLowerCase());
-                        startChat(streams.getChannel().getDisplay_name().toLowerCase());
-                        rv_fragment_single_stream.animate().alpha(0.0f).withEndAction(new Runnable() {
-                            @Override
-                            public void run() {
-                                rv_fragment_single_stream.setVisibility(View.GONE);
-                            }
-                        }).setDuration(300).start();
-                    }
-                });
-                Picasso.get().load(streams.getPreview().getMedium()).placeholder(R.drawable.streams_placeholder).into(viewHolder.iv);
-            }
+//            final Streams streams = getItem(i);
+//            if (streams != null) {
+//                viewHolder.tv.setTextColor(getResources().getColor(R.color.gray_100));
+//                viewHolder.tv.setText(streams.getChannel().getDisplay_name());
+//                viewHolder.tv.setOnClickListener(new View.OnClickListener() {
+//                    @Override
+//                    public void onClick(View v) {
+//                        if (oldView != null)
+//                            ((TextView) oldView).setTextColor(getResources().getColor(R.color.gray_100));
+//                        oldView = v;
+//                        viewHolder.tv.setTextColor(getColorAccentTheme());
+//                        startStream(streams.getChannel().getDisplay_name().toLowerCase());
+//                        startChat(streams.getChannel().getDisplay_name().toLowerCase());
+//                        rv_fragment_single_stream.animate().alpha(0.0f).withEndAction(new Runnable() {
+//                            @Override
+//                            public void run() {
+//                                rv_fragment_single_stream.setVisibility(View.GONE);
+//                            }
+//                        }).setDuration(300).start();
+//                    }
+//                });
+//                Picasso.get().load(streams.getPreview().getMedium()).placeholder(R.drawable.streams_placeholder).into(viewHolder.iv);
+//            }
         }
 
         class ViewHolder extends RecyclerView.ViewHolder {

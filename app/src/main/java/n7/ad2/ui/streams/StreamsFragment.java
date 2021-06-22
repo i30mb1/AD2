@@ -20,7 +20,6 @@ import androidx.fragment.app.FragmentManager;
 import androidx.fragment.app.FragmentTransaction;
 import androidx.lifecycle.Observer;
 import androidx.lifecycle.ViewModelProvider;
-import androidx.paging.PagedList;
 import androidx.recyclerview.widget.GridLayoutManager;
 
 import java.util.Arrays;
@@ -29,7 +28,6 @@ import java.util.LinkedList;
 import n7.ad2.R;
 import n7.ad2.databinding.DialogOpenStreamBinding;
 import n7.ad2.databinding.FragmentStreamsBinding;
-import n7.ad2.ui.streams.retrofit.Streams;
 
 import static n7.ad2.ui.streams.StreamsFullActivity.CHANNEL_NAME;
 import static n7.ad2.ui.streams.StreamsFullActivity.CHANNEL_TITLE;
@@ -156,11 +154,6 @@ public class StreamsFragment extends Fragment {
         final StreamsPagedListAdapter adapter = new StreamsPagedListAdapter();
         binding.rvFragmentStreams.setAdapter(adapter);
 
-        viewModel.getStreams().observe(getViewLifecycleOwner(), new Observer<PagedList<Streams>>() {
-            @Override
-            public void onChanged(@Nullable PagedList<Streams> streams) {
-                adapter.submitList(streams);
-            }
-        });
+
     }
 }

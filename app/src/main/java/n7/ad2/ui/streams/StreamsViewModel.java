@@ -8,7 +8,6 @@ import androidx.paging.PagedList;
 import androidx.databinding.ObservableBoolean;
 import androidx.annotation.NonNull;
 
-import n7.ad2.ui.streams.retrofit.Streams;
 
 public class StreamsViewModel extends AndroidViewModel {
 
@@ -21,15 +20,6 @@ public class StreamsViewModel extends AndroidViewModel {
         this.application = application;
 
         streamsStorage = new StreamsStorage(application, isLoading);
-    }
-
-    public LiveData<PagedList<Streams>> getStreams() {
-        StreamsSourceFactory sourceFactory = new StreamsSourceFactory(streamsStorage);
-        PagedList.Config config = new PagedList.Config.Builder()
-                .setEnablePlaceholders(false)
-                .setPageSize(30).build();
-        LiveData<PagedList<Streams>> pagedListLiveData = new LivePagedListBuilder<>(sourceFactory, config).build();
-        return pagedListLiveData;
     }
 
 }

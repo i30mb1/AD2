@@ -1,14 +1,14 @@
 package n7.ad2.ui.streams;
 
-import androidx.paging.PositionalDataSource;
 import androidx.annotation.NonNull;
+import androidx.paging.PositionalDataSource;
 
 import java.util.ArrayList;
 import java.util.List;
 
-import n7.ad2.ui.streams.retrofit.Streams;
+import n7.ad2.data.source.remote.model.Stream;
 
-public class PositionalStreamsDataSource extends PositionalDataSource<Streams> {
+public class PositionalStreamsDataSource extends PositionalDataSource<Stream> {
 
     private final StreamsStorage streamsStorage;
 
@@ -17,16 +17,16 @@ public class PositionalStreamsDataSource extends PositionalDataSource<Streams> {
     }
 
     @Override
-    public void loadInitial(@NonNull LoadInitialParams params, @NonNull LoadInitialCallback<Streams> callback) {
-        List<Streams> list = new ArrayList<>();
+    public void loadInitial(@NonNull LoadInitialParams params, @NonNull LoadInitialCallback<Stream> callback) {
+        List<Stream> list = new ArrayList<>();
         list.addAll(streamsStorage.getSubscribersStreams());
         list.addAll(streamsStorage.getData(params.requestedStartPosition, params.requestedLoadSize));
         callback.onResult(list, params.requestedStartPosition);
     }
 
     @Override
-    public void loadRange(@NonNull LoadRangeParams params, @NonNull LoadRangeCallback<Streams> callback) {
-        List<Streams> list = streamsStorage.getData(params.startPosition, params.loadSize);
+    public void loadRange(@NonNull LoadRangeParams params, @NonNull LoadRangeCallback<Stream> callback) {
+        List<Stream> list = streamsStorage.getData(params.startPosition, params.loadSize);
         callback.onResult(list);
     }
 

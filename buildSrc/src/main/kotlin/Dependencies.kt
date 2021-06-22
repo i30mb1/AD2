@@ -19,6 +19,7 @@ object Versions {
     const val kotlin = "1.4.30"
     const val dagger = "2.31"
     const val lifecycle = "2.4.0-alpha01"
+    const val retrofit = "2.7.1"
 }
 
 object Lib {
@@ -27,8 +28,9 @@ object Lib {
     const val ticker = "com.robinhood.ticker:ticker:1.2.2"
     const val sliding = "com.yarolegovich:sliding-root-nav:1.1.0"
     const val debugDB = "com.amitshekhar.android:debug-db:1.0.1" // cmd ipconfig основной шлюз + :8080 (как узнать страничку для браузера)
-    const val retrofit = "com.squareup.retrofit2:retrofit:2.7.1"
-    const val gsonConverter = "com.squareup.retrofit2:converter-gson:2.6.2"
+    const val retrofit = "com.squareup.retrofit2:retrofit:${Versions.retrofit}"
+    const val retrofitMoshiConverter = "com.squareup.retrofit2:converter-moshi:${Versions.retrofit}"
+    const val retrofitInterceptor    = "com.squareup.okhttp3:logging-interceptor:4.3.1"
     const val paging3 = "androidx.paging:paging-runtime:3.0.0"
     const val material = "com.google.android.material:material:1.2.0"
     const val constraintLayout = "androidx.constraintlayout:constraintlayout:2.0.4"
@@ -152,7 +154,8 @@ fun DependencyHandler.addBaseDependencies() {
     kapt(Lib.roomAnnotation)
 
     implementation(Lib.retrofit)
-    implementation(Lib.gsonConverter)
+    implementation(Lib.retrofitMoshiConverter)
+    implementation(Lib.retrofitInterceptor)
     implementation(Lib.moshi)
     kapt(Lib.moshiCodegen)
 

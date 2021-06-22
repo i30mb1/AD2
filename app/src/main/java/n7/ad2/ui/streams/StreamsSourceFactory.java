@@ -2,9 +2,9 @@ package n7.ad2.ui.streams;
 
 import androidx.paging.DataSource;
 
-import n7.ad2.ui.streams.retrofit.Streams;
+import n7.ad2.data.source.remote.model.Stream;
 
-public class StreamsSourceFactory extends DataSource.Factory<Integer, Streams> {
+public class StreamsSourceFactory extends DataSource.Factory<Integer, Stream> {
 
     private final StreamsStorage streamsStorage;
 
@@ -13,7 +13,7 @@ public class StreamsSourceFactory extends DataSource.Factory<Integer, Streams> {
     }
 
     @Override
-    public DataSource<Integer, Streams> create() {
+    public DataSource<Integer, Stream> create() {
         return new PositionalStreamsDataSource(streamsStorage);
     }
 }
