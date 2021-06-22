@@ -58,7 +58,7 @@ dependencies {
     debugImplementation(Lib.debugDB)
     implementation(Lib.ticker)
     implementation(Lib.sliding)
-    implementation(Lib.paging)
+    implementation(Lib.paging3)
     implementation(Lib.picasso)
     implementation(Lib.picassoTrans)
     implementation(Lib.viewPager2)
