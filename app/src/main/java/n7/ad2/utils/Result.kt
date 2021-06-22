@@ -1,12 +1,12 @@
 package n7.ad2.utils
 
 sealed class Result<out T : Any> {
-    class Failure<out T : Any>(val exception: Throwable) : Result<T>()
+    class Failure(val exception: Throwable) : Result<Nothing>()
     class Success<out T : Any>(val value: T) : Result<T>()
 
     companion object {
         fun <T : Any> success(value: T): Success<T> = Success(value)
-        fun failure(exception: Throwable): Failure<Nothing> = Failure(exception)
+        fun failure(exception: Throwable): Failure = Failure(exception)
     }
 
 }
