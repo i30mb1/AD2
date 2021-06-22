@@ -80,8 +80,6 @@ class ResponsesFragment : Fragment(R.layout.fragment_hero_responses) {
             adapter = responsesPagedListAdapter
         }
 
-        viewModel.voResponses.observe(viewLifecycleOwner) {
-            responsesPagedListAdapter.submitList(it)
-        }
+        viewModel.voResponses.observe(viewLifecycleOwner, responsesPagedListAdapter::submitList)
     }
 }

@@ -3,9 +3,9 @@ package n7.ad2.ui.heroResponse
 import android.view.LayoutInflater
 import android.view.ViewGroup
 import androidx.core.math.MathUtils.clamp
-import androidx.paging.PagedListAdapter
 import androidx.recyclerview.widget.DiffUtil
 import androidx.recyclerview.widget.GridLayoutManager
+import androidx.recyclerview.widget.ListAdapter
 import androidx.recyclerview.widget.RecyclerView
 import n7.ad2.R
 import n7.ad2.databinding.ItemResponseBodyBinding
@@ -21,19 +21,19 @@ class ResponsesAdapter(
     private val audioExoPlayer: AudioExoPlayer,
     private val infoPopupWindow: InfoPopupWindow,
     private val showDialogResponse: (VOResponseBody) -> Unit,
-) : PagedListAdapter<VOResponse, RecyclerView.ViewHolder>(DiffCallback()), StickyHeaderInterface {
+) : ListAdapter<VOResponse, RecyclerView.ViewHolder>(DiffCallback()), StickyHeaderInterface {
 
-    override fun onCreateViewHolder(viewGroup: ViewGroup, viewType: Int): RecyclerView.ViewHolder = when (viewType) {
-        R.layout.item_response_body -> BodyViewHolder.from(viewGroup, audioExoPlayer, showDialogResponse, infoPopupWindow)
-        R.layout.item_response_title -> HeaderViewHolder.from(viewGroup)
+    override fun onCreateViewHolder(viewGroup: ViewGroup, viewType: Int) = when (viewType) {
+        R.layout.item_response_body -> ResponseBodyViewHolder.from(viewGroup, audioExoPlayer, showDialogResponse, infoPopupWindow)
+        R.layout.item_response_title -> ResponseHeaderViewHolder.from(viewGroup)
         else -> throw UnsupportedOperationException("could not find ViewHolder for $viewGroup")
     }
 
     override fun onBindViewHolder(viewHolder: RecyclerView.ViewHolder, position: Int) {
         val item = getItem(position)
         when (viewHolder) {
-            is BodyViewHolder -> if (item != null) viewHolder.bind(item as VOResponseBody) else viewHolder.clear()
-            is HeaderViewHolder -> if (item != null) viewHolder.bind(item as VOResponseTitle) else viewHolder.clear()
+            is ResponseBodyViewHolder -> if (item != null) viewHolder.bind(item as VOResponseBody) else viewHolder.clear()
+            is ResponseHeaderViewHolder -> if (item != null) viewHolder.bind(item as VOResponseTitle) else viewHolder.clear()
             else -> throw UnsupportedOperationException("could not bind for $viewHolder")
         }
     }
@@ -46,7 +46,7 @@ class ResponsesAdapter(
 
     override fun getHeaderLayout() = R.layout.item_response_title
 
-    class HeaderViewHolder private constructor(
+    class ResponseHeaderViewHolder private constructor(
         private val binding: ItemResponseTitleBinding,
     ) : RecyclerView.ViewHolder(binding.root) {
 
@@ -58,16 +58,16 @@ class ResponsesAdapter(
         fun clear() = Unit
 
         companion object {
-            fun from(parent: ViewGroup): HeaderViewHolder {
+            fun from(parent: ViewGroup): ResponseHeaderViewHolder {
                 val layoutInflater = LayoutInflater.from(parent.context)
                 val binding = ItemResponseTitleBinding.inflate(layoutInflater, parent, false)
-                return HeaderViewHolder(binding)
+                return ResponseHeaderViewHolder(binding)
             }
         }
 
     }
 
-    class BodyViewHolder private constructor(
+    class ResponseBodyViewHolder private constructor(
         private val binding: ItemResponseBodyBinding,
         private val showDialogResponse: (VOResponseBody) -> Unit,
     ) : RecyclerView.ViewHolder(binding.root) {
@@ -95,7 +95,7 @@ class ResponsesAdapter(
                 audioExoPlayer: AudioExoPlayer,
                 showDialogResponse: (VOResponseBody) -> Unit,
                 infoPopupWindow: InfoPopupWindow,
-            ): BodyViewHolder {
+            ): ResponseBodyViewHolder {
                 val layoutInflater = LayoutInflater.from(parent.context)
                 val binding = ItemResponseBodyBinding.inflate(layoutInflater, parent, false).also {
                     it.infoPopupWindow = infoPopupWindow
@@ -110,7 +110,7 @@ class ResponsesAdapter(
                     adapter = responsesImagesAdapter
 //                    setItemViewCacheSize(MAX_VIEWS_RESPONSE_IMAGE)
                 }
-                return BodyViewHolder(binding, showDialogResponse)
+                return ResponseBodyViewHolder(binding, showDialogResponse)
             }
         }
 
