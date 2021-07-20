@@ -10,17 +10,19 @@ import retrofit2.http.Query
 interface TwitchApi {
 
     companion object {
-        private const val CLIENT_ID = "vmr0piicf3e3nxw4fs0zz2e2vqak8y"
+        private const val CLIENT_ID = "gp762nuuoqcoxypju8c569th9wz7q5"
+        private const val ACCESS_TOKEN = "6qla87p9en5fcye3aucbb04xrwx4z3"
     }
 
-    @Headers("Accept: application/vnd.twitchtv.v5+json", "Client-ID: $CLIENT_ID")
-    @GET("streams?game=Dota%202&stream_type=live&client_id=$CLIENT_ID")
+    @Headers("client-id: $CLIENT_ID", "Authorization: Bearer $ACCESS_TOKEN")
+    @GET("streams?game_id=29595")
     suspend fun getStreams(
-        @Query("limit") limit: Int,
-        @Query("offset") offset: Int,
+        @Query("first") first: Int = 100,
+        @Query("after") after: String = "",
+        @Query("before") before: String = "",
     ): Streams
 
-    @Headers("Accept: application/vnd.twitchtv.v5+json", "Client-ID: $CLIENT_ID")
+    @Headers("client-id: $CLIENT_ID", "Authorization: Bearer $ACCESS_TOKEN")
     @GET("streams/{name}?client_id=$CLIENT_ID")
     suspend fun getStream(
         @Path("name") name: String,

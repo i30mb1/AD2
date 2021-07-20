@@ -5,30 +5,46 @@ import com.squareup.moshi.JsonClass
 
 @JsonClass(generateAdapter = true)
 data class Streams(
-    @Json(name = "_total")
-    val _total: Int = 0,
-    @Json(name = "streams")
-    val streams: List<Stream> = emptyList(),
+    @Json(name = "data")
+    val `data`: List<Stream> = listOf(),
+    @Json(name = "pagination")
+    val pagination: Pagination = Pagination(),
 )
 
-class Stream(
-    @Json(name = "viewers")
-    val viewers: Int = 0,
-    @Json(name = "preview")
-    val preview: Preview? = null,
-    @Json(name = "channel")
-    val channel: Channel = Channel(),
-    val isPremium: Boolean = false,
+@JsonClass(generateAdapter = true)
+data class Stream(
+    @Json(name = "game_id")
+    val gameId: String = "",
+    @Json(name = "game_name")
+    val gameName: String = "",
+    @Json(name = "id")
+    val id: String = "",
+    @Json(name = "is_mature")
+    val isMature: Boolean = false,
+    @Json(name = "language")
+    val language: String = "",
+    @Json(name = "started_at")
+    val startedAt: String = "",
+    @Json(name = "tag_ids")
+    val tagIds: List<String> = listOf(),
+    @Json(name = "thumbnail_url")
+    val thumbnailUrl: String = "",
+    @Json(name = "title")
+    val title: String = "",
+    @Json(name = "type")
+    val type: String = "",
+    @Json(name = "user_id")
+    val userId: String = "",
+    @Json(name = "user_login")
+    val userLogin: String = "",
+    @Json(name = "user_name")
+    val userName: String = "",
+    @Json(name = "viewer_count")
+    val viewerCount: Int = 0,
 )
 
-class Preview(
-    @Json(name = "medium")
-    val medium: String = "",
-)
-
-class Channel(
-    @Json(name = "status")
-    val status: String = "",
-    @Json(name = "display_name")
-    val name: String = "",
+@JsonClass(generateAdapter = true)
+data class Pagination(
+    @Json(name = "cursor")
+    val cursor: String = "",
 )

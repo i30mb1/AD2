@@ -43,7 +43,7 @@ object RetrofitModule {
         client: OkHttpClient,
         moshi: Moshi,
     ): TwitchApi = Retrofit.Builder()
-        .baseUrl("https://api.twitch.tv/kraken/")
+        .baseUrl("https://api.twitch.tv/helix/")
         .client(client)
         .addConverterFactory(MoshiConverterFactory.create(moshi))
         .build()
