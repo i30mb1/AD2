@@ -1,6 +1,5 @@
 package n7.ad2.data.source.remote.retrofit
 
-import n7.ad2.data.source.remote.model.Stream
 import n7.ad2.data.source.remote.model.Streams
 import retrofit2.http.GET
 import retrofit2.http.Headers
@@ -23,8 +22,8 @@ interface TwitchApi {
     ): Streams
 
     @Headers("client-id: $CLIENT_ID", "Authorization: Bearer $ACCESS_TOKEN")
-    @GET("streams/{name}?client_id=$CLIENT_ID")
+    @GET("streams?game_id=29595")
     suspend fun getStream(
-        @Path("name") name: String,
-    ): Stream
+        @Path("user_id") userId: String,
+    ): Streams
 }
