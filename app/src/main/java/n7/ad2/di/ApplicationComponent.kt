@@ -23,6 +23,7 @@ import javax.inject.Singleton
     modules = [
         ApplicationModule::class,
         CoroutineModule::class,
+        RetrofitModule::class,
     ]
 )
 interface ApplicationComponent {
