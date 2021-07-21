@@ -6,7 +6,7 @@ import com.squareup.moshi.JsonClass
 @JsonClass(generateAdapter = true)
 data class Streams(
     @Json(name = "data")
-    val `data`: List<Stream> = listOf(),
+    val list: List<Stream> = listOf(),
     @Json(name = "pagination")
     val pagination: Pagination = Pagination(),
 )
