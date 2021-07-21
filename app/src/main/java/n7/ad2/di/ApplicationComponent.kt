@@ -14,6 +14,7 @@ import n7.ad2.ui.heroes.HeroesViewModel
 import n7.ad2.ui.itemInfo.ItemInfoViewModel
 import n7.ad2.ui.items.ItemsViewModel
 import n7.ad2.ui.splash.SplashViewModel
+import n7.ad2.ui.streams.StreamsViewModel
 import n7.ad2.workers.DatabaseWorker
 import javax.inject.Singleton
 
@@ -44,5 +45,6 @@ interface ApplicationComponent {
     val heroGuideViewModel: HeroGuideViewModel
     val newsViewModel: NewsViewModel
     val heroInfoViewModel: HeroInfoViewModel
+    val streamsViewModel: StreamsViewModel
 
 }

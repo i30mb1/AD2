@@ -1,92 +1,60 @@
-package n7.ad2.ui.streams;
+package n7.ad2.ui.streams
 
-import androidx.paging.PagedListAdapter;
-import androidx.databinding.DataBindingUtil;
-import android.os.Handler;
-import androidx.annotation.NonNull;
-import androidx.recyclerview.widget.DiffUtil;
-import androidx.recyclerview.widget.RecyclerView;
-import android.view.LayoutInflater;
-import android.view.ViewGroup;
+import android.os.Handler
+import android.view.LayoutInflater
+import android.view.ViewGroup
+import androidx.databinding.DataBindingUtil
+import androidx.paging.PagingDataAdapter
+import androidx.recyclerview.widget.DiffUtil
+import androidx.recyclerview.widget.RecyclerView
+import com.robinhood.ticker.TickerUtils
+import n7.ad2.R
+import n7.ad2.data.source.remote.model.Stream
+import n7.ad2.databinding.ItemListStreamBinding
+import n7.ad2.ui.heroResponse.domain.vo.VOResponse
+import java.util.Random
 
-import com.robinhood.ticker.TickerUtils;
+class StreamsPagedListAdapter: PagingDataAdapter<Stream, StreamsPagedListAdapter.ViewHolder>(DiffCallback()) {
 
-import java.util.Random;
+    private val view = intArrayOf(-2, -1, 0, 1, 2, 3)
+    private val duration = longArrayOf(2000, 3000, 4000, 3500, 2500)
+    private var inflater: LayoutInflater? = null
+    override fun onCreateViewHolder(viewGroup: ViewGroup, i: Int): ViewHolder {
+        if (inflater == null) inflater = LayoutInflater.from(viewGroup.context)
+        val binding: ItemListStreamBinding = DataBindingUtil.inflate(inflater!!, R.layout.item_list_stream, viewGroup, false)
+        return ViewHolder(binding)
+    }
 
-import n7.ad2.R;
-import n7.ad2.data.source.remote.model.Stream;
-import n7.ad2.databinding.ItemListStreamBinding;
-
-public class StreamsPagedListAdapter extends PagedListAdapter<Stream, StreamsPagedListAdapter.ViewHolder> {
-
-    private static final DiffUtil.ItemCallback<Stream> DIFF_CALLBACK = new DiffUtil.ItemCallback<Stream>() {
-        @Override
-        public boolean areItemsTheSame(@NonNull Stream streams, @NonNull Stream t1) {
-            return true;
+    override fun onBindViewHolder(viewHolder: ViewHolder, i: Int) {}
+    inner class ViewHolder(var binding: ItemListStreamBinding) : RecyclerView.ViewHolder(binding.root) {
+        var handler: Handler
+        private fun bindTo() {}
+        private fun clear() {
+            binding.ivItemListStream.setImageResource(R.drawable.streams_placeholder)
+            binding.tvItemListStreamTitle.text = ""
+            binding.tvItemListStreamSummary.text = ""
         }
 
-        @Override
-        public boolean areContentsTheSame(@NonNull Stream streams, @NonNull Stream t1) {
-            return false;
-        }
-    };
-    private final int[] view = {-2, -1, 0, 1, 2, 3};
-    private final long[] duration = {2000, 3000, 4000, 3500, 2500};
-    private LayoutInflater inflater;
-
-    StreamsPagedListAdapter() {
-        super(DIFF_CALLBACK);
-    }
-
-    @NonNull
-    @Override
-    public ViewHolder onCreateViewHolder(@NonNull ViewGroup viewGroup, int i) {
-        if (inflater == null) inflater = LayoutInflater.from(viewGroup.getContext());
-
-        ItemListStreamBinding binding = DataBindingUtil.inflate(inflater, R.layout.item_list_stream, viewGroup, false);
-        return new ViewHolder(binding);
-    }
-
-    @Override
-    public void onBindViewHolder(@NonNull ViewHolder viewHolder, int i) {
-
-    }
-
-    class ViewHolder extends RecyclerView.ViewHolder {
-        ItemListStreamBinding binding;
-        Handler handler;
-
-        ViewHolder(@NonNull final ItemListStreamBinding binding) {
-            super(binding.getRoot());
-            this.binding = binding;
-            binding.tvItemListStreamViewers.setCharacterList(TickerUtils.getDefaultNumberList());
-            handler = new Handler();
-            handler.post(new Runnable() {
-                @Override
-                public void run() {
+        init {
+            binding.tvItemListStreamViewers.setCharacterList(TickerUtils.getDefaultNumberList())
+            handler = Handler()
+            handler.post(object : Runnable {
+                override fun run() {
                     try {
-                        int value = Integer.valueOf(binding.tvItemListStreamViewers.getText());
-                        int randomValue = +view[new Random().nextInt(view.length - 1)];
-                        if (value + randomValue >= 0)
-                            binding.tvItemListStreamViewers.setText(String.valueOf(value + randomValue));
-                        handler.postDelayed(this, duration[new Random().nextInt(duration.length - 1)]);
-                    } catch (Exception e) {
-                        e.printStackTrace();
+                        val value = Integer.valueOf(binding.tvItemListStreamViewers.text)
+                        val randomValue = +view[Random().nextInt(view.size - 1)]
+                        if (value + randomValue >= 0) binding.tvItemListStreamViewers.text = (value + randomValue).toString()
+                        handler.postDelayed(this, duration[Random().nextInt(duration.size - 1)])
+                    } catch (e: Exception) {
+                        e.printStackTrace()
                     }
-
                 }
-            });
-        }
-
-        private void bindTo() {
-        }
-
-        private void clear() {
-            binding.ivItemListStream.setImageResource(R.drawable.streams_placeholder);
-            binding.tvItemListStreamTitle.setText("");
-            binding.tvItemListStreamSummary.setText("");
+            })
         }
     }
 
-
+    private class DiffCallback : DiffUtil.ItemCallback<Stream>() {
+        override fun areItemsTheSame(oldItem: Stream, newItem: Stream) = oldItem::class == newItem::class
+        override fun areContentsTheSame(oldItem: Stream, newItem: Stream) = oldItem == newItem
+    }
 }
