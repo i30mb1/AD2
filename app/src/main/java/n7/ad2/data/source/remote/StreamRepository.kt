@@ -33,7 +33,7 @@ class StreamPagingSource @Inject constructor(
 
         return try {
             val streams = streamRepository.getStreams(loadSize, paginationKey)
-            LoadResult.Page(streams.list, null, paginationKey)
+            LoadResult.Page(streams.list, null, streams.pagination.cursor)
         } catch (e: Exception) {
             LoadResult.Error(e)
         }

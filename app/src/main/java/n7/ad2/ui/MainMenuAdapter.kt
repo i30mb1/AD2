@@ -15,7 +15,7 @@ class HeroesMenuItem(title: String) : MenuItem(title)
 class ItemsMenuItem(title: String) : MenuItem(title)
 class NewsMenuItem(title: String) : MenuItem(title)
 class TournamentsMenuItem(title: String) : MenuItem(title)
-class StreamsMenuItem(title: String) : MenuItem(title, false)
+class StreamsMenuItem(title: String) : MenuItem(title)
 class GamesMenuItem(title: String) : MenuItem(title, false)
 
 class MainMenuAdapter(

@@ -4,7 +4,9 @@
     xmlns:tools="http://schemas.android.com/tools">
 
     <data>
-
+        <variable
+            name="item"
+            type="n7.ad2.ui.streams.domain.vo.VOSimpleStream" />
     </data>
 
     <com.google.android.material.card.MaterialCardView
@@ -45,6 +47,7 @@
                 android:textSize="14sp"
                 android:textStyle="bold"
                 android:lines="1"
+                android:text="@{item.title}"
                 app:layout_constraintLeft_toRightOf="@+id/iv_item_list_stream"
                 app:layout_constraintTop_toTopOf="@+id/iv_item_list_stream"
                 tools:text="@tools:sample/first_names" />
