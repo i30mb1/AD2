@@ -76,7 +76,7 @@ class ParseHeroes private constructor(
         heroList
 //            .filter { it == "Legion Commander" }
             .forEach { hero ->
-                val root = connectTo("${locale.baseUrl}/${hero}/")
+                val root = connectTo("${locale.baseUrl}${hero}/${locale.response}")
                 val allResponsesWithCategories = JSONArray()
 
                 JSONArray().apply {
@@ -229,7 +229,8 @@ class ParseHeroes private constructor(
         heroList
     }
 
-    private fun loadHero(locale: LOCALE, heroPath: String, heroLocalizedDirectory: String, heroDirectory: String) { val heroUrlEng = "${locale.baseUrl}$heroPath"
+    private fun loadHero(locale: LOCALE, heroPath: String, heroLocalizedDirectory: String, heroDirectory: String) {
+        val heroUrlEng = "${locale.baseUrl}$heroPath"
         if (!checkConnectToHero(heroUrlEng)) return
 
         val root = connectTo(heroUrlEng)
@@ -504,11 +505,11 @@ class ParseHeroes private constructor(
 fun main() = runBlocking {
     parser {
         loadRusDescription = true
-        loadEngDescription = false
-        loadRusResponses = false
-        loadEngResponses = false
-        loadHeroFullImage = false
-        loadHeroSpellImage = false
+        loadEngDescription = true
+        loadRusResponses = true
+        loadEngResponses = true
+        loadHeroFullImage = true
+        loadHeroSpellImage = true
     }.start()
 }
 
