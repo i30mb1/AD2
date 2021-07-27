@@ -2,7 +2,8 @@
   "abilities": [
     {
       "notes": [
-        "This attack damage talent is added as raw attack damage, so it does not benefit illusions, and is not affected by most percentage-based damage increasing or reducing effects."
+        "This attack damage talent is added as raw attack damage. Does not benefit illusions and is not affected by most percentage-based damage increasing or reducing effects.",
+        "Does not benefit illusions and is not affected by most percentage-based damage increasing or reducing effects."
       ],
       "spellName": "Talent",
       "talents": [
@@ -13,7 +14,7 @@
         },
         {
           "talentLvl": "20",
-          "talentLeft": "-8s Bramble Maze CD",
+          "talentLeft": "-7s Bramble Maze CD",
           "talentRight": "+50 Damage"
         },
         {
@@ -55,7 +56,7 @@
       ],
       "mana": "100\/120\/140\/160",
       "hotKey": "Q",
-      "cooldown": "20 (TagTalent 12)",
+      "cooldown": "20 (TagTalent 13)",
       "description": "Dark Willow creates a maze of brambles that grow in the target area after 0.5 seconds. Enemies that walk into a bramble are rooted and take damage over time.",
       "spellName": "Bramble Maze",
       "params": [
@@ -69,8 +70,7 @@
         "Number of Brambles: 8",
         "Total Damage: 120\/160\/200\/240",
         "Root Duration: 1\/1.5\/2\/2.5",
-        "Bramble Duration: 15",
-        "The fae realm exists all around you, merely waiting to draw you in\u2026"
+        "Bramble Duration: 15"
       ],
       "itemBehaviour": [],
       "legacyKey": "B",
@@ -86,9 +86,9 @@
       "notes": [
         "Does not interrupt channeling abilities upon cast.",
         "Shadow Realm disjoints projectiles upon cast.",
-        "During Shadow Realm, Dark Willow is phased, attack immune and unselectable. Any attack or ability targeting Dark Willow which is already in its attack or cast animation gets canceled. Due to this, Dark Willow (or ↓↓ Double-tapping) cannot target herself with most of her own items either, with the following exceptions: Glimmer Cape, Healing Salve, Moon Shard, Royal Jelly and Shadow Amulet. Does not prevent Spell Reflection from reflecting abilities back at her.",
+        "During Shadow Realm, Dark Willow is phased, attack immune and unselectable. Any attack or ability targeting Dark Willow which is already in its attack or cast animation gets canceled. Due to this, Dark Willow (or ↓↓ Double-tapping) cannot target herself with most of her own items either, with the following exceptions: Glimmer Cape, Healing Salve, Moon Shard and Shadow Amulet. Does not prevent Spell Reflection from reflecting abilities back at her.",
         "Any attack or ability targeting Dark Willow which is already in its attack or cast animation gets canceled.",
-        "Due to this, Dark Willow (or ↓↓ Double-tapping) cannot target herself with most of her own items either, with the following exceptions: Glimmer Cape, Healing Salve, Moon Shard, Royal Jelly and Shadow Amulet.",
+        "Due to this, Dark Willow (or ↓↓ Double-tapping) cannot target herself with most of her own items either, with the following exceptions: Glimmer Cape, Healing Salve, Moon Shard and Shadow Amulet.",
         "Does not prevent Spell Reflection from reflecting abilities back at her.",
         "Due to the unselectability, almost every ability treats Dark Willow as if she were invisible. Abilities which do not treat her as invisible are: Heat-Seeking Missile, Concussive Shot, Wrath of Nature, Omnislash, Mana Drain, Exorcism, and Thundergod's Wrath. Unlike with invisibility, Beetles, Phantoms and Undying Zombies do not instanly die when Shadow Realm is cast.",
         "Heat-Seeking Missile, Concussive Shot, Wrath of Nature, Omnislash, Mana Drain, Exorcism, and Thundergod's Wrath.",
@@ -120,8 +120,7 @@
         "Max Damage Duration: 3.5",
         "Duration: 5",
         "Attacking no longer takes you out of Shadow Realm. Each attack still has bonus damage based on the duration of the buff.",
-        "Does not attempt to damage spell immune enemies.",
-        "What you can't see will most definitely hurt you."
+        "Does not attempt to damage spell immune enemies."
       ],
       "itemBehaviour": [],
       "legacyKey": "R",
@@ -144,7 +143,7 @@
       ],
       "mana": "80\/100\/120\/140",
       "hotKey": "E",
-      "cooldown": "18\/16\/14\/12 (TagTalent 15\/13\/11\/9)",
+      "cooldown": "18\/16\/14\/12 (TagTalent 16\/14\/12\/10)",
       "description": "Dark Willow casts an ancient fae curse on the target. After a delay, the target and nearby enemies are stunned.",
       "spellName": "Cursed Crown",
       "params": [
@@ -154,9 +153,8 @@
         "Delay: 4 (TagTalent 3)",
         "Stun Duration: 1.75\/2.25\/2.75\/3.25 (TagTalent 2.35\/2.85\/3.35\/3.85)",
         "Bramble Spawn Radius: 175",
-        "Cursed Crown creates four brambles around the target after the counter ends. Triggers even upon dispel. Reduces cooldown by 3 seconds and stun delay by 1 second.",
-        "Blocked upon cast.",
-        "Didn't anyone ever tell you? Never strike a deal with a fairy\u2026"
+        "Cursed Crown creates four brambles around the target after the counter ends. Triggers even upon dispel. Reduces cooldown by 2 seconds and stun delay by 1 second.",
+        "Blocked upon cast."
       ],
       "itemBehaviour": [],
       "legacyKey": "C",
@@ -202,8 +200,7 @@
         "Attack Interval: 0.25",
         "Damage per Attack: 75\/125\/175 (TagTalent 107\/157\/207)",
         "Seconds per Revolution: 1.8",
-        "Duration: 5",
-        "You'll have to excuse my friend Jex. He's really into murder."
+        "Duration: 5"
       ],
       "itemBehaviour": [],
       "legacyKey": "D",
@@ -237,8 +234,7 @@
         "Cast Animation: 1+2.57",
         "Cast Range: 1200",
         "Radius: 400",
-        "Duration: 3.5\/3.75\/4 (TagTalent 5\/5.25\/5.5)",
-        "You think you know the first thing about fear? Jex'll show you what that word truly means\u2026"
+        "Duration: 3.5\/3.75\/4 (TagTalent 5\/5.25\/5.5)"
       ],
       "itemBehaviour": [],
       "legacyKey": "F",
@@ -263,7 +259,7 @@
     },
     {
       "talentLvl": "20",
-      "talentLeft": "-8s Bramble Maze CD",
+      "talentLeft": "-7s Bramble Maze CD",
       "talentRight": "+50 Damage"
     },
     {

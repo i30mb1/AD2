@@ -4,8 +4,8 @@
       "notes": [
         "The armor talent does not benefit illusions.",
         "The strength talent effectively grants Leshrac 400 health and 2 health regeneration.",
-        "The magic resistance talent stacks multiplicatively with other sources of magic resistance.",
-        "The magic resistance talent increases Leshrac's magic resistance to 47.5%."
+        "The magic resistance talent stacks multiplicatively with other sources of magic resistance. Increases Leshrac's magic resistance to 47.5%.",
+        "Increases Leshrac's magic resistance to 47.5%."
       ],
       "spellName": "Talent",
       "talents": [
@@ -42,14 +42,14 @@
         "Split Earth destroys trees within the affected radius.",
         "Split Earth first applies the debuff, then the damage.",
         "Has no visual or audio indicator during the effect delay.",
-        "With Aghanim's Shard, Split Earth applies its effect 4 times at the targeted point. The first instance still happens 0.35 seconds after cast. The following instances happen 5.35\/10.35\/15.35 seconds after cast. The visual effect during the delay between the extra instances is visible to everyone. Each instance has the following radius: Instance 1: 150\/175\/200\/225 (TagTalent 190\/215\/240\/265) radius. Instance 2: 225\/250\/275\/300 (TagTalent 265\/290\/315\/340) radius. Instance 3: 300\/325\/350\/375 (TagTalent 340\/365\/390\/415) radius. Instance 4: 375\/400\/425\/450 (TagTalent 415\/440\/465\/490) radius.",
+        "With Aghanim's Shard, Split Earth applies its effect 4 times at the targeted point. The first instance still happens 0.35 seconds after cast. The following instances happen 5.35\/10.35\/15.35 seconds after cast. The visual effect during the delay between the extra instances is visible to everyone. Each instance has the following radius: Level 1: 150\/225\/300\/375 (TagTalent 190\/265\/340\/415) Level 2: 175\/250\/325\/400 (TagTalent 215\/290\/365\/440) Level 3: 200\/275\/350\/425 (TagTalent 240\/315\/390\/465) Level 4: 225\/300\/375\/450 (TagTalent 265\/340\/415\/490)",
         "The first instance still happens 0.35 seconds after cast. The following instances happen 5.35\/10.35\/15.35 seconds after cast.",
         "The visual effect during the delay between the extra instances is visible to everyone.",
-        "Each instance has the following radius: Instance 1: 150\/175\/200\/225 (TagTalent 190\/215\/240\/265) radius. Instance 2: 225\/250\/275\/300 (TagTalent 265\/290\/315\/340) radius. Instance 3: 300\/325\/350\/375 (TagTalent 340\/365\/390\/415) radius. Instance 4: 375\/400\/425\/450 (TagTalent 415\/440\/465\/490) radius.",
-        "Instance 1: 150\/175\/200\/225 (TagTalent 190\/215\/240\/265) radius.",
-        "Instance 2: 225\/250\/275\/300 (TagTalent 265\/290\/315\/340) radius.",
-        "Instance 3: 300\/325\/350\/375 (TagTalent 340\/365\/390\/415) radius.",
-        "Instance 4: 375\/400\/425\/450 (TagTalent 415\/440\/465\/490) radius.",
+        "Each instance has the following radius: Level 1: 150\/225\/300\/375 (TagTalent 190\/265\/340\/415) Level 2: 175\/250\/325\/400 (TagTalent 215\/290\/365\/440) Level 3: 200\/275\/350\/425 (TagTalent 240\/315\/390\/465) Level 4: 225\/300\/375\/450 (TagTalent 265\/340\/415\/490)",
+        "Level 1: 150\/225\/300\/375 (TagTalent 190\/265\/340\/415)",
+        "Level 2: 175\/250\/325\/400 (TagTalent 215\/290\/365\/440)",
+        "Level 3: 200\/275\/350\/425 (TagTalent 240\/315\/390\/465)",
+        "Level 4: 225\/300\/375\/450 (TagTalent 265\/340\/415\/490)",
         ""
       ],
       "mana": "80\/100\/120\/140",
@@ -67,8 +67,7 @@
         "Stun Duration: 2",
         "Radius Increase per Instance: 75",
         "Radius Increase Interval: 5",
-        "Causes Split Earth to repeat in the same location two additional times, with a second delay between each one. Each time the radius increases by 75. Split Earth echo location is visible to both teams.",
-        "Twisting nature to his vile will, the shifting earth consumes those unlucky enough to cross Leshrac's path."
+        "Causes Split Earth to repeat in the same location three additional times, with a 5 second delay between each one. Each time the radius increases by 75. Split Earth echo location is visible to both teams."
       ],
       "itemBehaviour": [],
       "legacyKey": "T",
@@ -87,8 +86,9 @@
         "Fully affects invisible units and units in the Fog of War.",
         "When no valid targets are nearby, the explosions randomly appear within a square with 500 side length. These random explosions deal no damage.",
         "Creates explosions in 0.25 (TagTalent 0.14)-second intervals, starting immediately as the ability is cast, resulting in 40 (TagTalent 70) explosions.",
-        "Buildings take 11.2\/28\/44.8\/61.6 damage per explosion.",
-        "Can deal up to 320\/800\/1280\/1760 (TagTalent 560\/1400\/2240\/3080) damage to a single unit, or 448\/1120\/1792\/2464 (TagTalent 784\/1960\/3136\/4312) damage to a single building (before reductions).",
+        "Buildings take 11.2\/28\/44.8\/61.6 damage per explosion (before reductions).",
+        "Can deal up to 320\/800\/1280\/1760 (TagTalent 560\/1400\/2240\/3080) damage to a single unit. Can deal up to 448\/1120\/1792\/2464 (TagTalent 784\/1960\/3136\/4312) damage to a single building.",
+        "Can deal up to 448\/1120\/1792\/2464 (TagTalent 784\/1960\/3136\/4312) damage to a single building.",
         "When Leshrac dies, the explosions still occur at his location.",
         "Multiple instances of Diabolic Edict fully stack."
       ],
@@ -103,8 +103,7 @@
         "Number of Explosions: 40 (TagTalent 70)",
         "Unit Damage per Explosion: 8\/20\/32\/44",
         "Building Damage Bonus: 40%",
-        "Duration: 10",
-        "Chronoptic energy bursts from one plane to the other, evaporating anything it touches."
+        "Duration: 10"
       ],
       "itemBehaviour": [],
       "legacyKey": "C",
@@ -120,7 +119,7 @@
       "notes": [
         "The lightning hits the initial target after the 0.25-second effect delay and then jumps to other targets in 0.25-second intervals, so hitting all targets takes 1\/1.5\/2\/2.5 seconds.",
         "Because of the effect delay, the initial lightning can be avoided with spell immunity, invulnerability, or becoming hidden. However, this does not prevent it from jumping.",
-        "Does not bounce on invisible units, or units in the Fog of War. Can never hit the same unit twice per cast.",
+        "Does not bounce on invisible units, or units in the Fog of War.",
         "Can never hit the same unit twice per cast.",
         "All jumps together can deal up to 360\/780\/1360\/2100 (TagTalent 760\/1380\/2160\/3100) damage (before reductions).",
         "Lightning Storm first applies the damage, then the debuff.",
@@ -132,7 +131,7 @@
       "description": "Summons a lightning storm that blasts the target enemy unit, then jumps to nearby enemy units. Struck units are slowed by 75% for a duration.",
       "spellName": "Lightning Storm",
       "params": [
-        "Cast Animation: 0.3+0.87",
+        "Cast Animation: 0.3+1.04",
         "Cast Range: 650",
         "Jump Distance: 475",
         "Number of Jumps: 4\/6\/8\/10",
@@ -141,8 +140,7 @@
         "Move Speed Slow: 75%",
         "Slow Duration: 0.4\/0.6\/0.8\/1",
         "Attempts to damage if enemy turns spell immune during the delay. Slow persists if debuff was placed before spell immunity and when not dispelled.",
-        "Blocked fully only when primary target.",
-        "The Tormented Soul's mastery of the elements is evident in the massive storms that strike down armies before him."
+        "Blocked fully only when primary target."
       ],
       "itemBehaviour": [],
       "legacyKey": "G",
@@ -194,7 +192,7 @@
         "Activating the ability costs 90 mana.",
         "However, when having less than 90 mana and toggling on, it will still deal 1 damage instance and then toggle off.",
         "Fully affects invisible units and units in the Fog of War.",
-        "Silencing or disabling Leshrac does not toggle Pulse Nova off, not even while hidden."
+        "If toggled On, Pulse Nova continues working even when silenced, disabled, or hidden."
       ],
       "mana": "70",
       "hotKey": "R",
@@ -206,8 +204,7 @@
         "Damage Radius: 525",
         "Mana Cost per Second: 20\/40\/60",
         "Damage per Second: 100\/150\/200 (TagTalent 140\/190\/240)",
-        "Grants a new ability: Nihilism",
-        "If necessary, the Tormented Soul can manipulate space time itself, ravaging lesser beings."
+        "Grants a new ability: Nihilism"
       ],
       "itemBehaviour": [],
       "legacyKey": "V",

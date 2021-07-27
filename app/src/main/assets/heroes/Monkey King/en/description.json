@@ -8,7 +8,7 @@
       "talents": [
         {
           "talentLvl": "25",
-          "talentLeft": "+1 Wukong's Command Ring",
+          "talentLeft": "Additional Wukong's Command Ring",
           "talentRight": "0 Cooldown Primal Spring"
         },
         {
@@ -24,7 +24,7 @@
         {
           "talentLvl": "10",
           "talentLeft": "+20 Attack Speed",
-          "talentRight": "+400 Tree Dance Vision AoE"
+          "talentRight": "+50% Tree Dance Vision AoE"
         }
       ]
     },
@@ -52,7 +52,7 @@
       ],
       "mana": "100",
       "hotKey": "Q",
-      "cooldown": "22 (TagTalent 15)",
+      "cooldown": "23\/22\/21\/20 (TagTalent 16\/15\/14\/13)",
       "description": "Monkey King enlarges his staff and slams it against the ground, stunning enemies in a line and damaging them with a critical hit based on his attack. Has True Strike.",
       "spellName": "Boundless Strike",
       "params": [
@@ -61,8 +61,7 @@
         "Effect Length: 1100",
         "Effect Width: 150",
         "Critical Damage: 150%\/175%\/200%\/225% (TagTalent 190%\/215%\/240%\/265%)",
-        "Stun Duration: 0.7\/1\/1.3\/1.6",
-        "The legendary Jingu Bang grows to match its master's will, ensuring no enemy can escape the Monkey King's reach."
+        "Stun Duration: 1\/1.2\/1.4\/1.6"
       ],
       "itemBehaviour": [],
       "legacyKey": "B",
@@ -79,15 +78,15 @@
         "Leaps in an arc, with a top height of 192. During the leap, other units may pass below Monkey King. The activity modifier only appears during the leap and is responsible for the leaping animation.",
         "The activity modifier only appears during the leap and is responsible for the leaping animation.",
         "Although it visually looks like Monkey King is above the ground while perched, he still is considered to be on the ground. The height is part of the animations.",
-        "Tree Dance has several different cooldowns which activate at different times. Upon cast, the leap duration between trees is added to the cooldown, resulting in a cooldown of 1.1 (0.4) to up to 2.29 (TagTalent 2.93 or 1.59, 2.23) seconds, based on the distance. Upon reaching the tree, it goes on cooldown for 1 (0.3) second, which matters only if the cast cooldown was skipped with flat cooldown reduction abilities or cooldown resets. Upon unperching with a move (TagTalent Right Click) or attack command (A), it also goes on cooldown for 1 (0.3) seconds. Does not go on cooldown when unperched in other ways. Upon taking player-based or Roshan-based damage greater than 0 while on the ground (after damage reductions, excluding damage flagged as HP Removal), it goes on a 3-second cooldown. All of these cooldowns are unaffected by percentage-based cooldown reductions. Only flat cooldown reductions (e.g. Chakra Magic) and cooldown resets affects these cooldowns.",
-        "Upon cast, the leap duration between trees is added to the cooldown, resulting in a cooldown of 1.1 (0.4) to up to 2.29 (TagTalent 2.93 or 1.59, 2.23) seconds, based on the distance.",
-        "Upon reaching the tree, it goes on cooldown for 1 (0.3) second, which matters only if the cast cooldown was skipped with flat cooldown reduction abilities or cooldown resets.",
-        "Upon unperching with a move (TagTalent Right Click) or attack command (A), it also goes on cooldown for 1 (0.3) seconds. Does not go on cooldown when unperched in other ways.",
+        "Tree Dance has several different cooldowns which activate at different times. Upon cast, the leap duration between trees is added to the cooldown, resulting in a cooldown of 1.1 (TagTalent 0.4) to up to 2.29 (TagTalent 2.93 (TagTalent 1.59, 2.23) seconds, based on the distance. Upon reaching the tree, it goes on cooldown for 1 (TagTalent 0.3) second, which matters only if the cast cooldown was skipped with flat cooldown reductions or cooldown resets. Upon unperching with a move (TagTalent Right Click) or attack command (A), it also goes on cooldown for 1 (TagTalent 0.3) seconds. Does not go on cooldown when unperched in other ways. Upon taking player-based or Roshan-based damage greater than 0 while on the ground (after damage reductions, excluding damage flagged as HP Removal), it goes on a 3-second cooldown. All of these cooldowns are unaffected by percentage-based cooldown reductions. Only flat cooldown reductions and cooldown resets affects these cooldowns.",
+        "Upon cast, the leap duration between trees is added to the cooldown, resulting in a cooldown of 1.1 (TagTalent 0.4) to up to 2.29 (TagTalent 2.93 (TagTalent 1.59, 2.23) seconds, based on the distance.",
+        "Upon reaching the tree, it goes on cooldown for 1 (TagTalent 0.3) second, which matters only if the cast cooldown was skipped with flat cooldown reductions or cooldown resets.",
+        "Upon unperching with a move (TagTalent Right Click) or attack command (A), it also goes on cooldown for 1 (TagTalent 0.3) seconds. Does not go on cooldown when unperched in other ways.",
         "Does not go on cooldown when unperched in other ways.",
         "Upon taking player-based or Roshan-based damage greater than 0 while on the ground (after damage reductions, excluding damage flagged as HP Removal), it goes on a 3-second cooldown.",
-        "All of these cooldowns are unaffected by percentage-based cooldown reductions. Only flat cooldown reductions (e.g. Chakra Magic) and cooldown resets affects these cooldowns.",
+        "All of these cooldowns are unaffected by percentage-based cooldown reductions. Only flat cooldown reductions and cooldown resets affects these cooldowns.",
         "During the leap, Monkey King is disabled, unable to perform any actions. The last given order gets queued up and executed as soon as he lands.",
-        "During the leap and while on a tree, Monkey King gains flying vision, but has his day time\/night time vision reduced to 800\/400 (TagTalent 1200\/800). Both Moon Shard's active and passive ability granting bonus night vision works, while Nightmare and Smoke Screen do not affect Monkey King's vision while on a tree.",
+        "During the leap and while on a tree, Monkey King gains flying vision, but has his day time\/night time vision reduced to 800\/600 (TagTalent 1200\/900). Both Moon Shard's active and passive ability granting bonus night vision works, while Nightmare and Smoke Screen do not affect Monkey King's vision while on a tree.",
         "Both Moon Shard's active and passive ability granting bonus night vision works, while Nightmare and Smoke Screen do not affect Monkey King's vision while on a tree.",
         "While perched on a tree, Monkey King is hidden from sight. He can only be seen with flying vision. He can also be seen when standing 2 levels of ground higher than the tree Monkey King sits on, allowing wards to spot him when the ward is on an elevated ward spot. However, he cannot be seen when getting hurled in the air by spells (e.g. Toss). Only standing on high ground grants vision over him.",
         "He can also be seen when standing 2 levels of ground higher than the tree Monkey King sits on, allowing wards to spot him when the ward is on an elevated ward spot.",
@@ -109,15 +108,15 @@
       "spellName": "Tree Dance",
       "params": [
         "Cast Animation: 0.3+0 (TagTalent 0.1+0)",
-        "Cast Range: 900 (TagTalent 1350)",
+        "Cast Range from Ground: 900 (TagTalent 1350)",
+        "Cast Range from Tree: 1000 (TagTalent 1350)",
         "Damage Cooldown: 3",
         "Day Tree Vision: 800 (TagTalent 1200)",
-        "Night Tree Vision: 400 (TagTalent 800)",
+        "Night Tree Vision: 600 (TagTalent 900)",
         "Unperch Stun Duration: 4",
         "Reduces cooldown to 0.3 and cast point to 0.1.",
         "The stun upon falling off of a tree pierces spell immunity.",
-        "Getting rooted while already leaping does not cancel the leap.",
-        "Sun Wukong dances nimbly along the treetop canopy, always just out of arm's reach."
+        "Getting rooted while already leaping does not cancel the leap."
       ],
       "itemBehaviour": [],
       "legacyKey": "T",
@@ -161,8 +160,7 @@
         "Max Damage: 140\/210\/280\/350",
         "Max Move Speed Slow: 20%\/40%\/60%\/80%",
         "Slow Duration: 4",
-        "Getting rooted while already channeling or leaping does not cancel the spell.",
-        "Leaping from the safety of cover into the midst of his enemies, Sun Wukong attacks without mercy."
+        "Getting rooted while already channeling or leaping does not cancel the spell."
       ],
       "itemBehaviour": [],
       "legacyKey": "G",
@@ -218,12 +216,11 @@
       "params": [
         "Required Hits: 4",
         "Charges: 4",
-        "Attack Damage Bonus: 40\/70\/110\/130 (TagTalent 170\/200\/240\/260)",
+        "Attack Damage Bonus: 40\/70\/100\/130 (TagTalent 170\/200\/230\/260)",
         "Lifesteal: 15%\/30%\/45%\/60%",
         "Counter Duration: 7\/8\/9\/10",
         "Buff Duration: 35",
-        "Disables both the adding of the counter and the buff on Monkey King.",
-        "Always sensitive to the moods of its master, the Jingu Bang radiates power when Sun Wukong's combat fervor is on full display."
+        "Disables both the adding of the counter and the buff on Monkey King."
       ],
       "itemBehaviour": [],
       "legacyKey": "R",
@@ -266,8 +263,7 @@
         "Set Move Speed (TagTalentDefault): 200",
         "Set Move Speed (TagTalentas Courier): 380",
         "Search Radius: 350",
-        "Damage Immunity Duration: 0.2",
-        "Watch out for that tree."
+        "Damage Immunity Duration: 0.2"
       ],
       "itemBehaviour": [],
       "legacyKey": "F",
@@ -309,30 +305,28 @@
         "The first ring soldiers form a pentagon within a 300 radius circle, with the tip always facing north.",
         "The second ring soldiers form a nonagon within a 750 radius circle, with the tip always facing north as well.",
         "The third ring soldiers form a heptagon within a 1100 radius circle, with the tip always facing north as well.",
-        "The soldiers are invulnerable and considered hidden (although visible), making them immune to almost every ability. They are unselectable (by both Monkey King and enemies), uncontrollable, and can neither pick up, nor drop any items. They copy most of Monkey King's items, and are therefore able to use attack modifiers and bestow auras he had upon cast. (See item interactions)",
+        "The soldiers are invulnerable and considered hidden (although visible), making them immune to almost every ability. They are unselectable (by both Monkey King and enemies), uncontrollable, and can neither pick up, nor drop any items. They copy most of Monkey King's items, and are therefore able to use attack modifiers and bestow auras he had upon cast.",
         "They are unselectable (by both Monkey King and enemies), uncontrollable, and can neither pick up, nor drop any items.",
-        "They copy most of Monkey King's items, and are therefore able to use attack modifiers and bestow auras he had upon cast. (See item interactions)",
-        "The soldiers are hero clones of Monkey King, copying \/ \/ all attributes of Monkey King, with some special exceptions. They are not illusions. Their base stats adapt on every resummon (e.g. Permanent stats loss due to Intelligence Steal or Essence Shift). Attack speed buffs and slow do not affect clones, and they always attack once every 1.1 seconds. Evaded attacks will still trigger the 1.1-second attack interval cooldown. Their day and night vision is reduced to 600. They provide the vision while walking to their spot and while standing there.",
+        "They copy most of Monkey King's items, and are therefore able to use attack modifiers and bestow auras he had upon cast.",
+        "The soldiers are hero clones of Monkey King, copying \/ \/ all attributes of Monkey King, with some special exceptions. They are not illusions. Their base stats adapt on every resummon (e.g. Permanent stats loss due to Intelligence Steal or Essence Shift). While the clones are affected by attack speed buffs and slow, they may only attack once every 1.1 seconds, even if their attack misses. Their day and night vision is reduced to 600. They provide the vision while walking to their spot and while standing there.",
         "Their base stats adapt on every resummon (e.g. Permanent stats loss due to Intelligence Steal or Essence Shift).",
-        "Attack speed buffs and slow do not affect clones, and they always attack once every 1.1 seconds.",
-        "Evaded attacks will still trigger the 1.1-second attack interval cooldown.",
+        "While the clones are affected by attack speed buffs and slow, they may only attack once every 1.1 seconds, even if their attack misses.",
         "Their day and night vision is reduced to 600. They provide the vision while walking to their spot and while standing there.",
         "The soldiers only attack enemy heroes, clones, creep-heroes and illusions they see inside Wukong's Command. Invisible enemies and enemies inside the Fog of War within the circles are not attacked. Other units and any unit outside the circle are fully ignored, even when within attack range of a soldier. Since the soldiers use regular attacks, their damage is reduced by damage block.",
         "Invisible enemies and enemies inside the Fog of War within the circles are not attacked.",
         "Other units and any unit outside the circle are fully ignored, even when within attack range of a soldier.",
         "Since the soldiers use regular attacks, their damage is reduced by damage block.",
-        "The buffs of a consumed Aghanim's Blessing is copied as well. However, other permanent buffs like consumed Moon Shard and Duel are not copied. Jingu Mastery does not work for the clones. They neither can add stacks on enemies, nor gain the buff if Monkey King had it upon cast.",
-        "However, other permanent buffs like consumed Moon Shard and Duel are not copied.",
+        "The buffs of a consumed Aghanim's Blessing and Aghanim's Shard are copied as well. However, other permanent buffs like a consumed Moon Shard and Duel are not copied. Jingu Mastery does not work for the clones. They neither can add stacks on enemies, nor gain the buff if Monkey King had it upon cast.",
+        "However, other permanent buffs like a consumed Moon Shard and Duel are not copied.",
         "Jingu Mastery does not work for the clones. They neither can add stacks on enemies, nor gain the buff if Monkey King had it upon cast.",
         "If Monkey King moves more than 780 (TagTalent 1130) range away from the center of the circle, or when he dies, the soldiers disappear and the ability ends.",
         "Recasting Wukong's Command while a previous cast is still active immediately ends the previous cast.",
-        "The passive spawns from Aghanim's Scepter are on a recharge time, not an interval. This means when it finishes recharging, but Monkey King is in a state that doesn't allow passive spawns, it spawns the soldier as soon as circumstances allow it. Soldiers do not spawn while affected by the Tree Dance bounce leap and bounce perch modifiers, during Mischief, while fully invisible, during certain abilities that cause him to be hidden, or while dead. Unlike soldiers from a regular cast, passively spawned soldiers can attack any unit except Roshan, but require Monkey King to be within 500 range of them to attack buildings. When acquiring the item, it starts with a charge, so that a soldier spawns instantly. When Monkey King dies, the soldiers immediately disappear. Passive spawn soldiers do not attack Roshan.",
+        "The passive spawns from Aghanim's Scepter are on a recharge time, not an interval. This means when it finishes recharging, but Monkey King is in a state that doesn't allow passive spawns, it spawns the soldier as soon as circumstances allow it. Soldiers do not spawn while affected by the Tree Dance bounce leap and bounce perch modifiers, during Mischief, while fully invisible, during certain abilities that cause him to be hidden, or while dead. Unlike soldiers from a regular cast, passively spawned soldiers can attack any unit except Roshan, but require Monkey King to be within 500 range of them to attack buildings. When acquiring the item, it starts with a charge, so that a soldier spawns instantly. When Monkey King dies, the soldiers immediately disappear.",
         "This means when it finishes recharging, but Monkey King is in a state that doesn't allow passive spawns, it spawns the soldier as soon as circumstances allow it.",
         "Soldiers do not spawn while affected by the Tree Dance bounce leap and bounce perch modifiers, during Mischief, while fully invisible, during certain abilities that cause him to be hidden, or while dead.",
         "Unlike soldiers from a regular cast, passively spawned soldiers can attack any unit except Roshan, but require Monkey King to be within 500 range of them to attack buildings.",
         "When acquiring the item, it starts with a charge, so that a soldier spawns instantly.",
-        "When Monkey King dies, the soldiers immediately disappear.",
-        "Passive spawn soldiers do not attack Roshan."
+        "When Monkey King dies, the soldiers immediately disappear."
       ],
       "mana": "100",
       "hotKey": "R",
@@ -354,8 +348,7 @@
         "Number of Third Ring Soldiers: 7",
         "Passive Spawn Radius: 300",
         "Passive Spawn Interval: 4",
-        "Spawns a monkey soldier near you at regular intervals. Soldiers do not spawn while invisible or on trees. Soldiers only attack buildings when Monkey King himself is nearby.",
-        "Monkey King rips out a tuft of fur to blow at his enemies, charging each strand to transform into a copy of himself."
+        "Spawns a monkey soldier near you at regular intervals. Soldiers do not spawn while invisible or on trees. Soldiers only attack buildings when Monkey King himself is nearby."
       ],
       "itemBehaviour": [],
       "legacyKey": "W",
@@ -375,7 +368,7 @@
   "talents": [
     {
       "talentLvl": "25",
-      "talentLeft": "+1 Wukong's Command Ring",
+      "talentLeft": "Additional Wukong's Command Ring",
       "talentRight": "0 Cooldown Primal Spring"
     },
     {
@@ -391,7 +384,7 @@
     {
       "talentLvl": "10",
       "talentLeft": "+20 Attack Speed",
-      "talentRight": "+400 Tree Dance Vision AoE"
+      "talentRight": "+50% Tree Dance Vision AoE"
     }
   ]
 }

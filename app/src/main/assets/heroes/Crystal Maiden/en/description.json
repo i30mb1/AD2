@@ -53,8 +53,7 @@
         "Move Speed Slow: 20%\/30%\/40%\/50%",
         "Attack Speed Slow: 20\/30\/40\/50",
         "Slow Duration: 4.5",
-        "Slow persists if debuff was placed before spell immunity and when not dispelled.",
-        "The air temperature around Rylai drops rapidly, chilling all around her to the core."
+        "Slow persists if debuff was placed before spell immunity and when not dispelled."
       ],
       "itemBehaviour": [],
       "legacyKey": "V",
@@ -87,8 +86,7 @@
         "Damage per Second: 100",
         "Hero Duration: 1.5\/2\/2.5\/3 (TagTalent 2.75\/3.25\/3.75\/4.25)",
         "Creep Duration: 10 (TagTalent 11.25)",
-        "Root and disarm persist and attempts to damage if debuff was placed before spell immunity and when not dispelled.",
-        "Rylai channels winds from the Blueheart Glacier, imprisoning attackers in thick blocks of ice."
+        "Root and disarm persist and attempts to damage if debuff was placed before spell immunity and when not dispelled."
       ],
       "itemBehaviour": [],
       "legacyKey": "E",
@@ -120,8 +118,7 @@
         "Mana Regen Bonus: 0.5\/1\/1.5\/2",
         "Self Bonus Factor: 3",
         "Aura Linger Duration: 0.5",
-        "Magic Resistance Bonus: 6%",
-        "Cold temperatures promote the essence of magic, causing Rylai's presence to allow spell usage in abundance."
+        "Magic Resistance Bonus: 6%"
       ],
       "itemBehaviour": [],
       "legacyKey": "R",
@@ -147,7 +144,7 @@
         "If all explosion could hit a single target, it would deal up to 10500\/17000\/25000 (TagTalent 15500\/22000\/30000) damage (before reductions).",
         "The radius is always centered on Crystal Maiden and follows her even when she is moved.",
         "Despite the visual effects, the damage is dealt as the falling ice shards are spawned, not upon them reaching the ground.",
-        "With Aghanim's Scepter, Freezing Field provides an aura which tracks enemies within the area. The tracker lingers for 0.1 seconds. If an enemy unit is affected by the tracker for 1.75 seconds, Frostbite is applied to the enemy unit based on its current level. A unit can only be frostbitten once per cast of Freezing Field. Even if they re-enter the area, they are not affected a second time. If a unit is already frostbitten by a manual cast, it can still be frostbitten again by Freezing Field, refreshing the duration. The tracker resets whenever it is reapplied to a unit. This means a unit must be affected by it for 1.75 seconds continuously in order to be frostbitten. The tracker is placed on enemies even without having Aghanim's Scepter, tracking the duration enemies spend within the area normally. This means if Freezing Field is upgraded while channeling, enemies which have been in the area for more than 1.75 seconds instantly have Frostbite applied to them. The tracker does not affect invulnerable or hidden units. The tracker modifier lingers for 0.1 seconds. In Ability Draft, Frostbite must be drafted as well for this upgrade to work.",
+        "With Aghanim's Scepter, Freezing Field provides an aura which tracks enemies within the area. The tracker lingers for 0.1 seconds. If an enemy unit is affected by the tracker for 1.75 seconds, Frostbite is applied to the enemy unit based on its current level. A unit can only be frostbitten once per cast of Freezing Field. Even if they re-enter the area, they are not affected a second time. If a unit is already frostbitten by a manual cast, it can still be frostbitten again by Freezing Field, refreshing the duration. The tracker resets whenever it is reapplied to a unit. This means a unit must be affected by it for 1.75 seconds continuously in order to be frostbitten. The tracker is placed on enemies even without having Aghanim's Scepter, tracking the duration enemies spend within the area normally. This means if Freezing Field is upgraded while channeling, enemies which have been in the area for more than 1.75 seconds instantly have Frostbite applied to them. The tracker does not affect invulnerable or hidden units. In Ability Draft, Frostbite must be drafted as well for this upgrade to work.",
         "If an enemy unit is affected by the tracker for 1.75 seconds, Frostbite is applied to the enemy unit based on its current level.",
         "A unit can only be frostbitten once per cast of Freezing Field. Even if they re-enter the area, they are not affected a second time.",
         "If a unit is already frostbitten by a manual cast, it can still be frostbitten again by Freezing Field, refreshing the duration.",
@@ -155,7 +152,6 @@
         "The tracker is placed on enemies even without having Aghanim's Scepter, tracking the duration enemies spend within the area normally.",
         "This means if Freezing Field is upgraded while channeling, enemies which have been in the area for more than 1.75 seconds instantly have Frostbite applied to them.",
         "The tracker does not affect invulnerable or hidden units.",
-        "The tracker modifier lingers for 0.1 seconds.",
         "In Ability Draft, Frostbite must be drafted as well for this upgrade to work.",
         "With Aghanim's Shard, Freezing Field no longer requires to be channeled, so that Crystal Maiden can act freely during it. However, her movement speed is heavily slowed. This is a regular slow and can be off-set by movement speed bonuses, including haste. Freezing Field is interrupted if Crystal Maiden gets stunned, silenced, cycloned, feared, hexed or slept during it. It also stops when Crystal Maiden dies, or when she uses the Stop Freezing Field sub-ability.",
         "However, her movement speed is heavily slowed. This is a regular slow and can be off-set by movement speed bonuses, including haste.",
@@ -184,8 +180,7 @@
         "Duration: 10",
         "Applies Frostbite to any unit that has been standing in the Freezing Field for over a set amount of time.",
         "Grants a new ability: Stop Freezing Field. Allows you to move, cast and attack during Freezing Field. Can still be interrupted by enemies. You move 75% slower during this.",
-        "Slow persists if debuff was placed before spell immunity and when not dispelled.",
-        "Once the place of her exile, Icewrack has become an anchor for Rylai's frigid onslaught."
+        "Slow persists if debuff was placed before spell immunity and when not dispelled."
       ],
       "itemBehaviour": [],
       "legacyKey": "F",

@@ -4,7 +4,8 @@
       "notes": [
         "The armor talent does not benefit illusions.",
         "The strength talent effectively grants Night Stalker 240 health, 1.2 health regeneration, and 12 attack damage.",
-        "This attack damage talent is added as raw attack damage, so it does not benefit illusions, and is not affected by most percentage-based damage increasing or reducing effects."
+        "This attack damage talent is added as raw attack damage. Does not benefit illusions and is not affected by most percentage-based damage increasing or reducing effects.",
+        "Does not benefit illusions and is not affected by most percentage-based damage increasing or reducing effects."
       ],
       "spellName": "Talent",
       "talents": [
@@ -38,12 +39,11 @@
         "Damage Magical"
       ],
       "notes": [
+        "Also uses the night values during the night from Eclipse.",
         "Void first applies the slow debuff, then the damage, then the stun debuff.",
         "Has a cast backswing of 0.57 during Hunter in the Night.",
-        "Also uses the night values during the night from Eclipse.",
-        "With Aghanim's Scepter, Void turns into a non-targetable ability affecting all enemy units within 900 radius. Void still uses the same cast time. Does not target invisible units, and units inside the Fog of War.",
-        "Void still uses the same cast time.",
-        "Does not target invisible units, and units inside the Fog of War."
+        "With Aghanim's Scepter, Void turns into a non-targetable ability affecting all enemy units within 900 radius. Does not target invisible units, or units inside the Fog of War within the radius.",
+        "Does not target invisible units, or units inside the Fog of War within the radius."
       ],
       "mana": "80\/90\/100\/110",
       "hotKey": "Q",
@@ -52,19 +52,18 @@
       "spellName": "Void",
       "params": [
         "Cast Animation: 0.3+0.33",
-        "Cast Range: 525 (TagTalent 0)",
+        "Cast Range: 525 (TagAghanim 0)",
         "Damage: 80\/160\/240\/320 (TagTalent 125\/205\/285\/365)",
         "Move Speed Slow: 50%",
         "Attack Speed Slow: 50",
         "Day Slow Duration: 1.25",
         "Night Slow Duration: 2.5\/3\/3.5\/4",
         "Day Stun Duration: 0",
-        "Night Stun Duration: 0.1 (TagTalent 0.5)",
+        "Night Stun Duration: 0.1 (TagAghanim 0.5)",
         "Radius: 900",
         "Causes Void to be an AoE ability. Increases the ministun duration.",
         "Slow persists if debuff was placed before spell immunity and when not dispelled.",
-        "Not blocked when upgraded with Aghanim's Scepter.",
-        "Balanar creates a vortex of infinite night, tearing opponents violently into the eternal darkness that once was."
+        "Not blocked when upgraded with Aghanim's Scepter."
       ],
       "itemBehaviour": [],
       "legacyKey": "V",
@@ -77,10 +76,10 @@
         "Affects Enemies"
       ],
       "notes": [
+        "Also uses the night values during the night from Eclipse.",
         "The silence is provided by an aura, its debuff lingers for 0.5 seconds.",
         "The aura's duration does not update when it turns day or night while the buff is on.",
-        "Has a cast backswing of 0.67 during Hunter in the Night.",
-        "Also uses the night values during the night time from Eclipse."
+        "Has a cast backswing of 0.67 during Hunter in the Night."
       ],
       "mana": "50",
       "hotKey": "W",
@@ -93,8 +92,7 @@
         "Day Duration: 3",
         "Night Duration: 4\/5\/6\/7",
         "Aura Linger Duration: 0.5",
-        "Debuff persists if it was placed before spell immunity.",
-        "A vision of the twisted maw of Balanar etches itself into the minds of the poor souls unlucky enough to cross his path."
+        "Debuff persists if it was placed before spell immunity."
       ],
       "itemBehaviour": [],
       "legacyKey": "F",
@@ -108,17 +106,15 @@
         "Damage Instant Kill"
       ],
       "notes": [
-        "This passive ability is only available during night time. Also uses the night values during the night from Eclipse.",
-        "Also uses the night values during the night from Eclipse.",
-        "With Aghanim's Shard, can be cast on allied and enemy lane creeps, on neutral creeps, and on player-controlled units (but not special units such as Warlock's Chaotic Offering). Neutral creeps include ancient creeps as well, but exclude Roshan. Cannot target ancient creeps during daytime. The targeted creep is instantly killed, granting its gold and experience bounties like a regular last hit. Despite the visual effects, the heal and mana restore are applied instantly on cast.",
-        "Neutral creeps include ancient creeps as well, but exclude Roshan.",
-        "Cannot target ancient creeps during daytime.",
-        "The targeted creep is instantly killed, granting its gold and experience bounties like a regular last hit.",
-        "Despite the visual effects, the heal and mana restore are applied instantly on cast."
+        "Also works during the night from Eclipse.",
+        "With Aghanim's Shard, can be cast on any unit except for heroes, illusions, clones, creep-heroes, and Roshan. Cannot be cast on ancient creeps during daytime, but can during nighttime. The targeted creep is instantly killed, granting its gold and experience bounties if it was an enemy, denying it if it was an ally. Despite the visual effect, the heal and mana restore are applied instantly on cast.",
+        "Cannot be cast on ancient creeps during daytime, but can during nighttime.",
+        "The targeted creep is instantly killed, granting its gold and experience bounties if it was an enemy, denying it if it was an ally.",
+        "Despite the visual effect, the heal and mana restore are applied instantly on cast."
       ],
-      "mana": null,
+      "mana": "0",
       "hotKey": "E",
-      "cooldown": null,
+      "cooldown": "20",
       "description": "Night Stalker is in his element at night, attacking and moving with great swiftness.",
       "spellName": "Hunter in the Night",
       "params": [
@@ -128,8 +124,7 @@
         "Cast Range: 150",
         "Active Max Health as Heal: 35%",
         "Active Max Mana as Mana Restore: 35%",
-        "Night Stalker can cast Hunter in the Night. Consumes a lesser creature, instantly killing it and restoring 35% of Night Stalker's maximum HP and mana. Cooldown: 20",
-        "The hunting prowess of Balanar improves as the night beckons."
+        "Night Stalker can cast Hunter in the Night. Consumes a creep, instantly killing it and restoring 35% of Night Stalker's maximum HP and and 35% of maximum mana. Cannot target ancients during the daytime. Cooldown: 20"
       ],
       "itemBehaviour": [],
       "legacyKey": "G",
@@ -142,8 +137,8 @@
         "Affects Self"
       ],
       "notes": [
-        "Dark Ascension has a lower priority than the day time caused by Supernova. During it, Night Stalker still flies, has the damage bonus and unobstructed vision, but the vision is limited to his default day time vision.",
-        "During it, Night Stalker still flies, has the damage bonus and unobstructed vision, but the vision is limited to his default day time vision.",
+        "Dark Ascension has a lower priority than the daytime caused by Supernova. During it, Night Stalker still flies, has the damage bonus and unobstructed vision, but the vision is limited to his default daytime vision.",
+        "During it, Night Stalker still flies, has the damage bonus and unobstructed vision, but the vision is limited to his default daytime vision.",
         "Has a cast backswing of 0.5 seconds when cast during the night."
       ],
       "mana": "125\/175\/225",
@@ -154,8 +149,7 @@
       "params": [
         "Cast Animation: 0.3+0",
         "Attack Damage Bonus: 50\/100\/150",
-        "Duration: 30",
-        "It is a humbling sight to see when the mightiest of warriors become afraid of the dark."
+        "Duration: 30"
       ],
       "itemBehaviour": [],
       "legacyKey": "R",

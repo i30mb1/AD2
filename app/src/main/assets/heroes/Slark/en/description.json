@@ -58,8 +58,7 @@
         "Damage Radius: 325",
         "Effect Delay: 1.5",
         "Total Damage: 75\/150\/225\/300 (TagTalent 195\/270\/345\/420)",
-        "Self Damage Percentage: 50%",
-        "Slithereen are capable of quickly regrowing appendages, in case of critical injury, to save their own lives."
+        "Self Damage Percentage: 50%"
       ],
       "itemBehaviour": [],
       "legacyKey": "C",
@@ -72,17 +71,17 @@
         "Affects Enemy Heroes \/ Self"
       ],
       "notes": [
-        "Slark leaps forward at a speed of 933.33 (1599.99) for up to 0.75 seconds.",
+        "Slark leaps forward at a speed of 933.33 (TagTalent 1599.99) for up to 0.75 seconds.",
         "Always jumps for the full distance, unless an enemy hero gets within 95 radius of Slark during the jump.",
-        "Leashes the hit enemy hero, preventing them from casting certain mobility spells. With the max distance and latch radius, Pounce can latch on enemy heroes up to 795 range away.",
+        "Leashes the hit enemy hero, preventing them from casting certain mobility spells.",
         "With the max distance and latch radius, Pounce can latch on enemy heroes up to 795 range away.",
-        "Slark can turn, cast abilities, and use items during Pounce, but cannot attack.",
+        "Slark can turn and cast abilities and items during Pounce, but cannot attack.",
         "Pounce can latch on invisible units, but not on invulnerable, hidden units, or on illusions.",
         "When latching on a unit, Slark is automatically ordered to attack the target.",
         "The more the leash gets stretched, the slower the affected unit can walk away from the center, eventually coming to a full stop. It directly affects the target's movement speed.",
-        "If cast before getting leashed, the following abilities are not able to break the leash Skewer, Leap, Pounce, Tree Dance, Primal Spring, Toggle Movement, and Hurricane Pike when targeting an enemy.",
-        "Every other position changing effect, including abilities like Primal Roar and Blinding Light, can break the leash only if it is stretched beyond the max leash radius. Force Staff and ↓↓ Double-tapping Hurricane Pike instantly break the leash when cast.",
-        "Force Staff and ↓↓ Double-tapping Hurricane Pike instantly break the leash when cast.",
+        "If cast before getting leashed, the following abilities are not able to break the leash: Skewer, Leap, Pounce, Tree Dance, Primal Spring, Toggle Movement, and Hurricane Pike when targeting an enemy.",
+        "Every other position changing effect, can break the leash when stretching it beyond the max radius. Force Staff and an allied-targeted Hurricane Pike instantly break the leash when cast, regardless of the max radius.",
+        "Force Staff and an allied-targeted Hurricane Pike instantly break the leash when cast, regardless of the max radius.",
         "When the leash expires while a position changing effect is ongoing, it instantly cancels the position changing effect. This goes for the following abilities: Flamebreak, Primal Roar, Power Cogs, Hookshot, Vacuum, Gust, Boulder Smash, Rolling Boulder, Geomagnetic Grip, Deafening Blast, Tether, Blinding Light, Adaptive Strike (Strength), Blast Off!, Charge of Darkness, Greater Bash, Timber Chain, Walrus PUNCH!, Force Staff and Hurricane Pike.",
         "This goes for the following abilities: Flamebreak, Primal Roar, Power Cogs, Hookshot, Vacuum, Gust, Boulder Smash, Rolling Boulder, Geomagnetic Grip, Deafening Blast, Tether, Blinding Light, Adaptive Strike (Strength), Blast Off!, Charge of Darkness, Greater Bash, Timber Chain, Walrus PUNCH!, Force Staff and Hurricane Pike.",
         "Pounce destroys trees within 100 radius around Slark upon landing.",
@@ -95,7 +94,7 @@
       "spellName": "Pounce",
       "params": [
         "Cast Animation: 0+0.53",
-        "Leap Distance: 700 (TagTalent 1200)",
+        "Leap Distance: 700 (TagAghanim 1200)",
         "Latch Radius: 95",
         "Leash Radius: 400",
         "Leash Duration: 2.5\/2.75\/3\/3.25 (TagTalent 3.3\/3.55\/3.8\/4.05)",
@@ -103,8 +102,7 @@
         "Charge Replenish Time: 10",
         "Provides 2 charges and increases pounce range.",
         "Leash persists if debuff was placed before spell immunity and when not dispelled. Leash can be dispelled by spell immunity only.",
-        "Getting rooted during the leap does not cancel the leap.",
-        "Time in the Dark Reef made Slark a dangerous assassin; aggressive and fearless."
+        "Getting rooted during the leap does not cancel the leap."
       ],
       "itemBehaviour": [],
       "legacyKey": "E",
@@ -124,7 +122,7 @@
         "Successive attacks do not refresh the duration of all stolen or lost attributes. Each stack has its own duration. The status buff and debuff icon show the number of current stacks and show the duration of the last stack.",
         "The status buff and debuff icon show the number of current stacks and show the duration of the last stack.",
         "When Slark dies, he loses all temporarily stolen attributes, but the affected enemies do not get theirs back, and vice versa.",
-        "Cannot steal attributes from illusions, but can steal from hero clones. Cannot steal permanent attributes from Tempest Double, but can steal from Meepo Clones. Can steal attributes from allies.",
+        "Cannot steal attributes from illusions. Cannot steal permanent attributes from Tempest Double, but can steal from Meepo Clones. Can steal attributes from allies.",
         "Cannot steal permanent attributes from Tempest Double, but can steal from Meepo Clones.",
         "Can steal attributes from allies.",
         "To permanently steal agility, an enemy hero has to die within 300 range of Slark while having the Essence Shift debuff. Alternatively, Slark also steals agility when he kills a debuffed enemy hero from any distance.",
@@ -141,8 +139,7 @@
         "All Attributes Lost per Attack: 1",
         "Agility Gained per Attack: 3",
         "Duration: 15\/30\/60\/100 (TagTalent 80\/95\/125\/165)",
-        "Prevents gaining new stacks. Already existing stacks still provide bonus agility. Does not prevent permanently stealing agility.",
-        "With each strike at his adversaries, Slark's knowledge of their weaknesses improves."
+        "Prevents gaining new stacks. Already existing stacks still provide bonus agility. Does not prevent permanently stealing agility."
       ],
       "itemBehaviour": [],
       "legacyKey": "N",
@@ -155,27 +152,27 @@
         "Affects Allies"
       ],
       "notes": [
-        "Requires Aghanim's Shard to be unlocked.",
-        "The invisibility is granted by an aura. Its buff lingers for 0.5 seconds. The aura does not affect invulnerable units, so if a unit affected by Depth Shroud turns invulnerable, it gets revealed.",
-        "The aura does not affect invulnerable units, so if a unit affected by Depth Shroud turns invulnerable, it gets revealed.",
-        "Units affected by Depth Shroud turn invisible and cannot be revealed by anything (except for Chronosphere). However, the cloud created is visible to enemies.",
-        "The cloud created is based on the current level of Shadow Dance. It does not grant phased movement. The movement speed and max health as regeneration bonus of Depth Shroud and Shadow Dance stack independently. If Shadow Dance is not learned, nothing happens, wasting mana and cooldown.",
-        "It does not grant phased movement.",
-        "The movement speed and max health as regeneration bonus of Depth Shroud and Shadow Dance stack independently.",
-        "If Shadow Dance is not learned, nothing happens, wasting mana and cooldown.",
-        "Can regenerate up to 17.5%\/21%\/24.5% max health over its full duration."
+        "Requires Aghanim's Shard to be unlocked. In Ability Draft, Depth Shroud can be unlocked by the player that drafted Shadow Dance.",
+        "In Ability Draft, Depth Shroud can be unlocked by the player that drafted Shadow Dance.",
+        "Applies the Depth Shroud modifier based on Shadow Dance's current level on allies within the area. If Shadow Dance is not learned, nothing happens upon cast, wasting mana and cooldown.",
+        "If Shadow Dance is not learned, nothing happens upon cast, wasting mana and cooldown.",
+        "The modifier provides the same movement speed, health regeneration, and invisibility as Shadow Dance does. The modifier fully stacks with those of Shadow Dance. This means during Shadow Dance, Slark gains a total of 48%\/72%\/96% movement speed and 10%\/12%\/14% max health as health regeneration while inside the area.",
+        "The modifier fully stacks with those of Shadow Dance.",
+        "This means during Shadow Dance, Slark gains a total of 48%\/72%\/96% movement speed and 10%\/12%\/14% max health as health regeneration while inside the area.",
+        "The buff is provided by an aura. Its buff lingers for 0.5 seconds.",
+        "Affects every allied unit that is not a building or ward. Does not affect invulnerable or hidden units.",
+        "Does not affect invulnerable or hidden units.",
+        "Can regenerate up to 17.5%\/21%\/24.5% of the affect unit's max health over its full duration."
       ],
       "mana": "75",
       "hotKey": "D",
       "cooldown": "75",
-      "description": "Creates a cloud at the target location. All allies inside the cloud are hidden and have increased regeneration and movement speed",
+      "description": "Creates a 300 AoE cloud at the target location for 3 seconds. All allies inside the radius are hidden and affected by Shadow Dance. Cast Range: 800. Cooldown: 75",
       "spellName": "Depth Shroud",
       "params": [
-        "Cast Animation: 0.1+?",
+        "Cast Animation: 0.1+0.8",
         "Cast Range: 800",
         "Radius: 300",
-        "Move Speed Bonus: 24%\/36%\/48%",
-        "Max Health as Regen per Second: 5%\/6%\/7%",
         "Duration: 3",
         "Aura Linger Duration: 0.5"
       ],
@@ -194,10 +191,10 @@
         "Slark gains or loses the health regeneration and movement speed bonus 0.5 seconds after getting in or out of enemy vision, or casting Shadow Dance.",
         "If Slark is damaged by a neutral creep, the health regeneration and movement speed bonus are lost for 2 seconds.",
         "When casting Shadow Dance, he turns invisible and cannot be revealed by anything. However, the black cloud created is visible to enemies.",
-        "The invisibility is granted by an aura, however, its buff does not linger. The aura does not affect invulnerable units, so if Slark turns invulnerable during it, he gets revealed. Shadow Dance does not grant phased movement.",
+        "The invisibility is granted by an aura, however, its buff does not linger. The aura does not affect invulnerable units, so if Slark turns invulnerable during it, he gets revealed.",
         "The aura does not affect invulnerable units, so if Slark turns invulnerable during it, he gets revealed.",
         "Shadow Dance does not grant phased movement.",
-        "Can regenerate up to 20%\/25.5%\/31.5% of Slark's max health over its full duration. Can regenerate up to 300%\/360%\/420% of Slark's max health in one minute. Can fully regenerate Slark's health within 20\/16.67\/14.29 seconds.",
+        "Can regenerate up to 20%\/25.5%\/31.5% (TagTalent 25%\/31.5%\/38.5%) of Slark's max health over its active duration. Can regenerate up to 300%\/360%\/420% of Slark's max health in one minute. Can fully regenerate Slark's health within 20\/16.67\/14.29 seconds.",
         "Can regenerate up to 300%\/360%\/420% of Slark's max health in one minute.",
         "Can fully regenerate Slark's health within 20\/16.67\/14.29 seconds."
       ],
@@ -217,8 +214,7 @@
         "Active Duration: 4\/4.25\/4.5 (TagTalent 5\/5.25\/5.5)",
         "Grants a new ability: Depth Shroud.",
         "Regeneration and movement speed bonus are disabled, active invisibility is not.",
-        "Illusions get the buff, but it does not grant them the health regen and movement speed.",
-        "The hidden Thirteenth is a slippery foe."
+        "Illusions get the buff, but it does not grant them the health regen and movement speed."
       ],
       "itemBehaviour": [],
       "legacyKey": "D",

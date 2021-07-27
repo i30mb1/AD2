@@ -2,7 +2,8 @@
   "abilities": [
     {
       "notes": [
-        "This attack damage talent is added as raw attack damage, so it does not benefit illusions, and is not affected by most percentage-based damage increasing or reducing effects.",
+        "This attack damage talent is added as raw attack damage. Does not benefit illusions and is not affected by most percentage-based damage increasing or reducing effects.",
+        "Does not benefit illusions and is not affected by most percentage-based damage increasing or reducing effects.",
         "The cooldown reduction talent stacks multiplicatively with other sources cooldown reduction."
       ],
       "spellName": "Talent",
@@ -37,16 +38,17 @@
         "Damage Magical"
       ],
       "notes": [
-        "Sniper gets all 3 charges immediately upon learning Shrapnel. The charges increasing} talent immediately grants 6 charges.",
-        "The charges increasing} talent immediately grants 6 charges.",
-        "Shrapnel starts dealing damage, slowing and providing vision after the effect delay. Does not affect buildings.",
-        "Does not affect buildings.",
+        "Sniper gets all 3 charges immediately upon learning Shrapnel. The charges increasing talent immediately grants 6 charges.",
+        "The charges increasing talent immediately grants 6 charges.",
+        "Shrapnel starts dealing damage, slowing and providing vision after the effect delay.",
         "Provides 450 radius flying vision at the targeted area.",
         "The damage and the slow are both provided by an aura. Its debuff lingers for 0.5 seconds. Multiple instances of the aura do not stack.",
         "Deals damage in 1 second intervals, starting immediately as the debuff is placed, resulting in up to 11 possible damage instances. Can deal up to 220\/385\/550\/715 (TagTalent 484\/649\/814\/979) damage to a single unit (before reductions).",
         "Can deal up to 220\/385\/550\/715 (TagTalent 484\/649\/814\/979) damage to a single unit (before reductions).",
-        "The damage recasting onto the same units stack and refreshes the duration. The debuff do not stack and is not updated to the current level. The movement speed slow increasing talent does not upgrade the current active instant as well. The debuff has to expire to apply the new values.",
-        "The movement speed slow increasing talent does not upgrade the current active instant as well. The debuff has to expire to apply the new values."
+        "Does not affect buildings.",
+        "Leveling up Shrapnel immediately updates all already existing Shrapnel instances. However, the already placed debuffs on enemies do not update. The slow increasing talent immediately updates all already existing Shrapnel instances as well. However, the already placed debuffs on enemies do not update either. The damage increasing talent immediately updates all already existing Shrapnel instances as well, including already placed debuffs on enemies.",
+        "The slow increasing talent immediately updates all already existing Shrapnel instances as well. However, the already placed debuffs on enemies do not update either.",
+        "The damage increasing talent immediately updates all already existing Shrapnel instances as well, including already placed debuffs on enemies."
       ],
       "mana": "50",
       "hotKey": "Q",
@@ -64,8 +66,7 @@
         "Shrapnel Duration: 10",
         "Number of Charges: 3 (TagTalent 9)",
         "Charge Replenish Time: 35 (TagTalent 29.75)",
-        "Slow persists and attempts to damage if debuff was placed before spell immunity.",
-        "Kardel's modular rifle also fires incendiary rounds, useful for assaulting entrenched locations."
+        "Slow persists and attempts to damage if debuff was placed before spell immunity."
       ],
       "itemBehaviour": [],
       "legacyKey": "R",
@@ -80,13 +81,13 @@
       ],
       "notes": [
         "Headshot can miss.",
+        "Has a proc chance of 70% while Take Aim is active.",
         "The proccing attack first applies the debuffs, then its own damage.",
         "The bonus damage is dealt in one instance together with the attack damage, and counts as attack damage as well. It can be lifestealed off of, but it is not considered by crit or cleave. It is also not affected by percentage-based attack damage bonuses or reductions, but can be reduced with flat reductions.",
         "It can be lifestealed off of, but it is not considered by crit or cleave.",
         "It is also not affected by percentage-based attack damage bonuses or reductions, but can be reduced with flat reductions.",
-        "Increases Sniper's attack damage output on average by 8\/20\/32\/44. While Take Aim is active, it increases the proc chance to 70%. This further increases Sniper's attack damage output on average by 14\/35\/56\/77.",
-        "While Take Aim is active, it increases the proc chance to 70%.",
-        "This further increases Sniper's attack damage output on average by 14\/35\/56\/77.",
+        "Increases Sniper's attack damage output on average by 8\/20\/32\/44. During Take Aim, Increases Sniper's attack damage output on average by 14\/35\/56\/77.",
+        "During Take Aim, Increases Sniper's attack damage output on average by 14\/35\/56\/77.",
         "Cannot proc against wards and buildings, can proc against allies.",
         "Headshot uses pseudo-random distribution.",
         "Headshot applies forced movement on the target upon proccing, pushing the target away from Sniper. The knockback does not interrupt channeling spells. The knockback is not applied on units who are already affected by other sources of forced movement. Knocks units back at a speed of 100 (TagTalent 380).",
@@ -107,8 +108,7 @@
         "Knockback Distance: 10 (TagTalent 38)",
         "Slow Duration: 0.5",
         "Knockback Duration: 0.1",
-        "The damage pierces spell immunity, the slow and knockback do not. Slow and knockback persist if debuffs were placed before spell immunity and when not dispelled.",
-        "Taking potshots at steepstalkers in his childhood has been thoroughly refined into perfect leads on enemy combatants."
+        "The damage pierces spell immunity, the slow and knockback do not. Slow and knockback persist if debuffs were placed before spell immunity and when not dispelled."
       ],
       "itemBehaviour": [],
       "legacyKey": "D",
@@ -121,25 +121,22 @@
         "Affects Self"
       ],
       "notes": [
-        "Passively increases Sniper's total attack range to 650\/750\/850\/950. The attack range increasing talent further increases his total attack range to 750\/850\/950\/1050.",
-        "The attack range increasing talent further increases his total attack range to 750\/850\/950\/1050.",
-        "Interrupts Sniper's channeling abilities upon cast.",
-        "When cast, Sniper's attack has True Strike and increases the chances of Headshot proccing to 70%, but he now moves 25% slower.",
-        "Take Aim cannot be recast until losing the buff from a previous cast. Until then, the ability is inactive."
+        "Passively increases Sniper's total attack range to 650\/750\/850\/950 (TagTalent 750\/850\/950\/1050).",
+        "Interrupts Sniper's channeling abilities upon cast. When cast, Sniper gains True Strike and Headshot's proc chance increases to 70%.",
+        "When cast, Sniper gains True Strike and Headshot's proc chance increases to 70%."
       ],
       "mana": "50",
       "hotKey": "E",
       "cooldown": "35\/30\/25\/20 (TagTalent 29.75\/25.5\/21.25\/17)",
-      "description": "Extends the attack range of Sniper's rifle. Can be activated to provided True Strike and +30% Headshot chance for 4 seconds. Slows you by 30% for the duration.",
+      "description": "Extends the attack range of Sniper's rifle. Can be activated to provided True Strike and +30%% Headshot chance for 4 seconds. Slows you by 30%% for the duration.",
       "spellName": "Take Aim",
       "params": [
         "Cast Animation: 0+0",
         "Passive Attack Range Bonus: 100\/200\/300\/400",
-        "Active Headshot Proc Chance Bonus: 30%",
         "Active Self Move Speed Slow: 25%",
+        "Active Headshot Proc Chance Bonus: 30%",
         "Active Duration: 4",
-        "Break disables the passive range bonus.",
-        "Kardel always takes it upon himself to stay as far from harm as he can while still performing his role - taking perfect aim."
+        "Break disables the passive range bonus."
       ],
       "itemBehaviour": [],
       "legacyKey": "E",
@@ -154,27 +151,31 @@
       ],
       "notes": [
         "Requires Aghanim's Shard to be unlocked.",
-        "The grenade travels at a speed of 2500 until reaching the targeted point.",
+        "The grenade travels at a speed of 2500 until reaching the targeted point. The projectile has 175 radius flying vision. This vision does not last.",
         "The projectile has 175 radius flying vision. This vision does not last.",
-        "Knocks units back at a speed of 1062.5. Knockback distance is always 425, no matter how far the unit is from the center. Units are fully disabled during the knockback. Sniper is also knocked back 450 distance away from the target direction.",
-        "Units are fully disabled during the knockback.",
-        "Sniper is also knocked back 450 distance away from the target direction.",
-        "Can push units over impassable terrain. Any trees the knocked back unit collides with gets destroyed.",
+        "Knocks Sniper away from the targeted point at a speed of 1125 upon cast. Also knocks Sniper 100 range upwards, resulting in a small arc. Sniper is not disabled during the knock back. Can push Sniper over impassable terrain. Any tree a knocked back unit collides with gets destroyed.",
+        "Also knocks Sniper 100 range upwards, resulting in a small arc.",
+        "Sniper is not disabled during the knock back.",
+        "Can push Sniper over impassable terrain. Any tree a knocked back unit collides with gets destroyed.",
+        "Knocks enemies back at a speed of 1062.5. Knockback distance is always 425, no matter how far the unit is from the center. Also knocks enemies 100 range upwards, resulting in a small arc. Enemies are fully disabled during the knockback. Can push enemies over impassable terrain. Any tree a knocked back unit collides with gets destroyed.",
+        "Also knocks enemies 100 range upwards, resulting in a small arc.",
+        "Enemies are fully disabled during the knockback.",
+        "Can push enemies over impassable terrain. Any tree a knocked back unit collides with gets destroyed.",
         "Concussive Grenade first applies the debuff, then the knockback, then the damage.",
         "Does not affect Roshan."
       ],
       "mana": "50",
       "hotKey": "D",
       "cooldown": "16 (TagTalent 13.6)",
-      "description": "Grants Concussive Grenade. Deals 125 damage, knocking enemies back 425 distance, slowing them by 50% and disarming them for 3 seconds. Radius: 375. Knocks you back 450 on cast.",
+      "description": "Grants Concussive Grenade. Deals 125 damage, knocking enemies back 425 distance, slowing them by 50% and disarming them for 3 seconds. Radius: 375. Knocks you back 450 units on cast.",
       "spellName": "Concussive Grenade",
       "params": [
         "Cast Animation: 0.1+0.8",
         "Cast Range: 600",
         "Radius: 375",
         "Impact Damage: 125",
-        "Knockback Distance: 425",
         "Self Knockback Distance: 450",
+        "Enemy Knockback Distance: 425",
         "Knockback Duration: 0.4",
         "Move Speed Slow: 50%",
         "Debuff Duration: 3"
@@ -211,16 +212,15 @@
       "description": "Sniper locks onto a target enemy unit and, after a short aiming duration, fires a devastating shot that deals damage at long range and mini-stuns the target.",
       "spellName": "Assassinate",
       "params": [
-        "Cast Animation: 2+1.37 (TagTalent 0.5+3.04)",
+        "Cast Animation: 2+1.37 (TagAghanim 0.5+3.04)",
         "Cast Range: 3000",
         "Damage: 320\/485\/650",
-        "Stun Duration: 0.01 (TagTalent 1\/1.25\/1.5)",
+        "Stun Duration: 0.01 (TagAghanim 1\/1.25\/1.5)",
         "Vision Buff Max Duration: 4",
         "Causes Assassinate to fire quicker and disable the enemy target.",
         "Grants a new ability: Concussive Grenade.",
         "Blocked upon impact, therefore, vision and True Sight are still granted.",
-        "Cannot be disjointed with invisibility without true sight immunity, due to the debuff being placed on cast begin.",
-        "In order to fulfill the prophecy and return to his home town, Kardel must make another shot as perfect as the one on the day of his ancient test."
+        "Cannot be disjointed with invisibility without true sight immunity, due to the debuff being placed on cast begin."
       ],
       "itemBehaviour": [],
       "legacyKey": "T",
@@ -235,7 +235,7 @@
     "attrAgilityInc": 3.2,
     "attrAgility": 27.0
   },
-  "description": "Kardel Sharpeye, the Sniper, is a ranged agility hero who excels at dealing moderate to heavy damage from an incredible range. With no escape mechanism, poor mobility, and a low health pool, Sniper is exceptionally frail at all stages of the game and vulnerable to enemies who confront him head-on. However, his abilities provide him both the means to keep his distance and systematically destroy his enemies from afar. Shrapnel is a potent, high-cast range zoning ability that provides vision for Sniper while slowing and damaging enemies in its area of effect; with up to 3 charges on the ability, Sniper can completely close off any viable routes for his opponents to approach or escape. Headshot supplements Sniper's right-click damage and briefly stops enemies when it procs, which can be quite debilitating since it has a high rate of occurring. His third ability, Take Aim, gives him the largest attack range of any hero in the game, allowing him to deal high DPS from a safe distance while also giving him the ease to switch between targets at a moment's notice. Finally, Assassinate is a strong finishing and harassing ability, dealing hefty damage to an enemy from an enormous distance after a brief aiming period. Sniper is heavily item-dependent, relying on means to increase his survivability as well as his damage output as the game progresses. Skilled players will find that positioning is the most important thing to keep in mind when playing both as him or against him.",
+  "description": "Kardel Sharpeye, the Sniper, is a ranged agility hero who excels at dealing moderate to heavy damage from an incredible range. With no escape mechanism, poor mobility, and a low health pool, Sniper is exceptionally frail at all stages of the game and vulnerable to enemies who confront him head-on. However, his abilities provide him both the means to keep his distance and systematically destroy his enemies from afar. Shrapnel is a potent, high-cast range zoning ability that provides vision for Sniper while slowing and damaging enemies in its area of effect; with up to 3 charges on the ability, Sniper can completely close off any viable routes for his opponents to approach or escape. Headshot supplements Sniper's right-click damage and briefly pushes the enemy away, which can be quite crippling for approaching enemies since it has a high rate of occurring. His third ability, Take Aim, gives him the largest attack range of any hero in the game, allowing him to deal high DPS from a safe distance while also giving him the ability to never miss and proc more Headshots, ensuring the enemy cannot contest him from afar. Finally, Assassinate is a strong finishing and harassing ability, dealing hefty damage to an enemy from an enormous distance after a brief aiming period. Sniper is heavily item-dependent, relying on means to increase his survivability as well as his damage output as the game progresses. Skilled players will find that positioning is the most important thing to keep in mind when playing both as him or against him.",
   "history": "Kardel Sharpeye was born deep in the mountains of Knollen where, since time immemorial, Keen Folk have survived by hunting the strange, cliff-dwelling steepstalkers above their village, shooting them from a distance and collecting the carcasses where they fell. Sharpeye was among the best of these strange mountain keens for whom projectile weapons are but another appendage, and to shoot is as natural as to touch. On his day of summoning, when he was to gain full standing in his village, Sharpeye took the ancient test: a single shot from the valley floor to strike a beast down from the cliffs. To miss was to be dishonored. With his entire village standing vigil, Sharpeye took his shot. A steepstalker fell; the crowd cheered. But when the carcass was collected, the village grew silent, for the elders found that the bullet had pierced its glittering central eye then fallen to be clenched in the steepstalker's mandibles. This ominous sign was the literal opening of a dark prophecy, foretelling both greatness and exile for the gunman who made such a shot. Sharpeye the Sniper was thus, by his own skill, condemned to make his way apart from his people\u2014and unwelcome back among them until he has fulfilled the remainder of the prophecy by attaining legendary stature on a field of battle.",
   "talents": [
     {

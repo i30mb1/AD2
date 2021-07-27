@@ -18,7 +18,7 @@
         },
         {
           "talentLvl": "15",
-          "talentLeft": "+75 Overwhelming Odds Damage Per Hero",
+          "talentLeft": "+75 Overwhelming Odds Hero Damage",
           "talentRight": "+20 Attack Speed"
         },
         {
@@ -38,14 +38,14 @@
       "notes": [
         "The percentage bonus damage to summons is dealt before the base and bonus damage and only taken by units which were created by an ability. This includes illusions, but excludes creep-heroes and clones.",
         "This includes illusions, but excludes creep-heroes and clones.",
-        "The bonus damage counts creep-heroes and illusions as creeps, but clones as heroes. Ignores Couriers, invulnerable and hidden units.",
-        "Ignores Couriers, invulnerable and hidden units.",
-        "Total damage when hitting a certain amount of heroes, with no other units nearby (before reductions): 2 Heroes: 100\/180\/260\/340 (TagTalent 250\/330\/410\/490) damage to each hero, 200\/360\/520\/680 (TagTalent 500\/660\/820\/980 total damage. 3 Heroes: 130\/240\/350\/460 (TagTalent 355\/465\/575\/685) damage to each hero, 390\/720\/1050\/1380 (TagTalent 1065\/1395\/1725\/2055 total damage. 4 Heroes: 160\/300\/440\/580 (TagTalent 460\/600\/740\/880) damage to each hero, 640\/1200\/1760\/2320 (TagTalent 1840\/2400\/2960\/3520 total damage. 5 Heroes: 190\/360\/530\/700 (TagTalent 565\/735\/905\/1075) damage to each hero, 950\/1800\/2650\/3500 (TagTalent 2825\/3675\/4525\/5375 total damage.",
-        "2 Heroes: 100\/180\/260\/340 (TagTalent 250\/330\/410\/490) damage to each hero, 200\/360\/520\/680 (TagTalent 500\/660\/820\/980 total damage.",
-        "3 Heroes: 130\/240\/350\/460 (TagTalent 355\/465\/575\/685) damage to each hero, 390\/720\/1050\/1380 (TagTalent 1065\/1395\/1725\/2055 total damage.",
-        "4 Heroes: 160\/300\/440\/580 (TagTalent 460\/600\/740\/880) damage to each hero, 640\/1200\/1760\/2320 (TagTalent 1840\/2400\/2960\/3520 total damage.",
-        "5 Heroes: 190\/360\/530\/700 (TagTalent 565\/735\/905\/1075) damage to each hero, 950\/1800\/2650\/3500 (TagTalent 2825\/3675\/4525\/5375 total damage.",
+        "Total damage when hitting a certain amount of heroes, with no other units nearby (before reductions): 1 Hero: 70\/120\/170\/220 (TagTalent 145\/195\/245\/295) total damage. 2 Heroes: 100\/180\/260\/340 (TagTalent 250\/330\/410\/490) damage to each hero, 200\/360\/520\/680 (TagTalent 500\/660\/820\/980) total damage. 3 Heroes: 130\/240\/350\/460 (TagTalent 355\/465\/575\/685) damage to each hero, 390\/720\/1050\/1380 (TagTalent 1065\/1395\/1725\/2055) total damage. 4 Heroes: 160\/300\/440\/580 (TagTalent 460\/600\/740\/880) damage to each hero, 640\/1200\/1760\/2320 (TagTalent 1840\/2400\/2960\/3520) total damage. 5 Heroes: 190\/360\/530\/700 (TagTalent 565\/735\/905\/1075) damage to each hero, 950\/1800\/2650\/3500 (TagTalent 2825\/3675\/4525\/5375) total damage.",
+        "1 Hero: 70\/120\/170\/220 (TagTalent 145\/195\/245\/295) total damage.",
+        "2 Heroes: 100\/180\/260\/340 (TagTalent 250\/330\/410\/490) damage to each hero, 200\/360\/520\/680 (TagTalent 500\/660\/820\/980) total damage.",
+        "3 Heroes: 130\/240\/350\/460 (TagTalent 355\/465\/575\/685) damage to each hero, 390\/720\/1050\/1380 (TagTalent 1065\/1395\/1725\/2055) total damage.",
+        "4 Heroes: 160\/300\/440\/580 (TagTalent 460\/600\/740\/880) damage to each hero, 640\/1200\/1760\/2320 (TagTalent 1840\/2400\/2960\/3520) total damage.",
+        "5 Heroes: 190\/360\/530\/700 (TagTalent 565\/735\/905\/1075) damage to each hero, 950\/1800\/2650\/3500 (TagTalent 2825\/3675\/4525\/5375) total damage.",
         "",
+        "Completely ignores Couriers, invulnerable and hidden units within the area.",
         "The initial part of the ability's sound effect plays during the cast animation and is audible to everyone.",
         "The buff from multiple casts of Overwhelming Odds does not stack but gets refreshed instead. The movement speed bonus gets updated on each cast based on how many targets were hit.",
         "The movement speed bonus gets updated on each cast based on how many targets were hit."
@@ -66,8 +66,7 @@
         "Move Speed Bonus per Creep: 3%",
         "Move Speed Bonus per Hero: 9%",
         "Buff Duration: 7",
-        "Counts spell immune enemies towards the unit count. Does not attempt to damage spell immune enemies.",
-        "The archers of Stonehall are ready at Tresdin's command."
+        "Counts spell immune enemies towards the unit count. Does not attempt to damage spell immune enemies."
       ],
       "itemBehaviour": [],
       "legacyKey": "W",
@@ -86,10 +85,10 @@
         "With Aghanim's Shard, Press the Attack also grants spell immunity to the target. Press the Attack first applies the buff, and then the spell immunity buff. The spell immunity granted does not apply a spell immunity dispel on the target. Therefore certain debuffs (e.g. Pounce) only dispelable by spell immunity are not removed.",
         "Press the Attack first applies the buff, and then the spell immunity buff.",
         "The spell immunity granted does not apply a spell immunity dispel on the target. Therefore certain debuffs (e.g. Pounce) only dispelable by spell immunity are not removed.",
-        "The level 25 talent turns Press the Attack into a 400 radius area-targeted ability, so that it cannot directly target units anymore. Self-casting the ability still targets Legion Commander, centering the radius around her. The radius talent does not apply to the Press The Attack buff applied on self after winning a Duel. Aghanim's Shard's notes fully apply.",
-        "Self-casting the ability still targets Legion Commander, centering the radius around her.",
-        "The radius talent does not apply to the Press The Attack buff applied on self after winning a Duel.",
-        "Aghanim's Shard's notes fully apply."
+        "With the level 25 talent, Press the Attack turns into an area-targeted ability, so that it cannot directly target units anymore. ↓↓ Double-tapping centers the radius around Legion Commander. Aghanim's Shard upgrade notes fully apply. The Press The Attack triggered by winning a Duel still only affects self.",
+        "↓↓ Double-tapping centers the radius around Legion Commander.",
+        "Aghanim's Shard upgrade notes fully apply.",
+        "The Press The Attack triggered by winning a Duel still only affects self."
       ],
       "mana": "110",
       "hotKey": "W",
@@ -104,8 +103,7 @@
         "Duration: 5",
         "Radius: 400",
         "Spell Immunity Duration: 1.75",
-        "Press The Attack targets now gain Spell Immunity for 1.75 seconds. Reduces cooldown by 2 seconds.",
-        "The rallying horn of the Bronze Legion is able to inspire any heart."
+        "Press The Attack targets now gain Spell Immunity for 1.75 seconds. Reduces cooldown by 2 seconds."
       ],
       "itemBehaviour": [],
       "legacyKey": "T",
@@ -139,8 +137,7 @@
       "spellName": "Moment of Courage",
       "params": [
         "Proc Chance: 25% (TagTalent 33%)",
-        "Lifesteal: 55%\/65%\/75%\/85%",
-        "Tresdin knows that an enemy's most vulnerable moment often follows their fiercest stroke."
+        "Lifesteal: 55%\/65%\/75%\/85%"
       ],
       "itemBehaviour": [],
       "legacyKey": "E",
@@ -162,21 +159,21 @@
         "Duel also ends instantly and without a victor when a dueling unit comes under the effects of Depth Shroud, an allied Dismember or Supernova.",
         "A unit wins the duel if their opponent dies before the duel ends. If both duelists survive the duel, there is no victor.",
         "A victorious duelist does not need to have landed the last hit. Their opponent may be killed by enemies or neutrals, or denied by allies or themselves.",
-        "A victorious duelist gains bonus damage as long as their opponent is a non-illusion hero, and dies. However, there are a few exceptions: The dueled target does not gain the bonus damage if the duel caster dies to Ice Blast's shatter, but the caster does if the target shatters instead. The dueled target does not gain the bonus damage if they were hidden by Phantasm or Enchant Remnant as the caster died, but the caster does if the target was affected instead. Grant bonus damage only when the dueled Meepo dies from taking damage. If another Meepo dies during the duel, no damage is granted. Defeating a Tempest Double does not grant bonus damage. The victor of a duel gains bonus damage even when the victim had Reincarnation or enters Wraith Form.",
+        "A victorious duelist gains bonus damage as long as their opponent is a hero (excluding illusions and the Tempest Double), and dies (or enters Wraith Form). However, there are a few exceptions. The dueled target does not gain the bonus damage if the duel caster dies to Ice Blast's shatter, but the caster does if the target shatters instead. The dueled target does not gain the bonus damage if they were hidden by Phantasm or Enchant Remnant as the caster died, but the caster does if the target was affected instead. Killing Meepo grants the bonus damage only when the dueled Meepo dies from taking damage. If another Meepo dies during the duel, no damage is granted. The victor of a duel gains bonus damage even when the victim had Reincarnation.",
         "The dueled target does not gain the bonus damage if the duel caster dies to Ice Blast's shatter, but the caster does if the target shatters instead.",
         "The dueled target does not gain the bonus damage if they were hidden by Phantasm or Enchant Remnant as the caster died, but the caster does if the target was affected instead.",
-        "Grant bonus damage only when the dueled Meepo dies from taking damage. If another Meepo dies during the duel, no damage is granted.",
-        "Defeating a Tempest Double does not grant bonus damage.",
-        "The victor of a duel gains bonus damage even when the victim had Reincarnation or enters Wraith Form.",
-        "If Legion Commander is victorious, Press the Attack based on its current level is applied on her. Press the Attack notes fully apply. The radius talent does not apply. In Ability Draft, Press the Attack must be drafted as well for it to be applied on the caster upon a victory.",
-        "Press the Attack notes fully apply. The radius talent does not apply.",
+        "Killing Meepo grants the bonus damage only when the dueled Meepo dies from taking damage. If another Meepo dies during the duel, no damage is granted.",
+        "The victor of a duel gains bonus damage even when the victim had Reincarnation.",
+        "If Legion Commander is victorious, Press the Attack based on its current level is applied on her. Press the Attack notes fully apply. The radius talent does not apply, Aghanim's Shard upgrade fully applies. In Ability Draft, Press the Attack must be drafted as well for it to be applied on the caster upon a victory.",
+        "Press the Attack notes fully apply. The radius talent does not apply, Aghanim's Shard upgrade fully applies.",
         "In Ability Draft, Press the Attack must be drafted as well for it to be applied on the caster upon a victory.",
         "Can be cast on illusions. While illusions get bonus damage from winning such duels, real heroes do not gain damage for defeating illusions. Hero clones can gain damage individually as well. However, the Tempest Double loses it upon respawning. Meepo clones keep their victory damage permanently.",
         "Hero clones can gain damage individually as well. However, the Tempest Double loses it upon respawning. Meepo clones keep their victory damage permanently.",
         "If two enemy heroes are linked by Soulbind and duel is cast, Legion Commander gains bonus damage for any and all heroes that die during the duel. The order of death does not matter as duel simultaneously affects both heroes (Legion Commander only attacks the main target however). This link can result in doubled duel damage if both enemies die. If any enemy creep-hero is linked as a secondary target by Soulbind and duel is cast, the creep-hero gets dueled and winner gains the bonus damage.",
         "The order of death does not matter as duel simultaneously affects both heroes (Legion Commander only attacks the main target however). This link can result in doubled duel damage if both enemies die.",
         "If any enemy creep-hero is linked as a secondary target by Soulbind and duel is cast, the creep-hero gets dueled and winner gains the bonus damage.",
-        "With Aghanim's Scepter, it grants the dueling heroes 50% incoming damage reduction from non-dueling sources."
+        "With Aghanim's Scepter, applies generic incoming damage reduction on the dueling heroes. Stacks additively with other sources of generic incoming damage manipulation. The reduction affects all damage that is not flagged as HP removal the dueling heroes take from any source except each other.",
+        "The reduction affects all damage that is not flagged as HP removal the dueling heroes take from any source except each other."
       ],
       "mana": "75",
       "hotKey": "R",
@@ -187,10 +184,9 @@
         "Cast Animation: 0.3+0",
         "Cast Range: 150",
         "Winner Attack Damage Bonus: 10\/20\/30 (TagTalent 40\/50\/60)",
-        "Duel Duration: 4\/4.75\/5.5 (TagTalent 6\/7\/8)",
+        "Duel Duration: 4\/4.75\/5.5 (TagAghanim 6\/7\/8)",
         "Incoming Damage Reduction: 50%",
-        "Increases Duel duration, and makes Legion Commander and her opponent only take 50% damage from other sources. Reduces cooldown by 20 seconds.",
-        "To face a soldier of Stonehall in single combat is a challenge few can resist."
+        "Increases Duel duration, and makes Legion Commander and her opponent only take 50% damage from other sources. Reduces cooldown by 20 seconds."
       ],
       "itemBehaviour": [],
       "legacyKey": "D",
@@ -220,7 +216,7 @@
     },
     {
       "talentLvl": "15",
-      "talentLeft": "+75 Overwhelming Odds Damage Per Hero",
+      "talentLeft": "+75 Overwhelming Odds Hero Damage",
       "talentRight": "+20 Attack Speed"
     },
     {

@@ -33,18 +33,17 @@
         "Damage Magical"
       ],
       "notes": [
-        "Turning invulnerable or hidden does not stop the Thunder Strike from hitting other units within the 240\/650 radius.",
+        "Turning invulnerable or hidden does not stop Thunder Strike from hitting other units within the radius.",
         "Thunder Strike exposes the target.",
-        "The strikes first apply the debuff, then the damage.",
-        "Strikes the target in 2-second intervals, starting immediately as the debuff is placed, resulting in 4\/7 strikes. The debuff persists through death. If the target dies, Thunder Strike continues to apply damage at its death location.",
+        "The strikes first apply the slow debuff, then the damage.",
         "The debuff persists through death. If the target dies, Thunder Strike continues to apply damage at its death location.",
+        "Strikes the target in 2-second intervals, starting immediately as the debuff is placed, resulting in 4 (TagTalent 7) strikes.",
         "Can deal up to 180\/280\/380\/480 damage to a single unit (before reductions). With the level 10 damage increasing talent, it deals a total of 300\/400\/500\/600 damage. With the level 20 number of strikes increasing talent, it deals a total of 315\/490\/665\/840 damage. With both talents, it deals a total of 525\/700\/875\/1050 damage.",
         "With the level 10 damage increasing talent, it deals a total of 300\/400\/500\/600 damage.",
         "With the level 20 number of strikes increasing talent, it deals a total of 315\/490\/665\/840 damage.",
         "With both talents, it deals a total of 525\/700\/875\/1050 damage.",
         "The damage upgrading talent immediately upgrades all of Disruptor's currently active Thunder Strike instances.",
-        "However, the number of strikes increasing talent does not update currently active instances. The current instance must expire first.",
-        "The current instance must expire first.",
+        "The number of strikes increasing talent does not update currently active instances.",
         "Provides 450 range flying vision for 3.34 seconds at the target's last location when the debuff expires or is removed.",
         "Successive casts on the same unit do not stack, but only refresh the duration."
       ],
@@ -66,10 +65,9 @@
         "Ally Move Speed Bonus: 50%",
         "Ally Attack Speed Bonus: 75",
         "Ally Buff Duration: 1.25",
-        "Allows Thunder Strike to be cast on allies, follows the ally and deals damage around them. Each strike gives a short 1.25 second buff that provides +50% Movement Speed and +75 Attack Speed. Increases radius by 410 when used on allies.",
+        "Allows Thunder Strike to be cast on allies, follows the ally and deals damage around them. Each strike gives a short 1.25 second buff that provides +50% Movement Speed and +75 Attack Speed. Increases radius to 650.",
         "Continues to apply area effect if debuff was placed before spell immunity and when not dispelled. Does not attempt to damage spell immune enemies. Can be cast on spell immune allies.",
-        "Blocked fully only when primary enemy target.",
-        "Disruptor's charged coils occasionally overload, and a singed armor plate or tuft of fur is the enemy's result."
+        "Blocked fully only when primary enemy target."
       ],
       "itemBehaviour": [],
       "legacyKey": "C",
@@ -86,16 +84,15 @@
         "Glimpse does not instantly move the target back. A projectile spawns from the target which travels towards the mark. The projectile travels at a speed of 600, or reaches the mark in 1.8 seconds, whichever is faster. The projectile provides 400 range flying vision while traveling, which lingers for 3.34 seconds at the marked location.",
         "The projectile travels at a speed of 600, or reaches the mark in 1.8 seconds, whichever is faster.",
         "The projectile provides 400 range flying vision while traveling, which lingers for 3.34 seconds at the marked location.",
-        "If the target was dead for more than 4 seconds, the target gets moved to the team's fountain instead. Cannot target creep-heroes.",
-        "Cannot target creep-heroes.",
-        "The location at which the target lands after Glimpse is marked with a blue visual effect which is visible to everyone. With the level 15 talent, Glimpse deals 275 damage to the target upon arriving at the mark.",
-        "With the level 15 talent, Glimpse deals 275 damage to the target upon arriving at the mark.",
-        "Does not move spell immune units, but can move invulnerable units. Following the general rule of position changing effects, it can cancel abilities Time Walk or Ball Lightning. While Doppelganger, Sleight of Fist and Activate Fire Remnant reposition the caster, they cannot be interrupted, these abilities can be used to dodge. Does not move hidden units.",
-        "Following the general rule of position changing effects, it can cancel abilities Time Walk or Ball Lightning.",
-        "While Doppelganger, Sleight of Fist and Activate Fire Remnant reposition the caster, they cannot be interrupted, these abilities can be used to dodge.",
+        "If the target was dead for more than 4 seconds, the target gets moved to the team's fountain instead.",
+        "The location at which the target lands after Glimpse is marked with a blue visual effect which is visible to everyone.",
+        "Does not move spell immune units, but can move invulnerable units. Following the general rule of position changing effects, it can cancel abilities like Time Walk or Ball Lightning. Does not move hidden units.",
+        "Following the general rule of position changing effects, it can cancel abilities like Time Walk or Ball Lightning.",
         "Does not move hidden units.",
-        "The target is given a stop command as soon as it is moved back, effectively canceling channeling abilities.",
-        "Does not disjoint projectiles for the target upon teleporting them."
+        "The target is given a stop command as soon as it is moved back, effectively canceling channeling abilities. With the level 15 talent, Glimpse also deals 275 damage to the target once they are moved back.",
+        "With the level 15 talent, Glimpse also deals 275 damage to the target once they are moved back.",
+        "Does not disjoint projectiles for the target upon teleporting them.",
+        "Cannot be cast on creep-heroes."
       ],
       "mana": "100",
       "hotKey": "W",
@@ -107,8 +104,7 @@
         "Cast Range: 600\/1000\/1400\/1800",
         "Backtracked Time: 4",
         "Damage: 275",
-        "Does not return enemies while spell immune.",
-        "Playing with electricity can have unexpected results."
+        "Does not return enemies while spell immune."
       ],
       "itemBehaviour": [],
       "legacyKey": "D",
@@ -121,7 +117,7 @@
         "Affects Enemies"
       ],
       "notes": [
-        "The actual duration of the ability starts right after the 1.2 effect delay. The visual and sound effects during the effect delay are visible and audible to everyone.",
+        "The effect delay is not included in the field's duration. The actual duration starts right after the delay. The visual and sound effects during the effect delay are visible and audible to everyone.",
         "The visual and sound effects during the effect delay are visible and audible to everyone.",
         "Provides 350 range ground vision at the center of the area for 5.5 seconds upon cast",
         "Stops enemies by slowing them with a slow aura. The aura has a radius of 408 and is centered on the field. The slow gets exponentially stronger towards the visible barrier, which has a 350 radius. This effectively causes enemy units touching the barrier to come to halt. The slow is only present when facing towards the barrier. Units at the barrier facing away from it are not slowed. The aura's effect lingers for 0.5 seconds, resulting in an effective duration of 3.1\/3.7\/4.3\/4.9 (TagTalent 5.1\/5.7\/6.3\/6.9) seconds. Since the slow is fluctuating a lot, it is not displayed in the HUD.",
@@ -145,8 +141,7 @@
         "Effect Delay: 1.2",
         "Aura Linger Duration: 0.5",
         "Duration: 2.6\/3.2\/3.8\/4.4 (TagTalent 4.6\/5.2\/5.8\/6.4)",
-        "The Barrier's modifier persists if it was placed before spell immunity.",
-        "The stryder is immune to the gale-force winds that will consume its adversaries."
+        "The Barrier's modifier persists if it was placed before spell immunity."
       ],
       "itemBehaviour": [],
       "legacyKey": "E",
@@ -162,13 +157,14 @@
       "notes": [
         "The silence and mute is provided by an aura, its effects do not linger.",
         "Silences and mute invulnerable units, but not hidden units.",
-        "Deals a total of 20 damage instances over 5 (TagTalent 7) seconds, in 0.25-second (TagTalent 0.35-second) intervals. The damage on each instance is determined by the given max damage per second, divided by max instance, then multiplied by the current instance count.",
+        "Deals a total of 20 (TagTalent 28) damage instances over 5 (TagTalent 7), resulting in 0.25-second intervals.",
         "The damage on each instance is determined by the given max damage per second, divided by max instance, then multiplied by the current instance count.",
-        "This is how much damage each interval deals (before reductions) on each level: Level 1: 2.5\/5\/7.5\/10\/12.5\/15\/17.5\/20\/22.5\/25\/27.5\/30\/32.5\/35\/37.5\/40\/42.5\/45\/47.5\/50 damage. Level 2: 3.4\/6.9\/10.3\/13.8\/17.2\/20.6\/24.1\/27.5\/30.9\/34.4\/37.8\/41.3\/44.7\/48.1\/51.6\/55\/58.4\/61.9\/65.3\/68.8 damage. Level 3: 4.4\/8.8\/13.1\/17.5\/21.9\/26.3\/30.6\/35\/39.4\/43.8\/48.1\/52.5\/56.9\/61.3\/65.6\/70\/74.4\/78.8\/83.1\/87.5 damage.",
-        "Level 1: 2.5\/5\/7.5\/10\/12.5\/15\/17.5\/20\/22.5\/25\/27.5\/30\/32.5\/35\/37.5\/40\/42.5\/45\/47.5\/50 damage.",
-        "Level 2: 3.4\/6.9\/10.3\/13.8\/17.2\/20.6\/24.1\/27.5\/30.9\/34.4\/37.8\/41.3\/44.7\/48.1\/51.6\/55\/58.4\/61.9\/65.3\/68.8 damage.",
-        "Level 3: 4.4\/8.8\/13.1\/17.5\/21.9\/26.3\/30.6\/35\/39.4\/43.8\/48.1\/52.5\/56.9\/61.3\/65.6\/70\/74.4\/78.8\/83.1\/87.5 damage.",
-        "Can deal up to 525\/721.875\/918.75 damage to a single unit (before reductions).",
+        "This is how much damage each interval deals (before reductions) on each level: Level 1: 2.5\/5\/7.5\/10\/12.5\/15\/17.5\/20\/22.5\/25\/27.5\/30\/32.5\/35\/37.5\/40\/42.5\/45\/47.5\/50\/52.5\/55\/57.5\/60\/62.5\/65\/67.5\/70 damage Level 2: 3.4\/6.9\/10.3\/13.8\/17.2\/20.6\/24.1\/27.5\/30.9\/34.4\/37.8\/41.3\/44.7\/48.1\/51.6\/55\/58.4\/61.9\/65.3\/68.8\/72.2\/75.6\/79.1\/82.5\/85.9\/89.4\/92.8\/96.3 damage Level 3: 4.4\/8.8\/13.1\/17.5\/21.9\/26.3\/30.6\/35\/39.4\/43.8\/48.1\/52.5\/56.9\/61.3\/65.6\/70\/74.4\/78.8\/83.1\/87.5\/91.9\/96.3\/100.6\/105\/109.4\/113.8\/118.1\/122.5 damage",
+        "Level 1: 2.5\/5\/7.5\/10\/12.5\/15\/17.5\/20\/22.5\/25\/27.5\/30\/32.5\/35\/37.5\/40\/42.5\/45\/47.5\/50\/52.5\/55\/57.5\/60\/62.5\/65\/67.5\/70 damage",
+        "Level 2: 3.4\/6.9\/10.3\/13.8\/17.2\/20.6\/24.1\/27.5\/30.9\/34.4\/37.8\/41.3\/44.7\/48.1\/51.6\/55\/58.4\/61.9\/65.3\/68.8\/72.2\/75.6\/79.1\/82.5\/85.9\/89.4\/92.8\/96.3 damage",
+        "Level 3: 4.4\/8.8\/13.1\/17.5\/21.9\/26.3\/30.6\/35\/39.4\/43.8\/48.1\/52.5\/56.9\/61.3\/65.6\/70\/74.4\/78.8\/83.1\/87.5\/91.9\/96.3\/100.6\/105\/109.4\/113.8\/118.1\/122.5 damage",
+        "",
+        "Can deal up to 525\/721.875\/918.75 (TagTalent 1015\/1395.625\/1776.25) damage to a single unit (before reductions).",
         "Provides 450 range flying vision at the center of the area for 5 (TagTalent 7) seconds."
       ],
       "mana": "125\/175\/225",
@@ -180,12 +176,11 @@
         "Cast Animation: 0.05+0",
         "Cast Range: 800",
         "Storm Radius: 500 (TagTalent 775)",
-        "Number of Pulses: 20",
+        "Number of Pulses: 20 (TagTalent 28)",
         "Max Damage per Second: 200\/275\/350",
         "Aura Linger Duration: 0",
         "Duration: 5 (TagTalent 7)",
-        "Mutes items.",
-        "A summer squall in Druud is a hardship that only an Oglodi can survive."
+        "Mutes items."
       ],
       "itemBehaviour": [],
       "legacyKey": "R",

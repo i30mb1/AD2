@@ -39,9 +39,9 @@
         "The targeting reticule must be centered over an enemy unit.",
         "Storm Hammer travels at a speed of 1000.",
         "The projectile has 225 radius flying vision. This vision does not last.",
-        "Turning invulnerable or hidden does not prevent it from affecting the area around the target. Storm Hammer can be cast on invulnerable enemies, but does not affect them.",
-        "Storm Hammer can be cast on invulnerable enemies, but does not affect them.",
-        "Storm Hammer first applies the dispel, the damage, then the debuff.",
+        "Storm Hammer can be cast on invulnerable enemies, but does not affect them. Turning invulnerable or hidden does not prevent it from affecting the area around the target.",
+        "Turning invulnerable or hidden does not prevent it from affecting the area around the target.",
+        "Storm Hammer first applies the dispel, then the damage, then the debuff.",
         "Sven's sword emits some particles during the cast time, visible to everyone.",
         "With Aghanim's Scepter, Sven is moved along with the projectile. While being moved, Sven is fully disabled, untargetable and invulnerable. If the movement gets interrupted (with e.g. a teleport), Sven is no longer disabled, untargetable and invulnerable. Sven stops moving along with the projectile if Storm Hammer is disjointed, if the distance between him and the target exceeds 2200, or when Sven dies.",
         "While being moved, Sven is fully disabled, untargetable and invulnerable.",
@@ -55,16 +55,15 @@
       "spellName": "Storm Hammer",
       "params": [
         "Cast Animation: 0.3+0",
-        "Cast Range: 600 (TagTalent 900)",
+        "Cast Range: 600 (TagAghanim 950)",
         "Effect Radius: 255",
         "Damage: 110\/180\/250\/320",
         "Stun Duration: 1.25\/1.5\/1.75\/2 (TagTalent 2.5\/2.75\/3\/3.25)",
         "Increases cast range and transports Sven along the storm hammer.",
-        "Storm Hammer now applies a dispel on enemies. Also decreases the cooldown by 4 seconds.",
+        "Storm Hammer now applies a dispel on enemies and reduces cooldown by 4 seconds.",
         "Cannot target spell immune units. When the projectile connects with a spell immune unit, it still affects other units within the radius.",
         "Blocked fully only when primary target. Blocked upon impact.",
-        "Disjointing the projectile still applies area effect.",
-        "The Rogue Knight's iron gauntlet, taken from the school of his father, strikes his foes to their core."
+        "Disjointing the projectile still applies area effect."
       ],
       "itemBehaviour": [],
       "legacyKey": "T",
@@ -95,8 +94,7 @@
         "Starting Radius: 150",
         "Distance: 700",
         "End Radius: 360",
-        "Cleave Damage: 30%\/50%\/70%\/90% (TagTalent 55%\/75%\/95%\/115%)",
-        "The Vigil Knights still seek to reclaim the stolen Outcast Blade from Sven, a weapon capable of cutting wide swaths through lesser warriors."
+        "Cleave Damage: 30%\/50%\/70%\/90% (TagTalent 55%\/75%\/95%\/115%)"
       ],
       "itemBehaviour": [],
       "legacyKey": "C",
@@ -110,7 +108,8 @@
       ],
       "notes": [
         "Interrupts Sven's channeling abilities upon cast.",
-        "Only affects allied heroes, including clones, illusions and creep-heroes."
+        "Only affects allied heroes, including clones, illusions and creep-heroes.",
+        "Leveling up the ability and the armor increasing talent do not update already existing Warcry buffs."
       ],
       "mana": "30\/40\/50\/60",
       "hotKey": "E",
@@ -122,8 +121,7 @@
         "Effect Radius: 700",
         "Move Speed Bonus: 8%\/12%\/16%\/20%",
         "Armor Bonus: 6\/9\/12\/15 (TagTalent 16\/19\/22\/25)",
-        "Duration: 8 (TagTalent 11)",
-        "Calling a few lines from the Vigil Codex fortifies Sven's obedience to his rogue code. So poetic!"
+        "Duration: 8 (TagTalent 11)"
       ],
       "itemBehaviour": [],
       "legacyKey": "W",
@@ -137,7 +135,8 @@
       ],
       "notes": [
         "Only increases base damage and that given by the primary attribute of Sven. Raw bonus damage is not increased.",
-        "Checks Sven's main attack damage periodically and adapts the attack damage bonus instantly."
+        "Checks Sven's main attack damage periodically and adapts the attack damage bonus instantly.",
+        "Leveling up the ability and the damage increasing talent do not update an already existing God's Strength buff."
       ],
       "mana": "100\/150\/200",
       "hotKey": "R",
@@ -147,8 +146,7 @@
       "params": [
         "Cast Animation: 0.3+0",
         "Attack Damage Bonus: 120%\/160%\/200% (TagTalent 170%\/210%\/250%)",
-        "Duration: 40",
-        "With the strength that shattered the Sacred Helm, the Rogue Knight stands unopposed in melee combat."
+        "Duration: 40"
       ],
       "itemBehaviour": [],
       "legacyKey": "R",

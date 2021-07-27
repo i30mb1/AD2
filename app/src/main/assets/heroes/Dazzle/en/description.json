@@ -2,8 +2,8 @@
   "abilities": [
     {
       "notes": [
-        "The cast range talent does not affect the jump distance of Shadow Wave.",
-        "This attack damage talent is added as raw attack damage, so it does not benefit illusions, and is not affected by most percentage-based damage increasing or reducing effects."
+        "This attack damage talent is added as raw attack damage. Does not benefit illusions and is not affected by most percentage-based damage increasing or reducing effects.",
+        "Does not benefit illusions and is not affected by most percentage-based damage increasing or reducing effects."
       ],
       "spellName": "Talent",
       "talents": [
@@ -42,9 +42,8 @@
         "The complete area is shaped like a cone in front of Dazzle.",
         "The area starts in front of Dazzle, and not at the primary target's position.",
         "Targets within the cone area are not chosen randomly. It chooses the closest valid targets to the primary target within the cone.",
-        "Poison Touch applies the debuff, the hex, then the damage. Deals damage in 1-second intervals, starting immediately after the debuff is placed, resulting in 5\/6\/7\/8 damage instances.",
-        "Deals damage in 1-second intervals, starting immediately after the debuff is placed, resulting in 5\/6\/7\/8 damage instances.",
-        "Can deal up to 64\/140\/240\/364 (TagTalent 208\/320\/456\/616) damage to each target when the duration is not refreshed (before reductions).",
+        "Deals damage in 1-second intervals, starting immediately after the debuff is placed, resulting in 5\/6\/7\/8 damage instances when not refreshed.",
+        "Can deal up to 80\/168\/280\/416 (TagTalent 260\/384\/532\/704) damage to each target when not refreshed (before reductions).",
         "The duration gets refreshed whenever a player or Roshan lands an attack on the debuffed unit. This means it does not get refreshed on missed attacks.",
         "Multiple instances of Poison Touch fully stack.",
         "Bad Juju effectively reduces cooldown to: Level 1: 19.98\/17.76\/15.54\/13.32 Level 2: 16.74\/14.88\/13.02\/11.16 Level 3: 13.5\/12\/10.5\/9",
@@ -52,11 +51,10 @@
         "Level 2: 16.74\/14.88\/13.02\/11.16",
         "Level 3: 13.5\/12\/10.5\/9",
         "",
-        "With Aghanim's Shard, enemy targets affected by Poison Touch are hexed. Affected targets are hexed for the first 1.25 seconds of the debuff, then they are slowed as usual for the remaining 2.75\/3.75\/4.75\/5.75 seconds. The damage duration remains the same. Sets the affected targets' movement speed to 100 for the hexed duration. Does not hex the affected targets again when Poison Touch's duration is refreshed.",
-        "Affected targets are hexed for the first 1.25 seconds of the debuff, then they are slowed as usual for the remaining 2.75\/3.75\/4.75\/5.75 seconds.",
-        "The damage duration remains the same.",
-        "Sets the affected targets' movement speed to 100 for the hexed duration.",
-        "Does not hex the affected targets again when Poison Touch's duration is refreshed."
+        "With Aghanim's Shard, enemies are hexed on projectile impact, setting its base movement speed to 100, silencing, muting and disarming them. The hex is only applied once upon projectile impact. It is not applied upon refreshing the debuff with attacks. The main debuff and the hex are applied at the same time, so after the hex the target is still slowed for 2.75\/3.75\/4.75\/5.75 seconds. Poison Touch first applies its main debuff, then the hex debuff.",
+        "The hex is only applied once upon projectile impact. It is not applied upon refreshing the debuff with attacks.",
+        "The main debuff and the hex are applied at the same time, so after the hex the target is still slowed for 2.75\/3.75\/4.75\/5.75 seconds.",
+        "Poison Touch first applies its main debuff, then the hex debuff."
       ],
       "mana": "110\/120\/130\/140",
       "hotKey": "Q",
@@ -77,8 +75,7 @@
         "Hex Duration: 1.25",
         "Causes Poison Touch to hex affected targets for 1.25 seconds.",
         "Slow persists and deals damage if debuff was placed before spell immunity and when not dispelled.",
-        "Blocked upon cast fully only when primary target.",
-        "One of the few Dezun rites used for offensive purposes, the paralytic enchantment often proves useful."
+        "Blocked upon cast fully only when primary target."
       ],
       "itemBehaviour": [],
       "legacyKey": "T",
@@ -91,15 +88,14 @@
         "Affects Allied Heroes"
       ],
       "notes": [
-        "Prevents the target from dying by setting its minimum health to 1. This means the target cannot die to damage, not even damage flagged as HP removal, so that it prevents the target from dying to False Promise's delayed damage. Does not protect the target against Culling Blade's kill threshold, or Reincarnation's Wraith Delay expiring. Stops Ice Blast from shattering the target when graved while below the shatter threshold.",
+        "Prevents the target from dying by setting its minimum health to 1. This means the target cannot die to damage, not even damage flagged as HP removal, so that it prevents the target from dying to False Promise's delayed damage. Does not protect the target against Culling Blade's kill threshold, or Wraith Delay expiring. Stops Ice Blast from shattering the target when graved while below the shatter threshold.",
         "This means the target cannot die to damage, not even damage flagged as HP removal, so that it prevents the target from dying to False Promise's delayed damage.",
-        "Does not protect the target against Culling Blade's kill threshold, or Reincarnation's Wraith Delay expiring.",
+        "Does not protect the target against Culling Blade's kill threshold, or Wraith Delay expiring.",
         "Stops Ice Blast from shattering the target when graved while below the shatter threshold.",
-        "Incoming damage of all kinds are not reduced, so any damage event still registers the full damage.",
+        "Damage taken is technically not reduced, so any damage event still registers the full damage.",
         "Can be cast on illusions and creep-heroes. ↓↓ Double-tapping automatically targets self.",
         "↓↓ Double-tapping automatically targets self.",
-        "With the level 15 talent, losing the initial buff in any way heals the target for 225 health. The heal value itself is still subjected to heal manipulation.",
-        "The heal value itself is still subjected to heal manipulation.",
+        "With the level 15 talent, losing the buff in any way heals the target for 225 health.",
         "Bad Juju effectively reduces cooldown to: Level 1: 26.64\/22.2\/17.76\/13.32 Level 2: 22.32\/18.6\/14.88\/11.16 Level 3: 18\/15\/12\/9",
         "Level 1: 26.64\/22.2\/17.76\/13.32",
         "Level 2: 22.32\/18.6\/14.88\/11.16",
@@ -115,8 +111,7 @@
         "Cast Animation: 0.3+0",
         "Cast Range: 700\/800\/900\/1000",
         "Duration: 4\/4.5\/5\/5.5",
-        "Heal: 225",
-        "Only a seasoned acolyte of the Shadow can properly perform the rite of preventing death."
+        "Heal: 225"
       ],
       "itemBehaviour": [],
       "legacyKey": "G",
@@ -130,11 +125,10 @@
         "Damage Physical"
       ],
       "notes": [
-        "Shadow Wave has no bounce delay, so all targets within the 475 bounce distance are healed at the same time.",
-        "Shadow Wave has the following priorites: Hurt allied heroes ➤ hurt allied non-hero units (includes illusions) ➤ allied heroes ➤ non-hero units. The lower the health of nearby allies, the higher their priority. This means the lowest health units get healed first. If multiple units meets the exact same criteria (e.g. only full health non-hero units are within range), it chooses between them randomly.",
-        "Hurt allied heroes ➤ hurt allied non-hero units (includes illusions) ➤ allied heroes ➤ non-hero units.",
+        "Shadow Wave has no bounce delay, so all targets are healed at the same time.",
+        "Shadow Wave has the following priorites: Hurt allied heroes ➤ hurt allied non-hero units (includes illusions) ➤ allied heroes ➤ non-hero units. The lower the health of nearby allies, the higher their priority. This means the lowest health units get healed first. If multiple units meet the exact same criteria (e.g. only full health non-hero units are within range), it chooses between them randomly.",
         "The lower the health of nearby allies, the higher their priority. This means the lowest health units get healed first.",
-        "If multiple units meets the exact same criteria (e.g. only full health non-hero units are within range), it chooses between them randomly.",
+        "If multiple units meet the exact same criteria (e.g. only full health non-hero units are within range), it chooses between them randomly.",
         "Regardless of the target, Dazzle is always healed without counting towards the number of bounces, effectively healing 4\/5\/6\/7 units. ↓↓ Double-tapping automatically targets self.",
         "↓↓ Double-tapping automatically targets self.",
         "Can heal and damage up to 320\/500\/720\/980 (720\/1000\/1320\/1680) health when all bounces hit (before reductions). The damage radius is centered around each healed unit. An enemy unit can get damaged by all healed units per cast.",
@@ -144,7 +138,7 @@
         "Level 2: 8.68\/7.44\/6.2\/4.96",
         "Level 3: 7\/6\/5\/4",
         "",
-        "With Aghanim's Scepter, Shadow Wave applies a basic dispel on himself and all hit allies."
+        "With Aghanim's Scepter, Shadow Wave applies a basic dispel on Dazzle and all healed allies."
       ],
       "mana": "90\/100\/110\/120",
       "hotKey": "E",
@@ -157,10 +151,9 @@
         "Damage Radius: 185",
         "Bounce Distance: 475",
         "Number of Bounces: 3\/4\/5\/6",
-        "Heal: 80\/100\/120\/140 (TagTalent 180\/200\/220\/240)",
-        "Damage: 80\/100\/120\/140 (TagTalent 180\/200\/220\/240)",
-        "Causes Shadow Wave to dispel allies. Increases heal by +100 and damage by +100",
-        "While it is a simplistic and routine rite among Shadow Priests, the Shadow Wave is also the most critical for success."
+        "Heal: 80\/100\/120\/140 (TagAghanim 180\/200\/220\/240)",
+        "Damage: 80\/100\/120\/140 (TagAghanim 180\/200\/220\/240)",
+        "Causes Shadow Wave to dispel allies. Increases heal by +100 and damage by +100"
       ],
       "itemBehaviour": [],
       "legacyKey": "D",
@@ -174,12 +167,12 @@
       ],
       "notes": [
         "Stacks multiplicatively with other sources cooldown reduction.",
-        "Reduces enemies' armor before the triggering abilities.",
+        "Reduces enemies' armor before the triggering ability takes effect.",
+        "Does not trigger on active item abilities, on abilities with 0 cooldown, or on abilities which do not trigger on-cast effects.",
         "Places one debuff on enemies. This debuff gets stronger when it gets refreshed with successive casts. A number on the icon shows how many times the debuff was refreshed, including the first cast.",
         "A number on the icon shows how many times the debuff was refreshed, including the first cast.",
-        "Affects invisible units and units in the Fog of War. Does not affect invulnerable or hidden enemies. Does not affect Roshan. Does not trigger on active item abilities, on abilities with 0 cooldown, or on abilities which do not trigger on-cast effects.",
-        "Does not affect Roshan.",
-        "Does not trigger on active item abilities, on abilities with 0 cooldown, or on abilities which do not trigger on-cast effects."
+        "Affects invisible units and units in the Fog of War. Does not affect invulnerable or hidden enemies. Does not affect Roshan.",
+        "Does not affect Roshan."
       ],
       "mana": null,
       "hotKey": "R",
@@ -190,8 +183,7 @@
         "Cooldown Reduction: 26%\/38%\/50%",
         "Debuff Radius: 1200",
         "Armor Reduction per Cast: 2\/2.25\/2.5 (TagTalent 2.5\/2.75\/3)",
-        "Duration: 8",
-        "Each invocation of the Nothl realm helps it further permeate the surroundings of our own."
+        "Duration: 8"
       ],
       "itemBehaviour": [],
       "legacyKey": "W",

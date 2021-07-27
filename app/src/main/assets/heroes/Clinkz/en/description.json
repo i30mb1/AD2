@@ -49,8 +49,7 @@
         "Cast Animation: 0+0",
         "Attack Speed Bonus: 90\/120\/150\/180",
         "Ranged Evasion: 100%",
-        "Duration: 3\/4\/5\/6",
-        "It's hard to say whether the blur around the Bone Fletcher is from his flaming heart or his speed with the quiver."
+        "Duration: 3\/4\/5\/6"
       ],
       "itemBehaviour": [],
       "legacyKey": "T",
@@ -87,8 +86,7 @@
       "params": [
         "Cast Range: 625 (TagTalent 750)",
         "Damage: 24\/36\/48\/60 (TagTalent 54\/66\/78\/90)",
-        "Arrows per Cast: 1 (TagTalent 2)",
-        "Clinkz simply lights his arrows from his flaming essence for quite the destructive effect."
+        "Arrows per Cast: 1 (TagTalent 2)"
       ],
       "itemBehaviour": [],
       "legacyKey": "R",
@@ -124,8 +122,7 @@
         "Invisibility Duration: 25\/30\/35\/40",
         "Number of Archers: 2",
         "Archers Duration: 45",
-        "Causes Skeleton Walk to create two Burning Army Skeletons.",
-        "With a burst of fire and puff of smoke, the Bone Fletcher was nowhere to be seen."
+        "Causes Skeleton Walk to create two Burning Army Skeletons."
       ],
       "itemBehaviour": [],
       "legacyKey": "W",
@@ -174,8 +171,7 @@
         "Non-Hero Attacks to Destroy: 8",
         "Archers Attack Interval: 1.6",
         "Archers Attack Damage: 30%",
-        "Duration: 20",
-        "Existing on the brink of life and death, Clinkz has learned to temporarily bridge the gap between the two."
+        "Duration: 20"
       ],
       "itemBehaviour": [],
       "legacyKey": "E",
@@ -209,8 +205,7 @@
         "Target Max Health as Health Bonus: 40%\/70%\/100% (TagTalent 90%\/120%\/150%)",
         "Target Max Health as Attack Damage Bonus: 4%\/8%\/12% (TagTalent 9%\/13%\/17%)",
         "Duration: 65",
-        "Grants a new ability: Burning Army.",
-        "Sutherex' bond of life and death has become a part of Clinkz, and his old bones are refreshed with repetition of the pact on lesser beings."
+        "Grants a new ability: Burning Army."
       ],
       "itemBehaviour": [],
       "legacyKey": "C",

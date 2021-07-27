@@ -38,7 +38,7 @@
       ],
       "notes": [
         "The shuriken travels at a speed of 1000.",
-        "The shuriken first applies the damage, then the debuff (TagTalent and then Jinada).",
+        "The shuriken first applies the damage, the debuff and then the Jinada debuff.",
         "The initial target does not have to be Tracked for the shuriken to bounce. Can only bounce to each tracked unit once. Cannot bounce to, but can bounce off of invulnerable or hidden units.",
         "Can only bounce to each tracked unit once.",
         "Cannot bounce to, but can bounce off of invulnerable or hidden units.",
@@ -55,15 +55,14 @@
       "spellName": "Shuriken Toss",
       "params": [
         "Cast Animation: 0.3+0.43",
-        "Cast Range: 400 (TagTalent 650)",
+        "Cast Range: 400 (TagAghanim 650)",
         "Bounce Search Radius: 1200",
         "Damage: 150\/225\/300\/375 (TagTalent 200\/275\/350\/425)",
         "Stun Duration: 0.1",
         "Upgrades Shuriken Toss. Applies Jinada to it, reduces cooldown and increases cast range.",
         "Cannot be cast on spell immune units. Does not stun or attempt to damage spell immune units. Can jump to and off of spell immune units.",
         "Blocked upon impact as primary or secondary target. When blocked, it continues to bounce.",
-        "Can be disjointed by primary and secondary targets. Once disjointed, it stops bouncing.",
-        "While the shuriken may be small, Gondar's precise aim can cause critical damage."
+        "Can be disjointed by primary and secondary targets. Once disjointed, it stops bouncing."
       ],
       "itemBehaviour": [],
       "legacyKey": "T",
@@ -95,8 +94,7 @@
         "Attack Damage Bonus: 70\/100\/130\/160 (TagTalent 110\/140\/170\/200)",
         "Gold Stolen: 12\/20\/28\/36 (TagTalent 62\/70\/78\/86)",
         "Prevents attacks from triggering Jinada. Does not stop Shuriken Toss from triggering Jinada.",
-        "Illusions permanently emit Jinada's weapon particles.",
-        "Gondar's vast experience ensures he never walks away from a transaction empty-handed."
+        "Illusions permanently emit Jinada's weapon particles."
       ],
       "itemBehaviour": [],
       "legacyKey": "J",
@@ -110,14 +108,16 @@
       ],
       "notes": [
         "Does not interrupt Bounty Hunter's channeling abilities upon cast.",
-        "The attack first applies the Shadow Walk debuff, (TagTalent then the stun) and then the attack damage.",
+        "The attack first applies the Shadow Walk debuff, the stun and then the attack damage.",
         "During the fade time, Bounty Hunter can cast abilities, use items and perform attacks without breaking the invisibility. Those attacks apply the Shadow Walk slow as well.",
         "Those attacks apply the Shadow Walk slow as well.",
         "The invisibility is broken upon reaching the cast point of abilities or items, or upon landing an attack. Missed attacks do not break it. Casting Track does not break the invisibility of Shadow Walk. Bounty Hunter can pick up, drop or attack items without breaking the invisibility.",
         "Casting Track does not break the invisibility of Shadow Walk.",
         "Bounty Hunter can pick up, drop or attack items without breaking the invisibility.",
         "Grants phased movement while fully invisible.",
-        "With Aghanim's Shard, the incoming damage reduction is independent from the fade time, and is granted immediately."
+        "With Aghanim's Shard, applies generic incoming damage reduction on Bounty Hunter. Stacks additively with other sources of generic incoming damage manipulation. The reduction affects all damage Bounty Hunter takes that is not flagged as HP removal. The reduction is independent from the fade time, and is granted immediately.",
+        "The reduction affects all damage Bounty Hunter takes that is not flagged as HP removal.",
+        "The reduction is independent from the fade time, and is granted immediately."
       ],
       "mana": "65",
       "hotKey": "E",
@@ -132,8 +132,7 @@
         "Slow Duration: 4",
         "Incoming Damage Reduction: 35%",
         "Stun Duration: 1",
-        "Shadow Walk now grants you 35% damage reduction while invisible. Attacking out of invisibility stuns the target for 1 second. Lowers cooldown by 5 seconds.",
-        "The court jesters present during King Goff's assassination can recount no other image than a dancing shadow."
+        "Shadow Walk now grants you 35% damage reduction while invisible. Attacking out of invisibility stuns the target for 1 second. Lowers cooldown by 5 seconds."
       ],
       "itemBehaviour": [],
       "legacyKey": "W",
@@ -174,8 +173,7 @@
         "Self Bonus Gold: 130\/225\/320 (TagTalent 380\/475\/570)",
         "Ally Bonus Gold: 40\/80\/120 (TagTalent 290\/330\/370)",
         "Aura Linger Duration: 0.5",
-        "Duration: 30",
-        "Using his elevated senses of sight and smell, Gondar's hits have quite a good chance of success."
+        "Duration: 30"
       ],
       "itemBehaviour": [],
       "legacyKey": "R",

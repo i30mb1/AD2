@@ -2,7 +2,8 @@
   "abilities": [
     {
       "notes": [
-        "This attack damage talent is added as raw attack damage, so it does not benefit illusions, and is not affected by most percentage-based damage increasing or reducing effects.",
+        "This attack damage talent is added as raw attack damage. Does not benefit illusions and is not affected by most percentage-based damage increasing or reducing effects.",
+        "Does not benefit illusions and is not affected by most percentage-based damage increasing or reducing effects.",
         "The strength talent effectively grants Kunkka 320 health, 1.6 health regeneration, and 16 attack damage."
       ],
       "spellName": "Talent",
@@ -41,13 +42,13 @@
         "Torrent can be cast without having to face towards the targeted area.",
         "Units tossed in the air are stunned and still able to be attacked.",
         "While in the air, other units may pass below hit airborne units.",
-        "The stun and slow are applied at the same time, so overall, the slow lasts for 2.6\/3.6\/4.6\/5.6 seconds.",
-        "The knockup itself lasts 1.53 (TagTalent 1.93) seconds, so hit units are on the ground for the remaining 0.07 seconds of the stun. With the level 10 talent, since both stun and knockup duration is increased by 0.4 seconds, the remaining duration of the stun stays the same.",
-        "With the level 10 talent, since both stun and knockup duration is increased by 0.4 seconds, the remaining duration of the stun stays the same.",
+        "The stun and slow are applied at the same time, so overall, the slow lasts for 2.6\/3.6\/4.6\/5.6 (TagTalent 3\/4\/5\/6) seconds.",
+        "The stun lasts slightly longer than the knockup, so hit units are on the ground for the remaining 0.07 seconds of the stun.",
         "After casting, a visual effect appears at the targeted area and a sound effect plays for the delay period. These effects are visible and audible to allies only.",
         "These effects are visible and audible to allies only.",
-        "Deals 9.38\/18.75\/28.13\/37.5 (TagTalent 21.88\/31.25\/40.63\/50) damage in 0.2-second intervals, starting 0.2 seconds after the effect delay, resulting in 8 (TagTalent 10) damage instances.",
-        "Provides 350 radius ground vision over the targeted area upon cast for 3.13 (TagTalent 3.93) seconds."
+        "Deals 9.38\/18.75\/28.13\/37.5 (TagTalent 21.88\/31.25\/40.63\/50) damage in 0.2-second intervals, starting 0.2 seconds after the effect delay, resulting in 8 (TagTalent 10) damage instances. Since the damage interval is fixed at 0.2, the stun duration increasing causes it to deal a total of 93.75\/187.5\/281.25\/375 (TagTalent 218.75\/312.5\/406.25\/500) total damage.",
+        "Since the damage interval is fixed at 0.2, the stun duration increasing causes it to deal a total of 93.75\/187.5\/281.25\/375 (TagTalent 218.75\/312.5\/406.25\/500) total damage.",
+        "Provides 350 radius ground vision over the targeted area upon cast for 3.13 seconds."
       ],
       "mana": "90\/100\/110\/120",
       "hotKey": "Q",
@@ -65,8 +66,7 @@
         "Stun Duration: 1.6 (TagTalent 2)",
         "Knockup Duration: 1.53 (TagTalent 1.93)",
         "Grants a new ability: Torrent Storm.",
-        "Slow persists, and attempts to damage if debuff was placed before spell immunity and when not dispelled.",
-        "An ancestral rush of water explodes from the center of the world, called upon by the Admiral."
+        "Slow persists, and attempts to damage if debuff was placed before spell immunity and when not dispelled."
       ],
       "itemBehaviour": [],
       "legacyKey": "E",
@@ -81,15 +81,13 @@
       ],
       "notes": [
         "Upon leveling Tidebringer the first time, it has Autocast on by default.",
-        "Cleave damage cannot be amplified with outgoing spell damage amplification and cannot spell lifesteal. Can be amplified by incoming spell damage amplification. Cleave damage is reduced by Damage Block. Cleave damage depends on the attack damage value of the cleaving unit, not on how much their primary attack target took. The complete cleave area is shaped like an isosceles trapezoid in front of the attacking unit. Fully stacks with other sources of cleave. Each source of cleave works completely independent.",
+        "Cleave damage cannot be amplified with outgoing spell damage amplification and cannot spell lifesteal. Can be amplified by incoming spell damage amplification.",
         "Can be amplified by incoming spell damage amplification.",
         "Cleave damage is reduced by Damage Block.",
-        "Cleave damage depends on the attack damage value of the cleaving unit, not on how much their primary attack target took.",
-        "The complete cleave area is shaped like an isosceles trapezoid in front of the attacking unit.",
-        "Fully stacks with other sources of cleave. Each source of cleave works completely independent.",
         "The complete area is shaped like an isosceles trapezoid in front of Kunkka.",
+        "Fully stacks with other sources of cleave. Each source of cleave works completely independent.",
+        "Does not cleave upon attacking wards, buildings or allied units. Wards and buildings are unaffected by cleave.",
         "The particle effects on hit enemies are visible on invisible enemies and through the Fog of War.",
-        "Does not work against wards, buildings, and allied units.",
         "Plays an audio effect when going off cooldown, audible to the player only.",
         "Shows a visual effect on the sword whenever it is ready, visible to allies and enemies."
       ],
@@ -105,8 +103,7 @@
         "End Radius: 500\/550\/600\/650",
         "Cleave Damage: 165% (TagTalent 235%)",
         "Attack Damage Bonus: 25\/50\/75\/100",
-        "Illusions gain the visual effects and the attack sounds, but they neither gain the damage nor can cleave.",
-        "A lost Claddish soul inhabits Kunkka's trusty Tidebringer, empowering it to destroy demons of the Cataract."
+        "Illusions gain the visual effects and the attack sounds, but they neither gain the damage nor can cleave."
       ],
       "itemBehaviour": [],
       "legacyKey": "D",
@@ -145,10 +142,10 @@
         "Cast Animation: 0.4+0",
         "Cast Range: 400\/600\/800\/1000",
         "Enemy Duration: 4",
-        "Allies Duration: 8",
+        "Ally Duration: 8",
         "Can target and return spell immune allies. Cannot target or return spell immune enemies.",
         "Blocked upon cast. Not blocked upon returning.",
-        "The Admiral's set of arcane abilities includes some that can be used for battle as well as entertainment."
+        "Root does not prevent the the target from being returned."
       ],
       "itemBehaviour": [],
       "legacyKey": "X",
@@ -188,8 +185,8 @@
         "Requires Aghanim's Scepter to be unlocked. This ability is not available in Ability Draft, due to its reliance on a non-ultimate ability, which are limited to one ability slot.",
         "This ability is not available in Ability Draft, due to its reliance on a non-ultimate ability, which are limited to one ability slot.",
         "Torrent Storm's radius is centered on and follows Kunkka.",
-        "Creates a Torrent based on its current level immediately upon cast, and then one every 0.25 seconds, for a total of 21 Torrents. If Torrent is not learned, nothing spawns.",
-        "If Torrent is not learned, nothing spawns.",
+        "Creates a Torrent immediately upon cast, and then one every 0.25 seconds, for a total of 21 Torrents.",
+        "The Torrents are based on the current level of Torrent on Kunkka. If it is not learned, no Torrents spawn.",
         "Each Torrent can spawn within a random distance of 300 to 1100 away from Kunkka.",
         "The Torrent spawn radius is divided into four 90° segments (0°\u201390°, 90°\u2013180°, 180°\u2013270°, 270°\u2013360°).",
         "The first Torrent occurs within the north-east segment of the circle, following Torrents proceed counterclockwise.",
@@ -208,8 +205,7 @@
         "Max Spawn Radius: 1100",
         "Spawn Interval: 0.25",
         "Storm Duration: 5",
-        "Slow persists, and attempts to damage if debuff was placed before spell immunity and when not dispelled.",
-        "A hundred leagues of dry land couldn't keep these seas at bay."
+        "Slow persists, and attempts to damage if debuff was placed before spell immunity and when not dispelled."
       ],
       "itemBehaviour": [],
       "legacyKey": "R",
@@ -224,17 +220,17 @@
       ],
       "notes": [
         "Requires Aghanim's Shard to be unlocked.",
-        "With the travel distance and radius, the wave can hit units up to 2150 range away.",
         "The wave travels at a speed of 700, taking 3.29 seconds to travel the full distance.",
-        "The wave spawns 900 range away from the targeted point, from the opposite direction where Kunkka is facing.",
-        "Moves hit enemies towards the direction the wave is traveling. Enemies are not disabled during the knockback. They can still turn and use abilities and items. Channeling abilities are not interrupted. However they are disarmed.",
-        "Enemies are not disabled during the knockback. They can still turn and use abilities and items. Channeling abilities are not interrupted. However they are disarmed.",
+        "The wave spawns 900 range away from Kunkka, from the opposite direction where Kunkka is facing.",
+        "With the travel distance and radius, the wave can hit units up to 2150 range away.",
+        "Moves hit enemies towards the direction the wave is traveling. Enemies are only disarmed during the knockback. They cannot attack, but can still turn and cast abilities and items. Channeling abilities are not interrupted.",
+        "Enemies are only disarmed during the knockback. They cannot attack, but can still turn and cast abilities and items. Channeling abilities are not interrupted.",
         "The wave first applies the debuff, then the damage."
       ],
       "mana": "75",
       "hotKey": "F",
       "cooldown": "12",
-      "description": "Releases a Tidal Wave that spawns behind Kunkka. Deals 250 damage and drags enemies along it for 600 distance.",
+      "description": "Releases a Tidal Wave that spawns behind Kunkka. Deals 250 damage and drags enemies along it for 600 distance. Enemies cannot attack while being dragged.",
       "spellName": "Tidal Wave",
       "params": [
         "Cast Animation: 0.2+1",
@@ -262,6 +258,8 @@
         "The ship first applies the damage, then the debuff.",
         "A visual indicator appears at the location, showing the ship's destination point and radius. The indicator is only visible to allies.",
         "The Admiral's Rum buff applies to allied heroes that come within 425 range of the ship at any time during its travel.",
+        "Applies unique incoming damage reduction on the buffed allies. Stacks multiplicatively with all other sources of incoming damage manipulation. The reduction affects all damage the buffed allies take that is not flagged as HP removal.",
+        "The reduction affects all damage the buffed allies take that is not flagged as HP removal.",
         "Once the absorb buff expires, the Rum Hangover buff is placed, which lasts 1.4 seconds. This buff deals 5% of the previously reduced damage as damage in 1-second intervals until all the reduced damage is returned.",
         "This buff deals 5% of the previously reduced damage as damage in 1-second intervals until all the reduced damage is returned.",
         "The delayed damage dealt after the Rum wears off is flagged as HP Removal. It does not interact with any on-damage effects. Therefore, the delayed damage cannot be avoided by anything. However, it is not lethal.",
@@ -294,8 +292,7 @@
         "Stun Duration: 1.4",
         "Grants a new ability: Tidal Wave.",
         "Fully affects spell immune allies. Does not affect spell immune enemies.",
-        "Illusions do not get the Rum buff nor its visual effect.",
-        "The final ship of the Claddish Navy is nothing but a phantom, but it is all too real to the enemies of the Admiral."
+        "Illusions do not get the Rum buff nor its visual effect."
       ],
       "itemBehaviour": [],
       "legacyKey": "T",

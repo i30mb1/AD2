@@ -2,7 +2,8 @@
   "abilities": [
     {
       "notes": [
-        "This attack damage talent is added as raw attack damage, so it does not benefit illusions, and is not affected by most percentage-based damage increasing or reducing effects.",
+        "This attack damage talent is added as raw attack damage. Does not benefit illusions and is not affected by most percentage-based damage increasing or reducing effects.",
+        "Does not benefit illusions and is not affected by most percentage-based damage increasing or reducing effects.",
         "The cooldown reduction talent stacks multiplicatively with other sources cooldown reduction."
       ],
       "spellName": "Talent",
@@ -24,7 +25,7 @@
         },
         {
           "talentLvl": "10",
-          "talentLeft": "+15 Damage",
+          "talentLeft": "+20 Damage",
           "talentRight": "+8 Feral HP Regen"
         }
       ]
@@ -40,13 +41,12 @@
         "The wolves gain Invisibility on level 3 and Cripple on level 4.",
         "Already summoned wolves do not get new abilities when the spell is leveled. Only wolves summoned after leveling get them.",
         "Has a cast backswing of 0.6 during Shapeshift.",
-        "With Aghanim's Shard, 1 Lane Wolf is summon together with each creep wave in one random lane. The lane for Lane Wolf is selected at complete random each time. If Summon Wolves is not learned, no Lane Wolf is spawned. The Lane Wolf is not the same wolves as spawned with a manual cast. Although the Lane Wolf is uncontrollable, Lycan is considered their owner, meaning last hits they make grant bounty and experience to Lycan. They are affected by Feral Impulse and can gain critical strike from Shapeshift, but not the haste speed. Lane Wolf has Cripple, but not Invisibility.",
-        "The lane for Lane Wolf is selected at complete random each time.",
-        "If Summon Wolves is not learned, no Lane Wolf is spawned.",
-        "The Lane Wolf is not the same wolves as spawned with a manual cast.",
+        "With Aghanim's Shard, 1 Lane Wolf is spawned together with each creep wave in one random lane. The lane for the wolf is selected at complete random each time. If Summon Wolves is not learned, the Lane Wolf does not spawn. Although the Lane Wolf is uncontrollable, Lycan is considered their owner, meaning last hits they make grant bounty and experience to Lycan. This also means they are affected by Feral Impulse and can gain critical strike from Shapeshift, but not the haste speed. The Lane Wolf has Cripple, but not Invisibility.",
+        "The lane for the wolf is selected at complete random each time.",
+        "If Summon Wolves is not learned, the Lane Wolf does not spawn.",
         "Although the Lane Wolf is uncontrollable, Lycan is considered their owner, meaning last hits they make grant bounty and experience to Lycan.",
-        "They are affected by Feral Impulse and can gain critical strike from Shapeshift, but not the haste speed. Lane Wolf has Cripple, but not Invisibility.",
-        "Lane Wolf has Cripple, but not Invisibility."
+        "This also means they are affected by Feral Impulse and can gain critical strike from Shapeshift, but not the haste speed.",
+        "The Lane Wolf has Cripple, but not Invisibility."
       ],
       "mana": "125\/130\/135\/140",
       "hotKey": "Q",
@@ -58,8 +58,7 @@
         "Number of Wolves: 2 (TagTalent 4)",
         "Duration: 50",
         "Number of Lane Wolves: 1",
-        "Causes one of your creep waves to include an uncontrollable wolf that moves with each wave.",
-        "The very enchantment that twisted his being also summons canine familiars."
+        "Causes one of your creep waves to include an uncontrollable wolf that moves with each wave."
       ],
       "itemBehaviour": [],
       "legacyKey": "V",
@@ -86,8 +85,7 @@
         "Radius: 2000",
         "Attack Damage Reduction: 25%\/30%\/35%\/40%",
         "Armor Reduction: 5\/6\/7\/8",
-        "Duration: 5\/6\/7\/8",
-        "Blood-curdling wolf cries signal to opponents that Banehallow is among them."
+        "Duration: 5\/6\/7\/8"
       ],
       "itemBehaviour": [],
       "legacyKey": "W",
@@ -105,7 +103,7 @@
         "Does not affect invulnerable units.",
         "Can regenerate up to 120\/240\/360\/480 (TagTalent 600\/720\/840\/960) health in one minute.",
         "The aura's buff lingers for 0.5 seconds.",
-        "Lycan illusions created by abilities (e.g. Disruption, Wall of Replica, Reflection) do provide their owner and its units the bonuses. However, illusions that are Enchanted do not grant Enchantress' units the bonuses, only the illusion itself keeps them.",
+        "Lycan illusions created by abilities (e.g. Disruption, Wall of Replica, Reflection) do provide their owner and units the bonuses. However, illusions that are Enchanted do not grant Enchantress' units the bonuses, only the illusion itself keeps them.",
         "However, illusions that are Enchanted do not grant Enchantress' units the bonuses, only the illusion itself keeps them."
       ],
       "mana": null,
@@ -117,8 +115,7 @@
         "Radius: Global",
         "Attack Damage Bonus: 12%\/24%\/36%\/48% (TagTalent 42%\/54%\/66%\/78%)",
         "Health Regen Bonus: 2\/4\/6\/8 (TagTalent 10\/12\/14\/16)",
-        "Aura Linger Duration: 0.5",
-        "His animalistic symbiosis with canine kind gives Banehallow enhanced reflexes and hunting capabilities."
+        "Aura Linger Duration: 0.5"
       ],
       "itemBehaviour": [],
       "legacyKey": "I",
@@ -133,8 +130,8 @@
       "notes": [
         "Requires Aghanim's Scepter to be unlocked. In Ability Draft, Wolf Bite can be unlocked by the player that drafted Shapeshift.",
         "In Ability Draft, Wolf Bite can be unlocked by the player that drafted Shapeshift.",
-        "Applies all effects of Shapeshift on the ally, including the transformation time, the night vision, the crit chance and the haste speed but only to the target and not the units it owns.",
-        "Can target allied heroes or creep-heroes).",
+        "Applies all effects of Shapeshift on the ally, including the transformation time, the night vision, the critical strike and the haste speed. However, the aura only affects the targeted ally, meaning units owned by them do not gain the bonuses.",
+        "However, the aura only affects the targeted ally, meaning units owned by them do not gain the bonuses.",
         "Grants regular lifesteal and shared lifesteal to both, the caster and the target. This means, no matter who of them attacks, both always get healed. Lifesteal amplification affects shared lifesteal as well, but only if the amplification source is the healed unit.",
         "This means, no matter who of them attacks, both always get healed.",
         "Lifesteal amplification affects shared lifesteal as well, but only if the amplification source is the healed unit.",
@@ -154,8 +151,7 @@
         "Lifesteal Radius: 1200",
         "Lifesteal: 30%",
         "Shared Lifesteal: 30%",
-        "Illusions get their own Shapeshift buff lasting its regular duration. Illusions benefit from the aura's effects (TagTalentmovement speed and critical strike), but do not bestow it. Red critical numbers are before illusion and armor reduction. Illusions gain the night vision as well.",
-        "Does this bite look infected?"
+        "Illusions get their own Shapeshift buff lasting its regular duration. Illusions benefit from the aura's effects (TagTalentmovement speed and critical strike), but do not bestow it. Red critical numbers are before illusion and armor reduction. Illusions gain the night vision as well."
       ],
       "itemBehaviour": [],
       "legacyKey": "T",
@@ -170,14 +166,19 @@
       "notes": [
         "During the transformation, Lycan cannot do anything. Cannot be interrupted.",
         "Increases Lycan's night vision to a total of 1800.",
-        "Turns the caster into a melee unit for its duration (relevant for Wolf Bite and Ability Draft).",
-        "The movement speed and crit chance are provided by a global aura which affects all units owned by Lycan. The aura's effects linger for 0.1 seconds.",
+        "Turns the caster into a melee unit with 150 attack range for its duration (relevant for Wolf Bite, Rubick and Ability Draft). This means items treat the caster as a melee hero (e.g. Manta Style, Skull Basher, etc). Attack range bonuses are not overridden and still work normally.",
+        "This means items treat the caster as a melee hero (e.g. Manta Style, Skull Basher, etc).",
+        "Attack range bonuses are not overridden and still work normally.",
+        "The movement speed and critical strike are provided by a global aura which affects all units owned by Lycan. The aura's effects linger for 0.1 seconds.",
+        "The aura's effects linger for 0.1 seconds.",
         "Does not affect invulnerable units.",
         "The movement speed boost is a haste, meaning affected units cannot be slowed below the set value.",
-        "The critical strike increases the attack damage of Lycan, and all his units by an average of 20%\/30%\/40% (TagTalent 36%\/54%\/72%\/). The critical strike uses pseudo-random distribution.",
-        "The critical strike uses pseudo-random distribution.",
-        "The proc chances of multiple crit sources stack. If two sources of critical strike proc at the same time, the higher multiplier has priority.",
+        "The critical strike increases the attack damage of Lycan and all his units by an average of 20%\/30%\/40% (TagTalent 36%\/54%\/72%\/). The proc chances of multiple crit sources stack. If two sources of critical strike proc at the same time, the higher multiplier has priority. The critical strike uses pseudo-random distribution.",
+        "The proc chances of multiple crit sources stack.",
         "If two sources of critical strike proc at the same time, the higher multiplier has priority.",
+        "The critical strike uses pseudo-random distribution.",
+        "Lycan gets his maximum and current health increased by the given value. This does not count as a heal. Upon losing the buff, his current health stays the same and only the maximum health bonus gets reverted.",
+        "Upon losing the buff, his current health stays the same and only the maximum health bonus gets reverted.",
         "Shapeshift is fully canceled on death."
       ],
       "mana": "100",
@@ -189,16 +190,16 @@
         "Cast Animation: 0+0",
         "Transformation Time: 1.1",
         "Night Vision Bonus: 1000",
+        "Base Attack Range: 150",
         "Radius: Global",
         "Haste Speed: 550",
+        "Health Bonus: 200\/300\/400",
         "Critical Chance: 40% (TagTalent 72%)",
         "Critical Damage: 150%\/175%\/200%",
         "Aura Linger Duration: 0.1",
         "Duration: 28 (TagTalent 34)",
-        "Health Bonus: 200\/300\/400",
         "Grants a new ability: Wolf Bite.",
-        "Illusions get their own Shapeshift buff lasting its regular duration. Illusions benefit from the aura's effects (TagTalentmovement speed and critical strike), but do not bestow it. Red critical numbers are before illusion and armor reduction. Illusions gain the night vision as well.",
-        "Forever a slave to his lycanthropy, Banehallow has come to accept his curse, and embrace his own savagery."
+        "Illusions get their own Shapeshift buff lasting its regular duration. Illusions benefit from the aura's effects (TagTalentmovement speed and critical strike), but do not bestow it. Red critical numbers are before illusion and armor reduction. Illusions gain the night vision as well."
       ],
       "itemBehaviour": [],
       "legacyKey": "F",
@@ -235,7 +236,7 @@
       ],
       "notes": [
         "Available for level 4 wolves.",
-        "Deals damage in 1-second intervals, starting 1 second after proccing, resulting in 15% instances.",
+        "Deals damage in 1-second intervals, starting 1 second after proccing, resulting in 4 instances.",
         "Can deal up to 32 damage to the target (before reductions).",
         "Multiple procs on the same target do not stack, but refresh the duration instead.",
         "The proccing attack first applies the debuff, then its own damage.",
@@ -244,13 +245,13 @@
       "mana": null,
       "hotKey": null,
       "cooldown": null,
-      "description": "Gives 20% chance to cripple the target, causing 8 damage per second, lose 60 attack speed and 15% move speed for 4 seconds.",
+      "description": "Gives 20% chance to cripple the target, causing 8 damage per second and lose 60 attack speed for 4 seconds.",
       "spellName": "Cripple",
       "params": [
         "Proc Chance: 20%",
         "Damage per Second: 8",
-        "Attack Speed Slow: 60",
         "Move Speed Slow: 15%",
+        "Attack Speed Slow: 60",
         "Duration: 4"
       ],
       "itemBehaviour": [],
@@ -286,7 +287,7 @@
     },
     {
       "talentLvl": "10",
-      "talentLeft": "+15 Damage",
+      "talentLeft": "+20 Damage",
       "talentRight": "+8 Feral HP Regen"
     }
   ]

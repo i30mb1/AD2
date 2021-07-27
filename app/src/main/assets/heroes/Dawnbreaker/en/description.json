@@ -2,8 +2,9 @@
   "abilities": [
     {
       "notes": [
-        "The strength talent effectively grants Dawnbreaker 160 health, 0.8 health regeneration, and 8 attack damage.",
-        "This attack damage talent is added as raw attack damage, so it does not benefit illusions, and is not affected by most percentage-based damage increasing or reducing effects."
+        "The strength talent effectively grants Dawnbreaker 140 health, 0.7 health regeneration, and 7 attack damage.",
+        "This attack damage talent is added as raw attack damage. Does not benefit illusions and is not affected by most percentage-based damage increasing or reducing effects.",
+        "Does not benefit illusions and is not affected by most percentage-based damage increasing or reducing effects."
       ],
       "spellName": "Talent",
       "talents": [
@@ -25,7 +26,7 @@
         {
           "talentLvl": "10",
           "talentLeft": "+20 Movement Speed",
-          "talentRight": "+8 Strength"
+          "talentRight": "+7 Strength"
         }
       ]
     },
@@ -87,8 +88,7 @@
         "Number of Charges: 2",
         "Charge Replenish Time: 17\/15\/13\/11",
         "The instant attacks fully pierce spell immunity. The slow and stun do not pierce spell immunity.",
-        "Being rooted at any time during the ability instantly cancels the ability.",
-        "Across the vast lineage of star progeny, there were multitudes unwilling to align with the aims of the Children of Light. To those who dared organize defiance, the Children would dispatch Valora and her hammer to show a measure of their power--to leave the rebels either shattered or set back to rights."
+        "Being rooted at any time during the ability instantly cancels the ability."
       ],
       "itemBehaviour": [],
       "legacyKey": "B",
@@ -121,7 +121,7 @@
         "This results in up to 7 possible instances, and it can deal up to 70\/105\/140\/175 damage within the area for the entire duration.",
         "With Converge, both the hammer and Dawnbreaker create the fire trail behind them as they move."
       ],
-      "mana": "110",
+      "mana": "110\/120\/130\/140",
       "hotKey": "W",
       "cooldown": "18\/16\/14\/12",
       "description": "Dawnbreaker hurls her weapon at a target, damaging enemies struck along the way. The hammer pauses for 2 seconds at the destination before flying back to her, leaving a trail of fire that slows enemies. Dawnbreaker can recall the hammer at any time, pulling her towards it so they meet in the middle.",
@@ -138,8 +138,7 @@
         "Fire Trail Damage per Second: 20\/30\/40\/50",
         "Fire Trail Move Speed Slow: 35%",
         "Fire Trail Duration: 2.5",
-        "Fire Trail Debuff Linger Duration: 0.5",
-        "The Brightmaul is Valora's oldest companion and sole remaining connection to the glow of her creators."
+        "Fire Trail Debuff Linger Duration: 0.5"
       ],
       "itemBehaviour": [],
       "legacyKey": "C",
@@ -210,8 +209,7 @@
         "Lifesteal: 30%\/40%\/50%\/60%",
         "Allied Heal Percentage: 35%",
         "Creep Heal Penalty: 50%",
-        "Prevents gaining stacks. If having 3 stacks, does not prevent the next attack from critting and resetting the stack, but does prevent the healing.",
-        "Diminished in power without access to the Children's replenishing light, Valora can still recharge herself and her allies by creating order from the chaos which resides within each fight."
+        "Prevents gaining stacks. If having 3 stacks, does not prevent the next attack from critting and resetting the stack, but does prevent the healing."
       ],
       "itemBehaviour": [],
       "legacyKey": "L",
@@ -267,8 +265,7 @@
         "Landing Damage: 130\/160\/190",
         "Flight Duration: 0.8",
         "Landing Stun Duration: 1.5\/1.75\/2",
-        "Does not affect spell immune enemies. Fully affects spell immune allies.",
-        "Only in defense of an ally will Valora relent to call upon the last reserves of her old powers that still allow cosmic flight."
+        "Does not affect spell immune enemies. Fully affects spell immune allies."
       ],
       "itemBehaviour": [],
       "legacyKey": "R",
@@ -280,8 +277,8 @@
     "attrStrength": 26.0,
     "attrIntelligence": 20.0,
     "attrIntelligenceInc": 2.2,
-    "attrAgilityInc": 2.4,
-    "attrAgility": 20.0
+    "attrAgilityInc": 1.7,
+    "attrAgility": 14.0
   },
   "description": "Valora, the Dawnbreaker, is a melee strength hero that shines in the heart of battle, happily crushing enemies with her celestial hammer and using the energy released to heal nearby allies. At one with the mass of her weapon, she revels in hurling her hammer through multiple foes and then converging with it in a blazing wake. Created to rival ancient forces of chaos and darkness by descendants of the first light, Dawnbreaker only taps her true cosmic power to fly to the aid of her teammates \u2014 eager to rout her enemies on the battlefield no matter where they may be.",
   "history": "In the aeons after the Keeper's exodus birthed the age of light, some amongst the first sun's lineage began to align against the chaos their ancestor's maker left chasing in his wake. Calling themselves the Children of Light, they saw no one else as worthy of taking up the Keeper's abandoned mantle, and they yearned to beat back the onslaught of darkness, creating glorious armies built to purge the cosmos of all creatures of primordial night. Valora, the Dawnbreaker, most prized warrior amongst the Children's ancient creations, is the shining herald of the majesty of order and light. Molded from the heart of a young metallic star, and charged by golden breath with new life, Valora was called to spread the glow of the Children's wisdom to the darkest reaches of the universe \u2014 setting fire to the heavens with each swing of her celestial hammer amidst an endless battle to keep chaos at bay. In time, the Children also revealed another purpose for the Dawnbreaker. They had discovered a means of permeating the entirety of the cosmos with their inner light \u2014 to obliterate all aspects of darkness forever \u2014 and they sent Valora to seize a source of great power, the final piece of their ultimate plan. But for the first time, Valora and her hammer met with failure, and the price she and her masters paid was vast. The Children of Light's spark was utterly extinguished, and the Dawnbreaker was left adrift in a black expanse, lost for untold millennia before crashing on an unfamiliar world. There she rested, dormant, until the presence of a wandering young star gave fuel to an ancient energy forge \u2014 a relic of the Children's that, like her, lay buried for countless ages beneath a blowing red waste. Now, with a small measure of her former powers restored by the forge, Valora wakes to a land beset by war and the unrelenting forces of chaos. She knows her gods may be gone, but the heft of the Dawnbreaker's hammer remains \u2014 matched only by her will to wield it justly in the name of goodness and light.",
@@ -304,7 +301,7 @@
     {
       "talentLvl": "10",
       "talentLeft": "+20 Movement Speed",
-      "talentRight": "+8 Strength"
+      "talentRight": "+7 Strength"
     }
   ]
 }

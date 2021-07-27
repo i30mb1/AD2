@@ -2,7 +2,8 @@
   "abilities": [
     {
       "notes": [
-        "This attack damage talent is added as raw attack damage, so it does not benefit illusions, and is not affected by most percentage-based damage increasing or reducing effects.",
+        "This attack damage talent is added as raw attack damage. Does not benefit illusions and is not affected by most percentage-based damage increasing or reducing effects.",
+        "Does not benefit illusions and is not affected by most percentage-based damage increasing or reducing effects.",
         "The health talent increases maximum health capacity, and keeps the current health percentage.",
         "The lifesteal talent stacks additively with other sources of lifesteal."
       ],
@@ -37,18 +38,19 @@
         "Affects Self"
       ],
       "notes": [
-        "Guardian Sprint does not interrupt Slardar's channeling spells upon cast.",
+        "Guardian Sprint does not interrupt Slardar's channeling abilities upon cast.",
         "Turns Slardar phased for the duration, allowing him to pass through other units and wards.",
         "The river bonuses are applied when Slardar makes physical contact with the water of the river. This means if he is moved out of it vertically, the bonuses are lost as well, until he lands back in the water. The bonuses of the river do not linger at all.",
         "This means if he is moved out of it vertically, the bonuses are lost as well, until he lands back in the water.",
         "The bonuses of the river do not linger at all.",
+        "Gains a total of 41%\/49%\/57%\/65% movement speed while active inside the river.",
         "Multiple instances of the river bonus do not stack.",
         "The status resistance from Aghanim's Scepter stacks multiplicatively with other sources of status resistance."
       ],
       "mana": "25",
       "hotKey": "Q",
       "cooldown": "17",
-      "description": "Slardar slithers ahead, moving significantly faster and passing through units. Slardar has bonus movement speed while in the river.",
+      "description": "Slardar slithers ahead, moving significantly faster and passing through units. Slardar gains movement speed bonus while in the river.",
       "spellName": "Guardian Sprint",
       "params": [
         "Cast Animation: 0+0",
@@ -58,8 +60,7 @@
         "River Health Regen Bonus: 30",
         "River Armor Bonus: 10",
         "River Status Resistance Bonus: 40%",
-        "Provides additional HP Regen, Armor and Status Resistance while in a puddle or in the river.",
-        "As Slardar has made the transition from the Deeps, it has been necessary to use his powerful tail for sprinting instead of swimming."
+        "Provides additional HP Regen, Armor and Status Resistance while in a puddle or in the river."
       ],
       "itemBehaviour": [],
       "legacyKey": "T",
@@ -74,14 +75,15 @@
       ],
       "notes": [
         "The stun and slow are applied at the same time, so overall, the slow lasts for 4\/5\/6\/7 seconds.",
-        "The crush first applies the debuffs, then the damage.",
-        "With Aghanim's Scepter, the created puddles provide a 600 radius aura which grants the caster the river bonuses. Unlike the river, the puddles do not grant the bonuses to any other unit, not even the caster's illusions. Also unlike the river, the river bonus from a puddle lingers for 0.5 seconds. Multiple instances of the river bonus do not stack.",
+        "Slithereen Crush first applies the stun debuff, then the slow debuff, then the damage.",
+        "With Aghanim's Scepter, the created puddles provide an aura which grants the caster the river bonuses. Unlike the river, the puddles do not grant the bonuses to any other unit, not even the caster's illusions. Also unlike the river, the river bonus from a puddle lingers for 0.5 seconds. Multiple instances of the river bonus do not stack.",
         "Unlike the river, the puddles do not grant the bonuses to any other unit, not even the caster's illusions.",
         "Also unlike the river, the river bonus from a puddle lingers for 0.5 seconds.",
         "Multiple instances of the river bonus do not stack.",
-        "With Aghanim's Shard, Corrosive Haze based on its current level gets applied to all enemies hit by Slithereen Crush. Slithereen Crush first apply the debuff, then the damage. Therefore, the damage will be amplified. If Corrosive Haze is not learned, no debuff is applied.",
-        "Slithereen Crush first apply the debuff, then the damage. Therefore, the damage will be amplified.",
-        "If Corrosive Haze is not learned, no debuff is applied."
+        "With Aghanim's Shard, Corrosive Haze based on its current level gets applied to all enemies hit by Slithereen Crush. If Corrosive Haze is not learned, no debuff is applied. Corrosive Haze is applied after Slithereen Crush's other debuffs, but before its damage. This means the damage benefits from the armor reduction.",
+        "If Corrosive Haze is not learned, no debuff is applied.",
+        "Corrosive Haze is applied after Slithereen Crush's other debuffs, but before its damage.",
+        "This means the damage benefits from the armor reduction."
       ],
       "mana": "90\/100\/110\/120",
       "hotKey": "W",
@@ -101,9 +103,8 @@
         "Puddle Aura Linger Duration: 0.5",
         "Corrosive Haze Duration: 5",
         "Whenever Slardar casts Slithereen Crush, he creates a puddle of water that is considered a river for movement and bonuses.",
-        "Causes Corrosive Haze to be applied for 5 seconds to units hit with Slithereen Crush.",
-        "Slow persists if debuff was placed before spell immunity and when not dispelled.",
-        "A swift crush of might and water breaks even the toughest of defenses."
+        "Causes Slithereen Crush to apply Corrosive Haze for 5 seconds to units affected. Increases radius by 75.",
+        "Slow persists if debuff was placed before spell immunity and when not dispelled."
       ],
       "itemBehaviour": [],
       "legacyKey": "R",
@@ -125,21 +126,21 @@
         "The charges have no duration and last indefinitely.",
         "When the charges reach 4, the bash is applied and the charges set back to 0.",
         "The triggering attack first applies the debuff, then its own damage.",
-        "The bonus damage is dealt in one instance together with the attack damage, and counts as attack damage as well. It can be lifestealed off of and cleave, but it is not considered by crit. It is also not affected by percentage-based attack damage bonuses or reductions, but can be reduced with flat reductions.",
+        "The bonus damage is dealt in one instance together with the attack damage, and counts as attack damage as well. It can be lifestealed off of and cleave, but it is not considered by crit. It is also not affected by percentage-based attack damage bonuses or reductions, but can be reduced with flat reductions. Deals 100\/200\/300\/400 (TagTalent 220\/320\/420\/520) damage to non-hero units. Treats creep-heroes as creeps.",
         "It can be lifestealed off of and cleave, but it is not considered by crit.",
-        "It is also not affected by percentage-based attack damage bonuses or reductions, but can be reduced with flat reductions."
+        "It is also not affected by percentage-based attack damage bonuses or reductions, but can be reduced with flat reductions.",
+        "Deals 100\/200\/300\/400 (TagTalent 220\/320\/420\/520) damage to non-hero units. Treats creep-heroes as creeps."
       ],
       "mana": null,
       "hotKey": "E",
       "cooldown": null,
-      "description": "After 3 attacks, your next attack will bash the target.",
+      "description": "After 3 attacks, your next attack will bash the target. Deals double damage against creeps.",
       "spellName": "Bash of the Deep",
       "params": [
         "Required Hits: 4",
         "Damage: 50\/100\/150\/200 (TagTalent 110\/160\/210\/260)",
         "Creep Damage Percentage: 200%",
-        "Stun Duration: 1\/1.1\/1.2\/1.3",
-        "Thieves of the wealth of the Deep Ones meet the brutality of the Slithereen Guard in melee combat."
+        "Stun Duration: 1\/1.1\/1.2\/1.3"
       ],
       "itemBehaviour": [],
       "legacyKey": "B",
@@ -163,8 +164,7 @@
         "Cast Animation: 0.3+0.67",
         "Cast Range: 700\/800\/900",
         "Armor Reduction: 10\/15\/20 (TagTalent 14\/19\/24)",
-        "Duration: 18",
-        "Even the strongest armor counts for little when left to the brine of the sea."
+        "Duration: 18"
       ],
       "itemBehaviour": [],
       "legacyKey": "G",

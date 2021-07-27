@@ -1,9 +1,6 @@
 {
   "abilities": [
     {
-      "notes": [
-        "The cast range talent also affects the max distance of Illuminate."
-      ],
       "spellName": "Talent",
       "talents": [
         {
@@ -38,20 +35,18 @@
       "notes": [
         "The wave travels at a speed of 1050, taking 1.48 seconds to travel the full distance.",
         "With the travel distance and radius, it can hit units up to 1925 range away.",
-        "The damage increases by 3.75\/4.01\/4.17\/4.27 for every 0.03 seconds, starting as the 0.3-second cast time begins. The damage increasing per second talent does not alter this, it is added after the scaling damage is calculated. This means it can deal a minimum of 30 (TagTalent 210) damage. This also means that the maximum damage is reached after 1.7\/2.4\/3.1\/3.8 seconds of channeling.",
-        "The damage increasing per second talent does not alter this, it is added after the scaling damage is calculated.",
+        "The damage increases by 3.75\/4.01\/4.17\/4.27 for every 0.03 seconds, starting as the 0.3-second cast time begins. The damage increasing talent does not alter this, it is added after the scaling damage is calculated. This means it can deal a minimum of 30 (TagTalent 210) damage. This also means that the maximum damage is reached after 1.7\/2.4\/3.1\/3.8 seconds of channeling. The damage increasing talent instantly upgrades the current instance, as well as already released waves.",
+        "The damage increasing talent does not alter this, it is added after the scaling damage is calculated.",
         "This means it can deal a minimum of 30 (TagTalent 210) damage.",
         "This also means that the maximum damage is reached after 1.7\/2.4\/3.1\/3.8 seconds of channeling.",
+        "The damage increasing talent instantly upgrades the current instance, as well as already released waves.",
         "During the channeling, vision fields get created in a line in front of Ezalor. The vision fields provide 375 range flying vision and last for 10.34 seconds each. The first vision field spawns 150 range in front of Ezalor. The following ones spawn 150 range away from the previous vision fields. The vision fields are spawned in 0.5-second intervals, starting 0.5 seconds after channeling start, resulting in up to 3\/4.4\/5.8\/7.2 fields. When the channeling gets canceled, it stops spawning vision fields. This does not affect the travel distance of the wave. When fully channeled, all vision fields together reach up to 825\/1035\/1245\/1455 range away with their vision.",
         "The vision fields provide 375 range flying vision and last for 10.34 seconds each.",
         "The first vision field spawns 150 range in front of Ezalor. The following ones spawn 150 range away from the previous vision fields.",
         "The vision fields are spawned in 0.5-second intervals, starting 0.5 seconds after channeling start, resulting in up to 3\/4.4\/5.8\/7.2 fields.",
         "When the channeling gets canceled, it stops spawning vision fields. This does not affect the travel distance of the wave.",
         "When fully channeled, all vision fields together reach up to 825\/1035\/1245\/1455 range away with their vision.",
-        "The horses only spawn when the ability is channeled for the 2\/2.7\/3.4\/4.1 seconds maximum channel time and only have a visual purpose.",
-        "During Spirit Form, Illuminate has a cast range of 1925\/2050\/2175 and a travel distance of 1675\/1800\/1925. With the travel distance and radius, it can hit units up to 2050\/2175\/2300 range away during Spirit Form.",
-        "With the travel distance and radius, it can hit units up to 2050\/2175\/2300 range away during Spirit Form.",
-        "The damge increasing talent instantly upgrades the current instance."
+        "The visual effect of Illuminate's shockwave gets stronger the longer it was channeled."
       ],
       "mana": "100\/125\/150\/175",
       "hotKey": "Q",
@@ -66,8 +61,7 @@
         "Max Channel Time: 2\/2.7\/3.4\/4.1",
         "Damage Increase per Second: 100",
         "Max Damage: 225\/325\/425\/525 (TagTalent 405\/505\/605\/705)",
-        "Damage on enemies is blocked.",
-        "Ezalor's hidden light reveals itself in marvelous fashion."
+        "Damage on enemies is blocked."
       ],
       "itemBehaviour": [],
       "legacyKey": "T",
@@ -104,15 +98,16 @@
       "notes": [
         "Replaces Illuminate while having the spirit form buff on.",
         "Upon cast, an image of Ezalor is spawned at his location, which channels the Illuminate for him. Ezalor can act freely during this.",
-        "During Spirit Form, Illuminate also heals allies for 30%\/40%\/50% of its damage value. The heal value is based on the calculations of the damage value, so they scale in the same way. This means it can heal a minimum of 9\/12\/15 (TagTalent 189\/192\/195) health. This also means that the maximum heal values are reached after 1.7\/2.4\/3.1\/3.8 seconds of channeling. Illuminate while in Spirit Form can heal up to: Level 1: 67.5\/97.5\/127.5\/157.5 (TagTalent 121.5\/151.5\/181.5\/211.5) health. Level 2: 90\/130\/170\/210 (TagTalent 162\/202\/242\/282) health. Level 3: 112.5\/162.5\/212.5\/262.5 (TagTalent 202.5\/252.5\/302.5\/352.5) health.",
-        "The heal value is based on the calculations of the damage value, so they scale in the same way.",
-        "This means it can heal a minimum of 9\/12\/15 (TagTalent 189\/192\/195) health.",
-        "This also means that the maximum heal values are reached after 1.7\/2.4\/3.1\/3.8 seconds of channeling. Illuminate while in Spirit Form can heal up to: Level 1: 67.5\/97.5\/127.5\/157.5 (TagTalent 121.5\/151.5\/181.5\/211.5) health. Level 2: 90\/130\/170\/210 (TagTalent 162\/202\/242\/282) health. Level 3: 112.5\/162.5\/212.5\/262.5 (TagTalent 202.5\/252.5\/302.5\/352.5) health.",
-        "Level 1: 67.5\/97.5\/127.5\/157.5 (TagTalent 121.5\/151.5\/181.5\/211.5) health.",
-        "Level 2: 90\/130\/170\/210 (TagTalent 162\/202\/242\/282) health.",
-        "Level 3: 112.5\/162.5\/212.5\/262.5 (TagTalent 202.5\/252.5\/302.5\/352.5) health.",
+        "Illuminate notes fully apply.",
+        "During Spirit Form, Illuminate also heals allies. The heal value is based on the calculations of the damage value, resulting in the following values Level 1: 1.13\/1.2\/1.25\/1.28 heal increase per interval, 9 (TagTalent 63) minimum possible heal, 67.5\/97.5\/127.5\/157.5 (TagTalent 121.5\/151.5\/181.5\/211.5) maximum heal. Level 2: 1.69\/1.81\/1.88\/1.92 heal increase per interval, 13.5 (TagTalent 94.5) minimum possible heal, 101.25\/146.25\/191.25\/236.25 (TagTalent 182.25\/227.25\/272.25\/317.25) maximum heal. Level 3: 2.25\/2.41\/2.5\/2.56 heal increase per interval, 18 (TagTalent 126) minimum possible heal, 135\/195\/255\/315 (TagTalent 243\/303\/363\/423) maximum heal. Cannot heal invulnerable allies or Couriers.",
+        "The heal value is based on the calculations of the damage value, resulting in the following values",
+        "Level 1: 1.13\/1.2\/1.25\/1.28 heal increase per interval, 9 (TagTalent 63) minimum possible heal, 67.5\/97.5\/127.5\/157.5 (TagTalent 121.5\/151.5\/181.5\/211.5) maximum heal.",
+        "Level 2: 1.69\/1.81\/1.88\/1.92 heal increase per interval, 13.5 (TagTalent 94.5) minimum possible heal, 101.25\/146.25\/191.25\/236.25 (TagTalent 182.25\/227.25\/272.25\/317.25) maximum heal.",
+        "Level 3: 2.25\/2.41\/2.5\/2.56 heal increase per interval, 18 (TagTalent 126) minimum possible heal, 135\/195\/255\/315 (TagTalent 243\/303\/363\/423) maximum heal.",
         "",
-        "Illuminate cast range and channeling notes fully apply."
+        "Cannot heal invulnerable allies or Couriers.",
+        "During Spirit Form, Illuminate has a cast range of 1925\/2050\/2175 and a travel distance of 1675\/1800\/1925. With the travel distance and radius, it can hit units up to 2050\/2175\/2300 range away during Spirit Form.",
+        "With the travel distance and radius, it can hit units up to 2050\/2175\/2300 range away during Spirit Form."
       ],
       "mana": "100\/125\/150\/175",
       "hotKey": "Q",
@@ -127,8 +122,7 @@
         "Max Charge Time: 2\/2.7\/3.4\/4.1",
         "Damage Increase per Second: 100",
         "Max Damage: 225\/325\/425\/525 (TagTalent 405\/505\/605\/705)",
-        "Damage on enemies is blocked. Heal on allies is not.",
-        "Ezalor's hidden light reveals itself in marvelous fashion."
+        "Damage on enemies is blocked. Heal on allies is not."
       ],
       "itemBehaviour": [],
       "legacyKey": "T",
@@ -173,7 +167,7 @@
         "900 Distance: 36%\/49.5%\/63%\/76.5% movement speed.",
         "1200 Distance: 48%\/66%\/84%\/102% movement speed.",
         "1500 Distance: 60%\/82.5%\/105%\/127.5% movement speed.",
-        "There is not cap to the slow value, it can continue to grow indefinitely. The status debuff's description shows how strong the slow currently is.",
+        "There is no cap to the slow value, it can continue to grow indefinitely. The status debuff's description shows how strong the slow currently is.",
         "The particle effects get stronger the higher the slow gets, capped at 100% slow. The volume of the sound effect on the target increases while moving.",
         "Reduces most enemy heroes' total magic resistance to 14%\/10%\/6%\/2%, assuming basic 25% magic resistance and no other sources of magic resistance.",
         "During Spirit Form, Solar Bind has a cast range of: Level 1: 825\/875\/925\/975 cast range. Level 2: 950\/1000\/1050\/1100 cast range. Level 3: 1075\/1125\/1175\/1225 cast range.",
@@ -210,7 +204,7 @@
         "Only reduces cooldowns of every non-ultimate ability, including passive abilities. Also reduces the recharge time of currently recharging charge-based abilities.",
         "Also reduces the recharge time of currently recharging charge-based abilities.",
         "During Spirit Form, Chakra Magic has a cast range of 1025\/1150\/1275.",
-        "With the level 20 talent, Chakra Magic applies a basic dispel on the targeted ally."
+        "With the level 20 talent, Chakra Magic applies a basic dispel on the target upon cast."
       ],
       "mana": null,
       "hotKey": "E",
@@ -221,8 +215,7 @@
         "Cast Animation: 0.3+1",
         "Cast Range: 900",
         "Mana Restored: 100\/180\/260\/340",
-        "Current Cooldowns Reduction: 3\/4\/5\/6",
-        "In the same vein, Ezalor bestows his harmony among others."
+        "Current Cooldowns Reduction: 3\/4\/5\/6"
       ],
       "itemBehaviour": [],
       "legacyKey": "C",
@@ -236,12 +229,13 @@
         "Damage Magical"
       ],
       "notes": [
-        "Only available during Spirit Form, has a total cast range of 725\/850\/975.",
+        "Only available during Spirit Form.",
         "Knocks units back at a speed of 1000. Knockback distance is always 400, no matter how far the unit is from the center.",
         "Units are not disabled during the knockback. They can still turn, attack, cast abilities and use items. Channeling abilities are not interrupted.",
         "Can push units over impassable terrain. Any trees the knocked back unit collides with gets destroyed.",
-        "Blinding Light first applies the debuff, the stun, and then the damage.",
-        "Blinding Light's blind uses pseudo-random distribution."
+        "Blinding Light first applies the debuff, then the stun, and then the damage.",
+        "Blinding Light's blind uses pseudo-random distribution.",
+        "Has a cast range of 725\/850\/975 with Spirit Form's bonus."
       ],
       "mana": "150",
       "hotKey": "D",
@@ -258,8 +252,7 @@
         "Knockback Duration: 0.4",
         "Miss Duration: 4",
         "Stun Duration: 1.2",
-        "Knockback and blind persist if debuffs were placed before spell immunity and when not dispelled.",
-        "The Primordial light turns the tides of battle in favor of Ezalor and his allies."
+        "Knockback and blind persist if debuffs were placed before spell immunity and when not dispelled."
       ],
       "itemBehaviour": [],
       "legacyKey": "B",
@@ -272,12 +265,13 @@
         "Affects Enemies"
       ],
       "notes": [
-        "Requires Aghanim's Scepter to be unlocked.",
+        "Requires Aghanim's Scepter to be unlocked. In Ability Draft, Will-O-Wisp can be unlocked by the player that drafted Spirit Form.",
+        "In Ability Draft, Will-O-Wisp can be unlocked by the player that drafted Spirit Form.",
         "The wisp starts flickering 1 second after cast, and then every 3.15 seconds, up to 5 times.",
         "While flickering, moves enemies towards the wisp, and locks their facing angle on it. Does not disable enemies in any other way.",
-        "Only attacks from heroes and clones, excluding illusions can damage the wisp.",
-        "Destroys trees within the radius upon cast, and within 200 radius around affected enemies at the end of the pull.",
-        "Multiple wisps work independently from each other.",
+        "Only attacks from heroes (including clones, excluding illusions and creep-heroes) can damage the wisp.",
+        "Destroys trees within the radius upon cast, and within 150 radius around affected enemies at the end of the pull.",
+        "Multiple instances of Will-O-Wisp work independently from each other.",
         "During Spirit Form, Will-O-Wisp has a cast range of 925\/1050\/1175."
       ],
       "mana": "250",
@@ -295,8 +289,7 @@
         "Initial Delay: 1",
         "Off Duration: 1.85",
         "On Duration: 1.3",
-        "Wisp Duration: 14.9",
-        "Though he would not claim to 'know' them, Ezalor holds an uncanny influence over many powerful creatures always willing to come to his aid."
+        "Wisp Duration: 14.9"
       ],
       "itemBehaviour": [],
       "legacyKey": "R",
@@ -309,7 +302,8 @@
         "Affects Allied Heroes"
       ],
       "notes": [
-        "Requires Aghanim's Shard to be unlocked.",
+        "Requires Aghanim's Shard to be unlocked. In Ability Draft, Recall can be unlocked by the player that drafted Spirit Form.",
+        "In Ability Draft, Recall can be unlocked by the player that drafted Spirit Form.",
         "Only available during Spirit Form, and replaces Spirit Form for its duration.",
         "Targeting the ground chooses the closest allied hero to the targeted point. Cannot be cast on allies who have ☐ Disabled Help from Ezalor.",
         "Cannot be cast on allies who have ☐ Disabled Help from Ezalor.",
@@ -329,8 +323,7 @@
       "params": [
         "Cast Animation: 0.3+1.17",
         "Cast Range: Global",
-        "Teleport Delay: 3",
-        "Walk towards the light."
+        "Teleport Delay: 3"
       ],
       "itemBehaviour": [],
       "legacyKey": "F",
@@ -345,23 +338,21 @@
       "notes": [
         "Spirit Form interrupts Ezalor's channeling abilities upon cast.",
         "When Spirit Form expires while a spirit is channeling Illuminate (Spirit Form), it is released instantly.",
-        "The duration increasing talent does not affect the currently active instance.",
-        "With Aghanim's Shard, Recall replaces Spirit Form for its duration."
+        "With Aghanim's Shard, Recall replaces Spirit Form for its duration, due to lack of ability slots."
       ],
       "mana": "75\/125\/175",
       "hotKey": "R",
-      "cooldown": "80\/75\/70",
-      "description": "Ezalor temporarily turns his body luminescent, gaining bonus movement speed, cast range, allows Illuminate to be channeled by a separate spirit, and grants the Recall and Blinding Light abilities.",
+      "cooldown": "70",
+      "description": "Ezalor temporarily turns his body luminescent, gaining bonus movement speed, cast range, grants the Blinding Light ability, and allows Illuminate to be channeled by a separate spirit and heal allies during the day.",
       "spellName": "Spirit Form",
       "params": [
         "Cast Animation: 0+1.46",
         "Move Speed Bonus: 20%\/25%\/30%",
         "Cast Range Bonus: 125\/250\/375",
-        "Illuminate Damage as Heal: 30%\/40%\/50%",
+        "Illuminate Damage as Heal: 30%\/45%\/60%",
         "Duration: 40 (TagTalent 55)",
         "Grants a new ability: Will-O-Wisp.",
-        "Grants a new ability: Recall.",
-        "In a flash of light, Ezalor reveals his true nature."
+        "Grants a new ability during Spirit Form: Recall."
       ],
       "itemBehaviour": [],
       "legacyKey": "F",

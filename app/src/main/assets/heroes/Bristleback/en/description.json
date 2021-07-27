@@ -2,9 +2,11 @@
   "abilities": [
     {
       "notes": [
+        "This attack damage talent is added as raw attack damage. Does not benefit illusions and is not affected by most percentage-based damage increasing or reducing effects.",
+        "Does not benefit illusions and is not affected by most percentage-based damage increasing or reducing effects.",
         "The health talent increases maximum health capacity, and keeps the current health percentage.",
-        "The spell lifesteal talent stacks additively with other sources of spell lifesteal.",
-        "The spell lifesteal talent heals for 2.6% from non-hero units. Treats creep-heroes as creeps and does not heal off of illusions."
+        "The spell lifesteal talent stacks additively with other sources of spell lifesteal. Heals for 2.6% from non-hero units. Treats creep-heroes as creeps and does not heal off of illusions.",
+        "Heals for 2.6% from non-hero units. Treats creep-heroes as creeps and does not heal off of illusions."
       ],
       "spellName": "Talent",
       "talents": [
@@ -26,7 +28,7 @@
         {
           "talentLvl": "10",
           "talentLeft": "+2 Mana Regen",
-          "talentRight": "+20 Movement Speed"
+          "talentRight": "+15 Damage"
         }
       ]
     },
@@ -47,30 +49,30 @@
         "Level 4: 5\/8\/11\/14\/17\/20\/23\/26 armor and 32%\/44%\/56%\/68%\/80%\/92%\/104%\/116% movement speed.",
         "",
         "Treats creep-heroes as heroes.",
-        "With Aghanim's Scepter, Viscous Nasal Goo still uses the same cast time and disjointable projectiles, but different cast animation. Does not target invisible, invulnerable and hidden units, or units inside the Fog of War within the radius.",
+        "With Aghanim's Scepter, Viscous Nasal Goo loses its cast time and backswing. It still interrupts channeling abilities upon cast. Viscous Nasal Goo still uses the same disjointable projectiles. Does not target invisible, invulnerable and hidden units, or units inside the Fog of War within the radius.",
+        "Viscous Nasal Goo still uses the same disjointable projectiles.",
         "Does not target invisible, invulnerable and hidden units, or units inside the Fog of War within the radius."
       ],
       "mana": "12\/16\/20\/24",
       "hotKey": "Q",
-      "cooldown": "1.5",
+      "cooldown": "1.75",
       "description": "Covers a target in snot, causing it to have reduced armor and movement speed. Multiple casts stack and refresh the duration.",
       "spellName": "Viscous Nasal Goo",
       "params": [
-        "Cast Animation: 0.3+0 (TagTalent 0+0)",
-        "Cast Range: 600 (TagTalent 0)",
-        "Max Stacks: 4 (TagTalent 8)",
+        "Cast Animation: 0.3+0 (TagAghanim 0+0)",
+        "Cast Range: 600 (TagAghanim 0)",
+        "Max Stacks: 4 (TagAghanim 8)",
         "Base Armor Reduction: 2",
         "Armor Reduction per Stack: 1.5\/2\/2.5\/3",
         "Base Move Speed Slow: 20%",
         "Move Speed Slow per Stack: 3%\/6%\/9%\/12%",
         "Hero Duration: 5",
         "Non-Hero Duration: 10",
-        "Radius: 950",
+        "Radius: 900",
         "Viscous Nasal Goo becomes a no target area of effect ability, applying to all enemies within range. Increases stack limit to 8.",
         "Grants a new ability: Hairball.",
         "Slow and armor reduction persist if debuff was placed before spell immunity and when not dispelled.",
-        "Blocked upon impact, not blocked when upgraded.",
-        "Having caught a cold while stuck in the snow, Bristleback turns it to his advantage."
+        "Blocked upon impact, not blocked when upgraded."
       ],
       "itemBehaviour": [],
       "legacyKey": "G",
@@ -112,8 +114,7 @@
         "Stack Damage: 28\/30\/32\/34 (TagTalent 48\/50\/52\/54)",
         "Damage Cap: 550",
         "Stack Duration: 14",
-        "Grants a new ability: Hairball.",
-        "An enforcer's honor can be a prickly thing. So can his quills."
+        "Grants a new ability: Hairball."
       ],
       "itemBehaviour": [],
       "legacyKey": "R",
@@ -128,7 +129,8 @@
       "notes": [
         "A visual effect and sound plays whenever his back receives damage if Bristleback has learned Quill Spray. Taking damage from the sides shows no effect.",
         "Taking damage from the sides shows no effect.",
-        "Bristleback takes less damage from all damage types except from damage flagged as HP Removal. When taking rear damage, his effective health increases by 19%\/32%\/47%\/67%. When taking side damage, his effective health increases by 9%\/14%\/19%\/25%.",
+        "Applies generic incoming damage reduction on Bristleback. Stacks additively with other sources of generic incoming damage manipulation. The reduction affects all damage Bristleback takes that is not flagged as HP removal. When taking rear damage, his effective health increases by 19%\/32%\/47%\/67%. When taking side damage, his effective health increases by 9%\/14%\/19%\/25%.",
+        "The reduction affects all damage Bristleback takes that is not flagged as HP removal.",
         "When taking rear damage, his effective health increases by 19%\/32%\/47%\/67%.",
         "When taking side damage, his effective health increases by 9%\/14%\/19%\/25%.",
         "Checks the damage source's current position and compares it to Bristleback's facing angle on each damage instance. This means on e.g. damage over time effects, damage of an instance is only reduced when within the right angle. Damage from e.g. Death Ward, Proximity Mines is reduced when facing away from them, since they are their own source.",
@@ -153,8 +155,7 @@
         "Rear Damage Reduction: 16%\/24%\/32%\/40%",
         "Side Damage Reduction: 8%\/12%\/16%\/20%",
         "Damage Threshold: 210",
-        "Illusions gain the damage reduction, but not the passive Quill Spray procs.",
-        "Turning his back to a fight might be just the thing."
+        "Illusions gain the damage reduction, but not the passive Quill Spray procs."
       ],
       "itemBehaviour": [],
       "legacyKey": "K",
@@ -174,7 +175,8 @@
         "The Viscous Nasal Goo and Quill Spray released are based on the current level respectively. If neither are leveled, the ball does nothing upon reaching the targeted area. Checks for their level upon projectile impact.",
         "If neither are leveled, the ball does nothing upon reaching the targeted area.",
         "Checks for their level upon projectile impact.",
-        "Once the hairball reaches the center of the area, every enemy within the radius gets targeted by Viscsous Nasal Goo. At the same time, a Quill Spray is released. The second Quill Spray is released 2 seconds later. The goo and spray work identical to regular casts.",
+        "Once the hairball reaches the center of the area, every enemy within the radius gets targeted by Viscsous Nasal Goo. Viscous Nasal Goo does not target invisible units or units inside the Fog of War. At the same time, a Quill Spray is released. The second Quill Spray is released 2 seconds later. The goo and spray work identical to regular casts.",
+        "Viscous Nasal Goo does not target invisible units or units inside the Fog of War.",
         "At the same time, a Quill Spray is released. The second Quill Spray is released 2 seconds later.",
         "The goo and spray work identical to regular casts.",
         "Since Quill Spray travels faster than Viscous Nasal Goo, the quills always hit enemies before the goo does, so the quills do not benefit from the armor reduction."
@@ -182,7 +184,7 @@
       "mana": "100",
       "hotKey": "D",
       "cooldown": "20",
-      "description": "Coughs a quill-packed hairball towards the target location. Erupts at the location, hitting enemies in a 700 radius with Goo and 1 Quills.",
+      "description": "Coughs a quill-packed hairball towards the target location. Erupts at the location, hitting enemies in a 700 radius with Goo and 2 Quills.",
       "spellName": "Hairball",
       "params": [
         "Cast Animation: 0.1+0.64",
@@ -224,8 +226,7 @@
         "Move Speed Bonus per Stack: 3%\/4%\/5%",
         "Stack Duration: 14",
         "Prevents gaining new stacks. Already existing stacks still provide bonus movement speed and attack damage.",
-        "Whenever Bristleback gains a stack, all his illusions gain one as well. Illusions do not benefit from the raw damage bonuses.",
-        "'Temper, temper,' his mum always chided. But in a fight, a temper can come in handy."
+        "Whenever Bristleback gains a stack, all his illusions gain one as well. Illusions do not benefit from the raw damage bonuses."
       ],
       "itemBehaviour": [],
       "legacyKey": "W",
@@ -261,7 +262,7 @@
     {
       "talentLvl": "10",
       "talentLeft": "+2 Mana Regen",
-      "talentRight": "+20 Movement Speed"
+      "talentRight": "+15 Damage"
     }
   ]
 }

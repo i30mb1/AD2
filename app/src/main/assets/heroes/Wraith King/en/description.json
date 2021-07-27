@@ -63,8 +63,7 @@
         "Stun Duration: 1.1\/1.4\/1.7\/2 (TagTalent 1.6\/1.9\/2.2\/2.5)",
         "Slow persists and attempts to damage if debuff was placed before spell immunity and when not dispelled. The Wraithfire Blasts from Reincarnation with the talent do not target spell immune units.",
         "Blocked upon impact. The blasts from Reincarnation are blocked as well.",
-        "The blasts from Reincarnation can be disjointed as well.",
-        "Ostarion calls on his damned lineage, laying waste to his opponents."
+        "The blasts from Reincarnation can be disjointed as well."
       ],
       "itemBehaviour": [],
       "legacyKey": "T",
@@ -79,11 +78,11 @@
       "notes": [
         "Stacks additively with other sources of lifesteal.",
         "Cannot lifesteal off of wards, buildings and allied units.",
-        "A skeleton charge is gained for every 2 units killed by Wraith King. It does not matter how the units are killed. For each charge, 1 skeletons are spawned, resulting in 0\/1\/2\/3\/4\/5\/6\/7\/8 (TagTalent 6\/7\/8\/9\/10\/11\/12\/13\/14) at 0\/1\/2\/3\/4\/5\/6\/7\/8 charges. The skeletons spawn in 0.25 second intervals, starting immediately upon cast. It takes 1.75 (TagTalent 3.25) for all skeletons to spawn.",
-        "For each charge, 1 skeletons are spawned, resulting in 0\/1\/2\/3\/4\/5\/6\/7\/8 (TagTalent 6\/7\/8\/9\/10\/11\/12\/13\/14) at 0\/1\/2\/3\/4\/5\/6\/7\/8 charges.",
+        "A Wraith King Skeleton charge is gained for every 2 units killed by Wraith King. It does not matter how the units are killed. For each charge, 1 skeleton is spawned, resulting in 0\/1\/2\/3\/4\/5\/6\/7\/8 (TagTalent 6\/7\/8\/9\/10\/11\/12\/13\/14) at 0\/1\/2\/3\/4\/5\/6\/7\/8 charges. The skeletons spawn in 0.25 second intervals, starting immediately upon cast. This results in a total spawn time of 0\/0.25\/0.5\/0.75\/1\/1.25\/1.5\/1.75\/2\/2.25\/2.5\/2.75\/3\/3.25 seconds.",
+        "For each charge, 1 skeleton is spawned, resulting in 0\/1\/2\/3\/4\/5\/6\/7\/8 (TagTalent 6\/7\/8\/9\/10\/11\/12\/13\/14) at 0\/1\/2\/3\/4\/5\/6\/7\/8 charges.",
         "The skeletons spawn in 0.25 second intervals, starting immediately upon cast.",
-        "It takes 1.75 (TagTalent 3.25) for all skeletons to spawn.",
-        "Wraith King Skeletons spawn at a random spot within a 300 radius of Wraith King.",
+        "This results in a total spawn time of 0\/0.25\/0.5\/0.75\/1\/1.25\/1.5\/1.75\/2\/2.25\/2.5\/2.75\/3\/3.25 seconds.",
+        "The skeletons spawn at a random spot within a 300 radius of Wraith King.",
         "The skeletons cannot be controlled. They automatically choose an attack target within approximately 6500 range. If no unit is within that range, they move to the closest lane and walk it down like lane creeps. If their current attack target turns invisible, the skeletons may stop and do nothing. After a while, they select a new target or return to the lanes. Casting Wraithfire Blast orders all skeletons within approximately 2000 radius to attack that target. The skeletons do not block neutral creep camps.",
         "If no unit is within that range, they move to the closest lane and walk it down like lane creeps.",
         "If their current attack target turns invisible, the skeletons may stop and do nothing. After a while, they select a new target or return to the lanes.",
@@ -93,7 +92,7 @@
         "Just like with hero reincarnation, killing the skeletons grants no gold or experience when they reincarnate.",
         "Reincarnating does not reset the skeleton's duration. This means they do not reincarnate when expiring either."
       ],
-      "mana": "65\/70\/75\/80",
+      "mana": "70\/80\/90\/100",
       "hotKey": "W",
       "cooldown": "50",
       "description": "Restore health based on the damage Wraith King deals when attacking enemy units. Can be cast to summon skeletons with Vampiric Spirit. Every two kills on an enemy unit adds a skeleton charge. Skeletons respawn once when killed.",
@@ -108,8 +107,7 @@
         "Skeleton Respawn Delay: 3",
         "Skeleton Duration: 60",
         "Base Number of Skeletons: 6",
-        "Lifesteal is disabled by Break. Charge gaining on killing is not disabled. Lifesteal on the skeletons is only disabled when applying Break on Wraith King, not on the skeleton itself.",
-        "Wraith King's blade drains his enemy's essence to feed his aura."
+        "Lifesteal is disabled by Break. Charge gaining on killing is not disabled. Lifesteal on the skeletons is only disabled when applying Break on Wraith King, not on the skeleton itself."
       ],
       "itemBehaviour": [],
       "legacyKey": "V",
@@ -122,7 +120,7 @@
         "Affects Enemies"
       ],
       "notes": [
-        "Mortal Strike has an ensured critical strike when off cooldown, crits with a lower value have no effect if they proc, since the higher crit value takes priority.",
+        "If another source of critical strike proc on the same attack as Mortal Strike, the higher multiplier has priority.",
         "Does not trigger upon attacking wards, buildings, and allies.",
         "Missed attacks does not trigger the ability cooldown."
       ],
@@ -133,8 +131,7 @@
       "spellName": "Mortal Strike",
       "params": [
         "Critical Damage: 140%\/180%\/220%\/260%",
-        "Red critical numbers are before illusion and armor reduction.",
-        "One blow to crush a foe."
+        "Red critical numbers are before illusion and armor reduction."
       ],
       "itemBehaviour": [],
       "legacyKey": "E",
@@ -157,15 +154,16 @@
         "Only targets enemy heroes, including clones, but excluding illusions and creep-heroes.",
         "If Wraithfire Blast is not learned, Reincarnation still slows when the talent is chosen. Once learned, the blasts fully replace the slow.",
         "These blasts can target enemies inside the Fog of War and invisible units. However, invisible targets instantly disjoint them.",
-        "With Aghanim's Scepter, Reincarnation provides a 1200 radius aura that affects allied heroes (including clones and illusions, excluding creep-heroes), including Wraith King himself. The aura lingers for 0.5 seconds. The aura does not affect invulnerable or hidden heroes. The aura is bestowed to nearby allies even while Wraith King is dead.",
+        "With Aghanim's Scepter, Reincarnation provides an aura. The aura's buff lingers for 0.5 seconds. The aura only affects allied heroes (including clones and illusions, excluding creep-heroes), including Wraith King himself. The aura does not affect invulnerable or hidden heroes. The aura is bestowed to nearby allies even while Wraith King is dead.",
+        "The aura only affects allied heroes (including clones and illusions, excluding creep-heroes), including Wraith King himself.",
         "The aura does not affect invulnerable or hidden heroes.",
         "The aura is bestowed to nearby allies even while Wraith King is dead.",
-        "Wraith Delay triggers when the hero's health reaches 1, unless they are affected by Shallow Grave or have other Reincarnation sources. Units in Wraith form are kept alive by having their minimum health set to 1. Damage taken is technically not reduced.",
+        "Wraith Delay triggers when the hero's health reaches 1, unless they are affected by Shallow Grave, Battle Trance, or have other Reincarnation sources. Units in Wraith form are kept alive by having their minimum health set to 1. Damage taken is technically not reduced. Works for clones as well.",
         "Units in Wraith form are kept alive by having their minimum health set to 1. Damage taken is technically not reduced.",
-        "Wraith Delay does not trigger in the following scenarios: Although the aura places the buff on illusions, it does not work for them. Tempest Double expiring, or is force-killed from another Meepo clones dying. Dying to Powershot's Aghanim's Shard global instant-kill damage.",
-        "Although the aura places the buff on illusions, it does not work for them.",
-        "Tempest Double expiring, or is force-killed from another Meepo clones dying.",
-        "Dying to Powershot's Aghanim's Shard global instant-kill damage.",
+        "Works for clones as well.",
+        "Wraith Delay does not trigger in the following scenarios: The hero is an illusion (although the aura places the buff on them, it does not work for them). The hero dies by ability expiring (TagTalent Tempest Double), or is force-killed (TagTalent Divided We Stand).",
+        "The hero is an illusion (although the aura places the buff on them, it does not work for them).",
+        "The hero dies by ability expiring (TagTalent Tempest Double), or is force-killed (TagTalent Divided We Stand).",
         "Wraith Delay grants the affected heroes unobstructed movement, allowing them to move through units and trees and over cliffs. Wraith form causes the hero's model size to increase by 25% for its duration. This has no impact on its collision size. Also increases the hero's movement speed by 25% and attack speed by 75 for the duration. Allies in Wraith form can act freely like regular heroes, and can still be interacted with normally, without any restrictions. This means they still are fully affected by attacks and abilities normally, and already existing buffs and debuffs continue to affect them.",
         "Wraith form causes the hero's model size to increase by 25% for its duration. This has no impact on its collision size.",
         "Also increases the hero's movement speed by 25% and attack speed by 75 for the duration.",
@@ -174,9 +172,10 @@
         "When the Wraith duration ends, the hero dies. The kill is credited to whoever put the hero in Wraith form. This death cannot be prevented in any way. It ignores invulnerability and everything that would normally prevent death. If the hero has Reincarnation, it triggers normally once the hero dies.",
         "This death cannot be prevented in any way. It ignores invulnerability and everything that would normally prevent death.",
         "If the hero has Reincarnation, it triggers normally once the hero dies.",
-        "With Aghanim's Shard, 3 Wraith King Skeletons are summoned for each enemy hero within 900 radius upon triggering Reincarnation. Only summons skeletons for enemy heroes (including clones, excluding illusions and creep-heroes). If Vampiric Spirit is not learned, no skeletons are summoned. Skeleton notes of Vampiric Spirit fully apply.",
+        "With Aghanim's Shard, 3 Wraith King Skeletons are summoned for each enemy hero within 900 radius upon triggering Reincarnation. Only summons skeletons for enemy heroes (including clones, excluding illusions and creep-heroes). If Vampiric Spirit is not learned, no skeletons are summoned. The skeletons are also summoned for enemies inside the fog of war and invisible units. Skeleton notes of Vampiric Spirit fully apply.",
         "Only summons skeletons for enemy heroes (including clones, excluding illusions and creep-heroes).",
         "If Vampiric Spirit is not learned, no skeletons are summoned.",
+        "The skeletons are also summoned for enemies inside the fog of war and invisible units.",
         "Skeleton notes of Vampiric Spirit fully apply."
       ],
       "mana": "180 (TagTalent 0)",
@@ -198,8 +197,7 @@
         "Number of Skeletons per Enemy Hero: 3",
         "If a nearby allied hero is slain, they will be transformed into a wraith and have their death delayed for 7 seconds. Buffs the transformed units with +75 attack speed and +25% movement speed.",
         "Causes Reincarnation to have no mana cost and spawn three skeletons to attack each nearby enemy hero when Reincarnation is triggered.",
-        "The slow does not affect spell immune enemies. Slow persists if debuff was placed before spell immunity and when not dispelled. Wraith Delay aura affects spell immune allies.",
-        "Conspirators against the Wraith King wonder why he never stays dead."
+        "The slow does not affect spell immune enemies. Slow persists if debuff was placed before spell immunity and when not dispelled. Wraith Delay aura affects spell immune allies."
       ],
       "itemBehaviour": [],
       "legacyKey": "R",

@@ -2,7 +2,8 @@
   "abilities": [
     {
       "notes": [
-        "This attack damage talent is added as raw attack damage, so it does not benefit illusions, and is not affected by most percentage-based damage increasing or reducing effects.",
+        "This attack damage talent is added as raw attack damage. Does not benefit illusions and is not affected by most percentage-based damage increasing or reducing effects.",
+        "Does not benefit illusions and is not affected by most percentage-based damage increasing or reducing effects.",
         "The health talent increases maximum health capacity, and keeps the current health percentage."
       ],
       "spellName": "Talent",
@@ -51,8 +52,7 @@
         "Move Speed Slow: 25%\/35%\/45%\/55%",
         "Attack Speed Slow: 25\/35\/45\/55",
         "Slow Duration: 4",
-        "Slow persists if debuff was placed before spell immunity and when not dispelled.",
-        "A slam of Mangix' mighty keg starts the festivities."
+        "Slow persists if debuff was placed before spell immunity and when not dispelled."
       ],
       "itemBehaviour": [],
       "legacyKey": "C",
@@ -65,9 +65,12 @@
         "Affects Enemies"
       ],
       "notes": [
-        "Cinder Brew's projectile travels at a speed of 1600.",
-        "Despite the visual effect, Cinder Brew does not affect all units simultaneously upon the projectile reaching the center of the area. Instead, it behaves like a wave that travels outwards, affecting every unit as it travels towards the point, but only units that are within the targeted area.",
-        "Instead, it behaves like a wave that travels outwards, affecting every unit as it travels towards the point, but only units that are within the targeted area.",
+        "Cinder Brew's projectiles travel at a speed of 1600.",
+        "Despite the visual effect, Cinder Brew does not launch a single projectile towards the center of the targeted area. Instead, it launches individual projectiles on every enemy within the area. These projectiles are invisible and disjointable. This means Cinder Brew's targets are decided upon ability cast, and not upon the visible effect reaching the targeted area. It also means that enemies entering the area after cast are not affect, while enemies leaving the area after cast are still affected.",
+        "Instead, it launches individual projectiles on every enemy within the area.",
+        "These projectiles are invisible and disjointable.",
+        "This means Cinder Brew's targets are decided upon ability cast, and not upon the visible effect reaching the targeted area.",
+        "It also means that enemies entering the area after cast are not affect, while enemies leaving the area after cast are still affected.",
         "When an enemy with the Cinder Brew debuff takes any spell damage, the duration of the debuff gets extended by 3, and the damage starts. The debuff may be ignited only once. The debuff still slows after getting ignited.",
         "The debuff may be ignited only once. The debuff still slows after getting ignited.",
         "The damage interval is based on the debuff's duration, so that it always deals 8 instances of damage. Each instance deals 9.38\/18.75\/28.13\/37.5 (TagTalent 12.19\/24.38\/36.56\/48.75) damage.",
@@ -88,8 +91,7 @@
         "Ignition Total Damage: 75\/150\/225\/300 (TagTalent 97.5\/195\/292.5\/390)",
         "Duration: 5 (TagTalent 6.5)",
         "Ignite Duration Increase: 3",
-        "Slow persists if the debuff was placed before spell immunity and when not dispelled.",
-        "The Order of the Oyo's solution to all problems - another round!"
+        "Slow persists if the debuff was placed before spell immunity and when not dispelled."
       ],
       "itemBehaviour": [],
       "legacyKey": "D",
@@ -111,9 +113,9 @@
         "The sound effects and particles of the critical strike play upon finishing the attack.",
         "Drunken Brawler's evasion stacks multiplicatively with other sources of evasion.",
         "Drunken Brawler's crit and evasion use pseudo-random distribution.",
-        "The movement speed change switches around every second, starting with the bonus. This results in a 40% movement speed bonus in the first, third and fifth second, and a 20% movement speed slow in the second and fourth second. The average movement speed bonus over these 5 seconds is 116%.",
+        "The movement speed change switches around every second, starting with the bonus. This results in a 40% movement speed bonus in the first, third and fifth second, and a 20% movement speed slow in the second and fourth second. The average movement speed bonus over these 5 seconds is 16%.",
         "This results in a 40% movement speed bonus in the first, third and fifth second, and a 20% movement speed slow in the second and fourth second.",
-        "The average movement speed bonus over these 5 seconds is 116%."
+        "The average movement speed bonus over these 5 seconds is 16%."
       ],
       "mana": "35\/40\/45\/50",
       "hotKey": "E",
@@ -128,8 +130,7 @@
         "Active Evasion & Crit Chance Multiplier: 3",
         "Move Speed Slow: 20%",
         "Move Speed Bonus: 40%",
-        "Duration: 5",
-        "When Mangix won his title as the Brewmaster of the Order of Oyo, he also claimed his place in the mastery of inebriation."
+        "Duration: 5"
       ],
       "itemBehaviour": [],
       "legacyKey": "B",
@@ -177,8 +178,7 @@
         "Number of Charges: 2",
         "Charge Replenish Time: 140\/130\/120",
         "Primal Split has 2 charges and can be canceled at any time. Charge replenish time is equal to the normal cooldown.",
-        "Primal Split now creates a Void brewling. Has Astral Pulse ability, affecting enemies in a 500 AoE. Applies 20%\/30%\/40% slow and disarm for 2.5 seconds.",
-        "It isn't clear whether Mangix is consciously aware of his potent bond with nature, as it often occurs in the midst of a drunken stupor."
+        "Primal Split now creates a Void brewling. Has Astral Pulse ability, affecting enemies in a 500 AoE. Applies 20%\/30%\/40% slow and disarm for 2.5 seconds."
       ],
       "itemBehaviour": [],
       "legacyKey": "R",
@@ -194,7 +194,7 @@
         "Requires Aghanim's Scepter to be unlocked.",
         "Granted to all brewlings.",
         "When used, prematurely ends Primal Split.",
-        "Brewmaster re-appears at the location of the brewling that used the sub-ability, instead of according to the order explain in Primal Split's notes."
+        "Brewmaster re-appears at the location of the brewling that used the sub-ability, instead of according to the order explained in Primal Split's notes."
       ],
       "mana": "0",
       "hotKey": "R",

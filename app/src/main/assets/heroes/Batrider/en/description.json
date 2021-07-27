@@ -4,8 +4,8 @@
       "notes": [
         "The armor talent does not benefit illusions.",
         "The health talent increases maximum health capacity, and keeps the current health percentage.",
-        "The magic resistance talent stacks multiplicatively with other sources of magic resistance.",
-        "The magic resistance talent increases Batrider's magic resistance to 40%."
+        "The magic resistance talent stacks multiplicatively with other sources of magic resistance. Increases Batrider's magic resistance to 40%.",
+        "Increases Batrider's magic resistance to 40%."
       ],
       "spellName": "Talent",
       "talents": [
@@ -68,8 +68,7 @@
         "Move Speed Slow per Stack: 2%\/4%\/6%\/8%",
         "Turn Rate Slow: 10%\/30%\/50%\/70%",
         "Stack Duration: 8",
-        "Slow persists and attempts to damage if debuff was placed before spell immunity and when not dispelled.",
-        "It's not uncommon to hear the Rider cackle while he increases the flammability of his opponents."
+        "Slow persists and attempts to damage if debuff was placed before spell immunity and when not dispelled."
       ],
       "itemBehaviour": [],
       "legacyKey": "C",
@@ -114,8 +113,7 @@
         "Number of Charges: 2",
         "Charge Replenish Time: 18\/17\/16\/15",
         "Causes Flamebreak to have two charges and apply a Sticky Napalm charge on impact.",
-        "Damages if debuff was placed before spell immunity and when not dispelled.",
-        "A molotov cocktail is the weapon of choice for Batrider."
+        "Damages if debuff was placed before spell immunity and when not dispelled."
       ],
       "itemBehaviour": [],
       "legacyKey": "R",
@@ -155,8 +153,7 @@
         "Move Speed Bonus: 3%\/6%\/9%\/12%",
         "Vision Bonus: 200\/400\/600\/800",
         "Duration: 15 (TagTalent 21.5)",
-        "Illusions created during Firely do not fly.",
-        "When an enemy escapes into the Yama Raskav Jungle, most would cut through the brush to find the fugitive. Batrider just chooses to destroy the jungle along with his foes."
+        "Illusions created during Firefly do not fly."
       ],
       "itemBehaviour": [],
       "legacyKey": "E",
@@ -173,10 +170,11 @@
         "Flaming Lasso fully disables the target for its duration.",
         "Batrider is disarmed during Flaming Lasso. The disarm either lasts 3\/3.5\/4 seconds, or until the lasso is broken, whichever is shorter.",
         "Drags the targeted unit 300 distance behind Batrider. Despite the ability description, it can drag the target over impassable terrain.",
-        "If Batrider teleports a distance greater than 425, the lasso breaks. Flaming Lasso overrides every other position changing effect, making only teleports able to break the lasso. If the target gets teleported any distance (even a 0 range teleport is enough), the lasso breaks. The lasso also breaks when either Batrider or the target dies. Casting Dismember or Walrus Kick on the lasso target breaks the lasso as well.",
+        "If Batrider teleports a distance greater than 425, the lasso breaks. Flaming Lasso overrides every other position changing effect, making only teleports able to break the lasso. If the target gets teleported any distance (even a 0 range teleport is enough), the lasso breaks. The lasso also breaks when either Batrider or the target dies. It also breaks if the targets gets affected by Fear, Hypnosis, Dismember or Walrus Kick.",
         "Flaming Lasso overrides every other position changing effect, making only teleports able to break the lasso.",
         "If the target gets teleported any distance (even a 0 range teleport is enough), the lasso breaks.",
-        "The lasso also breaks when either Batrider or the target dies. Casting Dismember or Walrus Kick on the lasso target breaks the lasso as well.",
+        "The lasso also breaks when either Batrider or the target dies.",
+        "It also breaks if the targets gets affected by Fear, Hypnosis, Dismember or Walrus Kick.",
         "Deals damage in 1-second intervals, starting immediately upon cast, with a total of 3\/3\/4 instances. Can deal up to 105\/165\/300 damage per target (before reductions).",
         "Can deal up to 105\/165\/300 damage per target (before reductions).",
         "Cannot be cast on, but can drag invulnerable and hidden units.",
@@ -201,8 +199,7 @@
         "Duration: 3\/3.5\/4",
         "Secondary Target Search Radius: 600",
         "Flaming Lasso grabs both its target, as well as the target's nearest allied hero within range. The secondary target is tethered to the first.",
-        "Blocked fully only when primary target. When blocked, Batrider is not disarmed either.",
-        "Few dare to ask to ride on the bat, as Batrider gives them free of charge."
+        "Blocked fully only when primary target. When blocked, Batrider is not disarmed either."
       ],
       "itemBehaviour": [],
       "legacyKey": "F",

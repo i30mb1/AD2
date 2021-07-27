@@ -57,8 +57,7 @@
         "Max Mana Burned per Hit: 1%\/1.8%\/2.6%\/3.4% (TagTalent 1.6%\/2.4%\/3.2%\/4%)",
         "Burned Mana as Damage: 50%",
         "Illusion Percentage: 50%",
-        "Values are halved for illusions.",
-        "A modified technique of the Turstarkuri monks' peaceful ways is to turn magical energies on their owner."
+        "Values are halved for illusions."
       ],
       "itemBehaviour": [],
       "legacyKey": "R",
@@ -72,8 +71,8 @@
       ],
       "notes": [
         "Blink disjoints projectiles upon cast.",
-        "Does not blink for the full distance when targeting closer than the max distance.",
-        "When targeting beyond the max blink distance, Anti-Mage will blink for the max distance towards the targeted point."
+        "Does not blink for the full distance when targeting closer than the max distance. When targeting beyond the max blink distance, Anti-Mage blinks for the max distance towards the targeted point.",
+        "When targeting beyond the max blink distance, Anti-Mage blinks for the max distance towards the targeted point."
       ],
       "mana": "60",
       "hotKey": "W",
@@ -85,8 +84,7 @@
         "Cast Range: Global",
         "Max Blink Distance: 925\/1000\/1075\/1150 (TagTalent 1225\/1300\/1375\/1450)",
         "Grants a new ability: Blink Fragment.",
-        "Increases range by 300 and reduces cooldown by 2.",
-        "In his encounter with the Dead Gods, Anti-Mage learned the value of being elusive."
+        "Increases range by 300 and reduces cooldown by 2."
       ],
       "itemBehaviour": [],
       "legacyKey": "B",
@@ -114,8 +112,7 @@
         "Cast Animation: 0+0",
         "Magic Resistance Bonus: 15%\/25%\/35%\/45% (TagTalent 35%\/45%\/55%\/65%)",
         "Shell Duration: 1.2",
-        "The passive magic resistance bonus is disabled.",
-        "With the proper focus, Anti-Mage turns innate resistance into calculated retaliation."
+        "The passive magic resistance bonus is disabled."
       ],
       "itemBehaviour": [],
       "legacyKey": "C",
@@ -134,8 +131,8 @@
         "The illusion cannot act, so it is completely uncontrollable.",
         "The illusion is not invulnerable, and can be attacked and killed normally.",
         "When targeting an enemy, the illusion attacks that enemy.",
-        "When targeting the ground, the illusion relies on default auto attack rules. The illusion ignores the player's auto attack settings and is always in auto-attack mode. When no enemies are nearby, the illusion just idles in place, only moving when getting aggroed.",
-        "The illusion ignores the player's auto attack settings and is always in auto-attack mode.",
+        "When targeting the ground, the illusion relies on ◉ Standard auto attack rules. The illusion ignores the player's auto attack settings and is always in auto attack mode. When no enemies are nearby, the illusion just idles in place, only moving when getting aggroed.",
+        "The illusion ignores the player's auto attack settings and is always in auto attack mode.",
         "When no enemies are nearby, the illusion just idles in place, only moving when getting aggroed.",
         "The illusion is permanently phased.",
         "Counterspell is cast simultaneously by the illusion whenever Anti-Mage casts it."
@@ -183,8 +180,7 @@
         "Radius: 500",
         "Damage per Missing Mana: 0.8\/0.95\/1.1 (TagTalent 0.9\/1.05\/1.2)",
         "Stun Duration: 0.3 (TagTalent 1.3)",
-        "Blocked fully only when primary target.",
-        "After bringing enemies to their knees, Anti-Mage punishes them for their use of the arcane arts."
+        "Blocked fully only when primary target."
       ],
       "itemBehaviour": [],
       "legacyKey": "V",

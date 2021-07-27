@@ -10,7 +10,7 @@
         {
           "talentLvl": "25",
           "talentLeft": "-5 Rip Tide Armor",
-          "talentRight": "-10 Mirror Image Cooldown"
+          "talentRight": "-10s Mirror Image Cooldown"
         },
         {
           "talentLvl": "20",
@@ -37,12 +37,12 @@
       ],
       "notes": [
         "Mirror Image disjoints projectiles and applies a basic dispel on Naga Siren upon cast.",
-        "Naga Siren is invulnerable, hidden and spell immune during the split time. Orders the caster to stop after the split time, canceling all queued orders, and orders given during the split time. Resets all current attack and spell targeting orders from other units on Naga Siren.",
+        "Naga Siren is invulnerable, hidden and spell immune during the split time.",
         "Orders the caster to stop after the split time, canceling all queued orders, and orders given during the split time.",
         "Resets all current attack and spell targeting orders from other units on Naga Siren.",
-        "After the split time, Naga Siren reappears with her illusions. The reappear locations are based on Naga Siren's position upon cast, with one appearing at the cast location, and the others north, east, south or west from that point. This means when spawning 3 illusions, the formation is T-shaped and when spawning 4 illusions, it is shaped like a + plus. The distance in between each is 72 range. Though the formation is always the same, Naga Siren and her illusions take a random position in the formation and have all the same facing angle.",
+        "After the split time, Naga Siren reappears with her illusions. The reappear locations are based on Naga Siren's position upon cast, with one appearing at the cast location, and the others north, east, south or west from that point. This means when spawning 3 illusions, the formation is T-shaped and when spawning 4 illusions, it is shaped like a plus. The distance in between each is 72 range. Though the formation is always the same, Naga Siren and her illusions take a random position in the formation and have all the same facing angle.",
         "The reappear locations are based on Naga Siren's position upon cast, with one appearing at the cast location, and the others north, east, south or west from that point.",
-        "This means when spawning 3 illusions, the formation is T-shaped and when spawning 4 illusions, it is shaped like a + plus.",
+        "This means when spawning 3 illusions, the formation is T-shaped and when spawning 4 illusions, it is shaped like a plus.",
         "The distance in between each is 72 range.",
         "Though the formation is always the same, Naga Siren and her illusions take a random position in the formation and have all the same facing angle.",
         "Recasting Mirror Image replaces the illusions from the previous cast, no matter under whose control they are."
@@ -58,8 +58,7 @@
         "Number of Illusions: 3 (TagTalent 4)",
         "Illusion Damage Dealt: 25%\/30%\/35%\/40% (TagTalent 34%\/39%\/44%\/49%)",
         "Illusion Damage Taken: 350%",
-        "Illusion Duration: 26",
-        "Slithice, while being strong in her own right, is notoriously hard to track down."
+        "Illusion Duration: 26"
       ],
       "itemBehaviour": [],
       "legacyKey": "R",
@@ -72,16 +71,16 @@
         "Affects Enemies"
       ],
       "notes": [
-        "The snare travels at a speed of 1500.",
+        "The net travels at a speed of 1500.",
         "Roots the target, preventing it from moving and casting certain mobility spells. Provides True Sight over the target.",
         "Provides True Sight over the target.",
-        "All illusions owned by Naga Siren within 900 range of the target also cast a fake Ensnare. They play the whole cast animation and release their fake snare at the same time the real snare is released. When illusions currently are not having any order and are standing still, they turn to face the target and cast the fake snare. When illusions are moving or attacking, they continue to do so and do not turn to face the target. They still play the cast animation, overriding their move or attack animations. When canceling the cast (S), the illusions still play the full cast animation, but do not release the fake snare. The fake snare do not interact with anything and do not root.",
-        "They play the whole cast animation and release their fake snare at the same time the real snare is released.",
-        "When illusions currently are not having any order and are standing still, they turn to face the target and cast the fake snare.",
+        "All illusions owned by Naga Siren within 900 range of the target also cast a fake Ensnare. They play the whole cast animation and release their fake nets at the same time the real net is released. When illusions currently are not having any order and are standing still, they turn to face the target and cast the fake nets. When illusions are moving or attacking, they continue to do so and do not turn to face the target. They still play the cast animation, overriding their move or attack animations. When canceling the cast, the illusions still play the full cast animation, but do not release the fake nets. The fake nets do not interact with anything and do not root.",
+        "They play the whole cast animation and release their fake nets at the same time the real net is released.",
+        "When illusions currently are not having any order and are standing still, they turn to face the target and cast the fake nets.",
         "When illusions are moving or attacking, they continue to do so and do not turn to face the target. They still play the cast animation, overriding their move or attack animations.",
-        "When canceling the cast (S), the illusions still play the full cast animation, but do not release the fake snare.",
-        "The fake snare do not interact with anything and do not root.",
-        "With Aghanim's Scepter, Ensnare can be cast on spell immune and fully affect invulnerable units including units affected by sleep."
+        "When canceling the cast, the illusions still play the full cast animation, but do not release the fake nets.",
+        "The fake nets do not interact with anything and do not root.",
+        "With Aghanim's Scepter, Ensnare can be cast on and fully affect any invulnerable unit, not just sleeping units."
       ],
       "mana": "70\/80\/90\/100",
       "hotKey": "W",
@@ -90,12 +89,11 @@
       "spellName": "Ensnare",
       "params": [
         "Cast Animation: 0.4+0.47",
-        "Cast Range: 575\/600\/625\/650 (TagTalent 975\/1000\/1025\/1050)",
+        "Cast Range: 575\/600\/625\/650 (TagAghanim 975\/1000\/1025\/1050)",
         "Duration: 2.75\/3.5\/4.25\/5",
-        "Allows Ensnare to target Spell Immune or sleeping units. Reduces the cooldown by 6 seconds and increases cast range by 400.",
+        "Allows Ensnare to target Spell Immune or sleeping units. Reduces the Ensnare cooldown by 6 seconds and increases cast range by 400.",
         "Cannot be cast on or affect spell immune enemies. Fully pierces spell immunity.",
-        "Blocked upon impact.",
-        "The only way to escape the onslaught of a Slithereen is to never oppose one in the first place."
+        "Blocked upon impact."
       ],
       "itemBehaviour": [],
       "legacyKey": "E",
@@ -110,10 +108,8 @@
       ],
       "notes": [
         "When proccing, Rip Tide first applies the armor reduction debuff, the slow debuff, then the Rip Tide damage, and then the attack damage.",
-        "The armor reduction debuff and the slow debuff does not stack, so if an enemy is affected by more than one source, the duration gets refreshed instead.",
-        "Rip Tide uses pseudo-random distribution.",
-        "The damage source of the Rip Tide coming from her illusions is Naga Siren, and not the illusion itself. This means certain on-damage effects affect Naga Siren, rather than the illusion that applied the damage (e.g. Blade Mail).",
-        "This means certain on-damage effects affect Naga Siren, rather than the illusion that applied the damage (e.g. Blade Mail)."
+        "The armor reduction debuff and the slow debuff do not stack, the duration gets refreshed instead.",
+        "Rip Tide uses pseudo-random distribution."
       ],
       "mana": null,
       "hotKey": "E",
@@ -127,9 +123,9 @@
         "Armor Reduction: 2\/4\/6\/8 (TagTalent 7\/9\/11\/13) (TagTalent 6\/8\/10\/12, 11\/13\/15\/17)",
         "Armor Reduction Duration: 4",
         "Move Speed Slow: 20%",
-        "Increases the armor reduction by 4, and applies a 20% slow.",
-        "Debuffs persist if placed before spell immunity and when not dispelled.",
-        "A torrent from the Deep Ones crushes the defenses of the Siren's enemies."
+        "Slow Duration: 4",
+        "Adds 20% slow and increases base armor reduction by 4.",
+        "Debuffs persist if placed before spell immunity and when not dispelled."
       ],
       "itemBehaviour": [],
       "legacyKey": "D",
@@ -144,7 +140,7 @@
       "notes": [
         "Applies a sleep on affected units, preventing them from acting, until woken up.",
         "Affected units are invulnerable while sleeping.",
-        "The radius of the song follows Naga Siren, so if she moves far enough away from affected units, they wake up. The sleep is provided by an aura. Its debuff lingers for 0.4 seconds.",
+        "Song of the Siren's radius is centered on Naga Siren for the full duration, so if she moves far enough away from affected units, they wake up.",
         "The sleep is provided by an aura. Its debuff lingers for 0.4 seconds.",
         "Song of the Siren cannot be interrupted. Only Naga Siren's death or the Song of the Siren End sub-ability can stop it. However, silencing Naga Siren prevents her from manually stopping the song with the sub-ability.",
         "However, silencing Naga Siren prevents her from manually stopping the song with the sub-ability.",
@@ -161,8 +157,7 @@
         "Radius: 1000\/1200\/1400",
         "Aura Linger Duration: 0.4",
         "Duration: 7",
-        "The sleep does not affect spell immune enemies.",
-        "Slithice's powerful voice enchants leagues of opponents, while calling her Slithereen kin in a time of need."
+        "The sleep does not affect spell immune enemies."
       ],
       "itemBehaviour": [],
       "legacyKey": "G",
@@ -206,7 +201,7 @@
     {
       "talentLvl": "25",
       "talentLeft": "-5 Rip Tide Armor",
-      "talentRight": "-10 Mirror Image Cooldown"
+      "talentRight": "-10s Mirror Image Cooldown"
     },
     {
       "talentLvl": "20",

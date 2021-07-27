@@ -3,7 +3,8 @@
     {
       "notes": [
         "The health talent increases maximum health capacity, and keeps the current health percentage.",
-        "This attack damage talent is added as raw attack damage, so it does not benefit illusions, and is not affected by most percentage-based damage increasing or reducing effects."
+        "This attack damage talent is added as raw attack damage. Does not benefit illusions and is not affected by most percentage-based damage increasing or reducing effects.",
+        "Does not benefit illusions and is not affected by most percentage-based damage increasing or reducing effects."
       ],
       "spellName": "Talent",
       "talents": [
@@ -56,8 +57,7 @@
         "Secondary Radius: 425",
         "Main Damage: 75\/150\/225\/300",
         "Secondary Damage: 56.25\/112.5\/168.75\/225",
-        "Attempts to damage if enemy turns spell immune before the meteors hitting. Does not re-select a new target for the second meteor if the closest enemy turns spell immune after cast.",
-        "The Goddess breaks the strata to empower her Princess in the time of need."
+        "Attempts to damage if enemy turns spell immune before the meteors hitting. Does not re-select a new target for the second meteor if the closest enemy turns spell immune after cast."
       ],
       "itemBehaviour": [],
       "legacyKey": "T",
@@ -115,8 +115,7 @@
         "Starstorm Radius: 500",
         "Secondary Starstorm Damage: 50%",
         "Causes Sacred Arrow to release a Starstorm on enemies within 500 AoE along the travel path of the primary arrow, releasing a second starfall that deals 50% damage to the impacted unit.",
-        "Can collide with spell immune enemies. Does not stun or attempt to damage spell immune enemies.",
-        "Lunar energies make the Princess of the Moon's arrows more deadly than most."
+        "Can collide with spell immune enemies. Does not stun or attempt to damage spell immune enemies."
       ],
       "itemBehaviour": [],
       "legacyKey": "R",
@@ -156,8 +155,7 @@
         "Charge Replenish Time: 45\/40\/35\/30",
         "Critical Damage: 150%",
         "Grants +1 Leap Charge. Leap buff grants Mirana 1.5x Critical Strike attacks for its duration.",
-        "Getting rooted during the leap does not cancel the leap.",
-        "None can fail to recognize Mirana's iconic white beast in the heat of battle."
+        "Getting rooted during the leap does not cancel the leap."
       ],
       "itemBehaviour": [],
       "legacyKey": "E",
@@ -186,8 +184,7 @@
         "Fade Delay: 2.5\/2\/1.5",
         "Move Speed Bonus: 9%\/12%\/15%",
         "Duration: 18",
-        "Illusions are not made invisible.",
-        "Her tenure with Selemene allows Mirana to eclipse the ground, wrapping her allies in a cloak of shadows."
+        "Illusions are not made invisible."
       ],
       "itemBehaviour": [],
       "legacyKey": "W",

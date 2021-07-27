@@ -56,8 +56,7 @@
         "Buff Duration: 2",
         "Damage: 250",
         "Slow and damage amplification persist if debuff was placed before spell immunity and when not dispelled.",
-        "Blocked upon cast.",
-        "Although Chen's brand of animal enthrallment isn't quite strong enough to control the minds of enemy heroes, it still tests their resolve in combat."
+        "Blocked upon cast."
       ],
       "itemBehaviour": [],
       "legacyKey": "E",
@@ -113,7 +112,7 @@
         "Charge Replenish Time: 15",
         "Allows Holy Persuasion to target Ancient Creeps, maximum one per level of Hand of God.",
         "Can persuade spell immune units.",
-        "Although they may not be knights, Chen incorporates beasts into the Fold in the same way he himself was converted."
+        "Can be cast on and teleported rooted creeps."
       ],
       "itemBehaviour": [],
       "legacyKey": "T",
@@ -128,8 +127,8 @@
       "notes": [
         "The aura only affects allied heroes, including illusions and clones, excluding creep-heroes, and all units under Chen's control.",
         "Applies heal amplification and health regen amplification, but not lifesteal amplification or spell lifesteal amplification.",
-        "Can regenerate up to 75\/150\/225\/300 health in one minute. With Divine Favor's health regeneration amplification, it heals up to 79.5\/165\/256.5\/354.",
-        "With Divine Favor's health regeneration amplification, it heals up to 79.5\/165\/256.5\/354.",
+        "Can regenerate up to 75\/150\/225\/300 health in one minute. With Divine Favor's health regeneration amplification, it heals up to 79.5\/165\/256.5\/354 in one minute.",
+        "With Divine Favor's health regeneration amplification, it heals up to 79.5\/165\/256.5\/354 in one minute.",
         "The aura's buff lingers for 0.5 seconds.",
         "Does not affect invulnerable units.",
         "With Aghanim's Shard, Divine Favor turns into an active ability. The passive aura is still present. Can teleport any allied unit, own units and lane creeps. Cannot be cast on self. Cannot target invulnerable or hidden allies, but can teleport them if they turned invulnerable or hidden after cast. Unlike Holy Persuasion's teleport, Divine Favor's teleport is not dispelled upon taking damage. The teleport location is a point right in front of the team's fountain. Gives the target a stop command after teleporting it, canceling channeling abilities and stopping queued orders. Disjoints projectiles upon teleporting.",
@@ -155,7 +154,7 @@
         "Teleport Delay: 6",
         "Allows Divine Favor to be cast on allies, teleporting them back home after 6 seconds. Cannot target spell immune allies. Cast Range: 600",
         "Aura pierces spell immunity. Cannot target spell immune allies.",
-        "Chen's zeal is infectious, blessing his allies with vitality and compelling them to his side."
+        "Can be cast on and teleported rooted allies."
       ],
       "itemBehaviour": [],
       "legacyKey": "F",
@@ -175,6 +174,7 @@
         "Level 1: 291.5\/302.5\/313.5\/324.5 (TagTalent 588.3\/610.5\/632.7\/654.9)",
         "Level 2: 477\/495\/513\/531 (TagTalent 773.8\/803\/832.2\/861.4)",
         "Level 3: 662.5\/687.5\/712.5\/737.5 (TagTalent 959.3\/995.5\/1031.7\/1067.9)",
+        "",
         "The voice line upon cast is global for allies and not audible for enemies.",
         "With Aghanim's Scepter, Holy Persuasion allows 1\/2\/3 ancient creeps to be persuaded per level of Hand of God."
       ],
@@ -187,8 +187,7 @@
         "Cast Animation: 0.3+0.93",
         "Radius: Global",
         "Heal: 275\/450\/625 (TagTalent 555\/730\/905)",
-        "Max Ancient Creeps Count: 1\/2\/3",
-        "Using the mental link with his thralls, Chen calls down restoration and well-being to those who share his fanaticism."
+        "Max Ancient Creeps Count: 1\/2\/3"
       ],
       "itemBehaviour": [],
       "legacyKey": "D",

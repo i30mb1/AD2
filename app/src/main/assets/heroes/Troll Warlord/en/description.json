@@ -4,7 +4,8 @@
       "notes": [
         "The health talent increases maximum health capacity, and keeps the current health percentage.",
         "The agility talent effectively grants Troll Warlord 1.17 armor, 7 attack speed, and 7 attack damage.",
-        "This attack damage talent is added as raw attack damage, so it does not benefit illusions, and is not affected by most percentage-based damage increasing or reducing effects.",
+        "This attack damage talent is added as raw attack damage. Does not benefit illusions and is not affected by most percentage-based damage increasing or reducing effects.",
+        "Does not benefit illusions and is not affected by most percentage-based damage increasing or reducing effects.",
         "The evasion talent stacks multiplicatively with other sources of evasion."
       ],
       "spellName": "Talent",
@@ -40,12 +41,13 @@
       ],
       "notes": [
         "Berserker's Rage is not available in Ability Draft.",
-        "Does not interrupt Troll Warlord's channeling abilities upon toggling On \/ Off.",
-        "Toggling On disables Whirling Axes (Ranged) and then enables Whirling Axes (Melee). Grants Troll Warlord melee unit properties, so all items with ranged and melee differences (e.g. Battle Fury, Skull Basher) use their melee values. He now has 150 attack range.",
-        "Grants Troll Warlord melee unit properties, so all items with ranged and melee differences (e.g. Battle Fury, Skull Basher) use their melee values.",
-        "He now has 150 attack range.",
-        "When toggling On while a ranged projectile is flying, it is treated as a melee attack by items, but cannot root with Berserker's Rage. In other words, when the attack connects on the target, the area in front of Troll Warlord will receive cleave damage if he has Battle Fury, and items such as Orb of Venom and Skull Basher use the melee attack values. However, Quelling Blade uses the ranged values if Troll Warlord was ranged at the start of the projectile.",
-        "In other words, when the attack connects on the target, the area in front of Troll Warlord will receive cleave damage if he has Battle Fury, and items such as Orb of Venom and Skull Basher use the melee attack values. However, Quelling Blade uses the ranged values if Troll Warlord was ranged at the start of the projectile.",
+        "Does not interrupt Troll Warlord's channeling abilities upon toggling.",
+        "Toggling On disables Whirling Axes (Ranged) and then enables Whirling Axes (Melee). Turns Troll Warlord into a melee unit with 150 attack range for its duration (relevant for Rubick and Ability Draft). This means items treat the caster as a melee hero (e.g. Manta Style, Skull Basher, etc). Attack range bonuses are not overridden and still work normally.",
+        "Turns Troll Warlord into a melee unit with 150 attack range for its duration (relevant for Rubick and Ability Draft).",
+        "This means items treat the caster as a melee hero (e.g. Manta Style, Skull Basher, etc).",
+        "Attack range bonuses are not overridden and still work normally.",
+        "When toggling On while a ranged projectile is flying, it is treated as a melee attack by items, but cannot root with Berserker's Rage. When the attack connects on the target, the area in front of Troll Warlord will receive cleave damage if he has Battle Fury, and items such as Orb of Venom and Skull Basher use the melee attack values. However, Quelling Blade uses the ranged values if Troll Warlord was ranged at the start of the projectile.",
+        "When the attack connects on the target, the area in front of Troll Warlord will receive cleave damage if he has Battle Fury, and items such as Orb of Venom and Skull Basher use the melee attack values. However, Quelling Blade uses the ranged values if Troll Warlord was ranged at the start of the projectile.",
         "Persists through Troll Warlord's death. If Berserker's Rage was active upon death, he respawns with it active.",
         "The root proccing attack first applies the debuff, then its own damage. The root provides True Sight over the target for it's duration. The proc chance uses pseudo-random distribution.",
         "The root provides True Sight over the target for it's duration.",
@@ -67,8 +69,7 @@
         "Root Chance: 14%\/16%\/18%\/20%",
         "Root Duration: 0.8\/1.2\/1.6\/2",
         "The rooting is disabled, all other components are not.",
-        "Melee illusions cannot root.",
-        "Like his anger, Troll Warlord's supply of axes is infinite."
+        "Melee illusions cannot root."
       ],
       "itemBehaviour": [],
       "legacyKey": "G",
@@ -82,13 +83,13 @@
         "Damage Magical"
       ],
       "notes": [
-        "Whirling Axes (Ranged) is only available when Berserker's Rage is toggled Off. In Ability Draft, both Whirling Axes abilities are separate, stand-alone abilities that can be drafted and leveled up independently.",
-        "In Ability Draft, both Whirling Axes abilities are separate, stand-alone abilities that can be drafted and leveled up independently.",
+        "Whirling Axes (Ranged) is only available when Berserker's Rage is toggled Off. In Ability Draft, both Whirling Axes abilities are separate, stand-alone abilities that can be drafted up independently.",
+        "In Ability Draft, both Whirling Axes abilities are separate, stand-alone abilities that can be drafted up independently.",
         "The axes travel at a speed of 1500, taking 0.63 seconds to travel the full distance.",
         "Spawns 5 axes which spread up to 25° and affect units within 100 radius around them. Has no starting radius, the axes spawn at one point in front of Troll Warlord. So the total area is shaped like a cone.",
         "Has no starting radius, the axes spawn at one point in front of Troll Warlord. So the total area is shaped like a cone.",
         "With the travel distance and axes radius, it can hit units up to 1050 range away.",
-        "The axes first apply a basic dispel, the damage, then the debuff. Does not affect Roshan.",
+        "The axes first apply a basic dispel, then the damage, then the debuff.",
         "Does not affect Roshan.",
         "During Battle Trance this ability has an instant cast time, and does not require Troll Warlord to face the targeted direction."
       ],
@@ -107,8 +108,7 @@
         "Move Speed Slow: 40%",
         "Slow Duration: 2.5\/3\/3.5\/4",
         "Causes Ranged Axes to dispel enemies. Reduces cooldown and manacost.",
-        "Slow persists if debuff was placed before spell immunity and when not dispelled.",
-        "Only axes fueled by hate whirl with such a deadly spin."
+        "Slow persists if debuff was placed before spell immunity and when not dispelled."
       ],
       "itemBehaviour": [],
       "legacyKey": "E",
@@ -125,16 +125,16 @@
         "Whirling Axes (Melee) is only available when Berserker's Rage is toggled On. In Ability Draft, both Whirling Axes abilities are separate, stand-alone abilities that can be drafted and leveled up independently.",
         "In Ability Draft, both Whirling Axes abilities are separate, stand-alone abilities that can be drafted and leveled up independently.",
         "Interrupts Troll Warlord's channeling abilities upon cast.",
-        "The axes travel at a speed of 1250 and move out at a speed of 233.33 until reaching the max distance in 1.5 seconds, and then move back to Troll Warlord at the same speed. The axes always spawn towards east and west at Troll Warlord's position and rotate clockwise. With the max spin radius and axes radius, it can hit units up to 450 range away. The full damage and debuff is dealt the first time a unit comes in contact with an axe, being hit by the other axe does not deal extra damage or reapply the debuff. The axes first apply the damage, then the debuff.",
+        "The axes travel at a speed of 1250 and move out at a speed of 233.33 until reaching the max distance in 1.5 seconds, and then move back to Troll Warlord at the same speed. The axes always spawn towards east and west at Troll Warlord's position and rotate clockwise. With the max spin radius and axes radius, it can hit units up to 450 range away.",
         "The axes always spawn towards east and west at Troll Warlord's position and rotate clockwise.",
         "With the max spin radius and axes radius, it can hit units up to 450 range away.",
-        "The full damage and debuff is dealt the first time a unit comes in contact with an axe, being hit by the other axe does not deal extra damage or reapply the debuff.",
         "The axes first apply the damage, then the debuff.",
-        "Only units within 100 range of an axe get damaged and blinded.",
-        "Whirling Axes' blind uses pseudo-random distribution.",
+        "Only units within 100 range of an axe get damaged and blinded. The visual effects of this abilities are offset and do not reflect the actual currently affected area. The full damage and debuff is dealt the first time a unit comes in contact with an axe, being hit by the other axe does not deal extra damage or reapply the debuff.",
         "The visual effects of this abilities are offset and do not reflect the actual currently affected area.",
-        "If Troll Warlord dies, the ability ends and the axes disappear.",
+        "The full damage and debuff is dealt the first time a unit comes in contact with an axe, being hit by the other axe does not deal extra damage or reapply the debuff.",
+        "Whirling Axes' blind uses pseudo-random distribution.",
         "Does not affect Roshan.",
+        "If Troll Warlord dies, the ability ends and the axes disappear.",
         "With Aghanim's Scepter, applies a basic dispel on Troll Warlord upon cast."
       ],
       "mana": "50 (TagTalent 25)",
@@ -151,8 +151,7 @@
         "Blind Duration: 5",
         "Whirl Duration: 3",
         "Causes Melee Axes to dispel Troll Warlord. Reduces cooldown and manacost.",
-        "Blind effect persists if debuff was placed before spell immunity and when not dispelled.",
-        "Keep your enemies close."
+        "Blind effect persists if debuff was placed before spell immunity and when not dispelled."
       ],
       "itemBehaviour": [],
       "legacyKey": "F",
@@ -190,8 +189,7 @@
       "params": [
         "Max Stacks: 12",
         "Attack Speed Bonus per Stack: 15\/20\/25\/30 (TagTalent 20\/25\/30\/35)",
-        "Does not prevent gaining new stacks. Nullifies the bonus attack speed of all stacks.",
-        "If at first you don't succeed, strike, strike again."
+        "Does not prevent gaining new stacks. Nullifies the bonus attack speed of all stacks."
       ],
       "itemBehaviour": [],
       "legacyKey": "V",
@@ -204,15 +202,23 @@
         "Affects Allies"
       ],
       "notes": [
-        "Requires Aghanim's Shard to be unlocked.",
-        "Switching between melee and range form instantly updates the buff to provide the intended benefit, both for Troll Warlord and his allies.",
+        "Requires Aghanim's Shard upgrade to be unlocked. In Ability Draft, Rampage can be unlocked by the player that drafted Battle Trance.",
+        "In Ability Draft, Rampage can be unlocked by the player that drafted Battle Trance.",
+        "Interrupts Troll Warlord's channeling abilities upon cast.",
+        "Only affects heroes, including clones and illusions, excluding creep-heroes. Affects invulnerable and hidden allies as well.",
+        "Affects invulnerable and hidden allies as well.",
+        "Works independently from Berserker's Rage, checks for the caster's current range type. This means for Rubick during e.g. Shapeshift, Rampage grants status resistance bonus.",
+        "This means for Rubick during e.g. Shapeshift, Rampage grants status resistance bonus.",
+        "Creates red particles if the caster was melee on cast, and teal if they were ranged.",
+        "Checks the caster's range type periodically and updates the buff immediately. The particle effects do not update.",
+        "The particle effects do not update.",
         "The status resistance bonus stacks multiplicatively with other sources of status resistance.",
         "Despite the tooltip, the buff is dispellable by any dispel and it fully works on spell immune allies."
       ],
       "mana": "75",
       "hotKey": "F",
       "cooldown": "80",
-      "description": "Grants all allied heroes 70 Attack Speed or 25% Status Resistance for 5 seconds based on whichever stance Troll is currently in. Ranged provides attack speed and melee provides status resistance.",
+      "description": "Global active. Grants all allied heroes 70 Attack Speed or 25% Status Resistance for 5 seconds based on whichever stance Troll is currently in. Ranged provides attack speed and melee provides status resistance.",
       "spellName": "Rampage",
       "params": [
         "Cast Animation: 0+0",
@@ -222,7 +228,7 @@
         "Duration: 5"
       ],
       "itemBehaviour": [],
-      "legacyKey": "F",
+      "legacyKey": null,
       "story": null
     },
     {
@@ -233,27 +239,26 @@
       ],
       "notes": [
         "Battle Trance interrupts Troll Warlord's channeling abilities upon cast.",
+        "Applies a basic dispel on the Troll Warlord upon cast.",
         "Battle Trance first applies the buff, then the dispel.",
-        "Applies a basic dispel on the Troll Warlord upon cast. The Battle Trance strong dispel talent turns the basic dispel into a strong dispel. Also allows Battle Trance to be cast while stunned, cycloned, slept, hidden, or during Forced Movement. Does not allow it from being cast while silenced, taunted, hexed or prevented from acting. Troll Warlord is unable to ⇧ Shift-queue this ability upon learning the talent.",
-        "The Battle Trance strong dispel talent turns the basic dispel into a strong dispel. Also allows Battle Trance to be cast while stunned, cycloned, slept, hidden, or during Forced Movement. Does not allow it from being cast while silenced, taunted, hexed or prevented from acting. Troll Warlord is unable to ⇧ Shift-queue this ability upon learning the talent.",
-        "Also allows Battle Trance to be cast while stunned, cycloned, slept, hidden, or during Forced Movement.",
-        "Does not allow it from being cast while silenced, taunted, hexed or prevented from acting.",
-        "Troll Warlord is unable to ⇧ Shift-queue this ability upon learning the talent.",
-        "When cast while not attacking, Troll Warlord automatically chooses an attack target within the 900 search radius. Prioritizes heroes over other units. Uses default auto attack rules to decide for targets. Does not target Roshan, buildings, wards, allies, or invulnerable or attack immune enemies.",
-        "Prioritizes heroes over other units. Uses default auto attack rules to decide for targets.",
+        "When cast while not attacking, Troll Warlord automatically chooses an attack target within the search radius. Prioritizes heroes over other units. Uses default auto-attack rules to decide for targets. Does not target Roshan, buildings, wards, allies, or invulnerable or attack immune enemies.",
+        "Prioritizes heroes over other units. Uses default auto-attack rules to decide for targets.",
         "Does not target Roshan, buildings, wards, allies, or invulnerable or attack immune enemies.",
         "When cast while already attacking a target, Troll Warlord sticks to that target, even if it is Roshan, a building, a ward, or an ally. He only switches the current attack target when it becomes unattackable (turns invulnerable or attack immune, or dies).",
         "He only switches the current attack target when it becomes unattackable (turns invulnerable or attack immune, or dies).",
         "Grants shared vision over the current attack target as long as it stays within 900 range of the buffed hero, revealing it through the Fog of War. Does not provide True Sight.",
-        "While attacking, the Troll Warlord becomes almost fully uncontrollable, and can only be ordered to to toggle Berserker's Rage, or cast Whirling Axes. While attacking, he ignores taunts. Fear and Hypnosis prevent them from attacking and cause conflicting movement. When no enemies are nearby, they become controllable again, until a new visible enemy enters the search radius.",
-        "While attacking, he ignores taunts.",
-        "Fear and Hypnosis prevent them from attacking and cause conflicting movement.",
+        "While attacking, the Troll Warlord becomes almost fully uncontrollable, and can only be ordered to to toggle Berserker's Rage, or cast Whirling Axes. While attacking, Troll Warlord ignores taunts. Fear and Hypnosis prevent them from attacking and cause conflicting movement. When no enemies are nearby, they become controllable again, until a new visible enemy enters the search radius.",
+        "While attacking, Troll Warlord ignores taunts. Fear and Hypnosis prevent them from attacking and cause conflicting movement.",
         "When no enemies are nearby, they become controllable again, until a new visible enemy enters the search radius.",
         "Prevents Troll Warlord from dying by setting his minimum health to 1. This means he cannot die to damage, not even damage flagged as HP removal, so that it prevents him from dying to False Promise's delayed damage. Does not protect him against a lethal Culling Blade, or the expiring of Wraith Delay. Stops Ice Blast from shattering Troll Warlord when in Battle Trance while below the shatter threshold.",
         "This means he cannot die to damage, not even damage flagged as HP removal, so that it prevents him from dying to False Promise's delayed damage.",
         "Does not protect him against a lethal Culling Blade, or the expiring of Wraith Delay.",
         "Stops Ice Blast from shattering Troll Warlord when in Battle Trance while below the shatter threshold.",
-        "Damage taken is technically not reduced, so any damage event still registers the full damage."
+        "Damage taken is technically not reduced, so any damage event still registers the full damage.",
+        "The Battle Trance strong dispel talent turns the basic dispel into a strong dispel. Also allows Battle Trance to be cast while stunned, cycloned, slept, hidden, or during Forced Movement. Does not allow it from being cast while silenced, taunted, hexed or prevented from acting. Troll Warlord is unable to ⇧ Shift-queue this ability upon learning the talent.",
+        "Also allows Battle Trance to be cast while stunned, cycloned, slept, hidden, or during Forced Movement.",
+        "Does not allow it from being cast while silenced, taunted, hexed or prevented from acting.",
+        "Troll Warlord is unable to ⇧ Shift-queue this ability upon learning the talent."
       ],
       "mana": "150",
       "hotKey": "R",
@@ -267,8 +272,7 @@
         "Self Move Speed Bonus: 25%\/30%\/35%",
         "Self Attack Speed Bonus: 140\/170\/200",
         "Duration: 6.5 (TagTalent 8.5)",
-        "Grants a new ability: Rampage.",
-        "An adrenaline rush of pure hatred quickens your blades."
+        "Grants a new ability: Rampage."
       ],
       "itemBehaviour": [],
       "legacyKey": "R",

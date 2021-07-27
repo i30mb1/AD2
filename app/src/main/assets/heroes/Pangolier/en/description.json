@@ -41,16 +41,17 @@
         "After the dash, Pangolier performs 4 slashes towards the targeted direction. Slashes in 0.1-second intervals, starting immediately upon reaching the target point, taking 0.3 seconds in total.",
         "Slashes in 0.1-second intervals, starting immediately upon reaching the target point, taking 0.3 seconds in total.",
         "During the dash and the 4 slashes, Pangolier is stunned, and therefore unable to act.",
-        "Causes Pangolier to perform instant attacks on all hit enemies. These instant attacks can proc any attack modifiers (including Lucky Shot) and on-hit effects normally. They have True Strike, and completely ignore disarms. Procs Echo Sabre on all hit targets without putting the item on cooldown. Cleave effects are based on the hit enemies position, damaging a trapezoid area the opposite direction where the attacks came from. Despite the audio, the slashes do not hit ethereal units, so that attack modifiers may not proc. Also applies an instant attack on each enemy Pangolier directly dashes through.",
+        "Causes Pangolier to perform instant attacks on all hit enemies. These instant attacks can proc any attack modifiers (including Lucky Shot) and on-hit effects normally. They have True Strike, and completely ignore disarms. Procs Echo Sabre on all hit targets without putting the item on cooldown. Swashbuckle does not trigger damage block. Cleave effects are based on the hit enemies position, damaging a trapezoid area the opposite direction where the attacks came from. Despite the audio, the slashes do not hit ethereal units, so that attack modifiers may not proc. Also applies an instant attack on each enemy Pangolier directly dashes through.",
         "These instant attacks can proc any attack modifiers (including Lucky Shot) and on-hit effects normally. They have True Strike, and completely ignore disarms.",
         "Procs Echo Sabre on all hit targets without putting the item on cooldown.",
+        "Swashbuckle does not trigger damage block.",
         "Cleave effects are based on the hit enemies position, damaging a trapezoid area the opposite direction where the attacks came from.",
         "Despite the audio, the slashes do not hit ethereal units, so that attack modifiers may not proc.",
         "Also applies an instant attack on each enemy Pangolier directly dashes through.",
         "Sets Pangolier's damage to the given values. This means attack damage bonuses and reductions are completely ignored. Items which add a flat attack damage bonus on proc (e.g. Skull Basher or Javelin) still apply their damage.",
         "Items which add a flat attack damage bonus on proc (e.g. Skull Basher or Javelin) still apply their damage.",
-        "All slashes together can deal up to 96\/168\/240\/312 (TagTalent 216\/288\/360\/432) damage per hit enemy (before reductions). The damage increasing talent immediately updates the damage of the remaining slashes during an active cast.",
-        "The damage increasing talent immediately updates the damage of the remaining slashes during an active cast.",
+        "All slashes together can deal up to 96\/168\/240\/312 (TagTalent 216\/288\/360\/432) damage per hit enemy (before reductions). The damage increasing talent immediately updates the remaining slashes of the current cast of Swashbuckle.",
+        "The damage increasing talent immediately updates the remaining slashes of the current cast of Swashbuckle.",
         "The slashes can hit units up to 1125 (TagTalent 1525) range away from Pangolier after the dash. With the cast range, slash range and slash width, it can hit units up to 1975 (TagTalent 2375) range away.",
         "With the cast range, slash range and slash width, it can hit units up to 1975 (TagTalent 2375) range away."
       ],
@@ -66,8 +67,7 @@
         "Slash Width: 125",
         "Damage per Slash: 24\/42\/60\/78 (TagTalent 54\/72\/90\/108)",
         "Number of Slashes: 4",
-        "Slash Interval: 0.1",
-        "The Pangolier's blade is even nimbler than his tongue."
+        "Slash Interval: 0.1"
       ],
       "itemBehaviour": [],
       "legacyKey": "W",
@@ -86,6 +86,8 @@
         "The actual length of the jump depends on the terrain. This means jumping onto a higher\/lower ground results in a shorter\/longer jump. This does not affect the jump distance.",
         "The area damage hits all enemies within range, but the buff only counts hit heroes. Does not count illusions for the buff, but does count clones. Treats creep-heroes as creeps.",
         "Does not count illusions for the buff, but does count clones. Treats creep-heroes as creeps.",
+        "Applies generic incoming damage reduction on Pangolier. Stacks additively with other sources of generic incoming damage manipulation. The reduction affects all damage Pangolier takes that is not flagged as HP removal.",
+        "The reduction affects all damage Pangolier takes that is not flagged as HP removal.",
         "This is how much damage reduction Pangolier has with a certain amount of heroes hit on each level. Level 1: 12%\/24%\/36%\/48%\/60% Level 2: 14%\/28%\/42%\/56%\/70% Level 3: 16%\/32%\/48%\/64%\/80% Level 4: 18%\/36%\/54%\/72%\/90%",
         "Level 1: 12%\/24%\/36%\/48%\/60%",
         "Level 2: 14%\/28%\/42%\/56%\/70%",
@@ -97,13 +99,13 @@
         "With three enemies hit, the shields are bigger and gain a light yellow flame-like effect.",
         "With four or more enemies hit, the yellow flame gets much stronger.",
         "When recast while still having the buff from a previous cast, it refreshes, and the damage resistance updates if more enemy heroes were hit, but not if less were hit.",
-        "If Pangolier is stunned mid jump, he will not apply the damage or gain the damage resistance buff upon landing, but the skill will still go on cooldown.",
-        "During Rolling Thunder and Roll Up, Shield Crash only moves on the z axis (vertical movement), and does not move him on the x and y axis (horizontal movement). However, due to how vertical and horizontal movement stack with each other, it does not interfere with abilities which move Pangolier on the x and y axis. This means when cast during Rolling Thunder, he effectively jumps in an arc, using the height of the jump and the velocity of Rolling Thunder. The cast backswing increases to 0.54 during Rolling Thunder.",
-        "However, due to how vertical and horizontal movement stack with each other, it does not interfere with abilities which move Pangolier on the x and y axis.",
+        "If Pangolier is stunned mid jump, he does not apply the damage or gain the damage resistance buff upon landing.",
+        "During Rolling Thunder and Roll Up, Shield Crash only moves on the z axis (vertical movement), and does not move him on the x and y axis (horizontal movement). Due to how vertical and horizontal movement stack with each other, it does not interfere with abilities which move Pangolier on the x and y axis. This means when cast during Rolling Thunder, he effectively jumps in an arc, using the height of the jump and the velocity of Rolling Thunder. When Rolling Thunder or Roll Up expire during the jump of Shield Crash, their duration gets expanded based on how long the jump takes, so that the velocity is kept until landing. However, when Rolling Thunder or Roll Up are ended manually during the jump, via their sub-abilities, the velocity is lost, so that Pangolier falls straight down. Has a cast backswing of 0.54 during Rolling Thunder and Roll Up.",
+        "Due to how vertical and horizontal movement stack with each other, it does not interfere with abilities which move Pangolier on the x and y axis.",
         "This means when cast during Rolling Thunder, he effectively jumps in an arc, using the height of the jump and the velocity of Rolling Thunder.",
-        "The cast backswing increases to 0.54 during Rolling Thunder.",
-        "When Rolling Thunder and Roll Up expires during the jump of Shield Crash, its duration gets expanded based on how long the jump takes, so that the velocity is kept until landing. However, when ending Rolling Thunder with the Stop Rolling sub-ability, the velocity is lost, so that Pangolier and falls straight down.",
-        "However, when ending Rolling Thunder with the Stop Rolling sub-ability, the velocity is lost, so that Pangolier and falls straight down.",
+        "When Rolling Thunder or Roll Up expire during the jump of Shield Crash, their duration gets expanded based on how long the jump takes, so that the velocity is kept until landing.",
+        "However, when Rolling Thunder or Roll Up are ended manually during the jump, via their sub-abilities, the velocity is lost, so that Pangolier falls straight down.",
+        "Has a cast backswing of 0.54 during Rolling Thunder and Roll Up.",
         "With Aghanim's Scepter, Swashbuckle of the current level is applied instantly upon cast, not upon landing. The location of the effect is set upon cast as well, and does not follow Pangolier. The angle is based on Pangolier's facing angle, with the other Swashbuckles being 90° apart from each other.",
         "The location of the effect is set upon cast as well, and does not follow Pangolier.",
         "The angle is based on Pangolier's facing angle, with the other Swashbuckles being 90° apart from each other."
@@ -116,7 +118,7 @@
       "params": [
         "Cast Animation: 0+0.37",
         "Radius: 500",
-        "Damage: 90\/130\/260\/300",
+        "Damage: 90\/160\/230\/300",
         "Damage Reduction per Hero: 12%\/14%\/16%\/18%",
         "Jump Distance: 225",
         "Damage Reduction Duration: 10",
@@ -125,8 +127,7 @@
         "Number of Swashbuckle Slashes: 2",
         "Swashbuckle Angle: 90°",
         "Causes Shield Crash to cast a 2-attack Swashbuckle in every 90 degrees around your hero.",
-        "When cast while rooted or leashed, it gets cast without moving the caster forwards.",
-        "Only in the midst of his enemies does the Pangolier truly thrive."
+        "When cast while rooted or leashed, it gets cast without moving the caster forwards."
       ],
       "itemBehaviour": [],
       "legacyKey": "C",
@@ -152,8 +153,7 @@
         "Proc Chance: 17%",
         "Move Speed Slow: 35%",
         "Armor Reduction: 3\/4\/5\/6",
-        "Duration: 2\/3\/4\/5",
-        "The Pangolier's blade is guided more often by whim than reason."
+        "Duration: 2\/3\/4\/5"
       ],
       "itemBehaviour": [],
       "legacyKey": "E",
@@ -179,7 +179,7 @@
         "Roll Up can be cast during Rolling Thunder without interrupting it. When done, causes Rolling Thunder to stop rolling and stop applying its area effects. Its duration gets paused as well. Casting Rolling Thunder during Roll Up immediately cancels Roll Up.",
         "When done, causes Rolling Thunder to stop rolling and stop applying its area effects. Its duration gets paused as well.",
         "Casting Rolling Thunder during Roll Up immediately cancels Roll Up.",
-        "Casting any other abilities, or any items during Roll Up cancels it immediately."
+        "Casting any other ability, or any item during Roll Up cancels it immediately."
       ],
       "mana": "50",
       "hotKey": "D",
@@ -226,7 +226,7 @@
       ],
       "notes": [
         "Applies spell immunity for the duration and a basic dispel upon cast.",
-        "During Rolling Thunder, the caster is not disabled, they can and do not need to turn to cast abilities or items.",
+        "During Rolling Thunder, the caster does not need to turn to cast abilities or items.",
         "For better readability, the turn rate during Rolling Thunder is given as degrees per second, instead of radians per 0.03 seconds. 120° per second equal a turn rate of 0.063. The turn rate is boosted by an additional 165° upon beginning to roll, upon hitting a cliff or wall, or upon landing after casting Shield Crash. This boost lasts for 0.25 seconds. It effectively increases the turn rate to 0.149 for that time.",
         "120° per second equal a turn rate of 0.063.",
         "The turn rate is boosted by an additional 165° upon beginning to roll, upon hitting a cliff or wall, or upon landing after casting Shield Crash.",
@@ -261,8 +261,7 @@
         "Enemy Bounce Duration: 0.4",
         "Enemy Stun Duration: 1\/1.25\/1.5",
         "Rolling Thunder Duration: 10 (TagTalent 13)",
-        "Grants a new ability: Roll Up.",
-        "Where his ancestors sought only refuge, the Pangolier saw opportunity\u2026"
+        "Grants a new ability: Roll Up."
       ],
       "itemBehaviour": [],
       "legacyKey": "R",
@@ -283,8 +282,7 @@
       "description": "Halt!",
       "spellName": "Stop Rolling",
       "params": [
-        "Cast Animation: 0+0",
-        "Donté Panlin stops when he pleases."
+        "Cast Animation: 0+0"
       ],
       "itemBehaviour": [],
       "legacyKey": "R",

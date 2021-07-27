@@ -3,7 +3,8 @@
     {
       "notes": [
         "The strength talent effectively grants Abaddon 160 health, 0.8 health regeneration, and 8 attack damage.",
-        "This attack damage talent is added as raw attack damage, so it does not benefit illusions, and is not affected by most percentage-based damage increasing or reducing effects.",
+        "This attack damage talent is added as raw attack damage. Does not benefit illusions and is not affected by most percentage-based damage increasing or reducing effects.",
+        "Does not benefit illusions and is not affected by most percentage-based damage increasing or reducing effects.",
         "The armor talent does not benefit illusions.",
         "The cooldown reduction talent stacks multiplicatively with other sources cooldown reduction."
       ],
@@ -67,8 +68,7 @@
         "Causes Mist Coil to apply a Curse of Avernus stack on enemies. Lowers Cooldown for Mist Coil by 1.",
         "Can be cast on Spell Immune allies. Cannot be cast on spell immune enemies. Self damage pierces spell immunity.",
         "Blocked upon impact, as primary and secondary target, therefore, Abaddon still loses health.",
-        "Can be disjointed by enemies and allies.",
-        "A mysterious vapor from the Font of Avernus now infuses the breath of Abaddon, who releases it at will."
+        "Can be disjointed by enemies and allies."
       ],
       "itemBehaviour": [],
       "legacyKey": "D",
@@ -108,8 +108,7 @@
         "Burst Area Damage: 110\/140\/170\/200 (TagTalent 290\/320\/350\/380)",
         "Duration: 15",
         "Causes Aphotic Shield to apply a Curse of Avernus stack on enemies. Lowers Cooldown for Aphotic Shield by 1.",
-        "Shield persists if it was placed before spell immunity.",
-        "The powers of the black mist rise to absorb attacks like the black mist absorbs light."
+        "Shield persists if it was placed before spell immunity."
       ],
       "itemBehaviour": [],
       "legacyKey": "T",
@@ -145,8 +144,7 @@
         "Curse Debuff Duration: 4.5",
         "Speed Buff Duration: 4",
         "Increases base slow by 10%.",
-        "Disables placing the initial debuff, or increasing its counter. If already cursed, prevents allies from gaining the speed buff upon attacking the cursed enemy.",
-        "While the baptized draw strength from the Font, the gifts of Avernus are debilitating to the uninitiated."
+        "Disables placing the initial debuff, or increasing its counter. If already cursed, prevents allies from gaining the speed buff upon attacking the cursed enemy."
       ],
       "itemBehaviour": [],
       "legacyKey": "F",
@@ -194,13 +192,12 @@
       "params": [
         "Cast Animation: 0+0",
         "Passive Health Threshold: 400",
-        "Duration: 4\/5\/6 (TagTalent 7\/8\/9)",
+        "Duration: 4\/5\/6 (TagAghanim 7\/8\/9)",
         "Radius: 1600",
         "Mist Coil Trigger Health Threshold: 525",
         "Aura Linger Duration: 0.5",
         "Increases duration. While Borrowed Time is active, anytime an ally takes more than 525 damage while within 1600 range of Abaddon, an individual Mist Coil will automatically fire towards that ally.",
-        "The passive activating when below 400 health is disabled. The ability to fire Mist Coils at allies is not disabled.",
-        "The most unnatural of all the gifts of the Font of Avernus, this power defies mortal understanding. What should hurt, instead heals; and what should kill gives strength anew."
+        "The passive activating when below 400 health is disabled. The ability to fire Mist Coils at allies is not disabled."
       ],
       "itemBehaviour": [],
       "legacyKey": "B",

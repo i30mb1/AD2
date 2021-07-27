@@ -40,13 +40,27 @@
       ],
       "notes": [
         "Plasma Field interrupts Razor's channeling abilities upon cast.",
-        "Plasma Field is centered on and follows Razor, it expands and retracts at a speed of 636, taking 1.1 seconds to fully expand. Provides a 700 radius flying vision during the 2.2 second effect, following Razor and leaving a trail of vision which lasts 2 seconds.",
-        "Provides a 700 radius flying vision during the 2.2 second effect, following Razor and leaving a trail of vision which lasts 2 seconds.",
-        "Plasma Field's effect area is actually a 200 radius ring, which is right in front of the actual visible ring. This means that upon cast, the effect instantly hits units within 200 radius, before the visible ring hits. Upon expanding, it can hit units up to 900 range away. Upon retracting, the effects hits after the ring passed the units already. The damage and slow are applied upon expanding and upon retracting, so each enemy can be hit twice. The slow debuff fully stacks.",
-        "This means that upon cast, the effect instantly hits units within 200 radius, before the visible ring hits.",
-        "Upon expanding, it can hit units up to 900 range away.",
-        "Upon retracting, the effects hits after the ring passed the units already.",
-        "The damage and slow are applied upon expanding and upon retracting, so each enemy can be hit twice. The slow debuff fully stacks."
+        "Plasma Field expands and retracts at a speed of 636, taking a total of 2.2 seconds to fully expand and retract.",
+        "Plasma Field is centered on Razor for the full duration. Provides 700 radius flying vision during the 2.2-second effect, following Razor and leaving a trail of vision which lasts 2 seconds.",
+        "Provides 700 radius flying vision during the 2.2-second effect, following Razor and leaving a trail of vision which lasts 2 seconds.",
+        "Plasma Field's effect area is a 100 range wide annulus, a ring shape. The ring starts 105 range away from Razor and expands for up to 700 range, reaching a total distance of 805. Together with the damage width, it can hit units up to 905 range away.",
+        "The ring starts 105 range away from Razor and expands for up to 700 range, reaching a total distance of 805.",
+        "Together with the damage width, it can hit units up to 905 range away.",
+        "The visual effect starts at Razor's location and expands for the same distance. This means the visual effect is 105 range behind the damaging ring, and not centered on it.",
+        "This means the visual effect is 105 range behind the damaging ring, and not centered on it.",
+        "The damage and slow are applied upon expanding and upon retracting, so each enemy can be hit twice. The slow debuff fully stacks. This means it can deal up to 70\/80\/90\/100 - 160\/230\/300\/370 damage and slow for up to 10% - 50%\/60%\/70%\/80% movement speed.",
+        "This means it can deal up to 70\/80\/90\/100 - 160\/230\/300\/370 damage and slow for up to 10% - 50%\/60%\/70%\/80% movement speed.",
+        "The slow and damage values are based on how far the ring traveled, reaching max values at 805 range. 105 Distance: 35\/40\/45\/50 damage and 5%\/5%\/5%\/5% movement speed slow. 205 Distance: 41\/51\/60\/69 damage and 8%\/9%\/9%\/10% movement speed slow. 305 Distance: 48\/61\/75\/89 damage and 11%\/12%\/14%\/15% movement speed slow. 405 Distance: 54\/72\/90\/108 damage and 14%\/16%\/18%\/20% movement speed slow. 505 Distance: 61\/83\/105\/127 damage and 16%\/19%\/22%\/25% movement speed slow. 605 Distance: 67\/94\/120\/146 damage and 19%\/23%\/26%\/30% movement speed slow. 705 Distance: 74\/104\/135\/166 damage and 22%\/26%\/31%\/35% movement speed slow. 805 Distance: 80\/115\/150\/185 damage and 25%\/30%\/35%\/40% movement speed slow. 905 Distance: 80\/115\/150\/185 damage and 25%\/30%\/35%\/40% movement speed slow.",
+        "105 Distance: 35\/40\/45\/50 damage and 5%\/5%\/5%\/5% movement speed slow.",
+        "205 Distance: 41\/51\/60\/69 damage and 8%\/9%\/9%\/10% movement speed slow.",
+        "305 Distance: 48\/61\/75\/89 damage and 11%\/12%\/14%\/15% movement speed slow.",
+        "405 Distance: 54\/72\/90\/108 damage and 14%\/16%\/18%\/20% movement speed slow.",
+        "505 Distance: 61\/83\/105\/127 damage and 16%\/19%\/22%\/25% movement speed slow.",
+        "605 Distance: 67\/94\/120\/146 damage and 19%\/23%\/26%\/30% movement speed slow.",
+        "705 Distance: 74\/104\/135\/166 damage and 22%\/26%\/31%\/35% movement speed slow.",
+        "805 Distance: 80\/115\/150\/185 damage and 25%\/30%\/35%\/40% movement speed slow.",
+        "905 Distance: 80\/115\/150\/185 damage and 25%\/30%\/35%\/40% movement speed slow.",
+        ""
       ],
       "mana": "125",
       "hotKey": "Q",
@@ -56,13 +70,12 @@
       "params": [
         "Cast Animation: 0+0",
         "Max Extension Radius: 700",
-        "Damage Width: 200",
+        "Damage Width: 100",
         "Min Damage: 35\/40\/45\/50",
         "Max Damage: 80\/115\/150\/185",
         "Min Move Speed Slow: 5%",
         "Max Move Speed Slow: 25%\/30%\/35%\/40%",
-        "Slow Duration: 1.5",
-        "The Lightning Revenant rules the Underscape with plasmatic power."
+        "Slow Duration: 1.5"
       ],
       "itemBehaviour": [],
       "legacyKey": "F",
@@ -75,13 +88,13 @@
         "Affects Enemy Heroes \/ Self"
       ],
       "notes": [
-        "Static Link is broken when either unit dies or the link gets stretched more than 800 range. Nothing else can break the link. The distance between Razor and the target is checked right before each damage steal interval. If the distance is greater upon check, the link breaks. Since the link uses the ability's cast range, cast range increasing effects increase the link distance as well.",
+        "Static Link is broken when either unit dies or the link gets stretched more than 800 range. Nothing else can break the link. The distance between Razor and the target is checked right before each damage steal interval. If the distance is greater upon check, the link breaks. Since the link uses the ability's cast range, cast range increasing effects increase the link break distance as well.",
         "The distance between Razor and the target is checked right before each damage steal interval. If the distance is greater upon check, the link breaks.",
-        "Since the link uses the ability's cast range, cast range increasing effects increase the link distance as well.",
-        "Static Link provides shared vision over the target while draining. Keeps stealing damage even if the target's damage has reached 0.",
-        "Keeps stealing damage even if the target's damage has reached 0.",
-        "Drains 1.75\/3\/4.25\/5.5 (TagTalent 3\/4.25\/5.5\/6.75) damage in 0.25-second intervals, starting 0.25 seconds after cast, resulting in 20\/24\/28\/32 instances. It can steal up to 35\/72\/119\/176 (TagTalent 60\/102\/154\/216) damage when draining for the full duration.",
-        "It can steal up to 35\/72\/119\/176 (TagTalent 60\/102\/154\/216) damage when draining for the full duration.",
+        "Since the link uses the ability's cast range, cast range increasing effects increase the link break distance as well.",
+        "Static Link provides shared vision over the target while draining.",
+        "Static Link keeps stealing damage even if the target's damage has reached 0.",
+        "Drains 1.75\/3\/4.25\/5.5 (TagTalent 3\/4.25\/5.5\/6.75) damage in 0.25-second intervals, starting 0.25 seconds after cast, resulting in 20\/24\/28\/32 instances. Can steal up to 35\/72\/119\/176 (TagTalent 60\/102\/154\/216) damage when draining for the full duration.",
+        "Can steal up to 35\/72\/119\/176 (TagTalent 60\/102\/154\/216) damage when draining for the full duration.",
         "Static Link orders Razor to attack the target upon cast, and upon each move order. Allows Razor to move while attacking the Static Link target. To not attack the target while moving, a unit-targeted order, or a ground-targeted order that is not a move or attack order must be given to Razor.",
         "Allows Razor to move while attacking the Static Link target.",
         "To not attack the target while moving, a unit-targeted order, or a ground-targeted order that is not a move or attack order must be given to Razor.",
@@ -101,8 +114,7 @@
         "Link Break Distance Buffer: 250",
         "Attack Damage Stolen per Second: 7\/12\/17\/22 (TagTalent 12\/17\/22\/27)",
         "Link Duration: 5\/6\/7\/8",
-        "Buff Duration: 15\/16\/17\/18",
-        "Razor's polarity channels electricity into his being, draining the power of his opposition."
+        "Buff Duration: 15\/16\/17\/18"
       ],
       "itemBehaviour": [],
       "legacyKey": "C",
@@ -116,10 +128,10 @@
         "Damage Magical"
       ],
       "notes": [
-        "With Aghanim's Shard, can only proc when an enemy unit lands an attack on Razor, regardless of distance. This means it cannot proc on missed attacks. Does not proc on attacks from buildings and wards. Can be procced by allied attacks. Doing so hits the proccing ally, but it still chooses enemies as secondary targets. Also triggers on every single-target ability that is cast on Razor, including ground-targeted spells with unit-targeting option. This means it neither follows the Spell Reflection list, nor the Spell Block list. Projectile-based abilities trigger it on launch, not on impact.",
+        "With Aghanim's Shard, can only proc when an enemy unit lands an attack on Razor, regardless of distance. This means it cannot proc on missed attacks. Does not proc on attacks from buildings and wards. Can be procced by allied attacks. Doing so hits the proccing ally, but it still chooses enemies as secondary targets. Also triggers on every single-target ability that is cast on Razor, including ground-targeted abilities with unit-targeting option. This means it neither follows the Spell Reflection list, nor the Spell Block list. Projectile-based abilities trigger it on launch, not on impact.",
         "Does not proc on attacks from buildings and wards.",
         "Can be procced by allied attacks. Doing so hits the proccing ally, but it still chooses enemies as secondary targets.",
-        "Also triggers on every single-target ability that is cast on Razor, including ground-targeted spells with unit-targeting option.",
+        "Also triggers on every single-target ability that is cast on Razor, including ground-targeted abilities with unit-targeting option.",
         "This means it neither follows the Spell Reflection list, nor the Spell Block list. Projectile-based abilities trigger it on launch, not on impact.",
         "Storm Surge's effect is applied after the triggering ability takes effect. This means when the casting unit has low enough health to die to it, the triggering ability still takes effect.",
         "This means when the casting unit has low enough health to die to it, the triggering ability still takes effect.",
@@ -146,8 +158,7 @@
         "Causes Storm Surge to have a 18% chance when attacked, and always when targeted with a spell, to release a forked lightning that strikes the target and up to 2 other enemies. Deals 150 damage and slows them by 50% for 1.5 seconds.",
         "Forked lightning does not trigger if the source is spell immune. Does not target spell immune units as secondary targets.",
         "Movement speed bonus and Forked Lightnings are disabled by Break.",
-        "Movement speed bonus works for illusions. Forked lightnings cannot be released by illusions.",
-        "Merely approaching the Lightning Revenant is rewarded with shock therapy."
+        "Movement speed bonus works for illusions. Forked lightnings cannot be released by illusions."
       ],
       "itemBehaviour": [],
       "legacyKey": "N",
@@ -166,10 +177,6 @@
         "If there are multiple units with the same lowest health in range, Eye of the Storm chooses between them randomly.",
         "The storm prioritizes enemies which have the Static Link vision modifier on them, striking them over any other unit when within range, regardless of health values.",
         "When there are multiple enemies with the vision modifier within the radius, the storm chooses between them randomly on each strike.",
-        "With Aghanim's Scepter, only one of the strikes will hit the enemy with the vision modifier. The strikes can never hit the same target at the same time. If two enemies have the vision modifier, one strike goes for one of them and the other strike goes for the other. Prioritizes units over buildings and fully ignore filler buildings. Does not lower the armor of buildings.",
-        "If two enemies have the vision modifier, one strike goes for one of them and the other strike goes for the other.",
-        "Prioritizes units over buildings and fully ignore filler buildings.",
-        "Does not lower the armor of buildings.",
         "The strikes are neither regular attacks nor instant attacks, so they fully ignore effects such as evasion and Damage Block. This also means that they cannot trigger the on-attack effects of Counter Helix, Moment of Courage and Reactive Armor or break enemy Tranquil Boots. The strikes first deal their damage and then apply the armor reduction.",
         "This also means that they cannot trigger the on-attack effects of Counter Helix, Moment of Courage and Reactive Armor or break enemy Tranquil Boots.",
         "The strikes first deal their damage and then apply the armor reduction.",
@@ -177,7 +184,12 @@
         "Does not affect Couriers, Roshan, invisible units and units in the Fog of War.",
         "Eye of the Storm can strike up to 42\/50\/60 (TagTalent 50\/60\/75) times and deal up to 2520\/3750\/5400 (TagTalent 3000\/4500\/6750) damage per target (before reductions).",
         "When Razor turns invisible, Eye of the Storm and its strike turn invisible as well, but still strike nearby enemies without them seeing or hearing them.",
-        "Eye of the Storm immediately ends when Razor dies."
+        "Eye of the Storm immediately ends when Razor dies.",
+        "With Aghanim's Scepter, does not reduce the armor of buildings, only the damage is applied. Prioritizes units over buildings and fully ignores filler buildings. It also allows it to strike 2 targets at the same time on each interval. An enemy may only be hit by one strike at a time, so a lone target is not hit multiple times per instance. This also goes for the level 25 talent, which allows it to strike 2 targets as well, or 3, together with Aghanim's Scepter.",
+        "Prioritizes units over buildings and fully ignores filler buildings.",
+        "It also allows it to strike 2 targets at the same time on each interval.",
+        "An enemy may only be hit by one strike at a time, so a lone target is not hit multiple times per instance.",
+        "This also goes for the level 25 talent, which allows it to strike 2 targets as well, or 3, together with Aghanim's Scepter."
       ],
       "mana": "100\/150\/200",
       "hotKey": "R",
@@ -192,8 +204,7 @@
         "Damage per Strike: 60\/75\/90",
         "Armor Reduction per Strike: 1",
         "Duration: 30",
-        "Causes Eye of the Storm to strike two different units instead of one and can damage structures. When striking buildings, it will only target towers, barracks, and the Ancient.",
-        "Ride the lightning."
+        "Causes Eye of the Storm to strike two different units instead of one and can damage structures. When striking buildings, it will only target towers, barracks, and the Ancient."
       ],
       "itemBehaviour": [],
       "legacyKey": "E",

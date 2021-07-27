@@ -20,8 +20,8 @@
         },
         {
           "talentLvl": "15",
-          "talentLeft": "+25 Attack Speed",
-          "talentRight": "+250 Health"
+          "talentLeft": "+30 Attack Speed",
+          "talentRight": "+275 Health"
         },
         {
           "talentLvl": "10",
@@ -38,15 +38,14 @@
       ],
       "notes": [
         "Reflection slows all visible enemy heroes and clones, excluding illusions and creep-heroes within 475 radius, and creates illusions of them.",
-        "Reflection illusions are invulnerable, untargetable, and uncontrollable. These created illusions have 550 movement speed, unobstructed movement and are spell immune. They also provide vision equal to the vision range of their target.",
-        "These created illusions have 550 movement speed, unobstructed movement and are spell immune.",
+        "Reflection illusions are spell immune, invulnerable, hidden untargetable, and uncontrollable, have 550 movement speed and unobstructed movement. They also provide vision equal to the vision range of their target.",
         "They also provide vision equal to the vision range of their target.",
         "The illusions spawn 108 range away from their targets if the hero has a collision size of 24, and 72 if the collision size is 8. They appear either north, east, south or west from their targets.",
         "The illusions attempt to attack their targets. If they cannot be attacked, they follow the targets close enough until they can be attacked again.",
         "The illusions do not lose track when their targets turn invisible, hidden or move in the Fog of War. However, they do need vision to attack.",
         "Just like other illusions, Reflection illusions bestow auras and can make use of other passive abilities which work for illusions.",
-        "The movement speed slow debuffs and the illusions are bound to each other. Dispelling the movement speed slow removes all the Reflection illusions of that unit as well.",
-        "The movement speed slow of multiple casts does not stack, but each cast creates an illusion for each enemy hero within range. Although the slow duration gets refreshed, each created illusion has its separate duration, meaning new casts do not refresh the duration of previous illusions.",
+        "The slow debuffs and the illusions are bound to each other. Dispelling the slow removes all the Reflection illusions of that unit as well.",
+        "The slow of multiple casts does not stack, but each cast creates an illusion for each enemy hero within range. Although the slow duration gets refreshed, each created illusion has its separate duration, meaning new casts do not refresh the duration of previous illusions.",
         "Although the slow duration gets refreshed, each created illusion has its separate duration, meaning new casts do not refresh the duration of previous illusions.",
         "Has a cast backswing of 1.66 during Metamorphosis."
       ],
@@ -62,8 +61,7 @@
         "Move Speed Slow: 15%\/20%\/25%\/30%",
         "Illusion Damage Dealt: 55%\/70%\/85%\/100%",
         "Duration: 5",
-        "Slow and illusion persist if debuff was placed before spell immunity and when not dispelled.",
-        "In the fractal prison of Foulfell, Terrorblade learned the truth of this old tale: you are your own worst enemy. Now it is a lesson he teaches others."
+        "Slow and illusion persist if debuff was placed before spell immunity and when not dispelled."
       ],
       "itemBehaviour": [],
       "legacyKey": "C",
@@ -90,8 +88,7 @@
         "Number of Illusions: 1",
         "Illusion Damage Dealt: 30%\/40%\/50%\/60%",
         "Illusion Damage Taken: 320%",
-        "Duration: 34 (TagTalent 42)",
-        "There's only one thing more dangerous than facing Terrorblade. Facing MORE Terrorblades!"
+        "Duration: 34 (TagTalent 42)"
       ],
       "itemBehaviour": [],
       "legacyKey": "E",
@@ -104,14 +101,14 @@
         "Affects Self"
       ],
       "notes": [
-        "During the transformation, Terrorblade cannot do anything. The transformation cannot be interrupted. This applies to transforming illusions as well.",
-        "The transformation cannot be interrupted. This applies to transforming illusions as well.",
+        "During the transformation, Terrorblade cannot do anything. Cannot be interrupted. This applies to transforming illusions as well.",
+        "This applies to transforming illusions as well.",
         "The bonus damage is added to Terrorblade and his illusions' base attack damage.",
         "Increases Terrorblade's base attack damage to 67\u201273\/82\u201288\/97\u2012103\/112\u2012118 and attack range to 490\/510\/530\/550 (TagTalent 730\/750\/770\/790).",
         "It also grants Terrorblade ranged unit properties, so all items with ranged and melee differences (e.g. Manta Style) use their ranged values.",
         "Terrorblade's attack projectiles travel at a speed of 900.",
         "The aura affects illusions under Terrorblade's control including invulnerable and hidden illusions, except for the illusions from an enemy Reflection.",
-        "The transformation aura's buff lingers for 40\/44\/48\/52 seconds.",
+        "The transformation aura's buff lingers for 1 seconds.",
         "While transformed, Terrorblade does not leave footprints behind.",
         "Metamorphosis is fully canceled on death."
       ],
@@ -127,8 +124,7 @@
         "Attack Damage Bonus: 15\/30\/45\/60",
         "Attack Range Bonus: 340\/360\/380\/400 (TagTalent 580\/600\/620\/640)",
         "Aura Linger Duration: 1",
-        "Metamorphosis Duration: 40\/44\/48\/52",
-        "Temper, temper. The rage rises up and takes control. Meet Terrorblade's own worst self."
+        "Metamorphosis Duration: 40\/44\/48\/52"
       ],
       "itemBehaviour": [],
       "legacyKey": "T",
@@ -171,12 +167,12 @@
       ],
       "notes": [
         "Requires Aghanim's Scepter to be unlocked.",
-        "If cast while in regular form, transforms Terrorblade into his demon form for 10 seconds, based on Metamorphosis's current level. If cast while already in Metamorphosis, Terror Wave extends its duration by 10 seconds instead. The duration of multiple cast stacks, there is no limit to the duration increase. If Metamorphosis is not learnt, nothing happens.",
-        "If cast while already in Metamorphosis, Terror Wave extends its duration by 10 seconds instead.",
-        "The duration of multiple cast stacks, there is no limit to the duration increase.",
-        "If Metamorphosis is not learnt, nothing happens.",
-        "The wave is released 0.6 seconds after cast, starting at the original cast location. It travels outwards at a speed of 1000, taking 1.6 seconds to reach max radius. The wave is a thin ring expanding outwards. This means it can be avoided by teleporting towards Terrorblade over the ring.",
-        "It travels outwards at a speed of 1000, taking 1.6 seconds to reach max radius.",
+        "If cast while in regular form, transforms Terrorblade into his demon form for 10 seconds, based on Metamorphosis's current level. If cast while already in Metamorphosis, its duration gets extended by the same value instead. There is no limit to how often this can be done. Each cast increases the Metamorphosis duration. If Metamorphosis is not learnt, he does not transform.",
+        "If cast while already in Metamorphosis, its duration gets extended by the same value instead.",
+        "There is no limit to how often this can be done. Each cast increases the Metamorphosis duration.",
+        "If Metamorphosis is not learnt, he does not transform.",
+        "The wave is released 0.6 seconds after cast, starting at the original cast location. It does not follow Terrorblade.",
+        "It travels outwards at a speed of 1000, taking 1.6 seconds to reach max radius. The wave is a thin ring expanding outwards. This means it can be avoided by teleporting towards Terrorblade over the ring.",
         "The wave is a thin ring expanding outwards. This means it can be avoided by teleporting towards Terrorblade over the ring.",
         "Terror Wave's fear makes affected enemies run away from the caster, rather than make them run towards their team's fountain.",
         "The cast sound is global and audible to the enemy through the Fog of War.",
@@ -222,8 +218,7 @@
         "Min Health: 35%\/30%\/25%",
         "Grants a new ability: Terror Wave.",
         "Grants a new ability: Demon Zeal.",
-        "Can be cast on spell immune allies. Cannot be cast on spell immune enemies. When reflected, pierces spell immunity [?].",
-        "You didn't need that life, did you? The demon marauder steals that which you hold most dear."
+        "Can be cast on spell immune allies. Cannot be cast on spell immune enemies. When reflected, pierces spell immunity [?]."
       ],
       "itemBehaviour": [],
       "legacyKey": "R",
@@ -232,7 +227,7 @@
   ],
   "mainAttributes": {
     "attrStrengthInc": 1.7,
-    "attrStrength": 15.0,
+    "attrStrength": 16.0,
     "attrIntelligence": 19.0,
     "attrIntelligenceInc": 1.6,
     "attrAgilityInc": 4.8,
@@ -253,8 +248,8 @@
     },
     {
       "talentLvl": "15",
-      "talentLeft": "+25 Attack Speed",
-      "talentRight": "+250 Health"
+      "talentLeft": "+30 Attack Speed",
+      "talentRight": "+275 Health"
     },
     {
       "talentLvl": "10",

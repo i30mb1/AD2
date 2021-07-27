@@ -2,7 +2,8 @@
   "abilities": [
     {
       "notes": [
-        "This attack damage talent is added as raw attack damage, so it does not benefit illusions, and is not affected by most percentage-based damage increasing or reducing effects.",
+        "This attack damage talent is added as raw attack damage. Does not benefit illusions and is not affected by most percentage-based damage increasing or reducing effects.",
+        "Does not benefit illusions and is not affected by most percentage-based damage increasing or reducing effects.",
         "The cooldown reduction talent stacks multiplicatively with other sources cooldown reduction.",
         "The armor talent does not benefit illusions."
       ],
@@ -38,21 +39,21 @@
       "notes": [
         "Can directly be cast on any unit which is not a building or a ward and not invulnerable or hidden. ↓↓ Double-tapping automatically targets self.",
         "↓↓ Double-tapping automatically targets self.",
-        "Creates a planted tree on every 45°th of a 150 radius circle, resulting in 8 trees forming a ring and trapping the targeted unit. Trees created with Sprout act exactly like the other trees on the map. They block vision, pathing and interact with spells the same way. Sprouted trees have a different model and are smaller than other trees on the map and they do not have a dying animation. Tango heals for twice as long when targeting a Sprout tree.",
+        "Creates a planted tree on every 45°th of a 150 radius circle, resulting in 8 trees forming a ring and trapping the targeted unit. Trees created with Sprout act exactly like the other trees on the map. They block vision, pathing and interact with spells the same way. Sprout trees have a different model and are smaller than other trees on the map and they do not have a dying animation. Tango heals for twice as long when targeting a Sprout tree.",
         "Trees created with Sprout act exactly like the other trees on the map. They block vision, pathing and interact with spells the same way.",
-        "Sprouted trees have a different model and are smaller than other trees on the map and they do not have a dying animation.",
+        "Sprout trees have a different model and are smaller than other trees on the map and they do not have a dying animation.",
         "Tango heals for twice as long when targeting a Sprout tree.",
-        "Destroying one tree is enough to allow units to walk in and out of the Sprout of trees.",
+        "Destroying one tree is enough to allow units to walk in and out of the ring of trees.",
         "Sprout grants 500 range flying vision around the targeted point for its duration.",
         "Cannot be directly cast on ancient creeps and creep-heroes.",
-        "Units not controlled by any player do not try to path around the Sprout trees, but simply walk against them as if they are not there. This effectively causes them to get stuck, until they change directions (or when drawing aggro on them).",
-        "This effectively causes them to get stuck, until they change directions (or when drawing aggro on them).",
-        "With Aghanim's Shard, it causes Sprout trees summon Greater Treants upon getting destroyed. If Nature's Call is not learned, no Greater Treants are spawned. In Ability Draft, Nature's Call must be drafted as well for the Greater Treants to spawn. Only the first 2 trees of Sprout that get destroyed summon the Greater Treants. All remaining trees of that cast do not. It does not matter how the trees are destroyed, sprouted trees expiring summon them as well. If there are Greater Treants alive from a previous cast, they get instantly killed when the new ones are summoned.",
+        "Units not controlled by any player do not try to path around the Sprout trees, but simply walk against them as if they are not there. This effectively causes them to get stuck, until they change directions.",
+        "This effectively causes them to get stuck, until they change directions.",
+        "With Aghanim's Shard, Sprout trees summon Greater Treants upon getting destroyed. If Nature's Call is not learned, no Greater Treants are spawned. In Ability Draft, Nature's Call must be drafted as well for the Greater Treants to spawn. Only the first 2 trees of Sprout that get destroyed summon the Greater Treants. All remaining trees of that cast do not. It does not matter how the trees are destroyed, expiring Sprout trees summon them as well. If there are Greater Treants alive from a previous cast, they get instantly killed new ones are summoned.",
         "If Nature's Call is not learned, no Greater Treants are spawned.",
         "In Ability Draft, Nature's Call must be drafted as well for the Greater Treants to spawn.",
         "Only the first 2 trees of Sprout that get destroyed summon the Greater Treants. All remaining trees of that cast do not.",
-        "It does not matter how the trees are destroyed, sprouted trees expiring summon them as well.",
-        "If there are Greater Treants alive from a previous cast, they get instantly killed when the new ones are summoned."
+        "It does not matter how the trees are destroyed, expiring Sprout trees summon them as well.",
+        "If there are Greater Treants alive from a previous cast, they get instantly killed new ones are summoned."
       ],
       "mana": "70\/90\/110\/130",
       "hotKey": "Q",
@@ -67,8 +68,7 @@
         "Number of Greater Treants: 2",
         "Causes the first two trees destroyed with Sprout to summon Greater Treants. Can only have two Greater Treants alive.",
         "Cannot directly target spell immune enemies, targets ground instead. Can target spell immune allies.",
-        "Blocked fully only when directly targeted. Does not block when ground targeted.",
-        "Verdant overgrowth is a common ailment reported by Nature's Prophet's attackers."
+        "Blocked fully only when directly targeted. Does not block when ground targeted."
       ],
       "itemBehaviour": [],
       "legacyKey": "T",
@@ -94,8 +94,7 @@
       "spellName": "Teleportation",
       "params": [
         "Cast Animation: 3+0",
-        "Cast Range: Global",
-        "The Prophet keeps his sentinel over the forest, protecting it when in need."
+        "Cast Range: Global"
       ],
       "itemBehaviour": [],
       "legacyKey": "R",
@@ -113,10 +112,9 @@
         "Treants always spawn at the center of the area.",
         "Must have at least 1 tree within its area to be castable. Targeting an area without trees gives an error message. However, if trees within the targeted area disappear during the cast time, the ability is not canceled, wasting mana and cooldown.",
         "However, if trees within the targeted area disappear during the cast time, the ability is not canceled, wasting mana and cooldown.",
-        "Despite the description, the level 25 talent does not multiply the health and damage values by 2.5. Instead, it adds 825 health and 27 attack damage to both Treants and Greater Treants. This effectively multiplies the health and average attack damage for the regular Treants, but not that of Greater Treants. Furthermore, the minimum and maximum attack damage for the regular treants remains at their average ±2 respectively instead of ±5. This also causes the attack damage of Greater Treants to start scaling with the ability's level.",
-        "Instead, it adds 825 health and 27 attack damage to both Treants and Greater Treants.",
-        "This effectively multiplies the health and average attack damage for the regular Treants, but not that of Greater Treants.",
-        "Furthermore, the minimum and maximum attack damage for the regular treants remains at their average ±2 respectively instead of ±5.",
+        "Despite the description, the level 25 talent does not multiply the health and damage values by 2.5. Instead, it adds 825 health and 27\/39\/51\/63 min\/max attack damage to the Treants and Greater Treants. This effectively increases the health and average attack damage for the regular Treants by 2.5x, but not that of Greater Treants. This also causes the attack damage of Greater Treants to start scaling with the ability's level.",
+        "Instead, it adds 825 health and 27\/39\/51\/63 min\/max attack damage to the Treants and Greater Treants.",
+        "This effectively increases the health and average attack damage for the regular Treants by 2.5x, but not that of Greater Treants.",
         "This also causes the attack damage of Greater Treants to start scaling with the ability's level."
       ],
       "mana": "130\/140\/150\/160",
@@ -129,8 +127,7 @@
         "Cast Range: 750",
         "Radius: 150\/225\/300\/375 (TagTalent 275\/350\/425\/500)",
         "Number of Treants: 2\/3\/4\/5 (TagTalent 7\/8\/9\/10)",
-        "Treant Duration: 60",
-        "Verodicia bestowed the Prophet with the ability to summon the Treant Guard, a mythical sentient army of the wild."
+        "Treant Duration: 60"
       ],
       "itemBehaviour": [],
       "legacyKey": "F",
@@ -160,8 +157,8 @@
         "Level 2: 5 \/ 10 \/ 15 \/ 20 \/ 25 \/ 30 \/ 35 \/ 40 \/ 45 \/ 50 \/ 55 \/ 60 \/ 65 \/ 70 \/ 75 \/ 80 \/ 85 \/ 90",
         "Level 3: 6 \/ 12 \/ 18 \/ 24 \/ 30 \/ 36 \/ 42 \/ 48 \/ 54 \/ 60 \/ 66 \/ 72 \/ 78 \/ 84 \/ 90 \/ 96 \/ 102 \/ 108",
         "",
-        "With Aghanim's Scepter, Wrath of Nature roots and disarms all hit enemies and provides True Sight over them. The duration starts at 2.0 and increases by 0.106 seconds per bounce. This results in a duration of 2\/2.11\/2.21\/2.32\/2.42\/2.53\/2.64\/2.74\/2.85\/2.95\/3.06\/3.17\/3.27\/3.38\/3.48\/3.59\/3.7\/3.8 seconds from the 1st to the 18th bounce.",
-        "The duration starts at 2.0 and increases by 0.106 seconds per bounce.",
+        "With Aghanim's Scepter, Wrath of Nature roots and disarms all hit enemies and provides True Sight over them. The duration starts at 2 and increases by 0.106 seconds per bounce. This results in a duration of 2\/2.11\/2.21\/2.32\/2.42\/2.53\/2.64\/2.74\/2.85\/2.95\/3.06\/3.17\/3.27\/3.38\/3.48\/3.59\/3.7\/3.8 seconds from the 1st to the 18th bounce.",
+        "The duration starts at 2 and increases by 0.106 seconds per bounce.",
         "This results in a duration of 2\/2.11\/2.21\/2.32\/2.42\/2.53\/2.64\/2.74\/2.85\/2.95\/3.06\/3.17\/3.27\/3.38\/3.48\/3.59\/3.7\/3.8 seconds from the 1st to the 18th bounce."
       ],
       "mana": "175\/225\/275",
@@ -178,11 +175,10 @@
         "Base Damage: 115\/150\/185 (TagTalent 145\/180\/215)",
         "Attack Damage Bonus per Kill: 4\/5\/6",
         "Attack Damage Bonus Duration: 50",
-        "Min Root Duration: 2.0",
+        "Min Root Duration: 2",
         "Max Root Duration: 3.8",
-        "Lowers cooldown from 85 to 60. Entangles all enemies it hits. Duration scales from 2.0 up to 3.8 seconds at max bounce.",
-        "Blocked fully only when directly targeted. Does not block when ground targeted.",
-        "Nature's Prophet calls Verodicia's fury to strike down those who might ravage the wilderness."
+        "Lowers cooldown from 85 to 60. Entangles all enemies it hits. Duration scales from 2 up to 3.8 seconds at max bounce.",
+        "Blocked fully only when directly targeted. Does not block when ground targeted."
       ],
       "itemBehaviour": [],
       "legacyKey": "W",

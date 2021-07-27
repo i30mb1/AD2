@@ -10,7 +10,7 @@
         },
         {
           "talentLvl": "20",
-          "talentLeft": "+25 Shadow Word Heal\/Damage",
+          "talentLeft": "+25 Shadow Word Damage\/Heal",
           "talentRight": "Summons a Golem on Death"
         },
         {
@@ -20,7 +20,7 @@
         },
         {
           "talentLvl": "10",
-          "talentLeft": "+50 Movement Speed for Chaotic Offering Golem",
+          "talentLeft": "+50 Chaotic Offering Golems Movement Speed",
           "talentRight": "+3% Fatal Bonds Damage"
         }
       ]
@@ -38,13 +38,13 @@
         "Successive casts of Fatal Bonds fully stack and work independently from each other.",
         "Can bind units inside the Fog of War, but cannot bind invisible units. Cannot bind or be cast on Roshan.",
         "Cannot bind or be cast on Roshan.",
-        "Shared damage is the same damage type as the source of the damage. This means physical damage is spread as physical damage, magical damage as magical and pure damage as pure. Because of that, the shared damage does interact with every on-damage effect like disabling Blink Dagger. This also means it is fully affected by damage manipulation, e.g. the spell damage amplification is sourced from Warlock.",
+        "Shared damage is the same damage type as the source of the damage. This means physical damage is spread as physical damage, magical damage as magical and pure damage as pure. Because of that, the shared damage does interact with every on-damage effect like disabling Blink Dagger. This also means it is fully affected by outgoing damage manipulation on Warlock.",
         "This means physical damage is spread as physical damage, magical damage as magical and pure damage as pure.",
         "Because of that, the shared damage does interact with every on-damage effect like disabling Blink Dagger.",
-        "This also means it is fully affected by damage manipulation, e.g. the spell damage amplification is sourced from Warlock.",
+        "This also means it is fully affected by outgoing damage manipulation on Warlock.",
         "Fatal Bonds' damage has the no-reflection flag, preventing its damage from interacting with other sources of damage with the same flag.",
-        "Spreads the damage before it is reduced or amplified in any way on the receiving target. For example, if Abaddon gets damaged while under the effect of Borrowed Time, the bonds still spread the damage, before Borrowed Time heals Abaddon. This also goes for illusions. When damaging a bonded illusion, the damage is spread before it gets amplified for the illusions. This also goes for finishing blows. When, for example, a unit at 10 health is hit by 1000 damage, the bonds still spread based on the 1000 damage.",
-        "For example, if Abaddon gets damaged while under the effect of Borrowed Time, the bonds still spread the damage, before Borrowed Time heals Abaddon.",
+        "Spreads the damage before it is reduced or amplified in any way on the receiving target. For example, if Abaddon gets damaged while under the effect of Borrowed Time, the bonds still spread the damage, before Borrowed Time negates the damage. This also goes for illusions. When damaging a bonded illusion, the damage is spread before it gets amplified for the illusions. This also goes for finishing blows. When, for example, a unit at 10 health is hit by 1000 damage, the bonds still spread based on the 1000 damage.",
+        "For example, if Abaddon gets damaged while under the effect of Borrowed Time, the bonds still spread the damage, before Borrowed Time negates the damage.",
         "This also goes for illusions. When damaging a bonded illusion, the damage is spread before it gets amplified for the illusions.",
         "This also goes for finishing blows. When, for example, a unit at 10 health is hit by 1000 damage, the bonds still spread based on the 1000 damage.",
         "Does not spread damage flagged as HP Removal.",
@@ -66,8 +66,7 @@
         "Damage Shared: 12%\/16%\/20%\/24% (TagTalent 15%\/19%\/23%\/27%)",
         "Bonds Duration: 25",
         "Cannot be cast on spell immune enemies. Does not bind spell immune enemies. Damages bond enemies if debuff was placed before spell immunity (TagTalentmagical damage gets reduced to 0).",
-        "Blocked fully only when primary target.",
-        "An ancient incantation that links the vital energies of multiple lifeforms into one collective body."
+        "Blocked fully only when primary target."
       ],
       "itemBehaviour": [],
       "legacyKey": "F",
@@ -81,14 +80,15 @@
         "Damage Magical"
       ],
       "notes": [
-        "↓↓ Double-tapping automatically targets self. Can be cast on allied Couriers.",
+        "↓↓ Double-tapping automatically targets self.",
         "Can be cast on allied Couriers.",
-        "Deals damage or heals in 1-second intervals, starting 1 second after cast, resulting in instances.",
-        "Can deal up to 180\/300\/420\/540 (TagTalent 480\/600\/720\/840) damage to the target (before reductions), or heal for the same amount if cast on an ally.",
+        "Deals damage or heals in 1-second intervals, starting 1 second after cast, resulting in 10 instances.",
+        "Can deal up to 150\/250\/350\/450 (TagTalent 400\/500\/600\/700) damage to the target (before reductions), or heal for the same amount if cast on an ally.",
         "Successive casts of Shadow Word fully stack and work independently from each other.",
         "The first sound is played when the target is an ally, the second sound when it is an enemy.",
-        "With Aghanim's Shard, Shadow Word turns into a 450 radius area-targeted ability, so that it cannot directly target units anymore. Self-casting the ability still targets Warlock, centering the radius around him.",
-        "Self-casting the ability still targets Warlock, centering the radius around him."
+        "With Aghanim's Shard, Shadow Word turns into an area-targeted ability, so that it cannot directly target units anymore. Can target invisible units and units inside the Fog of War. ↓↓ Double-tapping centers the radius around Warlock.",
+        "Can target invisible units and units inside the Fog of War.",
+        "↓↓ Double-tapping centers the radius around Warlock."
       ],
       "mana": "120\/130\/140\/150",
       "hotKey": "W",
@@ -99,14 +99,13 @@
         "Cast Animation: 0.4+0.76",
         "Cast Range: 450\/600\/750\/900",
         "Damage per Second: 15\/25\/35\/45 (TagTalent 40\/50\/60\/70)",
-        "Heal per Second: 15\/25\/35\/45 (TagTalent 40\/50\/60\/70)",
-        "Duration: 12",
+        "Heal per Second: 18\/27\/36\/45 (TagTalent 43\/52\/61\/70)",
+        "Duration: 10",
         "Radius: 450",
         "Move Speed Change: 10%",
-        "Shadow Word grants 10% movement speed bonus to allies and slows enemies by 10%.",
+        "Turns Shadow Word into a 450 AoE Spell. Grants 10% movement speed bonus to allies and slows enemies by .",
         "Can be cast on spell immune allies. Cannot be cast on spell immune enemies. Attempts to damage if debuff was placed before spell immunity and when not dispelled.",
-        "Blocked as a single-target ability. Not blocked when turned into a radius ability.",
-        "Warlock arcane arts have a myriad of uses, allowing them to be powerful friendly enchantments or damaging curses."
+        "Not blocked when upgraded."
       ],
       "itemBehaviour": [],
       "legacyKey": "W",
@@ -119,16 +118,16 @@
         "Affects Enemies"
       ],
       "notes": [
-        "The longer the channel duration, the slower the movement speed. The movement speed slow is based on the channel duration, not on how long a unit stands in the affected area.",
-        "The movement speed slow is based on the channel duration, not on how long a unit stands in the affected area.",
-        "The slow percentage increases by 6%\/8.5%\/11%\/13.5% in 0.5 second intervals, starting 0.5 seconds after spell cast. So it takes 3.33\/3.53\/3.64\/3.7 seconds for the slow to reach the 40%\/60%\/80%\/100% slow cap. The slow debuff is applied or refreshed in the same intervals.",
-        "So it takes 3.33\/3.53\/3.64\/3.7 seconds for the slow to reach the 40%\/60%\/80%\/100% slow cap.",
+        "The strength of the slow is based on the channel duration, not on how long a unit stands in the affected area.",
+        "The slow percentage increases by 0.4%\/0.57%\/0.73%\/0.9% on each server tick, starting 1 tick after cast. So it takes 3.33\/3.53\/3.64\/3.7 seconds for the slow to reach the maximum slow value. The slow debuff is applied or refreshed in the same intervals.",
+        "So it takes 3.33\/3.53\/3.64\/3.7 seconds for the slow to reach the maximum slow value.",
         "The slow debuff is applied or refreshed in the same intervals.",
-        "The damage per second talent immediately updates the current instance. The damage is dealt in 0.5-second intervals, starting 0.5 seconds after the ability is cast. It deals 20 damage per tick. The debuff lingers for 3 seconds, therefore it will deal at least 120 damage (before reductions). Can deal up to 520\/600\/680\/760 damage. There is currently a small error which removes one tick of damage from Upheaval at levels 1 and 2, resulting in only 500\/580 total damage.",
-        "The damage is dealt in 0.5-second intervals, starting 0.5 seconds after the ability is cast. It deals 20 damage per tick.",
-        "The debuff lingers for 3 seconds, therefore it will deal at least 120 damage (before reductions).",
-        "Can deal up to 520\/600\/680\/760 damage. There is currently a small error which removes one tick of damage from Upheaval at levels 1 and 2, resulting in only 500\/580 total damage.",
-        "There is currently a small error which removes one tick of damage from Upheaval at levels 1 and 2, resulting in only 500\/580 total damage."
+        "With the level 15 talent, Upheaval's debuff starts deals damage over time. Deals 20 damage in 0.5-second intervals, starting 0.5 seconds after being placed, resulting in a minimum of 6 instances. One instance of the debuff can deal up to 120 damage. On level 1 and 2, the last damage instance is missing, resulting in up to 25\/29\/34\/38 instances over the full duration. Can deal a total of 500\/580\/680\/760 damage to each enemy over its full duration. When learned while already channeling, the talent immediately updates the current instance.",
+        "Deals 20 damage in 0.5-second intervals, starting 0.5 seconds after being placed, resulting in a minimum of 6 instances.",
+        "One instance of the debuff can deal up to 120 damage.",
+        "On level 1 and 2, the last damage instance is missing, resulting in up to 25\/29\/34\/38 instances over the full duration.",
+        "Can deal a total of 500\/580\/680\/760 damage to each enemy over its full duration.",
+        "When learned while already channeling, the talent immediately updates the current instance."
       ],
       "mana": "70\/90\/110\/130",
       "hotKey": "E",
@@ -140,12 +139,11 @@
         "Cast Range: 1200",
         "Radius: 500\/550\/600\/650",
         "Max Channel Time: 10\/12\/14\/16",
-        "Move Speed Slow per Second: 12%\/17%\/22%\/27%",
-        "Move Speed Slow Cap: 40%\/60%\/80%\/100%",
+        "Move Speed Slow Increase per Second: 12%\/17%\/22%\/27%",
+        "Max Move Speed Slow: 40%\/60%\/80%\/100%",
         "Slow Duration: 3",
         "Damage per Second: 40",
-        "Slow persists if debuff was placed before spell immunity and when not dispelled.",
-        "Demnok manipulates space-time, impairing entire armies."
+        "Slow persists if debuff was placed before spell immunity and when not dispelled."
       ],
       "itemBehaviour": [],
       "legacyKey": "E",
@@ -158,37 +156,37 @@
         "Affects Enemies"
       ],
       "notes": [
-        "Warlock Golems is always summoned at the center of the targeted area.",
+        "Warlock Golems are always summoned at the center of the targeted area.",
         "The golems are creep-heroes and ancient creeps, making them interact differently with several abilities. For detailed interactions follow the two links.",
-        "Upon spawning, Warlock Golems destroy all trees within a 600 radius around them.",
+        "Upon spawning, the golems destroy all trees within a 600 radius around them.",
         "The visual effect and sounds during the effect delay are visible and audible to everyone.",
         "Also plays a sound effect during the cast time, which is audible to everyone as well.",
-        "Both the movement speed increasing and magic resistance increasing talent does not affect the current summoned Warlock Golem. Sets Warlock Golems' magic resistance to 86%, instead of stacking multiplicatively like other sources.",
-        "Sets Warlock Golems' magic resistance to 86%, instead of stacking multiplicatively like other sources.",
-        "With the level 20 talent, 1 golem is summoned based on its current level instantly whenever Warlock dies, on his death location. Both talents fully affects the summoned golem on death, if they are learned. Aghanim's Scepter does not upgrade this talent. The golem is not summoned when Warlock dies while having Reincarnation. The 600 stun radius is also applied around Warlock.",
-        "Both talents fully affects the summoned golem on death, if they are learned.",
-        "Aghanim's Scepter does not upgrade this talent.",
-        "The golem is not summoned when Warlock dies while having Reincarnation.",
-        "The 600 stun radius is also applied around Warlock.",
-        "With Aghanim's Scepter, Chaotic Offering summons the 2nd golem 0.2 seconds after the first golem. This effectively extends the total stun duration to 1.2 seconds.",
-        "This effectively extends the total stun duration to 1.2 seconds."
+        "Learning the movement speed increasing or magic resistance increasing talents do not update already summoned golems.",
+        "With the level 20 , 1 Warlock Golem is summoned whenever Warlock dies, on his death location. This golem's stats are based on the current level of Chaotic Offering, and benifits from the level 25 talents as well. However, Aghanim's Scepter neither affects this golem's stats, nor does it increase the number of golems on death. The golem is not summoned when Warlock has Reincarnation. Unlike a regular cast, the golem is summoned instantly upon Warlock's death. The area stun and tree destruction of Chaotic Offering is also applied around Warlock.",
+        "This golem's stats are based on the current level of Chaotic Offering, and benifits from the level 25 talents as well.",
+        "However, Aghanim's Scepter neither affects this golem's stats, nor does it increase the number of golems on death.",
+        "The golem is not summoned when Warlock has Reincarnation.",
+        "Unlike a regular cast, the golem is summoned instantly upon Warlock's death.",
+        "The area stun and tree destruction of Chaotic Offering is also applied around Warlock.",
+        "With Aghanim's Scepter, Chaotic Offering summons a second golem 0.2 seconds after the first golem. This golem applies the area stun and the tree destruction as well, effectively extending the total stun duration to 1.2 seconds.",
+        "This golem applies the area stun and the tree destruction as well, effectively extending the total stun duration to 1.2 seconds."
       ],
       "mana": "250\/375\/500",
       "hotKey": "R",
       "cooldown": "170",
-      "description": "Summons a Golem from the depths, stunning enemies for one second. The Golem lives seconds, takes reduced damage from spells, has Permanent Immolation and Flaming Fists on attack.",
+      "description": "Summons a Golem from the depths, stunning enemies for one second. The Golem lives 60 seconds, takes reduced damage from spells, has Permanent Immolation and Flaming Fists on attack.",
       "spellName": "Chaotic Offering",
       "params": [
-        "Cast Animation: 0.2+0.7",
+        "Cast Animation: 0.5+0.7",
         "Cast Range: 1200",
         "Stun Radius: 600",
         "Effect Delay: 0.5",
-        "Number of Golems: 1 (TagTalent 2)",
+        "Number of Golems: 1 (TagAghanim 2)",
         "Stun Duration: 1",
         "Golem Duration: 60",
         "Golem Spawn Interval: 0.2",
-        "Calls 2 golems with reduced stats and bounty.",
-        "Demnok unleashes the captive spirit in his Dreadwood staff, causing destruction in enemy ranks."
+        "Number of Golems on Death: 1",
+        "Calls 2 golems with reduced stats and bounty."
       ],
       "itemBehaviour": [],
       "legacyKey": "R",
@@ -248,7 +246,7 @@
   ],
   "mainAttributes": {
     "attrStrengthInc": 3.0,
-    "attrStrength": 26.0,
+    "attrStrength": 24.0,
     "attrIntelligence": 25.0,
     "attrIntelligenceInc": 3.1,
     "attrAgilityInc": 1.0,
@@ -264,7 +262,7 @@
     },
     {
       "talentLvl": "20",
-      "talentLeft": "+25 Shadow Word Heal\/Damage",
+      "talentLeft": "+25 Shadow Word Damage\/Heal",
       "talentRight": "Summons a Golem on Death"
     },
     {
@@ -274,7 +272,7 @@
     },
     {
       "talentLvl": "10",
-      "talentLeft": "+50 Movement Speed for Chaotic Offering Golem",
+      "talentLeft": "+50 Chaotic Offering Golems Movement Speed",
       "talentRight": "+3% Fatal Bonds Damage"
     }
   ]

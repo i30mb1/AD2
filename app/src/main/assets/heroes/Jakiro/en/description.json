@@ -62,8 +62,7 @@
         "Attack Speed Slow: 28\/32\/36\/40",
         "Damage per Second: 20\/40\/60\/80 (TagTalent 40\/80\/120\/160)",
         "Duration: 5",
-        "Slow persists and attempts to deal damage if debuffs were placed before spell immunity and when not dispelled.",
-        "Pyrexae dragons have tremendously dangerous breath for each branch of the species; combining them is unimaginable."
+        "Slow persists and attempts to deal damage if debuffs were placed before spell immunity and when not dispelled."
       ],
       "itemBehaviour": [],
       "legacyKey": "D",
@@ -99,8 +98,7 @@
         "Path Radius: 150",
         "Effect Delay: 0.5",
         "Damage: 50",
-        "Path Duration: 1\/1.5\/2\/2.5 (TagTalent 1.5\/2\/2.5\/3)",
-        "Jakiro's cunning right head calls upon its frozen heritage, glazing the earth with blistering cold."
+        "Path Duration: 1\/1.5\/2\/2.5 (TagTalent 1.5\/2\/2.5\/3)"
       ],
       "itemBehaviour": [],
       "legacyKey": "T",
@@ -120,7 +118,7 @@
         "However, when the target turns spell immune or invulnerable before impact, Liquid Fire is not applied at all.",
         "Successive casts of Liquid Fire do not stack, but refresh the debuff instead.",
         "The attack first applies the debuff, then its own damage.",
-        "Fully affects buildings. Does not affect wards.",
+        "Fully affects buildings. Does not affect allied units or wards.",
         "Deals 6\/8\/10\/12 damage in 0.5-second intervals (before reductions), starting 0.5 seconds after the debuff is applied, resulting in 10 damage instances. Can deal up to 60\/80\/100\/120 damage to a single target (before reductions).",
         "Can deal up to 60\/80\/100\/120 damage to a single target (before reductions).",
         "When off cooldown, the fire head's mouth drools fire, visible to everyone.",
@@ -141,8 +139,7 @@
         "Grants a new ability: Liquid Frost",
         "Can target spell immune enemies. Does not place debuff on spell immune enemies. Slows and attempts to deal damage if debuff was placed before spell immunity and when not dispelled.",
         "When disjointed, the area effect is instantly applied at the target's current location.",
-        "Illusions always have the fiery particles when Liquid Fire is leveled at least once before the illusions got created.",
-        "The left maw of Jakiro opens, laying waste to any in its path."
+        "Illusions always have the fiery particles when Liquid Fire is leveled at least once before the illusions got created."
       ],
       "itemBehaviour": [],
       "legacyKey": "Q",
@@ -162,8 +159,8 @@
         "Applies Liquid Frost around and on the target regardless if the attack misses or is disjointed. However, when the target turns spell immune or invulnerable before impact, Liquid Frost is not applied at all.",
         "However, when the target turns spell immune or invulnerable before impact, Liquid Frost is not applied at all.",
         "Successive casts of Liquid Frost do not stack, but refresh the debuff instead.",
-        "Liquid Frost first applies the debuff, then the stun (and then its own damage against the primary target).",
-        "Fully affects buildings. Does not affect wards.",
+        "The attack first applies the debuff, then the stun, then its own damage.",
+        "Fully affects buildings. Does not affect allied units or wards.",
         "Deals damage in 1-second intervals, starting 1 second after the debuff is applied, resulting in 4 damage instances.",
         "Can deal up to 80 + 10% of max health as damage to a single target (before reductions).",
         "When off cooldown, the ice head's mouth glows and releases light blue smoke, visible to everyone.",
@@ -184,7 +181,7 @@
         "Max Health as Damage per Second: 2.5%",
         "Debuff Duration: 4",
         "Stun Duration: 0.4",
-        "Can target spell immune enemies. Does not place debuff on spell immune enemies. Slows and attempts to deal damage if debuff was placed before spell immunity and when not dispelled.",
+        "Can target spell immune enemies. Does not place the debuffs on spell immune enemies. Slows and attempts to deal damage if debuff was placed before spell immunity and when not dispelled.",
         "When disjointed, the area effect is instantly applied at the target's current location.",
         "Illusions always have the icy particles when Liquid Frost is unlocked before the illusions got created."
       ],
@@ -201,19 +198,18 @@
       ],
       "notes": [
         "Instantly applies its effects over the whole distance. Does not have any travel time.",
-        "Macropyre starts 234 range in front of Jakiro and has a length of 1166 (1566). With the starting distance, path length and path radius, Macropyre can hit units up to 1660 (2060) range away. It can also hit units 26 range behind Jakiro, due to its radius and starting position.",
-        "With the starting distance, path length and path radius, Macropyre can hit units up to 1660 (2060) range away.",
+        "Macropyre starts 234 range in front of Jakiro and has a length of 1166 (TagTalent 1566). With the starting distance, path length and path radius, Macropyre can hit units up to 1660 (TagTalent 2060) range away. It can also hit units 26 range behind Jakiro, due to its radius and starting position.",
+        "With the starting distance, path length and path radius, Macropyre can hit units up to 1660 (TagTalent 2060) range away.",
         "It can also hit units 26 range behind Jakiro, due to its radius and starting position.",
         "Places a debuff on enemies within the area in 0.5-second intervals, starting 0.5 seconds after cast.",
-        "The debuff does not stack. When standing inside the fire, its duration gets refreshed. The debuff deals 50\/70\/90 (TagTalent 65\/85\/105) damage in 0.5-second intervals, starting 0.5 seconds after being placed, resulting in 4 damage instances. This results in a maximum of 23 (63) damage instances when standing within the area the full duration. One instance of the debuff can deal up to 200\/280\/360 (TagTalent 260\/340\/420) damage (before reductions).",
+        "The debuff does not stack. When standing inside the fire, its duration gets refreshed. The debuff deals 50\/70\/90 (TagTalent 65\/85\/105) damage in 0.5-second intervals, starting 0.5 seconds after being placed, resulting in 4 damage instances. This results in a maximum of 23 (TagTalent 63) damage instances when standing within the area the full duration. One instance of the debuff can deal up to 200\/280\/360 (TagTalent 260\/340\/420) damage (before reductions).",
         "The debuff deals 50\/70\/90 (TagTalent 65\/85\/105) damage in 0.5-second intervals, starting 0.5 seconds after being placed, resulting in 4 damage instances.",
-        "This results in a maximum of 23 (63) damage instances when standing within the area the full duration.",
+        "This results in a maximum of 23 (TagTalent 63) damage instances when standing within the area the full duration.",
         "One instance of the debuff can deal up to 200\/280\/360 (TagTalent 260\/340\/420) damage (before reductions).",
-        "Can deal up to 1150\/1610\/2070 damage to a single unit (before reductions). With the level 20 talent, can deal up to 1495\/1955\/2415 damage to a single unit (before reductions).",
-        "With the level 20 talent, can deal up to 1495\/1955\/2415 damage to a single unit (before reductions).",
         "Multiple overlapping Macropyres do not stack. They refresh the same debuff on enemies.",
-        "With Aghanim's Scepter, Macropyre can deal up to 3150\/4410\/5670 (TagTalent 4095\/5355\/6615) damage to a single unit (before reductions). It also changes Macropyre's sound effect, and it is now audible through the Fog of War.",
-        "It also changes Macropyre's sound effect, and it is now audible through the Fog of War."
+        "Can deal up to 1150\/1610\/2070 (TagTalent 1495\/1955\/2415) damage to a single unit (before reductions). With Aghanim's Scepter, it can deal up to 3150\/4410\/5670 (TagTalent 4095\/5355\/6615) damage to a single unit (before reductions).",
+        "With Aghanim's Scepter, it can deal up to 3150\/4410\/5670 (TagTalent 4095\/5355\/6615) damage to a single unit (before reductions).",
+        "Aghanim's Scepter changes Macropyre's sound effect. This changed sound effect is audible through the Fog of War."
       ],
       "mana": "220\/330\/440",
       "hotKey": "R",
@@ -222,15 +218,14 @@
       "spellName": "Macropyre",
       "params": [
         "Cast Animation: 0.55+1.07",
-        "Cast Range: 1400 (TagTalent 1800)",
-        "Path Distance: 1400 (TagTalent 1800)",
+        "Cast Range: 1400 (TagAghanim 1800)",
+        "Path Distance: 1400 (TagAghanim 1800)",
         "Path Radius: 260",
         "Damage per Second: 100\/140\/180 (TagTalent 130\/170\/210)",
         "Damage Linger Duration: 2",
-        "Path Duration: 10 (TagTalent 30)",
+        "Path Duration: 10 (TagAghanim 30)",
         "Increases Macropyre distance by +400 range, duration by +20 seconds and causes it to become Pure damage and pierce Spell Immunity.",
-        "Debuff is always placed on spell immune enemies, even without the Aghanim's Scepter. The upgrade merely changes the damage type.",
-        "Ice and fire combine to rip the battlefield to shreds with extreme temperatures."
+        "Debuff is always placed on spell immune enemies, but the damage does not tick. The damage ticks normally when upgraded."
       ],
       "itemBehaviour": [],
       "legacyKey": "R",
@@ -241,7 +236,7 @@
     "attrStrengthInc": 3.0,
     "attrStrength": 27.0,
     "attrIntelligence": 26.0,
-    "attrIntelligenceInc": 3.2,
+    "attrIntelligenceInc": 2.8,
     "attrAgilityInc": 1.2,
     "attrAgility": 15.0
   },

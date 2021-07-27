@@ -42,7 +42,7 @@
         "Fully affects invisible and invulnerable units (except for units affected by Cyclone from items), but not hidden units. Does not affect ancient creeps.",
         "Does not affect ancient creeps.",
         "The damage is applied upon losing the debuff, dispelling the debuff causes the damage to happen earlier.",
-        "Destroys trees within 275 radius at the targeted point upon cast."
+        "Destroys trees within 125 radius at the targeted point upon cast."
       ],
       "mana": "60\/90\/120\/150",
       "hotKey": "Q",
@@ -55,8 +55,7 @@
         "Effect Radius: 400\/450\/500\/550 (TagTalent 500\/550\/600\/650)",
         "Damage: 100\/150\/200\/250",
         "Pull Duration: 0.3\/0.4\/0.5\/0.6",
-        "Attempts to deal damage if enemy turns spell immune before the pull ends.",
-        "Ish'Kafel modifies the center of gravity to a place of his choosing."
+        "Attempts to deal damage if enemy turns spell immune before the pull ends."
       ],
       "itemBehaviour": [],
       "legacyKey": "C",
@@ -77,8 +76,8 @@
         "Successive casts on the same unit do not stack, but refresh the duration and update the damage to the current level instead. When two opposing heroes cast it on the same target, the modifier updates and starts damaging the enemies of the latest caster. The modifier status, however, does not update. Whether it is treated as a buff or debuff is determined by the first cast, and not updated on refresh.",
         "When two opposing heroes cast it on the same target, the modifier updates and starts damaging the enemies of the latest caster.",
         "The modifier status, however, does not update. Whether it is treated as a buff or debuff is determined by the first cast, and not updated on refresh.",
-        "Deals 4.5\/7.5\/10.5\/13.5 (TagTalent 13.5\/16.5\/19.5\/22.5) damage in 0.15-second intervals, starting 0.15 seconds after the cast, resulting in 166.7 (300) damage instances.",
-        "Can deal up to 750\/1250\/1750\/2250 (TagTalent 2250\/2750\/3250\/3750) damage to a single unit (before reductions), if the enemy unit stays within range for the full duration. With Aghanim's Scepter, it can deal up to 1350\/2250\/3150\/4050 (TagTalent 4050\/4950\/5850\/6750) damage to a single unit (before reductions), if the enemy unit stays within range for the full duration.",
+        "Deals 4.5\/7.5\/10.5\/13.5 (TagTalent 13.5\/16.5\/19.5\/22.5) damage in 0.15-second intervals, starting 0.15 seconds after the cast, resulting in 166.7 (TagTalent 300) damage instances.",
+        "Can deal up to 750\/1250\/1750\/2250 (TagTalent 2250\/2750\/3250\/3750) damage to a single unit (before reductions), if the enemy unit stays within range for the full duration. With Aghanim's Scepter, it can deal up to 1350\/2250\/3150\/4050 (TagTalent 4050\/4950\/5850\/6750) damage to a single unit (before reductions), if the enemy unit stays within range for the full duration. The damage upgrading talent immediately upgrades all of Dark Seer's currently active Ion Shell modifiers.",
         "With Aghanim's Scepter, it can deal up to 1350\/2250\/3150\/4050 (TagTalent 4050\/4950\/5850\/6750) damage to a single unit (before reductions), if the enemy unit stays within range for the full duration.",
         "The damage upgrading talent immediately upgrades all of Dark Seer's currently active Ion Shell modifiers.",
         "With Aghanim's Scepter, Ion Shell also increases maximum health of targeted allies by 300, keeping the current health percentage the same."
@@ -93,13 +92,12 @@
         "Cast Range: 600",
         "Damage Radius: 275 (TagTalent 350)",
         "Damage per Second: 30\/50\/70\/90 (TagTalent 90\/110\/130\/150)",
-        "Duration: 25 (TagTalent 45)",
+        "Duration: 25 (TagAghanim 45)",
         "Max Health Bonus: 300",
         "Number of Charges: 2",
         "Charge Replenish Time: 9",
         "Causes Ion Shell to have 2 charges, increases duration by 20 and provides +300 Health.",
-        "Can be cast on spell immune allies. Cannot be cast on spell immune enemies. Shell persists if debuff was placed before spell immunity and when not dispelled.",
-        "The Dark Seer slices holes into the 'Land Behind the Wall,' causing prismatic energy to seep forth."
+        "Can be cast on spell immune allies. Cannot be cast on spell immune enemies. Shell persists if debuff was placed before spell immunity and when not dispelled."
       ],
       "itemBehaviour": [],
       "legacyKey": "E",
@@ -114,7 +112,7 @@
       "notes": [
         "↓↓ Double-tapping automatically targets self.",
         "Applies haste and grants phased movement on the target, meaning it cannot be slowed while affected.",
-        "The talent turns Surge into an area-targeted ability, so that it cannot directly target units anymore. Portrait-casting centers the radius around Dark Seer. However, ↓↓ Double-tapping only affects Dark Seer. Allies with range around Dark Seer are not affected.",
+        "With the level 25 talent, Surge turns into an area-targeted ability, so that it cannot directly target units anymore. Portrait-casting centers the radius around Dark Seer. However, ↓↓ Double-tapping only affects Dark Seer. Allies with range around Dark Seer are not affected.",
         "Portrait-casting centers the radius around Dark Seer.",
         "However, ↓↓ Double-tapping only affects Dark Seer. Allies with range around Dark Seer are not affected."
       ],
@@ -128,8 +126,7 @@
         "Cast Range: 600",
         "Haste Speed: 550",
         "Duration: 3\/4\/5\/6",
-        "Radius: 320",
-        "Ish'Kafel once used his speed of mind to navigate the maze between the walls."
+        "Radius: 320"
       ],
       "itemBehaviour": [],
       "legacyKey": "R",
@@ -152,13 +149,14 @@
         "For every 10 distance moved, the damage increases by 2.667, knockback distance by 3.333, knockback duration by 0.011, and stun duration by 0.023.",
         "Teleporting effects (which includes blinking) may only add up to 600 range to the distance counter, no matter how big the actual teleported distance was.",
         "The distance counter never resets, so it is possible to perform multiple full power punches in a row, with the help of cooldown resetting sources.",
-        "These are the damage, knockback distance, and stun duration values at certain distances moved in the last 3 seconds (before reductions): 0 distance moved: 10 damage, 50 knockback distance, 0.1s knockback duration, 0.2s stun duration. 180 distance moved: 90 damage, 150 knockback distance, 0.442s knockback duration, 0.883s stun duration. 360 distance moved: 170 damage, 250 knockback distance, 0.783s knockback duration, 1.567s stun duration. 540 distance moved: 250 damage, 350 knockback distance, 1.125s knockback duration, 2.25s stun duration. 720 distance moved: 330 damage, 450 knockback distance, 1.467s knockback duration, 2.933s stun duration. 900 distance moved: 410 damage, 550 knockback distance, 1.808s knockback duration, 3.617s stun duration.",
+        "These are the damage, knockback distance, and stun duration values at certain distances moved in the last 3 seconds (before reductions): 0 distance moved: 10 damage, 50 knockback distance, 0.1s knockback duration, 0.2s stun duration. 180 distance moved: 58 damage, 110 knockback distance, 0.305s knockback duration, 0.61s stun duration. 360 distance moved: 106 damage, 170 knockback distance, 0.51s knockback duration, 1.02s stun duration. 540 distance moved: 154 damage, 230 knockback distance, 0.715s knockback duration, 1.43s stun duration. 720 distance moved: 202 damage, 290 knockback distance, 0.92s knockback duration, 1.84s stun duration. 900 distance moved: 250 damage, 350 knockback distance, 1.125s knockback duration, 2.25s stun duration.",
         "0 distance moved: 10 damage, 50 knockback distance, 0.1s knockback duration, 0.2s stun duration.",
-        "180 distance moved: 90 damage, 150 knockback distance, 0.442s knockback duration, 0.883s stun duration.",
-        "360 distance moved: 170 damage, 250 knockback distance, 0.783s knockback duration, 1.567s stun duration.",
-        "540 distance moved: 250 damage, 350 knockback distance, 1.125s knockback duration, 2.25s stun duration.",
-        "720 distance moved: 330 damage, 450 knockback distance, 1.467s knockback duration, 2.933s stun duration.",
-        "900 distance moved: 410 damage, 550 knockback distance, 1.808s knockback duration, 3.617s stun duration.",
+        "180 distance moved: 58 damage, 110 knockback distance, 0.305s knockback duration, 0.61s stun duration.",
+        "360 distance moved: 106 damage, 170 knockback distance, 0.51s knockback duration, 1.02s stun duration.",
+        "540 distance moved: 154 damage, 230 knockback distance, 0.715s knockback duration, 1.43s stun duration.",
+        "720 distance moved: 202 damage, 290 knockback distance, 0.92s knockback duration, 1.84s stun duration.",
+        "900 distance moved: 250 damage, 350 knockback distance, 1.125s knockback duration, 2.25s stun duration.",
+        "",
         "Normal Punch first applies the stun, then the damage, then the knockback, then the attack damage.",
         "The illusion is spawned 350 range behind the enemy's determined landing position, 0.7 seconds after Normal Punch was delivered. The illusion can be controlled normally. It is initially ordered to attack the punched target.",
         "The illusion can be controlled normally. It is initially ordered to attack the punched target.",
@@ -230,8 +228,7 @@
         "Slow Duration: 1",
         "Parallel Wall Distance: 600",
         "Grants a new ability: Normal Punch.",
-        "Creates illusions of spell immune enemies, but does not slow them.",
-        "The Dark Seer, while unable to return to his natural realm, can channel part of the prismatic wall with powerful strength of mind, sowing confusion amongst enemy ranks."
+        "Creates illusions of spell immune enemies, but does not slow them."
       ],
       "itemBehaviour": [],
       "legacyKey": "W",

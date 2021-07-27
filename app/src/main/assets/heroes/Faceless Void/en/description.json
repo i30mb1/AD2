@@ -15,7 +15,7 @@
         },
         {
           "talentLvl": "20",
-          "talentLeft": "-2.0s Time Walk",
+          "talentLeft": "-2s Time Walk",
           "talentRight": "+40 Attack Speed"
         },
         {
@@ -41,8 +41,8 @@
         "Faceless Void is invulnerable during Time Walk.",
         "Does not disjoint projectiles upon cast.",
         "Does not travel the full distance, when targeting closer than the max distance.",
-        "Upon cast, any damage Faceless Void took in the last 2 seconds gets healed back up. This includes damage dealt by allies. It is fully affected by heal manipulation.",
-        "It is fully affected by heal manipulation.",
+        "Upon cast, any damage Faceless Void took in the last 2 seconds gets healed back up. This includes damage dealt by allies. Since it is a heal, it is fully affected by heal manipulation.",
+        "Since it is a heal, it is fully affected by heal manipulation.",
         "Backtracks the 3 damage types but not heals and HP Removal. This means it cannot backtrack abilities like Sunder, False Promise, Soul Ring and Armlet of Mordiggian.",
         "This means it cannot backtrack abilities like Sunder, False Promise, Soul Ring and Armlet of Mordiggian.",
         "Status buffs and debuffs, cooldowns and mana are completely unaffected.",
@@ -63,8 +63,7 @@
         "Time Lock Radius: 350",
         "Applies a Time Lock proc to all units at the landing destination.",
         "Increases Time Walk cast range by 400. Grants a new ability: Reverse Time Walk.",
-        "Does not apply Time Lock on spell immune enemies.",
-        "Darkterror tears a hole in time, passing through Claszureme, and appearing back in an instant."
+        "Does not apply Time Lock on spell immune enemies."
       ],
       "itemBehaviour": [],
       "legacyKey": "W",
@@ -74,25 +73,33 @@
       "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/a\/a3\/Faceless_Void_Time_Dilation_1.mp3\/revision\/latest?cb=20191216013829",
       "effects": [
         "Ability No Target",
-        "Affects Enemies"
+        "Affects Enemies",
+        "Damage Magical"
       ],
       "notes": [
         "Affects units in the Fog of War and invisible units, but not invulnerable and hidden units.",
-        "Causes enemy cooldowns and charge-based abilities to recharge 60% slower while they have the debuff. Affects cooldowns of passive abilities, but does not affect the cooldown of items.",
-        "Affects cooldowns of passive abilities, but does not affect the cooldown of items.",
-        "The damage ticks in 1-second intervals, starting 1 second after the debuff is placed, resulting in 8\/9\/10\/11 instance of damage. Time Dilation can deal up to 80\/99\/120\/143 damage for every ability that is on cooldown for the entire duration of the debuff (before reductions).",
-        "Time Dilation can deal up to 80\/99\/120\/143 damage for every ability that is on cooldown for the entire duration of the debuff (before reductions).",
-        "The slow has no stack limit. Each ability on cooldown adds a stack. Also counts the cooldown of hidden abilities, like Invoker's uninvoked spells or Morph, and abilities granted by Aghanim's Scepter and Aghanim's Shard. Rubick's stolen spells which are on cooldown and already lost do not count, as they are not hidden, but removed.",
-        "Also counts the cooldown of hidden abilities, like Invoker's uninvoked spells or Morph, and abilities granted by Aghanim's Scepter and Aghanim's Shard.",
+        "Causes enemy cooldowns and charge-based abilities to recharge 60% slower while they have the debuff. Affects cooldowns of passive abilities, but not the cooldown of items.",
+        "Affects cooldowns of passive abilities, but not the cooldown of items.",
+        "Deals damage in 1.1-second intervals, starting 1.1 seconds after the debuff is placed, resulting in up to 7\/8\/9\/10 possible instances.",
+        "This is how much it can slow and how much damage it can deal for a certain amount of cooldowns, considering the cooldowns are present for the entire duration: 1 Cooldown: 70\/88\/108\/130 damage and 10% movement speed slow. 2 Cooldowns: 140\/176\/216\/260 damage and 20% movement speed slow. 3 Cooldowns: 210\/264\/324\/390 damage and 30% movement speed slow. 4 Cooldowns: 280\/352\/432\/520 damage and 40% movement speed slow. 5 Cooldowns: 350\/440\/540\/650 damage and 50% movement speed slow. 6 Cooldowns: 420\/528\/648\/780 damage and 60% movement speed slow.",
+        "1 Cooldown: 70\/88\/108\/130 damage and 10% movement speed slow.",
+        "2 Cooldowns: 140\/176\/216\/260 damage and 20% movement speed slow.",
+        "3 Cooldowns: 210\/264\/324\/390 damage and 30% movement speed slow.",
+        "4 Cooldowns: 280\/352\/432\/520 damage and 40% movement speed slow.",
+        "5 Cooldowns: 350\/440\/540\/650 damage and 50% movement speed slow.",
+        "6 Cooldowns: 420\/528\/648\/780 damage and 60% movement speed slow.",
+        "",
+        "The slow and damage per second have no stack limit. Each ability on cooldown adds a stack. Also counts the cooldown of hidden abilities, like Invoker's uninvoked spells or Morph's copies. Rubick's stolen spells which are on cooldown and already lost do not count, as they are not hidden, but removed.",
+        "Also counts the cooldown of hidden abilities, like Invoker's uninvoked spells or Morph's copies.",
         "Rubick's stolen spells which are on cooldown and already lost do not count, as they are not hidden, but removed.",
-        "The slow debuff checks all cooldowns continuously, and adapts the slow value and stack count immediately.",
+        "The debuff checks all cooldowns continuously, and adapts the slow and damage values and stack count immediately.",
         "Abilities affected by Time Dilation can still be reset (e.g. Refresher Orb).",
         "Multiple instances of Time Dilation do not stack, but refresh the duration."
       ],
       "mana": "60\/70\/80\/90",
       "hotKey": "W",
       "cooldown": "28\/24\/20\/16",
-      "description": "Faceless Void traps all nearby enemies in a time dilation field for 8\/9\/10\/11 seconds, extending their cooldowns and slowing their movement and attack speed by 10% for each cooldown extended.",
+      "description": "Faceless Void traps all nearby enemies in a time dilation field for 8\/9\/10\/11 seconds, extending their cooldowns and slowing their movement and attack speed by 10% for each cooldown extended. Deals damage per second for each cooldown.",
       "spellName": "Time Dilation",
       "params": [
         "Cast Animation: 0.1+0.4",
@@ -101,8 +108,7 @@
         "Slow per Extended Cooldown: 10%",
         "Damage per Second per Extended Cooldown: 10\/11\/12\/13",
         "Duration: 8\/9\/10\/11",
-        "Effects persist if debuff was placed before spell immunity and when not dispelled.",
-        "For those facing off against Darkterror, each moment seems to stretch into eternity."
+        "Effects persist if debuff was placed before spell immunity and when not dispelled."
       ],
       "itemBehaviour": [],
       "legacyKey": "R",
@@ -117,14 +123,14 @@
       ],
       "notes": [
         "Does not stack with other bashes. The bash from Skull Basher and Abyssal Blade is completely disabled for Faceless Void. In Ability Draft, fully stacks with the bash from Skull Basher and Abyssal Blade.",
-        "The bash from Skull Basher and Abyssal Blade is completely disabled for Faceless Void.",
         "In Ability Draft, fully stacks with the bash from Skull Basher and Abyssal Blade.",
         "The proccing attack first applies the debuff, then its own damage.",
         "Time Lock works against allied units, but not against wards and buildings.",
-        "Upon proccing, the stun debuff gets applied. 0.33 seconds later, the second attack, and the damage applies. The bash damage is dealt in a separate instance and is spell damage. It is not added as attack damage. This means the damage works with spell lifesteal and spell damage amplification, but not with lifesteal, crit, or cleave. The second attack is an instant attack, which can proc any attack modifiers (including Time Lock itself) and on-hit effects normally, with cleave being an exception. They do not have True Strike.",
+        "Upon proccing, the stun debuff gets applied. 0.33 seconds later, the second attack, and the damage applies. The bash damage is dealt in a separate instance and is spell damage. It is not added as attack damage. This means the damage works with spell lifesteal and spell damage amplification, but not with lifesteal, crit, or cleave. The second attack is an instant attack, which can proc any attack modifiers except for cleave (including Time Lock itself) and on-hit effects normally. They do not have True Strike. Applies the instant attack first, then Time Lock's own damage.",
         "The bash damage is dealt in a separate instance and is spell damage. It is not added as attack damage.",
         "This means the damage works with spell lifesteal and spell damage amplification, but not with lifesteal, crit, or cleave.",
-        "The second attack is an instant attack, which can proc any attack modifiers (including Time Lock itself) and on-hit effects normally, with cleave being an exception. They do not have True Strike.",
+        "The second attack is an instant attack, which can proc any attack modifiers except for cleave (including Time Lock itself) and on-hit effects normally. They do not have True Strike.",
+        "Applies the instant attack first, then Time Lock's own damage.",
         "Despite the visual effect, the angle of the second attack is still based on Faceless Void's position, so cleave hits towards where he is facing, and not the image that appears.",
         "Adds an average of 1.8\/3.2\/5\/7.2 (TagTalent 8.4\/12\/16\/20.4) damage to every attack.",
         "Time Lock uses pseudo-random distribution."
@@ -139,8 +145,7 @@
         "Damage: 15\/20\/25\/30 (TagTalent 70\/75\/80\/85)",
         "Second Attack Delay: 0.33",
         "Hero Duration: 0.65",
-        "Non-Hero Duration: 2",
-        "The strike of the Faceless Void lands with dimension shifting force."
+        "Non-Hero Duration: 2"
       ],
       "itemBehaviour": [],
       "legacyKey": "E",
@@ -154,10 +159,11 @@
       ],
       "notes": [
         "Requires Aghanim's Shard to be unlocked.",
-        "Only available upon reaching the Time Walk destination point, and lasts until used, or up to 1.5 seconds.",
-        "When cast, it moves Faceless Void back to where he was as he cast Time Walk, using the same travel speed.",
+        "This ability stays inactive until Time Walk is cast and turns inactive again once Faceless Void seconds pass. In Ability Draft, due to non-ultimate abilities being limited to one ability slot, Reverse Time Walk replaces Time Walk while castable, instead of being in a separate slot.",
+        "In Ability Draft, due to non-ultimate abilities being limited to one ability slot, Reverse Time Walk replaces Time Walk while castable, instead of being in a separate slot.",
+        "When cast, moves Faceless Void back to where he was as he cast Time Walk, using the same travel speed.",
         "Does not reverse anything else. The health change are not reversed, and the Time Lock bash from the upgrade does not proc.",
-        "The health change are not reversed, and the Time Lock bash from the upgrade does not proc."
+        "If Time Walk was cast multiple times within 1.5 seconds, casting this moves Faceless Void back to where he was on the first cast."
       ],
       "mana": "0",
       "hotKey": "D",
@@ -169,7 +175,7 @@
         "Reversal Time Window: 1.5"
       ],
       "itemBehaviour": [],
-      "legacyKey": "0",
+      "legacyKey": "D",
       "story": null
     },
     {
@@ -180,13 +186,13 @@
       ],
       "notes": [
         "Chronosphere affects all units which are not owned by Faceless Void, including buildings, wards and allies.",
-        "Does not affect Couriers, hidden units and invulnerable heroes. All other invulnerable units are fully affected. Instantly destroys Homing Missile and The Swarm beetles. Instantly causes already latched Phantoms to return to their caster, and freezes traveling phantoms. Affected units are stunned. When other units walk inside the area, they also get affected for its remaining duration.",
-        "Instantly destroys Homing Missile and The Swarm beetles.",
+        "Does not affect Couriers, hidden units and invulnerable heroes. All other invulnerable units are fully affected. Instantly destroys Homing Missiles and The Swarm beetles. Instantly causes already latched Phantoms to return to their caster, and freezes traveling phantoms.",
+        "Instantly destroys Homing Missiles and The Swarm beetles.",
         "Instantly causes already latched Phantoms to return to their caster, and freezes traveling phantoms.",
         "Affected units are stunned. When other units walk inside the area, they also get affected for its remaining duration.",
         "While in the Chronosphere, Faceless Void and any units he controls are phased and hasted, meaning they cannot be slowed below the set value.",
-        "Faceless Void and illusions of him (be it his own, enemy or allied illusions) cannot be frozen by Chronospheres, regardless of source. This is innate to Faceless Void. However, the hasted and phased movement is only provided to the caster and their units. In Ability Draft, Faceless Void keeps his innate immunity to Chronospheres, even when not drafting it.",
-        "However, the hasted and phased movement is only provided to the caster and their units.",
+        "Faceless Void and illusions of him (be it his own, enemy or allied illusions) cannot be frozen by Chronospheres, regardless of source. This is innate to Faceless Void. However, the haste and phased movement is only provided to the caster and their units. In Ability Draft, Faceless Void keeps his innate immunity to Chronospheres, even when not drafting it.",
+        "However, the haste and phased movement is only provided to the caster and their units.",
         "In Ability Draft, Faceless Void keeps his innate immunity to Chronospheres, even when not drafting it.",
         "Provides flying vision and True Sight over the whole affected area for its duration.",
         "Cancels most sources of Forced Movement upon applying the disabling debuff on a unit.",
@@ -205,8 +211,7 @@
         "Radius: 500 (TagTalent 640)",
         "Haste Speed: 1000",
         "Duration: 4\/4.5\/5",
-        "Faceless Void's immunity to Chronospheres is not disabled by Break.",
-        "When a rift opens to Claszureme, all poor souls caught within will likely never return."
+        "Faceless Void's immunity to Chronospheres is not disabled by Break."
       ],
       "itemBehaviour": [],
       "legacyKey": "C",
@@ -247,7 +252,7 @@
   ],
   "mainAttributes": {
     "attrStrengthInc": 2.4,
-    "attrStrength": 22.0,
+    "attrStrength": 20.0,
     "attrIntelligence": 15.0,
     "attrIntelligenceInc": 1.5,
     "attrAgilityInc": 3.0,
@@ -263,7 +268,7 @@
     },
     {
       "talentLvl": "20",
-      "talentLeft": "-2.0s Time Walk",
+      "talentLeft": "-2s Time Walk",
       "talentRight": "+40 Attack Speed"
     },
     {

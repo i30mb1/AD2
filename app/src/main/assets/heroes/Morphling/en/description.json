@@ -2,8 +2,8 @@
   "abilities": [
     {
       "notes": [
-        "The magic resistance talent stacks multiplicatively with other sources of magic resistance.",
-        "The magic resistance talent increases Morphling's magic resistance to 36.25%.",
+        "The magic resistance talent stacks multiplicatively with other sources of magic resistance. Increases Morphling's magic resistance to 36.25%.",
+        "Increases Morphling's magic resistance to 36.25%.",
         "The agility talent effectively grants Morphling 2.5 armor, 15 attack speed, and 15 attack damage.",
         "The strength talent effectively grants Morphling 400 health and 2 health regeneration."
       ],
@@ -50,7 +50,7 @@
       ],
       "mana": "140",
       "hotKey": "Q",
-      "cooldown": "20\/17\/14\/11",
+      "cooldown": "20\/17\/14\/11 (TagTalent 0)",
       "description": "Morphling dissolves into liquid and surges forward, damaging enemy units in his path. Morphling is invulnerable during Waveform.",
       "spellName": "Waveform",
       "params": [
@@ -61,8 +61,7 @@
         "Damage: 75\/150\/225\/300",
         "Number of Charges: 2",
         "Charge Replenish Time: 20\/17\/14\/11",
-        "The instant attacks added by the talent pierce spell immunity.",
-        "A torrential flood takes enemies by force."
+        "The instant attacks added by the talent pierce spell immunity."
       ],
       "itemBehaviour": [],
       "legacyKey": "W",
@@ -87,8 +86,8 @@
         "When the current agility is 50% higher than the strength, the damage multiplier is at its maximum at 1\/1.5\/2\/2.5.",
         "When the current strength is 50% higher than the agility, the damage multiplier is at its minimum at 0.5.",
         "Checks Morphling's attributes upon projectile impact.",
-        "With Aghanim's Shard, Adaptive Strike launches 1 additional projectile towards random visible valid targets within the range. The search range is based on the cast range, plus the buffer, resulting in a search range of 900. Cannot target the primary target with the additional projectile, so when no other targets are nearby, nothing happens. The secondary target is chosen randomly within the area, with heroes being prioritized. Treats creep-heroes as heroes. Since the additional projectile uses the ability's cast range, cast range increasing effects increase its range as well.",
-        "The search range is based on the cast range, plus the buffer, resulting in a search range of 900.",
+        "With Aghanim's Shard, Adaptive Strike launches 1 additional projectile towards random visible valid targets within the range. The search range is based on the cast range, plus the buffer, resulting in a search range of 900\/1000\/1100\/1200. Cannot target the primary target with the additional projectile, so when no other targets are nearby, nothing happens. The secondary target is chosen randomly within the area, with heroes being prioritized. Treats creep-heroes as heroes. Since the additional projectile uses the ability's cast range, cast range increasing effects increase its range as well.",
+        "The search range is based on the cast range, plus the buffer, resulting in a search range of 900\/1000\/1100\/1200.",
         "Cannot target the primary target with the additional projectile, so when no other targets are nearby, nothing happens.",
         "The secondary target is chosen randomly within the area, with heroes being prioritized. Treats creep-heroes as heroes.",
         "Since the additional projectile uses the ability's cast range, cast range increasing effects increase its range as well."
@@ -107,9 +106,8 @@
         "Max Bonus Damage Agility Multiplier: 1\/1.5\/2\/2.5",
         "Adaptive Strike (TagTalentStrength) Downtime: 3",
         "Secondary Target Range Buffer: 300",
-        "Causes Adaptive Strike to have +1 Multishot. Prioritizes heroes.",
-        "Blocked upon impact.",
-        "The Morphling calls upon his elements to crush his opponents with waves."
+        "Causes Adaptive Strike to have +1 Multishot and increases the stun duration by 1 second. Multishot prioritizes heroes.",
+        "Blocked upon impact."
       ],
       "itemBehaviour": [],
       "legacyKey": "E",
@@ -127,15 +125,15 @@
         "Casting this puts the other Adaptive Strike (Agility) on a fixed 3 second cooldown. This cooldown can be reset with cooldown resetting abilities, but it is not affected by percentage-based cooldown changes.",
         "This cooldown can be reset with cooldown resetting abilities, but it is not affected by percentage-based cooldown changes.",
         "The projectile travels at a speed of 1150.",
-        "The knockback and stun values are not fixed. They adapt linearly in smooth intervals depending on the difference between Morphling's strength and agility. The values change with each percent difference between strength and agility, even when it is just a minimal change. The knockback and stun values count base attributes, as well as bonus attributes. Knocks the target back at a speed of 1000, resulting in a knockback duration of 0.1 to 0.5 seconds.",
+        "The knockback and stun values are not fixed. They adapt linearly in smooth intervals depending on the difference between Morphling's strength and agility. The values change with each percent difference between strength and agility, even when it is just a minimal change. The knockback and stun values count base attributes, as well as bonus attributes.",
         "The values change with each percent difference between strength and agility, even when it is just a minimal change.",
         "The knockback and stun values count base attributes, as well as bonus attributes.",
-        "Knocks the target back at a speed of 1000, resulting in a knockback duration of 0.1 to 0.5 seconds.",
-        "When the current strength is 50% higher than the agility, the knockback distance and stun duration are at their maximum at 500 and 1.5\/2\/2.5\/3 (2.5\/3\/3.5\/4) respectively.",
-        "When the current agility is 50% higher than the strength, the knockback distance and stun duration are at their minimum at 100 and 0.5 (1.5) respectively.",
+        "When the current strength is 50% higher than the agility, the knockback distance and stun duration are at their maximum at 500 and 1.5\/2\/2.5\/3 (TagTalent 2.5\/3\/3.5\/4) respectively.",
+        "When the current agility is 50% higher than the strength, the knockback distance and stun duration are at their minimum at 100 and 0.5 (TagTalent 1.5 respectively.",
+        "Knocks the target back at a speed of 1000, resulting in a knockback duration of 0.1-0.5.",
         "Checks Morphling's attributes upon projectile impact.",
-        "With Aghanim's Shard, Adaptive Strike launches 1 additional projectile towards random visible valid targets within the range. The search range is based on the cast range, plus the buffer, resulting in a search range of 900. Cannot target the primary target with the additional projectile, so when no other targets are nearby, nothing happens. The secondary target is chosen randomly within the area, with heroes being prioritized. Treats creep-heroes as heroes. Since the additional projectile uses the ability's cast range, cast range increasing effects increase its range as well.",
-        "The search range is based on the cast range, plus the buffer, resulting in a search range of 900.",
+        "With Aghanim's Shard, Adaptive Strike launches 1 additional projectile towards random visible valid targets within the range. The search range is based on the cast range, plus the buffer, resulting in a search range of 900\/1000\/1100\/1200. Cannot target the primary target with the additional projectile, so when no other targets are nearby, nothing happens. The secondary target is chosen randomly within the area, with heroes being prioritized. Treats creep-heroes as heroes. Since the additional projectile uses the ability's cast range, cast range increasing effects increase its range as well.",
+        "The search range is based on the cast range, plus the buffer, resulting in a search range of 900\/1000\/1100\/1200.",
         "Cannot target the primary target with the additional projectile, so when no other targets are nearby, nothing happens.",
         "The secondary target is chosen randomly within the area, with heroes being prioritized. Treats creep-heroes as heroes.",
         "Since the additional projectile uses the ability's cast range, cast range increasing effects increase its range as well."
@@ -155,9 +153,8 @@
         "Max Stun Duration: 1.5\/2\/2.5\/3 (TagTalent 2.5\/3\/3.5\/4)",
         "Adaptive Strike (TagTalentAgility) Downtime: 3",
         "Secondary Target Range Buffer: 300",
-        "Causes Adaptive Strike to have +1 Multishot. Prioritizes heroes. Also increases stun duration by 1 second.",
-        "Blocked upon impact.",
-        "The Morphling calls upon his elements to crush his opponents with waves."
+        "Causes Adaptive Strike to have +1 Multishot and increases the stun duration by 1 second. Multishot prioritizes heroes.",
+        "Blocked upon impact."
       ],
       "itemBehaviour": [],
       "legacyKey": "T",
@@ -173,18 +170,23 @@
         "Attribute Shift (Agility Gain) and Attribute Shift (Strength Gain) are linked abilities; leveling up one automatically levels up the other as well. This ability is not available in Ability Draft, due to non-ultimate abilities being limited to one ability slot.",
         "This ability is not available in Ability Draft, due to non-ultimate abilities being limited to one ability slot.",
         "Attribute Shift does not interrupt Morphling's channeling abilities upon toggling.",
-        "Converts 3.03\/6.25\/12.5\/25 attribute points per second, resulting in the following changes per second: Agility: Morphling gains\/loses 0.51\/1.04\/2.08\/4.17 armor, 3.03\/6.25\/12.5\/25 attack speed, and 3.03\/6.25\/12.5\/25 attack damage. Strength: Morphling gains\/loses 60.61\/125\/250\/500 maximum health, and 0.3\/0.63\/1.25\/2.5 health regeneration. The strength bonus or loss does not keep the current health percentage, but instead adds or removes 20 health per strength to or from the current health pool. This health bonus does not bypass Ice Blast or False Promise, and it does not count as heal for the latter. However, for other amplifications and reductions, only the part that exceeds the current health percentage is affected.",
-        "Agility: Morphling gains\/loses 0.51\/1.04\/2.08\/4.17 armor, 3.03\/6.25\/12.5\/25 attack speed, and 3.03\/6.25\/12.5\/25 attack damage.",
-        "Strength: Morphling gains\/loses 60.61\/125\/250\/500 maximum health, and 0.3\/0.63\/1.25\/2.5 health regeneration.",
-        "The strength bonus or loss does not keep the current health percentage, but instead adds or removes 20 health per strength to or from the current health pool.",
+        "Costs 3.33\/1.66\/0.83\/0.416 mana per shift interval, resulting in 10 mana per second. This mana cost is fixed and cannot be altered by anything. It ignores mana loss manipulation.",
+        "This mana cost is fixed and cannot be altered by anything. It ignores mana loss manipulation.",
+        "Converts 3\/6.02\/12.05\/24.04 attribute points per second, resulting in the following changes per second: Agility: Morphling gains\/loses 0.5\/1\/2.01\/4.01 armor, 3\/6.02\/12.05\/24.04 attack speed, and 3\/6.02\/12.05\/24.04 attack damage. Strength: Morphling gains\/loses 60.06\/120.48\/240.96\/480.77 maximum health, and 0.3\/0.6\/1.2\/2.4 health regen. The strength bonus\/loss does not keep the current health percentage, but instead adds\/removes 20 health per strength to\/from the current health pool. This health bonus does not bypass Ice Blast or False Promise, and it does not count as heal for the latter. However, for other amplifications and reductions, only the part that exceeds the current health percentage is affected.",
+        "Agility: Morphling gains\/loses 0.5\/1\/2.01\/4.01 armor, 3\/6.02\/12.05\/24.04 attack speed, and 3\/6.02\/12.05\/24.04 attack damage.",
+        "Strength: Morphling gains\/loses 60.06\/120.48\/240.96\/480.77 maximum health, and 0.3\/0.6\/1.2\/2.4 health regen.",
+        "The strength bonus\/loss does not keep the current health percentage, but instead adds\/removes 20 health per strength to\/from the current health pool.",
         "This health bonus does not bypass Ice Blast or False Promise, and it does not count as heal for the latter.",
         "However, for other amplifications and reductions, only the part that exceeds the current health percentage is affected.",
-        "Attribute Shift continues to convert attributes even if Morphling is disabled, but cannot be toggled while disabled, unless the Attribute Shift while disabled talent is learned. Toggling one Attribute Shift ability On automatically toggles the other Off. If Attribute Shift cannot convert anymore due to lack of attribute points, it stays toggled, but the process and mana cost is paused until it can continue. Shifted attributes are permanent and not reverted on death.",
-        "Toggling one Attribute Shift ability On automatically toggles the other Off.",
-        "If Attribute Shift cannot convert anymore due to lack of attribute points, it stays toggled, but the process and mana cost is paused until it can continue.",
-        "Shifted attributes are permanent and not reverted on death.",
+        "Attribute Shift continues to convert attributes even if Morphling is disabled, but cannot be toggled while disabled. With the level 25 talent, this restriction is removed, allowing Morphling to toggle Attribute Shift even while disabled. With the talent, it can be toggled while stunned, cycloned, slept, taunted, hidden, or during forced movement, but not while silenced, hexed or prevented from acting. Morphling becomes unable to ⇧ Shift-queue this ability upon acquiring the talent.",
+        "With the level 25 talent, this restriction is removed, allowing Morphling to toggle Attribute Shift even while disabled. With the talent, it can be toggled while stunned, cycloned, slept, taunted, hidden, or during forced movement, but not while silenced, hexed or prevented from acting. Morphling becomes unable to ⇧ Shift-queue this ability upon acquiring the talent.",
+        "With the talent, it can be toggled while stunned, cycloned, slept, taunted, hidden, or during forced movement, but not while silenced, hexed or prevented from acting.",
+        "Morphling becomes unable to ⇧ Shift-queue this ability upon acquiring the talent.",
+        "Toggling one Attribute Shift ability On automatically toggles the other Off. If Attribute Shift cannot convert anymore due to lack of attribute points or mana, it stays toggled, but the process is paused until it can continue.",
+        "If Attribute Shift cannot convert anymore due to lack of attribute points or mana, it stays toggled, but the process is paused until it can continue.",
         "Can only convert Morphling's base agility and strength. Bonus attributes cannot be converted. The passively added strength and agility are not added to the base attributes, and can therefore not be converted either.",
         "The passively added strength and agility are not added to the base attributes, and can therefore not be converted either.",
+        "Shifted attributes are permanent and not reverted on death.",
         "The passive agility bonus effectively grants Morphling 0.5\/0.83\/1.17\/1.5 armor, and 3\/5\/7\/9 attack speed and attack damage.",
         "The passive strength bonus effectively grants Morphling 60\/100\/140\/180 health and 0.3\/0.5\/0.7\/0.9 health regen."
       ],
@@ -195,12 +197,11 @@
       "spellName": "Attribute Shift (Agility Gain)",
       "params": [
         "Cast Animation: 0+0",
-        "Shift Interval: 0.33\/0.16\/0.08\/0.04",
+        "Shift Interval: 0.333\/0.166\/0.083\/0.0416",
+        "Mana Cost per Second: 10",
         "Points per Shift: 1",
         "Bonus Agility: 3\/5\/7\/9",
-        "Mana Cost per Second: 10",
-        "Illusions spawn with Morphling's current stats, not his original stats.",
-        "Shifting water makes it difficult to discern the nature of Morphling."
+        "Illusions spawn with Morphling's current stats, not his original stats."
       ],
       "itemBehaviour": [],
       "legacyKey": "D",
@@ -222,12 +223,11 @@
       "spellName": "Attribute Shift (Strength Gain)",
       "params": [
         "Cast Animation: 0+0",
-        "Shift Interval: 0.33\/0.16\/0.08\/0.04",
+        "Shift Interval: 0.333\/0.166\/0.083\/0.0416",
+        "Mana Cost per Second: 10",
         "Points per Shift: 1",
         "Bonus Strength: 3\/5\/7\/9",
-        "Mana Cost per Second: 10",
-        "Illusions spawn with Morphling's current stats, not his original stats.",
-        "Shifting water makes it difficult to discern the nature of Morphling."
+        "Illusions spawn with Morphling's current stats, not his original stats."
       ],
       "itemBehaviour": [],
       "legacyKey": "F",
@@ -247,8 +247,8 @@
         "Morphling is visually distinguishable from the original hero while morphed.",
         "Buffs and debuffs Morphling receives during it stay on him upon unmorphing.",
         "Most channeling abilities are interrupted upon unmorphing, except for Phase Shift, Upheaval, and item abilities.",
-        "Morphling keeps his current health and mana percentages upon morphing. He does not copy the target's current health or mana. Also copies the target's attribute values, primary attribute, movement speed, attack range and range type. The base damage of the morphed hero seems to be around ~10% lower than the original one, also the base armor & health regeneration seems to be slightly reduced depending on the original heroes' values you morph into (the amount of reduction seems to differ between several heroes). This means when targeting a melee strength hero, Morphling becomes a melee strength hero for the duration. Only copies the target's base attributes. Bonus attributes from abilities and items are not copied. All other base stats (e.g. attack values, armor, magic resistance, etc) are not copied either.",
-        "Also copies the target's attribute values, primary attribute, movement speed, attack range and range type. The base damage of the morphed hero seems to be around ~10% lower than the original one, also the base armor & health regeneration seems to be slightly reduced depending on the original heroes' values you morph into (the amount of reduction seems to differ between several heroes).",
+        "Morphling keeps his current health and mana percentages upon morphing. He does not copy the target's current health or mana.",
+        "Also copies the target's attribute values, primary attribute, movement speed, attack range and range type. This means when targeting a melee strength hero, Morphling becomes a melee strength hero for the duration. Only copies the target's base attributes. Bonus attributes from abilities and items are not copied. All other base stats (e.g. attack values, armor, magic resistance, etc) are not copied either.",
         "This means when targeting a melee strength hero, Morphling becomes a melee strength hero for the duration.",
         "Only copies the target's base attributes. Bonus attributes from abilities and items are not copied.",
         "All other base stats (e.g. attack values, armor, magic resistance, etc) are not copied either.",
@@ -278,8 +278,7 @@
         "Mana Loss Reduction: 50%",
         "Duration: 20 (TagTalent 36)",
         "Cast Range Bonus: 300",
-        "Allows targeting allied heroes. While Morphed, you gain Cast Range increase.",
-        "Staring into Morphling produces a reflection that mimics the beholder."
+        "Allows targeting allied heroes. While Morphed, you gain Cast Range increase."
       ],
       "itemBehaviour": [],
       "legacyKey": "R",
@@ -319,7 +318,7 @@
     "attrStrength": 22.0,
     "attrIntelligence": 19.0,
     "attrIntelligenceInc": 1.8,
-    "attrAgilityInc": 4.3,
+    "attrAgilityInc": 4.1,
     "attrAgility": 24.0
   },
   "description": "Morphling is a ranged agility hero that has many flexible abilities, item builds and is leveled as a very strong hard carry. He relies strongly on his attributes, and is an effective ganker. Unlike other agility carries that rely on physical attacks, he relies on his powerful abilities to initiate and shift into a state from which he can make a kill. Waveform lets him surge directly forward to a location, damaging enemies on his path, working both as a nuke or an escape. Adaptive Strike is a scaling two-part ability that blasts enemies with a jet of water, either stunning and knocking back or dealing damage. Its power is based on either agility or strength. Attribute Shift allows him to edit his physical being, switching it from Agility or Strength, transforming him into a strong damage dealer or a tank. His ultimate, Morph, transforms him into a copy of an enemy using their stats and basic abilities.",

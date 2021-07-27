@@ -2,9 +2,9 @@
   "abilities": [
     {
       "notes": [
-        "The magic resistance talent stacks multiplicatively with other sources of magic resistance.",
-        "The magic resistance talent increases Doom's magic resistance to 34%.",
-        "Cleave from talents is not disabled by Break. For more information, see cleave."
+        "The magic resistance talent stacks multiplicatively with other sources of magic resistance. Increases Doom's magic resistance to 34%.",
+        "Increases Doom's magic resistance to 34%.",
+        "Cleave from talents is not disabled by Break."
       ],
       "spellName": "Talent",
       "talents": [
@@ -38,14 +38,13 @@
         "Damage Instant Kill"
       ],
       "notes": [
-        "Can target all neutral creeps and summons, with the exception of Couriers, Roshan, ancient creeps and creep-heroes. With the level 15 talent, Devour can target ancient creeps. The targeted creep is instantly killed, granting its bounty and experience like a regular last hit.",
+        "Can target all neutral creeps and summons, except for with the exception of Couriers, Roshan, ancient creeps and creep-heroes. With the level 15 talent, Devour can target ancient creeps.",
         "With the level 15 talent, Devour can target ancient creeps.",
         "The targeted creep is instantly killed, granting its bounty and experience like a regular last hit.",
-        "Autocast enables acquiring abilities of neutral creeps and ancient creeps. It does not cast the ability automatically. When autocast is on, devouring a creep with no abilities does not remove the already acquired abilities. Can only gain abilities from neutral creeps. Other units' abilities (e.g. Melting Strike) cannot be gained. Abilities are gained instantly upon devouring the creep. The abilities use the original cast point of the neutral creeps they come from, however, the cast backswing differs depending on the ability acquired (see chart). The cast animation formula for Devoured abilities: OriginalCastPoint + (1.1 - OriginalCastPoint) Abilities from neutral creeps are kept permanently, even through death, until another neutral creep with abilities is devoured with Autocast on. When devouring Ancient Black Dragons, Doom gets Fireball and Splash Attack, but not Dragonhide Aura. In Ability Draft, Devour only grants passive abilities of devoured neutral creeps. Active abilities are not gained. Devour's cooldown is not reset by Rearm.",
+        "Autocast enables acquiring abilities of neutral creeps. It does not cast the ability automatically. When autocast is on, devouring a creep with no abilities does not remove the already acquired abilities. Can only gain abilities from neutral creeps. Other units' abilities cannot be gained. Abilities are gained instantly upon devouring the creep. The abilities use the original cast point of the neutral creeps they come from, however, the cast backswing differs depending on the ability acquired (see chart). Abilities from neutral creeps are kept permanently, even through death, until another neutral creep with abilities is devoured with Autocast on. When devouring Ancient Black Dragons, Doom gets Fireball and Splash Attack, but not Dragonhide Aura. In Ability Draft, Devour only grants passive abilities of devoured neutral creeps. Active abilities are not gained. Devour's cooldown is not reset by Rearm.",
         "When autocast is on, devouring a creep with no abilities does not remove the already acquired abilities.",
-        "Can only gain abilities from neutral creeps. Other units' abilities (e.g. Melting Strike) cannot be gained. Abilities are gained instantly upon devouring the creep.",
-        "The abilities use the original cast point of the neutral creeps they come from, however, the cast backswing differs depending on the ability acquired (see chart). The cast animation formula for Devoured abilities: OriginalCastPoint + (1.1 - OriginalCastPoint)",
-        "The cast animation formula for Devoured abilities: OriginalCastPoint + (1.1 - OriginalCastPoint)",
+        "Can only gain abilities from neutral creeps. Other units' abilities cannot be gained. Abilities are gained instantly upon devouring the creep.",
+        "The abilities use the original cast point of the neutral creeps they come from, however, the cast backswing differs depending on the ability acquired (see chart).",
         "Abilities from neutral creeps are kept permanently, even through death, until another neutral creep with abilities is devoured with Autocast on.",
         "When devouring Ancient Black Dragons, Doom gets Fireball and Splash Attack, but not Dragonhide Aura.",
         "In Ability Draft, Devour only grants passive abilities of devoured neutral creeps. Active abilities are not gained. Devour's cooldown is not reset by Rearm.",
@@ -62,8 +61,7 @@
         "Cast Range: 300",
         "Gold Bonus: 60\/120\/180\/240",
         "Max Creep Level: 4\/5\/6\/6",
-        "Digest Duration: 60",
-        "Lucifer's appetite and greed are never sated."
+        "Digest Duration: 60"
       ],
       "itemBehaviour": [],
       "legacyKey": "E",
@@ -78,9 +76,9 @@
       ],
       "notes": [
         "Scorched Earth interrupts Doom's channeling abilities upon cast.",
-        "The 600 radius is centered on Doom for the full duration.",
+        "Scorched Earth's radius is centered on Doom for the full duration.",
         "The movement speed bonus is provided by an aura, which lingers for 0.5 seconds.",
-        "The damage is independent from the aura. Deals damage in 1-second intervals, starting 1 second after cast, resulting in up to 15 possible instances.",
+        "The damage is independent from the aura.",
         "Deals damage in 1-second intervals, starting 1 second after cast, resulting in up to 15 possible instances.",
         "Can deal up to 225\/450\/675\/900 (TagTalent 525\/750\/975\/1200) damage to a single enemy when within range for the entire duration (before reductions).",
         "The damage increasing talent immediately upgrades damage of the current cast. However, leveling the ability up does not update the current cast.",
@@ -100,8 +98,7 @@
         "Move Speed Bonus: 9%\/11%\/13%\/15% (TagTalent 24%\/26%\/28%\/30%)",
         "Aura Linger Duration: 0.5",
         "Duration: 15",
-        "Affects Doom while spell immune.",
-        "The Fallen One spreads destruction in his wake, sparing none from the flame which sustains him."
+        "Affects Doom while spell immune."
       ],
       "itemBehaviour": [],
       "legacyKey": "T",
@@ -115,16 +112,17 @@
         "Damage Magical"
       ],
       "notes": [
-        "Deals damage in 1-second intervals, starting 1 second after the debuff is applied, resulting in 0.6 instances. Does not trigger for instant attacks. Does not work against Roshan.",
-        "Does not trigger for instant attacks.",
-        "Does not work against Roshan.",
+        "Infernal Blade only works with regular attacks. Instant attacks cannot trigger it.",
+        "Cannot be cast on Roshan.",
+        "Infernal Blade does not work against allied units, buildings or wards.",
+        "Deals damage in 1-second intervals, starting 1 second after the debuff is applied, resulting in 4 instances.",
         "Can deal up to 64\/80\/96\/112 + 5%\/10%\/15%\/20% (TagTalent 14.6%\/19.6%\/24.6%\/29.6%) of the target's maximum health as damage (before reductions).",
         "Multiple instances on the same target fully stack and work independently. The max health as damage increasing talent or leveling up the ability does not update the damage of the current instances.",
         "The max health as damage increasing talent or leveling up the ability does not update the damage of the current instances.",
-        "The attack first applies the bash, the burn debuff, then the damage. The bash fully stacks with other bash sources.",
-        "The bash fully stacks with other bash sources.",
-        "With Aghanim's Shard, if the target's level is 3\/6\/9\/12\/15\/18\/21\/24\/25\/26\/27\/28\/29\/30, 150 bonus damage is applied and the stun duration is increased to 1.8. If the target's level is one of the multiplier values, the attack first applies the damage and bonus damage, the bash, then the damage. Works against non-hero units as well, so the following units are always hit by the bonus damage and bash duration. Ancient Black Dragon, Ancient Black Drake, Ancient Granite Golem, Ancient Thunderhide, Dark Troll Summoner, Forged Spirit, Ghost, Giant Wolf, Harpy Stormcrafter, Hill Troll, Lycan Lane Wolf, Melee Creep, Ogre Frostmage, Satyr Tormenter, Spiderling,",
-        "If the target's level is one of the multiplier values, the attack first applies the damage and bonus damage, the bash, then the damage.",
+        "The stun is provided by a bash, which fully stacks with other bash abilities. The attack first applies the bash, then the burn debuffs, then its own damage.",
+        "The attack first applies the bash, then the burn debuffs, then its own damage.",
+        "With Aghanim's Shard, if the target's level is 3\/6\/9\/12\/15\/18\/21\/24\/25\/26\/27\/28\/29\/30, 150 bonus damage is applied and the stun duration is increased to 1.8. If the target has the right level, the attack first applies the initial bonus damage before anything else. Works against non-hero units as well, so the following units are always hit by the bonus damage and bash duration. Ancient Black Dragon, Ancient Black Drake, Ancient Granite Golem, Ancient Thunderhide, Dark Troll Summoner, Forged Spirit, Ghost, Giant Wolf, Harpy Stormcrafter, Hill Troll, Lycan Lane Wolf, Melee Creep, Ogre Frostmage, Satyr Tormenter, Spiderling,",
+        "If the target has the right level, the attack first applies the initial bonus damage before anything else.",
         "Works against non-hero units as well, so the following units are always hit by the bonus damage and bash duration. Ancient Black Dragon, Ancient Black Drake, Ancient Granite Golem, Ancient Thunderhide, Dark Troll Summoner, Forged Spirit, Ghost, Giant Wolf, Harpy Stormcrafter, Hill Troll, Lycan Lane Wolf, Melee Creep, Ogre Frostmage, Satyr Tormenter, Spiderling,"
       ],
       "mana": "40",
@@ -133,17 +131,16 @@
       "description": "Doom swings his burning sword, igniting the enemy. Stuns for 0.6 seconds and applies a second burn that deals a base damage plus a percentage of the target's Max HP as damage per second.",
       "spellName": "Infernal Blade",
       "params": [
-        "Cast Range: 175",
+        "Cast Range: 200",
         "Base Damage per second: 16\/20\/24\/28",
         "Max Health as Damage per Second: 1.25%\/2.5%\/3.75%\/5% (TagTalent 3.65%\/4.9%\/6.15%\/7.4%)",
         "Damage Duration: 4",
         "Bash Duration: 0.6 (TagTalent 1.2)",
         "Level Multiplier: 3",
         "Level Multiplier Damage Bonus: 150",
-        "Level Multiplier Bash Duration: 1.8",
+        "Level Multiplier Bash Duration Bonus: 0.6",
         "Infernal Blade stun duration is increased from 0.6 to 1.2 seconds. If the enemy's level is a multiple of 3, or above level 24, they will be stunned for an additional 0.6 seconds and take 150 bonus damage.",
-        "Attempts to deal damage if debuff was placed before spell immunity and when not dispelled.",
-        "Lucifer shares the fire branding bestowed upon him at the time of his exile."
+        "Attempts to deal damage if debuff was placed before spell immunity and when not dispelled."
       ],
       "itemBehaviour": [],
       "legacyKey": "V",
@@ -158,15 +155,16 @@
       ],
       "notes": [
         "Applies a basic dispel on the target upon cast, removing most buffs in the process.",
-        "Silences, mutes, and breaks the target, preventing it from casting abilities and using items.",
+        "Silences and mutes the target, preventing it from casting abilities and using items.",
         "Cannot be cast on ancient creeps. Can be cast on creep-heroes and illusions. In the case of a unit being both a creep-hero and ancient creep, the ancient unit tag takes priority, disallowing it to be targeted.",
         "In the case of a unit being both a creep-hero and ancient creep, the ancient unit tag takes priority, disallowing it to be targeted.",
-        "Deals damage in 1-second intervals, starting immediately upon cast, resulting in 16\/22 instances. Leveling up the ability does not update the damage of currrent instances. However, the damage increasing talent does update the damage of the current instances.",
-        "Leveling up the ability does not update the damage of currrent instances.",
-        "However, the damage increasing talent does update the damage of the current instances.",
-        "Can deal a total of 400\/640\/880 (TagTalent 880\/1120\/1360) damage (before reductions).",
+        "Deals damage in 1-second intervals, starting immediately upon cast, resulting in 16 (TagTalent 22) instances.",
+        "Can deal a total of 480\/720\/960 (TagTalent 660\/990\/1320) damage without any talents (before reductions). With the damage increasing talent, it can deal a total of 960\/1200\/1440 (TagTalent 1320\/1650\/1980) damage.",
+        "With the damage increasing talent, it can deal a total of 960\/1200\/1440 (TagTalent 1320\/1650\/1980) damage.",
+        "Leveling up the ability does not update the damage of already placed Doom debuffs. However, the damage increasing talent does update the damage.",
+        "However, the damage increasing talent does update the damage.",
         "Heroes afflicted by Doom can be denied when their health drops below 25%.",
-        "Multiple successive casts on the same unit do not stack, but only refresh the duration.",
+        "Successive casts on the same unit do not stack, but only refresh the duration.",
         "With Aghanim's Scepter, Doom applies a break on the target for its duration, disabling passive abilities."
       ],
       "mana": "150\/200\/250",
@@ -177,10 +175,9 @@
       "params": [
         "Cast Animation: 0.5+0.4",
         "Cast Range: 550",
-        "Damage per Second: 25\/40\/55 (TagTalent 55\/70\/85)",
-        "Duration: 16 (TagTalent 22)",
-        "Doom applies Break and increases duration.",
-        "When a name is tolled from the bell of Vashundol, doom is sure to follow."
+        "Damage per Second: 30\/45\/60 (TagTalent 60\/75\/90)",
+        "Duration: 16 (TagAghanim 22)",
+        "Doom applies Break and increases duration by 6 seconds."
       ],
       "itemBehaviour": [],
       "legacyKey": "D",
@@ -195,7 +192,7 @@
     "attrAgilityInc": 0.9,
     "attrAgility": 11.0
   },
-  "description": "Lucifer, the Doom, is a melee strength hero with strong farming capabilities, good versatility, and one of the strongest single-target disables in the game. His very low starting armor makes him vulnerable to harassment, but his abilities and high health allow him to lane or even jungle quite effectively. A ruthless demon, Doom possesses malicious abilities revolving around greed, fire, and death. His Devour ability allows him to consume creeps, granting regeneration to offset harassment, providing additional gold and allowing him to absorb their powers, using them to increase his own strength. Because there are numerous neutral creep abilities to choose from to supplement his other abilities, the role that he chooses to play is quite flexible. Scorched Earth allows him to chase or escape effectively, all while slowly burning his enemies. He can deal tremendous damage with Infernal Blade, an attack modifier which mini-stuns enemies and deals damage over time, based on their maximum health, making it a powerful nuking ability that scales into the late game. Finally, his namesake ultimate Doom serves as one of the strongest single-target lockdown abilities in the game. A unit afflicted with Doom takes intense damage over a lengthy duration while having all its active abilities - even those from items - completely silenced. With numerous expensive items in his arsenal and a key enemy hero rendered useless for a teamfight, a farmed Doom ensures that nobody can extinguish his flame.",
+  "description": "Lucifer, the Doom, is a melee strength hero with strong farming capabilities, good versatility, and one of the strongest single-target disables in the game. His very low starting armor makes him vulnerable to harassment, but his abilities and high health allow him to lane or even jungle quite effectively. A ruthless demon, Doom possesses malicious abilities revolving around greed, fire, and death. His Devour ability allows him to consume creeps, providing additional gold and allowing him to absorb their powers, using them to increase his own strength. Because there are numerous neutral creep abilities to choose from to supplement his other abilities, the role that he chooses to play is quite flexible. Scorched Earth allows him to chase or escape effectively, all while slowly burning his enemies. He can deal tremendous damage with Infernal Blade, an attack modifier which mini-stuns enemies and deals damage over time, based on their maximum health, making it a powerful nuking ability that scales into the late game. Finally, his namesake ultimate Doom serves as one of the strongest single-target lockdown abilities in the game. A unit afflicted with Doom takes intense damage over a lengthy duration while having all its active abilities - even those from items - completely silenced. With numerous expensive items in his arsenal and a key enemy hero rendered useless for a teamfight, a farmed Doom ensures that nobody can extinguish his flame.",
   "history": "He that burns and is not consumed, devours and is never sated, kills and is beyond all judgment--Lucifer brings doom to all who would stand against him. Bearing away souls on the tip of a fiery sword, he is the Fallen One, a once-favored general from the realm behind the light, cast out for the sin of defiance: he would not kneel. Six times his name was tolled from the great bell of Vashundol. Six and sixty times his wings were branded, until only smoking stumps remained. Without wings, he slipped loose from the tethers that bound him within the light and he fell screaming to earth. A crater in the desert, Paradise lost. Now he attacks without mercy, without motive, the only living being able to move freely between the seven dark dominions. Lashed by inescapable needs, twisted by unimaginable talents, Doom carries his own hell with him wherever he goes. Defiant to the last. Eventually, the world will belong to Doom.",
   "talents": [
     {

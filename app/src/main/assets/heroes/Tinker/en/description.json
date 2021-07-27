@@ -38,17 +38,21 @@
       "notes": [
         "Plays a sound effect during the cast time, which is audible to everyone.",
         "Uses the creep duration for creep-heroes.",
-        "The laser first applies the debuff (blind and health reduction), then the damage.",
+        "The laser first applies the blind debuff, then the health reduction debuff, then the damage.",
         "Laser's blind uses pseudo-random distribution.",
         "Multiple instances of the debuff do not stack.",
-        "With Aghanim's Scepter, the Laser bounces to the furthest enemy within 700 radius of its current target. Laser has no bounce delay, so all targets are hit at the same time. Can only bounce to heroes, clones, illusions and creep-heroes. When the primary target is a regular creep or summon, it still bounces to valid targets within the bounce search radius. Does not bounce on invisible units or units in the Fog of War. Also reduces the targets' max health and current health by 15%. This means the current health reduction gets less the lower the target's current health was, while the max health reduction stays constant. Upon losing the debuff, the target's maximum health is reverted, while their current health is kept the same. Multiple instances of the debuff fully stack, however, the 15% model size reduction stacks additively with each cast.",
+        "With Aghanim's Scepter, the Laser bounces to the furthest enemy within 700 radius of its current target. Laser has no bounce delay, so all targets are hit at the same time. Can only bounce to heroes, including clones, illusions and creep-heroes. If the primary target is a non-hero unit, it still bounces to valid targets within the search radius. Does not bounce on invisible units or units in the Fog of War.",
         "Laser has no bounce delay, so all targets are hit at the same time.",
-        "Can only bounce to heroes, clones, illusions and creep-heroes. When the primary target is a regular creep or summon, it still bounces to valid targets within the bounce search radius.",
+        "Can only bounce to heroes, including clones, illusions and creep-heroes.",
+        "If the primary target is a non-hero unit, it still bounces to valid targets within the search radius.",
         "Does not bounce on invisible units or units in the Fog of War.",
-        "Also reduces the targets' max health and current health by 15%.",
-        "This means the current health reduction gets less the lower the target's current health was, while the max health reduction stays constant.",
+        "With Aghanim's Scepter, Laser reduces the targets' current and max health by 15%. The maximum health reduction is based on the target's maximum health, while the current health reduction is based on the current health. This means the lower the target's current health is, the less health they lose through the reduction, while the max health reduction stays constant. Since the debuff is placed before the damage is applied, the health reduction takes place before the damage. Upon losing the debuff, the target's maximum health is reverted, while their current health is kept the same. The health and model size reduction are applied by the same modifier as the blind. When upgraded, this modifier starts stacking with each cast. The model size reduction of multiple instances stacks additively",
+        "The maximum health reduction is based on the target's maximum health, while the current health reduction is based on the current health.",
+        "This means the lower the target's current health is, the less health they lose through the reduction, while the max health reduction stays constant.",
+        "Since the debuff is placed before the damage is applied, the health reduction takes place before the damage.",
         "Upon losing the debuff, the target's maximum health is reverted, while their current health is kept the same.",
-        "Multiple instances of the debuff fully stack, however, the 15% model size reduction stacks additively with each cast."
+        "The health and model size reduction are applied by the same modifier as the blind. When upgraded, this modifier starts stacking with each cast.",
+        "The model size reduction of multiple instances stacks additively"
       ],
       "mana": "110\/130\/150\/170 (TagTalent 101.2\/119.6\/138\/156.4)",
       "hotKey": "Q",
@@ -57,7 +61,7 @@
       "spellName": "Laser",
       "params": [
         "Cast Animation: 0.4+1",
-        "Cast Range: 650 (TagTalent 1050)",
+        "Cast Range: 650 (TagAghanim 1050)",
         "Damage: 80\/160\/240\/320 (TagTalent 160\/240\/320\/400)",
         "Miss Chance: 100%",
         "Hero Duration: 3\/3.5\/4\/4.5",
@@ -65,10 +69,9 @@
         "Bounce Search Radius: 700",
         "Number of Bounces: 1",
         "Max\/Current Health and Model Size Reduction: 15%",
-        "Upgrades Tinker's Laser into a Shrink Ray, granting +400 cast range and reducing enemy hero's size and current health by 15% (TagTalentstacking). The laser bounces once on the farthest target up to 700 range from the primary one, prioritizing heroes.",
+        "Upgrades Tinker's Laser into a Shrink Ray, granting +400 cast range and reducing enemy hero's size and current health by 15% (TagAghanimstacking). The laser bounces once on the farthest target up to 700 range from the primary one, prioritizing heroes.",
         "Blind effect persists if debuff was placed before spell immunity and when not dispelled.",
-        "Blocked fully only when primary target.",
-        "Boush perfected this rock cutting laser in his subterranean laboratory, never considering its combat utility."
+        "Blocked fully only when primary target."
       ],
       "itemBehaviour": [],
       "legacyKey": "E",
@@ -101,8 +104,7 @@
         "Number of Targets: 2 (TagTalent 3)",
         "Damage per Rocket: 125\/200\/275\/350",
         "Stun Duration: 0.25",
-        "Does not target spell immune units.",
-        "The last contraption Boush was able to save was a retrofitted rocket launcher with a homing mechanism."
+        "Does not target spell immune units."
       ],
       "itemBehaviour": [],
       "legacyKey": "T",
@@ -120,16 +122,16 @@
         "The 900 spawn radius is centered and fixed around the cast point, not on Tinker's location.",
         "The spawn area is a line with 1800 length, which is centered 900 range behind the targeted cast point. The overall affected area is rather square-shaped, with 1800 side lengths.",
         "The overall affected area is rather square-shaped, with 1800 side lengths.",
-        "Robots spawn in 0.0417-second intervals at a random point of the line, which is 24 robots per second, for a total of 144 (TagTalent 204) robots. They do not spawn at points of the spawning line which are outside of the map boundaries.",
-        "They do not spawn at points of the spawning line which are outside of the map boundaries.",
+        "Robots spawn in 0.0417-second intervals at a random point of the line, which is 24 robots per second, for a total of 144 (TagTalent 204) robots. Robots do not spawn at points of the spawning line which are outside of the map boundaries.",
+        "Robots do not spawn at points of the spawning line which are outside of the map boundaries.",
         "When an enemy comes within 50 radius of a robot, or the robot reaches max distance, it deals damage in 150 radius around itself and then disappears.",
-        "If a lone enemy stands still within the area for the full duration, they would take an average of 189.44\/284.16\/378.88\/473.6 damage (before reductions). The duration increasing talent deals an average of 268.37\/402.56\/536.75\/670.93 damage. The damage increasing talent deals an average of 284.16\/378.88\/473.6\/568.32 damage. With both talents, it deals an average of 402.56\/536.75\/670.93\/805.12 damage.",
-        "The duration increasing talent deals an average of 268.37\/402.56\/536.75\/670.93 damage.",
-        "The damage increasing talent deals an average of 284.16\/378.88\/473.6\/568.32 damage.",
+        "If a lone enemy stands still within the area for the full duration, they would take an average of 189.44\/284.16\/378.88\/473.6 damage (before reductions). With the duration increasing talent, it deals an average of 268.37\/402.56\/536.75\/670.93 damage. With the damage increasing talent, it deals an average of 284.16\/378.88\/473.6\/568.32 damage. With both talents, it deals an average of 402.56\/536.75\/670.93\/805.12 damage.",
+        "With the duration increasing talent, it deals an average of 268.37\/402.56\/536.75\/670.93 damage.",
+        "With the damage increasing talent, it deals an average of 284.16\/378.88\/473.6\/568.32 damage.",
         "With both talents, it deals an average of 402.56\/536.75\/670.93\/805.12 damage.",
-        "If each explosion could hit a single target, it would deal up to 2304\/3456\/4608\/5760 damage (before reductions). The duration increasing talent would deal up to 3264\/4896\/6528\/8160 damage. The damage increasing talent would deal up to 3456\/4608\/5760\/6912 damage. With both talents, it would deal up to 4896\/6528\/8160\/9792 damage.",
-        "The duration increasing talent would deal up to 3264\/4896\/6528\/8160 damage.",
-        "The damage increasing talent would deal up to 3456\/4608\/5760\/6912 damage.",
+        "If each explosion could hit a single target, it would deal up to 2304\/3456\/4608\/5760 damage (before reductions). With the duration increasing talent, it would deal up to 3264\/4896\/6528\/8160 damage. With the damage increasing talent, it would deal up to 3456\/4608\/5760\/6912 damage. With both talents, it would deal up to 4896\/6528\/8160\/9792 damage.",
+        "With the duration increasing talent, it would deal up to 3264\/4896\/6528\/8160 damage.",
+        "With the damage increasing talent, it would deal up to 3456\/4608\/5760\/6912 damage.",
         "With both talents, it would deal up to 4896\/6528\/8160\/9792 damage.",
         "The robots do not explode and deal area damage when colliding with Couriers.",
         "The sound effect upon cast is not audible by enemies. The marching sounds are."
@@ -147,8 +149,7 @@
         "Robot Explosion Radius: 150",
         "Robot Explosion Damage: 16\/24\/32\/40 (TagTalent 24\/32\/40\/48)",
         "Spawn Duration: 6 (TagTalent 8.5)",
-        "Robots do not collide with spell immune enemies.",
-        "Even though the laboratory has since been sealed off, the ability to radio in robotic drones is still in working order."
+        "Robots do not collide with spell immune enemies."
       ],
       "itemBehaviour": [],
       "legacyKey": "C",
@@ -213,8 +214,7 @@
       "params": [
         "Cast Animation: 0+0",
         "Channel Time: 3.5\/2\/1.25",
-        "Grants a new ability: Defense Matrix.",
-        "A new battery here, another set of rockets there, Boush continually improves on existing technology."
+        "Grants a new ability: Defense Matrix."
       ],
       "itemBehaviour": [],
       "legacyKey": "R",

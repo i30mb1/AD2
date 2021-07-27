@@ -50,13 +50,12 @@
         "The Spirit Bear cannot be re-summoned if it has taken damage from a player in the last 3 seconds. Has no minimum damage threshold. Damage is checked before any sort of reduction, so fully blocked damage also prevents re-summoning it. If the Spirit Bear dies, it can be re-summoned immediately.",
         "Damage is checked before any sort of reduction, so fully blocked damage also prevents re-summoning it.",
         "If the Spirit Bear dies, it can be re-summoned immediately.",
-        "The Spirit Bear can use every item, except for placing Observer and Sentry Wards. It can also use runes, except for Illusion Rune. The Spirit Bear cannot have illusions of itself, therefore Manta Style do not spawn illusions of the bear. Hand of Midas grants Lone Druid the gold and experience when the Spirit Bear uses it.",
-        "It can also use runes, except for Illusion Rune.",
-        "The Spirit Bear cannot have illusions of itself, therefore Manta Style do not spawn illusions of the bear.",
+        "The Spirit Bear can use every item, except for placing Observer and Sentry Wards. It can also use runes. Hand of Midas grants Lone Druid the gold and experience when the Spirit Bear uses it. The Spirit Bear cannot have illusions of itself, so the Illusion Rune and Manta Style do not spawn illusions of the bear.",
         "Hand of Midas grants Lone Druid the gold and experience when the Spirit Bear uses it.",
-        "When the Spirit Bear is 1100 range away from Lone Druid, it gets disarmed, turns slightly grey and uses different animations. The grey hue and disarm symbol are visible to allies only. The animations are visible to everyone. With Aghanim's Scepter, this restriction is removed, and allows Spirit Bear to attack at any range from Lone Druid, and to survive if Lone Druid dies.",
+        "The Spirit Bear cannot have illusions of itself, so the Illusion Rune and Manta Style do not spawn illusions of the bear.",
+        "When the Spirit Bear is 1100 range away from Lone Druid, it gets disarmed, turns slightly grey and uses different animations. The grey hue and disarm symbol are visible to allies only. The animations are visible to everyone. With Aghanim's Scepter, this restriction is removed, allowing Spirit Bear to attack at any range from Lone Druid, and to survive if Lone Druid dies.",
         "The grey hue and disarm symbol are visible to allies only. The animations are visible to everyone.",
-        "With Aghanim's Scepter, this restriction is removed, and allows Spirit Bear to attack at any range from Lone Druid, and to survive if Lone Druid dies.",
+        "With Aghanim's Scepter, this restriction is removed, allowing Spirit Bear to attack at any range from Lone Druid, and to survive if Lone Druid dies.",
         "Has a cast backswing of 0.57 while in True Form."
       ],
       "mana": "75",
@@ -67,13 +66,13 @@
       "params": [
         "Cast Animation: 0.5+0.63",
         "Max Health as Backlash Damage: 20%",
-        "Attack Proximity Range: 1100 (TagTalent Global)",
+        "Attack Proximity Range: 1100 (TagAghanim Global)",
         "Health Bonus per Level: 90",
         "Attack Damage Bonus per Level: 5",
         "Duration: Permanent",
         "Allows Spirit Bear to attack at any range from Lone Druid, and to survive if Lone Druid dies.",
         "Spell immunity does not block the pure backlash damage.",
-        "Sylla's lifelong companion is symbiotic with his spirit and heart, coming to aid him in any time of need."
+        "Root does not prevent the Spirit Bear from being teleported back to Lone Druid."
       ],
       "itemBehaviour": [],
       "legacyKey": "B",
@@ -89,7 +88,7 @@
         "Uses lifesteal, but instead of healing the attacking Spirit Bear, it heals its owner instead. The lifesteal is affected by lifesteal amplification, but only if the amplification source is on Lone Druid.",
         "The lifesteal is affected by lifesteal amplification, but only if the amplification source is on Lone Druid.",
         "The visual effect upon leveling up only appears when the Spirit Bear is within 1500 range of Lone Druid.",
-        "Spirit Link only affects the hero who has the ability, and Spirit Bear's owner. Other controlled units are not affected. This applies to Ability Draft as well."
+        "Spirit Link only affects the hero who has the ability, and that hero's Spirit Bear. Other controlled units are not affected. This applies to Ability Draft as well."
       ],
       "mana": null,
       "hotKey": "W",
@@ -99,8 +98,7 @@
       "params": [
         "Attack Speed Bonus: 15\/30\/45\/60",
         "Shared Lifesteal: 20%\/35%\/50%\/65%",
-        "Lifesteal is disabled if Lone Druid is affected by Break. Attack speed is not disabled.",
-        "Sylla is emboldened by the presence of his companion, his vitality replenished with each swipe of the Spirit Bear's claws."
+        "Lifesteal is disabled if Lone Druid is affected by Break. Attack speed is not disabled."
       ],
       "itemBehaviour": [],
       "legacyKey": "R",
@@ -113,21 +111,22 @@
         "Affects Enemies (TagAghanim Allies)"
       ],
       "notes": [
-        "Savage Roar is always cast by Lone Druid and the Spirit Bear simultaneously, no matter who was given the order. However, if the other would normally not be able to cast it (e.g. stunned or silenced), the effect does not occur. The current cooldown status is ignored and does not prevent the roar from triggering if still on cooldown. The cooldown always triggers, regardless of any status. With Aghanim's Shard, Savage Roar is always cast simultaneously regardless of current status effects on Lone Druid or Spirit Bear.",
+        "Savage Roar is always cast by Lone Druid and the Spirit Bear simultaneously, no matter who was given the order. However, if the other would normally not be able to cast it (e.g. stunned or silenced), the effect does not occur. With Aghanim's Shard, this restriction is removed, so that the other casts it even when normally unable to cast it. The current cooldown status is ignored and does not prevent the roar from triggering if still on cooldown. The cooldown always triggers, regardless of any status.",
         "However, if the other would normally not be able to cast it (e.g. stunned or silenced), the effect does not occur.",
+        "With Aghanim's Shard, this restriction is removed, so that the other casts it even when normally unable to cast it.",
         "The current cooldown status is ignored and does not prevent the roar from triggering if still on cooldown.",
         "The cooldown always triggers, regardless of any status.",
-        "With Aghanim's Shard, Savage Roar is always cast simultaneously regardless of current status effects on Lone Druid or Spirit Bear.",
         "Applies fear on all hit enemies within the radius, forcing them to run towards their team's fountain, while preventing them from acting.",
-        "Only affects enemy units controlled by a player. lane and neutral creeps are unaffected.",
-        "The bonus attack speed and movement speed granted also affects the caster of Savage Roar.",
+        "Only affects enemy units controlled by a player. Lane and neutral creeps are unaffected.",
+        "The bonus attack speed and movement speed granted by Aghanim's Shard also affects the caster of Savage Roar.",
         "Shares cooldown with the Spirit Bear's Savage Roar.",
-        "In Ability Draft, Savage Roar must be drafted as well for the Spirit Bear to gain it."
+        "In Ability Draft, Savage Roar must be drafted as well for the Spirit Bear to gain it.",
+        "With Aghanim's Shard, Savage Roar applies a basic dispel on Lone Druid and the Spirit Bear upon cast."
       ],
       "mana": "50",
       "hotKey": "E",
       "cooldown": "38\/32\/26\/20 (TagTalent 28\/22\/16\/10)",
-      "description": "Lone Druid and the Spirit Bear roar fiercely causing nearby enemies to flee towards their base in terror. Their movement speed is increased by 1.4\/1.8\/2.2\/2.6.",
+      "description": "Lone Druid and the Spirit Bear roar fiercely causing nearby enemies to flee towards their base in terror. Their movement speed is increased by 20%.",
       "spellName": "Savage Roar",
       "params": [
         "Cast Animation: 0.1+0.57",
@@ -138,9 +137,8 @@
         "Ally Move Speed Bonus: 20%",
         "Ally Attack Speed Bonus: 60",
         "Ally Duration: 5",
-        "Savage Roar now empowers allies in 700 AoE with +20% Movement Speed and +60 Attack Speed for 5 seconds. Also applies a basic dispel on Lone Druid and the Spirit Bear on cast, and causes the roar to happen on both locations regardless of the casting state on the other side.",
-        "Does not affect spell immune enemies. Debuff persists if debuff was placed before spell immunity and when not dispelled. Fully affects spell immune allies.",
-        "Sylla studies and masters the arts of the lost Bear Clan, enhancing his attunement with the wild."
+        "Savage Roar now empowers allies in 700 AoE with +20% Movement Speed and +60 Attack Speed for 5 seconds. Applies a basic dispel. Replicates between Lone Druid and Spirit Bear regardless of castability on the other.",
+        "Does not affect spell immune enemies. Debuff persists if debuff was placed before spell immunity and when not dispelled. Fully affects spell immune allies."
       ],
       "itemBehaviour": [],
       "legacyKey": "E",
@@ -154,8 +152,9 @@
       ],
       "notes": [
         "During the transformation, Lone Druid cannot do anything. Cannot be interrupted.",
-        "Reduces Lone Druid's attack range to 225 while giving him melee attack properties. This means items treat him as a melee hero (e.g. Manta Style, Skull Basher, etc).",
-        "This means items treat him as a melee hero (e.g. Manta Style, Skull Basher, etc).",
+        "Turns Lone Druid into a melee unit with 225 attack range for its duration (relevant for Rubick and Ability Draft). This means items treat the caster as a melee hero (e.g. Manta Style, Skull Basher, etc). Attack range bonuses are not overridden and still work normally.",
+        "This means items treat the caster as a melee hero (e.g. Manta Style, Skull Basher, etc).",
+        "Attack range bonuses are not overridden and still work normally.",
         "Lone Druid gets his maximum and current health increased by the given value. This does not count as a heal. Upon losing the buff, his current health stays the same and only the maximum health bonus gets reverted. The maximum health increasing talent does not upgrade the current active True Form instance, but it instantly upgrades Spirit Bear's health.",
         "Upon losing the buff, his current health stays the same and only the maximum health bonus gets reverted.",
         "The maximum health increasing talent does not upgrade the current active True Form instance, but it instantly upgrades Spirit Bear's health.",
@@ -171,12 +170,12 @@
       "params": [
         "Cast Animation: 0+0",
         "Transformation Time: 1.933",
+        "Base Attack Time: 1.7",
         "Armor Bonus: 8\/10\/12",
         "Health Bonus: 500\/1000\/1500 (TagTalent 1500\/2000\/2500)",
         "Attack Range Loss: 325",
         "Duration: 40",
-        "Illusions get their own True Form buff lasting its regular duration.",
-        "The mighty bear is the king of the forest, possessing the throne through raw power."
+        "Illusions get their own True Form buff lasting its regular duration."
       ],
       "itemBehaviour": [],
       "legacyKey": "F",
@@ -242,8 +241,7 @@
       ],
       "notes": [
         "Same notes as for Lone Druid's Savage Roar apply.",
-        "Spirit Bear acquires this ability as soon as Lone Druid learns it.",
-        "Causes both Lone Druid and the Spirit Bear to cast Savage Roar at the same time and puts both Savage Roars on cooldown, regardless of who cast the ability."
+        "Spirit Bear acquires this ability as soon as Lone Druid learns it."
       ],
       "mana": "50",
       "hotKey": "E",

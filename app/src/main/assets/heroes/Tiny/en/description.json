@@ -20,7 +20,7 @@
         {
           "talentLvl": "15",
           "talentLeft": "+80 Avalanche Damage",
-          "talentRight": "+15% Tree Grab Unit Bonus Damage"
+          "talentRight": "+15% Tree Grab Unit Damage Bonus"
         },
         {
           "talentLvl": "10",
@@ -41,7 +41,7 @@
         "Deals 15\/30\/45\/60 (TagTalent 31\/46\/61\/76) damage in 0.3 second intervals, starting once the projectile reaches the targeted point, resulting in 5 instances. This results in a total duration of 1.2 seconds, counting after projectile arrival. The in-game tooltip includes the stun duration as well, showing a total duration of 1.4 seconds.",
         "This results in a total duration of 1.2 seconds, counting after projectile arrival.",
         "The in-game tooltip includes the stun duration as well, showing a total duration of 1.4 seconds.",
-        "If a unit is affected by Toss, it takes 2.5 times the damage from Avalanche, which deals 37.5\/75\/112.5\/150 (TagTalent 77.5\/115\/152.5\/190) per instance. Can deal up to 187.5\/375\/562.5\/750 (TagTalent 387.5\/575\/762.5\/950) damage if perfectly combined with Toss.",
+        "If a unit is affected by Toss, it takes 2.5 times the damage from Avalanche, which is 37.5\/75\/112.5\/150 (TagTalent 77.5\/115\/152.5\/190) per instance. Can deal up to 187.5\/375\/562.5\/750 (TagTalent 387.5\/575\/762.5\/950) damage if perfectly combined with Toss.",
         "Can deal up to 187.5\/375\/562.5\/750 (TagTalent 387.5\/575\/762.5\/950) damage if perfectly combined with Toss.",
         "On each instance, Avalanche first applies the damage, then the debuff."
       ],
@@ -58,8 +58,7 @@
         "Instances Interval: 0.3",
         "Total Damage: 75\/150\/225\/300 (TagTalent 155\/230\/305\/380)",
         "Stun Duration: 0.2",
-        "Avalanche Duration: 1.4",
-        "Inanimate rock becomes animate when called by the Stone Giant."
+        "Avalanche Duration: 1.4"
       ],
       "itemBehaviour": [],
       "legacyKey": "V",
@@ -73,23 +72,24 @@
         "Damage Magical"
       ],
       "notes": [
-        "The tossed unit travels at a speed based on the distance between it and the target, the speed is capped at 2308. The speed does not instantly adapt if the distance changes, but rather accelerates or decelerates at a slow rate.",
+        "The tossed unit travels at a speed based on the distance between it and the target, capped at 2308. The speed does not instantly adapt if the distance changes, but rather accelerates or decelerates at a slow rate.",
         "The speed does not instantly adapt if the distance changes, but rather accelerates or decelerates at a slow rate.",
         "The tossed unit can be avoided by blinking or moving rapidly, but cannot technically be disjointed. This means the tossed unit can fly up to 3000 range away when the target teleports far enough away.",
         "This means the tossed unit can fly up to 3000 range away when the target teleports far enough away.",
-        "If the tossed unit dies in mid-air, it still deals the area damage upon landing.",
-        "Forcefully moves the unit, disabling it and canceling channeling abilities and other position changing effects.",
+        "Toss's modifier persists through the target's death, so it continues flying and still applies the area damage upon landing.",
+        "The target is fully disabled during Toss.",
         "Buildings cannot be targeted, but take 30\/53\/77\/100 damage from the tossed unit landing within the damage radius.",
         "The 30% extra damage is only applied to the tossed enemy unit, effectively increasing the damage to 117\/208\/299\/390. Other enemy units (including buildings) within the radius only take the basic damage.",
         "Other enemy units (including buildings) within the radius only take the basic damage.",
-        "Can toss any unit, except for ancient creeps and wards. Invisible enemy units cannot be tossed, but still take damage from a unit being tossed onto or near them. Units in the Fog of War can be tossed if they are within a 275 radius of Tiny, but cannot be selected as a target. Can directly target and toss towards runes, but cannot toss runes. The Toss requires no target talent allows Tiny to target the ground, throwing the unit towards the targeted point. Only runes can no longer be directly targeted when this talent is learned, but other units are still targetable.",
+        "Destroys trees within a 100 radius around the tossed unit upon landing.",
+        "Can toss any unit, except for ancient creeps and wards. Invisible enemy units cannot be tossed, but still take damage from a unit being tossed onto or near them. Units in the Fog of War can be tossed if they are within a 275 radius of Tiny, but cannot be selected as a target. Can directly target and toss towards runes, but cannot toss runes.",
         "Invisible enemy units cannot be tossed, but still take damage from a unit being tossed onto or near them.",
         "Units in the Fog of War can be tossed if they are within a 275 radius of Tiny, but cannot be selected as a target.",
         "Can directly target and toss towards runes, but cannot toss runes.",
-        "The Toss requires no target talent allows Tiny to target the ground, throwing the unit towards the targeted point. Only runes can no longer be directly targeted when this talent is learned, but other units are still targetable.",
-        "Only runes can no longer be directly targeted when this talent is learned, but other units are still targetable.",
         "While in the air, other units may pass below the tossed unit.",
-        "The buff or debuff of Toss is hidden, it is not visible in the HUD."
+        "The modifier of Toss is hidden, it is not visible in the HUD.",
+        "With the level 20 talent, Toss can target the ground, throwing the unit towards the targeted point. Runes can no longer be directly targeted when this talent is learned, but other units still can.",
+        "Runes can no longer be directly targeted when this talent is learned, but other units still can."
       ],
       "mana": "90\/100\/110\/120",
       "hotKey": "W",
@@ -108,8 +108,7 @@
         "Toss Duration: 1.4",
         "Number of Charges: 3",
         "Charge Replenish Time: 17\/15\/13\/11",
-        "Cannot toss spell immune enemies. Can toss spell immune allies. Can toss towards spell immune units. Does not attempt to damage spell immune enemies within the area.",
-        "Tiny's gargantuan stature allows him to catapult even the sturdiest of warriors."
+        "Cannot toss spell immune enemies. Can toss spell immune allies. Can toss towards spell immune units. Does not attempt to damage spell immune enemies within the area."
       ],
       "itemBehaviour": [],
       "legacyKey": "T",
@@ -125,20 +124,22 @@
       "notes": [
         "The Tree Grab buff lasts until the charges are used up, the Tree Throw sub-ability is used, or until death.",
         "The cooldown only starts upon losing the tree in any way. The mana is expended but it does not go on cooldown upon cast.",
-        "Sets the caster's base attack range to 350. If the ability is used by other heroes than Tiny, they may have their range reduced. Attack range bonuses are not overridden and still work normally.",
+        "Turns the caster into a melee unit with 350 attack range for its duration (relevant for Rubick and Ability Draft). This means items treat the caster as a melee hero (e.g. Manta Style, Skull Basher, etc). Attack range bonuses are not overridden and still work normally.",
+        "This means items treat the caster as a melee hero (e.g. Manta Style, Skull Basher, etc).",
         "Attack range bonuses are not overridden and still work normally.",
         "Only increases base damage and that given by the primary attribute of Tiny. Raw bonus damage is not increased. Checks Tiny's main attack damage periodically and adapts the attack damage bonus instantly. The bonus damage is not applied when attacking allied units.",
         "Checks Tiny's main attack damage periodically and adapts the attack damage bonus instantly.",
         "The bonus damage is not applied when attacking allied units.",
-        "The area damage cannot be amplified with outgoing spell damage amplification and cannot spell lifesteal. Can be amplified by incoming spell damage amplification.",
+        "The area damage works like cleave, following the same rules. Cleave damage cannot be amplified with outgoing spell damage amplification and cannot spell lifesteal. Can be amplified by incoming spell damage amplification. Cleave damage is reduced by Damage Block. Fully stacks with other sources of cleaves. Each source of cleave works completely independent. Cleaves upon attacking wards, or buildings, but not on allies and items. Wards and buildings are unaffected by cleave. Despite the visual effect, the cleave damage is applied instantly in the whole area.",
+        "Cleave damage cannot be amplified with outgoing spell damage amplification and cannot spell lifesteal.",
         "Can be amplified by incoming spell damage amplification.",
-        "The area damage is reduced by Damage Block.",
-        "The area is shaped like a rectangular with a semi-circle at the side away from Tiny. Like cleave, the area always starts in front of the attacking unit. The rectangle has a length of 400 and a width of 400. The semi-circle has a radius of 200. With the area damage length and width, the area damage can reach up to 600 range away from Tiny.",
-        "The rectangle has a length of 400 and a width of 400. The semi-circle has a radius of 200.",
-        "With the area damage length and width, the area damage can reach up to 600 range away from Tiny.",
+        "Cleave damage is reduced by Damage Block.",
         "Fully stacks with other sources of cleaves. Each source of cleave works completely independent.",
-        "Applies the area damage upon attacking wards, or buildings, but not on allies and items. Wards and buildings are unaffected by cleave.",
-        "Despite the visual effect, the area damage is applied instantly in the whole area."
+        "Cleaves upon attacking wards, or buildings, but not on allies and items. Wards and buildings are unaffected by cleave.",
+        "Despite the visual effect, the cleave damage is applied instantly in the whole area.",
+        "The area is shaped like a rectangle with a semi-circle at the side away from Tiny. Like cleave, the area always starts in front of the attacking unit. The rectangle has a length of 400 and a width of 400. The semi-circle has a radius of 200. With the area damage length and width, the area damage can reach up to 600 range away from Tiny.",
+        "The rectangle has a length of 400 and a width of 400. The semi-circle has a radius of 200.",
+        "With the area damage length and width, the area damage can reach up to 600 range away from Tiny."
       ],
       "mana": "40",
       "hotKey": "E",
@@ -151,14 +152,13 @@
         "Area Damage Length: 400",
         "Area Damage Radius: 200",
         "Number of Attacks: 5 (TagTalent Infinite)",
-        "Attack Range: 350",
+        "Base Attack Range: 350",
         "Unit Attack Damage Bonus: 25% (TagTalent 40%)",
         "Building Attack Damage Bonus: 90%\/120%\/150%\/180%",
         "Attack Damage as Area Damage: 40%\/60%\/80%\/100%",
         "Grants a new ability: Tree Volley.",
         "Causes Tree Grab to have no charge limit.",
-        "Illusions do not spawn with trees when created while having a tree equipped.",
-        "Sticks and stones break all the bones, with structures sure to follow."
+        "Illusions do not spawn with trees when created while having a tree equipped."
       ],
       "itemBehaviour": [],
       "legacyKey": "C",
@@ -179,14 +179,15 @@
         "This way, the tree uses a 300 radius collision size. This means this way, the tree may hit the intended target earlier.",
         "With the travel distance and collision radius, the tree can hit units up to 1500.",
         "The splash damage is centered around the first unit it hits, and not around where the tree was as it hit.",
-        "Performs an instant attack on the targeted unit, or the first enemy it finds. This instant attack deals 25% bonus damage, like the attacks with Tree Grab do. It also applies splash damage around the target. This instant attack can proc attack modifier and on-hit effects on the primary target normally. They have True Strike. Since the area damage is splash damage, no modifiers are applied. However, when the tree is avoided, no attack is performed. Splash damage cannot be amplified with outgoing spell damage amplification and cannot spell lifesteal, but it can be amplified by incoming spell damage amplification. The area damage effect is based on the target's position, damaging a trapezoid area the opposite direction where the tree came from. Although the tree may make it look like a ranged attack, the attack still counts as melee. This means all abilities which differentiate between ranged and melee, use their melee effects and values.",
-        "This instant attack deals 25% bonus damage, like the attacks with Tree Grab do. It also applies splash damage around the target.",
-        "This instant attack can proc attack modifier and on-hit effects on the primary target normally. They have True Strike. Since the area damage is splash damage, no modifiers are applied. However, when the tree is avoided, no attack is performed.",
-        "However, when the tree is avoided, no attack is performed.",
-        "Splash damage cannot be amplified with outgoing spell damage amplification and cannot spell lifesteal, but it can be amplified by incoming spell damage amplification.",
-        "The area damage effect is based on the target's position, damaging a trapezoid area the opposite direction where the tree came from.",
-        "Although the tree may make it look like a ranged attack, the attack still counts as melee.",
-        "This means all abilities which differentiate between ranged and melee, use their melee effects and values.",
+        "Performs an instant attack on the targeted unit, or the first enemy it finds. This instant attack deals 25% (TagTalent 40%) bonus damage, like the attacks with Tree Grab do. It also applies splash damage around the target. This instant attack can proc attack modifier and on-hit effects normally. They have True Strike and ignore disarms. Cleave effects are based on the target's position, damaging a trapezoid area the opposite direction where the tree came from. Although the tree may make it look like a ranged attack, the attack still counts as a melee attack when coming from Tiny. This means all abilities which differentiate between ranged and melee, use their melee effects and values, not ranged.",
+        "This instant attack deals 25% (TagTalent 40%) bonus damage, like the attacks with Tree Grab do. It also applies splash damage around the target.",
+        "This instant attack can proc attack modifier and on-hit effects normally. They have True Strike and ignore disarms.",
+        "Cleave effects are based on the target's position, damaging a trapezoid area the opposite direction where the tree came from.",
+        "Although the tree may make it look like a ranged attack, the attack still counts as a melee attack when coming from Tiny.",
+        "This means all abilities which differentiate between ranged and melee, use their melee effects and values, not ranged.",
+        "The enemies around the primary target are hit by splash damage, not by instant attacks. Splash damage cannot be amplified with outgoing spell damage amplification and cannot spell lifesteal. Can be amplified by incoming spell damage amplification. Splash damage is affected by damage block.",
+        "Splash damage cannot be amplified with outgoing spell damage amplification and cannot spell lifesteal. Can be amplified by incoming spell damage amplification.",
+        "Splash damage is affected by damage block.",
         "When targeting the ground, the tree provides 200 radius flying vision around itself while traveling. Does not provide vision when directly targeting a unit. When the tree hits a unit, no matter if ground or directly targeted, it grants the same vision at its location for 2 seconds.",
         "Does not provide vision when directly targeting a unit.",
         "When the tree hits a unit, no matter if ground or directly targeted, it grants the same vision at its location for 2 seconds."
@@ -203,8 +204,7 @@
         "Splash Radius: 275",
         "Splash Damage: 150%",
         "Cannot directly target spell immune enemies. Fully hits spell immune enemies otherwise.",
-        "Can be disjointed when directly targeted.",
-        "Even enemies can share in Tiny's arbor ardor."
+        "Can be disjointed when directly targeted. When disjointed, the instant attack and splash damage are not applied"
       ],
       "itemBehaviour": [],
       "legacyKey": "C",
@@ -220,14 +220,15 @@
       "notes": [
         "Requires Aghanim's Scepter to be unlocked. This ability is not available in Ability Draft, due to its reliance on a non-ultimate ability, which are limited to one ability slot.",
         "This ability is not available in Ability Draft, due to its reliance on a non-ultimate ability, which are limited to one ability slot.",
-        "Throws trees in 0.4-second intervals, starting immediately upon cast begin, resulting in up to 6 trees being thrown. Checks for trees within 525 radius in the same intervals. If no tree is found within the area, the channeling ends prematurely. The trees within the tree grab radius are chosen randomly.",
-        "Checks for trees within 525 radius in the same intervals. If no tree is found within the area, the channeling ends prematurely.",
-        "The trees within the tree grab radius are chosen randomly.",
-        "Performs an instant attack on all enemies within the damage radius. Despite the tooltip, these instant attacks do not deal any bonus damage. They apply Tiny's regular attack damage. These instant attacks can proc any attack modifiers and on-hit effects normally, they have True Strike. The area damage effect is based on the target's position, damaging a trapezoid area the opposite direction where the tree came from. Although the trees may make it look like a ranged attacks, the attack still counts as melee. This means all abilities which differentiate between ranged and melee, use their melee effects and values, not ranged.",
-        "Despite the tooltip, these instant attacks do not deal any bonus damage. They apply Tiny's regular attack damage.",
-        "These instant attacks can proc any attack modifiers and on-hit effects normally, they have True Strike.",
-        "The area damage effect is based on the target's position, damaging a trapezoid area the opposite direction where the tree came from.",
-        "Although the trees may make it look like a ranged attacks, the attack still counts as melee.",
+        "Throws trees in 0.4-second intervals, starting immediately upon cast begin, resulting in up to 6 trees being thrown. Checks for trees in the same intervals. If no tree is found within the area, the channeling ends prematurely.",
+        "Checks for trees in the same intervals. If no tree is found within the area, the channeling ends prematurely.",
+        "The trees within the area are chosen randomly.",
+        "Performs an instant attack on all enemies within the damage radius. Despite the tooltip, the instant attacks do not deal any bonus damage. They apply Tiny's regular attack damage. However, the Tree Grab unit damage bonus talent is applieed to Tree Volley as well. These instant attacks can proc attack modifier and on-hit effects normally. They have True Strike and ignore disarms. Cleave effects are based on the target's position, damaging a trapezoid area the opposite direction where the tree came from. Although the trees may make it look like a ranged attacks, the attacks still counts as a melee attack when coming from Tiny. This means all abilities which differentiate between ranged and melee, use their melee effects and values, not ranged.",
+        "Despite the tooltip, the instant attacks do not deal any bonus damage. They apply Tiny's regular attack damage.",
+        "However, the Tree Grab unit damage bonus talent is applieed to Tree Volley as well.",
+        "These instant attacks can proc attack modifier and on-hit effects normally. They have True Strike and ignore disarms.",
+        "Cleave effects are based on the target's position, damaging a trapezoid area the opposite direction where the tree came from.",
+        "Although the trees may make it look like a ranged attacks, the attacks still counts as a melee attack when coming from Tiny.",
         "This means all abilities which differentiate between ranged and melee, use their melee effects and values, not ranged."
       ],
       "mana": "200",
@@ -241,8 +242,7 @@
         "Tree Grab Radius: 525",
         "Damage Radius: 400",
         "Max Channel Time: 2.4",
-        "Tree Throw Interval: 0.4",
-        "Sticks thrown from stones are like to shatter many bones."
+        "Tree Throw Interval: 0.4"
       ],
       "itemBehaviour": [],
       "legacyKey": "R",
@@ -268,8 +268,7 @@
       "params": [
         "Attack Damage Bonus: 30\/70\/110",
         "Attack Speed Loss: 20\/35\/50",
-        "Armor Bonus: 12\/18\/24",
-        "Watching a hill become a mountain is awe-inspiring - especially if the mountain begins laying waste to adversaries."
+        "Armor Bonus: 12\/18\/24"
       ],
       "itemBehaviour": [],
       "legacyKey": "W",
@@ -300,7 +299,7 @@
     {
       "talentLvl": "15",
       "talentLeft": "+80 Avalanche Damage",
-      "talentRight": "+15% Tree Grab Unit Bonus Damage"
+      "talentRight": "+15% Tree Grab Unit Damage Bonus"
     },
     {
       "talentLvl": "10",

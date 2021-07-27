@@ -2,7 +2,8 @@
   "abilities": [
     {
       "notes": [
-        "This attack damage talent is added as raw attack damage, so it does not benefit illusions, and is not affected by most percentage-based damage increasing or reducing effects."
+        "This attack damage talent is added as raw attack damage. Does not benefit illusions and is not affected by most percentage-based damage increasing or reducing effects.",
+        "Does not benefit illusions and is not affected by most percentage-based damage increasing or reducing effects."
       ],
       "spellName": "Talent",
       "talents": [
@@ -23,7 +24,7 @@
         },
         {
           "talentLvl": "10",
-          "talentLeft": "+0.75s Waning Rift Silence Duration",
+          "talentLeft": "+0.75 Waning Rift Silence Duration",
           "talentRight": "+25 Damage"
         }
       ]
@@ -52,8 +53,7 @@
         "Cast Range: 3000",
         "Travel Distance: 1950",
         "Damage Radius: 225",
-        "Damage: 75\/150\/225\/300",
-        "The playful Faerie Dragon delights in confusing others, vanishing and reappearing where unexpected."
+        "Damage: 75\/150\/225\/300"
       ],
       "itemBehaviour": [],
       "legacyKey": "R",
@@ -69,13 +69,12 @@
       "notes": [
         "↓↓ Double-tapping automatically targets 25 range in front of Puck.",
         "Waning Rift does not disjoint projectiles upon cast.",
-        "Despite the visual effects, the silence and damage are applied instantly in the entire radius. It first applies the damage, the silence debuff, the knockback, and then the True Sight debuff.",
-        "It first applies the damage, the silence debuff, the knockback, and then the True Sight debuff.",
-        "With Aghanim's Shard, knocks units back at a speed of 625. The knockback distance is always 250, no matter how far the unit is from the center. Units are not disabled during the knockback. They can still turn, attack, and use items. Channeling items and abilities are not interrupted. Can push units over impassable terrain. Any tree a knocked back unit collides with gets destroyed. Places the same debuff as Dust of Appearance on enemies to reveal them. However, it does not slow enemies. Multiple reveal debuffs do not stack, but refresh the duration instead. The debuff is placed on wards as well.",
-        "Units are not disabled during the knockback. They can still turn, attack, and use items. Channeling items and abilities are not interrupted.",
+        "Despite the visual effects, the silence and damage are applied instantly in the entire radius. It first applies the damage, then the silence debuff, then the knockback, then the True Sight debuff.",
+        "It first applies the damage, then the silence debuff, then the knockback, then the True Sight debuff.",
+        "With Aghanim's Shard, knocks units back at a speed of 625. The knockback distance is always 250, no matter how far the unit is from the center. Units are not disabled during the knockback. They can still turn, attack, and use items. Channeling items are not interrupted. Can push units over impassable terrain. Any tree a knocked back unit collides with gets destroyed. Places the same debuff as Dust of Appearance on enemies to reveal them. However, it does not slow enemies. The debuff is placed on wards as well.",
+        "Units are not disabled during the knockback. They can still turn, attack, and use items. Channeling items are not interrupted.",
         "Can push units over impassable terrain. Any tree a knocked back unit collides with gets destroyed.",
-        "Places the same debuff as Dust of Appearance on enemies to reveal them. However, it does not slow enemies. Multiple reveal debuffs do not stack, but refresh the duration instead.",
-        "Multiple reveal debuffs do not stack, but refresh the duration instead.",
+        "Places the same debuff as Dust of Appearance on enemies to reveal them. However, it does not slow enemies.",
         "The debuff is placed on wards as well."
       ],
       "mana": "100\/110\/120\/130",
@@ -95,8 +94,7 @@
         "True Sight Duration: 5",
         "Waning Rift now deals 70 bonus damage and knocks enemies back 250 distance over 0.4 seconds (TagTalentnon-interrupting). Reveals invisible enemy units and wards in the area for 5 seconds.",
         "Silence persists if debuff was placed before spell immunity and when not dispelled.",
-        "When cast while rooted or leashed, it always gets cast at the current location, no matter where it gets targeted.",
-        "With a mischievous grin, Puck spreads its enchanted powder which disrupts magical flow."
+        "When cast while rooted or leashed, it always gets cast at the current location, no matter where it gets targeted."
       ],
       "itemBehaviour": [],
       "legacyKey": "W",
@@ -115,11 +113,11 @@
         "Turns the caster invulnerable and hidden for its duration. Does not provide phased movement, so the caster can still block other units during Phase Shift. The buff lingers for one server tick once the channeling ends or is interrupted, which allows using items while still invulnerable and hidden.",
         "Does not provide phased movement, so the caster can still block other units during Phase Shift.",
         "The buff lingers for one server tick once the channeling ends or is interrupted, which allows using items while still invulnerable and hidden.",
-        "The Phase Shift instant attack talent causes Puck performs instant attacks on all enemies within attack range whenever Phase Shift is cast. These instant attacks can proc any attack modifiers and on-hit effects normally. They do not have True Strike, but completely ignore disarms. Every visible and attackable enemy nearby is attacked. This includes buildings, but not wards and Undying Zombies. The total instant attack radius for Puck is 750, since it is based on the attack range of the caster. Therefore, the radius can be further increased by other attack range bonuses. However, it is not affected by cast range bonuses.",
+        "The Phase Shift instant attack talent causes Puck to perform instant attacks on all enemies within attack range whenever Phase Shift is cast. These instant attacks can proc any attack modifiers and on-hit effects normally. They do not have True Strike, but completely ignore disarms. Every visible and attackable enemy nearby is attacked. This includes buildings, but not wards and Undying Zombies. The total instant attack radius for Puck is 750, since it is based on the attack range of the caster. The radius can be further increased by other attack range bonuses. Cast range bonuses do not increase it.",
         "These instant attacks can proc any attack modifiers and on-hit effects normally. They do not have True Strike, but completely ignore disarms.",
         "Every visible and attackable enemy nearby is attacked. This includes buildings, but not wards and Undying Zombies.",
         "The total instant attack radius for Puck is 750, since it is based on the attack range of the caster.",
-        "Therefore, the radius can be further increased by other attack range bonuses. However, it is not affected by cast range bonuses."
+        "The radius can be further increased by other attack range bonuses. Cast range bonuses do not increase it."
       ],
       "mana": null,
       "hotKey": "E",
@@ -129,8 +127,7 @@
       "params": [
         "Cast Animation: 0+0",
         "Max Channel Time: 0.75\/1.5\/2.25\/3.25",
-        "Instant Attack Range Bonus: 200",
-        "With a quip and flash, Puck returns to the alien dimension from whence it came."
+        "Instant Attack Range Bonus: 200"
       ],
       "itemBehaviour": [],
       "legacyKey": "F",
@@ -177,19 +174,17 @@
         "The leash snap first applies the damage, then the debuff.",
         "Dream Coil leashes invisible units and on units in the Fog of War as well, but it does not provide vision over them. The link visually draws to their last known location.",
         "Multiple instances of Dream Coil fully stack, with each cast placing its own separate leash.",
-        "The Dream Coil rapid fire talent causes Puck to perform instant attacks on all leashed enemies, as long as Puck stays within 775 radius of the targeted area. These instant attacks can proc any attack modifiers and on-hit effects normally. They do not have True Strike, but completely ignore disarms. The attacks are performed even while the caster is disabled, or hidden. This means the attacks happen even during Phase Shift. Attack speed buffs and slow do not affect the instant attacks, the attack happens once every 0.75 seconds. This means that Puck can perform up to 8 (10) instant attacks if it stays within the radius. Since the instant attacks is bound to the leash, snapping it, or dispelling it with spell immunity causes the attacks to stop. Multiple instances of Dream Coil on enemies causes the caster to instantly attack multiple times, for each instance, with the interval based on when the debuffs were received. Both Phase Shift and Dream Coil instant attack talents are independent from each other.",
+        "The Dream Coil rapid fire talent causes Puck to perform instant attacks on all leashed enemies, as long as Puck stays within 775 radius of the targeted area. These instant attacks can proc any attack modifiers and on-hit effects normally. They do not have True Strike, but completely ignore disarms. The attacks are performed even while the caster is disabled, or hidden. This means the attacks happen even during Phase Shift. The attacks are performed in 0.75-second intervals, starting 0.75 seconds after cast, resulting in up to 8 (TagTalent 10) instances. Since the instant attacks are bound to the leash, snapping it, or dispelling it with spell immunity causes the attacks to stop. Multiple instances of Dream Coil on enemies causes the caster to instant-attack multiple times, for each instance, with the interval based on when the debuffs were received.",
         "These instant attacks can proc any attack modifiers and on-hit effects normally. They do not have True Strike, but completely ignore disarms.",
-        "The attacks are performed even while the caster is disabled, or hidden. This means the attacks happen even during Phase Shift. Attack speed buffs and slow do not affect the instant attacks, the attack happens once every 0.75 seconds. This means that Puck can perform up to 8 (10) instant attacks if it stays within the radius.",
-        "Attack speed buffs and slow do not affect the instant attacks, the attack happens once every 0.75 seconds.",
-        "This means that Puck can perform up to 8 (10) instant attacks if it stays within the radius.",
-        "Since the instant attacks is bound to the leash, snapping it, or dispelling it with spell immunity causes the attacks to stop.",
-        "Multiple instances of Dream Coil on enemies causes the caster to instantly attack multiple times, for each instance, with the interval based on when the debuffs were received.",
-        "Both Phase Shift and Dream Coil instant attack talents are independent from each other."
+        "The attacks are performed even while the caster is disabled, or hidden. This means the attacks happen even during Phase Shift.",
+        "The attacks are performed in 0.75-second intervals, starting 0.75 seconds after cast, resulting in up to 8 (TagTalent 10) instances.",
+        "Since the instant attacks are bound to the leash, snapping it, or dispelling it with spell immunity causes the attacks to stop.",
+        "Multiple instances of Dream Coil on enemies causes the caster to instant-attack multiple times, for each instance, with the interval based on when the debuffs were received."
       ],
       "mana": "100\/150\/200",
       "hotKey": "R",
-      "cooldown": "80\/75\/70",
-      "description": "Creates a coil of volatile magic that latches onto enemy Heroes, stunning them for 6 seconds, damaging and leashing them. If the enemy hero stretches the coil by moving too far away, it snaps, stunning and dealing additional damage.",
+      "cooldown": "80",
+      "description": "Creates a coil of volatile magic that latches onto enemy Heroes, stunning them for 0.5 seconds, damaging and leashing them. If the enemy hero stretches the coil by moving too far away, it snaps, stunning and dealing additional damage.",
       "spellName": "Dream Coil",
       "params": [
         "Cast Animation: 0.1+0.27",
@@ -197,15 +192,14 @@
         "Coil Latch Radius: 375",
         "Link Break Radius: 600",
         "Initial Damage: 125\/200\/275",
-        "Link Break Damage: 300\/400\/500 (TagTalent 400\/550\/700)",
+        "Link Break Damage: 200\/300\/400 (TagAghanim 300\/450\/600)",
         "Initial Stun Duration: 0.5",
-        "Link Break Stun Duration: 1.8\/2.4\/3 (TagTalent 2\/3\/4)",
-        "Coil Duration: 6 (TagTalent 8)",
+        "Link Break Stun Duration: 1.8\/2.4\/3 (TagAghanim 2\/3\/4)",
+        "Coil Duration: 6 (TagAghanim 8)",
         "Instant Attack Radius: 775",
         "Instant Attack Interval: 0.75",
         "Increases damage from coil breaks, increases coil duration, coil break stun goes through spell immunity.",
-        "Does not latch on spell immune enemies. Turning spell immune dispels the leash. When upgraded, latches on spell immune enemies without stunning or damaging them. Turning spell immune does not dispel the leash. Leash break stun and damage pierce spell immunity.",
-        "The Faerie Dragon sows confusion by forcing its enemies to vividly dream about their own mortality."
+        "Does not latch on spell immune enemies. Turning spell immune dispels the leash. When upgraded, latches on spell immune enemies without stunning or damaging them. Turning spell immune does not dispel the leash. Leash break stun and damage pierce spell immunity."
       ],
       "itemBehaviour": [],
       "legacyKey": "C",
@@ -240,7 +234,7 @@
     },
     {
       "talentLvl": "10",
-      "talentLeft": "+0.75s Waning Rift Silence Duration",
+      "talentLeft": "+0.75 Waning Rift Silence Duration",
       "talentRight": "+25 Damage"
     }
   ]

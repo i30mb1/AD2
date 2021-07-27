@@ -2,12 +2,12 @@
   "abilities": [
     {
       "notes": [
-        "The attack range talent also affects the cast range of Burning Spear.",
-        "This attack damage talent is added as raw attack damage, so it does not benefit illusions, and is not affected by most percentage-based damage increasing or reducing effects.",
+        "This attack damage talent is added as raw attack damage. Does not benefit illusions and is not affected by most percentage-based damage increasing or reducing effects.",
+        "Does not benefit illusions and is not affected by most percentage-based damage increasing or reducing effects.",
         "The health talent increases maximum health capacity, and keeps the current health percentage.",
         "The lifesteal talent stacks additively with other sources of lifesteal.",
-        "The spell lifesteal talent stacks additively with other sources of spell lifesteal.",
-        "The spell lifesteal talent heals for 5% from non-hero units. Treats creep-heroes as creeps and does not heal off of illusions."
+        "The spell lifesteal talent stacks additively with other sources of spell lifesteal. Heals for 5% from non-hero units. Treats creep-heroes as creeps and does not heal off of illusions.",
+        "Heals for 5% from non-hero units. Treats creep-heroes as creeps and does not heal off of illusions."
       ],
       "spellName": "Talent",
       "talents": [
@@ -48,6 +48,10 @@
         "Does not knock back Roshan, but does damage and disarm him.",
         "The knockback is not a set distance. It pushes every enemy so they are 400 range away from Huskar's cast location. So the minimum knockback distance is -100.",
         "The knockback duration is always 1, so the speed varies between -100 and 400, depending on the knockback distance.",
+        "With Aghanim's Shard, Inner Fire loses its cast time and backswing. It still interrupts channeling abilities upon cast. It can be cast while stunned, cycloned, slept, taunted, hidden or during forced movement. It still cannot be cast while silenced, hexed or prevented from acting. Huskar becomes unable to ⇧ Shift-queue this ability upon acquiring Aghanim's Shard.",
+        "It can be cast while stunned, cycloned, slept, taunted, hidden or during forced movement.",
+        "It still cannot be cast while silenced, hexed or prevented from acting.",
+        "Huskar becomes unable to ⇧ Shift-queue this ability upon acquiring Aghanim's Shard.",
         "With Aghanim's Shard, the disarm modifier also slows movement speed by 40% and applies a 50% heal reduction, health regeneration reduction, lifesteal reduction and spell lifesteal reduction."
       ],
       "mana": "75\/100\/125\/150",
@@ -56,7 +60,7 @@
       "description": "In a fiery rage, knocks all nearby enemies away from you to a fixed distance, dealing damage and disarming them.",
       "spellName": "Inner Fire",
       "params": [
-        "Cast Animation: 0.2+0.64",
+        "Cast Animation: 0.2+0.64 (TagTalent 0+0)",
         "Radius: 500",
         "Damage: 100\/170\/240\/310",
         "Max Knockback Distance: 400",
@@ -65,8 +69,7 @@
         "Health Restoration Reduction: 50%",
         "Move Speed Slow: 40%",
         "Causes Inner Fire to reduce healing and regeneration by 50% and applies a 40% movement speed slow. Lowers cooldown by 3 seconds. Can be cast while disabled.",
-        "Disarm persists if debuff was placed before spell immunity and when not dispelled.",
-        "Not even Huskar's own flesh can contain the unending expansion of his life force."
+        "Disarm persists if debuff was placed before spell immunity and when not dispelled."
       ],
       "itemBehaviour": [],
       "legacyKey": "V",
@@ -81,7 +84,7 @@
       ],
       "notes": [
         "The current health as cost is direct HP Removal.",
-        "Uses Huskar's 400 (TagTalent 425) attack range when using Autocast. Manually casting it uses the 450 (TagTalent 475) cast range. The cast range can be further increased by other attack range bonuses. However, it is not affected by cast range bonuses.",
+        "Uses Huskar's 400 attack range when Autocast is active. Manually casting it uses the 450 cast range. The cast range can be further increased by other attack range bonuses. However, it is not affected by cast range bonuses.",
         "The cast range can be further increased by other attack range bonuses. However, it is not affected by cast range bonuses.",
         "Burning Spear stacks additively when used multiple times on one target. Each attack places the counter modifier on the target. The number of debuffs are summed up and displayed as one icon on the affected enemy. A number on the icon reveals the amount of stacks. The number is visible to everyone. Every instance's duration is completely independent from other instances. They do not prolong or refresh each other. The debuff modifier is only placed once and refreshed with successive casts. The debuff deals damage equal to 5\/10\/15\/20 (TagTalent 10\/15\/20\/25) times the number of stacks, starting 1 second after the debuff is applied. The damage is decided by the level of spell upon placing the debuff modifier. Therefore, placing new stacks with higher level of the ability on targets with old stacks still uses the old damage value.",
         "Each attack places the counter modifier on the target.",
@@ -91,7 +94,7 @@
         "The debuff modifier is only placed once and refreshed with successive casts.",
         "The debuff deals damage equal to 5\/10\/15\/20 (TagTalent 10\/15\/20\/25) times the number of stacks, starting 1 second after the debuff is applied.",
         "The damage is decided by the level of spell upon placing the debuff modifier. Therefore, placing new stacks with higher level of the ability on targets with old stacks still uses the old damage value.",
-        "The damage per second increasing talent immediately update all current active Burning Spear stacks.",
+        "The damage per second increasing and the pure damage talents immediately update all current active Burning Spear stacks.",
         "Deals a total of 40\/80\/120\/160 (TagTalent 80\/120\/160\/200) damage per Burning Spear instance (before reductions).",
         "Cannot be cast on buildings, wards and allied units."
       ],
@@ -101,12 +104,11 @@
       "description": "Huskar sets his spears aflame, dealing damage over time with his regular attack. Multiple attacks will stack additional damage. Each attack drains some of Huskar's health. Lasts 8 seconds.",
       "spellName": "Burning Spear",
       "params": [
-        "Cast Range: 450 (TagTalent 475)",
+        "Cast Range: 450",
         "Current Health as Cost: 3%",
         "Damage per Second: 5\/10\/15\/20 (TagTalent 10\/15\/20\/25)",
         "Duration: 8",
-        "Does not pierce spell immunity. Attempts to damage if debuff was placed before spell immunity. Pierces spell immunity when the required talent is chosen.",
-        "The Sacred Warrior ignites his weaponry after marking it with his own blood - causing far greater pain than he himself feels."
+        "Does not pierce spell immunity. Attempts to damage if debuff was placed before spell immunity. Pierces spell immunity when the required talent is chosen."
       ],
       "itemBehaviour": [],
       "legacyKey": "R",
@@ -134,8 +136,7 @@
       "params": [
         "Max Attack Speed Bonus: 160\/210\/260\/310",
         "Strength as Max Health Regen Bonus: 20%\/40%\/60%\/80% (TagTalent 55%\/75%\/95%\/115%)",
-        "Max Bonus Health Threshold: 10%",
-        "After losing his birthright, Huskar gained a lethality in physical combat that is only heightened as his own blood is spilled."
+        "Max Bonus Health Threshold: 10%"
       ],
       "itemBehaviour": [],
       "legacyKey": "B",
@@ -156,13 +157,13 @@
         "Since the modifier has a set max duration, it can expire while leaping, continuing the rest of the leap without its effects.",
         "If Huskar is disabled during the leap or the distance between the target and Huskar becomes more than 1450, the leap stops.",
         "Huskar can use items and abilities during the leap. However, position changing effects like Blink Dagger cancel it.",
-        "Can be cast on and debuff Roshan, but does not damage him. Cannot be cast on Couriers.",
-        "Cannot be cast on Couriers.",
-        "The 32%\/38%\/44% current health as cost is magical damage. Therefore, it can be reduced by magic resistance. The self-inflicted damage is not lethal, no matter how strong it gets amplified, so it cannot be used to deny oneself. The self-inflicted damage is applied on impact, it's not applied if the leap is interrupted prematurely.",
+        "Can be cast on and debuff Roshan, but does not damage him. Can be cast on Couriers.",
+        "Can be cast on Couriers.",
+        "Deals magical damage to the caster as well. Therefore, it can be reduced by magic resistance. The self-inflicted damage is not lethal, no matter how strong it gets amplified, so it cannot be used to deny oneself. The self-inflicted damage is applied on impact, it's not applied if the leap is interrupted prematurely.",
         "The self-inflicted damage is not lethal, no matter how strong it gets amplified, so it cannot be used to deny oneself.",
         "The self-inflicted damage is applied on impact, it's not applied if the leap is interrupted prematurely.",
         "Life Break first applies the damage, then the slow debuff, and then the taunt debuff.",
-        "With Aghanim's Scepter, Life Break taunts the target for 3, forcing them to attack Huskar. Does not silence the target, so active attack modifiers with Autocast on are still applied.",
+        "With Aghanim's Scepter, Life Break taunts the target, forcing them to attack Huskar. Does not silence the target, so active attack modifiers with Autocast on are still applied.",
         "Does not silence the target, so active attack modifiers with Autocast on are still applied."
       ],
       "mana": null,
@@ -172,15 +173,14 @@
       "spellName": "Life Break",
       "params": [
         "Cast Animation: 0.3+0.5",
-        "Cast Range: 550 (TagTalent 850)",
+        "Cast Range: 550 (TagAghanim 850)",
         "Current Health as Cost: 32%\/38%\/44%",
         "Target Current Health as Damage: 32%\/38%\/44%",
         "Move Speed Slow: 60%",
         "Slow Duration: 3\/4\/5",
         "Taunt Duration: 3",
         "Forces the enemy target to attack you and increases cast range.",
-        "Blocked upon impact. When blocked, Huskar takes no damage either.",
-        "No matter the danger, Huskar thrusts himself into melees that only he can survive."
+        "Blocked upon impact. When blocked, Huskar takes no damage either."
       ],
       "itemBehaviour": [],
       "legacyKey": "F",

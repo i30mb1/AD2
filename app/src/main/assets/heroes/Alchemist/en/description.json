@@ -2,9 +2,10 @@
   "abilities": [
     {
       "notes": [
-        "This attack damage talent is added as raw attack damage, so it does not benefit illusions, and is not affected by most percentage-based damage increasing or reducing effects.",
+        "This attack damage talent is added as raw attack damage. Does not benefit illusions and is not affected by most percentage-based damage increasing or reducing effects.",
+        "Does not benefit illusions and is not affected by most percentage-based damage increasing or reducing effects.",
         "The health talent increases maximum health capacity, and keeps the current health percentage.",
-        "Cleave from talents is not disabled by Break. For more information, see cleave."
+        "Cleave from talents is not disabled by Break."
       ],
       "spellName": "Talent",
       "talents": [
@@ -59,8 +60,7 @@
         "Damage per Second: 20\/25\/30\/35",
         "Armor Reduction: 4\/5\/6\/7",
         "Aura Linger Duration: 0.5",
-        "Duration: 16",
-        "Using traditional Alchemy from the Darkbrew family, Razzil concocts an acid that dissolves even the toughest metals."
+        "Duration: 16"
       ],
       "itemBehaviour": [],
       "legacyKey": "D",
@@ -102,8 +102,7 @@
         "Max Damage: 160\/240\/320\/400 (TagTalent 560\/640\/720\/800)",
         "Max Stun Duration: 1.75\/2.5\/3.25\/4",
         "Does not affect self when blowing up while spell immune, but still applies the area effect.",
-        "Blocked by enemies but not blocked by self when blowing up on self.",
-        "A silver lining to the failure of turning a mountain into gold, this volatile solution has destructive potential."
+        "Blocked by enemies but not blocked by self when blowing up on self."
       ],
       "itemBehaviour": [],
       "legacyKey": "E",
@@ -166,8 +165,7 @@
         "Extra Gold Bonus per Stack: 3",
         "Gold Bonus Cap: 15\/18\/21\/24",
         "Stack Duration: 36",
-        "Bounty Rune Multiplier: 1.5\/2\/2.5\/3",
-        "While it is not a mountain, Razzil has mastered the conversion of smaller compounds to line his pockets."
+        "Bounty Rune Multiplier: 1.5\/2\/2.5\/3"
       ],
       "itemBehaviour": [],
       "legacyKey": "G",
@@ -229,8 +227,7 @@
         "Rage Duration: 25",
         "Alchemist melts down Aghanim's Scepter to grant an allied hero all Aghanim's Scepter upgrades. When you have a Scepter of your own, you will gain bonus damage and spell amplification for each gifted Scepter.",
         "Grants a new ability: Berserk Potion.",
-        "Illusions created during Chemical Rage get a new Chemical Rage buff which lasts its full duration, regardless of how much was left on Alchemist himself.",
-        "The brew Razzil gave to the Ogre during their prison bust has become a useful potion in the midst of combat."
+        "Illusions created during Chemical Rage get a new Chemical Rage buff which lasts its full duration, regardless of how much was left on Alchemist himself."
       ],
       "itemBehaviour": [],
       "legacyKey": "R",
@@ -243,10 +240,10 @@
         "Affects Allied Heroes"
       ],
       "notes": [
-        "Aghanim's Scepter has an active ability for Alchemist, allowing him to cast it on allied heroes (excluding hero clones and illusions). Once cast, the Scepter is consumed and the targeted ally passively receives all of Aghanim's Scepter's effects. ↓↓ Double-tapping Aghanim's Scepter in the inventory automatically targets self. This includes all Aghanim's Scepter upgrades, as well as the item's attributes, 10 strength, 10 agility, 10 intelligence, 175 health, 175 mana, 10 attack speed and 10 attack damage. The net worth of the item transfers from Alchemist to the target hero. Self-casting does not change the net worth. Doing so does not change Alchemist's or the target's GPM. A hero can only be targeted once by Aghanim's Scepter Synth.",
+        "Aghanim's Scepter has an active ability for Alchemist, allowing him to cast it on allied heroes (excluding hero clones and illusions). Once cast, the Scepter is consumed and the targeted ally passively receives all of Aghanim's Scepter's effects. ↓↓ Double-tapping Aghanim's Scepter in the inventory automatically targets self. This includes all Aghanim's Scepter upgrades, as well as the item's attributes, 10 strength, 10 agility, 10 intelligence, 175 health, and 175 mana. The net worth of the item transfers from Alchemist to the target hero. Self-casting does not change the net worth. Doing so does not change Alchemist's or the target's GPM. A hero can only be targeted once by Aghanim's Scepter Synth.",
         "Once cast, the Scepter is consumed and the targeted ally passively receives all of Aghanim's Scepter's effects.",
         "↓↓ Double-tapping Aghanim's Scepter in the inventory automatically targets self.",
-        "This includes all Aghanim's Scepter upgrades, as well as the item's attributes, 10 strength, 10 agility, 10 intelligence, 175 health, 175 mana, 10 attack speed and 10 attack damage.",
+        "This includes all Aghanim's Scepter upgrades, as well as the item's attributes, 10 strength, 10 agility, 10 intelligence, 175 health, and 175 mana.",
         "The net worth of the item transfers from Alchemist to the target hero. Self-casting does not change the net worth.",
         "Doing so does not change Alchemist's or the target's GPM.",
         "A hero can only be targeted once by Aghanim's Scepter Synth.",

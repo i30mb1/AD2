@@ -2,7 +2,8 @@
   "abilities": [
     {
       "notes": [
-        "This attack damage talent is added as raw attack damage, so it does not benefit illusions, and is not affected by most percentage-based damage increasing or reducing effects."
+        "This attack damage talent is added as raw attack damage. Does not benefit illusions and is not affected by most percentage-based damage increasing or reducing effects.",
+        "Does not benefit illusions and is not affected by most percentage-based damage increasing or reducing effects."
       ],
       "spellName": "Talent",
       "talents": [
@@ -71,8 +72,7 @@
         "Pull Duration: 1.2\/1.4\/1.6\/1.8",
         "Remnant Duration: 20",
         "True Sight Radius: 475",
-        "Debuff persist if placed before spell immunity and when not dispelled.",
-        "Inai exists far beyond the scope of a single point in space and time."
+        "Debuff persist if placed before spell immunity and when not dispelled."
       ],
       "itemBehaviour": [],
       "legacyKey": "R",
@@ -86,18 +86,18 @@
         "Damage Magical"
       ],
       "notes": [
-        "Creates 7 (13) portals, with one of them being at the cast location. The following 6 portals form a ring around the center portal, with their center being 520 range far away from it. One portal is created in front of Void Spirit, while the other 5 are adapted to it, with 60° angles between them, forming a hexagon. With Aghanim's Shard, the last 6 portals are placed in line behind the portals of the first ring. These last portals are 520 range away from the center portal and are placed using the same angles as for the portals of the first ring.",
+        "Creates 7 (TagTalent 13) portals, with one of them being at the cast location. The following 6 portals form a ring around the center portal, with their center being 520 range far away from it. One portal is created in front of Void Spirit, while the other 5 are adapted to it, with 60° angles between them, forming a hexagon. With Aghanim's Shard, the last 6 portals are placed in line behind the portals of the first ring. These last portals are 520 range away from the center portal and are placed using the same angles as for the portals of the first ring.",
         "The following 6 portals form a ring around the center portal, with their center being 520 range far away from it.",
         "One portal is created in front of Void Spirit, while the other 5 are adapted to it, with 60° angles between them, forming a hexagon.",
         "With Aghanim's Shard, the last 6 portals are placed in line behind the portals of the first ring. These last portals are 520 range away from the center portal and are placed using the same angles as for the portals of the first ring.",
         "These last portals are 520 range away from the center portal and are placed using the same angles as for the portals of the first ring.",
-        "Void Spirit can decide at which portal to re-appear, by issuing a move order with Right Click or by pressing the move hotkey and right-click. Directly clicking on the portals is not required, a directional order is enough. The closest portal to the right-clicked location gets selected. Void Spirit can change the selected portals as many time as they want during the phase duration. A selected portal is highlighted for Void Spirit and his allies. For enemies, all portals look the same.",
+        "Void Spirit can decide at which portal to re-appear, by issuing a move order (TagTalent Right Click or M). Directly clicking on the portals is not required, a directional order is enough. The closest portal to the right-clicked location gets selected. Void Spirit can change the selected portals as many time as they want during the phase duration. A selected portal is highlighted for Void Spirit and his allies. For enemies, all portals look the same.",
         "Directly clicking on the portals is not required, a directional order is enough. The closest portal to the right-clicked location gets selected.",
         "Void Spirit can change the selected portals as many time as they want during the phase duration.",
         "A selected portal is highlighted for Void Spirit and his allies. For enemies, all portals look the same.",
         "Turns Void Spirit invulnerable and hidden for its duration.",
-        "Fully disables, silences, mutes, and disarms Void Spirit, making him unable to do anything. Attack orders (A) behave like move orders during disarms, so right-clicking an enemy selects the closest portal to the enemy as well.",
-        "Attack orders (A) behave like move orders during disarms, so right-clicking an enemy selects the closest portal to the enemy as well.",
+        "Fully disables, silences, mutes, and disarms Void Spirit, making him unable to do anything. Attack orders behave like move orders during disarms, so right-clicking an enemy selects the closest portal to the enemy as well.",
+        "Attack orders behave like move orders during disarms, so right-clicking an enemy selects the closest portal to the enemy as well.",
         "Does not provide phased movement, so Void Spirit can still block other units during Dissimilate.",
         "Does not disjoint projectiles upon teleporting.",
         "The damage and the 2.5 seconds stun is dealt around the selected portal upon re-appearing. Dissimilate first applies the damage, then the stun.",
@@ -119,8 +119,7 @@
         "Second Ring Radius: 1040",
         "Number of Second Ring Portals: 6",
         "Adds a partial outer ring to Dissimilate. Increases damage by 200.",
-        "Debuff persist if placed before spell immunity and when not dispelled.",
-        "Inai much prefers to observe our plane free from the confines of corporeal form."
+        "Debuff persist if placed before spell immunity and when not dispelled."
       ],
       "itemBehaviour": [],
       "legacyKey": "D",
@@ -141,11 +140,11 @@
         "Once these projectiles reaches Void Spirit, they increase the shield's capacity by the given amount.",
         "If the base shield got depleted before these projectiles reach, they create a new shield, with their own capacity.",
         "These projectiles cannot be disjointed.",
-        "The pulse is bound to a modifier. Multiple instances of the modifier stack, so that each cast releases a ring. The modifier is lost upon Void Spirit's death, therefore dying stops the ring.",
-        "The modifier is lost upon Void Spirit's death, therefore dying stops the ring.",
-        "The shield only works against physical attack damage. Magical or pure attack damage, and spell damage of any kind is not blocked. Multiple instances of the shield do not stack, recasting refreshes the duration and resets the absorption value.",
-        "Multiple instances of the shield do not stack, recasting refreshes the duration and resets the absorption value.",
+        "The pulse is bound to a modifier. Multiple instances of the modifier stack, so that each cast releases a ring. The modifier is lost upon dying, therefore dying stops the ring.",
+        "The modifier is lost upon dying, therefore dying stops the ring.",
+        "The shield only works against physical attack damage. Magical or pure attack damage, and spell damage of any kind is not blocked. Blocks after armor reduction, but before any other reductions. Multiple instances of the shield do not stack, recasting refreshes the duration and resets the absorption value.",
         "Blocks after armor reduction, but before any other reductions.",
+        "Multiple instances of the shield do not stack, recasting refreshes the duration and resets the absorption value.",
         "With Aghanim's Scepter, Resonance Pulse first applies the damage, then the silence debuff."
       ],
       "mana": "115\/120\/125\/130",
@@ -163,8 +162,7 @@
         "Silence Duration: 2",
         "Number of Charges: 2",
         "Charge Replenish Time: 18",
-        "Causes Resonant Pulse to silence and gain two charges.",
-        "Inai never hesitates to shroud himself in the essence of his true self when forced to interact with the mortal plane."
+        "Causes Resonant Pulse to silence and gain two charges."
       ],
       "itemBehaviour": [],
       "legacyKey": "E",
@@ -180,9 +178,9 @@
       "notes": [
         "Void Spirit is teleported instantly towards the targeted point upon cast.",
         "Does not disjoint projectiles upon teleporting.",
-        "Causes Void Spirit to perform an instant attack on every enemy unit along the path. These instant attacks can proc any attack modifiers (including crit) and on-hit effects normally, with cleave being an exception. They have True Strike, and completely ignore disarms. The talent grants Astral Step a 160% ensured critical strike, crits with a lower value have no effect if they proc, since the higher crit value takes priority.",
-        "These instant attacks can proc any attack modifiers (including crit) and on-hit effects normally, with cleave being an exception. They have True Strike, and completely ignore disarms.",
-        "The talent grants Astral Step a 160% ensured critical strike, crits with a lower value have no effect if they proc, since the higher crit value takes priority.",
+        "Causes Void Spirit to perform an instant attack on every enemy unit along the path. These instant attacks can proc any attack modifiers and on-hit effects normally, except for cleave. They have True Strike, and completely ignore disarms. With the talent, the instant attacks apply an ensured 160% damage critical strike as well.",
+        "These instant attacks can proc any attack modifiers and on-hit effects normally, except for cleave. They have True Strike, and completely ignore disarms.",
+        "With the talent, the instant attacks apply an ensured 160% damage critical strike as well.",
         "All hit enemies also receive the slow debuff. This debuff deals damage upon losing it. This means dispelling it causes the damage to happen earlier. Multiple instances of the debuff fully stack and work independently from each other.",
         "This means dispelling it causes the damage to happen earlier.",
         "Multiple instances of the debuff fully stack and work independently from each other.",
@@ -204,8 +202,7 @@
         "Debuff Duration: 1.25",
         "Number of Charges: 2",
         "Charge Replenish Time: 28\/23\/18 (TagTalent 24\/19\/14)",
-        "Critical Damage: 160%",
-        "A small step for Inai creates great devastation on the mortal plane."
+        "Critical Damage: 160%"
       ],
       "itemBehaviour": [],
       "legacyKey": "T",

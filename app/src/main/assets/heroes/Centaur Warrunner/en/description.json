@@ -19,12 +19,12 @@
         {
           "talentLvl": "15",
           "talentLeft": "+40% Double Edge Strength Damage",
-          "talentRight": "+6 Armor"
+          "talentRight": "+5 Armor"
         },
         {
           "talentLvl": "10",
           "talentLeft": "+20 Movement Speed",
-          "talentRight": "+6 Health Regen"
+          "talentRight": "+5 Health Regen"
         }
       ]
     },
@@ -40,15 +40,14 @@
       ],
       "mana": "100\/110\/120\/130",
       "hotKey": "Q",
-      "cooldown": "15\/14\/13\/12",
+      "cooldown": "18\/16\/14\/12",
       "description": "Slams the ground, stunning and damaging nearby enemy units.",
       "spellName": "Hoof Stomp",
       "params": [
         "Cast Animation: 0.5+0.3",
         "Radius: 330",
         "Damage: 100\/150\/200\/250",
-        "Stun Duration: 1.7\/2\/2.3\/2.6 (TagTalent 2.7\/3\/3.3\/3.6)",
-        "When the mighty hoof of the Warrunner touches soil, the tremors are felt far and wide."
+        "Stun Duration: 1.7\/2\/2.3\/2.6 (TagTalent 2.7\/3\/3.3\/3.6)"
       ],
       "itemBehaviour": [],
       "legacyKey": "F",
@@ -66,9 +65,8 @@
         "The damage radius is centered around the target, not around Centaur.",
         "Double Edge first damages the enemies within the area (at a random order), and then the caster.",
         "The self-inflicted damage is never lethal, so it cannot be used to deny oneself.",
-        "With Aghanim's Shard, the strength bonus is only gained when hitting heroes (including clones, excluding illusions and creep-heroes). Each hit enemy hero increases its stack count and refreshes the duration of the entire stack. Can increase strength by 15%\/30%\/45%\/60%\/75% with each amount of stacks. Increases the total amount of strength (base and bonus) by 15%\/30%\/45%\/60%\/75% with each amount of stacks. Double Edge first applies the slow debuff before applying its damage. The strength buff is applied after the first enemy got debuffed and damaged, and before the remaining enemies. However, Double Edge's damage is set upon cast, before any of its effects are applied, so that the strength bonus does not affect the damage.",
+        "With Aghanim's Shard, the strength bonus is only gained when hitting heroes (including clones, excluding illusions and creep-heroes). Each hit enemy hero increases its stack count and refreshes the duration of the entire stack. Increases the total amount of strength (base and bonus) by 15%\/30%\/45%\/60%\/75% with each amount of stacks. Double Edge first applies the slow debuff before applying its damage. The strength buff is applied after the first enemy got debuffed and damaged, and before the remaining enemies. However, Double Edge's damage is set upon cast, before any of its effects are applied, so that the strength bonus does not affect the damage.",
         "Each hit enemy hero increases its stack count and refreshes the duration of the entire stack.",
-        "Can increase strength by 15%\/30%\/45%\/60%\/75% with each amount of stacks.",
         "Increases the total amount of strength (base and bonus) by 15%\/30%\/45%\/60%\/75% with each amount of stacks.",
         "Double Edge first applies the slow debuff before applying its damage.",
         "The strength buff is applied after the first enemy got debuffed and damaged, and before the remaining enemies.",
@@ -91,8 +89,7 @@
         "Slow Duration: 2",
         "Buff Duration: 15",
         "Causes Double Edge to increase Centaur's strength by 15% per hero hit for 15 seconds. Duration refreshes per stack. Max 5 stacks. Slows enemies by 25% for 2 seconds.",
-        "Blocked fully only when primary target. When blocked, Centaur Warrunner takes no damage either.",
-        "In the spurs of combat, Bradwarden's vicious strikes sometimes cause self-inflicted collateral damage."
+        "Blocked fully only when primary target. When blocked, Centaur Warrunner takes no damage either."
       ],
       "itemBehaviour": [],
       "legacyKey": "D",
@@ -128,8 +125,7 @@
         "Aura Linger Duration: 0.5",
         "Aura Radius: 1200",
         "If Break is applied by an attack, Retaliate first triggers on that attack before getting disabled.",
-        "Retaliate does not work for illusions. Illusions bestow the Retaliate aura.",
-        "Bradwarden has no need to parry his opponent's attacks; his armor-like hide does it for him."
+        "Retaliate does not work for illusions. Illusions bestow the Retaliate aura."
       ],
       "itemBehaviour": [],
       "legacyKey": "R",
@@ -151,13 +147,14 @@
         "Stampede first applies the damage, then the debuff.",
         "The damage is sourced to each buffed ally, meaning certain on-damage effects react to the buffed ally rather than to Centaur Warrunner (e.g. Blade Mail).",
         "The sound effect is global and can be heard by enemies even through the Fog of War.",
-        "With Aghanim's Scepter, Stampede provides unobstructed movement that allows allies to walk over cliffs and causes them to destroy trees around them for the duration. Does not destroy trees around allies who have the perch modifier from Tree Dance, meaning allies sitting on trees do not get their trees destroyed by themselves. The damage reduction reduces all 3 damage types.",
+        "With Aghanim's Scepter, Stampede provides unobstructed movement that allows allies to walk over cliffs and causes them to destroy trees around them for the duration. Does not destroy trees around allies who have the perch modifier from Tree Dance, meaning allies sitting on trees do not get their trees destroyed by themselves. It also applies generic incoming damage reduction on the allies. Stacks additively with other sources of generic incoming damage manipulation. The reduction affects all damage the allies take that is not flagged as HP removal.",
         "Does not destroy trees around allies who have the perch modifier from Tree Dance, meaning allies sitting on trees do not get their trees destroyed by themselves.",
-        "The damage reduction reduces all 3 damage types."
+        "It also applies generic incoming damage reduction on the allies. Stacks additively with other sources of generic incoming damage manipulation.",
+        "The reduction affects all damage the allies take that is not flagged as HP removal."
       ],
       "mana": "150\/200\/250",
       "hotKey": "R",
-      "cooldown": "90 (TagTalent 70)",
+      "cooldown": "100 (TagTalent 80)",
       "description": "Centaur leads all allies into a vicious charge causing them to move through units at max speed and stop any enemy units they trample. Trampled enemies take damage based on Centaur Warrunner's strength. Each enemy can be trampled once.",
       "spellName": "Stampede",
       "params": [
@@ -167,11 +164,10 @@
         "Haste Speed: 550",
         "Move Speed Slow: 100%",
         "Slow Duration: 2.3",
-        "Stampede Duration: 3.5\/4\/4.5 (TagTalent 4.5\/5\/5.5)",
+        "Stampede Duration: 3.5\/4\/4.5 (TagAghanim 4.5\/5\/5.5)",
         "Ally Incoming Damage Reduction: 40%",
         "Heroes affected by Stampede take reduced damage, and are able to run through obstructions, including trees and up cliffs. Increases duration by 1 second.",
-        "Affects spell immune allies. Does not affect spell immune enemies. Slow persists if debuff was placed before spell immunity and was not dispelled.",
-        "The great belt of Omexe, which labels Bradwarden as the greatest warrior of his kind, incites his fellow gladiators to follow him into barbarous combat."
+        "Affects spell immune allies. Does not affect spell immune enemies. Slow persists if debuff was placed before spell immunity and was not dispelled."
       ],
       "itemBehaviour": [],
       "legacyKey": "T",
@@ -202,12 +198,12 @@
     {
       "talentLvl": "15",
       "talentLeft": "+40% Double Edge Strength Damage",
-      "talentRight": "+6 Armor"
+      "talentRight": "+5 Armor"
     },
     {
       "talentLvl": "10",
       "talentLeft": "+20 Movement Speed",
-      "talentRight": "+6 Health Regen"
+      "talentRight": "+5 Health Regen"
     }
   ]
 }

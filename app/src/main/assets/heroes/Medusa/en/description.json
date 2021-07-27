@@ -3,7 +3,8 @@
     {
       "notes": [
         "The evasion talent stacks multiplicatively with other sources of evasion.",
-        "This attack damage talent is added as raw attack damage, so it does not benefit illusions, and is not affected by most percentage-based damage increasing or reducing effects.",
+        "This attack damage talent is added as raw attack damage. Does not benefit illusions and is not affected by most percentage-based damage increasing or reducing effects.",
+        "Does not benefit illusions and is not affected by most percentage-based damage increasing or reducing effects.",
         "The intelligence talent effectively grants Medusa 900 mana and 3.75 mana regeneration."
       ],
       "spellName": "Talent",
@@ -16,11 +17,11 @@
         {
           "talentLvl": "20",
           "talentLeft": "+2s Stone Gaze Duration",
-          "talentRight": "-3s Mystic Snake Cooldown"
+          "talentRight": "+35% Mystic Snake Mana Gain"
         },
         {
           "talentLvl": "15",
-          "talentLeft": "+35% Mystic Snake Mana Gain",
+          "talentLeft": "-1.5s Mystic Snake Cooldown",
           "talentRight": "+30 Attack Speed"
         },
         {
@@ -38,16 +39,18 @@
         "Damage Instant Attack"
       ],
       "notes": [
-        "Split Shot does not interrupt Medusa's channeling abilities upon toggling On \/ Off. When toggled On, Medusa's main attack damage and bonus attack damage are reduced. Other sources of damage added to the primary attack are not reduced (e.g. bash from items). The reduction displayed in the HUD is inaccurate, as it is based on the main attack damage, instead of main and bonus damage. Split Shot persists through Medusa's death. If Split Shot was active upon death, she respawns with it active.",
-        "When toggled On, Medusa's main attack damage and bonus attack damage are reduced.",
+        "Split Shot does not interrupt Medusa's channeling abilities upon toggling On \/ Off.",
+        "When toggled On, Medusa's main attack damage and bonus attack damage are reduced. Other sources of damage added to the primary attack are not reduced (e.g. bash from items). The reduction displayed in the HUD is inaccurate, as it is based on the main attack damage, instead of main and bonus damage.",
         "Other sources of damage added to the primary attack are not reduced (e.g. bash from items).",
         "The reduction displayed in the HUD is inaccurate, as it is based on the main attack damage, instead of main and bonus damage.",
         "Split Shot persists through Medusa's death. If Split Shot was active upon death, she respawns with it active.",
-        "Causes Medusa to perform instant attacks on the closest 4 enemies whenever she launches an attack projectile. All 4 projectiles are released at the same time together at the same speed with the primary attack. Therefore, it does not matter whether the primary attack misses or not, the extra arrows are still released. The instant attacks may not proc any attack modifiers or on-hit effects, unless the Split Shot uses modifiers talent is learned. They do not have True Strike. Damage done by are affected by armor type and blocked by damage block like regular attacks.",
-        "All 4 projectiles are released at the same time together at the same speed with the primary attack. Therefore, it does not matter whether the primary attack misses or not, the extra arrows are still released.",
-        "The instant attacks may not proc any attack modifiers or on-hit effects, unless the Split Shot uses modifiers talent is learned. They do not have True Strike.",
-        "Damage done by are affected by armor type and blocked by damage block like regular attacks.",
-        "The search radius is based on Medusa's attack range and the secondary arrow range bonus, resulting in a search radius of 750, considering her default attack range. Does not target wards, buildings, invisible units, attack immune units, or units inside the Fog of War, but does target Couriers. However, attacking wards or buildings still causes secondary arrows to hit valid targets within the search radius. Secondary arrows are not released upon attacking allies.",
+        "Causes Medusa to perform instant attacks on the closest 4 enemies whenever she launches an attack projectile. This means all projectiles are released at the same time together with the main attack. It does not matter whether the primary attack misses. The extra projectiles travel at the same speed as the leading attack's projectile. This means their speed is affected by projectile speed changing effects as well. These instant attacks may not proc any attack modifiers or on-hit effects, unless the Split Shot uses modifiers talent is learned. They do not have True Strike. They are affected by armor type, and blocked by damage block like regular attacks.",
+        "This means all projectiles are released at the same time together with the main attack. It does not matter whether the primary attack misses.",
+        "The extra projectiles travel at the same speed as the leading attack's projectile.",
+        "This means their speed is affected by projectile speed changing effects as well.",
+        "These instant attacks may not proc any attack modifiers or on-hit effects, unless the Split Shot uses modifiers talent is learned. They do not have True Strike.",
+        "They are affected by armor type, and blocked by damage block like regular attacks.",
+        "The search radius is based on Medusa's attack range +150, resulting in a search radius of 750, considering her default attack range. Does not target wards, buildings, invisible units, attack immune units, or units inside the Fog of War, but does target Couriers. However, attacking wards or buildings still causes secondary arrows to hit valid targets within the search radius. Secondary arrows are not released upon attacking allies.",
         "Does not target wards, buildings, invisible units, attack immune units, or units inside the Fog of War, but does target Couriers.",
         "However, attacking wards or buildings still causes secondary arrows to hit valid targets within the search radius.",
         "Secondary arrows are not released upon attacking allies."
@@ -62,8 +65,8 @@
         "Secondary Arrows Range Bonus: 150",
         "Bonus Attack Targets: 4",
         "Outgoing Damage: 50%\/60%\/70%\/80%",
-        "Illusions created while Split Shot is toggled on have permanently Split Shot active.",
-        "All who encounter the cursed Gorgon will feel her rage."
+        "Does not disable the outgoing damage reduction. Does disable the split shot.",
+        "Illusions created while Split Shot is toggled on have permanently Split Shot active."
       ],
       "itemBehaviour": [],
       "legacyKey": "T",
@@ -79,9 +82,9 @@
       "notes": [
         "Mystic Snake travels at a speed of 800.",
         "Applies the damage first, the slow debuff, then the petrify debuff.",
-        "The snake always bounces to the closest valid target around its current target. Cannot hit the same unit more than once per cast. The snake can bounce on units in the Fog of War, but not on invisible, invulnerable or hidden units.",
+        "The snake always bounces to the closest valid target around its current target. Cannot hit the same unit more than once per cast. The snake can bounce on units in the Fog of War, but not on invisible, invulnerable or hidden units. If the snake's current target turns invulnerable, hidden or invisible, the bounce neither counts, nor increases the damage. The snake continues bouncing to nearby valid targets in these cases.",
         "The snake can bounce on units in the Fog of War, but not on invisible, invulnerable or hidden units.",
-        "If the snake's current target turns invulnerable, hidden or invisible, the bounce neither counts, nor increases the damage. The snake continues bouncing to nearby valid targets in these cases.",
+        "If the snake's current target turns invulnerable, hidden or invisible, the bounce neither counts, nor increases the damage.",
         "The snake continues bouncing to nearby valid targets in these cases.",
         "The snake provides 100 radius flying vision around itself. The vision does not last.",
         "Medusa's mana is restored when the snake returns to her. The restored amount is based on all hit enemies' maximum mana. Hit illusions are not counted towards the mana restore.",
@@ -89,19 +92,21 @@
         "Mystic Snake needs to hit units with a combined total mana pool of 1273\/1072\/942\/851 (TagTalent 305\/307\/308\/310) in order to fully reclaim its mana cost.",
         "Each successful hit on an enemy increases the damage of the next bounce by 35% of the ability's base damage. This means its damage grows linearly, not exponentially, dealing 28\/42\/56\/70 damage more per bounce.",
         "This means its damage grows linearly, not exponentially, dealing 28\/42\/56\/70 damage more per bounce.",
-        "This is how much damage Mystic Snake deals and for how long it petrifies per bounce when all bounces successfully hit (before reductions): Level 1: 80\/108\/136 damage, 324 total damage (1.5\/1.7\/1.9 seconds petrified). Level 2: 120\/162\/204\/246 damage, 732 total damage (1.5\/1.7\/1.9\/2.1 seconds petrified). Level 3: 160\/216\/272\/328\/384 damage, 1360 total damage (1.5\/1.7\/1.9\/2.1\/2.3 seconds petrified). Level 4: 200\/270\/340\/410\/480\/550 damage, 2250 total damage (1.5\/1.7\/1.9\/2.1\/2.3\/2.5 seconds petrified).",
-        "Level 1: 80\/108\/136 damage, 324 total damage (1.5\/1.7\/1.9 seconds petrified).",
-        "Level 2: 120\/162\/204\/246 damage, 732 total damage (1.5\/1.7\/1.9\/2.1 seconds petrified).",
-        "Level 3: 160\/216\/272\/328\/384 damage, 1360 total damage (1.5\/1.7\/1.9\/2.1\/2.3 seconds petrified).",
-        "Level 4: 200\/270\/340\/410\/480\/550 damage, 2250 total damage (1.5\/1.7\/1.9\/2.1\/2.3\/2.5 seconds petrified).",
+        "This is how much damage Mystic Snake deals and for how long it petrifies per bounce when all bounces successfully hit (before reductions): Level 1: 80\/108\/136 damage, 324 total damage (1.3\/1.5\/1.7 seconds petrified). Level 2: 120\/162\/204\/246 damage, 732 total damage (1.3\/1.5\/1.7\/1.9 seconds petrified). Level 3: 160\/216\/272\/328\/384 damage, 1360 total damage (1.3\/1.5\/1.7\/1.9\/2.1 seconds petrified). Level 4: 200\/270\/340\/410\/480\/550 damage, 2250 total damage (1.3\/1.5\/1.7\/1.9\/2.1\/2.3 seconds petrified).",
+        "Level 1: 80\/108\/136 damage, 324 total damage (1.3\/1.5\/1.7 seconds petrified).",
+        "Level 2: 120\/162\/204\/246 damage, 732 total damage (1.3\/1.5\/1.7\/1.9 seconds petrified).",
+        "Level 3: 160\/216\/272\/328\/384 damage, 1360 total damage (1.3\/1.5\/1.7\/1.9\/2.1 seconds petrified).",
+        "Level 4: 200\/270\/340\/410\/480\/550 damage, 2250 total damage (1.3\/1.5\/1.7\/1.9\/2.1\/2.3 seconds petrified).",
         "",
-        "The Aghanim's Scepter upgrade requires Stone Gaze to be learned. It applies the same modifier as Stone Gaze does, so their effects do not stack. The debuff also always uses Stone Gaze's icon. In Ability Draft, Stone Gaze must be drafted as well for this upgrade to work.",
-        "It applies the same modifier as Stone Gaze does, so their effects do not stack. The debuff also always uses Stone Gaze's icon.",
+        "With Aghanim's Scepter, Mystic Snake applies the Stone Gaze debuff on enemies it hits. The debuff is based on Stone Gaze's current level. If it is not learned, the debuff is not applied. Since it uses the same modifier as Stone Gaze, their effects do not stack. The debuff also always uses Stone Gaze's icon. Works for the Mystic Snake from Cold Blooded as well. In Ability Draft, Stone Gaze must be drafted as well for this upgrade to work.",
+        "The debuff is based on Stone Gaze's current level. If it is not learned, the debuff is not applied.",
+        "Since it uses the same modifier as Stone Gaze, their effects do not stack. The debuff also always uses Stone Gaze's icon.",
+        "Works for the Mystic Snake from Cold Blooded as well.",
         "In Ability Draft, Stone Gaze must be drafted as well for this upgrade to work."
       ],
       "mana": "140\/150\/160\/170",
       "hotKey": "W",
-      "cooldown": "10 (TagTalent 7)",
+      "cooldown": "10 (TagTalent 8.5)",
       "description": "A mystic snake made of energy jumps from target to target dealing damage. After it reaches its last target, it returns to Medusa to replenish her with mana. The snake deals more damage per jump and returns 11%\/14%\/17%\/20% mana based on the targets' total mana.",
       "spellName": "Mystic Snake",
       "params": [
@@ -115,13 +120,12 @@
         "Move Speed Slow: 30%",
         "Turn Rate Slow: 50%",
         "Slow Duration: 3",
-        "Base Stone Duration: 1.5",
-        "Stone Duration Increase per Bounce: 0.2",
+        "Base Petrify Duration: 1.3",
+        "Petrify Duration Increase per Bounce: 0.2",
         "Causes Mystic Snake to turn enemies hit into stone. Stone duration increases with each bounce of the Mystic Snake.",
         "Grants a new ability: Cold Blooded.",
         "If the current target turns spell immune, it does not count towards the number of bounces.",
-        "Blocked fully when primary or secondary target. Blocked upon impact. When blocked, stops bouncing and returns to Medusa to restore her mana.",
-        "The Gorgon's curse is her greatest strength."
+        "Blocked fully when primary or secondary target. Blocked upon impact. When blocked, stops bouncing and returns to Medusa to restore her mana."
       ],
       "itemBehaviour": [],
       "legacyKey": "C",
@@ -134,24 +138,25 @@
         "Affects Self"
       ],
       "notes": [
-        "Mana Shield does not interrupt Medusa's channeling abilities upon toggling On \/ Off. Mana Shield persists through Medusa's death. If Mana Shield was active upon death, she respawns with it active.",
+        "Mana Shield does not interrupt Medusa's channeling abilities upon toggling On \/ Off.",
         "Mana Shield persists through Medusa's death. If Mana Shield was active upon death, she respawns with it active.",
+        "Applies unique incoming damage reduction on Medusa. Stacks multiplicatively with all other sources of incoming damage manipulation. The reduction affects all damage Medusa allies take that is not flagged as HP removal.",
+        "The reduction affects all damage Medusa allies take that is not flagged as HP removal.",
         "Absorbs damage before any damage reduction takes place, including damage block or reduction from abilities (e.g. Aphotic Shield). This also affects everything which works directly with damage dealt after reductions (e.g. Orchid Malevolence).",
         "This also affects everything which works directly with damage dealt after reductions (e.g. Orchid Malevolence).",
         "Increases Medusa's effective health by 233.33% when toggled On, assuming she has enough mana."
       ],
-      "mana": null,
+      "mana": "0",
       "hotKey": "E",
-      "cooldown": null,
-      "description": "Creates a shield that absorbs 70% of incoming damage in exchange for Medusa's mana.",
+      "cooldown": "0",
+      "description": "Creates a shield that absorbs 70% of incoming damage in exchange for Medusa's mana. Provides bonus mana capacity.",
       "spellName": "Mana Shield",
       "params": [
         "Cast Animation: 0+0",
+        "Passive Mana Bonus: 100\/150\/200\/250",
         "Damage Absorption: 70%",
         "Damage Absorbed per Mana: 1.6\/1.9\/2.2\/2.5",
-        "Passive Mana Bonus: 100\/150\/200\/250",
-        "While spell immune, Mana Shield does not react on magical damage.",
-        "While Medusa was not gifted with eternal life upon birth, her curse bestowed her with impressive defensive powers."
+        "While spell immune, Mana Shield does not react on magical damage."
       ],
       "itemBehaviour": [],
       "legacyKey": "E",
@@ -168,14 +173,13 @@
         "Requires Aghanim's Shard to be unlocked. This ability is not available in Ability Draft, due to its reliance on a non-ultimate ability, which are limited to one ability slot.",
         "This ability is not available in Ability Draft, due to its reliance on a non-ultimate ability, which are limited to one ability slot.",
         "Follows the same rules as Spell Block.",
-        "The single target Mystic Snake is based on the current level of the ability, and its notes fully apply. This includes the fact that the snake does not count bounces on targets that died, turned invulnerable, spell immune, or hidden before impact. This means the snake may bounce onto another target in these cases. The Aghanim's Scepter upgrade notes fully apply as well.",
+        "The single target Mystic Snake is based on the current level of the ability, and its notes fully apply.",
+        "Mystic Snake's notes fully apply. This includes the fact that the snake does not count bounces on targets that died, turned invulnerable, spell immune, or hidden before impact. This means the snake may bounce onto another target in these cases. The Aghanim's Scepter upgrade notes fully apply as well.",
         "This includes the fact that the snake does not count bounces on targets that died, turned invulnerable, spell immune, or hidden before impact.",
         "This means the snake may bounce onto another target in these cases.",
         "The Aghanim's Scepter upgrade notes fully apply as well.",
         "The snake is sent out even if the triggering target is spell immune, invulnerable, hidden.",
-        "Has no range limit. The snake can be send out globally if targeted by abilities with Global cast range.",
-        "Cold Blooded deals 80\/120\/160\/200 damage (before reductions). With Aghanim's Scepter, Cold Blooded petrifies hit enemy for 1.5 second.",
-        "With Aghanim's Scepter, Cold Blooded petrifies hit enemy for 1.5 second."
+        "Has no range limit. The snake can be send out globally if targeted by abilities with Global cast range."
       ],
       "mana": null,
       "hotKey": null,
@@ -210,7 +214,7 @@
         "The slow debuff only slows affected enemies while facing Medusa. Units that turn away are not slowed, but keep the debuff. The slow debuff lasts for either as long as Stone Gaze does (ending whenever Stone Gaze ends in any way), or until getting petrified.",
         "The slow debuff lasts for either as long as Stone Gaze does (ending whenever Stone Gaze ends in any way), or until getting petrified.",
         "Once the petrify debuff expires, the unit can be affected by Stone Gaze again, repeating until Stone Gaze ends, so long the unit faces Medusa.",
-        "The stone debuff is a simple stun, which also freezes animations, and amplifies incoming physical attack damage. Does not amplify magical or pure attack damage, and does not amplify physical spell damage.",
+        "The petrify debuff is a simple stun, which also freezes animations, and amplifies incoming physical attack damage. Does not amplify magical or pure attack damage, and does not amplify physical spell damage.",
         "Does not amplify magical or pure attack damage, and does not amplify physical spell damage.",
         "Stone Gaze does not affect neutral creeps.",
         "Stone Gaze ends when Medusa dies, but already petrified enemies stay petrified for the duration."
@@ -230,8 +234,7 @@
         "Enemy Turn Rate Slow: 35%",
         "Physical Attack Damage Amplification: 40%\/45%\/50%",
         "Gaze Duration: 5\/5.5\/6 (TagTalent 7\/7.5\/8)",
-        "Stone Duration: 3",
-        "The beauty of Medusa is legendary."
+        "Petrify Duration: 3"
       ],
       "itemBehaviour": [],
       "legacyKey": "G",
@@ -257,11 +260,11 @@
     {
       "talentLvl": "20",
       "talentLeft": "+2s Stone Gaze Duration",
-      "talentRight": "-3s Mystic Snake Cooldown"
+      "talentRight": "+35% Mystic Snake Mana Gain"
     },
     {
       "talentLvl": "15",
-      "talentLeft": "+35% Mystic Snake Mana Gain",
+      "talentLeft": "-1.5s Mystic Snake Cooldown",
       "talentRight": "+30 Attack Speed"
     },
     {

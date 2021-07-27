@@ -2,7 +2,6 @@
   "abilities": [
     {
       "notes": [
-        "The cast range talent does not affect the max distance of Ether Shock.",
         "The health talent increases maximum health capacity, and keeps the current health percentage."
       ],
       "spellName": "Talent",
@@ -57,8 +56,7 @@
         "End Radius: 300",
         "Number of Targets: 1\/3\/5\/7",
         "Damage: 140\/200\/260\/320 (TagTalent 510\/570\/630\/690)",
-        "Blocked fully only when primary target.",
-        "Originally used to open shows with the travelling con-man, Rhasta's lightning display shocks adversaries in more ways than one."
+        "Blocked fully only when primary target."
       ],
       "itemBehaviour": [],
       "legacyKey": "R",
@@ -72,8 +70,9 @@
         "Damage Instant Kill"
       ],
       "notes": [
-        "Applies a hex on the target, setting its base movement speed to 100, silencing, muting, and disarming it. However the target's movement speed is still affected by movement speed bonuses from items and abilities.",
+        "Applies a hex on the target, setting its base movement speed to 100, silencing, muting, and disarming it. However the target's movement speed is still affected by movement speed bonuses from items and abilities. Since Hex sets the base movement speed of the target unit and does not actually apply a slow, all speed effects are calculated using the 100 base speed.",
         "However the target's movement speed is still affected by movement speed bonuses from items and abilities.",
+        "Since Hex sets the base movement speed of the target unit and does not actually apply a slow, all speed effects are calculated using the 100 base speed.",
         "Hex instantly destroys illusions.",
         "Shadow Shaman's hex transforms the target into a chicken. The Lamb to the Slaughter and Golden Lamb to the Slaughter change the model into a lamb.",
         "The Lamb to the Slaughter and Golden Lamb to the Slaughter change the model into a lamb."
@@ -88,8 +87,7 @@
         "Cast Range: 500",
         "Set Move Speed: 100",
         "Duration: 1.25\/2\/2.75\/3.5",
-        "Effects persist if debuff was placed before spell immunity.",
-        "Rhasta often ended performances by turning himself into a chicken - now, the humiliation is shared."
+        "Effects persist if debuff was placed before spell immunity."
       ],
       "itemBehaviour": [],
       "legacyKey": "D",
@@ -106,16 +104,16 @@
         "Shackles stuns the target as long as it is channeled. If the target turns invulnerable or hidden, the channeling stops instantly.",
         "If the target turns invulnerable or hidden, the channeling stops instantly.",
         "Provides True Sight over the target, but only when the target was not invisible or within a fade time upon cast.",
-        "Deals damage in 0.1-second intervals, starting immediately as the channeling begins, resulting in 28\/35\/43\/50 (TagTalent 48\/55\/63\/70) damage instances. The damage per tick is based on the total damage divided by its max channel time of 2.75\/3.5\/4.25\/5, and then divided by 10. The duration bonus from the talent is ignored. This translates to 21.82\/45.71\/61.18\/72 (TagTalent 85.45\/95.71\/102.35\/107) damage per second.",
-        "The damage per tick is based on the total damage divided by its max channel time of 2.75\/3.5\/4.25\/5, and then divided by 10. The duration bonus from the talent is ignored.",
-        "This translates to 21.82\/45.71\/61.18\/72 (TagTalent 85.45\/95.71\/102.35\/107) damage per second.",
-        "Therefore, the final damage dealt (before reductions) is 61.09\/160\/263.06\/360 (TagTalent 239.27\/335\/440.12\/535) damage per second. The duration increasing talent deals up to 104.73\/251.43\/385.41\/504 damage per second. With both talents, it can deal up to 410.18\/526.43\/644.82\/749 per second.",
-        "The duration increasing talent deals up to 104.73\/251.43\/385.41\/504 damage per second.",
-        "With both talents, it can deal up to 410.18\/526.43\/644.82\/749 per second.",
+        "Deals damage in 0.1-second intervals, starting immediately as the channeling begins, resulting in 28\/35\/43\/50 (TagTalent 48\/55\/63\/70) damage instances. The damage per tick is based on the total damage divided by its default channel time of 2.75\/3.5\/4.25\/5, and then divided by 10. The duration bonus from the talent is ignored. This results in 2.182\/4.571\/6.118\/7.2 (TagTalent 7.273\/8.571\/9.412\/10) damage per tick, or 21.82\/45.71\/61.18\/72 (TagTalent 72.73\/85.71\/94.12\/100) damage per second. Therefore, the final damage dealt (before reductions) is 61.09\/160\/263.06\/360 (TagTalent 203.64\/300\/404.71\/500). With the duration increasing talent, the final damage is 104.73\/251.43\/385.41\/504 (TagTalent 349.09\/471.43\/592.94\/700).",
+        "The damage per tick is based on the total damage divided by its default channel time of 2.75\/3.5\/4.25\/5, and then divided by 10. The duration bonus from the talent is ignored.",
+        "This results in 2.182\/4.571\/6.118\/7.2 (TagTalent 7.273\/8.571\/9.412\/10) damage per tick, or 21.82\/45.71\/61.18\/72 (TagTalent 72.73\/85.71\/94.12\/100) damage per second.",
+        "Therefore, the final damage dealt (before reductions) is 61.09\/160\/263.06\/360 (TagTalent 203.64\/300\/404.71\/500).",
+        "With the duration increasing talent, the final damage is 104.73\/251.43\/385.41\/504 (TagTalent 349.09\/471.43\/592.94\/700).",
         "Unlike other targeted spells, the caster vision of Shackles lasts for the entire channel duration (even if it gets canceled), instead of just 2 seconds.",
-        "With Aghanim's Shard, places a total of 4 Serpent Wards based on its current level 100 range towards the target's north, east, south, and west. The wards' facing angle is set equal to Shadow Shaman's facing angle upon cast. Same auto attack settings from Mass Serpent Wards and its Aghanim's Scepter upgrade fully apply as well. If Mass Serpent Ward is not learnt, no wards are summoned.",
+        "With Aghanim's Shard, places a total of 4 Serpent Wards based on its current level 100 range towards the target's north, east, south, and west. The wards' facing angle is set equal to Shadow Shaman's facing angle upon cast. The wards are ordered to attack the target upon creation, but they can be controlled by the player normally. The Aghanim's Scepter upgrade fully applies to them as well. If Mass Serpent Ward is not learnt, no wards are summoned.",
         "The wards' facing angle is set equal to Shadow Shaman's facing angle upon cast.",
-        "Same auto attack settings from Mass Serpent Wards and its Aghanim's Scepter upgrade fully apply as well.",
+        "The wards are ordered to attack the target upon creation, but they can be controlled by the player normally.",
+        "The Aghanim's Scepter upgrade fully applies to them as well.",
         "If Mass Serpent Ward is not learnt, no wards are summoned."
       ],
       "mana": "140\/150\/160\/170",
@@ -127,12 +125,11 @@
         "Cast Animation: 0.3+0",
         "Cast Range: 400 (TagTalent 525)",
         "Max Channel Time: 2.75\/3.5\/4.25\/5 (TagTalent 4.75\/5.5\/6.25\/7)",
-        "Total Damage: 60\/160\/260\/360 (TagTalent 235\/335\/435\/535)",
+        "Total Damage: 60\/160\/260\/360 (TagTalent 200\/300\/400\/500)",
         "Number of Serpent Wards: 4",
         "Wards Duration: 7",
         "Shackles creates Serpent Wards attacking the target. Increases Shackles cast range by 125. Lasts 7 seconds.",
-        "Effect does not persist and immediately ends if debuff was placed before spell immunity.",
-        "A self-defense incantation, Rhasta developed shackles after his master was slain in the Bleeding Hills."
+        "Effect does not persist and immediately ends if debuff was placed before spell immunity."
       ],
       "itemBehaviour": [],
       "legacyKey": "E",
@@ -149,13 +146,13 @@
         "The wards form a perfect barrier, so that enemies inside cannot move out, unless they have phased movement.",
         "Destroying one ward is enough to allow units to walk in and out of the ring of wards.",
         "The wards' facing angle is set equal to Shadow Shaman's facing angle upon cast.",
-        "Serpent Wards automatically attack enemies within their attack range, using ◉ Standard auto attack rules. It is possible to manually give the wards an attack target with A or Right Click an enemy in range. With Unified Orders with Ctrl, Ctrl+ Right Click an enemy in range will commands to all wards to attack the target. It is also possible to stop the wards from attacking with S (only works when the auto-attack option is ◎ Never).",
+        "Serpent Wards automatically attack enemies within their attack range, using ◉ Standard auto-attack rules. It is possible to manually give the wards an attack target with A or Right Click an enemy in range. With Unified Orders with Ctrl, Ctrl+ Right Click an enemy in range commands all wards to attack the target. It is also possible to stop the wards from attacking with S (only works when the auto-attack option is ◎ Never).",
         "It is possible to manually give the wards an attack target with A or Right Click an enemy in range.",
-        "With Unified Orders with Ctrl, Ctrl+ Right Click an enemy in range will commands to all wards to attack the target.",
+        "With Unified Orders with Ctrl, Ctrl+ Right Click an enemy in range commands all wards to attack the target.",
         "It is also possible to stop the wards from attacking with S (only works when the auto-attack option is ◎ Never).",
         "Serpent Wards have a lower target priority than other units and heroes, so they are attacked by towers and creeps last.",
         "The serpent wards attack damage is not reduced by Damage Block.",
-        "With Aghanim's Scepter, the wards perform instant attacks on enemy whenever they launch an attack projectile. This means the extra projectile is released at the same time together with the main attack. Therefore, it does not matter whether the primary attack misses or not, the extra projectile is still released. The extra projectile travels at the same speed as the primary projectile, and can be disjointed like regular attacks. These instant attacks do not proc any attack modifiers and on-hit effects normally. They do not have True Strike. However, they are affected by armor type and evasion. The extra attack does not target wards, invisible units, attack immune units, or units inside the Fog of War. They do target buildings. The secondary target is chosen randomly. There are no priorities.",
+        "With Aghanim's Scepter, the wards perform instant attacks on 1 enemy whenever they launch an attack projectile. This means the extra projectile is released at the same time together with the main attack. Therefore, it does not matter whether the primary attack misses or not, the extra projectile is still released. The extra projectile travels at the same speed as the primary projectile, and can be disjointed like regular attacks. These instant attacks do not proc any attack modifiers and on-hit effects normally. They do not have True Strike. However, they are affected by armor type and evasion. The extra attack does not target wards, invisible units, attack immune units, or units inside the Fog of War. They do target buildings. The secondary target is chosen randomly. There are no priorities.",
         "This means the extra projectile is released at the same time together with the main attack.",
         "Therefore, it does not matter whether the primary attack misses or not, the extra projectile is still released.",
         "The extra projectile travels at the same speed as the primary projectile, and can be disjointed like regular attacks.",
@@ -178,8 +175,7 @@
         "Wards Duration: 45",
         "Split Shot Search Radius: 875",
         "Bonus Attack Targets: 1",
-        "Causes Serpent Wards to have split shot, attacking two units for full damage. Increases attack range of Serpent Wards.",
-        "Snake charming was a big part of the Shadow Shaman's act; now Rhasta can empower the Snakes to do his bidding."
+        "Causes Serpent Wards to have split shot, attacking two units for full damage. Increases attack range of Serpent Wards."
       ],
       "itemBehaviour": [],
       "legacyKey": "W",

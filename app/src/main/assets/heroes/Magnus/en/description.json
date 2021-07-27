@@ -2,7 +2,8 @@
   "abilities": [
     {
       "notes": [
-        "This attack damage talent is added as raw attack damage, so it does not benefit illusions, and is not affected by most percentage-based damage increasing or reducing effects.",
+        "This attack damage talent is added as raw attack damage. Does not benefit illusions and is not affected by most percentage-based damage increasing or reducing effects.",
+        "Does not benefit illusions and is not affected by most percentage-based damage increasing or reducing effects.",
         "The strength talent effectively grants Magnus 240 health, 1.2 health regeneration, and 12 attack damage.",
         "The health talent increases maximum health capacity, and keeps the current health percentage."
       ],
@@ -33,13 +34,13 @@
     {
       "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/4\/47\/Magnus_Shockwave_1.mp3\/revision\/latest?cb=20191216015854",
       "effects": [
-        "Ability Target Point",
+        "Ability Target Point \/ Target Unit",
         "Affects Enemies",
         "Damage Magical"
       ],
       "notes": [
         "The Shockwaves travel at a speed of 900, taking 1.333 seconds to reach the maximum distance.",
-        "Can hit units up to 1400 range away (travel distance + radius).",
+        "With the travel distance and radius, it can hit units up to 1400 range away.",
         "Hit enemies are pulled towards the center of the Shockwave and towards the cast location. The further enemies are from the center of the shockwave, the stronger the pull force is towards its center than towards the cast location. Pulls hit enemies 150 range over 0.2 seconds, resulting in a speed of 750.",
         "The further enemies are from the center of the shockwave, the stronger the pull force is towards its center than towards the cast location.",
         "Pulls hit enemies 150 range over 0.2 seconds, resulting in a speed of 750.",
@@ -47,10 +48,10 @@
         "Plays an initial sound and particles upon start casting.",
         "The slow of multiple casts does not stack, it only refreshes the duration.",
         "Slows and damages Roshan but does not pull him.",
-        "With Aghanim's Scepter, the extra Shockwaves are launched with a 30° angle to the left and right of the centered Shockwave. Although the areas of all three waves overlap heavily, an enemy may be hit by only one of three outgoing waves. Upon reaching max distance of 1200, the Shockwaves return to the original cast location. The returning Shockwaves act like separate casts, cast by invisible dummies. Therefore, enemies at the very tip may only be hit only once. This is because Shockwave does not hit units behind the caster, so units hit by it 200 range beyond its max travel distance do not get hit upon returning. On the other side, units 200 range beyond the original cast point do get hit by the returning waves. The returning Shockwaves can hit previously already hit enemies a second time, and also pull enemies towards the cast location as well.",
-        "Although the areas of all three waves overlap heavily, an enemy may be hit by only one of three outgoing waves.",
+        "With Aghanim's Scepter, the extra Shockwaves are launched with a 30° angle to the left and right of the centered Shockwave. Although the areas of all three waves overlap heavily, an enemy may be hit by only one of them. Upon reaching max distance of 1200, the Shockwaves return to the original cast location. The returning Shockwaves act like separate casts, cast by invisible dummies. Therefore, enemies at the very tip may only be hit once. This is because Shockwave does not hit units behind the caster, so units hit by it 200 range beyond its max travel distance do not get hit upon returning. On the other side, units 200 range beyond the original cast point do get hit by the returning waves. The returning Shockwaves can hit previously already hit enemies a second time, and also pull enemies towards the cast location as well.",
+        "Although the areas of all three waves overlap heavily, an enemy may be hit by only one of them.",
         "Upon reaching max distance of 1200, the Shockwaves return to the original cast location.",
-        "The returning Shockwaves act like separate casts, cast by invisible dummies. Therefore, enemies at the very tip may only be hit only once.",
+        "The returning Shockwaves act like separate casts, cast by invisible dummies. Therefore, enemies at the very tip may only be hit once.",
         "This is because Shockwave does not hit units behind the caster, so units hit by it 200 range beyond its max travel distance do not get hit upon returning.",
         "On the other side, units 200 range beyond the original cast point do get hit by the returning waves.",
         "The returning Shockwaves can hit previously already hit enemies a second time, and also pull enemies towards the cast location as well."
@@ -65,7 +66,7 @@
         "Cast Range: 1200",
         "Wave Distance: 1200",
         "Wave Radius: 200",
-        "Number of Shockwaves: 1 (TagTalent 3)",
+        "Number of Shockwaves: 1 (TagAghanim 3)",
         "Damage: 75\/150\/225\/300",
         "Move Speed Slow: 75%",
         "Pull Distance: 150",
@@ -73,8 +74,7 @@
         "Slow Duration: 0.9 (TagTalent 1.4)",
         "Shockwave Angle: 30°",
         "Returning Damage: 56.25\/112.5\/168.75\/225",
-        "Magnus releases 3 shockwaves traveling away from him at 30-degree angles. After reaching their limit, the Shockwaves return to their origin, dealing 75% damage and pulling a second time.",
-        "Mt. Joerlak was a somewhat unstable mass, and Magnus has learned to channel its reverberations."
+        "Magnus releases 3 shockwaves traveling away from him at 30-degree angles. After reaching their limit, the Shockwaves return to their origin, dealing 75% damage and pulling a second time."
       ],
       "itemBehaviour": [],
       "legacyKey": "W",
@@ -88,13 +88,13 @@
         "Damage Physical"
       ],
       "notes": [
-        "Grants 17.5%\/35%\/52.5%\/70% (TagTalent 35%\/52.5%\/70%\/87.5%) cleave damage and 21%\/35%\/49%\/63% (TagTalent 38.5%\/52.5%\/66.5%\/80.5%) attack damage when cast on self. ↓↓ Double-tapping automatically targets self.",
+        "When cast on self, grants 17.5%\/35%\/52.5%\/70% (TagTalent 35%\/52.5%\/70%\/87.5%) cleave damage and 21%\/35%\/49%\/63% (TagTalent 38.5%\/52.5%\/66.5%\/80.5%) attack damage. ↓↓ Double-tapping automatically targets self.",
         "↓↓ Double-tapping automatically targets self.",
         "Only increases base damage and that given by the primary attribute of affected units. Raw bonus damage is not increased.",
         "The unit's current main damage is periodically checked, and the bonuses adapted instantly. The damage and cleave increasing talent instantly upgrade the current instance as well.",
         "The damage and cleave increasing talent instantly upgrade the current instance as well.",
         "Grants melee targets cleave and attack damage, and ranged targets only attack damage.",
-        "Cleave damage cannot be amplified with outgoing spell damage amplification and cannot spell lifesteal. Can be amplified by incoming spell damage amplification. Cleave damage is reduced by Damage Block. Cleave damage depends on the attack damage value of the cleaving unit, not on how much their primary attack target took. The complete cleave area is shaped like an isosceles trapezoid in front of the attacking unit. Fully stacks with other sources of cleave. Each source of cleave works completely independent.",
+        "Cleave damage cannot be amplified with outgoing spell damage amplification and cannot spell lifesteal. Can be amplified by incoming spell damage amplification. Cleave damage is reduced by Damage Block. Cleave damage depends on the attack damage value of the cleaving unit, not on how much their primary attack target took. The complete cleave area is shaped like an isosceles trapezoid in front of the attacking unit. Fully stacks with other sources of cleave. Each source of cleave works completely independent. Does not cleave upon attacking wards, buildings or allied units. Wards and buildings are unaffected by cleave. Despite the visual effect, cleave damage is applied instantly in the whole area.",
         "Can be amplified by incoming spell damage amplification.",
         "Cleave damage is reduced by Damage Block.",
         "Cleave damage depends on the attack damage value of the cleaving unit, not on how much their primary attack target took.",
@@ -117,8 +117,7 @@
         "Cleave Damage: 10%\/20%\/30%\/40% (TagTalent 20%\/30%\/40%\/50%)",
         "Attack Damage Bonus: 12%\/20%\/28%\/36% (TagTalent 22%\/30%\/38%\/46%)",
         "Self Bonus Factor: 1.75",
-        "Duration: 40",
-        "With a deep bellow, Magnus displays his true power."
+        "Duration: 40"
       ],
       "itemBehaviour": [],
       "legacyKey": "E",
@@ -132,16 +131,16 @@
         "Damage Magical"
       ],
       "notes": [
-        "Magnus charges at a speed of 900\/1000\/1100\/1200.",
-        "Moves Magnus in 31.67 range instances. When targeting any distance which is not a multiplier of that number, it gets rounded down. This means the minimal possible distance is 31.67 and the maximum possible 887\/982\/1077\/1172 (TagTalent 1298\/1425\/1520\/1615), which amounts to a multiplier of 28\/31\/34\/37 (TagTalent 41\/45\/48\/51).",
-        "This means the minimal possible distance is 31.67 and the maximum possible 887\/982\/1077\/1172 (TagTalent 1298\/1425\/1520\/1615), which amounts to a multiplier of 28\/31\/34\/37 (TagTalent 41\/45\/48\/51).",
+        "Magnus charges at a speed of 900.",
+        "Moves Magnus in 30 range instances. When targeting any distance which is not a multiplier of that number, it gets rounded down. This means the minimum possible distance is 30, and the actual maximum distance is 900\/990\/1080\/1200 (TagTalent 1320\/1410\/1500\/1620).",
+        "This means the minimum possible distance is 30, and the actual maximum distance is 900\/990\/1080\/1200 (TagTalent 1320\/1410\/1500\/1620).",
         "During the Skewer, Magnus is fully disabled.",
         "Enemy heroes within 145 radius around Magnus get moved in front of him and dragged along.",
-        "Dragged heroes are stunned during the drag, and land 200 range away in front of Magnus at the end of the charge. Can charge through and drag enemies over impassable terrain. Can also drag illusions and creep-heroes.",
+        "Dragged heroes are stunned during the drag, and land 200 range away in front of Magnus at the end of the charge.",
+        "Can only drag heroes, including illusions, clones, and creep-heroes.",
         "Can charge through and drag enemies over impassable terrain.",
-        "Can also drag illusions and creep-heroes.",
         "Skewer first applies the slow debuff, then the damage.",
-        "Destroys trees within 200 radius during the charge, and 400 radius at the destination point."
+        "Destroys trees within 200 radius during the charge."
       ],
       "mana": "80",
       "hotKey": "E",
@@ -151,15 +150,14 @@
       "params": [
         "Cast Animation: 0.3+0.33",
         "Cast Range: Global",
-        "Max Skewer Distance: 887\/982\/1077\/1172 (TagTalent 1298\/1425\/1520\/1615)",
+        "Max Skewer Distance: 900\/1000\/1100\/1200 (TagTalent 1325\/1425\/1525\/1625)",
         "Skewer Radius: 145",
         "Damage: 70\/150\/230\/310",
         "Move Speed Slow: 10%\/20%\/30%\/40%",
         "Attack Speed Slow: 25\/30\/35\/40",
         "Slow Duration: 3.25",
         "Cannot hit spell immune enemies. Slows and damages enemies when they turn spell immune while already hit.",
-        "Getting rooted while already charging does not cancel the charge.",
-        "Magnoceros horns are valuable in direct proportion to their danger to prospective merchants."
+        "Getting rooted while already charging does not cancel the charge."
       ],
       "itemBehaviour": [],
       "legacyKey": "D",
@@ -227,8 +225,7 @@
         "Radius: 410",
         "Damage: 75\/150\/225",
         "Stun Duration: 2.75\/3.25\/3.75 (TagTalent 3.75\/4.25\/4.75)",
-        "Grants a new ability: Horn Toss.",
-        "Magnus fights with the fury of the erupting Mt. Joerlak."
+        "Grants a new ability: Horn Toss."
       ],
       "itemBehaviour": [],
       "legacyKey": "V",
@@ -239,7 +236,7 @@
     "attrStrengthInc": 3.5,
     "attrStrength": 25.0,
     "attrIntelligence": 19.0,
-    "attrIntelligenceInc": 1.7,
+    "attrIntelligenceInc": 2.1,
     "attrAgilityInc": 2.5,
     "attrAgility": 15.0
   },

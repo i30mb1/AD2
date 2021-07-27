@@ -24,8 +24,8 @@
         },
         {
           "talentLvl": "10",
-          "talentLeft": "+1.5 Mana Regen",
-          "talentRight": "+9 Strength"
+          "talentLeft": "+9 Strength",
+          "talentRight": "+1.5 Mana Regen"
         }
       ]
     },
@@ -46,7 +46,7 @@
       ],
       "mana": "80\/90\/100\/110",
       "hotKey": "Q",
-      "cooldown": "16\/14\/12\/10 (TagTalent 13\/11\/9\/7)",
+      "cooldown": "17\/15\/13\/11 (TagTalent 14\/12\/10\/8)",
       "description": "Axe taunts nearby enemy units, forcing them to attack him, while he gains bonus armor during the duration.",
       "spellName": "Berserker's Call",
       "params": [
@@ -54,8 +54,7 @@
         "Radius: 300 (TagTalent 400)",
         "Armor Bonus: 30",
         "Duration: 2\/2.4\/2.8\/3.2",
-        "Berserker's Call applies Battle Hunger to affected units. Reduces Berserker's Call cooldown by 3.",
-        "Mogul Khan's warcry taunts opponents into engaging in an unconquerable battle with the Axe."
+        "Berserker's Call applies Battle Hunger to affected units. Reduces Berserker's Call cooldown by 3."
       ],
       "itemBehaviour": [],
       "legacyKey": "E",
@@ -69,12 +68,12 @@
         "Damage Magical"
       ],
       "notes": [
-        "Reduces non-hero units' movement speed by 6% (and armor by 3.5). Battle Hunger treats creep-heroes as creeps.",
+        "Reduces non-hero units' movement speed by 6% and armor by 3.5. Battle Hunger treats creep-heroes as creeps.",
         "Battle Hunger treats creep-heroes as creeps.",
-        "Battle Hunger has a passive modifier that is present at all times, but hidden when the stack count is at 0. This modifier gains 1 stack for every affected creep, and 2 for every affected hero. Each stack grants Axe 6% movement speed (and 3.5 armor). This means each affected hero effectively grants Axe 12% movement speed (and 7 armor). This modifier has no stack limit.",
+        "Battle Hunger has a passive modifier that is present at all times, but hidden when the stack count is at 0. This modifier gains 1 stack for every affected creep, and 2 for every affected hero. Each stack grants Axe 6% movement speed and 3.5 armor. This means each affected hero effectively grants Axe 12% movement speed and 7 armor. This modifier has no stack limit.",
         "This modifier gains 1 stack for every affected creep, and 2 for every affected hero.",
-        "Each stack grants Axe 6% movement speed (and 3.5 armor).",
-        "This means each affected hero effectively grants Axe 12% movement speed (and 7 armor).",
+        "Each stack grants Axe 6% movement speed and 3.5 armor.",
+        "This means each affected hero effectively grants Axe 12% movement speed and 7 armor.",
         "This modifier has no stack limit.",
         "Casting Battle Hunger multiple times on the same target does not stack, but refreshes the duration instead.",
         "Deals damage in 1-second intervals, starting 1 second after the debuff is placed, resulting in 12 instances.",
@@ -100,8 +99,7 @@
         "Enemy Armor Reduction: 7",
         "Self Armor Bonus per Affected Enemy: 7",
         "Battle Hunger also reduces enemy armor by 7 and grants Axe 7 armor per affected targeted.",
-        "Slow persists, and attempts to damage if debuff was placed before spell immunity and when not dispelled.",
-        "Ordinary heroes cannot withstand Mogul Khan's rage for battle, such that it injures them until it is satisfied."
+        "Slow persists, and attempts to damage if debuff was placed before spell immunity and when not dispelled."
       ],
       "itemBehaviour": [],
       "legacyKey": "R",
@@ -132,13 +130,12 @@
       "spellName": "Counter Helix",
       "params": [
         "Radius: 275",
-        "Proc Chance: 17%\/18%\/19%\/20% (TagTalent 27%\/28%\/29%\/30%)",
+        "Proc Chance: 17%\/18%\/19%\/20% (TagTalent 22%\/23%\/24%\/25%)",
         "Damage: 60\/100\/140\/180",
         "Attack Speed Bonus: 35",
-        "Causes Axe's attacks to have a chance to proc a Counter Helix. Attack procs ignore Counter Helix cooldown. Increases attack speed by 35 and proc chance by 10%.",
-        "If Break is applied by an attack, Counter Helix may trigger first on that attack before getting disabled.",
-        "Axe illusions have a fully functional Counter Helix.",
-        "Axe is the only reinforcement this army needs."
+        "Causes Axe's attacks to have a chance to proc a Counter Helix. Attack procs ignore Counter Helix cooldown. Increases attack speed by 35 and proc chance by 5%.",
+        "If Break is applied by an attack, Counter Helix may trigger first on that attack before getting disabled. The attack speed bonus is not disabled.",
+        "Axe illusions have a fully functional Counter Helix."
       ],
       "itemBehaviour": [],
       "legacyKey": "X",
@@ -175,8 +172,7 @@
         "Kill Health Threshold: 250\/350\/450 (TagTalent 400\/500\/600)",
         "Kill Move Speed Bonus: 30%",
         "Kill Attack Speed Bonus: 30",
-        "Kill Bonus Buff Duration: 6",
-        "Mogul Khan is the embodiment of battle and fury, launching into a gruesome fatality against those who dare engage the Axe in combat."
+        "Kill Bonus Buff Duration: 6"
       ],
       "itemBehaviour": [],
       "legacyKey": "C",
@@ -211,8 +207,8 @@
     },
     {
       "talentLvl": "10",
-      "talentLeft": "+1.5 Mana Regen",
-      "talentRight": "+9 Strength"
+      "talentLeft": "+9 Strength",
+      "talentRight": "+1.5 Mana Regen"
     }
   ]
 }

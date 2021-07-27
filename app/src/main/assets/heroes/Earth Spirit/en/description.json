@@ -2,7 +2,8 @@
   "abilities": [
     {
       "notes": [
-        "This attack damage talent is added as raw attack damage, so it does not benefit illusions, and is not affected by most percentage-based damage increasing or reducing effects.",
+        "This attack damage talent is added as raw attack damage. Does not benefit illusions and is not affected by most percentage-based damage increasing or reducing effects.",
+        "Does not benefit illusions and is not affected by most percentage-based damage increasing or reducing effects.",
         "The armor talent does not benefit illusions."
       ],
       "spellName": "Talent",
@@ -48,11 +49,12 @@
         "There must be a Stone Remnant within 200 radius around Earth Spirit.",
         "Boulder Smash has a default cast range of 2000. This range allows him to aim the Stone Remnant precisely.",
         "When targeting beyond 2000 range, he walks up until the point is within range. If there is a remnant nearby, he smashes it.",
-        "Smashing a unit: To do this, the unit must be directly targeted. There must not be a Stone Remnant between Earth Spirit and the targeted unit. He walks up until the target is within 150 range and smashes it towards the direction he approached the target from. If he meets a remnant while walking up to the target, he smashes the remnant towards the targeted unit instead.",
+        "Smashing a unit: To do this, the unit must be directly targeted. There must not be a Stone Remnant between Earth Spirit and the targeted unit. He walks up until the target is within 150 range and smashes it towards the direction he approached the target from. If he meets a remnant while walking up to the target, he smashes the remnant towards the targeted unit instead. Cannot be cast on allies who have ☐ Disabled Help from Earth Spirit.",
         "To do this, the unit must be directly targeted.",
         "There must not be a Stone Remnant between Earth Spirit and the targeted unit.",
         "He walks up until the target is within 150 range and smashes it towards the direction he approached the target from.",
         "If he meets a remnant while walking up to the target, he smashes the remnant towards the targeted unit instead.",
+        "Cannot be cast on allies who have ☐ Disabled Help from Earth Spirit.",
         "Boulder Smash first applies the damage, then the knockback debuff. Smashed remnants first applies the damage, then the slow debuff. The slow is applied to all enemy units within the radius of a smashed remnant. A smashed unit is not and does not slow.",
         "The slow is applied to all enemy units within the radius of a smashed remnant. A smashed unit is not and does not slow.",
         "Damage is applied to all enemy units within the radius of a smashed Stone Remnant or smashed unit. The smashed enemy is damaged instantly on cast. Smashed allies are not damaged.",
@@ -62,8 +64,7 @@
         "Cannot be cast on ancient creeps.",
         "Can move units and Stone Remnants over impassable terrain.",
         "Destroys trees which the targeted units or Stone Remnant collide with during the knockback.",
-        "With Aghanim's Scepter, when Earth Spirit is enchanted by Enchant Remnant, Boulder Smash turns into a non-targeted ability and automatically casts on himself when used. ↓↓ Double-tapping automatically target self.",
-        "↓↓ Double-tapping automatically target self."
+        "With Aghanim's Scepter, when Earth Spirit is enchanted by Enchant Remnant, Boulder Smash turns into a non-targeted ability and automatically casts on himself when used."
       ],
       "mana": "100",
       "hotKey": "Q",
@@ -82,8 +83,7 @@
         "Stone Move Speed Slow: 50%",
         "Stone Slow Duration: 1.25\/2.5\/3.25\/4",
         "Cannot target spell immune units. Does not attempt to damage or slow spell immune enemies. Can target spell immune units under the effect of Enchant Remnant.",
-        "Blocked fully only when primary target.",
-        "It is with the power of a mountain that Earth Spirit strikes his enemies."
+        "Blocked fully only when primary target."
       ],
       "itemBehaviour": [],
       "legacyKey": "D",
@@ -97,14 +97,14 @@
         "Damage Magical"
       ],
       "notes": [
-        "Rolls at a speed of 800 and always rolls the full 750 (TagTalent 1075) distance within 0.94 (TagTalent 1.34) seconds when not colliding with an enemy hero.",
-        "When rolling over a Stone Remnant, the rolling speed is doubled, and the total rolling distance is increased to 1500 (TagTalent 2150). The stun duration also gets increased to 0.8\/1.2\/1.6\/2 (TagTalent 1.4\/1.8\/2.2\/2.6)",
+        "Rolls at a speed of 800 and always rolls the full distance when not colliding with an enemy hero.",
+        "When rolling over a Stone Remnant, the speed is doubled, and the total distance increased to 1500 (TagTalent 2150). The stun duration also gets increased to 0.8\/1.2\/1.6\/2 (TagTalent 1.4\/1.8\/2.2\/2.6)",
         "The stun duration also gets increased to 0.8\/1.2\/1.6\/2 (TagTalent 1.4\/1.8\/2.2\/2.6)",
         "The stun is applied to all enemy units (except for Couriers) in the path, not just the hero it collides with.",
         "Rolling Boulder first applies the damage, then the debuff.",
         "While rolling, Earth Spirit is rooted and disarmed, so he cannot move, blink or attack during it. Other abilities and items can be used normally while rolling, except for Rolling Boulder, which cannot be re-cast while rolling.",
         "Other abilities and items can be used normally while rolling, except for Rolling Boulder, which cannot be re-cast while rolling.",
-        "Earth Spirit is placed 80 range away from an enemy hero upon colliding, on the opposite side he collided into them from.",
+        "When colliding with an enemy hero, Earth Spirit is placed 80 range away from them, on the opposite side he collided into them from.",
         "Does not affect invulnerable units and heroes. Cannot collide with invulnerable heroes. Fully affects invisible units.",
         "Can move Earth Spirit over impassable terrain. Destroys trees Earth Spirit collides with while rolling.",
         "Rolling Boulder is canceled when Earth Spirit gets stunned, cycloned, hexed, slept, hidden, feared, hypnotized or hit by Forced Movement at any time during it. It is not canceled by taunts. Instead, Earth Spirit starts attacking the taunting unit once the rolling stops. Non-disabling forced movement does not cancel it when applied while stationary, but does once the rolling begins.",
@@ -127,8 +127,7 @@
         "Stun Duration: 0.4\/0.6\/0.8\/1 (TagTalent 1\/1.2\/1.4\/1.6)",
         "Stone Stun Duration Bonus: 0.4\/0.6\/0.8\/1",
         "Collides with, and attempts to damage spell immune enemies.",
-        "Getting rooted while already rolling does not cancel the rolling.",
-        "Calling upon his connection to the land, the Earth Spirit draws loose stone to him, which forms a protective ball that he can use to roll short distances."
+        "Getting rooted while already rolling does not cancel the rolling."
       ],
       "itemBehaviour": [],
       "legacyKey": "F",
@@ -142,12 +141,10 @@
         "Damage Magical"
       ],
       "notes": [
-        "This ability is not available in Ability Draft.",
-        "When targeting ground, a Stone Remnant within 180 radius of the targeted point is pulled. When no Stone Remnants are within the range, nothing happens. The ability is not cast. When cast on allies or Stone Remnants affected by Boulder Smash, the smash gets canceled out by the grip.",
+        "When targeting ground, a Stone Remnant within 180 radius of the targeted point is pulled. When no Stone Remnants are within the range, nothing happens. The ability is not cast.",
         "When no Stone Remnants are within the range, nothing happens. The ability is not cast.",
-        "When cast on allies or Stone Remnants affected by Boulder Smash, the smash gets canceled out by the grip.",
-        "In order to pull a unit, it has to be targeted directly. Cannot target allied heroes and treats creep-heroes as creeps. With the level 25 talent, Geomagnetic Grip can target allied heroes.",
-        "With the level 25 talent, Geomagnetic Grip can target allied heroes.",
+        "In order to pull a unit, it has to be targeted directly. Cannot target allied heroes, including creep-heroes. With the level 25 talent, Geomagnetic Grip can target allied heroes and creep-heroes.",
+        "With the level 25 talent, Geomagnetic Grip can target allied heroes and creep-heroes.",
         "Silence is applied to all enemy units within the radius of a pulled unit or remnant.",
         "Damage is applied to all enemy units within the radius of a pulled Stone Remnant. A pulled unit is not damaged and does no damage.",
         "Targeted units are not disabled during the pull. They are able to turn, attack, cast abilities and use items. Geomagnetic Grip does not interrupt the target's channeling abilities. Destroys trees within 200 radius around the targeted unit during the pull.",
@@ -156,7 +153,8 @@
         "Geomagnetic Grip does not pull the target if it is affected by Black Hole, Chronosphere, Duel, or Flaming Lasso. In the last two cases, it does not even pull the target if it is affected by Enchant Remnant.",
         "In the last two cases, it does not even pull the target if it is affected by Enchant Remnant.",
         "The pulled remnant first applies the debuff, then the damage.",
-        "Can move Stone Remnants and allies over impassable terrain."
+        "When cast on allies or Stone Remnants affected by Boulder Smash, the smash gets canceled out by the grip.",
+        "Can move allies and Stone Remnants over impassable terrain."
       ],
       "mana": "100",
       "hotKey": "E",
@@ -172,8 +170,7 @@
         "Unit Pull Speed: 600",
         "Silence Duration: 2\/2.5\/3\/3.5 (TagTalent 5\/5.5\/6\/6.5)",
         "Cannot target spell immune units. Does not attempt to damage or silence spell immune enemies. Silence persists if debuff was placed before spell immunity and when not dispelled. Can target spell immune units under the effect of Enchant Remnant.",
-        "Not blocked when cast on an enemy hero affected by Enchant Remnant.",
-        "Like calls to like. Even the minerals found in the blood and bones of living beings are not immune to the call of the Earth Spirit."
+        "Not blocked when cast on an enemy hero affected by Enchant Remnant."
       ],
       "itemBehaviour": [],
       "legacyKey": "R",
@@ -187,23 +184,20 @@
       "notes": [
         "This is an innate ability and does not need to be skilled. In Ability Draft, Stone Remnant is bound to Magnetize, and is granted to the player that drafts it.",
         "In Ability Draft, Stone Remnant is bound to Magnetize, and is granted to the player that drafts it.",
-        "Earth Spirit begins the game with all 7 charges. When acquiring Aghanim's Shard, he immediately gains the extra charges as well.",
-        "When acquiring Aghanim's Shard, he immediately gains the extra charges as well.",
+        "Earth Spirit begins the game with all 7 charges.",
         "↓↓ Double-tapping places a Stone Remnant 100 range in front of Earth Spirit.",
-        "It is possible to have up to 7 (13) remnants when placing all 7 (11) remnants at once, and then every time after the 25 seconds recharge.",
+        "It is possible to have up to 7 (TagTalent 13) remnants when placing all 7 (TagTalent 11) remnants at once, and then every time after the 25 seconds recharge.",
         "Remnants cannot be attacked or destroyed by anyone. They may only be destroyed by Rolling Boulder, Magnetize or by expiring. When used by Magnetize, the remnant remains for 8 seconds before crumbling down. Rolling Boulder destroys them instantly.",
         "When used by Magnetize, the remnant remains for 8 seconds before crumbling down.",
         "Rolling Boulder destroys them instantly.",
-        "Rubick is unable to steal Stone Remnant with Spell Steal. An enemy Rubick can make use of the same remnants when stealing and using one of Earth Spirit's abilities.",
         "An enemy Rubick can make use of the same remnants when stealing and using one of Earth Spirit's abilities.",
         "Stone Remnants can be seen through the Fog of War by all players.",
         "Enemies can also see and hear the following effects through the Fog of War: Stone Remnants being smashed by Boulder Smash. Stone Remnants being consumed by Rolling Boulder to roll farther. Stone Remnants being pulled by Geomagnetic Grip.",
         "Stone Remnants being smashed by Boulder Smash.",
         "Stone Remnants being consumed by Rolling Boulder to roll farther.",
         "Stone Remnants being pulled by Geomagnetic Grip.",
-        "With Aghanim's Shard, Stone Remnant provides ground vision. Instantly grants 4 charges as well. However, even with Aghanim's Shard, it does not instantly grant Morphling the extra charges upon Morph. Alt creates a range indicator around all Stone Remnants, showing their vision range.",
-        "Instantly grants 4 charges as well.",
-        "However, even with Aghanim's Shard, it does not instantly grant Morphling the extra charges upon Morph.",
+        "With Aghanim's Shard, Stone Remnant provides ground vision. Instantly grants 4 charges upon acquiring Aghanim's Shard. Alt creates a range indicator around all Stone Remnants, showing their vision range.",
+        "Instantly grants 4 charges upon acquiring Aghanim's Shard.",
         "Alt creates a range indicator around all Stone Remnants, showing their vision range."
       ],
       "mana": null,
@@ -219,8 +213,7 @@
         "Charge Replenish Time: 25",
         "Vision Radius: 375",
         "Grants a new ability: Enchant Remnant.",
-        "Causes Stone Remnant to provide 375 ground vision. Increases charge count by 4.",
-        "Earth Spirit calls forth a remnant of his stone army, long buried with him in the dark embrace of the Earth."
+        "Causes Stone Remnant to provide 375 ground vision. Increases charge count by 4."
       ],
       "itemBehaviour": [],
       "legacyKey": "E",
@@ -263,8 +256,7 @@
         "Damage Radius: 450",
         "Damage: 450",
         "Duration: 3",
-        "Can be cast on spell immune allies. Cannot be cast on spell immune enemies. Does not attempt to damage spell immune enemies.",
-        "Kaolin uses the elemental power of the Earth to temporarily petrify living beings, so that they might be conscripted into his stone funerary army."
+        "Can be cast on spell immune allies. Cannot be cast on spell immune enemies. Does not attempt to damage spell immune enemies."
       ],
       "itemBehaviour": [],
       "legacyKey": "W",
@@ -300,8 +292,7 @@
         "Stone Refresh Radius: 600",
         "Damage per Second: 40\/80\/120",
         "Duration: 6",
-        "Places debuff on and attempts to damage spell immune enemies. Can spread to and refresh debuff on spell immune enemies. Does not silence or slow spell immune enemies when another magnetized enemy is hit by Boulder Smash or Geomagnetic Grip.",
-        "At the Earth Spirit\u2019s call, the minerals in the blood and bones of his enemies rebel against the bodies they find themselves in."
+        "Places debuff on and attempts to damage spell immune enemies. Can spread to and refresh debuff on spell immune enemies. Does not silence or slow spell immune enemies when another magnetized enemy is hit by Boulder Smash or Geomagnetic Grip."
       ],
       "itemBehaviour": [],
       "legacyKey": "T",

@@ -2,8 +2,8 @@
   "abilities": [
     {
       "notes": [
-        "The magic resistance talent stacks multiplicatively with other sources of magic resistance.",
-        "The magic resistance talent increases Bane's magic resistance to 36.25%.",
+        "The magic resistance talent stacks multiplicatively with other sources of magic resistance. Increases Bane's magic resistance to 36.25%.",
+        "Increases Bane's magic resistance to 36.25%.",
         "The armor talent does not benefit illusions."
       ],
       "spellName": "Talent",
@@ -53,8 +53,7 @@
         "Attack Damage Reduction: 45%\/50%\/55%\/60%",
         "Health Restoration Reduction: 45%\/50%\/55%\/60%",
         "Cast Time Increase: 30%",
-        "Duration: 8\/9\/10\/11",
-        "Each tendril of fear that Atropos weaves increases the vulnerability of his victims to arcane and unknown arts."
+        "Duration: 8\/9\/10\/11"
       ],
       "itemBehaviour": [],
       "legacyKey": "T",
@@ -72,8 +71,9 @@
         "The heal amount is based on how much damage the target took from Brain Sap. This means amplifying or reducing the damage affects the heal value. The heal value itself is still subjected to heal manipulation.",
         "This means amplifying or reducing the damage affects the heal value.",
         "The heal value itself is still subjected to heal manipulation.",
-        "With Aghanim's Shard, Brain Sap affects enemies within a 550 radius around the primary target, dealing the full damage to them. However, it only heals for 18.75\/37.5\/56.25\/75 (TagTalent 56.25\/75\/93.75\/112.5) from secondary targets (assuming full damage was dealt).",
-        "However, it only heals for 18.75\/37.5\/56.25\/75 (TagTalent 56.25\/75\/93.75\/112.5) from secondary targets (assuming full damage was dealt)."
+        "Aghanim's Shard adds a 550 radius to this ability. The ability must be centered over a unit still. Can target invisible units and units inside the Fog of War. From secondary targets, it can only heal for 18.75\/37.5\/56.25\/75 (TagTalent 56.25\/75\/93.75\/112.5).",
+        "Can target invisible units and units inside the Fog of War.",
+        "From secondary targets, it can only heal for 18.75\/37.5\/56.25\/75 (TagTalent 56.25\/75\/93.75\/112.5)."
       ],
       "mana": "120\/140\/160\/180",
       "hotKey": "W",
@@ -87,8 +87,7 @@
         "Damage as Heal: 100%",
         "Radius: 550",
         "Secondary Damage as Heal: 25%",
-        "Causes Brain Sap to become a 550 AoE spell. Secondary targets only heal for 25%.",
-        "Atropos finds no greater pleasure than to harvest the fear he creates."
+        "Causes Brain Sap to become a 550 AoE spell. Secondary targets only heal for 25%."
       ],
       "itemBehaviour": [],
       "legacyKey": "B",
@@ -116,9 +115,9 @@
         "Bane and illusions of him (be it his own, enemy or allied illusions) can attack nightmared units without waking the target up, and without the Nightmare transfering to them. This is innate to Bane, and does not apply to other heroes who use this ability (TagTalent Rubick and Morphling). In Ability Draft, Bane keeps this innate ability. However, the hero and illusions of the player who drafts Nightmare gain this ability as well.",
         "This is innate to Bane, and does not apply to other heroes who use this ability (TagTalent Rubick and Morphling).",
         "In Ability Draft, Bane keeps this innate ability. However, the hero and illusions of the player who drafts Nightmare gain this ability as well.",
-        "Nightmared units are never automatically attacked, regardless of settings. A forced attack order is required to attack them. This prevents enemies from accidentally afflicting themselves with Nightmare by auto-attacking a nightmared unit. This also means that nightmared units are never attacked by lane creeps, neutral creeps, towers and fountains. Units can force an attack on an allied nightmared unit to transfer the Nightmare to themselves.",
-        "This prevents enemies from accidentally afflicting themselves with Nightmare by auto-attacking a nightmared unit.",
-        "This also means that nightmared units are never attacked by lane creeps, neutral creeps, towers and fountains.",
+        "Sleeping units are never automatically attacked, regardless of auto attack settings. This means that sleeping units are never attacked by lane creeps, neutral creeps, towers and fountains. Players can still force an attack order on the target (TagTalent Right Click or A). Units can force an attack on an allied nightmared unit to transfer the Nightmare to themselves.",
+        "This means that sleeping units are never attacked by lane creeps, neutral creeps, towers and fountains.",
+        "Players can still force an attack order on the target (TagTalent Right Click or A).",
         "Units can force an attack on an allied nightmared unit to transfer the Nightmare to themselves.",
         "As long as a unit is affected by Nightmare from Bane, Nightmare is replaced by the Nightmare End sub-ability which allows Bane to wake the unit up.",
         "Nightmare's invulnerability status effect uses the default invulnerability icon, instead of its own ability icon."
@@ -134,8 +133,7 @@
         "Sleep Duration: 4\/5\/6\/7",
         "Invulnerability Duration: 1",
         "Sleep and invulnerability debuffs persist if placed before spell immunity and when not dispelled.",
-        "Blocked when primary target. Blocked upon attacking a unit affected by an enemy Nightmare.",
-        "A stolen prowess from the goddess Nyctasha is to put his prey into forever sleep."
+        "Blocked when primary target. Blocked upon attacking a unit affected by an enemy Nightmare."
       ],
       "itemBehaviour": [],
       "legacyKey": "E",
@@ -171,7 +169,7 @@
       "effects": [
         "Ability Target Unit \/ Channeled",
         "Affects Enemies \/ Self",
-        "Damage Pure"
+        "Damage Pure (TagAghanim Magical)"
       ],
       "notes": [
         "Fiend's Grip fully disables and provides True Sight over the target until the channeling ends. If the target turns invulnerable or hidden, the channeling stops instantly.",
@@ -204,8 +202,7 @@
         "Number of Illusions: 2",
         "Illusion Damage Taken: 700%",
         "Illusion Duration: 20",
-        "Reduces Fiend's Grip cooldown by 45 seconds. Fiend's Grip now creates two uncontrollable illusions that are also channeling Fiend's Grip on the target. Illusions takes 700% incoming damage and immediately dies if they are interrupted. Damage does not stack.",
-        "Victims of Atropos are frequently torn apart by vivid conjurations of their own nightmares."
+        "Reduces Fiend's Grip cooldown by 45 seconds. Fiend's Grip now creates two uncontrollable illusions that are also channeling Fiend's Grip on the target. Illusions takes 700% incoming damage and immediately dies if they are interrupted. Damage does not stack."
       ],
       "itemBehaviour": [],
       "legacyKey": "F",

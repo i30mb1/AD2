@@ -37,11 +37,11 @@
       ],
       "notes": [
         "Scatterblast travels at a speed of 3000, taking 0.73 seconds to travel the full distance.",
-        "Scatterblast first applies the stun, the knockback, the damage, then the movement speed slow.",
-        "Leveling up Scatterblast, or choosing the damage increasing talent does not affect the damage of an already launched instance.",
-        "With the travel distance and end radius, it can hit units up to 1200 range away.",
+        "With the travel distance and end radius, it can hit units up to 1200 range away. The complete area is shaped like a cone.",
         "The complete area is shaped like a cone.",
         "Deals 120\/225\/330\/435 (TagTalent 232.5\/337.5\/442.5\/547.5) damage to units within point-blank distance.",
+        "Scatterblast first applies the stun, then the knockback, then the damage, then the movement speed slow.",
+        "Leveling up Scatterblast, or choosing the damage increasing talent does not update the damage of an already launched instance.",
         "With Aghanim's Shard, Scatterblast deals 245\/350\/455\/560 (TagTalent 357.5\/462.5\/567.5\/672.5) damage to units within point-blank distance. Also stuns for 0.3 seconds and knocks enemies 250 range back within the point-blank distance. Knocks back at a speed of 833.33. The knockback destroys trees the enemies collide with.",
         "Also stuns for 0.3 seconds and knocks enemies 250 range back within the point-blank distance. Knocks back at a speed of 833.33.",
         "The knockback destroys trees the enemies collide with."
@@ -68,8 +68,7 @@
         "Point-Blank Knockback Duration: 0.3",
         "Point-Blank Stun Duration: 2",
         "Causes Scatterblast to knock units back in the point blank range for 250 units, dealing 125 extra damage and stunning for 2 seconds.",
-        "Debuff persists if placed before spell immunity and when not dispelled.",
-        "A favorite from her collection, Beadie crafted Ol' Rackatee as her first line of defense when she ventured into the Outlands."
+        "Debuff persists if placed before spell immunity and when not dispelled."
       ],
       "itemBehaviour": [],
       "legacyKey": "R",
@@ -86,16 +85,16 @@
         "↓↓ Double-tapping automatically target self. Has no cast backswing when cast on self.",
         "Has no cast backswing when cast on self.",
         "The projectile travels at a speed of 1000.",
-        "Cannot be cast on allied units that are currently channeling. If the ally starts channeling after projectile launch, the projectile does nothing upon impact. This includes self-casting. Can target, but has no effect on units affected by Chronosphere and Black Hole, the projectile does nothing on impact.",
-        "If the ally starts channeling after projectile launch, the projectile does nothing upon impact. This includes self-casting.",
+        "Cannot be cast on allied units that are currently channeling. This includes self-casting. If the ally starts channeling after projectile launch, the projectile does nothing upon impact. Can target, but has no effect on units affected by Chronosphere and Black Hole, the projectile does nothing on impact.",
+        "If the ally starts channeling after projectile launch, the projectile does nothing upon impact.",
         "Can target, but has no effect on units affected by Chronosphere and Black Hole, the projectile does nothing on impact.",
         "The target jumps 425 range forwards upon projectile impact, 257 range high. While in the air, other units can pass below them.",
-        "During the jump, the target is fully disabled, unable to move, turn, attack or cast abilities or items. Can jump over other units and over impassable terrain.",
+        "During the jump, the target is fully disabled, unable to move, turn, attack or cast abilities or items.",
         "Can jump over other units and over impassable terrain.",
-        "Firesnap Cookie first applies the heal, the damage, then the stun. The health restore talent immediately upgrades already launched cookies, making them heal on impact. The area damage and stun are applied upon losing the hop buff. This means if the leap gets interrupted, the effects are applied earlier.",
-        "The health restore talent immediately upgrades already launched cookies, making them heal on impact.",
         "The area damage and stun are applied upon losing the hop buff. This means if the leap gets interrupted, the effects are applied earlier.",
-        "Destroys trees within a 100 radius upon landing."
+        "Firesnap Cookie first applies the heal, then the damage, then the stun.",
+        "Destroys trees within a 150 radius upon landing.",
+        "The health restore talent immediately upgrades already launched cookies, making them heal on impact."
       ],
       "mana": "110",
       "hotKey": "W",
@@ -110,10 +109,9 @@
         "Jump Distance: 425",
         "Impact Damage: 70\/140\/210\/280",
         "Jump Duration: 0.5",
-        "Impact Stun Duration: 1.6\/1.8\/2\/2.2",
+        "Impact Stun Duration: 1.3\/1.6\/1.9\/2.2",
         "Heal: 200",
-        "Can be cast on spell immune allies. Does not affect spell immune enemies.",
-        "With the help of a secret mixture that pairs Beadie's baking skills with her passion for black powder, these battle biscuits pack a punch."
+        "Can be cast on spell immune allies. Does not affect spell immune enemies."
       ],
       "itemBehaviour": [],
       "legacyKey": "C",
@@ -127,12 +125,11 @@
         "Damage Instant Attack"
       ],
       "notes": [
-        "The cast range of Lil' Shredder is based on the attack range of the caster. Together with the ability's own bonus, Lil' Shredder effectively has a cast range of 575\/650\/725\/800 on Snapfire. The cast range can be further increased by other attack range bonuses, and is also affected by cast range bonuses.",
-        "Together with the ability's own bonus, Lil' Shredder effectively has a cast range of 575\/650\/725\/800 on Snapfire.",
-        "The cast range can be further increased by other attack range bonuses, and is also affected by cast range bonuses.",
-        "Interrupts Snapfire's channeling abilities on cast.",
-        "Sets Snapfire's base attack time to 1 and her damage to the given values. This means attack damage bonuses and reductions are completely ignored, unless the Lil' Shredder uses attack damage talent is learned.",
-        "This means attack damage bonuses and reductions are completely ignored, unless the Lil' Shredder uses attack damage talent is learned.",
+        "Interrupts Snapfire's channeling spells on cast.",
+        "Increases Snapfire's attack range to 575\/650\/725\/800, and sets her base attack time to 1.",
+        "Sets Snapfire's damage to the given values. This means attack damage bonuses and reductions are completely ignored. With the level 20 talent, Lil' Shredder uses her regular attack damage, so that all bonuses and reductions now work. Leveling up Lil' Shredder or choosing the level 20 talent do not update the damage of an already existing instance from a previous cast.",
+        "With the level 20 talent, Lil' Shredder uses her regular attack damage, so that all bonuses and reductions now work.",
+        "Leveling up Lil' Shredder or choosing the level 20 talent do not update the damage of an already existing instance from a previous cast.",
         "An attack charge is lost whenever an attack is executed, regardless of outcome. This means missed attacks use up charges as well.",
         "The number of charges left is visible on the buff icon.",
         "Lil' Shredder uses a single debuff on the target. Following attacks increase its stack count. A number on the icon reveals the amount of stacks. The number is visible to everyone. Since only one debuff is used, each attack resets the duration of the entire stack.",
@@ -140,15 +137,14 @@
         "Since only one debuff is used, each attack resets the duration of the entire stack.",
         "The armor reduction is applied on any attacked target, including buildings and allies.",
         "Can deal a total of 120\/270\/420\/570 damage with all 6 attacks (before reductions).",
+        "Can reduce a total of 4.5 armor with all 6 attacks.",
         "The attacks first place the debuff, then apply their own damage.",
-        "Successive casts do not stack, but refresh the buff instead, resetting the amount of attacks and updating the range bonus. Leveling up the ability and the Lil' Shredder uses attack damage talent does not update the damage of an already existing instance from a previous cast.",
-        "Leveling up the ability and the Lil' Shredder uses attack damage talent does not update the damage of an already existing instance from a previous cast.",
-        "The multishot talent causes Snapfire to perform instant attacks on different random targets within attack range whenever attacking during Lil' Shredder. These instant attacks can proc any attack modifiers and on-hit effects normally. They do not have True Strike, and are affected by disarms. The secondary attacks have no target priorities. They simply choose random valid targets within range.",
+        "Successive casts do not stack, but refresh the buff instead, resetting the amount of attacks and updating the range bonus.",
+        "With the multishot talent, Snapfire performs instant attacks on different random targets within attack range whenever attacking during Lil' Shredder. These instant attacks can proc any attack modifiers and on-hit effects normally. They do not have True Strike, and are affected by disarms. The secondary attacks have no target priorities. They simply choose random valid targets within range.",
         "These instant attacks can proc any attack modifiers and on-hit effects normally. They do not have True Strike, and are affected by disarms.",
-        "The secondary attacks have no target priorities. They simply choose random valid targets within range.",
-        "If Snapfire is disarmed, no attacks are fired."
+        "The secondary attacks have no target priorities. They simply choose random valid targets within range."
       ],
-      "mana": "50\/60\/70\/80",
+      "mana": "50\/65\/80\/95",
       "hotKey": "E",
       "cooldown": "24\/20\/16\/12",
       "description": "Snapfire heats up her mounted turret to rapidly fire 6 fixed-damage attacks. Each attack reduces the enemy's armor. Provides bonus attack range for the duration.",
@@ -160,12 +156,11 @@
         "Base Attack Time: 1",
         "Fixed Attack Damage: 20\/45\/70\/95 (TagTalent 0)",
         "Number of Attacks: 6",
-        "Armor Reduction per Attack: 1",
+        "Armor Reduction per Attack: 0.75",
         "Armor Reduction Duration: 5",
-        "Buff Duration: 8",
+        "Buff Duration: 6",
         "Bonus Attack Targets: 3",
-        "Debuff persists if placed before spell immunity and when not dispelled.",
-        "Beadie constantly tinkers with a design she first dreamed up plotting an exodus from her old gang."
+        "Debuff persists if placed before spell immunity and when not dispelled."
       ],
       "itemBehaviour": [],
       "legacyKey": "E",
@@ -190,8 +185,8 @@
         "The unit is automatically released after 3 seconds if not manually spat out. If the unit is not a hero or a clone, it gets instantly killed upon getting released. Targeted non-hero units also get their ownership changed to that of the caster, meaning its death counts as a deny.",
         "If the unit is not a hero or a clone, it gets instantly killed upon getting released.",
         "Targeted non-hero units also get their ownership changed to that of the caster, meaning its death counts as a deny.",
-        "Swallowing a unit turns this ability inactive and turns the Spit Out sub-ability active. This ability stays inactive until the unit is released, either by timing out, by using the sub-ability, or Snapfire dies.",
-        "This ability stays inactive until the unit is released, either by timing out, by using the sub-ability, or Snapfire dies."
+        "Swallowing a unit turns this ability inactive and turns the Spit Out sub-ability active. This ability stays inactive until the unit is released, either by timing out, by using the sub-ability, or by the caster dying.",
+        "This ability stays inactive until the unit is released, either by timing out, by using the sub-ability, or by the caster dying."
       ],
       "mana": "150",
       "hotKey": "D",
@@ -224,13 +219,13 @@
         "Upon landing, the unit deals the impact damage and leaves a lava puddle behind. The puddle lasts 3 seconds. The impact damage equals the one of Mortimer Kisses, based on its current level. The puddle applies the debuff on enemies in 0.5 second intervals, starting immediately as it is created, resulting in 7 instances. The debuff lasts 1 second, and deals 50 damage in 0.5 second intervals, starting immediately upon being placed, resulting in 3 instances. Can deal a total of 610\/690\/770 damage, considering impact damage, and standing within the puddle for the full duration. Multiple instances of the debuff do not stack. Since Spit Out and Mortimer Kisses use the same modifer, they do not stack, with the damage from the first applied debuff taking priority.",
         "The impact damage equals the one of Mortimer Kisses, based on its current level.",
         "The puddle applies the debuff on enemies in 0.5 second intervals, starting immediately as it is created, resulting in 7 instances.",
-        "The debuff lasts 1 second, and deals 50 damage in 0.5 second intervals, starting immediately upon being placed, resulting in 3 instances. Can deal a total of 610\/690\/770 damage, considering impact damage, and standing within the puddle for the full duration.",
+        "The debuff lasts 1 second, and deals 50 damage in 0.5 second intervals, starting immediately upon being placed, resulting in 3 instances.",
         "Can deal a total of 610\/690\/770 damage, considering impact damage, and standing within the puddle for the full duration.",
         "Multiple instances of the debuff do not stack.",
         "Since Spit Out and Mortimer Kisses use the same modifer, they do not stack, with the damage from the first applied debuff taking priority.",
         "The impact first applies the damage, then the stun.",
         "The projectile provides 500 radius flying vision as it travels. This vision lingers for 3.5 seconds at the impact area.",
-        "Destroys trees within the impact area upon landing."
+        "Destroys trees within a 150 radius upon landing."
       ],
       "mana": "0",
       "hotKey": "F",
@@ -267,8 +262,7 @@
         "Mortimer Kisses is canceled if Snapfire gets stunned, silenced, cycloned, hexed, slept, feared, or hypnotized. Taunts prevent Snapfire from changing locations for the globs, but do not cancel it. Mortimer Kisses can also be stopped manually by giving Snapfire any other order besides moving.",
         "Taunts prevent Snapfire from changing locations for the globs, but do not cancel it.",
         "Mortimer Kisses can also be stopped manually by giving Snapfire any other order besides moving.",
-        "The location for the globs can be changed with a move order (TagTalent Right Click, or by pressing the move hotkey and selecting a target point). Selecting a point outside the minimum\/maximum distance, the globs are launched using the minimum and maximum distance towards the targeted direction. Although reducing turn rate a lot while active, the globs are launched where the order was targeted, they are not launched based on facing angle.",
-        "Selecting a point outside the minimum\/maximum distance, the globs are launched using the minimum and maximum distance towards the targeted direction.",
+        "The location for the globs can be changed with a move order (TagTalent Right Click or M). Although reducing turn rate a lot while active, the globs are launched where the order was targeted, they are not launched based on facing angle.",
         "Although reducing turn rate a lot while active, the globs are launched where the order was targeted, they are not launched based on facing angle.",
         "Snapfire is disarmed during Mortimer Kisses. Attack orders behave like move orders during disarms, so right-clicking an enemy sets a new location as well.",
         "The destination for each glob is marked with a red circle indicator, which is visible to allies only.",
@@ -306,8 +300,7 @@
         "Puddle Duration: 3",
         "Debuff Duration: 1",
         "Grants a new ability: Gobble Up. Mortimer gobbles up a creep or an allied hero, which he can then spit towards enemies.",
-        "Debuff persists if placed before spell immunity and when not dispelled.",
-        "Little did Beadie know when she adopted Mortimer, dragon toads--which aren't even toads at all--share more than just a name with their distant draconic cousins."
+        "Debuff persists if placed before spell immunity and when not dispelled."
       ],
       "itemBehaviour": [],
       "legacyKey": "D",
@@ -322,7 +315,7 @@
     "attrAgilityInc": 1.9,
     "attrAgility": 16.0
   },
-  "description": "Beatrix Snapfire, or simply Snapfire, is a ranged strength hero armed with a wide array of firepower, riding into battle on her dragon toad Mortimer. Her powerful Scatterblast blasts foes who get too close, while her mounted turret increases her range, allowing her to unleash a barrage of rapid fire attacks. Snapfire's coveted Firesnap Cookies give allies a boost, allowing them to leap a short distance. The cookies aren't her only secret weapon, her dragon toad has the ultimate nasty surprise for the enemy team\u2014a long range artillery barrage of Mortimer Kisses that coat the map in searing lava.",
+  "description": "Beatrix Snapfire, or simply Snapfire, is a ranged strength hero armed with a wide array of firepower, riding into battle on her dragon toad Mortimer. Her powerful Scatterblast blasts foes who get too close, while her mounted turret increases her range, allowing her to unleash a barrage of rapid fire attacks. Snapfire's coveted Firesnap Cookies give allies a boost, allowing them to leap a short distance. The cookies aren't her only secret weapon, as her dragon toad has the ultimate nasty surprise for the enemy team\u2014a long range artillery barrage of Mortimer Kisses that coats the map in searing lava.",
   "history": "Beatrix Snapfire and her dragon toad Mortimer are a welcome sight to the ragged folk who scratch out lives along the desert routes and oases scattered throughout Nanarak, the rain-forsaken gateway to the Outlands. As well known for her unrivaled skills as a weaponsmith as for dispensing wisdom, mirth, and the meanest firesnap cookies the world has ever seen, Beadie's survived to a ripe old age in a young keen's trade by being quick with her wits and even quicker with her guns. Indeed, the Outlands are littered with the bones of bandits and ne'er-do-wells who thought to take advantage of her small stature and propensity for kindness.",
   "talents": [
     {

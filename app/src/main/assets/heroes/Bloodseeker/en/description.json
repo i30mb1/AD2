@@ -44,7 +44,9 @@
         "Deals 1% of max health as damage in 0.5-second intervals, starting 0.5 seconds after cast, resulting in 16 instances. The damage is flagged as HP Removal, so it does not trigger any on-damage effects. Does not drain health while invulnerable. Health drain cannot bring the target's health below 1.",
         "The damage is flagged as HP Removal, so it does not trigger any on-damage effects.",
         "Does not drain health while invulnerable. Health drain cannot bring the target's health below 1.",
-        "Successive casts with different levels on a same target only refresh the duration, but do not update the attack speed and spell damage amplification.",
+        "Applies generic outgoing damage amplification on the target. Stacks additively with other sources of generic outgoing damage manipulation. The amplification affects only spell damage the target deals that is not flagged as HP removal. Attack damage is not amplified.",
+        "The amplification affects only spell damage the target deals that is not flagged as HP removal. Attack damage is not amplified.",
+        "Successive casts with different levels on a same target only refresh the duration, but do not update the attack speed or the amplification.",
         "With Aghanim's Shard, Bloodseeker's attacks deals pure damage based on the target's maximum health. The damage is directly added to Bloodseeker's attack damage, however, it is ignored by percentage-based damage bonus or reductions. The damage cannot crit, cleave, or lifesteal with other sources of lifesteal than its own. Bloodrage's lifesteal is affected by lifesteal manipulation. Bloodrage's own outgoing damage amplification does not affect the shard's percentage-based pure damage. Does not work against Roshan.",
         "The damage is directly added to Bloodseeker's attack damage, however, it is ignored by percentage-based damage bonus or reductions.",
         "The damage cannot crit, cleave, or lifesteal with other sources of lifesteal than its own.",
@@ -67,8 +69,7 @@
         "Outgoing Spell Damage Amplification: 15%\/20%\/25%\/30%",
         "Duration: 8",
         "Enemy Max Health as Damage\/Lifesteal: 2%",
-        "Bloodrage attacks now deal 2% of the target's max health as pure damage and heals Bloodseeker for that amount. Only works for Bloodseeker.",
-        "Strygwyr shares his animalistic thirst for bloodshed."
+        "Bloodrage attacks now deal 2% of the target's max health as pure damage and heals Bloodseeker for that amount. Only works for Bloodseeker."
       ],
       "itemBehaviour": [],
       "legacyKey": "D",
@@ -101,8 +102,7 @@
         "Effect Delay: 2.6",
         "Damage: 120\/160\/200\/240 (TagTalent 205\/245\/285\/325)",
         "Silence Duration: 3\/4\/5\/6",
-        "Silence persists if debuff was placed before spell immunity and when not dispelled.",
-        "The Flayed Twins are ever willing to aid those who spill blood upon the field of battle."
+        "Silence persists if debuff was placed before spell immunity and when not dispelled."
       ],
       "itemBehaviour": [],
       "legacyKey": "B",
@@ -153,8 +153,7 @@
         "Speed Linger Duration: 4",
         "Completely ignores spell immune enemies.",
         "Disables the detection, movement speed bonus, and the movement speed limit removal, but not the heal on kill or nearby death.",
-        "Heal and speed limit removal work for illusions, movement speed bonus and detection do not.",
-        "Strygwyr becomes frenzied when blood is spilled."
+        "Heal and speed limit removal work for illusions, movement speed bonus and detection do not."
       ],
       "itemBehaviour": [],
       "legacyKey": "T",
@@ -179,6 +178,14 @@
         "900 Distance: 297\/396\/495 damage.",
         "1200 Distance: 396\/528\/660 damage.",
         "1500 Distance: 495\/660\/825 damage.",
+        "",
+        "With level 4 Bloodrage on Bloodseeker, Rupture deals 13% current health as damage to the target and Rupture can deal up to the following damage when the affected unit travels certain distances: 300 Distance: 128.7\/171.6\/214.5 damage. 600 Distance: 257.4\/343.2\/429 damage. 900 Distance: 386.1\/514.8\/643.5 damage. 1200 Distance: 514.8\/686.4\/858 damage. 1500 Distance: 643.5\/858\/1072.5 damage.",
+        "300 Distance: 128.7\/171.6\/214.5 damage.",
+        "600 Distance: 257.4\/343.2\/429 damage.",
+        "900 Distance: 386.1\/514.8\/643.5 damage.",
+        "1200 Distance: 514.8\/686.4\/858 damage.",
+        "1500 Distance: 643.5\/858\/1072.5 damage.",
+        "",
         "Multiple casts on the same target do not stack, but refresh the duration instead.",
         "Despite the sounds, affected units take no damage when moving upwards (with e.g. Torrent or Impale).",
         "Can be cast on, but cannot damage Couriers.",
@@ -197,8 +204,7 @@
         "Duration: 10\/11\/12",
         "Number of Charges: 2",
         "Charge Replenish Time: 40",
-        "Grants 2 charges to Rupture with a 40 seconds replenish time.",
-        "When the Bloodseeker hunts you, injuries become fatalities."
+        "Grants 2 charges to Rupture with a 40 seconds replenish time."
       ],
       "itemBehaviour": [],
       "legacyKey": "R",

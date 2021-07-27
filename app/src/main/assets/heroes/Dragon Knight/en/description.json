@@ -2,7 +2,8 @@
   "abilities": [
     {
       "notes": [
-        "This attack damage talent is added as raw attack damage, so it does not benefit illusions, and is not affected by most percentage-based damage increasing or reducing effects.",
+        "This attack damage talent is added as raw attack damage. Does not benefit illusions and is not affected by most percentage-based damage increasing or reducing effects.",
+        "Does not benefit illusions and is not affected by most percentage-based damage increasing or reducing effects.",
         "The health talent increases maximum health capacity, and keeps the current health percentage.",
         "The strength talent effectively grants Dragon Knight 400 health, 2 health regeneration, and 20 attack damage."
       ],
@@ -21,7 +22,7 @@
         {
           "talentLvl": "15",
           "talentLeft": "+400 Health",
-          "talentRight": "+0.5s Dragon Tail Stun Duration"
+          "talentRight": "+0.5s Dragon Tail"
         },
         {
           "talentLvl": "10",
@@ -41,9 +42,9 @@
         "Breathe Fire travels at a speed of 1050.",
         "With the travel distance and end radius, Breathe Fire can hit units up to 1000 range away. The complete area is shaped like a cone.",
         "The complete area is shaped like a cone.",
+        "Reduces hit targets' total attack damage, including raw damage bonuses.",
         "Breathe Fire first applies the damage, then the debuff.",
-        "Reduces 25%\/55% of hit targets' total attack damage, including raw damage bonuses.",
-        "While in Elder Dragon Form, it has a cast backswing of 0.53 seconds."
+        "Has a cast backswing of 0.53 seconds while in Elder Dragon Form."
       ],
       "mana": "90\/100\/110\/120",
       "hotKey": "Q",
@@ -59,8 +60,7 @@
         "Damage: 90\/170\/240\/300",
         "Attack Damage Reduction: 25% (TagTalent 55%)",
         "Reduction Duration: 11",
-        "Attack damage reduction persists if debuff was placed before spell immunity and when not dispelled. Can directly target spell immune units, launching the fire in their direction.",
-        "Knight Davion's breath has become that of the mighty Eldwurm Slyrak, remembered for burning numerous other knights to a crisp."
+        "Attack damage reduction persists if debuff was placed before spell immunity and when not dispelled. Can directly target spell immune units, launching the fire in their direction."
       ],
       "itemBehaviour": [],
       "legacyKey": "F",
@@ -74,11 +74,13 @@
         "Damage Magical"
       ],
       "notes": [
-        "In human form, Dragon Tail does not rely on a projectile, therefore it cannot be disjointed.",
+        "In human form, Dragon Tail does not rely on a projectile and can therefore not be disjointed.",
         "Dragon Tail first applies the damage, then the debuff.",
-        "While in Elder Dragon Form, Dragon Tail has a cast range of 400 and uses a projectile, instead of being instant. The projectile travels at a speed of 1600. The talent turns Dragon Tail into a 375 radius area-targeted ability, so that it cannot directly target units anymore. The targeting reticule must be centered over an enemy unit.",
+        "While in Elder Dragon Form, Dragon Tail has a cast range of 400 and uses a projectile, instead of being instant. The projectile travels at a speed of 1600.",
         "The projectile travels at a speed of 1600.",
-        "The talent turns Dragon Tail into a 375 radius area-targeted ability, so that it cannot directly target units anymore. The targeting reticule must be centered over an enemy unit."
+        "The level 25 talent adds a 375 radius to this ability while in Elder Dragon Form. The ability still must be centered over a unit. Causes the launched projectile to apply its effects within the area, instead of only to the targeted unit. Can hit invisible units and units inside the Fog of War.",
+        "Causes the launched projectile to apply its effects within the area, instead of only to the targeted unit.",
+        "Can hit invisible units and units inside the Fog of War."
       ],
       "mana": "70\/80\/90\/100",
       "hotKey": "W",
@@ -90,8 +92,7 @@
         "Cast Range: 150",
         "Damage: 70\/100\/130\/160",
         "Stun Duration: 2.5\/2.75\/3\/3.25 (TagTalent 3\/3.25\/3.5\/3.75)",
-        "The projectile used during Elder Dragon Form can be disjointed.",
-        "Davion's combination of dragon talents and knightly skills makes him a vicious opponent in melee combat."
+        "The projectile used during Elder Dragon Form can be disjointed."
       ],
       "itemBehaviour": [],
       "legacyKey": "T",
@@ -104,8 +105,7 @@
         "Affects Self"
       ],
       "notes": [
-        "Can regenerate up to 240\/480\/720\/960 (TagTalent 960\/1200\/1440\/1680) health in one minute.",
-        "Armor granted by Dragon Blood is bonus armor, which is the armor value shown in green numbers with a plus on the left."
+        "Can regenerate up to 240\/480\/720\/960 (TagTalent 960\/1200\/1440\/1680) health in one minute."
       ],
       "mana": null,
       "hotKey": "E",
@@ -115,8 +115,7 @@
       "params": [
         "Health Regen Bonus: 4\/8\/12\/16 (TagTalent 16\/20\/24\/28)",
         "Armor Bonus: 3\/6\/9\/12 (TagTalent 15\/18\/21\/24)",
-        "Illusions benefit from the health regeneration, but not from the armor.",
-        "Slyrak's blood still courses through Davion's veins, giving him twice the vitality of an ordinary knight."
+        "Illusions benefit from the health regeneration, but not from the armor."
       ],
       "itemBehaviour": [],
       "legacyKey": "D",
@@ -130,7 +129,8 @@
         "Damage Magical"
       ],
       "notes": [
-        "Requires Aghanim's Shard to be unlocked.",
+        "Requires Aghanim's Shard to be unlocked. In Ability Draft, Fireball can be unlocked by the player that drafted Elder Dragon Form.",
+        "In Ability Draft, Fireball can be unlocked by the player that drafted Elder Dragon Form.",
         "Deals 40 damage in 0.5-second intervals, immediately upon cast, resulting in 21 damage instances. Can deal up to 840 damage to a single unit (before reductions).",
         "Can deal up to 840 damage to a single unit (before reductions).",
         "Multiple instances of Fireball on the same area stack, with each cast dealing damage to units within range.",
@@ -139,7 +139,7 @@
       "mana": "100",
       "hotKey": "D",
       "cooldown": "20",
-      "description": "Provided to Elder Dragon Form. Ignites a 450 AoE area for 10 seconds, dealing 80 damage per second to enemies in it.",
+      "description": "Ignites a 450 AoE area for 10 seconds, dealing 80 damage per second to enemies in it. Has reduced cast range when melee.",
       "spellName": "Fireball",
       "params": [
         "Cast Animation: 0.2+0.53",
@@ -160,17 +160,16 @@
         "Damage Magical \/ Physical"
       ],
       "notes": [
-        "Increases Dragon Knight's movement speed to 335, attack range to 500\/650, and magic resistance to 25%\/25%\/25%\/55%. Also gives Dragon Knight ranged attack properties. His attack projectiles travel at a speed of 900. The talent turns Dragon Tail into a 375 radius area-targeted ability, so that it cannot directly target units anymore. The targeting reticule must be centered over an enemy unit.",
+        "Increases Dragon Knight's movement speed to 335 and attack range to 500 (TagTalent 650) (TagTalent and magic resistance to 55%). Also gives Dragon Knight ranged attack properties. His attack projectiles travel at a speed of 900.",
         "Also gives Dragon Knight ranged attack properties. His attack projectiles travel at a speed of 900.",
-        "The talent turns Dragon Tail into a 375 radius area-targeted ability, so that it cannot directly target units anymore. The targeting reticule must be centered over an enemy unit.",
-        "Level 1 transforms him into a Green Dragon, level 2 into a Red Dragon, level 3 into a Blue Dragon and level 4 into a Black Dragon.",
+        "Level 1 transforms him into a Green Dragon, level 2 into a Red Dragon, and level 3 into a Blue Dragon (TagTalent and level 4 into a Black Dragon).",
         "Elder Dragon Form is fully canceled on death. The Dragon Form buff is hidden, only the 3 attack modifier buffs are displayed.",
         "Successive casts of Elder Dragon Form refresh the duration and update the form, adapting to the current level of the ability.",
         "While in Elder Dragon Form, Dragon Knight gains the following attack modifiers through undispellable buffs:",
-        "Corrosive Breath: (Available for Level 1 and higher levels of Elder Dragon Form) Places a Corrosive Breath debuff, which deals magical damage in 1-second intervals, starting 1 second after the debuff is applied, resulting in 5 instances. When on level 2 or higher, the debuff is applied to all enemies within the splash radius. Can deal up to 100\/100\/100\/150 damage to a unit (before reductions). Does not work against wards, works against allied units. Corrosive Breath fully affects buildings, meaning it can also be used to deny allied towers. However, buildings are only debuffed when directly attacked. Successive hits do not stack, but refresh the duration. The attacks first apply the debuff, then their own attack damage. However, on secondary targets, it first applies the splash damage, then the debuff. When an attack misses or is disjointed, the debuff is not applied within the radius.",
+        "Corrosive Breath: (Available for Level 1 and higher levels of Elder Dragon Form) Places a Corrosive Breath debuff, which deals magical damage in 1-second intervals, starting 1 second after the debuff is applied, resulting in 5 instances. When on level 2 or higher, the debuff is applied to all enemies within the splash radius. Can deal up to 100 (TagTalent 150) damage to a unit (before reductions). Does not work against wards, works against allied units. Corrosive Breath fully affects buildings, meaning it can also be used to deny allied towers. However, buildings are only debuffed when directly attacked. Successive hits do not stack, but refresh the duration. The attacks first apply the debuff, then their own attack damage. However, on secondary targets, it first applies the splash damage, then the debuff. When an attack misses or is disjointed, the debuff is not applied within the radius.",
         "Places a Corrosive Breath debuff, which deals magical damage in 1-second intervals, starting 1 second after the debuff is applied, resulting in 5 instances.",
         "When on level 2 or higher, the debuff is applied to all enemies within the splash radius.",
-        "Can deal up to 100\/100\/100\/150 damage to a unit (before reductions).",
+        "Can deal up to 100 (TagTalent 150) damage to a unit (before reductions).",
         "Does not work against wards, works against allied units.",
         "Corrosive Breath fully affects buildings, meaning it can also be used to deny allied towers. However, buildings are only debuffed when directly attacked.",
         "Successive hits do not stack, but refresh the duration.",
@@ -185,10 +184,9 @@
         "Successive hits do not stack, but refresh the duration.",
         "The attacks first apply the debuff, then their own attack damage. The splash damage is applied after the debuff as well. When an attack misses or is disjointed, the slow is not applied within the radius.",
         "When an attack misses or is disjointed, the slow is not applied within the radius.",
-        "With Aghanim's Scepter, Elder Dragon Form automatically increases its level by 1, granting Black Dragon form. The ability can still only be leveled 3 times. Level 4 is only available while having Aghanim's Scepter. Grants Black Dragon unobstructed movement, allowing him to path over impassable terrain, units, buildings, and trees. However, it does not grants him phased movement, means other unit cannot pass him. The black dragon form is 30% larger than the other forms.",
-        "Level 4 is only available while having Aghanim's Scepter.",
+        "With Aghanim's Scepter, Elder Dragon Form automatically increases its level by 1, granting Black Dragon form. The ability can still only be leveled 3 times. Grants Black Dragon unobstructed movement, allowing him to path over impassable terrain, units, buildings, and trees. However, it does not grant him phased movement meaning other units cannot pass through him. The black dragon form is 30% larger than the other forms.",
         "Grants Black Dragon unobstructed movement, allowing him to path over impassable terrain, units, buildings, and trees.",
-        "However, it does not grants him phased movement, means other unit cannot pass him.",
+        "However, it does not grant him phased movement meaning other units cannot pass through him.",
         "The black dragon form is 30% larger than the other forms."
       ],
       "mana": "50",
@@ -200,24 +198,23 @@
         "Cast Animation: 0+0.5",
         "Attack Range Bonus: 350 (TagTalent 500)",
         "Move Speed Bonus: 25",
-        "Magic Resistance Bonus: 0%\/0%\/0% (TagTalent \/40%)",
+        "Magic Resistance Bonus: 0%\/0%\/0% (TagAghanim \/40%)",
         "Dragon Tail Cast Range Bonus: 250",
         "Dragon Form Duration: 60",
-        "Corrosive Breath Damage per Second: 20\/20\/20 (TagTalent \/30)",
+        "Corrosive Breath Damage per Second: 20\/20\/20 (TagAghanim \/30)",
         "Corrosive Breath Debuff Duration: 5",
         "Splash Attack Radius: 350",
-        "Splash Attack Damage: 0%\/75%\/75% (TagTalent \/115%)",
+        "Splash Attack Damage: 0%\/75%\/75% (TagAghanim \/115%)",
         "Frost Breath Radius: 300",
-        "Frost Breath Move Speed Slow: 0%\/0%\/40% (TagTalent \/60%)",
-        "Frost Breath Attack Speed Slow: 0\/0\/40 (TagTalent \/60)",
+        "Frost Breath Move Speed Slow: 0%\/0%\/40% (TagAghanim \/60%)",
+        "Frost Breath Attack Speed Slow: 0\/0\/40 (TagAghanim \/60)",
         "Frost Breath Debuff Duration: 3",
         "Dragon Tail Radius: 375",
         "Fireball Cast Range Bonus: 800",
         "Increases the level of your ultimate. Adds a 4th level, Black Dragon. Black Dragon has bonus Corrosive Damage, Splash Damage, and Slow amount, free pathing and grants additional Magic resistance.",
         "Grants a new ability: Fireball",
         "Poison and frost breath do not pierce spell immunity. Splash pierces spell immunity. Corrosive Breath attempts to damage spell immune enemies when placed before spell immunity and when not dispelled.",
-        "Illusions get their own Elder Dragon Form buff lasting its regular duration.",
-        "The dormant dragon power springs forth from within Davion, combining the powers of a legendary knight with a legendary Eldwurm."
+        "Illusions get their own Elder Dragon Form buff lasting its regular duration."
       ],
       "itemBehaviour": [],
       "legacyKey": "R",
@@ -248,7 +245,7 @@
     {
       "talentLvl": "15",
       "talentLeft": "+400 Health",
-      "talentRight": "+0.5s Dragon Tail Stun Duration"
+      "talentRight": "+0.5s Dragon Tail"
     },
     {
       "talentLvl": "10",

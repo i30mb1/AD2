@@ -2,8 +2,8 @@
   "abilities": [
     {
       "notes": [
-        "The spell lifesteal talent stacks additively with other sources of spell lifesteal.",
-        "The spell lifesteal talent heals for 2.4% from non-hero units. Treats creep-heroes as creeps and does not heal off of illusions."
+        "The spell lifesteal talent stacks additively with other sources of spell lifesteal. Heals for 2.4% from non-hero units. Treats creep-heroes as creeps and does not heal off of illusions.",
+        "Heals for 2.4% from non-hero units. Treats creep-heroes as creeps and does not heal off of illusions."
       ],
       "spellName": "Talent",
       "talents": [
@@ -37,8 +37,8 @@
         "Damage Magical"
       ],
       "notes": [
-        "The gale travels at a speed of 1200, taking 0.71 (1.04) seconds to reach max distance.",
-        "With the travel distance and gale radius, it can hit units up to 975 (1375) range away.",
+        "The gale travels at a speed of 1200, taking 0.71 (TagTalent 1.04) seconds to reach max distance.",
+        "With the travel distance and gale radius, it can hit units up to 975 (TagTalent 1375) range away.",
         "The slow decreases over time. Hit units regain 1% of their movement speed in 0.3-second intervals, starting 0.3 seconds after the debuff is applied.",
         "A unit with less than 25% of its maximum health can be denied when it has the Venomous Gale debuff on.",
         "After the initial damage, it deals damage over time in 3-second intervals, resulting in overall 6 damage instances.",
@@ -46,7 +46,7 @@
         "The debuff from successive casts does not stack, only the duration is refreshed. This means the initial damage is not dealt again, since it only applies on debuff creation, but not on refresh.",
         "This means the initial damage is not dealt again, since it only applies on debuff creation, but not on refresh.",
         "The projectile has 280 radius flying vision. This vision does not last.",
-        "With Aghanim's Shard, Venomous Gale spawns 2 Plague Wards based on its current level around each hit enemy hero and clones, excluding illusions. If Plague Ward is not learned, no wards are spawned. The wards are placed within 100 range of every enemy hero affected, on opposite sides of each other.",
+        "With Aghanim's Shard, Venomous Gale spawns 2 Plague Wards based on its current level around each hit enemy hero, including clones, excluding illusions. If Plague Ward is not learned, no wards are spawned. The wards are placed within 100 range of every enemy hero affected, on opposite sides of each other.",
         "If Plague Ward is not learned, no wards are spawned.",
         "The wards are placed within 100 range of every enemy hero affected, on opposite sides of each other."
       ],
@@ -67,8 +67,7 @@
         "Duration: 15",
         "Number of Plague Wards: 2",
         "Causes Venomous Gale to summon two Plague Wards when it impacts an enemy hero. Increases travel range by 400.",
-        "Slow persists and attempts to damage if debuff was placed before spell immunity and when not dispelled.",
-        "A concoction of various stings, poisons, and toxins gathered from the jungles of Jidi Isle, victims surviving it are rare."
+        "Slow persists and attempts to damage if debuff was placed before spell immunity and when not dispelled."
       ],
       "itemBehaviour": [],
       "legacyKey": "E",
@@ -82,10 +81,15 @@
         "Damage Magical (TagAghanimHP Removal)"
       ],
       "notes": [
-        "The damage from Poison Sting is flagged as HP Removal, it is not lethal and does not trigger any on-damage effects.",
+        "The damage from Poison Sting is flagged as HP Removal, so it does not trigger any on-damage effects.",
         "The damage ticks in 1-second intervals, starting immediately as the debuff is placed, resulting in 6\/9\/12\/15 damage ticks.",
         "The debuff from successive attacks does not stack, only the duration is refreshed.",
-        "Can deal up to 36\/126\/264\/450 damage (before reductions)."
+        "Can deal up to 36\/126\/264\/450 damage (before reductions).",
+        "Plague Wards' attacks apply Poison Sting based on its current level on enemies as well. If Poison Sting is not learned, the wards cannot apply it. The Poison Sting applied by the wards uses a different modifier than Venomancer. These modifiers do not interfere with each other. However, the wards' debuff does not damage or slow if the enemy is also affected by both debuffs. The wards' Poison Sting can deal up to 18\/63\/132\/225 damage (before reductions).",
+        "If Poison Sting is not learned, the wards cannot apply it.",
+        "The Poison Sting applied by the wards uses a different modifier than Venomancer. These modifiers do not interfere with each other.",
+        "However, the wards' debuff does not damage or slow if the enemy is also affected by both debuffs.",
+        "The wards' Poison Sting can deal up to 18\/63\/132\/225 damage (before reductions)."
       ],
       "mana": null,
       "hotKey": "W",
@@ -94,10 +98,10 @@
       "spellName": "Poison Sting",
       "params": [
         "Damage per Second: 6\/14\/22\/30",
+        "Plague Wards Damage Percentage: 50%",
         "Move Speed Slow: 8%\/10%\/12%\/14% (TagTalent 16%\/18%\/20%\/22%)",
         "Duration: 6\/9\/12\/15",
-        "When Venomancer is affected by Break, his Plague Wards cannot apply Poison Sting either.",
-        "The paralytic sting of the creature which caused his transformation now belongs to the Venomancer."
+        "When Venomancer is affected by Break, his Plague Wards cannot apply Poison Sting either."
       ],
       "itemBehaviour": [],
       "legacyKey": "T",
@@ -109,18 +113,18 @@
         "Ability Target Point"
       ],
       "notes": [
-        "Plague Wards automatically attack enemies within their attack range, using ◉ Standard auto attack rules. Upon being created, the ward attacks the closest enemy hero to it. After that, it follows default auto attack rules. It is possible to manually give Plague Wards an attack target with A or Right Click an enemy in range. With Unified Orders with Ctrl, Ctrl+ Right Click an enemy in range will command Plague Wards to attack the target. It is also possible to stop the wards from attacking with S (only works when the auto-attack option is ◎ Never).",
-        "Upon being created, the ward attacks the closest enemy hero to it. After that, it follows default auto attack rules.",
-        "It is possible to manually give Plague Wards an attack target with A or Right Click an enemy in range.",
-        "With Unified Orders with Ctrl, Ctrl+ Right Click an enemy in range will command Plague Wards to attack the target.",
+        "Plague Wards automatically attack enemies within their attack range, using ◉ Standard auto-attack rules. It is possible to manually give the wards an attack target with A or Right Click an enemy in range. With Unified Orders with Ctrl, Ctrl+ Right Click an enemy in range commands all wards to attack the target. It is also possible to stop the wards from attacking with S (only works when the auto-attack option is ◎ Never).",
+        "It is possible to manually give the wards an attack target with A or Right Click an enemy in range.",
+        "With Unified Orders with Ctrl, Ctrl+ Right Click an enemy in range commands all wards to attack the target.",
         "It is also possible to stop the wards from attacking with S (only works when the auto-attack option is ◎ Never).",
-        "Plague Wards' attacks apply Poison Sting on enemies. The debuff stacks with that of Venomancer's own attacks, but their effects do not stack. This means that wards place a separate Poison Sting debuff on attacked enemies and do not refresh the debuff from Venomancer's attacks. However, the debuff placed by a ward is muted, it does not damage or slow, if the enemy is also affected by Venomancer's debuff. Can deal up to 18\/63\/132\/225 damage (before reductions) applied by the wards.",
-        "This means that wards place a separate Poison Sting debuff on attacked enemies and do not refresh the debuff from Venomancer's attacks.",
-        "However, the debuff placed by a ward is muted, it does not damage or slow, if the enemy is also affected by Venomancer's debuff.",
-        "Can deal up to 18\/63\/132\/225 damage (before reductions) applied by the wards.",
+        "Plague Wards' attacks apply Poison Sting based on its current level on enemies as well. If Poison Sting is not learned, the wards cannot apply it. The Poison Sting applied by the wards uses a different modifier than Venomancer. These modifiers do not interfere with each other. However, the wards' debuff does not damage or slow if the enemy is also affected by both debuffs. The wards' Poison Sting can deal up to 18\/63\/132\/225 damage (before reductions).",
+        "If Poison Sting is not learned, the wards cannot apply it.",
+        "The Poison Sting applied by the wards uses a different modifier than Venomancer. These modifiers do not interfere with each other.",
+        "However, the wards' debuff does not damage or slow if the enemy is also affected by both debuffs.",
+        "The wards' Poison Sting can deal up to 18\/63\/132\/225 damage (before reductions).",
         "The damage source of the wards' Poison Sting is set to be Venomancer, not the wards themselves.",
         "Plague Wards have a lower target priority than units and heroes, so they are attacked by towers and lane creeps last.",
-        "The wards gain their spell immunity through a buff, so it is possible for enemies to \u203C Ping or Alt+ Left Click it to display its remaining duration.",
+        "The wards gain their spell immunity through a buff, so it is possible for enemies to \u203C Ping it to display its remaining duration.",
         "The wards' attack damage is not reduced by damage block."
       ],
       "mana": "20\/22\/24\/26",
@@ -131,8 +135,7 @@
       "params": [
         "Cast Animation: 0+0.63",
         "Cast Range: 850",
-        "Ward Duration: 40",
-        "A mixture of his old herbalist talents and newfound toxic mastery creates a living embodiment of plague."
+        "Ward Duration: 40"
       ],
       "itemBehaviour": [],
       "legacyKey": "W",
@@ -148,12 +151,12 @@
       "notes": [
         "Interrupts Venomancer's channeling abilities upon cast.",
         "Poison Nova's ring expands with a speed of 500.",
-        "With the travel distance and width, Poison Nova can hit units up to 885 (TagTalent 1525) range away . Despite Poison Nova having a width, units between the ring and Venomancer are still affected, even when not within 255 width of the Poison Nova ring.",
-        "Despite Poison Nova having a width, units between the ring and Venomancer are still affected, even when not within 255 width of the Poison Nova ring.",
-        "Deals damage in 1-second intervals, starting immediately as the debuff is placed, resulting in 21 (TagTalent 26) instances. Poison Nova can never kill a unit. It does not drop affected units below 1 health from its damage ticks. Can deal up to 840\/1365\/1890 (TagTalent 1040\/1690\/2340) (or 1575\/2100\/2625, 1950\/2600\/3250) damage to a single unit (before reductions).",
+        "With the travel distance and width, Poison Nova can hit units up to 885 (TagTalent 1525) range away . Despite Poison Nova having a width, units between the ring and Venomancer are still affected, even when not within 255 width of the ring.",
+        "Despite Poison Nova having a width, units between the ring and Venomancer are still affected, even when not within 255 width of the ring.",
+        "Deals damage in 1-second intervals, starting immediately as the debuff is placed, resulting in 21 (TagTalent 26) instances. Poison Nova can never kill a unit. It does not drop affected units below 1 health from its damage ticks. Can deal up to 840\/1365\/1890 (TagTalent 1040\/1690\/2340) (TagTalent 1575\/2100\/2625, 1950\/2600\/3250) damage to a single unit (before reductions).",
         "Poison Nova can never kill a unit. It does not drop affected units below 1 health from its damage ticks.",
-        "Can deal up to 840\/1365\/1890 (TagTalent 1040\/1690\/2340) (or 1575\/2100\/2625, 1950\/2600\/3250) damage to a single unit (before reductions).",
-        "The debuff from successive casts does not stack, but the duration is refreshed."
+        "Can deal up to 840\/1365\/1890 (TagTalent 1040\/1690\/2340) (TagTalent 1575\/2100\/2625, 1950\/2600\/3250) damage to a single unit (before reductions).",
+        "The debuff from successive casts does not stack, only the duration is refreshed."
       ],
       "mana": "200\/300\/400",
       "hotKey": "R",
@@ -164,11 +167,10 @@
         "Cast Animation: 0+0.87",
         "Radius: 630 (TagTalent 1270)",
         "Nova Width: 255",
-        "Damage per Second: 40\/65\/90 (TagTalent 75\/100\/125)",
+        "Damage per Second: 40\/65\/90 (TagAghanim 75\/100\/125)",
         "Duration: 20 (TagTalent 25)",
         "Increases damage and decreases cooldown.",
-        "Places debuff on spell immune enemies. Does not deal damage to spell immune enemies.",
-        "In the Acid Jungles, creatures releasing noxious poison to their attackers is common; Venomancer spreads this plague beyond the Jidi Isle."
+        "Places debuff on spell immune enemies. Does not deal damage to spell immune enemies."
       ],
       "itemBehaviour": [],
       "legacyKey": "V",

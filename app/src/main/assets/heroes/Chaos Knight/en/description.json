@@ -3,7 +3,7 @@
     {
       "notes": [
         "The all \/ \/ stats talent effectively grants Chaos Knight 100 health, 0.5 health regeneration, 0.83 armor, 5 attack speed, 60 mana, 0.25 mana regeneration, and 5 attack damage.",
-        "Cleave from talents is not disabled by Break. For more information, see cleave.",
+        "Cleave from talents is not disabled by Break.",
         "The strength talent effectively grants Chaos Knight 240 health, 1.2 health regeneration, and 12 attack damage."
       ],
       "spellName": "Talent",
@@ -55,8 +55,8 @@
         "When illusions are moving or attacking, they continue to do so and do not turn to face the target. They still play the cast animation, overriding their move or attack animations.",
         "When canceling the cast, the illusions still play the full cast animation, but do not release the fake bolt.",
         "The fake bolts do not interact with anything and do not damage or stun the target.",
-        "With Aghanim's Shard, Chaos Bolt creates 1 controllable illusion upon projectile impact, based on its current level. The illusion is a Phantasm illusion, so that Phantasm's notes fully apply. If Phantasm is not learned, the illusion does not spawn. The illusion is spawned exactly on the targeted enemy's location, and it automatically starts attacking that enemy. Dispelling the stun or dying does not remove the illusion.",
-        "The illusion is a Phantasm illusion, so that Phantasm's notes fully apply. If Phantasm is not learned, the illusion does not spawn.",
+        "With Aghanim's Shard, Chaos Bolt creates 1 controllable Phantasm illusion upon projectile impact, based on its current level. Phantasm notes fully apply. If Phantasm is not learned, the illusion does not spawn. The illusion is spawned exactly on the targeted enemy's location, and it automatically starts attacking that enemy. Dispelling the stun or dying does not remove the illusion.",
+        "Phantasm notes fully apply. If Phantasm is not learned, the illusion does not spawn.",
         "The illusion is spawned exactly on the targeted enemy's location, and it automatically starts attacking that enemy.",
         "Dispelling the stun or dying does not remove the illusion."
       ],
@@ -73,10 +73,11 @@
         "Min Stun Duration: 1.25\/1.5\/1.75\/2 (TagTalent 1.75\/2\/2.25\/2.5)",
         "Max Stun Duration: 2.2\/2.8\/3.4\/4 (TagTalent 2.7\/3.3\/3.9\/4.5)",
         "Number of Phantasm Illusions: 1",
+        "Illusion Damage Dealt: 100%",
+        "Illusion Damage Taken: 325%",
         "Illusion Duration: 6",
         "Chaos Bolt creates 1 Phantasm illusion attacking the target for 6 seconds. Increases cast range by 300.",
-        "Blocked upon impact.",
-        "Even Chaos Knight cannot predict this manifest of unholy energy."
+        "Blocked upon impact."
       ],
       "itemBehaviour": [],
       "legacyKey": "C",
@@ -115,8 +116,7 @@
         "Target Pull Distance: 250\/300\/350\/400",
         "Armor Reduction: 3\/4\/5\/6",
         "Duration: 6",
-        "Cannot target or apply its debuff to spell immune units. Can target and apply its debuff to spell immune units.",
-        "Armageddon rides between the planes, bringing Chaos Knight to his victim wherever he may hide."
+        "Cannot target or apply its debuff to spell immune units. Can target and apply its debuff to spell immune units."
       ],
       "itemBehaviour": [],
       "legacyKey": "E",
@@ -147,8 +147,7 @@
         "Min Critical Damage: 120%",
         "Max Critical Damage: 140%\/170%\/200%\/230%",
         "Lifesteal: 25%\/40%\/55%\/70%",
-        "Red critical numbers are before illusion and armor reduction. The lifesteal works for illusions as well.",
-        "Chaos Knight's unwieldy power bludgeons those who stand before him, crushing the thickest of armors."
+        "Red critical numbers are before illusion and armor reduction. The lifesteal works for illusions as well."
       ],
       "itemBehaviour": [],
       "legacyKey": "R",
@@ -186,13 +185,12 @@
       "params": [
         "Cast Animation: 0.4+0",
         "Split Time: 0.5",
-        "Number of Illusions: 1\/2\/3 (TagTalent 2\/3\/4)",
+        "Number of Illusions: 1\/2\/3 (TagAghanim 2\/3\/4)",
         "Illusion Damage Dealt: 100%",
         "Illusion Damage Taken: 325%",
         "Duration: 30 (TagTalent 40)",
         "Number of Illusions From Each Ally: 1",
-        "Creates an illusion of allied heroes. Creates an additional illusion for Chaos Knight as well.",
-        "Drawing on his battles fought across many worlds and many times, phantasms of the Chaos Knight rise up to quell all who oppose him."
+        "Creates an illusion of allied heroes. Creates an additional illusion for Chaos Knight as well."
       ],
       "itemBehaviour": [],
       "legacyKey": "T",

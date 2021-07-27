@@ -3,7 +3,8 @@
     {
       "notes": [
         "The level 15 health talent is provided by an aura.",
-        "This attack damage talent is added as raw attack damage, so it does not benefit illusions, and is not affected by most percentage-based damage increasing or reducing effects."
+        "This attack damage talent is added as raw attack damage. Does not benefit illusions and is not affected by most percentage-based damage increasing or reducing effects.",
+        "Does not benefit illusions and is not affected by most percentage-based damage increasing or reducing effects."
       ],
       "spellName": "Talent",
       "talents": [
@@ -14,12 +15,12 @@
         },
         {
           "talentLvl": "20",
-          "talentLeft": "-35s Primal Roar Cooldown",
-          "talentRight": "+30 Boar Damage"
+          "talentLeft": "-30s Primal Roar Cooldown",
+          "talentRight": "+35 Boar Damage"
         },
         {
           "talentLvl": "15",
-          "talentLeft": "+300 Health Beastmaster Controlled",
+          "talentLeft": "+350 Health Beastmaster Controlled",
           "talentRight": "+3 Mana Regen"
         },
         {
@@ -40,17 +41,17 @@
         "The axes either travel at a speed of 1200 or reach the target point in one second, whichever is faster. The same applies upon returning. Upon returning, their speed periodically adapts based on their distance to Beastmaster and the remaining travel time. This means the axes fly a maximum of up to two seconds, up to one second towards the point and up to one second back.",
         "Upon returning, their speed periodically adapts based on their distance to Beastmaster and the remaining travel time.",
         "This means the axes fly a maximum of up to two seconds, up to one second towards the point and up to one second back.",
-        "Both axes spread up to 450 distance away from each other, before moving back together while traveling towards the targeted point. Their minimum travel distance is 450 as well, so when targeting a point closer than 450 range, they still intersect 450 range away. The axes fly in arcs, so that the axe coming from Beastmaster's left hand travels back towards his right hand, and vice versa. They destroy trees within 175 radius around them, while providing 350 radius flying vision as they travel. This vision does not last.",
+        "Both axes spread up to 450 distance away from each other, before moving back together while traveling towards the targeted point. Their minimum travel distance is 450 as well, so when targeting a point closer than 450 range, they still intersect 450 range away. The axes fly in arcs, so that the axe coming from Beastmaster's left hand travels back towards his right hand, and vice versa. They destroy every tree they come in contact with, while providing 350 radius flying vision as they travel. This vision does not last.",
         "Their minimum travel distance is 450 as well, so when targeting a point closer than 450 range, they still intersect 450 range away.",
         "The axes fly in arcs, so that the axe coming from Beastmaster's left hand travels back towards his right hand, and vice versa.",
-        "They destroy trees within 175 radius around them, while providing 350 radius flying vision as they travel. This vision does not last.",
+        "They destroy every tree they come in contact with, while providing 350 radius flying vision as they travel. This vision does not last.",
         "The axes first apply the debuff, then the damage. This means they effectively amplify their own damage as well. Uses one debuff on hit targets for all stacks. The debuff has a number on it, showing the amount of stacks. Since the axes work separate, one of the axes always benefits from 2 stacks of the debuff, if both hit. Successive hits on the same unit fully refresh the whole stack's duration.",
         "Uses one debuff on hit targets for all stacks. The debuff has a number on it, showing the amount of stacks.",
         "Since the axes work separate, one of the axes always benefits from 2 stacks of the debuff, if both hit.",
         "Successive hits on the same unit fully refresh the whole stack's duration.",
-        "The damage amplification only works for Beastmaster and all his units. Allies do not benefit from it.",
-        "A unit can only get hit once by each axe, so the maximum possible damage per axe is 42.4\/75.6\/110\/145.6 (74.2\/108\/143\/179.2 or 77\/112\/148.2\/185.6) (before reductions).",
-        "Does not affect Couriers.",
+        "Applies generic incoming damage amplification on the targets. Stacks additively with other sources of generic incoming damage manipulation. The amplification affects all damage that is not flagged as HP removal the targets take from Beastmaster and all his units. Allies do not benefit from it.",
+        "The amplification affects all damage that is not flagged as HP removal the targets take from Beastmaster and all his units. Allies do not benefit from it.",
+        "A unit can only get hit once by each axe, so the maximum possible damage per axe is 42.4\/75.6\/110\/145.6 (TagTalent 44\/78.4\/114\/150.8) before reductions. Does not affect Couriers.",
         "Does not affect Couriers."
       ],
       "mana": "65",
@@ -64,11 +65,10 @@
         "Axes Radius: 175",
         "Axes Travel Distance: 1500",
         "Axes Spread Distance: 450",
-        "Damage per Axe: 40\/70\/100\/130 (TagTalent 70\/100\/130\/160)",
+        "Damage per Axe: 40\/70\/100\/130",
         "Damage Amplification per Stack: 6%\/8%\/10%\/12% (TagTalent 10%\/12%\/14%\/16%)",
         "Stack Duration: 12",
-        "Causes Wild Axes to have no cooldown, and can be used again once they come back. Increases damage by 30.",
-        "While learning to maneuver in nature alone, the Beastmaster also mastered the use of a pair of tomahawks, adept at cutting down trees as well as adversaries."
+        "Causes Wild Axes to have no cooldown, and can be used again once they come back."
       ],
       "itemBehaviour": [],
       "legacyKey": "W",
@@ -93,8 +93,7 @@
       "params": [
         "Cast Animation: 0.3+0.67",
         "Number of Boars: 1",
-        "Summons Duration: 60",
-        "After befriending the strange beast of his childhood, Beastmaster has learned to call to animals in times of need."
+        "Summons Duration: 60"
       ],
       "itemBehaviour": [],
       "legacyKey": "D",
@@ -128,8 +127,7 @@
         "Cast Animation: 0.3+0.67",
         "Number of Hawks: 1",
         "Summons Duration: 60",
-        "Reduces Hawk cooldown by 15. Hawks gain Dive Bomb.",
-        "After befriending the strange beast of his childhood, Beastmaster has learned to call to animals in times of need."
+        "Reduces Hawk cooldown by 15. Hawks gain Dive Bomb."
       ],
       "itemBehaviour": [],
       "legacyKey": "E",
@@ -152,9 +150,8 @@
       "spellName": "Inner Beast",
       "params": [
         "Radius: 1200",
-        "Attack Speed Bonus: 10\/20\/30\/40 (TagTalent 40\/50\/60\/70)",
-        "Aura Linger Duration: 0.5",
-        "Beastmaster's ability to incite the innate strength of animals was seen in the mauling of the king of Slom."
+        "Attack Speed Bonus: 15\/25\/35\/45 (TagTalent 45\/55\/65\/75)",
+        "Aura Linger Duration: 0.5"
       ],
       "itemBehaviour": [],
       "legacyKey": "B",
@@ -186,7 +183,7 @@
       ],
       "mana": "150\/175\/200",
       "hotKey": "R",
-      "cooldown": "90\/80\/70 (TagTalent 55\/45\/35)",
+      "cooldown": "90\/80\/70 (TagTalent 60\/50\/40)",
       "description": "Beastmaster lets loose a deafening roar that stuns, and shoves open a path to its target. All units in the path of the roar are damaged, while units shoved aside by the roar have their movement and attack speed slowed. Additionally, Beastmaster and his units gain 60% movement speed for 3\/3.5\/4 seconds.",
       "spellName": "Primal Roar",
       "params": [
@@ -204,8 +201,7 @@
         "Move Speed Buff Duration: 3\/3.5\/4",
         "Stun Duration: 3\/3.5\/4",
         "Fully pierces spell immunity on the primary target. Does not affect secondary spell immune enemies. Slow and knockback persist if debuff was placed before spell immunity and when not dispelled.",
-        "Blocked fully only when primary target.",
-        "The Beastmaster has learned to channel his primal instincts into an animalistic roar, causing devastation in the ranks of enemies."
+        "Blocked fully only when primary target."
       ],
       "itemBehaviour": [],
       "legacyKey": "R",
@@ -230,7 +226,7 @@
       "spellName": "Health Aura",
       "params": [
         "Radius: Global",
-        "Health Bonus: 300",
+        "Health Bonus: 350",
         "Aura Linger Duration: 0.5",
         "Illusions bestow and benifit from the aura. Multiple instances of the aura do not stack."
       ],
@@ -266,7 +262,7 @@
       "story": null
     },
     {
-      "audioUrl": null,
+      "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/d\/d3\/Hawk_Dive_Bomb_1.mp3\/revision\/latest?cb=20210626132907",
       "effects": [
         "Ability Target Unit",
         "Affects Enemies \/ Self"
@@ -275,6 +271,7 @@
         "Requires Aghanim's Shard to be unlocked.",
         "Despite the description, Dive Bomb uses a cast time, and not channel time. The reveal modifier is placed on the Hawk as soon as it begins casting, and lasts until the dive ends.",
         "The reveal modifier is placed on the Hawk as soon as it begins casting, and lasts until the dive ends.",
+        "Once the cast begins, the player cannot manually cancel it anymore, since casting Dive Bomb is the only order that can be given to the Hawk.",
         "The hawk dives in an arc for to 0.4 seconds, so the speed varies based on the distance. The speed does not instantly adapt if the distance changes, but rather accelerates or decelerates at a very slow rate.",
         "The speed does not instantly adapt if the distance changes, but rather accelerates or decelerates at a very slow rate.",
         "Uses forced movement to move the Hawk. This means, it can be interrupted by applying other sources of forced movement on it. The dive cannot be interrupted by anything else. It fully ignores all disables.",
@@ -319,12 +316,12 @@
     },
     {
       "talentLvl": "20",
-      "talentLeft": "-35s Primal Roar Cooldown",
-      "talentRight": "+30 Boar Damage"
+      "talentLeft": "-30s Primal Roar Cooldown",
+      "talentRight": "+35 Boar Damage"
     },
     {
       "talentLvl": "15",
-      "talentLeft": "+300 Health Beastmaster Controlled",
+      "talentLeft": "+350 Health Beastmaster Controlled",
       "talentRight": "+3 Mana Regen"
     },
     {

@@ -59,8 +59,7 @@
         "Damage per Second: 15\/30\/45\/60",
         "Move Speed Slow: 20%\/30%\/40%\/50%",
         "Duration: 6",
-        "Slow persists and attempts to deal damage if debuff was placed before spell immunity and when not dispelled.",
-        "An infinitesimal fraction of the power which imprisoned the Ancients."
+        "Slow persists and attempts to deal damage if debuff was placed before spell immunity and when not dispelled."
       ],
       "itemBehaviour": [],
       "legacyKey": "C",
@@ -112,8 +111,7 @@
         "Enemy Max Knockback Distance: 350",
         "Enemy Knockback Duration: 0.3",
         "Magnetic Field now pushes enemies out of the area at cast time, and provides allies in it with +40% Magic Resistance. Slows enemies inside by 20%.",
-        "Fully affects spell immune allies and self. Knockback and slow do not affect spell immune enemies.",
-        "Time and space are of little consequence to one as old as Zet."
+        "Fully affects spell immune allies and self. Knockback and slow do not affect spell immune enemies."
       ],
       "itemBehaviour": [],
       "legacyKey": "F",
@@ -158,8 +156,7 @@
         "Wraith Duration: 45",
         "Second Activation Delay: 3",
         "Causes Spark Wraiths to spawn a new Spark Wraith after impacting an enemy, which then starts its 3 activation period.",
-        "Attempts to deal damage if target turns spell immune before impact.",
-        "Lesser fragments of Zet's original self."
+        "Attempts to deal damage if target turns spell immune before impact."
       ],
       "itemBehaviour": [],
       "legacyKey": "R",
@@ -180,7 +177,7 @@
         "Arc Warden and his clone are represented by an icon with health and mana bars for each on the top left corner of the screen. When a Zet is selected, its icon becomes brighter. When a Zet takes damage, its icon blinks red.",
         "When a Zet is selected, its icon becomes brighter. When a Zet takes damage, its icon blinks red.",
         "The Tempest Double is visually distinguishable from the original Zet for enemies, just like how it is for allies, except for its minimap icon.",
-        "The buffs of a consumed Moon Shard, Aghanim's Blessing, Aghanim's Shard, and Royal Jelly are copied as well. However, other permanent buffs (e.g. Duel, Intelligence Steal) are not. Any Duel victory damage the double gains during its uptime is lost upon death.",
+        "The buffs of a consumed Moon Shard, Aghanim's Blessing and Aghanim's Shard are copied as well. However, other permanent buffs (e.g. Duel, Intelligence Steal) are not. Any Duel victory damage the double gains during its uptime is lost upon death.",
         "However, other permanent buffs (e.g. Duel, Intelligence Steal) are not.",
         "Any Duel victory damage the double gains during its uptime is lost upon death.",
         "The double is a clone and therefore treated exactly like a hero by all abilities, since it is not an illusion.",
@@ -202,7 +199,7 @@
         "Number of Doubles: 1",
         "Duration: 18\/22\/26 (TagTalent 30\/34\/38)",
         "Bounty: 180\/240\/300",
-        "Warped by the power of its peers, Arc Warden becomes what it despises most: disharmony."
+        "Root does not prevent the Tempest Double from being teleported back to Arc Warden."
       ],
       "itemBehaviour": [],
       "legacyKey": "D",
