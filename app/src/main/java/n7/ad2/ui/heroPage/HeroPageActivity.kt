@@ -23,7 +23,7 @@ import n7.ad2.utils.Utils
 class HeroPageActivity : BaseActivity() {
 
     lateinit var binding: ActivityHeroPageBinding
-    val audioExoPlayer: AudioExoPlayer by lazy(LazyThreadSafetyMode.NONE) { AudioExoPlayer(application, lifecycle, ::showDialogError) }
+    val audioExoPlayer: AudioExoPlayer by lazy(LazyThreadSafetyMode.NONE) { AudioExoPlayer(this, lifecycle, ::showDialogError) }
 
     companion object {
         const val HERO_NAME = "HERO_NAME"

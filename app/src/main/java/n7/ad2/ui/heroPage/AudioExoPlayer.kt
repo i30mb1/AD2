@@ -1,6 +1,6 @@
 package n7.ad2.ui.heroPage
 
-import android.app.Application
+import android.content.Context
 import android.net.Uri
 import android.os.Build
 import androidx.annotation.RawRes
@@ -28,7 +28,7 @@ interface Playable {
 }
 
 class AudioExoPlayer(
-    private val application: Application,
+    private val context: Context,
     private val lifecycle: Lifecycle,
     private var errorListener: ((exception: Exception) -> Unit)? = null,
 ) : Player.EventListener, LifecycleObserver {
@@ -58,7 +58,7 @@ class AudioExoPlayer(
     fun playFromAssets(url: String) {
         val dataSpec = DataSpec(Uri.parse(url))
 
-        val assetDataSource = AssetDataSource(application)
+        val assetDataSource = AssetDataSource(context)
         assetDataSource.open(dataSpec)
 
         play(assetDataSource.uri!!)
@@ -89,7 +89,7 @@ class AudioExoPlayer(
     private fun onResume() = if (Build.VERSION.SDK_INT < Build.VERSION_CODES.N) initializePlayer() else Unit
 
     private fun initializePlayer() {
-        exoPlayer = SimpleExoPlayer.Builder(application).build()
+        exoPlayer = SimpleExoPlayer.Builder(context).build()
 
         exoPlayer.addListener(this)
         initAudioFocus()
@@ -131,8 +131,8 @@ class AudioExoPlayer(
     }
 
     private fun buildMediaSource(uri: Uri): ProgressiveMediaSource {
-        val userAgent = Util.getUserAgent(application, application.getString(R.string.app_name))
-        val dataSourceFactory = DefaultDataSourceFactory(application, userAgent)
+        val userAgent = Util.getUserAgent(context, context.getString(R.string.app_name))
+        val dataSourceFactory = DefaultDataSourceFactory(context, userAgent)
 
         return ProgressiveMediaSource.Factory(dataSourceFactory).createMediaSource(uri)
     }
