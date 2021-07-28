@@ -2,6 +2,7 @@
 
 package n7.ad2.ui.heroGuide
 
+import android.annotation.SuppressLint
 import android.content.Context
 import androidx.core.app.NotificationCompat
 import androidx.core.app.NotificationManagerCompat
@@ -9,6 +10,7 @@ import androidx.work.CoroutineWorker
 import androidx.work.ForegroundInfo
 import androidx.work.OneTimeWorkRequest
 import androidx.work.OneTimeWorkRequestBuilder
+import androidx.work.OutOfQuotaPolicy
 import androidx.work.WorkerParameters
 import androidx.work.workDataOf
 import kotlinx.coroutines.coroutineScope
@@ -32,9 +34,12 @@ class HeroGuideWorker(
     companion object {
         private const val HERO_NAME = "HERO_NAME"
         const val RESULT = "RESULT"
+
+        @SuppressLint("UnsafeOptInUsageError")
         fun getRequest(heroName: String): OneTimeWorkRequest {
             val data = workDataOf(HERO_NAME to heroName)
             return OneTimeWorkRequestBuilder<HeroGuideWorker>()
+                .setExpedited(OutOfQuotaPolicy.RUN_AS_NON_EXPEDITED_WORK_REQUEST)
                 .setInputData(data)
                 .build()
         }
