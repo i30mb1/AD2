@@ -3,6 +3,7 @@ package n7.ad2.ui.heroResponse
 import android.view.LayoutInflater
 import android.view.ViewGroup
 import androidx.core.math.MathUtils.clamp
+import androidx.core.view.isVisible
 import androidx.recyclerview.widget.DiffUtil
 import androidx.recyclerview.widget.GridLayoutManager
 import androidx.recyclerview.widget.ListAdapter
@@ -35,6 +36,18 @@ class ResponsesAdapter(
             is ResponseBodyViewHolder -> if (item != null) viewHolder.bind(item as VOResponseBody) else viewHolder.clear()
             is ResponseHeaderViewHolder -> if (item != null) viewHolder.bind(item as VOResponseTitle) else viewHolder.clear()
             else -> throw UnsupportedOperationException("could not bind for $viewHolder")
+        }
+    }
+
+    override fun onBindViewHolder(
+        holder: RecyclerView.ViewHolder,
+        position: Int,
+        payloads: MutableList<Any>,
+    ) {
+        if (payloads.isNullOrEmpty()) {
+            super.onBindViewHolder(holder, position, payloads)
+        } else {
+            (holder as ResponseBodyViewHolder).bind(payloads.last() as Boolean)
         }
     }
 
@@ -71,6 +84,11 @@ class ResponsesAdapter(
         private val binding: ItemResponseBodyBinding,
         private val showDialogResponse: (VOResponseBody) -> Unit,
     ) : RecyclerView.ViewHolder(binding.root) {
+
+        fun bind(isSaved: Boolean) {
+            binding.ivIsSaved.isVisible = isSaved
+            binding.executePendingBindings()
+        }
 
         fun bind(item: VOResponseBody) {
             (binding.rv.layoutManager as GridLayoutManager).spanCount = clamp(item.icons.size, MIN_ICONS_IN_ROW, MAX_ICONS_IN_ROW)
@@ -119,6 +137,12 @@ class ResponsesAdapter(
     private class DiffCallback : DiffUtil.ItemCallback<VOResponse>() {
         override fun areItemsTheSame(oldItem: VOResponse, newItem: VOResponse) = oldItem::class == newItem::class
         override fun areContentsTheSame(oldItem: VOResponse, newItem: VOResponse) = oldItem == newItem
+        override fun getChangePayload(oldItem: VOResponse, newItem: VOResponse): Any? {
+            if (oldItem is VOResponseBody && newItem is VOResponseBody) {
+                if (oldItem.isSavedInMemory != newItem.isSavedInMemory) return newItem.isSavedInMemory
+            }
+            return super.getChangePayload(oldItem, newItem)
+        }
     }
 
 }
