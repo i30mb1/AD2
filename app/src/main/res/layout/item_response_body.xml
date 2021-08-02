@@ -23,12 +23,12 @@
             type="n7.ad2.ui.heroResponse.domain.vo.VOResponseBody" />
     </data>
 
-    <com.google.android.material.card.MaterialCardView
+    <FrameLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:foreground="@drawable/background_ripple"
         android:background="?colorSurface"
-        android:onClick="@{()-> audioExoPlayer.play(item)}"
-        app:cardUseCompatPadding="false">
+        android:onClick="@{()-> audioExoPlayer.play(item)}">
 
         <ProgressBar
             style="@style/Widget.AppCompat.ProgressBar.Horizontal"
@@ -95,5 +95,5 @@
                 android:layout_weight="0" />
         </LinearLayout>
 
-    </com.google.android.material.card.MaterialCardView>
+    </FrameLayout>
 </layout>
