@@ -74,7 +74,7 @@ class ParseHeroes private constructor(
 
     private fun loadResponses(locale: LOCALE, heroList: ArrayList<String>) = launch {
         heroList
-//            .filter { it == "Legion Commander" }
+//            .filter { it == "Dawnbreaker" }
             .forEach { hero ->
                 val root = connectTo("${locale.baseUrl}${hero}/${locale.response}")
                 val allResponsesWithCategories = JSONArray()
@@ -178,12 +178,14 @@ class ParseHeroes private constructor(
         val rootUrl = connectTo(locale.urlAllHeroes)
         val heroes = getHeroes(rootUrl)
 
-        heroes.forEachIndexed { index, _ ->
-            val heroName = getHeroName(heroes[index])
-            val heroDescriptionUrl = getHeroHref(heroes[index])
+        heroes
+            .forEachIndexed { index, _ ->
+                val heroName = getHeroName(heroes[index])
+                val heroDescriptionUrl = getHeroHref(heroes[index])
 
-            loadHero(locale, heroName, "$ASSETS_FOLDER_HEROES/$heroName/${locale.directory}", "$ASSETS_FOLDER_HEROES/$heroName")
-        }
+//            if(heroName == "Dawnbreaker")
+                loadHero(locale, heroName, "$ASSETS_FOLDER_HEROES/$heroName/${locale.directory}", "$ASSETS_FOLDER_HEROES/$heroName")
+            }
     }
 
     private fun loadHeroesFile() = async {
