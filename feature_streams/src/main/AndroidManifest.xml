@@ -10,7 +10,7 @@
         dist:instant="true"
         dist:title="@string/title_feature_streams">
         <dist:delivery>
-            <dist:install-time />
+            <dist:on-demand />
         </dist:delivery>
 
         <dist:fusing dist:include="true" />
