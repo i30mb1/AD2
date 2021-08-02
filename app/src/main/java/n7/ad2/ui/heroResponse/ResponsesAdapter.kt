@@ -106,7 +106,9 @@ class ResponsesAdapter(
             private const val MAX_ICONS_IN_ROW = 3
             private const val MIN_ICONS_IN_ROW = 1
             private const val MAX_VIEWS_RESPONSE_IMAGE = 60
-            private val viewPool = RecyclerView.RecycledViewPool().apply { setMaxRecycledViews(R.layout.item_response_image, MAX_VIEWS_RESPONSE_IMAGE) }
+            private val viewPool = RecyclerView.RecycledViewPool().apply {
+                setMaxRecycledViews(R.layout.item_response_image, MAX_VIEWS_RESPONSE_IMAGE)
+            }
 
             fun from(
                 parent: ViewGroup,
@@ -120,7 +122,10 @@ class ResponsesAdapter(
                     it.audioExoPlayer = audioExoPlayer
                 }
                 val responsesImagesAdapter = ResponsesImagesAdapter(infoPopupWindow)
-                val gridLayoutManager = GridLayoutManager(parent.context, MAX_ICONS_IN_ROW).apply { recycleChildrenOnDetach = true }
+                val gridLayoutManager = GridLayoutManager(parent.context, MAX_ICONS_IN_ROW).apply {
+                    recycleChildrenOnDetach = true
+                    initialPrefetchItemCount = 12
+                }
                 binding.rv.apply {
                     setRecycledViewPool(viewPool)
                     setHasFixedSize(true)
