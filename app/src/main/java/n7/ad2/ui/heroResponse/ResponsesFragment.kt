@@ -6,6 +6,7 @@ import androidx.core.os.bundleOf
 import androidx.fragment.app.Fragment
 import androidx.lifecycle.lifecycleScope
 import androidx.recyclerview.widget.LinearLayoutManager
+import androidx.recyclerview.widget.RecyclerView
 import kotlinx.coroutines.InternalCoroutinesApi
 import kotlinx.coroutines.flow.collect
 import n7.ad2.R
@@ -73,6 +74,7 @@ class ResponsesFragment : Fragment(R.layout.fragment_hero_responses) {
         responsesPagedListAdapter = ResponsesAdapter((requireActivity() as HeroPageActivity).audioExoPlayer, infoPopupWindow) {
             createDialogResponse(it)
         }
+        responsesPagedListAdapter.stateRestorationPolicy = RecyclerView.Adapter.StateRestorationPolicy.PREVENT_WHEN_EMPTY
         binding.rv.apply {
             setHasFixedSize(true)
             layoutManager = LinearLayoutManager(context, LinearLayoutManager.VERTICAL, false)
