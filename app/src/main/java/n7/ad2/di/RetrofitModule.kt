@@ -16,6 +16,9 @@ import javax.inject.Singleton
 @Module
 object RetrofitModule {
 
+    private const val CLIENT_ID = "gp762nuuoqcoxypju8c569th9wz7q5"
+    private const val ACCESS_TOKEN = "6qla87p9en5fcye3aucbb04xrwx4z3"
+
     @Provides
     @Singleton
     fun provideHttpLoggingInterceptor(): HttpLoggingInterceptor = HttpLoggingInterceptor(object : HttpLoggingInterceptor.Logger {
@@ -32,6 +35,13 @@ object RetrofitModule {
         .connectTimeout(10, TimeUnit.SECONDS)
         .writeTimeout(10, TimeUnit.SECONDS)
         .readTimeout(10, TimeUnit.SECONDS)
+        .addInterceptor { chain ->
+            val request = chain.request().newBuilder()
+                .addHeader("client-id", CLIENT_ID)
+                .addHeader("Authorization", "Bearer $ACCESS_TOKEN")
+                .build()
+            return@addInterceptor chain.proceed(request)
+        }
         .addInterceptor(httpLoggingInterceptor)
         .build()
 
@@ -46,7 +56,6 @@ object RetrofitModule {
         .addConverterFactory(MoshiConverterFactory.create(moshi))
         .build()
         .create()
-
 
 
 }
