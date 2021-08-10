@@ -43,7 +43,7 @@ class StickyHeaderDecorator<T : RecyclerView.ViewHolder>(
         super.onDrawOver(c, parent, state)
         val topChild = parent.getChildAt(0) ?: return
         val topChildPosition = parent.getChildAdapterPosition(topChild)
-        if (topChildPosition == RecyclerView.NO_POSITION) return
+        if (topChildPosition == RecyclerView.NO_POSITION) return // https://youtu.be/o8rzzQPOo2U?list=LL&t=3584
 
         val currentHeader = getHeaderViewForItem(topChildPosition) ?: return
         fixLayoutSize(parent, currentHeader)
