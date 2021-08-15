@@ -5,8 +5,8 @@ import android.view.View
 import androidx.core.os.bundleOf
 import androidx.fragment.app.Fragment
 import androidx.lifecycle.Lifecycle
-import androidx.lifecycle.addRepeatingJob
 import androidx.lifecycle.lifecycleScope
+import androidx.lifecycle.repeatOnLifecycle
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.work.WorkInfo
 import androidx.work.WorkManager
@@ -53,8 +53,10 @@ class HeroGuideFragment : Fragment(R.layout.fragment_hero_guide) {
             layoutManager = linearLayoutManager
             addItemDecoration(StickyHeaderDecorator(heroGuideAdapter, this))
         }
-        addRepeatingJob(Lifecycle.State.STARTED) {
-            viewModel.error.collect(::showDialogError)
+        lifecycleScope.launch {
+            lifecycle.repeatOnLifecycle(Lifecycle.State.STARTED) {
+                viewModel.error.collect(::showDialogError)
+            }
         }
         viewModel.loadHeroWithGuides(heroName).observe(viewLifecycleOwner, heroGuideAdapter::submitList)
     }
