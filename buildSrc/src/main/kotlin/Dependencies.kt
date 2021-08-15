@@ -16,10 +16,11 @@ object Versions {
     const val workManager = "2.7.0-alpha05"
     const val moshi = "1.9.2"
     const val room = "2.3.0"
-    const val kotlin = "1.4.30"
+    const val kotlin = "1.5.20"
     const val dagger = "2.31"
     const val lifecycle = "2.4.0-alpha01"
     const val retrofit = "2.7.1"
+    const val coroutines = "1.5.1"
 }
 
 object Lib {
@@ -65,8 +66,8 @@ object Lib {
     const val roomKtx = "androidx.room:room-ktx:${Versions.room}" // kotlin Extensions and Coroutines support for Room
 
     // --- Coroutines ---
-    const val coroutines = "org.jetbrains.kotlinx:kotlinx-coroutines-core:1.4.0"
-    const val coroutinesAndroid = "org.jetbrains.kotlinx:kotlinx-coroutines-android:1.4.0" // for testing coroutines
+    const val coroutines = "org.jetbrains.kotlinx:kotlinx-coroutines-core:${Versions.coroutines}"
+    const val coroutinesAndroid = "org.jetbrains.kotlinx:kotlinx-coroutines-android:${Versions.coroutines}" // for testing coroutines
     const val coroutinesLifecycle = "androidx.lifecycle:lifecycle-runtime-ktx:${Versions.lifecycle}" // lifecycleScope + launchWhenResumed and ets.
     const val coroutinesLivedata = "androidx.lifecycle:lifecycle-livedata-ktx:${Versions.lifecycle}" // liveData (LiveData + coroutines)
     const val coroutinesViewmodel = "androidx.lifecycle:lifecycle-viewmodel-ktx:${Versions.lifecycle}" // viewModelScope + savedStateHandle
