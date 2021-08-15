@@ -4,9 +4,9 @@ import android.app.Application
 import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
-import androidx.lifecycle.ViewModelProvider
 import androidx.lifecycle.viewModelScope
 import dagger.assisted.Assisted
+import dagger.assisted.AssistedFactory
 import dagger.assisted.AssistedInject
 import kotlinx.coroutines.launch
 import n7.ad2.R
@@ -22,21 +22,9 @@ class ItemInfoViewModel @AssistedInject constructor(
     @Assisted private val itemName: String,
 ) : ViewModel() {
 
-    @dagger.assisted.AssistedFactory
-    interface AssistedFactory {
+    @AssistedFactory
+    interface Factory {
         fun create(itemName: String): ItemInfoViewModel
-    }
-
-    companion object {
-        fun provideFactory(
-            assistedFactory: AssistedFactory,
-            itemName: String,
-        ): ViewModelProvider.Factory = object : ViewModelProvider.Factory {
-            @Suppress("UNCHECKED_CAST")
-            override fun <T : ViewModel> create(modelClass: Class<T>): T {
-                return assistedFactory.create(itemName) as T
-            }
-        }
     }
 
     private val _error = MutableLiveData<Throwable?>(null)

@@ -11,6 +11,7 @@ import n7.ad2.ui.heroGuide.HeroGuideWorker
 import n7.ad2.ui.heroInfo.HeroInfoViewModel
 import n7.ad2.ui.heroResponse.ResponsesViewModel
 import n7.ad2.ui.heroes.HeroesViewModel
+import n7.ad2.ui.itemInfo.ItemInfoFragment
 import n7.ad2.ui.itemInfo.ItemInfoViewModel
 import n7.ad2.ui.items.ItemsViewModel
 import n7.ad2.ui.splash.SplashViewModel
@@ -36,13 +37,14 @@ interface ApplicationComponent {
     fun inject(databaseWorker: DatabaseWorker)
     fun inject(mainActivity: MainActivity)
     fun inject(heroGuideWorker: HeroGuideWorker)
+    fun inject(heroGuideWorker: ItemInfoFragment)
 
     val mainViewModel: MainViewModel
     val splashViewModel: SplashViewModel
     val heroesViewModel: HeroesViewModel
     val itemsViewModel: ItemsViewModel
     val responsesViewModel: ResponsesViewModel
-    val itemInfoViewModel: ItemInfoViewModel.AssistedFactory
+    val itemInfoViewModel: ItemInfoViewModel.Factory
     val heroGuideViewModel: HeroGuideViewModel
     val newsViewModel: NewsViewModel
     val heroInfoViewModel: HeroInfoViewModel

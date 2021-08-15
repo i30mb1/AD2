@@ -4,7 +4,6 @@ import android.os.Bundle
 import android.view.View
 import androidx.core.os.bundleOf
 import androidx.fragment.app.Fragment
-import androidx.fragment.app.viewModels
 import n7.ad2.R
 import n7.ad2.databinding.FragmentItemInfoBinding
 import n7.ad2.di.injector
@@ -12,6 +11,8 @@ import n7.ad2.ui.heroInfo.InfoPopupWindow
 import n7.ad2.ui.heroPage.AudioExoPlayer
 import n7.ad2.ui.heroPage.showDialogError
 import n7.ad2.utils.StickyHeaderDecorator
+import n7.ad2.utils.viewModelWithParam
+import javax.inject.Inject
 
 class ItemInfoFragment : Fragment(R.layout.fragment_item_info) {
 
@@ -20,7 +21,11 @@ class ItemInfoFragment : Fragment(R.layout.fragment_item_info) {
     private val audioExoPlayer: AudioExoPlayer by lazy(LazyThreadSafetyMode.NONE) { AudioExoPlayer(requireContext(), lifecycle, ::showDialogError) }
     private val infoPopupWindow: InfoPopupWindow by lazy(LazyThreadSafetyMode.NONE) { InfoPopupWindow(requireContext(), lifecycle) }
     private val itemName: String by lazy(LazyThreadSafetyMode.NONE) { requireArguments().getString(ITEM_NAME)!! }
-    private val viewModel: ItemInfoViewModel by viewModels { ItemInfoViewModel.provideFactory(injector.itemInfoViewModel, itemName) }
+    @Inject
+    lateinit var itemInfoFactory: ItemInfoViewModel.Factory
+    private val viewModel: ItemInfoViewModel by viewModelWithParam {
+        itemInfoFactory.create(itemName)
+    }
 
     companion object {
         private const val ITEM_NAME = "ITEM_NAME"
@@ -31,6 +36,7 @@ class ItemInfoFragment : Fragment(R.layout.fragment_item_info) {
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
+        injector.inject(this)
         _binding = FragmentItemInfoBinding.bind(view)
 
         viewModel.error.observe(viewLifecycleOwner) { if (it != null) showDialogError(it) }
