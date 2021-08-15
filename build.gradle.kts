@@ -9,8 +9,8 @@ subprojects {
             compileSdkVersion(Apps.compileSdk)
 
             defaultConfig {
-                minSdkVersion(Apps.minSdk)
-                targetSdkVersion(Apps.targetSdk)
+                minSdk = Apps.minSdkVersion
+                targetSdk = Apps.targetSdkVersion
             }
 
             compileOptions {
@@ -30,7 +30,7 @@ subprojects {
 
 buildscript {
     repositories {
-        jcenter()
+        mavenCentral()
         google()
     }
 

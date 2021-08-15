@@ -44,7 +44,7 @@ android {
         }
     }
 
-    dynamicFeatures = mutableSetOf(":feature_streams")
+    setDynamicFeatures(mutableSetOf(":feature_streams"))
 
     testOptions {
         unitTests.apply {
