@@ -11,6 +11,7 @@ import androidx.lifecycle.OnLifecycleEvent
 import com.google.android.exoplayer2.C
 import com.google.android.exoplayer2.ExoPlaybackException
 import com.google.android.exoplayer2.ExoPlayer
+import com.google.android.exoplayer2.MediaItem
 import com.google.android.exoplayer2.Player
 import com.google.android.exoplayer2.SimpleExoPlayer
 import com.google.android.exoplayer2.audio.AudioAttributes
@@ -31,7 +32,7 @@ class AudioExoPlayer(
     private val context: Context,
     private val lifecycle: Lifecycle,
     private var errorListener: ((exception: Exception) -> Unit)? = null,
-) : Player.EventListener, LifecycleObserver {
+) : Player.Listener, LifecycleObserver {
 
     private lateinit var exoPlayer: SimpleExoPlayer
     private var isPlaying = ObservableBoolean(false)
@@ -78,7 +79,8 @@ class AudioExoPlayer(
         isPlaying.set(true)
         val source = buildMediaSource(uri)
 
-        exoPlayer.prepare(source)
+        exoPlayer.setMediaSource(source)
+        exoPlayer.prepare()
         exoPlayer.playWhenReady = true
     }
 
@@ -133,8 +135,8 @@ class AudioExoPlayer(
     private fun buildMediaSource(uri: Uri): ProgressiveMediaSource {
         val userAgent = Util.getUserAgent(context, context.getString(R.string.app_name))
         val dataSourceFactory = DefaultDataSourceFactory(context, userAgent)
-
-        return ProgressiveMediaSource.Factory(dataSourceFactory).createMediaSource(uri)
+        val mediaItem = MediaItem.fromUri(uri)
+        return ProgressiveMediaSource.Factory(dataSourceFactory).createMediaSource(mediaItem)
     }
 
 }
