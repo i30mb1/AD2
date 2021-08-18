@@ -17,6 +17,8 @@ jobs:
       with:
         java-version: '8'
         distribution: 'adopt'
-
+        
+    - name: Hello World
+      run: java -cp java Hello
     - name: Build with Gradle
       run: gradle build
