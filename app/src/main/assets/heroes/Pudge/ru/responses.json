@@ -1406,9 +1406,16 @@
         "title": "Фоновый шум"
       },
       {
-        "audioUrl": "",
-        "isArcane": true,
-        "title": "Фоновый шум"
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_ru_gamepedia\/images\/2\/29\/Pud_spawn_09_ru.mp3\/revision\/latest?cb=20170413110318",
+        "title": "Так много мяса, так мало времени."
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_ru_gamepedia\/images\/4\/4d\/Pud_ability_rot_02_ru.mp3\/revision\/latest?cb=20170413104402",
+        "title": "Что протухло?"
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_ru_gamepedia\/images\/0\/0d\/Pud_level_10_ru.mp3\/revision\/latest?cb=20170413105509",
+        "title": "Ножи всё острее и острее!"
       }
     ],
     "category": "Разное"

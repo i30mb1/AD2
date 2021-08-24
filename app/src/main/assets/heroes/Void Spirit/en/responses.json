@@ -2010,7 +2010,10 @@
       },
       {
         "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/b\/bc\/Vo_void_spirit_voidspir_rival_200.mp3\/revision\/latest?cb=20191202231851",
-        "title": "Too ruled by fear and emotion to choose the winning side."
+        "title": "Too ruled by fear and emotion to choose the winning side.",
+        "icons": [
+          "heroes\/Dawnbreaker\/minimap.png"
+        ]
       },
       {
         "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/5\/5d\/Vo_void_spirit_voidspir_rival_202.mp3\/revision\/latest?cb=20191202231853",

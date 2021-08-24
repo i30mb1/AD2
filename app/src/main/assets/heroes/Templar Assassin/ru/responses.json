@@ -801,10 +801,9 @@
       },
       {
         "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/2\/28\/Vo_templar_assassin_temp_ally_17.mp3\/revision\/latest?cb=20191211040125",
-        "title": "You are not the first of the ascended to cross my path. Truthfully though, you pale in comparison.",
+        "title": "You are not the first of the to cross my path. Truthfully though, you pale in comparison.",
         "icons": [
-          "heroes\/Grimstroke\/minimap.png",
-          "items\/Ascended Ones\/full.webp"
+          "heroes\/Grimstroke\/minimap.png"
         ]
       },
       {
@@ -823,10 +822,9 @@
       },
       {
         "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/3\/38\/Vo_templar_assassin_temp_ally_20.mp3\/revision\/latest?cb=20191211040129",
-        "title": "Yes, I see you, Mortimer, but now is no time to play.",
+        "title": "Yes, I see you, , but now is no time to play.",
         "icons": [
-          "heroes\/Snapfire\/minimap.png",
-          "items\/Mortimer\/full.webp"
+          "heroes\/Snapfire\/minimap.png"
         ]
       },
       {
@@ -1406,7 +1404,7 @@
       },
       {
         "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/c\/ce\/Vo_templar_assassin_temp_void_07.mp3\/revision\/latest?cb=20191211040158",
-        "title": "The fall of an Ancient will set in motion the rise of a threat not even the Hidden Temple can ignore."
+        "title": "The fall of an Ancient will set in motion the rise of a threat not even the can ignore."
       },
       {
         "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/c\/c5\/Vo_templar_assassin_temp_void_09.mp3\/revision\/latest?cb=20191211040200",

@@ -134,7 +134,7 @@
       },
       {
         "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/b\/bf\/Vo_void_spirit_voidspir_spawn_17_03.mp3\/revision\/latest?cb=20191202231926",
-        "title": "I step from my Hidden Temple."
+        "title": "I step from my ."
       },
       {
         "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/8\/8d\/Vo_void_spirit_voidspir_spawn_18.mp3\/revision\/latest?cb=20191202231927",
@@ -1449,10 +1449,9 @@
       },
       {
         "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/1\/1c\/Vo_void_spirit_voidspir_rival_46.mp3\/revision\/latest?cb=20191202231714",
-        "title": "This isn't your Nothl playground.",
+        "title": "This isn't your playground.",
         "icons": [
-          "heroes\/Huskar\/minimap.png",
-          "items\/Nothl\/full.webp"
+          "heroes\/Huskar\/minimap.png"
         ]
       },
       {
@@ -1548,10 +1547,9 @@
       },
       {
         "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/c\/c3\/Vo_void_spirit_voidspir_rival_61.mp3\/revision\/latest?cb=20191202231731",
-        "title": "Your goddess doesn't care to help you, child. Not that she could.",
+        "title": "Your doesn't care to help you, child. Not that she could.",
         "icons": [
-          "heroes\/Luna\/minimap.png",
-          "items\/Selemene\/full.webp"
+          "heroes\/Luna\/minimap.png"
         ]
       },
       {
@@ -1640,10 +1638,9 @@
       },
       {
         "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/d\/d6\/Vo_void_spirit_voidspir_rival_76.mp3\/revision\/latest?cb=20191202231747",
-        "title": "Would you like to know what the Omniscience is, Purist? Hm hm hm hm.",
+        "title": "Would you like to know what the is, Purist? Hm hm hm hm.",
         "icons": [
-          "heroes\/Omniknight\/minimap.png",
-          "items\/Omniscience\/full.webp"
+          "heroes\/Omniknight\/minimap.png"
         ]
       },
       {
@@ -2197,10 +2194,9 @@
       },
       {
         "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/f\/f8\/Vo_void_spirit_voidspir_ally_09.mp3\/revision\/latest?cb=20191202230422",
-        "title": "Place our cause before your gods of gluttony, Bloodseeker.",
+        "title": "Place our cause before your , Bloodseeker.",
         "icons": [
-          "heroes\/Bloodseeker\/minimap.png",
-          "items\/Flayed Twins\/full.webp"
+          "heroes\/Bloodseeker\/minimap.png"
         ]
       },
       {
@@ -2247,10 +2243,9 @@
       },
       {
         "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/a\/ab\/Vo_void_spirit_voidspir_ally_16.mp3\/revision\/latest?cb=20191202230429",
-        "title": "Why do you seek the Shadowgate Amulet, Mireska? I expect the toll of its use will not agree with you.",
+        "title": "Why do you seek the , Mireska? I expect the toll of its use will not agree with you.",
         "icons": [
-          "heroes\/Dark Willow\/minimap.png",
-          "items\/Shadowgate Amulet\/full.webp"
+          "heroes\/Dark Willow\/minimap.png"
         ]
       },
       {
@@ -2339,10 +2334,9 @@
       },
       {
         "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/8\/85\/Vo_void_spirit_voidspir_ally_29.mp3\/revision\/latest?cb=20191202230443",
-        "title": "I'm impressed that you've not only heard of the Korumite, but you even remember some incantations.",
+        "title": "I'm impressed that you've not only heard of the , but you even remember some incantations.",
         "icons": [
-          "heroes\/Invoker\/minimap.png",
-          "items\/Korumite\/full.webp"
+          "heroes\/Invoker\/minimap.png"
         ]
       },
       {
@@ -2459,10 +2453,9 @@
       },
       {
         "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/3\/30\/Vo_void_spirit_voidspir_ally_45.mp3\/revision\/latest?cb=20191202230503",
-        "title": "Amusing that they call you an outlander...",
+        "title": "Amusing that they call you an ...",
         "icons": [
-          "heroes\/Snapfire\/minimap.png",
-          "items\/Outlands\/full.webp"
+          "heroes\/Snapfire\/minimap.png"
         ]
       },
       {
@@ -2481,10 +2474,9 @@
       },
       {
         "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/a\/a1\/Vo_void_spirit_voidspir_ally_48.mp3\/revision\/latest?cb=20191202230506",
-        "title": "I make no apologies for allowing Thunderkeg to stumble upon that forbidden spell.",
+        "title": "I make no apologies for allowing to stumble upon that forbidden spell.",
         "icons": [
-          "heroes\/Storm Spirit\/minimap.png",
-          "items\/Thunderkeg\/full.webp"
+          "heroes\/Storm Spirit\/minimap.png"
         ]
       },
       {

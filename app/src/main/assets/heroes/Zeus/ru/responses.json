@@ -910,20 +910,18 @@
       },
       {
         "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/d\/de\/Vo_zuus_zeus_darkwillow_rival_01_02.mp3\/revision\/latest?cb=20200424161539",
-        "title": "Even the fae must bow!",
+        "title": "Even the must bow!",
         "icons": [
-          "heroes\/Dark Willow\/minimap.png",
-          "items\/Fae\/full.webp"
+          "heroes\/Dark Willow\/minimap.png"
         ]
       },
       {
         "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/3\/31\/Vo_zuus_zeus_arc_darkwillow_rival_01_02.mp3\/revision\/latest?cb=20200424161329",
         "isArcane": true,
         "icons": [
-          "heroes\/Dark Willow\/minimap.png",
-          "items\/Fae\/full.webp"
+          "heroes\/Dark Willow\/minimap.png"
         ],
-        "title": "Even the fae must bow!"
+        "title": "Even the must bow!"
       },
       {
         "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/3\/3c\/Vo_zuus_zeus_darkwillow_rival_02.mp3\/revision\/latest?cb=20200424161541",
