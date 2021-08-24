@@ -244,7 +244,7 @@ class ParseHeroes private constructor(
 
     private fun loadHeroImageMinimap(root: Document, directory: String) {
         try {
-            val imageUrl = root.getElementsByTag("img")[4].attr("src")
+            val imageUrl = root.getElementsByTag("img")[6].attr("data-src")
             saveImageInDirectory(imageUrl, directory, "minimap.png")
             println("image minimap saved")
         } catch (e: Exception) {
@@ -358,14 +358,7 @@ class ParseHeroes private constructor(
                     val spellName = it.getElementsByTag("div")[3].childNode(0).toString().trim()
                     put("spellName", spellName)
 
-                    if (loadHeroSpellImage) {
-                        try {
-                            val spellImage = it.getElementsByAttributeValue("class", "image")[0].child(0).attr("src")
-                            saveImageInDirectory(spellImage, HEROES_SPELL_FOLDER + File.separator, "$spellName.png")
-                        } catch (e: Exception) {
-                            println("cannot download hero spell $spellName")
-                        }
-                    }
+                    if (loadHeroSpellImage) loadSpellImage(it, spellName)
 
                     var audioUrl = it.getElementsByTag("source").attr("src")
                     if (audioUrl.isNullOrEmpty()) audioUrl = null
@@ -450,6 +443,15 @@ class ParseHeroes private constructor(
                 }
             }
             put("abilities", this)
+        }
+    }
+
+    private fun loadSpellImage(it: Element, spellName: String) {
+        try {
+            val spellImage = it.getElementsByAttributeValue("class", "image")[0].attr("href")
+            saveImageInDirectory(spellImage, HEROES_SPELL_FOLDER + File.separator, "$spellName.png")
+        } catch (e: Exception) {
+            println("cannot download hero spell $spellName")
         }
     }
 
