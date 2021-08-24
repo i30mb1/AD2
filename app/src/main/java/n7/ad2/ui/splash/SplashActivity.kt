@@ -9,7 +9,6 @@ import androidx.fragment.app.FragmentActivity
 import androidx.lifecycle.lifecycleScope
 import androidx.preference.PreferenceManager
 import androidx.transition.TransitionManager
-import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.delay
 import kotlinx.coroutines.launch
 import n7.ad2.R
@@ -32,8 +31,8 @@ class SplashActivity : FragmentActivity() {
     private val viewModel: SplashViewModel by viewModel { injector.splashViewModel }
 
     override fun onCreate(savedInstanceState: Bundle?) {
-        lifecycleScope.launch(Dispatchers.Main) {
-            if(!viewModel.shouldWeShowSplashScreen()) finishSplashActivityAndStartMainActivity()
+        lifecycleScope.launch {
+            if (!viewModel.shouldWeShowSplashScreen()) finishSplashActivityAndStartMainActivity()
         }
         setMySplashTheme()
         super.onCreate(savedInstanceState)
