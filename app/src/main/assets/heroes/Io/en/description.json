@@ -50,7 +50,7 @@
         "Forced Movement cancels the pull as well, but only after the movement ends, and not upon getting applied.",
         "Taunts, leashes, and silences do not interrupt the pulling.",
         "If the distance between Io and the target gets greater than 2150 during the pull, the pull ends and the Tether breaks.",
-        "If the distance between Io and the target gets greater than 900, the Tether breaks. When the distance between Io and the tethered target gets greater than 700, the link's visual appearance changes.",
+        "If the distance between Io and the target gets greater than 1000, the Tether breaks. When the distance between Io and the tethered target gets greater than 700, the link's visual appearance changes.",
         "When the distance between Io and the tethered target gets greater than 700, the link's visual appearance changes.",
         "Tether has no set duration. It breaks only when exceeding the break distances, when Io or the target dies, when affected by an allied Dismember, or when using the Break Tether sub-ability.",
         "The movement speed bonus is only applied to the tethered ally, while Io copies the target ally's movement speed. Sets Io's base movement speed equal to the base speed of the target and any speed bonuses it has, flat and percentage. If the target gets slowed, Io's movement speed does not copy the movement speed loss caused by the slow. However, Io can be slowed directly by movement speed slowing effects, and cannot have its movement speed increased by other sources. Does not allow Io to bypass the maximum movement speed limit if the tethered ally exceeds it.",
@@ -81,10 +81,10 @@
       "params": [
         "Cast Animation: 0+0",
         "Cast Range: 1600",
-        "Tether Break Distance: 900",
+        "Tether Break Distance: 1000",
         "Tether Pull Distance: 700",
         "Tether Break Distance During Pull: 2150",
-        "Heal\/Restore Transfer: 60%\/80%\/100%\/120%",
+        "Heal\/Restore Transfer: 70%\/90%\/110%\/130%",
         "Target Move Speed Bonus: 6%\/8%\/10%\/12% (TagTalent 16%\/18%\/20%\/22%)",
         "Enemy Move Speed Slow: 15%\/25%\/35%\/45%",
         "Enemy Attack Speed Slow: 15\/25\/35\/45",
@@ -229,8 +229,8 @@
         "The amplification affects only spell damage Io and the tethered ally deal that is not flagged as HP removal. Attack damage is not amplified.",
         "Io does not need to be already tethered to the target transfer the Overcharge. Tethering afterwards transfers it as well. The Overcharge on allies does not show a duration, and always appears like a permanent buff.",
         "The Overcharge on allies does not show a duration, and always appears like a permanent buff.",
-        "Can regenerate up to 4%\/4.8%\/5.6%\/6.4% of Io's max health over the duration. Can restore up to 4%\/4.8%\/5.6%\/6.4% of the target's max health, plus 2.4%\/3.84%\/5.6%\/7.68% of Io's max health on the tethered ally.",
-        "Can restore up to 4%\/4.8%\/5.6%\/6.4% of the target's max health, plus 2.4%\/3.84%\/5.6%\/7.68% of Io's max health on the tethered ally."
+        "Can regenerate up to 4%\/4.8%\/5.6%\/6.4% of Io's max health over the duration. Can restore up to 4%\/4.8%\/5.6%\/6.4% of the target's max health, plus 2.8%\/4.32%\/6.16%\/8.32% of Io's max health on the tethered ally.",
+        "Can restore up to 4%\/4.8%\/5.6%\/6.4% of the target's max health, plus 2.8%\/4.32%\/6.16%\/8.32% of Io's max health on the tethered ally."
       ],
       "mana": "40\/60\/80\/100",
       "hotKey": "E",

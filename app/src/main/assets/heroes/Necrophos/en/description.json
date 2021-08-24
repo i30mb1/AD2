@@ -3,8 +3,6 @@
     {
       "notes": [
         "The strength talent effectively grants Necrophos 160 health and 0.8 health regeneration.",
-        "This attack damage talent is added as raw attack damage. Does not benefit illusions and is not affected by most percentage-based damage increasing or reducing effects.",
-        "Does not benefit illusions and is not affected by most percentage-based damage increasing or reducing effects.",
         "The magic resistance talent stacks multiplicatively with other sources of magic resistance. Increases Necrophos's magic resistance to 36.25%.",
         "Increases Necrophos's magic resistance to 36.25%."
       ],
@@ -28,7 +26,7 @@
         {
           "talentLvl": "10",
           "talentLeft": "+8 Strength",
-          "talentRight": "+25 Damage"
+          "talentRight": "+100 Reaper's Scythe Castt Range"
         }
       ]
     },
@@ -54,8 +52,8 @@
       "params": [
         "Cast Animation: 0+0.77",
         "Search Radius: 500",
-        "Damage: 100\/150\/200\/250",
-        "Heal: 60\/80\/100\/120 (TagTalent 92\/112\/132\/152)",
+        "Damage: 100\/160\/220\/280",
+        "Heal: 60\/85\/110\/135 (TagTalent 92\/117\/142\/167)",
         "Grants a new ability: Death Seeker.",
         "Does not target spell immune enemies. Already launched projectiles attempt to damage. Fully affects spell immune allies."
       ],
@@ -74,9 +72,9 @@
         "Turns Necrophos ethereal, disarming him, rendering him attack immune, and granting 100% physical damage resistance.",
         "Reduces Necrophos' total magic resistance to -5%.",
         "The magic resistance reduction does not stack with other ethereal effects, the one with higher value takes priority.",
-        "Applies heal amplification, health regen amplification, mana restore amplification, and mana regen amplification, but not lifesteal amplification or spell lifesteal amplification. Effectively causes Death Pulse to heal Necrophos for 105\/140\/175\/210 (TagTalent 161\/196\/231\/266) health per cast. Effectively increases the health and mana regeneration bonus from Heartstopper Aura per stack to 7\/8.75\/10.5\/12.25.",
-        "Effectively causes Death Pulse to heal Necrophos for 105\/140\/175\/210 (TagTalent 161\/196\/231\/266) health per cast.",
-        "Effectively increases the health and mana regeneration bonus from Heartstopper Aura per stack to 7\/8.75\/10.5\/12.25.",
+        "Applies heal amplification, health regen amplification, mana restore amplification, and mana regen amplification, but not lifesteal amplification or spell lifesteal amplification. Effectively causes Death Pulse to heal Necrophos for 60.000000000101\/85.000000000143\/110.00000000018\/135.00000000023 (TagTalent 92.000000000154\/117.0000000002\/142.00000000024\/167.00000000028) health per cast. Effectively increases the health and mana regeneration bonus from Heartstopper Aura per stack to 4.0000000000067\/5.0000000000084\/6.0000000000101\/7.0000000000117.",
+        "Effectively causes Death Pulse to heal Necrophos for 60.000000000101\/85.000000000143\/110.00000000018\/135.00000000023 (TagTalent 92.000000000154\/117.0000000002\/142.00000000024\/167.00000000028) health per cast.",
+        "Effectively increases the health and mana regeneration bonus from Heartstopper Aura per stack to 4.0000000000067\/5.0000000000084\/6.0000000000101\/7.0000000000117.",
         "The slow is provided by an aura. Its debuff lingers for 0.5 seconds."
       ],
       "mana": "50",
@@ -88,7 +86,7 @@
         "Cast Animation: 0+0",
         "Slow Radius: 750",
         "Enemy Move Speed Slow: 12%\/16%\/20%\/24% (TagTalent 36%\/40%\/44%\/48%)",
-        "Self Restoration Amplification: 75%",
+        "Self Restoration Amplification: 45%\/55%\/65%\/75%",
         "Self Magic Resistance Reduction: 40%",
         "Aura Linger Duration: 0.5",
         "Duration: 3\/3.5\/4\/4.5",
@@ -159,10 +157,10 @@
         "Cannot be cast on self.",
         "The projectile travels at a speed of 900.",
         "Death Seeker first applies its debuff, then releases the Death Pulse.",
-        "Turns the target ethereal, disarming them, rendering them attack immune, and granting 100% physical damage resistance. The magic resistance reduction does not stack with other ethereal effects, the one with higher value takes priority. Reduces most enemy heroes' total magic resistance to 6.25%. The Death Pulse effectively deals 125\/187.5\/250\/312.5 damage against the targeted enemy.",
+        "Turns the target ethereal, disarming them, rendering them attack immune, and granting 100% physical damage resistance. The magic resistance reduction does not stack with other ethereal effects, the one with higher value takes priority. Reduces most enemy heroes' total magic resistance to 6.25%. The Death Pulse effectively deals 125\/200\/275\/350 damage against the targeted enemy.",
         "The magic resistance reduction does not stack with other ethereal effects, the one with higher value takes priority.",
         "Reduces most enemy heroes' total magic resistance to 6.25%.",
-        "The Death Pulse effectively deals 125\/187.5\/250\/312.5 damage against the targeted enemy.",
+        "The Death Pulse effectively deals 125\/200\/275\/350 damage against the targeted enemy.",
         "The released Death Pulse is based on its current level. Death Pulse's notes fully apply. If Death Pulse is not learned, no projectile is released on cast, wasting the mana and cooldown. If the target is invulnerable or hidden on impact, the Death Pulse is not released.",
         "If Death Pulse is not learned, no projectile is released on cast, wasting the mana and cooldown.",
         "If the target is invulnerable or hidden on impact, the Death Pulse is not released."
@@ -208,7 +206,7 @@
       "spellName": "Reaper's Scythe",
       "params": [
         "Cast Animation: 0.45+1.5",
-        "Cast Range: 600",
+        "Cast Range: 600 (TagTalent 700)",
         "Damage per Missing Health: 0.7\/0.8\/0.9",
         "Respawn Time Increase: 15\/25\/35",
         "Stun Duration: 1.5",
@@ -220,7 +218,7 @@
     }
   ],
   "mainAttributes": {
-    "attrStrengthInc": 2.6,
+    "attrStrengthInc": 2.3,
     "attrStrength": 18.0,
     "attrIntelligence": 21.0,
     "attrIntelligenceInc": 2.7,
@@ -248,7 +246,7 @@
     {
       "talentLvl": "10",
       "talentLeft": "+8 Strength",
-      "talentRight": "+25 Damage"
+      "talentRight": "+100 Reaper's Scythe Castt Range"
     }
   ]
 }

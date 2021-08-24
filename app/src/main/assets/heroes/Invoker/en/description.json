@@ -5,7 +5,7 @@
       "talents": [
         {
           "talentLvl": "25",
-          "talentLeft": "+2 Forged Spirit Armor Reduction",
+          "talentLeft": "2.5x Quas\/ Wex\/ Exort passive effects",
           "talentRight": "Radial Deafening Blast"
         },
         {
@@ -16,7 +16,7 @@
         {
           "talentLvl": "15",
           "talentLeft": "-8s Cold Snap Cooldown",
-          "talentRight": "+60 DPS Ice Wall"
+          "talentRight": "+1 Forged Spirit Armor Reduction"
         },
         {
           "talentLvl": "10",
@@ -36,12 +36,12 @@
         "Quas can be leveled 7 times, from level 1\/3\/5\/7\/9\/11\/13 on, respectively.",
         "Invoker can only have up to 3 instances up at any time. The orbs floating above Invoker are visible to everyone.",
         "If he already has 3 instances, the oldest instance is replaced. The order of instances can be seen in the HUD as status buff icons, the oldest one being on the left.",
-        "Can regenerate up to 60\/120\/180\/240\/300\/360\/420 health per Quas instance in one minute.",
+        "Can regenerate up to 60\/120\/180\/240\/300\/360\/420 (TagTalent 150\/300\/450\/600\/750\/900\/1050) health per Quas instance in one minute.",
         "The passive strength bonus effectively grants Invoker 40\/80\/120\/160\/200\/240\/280 health and 0.2\/0.4\/0.6\/0.8\/1\/1.2\/1.4 health regeneration.",
-        "This is how much health regeneration Invoker gains from 1, 2 and 3 Quas instances: 1 Quas Instance: 1\/2\/3\/4\/5\/6\/7 health regeneration. 2 Quas Instance: 2\/4\/6\/8\/10\/12\/14 health regeneration. 3 Quas Instance: 3\/6\/9\/12\/15\/18\/21 health regeneration.",
-        "1 Quas Instance: 1\/2\/3\/4\/5\/6\/7 health regeneration.",
-        "2 Quas Instance: 2\/4\/6\/8\/10\/12\/14 health regeneration.",
-        "3 Quas Instance: 3\/6\/9\/12\/15\/18\/21 health regeneration.",
+        "This is how much health regeneration Invoker gains from 1, 2 and 3 Quas instances: 1 Quas Instance: 1\/2\/3\/4\/5\/6\/7 (TagTalent 2.5\/5\/7.5\/10\/12.5\/15\/17.5) health regeneration. 2 Quas Instance: 2\/4\/6\/8\/10\/12\/14 (TagTalent 5\/10\/15\/20\/25\/30\/35) health regeneration. 3 Quas Instance: 3\/6\/9\/12\/15\/18\/21 (TagTalent 7.5\/15\/22.5\/30\/37.5\/45\/52.5) health regeneration.",
+        "1 Quas Instance: 1\/2\/3\/4\/5\/6\/7 (TagTalent 2.5\/5\/7.5\/10\/12.5\/15\/17.5) health regeneration.",
+        "2 Quas Instance: 2\/4\/6\/8\/10\/12\/14 (TagTalent 5\/10\/15\/20\/25\/30\/35) health regeneration.",
+        "3 Quas Instance: 3\/6\/9\/12\/15\/18\/21 (TagTalent 7.5\/15\/22.5\/30\/37.5\/45\/52.5) health regeneration.",
         ""
       ],
       "mana": null,
@@ -52,7 +52,7 @@
       "params": [
         "Cast Animation: 0+0",
         "Instances of Quas per Cast: 1",
-        "Health Regen Bonus per Quas Instance: 1\/2\/3\/4\/5\/6\/7",
+        "Health Regen Bonus per Quas Instance: 1\/2\/3\/4\/5\/6\/7 (TagTalent 2.5\/5\/7.5\/10\/12.5\/15\/17.5)",
         "Passive Strength Bonus: 2\/4\/6\/8\/10\/12\/14",
         "Illusions copy the currently active reagents and benefit from the regen bonus."
       ],
@@ -72,10 +72,10 @@
         "Invoker can only have up to 3 instances up at any time. The orbs floating above Invoker are visible to everyone.",
         "If he already has 3 instances, the oldest instance is replaced. The order of instances can be seen in the HUD as status buff icons, the oldest one being on the left.",
         "The passive agility bonus effectively grants Invoker 0.33\/0.67\/1\/1.33\/1.67\/2\/2.33 armor and 2\/4\/6\/8\/10\/12\/14 attack speed.",
-        "1 Wex Instance: 1\/2\/3\/4\/5\/6\/7 attack speed and 1%\/2%\/3%\/4%\/5%\/6%\/7% movement speed. 2 Wex Instance: 2\/4\/6\/8\/10\/12\/14 attack speed and 2%\/4%\/6%\/8%\/10%\/12%\/14% movement speed. 3 Wex Instance: 3\/6\/9\/12\/15\/18\/21 attack speed and 3%\/6%\/9%\/12%\/15%\/18%\/21% movement speed.",
-        "1 Wex Instance: 1\/2\/3\/4\/5\/6\/7 attack speed and 1%\/2%\/3%\/4%\/5%\/6%\/7% movement speed.",
-        "2 Wex Instance: 2\/4\/6\/8\/10\/12\/14 attack speed and 2%\/4%\/6%\/8%\/10%\/12%\/14% movement speed.",
-        "3 Wex Instance: 3\/6\/9\/12\/15\/18\/21 attack speed and 3%\/6%\/9%\/12%\/15%\/18%\/21% movement speed.",
+        "This is how much movement and attack speed Invoker gains from 1, 2 and 3 Wex instances: 1 Wex Instance: 1%\/2%\/3%\/4%\/5%\/6%\/7% (TagTalent 0.025\/0.05\/0.075\/0.1\/0.125\/0.15\/0.175) movement speed and 1\/2\/3\/4\/5\/6\/7 (TagTalent 2.5\/5\/7.5\/10\/12.5\/15\/17.5) attack speed. 2 Wex Instance: 2%\/4%\/6%\/8%\/10%\/12%\/14% (TagTalent 0.05\/0.1\/0.15\/0.2\/0.25\/0.3\/0.35) movement speed and 2\/4\/6\/8\/10\/12\/14 (TagTalent 5\/10\/15\/20\/25\/30\/35) attack speed. 3 Wex Instance: 3%\/6%\/9%\/12%\/15%\/18%\/21% (TagTalent 0.075\/0.15\/0.225\/0.3\/0.375\/0.45\/0.525) movement speed and 3\/6\/9\/12\/15\/18\/21 (TagTalent 7.5\/15\/22.5\/30\/37.5\/45\/52.5) attack speed.",
+        "1 Wex Instance: 1%\/2%\/3%\/4%\/5%\/6%\/7% (TagTalent 0.025\/0.05\/0.075\/0.1\/0.125\/0.15\/0.175) movement speed and 1\/2\/3\/4\/5\/6\/7 (TagTalent 2.5\/5\/7.5\/10\/12.5\/15\/17.5) attack speed.",
+        "2 Wex Instance: 2%\/4%\/6%\/8%\/10%\/12%\/14% (TagTalent 0.05\/0.1\/0.15\/0.2\/0.25\/0.3\/0.35) movement speed and 2\/4\/6\/8\/10\/12\/14 (TagTalent 5\/10\/15\/20\/25\/30\/35) attack speed.",
+        "3 Wex Instance: 3%\/6%\/9%\/12%\/15%\/18%\/21% (TagTalent 0.075\/0.15\/0.225\/0.3\/0.375\/0.45\/0.525) movement speed and 3\/6\/9\/12\/15\/18\/21 (TagTalent 7.5\/15\/22.5\/30\/37.5\/45\/52.5) attack speed.",
         ""
       ],
       "mana": null,
@@ -86,8 +86,8 @@
       "params": [
         "Cast Animation: 0+0",
         "Instances of Wex per Cast: 1",
-        "Attack Speed Bonus per Wex Instance: 1\/2\/3\/4\/5\/6\/7",
-        "Move Speed Bonus per Wex Instance: 1%\/2%\/3%\/4%\/5%\/6%\/7%",
+        "Attack Speed Bonus per Wex Instance: 1\/2\/3\/4\/5\/6\/7 (TagTalent 2.5\/5\/7.5\/10\/12.5\/15\/17.5)",
+        "Move Speed Bonus per Wex Instance: 1%\/2%\/3%\/4%\/5%\/6%\/7% (TagTalent 2.5%\/5%\/7.5%\/10%\/12.5%\/15%\/17.5%)",
         "Passive Agility Bonus: 2\/4\/6\/8\/10\/12\/14",
         "Illusions copy the currently active reagents and benefit from the speed bonuses."
       ],
@@ -107,10 +107,10 @@
         "Invoker can only have up to 3 instances up at any time. The orbs floating above Invoker are visible to everyone.",
         "If he already has 3 instances, the oldest instance is replaced. The order of instances can be seen in the HUD as status buff icons, the oldest one being on the left.",
         "The passive intelligence bonus effectively grants Invoker 24\/48\/72\/96\/120\/144\/168 mana, 0.1\/0.2\/0.3\/0.4\/0.5\/0.6\/0.7 mana regeneration, and 2\/4\/6\/8\/10\/12\/14 attack damage.",
-        "This is how much attack damage Invoker gains from 1, 2 and 3 Exort instances: 1 Exort Instance: 2\/4\/6\/8\/10\/12\/14 attack damage. 2 Exort Instance: 4\/8\/12\/16\/20\/24\/28 attack damage. 3 Exort Instance: 6\/12\/18\/24\/30\/36\/42 attack damage.",
-        "1 Exort Instance: 2\/4\/6\/8\/10\/12\/14 attack damage.",
-        "2 Exort Instance: 4\/8\/12\/16\/20\/24\/28 attack damage.",
-        "3 Exort Instance: 6\/12\/18\/24\/30\/36\/42 attack damage.",
+        "This is how much attack damage Invoker gains from 1, 2 and 3 Exort instances: 1 Exort Instance: 2\/4\/6\/8\/10\/12\/14 (TagTalent 5\/10\/15\/20\/25\/30\/35) attack damage. 2 Exort Instance: 4\/8\/12\/16\/20\/24\/28 (TagTalent 10\/20\/30\/40\/50\/60\/70) attack damage. 3 Exort Instance: 6\/12\/18\/24\/30\/36\/42 (TagTalent 15\/30\/45\/60\/75\/90\/105) attack damage.",
+        "1 Exort Instance: 2\/4\/6\/8\/10\/12\/14 (TagTalent 5\/10\/15\/20\/25\/30\/35) attack damage.",
+        "2 Exort Instance: 4\/8\/12\/16\/20\/24\/28 (TagTalent 10\/20\/30\/40\/50\/60\/70) attack damage.",
+        "3 Exort Instance: 6\/12\/18\/24\/30\/36\/42 (TagTalent 15\/30\/45\/60\/75\/90\/105) attack damage.",
         ""
       ],
       "mana": null,
@@ -121,7 +121,7 @@
       "params": [
         "Cast Animation: 0+0",
         "Instances of Exort per Cast: 1",
-        "Attack Damage Bonus per Exort Instance: 2\/4\/6\/8\/10\/12\/14",
+        "Attack Damage Bonus per Exort Instance: 2\/4\/6\/8\/10\/12\/14 (TagTalent 5\/10\/15\/20\/25\/30\/35)",
         "Passive Intelligence Bonus: 2\/4\/6\/8\/10\/12\/14",
         "Illusions copy the currently active reagents, but cannot benefit from the attack damage bonus."
       ],
@@ -253,14 +253,13 @@
       "notes": [
         "Ability invokes when Invoker has 2 Quas and 1 Exort instances.",
         "The Ice Wall is always created in front of Invoker, perpendicular to the line between Invoker and a point 200 range right in front of him.",
-        "Creates 15 wall segments, with a spacing of 80 between each, resulting in a total length of 1120. Each segment affects a 105 radius around itself. The wall's effective length (wall length + radius from both sides) is 1330.",
+        "Creates 15 wall segments, with a spacing of 80 between each, resulting in a total length of 1120. Each segment affects a 105 radius around itself. With the radius from both sides and the wall length, Ice Wall has an effective length of 1330.",
         "Each segment affects a 105 radius around itself.",
-        "The wall's effective length (wall length + radius from both sides) is 1330.",
+        "With the radius from both sides and the wall length, Ice Wall has an effective length of 1330.",
         "Each segment possesses a movement speed slowing aura. Its debuff lingers for 2 seconds.",
         "The damage is independent from the slow, so getting further than 105 radius away from a segment immediately stops the damage, while the slow still lingers.",
-        "Deals damage in 1-second intervals, starting 1 second after cast, resulting in up to 3\/4\/6\/7\/9\/10\/12\/48 possible instances. Can deal up to 18\/48\/108\/168\/270\/360\/504\/624 damage to a single unit (before reductions), when it stays in range for its full duration. With the level 15 talent, can deal up to 198\/288\/468\/588\/810\/960\/1224\/1404 damage to a single unit (before reductions), when it stays in range for its full duration.",
+        "Deals damage in 1-second intervals, starting 1 second after cast, resulting in up to 3\/4\/6\/7\/9\/10\/12\/48 possible instances. Can deal up to 18\/48\/108\/168\/270\/360\/504\/624 damage to a single unit (before reductions), when it stays in range for its full duration.",
         "Can deal up to 18\/48\/108\/168\/270\/360\/504\/624 damage to a single unit (before reductions), when it stays in range for its full duration.",
-        "With the level 15 talent, can deal up to 198\/288\/468\/588\/810\/960\/1224\/1404 damage to a single unit (before reductions), when it stays in range for its full duration.",
         "Ice Wall is not a pathing blocker. Any unit can pass through it.",
         "Ability formulas: Damage per second: 0 + (6 * Exort) Movement speed slow: 0 + (20 * Quas)% Wall duration: 1.5 + (1.5 * Quas)",
         "Damage per second: 0 + (6 * Exort)",
@@ -277,7 +276,7 @@
         "Wall Spawn Distance: 200",
         "Wall Length: 1120",
         "Wall Width: 105",
-        "Damage per Second (TagTalentExort): 6\/12\/18\/24\/30\/36\/42 (TagTalent \/48) (TagTalent 66\/72\/78\/84\/90\/96\/102 \/108)",
+        "Damage per Second (TagTalentExort): 6\/12\/18\/24\/30\/36\/42 (TagTalent \/48)",
         "Move Speed Slow (TagTalentQuas): 20%\/40%\/60%\/80%\/100%\/120%\/140% (TagTalent \/160%)",
         "Aura Linger Duration: 2",
         "Wall Duration (TagTalentQuas): 3\/4.5\/6\/7.5\/9\/10.5\/12 (TagTalent \/13.5)",
@@ -345,10 +344,10 @@
         "The Tornado provides 200 radius flying vision as it travels. This vision does not last. The same vision is also provided for 1.75 seconds after reaching its final destination.",
         "The same vision is also provided for 1.75 seconds after reaching its final destination.",
         "Does not lift Roshan, but damages and interrupts him for a split second.",
-        "Ability formulas: Travel distance: 400 + (400 * Wex) Bonus damage: 0 + (45 * Wex) Cyclone duration: 0.5 + (0.3 * Quas)",
+        "Ability formulas: Travel distance: 400 + (400 * Wex) Bonus damage: 0 + (45 * Wex) Cyclone duration: 0.6 + (0.25 * Quas)",
         "Travel distance: 400 + (400 * Wex)",
         "Bonus damage: 0 + (45 * Wex)",
-        "Cyclone duration: 0.5 + (0.3 * Quas)"
+        "Cyclone duration: 0.6 + (0.25 * Quas)"
       ],
       "mana": "150",
       "hotKey": null,
@@ -362,7 +361,7 @@
         "Travel Distance (TagTalentWex): 800\/1200\/1600\/2000\/2400\/2800\/3200 (TagTalent \/3600)",
         "Base Damage: 70",
         "Bonus Damage (TagTalentWex): 45\/90\/135\/180\/225\/270\/315 (TagTalent \/360)",
-        "Cyclone Duration (TagTalentQuas): 0.8\/1.1\/1.4\/1.7\/2\/2.3\/2.6 (TagTalent \/2.9)"
+        "Cyclone Duration (TagTalentQuas): 0.85\/1.1\/1.35\/1.6\/1.85\/2.1\/2.35 (TagTalent \/2.6)"
       ],
       "itemBehaviour": [],
       "legacyKey": "X",
@@ -377,8 +376,8 @@
       "notes": [
         "Ability invokes when Invoker has 2 Wex and 1 Exort instances.",
         "↓↓ Double-tapping automatically targets self.",
-        "Ability formulas: Attack speed bonus: -5 + (15 * Wex) (TagTalent -5 + 35 + (15 * Wex)) Attack damage bonus: -2 + (12 * Exort) (TagTalent -2 + 35 + (12 * Exort))",
-        "Attack speed bonus: -5 + (15 * Wex) (TagTalent -5 + 35 + (15 * Wex))",
+        "Ability formulas: Attack speed bonus: -2 + (12 * Wex) (TagTalent -2 + 35 + (12 * Wex)) Attack damage bonus: -2 + (12 * Exort) (TagTalent -2 + 35 + (12 * Exort))",
+        "Attack speed bonus: -2 + (12 * Wex) (TagTalent -2 + 35 + (12 * Wex))",
         "Attack damage bonus: -2 + (12 * Exort) (TagTalent -2 + 35 + (12 * Exort))"
       ],
       "mana": "60",
@@ -389,7 +388,7 @@
       "params": [
         "Cast Animation: 0.05+0",
         "Cast Range: 650",
-        "Attack Speed Bonus (TagTalentWex): 10\/25\/40\/55\/70\/85\/100 (TagTalent \/115) (TagTalent 45\/60\/75\/90\/105\/120\/135 \/150)",
+        "Attack Speed Bonus (TagTalentWex): 10\/22\/34\/46\/58\/70\/82 (TagTalent \/94) (TagTalent 45\/57\/69\/81\/93\/105\/117 \/129)",
         "Attack Damage Bonus (TagTalentExort): 10\/22\/34\/46\/58\/70\/82 (TagTalent \/94) (TagTalent 45\/57\/69\/81\/93\/105\/117 \/129)",
         "Duration: 9"
       ],
@@ -496,26 +495,26 @@
         "Chaos Meteor rolls at a speed of 300 and always rolls the full distance, so it takes 1.55\/2.05\/2.57\/3.07\/3.57\/4.07\/4.57\/5.07 seconds to reach the max distance.",
         "After landing, the meteor deals its main damage and places the burn debuff to units within its effect radius in 0.5-second intervals, starting immediately upon landing. On each interval, the meteor first applies the damage, then the debuff.",
         "On each interval, the meteor first applies the damage, then the debuff.",
-        "The following Chaos Meteor damage calculations are all before reductions: The main damage can hit a unit up to 4\/5\/6\/7\/8\/9\/10\/11 times and thus can deal up to 230\/375\/555\/770\/1020\/1305\/1625\/1980 (TagTalent 322\/525\/777\/1078\/1428\/1827\/2275\/2772) damage.",
-        "The main damage can hit a unit up to 4\/5\/6\/7\/8\/9\/10\/11 times and thus can deal up to 230\/375\/555\/770\/1020\/1305\/1625\/1980 (TagTalent 322\/525\/777\/1078\/1428\/1827\/2275\/2772) damage.",
-        "The burn debuff deals damage in 1-second intervals, starting 1 second after the debuff is placed, resulting in 3 instances for each debuff. The burn debuffs from each interval fully stack and do not refresh each other. So a unit can be affected by 4\/5\/6\/7\/8\/9\/10\/11 instances of the burn debuff per cast. One instance of the burn debuff can deal up to 34.5\/45\/55.5\/66\/76.5\/87\/97.5\/108 damage. All possible instances of burn damage per unit together can deal up to 138\/225\/333\/462\/612\/783\/975\/1188 damage. The whole Chaos Meteor, main and burn damage, can deal up to 368\/600\/888\/1232\/1632\/2088\/2600\/3168 damage when a unit is hit by all possible instances.",
+        "The following Chaos Meteor damage calculations are all before reductions: The main damage can hit a unit up to 4\/5\/6\/7\/8\/9\/10\/11 times and thus can deal up to 208\/355\/540\/763\/1024\/1323\/1660\/2035 (TagTalent 291.2\/497\/756\/1068.2\/1433.6\/1852.2\/2324\/2849) damage.",
+        "The main damage can hit a unit up to 4\/5\/6\/7\/8\/9\/10\/11 times and thus can deal up to 208\/355\/540\/763\/1024\/1323\/1660\/2035 (TagTalent 291.2\/497\/756\/1068.2\/1433.6\/1852.2\/2324\/2849) damage.",
+        "The burn debuff deals damage in 1-second intervals, starting 1 second after the debuff is placed, resulting in 3 instances for each debuff. The burn debuffs from each interval fully stack and do not refresh each other. So a unit can be affected by 4\/5\/6\/7\/8\/9\/10\/11 instances of the burn debuff per cast. One instance of the burn debuff can deal up to 30\/42\/54\/66\/78\/90\/102\/114 damage. All possible instances of burn damage per unit together can deal up to 120\/210\/324\/462\/624\/810\/1020\/1254 damage. The whole Chaos Meteor, main and burn damage, can deal up to 328\/565\/864\/1225\/1648\/2133\/2680\/3289 damage when a unit is hit by all possible instances.",
         "The burn debuffs from each interval fully stack and do not refresh each other. So a unit can be affected by 4\/5\/6\/7\/8\/9\/10\/11 instances of the burn debuff per cast.",
-        "One instance of the burn debuff can deal up to 34.5\/45\/55.5\/66\/76.5\/87\/97.5\/108 damage.",
-        "All possible instances of burn damage per unit together can deal up to 138\/225\/333\/462\/612\/783\/975\/1188 damage.",
-        "The whole Chaos Meteor, main and burn damage, can deal up to 368\/600\/888\/1232\/1632\/2088\/2600\/3168 damage when a unit is hit by all possible instances.",
-        "With the level 15 talent: With the damage increasing talent, one instance of the burn debuff can deal up to 48.3\/63\/77.7\/92.4\/107.1\/121.8\/136.5\/151.2 damage. All possible instances of burn damage per unit together can deal up to 193.2\/315\/466.2\/646.8\/856.8\/1096.2\/1365\/1663.2 damage. The whole Chaos Meteor, main and burn damage, can deal up to 515.2\/840\/1243.2\/1724.8\/2284.8\/2923.2\/3640\/4435.2 damage when a unit is hit by all possible instances.",
-        "With the damage increasing talent, one instance of the burn debuff can deal up to 48.3\/63\/77.7\/92.4\/107.1\/121.8\/136.5\/151.2 damage.",
-        "All possible instances of burn damage per unit together can deal up to 193.2\/315\/466.2\/646.8\/856.8\/1096.2\/1365\/1663.2 damage.",
-        "The whole Chaos Meteor, main and burn damage, can deal up to 515.2\/840\/1243.2\/1724.8\/2284.8\/2923.2\/3640\/4435.2 damage when a unit is hit by all possible instances.",
+        "One instance of the burn debuff can deal up to 30\/42\/54\/66\/78\/90\/102\/114 damage.",
+        "All possible instances of burn damage per unit together can deal up to 120\/210\/324\/462\/624\/810\/1020\/1254 damage.",
+        "The whole Chaos Meteor, main and burn damage, can deal up to 328\/565\/864\/1225\/1648\/2133\/2680\/3289 damage when a unit is hit by all possible instances.",
+        "With the level 15 talent: With the damage increasing talent, one instance of the burn debuff can deal up to 42\/58.8\/75.6\/92.4\/109.2\/126\/142.8\/159.6 damage. All possible instances of burn damage per unit together can deal up to 168\/294\/453.6\/646.8\/873.6\/1134\/1428\/1755.6 damage. The whole Chaos Meteor, main and burn damage, can deal up to 459.2\/791\/1209.6\/1715\/2307.2\/2986.2\/3752\/4604.6 damage when a unit is hit by all possible instances.",
+        "With the damage increasing talent, one instance of the burn debuff can deal up to 42\/58.8\/75.6\/92.4\/109.2\/126\/142.8\/159.6 damage.",
+        "All possible instances of burn damage per unit together can deal up to 168\/294\/453.6\/646.8\/873.6\/1134\/1428\/1755.6 damage.",
+        "The whole Chaos Meteor, main and burn damage, can deal up to 459.2\/791\/1209.6\/1715\/2307.2\/2986.2\/3752\/4604.6 damage when a unit is hit by all possible instances.",
         "With Aghanim's Shard, the extra meteors are launched with a 30° angle to the left and right of Invoker. The angle is based on Invoker's position. No matter the cast distance, the meteors always land and travel along offset by 30° from the centered meteor. The extra meteors land so that they are at least 200 range away from the centered meteor. This means when the targeted point is within 346 range of Invoker, they land further ahead of the centered meteor to keep a minimum distance of 200. This means, unlike the centered meteor, the extra meteors cannot land within 400 range of Invoker.",
         "The angle is based on Invoker's position. No matter the cast distance, the meteors always land and travel along offset by 30° from the centered meteor.",
         "The extra meteors land so that they are at least 200 range away from the centered meteor.",
         "This means when the targeted point is within 346 range of Invoker, they land further ahead of the centered meteor to keep a minimum distance of 200.",
         "This means, unlike the centered meteor, the extra meteors cannot land within 400 range of Invoker.",
-        "Ability formulas: Travel distance: 315 + (150 * Wex) Main damage per interval: 40 + (17.5 * Exort) (TagTalent (40 + (17.5 * Exort)) * 1.4 ) Burn damage per second: 8 + (3.5 * Exort) (TagTalent (8 + (3.5 * Exort)) * 1.4 )",
+        "Ability formulas: Travel distance: 315 + (150 * Wex) Main damage per interval: 33 + (19 * Exort) (TagTalent (33+ (19 * Exort)) * 1.4 ) Burn damage per second: 6 + (4 * Exort) (TagTalent (6 + (4 * Exort)) * 1.4 )",
         "Travel distance: 315 + (150 * Wex)",
-        "Main damage per interval: 40 + (17.5 * Exort) (TagTalent (40 + (17.5 * Exort)) * 1.4 )",
-        "Burn damage per second: 8 + (3.5 * Exort) (TagTalent (8 + (3.5 * Exort)) * 1.4 )"
+        "Main damage per interval: 33 + (19 * Exort) (TagTalent (33+ (19 * Exort)) * 1.4 )",
+        "Burn damage per second: 6 + (4 * Exort) (TagTalent (6 + (4 * Exort)) * 1.4 )"
       ],
       "mana": "200",
       "hotKey": null,
@@ -530,8 +529,8 @@
         "Number of Meteors: 1 (TagTalent 3)",
         "Effect Delay: 1.3",
         "Effect Interval: 0.5",
-        "Main Damage per Interval (TagTalentExort): 57.5\/75\/92.5\/110\/127.5\/145\/162.5 (TagTalent \/180) (TagTalent 80.5\/105\/129.5\/154\/178.5\/203\/227.5 \/252)",
-        "Burn Damage per Second (TagTalentExort): 11.5\/15\/18.5\/22\/25.5\/29\/32.5 (TagTalent \/36) (TagTalent 16.1\/21\/25.9\/30.8\/35.7\/40.6\/45.5 \/50.4)",
+        "Main Damage per Interval (TagTalentExort): 52\/71\/90\/109\/128\/147\/166 (TagTalent \/185) (TagTalent 72.8\/99.4\/126\/152.6\/179.2\/205.8\/232.4 \/259)",
+        "Burn Damage per Second (TagTalentExort): 10\/14\/18\/22\/26\/30\/34 (TagTalent \/38) (TagTalent 14\/19.6\/25.2\/30.8\/36.4\/42\/47.6 \/53.2)",
         "Burn Duration: 3",
         "Chaos Meteor Spread Distance: 200",
         "Chaos Meteor Angle: 30°",
@@ -556,26 +555,26 @@
         "The complete area is shaped like a cone.",
         "Applies a non-disabling Forced Movement, so affected enemies can still use abilities and items during it and their channeling abilities are not interrupted.",
         "The knockback and disarm are applied at the same time.",
-        "This is how the knockback works: Affected units are moved in 0.03 second intervals. They are moved 8\/16\/25\/33\/41\/50\/58\/66 times, and is defined as (Quas * 25 \/ 3). The knockback calculation can be split up into two sections - the first intervals and the remaining intervals. The first intervals, units are moved linearly, by a distance of 6 per interval. Therefore, the total of the first intervals is moved 2\/5\/8\/11\/13\/16\/19\/22 times, which results in a knockback distance of 12\/30\/48\/66\/78\/96\/114\/132. For the remaining of the intervals - 6\/11\/17\/22\/28\/34\/39\/44, the units are moved exponentially with 0.98 times the speed of the previous interval. So the remaining intervals together (on each level) move the units by a distance of 33.56\/58.58\/85.46\/105.5\/127.02\/146.08\/160.29\/173.14. The remaining intervals can be defined as at level 1 Quas. Summed up, the total distance on each level is 45.56\/88.58\/133.46\/171.5\/205.02\/242.08\/274.29\/305.14. As conclusion, the knockback starts at a speed of 200 and decreases exponentially.",
+        "This is how the knockback works: Affected units are moved in 0.03 second intervals. They are moved 6\/13\/20\/26\/33\/40\/46\/53 times, and is defined as (Quas * 25 \/ 3). The knockback calculation can be split up into two sections - the first intervals and the remaining intervals. The first intervals, units are moved linearly, by a distance of 6 per interval. Therefore, the total of the first intervals is moved 2\/4\/6\/8\/11\/13\/15\/17 times, which results in a knockback distance of 12\/24\/36\/48\/66\/78\/90\/102. For the remaining of the intervals - 4\/9\/14\/18\/22\/27\/31\/36, the units are moved exponentially with 0.98 times the speed of the previous interval. So the remaining intervals together (on each level) move the units by a distance of 22.82\/48.88\/72.43\/89.63\/105.5\/123.61\/136.84\/151.94. The remaining intervals can be defined as at level 1 Quas. Summed up, the total distance on each level is 34.82\/72.88\/108.43\/137.63\/171.5\/201.61\/226.84\/253.94. As conclusion, the knockback starts at a speed of 200 and decreases exponentially.",
         "Affected units are moved in 0.03 second intervals.",
-        "They are moved 8\/16\/25\/33\/41\/50\/58\/66 times, and is defined as (Quas * 25 \/ 3).",
+        "They are moved 6\/13\/20\/26\/33\/40\/46\/53 times, and is defined as (Quas * 25 \/ 3).",
         "The knockback calculation can be split up into two sections - the first intervals and the remaining intervals.",
         "The first intervals, units are moved linearly, by a distance of 6 per interval.",
-        "Therefore, the total of the first intervals is moved 2\/5\/8\/11\/13\/16\/19\/22 times, which results in a knockback distance of 12\/30\/48\/66\/78\/96\/114\/132.",
-        "For the remaining of the intervals - 6\/11\/17\/22\/28\/34\/39\/44, the units are moved exponentially with 0.98 times the speed of the previous interval.",
-        "So the remaining intervals together (on each level) move the units by a distance of 33.56\/58.58\/85.46\/105.5\/127.02\/146.08\/160.29\/173.14. The remaining intervals can be defined as at level 1 Quas.",
+        "Therefore, the total of the first intervals is moved 2\/4\/6\/8\/11\/13\/15\/17 times, which results in a knockback distance of 12\/24\/36\/48\/66\/78\/90\/102.",
+        "For the remaining of the intervals - 4\/9\/14\/18\/22\/27\/31\/36, the units are moved exponentially with 0.98 times the speed of the previous interval.",
+        "So the remaining intervals together (on each level) move the units by a distance of 22.82\/48.88\/72.43\/89.63\/105.5\/123.61\/136.84\/151.94. The remaining intervals can be defined as at level 1 Quas.",
         "The remaining intervals can be defined as at level 1 Quas.",
-        "Summed up, the total distance on each level is 45.56\/88.58\/133.46\/171.5\/205.02\/242.08\/274.29\/305.14.",
+        "Summed up, the total distance on each level is 34.82\/72.88\/108.43\/137.63\/171.5\/201.61\/226.84\/253.94.",
         "As conclusion, the knockback starts at a speed of 200 and decreases exponentially.",
         "Can knock units over impassable terrain. During the knockback, all trees the units collide with get destroyed.",
         "Does not knock Roshan back, but damages and disarms him.",
         "The Radial Deafening Blast talent releases blasts towards every direction around Invoker, no matter where it is targeted. A total of 12 blasts are released. One blast is released towards the targeted point, while the other eleven are adapted to it, with 30° angles between them. A unit can only be hit by one blast per cast. If an enemy unit stands within the areas of multiple blasts, it is only affected by one.",
         "A total of 12 blasts are released. One blast is released towards the targeted point, while the other eleven are adapted to it, with 30° angles between them.",
         "A unit can only be hit by one blast per cast. If an enemy unit stands within the areas of multiple blasts, it is only affected by one.",
-        "Ability formulas: Damage: 0 + (40 * Exort) Knockback distance:",
-        "Damage: 0 + (40 * Exort)",
+        "Ability formulas: Damage: -20 + (40 * Exort) Knockback distance:",
+        "Damage: -20 + (40 * Exort)",
         "Knockback distance:",
-        "Knockback duration: 0 + (0.25 * Quas)",
+        "Knockback duration: 0 + (0.2 * Quas)",
         "Disarm duration: 0.5 + (0.75 * Wex)"
       ],
       "mana": "300",
@@ -590,9 +589,9 @@
         "Travel Distance: 1000",
         "End Radius: 225",
         "Number of Blasts: 1 (TagTalent 12)",
-        "Damage (TagTalentExort): 40\/80\/120\/160\/200\/240\/280 (TagTalent \/320)",
+        "Damage (TagTalentExort): 20\/60\/100\/140\/180\/220\/260 (TagTalent \/300)",
         "Knockback Distance (TagTalentQuas): 45.6\/88.6\/133.5\/171.5\/205\/242.1\/274.3 (TagTalent \/305.14)",
-        "Knockback Duration (TagTalentQuas): 0.25\/0.5\/0.75\/1\/1.25\/1.5\/1.75 (TagTalent \/2)",
+        "Knockback Duration (TagTalentQuas): 0.2\/0.4\/0.6\/0.8\/1\/1.2\/1.4 (TagTalent \/1.6)",
         "Disarm Duration (TagTalentWex): 1.25\/2\/2.75\/3.5\/4.25\/5\/5.75 (TagTalent \/6.5)",
         "Deafening Blast Angle: (TagTalent 30°)",
         "Knockback persists if debuff was placed before spell immunity. Disarm can be dispelled by spell immunity only."
@@ -618,8 +617,8 @@
       "description": "Melts away the armor of heroes hit by the spirit's attack. Each successive hit increases the amount of armor melted.",
       "spellName": "Melting Strike",
       "params": [
-        "Armor Reduction per Attack: 1 (TagTalent 3)",
-        "Armor Reduction Cap: 20 (TagTalent 60)",
+        "Armor Reduction per Attack: 1 (TagTalent 2)",
+        "Armor Reduction Cap: 20 (TagTalent 40)",
         "Duration: 5",
         "Armor reduction persists if debuff was placed before spell immunity."
       ],
@@ -641,7 +640,7 @@
   "talents": [
     {
       "talentLvl": "25",
-      "talentLeft": "+2 Forged Spirit Armor Reduction",
+      "talentLeft": "2.5x Quas\/ Wex\/ Exort passive effects",
       "talentRight": "Radial Deafening Blast"
     },
     {
@@ -652,7 +651,7 @@
     {
       "talentLvl": "15",
       "talentLeft": "-8s Cold Snap Cooldown",
-      "talentRight": "+60 DPS Ice Wall"
+      "talentRight": "+1 Forged Spirit Armor Reduction"
     },
     {
       "talentLvl": "10",

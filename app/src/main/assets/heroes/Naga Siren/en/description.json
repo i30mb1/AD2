@@ -2,29 +2,29 @@
   "abilities": [
     {
       "notes": [
-        "The strength talent effectively grants Naga Siren 260 health and 1.3 health regeneration.",
-        "The agility talent effectively grants Naga Siren 1.67 armor, 10 attack speed, and 10 attack damage."
+        "The agility talent effectively grants Naga Siren 1.33 armor, 8 attack speed, and 8 attack damage.",
+        "The strength talent effectively grants Naga Siren 300 health and 1.5 health regeneration."
       ],
       "spellName": "Talent",
       "talents": [
         {
           "talentLvl": "25",
-          "talentLeft": "-5 Rip Tide Armor",
+          "talentLeft": "-6 Rip Tide Armor",
           "talentRight": "-10s Mirror Image Cooldown"
         },
         {
           "talentLvl": "20",
           "talentLeft": "+1 Mirror Image Illusion",
-          "talentRight": "-30s Song of the Siren Cooldown"
+          "talentRight": "+10% Rip Tide Chance"
         },
         {
           "talentLvl": "15",
-          "talentLeft": "+13 Strength",
-          "talentRight": "+10 Agility"
+          "talentLeft": "+15 Strength",
+          "talentRight": "+13% Mirror Image Damage"
         },
         {
           "talentLvl": "10",
-          "talentLeft": "+9% Mirror Image Damage",
+          "talentLeft": "+8 Agility",
           "talentRight": "+20 Movement Speed"
         }
       ]
@@ -56,7 +56,7 @@
         "Cast Animation: 0.65+0",
         "Split Time: 0.3",
         "Number of Illusions: 3 (TagTalent 4)",
-        "Illusion Damage Dealt: 25%\/30%\/35%\/40% (TagTalent 34%\/39%\/44%\/49%)",
+        "Illusion Damage Dealt: 25%\/30%\/35%\/40% (TagTalent 38%\/43%\/48%\/53%)",
         "Illusion Damage Taken: 350%",
         "Illusion Duration: 26"
       ],
@@ -107,8 +107,7 @@
         "Damage Magical"
       ],
       "notes": [
-        "When proccing, Rip Tide first applies the armor reduction debuff, the slow debuff, then the Rip Tide damage, and then the attack damage.",
-        "The armor reduction debuff and the slow debuff do not stack, the duration gets refreshed instead.",
+        "When proccing, Rip Tide first applies the armor reduction debuff, then the Rip Tide damage, and then the attack damage.",
         "Rip Tide uses pseudo-random distribution."
       ],
       "mana": null,
@@ -117,14 +116,11 @@
       "description": "The Naga Siren and her images have a chance on attack to hit all nearby units with a damaging wave of water that lowers armor for seconds.",
       "spellName": "Rip Tide",
       "params": [
-        "Proc Chance: 17%",
+        "Proc Chance: 17% (TagTalent 27%)",
         "Radius: 300",
-        "Damage: 30\/40\/50\/60",
-        "Armor Reduction: 2\/4\/6\/8 (TagTalent 7\/9\/11\/13) (TagTalent 6\/8\/10\/12, 11\/13\/15\/17)",
+        "Damage: 30\/45\/60\/75",
+        "Armor Reduction: 2\/4\/6\/8 (TagTalent 8\/10\/12\/14)",
         "Armor Reduction Duration: 4",
-        "Move Speed Slow: 20%",
-        "Slow Duration: 4",
-        "Adds 20% slow and increases base armor reduction by 4.",
         "Debuffs persist if placed before spell immunity and when not dispelled."
       ],
       "itemBehaviour": [],
@@ -149,7 +145,7 @@
       ],
       "mana": "150\/175\/200",
       "hotKey": "R",
-      "cooldown": "160\/120\/80 (TagTalent 130\/90\/50)",
+      "cooldown": "160\/120\/80",
       "description": "All enemies in range of the Naga Siren are put into a magical stasis where they cannot act or be attacked. Using Song of the Siren again will end the duration early.",
       "spellName": "Song of the Siren",
       "params": [
@@ -157,6 +153,8 @@
         "Radius: 1000\/1200\/1400",
         "Aura Linger Duration: 0.4",
         "Duration: 7",
+        "Max Health as Heal per Second: 5%",
+        "Song of the Siren heal allies for 5% Max HP per second",
         "The sleep does not affect spell immune enemies."
       ],
       "itemBehaviour": [],
@@ -192,7 +190,7 @@
     "attrStrength": 22.0,
     "attrIntelligence": 21.0,
     "attrIntelligenceInc": 2.0,
-    "attrAgilityInc": 3.5,
+    "attrAgilityInc": 3.3,
     "attrAgility": 21.0
   },
   "description": "Slithice, the Naga Siren, is a melee agility hero who can be played both as a late-game carry and an early\/mid-game support. Slithice is an item dependent hero yet with the right style and inventory choices she can overpower many other heroes that deal strong physical damage while casting her active abilities to handle her enemies altogether and turn the tides. Mirror Image creates three illusions to wreak havoc upon her enemies. Ensnare is a very useful spell with several unique features. It not only holds an enemy in place, but also prevents them from blinking and going invisible. Rip Tide calls the forces of the seas, allowing the Siren and her illusions to unleash a wave of magical water to wash away foes and degrade their armor. The Song of the Siren is the ultimate ability for team battles; Naga Siren performs a mystical song to put her enemies to sleep in an area around her. Song of the Siren is her tool for initiation, as while her enemies are under her slumber her allies can come forth and prepare to unleash their attacks after the song wears off. Time is Naga's best friend, for as the game wears on, Slithice will gradually consume more and more of the map and engulf enemy towers and heroes like the rising tide itself.",
@@ -200,22 +198,22 @@
   "talents": [
     {
       "talentLvl": "25",
-      "talentLeft": "-5 Rip Tide Armor",
+      "talentLeft": "-6 Rip Tide Armor",
       "talentRight": "-10s Mirror Image Cooldown"
     },
     {
       "talentLvl": "20",
       "talentLeft": "+1 Mirror Image Illusion",
-      "talentRight": "-30s Song of the Siren Cooldown"
+      "talentRight": "+10% Rip Tide Chance"
     },
     {
       "talentLvl": "15",
-      "talentLeft": "+13 Strength",
-      "talentRight": "+10 Agility"
+      "talentLeft": "+15 Strength",
+      "talentRight": "+13% Mirror Image Damage"
     },
     {
       "talentLvl": "10",
-      "talentLeft": "+9% Mirror Image Damage",
+      "talentLeft": "+8 Agility",
       "talentRight": "+20 Movement Speed"
     }
   ]

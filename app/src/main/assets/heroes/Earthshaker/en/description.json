@@ -2,19 +2,15 @@
   "abilities": [
     {
       "notes": [
-        "The mana talent increases maximum mana capacity, and keeps the current mana percentage.",
         "This attack damage talent is added as base attack damage. It benefits illusions, and is affected by every percentage-based damage increasing or reducing effects.",
-        "It benefits illusions, and is affected by every percentage-based damage increasing or reducing effects.",
-        "The armor talent does not benefit illusions.",
-        "The magic resistance talent stacks multiplicatively with other sources of magic resistance. Increases Earthshaker's magic resistance to 55%.",
-        "Increases Earthshaker's magic resistance to 55%."
+        "It benefits illusions, and is affected by every percentage-based damage increasing or reducing effects."
       ],
       "spellName": "Talent",
       "talents": [
         {
           "talentLvl": "25",
           "talentLeft": "-1.5s Enchant Totem Cooldown",
-          "talentRight": "+40% Magic Resistance"
+          "talentRight": "+200 Aftershock Range"
         },
         {
           "talentLvl": "20",
@@ -23,13 +19,13 @@
         },
         {
           "talentLvl": "15",
-          "talentLeft": "+7 Armor",
+          "talentLeft": "+50 Aftershock Damage",
           "talentRight": "+25 Movement Speed"
         },
         {
           "talentLvl": "10",
-          "talentLeft": "+200 Mana",
-          "talentRight": "+20 Base Damage"
+          "talentLeft": "+80 Fissure Damage",
+          "talentRight": "+30 Base Damage"
         }
       ]
     },
@@ -47,18 +43,18 @@
         "This means the actual length of the Fissure can only be a factor of 56.25. It is defined as (2 * 24 + 8.25) so that it never exceeds the listed values.",
         "Therefore, Fissure consists of 24 (TagTalent 30) segments, resulting in an actual range of 1350 (TagTalent 1687.5).",
         "Every unit (except wards and buildings) which is within that radius upon cast is pushed aside.",
-        "The stun and damage are applied in a circular shape around each segment. This means the total damage\/stun radius consists of multiple overlapping circles, and not a smooth line. A unit can only be hit by one instance per cast, even when within the damage\/stun radius of multiple segments. Can hit units up to 1575 (TagTalent {1912.5) range in front and 216.75 range behind Earthshaker.",
+        "The stun and damage are applied in a circular shape around each segment. This means the total damage\/stun radius consists of multiple overlapping circles, and not a smooth line. A unit can only be hit by one instance per cast, even when within the damage\/stun radius of multiple segments. Can hit units up to 1575 (TagTalent 1912.5) range in front and 216.75 range behind Earthshaker.",
         "A unit can only be hit by one instance per cast, even when within the damage\/stun radius of multiple segments.",
-        "Can hit units up to 1575 (TagTalent {1912.5) range in front and 216.75 range behind Earthshaker.",
+        "Can hit units up to 1575 (TagTalent 1912.5) range in front and 216.75 range behind Earthshaker.",
         "Fissure first applies the debuff, then the damage.",
         "Flying units and units with unobstructed movement (e.g. Spectral Dagger, Spin Web) are not blocked by Fissure. They still are fully affected by it otherwise when hit. They are pushed aside, stunned and damaged.",
         "They still are fully affected by it otherwise when hit. They are pushed aside, stunned and damaged.",
         "Units not controlled by any player do not try to path around the Fissure, but simply walk against it as if it is not there. This effectively causes them to get stuck, until they change directions (e.g. when aggro-ing them), or until the Fissure dissipates.",
         "This effectively causes them to get stuck, until they change directions (e.g. when aggro-ing them), or until the Fissure dissipates.",
-        "With Aghanim's Shard, the Fissure segments provide the caster with unobstructed movement while within 150 range of them. The modifier lingers for 1 second. This means the caster can path through anything while standing on the Fissure and for a short time after leaving its area. Also, Aftershock gets applied around each of Fissure's segments whenever it gets triggered. Enemies may only be hit by one instance of Aftershock, so the overlapping areas along the Fissure do not stack the damage. The Aftershock uses a reduced stun duration of 0.3\/0.45\/0.6\/0.75 seconds.",
+        "With Aghanim's Shard, the Fissure segments provide the caster with unobstructed movement while within 150 range of them. The modifier lingers for 1 second. This means the caster can path through anything while standing on the Fissure and for a short time after leaving its area. Also, Aftershock based on the current level gets applied around each of Fissure's segments whenever it gets triggered. A unit can only be hit by one instance of Aftershock per cast, even when within the damage\/stun radius of multiple segments. The Aftershock uses a reduced stun duration of 0.3\/0.45\/0.6\/0.75 seconds.",
         "This means the caster can path through anything while standing on the Fissure and for a short time after leaving its area.",
-        "Also, Aftershock gets applied around each of Fissure's segments whenever it gets triggered.",
-        "Enemies may only be hit by one instance of Aftershock, so the overlapping areas along the Fissure do not stack the damage.",
+        "Also, Aftershock based on the current level gets applied around each of Fissure's segments whenever it gets triggered.",
+        "A unit can only be hit by one instance of Aftershock per cast, even when within the damage\/stun radius of multiple segments.",
         "The Aftershock uses a reduced stun duration of 0.3\/0.45\/0.6\/0.75 seconds."
       ],
       "mana": "110\/130\/150\/170",
@@ -72,7 +68,7 @@
         "Fissure Length: 1400 (TagTalent 1720)",
         "Fissure Pathing Block Radius: 24",
         "Fissure Damage\/Stun Radius: 225",
-        "Damage: 110\/160\/210\/260",
+        "Damage: 110\/160\/210\/260 (TagTalent 190\/240\/290\/340)",
         "Stun Duration: 1\/1.25\/1.5\/1.75",
         "Fissure Duration: 6.5\/7\/7.5\/8",
         "Free Pathing Radius: 150",
@@ -94,10 +90,10 @@
       "notes": [
         "Only increases base damage and that given by the primary attribute of the caster. Raw bonus damage is not increased.",
         "The Enchant Totem buff is only used up upon successfully hitting a target. Missed attacks do not waste it.",
-        "With Aghanim's Scepter, Enchant Totem turns into an area-targeted ability. It may only target the ground or self. ↓↓ Double-tapping automatically targets self. When targeting self, Enchant Totem behaves like the unupgraded version, using 1.07-second cast animation and not leaping. When targeting the ground, it uses a 0-second cast time upon cast and a 0.2-second cast backswing upon landing, during which Earthshaker is fully disabled. The leap duration is always the same, so the speed adapts based on the targeted distance. The leap height is always 950 range. During the leap, Earthshaker is fully disabled, unable to move, turn, attack or cast abilities or items. The ability counts as cast as soon as the leap starts, however, Aftershock and the totem buff are applied upon landing. Getting disabled during the leap does not prevent the Aftershock and the totem buff from being applied. Getting hit by other sources of Forced Movement causes the leap's trajectory to change, but it is not interrupted. However, getting hit by forced movement causes the ability to not apply Aftershock or the totem buff upon landing. The ability is fully and immediately canceled when getting moved upwards or teleported by other abilities. While in the air, other units may pass below Earthshaker. The targeting reticule shows the radius of Aftershock, even when it hasn't been learned yet. The Enchant Totem buff grants Earthshaker cleave while it is present. Cleave damage cannot be amplified with outgoing spell damage amplification and cannot spell lifesteal. Can be amplified by incoming spell damage amplification. Cleave damage is reduced by Damage Block. The complete area is shaped like an isosceles trapezoid in front of the attacking Earthshaker. Fully stacks with other sources of cleave. Each source of cleave works completely independent. Does not cleave upon attacking wards, buildings or allied units. Wards and buildings are unaffected by cleave. Despite the visual effect, cleave damage is applied instantly in the whole area.",
+        "With Aghanim's Scepter, Enchant Totem turns into an area-targeted ability. It may only target the ground or self. ↓↓ Double-tapping automatically targets self. When self-targeted, Enchant Totem behaves like the non-upgraded version, using 1.07-second cast animation and not leaping. When ground-targeted, it uses a 0-second cast time upon cast and a 0.2-second cast backswing upon landing, during which Earthshaker is fully disabled. The leap duration is always the same, so the speed adapts based on the targeted distance. The leap height is always 950 range. During the leap, Earthshaker is fully disabled, unable to move, turn, attack or cast abilities or items. The ability counts as cast as soon as the leap starts, however, Aftershock and the totem buff are applied upon landing. Getting disabled during the leap does not prevent the Aftershock and the totem buff from being applied. Getting hit by other sources of Forced Movement causes the leap's trajectory to change, but it is not interrupted. However, getting hit by forced movement causes the ability to not apply Aftershock or the totem buff upon landing. The ability is fully and immediately canceled when getting moved upwards or teleported by other abilities. While in the air, other units may pass below Earthshaker. The targeting reticule shows the radius of Aftershock, even when it hasn't been learned yet. The Enchant Totem buff grants Earthshaker cleave while it is present. Cleave damage cannot be amplified with outgoing spell damage amplification and cannot spell lifesteal. Can be amplified by incoming spell damage amplification. Cleave damage is reduced by Damage Block. The complete area is shaped like an isosceles trapezoid in front of the attacking Earthshaker. Fully stacks with other sources of cleave. Each source of cleave works completely independent. Does not cleave upon attacking wards, buildings or allied units. Wards and buildings are unaffected by cleave. Despite the visual effect, cleave damage is applied instantly in the whole area.",
         "↓↓ Double-tapping automatically targets self.",
-        "When targeting self, Enchant Totem behaves like the unupgraded version, using 1.07-second cast animation and not leaping.",
-        "When targeting the ground, it uses a 0-second cast time upon cast and a 0.2-second cast backswing upon landing, during which Earthshaker is fully disabled.",
+        "When self-targeted, Enchant Totem behaves like the non-upgraded version, using 1.07-second cast animation and not leaping.",
+        "When ground-targeted, it uses a 0-second cast time upon cast and a 0.2-second cast backswing upon landing, during which Earthshaker is fully disabled.",
         "The leap duration is always the same, so the speed adapts based on the targeted distance. The leap height is always 950 range.",
         "During the leap, Earthshaker is fully disabled, unable to move, turn, attack or cast abilities or items.",
         "The ability counts as cast as soon as the leap starts, however, Aftershock and the totem buff are applied upon landing.",
@@ -150,7 +146,7 @@
         "Aftershock does not trigger upon using items.",
         "Aftershock first applies the stun debuff, then the damage.",
         "Applies its own effects before the effects of the triggering ability are applied.",
-        "The stun does not stack with the stun of Fissure. It follows the regular rule of stuns \u2013 the longer stun overrides the shorter one."
+        "The stun does not stack with the stun of Fissure. It follows the regular rule of stuns\u2014the longer stun overrides the shorter one."
       ],
       "mana": null,
       "hotKey": "E",
@@ -158,8 +154,8 @@
       "description": "Causes the earth to shake underfoot, adding additional damage and stuns to nearby enemy units when Earthshaker casts his abilities.",
       "spellName": "Aftershock",
       "params": [
-        "Radius: 300",
-        "Damage: 75\/100\/125\/150",
+        "Radius: 300 (TagTalent 500)",
+        "Damage: 75\/100\/125\/150 (TagTalent 125\/150\/175\/200)",
         "Stun Duration: 0.6\/0.9\/1.2\/1.5"
       ],
       "itemBehaviour": [],
@@ -215,8 +211,8 @@
   "mainAttributes": {
     "attrStrengthInc": 3.7,
     "attrStrength": 22.0,
-    "attrIntelligence": 16.0,
-    "attrIntelligenceInc": 1.8,
+    "attrIntelligence": 18.0,
+    "attrIntelligenceInc": 2.1,
     "attrAgilityInc": 1.4,
     "attrAgility": 12.0
   },
@@ -226,7 +222,7 @@
     {
       "talentLvl": "25",
       "talentLeft": "-1.5s Enchant Totem Cooldown",
-      "talentRight": "+40% Magic Resistance"
+      "talentRight": "+200 Aftershock Range"
     },
     {
       "talentLvl": "20",
@@ -235,13 +231,13 @@
     },
     {
       "talentLvl": "15",
-      "talentLeft": "+7 Armor",
+      "talentLeft": "+50 Aftershock Damage",
       "talentRight": "+25 Movement Speed"
     },
     {
       "talentLvl": "10",
-      "talentLeft": "+200 Mana",
-      "talentRight": "+20 Base Damage"
+      "talentLeft": "+80 Fissure Damage",
+      "talentRight": "+30 Base Damage"
     }
   ]
 }

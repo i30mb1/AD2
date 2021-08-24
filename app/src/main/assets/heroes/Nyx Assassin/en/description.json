@@ -155,7 +155,7 @@
         "Other targeted abilities and items still require facing.",
         "Applies generic incoming damage reduction on Nyx Assassin while burrowed. Stacks additively with other sources of generic incoming damage manipulation. The reduction affects all damage Nyx Assassin takes that is not flagged as HP removal.",
         "The reduction affects all damage Nyx Assassin takes that is not flagged as HP removal.",
-        "Can regenerate up to 90% of Nyx Assassin's max health and max mana in one minute.",
+        "Can regenerate up to 60% of Nyx Assassin's max health and max mana in one minute.",
         "Burrow lasts until using Unburrow sub-ability is used or Vendetta, or until death.",
         "Nyx Assassin can still be moved by abilities while burrowed, without getting unburrowed.",
         "Losing Aghanim's Scepter instantly unburrows Nyx."
@@ -168,7 +168,7 @@
       "params": [
         "Cast Animation: 1.5+0.1",
         "Fade Time: 0",
-        "Max Health\/Mana Regen Bonus: 1.5%",
+        "Max Health\/Mana Regen Bonus: 1%",
         "Incoming Damage Reduction: 50%",
         "Impale Cast\/Travel Range Increase: 525",
         "Impale Cooldown Reduction: 7",
@@ -247,11 +247,11 @@
   ],
   "mainAttributes": {
     "attrStrengthInc": 2.5,
-    "attrStrength": 18.0,
+    "attrStrength": 17.0,
     "attrIntelligence": 21.0,
     "attrIntelligenceInc": 2.1,
     "attrAgilityInc": 2.5,
-    "attrAgility": 19.0
+    "attrAgility": 18.0
   },
   "description": "Nyx Assassin, is a melee agility hero who is feared as one of the most effective gankers and solo-killers in the game. With his powerful burst damage nukes, Nyx Assassin specializes in disabling and killing lone and fragile enemies with little to no warning. He possesses an area nuke and stun ability in Impale, allowing him to disable enemies in a straight line in front of him while dealing damage. His Mana Burn ability can destroy a significant fraction of a target hero's mana pool while dealing the same amount as damage, making him the bane of weak intelligence heroes with lots of mana but very little health. Should the enemy attempt to attack him, Nyx Assassin can dissuade them with Spiked Carapace, stunning any heroes that attack him while reflecting their damage back at them. His ultimate, Vendetta, turns Nyx invisible, allowing him to deal tremendous pure damage to the next target that he strikes out of invisibility. Stalking from the shadows, Nyx Assassin can strike without warning and lay low his foes before they realize that their death is upon them.",
   "history": "Deep in the Archive of Ultimyr, shelved between scholarly treatises on dragon cladistics and books of untranslatable spells, there is an ancient tome of entomological curiosities. Compiled by scholars, the book describes the telepathic talents of the zealot scarab, a strange species of social insect with abilities unique to all the seven planes. Unlike most grubs of his colony, Nyx Assassin did not arise from metamorphosis with the plodding thoughts and blunted appendages common to the worker caste of his kind. For his was a special transformation, guided by the grace of Nyx. He was the chosen one, selected from the many and anointed with an extract of the queen goddess herself. Not all survive the dark blessing of the queen's chamber, but he emerged with a penetrating mind, and dagger-like claws\u2013his razor sharp mandibles raking the air while his thoughts projected directly into the minds of those around him. Of all zealot scarabs, he alone was selected for the highest calling. After his metamorphosis, he was reborn, by grace of Nyx, with abilities which shaped him for one thing and one thing only: to kill in the name of his goddess.",

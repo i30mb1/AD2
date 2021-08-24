@@ -2,7 +2,7 @@
   "abilities": [
     {
       "notes": [
-        "The Spiders health and attack damage talents affect Spiderlings and Spiderites.",
+        "Both Spiders talents affect Spiderlings and Spiderites.",
         "The agility talent effectively grants Broodmother 1.67 armor, 10 attack speed, and 10 attack damage.",
         "The health talent increases maximum health capacity, and keeps the current health percentage."
       ],
@@ -16,7 +16,7 @@
         {
           "talentLvl": "20",
           "talentLeft": "+400 Health",
-          "talentRight": "+15 Spiders Attack Damage"
+          "talentRight": "+50% Spiders Damage to Buildings"
         },
         {
           "talentLvl": "15",
@@ -49,7 +49,7 @@
       "spellName": "Insatiable Hunger",
       "params": [
         "Cast Animation: 0.2+0.5",
-        "Attack Damage Bonus: 35\/40\/45\/50 (TagTalent 85\/90\/95\/100)",
+        "Attack Damage Bonus: 35\/45\/55\/65 (TagTalent 85\/95\/105\/115)",
         "Lifesteal: 40%\/60%\/80%\/100% (TagTalent 90%\/110%\/130%\/150%)",
         "Duration: 8\/10\/12\/14"
       ],
@@ -65,9 +65,10 @@
       ],
       "notes": [
         "Has a global cast range when a part of another web is within the targeted area.",
-        "Upon learning, Broodmother instantly gains 3 charges. However, leveling it up further does not instantly grant the other charges. Acquiring Aghanim's Scepter instantly grants 9 charges as well. This only happens once, so re-acquiring it does not grant another 9 charges.",
-        "Acquiring Aghanim's Scepter instantly grants 9 charges as well. This only happens once, so re-acquiring it does not grant another 9 charges.",
-        "The buff only affects the caster, and all Spiderlings and Spiderites under the player's control. Other player-controlled units are unaffected. Does not affect invulnerable or hidden units.",
+        "Upon learning, Broodmother instantly gains 3 charges. However, leveling it up further does not instantly grant the other charges.",
+        "The buff only affects the caster, and all Spiderlings and Spiderites under the player's control. Other player-controlled units are unaffected. The movement speed gets lower by 0.225%\/0.375%\/0.525%\/0.675% for every 1% of health missing, reaching 0% at 20% health. The health percentage is check periodically and the effects adapted instantly. Does not affect invulnerable or hidden units.",
+        "The movement speed gets lower by 0.225%\/0.375%\/0.525%\/0.675% for every 1% of health missing, reaching 0% at 20% health.",
+        "The health percentage is check periodically and the effects adapted instantly.",
         "Does not affect invulnerable or hidden units.",
         "Can regenerate up to 180\/300\/420\/540 health in one minute.",
         "The effects are provided by an aura. Its buff lingers for 0.2 seconds.",
@@ -78,19 +79,19 @@
       "mana": "50",
       "hotKey": "W",
       "cooldown": "0",
-      "description": "Spins a large web that grants Broodmother a passive movement speed increase, gives free movement, and boosts regeneration while in its vicinity. Spin Web charges restore every 40 seconds. Spin Web can be cast from anywhere as long as the new web touches an existing web. Webs never expire, and can be manually destroyed. When the maximum limit of webs is exceeded, the oldest web disappears.",
+      "description": "Spins a large web that grants Broodmother a passive movement speed increase, and boosts regeneration while in its vicinity, as well as giving free movement as long as Broodmother hasn't received damage in the last 3 seconds. Spin Web charges restore every 40 seconds. Spin Web can be cast from anywhere as long as the new web touches an existing web. Webs never expire, and can be manually destroyed. When the maximum limit of webs is exceeded, the oldest web disappears.",
       "spellName": "Spin Web",
       "params": [
         "Cast Animation: 0.4+0.4",
         "Cast Range: 1000",
         "Web Radius: 900",
-        "Max Amount of Webs: 3\/5\/7\/9 (TagAghanim 6\/10\/14\/18)",
+        "Max Amount of Webs: 3\/5\/7\/9",
         "Health Regen Bonus: 3\/5\/7\/9",
-        "Move Speed Bonus: 18%\/30%\/42%\/54% (TagAghanim 35%\/50%\/65%\/80%)",
+        "Max Move Speed Bonus: 18%\/30%\/42%\/54%",
+        "Min Bonus Health Threshold: 20%",
         "Aura Linger Duration: 0.2",
-        "Number of Charges: 3\/5\/7\/9 (TagAghanim 6\/10\/14\/18)",
-        "Charge Replenish Time: 40 (TagTalent 25)",
-        "Increases movement speed and increases Spin Web max count."
+        "Number of Charges: 3\/5\/7\/9",
+        "Charge Replenish Time: 40 (TagTalent 25)"
       ],
       "itemBehaviour": [],
       "legacyKey": "B",
@@ -135,6 +136,56 @@
       "story": null
     },
     {
+      "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/5\/5a\/Broodmother_Spinner%27s_Snare_1.mp3\/revision\/latest?cb=20210823213143",
+      "effects": [
+        "Ability Target Point \/ Vector Targeting",
+        "Affects Enemies",
+        "Damage Magical"
+      ],
+      "notes": [
+        "Requires Aghanim's Scepter to be unlocked.",
+        "Cannot be cast within vicinity of another web line. The vector must not overlap with other line either to cast.",
+        "The web line forms over a 2-second duration, during which the line is completely inactive.",
+        "The web lines are completely invisible to the enemy and cannot be revealed.",
+        "Once formed, the line can trigger on any enemy hero coming within its area of effect. Only reacts on heroes, including clones, but excluding illusions and creep-heroes.",
+        "Only reacts on heroes, including clones, but excluding illusions and creep-heroes.",
+        "When triggered, the triggering hero reveives a single debuff that applies all effects. The modifier exposes the target, provides True Sight over the them and slows their movement speed. After 0.25 seconds, the modifier roots the target, preventing them from moving and casting certain mobility spells. This means the root effectively lasts 3.75 seconds. The damage over time starts after this delay as well, and ticks in 1-second intervals, resulting in 4 instances. Can deal a total of 400 damage to the target (before reductions).",
+        "The modifier exposes the target, provides True Sight over the them and slows their movement speed.",
+        "After 0.25 seconds, the modifier roots the target, preventing them from moving and casting certain mobility spells.",
+        "This means the root effectively lasts 3.75 seconds.",
+        "The damage over time starts after this delay as well, and ticks in 1-second intervals, resulting in 4 instances.",
+        "Can deal a total of 400 damage to the target (before reductions).",
+        "Once triggered, the web line becomes visible to enemies, and disappears after 4 seconds. This timer is independent from the debuff on the enemy, so removing the debuff does not cause the line to disappear earlier. During this time, other enemy heroes still may get debuffed by the line.",
+        "This timer is independent from the debuff on the enemy, so removing the debuff does not cause the line to disappear earlier.",
+        "During this time, other enemy heroes still may get debuffed by the line.",
+        "The web lines have no set duration, they last until triggered. Exceeding the max allowed number of lines instantly destroys the oldest line.",
+        "Exceeding the max allowed number of lines instantly destroys the oldest line.",
+        "The lines have no form of vision, and are not visible through the Fog of War for anyone."
+      ],
+      "mana": "100",
+      "hotKey": "D",
+      "cooldown": "0",
+      "description": "Broodmother creates a 900 width invisible web line. Enemy Heroes that cross the web line will make it visible and become rooted, visible in fog and receive 100dps for 4 seconds, after which the line is destroyed. Broodmother's team is notified in the Minimap whenever someone trips in a Web line. Multiple Heroes can trip on the same line until it's destroyed. Can only have 5 Snares Active. Formation Delay: 2, Cast Range: 600, Slow Duration: 0.25, Slow: 100%, Root Duration: 4, DPS: 100",
+      "spellName": "Spinner's Snare",
+      "params": [
+        "Cast Animation: 0.2+0.56",
+        "Cast Range: 600",
+        "Line Length: 900",
+        "Line Width: 50",
+        "Line Formation Time: 2",
+        "Max Amount of Lines: 5",
+        "Damage per Second: 100",
+        "Move Speed Slow: 100%",
+        "Root Delay: 0.25",
+        "Debuff Duration: 4",
+        "Number of Charges: 2",
+        "Charge Replenish Time: 20"
+      ],
+      "itemBehaviour": [],
+      "legacyKey": "D",
+      "story": "The slightest tremor of her web is all Arachnia needs to find her prey."
+    },
+    {
       "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/6\/6e\/Broodmother_Spawn_Spiderlings_1.mp3\/revision\/latest?cb=20191216011849",
       "effects": [
         "Ability Target Unit",
@@ -151,9 +202,9 @@
         "Has a stack limit of 7. If an enemy has already 7 instances of the debuff, a new cast does not affect them at all.",
         "Spiderlings are fully affected by Spin Web.",
         "The damage increasing talent immediately upgrades all of Broodmother's currently flying Spawn Spiderling projectiles.",
-        "The health increasing or attack damage increasing talent does not upgrade any of Broodmother's currently living Spiderlings or Spiderites."
+        "The health increasing or building damage increasing talent does not upgrade any of Broodmother's currently living Spiderlings or Spiderites."
       ],
-      "mana": "100",
+      "mana": "120",
       "hotKey": "R",
       "cooldown": "9\/8\/7",
       "description": "Broodmother injects her young into an enemy unit, dealing damage. The spiderlings will hatch if the target is killed while under this influence.",
@@ -161,10 +212,11 @@
       "params": [
         "Cast Animation: 0.2+0.5",
         "Cast Range: 900",
-        "Damage: 300\/370\/440 (TagTalent 380\/450\/520)",
+        "Damage: 240\/320\/400 (TagTalent 320\/400\/480)",
         "Number of Spiderlings: 4\/5\/6",
         "Debuff Duration: 20",
         "Spiderling Duration: 60",
+        "Spiders Building Damage Bonus: 50%",
         "Debuff persists if debuff was placed before spell immunity and when not dispelled.",
         "Blocked upon impact."
       ],
@@ -233,7 +285,7 @@
       "notes": [
         "Successive hits with Spawn Spiderite on the same target do not stack, only the debuff gets refreshed.",
         "The attacks first apply their damage, then the debuff.",
-        "Spiderites only spawn when the attacked unit dies while having the debuff on. It does not matter who kills the target, if it dies in any way, the Spiderite spawns.",
+        "Lua error in Module:VarQuery at line 21: No results found.. Spiderites only spawn when the attacked unit dies while having the debuff on. It does not matter who kills the target, if it dies in any way, the Spiderite spawns.",
         "It does not matter who kills the target, if it dies in any way, the Spiderite spawns.",
         "Does not affect wards and buildings, but affects allies.",
         "Spiderites are fully affected by Spin Web.",
@@ -260,7 +312,7 @@
     "attrStrength": 18.0,
     "attrIntelligence": 18.0,
     "attrIntelligenceInc": 2.0,
-    "attrAgilityInc": 3.0,
+    "attrAgilityInc": 3.4,
     "attrAgility": 19.0
   },
   "description": "Black Arachnia, the Broodmother, is a melee agility hero who is a notably powerful pusher. Her trademark spiderlings, as both an asset and a liability, define her play style. While a possible additional source of income, experience and lane pushes, spiderlings can easily feed opponents when not handled with deft micro and great awareness. Broodmother's abilities allow her to summon those spiderlings to do her bidding and to slow and kill heroes with relative ease if caught off guard, all while staying as elusive as possible with her webs and passives. She spends most of the early game pressuring a lane with little concern, due to her spiderlings and her added health regeneration, but she can also transition into a difficult to kill melee carry, which can dive in on and rapidly kill lone enemies with the right items later on.",
@@ -274,7 +326,7 @@
     {
       "talentLvl": "20",
       "talentLeft": "+400 Health",
-      "talentRight": "+15 Spiders Attack Damage"
+      "talentRight": "+50% Spiders Damage to Buildings"
     },
     {
       "talentLvl": "15",

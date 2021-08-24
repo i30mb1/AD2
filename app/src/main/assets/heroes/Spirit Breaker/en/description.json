@@ -13,17 +13,17 @@
         {
           "talentLvl": "25",
           "talentLeft": "+800 Health",
-          "talentRight": "+20% Greater Bash Chance"
+          "talentRight": "+25% Greater Bash Damage"
         },
         {
           "talentLvl": "20",
-          "talentLeft": "-5.5s Bulldoze Cooldown",
-          "talentRight": "+12% Greater Bash Damage"
+          "talentLeft": "+200 Charge of Darkness Speed Bonus",
+          "talentRight": "+10% Greater Bash Chance"
         },
         {
           "talentLvl": "15",
           "talentLeft": "+40 Damage",
-          "talentRight": "+10 Health Regen"
+          "talentRight": "-4s Bulldoze Cooldown"
         },
         {
           "talentLvl": "10",
@@ -66,19 +66,19 @@
         "Destroys trees within a small radius around Spirit Breaker whenever the charge ends.",
         "The hidden buff buff is placed upon reaching the target and lasts for 0.1 seconds. It is responsible for the Greater Bash."
       ],
-      "mana": "70\/80\/90\/100",
+      "mana": "100",
       "hotKey": "Q",
       "cooldown": "17\/15\/13\/11 (TagTalent 7)",
       "description": "Spirit Breaker fixes his sight on an enemy unit and starts charging through all objects. All enemy units passed through and the targeted unit will be hit by a Greater Bash. If the targeted unit dies, Spirit Breaker will change his target to the nearest enemy unit to that location.",
       "spellName": "Charge of Darkness",
       "params": [
-        "Cast Animation: 0.3+0.5",
+        "Cast Animation: 0.3+0.5 (TagAghanim 0.1+?)",
         "Cast Range: Global",
         "Greater Bash Radius: 300",
-        "Charge Speed Bonus: 300\/325\/350\/375 (TagAghanim 475\/500\/525\/550)",
+        "Charge Speed Bonus: 300\/325\/350\/375 (TagTalent 500\/525\/550\/575)",
         "Stun Duration: 1.2\/1.6\/2\/2.4",
-        "Increases Charge of Darkness movement speed and reduces cooldown.",
-        "Greater Bash is still applied, since it pierces spell immunity.",
+        "Reduces cooldown, reduces cooldown and allows Charge of Darkness to pierce spell immunity.",
+        "Greater Bash is still applied, since it pierces spell immunity. Fully pierces spell immunity.",
         "Blocked fully only when primary target. Blocked upon cast. If the charge has already begun, its impact is not blocked."
       ],
       "itemBehaviour": [],
@@ -97,7 +97,7 @@
       ],
       "mana": "30\/40\/50\/60",
       "hotKey": "W",
-      "cooldown": "22\/20\/18\/16 (TagTalent 16.5\/14.5\/12.5\/10.5)",
+      "cooldown": "22\/20\/18\/16 (TagTalent 18\/16\/14\/12)",
       "description": "Spirit Breaker gains movement speed and status resistance to ram through enemies. Can be used while charging.",
       "spellName": "Bulldoze",
       "params": [
@@ -124,15 +124,15 @@
         "Greater Bash's effects happen before the attack damage of the attack that procs it, and before Nether Strike's damage.",
         "Knocks back bashed units 143\/152\/158\/162 distance, over 0.5 seconds, resulting in a speed of 286\/304\/316\/324. Also knocks affected enemies 50 units upwards, resulting in a small arc. This has only visual purposes.",
         "Also knocks affected enemies 50 units upwards, resulting in a small arc. This has only visual purposes.",
-        "With the movement speed limits of 100 to 550, the minimum and maximum possible damage are 14\/20\/26\/32 and 77\/110\/143\/176 (TagTalent 26\/32\/38\/44 and 143\/176\/209\/242).",
+        "With the movement speed limits of 100 to 550, the minimum and maximum possible damage are 14\/20\/26\/32 and 77\/110\/143\/176 (TagTalent 39\/45\/51\/57 and 214.5\/247.5\/280.5\/313.5).",
         "The bonus damage is dealt in a separate damage instance, and counts as spell damage. This means it is not affected or considered by anything that works with attack damage. This also means that it fully works with spell damage amplification and spell lifesteal.",
         "This means it is not affected or considered by anything that works with attack damage.",
         "This also means that it fully works with spell damage amplification and spell lifesteal.",
         "Can proc on Roshan, putting it on cooldown and applying the damage, but Roshan is neither knocked back nor stunned.",
-        "Adds an average of 2.38%\/3.4%\/4.42%\/5.44% of Spirit Breaker's movement speed as magical damage to every attack. The damage increasing talent adds an average of 4.42%\/5.44%\/6.46%\/7.48% damage. The proc chance increasing talent adds an average of 5.18%\/7.4%\/9.62%\/11.84% damage. With both talents, it adds an average of 9.62%\/11.84%\/14.06%\/16.28% damage.",
-        "The damage increasing talent adds an average of 4.42%\/5.44%\/6.46%\/7.48% damage.",
-        "The proc chance increasing talent adds an average of 5.18%\/7.4%\/9.62%\/11.84% damage.",
-        "With both talents, it adds an average of 9.62%\/11.84%\/14.06%\/16.28% damage.",
+        "Adds an average of 2.38%\/3.4%\/4.42%\/5.44% of Spirit Breaker's movement speed as magical damage to every attack. The damage increasing talent adds an average of 6.63%\/7.65%\/8.67%\/9.69% damage. The proc chance increasing talent adds an average of 3.78%\/5.4%\/7.02%\/8.64% damage. With both talents, it adds an average of 10.53%\/12.15%\/13.77%\/15.39% damage.",
+        "The damage increasing talent adds an average of 6.63%\/7.65%\/8.67%\/9.69% damage.",
+        "The proc chance increasing talent adds an average of 3.78%\/5.4%\/7.02%\/8.64% damage.",
+        "With both talents, it adds an average of 10.53%\/12.15%\/13.77%\/15.39% damage.",
         "Does not go on cooldown when proccing from Charge of Darkness or Nether Strike.",
         "Does not work against wards, buildings and allied units.",
         "Greater Bash uses pseudo-random distribution."
@@ -143,8 +143,8 @@
       "description": "Gives a chance to stun and knockback an enemy unit on an attack. Deals a percentage of movement speed as damage.",
       "spellName": "Greater Bash",
       "params": [
-        "Proc Chance: 17% (TagTalent 37%)",
-        "Move Speed as Damage: 14%\/20%\/26%\/32% (TagTalent 26%\/32%\/38%\/44%)",
+        "Proc Chance: 17% (TagTalent 27%)",
+        "Move Speed as Damage: 14%\/20%\/26%\/32% (TagTalent 39%\/45%\/51%\/57%)",
         "Knockback Distance: 143\/152\/158\/162",
         "Knockback Duration: 0.5",
         "Stun Duration: 0.9\/1.2\/1.5\/1.8",
@@ -198,8 +198,8 @@
     }
   ],
   "mainAttributes": {
-    "attrStrengthInc": 3.1,
-    "attrStrength": 29.0,
+    "attrStrengthInc": 3.0,
+    "attrStrength": 27.0,
     "attrIntelligence": 14.0,
     "attrIntelligenceInc": 1.8,
     "attrAgilityInc": 1.7,
@@ -211,17 +211,17 @@
     {
       "talentLvl": "25",
       "talentLeft": "+800 Health",
-      "talentRight": "+20% Greater Bash Chance"
+      "talentRight": "+25% Greater Bash Damage"
     },
     {
       "talentLvl": "20",
-      "talentLeft": "-5.5s Bulldoze Cooldown",
-      "talentRight": "+12% Greater Bash Damage"
+      "talentLeft": "+200 Charge of Darkness Speed Bonus",
+      "talentRight": "+10% Greater Bash Chance"
     },
     {
       "talentLvl": "15",
       "talentLeft": "+40 Damage",
-      "talentRight": "+10 Health Regen"
+      "talentRight": "-4s Bulldoze Cooldown"
     },
     {
       "talentLvl": "10",

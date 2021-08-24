@@ -4,7 +4,7 @@
       "notes": [
         "Talents are fully copied by the Tempest Double.",
         "The health talent increases maximum health capacity, and keeps the current health percentage.",
-        "The cooldown reduction talent stacks multiplicatively with other sources cooldown reduction.",
+        "The armor talent does not benefit illusions.",
         "The lifesteal talent stacks additively with other sources of lifesteal."
       ],
       "spellName": "Talent",
@@ -16,13 +16,13 @@
         },
         {
           "talentLvl": "20",
-          "talentLeft": "+100 Attack Range",
+          "talentLeft": "+40 Flux Damage",
           "talentRight": "+125 Spark Wraith Damage"
         },
         {
           "talentLvl": "15",
-          "talentLeft": "12% Cooldown Reduction",
-          "talentRight": "+40 Attack Speed"
+          "talentLeft": "+40 Magnetic Field Attack Speed",
+          "talentRight": "+8 Armor"
         },
         {
           "talentLvl": "10",
@@ -41,22 +41,23 @@
       "notes": [
         "If the target has allies or neutral creeps within the 225 search radius, the ability temporarily stops slowing and damaging the target, until it is alone again.",
         "Checks for enemies and neutrals in 0.5-second intervals, beginning instantly upon cast. The slow updates based on the result of the checks.",
-        "Also deals damage in the same intervals, based on the checks, dealing 7.5\/15\/22.5\/30 damage, resulting in 13 possible instances.",
+        "Also deals damage in the same intervals, based on the checks, dealing 7.5\/15\/22.5\/30 (TagTalent 27.5\/35\/42.5\/50) damage, resulting in 13 possible instances.",
         "While Flux is muted, the particle effects on the target vanish, with only a red glow remaining on the unit, indicating the debuff is still there.",
         "Nearby buildings, wards and hidden units are ignored and do not mute the effects. Invulnerable units, however, are not ignored.",
-        "Can deal up to 97.5\/195\/292.5\/390 damage to the target if all instances are applied (before reductions).",
+        "Can deal up to 97.5\/195\/292.5\/390 (TagTalent 357.5\/455\/552.5\/650) damage to the target if all instances are applied (before reductions). The damage per second increasing talent does not upgrade already existing instances of Flux.",
+        "The damage per second increasing talent does not upgrade already existing instances of Flux.",
         "Multiple casts on the same target fully stack, with all instances working independently from each other."
       ],
       "mana": "75",
       "hotKey": "Q",
-      "cooldown": "16 (TagTalent 14.08)",
+      "cooldown": "16",
       "description": "Infuses a lone enemy unit with swirling, volatile energy, slowing its movement speed and dealing damage over time. The effect is muted if another enemy unit is near the target.",
       "spellName": "Flux",
       "params": [
         "Cast Animation: 0.3+0.77",
         "Cast Range: 500\/600\/700\/800 (TagTalent 675\/775\/875\/975)",
         "Search Radius: 225",
-        "Damage per Second: 15\/30\/45\/60",
+        "Damage per Second: 15\/30\/45\/60 (TagTalent 55\/70\/85\/100)",
         "Move Speed Slow: 20%\/30%\/40%\/50%",
         "Duration: 6",
         "Slow persists and attempts to deal damage if debuff was placed before spell immunity and when not dispelled."
@@ -80,14 +81,17 @@
         "Affects heroes (including illusions and clones), creep-heroes and buildings. All other units are completely unaffected.",
         "Does not affect invulnerable units, so buildings are only affected when attackable.",
         "The attack speed bonus of multiple Magnetic Fields does not stack.",
-        "With Aghanim's Shard, Magnetic Field pushes every enemy within its 300 radius out of it upon cast. The knockback is not a set distance. It pushes every enemy so that they are 350 range away from the center of the targeted area. So the minimum knockback distance is 50 and the maximum is 350. The knockback duration is always 0.3, so the speed varies between 1166.67 and 166.67, depending on the knockback distance. Enemies are not disabled during the knockback, and are, besides moving, able to act freely during it. Can push units over impassable terrain. Any trees the knocked back unit collides with gets destroyed.",
+        "Despite its visual effects, the effective area is a cylinder not a sphere.",
+        "The attack speed increasing talent immediately upgrades all currently active Magnetic Fields, but not already placed buffs.",
+        "With Aghanim's Shard, Magnetic Field pushes every enemy within its 300 radius out of it upon cast. The knockback is not a set distance. It pushes every enemy so that they are 350 range away from the center of the targeted area. So the minimum knockback distance is 50 and the maximum is 350. The knockback duration is always 0.3, so the speed varies between 1166.67 \u2014 166.67, depending on the knockback distance. Enemies are not disabled during the knockback, and are, besides moving, able to act freely during it. Can push units over impassable terrain. Any trees the knocked back unit collides with gets destroyed.",
         "The knockback is not a set distance. It pushes every enemy so that they are 350 range away from the center of the targeted area. So the minimum knockback distance is 50 and the maximum is 350.",
-        "The knockback duration is always 0.3, so the speed varies between 1166.67 and 166.67, depending on the knockback distance.",
+        "The knockback duration is always 0.3, so the speed varies between 1166.67 \u2014 166.67, depending on the knockback distance.",
         "Enemies are not disabled during the knockback, and are, besides moving, able to act freely during it.",
         "Can push units over impassable terrain. Any trees the knocked back unit collides with gets destroyed.",
-        "With Aghanim's Shard, immediately causes all already placed Magnetic Fields to apply the 40% magic resistance and 20% movement speed slow. Increases both heroes and buildings' magic resistance within its 300 effect radius. The movement speed slow of multiple fields stack additively with each and with other sources of movement speed slow. The magic resistance bonus of multiple fields stack multiplicatively with each and with other sources of magic resistance. Assuming basic 25% magic resistance for heroes or 0% magic resistance for buildings with no other sources of magic resistance: Increases most heroes' total magic resistance to 55% (or 73% by stacking two instances). Increases all buildings' total magic resistance to 40% (or 64% by stacking two instances).",
+        "With Aghanim's Shard, immediately causes all already placed Magnetic Fields to apply the 40% magic resistance and 30% movement speed slow. Increases both heroes and buildings' magic resistance within its 300 effect radius. The movement speed slow of multiple fields stack additively with each and with other sources of movement speed slow. Reduces enemies' 60% movement speed by stacking two instances. The magic resistance bonus of multiple fields stack multiplicatively with each and with other sources of magic resistance. Assuming basic 25% magic resistance for heroes or 0% magic resistance for buildings with no other sources of magic resistance: Increases most heroes' total magic resistance to 55% (or 73% by stacking two instances). Increases all buildings' total magic resistance to 40% (or 64% by stacking two instances).",
         "Increases both heroes and buildings' magic resistance within its 300 effect radius.",
-        "The movement speed slow of multiple fields stack additively with each and with other sources of movement speed slow.",
+        "The movement speed slow of multiple fields stack additively with each and with other sources of movement speed slow. Reduces enemies' 60% movement speed by stacking two instances.",
+        "Reduces enemies' 60% movement speed by stacking two instances.",
         "The magic resistance bonus of multiple fields stack multiplicatively with each and with other sources of magic resistance.",
         "Assuming basic 25% magic resistance for heroes or 0% magic resistance for buildings with no other sources of magic resistance: Increases most heroes' total magic resistance to 55% (or 73% by stacking two instances). Increases all buildings' total magic resistance to 40% (or 64% by stacking two instances).",
         "Increases most heroes' total magic resistance to 55% (or 73% by stacking two instances).",
@@ -95,7 +99,7 @@
       ],
       "mana": "50\/70\/90\/110",
       "hotKey": "W",
-      "cooldown": "20 (TagTalent 17.6)",
+      "cooldown": "20",
       "description": "Generates a circular distortion field of magnetic energy that protects allied heroes and buildings within it by evading attacks coming from outside the field.",
       "spellName": "Magnetic Field",
       "params": [
@@ -103,14 +107,14 @@
         "Cast Range: 900",
         "Effect Radius: 300",
         "Evasion: 100%",
-        "Attack Speed Bonus: 50\/60\/70\/80",
+        "Attack Speed Bonus: 50\/60\/70\/80 (TagTalent 90\/100\/110\/120)",
         "Aura Linger Duration: 0.1",
         "Duration: 3.5\/4.5\/5.5\/6.5",
         "Magic Resistance Bonus: 40%",
-        "Enemy Move Speed Slow: 20%",
+        "Enemy Move Speed Slow: 30%",
         "Enemy Max Knockback Distance: 350",
         "Enemy Knockback Duration: 0.3",
-        "Magnetic Field now pushes enemies out of the area at cast time, and provides allies in it with +40% Magic Resistance. Slows enemies inside by 20%.",
+        "Magnetic Field now pushes enemies out of the area at cast time, and provides allies in it with +40% Magic Resistance. Slows enemies inside by 30%.",
         "Fully affects spell immune allies and self. Knockback and slow do not affect spell immune enemies."
       ],
       "itemBehaviour": [],
@@ -142,7 +146,7 @@
       ],
       "mana": "80",
       "hotKey": "E",
-      "cooldown": "4 (TagTalent 3.52)",
+      "cooldown": "4",
       "description": "Summons a Spark Wraith that slowly materializes and patrols a targeted area until an enemy comes within its range. Once a target has been found the wraith fuses with them, dealing magical damage and slowing the unit.",
       "spellName": "Spark Wraith",
       "params": [
@@ -224,13 +228,13 @@
     },
     {
       "talentLvl": "20",
-      "talentLeft": "+100 Attack Range",
+      "talentLeft": "+40 Flux Damage",
       "talentRight": "+125 Spark Wraith Damage"
     },
     {
       "talentLvl": "15",
-      "talentLeft": "12% Cooldown Reduction",
-      "talentRight": "+40 Attack Speed"
+      "talentLeft": "+40 Magnetic Field Attack Speed",
+      "talentRight": "+8 Armor"
     },
     {
       "talentLvl": "10",

@@ -1,10 +1,6 @@
 {
   "abilities": [
     {
-      "notes": [
-        "This attack damage talent is added as raw attack damage. Does not benefit illusions and is not affected by most percentage-based damage increasing or reducing effects.",
-        "Does not benefit illusions and is not affected by most percentage-based damage increasing or reducing effects."
-      ],
       "spellName": "Talent",
       "talents": [
         {
@@ -24,7 +20,7 @@
         },
         {
           "talentLvl": "10",
-          "talentLeft": "+15 Damage",
+          "talentLeft": "+60 Aether Remnant Damage",
           "talentRight": "+2.5 Mana Regen"
         }
       ]
@@ -47,15 +43,15 @@
         "After the delay, the remnant searches for enemies within a path in front of it. The search path has a length of 450 and width of 130. When multiple enemies are within the area, it grabs the one furthest away closest to the center line.",
         "The search path has a length of 450 and width of 130.",
         "When multiple enemies are within the area, it grabs the one furthest away closest to the center line.",
-        "Hypnotizes the target, forcing it to move towards the the remnant, and preventing it from acting. Sets the target's movement speed to 44%\/50%\/56%\/62% of the distance between Remnant and the target. If the target is too close, it stops moving once within 100 range of the remnant. When cast at max cast range, this results in a speed of 275\/267.86\/262.5\/258.33.",
+        "Hypnotizes the target, forcing it to move towards the the remnant, and preventing it from acting. Sets the target's movement speed to 44%\/50%\/56%\/62% of the distance between Remnant and the target. If the target is too close, it stops moving once within 100 range of the remnant. When cast at max cast range, this results in a speed of 235.71\/234.38\/233.33\/232.5.",
         "Sets the target's movement speed to 44%\/50%\/56%\/62% of the distance between Remnant and the target.",
         "If the target is too close, it stops moving once within 100 range of the remnant.",
-        "When cast at max cast range, this results in a speed of 275\/267.86\/262.5\/258.33.",
+        "When cast at max cast range, this results in a speed of 235.71\/234.38\/233.33\/232.5.",
         "The speed is set once upon cast. If the target gets moved or teleported, the speed does not adapt.",
         "Aether Remnant first applies the damage, then the pull debuff.",
         "Destroys trees within a 200 radius around the target at the end of the hypnosis."
       ],
-      "mana": "85\/90\/95\/100",
+      "mana": "75\/80\/85\/90",
       "hotKey": "Q",
       "cooldown": "17\/15\/13\/11",
       "description": "Vector targeted. Void Spirit dispatches a remnant to the target location. The remnant stands watch over the region, facing the direction of his vector. When a unit crosses its gaze, the remnant pulls it in and damages it.",
@@ -67,9 +63,9 @@
         "Remnant Watch Width: 130",
         "Watch Path Vision Radius: 200",
         "Activation Delay: 0.4",
-        "Damage: 80\/130\/180\/230",
+        "Damage: 80\/130\/180\/230 (TagTalent 140\/190\/240\/290)",
         "Distance Moved: 44%\/50%\/56%\/62%",
-        "Pull Duration: 1.2\/1.4\/1.6\/1.8",
+        "Pull Duration: 1.4\/1.6\/1.8\/2",
         "Remnant Duration: 20",
         "True Sight Radius: 475",
         "Debuff persist if placed before spell immunity and when not dispelled."
@@ -198,7 +194,7 @@
         "Max Distance: 700\/850\/1000",
         "Path Width: 170",
         "Move Speed Slow: 40%\/60%\/80%",
-        "Debuff Damage: 150\/200\/250",
+        "Debuff Damage: 150\/250\/350",
         "Debuff Duration: 1.25",
         "Number of Charges: 2",
         "Charge Replenish Time: 28\/23\/18 (TagTalent 24\/19\/14)",
@@ -237,7 +233,7 @@
     },
     {
       "talentLvl": "10",
-      "talentLeft": "+15 Damage",
+      "talentLeft": "+60 Aether Remnant Damage",
       "talentRight": "+2.5 Mana Regen"
     }
   ]

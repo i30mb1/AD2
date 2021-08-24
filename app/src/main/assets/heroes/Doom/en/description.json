@@ -11,7 +11,7 @@
         {
           "talentLvl": "25",
           "talentLeft": "+150% Cleave",
-          "talentRight": "+2.4% Infernal Blade Damage"
+          "talentRight": "+2.1% Infernal Blade Damage"
         },
         {
           "talentLvl": "20",
@@ -21,7 +21,7 @@
         {
           "talentLvl": "15",
           "talentLeft": "Devour Can Target Ancients",
-          "talentRight": "-10s Scorched Earth Cooldown"
+          "talentRight": "-8s Scorched Earth Cooldown"
         },
         {
           "talentLvl": "10",
@@ -59,7 +59,7 @@
       "params": [
         "Cast Animation: 0.3+0.5",
         "Cast Range: 300",
-        "Gold Bonus: 60\/120\/180\/240",
+        "Gold Bonus: 60\/110\/160\/210",
         "Max Creep Level: 4\/5\/6\/6",
         "Digest Duration: 60"
       ],
@@ -79,8 +79,8 @@
         "Scorched Earth's radius is centered on Doom for the full duration.",
         "The movement speed bonus is provided by an aura, which lingers for 0.5 seconds.",
         "The damage is independent from the aura.",
-        "Deals damage in 1-second intervals, starting 1 second after cast, resulting in up to 15 possible instances.",
-        "Can deal up to 225\/450\/675\/900 (TagTalent 525\/750\/975\/1200) damage to a single enemy when within range for the entire duration (before reductions).",
+        "Deals damage in 1-second intervals, starting 1 second after cast, resulting in up to 10\/12\/14\/16 possible instances.",
+        "Can deal up to 180\/384\/644\/960 (TagTalent 380\/624\/924\/1280) damage to a single enemy when within range for the entire duration (before reductions).",
         "The damage increasing talent immediately upgrades damage of the current cast. However, leveling the ability up does not update the current cast.",
         "However, leveling the ability up does not update the current cast.",
         "The movement speed increasing talent or leveling up the ability does not update the movement speed of the current cast.",
@@ -88,16 +88,16 @@
       ],
       "mana": "60\/70\/80\/90",
       "hotKey": "W",
-      "cooldown": "50\/45\/40\/35 (TagTalent 40\/35\/30\/25)",
+      "cooldown": "35 (TagTalent 27)",
       "description": "Carpets the nearby earth in flames which damage enemies, while also granting him increased movement speed.",
       "spellName": "Scorched Earth",
       "params": [
         "Cast Animation: 0+0.5",
         "Radius: 600",
-        "Damage per Second: 15\/30\/45\/60 (TagTalent 35\/50\/65\/80)",
+        "Damage per Second: 18\/32\/46\/60 (TagTalent 38\/52\/66\/80)",
         "Move Speed Bonus: 9%\/11%\/13%\/15% (TagTalent 24%\/26%\/28%\/30%)",
         "Aura Linger Duration: 0.5",
-        "Duration: 15",
+        "Duration: 10\/12\/14\/16",
         "Affects Doom while spell immune."
       ],
       "itemBehaviour": [],
@@ -116,7 +116,7 @@
         "Cannot be cast on Roshan.",
         "Infernal Blade does not work against allied units, buildings or wards.",
         "Deals damage in 1-second intervals, starting 1 second after the debuff is applied, resulting in 4 instances.",
-        "Can deal up to 64\/80\/96\/112 + 5%\/10%\/15%\/20% (TagTalent 14.6%\/19.6%\/24.6%\/29.6%) of the target's maximum health as damage (before reductions).",
+        "Can deal up to 64\/96\/128\/160 + 5%\/10%\/15%\/20% (TagTalent 13.4%\/18.4%\/23.4%\/28.4%) of the target's maximum health as damage (before reductions).",
         "Multiple instances on the same target fully stack and work independently. The max health as damage increasing talent or leveling up the ability does not update the damage of the current instances.",
         "The max health as damage increasing talent or leveling up the ability does not update the damage of the current instances.",
         "The stun is provided by a bash, which fully stacks with other bash abilities. The attack first applies the bash, then the burn debuffs, then its own damage.",
@@ -132,8 +132,8 @@
       "spellName": "Infernal Blade",
       "params": [
         "Cast Range: 200",
-        "Base Damage per second: 16\/20\/24\/28",
-        "Max Health as Damage per Second: 1.25%\/2.5%\/3.75%\/5% (TagTalent 3.65%\/4.9%\/6.15%\/7.4%)",
+        "Base Damage per second: 16\/24\/32\/40",
+        "Max Health as Damage per Second: 1.25%\/2.5%\/3.75%\/5% (TagTalent 3.35%\/4.6%\/5.85%\/7.1%)",
         "Damage Duration: 4",
         "Bash Duration: 0.6 (TagTalent 1.2)",
         "Level Multiplier: 3",
@@ -188,7 +188,7 @@
     "attrStrengthInc": 3.7,
     "attrStrength": 24.0,
     "attrIntelligence": 15.0,
-    "attrIntelligenceInc": 2.1,
+    "attrIntelligenceInc": 1.7,
     "attrAgilityInc": 0.9,
     "attrAgility": 11.0
   },
@@ -198,7 +198,7 @@
     {
       "talentLvl": "25",
       "talentLeft": "+150% Cleave",
-      "talentRight": "+2.4% Infernal Blade Damage"
+      "talentRight": "+2.1% Infernal Blade Damage"
     },
     {
       "talentLvl": "20",
@@ -208,7 +208,7 @@
     {
       "talentLvl": "15",
       "talentLeft": "Devour Can Target Ancients",
-      "talentRight": "-10s Scorched Earth Cooldown"
+      "talentRight": "-8s Scorched Earth Cooldown"
     },
     {
       "talentLvl": "10",

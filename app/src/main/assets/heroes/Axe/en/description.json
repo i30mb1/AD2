@@ -2,8 +2,8 @@
   "abilities": [
     {
       "notes": [
-        "The strength talent effectively grants Axe 180 health, 0.9 health regeneration, and 9 attack damage.",
-        "The health talent increases maximum health capacity, and keeps the current health percentage."
+        "The magic resistance talent stacks multiplicatively with other sources of magic resistance. Increases Axe's magic resistance to 34%.",
+        "Increases Axe's magic resistance to 34%."
       ],
       "spellName": "Talent",
       "talents": [
@@ -19,12 +19,12 @@
         },
         {
           "talentLvl": "15",
-          "talentLeft": "+300 Health",
+          "talentLeft": "+30 Counter Helix Damage",
           "talentRight": "+25 Movement Speed"
         },
         {
           "talentLvl": "10",
-          "talentLeft": "+9 Strength",
+          "talentLeft": "+12% Magic Resistance",
           "talentRight": "+1.5 Mana Regen"
         }
       ]
@@ -109,7 +109,7 @@
       "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/8\/8e\/Axe_Counter_Helix.mp3\/revision\/latest?cb=20191216010823",
       "effects": [
         "Ability Passive",
-        "Affects Enemies (TagAghanim Self)",
+        "Affects Enemies",
         "Damage Pure"
       ],
       "notes": [
@@ -120,8 +120,11 @@
         "Despite the visual effects, the damage is applied instantly within the radius.",
         "Counter Helix uses pseudo-random distribution.",
         "Counter Helix does not use a regular cooldown. It is neither displayed on the ability icon when proccing, nor is it affected by cooldown manipulating effects.",
-        "With Aghanim's Shard, Counter Helix can proc on Axe's attacks as well. These procs are independent from the regular procs and even work while the ability is on cooldown.",
-        "These procs are independent from the regular procs and even work while the ability is on cooldown."
+        "With Aghanim's Shard, Counter Helix places one debuff on enemies within its radius. This debuff gets stronger when it gets refreshed with successive procs. The debuff can stack up to 5 times. A number on the icon shows the current number of stacks. Successive procs refresh the entire stack's duration. Can reduce an enemy's attack damage by 20%\/40%\/60%\/80%\/100% with each amount of stacks. Reduces hit enemies' total attack damage, including raw attack damage bonuses.",
+        "The debuff can stack up to 5 times. A number on the icon shows the current number of stacks.",
+        "Successive procs refresh the entire stack's duration.",
+        "Can reduce an enemy's attack damage by 20%\/40%\/60%\/80%\/100% with each amount of stacks.",
+        "Reduces hit enemies' total attack damage, including raw attack damage bonuses."
       ],
       "mana": null,
       "hotKey": "E",
@@ -130,11 +133,13 @@
       "spellName": "Counter Helix",
       "params": [
         "Radius: 275",
-        "Proc Chance: 17%\/18%\/19%\/20% (TagTalent 22%\/23%\/24%\/25%)",
-        "Damage: 60\/100\/140\/180",
-        "Attack Speed Bonus: 35",
-        "Causes Axe's attacks to have a chance to proc a Counter Helix. Attack procs ignore Counter Helix cooldown. Increases attack speed by 35 and proc chance by 5%.",
-        "If Break is applied by an attack, Counter Helix may trigger first on that attack before getting disabled. The attack speed bonus is not disabled.",
+        "Proc Chance: 17%\/18%\/19%\/20% (TagTalent 27%\/28%\/29%\/30%)",
+        "Damage: 60\/100\/140\/180 (TagTalent 90\/130\/170\/210)",
+        "Max Stacks: 5",
+        "Attack Damage Reduction per Stack: 20%",
+        "Stacks Duration: 6",
+        "Counter Helix now applies a stacking -20% Attack Damage debuff for 6s to enemies hit by it. Increases Counter Helix Chance by 10%.",
+        "If Break is applied by an attack, Counter Helix may trigger first on that attack before getting disabled.",
         "Axe illusions have a fully functional Counter Helix."
       ],
       "itemBehaviour": [],
@@ -202,12 +207,12 @@
     },
     {
       "talentLvl": "15",
-      "talentLeft": "+300 Health",
+      "talentLeft": "+30 Counter Helix Damage",
       "talentRight": "+25 Movement Speed"
     },
     {
       "talentLvl": "10",
-      "talentLeft": "+9 Strength",
+      "talentLeft": "+12% Magic Resistance",
       "talentRight": "+1.5 Mana Regen"
     }
   ]

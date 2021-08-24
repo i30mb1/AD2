@@ -20,7 +20,7 @@
         },
         {
           "talentLvl": "15",
-          "talentLeft": "+350 Health Beastmaster Controlled",
+          "talentLeft": "+250 Health Beastmaster Controlled",
           "talentRight": "+3 Mana Regen"
         },
         {
@@ -93,7 +93,7 @@
       "params": [
         "Cast Animation: 0.3+0.67",
         "Number of Boars: 1",
-        "Summons Duration: 60"
+        "Boar Duration: 60"
       ],
       "itemBehaviour": [],
       "legacyKey": "D",
@@ -102,7 +102,7 @@
     {
       "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/2\/27\/Beastmaster_Call_of_the_Wild_Hawk.mp3\/revision\/latest?cb=20191216011215",
       "effects": [
-        "Ability No Target"
+        "Ability Target Area (TagAghanim Target Unit)"
       ],
       "notes": [
         "Leveling this ability automatically levels Call of the Wild Boar as well. In Ability Draft, Call of the Wild Hawk is unavailable. Call of the Wild Boar is a stand-alone ability.",
@@ -113,10 +113,14 @@
         "Its flight towards the target area cannot be interrupted by anything.",
         "If the hawk gets its movement disabled (e.g. stunned, rooted, etc), it resumes moving to the location as soon as it can move again.",
         "Taunts and hypnotize cause the hawk to stop for their duration, but it resumes as soon as the taunt expires. The hawk completely ignores fear.",
-        "With Aghanim's Shard, the hawk can be controlled normally, and the player can stop the initial flight with any order. However, with Aghanim's Shard, taunt, hypnosis and fear may now interrupt the initial flight as well. Acquiring Aghanim's Shard does not update already existing Hawks on the map.",
-        "However, with Aghanim's Shard, taunt, hypnosis and fear may now interrupt the initial flight as well.",
-        "Acquiring Aghanim's Shard does not update already existing Hawks on the map.",
-        "Hawks do not block neutral creep camps."
+        "Hawks do not block neutral creep camps.",
+        "Acquiring Aghanim's Shard does not retroactively grant the Dive Bomb ability to already summoned Hawks.",
+        "With Aghanim's Shard, this ability can be directly targeted on an enemy unit. When done, the hawk flies towards that unit's location upon cast, as if ground-targeted. It does not alter its path if the target moves. If at any time while traveling the target comes within cast range of Dive Bomb, the Hawk casts it on them. If the target gets out of cast range before the cast finishes, it gets canceled and the hawk resumes traveling to the cast location. However, the hawk may attempt to cast Dive Bomb again if the target comes within range again. Once the hawk reaches the cast location and becomes stationary, it no longer attempts to cast Dive Bomb on the original target.",
+        "When done, the hawk flies towards that unit's location upon cast, as if ground-targeted. It does not alter its path if the target moves.",
+        "If at any time while traveling the target comes within cast range of Dive Bomb, the Hawk casts it on them.",
+        "If the target gets out of cast range before the cast finishes, it gets canceled and the hawk resumes traveling to the cast location.",
+        "However, the hawk may attempt to cast Dive Bomb again if the target comes within range again.",
+        "Once the hawk reaches the cast location and becomes stationary, it no longer attempts to cast Dive Bomb on the original target."
       ],
       "mana": "30",
       "hotKey": "E",
@@ -125,8 +129,9 @@
       "spellName": "Call of the Wild Hawk",
       "params": [
         "Cast Animation: 0.3+0.67",
+        "Cast Range: Global",
         "Number of Hawks: 1",
-        "Summons Duration: 60",
+        "Hawk Duration: 60",
         "Reduces Hawk cooldown by 15. Hawks gain Dive Bomb."
       ],
       "itemBehaviour": [],
@@ -226,7 +231,7 @@
       "spellName": "Health Aura",
       "params": [
         "Radius: Global",
-        "Health Bonus: 350",
+        "Health Bonus: 250",
         "Aura Linger Duration: 0.5",
         "Illusions bestow and benifit from the aura. Multiple instances of the aura do not stack."
       ],
@@ -321,7 +326,7 @@
     },
     {
       "talentLvl": "15",
-      "talentLeft": "+350 Health Beastmaster Controlled",
+      "talentLeft": "+250 Health Beastmaster Controlled",
       "talentRight": "+3 Mana Regen"
     },
     {

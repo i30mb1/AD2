@@ -19,13 +19,13 @@
         },
         {
           "talentLvl": "15",
-          "talentLeft": "-8s Spectral Dagger Cooldown",
+          "talentLeft": "+100 Spectral Dagger Damage",
           "talentRight": "+12 Desolate Damage"
         },
         {
           "talentLvl": "10",
           "talentLeft": "+5 All Stats",
-          "talentRight": "+5 Health Regen"
+          "talentRight": "-5s Spectral Dagger Cooldown"
         }
       ]
     },
@@ -53,14 +53,14 @@
       ],
       "mana": "130\/140\/150\/160",
       "hotKey": "Q",
-      "cooldown": "22\/20\/18\/16 (TagTalent 14\/12\/10\/8)",
+      "cooldown": "22\/20\/18\/16 (TagTalent 17\/15\/13\/11)",
       "description": "Spectre flings a dagger to draw a Shadow Path, dealing damage and slowing the movement speed of any enemies along the trail. Units hit by the dagger also trail a Shadow Path. While treading the path, Spectre phases through otherwise impassable terrain.",
       "spellName": "Spectral Dagger",
       "params": [
         "Cast Animation: 0.3+0.37",
         "Cast Range: 1800",
         "Effect Radius: 125",
-        "Damage: 75\/130\/185\/240",
+        "Damage: 75\/130\/185\/240 (TagTalent 175\/230\/285\/340)",
         "Move Speed Slow\/Bonus: 10%\/14%\/18%\/22% (TagTalent 24%\/28%\/32%\/36%)",
         "Path Duration: 12",
         "Path Creator Duration: 7",
@@ -108,7 +108,7 @@
     {
       "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/0\/0f\/Spectre_Dispersion.mp3\/revision\/latest?cb=20210103161400",
       "effects": [
-        "Ability Passive (TagAghanim Target Point)",
+        "Ability Passive",
         "Affects Self \/ Enemies",
         "Damage HP Removal"
       ],
@@ -131,28 +131,20 @@
         "400 Distance: 6%\/9%\/12%\/15% (TagTalent 9.75%\/12.75%\/15.75%\/18.75%) of dealt damage.",
         "500 Distance: 4%\/6%\/8%\/10% (TagTalent 6.5%\/8.5%\/10.5%\/12.5%) of dealt damage.",
         "600 Distance: 2%\/3%\/4%\/5% (TagTalent 3.25%\/4.25%\/5.25%\/6.25%) of dealt damage.",
-        "",
-        "With Aghanim's Shard, Dispersion turns into an active ability. The passive component is still present. Creates a Haunt illusion based on its current level on the enemy hero closest to the targeted point. The illusion notes of Haunt apply to Dispersion as well. If Haunt is not learned, the illusion does not spawn. If no enemy dealt damage to Spectre in the last 8 seconds, Dispersion is not castable. Only registers damage dealt by enemy heroes, including illusions, clones and creep-heroes. Does not register damage from invulnerable, hidden or dead heroes.",
-        "Creates a Haunt illusion based on its current level on the enemy hero closest to the targeted point.",
-        "The illusion notes of Haunt apply to Dispersion as well. If Haunt is not learned, the illusion does not spawn.",
-        "If no enemy dealt damage to Spectre in the last 8 seconds, Dispersion is not castable.",
-        "Only registers damage dealt by enemy heroes, including illusions, clones and creep-heroes.",
-        "Does not register damage from invulnerable, hidden or dead heroes."
+        ""
       ],
-      "mana": "50",
+      "mana": null,
       "hotKey": "E",
-      "cooldown": "25",
+      "cooldown": null,
       "description": "Damage done to Spectre is reflected on her enemies, leaving her unharmed. The effect lessens with distance.",
       "spellName": "Dispersion",
       "params": [
-        "Cast Animation: 0+0.47",
         "Min Radius: 300",
         "Max Radius: 700",
         "Damage Reflected: 8%\/12%\/16%\/20% (TagTalent 13%\/17%\/21%\/25%)",
-        "Cast Range: Global",
-        "Recent Damage Timer: 8",
-        "Haunt Duration: 5",
-        "Can cast Dispersion on a hero that damaged you in the last 8 seconds. Illusion lasts 5 seconds. Cooldown: 25"
+        "Damage Threshold: 300",
+        "Damage Search Radius: 700",
+        "Causes dispersion to fire a spectral dagger every 300 damage absorbed in the direction of the last source of damage. Can fire a maximum of one dagger every 7 seconds and only triggers off player based damage within 700 range."
       ],
       "itemBehaviour": [],
       "legacyKey": "I",
@@ -270,13 +262,13 @@
     },
     {
       "talentLvl": "15",
-      "talentLeft": "-8s Spectral Dagger Cooldown",
+      "talentLeft": "+100 Spectral Dagger Damage",
       "talentRight": "+12 Desolate Damage"
     },
     {
       "talentLvl": "10",
       "talentLeft": "+5 All Stats",
-      "talentRight": "+5 Health Regen"
+      "talentRight": "-5s Spectral Dagger Cooldown"
     }
   ]
 }

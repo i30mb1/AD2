@@ -112,7 +112,7 @@
       "params": [
         "Cast Animation: 0.2+0.67",
         "Cast Range: 700",
-        "Bounce Radius: 475",
+        "Bounce Radius: 450",
         "Number of Bounces: 3\/4\/5\/6",
         "Base Damage: 80\/120\/160\/200",
         "Damage Increase per Bounce: 35%",
@@ -155,7 +155,7 @@
         "Cast Animation: 0+0",
         "Passive Mana Bonus: 100\/150\/200\/250",
         "Damage Absorption: 70%",
-        "Damage Absorbed per Mana: 1.6\/1.9\/2.2\/2.5",
+        "Damage Absorbed per Mana: 1.3\/1.7\/2.1\/2.5",
         "While spell immune, Mana Shield does not react on magical damage."
       ],
       "itemBehaviour": [],

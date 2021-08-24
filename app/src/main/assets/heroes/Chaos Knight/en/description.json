@@ -2,8 +2,6 @@
   "abilities": [
     {
       "notes": [
-        "The all \/ \/ stats talent effectively grants Chaos Knight 100 health, 0.5 health regeneration, 0.83 armor, 5 attack speed, 60 mana, 0.25 mana regeneration, and 5 attack damage.",
-        "Cleave from talents is not disabled by Break.",
         "The strength talent effectively grants Chaos Knight 240 health, 1.2 health regeneration, and 12 attack damage."
       ],
       "spellName": "Talent",
@@ -20,13 +18,13 @@
         },
         {
           "talentLvl": "15",
-          "talentLeft": "+35% Cleave",
-          "talentRight": "+12 Strength"
+          "talentLeft": "+12 Strength",
+          "talentRight": "-3s Chaos Bolt Cooldown"
         },
         {
           "talentLvl": "10",
-          "talentLeft": "+20 Movement Speed",
-          "talentRight": "+5 All Stats"
+          "talentLeft": "+200 Reality Rift Pull Distance",
+          "talentRight": "+20% Chaos Strike Lifesteal"
         }
       ]
     },
@@ -62,7 +60,7 @@
       ],
       "mana": "110\/120\/130\/140",
       "hotKey": "Q",
-      "cooldown": "13\/12\/11\/10",
+      "cooldown": "13\/12\/11\/10 (TagTalent 10\/9\/8\/7)",
       "description": "Throws a mysterious bolt of energy at the target unit. It stuns for a random duration and deals random damage.",
       "spellName": "Chaos Bolt",
       "params": [
@@ -91,8 +89,8 @@
       ],
       "notes": [
         "Reality Rift does not disjoint projectiles.",
-        "Teleports Chaos Knight to a point 250\/300\/350\/400 range away from the target's original position, towards Chaos Knight's original cast location, but not beyond it. The target is then teleported 62 range in front of that location, so they effectively get pulled by 188\/238\/288\/338 range. Chaos Knight's illusions are located around the target from random angles, with same distance to it as Chaos Knight. The location is determined at the beginning of the cast. A visual effect while casting denotes the point at which Chaos Knight and his target will land. Also plays a visual effect at the location of any nearby allied illusions while casting, even illusions not actually owned by Chaos Knight. If the enemy has vision of Chaos Knight or the target, these visual effects can be seen through the Fog of War. Chaos Knight and his illusions are made to face his target and are issued an attack order against the target.",
-        "The target is then teleported 62 range in front of that location, so they effectively get pulled by 188\/238\/288\/338 range.",
+        "Teleports Chaos Knight to a point 250\/300\/350\/400 (TagTalent 450\/500\/550\/600) range away from the target's original position, towards Chaos Knight's original cast location, but not beyond it. The target is then teleported 62 range in front of that location, so they effectively get pulled by 188\/238\/288\/338 (TagTalent 388\/438\/488\/538) range. Chaos Knight's illusions are located around the target from random angles, with same distance to it as Chaos Knight. The location is determined at the beginning of the cast. A visual effect while casting denotes the point at which Chaos Knight and his target will land. Also plays a visual effect at the location of any nearby allied illusions while casting, even illusions not actually owned by Chaos Knight. If the enemy has vision of Chaos Knight or the target, these visual effects can be seen through the Fog of War. Chaos Knight and his illusions are made to face his target and are issued an attack order against the target.",
+        "The target is then teleported 62 range in front of that location, so they effectively get pulled by 188\/238\/288\/338 (TagTalent 388\/438\/488\/538) range.",
         "Chaos Knight's illusions are located around the target from random angles, with same distance to it as Chaos Knight.",
         "The location is determined at the beginning of the cast.",
         "A visual effect while casting denotes the point at which Chaos Knight and his target will land. Also plays a visual effect at the location of any nearby allied illusions while casting, even illusions not actually owned by Chaos Knight. If the enemy has vision of Chaos Knight or the target, these visual effects can be seen through the Fog of War.",
@@ -106,14 +104,14 @@
       ],
       "mana": "50",
       "hotKey": "W",
-      "cooldown": "15\/12\/9\/6",
+      "cooldown": "18\/14\/10\/6",
       "description": "Teleports you, any images you have and the target unit to a point along the line between the two of you. Reduces armor of the enemy unit for 6 seconds.",
       "spellName": "Reality Rift",
       "params": [
         "Cast Animation: 0.3+0.5",
         "Cast Range: 550\/600\/650\/750",
         "Illusion Search Radius: 1375",
-        "Target Pull Distance: 250\/300\/350\/400",
+        "Target Pull Distance: 250\/300\/350\/400 (TagTalent 450\/500\/550\/600)",
         "Armor Reduction: 3\/4\/5\/6",
         "Duration: 6",
         "Cannot target or apply its debuff to spell immune units. Can target and apply its debuff to spell immune units."
@@ -129,7 +127,7 @@
         "Affects Enemies \/ Self"
       ],
       "notes": [
-        "Increases attack damage by an average of 9%\/13.5%\/18%\/22.5% (TagTalent 12%\/18%\/24%\/30%).",
+        "Increases attack damage by an average of 9%\/14.25%\/19.5%\/24.75% (TagTalent 12%\/19%\/26%\/33%).",
         "The proc chances of multiple crit sources stack. If two sources of critical strike proc at the same time, the higher multiplier has priority.",
         "If two sources of critical strike proc at the same time, the higher multiplier has priority.",
         "Stacks additively with other sources of lifesteal.",
@@ -145,8 +143,8 @@
       "params": [
         "Proc Chance: 30% (TagTalent 40%)",
         "Min Critical Damage: 120%",
-        "Max Critical Damage: 140%\/170%\/200%\/230%",
-        "Lifesteal: 25%\/40%\/55%\/70%",
+        "Max Critical Damage: 140%\/175%\/210%\/245%",
+        "Lifesteal: 24%\/36%\/48%\/60% (TagTalent 44%\/56%\/68%\/80%)",
         "Red critical numbers are before illusion and armor reduction. The lifesteal works for illusions as well."
       ],
       "itemBehaviour": [],
@@ -198,7 +196,7 @@
     }
   ],
   "mainAttributes": {
-    "attrStrengthInc": 3.4,
+    "attrStrengthInc": 3.2,
     "attrStrength": 22.0,
     "attrIntelligence": 18.0,
     "attrIntelligenceInc": 1.2,
@@ -220,13 +218,13 @@
     },
     {
       "talentLvl": "15",
-      "talentLeft": "+35% Cleave",
-      "talentRight": "+12 Strength"
+      "talentLeft": "+12 Strength",
+      "talentRight": "-3s Chaos Bolt Cooldown"
     },
     {
       "talentLvl": "10",
-      "talentLeft": "+20 Movement Speed",
-      "talentRight": "+5 All Stats"
+      "talentLeft": "+200 Reality Rift Pull Distance",
+      "talentRight": "+20% Chaos Strike Lifesteal"
     }
   ]
 }

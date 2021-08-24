@@ -1,9 +1,6 @@
 {
   "abilities": [
     {
-      "notes": [
-        "The armor talent does not benefit illusions."
-      ],
       "spellName": "Talent",
       "talents": [
         {
@@ -23,8 +20,8 @@
         },
         {
           "talentLvl": "10",
-          "talentLeft": "+20 Movement Speed",
-          "talentRight": "+5 Armor"
+          "talentLeft": "+60 Power Cogs Mana Burn",
+          "talentRight": "-2s Rocket Flare Cooldown"
         }
       ]
     },
@@ -111,7 +108,7 @@
         "Attacks to Destroy: 2 (TagTalent 4)",
         "Shock Search Radius: 185",
         "Shock Damage: 50\/125\/200\/275",
-        "Shock Mana Loss: 50\/80\/110\/140",
+        "Shock Mana Loss: 50\/80\/110\/140 (TagTalent 110\/140\/170\/200)",
         "Shock Knockback Distance: 300",
         "Shock Knockback Duration: 1",
         "Cogs Duration: 5\/6\/7\/8",
@@ -132,17 +129,17 @@
       ],
       "notes": [
         "The Rocket Flare travels at a speed of 2250.",
-        "Provides flying vision in a 600 radius for 1 second while traveling and for 6 seconds at the targeted area after reaching it. With the level 20 talent, Rocket Flare also provides 600 radius True Sight at the targeted area for 10 seconds. The True Sight is provided by an aura which affects enemies. Its debuff lingers for 0.5 seconds. The rocket can not reveal Eyes In The Forest. However, it does not add True Sight to rockets which already reached their targeted point and exploded.",
+        "Provides flying vision in a 600 radius for 1 second while traveling and for 6 seconds at the targeted area after reaching it. With the level 20 talent, Rocket Flare also provides 600 radius True Sight at the targeted area for 10 seconds. The True Sight is provided by an aura which affects enemies. Its debuff lingers for 0.5 seconds. The rocket can not reveal trees enchanted by Eyes In The Forest. However, it does not add True Sight to rockets which already reached their targeted point and exploded.",
         "With the level 20 talent, Rocket Flare also provides 600 radius True Sight at the targeted area for 10 seconds.",
         "The True Sight is provided by an aura which affects enemies. Its debuff lingers for 0.5 seconds.",
-        "The rocket can not reveal Eyes In The Forest.",
+        "The rocket can not reveal trees enchanted by Eyes In The Forest.",
         "However, it does not add True Sight to rockets which already reached their targeted point and exploded.",
         "Both damage increasing and True Sight granting talents immediately upgrade all of Clockwerk's currently flying rockets.",
         "The rocket can be seen on the minimap. It appears green to allies and red to enemies (enemies require vision over it to see it)."
       ],
       "mana": "35\/40\/45\/50",
       "hotKey": "E",
-      "cooldown": "20\/18\/16\/14",
+      "cooldown": "20\/18\/16\/14 (TagTalent 18\/16\/14\/12)",
       "description": "Fires a global range flare that explodes over a given area, damaging enemies and providing vision for 6 seconds.",
       "spellName": "Rocket Flare",
       "params": [
@@ -180,7 +177,7 @@
       "spellName": "Overclocking",
       "params": [
         "Cast Animation: 0+0",
-        "Move Speed Bonus: 40%",
+        "Move Speed Bonus: 30%",
         "Attack Speed Bonus: 200",
         "Duration: 8",
         "Stun Duration: 4"
@@ -296,8 +293,8 @@
     },
     {
       "talentLvl": "10",
-      "talentLeft": "+20 Movement Speed",
-      "talentRight": "+5 Armor"
+      "talentLeft": "+60 Power Cogs Mana Burn",
+      "talentRight": "-2s Rocket Flare Cooldown"
     }
   ]
 }

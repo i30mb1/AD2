@@ -2,6 +2,7 @@
   "abilities": [
     {
       "notes": [
+        "The health talent increases maximum health capacity, and keeps the current health percentage.",
         "The spell lifesteal talent stacks additively with other sources of spell lifesteal. Heals for 2.4% from non-hero units. Treats creep-heroes as creeps and does not heal off of illusions.",
         "Heals for 2.4% from non-hero units. Treats creep-heroes as creeps and does not heal off of illusions."
       ],
@@ -24,7 +25,7 @@
         },
         {
           "talentLvl": "10",
-          "talentLeft": "+100 Attack Range",
+          "talentLeft": "+175 Health",
           "talentRight": "-6 Venomous Gale CD"
         }
       ]
@@ -153,9 +154,9 @@
         "Poison Nova's ring expands with a speed of 500.",
         "With the travel distance and width, Poison Nova can hit units up to 885 (TagTalent 1525) range away . Despite Poison Nova having a width, units between the ring and Venomancer are still affected, even when not within 255 width of the ring.",
         "Despite Poison Nova having a width, units between the ring and Venomancer are still affected, even when not within 255 width of the ring.",
-        "Deals damage in 1-second intervals, starting immediately as the debuff is placed, resulting in 21 (TagTalent 26) instances. Poison Nova can never kill a unit. It does not drop affected units below 1 health from its damage ticks. Can deal up to 840\/1365\/1890 (TagTalent 1040\/1690\/2340) (TagTalent 1575\/2100\/2625, 1950\/2600\/3250) damage to a single unit (before reductions).",
+        "Deals damage in 1-second intervals, starting immediately as the debuff is placed, resulting in 21 (TagTalent 26) instances. Poison Nova can never kill a unit. It does not drop affected units below 1 health from its damage ticks. Can deal up to 420\/630\/840 + 42%\/57.75%\/73.5% (TagTalent 63%\/78.75%\/94.5%) (TagTalent 520\/780\/1040 + 52%, 78%\/97.5%\/117%) damage to a single unit (before reductions).",
         "Poison Nova can never kill a unit. It does not drop affected units below 1 health from its damage ticks.",
-        "Can deal up to 840\/1365\/1890 (TagTalent 1040\/1690\/2340) (TagTalent 1575\/2100\/2625, 1950\/2600\/3250) damage to a single unit (before reductions).",
+        "Can deal up to 420\/630\/840 + 42%\/57.75%\/73.5% (TagTalent 63%\/78.75%\/94.5%) (TagTalent 520\/780\/1040 + 52%, 78%\/97.5%\/117%) damage to a single unit (before reductions).",
         "The debuff from successive casts does not stack, only the duration is refreshed."
       ],
       "mana": "200\/300\/400",
@@ -167,7 +168,8 @@
         "Cast Animation: 0+0.87",
         "Radius: 630 (TagTalent 1270)",
         "Nova Width: 255",
-        "Damage per Second: 40\/65\/90 (TagAghanim 75\/100\/125)",
+        "Damage per Second: 20\/30\/40",
+        "Max Health as Damage per Second: 2%\/2.75%\/3.5% (TagAghanim 3%\/3.75%\/4.5%)",
         "Duration: 20 (TagTalent 25)",
         "Increases damage and decreases cooldown.",
         "Places debuff on spell immune enemies. Does not deal damage to spell immune enemies."
@@ -182,8 +184,8 @@
     "attrStrength": 19.0,
     "attrIntelligence": 19.0,
     "attrIntelligenceInc": 1.8,
-    "attrAgilityInc": 3.2,
-    "attrAgility": 26.0
+    "attrAgilityInc": 3.0,
+    "attrAgility": 24.0
   },
   "description": "Lesale Deathbringer, the Venomancer, is a ranged agility hero who is focused on dealing damage over time and slowing enemies down. While unassuming due to his mediocre stats and low attack range, he can inflict surprising amounts of gradual damage with his poisonous abilities if left alone. Venomancer can unleash a Venomous Gale to infect enemies in a straight line, drastically slowing them while dealing damage over time. His attacks are just as hazardous thanks to his lethal Poison Sting, which adds a toxic effect to his normal attacks, poisoning opposing Heroes for a great amount of damage over time. Plague Ward lets him summon a sentient ward to a targeted point, which attacks enemies or structures. While weak on first use its power grows in numbers, which means the more the wards are placed the deadlier they become. This gives him good versatility, providing vision, pushing power, and a helpful block, preventing enemies from running away when trapped in a sticky situation. Venomancer's most dangerous ability is Poison Nova: though it is not lethal and does not kill an enemy by itself, the damage it inflicts is tremendous, the duration is very long, and its wide area of effect makes it difficult to avoid. It is mostly used to initiate battles, since Poison Nova cannot quickly inflict damage but rather degrades its targets over time. When combined together, the Venomancer is a powerful killing machine, like a virus, slowly killing enemies with venom and poisons. Despite being considered by most players as a support, because of his slowing capabilities, extra ward vision, and being item independent, this does not hinder his power to gank and kill enemies, especially in the earliest parts of the game, and with enough kills, farm, and domination, Venomancer can transition into a semi-carry, with formidable venomous power and deadly specialties.",
   "history": "In the Acid Jungles of Jidi Isle, poison runs in the veins and bubbles in the guts of every creature that scuttles, climbs or swoops between fluorescent vines dripping with caustic sap. Yet even in this toxic menagerie, Venomancer is acknowledged as the most venomous. Ages ago, an Herbalist named Lesale crossed the Bay of Fradj by coracle, searching for potent essences that might be extracted from bark and root, and found instead a nightmare transformation. Two leagues into Jidi's jungle, Lesale encountered a reptile camouflaged as an epiphyte, which stung him as he mistakenly plucked it. In desperation, he used his partial knowledge of the jungle's herbal bounty, mixing the venom of the (swiftly throttled) reptile with the nectar of an armored orchid, to compound an antidote. In the moments before a black paralysis claimed him completely, he injected himself by orchid-thorn, and instantly fell into a coma. Seventeen years later, something stirred in the spot where he had fallen, throwing off the years' accumulation of humus: Venomancer. Lesale the Herbalist no longer\u2014but Lesale the Deathbringer. His mind was all but erased, and his flesh had been consumed and replaced by a new type of matter\u2014one fusing the venom of the reptile with the poisonous integument of the orchid. Jidi's Acid Jungles knew a new master, one before whom even the most vicious predators soon learned to bow or burrow for their lives. The lurid isle proved too confining, and some human hunger deep in the heart of the Venomancer drove Lesale out in search of new poisons\u2014and new deaths to bring.",
@@ -205,7 +207,7 @@
     },
     {
       "talentLvl": "10",
-      "talentLeft": "+100 Attack Range",
+      "talentLeft": "+175 Health",
       "talentRight": "-6 Venomous Gale CD"
     }
   ]

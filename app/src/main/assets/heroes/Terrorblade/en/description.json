@@ -10,7 +10,7 @@
       "talents": [
         {
           "talentLvl": "25",
-          "talentLeft": "+240 Metamorphosis Attack Range",
+          "talentLeft": "+20s Metamorphosis Duration",
           "talentRight": "-34s Sunder Cooldown"
         },
         {
@@ -26,7 +26,7 @@
         {
           "talentLvl": "10",
           "talentLeft": "16% Evasion",
-          "talentRight": "+20 Movement Speed"
+          "talentRight": "+2s Reflection Duration"
         }
       ]
     },
@@ -60,7 +60,7 @@
         "Radius: 475",
         "Move Speed Slow: 15%\/20%\/25%\/30%",
         "Illusion Damage Dealt: 55%\/70%\/85%\/100%",
-        "Duration: 5",
+        "Duration: 5 (TagTalent 7)",
         "Slow and illusion persist if debuff was placed before spell immunity and when not dispelled."
       ],
       "itemBehaviour": [],
@@ -104,7 +104,7 @@
         "During the transformation, Terrorblade cannot do anything. Cannot be interrupted. This applies to transforming illusions as well.",
         "This applies to transforming illusions as well.",
         "The bonus damage is added to Terrorblade and his illusions' base attack damage.",
-        "Increases Terrorblade's base attack damage to 67\u201273\/82\u201288\/97\u2012103\/112\u2012118 and attack range to 490\/510\/530\/550 (TagTalent 730\/750\/770\/790).",
+        "Increases Terrorblade's base attack damage to 67\u201273\/82\u201288\/97\u2012103\/112\u2012118 and attack range to 490\/510\/530\/550",
         "It also grants Terrorblade ranged unit properties, so all items with ranged and melee differences (e.g. Manta Style) use their ranged values.",
         "Terrorblade's attack projectiles travel at a speed of 900.",
         "The aura affects illusions under Terrorblade's control including invulnerable and hidden illusions, except for the illusions from an enemy Reflection.",
@@ -122,9 +122,9 @@
         "Transformation Time: 0.35",
         "Illusion Radius: 1200",
         "Attack Damage Bonus: 15\/30\/45\/60",
-        "Attack Range Bonus: 340\/360\/380\/400 (TagTalent 580\/600\/620\/640)",
+        "Attack Range Bonus: 340\/360\/380\/400",
         "Aura Linger Duration: 1",
-        "Metamorphosis Duration: 40\/44\/48\/52"
+        "Metamorphosis Duration: 36\/40\/44\/48 (TagTalent 56\/60\/64\/68)"
       ],
       "itemBehaviour": [],
       "legacyKey": "T",
@@ -138,6 +138,7 @@
       ],
       "notes": [
         "Requires Aghanim's Shard to be unlocked.",
+        "Applies a basic dispel on Terrorblade upon cast.",
         "The 20% current health as cost is direct HP Removal.",
         "Grants 100 movement speed and 100 attack speed when not in Metamorphosis form.",
         "The buff constantly checks for the Metamorphosis buff and updates its values immediately."
@@ -230,7 +231,7 @@
     "attrStrength": 16.0,
     "attrIntelligence": 19.0,
     "attrIntelligenceInc": 1.6,
-    "attrAgilityInc": 4.8,
+    "attrAgilityInc": 4.4,
     "attrAgility": 22.0
   },
   "description": "Terrorblade, the Demon Marauder, is a melee agility hero who grows to a devastating carry in the later stages of the game. Terrorblade has the highest starting armor in the game, but is squishy due to his low health, meaning he needs strength items to be tanky enough to sustain damage to himself and his illusions. As with all illusion-based heroes, he needs attribute-based items in order to make his illusions powerful. He uses Reflection, which creates invulnerable illusions of all nearby enemy heroes for a few seconds. Conjure Image creates an illusion of Terrorblade that deals considerable damage at max level. Terrorblade can create up to two illusions, which together deal more damage than Terrorblade himself, effectively multiplying Terrorblade's base damage (but not his bonus damage). Metamorphosis transforms Terrorblade into a powerful ranged demon capable of wreaking havoc on his enemies with its bonus range and damage. Metamorphosis also makes illusions of Terrorblade transform into his demonic form, but they revert back once they wander too far away from Terrorblade. Finally his ultimate, Sunder, swaps his health with a targeted hero, ally or enemy alike. This ability makes ganks on him incredibly risky since he can sunder a hero before finishing them off with a few attacks. With his two illusion-based abilities, the 'semi-ultimate' Metamorphosis and his ultimate, Sunder, Terrorblade's skill set makes him a strong foe in the early game and absolutely terrifying at the later stages of the game. He is usually played as a hard carry.",
@@ -238,7 +239,7 @@
   "talents": [
     {
       "talentLvl": "25",
-      "talentLeft": "+240 Metamorphosis Attack Range",
+      "talentLeft": "+20s Metamorphosis Duration",
       "talentRight": "-34s Sunder Cooldown"
     },
     {
@@ -254,7 +255,7 @@
     {
       "talentLvl": "10",
       "talentLeft": "16% Evasion",
-      "talentRight": "+20 Movement Speed"
+      "talentRight": "+2s Reflection Duration"
     }
   ]
 }

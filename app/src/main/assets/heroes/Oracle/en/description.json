@@ -133,7 +133,7 @@
       ],
       "mana": "80\/85\/90\/95",
       "hotKey": "E",
-      "cooldown": "2.25 (TagTalent 1)",
+      "cooldown": "2.5 (TagTalent 1.25)",
       "description": "Burns away impurities, dealing heavy magic damage to the target before causing them to regenerate health over time. The amount of health regenerated over its duration exceeds the amount of initial damage. Can be cast on enemies and allies.",
       "spellName": "Purifying Flames",
       "params": [
@@ -164,7 +164,7 @@
         "This means when combined with e.g. Aphotic Shield or Refraction, False Promise negates damage while the other sources do not.",
         "It has a lower priority than Borrowed Time, means Borrowed Time first turns damage into heal, and then it is blocked as heal by False Promise.",
         "As with all damage manipulating effects, False Promise only negates and delays the 3 damage types. It fully ignores HP Removal (except for Heartstopper Aura and Static Field).",
-        "Does not prevent instant killing effects like Culling Blade, or Ice Blast shatter.",
+        "Does not prevent instant killing effects like Culling Blade or Ice Blast.",
         "Just like damage, False Promise also prevents the hero's health from increasing, with a few exceptions. Unlike negated damage, negates healing effects before any amplifications or reductions (e.g. Ghost Shroud and Ice Blast). Only actual heals are counted by False Promise. Other means of health increase are not counted, although may still be prevented (e.g. health gained from strength). Does not prevent the following spells from increasing the hero's health: Supernova, Soul Catcher, Sunder, Whirling Death, Decay, Time Lapse, Armlet of Mordiggian, and Essence Ring.",
         "Unlike negated damage, negates healing effects before any amplifications or reductions (e.g. Ghost Shroud and Ice Blast).",
         "Only actual heals are counted by False Promise. Other means of health increase are not counted, although may still be prevented (e.g. health gained from strength).",
@@ -193,7 +193,7 @@
         "Cast Animation: 0.3+0.97",
         "Cast Range: 700\/850\/1000",
         "Delayed Heal Amplification: 100%",
-        "Duration: 8\/9\/10 (TagTalent 9.5\/10.5\/11.5)",
+        "Duration: 7\/8.5\/10 (TagTalent 8.5\/10\/11.5)",
         "Armor Bonus: 15",
         "Fade Delay: 0.15",
         "Causes False Promise to have a 0.15-second fade delay invisibility."

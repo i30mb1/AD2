@@ -2,7 +2,6 @@
   "abilities": [
     {
       "notes": [
-        "The health talent increases maximum health capacity, and keeps the current health percentage.",
         "The lifesteal talent stacks additively with other sources of lifesteal.",
         "Armor Corruption Strike from talents is not disabled by Break. The armor corruption lasts 10 seconds, and stacks with the Armor Corruption talents of other heroes.",
         "The armor corruption lasts 10 seconds, and stacks with the Armor Corruption talents of other heroes."
@@ -27,7 +26,7 @@
         {
           "talentLvl": "10",
           "talentLeft": "-2s Stifling Dagger Cooldown",
-          "talentRight": "+175 Health"
+          "talentRight": "+1 Phantom Strike Duration"
         }
       ]
     },
@@ -74,7 +73,7 @@
         "Base Damage: 65",
         "Attack Damage: 25%\/40%\/55%\/70%",
         "Move Speed Slow: 50%",
-        "Slow Duration: 1.75\/2.5\/3.25\/4",
+        "Slow Duration: 2.2\/2.8\/3.4\/4",
         "Secondary Target Range Buffer: 300",
         "Can be cast on spell immune units. The attack pierces spell immunity, the slow does not. Slow persists if debuff was placed before spell immunity and when not dispelled.",
         "Blocked upon impact, as primary and secondary target."
@@ -105,7 +104,7 @@
         "Cast Animation: 0.25+0.8",
         "Cast Range: 1000 (TagTalent 1250)",
         "Attack Speed Bonus: 75\/100\/125\/150",
-        "Duration: 2"
+        "Duration: 2 (TagTalent 3)"
       ],
       "itemBehaviour": [],
       "legacyKey": "B",
@@ -244,7 +243,7 @@
     {
       "talentLvl": "10",
       "talentLeft": "-2s Stifling Dagger Cooldown",
-      "talentRight": "+175 Health"
+      "talentRight": "+1 Phantom Strike Duration"
     }
   ]
 }

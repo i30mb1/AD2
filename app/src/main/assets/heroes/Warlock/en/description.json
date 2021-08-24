@@ -16,7 +16,7 @@
         {
           "talentLvl": "15",
           "talentLeft": "-5s Shadow Word Cooldown",
-          "talentRight": "+40 Upheaval DPS"
+          "talentRight": "Upheaval grants +10 attack speed per second to allies"
         },
         {
           "talentLvl": "10",
@@ -83,7 +83,7 @@
         "↓↓ Double-tapping automatically targets self.",
         "Can be cast on allied Couriers.",
         "Deals damage or heals in 1-second intervals, starting 1 second after cast, resulting in 10 instances.",
-        "Can deal up to 150\/250\/350\/450 (TagTalent 400\/500\/600\/700) damage to the target (before reductions), or heal for the same amount if cast on an ally.",
+        "Can deal up to 180\/270\/360\/450 (TagTalent 430\/520\/610\/700) damage to the target (before reductions), or heal for the same amount if cast on an ally.",
         "Successive casts of Shadow Word fully stack and work independently from each other.",
         "The first sound is played when the target is an ally, the second sound when it is an enemy.",
         "With Aghanim's Shard, Shadow Word turns into an area-targeted ability, so that it cannot directly target units anymore. Can target invisible units and units inside the Fog of War. ↓↓ Double-tapping centers the radius around Warlock.",
@@ -98,7 +98,7 @@
       "params": [
         "Cast Animation: 0.4+0.76",
         "Cast Range: 450\/600\/750\/900",
-        "Damage per Second: 15\/25\/35\/45 (TagTalent 40\/50\/60\/70)",
+        "Damage per Second: 18\/27\/36\/45 (TagTalent 43\/52\/61\/70)",
         "Heal per Second: 18\/27\/36\/45 (TagTalent 43\/52\/61\/70)",
         "Duration: 10",
         "Radius: 450",
@@ -115,18 +115,18 @@
       "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/4\/4e\/Warlock_Upheaval.mp3\/revision\/latest?cb=20191216030444",
       "effects": [
         "Ability Target Area \/ Channeled",
-        "Affects Enemies"
+        "Affects Enemies (TagAghanim Allies)"
       ],
       "notes": [
         "The strength of the slow is based on the channel duration, not on how long a unit stands in the affected area.",
         "The slow percentage increases by 0.4%\/0.57%\/0.73%\/0.9% on each server tick, starting 1 tick after cast. So it takes 3.33\/3.53\/3.64\/3.7 seconds for the slow to reach the maximum slow value. The slow debuff is applied or refreshed in the same intervals.",
         "So it takes 3.33\/3.53\/3.64\/3.7 seconds for the slow to reach the maximum slow value.",
         "The slow debuff is applied or refreshed in the same intervals.",
-        "With the level 15 talent, Upheaval's debuff starts deals damage over time. Deals 20 damage in 0.5-second intervals, starting 0.5 seconds after being placed, resulting in a minimum of 6 instances. One instance of the debuff can deal up to 120 damage. On level 1 and 2, the last damage instance is missing, resulting in up to 25\/29\/34\/38 instances over the full duration. Can deal a total of 500\/580\/680\/760 damage to each enemy over its full duration. When learned while already channeling, the talent immediately updates the current instance.",
-        "Deals 20 damage in 0.5-second intervals, starting 0.5 seconds after being placed, resulting in a minimum of 6 instances.",
-        "One instance of the debuff can deal up to 120 damage.",
-        "On level 1 and 2, the last damage instance is missing, resulting in up to 25\/29\/34\/38 instances over the full duration.",
-        "Can deal a total of 500\/580\/680\/760 damage to each enemy over its full duration.",
+        "With the level 15 talent, Upheaval applies a buff to allies which increases attack speed. The buff fully works on allied heroes and creeps. Just like the debuff, the buff persists 3 seconds after leaving the area or stopping the channeling. The bonus attack speed is capped at 70, reached after 7 seconds of channel time. Just like the debuff, the strength of the buff is based on the channel duration, not on how long a unit stands in the affected area. When learned while already channeling, the talent immediately updates the current instance.",
+        "The buff fully works on allied heroes and creeps.",
+        "Just like the debuff, the buff persists 3 seconds after leaving the area or stopping the channeling.",
+        "The bonus attack speed is capped at 70, reached after 7 seconds of channel time.",
+        "Just like the debuff, the strength of the buff is based on the channel duration, not on how long a unit stands in the affected area.",
         "When learned while already channeling, the talent immediately updates the current instance."
       ],
       "mana": "70\/90\/110\/130",
@@ -142,7 +142,7 @@
         "Move Speed Slow Increase per Second: 12%\/17%\/22%\/27%",
         "Max Move Speed Slow: 40%\/60%\/80%\/100%",
         "Slow Duration: 3",
-        "Damage per Second: 40",
+        "Attack Speed per Second to Allies: 10",
         "Slow persists if debuff was placed before spell immunity and when not dispelled."
       ],
       "itemBehaviour": [],
@@ -268,7 +268,7 @@
     {
       "talentLvl": "15",
       "talentLeft": "-5s Shadow Word Cooldown",
-      "talentRight": "+40 Upheaval DPS"
+      "talentRight": "Upheaval grants +10 attack speed per second to allies"
     },
     {
       "talentLvl": "10",

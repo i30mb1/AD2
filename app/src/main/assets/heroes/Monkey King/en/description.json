@@ -14,7 +14,7 @@
         {
           "talentLvl": "20",
           "talentLeft": "-7s Boundless Strike Cooldown",
-          "talentRight": "+40% Boundless Strike Crit"
+          "talentRight": "+2 Jingu Mastery Charges"
         },
         {
           "talentLvl": "15",
@@ -23,7 +23,7 @@
         },
         {
           "talentLvl": "10",
-          "talentLeft": "+20 Attack Speed",
+          "talentLeft": "+0.3s Boundless Strike Stun",
           "talentRight": "+50% Tree Dance Vision AoE"
         }
       ]
@@ -60,8 +60,8 @@
         "Cast Range: 1100",
         "Effect Length: 1100",
         "Effect Width: 150",
-        "Critical Damage: 150%\/175%\/200%\/225% (TagTalent 190%\/215%\/240%\/265%)",
-        "Stun Duration: 1\/1.2\/1.4\/1.6"
+        "Critical Damage: 150%\/175%\/200%\/225%",
+        "Stun Duration: 1\/1.2\/1.4\/1.6 (TagTalent 1.3\/1.5\/1.7\/1.9)"
       ],
       "itemBehaviour": [],
       "legacyKey": "B",
@@ -74,14 +74,14 @@
         "Affects Self \/ Trees"
       ],
       "notes": [
-        "Monkey king leaps to the target tree at a speed of 700, reaching the tree within up to 1.29 (TagTalent 1.93) seconds.",
+        "Monkey king leaps to the target tree at a speed of 800, reaching the tree within up to 1.13 (TagTalent 1.69) seconds.",
         "Leaps in an arc, with a top height of 192. During the leap, other units may pass below Monkey King. The activity modifier only appears during the leap and is responsible for the leaping animation.",
         "The activity modifier only appears during the leap and is responsible for the leaping animation.",
         "Although it visually looks like Monkey King is above the ground while perched, he still is considered to be on the ground. The height is part of the animations.",
-        "Tree Dance has several different cooldowns which activate at different times. Upon cast, the leap duration between trees is added to the cooldown, resulting in a cooldown of 1.1 (TagTalent 0.4) to up to 2.29 (TagTalent 2.93 (TagTalent 1.59, 2.23) seconds, based on the distance. Upon reaching the tree, it goes on cooldown for 1 (TagTalent 0.3) second, which matters only if the cast cooldown was skipped with flat cooldown reductions or cooldown resets. Upon unperching with a move (TagTalent Right Click) or attack command (A), it also goes on cooldown for 1 (TagTalent 0.3) seconds. Does not go on cooldown when unperched in other ways. Upon taking player-based or Roshan-based damage greater than 0 while on the ground (after damage reductions, excluding damage flagged as HP Removal), it goes on a 3-second cooldown. All of these cooldowns are unaffected by percentage-based cooldown reductions. Only flat cooldown reductions and cooldown resets affects these cooldowns.",
-        "Upon cast, the leap duration between trees is added to the cooldown, resulting in a cooldown of 1.1 (TagTalent 0.4) to up to 2.29 (TagTalent 2.93 (TagTalent 1.59, 2.23) seconds, based on the distance.",
-        "Upon reaching the tree, it goes on cooldown for 1 (TagTalent 0.3) second, which matters only if the cast cooldown was skipped with flat cooldown reductions or cooldown resets.",
-        "Upon unperching with a move (TagTalent Right Click) or attack command (A), it also goes on cooldown for 1 (TagTalent 0.3) seconds. Does not go on cooldown when unperched in other ways.",
+        "Tree Dance has several different cooldowns which activate at different times. Upon cast, the leap duration between trees is added to the cooldown, resulting in a cooldown of 1.1 to up to 2.29 (TagTalent 2.93) seconds, based on the distance. Upon reaching the tree, it goes on cooldown for 1 second, which matters only if the cast cooldown was skipped with flat cooldown reductions or cooldown resets. Upon unperching with a move (TagTalent Right Click) or attack command (A), it also goes on cooldown for 1 seconds. Does not go on cooldown when unperched in other ways. Upon taking player-based or Roshan-based damage greater than 0 while on the ground (after damage reductions, excluding damage flagged as HP Removal), it goes on a 3-second cooldown. All of these cooldowns are unaffected by percentage-based cooldown reductions. Only flat cooldown reductions and cooldown resets affects these cooldowns.",
+        "Upon cast, the leap duration between trees is added to the cooldown, resulting in a cooldown of 1.1 to up to 2.29 (TagTalent 2.93) seconds, based on the distance.",
+        "Upon reaching the tree, it goes on cooldown for 1 second, which matters only if the cast cooldown was skipped with flat cooldown reductions or cooldown resets.",
+        "Upon unperching with a move (TagTalent Right Click) or attack command (A), it also goes on cooldown for 1 seconds. Does not go on cooldown when unperched in other ways.",
         "Does not go on cooldown when unperched in other ways.",
         "Upon taking player-based or Roshan-based damage greater than 0 while on the ground (after damage reductions, excluding damage flagged as HP Removal), it goes on a 3-second cooldown.",
         "All of these cooldowns are unaffected by percentage-based cooldown reductions. Only flat cooldown reductions and cooldown resets affects these cooldowns.",
@@ -103,18 +103,17 @@
       ],
       "mana": "0",
       "hotKey": "W",
-      "cooldown": "1 (TagTalent 0.3)",
+      "cooldown": "1",
       "description": "Monkey King jumps to a tree and perches atop it. While perched, he gains the Primal Spring ability-a channeled leap attack. If Monkey King's tree is destroyed, he falls and is stunned for 4 seconds. Taking damage from player controlled units or Roshan while on the ground puts Tree Dance on cooldown.",
       "spellName": "Tree Dance",
       "params": [
-        "Cast Animation: 0.3+0 (TagTalent 0.1+0)",
+        "Cast Animation: 0.1+0",
         "Cast Range from Ground: 900 (TagTalent 1350)",
         "Cast Range from Tree: 1000 (TagTalent 1350)",
         "Damage Cooldown: 3",
         "Day Tree Vision: 800 (TagTalent 1200)",
         "Night Tree Vision: 600 (TagTalent 900)",
         "Unperch Stun Duration: 4",
-        "Reduces cooldown to 0.3 and cast point to 0.1.",
         "The stun upon falling off of a tree pierces spell immunity.",
         "Getting rooted while already leaping does not cancel the leap."
       ],
@@ -215,9 +214,9 @@
       "spellName": "Jingu Mastery",
       "params": [
         "Required Hits: 4",
-        "Charges: 4",
+        "Charges: 4 (TagTalent 6)",
         "Attack Damage Bonus: 40\/70\/100\/130 (TagTalent 170\/200\/230\/260)",
-        "Lifesteal: 15%\/30%\/45%\/60%",
+        "Lifesteal: 25%\/40%\/55%\/70%",
         "Counter Duration: 7\/8\/9\/10",
         "Buff Duration: 35",
         "Disables both the adding of the counter and the buff on Monkey King."
@@ -255,7 +254,7 @@
       ],
       "mana": "0",
       "hotKey": "F",
-      "cooldown": "15",
+      "cooldown": "15 (TagTalent 8)",
       "description": "Changes Monkey King's shape to deceive opponents, using the environment nearby as inspiration for the disguise. Taking damage, attacking, or using any item or ability breaks Monkey King's disguise. Grants damage immunity for 0.2 upon transforming.",
       "spellName": "Mischief",
       "params": [
@@ -263,7 +262,8 @@
         "Set Move Speed (TagTalentDefault): 200",
         "Set Move Speed (TagTalentas Courier): 380",
         "Search Radius: 350",
-        "Damage Immunity Duration: 0.2"
+        "Damage Immunity Duration: 0.2 (TagTalent 0.5)",
+        "Reduces Mischief Cooldown to 8s, increases the invulnerability time to s and disjoints projectiles on transformation. Mischief no longer reduces your move speed below your current one."
       ],
       "itemBehaviour": [],
       "legacyKey": "F",
@@ -374,7 +374,7 @@
     {
       "talentLvl": "20",
       "talentLeft": "-7s Boundless Strike Cooldown",
-      "talentRight": "+40% Boundless Strike Crit"
+      "talentRight": "+2 Jingu Mastery Charges"
     },
     {
       "talentLvl": "15",
@@ -383,7 +383,7 @@
     },
     {
       "talentLvl": "10",
-      "talentLeft": "+20 Attack Speed",
+      "talentLeft": "+0.3s Boundless Strike Stun",
       "talentRight": "+50% Tree Dance Vision AoE"
     }
   ]

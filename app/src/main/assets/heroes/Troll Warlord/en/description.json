@@ -2,8 +2,6 @@
   "abilities": [
     {
       "notes": [
-        "The health talent increases maximum health capacity, and keeps the current health percentage.",
-        "The agility talent effectively grants Troll Warlord 1.17 armor, 7 attack speed, and 7 attack damage.",
         "This attack damage talent is added as raw attack damage. Does not benefit illusions and is not affected by most percentage-based damage increasing or reducing effects.",
         "Does not benefit illusions and is not affected by most percentage-based damage increasing or reducing effects.",
         "The evasion talent stacks multiplicatively with other sources of evasion."
@@ -27,8 +25,8 @@
         },
         {
           "talentLvl": "10",
-          "talentLeft": "+225 Health",
-          "talentRight": "+7 Agility"
+          "talentLeft": "+7 Berserker's Rage Armor",
+          "talentRight": "+25 Berserker's Rage Movement Speed"
         }
       ]
     },
@@ -62,8 +60,8 @@
       "spellName": "Berserker's Rage",
       "params": [
         "Cast Animation: 0+0",
-        "Armor Bonus: 4\/5\/6\/7",
-        "Move Speed Bonus: 15\/25\/35\/45",
+        "Armor Bonus: 4\/5\/6\/7 (TagTalent 11\/12\/13\/14)",
+        "Move Speed Bonus: 15\/25\/35\/45 (TagTalent 40\/50\/60\/70)",
         "Attack Range Loss: 350",
         "Base Attack Time: 1.45",
         "Root Chance: 14%\/16%\/18%\/20%",
@@ -104,7 +102,7 @@
         "Axes Travel Distance: 950",
         "Axes Radius: 100",
         "Axes Spread End Radius: 206.17",
-        "Damage: 75 (TagTalent 165)",
+        "Damage: 90 (TagTalent 180)",
         "Move Speed Slow: 40%",
         "Slow Duration: 2.5\/3\/3.5\/4",
         "Causes Ranged Axes to dispel enemies. Reduces cooldown and manacost.",
@@ -244,25 +242,26 @@
         "When cast while not attacking, Troll Warlord automatically chooses an attack target within the search radius. Prioritizes heroes over other units. Uses default auto-attack rules to decide for targets. Does not target Roshan, buildings, wards, allies, or invulnerable or attack immune enemies.",
         "Prioritizes heroes over other units. Uses default auto-attack rules to decide for targets.",
         "Does not target Roshan, buildings, wards, allies, or invulnerable or attack immune enemies.",
-        "When cast while already attacking a target, Troll Warlord sticks to that target, even if it is Roshan, a building, a ward, or an ally. He only switches the current attack target when it becomes unattackable (turns invulnerable or attack immune, or dies).",
+        "When cast while already attacking a target, Troll Warlord sticks to that target, even if it is Roshan, a building, a ward, or an ally. While sticking to a target, Troll Warlord is considered to be hasted and fully ignores movement speed slows. He only switches the current attack target when it becomes unattackable (turns invulnerable or attack immune, or dies).",
+        "While sticking to a target, Troll Warlord is considered to be hasted and fully ignores movement speed slows.",
         "He only switches the current attack target when it becomes unattackable (turns invulnerable or attack immune, or dies).",
         "Grants shared vision over the current attack target as long as it stays within 900 range of the buffed hero, revealing it through the Fog of War. Does not provide True Sight.",
-        "While attacking, the Troll Warlord becomes almost fully uncontrollable, and can only be ordered to to toggle Berserker's Rage, or cast Whirling Axes. While attacking, Troll Warlord ignores taunts. Fear and Hypnosis prevent them from attacking and cause conflicting movement. When no enemies are nearby, they become controllable again, until a new visible enemy enters the search radius.",
-        "While attacking, Troll Warlord ignores taunts. Fear and Hypnosis prevent them from attacking and cause conflicting movement.",
-        "When no enemies are nearby, they become controllable again, until a new visible enemy enters the search radius.",
+        "While attacking, the Troll Warlord becomes almost fully uncontrollable, and can only be ordered to toggle Berserker's Rage, or cast Whirling Axes or Rampage. While attacking, Troll Warlord ignores taunts. Fear and Hypnosis prevent him from attacking and cause conflicting movement. When no enemies are nearby, he becomes controllable and slowable again, until a new visible enemy enters the search radius.",
+        "While attacking, Troll Warlord ignores taunts. Fear and Hypnosis prevent him from attacking and cause conflicting movement.",
+        "When no enemies are nearby, he becomes controllable and slowable again, until a new visible enemy enters the search radius.",
         "Prevents Troll Warlord from dying by setting his minimum health to 1. This means he cannot die to damage, not even damage flagged as HP removal, so that it prevents him from dying to False Promise's delayed damage. Does not protect him against a lethal Culling Blade, or the expiring of Wraith Delay. Stops Ice Blast from shattering Troll Warlord when in Battle Trance while below the shatter threshold.",
         "This means he cannot die to damage, not even damage flagged as HP removal, so that it prevents him from dying to False Promise's delayed damage.",
         "Does not protect him against a lethal Culling Blade, or the expiring of Wraith Delay.",
         "Stops Ice Blast from shattering Troll Warlord when in Battle Trance while below the shatter threshold.",
         "Damage taken is technically not reduced, so any damage event still registers the full damage.",
-        "The Battle Trance strong dispel talent turns the basic dispel into a strong dispel. Also allows Battle Trance to be cast while stunned, cycloned, slept, hidden, or during Forced Movement. Does not allow it from being cast while silenced, taunted, hexed or prevented from acting. Troll Warlord is unable to ⇧ Shift-queue this ability upon learning the talent.",
-        "Also allows Battle Trance to be cast while stunned, cycloned, slept, hidden, or during Forced Movement.",
-        "Does not allow it from being cast while silenced, taunted, hexed or prevented from acting.",
+        "The Battle Trance strong dispel talent turns the basic dispel into a strong dispel. Also allows Battle Trance to be cast while stunned, cycloned, taunted, slept, hidden, or during Forced Movement. Does not allow it from being cast while silenced, hexed or prevented from acting. Troll Warlord is unable to ⇧ Shift-queue this ability upon learning the talent.",
+        "Also allows Battle Trance to be cast while stunned, cycloned, taunted, slept, hidden, or during Forced Movement.",
+        "Does not allow it from being cast while silenced, hexed or prevented from acting.",
         "Troll Warlord is unable to ⇧ Shift-queue this ability upon learning the talent."
       ],
       "mana": "150",
       "hotKey": "R",
-      "cooldown": "90",
+      "cooldown": "90\/80\/70",
       "description": "Troll unleashes a powerful battle trance, that forces you to continuously attack the closest enemy unit within 900 range, prioritizing heroes. Damage does not kill you during this mode. Grants you bonus lifesteal, attack speed and movement speed. Applies a Basic Dispel.",
       "spellName": "Battle Trance",
       "params": [
@@ -307,8 +306,8 @@
     },
     {
       "talentLvl": "10",
-      "talentLeft": "+225 Health",
-      "talentRight": "+7 Agility"
+      "talentLeft": "+7 Berserker's Rage Armor",
+      "talentRight": "+25 Berserker's Rage Movement Speed"
     }
   ]
 }

@@ -2,9 +2,7 @@
   "abilities": [
     {
       "notes": [
-        "The agility talent effectively grants Slark 1.33 armor, 8 attack speed, and 8 attack damage.",
-        "The strength talent effectively grants Slark 180 health and 0.9 health regeneration.",
-        "The lifesteal talent stacks additively with other sources of lifesteal."
+        "The agility talent effectively grants Slark 1.33 armor, 8 attack speed, and 8 attack damage."
       ],
       "spellName": "Talent",
       "talents": [
@@ -16,17 +14,17 @@
         {
           "talentLvl": "20",
           "talentLeft": "+0.8s Pounce Leash",
-          "talentRight": "+120 Dark Pact Damage"
+          "talentRight": "+1 Agility Gained per Essence Shift Attack"
         },
         {
           "talentLvl": "15",
-          "talentLeft": "18% Lifesteal",
-          "talentRight": "+20 Attack Speed"
+          "talentLeft": "+50 Shadow Dance Attack Speed",
+          "talentRight": "+70 Dark Pact Damage"
         },
         {
           "talentLvl": "10",
           "talentLeft": "+8 Agility",
-          "talentRight": "+9 Strength"
+          "talentRight": "-1s Dark Pact Cooldown"
         }
       ]
     },
@@ -39,8 +37,8 @@
       ],
       "notes": [
         "Dark Pact interrupts Slark's channeling abilities upon cast.",
-        "Deals 7.5\/15\/22.5\/30 (TagTalent 19.5\/27\/34.5\/42) damage within a 325 radius in 0.1-second intervals, starting 1.5 seconds after cast for a total of 10 instances.",
-        "Slark takes 3.75\/7.5\/11.25\/15 (TagTalent 9.75\/13.5\/17.25\/21) damage in the same intervals, resulting in 37.5\/75\/112.5\/150 (TagTalent 97.5\/135\/172.5\/210) total damage. Applies a strong dispel on Slark in the same intervals, before each of its damage instances. The self-inflicted damage can be reduced or amplified, but can never kill Slark.",
+        "Deals 7.5\/15\/22.5\/30 (TagTalent 14.5\/22\/29.5\/37) damage within a 325 radius in 0.1-second intervals, starting 1.5 seconds after cast for a total of 10 instances.",
+        "Slark takes 2.25\/4.5\/6.75\/9 (TagTalent 4.35\/6.6\/8.85\/11.1) damage in the same intervals, resulting in 22.5\/45\/67.5\/90 (TagTalent 43.5\/66\/88.5\/111) total damage. Applies a strong dispel on Slark in the same intervals, before each of its damage instances. The self-inflicted damage can be reduced or amplified, but can never kill Slark.",
         "Applies a strong dispel on Slark in the same intervals, before each of its damage instances.",
         "The self-inflicted damage can be reduced or amplified, but can never kill Slark.",
         "The visual effects and sounds during the 1.5 seconds delay is only visible and audible to allies.",
@@ -48,17 +46,17 @@
         "Dark Pact ends 2.5 seconds after cast, but ends instantly when Slark dies.",
         "Re-casting Dark Pact during the effect delay cancels the previous cast and starts a new one instead."
       ],
-      "mana": "60",
+      "mana": "75",
       "hotKey": "Q",
-      "cooldown": "9\/8\/7\/6",
-      "description": "After a short delay, Slark sacrifices some of his life blood, purging most negative debuffs and dealing damage to enemy units around him and to himself. Slark only takes 50% of the damage.",
+      "cooldown": "9\/8\/7\/6 (TagTalent 8\/7\/6\/5)",
+      "description": "After a short delay, Slark sacrifices some of his life blood, purging most negative debuffs and dealing damage to enemy units around him and to himself. Slark only takes 30% of the damage.",
       "spellName": "Dark Pact",
       "params": [
         "Cast Animation: 0+0",
         "Damage Radius: 325",
         "Effect Delay: 1.5",
-        "Total Damage: 75\/150\/225\/300 (TagTalent 195\/270\/345\/420)",
-        "Self Damage Percentage: 50%"
+        "Total Damage: 75\/150\/225\/300 (TagTalent 145\/220\/295\/370)",
+        "Self Damage Percentage: 30%"
       ],
       "itemBehaviour": [],
       "legacyKey": "C",
@@ -115,7 +113,8 @@
         "Affects Enemy Heroes \/ Self"
       ],
       "notes": [
-        "Essence Shift steals 1 of \/ \/ all attributes before the attack damage is applied.",
+        "Essence Shift steals 1 of \/ \/ all attributes before the attack damage is applied. With the level 20 talent, Essence Shift steals an extra point in agility for a total of 2.",
+        "With the level 20 talent, Essence Shift steals an extra point in agility for a total of 2.",
         "Effective stats loss per stack of Essence Shift: 1 attack damage, 20 health, 0.1 health regeneration, 0.17 armor, 1 attack speed, 12 mana, 0.05 mana regeneration. Effectively grants Slark 0.5 armor, 3 attack speed, and 3 attack damage per stack.",
         "Effectively grants Slark 0.5 armor, 3 attack speed, and 3 attack damage per stack.",
         "Essence Shift cannot reduce any attribute below 0. However, Slark continues to gain agility, both temporarily and permanently, even when the attacked hero has no more attributes left to steal.",
@@ -137,7 +136,7 @@
         "Permanent Steal Radius: 300",
         "Permanent Agility Steal: 1",
         "All Attributes Lost per Attack: 1",
-        "Agility Gained per Attack: 3",
+        "Agility Gained per Attack: 3 (TagTalent 4)",
         "Duration: 15\/30\/60\/100 (TagTalent 80\/95\/125\/165)",
         "Prevents gaining new stacks. Already existing stacks still provide bonus agility. Does not prevent permanently stealing agility."
       ],
@@ -174,7 +173,8 @@
         "Cast Range: 800",
         "Radius: 300",
         "Duration: 3",
-        "Aura Linger Duration: 0.5"
+        "Aura Linger Duration: 0.5",
+        "Attack Speed Bonus: 50"
       ],
       "itemBehaviour": [],
       "legacyKey": "F",
@@ -200,7 +200,7 @@
       ],
       "mana": "120",
       "hotKey": "R",
-      "cooldown": "80\/65\/50",
+      "cooldown": "75\/60\/45",
       "description": "When used, Slark hides himself in a cloud of shadows, becoming immune to detection. Attacking, casting spells, and using items will not reveal Slark. Passively, when not visible to the enemy team, Slark gains bonus movement speed and health regeneration.",
       "spellName": "Shadow Dance",
       "params": [
@@ -212,6 +212,7 @@
         "Passive Activation Delay: 0.5",
         "Neutral Creep Damage Deactivate Duration: 2",
         "Active Duration: 4\/4.25\/4.5 (TagTalent 5\/5.25\/5.5)",
+        "Active Attack Speed Bonus: 50",
         "Grants a new ability: Depth Shroud.",
         "Regeneration and movement speed bonus are disabled, active invisibility is not.",
         "Illusions get the buff, but it does not grant them the health regen and movement speed."
@@ -240,17 +241,17 @@
     {
       "talentLvl": "20",
       "talentLeft": "+0.8s Pounce Leash",
-      "talentRight": "+120 Dark Pact Damage"
+      "talentRight": "+1 Agility Gained per Essence Shift Attack"
     },
     {
       "talentLvl": "15",
-      "talentLeft": "18% Lifesteal",
-      "talentRight": "+20 Attack Speed"
+      "talentLeft": "+50 Shadow Dance Attack Speed",
+      "talentRight": "+70 Dark Pact Damage"
     },
     {
       "talentLvl": "10",
       "talentLeft": "+8 Agility",
-      "talentRight": "+9 Strength"
+      "talentRight": "-1s Dark Pact Cooldown"
     }
   ]
 }

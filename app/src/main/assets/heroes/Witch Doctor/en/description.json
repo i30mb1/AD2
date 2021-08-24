@@ -2,9 +2,7 @@
   "abilities": [
     {
       "notes": [
-        "The health talent increases maximum health capacity, and keeps the current health percentage.",
-        "This attack damage talent is added as raw attack damage. Does not benefit illusions and is not affected by most percentage-based damage increasing or reducing effects.",
-        "Does not benefit illusions and is not affected by most percentage-based damage increasing or reducing effects."
+        "The health talent increases maximum health capacity, and keeps the current health percentage."
       ],
       "spellName": "Talent",
       "talents": [
@@ -20,13 +18,13 @@
         },
         {
           "talentLvl": "15",
-          "talentLeft": "+100 Maledict AoE",
+          "talentLeft": "+300 Health",
           "talentRight": "+2 Cask Bounces"
         },
         {
           "talentLvl": "10",
-          "talentLeft": "+200 Health",
-          "talentRight": "+60 Damage"
+          "talentLeft": "+75 Maledict AoE",
+          "talentRight": "-25% Voodoo Restoration Mana Per Second"
         }
       ]
     },
@@ -41,13 +39,13 @@
         "The cask travels at a speed of 1000.",
         "The projectile bounces in 0.3-second intervals.",
         "Cannot bounce on invisible, invulnerable or hidden units, but can bounce on units in the Fog of War.",
-        "The initial target is not counted towards the bounces, resulting in a total of 3\/5\/7\/9 (TagTalent 5\/7\/9\/11) instances. All bounces together can deal up to 150\/300\/490\/720 (TagTalent 250\/420\/630\/880) damage to heroes (before reductions). Can deal up to 225\/500\/875\/1350 (TagTalent 375\/700\/1125\/1650) damage to non-hero units (before reductions). Can bounce on the same unit multiple times, but only when another target was hit between the bounces. This means it may hit the same target a maximum of 2\/3\/4\/5 (TagTalent 3\/4\/5\/6) times. Can deal up to 100\/180\/280\/400 (TagTalent 150\/240\/350\/480) damage to a single hero (before reductions). Can deal up to 150\/300\/500\/750 (TagTalent 225\/400\/625\/900) damage to a single non-hero unit (before reductions). The damage treats illusions, clones and creep-heroes as heroes as well.",
-        "All bounces together can deal up to 150\/300\/490\/720 (TagTalent 250\/420\/630\/880) damage to heroes (before reductions).",
-        "Can deal up to 225\/500\/875\/1350 (TagTalent 375\/700\/1125\/1650) damage to non-hero units (before reductions).",
+        "The initial target is not counted towards the bounces, resulting in a total of 3\/5\/7\/9 (TagTalent 5\/7\/9\/11) instances. All bounces together can deal up to 150\/350\/700\/1260 (TagTalent 300\/595\/1080\/1815) damage to heroes (before reductions). Can deal up to 255\/525\/945\/1575 (TagTalent 475\/840\/1395\/2200) damage to non-hero units (before reductions). Can bounce on the same unit multiple times, but only when another target was hit between the bounces. This means it may hit the same target a maximum of 2\/3\/4\/5 (TagTalent 3\/4\/5\/6) times. Can deal up to 100\/210\/400\/700 (TagTalent 180\/340\/600\/990) damage to a single hero (before reductions). Can deal up to 170\/315\/540\/875 (TagTalent 285\/480\/775\/1200) damage to a single non-hero unit (before reductions). The damage treats illusions, clones and creep-heroes as heroes as well.",
+        "All bounces together can deal up to 150\/350\/700\/1260 (TagTalent 300\/595\/1080\/1815) damage to heroes (before reductions).",
+        "Can deal up to 255\/525\/945\/1575 (TagTalent 475\/840\/1395\/2200) damage to non-hero units (before reductions).",
         "Can bounce on the same unit multiple times, but only when another target was hit between the bounces.",
         "This means it may hit the same target a maximum of 2\/3\/4\/5 (TagTalent 3\/4\/5\/6) times.",
-        "Can deal up to 100\/180\/280\/400 (TagTalent 150\/240\/350\/480) damage to a single hero (before reductions).",
-        "Can deal up to 150\/300\/500\/750 (TagTalent 225\/400\/625\/900) damage to a single non-hero unit (before reductions).",
+        "Can deal up to 100\/210\/400\/700 (TagTalent 180\/340\/600\/990) damage to a single hero (before reductions).",
+        "Can deal up to 170\/315\/540\/875 (TagTalent 285\/480\/775\/1200) damage to a single non-hero unit (before reductions).",
         "The damage treats illusions, clones and creep-heroes as heroes as well.",
         "The stun treats clones, creep-heroes and Roshan has heroes, but treats illusions as creeps.",
         "The cask first applies the debuff, then the damage.",
@@ -64,10 +62,11 @@
         "Cast Range: 700",
         "Bounce Distance: 575",
         "Number of Bounces: 2\/4\/6\/8 (TagTalent 4\/6\/8\/10)",
-        "Hero Damage: 50\/60\/70\/80",
-        "Creep Damage: 75\/100\/125\/150",
+        "Hero Damage: 40",
+        "Creep Damage: 75",
         "Hero Stun Duration: 1",
         "Creep Stun Duration: 5",
+        "Bonus Damage Per Bounce: 10\/15\/20\/25",
         "Cannot directly target spell immune enemies. Can bounce to spell immune enemies. Does not stun or attempt to damage spell immune enemies.",
         "Blocked fully when primary or secondary target. Blocked upon impact. Does not stop bouncing when blocked."
       ],
@@ -138,7 +137,7 @@
       "params": [
         "Cast Animation: 0.35+0",
         "Cast Range: 575",
-        "Radius: 180 (TagTalent 280)",
+        "Radius: 180 (TagTalent 255)",
         "Damage per Second: 7\/14\/21\/28",
         "Lost Health as Burst Damage: 16%\/24%\/32%\/40% (TagTalent 31%\/39%\/47%\/55%)",
         "Burst Damage Interval: 4",
@@ -253,13 +252,13 @@
     },
     {
       "talentLvl": "15",
-      "talentLeft": "+100 Maledict AoE",
+      "talentLeft": "+300 Health",
       "talentRight": "+2 Cask Bounces"
     },
     {
       "talentLvl": "10",
-      "talentLeft": "+200 Health",
-      "talentRight": "+60 Damage"
+      "talentLeft": "+75 Maledict AoE",
+      "talentRight": "-25% Voodoo Restoration Mana Per Second"
     }
   ]
 }

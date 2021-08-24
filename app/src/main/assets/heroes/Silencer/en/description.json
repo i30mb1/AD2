@@ -3,30 +3,29 @@
     {
       "notes": [
         "The attack range talent also affects the cast range of Glaives of Wisdom.",
-        "The armor talent does not benefit illusions.",
-        "The cooldown reduction talent stacks multiplicatively with other sources cooldown reduction."
+        "The health talent increases maximum health capacity, and keeps the current health percentage."
       ],
       "spellName": "Talent",
       "talents": [
         {
           "talentLvl": "25",
-          "talentLeft": "30% Cooldown Reduction",
+          "talentLeft": "Last Word Mutes",
           "talentRight": "+15% Glaives of Wisdom Damage"
         },
         {
           "talentLvl": "20",
-          "talentLeft": "+20% Arcane Curse Slow",
-          "talentRight": "+100 Attack Range"
+          "talentLeft": "+1.2x Last Word Int Multiplier",
+          "talentRight": "+400 Health"
         },
         {
           "talentLvl": "15",
-          "talentLeft": "+2 Intelligence Steal",
-          "talentRight": "+30 Arcane Curse Damage"
+          "talentLeft": "+8% Arcane Curse Slow",
+          "talentRight": "+100 Attack Range"
         },
         {
           "talentLvl": "10",
           "talentLeft": "+20 Attack Speed",
-          "talentRight": "+6 Armor"
+          "talentRight": "+15 Arcane Curse Damage"
         }
       ]
     },
@@ -38,28 +37,30 @@
         "Damage Magical"
       ],
       "notes": [
-        "Whenever an affected unit casts an ability, the duration is increased by 5. This effect has no stack limit. Fully ignores toggle abilities, active attack modifiers and the abilities listed here.",
+        "Whenever an affected unit casts an ability, the duration is increased by 3. This effect has no stack limit. Fully ignores toggle abilities, active attack modifiers and the abilities listed here.",
         "Fully ignores toggle abilities, active attack modifiers and the abilities listed here.",
-        "If an affected unit gets silenced, the duration is paused until the silence expires. However, the slow and damage are not paused while silenced and still slow and continue to tick.",
-        "However, the slow and damage are not paused while silenced and still slow and continue to tick.",
+        "Deals damage in 1-second intervals, starting 1 second after the debuff is applied, resulting in 6 + 3 \/ penalty instances. Can deal up to 96\/144\/192\/240 + 48\/72\/96\/120 \/ penalty (TagTalent 186\/234\/282\/330 + 93\/117\/141\/165 \/ penalty) damage to a single unit (before reductions).",
+        "Can deal up to 96\/144\/192\/240 + 48\/72\/96\/120 \/ penalty (TagTalent 186\/234\/282\/330 + 93\/117\/141\/165 \/ penalty) damage to a single unit (before reductions).",
+        "If the affected unit is also being silenced (by any effect), the damage and movement slow is doubled. Also, Arcane Curse's duration is increased by 1s whenever it deals damage. This effectively prolongs the debuff, or \"pause\" its duration, as long as the affected unit remains silenced. In this case, the debuff can deal 32\/48\/64\/80 (TagTalent 62\/78\/94\/110) damage per second.",
+        "This effectively prolongs the debuff, or \"pause\" its duration, as long as the affected unit remains silenced.",
+        "In this case, the debuff can deal 32\/48\/64\/80 (TagTalent 62\/78\/94\/110) damage per second.",
         "Successive casts of Arcane Curse fully stack, always placing an independent debuff.",
-        "Deals damage in 1-second intervals, starting 1 second after the debuff is applied, resulting in 6 (+5 per penalty) instances. Can deal up to 96\/144\/192\/240 + 80\/120\/160\/200 per penalty (TagTalent 276\/324\/372\/420 + 230\/270\/310\/350 per penalty) damage to a single unit (before reductions).",
-        "Can deal up to 96\/144\/192\/240 + 80\/120\/160\/200 per penalty (TagTalent 276\/324\/372\/420 + 230\/270\/310\/350 per penalty) damage to a single unit (before reductions).",
         "The sound effect played on every damage instance is only audible to the affected unit's player."
       ],
       "mana": "125\/130\/135\/140",
       "hotKey": "Q",
-      "cooldown": "20\/18\/16\/14 (TagTalent 14\/12.6\/11.2\/9.8)",
+      "cooldown": "20\/18\/16\/14",
       "description": "Curses the target area, causing enemy heroes to take damage and slowing their movement speed. Anytime affected enemies cast a spell, the duration is increased.",
       "spellName": "Arcane Curse",
       "params": [
         "Cast Animation: 0.3+0.37",
         "Cast Range: 1000",
         "Radius: 425",
-        "Damage per Second: 16\/24\/32\/40 (TagTalent 46\/54\/62\/70)",
-        "Move Speed Slow: 9%\/12%\/15%\/18% (TagTalent 29%\/32%\/35%\/38%)",
+        "Damage per Second: 16\/24\/32\/40 (TagTalent 31\/39\/47\/55)",
+        "Move Speed Slow: 9%\/12%\/15%\/18% (TagTalent 17%\/20%\/23%\/26%)",
         "Base Duration: 6",
-        "Penalty Duration: 5",
+        "Penalty Duration: 3",
+        "Silenced Damage Multiplier: 2",
         "Slow persists and attempts to damage if debuff was placed before spell immunity and when not dispelled."
       ],
       "itemBehaviour": [],
@@ -74,9 +75,9 @@
         "Damage Pure"
       ],
       "notes": [
-        "The cast range of Glaves of Wisdom is based on the attack range of the caster. The cast range can be further increased by other attack range bonuses. However, it is not affected by cast range bonuses. The level 20 talent bonus attack range talent increases the cast range to 700.",
+        "The cast range of Glaves of Wisdom is based on the attack range of the caster. The cast range can be further increased by other attack range bonuses. However, it is not affected by cast range bonuses. The level 15 talent bonus attack range talent increases the cast range to 700.",
         "The cast range can be further increased by other attack range bonuses. However, it is not affected by cast range bonuses.",
-        "The level 20 talent bonus attack range talent increases the cast range to 700.",
+        "The level 15 talent bonus attack range talent increases the cast range to 700.",
         "The bonus damage is dealt in a separate damage instance, and counts as spell damage. This means it is not affected or considered by anything that works with attack damage. This also means that it fully works with spell damage amplification and spell lifesteal.",
         "This means it is not affected or considered by anything that works with attack damage.",
         "This also means that it fully works with spell damage amplification and spell lifesteal.",
@@ -94,13 +95,13 @@
         "Each attack places a new hidden modifier buff\/debuff on both Silencer and the target. This means their durations are independent from each other. The counter modifiers on both Silencer and his targets show how much intelligence they gained or lost. Upon death, the dying hero's intelligence restores back to its normal values, while the other party keeps the changed intelligence values for the remaining duration.",
         "The counter modifiers on both Silencer and his targets show how much intelligence they gained or lost.",
         "Upon death, the dying hero's intelligence restores back to its normal values, while the other party keeps the changed intelligence values for the remaining duration.",
-        "Permanently stolen intelligence is directly removed from the enemy's base intelligence and added to Silencer's base intelligence. It does not matter how an enemy hero within the radius dies, Silencer always steals its intelligence. Silencer also always steals intelligence when he deals the killing blow on an enemy hero, regardless of distance. However, Silencer needs to be alive as the kill happens to steal the intelligence. Cannot steal intelligence from illusions or hero clones. When killing Meepo or his clones, only the main Meepo gets intelligence stolen. Cannot reduce enemy base intelligence below 1. Silencer also does not gain intelligence from heroes that are at 1 intelligence. Enemy heroes effectively lose 24 (TagTalent 48) mana and 0.1 (TagTalent 0.2) mana regeneration (and 2 (TagTalent 4) attack damage if it is an intelligence hero). Vice versa, effectively increases Silencer's mana, mana regeneration, and attack damage by the same amount per stack. The permanent intelligence steal is not retroactive, it cannot gain charges from kills and deaths before Glaives of Wisdom is learned.",
+        "Permanently stolen intelligence is directly removed from the enemy's base intelligence and added to Silencer's base intelligence. It does not matter how an enemy hero within the radius dies, Silencer always steals its intelligence. Silencer also always steals intelligence when he deals the killing blow on an enemy hero, regardless of distance. However, Silencer needs to be alive as the kill happens to steal the intelligence. Cannot steal intelligence from illusions or hero clones. When killing Meepo or his clones, only the main Meepo gets intelligence stolen. Cannot reduce enemy base intelligence below 1. Silencer also does not gain intelligence from heroes that are at 1 intelligence. Enemy heroes effectively lose 24 mana and 0.1 mana regeneration (and 2 attack damage if it is an intelligence hero). Vice versa, effectively increases Silencer's mana, mana regeneration, and attack damage by the same amount per stack. The permanent intelligence steal is not retroactive, it cannot gain charges from kills and deaths before Glaives of Wisdom is learned.",
         "It does not matter how an enemy hero within the radius dies, Silencer always steals its intelligence.",
         "Silencer also always steals intelligence when he deals the killing blow on an enemy hero, regardless of distance.",
         "However, Silencer needs to be alive as the kill happens to steal the intelligence.",
         "Cannot steal intelligence from illusions or hero clones. When killing Meepo or his clones, only the main Meepo gets intelligence stolen.",
         "Cannot reduce enemy base intelligence below 1. Silencer also does not gain intelligence from heroes that are at 1 intelligence.",
-        "Enemy heroes effectively lose 24 (TagTalent 48) mana and 0.1 (TagTalent 0.2) mana regeneration (and 2 (TagTalent 4) attack damage if it is an intelligence hero).",
+        "Enemy heroes effectively lose 24 mana and 0.1 mana regeneration (and 2 attack damage if it is an intelligence hero).",
         "Vice versa, effectively increases Silencer's mana, mana regeneration, and attack damage by the same amount per stack.",
         "The permanent intelligence steal is not retroactive, it cannot gain charges from kills and deaths before Glaives of Wisdom is learned.",
         "With Aghanim's Shard, the Glaives of Wisdom bounces towards the closest enemy unit within 600 range of the attack target. The bouncing glaive travels at the same speed as the leading attack's projectile, and is affected by projectile speed changing effects as well. Does not perform instant attacks. The projectile is entirely spell-based. This means they do not trigger any attack modifier or on-hit effects, and ignore evasion. However, damage block affects them. Their damage counts as spell damage, however, they ignore outgoing spell damage amplification and cannot spell lifesteal. The glaives deal damage based on the damage amount calculated for the leading attack. Attack damage amount is calculated upon attack begin. This means it works with Critical Strike and Quell, since these are included in the initial damage calculations. This also means that it does not matter how much damage the attack actually did to the target, since that part is being calculated on projectile hit. It also means that other conditional attack damage bonuses like a Javelin proc are not included, since these happen later as well. The bouncing glaive still applies the intelligence-based damage separately, and steals intelligence of its target as well, if it is a hero. Does not bounce off of or towards allied units, couriers, wards or buildings.",
@@ -123,7 +124,7 @@
       "params": [
         "Cast Range: 600 (TagTalent 700)",
         "Permanent Intelligence Steal Radius: 925",
-        "Permanent Intelligence Steal: 2 (TagTalent 4)",
+        "Permanent Intelligence Steal: 2",
         "Intelligence as Damage: 15%\/35%\/55%\/75% (TagTalent 30%\/50%\/70%\/90%)",
         "Temporary Intelligence Steal: 1\/1\/2\/3",
         "Temporary Steal Duration: 10\/20\/30\/40",
@@ -163,16 +164,17 @@
       ],
       "mana": "100\/105\/110\/115",
       "hotKey": "E",
-      "cooldown": "22\/18\/14\/10 (TagTalent 15.4\/12.6\/9.8\/7)",
-      "description": "Enchants a target, providing vision of them and causing them to be damaged and silenced if they cast a spell or if the enchantment timer expires. Deals extra damage based on the difference in intelligence between Silencer and the target.",
+      "cooldown": "22\/18\/14\/10",
+      "description": "Enchants a target, providing vision of them and causing them to be damaged and silenced and muted\/\/\/ if they cast a spell or if the enchantment timer expires. Deals extra damage based on the difference in intelligence between Silencer and the target.",
       "spellName": "Last Word",
       "params": [
         "Cast Animation: 0.3+0.47",
         "Cast Range: 900",
         "Base Damage: 120\/160\/200\/240",
-        "Intelligence Difference Multiplier: 1.5\/2\/2.5\/3",
+        "Intelligence Difference Multiplier: 1.5\/2\/2.5\/3 (TagTalent 2.7\/3.2\/3.7\/4.2)",
         "Initial Debuff Duration: 4",
         "Silence Duration: 3\/4\/5\/6",
+        "Mute Duration: 3\/4\/5\/6",
         "Radius: 650",
         "Causes Last Word to become an AoE ability.",
         "Does not attempt to damage or silence if initial debuff was placed before spell immunity and when not dispelled. Silence persists if silence debuff was placed before spell immunity and when not dispelled.",
@@ -195,7 +197,7 @@
       ],
       "mana": "300\/450\/600",
       "hotKey": "R",
-      "cooldown": "130\/115\/100 (TagTalent 91\/80.5\/70)",
+      "cooldown": "130\/115\/100",
       "description": "Silencer stops all sound, preventing enemy heroes and units on the map from casting spells.",
       "spellName": "Global Silence",
       "params": [
@@ -209,7 +211,7 @@
     }
   ],
   "mainAttributes": {
-    "attrStrengthInc": 2.7,
+    "attrStrengthInc": 2.4,
     "attrStrength": 19.0,
     "attrIntelligence": 25.0,
     "attrIntelligenceInc": 2.9,
@@ -221,23 +223,23 @@
   "talents": [
     {
       "talentLvl": "25",
-      "talentLeft": "30% Cooldown Reduction",
+      "talentLeft": "Last Word Mutes",
       "talentRight": "+15% Glaives of Wisdom Damage"
     },
     {
       "talentLvl": "20",
-      "talentLeft": "+20% Arcane Curse Slow",
-      "talentRight": "+100 Attack Range"
+      "talentLeft": "+1.2x Last Word Int Multiplier",
+      "talentRight": "+400 Health"
     },
     {
       "talentLvl": "15",
-      "talentLeft": "+2 Intelligence Steal",
-      "talentRight": "+30 Arcane Curse Damage"
+      "talentLeft": "+8% Arcane Curse Slow",
+      "talentRight": "+100 Attack Range"
     },
     {
       "talentLvl": "10",
       "talentLeft": "+20 Attack Speed",
-      "talentRight": "+6 Armor"
+      "talentRight": "+15 Arcane Curse Damage"
     }
   ]
 }

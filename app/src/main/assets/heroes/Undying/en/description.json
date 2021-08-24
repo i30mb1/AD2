@@ -2,8 +2,7 @@
   "abilities": [
     {
       "notes": [
-        "The Zombie attack damage talent is added to the base damage, and not as bonus damage.",
-        "The armor talent does not benefit illusions."
+        "The Zombie attack damage talent is added to the base damage, and not as bonus damage."
       ],
       "spellName": "Talent",
       "talents": [
@@ -25,7 +24,7 @@
         {
           "talentLvl": "10",
           "talentLeft": "-15s Tombstone Cooldown",
-          "talentRight": "+5 Armor"
+          "talentRight": "+50s Decay Damage"
         }
       ]
     },
@@ -55,11 +54,7 @@
         "Upon acquiring or losing Aghanim's Scepter, all stacks of stolen strength instantly update to the current values. Upon updating the strength values, Undying's current health stays the same. However, debuffed enemies keep their current health percentage. Their health also only updates upon gaining or losing maximum health again.",
         "Upon updating the strength values, Undying's current health stays the same.",
         "However, debuffed enemies keep their current health percentage. Their health also only updates upon gaining or losing maximum health again.",
-        "When Undying dies, he loses all the stolen strength, but the affected enemies do not get theirs back, and vice versa.",
-        "With Aghanim's Shard, summons an Undying Zombie on each enemy hero that got strength stolen. This means in case of Meepo Clones and Tempest Double, a zombie spawns only on the clone that got randomly chosen for the strength steal, and not on all of them. This also means it never spawns zombies on any non-hero unit, or on illusions. The zombies are based on Tombstone's current level. If it is not learned, no zombies spawn.",
-        "This means in case of Meepo Clones and Tempest Double, a zombie spawns only on the clone that got randomly chosen for the strength steal, and not on all of them.",
-        "This also means it never spawns zombies on any non-hero unit, or on illusions.",
-        "The zombies are based on Tombstone's current level. If it is not learned, no zombies spawn."
+        "When Undying dies, he loses all the stolen strength, but the affected enemies do not get theirs back, and vice versa."
       ],
       "mana": "85\/90\/95\/100",
       "hotKey": "Q",
@@ -69,14 +64,12 @@
       "params": [
         "Cast Animation: 0.45+0",
         "Cast Range: 650",
-        "Radius: 325 (TagTalent 425)",
-        "Damage: 20\/50\/80\/110",
+        "Radius: 325",
+        "Damage: 20\/50\/80\/110 (TagTalent 70\/100\/130\/160)",
         "Creep Damage Multiplier: 2",
         "Strength Steal: 4 (TagAghanim 10)",
         "Decay Duration: 45",
-        "Zombie Duration: 15",
         "Increases strength steal.",
-        "Increases Decay radius by 100 and spawns a zombie around each hero target.",
         "Strength loss persists if debuff was placed before spell immunity.",
         "Illusions of Undying or affected enemies do not reflect the gained or lost strength. They keep the original strength values of the heroes."
       ],
@@ -106,7 +99,7 @@
         "The damage or heal are summed up and the target receives the total value in once instance.",
         "Soul Rip can damage or heal a unit for up to 152\/234\/330\/440 (TagTalent 248\/342\/450\/572) health (before reductions)."
       ],
-      "mana": "100\/110\/120\/130",
+      "mana": "85\/100\/115\/130",
       "hotKey": "W",
       "cooldown": "24\/18\/12\/6",
       "description": "Undying rips health away from all nearby units and uses it to heal an ally, or damage an enemy. Soul Rip can also be used to heal Tombstone.",
@@ -180,25 +173,29 @@
         "Flesh Golem interrupts Undying's channeling abilities upon cast.",
         "Increases Undying's total strength, including strength bonuses. Checks Undying's strength periodically and adapts the bonus instantly.",
         "Checks Undying's strength periodically and adapts the bonus instantly.",
-        "Increases Undying's base movement speed to 330.",
+        "Increases Undying's base movement speed to 300.015.",
         "Multiple attacks on the same target do not stack, but refresh the duration instead.",
         "Applies generic incoming damage amplification on the targets. Stacks additively with other sources of generic incoming damage manipulation. The amplification affects all damage the targets take that is not flagged as HP removal.",
         "The amplification affects all damage the targets take that is not flagged as HP removal.",
-        "Flesh Golem is fully canceled on death."
+        "Flesh Golem is fully canceled on death.",
+        "With Aghanim's Shard, summons an Undying Zombie on each enemy that gets hit by Flesh Golem. The zombies are based on Tombstone's current level. If it is not learned, no zombies spawn.",
+        "The zombies are based on Tombstone's current level. If it is not learned, no zombies spawn."
       ],
       "mana": "100\/125\/150",
       "hotKey": "R",
-      "cooldown": "125",
+      "cooldown": "125 (TagTalent 95)",
       "description": "Undying transforms into a horrifying flesh golem. Gains a percentage increase to strength and imbues attacks with a slow and damage amplification.",
       "spellName": "Flesh Golem",
       "params": [
         "Cast Animation: 0+0",
         "Strength Bonus: 40%\/50%\/60%",
-        "Self Move Speed Bonus: 30",
+        "Self Move Speed Bonus: 30\/40\/50",
         "Enemy Move Speed Slow: 40%\/45%\/50%",
         "Enemy Incoming Damage Amplification: 25%\/30%\/35%",
         "Debuff Duration: 6",
         "Flesh Golem Duration: 40",
+        "Zombie spawned on attack: 1",
+        "Reduces Flesh Golem Cooldown by 30s and causes Undying to spawn one zombie on each attack.",
         "Illusions get a new Flesh Golem buff, lasting for the full duration, regardless of how much is left on Undying himself. Illusions' attacks do not apply the debuff."
       ],
       "itemBehaviour": [],
@@ -312,7 +309,7 @@
     {
       "talentLvl": "10",
       "talentLeft": "-15s Tombstone Cooldown",
-      "talentRight": "+5 Armor"
+      "talentRight": "+50s Decay Damage"
     }
   ]
 }

@@ -2,10 +2,7 @@
   "abilities": [
     {
       "notes": [
-        "This attack damage talent is added as raw attack damage. Does not benefit illusions and is not affected by most percentage-based damage increasing or reducing effects.",
-        "Does not benefit illusions and is not affected by most percentage-based damage increasing or reducing effects.",
-        "The health talent increases maximum health capacity, and keeps the current health percentage.",
-        "The lifesteal talent stacks additively with other sources of lifesteal."
+        "The health talent increases maximum health capacity, and keeps the current health percentage."
       ],
       "spellName": "Talent",
       "talents": [
@@ -17,7 +14,7 @@
         {
           "talentLvl": "20",
           "talentLeft": "-4 Corrosive Haze Armor",
-          "talentRight": "25% Lifesteal"
+          "talentRight": "+100 Slithereen Crush Damage"
         },
         {
           "talentLvl": "15",
@@ -26,8 +23,8 @@
         },
         {
           "talentLvl": "10",
-          "talentLeft": "+20 Damage",
-          "talentRight": "+7 Health Regen"
+          "talentLeft": "-3s Guardian Sprint Cooldown",
+          "talentRight": "-10% Slithereen Crush Attack and Move Speed Slow"
         }
       ]
     },
@@ -43,19 +40,19 @@
         "The river bonuses are applied when Slardar makes physical contact with the water of the river. This means if he is moved out of it vertically, the bonuses are lost as well, until he lands back in the water. The bonuses of the river do not linger at all.",
         "This means if he is moved out of it vertically, the bonuses are lost as well, until he lands back in the water.",
         "The bonuses of the river do not linger at all.",
-        "Gains a total of 41%\/49%\/57%\/65% movement speed while active inside the river.",
+        "Gains a total of 50%\/55%\/60%\/65% movement speed while active inside the river.",
         "Multiple instances of the river bonus do not stack.",
         "The status resistance from Aghanim's Scepter stacks multiplicatively with other sources of status resistance."
       ],
       "mana": "25",
       "hotKey": "Q",
-      "cooldown": "17",
+      "cooldown": "32\/27\/22\/17 (TagTalent 29\/24\/19\/14)",
       "description": "Slardar slithers ahead, moving significantly faster and passing through units. Slardar gains movement speed bonus while in the river.",
       "spellName": "Guardian Sprint",
       "params": [
         "Cast Animation: 0+0",
         "River Move Speed Bonus: 25%",
-        "Active Move Speed Bonus: 16%\/24%\/32%\/40%",
+        "Active Move Speed Bonus: 25%\/30%\/35%\/40%",
         "Active Duration: 10",
         "River Health Regen Bonus: 30",
         "River Armor Bonus: 10",
@@ -93,9 +90,9 @@
       "params": [
         "Cast Animation: 0.35+0.6",
         "Effect Radius: 350 (TagTalent 425)",
-        "Damage: 80\/140\/200\/260",
-        "Move Speed Slow: 20%\/25%\/30%\/35%",
-        "Attack Speed Slow: 20\/25\/30\/35",
+        "Damage: 70\/140\/210\/280 (TagTalent 170\/240\/310\/380)",
+        "Move Speed Slow: 20%\/25%\/30%\/35% (TagTalent 30%\/35%\/40%\/45%)",
+        "Attack Speed Slow: 20\/25\/30\/35 (TagTalent 30\/35\/40\/45)",
         "Stun Duration: 1",
         "Slow Duration: 3\/4\/5\/6",
         "Puddle Radius: 600",
@@ -190,7 +187,7 @@
     {
       "talentLvl": "20",
       "talentLeft": "-4 Corrosive Haze Armor",
-      "talentRight": "25% Lifesteal"
+      "talentRight": "+100 Slithereen Crush Damage"
     },
     {
       "talentLvl": "15",
@@ -199,8 +196,8 @@
     },
     {
       "talentLvl": "10",
-      "talentLeft": "+20 Damage",
-      "talentRight": "+7 Health Regen"
+      "talentLeft": "-3s Guardian Sprint Cooldown",
+      "talentRight": "-10% Slithereen Crush Attack and Move Speed Slow"
     }
   ]
 }

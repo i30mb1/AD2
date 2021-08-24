@@ -2,8 +2,9 @@
   "abilities": [
     {
       "notes": [
-        "The attack range talent also affects the cast range of Searing Arrows.",
-        "The agility talent effectively grants Clinkz 1.33 armor, 8 attack speed, and 8 attack damage."
+        "The attack range talent also affects the cast range of Searing Arrows, and the range of Burning Barrage.",
+        "The magic resistance talent stacks multiplicatively with other sources of magic resistance. Increases Clinkz's magic resistance to 34%.",
+        "Increases Clinkz's magic resistance to 34%."
       ],
       "spellName": "Talent",
       "talents": [
@@ -14,42 +15,56 @@
         },
         {
           "talentLvl": "20",
-          "talentLeft": "-10s Strafe Cooldown",
+          "talentLeft": "+2 Burning Barrage arrows",
           "talentRight": "+125 Attack Range"
         },
         {
           "talentLvl": "15",
           "talentLeft": "+30 Searing Arrows Damage",
-          "talentRight": "-7s Skeleton Walk Cooldown"
+          "talentRight": "-5s Skeleton Walk Cooldown"
         },
         {
           "talentLvl": "10",
           "talentLeft": "+1.75 Mana Regen",
-          "talentRight": "+8 Agility"
+          "talentRight": "+12% Magic Resistance"
         }
       ]
     },
     {
-      "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/d\/d4\/Strafe.mp3\/revision\/latest?cb=20140424025306",
+      "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/c\/c6\/Clinkz_Burning_Barrage.mp3\/revision\/latest?cb=20210823213542",
       "effects": [
-        "Ability No Target",
-        "Affects Self"
+        "Ability Target Point \/ Channeled",
+        "Affects Enemies",
+        "Damage Instant Attack"
       ],
       "notes": [
-        "Strafe does not interrupt Clinkz' channeling abilities upon cast.",
-        "The evasion works against ranged attacks only.",
-        "Successive casts of Strafe do not stack, but refresh the duration, and update the attack speed to the current level."
+        "The arrows fly at a speed of 1200, and always fly the full distance. The speed is not affected by projectile speed increasing effects.",
+        "The speed is not affected by projectile speed increasing effects.",
+        "The cast range and arrows' travel distance is affected by attack range bonuses, but not by cast range bonuses.",
+        "Releases the arrows in 0.5\/0.48\/0.46\/0.45 (TagTalent 0.3\/0.32\/0.33\/0.34)-second intervals, starting immediately upon channel begin. This means it takes total of 1\/1.43\/1.84\/2.25 (TagTalent 1.2\/1.58\/1.97\/2.36) seconds to release all arrows.",
+        "This means it takes total of 1\/1.43\/1.84\/2.25 (TagTalent 1.2\/1.58\/1.97\/2.36) seconds to release all arrows.",
+        "The arrows are released from the tip of the bow, not from Clinkz's center point. This results in the first launched arrow being offset slightly towards Clinkz's left side as compared to the following arrows.",
+        "This results in the first launched arrow being offset slightly towards Clinkz's left side as compared to the following arrows.",
+        "Causes Clinkz to perform instant attacks on enemies within hit by the arrows. These instant attacks can proc any attack modifiers and on-hit effects normally. They have True Strike, and completely ignore disarms. The arrows always apply the current level of Searing Arrows, regardless of whether they are currently castable or not. The Searing Arrows applied by Burning Barrage do not cost any mana. The Searing Arrows multishot talent is not applied to these Searing Arrows.",
+        "These instant attacks can proc any attack modifiers and on-hit effects normally. They have True Strike, and completely ignore disarms.",
+        "The arrows always apply the current level of Searing Arrows, regardless of whether they are currently castable or not.",
+        "The Searing Arrows applied by Burning Barrage do not cost any mana.",
+        "The Searing Arrows multishot talent is not applied to these Searing Arrows.",
+        "The arrows provide 200 radius flying vision around them as they travel."
       ],
-      "mana": "70",
+      "mana": "40\/50\/60\/70",
       "hotKey": "Q",
-      "cooldown": "34\/30\/26\/22 (TagTalent 24\/20\/16\/12)",
-      "description": "Clinkz nimbly attacks with a barrage of arrows. Gains 100% evasion against ranged attackers and dramatically increases attack speed for a short time.",
-      "spellName": "Strafe",
+      "cooldown": "28\/24\/20\/16",
+      "description": "Clinkz channels for 1.5\/1.9\/2.3\/2.7s shooting 3\/4\/5\/6 piercing arrows in the target direction up to 750\/800\/850\/900 distance away that hit all enemy units applying 60% of Clinkz' attack damage and attack modifiers.",
+      "spellName": "Burning Barrage",
       "params": [
         "Cast Animation: 0+0",
-        "Attack Speed Bonus: 90\/120\/150\/180",
-        "Ranged Evasion: 100%",
-        "Duration: 3\/4\/5\/6"
+        "Cast Range: 750\/800\/850\/900 (TagTalent 875\/925\/975\/1025)",
+        "Arrows Travel Distance: 750\/800\/850\/900 (TagTalent 875\/925\/975\/1025)",
+        "Arrows Collision Radius: 200",
+        "Max Channel Time: 1.5\/1.9\/2.3\/2.7",
+        "Number of Arrows: 3\/4\/5\/6 (TagTalent 5\/6\/7\/8)",
+        "Attack Damage as Damage: 60%"
       ],
       "itemBehaviour": [],
       "legacyKey": "T",
@@ -78,7 +93,7 @@
         "The secondary arrow has no target priorities. It simply chooses a random valid target within cast range.",
         "Since Searing Arrows affects buildings, the secondary arrows can target buildings as well."
       ],
-      "mana": "12",
+      "mana": "10",
       "hotKey": "W",
       "cooldown": "0",
       "description": "Imbues Clinkz's arrows with fire for extra damage.",
@@ -101,9 +116,7 @@
       "notes": [
         "Skeleton Walk does not interrupt Clinkz' channeling abilities upon cast.",
         "During the fade time, Clinkz can cast abilities, use items and perform attacks without breaking the invisibility.",
-        "Invisibility is broken upon launching an attack, or upon reaching the cast point of items and abilities, except for Strafe, Death Pact and Burning Army. This means re-casting Skeleton Walk while already invisible does break it, so that the fade time applies again. This also means any other ability cast during it does break it. This goes for Rubick, Morphling, and Ability Draft.",
-        "This means re-casting Skeleton Walk while already invisible does break it, so that the fade time applies again.",
-        "This also means any other ability cast during it does break it. This goes for Rubick, Morphling, and Ability Draft.",
+        "Invisibility is broken upon launching an attack, or upon reaching the cast point of items and abilities, except for Death Pact.",
         "Allows Clinkz to path through other units, including wards, but not through buildings.",
         "Clinkz can pick up or drop items without breaking the invisibility.",
         "With Aghanim's Shard, the 2 Skeleton Archers spawn 250 range away from Clinkz to his right and left side, facing the same direction. The archers only spawn upon losing the Skeleton Walk buff, no matter how. The archers are the same as the ones summoned by Burning Army. See below for their stats.",
@@ -112,7 +125,7 @@
       ],
       "mana": "75",
       "hotKey": "E",
-      "cooldown": "20\/19\/18\/17 (TagTalent 13\/12\/11\/10)",
+      "cooldown": "20\/19\/18\/17 (TagTalent 15\/14\/13\/12)",
       "description": "Clinkz moves invisibly through units until the moment he attacks or uses items.",
       "spellName": "Skeleton Walk",
       "params": [
@@ -185,6 +198,7 @@
         "Damage Instant Kill"
       ],
       "notes": [
+        "Can be cast without breaking the invisibility of Skeleton Walk.",
         "Despite the description, the bonuses are based on the target's maximum health, not current health.",
         "The targeted unit is instantly killed, counting as a regular last hit or deny.",
         "Increases Clinkz' maximum health without keeping the current health percentage, then heals Clinkz for the same amount.",
@@ -230,18 +244,18 @@
     },
     {
       "talentLvl": "20",
-      "talentLeft": "-10s Strafe Cooldown",
+      "talentLeft": "+2 Burning Barrage arrows",
       "talentRight": "+125 Attack Range"
     },
     {
       "talentLvl": "15",
       "talentLeft": "+30 Searing Arrows Damage",
-      "talentRight": "-7s Skeleton Walk Cooldown"
+      "talentRight": "-5s Skeleton Walk Cooldown"
     },
     {
       "talentLvl": "10",
       "talentLeft": "+1.75 Mana Regen",
-      "talentRight": "+8 Agility"
+      "talentRight": "+12% Magic Resistance"
     }
   ]
 }

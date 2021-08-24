@@ -2,9 +2,7 @@
   "abilities": [
     {
       "notes": [
-        "The strength talent effectively grants Weaver 240 health and 1.2 health regeneration.",
-        "This attack damage talent is added as raw attack damage. Does not benefit illusions and is not affected by most percentage-based damage increasing or reducing effects.",
-        "Does not benefit illusions and is not affected by most percentage-based damage increasing or reducing effects."
+        "The strength talent effectively grants Weaver 180 health and 0.9 health regeneration."
       ],
       "spellName": "Talent",
       "talents": [
@@ -15,17 +13,17 @@
         },
         {
           "talentLvl": "20",
-          "talentLeft": "+3 Swarm Attacks to Kill",
-          "talentRight": "+35 Damage"
+          "talentLeft": "+0.5 Swarm Armor Reduction",
+          "talentRight": "+90 Geminate Attack Damage"
         },
         {
           "talentLvl": "15",
-          "talentLeft": "+12 Strength",
+          "talentLeft": "+2 Swarm Attacks to Kill",
           "talentRight": "+20 Mana Break"
         },
         {
           "talentLvl": "10",
-          "talentLeft": "+0.2 Swarm Armor Reduction",
+          "talentLeft": "+9 Strength",
           "talentRight": "+60 Shukuchi Damage"
         }
       ]
@@ -38,28 +36,28 @@
         "Damage Physical"
       ],
       "notes": [
-        "The Swarm moves forward at a speed of 600, taking 5 seconds to reach max distance.",
+        "The Swarm moves forward at a speed of 750, taking 5 seconds to reach max distance.",
         "The beetles are not attackable when traveling as a swarm. They become attackable only after latching onto targets.",
         "Beetles have the highest priority for auto-attack behaviors, together with Phantoms.",
         "The beetles spawn within a 300 radius randomly around Weaver and move forward as a swarm.",
-        "When an enemy unit comes within 100 radius of a beetle, the beetle latches onto it, unless it already has a beetle latched onto it. This means that multiple casts cannot affect the same unit more than once simultaneously, and the duration cannot be refreshed. The beetles can latch on invulnerable units, but not on invisible or hidden units. If a beetle's target turns hidden after latching, it still stays on it and is not removed. If a beetle's target turns invisible after latching, the beetle dies instantly (credited to no one), if the unit is not under True Sight. With Aghanim's Shard, beetles can latch on invisible units, and provide True Sight over them. When the beetles get affected by Chronosphere they instantly die, credited to no one.",
+        "When an enemy unit comes within 100 radius of a beetle, the beetle latches onto it, unless it already has a beetle latched onto it. This means that multiple casts cannot affect the same unit more than once simultaneously, and the duration cannot be refreshed. The beetles can latch on invulnerable units, but not on invisible or hidden units. If a beetle's target turns hidden after latching, it still stays on it and is not removed. If a beetle's target turns invisible after latching, the beetle dies instantly (credited to no one), if the unit is not under True Sight. With Aghanim's Shard, beetles can latch on invisible units (ignoring True Sight Immunity), and provide True Sight over them. When the beetles get affected by Chronosphere they instantly die, credited to no one.",
         "This means that multiple casts cannot affect the same unit more than once simultaneously, and the duration cannot be refreshed.",
         "The beetles can latch on invulnerable units, but not on invisible or hidden units.",
         "If a beetle's target turns hidden after latching, it still stays on it and is not removed.",
         "If a beetle's target turns invisible after latching, the beetle dies instantly (credited to no one), if the unit is not under True Sight.",
-        "With Aghanim's Shard, beetles can latch on invisible units, and provide True Sight over them.",
+        "With Aghanim's Shard, beetles can latch on invisible units (ignoring True Sight Immunity), and provide True Sight over them.",
         "When the beetles get affected by Chronosphere they instantly die, credited to no one.",
         "With the spawn radius, travel distance and latch radius, the beetles can latch on units 3400 range away. When attached, the beetle always stays 64 range in front of the unit.",
         "When attached, the beetle always stays 64 range in front of the unit.",
-        "The Swarm deals damage in 1.15\/1.0\/0.85\/0.7-second intervals, starting immediately when latching on a unit, resulting in up to 14\/17\/19\/23 attacks. The beetles do not actually attack their targets, but rather the ability simply deals damage to them in the set intervals while the beetle is attached. This means the damage is sourced to Weaver, and is affected by outgoing damage manipulation and spell lifesteal. The Swarm's damage is affected by Damage Block. Can deal up to 252\/340\/418\/552 damage to each latched enemy (before reductions).",
+        "The Swarm deals damage in 1.15\/1.0\/0.85\/0.7-second intervals, starting immediately when latching on a unit, resulting in up to 14\/17\/19\/23 attacks. The beetles do not actually attack their targets, but rather the ability simply deals damage to them in the set intervals while the beetle is attached. This means the damage is sourced to Weaver, and is affected by outgoing damage manipulation and spell lifesteal. The Swarm's damage is not affected by Damage Block. Can deal up to 252\/340\/418\/552 damage to each latched enemy (before reductions).",
         "The beetles do not actually attack their targets, but rather the ability simply deals damage to them in the set intervals while the beetle is attached.",
         "This means the damage is sourced to Weaver, and is affected by outgoing damage manipulation and spell lifesteal.",
-        "The Swarm's damage is affected by Damage Block.",
+        "The Swarm's damage is not affected by Damage Block.",
         "Can deal up to 252\/340\/418\/552 damage to each latched enemy (before reductions).",
-        "The armor reduction is independent from the damage. It keeps reducing armor on ethereal targets, but not invulnerable targets. The armor reduction is directly bound to the beetle, so it disappears always together with it. On each interval, The Swarm first applies the armor reduction, then the damage. Can reduce up to 14\/17\/19\/23 (TagTalent 16.8\/20.4\/22.8\/27.6) armor per unit.",
+        "The armor reduction is independent from the damage. It keeps reducing armor on ethereal targets, but not invulnerable targets. The armor reduction is directly bound to the beetle, so it disappears always together with it. On each interval, The Swarm first applies the armor reduction, then the damage. Can reduce up to 14\/17\/19\/23 (TagTalent 21\/25.5\/28.5\/34.5) armor per unit.",
         "The armor reduction is directly bound to the beetle, so it disappears always together with it.",
         "On each interval, The Swarm first applies the armor reduction, then the damage.",
-        "Can reduce up to 14\/17\/19\/23 (TagTalent 16.8\/20.4\/22.8\/27.6) armor per unit.",
+        "Can reduce up to 14\/17\/19\/23 (TagTalent 21\/25.5\/28.5\/34.5) armor per unit.",
         "The beetles provide flying vision while traveling forwards and while attached to a unit."
       ],
       "mana": "110",
@@ -74,11 +72,11 @@
         "Beetles Spawn Radius: 300",
         "Beetles Latch Radius: 100",
         "Number of Beetles: 12",
-        "Non-Hero Attacks to Destroy: 8 (TagTalent 11)",
-        "Hero Attacks to Destroy: 4 (TagTalent 6)",
+        "Non-Hero Attacks to Destroy: 8 (TagTalent 10)",
+        "Hero Attacks to Destroy: 4 (TagTalent 5)",
         "Tick Interval: 1.15\/1.0\/0.85\/0.7",
         "Damage per Tick: 18\/20\/22\/24",
-        "Armor Reduction per Tick: 1 (TagTalent 1.2)",
+        "Armor Reduction per Tick: 1 (TagTalent 1.5)",
         "Beetle Duration: 16",
         "Reduces cooldown by 4 seconds. Causes The Swarm to latch onto and reveal invisible units.",
         "Turning spell immune does not remove already attached beetles."
@@ -103,7 +101,7 @@
         "During the fade time, Weaver can attack and cast abilities and items without breaking the invisibility.",
         "Invisibility is broken upon reaching the cast point of abilities or items, or upon launching an attack. Weaver can pick up or drop items without breaking the invisibility.",
         "Weaver can pick up or drop items without breaking the invisibility.",
-        "When learning the level 25 talent, Weaver immediately gains -1 charge."
+        "When learning the level 25 talent, Weaver immediately gains 1 charge."
       ],
       "mana": "70",
       "hotKey": "W",
@@ -127,11 +125,12 @@
     {
       "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/f\/fa\/Weaver_Geminate_Attack.mp3\/revision\/latest?cb=20191216030516",
       "effects": [
-        "Ability Passive",
+        "Ability Target Unit \/ Autocast",
         "Affects Enemies",
         "Damage Instant Attack"
       ],
       "notes": [
+        "Upon leveling Geminate Attack the first time, it has Autocast on by default.",
         "Causes Weaver to perform an instant attack on the attacked target 0.25 seconds after launching the leading attack. These instant attacks can proc any attack modifiers and on-hit effects normally. They do not have True Strike, but completely ignore disarms. The instant attacks of Geminate Attack do not break Smoke of Deceit's invisibility. The bonus damage is only applied to the extra attacks. The triggering attack does not deal more damage.",
         "These instant attacks can proc any attack modifiers and on-hit effects normally. They do not have True Strike, but completely ignore disarms.",
         "The instant attacks of Geminate Attack do not break Smoke of Deceit's invisibility.",
@@ -139,7 +138,8 @@
         "There is no range limit for the Geminate Attacks, they launch regardless of how far away the target got before they launched. Even if the initial attack kills the target, the Geminate Attacks are still released, hitting the dead target. Weaver has to be alive for the attack to happen.",
         "Even if the initial attack kills the target, the Geminate Attacks are still released, hitting the dead target.",
         "Weaver has to be alive for the attack to happen.",
-        "Works against enemy buildings, Couriers and wards, except for Observer and Sentry Wards.",
+        "Works against enemy buildings, Courier and wards, except for Observer and Sentry Wards. Does not work against buildings when manually cast.",
+        "Does not work against buildings when manually cast.",
         "With Aghanim's Shard, Geminate Attacks targets every enemy unit affected by The Swarm that is within 1200 range of the primary attack target. Unlike the Geminate Attacks on the primary target, these instant attacks do not trigger attack modifiers or on-hit effects. These Geminate Attacks are launched simultaneously with the Geminate Attacks on the primary attack target. The Beetles do not have to be Weaver's beetles. Works with beetles from allies as well.",
         "Unlike the Geminate Attacks on the primary target, these instant attacks do not trigger attack modifiers or on-hit effects.",
         "These Geminate Attacks are launched simultaneously with the Geminate Attacks on the primary attack target.",
@@ -153,9 +153,9 @@
       "params": [
         "Effect Delay: 0.25",
         "Number of Extra Attacks: 1 (TagTalent 2)",
-        "Attack Damage Bonus: 10\/25\/40\/55",
-        "The Swarm Targets Search Radius: 1200",
-        "Causes Geminate attack to launch on other enemies within 1200 range of the target that have Beetles attached to them."
+        "Attack Damage Bonus: 10\/25\/40\/55 (TagTalent 100\/115\/130\/145)",
+        "Beetle Targets Search Radius: 1200",
+        "Causes Geminate Attack to launch on other enemies within 1200 range of the target that have Beetles attached to them."
       ],
       "itemBehaviour": [],
       "legacyKey": "K",
@@ -252,17 +252,17 @@
     },
     {
       "talentLvl": "20",
-      "talentLeft": "+3 Swarm Attacks to Kill",
-      "talentRight": "+35 Damage"
+      "talentLeft": "+0.5 Swarm Armor Reduction",
+      "talentRight": "+90 Geminate Attack Damage"
     },
     {
       "talentLvl": "15",
-      "talentLeft": "+12 Strength",
+      "talentLeft": "+2 Swarm Attacks to Kill",
       "talentRight": "+20 Mana Break"
     },
     {
       "talentLvl": "10",
-      "talentLeft": "+0.2 Swarm Armor Reduction",
+      "talentLeft": "+9 Strength",
       "talentRight": "+60 Shukuchi Damage"
     }
   ]

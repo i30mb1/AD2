@@ -26,7 +26,7 @@
         },
         {
           "talentLvl": "10",
-          "talentLeft": "-6s Unstable Concoction Cooldown",
+          "talentLeft": "+125 Unstable Concoction Radius",
           "talentRight": "+15 Attack Speed"
         }
       ]
@@ -86,16 +86,17 @@
         "Unstable Concoction always affects a 250 radius around where it explodes, including when it explodes on Alchemist. When Alchemist dies while brewing, it instantly blows up, hitting units around Alchemist based on how long it was brewed. The self-inflicted damage is lethal, it can be used to deny oneself. The stun and damage can hit creep-heroes within the radius as well.",
         "When Alchemist dies while brewing, it instantly blows up, hitting units around Alchemist based on how long it was brewed.",
         "The self-inflicted damage is lethal, it can be used to deny oneself.",
-        "The stun and damage can hit creep-heroes within the radius as well."
+        "The stun and damage can hit creep-heroes within the radius as well.",
+        "The radius increasing talent immediately updates all of Alchemist's currently brewing concoction and all of his currently flying concoction projectiles."
       ],
-      "mana": "90\/100\/110\/120",
+      "mana": "100",
       "hotKey": "W",
-      "cooldown": "16 (TagTalent 10)",
+      "cooldown": "13",
       "description": "Alchemist brews up an unstable concoction that he can throw at an enemy hero, to stun and deal damage in an area around the explosion. The longer the concoction brews, the more damage it deals and the longer the stun. After 5 seconds, the brew reaches its maximum damage and stun time. However, after 5.5 seconds, the concoction will explode on Alchemist himself if not thrown.",
       "spellName": "Unstable Concoction",
       "params": [
         "Cast Animation: 0+0",
-        "Concoction Radius: 250",
+        "Concoction Radius: 250 (TagTalent 375)",
         "Max Brew Time: 5",
         "Max Throw Time: 5.5",
         "Min Damage: 0",
@@ -182,16 +183,18 @@
         "Applies a basic dispel on the target ally upon cast. ↓↓ Double-tapping automatically targets self.",
         "↓↓ Double-tapping automatically targets self.",
         "The projectile travels at a speed of 900.",
+        "Increases Alchemist's total movement speed to 335, and to 375\/385\/395 when combined with Chemical Rage.",
         "Can regenerate up to 400 health over its full duration."
       ],
       "mana": "125",
       "hotKey": "D",
       "cooldown": "35",
-      "description": "Alchemist throws a potion at an ally, applying a basic dispel and giving them 50 Attack Speed and 40 HP regen. Lasts 10 seconds.",
+      "description": "Alchemist throws a potion at an ally, applying a basic dispel and giving them 50 Attack Speed, 30 Movement Speed and 40 HP regen. Lasts 10 seconds.",
       "spellName": "Berserk Potion",
       "params": [
         "Cast Animation: 0.2+0.63",
         "Cast Range: 800",
+        "Move Speed Bonus: 30",
         "Attack Speed Bonus: 50",
         "Health Regen Bonus: 40",
         "Buff Duration: 10"
@@ -300,7 +303,7 @@
     },
     {
       "talentLvl": "10",
-      "talentLeft": "-6s Unstable Concoction Cooldown",
+      "talentLeft": "+125 Unstable Concoction Radius",
       "talentRight": "+15 Attack Speed"
     }
   ]

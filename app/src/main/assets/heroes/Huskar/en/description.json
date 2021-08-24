@@ -2,19 +2,14 @@
   "abilities": [
     {
       "notes": [
-        "This attack damage talent is added as raw attack damage. Does not benefit illusions and is not affected by most percentage-based damage increasing or reducing effects.",
-        "Does not benefit illusions and is not affected by most percentage-based damage increasing or reducing effects.",
-        "The health talent increases maximum health capacity, and keeps the current health percentage.",
-        "The lifesteal talent stacks additively with other sources of lifesteal.",
-        "The spell lifesteal talent stacks additively with other sources of spell lifesteal. Heals for 5% from non-hero units. Treats creep-heroes as creeps and does not heal off of illusions.",
-        "Heals for 5% from non-hero units. Treats creep-heroes as creeps and does not heal off of illusions."
+        "The lifesteal talent stacks additively with other sources of lifesteal."
       ],
       "spellName": "Talent",
       "talents": [
         {
           "talentLvl": "25",
           "talentLeft": "Burning Spears Pure Damage",
-          "talentRight": "25% Spell Lifesteal"
+          "talentRight": "+16% Life Break Damage"
         },
         {
           "talentLvl": "20",
@@ -28,8 +23,8 @@
         },
         {
           "talentLvl": "10",
-          "talentLeft": "+12 Damage",
-          "talentRight": "+175 Health"
+          "talentLeft": "+2s Life Break Slow Duration",
+          "talentRight": "+1s Inner Fire Duration"
         }
       ]
     },
@@ -48,11 +43,15 @@
         "Does not knock back Roshan, but does damage and disarm him.",
         "The knockback is not a set distance. It pushes every enemy so they are 400 range away from Huskar's cast location. So the minimum knockback distance is -100.",
         "The knockback duration is always 1, so the speed varies between -100 and 400, depending on the knockback distance.",
-        "With Aghanim's Shard, Inner Fire loses its cast time and backswing. It still interrupts channeling abilities upon cast. It can be cast while stunned, cycloned, slept, taunted, hidden or during forced movement. It still cannot be cast while silenced, hexed or prevented from acting. Huskar becomes unable to ⇧ Shift-queue this ability upon acquiring Aghanim's Shard.",
-        "It can be cast while stunned, cycloned, slept, taunted, hidden or during forced movement.",
+        "With Aghanim's Shard, Inner Fire loses its cast time and backswing, starts slowing enemies, and heals Huskar based on the damage dealt. Still interrupts Huskar's channeling abilities upon cast. Can be cast while stunned, cycloned, slept, taunted, hidden or during forced movement. It still cannot be cast while silenced, hexed or prevented from acting. Huskar becomes unable to ⇧ Shift-queue this ability upon acquiring Aghanim's Shard. The disarm modifier is also responsible for the movement speed slow. The damage and heal work independently from each other, meaning it always heals for the full amount, regardless of how much damage enemies take. Heals 50\/85\/120\/155 health per hit hero (including illusions and clones, excluding creep-heroes) and 10\/17\/24\/31 health per hit non-hero unit.",
+        "Still interrupts Huskar's channeling abilities upon cast.",
+        "Can be cast while stunned, cycloned, slept, taunted, hidden or during forced movement.",
         "It still cannot be cast while silenced, hexed or prevented from acting.",
         "Huskar becomes unable to ⇧ Shift-queue this ability upon acquiring Aghanim's Shard.",
-        "With Aghanim's Shard, the disarm modifier also slows movement speed by 40% and applies a 50% heal reduction, health regeneration reduction, lifesteal reduction and spell lifesteal reduction."
+        "The disarm modifier is also responsible for the movement speed slow.",
+        "The damage and heal work independently from each other, meaning it always heals for the full amount, regardless of how much damage enemies take.",
+        "Heals 50\/85\/120\/155 health per hit hero (including illusions and clones, excluding creep-heroes) and 10\/17\/24\/31 health per hit non-hero unit.",
+        ""
       ],
       "mana": "75\/100\/125\/150",
       "hotKey": "Q",
@@ -65,10 +64,11 @@
         "Damage: 100\/170\/240\/310",
         "Max Knockback Distance: 400",
         "Knockback Duration: 1",
-        "Debuff Duration: 1.75\/2.5\/3.25\/4",
-        "Health Restoration Reduction: 50%",
+        "Debuff Duration: 1.75\/2.5\/3.25\/4 (TagTalent 2.75\/3.5\/4.25\/5)",
+        "Hero Damage as Heal: 50%",
+        "Non-Hero Damage as Heal: 10%",
         "Move Speed Slow: 40%",
-        "Causes Inner Fire to reduce healing and regeneration by 50% and applies a 40% movement speed slow. Lowers cooldown by 3 seconds. Can be cast while disabled.",
+        "Causes Inner Fire to apply a 40% movement speed slow and heal Huskar for 50% of the damage dealt to heroes. Lowers cooldown by 3 seconds. Can be cast while disabled.",
         "Disarm persists if debuff was placed before spell immunity and when not dispelled."
       ],
       "itemBehaviour": [],
@@ -175,9 +175,9 @@
         "Cast Animation: 0.3+0.5",
         "Cast Range: 550 (TagAghanim 850)",
         "Current Health as Cost: 32%\/38%\/44%",
-        "Target Current Health as Damage: 32%\/38%\/44%",
+        "Target Current Health as Damage: 32%\/38%\/44% (TagTalent 48%\/54%\/60%)",
         "Move Speed Slow: 60%",
-        "Slow Duration: 3\/4\/5",
+        "Slow Duration: 3\/4\/5 (TagTalent 5\/6\/7)",
         "Taunt Duration: 3",
         "Forces the enemy target to attack you and increases cast range.",
         "Blocked upon impact. When blocked, Huskar takes no damage either."
@@ -201,7 +201,7 @@
     {
       "talentLvl": "25",
       "talentLeft": "Burning Spears Pure Damage",
-      "talentRight": "25% Spell Lifesteal"
+      "talentRight": "+16% Life Break Damage"
     },
     {
       "talentLvl": "20",
@@ -215,8 +215,8 @@
     },
     {
       "talentLvl": "10",
-      "talentLeft": "+12 Damage",
-      "talentRight": "+175 Health"
+      "talentLeft": "+2s Life Break Slow Duration",
+      "talentRight": "+1s Inner Fire Duration"
     }
   ]
 }

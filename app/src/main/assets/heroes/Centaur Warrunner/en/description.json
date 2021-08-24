@@ -47,7 +47,7 @@
         "Cast Animation: 0.5+0.3",
         "Radius: 330",
         "Damage: 100\/150\/200\/250",
-        "Stun Duration: 1.7\/2\/2.3\/2.6 (TagTalent 2.7\/3\/3.3\/3.6)"
+        "Stun Duration: 1.6\/1.9\/2.2\/2.5 (TagTalent 2.6\/2.9\/3.2\/3.5)"
       ],
       "itemBehaviour": [],
       "legacyKey": "F",
@@ -160,10 +160,10 @@
       "params": [
         "Cast Animation: 0+0",
         "Damage & Slow Radius: 105",
-        "Strength as Damage: 150%\/225%\/300%",
+        "Strength as Damage: 175%\/250%\/325%",
         "Haste Speed: 550",
         "Move Speed Slow: 100%",
-        "Slow Duration: 2.3",
+        "Slow Duration: 2.5",
         "Stampede Duration: 3.5\/4\/4.5 (TagAghanim 4.5\/5\/5.5)",
         "Ally Incoming Damage Reduction: 40%",
         "Heroes affected by Stampede take reduced damage, and are able to run through obstructions, including trees and up cliffs. Increases duration by 1 second.",

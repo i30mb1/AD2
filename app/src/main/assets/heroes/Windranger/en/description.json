@@ -2,14 +2,13 @@
   "abilities": [
     {
       "notes": [
-        "The attack range talent also affects the cast range of Focus Fire.",
-        "The cooldown reduction talent stacks multiplicatively with other sources cooldown reduction."
+        "The attack range talent also affects the cast range of Focus Fire."
       ],
       "spellName": "Talent",
       "talents": [
         {
           "talentLvl": "25",
-          "talentLeft": "25% Cooldown Reduction",
+          "talentLeft": "Focus Fire Kills Advance Cooldown By 20s",
           "talentRight": "Windrun Grants Invisibility"
         },
         {
@@ -19,7 +18,7 @@
         },
         {
           "talentLvl": "15",
-          "talentLeft": "+100 Attack Range",
+          "talentLeft": "Windrun Undispellable",
           "talentRight": "+100 Powershot Damage"
         },
         {
@@ -41,17 +40,14 @@
         "This means when Windranger teleports away after cast, it latches on targets based on the cast location, not her new location.",
         "The complete search area is shaped like a triangle. 575 is the triangle's height.",
         "Therefore, the triangle has two sides with a length of 624.66, and the third side has a length of 488.15.",
-        "Shackleshot always prioritizes units over trees as a secondary target.",
+        "Shackleshot always prioritizes units over trees as a secondary target, and picks the furthest suitable unit or tree.",
         "If the target does not get shackled, it is only briefly stunned using the default stunned debuff. If the target gets shackled to a unit, both of them are stunned for the full duration using the shackleshot debuff. The stun persists, even when the primary or the secondary unit dies, or the tree is destroyed earlier. The stun also persists, when one of the targets gets freed from the stun earlier.",
         "If the target gets shackled to a unit, both of them are stunned for the full duration using the shackleshot debuff.",
         "The stun persists, even when the primary or the secondary unit dies, or the tree is destroyed earlier.",
         "The stun also persists, when one of the targets gets freed from the stun earlier.",
         "When the primary target dies before the shackle reaches it, it still can latch to a secondary unit and stun it.",
         "Shackleshot can latch on invisible units and units in the Fog of War.",
-        "The stun duration increasing talent only increases the success stun duration. The fail stun duration is not increased.",
-        "Only the flat cooldown reduction talent is displayed. With the level talent alone, the cooldown is reduced to 12\/10.5\/9\/7.5. With both talents, the cooldown is reduced to 10.5\/9\/7.5\/6.",
-        "With the level talent alone, the cooldown is reduced to 12\/10.5\/9\/7.5.",
-        "With both talents, the cooldown is reduced to 10.5\/9\/7.5\/6."
+        "The stun duration increasing talent only increases the success stun duration. The fail stun duration is not increased."
       ],
       "mana": "70\/80\/90\/100",
       "hotKey": "Q",
@@ -77,7 +73,7 @@
       "effects": [
         "Ability Target Point \/ Channeled",
         "Affects Enemies",
-        "Damage Magical (TagAghanim Instant Kill)"
+        "Damage Magical"
       ],
       "notes": [
         "The arrow travels at a speed of 3000, taking 0.87 seconds to reach max distance.",
@@ -89,28 +85,21 @@
         "With the max damage increasing talent, this is how much damage a fully channeled arrow deals after hitting up to 10 units:",
         "To reach 1 damage, the arrow needs to hit 23\/25\/27\/28 (TagTalent 25\/27\/28\/29) units.",
         "The arrow provides 400 radius flying vision as it travels, which sticks at its final location for 3.34 seconds.",
-        "The sound of a bow getting stretched during channeling time is audible to allies only.",
-        "With Aghanim's Shard, Powershot travels globally. It only stops traveling upon hitting an enemy hero (including illusions and clones, excluding creep-heroes) beyond the initial 2600 range. When hitting a hero, it first applies its damage, and then checks the target's current health. Stops hitting creeps after traveling the initial 2600 distance. Still destroys trees and provides vision along the entire travel path.",
-        "It only stops traveling upon hitting an enemy hero (including illusions and clones, excluding creep-heroes) beyond the initial 2600 range.",
-        "When hitting a hero, it first applies its damage, and then checks the target's current health.",
-        "Stops hitting creeps after traveling the initial 2600 distance.",
-        "Still destroys trees and provides vision along the entire travel path."
+        "The sound of a bow getting stretched during channeling time is audible to allies only."
       ],
       "mana": "90\/100\/110\/120",
       "hotKey": "W",
-      "cooldown": "12\/11\/10\/9 (TagTalent 9\/8.25\/7.5\/6.75) (TagTalent 10.5\/9.5\/8.5\/7.5, 7.875\/7.125\/6.375\/5.625)",
+      "cooldown": "12\/11\/10\/9",
       "description": "Windranger charges her bow for up to 1 second for a single powerful shot, which deals more damage the longer it is charged. The arrow damages enemies along its path. For each enemy that Powershot hits, its damage is reduced by 20%.",
       "spellName": "Powershot",
       "params": [
         "Cast Animation: 0+0",
         "Cast Range: 2600",
-        "Travel Distance: 2600 (TagTalent Global)",
+        "Travel Distance: 2600",
         "Damage Radius: 125",
         "Max Channel Time: 1",
         "Max Damage: 150\/250\/350\/450 (TagTalent 250\/350\/450\/550)",
-        "Damage Reduction per Unit Hit: 20%",
-        "Kill Health Threshold: 13%",
-        "Powershot now becomes global, but only hits heroes beyond its default range (TagTalentmax 1 hero). Impacted heroes will be killed if they are under 13% after taking the impact damage. Lowers cooldown by 1.5 seconds."
+        "Damage Reduction per Unit Hit: 20%"
       ],
       "itemBehaviour": [],
       "legacyKey": "R",
@@ -137,7 +126,7 @@
       ],
       "mana": "50",
       "hotKey": "E",
-      "cooldown": "15\/14\/13\/12 (TagTalent 11.25\/10.5\/9.75\/9) (TagTalent 0.25, 0.19)",
+      "cooldown": "15\/14\/13\/12 (TagTalent 0.25)",
       "description": "Increases movement speed and adds evasion from all physical attacks, while slowing movement of nearby enemies.",
       "spellName": "Windrun",
       "params": [
@@ -152,7 +141,7 @@
         "Passive Evasion: 30%",
         "Haste Speed: 550",
         "Number of Charges: 2",
-        "Charge Replenish Time: 15\/14\/13\/12 (TagAghanim 11.25\/10.5\/9.75\/9)",
+        "Charge Replenish Time: 15\/14\/13\/12",
         "Grants 2 charges to Windrun and grants haste movement speed. Passively provides 30% Evasion.",
         "Slow persists if debuff was placed before spell immunity.",
         "The passive evasion is disabled by Break.",
@@ -186,18 +175,38 @@
       ],
       "mana": "75\/100\/125",
       "hotKey": "R",
-      "cooldown": "70\/50\/30 (TagTalent 52.5\/37.5\/22.5)",
+      "cooldown": "70\/50\/30",
       "description": "Windranger channels the wind to gain 475 additional attack speed against a single enemy unit or structure, though with a reduction to her attack damage. Extra damage from secondary item effects is not reduced. Lasts 20 seconds.",
       "spellName": "Focus Fire",
       "params": [
         "Cast Animation: 0+0",
         "Attack Speed Bonus: 475",
         "Attack Damage Reduction: 50%\/40%\/30% (TagTalent 34%\/24%\/14%)",
-        "Duration: 20"
+        "Duration: 20",
+        "Cooldown Reduction per Kill: 20"
       ],
       "itemBehaviour": [],
       "legacyKey": "F",
       "story": "Lyralei's ability to bombard opponents with a flurry of arrows is unparalleled - even at the expense of accuracy."
+    },
+    {
+      "audioUrl": null,
+      "effects": [
+        "Ability Target Point",
+        "Affects Enemies"
+      ],
+      "notes": [
+        "Requires Aghanim's Shard to be unlocked."
+      ],
+      "mana": "150",
+      "hotKey": null,
+      "cooldown": "40",
+      "description": "Summons a strong wind that pushes all enemies within 1000 range 250 units per second in the target direction for 3 seconds. Vector Targeted.",
+      "spellName": "Gale Force",
+      "params": [],
+      "itemBehaviour": [],
+      "legacyKey": null,
+      "story": "At last Lyralei has learned to call upon the might of her true birthright."
     }
   ],
   "mainAttributes": {
@@ -213,7 +222,7 @@
   "talents": [
     {
       "talentLvl": "25",
-      "talentLeft": "25% Cooldown Reduction",
+      "talentLeft": "Focus Fire Kills Advance Cooldown By 20s",
       "talentRight": "Windrun Grants Invisibility"
     },
     {
@@ -223,7 +232,7 @@
     },
     {
       "talentLvl": "15",
-      "talentLeft": "+100 Attack Range",
+      "talentLeft": "Windrun Undispellable",
       "talentRight": "+100 Powershot Damage"
     },
     {

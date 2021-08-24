@@ -1,11 +1,6 @@
 {
   "abilities": [
     {
-      "notes": [
-        "This attack damage talent is added as raw attack damage. Does not benefit illusions and is not affected by most percentage-based damage increasing or reducing effects.",
-        "Does not benefit illusions and is not affected by most percentage-based damage increasing or reducing effects.",
-        "The armor talent does not benefit illusions."
-      ],
       "spellName": "Talent",
       "talents": [
         {
@@ -21,11 +16,11 @@
         {
           "talentLvl": "15",
           "talentLeft": "+120 Rolling Boulder Damage",
-          "talentRight": "+8 Armor"
+          "talentRight": "+300 Boulder Smash Distance"
         },
         {
           "talentLvl": "10",
-          "talentLeft": "+60 Damage",
+          "talentLeft": "+2s Magnetize Duration",
           "talentRight": "+325 Rolling Boulder Distance"
         }
       ]
@@ -78,8 +73,8 @@
         "Damage & Slow Radius: 180",
         "Damage: 105\/170\/235\/300",
         "Knockback Speed: 900",
-        "Unit Knockback Distance: 480\/600\/680\/800",
-        "Stone Knockback Distance: 2000",
+        "Unit Knockback Distance: 480\/600\/680\/800 (TagTalent 780\/900\/980\/1100)",
+        "Stone Knockback Distance: 2000 (TagTalent 2300)",
         "Stone Move Speed Slow: 50%",
         "Stone Slow Duration: 1.25\/2.5\/3.25\/4",
         "Cannot target spell immune units. Does not attempt to damage or slow spell immune enemies. Can target spell immune units under the effect of Enchant Remnant.",
@@ -186,7 +181,7 @@
         "In Ability Draft, Stone Remnant is bound to Magnetize, and is granted to the player that drafts it.",
         "Earth Spirit begins the game with all 7 charges.",
         "↓↓ Double-tapping places a Stone Remnant 100 range in front of Earth Spirit.",
-        "It is possible to have up to 7 (TagTalent 13) remnants when placing all 7 (TagTalent 11) remnants at once, and then every time after the 25 seconds recharge.",
+        "It is possible to have up to 7 (TagTalent 13) remnants when placing all 7 (TagTalent 11) remnants at once, and then every time after the 20 seconds recharge.",
         "Remnants cannot be attacked or destroyed by anyone. They may only be destroyed by Rolling Boulder, Magnetize or by expiring. When used by Magnetize, the remnant remains for 8 seconds before crumbling down. Rolling Boulder destroys them instantly.",
         "When used by Magnetize, the remnant remains for 8 seconds before crumbling down.",
         "Rolling Boulder destroys them instantly.",
@@ -210,7 +205,7 @@
         "Cast Range: 1100",
         "Remnant Duration: 60",
         "Number of Charges: 7 (TagTalent 11)",
-        "Charge Replenish Time: 25",
+        "Charge Replenish Time: 20",
         "Vision Radius: 375",
         "Grants a new ability: Enchant Remnant.",
         "Causes Stone Remnant to provide 375 ground vision. Increases charge count by 4."
@@ -233,8 +228,8 @@
         "↓↓ Double-tapping automatically target self.",
         "When Earth Spirit is enchanted, Boulder Smash turns into a non-targeted ability and automatically casts on himself when used.",
         "Provides True Sight over the target for the full duration.",
-        "An enchanted hero is fully disabled, invulnerable and reacts on Earth Spirit's abilities just like a regular Stone Remnant. Boulder Smash: Enchanted heroes are knocked back for 2000 distance and slow and damage enemies they collide with. Rolling Boulder: Enchanted heroes boost the rolling, ending the enchantment early. Earth Spirit does not collide with them. Geomagnetic Grip: Enchanted heroes are pulled at a speed of 900 and apply the damage. Can pull enchanted enemies. Magnetize: Enchanted heroes receive, refresh and spread Magnetize when within its stone search radius.",
-        "Boulder Smash: Enchanted heroes are knocked back for 2000 distance and slow and damage enemies they collide with.",
+        "An enchanted hero is fully disabled, invulnerable and reacts on Earth Spirit's abilities just like a regular Stone Remnant. Boulder Smash: Enchanted heroes are knocked back for 2000 (TagTalent 2300) distance and slow and damage enemies they collide with. Rolling Boulder: Enchanted heroes boost the rolling, ending the enchantment early. Earth Spirit does not collide with them. Geomagnetic Grip: Enchanted heroes are pulled at a speed of 900 and apply the damage. Can pull enchanted enemies. Magnetize: Enchanted heroes receive, refresh and spread Magnetize when within its stone search radius.",
+        "Boulder Smash: Enchanted heroes are knocked back for 2000 (TagTalent 2300) distance and slow and damage enemies they collide with.",
         "Rolling Boulder: Enchanted heroes boost the rolling, ending the enchantment early. Earth Spirit does not collide with them.",
         "Geomagnetic Grip: Enchanted heroes are pulled at a speed of 900 and apply the damage. Can pull enchanted enemies.",
         "Magnetize: Enchanted heroes receive, refresh and spread Magnetize when within its stone search radius.",
@@ -273,10 +268,10 @@
         "Checks for nearby Stone Remnants in 0.5-second intervals, starting 0.5 seconds after cast.",
         "If a remnant is found near an affected unit, Magnetize gets spread to enemies within a 600 radius around the remnant. If an enemy within range already was affected by Magnetize, it gets the debuff refreshed instead.",
         "If an enemy within range already was affected by Magnetize, it gets the debuff refreshed instead.",
-        "Deals 20\/40\/60 damage in 0.5-second intervals, starting 0.5 seconds after cast. Without refreshing the duration once, Magnetize can deal up to 240\/480\/720 damage per affected unit (before reductions).",
-        "Without refreshing the duration once, Magnetize can deal up to 240\/480\/720 damage per affected unit (before reductions).",
+        "Deals 20\/40\/60 damage in 0.5-second intervals, starting 0.5 seconds after cast. Without refreshing the duration once, Magnetize can deal up to 240\/480\/720 (TagTalent 320\/640\/960) damage per affected unit (before reductions).",
+        "Without refreshing the duration once, Magnetize can deal up to 240\/480\/720 (TagTalent 320\/640\/960) damage per affected unit (before reductions).",
         "Earth Spirit can still utilize a Stone Remnant for 8 seconds after it has spread Magnetize, before it is destroyed.",
-        "The magnetize debuff can be placed on and spread from invisible and invulnerable units, but not on or from hidden units and couriers.",
+        "The magnetize debuff can be placed on and spread from invisible and invulnerable units, but not on or from hidden units and Couriers.",
         "A number is visible above all magnetized enemies, counting down the duration. This is visible to allies only. Refreshing the duration with a Stone Remnant also resets the timer.",
         "Refreshing the duration with a Stone Remnant also resets the timer."
       ],
@@ -291,7 +286,7 @@
         "Stone Search Radius: 400",
         "Stone Refresh Radius: 600",
         "Damage per Second: 40\/80\/120",
-        "Duration: 6",
+        "Duration: 6 (TagTalent 8)",
         "Places debuff on and attempts to damage spell immune enemies. Can spread to and refresh debuff on spell immune enemies. Does not silence or slow spell immune enemies when another magnetized enemy is hit by Boulder Smash or Geomagnetic Grip."
       ],
       "itemBehaviour": [],
@@ -323,11 +318,11 @@
     {
       "talentLvl": "15",
       "talentLeft": "+120 Rolling Boulder Damage",
-      "talentRight": "+8 Armor"
+      "talentRight": "+300 Boulder Smash Distance"
     },
     {
       "talentLvl": "10",
-      "talentLeft": "+60 Damage",
+      "talentLeft": "+2s Magnetize Duration",
       "talentRight": "+325 Rolling Boulder Distance"
     }
   ]

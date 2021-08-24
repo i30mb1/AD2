@@ -13,18 +13,18 @@
         },
         {
           "talentLvl": "20",
-          "talentLeft": "+25 Health Regen",
+          "talentLeft": "+120 Caustic Finale Damage",
           "talentRight": "-2s Burrowstrike Cooldown"
         },
         {
           "talentLvl": "15",
           "talentLeft": "+20% Caustic Finale Slow",
-          "talentRight": "+30 Sand Storm DPS"
+          "talentRight": "+150 Sand Storm Radius"
         },
         {
           "talentLvl": "10",
           "talentLeft": "+200 Health",
-          "talentRight": "+20 Epicenter Damage Per Pulse"
+          "talentRight": "+20 Sand Storm DPS"
         }
       ]
     },
@@ -81,8 +81,8 @@
         "Turns Sand King instantly invisible upon cast. The fade delay takes effect when breaking the invisibility by attacking, or casting abilities or items. However, since casting Sand Storm applies the invisibility instantly, the fade delay does not take effect when re-casting it while inside the previous cast's area.",
         "The fade delay takes effect when breaking the invisibility by attacking, or casting abilities or items.",
         "However, since casting Sand Storm applies the invisibility instantly, the fade delay does not take effect when re-casting it while inside the previous cast's area.",
-        "Sand Storm deals 10\/22.5\/35\/47.5 (TagTalent 25\/37.5\/50\/62.5) damage in 0.5-second intervals, starting immediately upon cast, resulting in a total of 40\/50\/60\/70 instances. Can deal up to 400\/1125\/2100\/3325 (TagTalent 1000\/1875\/3000\/4375) damage to a single unit (before reductions) if it stays in range for the whole duration.",
-        "Can deal up to 400\/1125\/2100\/3325 (TagTalent 1000\/1875\/3000\/4375) damage to a single unit (before reductions) if it stays in range for the whole duration.",
+        "Sand Storm deals 10\/22.5\/35\/47.5 (TagTalent 20\/32.5\/45\/57.5) damage in 0.5-second intervals, starting immediately upon cast, resulting in a total of 40\/50\/60\/70 instances. Can deal up to 400\/1125\/2100\/3325 (TagTalent 800\/1625\/2700\/4025) damage to a single unit (before reductions) if it stays in range for the whole duration.",
+        "Can deal up to 400\/1125\/2100\/3325 (TagTalent 800\/1625\/2700\/4025) damage to a single unit (before reductions) if it stays in range for the whole duration.",
         "With the level 25 talent, enemy units within the Sand Storm radius are blinded and have their movement speed slowed by 40%. The effects are provided by an aura, and its debuff lingers for 0.5 seconds. Sand Storm's blind uses pseudo-random distribution.",
         "The effects are provided by an aura, and its debuff lingers for 0.5 seconds.",
         "Sand Storm's blind uses pseudo-random distribution."
@@ -94,9 +94,9 @@
       "spellName": "Sand Storm",
       "params": [
         "Cast Animation: 0+0.5",
-        "Radius: 425\/500\/575\/650",
+        "Radius: 425\/500\/575\/650 (TagTalent 575\/650\/725\/800)",
         "Fade Delay: 0.7",
-        "Damage per Second: 20\/45\/70\/95 (TagTalent 50\/75\/100\/125)",
+        "Damage per Second: 20\/45\/70\/95 (TagTalent 40\/65\/90\/115)",
         "Duration: 20\/25\/30\/35",
         "Aura Linger Duration: 0.5",
         "Enemy Miss Chance: 40%",
@@ -130,7 +130,7 @@
       "spellName": "Caustic Finale",
       "params": [
         "Damage Radius: 500",
-        "Base Damage: 70\/90\/110\/130",
+        "Base Damage: 70\/90\/110\/130 (TagTalent 190\/210\/230\/250)",
         "Max Health as Damage: 10%\/14%\/18%\/22%",
         "Move Speed Slow: 10%\/15%\/20%\/25% (TagTalent 30%\/35%\/40%\/45%)",
         "Debuff Duration: 5"
@@ -151,21 +151,19 @@
         "The pulse radii are all centered on and follow Sand King. The pulses happen in 0.5\/0.375\/0.3-second (TagTalent 0.27\/0.23\/0.2-second) intervals, starting 0.5\/0.375\/0.3 (TagTalent 0.27\/0.23\/0.2) seconds after cast. This means it takes 3 seconds for the ability to release all pulses after the initial delay.",
         "The pulses happen in 0.5\/0.375\/0.3-second (TagTalent 0.27\/0.23\/0.2-second) intervals, starting 0.5\/0.375\/0.3 (TagTalent 0.27\/0.23\/0.2) seconds after cast.",
         "This means it takes 3 seconds for the ability to release all pulses after the initial delay.",
-        "Can deal a total of 660\/960\/1300 damage without any talents (before reductions). With the damage per pulse increasing talent, it can deal a total of 780\/1120\/1500 damage. With the number per pulse increasing talent, it can deal a total of 1210\/1560\/1950 damage. With the both talent, it can deal a total of 1430\/1820\/2250 damage.",
-        "With the damage per pulse increasing talent, it can deal a total of 780\/1120\/1500 damage.",
-        "With the number per pulse increasing talent, it can deal a total of 1210\/1560\/1950 damage.",
-        "With the both talent, it can deal a total of 1430\/1820\/2250 damage.",
+        "Can deal a total of 660\/960\/1300 (1210\/1560\/1950) damage (before reductions).",
         "The slow is applied to enemies on each pulse. Multiple instances of the slow on a unit do not stack, but refresh the duration. Can slow a single unit for up to 6 seconds. Each pulse first applies the damage, then the debuff.",
         "Can slow a single unit for up to 6 seconds.",
         "Each pulse first applies the damage, then the debuff.",
         "Multiple casts of Epicenter fully stack, with each cast creating its own independent instance.",
-        "With Aghanim's Shard, Epicenter passively releases a single pulse when Sand King collectively moves a distance of 700. The pulses are based on Epicenter's current level. If it is not learned, the passive pulses are not released. However, the distance counter still counts even if Epicenter is not learned. Teleporting effects (which includes blinking) may only add up to 700 range to the distance counter, no matter how big the actual teleported distance was. This means long distance teleports may only release one pulse, and not multiple pulses based on the entire distance. The distance counter has no time limit. It only resets upon releasing a passive pulse. When no enemies are within the radius, the pulse waits until an enemy comes within range, and releases the pulse immediately once there is.",
+        "With Aghanim's Shard, Epicenter passively releases a single pulse when Sand King collectively moves a distance of 700. The pulses are based on Epicenter's current level. If it is not learned, the passive pulses are not released. However, the distance counter still counts even if Epicenter is not learned. Teleporting effects (which includes blinking) may only add up to 700 range to the distance counter, no matter how big the actual teleported distance was. This means long distance teleports may only release one pulse, and not multiple pulses based on the entire distance. The distance counter has no time limit. It only resets upon releasing a passive pulse. When no enemies are within the radius, the pulse waits until an enemy comes within range, and releases the pulse immediately once there is. With the extra damage provided by the shard, can deal a total of 780\/1120\/1500 (1430\/1820\/2250) damage (before reductions).",
         "The pulses are based on Epicenter's current level. If it is not learned, the passive pulses are not released.",
         "However, the distance counter still counts even if Epicenter is not learned.",
         "Teleporting effects (which includes blinking) may only add up to 700 range to the distance counter, no matter how big the actual teleported distance was.",
         "This means long distance teleports may only release one pulse, and not multiple pulses based on the entire distance.",
         "The distance counter has no time limit. It only resets upon releasing a passive pulse.",
-        "When no enemies are within the radius, the pulse waits until an enemy comes within range, and releases the pulse immediately once there is."
+        "When no enemies are within the radius, the pulse waits until an enemy comes within range, and releases the pulse immediately once there is.",
+        "With the extra damage provided by the shard, can deal a total of 780\/1120\/1500 (1430\/1820\/2250) damage (before reductions)."
       ],
       "mana": "150\/225\/300",
       "hotKey": "R",
@@ -183,7 +181,7 @@
         "Epicenter Duration: 3",
         "Passive Distance Required for Pulse: 700",
         "Passive Pulse Radius: 475",
-        "Every 700 units moved causes an Epicenter Pulse around Sand King in 475 AoE.",
+        "Every 700 units moved causes an Epicenter Pulse around Sand King in 475 AoE. Increases Pulse damage by 20.",
         "The passive pulses are not disabled by Break."
       ],
       "itemBehaviour": [],
@@ -192,7 +190,7 @@
     }
   ],
   "mainAttributes": {
-    "attrStrengthInc": 3.0,
+    "attrStrengthInc": 2.7,
     "attrStrength": 22.0,
     "attrIntelligence": 19.0,
     "attrIntelligenceInc": 1.8,
@@ -209,18 +207,18 @@
     },
     {
       "talentLvl": "20",
-      "talentLeft": "+25 Health Regen",
+      "talentLeft": "+120 Caustic Finale Damage",
       "talentRight": "-2s Burrowstrike Cooldown"
     },
     {
       "talentLvl": "15",
       "talentLeft": "+20% Caustic Finale Slow",
-      "talentRight": "+30 Sand Storm DPS"
+      "talentRight": "+150 Sand Storm Radius"
     },
     {
       "talentLvl": "10",
       "talentLeft": "+200 Health",
-      "talentRight": "+20 Epicenter Damage Per Pulse"
+      "talentRight": "+20 Sand Storm DPS"
     }
   ]
 }

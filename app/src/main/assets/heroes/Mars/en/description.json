@@ -1,11 +1,6 @@
 {
   "abilities": [
     {
-      "notes": [
-        "This attack damage talent is added as raw attack damage. Does not benefit illusions and is not affected by most percentage-based damage increasing or reducing effects.",
-        "Does not benefit illusions and is not affected by most percentage-based damage increasing or reducing effects.",
-        "The armor talent does not benefit illusions."
-      ],
       "spellName": "Talent",
       "talents": [
         {
@@ -16,17 +11,17 @@
         {
           "talentLvl": "20",
           "talentLeft": "+0.8s Spear of Mars Stun",
-          "talentRight": "+160 Spear of Mars Damage"
+          "talentRight": "+10%\/5% Bulwark Front\/Side Damage Reduction"
         },
         {
           "talentLvl": "15",
-          "talentLeft": "+8 Armor",
+          "talentLeft": "+100 Spear of Mars Damage",
           "talentRight": "-4s God's Rebuke Cooldown"
         },
         {
           "talentLvl": "10",
-          "talentLeft": "+20 Movement Speed",
-          "talentRight": "+15 Damage"
+          "talentLeft": "-10% Bulwark Movement Penalty",
+          "talentRight": "+1.5s God's Rebuke Slow"
         }
       ]
     },
@@ -39,15 +34,15 @@
       ],
       "notes": [
         "The spear travels at a speed of 1400, taking 0.64\/0.71\/0.79\/0.86 seconds to reach maximum distance.",
-        "The spear starts traveling exactly on Mars' location, and travels forward up to 900\/1000\/1100\/1200 range. Although within the spear's search radius, it does not hit enemies behind Mars upon cast. Can hit units up to 1025\/1125\/1225\/1325 range away (travel distance + radius).",
+        "The spear starts traveling exactly on Mars' location, and travels forward up to 900\/1000\/1100\/1200 range. Although within the spear's search radius, it does not hit enemies behind Mars upon cast. With the travel distance and search radius, it can hit units up to 1025\/1125\/1225\/1325 range away.",
         "Although within the spear's search radius, it does not hit enemies behind Mars upon cast.",
-        "Can hit units up to 1025\/1125\/1225\/1325 range away (travel distance + radius).",
-        "A spear may only damage and drag 1 (2) hero(es) along with it, and are stunned during the drag. If that hero dies or gets freed from the spear, it cannot impale a new hero. Dragged heroes are made to face towards the direction the spear came from. When hitting a building, tree, or cliff, the hero is moved closely to the pinned object and stunned. Buildings include every building, enemy and allied ones alike, but excludes the shops. Cliffs include all natural cliffs onto elevated areas, as well as Ice Shards, Power Cogs, and Arena Of Blood. Terrain decorations like the walls at the borders of both bases, the random statues on the map, and the arches at stairs cannot be used to pin enemies.",
+        "With the travel distance and search radius, it can hit units up to 1025\/1125\/1225\/1325 range away.",
+        "A spear may only damage and drag 1 (or 2) heroes along with it, and are stunned during the drag. If that hero dies or gets freed from the spear, it cannot impale a new hero. Dragged heroes are made to face towards the direction the spear came from. When hitting a building, tree, or cliff, the hero is moved closely to the pinned object and stunned. Buildings include every building, enemy and allied ones alike, but excludes the shops. Cliffs include all natural cliffs onto elevated areas, as well as pathing blockers (i.e. Ice Shards) and Arena Of Blood. Terrain decorations like the walls at the borders of both bases, the random statues on the map, and the arches at stairs cannot be used to pin enemies.",
         "If that hero dies or gets freed from the spear, it cannot impale a new hero.",
         "Dragged heroes are made to face towards the direction the spear came from.",
         "When hitting a building, tree, or cliff, the hero is moved closely to the pinned object and stunned.",
         "Buildings include every building, enemy and allied ones alike, but excludes the shops.",
-        "Cliffs include all natural cliffs onto elevated areas, as well as Ice Shards, Power Cogs, and Arena Of Blood.",
+        "Cliffs include all natural cliffs onto elevated areas, as well as pathing blockers (i.e. Ice Shards) and Arena Of Blood.",
         "Terrain decorations like the walls at the borders of both bases, the random statues on the map, and the arches at stairs cannot be used to pin enemies.",
         "Provides true sight over the impaled enemy. No true sight is applied while dragging the enemy along with the spear.",
         "Upon losing the impale stun debuff, trees within a 100 radius around the hero get destroyed.",
@@ -72,7 +67,7 @@
       ],
       "mana": "110\/120\/130\/140",
       "hotKey": "Q",
-      "cooldown": "14",
+      "cooldown": "14\/13\/12\/11",
       "description": "Mars throws his legendary Spear with deadly precision, damaging each enemy unit it strikes. The first enemy hero it hits is skewered on the spear, pushing it back. If a skewered hero hits a tree, building, or cliff, they will be impaled to it and stunned.",
       "spellName": "Spear of Mars",
       "params": [
@@ -80,7 +75,7 @@
         "Cast Range: Global",
         "Max Travel Distance: 900\/1000\/1100\/1200",
         "Spear Collision Size: 125",
-        "Spear Damage: 100\/175\/250\/325 (TagTalent 260\/335\/410\/485)",
+        "Spear Damage: 100\/175\/250\/325 (TagTalent 200\/275\/350\/425)",
         "Knockback Distance: 75",
         "Knockback Duration: 0.25",
         "Number of Impaled Units: 1 (TagTalent 2)",
@@ -133,7 +128,7 @@
         "Move Speed Slow: 40%",
         "Knockback Distance: 150",
         "Knockback Duration: 0.3",
-        "Slow Duration: 2",
+        "Slow Duration: 2 (TagTalent 3.5)",
         "The instant attack fully pierces spell immunity. Does not knock spell immune enemies back."
       ],
       "itemBehaviour": [],
@@ -187,11 +182,11 @@
       "params": [
         "Front Angle: 140°",
         "Side Angle: 240°",
-        "Front Damage Reduction: 40%\/50%\/60%\/70%",
-        "Side Damage Reduction: 20%\/25%\/30%\/35%",
+        "Front Damage Reduction: 40%\/50%\/60%\/70% (TagTalent 50%\/60%\/70%\/80%)",
+        "Side Damage Reduction: 20%\/25%\/30%\/35% (TagTalent 25%\/30%\/35%\/40%)",
         "Active Projectile Redirect Chance: 70%",
         "Active Projectile Redirect Range: 800",
-        "Active Self Move Speed Slow: 20%",
+        "Active Self Move Speed Slow: 20% (TagTalent 10%)",
         "Instant Attack Interval: 1",
         "Instant Attack Damage Bonus: 75",
         "Number of Soldiers: 5",
@@ -246,7 +241,7 @@
       ],
       "mana": "150\/175\/200",
       "hotKey": "R",
-      "cooldown": "90\/75\/60",
+      "cooldown": "90",
       "description": "After a short formation time, Mars summons an arena lined with the undead warriors of the Ash Legion, who block enemy attacks and movement. Enemy heroes near the inside edge of the arena will be attacked by spears, dealing damage and knocking them back.",
       "spellName": "Arena Of Blood",
       "params": [
@@ -289,17 +284,17 @@
     {
       "talentLvl": "20",
       "talentLeft": "+0.8s Spear of Mars Stun",
-      "talentRight": "+160 Spear of Mars Damage"
+      "talentRight": "+10%\/5% Bulwark Front\/Side Damage Reduction"
     },
     {
       "talentLvl": "15",
-      "talentLeft": "+8 Armor",
+      "talentLeft": "+100 Spear of Mars Damage",
       "talentRight": "-4s God's Rebuke Cooldown"
     },
     {
       "talentLvl": "10",
-      "talentLeft": "+20 Movement Speed",
-      "talentRight": "+15 Damage"
+      "talentLeft": "-10% Bulwark Movement Penalty",
+      "talentRight": "+1.5s God's Rebuke Slow"
     }
   ]
 }

@@ -35,7 +35,7 @@
       "effects": [
         "Ability Target Point",
         "Affects Enemies \/ Allies",
-        "Damage Pure"
+        "Damage Pure \/ Instant Kill"
       ],
       "notes": [
         "The Meat Hook travels at a speed of 1450, taking 0.9 seconds to reach maximum distance.",
@@ -52,9 +52,11 @@
         "Hooked enemies are fully disabled for the entire pull duration. Allies are not disabled. They can act freely while being pulled by the hook.",
         "Allies are not disabled. They can act freely while being pulled by the hook.",
         "When the hook hits a unit, it provides 500 radius flying vision at the unit's location upon hit for 4 seconds.",
+        "If the hook collides with a unit which is not a hero, ancient creep, or creep-hero, it instantly kills it. The creep is killed by getting its health dealt as damage to it, in the form of HP Removal. Spell immune creeps are not killed.",
+        "The creep is killed by getting its health dealt as damage to it, in the form of HP Removal. Spell immune creeps are not killed.",
         "Runes can be hooked as well. Doing so refunds the mana spent on the hook."
       ],
-      "mana": "125\/130\/135\/140",
+      "mana": "135",
       "hotKey": "Q",
       "cooldown": "18\/16\/14\/12 (TagTalent 14\/12\/10\/8)",
       "description": "Launches a bloody hook toward a unit or location. The hook will snag the first unit it encounters, dragging the unit back to Pudge and dealing damage if it is an enemy.",
@@ -183,13 +185,10 @@
         "Pulls the target closer to Pudge at a speed of 75. The pull debuff disappears when the target gets within 125 range of Pudge. Provides True Sight over the target, but only when the target was not invisible or within a fade time upon cast. If the target turns invulnerable or hidden, the channeling stops instantly.",
         "Provides True Sight over the target, but only when the target was not invisible or within a fade time upon cast.",
         "If the target turns invulnerable or hidden, the channeling stops instantly.",
-        "Treats creep-heroes as heroes.",
-        "Deals damage in 0.5-second intervals, starting immediately upon cast, resulting in up to 6 (TagTalent 7.6) (or 12 (TagTalent 13.6) against non-heroes) damage instances.",
-        "Can deal up to 180\/270\/360 + 90%\/180%\/270% (360\/540\/720 + 180%\/360%\/540% to non-heroes) damage (before reductions). With the duration increasing talent, it can deal up to 228\/342\/456 + 114%\/228%\/342% (or 408\/612\/816 + 204%\/408%\/612% to non-heroes) damage. With the damage increasing talent, it can deal up to 324\/486\/648 + 162%\/324%\/486% (or 648\/972\/1296 + 324%\/648%\/972% to non-heroes) damage. With both talents, it can deal up to 410.4\/615.6\/820.8 + 205.2%\/410.4%\/615.6% (or 734.4\/1101.6\/1468.8 + 367.2%\/734.4%\/1101.6% to non-heroes) damage. Also heals Pudge for the same amount when fully channeled.",
-        "With the duration increasing talent, it can deal up to 228\/342\/456 + 114%\/228%\/342% (or 408\/612\/816 + 204%\/408%\/612% to non-heroes) damage.",
-        "With the damage increasing talent, it can deal up to 324\/486\/648 + 162%\/324%\/486% (or 648\/972\/1296 + 324%\/648%\/972% to non-heroes) damage.",
-        "With both talents, it can deal up to 410.4\/615.6\/820.8 + 205.2%\/410.4%\/615.6% (or 734.4\/1101.6\/1468.8 + 367.2%\/734.4%\/1101.6% to non-heroes) damage.",
-        "Also heals Pudge for the same amount when fully channeled.",
+        "Treats creep-heroes partly as heroes, and partly as creeps. Uses the hero duration for creep-heroes, but uses the non-hero amount of ticks for them. However, the damage per instance is calculated to match the total damage a hero would take, and not a creep.",
+        "Uses the hero duration for creep-heroes, but uses the non-hero amount of ticks for them.",
+        "However, the damage per instance is calculated to match the total damage a hero would take, and not a creep.",
+        "Dismember deals a fixed amount of intervals spread evenly over its full duration, with the first tick happening immediately upon cast.",
         "The damage and heal work independently from each other, meaning it always heals for the full amount per interval, regardless of how much damage the target takes.",
         "Pudge's Dismember responses are global and audible to everyone, even through the Fog of War.",
         "With Aghanim's Shard, Dismember can be cast on allied heroes, including clones and illusions, excluding creep-heroes. Disjoints projectiles and applies a strong dispel on the target upon cast. The allied hero is invulnerable, hidden and spell immune while swallowed. The hero can simply get out of Pudge themself, by issuing any order 3 seconds after being swallowed. Swallowing an ally grants Pudge the Eject sub-ability, allowing him to eject the ally at any time. This ignores the order lock duration. Only one hero may be swallowed at a time. Swallowing a second hero automatically ejects the previous ally. During Dismember, the allied hero is periodically moved to Pudge's current position. This means their auras are effectively bestowed around Pudge until ejected. The periodic movement gets interrupted by teleport effects, without the ally getting ejected. They stay swallowed at the location they got teleported to. Can fully regenerate the swallowed ally's health within 16.67 seconds. Pudge receives the hidden modifier upon cast, which creates the visual effect above him, visible to allies only.",
@@ -213,10 +212,12 @@
         "Cast Range: 160",
         "Hero Max Channel Time: 3 (TagTalent 3.8)",
         "Non-Hero Max Channel Time: 6 (TagTalent 6.8)",
+        "Hero Total Number of Intervals: 6 (TagTalent 8)",
+        "Non-Hero Total Number of Intervals: 9 (TagTalent 11)",
         "Base Damage\/Heal per Second: 60\/90\/120 (TagTalent 108\/162\/216)",
         "Strength as Damage\/Heal per Second: 30%\/60%\/90% (TagTalent 54%\/108%\/162%)",
         "Pull Speed: 75",
-        "Allied Cast Range: 400",
+        "Allied Cast Range: 300",
         "Ally Max Health as Health Regen: 6%",
         "Ally Order Lock Duration: 3",
         "Allows targeting an ally to swallow them and heal them for 6% of their max health per second. Reduces cooldown by 10 seconds."

@@ -16,12 +16,12 @@
         {
           "talentLvl": "15",
           "talentLeft": "+30 Nature's Grasp Damage",
-          "talentRight": "+48 Living Armor Heal"
+          "talentRight": "+15% Leech Seed Slow"
         },
         {
           "talentLvl": "10",
           "talentLeft": "-5s Nature's Grasp Cooldown",
-          "talentRight": "+1.75 Mana Regen"
+          "talentRight": "+36 Living Armor Heal"
         }
       ]
     },
@@ -38,21 +38,21 @@
         "The thickets are placed with 175 distance from each other, with the first one starting 100 range in front of Treant Protector, resulting in a total length of 1500.",
         "The brambles spawn in 0.1-second intervals, with the first one spawning right upon cast, resulting in a formation time of 0.8 seconds.",
         "With the path length and effect radius, the path can hit units up to 1635 range away.",
-        "A thicket's duration starts after the thicket was created. This means the last thicket disappears 12.8 seconds after cast.",
+        "A thicket's duration starts after the thicket was created. This means the last thicket disappears 0.80681818181818 seconds after cast.",
         "When there is a tree within the radius of any thicket, all thickets deal increased damage. Checks for trees once upon creation of the path. Trees created or destroyed after creation are ignored.",
         "When there is a tree within the radius of any thicket, all thickets deal increased damage.",
         "Checks for trees once upon creation of the path. Trees created or destroyed after creation are ignored.",
         "The slow and damage are provided by an aura, which is applied by each thicket in the path. There are 2 different modifiers used \u2014 the damage modifier is used by regular thickets, while the damage bonus modifier is used by thickets boosted by trees. These 2 modifiers stack with each other, but do not stack with multiple of themselves.",
         "There are 2 different modifiers used \u2014 the damage modifier is used by regular thickets, while the damage bonus modifier is used by thickets boosted by trees.",
         "These 2 modifiers stack with each other, but do not stack with multiple of themselves.",
-        "Deals 7.5\/10\/12.5\/15 (TagTalent 15\/17.5\/20\/22.5) damage in 0.25-second intervals, starting 0.25 seconds after the debuff is placed. Can deal up to 375\/500\/625\/750 (TagTalent 750\/875\/1000\/1125) damage to a single unit (before reductions). When buffed by a tree, deals 11.25\/15\/18.75\/22.5 (TagTalent 22.5\/26.25\/30\/33.75) damage in 0.25-second intervals. When buffed by a tree, can deal up to 562.5\/750\/937.5\/1125 (TagTalent 1125\/1312.5\/1500\/1687.5) damage to a single unit (before reductions).",
-        "Can deal up to 375\/500\/625\/750 (TagTalent 750\/875\/1000\/1125) damage to a single unit (before reductions).",
+        "Deals 7.5\/10\/12.5\/15 (TagTalent 15\/17.5\/20\/22.5) damage in 0.25-second intervals, starting 0.25 seconds after the debuff is placed. Can deal up to 15.2\/20.27\/25.34\/30.41 (TagTalent 30.41\/35.48\/40.55\/45.61) damage to a single unit (before reductions). When buffed by a tree, deals 11.25\/15\/18.75\/22.5 (TagTalent 22.5\/26.25\/30\/33.75) damage in 0.25-second intervals. When buffed by a tree, can deal up to 22.81\/30.41\/38.01\/45.61 (TagTalent 45.61\/53.22\/60.82\/68.42) damage to a single unit (before reductions).",
+        "Can deal up to 15.2\/20.27\/25.34\/30.41 (TagTalent 30.41\/35.48\/40.55\/45.61) damage to a single unit (before reductions).",
         "When buffed by a tree, deals 11.25\/15\/18.75\/22.5 (TagTalent 22.5\/26.25\/30\/33.75) damage in 0.25-second intervals.",
-        "When buffed by a tree, can deal up to 562.5\/750\/937.5\/1125 (TagTalent 1125\/1312.5\/1500\/1687.5) damage to a single unit (before reductions).",
-        "Against non-hero units, it deals 3.75\/5\/6.25\/7.5 (TagTalent 7.5\/8.75\/10\/11.25) damage in 0.25-second intervals, starting 0.25 seconds after the debuff is placed. Can deal up to 187.5\/250\/312.5\/375 (TagTalent 375\/437.5\/500\/562.5) damage to a single unit (before reductions). When buffed by a tree, deals 5.63\/7.5\/9.38\/11.25 (TagTalent 11.25\/13.13\/15\/16.88) damage in 0.25-second intervals. When buffed by a tree, can deal up to 281.25\/375\/468.75\/562.5 (TagTalent 562.5\/656.25\/750\/843.75) damage to a single unit (before reductions).",
-        "Can deal up to 187.5\/250\/312.5\/375 (TagTalent 375\/437.5\/500\/562.5) damage to a single unit (before reductions).",
+        "When buffed by a tree, can deal up to 22.81\/30.41\/38.01\/45.61 (TagTalent 45.61\/53.22\/60.82\/68.42) damage to a single unit (before reductions).",
+        "Against non-hero units, it deals 3.75\/5\/6.25\/7.5 (TagTalent 7.5\/8.75\/10\/11.25) damage in 0.25-second intervals, starting 0.25 seconds after the debuff is placed. Can deal up to 7.6\/10.14\/12.67\/15.2 (TagTalent 15.2\/17.74\/20.27\/22.81) damage to a single unit (before reductions). When buffed by a tree, deals 5.63\/7.5\/9.38\/11.25 (TagTalent 11.25\/13.13\/15\/16.88) damage in 0.25-second intervals. When buffed by a tree, can deal up to 11.4\/15.2\/19.01\/22.81 (TagTalent 22.81\/26.61\/30.41\/34.21) damage to a single unit (before reductions).",
+        "Can deal up to 7.6\/10.14\/12.67\/15.2 (TagTalent 15.2\/17.74\/20.27\/22.81) damage to a single unit (before reductions).",
         "When buffed by a tree, deals 5.63\/7.5\/9.38\/11.25 (TagTalent 11.25\/13.13\/15\/16.88) damage in 0.25-second intervals.",
-        "When buffed by a tree, can deal up to 281.25\/375\/468.75\/562.5 (TagTalent 562.5\/656.25\/750\/843.75) damage to a single unit (before reductions)."
+        "When buffed by a tree, can deal up to 11.4\/15.2\/19.01\/22.81 (TagTalent 22.81\/26.61\/30.41\/34.21) damage to a single unit (before reductions)."
       ],
       "mana": "75\/80\/85\/90",
       "hotKey": "Q",
@@ -68,7 +68,7 @@
         "Tree Contact Damage Increase: 50%",
         "Creep Damage Percentage: 50%",
         "Move Speed Slow: 25%\/30%\/35%\/40%",
-        "Vines Duration: 12",
+        "Vines Duration: 9\/10\/11\/12",
         "Aura Linger Duration: 0.5"
       ],
       "itemBehaviour": [],
@@ -102,7 +102,7 @@
         "Radius: 650",
         "Pulse Interval: 1",
         "Damage\/Heal per Pulse: 16\/32\/48\/64 (TagTalent 56\/72\/88\/104)",
-        "Move Speed Slow: 8%\/14%\/20%\/26%",
+        "Move Speed Slow: 8%\/14%\/20%\/26% (TagTalent 23%\/29%\/35%\/41%)",
         "Duration: 5",
         "Can heal spell immune allies. Slow persists, attempts to damage and continues to pulse, if debuff was placed before spell immunity and when not dispelled."
       ],
@@ -120,7 +120,7 @@
         "When targeting the ground, the closest unit to the target point is targeted instead. ↓↓ Double-tapping automatically targets self.",
         "↓↓ Double-tapping automatically targets self.",
         "Can be cast on buildings, providing all its effects to them.",
-        "Heals 5\/8.33\/11.67\/15 (TagTalent 9\/12.33\/15.67\/19) health in 1-second intervals, starting 1 second after the buff is placed, resulting in 12 instances.",
+        "Heals 5\/8.33\/11.67\/15 (TagTalent 8\/11.33\/14.67\/18) health in 1-second intervals, starting 1 second after the buff is placed, resulting in 12 instances.",
         "With the level 25 talent, Living Armor turns into an area-targeted ability, so that it cannot directly target units anymore. ↓↓ Double-tapping still targets Treant Protector, centering the radius around him.",
         "↓↓ Double-tapping still targets Treant Protector, centering the radius around him."
       ],
@@ -132,7 +132,7 @@
       "params": [
         "Cast Animation: 0.3+0.66",
         "Cast Range: Global",
-        "Total Heal: 60\/100\/140\/180 (TagTalent 108\/148\/188\/228)",
+        "Total Heal: 60\/100\/140\/180 (TagTalent 96\/136\/176\/216)",
         "Armor Bonus: 5\/6\/7\/8 (TagTalent 13\/14\/15\/16)",
         "Duration: 12",
         "Radius: 450"
@@ -161,7 +161,7 @@
         "Multiple overlapping areas do not cause Overgrowth to stack.",
         "Upon losing Aghanim's Scepter, the enchanted trees still provide vision, and are not removed. However, for Overgrowth does not root enemies around the enchanted trees anymore.",
         "However, for Overgrowth does not root enemies around the enchanted trees anymore.",
-        "Eyes In The Forest sets the respawn time of all natural trees on the map to 10 seconds, down from the default 5 minutes. Planted trees are not affected. If Aghanim's Scepter is acquired while there already are destroyed trees on the map, the trees respawn immediately.",
+        "Eyes In The Forest sets the respawn time of all natural trees on the map to 10 seconds, down from the default 3 minutes. Planted trees are not affected. If Aghanim's Scepter is acquired while there already are destroyed trees on the map, the trees respawn immediately.",
         "If Aghanim's Scepter is acquired while there already are destroyed trees on the map, the trees respawn immediately."
       ],
       "mana": "100",
@@ -286,12 +286,12 @@
     {
       "talentLvl": "15",
       "talentLeft": "+30 Nature's Grasp Damage",
-      "talentRight": "+48 Living Armor Heal"
+      "talentRight": "+15% Leech Seed Slow"
     },
     {
       "talentLvl": "10",
       "talentLeft": "-5s Nature's Grasp Cooldown",
-      "talentRight": "+1.75 Mana Regen"
+      "talentRight": "+36 Living Armor Heal"
     }
   ]
 }

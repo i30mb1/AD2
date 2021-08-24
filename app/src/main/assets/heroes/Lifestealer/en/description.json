@@ -26,7 +26,7 @@
         },
         {
           "talentLvl": "10",
-          "talentLeft": "+20 Movement Speed",
+          "talentLeft": "+10% Rage Move Speed Bonus",
           "talentRight": "+30 Attack Speed"
         }
       ]
@@ -49,7 +49,7 @@
       "spellName": "Rage",
       "params": [
         "Cast Animation: 0+0",
-        "Move Speed Bonus: 15%\/16%\/17%\/18%",
+        "Move Speed Bonus: 15%\/16%\/17%\/18% (TagTalent 25%\/26%\/27%\/28%)",
         "Duration: 3\/4\/5\/6 (TagTalent 4.5\/5.5\/6.5\/7.5)"
       ],
       "itemBehaviour": [],
@@ -174,18 +174,18 @@
         "If the target is not a hero or creep-hero, its base movement speed also gets set equal to Lifestealer's current movement speed.",
         "If the target is not a hero or a creep-hero, Lifestealer automatically takes control over it, turning it into his unit. If the target was an enemy, it retains its health bar colors, making it harder for enemies to tell that it got taken over.",
         "If the target was an enemy, it retains its health bar colors, making it harder for enemies to tell that it got taken over.",
-        "Can be cast on, but cannot take control over allied heroes and allied creep-heroes. When on level 2 or higher, can be cast on and take control over ancient creeps. Cannot be cast on Roshan, Couriers, wards, buildings, enemy heroes and enemy creep-heroes.",
+        "Can be cast on, but cannot take control over allied heroes and allied creep-heroes. When on level 2 or higher, can be cast on and take control over ancient creeps. Cannot be cast on Roshan, Courier, Undying Zombie, wards, buildings, enemy heroes and enemy creep-heroes.",
         "When on level 2 or higher, can be cast on and take control over ancient creeps.",
-        "Cannot be cast on Roshan, Couriers, wards, buildings, enemy heroes and enemy creep-heroes.",
+        "Cannot be cast on Roshan, Courier, Undying Zombie, wards, buildings, enemy heroes and enemy creep-heroes.",
         "The infested unit receives a hidden modifier, which creates the visual effect above it, visible to allies only.",
         "Infest's cooldown starts upon leaving the infested unit, not upon cast.",
-        "With Aghanim's Scepter, Infest can be cast on enemy heroes and creep-heroes. Does not increase health or movement speed of such targets. Although having a limited duration on these targets, Lifestealer still may use Consume to leave the host earlier. Causes Lifestealer to perform instant attacks on an Infested enemy target in 1.25-second intervals, starting 1.25 after cast, resulting in up to 4 attacks. These instant attacks can proc any attack modifiers and on-hit effects normally. They do not have True Strike, but completely ignore disarms.",
+        "With Aghanim's Scepter, Infest can be cast on enemy heroes and creep-heroes. Does not increase health or movement speed of such targets. Although having a limited duration on these targets, Lifestealer still may use Consume to leave the host earlier. Causes Lifestealer to perform instant attacks on an Infested enemy target in 1.25-second intervals, starting immediately after cast, resulting in up to 5 attacks. These instant attacks can proc any attack modifiers and on-hit effects normally. They do not have True Strike, but completely ignore disarms.",
         "Does not increase health or movement speed of such targets.",
         "Although having a limited duration on these targets, Lifestealer still may use Consume to leave the host earlier.",
-        "Causes Lifestealer to perform instant attacks on an Infested enemy target in 1.25-second intervals, starting 1.25 after cast, resulting in up to 4 attacks.",
+        "Causes Lifestealer to perform instant attacks on an Infested enemy target in 1.25-second intervals, starting immediately after cast, resulting in up to 5 attacks.",
         "These instant attacks can proc any attack modifiers and on-hit effects normally. They do not have True Strike, but completely ignore disarms."
       ],
-      "mana": "100\/150\/200",
+      "mana": "100\/125\/150",
       "hotKey": "R",
       "cooldown": "100\/75\/50 (TagTalent 20)",
       "description": "Lifestealer infests the body of a target unit, becoming undetectable, and healing for a portion of his max hitpoints every second while inside. He can then explode from the host body, dealing damage to nearby enemies. If the infested unit is an enemy creep or a neutral creep, he can take control of the unit's ability to move and attack. Does not work on enemy heroes.",
@@ -198,7 +198,8 @@
         "Self Max Health as Health Regen Bonus: 3%\/4%\/5% (TagAghanim 6%\/8%\/10%)",
         "Enemy Hero Attack Interval: 1.25",
         "Enemy Hero Duration: 5",
-        "Allows Infesting enemy heroes for 5 seconds, attacking their inside once every 1.25 seconds and doubling Lifestealer's regen rate. Increases cast range to 500 and reduces cooldown to 20 seconds.",
+        "Disarm Duration: 5",
+        "Allows Infesting enemy heroes for 5 seconds, disarming them, attacking their inside once every 1.25 seconds and doubling Lifestealer's regen rate. Increases cast range to 500 and reduces cooldown to 20 seconds.",
         "Grants a new ability: Open Wounds."
       ],
       "itemBehaviour": [],
@@ -263,7 +264,7 @@
     },
     {
       "talentLvl": "10",
-      "talentLeft": "+20 Movement Speed",
+      "talentLeft": "+10% Rage Move Speed Bonus",
       "talentRight": "+30 Attack Speed"
     }
   ]

@@ -54,7 +54,7 @@
       "description": "Sven unleashes his magical gauntlet that deals damage and stuns enemy units in a small area around the target.",
       "spellName": "Storm Hammer",
       "params": [
-        "Cast Animation: 0.3+0",
+        "Cast Animation: 0.2+0",
         "Cast Range: 600 (TagAghanim 950)",
         "Effect Radius: 255",
         "Damage: 110\/180\/250\/320",
@@ -94,7 +94,7 @@
         "Starting Radius: 150",
         "Distance: 700",
         "End Radius: 360",
-        "Cleave Damage: 30%\/50%\/70%\/90% (TagTalent 55%\/75%\/95%\/115%)"
+        "Cleave Damage: 25%\/50%\/75%\/100% (TagTalent 50%\/75%\/100%\/125%)"
       ],
       "itemBehaviour": [],
       "legacyKey": "C",

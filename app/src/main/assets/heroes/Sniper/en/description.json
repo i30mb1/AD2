@@ -3,8 +3,7 @@
     {
       "notes": [
         "This attack damage talent is added as raw attack damage. Does not benefit illusions and is not affected by most percentage-based damage increasing or reducing effects.",
-        "Does not benefit illusions and is not affected by most percentage-based damage increasing or reducing effects.",
-        "The cooldown reduction talent stacks multiplicatively with other sources cooldown reduction."
+        "Does not benefit illusions and is not affected by most percentage-based damage increasing or reducing effects."
       ],
       "spellName": "Talent",
       "talents": [
@@ -26,7 +25,7 @@
         {
           "talentLvl": "10",
           "talentLeft": "+15 Damage",
-          "talentRight": "15% Cooldown Reduction"
+          "talentRight": "+1s Take Aim Duration"
         }
       ]
     },
@@ -43,8 +42,8 @@
         "Shrapnel starts dealing damage, slowing and providing vision after the effect delay.",
         "Provides 450 radius flying vision at the targeted area.",
         "The damage and the slow are both provided by an aura. Its debuff lingers for 0.5 seconds. Multiple instances of the aura do not stack.",
-        "Deals damage in 1 second intervals, starting immediately as the debuff is placed, resulting in up to 11 possible damage instances. Can deal up to 220\/385\/550\/715 (TagTalent 484\/649\/814\/979) damage to a single unit (before reductions).",
-        "Can deal up to 220\/385\/550\/715 (TagTalent 484\/649\/814\/979) damage to a single unit (before reductions).",
+        "Deals damage in 1 second intervals, starting immediately as the debuff is placed, resulting in up to 11 possible damage instances. Can deal up to 275\/440\/605\/770 (TagTalent 539\/704\/869\/1034) damage to a single unit (before reductions).",
+        "Can deal up to 275\/440\/605\/770 (TagTalent 539\/704\/869\/1034) damage to a single unit (before reductions).",
         "Does not affect buildings.",
         "Leveling up Shrapnel immediately updates all already existing Shrapnel instances. However, the already placed debuffs on enemies do not update. The slow increasing talent immediately updates all already existing Shrapnel instances as well. However, the already placed debuffs on enemies do not update either. The damage increasing talent immediately updates all already existing Shrapnel instances as well, including already placed debuffs on enemies.",
         "The slow increasing talent immediately updates all already existing Shrapnel instances as well. However, the already placed debuffs on enemies do not update either.",
@@ -60,12 +59,12 @@
         "Cast Range: 1800",
         "Effect Radius: 450",
         "Effect Delay: 1.2",
-        "Damage per Second: 20\/35\/50\/65 (TagTalent 44\/59\/74\/89)",
+        "Damage per Second: 25\/40\/55\/70 (TagTalent 49\/64\/79\/94)",
         "Move Speed Slow: 12%\/18%\/24%\/30% (TagTalent 26%\/32%\/38%\/44%)",
         "Aura Linger Duration: 0.5",
         "Shrapnel Duration: 10",
         "Number of Charges: 3 (TagTalent 9)",
-        "Charge Replenish Time: 35 (TagTalent 29.75)",
+        "Charge Replenish Time: 35 (TagTalent 34.65)",
         "Slow persists and attempts to damage if debuff was placed before spell immunity."
       ],
       "itemBehaviour": [],
@@ -81,13 +80,13 @@
       ],
       "notes": [
         "Headshot can miss.",
-        "Has a proc chance of 70% while Take Aim is active.",
+        "With Take Aim active, the proc chance increases to 100%.",
         "The proccing attack first applies the debuffs, then its own damage.",
         "The bonus damage is dealt in one instance together with the attack damage, and counts as attack damage as well. It can be lifestealed off of, but it is not considered by crit or cleave. It is also not affected by percentage-based attack damage bonuses or reductions, but can be reduced with flat reductions.",
         "It can be lifestealed off of, but it is not considered by crit or cleave.",
         "It is also not affected by percentage-based attack damage bonuses or reductions, but can be reduced with flat reductions.",
-        "Increases Sniper's attack damage output on average by 8\/20\/32\/44. During Take Aim, Increases Sniper's attack damage output on average by 14\/35\/56\/77.",
-        "During Take Aim, Increases Sniper's attack damage output on average by 14\/35\/56\/77.",
+        "Increases Sniper's attack damage output on average by 8\/20\/32\/44. With Take Aim active, Sniper's attack damage output is increased by 20\/50\/80\/110.",
+        "With Take Aim active, Sniper's attack damage output is increased by 20\/50\/80\/110.",
         "Cannot proc against wards and buildings, can proc against allies.",
         "Headshot uses pseudo-random distribution.",
         "Headshot applies forced movement on the target upon proccing, pushing the target away from Sniper. The knockback does not interrupt channeling spells. The knockback is not applied on units who are already affected by other sources of forced movement. Knocks units back at a speed of 100 (TagTalent 380).",
@@ -122,20 +121,20 @@
       ],
       "notes": [
         "Passively increases Sniper's total attack range to 650\/750\/850\/950 (TagTalent 750\/850\/950\/1050).",
-        "Interrupts Sniper's channeling abilities upon cast. When cast, Sniper gains True Strike and Headshot's proc chance increases to 70%.",
-        "When cast, Sniper gains True Strike and Headshot's proc chance increases to 70%."
+        "Interrupts Sniper's channeling abilities upon cast. When cast, Headshot's proc chance increases to 100%.",
+        "When cast, Headshot's proc chance increases to 100%."
       ],
-      "mana": "50",
+      "mana": "25",
       "hotKey": "E",
-      "cooldown": "35\/30\/25\/20 (TagTalent 29.75\/25.5\/21.25\/17)",
-      "description": "Extends the attack range of Sniper's rifle. Can be activated to provided True Strike and +30%% Headshot chance for 4 seconds. Slows you by 30%% for the duration.",
+      "cooldown": "20\/18\/16\/14 (TagTalent 19.8\/17.82\/15.84\/13.86)",
+      "description": "Extends the attack range of Sniper's rifle. Can be activated to provide 100% Headshot chance for 3 seconds. Slows you by 45% for the duration.",
       "spellName": "Take Aim",
       "params": [
         "Cast Animation: 0+0",
         "Passive Attack Range Bonus: 100\/200\/300\/400",
-        "Active Self Move Speed Slow: 25%",
-        "Active Headshot Proc Chance Bonus: 30%",
-        "Active Duration: 4",
+        "Active Self Move Speed Slow: 45%\/40%\/35%\/30%",
+        "Active Headshot Proc Chance: 100%",
+        "Active Duration: 3 (TagTalent 4)",
         "Break disables the passive range bonus."
       ],
       "itemBehaviour": [],
@@ -153,11 +152,11 @@
         "Requires Aghanim's Shard to be unlocked.",
         "The grenade travels at a speed of 2500 until reaching the targeted point. The projectile has 175 radius flying vision. This vision does not last.",
         "The projectile has 175 radius flying vision. This vision does not last.",
-        "Knocks Sniper away from the targeted point at a speed of 1125 upon cast. Also knocks Sniper 100 range upwards, resulting in a small arc. Sniper is not disabled during the knock back. Can push Sniper over impassable terrain. Any tree a knocked back unit collides with gets destroyed.",
+        "Knocks Sniper away from the targeted point at a speed of 1187.5 upon cast. Also knocks Sniper 100 range upwards, resulting in a small arc. Sniper is not disabled during the knock back. Can push Sniper over impassable terrain. Any tree a knocked back unit collides with gets destroyed.",
         "Also knocks Sniper 100 range upwards, resulting in a small arc.",
         "Sniper is not disabled during the knock back.",
         "Can push Sniper over impassable terrain. Any tree a knocked back unit collides with gets destroyed.",
-        "Knocks enemies back at a speed of 1062.5. Knockback distance is always 425, no matter how far the unit is from the center. Also knocks enemies 100 range upwards, resulting in a small arc. Enemies are fully disabled during the knockback. Can push enemies over impassable terrain. Any tree a knocked back unit collides with gets destroyed.",
+        "Knocks enemies back at a speed of 1187.5. Knockback distance is always 475, no matter how far the unit is from the center. Also knocks enemies 100 range upwards, resulting in a small arc. Enemies are fully disabled during the knockback. Can push enemies over impassable terrain. Any tree a knocked back unit collides with gets destroyed.",
         "Also knocks enemies 100 range upwards, resulting in a small arc.",
         "Enemies are fully disabled during the knockback.",
         "Can push enemies over impassable terrain. Any tree a knocked back unit collides with gets destroyed.",
@@ -166,16 +165,16 @@
       ],
       "mana": "50",
       "hotKey": "D",
-      "cooldown": "16 (TagTalent 13.6)",
-      "description": "Grants Concussive Grenade. Deals 125 damage, knocking enemies back 425 distance, slowing them by 50% and disarming them for 3 seconds. Radius: 375. Knocks you back 450 units on cast.",
+      "cooldown": "16 (TagTalent 15.84)",
+      "description": "Grants Concussive Grenade. Deals 125 damage, knocking enemies back 475 distance, slowing them by 50% and disarming them for 3 seconds. Radius: 375. Knocks you back 475 units on cast.",
       "spellName": "Concussive Grenade",
       "params": [
         "Cast Animation: 0.1+0.8",
         "Cast Range: 600",
         "Radius: 375",
         "Impact Damage: 125",
-        "Self Knockback Distance: 450",
-        "Enemy Knockback Distance: 425",
+        "Self Knockback Distance: 475",
+        "Enemy Knockback Distance: 475",
         "Knockback Duration: 0.4",
         "Move Speed Slow: 50%",
         "Debuff Duration: 3"
@@ -208,7 +207,7 @@
       ],
       "mana": "175\/225\/275",
       "hotKey": "R",
-      "cooldown": "20\/15\/10 (TagTalent 17\/12.75\/8.5)",
+      "cooldown": "20\/15\/10 (TagTalent 19.8\/14.85\/9.9)",
       "description": "Sniper locks onto a target enemy unit and, after a short aiming duration, fires a devastating shot that deals damage at long range and mini-stuns the target.",
       "spellName": "Assassinate",
       "params": [
@@ -256,7 +255,7 @@
     {
       "talentLvl": "10",
       "talentLeft": "+15 Damage",
-      "talentRight": "15% Cooldown Reduction"
+      "talentRight": "+1s Take Aim Duration"
     }
   ]
 }

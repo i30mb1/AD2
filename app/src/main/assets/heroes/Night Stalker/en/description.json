@@ -2,10 +2,7 @@
   "abilities": [
     {
       "notes": [
-        "The armor talent does not benefit illusions.",
-        "The strength talent effectively grants Night Stalker 240 health, 1.2 health regeneration, and 12 attack damage.",
-        "This attack damage talent is added as raw attack damage. Does not benefit illusions and is not affected by most percentage-based damage increasing or reducing effects.",
-        "Does not benefit illusions and is not affected by most percentage-based damage increasing or reducing effects."
+        "The strength talent effectively grants Night Stalker 500 health, 2.5 health regeneration, and 25 attack damage."
       ],
       "spellName": "Talent",
       "talents": [
@@ -16,17 +13,17 @@
         },
         {
           "talentLvl": "20",
-          "talentLeft": "+35 Damage",
+          "talentLeft": "+25 Strength",
           "talentRight": "-4s Crippling Fear Cooldown"
         },
         {
           "talentLvl": "15",
           "talentLeft": "+10% Hunter In The Night Movement Speed",
-          "talentRight": "+12 Strength"
+          "talentRight": "+50s Dark Ascension damage"
         },
         {
           "talentLvl": "10",
-          "talentLeft": "+6 Armor",
+          "talentLeft": "+10s Dark Ascension Duration",
           "talentRight": "+45 Void Damage"
         }
       ]
@@ -143,13 +140,13 @@
       ],
       "mana": "125\/175\/225",
       "hotKey": "R",
-      "cooldown": "140\/130\/120 (TagTalent 80\/70\/60)",
+      "cooldown": "150\/140\/130 (TagTalent 90\/80\/70)",
       "description": "Night Stalker smothers the sun and summons instant darkness, so that he might use his powers at their fullest. Nightstalker gains flight and bonus damage during this time. Has unobstructed vision.",
       "spellName": "Dark Ascension",
       "params": [
         "Cast Animation: 0.3+0",
-        "Attack Damage Bonus: 50\/100\/150",
-        "Duration: 30"
+        "Attack Damage Bonus: 50\/100\/150 (TagTalent 100\/150\/200)",
+        "Duration: 30 (TagTalent 40)"
       ],
       "itemBehaviour": [],
       "legacyKey": "R",
@@ -174,17 +171,17 @@
     },
     {
       "talentLvl": "20",
-      "talentLeft": "+35 Damage",
+      "talentLeft": "+25 Strength",
       "talentRight": "-4s Crippling Fear Cooldown"
     },
     {
       "talentLvl": "15",
       "talentLeft": "+10% Hunter In The Night Movement Speed",
-      "talentRight": "+12 Strength"
+      "talentRight": "+50s Dark Ascension damage"
     },
     {
       "talentLvl": "10",
-      "talentLeft": "+6 Armor",
+      "talentLeft": "+10s Dark Ascension Duration",
       "talentRight": "+45 Void Damage"
     }
   ]

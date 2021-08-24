@@ -89,7 +89,7 @@
         "Gives the target a stop command after teleporting it, canceling channeling abilities and stopping queued orders.",
         "↓↓ Double-tapping automatically teleport all units under the caster's control (excluding wards, illusions, clones and non-ancient creep-heroes) get teleport to the caster.",
         "Unlike directly targeting a creep to teleport, ↓↓ Double-tapping or Portrait-casting does affect invulnerable and hidden units.",
-        "With Aghanim's Scepter, Holy Persuasion allows ancient creeps to be persuaded per level of Hand of God. Ancient creeps are included in the maximum allowed units, so it does not allow Chen to have more creeps persuaded. Can be cast on ancient creeps without having Hand of God leveled for no result, wasting the mana and cooldown.",
+        "With Aghanim's Shard, Holy Persuasion allows 1\/2\/3 ancient creeps to be persuaded per level of Hand of God. Ancient creeps are included in the maximum allowed units, so it does not allow Chen to have more creeps persuaded. Can be cast on ancient creeps without having Hand of God leveled for no result, wasting the mana and cooldown.",
         "Ancient creeps are included in the maximum allowed units, so it does not allow Chen to have more creeps persuaded.",
         "Can be cast on ancient creeps without having Hand of God leveled for no result, wasting the mana and cooldown."
       ],
@@ -110,7 +110,7 @@
         "Teleport Delay: 6",
         "Max Charges: 3",
         "Charge Replenish Time: 15",
-        "Allows Holy Persuasion to target Ancient Creeps, maximum one per level of Hand of God.",
+        "Allows Holy Persuasion to target Ancient Creeps. Can control up to 1\/2\/3 Ancient Creeps based on Hand of God's level.",
         "Can persuade spell immune units.",
         "Can be cast on and teleported rooted creeps."
       ],
@@ -121,40 +121,26 @@
     {
       "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/8\/8a\/Chen_Divine_Favor.mp3\/revision\/latest?cb=20191216012059",
       "effects": [
-        "Ability Aura (TagAghanim Target Unit)",
+        "Ability Aura",
         "Affects Allies"
       ],
       "notes": [
-        "The aura only affects allied heroes, including illusions and clones, excluding creep-heroes, and all units under Chen's control.",
-        "Applies heal amplification and health regen amplification, but not lifesteal amplification or spell lifesteal amplification.",
-        "Can regenerate up to 75\/150\/225\/300 health in one minute. With Divine Favor's health regeneration amplification, it heals up to 79.5\/165\/256.5\/354 in one minute.",
-        "With Divine Favor's health regeneration amplification, it heals up to 79.5\/165\/256.5\/354 in one minute.",
+        "The aura affects all units under Chen's control except for non-ancient creep-heroes, as well as allied heroes, including illusions and clones, but excluding creep-heroes.",
+        "Can regenerate up to 75\/150\/225\/300 health in one minute.",
         "The aura's buff lingers for 0.5 seconds.",
-        "Does not affect invulnerable units.",
-        "With Aghanim's Shard, Divine Favor turns into an active ability. The passive aura is still present. Can teleport any allied unit, own units and lane creeps. Cannot be cast on self. Cannot target invulnerable or hidden allies, but can teleport them if they turned invulnerable or hidden after cast. Unlike Holy Persuasion's teleport, Divine Favor's teleport is not dispelled upon taking damage. The teleport location is a point right in front of the team's fountain. Gives the target a stop command after teleporting it, canceling channeling abilities and stopping queued orders. Disjoints projectiles upon teleporting.",
-        "Can teleport any allied unit, own units and lane creeps. Cannot be cast on self.",
-        "Cannot target invulnerable or hidden allies, but can teleport them if they turned invulnerable or hidden after cast.",
-        "Unlike Holy Persuasion's teleport, Divine Favor's teleport is not dispelled upon taking damage.",
-        "The teleport location is a point right in front of the team's fountain.",
-        "Gives the target a stop command after teleporting it, canceling channeling abilities and stopping queued orders.",
-        "Disjoints projectiles upon teleporting."
+        "Does not affect invulnerable units."
       ],
-      "mana": "100",
+      "mana": null,
       "hotKey": "E",
-      "cooldown": "25",
-      "description": "Passively provides an aura that grants increased health regeneration and amplifies all health restore by a percentage.",
+      "cooldown": null,
+      "description": "Passively provides an aura that grants increased health regeneration and armor.",
       "spellName": "Divine Favor",
       "params": [
-        "Cast Animation: 0.3+0.94",
-        "Aura Radius: 1200",
+        "Radius: 1200",
         "Health Regen Bonus: 1.25\/2.5\/3.75\/5",
-        "Heal and Health Regen Amplification: 6%\/10%\/14%\/18%",
+        "Armor Bonus: 2\/3\/4\/5",
         "Aura Linger Duration: 0.5",
-        "Cast Range: 600",
-        "Teleport Delay: 6",
-        "Allows Divine Favor to be cast on allies, teleporting them back home after 6 seconds. Cannot target spell immune allies. Cast Range: 600",
-        "Aura pierces spell immunity. Cannot target spell immune allies.",
-        "Can be cast on and teleported rooted allies."
+        "Illusions provide the aura and benefit from the health regeneration, but not from the armor."
       ],
       "itemBehaviour": [],
       "legacyKey": "F",
@@ -170,13 +156,9 @@
         "All units owned by Chen are healed, including his illusions, summons (except for non-ancient creep-heroes) and persuaded or dominated units.",
         "Does not heal any allied non-hero units or illusions, except for hero clones.",
         "Can heal allies while they are invulnerable and while hidden.",
-        "With Divine Favor's heal amplification, Hand of God heals for the following values on each level: Level 1: 291.5\/302.5\/313.5\/324.5 (TagTalent 588.3\/610.5\/632.7\/654.9) Level 2: 477\/495\/513\/531 (TagTalent 773.8\/803\/832.2\/861.4) Level 3: 662.5\/687.5\/712.5\/737.5 (TagTalent 959.3\/995.5\/1031.7\/1067.9)",
-        "Level 1: 291.5\/302.5\/313.5\/324.5 (TagTalent 588.3\/610.5\/632.7\/654.9)",
-        "Level 2: 477\/495\/513\/531 (TagTalent 773.8\/803\/832.2\/861.4)",
-        "Level 3: 662.5\/687.5\/712.5\/737.5 (TagTalent 959.3\/995.5\/1031.7\/1067.9)",
-        "",
         "The voice line upon cast is global for allies and not audible for enemies.",
-        "With Aghanim's Scepter, Holy Persuasion allows 1\/2\/3 ancient creeps to be persuaded per level of Hand of God."
+        "With Aghanim's Scepter, Hand of God applies a strong dispel on units it heals, after healing them.",
+        "With Aghanim's Shard, Holy Persuasion allows 1\/2\/3 ancient creeps to be persuaded per level of Hand of God."
       ],
       "mana": "250\/350\/450",
       "hotKey": "R",
@@ -187,7 +169,8 @@
         "Cast Animation: 0.3+0.93",
         "Radius: Global",
         "Heal: 275\/450\/625 (TagTalent 555\/730\/905)",
-        "Max Ancient Creeps Count: 1\/2\/3"
+        "Max Ancient Creeps Count: 1\/2\/3",
+        "Hand of God Applies a Strong Dispel to all allies."
       ],
       "itemBehaviour": [],
       "legacyKey": "D",

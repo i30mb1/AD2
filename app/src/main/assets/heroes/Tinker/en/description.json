@@ -1,9 +1,6 @@
 {
   "abilities": [
     {
-      "notes": [
-        "The armor talent does not benefit illusions."
-      ],
       "spellName": "Talent",
       "talents": [
         {
@@ -13,18 +10,18 @@
         },
         {
           "talentLvl": "20",
-          "talentLeft": "+8 March of the Machines Damage",
-          "talentRight": "+8 Armor"
+          "talentLeft": "+150 Defense Matrix Damage Absorved",
+          "talentRight": "+10% Spell Amplification"
         },
         {
           "talentLvl": "15",
           "talentLeft": "+1 Heat-Seeking Missile Count",
-          "talentRight": "+2.5s March of the Machines Duration"
+          "talentRight": "-0.5s Keen Conveyance Channel Time"
         },
         {
           "talentLvl": "10",
           "talentLeft": "+8% Manacost\/Manaloss Reduction",
-          "talentRight": "+8% Spell Amplification"
+          "talentRight": "+2 Laser Blind Duration"
         }
       ]
     },
@@ -41,12 +38,12 @@
         "The laser first applies the blind debuff, then the health reduction debuff, then the damage.",
         "Laser's blind uses pseudo-random distribution.",
         "Multiple instances of the debuff do not stack.",
-        "With Aghanim's Scepter, the Laser bounces to the furthest enemy within 700 radius of its current target. Laser has no bounce delay, so all targets are hit at the same time. Can only bounce to heroes, including clones, illusions and creep-heroes. If the primary target is a non-hero unit, it still bounces to valid targets within the search radius. Does not bounce on invisible units or units in the Fog of War.",
+        "With Aghanim's Scepter, the Laser bounces to the furthest enemy within radius of its current target. Laser has no bounce delay, so all targets are hit at the same time. Can only bounce to heroes, including clones, illusions and creep-heroes. If the primary target is a non-hero unit, it still bounces to valid targets within the search radius. Does not bounce on invisible units or units in the Fog of War.",
         "Laser has no bounce delay, so all targets are hit at the same time.",
         "Can only bounce to heroes, including clones, illusions and creep-heroes.",
         "If the primary target is a non-hero unit, it still bounces to valid targets within the search radius.",
         "Does not bounce on invisible units or units in the Fog of War.",
-        "With Aghanim's Scepter, Laser reduces the targets' current and max health by 15%. The maximum health reduction is based on the target's maximum health, while the current health reduction is based on the current health. This means the lower the target's current health is, the less health they lose through the reduction, while the max health reduction stays constant. Since the debuff is placed before the damage is applied, the health reduction takes place before the damage. Upon losing the debuff, the target's maximum health is reverted, while their current health is kept the same. The health and model size reduction are applied by the same modifier as the blind. When upgraded, this modifier starts stacking with each cast. The model size reduction of multiple instances stacks additively",
+        "With Aghanim's Scepter, Laser reduces the targets' current and max health by 700. The maximum health reduction is based on the target's maximum health, while the current health reduction is based on the current health. This means the lower the target's current health is, the less health they lose through the reduction, while the max health reduction stays constant. Since the debuff is placed before the damage is applied, the health reduction takes place before the damage. Upon losing the debuff, the target's maximum health is reverted, while their current health is kept the same. The health and model size reduction are applied by the same modifier as the blind. When upgraded, this modifier starts stacking with each cast. The model size reduction of multiple instances stacks additively",
         "The maximum health reduction is based on the target's maximum health, while the current health reduction is based on the current health.",
         "This means the lower the target's current health is, the less health they lose through the reduction, while the max health reduction stays constant.",
         "Since the debuff is placed before the damage is applied, the health reduction takes place before the damage.",
@@ -61,15 +58,17 @@
       "spellName": "Laser",
       "params": [
         "Cast Animation: 0.4+1",
-        "Cast Range: 650 (TagAghanim 1050)",
+        "Cast Range: 650 (TagAghanim 950)",
         "Damage: 80\/160\/240\/320 (TagTalent 160\/240\/320\/400)",
         "Miss Chance: 100%",
         "Hero Duration: 3\/3.5\/4\/4.5",
         "Creep Duration: 6",
+        "Radius Secondary Damage: 250",
+        "Secondary Damage: 100%",
         "Bounce Search Radius: 700",
         "Number of Bounces: 1",
-        "Max\/Current Health and Model Size Reduction: 15%",
-        "Upgrades Tinker's Laser into a Shrink Ray, granting +400 cast range and reducing enemy hero's size and current health by 15% (TagAghanimstacking). The laser bounces once on the farthest target up to 700 range from the primary one, prioritizing heroes.",
+        "Max\/Current Health and Model Size Reduction: 10%",
+        "Upgrades Tinker's Laser into a Shrink Ray, granting +300 cast range and reducing enemy hero's size and current health by 10% (TagAghanimstacking). The laser bounces once on the farthest target up to range from the primary one, prioritizing heroes.",
         "Blind effect persists if debuff was placed before spell immunity and when not dispelled.",
         "Blocked fully only when primary target."
       ],
@@ -111,6 +110,36 @@
       "story": "The last contraption Boush was able to save was a retrofitted rocket launcher with a homing mechanism."
     },
     {
+      "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/2\/2e\/Tinker_Defense_Matrix.mp3\/revision\/latest?cb=20210103154706",
+      "effects": [
+        "Ability Target Unit",
+        "Affects Allies"
+      ],
+      "notes": [
+        "↓↓ Double-tapping automatically targets self.",
+        "Defense Matrix fully negates damage (after all reductions), causing several on-damage effects to not trigger.",
+        "Negates damage after all reductions, except the following ones: Shield Crash, Aphotic Shield, Mischief, Ghostship.",
+        "Shield Crash, Aphotic Shield, Mischief, Ghostship.",
+        "Multiple instances of the shield do not stack. Re-casting it refreshes the duration and resets the shield capacity.",
+        "The status resistance stacks multiplicatively with other sources of status resistance."
+      ],
+      "mana": "70\/80\/90\/100 (TagTalent 64.4\/73.6\/82.8\/92)",
+      "hotKey": "E",
+      "cooldown": "12",
+      "description": "Targets an allied unit, applying a barrier to them that blocks the next 100\/180\/240\/320 damage and provides 20\/30\/40\/50% Status Resistance. Barrier lasts up to 15 seconds.",
+      "spellName": "Defense Matrix",
+      "params": [
+        "Cast Animation: 0.2+0.6",
+        "Cast Range: 600",
+        "Shield Capacity: 100\/180\/240\/320",
+        "Status Resistance Bonus: 20\/30\/40\/50%",
+        "Duration: 15"
+      ],
+      "itemBehaviour": [],
+      "legacyKey": "C",
+      "story": null
+    },
+    {
       "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/3\/33\/Tinker_March_of_the_Machines.mp3\/revision\/latest?cb=20191216025247",
       "effects": [
         "Ability Target Point",
@@ -118,26 +147,21 @@
         "Damage Magical"
       ],
       "notes": [
+        "Requires Aghanim's Shard to be unlocked.",
         "The robots move at a speed of 400 and move a distance up to 1800 forwards, taking 4.5 seconds to travel the full distance.",
         "The 900 spawn radius is centered and fixed around the cast point, not on Tinker's location.",
         "The spawn area is a line with 1800 length, which is centered 900 range behind the targeted cast point. The overall affected area is rather square-shaped, with 1800 side lengths.",
         "The overall affected area is rather square-shaped, with 1800 side lengths.",
-        "Robots spawn in 0.0417-second intervals at a random point of the line, which is 24 robots per second, for a total of 144 (TagTalent 204) robots. Robots do not spawn at points of the spawning line which are outside of the map boundaries.",
+        "Robots spawn in 0.0417-second intervals at a random point of the line, which is 24 robots per second, for a total of 144 robots. Robots do not spawn at points of the spawning line which are outside of the map boundaries.",
         "Robots do not spawn at points of the spawning line which are outside of the map boundaries.",
         "When an enemy comes within 50 radius of a robot, or the robot reaches max distance, it deals damage in 150 radius around itself and then disappears.",
-        "If a lone enemy stands still within the area for the full duration, they would take an average of 189.44\/284.16\/378.88\/473.6 damage (before reductions). With the duration increasing talent, it deals an average of 268.37\/402.56\/536.75\/670.93 damage. With the damage increasing talent, it deals an average of 284.16\/378.88\/473.6\/568.32 damage. With both talents, it deals an average of 402.56\/536.75\/670.93\/805.12 damage.",
-        "With the duration increasing talent, it deals an average of 268.37\/402.56\/536.75\/670.93 damage.",
-        "With the damage increasing talent, it deals an average of 284.16\/378.88\/473.6\/568.32 damage.",
-        "With both talents, it deals an average of 402.56\/536.75\/670.93\/805.12 damage.",
-        "If each explosion could hit a single target, it would deal up to 2304\/3456\/4608\/5760 damage (before reductions). With the duration increasing talent, it would deal up to 3264\/4896\/6528\/8160 damage. With the damage increasing talent, it would deal up to 3456\/4608\/5760\/6912 damage. With both talents, it would deal up to 4896\/6528\/8160\/9792 damage.",
-        "With the duration increasing talent, it would deal up to 3264\/4896\/6528\/8160 damage.",
-        "With the damage increasing talent, it would deal up to 3456\/4608\/5760\/6912 damage.",
-        "With both talents, it would deal up to 4896\/6528\/8160\/9792 damage.",
+        "If a lone enemy stands still within the area for the full duration, they would take an average of 355.2 damage (before reductions).",
+        "If each explosion could hit a single target, it would deal up to 4320 damage (before reductions).",
         "The robots do not explode and deal area damage when colliding with Couriers.",
         "The sound effect upon cast is not audible by enemies. The marching sounds are."
       ],
-      "mana": "130\/150\/170\/190 (TagTalent 119.6\/138\/156.4\/174.8)",
-      "hotKey": "E",
+      "mana": "190 (TagTalent 174.8)",
+      "hotKey": "D",
       "cooldown": "35",
       "description": "Enlists an army of robotic minions to destroy enemy units in an area around Tinker.",
       "spellName": "March of the Machines",
@@ -147,44 +171,33 @@
         "Robot Spawn Radius: 900",
         "Robot Collision Radius: 50",
         "Robot Explosion Radius: 150",
-        "Robot Explosion Damage: 16\/24\/32\/40 (TagTalent 24\/32\/40\/48)",
-        "Spawn Duration: 6 (TagTalent 8.5)",
+        "Robot Explosion Damage: 30",
+        "Spawn Duration: 6",
         "Robots do not collide with spell immune enemies."
       ],
       "itemBehaviour": [],
-      "legacyKey": "C",
+      "legacyKey": "D",
       "story": "Even though the laboratory has since been sealed off, the ability to radio in robotic drones is still in working order."
     },
     {
-      "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/2\/2e\/Tinker_Defense_Matrix.mp3\/revision\/latest?cb=20210103154706",
+      "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/7\/72\/Town_Portal_Scroll_Teleport_1.mp3\/revision\/latest?cb=20191227195542",
       "effects": [
-        "Ability Target Unit",
+        "Ability N\/A \/ Channeled",
         "Affects Allies"
       ],
-      "notes": [
-        "Requires Aghanim's Shard to be unlocked.",
-        "↓↓ Double-tapping automatically targets self.",
-        "Defense Matrix fully negates damage (after all reductions), causing several on-damage effects to not trigger.",
-        "Negates damage after all reductions, except the following ones: Shield Crash, Aphotic Shield, Mischief, Ghostship.",
-        "Shield Crash, Aphotic Shield, Mischief, Ghostship.",
-        "Multiple instances of the shield do not stack. Re-casting it refreshes the duration and resets the shield capacity.",
-        "The status resistance stacks multiplicatively with other sources of status resistance."
-      ],
-      "mana": "100 (TagTalent 92)",
-      "hotKey": "D",
-      "cooldown": "30",
-      "description": "Targets an allied unit, applying a barrier to them that blocks the next 350 damage and provides 50% Status Resistance. Barrier lasts up to 15 seconds.",
-      "spellName": "Defense Matrix",
+      "notes": [],
+      "mana": "75",
+      "hotKey": "F",
+      "cooldown": "",
+      "description": "After channeling for 4.5s teleport to a target friendly structure. Level 2 allows teleporting to friendly units and Level 3 to friendly heroes.",
+      "spellName": "Keen Conveyance",
       "params": [
-        "Cast Animation: 0.2+0.6",
-        "Cast Range: 400",
-        "Shield Capacity: 350",
-        "Status Resistance Bonus: 50%",
-        "Duration: 15"
+        "Cast Animation: 0+0",
+        "Channel Time: 4.5\/4\/3.5 (TagTalent 4\/3.5\/3)"
       ],
       "itemBehaviour": [],
-      "legacyKey": "D",
-      "story": null
+      "legacyKey": "F",
+      "story": "As Boush likes to say, 'There is nothing the arcane can accomplish that the curious mind cannot reproduce given time. And proper funding, of course.'."
     },
     {
       "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/b\/b9\/Tinker_Rearm_1.mp3\/revision\/latest?cb=20191216025250",
@@ -214,7 +227,7 @@
       "params": [
         "Cast Animation: 0+0",
         "Channel Time: 3.5\/2\/1.25",
-        "Grants a new ability: Defense Matrix."
+        "Grants a new ability: March of the Machines."
       ],
       "itemBehaviour": [],
       "legacyKey": "R",
@@ -229,7 +242,7 @@
     "attrAgilityInc": 1.2,
     "attrAgility": 13.0
   },
-  "description": "Boush, the Tinker, is a ranged intelligence hero who leverages great mobility and blistering nukes to push lanes and gank his enemies. Tinker's ultimate Rearm resets the cooldown on his items and abilities, allowing him to deal prodigious damage with his Laser, Heat-Seeking Missiles and with items such as Dagon. By refreshing Blink Dagger, Rearm also grants Tinker vast mobility, enabling him to pressure multiple lanes with his March of the Machines. Tinker's mana costs are very high, however, so to remain a global threat he must regularly regenerate at his fountain. His mana dependency and modest stat gain make quickly acquiring Boots of Travel a key to success. When played with the right items, good mana management and mechanical skill, there are few heroes Tinker will not evaporate.",
+  "description": "Boush, the Tinker, is a ranged intelligence hero who leverages great mobility and blistering nukes to push lanes and gank his enemies. Tinker's ultimate Rearm resets the cooldown on his items and abilities, allowing him to deal prodigious damage with his Laser, Heat-Seeking Missiles and with items such as Dagon. By Rearming Blink Dagger, Rearm also grants Tinker vast mobility, enabling him to pressure multiple lanes with his Laser and March of the Machines. Tinker's mana costs are very high, however, so to remain a global threat he must regularly regenerate at his fountain by using Keen Conveyance. When played with the right items, good mana management and mechanical skill, there are few heroes Tinker will not evaporate.",
   "history": "Boush the Tinker's diminutive race is known for its intelligence, its cunning, and its prickly relationship with magic. As a matter of pride, they survive by their wits, and use only those powers of nature that may be unlocked through rational methodologies. Even this forbearance has led to a great deal of trouble, as Boush can attest. Once a key investigator of natural law, Boush the Tinker led a vast intellectual investigation into the workings of nature, founding a subterranean laboratory in the rumored, mist-wreathed wastes of the Violet Plateau. While scorning mages for the dangers they visit upon the world, Boush and his Tinker associates haughtily wrenched open a portal to some realm beyond comprehension and ushered in some nightmares of their own. A black mist rose from the cavernous interior of the Violet Plateau, shrouding it in permanent darkness from which sounds of horror perpetually emanate. Boush escaped with only his wits and the contraptions he carried, the sole Tinker to survive the Violet Plateau Incident.",
   "talents": [
     {
@@ -239,18 +252,18 @@
     },
     {
       "talentLvl": "20",
-      "talentLeft": "+8 March of the Machines Damage",
-      "talentRight": "+8 Armor"
+      "talentLeft": "+150 Defense Matrix Damage Absorved",
+      "talentRight": "+10% Spell Amplification"
     },
     {
       "talentLvl": "15",
       "talentLeft": "+1 Heat-Seeking Missile Count",
-      "talentRight": "+2.5s March of the Machines Duration"
+      "talentRight": "-0.5s Keen Conveyance Channel Time"
     },
     {
       "talentLvl": "10",
       "talentLeft": "+8% Manacost\/Manaloss Reduction",
-      "talentRight": "+8% Spell Amplification"
+      "talentRight": "+2 Laser Blind Duration"
     }
   ]
 }

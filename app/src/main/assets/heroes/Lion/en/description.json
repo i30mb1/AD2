@@ -25,7 +25,7 @@
         },
         {
           "talentLvl": "10",
-          "talentLeft": "+70 Damage",
+          "talentLeft": "+60 Damage",
           "talentRight": "+15 Movement Speed"
         }
       ]
@@ -38,8 +38,8 @@
         "Damage Magical"
       ],
       "notes": [
-        "The spikes travel at a speed of 1600, taking 0.56 (TagTalent 1.06) seconds to travel the full distance.",
-        "With the travel distance and the spikes radius, it can hit units up to 1025 (TagTalent 1825) range away.",
+        "The spikes travel at a speed of 1600, taking 0.53 (TagTalent 1.03) seconds to travel the full distance.",
+        "With the travel distance and the spikes radius, it can hit units up to 975 (TagTalent 1775) range away.",
         "When targeting a unit, the spikes are released towards its current location upon cast. Spikes do not home and thus can be evaded.",
         "Hit units are knocked up 350 range for the initial 0.5 seconds of the stun.",
         "While in the air, other units may pass below hit airborne units.",
@@ -54,7 +54,7 @@
       "params": [
         "Cast Animation: 0.3+0",
         "Cast Range: 575 (TagTalent 1375)",
-        "Spikes Travel Distance: 900 (TagTalent 1700)",
+        "Spikes Travel Distance: 850 (TagTalent 1650)",
         "Spikes Radius: 125",
         "Damage: 80\/140\/200\/260",
         "Stun Duration: 1.4\/1.8\/2.2\/2.6",
@@ -162,12 +162,12 @@
       "notes": [
         "Places a debuff on the target upon cast, which applies the damage and the second debuff upon expiring. The debuff lasts 0.25 seconds. This means the damage can be avoided by being invulnerable, hidden or spell immune as the debuff expires.",
         "This means the damage can be avoided by being invulnerable, hidden or spell immune as the debuff expires.",
-        "If the target dies while having the second debuff, Finger Of Death gains a permanent damage bonus. The status buff on Lion keeps track of how many heroes died with the debuff. The bonus debuff stacks, meaning that if Finger Of Death is cast on the same target twice within the 3-second time frame and the target dies, the bonus damage is granted twice. Although only gaining damage from hero kills, the debuff is placed on every target. Gains damage from dying Meepo Clones as well, but not from Tempest Doubles, illusions or creep-heroes. With the level 15 talent, the debuff also grants Lion a permanent max health bonus. The health gain keeps the current health percentage the same.",
+        "If the target dies while having the second debuff, Finger Of Death gains a permanent damage bonus. The status buff on Lion keeps track of how many heroes died with the debuff. The bonus debuff stacks, meaning that if Finger Of Death is cast on the same target twice within the 3-second time frame and the target dies, the bonus damage is granted twice. Although only gaining damage from hero kills, the debuff is placed on every target. Gains damage from dying Meepo Clones as well, but not from Tempest Doubles, illusions or creep-heroes. With the level 15 talent, the debuff also grants Lion a permanent 70 max health bonus. The health gain keeps the current health percentage the same.",
         "The status buff on Lion keeps track of how many heroes died with the debuff.",
         "The bonus debuff stacks, meaning that if Finger Of Death is cast on the same target twice within the 3-second time frame and the target dies, the bonus damage is granted twice.",
         "Although only gaining damage from hero kills, the debuff is placed on every target.",
         "Gains damage from dying Meepo Clones as well, but not from Tempest Doubles, illusions or creep-heroes.",
-        "With the level 15 talent, the debuff also grants Lion a permanent max health bonus. The health gain keeps the current health percentage the same.",
+        "With the level 15 talent, the debuff also grants Lion a permanent 70 max health bonus. The health gain keeps the current health percentage the same.",
         "The health gain keeps the current health percentage the same.",
         "With Aghanim's Scepter, Finger of Death is cast on all enemy units within 325 radius of the primary target. Can hit invisible units and units inside the Fog of War.",
         "Can hit invisible units and units inside the Fog of War."
@@ -181,12 +181,12 @@
         "Cast Animation: 0.3+0.5",
         "Cast Range: 900",
         "Effect Delay: 0.25",
-        "Base Damage: 600\/725\/850 (TagAghanim 725\/875\/1025)",
+        "Base Damage: 600\/725\/850 (TagAghanim 700\/825\/950)",
         "Damage Bonus per Kill: 40 (TagTalent 60)",
         "Kill Grace Duration: 3",
         "Max Health per Kill: 70",
         "Radius: 325",
-        "Increases damage. Decreases cooldown. Finger of Death hits all units in a small area.",
+        "Increases base damage and reduces cooldown. Finger of Death hits all units in a small area.",
         "Cannot be cast on spell immune enemies. Attempts to damage, and places the debuff if target turns spell immune during the delay.",
         "Blocked fully only when primary target. Blocked upon cast. Particles still visually appear."
       ],
@@ -223,7 +223,7 @@
     },
     {
       "talentLvl": "10",
-      "talentLeft": "+70 Damage",
+      "talentLeft": "+60 Damage",
       "talentRight": "+15 Movement Speed"
     }
   ]

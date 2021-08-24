@@ -2,7 +2,7 @@
   "abilities": [
     {
       "notes": [
-        "The strength talent effectively grants Wraith King 320 health, 1.6 health regeneration, and 16 attack damage."
+        "Cleave from talents is not disabled by Break."
       ],
       "spellName": "Talent",
       "talents": [
@@ -14,17 +14,17 @@
         {
           "talentLvl": "20",
           "talentLeft": "+6 Skeletons Spawned",
-          "talentRight": "+16 Strength"
+          "talentRight": "+25% Cleave"
         },
         {
           "talentLvl": "15",
           "talentLeft": "+24 Skeletons Attack Damage",
-          "talentRight": "+25 Movement Speed"
+          "talentRight": "+0.7s Wraithfire Blast Stun Duration"
         },
         {
           "talentLvl": "10",
           "talentLeft": "+15 Attack Speed",
-          "talentRight": "+0.5s Wraithfire Blast Stun Duration"
+          "talentRight": "+20 Movement Speed"
         }
       ]
     },
@@ -37,8 +37,8 @@
       ],
       "notes": [
         "Wraithfire Blast travels at a speed of 1000.",
-        "The stun and slow are applied at the same time, so overall, the slow lasts for 3.1\/3.4\/3.7\/4 (TagTalent 3.6\/3.9\/4.2\/4.5) seconds.",
-        "Deals the base damage instantly upon hitting, and the damage over time in 1-second intervals, starting immediately after the stun.",
+        "The stun and slow are applied at the same time, so overall, the slow lasts for 3.1\/3.4\/3.7\/4 (TagTalent 3.8\/4.1\/4.4\/4.7) seconds.",
+        "Deals the base damage instantly upon hitting, and the damage over time in 1-second intervals, starting immediately after the stun. Can deal up to 90\/140\/190\/240 damage (before reductions). The blast first applies the damage, then the debuffs.",
         "Can deal up to 90\/140\/190\/240 damage (before reductions).",
         "The blast first applies the damage, then the debuffs.",
         "Casting Wraithfire Blast orders all of Wraith King Skeletons to attack that target.",
@@ -60,7 +60,7 @@
         "Damage over Time: 10\/30\/50\/70",
         "Move Speed Slow: 20%",
         "Debuff Duration: 2",
-        "Stun Duration: 1.1\/1.4\/1.7\/2 (TagTalent 1.6\/1.9\/2.2\/2.5)",
+        "Stun Duration: 1.1\/1.4\/1.7\/2 (TagTalent 1.8\/2.1\/2.4\/2.7)",
         "Slow persists and attempts to damage if debuff was placed before spell immunity and when not dispelled. The Wraithfire Blasts from Reincarnation with the talent do not target spell immune units.",
         "Blocked upon impact. The blasts from Reincarnation are blocked as well.",
         "The blasts from Reincarnation can be disjointed as well."
@@ -172,15 +172,15 @@
         "When the Wraith duration ends, the hero dies. The kill is credited to whoever put the hero in Wraith form. This death cannot be prevented in any way. It ignores invulnerability and everything that would normally prevent death. If the hero has Reincarnation, it triggers normally once the hero dies.",
         "This death cannot be prevented in any way. It ignores invulnerability and everything that would normally prevent death.",
         "If the hero has Reincarnation, it triggers normally once the hero dies.",
-        "With Aghanim's Shard, 3 Wraith King Skeletons are summoned for each enemy hero within 900 radius upon triggering Reincarnation. Only summons skeletons for enemy heroes (including clones, excluding illusions and creep-heroes). If Vampiric Spirit is not learned, no skeletons are summoned. The skeletons are also summoned for enemies inside the fog of war and invisible units. Skeleton notes of Vampiric Spirit fully apply.",
+        "With Aghanim's Shard, 3 Wraith King Skeletons are summoned for each enemy hero within 900 radius upon triggering Reincarnation. Only summons skeletons for enemy heroes (including clones, excluding illusions and creep-heroes). If Vampiric Spirit is not learned, no skeletons are summoned. The skeletons are also summoned for enemies inside the Fog of War and invisible units. Skeleton notes of Vampiric Spirit fully apply.",
         "Only summons skeletons for enemy heroes (including clones, excluding illusions and creep-heroes).",
         "If Vampiric Spirit is not learned, no skeletons are summoned.",
-        "The skeletons are also summoned for enemies inside the fog of war and invisible units.",
+        "The skeletons are also summoned for enemies inside the Fog of War and invisible units.",
         "Skeleton notes of Vampiric Spirit fully apply."
       ],
       "mana": "180 (TagTalent 0)",
       "hotKey": "R",
-      "cooldown": "200\/120\/40",
+      "cooldown": "200\/130\/60",
       "description": "Wraith King's form regroups after death, allowing him to resurrect when killed in battle. Upon death, enemy units in a 900 radius will be slowed.",
       "spellName": "Reincarnation",
       "params": [
@@ -223,17 +223,17 @@
     {
       "talentLvl": "20",
       "talentLeft": "+6 Skeletons Spawned",
-      "talentRight": "+16 Strength"
+      "talentRight": "+25% Cleave"
     },
     {
       "talentLvl": "15",
       "talentLeft": "+24 Skeletons Attack Damage",
-      "talentRight": "+25 Movement Speed"
+      "talentRight": "+0.7s Wraithfire Blast Stun Duration"
     },
     {
       "talentLvl": "10",
       "talentLeft": "+15 Attack Speed",
-      "talentRight": "+0.5s Wraithfire Blast Stun Duration"
+      "talentRight": "+20 Movement Speed"
     }
   ]
 }

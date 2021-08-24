@@ -8,13 +8,13 @@
       "talents": [
         {
           "talentLvl": "25",
-          "talentLeft": "+40% Atrophy Allied Hero Bonus",
+          "talentLeft": "+50% Atrophy Allied Hero Bonus",
           "talentRight": "+0.65s Pit of Malice Root"
         },
         {
           "talentLvl": "20",
-          "talentLeft": "+20 Health Regen",
-          "talentRight": "+60 Attack Speed"
+          "talentLeft": "+12% Atrophy Aura Attack Damage Reduction",
+          "talentRight": "+1% Max HP Firestorm Damage"
         },
         {
           "talentLvl": "15",
@@ -43,12 +43,13 @@
         "Does not place the burn debuff on Roshan, but does apply the wave damage.",
         "The burn debuff deals damage in 1-second intervals, starting immediately as the debuff is applied, resulting in 3 instances. The burn debuff does not stack per interval. Each interval refreshes its duration, resulting in 8 (TagTalent 11) possible instances.",
         "The burn debuff does not stack per interval. Each interval refreshes its duration, resulting in 8 (TagTalent 11) possible instances.",
-        "Can deal up to 150\/240\/330\/420 + 8%\/16%\/24%\/32% (TagTalent 225\/360\/495\/630 + 11%\/22%\/33%\/44%) of max health as damage (before reductions) when all waves hit and the debuff is not dispelled.",
-        "With Aghanim's Shard, Firestorm may directly target Underlord. It cannot target other units. When done, the waves area created at Underlord's current location, instead of staying at the original cast location. ↓↓ Double-tapping automatically targets self.",
+        "Can deal up to 150\/240\/330\/420 + 8%\/16%\/24%\/32% (TagTalent 16%\/24%\/32%\/40%) of max health as damage (before reductions) when all waves hit and the debuff is not dispeled.",
+        "With Aghanim's Shard, Firestorm may directly target Underlord. It cannot target other units. ↓↓ Double-tapping automatically targets self. When done, the waves area created at Underlord's current location, instead of staying at the original cast location. Can deal up to 225\/360\/495\/630 + 11%\/22%\/33%\/44% (TagTalent 22%\/33%\/44%\/55%) max health as damage when all waves hit and the defbuff is not dispeled.",
+        "↓↓ Double-tapping automatically targets self.",
         "When done, the waves area created at Underlord's current location, instead of staying at the original cast location.",
-        "↓↓ Double-tapping automatically targets self."
+        "Can deal up to 225\/360\/495\/630 + 11%\/22%\/33%\/44% (TagTalent 22%\/33%\/44%\/55%) max health as damage when all waves hit and the defbuff is not dispeled."
       ],
-      "mana": "100\/110\/120\/130",
+      "mana": "110\/120\/130\/140",
       "hotKey": "Q",
       "cooldown": "12 (TagTalent 8)",
       "description": "Calls down waves of fire that damage enemy units in the target area, burning for additional damage over time.",
@@ -60,7 +61,7 @@
         "Number of Waves: 6 (TagTalent 9)",
         "Wave Interval: 1",
         "Damage per Wave: 25\/40\/55\/70",
-        "Max Health as Damage per Second: 1%\/2%\/3%\/4%",
+        "Max Health as Damage per Second: 1%\/2%\/3%\/4% (TagTalent 2%\/3%\/4%\/5%)",
         "Burn Duration: 2",
         "Firestorm can be self-targeted. When used that way, the Firestorm follows Underlord around. Increases the wave count by 3. Reduced cast point by half.",
         "Attempts to damage if debuff was placed before spell immunity."
@@ -128,10 +129,10 @@
         "The aura does not affect invulnerable or hidden units.",
         "The attack damage reduction does not affect enemies which have no vision over Underlord. However, Underlord still gains damage from enemies within the aura's radius, despite the debuff not being present.",
         "However, Underlord still gains damage from enemies within the aura's radius, despite the debuff not being present.",
-        "With the level 25 talent, the aura grants the damage buff to all allied heroes (including illusions, clones, and creep-heroes) within its radius, rather than only to Underlord. This means the damage is not provided by an aura, it is placed as an expiring buff on allies. Uses the same modifiers for allies as it does for Underlord, so they work exactly the same. Allied heroes gain 12\/14\/16\/18 attack damage per hero death and 0.8\/1.6\/2.4\/3.2 attack damage per non-hero death.",
+        "With the level 25 talent, the aura grants the damage buff to all allied heroes (including illusions, clones, and creep-heroes) within its radius, rather than only to Underlord. This means the damage is not provided by an aura, it is placed as an expiring buff on allies. Uses the same modifiers for allies as it does for Underlord, so they work exactly the same. Allied heroes gain 15\/17.5\/20\/22.5 attack damage per hero death and 1\/2\/3\/4 attack damage per non-hero death.",
         "This means the damage is not provided by an aura, it is placed as an expiring buff on allies.",
         "Uses the same modifiers for allies as it does for Underlord, so they work exactly the same.",
-        "Allied heroes gain 12\/14\/16\/18 attack damage per hero death and 0.8\/1.6\/2.4\/3.2 attack damage per non-hero death."
+        "Allied heroes gain 15\/17.5\/20\/22.5 attack damage per hero death and 1\/2\/3\/4 attack damage per non-hero death."
       ],
       "mana": null,
       "hotKey": "E",
@@ -140,18 +141,45 @@
       "spellName": "Atrophy Aura",
       "params": [
         "Radius: 900",
-        "Attack Damage Reduction: 5%\/15%\/25%\/35%",
+        "Attack Damage Reduction: 5%\/15%\/25%\/35% (TagTalent 17%\/27%\/37%\/47%)",
         "Attack Damage Bonus per Hero Death: 30\/35\/40\/45",
         "Attack Damage Bonus per Non-Hero Death: 2\/4\/6\/8",
         "Attack Damage Bonus Duration: 30\/45\/60\/75",
         "Aura Linger Duration: 0.5",
-        "Allied Bonus Percentage: 40%",
+        "Allied Bonus Percentage: 50%",
         "Disables aura and prevents gaining new stacks. Already existing stacks still provide bonus attack damage.",
         "Illusions carry the aura. When an enemy unit dies around an illusion which is or was under Underlord's control, the damage is granted to Underlord. If the source of the illusion is an enemy or allied ability, the damage is granted to the illusion, although the illusion cannot make use of it."
       ],
       "itemBehaviour": [],
       "legacyKey": "R",
       "story": "To merely stand in the presence of the Underlord is to feel the conviction of battle sapped from one's soul."
+    },
+    {
+      "audioUrl": null,
+      "effects": [
+        "Ability Target Point",
+        "Affects Allies"
+      ],
+      "notes": [
+        "Requires Aghanim's Scepter to be unlocked. In Ability Draft, Fiend's Gate can be unlocked by the player that drafted Dark Rift.",
+        "In Ability Draft, Fiend's Gate can be unlocked by the player that drafted Dark Rift."
+      ],
+      "mana": "100",
+      "hotKey": "D",
+      "cooldown": "130",
+      "description": "Open 2 portals, one next to Underlord and one at the target location. Allies can channel a portal for 2 seconds to teleport to the other side.",
+      "spellName": "Fiend's Gate",
+      "params": [
+        "Cast Animation: 0.+0.",
+        "Cast Range: 4000",
+        "Channel Distance: x",
+        "Channel Time: 2",
+        "Number of Portals: 2",
+        "Duration: 20"
+      ],
+      "itemBehaviour": [],
+      "legacyKey": null,
+      "story": "Long have the forces of abyss been limited in reach, but with the power of Aghanim in hand, Vrogros' thirst for conquest grows only stronger."
     },
     {
       "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/7\/73\/Underlord_Dark_Rift_1.mp3\/revision\/latest?cb=20191216025830",
@@ -162,8 +190,7 @@
       "notes": [
         "Upon cast, Dark Rift is replaced by Cancel Dark Rift for its duration.",
         "↓↓ Double-tapping automatically targets the team's fountain.",
-        "Can be cast on any allied unit, except for heroes, illusions, clones and wards. With Aghanim's Scepter, can be cast on allied heroes, illusions and clones as well.",
-        "With Aghanim's Scepter, can be cast on allied heroes, illusions and clones as well.",
+        "Can be cast on any allied unit, except for heroes, illusions, clones and wards.",
         "Can target and teleport to invulnerable units. Cannot target hidden units, but the teleport still happens if the target turns hidden after being targeted.",
         "When targeting the ground, it searches for the nearest valid target on the map and teleports towards it.",
         "The visual effects around Underlord and on the teleport target are visible to everyone.",
@@ -172,22 +199,18 @@
         "Can only teleport heroes, illusions, clones and creep-heroes. Can teleport them even while invulnerable or hidden.",
         "Can teleport them even while invulnerable or hidden.",
         "When Underlord or the teleport target dies during the delay, Dark Rift is canceled. Dark Rift is not canceled when the targeted creep changes ownership (e.g. Holy Persuasion, Enchant, etc).",
-        "Dark Rift is not canceled when the targeted creep changes ownership (e.g. Holy Persuasion, Enchant, etc).",
-        "When acquiring Aghanim's Scepter, Underlord immediately gains 1 charge."
+        "Dark Rift is not canceled when the targeted creep changes ownership (e.g. Holy Persuasion, Enchant, etc)."
       ],
       "mana": "100\/200\/300",
       "hotKey": "R",
-      "cooldown": "130\/115\/100 (TagTalent 0)",
+      "cooldown": "130\/115\/100",
       "description": "Opens a dark rift at the targeted friendly unit's or building's position. After a short delay, Underlord and all nearby friendly heroes are teleported to that unit's location. Dark Rift can be cancelled at anytime during the cast. If it is cancelled in this way or the target unit dies before the spell becomes active, Dark Rift goes into cooldown.",
       "spellName": "Dark Rift",
       "params": [
         "Cast Animation: 0.6+0.47",
         "Cast Range: Global",
-        "Radius: 600 (TagAghanim 900)",
-        "Teleport Delay: 6\/5\/4 (TagAghanim 5\/4\/3)",
-        "Number of Charges: 2",
-        "Charge Replenish Time: 130\/115\/100",
-        "Dark Rift has two charges and can be cast on allied heroes. Reduces cast delay by -1 second."
+        "Radius: 600",
+        "Teleport Delay: 6\/5\/4"
       ],
       "itemBehaviour": [],
       "legacyKey": "D",
@@ -228,13 +251,13 @@
   "talents": [
     {
       "talentLvl": "25",
-      "talentLeft": "+40% Atrophy Allied Hero Bonus",
+      "talentLeft": "+50% Atrophy Allied Hero Bonus",
       "talentRight": "+0.65s Pit of Malice Root"
     },
     {
       "talentLvl": "20",
-      "talentLeft": "+20 Health Regen",
-      "talentRight": "+60 Attack Speed"
+      "talentLeft": "+12% Atrophy Aura Attack Damage Reduction",
+      "talentRight": "+1% Max HP Firestorm Damage"
     },
     {
       "talentLvl": "15",

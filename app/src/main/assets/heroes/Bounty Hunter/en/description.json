@@ -1,31 +1,27 @@
 {
   "abilities": [
     {
-      "notes": [
-        "The health talent increases maximum health capacity, and keeps the current health percentage.",
-        "The evasion talent stacks multiplicatively with other sources of evasion."
-      ],
       "spellName": "Talent",
       "talents": [
         {
           "talentLvl": "25",
           "talentLeft": "+250 Track Gold",
-          "talentRight": "40% Evasion"
+          "talentRight": "2 Shuriken Toss Charges"
         },
         {
           "talentLvl": "20",
           "talentLeft": "+50 Jinada Gold Steal",
-          "talentRight": "+50 Attack Speed"
+          "talentRight": "Track Grants 600 Ground Vision"
         },
         {
           "talentLvl": "15",
-          "talentLeft": "+275 Health",
+          "talentLeft": "Half Track Bonus Speed to Allies",
           "talentRight": "+50 Shuriken Toss Damage"
         },
         {
           "talentLvl": "10",
           "talentLeft": "+40 Jinada Damage",
-          "talentRight": "+20 Movement Speed"
+          "talentRight": "+2 Shadow Walk Slow Duration"
         }
       ]
     },
@@ -42,24 +38,31 @@
         "The initial target does not have to be Tracked for the shuriken to bounce. Can only bounce to each tracked unit once. Cannot bounce to, but can bounce off of invulnerable or hidden units.",
         "Can only bounce to each tracked unit once.",
         "Cannot bounce to, but can bounce off of invulnerable or hidden units.",
+        "This is how much damage Shuriken Toss deals to Tracked targets on each level: Level 1: 112\/168\/224\/280 (TagTalent 182\/238\/294\/350) Level 2: 136\/204\/272\/340 (TagTalent 221\/289\/357\/425) Level 3: 160\/240\/320\/400 (TagTalent 260\/340\/420\/500)",
+        "Level 1: 112\/168\/224\/280 (TagTalent 182\/238\/294\/350)",
+        "Level 2: 136\/204\/272\/340 (TagTalent 221\/289\/357\/425)",
+        "Level 3: 160\/240\/320\/400 (TagTalent 260\/340\/420\/500)",
+        "",
         "The damage increasing talent immediately upgrades all of Bounty Hunter's currently flying shurikens.",
         "With Aghanim's Scepter, Shuriken Toss applies the current level of Jinada on its target upon projectile impact. Shuriken Toss's Jinada is independent from the Jinada applied by attacks, ignoring its cooldown, and working even when dead. Does not use instant attacks to apply the Jinada. The effects are applied by Shuriken Toss itself. The Jinada damage is applied as spell damage in a separate damage instance, it is affected by spell damage amplification and works with spell lifesteal.",
         "Shuriken Toss's Jinada is independent from the Jinada applied by attacks, ignoring its cooldown, and working even when dead.",
         "Does not use instant attacks to apply the Jinada. The effects are applied by Shuriken Toss itself.",
         "The Jinada damage is applied as spell damage in a separate damage instance, it is affected by spell damage amplification and works with spell lifesteal."
       ],
-      "mana": "120\/125\/130\/135",
+      "mana": "50\/60\/70\/80",
       "hotKey": "Q",
-      "cooldown": "8 (TagTalent 6)",
+      "cooldown": "5 (TagTalent 0)",
       "description": "Hurls a deadly shuriken at an enemy unit, dealing damage and mini-stunning the target. The shuriken will bounce to any Tracked units who are within a 1200 radius of each other.",
       "spellName": "Shuriken Toss",
       "params": [
         "Cast Animation: 0.3+0.43",
-        "Cast Range: 400 (TagAghanim 650)",
+        "Cast Range: 375\/425\/475\/525 (TagAghanim 700)",
         "Bounce Search Radius: 1200",
-        "Damage: 150\/225\/300\/375 (TagTalent 200\/275\/350\/425)",
+        "Damage: 80\/120\/160\/200 (TagTalent 130\/170\/210\/250)",
         "Stun Duration: 0.1",
-        "Upgrades Shuriken Toss. Applies Jinada to it, reduces cooldown and increases cast range.",
+        "Number of Charges: 2",
+        "Charge Replenish Time: 5",
+        "Upgrades Shuriken Toss. Applies Jinada to it and increases cast range.",
         "Cannot be cast on spell immune units. Does not stun or attempt to damage spell immune units. Can jump to and off of spell immune units.",
         "Blocked upon impact as primary or secondary target. When blocked, it continues to bounce.",
         "Can be disjointed by primary and secondary targets. Once disjointed, it stops bouncing."
@@ -71,10 +74,11 @@
     {
       "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/d\/df\/Bounty_Hunter_Jinada.mp3\/revision\/latest?cb=20191216011329",
       "effects": [
-        "Ability Passive",
+        "Ability Target Unit \/ Autocast",
         "Affects Enemies"
       ],
       "notes": [
+        "Upon leveling Jinada the first time, it has Autocast on by default.",
         "When off cooldown, Bounty Hunter's weapons emit particle effects.",
         "Checks its cooldown on attack begin, not on attack hit. This means Jinada does not apply when its cooldown finishes during the attack animation.",
         "This means Jinada does not apply when its cooldown finishes during the attack animation.",
@@ -82,7 +86,8 @@
         "Only steals unreliable gold, removing it from the target and adding it to his own unreliable gold. Steals gold only when attacking enemy heroes, including clones, excluding illusions. Bounty Hunter gains exactly how much the target loses.",
         "Steals gold only when attacking enemy heroes, including clones, excluding illusions.",
         "Bounty Hunter gains exactly how much the target loses.",
-        "When attacking any other unit (including buildings and wards), only the damage is applied, triggering the cooldown.",
+        "When attacking any other unit (including buildings and wards), only the damage is applied, triggering the cooldown. Does not work against buildings when manually cast. Does not work against allies.",
+        "Does not work against buildings when manually cast.",
         "Does not work against allies."
       ],
       "mana": null,
@@ -115,7 +120,7 @@
         "Casting Track does not break the invisibility of Shadow Walk.",
         "Bounty Hunter can pick up, drop or attack items without breaking the invisibility.",
         "Grants phased movement while fully invisible.",
-        "With Aghanim's Shard, applies generic incoming damage reduction on Bounty Hunter. Stacks additively with other sources of generic incoming damage manipulation. The reduction affects all damage Bounty Hunter takes that is not flagged as HP removal. The reduction is independent from the fade time, and is granted immediately.",
+        "With Aghanim's Shard, applies generic incoming damage reduction on Bounty Hunter. Stacks additively with other sources of incoming damage manipulation. The reduction affects all damage Bounty Hunter takes that is not flagged as HP removal. The reduction is independent from the fade time, and is granted immediately.",
         "The reduction affects all damage Bounty Hunter takes that is not flagged as HP removal.",
         "The reduction is independent from the fade time, and is granted immediately."
       ],
@@ -129,7 +134,7 @@
         "Fade Time: 1\/0.75\/0.5\/0.25",
         "Move Speed Slow: 16%\/24%\/32%\/40%",
         "Invisibility Duration: 20\/25\/30\/35",
-        "Slow Duration: 4",
+        "Slow Duration: 4 (TagTalent 6)",
         "Incoming Damage Reduction: 35%",
         "Stun Duration: 1",
         "Shadow Walk now grants you 35% damage reduction while invisible. Attacking out of invisibility stuns the target for 1 second. Lowers cooldown by 5 seconds."
@@ -146,34 +151,38 @@
       ],
       "notes": [
         "Despite the visual effect, the Track debuff is applied instantly on the target.",
-        "Provides True Sight over the target and makes both their hero model and minimap icon visible through the Fog of War.",
+        "Exposes the target, provides True Sight over and ground vision around it. The ground vision adding talent immediately updates all existing Track debuffs.",
+        "The ground vision adding talent immediately updates all existing Track debuffs.",
         "Grants unreliable gold to Bounty Hunter and his allies around the target when the target dies, no matter how it dies. Allies only get the bonus gold if they are within 1200 range of the tracked hero while alive. Bounty Hunter himself gets the gold regardless of distance, even while dead.",
         "Allies only get the bonus gold if they are within 1200 range of the tracked hero while alive. Bounty Hunter himself gets the gold regardless of distance, even while dead.",
         "Track can be cast on illusions and Tempest Doubles, but does not grant any gold when they die.",
         "When multiple Meepoes are tracked and one of them dies, each Meepo grants the Track gold around them.",
-        "The movement speed bonus is provided by an aura on the target. Its buff lingers for 0.5 seconds. Multiple instances of the aura do not stack. The aura does not affect invulnerable or hidden units.",
+        "The movement speed bonus is provided by an aura on the target. Its buff lingers for 0.5 seconds. Multiple instances of the aura do not stack. The ally movement speed talent immediately updates all existing Track debuffs. The aura does not affect invulnerable or hidden units.",
+        "The ally movement speed talent immediately updates all existing Track debuffs.",
         "The aura does not affect invulnerable or hidden units.",
         "The visual effects and sound of Track are only visible and audible to Bounty Hunter and his allies. However, the debuff is visible to everyone.",
-        "The visual effects on Bounty Hunter given by the movement speed buff is visible to everyone as well.",
+        "The visual effects from the movement speed buff is visible to everyone as well.",
         "The debuff icon on the target shows how much gold it currently has. Alt+ Left Click the debuff announces the tracked hero's current gold in the chat.",
         "Alt+ Left Click the debuff announces the tracked hero's current gold in the chat."
       ],
       "mana": "60",
       "hotKey": "R",
       "cooldown": "4",
-      "description": "Tracks an enemy hero, granting True Sight of the target, and information on how much gold it is carrying. You move fast when near the tracked unit and deal critical strikes when attacking it. If the target dies, Bounty Hunter and nearby heroes collect a bonus bounty of gold. Casting Track does not take you out of invisibility.",
+      "description": "Tracks an enemy hero, granting True Sight of the target, and information on how much gold it is carrying. Bounty Hunter moves fast when near the tracked unit and deals critical strikes when attacking it. If the target dies, Bounty Hunter and nearby heroes collect a bonus bounty of gold. Casting Track does not take you out of invisibility.",
       "spellName": "Track",
       "params": [
         "Cast Animation: 0.3+0.43",
         "Cast Range: 1000",
-        "Ally Gold Radius: 1200",
-        "Speed Radius: 1200",
+        "Radius: 1200",
         "Self Move Speed Bonus: 16%\/20%\/24%",
         "Self Critical Damage Against Target: 140%\/170%\/200%",
         "Self Bonus Gold: 130\/225\/320 (TagTalent 380\/475\/570)",
         "Ally Bonus Gold: 40\/80\/120 (TagTalent 290\/330\/370)",
+        "Shuriken Toss Damage Multiplier: 1.4\/1.7\/2",
         "Aura Linger Duration: 0.5",
-        "Duration: 30"
+        "Duration: 30",
+        "Ally Move Speed Bonus: 70%\/85%\/100%",
+        "Vision Radius: 600"
       ],
       "itemBehaviour": [],
       "legacyKey": "R",
@@ -194,22 +203,22 @@
     {
       "talentLvl": "25",
       "talentLeft": "+250 Track Gold",
-      "talentRight": "40% Evasion"
+      "talentRight": "2 Shuriken Toss Charges"
     },
     {
       "talentLvl": "20",
       "talentLeft": "+50 Jinada Gold Steal",
-      "talentRight": "+50 Attack Speed"
+      "talentRight": "Track Grants 600 Ground Vision"
     },
     {
       "talentLvl": "15",
-      "talentLeft": "+275 Health",
+      "talentLeft": "Half Track Bonus Speed to Allies",
       "talentRight": "+50 Shuriken Toss Damage"
     },
     {
       "talentLvl": "10",
       "talentLeft": "+40 Jinada Damage",
-      "talentRight": "+20 Movement Speed"
+      "talentRight": "+2 Shadow Walk Slow Duration"
     }
   ]
 }

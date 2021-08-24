@@ -1,30 +1,27 @@
 {
   "abilities": [
     {
-      "notes": [
-        "The cooldown reduction talent stacks multiplicatively with other sources cooldown reduction."
-      ],
       "spellName": "Talent",
       "talents": [
         {
           "talentLvl": "25",
-          "talentLeft": "30% Cooldown Reduction",
+          "talentLeft": "-40s Requiem of Souls Cooldown",
           "talentRight": "-4 Presence Aura Armor"
         },
         {
           "talentLvl": "20",
-          "talentLeft": "+120 Shadowraze Damage",
+          "talentLeft": "+0.3s Fear\/Slow per Requiem of Souls Line",
           "talentRight": "+3 Damage Per Soul"
         },
         {
           "talentLvl": "15",
-          "talentLeft": "+25 Movement Speed",
+          "talentLeft": "+80 Shadowraze Damage",
           "talentRight": "Presence Aura Affects Building"
         },
         {
           "talentLvl": "10",
-          "talentLeft": "+20 Attack Speed",
-          "talentRight": "+6% Spell Amplification"
+          "talentLeft": "+25 Attack Speed",
+          "talentRight": "+8% Spell Amplification"
         }
       ]
     },
@@ -45,20 +42,20 @@
         "This means the stack added by the raze does not affect the ability's damage.",
         "A number on the icon shows how many times the debuff was refreshed, including the first cast.",
         "The debuff has no stack limit and can be increased infinitely.",
-        "Hitting all three razes consecutively can deal up to 420\/660\/900\/1140 (TagTalent 780\/1020\/1260\/1500) damage to a single unit (before reductions).",
+        "Hitting all three razes consecutively can deal up to 420\/660\/900\/1140 (TagTalent 660\/900\/1140\/1380) damage to a single unit (before reductions).",
         "A hidden debuff is placed on heroes is used to count successive Shadowraze hits. It lasts for 3 seconds. Although only the Demon Eater cosmetic item makes use of it, the counter is always placed.",
         "Although only the Demon Eater cosmetic item makes use of it, the counter is always placed."
       ],
       "mana": "75\/80\/85\/90",
       "hotKey": "Q",
-      "cooldown": "10 (TagTalent 7)",
+      "cooldown": "10",
       "description": "Shadow Fiend razes the ground directly in front of him, dealing damage to enemy units in the area. Adds a stacking damage amplifier on the target that causes the enemy to take bonus Shadow Raze damage per stack.",
       "spellName": "Shadowraze (Near)",
       "params": [
         "Cast Animation: 0.55+0",
         "Distance: 200",
         "Radius: 250",
-        "Base Damage: 90\/160\/230\/300 (TagTalent 210\/280\/350\/420)",
+        "Base Damage: 90\/160\/230\/300 (TagTalent 170\/240\/310\/380)",
         "Damage Increase per Stack: 50\/60\/70\/80",
         "Stack Duration: 8",
         "Debuff persists if placed before spell immunity and when not dispelled."
@@ -83,14 +80,14 @@
       ],
       "mana": "75\/80\/85\/90",
       "hotKey": "W",
-      "cooldown": "10 (TagTalent 7)",
+      "cooldown": "10",
       "description": "Shadow Fiend razes the ground a short distance away from him, dealing damage to enemy units in the area. Adds a stacking damage amplifier on the target that causes the enemy to take bonus Shadow Raze damage per stack.",
       "spellName": "Shadowraze (Medium)",
       "params": [
         "Cast Animation: 0.55+0",
         "Distance: 450",
         "Radius: 250",
-        "Base Damage: 90\/160\/230\/300 (TagTalent 210\/280\/350\/420)",
+        "Base Damage: 90\/160\/230\/300 (TagTalent 170\/240\/310\/380)",
         "Damage Increase per Stack: 50\/60\/70\/80",
         "Stack Duration: 8",
         "Debuff persists if placed before spell immunity and when not dispelled."
@@ -115,14 +112,14 @@
       ],
       "mana": "75\/80\/85\/90",
       "hotKey": "E",
-      "cooldown": "10 (TagTalent 7)",
+      "cooldown": "10",
       "description": "Shadow Fiend razes the ground a longer distance away from him, dealing damage to enemy units in the area. Adds a stacking damage amplifier on the target that causes the enemy to take bonus Shadow Raze damage per stack.",
       "spellName": "Shadowraze (Far)",
       "params": [
         "Cast Animation: 0.55+0",
         "Distance: 700",
         "Radius: 250",
-        "Base Damage: 90\/160\/230\/300 (TagTalent 210\/280\/350\/420)",
+        "Base Damage: 90\/160\/230\/300 (TagTalent 170\/240\/310\/380)",
         "Damage Increase per Stack: 50\/60\/70\/80",
         "Stack Duration: 8",
         "Debuff persists if placed before spell immunity and when not dispelled."
@@ -134,7 +131,7 @@
     {
       "audioUrl": null,
       "effects": [
-        "Ability Passive",
+        "Ability Passive (TagAghanim Autocast)",
         "Affects Self"
       ],
       "notes": [
@@ -159,10 +156,13 @@
       "spellName": "Necromastery",
       "params": [
         "Max Souls: 11\/14\/17\/20 (TagAghanim 25)",
-        "Soul Gain Kill: 1",
+        "Soul Gain Kill: 1 (TagTalent 2)",
         "Attack Damage Bonus per Soul: 1\/2\/3\/4 (TagTalent 4\/5\/6\/7)",
         "Souls Lost on Death: 40%",
+        "Critical Damage: 170%",
+        "Soul consumed on attack: 1",
         "Increases Necromastery Max Souls.",
+        "Necromastery becomes an attack modifier that consumes 1 soul granting your next attack 170%% crit with a 3 second cooldown. Additionally, enemies killed grant an extra soul.",
         "Prevents gaining new stacks. Already existing stacks still provide their bonuses.",
         "Illusions start with 0 souls. Illusions can gather souls for themselves, but cannot make use of the raw bonus damage."
       ],
@@ -177,10 +177,9 @@
         "Affects Enemies"
       ],
       "notes": [
-        "The armor and magic resistance reduction is provided by an aura. Its debuff lingers for 0.5 seconds.",
+        "The armor reduction is provided by an aura. Its debuff lingers for 0.5 seconds.",
         "Does not affect enemies which have no vision over Shadow Fiend.",
-        "With the level 15 talent, the aura affects buildings.",
-        "With Aghanim's Shard, reduces most heroes' total magic resistance to 14.5%."
+        "With the level 15 talent, the aura affects buildings."
       ],
       "mana": null,
       "hotKey": "F",
@@ -190,9 +189,7 @@
       "params": [
         "Radius: 1200",
         "Armor Reduction: 4\/5\/6\/7 (TagTalent 8\/9\/10\/11)",
-        "Aura Linger Duration: 0.5",
-        "Magic Resistance Reduction: 14%",
-        "Lowers nearby enemy magic resistance by 14%."
+        "Aura Linger Duration: 0.5"
       ],
       "itemBehaviour": [],
       "legacyKey": "P",
@@ -215,8 +212,8 @@
         "The damaging lines travel at a speed of 700, taking 1.43 seconds to reach the max distance.",
         "With the travel distance and end width, the damaging lines can hit units up to 1350 range away.",
         "Each damaging line cannot hit the same unit more than once per cast upon expanding and returning respectively.",
-        "Fears and reduces the movement speed of all enemy units hit by the damaging lines of Requiem of Souls. The duration increases by 0.8 per each line hit, but is capped at 2.4 seconds. Requiem of Souls's fear makes affected enemies run away from the caster, rather than make them run towards their team's fountain.",
-        "The duration increases by 0.8 per each line hit, but is capped at 2.4 seconds.",
+        "Fears and reduces the movement speed of all enemy units hit by the damaging lines of Requiem of Souls. The duration increases by 0.8 (1.1) per each line hit, but is capped at 2.4 (3.3) seconds. Requiem of Souls's fear makes affected enemies run away from the caster, rather than make them run towards their team's fountain.",
+        "The duration increases by 0.8 (1.1) per each line hit, but is capped at 2.4 (3.3) seconds.",
         "Requiem of Souls's fear makes affected enemies run away from the caster, rather than make them run towards their team's fountain.",
         "The expanding lines can deal up to 1600\/2400\/3200 damage to a single unit (before reductions), if all lines hit.",
         "The lines first apply the damage, then the debuff.",
@@ -241,7 +238,7 @@
       ],
       "mana": "150\/175\/200",
       "hotKey": "R",
-      "cooldown": "120\/110\/100 (TagTalent 84\/77\/70)",
+      "cooldown": "120\/110\/100 (TagTalent 80\/70\/60)",
       "description": "Shadow Fiend gathers his captured souls to release them as lines of demonic energy. Units near Shadow Fiend when the souls are released can be damaged by several lines of energy. Any unit damaged by Requiem of Souls will be feared and have its movement speed reduced for 0.8 seconds for each line hit. Lines of energy are created for every 1 souls captured through Necromastery. Requiem of Souls is automatically cast whenever Shadow Fiend dies, regardless of its cooldown.",
       "spellName": "Requiem of Souls",
       "params": [
@@ -251,9 +248,9 @@
         "Damage Lines End Width: 350",
         "Necromastery Souls Required per Line: 1",
         "Damage per Line on Release: 80\/120\/160",
-        "Move Speed Slow: 25%",
-        "Debuff Duration per Line: 0.8",
-        "Max Debuff Duration: 2.4",
+        "Move Speed Slow: 20%\/25%\/30%",
+        "Debuff Duration per Line: 0.8 (TagTalent 1.1)",
+        "Max Debuff Duration: 2.4 (TagTalent 3.3)",
         "Damage per Line on Return: 32\/48\/64",
         "Heal per Hit Hero on Return: 32\/48\/64",
         "Increases Necromastery Max Souls and causes Requiem of Souls to return back to Shadow Fiend. The wave back to Shadow Fiend deals less damage, but heals Shadow Fiend for all the damage it dealt.",
@@ -277,23 +274,23 @@
   "talents": [
     {
       "talentLvl": "25",
-      "talentLeft": "30% Cooldown Reduction",
+      "talentLeft": "-40s Requiem of Souls Cooldown",
       "talentRight": "-4 Presence Aura Armor"
     },
     {
       "talentLvl": "20",
-      "talentLeft": "+120 Shadowraze Damage",
+      "talentLeft": "+0.3s Fear\/Slow per Requiem of Souls Line",
       "talentRight": "+3 Damage Per Soul"
     },
     {
       "talentLvl": "15",
-      "talentLeft": "+25 Movement Speed",
+      "talentLeft": "+80 Shadowraze Damage",
       "talentRight": "Presence Aura Affects Building"
     },
     {
       "talentLvl": "10",
-      "talentLeft": "+20 Attack Speed",
-      "talentRight": "+6% Spell Amplification"
+      "talentLeft": "+25 Attack Speed",
+      "talentRight": "+8% Spell Amplification"
     }
   ]
 }

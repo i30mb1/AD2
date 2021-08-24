@@ -1,11 +1,6 @@
 {
   "abilities": [
     {
-      "notes": [
-        "The strength talent effectively grants Faceless Void 180 health and 0.9 health regeneration.",
-        "The agility talent effectively grants Faceless Void 1.17 armor, 7 attack speed, and 7 attack damage.",
-        "The health talent increases maximum health capacity, and keeps the current health percentage."
-      ],
       "spellName": "Talent",
       "talents": [
         {
@@ -15,18 +10,18 @@
         },
         {
           "talentLvl": "20",
-          "talentLeft": "-2s Time Walk",
-          "talentRight": "+40 Attack Speed"
+          "talentLeft": "+70 Time Lock Damage",
+          "talentRight": "+120 Attack Speed during Chronosphere"
         },
         {
           "talentLvl": "15",
-          "talentLeft": "+300 Health",
-          "talentRight": "+55 Time Lock Damage"
+          "talentLeft": "+7% Time Dilation Slow per Cooldown",
+          "talentRight": "-1.5s Time Walk"
         },
         {
           "talentLvl": "10",
-          "talentLeft": "+9 Strength",
-          "talentRight": "+7 Agility"
+          "talentLeft": "+0.5 Time Walk Backtrack Duration",
+          "talentRight": "+6 Time Dilation DPS per cooldown"
         }
       ]
     },
@@ -41,7 +36,7 @@
         "Faceless Void is invulnerable during Time Walk.",
         "Does not disjoint projectiles upon cast.",
         "Does not travel the full distance, when targeting closer than the max distance.",
-        "Upon cast, any damage Faceless Void took in the last 2 seconds gets healed back up. This includes damage dealt by allies. Since it is a heal, it is fully affected by heal manipulation.",
+        "Upon cast, any damage Faceless Void took in the last 2 2.5) seconds gets healed back up. This includes damage dealt by allies. Since it is a heal, it is fully affected by heal manipulation.",
         "Since it is a heal, it is fully affected by heal manipulation.",
         "Backtracks the 3 damage types but not heals and HP Removal. This means it cannot backtrack abilities like Sunder, False Promise, Soul Ring and Armlet of Mordiggian.",
         "This means it cannot backtrack abilities like Sunder, False Promise, Soul Ring and Armlet of Mordiggian.",
@@ -52,14 +47,14 @@
       ],
       "mana": "40",
       "hotKey": "Q",
-      "cooldown": "24\/18\/12\/6 (TagTalent 22\/16\/10\/4)",
+      "cooldown": "24\/18\/12\/6 (TagTalent 22.5\/16.5\/10.5\/4.5)",
       "description": "Rushes to a target location while backtracking any damage taken in the last 2 seconds.",
       "spellName": "Time Walk",
       "params": [
         "Cast Animation: 0.3+0",
         "Cast Range: Global",
         "Max Travel Distance: 650 (TagTalent 1050)",
-        "Backtracked Time: 2",
+        "Backtracked Time: 2 (TagTalent 2.5)",
         "Time Lock Radius: 350",
         "Applies a Time Lock proc to all units at the landing destination.",
         "Increases Time Walk cast range by 400. Grants a new ability: Reverse Time Walk.",
@@ -81,17 +76,18 @@
         "Causes enemy cooldowns and charge-based abilities to recharge 60% slower while they have the debuff. Affects cooldowns of passive abilities, but not the cooldown of items.",
         "Affects cooldowns of passive abilities, but not the cooldown of items.",
         "Deals damage in 1.1-second intervals, starting 1.1 seconds after the debuff is placed, resulting in up to 7\/8\/9\/10 possible instances.",
-        "This is how much it can slow and how much damage it can deal for a certain amount of cooldowns, considering the cooldowns are present for the entire duration: 1 Cooldown: 70\/88\/108\/130 damage and 10% movement speed slow. 2 Cooldowns: 140\/176\/216\/260 damage and 20% movement speed slow. 3 Cooldowns: 210\/264\/324\/390 damage and 30% movement speed slow. 4 Cooldowns: 280\/352\/432\/520 damage and 40% movement speed slow. 5 Cooldowns: 350\/440\/540\/650 damage and 50% movement speed slow. 6 Cooldowns: 420\/528\/648\/780 damage and 60% movement speed slow.",
-        "1 Cooldown: 70\/88\/108\/130 damage and 10% movement speed slow.",
-        "2 Cooldowns: 140\/176\/216\/260 damage and 20% movement speed slow.",
-        "3 Cooldowns: 210\/264\/324\/390 damage and 30% movement speed slow.",
-        "4 Cooldowns: 280\/352\/432\/520 damage and 40% movement speed slow.",
-        "5 Cooldowns: 350\/440\/540\/650 damage and 50% movement speed slow.",
-        "6 Cooldowns: 420\/528\/648\/780 damage and 60% movement speed slow.",
+        "This is how much it can slow and how much damage it can deal for a certain amount of cooldowns, considering the cooldowns are present for the entire duration: 1 Cooldown: 70\/88\/108\/130 (TagTalent 112\/136\/162\/190) damage and 10% (TagTalent 17%) movement speed slow. 2 Cooldowns: 140\/176\/216\/260 (TagTalent 224\/272\/324\/380) damage and 20% (TagTalent 34%) movement speed slow. 3 Cooldowns: 210\/264\/324\/390 (TagTalent 336\/408\/486\/570) damage and 30% (TagTalent 51%) movement speed slow. 4 Cooldowns: 280\/352\/432\/520 (TagTalent 448\/544\/648\/760) damage and 40% (TagTalent 68%) movement speed slow. 5 Cooldowns: 350\/440\/540\/650 (TagTalent 560\/680\/810\/950) damage and 50% (TagTalent 85%) movement speed slow. 6 Cooldowns: 420\/528\/648\/780 (TagTalent 672\/816\/972\/1140) damage and 60% (TagTalent 102%) movement speed slow.",
+        "1 Cooldown: 70\/88\/108\/130 (TagTalent 112\/136\/162\/190) damage and 10% (TagTalent 17%) movement speed slow.",
+        "2 Cooldowns: 140\/176\/216\/260 (TagTalent 224\/272\/324\/380) damage and 20% (TagTalent 34%) movement speed slow.",
+        "3 Cooldowns: 210\/264\/324\/390 (TagTalent 336\/408\/486\/570) damage and 30% (TagTalent 51%) movement speed slow.",
+        "4 Cooldowns: 280\/352\/432\/520 (TagTalent 448\/544\/648\/760) damage and 40% (TagTalent 68%) movement speed slow.",
+        "5 Cooldowns: 350\/440\/540\/650 (TagTalent 560\/680\/810\/950) damage and 50% (TagTalent 85%) movement speed slow.",
+        "6 Cooldowns: 420\/528\/648\/780 (TagTalent 672\/816\/972\/1140) damage and 60% (TagTalent 102%) movement speed slow.",
         "",
-        "The slow and damage per second have no stack limit. Each ability on cooldown adds a stack. Also counts the cooldown of hidden abilities, like Invoker's uninvoked spells or Morph's copies. Rubick's stolen spells which are on cooldown and already lost do not count, as they are not hidden, but removed.",
-        "Also counts the cooldown of hidden abilities, like Invoker's uninvoked spells or Morph's copies.",
-        "Rubick's stolen spells which are on cooldown and already lost do not count, as they are not hidden, but removed.",
+        "The damage per second and movement speed slow increasing talents do not update already existing debuffs on enemies.",
+        "The slow and damage per second have no stack limit. Each ability on cooldown adds a stack. Also counts the cooldown of hidden abilities, like Invoker's uninvoked abilities or Morph's copies. Rubick's stolen abilities which are on cooldown and already lost do not count, as they are not hidden, but removed.",
+        "Also counts the cooldown of hidden abilities, like Invoker's uninvoked abilities or Morph's copies.",
+        "Rubick's stolen abilities which are on cooldown and already lost do not count, as they are not hidden, but removed.",
         "The debuff checks all cooldowns continuously, and adapts the slow and damage values and stack count immediately.",
         "Abilities affected by Time Dilation can still be reset (e.g. Refresher Orb).",
         "Multiple instances of Time Dilation do not stack, but refresh the duration."
@@ -105,8 +101,8 @@
         "Cast Animation: 0.1+0.4",
         "Radius: 775",
         "Cooldown Rate Reduction: 60%",
-        "Slow per Extended Cooldown: 10%",
-        "Damage per Second per Extended Cooldown: 10\/11\/12\/13",
+        "Slow per Extended Cooldown: 10% (TagTalent 17%)",
+        "Damage per Second per Extended Cooldown: 10\/11\/12\/13 (TagTalent 16\/17\/18\/19)",
         "Duration: 8\/9\/10\/11",
         "Effects persist if debuff was placed before spell immunity and when not dispelled."
       ],
@@ -132,7 +128,8 @@
         "The second attack is an instant attack, which can proc any attack modifiers except for cleave (including Time Lock itself) and on-hit effects normally. They do not have True Strike.",
         "Applies the instant attack first, then Time Lock's own damage.",
         "Despite the visual effect, the angle of the second attack is still based on Faceless Void's position, so cleave hits towards where he is facing, and not the image that appears.",
-        "Adds an average of 1.8\/3.2\/5\/7.2 (TagTalent 8.4\/12\/16\/20.4) damage to every attack.",
+        "Adds an average of 1.8\/3.2\/5\/7.2 (TagTalent 10.2\/14.4\/19\/24) damage to every attack.",
+        "The damage increasing talent immediately updates already procced instances of Time Lock.",
         "Time Lock uses pseudo-random distribution."
       ],
       "mana": null,
@@ -142,7 +139,7 @@
       "spellName": "Time Lock",
       "params": [
         "Proc Chance: 12%\/16%\/20%\/24%",
-        "Damage: 15\/20\/25\/30 (TagTalent 70\/75\/80\/85)",
+        "Damage: 15\/20\/25\/30 (TagTalent 85\/90\/95\/100)",
         "Second Attack Delay: 0.33",
         "Hero Duration: 0.65",
         "Non-Hero Duration: 2"
@@ -159,7 +156,7 @@
       ],
       "notes": [
         "Requires Aghanim's Shard to be unlocked.",
-        "This ability stays inactive until Time Walk is cast and turns inactive again once Faceless Void seconds pass. In Ability Draft, due to non-ultimate abilities being limited to one ability slot, Reverse Time Walk replaces Time Walk while castable, instead of being in a separate slot.",
+        "This ability stays inactive until Time Walk is cast and turns inactive again once 1.5 seconds pass. In Ability Draft, due to non-ultimate abilities being limited to one ability slot, Reverse Time Walk replaces Time Walk while castable, instead of being in a separate slot.",
         "In Ability Draft, due to non-ultimate abilities being limited to one ability slot, Reverse Time Walk replaces Time Walk while castable, instead of being in a separate slot.",
         "When cast, moves Faceless Void back to where he was as he cast Time Walk, using the same travel speed.",
         "Does not reverse anything else. The health change are not reversed, and the Time Lock bash from the upgrade does not proc.",
@@ -185,12 +182,14 @@
         "Affects Enemies \/ Allies"
       ],
       "notes": [
-        "Chronosphere affects all units which are not owned by Faceless Void, including buildings, wards and allies.",
-        "Does not affect Couriers, hidden units and invulnerable heroes. All other invulnerable units are fully affected. Instantly destroys Homing Missiles and The Swarm beetles. Instantly causes already latched Phantoms to return to their caster, and freezes traveling phantoms.",
-        "Instantly destroys Homing Missiles and The Swarm beetles.",
+        "Chronosphere freezes all units which are not owned by Faceless Void, including buildings, wards and allies.",
+        "Does not affect Couriers, hidden units and invulnerable heroes. All other invulnerable units are fully affected. Instantly destroys Beetles and Homing Missiles. Instantly causes already latched Phantoms to return to their caster, and freezes traveling phantoms.",
+        "Instantly destroys Beetles and Homing Missiles.",
         "Instantly causes already latched Phantoms to return to their caster, and freezes traveling phantoms.",
         "Affected units are stunned. When other units walk inside the area, they also get affected for its remaining duration.",
-        "While in the Chronosphere, Faceless Void and any units he controls are phased and hasted, meaning they cannot be slowed below the set value.",
+        "While in the Chronosphere, Faceless Void and any units he controls are phased and hasted, meaning they cannot be slowed below the set value. With the level 20 talent, they all also gain 120 attack speed while inside. The attack speed increasing talent immediately upgrades all currently active Chronospheres, but not already placed buffs.",
+        "With the level 20 talent, they all also gain 120 attack speed while inside.",
+        "The attack speed increasing talent immediately upgrades all currently active Chronospheres, but not already placed buffs.",
         "Faceless Void and illusions of him (be it his own, enemy or allied illusions) cannot be frozen by Chronospheres, regardless of source. This is innate to Faceless Void. However, the haste and phased movement is only provided to the caster and their units. In Ability Draft, Faceless Void keeps his innate immunity to Chronospheres, even when not drafting it.",
         "However, the haste and phased movement is only provided to the caster and their units.",
         "In Ability Draft, Faceless Void keeps his innate immunity to Chronospheres, even when not drafting it.",
@@ -202,7 +201,7 @@
       ],
       "mana": "150\/225\/300",
       "hotKey": "R",
-      "cooldown": "160",
+      "cooldown": "160\/150\/140",
       "description": "Creates a blister in spacetime, trapping all units caught in its sphere of influence and causes you to move very quickly inside it. Only Faceless Void and any units he controls are unaffected. Invisible enemies in the sphere will be revealed.",
       "spellName": "Chronosphere",
       "params": [
@@ -211,6 +210,7 @@
         "Radius: 500 (TagTalent 640)",
         "Haste Speed: 1000",
         "Duration: 4\/4.5\/5",
+        "Attack Speed Bonus: 120",
         "Faceless Void's immunity to Chronospheres is not disabled by Break."
       ],
       "itemBehaviour": [],
@@ -268,18 +268,18 @@
     },
     {
       "talentLvl": "20",
-      "talentLeft": "-2s Time Walk",
-      "talentRight": "+40 Attack Speed"
+      "talentLeft": "+70 Time Lock Damage",
+      "talentRight": "+120 Attack Speed during Chronosphere"
     },
     {
       "talentLvl": "15",
-      "talentLeft": "+300 Health",
-      "talentRight": "+55 Time Lock Damage"
+      "talentLeft": "+7% Time Dilation Slow per Cooldown",
+      "talentRight": "-1.5s Time Walk"
     },
     {
       "talentLvl": "10",
-      "talentLeft": "+9 Strength",
-      "talentRight": "+7 Agility"
+      "talentLeft": "+0.5 Time Walk Backtrack Duration",
+      "talentRight": "+6 Time Dilation DPS per cooldown"
     }
   ]
 }

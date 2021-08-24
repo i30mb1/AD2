@@ -2,7 +2,6 @@
   "abilities": [
     {
       "notes": [
-        "The cooldown reduction talent stacks multiplicatively with other sources cooldown reduction.",
         "The health talent increases maximum health capacity, and keeps the current health percentage."
       ],
       "spellName": "Talent",
@@ -20,12 +19,12 @@
         {
           "talentLvl": "15",
           "talentLeft": "+200 Midnight Pulse Radius",
-          "talentRight": "8% Cooldown Reduction"
+          "talentRight": "+30 Malefice Instance Damage"
         },
         {
           "talentLvl": "10",
           "talentLeft": "+0.35s Malefice Stun Duration",
-          "talentRight": "+135 Eidolon Health"
+          "talentRight": "+20 Eidolon Attack Speed"
         }
       ]
     },
@@ -39,12 +38,19 @@
       "notes": [
         "The first instance occurs upon cast, and then every 2 seconds.",
         "On each tick, Malefice first applies the damage, then the stun.",
-        "Can deal up to 120\/180\/240\/300 (TagTalent 280\/420\/560\/700) damage (before reductions).",
+        "Can deal up to 120\/180\/240\/300 damage (before reductions). With the damage increasing talent, it can deal up to 720\/780\/840\/900 damage. With the number of instances increasing talent, it can deal up to 280\/420\/560\/700 damage. With both talents, it can deal up to 1680\/1820\/1960\/2100 damage.",
+        "With the damage increasing talent, it can deal up to 720\/780\/840\/900 damage.",
+        "With the number of instances increasing talent, it can deal up to 280\/420\/560\/700 damage.",
+        "With both talents, it can deal up to 1680\/1820\/1960\/2100 damage.",
+        "Can stun for up to 1.2\/1.8\/2.4\/3 seconds in total. With the stun duration increasing talent, it can stun for up to 2.25\/2.85\/3.45\/4.05 seconds in total. With the number of instances increasing talent, it can stun for up to 2.8\/4.2\/5.6\/7 seconds in total. With both talents, it can stun for up to 5.25\/6.65\/8.05\/9.45 seconds in total.",
+        "With the stun duration increasing talent, it can stun for up to 2.25\/2.85\/3.45\/4.05 seconds in total.",
+        "With the number of instances increasing talent, it can stun for up to 2.8\/4.2\/5.6\/7 seconds in total.",
+        "With both talents, it can stun for up to 5.25\/6.65\/8.05\/9.45 seconds in total.",
         "Multiple instances of Malefice do not stack, but refresh the duration instead. It continues ticking with the tick rate of the first cast."
       ],
       "mana": "100\/120\/140\/160",
       "hotKey": "Q",
-      "cooldown": "14 (TagTalent 12.88)",
+      "cooldown": "14",
       "description": "Focuses Enigma's power on a target, causing it to take damage and become repeatedly stunned for multiple instances. An instance strikes every 2 seconds.",
       "spellName": "Malefice",
       "params": [
@@ -52,7 +58,7 @@
         "Cast Range: 600",
         "Number of Instances: 3 (TagTalent 7)",
         "Instance Interval: 2",
-        "Damage per Instance: 40\/60\/80\/100",
+        "Damage per Instance: 40\/60\/80\/100 (TagTalent 240\/260\/280\/300)",
         "Stun Duration per Instance: 0.4\/0.6\/0.8\/1 (TagTalent 0.75\/0.95\/1.15\/1.35)",
         "Malefice Duration: 4 (TagTalent 12)",
         "Does not attempt to stun or damage when applied before spell immunity and when not dispelled."
@@ -78,11 +84,11 @@
         "The Eidolon's name progress is as follow: Lesser Eidolon ➜ Eidolon ➜ Greater Eidolon ➜ Dire Eidolon.",
         "Eidolons can only multiply once. Eidolons which spawned through multiplication, cannot multiply.",
         "Cannot be cast on ancient creeps, wards, creep-heroes, Necronomicon Warriors, Necronomicon Archers, Centaur Conquerors, Satyr Tormenters, Wildwing Rippers, Dark Troll Summoners and Hellbear Smashers.",
-        "The eidolons health increasing talent does not update the health of already spawned Eidolons."
+        "The eidolons attack speed increasing talent immediately updates the attack speed of already spawned Eidolons."
       ],
       "mana": "140\/150\/160\/170",
       "hotKey": "W",
-      "cooldown": "50\/45\/40\/35 (TagTalent 46\/41.4\/36.8\/32.2)",
+      "cooldown": "50\/45\/40\/35",
       "description": "Transforms a creep into three fragments of Enigma himself. These eidolons are all under Enigma's control, and repeated successful attacks cause them to multiply. When this happens, the eidolons have their health restored.",
       "spellName": "Demonic Conversion",
       "params": [
@@ -106,23 +112,25 @@
         "Damage Magical"
       ],
       "notes": [
-        "Midnight Pulse deals damage in 1 second intervals, starting 1 second after cast, resulting in 9\/10\/11\/12 instances.",
+        "The damage is provided by an aura, its debuff lingers for 0.5 seconds.",
+        "Midnight Pulse deals damage in 1 second intervals, starting 1 second after cast, resulting in 9\/10\/11\/12 instances. Can deal up to 42.75%\/55%\/68.75%\/84% of the affected units' maximum health as damage (before reductions).",
         "Can deal up to 42.75%\/55%\/68.75%\/84% of the affected units' maximum health as damage (before reductions).",
         "Does not affect ancient creeps and wards.",
-        "Successive casts of Midnight Pulse stacks and work fully independently from each other.",
+        "Multiple instances of Midnight Pulse's debuff do not stack.",
         "Destroys trees within the radius at the target location upon cast."
       ],
       "mana": "50\/80\/110\/140",
       "hotKey": "E",
-      "cooldown": "50\/45\/40\/35 (TagTalent 46\/41.4\/36.8\/32.2)",
+      "cooldown": "50\/45\/40\/35",
       "description": "Steeps an area in dark resonance, damaging enemy units based on their max HP.",
       "spellName": "Midnight Pulse",
       "params": [
         "Cast Animation: 0.1+0",
         "Cast Range: 700",
-        "Radius: 550 (TagTalent 750)",
+        "Radius: 550 (TagTalent 580)",
         "Max Health as Damage per Second: 4.75%\/5.5%\/6.25%\/7%",
-        "Duration: 9\/10\/11\/12"
+        "Duration: 9\/10\/11\/12",
+        "Aura Linger Duration: 0.5"
       ],
       "itemBehaviour": [],
       "legacyKey": "D",
@@ -145,16 +153,12 @@
         "The pull and disable are provided by an aura, which lingers for 0.5 seconds, or until the channeling stops, whichever is shorter.",
         "Does not affect wards or buildings. Fully affects Couriers.",
         "Provides 800 range ground vision at the targeted point for 4 seconds upon cast.",
-        "Deals damage in 1 second intervals, starting 1 second after cast, resulting in 4 instances.",
-        "Can deal up to 400\/600\/800 (TagTalent + 19%\/22%\/25%\/28% of maximum health as) damage (before reductions).",
-        "The Aghanim's Scepter upgrade does not actually cause Midnight Pulse to be cast when using Black Hole, it just adds its max health as damage to Black Hole: The max health as damage is based on the current level of Midnight Pulse, so if not learned, Black Hole deals no extra damage. The damage is dealt in separate instances, in the same intervals as Black Hole's damage, resulting in 8 total instances together with Black Hole's regular damage. The extra damage is dealt across the whole radius of Black Hole and lasts for the duration of Black Hole. The extra damage stacks with any previously cast Midnight Pulse and deals pure damage. Unlike Midnight Pulse, Black Hole's pulse damage hits ancient creeps and it does not destroy trees in the area upon cast. In Ability Draft, Midnight Pulse must be drafted as well for Black Hole to apply Midnight Pulse's damage.",
-        "The max health as damage is based on the current level of Midnight Pulse, so if not learned, Black Hole deals no extra damage.",
-        "The damage is dealt in separate instances, in the same intervals as Black Hole's damage, resulting in 8 total instances together with Black Hole's regular damage.",
-        "The extra damage is dealt across the whole radius of Black Hole and lasts for the duration of Black Hole.",
-        "The extra damage stacks with any previously cast Midnight Pulse and deals pure damage.",
-        "Unlike Midnight Pulse, Black Hole's pulse damage hits ancient creeps and it does not destroy trees in the area upon cast.",
-        "In Ability Draft, Midnight Pulse must be drafted as well for Black Hole to apply Midnight Pulse's damage.",
-        "With Aghanim's Shard, spirals enemies within a 1200 radius counter-clockwise towards the center at a speed of 175, resulting in a maximum possible distance of 700. The pull towards the center gets stronger the closer the affected units are to it. However, unlike the pull within the main area, this pull spirals much weaker and goes more towards the center. The outer pull is provided by a separate aura, which also lingers for 0.5 seconds, or until the channeling stops, whichever is shorter. This pull does not impede the targets at all, and even allows them to move still.",
+        "Deals damage in 1-second intervals, starting 1 second after cast, resulting in 4 instances.",
+        "Can deal up to 400\/600\/800 (TagTalent + 20% of maximum health as) damage (before reductions).",
+        "With Aghanim's Scepter, Black Hole deals extra damage based on the enemy's maximum health. The damage is added to the main damage and dealt together in one instance. Does not work against Roshan, he only takes the main damage.",
+        "The damage is added to the main damage and dealt together in one instance.",
+        "Does not work against Roshan, he only takes the main damage.",
+        "With Aghanim's Shard, spirals enemies within a 1200 radius counter-clockwise in at a speed of 175, resulting in a maximum possible distance of 700. The pull towards the center gets stronger the closer the affected units are to it. However, unlike the pull within the main area, this pull spirals much weaker and goes more towards the center. The outer pull is provided by a separate aura, which also lingers for 0.5 seconds, or until the channeling stops, whichever is shorter. This pull does not impede the targets at all, and even allows them to move still.",
         "The pull towards the center gets stronger the closer the affected units are to it.",
         "However, unlike the pull within the main area, this pull spirals much weaker and goes more towards the center.",
         "The outer pull is provided by a separate aura, which also lingers for 0.5 seconds, or until the channeling stops, whichever is shorter.",
@@ -162,7 +166,7 @@
       ],
       "mana": "300\/400\/500",
       "hotKey": "R",
-      "cooldown": "200\/180\/160 (TagTalent 184\/165.6\/147.2)",
+      "cooldown": "200\/180\/160",
       "description": "Summons a vortex that sucks in nearby enemy units. Enemies affected by Black Hole cannot move, attack, or cast spells.",
       "spellName": "Black Hole",
       "params": [
@@ -172,8 +176,9 @@
         "Inner Effect Radius: 420",
         "Damage per Second: 100\/150\/200",
         "Aura Linger Duration: 0.5",
+        "Max Health as Damage per Second: 5%",
         "Outer Effect Radius: 1200",
-        "Adds the current level of Midnight Pulse to Black Hole.",
+        "Black Hole deals additional damage equivalent to 5% of the unit's Max Health.",
         "Black Hole does a non-interrupting pull towards it in a 1200 AoE. Pulls at a rate of 175."
       ],
       "itemBehaviour": [],
@@ -205,12 +210,12 @@
     {
       "talentLvl": "15",
       "talentLeft": "+200 Midnight Pulse Radius",
-      "talentRight": "8% Cooldown Reduction"
+      "talentRight": "+30 Malefice Instance Damage"
     },
     {
       "talentLvl": "10",
       "talentLeft": "+0.35s Malefice Stun Duration",
-      "talentRight": "+135 Eidolon Health"
+      "talentRight": "+20 Eidolon Attack Speed"
     }
   ]
 }

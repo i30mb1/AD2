@@ -24,7 +24,7 @@
         {
           "talentLvl": "15",
           "talentLeft": "+300 Health",
-          "talentRight": "+100 Attack Range"
+          "talentRight": "+70 Nethertoxin Max Damage"
         },
         {
           "talentLvl": "10",
@@ -41,9 +41,9 @@
         "Damage Magical"
       ],
       "notes": [
-        "The cast range of Poison Attack is based on the attack range of the caster. The cast range can be further increased by other attack range bonuses. However, it is not affected by cast range bonuses. The bonus attack range talent increases the cast range to 700\/740\/780\/820. Both Autocast and manually casting it uses Viper's current attack range.",
+        "The cast range of Poison Attack is based on the attack range of the caster. The cast range can be further increased by other attack range bonuses. However, it is not affected by cast range bonuses. The bonus attack range talent increases the cast range to 670\/710\/750\/790. Both Autocast and manually casting it uses Viper's current attack range.",
         "The cast range can be further increased by other attack range bonuses. However, it is not affected by cast range bonuses.",
-        "The bonus attack range talent increases the cast range to 700\/740\/780\/820.",
+        "The bonus attack range talent increases the cast range to 670\/710\/750\/790.",
         "Both Autocast and manually casting it uses Viper's current attack range.",
         "Poison Attack places one debuff on the target. Following attacks increase its stack count. A number on the icon reveals the amount of stacks. The number is visible to everyone. Each attack resets the duration of the entire stack.",
         "A number on the icon reveals the amount of stacks. The number is visible to everyone.",
@@ -68,13 +68,13 @@
         "At max stacks, Poison Attack reduces all affected buildings' total magic resistance by -24%\/-40%\/-56%\/-72%.",
         "With the magic resistance reduction, it can deal up to 63.49\/143.36\/239.62\/352.26 damage to buildings."
       ],
-      "mana": "20\/22\/24\/26",
+      "mana": "18\/20\/22\/24",
       "hotKey": "Q",
       "cooldown": "0",
       "description": "Intensifies Viper's venom, adding an effect to his normal attack that applies a stacking movement speed slow and magic resistance deduction while dealing damage over time. Stacks up to 5 times.",
       "spellName": "Poison Attack",
       "params": [
-        "Cast Range: 600\/640\/680\/720 (TagTalent 700\/740\/780\/820)",
+        "Cast Range: 600\/640\/680\/720 (TagTalent 670\/710\/750\/790)",
         "Max Stacks: 5 (TagTalent 8)",
         "Damage per Second per Stack: 4\/8\/12\/16",
         "Move Speed Slow per Stack: 6%\/8%\/10%\/12%",
@@ -100,13 +100,19 @@
         "Nethertoxin's projectile travels at a speed of 2000.",
         "All effects of Nethertoxin, including the damage, are provided by an aura. Its debuff lingers for 0.5 seconds.",
         "Deals damage in 0.5-second intervals, starting 0.5 seconds after receiving the debuff, resulting in up to 17 instances.",
-        "The damage increases by 4.06\/5\/5.94\/6.88 for each 0.5 seconds spent within the area, resulting in the following values per instance. Level 1: 7.5 \/ 11.6 \/ 15.6 \/ 19.7 \/ 23.8 \/ 27.8 \/ 31.9 \/ 35.9 \/ 40 \/ 40 \/ 40 \/ 40 \/ 40 \/ 40 \/ 40 \/ 40 Level 2: 10 \/ 15 \/ 20 \/ 25 \/ 30 \/ 35 \/ 40 \/ 45 \/ 50 \/ 50 \/ 50 \/ 50 \/ 50 \/ 50 \/ 50 \/ 50 Level 3: 12.5 \/ 18.4 \/ 24.4 \/ 30.3 \/ 36.3 \/ 42.2 \/ 48.1 \/ 54.1 \/ 60 \/ 60 \/ 60 \/ 60 \/ 60 \/ 60 \/ 60 \/ 60 Level 4: 15 \/ 21.9 \/ 28.8 \/ 35.6 \/ 42.5 \/ 49.4 \/ 56.3 \/ 63.1 \/ 70 \/ 70 \/ 70 \/ 70 \/ 70 \/ 70 \/ 70 \/ 70",
-        "Level 1: 7.5 \/ 11.6 \/ 15.6 \/ 19.7 \/ 23.8 \/ 27.8 \/ 31.9 \/ 35.9 \/ 40 \/ 40 \/ 40 \/ 40 \/ 40 \/ 40 \/ 40 \/ 40",
-        "Level 2: 10 \/ 15 \/ 20 \/ 25 \/ 30 \/ 35 \/ 40 \/ 45 \/ 50 \/ 50 \/ 50 \/ 50 \/ 50 \/ 50 \/ 50 \/ 50",
-        "Level 3: 12.5 \/ 18.4 \/ 24.4 \/ 30.3 \/ 36.3 \/ 42.2 \/ 48.1 \/ 54.1 \/ 60 \/ 60 \/ 60 \/ 60 \/ 60 \/ 60 \/ 60 \/ 60",
-        "Level 4: 15 \/ 21.9 \/ 28.8 \/ 35.6 \/ 42.5 \/ 49.4 \/ 56.3 \/ 63.1 \/ 70 \/ 70 \/ 70 \/ 70 \/ 70 \/ 70 \/ 70 \/ 70",
+        "The damage increases by 2.19\/3.44\/4.69\/5.94 for each 0.5 seconds spent within the area, resulting in the following values per instance. Level 1: 7.5 \/ 9.7 \/ 11.9 \/ 14.1 \/ 16.3 \/ 18.4 \/ 20.6 \/ 22.8 \/ 25 \/ 25 \/ 25 \/ 25 \/ 25 \/ 25 \/ 25 \/ 25 Level 2: 10 \/ 13.4 \/ 16.9 \/ 20.3 \/ 23.8 \/ 27.2 \/ 30.6 \/ 34.1 \/ 37.5 \/ 37.5 \/ 37.5 \/ 37.5 \/ 37.5 \/ 37.5 \/ 37.5 \/ 37.5 Level 3: 12.5 \/ 17.2 \/ 21.9 \/ 26.6 \/ 31.3 \/ 35.9 \/ 40.6 \/ 45.3 \/ 50 \/ 50 \/ 50 \/ 50 \/ 50 \/ 50 \/ 50 \/ 50 Level 4: 15 \/ 20.9 \/ 26.9 \/ 32.8 \/ 38.8 \/ 44.7 \/ 50.6 \/ 56.6 \/ 62.5 \/ 62.5 \/ 62.5 \/ 62.5 \/ 62.5 \/ 62.5 \/ 62.5 \/ 62.5",
+        "Level 1: 7.5 \/ 9.7 \/ 11.9 \/ 14.1 \/ 16.3 \/ 18.4 \/ 20.6 \/ 22.8 \/ 25 \/ 25 \/ 25 \/ 25 \/ 25 \/ 25 \/ 25 \/ 25",
+        "Level 2: 10 \/ 13.4 \/ 16.9 \/ 20.3 \/ 23.8 \/ 27.2 \/ 30.6 \/ 34.1 \/ 37.5 \/ 37.5 \/ 37.5 \/ 37.5 \/ 37.5 \/ 37.5 \/ 37.5 \/ 37.5",
+        "Level 3: 12.5 \/ 17.2 \/ 21.9 \/ 26.6 \/ 31.3 \/ 35.9 \/ 40.6 \/ 45.3 \/ 50 \/ 50 \/ 50 \/ 50 \/ 50 \/ 50 \/ 50 \/ 50",
+        "Level 4: 15 \/ 20.9 \/ 26.9 \/ 32.8 \/ 38.8 \/ 44.7 \/ 50.6 \/ 56.6 \/ 62.5 \/ 62.5 \/ 62.5 \/ 62.5 \/ 62.5 \/ 62.5 \/ 62.5 \/ 62.5",
         "",
-        "Can deal up to 533.75\/670\/806.25\/942.5 damage within the area for the entire duration.",
+        "With the level 15 talent, the damage increases by 6.56\/7.81\/9.06\/10.31 for each 0.5 seconds spent within the area, resulting in the following values per instance. Level 1: 7.5 \/ 14.1 \/ 20.6 \/ 27.2 \/ 33.8 \/ 40.3 \/ 46.9 \/ 53.4 \/ 60 \/ 60 \/ 60 \/ 60 \/ 60 \/ 60 \/ 60 \/ 60 Level 2: 10 \/ 17.8 \/ 25.6 \/ 33.4 \/ 41.3 \/ 49.1 \/ 56.9 \/ 64.7 \/ 72.5 \/ 72.5 \/ 72.5 \/ 72.5 \/ 72.5 \/ 72.5 \/ 72.5 \/ 72.5 Level 3: 12.5 \/ 21.6 \/ 30.6 \/ 39.7 \/ 48.8 \/ 57.8 \/ 66.9 \/ 75.9 \/ 85 \/ 85 \/ 85 \/ 85 \/ 85 \/ 85 \/ 85 \/ 85 Level 4: 15 \/ 25.3 \/ 35.6 \/ 45.9 \/ 56.3 \/ 66.6 \/ 76.9 \/ 87.2 \/ 97.5 \/ 97.5 \/ 97.5 \/ 97.5 \/ 97.5 \/ 97.5 \/ 97.5 \/ 97.5",
+        "Level 1: 7.5 \/ 14.1 \/ 20.6 \/ 27.2 \/ 33.8 \/ 40.3 \/ 46.9 \/ 53.4 \/ 60 \/ 60 \/ 60 \/ 60 \/ 60 \/ 60 \/ 60 \/ 60",
+        "Level 2: 10 \/ 17.8 \/ 25.6 \/ 33.4 \/ 41.3 \/ 49.1 \/ 56.9 \/ 64.7 \/ 72.5 \/ 72.5 \/ 72.5 \/ 72.5 \/ 72.5 \/ 72.5 \/ 72.5 \/ 72.5",
+        "Level 3: 12.5 \/ 21.6 \/ 30.6 \/ 39.7 \/ 48.8 \/ 57.8 \/ 66.9 \/ 75.9 \/ 85 \/ 85 \/ 85 \/ 85 \/ 85 \/ 85 \/ 85 \/ 85",
+        "Level 4: 15 \/ 25.3 \/ 35.6 \/ 45.9 \/ 56.3 \/ 66.6 \/ 76.9 \/ 87.2 \/ 97.5 \/ 97.5 \/ 97.5 \/ 97.5 \/ 97.5 \/ 97.5 \/ 97.5 \/ 97.5",
+        "",
+        "Can deal up to 346.25\/513.75\/681.25\/848.75 (783.75\/951.25\/1118.75\/1286.25) damage within the area for the entire duration.",
         "The damage value for an enemy resets whenever the enemy leaves the area and enters it again. It does not count accumulated time spent within the area.",
         "Multiple instances of Nethertoxin's debuff do not stack.",
         "When leveling up the ability, the damage on already affected units do not update. However, if an enemy receives the debuff after leveling it up, that enemy receives the new damage values.",
@@ -122,7 +128,7 @@
         "Cast Range: 900",
         "Radius: 400",
         "Min Damage per Second: 15\/20\/25\/30",
-        "Max Damage per Second: 80\/100\/120\/140",
+        "Max Damage per Second: 50\/75\/100\/125 (TagTalent 120\/145\/170\/195)",
         "Max Damage Duration: 4",
         "Damage Interval: 0.5",
         "Aura Linger Duration: 0.5",
@@ -229,7 +235,7 @@
     {
       "talentLvl": "15",
       "talentLeft": "+300 Health",
-      "talentRight": "+100 Attack Range"
+      "talentRight": "+70 Nethertoxin Max Damage"
     },
     {
       "talentLvl": "10",

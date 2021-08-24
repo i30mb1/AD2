@@ -19,7 +19,7 @@
         {
           "talentLvl": "15",
           "talentLeft": "+3 Nether Ward Health",
-          "talentRight": "-0.8s Netherblast Cooldown"
+          "talentRight": "-1s Netherblast Cooldown"
         },
         {
           "talentLvl": "10",
@@ -41,7 +41,7 @@
       ],
       "mana": "85\/105\/125\/145",
       "hotKey": "Q",
-      "cooldown": "5 (TagTalent 4.2)",
+      "cooldown": "5 (TagTalent 4)",
       "description": "An exploding pulse deals damage to enemies and structures in the area. Deals half damage to structures.",
       "spellName": "Nether Blast",
       "params": [
@@ -101,10 +101,6 @@
       "notes": [
         "↓↓ Double-tapping automatically places the Nether Ward right in front of Pugna, 150 range away from him.",
         "Illusions are treated as creeps when attacking the ward, so they take 16 (TagTalent 28) attacks to destroy it, instead of 4 (TagTalent 7) like heroes.",
-        "The mana regeneration reduction is provided by an aura with 1600 radius. Its debuff lingers for 0.5 seconds. The damage is independent from the aura. Can degenerate up to 11.1%\/18%\/26.5%\/36.6% of a unit's max mana over its full duration. Can fully degenerate a unit's mana within 166.67\/125\/100\/83.33 seconds. The aura does not affect neutral creeps and lane creeps.",
-        "Can degenerate up to 11.1%\/18%\/26.5%\/36.6% of a unit's max mana over its full duration.",
-        "Can fully degenerate a unit's mana within 166.67\/125\/100\/83.33 seconds.",
-        "The aura does not affect neutral creeps and lane creeps.",
         "The damage triggers on every instance of mana usage from ability and items. If an ability or item costs no mana to use, it does not trigger on it. This means if an ability uses mana over time (e.g. Chakram), the flare triggers on every single instance of mana they use. However, it does not trigger on abilities that do not trigger on-cast effects, like active attack modifier and toggle abilities.",
         "This means if an ability uses mana over time (e.g. Chakram), the flare triggers on every single instance of mana they use.",
         "However, it does not trigger on abilities that do not trigger on-cast effects, like active attack modifier and toggle abilities.",
@@ -118,7 +114,7 @@
       "mana": "80",
       "hotKey": "E",
       "cooldown": "35",
-      "description": "Pugna places a Nether Ward at the target location. The ward causes nearby enemy heroes to lose a percentage of their max mana every second, and will fire at any enemy hero who casts a spell. Nether Ward deals base damage plus the damage multiplier of the mana spent by the enemy hero.",
+      "description": "Pugna places a Nether Ward at the target location. The ward will fire at any enemy hero who casts a spell. Nether Ward deals base damage plus the damage multiplier of the mana spent by the enemy hero. Nether Ward heals hits whenever it triggers.",
       "spellName": "Nether Ward",
       "params": [
         "Cast Animation: 0.2+0.4",
@@ -128,9 +124,8 @@
         "Non-Hero Attacks to Destroy: 16 (TagTalent 28)",
         "Base Damage: 50",
         "Damage per Used Mana: 1\/1.25\/1.5\/1.75 (TagTalent 2.75\/3\/3.25\/3.5)",
-        "Max Mana as Mana Regen Reduction: 0.6%\/0.8%\/1%\/1.2%",
-        "Aura Linger Duration: 0.5",
-        "Ward Duration: 18\/22\/26\/30"
+        "Ward Duration: 18\/22\/26\/30",
+        "Ward Self Heal on proc: 2"
       ],
       "itemBehaviour": [],
       "legacyKey": "W",
@@ -218,7 +213,7 @@
     {
       "talentLvl": "15",
       "talentLeft": "+3 Nether Ward Health",
-      "talentRight": "-0.8s Netherblast Cooldown"
+      "talentRight": "-1s Netherblast Cooldown"
     },
     {
       "talentLvl": "10",

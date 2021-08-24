@@ -19,12 +19,12 @@
         {
           "talentLvl": "15",
           "talentLeft": "+25 Attack Speed",
-          "talentRight": "+65 Static Remnant Damage"
+          "talentRight": "+250 Health"
         },
         {
           "talentLvl": "10",
           "talentLeft": "+2.5 Mana Regen",
-          "talentRight": "+200 Health"
+          "talentRight": "+40 Static Remnant Damage"
         }
       ]
     },
@@ -41,7 +41,8 @@
         "When a remnant expires, it still explodes and deals damage around it.",
         "Remnant can be triggered by invisible units and deal damage to them.",
         "The remnants are visible on the minimap with the same color as Radiant or Dire units, not the color of the player.",
-        "Remnants provide 500 range flying vision at their location for their duration or until exploding."
+        "Remnants provide 500 range flying vision at their location for their duration or until exploding.",
+        "The damage increasing talent does not affect all currently placed Static Remnants."
       ],
       "mana": "70\/80\/90\/100",
       "hotKey": "Q",
@@ -53,7 +54,7 @@
         "Trigger Radius: 235",
         "Damage Radius: 260",
         "Activation Delay: 1",
-        "Damage: 120\/175\/230\/285 (TagTalent 185\/240\/295\/350)",
+        "Damage: 120\/180\/240\/300 (TagTalent 160\/220\/280\/340)",
         "Remnant Duration: 12",
         "Procs on spell immune enemies. Does not attempt to damage spell immune enemies."
       ],
@@ -124,7 +125,7 @@
         "This means it works with Critical Strike and Quell, since these are included in the initial damage calculations.",
         "This also means that it does not matter how much damage the attack actually did to the target, since that part is being calculated on projectile hit.",
         "It also means that other conditional attack damage bonuses like a Javelin proc are not included, since these happen later as well.",
-        "With Aghanim's Shard, Overload turns into an active ability. The passive component is still present. Interrupts Storm Spirit's channeling abilities upon cast. Triggers Overload upon cast as well, and fully stacks with it on the same attack. The buff is only placed on allied heroes, including clones and creep-heroes, excluding illusions. The buff is not placed on invulnerable or hidden units. The Overload values for the buff are set upon cast, and do not adapt if it gets leveled up after cast. The Overload effect applied by an ally is creditted to that ally, and not to Storm Spirit. The bouncing Overload talent only works for Storm Spirit, and not for buffed allies. Recasting Electric Rave refreshes the buff's duration and resets the charges. The number of charges is visible on the buff's icon.",
+        "With Aghanim's Shard, Overload turns into an active ability. The passive component is still present. Interrupts Storm Spirit's channeling abilities upon cast. Triggers Overload upon cast as well, and fully stacks with it on the same attack. The buff is only placed on allied heroes, including clones and creep-heroes, excluding illusions. The buff is not placed on invulnerable or hidden units. The Overload values for the buff are set upon cast, and do not adapt if it gets leveled up after cast. The Overload effect applied by an ally is creditted to that ally, and not to Storm Spirit. The bouncing Overload talent only works for Storm Spirit, and not for buffed allies. Recasting Overload refreshes the buff's duration and resets the charges. The number of charges is visible on the buff's icon.",
         "Interrupts Storm Spirit's channeling abilities upon cast.",
         "Triggers Overload upon cast as well, and fully stacks with it on the same attack.",
         "The buff is only placed on allied heroes, including clones and creep-heroes, excluding illusions.",
@@ -132,7 +133,7 @@
         "The Overload values for the buff are set upon cast, and do not adapt if it gets leveled up after cast.",
         "The Overload effect applied by an ally is creditted to that ally, and not to Storm Spirit.",
         "The bouncing Overload talent only works for Storm Spirit, and not for buffed allies.",
-        "Recasting Electric Rave refreshes the buff's duration and resets the charges. The number of charges is visible on the buff's icon."
+        "Recasting Overload refreshes the buff's duration and resets the charges. The number of charges is visible on the buff's icon."
       ],
       "mana": "150",
       "hotKey": "E",
@@ -182,19 +183,19 @@
         "Ball Lightning deals damage around Storm Spirit as he travels. An enemy may only be damaged once per cast of Ball Lightning. The damage starts at 0 and increases by 8\/12\/16 for every 100 distance traveled. So for distances shorter than 100 range, Ball Lightning deals no damage.",
         "The damage starts at 0 and increases by 8\/12\/16 for every 100 distance traveled.",
         "So for distances shorter than 100 range, Ball Lightning deals no damage.",
-        "This is how much damage Ball Lightning can deal around Storm Spirit at certain travel distances (before reductions): 500 Distance: 40\/60\/80 damage, 80 + 11.25% max mana 1000 Distance: 80\/120\/160 damage, 130 + 14.5% max mana 2500 Distance: 200\/300\/400 damage, 280 + 24.25% max mana 5000 Distance: 400\/600\/800 damage, 530 + 40.5% max mana",
-        "500 Distance: 40\/60\/80 damage, 80 + 11.25% max mana",
-        "1000 Distance: 80\/120\/160 damage, 130 + 14.5% max mana",
-        "2500 Distance: 200\/300\/400 damage, 280 + 24.25% max mana",
-        "5000 Distance: 400\/600\/800 damage, 530 + 40.5% max mana",
+        "This is how much damage Ball Lightning can deal around Storm Spirit at certain travel distances (before reductions): 500 Distance: 40\/60\/80 damage, 75 + 10.75% max mana 1000 Distance: 80\/120\/160 damage, 125 + 14% max mana 2500 Distance: 200\/300\/400 damage, 275 + 23.75% max mana 5000 Distance: 400\/600\/800 damage, 525 + 40% max mana",
+        "500 Distance: 40\/60\/80 damage, 75 + 10.75% max mana",
+        "1000 Distance: 80\/120\/160 damage, 125 + 14% max mana",
+        "2500 Distance: 200\/300\/400 damage, 275 + 23.75% max mana",
+        "5000 Distance: 400\/600\/800 damage, 525 + 40% max mana",
         "",
         "The auto remnant in Ball Lightning talent automatically creates a Static Remnant based on its current level every 550 distance Storm Spirit travels. These remnants do not cost mana and do not prevent Storm Spirit from manually casting Static Remnant during Ball Lightning.",
         "These remnants do not cost mana and do not prevent Storm Spirit from manually casting Static Remnant during Ball Lightning."
       ],
-      "mana": "30 + 8% of max mana",
+      "mana": "25 + 7.5% of max mana",
       "hotKey": "R",
       "cooldown": "0",
-      "description": "Storm Spirit becomes volatile electricity, charging across the battlefield until he depletes his mana or reaches his target. The activation mana cost is 30+8% of his total mana pool, and the cost per 100 units traveled is 0.65%+ of his total mana pool. Damage is expressed in damage per 100 units traveled.",
+      "description": "Storm Spirit becomes volatile electricity, charging across the battlefield until he depletes his mana or reaches his target. The activation mana cost is 25+7.5% of his total mana pool, and the cost per 100 units traveled is 0.65%+ of his total mana pool. Damage is expressed in damage per 100 units traveled.",
       "spellName": "Ball Lightning",
       "params": [
         "Cast Animation: 0.3+0",
@@ -235,12 +236,12 @@
     {
       "talentLvl": "15",
       "talentLeft": "+25 Attack Speed",
-      "talentRight": "+65 Static Remnant Damage"
+      "talentRight": "+250 Health"
     },
     {
       "talentLvl": "10",
       "talentLeft": "+2.5 Mana Regen",
-      "talentRight": "+200 Health"
+      "talentRight": "+40 Static Remnant Damage"
     }
   ]
 }

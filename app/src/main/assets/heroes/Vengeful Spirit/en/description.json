@@ -166,7 +166,8 @@
         "The target is given a stop command as soon as it is teleported back, effectively canceling channeling abilities.",
         "Does not disjoint projectiles upon teleporting, neither for the caster, nor for the target.",
         "Destroys trees within 300 radius around Vengeful Spirit and the Nether Swap target.",
-        "Can be cast on illusions, Spirit Bear, and on invulnerable units."
+        "Can be cast on illusions, Spirit Bear, and on invulnerable units.",
+        "The damage is only dealt to enemies, the damage reduction buff is only given to Vengeful Spirit and an allied target."
       ],
       "mana": "100\/150\/200",
       "hotKey": "R",
@@ -175,7 +176,10 @@
       "spellName": "Nether Swap",
       "params": [
         "Cast Animation: 0.4+0",
-        "Cast Range: 800\/950\/1100"
+        "Cast Range: 800\/950\/1100",
+        "Damage: 50",
+        "Damage Reduction: 30%\/40%\/50%",
+        "Duration: 3"
       ],
       "itemBehaviour": [],
       "legacyKey": "W",

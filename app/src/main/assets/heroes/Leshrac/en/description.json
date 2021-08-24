@@ -2,16 +2,13 @@
   "abilities": [
     {
       "notes": [
-        "The armor talent does not benefit illusions.",
-        "The strength talent effectively grants Leshrac 400 health and 2 health regeneration.",
-        "The magic resistance talent stacks multiplicatively with other sources of magic resistance. Increases Leshrac's magic resistance to 47.5%.",
-        "Increases Leshrac's magic resistance to 47.5%."
+        "The strength talent effectively grants Leshrac 400 health and 2 health regeneration."
       ],
       "spellName": "Talent",
       "talents": [
         {
           "talentLvl": "25",
-          "talentLeft": "+30% Magic Resistance",
+          "talentLeft": "Lightning Storm Bounces Twice",
           "talentRight": "+30 Diabolic Edict Explosions"
         },
         {
@@ -27,7 +24,7 @@
         {
           "talentLvl": "10",
           "talentLeft": "+40 Split Earth Radius",
-          "talentRight": "+4 Armor"
+          "talentRight": "+1.75 Mana Regen"
         }
       ]
     },
@@ -78,7 +75,7 @@
       "effects": [
         "Ability No Target",
         "Affects Enemies",
-        "Damage Physical"
+        "Damage Pure"
       ],
       "notes": [
         "Diabolic Edict's radius is centered on and follows Leshrac.",
@@ -86,23 +83,20 @@
         "Fully affects invisible units and units in the Fog of War.",
         "When no valid targets are nearby, the explosions randomly appear within a square with 500 side length. These random explosions deal no damage.",
         "Creates explosions in 0.25 (TagTalent 0.14)-second intervals, starting immediately as the ability is cast, resulting in 40 (TagTalent 70) explosions.",
-        "Buildings take 11.2\/28\/44.8\/61.6 damage per explosion (before reductions).",
-        "Can deal up to 320\/800\/1280\/1760 (TagTalent 560\/1400\/2240\/3080) damage to a single unit. Can deal up to 448\/1120\/1792\/2464 (TagTalent 784\/1960\/3136\/4312) damage to a single building.",
-        "Can deal up to 448\/1120\/1792\/2464 (TagTalent 784\/1960\/3136\/4312) damage to a single building.",
+        "Can deal up to 280\/560\/840\/1120 (TagTalent 490\/980\/1470\/1960) damage to a single unit or structure.",
         "When Leshrac dies, the explosions still occur at his location.",
         "Multiple instances of Diabolic Edict fully stack."
       ],
       "mana": "95\/120\/135\/155",
       "hotKey": "W",
       "cooldown": "22",
-      "description": "Saturates the area around Leshrac with magical explosions that deal physical damage to enemy units and structures. The fewer units available to attack, the more damage those units will take. Deals 40% more damage to towers. Lasts 10 seconds.",
+      "description": "Saturates the area around Leshrac with magical explosions that deal pure damage to enemy units and structures. The fewer units available to attack, the more damage those units will take. Lasts 10 seconds.",
       "spellName": "Diabolic Edict",
       "params": [
         "Cast Animation: 0.5+0.87",
         "Radius: 500",
         "Number of Explosions: 40 (TagTalent 70)",
-        "Unit Damage per Explosion: 8\/20\/32\/44",
-        "Building Damage Bonus: 40%",
+        "Unit Damage per Explosion: 7\/14\/21\/28",
         "Duration: 10"
       ],
       "itemBehaviour": [],
@@ -117,13 +111,16 @@
         "Damage Magical"
       ],
       "notes": [
-        "The lightning hits the initial target after the 0.25-second effect delay and then jumps to other targets in 0.25-second intervals, so hitting all targets takes 1\/1.5\/2\/2.5 seconds.",
+        "The lightning hits the initial target after the 0.25-second effect delay and then jumps to other targets in 0.25-second intervals, so hitting all targets takes 1\/1.5\/2\/2.5 (TagTalent 2\/3\/4\/5) seconds.",
         "Because of the effect delay, the initial lightning can be avoided with spell immunity, invulnerability, or becoming hidden. However, this does not prevent it from jumping.",
         "Does not bounce on invisible units, or units in the Fog of War.",
-        "Can never hit the same unit twice per cast.",
-        "All jumps together can deal up to 360\/780\/1360\/2100 (TagTalent 760\/1380\/2160\/3100) damage (before reductions).",
         "Lightning Storm first applies the damage, then the debuff.",
-        "The lightning storm buff is a hidden buff required for the lightning to jump."
+        "The lightning storm buff is a hidden buff required for the lightning to jump.",
+        "Can never hit the same unit twice per cast. The Lightning Storm bounce twice talent will bounce to units it affected already when there are no other valid units available. Same rules as above apply to the second Lightning Storm cast.",
+        "The Lightning Storm bounce twice talent will bounce to units it affected already when there are no other valid units available.",
+        "Same rules as above apply to the second Lightning Storm cast.",
+        "All jumps together can deal up to 360\/780\/1360\/2100 (TagTalent 760\/1380\/2160\/3100) damage (before reductions). With both damage increasing and Lightning Storm bounce twice talents, all jumps can deal up to 1520\/2760\/4320\/6200 damage.",
+        "With both damage increasing and Lightning Storm bounce twice talents, all jumps can deal up to 1520\/2760\/4320\/6200 damage."
       ],
       "mana": "80\/100\/120\/140",
       "hotKey": "E",
@@ -139,6 +136,7 @@
         "Damage: 90\/130\/170\/210 (TagTalent 190\/230\/270\/310)",
         "Move Speed Slow: 75%",
         "Slow Duration: 0.4\/0.6\/0.8\/1",
+        "Number of Bounces: 2",
         "Attempts to damage if enemy turns spell immune during the delay. Slow persists if debuff was placed before spell immunity and when not dispelled.",
         "Blocked fully only when primary target."
       ],
@@ -224,7 +222,7 @@
   "talents": [
     {
       "talentLvl": "25",
-      "talentLeft": "+30% Magic Resistance",
+      "talentLeft": "Lightning Storm Bounces Twice",
       "talentRight": "+30 Diabolic Edict Explosions"
     },
     {
@@ -240,7 +238,7 @@
     {
       "talentLvl": "10",
       "talentLeft": "+40 Split Earth Radius",
-      "talentRight": "+4 Armor"
+      "talentRight": "+1.75 Mana Regen"
     }
   ]
 }

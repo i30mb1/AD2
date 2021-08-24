@@ -1,10 +1,6 @@
 {
   "abilities": [
     {
-      "notes": [
-        "This attack damage talent is added as raw attack damage. Does not benefit illusions and is not affected by most percentage-based damage increasing or reducing effects.",
-        "Does not benefit illusions and is not affected by most percentage-based damage increasing or reducing effects."
-      ],
       "spellName": "Talent",
       "talents": [
         {
@@ -25,7 +21,7 @@
         {
           "talentLvl": "10",
           "talentLeft": "+0.75 Waning Rift Silence Duration",
-          "talentRight": "+25 Damage"
+          "talentRight": "+300 Illusory Orb Distance"
         }
       ]
     },
@@ -51,7 +47,7 @@
       "params": [
         "Cast Animation: 0.1+0.27",
         "Cast Range: 3000",
-        "Travel Distance: 1950",
+        "Travel Distance: 1950 (TagTalent 2250)",
         "Damage Radius: 225",
         "Damage: 75\/150\/225\/300"
       ],
@@ -184,7 +180,7 @@
       "mana": "100\/150\/200",
       "hotKey": "R",
       "cooldown": "80",
-      "description": "Creates a coil of volatile magic that latches onto enemy Heroes, stunning them for 0.5 seconds, damaging and leashing them. If the enemy hero stretches the coil by moving too far away, it snaps, stunning and dealing additional damage.",
+      "description": "Creates a coil of volatile magic that latches onto enemy Heroes, stunning them for 1.8\/2.4\/3 seconds, damaging and leashing them. If the enemy hero stretches the coil by moving too far away, it snaps, stunning and dealing additional damage.",
       "spellName": "Dream Coil",
       "params": [
         "Cast Animation: 0.1+0.27",
@@ -193,7 +189,6 @@
         "Link Break Radius: 600",
         "Initial Damage: 125\/200\/275",
         "Link Break Damage: 200\/300\/400 (TagAghanim 300\/450\/600)",
-        "Initial Stun Duration: 0.5",
         "Link Break Stun Duration: 1.8\/2.4\/3 (TagAghanim 2\/3\/4)",
         "Coil Duration: 6 (TagAghanim 8)",
         "Instant Attack Radius: 775",
@@ -235,7 +230,7 @@
     {
       "talentLvl": "10",
       "talentLeft": "+0.75 Waning Rift Silence Duration",
-      "talentRight": "+25 Damage"
+      "talentRight": "+300 Illusory Orb Distance"
     }
   ]
 }

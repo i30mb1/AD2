@@ -15,7 +15,7 @@
         },
         {
           "talentLvl": "15",
-          "talentLeft": "+12 Health Regen",
+          "talentLeft": "+150 Cold Feet Breaking distance",
           "talentRight": "-2s Ice Vortex Cooldown"
         },
         {
@@ -34,27 +34,28 @@
       ],
       "notes": [
         "Cold Feet places an initial debuff on the target and places an icy marker at its current position upon cast.",
-        "As long as the target stays within 715 radius of the mark, it takes damage from the debuff and after 4 seconds it is stunned.",
-        "If the target moves 715 range away from the mark at any point during the initial debuff, the ability completely stops, removing the debuff and the marker. This means even when the target moves back within range, it is not frozen or damaged further. Also considers the target's vertical position, so getting moved far up enough can stop Cold Feet as well.",
+        "As long as the target stays within 715 (TagTalent 865) radius of the mark, it takes damage from the debuff and after 4 seconds it is stunned.",
+        "If the target moves 715 (TagTalent 865) range away from the mark at any point during the initial debuff, the ability completely stops, removing the debuff and the marker. This means even when the target moves back within range, it is not frozen or damaged further. Also considers the target's vertical position, so getting moved far up enough can stop Cold Feet as well.",
         "This means even when the target moves back within range, it is not frozen or damaged further.",
         "Also considers the target's vertical position, so getting moved far up enough can stop Cold Feet as well.",
         "When cast on units which already have the Cold Feet modifier, nothing happens.",
         "Deals damage in 1-second intervals, starting immediately upon cast, resulting in 4 instances.",
         "The stun is applied 1 second after the last instance.",
         "Can deal up to 120\/200\/280\/360 damage to the target (before reductions).",
+        "The break distance increasing talent does not update the break distance of already placed Cold Feet debuffs.",
         "The level 25 talent turns Cold Feet into an area-targeted ability with 500 radius, so that it cannot directly target units anymore. The break distances are different for each hit enemy. They do not share it. Can target invisible enemies and enemies inside the Fog of War.",
         "The break distances are different for each hit enemy. They do not share it.",
         "Can target invisible enemies and enemies inside the Fog of War."
       ],
       "mana": "125",
       "hotKey": "Q",
-      "cooldown": "10\/9\/8\/7",
+      "cooldown": "12\/11\/10\/9",
       "description": "Places a frozen hex on an enemy unit that deals damage over time, but can be dispelled by moving away from the initial cast point. If the enemy unit doesn't move out of the given range, it will be stunned and frozen in place after 4 seconds.",
       "spellName": "Cold Feet",
       "params": [
         "Cast Animation: 0.01+0",
         "Cast Range: 700\/800\/900\/1000",
-        "Break Distance: 715",
+        "Break Distance: 715 (TagTalent 865)",
         "Damage per Tick: 30\/50\/70\/90",
         "Damage Duration: 4",
         "Stun Duration: 2\/2.5\/3\/3.5",
@@ -173,7 +174,7 @@
       ],
       "mana": "175",
       "hotKey": "R",
-      "cooldown": "40",
+      "cooldown": "60\/50\/40",
       "description": "Launches a tracer towards any location of the battlefield, which must be triggered again to mark the area to be blasted by a damaging explosion of hail. The further the tracer travels, the larger the explosion will be. Enemies caught in the explosion, or who touched the icy ball of hail as it travels, are frostbitten, taking damage and prevented from regenerating or healing. If a frostbitten unit's health drops below a certain percentage, they will instantly shatter.",
       "spellName": "Ice Blast",
       "params": [
@@ -246,7 +247,7 @@
     },
     {
       "talentLvl": "15",
-      "talentLeft": "+12 Health Regen",
+      "talentLeft": "+150 Cold Feet Breaking distance",
       "talentRight": "-2s Ice Vortex Cooldown"
     },
     {

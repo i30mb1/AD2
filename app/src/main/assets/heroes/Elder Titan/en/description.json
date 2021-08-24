@@ -39,7 +39,7 @@
       ],
       "notes": [
         "Applies sleep on affected units, preventing them from acting, until woken up.",
-        "If a unit is hit by both damage components of the stomp, it takes 140\/200\/260\/320 (TagTalent 340\/400\/460\/520) damage (before reductions).",
+        "If a unit is hit by both damage components of the stomp, it takes 140\/180\/220\/260 (TagTalent 340\/380\/420\/460) damage (before reductions).",
         "The stomp first applies the damage, then the debuff.",
         "When the Astral Spirit is summoned, it performs the stomp perfectly synchronized with Elder Titan. The sleep is applied in the radius around Elder Titan and the spirit. If the radii overlap, the duration does not stack up. If the spirit is not summoned, or Astral Spirit is not learned, both magical and physical damage are centered by default around Elder Titan.",
         "The sleep is applied in the radius around Elder Titan and the spirit. If the radii overlap, the duration does not stack up.",
@@ -71,8 +71,8 @@
         "Cast Animation: 0.4+0",
         "Channel Time: 1.3",
         "Radius: 500",
-        "Physical Damage: 70\/100\/130\/160 (TagTalent 170\/200\/230\/260)",
-        "Magical Damage: 70\/100\/130\/160 (TagTalent 170\/200\/230\/260)",
+        "Physical Damage: 70\/90\/110\/130 (TagTalent 170\/190\/210\/230)",
+        "Magical Damage: 70\/90\/110\/130 (TagTalent 170\/190\/210\/230)",
         "Wake Up Damage Threshold: 50\/100\/150\/200 (TagTalent 500\/550\/600\/650)",
         "Initial Stun Duration: 0.2",
         "Sleep Duration: 2\/3\/4\/5",
@@ -84,7 +84,7 @@
       "story": "The force of creation still echoes in the stomp of the Titan."
     },
     {
-      "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/a\/ae\/Elder_Titan_Astral_Spirit.mp3\/revision\/latest?cb=20191216013444",
+      "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/c\/c0\/Elder_Titan_Astral_Spirit_1.mp3\/revision\/latest?cb=20191216013444",
       "effects": [
         "Ability Target Point",
         "Affects Enemies",
@@ -131,7 +131,7 @@
         "Attack Damage Bonus per Hero: 20\/40\/60\/80 (TagTalent 45\/65\/85\/105)",
         "Armor Bonus per Non-Hero Unit: 0.5",
         "Armor Bonus per Hero: 1.5\/3\/4.5\/6",
-        "Spirit Duration: 8",
+        "Spirit Duration: 10",
         "Buff Duration: 10",
         "Spell Immunity Duration per Hero: 2",
         "Causes you to become Spell Immune for 2 seconds per affected enemy hero when the spirit returns to you.",

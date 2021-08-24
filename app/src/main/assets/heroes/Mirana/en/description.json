@@ -1,32 +1,27 @@
 {
   "abilities": [
     {
-      "notes": [
-        "The health talent increases maximum health capacity, and keeps the current health percentage.",
-        "This attack damage talent is added as raw attack damage. Does not benefit illusions and is not affected by most percentage-based damage increasing or reducing effects.",
-        "Does not benefit illusions and is not affected by most percentage-based damage increasing or reducing effects."
-      ],
       "spellName": "Talent",
       "talents": [
         {
           "talentLvl": "25",
-          "talentLeft": "-60 Moonlight Shadow Cooldown",
+          "talentLeft": "+180 Starstorm damage",
           "talentRight": "+2 Multishot Sacred Arrows"
         },
         {
           "talentLvl": "20",
           "talentLeft": "+20 Mana Break",
-          "talentRight": "+8% Spell Amplification"
+          "talentRight": "-25 Moonlight Shadow Cooldown"
         },
         {
           "talentLvl": "15",
           "talentLeft": "+75 Leap Attack Speed",
-          "talentRight": "-3s Sacred Arrow cooldown"
+          "talentRight": "+20% Moonlight Shadow Evasion"
         },
         {
           "talentLvl": "10",
-          "talentLeft": "+150 Health",
-          "talentRight": "+15 Damage"
+          "talentLeft": "+100 Leap Distance",
+          "talentRight": "-2s Sacred Arrow cooldown"
         }
       ]
     },
@@ -44,7 +39,7 @@
         "The target for the second meteor is set upon cast of Starstorm, so it can hit its target even after it has moved out of the radius.",
         "The second meteor starts falling exactly 0.8 seconds after cast, and also takes 0.57 seconds to hit its target.",
         "Starstorm chooses a new target for the second meteor if the set target dies before or because of the first meteor's impact.",
-        "Can deal a total of 131.25\/262.5\/393.75\/525 damage to a single target (before reductions) with the second meteor hit."
+        "Can deal a total of 131.25\/262.5\/393.75\/525 (TagTalent 446.25\/577.5\/708.75\/840) damage to a single target (before reductions) with the second meteor hit."
       ],
       "mana": "80\/105\/130\/155",
       "hotKey": "Q",
@@ -55,8 +50,8 @@
         "Cast Animation: 0.4+0",
         "Main Radius: 650",
         "Secondary Radius: 425",
-        "Main Damage: 75\/150\/225\/300",
-        "Secondary Damage: 56.25\/112.5\/168.75\/225",
+        "Main Damage: 75\/150\/225\/300 (TagTalent 255\/330\/405\/480)",
+        "Secondary Damage: 56.25\/112.5\/168.75\/225 (TagTalent 191.25\/247.5\/303.75\/360)",
         "Attempts to damage if enemy turns spell immune before the meteors hitting. Does not re-select a new target for the second meteor if the closest enemy turns spell immune after cast."
       ],
       "itemBehaviour": [],
@@ -75,31 +70,31 @@
         "The arrow starts traveling 51 range in front of Mirana, and travels forward up to 3067 range. This means units within 50 range in front of Mirana cannot be hit, as it does not search for units right behind the arrow.",
         "This means units within 50 range in front of Mirana cannot be hit, as it does not search for units right behind the arrow.",
         "With the travel distance and radius, Sacred Arrow can hit units up to 3163 range away.",
-        "The stun increases by 0.07\/0.08\/0.09\/0.1 seconds and the damage by 0.003125 for each 30 distance traveled, resulting in the following values at certain distances (before reductions): 300 Distance: 0.7\/0.8\/0.9\/1 second stun, 96\/186\/276\/366 damage. 600 Distance: 1.4\/1.6\/1.8\/2 second stun, 132\/222\/312\/402 damage. 900 Distance: 2.1\/2.4\/2.7\/3 second stun, 168\/258\/348\/438 damage. 1200 Distance: 2.8\/3.2\/3.6\/4 second stun, 204\/294\/384\/474 damage. 1500 Distance: 3.5\/4\/4.5\/5 second stun, 240\/330\/420\/510 damage. The arrow reaches its full potential after traveling for 1500 distance, which takes 1.67 seconds.",
-        "300 Distance: 0.7\/0.8\/0.9\/1 second stun, 96\/186\/276\/366 damage.",
-        "600 Distance: 1.4\/1.6\/1.8\/2 second stun, 132\/222\/312\/402 damage.",
-        "900 Distance: 2.1\/2.4\/2.7\/3 second stun, 168\/258\/348\/438 damage.",
-        "1200 Distance: 2.8\/3.2\/3.6\/4 second stun, 204\/294\/384\/474 damage.",
-        "1500 Distance: 3.5\/4\/4.5\/5 second stun, 240\/330\/420\/510 damage.",
+        "The stun increases by 0.064\/0.076\/0.088\/0.1 seconds and the damage by 0.003125 for each 30 distance traveled, resulting in the following values at certain distances (before reductions): 300 Distance: 0.64\/0.76\/0.88\/1 second stun, 96\/186\/276\/366 damage. 600 Distance: 1.28\/1.52\/1.76\/2 second stun, 132\/222\/312\/402 damage. 900 Distance: 1.92\/2.28\/2.64\/3 second stun, 168\/258\/348\/438 damage. 1200 Distance: 2.56\/3.04\/3.52\/4 second stun, 204\/294\/384\/474 damage. 1500 Distance: 3.2\/3.8\/4.4\/5 second stun, 240\/330\/420\/510 damage. The arrow reaches its full potential after traveling for 1500 distance, which takes 1.67 seconds.",
+        "300 Distance: 0.64\/0.76\/0.88\/1 second stun, 96\/186\/276\/366 damage.",
+        "600 Distance: 1.28\/1.52\/1.76\/2 second stun, 132\/222\/312\/402 damage.",
+        "900 Distance: 1.92\/2.28\/2.64\/3 second stun, 168\/258\/348\/438 damage.",
+        "1200 Distance: 2.56\/3.04\/3.52\/4 second stun, 204\/294\/384\/474 damage.",
+        "1500 Distance: 3.2\/3.8\/4.4\/5 second stun, 240\/330\/420\/510 damage.",
         "The arrow reaches its full potential after traveling for 1500 distance, which takes 1.67 seconds.",
         "The arrow first applies the damage, then the debuff.",
         "The stun duration is shown above the target's head upon hit (visible to allies only). The shown value is rounded.",
         "If the arrow collides with a unit which is not a hero, ancient creep, or creep-hero, it instantly kills it. The creep is killed by getting its health dealt as damage to it, in the form of HP Removal. Spell immune creeps are not killed.",
         "The creep is killed by getting its health dealt as damage to it, in the form of HP Removal. Spell immune creeps are not killed.",
         "The arrow cannot collide with invulnerable or hidden units, it simply flies through them.",
-        "The Sacred Arrow has 500 flying vision, which stays for 3 seconds at the point the arrow hits a target.",
-        "With Aghanim's Scepter, Sacred Arrow releases a meteor based on the current level of Starstorm onto every enemy that comes within 500 range as it travels. If the arrow lands on a unit, that unit is hit by a secondary meteor that deals 37.5\/75\/112.5\/150 damage (before reductions). This results in a total damage of 112.5\/225\/337.5\/450 against that target, on top of Sacred Arrow's damage (before reductions).",
-        "If the arrow lands on a unit, that unit is hit by a secondary meteor that deals 37.5\/75\/112.5\/150 damage (before reductions).",
-        "This results in a total damage of 112.5\/225\/337.5\/450 against that target, on top of Sacred Arrow's damage (before reductions).",
-        "With the level 25 talent, the extra arrows are launched together with the primary arrow. The extra arrows are launched with a 30° angle to the left and right of the primary arrow in the center. Although all 3 arrows overlap in front of Mirana, they cannot hit the same target. Aghanim's Scepter does not upgrade the extra arrows from the talent.",
+        "The Sacred Arrow has 400 flying vision, which stays for 3 seconds at the point the arrow hits a target.",
+        "With Aghanim's Scepter, Sacred Arrow releases a meteor based on the current level of Starstorm onto every enemy that comes within 500 range as it travels. If the arrow lands on a unit, that unit is hit by a secondary meteor that deals 37.5\/75\/112.5\/150 (TagTalent 127.5\/165\/202.5\/240) damage (before reductions). This results in a total damage of 112.5\/225\/337.5\/450 (TagTalent 382.5\/495\/607.5\/720) against that target, on top of Sacred Arrow's damage (before reductions).",
+        "If the arrow lands on a unit, that unit is hit by a secondary meteor that deals 37.5\/75\/112.5\/150 (TagTalent 127.5\/165\/202.5\/240) damage (before reductions).",
+        "This results in a total damage of 112.5\/225\/337.5\/450 (TagTalent 382.5\/495\/607.5\/720) against that target, on top of Sacred Arrow's damage (before reductions).",
+        "With the level 25 talent, 2 extra arrows are launched together with the primary arrow. The extra arrows are launched with a 30° angle to the left and right of the primary arrow in the center. Although all 3 arrows overlap in front of Mirana, they cannot hit the same target. The extra arrows from the Multishot talent are not upgraded by Aghanim's Scepter.",
         "The extra arrows are launched with a 30° angle to the left and right of the primary arrow in the center.",
         "Although all 3 arrows overlap in front of Mirana, they cannot hit the same target.",
-        "Aghanim's Scepter does not upgrade the extra arrows from the talent."
+        "The extra arrows from the Multishot talent are not upgraded by Aghanim's Scepter."
       ],
       "mana": "100",
       "hotKey": "W",
-      "cooldown": "19\/18\/17\/16 (TagTalent 16\/15\/14\/13)",
-      "description": "Fires a long-range arrow with deadly precision, which stuns and damages the first enemy unit it strikes. The stun duration ranges from 0.01 to 3.5\/4\/4.5\/5 seconds, with bonus damage up to 180 added, based on the distance the arrow travels to its target. Instantly kills the first non-ancient creep it hits.",
+      "cooldown": "19\/18\/17\/16 (TagTalent 17\/16\/15\/14)",
+      "description": "Fires a long-range arrow with deadly precision, which stuns and damages the first enemy unit it strikes. The stun duration ranges from 0.01 to 3.2\/3.8\/4.4\/5 seconds, with bonus damage up to 180 added, based on the distance the arrow travels to its target. Instantly kills the first non-ancient creep it hits.",
       "spellName": "Sacred Arrow",
       "params": [
         "Cast Animation: 0.5+0",
@@ -111,7 +106,7 @@
         "Base Damage: 60\/150\/240\/330",
         "Max Bonus Damage: 180",
         "Min Stun Duration: 0.01",
-        "Max Stun Duration: 3.5\/4\/4.5\/5",
+        "Max Stun Duration: 3.2\/3.8\/4.4\/5",
         "Starstorm Radius: 500",
         "Secondary Starstorm Damage: 50%",
         "Causes Sacred Arrow to release a Starstorm on enemies within 500 AoE along the travel path of the primary arrow, releasing a second starfall that deals 50% damage to the impacted unit.",
@@ -147,7 +142,7 @@
       "spellName": "Leap",
       "params": [
         "Cast Animation: 0+0",
-        "Leap Distance: 575",
+        "Leap Distance: 575 (TagTalent 675)",
         "Move Speed Bonus: 8%\/16%\/24%\/32%",
         "Attack Speed Bonus: 25\/50\/75\/100 (TagTalent 100\/125\/150\/175)",
         "Buff Duration: 2.5",
@@ -171,11 +166,14 @@
         "Places a buff on all allied heroes. As long as this buff stays on them, they will keep turning invisible. Fully affects invulnerable and hidden allies, placing the buff on them and turning them invisible.",
         "Fully affects invulnerable and hidden allies, placing the buff on them and turning them invisible.",
         "The movement speed bonus is only applied when fully invisible. It is not applied during the fade delay. Attacking, casting abilities or using items during the fade delay resets it.",
-        "Attacking, casting abilities or using items during the fade delay resets it."
+        "Attacking, casting abilities or using items during the fade delay resets it.",
+        "The evasion during Moonlight Shadow talent immediately upgrades the current active instance. Moonlight Shadow's evasion stacks diminishingly with other sources of evasion and uses pseudo-random distribution. On average, the evasion talent increases Mirana and her team's survivability against physical attacks by 25%.",
+        "Moonlight Shadow's evasion stacks diminishingly with other sources of evasion and uses pseudo-random distribution.",
+        "On average, the evasion talent increases Mirana and her team's survivability against physical attacks by 25%."
       ],
       "mana": "125",
       "hotKey": "R",
-      "cooldown": "140\/120\/100 (TagTalent 80\/60\/40)",
+      "cooldown": "140\/120\/100 (TagTalent 115\/95\/75)",
       "description": "Turns Mirana and all allied heroes invisible and grants bonus movement speed. If a hero is revealed, invisibility will restore after the fade delay as long as Moonlight Shadow's duration has not expired.",
       "spellName": "Moonlight Shadow",
       "params": [
@@ -184,6 +182,7 @@
         "Fade Delay: 2.5\/2\/1.5",
         "Move Speed Bonus: 9%\/12%\/15%",
         "Duration: 18",
+        "Active Evasion: 20%",
         "Illusions are not made invisible."
       ],
       "itemBehaviour": [],
@@ -237,23 +236,23 @@
   "talents": [
     {
       "talentLvl": "25",
-      "talentLeft": "-60 Moonlight Shadow Cooldown",
+      "talentLeft": "+180 Starstorm damage",
       "talentRight": "+2 Multishot Sacred Arrows"
     },
     {
       "talentLvl": "20",
       "talentLeft": "+20 Mana Break",
-      "talentRight": "+8% Spell Amplification"
+      "talentRight": "-25 Moonlight Shadow Cooldown"
     },
     {
       "talentLvl": "15",
       "talentLeft": "+75 Leap Attack Speed",
-      "talentRight": "-3s Sacred Arrow cooldown"
+      "talentRight": "+20% Moonlight Shadow Evasion"
     },
     {
       "talentLvl": "10",
-      "talentLeft": "+150 Health",
-      "talentRight": "+15 Damage"
+      "talentLeft": "+100 Leap Distance",
+      "talentRight": "-2s Sacred Arrow cooldown"
     }
   ]
 }

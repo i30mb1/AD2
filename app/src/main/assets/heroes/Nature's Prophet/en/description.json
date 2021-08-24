@@ -4,7 +4,6 @@
       "notes": [
         "This attack damage talent is added as raw attack damage. Does not benefit illusions and is not affected by most percentage-based damage increasing or reducing effects.",
         "Does not benefit illusions and is not affected by most percentage-based damage increasing or reducing effects.",
-        "The cooldown reduction talent stacks multiplicatively with other sources cooldown reduction.",
         "The armor talent does not benefit illusions."
       ],
       "spellName": "Talent",
@@ -16,7 +15,7 @@
         },
         {
           "talentLvl": "20",
-          "talentLeft": "20% Cooldown Reduction",
+          "talentLeft": "+75% Sprout Miss Chance",
           "talentRight": "+8 Armor"
         },
         {
@@ -44,20 +43,20 @@
         "Sprout trees have a different model and are smaller than other trees on the map and they do not have a dying animation.",
         "Tango heals for twice as long when targeting a Sprout tree.",
         "Destroying one tree is enough to allow units to walk in and out of the ring of trees.",
-        "Sprout grants 500 range flying vision around the targeted point for its duration.",
+        "Sprout grants 250 range flying vision around the targeted point for its duration.",
         "Cannot be directly cast on ancient creeps and creep-heroes.",
         "Units not controlled by any player do not try to path around the Sprout trees, but simply walk against them as if they are not there. This effectively causes them to get stuck, until they change directions.",
         "This effectively causes them to get stuck, until they change directions.",
-        "With Aghanim's Shard, Sprout trees summon Greater Treants upon getting destroyed. If Nature's Call is not learned, no Greater Treants are spawned. In Ability Draft, Nature's Call must be drafted as well for the Greater Treants to spawn. Only the first 2 trees of Sprout that get destroyed summon the Greater Treants. All remaining trees of that cast do not. It does not matter how the trees are destroyed, expiring Sprout trees summon them as well. If there are Greater Treants alive from a previous cast, they get instantly killed new ones are summoned.",
+        "With Aghanim's Shard, Sprout trees summon Greater Treants upon getting destroyed. If Nature's Call is not learned, no Greater Treants are spawned. In Ability Draft, Nature's Call must be drafted as well for the Greater Treants to spawn. Only the first trees of Sprout that get destroyed summon the Greater Treants. All remaining trees of that cast do not. It does not matter how the trees are destroyed, expiring Sprout trees summon them as well. If there are Greater Treants alive from a previous cast, they get instantly killed new ones are summoned.",
         "If Nature's Call is not learned, no Greater Treants are spawned.",
         "In Ability Draft, Nature's Call must be drafted as well for the Greater Treants to spawn.",
-        "Only the first 2 trees of Sprout that get destroyed summon the Greater Treants. All remaining trees of that cast do not.",
+        "Only the first trees of Sprout that get destroyed summon the Greater Treants. All remaining trees of that cast do not.",
         "It does not matter how the trees are destroyed, expiring Sprout trees summon them as well.",
         "If there are Greater Treants alive from a previous cast, they get instantly killed new ones are summoned."
       ],
       "mana": "70\/90\/110\/130",
       "hotKey": "Q",
-      "cooldown": "11\/10\/9\/8 (TagTalent 8.8\/8\/7.2\/6.4)",
+      "cooldown": "11\/10\/9\/8",
       "description": "Sprouts a ring of trees around a unit, trapping it in place, and providing vision in a 500 radius.",
       "spellName": "Sprout",
       "params": [
@@ -65,6 +64,7 @@
         "Cast Range: 625\/700\/775\/850",
         "Trees Spawn Radius: 150",
         "Duration: 3\/4\/5\/6",
+        "Miss Chance: 75%",
         "Number of Greater Treants: 2",
         "Causes the first two trees destroyed with Sprout to summon Greater Treants. Can only have two Greater Treants alive.",
         "Cannot directly target spell immune enemies, targets ground instead. Can target spell immune allies.",
@@ -85,11 +85,12 @@
         "↓↓ Double-tapping automatically targets the team's fountain.",
         "Unlike the teleports from Town Portal Scroll and Boots of Travel, canceling this one does not consume the cooldown and mana.",
         "During the cast time, a visual effect is created around Nature's Prophet and at the target location. These visual effects are visible to everyone.",
-        "Also plays a sound at the target location, however, this is only audible to enemies when Nature's Prophet is visible to them."
+        "Also plays a sound at the target location, however, this is only audible to enemies when Nature's Prophet is visible to them.",
+        "The level 25 talent removes Teleportation's cooldown completely."
       ],
       "mana": "50",
       "hotKey": "W",
-      "cooldown": "65\/50\/35\/20 (TagTalent 52\/40\/28\/16)",
+      "cooldown": "65\/50\/35\/20 (TagTalent 0)",
       "description": "Teleports to any point on the map.",
       "spellName": "Teleportation",
       "params": [
@@ -119,7 +120,7 @@
       ],
       "mana": "130\/140\/150\/160",
       "hotKey": "E",
-      "cooldown": "37 (TagTalent 29.6)",
+      "cooldown": "37",
       "description": "Converts an area of trees into Treants under the command of Nature's Prophet.",
       "spellName": "Nature's Call",
       "params": [
@@ -145,25 +146,20 @@
         "Bounces in 0.25-second intervals, so hitting all targets takes 4.25 seconds. Each bounce increases the current damage by 10%.",
         "Does not bounce on Couriers, invisible units or units in the Fog of War.",
         "Can never hit the same unit twice per cast.",
-        "This is how much damage each bounce deals on each level (before reductions):",
-        "With the base damage increasing talent, this is how much damage each bounce deals (before reductions):",
-        "All bounces together can collectively deal up to 5243.9\/6839.9\/8435.8 (TagTalent 6611.9\/8207.9\/9803.8) damage (before reductions).",
-        "The caster receives one stack of attack damage for each enemy killed by Wrath of Nature. To gain a stack, enemies have to die to the damage. Killing an enemy with the Wrath of Nature debuff does not grant a stack. Each instance has its own independent duration. The status buff shows the current amount of damage the stack provides. There is no stack limit.",
+        "All bounces together can collectively deal up to 5243.9\/6839.9\/8435.8 (TagTalent 6611.9\/8207.9\/9803.8) damage (before reductions). For how much damage each bounce Wrath of Nature deals on each level, and with the base damage increasing talent (before reductions), please refer to the chart below.",
+        "For how much damage each bounce Wrath of Nature deals on each level, and with the base damage increasing talent (before reductions), please refer to the chart below.",
+        "The caster receives one stack of attack damage for each enemy killed by Wrath of Nature. To gain a stack, enemies have to die to the damage. Killing an enemy with the Wrath of Nature debuff does not grant a stack. Each instance has its own independent duration. The status buff shows the current amount of damage the stack provides. There is no stack limit. For how much attack damage bonus each bounce of Wrath of Nature grants, please refer to the chart below.",
         "To gain a stack, enemies have to die to the damage. Killing an enemy with the Wrath of Nature debuff does not grant a stack.",
         "Each instance has its own independent duration.",
         "The status buff shows the current amount of damage the stack provides. There is no stack limit.",
-        "This is how much attack damage Wrath of Nature can grant with a certain amount of stacks on each level: Level 1: 4 \/ 8 \/ 12 \/ 16 \/ 20 \/ 24 \/ 28 \/ 32 \/ 36 \/ 40 \/ 44 \/ 48 \/ 52 \/ 56 \/ 60 \/ 64 \/ 68 \/ 72 Level 2: 5 \/ 10 \/ 15 \/ 20 \/ 25 \/ 30 \/ 35 \/ 40 \/ 45 \/ 50 \/ 55 \/ 60 \/ 65 \/ 70 \/ 75 \/ 80 \/ 85 \/ 90 Level 3: 6 \/ 12 \/ 18 \/ 24 \/ 30 \/ 36 \/ 42 \/ 48 \/ 54 \/ 60 \/ 66 \/ 72 \/ 78 \/ 84 \/ 90 \/ 96 \/ 102 \/ 108",
-        "Level 1: 4 \/ 8 \/ 12 \/ 16 \/ 20 \/ 24 \/ 28 \/ 32 \/ 36 \/ 40 \/ 44 \/ 48 \/ 52 \/ 56 \/ 60 \/ 64 \/ 68 \/ 72",
-        "Level 2: 5 \/ 10 \/ 15 \/ 20 \/ 25 \/ 30 \/ 35 \/ 40 \/ 45 \/ 50 \/ 55 \/ 60 \/ 65 \/ 70 \/ 75 \/ 80 \/ 85 \/ 90",
-        "Level 3: 6 \/ 12 \/ 18 \/ 24 \/ 30 \/ 36 \/ 42 \/ 48 \/ 54 \/ 60 \/ 66 \/ 72 \/ 78 \/ 84 \/ 90 \/ 96 \/ 102 \/ 108",
-        "",
-        "With Aghanim's Scepter, Wrath of Nature roots and disarms all hit enemies and provides True Sight over them. The duration starts at 2 and increases by 0.106 seconds per bounce. This results in a duration of 2\/2.11\/2.21\/2.32\/2.42\/2.53\/2.64\/2.74\/2.85\/2.95\/3.06\/3.17\/3.27\/3.38\/3.48\/3.59\/3.7\/3.8 seconds from the 1st to the 18th bounce.",
+        "For how much attack damage bonus each bounce of Wrath of Nature grants, please refer to the chart below.",
+        "With Aghanim's Scepter, Wrath of Nature roots and disarms all hit enemies and provides True Sight over them. The duration starts at 2 and increases by 0.106 seconds per bounce. For the root duration increase per bounce from the 1st to the 18th target, please refer to the chart below.",
         "The duration starts at 2 and increases by 0.106 seconds per bounce.",
-        "This results in a duration of 2\/2.11\/2.21\/2.32\/2.42\/2.53\/2.64\/2.74\/2.85\/2.95\/3.06\/3.17\/3.27\/3.38\/3.48\/3.59\/3.7\/3.8 seconds from the 1st to the 18th bounce."
+        "For the root duration increase per bounce from the 1st to the 18th target, please refer to the chart below."
       ],
       "mana": "175\/225\/275",
       "hotKey": "R",
-      "cooldown": "85 (TagTalent 68) (TagTalent 60, 48)",
+      "cooldown": "85 (TagTalent 60)",
       "description": "Damaging energy bounces around the map, striking enemies close to the cast point that are in vision. Each enemy hit beyond the first adds damage. Enemies that die under this spell grant you bonus damage for 50 seconds.",
       "spellName": "Wrath of Nature",
       "params": [
@@ -173,7 +169,7 @@
         "Number of Bounces: 18",
         "Damage Increment per Bounce: 10%",
         "Base Damage: 115\/150\/185 (TagTalent 145\/180\/215)",
-        "Attack Damage Bonus per Kill: 4\/5\/6",
+        "Attack Damage Bonus per Kill: 6",
         "Attack Damage Bonus Duration: 50",
         "Min Root Duration: 2",
         "Max Root Duration: 3.8",
@@ -203,7 +199,7 @@
     },
     {
       "talentLvl": "20",
-      "talentLeft": "20% Cooldown Reduction",
+      "talentLeft": "+75% Sprout Miss Chance",
       "talentRight": "+8 Armor"
     },
     {

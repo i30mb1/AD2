@@ -202,7 +202,7 @@
         "Cast Range: 1200",
         "Tree Collision Radius: 300",
         "Splash Radius: 275",
-        "Splash Damage: 150%",
+        "Splash Damage: 200%",
         "Cannot directly target spell immune enemies. Fully hits spell immune enemies otherwise.",
         "Can be disjointed when directly targeted. When disjointed, the instant attack and splash damage are not applied"
       ],
@@ -267,7 +267,7 @@
       "spellName": "Grow",
       "params": [
         "Attack Damage Bonus: 30\/70\/110",
-        "Attack Speed Loss: 20\/35\/50",
+        "Attack Speed Loss: 20\/30\/40",
         "Armor Bonus: 12\/18\/24"
       ],
       "itemBehaviour": [],

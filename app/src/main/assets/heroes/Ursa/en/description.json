@@ -51,7 +51,7 @@
       ],
       "mana": "85",
       "hotKey": "Q",
-      "cooldown": "11\/10\/9\/8 (TagTalent 10\/9\/8\/7)",
+      "cooldown": "14\/12\/10\/8",
       "description": "Ursa leaps forward 250 units and slams the earth, causing a powerful shock to damage and slow all enemy units in a nearby area for 4 seconds.",
       "spellName": "Earthshock",
       "params": [
@@ -63,7 +63,7 @@
         "Slow Duration: 4",
         "Leap Duration: 0.25",
         "Enrage Duration: 1.5",
-        "Causes Earthshock to apply a 1.5 second Enrage buff on yourself. Reduces cooldown by 1 seconds.",
+        "Causes Earthshock to apply a 1.5 second Enrage buff on yourself.",
         "Slow persists if debuff was placed before spell immunity and when not dispelled.",
         "The leap instantly ends when getting rooted. When cast while already rooted, results in an instant Earthshock at the current location."
       ],
@@ -180,7 +180,7 @@
   ],
   "mainAttributes": {
     "attrStrengthInc": 2.6,
-    "attrStrength": 24.0,
+    "attrStrength": 25.0,
     "attrIntelligence": 16.0,
     "attrIntelligenceInc": 1.5,
     "attrAgilityInc": 2.6,

@@ -92,7 +92,7 @@
         "Cast Animation: 0.3+0",
         "Cast Range: 600\/700\/800\/900",
         "Self Attack Animation Speed Bonus: 50%",
-        "Damage: 25\/50\/75\/100",
+        "Damage: 40\/60\/80\/100",
         "Number of Charges: 2",
         "Charge Replenish Time: 25\/20\/15\/10 (TagTalent 21\/16\/11\/6)"
       ],
@@ -137,9 +137,9 @@
         "Max Channel Time: 2",
         "Radius: 450",
         "Attack Targets: 1 (TagAghanim 2)",
-        "Attack Count: 4",
+        "Attack Count: 4 (TagAghanim 5)",
         "Agility Bonus: 55%\/70%\/85%\/100%",
-        "Instant Attack Damage: 50%",
+        "Instant Attack Damage: 40%",
         "Increases cast range and allows you to target an allied hero, hiding inside them for the duration."
       ],
       "itemBehaviour": [],
@@ -166,14 +166,14 @@
         "This means dispeling it applies the effects as well.",
         "The debuff first applies the slow debuff, then the damage."
       ],
-      "mana": "85",
+      "mana": "75",
       "hotKey": "D",
       "cooldown": "12",
       "description": "Fires a dart at the target enemy, putting them to sleep for 4 seconds or if they take 200 damage. At the end of the duration, the target wakes up and takes 150 damage, and is slowed by 30% for 4 seconds.",
       "spellName": "Sleeping Dart",
       "params": [
         "Cast Animation: 0.2+0.57",
-        "Cast Range: 1200",
+        "Cast Range: 1000",
         "Wake Up Damage Threshold: 200",
         "Damage: 150",
         "Move Speed Slow: 30%",

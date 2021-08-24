@@ -17,7 +17,7 @@
         },
         {
           "talentLvl": "20",
-          "talentLeft": "+30 Bloodlust AS",
+          "talentLeft": "+25 Bloodlust AS",
           "talentRight": "+25 Strength"
         },
         {
@@ -42,10 +42,10 @@
       "notes": [
         "Fireblast first applies the damage, then the debuff.",
         "When Multicast, Fireblast hits the same target several times in 0.6 second intervals.",
-        "This is how much damage a multicast Fireblast deals (before reductions) and how long it stuns on each level: 2x Multicast: 120\/240\/360\/480 (TagTalent 600\/720\/840\/960) damage, 2.1 seconds stun. 3x Multicast: 180\/360\/540\/720 (TagTalent 900\/1080\/1260\/1440) damage, 2.7 seconds stun. 4x Multicast: 240\/480\/720\/960 (TagTalent 1200\/1440\/1680\/1920) damage, 3.3 seconds stun.",
-        "2x Multicast: 120\/240\/360\/480 (TagTalent 600\/720\/840\/960) damage, 2.1 seconds stun.",
-        "3x Multicast: 180\/360\/540\/720 (TagTalent 900\/1080\/1260\/1440) damage, 2.7 seconds stun.",
-        "4x Multicast: 240\/480\/720\/960 (TagTalent 1200\/1440\/1680\/1920) damage, 3.3 seconds stun.",
+        "This is how much damage a multicast Fireblast deals (before reductions) and how long it stuns on each level: 2x Multicast: 140\/260\/380\/500 (TagTalent 620\/740\/860\/980) damage, 2.1 seconds stun. 3x Multicast: 210\/390\/570\/750 (TagTalent 930\/1110\/1290\/1470) damage, 2.7 seconds stun. 4x Multicast: 280\/520\/760\/1000 (TagTalent 1240\/1480\/1720\/1960) damage, 3.3 seconds stun.",
+        "2x Multicast: 140\/260\/380\/500 (TagTalent 620\/740\/860\/980) damage, 2.1 seconds stun.",
+        "3x Multicast: 210\/390\/570\/750 (TagTalent 930\/1110\/1290\/1470) damage, 2.7 seconds stun.",
+        "4x Multicast: 280\/520\/760\/1000 (TagTalent 1240\/1480\/1720\/1960) damage, 3.3 seconds stun.",
         ""
       ],
       "mana": "70\/80\/90\/100",
@@ -57,7 +57,7 @@
         "Cast Animation: 0.45+0.53",
         "Cast Range: 475",
         "Multicast Interval: 0.6",
-        "Damage: 60\/120\/180\/240 (TagTalent 300\/360\/420\/480)",
+        "Damage: 70\/130\/190\/250 (TagTalent 310\/370\/430\/490)",
         "Stun Duration: 1.5",
         "Grants a new ability: Unrefined Fireblast",
         "When blocked, ends Multicast, no matter if the initial cast or a multicast instance was blocked."
@@ -99,7 +99,7 @@
         "4x Multicast: 420\/750\/1160\/1650 (TagTalent 756\/1150\/1624\/2178) damage.",
         ""
       ],
-      "mana": "110",
+      "mana": "80\/90\/100\/110",
       "hotKey": "W",
       "cooldown": "15",
       "description": "Drenches the target and another random unit in volatile chemicals, causing it to burst into flames. The target is in immense pain, taking damage and moving more slowly.",
@@ -148,8 +148,8 @@
         "Cast Range: 600",
         "Multicast Radius: 700",
         "Move Speed Bonus: 7%\/9%\/11%\/13%",
-        "Allies Attack Speed Bonus: 30\/40\/50\/60 (TagTalent 60\/70\/80\/90)",
-        "Self Attack Speed Bonus: 30\/50\/70\/90 (TagTalent 60\/80\/100\/120)",
+        "Allies Attack Speed Bonus: 30\/40\/50\/60 (TagTalent 55\/65\/75\/85)",
+        "Self Attack Speed Bonus: 30\/50\/70\/90 (TagTalent 55\/75\/95\/115)",
         "Duration: 30"
       ],
       "itemBehaviour": [],
@@ -166,7 +166,7 @@
       "notes": [
         "Requires Aghanim's Scepter to be unlocked. This ability is not available in Ability Draft, due to its reliance on multiple non-ultimate abilities, which are limited to one ability slot.",
         "This ability is not available in Ability Draft, due to its reliance on multiple non-ultimate abilities, which are limited to one ability slot.",
-        "Ogre Magi can never be out of mana to cast this ability, since it always costs 30% of his current mana pool, rounded down. The tooltip shows the momentary mana cost and updates whenever the mouse cursor is moved over the ability icon.",
+        "Ogre Magi can never be out of mana to cast this ability, since it always costs 35% of his current mana pool, rounded down. The tooltip shows the momentary mana cost and updates whenever the mouse cursor is moved over the ability icon.",
         "The tooltip shows the momentary mana cost and updates whenever the mouse cursor is moved over the ability icon.",
         "Unrefined Fireblast first applies the damage, then the debuff.",
         "When Multicast, Unrefined Fireblast hits the same target several times in 0.6-second intervals.",
@@ -176,10 +176,10 @@
         "4x Multicast: 1100 damage, 3.3 seconds stun.",
         ""
       ],
-      "mana": "30% of current mana",
+      "mana": "35% of current mana",
       "hotKey": "D",
       "cooldown": "6",
-      "description": "Blasts an enemy unit with a wave of fire, dealing damage and stunning the target. Its mana cost is 30% of the hero's current mana.",
+      "description": "Blasts an enemy unit with a wave of fire, dealing damage and stunning the target. Its mana cost is 35% of the hero's current mana.",
       "spellName": "Unrefined Fireblast",
       "params": [
         "Cast Animation: 0.45+0.53",
@@ -207,9 +207,9 @@
         "Cannot be cast on invulnerable units. However, Multicast can target invulnerable units.",
         "↓↓ Double-tapping automatically targets self.",
         "When Multicast, instantly applies the Fire Shield buff on random allies within the radius.",
-        "The shield only reacts on attacks, meaning the damage reduction only applies to the attack damage dealt from attacks it reacts to. Can only trigger when an enemy unit lands an attack, regardless of distance. This means it cannot trigger on missed attacks. Does not react on attacks from buildings and wards. Fully works against allied attacks.",
+        "The shield only reacts on attacks, meaning the damage reduction only applies to the attack damage dealt from attacks it reacts to. Can only trigger when an enemy unit lands an attack, regardless of distance. This means it cannot trigger on missed attacks. Does not react on attacks from creeps, buildings and wards. Fully works against allied attacks.",
         "Can only trigger when an enemy unit lands an attack, regardless of distance. This means it cannot trigger on missed attacks.",
-        "Does not react on attacks from buildings and wards. Fully works against allied attacks.",
+        "Does not react on attacks from creeps, buildings and wards. Fully works against allied attacks.",
         "The fireballs travel at a speed of 1400.",
         "The damage source of the fireballs is always the caster of Fire Shield, and not the buffed unit.",
         "All fireballs together can deal 375 damage (before reductions).",
@@ -281,7 +281,7 @@
     }
   ],
   "mainAttributes": {
-    "attrStrengthInc": 3.5,
+    "attrStrengthInc": 3.3,
     "attrStrength": 23.0,
     "attrIntelligence": 15.0,
     "attrIntelligenceInc": 2.5,
@@ -298,7 +298,7 @@
     },
     {
       "talentLvl": "20",
-      "talentLeft": "+30 Bloodlust AS",
+      "talentLeft": "+25 Bloodlust AS",
       "talentRight": "+25 Strength"
     },
     {

@@ -1,17 +1,12 @@
 {
   "abilities": [
     {
-      "notes": [
-        "This attack damage talent is added as raw attack damage. Does not benefit illusions and is not affected by most percentage-based damage increasing or reducing effects.",
-        "Does not benefit illusions and is not affected by most percentage-based damage increasing or reducing effects.",
-        "The cooldown reduction talent stacks multiplicatively with other sources cooldown reduction."
-      ],
       "spellName": "Talent",
       "talents": [
         {
           "talentLvl": "25",
-          "talentLeft": "+200 Damage",
-          "talentRight": "20% Cooldown Reduction"
+          "talentLeft": "50% Chance to Proc Anchor Smash on Attacks",
+          "talentRight": "+1s Ravage Stun Duration"
         },
         {
           "talentLvl": "20",
@@ -25,8 +20,8 @@
         },
         {
           "talentLvl": "10",
-          "talentLeft": "+1.75 Mana Regen",
-          "talentRight": "+20 Movement Speed"
+          "talentLeft": "-100 Kraken Shell Damage Threshold",
+          "talentRight": "+10% Gush Move Speed Slow"
         }
       ]
     },
@@ -51,15 +46,15 @@
       ],
       "mana": "100\/105\/110\/115",
       "hotKey": "Q",
-      "cooldown": "12 (TagTalent 9.6) (TagTalent 7, 5.6)",
+      "cooldown": "12 (TagTalent 7)",
       "description": "Summons a gush of water to damage an enemy unit, reducing their movement speed and armor. Lasts 4 seconds.",
       "spellName": "Gush",
       "params": [
         "Cast Animation: 0.3+0.6",
         "Cast Range: 700 (TagAghanim 2200)",
         "Damage: 110\/160\/210\/260 (TagTalent 230\/280\/330\/380)",
-        "Armor Reduction: 4\/5\/6\/7 (TagTalent 8\/9\/10\/11)",
-        "Move Speed Slow: 40%",
+        "Armor Reduction: 3\/4\/5\/6 (TagTalent 7\/8\/9\/10)",
+        "Move Speed Slow: 40% (TagTalent 50%)",
         "Debuff Duration: 4",
         "Wave Travel Distance: 2200",
         "Wave Radius: 260",
@@ -84,7 +79,7 @@
         "The damage block does not work against wards (e.g. Plague Ward, Mass Serpent Ward, Death Ward etc.).",
         "Does not reduce physical damage from abilities, except from Moon Glaives and The Swarm.",
         "Only damage from player owned sources (after reductions) is counted towards the debuff removal.",
-        "Damage counter for the debuff removal resets when Tidehunter does not take player based damage for 6 seconds.",
+        "Damage counter for the debuff removal resets when Tidehunter does not take player based damage for 7 seconds.",
         "When Kraken Shell is procced by an ability that first deals its damage and then applies its debuff (e.g. Storm Hammer), Tidehunter is dispelled before the ability's debuff is applied.",
         "A debuff removal proc is indicated by a sound effect and water particles on Tidehunter's skin."
       ],
@@ -96,8 +91,8 @@
       "params": [
         "Damage Block Proc Chance: 100%",
         "Damage Block: 18\/30\/42\/54 (TagTalent 48\/60\/72\/84)",
-        "Damage Threshold: 600\/550\/500\/450",
-        "Threshold Reset Timer: 6",
+        "Damage Threshold: 600\/550\/500\/450 (TagTalent 500\/450\/400\/350)",
+        "Threshold Reset Timer: 7",
         "Damage Block works for illusions. The dispel effect does not work."
       ],
       "itemBehaviour": [],
@@ -117,20 +112,22 @@
         "Only reduces base damage and that given by the primary attribute of affected units. Raw bonus damage is not reduced.",
         "The smash first applies the debuff, then the instant attack.",
         "Affects ancient creeps, but not Roshan.",
+        "With the level 25 talent, causes 50% of your attacks to proc Anchor Smash. Such a proc will inflict two attacks' worth of damage plus Anchor Smash's bonus damage on the main target.",
         "With Aghanim's Shard, Anchor Smash fully affects buildings as well. Does not affect wards.",
         "Does not affect wards."
       ],
       "mana": "30\/40\/50\/60",
       "hotKey": "E",
-      "cooldown": "7\/6\/5\/4 (TagTalent 5.6\/4.8\/4\/3.2) (TagTalent 6\/5\/4\/3, 4.8\/4\/3.2\/2.4)",
+      "cooldown": "7\/6\/5\/4 (TagTalent 6\/5\/4\/3)",
       "description": "Tidehunter swings his mighty anchor to attack and deal bonus damage to nearby enemies and reduce their attack damage.",
       "spellName": "Anchor Smash",
       "params": [
         "Cast Animation: 0.4+0.3",
         "Radius: 375",
-        "Attack Damage Bonus: 45\/90\/135\/180 (TagTalent 135\/180\/225\/270)",
+        "Attack Damage Bonus: 40\/85\/130\/175 (TagTalent 130\/175\/220\/265)",
         "Attack Damage Reduction: 30%\/40%\/50%\/60% (TagTalent 50%\/60%\/70%\/80%)",
         "Duration: 6",
+        "Proc Chance: 50%",
         "Increases Anchor Smash damage by 90 and causes it to affect buildings. Reduces cooldown by 1 second."
       ],
       "itemBehaviour": [],
@@ -156,7 +153,7 @@
       ],
       "mana": "150\/225\/325",
       "hotKey": "R",
-      "cooldown": "150 (TagTalent 120)",
+      "cooldown": "150",
       "description": "Slams the ground, causing tentacles to erupt in all directions, damaging and stunning all nearby enemy units.",
       "spellName": "Ravage",
       "params": [
@@ -164,7 +161,7 @@
         "Max Effect Radius: 1250",
         "Effect Width: 250",
         "Damage: 200\/300\/400",
-        "Stun Duration: 2.4\/2.6\/2.8",
+        "Stun Duration: 2.4\/2.6\/2.8 (TagTalent 3.4\/3.6\/3.8)",
         "Attempts to damage if already hit enemies turn spell immune before landing."
       ],
       "itemBehaviour": [],
@@ -185,8 +182,8 @@
   "talents": [
     {
       "talentLvl": "25",
-      "talentLeft": "+200 Damage",
-      "talentRight": "20% Cooldown Reduction"
+      "talentLeft": "50% Chance to Proc Anchor Smash on Attacks",
+      "talentRight": "+1s Ravage Stun Duration"
     },
     {
       "talentLvl": "20",
@@ -200,8 +197,8 @@
     },
     {
       "talentLvl": "10",
-      "talentLeft": "+1.75 Mana Regen",
-      "talentRight": "+20 Movement Speed"
+      "talentLeft": "-100 Kraken Shell Damage Threshold",
+      "talentRight": "+10% Gush Move Speed Slow"
     }
   ]
 }

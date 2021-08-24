@@ -1,9 +1,6 @@
 {
   "abilities": [
     {
-      "notes": [
-        "The strength talent effectively grants Legion Commander 140 health, 0.7 health regeneration, and 7 attack damage."
-      ],
       "spellName": "Talent",
       "talents": [
         {
@@ -19,12 +16,12 @@
         {
           "talentLvl": "15",
           "talentLeft": "+75 Overwhelming Odds Hero Damage",
-          "talentRight": "+20 Attack Speed"
+          "talentRight": "+40 Press the Attack Health Regen"
         },
         {
           "talentLvl": "10",
-          "talentLeft": "+1.5 Mana Regen",
-          "talentRight": "+7 Strength"
+          "talentLeft": "+100 Overwhelming Odds Radius",
+          "talentRight": "+200 Duel Cast Range"
         }
       ]
     },
@@ -58,7 +55,7 @@
       "params": [
         "Cast Animation: 0.3+0",
         "Cast Range: 1000",
-        "Radius: 330\/340\/350\/360",
+        "Radius: 330\/340\/350\/360 (TagTalent 430\/440\/450\/460)",
         "Base Damage: 40\/60\/80\/100",
         "Damage per Creep: 14\/16\/18\/20",
         "Damage per Hero: 30\/60\/90\/120 (TagTalent 105\/135\/165\/195)",
@@ -81,7 +78,8 @@
       "notes": [
         "Applies a strong dispel on the target upon cast. ↓↓ Double-tapping automatically targets self.",
         "↓↓ Double-tapping automatically targets self.",
-        "Can regenerate up to 150\/200\/250\/300 health over its full duration.",
+        "Can regenerate up to 150\/200\/250\/300 (TagTalent 350\/400\/450\/500) health over its full duration. The health regeneration increasing talent does not upgrade the current active instance.",
+        "The health regeneration increasing talent does not upgrade the current active instance.",
         "With Aghanim's Shard, Press the Attack also grants spell immunity to the target. Press the Attack first applies the buff, and then the spell immunity buff. The spell immunity granted does not apply a spell immunity dispel on the target. Therefore certain debuffs (e.g. Pounce) only dispelable by spell immunity are not removed.",
         "Press the Attack first applies the buff, and then the spell immunity buff.",
         "The spell immunity granted does not apply a spell immunity dispel on the target. Therefore certain debuffs (e.g. Pounce) only dispelable by spell immunity are not removed.",
@@ -98,7 +96,7 @@
       "params": [
         "Cast Animation: 0.2+0.93",
         "Cast Range: 700",
-        "Health Regen Bonus: 30\/40\/50\/60",
+        "Health Regen Bonus: 30\/40\/50\/60 (TagTalent 70\/80\/90\/100)",
         "Attack Speed Bonus: 65\/90\/115\/140",
         "Duration: 5",
         "Radius: 400",
@@ -164,8 +162,8 @@
         "The dueled target does not gain the bonus damage if they were hidden by Phantasm or Enchant Remnant as the caster died, but the caster does if the target was affected instead.",
         "Killing Meepo grants the bonus damage only when the dueled Meepo dies from taking damage. If another Meepo dies during the duel, no damage is granted.",
         "The victor of a duel gains bonus damage even when the victim had Reincarnation.",
-        "If Legion Commander is victorious, Press the Attack based on its current level is applied on her. Press the Attack notes fully apply. The radius talent does not apply, Aghanim's Shard upgrade fully applies. In Ability Draft, Press the Attack must be drafted as well for it to be applied on the caster upon a victory.",
-        "Press the Attack notes fully apply. The radius talent does not apply, Aghanim's Shard upgrade fully applies.",
+        "If Legion Commander is victorious, Press the Attack based on its current level is applied on her. Press the Attack notes fully apply. The radius talent does not apply, however the spell immunity bonus upgrade fully applies. In Ability Draft, Press the Attack must be drafted as well for it to be applied on the caster upon a victory.",
+        "Press the Attack notes fully apply. The radius talent does not apply, however the spell immunity bonus upgrade fully applies.",
         "In Ability Draft, Press the Attack must be drafted as well for it to be applied on the caster upon a victory.",
         "Can be cast on illusions. While illusions get bonus damage from winning such duels, real heroes do not gain damage for defeating illusions. Hero clones can gain damage individually as well. However, the Tempest Double loses it upon respawning. Meepo clones keep their victory damage permanently.",
         "Hero clones can gain damage individually as well. However, the Tempest Double loses it upon respawning. Meepo clones keep their victory damage permanently.",
@@ -182,7 +180,7 @@
       "spellName": "Duel",
       "params": [
         "Cast Animation: 0.3+0",
-        "Cast Range: 150",
+        "Cast Range: 150 (TagTalent 350)",
         "Winner Attack Damage Bonus: 10\/20\/30 (TagTalent 40\/50\/60)",
         "Duel Duration: 4\/4.75\/5.5 (TagAghanim 6\/7\/8)",
         "Incoming Damage Reduction: 50%",
@@ -217,12 +215,12 @@
     {
       "talentLvl": "15",
       "talentLeft": "+75 Overwhelming Odds Hero Damage",
-      "talentRight": "+20 Attack Speed"
+      "talentRight": "+40 Press the Attack Health Regen"
     },
     {
       "talentLvl": "10",
-      "talentLeft": "+1.5 Mana Regen",
-      "talentRight": "+7 Strength"
+      "talentLeft": "+100 Overwhelming Odds Radius",
+      "talentRight": "+200 Duel Cast Range"
     }
   ]
 }

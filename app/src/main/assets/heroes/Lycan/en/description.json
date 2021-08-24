@@ -2,9 +2,7 @@
   "abilities": [
     {
       "notes": [
-        "This attack damage talent is added as raw attack damage. Does not benefit illusions and is not affected by most percentage-based damage increasing or reducing effects.",
-        "Does not benefit illusions and is not affected by most percentage-based damage increasing or reducing effects.",
-        "The cooldown reduction talent stacks multiplicatively with other sources cooldown reduction."
+        "The bonus wolves attack damage talent is added as raw attack damage, and is not affected by most percentage-based damage increasing or reducing effects."
       ],
       "spellName": "Talent",
       "talents": [
@@ -20,12 +18,12 @@
         },
         {
           "talentLvl": "15",
-          "talentLeft": "12% Cooldown Reduction",
+          "talentLeft": "-20 Shapeshift Cooldown",
           "talentRight": "+200 Summon Wolves Health"
         },
         {
           "talentLvl": "10",
-          "talentLeft": "+20 Damage",
+          "talentLeft": "+20 Summon Wolves Damage",
           "talentRight": "+8 Feral HP Regen"
         }
       ]
@@ -41,16 +39,17 @@
         "The wolves gain Invisibility on level 3 and Cripple on level 4.",
         "Already summoned wolves do not get new abilities when the spell is leveled. Only wolves summoned after leveling get them.",
         "Has a cast backswing of 0.6 during Shapeshift.",
-        "With Aghanim's Shard, 1 Lane Wolf is spawned together with each creep wave in one random lane. The lane for the wolf is selected at complete random each time. If Summon Wolves is not learned, the Lane Wolf does not spawn. Although the Lane Wolf is uncontrollable, Lycan is considered their owner, meaning last hits they make grant bounty and experience to Lycan. This also means they are affected by Feral Impulse and can gain critical strike from Shapeshift, but not the haste speed. The Lane Wolf has Cripple, but not Invisibility.",
+        "With Aghanim's Shard, 1 Lane Wolf is spawned together with each creep wave in one random lane. The lane for the wolf is selected at complete random each time. If Summon Wolves is not learned, the Lane Wolf does not spawn. Although the Lane Wolf is uncontrollable, Lycan is considered their owner, meaning last hits they make grant bounty and experience to Lycan. This also means they are affected by Feral Impulse and can gain critical strike from Shapeshift, but not the haste speed. The Lane Wolf has Cripple, but not Invisibility. Lane Wolves can proc Cripple on buildings.",
         "The lane for the wolf is selected at complete random each time.",
         "If Summon Wolves is not learned, the Lane Wolf does not spawn.",
         "Although the Lane Wolf is uncontrollable, Lycan is considered their owner, meaning last hits they make grant bounty and experience to Lycan.",
         "This also means they are affected by Feral Impulse and can gain critical strike from Shapeshift, but not the haste speed.",
-        "The Lane Wolf has Cripple, but not Invisibility."
+        "The Lane Wolf has Cripple, but not Invisibility. Lane Wolves can proc Cripple on buildings.",
+        "Lane Wolves can proc Cripple on buildings."
       ],
       "mana": "125\/130\/135\/140",
       "hotKey": "Q",
-      "cooldown": "30 (TagTalent 26.4)",
+      "cooldown": "30",
       "description": "Summons two wolves to fight for Lycan. Level 3-4 wolves have Permanent Invisibility, and level 4 wolves have Cripple.",
       "spellName": "Summon Wolves",
       "params": [
@@ -77,15 +76,15 @@
       ],
       "mana": "35\/40\/45\/50",
       "hotKey": "W",
-      "cooldown": "18 (TagTalent 15.84)",
+      "cooldown": "22\/20\/18\/16",
       "description": "Strikes fear into enemies, reducing armor and attack damage to all enemies within 2000 range of Lycan and his wolves.",
       "spellName": "Howl",
       "params": [
         "Cast Animation: 0.3+0",
         "Radius: 2000",
         "Attack Damage Reduction: 25%\/30%\/35%\/40%",
-        "Armor Reduction: 5\/6\/7\/8",
-        "Duration: 5\/6\/7\/8"
+        "Armor Reduction: 4\/5\/6\/7",
+        "Duration: 8"
       ],
       "itemBehaviour": [],
       "legacyKey": "W",
@@ -143,7 +142,7 @@
       ],
       "mana": "150",
       "hotKey": "D",
-      "cooldown": "80 (TagTalent 70.4)",
+      "cooldown": "80",
       "description": "Lycan bites an ally, granting them Shapeshift properties. Lycan and the bitten target gain 30% Lifesteal and share Lifesteal with each other as long as they are within 1200 range of each other.",
       "spellName": "Wolf Bite",
       "params": [
@@ -173,7 +172,7 @@
         "The aura's effects linger for 0.1 seconds.",
         "Does not affect invulnerable units.",
         "The movement speed boost is a haste, meaning affected units cannot be slowed below the set value.",
-        "The critical strike increases the attack damage of Lycan and all his units by an average of 20%\/30%\/40% (TagTalent 36%\/54%\/72%\/). The proc chances of multiple crit sources stack. If two sources of critical strike proc at the same time, the higher multiplier has priority. The critical strike uses pseudo-random distribution.",
+        "The critical strike increases the attack damage of Lycan and all his units by an average of 20%\/30%\/40% (TagTalent 36%\/54%\/72%). The proc chances of multiple crit sources stack. If two sources of critical strike proc at the same time, the higher multiplier has priority. The critical strike uses pseudo-random distribution.",
         "The proc chances of multiple crit sources stack.",
         "If two sources of critical strike proc at the same time, the higher multiplier has priority.",
         "The critical strike uses pseudo-random distribution.",
@@ -183,7 +182,7 @@
       ],
       "mana": "100",
       "hotKey": "R",
-      "cooldown": "125\/110\/95 (TagTalent 110\/96.8\/83.6)",
+      "cooldown": "125\/110\/95 (TagTalent 105\/90\/75)",
       "description": "Lycan assumes his lupine form, granting him and his units critical strikes and added vision at night. During Shapeshift, Lycan and all units under his control move at increased speed, cannot be slowed and have a 40% chance to deal a critical strike doing 150%\/175%\/200% damage.",
       "spellName": "Shapeshift",
       "params": [
@@ -282,12 +281,12 @@
     },
     {
       "talentLvl": "15",
-      "talentLeft": "12% Cooldown Reduction",
+      "talentLeft": "-20 Shapeshift Cooldown",
       "talentRight": "+200 Summon Wolves Health"
     },
     {
       "talentLvl": "10",
-      "talentLeft": "+20 Damage",
+      "talentLeft": "+20 Summon Wolves Damage",
       "talentRight": "+8 Feral HP Regen"
     }
   ]

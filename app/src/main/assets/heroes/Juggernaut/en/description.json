@@ -25,7 +25,7 @@
         },
         {
           "talentLvl": "10",
-          "talentLeft": "+20 Movement Speed",
+          "talentLeft": "+75 Blade Fury Radius",
           "talentRight": "+5 All Stats"
         }
       ]
@@ -47,8 +47,8 @@
         "During Blade Fury, Juggernaut's attacks deal 0 damage, except against wards and buildings. Attack modifiers like Monkey King Bar, Diffusal Blade or Skull Basher still apply their effects and damage on procs. Despite the visual effect, critical strike, lifesteal and cleave have no effect, since they are based on the actual damage dealt.",
         "Attack modifiers like Monkey King Bar, Diffusal Blade or Skull Basher still apply their effects and damage on procs.",
         "Despite the visual effect, critical strike, lifesteal and cleave have no effect, since they are based on the actual damage dealt.",
-        "Deals 17\/22\/27\/32 (TagTalent 49\/54\/59\/64) damage in 0.2-second intervals, starting 0.2 seconds after cast, resulting in 25 damage instances. Can deal up to 425\/550\/675\/800 (TagTalent 1225\/1350\/1475\/1600) damage to a single unit (before reductions).",
-        "Can deal up to 425\/550\/675\/800 (TagTalent 1225\/1350\/1475\/1600) damage to a single unit (before reductions).",
+        "Deals 18\/23\/28\/33 (TagTalent 50\/55\/60\/65) damage in 0.2-second intervals, starting 0.2 seconds after cast, resulting in 25 damage instances. Can deal up to 450\/575\/700\/825 (TagTalent 1250\/1375\/1500\/1625) damage to a single unit (before reductions).",
+        "Can deal up to 450\/575\/700\/825 (TagTalent 1250\/1375\/1500\/1625) damage to a single unit (before reductions).",
         "With Aghanim's Shard, Juggernaut performs instant attacks on random enemies within the area in 1-second intervals, starting 0.2 seconds after cast, resulting in up to 4 attacks. These instant attacks can proc any attack modifiers and on-hit effects normally. They do not have True Strike, but completely ignore disarms. The targets are chosen randomly, there are no priorities. Does not target buildings or wards. Unlike the regular attacks that can be performed during Blade Fury, these instant attacks deal 75% of Juggernaut's attack damage as damage, instead of 0.",
         "These instant attacks can proc any attack modifiers and on-hit effects normally. They do not have True Strike, but completely ignore disarms.",
         "The targets are chosen randomly, there are no priorities. Does not target buildings or wards.",
@@ -61,8 +61,8 @@
       "spellName": "Blade Fury",
       "params": [
         "Cast Animation: 0+0",
-        "Radius: 260",
-        "Damage per Second: 85\/110\/135\/160 (TagTalent 245\/270\/295\/320)",
+        "Radius: 260 (TagTalent 335)",
+        "Damage per Second: 90\/115\/140\/165 (TagTalent 250\/275\/300\/325)",
         "Duration: 5",
         "Move Speed Bonus: 100",
         "Instant Attack Damage: 75%",
@@ -90,7 +90,7 @@
       "mana": "140",
       "hotKey": "W",
       "cooldown": "60 (TagTalent 40)",
-      "description": "Summons a Healing Ward which heals all nearby allied units, based on their max health. The Healing Ward moves at 350 movement speed after being summoned. Lasts 25 seconds.",
+      "description": "Summons a Healing Ward which heals all nearby allied units, based on their max health. The Healing Ward moves at 325 movement speed after being summoned. Lasts 25 seconds.",
       "spellName": "Healing Ward",
       "params": [
         "Cast Animation: 0.3+0.47",
@@ -239,7 +239,7 @@
     },
     {
       "talentLvl": "10",
-      "talentLeft": "+20 Movement Speed",
+      "talentLeft": "+75 Blade Fury Radius",
       "talentRight": "+5 All Stats"
     }
   ]

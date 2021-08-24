@@ -15,7 +15,7 @@
         {
           "talentLvl": "20",
           "talentLeft": "+65 Sleight of Fist Hero Damage",
-          "talentRight": "+8% Spell Amplification"
+          "talentRight": "+1 Searing Chains Target"
         },
         {
           "talentLvl": "15",
@@ -43,9 +43,8 @@
         "Roots the targets, preventing them from moving and casting certain mobility spells. Provides True Sight over the targets, but only when the targets were not invisible or within a fade time upon cast.",
         "Provides True Sight over the targets, but only when the targets were not invisible or within a fade time upon cast.",
         "Does not target invisible units or units inside the Fog of War.",
-        "Deals damage in 0.5-second intervals, starting 0.5 seconds after cast, resulting in 3\/4\/5\/6 (TagTalent 5\/6\/7\/8) damage instances.",
-        "Can deal up to 75\/150\/225\/300 (TagTalent 125\/225\/315\/400) damage to each unit.",
-        "Can deal up to 75\/150\/225\/300 (TagTalent 125\/225\/315\/400) damage to each unit."
+        "Deals damage in 0.5-second intervals, starting 0.5 seconds after cast, resulting in 3\/4\/5\/6 (TagTalent 5\/6\/7\/8) damage instances. Can deal up to 75\/140\/225\/330 (TagTalent 125\/210\/315\/440) damage to each unit.",
+        "Can deal up to 75\/140\/225\/330 (TagTalent 125\/210\/315\/440) damage to each unit."
       ],
       "mana": "80\/90\/100\/110",
       "hotKey": "Q",
@@ -55,8 +54,8 @@
       "params": [
         "Cast Animation: 0+0.5",
         "Search Radius: 400",
-        "Max Targets: 2",
-        "Damage per Second: 50\/75\/90\/100",
+        "Max Targets: 2 (TagTalent 3)",
+        "Damage per Second: 50\/70\/90\/110",
         "Duration: 1.5\/2\/2.5\/3 (TagTalent 2.5\/3\/3.5\/4)",
         "Root effect persists and attempts to damage if debuff was placed before spell immunity and when not dispelled."
       ],
@@ -87,8 +86,7 @@
         "The instant attacks of Sleight of Fist do not break Smoke of Deceit's invisibility.",
         "After all marked targets have been slashed, Ember Spirit returns to the position he had upon casting Sleight of Fist. That position is marked by a fiery replica of Ember Spirit for the duration.",
         "That position is marked by a fiery replica of Ember Spirit for the duration.",
-        "Casting Activate Fire Remnant cancels Sleight of Fist. However, other sources of Forced Movement do not.",
-        "With the level 25 talent, the cooldown is replaced with 2 charges that have a 18\/14\/10\/6-second charge replenish time."
+        "Casting Activate Fire Remnant cancels Sleight of Fist. However, other sources of Forced Movement do not."
       ],
       "mana": "50",
       "hotKey": "W",
@@ -136,7 +134,7 @@
         "Cast Animation: 0+0.6",
         "Damage Radius: 400",
         "Damage per Second: 25\/35\/45\/55 (TagTalent 75\/85\/95\/105)",
-        "Magical Damage Absorbed: 80\/220\/360\/500 (TagTalent 360\/500\/640\/780)",
+        "Magical Damage Absorbed: 110\/240\/370\/500 (TagTalent 390\/520\/650\/780)",
         "Duration: 11\/14\/17\/20"
       ],
       "itemBehaviour": [],
@@ -191,7 +189,7 @@
         "Leveling this ability automatically levels Activate Fire Remnant as well.",
         "Ember Spirit gets all 3 charges immediately upon learning Fire Remnant. Acquiring Aghanim's Scepter the first time instantly grants 2 charges as well. This only happens once, so re-acquiring it does not grant them again.",
         "Acquiring Aghanim's Scepter the first time instantly grants 2 charges as well. This only happens once, so re-acquiring it does not grant them again.",
-        "Fire Remnants move to their targeted location at a speed of 250% (500%) of Ember Spirit's movement speed. The movement speed is set upon cast and does not adapt.",
+        "Fire Remnants move to their targeted location at a speed of 250% (TagTalent 500%) of Ember Spirit's movement speed. The movement speed is set upon cast and does not adapt.",
         "The movement speed is set upon cast and does not adapt.",
         "Since Fire Remnants last for 45 seconds and the replenish time is 38 (TagTalent 26) seconds, it is possible to have 4 (TagTalent 4) (TagTalent 6, 6) remnants up at a time.",
         "Every time a Fire Remnant is placed, Ember Spirit gets a status buff, showing the duration of the remnant. The status buff disappears once the Remnant expires or is used.",
@@ -214,7 +212,7 @@
       "spellName": "Fire Remnant",
       "params": [
         "Cast Animation: 0+0.53",
-        "Cast Range: 1400 (TagAghanim 3500)",
+        "Cast Range: 1400 (TagAghanim 3000)",
         "Remnant Travel Speed: 250% (TagAghanim 500%)",
         "Remnant Duration: 45",
         "Number of Charges: 3 (TagAghanim 5)",
@@ -250,7 +248,7 @@
     {
       "talentLvl": "20",
       "talentLeft": "+65 Sleight of Fist Hero Damage",
-      "talentRight": "+8% Spell Amplification"
+      "talentRight": "+1 Searing Chains Target"
     },
     {
       "talentLvl": "15",

@@ -2,8 +2,6 @@
   "abilities": [
     {
       "notes": [
-        "The armor talent does not benefit illusions.",
-        "The lifesteal talent stacks additively with other sources of lifesteal.",
         "The health talent increases maximum health capacity, and keeps the current health percentage."
       ],
       "spellName": "Talent",
@@ -21,11 +19,11 @@
         {
           "talentLvl": "15",
           "talentLeft": "+85 Blood Rite Damage",
-          "talentRight": "15% Lifesteal"
+          "talentRight": "+10% Rupture Initial Damage"
         },
         {
           "talentLvl": "10",
-          "talentLeft": "+7 Armor",
+          "talentLeft": "+10% Bloodrage Spell Amplification",
           "talentRight": "+30 Bloodrage Attack Speed"
         }
       ]
@@ -66,7 +64,7 @@
         "Max Health as Cost per Second: 2%",
         "Self Attack Speed Bonus: 60\/90\/120\/150 (TagTalent 90\/120\/150\/180)",
         "Allied Attack Speed Bonus: 30\/45\/60\/75 (TagTalent 45\/60\/75\/90)",
-        "Outgoing Spell Damage Amplification: 15%\/20%\/25%\/30%",
+        "Outgoing Spell Damage Amplification: 15%\/20%\/25%\/30% (TagTalent 25%\/30%\/35%\/40%)",
         "Duration: 8",
         "Enemy Max Health as Damage\/Lifesteal: 2%",
         "Bloodrage attacks now deal 2% of the target's max health as pure damage and heals Bloodseeker for that amount. Only works for Bloodseeker."
@@ -86,8 +84,9 @@
         "The affected area is visible to enemies.",
         "Applies a silence within the targeted area after the 2.6-second delay.",
         "Blood Rite first applies the damage, then the debuff.",
-        "With level 4 Bloodrage on Bloodseeker, Blood Rite deals 156\/208\/260\/312 (TagTalent 266.5\/318.5\/370.5\/422.5) damage (before reductions). The damage upgrading talent immediately upgrades all of Bloodseeker's currently active Blood Rite casts when chosen during the delay.",
+        "With level 4 Bloodrage on Bloodseeker, Blood Rite deals 156\/208\/260\/312 (TagTalent 266.5\/318.5\/370.5\/422.5) damage (before reductions). The damage upgrading talent immediately upgrades all of Bloodseeker's currently active Blood Rite casts when chosen during the delay. With the spell damage amplification increasing talent it deals 168\/224\/280\/336 (TagTalent 287\/343\/399\/455) damage.",
         "The damage upgrading talent immediately upgrades all of Bloodseeker's currently active Blood Rite casts when chosen during the delay.",
+        "With the spell damage amplification increasing talent it deals 168\/224\/280\/336 (TagTalent 287\/343\/399\/455) damage.",
         "Grants 600 radius ground vision at the center of the affected area for 6 seconds after cast."
       ],
       "mana": "90\/100\/110\/120",
@@ -116,16 +115,16 @@
       ],
       "notes": [
         "Learning Thirst unlocks maximum movement speed and removes the 550 movement speed cap for Bloodseeker.",
-        "When an enemy hero drops below 25% health, Thirst provides True Sight over the target and makes both their hero model and minimap icon visible through the Fog of War. When enemies are revealed by Thirst, a debuff and particle effects are placed on them, which is visible to everyone. Bloodseeker himself also gets a status buff and particle effects and speaks certain lines, making it clear that an enemy is currently being revealed by Thirst.",
+        "When an enemy hero drops below 25% health, Thirst exposes the target and provides True Sight over them. When enemies are revealed by Thirst, a debuff and particle effects are placed on them, which is visible to everyone. Bloodseeker himself also gets a status buff and particle effects and speaks certain lines, making it clear that an enemy is currently being revealed by Thirst.",
         "When enemies are revealed by Thirst, a debuff and particle effects are placed on them, which is visible to everyone.",
         "Bloodseeker himself also gets a status buff and particle effects and speaks certain lines, making it clear that an enemy is currently being revealed by Thirst.",
         "Thirst is not triggered by enemy illusions, but is triggered by hero clones. It is not triggered by hidden enemy heroes, but does react on invulnerable ones.",
         "It is not triggered by hidden enemy heroes, but does react on invulnerable ones.",
-        "The first stack is applied when an enemy hero is below 75% health and the last when below 26%.",
-        "Grants 0.28%\/0.48%\/0.68%\/0.88% (TagTalent 0.56%\/0.76%\/0.96%\/1.16%) movement speed for each percent of missing health between 75% and 25%. However, since the HUD does not show decimals, movement speed increases by 1% for every missing 3.57%\/2.08%\/1.47%\/1.14% (TagTalent 1.79%\/1.32%\/1.04%\/0.86%) health.",
-        "However, since the HUD does not show decimals, movement speed increases by 1% for every missing 3.57%\/2.08%\/1.47%\/1.14% (TagTalent 1.79%\/1.32%\/1.04%\/0.86%) health.",
-        "The bonuses linger for 4 seconds if the enemy dies. However, it does not linger, and disappears immediately if the enemy has Reincarnation. The bonuses are always the maximum values, despite the health percentage the enemy had right before the killing blow.",
-        "The bonuses are always the maximum values, despite the health percentage the enemy had right before the killing blow.",
+        "The first stack is applied when an enemy hero is below 80% health and the last when below 26%.",
+        "Grants 0.25%\/0.44%\/0.62%\/0.8% (TagTalent 0.51%\/0.69%\/0.87%\/1.05%) movement speed for each percent of missing health between 80% and 25%. However, since the HUD does not show decimals, movement speed increases by 1% for every missing 3.93%\/2.29%\/1.62%\/1.25% (TagTalent 1.96%\/1.45%\/1.15%\/0.95%) health.",
+        "However, since the HUD does not show decimals, movement speed increases by 1% for every missing 3.93%\/2.29%\/1.62%\/1.25% (TagTalent 1.96%\/1.45%\/1.15%\/0.95%) health.",
+        "The bonuses linger for 4 seconds if the enemy dies. However, it does not linger, and disappears immediately if the enemy has Reincarnation. The bonuses are always the maximum values, regardless of the health percentage the enemy had right before the killing blow.",
+        "The bonuses are always the maximum values, regardless of the health percentage the enemy had right before the killing blow.",
         "This is how much movement speed Bloodseeker gains from Thirst with a certain amount of heroes being below 25% of their maximum health: 2 Heroes: 28%\/48%\/68%\/88% (TagTalent 56%\/76%\/96%\/116%) movement speed. 3 Heroes: 42%\/72%\/102%\/132% (TagTalent 84%\/114%\/144%\/174%) movement speed. 4 Heroes: 56%\/96%\/136%\/176% (TagTalent 112%\/152%\/192%\/232%) movement speed. 5 Heroes: 70%\/120%\/170%\/220% (TagTalent 140%\/190%\/240%\/290%) movement speed.",
         "2 Heroes: 28%\/48%\/68%\/88% (TagTalent 56%\/76%\/96%\/116%) movement speed.",
         "3 Heroes: 42%\/72%\/102%\/132% (TagTalent 84%\/114%\/144%\/174%) movement speed.",
@@ -133,19 +132,19 @@
         "5 Heroes: 70%\/120%\/170%\/220% (TagTalent 140%\/190%\/240%\/290%) movement speed.",
         "",
         "The heal is based on the dying unit's maximum health, and not on Bloodseeker's health.",
-        "Heals from any non-hero unit killed, and from heroes killed. Always trigger the heal from heroes that die within 300 radius of Bloodseeker, no matter how they die.",
-        "Always trigger the heal from heroes that die within 300 radius of Bloodseeker, no matter how they die.",
-        "Does not heal upon killing illusions, Tempest Doubles, Roshan, wards, buildings, or allied units."
+        "Heals from any unit killed by Bloodseeker, and from any hero that dies within 300 radius of Bloodseeker, including allied heroes. Does not heal upon killing illusions, Tempest Doubles, Roshan, wards, or buildings. Denying allied non-hero units heals for 5.5%\/7%\/8.5%\/10% of their max health. Denying allied heroes still heal for the full value.",
+        "Does not heal upon killing illusions, Tempest Doubles, Roshan, wards, or buildings.",
+        "Denying allied non-hero units heals for 5.5%\/7%\/8.5%\/10% of their max health. Denying allied heroes still heal for the full value."
       ],
       "mana": null,
       "hotKey": "E",
       "cooldown": null,
-      "description": "Bloodseeker is invigorated by the wounds of his enemies, restoring some life when he kills an enemy unit. Also gains bonus movement speed when an enemy hero's health falls below 75%, with the bonuses increasing as their health falls further. If an enemy hero's health falls below 25%, he will also gain vision and True Sight of that hero. Bonuses stack per hero. Unlocks max movement speed for Bloodseeker.",
+      "description": "Bloodseeker is invigorated by the wounds of his enemies, restoring some life when he kills a unit. Restores for half values when denying, or if an ally kills a nearby enemy hero. Also gains bonus movement speed when an enemy hero's health falls below 80%, with the bonuses increasing as their health falls further. If an enemy hero's health falls below 25%, he will also gain vision and True Sight of that hero. Bonuses stack per hero. Unlocks max movement speed for Bloodseeker.",
       "spellName": "Thirst",
       "params": [
         "Detection Radius: Global",
         "Enemy Hero Death Heal Radius: 300",
-        "Thirst Health Threshold: 75%",
+        "Thirst Health Threshold: 80%",
         "Visibility Health Threshold: 25%",
         "Max Move Speed Bonus per Hero: 14%\/24%\/34%\/44% (TagTalent 28%\/38%\/48%\/58%)",
         "Hero Max Health as Heal: 10%\/15%\/20%\/25%",
@@ -179,12 +178,14 @@
         "1200 Distance: 396\/528\/660 damage.",
         "1500 Distance: 495\/660\/825 damage.",
         "",
-        "With level 4 Bloodrage on Bloodseeker, Rupture deals 13% current health as damage to the target and Rupture can deal up to the following damage when the affected unit travels certain distances: 300 Distance: 128.7\/171.6\/214.5 damage. 600 Distance: 257.4\/343.2\/429 damage. 900 Distance: 386.1\/514.8\/643.5 damage. 1200 Distance: 514.8\/686.4\/858 damage. 1500 Distance: 643.5\/858\/1072.5 damage.",
-        "300 Distance: 128.7\/171.6\/214.5 damage.",
-        "600 Distance: 257.4\/343.2\/429 damage.",
-        "900 Distance: 386.1\/514.8\/643.5 damage.",
-        "1200 Distance: 514.8\/686.4\/858 damage.",
-        "1500 Distance: 643.5\/858\/1072.5 damage.",
+        "With level 4 Bloodrage on Bloodseeker, Rupture deals 13% (TagTalent 26%) current health as damage to the target. With the spell damage amplification increasing talent it deals 14% (TagTalent 28%) current health as damage. This is how much damage it deals for certain distances traveled with level 4 Bloodrage (and with the spell damage amplification increasing talent). 300 Distance: 128.7\/171.6\/214.5 (TagTalent 138.6\/184.8\/231) damage. 600 Distance: 257.4\/343.2\/429 (TagTalent 277.2\/369.6\/462) damage. 900 Distance: 386.1\/514.8\/643.5 (TagTalent 415.8\/554.4\/693) damage. 1200 Distance: 514.8\/686.4\/858 (TagTalent 554.4\/739.2\/924) damage. 1500 Distance: 643.5\/858\/1072.5 (TagTalent 693\/924\/1155) damage.",
+        "With the spell damage amplification increasing talent it deals 14% (TagTalent 28%) current health as damage.",
+        "This is how much damage it deals for certain distances traveled with level 4 Bloodrage (and with the spell damage amplification increasing talent). 300 Distance: 128.7\/171.6\/214.5 (TagTalent 138.6\/184.8\/231) damage. 600 Distance: 257.4\/343.2\/429 (TagTalent 277.2\/369.6\/462) damage. 900 Distance: 386.1\/514.8\/643.5 (TagTalent 415.8\/554.4\/693) damage. 1200 Distance: 514.8\/686.4\/858 (TagTalent 554.4\/739.2\/924) damage. 1500 Distance: 643.5\/858\/1072.5 (TagTalent 693\/924\/1155) damage.",
+        "300 Distance: 128.7\/171.6\/214.5 (TagTalent 138.6\/184.8\/231) damage.",
+        "600 Distance: 257.4\/343.2\/429 (TagTalent 277.2\/369.6\/462) damage.",
+        "900 Distance: 386.1\/514.8\/643.5 (TagTalent 415.8\/554.4\/693) damage.",
+        "1200 Distance: 514.8\/686.4\/858 (TagTalent 554.4\/739.2\/924) damage.",
+        "1500 Distance: 643.5\/858\/1072.5 (TagTalent 693\/924\/1155) damage.",
         "",
         "Multiple casts on the same target do not stack, but refresh the duration instead.",
         "Despite the sounds, affected units take no damage when moving upwards (with e.g. Torrent or Impale).",
@@ -199,7 +200,7 @@
       "params": [
         "Cast Animation: 0.4+0.53",
         "Cast Range: 800 (TagTalent 1275)",
-        "Initial Current Health as Damage: 10%",
+        "Initial Current Health as Damage: 10% (TagTalent 20%)",
         "Moved Distance as Damage: 33%\/44%\/55%",
         "Duration: 10\/11\/12",
         "Number of Charges: 2",
@@ -235,11 +236,11 @@
     {
       "talentLvl": "15",
       "talentLeft": "+85 Blood Rite Damage",
-      "talentRight": "15% Lifesteal"
+      "talentRight": "+10% Rupture Initial Damage"
     },
     {
       "talentLvl": "10",
-      "talentLeft": "+7 Armor",
+      "talentLeft": "+10% Bloodrage Spell Amplification",
       "talentRight": "+30 Bloodrage Attack Speed"
     }
   ]

@@ -100,7 +100,7 @@
         "All illusions gathered with Doppelganger get their duration increased. The illusions created with this cast are not affected by this. The duration extension happens upon cast, so they effectively gain 1 second extra duration, since it takes 1 second for the illusions and Phantom Lancer to reappear.",
         "The duration extension happens upon cast, so they effectively gain 1 second extra duration, since it takes 1 second for the illusions and Phantom Lancer to reappear.",
         "The normal damage taking and no damage dealing illusion is brighter and can be distinguished by Phantom Lancer and his allies from other illusions.",
-        "The 20% damage taking and 600% damage dealing illusion looks like any other illusion Phantom Lancer can create.",
+        "The 600% damage taking and 20% damage dealing illusion looks like any other illusion Phantom Lancer can create.",
         "Unlike illusions created by Phantom Lancer's other abilities, Doppelganger illusions use the default bounty values which scale with levels.",
         "Doppelganger cannot be interrupted by anything except death. This means when getting teleported (with e.g. Glimpse), Phantom Lancer still appears at the targeted area."
       ],
@@ -193,21 +193,21 @@
       ],
       "mana": "75",
       "hotKey": "R",
-      "cooldown": "60",
+      "cooldown": "40",
       "description": "Phantom Lancer has a chance to fracture his presence, creating an illusion of himself. Illusions also have a chance to fracture further. Illusions created from Phantom Lancer last for 8 seconds, while illusions created from other illusions last 4 seconds.",
       "spellName": "Juxtapose",
       "params": [
         "Cast Animation: 0+0.54",
         "Hero Proc Chance: 40%\/45%\/50%",
         "Illusion Proc Chance: 8%",
-        "Max Illusions: 6\/8\/10",
+        "Max Illusions: 6\/8\/10 (TagAghanim 8\/10\/12)",
         "Illusion Damage Dealt: 22% (TagTalent 27%)",
         "Illusion Damage Taken: 650%",
         "Illusion Duration (TagTalentfrom Hero): 8",
         "Illusion Duration (TagTalentfrom Illusion): 4",
         "Active Spawn Radius: 550",
         "Active Illusion Duration: 18",
-        "Adds Juxtapose active ability. Destroys Phantom Lancer's other Juxtapose illusions and quickly creates the max illusion it allows with a bonus 10 seconds of duration."
+        "Adds Juxtapose active ability. Destroys Phantom Lancer's other Juxtapose illusions and quickly creates the max illusion it allows with a bonus 10 seconds of duration. Also increases max number of Juxtapose illusions by 2."
       ],
       "itemBehaviour": [],
       "legacyKey": "X",

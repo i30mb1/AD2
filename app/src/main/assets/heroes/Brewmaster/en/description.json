@@ -105,9 +105,9 @@
       ],
       "notes": [
         "Interrupts Brewmaster's channeling abilities on cast.",
-        "Passively increases attack damage by an average of 10.8%\/14.4%\/18%\/21.6% (TagTalent 30%\/33.6%\/37.2%\/40.8%) and survivability versus attacks by 11%\/18%\/25%\/33%.",
-        "While active, has a 30%\/45%\/60%\/75% chance to evade attacks, and a 72% chance to deal critical damage. Increases attack damage by an average of 32.4%\/43.2%\/54%\/64.8% (TagTalent 90%\/100.8%\/111.6%\/122.4%) and survivability versus attacks by 43%\/82%\/150%\/300% while active.",
-        "Increases attack damage by an average of 32.4%\/43.2%\/54%\/64.8% (TagTalent 90%\/100.8%\/111.6%\/122.4%) and survivability versus attacks by 43%\/82%\/150%\/300% while active.",
+        "Passively increases attack damage by an average of 10.8%\/14.4%\/18%\/21.6% (TagTalent 30%\/33.6%\/37.2%\/40.8%) and survivability versus attacks by 18%\/25%\/33%\/43%.",
+        "While active, has a 45%\/60%\/75%\/90% chance to evade attacks, and a 72% chance to deal critical damage. Increases attack damage by an average of 32.4%\/43.2%\/54%\/64.8% (TagTalent 90%\/100.8%\/111.6%\/122.4%) and survivability versus attacks by 82%\/150%\/300%\/900% while active.",
+        "Increases attack damage by an average of 32.4%\/43.2%\/54%\/64.8% (TagTalent 90%\/100.8%\/111.6%\/122.4%) and survivability versus attacks by 82%\/150%\/300%\/900% while active.",
         "The proc chances of multiple crit sources stack. If two sources of critical strike proc at the same time, the higher multiplier has priority. The sound effects and particles of the critical strike play upon finishing the attack.",
         "If two sources of critical strike proc at the same time, the higher multiplier has priority.",
         "The sound effects and particles of the critical strike play upon finishing the attack.",
@@ -124,7 +124,7 @@
       "spellName": "Drunken Brawler",
       "params": [
         "Cast Animation: 0+0",
-        "Passive Evasion: 10%\/15%\/20%\/25%",
+        "Passive Evasion: 15%\/20%\/25%\/30%",
         "Passive Critical Chance: 24%",
         "Passive Critical Damage: 145%\/160%\/175%\/190% (TagTalent 225%\/240%\/255%\/270%)",
         "Active Evasion & Crit Chance Multiplier: 3",
@@ -160,10 +160,11 @@
         "Storm is always spawned 100 range to the left of Brewmaster's cast location.",
         "Fire is always spawned 100 range to the right of Brewmaster's cast location.",
         "Void is always spawned 100 range behind Brewmaster's cast location.",
-        "The brewlings are creep-heroes and ancient creeps, making them interact differently with several spells. For detailed interactions follow the two links.",
+        "The brewlings are creep-heroes and ancient creeps, making them interact differently with several abilities. For detailed interactions follow the two links.",
+        "With Aghanim's Shard, all attack modifiers Brewmaster gains from items (including neutral items) can be triggered by Void as well.",
         "With Aghanim's Scepter, the brewlings gain the Primal Split Cancel sub-ability. Casting the ability immediately ends Primal Split. Brewmaster re-appears at the location of the brewling which used the sub-ability.",
         "Casting the ability immediately ends Primal Split. Brewmaster re-appears at the location of the brewling which used the sub-ability.",
-        "The level 25 talent grants the drunken brawler modifier to all brewlings, which grants them the passive evasion and critical strike based on its current level. Since the ability itself is not granted, they cannot use the active component to enhance the values.",
+        "The level 25 talent grants the Drunken Brawler modifier to all brewlings, which grants them the passive evasion and critical strike based on its current level. Since the ability itself is not granted, they cannot use the active component to enhance the values.",
         "Since the ability itself is not granted, they cannot use the active component to enhance the values."
       ],
       "mana": "125\/150\/175",
@@ -178,7 +179,7 @@
         "Number of Charges: 2",
         "Charge Replenish Time: 140\/130\/120",
         "Primal Split has 2 charges and can be canceled at any time. Charge replenish time is equal to the normal cooldown.",
-        "Primal Split now creates a Void brewling. Has Astral Pulse ability, affecting enemies in a 500 AoE. Applies 20%\/30%\/40% slow and disarm for 2.5 seconds."
+        "Primal Split now creates a Void brewling. Has Astral Pulse ability, affecting enemies in 500 AoE. Applies a 20%\/30%\/40% slow and Disarm for 2.5 seconds. Void Brewling inherits Brewmaster's Attack Modifiers"
       ],
       "itemBehaviour": [],
       "legacyKey": "R",

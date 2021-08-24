@@ -3,7 +3,6 @@
     {
       "notes": [
         "The health talent increases maximum health capacity, and keeps the current health percentage.",
-        "The cooldown reduction talent stacks multiplicatively with other sources cooldown reduction.",
         "The strength talent effectively grants Timbersaw 320 health, 1.6 health regeneration, and 16 attack damage."
       ],
       "spellName": "Talent",
@@ -15,7 +14,7 @@
         },
         {
           "talentLvl": "20",
-          "talentLeft": "12% Cooldown Reduction",
+          "talentLeft": "+3% Chakram Slow",
           "talentRight": "+16 Strength"
         },
         {
@@ -51,16 +50,16 @@
       ],
       "mana": "80",
       "hotKey": "Q",
-      "cooldown": "6 (TagTalent 5.28)",
+      "cooldown": "6",
       "description": "Timbersaw whirls extremely sharp edges, damaging enemies and destroying trees around him in an area. If an enemy hero is affected, it loses some of its primary attribute for a short duration. Whirling Death will deal bonus damage per tree destroyed.",
       "spellName": "Whirling Death",
       "params": [
         "Cast Animation: 0+0",
         "Radius: 325",
-        "Base Damage: 80\/120\/160\/200",
-        "Bonus Damage per Cut Tree: 12\/18\/24\/30",
+        "Base Damage: 60\/100\/140\/180",
+        "Bonus Damage per Cut Tree: 8\/16\/24\/32",
         "Primary Attribute Reduction: 13%\/14%\/15%\/16% (TagTalent 23%\/24%\/25%\/26%)",
-        "Attribute Reduction Duration: 12\/13\/14\/15",
+        "Attribute Reduction Duration: 13\/14\/15\/16",
         "Attribute reduction persists if debuff was placed before spell immunity and when not dispelled."
       ],
       "itemBehaviour": [],
@@ -87,7 +86,7 @@
       ],
       "mana": "60\/70\/80\/90",
       "hotKey": "W",
-      "cooldown": "4 (TagTalent 3.52)",
+      "cooldown": "4",
       "description": "Timbersaw fires a chain that embeds itself in the first tree it hits, pulling him towards it. Any enemy in the path takes damage.",
       "spellName": "Timber Chain",
       "params": [
@@ -96,7 +95,7 @@
         "Max Travel Distance: 800\/950\/1100\/1250 (TagTalent 1925\/2075\/2225\/2375)",
         "Tree Search Radius: 50",
         "Damage Radius: 225",
-        "Damage: 100\/140\/180\/220",
+        "Damage: 70\/120\/170\/220",
         "Getting rooted after cast does not stop the chain from latching and pulling Timbersaw."
       ],
       "itemBehaviour": [],
@@ -168,7 +167,7 @@
       ],
       "mana": "80\/140\/200",
       "hotKey": "D",
-      "cooldown": "8 (TagTalent 7.04)",
+      "cooldown": "8",
       "description": "Fires a secondary saw blade at the target location where it will spin in place, dealing damage in an area around it. Additionally, for each 5% of health missing, enemies caught in the saw blade move more slowly. The blade deals damage and cuts down trees in its path when fired and retracted. While active the ability costs mana, and you lose the ability to attack.",
       "spellName": "Second Chakram",
       "params": [
@@ -177,7 +176,7 @@
         "Effect Radius: 200",
         "Pass Damage: 100\/140\/180",
         "Damage per Second: 70\/95\/120",
-        "Move Speed Slow per 5% Max Health Missing: 5%",
+        "Move Speed Slow per 5% Max Health Missing: 5% (TagTalent 8%)",
         "Mana Cost per Second: 16\/23\/30",
         "Aura Linger Duration: 0.5",
         "Passing Slow Duration: 0.5",
@@ -229,7 +228,7 @@
       ],
       "mana": "100",
       "hotKey": "F",
-      "cooldown": "18 (TagTalent 15.84)",
+      "cooldown": "18 (TagTalent 17.46)",
       "description": "Releases a 275 width flame that extends 400 range in the direction Timbersaw is facing. Applies a debuff that deals 90 damage per second and slows by 30%. Affects buildings for 40% damage. Lasts 7 seconds. Debuff lingers for 2 seconds.",
       "spellName": "Flamethrower",
       "params": [
@@ -278,7 +277,7 @@
       ],
       "mana": "80\/140\/200",
       "hotKey": "R",
-      "cooldown": "8 (TagTalent 7.04)",
+      "cooldown": "8",
       "description": "Fires your main saw blade at the target location where it will spin in place, dealing damage in an area around it. Enemies caught in the saw blade will move more slowly for every 5% of health missing. The blade deals damage and cuts down trees in its path when fired and retracted. While active the ability costs mana, and you lose the ability to attack.",
       "spellName": "Chakram",
       "params": [
@@ -287,7 +286,7 @@
         "Effect Radius: 200",
         "Pass Damage: 100\/140\/180",
         "Damage per Second: 50\/75\/100 (TagAghanim 70\/95\/120)",
-        "Move Speed Slow per 5% Max Health Missing: 5%",
+        "Move Speed Slow per 5% Max Health Missing: 5% (TagTalent 8%)",
         "Mana Cost per Second: 16\/23\/30",
         "Aura Linger Duration: 0.5",
         "Passing Slow Duration: 0.5",
@@ -339,7 +338,7 @@
     },
     {
       "talentLvl": "20",
-      "talentLeft": "12% Cooldown Reduction",
+      "talentLeft": "+3% Chakram Slow",
       "talentRight": "+16 Strength"
     },
     {

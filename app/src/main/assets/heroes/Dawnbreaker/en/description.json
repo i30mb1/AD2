@@ -1,32 +1,27 @@
 {
   "abilities": [
     {
-      "notes": [
-        "The strength talent effectively grants Dawnbreaker 140 health, 0.7 health regeneration, and 7 attack damage.",
-        "This attack damage talent is added as raw attack damage. Does not benefit illusions and is not affected by most percentage-based damage increasing or reducing effects.",
-        "Does not benefit illusions and is not affected by most percentage-based damage increasing or reducing effects."
-      ],
       "spellName": "Talent",
       "talents": [
         {
           "talentLvl": "25",
           "talentLeft": "+1100 Celestial Hammer Cast Range",
-          "talentRight": "+200 Solar Guardian Radius"
+          "talentRight": "2 Starbreaker Charges"
         },
         {
           "talentLvl": "20",
-          "talentLeft": "+40% Luminosity Crit",
-          "talentRight": "2 Starbreaker charges"
+          "talentLeft": "-1 Luminosity Attacks Required",
+          "talentRight": "+150 Solar Guardian Radius"
         },
         {
           "talentLvl": "15",
           "talentLeft": "-20s Solar Guardian Cooldown",
-          "talentRight": "+20 Damage"
+          "talentRight": "+40% Luminosity Crit"
         },
         {
           "talentLvl": "10",
-          "talentLeft": "+20 Movement Speed",
-          "talentRight": "+7 Strength"
+          "talentLeft": "+15% Celestial Hammer Slow",
+          "talentRight": "+30 Starbreaker Swipe Damage"
         }
       ]
     },
@@ -41,9 +36,9 @@
         "Starbreaker cannot be cast while the hammer is out due to Celestial Hammer. Solar Guardian cannot be cast while Starbreaker is active.",
         "Solar Guardian cannot be cast while Starbreaker is active.",
         "↓↓ Double-tapping automatically casts it towards the current facing direction.",
-        "During Starbreaker, Dawnbreaker gets moved towards the targeted direction at a speed of 215. The movement is not interrupted by other sources of non-disabling forced movement. Starbreaker's movement resumes as soon as the other source finishes. Cannot move Dawnbreaker over cliffs. Upon reaching unpathable terrain, the movement stops and the ability continues stationary. Can move Dawnbreaker a total distance of 236.5 over 1.1 duration. Trees in the way are destroyed.",
+        "During Starbreaker, Dawnbreaker gets moved towards the targeted direction at a speed of 215. The movement is not interrupted by other sources of non-disabling forced movement. Starbreaker's movement resumes as soon as the other source finishes. Cannot move Dawnbreaker over cliffs, through Barriers, or through pathing blockers. Upon reaching any of these, the movement stops and the ability continues stationary. Can move Dawnbreaker a total distance of 236.5 over 1.1 duration. Trees in the way are destroyed.",
         "The movement is not interrupted by other sources of non-disabling forced movement. Starbreaker's movement resumes as soon as the other source finishes.",
-        "Cannot move Dawnbreaker over cliffs. Upon reaching unpathable terrain, the movement stops and the ability continues stationary.",
+        "Cannot move Dawnbreaker over cliffs, through Barriers, or through pathing blockers. Upon reaching any of these, the movement stops and the ability continues stationary.",
         "Can move Dawnbreaker a total distance of 236.5 over 1.1 duration.",
         "Trees in the way are destroyed.",
         "During the combo, Dawnbreaker is disarmed, and unable to cast Celestial Hammer and Solar Guardian. Items can be used normally. Other abilities can be cast normally as well (e.g. Rubick or in Ability Draft). Using mobility items does not cancel any aspect of Starbreaker.",
@@ -56,14 +51,16 @@
         "Luminosity only gains 1 charge per instance, regardless of how many enemies got hit by instant attacks on each instance.",
         "Performs instant attacks in 0.55-second intervals, starting immediately upon cast, resulting in 3 instances.",
         "The actual effects of the ability are independent from the whirling animation of Dawnbreaker. All enemies are hit by the instant attacks at the same time on each interval.",
-        "The first 2 instances are applied within the 360 radius around Dawnbreaker. These instances use the lesser attack damage bonus and apply a movement speed slow. The attacks first apply their damage, then the slow debuff.",
+        "The first 2 instances are applied within the 360 radius around Dawnbreaker. These instances use the lesser attack damage bonus and apply a movement speed slow. The attacks first apply their damage, then the slow debuff. The swipe attack damage bonus increasing talent does not update the current cast of Starbreaker.",
         "These instances use the lesser attack damage bonus and apply a movement speed slow.",
         "The attacks first apply their damage, then the slow debuff.",
+        "The swipe attack damage bonus increasing talent does not update the current cast of Starbreaker.",
         "The last instance is applied within 250 radius 250 range in front of Dawnbreaker. This instance uses the greater attack damage bonus and applies the stun with a small 90-range knock-up. The attacks first apply their damage, then the stun debuff. The smash can hit units up to 500 range away from Dawnbreaker.",
         "This instance uses the greater attack damage bonus and applies the stun with a small 90-range knock-up.",
         "The attacks first apply their damage, then the stun debuff.",
         "The smash can hit units up to 500 range away from Dawnbreaker.",
-        "Dawnbreaker gets stunned for 0.2 seconds upon performing the last smash attack of the combo."
+        "Dawnbreaker gets stunned for 0.2 seconds upon performing the last smash attack of the combo.",
+        "Acquiring Aghanim's Shard while Starbreaker is active immediately updates the current instance."
       ],
       "mana": "80",
       "hotKey": "Q",
@@ -77,7 +74,7 @@
         "Number of Attacks: 3",
         "Combo Duration: 1.1",
         "Swipe Radius: 360",
-        "Swipe Attack Damage Bonus: 25\/35\/45\/55",
+        "Swipe Attack Damage Bonus: 25\/35\/45\/55 (TagTalent 55\/65\/75\/85)",
         "Swipe Move Speed Slow: 100%",
         "Swipe Slow Duration: 0.12",
         "Smash Radius: 250",
@@ -87,8 +84,9 @@
         "Self Stun Duration: 0.2",
         "Number of Charges: 2",
         "Charge Replenish Time: 17\/15\/13\/11",
+        "Dawnbreaker gains magic immunity during Star Breaker.",
         "The instant attacks fully pierce spell immunity. The slow and stun do not pierce spell immunity.",
-        "Being rooted at any time during the ability instantly cancels the ability."
+        "Only the movement is disabled by roots."
       ],
       "itemBehaviour": [],
       "legacyKey": "B",
@@ -119,7 +117,8 @@
         "The fire provides an aura that places a debuff on enemies within its fire trail 150 radius. The aura debuff lingers for 0.5 seconds.",
         "The debuff deals 10\/15\/20\/25 damage in 0.5-second intervals, starting immediately upon being placed.",
         "This results in up to 7 possible instances, and it can deal up to 70\/105\/140\/175 damage within the area for the entire duration.",
-        "With Converge, both the hammer and Dawnbreaker create the fire trail behind them as they move."
+        "With Converge, both the hammer and Dawnbreaker create the fire trail behind them as they move.",
+        "The movement speed slow increasing talent immediately upgrades all currently active fire trails, but not already placed debuffs."
       ],
       "mana": "110\/120\/130\/140",
       "hotKey": "W",
@@ -136,7 +135,7 @@
         "Hammer Pause Duration: 2",
         "Fire Trail Radius: 150",
         "Fire Trail Damage per Second: 20\/30\/40\/50",
-        "Fire Trail Move Speed Slow: 35%",
+        "Fire Trail Move Speed Slow: 35% (TagTalent 50%)",
         "Fire Trail Duration: 2.5",
         "Fire Trail Debuff Linger Duration: 0.5"
       ],
@@ -183,7 +182,7 @@
         "Luminosity gains 1 charge per instance of Starbreaker, no matter how many enemies got hit by the instance.",
         "The buff is always present, but it is hidden when at 0 charges.",
         "Does not count attacks done against allies, wards or buildings, nor triggers the powered up attack.",
-        "Once the counter reaches 3, Dawnbreaker gains the attack buff. This buff causes the next attack to be a critical strike, to lifesteal, and to heal nearby allies. Nearby allies are healed for a percentage of the lifesteal value, so they are healed for 10.5%\/14%\/17.5%\/21%. When the attack target is a non-hero unit, the lifesteal value is reduced to 15%\/20%\/25%\/30%. This means for allies, it is further reduced to 5.25%\/7%\/8.75%\/10.5%. Treats creep-heroes as heroes.",
+        "Once the counter reaches 3 (TagTalent 2), Dawnbreaker gains the attack buff. This buff causes the next attack to be a critical strike, to lifesteal, and to heal nearby allies. Nearby allies are healed for a percentage of the lifesteal value, so they are healed for 10.5%\/14%\/17.5%\/21%. When the attack target is a non-hero unit, the lifesteal value is reduced to 15%\/20%\/25%\/30%. This means for allies, it is further reduced to 5.25%\/7%\/8.75%\/10.5%. Treats creep-heroes as heroes.",
         "This buff causes the next attack to be a critical strike, to lifesteal, and to heal nearby allies.",
         "Nearby allies are healed for a percentage of the lifesteal value, so they are healed for 10.5%\/14%\/17.5%\/21%.",
         "When the attack target is a non-hero unit, the lifesteal value is reduced to 15%\/20%\/25%\/30%.",
@@ -203,7 +202,7 @@
       "description": "After 3 attacks, Dawnbreaker powers up, charging her next attack with a critical hit that heals all allied heroes within 650 units around her for a portion of attack damage dealt. Creeps and neutral enemies provide less healing. Allies are healed for 35% of the amount.",
       "spellName": "Luminosity",
       "params": [
-        "Required Hits: 4",
+        "Required Hits: 4 (TagTalent 3)",
         "Healing Radius: 650",
         "Critical Damage: 120%\/140%\/160%\/180% (TagTalent 160%\/180%\/200%\/220%)",
         "Lifesteal: 30%\/40%\/50%\/60%",
@@ -230,23 +229,31 @@
         "Valid targets are allied heroes, including illusions, clones, and creep-heroes.",
         "If there is no valid target within range, an error message appears and it does not cast.",
         "Once targeted, the destination stays the same. It does not follow the target.",
-        "While channeling and during the flight time, Dawnbreaker cannot act at all. This means the player cannot manually cancel the channeling. The channeling can still be canceled normally via disables applied by other units. Once the channeling finishes and the flight starts, Dawnbreaker turns spell immune and the flight can no longer be interrupted by most abilities. Chronosphere and Dismember fully cancel Solar Guardian. Additionally, applying piercing forced movement on Dawnbreaker during the leap, prevents her from teleporting towards the destination. In this case she falls down wherever the forced movement brings her, applying the impact damage and stun there.",
+        "While channeling, Dawnbreaker cannot act, so that she cannot manually cancel the channeling. The channeling can still be canceled normally via disables applied by other units.",
         "The channeling can still be canceled normally via disables applied by other units.",
-        "Once the channeling finishes and the flight starts, Dawnbreaker turns spell immune and the flight can no longer be interrupted by most abilities.",
-        "Chronosphere and Dismember fully cancel Solar Guardian.",
-        "Additionally, applying piercing forced movement on Dawnbreaker during the leap, prevents her from teleporting towards the destination.",
-        "In this case she falls down wherever the forced movement brings her, applying the impact damage and stun there.",
-        "The flight starts upon finishing the channeling. For the first half, Dawnbreaker flies straight up into the sky. Upon reaching the half mark, she gets teleported towards the center of the destination, where she then descends from the sky for the remaining half.",
-        "Upon reaching the half mark, she gets teleported towards the center of the destination, where she then descends from the sky for the remaining half.",
-        "While channeling and during the flight duration, pulses are created at the targeted point. The pulses heal allies and deal damage to enemies within the area. The visual effect created at the chosen location and the audio are visible and audible to everyone. The healing and damaging pulses happen in 0.5-second intervals, starting immediately upon channel begin, resulting in 6 pulses. The heal does not affect Dawnbreaker herself, but does affect her units. Can heal allies for up to 270\/420\/570 health. The heal value itself is still subjected to heal manipulation.",
+        "Once the channeling succeeds, Dawnbreaker also turns invulnerable, spell immune, unselectable, and still cannot act. Once reaching this state, it cannot be interrupted anymore. Dawnbreaker gets quickly moved upwards until no longer visible, and stays in the air for the full flight duration. Upon reaching the half mark of the flight duration, she gets teleported towards the center of the destination. Towards the end of the flight time, she quickly descents back onto the ground, and applies the landing effects.",
+        "Once reaching this state, it cannot be interrupted anymore.",
+        "Dawnbreaker gets quickly moved upwards until no longer visible, and stays in the air for the full flight duration.",
+        "Upon reaching the half mark of the flight duration, she gets teleported towards the center of the destination.",
+        "Towards the end of the flight time, she quickly descents back onto the ground, and applies the landing effects.",
+        "While channeling and during the flight duration, pulses are created at the targeted point. The pulses heal allies and deal damage to enemies within the area. The visual effect created at the chosen location and the audio are visible and audible to everyone. The healing and damaging pulses happen in 0.5-second intervals, starting immediately upon channel begin, resulting in 5 (TagTalent 11) pulses. The heal does not affect Dawnbreaker herself, but does affect her units. Can heal allies for up to 225\/350\/475 (TagTalent 660\/990\/1320) health.",
         "The visual effect created at the chosen location and the audio are visible and audible to everyone.",
-        "The healing and damaging pulses happen in 0.5-second intervals, starting immediately upon channel begin, resulting in 6 pulses.",
+        "The healing and damaging pulses happen in 0.5-second intervals, starting immediately upon channel begin, resulting in 5 (TagTalent 11) pulses.",
         "The heal does not affect Dawnbreaker herself, but does affect her units.",
-        "Can heal allies for up to 270\/420\/570 health. The heal value itself is still subjected to heal manipulation.",
-        "The heal value itself is still subjected to heal manipulation.",
-        "At the end of the flight duration, enemies within 500 radius of Dawnbreaker get stunned and take the impact damage. Can deal a total of 310\/460\/610, considering impact damage and all pulses.",
-        "Can deal a total of 310\/460\/610, considering impact damage and all pulses.",
-        "The landing first applies the damage, then the stun."
+        "Can heal allies for up to 225\/350\/475 (TagTalent 660\/990\/1320) health.",
+        "At the end of the flight duration, enemies within 500 radius of Dawnbreaker get stunned and take the impact damage. Can deal a total of 280\/410\/540, considering impact damage and all pulses. The landing first applies the damage, then the stun.",
+        "Can deal a total of 280\/410\/540, considering impact damage and all pulses.",
+        "The landing first applies the damage, then the stun.",
+        "The radius increasing talent partially updates the current cast of Solar Guardian. The pulses during the channeling and flight are not updated. However, the radius for the landing damage and stun is updated.",
+        "The pulses during the channeling and flight are not updated. However, the radius for the landing damage and stun is updated.",
+        "With Aghanim's Scepter the pulses at the destinatior area also apply a buff on allies with the same intervals as the heal. The buff grants allies evasion, and lingers for 1.5 seconds. The evasion uses pseudo-random distribution. Also during the flight, the ability gets replaced by the Solar Guardian Land sub-ability, which when used, causes Dawnbreaker to land immediately.",
+        "The buff grants allies evasion, and lingers for 1.5 seconds.",
+        "The evasion uses pseudo-random distribution.",
+        "Also during the flight, the ability gets replaced by the Solar Guardian Land sub-ability, which when used, causes Dawnbreaker to land immediately.",
+        "Acquiring Aghanim's Scepter partially upgrades the current cast of Solar Guardian. The pulses during the channeling and flight immediately start applying the higher heal value and the modifier. If acquired while channeling but before the flight begins, the flight uses the increased duration, and the sub-ability is granted. However, the pulses' duration does not update, so that the pulses use the default duration, but the flight the upgraded duration.",
+        "The pulses during the channeling and flight immediately start applying the higher heal value and the modifier.",
+        "If acquired while channeling but before the flight begins, the flight uses the increased duration, and the sub-ability is granted.",
+        "However, the pulses' duration does not update, so that the pulses use the default duration, but the flight the upgraded duration."
       ],
       "mana": "150\/200\/250",
       "hotKey": "R",
@@ -258,18 +265,46 @@
         "Cast Range: Global",
         "Max Search Distance: 1400",
         "Max Targeting Distance: 350",
-        "Channel Time: 1.7",
-        "Effect Radius: 500 (TagTalent 700)",
+        "Channel Time: 1.7 (TagAghanim 1)",
+        "Effect Radius: 500 (TagTalent 650)",
         "Damage per Pulse: 30\/50\/70",
-        "Heal per Pulse: 45\/70\/95",
+        "Heal per Pulse: 45\/70\/95 (TagAghanim 60\/90\/120)",
         "Landing Damage: 130\/160\/190",
-        "Flight Duration: 0.8",
+        "Flight Duration: 0.8 (TagAghanim 4.3)",
         "Landing Stun Duration: 1.5\/1.75\/2",
+        "Allied Evasion: 60%",
+        "Evasion Duration: 1.5",
+        "Grants a new ability: Solar Guardian Land. Solar Guardian healing increased, channeling time reduced to 1 second and total duration increased to 6 seconds. Causes allies in the destination area to have 60% evasion while Dawnbreaker is airborne. Solar Guardian can be cast again after take off to land early.",
         "Does not affect spell immune enemies. Fully affects spell immune allies."
       ],
       "itemBehaviour": [],
       "legacyKey": "R",
       "story": "Only in defense of an ally will Valora relent to call upon the last reserves of her old powers that still allow cosmic flight."
+    },
+    {
+      "audioUrl": null,
+      "effects": [
+        "Ability No Target",
+        "Affects Self"
+      ],
+      "notes": [
+        "Requires Aghanim's Scepter to be unlocked.",
+        "Replaces Solar Guardian until the sub-ability is used or the flight duration ends.",
+        "Can be used while stunned, cycloned, slept, taunted, hidden, or during Forced Movement.",
+        "Cannot be used while silenced, hexed or prevented from acting. Dawnbreaker is unable to ⇧ Shift-queue this ability.",
+        "Dawnbreaker is unable to ⇧ Shift-queue this ability."
+      ],
+      "mana": "0",
+      "hotKey": "R",
+      "cooldown": "2",
+      "description": "There is no description for this ability.",
+      "spellName": "Solar Guardian Land",
+      "params": [
+        "Cast Animation: 0+0"
+      ],
+      "itemBehaviour": [],
+      "legacyKey": "R",
+      "story": null
     }
   ],
   "mainAttributes": {
@@ -286,22 +321,22 @@
     {
       "talentLvl": "25",
       "talentLeft": "+1100 Celestial Hammer Cast Range",
-      "talentRight": "+200 Solar Guardian Radius"
+      "talentRight": "2 Starbreaker Charges"
     },
     {
       "talentLvl": "20",
-      "talentLeft": "+40% Luminosity Crit",
-      "talentRight": "2 Starbreaker charges"
+      "talentLeft": "-1 Luminosity Attacks Required",
+      "talentRight": "+150 Solar Guardian Radius"
     },
     {
       "talentLvl": "15",
       "talentLeft": "-20s Solar Guardian Cooldown",
-      "talentRight": "+20 Damage"
+      "talentRight": "+40% Luminosity Crit"
     },
     {
       "talentLvl": "10",
-      "talentLeft": "+20 Movement Speed",
-      "talentRight": "+7 Strength"
+      "talentLeft": "+15% Celestial Hammer Slow",
+      "talentRight": "+30 Starbreaker Swipe Damage"
     }
   ]
 }

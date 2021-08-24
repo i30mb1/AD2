@@ -1,10 +1,6 @@
 {
   "abilities": [
     {
-      "notes": [
-        "This attack damage talent is added as base attack damage. It benefits illusions, and is affected by every percentage-based damage increasing or reducing effects.",
-        "It benefits illusions, and is affected by every percentage-based damage increasing or reducing effects."
-      ],
       "spellName": "Talent",
       "talents": [
         {
@@ -20,11 +16,11 @@
         {
           "talentLvl": "15",
           "talentLeft": "+0.6s Telekinesis Lift Duration",
-          "talentRight": "+100 Base Damage"
+          "talentRight": "25% Cooldown Reduction for Stolen Spells"
         },
         {
           "talentLvl": "10",
-          "talentLeft": "Fade Bolt Borrows Hero Damage",
+          "talentLeft": "+10% Fade Bolt Damage Reduction",
           "talentRight": "+175 Telekinesis Landing Damage"
         }
       ]
@@ -179,9 +175,8 @@
         "Number of Bounces: Infinite",
         "Base Damage: 100\/175\/250\/325",
         "Bounce Damage Reduction: 8%",
-        "Attack Damage Reduction: 10%\/18%\/26%\/34%",
+        "Attack Damage Reduction: 10%\/18%\/26%\/34% (TagTalent 20%\/28%\/36%\/44%)",
         "Duration: 10",
-        "Attack Damage Steal: 10%\/18%\/26%\/34%",
         "Attack damage reduction persists if debuff was placed before spell immunity and when not dispelled.",
         "Blocked fully only when primary target."
       ],
@@ -222,7 +217,7 @@
       "notes": [
         "A full list of unique interactions with Spell Steal can be found here.",
         "This ability is not available in Ability Draft.",
-        "The stolen ability travels as a projectile towards Rubick at a speed of 900. Rubick gains the new ability and loses the previous stolen ability as the projectile reaches him.",
+        "The stolen ability travels as a projectile towards Rubick at a speed of 1200. Rubick gains the new ability and loses the previous stolen ability as the projectile reaches him.",
         "Cannot steal passive abilities, item abilities, or active attack modifiers (except for Walrus PUNCH!). Can only steal from heroes (including clones, excluding illusions).",
         "Cannot steal the following abilities: Stone Remnant, Quas, Wex, Exort, Invoke, Mischief, Morph, Minefield Sign and Stone Form. Cannot steal the following Aghanim's Shard upgraded abilities: Divine Favor, Hunter in the Night, Essence Flux, Dispersion and Gravekeeper's Cloak.",
         "Cannot steal the following Aghanim's Shard upgraded abilities: Divine Favor, Hunter in the Night, Essence Flux, Dispersion and Gravekeeper's Cloak.",
@@ -243,7 +238,7 @@
       ],
       "mana": "25",
       "hotKey": "R",
-      "cooldown": "26\/20\/14 (TagTalent 6\/4\/2)",
+      "cooldown": "20\/15\/10 (TagTalent 6\/4\/2)",
       "description": "Rubick studies the trace magical essence of one enemy hero, learning the secrets of the last spell the hero cast. Rubick can use this spell as his own for several minutes or until he dies.",
       "spellName": "Spell Steal",
       "params": [
@@ -253,6 +248,7 @@
         "Stolen Spell Debuff Duration Amplification: 10%\/20%\/30%",
         "Spell Duration: 180\/240\/300",
         "Stolen Spell Damage Amplification: 40%",
+        "Stolen Spell Cooldown Reduction: 25%",
         "Decreases cooldown, increases cast range and upgrades the spell to the Scepter level.",
         "The debuff duration amplification is not disabled by Break."
       ],
@@ -285,11 +281,11 @@
     {
       "talentLvl": "15",
       "talentLeft": "+0.6s Telekinesis Lift Duration",
-      "talentRight": "+100 Base Damage"
+      "talentRight": "25% Cooldown Reduction for Stolen Spells"
     },
     {
       "talentLvl": "10",
-      "talentLeft": "Fade Bolt Borrows Hero Damage",
+      "talentLeft": "+10% Fade Bolt Damage Reduction",
       "talentRight": "+175 Telekinesis Landing Damage"
     }
   ]

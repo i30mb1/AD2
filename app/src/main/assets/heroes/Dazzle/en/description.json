@@ -3,7 +3,8 @@
     {
       "notes": [
         "This attack damage talent is added as raw attack damage. Does not benefit illusions and is not affected by most percentage-based damage increasing or reducing effects.",
-        "Does not benefit illusions and is not affected by most percentage-based damage increasing or reducing effects."
+        "Does not benefit illusions and is not affected by most percentage-based damage increasing or reducing effects.",
+        "The strength talent effectively grants Dazzle 400 health and 2 health regeneration."
       ],
       "spellName": "Talent",
       "talents": [
@@ -15,12 +16,12 @@
         {
           "talentLvl": "20",
           "talentLeft": "+36 Poison Touch DPS",
-          "talentRight": "+30 Movement Speed"
+          "talentRight": "+250 Heal On Shallow Grave End"
         },
         {
           "talentLvl": "15",
           "talentLeft": "+60 Attack Speed",
-          "talentRight": "+225 Heal On Shallow Grave End"
+          "talentRight": "+20 Strength"
         },
         {
           "talentLvl": "10",
@@ -42,16 +43,23 @@
         "The complete area is shaped like a cone in front of Dazzle.",
         "The area starts in front of Dazzle, and not at the primary target's position.",
         "Targets within the cone area are not chosen randomly. It chooses the closest valid targets to the primary target within the cone.",
-        "Deals damage in 1-second intervals, starting immediately after the debuff is placed, resulting in 5\/6\/7\/8 damage instances when not refreshed.",
+        "Deals damage in 1-second intervals, starting immediately, resulting in 5\/6\/7\/8 damage instances when not refreshed.",
         "Can deal up to 80\/168\/280\/416 (TagTalent 260\/384\/532\/704) damage to each target when not refreshed (before reductions).",
-        "The duration gets refreshed whenever a player or Roshan lands an attack on the debuffed unit. This means it does not get refreshed on missed attacks.",
+        "The duration gets refreshed whenever Dazzle lands an attack on the debuffed unit. Missed attacks do not refresh it. Refreshing it also increases the movement speed slow value by 2%\/2.5%\/3%\/3.5% each time. This has no stack limit.",
+        "Refreshing it also increases the movement speed slow value by 2%\/2.5%\/3%\/3.5% each time. This has no stack limit.",
+        "This is how much movement speed one instance of Poison Touch reduces when refreshed 8 times on each level: Level 1: 18%\/20%\/22%\/24%\/26%\/28%\/30%\/32% (TagTalent 50%\/52%\/54%\/56%\/58%\/60%\/62%\/64%) movement speed. Level 2: 18.5%\/21%\/23.5%\/26%\/28.5%\/31%\/33.5%\/36% (TagTalent 50.5%\/53%\/55.5%\/58%\/60.5%\/63%\/65.5%\/68%) movement speed. Level 3: 19%\/22%\/25%\/28%\/31%\/34%\/37%\/40% (TagTalent 51%\/54%\/57%\/60%\/63%\/66%\/69%\/72%) movement speed. Level 4: 19.5%\/23%\/26.5%\/30%\/33.5%\/37%\/40.5%\/44% (TagTalent 51.5%\/55%\/58.5%\/62%\/65.5%\/69%\/72.5%\/76%) movement speed.",
+        "Level 1: 18%\/20%\/22%\/24%\/26%\/28%\/30%\/32% (TagTalent 50%\/52%\/54%\/56%\/58%\/60%\/62%\/64%) movement speed.",
+        "Level 2: 18.5%\/21%\/23.5%\/26%\/28.5%\/31%\/33.5%\/36% (TagTalent 50.5%\/53%\/55.5%\/58%\/60.5%\/63%\/65.5%\/68%) movement speed.",
+        "Level 3: 19%\/22%\/25%\/28%\/31%\/34%\/37%\/40% (TagTalent 51%\/54%\/57%\/60%\/63%\/66%\/69%\/72%) movement speed.",
+        "Level 4: 19.5%\/23%\/26.5%\/30%\/33.5%\/37%\/40.5%\/44% (TagTalent 51.5%\/55%\/58.5%\/62%\/65.5%\/69%\/72.5%\/76%) movement speed.",
+        "",
         "Multiple instances of Poison Touch fully stack.",
         "Bad Juju effectively reduces cooldown to: Level 1: 19.98\/17.76\/15.54\/13.32 Level 2: 16.74\/14.88\/13.02\/11.16 Level 3: 13.5\/12\/10.5\/9",
         "Level 1: 19.98\/17.76\/15.54\/13.32",
         "Level 2: 16.74\/14.88\/13.02\/11.16",
         "Level 3: 13.5\/12\/10.5\/9",
         "",
-        "With Aghanim's Shard, enemies are hexed on projectile impact, setting its base movement speed to 100, silencing, muting and disarming them. The hex is only applied once upon projectile impact. It is not applied upon refreshing the debuff with attacks. The main debuff and the hex are applied at the same time, so after the hex the target is still slowed for 2.75\/3.75\/4.75\/5.75 seconds. Poison Touch first applies its main debuff, then the hex debuff.",
+        "With Aghanim's Shard, enemies are hexed on projectile impact, setting their base movement speed to 100, silencing, muting and disarming them. The hex is only applied once upon projectile impact. It is not applied upon refreshing the debuff with attacks. The main debuff and the hex are applied at the same time, so after the hex the target is still slowed for 2.75\/3.75\/4.75\/5.75 seconds. Poison Touch first applies its main debuff, then the hex debuff.",
         "The hex is only applied once upon projectile impact. It is not applied upon refreshing the debuff with attacks.",
         "The main debuff and the hex are applied at the same time, so after the hex the target is still slowed for 2.75\/3.75\/4.75\/5.75 seconds.",
         "Poison Touch first applies its main debuff, then the hex debuff."
@@ -59,7 +67,7 @@
       "mana": "110\/120\/130\/140",
       "hotKey": "Q",
       "cooldown": "27\/24\/21\/18",
-      "description": "Releases a cone of poison that strikes multiple enemy units. Deals damage over time and slows the targets. Anytime the targets get attacked, the debuff duration is refreshed.",
+      "description": "Releases a cone of poison that strikes multiple enemy units. Deals damage over time and slows the targets. Anytime the targets get attacked by Dazzle, the debuff duration is refreshed and slow is increased.",
       "spellName": "Poison Touch",
       "params": [
         "Cast Animation: 0.3+0.57",
@@ -69,11 +77,12 @@
         "End Radius: 300",
         "Number of Targets: 2\/4\/6\/8",
         "Damage per Second: 16\/28\/40\/52 (TagTalent 52\/64\/76\/88)",
-        "Move Speed Slow: 14%\/16%\/18%\/20% (TagTalent 46%\/48%\/50%\/52%)",
+        "Base Move Speed Slow: 16%\/18%\/20%\/22% (TagTalent 48%\/50%\/52%\/54%)",
+        "Move Speed Slow Increase per Refresh: 2%\/2.5%\/3%\/3.5%",
         "Duration: 4\/5\/6\/7",
         "Hex Set Move Speed: 100",
         "Hex Duration: 1.25",
-        "Causes Poison Touch to hex affected targets for 1.25 seconds.",
+        "Causes Poison Touch to hex affected targets for 100 seconds.",
         "Slow persists and deals damage if debuff was placed before spell immunity and when not dispelled.",
         "Blocked upon cast fully only when primary target."
       ],
@@ -95,14 +104,14 @@
         "Damage taken is technically not reduced, so any damage event still registers the full damage.",
         "Can be cast on illusions and creep-heroes. ↓↓ Double-tapping automatically targets self.",
         "↓↓ Double-tapping automatically targets self.",
-        "With the level 15 talent, losing the buff in any way heals the target for 225 health.",
+        "With the level 20 talent, losing the buff in any way heals the target for 250 health.",
         "Bad Juju effectively reduces cooldown to: Level 1: 26.64\/22.2\/17.76\/13.32 Level 2: 22.32\/18.6\/14.88\/11.16 Level 3: 18\/15\/12\/9",
         "Level 1: 26.64\/22.2\/17.76\/13.32",
         "Level 2: 22.32\/18.6\/14.88\/11.16",
         "Level 3: 18\/15\/12\/9",
         ""
       ],
-      "mana": "150",
+      "mana": "120\/130\/140\/150",
       "hotKey": "W",
       "cooldown": "36\/30\/24\/18",
       "description": "An ally blessed with Shallow Grave, no matter how close to death, cannot die while under its protection.",
@@ -111,7 +120,7 @@
         "Cast Animation: 0.3+0",
         "Cast Range: 700\/800\/900\/1000",
         "Duration: 4\/4.5\/5\/5.5",
-        "Heal: 225"
+        "Heal: 250"
       ],
       "itemBehaviour": [],
       "legacyKey": "G",
@@ -131,7 +140,7 @@
         "If multiple units meet the exact same criteria (e.g. only full health non-hero units are within range), it chooses between them randomly.",
         "Regardless of the target, Dazzle is always healed without counting towards the number of bounces, effectively healing 4\/5\/6\/7 units. ↓↓ Double-tapping automatically targets self.",
         "↓↓ Double-tapping automatically targets self.",
-        "Can heal and damage up to 320\/500\/720\/980 (720\/1000\/1320\/1680) health when all bounces hit (before reductions). The damage radius is centered around each healed unit. An enemy unit can get damaged by all healed units per cast.",
+        "Can heal and damage up to 320\/500\/720\/980 (TagTalent 720\/1000\/1320\/1680) health when all bounces hit (before reductions). The damage radius is centered around each healed unit. An enemy unit can get damaged by all healed units per cast.",
         "The damage radius is centered around each healed unit. An enemy unit can get damaged by all healed units per cast.",
         "Bad Juju effectively reduces cooldown to: Level 1: 10.36\/8.88\/7.4\/5.92 Level 2: 8.68\/7.44\/6.2\/4.96 Level 3: 7\/6\/5\/4",
         "Level 1: 10.36\/8.88\/7.4\/5.92",
@@ -166,7 +175,7 @@
         "Affects Self \/ Enemies"
       ],
       "notes": [
-        "Stacks multiplicatively with other sources cooldown reduction.",
+        "Multiple sources of percentage-based cooldown reductions do not stack. The highest value takes priority.",
         "Reduces enemies' armor before the triggering ability takes effect.",
         "Does not trigger on active item abilities, on abilities with 0 cooldown, or on abilities which do not trigger on-cast effects.",
         "Places one debuff on enemies. This debuff gets stronger when it gets refreshed with successive casts. A number on the icon shows how many times the debuff was refreshed, including the first cast.",
@@ -196,7 +205,7 @@
     "attrIntelligence": 25.0,
     "attrIntelligenceInc": 3.7,
     "attrAgilityInc": 1.7,
-    "attrAgility": 21.0
+    "attrAgility": 20.0
   },
   "description": "Dazzle, the Shadow Priest, is a ranged intelligence hero who conjures dazzling dark light to heal his allies and prevent their deaths. His Shadow Wave is a low-cooldown nuke and chain healing ability, dealing more damage to nearby enemies for each ally the wave heals. Shallow Grave makes an ally temporarily unkillable, allowing Dazzle's teammates to survive impossible situations. Poison Touch is a spammable ability that slows its target and deals damage over time. His ultimate, Bad Juju, allows for all of his spells and items to be used more frequently, while also causing his spells to temporarily reduce his enemies' armor.",
   "history": "Each young acolyte to the Dezun order must complete a series of rites before becoming a shadow priest. The final rite, the rite of shades, is a harrowing spiritual journey through the Nothl Realm, an unpredictable domain from which not all visitants return. Of those who do, some return mad. Others return with strange aptitudes. But all who go there are changed by their experiences. Driven by the need for enlightenment, Dazzle was the youngest of his tribe ever to request the sacred ritual. At first the order refused him, saying he was too young. But Dazzle was not to be dissuaded. Sensing something special in the headstrong young acolyte, the elders relented. Dazzle drank down the sacred potion and sat by the fire while the rest of his tribe danced through the night. In this ethereal dimension of the Nothl Realm, the properties of light and dark are inverted. Thus his brilliant healing light, beautiful to our eye, is actually a sinister kind of evil; and the darkest deeds are done in a dazzling glow. The elders' intuition was prophetic: Dazzle returned to his people as a Shadow Priest like none seen before, with the power to heal as well as to destroy. Now he uses his gift to cut down his enemies and mend his friends.",
@@ -209,12 +218,12 @@
     {
       "talentLvl": "20",
       "talentLeft": "+36 Poison Touch DPS",
-      "talentRight": "+30 Movement Speed"
+      "talentRight": "+250 Heal On Shallow Grave End"
     },
     {
       "talentLvl": "15",
       "talentLeft": "+60 Attack Speed",
-      "talentRight": "+225 Heal On Shallow Grave End"
+      "talentRight": "+20 Strength"
     },
     {
       "talentLvl": "10",

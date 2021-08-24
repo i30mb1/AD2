@@ -1,16 +1,11 @@
 {
   "abilities": [
     {
-      "notes": [
-        "The \/ \/ all stats talent effectively grants Drow Ranger 100 health, 0.5 health regeneration, 0.83 armor, 5 attack speed, 60 mana, 0.25 mana regeneration, and 5 attack damage.",
-        "The agility talent effectively grants Drow Ranger 1.67 armor, 10 attack speed, and 10 attack damage.",
-        "The cooldown reduction talent stacks multiplicatively with other sources cooldown reduction."
-      ],
       "spellName": "Talent",
       "talents": [
         {
           "talentLvl": "25",
-          "talentLeft": "30% Cooldown Reduction",
+          "talentLeft": "+2 Multishot Waves",
           "talentRight": "+12% Marksmanship Chance"
         },
         {
@@ -21,11 +16,11 @@
         {
           "talentLvl": "15",
           "talentLeft": "-8s Multishot Cooldown",
-          "talentRight": "+10 Agility"
+          "talentRight": "+250 Gust Width"
         },
         {
           "talentLvl": "10",
-          "talentLeft": "+5 All Stats",
+          "talentLeft": "+15 Frost Arrow Damage",
           "talentRight": "+50% Gust Blind"
         }
       ]
@@ -44,8 +39,8 @@
         "The attacks first apply the debuff, then their own damage.",
         "The slow from successive casts does not stack, only the duration gets refreshed.",
         "Frost Arrows does not work against allied units, buildings or wards.",
-        "With Aghanim's Shard, attacks place one hypothermia debuff on the enemy. This debuff gets stronger when it gets refreshed with successive casts. Works against every unit Frost Arrows can affect. Also works when applied with instant attacks (TagTalent Multishot, Marksmanship splinter shots, Ability Draft). A number on the icon, as well as a number above the target show the current amount of stacks on them. The debuff applies heal reduction, health regeneration reduction, lifesteal reduction, and spell lifesteal reduction on the target. Can reduce health restoration by up to 10%\/20%\/30%\/40%\/50%\/60%\/70%, based on the amount of stacks.",
-        "Works against every unit Frost Arrows can affect. Also works when applied with instant attacks (TagTalent Multishot, Marksmanship splinter shots, Ability Draft).",
+        "With Aghanim's Shard, attacks place one hypothermia debuff on the enemy. This debuff gets stronger when it gets refreshed with successive casts. Works against every unit Frost Arrows can affect. Also works when applied with instant attacks (TagTalent Multishot, Splinter Shots and Ability Draft). A number on the icon, as well as a number above the target show the current amount of stacks on them. The debuff applies heal reduction, health regeneration reduction, lifesteal reduction, and spell lifesteal reduction on the target. Can reduce health restoration by up to 10%\/20%\/30%\/40%\/50%\/60%\/70%, based on the amount of stacks.",
+        "Works against every unit Frost Arrows can affect. Also works when applied with instant attacks (TagTalent Multishot, Splinter Shots and Ability Draft).",
         "A number on the icon, as well as a number above the target show the current amount of stacks on them.",
         "The debuff applies heal reduction, health regeneration reduction, lifesteal reduction, and spell lifesteal reduction on the target.",
         "Can reduce health restoration by up to 10%\/20%\/30%\/40%\/50%\/60%\/70%, based on the amount of stacks.",
@@ -53,11 +48,11 @@
         "These projectiles travel at a speed of 1300.",
         "The projectiles first apply the damage, then the debuff.",
         "The projectiles deal up to 60\/120\/180\/240\/300\/360\/420 damage, based on how many stacks the unit had.",
-        "The bonus damage increases to the following values with certain amount of hypothermia stacks on each level: Level 1: 10\/15\/20\/25\/30\/35\/40 damage Level 2: 15\/20\/25\/30\/35\/40\/45 damage Level 3: 20\/25\/30\/35\/40\/45\/50 damage Level 4: 25\/30\/35\/40\/45\/50\/55 damage",
-        "Level 1: 10\/15\/20\/25\/30\/35\/40 damage",
-        "Level 2: 15\/20\/25\/30\/35\/40\/45 damage",
-        "Level 3: 20\/25\/30\/35\/40\/45\/50 damage",
-        "Level 4: 25\/30\/35\/40\/45\/50\/55 damage",
+        "The bonus damage increases to the following values with certain amount of hypothermia stacks on each level: Level 1: 10\/15\/20\/25\/30\/35\/40 (TagTalent 25\/30\/35\/40\/45\/50\/55) damage Level 2: 15\/20\/25\/30\/35\/40\/45 (TagTalent 30\/35\/40\/45\/50\/55\/60) damage Level 3: 20\/25\/30\/35\/40\/45\/50 (TagTalent 35\/40\/45\/50\/55\/60\/65) damage Level 4: 25\/30\/35\/40\/45\/50\/55 (TagTalent 40\/45\/50\/55\/60\/65\/70) damage",
+        "Level 1: 10\/15\/20\/25\/30\/35\/40 (TagTalent 25\/30\/35\/40\/45\/50\/55) damage",
+        "Level 2: 15\/20\/25\/30\/35\/40\/45 (TagTalent 30\/35\/40\/45\/50\/55\/60) damage",
+        "Level 3: 20\/25\/30\/35\/40\/45\/50 (TagTalent 35\/40\/45\/50\/55\/60\/65) damage",
+        "Level 4: 25\/30\/35\/40\/45\/50\/55 (TagTalent 40\/45\/50\/55\/60\/65\/70) damage",
         ""
       ],
       "mana": "12",
@@ -67,7 +62,7 @@
       "spellName": "Frost Arrows",
       "params": [
         "Cast Range: 625",
-        "Base Damage: 5\/10\/15\/20",
+        "Base Damage: 5\/10\/15\/20 (TagTalent 20\/25\/30\/35)",
         "Move Speed Slow: 10%\/25%\/40%\/55%",
         "Slow Duration: 1.5",
         "Burst Radius: 650",
@@ -93,7 +88,7 @@
         "Affects Enemies"
       ],
       "notes": [
-        "With the travel distance and the effect radius, Gust reaches up to 1150 range away. The wave travels at a speed of 2000, reaching max distance in 0.45 seconds.",
+        "With the travel distance and the effect radius, Gust reaches up to 1150 (TagTalent 1400) range away. The wave travels at a speed of 2000, reaching max distance in 0.45 seconds.",
         "The wave travels at a speed of 2000, reaching max distance in 0.45 seconds.",
         "The knockback distance is based on the distance between Drow Ranger and the hit enemy. The closer they are, the further they get knocked back. The knockback is strongest when the distance between Drow Ranger and the enemy is 1 range, pushing the enemy 450 range away. Each additional range of distance between them affects the knockback's distance, reducing it by 0.5. However, the knockback values are truncated, so that the knockback distance decreases by 1 for every 2\u20132 range between Drow and the enemy. Due to this, the minimum knockback distance is 1 range. When standing at the exact same location as Drow Ranger, no knockback occurs, since the formula then multiplies by 0, which results in 0 knockback.",
         "The knockback is strongest when the distance between Drow Ranger and the enemy is 1 range, pushing the enemy 450 range away.",
@@ -107,10 +102,7 @@
         "Units are not disabled during the knockback. They can still turn, attack and use items. Channeling items are not interrupted.",
         "Does not affect Roshan.",
         "With the level 10 talent, Gust also blinds enemies. Gust's blind uses pseudo-random distribution.",
-        "Gust's blind uses pseudo-random distribution.",
-        "Only the flat cooldown reduction talent is displayed. With the level 25 talent alone, the cooldown is reduced to 11.2\/10.5\/9.8\/9.1. With both talents, the cooldown is reduced to 8.4\/7.7\/7\/6.3.",
-        "With the level 25 talent alone, the cooldown is reduced to 11.2\/10.5\/9.8\/9.1.",
-        "With both talents, the cooldown is reduced to 8.4\/7.7\/7\/6.3."
+        "Gust's blind uses pseudo-random distribution."
       ],
       "mana": "70",
       "hotKey": "W",
@@ -121,7 +113,7 @@
         "Cast Animation: 0.25+0.6",
         "Cast Range: 900",
         "Travel Distance: 900",
-        "Effect Radius: 250",
+        "Effect Radius: 250 (TagTalent 500)",
         "Max Knockback Distance: 450",
         "Knockback Duration: 0.6\/0.7\/0.8\/0.9",
         "Debuff Duration: 3\/4\/5\/6",
@@ -140,25 +132,25 @@
         "Damage Physical"
       ],
       "notes": [
-        "The arrows fly at a speed of 1200, and fly either the full distance or until hitting an enemy.",
-        "Releases the waves in a 0.55-second interval. The first wave starts 0.1 seconds after channel begin. Within the waves, the arrows are released with a 0.033-second delay between them (1 arrow per server tick), so it takes 0.1 seconds for all arrows of a wave to be released. This results in a total duration of 1.3 seconds to release all arrows, making it safe to cancel the last 0.45 seconds of the channeling without losing an arrow.",
-        "Within the waves, the arrows are released with a 0.033-second delay between them (1 arrow per server tick), so it takes 0.1 seconds for all arrows of a wave to be released.",
+        "The arrows fly at a speed of 1200, and fly either the full distance or until hitting an enemy. The speed is not affected by projectile speed increasing effects.",
+        "The speed is not affected by projectile speed increasing effects.",
+        "Releases the waves in a 0.55-second interval. The first wave starts 0.1 seconds after channel begin. Within the waves, the arrows are released with a 0.033-second delay between them, so it takes 0.1 seconds for all arrows of a wave to be released. This results in a total duration of 1.3 seconds to release all arrows, making it safe to cancel the last 0.45 seconds of the channeling without losing an arrow.",
+        "Within the waves, the arrows are released with a 0.033-second delay between them, so it takes 0.1 seconds for all arrows of a wave to be released.",
         "This results in a total duration of 1.3 seconds to release all arrows, making it safe to cancel the last 0.45 seconds of the channeling without losing an arrow.",
         "The arrows are released in a cone centered in front of Drow Ranger. The first arrow in each wave always starts on Drow Ranger's right side. The cone's angle is calculated as if 6 arrows get released per wave. If 6 arrows would get released, the cone's angle would be 50°. However, since only 4 arrows get released, the cone's angle is 33.33°, with an angle of 8.33° between each arrow. Considering Drow Ranger's default attack range of 625, the cone has an end radius of 358.5.",
         "The cone's angle is calculated as if 6 arrows get released per wave. If 6 arrows would get released, the cone's angle would be 50°.",
         "However, since only 4 arrows get released, the cone's angle is 33.33°, with an angle of 8.33° between each arrow.",
         "Considering Drow Ranger's default attack range of 625, the cone has an end radius of 358.5.",
         "The arrows provide 100 radius flying vision around them as they travel.",
-        "An enemy may only be hit one arrow per wave, so that up to 3 arrows can hit the same enemy per cast.",
-        "Despite the appearance, Multishot does not use instant attacks. The arrows deal physical spell damage, with the damage based on Drow Ranger's average main attack damage (ignoring bonus damage). This means the arrows cannot proc any attack modifier or trigger any on-attack effects, but are affected by spell damage amplification and spell lifesteal. Despite not utilising instant attacks, Multishot does not affect attack immune units at all, unlike other sources of spell damage.",
+        "An enemy may only be hit one arrow per wave, so that up to 3 (TagTalent 5) arrows can hit the same enemy per cast.",
+        "Despite the appearance, Multishot does not use instant attacks. The arrows deal physical spell damage, with the damage based on Drow Ranger's average main attack damage (ignoring bonus damage). This means the arrows cannot proc any attack modifier or trigger any on-attack effects, but are affected by spell damage amplification and spell lifesteal. Despite not utilizing instant attacks, Multishot does not affect attack immune units at all, unlike other sources of spell damage.",
+        "The arrows deal physical spell damage, with the damage based on Drow Ranger's average main attack damage (ignoring bonus damage).",
         "This means the arrows cannot proc any attack modifier or trigger any on-attack effects, but are affected by spell damage amplification and spell lifesteal.",
-        "Despite not utilising instant attacks, Multishot does not affect attack immune units at all, unlike other sources of spell damage.",
-        "The arrows first apply the Frost Arrows modifier based on its current level, and then the damage. If Frost Arrows is not leveled, the debuff is not applied. The bonus damage of Frost Arrows is not applied. With Aghanim's Shard, the hypothermia debuff from Frost Arrows fully works with Multishot.",
+        "Despite not utilizing instant attacks, Multishot does not affect attack immune units at all, unlike other sources of spell damage.",
+        "The arrows first apply the Frost Arrows modifier based on its current level, and then the damage. If Frost Arrows is not leveled, the debuff is not applied. The bonus damage of Frost Arrows is not applied. The Frost Arrows applied by Multishot do not cost any mana. With Aghanim's Shard, the hypothermia debuff from fully works with Multishot.",
         "If Frost Arrows is not leveled, the debuff is not applied. The bonus damage of Frost Arrows is not applied.",
-        "With Aghanim's Shard, the hypothermia debuff from Frost Arrows fully works with Multishot.",
-        "Only the flat cooldown reduction talent is displayed. With the level 25 talent alone, the cooldown is reduced to 18.2\/16.8\/15.4\/14. With both talents, the cooldown is reduced to 12.6\/11.2\/9.8\/8.4.",
-        "With the level 25 talent alone, the cooldown is reduced to 18.2\/16.8\/15.4\/14.",
-        "With both talents, the cooldown is reduced to 12.6\/11.2\/9.8\/8.4."
+        "The Frost Arrows applied by Multishot do not cost any mana.",
+        "With Aghanim's Shard, the hypothermia debuff from fully works with Multishot."
       ],
       "mana": "50\/70\/90\/110",
       "hotKey": "E",
@@ -171,8 +163,8 @@
         "Attack Range as Travel Distance Multiplier: 2",
         "Arrows Cone Angle: 50",
         "Arrows Collision Radius: 90",
-        "Max Channel Time: 1.75",
-        "Number of Waves: 3",
+        "Max Channel Time: 1.75 (TagTalent 2.85)",
+        "Number of Waves: 3 (TagTalent 5)",
         "Arrows per Wave: 4",
         "Main Attack Damage as Damage: 85%\/110%\/135%\/160% (TagTalent 113%\/138%\/163%\/188%)",
         "Arrows Slow Duration: 1.25\/2\/2.75\/3.5",
@@ -200,22 +192,21 @@
         "The damage is dealt in one instance together with the attack damage, and counts as attack damage as well. It can lifesteal, but not crit.",
         "Proccing attacks have True Strike.",
         "Visually alters Drow Ranger's attack projectile when proccing. Has a lower priority than Desolator and Eye of Skadi's effects.",
-        "With Aghanim's Scepter, causes Drow Ranger to perform instant attacks on random enemies around the primary target. This means the splinters are regular attacks, using Drow Ranger's 1250 projectile speed and being disjointable. These instant attacks can proc any attack modifiers and on-hit effects normally (including Marksmanship). They do not have True Strike. However, the splinter attacks always use Drow Ranger's default attack projectile visual. The splinters are only released if the primary attack successfully hits a target. This means missed or disjointed attacks do not release any splinters. The splinters originate from the primary target's location, not Drow Ranger's location. Since the splinters are independent attacks, their damage does not depend on how much damage the primary target took. The damage penalty only applies to the attack damage and any bonuses. Damage dealt in separate instances is unaffected (e.g. Maelstrom, Gleipnir and Mjollnir). Attacks do not splinter to or from invisible, invulnerable, or hidden units. Attacks do not splinter to couriers, buildings, wards, allied units or units in the Fog of War, but can splinter off of them to nearby valid targets. Splinter attacks are not disabled by being within 400 range of an enemy hero.",
+        "With Aghanim's Scepter, causes Drow Ranger to perform instant attacks on random enemies around the primary target. This means the splinters are regular attacks, using Drow Ranger's 1250 projectile speed and being disjointable. These instant attacks can proc any attack modifiers and on-hit effects normally (including Marksmanship). They do not have True Strike. However, the splinter attacks always use Drow Ranger's default attack projectile visual. The splinters are only released if the primary attack successfully hits a target. This means missed or disjointed attacks do not release any splinters. The splinters originate from the primary target's location, not Drow Ranger's location. Since the splinters are independent attacks, their damage does not depend on how much damage the primary target took. The damage penalty only applies to the attack damage and any bonuses. Damage dealt in separate instances is unaffected (e.g. Maelstrom). Attacks do not splinter to or from invisible, invulnerable, or hidden units. Attacks do not splinter to couriers, buildings, wards, allied units or units in the Fog of War, but can splinter off of them to nearby valid targets. Splinter attacks are not disabled by being within 400 range of an enemy hero.",
         "This means the splinters are regular attacks, using Drow Ranger's 1250 projectile speed and being disjointable.",
         "These instant attacks can proc any attack modifiers and on-hit effects normally (including Marksmanship). They do not have True Strike.",
         "However, the splinter attacks always use Drow Ranger's default attack projectile visual.",
         "The splinters are only released if the primary attack successfully hits a target. This means missed or disjointed attacks do not release any splinters.",
         "The splinters originate from the primary target's location, not Drow Ranger's location.",
         "Since the splinters are independent attacks, their damage does not depend on how much damage the primary target took.",
-        "The damage penalty only applies to the attack damage and any bonuses. Damage dealt in separate instances is unaffected (e.g. Maelstrom, Gleipnir and Mjollnir).",
+        "The damage penalty only applies to the attack damage and any bonuses. Damage dealt in separate instances is unaffected (e.g. Maelstrom).",
         "Attacks do not splinter to or from invisible, invulnerable, or hidden units.",
         "Attacks do not splinter to couriers, buildings, wards, allied units or units in the Fog of War, but can splinter off of them to nearby valid targets.",
         "Splinter attacks are not disabled by being within 400 range of an enemy hero.",
-        "When Frost Arrows is set to Autocast, splintered attacks attempts to activate Frost Arrows with hypothermia debuff on successful splinter hits. The autocast check is performed when the splintered arrows successfully hit their targets. The splintered Frost Arrows still require mana to cast, and are not be applied if Drow Ranger does not have sufficient mana. Missed or disjointed splintered attacks do not attempt to apply Frost Arrows, thus spending no mana, and applying no slow. Splintered attacks still try to apply Frost Arrows to spell immune units despite it not affecting them, effectively wasting mana.",
+        "When Frost Arrows is set to Autocast, splintered attacks apply the current level of Frost Arrows hit enemies. The autocast check is performed when the splintered arrows successfully hit their targets. The Frost Arrows applied by the splintered attacks do not cost any mana. With Aghanim's Shard, the hypothermia debuff from fully works with the splintered attacks.",
         "The autocast check is performed when the splintered arrows successfully hit their targets.",
-        "The splintered Frost Arrows still require mana to cast, and are not be applied if Drow Ranger does not have sufficient mana.",
-        "Missed or disjointed splintered attacks do not attempt to apply Frost Arrows, thus spending no mana, and applying no slow.",
-        "Splintered attacks still try to apply Frost Arrows to spell immune units despite it not affecting them, effectively wasting mana."
+        "The Frost Arrows applied by the splintered attacks do not cost any mana.",
+        "With Aghanim's Shard, the hypothermia debuff from fully works with the splintered attacks."
       ],
       "mana": null,
       "hotKey": "R",
@@ -227,7 +218,7 @@
         "Aura Radius: 1200",
         "Agility as Ranged Agility Bonus: 25%\/35%\/45%",
         "Proc Chance: 20%\/30%\/40% (TagTalent 32%\/42%\/52%)",
-        "Proc Damage: 50\/70\/90",
+        "Proc Damage: 40\/60\/80",
         "Aura Linger Duration: 0.5",
         "Splinter Search Radius: 375",
         "Max Splinter Targets: 2",
@@ -254,7 +245,7 @@
   "talents": [
     {
       "talentLvl": "25",
-      "talentLeft": "30% Cooldown Reduction",
+      "talentLeft": "+2 Multishot Waves",
       "talentRight": "+12% Marksmanship Chance"
     },
     {
@@ -265,11 +256,11 @@
     {
       "talentLvl": "15",
       "talentLeft": "-8s Multishot Cooldown",
-      "talentRight": "+10 Agility"
+      "talentRight": "+250 Gust Width"
     },
     {
       "talentLvl": "10",
-      "talentLeft": "+5 All Stats",
+      "talentLeft": "+15 Frost Arrow Damage",
       "talentRight": "+50% Gust Blind"
     }
   ]

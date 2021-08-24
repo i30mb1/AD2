@@ -2,8 +2,6 @@
   "abilities": [
     {
       "notes": [
-        "This attack damage talent is added as raw attack damage. Does not benefit illusions and is not affected by most percentage-based damage increasing or reducing effects.",
-        "Does not benefit illusions and is not affected by most percentage-based damage increasing or reducing effects.",
         "The strength talent effectively grants Magnus 240 health, 1.2 health regeneration, and 12 attack damage.",
         "The health talent increases maximum health capacity, and keeps the current health percentage."
       ],
@@ -27,7 +25,7 @@
         {
           "talentLvl": "10",
           "talentLeft": "+0.5s Shockwave Slow Duration",
-          "talentRight": "+20 Damage"
+          "talentRight": "+10s Empower Duration"
         }
       ]
     },
@@ -91,8 +89,8 @@
         "When cast on self, grants 17.5%\/35%\/52.5%\/70% (TagTalent 35%\/52.5%\/70%\/87.5%) cleave damage and 21%\/35%\/49%\/63% (TagTalent 38.5%\/52.5%\/66.5%\/80.5%) attack damage. ↓↓ Double-tapping automatically targets self.",
         "↓↓ Double-tapping automatically targets self.",
         "Only increases base damage and that given by the primary attribute of affected units. Raw bonus damage is not increased.",
-        "The unit's current main damage is periodically checked, and the bonuses adapted instantly. The damage and cleave increasing talent instantly upgrade the current instance as well.",
-        "The damage and cleave increasing talent instantly upgrade the current instance as well.",
+        "The unit's current main damage is periodically checked, and the bonuses adapted instantly. Both the damage and cleave increasing and duration increasing talent instantly upgrade the current instance as well.",
+        "Both the damage and cleave increasing and duration increasing talent instantly upgrade the current instance as well.",
         "Grants melee targets cleave and attack damage, and ranged targets only attack damage.",
         "Cleave damage cannot be amplified with outgoing spell damage amplification and cannot spell lifesteal. Can be amplified by incoming spell damage amplification. Cleave damage is reduced by Damage Block. Cleave damage depends on the attack damage value of the cleaving unit, not on how much their primary attack target took. The complete cleave area is shaped like an isosceles trapezoid in front of the attacking unit. Fully stacks with other sources of cleave. Each source of cleave works completely independent. Does not cleave upon attacking wards, buildings or allied units. Wards and buildings are unaffected by cleave. Despite the visual effect, cleave damage is applied instantly in the whole area.",
         "Can be amplified by incoming spell damage amplification.",
@@ -117,7 +115,7 @@
         "Cleave Damage: 10%\/20%\/30%\/40% (TagTalent 20%\/30%\/40%\/50%)",
         "Attack Damage Bonus: 12%\/20%\/28%\/36% (TagTalent 22%\/30%\/38%\/46%)",
         "Self Bonus Factor: 1.75",
-        "Duration: 40"
+        "Duration: 35 (TagTalent 45)"
       ],
       "itemBehaviour": [],
       "legacyKey": "E",
@@ -131,7 +129,7 @@
         "Damage Magical"
       ],
       "notes": [
-        "Magnus charges at a speed of 900.",
+        "Magnus charges forward at a speed of 900.",
         "Moves Magnus in 30 range instances. When targeting any distance which is not a multiplier of that number, it gets rounded down. This means the minimum possible distance is 30, and the actual maximum distance is 900\/990\/1080\/1200 (TagTalent 1320\/1410\/1500\/1620).",
         "This means the minimum possible distance is 30, and the actual maximum distance is 900\/990\/1080\/1200 (TagTalent 1320\/1410\/1500\/1620).",
         "During the Skewer, Magnus is fully disabled.",
@@ -152,7 +150,7 @@
         "Cast Range: Global",
         "Max Skewer Distance: 900\/1000\/1100\/1200 (TagTalent 1325\/1425\/1525\/1625)",
         "Skewer Radius: 145",
-        "Damage: 70\/150\/230\/310",
+        "Damage: 80\/170\/260\/350",
         "Move Speed Slow: 10%\/20%\/30%\/40%",
         "Attack Speed Slow: 25\/30\/35\/40",
         "Slow Duration: 3.25",
@@ -176,7 +174,7 @@
         "This means it affects units in front of Magnus, and to his left and right up to a certain degree.",
         "The center of the search area is located 75 range in front of Magnus, which approximately aligns with the position of his horn. This means Horn Toss can hit units up to 400 range in front of Magnus.",
         "This means Horn Toss can hit units up to 400 range in front of Magnus.",
-        "Enemies are always tossed at a location between 180-210 range behind Magnus, varying based on where they were in front of him.",
+        "Enemies are always tossed at a location between 180\u2012210 range behind Magnus, varying based on where they were in front of him.",
         "Enemies are moved over Magnus' head, in an arc with a height of 300, and varying lengths. The toss always takes 0.6 seconds. Enemies are fully disabled during the toss.",
         "Enemies are fully disabled during the toss.",
         "The damage and stun are applied upon landing. This means enemies are effectively stunned for 1.35 seconds.",
@@ -261,7 +259,7 @@
     {
       "talentLvl": "10",
       "talentLeft": "+0.5s Shockwave Slow Duration",
-      "talentRight": "+20 Damage"
+      "talentRight": "+10s Empower Duration"
     }
   ]
 }

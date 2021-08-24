@@ -18,12 +18,12 @@
         },
         {
           "talentLvl": "15",
-          "talentLeft": "+180 Psionic Trap Damage",
+          "talentLeft": "+120 Psi Blades Range",
           "talentRight": "15% Evasion"
         },
         {
           "talentLvl": "10",
-          "talentLeft": "+100 Psi Blades Range",
+          "talentLeft": "+110 Psionic Trap Damage",
           "talentRight": "+20 Attack Speed"
         }
       ]
@@ -116,10 +116,10 @@
         "Damage Pure"
       ],
       "notes": [
-        "Increases Templar Assassin's total attack range to 240\/290\/340\/390 (TagTalent 340\/390\/440\/490).",
-        "The spill area has a rectangular shape, with a width of 90 and a length based on Templar Assassin's total attack range. With her default attack range and Psi Blade's attack range bonus, the spill area has a length of 480\/580\/680\/780 (TagTalent 680\/780\/880\/980). The spill area starts at the attack target's location and extends beyond them. So from max attack range, it can hit units up to 720\/870\/1020\/1170 (TagTalent 1020\/1170\/1320\/1470) range away. The spill area can be further increased by other attack range bonuses.",
-        "With her default attack range and Psi Blade's attack range bonus, the spill area has a length of 480\/580\/680\/780 (TagTalent 680\/780\/880\/980).",
-        "The spill area starts at the attack target's location and extends beyond them. So from max attack range, it can hit units up to 720\/870\/1020\/1170 (TagTalent 1020\/1170\/1320\/1470) range away.",
+        "Increases Templar Assassin's total attack range to 240\/290\/340\/390 (TagTalent 360\/410\/460\/510).",
+        "The spill area has a rectangular shape, with a width of 90 and a length based on Templar Assassin's total attack range. With her default attack range and Psi Blade's attack range bonus, the spill area has a length of 360\/435\/510\/585 (TagTalent 540\/615\/690\/765). The spill area starts at the attack target's location and extends beyond them. So from max attack range, it can hit units up to 600\/725\/850\/975 (TagTalent 900\/1025\/1150\/1275) range away. The spill area can be further increased by other attack range bonuses.",
+        "With her default attack range and Psi Blade's attack range bonus, the spill area has a length of 360\/435\/510\/585 (TagTalent 540\/615\/690\/765).",
+        "The spill area starts at the attack target's location and extends beyond them. So from max attack range, it can hit units up to 600\/725\/850\/975 (TagTalent 900\/1025\/1150\/1275) range away.",
         "The spill area can be further increased by other attack range bonuses.",
         "Psi Blade's damage counts as spell damage, but they ignore outgoing spell damage amplification and cannot spell lifesteal. The spill damage equals the amount of damage the primary attack target took from the attack. This means the spill damage is fully affected by incoming damage manipulation. This also means that it also works with crit, quell and bashes. However, it does not work with Javelin and Monkey King Bar. Attack modifiers are only applied to the primary target.",
         "The spill damage equals the amount of damage the primary attack target took from the attack.",
@@ -138,10 +138,11 @@
       "description": "Templar Assassin's psi blades slice through the attacked unit, splitting and damaging enemy units directly behind it, while gaining bonus attack range.",
       "spellName": "Psi Blades",
       "params": [
-        "Attack Range Bonus: 80\/130\/180\/230 (TagTalent 180\/230\/280\/330)",
+        "Attack Range Bonus: 80\/130\/180\/230 (TagTalent 200\/250\/300\/350)",
         "Spill Area Width: 90",
-        "Spill Area Length Multiplier: 2",
-        "Attack Damage Spilled: 100%"
+        "Spill Area Length Multiplier: 1.5",
+        "Attack Damage Spilled: 100%",
+        "Damage Reduction per Unit Hit: 5%"
       ],
       "itemBehaviour": [],
       "legacyKey": "B",
@@ -169,7 +170,7 @@
         "",
         "The damage is only applied when the trap is fully charged. The trap visually changes once fully charged. Its outer ring starts black and turns white once fully charged.",
         "The trap visually changes once fully charged. Its outer ring starts black and turns white once fully charged.",
-        "Deals 50\/60\/70 (TagTalent 86\/96\/106) damage in 1-second intervals, starting 1 second after the debuff is placed, resulting in 5 damage instances.",
+        "Deals 50\/60\/70 (TagTalent 72\/82\/92) damage in 1-second intervals, starting 1 second after the debuff is placed, resulting in 5 damage instances.",
         "The source of the damage is the caster, and not the trap itself.",
         "The damage values are always based on the current level and talent upgrades upon triggering the trap, and are not set upon spawning the trap.",
         "Multiple instances of the debuff do not stack, but get refreshed instead. When refreshed, the slow and damage values get updated based on how long that trap was charged.",
@@ -184,7 +185,7 @@
         "Cast Animation: 0+0",
         "Trap Search Radius: Global",
         "Slow Radius: 400",
-        "Total Damage: 250\/300\/350 (TagTalent 430\/480\/530)",
+        "Total Damage: 250\/300\/350 (TagTalent 360\/410\/460)",
         "Min Move Speed Slow: 30%",
         "Max Move Speed Slow: 60%",
         "Trap Charge Time: 4",
@@ -219,8 +220,8 @@
         "Cast Animation: 0.2+0",
         "Cast Range: Global",
         "Slow Radius: 400",
-        "Channel Time: 1",
-        "Total Damage: 250\/300\/350 (TagTalent 430\/480\/530)",
+        "Channel Time: 1.5",
+        "Total Damage: 250\/300\/350 (TagTalent 370\/420\/470)",
         "Min Move Speed Slow: 30%",
         "Max Move Speed Slow: 60%",
         "Trap Charge Time: 4",
@@ -316,12 +317,12 @@
     },
     {
       "talentLvl": "15",
-      "talentLeft": "+180 Psionic Trap Damage",
+      "talentLeft": "+120 Psi Blades Range",
       "talentRight": "15% Evasion"
     },
     {
       "talentLvl": "10",
-      "talentLeft": "+100 Psi Blades Range",
+      "talentLeft": "+110 Psionic Trap Damage",
       "talentRight": "+20 Attack Speed"
     }
   ]

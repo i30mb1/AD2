@@ -1,10 +1,6 @@
 {
   "abilities": [
     {
-      "notes": [
-        "This attack damage talent is added as raw attack damage. Does not benefit illusions and is not affected by most percentage-based damage increasing or reducing effects.",
-        "Does not benefit illusions and is not affected by most percentage-based damage increasing or reducing effects."
-      ],
       "spellName": "Talent",
       "talents": [
         {
@@ -20,7 +16,7 @@
         {
           "talentLvl": "15",
           "talentLeft": "-3s Frost Blast Cooldown",
-          "talentRight": "+100 Damage"
+          "talentRight": "+0.5s Sinister Gaze Duration"
         },
         {
           "talentLvl": "10",
@@ -42,7 +38,7 @@
         "The primary target takes the primary damage and the area damage, resulting in 120\/200\/280\/360 (TagTalent 245\/325\/405\/485) damage (before reductions).",
         "Frost Blast first applies the damage, then the debuff."
       ],
-      "mana": "115\/135\/155\/175",
+      "mana": "110\/130\/150\/170",
       "hotKey": "Q",
       "cooldown": "7 (TagTalent 4)",
       "description": "Blasts the target enemy unit with damaging frost, dealing area damage and slowing movement and attack rates for 4 seconds. The primary target receives both base and area damage.",
@@ -80,9 +76,10 @@
         "All pulses together deal up to 120\/180\/240\/300 (TagTalent 200\/300\/400\/500) per enemy (before reductions).",
         "The pulses first apply their damage, then the slow debuff.",
         "Recasting Frost Shield on the same target does not stack, but refreshes the duration, and resets the pulse interval.",
-        "With the level 25 talent, Frost Shield grants health regeneration to the target. Fully works for buildings. Can regenerate up to 300 (TagTalent 500) health over its full duration. Does not update currently active instance of Frost Shield.",
-        "Can regenerate up to 300 (TagTalent 500) health over its full duration.",
-        "Does not update currently active instance of Frost Shield."
+        "With the level 25 talent, Frost Shield grants health regeneration to the target. Fully works for buildings. Can regenerate up to 300 health over its full duration. The level 20 duration increasing talent further increases the health regeneration to 500 health with the over its full duration. Both duration increasing and Frost Shield health regeneration talents do not update currently active instance of Frost Shield.",
+        "Can regenerate up to 300 health over its full duration.",
+        "The level 20 duration increasing talent further increases the health regeneration to 500 health with the over its full duration.",
+        "Both duration increasing and Frost Shield health regeneration talents do not update currently active instance of Frost Shield."
       ],
       "mana": "100\/110\/120\/130",
       "hotKey": "W",
@@ -114,30 +111,30 @@
       ],
       "notes": [
         "Hypnotizes the target, forcing it to move towards the Lich, and preventing it from acting.",
-        "Sets the target's movement speed to 32%\/38%\/44%\/50% of the distance between Lich and the target. The speed is set once upon cast. If the target gets moved or teleported, the speed does not adapt. When cast at max cast range, this results in a speed of 114.29\/117.35\/121\/125. Grants the target unobstructed pathing, so they can move through cliffs, trees, and other units while Sinister Gaze is channeling..",
+        "Sets the target's movement speed to 32%\/38%\/44%\/50% of the distance between Lich and the target. The speed is set once upon cast. If the target gets moved or teleported, the speed does not adapt. When cast at max cast range, this results in a speed of 137.14 (TagTalent 101.05). Grants the affected target unobstructed pathing, so they can move through cliffs, trees, and other units while Sinister Gaze is channeling.",
         "The speed is set once upon cast. If the target gets moved or teleported, the speed does not adapt.",
-        "When cast at max cast range, this results in a speed of 114.29\/117.35\/121\/125.",
-        "Grants the target unobstructed pathing, so they can move through cliffs, trees, and other units while Sinister Gaze is channeling..",
-        "Drains 0.714%\/0.882%\/1%\/1.087% of current mana in 0.1-second intervals, starting immediately upon channel begin, resulting in 15\/18\/21\/24 instances. Can drain up to 10.19%\/14.75%\/19.03%\/23.07% of the target's current mana, assuming nothing else affects the target's mana.",
-        "Can drain up to 10.19%\/14.75%\/19.03%\/23.07% of the target's current mana, assuming nothing else affects the target's mana.",
+        "When cast at max cast range, this results in a speed of 137.14 (TagTalent 101.05).",
+        "Grants the affected target unobstructed pathing, so they can move through cliffs, trees, and other units while Sinister Gaze is channeling.",
+        "Drains 0.714%\/0.882%\/1%\/1.087% (TagTalent 0.526%\/0.682%\/0.8%\/0.893%) of current mana in 0.1-second intervals, starting immediately upon channel begin, resulting in 15\/18\/21\/24 (TagTalent 20\/23\/26\/29) instances. Can drain up to 10.19%\/14.75%\/19.03%\/23.07% (TagTalent 10.02%\/14.56%\/18.85%\/22.9%) of the target's current mana, assuming nothing else affects the target's mana.",
+        "Can drain up to 10.19%\/14.75%\/19.03%\/23.07% (TagTalent 10.02%\/14.56%\/18.85%\/22.9%) of the target's current mana, assuming nothing else affects the target's mana.",
         "Does not provide any form of vision over the target. However, the target turning invisible or entering the Fog of War does not cancel Sinister Gaze.",
         "Destroys trees within a 200 radius around the target at the end of the channeling.",
         "With Aghanim's Scepter, Sinister Gaze turns into an area-targeted ability, so that it cannot directly target units anymore. Does not target invisible units or units under Fog of War.",
         "Does not target invisible units or units under Fog of War."
       ],
-      "mana": "120\/130\/140\/150",
+      "mana": "80",
       "hotKey": "E",
       "cooldown": "24\/22\/20\/18",
       "description": "Hypnotizes an enemy unit, causing it to move towards a point between the two of you and drains a percentage of its current mana.",
       "spellName": "Sinister Gaze",
       "params": [
         "Cast Animation: 0+0",
-        "Cast Range: 500\/525\/550\/575",
+        "Cast Range: 600",
         "Distance Moved: 32%\/38%\/44%\/50%",
         "Current Mana Drained: 10%\/15%\/20%\/25%",
-        "Duration: 1.4\/1.7\/2.0\/2.3",
+        "Duration: 1.4\/1.7\/2.0\/2.3 (TagTalent 1.9\/2.2\/2.5\/2.8)",
         "Radius: 400",
-        "Casts Sinister Gaze in a target area.",
+        "Casts Sinister Gaze in a target area. Allows Lich to cast his other spells while channeling Sinister Gaze.",
         "Not blocked when upgraded."
       ],
       "itemBehaviour": [],
@@ -187,22 +184,17 @@
         "Damage Magical"
       ],
       "notes": [
-        "Chain Frost travels at a speed of 850.",
+        "Chain Frost travels at a speed of 1050.",
         "The projectile bounces with a 0.2 second delay.",
         "Can bounce on the same unit multiple times, but only when another target was hit between the bounces. Can bounce on, but cannot damage or slow Roshan. Only the initial hit can damage and slow him. Cannot bounce on Undying Zombies and units which are out of vision (e.g. invisible), invulnerable or hidden.",
         "Can bounce on, but cannot damage or slow Roshan. Only the initial hit can damage and slow him.",
         "Cannot bounce on Undying Zombies and units which are out of vision (e.g. invisible), invulnerable or hidden.",
         "Chain Frost first applies the debuff, then the damage.",
         "Leveling up Chain Frost and the damage increasing talent immediately update currently flying Chain Frost projectiles.",
-        "This is how much damage each bounce deals on each level (before reductions): Level 1: 250 \/ 265 \/ 280 \/ 295 \/ 310 \/ 325 \/ 340 \/ 355 \/ 370 \/ 385 \/ 400 Level 2: 400 \/ 420 \/ 440 \/ 460 \/ 480 \/ 500 \/ 520 \/ 540 \/ 560 \/ 580 \/ 600 Level 3: 550 \/ 575 \/ 600 \/ 625 \/ 650 \/ 675 \/ 700 \/ 725 \/ 750 \/ 775 \/ 800",
-        "Level 1: 250 \/ 265 \/ 280 \/ 295 \/ 310 \/ 325 \/ 340 \/ 355 \/ 370 \/ 385 \/ 400",
-        "Level 2: 400 \/ 420 \/ 440 \/ 460 \/ 480 \/ 500 \/ 520 \/ 540 \/ 560 \/ 580 \/ 600",
-        "Level 3: 550 \/ 575 \/ 600 \/ 625 \/ 650 \/ 675 \/ 700 \/ 725 \/ 750 \/ 775 \/ 800",
-        "",
-        "This is how much damage each bounce deals on each level with the damage talent (before reductions): Level 1: 350 \/ 365 \/ 380 \/ 395 \/ 410 \/ 425 \/ 440 \/ 455 \/ 470 \/ 485 \/ 500 Level 2: 500 \/ 520 \/ 540 \/ 560 \/ 580 \/ 600 \/ 620 \/ 640 \/ 660 \/ 680 \/ 700 Level 3: 650 \/ 675 \/ 700 \/ 725 \/ 750 \/ 775 \/ 800 \/ 825 \/ 850 \/ 875 \/ 900",
-        "Level 1: 350 \/ 365 \/ 380 \/ 395 \/ 410 \/ 425 \/ 440 \/ 455 \/ 470 \/ 485 \/ 500",
-        "Level 2: 500 \/ 520 \/ 540 \/ 560 \/ 580 \/ 600 \/ 620 \/ 640 \/ 660 \/ 680 \/ 700",
-        "Level 3: 650 \/ 675 \/ 700 \/ 725 \/ 750 \/ 775 \/ 800 \/ 825 \/ 850 \/ 875 \/ 900",
+        "This is how much damage each bounce deals on each level (before reductions): Level 1: 250 \/ 265 \/ 280 \/ 295 \/ 310 \/ 325 \/ 340 \/ 355 \/ 370 \/ 385 \/ 400 + 100 damage on each bounce Level 2: 400 \/ 420 \/ 440 \/ 460 \/ 480 \/ 500 \/ 520 \/ 540 \/ 560 \/ 580 \/ 600 + 100 damage on each bounce Level 3: 550 \/ 575 \/ 600 \/ 625 \/ 650 \/ 675 \/ 700 \/ 725 \/ 750 \/ 775 \/ 800 + 100 damage on each bounce",
+        "Level 1: 250 \/ 265 \/ 280 \/ 295 \/ 310 \/ 325 \/ 340 \/ 355 \/ 370 \/ 385 \/ 400 + 100 damage on each bounce",
+        "Level 2: 400 \/ 420 \/ 440 \/ 460 \/ 480 \/ 500 \/ 520 \/ 540 \/ 560 \/ 580 \/ 600 + 100 damage on each bounce",
+        "Level 3: 550 \/ 575 \/ 600 \/ 625 \/ 650 \/ 675 \/ 700 \/ 725 \/ 750 \/ 775 \/ 800 + 100 damage on each bounce",
         "",
         "Can potentially deal up to 3575\/5500\/7425 (TagTalent 4675\/6600\/8525) damage total if all bounces hit (before reductions).",
         "The projectile has 800 range flying vision. The vision is not provided during the 0.2 second bounce delay.",
@@ -257,7 +249,7 @@
     {
       "talentLvl": "15",
       "talentLeft": "-3s Frost Blast Cooldown",
-      "talentRight": "+100 Damage"
+      "talentRight": "+0.5s Sinister Gaze Duration"
     },
     {
       "talentLvl": "10",

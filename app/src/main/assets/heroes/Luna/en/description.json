@@ -1,31 +1,27 @@
 {
   "abilities": [
     {
-      "notes": [
-        "The all \/ \/ stats talent effectively grants Luna 160 health, 0.8 health regeneration, 1.33 armor, 8 attack speed, 96 mana, 0.4 mana regeneration, and 8 attack damage.",
-        "The lifesteal talent stacks additively with other sources of lifesteal."
-      ],
       "spellName": "Talent",
       "talents": [
         {
           "talentLvl": "25",
           "talentLeft": "+0.2s Eclipse Lucent Ministun",
-          "talentRight": "30% Lifesteal"
+          "talentRight": "+35 Lunar Blessing Damage"
         },
         {
           "talentLvl": "20",
           "talentLeft": "+100 Lucent Beam Damage",
-          "talentRight": "+8 All Stats"
+          "talentRight": "Global Lunar Blessing"
         },
         {
           "talentLvl": "15",
-          "talentLeft": "+25 Movement Speed",
+          "talentLeft": "-20s Eclipse Cooldown",
           "talentRight": "-3.5s Lucent Beam Cooldown"
         },
         {
           "talentLvl": "10",
           "talentLeft": "+0.4s Lucent Beam Ministun",
-          "talentRight": "+15 Attack Speed"
+          "talentRight": "-8% Moon Glaives Damage Reduction"
         }
       ]
     },
@@ -39,21 +35,21 @@
       "notes": [
         "Lucent Beam first applies the damage, then the debuff.",
         "Luna's glaive emits particles during the cast time, visible to everyone.",
-        "With Aghanim's Shard, Lucent Beam can either be cast on a unit or on the ground. When targeting the ground, does not require any vision or True Sight. It can hit invisible and enemies inside the Fog of War. Only searches for heroes (including illusions, clones and creep-heroes) within the search area. Other units are ignored. This means if there are no heroes within the search area, Lucent Beam does no damage. Provides 300 radius ground vision at the targeted point for 3 seconds when cast on the ground.",
+        "With Aghanim's Shard, Lucent Beam can either be cast on a unit or on the ground. When targeting the ground, does not require any vision or True Sight. It can hit invisible and enemies inside the Fog of War. Only searches for heroes (including illusions, clones and creep-heroes) within the search area. Other units are ignored. This means if there are no heroes within the search area, Lucent Beam does no damage. Provides 300 radius ground vision at the targeted point for 3 seconds when ground-targeted.",
         "When targeting the ground, does not require any vision or True Sight. It can hit invisible and enemies inside the Fog of War.",
         "Only searches for heroes (including illusions, clones and creep-heroes) within the search area. Other units are ignored.",
         "This means if there are no heroes within the search area, Lucent Beam does no damage.",
-        "Provides 300 radius ground vision at the targeted point for 3 seconds when cast on the ground.",
-        "With Aghanim's Shard, Lucent Beam causes Luna to perform instant attacks on 2 random enemies within 500 radius of the targeted point. These instant attacks can proc any attack modifiers and on-hit effects normally (including Moon Glaives). They do not have True Strike, but ignore disarms. The targets are choosen completely randomly, there are no priorities. The attacks do not target invisible units, but can target units in Fog of War. The instant attacks originate from the targeted point or unit. When targeting the ground, the attacks originate from the targeted point even if the beam found and hit a nearby enemy hero.",
+        "Provides 300 radius ground vision at the targeted point for 3 seconds when ground-targeted.",
+        "With Aghanim's Shard, Lucent Beam causes Luna to perform instant attacks on 2 random enemies within 325 radius of the targeted point. These instant attacks can proc any attack modifiers and on-hit effects normally (including Moon Glaives). They do not have True Strike, but ignore disarms. The targets are chosen completely randomly, there are no priorities. The attacks do not target invisible units, but can target units in Fog of War. The instant attacks originate from the targeted point or unit. When targeting the ground, the attacks originate from the targeted point even if the beam found and hit a nearby enemy hero.",
         "These instant attacks can proc any attack modifiers and on-hit effects normally (including Moon Glaives). They do not have True Strike, but ignore disarms.",
-        "The targets are choosen completely randomly, there are no priorities.",
+        "The targets are chosen completely randomly, there are no priorities.",
         "The attacks do not target invisible units, but can target units in Fog of War.",
         "The instant attacks originate from the targeted point or unit.",
         "When targeting the ground, the attacks originate from the targeted point even if the beam found and hit a nearby enemy hero."
       ],
       "mana": "90\/100\/110\/120 (TagTalent 40\/50\/60\/70)",
       "hotKey": "Q",
-      "cooldown": "6 (TagTalent 2.5)",
+      "cooldown": "9\/8\/7\/6 (TagTalent 5.5\/4.5\/3.5\/2.5)",
       "description": "Calls a beam of lunar energy down upon an enemy, damaging and briefly stunning them.",
       "spellName": "Lucent Beam",
       "params": [
@@ -61,10 +57,9 @@
         "Cast Range: 800",
         "Damage: 75\/150\/225\/300 (TagTalent 175\/250\/325\/400)",
         "Stun Duration: 0.8 (TagTalent 1.2)",
-        "Hero Search Radius: 325",
-        "Instant Attack Search Radius: 500",
+        "Search Radius: 325",
         "Number of Instant Attacks: 2",
-        "Allows Lucent beam to be ground targeted with a 325 target search radius. Also releases attacks on up to two random targets within 500 range of the Lucent Beam. Reduces manacost by 50.",
+        "Allows Lucent beam to be ground targeted with a 325 target search radius. Also releases attacks on up to two random targets within 2 range of the Lucent Beam. Reduces manacost by 50.",
         "Blocked even when ground-targeted."
       ],
       "itemBehaviour": [],
@@ -88,7 +83,7 @@
         "This means it works with critical strike and quell, since these are included in the initial damage calculations.",
         "This also means that it does not matter how much damage the attack actually did to the target, since that part is being calculated on projectile hit.",
         "It also means that other conditional attack damage bonuses like a Javelin proc are not included, since these happen later as well.",
-        "Effectively increases Luna's attack damage by 87.5%\/114.76%\/148.21%\/191.49% if all bounces hit.",
+        "Effectively increases Luna's attack damage by 71.88%\/93.75%\/120.26%\/153.89% (TagTalent 93.1%\/122.47%\/158.69%\/205.88%) if all bounces hit.",
         "Can bounce back to the same units if it already hit all other nearby units. If no other units are nearby, the ability does nothing. Cannot bounce on enemies in the Fog of War. Does bounce to, but does not damage ethereal units. Does not bounce to invisible units.",
         "Does bounce to, but does not damage ethereal units. Does not bounce to invisible units.",
         "Does not bounce towards wards and allies, but it does bounce off of them when attacking them. Fully works against buildings.",
@@ -102,7 +97,7 @@
       "params": [
         "Search Radius: 500",
         "Number of Bounces: 3\/4\/5\/6",
-        "Damage Reduction per Bounce: 50%\/44%\/38%\/32%",
+        "Damage Reduction per Bounce: 56%\/50%\/44%\/38% (TagTalent 48%\/42%\/36%\/30%)",
         "When disjointed by the primary attack target, it does not bounce. When disjointed by a secondary target, the disjointing unit is not registered as hit, meaning the attack can immediately bounce on it again if within range. A disjointed bounce still counts towards the max bounces."
       ],
       "itemBehaviour": [],
@@ -128,9 +123,9 @@
       "description": "Increases the attack damage for Luna and nearby allied heroes. Luna is also blessed with increased vision range at night.",
       "spellName": "Lunar Blessing",
       "params": [
-        "Radius: 1200",
+        "Radius: 1200 (TagTalent Global)",
         "Self Night Vision Bonus: 250\/500\/750\/1000",
-        "Attack Damage Bonus: 5\/15\/25\/35",
+        "Attack Damage Bonus: 5\/15\/25\/35 (TagTalent 40\/50\/60\/70)",
         "Aura Linger Duration: 0.5"
       ],
       "itemBehaviour": [],
@@ -174,7 +169,7 @@
       ],
       "mana": "150\/200\/250",
       "hotKey": "R",
-      "cooldown": "140",
+      "cooldown": "140 (TagTalent 120)",
       "description": "Showers random nearby enemies with strikes from Luna's current level of Lucent Beam. These beams do not stun their targets, and there is a maximum number of times that a single target can be struck. Also turns day into night for 10 seconds.",
       "spellName": "Eclipse",
       "params": [
@@ -207,22 +202,22 @@
     {
       "talentLvl": "25",
       "talentLeft": "+0.2s Eclipse Lucent Ministun",
-      "talentRight": "30% Lifesteal"
+      "talentRight": "+35 Lunar Blessing Damage"
     },
     {
       "talentLvl": "20",
       "talentLeft": "+100 Lucent Beam Damage",
-      "talentRight": "+8 All Stats"
+      "talentRight": "Global Lunar Blessing"
     },
     {
       "talentLvl": "15",
-      "talentLeft": "+25 Movement Speed",
+      "talentLeft": "-20s Eclipse Cooldown",
       "talentRight": "-3.5s Lucent Beam Cooldown"
     },
     {
       "talentLvl": "10",
       "talentLeft": "+0.4s Lucent Beam Ministun",
-      "talentRight": "+15 Attack Speed"
+      "talentRight": "-8% Moon Glaives Damage Reduction"
     }
   ]
 }

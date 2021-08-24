@@ -23,7 +23,7 @@
         },
         {
           "talentLvl": "10",
-          "talentLeft": "+20 Movement Speed",
+          "talentLeft": "+1s Scatterblast Slow",
           "talentRight": "+200 Health"
         }
       ]
@@ -41,7 +41,7 @@
         "The complete area is shaped like a cone.",
         "Deals 120\/225\/330\/435 (TagTalent 232.5\/337.5\/442.5\/547.5) damage to units within point-blank distance.",
         "Scatterblast first applies the stun, then the knockback, then the damage, then the movement speed slow.",
-        "Leveling up Scatterblast, or choosing the damage increasing talent does not update the damage of an already launched instance.",
+        "Leveling up Scatterblast, choosing the movement speed slow increasing or damage increasing talent does not upgrade the current instance launched.",
         "With Aghanim's Shard, Scatterblast deals 245\/350\/455\/560 (TagTalent 357.5\/462.5\/567.5\/672.5) damage to units within point-blank distance. Also stuns for 0.3 seconds and knocks enemies 250 range back within the point-blank distance. Knocks back at a speed of 833.33. The knockback destroys trees the enemies collide with.",
         "Also stuns for 0.3 seconds and knocks enemies 250 range back within the point-blank distance. Knocks back at a speed of 833.33.",
         "The knockback destroys trees the enemies collide with."
@@ -62,7 +62,7 @@
         "Point-Blank Percentage Damage Bonus: 50%",
         "Move Speed Slow: 100%",
         "Attack Speed Slow: 100",
-        "Slow Duration: 1",
+        "Slow Duration: 1 (TagTalent 2)",
         "Point-Blank Flat Damage Bonus: 125",
         "Point-Blank Knockback Distance: 250",
         "Point-Blank Knockback Duration: 0.3",
@@ -96,7 +96,7 @@
         "Destroys trees within a 150 radius upon landing.",
         "The health restore talent immediately upgrades already launched cookies, making them heal on impact."
       ],
-      "mana": "110",
+      "mana": "100",
       "hotKey": "W",
       "cooldown": "21\/19\/17\/15",
       "description": "Snapfire feeds a potent cookie to Mortimer or an ally, causing them to hop a short distance. The hopping unit stuns and damages enemies in the landing zone.",
@@ -267,11 +267,11 @@
         "Snapfire is disarmed during Mortimer Kisses. Attack orders behave like move orders during disarms, so right-clicking an enemy sets a new location as well.",
         "The destination for each glob is marked with a red circle indicator, which is visible to allies only.",
         "Launches globs in 0.75-second (TagTalent 0.429-second) intervals, starting immediately upon cast, resulting in 8 (TagTalent 14) globs.",
-        "Each glob deals the impact damage and leaves a lava puddle behind. The puddles last 3 seconds. The puddles apply the debuff on enemies in 0.5 second intervals, starting immediately as they are created, resulting in 7 instances. The debuff lasts 1 second, and deals 25\/37.5\/50 damage in 0.5 second intervals, starting immediately upon being placed, resulting in 3 instances. Multiple instances of the debuff do not stack.",
+        "Each glob deals the impact damage and leaves a lava puddle behind. The puddles last 3 seconds. The puddles apply the debuff on enemies in 0.5 second intervals, starting immediately as they are created, resulting in 7 instances. The debuff lasts 1 second, and deals 30\/40\/50 damage in 0.5 second intervals, starting immediately upon being placed, resulting in 3 instances. Multiple instances of the debuff do not stack.",
         "The puddles apply the debuff on enemies in 0.5 second intervals, starting immediately as they are created, resulting in 7 instances.",
-        "The debuff lasts 1 second, and deals 25\/37.5\/50 damage in 0.5 second intervals, starting immediately upon being placed, resulting in 3 instances.",
+        "The debuff lasts 1 second, and deals 30\/40\/50 damage in 0.5 second intervals, starting immediately upon being placed, resulting in 3 instances.",
         "Multiple instances of the debuff do not stack.",
-        "A single glob can deal a total of 385\/577.5\/770 damage, considering impact damage, and standing within the puddle for the full duration.",
+        "A single glob can deal a total of 430\/600\/770 damage, considering impact damage, and standing within the puddle for the full duration.",
         "Provides 275 radius flying vision at the current targeted location for the globs, lasting until Mortimer stops launching projectiles.",
         "The projectiles provide 500 radius flying vision as they travel. This vision lingers for 3.5 seconds at the impact area.",
         "Leveling up Mortimer Kisses does not update the impact damage of already launched globs to the new level. However, the lava puddles are updated to apply the debuff with the new level's value. Already placed debuffs are not updated to the new level.",
@@ -282,7 +282,7 @@
       ],
       "mana": "125\/150\/175",
       "hotKey": "R",
-      "cooldown": "110",
+      "cooldown": "120\/110\/100",
       "description": "Snapfire's friend launches a barrage of firespit globs over 6 seconds. Globs cause impact damage and create pools of firespit, which slow and apply damage over time. Snapfire has a reduced turn rate for the duration and a minimum launch range of 600. Each glob can be targeted with a right click.",
       "spellName": "Mortimer Kisses",
       "params": [
@@ -294,7 +294,7 @@
         "Turn Rate in Degrees per Second: 75°",
         "Number of Projectiles: 8 (TagTalent 14)",
         "Impact Damage: 160\/240\/320",
-        "Debuff Damage per Second: 50\/75\/100",
+        "Debuff Damage per Second: 60\/80\/100",
         "Move Speed Slow: 15%\/20%\/25% (TagTalent 35%\/40%\/45%)",
         "Launch Duration: 6",
         "Puddle Duration: 3",
@@ -308,7 +308,7 @@
     }
   ],
   "mainAttributes": {
-    "attrStrengthInc": 3.3,
+    "attrStrengthInc": 3.5,
     "attrStrength": 20.0,
     "attrIntelligence": 21.0,
     "attrIntelligenceInc": 2.2,
@@ -335,7 +335,7 @@
     },
     {
       "talentLvl": "10",
-      "talentLeft": "+20 Movement Speed",
+      "talentLeft": "+1s Scatterblast Slow",
       "talentRight": "+200 Health"
     }
   ]

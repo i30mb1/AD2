@@ -96,7 +96,7 @@
       "description": "Links Lone Druid and the Spirit Bear, increasing the attack speed of both and causing damage dealt by the Spirit Bear to heal Lone Druid.",
       "spellName": "Spirit Link",
       "params": [
-        "Attack Speed Bonus: 15\/30\/45\/60",
+        "Attack Speed Bonus: 16\/34\/52\/70",
         "Shared Lifesteal: 20%\/35%\/50%\/65%",
         "Lifesteal is disabled if Lone Druid is affected by Break. Attack speed is not disabled."
       ],
@@ -158,7 +158,8 @@
         "Lone Druid gets his maximum and current health increased by the given value. This does not count as a heal. Upon losing the buff, his current health stays the same and only the maximum health bonus gets reverted. The maximum health increasing talent does not upgrade the current active True Form instance, but it instantly upgrades Spirit Bear's health.",
         "Upon losing the buff, his current health stays the same and only the maximum health bonus gets reverted.",
         "The maximum health increasing talent does not upgrade the current active True Form instance, but it instantly upgrades Spirit Bear's health.",
-        "While active, Lone Druid gains Demolish and Entangling Claws, based on the same level as the Spirit Bear's abilities.",
+        "While in True Form, Lone Druid deals 15%\/25%\/35%\/45% bonus damage to buildings with Demolish based on Summon Spirit Bear's current level. Also, it increases Entangling Claws proc chance to 30%.",
+        "Also, it increases Entangling Claws proc chance to 30%.",
         "True Form persists through Lone Druid's death. If he dies during it, he respawns in True Form.",
         "Changes Lone Druid's model and alters his voice."
       ],
@@ -174,6 +175,8 @@
         "Armor Bonus: 8\/10\/12",
         "Health Bonus: 500\/1000\/1500 (TagTalent 1500\/2000\/2500)",
         "Attack Range Loss: 325",
+        "Active Entangle Proc Change Bonus: 10%",
+        "Active Building Attack Damage Bonus: 5%",
         "Duration: 40",
         "Illusions get their own True Form buff lasting its regular duration."
       ],
@@ -218,7 +221,7 @@
         "The magic resistance stacks multiplicatively with other sources of magic resistance. Increases the Spirit Bear's total magic resistance to 33%.",
         "Increases the Spirit Bear's total magic resistance to 33%.",
         "Increases the Spirit Bear's total attack damage against buildings, including raw damage bonuses.",
-        "While True Form is active, Lone Druid gains the current level of Demolish."
+        "While True Form is active, Lone Druid gains the current level of Demolish, with 15%\/25%\/35%\/45% building attack damage bonus."
       ],
       "mana": null,
       "hotKey": null,
@@ -246,7 +249,7 @@
       "mana": "50",
       "hotKey": "E",
       "cooldown": "38\/32\/26\/20 (TagTalent 28\/22\/16\/10)",
-      "description": "Lone Druid and the Spirit Bear roar fiercely causing nearby enemies to flee towards their base in terror. Their movement speed is increased by 1.4\/1.8\/2.2\/2.6.",
+      "description": "Lone Druid and the Spirit Bear roar fiercely causing nearby enemies to flee towards their base in terror. Their movement speed is increased by 20%.",
       "spellName": "Savage Roar",
       "params": [
         "Cast Animation: 0.1+0.64",
@@ -274,11 +277,11 @@
         "Roots the target, preventing it from moving and casting certain mobility spells. Provides True Sight over the target.",
         "Provides True Sight over the target.",
         "The proccing attack first applies the debuff, then its own damage.",
-        "Deals 15 damage in 0.25 second intervals, starting 0.25 seconds after the debuff is placed, resulting in 3\/6\/9\/12 instances.",
+        "Deals 15 damage in 0.25-second intervals, starting 0.25 seconds after the debuff is placed, resulting in 3\/6\/9\/12 instances.",
         "Deals a total of 45\/90\/135\/180 damage (before reductions).",
         "Does not affect ancient creeps.",
         "Entangling Claws uses pseudo-random distribution.",
-        "While True Form is active, Lone Druid gains the current level of Entangling Claws."
+        "While True Form is active, Lone Druid gains the current level of Entangling Claws, with a 30% proc chance."
       ],
       "mana": null,
       "hotKey": null,

@@ -2,8 +2,6 @@
   "abilities": [
     {
       "notes": [
-        "The health talent increases maximum health capacity, and keeps the current health percentage.",
-        "The agility talent effectively grants Hoodwink 2.67 armor, 16 attack speed, and 16 attack damage.",
         "Armor Corruption from talents is not disabled by Break. The armor corruption lasts 10 seconds, and stacks with the Armor Corruption talents of other heroes.",
         "The armor corruption lasts 10 seconds, and stacks with the Armor Corruption talents of other heroes."
       ],
@@ -21,13 +19,13 @@
         },
         {
           "talentLvl": "15",
-          "talentLeft": "+16 Agility",
+          "talentLeft": "+2 Acorn Shot Bounces",
           "talentRight": "Scurry Camouflage"
         },
         {
           "talentLvl": "10",
           "talentLeft": "-4s Bushwhack Cooldown",
-          "talentRight": "+200 Health"
+          "talentRight": "+1 Scurry Duration"
         }
       ]
     },
@@ -46,7 +44,7 @@
         "Unlike with other planted trees, Tango does not heal for twice as long when targeting a Acorn Shot tree.",
         "The planted tree provides 200 radius ground vision around itself, that lasts for 20 seconds or until the tree is destroyed.",
         "When put on Autocast, it can only target the ground.",
-        "When targeting a unit, the initial hit is not counted towards the bounce limit, so that up to 3\/4\/5\/6 hits can be achieved.",
+        "When targeting a unit, the initial hit is not counted towards the bounce limit, so that up to 3\/4\/5\/6 (TagTalent 5\/6\/7\/8) hits can be achieved.",
         "The projectile speed is based on the attack projectile speed of the caster. Initially, the projectile's speed matches the caster's projectile speed, but is halved on the bounces. Has an initial projectile speed of 1800 and a bounce speed of 900 on Hoodwink. The projectile speed can be further increased by other attack projectile speed bonuses.",
         "Initially, the projectile's speed matches the caster's projectile speed, but is halved on the bounces.",
         "Has an initial projectile speed of 1800 and a bounce speed of 900 on Hoodwink.",
@@ -71,7 +69,7 @@
         "Attack Range Bonus: 125\/200\/275\/350",
         "Instant Attack Damage Bonus: 50\/75\/100\/125",
         "Instant Attack Damage: 75%",
-        "Number of Bounces: 2\/3\/4\/5",
+        "Number of Bounces: 2\/3\/4\/5 (TagTalent 4\/5\/6\/7)",
         "Move Speed Slow: 100%",
         "Slow Duration: 0.25",
         "Tree Duration: 20",
@@ -96,6 +94,7 @@
         "The projectile travels at a speed of 1200.",
         "With the maximum cast range and radius, Bushwhack can hit units up to 1265 range away.",
         "If there are no trees within the area, nothing happens.",
+        "Deals 15\/25\/32.14\/37.5 damage in 0.3-second intervals, starting 0.3 seconds after receiving the debuff, resulting in 5\/6\/7\/8 instances.",
         "Hit enemies are stunned and moved towards the tree closest to the center of the targeted point. However, if there is another tree in the way, the unit is bound to that tree instead. Moves units towards the tree at a speed of 1000. Exposes hit enemies for the debuff duration, revealing their exact location.",
         "However, if there is another tree in the way, the unit is bound to that tree instead.",
         "Moves units towards the tree at a speed of 1000.",
@@ -115,7 +114,7 @@
         "Cast Animation: 0.2+1.07",
         "Cast Range: 1000",
         "Radius: 265",
-        "Damage: 75\/150\/225\/300",
+        "Total Damage: 75\/150\/225\/300",
         "Stun Duration: 1.5\/1.8\/2.1\/2.4"
       ],
       "itemBehaviour": [],
@@ -151,7 +150,7 @@
         "Passive Tree Search Radius: 275",
         "Passive Evasion: 8%\/16%\/24%\/32%",
         "Active Move Speed Bonus: 20%\/25%\/30%\/35%",
-        "Active Duration: 4",
+        "Active Duration: 4 (TagTalent 5)",
         "Number of Charges: 2",
         "Charge Replenish Time: 30\/24\/18\/12",
         "Passive Invisibility Fade Delay: 1.2",
@@ -175,22 +174,29 @@
         "Decoy can be cast without having to face towards the targeted point.",
         "Does not interrupt Hoodwink's channeling abilities or any other current order upon cast.",
         "The illusion automatically walks to the targeted point once created.",
-        "The illusion spawns with the Scurry buff based on its current level. If Scurry is not learned, the buff is still placed, but without any values. This means it does not grant the movement speed bonus, but still grants the phased movement and tree-walking.",
+        "The illusion spawns with the Scurry buff based on its current level. If Scurry is not learned, the buff is still placed, but without any values. This means it does not grant the movement speed bonus, but still grants the phased movement and tree-walking. The Scurry duration increasing talent does not increase the duration of the Decoy's Scurry.",
         "If Scurry is not learned, the buff is still placed, but without any values.",
         "This means it does not grant the movement speed bonus, but still grants the phased movement and tree-walking.",
-        "The tree and area stun are only applied when the illusion gets triggered. They are not applied if the illusion is destroyed in other ways or it expires. It gets triggered when an enemy hero (including illusions, clones, and creep-heroes) lands an attack on it. Missed attacks do not count. It gets also triggered when it gets targeted by an ability, following the rules of Spell Block.",
-        "It gets triggered when an enemy hero (including illusions, clones, and creep-heroes) lands an attack on it. Missed attacks do not count.",
-        "It gets also triggered when it gets targeted by an ability, following the rules of Spell Block.",
-        "When triggered, the illusion is instantly destroyed and it is not credited to anyone. Creates a regular planted tree at its location when triggered. This tree is smaller than the other trees on the map and has a smaller collision size. Tango heals for twice as long when targeting a Decoy tree. Although using Bushwhack's modifier, the area stun is completely independent from the ability. This means, in Ability Draft, Bushwhack is not required for the the stun to be applied, it works regardless.",
-        "Creates a regular planted tree at its location when triggered. This tree is smaller than the other trees on the map and has a smaller collision size.",
+        "The Scurry duration increasing talent does not increase the duration of the Decoy's Scurry.",
+        "The illusion is permanently phased.",
+        "When hit by an attack or a single-target ability within 1000 range, the Decoy's effects trigger. Only triggers on attacks of enemy heroes (including illusions, clones, and creep-heroes). Triggers on abilities of any unit, not just heroes. Follows the rules of Spell Block. The triggering ability gets blocked as well. Attacks and abilities coming from more than 1000 range away do not trigger the Decoy. However, abilities from outisde that distance still get fully blocked. Attacks affect the Decoy normally.",
+        "Only triggers on attacks of enemy heroes (including illusions, clones, and creep-heroes).",
+        "Triggers on abilities of any unit, not just heroes. Follows the rules of Spell Block. The triggering ability gets blocked as well.",
+        "Attacks and abilities coming from more than 1000 range away do not trigger the Decoy.",
+        "However, abilities from outisde that distance still get fully blocked. Attacks affect the Decoy normally.",
+        "When triggered, the illusion gets destroyed, and a lesser Bushwhack is sent towards the target. The triggering enemy does not get any credits for the Decoy's destruction.",
+        "When triggered, the illusion gets destroyed, and a lesser Bushwhack is sent towards the target.",
+        "The triggering enemy does not get any credits for the Decoy's destruction.",
+        "The lesser Bushwhack flies towards the triggering enemy's location upon triggering. It does not follow them. Upon reaching that location, it first creates a planted tree. This tree is smaller than the other trees on the map and has a smaller collision size. Tango heals for twice as long when targeting a Decoy tree. Although using Bushwhack's modifier, the area stun is completely independent from the ability. This means, in Ability Draft, Bushwhack is not required for the the stun to be applied, it works regardless.",
+        "Upon reaching that location, it first creates a planted tree. This tree is smaller than the other trees on the map and has a smaller collision size.",
         "Tango heals for twice as long when targeting a Decoy tree.",
         "Although using Bushwhack's modifier, the area stun is completely independent from the ability.",
         "This means, in Ability Draft, Bushwhack is not required for the the stun to be applied, it works regardless."
       ],
       "mana": "50",
       "hotKey": "D",
-      "cooldown": "60",
-      "description": "Hoodwink sends a decoy illusion to the target location. When the illusion is attacked or hit by a targeted ability, it is destroyed and plants a tree in its place that applies a lesser Bushwhack to enemy heroes around it.",
+      "cooldown": "25",
+      "description": "Hoodwink sends a decoy illusion to the target location. When the illusion is attacked or hit by a targeted ability, it is destroyed and it throws a lesser bushwhack towards the enemy.",
       "spellName": "Decoy",
       "params": [
         "Cast Animation: 0+0",
@@ -199,8 +205,9 @@
         "Illusion Damage Dealt: 0%",
         "Illusion Damage Taken: 200%",
         "Illusion Duration: 12",
+        "Trigger Distance: 1000",
         "Stun Radius: 250",
-        "Stun Duration: 1",
+        "Stun Duration: 2",
         "Tree Duration: 20"
       ],
       "itemBehaviour": [],
@@ -210,20 +217,22 @@
     {
       "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/2\/22\/Hoodwink_Hunter%27s_Boomerang_1.mp3\/revision\/latest?cb=20210410154149",
       "effects": [
-        "Ability Target Unit",
+        "Ability Target Point \/ Target Unit",
         "Affects Enemies",
         "Damage Magical"
       ],
       "notes": [
         "Requires Aghanim's Scepter to be unlocked. In Ability Draft, Hunter's Boomerang can be unlocked by the player that drafted Sharpshooter.",
         "In Ability Draft, Hunter's Boomerang can be unlocked by the player that drafted Sharpshooter.",
-        "Can be cast on an unit, including allies, excluding self, buildings and wards. Targeting allies sends the boomerang towards them, but does not affect them.",
+        "When targeting a unit, the boomerang homes in on the target. Can be cast on any unit, including allies, excluding self, buildings and wards. Targeting allies sends the boomerang towards them, but does not affect them. The boomerang either travel at a speed of 900 or reaches the target unit between 0.5 and 1.2 seconds, whichever is faster. The same applies upon returning. This means the boomerang can fly for a minimum of 1 second and a maximum of 2.4 seconds. The duration is set once upon cast, based on the distances. If the distances change after cast, the speed adapts to the predetermined duration. For example, if the target was within 450 range upon cast, the boomerang will have fully returned within 1 second. If the target was more than 1080 range away, it will have fully returned within 2.4 seconds.",
+        "Can be cast on any unit, including allies, excluding self, buildings and wards.",
         "Targeting allies sends the boomerang towards them, but does not affect them.",
-        "The boomerang either travel at a speed of 900 or reaches the target unit between 0.5 and 1.2 seconds, whichever is faster. The same applies upon returning. This means the boomerang can fly for a minimum of 1 second and a maximum of 2.4 seconds. The duration is set once upon cast, based on the distances. If the distances change after cast, the speed adapts to the predetermined duration. For example, if the target was within 450 range upon cast, the boomerang will have fully returned within 1 second. If the target was more than 1080 range away, it will have fully returned within 2.4 seconds.",
+        "The boomerang either travel at a speed of 900 or reaches the target unit between 0.5 and 1.2 seconds, whichever is faster. The same applies upon returning.",
         "This means the boomerang can fly for a minimum of 1 second and a maximum of 2.4 seconds.",
         "The duration is set once upon cast, based on the distances. If the distances change after cast, the speed adapts to the predetermined duration. For example, if the target was within 450 range upon cast, the boomerang will have fully returned within 1 second. If the target was more than 1080 range away, it will have fully returned within 2.4 seconds.",
         "For example, if the target was within 450 range upon cast, the boomerang will have fully returned within 1 second.",
         "If the target was more than 1080 range away, it will have fully returned within 2.4 seconds.",
+        "When targeting the ground, it flies towards that point at the fixed speed of 900.",
         "The boomerang is always thrown from Hoodwink's right side and returns from the opposite side. It flies towards the target arcing to the right side and returns to Hoodwink in a mirrored arc. Both arcs have a combined width of 400. Its minimum travel distance is 400 as well, so when targeting a point closer than 400 range, it flies in a triangular pattern with side lengths of 400.",
         "It flies towards the target arcing to the right side and returns to Hoodwink in a mirrored arc.",
         "Both arcs have a combined width of 400.",
@@ -362,13 +371,13 @@
     },
     {
       "talentLvl": "15",
-      "talentLeft": "+16 Agility",
+      "talentLeft": "+2 Acorn Shot Bounces",
       "talentRight": "Scurry Camouflage"
     },
     {
       "talentLvl": "10",
       "talentLeft": "-4s Bushwhack Cooldown",
-      "talentRight": "+200 Health"
+      "talentRight": "+1 Scurry Duration"
     }
   ]
 }

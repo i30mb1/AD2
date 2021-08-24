@@ -4,10 +4,7 @@
       "notes": [
         "The strength talent effectively grants Queen of Pain 220 health and 1.1 health regeneration.",
         "This attack damage talent is added as raw attack damage. Does not benefit illusions and is not affected by most percentage-based damage increasing or reducing effects.",
-        "Does not benefit illusions and is not affected by most percentage-based damage increasing or reducing effects.",
-        "The cooldown reduction talent stacks multiplicatively with other sources cooldown reduction.",
-        "The spell lifesteal talent stacks additively with other sources of spell lifesteal. Heals for 6% from non-hero units. Treats creep-heroes as creeps and does not heal off of illusions.",
-        "Heals for 6% from non-hero units. Treats creep-heroes as creeps and does not heal off of illusions."
+        "Does not benefit illusions and is not affected by most percentage-based damage increasing or reducing effects."
       ],
       "spellName": "Talent",
       "talents": [
@@ -19,12 +16,12 @@
         {
           "talentLvl": "20",
           "talentLeft": "525 AoE Shadow Strike",
-          "talentRight": "30% Spell Lifesteal"
+          "talentRight": "+120 Scream of Pain Damage"
         },
         {
           "talentLvl": "15",
           "talentLeft": "+30 Attack Speed",
-          "talentRight": "10% Cooldown Reduction"
+          "talentRight": "+2 Shadow Strike Damage Instances"
         },
         {
           "talentLvl": "10",
@@ -48,8 +45,11 @@
         "Level 3: 50.0% \/ 40.8% \/ 32.7% \/ 25.9% \/ 20.1% \/ 15.5% \/ 11.7% \/ 8.7% \/ 6.4% \/ 4.6% \/ 3.3% \/ 2.3% \/ 1.6% \/ 1.1% \/ 0.7%",
         "Level 4: 65.0% \/ 53.0% \/ 42.5% \/ 33.6% \/ 26.2% \/ 20.1% \/ 15.2% \/ 11.3% \/ 8.3% \/ 6.0% \/ 4.3% \/ 3.0% \/ 2.1% \/ 1.4% \/ 0.9%",
         "A unit with less than 25% of its maximum health can be denied when it has the Shadow Strike debuff on.",
-        "Deals the initial damage upon impact and the damage over time in 3 second intervals, resulting in overall 6 damage instances. Can deal up to 180\/310\/440\/570 damage to the target (before reductions).",
-        "Can deal up to 180\/310\/440\/570 damage to the target (before reductions).",
+        "Deals the initial damage upon impact and the damage over time in 3 (2.1428571428571) second intervals, resulting in overall 6 (8) damage instances. Can deal up to 130\/260\/390\/520 (170\/340\/510\/680) damage to the target (before reductions).",
+        "Can deal up to 130\/260\/390\/520 (170\/340\/510\/680) damage to the target (before reductions).",
+        "Heals the caster for half-value on heroes and quarter-value on creeps on every tick Does not heal on the initial damage. For a single enemy hero, this results in up to 50\/100\/150\/200 (70\/140\/210\/280) health restored.",
+        "Does not heal on the initial damage.",
+        "For a single enemy hero, this results in up to 50\/100\/150\/200 (70\/140\/210\/280) health restored.",
         "Successive casts on the same target remove the debuff from the previous cast and place a new one. This means the initial damage is dealt again, and the slow value and tick interval are effectively reset.",
         "This means the initial damage is dealt again, and the slow value and tick interval are effectively reset.",
         "The level 20 talent adds a 525 radius to this ability. The ability must be centered over a unit still. Upon cast, Queen of Pain sends daggers towards every enemy within the radius. These behave just like a regular cast, and can be disjointed normally. Also targets units inside the Fog of War and invisible units. However, invisible targets instantly disjoint it.",
@@ -59,15 +59,17 @@
       ],
       "mana": "110\/120\/130\/140",
       "hotKey": "Q",
-      "cooldown": "16\/12\/8\/4 (TagTalent 14.4\/10.8\/7.2\/3.6)",
-      "description": "Hurls a poisoned dagger which deals large initial damage, and then deals damage over time. The poisoned unit has its movement speed slowed for 15 seconds. An instance of damage is dealt every 3 seconds.",
+      "cooldown": "16\/12\/8\/4",
+      "description": "Hurls a poisoned dagger which deals large initial damage, and then deals damage over time. The poisoned unit has its movement speed slowed for 50% seconds. An instance of damage is dealt every 3 (2.1428571428571) seconds.",
       "spellName": "Shadow Strike",
       "params": [
         "Cast Animation: 0.4+0.67",
         "Cast Range: 450\/500\/550\/600",
         "Initial Damage: 30\/60\/90\/120",
-        "Number of Instances: 5",
-        "Damage per Instance: 30\/50\/70\/90",
+        "Number of Instances: 5 (TagTalent 7)",
+        "Damage per Instance: 20\/40\/60\/80",
+        "Hero damage as Heal per Instance: 10\/20\/30\/40",
+        "Non-Hero damage as Heal per Instance: 50%",
         "Move Speed Slow: 20%\/35%\/50%\/65%",
         "Duration: 15",
         "Radius: 525",
@@ -89,11 +91,8 @@
         "Disjoints projectiles upon cast.",
         "Does not blink for the full distance when targeting closer than the max distance. When targeting beyond the max blink distance, Queen of Pain blinks for the max distance towards the targeted point.",
         "When targeting beyond the max blink distance, Queen of Pain blinks for the max distance towards the targeted point.",
-        "Only the flat cooldown reduction talent is displayed. With the level 15 talent alone, the cooldown is reduced to 10.8\/9\/7.2\/5.4. With both talents, the cooldown is reduced to 9\/7.2\/5.4\/3.6.",
-        "With the level 15 talent alone, the cooldown is reduced to 10.8\/9\/7.2\/5.4.",
-        "With both talents, the cooldown is reduced to 9\/7.2\/5.4\/3.6.",
-        "With Aghanim's Shard, Blink first applies the damage, then the silence debuff. The damage fully stack, so enemies within 300 radius of the starting and end location are hit twice. The silence however cannot be applied twice for double the duration.",
-        "The damage fully stack, so enemies within 300 radius of the starting and end location are hit twice.",
+        "With Aghanim's Shard, Blink first applies the damage, then the silence debuff. The damage fully stack, so enemies within 300 radius of the starting and end location are hit twice, resulting in 350 damage. The silence however cannot be applied twice for double the duration.",
+        "The damage fully stack, so enemies within 300 radius of the starting and end location are hit twice, resulting in 350 damage.",
         "The silence however cannot be applied twice for double the duration."
       ],
       "mana": "60",
@@ -129,13 +128,13 @@
       ],
       "mana": "85\/100\/115\/130",
       "hotKey": "E",
-      "cooldown": "7 (TagTalent 6.3)",
+      "cooldown": "7",
       "description": "The Queen of Pain lets loose a piercing scream around her, damaging nearby enemies.",
       "spellName": "Scream of Pain",
       "params": [
         "Cast Animation: 0+0.63",
         "Search Radius: 550",
-        "Damage: 75\/150\/225\/300"
+        "Damage: 75\/150\/225\/300 (TagTalent 195\/270\/345\/420)"
       ],
       "itemBehaviour": [],
       "legacyKey": "F",
@@ -162,7 +161,7 @@
       ],
       "mana": "250\/400\/550",
       "hotKey": "R",
-      "cooldown": "125 (TagTalent 112.5) (TagTalent 40, 36)",
+      "cooldown": "125 (TagTalent 40)",
       "description": "Creates a gigantic wave of sound in front of Queen of Pain, dealing heavy damage to all enemy units in its wake and pushing them back.",
       "spellName": "Sonic Wave",
       "params": [
@@ -227,12 +226,12 @@
     {
       "talentLvl": "20",
       "talentLeft": "525 AoE Shadow Strike",
-      "talentRight": "30% Spell Lifesteal"
+      "talentRight": "+120 Scream of Pain Damage"
     },
     {
       "talentLvl": "15",
       "talentLeft": "+30 Attack Speed",
-      "talentRight": "10% Cooldown Reduction"
+      "talentRight": "+2 Shadow Strike Damage Instances"
     },
     {
       "talentLvl": "10",

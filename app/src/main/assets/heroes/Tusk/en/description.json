@@ -24,7 +24,7 @@
         {
           "talentLvl": "10",
           "talentLeft": "+0.4s Walrus Punch Stun Duration",
-          "talentRight": "+8 Health Regen"
+          "talentRight": "+25 Tag Team Damage"
         }
       ]
     },
@@ -45,7 +45,12 @@
         "The shards' collision radius is approximately 67, the distance between them is about 6, which is too small for any unit to move through.",
         "Units not controlled by any player do not try to path around the shards, but simply walk against them as if they are not there. This effectively causes them to get stuck until they change directions (e.g. when aggro-ing them), or until Ice Shards dissipates.",
         "This effectively causes them to get stuck until they change directions (e.g. when aggro-ing them), or until Ice Shards dissipates.",
-        "The projectile has 100 radius flying vision. This vision lasts for 2 seconds at the targeted point upon reaching it."
+        "The projectile has 100 radius flying vision. This vision lasts for 2 seconds at the targeted point upon reaching it.",
+        "With Aghanim's Shard, with the spawn radius and the bonus shards length, it can hit units up to 400 range away. A 200 radius debuff aura is created at the center of the shards. Ice Shard now deals damage in 1-second intervals, starting 1 second after receiving the debuff, resulting in up to 4 possible instances. Can deal up to 240 damage (before reductions) to a single unit within the area for the entire duration. Acquiring Aghanim's Shard immediately upgrades all currently active Ice Shards.",
+        "A 200 radius debuff aura is created at the center of the shards.",
+        "Ice Shard now deals damage in 1-second intervals, starting 1 second after receiving the debuff, resulting in up to 4 possible instances.",
+        "Can deal up to 240 damage (before reductions) to a single unit within the area for the entire duration.",
+        "Acquiring Aghanim's Shard immediately upgrades all currently active Ice Shards."
       ],
       "mana": "100",
       "hotKey": "Q",
@@ -59,6 +64,9 @@
         "Shards Spawn Radius: 200",
         "Damage: 70\/140\/210\/280",
         "Shards Duration: 4\/5\/6\/7",
+        "Shards Length: 400",
+        "Damage per Second: 60",
+        "Move Speed Slow: 40%",
         "Pathing block affects spell immune units. Does not attempt to damage spell immune enemies."
       ],
       "itemBehaviour": [],
@@ -89,11 +97,11 @@
         "Dark Rift is the only ability able to force Tusk out of the Snowball. Upon doing so, Snowball gets fully canceled.",
         "When Snowball connects with its target, Tusk is given an attack order on the target, regardless of auto-attack settings.",
         "The Snowball destroys trees within its radius as it rolls forward.",
-        "This is how much damage Snowball deals (before reductions) with a certain amount of heroes including Tusk: 1 Hero: 100\/160\/220\/280 (TagTalent 220\/280\/340\/400) 2 Heroes: 120\/200\/280\/360 (TagTalent 240\/320\/400\/480) 3 Heroes: 140\/240\/340\/440 (TagTalent 260\/360\/460\/560) 4 Heroes: 160\/280\/400\/520 (TagTalent 280\/400\/520\/640) Tusk himself is not counted, so if no allied heroes are gathered, only the base damage is applied.",
-        "1 Hero: 100\/160\/220\/280 (TagTalent 220\/280\/340\/400)",
-        "2 Heroes: 120\/200\/280\/360 (TagTalent 240\/320\/400\/480)",
-        "3 Heroes: 140\/240\/340\/440 (TagTalent 260\/360\/460\/560)",
-        "4 Heroes: 160\/280\/400\/520 (TagTalent 280\/400\/520\/640)",
+        "This is how much damage Snowball deals (before reductions) with a certain amount of heroes including Tusk: 1 Hero: 105\/170\/235\/300 (TagTalent 225\/290\/355\/420) 2 Heroes: 130\/220\/310\/400 (TagTalent 250\/340\/430\/520) 3 Heroes: 155\/270\/385\/500 (TagTalent 275\/390\/505\/620) 4 Heroes: 180\/320\/460\/600 (TagTalent 300\/440\/580\/720) Tusk himself is not counted, so if no allied heroes are gathered, only the base damage is applied.",
+        "1 Hero: 105\/170\/235\/300 (TagTalent 225\/290\/355\/420)",
+        "2 Heroes: 130\/220\/310\/400 (TagTalent 250\/340\/430\/520)",
+        "3 Heroes: 155\/270\/385\/500 (TagTalent 275\/390\/505\/620)",
+        "4 Heroes: 180\/320\/460\/600 (TagTalent 300\/440\/580\/720)",
         "",
         "Tusk himself is not counted, so if no allied heroes are gathered, only the base damage is applied.",
         "Snowball first applies the debuff, then the damage.",
@@ -113,7 +121,7 @@
         "Max Stationary Time: 3",
         "Max Chase Duration: 3",
         "Base Damage: 80\/120\/160\/200 (TagTalent 200\/240\/280\/320)",
-        "Damage Bonus per Gathered Hero: 20\/40\/60\/80",
+        "Damage Bonus per Gathered Hero: 25\/50\/75\/100",
         "Snowball Speed: 600\/625\/650\/675",
         "Stun Duration: 0.5\/0.75\/1\/1.25",
         "Cannot target spell immune enemies. Does not attempt to damage or stun spell immune enemies. Can pull spell immune allies inside."
@@ -165,7 +173,7 @@
       "params": [
         "Cast Animation: 0+0",
         "Radius: 350",
-        "Attack Damage Bonus on Proc: 20\/45\/70\/95",
+        "Attack Damage Bonus on Proc: 20\/45\/70\/95 (TagTalent 45\/70\/95\/120)",
         "Move Speed Slow: 75%",
         "Slow Duration: 0.4",
         "Aura Duration: 5",
@@ -217,38 +225,6 @@
       "itemBehaviour": [],
       "legacyKey": "D",
       "story": "Tusk may have made his name with his fists, but the wise enemy is wary of any and all limbs."
-    },
-    {
-      "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/7\/73\/Tusk_Frozen_Sigil.mp3\/revision\/latest?cb=20201007213717",
-      "effects": [
-        "Ability No Target",
-        "Affects Enemies"
-      ],
-      "notes": [
-        "Requires Aghanim's Shard to be unlocked.",
-        "Frozen Sigil spawns at Tusk's exact location.",
-        "After cast, the Sigil automatically follows Tusk, if no other order is given.",
-        "The slow is provided by an aura. Its debuff lingers for 25 seconds.",
-        "Can be gathered inside Snowball, even though it is a ward-type unit."
-      ],
-      "mana": "70",
-      "hotKey": "F",
-      "cooldown": "30",
-      "description": "Summons a flying Sigil that slows enemy attack by -40% and movement speed by -40% for enemies within 650 radius. Lasts seconds. Cooldown: 30",
-      "spellName": "Frozen Sigil",
-      "params": [
-        "Cast Animation: 0.1+0.94",
-        "Radius: 650",
-        "Hero Attacks to Destroy: 6",
-        "Non-Hero Attacks to Destroy: 24",
-        "Move Speed Slow: 40%",
-        "Aura Linger Duration: 0.5",
-        "Sigil Duration: 25",
-        "Slow persists if debuff was placed before spell immunity."
-      ],
-      "itemBehaviour": [],
-      "legacyKey": "F",
-      "story": "The chill of home!"
     },
     {
       "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/b\/b2\/Tusk_Walrus_PUNCH%21.mp3\/revision\/latest?cb=20191216025622",
@@ -325,7 +301,7 @@
     {
       "talentLvl": "10",
       "talentLeft": "+0.4s Walrus Punch Stun Duration",
-      "talentRight": "+8 Health Regen"
+      "talentRight": "+25 Tag Team Damage"
     }
   ]
 }

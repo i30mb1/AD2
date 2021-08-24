@@ -40,6 +40,9 @@
         "Damage Pure"
       ],
       "notes": [
+        "The cast range of Arcane Orb is based on the attack range of the caster. The cast range can be further increased by other attack range bonuses. However, it is not affected by cast range bonuses. Both Autocast and manually casting it uses Outworld Destroyer's current attack range.",
+        "The cast range can be further increased by other attack range bonuses. However, it is not affected by cast range bonuses.",
+        "Both Autocast and manually casting it uses Outworld Destroyer's current attack range.",
         "The bonus damage is dealt in a separate damage instance, and counts as spell damage. This means it is not affected or considered by anything that works with attack damage. This also means that it fully works with spell damage amplification and spell lifesteal.",
         "This means it is not affected or considered by anything that works with attack damage.",
         "This also means that it fully works with spell damage amplification and spell lifesteal.",
@@ -78,7 +81,9 @@
         "This also goes for Outworld Destroyer. Only his max mana gets changed, with current mana staying the same.",
         "Outworld Destroyer gains a status buff that shows how much mana he currently acquired with Astral Imprisonment.",
         "The red ring expanding at the center of the visual effects indicates a fixed 4-second duration. The red ring is visible to allies only.",
-        "With Aghanim's Scepter, the area damage is applied regardless of the target's alliance."
+        "With Aghanim's Scepter, the area damage is applied regardless of the target's alliance.",
+        "With Aghanim's Shard, allows allied heroes to move during Astral Imprisonment. They are visible, but untargettable and can't perform any other actions",
+        "They are visible, but untargettable and can't perform any other actions"
       ],
       "mana": "150",
       "hotKey": "W",
@@ -89,13 +94,15 @@
         "Cast Animation: 0.3+0.4",
         "Cast Range: 650",
         "Damage: 120\/200\/280\/360 (TagAghanim 260\/340\/420\/500)",
-        "Max Mana Steal: 16%\/18%\/20%\/22%",
+        "Max Mana Steal: 16%\/18%\/20%\/22% (TagTalent 21%\/23%\/25%\/27%)",
         "Imprison Duration: 1.75\/2.5\/3.25\/4",
         "Mana Steal Duration: 30\/40\/50\/60",
         "Damage Radius: 400",
         "Number of Charges: 2",
         "Charge Replenish Time: 12",
-        "Grants charges to Astral Imprisonment, increases damage by 140 and applies the damage in an area."
+        "Ally Move Speed: 40%",
+        "Grants charges to Astral Imprisonment, increases damage by 140 and applies the damage in an area.",
+        "Grants an additional +5% mana capacity steal to Astral Imprisonment. Also allows allies to move at 60% movement speed during Astral Imprisonment."
       ],
       "itemBehaviour": [],
       "legacyKey": "T",
@@ -104,29 +111,24 @@
     {
       "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/2\/26\/Outworld_Destroyer_Essence_Flux_2.mp3\/revision\/latest?cb=20191216021427",
       "effects": [
-        "Ability Passive (TagAghanim No Target \/ Channeled)",
+        "Ability Passive",
         "Affects Self"
       ],
       "notes": [
-        "Restores the mana after the spell is cast.",
+        "Restores mana after the ability is cast.",
         "Essence Flux does not proc on any item abilities.",
         "Essence Flux uses pseudo-random distribution.",
-        "On average, restores 6%\/9%\/12%\/15% of caster's maximum mana per cast.",
-        "With Aghanim's Shard, Essence Flux turns into an active ability. The passive component is still present. Sets the current health value equal to 100% of the current mana value and vice versa. Directly manipulates health and mana, so it does not interact with any on-damage effect.",
-        "Sets the current health value equal to 100% of the current mana value and vice versa.",
-        "Directly manipulates health and mana, so it does not interact with any on-damage effect."
+        "On average, restores 6%\/9%\/12%\/15% of caster's maximum mana per cast. Keeps Outworld Devourer on average at 30%\/45%\/60%\/75% of max mana, assuming no other source of mana restoration.",
+        "Keeps Outworld Devourer on average at 30%\/45%\/60%\/75% of max mana, assuming no other source of mana restoration."
       ],
-      "mana": "0",
+      "mana": null,
       "hotKey": "E",
-      "cooldown": "45",
+      "cooldown": null,
       "description": "Passively grants you a chance to restore a percentage of your max mana each time you cast an ability.",
       "spellName": "Essence Flux",
       "params": [
-        "Cast Animation: 0.75+0.25",
         "Proc Chance: 30%",
-        "Passive Max Mana Restored: 20%\/30%\/40%\/50%",
-        "Active Health\/Mana Transfer: 100%",
-        "Essence Flux becomes castable ability with 0.75 cast time. Swaps Outworld Destroyer's current Life and Mana totals. Cooldown: 45"
+        "Passive Max Mana Restored: 20%\/30%\/40%\/50%"
       ],
       "itemBehaviour": [],
       "legacyKey": "E",

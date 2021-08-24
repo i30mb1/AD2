@@ -1,9 +1,6 @@
 {
   "abilities": [
     {
-      "notes": [
-        "The health talent increases maximum health capacity, and keeps the current health percentage."
-      ],
       "spellName": "Talent",
       "talents": [
         {
@@ -14,16 +11,16 @@
         {
           "talentLvl": "20",
           "talentLeft": "+1 Serpent Wards Max HP",
-          "talentRight": "+2s Shackles Duration"
+          "talentRight": "Hex Breaks"
         },
         {
           "talentLvl": "15",
-          "talentLeft": "-5s Hex Cooldown",
-          "talentRight": "+75 Serpent Wards Attack Range"
+          "talentLeft": "+1s Shackles Duration",
+          "talentRight": "+100 Serpent Wards Attack Range"
         },
         {
           "talentLvl": "10",
-          "talentLeft": "+175 Health",
+          "talentLeft": "-3s Hex Cooldown",
           "talentRight": "+140 Shackles Total Damage"
         }
       ]
@@ -79,8 +76,8 @@
       ],
       "mana": "70\/110\/150\/190",
       "hotKey": "W",
-      "cooldown": "13 (TagTalent 8)",
-      "description": "Transforms an enemy unit into a harmless creature, disabling their attacks and abilities.",
+      "cooldown": "13 (TagTalent 10)",
+      "description": "Transforms an enemy unit into a harmless creature, disabling their attacks and abilities and breaking them\/\/\/.",
       "spellName": "Hex",
       "params": [
         "Cast Animation: 0+1.13",
@@ -104,11 +101,11 @@
         "Shackles stuns the target as long as it is channeled. If the target turns invulnerable or hidden, the channeling stops instantly.",
         "If the target turns invulnerable or hidden, the channeling stops instantly.",
         "Provides True Sight over the target, but only when the target was not invisible or within a fade time upon cast.",
-        "Deals damage in 0.1-second intervals, starting immediately as the channeling begins, resulting in 28\/35\/43\/50 (TagTalent 48\/55\/63\/70) damage instances. The damage per tick is based on the total damage divided by its default channel time of 2.75\/3.5\/4.25\/5, and then divided by 10. The duration bonus from the talent is ignored. This results in 2.182\/4.571\/6.118\/7.2 (TagTalent 7.273\/8.571\/9.412\/10) damage per tick, or 21.82\/45.71\/61.18\/72 (TagTalent 72.73\/85.71\/94.12\/100) damage per second. Therefore, the final damage dealt (before reductions) is 61.09\/160\/263.06\/360 (TagTalent 203.64\/300\/404.71\/500). With the duration increasing talent, the final damage is 104.73\/251.43\/385.41\/504 (TagTalent 349.09\/471.43\/592.94\/700).",
+        "Deals damage in 0.1-second intervals, starting immediately as the channeling begins, resulting in 28\/35\/43\/50 (TagTalent 38\/45\/53\/60) damage instances. The damage per tick is based on the total damage divided by its default channel time of 2.75\/3.5\/4.25\/5, and then divided by 10. The duration bonus from the talent is ignored. This results in 2.182\/4.571\/6.118\/7.2 (TagTalent 7.273\/8.571\/9.412\/10) damage per tick, or 21.82\/45.71\/61.18\/72 (TagTalent 72.73\/85.71\/94.12\/100) damage per second. Therefore, the final damage dealt (before reductions) is 61.09\/160\/263.06\/360 (TagTalent 203.64\/300\/404.71\/500). With the duration increasing talent, the final damage is 82.91\/205.71\/324.24\/432 (TagTalent 276.36\/385.71\/498.82\/600).",
         "The damage per tick is based on the total damage divided by its default channel time of 2.75\/3.5\/4.25\/5, and then divided by 10. The duration bonus from the talent is ignored.",
         "This results in 2.182\/4.571\/6.118\/7.2 (TagTalent 7.273\/8.571\/9.412\/10) damage per tick, or 21.82\/45.71\/61.18\/72 (TagTalent 72.73\/85.71\/94.12\/100) damage per second.",
         "Therefore, the final damage dealt (before reductions) is 61.09\/160\/263.06\/360 (TagTalent 203.64\/300\/404.71\/500).",
-        "With the duration increasing talent, the final damage is 104.73\/251.43\/385.41\/504 (TagTalent 349.09\/471.43\/592.94\/700).",
+        "With the duration increasing talent, the final damage is 82.91\/205.71\/324.24\/432 (TagTalent 276.36\/385.71\/498.82\/600).",
         "Unlike other targeted spells, the caster vision of Shackles lasts for the entire channel duration (even if it gets canceled), instead of just 2 seconds.",
         "With Aghanim's Shard, places a total of 4 Serpent Wards based on its current level 100 range towards the target's north, east, south, and west. The wards' facing angle is set equal to Shadow Shaman's facing angle upon cast. The wards are ordered to attack the target upon creation, but they can be controlled by the player normally. The Aghanim's Scepter upgrade fully applies to them as well. If Mass Serpent Ward is not learnt, no wards are summoned.",
         "The wards' facing angle is set equal to Shadow Shaman's facing angle upon cast.",
@@ -124,7 +121,7 @@
       "params": [
         "Cast Animation: 0.3+0",
         "Cast Range: 400 (TagTalent 525)",
-        "Max Channel Time: 2.75\/3.5\/4.25\/5 (TagTalent 4.75\/5.5\/6.25\/7)",
+        "Max Channel Time: 2.75\/3.5\/4.25\/5 (TagTalent 3.75\/4.5\/5.25\/6)",
         "Total Damage: 60\/160\/260\/360 (TagTalent 200\/300\/400\/500)",
         "Number of Serpent Wards: 4",
         "Wards Duration: 7",
@@ -201,16 +198,16 @@
     {
       "talentLvl": "20",
       "talentLeft": "+1 Serpent Wards Max HP",
-      "talentRight": "+2s Shackles Duration"
+      "talentRight": "Hex Breaks"
     },
     {
       "talentLvl": "15",
-      "talentLeft": "-5s Hex Cooldown",
-      "talentRight": "+75 Serpent Wards Attack Range"
+      "talentLeft": "+1s Shackles Duration",
+      "talentRight": "+100 Serpent Wards Attack Range"
     },
     {
       "talentLvl": "10",
-      "talentLeft": "+175 Health",
+      "talentLeft": "-3s Hex Cooldown",
       "talentRight": "+140 Shackles Total Damage"
     }
   ]

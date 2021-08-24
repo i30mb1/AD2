@@ -2,8 +2,8 @@
   "abilities": [
     {
       "notes": [
-        "The magic resistance talent stacks multiplicatively with other sources of magic resistance. Increases Enchantress's magic resistance to 34%.",
-        "Increases Enchantress's magic resistance to 34%.",
+        "The magic resistance talent stacks multiplicatively with other sources of magic resistance. Increases Enchantress's magic resistance to 32.5%.",
+        "Increases Enchantress's magic resistance to 32.5%.",
         "This attack damage talent is added as raw attack damage. Does not benefit illusions and is not affected by most percentage-based damage increasing or reducing effects.",
         "Does not benefit illusions and is not affected by most percentage-based damage increasing or reducing effects."
       ],
@@ -21,13 +21,13 @@
         },
         {
           "talentLvl": "15",
-          "talentLeft": "+6 Nature's Attendants Wisps",
-          "talentRight": "+40 Damage"
+          "talentLeft": "+5 Nature's Attendants Wisps",
+          "talentRight": "+45 Damage"
         },
         {
           "talentLvl": "10",
           "talentLeft": "+20 Movement Speed",
-          "talentRight": "+12% Magic Resistance"
+          "talentRight": "+10% Magic Resistance"
         }
       ]
     },
@@ -89,7 +89,7 @@
       "spellName": "Enchant",
       "params": [
         "Cast Animation: 0.3+0.67",
-        "Cast Range: 700",
+        "Cast Range: 500\/550\/600\/650",
         "Hero Move Speed Slow: 55%",
         "Hero Slow Duration: 3.75\/4.5\/5.25\/6",
         "Max Enchanted Creeps: 1",
@@ -110,7 +110,7 @@
         "Affects Allies"
       ],
       "notes": [
-        "Every 0.5 seconds, each wisp chooses a random allied unit to heal. So it is possible to heal up to 8 (TagTalent 14) allies at a time.",
+        "Every 0.5 seconds, each wisp chooses a random allied unit to heal. So it is possible to heal up to 8 (TagTalent 13) allies at a time.",
         "The heal targets are chosen completely random, without any priorities. Multiple wisps can randomly select the same unit. Each wisp approaches its chosen target, indicating the wisp is healing the target. However, when choosing the wisps increasing talent, the visual effect does not adapt. The numbers of wisps that can be seen does not increase.",
         "Each wisp approaches its chosen target, indicating the wisp is healing the target.",
         "However, when choosing the wisps increasing talent, the visual effect does not adapt. The numbers of wisps that can be seen does not increase.",
@@ -119,10 +119,10 @@
         "The area of effect is centered around Enchantress' current location, and follows her at all times.",
         "When Enchantress dies, the wisps still continue to heal units nearby her death's location.",
         "Nature's Attendants does not stack with itself. Casting the ability while it is active refreshes the buff.",
-        "Can heal a total of 32\/64\/96\/128 health per second or 384\/768\/1152\/1536 health over its full duration. The number of wisps increasing talent can heal a total of 56\/112\/168\/224 health per second or 672\/1344\/2016\/2688 health over its full duration. The bonus heal per wisp talent can heal a total of 192\/224\/256\/288 health per second or 2304\/2688\/3072\/3456 health over its full duration. With both talents, it can heal a total of 336\/392\/448\/504 health per second or 4032\/4704\/5376\/6048 health over its full duration.",
-        "The number of wisps increasing talent can heal a total of 56\/112\/168\/224 health per second or 672\/1344\/2016\/2688 health over its full duration.",
+        "Can heal a total of 32\/64\/96\/128 health per second or 384\/768\/1152\/1536 health over its full duration. The number of wisps increasing talent can heal a total of 52\/104\/156\/208 health per second or 624\/1248\/1872\/2496 health over its full duration. The bonus heal per wisp talent can heal a total of 192\/224\/256\/288 health per second or 2304\/2688\/3072\/3456 health over its full duration. With both talents, it can heal a total of 312\/364\/416\/468 health per second or 3744\/4368\/4992\/5616 health over its full duration.",
+        "The number of wisps increasing talent can heal a total of 52\/104\/156\/208 health per second or 624\/1248\/1872\/2496 health over its full duration.",
         "The bonus heal per wisp talent can heal a total of 192\/224\/256\/288 health per second or 2304\/2688\/3072\/3456 health over its full duration.",
-        "With both talents, it can heal a total of 336\/392\/448\/504 health per second or 4032\/4704\/5376\/6048 health over its full duration.",
+        "With both talents, it can heal a total of 312\/364\/416\/468 health per second or 3744\/4368\/4992\/5616 health over its full duration.",
         "With Aghanim's Shard, the passive wisps can heal up to 12\/24\/36\/48 (TagTalent 72\/84\/96\/108) health per second or 720\/1440\/2160\/2880 (TagTalent 4320\/5040\/5760\/6480) per minute."
       ],
       "mana": "170\/160\/150\/140",
@@ -133,7 +133,7 @@
       "params": [
         "Cast Animation: 0.3+0.93",
         "Search Radius: 275",
-        "Active Number of Wisps: 8 (TagTalent 14)",
+        "Active Number of Wisps: 8 (TagTalent 13)",
         "Heal per Second per Wisp: 4\/8\/12\/16 (TagTalent 24\/28\/32\/36)",
         "Duration: 12",
         "Passive Number of Wisps: 3",
@@ -160,10 +160,13 @@
         "Always leaps 180° away from the direction Enchantress is facing. Does not lock Enchantress' facing angle during the leap.",
         "Can leap over other units and over impassable terrain.",
         "During Sproink, Enchantress can attack, cast abilities, and use items.",
-        "Halfway through the leap, at 0.2 seconds, Enchantress performs instant attacks based on the current Impetus level on the furthest 3 enemies within her total attack range, plus the bonus. Searches for enemies all around her, meaning it may target enemies behind Enchantress as well. These instant attacks can proc any attack modifiers and on-hit effects normally. They do not have True Strike, and are prevented by disarms.",
+        "0.2 seconds in to the leap, Enchantress performs instant attacks on the furthest 3 enemies within the search radius. This means if the leap gets interrupted before that, the insant attacks do not happen. The search radius is based on Enchantress's attack range +200, resulting in a search radius of 775, considering her default attack range. Searches for enemies all around her, meaning it may target enemies behind Enchantress as well. These instant attacks can proc any attack modifiers and on-hit effects normally. They do not have True Strike, and are prevented by disarms. The instant attacks apply the current level of Impetus, regardless of whether it is currently castable or not. The Impetus applied by Sproink do not cost any mana.",
+        "This means if the leap gets interrupted before that, the insant attacks do not happen.",
+        "The search radius is based on Enchantress's attack range +200, resulting in a search radius of 775, considering her default attack range.",
         "Searches for enemies all around her, meaning it may target enemies behind Enchantress as well.",
         "These instant attacks can proc any attack modifiers and on-hit effects normally. They do not have True Strike, and are prevented by disarms.",
-        "Impetus notes fully apply."
+        "The instant attacks apply the current level of Impetus, regardless of whether it is currently castable or not.",
+        "The Impetus applied by Sproink do not cost any mana."
       ],
       "mana": "50",
       "hotKey": "D",
@@ -236,13 +239,13 @@
     },
     {
       "talentLvl": "15",
-      "talentLeft": "+6 Nature's Attendants Wisps",
-      "talentRight": "+40 Damage"
+      "talentLeft": "+5 Nature's Attendants Wisps",
+      "talentRight": "+45 Damage"
     },
     {
       "talentLvl": "10",
       "talentLeft": "+20 Movement Speed",
-      "talentRight": "+12% Magic Resistance"
+      "talentRight": "+10% Magic Resistance"
     }
   ]
 }
