@@ -16,7 +16,7 @@ class HeroGuideViewModel @Inject constructor(
     private val shouldWeLoadNewHeroGuidesInteractor: ShouldWeLoadNewHeroGuidesInteractor,
 ) : ViewModel() {
 
-    private val _error = Channel<Throwable>()
+    private val _error = Channel<Throwable>(Channel.BUFFERED)
     val error = _error.receiveAsFlow()
 
     suspend fun shouldWeLoadNewHeroGuides(heroName: String): Boolean = shouldWeLoadNewHeroGuidesInteractor(heroName)
