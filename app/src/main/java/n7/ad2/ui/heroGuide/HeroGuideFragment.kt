@@ -8,8 +8,6 @@ import androidx.lifecycle.Lifecycle
 import androidx.lifecycle.flowWithLifecycle
 import androidx.lifecycle.lifecycleScope
 import androidx.recyclerview.widget.LinearLayoutManager
-import androidx.work.WorkInfo
-import androidx.work.WorkManager
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.flow.collect
 import kotlinx.coroutines.launch
@@ -63,15 +61,8 @@ class HeroGuideFragment : Fragment(R.layout.fragment_hero_guide) {
 
     private fun loadNewHeroGuide(heroName: String) = lifecycleScope.launch(Dispatchers.Main) {
         if (viewModel.shouldWeLoadNewHeroGuides(heroName)) {
-            val request = HeroGuideWorker.getRequest(heroName)
 
-            WorkManager.getInstance(requireContext()).enqueue(request)
-            WorkManager.getInstance(requireContext()).getWorkInfoByIdLiveData(request.id).observe(viewLifecycleOwner) {
-                when (it.state) {
-                    WorkInfo.State.FAILED -> showDialogError(it.outputData.getString(HeroGuideWorker.RESULT)!!)
-                    else -> Unit
-                }
-            }
+
         }
     }
 
