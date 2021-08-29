@@ -34,10 +34,10 @@ class HeroesViewModel @Inject constructor(
             .launchIn(viewModelScope)
     }
 
-    fun filterHeroes(filter: String) = allHeroes
-        .map { list -> filterHeroesUseCase(list, filter) }
-        .onEach { _filteredHeroes.emit(it) }
-        .launchIn(viewModelScope)
+    fun filterHeroes(filter: String) {
+        allHeroes.map { list -> filterHeroesUseCase(list, filter) }
+            .onEach { _filteredHeroes.emit(it) }
+    }
 
     fun updateViewedByUserFieldForHero(name: String) = viewModelScope.launch {
         updateViewedByUserFieldUseCase(name)
