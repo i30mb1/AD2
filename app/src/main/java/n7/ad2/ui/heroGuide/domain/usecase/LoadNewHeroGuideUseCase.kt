@@ -18,7 +18,7 @@ class LoadNewHeroGuideUseCase @Inject constructor(
         workManager.enqueue(request)
 
         val work = workManager.getWorkInfoByIdLiveData(request.id)
-        val observer = object : Observer<WorkInfo> {
+        work.observeForever(object : Observer<WorkInfo> {
             override fun onChanged(info: WorkInfo) {
                 when (info.state) {
                     WorkInfo.State.SUCCEEDED -> {
@@ -32,7 +32,6 @@ class LoadNewHeroGuideUseCase @Inject constructor(
                     else -> Unit
                 }
             }
-        }
-        work.observeForever(observer)
+        })
     }
 }
