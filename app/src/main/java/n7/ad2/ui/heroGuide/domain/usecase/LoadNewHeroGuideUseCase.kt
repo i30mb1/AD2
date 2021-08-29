@@ -3,17 +3,14 @@ package n7.ad2.ui.heroGuide.domain.usecase
 import androidx.lifecycle.Observer
 import androidx.work.WorkInfo
 import androidx.work.WorkManager
-import kotlinx.coroutines.CoroutineDispatcher
-import kotlinx.coroutines.withContext
 import n7.ad2.ui.heroGuide.HeroGuideWorker
 import javax.inject.Inject
 
 class LoadNewHeroGuideUseCase @Inject constructor(
-    private val ioDispatcher: CoroutineDispatcher,
     private val workManager: WorkManager,
 ) {
 
-    suspend operator fun invoke(heroName: String): Unit = withContext(ioDispatcher) {
+    suspend operator fun invoke(heroName: String) {
         val request = HeroGuideWorker.getRequest(heroName)
         workManager.enqueue(request)
 

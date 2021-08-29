@@ -12,6 +12,7 @@ import javax.inject.Inject
 
 class GetVOHeroGuideItemsInteractor @Inject constructor(
     private val getLocalHeroWithGuidesUseCase: GetLocalHeroWithGuidesUseCase,
+    private val shouldWeLoadNewHeroGuidesInteractor: ShouldWeLoadNewHeroGuidesInteractor,
     private val loadNewHeroGuideUseCase: LoadNewHeroGuideUseCase,
     private val convertLocalHeroWithGuidesToLocalGuideJsonUseCase: ConvertLocalHeroWithGuidesToLocalGuideJsonUseCase,
     private val convertLocalGuideJsonToVOGuideItemsUseCase: ConvertLocalGuideJsonToVOGuideItemsUseCase,
@@ -20,7 +21,7 @@ class GetVOHeroGuideItemsInteractor @Inject constructor(
     @Suppress("BlockingMethodInNonBlockingContext")
     operator fun invoke(heroName: String): Flow<List<VOGuideItem>> {
         return getLocalHeroWithGuidesUseCase(heroName)
-            .onStart { loadNewHeroGuideUseCase(heroName) }
+            .onStart { if (shouldWeLoadNewHeroGuidesInteractor(heroName)) loadNewHeroGuideUseCase(heroName) }
             .map { convertLocalHeroWithGuidesToLocalGuideJsonUseCase(it) }
             .map { convertLocalGuideJsonToVOGuideItemsUseCase(it) }
     }

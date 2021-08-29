@@ -8,7 +8,6 @@ import androidx.lifecycle.Lifecycle
 import androidx.lifecycle.flowWithLifecycle
 import androidx.lifecycle.lifecycleScope
 import androidx.recyclerview.widget.LinearLayoutManager
-import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.flow.collect
 import kotlinx.coroutines.launch
 import n7.ad2.R
@@ -38,7 +37,6 @@ class HeroGuideFragment : Fragment(R.layout.fragment_hero_guide) {
         }
         // region Click
         val heroName = requireArguments().getString(HERO_NAME)!!
-        loadNewHeroGuide(heroName)
         // endregion
         setupGuideRecyclerView(heroName)
     }
@@ -58,13 +56,5 @@ class HeroGuideFragment : Fragment(R.layout.fragment_hero_guide) {
         }
         viewModel.loadHeroWithGuides(heroName).observe(viewLifecycleOwner, heroGuideAdapter::submitList)
     }
-
-    private fun loadNewHeroGuide(heroName: String) = lifecycleScope.launch(Dispatchers.Main) {
-        if (viewModel.shouldWeLoadNewHeroGuides(heroName)) {
-
-
-        }
-    }
-
 
 }
