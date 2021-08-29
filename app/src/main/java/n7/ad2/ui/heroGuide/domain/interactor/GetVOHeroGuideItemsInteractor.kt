@@ -1,6 +1,7 @@
 package n7.ad2.ui.heroGuide.domain.interactor;
 
 import kotlinx.coroutines.flow.Flow
+import kotlinx.coroutines.flow.distinctUntilChanged
 import kotlinx.coroutines.flow.map
 import kotlinx.coroutines.flow.onStart
 import n7.ad2.ui.heroGuide.domain.usecase.ConvertLocalGuideJsonToVOGuideItemsUseCase
@@ -21,9 +22,13 @@ class GetVOHeroGuideItemsInteractor @Inject constructor(
     @Suppress("BlockingMethodInNonBlockingContext")
     operator fun invoke(heroName: String): Flow<List<VOGuideItem>> {
         return getLocalHeroWithGuidesUseCase(heroName)
-            .onStart { if (shouldWeLoadNewHeroGuidesInteractor(heroName)) loadNewHeroGuideUseCase(heroName) }
+            .onStart {
+//                if (shouldWeLoadNewHeroGuidesInteractor(heroName))
+                loadNewHeroGuideUseCase(heroName)
+            }
             .map { convertLocalHeroWithGuidesToLocalGuideJsonUseCase(it) }
             .map { convertLocalGuideJsonToVOGuideItemsUseCase(it) }
+            .distinctUntilChanged()
     }
 
 }
