@@ -8,7 +8,6 @@ import n7.ad2.ui.heroGuide.domain.usecase.ConvertLocalHeroWithGuidesToLocalGuide
 import n7.ad2.ui.heroGuide.domain.usecase.GetLocalHeroWithGuidesUseCase
 import n7.ad2.ui.heroGuide.domain.usecase.LoadNewHeroGuideUseCase
 import n7.ad2.ui.heroGuide.domain.vo.VOGuideItem
-import n7.ad2.utils.ResultState
 import javax.inject.Inject
 
 class GetVOHeroGuideItemsInteractor @Inject constructor(
@@ -19,12 +18,9 @@ class GetVOHeroGuideItemsInteractor @Inject constructor(
 ) {
 
     @Suppress("BlockingMethodInNonBlockingContext")
-    operator fun invoke(
-        heroName: String,
-        loadingCallback: (ResultState<Unit>) -> Unit,
-    ): Flow<List<VOGuideItem>> {
+    operator fun invoke(heroName: String): Flow<List<VOGuideItem>> {
         return getLocalHeroWithGuidesUseCase(heroName)
-            .onStart { loadNewHeroGuideUseCase(heroName, loadingCallback) }
+            .onStart { loadNewHeroGuideUseCase(heroName) }
             .map { convertLocalHeroWithGuidesToLocalGuideJsonUseCase(it) }
             .map { convertLocalGuideJsonToVOGuideItemsUseCase(it) }
     }
