@@ -11,15 +11,15 @@ import androidx.work.WorkManager
 import com.squareup.moshi.Moshi
 import dagger.Module
 import dagger.Provides
-import dagger.Reusable
 import n7.ad2.data.source.local.db.AppDatabase
 import n7.ad2.workers.DatabaseWorker
 import java.util.Calendar
+import javax.inject.Singleton
 
 @Module
 object ApplicationModule {
 
-    @Reusable
+    @Singleton
     @Provides
     fun provideDatabase(application: Application): AppDatabase {
         fun fillInDatabase() {
@@ -41,14 +41,19 @@ object ApplicationModule {
             .build()
     }
 
-    @Reusable
+    @Singleton
+    @Provides
+    fun provideWorkManager(application: Application): WorkManager = WorkManager.getInstance(application)
+
+    @Singleton
     @Provides
     fun moshi(): Moshi = Moshi.Builder().build()
 
-    @Reusable
+    @Singleton
     @Provides
     fun provideSharedPreferences(application: Application): SharedPreferences = PreferenceManager.getDefaultSharedPreferences(application)
 
+    @Singleton
     @Provides
     fun provideCalendar(): Calendar = Calendar.getInstance()
 
