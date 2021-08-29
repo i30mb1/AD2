@@ -176,7 +176,7 @@ class MainActivity : BaseActivity() {
         if (shouldDisplayLog) {
 
             logger.getLogFlow()
-                .flowWithLifecycle(lifecycle, Lifecycle.State.STARTED)
+                .flowWithLifecycle(lifecycle, Lifecycle.State.CREATED)
                 .onEach(loggerAdapter::add)
                 .launchIn(lifecycleScope)
 
