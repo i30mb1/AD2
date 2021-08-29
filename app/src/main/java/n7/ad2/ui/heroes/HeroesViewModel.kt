@@ -39,10 +39,8 @@ class HeroesViewModel @Inject constructor(
         .onEach { _filteredHeroes.emit(it) }
         .launchIn(viewModelScope)
 
-
     fun updateViewedByUserFieldForHero(name: String) = viewModelScope.launch {
         updateViewedByUserFieldUseCase(name)
     }
-
 
 }
