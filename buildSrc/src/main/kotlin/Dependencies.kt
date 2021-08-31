@@ -21,10 +21,11 @@ object Versions {
     const val lifecycle = "2.4.0-alpha01"
     const val retrofit = "2.7.1"
     const val coroutines = "1.5.1"
-    const val dataStore = "1.0.0"
+    const val dataStore = "1.0.0-beta02"
 }
 
 object Lib {
+    const val dataStorePref = "androidx.datastore:datastore-preferences:${Versions.dataStore}"
     const val dataStore = "androidx.datastore:datastore:${Versions.dataStore}"
     const val recyclerView = "androidx.recyclerview:recyclerview:1.2.0-beta02"
     const val kotlinReflection = "org.jetbrains.kotlin:kotlin-reflect:${Versions.kotlin}"
@@ -144,6 +145,7 @@ fun DependencyHandler.addBaseDependencies() {
     api(Lib.exoPlayer)
     api(Lib.recyclerView)
     api(Lib.dataStore)
+    api(Lib.dataStorePref)
 
     api(Lib.coroutinesLifecycle)
     api(Lib.coroutinesLivedata)
