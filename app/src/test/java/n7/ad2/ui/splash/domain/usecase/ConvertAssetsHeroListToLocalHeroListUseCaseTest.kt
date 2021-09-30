@@ -4,8 +4,8 @@ import androidx.test.filters.SmallTest
 import com.google.common.truth.Truth.assertThat
 import kotlinx.coroutines.ExperimentalCoroutinesApi
 import n7.ad2.CoroutineTestRule
-import n7.ad2.ui.splash.domain.model.AssetsHero
 import n7.ad2.runBlockingTest
+import n7.ad2.ui.splash.domain.model.AssetsHero
 import org.junit.Rule
 import org.junit.Test
 
@@ -24,7 +24,6 @@ class ConvertAssetsHeroListToLocalHeroListUseCaseTest {
 
         val localHero = convertAssetsHeroesFromJsonUseCase(assetsHeroList)[0]
 
-        assertThat(localHero.assetsPath).isNotEmpty()
         assertThat(localHero.name).isNotEmpty()
         assertThat(localHero.mainAttr).isNotEmpty()
     }
