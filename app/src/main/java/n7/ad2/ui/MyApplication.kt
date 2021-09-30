@@ -14,6 +14,11 @@ const val ANDROID_ID = Settings.Secure.ANDROID_ID
 
 // “Code never lies, comments sometimes do” — Ron Jeffries
 class MyApplication : Application(), DaggerComponentProvider {
+//
+//    val saf = Settings.Secure.getString(
+//        applicationContext.contentResolver,
+//        Settings.Secure.ANDROID_ID
+//    )
 
     override val component: ApplicationComponent by lazy {
         DaggerApplicationComponent.factory().create(this)
