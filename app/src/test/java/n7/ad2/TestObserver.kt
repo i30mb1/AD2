@@ -29,7 +29,7 @@ class TestObserver<T> private constructor() : Observer<T> {
     }
 
     fun value(time: Long = 2): T {
-        if (valueLatch.await(2, TimeUnit.SECONDS)) throw TimeoutException("LiveData value was never set.")
+        if (!valueLatch.await(2, TimeUnit.SECONDS)) throw TimeoutException("LiveData value was never set.")
         return valueHistory.last()
     }
 
