@@ -23,8 +23,6 @@ import androidx.core.view.WindowInsetsCompat
 import androidx.databinding.DataBindingUtil
 import androidx.databinding.ObservableBoolean
 import androidx.fragment.app.commit
-import androidx.lifecycle.Lifecycle
-import androidx.lifecycle.flowWithLifecycle
 import androidx.lifecycle.lifecycleScope
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.transition.ChangeBounds
@@ -176,7 +174,6 @@ class MainActivity : BaseActivity() {
         if (shouldDisplayLog) {
 
             logger.getLogFlow()
-                .flowWithLifecycle(lifecycle, Lifecycle.State.CREATED)
                 .onEach(loggerAdapter::add)
                 .launchIn(lifecycleScope)
 
