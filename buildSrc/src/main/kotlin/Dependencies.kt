@@ -16,11 +16,11 @@ object Versions {
     const val workManager = "2.7.0-alpha05"
     const val moshi = "1.12.0"
     const val room = "2.3.0"
-    const val kotlin = "1.5.21"
+    const val kotlin = "1.5.30"
     const val dagger = "2.38.1"
     const val lifecycle = "2.4.0-alpha01"
     const val retrofit = "2.7.1"
-    const val coroutines = "1.5.1"
+    const val coroutines = "1.5.2"
     const val dataStore = "1.0.0"
 }
 
@@ -89,14 +89,14 @@ object Lib {
 
     object Test {
         const val coroutinesTest = "org.jetbrains.kotlinx:kotlinx-coroutines-test:1.3.2"
-        const val testCore = "androidx.test:core:1.2.0" // Core library
-        const val testCoreKtx = "androidx.test:core-ktx:1.2.0"
-        const val testRunner = "androidx.test:runner:1.2.0" // AndroidJUnitRunner
+        const val testCore = "androidx.test:core:1.4.0" // Core library
+        const val testCoreKtx = "androidx.test:core-ktx:1.4.0"
+        const val testRunner = "androidx.test:runner:1.4.0" // AndroidJUnitRunner
         const val testRules = "androidx.test:rules:1.2.0" // JUnit Rules
-        const val testJunit = "androidx.test.ext:junit:1.1.1" // Assertions and JUnit 4 framework
-        const val testJunitKtx = "androidx.test.ext:junit-ktx:1.1.1" // Assertions
-        const val testTruth2 = "com.google.truth:truth:0.44"
-        const val testTruth = "androidx.test.ext:truth:1.2.0"
+        const val testJunit = "androidx.test.ext:junit:1.1.3" // Assertions and JUnit 4 framework
+        const val testJunitKtx = "androidx.test.ext:junit-ktx:1.1.3" // Assertions
+        const val testTruth2 = "com.google.truth:truth:1.1.3"
+        const val testTruth = "androidx.test.ext:truth:1.4.0"
         const val coreTesting = "androidx.arch.core:core-testing:2.1.0"
         const val mockitoWeb = "com.squareup.okhttp3:mockwebserver:4.4.0"
         const val mockito = "org.mockito:mockito-core:3.2.4"
