@@ -2,8 +2,8 @@
 <resources>
     <!--серая тема-->
     <color name="gray_100">#C1C2C3</color>
-    <color name="gray_700">#303337</color>
-    <color name="gray_500">#36393E</color>
+    <color name="gray_700">#2F3136</color>
+    <color name="gray_500">#202225</color>
     <color name="red_500">#f44336</color>
     <!--чёрная тема-->
     <color name="black_700">#17161A</color>

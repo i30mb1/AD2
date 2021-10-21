@@ -1,5 +1,7 @@
 package n7.ad2.ui.streams;
 
+import static androidx.core.internal.view.SupportMenuItem.SHOW_AS_ACTION_ALWAYS;
+
 import android.content.DialogInterface;
 import android.content.SharedPreferences;
 import android.media.AudioManager;
@@ -7,10 +9,6 @@ import android.media.MediaPlayer;
 import android.os.Bundle;
 import android.os.Handler;
 import android.preference.PreferenceManager;
-import androidx.annotation.NonNull;
-import androidx.appcompat.app.AlertDialog;
-import androidx.recyclerview.widget.RecyclerView;
-import androidx.appcompat.widget.Toolbar;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.MotionEvent;
@@ -23,6 +21,11 @@ import android.widget.ImageView;
 import android.widget.ProgressBar;
 import android.widget.TextView;
 import android.widget.Toast;
+
+import androidx.annotation.NonNull;
+import androidx.appcompat.app.AlertDialog;
+import androidx.appcompat.widget.Toolbar;
+import androidx.recyclerview.widget.RecyclerView;
 
 import com.gikk.twirk.Twirk;
 import com.gikk.twirk.TwirkBuilder;
@@ -38,7 +41,6 @@ import java.io.InputStream;
 import java.io.InputStreamReader;
 import java.net.HttpURLConnection;
 import java.net.URL;
-import java.net.URLEncoder;
 import java.nio.charset.Charset;
 import java.nio.charset.StandardCharsets;
 import java.util.ArrayList;
@@ -54,8 +56,6 @@ import n7.ad2.utils.SmoothScrollableLinearLayoutManager;
 import okhttp3.OkHttpClient;
 import okhttp3.Request;
 import okhttp3.Response;
-
-import static androidx.core.internal.view.SupportMenuItem.SHOW_AS_ACTION_ALWAYS;
 // https://medium.com/@mattgrint/detecting-clicks-or-scrolls-in-kotlin-for-android-9c2cf0aab7fa
 public class StreamsFullActivity extends BaseActivity implements SurfaceHolder.Callback {
 
@@ -258,7 +258,7 @@ public class StreamsFullActivity extends BaseActivity implements SurfaceHolder.C
                     JSONObject jsonObject = new JSONObject(response.body().string());
                     String token = jsonObject.getString("token");
                     String sig = jsonObject.getString("sig");
-                    String url = "http://usher.twitch.tv/api/channel/hls/" + getIntent().getExtras().getString(CHANNEL_NAME) + ".m3u8?token=" + URLEncoder.encode(token, "UTF-8") + "&sig=" + sig;
+                    String url = "http://usher.twitch.tv/api/channel/hls/norfl_.m3u8?player=twitchweb&&token=%7B%22adblock%22%3Afalse%2C%22authorization%22%3A%7B%22forbidden%22%3Afalse%2C%22reason%22%3A%22%22%7D%2C%22blackout_enabled%22%3Afalse%2C%22channel%22%3A%22norfl_%22%2C%22channel_id%22%3A135338936%2C%22chansub%22%3A%7B%22restricted_bitrates%22%3A%5B%5D%2C%22view_until%22%3A1924905600%7D%2C%22ci_gb%22%3Afalse%2C%22geoblock_reason%22%3A%22%22%2C%22device_id%22%3Anull%2C%22expires%22%3A1634830193%2C%22extended_history_allowed%22%3Afalse%2C%22game%22%3A%22%22%2C%22hide_ads%22%3Afalse%2C%22https_required%22%3Atrue%2C%22mature%22%3Afalse%2C%22partner%22%3Afalse%2C%22platform%22%3A%22web%22%2C%22player_type%22%3A%22embed%22%2C%22private%22%3A%7B%22allowed_to_view%22%3Atrue%7D%2C%22privileged%22%3Afalse%2C%22role%22%3A%22%22%2C%22server_ads%22%3Atrue%2C%22show_ads%22%3Atrue%2C%22subscriber%22%3Afalse%2C%22turbo%22%3Afalse%2C%22user_id%22%3Anull%2C%22user_ip%22%3A%2237.214.79.246%22%2C%22version%22%3A2%7D&sig=113f5a5f219aa9a3e5321d9e0a54ec743ca5d95d&allow_audio_only=true&allow_source=true&type=any&p=1";
                     String result2 = basicRequestSend(url);
                     Playlist playList = Playlist.parse(result2);
                     qualities = new Element.List(playList.getElements());

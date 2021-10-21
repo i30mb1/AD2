@@ -17,9 +17,12 @@
             type="n7.ad2.ui.items.domain.vo.VOItemBody" />
     </data>
 
-    <com.google.android.material.card.MaterialCardView
+    <androidx.cardview.widget.CardView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:elevation="8dp"
+        android:layout_margin="8dp"
+        android:padding="8dp"
         android:onClick="@{()-> itemClickListener.invoke(binding)}"
         tools:layout_height="64dp"
         tools:layout_width="88dp">
@@ -48,5 +51,5 @@
             android:layout_height="match_parent"
             android:background="?colorPrimary" />
 
-    </com.google.android.material.card.MaterialCardView>
+    </androidx.cardview.widget.CardView>
 </layout>

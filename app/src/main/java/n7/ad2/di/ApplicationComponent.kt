@@ -15,6 +15,7 @@ import n7.ad2.ui.itemInfo.ItemInfoFragment
 import n7.ad2.ui.itemInfo.ItemInfoViewModel
 import n7.ad2.ui.items.ItemsViewModel
 import n7.ad2.ui.splash.SplashViewModel
+import n7.ad2.ui.streams.StreamsFragment
 import n7.ad2.ui.streams.StreamsViewModel
 import n7.ad2.workers.DatabaseWorker
 import javax.inject.Singleton
@@ -36,6 +37,7 @@ interface ApplicationComponent {
 
     fun inject(databaseWorker: DatabaseWorker)
     fun inject(mainActivity: MainActivity)
+    fun inject(streamsFragment: StreamsFragment)
     fun inject(heroGuideWorker: HeroGuideWorker)
     fun inject(heroGuideWorker: ItemInfoFragment)
 

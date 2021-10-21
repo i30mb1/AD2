@@ -9,8 +9,11 @@ import n7.ad2.R
 import n7.ad2.databinding.ItemListStreamBinding
 import n7.ad2.ui.streams.domain.vo.VOSimpleStream
 import n7.ad2.ui.streams.domain.vo.VOStream
+import n7.ad2.utils.ImageLoader
 
-class StreamsPagedListAdapter : PagingDataAdapter<VOStream, RecyclerView.ViewHolder>(DiffCallback()) {
+class StreamsPagedListAdapter(
+    private val imageLoader: ImageLoader,
+) : PagingDataAdapter<VOStream, RecyclerView.ViewHolder>(DiffCallback()) {
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int) = when (viewType) {
         R.layout.item_list_stream -> StreamViewHolder.from(parent)
@@ -25,7 +28,7 @@ class StreamsPagedListAdapter : PagingDataAdapter<VOStream, RecyclerView.ViewHol
     override fun onBindViewHolder(holder: RecyclerView.ViewHolder, position: Int) {
         val item = getItem(position)
         when (holder) {
-            is StreamViewHolder -> holder.bindTo(item as VOSimpleStream)
+            is StreamViewHolder -> holder.bindTo(item as VOSimpleStream, imageLoader)
         }
     }
 
@@ -33,9 +36,9 @@ class StreamsPagedListAdapter : PagingDataAdapter<VOStream, RecyclerView.ViewHol
         private val binding: ItemListStreamBinding,
     ) : RecyclerView.ViewHolder(binding.root) {
 
-        fun bindTo(stream: VOSimpleStream) = binding.apply {
-            item = stream
-            executePendingBindings()
+        fun bindTo(stream: VOSimpleStream, imageLoader: ImageLoader) = binding.apply {
+            binding.tvTitle.text = stream.title
+            imageLoader.load(binding.ivStreamImage, stream.imageUrl, R.drawable.streams_placeholder)
         }
 
         companion object {

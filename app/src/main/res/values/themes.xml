@@ -3,7 +3,7 @@
 
     <!--Grey тема-->
     <style name="AD2Theme" parent="Theme.MaterialComponents.Light.NoActionBar">
-        <item name="android:statusBarColor">@color/gray_700</item>
+        <item name="android:statusBarColor">@color/gray_500</item>
         <item name="colorPrimary">@color/red_500</item>
         <item name="colorSecondary">@color/red_500</item>
         <item name="android:colorBackground">@color/gray_500</item>
@@ -26,6 +26,9 @@
 
         <item name="android:windowAnimationStyle">@style/MyWindowAnimationTransition</item>
 
+        <item name="elevationOverlayEnabled">false</item>
+        <item name="elevationOverlayColor">@color/red_500</item>
+
         <item name="textAppearanceHeadline6">@style/TextAppearance.Headline6</item>
         <item name="textAppearanceSubtitle1">@style/TextAppearance.Subtitle1</item>
         <item name="textAppearanceBody1">@style/TextAppearance.Body1</item>
@@ -40,19 +43,29 @@
         <item name="textStyleHeroAdvantage">@style/Widget.TextView.HeroAdvantage</item>
         <item name="textStyleHeroDisadvantage">@style/Widget.TextView.HeroDisadvantage</item>
         <item name="textStyleHeroSignature">@style/Widget.TextView.HeroSignature</item>
-        <item name="textStyleHeroGuideItemSignature">@style/Widget.TextView.HeroGuideItemSignature</item>
+        <item name="textStyleHeroGuideItemSignature">@style/Widget.TextView.HeroGuideItemSignature
+        </item>
         <item name="textStyleItemSignature">@style/Widget.TextView.ItemSignature</item>
         <item name="textStyleSpellSignature">@style/Widget.TextView.SpellSignature</item>
         <item name="textStyleHeroGuideTabNumber">@style/Widget.TextView.HeroGuideTabNumber</item>
 
-        <item name="shapeAppearanceMediumComponent">@style/MyMediumComponent</item>
         <item name="materialAlertDialogTheme">@style/MyMaterialAlertDialogTheme</item>
         <item name="materialCardViewStyle">@style/Widget.CardView</item>
         <item name="tabStyle">@style/Widget.TabLayout</item>
     </style>
 
+    <style name="AD2CardViewStyle" parent="Widget.MaterialComponents.CardView">
+        <item name="cardElevation">0dp</item>
+        <item name="android:layout_marginStart">8dp</item>
+        <item name="android:layout_marginEnd">8dp</item>
+        <item name="android:layout_marginTop">4dp</item>
+        <item name="android:layout_marginBottom">4dp</item>
+        <item name="android:foreground">?android:attr/selectableItemBackground</item>
+        <item name="shapeAppearance">@style/MyMediumComponent</item>
+    </style>
+
     <!--Black тема-->
-    <style name="AD2Theme.Black" >
+    <style name="AD2Theme.Black">
         <item name="android:statusBarColor">@android:color/black</item>
         <!--фон панели приложения-->
         <item name="colorPrimary">@color/purple</item>
