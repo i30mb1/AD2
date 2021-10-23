@@ -5,11 +5,9 @@ import dagger.Module
 import dagger.Provides
 import n7.ad2.BuildConfig
 import n7.ad2.data.source.remote.retrofit.TwitchApi
+import n7.ad2.data.source.remote.retrofit.TwitchGQLApi
 import okhttp3.OkHttpClient
 import okhttp3.logging.HttpLoggingInterceptor
-import retrofit2.Retrofit
-import retrofit2.converter.moshi.MoshiConverterFactory
-import retrofit2.create
 import java.util.concurrent.TimeUnit
 import javax.inject.Singleton
 
@@ -38,7 +36,7 @@ object RetrofitModule {
         .addInterceptor { chain ->
             val request = chain.request().newBuilder()
                 .addHeader("client-id", CLIENT_ID)
-                .addHeader("Authorization", "Bearer $ACCESS_TOKEN")
+//                .addHeader("Authorization", "Bearer $ACCESS_TOKEN")
                 .build()
             return@addInterceptor chain.proceed(request)
         }
@@ -47,15 +45,10 @@ object RetrofitModule {
 
     @Provides
     @Singleton
-    fun provideTwitchApi(
-        client: OkHttpClient,
-        moshi: Moshi,
-    ): TwitchApi = Retrofit.Builder()
-        .baseUrl("https://api.twitch.tv/helix/")
-        .client(client)
-        .addConverterFactory(MoshiConverterFactory.create(moshi))
-        .build()
-        .create()
+    fun provideTwitchApi(client: OkHttpClient, moshi: Moshi): TwitchApi = TwitchApi.get(client, moshi)
 
+    @Provides
+    @Singleton
+    fun provideTwitchGQL(client: OkHttpClient, moshi: Moshi): TwitchGQLApi = TwitchGQLApi.get(client, moshi)
 
 }

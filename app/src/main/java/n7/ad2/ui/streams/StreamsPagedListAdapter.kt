@@ -13,10 +13,11 @@ import n7.ad2.utils.ImageLoader
 
 class StreamsPagedListAdapter(
     private val imageLoader: ImageLoader,
+    private val onStreamClick: (vOSimpleStream: VOSimpleStream) -> Unit,
 ) : PagingDataAdapter<VOStream, RecyclerView.ViewHolder>(DiffCallback()) {
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int) = when (viewType) {
-        R.layout.item_list_stream -> StreamViewHolder.from(parent)
+        R.layout.item_list_stream -> StreamViewHolder.from(parent, imageLoader)
         else -> throw UnsupportedOperationException("could not find ViewHolder for $viewType")
     }
 
@@ -28,26 +29,44 @@ class StreamsPagedListAdapter(
     override fun onBindViewHolder(holder: RecyclerView.ViewHolder, position: Int) {
         val item = getItem(position)
         when (holder) {
-            is StreamViewHolder -> holder.bindTo(item as VOSimpleStream, imageLoader)
+            is StreamViewHolder -> holder.bindTo(item as VOSimpleStream, onStreamClick)
+        }
+    }
+
+    override fun onViewDetachedFromWindow(holder: RecyclerView.ViewHolder) {
+        super.onViewDetachedFromWindow(holder)
+        when (holder) {
+            is StreamViewHolder -> holder.unbind()
         }
     }
 
     class StreamViewHolder(
         private val binding: ItemListStreamBinding,
+        private val imageLoader: ImageLoader,
     ) : RecyclerView.ViewHolder(binding.root) {
 
-        fun bindTo(stream: VOSimpleStream, imageLoader: ImageLoader) = binding.apply {
-            binding.tvTitle.text = stream.title
-            imageLoader.load(binding.ivStreamImage, stream.imageUrl, R.drawable.streams_placeholder)
+        fun bindTo(
+            vOSimpleStream: VOSimpleStream,
+            onStreamClick: (vOSimpleStream: VOSimpleStream) -> Unit,
+        ) = binding.apply {
+            binding.tvTitle.text = vOSimpleStream.title
+            binding.root.setOnClickListener { onStreamClick(vOSimpleStream) }
+            imageLoader.load(binding.ivStreamImage, vOSimpleStream.imageUrl, R.drawable.streams_placeholder)
+        }
+
+        fun unbind() {
+            binding.root.setOnClickListener(null)
+            imageLoader.clear(binding.ivStreamImage)
         }
 
         companion object {
             fun from(
                 parent: ViewGroup,
+                imageLoader: ImageLoader,
             ): StreamViewHolder {
                 val layoutInflater = LayoutInflater.from(parent.context)
                 val binding = ItemListStreamBinding.inflate(layoutInflater, parent, false)
-                return StreamViewHolder(binding)
+                return StreamViewHolder(binding, imageLoader)
             }
         }
 

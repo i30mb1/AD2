@@ -15,9 +15,11 @@ class ConvertStreamToVOStreamUseCase @Inject constructor(
 
     operator fun invoke(stream: Stream): VOStream {
         val title = stream.title
+        val streamerName = stream.userLogin
         val streamImage = stream.thumbnailUrl.replace("{width}", "$width").replace("{height}", "$height")
         return VOSimpleStream(
             title,
+            streamerName,
             streamImage
         )
     }

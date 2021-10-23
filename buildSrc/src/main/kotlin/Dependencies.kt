@@ -22,6 +22,7 @@ object Versions {
     const val retrofit = "2.7.1"
     const val coroutines = "1.5.2"
     const val dataStore = "1.0.0"
+    const val exoPlayer = "2.15.1"
 }
 
 object Lib {
@@ -45,13 +46,17 @@ object Lib {
     const val firebaseAnal = "com.google.firebase:firebase-analytics:17.3.0"
     const val playCore = "com.google.android.play:core:1.8.0" // auto update + rateMe
     const val playCoreKtx = "com.google.android.play:core-ktx:1.8.1"
-    const val exoPlayer = "com.google.android.exoplayer:exoplayer-core:2.14.2"
     const val coreKtx = "androidx.core:core-ktx:1.6.0-alpha02" // Write more concise, idiomatic Kotlin code.
     const val jsonSimple = "com.googlecode.json-simple:json-simple:1.1.1"
     const val springAnimation = "androidx.dynamicanimation:dynamicanimation:1.0.0"
     const val springAnimationKtx = "androidx.dynamicanimation:dynamicanimation-ktx:1.0.0-alpha03"
     const val instantApps = "com.google.android.gms:play-services-instantapps:17.0.0"
     const val viewPager2 = "androidx.viewpager2:viewpager2:1.0.0"
+
+    const val exoPlayerCore = "com.google.android.exoplayer:exoplayer-core:${Versions.exoPlayer}"
+    const val exoPlayerHls = "com.google.android.exoplayer:exoplayer-hls:${Versions.exoPlayer}"
+    const val exoPlayerUi = "com.google.android.exoplayer:exoplayer-ui:${Versions.exoPlayer}"
+    const val exoPlayerMediaSession = "com.google.android.exoplayer:extension-mediasession:${Versions.exoPlayer}"
 
     const val workManager = "androidx.work:work-runtime:2.0.1"
     const val workManagerKotlin = "androidx.work:work-runtime-ktx:${Versions.workManager}"
@@ -141,7 +146,10 @@ fun DependencyHandler.addBaseDependencies() {
     api(Lib.coreKtx)
     api(Lib.springAnimation)
     api(Lib.springAnimationKtx)
-    api(Lib.exoPlayer)
+    implementation(Lib.exoPlayerCore)
+    implementation(Lib.exoPlayerUi)
+    implementation(Lib.exoPlayerMediaSession)
+    implementation(Lib.exoPlayerHls)
     api(Lib.recyclerView)
     api(Lib.dataStorePref)
 
