@@ -50,7 +50,7 @@ object RetrofitModule {
 
     @Provides
     @Singleton
-    fun provideTwitchGQL(client: OkHttpClient, moshi: Moshi): TwitchGQLApi = TwitchGQLApi.get(client, moshi)
+    fun provideTwitchGQL(client: OkHttpClient, moshi: Moshi): TwitchGQLApi = TwitchGQLApi.get(OkHttpClient(), moshi)
 
     @Provides
     @Singleton
