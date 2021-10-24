@@ -9,7 +9,6 @@ class ImageLoader @Inject constructor() {
 
     fun load(imageView: ImageView, url: String, placeholder: Int) {
         imageView.load(url) {
-            crossfade(300)
             placeholder(placeholder)
         }
     }

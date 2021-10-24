@@ -11,7 +11,7 @@
         android:layout_width="160dp"
         android:layout_height="90dp"
         android:contentDescription="@string/desc_stream_image"
-        app:srcCompat="@drawable/streams_placeholder" />
+        tools:srcCompat="@drawable/streams_placeholder" />
 
     <TextView
         android:id="@+id/tv_title"
