@@ -54,6 +54,6 @@ object RetrofitModule {
 
     @Provides
     @Singleton
-    fun provideTwitchHLSApi(client: OkHttpClient): TwitchHLSApi = TwitchHLSApi.get(client)
+    fun provideTwitchHLSApi(client: OkHttpClient, moshi: Moshi): TwitchHLSApi = TwitchHLSApi.get(client, moshi)
 
 }

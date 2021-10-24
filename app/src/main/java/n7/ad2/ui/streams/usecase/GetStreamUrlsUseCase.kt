@@ -37,7 +37,7 @@ class GetStreamUrlsUseCase @Inject constructor(
         val token = safeEncode(body2.data.streamPlaybackAccessToken.value)
         val signature = body2.data.streamPlaybackAccessToken.signature
         val p = java.util.Random().nextInt(6)
-        val streamURL = "http://usher.twitch.tv/api/channel/hls/$streamerName.m3u8?player=twitchweb&&token=$token&sig=$signature&allow_audio_only=true&allow_source=true&type=any&p=1"
+        val streamURL = "http://usher.twitch.tv/api/channel/hls/$streamerName.m3u8?player=twitchweb&token=$token&sig=$signature&allow_audio_only=true&allow_source=true&type=any&p=1"
         val resultUrl = parseM3U8(streamURL)["auto"]
         parseM3(streamerName, p, token, signature, streamURL)
         emit(resultUrl!!.url)
