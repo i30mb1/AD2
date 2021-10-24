@@ -8,7 +8,7 @@ import n7.ad2.R
 import n7.ad2.ui.setting.domain.model.Theme
 
 @SuppressLint("Registered")
-open class BaseActivity : AppCompatActivity() {
+open class BaseActivity() : AppCompatActivity() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         when (PreferenceManager.getDefaultSharedPreferences(this).getString(getString(R.string.setting_theme_key), "")) {

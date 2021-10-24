@@ -105,7 +105,8 @@ class MainActivity : BaseActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         (applicationContext as MyApplication).component.inject(this)
         super.onCreate(savedInstanceState)
-        binding = DataBindingUtil.setContentView(this, R.layout.activity_main)
+        binding = ActivityMainBinding.inflate(layoutInflater)
+        setContentView(binding.root)
         drawer = DataBindingUtil.inflate(layoutInflater, R.layout.drawer, null, false)
         drawer.setViewModel(viewModel)
         drawer.setActivity(this)
@@ -118,7 +119,7 @@ class MainActivity : BaseActivity() {
     }
 
     private fun setupMenuRecyclerView() {
-        val linearLayoutManager = LinearLayoutManager(this, LinearLayoutManager.VERTICAL, false)
+        val linearLayoutManager = LinearLayoutManager(this)
         val mainMenuAdapter = MainMenuAdapter(layoutInflater, ::setFragment)
         drawer.rv.apply {
             overScrollMode = View.OVER_SCROLL_NEVER
