@@ -8,9 +8,7 @@ import n7.ad2.data.source.remote.model.StreamsQuality
 import n7.ad2.data.source.remote.model.Variables
 import n7.ad2.data.source.remote.retrofit.TwitchGQLApi
 import n7.ad2.data.source.remote.retrofit.TwitchHLSApi
-import okhttp3.OkHttpClient
 import java.net.URLEncoder
-import java.util.concurrent.TimeUnit
 import java.util.regex.Pattern
 import javax.inject.Inject
 
@@ -19,11 +17,6 @@ class GetStreamUrlsUseCase @Inject constructor(
     private val twitchGQLApi: TwitchGQLApi,
     private val twitchHLSApi: TwitchHLSApi,
 ) {
-
-    val client = OkHttpClient.Builder()
-        .readTimeout(5, TimeUnit.SECONDS)
-        .connectTimeout(3, TimeUnit.SECONDS)
-        .build()
 
     operator fun invoke(streamerName: String) = flow {
         val requestObject = StreamGQLRequest(variables = Variables(streamerName = streamerName))
@@ -34,17 +27,17 @@ class GetStreamUrlsUseCase @Inject constructor(
         val p = java.util.Random().nextInt(6)
         val streamURL = "http://usher.twitch.tv/api/channel/hls/$streamerName.m3u8?player=twitchweb&token=$token&sig=$signature&allow_audio_only=true&allow_source=true&type=any&p=$p"
         val result = parseM3(streamerName, p, token, signature, streamURL)
-        emit(result.first().url)
+        emit(streamURL)
     }.flowOn(ioDispatcher)
 
     private suspend fun parseM3(streamerName: String, p: Int, token: String, signature: String, streamURL: String): List<StreamsQuality> {
-        val response = twitchHLSApi.getUrls(streamerName = streamerName, p = 2, sig = signature, token = token)
+        val response = twitchHLSApi.getUrls(streamerName = streamerName, p = p, sig = signature, token = token)
         val body = response.body().toString()
         val result = mutableListOf<StreamsQuality>()
         result.add(StreamsQuality("Auto", "Auto", streamURL))
         val pattern = Pattern.compile("GROUP-ID=\"(.+)\",NAME=\"(.+)\".+\\n.+\\n(https?://\\S+)")
         val matcher = pattern.matcher(body)
-        while (matcher.find()) result.add(StreamsQuality(matcher.group(1), matcher.group(2), matcher.group(3)))
+        while (matcher.find()) result.add(StreamsQuality(matcher.group(1)!!, matcher.group(2)!!, matcher.group(3)!!))
         return result
     }
 

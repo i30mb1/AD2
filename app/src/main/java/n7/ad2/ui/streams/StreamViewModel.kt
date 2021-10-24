@@ -18,7 +18,7 @@ class StreamViewModel @Inject constructor(
     private val _error = Channel<Throwable>(Channel.BUFFERED)
     val error = _error.receiveAsFlow()
 
-    val url = MutableLiveData("")
+    val url: MutableLiveData<String?> = MutableLiveData(null)
 
     fun load(streamerName: String) {
         getStreamUrlsUseCase(streamerName)

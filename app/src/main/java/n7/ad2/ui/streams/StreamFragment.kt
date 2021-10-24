@@ -59,14 +59,10 @@ class StreamFragment : Fragment(R.layout.fragment_stream) {
     private fun playUrl() {
         viewModel.load(streamerName)
         viewModel.url.observe(viewLifecycleOwner) { realUrl ->
+            if (realUrl == null) return@observe
             val dataSource = DefaultHttpDataSource.Factory()
-                .setUserAgent(getString(R.string.app_name))
-                .setDefaultRequestProperties(mapOf(
-                    "Referer" to "https://player.twitch.tv",
-                    "Origin" to "https://player.twitch.tv"
-                ))
-            val mediaSource = HlsMediaSource.Factory(dataSource)
-                .createMediaSource(MediaItem.fromUri(realUrl.toUri()))
+
+            val mediaSource = HlsMediaSource.Factory(dataSource).createMediaSource(MediaItem.fromUri(realUrl.toUri()))
             player.setMediaSource(mediaSource)
             player.prepare()
             player.play()
