@@ -67,7 +67,7 @@ dependencies {
     implementation(Lib.jsoup)
     implementation(Lib.firebaseAnal)
     implementation(Lib.instantApps)
-    
+
     lintChecks(project(":rules"))
 
     addBaseDependencies()

@@ -34,7 +34,8 @@ object Lib {
     const val debugDB = "com.amitshekhar.android:debug-db:1.0.1" // cmd ipconfig основной шлюз + :8080 (как узнать страничку для браузера)
     const val retrofit = "com.squareup.retrofit2:retrofit:${Versions.retrofit}"
     const val retrofitMoshiConverter = "com.squareup.retrofit2:converter-moshi:${Versions.retrofit}"
-    const val retrofitInterceptor    = "com.squareup.okhttp3:logging-interceptor:4.3.1"
+    const val retrofitInterceptor = "com.squareup.okhttp3:logging-interceptor:4.3.1"
+    const val retrofitScalars = "com.squareup.retrofit2:converter-scalars:2.9.0"
     const val paging3 = "androidx.paging:paging-runtime:3.0.0"
     const val material = "com.google.android.material:material:1.2.0"
     const val constraintLayout = "androidx.constraintlayout:constraintlayout:2.0.4"
@@ -168,6 +169,7 @@ fun DependencyHandler.addBaseDependencies() {
     implementation(Lib.retrofit)
     implementation(Lib.retrofitMoshiConverter)
     implementation(Lib.retrofitInterceptor)
+    implementation(Lib.retrofitScalars)
     implementation(Lib.moshi)
     kapt(Lib.moshiCodegen)
 

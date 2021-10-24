@@ -37,3 +37,4 @@ data class StreamPlaybackAccessToken(
     @Json(name = "value")
     val value: String = "",
 )
+
