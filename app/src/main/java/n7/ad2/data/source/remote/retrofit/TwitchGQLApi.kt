@@ -19,8 +19,6 @@ interface TwitchGQLApi {
         @Body body: StreamGQLRequest,
     ): FF
 
-    suspend fun getStreamURL(): String
-
     companion object {
 
         fun get(

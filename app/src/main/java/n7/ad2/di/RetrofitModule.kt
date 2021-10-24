@@ -6,6 +6,7 @@ import dagger.Provides
 import n7.ad2.BuildConfig
 import n7.ad2.data.source.remote.retrofit.TwitchApi
 import n7.ad2.data.source.remote.retrofit.TwitchGQLApi
+import n7.ad2.data.source.remote.retrofit.TwitchHLSApi
 import okhttp3.OkHttpClient
 import okhttp3.logging.HttpLoggingInterceptor
 import java.util.concurrent.TimeUnit
@@ -50,5 +51,9 @@ object RetrofitModule {
     @Provides
     @Singleton
     fun provideTwitchGQL(client: OkHttpClient, moshi: Moshi): TwitchGQLApi = TwitchGQLApi.get(client, moshi)
+
+    @Provides
+    @Singleton
+    fun provideTwitchHLSApi(client: OkHttpClient): TwitchHLSApi = TwitchHLSApi.get(client)
 
 }
