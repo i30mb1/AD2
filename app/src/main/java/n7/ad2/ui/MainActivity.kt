@@ -21,7 +21,6 @@ import androidx.constraintlayout.widget.ConstraintSet
 import androidx.core.view.ViewCompat
 import androidx.core.view.WindowInsetsCompat
 import androidx.databinding.DataBindingUtil
-import androidx.databinding.ObservableBoolean
 import androidx.fragment.app.commit
 import androidx.lifecycle.lifecycleScope
 import androidx.recyclerview.widget.LinearLayoutManager
@@ -74,8 +73,6 @@ class MainActivity : BaseActivity() {
 
     @Inject
     lateinit var logger: AD2Logger
-
-    var subscription = ObservableBoolean(false)
 
     private var doubleBackToExitPressedOnce = false
     private val constraintSetHidden = ConstraintSet()
@@ -287,7 +284,7 @@ class MainActivity : BaseActivity() {
 
     private fun showDialogRate() {
         val showDialogRate = PreferenceManager.getDefaultSharedPreferences(this).getBoolean(DIALOG_RATE_SHOW, true)
-        if (showDialogRate && !subscription.get()) {
+        if (showDialogRate) {
             val builder = AlertDialog.Builder(this)
             val binding: DialogRateBinding = DataBindingUtil.inflate(layoutInflater, R.layout.dialog_rate, null, false)
             binding.activity = this
