@@ -5,7 +5,7 @@ import com.squareup.moshi.JsonClass
 
 
 @JsonClass(generateAdapter = true)
-data class FF(
+data class StreamGQLData(
     @Json(name = "data")
     val `data`: Data = Data(),
     @Json(name = "extensions")

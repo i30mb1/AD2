@@ -1,7 +1,7 @@
 package n7.ad2.data.source.remote.retrofit
 
 import com.squareup.moshi.Moshi
-import n7.ad2.data.source.remote.model.FF
+import n7.ad2.data.source.remote.model.StreamGQLData
 import n7.ad2.data.source.remote.model.StreamGQLRequest
 import okhttp3.OkHttpClient
 import retrofit2.Retrofit
@@ -17,7 +17,7 @@ interface TwitchGQLApi {
     @POST("gql/")
     suspend fun getStreamGQL(
         @Body body: StreamGQLRequest,
-    ): FF
+    ): StreamGQLData
 
     companion object {
 
