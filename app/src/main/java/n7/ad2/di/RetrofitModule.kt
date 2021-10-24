@@ -36,7 +36,7 @@ object RetrofitModule {
         .addInterceptor { chain ->
             val request = chain.request().newBuilder()
                 .addHeader("client-id", CLIENT_ID)
-//                .addHeader("Authorization", "Bearer $ACCESS_TOKEN")
+                .addHeader("Authorization", "Bearer $ACCESS_TOKEN")
                 .build()
             return@addInterceptor chain.proceed(request)
         }

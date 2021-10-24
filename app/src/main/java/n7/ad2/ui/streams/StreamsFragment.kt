@@ -8,6 +8,7 @@ import androidx.fragment.app.commit
 import androidx.lifecycle.Lifecycle
 import androidx.lifecycle.flowWithLifecycle
 import androidx.lifecycle.lifecycleScope
+import androidx.paging.LoadState
 import androidx.recyclerview.widget.LinearLayoutManager
 import kotlinx.coroutines.flow.collect
 import kotlinx.coroutines.launch
@@ -23,7 +24,6 @@ class StreamsFragment : Fragment(R.layout.fragment_streams) {
 
     private lateinit var binding: FragmentStreamsBinding
     private val viewModel: StreamsViewModel by viewModel { injector.streamsViewModel }
-
     @Inject
     lateinit var imageLoader: ImageLoader
     private val onStreamClick: (vOSimpleStream: VOSimpleStream) -> Unit = { voSimpleStream ->
@@ -56,6 +56,13 @@ class StreamsFragment : Fragment(R.layout.fragment_streams) {
             adapter = streamsPagedListAdapter
         }
 
+        streamsPagedListAdapter.addLoadStateListener { loadState ->
+            when (loadState.refresh) {
+                is LoadState.NotLoading -> Unit
+                LoadState.Loading -> Unit
+                is LoadState.Error -> Toast.makeText(requireContext(), (loadState.refresh as LoadState.Error).error.toString(), Toast.LENGTH_LONG).show()
+            }
+        }
         lifecycleScope.launch {
             viewModel.streams
                 .flowWithLifecycle(lifecycle, Lifecycle.State.STARTED)

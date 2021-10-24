@@ -5,14 +5,20 @@ import android.view.View
 import androidx.core.net.toUri
 import androidx.core.os.bundleOf
 import androidx.fragment.app.Fragment
+import androidx.lifecycle.Lifecycle
+import androidx.lifecycle.flowWithLifecycle
+import androidx.lifecycle.lifecycleScope
 import com.google.android.exoplayer2.ExoPlayer
 import com.google.android.exoplayer2.MediaItem
 import com.google.android.exoplayer2.SimpleExoPlayer
 import com.google.android.exoplayer2.source.hls.HlsMediaSource
 import com.google.android.exoplayer2.upstream.DefaultHttpDataSource
+import kotlinx.coroutines.flow.collect
+import kotlinx.coroutines.launch
 import n7.ad2.R
 import n7.ad2.databinding.FragmentStreamBinding
 import n7.ad2.di.injector
+import n7.ad2.ui.heroPage.showDialogError
 import n7.ad2.utils.lazyUnsafe
 import n7.ad2.utils.viewModel
 
@@ -37,6 +43,11 @@ class StreamFragment : Fragment(R.layout.fragment_stream) {
         super.onViewCreated(view, savedInstanceState)
         binding = FragmentStreamBinding.bind(view)
         initializePlayer()
+        lifecycleScope.launch {
+            viewModel.error
+                .flowWithLifecycle(viewLifecycleOwner.lifecycle, Lifecycle.State.STARTED)
+                .collect(::showDialogError)
+        }
     }
 
     private fun initializePlayer() {
@@ -49,17 +60,20 @@ class StreamFragment : Fragment(R.layout.fragment_stream) {
 
     private fun playUrl(url: String) {
         viewModel.load(streamerName)
-        val dataSource = DefaultHttpDataSource.Factory()
-            .setUserAgent(getString(R.string.app_name))
-            .setDefaultRequestProperties(mapOf(
-                "Referer" to "https://player.twitch.tv",
-                "Origin" to "https://player.twitch.tv"
-            ))
-        val mediaSource = HlsMediaSource.Factory(dataSource)
-            .createMediaSource(MediaItem.fromUri(url.toUri()))
-        player.setMediaSource(mediaSource)
-        player.prepare()
-        player.play()
+        viewModel.url.observe(viewLifecycleOwner) { realUrl ->
+            val dataSource = DefaultHttpDataSource.Factory()
+                .setUserAgent(getString(R.string.app_name))
+                .setDefaultRequestProperties(mapOf(
+                    "Referer" to "https://player.twitch.tv",
+                    "Origin" to "https://player.twitch.tv"
+                ))
+            val mediaSource = HlsMediaSource.Factory(dataSource)
+                .createMediaSource(MediaItem.fromUri(realUrl.toUri()))
+            player.setMediaSource(mediaSource)
+            player.prepare()
+            player.play()
+        }
+
     }
 
 }
