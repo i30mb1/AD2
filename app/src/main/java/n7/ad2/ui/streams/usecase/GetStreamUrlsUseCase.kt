@@ -9,7 +9,6 @@ import n7.ad2.data.source.remote.model.Variables
 import n7.ad2.data.source.remote.retrofit.TwitchGQLApi
 import n7.ad2.data.source.remote.retrofit.TwitchHLSApi
 import okhttp3.OkHttpClient
-import java.io.UnsupportedEncodingException
 import java.net.URLEncoder
 import java.util.concurrent.TimeUnit
 import java.util.regex.Pattern
@@ -35,7 +34,7 @@ class GetStreamUrlsUseCase @Inject constructor(
         val p = java.util.Random().nextInt(6)
         val streamURL = "http://usher.twitch.tv/api/channel/hls/$streamerName.m3u8?player=twitchweb&token=$token&sig=$signature&allow_audio_only=true&allow_source=true&type=any&p=$p"
         val result = parseM3(streamerName, p, token, signature, streamURL)
-        emit(result[result.size - 2].url)
+        emit(result.first().url)
     }.flowOn(ioDispatcher)
 
     private suspend fun parseM3(streamerName: String, p: Int, token: String, signature: String, streamURL: String): List<StreamsQuality> {
@@ -49,12 +48,6 @@ class GetStreamUrlsUseCase @Inject constructor(
         return result
     }
 
-    fun safeEncode(s: String): String {
-        return try {
-            URLEncoder.encode(s, "utf-8")
-        } catch (ignore: UnsupportedEncodingException) {
-            s
-        }
-    }
+    private fun safeEncode(s: String): String = URLEncoder.encode(s, "utf-8")
 
 }
