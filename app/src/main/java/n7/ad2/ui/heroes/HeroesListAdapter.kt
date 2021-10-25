@@ -1,6 +1,5 @@
 package n7.ad2.ui.heroes
 
-import android.graphics.Rect
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
@@ -21,11 +20,7 @@ class HeroesListAdapter internal constructor(fragment: HeroesFragment) : ListAda
         )
     }
     private val longListener = View.OnLongClickListener {
-        val viewRect = Rect()
-        val itemHeroBinding = it.getTag(R.id.ViewHolderBinding) as ItemHeroBinding
-        itemHeroBinding.iv.getGlobalVisibleRect(viewRect)
-        fragment.explode(viewRect)
-        true
+        false
     }
 
     override fun getItemViewType(position: Int): Int = R.layout.item_hero
