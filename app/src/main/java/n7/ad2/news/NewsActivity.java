@@ -1,15 +1,16 @@
 package n7.ad2.news;
 
-import androidx.lifecycle.Observer;
 import android.content.res.Resources;
 import android.graphics.Color;
 import android.os.Bundle;
-import androidx.annotation.Nullable;
-import androidx.appcompat.widget.Toolbar;
 import android.util.TypedValue;
 import android.view.MenuItem;
 import android.webkit.WebSettings;
 import android.webkit.WebView;
+
+import androidx.annotation.Nullable;
+import androidx.appcompat.widget.Toolbar;
+import androidx.lifecycle.Observer;
 
 import n7.ad2.R;
 import n7.ad2.news.db.NewsDao;
@@ -80,6 +81,7 @@ public class NewsActivity extends BaseActivity {
             public void onChanged(@Nullable NewsModel steamNews) {
                 contents.loadDataWithBaseURL(null, "<style>img{display: inline;height: auto;max-width: 100%;text-decoration:none;}</style>" +
                         "<style type=\"text/css\">body{color:" + getColorTextTheme() + ";}</style>" + steamNews.getContent().trim(), "text/html", "UTF-8", null);
+                // https://proandroiddev.com/enhance-android-webview-performance-using-glide-aba4bbc41bc7
             }
         });
 //        webSettings.setDefaultFontSize(10);
