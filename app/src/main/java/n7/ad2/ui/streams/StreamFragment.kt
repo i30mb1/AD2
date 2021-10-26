@@ -2,6 +2,7 @@ package n7.ad2.ui.streams
 
 import android.os.Bundle
 import android.view.View
+import androidx.activity.addCallback
 import androidx.core.net.toUri
 import androidx.core.os.bundleOf
 import androidx.fragment.app.Fragment
@@ -44,8 +45,12 @@ class StreamFragment : Fragment(R.layout.fragment_stream) {
         super.onCreate(savedInstanceState)
 
         // todo but how to animate recyclerView???
-        enterTransition = MaterialFadeThrough()
-        exitTransition = MaterialFadeThrough()
+        enterTransition = MaterialFadeThrough().apply {
+            duration = 3000
+        }
+        exitTransition = MaterialFadeThrough().apply {
+            duration = 3000
+        }
     }
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
@@ -56,6 +61,13 @@ class StreamFragment : Fragment(R.layout.fragment_stream) {
             viewModel.error
                 .flowWithLifecycle(viewLifecycleOwner.lifecycle, Lifecycle.State.STARTED)
                 .collect(::showDialogError)
+        }
+        setupOnBackPressed()
+    }
+
+    private fun setupOnBackPressed() {
+        activity?.onBackPressedDispatcher?.addCallback(viewLifecycleOwner) {
+            parentFragmentManager.popBackStack()
         }
     }
 

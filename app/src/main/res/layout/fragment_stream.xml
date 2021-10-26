@@ -2,6 +2,7 @@
 <FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="?android:colorBackground"
     xmlns:app="http://schemas.android.com/apk/res-auto">
 
     <com.google.android.exoplayer2.ui.PlayerView
@@ -10,5 +11,11 @@
         android:layout_height="wrap_content"
         android:background="@android:color/black"
         app:use_controller="false" />
+
+    <View
+        android:layout_width="200dp"
+        android:layout_gravity="center"
+        android:background="#FF0000"
+        android:layout_height="100dp" />
 
 </FrameLayout>

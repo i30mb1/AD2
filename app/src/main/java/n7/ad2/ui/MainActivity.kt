@@ -15,6 +15,7 @@ import android.view.MotionEvent
 import android.view.View
 import android.view.ViewGroup
 import android.view.animation.LinearInterpolator
+import androidx.activity.addCallback
 import androidx.appcompat.app.AlertDialog
 import androidx.constraintlayout.widget.ConstraintLayout
 import androidx.constraintlayout.widget.ConstraintSet
@@ -113,6 +114,23 @@ class MainActivity : BaseActivity() {
         setupSecretActivity()
         setupMenuRecyclerView()
         setLastFragment()
+        setupOnBackPressed()
+    }
+
+    private fun setupOnBackPressed() {
+        onBackPressedDispatcher.addCallback(this) {
+            if (doubleBackToExitPressedOnce) {
+                finish()
+                return@addCallback
+            }
+            if (currentSet === constraintSetHidden) {
+                toggleSecretActivity(binding.root)
+                return@addCallback
+            }
+            doubleBackToExitPressedOnce = true
+            Snackbar.make(binding.root, R.string.main_press_again_to_exit, Snackbar.LENGTH_SHORT).show()
+            Handler(Looper.getMainLooper()).postDelayed({ doubleBackToExitPressedOnce = false }, MILLIS_FOR_EXIT.toLong())
+        }
     }
 
     private fun setupMenuRecyclerView() {
@@ -349,20 +367,6 @@ class MainActivity : BaseActivity() {
                 else -> loadNewVersionFlexible()
             }
         }
-    }
-
-    override fun onBackPressed() {
-        if (doubleBackToExitPressedOnce) {
-            finish()
-            return
-        }
-        if (currentSet === constraintSetHidden) {
-            toggleSecretActivity(binding.root)
-            return
-        }
-        doubleBackToExitPressedOnce = true
-        Snackbar.make(binding.root, R.string.main_press_again_to_exit, Snackbar.LENGTH_SHORT).show()
-        Handler(Looper.getMainLooper()).postDelayed({ doubleBackToExitPressedOnce = false }, MILLIS_FOR_EXIT.toLong())
     }
 
 }
