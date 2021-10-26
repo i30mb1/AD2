@@ -54,6 +54,7 @@ class StreamsFragment : Fragment(R.layout.fragment_streams) {
             setHasFixedSize(true)
             layoutManager = LinearLayoutManager(context)
             adapter = streamsPagedListAdapter
+            addItemDecoration(DividerItemDecorator())
         }
 
         streamsPagedListAdapter.addLoadStateListener { loadState ->
