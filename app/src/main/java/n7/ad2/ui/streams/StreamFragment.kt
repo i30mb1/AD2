@@ -73,8 +73,8 @@ class StreamFragment : Fragment(R.layout.fragment_stream) {
 
     private fun initializePlayer() {
         player = SimpleExoPlayer.Builder(requireContext()).build()
-        binding.playerView.player = player
-        playUrl()
+//        binding.playerView.player = player
+//        playUrl()
     }
 
     private fun playUrl() {
