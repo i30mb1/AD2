@@ -20,7 +20,11 @@ import androidx.appcompat.app.AlertDialog
 import androidx.constraintlayout.widget.ConstraintLayout
 import androidx.constraintlayout.widget.ConstraintSet
 import androidx.core.view.ViewCompat
+import androidx.core.view.WindowCompat
+import androidx.core.view.WindowInsetsAnimationCompat
 import androidx.core.view.WindowInsetsCompat
+import androidx.core.view.WindowInsetsControllerCompat
+import androidx.core.view.updatePadding
 import androidx.databinding.DataBindingUtil
 import androidx.fragment.app.commit
 import androidx.lifecycle.lifecycleScope
@@ -28,6 +32,7 @@ import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.transition.ChangeBounds
 import androidx.transition.TransitionManager
 import androidx.transition.TransitionSet
+import com.google.android.material.math.MathUtils.lerp
 import com.google.android.material.snackbar.Snackbar
 import com.google.android.play.core.appupdate.AppUpdateManager
 import com.google.android.play.core.appupdate.AppUpdateManagerFactory
@@ -115,6 +120,63 @@ class MainActivity : BaseActivity() {
         setupMenuRecyclerView()
         setLastFragment()
         setupOnBackPressed()
+        setupInsets()
+    }
+
+    private fun setupInsets() {
+        WindowCompat.setDecorFitsSystemWindows(window, false)
+        WindowInsetsControllerCompat(window, binding.root).let { controller ->
+//            controller.systemBarsBehavior = WindowInsetsControllerCompat.BEHAVIOR_SHOW_TRANSIENT_BARS_BY_SWIPE
+//            controller.hide(WindowInsetsCompat.Type.systemBars())
+            controller.isAppearanceLightStatusBars = false
+        }
+        ViewCompat.setOnApplyWindowInsetsListener(drawer.root) { view, insets ->
+            val navigationBarsInsets = insets.getInsets(WindowInsetsCompat.Type.navigationBars())
+            val statusBarsInsets = insets.getInsets(WindowInsetsCompat.Type.statusBars())
+            view.updatePadding(bottom = navigationBarsInsets.bottom)
+//            binding.root.updateLayoutParams<ViewGroup.MarginLayoutParams> {
+//                updateMargins(top = statusBarsInsets.top, bottom = navigationBarsInsets.bottom)
+//            }
+
+            val imeVisible = insets.isVisible(WindowInsetsCompat.Type.ime())
+            val imeHeight = insets.getInsets(WindowInsetsCompat.Type.ime()).bottom
+
+            WindowInsetsCompat.CONSUMED
+        }
+        val callback = object : WindowInsetsAnimationCompat.Callback(DISPATCH_MODE_STOP) {
+
+            private var startBottom: Float = 0F
+            private var endBottom: Float = 0F
+
+            override fun onPrepare(animation: WindowInsetsAnimationCompat) {
+                super.onPrepare(animation)
+                startBottom = drawer.root.paddingBottom.toFloat()
+            }
+
+            override fun onStart(animation: WindowInsetsAnimationCompat, bounds: WindowInsetsAnimationCompat.BoundsCompat): WindowInsetsAnimationCompat.BoundsCompat {
+                endBottom = drawer.root.paddingBottom.toFloat()
+                drawer.root.translationY = startBottom - endBottom
+                return super.onStart(animation, bounds)
+            }
+
+            override fun onProgress(insets: WindowInsetsCompat, runningAnimations: MutableList<WindowInsetsAnimationCompat>): WindowInsetsCompat {
+                val offset = lerp(
+                    startBottom - endBottom,
+                    0F,
+                    runningAnimations.first().interpolatedFraction
+                )
+                drawer.root.translationY = offset
+                return insets
+            }
+
+
+            override fun onEnd(animation: WindowInsetsAnimationCompat) {
+                super.onEnd(animation)
+            }
+
+        }
+
+        ViewCompat.setWindowInsetsAnimationCallback(binding.root, callback)
     }
 
     private fun setupOnBackPressed() {
