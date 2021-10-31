@@ -63,7 +63,7 @@ class DraggableDrawer(
 
     override fun onLayout(changed: Boolean, left: Int, top: Int, right: Int, bottom: Int) {
         super.onLayout(changed, left, top, right, bottom)
-        initDragView()
+        initDraggableView()
         draggableView.offsetLeftAndRight(offsetX)
     }
 
@@ -105,7 +105,7 @@ class DraggableDrawer(
         if (startSettling) SettleRunnable().run()
     }
 
-    private fun initDragView() {
+    private fun initDraggableView() {
         if (isDraggableViewInitiated) return
         if (isCollapsed) {
             offsetX = collapsedOffsetX
