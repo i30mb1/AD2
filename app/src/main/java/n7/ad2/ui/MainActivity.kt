@@ -61,6 +61,7 @@ import n7.ad2.ui.items.ItemsFragment
 import n7.ad2.ui.setting.SettingActivity
 import n7.ad2.ui.streams.StreamsFragment
 import n7.ad2.utils.BaseActivity
+import n7.ad2.utils.lazyUnsafe
 import n7.ad2.utils.viewModel
 import javax.inject.Inject
 
@@ -84,7 +85,7 @@ class MainActivity : BaseActivity() {
     private val constraintSetHidden = ConstraintSet()
     private val constraintSetOrigin = ConstraintSet()
     private var currentSet: ConstraintSet? = null
-    private val loggerAdapter: AD2LoggerAdapter by lazy { AD2LoggerAdapter() }
+    private val loggerAdapter: AD2LoggerAdapter by lazyUnsafe { AD2LoggerAdapter() }
     private lateinit var binding: ActivityMainBinding
     private lateinit var drawer: DrawerBinding
     private var shouldUpdateFromMarket = true

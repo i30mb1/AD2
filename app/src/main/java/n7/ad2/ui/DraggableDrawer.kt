@@ -25,6 +25,7 @@ class DraggableDrawer(
         private val collapsedOffsetX = 130.toPx
         private const val collapsedScale = 0.6f
         private const val maxScale = 1.0f
+        private const val defaultElevation = 10f
     }
 
     private lateinit var draggableView: FragmentContainerView
@@ -71,6 +72,7 @@ class DraggableDrawer(
         dragHelper.processTouchEvent(ev)
         val clickedOnView = dragHelper.shouldInterceptTouchEvent(ev)
         if (clickedOnView) {
+            dragHelper.processTouchEvent(ev)
             when (ev.action) {
                 MotionEvent.ACTION_DOWN -> {
                     initialMotionX = ev.x
@@ -112,6 +114,7 @@ class DraggableDrawer(
             draggableView.scaleY = collapsedScale
             draggableView.scaleX = collapsedScale
         }
+        draggableView.elevation = defaultElevation
         isDraggableViewInitiated = true
     }
 

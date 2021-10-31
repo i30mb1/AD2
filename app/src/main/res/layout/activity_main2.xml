@@ -3,6 +3,7 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    xmlns:tools="http://schemas.android.com/tools"
     app:isCollapsed="true">
 
     <androidx.fragment.app.FragmentContainerView
@@ -16,5 +17,14 @@
         android:layout_width="wrap_content"
         android:layout_gravity="center_vertical"
         android:layout_height="wrap_content" />
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/rv_log"
+        android:layout_width="wrap_content"
+        android:layout_gravity="end|bottom"
+        android:layout_height="wrap_content"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        tools:listitem="@layout/item_log" />
 
 </n7.ad2.ui.DraggableDrawer>
