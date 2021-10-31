@@ -41,8 +41,6 @@ import com.google.android.play.core.install.InstallStateUpdatedListener
 import com.google.android.play.core.install.model.AppUpdateType
 import com.google.android.play.core.install.model.InstallStatus
 import com.google.android.play.core.install.model.UpdateAvailability
-import com.yarolegovich.slidingrootnav.SlidingRootNavBuilder
-import com.yarolegovich.slidingrootnav.callback.DragStateListener
 import kotlinx.coroutines.flow.launchIn
 import kotlinx.coroutines.flow.onEach
 import n7.ad2.AD2Logger
@@ -115,8 +113,6 @@ class MainActivity : BaseActivity() {
         drawer.setViewModel(viewModel)
         drawer.setActivity(this)
         setupLoggerAdapter()
-        setupToolbar()
-        setupDrawer()
         setupSecretActivity()
         setupMenuRecyclerView()
         setLastFragment()
@@ -398,26 +394,6 @@ class MainActivity : BaseActivity() {
     override fun dispatchTouchEvent(event: MotionEvent): Boolean {
         drawer.fingerCoordinator.handleGlobalEvent(event)
         return super.dispatchTouchEvent(event)
-    }
-
-    private fun setupDrawer() {
-        val drawer = SlidingRootNavBuilder(this)
-            .withToolbarMenuToggle(binding.toolbar)
-            .withDragDistance(110)
-            .withRootViewScale(0.65f)
-            .withRootViewElevation(8)
-            .withRootViewYTranslation(0)
-            .withContentClickableWhenMenuOpened(true)
-            .addDragStateListener(object : DragStateListener {
-                override fun onDragStart() {
-                    hideKeyboard()
-                }
-
-                override fun onDragEnd(isMenuOpened: Boolean) {}
-            })
-            .withMenuView(drawer.root)
-            .inject()
-        drawer.openMenu()
     }
 
     private fun checkInstallUpdate() {

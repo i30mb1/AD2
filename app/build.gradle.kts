@@ -58,7 +58,6 @@ dependencies {
     implementation(fileTree(mapOf("dir" to "libs", "include" to listOf("*.jar"))))
     debugImplementation(Lib.debugDB)
     implementation(Lib.ticker)
-    implementation(Lib.sliding)
     implementation(Lib.paging3)
     implementation(Lib.picasso)
     implementation(Lib.picassoTrans)

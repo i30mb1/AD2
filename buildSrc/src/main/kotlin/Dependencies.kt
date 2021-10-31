@@ -30,7 +30,6 @@ object Lib {
     const val recyclerView = "androidx.recyclerview:recyclerview:1.2.0-beta02"
     const val kotlinReflection = "org.jetbrains.kotlin:kotlin-reflect:${Versions.kotlin}"
     const val ticker = "com.robinhood.ticker:ticker:1.2.2"
-    const val sliding = "com.yarolegovich:sliding-root-nav:1.1.0"
     const val debugDB = "com.amitshekhar.android:debug-db:1.0.1" // cmd ipconfig основной шлюз + :8080 (как узнать страничку для браузера)
     const val retrofit = "com.squareup.retrofit2:retrofit:${Versions.retrofit}"
     const val retrofitMoshiConverter = "com.squareup.retrofit2:converter-moshi:${Versions.retrofit}"
