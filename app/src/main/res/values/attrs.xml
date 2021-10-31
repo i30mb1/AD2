@@ -16,4 +16,9 @@
     <attr name="textStyleSpellSignature" format="reference" />
     <attr name="textStyleTitle" format="reference" />
     <attr name="textStyleHeroGuideTabNumber" format="reference" />
+
+    <declare-styleable name="DrawableDrawer">
+        <attr name="isCollapsed" format="boolean" />
+    </declare-styleable>
+
 </resources>
