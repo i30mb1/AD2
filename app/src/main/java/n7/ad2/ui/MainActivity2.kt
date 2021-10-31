@@ -1,6 +1,5 @@
 package n7.ad2.ui
 
-import android.content.SharedPreferences
 import android.os.Bundle
 import android.view.MotionEvent
 import androidx.fragment.app.commit
@@ -8,8 +7,9 @@ import androidx.lifecycle.lifecycleScope
 import androidx.recyclerview.widget.LinearLayoutManager
 import kotlinx.coroutines.flow.launchIn
 import kotlinx.coroutines.flow.onEach
+import kotlinx.coroutines.launch
 import n7.ad2.AD2Logger
-import n7.ad2.R
+import n7.ad2.data.source.local.AppPreference
 import n7.ad2.databinding.ActivityMain2Binding
 import n7.ad2.ui.heroes.HeroesFragment
 import n7.ad2.utils.BaseActivity
@@ -21,10 +21,12 @@ class MainActivity2 : BaseActivity() {
     private val loggerAdapter: AD2LoggerAdapter by lazyUnsafe { AD2LoggerAdapter() }
 
     private lateinit var binding: ActivityMain2Binding
+
     @Inject
     lateinit var logger: AD2Logger
+
     @Inject
-    lateinit var preferences: SharedPreferences
+    lateinit var preferences: AppPreference
 
     override fun onCreate(savedInstanceState: Bundle?) {
         (applicationContext as MyApplication).component.inject(this)
@@ -42,15 +44,15 @@ class MainActivity2 : BaseActivity() {
         return super.dispatchTouchEvent(event)
     }
 
-    private fun setupLoggerAdapter() {
-        val shouldDisplayLog = preferences.getBoolean(getString(R.string.setting_log_key), true)
+    private fun setupLoggerAdapter() = lifecycleScope.launch {
+        val shouldDisplayLog = preferences.isShowFingerCoordinate()
         if (shouldDisplayLog) {
             logger.getLogFlow()
                 .onEach(loggerAdapter::add)
                 .launchIn(lifecycleScope)
 
             binding.rvLog.adapter = loggerAdapter
-            binding.rvLog.layoutManager = object : LinearLayoutManager(this) {
+            binding.rvLog.layoutManager = object : LinearLayoutManager(this@MainActivity2) {
                 override fun canScrollVertically(): Boolean = false
             }
         }
