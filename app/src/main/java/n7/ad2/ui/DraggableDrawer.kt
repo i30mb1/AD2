@@ -1,7 +1,7 @@
 package n7.ad2.ui
 
+import android.annotation.SuppressLint
 import android.content.Context
-import android.graphics.Rect
 import android.util.AttributeSet
 import android.view.MotionEvent
 import android.view.View
@@ -22,32 +22,29 @@ class DraggableDrawer(
 ) : FrameLayout(context, attributeSet) {
 
     companion object {
-        private val offsetRight = 130.toPx
-        private const val minScale = 0.6f
+        private val collapsedOffsetX = 130.toPx
+        private const val collapsedScale = 0.6f
         private const val maxScale = 1.0f
     }
 
     private lateinit var draggableView: FragmentContainerView
-    private val hitRect = Rect()
     private var initialMotionX = 0F
     private var isCollapsed: Boolean = false
-    private var isDragViewInit = false
+    private var isDraggableViewInitiated = false
     private var isIntercept = false
-    private var currentScale = minScale
     private var offsetX = 0
     private var offsetY = 0
     private val onAnimationEnd: (() -> Unit)? = null
 
     private val dragHelper = ViewDragHelper.create(this, 1F, object : ViewDragHelper.Callback() {
         override fun tryCaptureView(child: View, pointerId: Int) = child == draggableView
-        override fun clampViewPositionHorizontal(child: View, left: Int, dx: Int): Int = MathUtils.clamp(left, width - child.width, width - child.width + offsetRight)
+        override fun clampViewPositionHorizontal(child: View, left: Int, dx: Int): Int = MathUtils.clamp(left, width - child.width, width - child.width + collapsedOffsetX)
         override fun clampViewPositionVertical(child: View, top: Int, dy: Int) = 0
         override fun onViewReleased(releasedChild: View, xvel: Float, yvel: Float) = onReleased(xvel)
         override fun onViewPositionChanged(changedView: View, left: Int, top: Int, dx: Int, dy: Int) {
-            val scale = maxScale - left.toFloat() / offsetRight * (maxScale - minScale)
+            val scale = maxScale - left.toFloat() / collapsedOffsetX * (maxScale - collapsedScale)
             draggableView.scaleY = scale
             draggableView.scaleX = scale
-            currentScale = draggableView.scaleX
             offsetX = changedView.left
             offsetY = changedView.top
         }
@@ -71,10 +68,9 @@ class DraggableDrawer(
     }
 
     override fun onInterceptTouchEvent(ev: MotionEvent): Boolean {
-        draggableView.getHitRect(hitRect)
-        val clickedOnView = hitRect.contains(ev.x.toInt(), ev.y.toInt())
+        dragHelper.processTouchEvent(ev)
+        val clickedOnView = dragHelper.shouldInterceptTouchEvent(ev)
         if (clickedOnView) {
-            dragHelper.processTouchEvent(ev)
             when (ev.action) {
                 MotionEvent.ACTION_DOWN -> {
                     initialMotionX = ev.x
@@ -94,8 +90,7 @@ class DraggableDrawer(
         return super.onInterceptTouchEvent(ev)
     }
 
-    override fun performClick(): Boolean = super.performClick()
-
+    @SuppressLint("ClickableViewAccessibility")
     override fun onTouchEvent(event: MotionEvent): Boolean {
         dragHelper.processTouchEvent(event)
         performClick()
@@ -105,21 +100,19 @@ class DraggableDrawer(
     private fun onReleased(xVel: Float) {
         if (!isIntercept) return
         val finalStateIsCollapsed = xVel > 0
-        val finalX = if (finalStateIsCollapsed) offsetRight else 0
+        val finalX = if (finalStateIsCollapsed) collapsedOffsetX else 0
         val startSettling = dragHelper.smoothSlideViewTo(draggableView, finalX, 0)
         if (startSettling) SettleRunnable().run()
     }
 
     private fun initDragView() {
-        if (isDragViewInit) return
+        if (isDraggableViewInitiated) return
         if (isCollapsed) {
-            offsetX = offsetRight
-            draggableView.scaleY = minScale
-            draggableView.scaleX = minScale
-            currentScale = draggableView.scaleX
-
+            offsetX = collapsedOffsetX
+            draggableView.scaleY = collapsedScale
+            draggableView.scaleX = collapsedScale
         }
-        isDragViewInit = true
+        isDraggableViewInitiated = true
     }
 
     private inner class SettleRunnable : Runnable {
