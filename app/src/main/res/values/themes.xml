@@ -5,6 +5,7 @@
     <style name="AD2Theme" parent="Theme.MaterialComponents.Light.NoActionBar">
         <item name="android:statusBarColor">@color/gray_500</item>
         <item name="colorPrimary">@color/red_500</item>
+        <item name="colorOnPrimary">@android:color/white</item>
         <item name="colorSecondary">@color/red_500</item>
         <item name="android:colorBackground">@color/gray_500</item>
         <item name="myBackgroundAD2">@drawable/background_hd</item>
