@@ -11,7 +11,6 @@ import android.os.Environment
 import android.os.Handler
 import android.os.Looper
 import android.preference.PreferenceManager
-import android.view.MotionEvent
 import android.view.View
 import android.view.ViewGroup
 import android.view.animation.LinearInterpolator
@@ -389,11 +388,6 @@ class MainActivity : BaseActivity() {
     private fun hideKeyboard() {
         val insetsController = ViewCompat.getWindowInsetsController(drawer.root)
         insetsController?.hide(WindowInsetsCompat.Type.ime())
-    }
-
-    override fun dispatchTouchEvent(event: MotionEvent): Boolean {
-        drawer.fingerCoordinator.handleGlobalEvent(event)
-        return super.dispatchTouchEvent(event)
     }
 
     private fun checkInstallUpdate() {

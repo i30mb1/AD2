@@ -2,6 +2,7 @@ package n7.ad2.ui
 
 import android.content.SharedPreferences
 import android.os.Bundle
+import android.view.MotionEvent
 import androidx.fragment.app.commit
 import androidx.lifecycle.lifecycleScope
 import androidx.recyclerview.widget.LinearLayoutManager
@@ -34,6 +35,11 @@ class MainActivity2 : BaseActivity() {
         supportFragmentManager.commit {
             replace(binding.container.id, HeroesFragment())
         }
+    }
+
+    override fun dispatchTouchEvent(event: MotionEvent): Boolean {
+        binding.fingerCoordinator.handleGlobalEvent(event)
+        return super.dispatchTouchEvent(event)
     }
 
     private fun setupLoggerAdapter() {

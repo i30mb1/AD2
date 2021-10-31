@@ -27,4 +27,11 @@
         app:layout_constraintEnd_toEndOf="parent"
         tools:listitem="@layout/item_log" />
 
+    <n7.ad2.FingerCoordinate
+        android:id="@+id/finger_coordinator"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
 </n7.ad2.ui.DraggableDrawer>
