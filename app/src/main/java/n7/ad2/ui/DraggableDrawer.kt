@@ -10,10 +10,14 @@ import androidx.core.content.res.getBooleanOrThrow
 import androidx.core.content.withStyledAttributes
 import androidx.core.math.MathUtils
 import androidx.core.view.ViewCompat
+import androidx.core.view.WindowInsetsCompat
+import androidx.core.view.updatePadding
 import androidx.customview.widget.ViewDragHelper
 import androidx.fragment.app.FragmentContainerView
+import n7.ad2.AD2Logger
 import n7.ad2.R
 import n7.ad2.utils.extension.toPx
+import javax.inject.Inject
 import kotlin.math.abs
 
 class DraggableDrawer(
@@ -28,6 +32,7 @@ class DraggableDrawer(
         private const val defaultElevation = 10f
     }
 
+    @Inject lateinit var logger: AD2Logger
     private lateinit var draggableView: FragmentContainerView
     private var initialMotionX = 0F
     private var isCollapsed: Boolean = false
@@ -35,6 +40,8 @@ class DraggableDrawer(
     private var isIntercept = false
     private var offsetX = 0
     private var offsetY = 0
+    private var navigationBarsInsetsBottom: Int = 0
+    private var statusBarsInsetsTop: Int = 0
     private val onAnimationEnd: (() -> Unit)? = null
 
     private val dragHelper = ViewDragHelper.create(this, 1F, object : ViewDragHelper.Callback() {
@@ -43,6 +50,10 @@ class DraggableDrawer(
         override fun clampViewPositionVertical(child: View, top: Int, dy: Int) = 0
         override fun onViewReleased(releasedChild: View, xvel: Float, yvel: Float) = onReleased(xvel)
         override fun onViewPositionChanged(changedView: View, left: Int, top: Int, dx: Int, dy: Int) {
+            val percent = (1 - left.toFloat() / collapsedOffsetX)
+            val currentPaddingTop = statusBarsInsetsTop * percent
+            val currentPaddingBottom = navigationBarsInsetsBottom * percent
+            draggableView.updatePadding(top = currentPaddingTop.toInt(), bottom = currentPaddingBottom.toInt())
             val scale = maxScale - left.toFloat() / collapsedOffsetX * (maxScale - collapsedScale)
             draggableView.scaleY = scale
             draggableView.scaleX = scale
@@ -52,8 +63,14 @@ class DraggableDrawer(
     })
 
     init {
+        (context.applicationContext as MyApplication).component.inject(this)
         context.withStyledAttributes(attributeSet, R.styleable.DrawableDrawer) {
             isCollapsed = getBooleanOrThrow(R.styleable.DrawableDrawer_isCollapsed)
+        }
+        ViewCompat.setOnApplyWindowInsetsListener(this) { _, insets ->
+            navigationBarsInsetsBottom = insets.getInsets(WindowInsetsCompat.Type.navigationBars()).bottom
+            statusBarsInsetsTop = insets.getInsets(WindowInsetsCompat.Type.statusBars()).top
+            insets
         }
     }
 

@@ -12,5 +12,7 @@
             tools:itemCount="30"
             tools:layoutManager="GridLayoutManager"
             tools:spanCount="3"
+            android:overScrollMode="never"
+            android:clipToPadding="false"
             tools:listitem="@layout/item_hero" />
 </layout>

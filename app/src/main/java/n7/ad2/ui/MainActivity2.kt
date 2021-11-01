@@ -2,6 +2,10 @@ package n7.ad2.ui
 
 import android.os.Bundle
 import android.view.MotionEvent
+import androidx.core.view.ViewCompat
+import androidx.core.view.WindowCompat
+import androidx.core.view.WindowInsetsCompat
+import androidx.core.view.updatePadding
 import androidx.fragment.app.commit
 import androidx.lifecycle.lifecycleScope
 import androidx.recyclerview.widget.LinearLayoutManager
@@ -21,12 +25,8 @@ class MainActivity2 : BaseActivity() {
     private val loggerAdapter: AD2LoggerAdapter by lazyUnsafe { AD2LoggerAdapter() }
 
     private lateinit var binding: ActivityMain2Binding
-
-    @Inject
-    lateinit var logger: AD2Logger
-
-    @Inject
-    lateinit var preferences: AppPreference
+    @Inject lateinit var logger: AD2Logger
+    @Inject lateinit var preferences: AppPreference
 
     override fun onCreate(savedInstanceState: Bundle?) {
         (applicationContext as MyApplication).component.inject(this)
@@ -34,6 +34,7 @@ class MainActivity2 : BaseActivity() {
         binding = ActivityMain2Binding.inflate(layoutInflater)
         setContentView(binding.root)
         setupLoggerAdapter()
+        setupInsets()
         supportFragmentManager.commit {
             replace(binding.container.id, HeroesFragment())
         }
@@ -42,6 +43,20 @@ class MainActivity2 : BaseActivity() {
     override fun dispatchTouchEvent(event: MotionEvent): Boolean {
         binding.fingerCoordinator.handleGlobalEvent(event)
         return super.dispatchTouchEvent(event)
+    }
+
+    private fun setupInsets() {
+        WindowCompat.setDecorFitsSystemWindows(window, false)
+        ViewCompat.setOnApplyWindowInsetsListener(binding.rvLog) { view, insets ->
+            val navigationBarsInsets = insets.getInsets(WindowInsetsCompat.Type.navigationBars())
+            view.updatePadding(bottom = navigationBarsInsets.bottom)
+            insets
+        }
+        ViewCompat.setOnApplyWindowInsetsListener(binding.fingerCoordinator) { view, insets ->
+            val statusBarsInsets = insets.getInsets(WindowInsetsCompat.Type.statusBars())
+            view.updatePadding(top = statusBarsInsets.top)
+            insets
+        }
     }
 
     private fun setupLoggerAdapter() = lifecycleScope.launch {

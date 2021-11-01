@@ -238,5 +238,6 @@
 
     <string name="item_disabled">This item currently disabled!</string>
     <string name="desc_active_users_icon" translatable="false">active users icon</string>
+    <string name="desc_background" translatable="false">background</string>
 
 </resources>

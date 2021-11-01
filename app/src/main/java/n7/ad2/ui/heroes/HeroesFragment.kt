@@ -1,12 +1,7 @@
 package n7.ad2.ui.heroes
 
 import android.content.Intent
-import android.graphics.Rect
 import android.os.Bundle
-import android.transition.Explode
-import android.transition.Transition
-import android.transition.TransitionManager
-import android.transition.Visibility
 import android.view.Menu
 import android.view.MenuInflater
 import android.view.View
@@ -18,10 +13,8 @@ import androidx.lifecycle.Lifecycle
 import androidx.lifecycle.flowWithLifecycle
 import androidx.lifecycle.lifecycleScope
 import androidx.recyclerview.widget.GridLayoutManager
-import kotlinx.coroutines.delay
 import kotlinx.coroutines.flow.launchIn
 import kotlinx.coroutines.flow.onEach
-import kotlinx.coroutines.launch
 import n7.ad2.R
 import n7.ad2.databinding.FragmentHeroesBinding
 import n7.ad2.databinding.ItemHeroBinding
@@ -82,6 +75,12 @@ class HeroesFragment : Fragment(R.layout.fragment_heroes) {
             adapter = heroAdapter
             postponeEnterTransition()
             doOnPreDraw { startPostponedEnterTransition() }
+//            ViewCompat.setOnApplyWindowInsetsListener(this) { view, insets ->
+//                val statusBarsInsets = insets.getInsets(WindowInsetsCompat.Type.statusBars())
+//                val navigationBarsInsets = insets.getInsets(WindowInsetsCompat.Type.navigationBars())
+//                view.updatePadding(bottom = navigationBarsInsets.bottom, top = statusBarsInsets.top)
+//                insets
+//            }
         }
 
         viewModel.filteredHeroes.flowWithLifecycle(lifecycle, Lifecycle.State.STARTED)
@@ -89,26 +88,4 @@ class HeroesFragment : Fragment(R.layout.fragment_heroes) {
             .launchIn(lifecycleScope)
     }
 
-    fun explode(rect: Rect) {
-        var explode = Explode()
-        explode.epicenterCallback = object : Transition.EpicenterCallback() {
-            override fun onGetEpicenter(transition: Transition?): Rect = rect
-        }
-        explode.duration = resources.getInteger(R.integer.animation_medium).toLong()
-        explode.mode = Visibility.MODE_OUT
-        TransitionManager.beginDelayedTransition(binding.rv, explode)
-        heroAdapter.submitList(null)
-        heroAdapter.notifyDataSetChanged()
-        lifecycleScope.launch {
-            delay(resources.getInteger(R.integer.animation_medium).toLong() * 2)
-            explode = Explode()
-            explode.duration = resources.getInteger(R.integer.animation_medium).toLong()
-            explode.mode = Visibility.MODE_IN
-            TransitionManager.beginDelayedTransition(binding.rv, explode)
-            viewModel.filteredHeroes.flowWithLifecycle(lifecycle, Lifecycle.State.STARTED)
-                .onEach(heroAdapter::submitList)
-                .launchIn(lifecycleScope)
-            heroAdapter.notifyDataSetChanged()
-        }
-    }
 }

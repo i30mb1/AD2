@@ -6,17 +6,19 @@
     xmlns:tools="http://schemas.android.com/tools"
     app:isCollapsed="true">
 
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:scaleType="centerCrop"
+        android:src="@drawable/app_background"
+        android:contentDescription="@string/desc_background" />
+
     <androidx.fragment.app.FragmentContainerView
         android:id="@+id/container"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:layout_gravity="end|center_vertical"
-        android:background="@color/red_500" />
-
-    <com.google.android.material.button.MaterialButton
-        android:layout_width="wrap_content"
-        android:layout_gravity="center_vertical"
-        android:layout_height="wrap_content" />
+        android:background="?android:colorBackground" />
 
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/rv_log"
@@ -26,6 +28,10 @@
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         tools:listitem="@layout/item_log" />
+
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
 
     <n7.ad2.FingerCoordinate
         android:id="@+id/finger_coordinator"

@@ -3,12 +3,11 @@
 
     <!--Grey тема-->
     <style name="AD2Theme" parent="Theme.MaterialComponents.Light.NoActionBar">
-        <item name="android:statusBarColor">@color/gray_500</item>
         <item name="colorPrimary">@color/red_500</item>
         <item name="colorOnPrimary">@android:color/white</item>
         <item name="colorSecondary">@color/red_500</item>
         <item name="android:colorBackground">@color/gray_500</item>
-        <item name="myBackgroundAD2">@drawable/background_hd</item>
+        <item name="myBackgroundAD2">@drawable/app_background</item>
         <item name="colorSurface">@color/gray_700</item>
         <item name="colorOnSurface">@color/red_500</item>
 
@@ -75,7 +74,7 @@
         <item name="colorOnSurface">@color/purple</item>
         <!--бэкграунд приложения-->
         <item name="android:windowBackground">@color/black_700</item>
-        <item name="myBackgroundAD2">@drawable/background_hd_black</item>
+        <!--        <item name="myBackgroundAD2">@drawable/background_hd_black</item>-->
         <!--цвет главного текста-->
         <item name="android:textColorPrimary">@android:color/white</item>
         <!--цвет под заголовков-->
@@ -93,7 +92,7 @@
         <item name="colorOnSurface">@color/blue</item>
         <!--бэкграунд приложения-->
         <item name="android:windowBackground">@android:color/white</item>
-        <item name="myBackgroundAD2">@drawable/background_hd_white</item>
+        <!--        <item name="myBackgroundAD2">@drawable/background_hd_white</item>-->
         <item name="myTextColorPrimary">@android:color/black</item>
         <item name="myTextColorSecondary">@android:color/black</item>
         <!--цвет главного текста-->
