@@ -30,8 +30,8 @@ class DraggableDrawer(
         private const val collapsedScale = 0.6f
         private const val maxScale = 1.0f
         private const val defaultElevation = 10f
-        private const val POSITIVE_VELOCITY_FOR_STICK_TO_BORDER = 2000
-        private const val NEGATIVE_VELOCITY_FOR_STICK_TO_BORDER = -2000
+        private const val POSITIVE_VELOCITY_FOR_STICK_TO_BORDER = 1000
+        private const val NEGATIVE_VELOCITY_FOR_STICK_TO_BORDER = -1000
     }
 
     @Inject lateinit var logger: AD2Logger
