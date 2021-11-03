@@ -8,7 +8,9 @@ import n7.ad2.utils.extension.toPx
 
 class GridDividerItemDecorator : RecyclerView.ItemDecoration() {
 
-    private val offset = 16.toPx
+    var offsetTop = 0
+    var offsetBottom = 0
+    private val offset = 3.toPx
 
     override fun getItemOffsets(outRect: Rect, view: View, parent: RecyclerView, state: RecyclerView.State) {
         super.getItemOffsets(outRect, view, parent, state)
@@ -23,8 +25,10 @@ class GridDividerItemDecorator : RecyclerView.ItemDecoration() {
         val leftOffset = if (column == 0) offset else offset / 2
         val rightOffset = if (column == spanCount - 1) offset else offset / 2
         with(outRect) {
-            left = leftOffset
-            right = rightOffset
+            bottom = if (position == childCount - 1) offsetBottom else offset
+            top = if (position in (0 until spanCount)) offsetTop else offset
+            left = offset
+            right = offset
         }
 
     }

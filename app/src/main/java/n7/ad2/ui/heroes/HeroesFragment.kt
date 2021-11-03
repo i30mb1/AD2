@@ -26,6 +26,7 @@ import n7.ad2.utils.viewModel
 class HeroesFragment : Fragment(R.layout.fragment_heroes) {
 
     private val viewModel: HeroesViewModel by viewModel { injector.heroesViewModel }
+    private val gridItemDecorator = GridDividerItemDecorator()
     private lateinit var binding: FragmentHeroesBinding
     private lateinit var heroAdapter: HeroesListAdapter
 
@@ -73,6 +74,7 @@ class HeroesFragment : Fragment(R.layout.fragment_heroes) {
             recycledViewPool.setMaxRecycledViews(R.layout.item_hero, 30)
             layoutManager = GridLayoutManager(context, 3)
             adapter = heroAdapter
+            addItemDecoration(gridItemDecorator)
             postponeEnterTransition()
             doOnPreDraw { startPostponedEnterTransition() }
 //            ViewCompat.setOnApplyWindowInsetsListener(this) { view, insets ->
