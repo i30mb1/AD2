@@ -13,21 +13,22 @@
         android:src="@drawable/app_background"
         android:contentDescription="@string/desc_background" />
 
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/rv_log"
+        android:layout_width="wrap_content"
+        android:layout_gravity="end|bottom"
+        android:layout_height="match_parent"
+        android:overScrollMode="never"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        tools:listitem="@layout/item_log" />
+
     <androidx.fragment.app.FragmentContainerView
         android:id="@+id/container"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:layout_gravity="end|center_vertical"
         android:background="?android:colorBackground" />
-
-    <androidx.recyclerview.widget.RecyclerView
-        android:id="@+id/rv_log"
-        android:layout_width="wrap_content"
-        android:layout_gravity="end|bottom"
-        android:layout_height="wrap_content"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        tools:listitem="@layout/item_log" />
 
     <ImageView
         android:layout_width="wrap_content"

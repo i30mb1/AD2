@@ -30,6 +30,8 @@ class DraggableDrawer(
         private const val collapsedScale = 0.6f
         private const val maxScale = 1.0f
         private const val defaultElevation = 10f
+        private const val POSITIVE_VELOCITY_FOR_STICK_TO_BORDER = 2000
+        private const val NEGATIVE_VELOCITY_FOR_STICK_TO_BORDER = -2000
     }
 
     @Inject lateinit var logger: AD2Logger
@@ -40,6 +42,7 @@ class DraggableDrawer(
     private var isIntercept = false
     private var offsetX = 0
     private var offsetY = 0
+    private var currentOffsetX = 0
     private var navigationBarsInsetsBottom: Int = 0
     private var statusBarsInsetsTop: Int = 0
     private val onAnimationEnd: (() -> Unit)? = null
@@ -59,6 +62,7 @@ class DraggableDrawer(
             draggableView.scaleX = scale
             offsetX = changedView.left
             offsetY = changedView.top
+            currentOffsetX = offsetX
         }
     })
 
@@ -118,8 +122,12 @@ class DraggableDrawer(
 
     private fun onReleased(xVel: Float) {
         if (!isIntercept) return
-        val finalStateIsCollapsed = xVel > 0
-        val finalX = if (finalStateIsCollapsed) collapsedOffsetX else 0
+        val finalX = when {
+            xVel < NEGATIVE_VELOCITY_FOR_STICK_TO_BORDER -> 0
+            xVel > POSITIVE_VELOCITY_FOR_STICK_TO_BORDER -> collapsedOffsetX
+            currentOffsetX < collapsedOffsetX / 2 -> 0
+            else -> collapsedOffsetX
+        }
         val startSettling = dragHelper.smoothSlideViewTo(draggableView, finalX, 0)
         if (startSettling) SettleRunnable().run()
     }

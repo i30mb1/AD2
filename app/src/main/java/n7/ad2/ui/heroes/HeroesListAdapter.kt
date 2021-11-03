@@ -11,7 +11,9 @@ import n7.ad2.R
 import n7.ad2.databinding.ItemHeroBinding
 import n7.ad2.ui.heroes.domain.vo.VOHero
 
-class HeroesListAdapter internal constructor(fragment: HeroesFragment) : ListAdapter<VOHero, HeroesListAdapter.ViewHolder>(DiffCallback()) {
+class HeroesListAdapter(
+    fragment: HeroesFragment,
+) : ListAdapter<VOHero, HeroesListAdapter.ViewHolder>(DiffCallback()) {
 
     private val listener = View.OnClickListener {
         fragment.startHeroFragment(

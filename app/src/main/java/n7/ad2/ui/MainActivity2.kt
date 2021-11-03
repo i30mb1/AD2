@@ -47,11 +47,6 @@ class MainActivity2 : BaseActivity() {
 
     private fun setupInsets() {
         WindowCompat.setDecorFitsSystemWindows(window, false)
-        ViewCompat.setOnApplyWindowInsetsListener(binding.rvLog) { view, insets ->
-            val navigationBarsInsets = insets.getInsets(WindowInsetsCompat.Type.navigationBars())
-            view.updatePadding(bottom = navigationBarsInsets.bottom)
-            insets
-        }
         ViewCompat.setOnApplyWindowInsetsListener(binding.fingerCoordinator) { view, insets ->
             val statusBarsInsets = insets.getInsets(WindowInsetsCompat.Type.statusBars())
             view.updatePadding(top = statusBarsInsets.top)
@@ -61,16 +56,18 @@ class MainActivity2 : BaseActivity() {
 
     private fun setupLoggerAdapter() = lifecycleScope.launch {
         val shouldDisplayLog = preferences.isShowFingerCoordinate()
-        if (shouldDisplayLog) {
-            logger.getLogFlow()
-                .onEach(loggerAdapter::add)
-                .launchIn(lifecycleScope)
+        if (!shouldDisplayLog) return@launch
+        logger.getLogFlow()
+            .onEach(loggerAdapter::add)
+            .onEach { binding.rvLog.scrollToPosition(loggerAdapter.itemCount - 1) }
+            .launchIn(lifecycleScope)
 
-            binding.rvLog.adapter = loggerAdapter
-            binding.rvLog.layoutManager = object : LinearLayoutManager(this@MainActivity2) {
-                override fun canScrollVertically(): Boolean = false
-            }
+        binding.rvLog.adapter = loggerAdapter
+        val layoutManager = object : LinearLayoutManager(this@MainActivity2) {
+            override fun canScrollVertically(): Boolean = false
         }
+        layoutManager.stackFromEnd = true
+        binding.rvLog.layoutManager = layoutManager
     }
 
 }
