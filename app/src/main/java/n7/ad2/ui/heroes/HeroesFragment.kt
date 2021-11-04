@@ -25,6 +25,10 @@ import n7.ad2.utils.viewModel
 
 class HeroesFragment : Fragment(R.layout.fragment_heroes) {
 
+    companion object {
+        fun getInstance(): HeroesFragment = HeroesFragment()
+    }
+
     private val viewModel: HeroesViewModel by viewModel { injector.heroesViewModel }
     private val gridItemDecorator = GridDividerItemDecorator()
     private lateinit var binding: FragmentHeroesBinding

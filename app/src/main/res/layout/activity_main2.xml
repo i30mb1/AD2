@@ -23,16 +23,22 @@
         app:layout_constraintEnd_toEndOf="parent"
         tools:listitem="@layout/item_log" />
 
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/rv_menu"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_vertical"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:listitem="@layout/item_menu" />
+
     <androidx.fragment.app.FragmentContainerView
         android:id="@+id/container"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:layout_gravity="end|center_vertical"
         android:background="?android:colorBackground" />
-
-    <ImageView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content" />
 
     <n7.ad2.FingerCoordinate
         android:id="@+id/finger_coordinator"
