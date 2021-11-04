@@ -7,7 +7,10 @@ import android.view.MenuInflater
 import android.view.View
 import androidx.appcompat.widget.SearchView
 import androidx.core.app.ActivityOptionsCompat
+import androidx.core.view.ViewCompat
+import androidx.core.view.WindowInsetsCompat
 import androidx.core.view.doOnPreDraw
+import androidx.core.view.updatePadding
 import androidx.fragment.app.Fragment
 import androidx.lifecycle.Lifecycle
 import androidx.lifecycle.flowWithLifecycle
@@ -19,6 +22,7 @@ import n7.ad2.R
 import n7.ad2.databinding.FragmentHeroesBinding
 import n7.ad2.databinding.ItemHeroBinding
 import n7.ad2.di.injector
+import n7.ad2.ui.DraggableDrawer
 import n7.ad2.ui.heroPage.HeroPageActivity
 import n7.ad2.ui.heroes.domain.vo.VOHero
 import n7.ad2.utils.viewModel
@@ -31,6 +35,7 @@ class HeroesFragment : Fragment(R.layout.fragment_heroes) {
 
     private val viewModel: HeroesViewModel by viewModel { injector.heroesViewModel }
     private val gridItemDecorator = GridDividerItemDecorator()
+    private val onHeroClick: (hero: VOHero) -> Unit = { }
     private lateinit var binding: FragmentHeroesBinding
     private lateinit var heroAdapter: HeroesListAdapter
 
@@ -80,13 +85,18 @@ class HeroesFragment : Fragment(R.layout.fragment_heroes) {
             adapter = heroAdapter
             addItemDecoration(gridItemDecorator)
             postponeEnterTransition()
+            addItemDecoration(gridItemDecorator)
             doOnPreDraw { startPostponedEnterTransition() }
-//            ViewCompat.setOnApplyWindowInsetsListener(this) { view, insets ->
-//                val statusBarsInsets = insets.getInsets(WindowInsetsCompat.Type.statusBars())
-//                val navigationBarsInsets = insets.getInsets(WindowInsetsCompat.Type.navigationBars())
-//                view.updatePadding(bottom = navigationBarsInsets.bottom, top = statusBarsInsets.top)
-//                insets
-//            }
+            ViewCompat.setOnApplyWindowInsetsListener(this) { view, insets ->
+                val statusBarsInsets = insets.getInsets(WindowInsetsCompat.Type.statusBars())
+                val navigationBarsInsets = insets.getInsets(WindowInsetsCompat.Type.navigationBars())
+                (activity as? DraggableDrawer.Listener)?.setDrawerPercentListener { percent ->
+                    val bottomPadding = (navigationBarsInsets.bottom * percent).toInt()
+                    val topPadding = (statusBarsInsets.top * percent).toInt()
+                    view.updatePadding(bottom = bottomPadding, top = topPadding)
+                }
+                insets
+            }
         }
 
         viewModel.filteredHeroes.flowWithLifecycle(lifecycle, Lifecycle.State.STARTED)

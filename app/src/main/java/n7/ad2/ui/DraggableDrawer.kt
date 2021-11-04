@@ -11,7 +11,6 @@ import androidx.core.content.withStyledAttributes
 import androidx.core.math.MathUtils
 import androidx.core.view.ViewCompat
 import androidx.core.view.WindowInsetsCompat
-import androidx.core.view.updatePadding
 import androidx.customview.widget.ViewDragHelper
 import androidx.fragment.app.FragmentContainerView
 import n7.ad2.AD2Logger
@@ -34,6 +33,10 @@ class DraggableDrawer(
         private const val NEGATIVE_VELOCITY_FOR_STICK_TO_BORDER = -1000
     }
 
+    interface Listener {
+        fun setDrawerPercentListener(listener: ((percent: Float) -> Unit)?)
+    }
+
     @Inject lateinit var logger: AD2Logger
     private lateinit var draggableView: FragmentContainerView
     private var initialMotionX = 0F
@@ -45,7 +48,8 @@ class DraggableDrawer(
     private var currentOffsetX = 0
     private var navigationBarsInsetsBottom: Int = 0
     private var statusBarsInsetsTop: Int = 0
-    private val onAnimationEnd: (() -> Unit)? = null
+    private var onAnimationEnd: (() -> Unit)? = null
+    private var drawerPercent: ((percent: Float) -> Unit)? = null
 
     private val dragHelper = ViewDragHelper.create(this, 1F, object : ViewDragHelper.Callback() {
         override fun tryCaptureView(child: View, pointerId: Int) = child == draggableView
@@ -56,7 +60,8 @@ class DraggableDrawer(
             val percent = (1 - left.toFloat() / collapsedOffsetX)
             val currentPaddingTop = statusBarsInsetsTop * percent
             val currentPaddingBottom = navigationBarsInsetsBottom * percent
-            draggableView.updatePadding(top = currentPaddingTop.toInt(), bottom = currentPaddingBottom.toInt())
+            drawerPercent?.invoke(percent)
+//            draggableView.updatePadding(top = currentPaddingTop.toInt(), bottom = currentPaddingBottom.toInt())
             val scale = maxScale - left.toFloat() / collapsedOffsetX * (maxScale - collapsedScale)
             draggableView.scaleY = scale
             draggableView.scaleX = scale
@@ -118,6 +123,10 @@ class DraggableDrawer(
         dragHelper.processTouchEvent(event)
         performClick()
         return super.onTouchEvent(event)
+    }
+
+    fun setDrawerPercentListener(listener: ((percent: Float) -> Unit)?) {
+        drawerPercent = listener
     }
 
     private fun onReleased(xVel: Float) {

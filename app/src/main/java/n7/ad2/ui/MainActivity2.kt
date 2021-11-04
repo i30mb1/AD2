@@ -28,7 +28,7 @@ import n7.ad2.utils.BaseActivity
 import n7.ad2.utils.lazyUnsafe
 import javax.inject.Inject
 
-class MainActivity2 : BaseActivity() {
+class MainActivity2 : BaseActivity(), DraggableDrawer.Listener {
 
     private val loggerAdapter: AD2LoggerAdapter by lazyUnsafe { AD2LoggerAdapter() }
 
@@ -49,6 +49,10 @@ class MainActivity2 : BaseActivity() {
     override fun dispatchTouchEvent(event: MotionEvent): Boolean {
         binding.fingerCoordinator.handleGlobalEvent(event)
         return super.dispatchTouchEvent(event)
+    }
+
+    override fun setDrawerPercentListener(listener: ((percent: Float) -> Unit)?) {
+        binding.draggableDrawer.setDrawerPercentListener(listener)
     }
 
     private fun setupMenuAdapter() {

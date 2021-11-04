@@ -8,9 +8,9 @@ import n7.ad2.utils.extension.toPx
 
 class GridDividerItemDecorator : RecyclerView.ItemDecoration() {
 
-    var offsetTop = 0
-    var offsetBottom = 0
-    private val offset = 3.toPx
+    private val offset = 2.toPx
+    private val offsetBottom = 4.toPx
+    private val offsetTop = 4.toPx
 
     override fun getItemOffsets(outRect: Rect, view: View, parent: RecyclerView, state: RecyclerView.State) {
         super.getItemOffsets(outRect, view, parent, state)
