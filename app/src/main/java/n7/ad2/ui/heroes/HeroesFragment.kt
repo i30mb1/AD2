@@ -10,7 +10,6 @@ import androidx.core.app.ActivityOptionsCompat
 import androidx.core.view.ViewCompat
 import androidx.core.view.WindowInsetsCompat
 import androidx.core.view.doOnPreDraw
-import androidx.core.view.updatePadding
 import androidx.fragment.app.Fragment
 import androidx.lifecycle.Lifecycle
 import androidx.lifecycle.flowWithLifecycle
@@ -85,17 +84,17 @@ class HeroesFragment : Fragment(R.layout.fragment_heroes) {
             adapter = heroAdapter
             addItemDecoration(gridItemDecorator)
             postponeEnterTransition()
-            addItemDecoration(gridItemDecorator)
             doOnPreDraw { startPostponedEnterTransition() }
-            ViewCompat.setOnApplyWindowInsetsListener(this) { view, insets ->
+            ViewCompat.setOnApplyWindowInsetsListener(this) { _, insets ->
                 val statusBarsInsets = insets.getInsets(WindowInsetsCompat.Type.statusBars())
                 val navigationBarsInsets = insets.getInsets(WindowInsetsCompat.Type.navigationBars())
-                (activity as? DraggableDrawer.Listener)?.setDrawerPercentListener { percent ->
-                    val bottomPadding = (navigationBarsInsets.bottom * percent).toInt()
-                    val topPadding = (statusBarsInsets.top * percent).toInt()
-                    view.updatePadding(bottom = bottomPadding, top = topPadding)
-                }
+                gridItemDecorator.statusBarsInsets = statusBarsInsets.top
+                gridItemDecorator.navigationBarsInsets = navigationBarsInsets.bottom
                 insets
+            }
+            (activity as? DraggableDrawer.Listener)?.setDrawerPercentListener { percent ->
+                gridItemDecorator.percent = percent
+                binding.rv.invalidateItemDecorations()
             }
         }
 
