@@ -35,7 +35,7 @@ import javax.inject.Inject
 
 class MainActivity2 : BaseActivity(), DraggableDrawer.Listener {
 
-    private val loggerAdapter: AD2LoggerAdapter by lazyUnsafe { AD2LoggerAdapter() }
+    private val loggerAdapter: AD2LoggerAdapter by lazyUnsafe { AD2LoggerAdapter(layoutInflater) }
     private val viewModel: MainViewModel by viewModel { injector.mainViewModel }
 
     private lateinit var binding: ActivityMain2Binding

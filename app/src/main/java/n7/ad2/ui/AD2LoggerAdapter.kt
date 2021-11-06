@@ -8,13 +8,15 @@ import n7.ad2.databinding.ItemLogBinding
 import n7.ad2.ui.AD2LoggerAdapter.TextViewHolder
 import java.util.ArrayList
 
-class AD2LoggerAdapter : RecyclerView.Adapter<TextViewHolder>() {
+class AD2LoggerAdapter(
+    private val layoutInflater: LayoutInflater,
+) : RecyclerView.Adapter<TextViewHolder>() {
 
     private val list: ArrayList<AD2Log> = ArrayList()
 
     override fun onBindViewHolder(holder: TextViewHolder, position: Int) = holder.bind(list[position])
 
-    override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): TextViewHolder = TextViewHolder.from(parent)
+    override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): TextViewHolder = TextViewHolder.from(parent, layoutInflater)
 
     override fun getItemCount(): Int = list.size
 
@@ -28,15 +30,11 @@ class AD2LoggerAdapter : RecyclerView.Adapter<TextViewHolder>() {
     ) : RecyclerView.ViewHolder(binding.root) {
 
         fun bind(item: AD2Log) {
-            binding.item = item
-            binding.executePendingBindings()
+            binding.tvText.text = item.message
         }
 
         companion object {
-            fun from(
-                parent: ViewGroup,
-            ): TextViewHolder {
-                val layoutInflater = LayoutInflater.from(parent.context)
+            fun from(parent: ViewGroup, layoutInflater: LayoutInflater): TextViewHolder {
                 val binding = ItemLogBinding.inflate(layoutInflater, parent, false)
                 return TextViewHolder(binding)
             }

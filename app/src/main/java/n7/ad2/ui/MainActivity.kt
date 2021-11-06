@@ -77,7 +77,7 @@ class MainActivity : BaseActivity() {
     private val constraintSetHidden = ConstraintSet()
     private val constraintSetOrigin = ConstraintSet()
     private var currentSet: ConstraintSet? = null
-    private val loggerAdapter: AD2LoggerAdapter by lazyUnsafe { AD2LoggerAdapter() }
+    private val loggerAdapter: AD2LoggerAdapter by lazyUnsafe { AD2LoggerAdapter(layoutInflater) }
     private lateinit var binding: ActivityMainBinding
     private lateinit var drawer: DrawerBinding
     private var shouldUpdateFromMarket = true
