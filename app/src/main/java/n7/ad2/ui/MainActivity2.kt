@@ -2,7 +2,6 @@ package n7.ad2.ui
 
 import android.os.Bundle
 import android.view.MotionEvent
-import android.view.View
 import androidx.core.view.ViewCompat
 import androidx.core.view.WindowCompat
 import androidx.core.view.WindowInsetsCompat
@@ -65,7 +64,6 @@ class MainActivity2 : BaseActivity(), DraggableDrawer.Listener {
         val linearLayoutManager = LinearLayoutManager(this)
         val mainMenuAdapter = MainMenuAdapter(layoutInflater, ::setFragment)
         binding.rvMenu.apply {
-            overScrollMode = View.OVER_SCROLL_NEVER
             layoutManager = linearLayoutManager
             adapter = mainMenuAdapter
         }
@@ -119,12 +117,12 @@ class MainActivity2 : BaseActivity(), DraggableDrawer.Listener {
             .onEach { binding.rvLog.scrollToPosition(loggerAdapter.itemCount - 1) }
             .launchIn(lifecycleScope)
 
-        binding.rvLog.adapter = loggerAdapter
         val layoutManager = object : LinearLayoutManager(this@MainActivity2) {
             override fun canScrollVertically(): Boolean = false
         }
         layoutManager.stackFromEnd = true
         binding.rvLog.layoutManager = layoutManager
+        binding.rvLog.adapter = loggerAdapter
     }
 
 }

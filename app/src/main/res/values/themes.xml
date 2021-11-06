@@ -54,13 +54,8 @@
 
         <item name="materialAlertDialogTheme">@style/MyMaterialAlertDialogTheme</item>
         <item name="materialCardViewStyle">@style/Widget.CardView</item>
+        <item name="recyclerViewStyle">@style/Widget.RecyclerView</item>
         <item name="tabStyle">@style/Widget.TabLayout</item>
-    </style>
-
-    <style name="AD2CardViewStyle" parent="Widget.MaterialComponents.CardView">
-        <item name="cardElevation">0dp</item>
-        <item name="android:foreground">?android:attr/selectableItemBackground</item>
-        <item name="shapeAppearance">@style/MyMediumComponent</item>
     </style>
 
     <!--Black тема-->
