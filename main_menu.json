@@ -1,6 +1,6 @@
 {
-  "version": "1",
-  "main_menu": [
+  "version": 1,
+  "menu": [
     {
       "name": "Heroes",
       "enabled": true
@@ -23,7 +23,7 @@
     },
     {
       "name": "Games",
-      "enabled": true
+      "enabled": false
     }
   ]
 }
