@@ -2,27 +2,27 @@
   "version": 1,
   "menu": [
     {
-      "name": "Heroes",
+      "type": "HEROES",
       "isEnable": true
     },
     {
-      "name": "Items",
+      "type": "ITEMS",
       "isEnable": true
     },
     {
-      "name": "News",
+      "type": "NEWS",
       "isEnable": true
     },
     {
-      "name": "Tournaments",
+      "type": "TOURNAMENTS",
       "isEnable": true
     },
     {
-      "name": "Streams",
+      "type": "STREAMS",
       "isEnable": true
     },
     {
-      "name": "Games",
+      "type": "GAMES",
       "isEnable": false
     }
   ]
