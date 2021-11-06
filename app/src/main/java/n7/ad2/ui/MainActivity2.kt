@@ -86,11 +86,11 @@ class MainActivity2 : BaseActivity(), DraggableDrawer.Listener {
         if (currentTag == menuItem.title) return false
         val fragment = when (menuItem.type) {
             VOMenuType.HEROES -> HeroesFragment.getInstance()
-            VOMenuType.ITEMS -> GameFragment()
-            VOMenuType.NEWS -> ItemsFragment()
-            VOMenuType.TOURNAMENTS -> NewsFragment()
+            VOMenuType.ITEMS -> ItemsFragment()
+            VOMenuType.NEWS -> NewsFragment()
+            VOMenuType.TOURNAMENTS -> TournamentsFragment()
             VOMenuType.STREAMS -> StreamsFragment()
-            VOMenuType.GAMES -> TournamentsFragment()
+            VOMenuType.GAMES -> GameFragment()
             VOMenuType.UNKNOWN -> TODO()
         }
         supportFragmentManager.commit {
