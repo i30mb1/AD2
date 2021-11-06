@@ -2,70 +2,58 @@ package n7.ad2.ui
 
 import android.view.LayoutInflater
 import android.view.ViewGroup
-import androidx.databinding.ObservableBoolean
+import androidx.core.content.ContextCompat
+import androidx.core.view.isVisible
+import androidx.recyclerview.widget.DiffUtil
+import androidx.recyclerview.widget.ListAdapter
 import androidx.recyclerview.widget.RecyclerView
 import n7.ad2.R
 import n7.ad2.databinding.ItemMenuBinding
+import n7.ad2.ui.vo.VOMenu
 
-sealed class MenuItem(val title: String, val isEnable: Boolean = true) {
-    val isSelected = ObservableBoolean(false)
-}
-
-class HeroesMenuItem(title: String) : MenuItem(title)
-class ItemsMenuItem(title: String) : MenuItem(title)
-class NewsMenuItem(title: String) : MenuItem(title)
-class TournamentsMenuItem(title: String) : MenuItem(title)
-class StreamsMenuItem(title: String) : MenuItem(title)
-class GamesMenuItem(title: String) : MenuItem(title, false)
 
 class MainMenuAdapter(
     private val layoutInflater: LayoutInflater,
-    itemListener: (menuItem: MenuItem) -> Boolean,
-) : RecyclerView.Adapter<MainMenuAdapter.MenuItemHolder>() {
+    itemListener: (menuItem: VOMenu) -> Boolean,
+) : ListAdapter<VOMenu, MainMenuAdapter.MenuItemHolder>(DiffCallback()) {
 
-    private val itemListener: (menuItem: MenuItem) -> Unit = { menuItem ->
+    private val itemListener: (menuItem: VOMenu) -> Unit = { menuItem ->
         val handled = itemListener.invoke(menuItem)
-        if (handled) {
-            menuList.forEach { it.isSelected.set(false) }
-            menuList.find { it == menuItem }!!.isSelected.set(true)
-        }
     }
-    private val menuList = listOf(
-        HeroesMenuItem(layoutInflater.context.getString(R.string.heroes)).apply { isSelected.set(true) },
-        ItemsMenuItem(layoutInflater.context.getString(R.string.items)),
-        NewsMenuItem(layoutInflater.context.getString(R.string.news)),
-        TournamentsMenuItem(layoutInflater.context.getString(R.string.tournaments)),
-        StreamsMenuItem(layoutInflater.context.getString(R.string.streams)),
-        GamesMenuItem(layoutInflater.context.getString(R.string.games)),
-    )
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int) = MenuItemHolder.from(layoutInflater, parent, itemListener)
 
-    override fun onBindViewHolder(holder: MenuItemHolder, position: Int) = holder.bind(menuList[position])
-
-    override fun getItemCount() = menuList.size
+    override fun onBindViewHolder(holder: MenuItemHolder, position: Int) = holder.bind(getItem(position))
 
     class MenuItemHolder private constructor(
         private val binding: ItemMenuBinding,
+        private val itemListener: (menuItem: VOMenu) -> Unit,
     ) : RecyclerView.ViewHolder(binding.root) {
 
-        fun bind(item: MenuItem) {
-            binding.item = item
-            binding.executePendingBindings()
+        fun bind(item: VOMenu) {
+            binding.vRedLine.isVisible = item.isSelected
+            binding.tvTitle.text = item.title
+            val drawableID = if (item.isEnable) R.drawable.background_ripple else R.drawable.transparent_30
+            binding.root.foreground = ContextCompat.getDrawable(binding.root.context, drawableID)
+            binding.root.setOnClickListener { itemListener.invoke(item) } // каждый bind сэтим листенер... нужно подумать...
         }
 
         companion object {
             fun from(
                 layoutInflater: LayoutInflater,
                 parent: ViewGroup,
-                itemListener: (menuItem: MenuItem) -> Unit,
+                itemListener: (menuItem: VOMenu) -> Unit,
             ): MenuItemHolder {
                 val binding = ItemMenuBinding.inflate(layoutInflater, parent, false)
-                binding.itemListener = itemListener
-                return MenuItemHolder(binding)
+                return MenuItemHolder(binding, itemListener)
             }
         }
 
+    }
+
+    private class DiffCallback : DiffUtil.ItemCallback<VOMenu>() {
+        override fun areItemsTheSame(oldItem: VOMenu, newItem: VOMenu) = oldItem.type == newItem.type
+        override fun areContentsTheSame(oldItem: VOMenu, newItem: VOMenu) = oldItem.isSelected == newItem.isSelected
     }
 
 }

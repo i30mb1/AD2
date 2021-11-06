@@ -49,14 +49,9 @@ import n7.ad2.databinding.DialogRateBinding
 import n7.ad2.databinding.DialogUpdateBinding
 import n7.ad2.databinding.DrawerBinding
 import n7.ad2.di.injector
-import n7.ad2.games.GameFragment
 import n7.ad2.main.MainViewModel
-import n7.ad2.news.NewsFragment
-import n7.ad2.tournaments.TournamentsFragment
 import n7.ad2.ui.heroes.HeroesFragment
-import n7.ad2.ui.items.ItemsFragment
 import n7.ad2.ui.setting.SettingActivity
-import n7.ad2.ui.streams.StreamsFragment
 import n7.ad2.utils.BaseActivity
 import n7.ad2.utils.lazyUnsafe
 import n7.ad2.utils.viewModel
@@ -113,7 +108,6 @@ class MainActivity : BaseActivity() {
         drawer.setActivity(this)
         setupLoggerAdapter()
         setupSecretActivity()
-        setupMenuRecyclerView()
         setLastFragment()
         setupOnBackPressed()
         setupInsets()
@@ -191,39 +185,10 @@ class MainActivity : BaseActivity() {
         }
     }
 
-    private fun setupMenuRecyclerView() {
-        val linearLayoutManager = LinearLayoutManager(this)
-        val mainMenuAdapter = MainMenuAdapter(layoutInflater, ::setFragment)
-        drawer.rv.apply {
-            overScrollMode = View.OVER_SCROLL_NEVER
-            layoutManager = linearLayoutManager
-            adapter = mainMenuAdapter
-        }
-    }
-
     private fun setLastFragment() {
         supportFragmentManager.commit {
             replace(binding.container.id, HeroesFragment())
         }
-    }
-
-    private fun setFragment(menu: MenuItem): Boolean {
-        if (!menu.isEnable) {
-            Snackbar.make(binding.root, getString(R.string.item_disabled), Snackbar.LENGTH_SHORT).show()
-            return false
-        }
-        val fragment = when (menu) {
-            is GamesMenuItem -> GameFragment()
-            is HeroesMenuItem -> HeroesFragment()
-            is ItemsMenuItem -> ItemsFragment()
-            is NewsMenuItem -> NewsFragment()
-            is StreamsMenuItem -> StreamsFragment()
-            is TournamentsMenuItem -> TournamentsFragment()
-        }
-        supportFragmentManager.commit {
-            replace(binding.container.id, fragment)
-        }
-        return true
     }
 
     private fun showDialogUpdate() {

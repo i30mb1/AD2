@@ -1,36 +1,21 @@
 <?xml version="1.0" encoding="utf-8"?>
-<layout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:tools="http://schemas.android.com/tools">
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/root"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
 
-    <data>
+    <View
+        android:id="@+id/v_red_line"
+        android:layout_width="@dimen/line_width"
+        android:layout_height="match_parent"
+        android:background="?colorAccent" />
 
-        <variable
-            name="itemListener"
-            type="kotlin.jvm.functions.Function1" />
-
-        <variable
-            name="item"
-            type="n7.ad2.ui.MenuItem" />
-    </data>
-
-    <FrameLayout
+    <com.google.android.material.textview.MaterialTextView
+        android:id="@+id/tv_title"
+        style="@style/Widget.TextView.MainMenu"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:foreground="@{item.isEnable() ? @drawable/background_ripple : @drawable/transparent_30}"
-        android:onClick="@{() -> itemListener.invoke(item)}">
+        tools:text="@tools:sample/cities" />
 
-        <View
-            android:layout_width="@dimen/line_width"
-            android:layout_height="match_parent"
-            android:background="?colorAccent"
-            android:visibility="@{item.isSelected()}" />
-
-        <com.google.android.material.textview.MaterialTextView
-            style="@style/Widget.TextView.MainMenu"
-            asyncText="@{item.title}"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            tools:text="@tools:sample/cities" />
-
-    </FrameLayout>
-</layout>
+</FrameLayout>

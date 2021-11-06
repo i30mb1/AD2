@@ -12,6 +12,7 @@ import com.squareup.moshi.Moshi
 import dagger.Module
 import dagger.Provides
 import n7.ad2.data.source.local.db.AppDatabase
+import n7.ad2.data.source.remote.adapter.StringVOMenuTypeAdapter
 import n7.ad2.workers.DatabaseWorker
 import java.util.Calendar
 import javax.inject.Singleton
@@ -47,7 +48,9 @@ object ApplicationModule {
 
     @Singleton
     @Provides
-    fun moshi(): Moshi = Moshi.Builder().build()
+    fun moshi(): Moshi = Moshi.Builder()
+        .add(StringVOMenuTypeAdapter())
+        .build()
 
     @Singleton
     @Provides

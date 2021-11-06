@@ -17,20 +17,26 @@ import kotlinx.coroutines.launch
 import n7.ad2.AD2Logger
 import n7.ad2.R
 import n7.ad2.data.source.local.AppPreference
+import n7.ad2.data.source.remote.model.VOMenuType
 import n7.ad2.databinding.ActivityMain2Binding
+import n7.ad2.di.injector
 import n7.ad2.games.GameFragment
+import n7.ad2.main.MainViewModel
 import n7.ad2.news.NewsFragment
 import n7.ad2.tournaments.TournamentsFragment
 import n7.ad2.ui.heroes.HeroesFragment
 import n7.ad2.ui.items.ItemsFragment
 import n7.ad2.ui.streams.StreamsFragment
+import n7.ad2.ui.vo.VOMenu
 import n7.ad2.utils.BaseActivity
 import n7.ad2.utils.lazyUnsafe
+import n7.ad2.utils.viewModel
 import javax.inject.Inject
 
 class MainActivity2 : BaseActivity(), DraggableDrawer.Listener {
 
     private val loggerAdapter: AD2LoggerAdapter by lazyUnsafe { AD2LoggerAdapter() }
+    private val viewModel: MainViewModel by viewModel { injector.mainViewModel }
 
     private lateinit var binding: ActivityMain2Binding
     @Inject lateinit var logger: AD2Logger
@@ -56,7 +62,6 @@ class MainActivity2 : BaseActivity(), DraggableDrawer.Listener {
     }
 
     private fun setupMenuAdapter() {
-        setupLastSelectedMenu()
         val linearLayoutManager = LinearLayoutManager(this)
         val mainMenuAdapter = MainMenuAdapter(layoutInflater, ::setFragment)
         binding.rvMenu.apply {
@@ -64,6 +69,8 @@ class MainActivity2 : BaseActivity(), DraggableDrawer.Listener {
             layoutManager = linearLayoutManager
             adapter = mainMenuAdapter
         }
+        viewModel.menu.observe(this, mainMenuAdapter::submitList)
+        setupLastSelectedMenu()
     }
 
     private fun setupLastSelectedMenu() {
@@ -72,21 +79,26 @@ class MainActivity2 : BaseActivity(), DraggableDrawer.Listener {
         }
     }
 
-    private fun setFragment(menuItem: MenuItem): Boolean {
+    private fun setFragment(menuItem: VOMenu): Boolean {
         if (!menuItem.isEnable) {
             Snackbar.make(binding.root, getString(R.string.item_disabled), Snackbar.LENGTH_SHORT).show()
             return false
         }
-        val fragment = when (menuItem) {
-            is HeroesMenuItem -> HeroesFragment.getInstance()
-            is GamesMenuItem -> GameFragment()
-            is ItemsMenuItem -> ItemsFragment()
-            is NewsMenuItem -> NewsFragment()
-            is StreamsMenuItem -> StreamsFragment()
-            is TournamentsMenuItem -> TournamentsFragment()
+        if (menuItem.type == VOMenuType.UNKNOWN) return false
+        val tag = menuItem.title
+        val currentTag = supportFragmentManager.fragments.last().tag
+        if (currentTag == tag) return false
+        val fragment = when (menuItem.type) {
+            VOMenuType.HEROES -> HeroesFragment.getInstance()
+            VOMenuType.ITEMS -> GameFragment()
+            VOMenuType.NEWS -> ItemsFragment()
+            VOMenuType.TOURNAMENTS -> NewsFragment()
+            VOMenuType.STREAMS -> StreamsFragment()
+            VOMenuType.GAMES -> TournamentsFragment()
+            VOMenuType.UNKNOWN -> TODO()
         }
         supportFragmentManager.commit {
-            replace(binding.container.id, fragment)
+            replace(binding.container.id, fragment, tag)
         }
         return true
     }
