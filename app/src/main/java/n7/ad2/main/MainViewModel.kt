@@ -1,10 +1,11 @@
 package n7.ad2.main
 
 import android.app.Application
-import androidx.lifecycle.LiveData
+import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
-import androidx.lifecycle.liveData
+import androidx.lifecycle.viewModelScope
 import kotlinx.coroutines.flow.single
+import kotlinx.coroutines.launch
 import n7.ad2.AD2Logger
 import n7.ad2.ui.GetMenuItemsUseCase
 import n7.ad2.ui.vo.VOMenu
@@ -16,9 +17,18 @@ class MainViewModel @Inject constructor(
     private val logger: AD2Logger,
 ) : ViewModel() {
 
-    val menu: LiveData<List<VOMenu>> = liveData {
-        emit(getMenuItemsUseCase().single())
+    val menu: MutableLiveData<List<VOMenu>> = MutableLiveData()
+
+    init {
+        viewModelScope.launch {
+            val items = getMenuItemsUseCase().single()
+            menu.value = items
+        }
+
     }
 
+    fun updateMenu(selectedMenu: VOMenu) {
+        menu.value = menu.value?.map { menu -> menu.copy(isSelected = menu.type == selectedMenu.type) }
+    }
 
 }

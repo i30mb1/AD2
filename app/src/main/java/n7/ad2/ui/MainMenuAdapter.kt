@@ -18,7 +18,7 @@ class MainMenuAdapter(
 ) : ListAdapter<VOMenu, MainMenuAdapter.MenuItemHolder>(DiffCallback()) {
 
     private val itemListener: (menuItem: VOMenu) -> Unit = { menuItem ->
-        val handled = itemListener.invoke(menuItem)
+        itemListener(menuItem)
     }
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int) = MenuItemHolder.from(layoutInflater, parent, itemListener)
@@ -30,12 +30,14 @@ class MainMenuAdapter(
         private val itemListener: (menuItem: VOMenu) -> Unit,
     ) : RecyclerView.ViewHolder(binding.root) {
 
+        private val backgroundRipple = ContextCompat.getDrawable(binding.root.context, R.drawable.background_ripple)
+        private val transparent = ContextCompat.getDrawable(binding.root.context, R.drawable.transparent_30)
+
         fun bind(item: VOMenu) {
             binding.vRedLine.isVisible = item.isSelected
             binding.tvTitle.text = item.title
-            val drawableID = if (item.isEnable) R.drawable.background_ripple else R.drawable.transparent_30
-            binding.root.foreground = ContextCompat.getDrawable(binding.root.context, drawableID)
-            binding.root.setOnClickListener { itemListener.invoke(item) } // каждый bind сэтим листенер... нужно подумать...
+            binding.root.foreground = if (item.isEnable) backgroundRipple else transparent
+            binding.root.setOnClickListener { itemListener.invoke(item) }
         }
 
         companion object {

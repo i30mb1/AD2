@@ -80,14 +80,12 @@ class MainActivity2 : BaseActivity(), DraggableDrawer.Listener {
     }
 
     private fun setFragment(menuItem: VOMenu): Boolean {
-        if (!menuItem.isEnable) {
+        if (!menuItem.isEnable || menuItem.type == VOMenuType.UNKNOWN) {
             Snackbar.make(binding.root, getString(R.string.item_disabled), Snackbar.LENGTH_SHORT).show()
             return false
         }
-        if (menuItem.type == VOMenuType.UNKNOWN) return false
-        val tag = menuItem.title
-        val currentTag = supportFragmentManager.fragments.last().tag
-        if (currentTag == tag) return false
+        val currentTag = supportFragmentManager.fragments.lastOrNull()?.tag
+        if (currentTag == menuItem.title) return false
         val fragment = when (menuItem.type) {
             VOMenuType.HEROES -> HeroesFragment.getInstance()
             VOMenuType.ITEMS -> GameFragment()
@@ -98,8 +96,9 @@ class MainActivity2 : BaseActivity(), DraggableDrawer.Listener {
             VOMenuType.UNKNOWN -> TODO()
         }
         supportFragmentManager.commit {
-            replace(binding.container.id, fragment, tag)
+            replace(binding.container.id, fragment, menuItem.title)
         }
+        viewModel.updateMenu(menuItem)
         return true
     }
 
