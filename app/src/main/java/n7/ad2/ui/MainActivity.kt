@@ -8,13 +8,10 @@ import android.content.SharedPreferences
 import android.net.Uri
 import android.os.Bundle
 import android.os.Environment
-import android.os.Handler
-import android.os.Looper
 import android.preference.PreferenceManager
 import android.view.View
 import android.view.ViewGroup
 import android.view.animation.LinearInterpolator
-import androidx.activity.addCallback
 import androidx.appcompat.app.AlertDialog
 import androidx.constraintlayout.widget.ConstraintLayout
 import androidx.constraintlayout.widget.ConstraintSet
@@ -61,7 +58,6 @@ import javax.inject.Inject
 class MainActivity : BaseActivity() {
 
     companion object {
-        const val MILLIS_FOR_EXIT = 2000
         const val GITHUB_LAST_APK_URL = "https://github.com/i30mb1/AD2/blob/master/app-release.apk?raw=true"
         const val LOG_ON_RECEIVE = "log"
         const val DIALOG_RATE_SHOW = "DIALOG_RATE_SHOW"
@@ -74,7 +70,6 @@ class MainActivity : BaseActivity() {
     @Inject
     lateinit var logger: AD2Logger
 
-    private var doubleBackToExitPressedOnce = false
     private val constraintSetHidden = ConstraintSet()
     private val constraintSetOrigin = ConstraintSet()
     private var currentSet: ConstraintSet? = null
@@ -110,7 +105,6 @@ class MainActivity : BaseActivity() {
         setupLoggerAdapter()
         setupSecretActivity()
         setLastFragment()
-        setupOnBackPressed()
         setupInsets()
     }
 
@@ -168,22 +162,6 @@ class MainActivity : BaseActivity() {
         }
 
         ViewCompat.setWindowInsetsAnimationCallback(binding.root, callback)
-    }
-
-    private fun setupOnBackPressed() {
-        onBackPressedDispatcher.addCallback(this) {
-            if (doubleBackToExitPressedOnce) {
-                finish()
-                return@addCallback
-            }
-            if (currentSet === constraintSetHidden) {
-                toggleSecretActivity(binding.root)
-                return@addCallback
-            }
-            doubleBackToExitPressedOnce = true
-            Snackbar.make(binding.root, R.string.main_press_again_to_exit, Snackbar.LENGTH_SHORT).show()
-            Handler(Looper.getMainLooper()).postDelayed({ doubleBackToExitPressedOnce = false }, MILLIS_FOR_EXIT.toLong())
-        }
     }
 
     private fun setLastFragment() {

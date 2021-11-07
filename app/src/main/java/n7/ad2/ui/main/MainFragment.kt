@@ -2,6 +2,7 @@ package n7.ad2.ui.main
 
 import android.os.Bundle
 import android.view.View
+import androidx.activity.addCallback
 import androidx.core.view.ViewCompat
 import androidx.core.view.WindowInsetsCompat
 import androidx.core.view.updatePadding
@@ -10,6 +11,7 @@ import androidx.fragment.app.commit
 import androidx.lifecycle.lifecycleScope
 import androidx.recyclerview.widget.LinearLayoutManager
 import com.google.android.material.snackbar.Snackbar
+import kotlinx.coroutines.delay
 import kotlinx.coroutines.flow.launchIn
 import kotlinx.coroutines.flow.onEach
 import kotlinx.coroutines.launch
@@ -57,10 +59,32 @@ class MainFragment : Fragment(R.layout.fragment_main), DraggableDrawer.Listener 
         setupFingerCoordinator()
         setupLoggerAdapter()
         setupInsets()
+        setupOnBackPressed()
     }
 
     override fun setDrawerPercentListener(listener: ((percent: Float) -> Unit)?) {
         binding.draggableDrawer.setDrawerPercentListener(listener)
+    }
+
+    private fun setupOnBackPressed() {
+        val millisForExit = 2000L
+        var doubleBackToExitPressedOnce = false
+        activity?.onBackPressedDispatcher?.addCallback(viewLifecycleOwner) {
+            if (doubleBackToExitPressedOnce) {
+                activity?.finishAffinity()
+                return@addCallback
+            }
+            if (binding.draggableDrawer.isOpen) {
+                binding.draggableDrawer.close()
+                return@addCallback
+            }
+            doubleBackToExitPressedOnce = true
+            Snackbar.make(binding.root, R.string.main_press_again_to_exit, Snackbar.LENGTH_SHORT).show()
+            lifecycleScope.launch {
+                delay(millisForExit)
+                doubleBackToExitPressedOnce = false
+            }
+        }
     }
 
     private fun setupInsets() {

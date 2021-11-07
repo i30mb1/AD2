@@ -38,6 +38,7 @@ class DraggableDrawer(
         fun setDrawerPercentListener(listener: ((percent: Float) -> Unit)?)
     }
 
+    var isOpen: Boolean = false
     @Inject lateinit var logger: AD2Logger
     private lateinit var draggableView: FragmentContainerView
     private var initialMotionX = 0F
@@ -126,6 +127,12 @@ class DraggableDrawer(
         return super.onTouchEvent(event)
     }
 
+    fun close() {
+        val startSettling = dragHelper.smoothSlideViewTo(draggableView, collapsedOffsetX, 0)
+        if (startSettling) SettleRunnable().run()
+        isOpen = false
+    }
+
     fun setDrawerPercentListener(listener: ((percent: Float) -> Unit)?) {
         drawerPercent = listener
     }
@@ -140,6 +147,7 @@ class DraggableDrawer(
         }
         val startSettling = dragHelper.smoothSlideViewTo(draggableView, finalX, 0)
         if (startSettling) SettleRunnable().run()
+        isOpen = finalX != collapsedOffsetX
     }
 
     private fun initDraggableView() {
