@@ -4,6 +4,7 @@ import android.content.Context
 import androidx.work.CoroutineWorker
 import androidx.work.WorkerParameters
 import kotlinx.coroutines.coroutineScope
+import kotlinx.coroutines.flow.collect
 import n7.ad2.ui.MyApplication
 import n7.ad2.ui.splash.domain.interactor.PopulateHeroesDatabaseInteractor
 import n7.ad2.ui.splash.domain.interactor.PopulateItemsDatabaseInteractor
@@ -24,8 +25,8 @@ class DatabaseWorker(
         (context as MyApplication).component.inject(this@DatabaseWorker)
 
         try {
-            populateHeroesDatabaseInteractor.invoke()
-            populateItemsDatabaseInteractor.invoke()
+            populateHeroesDatabaseInteractor().collect()
+            populateItemsDatabaseInteractor().collect()
             Result.success()
         } catch (e: Exception) {
             Result.failure()
