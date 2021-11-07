@@ -1,11 +1,11 @@
 package n7.ad2.ui.splash.domain.interactor
 
 import com.squareup.moshi.Moshi
-import kotlinx.coroutines.CoroutineDispatcher
 import kotlinx.coroutines.flow.Flow
 import kotlinx.coroutines.flow.flow
 import kotlinx.coroutines.flow.flowOn
 import n7.ad2.AD2Logger
+import n7.ad2.base.DispatchersProvider
 import n7.ad2.data.source.local.HeroRepository
 import n7.ad2.data.source.local.model.LocalHero
 import n7.ad2.ui.splash.domain.model.AssetsHeroList
@@ -15,7 +15,7 @@ class PopulateHeroesDatabaseInteractor @Inject constructor(
     private val moshi: Moshi,
     private val heroRepository: HeroRepository,
     private val logger: AD2Logger,
-    private val ioDispatcher: CoroutineDispatcher,
+    private val dispatcher: DispatchersProvider,
 ) {
 
     class PopulateHeroesDatabaseException(message: String) : Exception(message)
@@ -31,6 +31,6 @@ class PopulateHeroesDatabaseInteractor @Inject constructor(
         heroRepository.insertHeroes(localHeroesList)
         logger.log("Hero loaded in DB")
         emit(true)
-    }.flowOn(ioDispatcher)
+    }.flowOn(dispatcher.IO)
 
 }

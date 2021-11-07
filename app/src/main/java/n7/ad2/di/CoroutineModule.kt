@@ -7,9 +7,14 @@ import kotlinx.coroutines.CoroutineDispatcher
 import kotlinx.coroutines.CoroutineScope
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.SupervisorJob
+import n7.ad2.base.DispatchersProvider
 
 @Module
 class CoroutineModule {
+
+    @Reusable
+    @Provides
+    fun provideDispatchers(): DispatchersProvider = DispatchersProvider()
 
     @Reusable
     @Provides
