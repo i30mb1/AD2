@@ -8,7 +8,7 @@
 
         <variable
             name="viewModel"
-            type="n7.ad2.main.MainViewModel" />
+            type="n7.ad2.ui.main.MainViewModel" />
 
         <variable
             name="activity"

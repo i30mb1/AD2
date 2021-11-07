@@ -20,7 +20,6 @@ import n7.ad2.data.source.remote.model.VOMenuType
 import n7.ad2.databinding.FragmentMainBinding
 import n7.ad2.di.injector
 import n7.ad2.games.GameFragment
-import n7.ad2.main.MainViewModel
 import n7.ad2.news.NewsFragment
 import n7.ad2.tournaments.TournamentsFragment
 import n7.ad2.ui.MainActivity2

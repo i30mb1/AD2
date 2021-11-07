@@ -44,15 +44,12 @@ class HeroesListAdapter(
     ) : RecyclerView.ViewHolder(binding.root) {
 
         fun bindTo(hero: VOHero) = binding.apply {
-            binding.model = hero
-            executePendingBindings()
             root.setTag(R.id.ViewHolderBinding, binding)
             root.setTag(R.id.ViewHolderModel, hero)
         }
 
         fun clear() = binding.apply {
             iv.clear()
-            tv.text = ""
         }
 
         companion object {

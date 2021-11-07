@@ -3,7 +3,6 @@ package n7.ad2.di
 import android.app.Application
 import dagger.BindsInstance
 import dagger.Component
-import n7.ad2.main.MainViewModel
 import n7.ad2.news.NewsViewModel
 import n7.ad2.ui.MainActivity
 import n7.ad2.ui.MainActivity2
@@ -17,6 +16,7 @@ import n7.ad2.ui.itemInfo.ItemInfoViewModel
 import n7.ad2.ui.items.ItemsViewModel
 import n7.ad2.ui.main.DraggableDrawer
 import n7.ad2.ui.main.MainFragment
+import n7.ad2.ui.main.MainViewModel
 import n7.ad2.ui.streams.StreamViewModel
 import n7.ad2.ui.streams.StreamsFragment
 import n7.ad2.ui.streams.StreamsViewModel

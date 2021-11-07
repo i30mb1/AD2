@@ -1,4 +1,4 @@
-package n7.ad2.main
+package n7.ad2.ui.main
 
 import android.app.Application
 import androidx.lifecycle.MutableLiveData
