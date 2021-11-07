@@ -23,6 +23,7 @@ import n7.ad2.games.GameFragment
 import n7.ad2.main.MainViewModel
 import n7.ad2.news.NewsFragment
 import n7.ad2.tournaments.TournamentsFragment
+import n7.ad2.ui.MainActivity2
 import n7.ad2.ui.heroes.HeroesFragment
 import n7.ad2.ui.items.ItemsFragment
 import n7.ad2.ui.streams.StreamsFragment
@@ -101,7 +102,10 @@ class MainFragment : Fragment(R.layout.fragment_main), DraggableDrawer.Listener 
             layoutManager = linearLayoutManager
             adapter = mainMenuAdapter
         }
-        viewModel.menu.observe(viewLifecycleOwner, mainMenuAdapter::submitList)
+        viewModel.menu.observe(viewLifecycleOwner) { list ->
+            mainMenuAdapter.submitList(list)
+            (activity as MainActivity2).shouldKeepOnScreen = false
+        }
         setupLastSelectedMenu()
     }
 

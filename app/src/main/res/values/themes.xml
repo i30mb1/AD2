@@ -99,10 +99,16 @@
         <!--тёмные иконки для светкой панели уведомления-->
         <item name="android:windowLightStatusBar">true</item>
 
-<!--        <item name="android:listDivider">@color/gray_100</item>-->
-<!--        <item name="android:divider">@color/gray_100</item>-->
-<!--        <item name="android:dividerHeight">1dp</item>-->
-<!--        <item name="android:showDividers">middle</item>-->
+        <!--        <item name="android:listDivider">@color/gray_100</item>-->
+        <!--        <item name="android:divider">@color/gray_100</item>-->
+        <!--        <item name="android:dividerHeight">1dp</item>-->
+        <!--        <item name="android:showDividers">middle</item>-->
+    </style>
+
+    <style name="Theme.AppSplash" parent="Theme.SplashScreen">
+        <item name="windowSplashScreenBackground">@color/gray_500</item>
+        <item name="windowSplashScreenAnimatedIcon">@drawable/ic_splash_logo</item>
+        <item name="postSplashScreenTheme">@style/AD2Theme</item>
     </style>
 
 </resources>

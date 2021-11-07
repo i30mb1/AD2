@@ -17,7 +17,6 @@ import n7.ad2.ui.itemInfo.ItemInfoViewModel
 import n7.ad2.ui.items.ItemsViewModel
 import n7.ad2.ui.main.DraggableDrawer
 import n7.ad2.ui.main.MainFragment
-import n7.ad2.ui.splash.SplashViewModel
 import n7.ad2.ui.streams.StreamViewModel
 import n7.ad2.ui.streams.StreamsFragment
 import n7.ad2.ui.streams.StreamsViewModel
@@ -49,7 +48,6 @@ interface ApplicationComponent {
     fun inject(heroGuideWorker: ItemInfoFragment)
 
     val mainViewModel: MainViewModel
-    val splashViewModel: SplashViewModel
     val heroesViewModel: HeroesViewModel
     val itemsViewModel: ItemsViewModel
     val responsesViewModel: ResponsesViewModel

@@ -1,11 +1,10 @@
 import org.gradle.api.artifacts.dsl.DependencyHandler
 
 object Apps {
-    const val compileSdk = 30
-    const val buildToolsSdk = "30.0.2"
+    const val compileSdk = 31
     const val applicationId = "n7.ad2"
     const val minSdkVersion = 23
-    const val targetSdkVersion = 30
+    const val targetSdkVersion = 31
     const val versionCode = 555
     const val versionName = "555"
 }
@@ -52,6 +51,7 @@ object Lib {
     const val springAnimationKtx = "androidx.dynamicanimation:dynamicanimation-ktx:1.0.0-alpha03"
     const val instantApps = "com.google.android.gms:play-services-instantapps:17.0.0"
     const val viewPager2 = "androidx.viewpager2:viewpager2:1.0.0"
+    const val splashScreen = "androidx.core:core-splashscreen:1.0.0-alpha02"
 
     const val exoPlayerCore = "com.google.android.exoplayer:exoplayer-core:${Versions.exoPlayer}"
     const val exoPlayerHls = "com.google.android.exoplayer:exoplayer-hls:${Versions.exoPlayer}"
@@ -138,6 +138,7 @@ fun DependencyHandler.addTestDependencies() {
 }
 
 fun DependencyHandler.addBaseDependencies() {
+    implementation(Lib.splashScreen)
     api(Lib.fragmentKtx)
     api(Lib.activityKtx)
     api(Lib.constraintLayout)
