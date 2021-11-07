@@ -21,9 +21,9 @@ import n7.ad2.R
 import n7.ad2.databinding.FragmentHeroesBinding
 import n7.ad2.databinding.ItemHeroBinding
 import n7.ad2.di.injector
-import n7.ad2.ui.DraggableDrawer
 import n7.ad2.ui.heroPage.HeroPageActivity
 import n7.ad2.ui.heroes.domain.vo.VOHero
+import n7.ad2.ui.main.DraggableDrawer
 import n7.ad2.utils.viewModel
 
 class HeroesFragment : Fragment(R.layout.fragment_heroes) {
@@ -92,7 +92,7 @@ class HeroesFragment : Fragment(R.layout.fragment_heroes) {
                 gridItemDecorator.navigationBarsInsets = navigationBarsInsets.bottom
                 insets
             }
-            (activity as? DraggableDrawer.Listener)?.setDrawerPercentListener { percent ->
+            (parentFragment as DraggableDrawer.Listener).setDrawerPercentListener { percent ->
                 gridItemDecorator.percent = percent
                 binding.rv.invalidateItemDecorations()
             }

@@ -7,7 +7,7 @@ import androidx.lifecycle.viewModelScope
 import kotlinx.coroutines.flow.single
 import kotlinx.coroutines.launch
 import n7.ad2.AD2Logger
-import n7.ad2.ui.GetMenuItemsUseCase
+import n7.ad2.ui.main.domain.usecase.GetMenuItemsUseCase
 import n7.ad2.ui.vo.VOMenu
 import javax.inject.Inject
 

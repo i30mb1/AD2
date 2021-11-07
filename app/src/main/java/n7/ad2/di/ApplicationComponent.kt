@@ -5,7 +5,6 @@ import dagger.BindsInstance
 import dagger.Component
 import n7.ad2.main.MainViewModel
 import n7.ad2.news.NewsViewModel
-import n7.ad2.ui.DraggableDrawer
 import n7.ad2.ui.MainActivity
 import n7.ad2.ui.MainActivity2
 import n7.ad2.ui.heroGuide.HeroGuideViewModel
@@ -16,6 +15,8 @@ import n7.ad2.ui.heroes.HeroesViewModel
 import n7.ad2.ui.itemInfo.ItemInfoFragment
 import n7.ad2.ui.itemInfo.ItemInfoViewModel
 import n7.ad2.ui.items.ItemsViewModel
+import n7.ad2.ui.main.DraggableDrawer
+import n7.ad2.ui.main.MainFragment
 import n7.ad2.ui.splash.SplashViewModel
 import n7.ad2.ui.streams.StreamViewModel
 import n7.ad2.ui.streams.StreamsFragment
@@ -41,6 +42,7 @@ interface ApplicationComponent {
     fun inject(databaseWorker: DatabaseWorker)
     fun inject(mainActivity: MainActivity)
     fun inject(mainActivity2: MainActivity2)
+    fun inject(mainFragment: MainFragment)
     fun inject(draggableDrawer: DraggableDrawer)
     fun inject(streamsFragment: StreamsFragment)
     fun inject(heroGuideWorker: HeroGuideWorker)

@@ -51,6 +51,7 @@ import n7.ad2.databinding.DrawerBinding
 import n7.ad2.di.injector
 import n7.ad2.main.MainViewModel
 import n7.ad2.ui.heroes.HeroesFragment
+import n7.ad2.ui.main.AD2LoggerAdapter
 import n7.ad2.ui.setting.SettingActivity
 import n7.ad2.utils.BaseActivity
 import n7.ad2.utils.lazyUnsafe

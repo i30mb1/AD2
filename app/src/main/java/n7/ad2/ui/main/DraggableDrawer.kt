@@ -1,4 +1,4 @@
-package n7.ad2.ui
+package n7.ad2.ui.main
 
 import android.annotation.SuppressLint
 import android.content.Context
@@ -15,6 +15,7 @@ import androidx.customview.widget.ViewDragHelper
 import androidx.fragment.app.FragmentContainerView
 import n7.ad2.AD2Logger
 import n7.ad2.R
+import n7.ad2.ui.MyApplication
 import n7.ad2.utils.extension.toPx
 import javax.inject.Inject
 import kotlin.math.abs

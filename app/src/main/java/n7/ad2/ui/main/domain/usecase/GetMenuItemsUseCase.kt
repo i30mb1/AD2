@@ -1,4 +1,4 @@
-package n7.ad2.ui
+package n7.ad2.ui.main.domain.usecase
 
 import android.app.Application
 import kotlinx.coroutines.CoroutineDispatcher
