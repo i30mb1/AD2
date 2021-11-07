@@ -24,7 +24,9 @@ import n7.ad2.di.injector
 import n7.ad2.ui.heroPage.HeroPageActivity
 import n7.ad2.ui.heroes.domain.vo.VOHero
 import n7.ad2.ui.main.DraggableDrawer
+import n7.ad2.utils.ImageLoader
 import n7.ad2.utils.viewModel
+import javax.inject.Inject
 
 class HeroesFragment : Fragment(R.layout.fragment_heroes) {
 
@@ -32,11 +34,18 @@ class HeroesFragment : Fragment(R.layout.fragment_heroes) {
         fun getInstance(): HeroesFragment = HeroesFragment()
     }
 
+    @Inject lateinit var imageLoader: ImageLoader
+    private lateinit var binding: FragmentHeroesBinding
+    private lateinit var heroAdapter: HeroesListAdapter
+
     private val viewModel: HeroesViewModel by viewModel { injector.heroesViewModel }
     private val gridItemDecorator = GridDividerItemDecorator()
     private val onHeroClick: (hero: VOHero) -> Unit = { }
-    private lateinit var binding: FragmentHeroesBinding
-    private lateinit var heroAdapter: HeroesListAdapter
+
+    override fun onCreate(savedInstanceState: Bundle?) {
+        super.onCreate(savedInstanceState)
+        injector.inject(this)
+    }
 
     override fun onCreateOptionsMenu(menu: Menu, inflater: MenuInflater) {
         // implement search for last queries https://developer.android.com/guide/topics/search/adding-recent-query-suggestions
@@ -57,8 +66,8 @@ class HeroesFragment : Fragment(R.layout.fragment_heroes) {
     fun startHeroFragment(model: VOHero, binding: ItemHeroBinding) {
         Intent(binding.root.context, HeroPageActivity::class.java).apply {
             putExtra(HeroPageActivity.HERO_NAME, model.name)
-            putExtra(HeroPageActivity.TN_PHOTO, binding.iv.transitionName)
-            val options = ActivityOptionsCompat.makeSceneTransitionAnimation(requireActivity(), binding.iv, binding.iv.transitionName)
+            putExtra(HeroPageActivity.TN_PHOTO, binding.ivImage.transitionName)
+            val options = ActivityOptionsCompat.makeSceneTransitionAnimation(requireActivity(), binding.ivImage, binding.ivImage.transitionName)
             startActivity(this)
         }
 
@@ -75,7 +84,7 @@ class HeroesFragment : Fragment(R.layout.fragment_heroes) {
 
 
     private fun setupAdapter() {
-        heroAdapter = HeroesListAdapter(this)
+        heroAdapter = HeroesListAdapter(layoutInflater, imageLoader, onHeroClick)
         binding.rv.apply {
             setHasFixedSize(true)
             setItemViewCacheSize(15)

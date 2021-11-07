@@ -24,8 +24,7 @@ class StreamsFragment : Fragment(R.layout.fragment_streams) {
 
     private lateinit var binding: FragmentStreamsBinding
     private val viewModel: StreamsViewModel by viewModel { injector.streamsViewModel }
-    @Inject
-    lateinit var imageLoader: ImageLoader
+    @Inject lateinit var imageLoader: ImageLoader
     private val onStreamClick: (vOSimpleStream: VOSimpleStream) -> Unit = { voSimpleStream ->
         childFragmentManager.commit {
             addToBackStack(null)

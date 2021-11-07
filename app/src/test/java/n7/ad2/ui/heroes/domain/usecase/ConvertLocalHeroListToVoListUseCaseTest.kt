@@ -27,7 +27,7 @@ class ConvertLocalHeroListToVoListUseCaseTest {
         val voList: List<VOHero> = convertLocalHeroListToVoListUseCase.invoke(list)
 
         Truth.assertThat(voList[0].name).isNotEmpty()
-        Truth.assertThat(voList[0].image).isNotEmpty()
+        Truth.assertThat(voList[0].imageUrl).isNotEmpty()
 
     }
 
