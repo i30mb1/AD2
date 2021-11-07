@@ -5,16 +5,10 @@ import androidx.lifecycle.AndroidViewModel
 import androidx.lifecycle.LiveData
 import androidx.lifecycle.liveData
 import androidx.lifecycle.viewModelScope
-import androidx.work.Constraints
-import androidx.work.Data
-import androidx.work.ExistingWorkPolicy
-import androidx.work.NetworkType
-import androidx.work.OneTimeWorkRequest
-import androidx.work.WorkManager
 import kotlinx.coroutines.launch
-import n7.ad2.news.NewsWorker
 import n7.ad2.ui.splash.domain.interactor.ShouldWeShowSplashScreenInteractor
 import n7.ad2.ui.splash.domain.usecase.GetRandomEmoteUseCase
+import n7.ad2.ui.splash.domain.usecase.LoadNewsUseCase
 import n7.ad2.ui.splash.domain.usecase.SaveCurrentDateUseCase
 import javax.inject.Inject
 
@@ -23,6 +17,7 @@ class SplashViewModel @Inject constructor(
     private val saveCurrentDateUseCase: SaveCurrentDateUseCase,
     private val getRandomEmoteUseCase: GetRandomEmoteUseCase,
     private val shouldWeShowSplashScreenInteractor: ShouldWeShowSplashScreenInteractor,
+    private val loadNewsUseCase: LoadNewsUseCase,
 ) : AndroidViewModel(application) {
 
     init {
@@ -35,17 +30,6 @@ class SplashViewModel @Inject constructor(
 
     suspend fun shouldWeShowSplashScreen(): Boolean = shouldWeShowSplashScreenInteractor()
 
-    fun loadNews() {
-        val constraints = Constraints.Builder().setRequiredNetworkType(NetworkType.CONNECTED).build()
-        val data = Data.Builder()
-            .putBoolean(NewsWorker.DELETE_TABLE, true)
-            .build()
-        val worker = OneTimeWorkRequest.Builder(NewsWorker::class.java)
-            .setInputData(data)
-            .setConstraints(constraints)
-            .build()
-        WorkManager.getInstance(getApplication()).beginUniqueWork(NewsWorker.TAG, ExistingWorkPolicy.APPEND, worker).enqueue()
-    }
-
+    fun loadNews() = loadNewsUseCase()
 
 }
