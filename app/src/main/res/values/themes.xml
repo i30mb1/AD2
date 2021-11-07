@@ -105,28 +105,4 @@
 <!--        <item name="android:showDividers">middle</item>-->
     </style>
 
-    <style name="SplashTheme" parent="AD2Theme">
-        <item name="android:windowTranslucentStatus">true</item>
-        <item name="android:windowTranslucentNavigation">true</item>
-        <item name="android:windowBackground">@android:color/transparent</item>
-        <item name="textAppearanceHeadline5">@style/Headline5</item>
-        <item name="android:windowShowWallpaper">true</item>
-    </style>
-
-    <style name="SplashTheme.Dark" parent="AD2Theme.Black">
-        <item name="android:windowTranslucentStatus">true</item>
-        <item name="android:windowTranslucentNavigation">true</item>
-        <item name="android:windowBackground">@android:color/transparent</item>
-        <item name="textAppearanceHeadline5">@style/Headline5</item>
-        <item name="android:windowShowWallpaper">true</item>
-    </style>
-
-    <style name="SplashTheme.White" parent="AD2Theme.White">
-        <item name="android:windowTranslucentStatus">true</item>
-        <item name="android:windowTranslucentNavigation">true</item>
-        <item name="android:windowBackground">@android:color/transparent</item>
-        <item name="android:windowShowWallpaper">true</item>
-        <item name="textAppearanceHeadline5">@style/Headline5</item>
-    </style>
-
 </resources>

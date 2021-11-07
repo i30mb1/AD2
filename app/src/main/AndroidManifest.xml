@@ -28,11 +28,6 @@
         android:usesCleartextTraffic="true"
         tools:ignore="GoogleAppIndexingWarning">
 
-        <activity
-            android:name=".ui.splash.SplashActivity"
-            android:exported="true"
-            android:theme="@style/SplashTheme" />
-
         <!--        <activity-alias-->
         <!--            android:name=".ui.setting.domain.model.Red"-->
         <!--            android:enabled="true"-->
@@ -96,12 +91,6 @@
             android:name=".ui.heroPage.HeroPageActivity"
             android:exported="false"
             android:screenOrientation="portrait" />
-        <activity
-            android:name=".ui.streams.StreamsFullActivity"
-            android:exported="false"
-            android:finishOnTaskLaunch="true"
-            android:launchMode="singleTop"
-            android:screenOrientation="sensorLandscape" />
         <activity
             android:name=".news.NewsActivity"
             android:exported="false"
