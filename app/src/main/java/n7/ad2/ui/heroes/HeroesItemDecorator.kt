@@ -6,7 +6,7 @@ import androidx.recyclerview.widget.GridLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import n7.ad2.utils.extension.toPx
 
-class InsetsItemDecorator : RecyclerView.ItemDecoration() {
+class HeroesItemDecorator : RecyclerView.ItemDecoration() {
 
     var statusBarsInsets = 0
     var navigationBarsInsets = 0
@@ -24,10 +24,11 @@ class InsetsItemDecorator : RecyclerView.ItemDecoration() {
         val spanCount: Int = layoutManager.spanCount
         val column: Int = position % spanCount
         val childCount = parent.adapter?.itemCount ?: return
+        val itemsInEnd = childCount % spanCount
         val type = parent.adapter?.getItemViewType(position) ?: return
 
         with(outRect) {
-            bottom = if (position == childCount - 1) offsetBottom + (navigationBarsInsets * percent).toInt() else offset
+            bottom = if (position in (childCount - itemsInEnd..childCount)) offsetBottom + (navigationBarsInsets * percent).toInt() else offset
             top = if (position in (0 until spanCount)) offsetTop + (statusBarsInsets * percent).toInt() else offset
             left = offset
             right = offset

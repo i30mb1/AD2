@@ -39,7 +39,7 @@ class HeroesFragment : Fragment(R.layout.fragment_heroes) {
     private lateinit var heroAdapter: HeroesListAdapter
 
     private val viewModel: HeroesViewModel by viewModel { injector.heroesViewModel }
-    private val gridItemDecorator = InsetsItemDecorator()
+    private val heroesItemDecorator = HeroesItemDecorator()
     private val onHeroClick: (hero: VOHero) -> Unit = { }
 
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -91,18 +91,18 @@ class HeroesFragment : Fragment(R.layout.fragment_heroes) {
             recycledViewPool.setMaxRecycledViews(R.layout.item_hero, 30)
             layoutManager = GridLayoutManager(context, 3)
             adapter = heroAdapter
-            addItemDecoration(gridItemDecorator)
+            addItemDecoration(heroesItemDecorator)
             postponeEnterTransition()
             doOnPreDraw { startPostponedEnterTransition() }
             ViewCompat.setOnApplyWindowInsetsListener(this) { _, insets ->
                 val statusBarsInsets = insets.getInsets(WindowInsetsCompat.Type.statusBars())
                 val navigationBarsInsets = insets.getInsets(WindowInsetsCompat.Type.navigationBars())
-                gridItemDecorator.statusBarsInsets = statusBarsInsets.top
-                gridItemDecorator.navigationBarsInsets = navigationBarsInsets.bottom
+                heroesItemDecorator.statusBarsInsets = statusBarsInsets.top
+                heroesItemDecorator.navigationBarsInsets = navigationBarsInsets.bottom
                 insets
             }
             (parentFragment as DraggableDrawer.Listener).setDrawerPercentListener { percent ->
-                gridItemDecorator.percent = percent
+                heroesItemDecorator.percent = percent
                 binding.rv.invalidateItemDecorations()
             }
         }

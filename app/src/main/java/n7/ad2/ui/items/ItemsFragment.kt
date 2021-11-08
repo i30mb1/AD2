@@ -15,8 +15,8 @@ import kotlinx.coroutines.flow.onEach
 import n7.ad2.R
 import n7.ad2.databinding.FragmentItemsBinding
 import n7.ad2.di.injector
-import n7.ad2.ui.heroes.InsetsItemDecorator
 import n7.ad2.ui.itemInfo.ItemInfoActivity
+import n7.ad2.ui.items.adapter.ItemsItemDecorator
 import n7.ad2.ui.items.adapter.ItemsListAdapter
 import n7.ad2.ui.items.domain.vo.VOItemBody
 import n7.ad2.ui.main.DraggableDrawer
@@ -30,7 +30,7 @@ class ItemsFragment : Fragment(R.layout.fragment_items) {
     private lateinit var binding: FragmentItemsBinding
 
     private val viewModel: ItemsViewModel by viewModel { injector.itemsViewModel }
-    private val gridItemDecorator = InsetsItemDecorator()
+    private val itemsItemDecorator = ItemsItemDecorator()
     private val onItemClick: (hero: VOItemBody) -> Unit = { model ->
         startItemInfoFragment(model)
     }
@@ -70,18 +70,18 @@ class ItemsFragment : Fragment(R.layout.fragment_items) {
         ViewCompat.setOnApplyWindowInsetsListener(binding.root) { _, insets ->
             val statusBarsInsets = insets.getInsets(WindowInsetsCompat.Type.statusBars())
             val navigationBarsInsets = insets.getInsets(WindowInsetsCompat.Type.navigationBars())
-            gridItemDecorator.statusBarsInsets = statusBarsInsets.top
-            gridItemDecorator.navigationBarsInsets = navigationBarsInsets.bottom
+            itemsItemDecorator.statusBarsInsets = statusBarsInsets.top
+            itemsItemDecorator.navigationBarsInsets = navigationBarsInsets.bottom
             insets
         }
         (parentFragment as DraggableDrawer.Listener).setDrawerPercentListener { percent ->
-            gridItemDecorator.percent = percent
+            itemsItemDecorator.percent = percent
             binding.rv.invalidateItemDecorations()
         }
 
         binding.rv.apply {
             setHasFixedSize(true)
-            addItemDecoration(gridItemDecorator)
+            addItemDecoration(itemsItemDecorator)
             layoutManager = gridLayoutManager
             adapter = itemsAdapter
         }

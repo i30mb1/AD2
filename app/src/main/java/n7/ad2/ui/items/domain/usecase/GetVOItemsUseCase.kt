@@ -8,7 +8,10 @@ import kotlinx.coroutines.flow.onStart
 import n7.ad2.AD2Logger
 import n7.ad2.base.DispatchersProvider
 import n7.ad2.data.source.local.ItemRepository
+import n7.ad2.data.source.local.model.LocalItem
+import n7.ad2.ui.items.domain.vo.VOItem
 import n7.ad2.ui.items.domain.vo.VOItemBody
+import n7.ad2.ui.items.domain.vo.VOItemHeader
 import javax.inject.Inject
 
 class GetVOItemsUseCase @Inject constructor(
@@ -17,12 +20,20 @@ class GetVOItemsUseCase @Inject constructor(
     private val logger: AD2Logger,
 ) {
 
-    operator fun invoke(): Flow<List<VOItemBody>> {
+    operator fun invoke(): Flow<List<VOItem>> {
         return itemRepository.getAllItems()
             .onStart { logger.log("items loaded") }
             .flatMapLatest { list ->
+                val result = mutableListOf<VOItem>()
                 flow {
-                    emit(list.map { VOItemBody(it.name, ItemRepository.getFullUrlItemImage(it.name), it.viewedByUser) })
+                    list.groupBy { localItem -> localItem.type }
+                        .forEach { map: Map.Entry<String, List<LocalItem>> ->
+                            result.add(VOItemHeader(map.key))
+                            result.addAll(map.value.map {
+                                VOItemBody(it.name, ItemRepository.getFullUrlItemImage(it.name), it.viewedByUser)
+                            })
+                        }
+                    emit(result.toList())
                 }
             }
             .flowOn(dispatchers.IO)
