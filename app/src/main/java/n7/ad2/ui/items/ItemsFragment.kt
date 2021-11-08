@@ -2,9 +2,9 @@ package n7.ad2.ui.items
 
 import android.content.Intent
 import android.os.Bundle
-import android.view.Menu
-import android.view.MenuInflater
 import android.view.View
+import androidx.core.view.ViewCompat
+import androidx.core.view.WindowInsetsCompat
 import androidx.fragment.app.Fragment
 import androidx.lifecycle.Lifecycle
 import androidx.lifecycle.flowWithLifecycle
@@ -14,28 +14,40 @@ import kotlinx.coroutines.flow.launchIn
 import kotlinx.coroutines.flow.onEach
 import n7.ad2.R
 import n7.ad2.databinding.FragmentItemsBinding
-import n7.ad2.databinding.ItemItemBodyBinding
 import n7.ad2.di.injector
-import n7.ad2.ui.MainActivity
+import n7.ad2.ui.heroes.InsetsItemDecorator
 import n7.ad2.ui.itemInfo.ItemInfoActivity
+import n7.ad2.ui.items.adapter.ItemsListAdapter
 import n7.ad2.ui.items.domain.vo.VOItemBody
+import n7.ad2.ui.main.DraggableDrawer
+import n7.ad2.utils.ImageLoader
 import n7.ad2.utils.viewModel
+import javax.inject.Inject
 
 class ItemsFragment : Fragment(R.layout.fragment_items) {
 
-    private val viewModel: ItemsViewModel by viewModel { injector.itemsViewModel }
+    @Inject lateinit var imageLoader: ImageLoader
     private lateinit var binding: FragmentItemsBinding
+
+    private val viewModel: ItemsViewModel by viewModel { injector.itemsViewModel }
+    private val gridItemDecorator = InsetsItemDecorator()
+    private val onItemClick: (hero: VOItemBody) -> Unit = { model ->
+        startItemInfoFragment(model)
+    }
+
+    override fun onCreate(savedInstanceState: Bundle?) {
+        super.onCreate(savedInstanceState)
+        injector.inject(this)
+    }
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
         binding = FragmentItemsBinding.bind(view)
 
-        requireActivity().setTitle(R.string.items)
-        setHasOptionsMenu(true)
         setupAdapter()
     }
 
-    fun startItemInfoFragment(model: VOItemBody, binding: ItemItemBodyBinding) {
+    private fun startItemInfoFragment(model: VOItemBody) {
         val intent = Intent(requireContext(), ItemInfoActivity::class.java)
         intent.putExtra(ItemInfoActivity.ITEM_NAME, model.name)
         startActivity(intent)
@@ -47,17 +59,29 @@ class ItemsFragment : Fragment(R.layout.fragment_items) {
         val spanSizeItem = 1
         val spanSizeItemHeader = 4
 
-        val itemsAdapter = ItemsListAdapter(this)
-        val gridLayoutManager = GridLayoutManager(context, spanSizeItemHeader).apply {
-            spanSizeLookup = object : GridLayoutManager.SpanSizeLookup() {
-                override fun getSpanSize(position: Int) = when (itemsAdapter.getItemViewType(position)) {
-                    R.layout.item_item_header -> spanSizeItemHeader
-                    else -> spanSizeItem
-                }
+        val itemsAdapter = ItemsListAdapter(layoutInflater, imageLoader, onItemClick)
+        val gridLayoutManager = GridLayoutManager(context, spanSizeItemHeader)
+        gridLayoutManager.spanSizeLookup = object : GridLayoutManager.SpanSizeLookup() {
+            override fun getSpanSize(position: Int) = when (itemsAdapter.getItemViewType(position)) {
+                R.layout.item_item_header -> spanSizeItemHeader
+                else -> spanSizeItem
             }
         }
+        ViewCompat.setOnApplyWindowInsetsListener(binding.root) { _, insets ->
+            val statusBarsInsets = insets.getInsets(WindowInsetsCompat.Type.statusBars())
+            val navigationBarsInsets = insets.getInsets(WindowInsetsCompat.Type.navigationBars())
+            gridItemDecorator.statusBarsInsets = statusBarsInsets.top
+            gridItemDecorator.navigationBarsInsets = navigationBarsInsets.bottom
+            insets
+        }
+        (parentFragment as DraggableDrawer.Listener).setDrawerPercentListener { percent ->
+            gridItemDecorator.percent = percent
+            binding.rv.invalidateItemDecorations()
+        }
+
         binding.rv.apply {
             setHasFixedSize(true)
+            addItemDecoration(gridItemDecorator)
             layoutManager = gridLayoutManager
             adapter = itemsAdapter
         }

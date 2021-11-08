@@ -6,7 +6,7 @@ import androidx.recyclerview.widget.GridLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import n7.ad2.utils.extension.toPx
 
-class GridDividerItemDecorator : RecyclerView.ItemDecoration() {
+class InsetsItemDecorator : RecyclerView.ItemDecoration() {
 
     var statusBarsInsets = 0
     var navigationBarsInsets = 0

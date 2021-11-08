@@ -1,16 +1,9 @@
-<layout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:tools="http://schemas.android.com/tools">
-
-    <data>
-
-    </data>
-
-        <androidx.recyclerview.widget.RecyclerView
-            android:id="@+id/rv"
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            tools:itemCount="30"
-            tools:layoutManager="GridLayoutManager"
-            tools:spanCount="4"
-            tools:listitem="@layout/item_item_body" />
-</layout>
+<androidx.recyclerview.widget.RecyclerView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/rv"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:itemCount="30"
+    tools:layoutManager="GridLayoutManager"
+    tools:listitem="@layout/item_item_body"
+    tools:spanCount="4" />

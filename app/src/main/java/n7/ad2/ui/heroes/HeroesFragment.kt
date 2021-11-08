@@ -39,7 +39,7 @@ class HeroesFragment : Fragment(R.layout.fragment_heroes) {
     private lateinit var heroAdapter: HeroesListAdapter
 
     private val viewModel: HeroesViewModel by viewModel { injector.heroesViewModel }
-    private val gridItemDecorator = GridDividerItemDecorator()
+    private val gridItemDecorator = InsetsItemDecorator()
     private val onHeroClick: (hero: VOHero) -> Unit = { }
 
     override fun onCreate(savedInstanceState: Bundle?) {

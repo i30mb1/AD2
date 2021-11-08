@@ -14,6 +14,7 @@ import n7.ad2.ui.heroes.HeroesFragment
 import n7.ad2.ui.heroes.HeroesViewModel
 import n7.ad2.ui.itemInfo.ItemInfoFragment
 import n7.ad2.ui.itemInfo.ItemInfoViewModel
+import n7.ad2.ui.items.ItemsFragment
 import n7.ad2.ui.items.ItemsViewModel
 import n7.ad2.ui.main.DraggableDrawer
 import n7.ad2.ui.main.MainFragment
@@ -42,6 +43,7 @@ interface ApplicationComponent {
     fun inject(databaseWorker: DatabaseWorker)
     fun inject(mainActivity: MainActivity)
     fun inject(heroesFragment: HeroesFragment)
+    fun inject(itemsFragment: ItemsFragment)
     fun inject(mainActivity2: MainActivity2)
     fun inject(mainFragment: MainFragment)
     fun inject(draggableDrawer: DraggableDrawer)
