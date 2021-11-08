@@ -2,6 +2,7 @@ package n7.ad2.ui.main
 
 import android.annotation.SuppressLint
 import android.content.Context
+import android.graphics.Rect
 import android.util.AttributeSet
 import android.view.MotionEvent
 import android.view.View
@@ -52,6 +53,7 @@ class DraggableDrawer(
     private var statusBarsInsetsTop: Int = 0
     private var onAnimationEnd: (() -> Unit)? = null
     private var drawerPercent: ((percent: Float) -> Unit)? = null
+    private val draggableRect = Rect()
 
     private val dragHelper = ViewDragHelper.create(this, 1F, object : ViewDragHelper.Callback() {
         override fun tryCaptureView(child: View, pointerId: Int) = child == draggableView
@@ -59,17 +61,16 @@ class DraggableDrawer(
         override fun clampViewPositionVertical(child: View, top: Int, dy: Int) = 0
         override fun onViewReleased(releasedChild: View, xvel: Float, yvel: Float) = onReleased(xvel)
         override fun onViewPositionChanged(changedView: View, left: Int, top: Int, dx: Int, dy: Int) {
-            val percent = (1 - left.toFloat() / collapsedOffsetX)
-            val currentPaddingTop = statusBarsInsetsTop * percent
-            val currentPaddingBottom = navigationBarsInsetsBottom * percent
-            drawerPercent?.invoke(percent)
-//            draggableView.updatePadding(top = currentPaddingTop.toInt(), bottom = currentPaddingBottom.toInt())
-            val scale = maxScale - left.toFloat() / collapsedOffsetX * (maxScale - collapsedScale)
-            draggableView.scaleY = scale
-            draggableView.scaleX = scale
-            offsetX = changedView.left
-            offsetY = changedView.top
-            currentOffsetX = offsetX
+            if (isIntercept) {
+                val percent = (1 - left.toFloat() / collapsedOffsetX)
+                drawerPercent?.invoke(percent)
+                val scale = maxScale - left.toFloat() / collapsedOffsetX * (maxScale - collapsedScale)
+                draggableView.scaleY = scale
+                draggableView.scaleX = scale
+                offsetX = changedView.left
+                offsetY = changedView.top
+                currentOffsetX = offsetX
+            }
         }
     })
 
@@ -97,8 +98,8 @@ class DraggableDrawer(
     }
 
     override fun onInterceptTouchEvent(ev: MotionEvent): Boolean {
-        dragHelper.processTouchEvent(ev)
-        val clickedOnView = dragHelper.shouldInterceptTouchEvent(ev)
+        draggableView.getHitRect(draggableRect)
+        val clickedOnView = draggableRect.contains(ev.x.toInt(), ev.y.toInt())
         if (clickedOnView) {
             dragHelper.processTouchEvent(ev)
             when (ev.action) {
