@@ -41,8 +41,9 @@ class MainFragment : Fragment(R.layout.fragment_main), DraggableDrawer.Listener 
 
     @Inject lateinit var logger: AD2Logger
     @Inject lateinit var preferences: AppPreference
-    private lateinit var binding: FragmentMainBinding
 
+    private var _binding: FragmentMainBinding? = null
+    private val binding: FragmentMainBinding get() = _binding!!
     private val loggerAdapter: AD2LoggerAdapter by lazyUnsafe { AD2LoggerAdapter(layoutInflater) }
     private val viewModel: MainViewModel by viewModel { injector.mainViewModel }
 
@@ -53,13 +54,18 @@ class MainFragment : Fragment(R.layout.fragment_main), DraggableDrawer.Listener 
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
-        binding = FragmentMainBinding.bind(view)
+        _binding = FragmentMainBinding.bind(view)
 
         setupMenuAdapter()
         setupFingerCoordinator()
         setupLoggerAdapter()
         setupInsets()
         setupOnBackPressed()
+    }
+
+    override fun onDestroyView() {
+        super.onDestroyView()
+        _binding = null
     }
 
     override fun setDrawerPercentListener(listener: ((percent: Float) -> Unit)?) {
@@ -105,10 +111,10 @@ class MainFragment : Fragment(R.layout.fragment_main), DraggableDrawer.Listener 
         val fragment = when (menuItem.type) {
             VOMenuType.HEROES -> HeroesFragment.getInstance()
             VOMenuType.ITEMS -> ItemsFragment.getInstance()
-            VOMenuType.NEWS -> NewsFragment()
-            VOMenuType.TOURNAMENTS -> TournamentsFragment()
-            VOMenuType.STREAMS -> StreamsFragment()
-            VOMenuType.GAMES -> GameFragment()
+            VOMenuType.NEWS -> NewsFragment.getInstance()
+            VOMenuType.TOURNAMENTS -> TournamentsFragment.getInstance()
+            VOMenuType.STREAMS -> StreamsFragment.getInstance()
+            VOMenuType.GAMES -> GameFragment.getInstance()
             VOMenuType.UNKNOWN -> TODO()
         }
         childFragmentManager.commit {

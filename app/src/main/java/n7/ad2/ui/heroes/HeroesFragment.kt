@@ -25,6 +25,7 @@ import n7.ad2.ui.heroPage.HeroPageActivity
 import n7.ad2.ui.heroes.domain.vo.VOHero
 import n7.ad2.ui.main.DraggableDrawer
 import n7.ad2.utils.ImageLoader
+import n7.ad2.utils.lazyUnsafe
 import n7.ad2.utils.viewModel
 import javax.inject.Inject
 
@@ -35,9 +36,10 @@ class HeroesFragment : Fragment(R.layout.fragment_heroes) {
     }
 
     @Inject lateinit var imageLoader: ImageLoader
-    private lateinit var binding: FragmentHeroesBinding
-    private lateinit var heroAdapter: HeroesListAdapter
+    private var _binding: FragmentHeroesBinding? = null
 
+    private val binding: FragmentHeroesBinding get() = _binding!!
+    private val heroAdapter: HeroesListAdapter by lazyUnsafe { HeroesListAdapter(layoutInflater, imageLoader, onHeroClick) }
     private val viewModel: HeroesViewModel by viewModel { injector.heroesViewModel }
     private val heroesItemDecorator = HeroesItemDecorator()
     private val onHeroClick: (hero: VOHero) -> Unit = { }
@@ -76,15 +78,18 @@ class HeroesFragment : Fragment(R.layout.fragment_heroes) {
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
-        binding = FragmentHeroesBinding.bind(view)
+        _binding = FragmentHeroesBinding.bind(view)
         requireActivity().setTitle(R.string.heroes)
         setHasOptionsMenu(true) //вызов метода onCreateOptionsMenu в фрагменте
         setupAdapter()
     }
 
+    override fun onDestroyView() {
+        super.onDestroyView()
+        _binding = null
+    }
 
     private fun setupAdapter() {
-        heroAdapter = HeroesListAdapter(layoutInflater, imageLoader, onHeroClick)
         binding.rv.apply {
             setHasFixedSize(true)
             setItemViewCacheSize(15)

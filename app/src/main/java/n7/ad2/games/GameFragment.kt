@@ -1,96 +1,55 @@
-package n7.ad2.games;
+package n7.ad2.games
 
+import android.content.Intent
+import android.os.Bundle
+import android.view.View
+import androidx.fragment.app.Fragment
+import n7.ad2.R
+import n7.ad2.databinding.FragmentGameBinding
 
-import android.content.Intent;
-import android.content.SharedPreferences;
-import androidx.databinding.DataBindingUtil;
-import androidx.databinding.ObservableBoolean;
-import android.os.Bundle;
-import android.preference.PreferenceManager;
-import androidx.annotation.NonNull;
-import androidx.annotation.Nullable;
-import androidx.core.app.ActivityOptionsCompat;
-import androidx.fragment.app.Fragment;
-import androidx.core.util.Pair;
-import android.view.LayoutInflater;
-import android.view.View;
-import android.view.ViewGroup;
+class GameFragment : Fragment(R.layout.fragment_game) {
 
-import n7.ad2.R;
-import n7.ad2.databinding.FragmentGameBinding;
+    companion object {
+        fun getInstance() = GameFragment()
+    }
 
-import static n7.ad2.ui.MainActivity.LOG_ON_RECEIVE;
+    private var _binding: FragmentGameBinding? = null
+    private val binding: FragmentGameBinding get() = _binding!!
 
-public class GameFragment extends Fragment implements SharedPreferences.OnSharedPreferenceChangeListener {
+    override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
+        super.onViewCreated(view, savedInstanceState)
+        _binding = FragmentGameBinding.bind(view)
+    }
 
-    public ObservableBoolean subscription = new ObservableBoolean();
-    private FragmentGameBinding binding;
+    override fun onDestroyView() {
+        super.onDestroyView()
+        _binding = null
+    }
 
-    public GameFragment() {
+    fun startG1P1() {
+        val intent = Intent(context, Game1p1::class.java)
+        startActivity(intent)
+    }
+
+    fun startG1P2() {
+        val intent = Intent(context, Game1p2::class.java)
+        startActivity(intent)
+    }
+
+    fun startG2P1() {
+        val intent = Intent(context, Game2p1::class.java)
+        startActivity(intent)
+    }
+
+    fun startG3P1() {
+        val intent = Intent(context, Game3p1::class.java)
+        startActivity(intent)
+    }
+
+    fun startG2P2() {
+        val intent = Intent(context, Game2p2::class.java)
+        startActivity(intent)
     }
 
 
-    @Override
-    public View onCreateView(@NonNull LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
-        binding = DataBindingUtil.inflate(inflater, R.layout.fragment_game, container, false);
-        binding.setActivity(this);
-
-        return binding.getRoot();
-    }
-
-    @Override
-    public void onActivityCreated(@Nullable Bundle savedInstanceState) {
-        super.onActivityCreated(savedInstanceState);
-
-//        subscription.set(PreferenceManager.getDefaultSharedPreferences(getContext()).getBoolean(SUBSCRIPTION_PREF, false));
-        subscription.set(true);
-        PreferenceManager.getDefaultSharedPreferences(getContext()).registerOnSharedPreferenceChangeListener(this);
-        getActivity().setTitle(R.string.games);
-        getActivity().sendBroadcast(new Intent(LOG_ON_RECEIVE).putExtra(LOG_ON_RECEIVE, "games_activity_created"));
-        setHasOptionsMenu(true);
-    }
-
-    @SuppressWarnings({"unchecked", "ConstantConditions"})
-    public void startG1P1() {
-        Pair<View, String> p2 = Pair.create((View) binding.tvFragmentGameG1, "tv1");
-        ActivityOptionsCompat optionsCompat = ActivityOptionsCompat.makeSceneTransitionAnimation(getActivity(), p2);
-        Intent intent = new Intent(getContext(), Game1p1.class);
-        startActivity(intent, optionsCompat.toBundle());
-    }
-
-    @SuppressWarnings({"unchecked", "ConstantConditions"})
-    public void startG1P2() {
-        Intent intent = new Intent(getContext(), Game1p2.class);
-        startActivity(intent);
-    }
-
-    @SuppressWarnings({"unchecked", "ConstantConditions"})
-    public void startG2P1() {
-        Pair<View, String> p2 = Pair.create((View) binding.tvActivityGame2p1Title, "tv2");
-        ActivityOptionsCompat optionsCompat = ActivityOptionsCompat.makeSceneTransitionAnimation(getActivity(), p2);
-        Intent intent = new Intent(getContext(), Game2p1.class);
-        startActivity(intent, optionsCompat.toBundle());
-    }
-
-
-    @SuppressWarnings({"unchecked", "ConstantConditions"})
-    public void startG3P1() {
-        Pair<View, String> p2 = Pair.create((View) binding.tvActivityGame3p1Title, "tv2");
-        ActivityOptionsCompat optionsCompat = ActivityOptionsCompat.makeSceneTransitionAnimation(getActivity(), p2);
-        Intent intent = new Intent(getContext(), Game3p1.class);
-        startActivity(intent, optionsCompat.toBundle());
-    }
-
-    @SuppressWarnings({"unchecked", "ConstantConditions"})
-    public void startG2P2() {
-        Intent intent = new Intent(getContext(), Game2p2.class);
-        startActivity(intent);
-    }
-
-    @Override
-    public void onSharedPreferenceChanged(SharedPreferences sharedPreferences, String key) {
-//        if (key.equals(SUBSCRIPTION_PREF)) {
-//            subscription.set(sharedPreferences.getBoolean(key, false));
-//        }
-    }
 }

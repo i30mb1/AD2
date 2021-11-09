@@ -31,8 +31,9 @@ class ItemsFragment : Fragment(R.layout.fragment_items) {
     }
 
     @Inject lateinit var imageLoader: ImageLoader
-    private lateinit var binding: FragmentItemsBinding
 
+    private var _binding: FragmentItemsBinding? = null
+    private val binding: FragmentItemsBinding get() = _binding!!
     private val viewModel: ItemsViewModel by viewModel { injector.itemsViewModel }
     private val itemsItemDecorator = ItemsItemDecorator()
     private val onItemClick: (hero: VOItemBody) -> Unit = { model ->
@@ -46,8 +47,7 @@ class ItemsFragment : Fragment(R.layout.fragment_items) {
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
-        binding = FragmentItemsBinding.bind(view)
-
+        _binding = FragmentItemsBinding.bind(view)
         setupAdapter()
     }
 

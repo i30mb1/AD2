@@ -1,24 +1,31 @@
 package n7.ad2.tournaments;
 
+import static n7.ad2.tournaments.GameFullActivity.URL;
+
 import android.app.Activity;
-import androidx.lifecycle.LifecycleOwner;
-import androidx.lifecycle.Observer;
-import androidx.paging.PagedListAdapter;
 import android.content.Intent;
-import androidx.databinding.ObservableBoolean;
-import androidx.annotation.NonNull;
-import androidx.annotation.Nullable;
-import androidx.core.app.ActivityOptionsCompat;
-import androidx.core.util.Pair;
-import androidx.recyclerview.widget.DiffUtil;
-import androidx.cardview.widget.CardView;
-import androidx.recyclerview.widget.RecyclerView;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.TextView;
+
+import androidx.annotation.NonNull;
+import androidx.annotation.Nullable;
+import androidx.cardview.widget.CardView;
+import androidx.core.app.ActivityOptionsCompat;
+import androidx.core.util.Pair;
+import androidx.databinding.ObservableBoolean;
+import androidx.lifecycle.LifecycleOwner;
+import androidx.lifecycle.Observer;
+import androidx.paging.PagedListAdapter;
+import androidx.recyclerview.widget.DiffUtil;
+import androidx.recyclerview.widget.RecyclerView;
+import androidx.work.Data;
+import androidx.work.OneTimeWorkRequest;
+import androidx.work.WorkInfo;
+import androidx.work.WorkManager;
 
 import com.squareup.picasso.Picasso;
 
@@ -27,14 +34,8 @@ import java.util.List;
 import java.util.Locale;
 import java.util.concurrent.TimeUnit;
 
-import androidx.work.Data;
-import androidx.work.OneTimeWorkRequest;
-import androidx.work.WorkInfo;
-import androidx.work.WorkManager;
 import n7.ad2.R;
 import n7.ad2.tournaments.db.TournamentGame;
-
-import static n7.ad2.tournaments.GameFullActivity.URL;
 
 public class TournamentsPagedListAdapter extends PagedListAdapter<TournamentGame, TournamentsPagedListAdapter.ViewHolder> {
 
@@ -52,7 +53,7 @@ public class TournamentsPagedListAdapter extends PagedListAdapter<TournamentGame
     private LifecycleOwner lifecycleOwner;
     private ObservableBoolean isPremium;
 
-    public TournamentsPagedListAdapter(LifecycleOwner lifecycleOwner, ObservableBoolean isPremium) {
+    public TournamentsPagedListAdapter(LifecycleOwner lifecycleOwner) {
         super(DIFF_CALLBACK);
         this.isPremium = isPremium;
         this.lifecycleOwner = lifecycleOwner;
