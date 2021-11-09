@@ -4,6 +4,7 @@ import android.app.Application
 import dagger.BindsInstance
 import dagger.Component
 import n7.ad2.news.NewsViewModel
+import n7.ad2.tournaments.TournamentsViewModel
 import n7.ad2.ui.MainActivity
 import n7.ad2.ui.MainActivity2
 import n7.ad2.ui.heroGuide.HeroGuideViewModel
@@ -52,6 +53,7 @@ interface ApplicationComponent {
     fun inject(heroGuideWorker: ItemInfoFragment)
 
     val mainViewModel: MainViewModel
+    val tournamentsViewModel: TournamentsViewModel
     val heroesViewModel: HeroesViewModel
     val itemsViewModel: ItemsViewModel
     val responsesViewModel: ResponsesViewModel

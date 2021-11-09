@@ -22,9 +22,15 @@ import javax.inject.Inject
 
 class StreamsFragment : Fragment(R.layout.fragment_streams) {
 
-    private lateinit var binding: FragmentStreamsBinding
-    private val viewModel: StreamsViewModel by viewModel { injector.streamsViewModel }
+    companion object {
+        fun getInstance() = StreamFragment()
+    }
+
     @Inject lateinit var imageLoader: ImageLoader
+
+    private var _binding: FragmentStreamsBinding? = null
+    private val binding: FragmentStreamsBinding get() = _binding!!
+    private val viewModel: StreamsViewModel by viewModel { injector.streamsViewModel }
     private val onStreamClick: (vOSimpleStream: VOSimpleStream) -> Unit = { voSimpleStream ->
         childFragmentManager.commit {
             addToBackStack(null)
@@ -39,21 +45,26 @@ class StreamsFragment : Fragment(R.layout.fragment_streams) {
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
-        binding = FragmentStreamsBinding.bind(view)
+        _binding = FragmentStreamsBinding.bind(view)
         setupAdapter()
-        viewModel.error.observe(viewLifecycleOwner) {
-            if (it == null) return@observe
-            Toast.makeText(requireContext(), it.toString(), Toast.LENGTH_LONG).show()
+        viewModel.error.observe(viewLifecycleOwner) { throwable ->
+            if (throwable == null) return@observe
+            Toast.makeText(requireContext(), throwable.toString(), Toast.LENGTH_LONG).show()
         }
+    }
+
+    override fun onDestroyView() {
+        super.onDestroyView()
+        _binding = null
     }
 
     private fun setupAdapter() {
         val streamsPagedListAdapter = StreamsPagedListAdapter(imageLoader, onStreamClick)
         binding.rv.apply {
-            setHasFixedSize(true)
             layoutManager = LinearLayoutManager(context)
             adapter = streamsPagedListAdapter
             addItemDecoration(DividerItemDecorator())
+            setHasFixedSize(true)
         }
 
         streamsPagedListAdapter.addLoadStateListener { loadState ->
