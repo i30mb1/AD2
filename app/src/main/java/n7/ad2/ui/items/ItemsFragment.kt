@@ -26,6 +26,10 @@ import javax.inject.Inject
 
 class ItemsFragment : Fragment(R.layout.fragment_items) {
 
+    companion object {
+        fun getInstance() = ItemsFragment()
+    }
+
     @Inject lateinit var imageLoader: ImageLoader
     private lateinit var binding: FragmentItemsBinding
 

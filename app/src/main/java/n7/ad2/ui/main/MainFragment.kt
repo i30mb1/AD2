@@ -104,7 +104,7 @@ class MainFragment : Fragment(R.layout.fragment_main), DraggableDrawer.Listener 
         if (currentTag == menuItem.title) return false
         val fragment = when (menuItem.type) {
             VOMenuType.HEROES -> HeroesFragment.getInstance()
-            VOMenuType.ITEMS -> ItemsFragment()
+            VOMenuType.ITEMS -> ItemsFragment.getInstance()
             VOMenuType.NEWS -> NewsFragment()
             VOMenuType.TOURNAMENTS -> TournamentsFragment()
             VOMenuType.STREAMS -> StreamsFragment()
