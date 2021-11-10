@@ -8,10 +8,13 @@ import androidx.core.view.WindowInsetsCompat
 import androidx.core.view.updatePadding
 import androidx.fragment.app.Fragment
 import androidx.fragment.app.commit
+import androidx.lifecycle.Lifecycle
+import androidx.lifecycle.flowWithLifecycle
 import androidx.lifecycle.lifecycleScope
 import androidx.recyclerview.widget.LinearLayoutManager
 import com.google.android.material.snackbar.Snackbar
 import kotlinx.coroutines.delay
+import kotlinx.coroutines.flow.filter
 import kotlinx.coroutines.flow.launchIn
 import kotlinx.coroutines.flow.onEach
 import kotlinx.coroutines.launch
@@ -101,13 +104,13 @@ class MainFragment : Fragment(R.layout.fragment_main), DraggableDrawer.Listener 
         }
     }
 
-    private fun setFragment(menuItem: VOMenu): Boolean {
+    private fun setFragment(menuItem: VOMenu) {
         if (!menuItem.isEnable || menuItem.type == VOMenuType.UNKNOWN) {
             Snackbar.make(binding.root, getString(R.string.item_disabled), Snackbar.LENGTH_SHORT).show()
-            return false
+            return
         }
         val currentTag = childFragmentManager.fragments.lastOrNull()?.tag
-        if (currentTag == menuItem.title) return false
+        if (currentTag == menuItem.title) return
         val fragment = when (menuItem.type) {
             VOMenuType.HEROES -> HeroesFragment.getInstance()
             VOMenuType.ITEMS -> ItemsFragment.getInstance()
@@ -115,33 +118,29 @@ class MainFragment : Fragment(R.layout.fragment_main), DraggableDrawer.Listener 
             VOMenuType.TOURNAMENTS -> TournamentsFragment.getInstance()
             VOMenuType.STREAMS -> StreamsFragment.getInstance()
             VOMenuType.GAMES -> GameFragment.getInstance()
-            VOMenuType.UNKNOWN -> TODO()
+            VOMenuType.UNKNOWN -> return
         }
         childFragmentManager.commit {
             replace(binding.container.id, fragment, menuItem.title)
         }
         viewModel.updateMenu(menuItem)
-        return true
     }
 
     private fun setupMenuAdapter() {
         val linearLayoutManager = LinearLayoutManager(requireContext())
-        val mainMenuAdapter = MainMenuAdapter(layoutInflater, ::setFragment)
+        val mainMenuAdapter = MainMenuAdapter(layoutInflater, viewModel::updateMenu)
         binding.rvMenu.apply {
             layoutManager = linearLayoutManager
             adapter = mainMenuAdapter
         }
-        viewModel.menu.observe(viewLifecycleOwner) { list ->
-            mainMenuAdapter.submitList(list)
-            (activity as MainActivity2).shouldKeepOnScreen = false
-        }
-        setupLastSelectedMenu()
-    }
-
-    private fun setupLastSelectedMenu() {
-        childFragmentManager.commit {
-            replace(binding.container.id, HeroesFragment.getInstance())
-        }
+        viewModel.menu.flowWithLifecycle(lifecycle, Lifecycle.State.STARTED)
+            .filter { list -> list.isNotEmpty() }
+            .onEach { list ->
+                mainMenuAdapter.submitList(list)
+                setFragment(list.first { menu -> menu.isSelected })
+                (activity as MainActivity2).shouldKeepOnScreen = false
+            }
+            .launchIn(lifecycleScope)
     }
 
     private fun setupFingerCoordinator() {

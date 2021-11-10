@@ -25,7 +25,7 @@ class GetMenuItemsUseCase @Inject constructor(
         val settingsFromLocalStore = appPreference.getSettings()
         val result = settingsFromLocalStore.menu.map { menu ->
             when (menu.type) {
-                VOMenuType.HEROES -> VOMenu(menu.type, application.getString(R.string.heroes), menu.isEnable)
+                VOMenuType.HEROES -> VOMenu(menu.type, application.getString(R.string.heroes), menu.isEnable, true)
                 VOMenuType.ITEMS -> VOMenu(menu.type, application.getString(R.string.items), menu.isEnable)
                 VOMenuType.NEWS -> VOMenu(menu.type, application.getString(R.string.news), menu.isEnable)
                 VOMenuType.TOURNAMENTS -> VOMenu(menu.type, application.getString(R.string.tournaments), menu.isEnable)

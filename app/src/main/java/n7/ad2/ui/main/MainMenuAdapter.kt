@@ -14,7 +14,7 @@ import n7.ad2.ui.vo.VOMenu
 
 class MainMenuAdapter(
     private val layoutInflater: LayoutInflater,
-    itemListener: (menuItem: VOMenu) -> Boolean,
+    itemListener: (menuItem: VOMenu) -> Unit,
 ) : ListAdapter<VOMenu, MainMenuAdapter.MenuItemHolder>(DiffCallback()) {
 
     private val itemListener: (menuItem: VOMenu) -> Unit = { menuItem ->
