@@ -1,12 +1,17 @@
 <?xml version="1.0" encoding="utf-8"?>
-<com.google.android.material.textview.MaterialTextView xmlns:android="http://schemas.android.com/apk/res/android"
+<com.google.android.material.card.MaterialCardView xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
-    android:id="@+id/tv_title"
     android:layout_width="wrap_content"
-    android:layout_height="wrap_content"
-    android:layout_gravity="center_vertical"
-    android:background="?colorAccent"
-    android:lines="1"
-    android:padding="4dp"
-    android:textAppearance="?textAppearanceOverline"
-    tools:text="И даже если я разочарую тебя, я хочу, чтобы ты запомнил меня" />
+    android:layout_height="wrap_content">
+
+    <com.google.android.material.textview.MaterialTextView
+        android:id="@+id/tv_title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_vertical"
+        android:background="?colorAccent"
+        android:lines="1"
+        android:padding="4dp"
+        android:textAppearance="?textAppearanceOverline"
+        tools:text="И даже если я разочарую тебя, я хочу, чтобы ты запомнил меня" />
+</com.google.android.material.card.MaterialCardView>
