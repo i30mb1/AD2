@@ -12,6 +12,7 @@ import n7.ad2.di.DaggerComponentProvider
 
 const val ANDROID_ID = Settings.Secure.ANDROID_ID
 
+// https://medium.com/bumble-tech/how-we-achieved-a-6x-reduction-of-anrs-part-2-fixing-anrs-24fedf9a973f
 // “Code never lies, comments sometimes do” — Ron Jeffries
 class MyApplication : Application(), DaggerComponentProvider {
 //
