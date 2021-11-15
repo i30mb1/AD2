@@ -4,16 +4,14 @@ import android.os.Bundle
 import android.view.View
 import androidx.core.os.bundleOf
 import androidx.fragment.app.Fragment
-import androidx.lifecycle.lifecycleScope
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import kotlinx.coroutines.InternalCoroutinesApi
-import kotlinx.coroutines.flow.collect
 import n7.ad2.R
 import n7.ad2.databinding.FragmentHeroResponsesBinding
 import n7.ad2.di.injector
 import n7.ad2.ui.heroInfo.InfoPopupWindow
-import n7.ad2.ui.heroPage.HeroPageActivity
+import n7.ad2.ui.heroPage.HeroPageFragment
 import n7.ad2.ui.heroPage.showDialogError
 import n7.ad2.ui.heroResponse.domain.vo.VOResponseBody
 import n7.ad2.utils.StickyHeaderDecorator
@@ -49,13 +47,13 @@ class ResponsesFragment : Fragment(R.layout.fragment_hero_responses) {
             }
         }
 
-        lifecycleScope.launchWhenResumed { viewModel.error.collect(::showDialogError) }
-        val heroName = requireArguments().getString(HERO_NAME)!!
-        (requireActivity() as HeroPageActivity).binding.toolbar.setOnChangeHeroLocaleListener {
-            viewModel.loadResponses(heroName, it)
-        }
-        viewModel.loadResponses(heroName)
-        setupPagedListAdapter()
+//        lifecycleScope.launchWhenResumed { viewModel.error.collect(::showDialogError) }
+//        val heroName = requireArguments().getString(HERO_NAME)!!
+//        (requireActivity() as HeroPageFragment).binding.toolbar.setOnChangeHeroLocaleListener {
+//            viewModel.loadResponses(heroName, it)
+//        }
+//        viewModel.loadResponses(heroName)
+//        setupPagedListAdapter()
     }
 
     private fun createDialogResponse(item: VOResponseBody) {
@@ -71,7 +69,7 @@ class ResponsesFragment : Fragment(R.layout.fragment_hero_responses) {
     }
 
     private fun setupPagedListAdapter() {
-        responsesPagedListAdapter = ResponsesAdapter((requireActivity() as HeroPageActivity).audioExoPlayer, infoPopupWindow) {
+        responsesPagedListAdapter = ResponsesAdapter((requireActivity() as HeroPageFragment).audioExoPlayer, infoPopupWindow) {
             createDialogResponse(it)
         }
         responsesPagedListAdapter.stateRestorationPolicy = RecyclerView.Adapter.StateRestorationPolicy.PREVENT_WHEN_EMPTY

@@ -4,12 +4,9 @@ import android.os.Bundle
 import android.view.View
 import androidx.core.os.bundleOf
 import androidx.fragment.app.Fragment
-import androidx.recyclerview.widget.LinearLayoutManager
 import n7.ad2.R
 import n7.ad2.databinding.FragmentHeroInfoBinding
 import n7.ad2.di.injector
-import n7.ad2.ui.heroPage.HeroPageActivity
-import n7.ad2.utils.StickyHeaderDecorator
 import n7.ad2.utils.viewModel
 
 class HeroInfoFragment : Fragment(R.layout.fragment_hero_info) {
@@ -39,15 +36,15 @@ class HeroInfoFragment : Fragment(R.layout.fragment_hero_info) {
     }
 
     private fun setupSpellInfoRecyclerView() {
-        val audioExoPlayer = (requireActivity() as HeroPageActivity).audioExoPlayer
-        val descriptionsListAdapter = DescriptionsListAdapter(audioExoPlayer, infoPopupWindow)
-        val linearLayoutManager = LinearLayoutManager(requireContext(), LinearLayoutManager.VERTICAL, false)
-
-        binding.rv.apply {
-            adapter = descriptionsListAdapter
-            layoutManager = linearLayoutManager
-            addItemDecoration(StickyHeaderDecorator(descriptionsListAdapter, this))
-        }
+//        val audioExoPlayer = (requireActivity() as HeroPageFragment).audioExoPlayer
+//        val descriptionsListAdapter = DescriptionsListAdapter(audioExoPlayer, infoPopupWindow)
+//        val linearLayoutManager = LinearLayoutManager(requireContext(), LinearLayoutManager.VERTICAL, false)
+//
+//        binding.rv.apply {
+//            adapter = descriptionsListAdapter
+//            layoutManager = linearLayoutManager
+//            addItemDecoration(StickyHeaderDecorator(descriptionsListAdapter, this))
+//        }
     }
 
 }

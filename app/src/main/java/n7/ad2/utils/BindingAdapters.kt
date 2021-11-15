@@ -9,7 +9,6 @@ import androidx.core.text.PrecomputedTextCompat
 import androidx.core.view.isVisible
 import androidx.core.widget.TextViewCompat
 import androidx.databinding.BindingAdapter
-import androidx.recyclerview.widget.ListAdapter
 import androidx.recyclerview.widget.RecyclerView
 import coil.load
 import n7.ad2.ui.heroResponse.ResponsesImagesAdapter
@@ -32,7 +31,7 @@ fun RecyclerView.loadIcons(list: List<VOResponseImage>) {
 @Suppress("UNCHECKED_CAST")
 @BindingAdapter("data")
 fun <T> RecyclerView.loadData(list: List<T>?) {
-    (this.adapter as ListAdapter<T, RecyclerView.ViewHolder>).submitList(list)
+//    (this.adapter as ListAdapter<T, RecyclerView.ViewHolder>).submitList(list)
 }
 
 @BindingAdapter("isVisible", "withSpace", requireAll = false)

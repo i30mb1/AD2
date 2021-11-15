@@ -9,11 +9,13 @@ import n7.ad2.databinding.ActivityMain2Binding
 import n7.ad2.ui.main.MainFragment
 import n7.ad2.ui.main.TouchEvent
 import n7.ad2.utils.BaseActivity
+import n7.ad2.utils.lazyUnsafe
 
 class MainActivity2 : BaseActivity(), TouchEvent {
 
     override var dispatchTouchEvent: ((event: MotionEvent) -> Unit)? = null
     var shouldKeepOnScreen = true
+    private val mainNavigator: MainNavigator by lazyUnsafe { MainNavigator(supportFragmentManager, binding.container.id) }
     private lateinit var binding: ActivityMain2Binding
 
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -33,6 +35,10 @@ class MainActivity2 : BaseActivity(), TouchEvent {
     override fun dispatchTouchEvent(event: MotionEvent): Boolean {
         dispatchTouchEvent?.invoke(event)
         return super.dispatchTouchEvent(event)
+    }
+
+    fun openHeroPageFragment(heroName: String) {
+        mainNavigator.openHeroPageFragment(heroName)
     }
 
     private fun setupInsets() {

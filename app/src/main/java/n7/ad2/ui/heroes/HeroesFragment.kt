@@ -1,12 +1,10 @@
 package n7.ad2.ui.heroes
 
-import android.content.Intent
 import android.os.Bundle
 import android.view.Menu
 import android.view.MenuInflater
 import android.view.View
 import androidx.appcompat.widget.SearchView
-import androidx.core.app.ActivityOptionsCompat
 import androidx.core.view.ViewCompat
 import androidx.core.view.WindowInsetsCompat
 import androidx.core.view.doOnPreDraw
@@ -19,11 +17,10 @@ import kotlinx.coroutines.flow.launchIn
 import kotlinx.coroutines.flow.onEach
 import n7.ad2.R
 import n7.ad2.databinding.FragmentHeroesBinding
-import n7.ad2.databinding.ItemHeroBinding
 import n7.ad2.di.injector
-import n7.ad2.ui.heroPage.HeroPageActivity
 import n7.ad2.ui.heroes.domain.vo.VOHero
 import n7.ad2.ui.main.DraggableDrawer
+import n7.ad2.ui.main.MainFragment
 import n7.ad2.utils.ImageLoader
 import n7.ad2.utils.lazyUnsafe
 import n7.ad2.utils.viewModel
@@ -42,7 +39,7 @@ class HeroesFragment : Fragment(R.layout.fragment_heroes) {
     private val heroAdapter: HeroesListAdapter by lazyUnsafe { HeroesListAdapter(layoutInflater, imageLoader, onHeroClick) }
     private val viewModel: HeroesViewModel by viewModel { injector.heroesViewModel }
     private val heroesItemDecorator = HeroesItemDecorator()
-    private val onHeroClick: (hero: VOHero) -> Unit = { }
+    private val onHeroClick: (hero: VOHero) -> Unit = { hero -> startHeroFragment(hero) }
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -65,14 +62,8 @@ class HeroesFragment : Fragment(R.layout.fragment_heroes) {
         })
     }
 
-    fun startHeroFragment(model: VOHero, binding: ItemHeroBinding) {
-        Intent(binding.root.context, HeroPageActivity::class.java).apply {
-            putExtra(HeroPageActivity.HERO_NAME, model.name)
-            putExtra(HeroPageActivity.TN_PHOTO, binding.ivImage.transitionName)
-            val options = ActivityOptionsCompat.makeSceneTransitionAnimation(requireActivity(), binding.ivImage, binding.ivImage.transitionName)
-            startActivity(this)
-        }
-
+    private fun startHeroFragment(model: VOHero) {
+        (parentFragment as MainFragment).openHeroPageFragment(model.name)
         if (!model.viewedByUser) viewModel.updateViewedByUserFieldForHero(model.name)
     }
 

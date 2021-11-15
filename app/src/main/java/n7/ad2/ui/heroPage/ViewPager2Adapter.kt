@@ -1,16 +1,15 @@
 package n7.ad2.ui.heroPage
 
 import androidx.fragment.app.Fragment
-import androidx.fragment.app.FragmentActivity
 import androidx.viewpager2.adapter.FragmentStateAdapter
 import n7.ad2.ui.heroGuide.HeroGuideFragment
 import n7.ad2.ui.heroInfo.HeroInfoFragment
 import n7.ad2.ui.heroResponse.ResponsesFragment
 
 class ViewPager2Adapter(
-        activity: FragmentActivity,
-        private val heroName: String
-) : FragmentStateAdapter(activity) {
+    fragment: Fragment,
+    private val heroName: String,
+) : FragmentStateAdapter(fragment) {
 
     override fun getItemCount(): Int = 3
 
@@ -21,4 +20,5 @@ class ViewPager2Adapter(
             else -> HeroGuideFragment.newInstance(heroName)
         }
     }
+
 }
