@@ -46,6 +46,7 @@ class DraggableDrawer(
     private var isCollapsed: Boolean = false
     private var isDraggableViewInitiated = false
     private var isIntercept = false
+    private var forceToIntercept = false
     private var offsetX = 0
     private var offsetY = 0
     private var currentOffsetX = 0
@@ -61,7 +62,7 @@ class DraggableDrawer(
         override fun clampViewPositionVertical(child: View, top: Int, dy: Int) = 0
         override fun onViewReleased(releasedChild: View, xvel: Float, yvel: Float) = onReleased(xvel)
         override fun onViewPositionChanged(changedView: View, left: Int, top: Int, dx: Int, dy: Int) {
-            if (isIntercept) {
+            if (isIntercept || forceToIntercept) {
                 val percent = (1 - left.toFloat() / collapsedOffsetX)
                 drawerPercent?.invoke(percent)
                 val scale = maxScale - left.toFloat() / collapsedOffsetX * (maxScale - collapsedScale)
@@ -129,6 +130,7 @@ class DraggableDrawer(
     }
 
     fun close() {
+        forceToIntercept = true
         val startSettling = dragHelper.smoothSlideViewTo(draggableView, collapsedOffsetX, 0)
         if (startSettling) SettleRunnable().run()
         isOpen = false
@@ -167,6 +169,7 @@ class DraggableDrawer(
             if (dragHelper.continueSettling(true)) {
                 ViewCompat.postOnAnimation(draggableView, this)
             } else {
+                forceToIntercept = false
                 onAnimationEnd?.invoke()
             }
         }
