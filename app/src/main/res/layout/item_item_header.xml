@@ -12,7 +12,7 @@
         android:layout_gravity="center_vertical"
         android:lines="1"
         android:padding="4dp"
-        android:textAppearance="?textAppearanceOverline"
+        android:textAppearance="@style/TextAppearance.Header"
         tools:text="И даже если я разочарую тебя, я хочу, чтобы ты запомнил меня" />
 
 </com.google.android.material.card.MaterialCardView>
