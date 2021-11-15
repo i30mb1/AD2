@@ -13,12 +13,12 @@ import androidx.lifecycle.Lifecycle
 import androidx.lifecycle.flowWithLifecycle
 import androidx.lifecycle.lifecycleScope
 import androidx.recyclerview.widget.GridLayoutManager
-import kotlinx.coroutines.flow.launchIn
-import kotlinx.coroutines.flow.onEach
 import n7.ad2.R
 import n7.ad2.databinding.FragmentHeroesBinding
 import n7.ad2.di.injector
-import n7.ad2.ui.heroes.domain.vo.VOHero
+import n7.ad2.ui.heroes.adapter.HeroesItemDecorator
+import n7.ad2.ui.heroes.adapter.HeroesListAdapter
+import n7.ad2.ui.heroes.domain.vo.VOHeroBody
 import n7.ad2.ui.main.DraggableDrawer
 import n7.ad2.ui.main.MainFragment
 import n7.ad2.utils.ImageLoader
@@ -39,7 +39,7 @@ class HeroesFragment : Fragment(R.layout.fragment_heroes) {
     private val heroAdapter: HeroesListAdapter by lazyUnsafe { HeroesListAdapter(layoutInflater, imageLoader, onHeroClick) }
     private val viewModel: HeroesViewModel by viewModel { injector.heroesViewModel }
     private val heroesItemDecorator = HeroesItemDecorator()
-    private val onHeroClick: (hero: VOHero) -> Unit = { hero -> startHeroFragment(hero) }
+    private val onHeroClick: (hero: VOHeroBody) -> Unit = { hero -> startHeroFragment(hero) }
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -62,7 +62,7 @@ class HeroesFragment : Fragment(R.layout.fragment_heroes) {
         })
     }
 
-    private fun startHeroFragment(model: VOHero) {
+    private fun startHeroFragment(model: VOHeroBody) {
         (parentFragment as MainFragment).openHeroPageFragment(model.name)
         if (!model.viewedByUser) viewModel.updateViewedByUserFieldForHero(model.name)
     }
@@ -84,7 +84,7 @@ class HeroesFragment : Fragment(R.layout.fragment_heroes) {
         binding.rv.apply {
             setHasFixedSize(true)
             setItemViewCacheSize(15)
-            recycledViewPool.setMaxRecycledViews(R.layout.item_hero, 30)
+            recycledViewPool.setMaxRecycledViews(R.layout.item_hero_body, 30)
             layoutManager = GridLayoutManager(context, 3)
             adapter = heroAdapter
             addItemDecoration(heroesItemDecorator)

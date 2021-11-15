@@ -14,5 +14,5 @@
             tools:spanCount="3"
             android:overScrollMode="never"
             android:clipToPadding="false"
-            tools:listitem="@layout/item_hero" />
+            tools:listitem="@layout/item_hero_body" />
 </layout>

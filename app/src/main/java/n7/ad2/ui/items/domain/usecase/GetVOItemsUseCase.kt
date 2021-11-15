@@ -7,6 +7,7 @@ import kotlinx.coroutines.flow.flowOn
 import kotlinx.coroutines.flow.onStart
 import n7.ad2.AD2Logger
 import n7.ad2.base.DispatchersProvider
+import n7.ad2.base.adapter.HeaderViewHolder
 import n7.ad2.data.source.local.ItemRepository
 import n7.ad2.data.source.local.model.LocalItem
 import n7.ad2.ui.items.domain.vo.VOItem
@@ -28,7 +29,7 @@ class GetVOItemsUseCase @Inject constructor(
                 flow {
                     list.groupBy { localItem -> localItem.type }
                         .forEach { map: Map.Entry<String, List<LocalItem>> ->
-                            result.add(VOItemHeader(map.key))
+                            result.add(VOItemHeader(HeaderViewHolder.Data(map.key)))
                             result.addAll(map.value.map {
                                 VOItemBody(it.name, ItemRepository.getFullUrlItemImage(it.name), it.viewedByUser)
                             })

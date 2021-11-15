@@ -1,4 +1,4 @@
-package n7.ad2.ui.heroes
+package n7.ad2.ui.heroes.adapter
 
 import android.graphics.Rect
 import android.view.View

@@ -10,7 +10,8 @@ class FilterHeroesUseCase @Inject constructor(
 ) {
 
     suspend operator fun invoke(list: List<VOHero>, filter: String): List<VOHero> = withContext(ioDispatcher) {
-        list.filter { it.name.contains(filter, true) }
+//        list.filter { it.name.contains(filter, true) }
+        list.filter { true }
     }
 
 }
