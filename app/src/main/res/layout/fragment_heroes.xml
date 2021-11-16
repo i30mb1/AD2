@@ -1,18 +1,11 @@
-<layout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:tools="http://schemas.android.com/tools">
+<androidx.recyclerview.widget.RecyclerView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/rv"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layoutAnimation="@anim/scale_layout_animation"
+    tools:itemCount="30"
+    tools:layoutManager="GridLayoutManager"
+    tools:listitem="@layout/item_hero_body"
+    tools:spanCount="3" />
 
-    <data>
-
-    </data>
-
-        <androidx.recyclerview.widget.RecyclerView
-            android:id="@+id/rv"
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            tools:itemCount="30"
-            tools:layoutManager="GridLayoutManager"
-            tools:spanCount="3"
-            android:overScrollMode="never"
-            android:clipToPadding="false"
-            tools:listitem="@layout/item_hero_body" />
-</layout>

@@ -7,7 +7,6 @@ import android.view.View
 import androidx.appcompat.widget.SearchView
 import androidx.core.view.ViewCompat
 import androidx.core.view.WindowInsetsCompat
-import androidx.core.view.doOnPreDraw
 import androidx.fragment.app.Fragment
 import androidx.lifecycle.Lifecycle
 import androidx.lifecycle.flowWithLifecycle
@@ -90,8 +89,8 @@ class HeroesFragment : Fragment(R.layout.fragment_heroes) {
             layoutManager = GridLayoutManager(context, 3)
             adapter = heroAdapter
             addItemDecoration(heroesItemDecorator)
-            postponeEnterTransition()
-            doOnPreDraw { startPostponedEnterTransition() }
+//            postponeEnterTransition()
+//            doOnPreDraw { startPostponedEnterTransition() }
             ViewCompat.setOnApplyWindowInsetsListener(this) { _, insets ->
                 val statusBarsInsets = insets.getInsets(WindowInsetsCompat.Type.statusBars())
                 val navigationBarsInsets = insets.getInsets(WindowInsetsCompat.Type.navigationBars())
