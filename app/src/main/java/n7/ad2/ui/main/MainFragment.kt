@@ -75,10 +75,6 @@ class MainFragment : Fragment(R.layout.fragment_main), DraggableDrawer.Listener 
         binding.draggableDrawer.setDrawerPercentListener(listener)
     }
 
-    fun openHeroPageFragment(heroName: String) {
-        (activity as? MainActivity2)?.openHeroPageFragment(heroName) ?: logger.log("could not open HeroPageFragment")
-    }
-
     private fun setupOnBackPressed() {
         val millisForExit = 2000L
         var doubleBackToExitPressedOnce = false
