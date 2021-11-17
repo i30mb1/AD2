@@ -10,8 +10,8 @@ import kotlinx.coroutines.flow.launchIn
 import kotlinx.coroutines.flow.map
 import kotlinx.coroutines.flow.onEach
 import kotlinx.coroutines.launch
-import n7.ad2.ui.heroes.domain.interactor.GetVOHeroesListInteractor
 import n7.ad2.ui.heroes.domain.usecase.FilterHeroesUseCase
+import n7.ad2.ui.heroes.domain.usecase.GetVOHeroesListInteractor
 import n7.ad2.ui.heroes.domain.usecase.UpdateViewedByUserFieldUseCase
 import n7.ad2.ui.heroes.domain.vo.VOHero
 import javax.inject.Inject

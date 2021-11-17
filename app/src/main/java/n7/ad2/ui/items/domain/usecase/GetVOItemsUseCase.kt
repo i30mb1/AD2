@@ -30,8 +30,8 @@ class GetVOItemsUseCase @Inject constructor(
                     list.groupBy { localItem -> localItem.type }
                         .forEach { map: Map.Entry<String, List<LocalItem>> ->
                             result.add(VOItemHeader(HeaderViewHolder.Data(map.key)))
-                            result.addAll(map.value.map {
-                                VOItemBody(it.name, ItemRepository.getFullUrlItemImage(it.name), it.viewedByUser)
+                            result.addAll(map.value.map { localItem ->
+                                VOItemBody(localItem.name, ItemRepository.getFullUrlItemImage(localItem.name), localItem.viewedByUser)
                             })
                         }
                     emit(result.toList())

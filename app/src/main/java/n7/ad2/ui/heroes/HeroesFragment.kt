@@ -34,8 +34,8 @@ class HeroesFragment : Fragment(R.layout.fragment_heroes) {
     }
 
     @Inject lateinit var imageLoader: ImageLoader
-    private var _binding: FragmentHeroesBinding? = null
 
+    private var _binding: FragmentHeroesBinding? = null
     private val binding: FragmentHeroesBinding get() = _binding!!
     private val heroAdapter: HeroesListAdapter by lazyUnsafe { HeroesListAdapter(layoutInflater, imageLoader, onHeroClick) }
     private val viewModel: HeroesViewModel by viewModel { injector.heroesViewModel }
@@ -82,11 +82,21 @@ class HeroesFragment : Fragment(R.layout.fragment_heroes) {
     }
 
     private fun setupAdapter() {
+        val spanSizeItem = 1
+        val spanSizeItemHeader = 3
+
+        val gridLayoutManager = GridLayoutManager(context, 3)
+        gridLayoutManager.spanSizeLookup = object : GridLayoutManager.SpanSizeLookup() {
+            override fun getSpanSize(position: Int) = when (heroAdapter.getItemViewType(position)) {
+                R.layout.item_header -> spanSizeItemHeader
+                else -> spanSizeItem
+            }
+        }
         binding.rv.apply {
             setHasFixedSize(true)
             setItemViewCacheSize(15)
             recycledViewPool.setMaxRecycledViews(R.layout.item_hero_body, 30)
-            layoutManager = GridLayoutManager(context, 3)
+            layoutManager = gridLayoutManager
             adapter = heroAdapter
             addItemDecoration(heroesItemDecorator)
 //            postponeEnterTransition()
@@ -100,7 +110,7 @@ class HeroesFragment : Fragment(R.layout.fragment_heroes) {
             }
             (parentFragment as DraggableDrawer.Listener).setDrawerPercentListener { percent ->
                 heroesItemDecorator.percent = percent
-                binding.rv.invalidateItemDecorations()
+                invalidateItemDecorations()
             }
         }
 

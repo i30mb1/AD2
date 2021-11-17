@@ -29,7 +29,7 @@ class HeroesItemDecorator : RecyclerView.ItemDecoration() {
 
         with(outRect) {
             bottom = if (position in (childCount - itemsInEnd..childCount)) offsetBottom + (navigationBarsInsets * percent).toInt() else offset
-            top = if (position in (0 until spanCount)) offsetTop + (statusBarsInsets * percent).toInt() else offset
+            top = if (position == 0) offsetTop + (statusBarsInsets * percent).toInt() else offset
             left = offset
             right = offset
         }
