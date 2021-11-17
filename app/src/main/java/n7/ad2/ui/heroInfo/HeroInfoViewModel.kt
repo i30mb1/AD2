@@ -1,23 +1,26 @@
 package n7.ad2.ui.heroInfo
 
 import android.app.Application
-import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
+import dagger.assisted.Assisted
 import dagger.assisted.AssistedFactory
 import dagger.assisted.AssistedInject
+import kotlinx.coroutines.flow.MutableStateFlow
+import kotlinx.coroutines.flow.StateFlow
+import kotlinx.coroutines.flow.asStateFlow
 import kotlinx.coroutines.launch
 import n7.ad2.R
 import n7.ad2.data.source.local.Locale
 import n7.ad2.ui.heroInfo.domain.interactor.GetHeroDescriptionInteractor
-import n7.ad2.ui.heroInfo.domain.vo.VODescription
+import n7.ad2.ui.heroInfo.domain.vo.VOHeroInfo
 import n7.ad2.ui.heroPage.domain.usecase.GetLocalHeroByNameUseCase
 
 class HeroInfoViewModel @AssistedInject constructor(
     private val application: Application,
     private val getHeroDescriptionInteractor: GetHeroDescriptionInteractor,
     private val getLocalHeroByNameUseCase: GetLocalHeroByNameUseCase,
-    private val heroName: String,
+    @Assisted private val heroName: String,
 ) : ViewModel() {
 
     @AssistedFactory
@@ -25,17 +28,18 @@ class HeroInfoViewModel @AssistedInject constructor(
         fun create(heroName: String): HeroInfoViewModel
     }
 
-    val vOHero = MutableLiveData<List<VODescription>>()
+    private val _list: MutableStateFlow<List<VOHeroInfo>> = MutableStateFlow(emptyList())
+    val list: StateFlow<List<VOHeroInfo>> = _list.asStateFlow()
 
     init {
         loadHero()
     }
 
-    fun loadHero() {
+    private fun loadHero() {
         viewModelScope.launch {
             val locale = Locale.valueOf(application.getString(R.string.locale))
             val localHero = getLocalHeroByNameUseCase(heroName)
-            vOHero.value = getHeroDescriptionInteractor(localHero, locale)!!
+            _list.emit(getHeroDescriptionInteractor(localHero, locale))
         }
     }
 

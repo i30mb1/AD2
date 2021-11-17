@@ -9,6 +9,7 @@ import n7.ad2.ui.MainActivity
 import n7.ad2.ui.MainActivity2
 import n7.ad2.ui.heroGuide.HeroGuideViewModel
 import n7.ad2.ui.heroGuide.HeroGuideWorker
+import n7.ad2.ui.heroInfo.HeroInfoFragment
 import n7.ad2.ui.heroInfo.HeroInfoViewModel
 import n7.ad2.ui.heroResponse.ResponsesViewModel
 import n7.ad2.ui.heroes.HeroesFragment
@@ -49,6 +50,7 @@ interface ApplicationComponent {
     fun inject(mainFragment: MainFragment)
     fun inject(draggableDrawer: DraggableDrawer)
     fun inject(streamsFragment: StreamsFragment)
+    fun inject(heroInfoFragment: HeroInfoFragment)
     fun inject(heroGuideWorker: HeroGuideWorker)
     fun inject(heroGuideWorker: ItemInfoFragment)
 

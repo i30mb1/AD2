@@ -4,10 +4,8 @@ import android.app.Application
 import kotlinx.coroutines.CoroutineDispatcher
 import kotlinx.coroutines.withContext
 import n7.ad2.data.source.local.model.LocalHero
-import n7.ad2.ui.heroInfo.domain.adapter.toVOHeroAttrs
-import n7.ad2.ui.heroInfo.domain.adapter.toVOHeroSpells
 import n7.ad2.ui.heroInfo.domain.model.LocalHeroDescription
-import n7.ad2.ui.heroInfo.domain.vo.VODescription
+import n7.ad2.ui.heroInfo.domain.vo.VOHeroInfo
 import javax.inject.Inject
 
 class GetVOHeroDescriptionUseCase @Inject constructor(
@@ -15,15 +13,16 @@ class GetVOHeroDescriptionUseCase @Inject constructor(
     private val application: Application,
 ) {
 
-    @ExperimentalStdlibApi
-    suspend operator fun invoke(localHeroDescription: LocalHeroDescription, localHero: LocalHero): List<VODescription> = withContext(ioDispatcher) {
+    @OptIn(ExperimentalStdlibApi::class)
+    suspend operator fun invoke(localHeroDescription: LocalHeroDescription, localHero: LocalHero): List<VOHeroInfo> = withContext(ioDispatcher) {
         buildList {
-            val voHeroAttrs = localHeroDescription.toVOHeroAttrs(application, localHero.name)
-            add(voHeroAttrs)
+//            add(VOHeroInfoHeaderSound("spellName", "hotKey", "legacyKey", "audioUrl!!"))
+//            val voHeroAttrs = localHeroDescription.toVOHeroAttrs(application, localHero.name)
+//            add(voHeroAttrs)
 
-            val voHeroSpells = localHeroDescription.toVOHeroSpells(application)
-            add(voHeroSpells)
-            addAll(voHeroAttrs.voDescriptionList)
+//            val voHeroSpells = localHeroDescription.toVOHeroSpells(application)
+//            add(voHeroSpells)
+//            addAll(voHeroAttrs.voDescriptionList)
         }
     }
 }

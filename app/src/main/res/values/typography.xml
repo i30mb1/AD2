@@ -16,9 +16,13 @@
         <item name="android:textAllCaps">true</item>
     </style>
 
-    <style name="TextAppearance.Subtitle1" parent="TextAppearance.MaterialComponents.Subtitle1">
+    <style name="TextAppearance.H6.White" parent="TextAppearance.MaterialComponents.Subtitle1">
         <item name="android:textColor">@android:color/white</item>
         <item name="android:textSize">14sp</item>
+        <item name="android:textStyle">bold</item>
+    </style>
+
+    <style name="TextAppearance.H6.White.Bold" parent="TextAppearance.H6.White">
         <item name="android:textStyle">bold</item>
     </style>
 

@@ -1,4 +1,4 @@
-package n7.ad2.ui.heroInfo
+package n7.ad2.ui.heroInfo.adapter
 
 import android.text.SpannableString
 import android.text.method.LinkMovementMethod
@@ -20,32 +20,38 @@ import n7.ad2.databinding.ItemBodyLineBinding
 import n7.ad2.databinding.ItemBodyWithImageBinding
 import n7.ad2.databinding.ItemBodyWithSeparatorBinding
 import n7.ad2.databinding.ItemHeroMainInformationBinding
-import n7.ad2.databinding.ItemTitleBinding
+import n7.ad2.ui.heroInfo.InfoPopupWindow
+import n7.ad2.ui.heroInfo.PopUpClickableSpan
 import n7.ad2.ui.heroInfo.domain.vo.VOBodyLine
 import n7.ad2.ui.heroInfo.domain.vo.VOBodySimple
 import n7.ad2.ui.heroInfo.domain.vo.VOBodyTalent
 import n7.ad2.ui.heroInfo.domain.vo.VOBodyWithImage
 import n7.ad2.ui.heroInfo.domain.vo.VOBodyWithSeparator
-import n7.ad2.ui.heroInfo.domain.vo.VODescription
+import n7.ad2.ui.heroInfo.domain.vo.VOHeroInfo
+import n7.ad2.ui.heroInfo.domain.vo.VOHeroInfoHeaderSound
 import n7.ad2.ui.heroInfo.domain.vo.VOHeroMainInformation
 import n7.ad2.ui.heroInfo.domain.vo.VOHeroSpells
-import n7.ad2.ui.heroInfo.domain.vo.VOTitle
 import n7.ad2.ui.heroPage.AudioExoPlayer
 import n7.ad2.utils.StickyHeaderDecorator
 import n7.ad2.utils.extension.toPx
 
-class DescriptionsListAdapter(
+class HeroInfoAdapter(
+    private val layoutInflater: LayoutInflater,
     private val audioExoPlayer: AudioExoPlayer,
     private val infoPopupWindow: InfoPopupWindow,
-) : ListAdapter<VODescription, DescriptionsListAdapter.ViewHolder>(DiffCallback()), StickyHeaderDecorator.StickyHeaderInterface {
+    private val onPlayIconClickListener: (model: VOHeroInfoHeaderSound) -> Unit,
+    private val onKeyClickListener: (key: String) -> Unit,
+) : ListAdapter<VOHeroInfo, RecyclerView.ViewHolder>(DiffCallback()),
+    StickyHeaderDecorator.StickyHeaderInterface {
 
     private val popupListener = { view: View, text: String -> infoPopupWindow.show(view, text) }
-    private val descriptionsListener = { voDescriptions: List<VODescription> -> setDescriptions(voDescriptions) }
+    private val descriptionsListener = { voDescriptions: List<VOHeroInfo> -> setDescriptions(voDescriptions) }
 
-    override fun getHeaderLayout(): Int = R.layout.item_title
+    override fun getHeaderLayout(): Int = R.layout.item_header_sound
 
     override fun getItemViewType(position: Int): Int = when (getItem(position)) {
-        is VOTitle -> R.layout.item_title
+        is VOHeroInfoHeaderSound -> R.layout.item_header_sound
+
         is VOBodyLine -> R.layout.item_body_line
         is VOBodySimple -> R.layout.item_body_simple
         is VOBodyWithSeparator -> R.layout.item_body_with_separator
@@ -55,13 +61,21 @@ class DescriptionsListAdapter(
         is VOHeroSpells -> R.layout.item_body_hero_spells
     }
 
-    override fun onCreateViewHolder(parent: ViewGroup, viewType: Int) = ViewHolder.from(parent, viewType, audioExoPlayer, popupListener, descriptionsListener)
+    override fun onCreateViewHolder(parent: ViewGroup, viewType: Int) = when (viewType) {
+        R.layout.item_header_sound -> HeaderSoundViewHolder.from(layoutInflater, parent, onPlayIconClickListener, onKeyClickListener)
+        else -> throw UnsupportedOperationException("could not find ViewHolder for $viewType")
+    }
 
-    override fun onBindViewHolder(holder: ViewHolder, position: Int) = holder.bind(getItem(position))
+    override fun onBindViewHolder(holder: RecyclerView.ViewHolder, position: Int) {
+        val item = getItem(position)
+        when (holder) {
+            is HeaderSoundViewHolder -> if (item != null) holder.bind(item as VOHeroInfoHeaderSound) else holder.clear()
+        }
+    }
 
     @OptIn(ExperimentalStdlibApi::class)
-    private fun setDescriptions(voDescriptions: List<VODescription>) = submitList(buildList {
-        addAll(currentList.takeWhile { it !is VOTitle })
+    private fun setDescriptions(voDescriptions: List<VOHeroInfo>) = submitList(buildList {
+        addAll(currentList.takeWhile { it !is VOHeroInfoHeaderSound })
         addAll(voDescriptions)
     })
 
@@ -72,7 +86,7 @@ class DescriptionsListAdapter(
 
         private var lineHeight = 0
 
-        fun bind(item: VODescription) {
+        fun bind(item: VOHeroInfo) {
             binding.setVariable(BR.item, item)
             bindSetting(binding)
             binding.executePendingBindings()
@@ -102,11 +116,10 @@ class DescriptionsListAdapter(
                 viewType: Int,
                 audioExoPlayer: AudioExoPlayer,
                 popupListener: (View, String) -> Unit,
-                descriptionsListener: (List<VODescription>) -> Unit,
+                descriptionsListener: (List<VOHeroInfo>) -> Unit,
             ): ViewHolder {
                 val layoutInflater = LayoutInflater.from(parent.context)
                 val binding: ViewDataBinding = when (viewType) {
-                    R.layout.item_title -> ItemTitleBinding.inflate(layoutInflater, parent, false).also { it.audioExoPlayer = audioExoPlayer; it.popupListener = popupListener }
                     R.layout.item_body_hero_spells -> ItemBodyHeroSpellsBinding.inflate(layoutInflater, parent, false).apply {
                         val spellsListAdapter = SpellsListAdapter(descriptionsListener)
                         spellsListAdapter.stateRestorationPolicy = StateRestorationPolicy.PREVENT_WHEN_EMPTY
@@ -121,8 +134,8 @@ class DescriptionsListAdapter(
         }
     }
 
-    private class DiffCallback : DiffUtil.ItemCallback<VODescription>() {
-        override fun areItemsTheSame(oldItem: VODescription, newItem: VODescription): Boolean = oldItem::class == newItem::class
-        override fun areContentsTheSame(oldItem: VODescription, newItem: VODescription): Boolean = oldItem == newItem
+    private class DiffCallback : DiffUtil.ItemCallback<VOHeroInfo>() {
+        override fun areItemsTheSame(oldItem: VOHeroInfo, newItem: VOHeroInfo): Boolean = oldItem::class == newItem::class
+        override fun areContentsTheSame(oldItem: VOHeroInfo, newItem: VOHeroInfo): Boolean = oldItem == newItem
     }
 }

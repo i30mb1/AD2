@@ -40,7 +40,6 @@
             android:layout_marginStart="8dp"
             android:layout_marginTop="8dp"
             android:layout_marginEnd="8dp"
-            android:text="@{String.valueOf(activity.clicks)}"
             android:textColor="?android:textColorPrimary"
             android:textSize="36sp"
             android:textStyle="bold"
@@ -63,7 +62,6 @@
             android:id="@+id/tv_activity_game2p1_timer"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="@{String.valueOf(activity.secondRemains)}"
             android:textColor="?android:textColorPrimary"
             android:textSize="36sp"
             android:textStyle="bold"
@@ -105,7 +103,6 @@
             android:layout_width="60dp"
             android:layout_height="60dp"
             android:contentDescription="@string/setting_tell_friend_title"
-            android:onClick="@{activity::moveCreep}"
             android:scaleType="centerCrop"
             android:visibility="invisible"
             app:layout_constraintBottom_toBottomOf="parent"
@@ -117,7 +114,6 @@
             app:srcCompat="@drawable/creep" />
 
         <ImageView
-            android:onClick="@{activity::moveCreep}"
             android:id="@+id/iv_activity_game2p1_creep2"
             android:layout_width="60dp"
             android:layout_height="60dp"
@@ -133,7 +129,6 @@
             android:contentDescription="@string/setting_tell_friend_title" />
 
         <ImageView
-            android:onClick="@{activity::moveCreep}"
             android:id="@+id/iv_activity_game2p1_creep3"
             android:layout_width="60dp"
             android:layout_height="60dp"

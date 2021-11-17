@@ -12,8 +12,12 @@
     </data>
 
     <TextView
-        style="?textStyleTitle"
-        asyncText="@{item.title}"
-        tools:text="@string/easy_to_win_heroes" />
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
+
+    <!--    <TextView-->
+    <!--        style="?textStyleTitle"-->
+    <!--        asyncText="@{item.title}"-->
+    <!--        tools:text="@string/easy_to_win_heroes" />-->
 
 </layout>

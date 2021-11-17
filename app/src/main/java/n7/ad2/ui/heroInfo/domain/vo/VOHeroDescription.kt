@@ -21,14 +21,14 @@ class VOHeroDescription : BaseObservable() {
     }
 
     @get:Bindable
-    var selectedDescriptionList: List<VODescription> = emptyList()
-    set(value) {
-        field = value
-        notifyPropertyChanged(BR.selectedDescriptionList)
-    }
+    var selectedDescriptionList: List<VOHeroInfo> = emptyList()
+        set(value) {
+            field = value
+            notifyPropertyChanged(BR.selectedDescriptionList)
+        }
 
     @get:Bindable
-    var heroBio: List<VODescription> = emptyList()
+    var heroBio: List<VOHeroInfo> = emptyList()
         set(value) {
             field = value
             notifyPropertyChanged(BR.heroBio)

@@ -2,12 +2,11 @@ package n7.ad2.ui.itemInfo.domain.vo
 
 import android.text.SpannableString
 import androidx.annotation.DrawableRes
-import androidx.databinding.ObservableBoolean
 import n7.ad2.ui.heroPage.Playable
 
 sealed class ItemInfo
-data class VOItemInfoTitle(val title: String, override val audioUrl: String? = null) : ItemInfo(), Playable {
-    override val isPlaying = ObservableBoolean(false)
+data class VOItemInfoTitle(val title: String, override val audioUrl: String) : ItemInfo(), Playable {
+    override val isPlaying = false
 }
 
 data class VOItemInfoLine(val title: String) : ItemInfo()

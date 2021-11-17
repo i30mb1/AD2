@@ -1,4 +1,4 @@
-package n7.ad2.ui.heroInfo
+package n7.ad2.ui.heroInfo.adapter
 
 import android.view.LayoutInflater
 import android.view.ViewGroup
@@ -6,11 +6,11 @@ import androidx.recyclerview.widget.DiffUtil
 import androidx.recyclerview.widget.ListAdapter
 import androidx.recyclerview.widget.RecyclerView
 import n7.ad2.databinding.ItemSpellBinding
-import n7.ad2.ui.heroInfo.domain.vo.VODescription
+import n7.ad2.ui.heroInfo.domain.vo.VOHeroInfo
 import n7.ad2.ui.heroInfo.domain.vo.VOSpell
 
 class SpellsListAdapter(
-    descriptionsListener: (List<VODescription>) -> Unit,
+    descriptionsListener: (List<VOHeroInfo>) -> Unit,
 ) : ListAdapter<VOSpell, SpellsListAdapter.ViewHolder>(DiffCallback()) {
 
     private val itemClickListener = { model: VOSpell ->

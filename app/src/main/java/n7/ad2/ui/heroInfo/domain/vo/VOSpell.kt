@@ -7,7 +7,7 @@ import n7.ad2.BR
 data class VOSpell(
     val name: String,
     val urlSpellImage: String,
-    val voDescriptionList: List<VODescription>,
+    val voDescriptionList: List<VOHeroInfo>,
 ) : BaseObservable() {
 
     @get:Bindable

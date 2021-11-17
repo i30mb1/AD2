@@ -71,7 +71,7 @@
         <item name="android:layout_gravity">bottom</item>
         <item name="android:textStyle">bold</item>
         <item name="android:textColor">@android:color/white</item>
-        <item name="android:background">@drawable/transparent_30</item>
+        <item name="android:background">@color/transparent</item>
     </style>
 
     <style name="Widget.TextView.HeroSignature" parent="Widget.TextView.Signature">

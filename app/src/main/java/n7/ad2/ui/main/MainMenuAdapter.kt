@@ -31,12 +31,12 @@ class MainMenuAdapter(
     ) : RecyclerView.ViewHolder(binding.root) {
 
         private val backgroundRipple = ContextCompat.getDrawable(binding.root.context, R.drawable.background_ripple)
-        private val transparent = ContextCompat.getDrawable(binding.root.context, R.drawable.transparent_30)
+//        private val transparent = ContextCompat.getColor(binding.root.context, R.color.transparent)
 
         fun bind(item: VOMenu) {
             binding.vRedLine.isVisible = item.isSelected
             binding.tvTitle.text = item.title
-            binding.root.foreground = if (item.isEnable) backgroundRipple else transparent
+//            binding.root.foreground = if (item.isEnable) backgroundRipple else transparent
             binding.root.setOnClickListener { itemListener.invoke(item) }
         }
 

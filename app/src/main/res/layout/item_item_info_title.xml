@@ -22,10 +22,10 @@
         android:layout_height="wrap_content"
         tools:ignore="UseCompoundDrawables">
 
-        <TextView
-            style="?textStyleTitle"
-            asyncText="@{item.title}"
-            tools:text="Duel" />
+        <!--        <TextView-->
+        <!--            style="?textStyleTitle"-->
+        <!--            asyncText="@{item.title}"-->
+        <!--            tools:text="Duel" />-->
 
         <ImageView
             android:id="@+id/play"

@@ -12,14 +12,13 @@
     <FrameLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:background="@drawable/transparent_30">
+        android:background="@color/transparent">
 
         <TextView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:gravity="center_horizontal"
             android:padding="4dp"
-            android:text="@{item.title}"
             android:textAppearance="?textAppearanceSubtitle1"
             android:textSize="12sp"
             tools:text="@tools:sample/lorem" />

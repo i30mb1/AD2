@@ -13,7 +13,7 @@
     <FrameLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:background="@drawable/transparent_30">
+        android:background="@color/transparent">
 
         <androidx.recyclerview.widget.RecyclerView
             android:id="@+id/rv"

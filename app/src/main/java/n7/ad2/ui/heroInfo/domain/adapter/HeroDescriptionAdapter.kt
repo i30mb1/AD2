@@ -1,36 +1,27 @@
 package n7.ad2.ui.heroInfo.domain.adapter
 
 import android.app.Application
-import android.text.SpannableString
-import n7.ad2.ui.heroInfo.HeroStatistics
-import n7.ad2.R
 import n7.ad2.data.source.local.HeroRepository
+import n7.ad2.ui.heroInfo.HeroStatistics
 import n7.ad2.ui.heroInfo.domain.model.Ability
 import n7.ad2.ui.heroInfo.domain.model.LocalHeroDescription
-import n7.ad2.ui.heroInfo.domain.vo.VOBodyLine
-import n7.ad2.ui.heroInfo.domain.vo.VOBodySimple
-import n7.ad2.ui.heroInfo.domain.vo.VOBodyTalent
-import n7.ad2.ui.heroInfo.domain.vo.VOBodyWithImage
-import n7.ad2.ui.heroInfo.domain.vo.VOBodyWithSeparator
+import n7.ad2.ui.heroInfo.domain.vo.VOHeroInfoHeaderSound
 import n7.ad2.ui.heroInfo.domain.vo.VOHeroMainInformation
 import n7.ad2.ui.heroInfo.domain.vo.VOHeroSpells
 import n7.ad2.ui.heroInfo.domain.vo.VOSpell
-import n7.ad2.ui.heroInfo.domain.vo.VOTitle
-import n7.ad2.utils.extension.spanWithDotaImages
-import n7.ad2.utils.extension.toStringListWithDash
 
 @ExperimentalStdlibApi
 fun LocalHeroDescription.toVOHeroAttrs(application: Application, heroName: String): VOHeroMainInformation = VOHeroMainInformation(
     HeroRepository.getFullUrlHeroImage(heroName),
     HeroStatistics.Companion.Statistics(mainAttributes.attrStrength, mainAttributes.attrAgility, mainAttributes.attrIntelligence),
     buildList {
-        add(VOTitle(application.getString(R.string.hero_fragment_description)))
-        add(VOBodyWithSeparator(SpannableString(description)))
-        add(VOTitle(application.getString(R.string.hero_fragment_bio)))
-        add(VOBodyWithSeparator(SpannableString(history)))
+//        add(VOHeroInfoHeaderSound(application.getString(R.string.hero_fragment_description)))
+//        add(VOBodyWithSeparator(SpannableString(description)))
+//        add(VOHeroInfoHeaderSound(application.getString(R.string.hero_fragment_bio)))
+//        add(VOBodyWithSeparator(SpannableString(history)))
         trivia?.let { trivia ->
-            add(VOTitle(application.getString(R.string.hero_fragment_trivia)))
-            add(VOBodyWithSeparator(SpannableString(trivia.toStringListWithDash())))
+//            add(VOHeroInfoHeaderSound(application.getString(R.string.hero_fragment_trivia)))
+//            add(VOBodyWithSeparator(SpannableString(trivia.toStringListWithDash())))
         }
     }
 )
@@ -43,24 +34,24 @@ fun Ability.toVOSpell(application: Application) = VOSpell(
     this.spellName,
     HeroRepository.getFullUrlHeroSpell(this.spellName),
     buildList {
-        add(VOTitle(spellName, hotKey, legacyKey, audioUrl))
-        effects.forEach { title -> add(VOBodyLine(SpannableString(title.spanWithDotaImages(application, true)))) }
-        talents?.forEach { talent -> add(VOBodyTalent(talent.talentLeft, talent.talentLvl, talent.talentRight)) }
-        description?.let { description -> add(VOBodySimple(description)) }
-        cooldown?.let { cooldown -> add(VOBodyWithImage(cooldown.spanWithDotaImages(application, true), R.drawable.cooldown, application.getString(R.string.desc_cooldown))) }
-        mana?.let { mana -> add(VOBodyWithImage(mana.spanWithDotaImages(application, true), R.drawable.mana, application.getString(R.string.desc_mana))) }
-        params?.let { params ->
-            add(VOTitle(application.getString(R.string.hero_fragment_params)))
-            add(VOBodyWithSeparator((params.toStringListWithDash()).spanWithDotaImages(application)))
-        }
-        story?.let { story ->
-            add(VOTitle(application.getString(R.string.hero_fragment_story)))
-            add(VOBodyWithSeparator(SpannableString(story)))
-        }
-        notes?.let { notes ->
-            add(VOTitle(application.getString(R.string.hero_fragment_notes)))
-            add(VOBodyWithSeparator(SpannableString(notes.toStringListWithDash())))
-        }
+        add(VOHeroInfoHeaderSound(spellName, hotKey!!, legacyKey!!, audioUrl!!))
+//        effects.forEach { title -> add(VOBodyLine(SpannableString(title.spanWithDotaImages(application, true)))) }
+//        talents?.forEach { talent -> add(VOBodyTalent(talent.talentLeft, talent.talentLvl, talent.talentRight)) }
+//        description?.let { description -> add(VOBodySimple(description)) }
+//        cooldown?.let { cooldown -> add(VOBodyWithImage(cooldown.spanWithDotaImages(application, true), R.drawable.cooldown, application.getString(R.string.desc_cooldown))) }
+//        mana?.let { mana -> add(VOBodyWithImage(mana.spanWithDotaImages(application, true), R.drawable.mana, application.getString(R.string.desc_mana))) }
+//        params?.let { params ->
+////            add(VOHeroInfoHeaderSound(application.getString(R.string.hero_fragment_params)))
+//            add(VOBodyWithSeparator((params.toStringListWithDash()).spanWithDotaImages(application)))
+//        }
+//        story?.let { story ->
+////            add(VOHeroInfoHeaderSound(application.getString(R.string.hero_fragment_story)))
+//            add(VOBodyWithSeparator(SpannableString(story)))
+//        }
+//        notes?.let { notes ->
+////            add(VOHeroInfoHeaderSound(application.getString(R.string.hero_fragment_notes)))
+//            add(VOBodyWithSeparator(SpannableString(notes.toStringListWithDash())))
+//        }
     }
 )
 

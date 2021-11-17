@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
     <!--серая тема-->
+    <color name="transparent">#25000000</color>
     <color name="gray_100">#C1C2C3</color>
     <color name="gray_700">#2F3136</color>
     <color name="gray_500">#202225</color>
