@@ -1,31 +1,39 @@
 package n7.ad2.ui.heroInfo
 
 import android.app.Application
-import androidx.lifecycle.AndroidViewModel
 import androidx.lifecycle.MutableLiveData
-import androidx.lifecycle.SavedStateHandle
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
+import dagger.assisted.AssistedFactory
+import dagger.assisted.AssistedInject
 import kotlinx.coroutines.launch
 import n7.ad2.R
 import n7.ad2.data.source.local.Locale
 import n7.ad2.ui.heroInfo.domain.interactor.GetHeroDescriptionInteractor
 import n7.ad2.ui.heroInfo.domain.vo.VODescription
 import n7.ad2.ui.heroPage.domain.usecase.GetLocalHeroByNameUseCase
-import javax.inject.Inject
 
-class HeroInfoViewModel @Inject constructor(
-    application: Application,
+class HeroInfoViewModel @AssistedInject constructor(
+    private val application: Application,
     private val getHeroDescriptionInteractor: GetHeroDescriptionInteractor,
     private val getLocalHeroByNameUseCase: GetLocalHeroByNameUseCase,
-) : AndroidViewModel(application) {
+    private val heroName: String,
+) : ViewModel() {
+
+    @AssistedFactory
+    interface Factory {
+        fun create(heroName: String): HeroInfoViewModel
+    }
 
     val vOHero = MutableLiveData<List<VODescription>>()
 
-    @ExperimentalStdlibApi
-    fun loadHero(heroName: String) {
+    init {
+        loadHero()
+    }
+
+    fun loadHero() {
         viewModelScope.launch {
-            val locale = Locale.valueOf(getApplication<Application>().getString(R.string.locale))
+            val locale = Locale.valueOf(application.getString(R.string.locale))
             val localHero = getLocalHeroByNameUseCase(heroName)
             vOHero.value = getHeroDescriptionInteractor(localHero, locale)!!
         }

@@ -1,21 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
-<layout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:tools="http://schemas.android.com/tools">
-
-    <data>
-
-        <variable
-            name="viewModel"
-            type="n7.ad2.ui.heroInfo.HeroInfoViewModel" />
-    </data>
-
-    <androidx.recyclerview.widget.RecyclerView
-        android:id="@+id/rv"
-        data="@{viewModel.VOHero}"
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:orientation="vertical"
-        tools:itemCount="3"
-        tools:listitem="@layout/item_body_simple" />
-
-</layout>
+<androidx.recyclerview.widget.RecyclerView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/rv"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:itemCount="3"
+    tools:listitem="@layout/item_body_simple"
+    tools:orientation="vertical" />

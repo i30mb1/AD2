@@ -11,7 +11,7 @@ import n7.ad2.ui.heroInfo.InfoPopupWindow
 import n7.ad2.ui.heroPage.AudioExoPlayer
 import n7.ad2.ui.heroPage.showDialogError
 import n7.ad2.utils.StickyHeaderDecorator
-import n7.ad2.utils.viewModelWithParam
+import n7.ad2.utils.viewModel2
 import javax.inject.Inject
 
 class ItemInfoFragment : Fragment(R.layout.fragment_item_info) {
@@ -21,9 +21,10 @@ class ItemInfoFragment : Fragment(R.layout.fragment_item_info) {
     private val audioExoPlayer: AudioExoPlayer by lazy(LazyThreadSafetyMode.NONE) { AudioExoPlayer(requireContext(), lifecycle, ::showDialogError) }
     private val infoPopupWindow: InfoPopupWindow by lazy(LazyThreadSafetyMode.NONE) { InfoPopupWindow(requireContext(), lifecycle) }
     private val itemName: String by lazy(LazyThreadSafetyMode.NONE) { requireArguments().getString(ITEM_NAME)!! }
+
     @Inject
     lateinit var itemInfoFactory: ItemInfoViewModel.Factory
-    private val viewModel: ItemInfoViewModel by viewModelWithParam {
+    private val viewModel: ItemInfoViewModel by viewModel2 {
         itemInfoFactory.create(itemName)
     }
 

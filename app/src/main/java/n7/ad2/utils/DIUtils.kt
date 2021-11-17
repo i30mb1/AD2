@@ -38,7 +38,7 @@ inline fun <reified T : ViewModel> Fragment.activityViewModel(
 }
 
 /* Please work */
-inline fun <reified T : ViewModel> Fragment.viewModelWithParam(
+inline fun <reified T : ViewModel> Fragment.viewModel2(
     defaultArgs: Bundle? = null,
     crossinline provider: (handle: SavedStateHandle) -> T,
 ) = viewModels<T> {

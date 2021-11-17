@@ -9,6 +9,9 @@ import androidx.activity.result.contract.ActivityResultContracts
 import androidx.annotation.RequiresPermission
 import androidx.core.content.ContextCompat.checkSelfPermission
 import androidx.core.os.bundleOf
+import androidx.core.view.ViewCompat
+import androidx.core.view.WindowInsetsCompat
+import androidx.core.view.updatePadding
 import androidx.fragment.app.Fragment
 import androidx.viewpager2.widget.ViewPager2
 import com.google.android.material.tabs.TabLayoutMediator
@@ -30,15 +33,16 @@ class HeroPageFragment : Fragment(R.layout.fragment_hero_page) {
     private var _binding: FragmentHeroPageBinding? = null
     private val binding: FragmentHeroPageBinding get() = _binding!!
 
-    val audioExoPlayer: AudioExoPlayer by lazy(LazyThreadSafetyMode.NONE) { AudioExoPlayer(requireContext(), lifecycle, ::showDialogError) }
+    val audioExoPlayer: AudioExoPlayer by lazyUnsafe { AudioExoPlayer(requireContext(), lifecycle, ::showDialogError) }
     private val heroName by lazyUnsafe { requireArguments().getString(HERO_NAME)!! }
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
         _binding = FragmentHeroPageBinding.bind(view)
 
-        setToolbar(heroName)
-        setViewPager2(heroName)
+        setToolbar()
+        setViewPager2()
+        setupInsets()
     }
 
     override fun onDestroyView() {
@@ -57,7 +61,16 @@ class HeroPageFragment : Fragment(R.layout.fragment_hero_page) {
             })
     }
 
-    private fun setViewPager2(heroName: String) {
+    private fun setupInsets() {
+        ViewCompat.setOnApplyWindowInsetsListener(binding.root) { view, insets ->
+            val statusBarsInsets = insets.getInsets(WindowInsetsCompat.Type.statusBars())
+            val navigationBarsInsets = insets.getInsets(WindowInsetsCompat.Type.navigationBars())
+            view.updatePadding(top = statusBarsInsets.top, bottom = navigationBarsInsets.bottom)
+            insets
+        }
+    }
+
+    private fun setViewPager2() {
         val viewPager2Adapter = ViewPager2Adapter(this, heroName)
         binding.vp.adapter = viewPager2Adapter
         TabLayoutMediator(binding.tl, binding.vp) { tab, position ->
@@ -76,7 +89,7 @@ class HeroPageFragment : Fragment(R.layout.fragment_hero_page) {
         })
     }
 
-    private fun setToolbar(heroName: String) {
+    private fun setToolbar() {
         binding.toolbar.loadHero(heroName)
     }
 

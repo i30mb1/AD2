@@ -16,7 +16,6 @@ class GetHeroDescriptionInteractor @Inject constructor(
     private val logger: AD2Logger,
 ) {
 
-    @ExperimentalStdlibApi
     suspend operator fun invoke(localHero: LocalHero, locale: Locale): List<VODescription> {
         logger.log("load ${localHero.name} description")
         val json = getJsonHeroDescriptionUseCase(localHero.name, locale)

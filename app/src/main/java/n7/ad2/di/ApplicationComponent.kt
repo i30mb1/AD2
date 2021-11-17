@@ -57,10 +57,10 @@ interface ApplicationComponent {
     val heroesViewModel: HeroesViewModel
     val itemsViewModel: ItemsViewModel
     val responsesViewModel: ResponsesViewModel
-    val itemInfoViewModel: ItemInfoViewModel.Factory
+    val itemInfoFactory: ItemInfoViewModel.Factory
+    val heroInfoFactory: HeroInfoViewModel.Factory
     val heroGuideViewModel: HeroGuideViewModel
     val newsViewModel: NewsViewModel
-    val heroInfoViewModel: HeroInfoViewModel
     val streamsViewModel: StreamsViewModel
     val streamViewModel: StreamViewModel
 
