@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.google.android.material.card.MaterialCardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/root"
+    style="@style/Widget.CardView"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/transparent"
+        android:gravity="center"
+        android:orientation="horizontal">
+
+        <n7.ad2.utils.SelectableImageView
+            android:id="@+id/iv_hero"
+            android:layout_width="150dp"
+            android:layout_height="80dp"
+            android:contentDescription="@string/desc_dota_hero"
+            android:cropToPadding="true"
+            android:scaleType="centerCrop"
+            android:transitionName="iv"
+            tools:src="@drawable/hero_placeholder" />
+
+        <n7.ad2.ui.heroInfo.HeroStatistics
+            android:id="@+id/hero_statistics"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+
+    </LinearLayout>
+
+</com.google.android.material.card.MaterialCardView>

@@ -1,5 +1,6 @@
 package n7.ad2.ui.heroInfo.domain.interactor
 
+import kotlinx.coroutines.flow.single
 import n7.ad2.AD2Logger
 import n7.ad2.data.source.local.Locale
 import n7.ad2.data.source.local.model.LocalHero
@@ -20,7 +21,7 @@ class GetHeroDescriptionInteractor @Inject constructor(
         logger.log("load ${localHero.name} description")
         val json = getJsonHeroDescriptionUseCase(localHero.name, locale)
         val localHeroDescription = getLocalHeroDescriptionFromJsonUseCase(json)
-        return getVOHeroDescriptionUseCase(localHeroDescription, localHero)
+        return getVOHeroDescriptionUseCase(localHeroDescription, localHero).single()
     }
 
 }

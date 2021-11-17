@@ -16,6 +16,7 @@ import n7.ad2.di.injector
 import n7.ad2.ui.heroInfo.adapter.HeroInfoAdapter
 import n7.ad2.ui.heroInfo.domain.vo.VOHeroInfoHeaderSound
 import n7.ad2.ui.heroPage.HeroPageFragment
+import n7.ad2.utils.ImageLoader
 import n7.ad2.utils.StickyHeaderDecorator
 import n7.ad2.utils.lazyUnsafe
 import n7.ad2.utils.viewModel2
@@ -30,6 +31,7 @@ class HeroInfoFragment : Fragment(R.layout.fragment_hero_info) {
         }
     }
 
+    @Inject lateinit var imageLoader: ImageLoader
     @Inject lateinit var heroInfoFactory: HeroInfoViewModel.Factory
 
     private var _binding: FragmentHeroInfoBinding? = null
@@ -61,7 +63,7 @@ class HeroInfoFragment : Fragment(R.layout.fragment_hero_info) {
 
     private fun setupSpellInfoRecyclerView() {
         val audioExoPlayer = (parentFragment as HeroPageFragment).audioExoPlayer
-        val heroInfoAdapter = HeroInfoAdapter(layoutInflater, audioExoPlayer, infoPopupWindow, playClickListener, keyClickListener)
+        val heroInfoAdapter = HeroInfoAdapter(layoutInflater, audioExoPlayer, infoPopupWindow, imageLoader, playClickListener, keyClickListener)
         val linearLayoutManager = LinearLayoutManager(requireContext())
 
         binding.rv.apply {

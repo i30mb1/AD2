@@ -14,8 +14,8 @@ data class VOHeroInfoHeaderSound(
     override val isPlaying: Boolean = false,
 ) : VOHeroInfo(), Playable
 
+data class VOHeroInfoMain(val urlHeroImage: String, val heroStatistics: HeroStatistics.Companion.Statistics) : VOHeroInfo()
 data class VOHeroSpells(val spells: List<VOSpell>) : VOHeroInfo()
-data class VOHeroMainInformation(val urlHeroImage: String, val heroStatistics: HeroStatistics.Companion.Statistics, val voDescriptionList: List<VOHeroInfo>) : VOHeroInfo()
 data class VOBodyTalent(val talentLeft: String, val talentLvl: String, val talentRight: String) : VOHeroInfo()
 data class VOBodySimple(val body: String) : VOHeroInfo()
 data class VOBodyWithSeparator(val body: SpannableString) : VOHeroInfo()

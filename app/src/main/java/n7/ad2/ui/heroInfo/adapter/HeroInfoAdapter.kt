@@ -19,7 +19,6 @@ import n7.ad2.databinding.ItemBodyHeroSpellsBinding
 import n7.ad2.databinding.ItemBodyLineBinding
 import n7.ad2.databinding.ItemBodyWithImageBinding
 import n7.ad2.databinding.ItemBodyWithSeparatorBinding
-import n7.ad2.databinding.ItemHeroMainInformationBinding
 import n7.ad2.ui.heroInfo.InfoPopupWindow
 import n7.ad2.ui.heroInfo.PopUpClickableSpan
 import n7.ad2.ui.heroInfo.domain.vo.VOBodyLine
@@ -29,9 +28,10 @@ import n7.ad2.ui.heroInfo.domain.vo.VOBodyWithImage
 import n7.ad2.ui.heroInfo.domain.vo.VOBodyWithSeparator
 import n7.ad2.ui.heroInfo.domain.vo.VOHeroInfo
 import n7.ad2.ui.heroInfo.domain.vo.VOHeroInfoHeaderSound
-import n7.ad2.ui.heroInfo.domain.vo.VOHeroMainInformation
+import n7.ad2.ui.heroInfo.domain.vo.VOHeroInfoMain
 import n7.ad2.ui.heroInfo.domain.vo.VOHeroSpells
 import n7.ad2.ui.heroPage.AudioExoPlayer
+import n7.ad2.utils.ImageLoader
 import n7.ad2.utils.StickyHeaderDecorator
 import n7.ad2.utils.extension.toPx
 
@@ -39,6 +39,7 @@ class HeroInfoAdapter(
     private val layoutInflater: LayoutInflater,
     private val audioExoPlayer: AudioExoPlayer,
     private val infoPopupWindow: InfoPopupWindow,
+    private val imageLoader: ImageLoader,
     private val onPlayIconClickListener: (model: VOHeroInfoHeaderSound) -> Unit,
     private val onKeyClickListener: (key: String) -> Unit,
 ) : ListAdapter<VOHeroInfo, RecyclerView.ViewHolder>(DiffCallback()),
@@ -51,18 +52,19 @@ class HeroInfoAdapter(
 
     override fun getItemViewType(position: Int): Int = when (getItem(position)) {
         is VOHeroInfoHeaderSound -> R.layout.item_header_sound
+        is VOHeroInfoMain -> R.layout.item_hero_info_main
 
         is VOBodyLine -> R.layout.item_body_line
         is VOBodySimple -> R.layout.item_body_simple
         is VOBodyWithSeparator -> R.layout.item_body_with_separator
         is VOBodyWithImage -> R.layout.item_body_with_image
         is VOBodyTalent -> R.layout.item_body_talent
-        is VOHeroMainInformation -> R.layout.item_hero_main_information
         is VOHeroSpells -> R.layout.item_body_hero_spells
     }
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int) = when (viewType) {
         R.layout.item_header_sound -> HeaderSoundViewHolder.from(layoutInflater, parent, onPlayIconClickListener, onKeyClickListener)
+        R.layout.item_hero_info_main -> HeroInfoMainViewHolder.from(layoutInflater, parent, imageLoader)
         else -> throw UnsupportedOperationException("could not find ViewHolder for $viewType")
     }
 
@@ -70,6 +72,7 @@ class HeroInfoAdapter(
         val item = getItem(position)
         when (holder) {
             is HeaderSoundViewHolder -> if (item != null) holder.bind(item as VOHeroInfoHeaderSound) else holder.clear()
+            is HeroInfoMainViewHolder -> if (item != null) holder.bind(item as VOHeroInfoMain) else holder.clear()
         }
     }
 
@@ -126,7 +129,6 @@ class HeroInfoAdapter(
                         rv.adapter = spellsListAdapter
                     }
                     R.layout.item_body_with_image -> ItemBodyWithImageBinding.inflate(layoutInflater, parent, false).also { it.popupListener = popupListener }
-                    R.layout.item_hero_main_information -> ItemHeroMainInformationBinding.inflate(layoutInflater, parent, false).also { it.descriptionListener = descriptionsListener }
                     else -> DataBindingUtil.inflate(layoutInflater, viewType, parent, false)
                 }
                 return ViewHolder(binding, popupListener)

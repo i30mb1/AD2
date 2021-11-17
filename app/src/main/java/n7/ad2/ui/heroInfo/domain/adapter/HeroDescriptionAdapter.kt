@@ -2,29 +2,11 @@ package n7.ad2.ui.heroInfo.domain.adapter
 
 import android.app.Application
 import n7.ad2.data.source.local.HeroRepository
-import n7.ad2.ui.heroInfo.HeroStatistics
 import n7.ad2.ui.heroInfo.domain.model.Ability
 import n7.ad2.ui.heroInfo.domain.model.LocalHeroDescription
 import n7.ad2.ui.heroInfo.domain.vo.VOHeroInfoHeaderSound
-import n7.ad2.ui.heroInfo.domain.vo.VOHeroMainInformation
 import n7.ad2.ui.heroInfo.domain.vo.VOHeroSpells
 import n7.ad2.ui.heroInfo.domain.vo.VOSpell
-
-@ExperimentalStdlibApi
-fun LocalHeroDescription.toVOHeroAttrs(application: Application, heroName: String): VOHeroMainInformation = VOHeroMainInformation(
-    HeroRepository.getFullUrlHeroImage(heroName),
-    HeroStatistics.Companion.Statistics(mainAttributes.attrStrength, mainAttributes.attrAgility, mainAttributes.attrIntelligence),
-    buildList {
-//        add(VOHeroInfoHeaderSound(application.getString(R.string.hero_fragment_description)))
-//        add(VOBodyWithSeparator(SpannableString(description)))
-//        add(VOHeroInfoHeaderSound(application.getString(R.string.hero_fragment_bio)))
-//        add(VOBodyWithSeparator(SpannableString(history)))
-        trivia?.let { trivia ->
-//            add(VOHeroInfoHeaderSound(application.getString(R.string.hero_fragment_trivia)))
-//            add(VOBodyWithSeparator(SpannableString(trivia.toStringListWithDash())))
-        }
-    }
-)
 
 @ExperimentalStdlibApi
 fun LocalHeroDescription.toVOHeroSpells(application: Application) = VOHeroSpells(abilities.map { it.toVOSpell(application) })
