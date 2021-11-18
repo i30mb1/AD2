@@ -9,16 +9,18 @@ import dagger.assisted.AssistedInject
 import kotlinx.coroutines.flow.MutableStateFlow
 import kotlinx.coroutines.flow.StateFlow
 import kotlinx.coroutines.flow.asStateFlow
+import kotlinx.coroutines.flow.launchIn
+import kotlinx.coroutines.flow.onEach
 import kotlinx.coroutines.launch
 import n7.ad2.R
 import n7.ad2.data.source.local.Locale
-import n7.ad2.ui.heroInfo.domain.interactor.GetHeroDescriptionInteractor
+import n7.ad2.ui.heroInfo.domain.interactor.GetVOHeroDescriptionUseCase
 import n7.ad2.ui.heroInfo.domain.vo.VOHeroInfo
 import n7.ad2.ui.heroPage.domain.usecase.GetLocalHeroByNameUseCase
 
 class HeroInfoViewModel @AssistedInject constructor(
     private val application: Application,
-    private val getHeroDescriptionInteractor: GetHeroDescriptionInteractor,
+    private val getHeroDescriptionInteractor: GetVOHeroDescriptionUseCase,
     private val getLocalHeroByNameUseCase: GetLocalHeroByNameUseCase,
     @Assisted private val heroName: String,
 ) : ViewModel() {
@@ -39,7 +41,9 @@ class HeroInfoViewModel @AssistedInject constructor(
         viewModelScope.launch {
             val locale = Locale.valueOf(application.getString(R.string.locale))
             val localHero = getLocalHeroByNameUseCase(heroName)
-            _list.emit(getHeroDescriptionInteractor(localHero, locale))
+            getHeroDescriptionInteractor(localHero, locale)
+                .onEach { list -> _list.emit(list) }
+                .launchIn(viewModelScope)
         }
     }
 

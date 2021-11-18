@@ -1,11 +1,11 @@
-package n7.ad2.ui.streams
+package n7.ad2.ui.heroInfo.adapter
 
 import android.graphics.Rect
 import android.view.View
 import androidx.recyclerview.widget.RecyclerView
 import n7.ad2.utils.extension.toPx
 
-class DividerItemDecorator : RecyclerView.ItemDecoration() {
+class HeroInfoItemDecorator : RecyclerView.ItemDecoration() {
 
     private val topOffset = 16.toPx
     private val botOffset = 16.toPx

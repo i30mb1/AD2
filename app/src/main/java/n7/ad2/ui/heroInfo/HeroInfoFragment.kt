@@ -14,6 +14,7 @@ import n7.ad2.R
 import n7.ad2.databinding.FragmentHeroInfoBinding
 import n7.ad2.di.injector
 import n7.ad2.ui.heroInfo.adapter.HeroInfoAdapter
+import n7.ad2.ui.heroInfo.adapter.HeroInfoItemDecorator
 import n7.ad2.ui.heroInfo.domain.vo.VOHeroInfoHeaderSound
 import n7.ad2.ui.heroPage.HeroPageFragment
 import n7.ad2.utils.ImageLoader
@@ -70,6 +71,7 @@ class HeroInfoFragment : Fragment(R.layout.fragment_hero_info) {
             adapter = heroInfoAdapter
             layoutManager = linearLayoutManager
             addItemDecoration(StickyHeaderDecorator(heroInfoAdapter, this))
+            addItemDecoration(HeroInfoItemDecorator())
         }
 
         viewModel.list.flowWithLifecycle(lifecycle, Lifecycle.State.STARTED)
