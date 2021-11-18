@@ -1,33 +1,16 @@
 <?xml version="1.0" encoding="utf-8"?>
-<layout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto">
+<com.google.android.material.card.MaterialCardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/root"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:stateListAnimator="@animator/spell_selected_animation">
 
-    <data>
+    <n7.ad2.utils.SelectableImageView
+        android:id="@+id/iv"
+        android:layout_width="60dp"
+        android:layout_height="60dp"
+        android:contentDescription="@string/desc_hero_spell"
+        app:srcCompat="@drawable/spell_placeholder" />
 
-        <variable
-            name="model"
-            type="n7.ad2.ui.heroInfo.domain.vo.VOSpell" />
-
-        <variable
-            name="itemClickListener"
-            type="kotlin.jvm.functions.Function1" />
-    </data>
-
-    <com.google.android.material.card.MaterialCardView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:onClick="@{()->itemClickListener.invoke(model)}"
-        android:stateListAnimator="@animator/spell"
-        app:selected="@{model.selected}">
-
-        <n7.ad2.utils.SelectableImageView
-            android:id="@+id/iv"
-            loadImageUrl="@{model.urlSpellImage}"
-            onError="@{@drawable/spell_placeholder}"
-            placeHolder="@{@drawable/spell_placeholder}"
-            android:layout_width="60dp"
-            android:layout_height="60dp"
-            android:contentDescription="@string/desc_hero_spell"
-            app:srcCompat="@drawable/spell_placeholder" />
-    </com.google.android.material.card.MaterialCardView>
-</layout>
+</com.google.android.material.card.MaterialCardView>

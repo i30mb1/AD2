@@ -18,11 +18,13 @@ sealed class VOHeroInfo {
 
     data class Header(val item: HeaderViewHolder.Data) : VOHeroInfo()
     data class Body(val item: BodyViewHolder.Data) : VOHeroInfo()
-    data class Attributes(val urlHeroImage: String, val heroStatistics: HeroStatistics.Statistics) : VOHeroInfo()
+    data class Attributes(val urlHeroImage: String, val heroStatistics: HeroStatistics.Statistics, val isSelected: Boolean) : VOHeroInfo()
+    data class Spells(val spells: List<VOSpell>) : VOHeroInfo()
 }
 
+data class VOSpell(val name: String, val urlSpellImage: String, val isSelected: Boolean)
 
-data class VOHeroSpells(val spells: List<VOSpell>) : VOHeroInfo()
+
 data class VOBodyTalent(val talentLeft: String, val talentLvl: String, val talentRight: String) : VOHeroInfo()
 data class VOBodySimple(val body: String) : VOHeroInfo()
 data class VOBodyWithImage(val body: SpannableString, @DrawableRes val drawable: Int, val tip: String) : VOHeroInfo()

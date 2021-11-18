@@ -14,7 +14,7 @@ import kotlinx.coroutines.flow.onEach
 import kotlinx.coroutines.launch
 import n7.ad2.R
 import n7.ad2.data.source.local.Locale
-import n7.ad2.ui.heroInfo.domain.interactor.GetVOHeroDescriptionUseCase
+import n7.ad2.ui.heroInfo.domain.usecase.GetVOHeroDescriptionUseCase
 import n7.ad2.ui.heroInfo.domain.vo.VOHeroInfo
 
 class HeroInfoViewModel @AssistedInject constructor(

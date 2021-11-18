@@ -5,53 +5,49 @@ import android.view.ViewGroup
 import androidx.recyclerview.widget.DiffUtil
 import androidx.recyclerview.widget.ListAdapter
 import androidx.recyclerview.widget.RecyclerView
-import n7.ad2.databinding.ItemSpellBinding
-import n7.ad2.ui.heroInfo.domain.vo.VOHeroInfo
+import n7.ad2.R
 import n7.ad2.ui.heroInfo.domain.vo.VOSpell
+import n7.ad2.utils.ImageLoader
 
 class SpellsListAdapter(
-    descriptionsListener: (List<VOHeroInfo>) -> Unit,
-) : ListAdapter<VOSpell, SpellsListAdapter.ViewHolder>(DiffCallback()) {
+    private val layoutInflater: LayoutInflater,
+    private val imageLoader: ImageLoader,
+    private val onSpellClickListener: (spell: VOSpell) -> Unit,
+) : ListAdapter<VOSpell, RecyclerView.ViewHolder>(DiffCallback()) {
 
-    private val itemClickListener = { model: VOSpell ->
-        descriptionsListener.invoke(model.voDescriptionList)
-        deselectAll()
-        model.selected = true
+    override fun onCreateViewHolder(parent: ViewGroup, viewType: Int) = when (viewType) {
+        R.layout.item_spell -> SpellViewHolder.from(layoutInflater, parent, imageLoader, onSpellClickListener)
+        else -> throw UnsupportedOperationException("could not find ViewHolder for $viewType")
     }
 
-    fun deselectAll() = currentList.forEach { item -> item.selected = false }
+    override fun getItemViewType(position: Int) = when (getItem(position)) {
+        is VOSpell -> R.layout.item_spell
+        else -> throw UnsupportedOperationException("could not get type for $position")
+    }
 
-    override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): ViewHolder = ViewHolder.from(parent, itemClickListener)
-
-    override fun onBindViewHolder(holder: ViewHolder, position: Int) = holder.bind(getItem(position))
-
-    class ViewHolder private constructor(
-        private val binding: ItemSpellBinding,
-        private val itemClickListener: (VOSpell) -> Unit,
-    ) : RecyclerView.ViewHolder(binding.root) {
-
-        fun bind(model: VOSpell) = binding.let {
-            it.model = model
-            it.itemClickListener = itemClickListener
-            it.executePendingBindings()
+    override fun onBindViewHolder(holder: RecyclerView.ViewHolder, position: Int) {
+        val item = getItem(position)
+        when (holder) {
+            is SpellViewHolder -> if (item != null) holder.bind(item) else holder.clear()
         }
+    }
 
-        companion object {
-            fun from(
-                parent: ViewGroup,
-                itemClickListener: (VOSpell) -> Unit,
-            ): ViewHolder {
-                val layoutInflater = LayoutInflater.from(parent.context)
-                val binding = ItemSpellBinding.inflate(layoutInflater, parent, false)
-                return ViewHolder(binding, itemClickListener)
-            }
+    override fun onBindViewHolder(holder: RecyclerView.ViewHolder, position: Int, payloads: MutableList<Any>) {
+        when {
+            payloads.isNullOrEmpty() -> super.onBindViewHolder(holder, position, payloads)
+            holder is SpellViewHolder -> holder.bind((payloads.last() as VOSpell).isSelected)
         }
     }
 
     class DiffCallback : DiffUtil.ItemCallback<VOSpell>() {
         override fun areItemsTheSame(oldItem: VOSpell, newItem: VOSpell): Boolean = oldItem.name == newItem.name
         override fun areContentsTheSame(oldItem: VOSpell, newItem: VOSpell): Boolean = oldItem == newItem
+        override fun getChangePayload(oldItem: VOSpell, newItem: VOSpell): Any? {
+            if (oldItem.isSelected != newItem.isSelected) return newItem
+            return super.getChangePayload(oldItem, newItem)
+        }
     }
+
 }
 
 

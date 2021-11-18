@@ -1,4 +1,4 @@
-package n7.ad2.ui.heroInfo.domain.interactor
+package n7.ad2.ui.heroInfo.domain.usecase
 
 import android.app.Application
 import androidx.core.text.toSpanned
@@ -17,6 +17,7 @@ import n7.ad2.data.source.local.Locale
 import n7.ad2.ui.heroInfo.HeroStatistics
 import n7.ad2.ui.heroInfo.domain.model.LocalHeroDescription
 import n7.ad2.ui.heroInfo.domain.vo.VOHeroInfo
+import n7.ad2.ui.heroInfo.domain.vo.VOSpell
 import n7.ad2.utils.extension.toTextWithDash
 import javax.inject.Inject
 
@@ -46,7 +47,16 @@ class GetVOHeroDescriptionUseCase @Inject constructor(
                     info.mainAttributes.attrStrength,
                     info.mainAttributes.attrAgility,
                     info.mainAttributes.attrIntelligence
-                )
+                ),
+                heroInfo == HeroInfo.Main
+            ))
+            add(VOHeroInfo.Spells(
+                info.abilities.map { ability ->
+                    val name = ability.spellName
+                    val urlSpellImage = HeroRepository.getFullUrlHeroSpell(ability.spellName)
+                    val isSelected = (heroInfo as? HeroInfo.Spell)?.spellName == ability.spellName
+                    VOSpell(name, urlSpellImage, isSelected)
+                }
             ))
             when (heroInfo) {
                 HeroInfo.Main -> {

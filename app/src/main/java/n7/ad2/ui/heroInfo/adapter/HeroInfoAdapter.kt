@@ -17,18 +17,17 @@ import n7.ad2.BR
 import n7.ad2.R
 import n7.ad2.base.adapter.BodyViewHolder
 import n7.ad2.base.adapter.HeaderViewHolder
-import n7.ad2.databinding.ItemBodyHeroSpellsBinding
 import n7.ad2.databinding.ItemBodyLineBinding
 import n7.ad2.databinding.ItemBodyWithImageBinding
 import n7.ad2.ui.heroInfo.InfoPopupWindow
 import n7.ad2.ui.heroInfo.PopUpClickableSpan
-import n7.ad2.ui.heroInfo.domain.interactor.GetVOHeroDescriptionUseCase
+import n7.ad2.ui.heroInfo.domain.usecase.GetVOHeroDescriptionUseCase
 import n7.ad2.ui.heroInfo.domain.vo.VOBodyLine
 import n7.ad2.ui.heroInfo.domain.vo.VOBodySimple
 import n7.ad2.ui.heroInfo.domain.vo.VOBodyTalent
 import n7.ad2.ui.heroInfo.domain.vo.VOBodyWithImage
 import n7.ad2.ui.heroInfo.domain.vo.VOHeroInfo
-import n7.ad2.ui.heroInfo.domain.vo.VOHeroSpells
+import n7.ad2.ui.heroInfo.domain.vo.VOSpell
 import n7.ad2.ui.heroPage.AudioExoPlayer
 import n7.ad2.utils.ImageLoader
 import n7.ad2.utils.StickyHeaderDecorator
@@ -41,11 +40,9 @@ class HeroInfoAdapter(
     private val onPlayIconClickListener: (model: VOHeroInfo.HeaderSound) -> Unit,
     private val onKeyClickListener: (key: String) -> Unit,
     private val onHeroInfoCLickListener: (heroInfo: GetVOHeroDescriptionUseCase.HeroInfo) -> Unit,
+    private val onSpellClickListener: (spell: VOSpell) -> Unit,
 ) : ListAdapter<VOHeroInfo, RecyclerView.ViewHolder>(DiffCallback()),
     StickyHeaderDecorator.StickyHeaderInterface {
-
-    private val popupListener = { view: View, text: String -> infoPopupWindow.show(view, text) }
-    private val descriptionsListener = { voDescriptions: List<VOHeroInfo> -> setDescriptions(voDescriptions) }
 
     override fun getHeaderLayout(): Int = R.layout.item_header
 
@@ -54,12 +51,12 @@ class HeroInfoAdapter(
         is VOHeroInfo.Attributes -> R.layout.item_hero_attributes
         is VOHeroInfo.Header -> R.layout.item_header
         is VOHeroInfo.Body -> R.layout.item_body
+        is VOHeroInfo.Spells -> R.layout.item_hero_spells
 
         is VOBodyLine -> R.layout.item_body_line
         is VOBodySimple -> R.layout.item_body_simple
         is VOBodyWithImage -> R.layout.item_body_with_image
         is VOBodyTalent -> R.layout.item_body_talent
-        is VOHeroSpells -> R.layout.item_body_hero_spells
     }
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int) = when (viewType) {
@@ -67,6 +64,7 @@ class HeroInfoAdapter(
         R.layout.item_hero_attributes -> HeroInfoMainViewHolder.from(layoutInflater, parent, imageLoader, onHeroInfoCLickListener)
         R.layout.item_header -> HeaderViewHolder.from(layoutInflater, parent)
         R.layout.item_body -> BodyViewHolder.from(layoutInflater, parent)
+        R.layout.item_hero_spells -> HeroSpellsViewHolder.from(layoutInflater, parent, imageLoader, onSpellClickListener)
         else -> throw UnsupportedOperationException("could not find ViewHolder for $viewType")
     }
 
@@ -77,6 +75,15 @@ class HeroInfoAdapter(
             is HeroInfoMainViewHolder -> if (item != null) holder.bind(item as VOHeroInfo.Attributes) else holder.clear()
             is HeaderViewHolder -> if (item != null) holder.bind((item as VOHeroInfo.Header).item) else holder.clear()
             is BodyViewHolder -> if (item != null) holder.bind((item as VOHeroInfo.Body).item) else holder.clear()
+            is HeroSpellsViewHolder -> if (item != null) holder.bind(item as VOHeroInfo.Spells) else holder.clear()
+        }
+    }
+
+    override fun onBindViewHolder(holder: RecyclerView.ViewHolder, position: Int, payloads: MutableList<Any>) {
+        when {
+            payloads.isNullOrEmpty() -> super.onBindViewHolder(holder, position, payloads)
+            holder is HeroSpellsViewHolder -> holder.bind((payloads.last() as VOHeroInfo.Spells))
+            holder is HeroInfoMainViewHolder -> holder.bind((payloads.last() as VOHeroInfo.Attributes).isSelected)
         }
     }
 
@@ -126,11 +133,6 @@ class HeroInfoAdapter(
             ): ViewHolder {
                 val layoutInflater = LayoutInflater.from(parent.context)
                 val binding: ViewDataBinding = when (viewType) {
-                    R.layout.item_body_hero_spells -> ItemBodyHeroSpellsBinding.inflate(layoutInflater, parent, false).apply {
-                        val spellsListAdapter = SpellsListAdapter(descriptionsListener)
-                        spellsListAdapter.stateRestorationPolicy = StateRestorationPolicy.PREVENT_WHEN_EMPTY
-                        rv.adapter = spellsListAdapter
-                    }
                     R.layout.item_body_with_image -> ItemBodyWithImageBinding.inflate(layoutInflater, parent, false).also { it.popupListener = popupListener }
                     else -> DataBindingUtil.inflate(layoutInflater, viewType, parent, false)
                 }
@@ -142,5 +144,10 @@ class HeroInfoAdapter(
     private class DiffCallback : DiffUtil.ItemCallback<VOHeroInfo>() {
         override fun areItemsTheSame(oldItem: VOHeroInfo, newItem: VOHeroInfo): Boolean = oldItem::class == newItem::class
         override fun areContentsTheSame(oldItem: VOHeroInfo, newItem: VOHeroInfo): Boolean = oldItem == newItem
+        override fun getChangePayload(oldItem: VOHeroInfo, newItem: VOHeroInfo): Any? {
+            if (oldItem is VOHeroInfo.Spells && newItem is VOHeroInfo.Spells && oldItem.spells != newItem.spells) return newItem
+            if (oldItem is VOHeroInfo.Attributes && newItem is VOHeroInfo.Attributes && oldItem.isSelected != newItem.isSelected) return newItem
+            return super.getChangePayload(oldItem, newItem)
+        }
     }
 }

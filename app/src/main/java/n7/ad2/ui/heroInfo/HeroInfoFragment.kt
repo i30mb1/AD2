@@ -15,8 +15,9 @@ import n7.ad2.databinding.FragmentHeroInfoBinding
 import n7.ad2.di.injector
 import n7.ad2.ui.heroInfo.adapter.HeroInfoAdapter
 import n7.ad2.ui.heroInfo.adapter.HeroInfoItemDecorator
-import n7.ad2.ui.heroInfo.domain.interactor.GetVOHeroDescriptionUseCase
+import n7.ad2.ui.heroInfo.domain.usecase.GetVOHeroDescriptionUseCase
 import n7.ad2.ui.heroInfo.domain.vo.VOHeroInfo
+import n7.ad2.ui.heroInfo.domain.vo.VOSpell
 import n7.ad2.ui.heroPage.HeroPageFragment
 import n7.ad2.utils.ImageLoader
 import n7.ad2.utils.lazyUnsafe
@@ -45,6 +46,7 @@ class HeroInfoFragment : Fragment(R.layout.fragment_hero_info) {
     private val onPlayClickListener = { model: VOHeroInfo.HeaderSound -> }
     private val onKeyClickListener = { key: String -> }
     private val onHeroInfoCLickListener = { heroInfo: GetVOHeroDescriptionUseCase.HeroInfo -> viewModel.load(heroInfo) }
+    private val onSpellClickListener = { spell: VOSpell -> viewModel.load(GetVOHeroDescriptionUseCase.HeroInfo.Spell(spell.name)) }
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -65,12 +67,21 @@ class HeroInfoFragment : Fragment(R.layout.fragment_hero_info) {
 
     private fun setupSpellInfoRecyclerView() {
         val audioExoPlayer = (parentFragment as HeroPageFragment).audioExoPlayer
-        val heroInfoAdapter = HeroInfoAdapter(layoutInflater, infoPopupWindow, imageLoader, onPlayClickListener, onKeyClickListener, onHeroInfoCLickListener)
+        val heroInfoAdapter = HeroInfoAdapter(
+            layoutInflater,
+            infoPopupWindow,
+            imageLoader,
+            onPlayClickListener,
+            onKeyClickListener,
+            onHeroInfoCLickListener,
+            onSpellClickListener
+        )
         val linearLayoutManager = LinearLayoutManager(requireContext())
 
         binding.rv.apply {
             adapter = heroInfoAdapter
             layoutManager = linearLayoutManager
+            setHasFixedSize(true)
 //            addItemDecoration(StickyHeaderDecorator(heroInfoAdapter, this))
             addItemDecoration(HeroInfoItemDecorator())
         }

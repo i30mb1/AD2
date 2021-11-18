@@ -5,7 +5,7 @@ import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
 import n7.ad2.R
 import n7.ad2.databinding.ItemHeroAttributesBinding
-import n7.ad2.ui.heroInfo.domain.interactor.GetVOHeroDescriptionUseCase
+import n7.ad2.ui.heroInfo.domain.usecase.GetVOHeroDescriptionUseCase
 import n7.ad2.ui.heroInfo.domain.vo.VOHeroInfo
 import n7.ad2.utils.ImageLoader
 
@@ -17,11 +17,15 @@ class HeroInfoMainViewHolder private constructor(
     fun bind(item: VOHeroInfo.Attributes) {
         imageLoader.load(binding.ivHero, item.urlHeroImage, R.drawable.hero_placeholder)
         binding.heroStatistics.setHeroStatistics(item.heroStatistics)
+        bind(item.isSelected)
     }
 
-    fun clear() {
-
+    fun bind(isSelected: Boolean) {
+        binding.root.isSelected = isSelected
+        binding.ivHero.isSelected = isSelected
     }
+
+    fun clear() = Unit
 
     companion object {
         fun from(

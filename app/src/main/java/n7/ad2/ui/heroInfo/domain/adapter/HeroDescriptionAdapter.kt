@@ -1,22 +1,11 @@
 package n7.ad2.ui.heroInfo.domain.adapter
 
-import android.app.Application
-import n7.ad2.data.source.local.HeroRepository
-import n7.ad2.ui.heroInfo.domain.model.Ability
-import n7.ad2.ui.heroInfo.domain.model.LocalHeroDescription
-import n7.ad2.ui.heroInfo.domain.vo.VOHeroInfo
-import n7.ad2.ui.heroInfo.domain.vo.VOHeroSpells
-import n7.ad2.ui.heroInfo.domain.vo.VOSpell
-
-@ExperimentalStdlibApi
-fun LocalHeroDescription.toVOHeroSpells(application: Application) = VOHeroSpells(abilities.map { it.toVOSpell(application) })
-
-@ExperimentalStdlibApi
-fun Ability.toVOSpell(application: Application) = VOSpell(
-    this.spellName,
-    HeroRepository.getFullUrlHeroSpell(this.spellName),
-    buildList {
-        add(VOHeroInfo.HeaderSound(spellName, hotKey!!, legacyKey!!, audioUrl!!))
+//@ExperimentalStdlibApi
+//fun Ability.toVOSpell(application: Application) = VOSpell(
+//    this.spellName,
+//    HeroRepository.getFullUrlHeroSpell(this.spellName),
+//    buildList {
+//        add(VOHeroInfo.HeaderSound(spellName, hotKey!!, legacyKey!!, audioUrl!!))
 //        effects.forEach { title -> add(VOBodyLine(SpannableString(title.spanWithDotaImages(application, true)))) }
 //        talents?.forEach { talent -> add(VOBodyTalent(talent.talentLeft, talent.talentLvl, talent.talentRight)) }
 //        description?.let { description -> add(VOBodySimple(description)) }
@@ -34,6 +23,6 @@ fun Ability.toVOSpell(application: Application) = VOSpell(
 ////            add(VOHeroInfoHeaderSound(application.getString(R.string.hero_fragment_notes)))
 //            add(VOBodyWithSeparator(SpannableString(notes.toStringListWithDash())))
 //        }
-    }
-)
+//    }
+//)
 
