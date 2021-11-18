@@ -22,6 +22,7 @@ import n7.ad2.databinding.ItemBodyLineBinding
 import n7.ad2.databinding.ItemBodyWithImageBinding
 import n7.ad2.ui.heroInfo.InfoPopupWindow
 import n7.ad2.ui.heroInfo.PopUpClickableSpan
+import n7.ad2.ui.heroInfo.domain.interactor.GetVOHeroDescriptionUseCase
 import n7.ad2.ui.heroInfo.domain.vo.VOBodyLine
 import n7.ad2.ui.heroInfo.domain.vo.VOBodySimple
 import n7.ad2.ui.heroInfo.domain.vo.VOBodyTalent
@@ -39,11 +40,11 @@ import n7.ad2.utils.extension.toPx
 
 class HeroInfoAdapter(
     private val layoutInflater: LayoutInflater,
-    private val audioExoPlayer: AudioExoPlayer,
     private val infoPopupWindow: InfoPopupWindow,
     private val imageLoader: ImageLoader,
     private val onPlayIconClickListener: (model: VOHeroInfoHeaderSound) -> Unit,
     private val onKeyClickListener: (key: String) -> Unit,
+    private val onHeroInfoCLickListener: (heroInfo: GetVOHeroDescriptionUseCase.HeroInfo) -> Unit,
 ) : ListAdapter<VOHeroInfo, RecyclerView.ViewHolder>(DiffCallback()),
     StickyHeaderDecorator.StickyHeaderInterface {
 
@@ -67,7 +68,7 @@ class HeroInfoAdapter(
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int) = when (viewType) {
         R.layout.item_header_sound -> HeaderSoundViewHolder.from(layoutInflater, parent, onPlayIconClickListener, onKeyClickListener)
-        R.layout.item_hero_info_main -> HeroInfoMainViewHolder.from(layoutInflater, parent, imageLoader)
+        R.layout.item_hero_info_main -> HeroInfoMainViewHolder.from(layoutInflater, parent, imageLoader, onHeroInfoCLickListener)
         R.layout.item_header -> HeaderViewHolder.from(layoutInflater, parent)
         R.layout.item_body -> BodyViewHolder.from(layoutInflater, parent)
         else -> throw UnsupportedOperationException("could not find ViewHolder for $viewType")

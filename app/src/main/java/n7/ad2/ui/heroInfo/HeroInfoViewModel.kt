@@ -16,12 +16,10 @@ import n7.ad2.R
 import n7.ad2.data.source.local.Locale
 import n7.ad2.ui.heroInfo.domain.interactor.GetVOHeroDescriptionUseCase
 import n7.ad2.ui.heroInfo.domain.vo.VOHeroInfo
-import n7.ad2.ui.heroPage.domain.usecase.GetLocalHeroByNameUseCase
 
 class HeroInfoViewModel @AssistedInject constructor(
     private val application: Application,
-    private val getHeroDescriptionInteractor: GetVOHeroDescriptionUseCase,
-    private val getLocalHeroByNameUseCase: GetLocalHeroByNameUseCase,
+    private val getVOHeroDescriptionUseCase: GetVOHeroDescriptionUseCase,
     @Assisted private val heroName: String,
 ) : ViewModel() {
 
@@ -34,14 +32,13 @@ class HeroInfoViewModel @AssistedInject constructor(
     val list: StateFlow<List<VOHeroInfo>> = _list.asStateFlow()
 
     init {
-        loadHero()
+        load(null)
     }
 
-    private fun loadHero() {
+    fun load(heroInfo: GetVOHeroDescriptionUseCase.HeroInfo?) {
         viewModelScope.launch {
             val locale = Locale.valueOf(application.getString(R.string.locale))
-            val localHero = getLocalHeroByNameUseCase(heroName)
-            getHeroDescriptionInteractor(localHero, locale)
+            getVOHeroDescriptionUseCase(heroName, locale, heroInfo)
                 .onEach { list -> _list.emit(list) }
                 .launchIn(viewModelScope)
         }

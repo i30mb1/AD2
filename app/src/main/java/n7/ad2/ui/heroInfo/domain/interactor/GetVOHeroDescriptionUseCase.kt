@@ -14,7 +14,6 @@ import n7.ad2.base.adapter.BodyViewHolder
 import n7.ad2.base.adapter.HeaderViewHolder
 import n7.ad2.data.source.local.HeroRepository
 import n7.ad2.data.source.local.Locale
-import n7.ad2.data.source.local.model.LocalHero
 import n7.ad2.ui.heroInfo.HeroStatistics
 import n7.ad2.ui.heroInfo.domain.model.LocalHeroDescription
 import n7.ad2.ui.heroInfo.domain.vo.VOHeroInfo
@@ -32,30 +31,44 @@ class GetVOHeroDescriptionUseCase @Inject constructor(
     private val dispatchers: DispatchersProvider,
 ) {
 
+    sealed class HeroInfo {
+        object Main : HeroInfo()
+        data class Spell(val spellName: String) : HeroInfo()
+    }
+
     @OptIn(ExperimentalStdlibApi::class)
-    suspend operator fun invoke(localHero: LocalHero, locale: Locale): Flow<List<VOHeroInfo>> = flow {
+    suspend operator fun invoke(heroName: String, locale: Locale, heroInfo: HeroInfo? = null): Flow<List<VOHeroInfo>> = flow {
+        val localHero = heroRepository.getHero(heroName)
         val json = heroRepository.getHeroDescription(localHero.name, locale)
         val info = moshi.adapter(LocalHeroDescription::class.java).fromJson(json)!!
 
         emit(buildList {
             add(VOHeroInfoMain(
                 HeroRepository.getFullUrlHeroImage(localHero.name),
-                HeroStatistics.Companion.Statistics(
+                HeroStatistics.Statistics(
                     info.mainAttributes.attrStrength,
                     info.mainAttributes.attrAgility,
                     info.mainAttributes.attrIntelligence
                 )
             ))
-            add(VOHeroInfoHeader(HeaderViewHolder.Data(application.getString(R.string.hero_fragment_description))))
-            add(VOHeroInfoBody(BodyViewHolder.Data(info.description.toSpanned())))
-            add(VOHeroInfoHeader(HeaderViewHolder.Data(application.getString(R.string.hero_fragment_bio))))
-            add(VOHeroInfoBody(BodyViewHolder.Data(info.history.toSpanned())))
-            info.trivia?.let { list ->
-                add(VOHeroInfoHeader(HeaderViewHolder.Data(application.getString(R.string.hero_fragment_trivia))))
-                add(VOHeroInfoBody(BodyViewHolder.Data(list.toTextWithDash())))
+            when (heroInfo) {
+                HeroInfo.Main -> {
+                    add(VOHeroInfoHeader(HeaderViewHolder.Data(application.getString(R.string.hero_fragment_description))))
+                    add(VOHeroInfoBody(BodyViewHolder.Data(info.description.toSpanned())))
+                    add(VOHeroInfoHeader(HeaderViewHolder.Data(application.getString(R.string.hero_fragment_bio))))
+                    add(VOHeroInfoBody(BodyViewHolder.Data(info.history.toSpanned())))
+                    info.trivia?.let { list ->
+                        add(VOHeroInfoHeader(HeaderViewHolder.Data(application.getString(R.string.hero_fragment_trivia))))
+                        add(VOHeroInfoBody(BodyViewHolder.Data(list.toTextWithDash())))
+                    }
+                }
+                is HeroInfo.Spell -> {
+
+                }
             }
+
         })
-    }.onStart { logger.log("load ${localHero.name} description") }
+    }.onStart { logger.log("load $heroName description") }
         .flowOn(dispatchers.IO)
 
 }

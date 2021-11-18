@@ -15,15 +15,9 @@ class HeroStatistics(
     attributeSet: AttributeSet,
 ) : ConstraintLayout(context, attributeSet) {
 
-    companion object {
-        data class Statistics(val strength: Double, val agility: Double, val intelligence: Double)
-    }
+    data class Statistics(val strength: Double, val agility: Double, val intelligence: Double)
 
     private val binding: HeroStatisticsBinding = HeroStatisticsBinding.inflate(LayoutInflater.from(context), this)
-
-    init {
-    }
-
 
     fun setHeroStatistics(statistics: Statistics) {
         binding.tvAgility.text = "${statistics.agility}"

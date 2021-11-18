@@ -15,6 +15,7 @@ import n7.ad2.databinding.FragmentHeroInfoBinding
 import n7.ad2.di.injector
 import n7.ad2.ui.heroInfo.adapter.HeroInfoAdapter
 import n7.ad2.ui.heroInfo.adapter.HeroInfoItemDecorator
+import n7.ad2.ui.heroInfo.domain.interactor.GetVOHeroDescriptionUseCase
 import n7.ad2.ui.heroInfo.domain.vo.VOHeroInfoHeaderSound
 import n7.ad2.ui.heroPage.HeroPageFragment
 import n7.ad2.utils.ImageLoader
@@ -41,8 +42,9 @@ class HeroInfoFragment : Fragment(R.layout.fragment_hero_info) {
     }
     private val infoPopupWindow: InfoPopupWindow by lazyUnsafe { InfoPopupWindow(requireContext(), lifecycle) }
     private val heroName by lazyUnsafe { requireArguments().getString(HERO_NAME)!! }
-    private val playClickListener: (model: VOHeroInfoHeaderSound) -> Unit = { }
-    private val keyClickListener: (key: String) -> Unit = { }
+    private val onPlayClickListener = { model: VOHeroInfoHeaderSound -> }
+    private val onKeyClickListener = { key: String -> }
+    private val onHeroInfoCLickListener = { heroInfo: GetVOHeroDescriptionUseCase.HeroInfo -> viewModel.load(heroInfo) }
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -63,7 +65,7 @@ class HeroInfoFragment : Fragment(R.layout.fragment_hero_info) {
 
     private fun setupSpellInfoRecyclerView() {
         val audioExoPlayer = (parentFragment as HeroPageFragment).audioExoPlayer
-        val heroInfoAdapter = HeroInfoAdapter(layoutInflater, audioExoPlayer, infoPopupWindow, imageLoader, playClickListener, keyClickListener)
+        val heroInfoAdapter = HeroInfoAdapter(layoutInflater, infoPopupWindow, imageLoader, onPlayClickListener, onKeyClickListener, onHeroInfoCLickListener)
         val linearLayoutManager = LinearLayoutManager(requireContext())
 
         binding.rv.apply {
@@ -74,7 +76,11 @@ class HeroInfoFragment : Fragment(R.layout.fragment_hero_info) {
         }
 
         viewModel.list.flowWithLifecycle(lifecycle, Lifecycle.State.STARTED)
-            .onEach(heroInfoAdapter::submitList)
+            .onEach { list ->
+                heroInfoAdapter.submitList(list) {
+                    binding.rv.invalidateItemDecorations()
+                }
+            }
             .launchIn(lifecycleScope)
     }
 

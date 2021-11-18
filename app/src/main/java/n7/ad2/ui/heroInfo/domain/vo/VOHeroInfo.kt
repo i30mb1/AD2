@@ -19,7 +19,12 @@ data class VOHeroInfoHeaderSound(
 data class VOHeroInfoHeader(val item: HeaderViewHolder.Data) : VOHeroInfo()
 data class VOHeroInfoBody(val item: BodyViewHolder.Data) : VOHeroInfo()
 
-data class VOHeroInfoMain(val urlHeroImage: String, val heroStatistics: HeroStatistics.Companion.Statistics) : VOHeroInfo()
+data class VOHeroInfoMain(
+    val urlHeroImage: String,
+    val heroStatistics: HeroStatistics.Statistics,
+
+    ) : VOHeroInfo()
+
 data class VOHeroSpells(val spells: List<VOSpell>) : VOHeroInfo()
 data class VOBodyTalent(val talentLeft: String, val talentLvl: String, val talentRight: String) : VOHeroInfo()
 data class VOBodySimple(val body: String) : VOHeroInfo()

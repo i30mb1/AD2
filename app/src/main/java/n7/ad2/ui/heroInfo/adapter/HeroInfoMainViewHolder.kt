@@ -5,6 +5,7 @@ import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
 import n7.ad2.R
 import n7.ad2.databinding.ItemHeroInfoMainBinding
+import n7.ad2.ui.heroInfo.domain.interactor.GetVOHeroDescriptionUseCase
 import n7.ad2.ui.heroInfo.domain.vo.VOHeroInfoMain
 import n7.ad2.utils.ImageLoader
 
@@ -27,8 +28,10 @@ class HeroInfoMainViewHolder private constructor(
             layoutInflater: LayoutInflater,
             parent: ViewGroup,
             imageLoader: ImageLoader,
+            onHeroInfoCLickListener: (heroInfo: GetVOHeroDescriptionUseCase.HeroInfo) -> Unit,
         ): HeroInfoMainViewHolder {
             val binding = ItemHeroInfoMainBinding.inflate(layoutInflater, parent, false)
+            binding.root.setOnClickListener { onHeroInfoCLickListener(GetVOHeroDescriptionUseCase.HeroInfo.Main) }
             return HeroInfoMainViewHolder(binding, imageLoader)
         }
     }
