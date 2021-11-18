@@ -7,23 +7,20 @@ import n7.ad2.base.adapter.HeaderViewHolder
 import n7.ad2.ui.heroInfo.HeroStatistics
 import n7.ad2.ui.heroPage.Playable
 
-sealed class VOHeroInfo
-data class VOHeroInfoHeaderSound(
-    val title: String,
-    val hotkey: String,
-    val legacyKey: String,
-    override val audioUrl: String,
-    override val isPlaying: Boolean = false,
-) : VOHeroInfo(), Playable
+sealed class VOHeroInfo {
+    data class HeaderSound(
+        val title: String,
+        val hotkey: String,
+        val legacyKey: String,
+        override val audioUrl: String,
+        override val isPlaying: Boolean = false,
+    ) : VOHeroInfo(), Playable
 
-data class VOHeroInfoHeader(val item: HeaderViewHolder.Data) : VOHeroInfo()
-data class VOHeroInfoBody(val item: BodyViewHolder.Data) : VOHeroInfo()
+    data class Header(val item: HeaderViewHolder.Data) : VOHeroInfo()
+    data class Body(val item: BodyViewHolder.Data) : VOHeroInfo()
+    data class Attributes(val urlHeroImage: String, val heroStatistics: HeroStatistics.Statistics) : VOHeroInfo()
+}
 
-data class VOHeroInfoMain(
-    val urlHeroImage: String,
-    val heroStatistics: HeroStatistics.Statistics,
-
-    ) : VOHeroInfo()
 
 data class VOHeroSpells(val spells: List<VOSpell>) : VOHeroInfo()
 data class VOBodyTalent(val talentLeft: String, val talentLvl: String, val talentRight: String) : VOHeroInfo()

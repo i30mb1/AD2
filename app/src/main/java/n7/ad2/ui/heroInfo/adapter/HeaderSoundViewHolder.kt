@@ -4,16 +4,16 @@ import android.view.LayoutInflater
 import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
 import n7.ad2.databinding.ItemHeaderSoundBinding
-import n7.ad2.ui.heroInfo.domain.vo.VOHeroInfoHeaderSound
+import n7.ad2.ui.heroInfo.domain.vo.VOHeroInfo
 
 class HeaderSoundViewHolder private constructor(
     private val binding: ItemHeaderSoundBinding,
-    private val onPlayIconClickListener: (model: VOHeroInfoHeaderSound) -> Unit,
+    private val onPlayIconClickListener: (model: VOHeroInfo.HeaderSound) -> Unit,
     private val onKeyClickListener: (key: String) -> Unit,
 ) : RecyclerView.ViewHolder(binding.root) {
 
 
-    fun bind(item: VOHeroInfoHeaderSound) {
+    fun bind(item: VOHeroInfo.HeaderSound) {
         binding.tvHotKey.text = item.hotkey
         binding.tvLegacyKey.text = item.legacyKey
         binding.tvTitle.text = item.title
@@ -31,7 +31,7 @@ class HeaderSoundViewHolder private constructor(
         fun from(
             layoutInflater: LayoutInflater,
             parent: ViewGroup,
-            playClickListener: (model: VOHeroInfoHeaderSound) -> Unit,
+            playClickListener: (model: VOHeroInfo.HeaderSound) -> Unit,
             keyClickListener: (key: String) -> Unit,
         ): HeaderSoundViewHolder {
             val binding = ItemHeaderSoundBinding.inflate(layoutInflater, parent, false)

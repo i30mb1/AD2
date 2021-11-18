@@ -16,7 +16,7 @@ import n7.ad2.di.injector
 import n7.ad2.ui.heroInfo.adapter.HeroInfoAdapter
 import n7.ad2.ui.heroInfo.adapter.HeroInfoItemDecorator
 import n7.ad2.ui.heroInfo.domain.interactor.GetVOHeroDescriptionUseCase
-import n7.ad2.ui.heroInfo.domain.vo.VOHeroInfoHeaderSound
+import n7.ad2.ui.heroInfo.domain.vo.VOHeroInfo
 import n7.ad2.ui.heroPage.HeroPageFragment
 import n7.ad2.utils.ImageLoader
 import n7.ad2.utils.lazyUnsafe
@@ -42,7 +42,7 @@ class HeroInfoFragment : Fragment(R.layout.fragment_hero_info) {
     }
     private val infoPopupWindow: InfoPopupWindow by lazyUnsafe { InfoPopupWindow(requireContext(), lifecycle) }
     private val heroName by lazyUnsafe { requireArguments().getString(HERO_NAME)!! }
-    private val onPlayClickListener = { model: VOHeroInfoHeaderSound -> }
+    private val onPlayClickListener = { model: VOHeroInfo.HeaderSound -> }
     private val onKeyClickListener = { key: String -> }
     private val onHeroInfoCLickListener = { heroInfo: GetVOHeroDescriptionUseCase.HeroInfo -> viewModel.load(heroInfo) }
 

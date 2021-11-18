@@ -17,7 +17,7 @@ import java.io.File
 @ExperimentalCoroutinesApi
 @SmallTest
 @RunWith(AndroidJUnit4::class)
-class MainTest {
+class AttributesTest {
 
     @get:Rule
     val coroutineTestRule = CoroutineTestRule()

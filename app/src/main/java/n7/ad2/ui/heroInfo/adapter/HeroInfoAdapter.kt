@@ -28,10 +28,6 @@ import n7.ad2.ui.heroInfo.domain.vo.VOBodySimple
 import n7.ad2.ui.heroInfo.domain.vo.VOBodyTalent
 import n7.ad2.ui.heroInfo.domain.vo.VOBodyWithImage
 import n7.ad2.ui.heroInfo.domain.vo.VOHeroInfo
-import n7.ad2.ui.heroInfo.domain.vo.VOHeroInfoBody
-import n7.ad2.ui.heroInfo.domain.vo.VOHeroInfoHeader
-import n7.ad2.ui.heroInfo.domain.vo.VOHeroInfoHeaderSound
-import n7.ad2.ui.heroInfo.domain.vo.VOHeroInfoMain
 import n7.ad2.ui.heroInfo.domain.vo.VOHeroSpells
 import n7.ad2.ui.heroPage.AudioExoPlayer
 import n7.ad2.utils.ImageLoader
@@ -42,7 +38,7 @@ class HeroInfoAdapter(
     private val layoutInflater: LayoutInflater,
     private val infoPopupWindow: InfoPopupWindow,
     private val imageLoader: ImageLoader,
-    private val onPlayIconClickListener: (model: VOHeroInfoHeaderSound) -> Unit,
+    private val onPlayIconClickListener: (model: VOHeroInfo.HeaderSound) -> Unit,
     private val onKeyClickListener: (key: String) -> Unit,
     private val onHeroInfoCLickListener: (heroInfo: GetVOHeroDescriptionUseCase.HeroInfo) -> Unit,
 ) : ListAdapter<VOHeroInfo, RecyclerView.ViewHolder>(DiffCallback()),
@@ -54,10 +50,10 @@ class HeroInfoAdapter(
     override fun getHeaderLayout(): Int = R.layout.item_header
 
     override fun getItemViewType(position: Int): Int = when (getItem(position)) {
-        is VOHeroInfoHeaderSound -> R.layout.item_header_sound
-        is VOHeroInfoMain -> R.layout.item_hero_info_main
-        is VOHeroInfoHeader -> R.layout.item_header
-        is VOHeroInfoBody -> R.layout.item_body
+        is VOHeroInfo.HeaderSound -> R.layout.item_header_sound
+        is VOHeroInfo.Attributes -> R.layout.item_hero_attributes
+        is VOHeroInfo.Header -> R.layout.item_header
+        is VOHeroInfo.Body -> R.layout.item_body
 
         is VOBodyLine -> R.layout.item_body_line
         is VOBodySimple -> R.layout.item_body_simple
@@ -68,7 +64,7 @@ class HeroInfoAdapter(
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int) = when (viewType) {
         R.layout.item_header_sound -> HeaderSoundViewHolder.from(layoutInflater, parent, onPlayIconClickListener, onKeyClickListener)
-        R.layout.item_hero_info_main -> HeroInfoMainViewHolder.from(layoutInflater, parent, imageLoader, onHeroInfoCLickListener)
+        R.layout.item_hero_attributes -> HeroInfoMainViewHolder.from(layoutInflater, parent, imageLoader, onHeroInfoCLickListener)
         R.layout.item_header -> HeaderViewHolder.from(layoutInflater, parent)
         R.layout.item_body -> BodyViewHolder.from(layoutInflater, parent)
         else -> throw UnsupportedOperationException("could not find ViewHolder for $viewType")
@@ -77,16 +73,16 @@ class HeroInfoAdapter(
     override fun onBindViewHolder(holder: RecyclerView.ViewHolder, position: Int) {
         val item = getItem(position)
         when (holder) {
-            is HeaderSoundViewHolder -> if (item != null) holder.bind(item as VOHeroInfoHeaderSound) else holder.clear()
-            is HeroInfoMainViewHolder -> if (item != null) holder.bind(item as VOHeroInfoMain) else holder.clear()
-            is HeaderViewHolder -> if (item != null) holder.bind((item as VOHeroInfoHeader).item) else holder.clear()
-            is BodyViewHolder -> if (item != null) holder.bind((item as VOHeroInfoBody).item) else holder.clear()
+            is HeaderSoundViewHolder -> if (item != null) holder.bind(item as VOHeroInfo.HeaderSound) else holder.clear()
+            is HeroInfoMainViewHolder -> if (item != null) holder.bind(item as VOHeroInfo.Attributes) else holder.clear()
+            is HeaderViewHolder -> if (item != null) holder.bind((item as VOHeroInfo.Header).item) else holder.clear()
+            is BodyViewHolder -> if (item != null) holder.bind((item as VOHeroInfo.Body).item) else holder.clear()
         }
     }
 
     @OptIn(ExperimentalStdlibApi::class)
     private fun setDescriptions(voDescriptions: List<VOHeroInfo>) = submitList(buildList {
-        addAll(currentList.takeWhile { it !is VOHeroInfoHeaderSound })
+        addAll(currentList.takeWhile { it !is VOHeroInfo.HeaderSound })
         addAll(voDescriptions)
     })
 

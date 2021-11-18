@@ -17,9 +17,6 @@ import n7.ad2.data.source.local.Locale
 import n7.ad2.ui.heroInfo.HeroStatistics
 import n7.ad2.ui.heroInfo.domain.model.LocalHeroDescription
 import n7.ad2.ui.heroInfo.domain.vo.VOHeroInfo
-import n7.ad2.ui.heroInfo.domain.vo.VOHeroInfoBody
-import n7.ad2.ui.heroInfo.domain.vo.VOHeroInfoHeader
-import n7.ad2.ui.heroInfo.domain.vo.VOHeroInfoMain
 import n7.ad2.utils.extension.toTextWithDash
 import javax.inject.Inject
 
@@ -43,7 +40,7 @@ class GetVOHeroDescriptionUseCase @Inject constructor(
         val info = moshi.adapter(LocalHeroDescription::class.java).fromJson(json)!!
 
         emit(buildList {
-            add(VOHeroInfoMain(
+            add(VOHeroInfo.Attributes(
                 HeroRepository.getFullUrlHeroImage(localHero.name),
                 HeroStatistics.Statistics(
                     info.mainAttributes.attrStrength,
@@ -53,13 +50,13 @@ class GetVOHeroDescriptionUseCase @Inject constructor(
             ))
             when (heroInfo) {
                 HeroInfo.Main -> {
-                    add(VOHeroInfoHeader(HeaderViewHolder.Data(application.getString(R.string.hero_fragment_description))))
-                    add(VOHeroInfoBody(BodyViewHolder.Data(info.description.toSpanned())))
-                    add(VOHeroInfoHeader(HeaderViewHolder.Data(application.getString(R.string.hero_fragment_bio))))
-                    add(VOHeroInfoBody(BodyViewHolder.Data(info.history.toSpanned())))
+                    add(VOHeroInfo.Header(HeaderViewHolder.Data(application.getString(R.string.hero_fragment_description))))
+                    add(VOHeroInfo.Body(BodyViewHolder.Data(info.description.toSpanned())))
+                    add(VOHeroInfo.Header(HeaderViewHolder.Data(application.getString(R.string.hero_fragment_bio))))
+                    add(VOHeroInfo.Body(BodyViewHolder.Data(info.history.toSpanned())))
                     info.trivia?.let { list ->
-                        add(VOHeroInfoHeader(HeaderViewHolder.Data(application.getString(R.string.hero_fragment_trivia))))
-                        add(VOHeroInfoBody(BodyViewHolder.Data(list.toTextWithDash())))
+                        add(VOHeroInfo.Header(HeaderViewHolder.Data(application.getString(R.string.hero_fragment_trivia))))
+                        add(VOHeroInfo.Body(BodyViewHolder.Data(list.toTextWithDash())))
                     }
                 }
                 is HeroInfo.Spell -> {
