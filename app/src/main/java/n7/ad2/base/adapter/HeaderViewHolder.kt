@@ -11,8 +11,8 @@ class HeaderViewHolder private constructor(
 
     data class Data(val title: String)
 
-    fun bind(model: Data) = binding.apply {
-        tvTitle.text = model.title
+    fun bind(item: Data) = binding.apply {
+        tvTitle.text = item.title
     }
 
     fun clear() = Unit

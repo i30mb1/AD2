@@ -16,6 +16,6 @@
         android:layout_height="wrap_content"
         android:background="?colorSurface"
         android:padding="8dp"
-        android:textAppearance="?textAppearanceBody1"
+        android:textAppearance="?textAppearance.B1"
         tools:text="@tools:sample/lorem" />
 </layout>

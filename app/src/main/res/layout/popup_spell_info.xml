@@ -28,7 +28,7 @@
             android:layout_marginEnd="8dp"
             android:background="?colorAccent"
             android:padding="8dp"
-            android:textAppearance="@style/TextAppearance.Body1"
+            android:textAppearance="@style/TextAppearance.B1"
             tools:text="tools:sample/lorem/random" />
     </LinearLayout>
 </layout>

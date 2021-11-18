@@ -33,17 +33,6 @@ class GetVOHeroDescriptionUseCase @Inject constructor(
                 )
             ))
         })
-
-//                buildList {
-//        add(VOHeroInfoHeaderSound(application.getString(R.string.hero_fragment_description)))
-//        add(VOBodyWithSeparator(SpannableString(description)))
-//        add(VOHeroInfoHeaderSound(application.getString(R.string.hero_fragment_bio)))
-//        add(VOBodyWithSeparator(SpannableString(history)))
-//                    trivia?.let { trivia ->
-//            add(VOHeroInfoHeaderSound(application.getString(R.string.hero_fragment_trivia)))
-//            add(VOBodyWithSeparator(SpannableString(trivia.toStringListWithDash())))
-//                    }
-//                }
 //            add(VOHeroInfoHeaderSound("spellName", "hotKey", "legacyKey", "audioUrl!!"))
 //            val voHeroAttrs = localHeroDescription.toVOHeroAttrs(application, localHero.name)
 //            add(voHeroAttrs)

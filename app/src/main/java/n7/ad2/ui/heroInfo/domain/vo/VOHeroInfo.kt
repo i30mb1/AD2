@@ -2,6 +2,8 @@ package n7.ad2.ui.heroInfo.domain.vo
 
 import android.text.SpannableString
 import androidx.annotation.DrawableRes
+import n7.ad2.base.adapter.BodyViewHolder
+import n7.ad2.base.adapter.HeaderViewHolder
 import n7.ad2.ui.heroInfo.HeroStatistics
 import n7.ad2.ui.heroPage.Playable
 
@@ -14,10 +16,12 @@ data class VOHeroInfoHeaderSound(
     override val isPlaying: Boolean = false,
 ) : VOHeroInfo(), Playable
 
+data class VOHeroInfoHeader(val item: HeaderViewHolder.Data) : VOHeroInfo()
+data class VOHeroInfoBody(val item: BodyViewHolder.Data) : VOHeroInfo()
+
 data class VOHeroInfoMain(val urlHeroImage: String, val heroStatistics: HeroStatistics.Companion.Statistics) : VOHeroInfo()
 data class VOHeroSpells(val spells: List<VOSpell>) : VOHeroInfo()
 data class VOBodyTalent(val talentLeft: String, val talentLvl: String, val talentRight: String) : VOHeroInfo()
 data class VOBodySimple(val body: String) : VOHeroInfo()
-data class VOBodyWithSeparator(val body: SpannableString) : VOHeroInfo()
 data class VOBodyWithImage(val body: SpannableString, @DrawableRes val drawable: Int, val tip: String) : VOHeroInfo()
 data class VOBodyLine(val title: SpannableString) : VOHeroInfo()

@@ -28,7 +28,7 @@ class AnimatedToolbar(context: Context, attr: AttributeSet) : Toolbar(context, a
         contentDescription = context.getString(R.string.desc_hero_mini_avatar)
         addView(this)
     }
-    private val tvLocale: TickerView = TickerView(context, null, R.style.TextAppearance_Body1).apply {
+    private val tvLocale: TickerView = TickerView(context, null, R.style.TextAppearance_B1).apply {
         layoutParams = params.apply { width = 60.toPx }
         setCharacterList(TickerUtils.getDefaultListForUSCurrency())
         animationDuration = resources.getInteger(R.integer.animation_long).toLong()

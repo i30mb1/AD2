@@ -8,6 +8,7 @@
     <attr name="textAppearanceTalent" format="reference" />
     <attr name="textAppearanceHeroStatistics" format="reference" />
 
+    <attr name="textAppearance.B1" format="reference" />
     <attr name="textAppearance.H6.White" format="reference" />
     <attr name="TextAppearance.H6.White.Bold" format="reference" />
     <attr name="textStyleHeroAdvantage" format="reference" />

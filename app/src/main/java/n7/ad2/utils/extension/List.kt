@@ -1,6 +1,8 @@
 package n7.ad2.utils.extension
 
 import android.text.SpannableStringBuilder
+import android.text.Spanned
+import androidx.core.text.toSpanned
 
 private const val SEPARATOR = "- "
 private const val COLON = ": "
@@ -14,14 +16,14 @@ fun List<String>.toStringList(): String {
     return builder.toString()
 }
 
-fun List<String>.toStringListWithDash(): String {
+fun List<String>.toTextWithDash(): Spanned {
     val builder = StringBuilder()
     forEachIndexed { index, text ->
         builder.append(SEPARATOR)
         builder.append(text)
         if (index != lastIndex) builder.append(System.lineSeparator())
     }
-    return builder.toString()
+    return builder.toSpanned()
 }
 
 fun List<String>.toStringListWithDashAfterColon(): String {

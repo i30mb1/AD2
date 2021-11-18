@@ -15,18 +15,20 @@ import androidx.recyclerview.widget.ListAdapter
 import androidx.recyclerview.widget.RecyclerView
 import n7.ad2.BR
 import n7.ad2.R
+import n7.ad2.base.adapter.BodyViewHolder
+import n7.ad2.base.adapter.HeaderViewHolder
 import n7.ad2.databinding.ItemBodyHeroSpellsBinding
 import n7.ad2.databinding.ItemBodyLineBinding
 import n7.ad2.databinding.ItemBodyWithImageBinding
-import n7.ad2.databinding.ItemBodyWithSeparatorBinding
 import n7.ad2.ui.heroInfo.InfoPopupWindow
 import n7.ad2.ui.heroInfo.PopUpClickableSpan
 import n7.ad2.ui.heroInfo.domain.vo.VOBodyLine
 import n7.ad2.ui.heroInfo.domain.vo.VOBodySimple
 import n7.ad2.ui.heroInfo.domain.vo.VOBodyTalent
 import n7.ad2.ui.heroInfo.domain.vo.VOBodyWithImage
-import n7.ad2.ui.heroInfo.domain.vo.VOBodyWithSeparator
 import n7.ad2.ui.heroInfo.domain.vo.VOHeroInfo
+import n7.ad2.ui.heroInfo.domain.vo.VOHeroInfoBody
+import n7.ad2.ui.heroInfo.domain.vo.VOHeroInfoHeader
 import n7.ad2.ui.heroInfo.domain.vo.VOHeroInfoHeaderSound
 import n7.ad2.ui.heroInfo.domain.vo.VOHeroInfoMain
 import n7.ad2.ui.heroInfo.domain.vo.VOHeroSpells
@@ -48,15 +50,16 @@ class HeroInfoAdapter(
     private val popupListener = { view: View, text: String -> infoPopupWindow.show(view, text) }
     private val descriptionsListener = { voDescriptions: List<VOHeroInfo> -> setDescriptions(voDescriptions) }
 
-    override fun getHeaderLayout(): Int = R.layout.item_header_sound
+    override fun getHeaderLayout(): Int = R.layout.item_header
 
     override fun getItemViewType(position: Int): Int = when (getItem(position)) {
         is VOHeroInfoHeaderSound -> R.layout.item_header_sound
         is VOHeroInfoMain -> R.layout.item_hero_info_main
+        is VOHeroInfoHeader -> R.layout.item_header
+        is VOHeroInfoBody -> R.layout.item_body
 
         is VOBodyLine -> R.layout.item_body_line
         is VOBodySimple -> R.layout.item_body_simple
-        is VOBodyWithSeparator -> R.layout.item_body_with_separator
         is VOBodyWithImage -> R.layout.item_body_with_image
         is VOBodyTalent -> R.layout.item_body_talent
         is VOHeroSpells -> R.layout.item_body_hero_spells
@@ -65,6 +68,8 @@ class HeroInfoAdapter(
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int) = when (viewType) {
         R.layout.item_header_sound -> HeaderSoundViewHolder.from(layoutInflater, parent, onPlayIconClickListener, onKeyClickListener)
         R.layout.item_hero_info_main -> HeroInfoMainViewHolder.from(layoutInflater, parent, imageLoader)
+        R.layout.item_header -> HeaderViewHolder.from(layoutInflater, parent)
+        R.layout.item_body -> BodyViewHolder.from(layoutInflater, parent)
         else -> throw UnsupportedOperationException("could not find ViewHolder for $viewType")
     }
 
@@ -73,6 +78,8 @@ class HeroInfoAdapter(
         when (holder) {
             is HeaderSoundViewHolder -> if (item != null) holder.bind(item as VOHeroInfoHeaderSound) else holder.clear()
             is HeroInfoMainViewHolder -> if (item != null) holder.bind(item as VOHeroInfoMain) else holder.clear()
+            is HeaderViewHolder -> if (item != null) holder.bind((item as VOHeroInfoHeader).item) else holder.clear()
+            is BodyViewHolder -> if (item != null) holder.bind((item as VOHeroInfoBody).item) else holder.clear()
         }
     }
 
@@ -97,7 +104,6 @@ class HeroInfoAdapter(
 
         private fun bindSetting(binding: ViewDataBinding) {
             when (binding) {
-                is ItemBodyWithSeparatorBinding -> setActionsForSpans(binding.tvBody, binding.item!!.body)
                 is ItemBodyWithImageBinding -> setActionsForSpans(binding.tvBody, binding.item!!.body)
                 is ItemBodyLineBinding -> setActionsForSpans(binding.tvBody, binding.item!!.title)
             }

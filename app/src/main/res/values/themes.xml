@@ -32,11 +32,11 @@
         <item name="elevationOverlayEnabled">false</item>
         <item name="elevationOverlayColor">@color/red_500</item>
 
+        <item name="textAppearance.B1">@style/TextAppearance.B1</item>
         <item name="textAppearance.H6.White">@style/TextAppearance.H6.White</item>
         <item name="TextAppearance.H6.White.Bold">@style/TextAppearance.H6.White.Bold</item>
 
         <item name="textAppearanceHeadline6">@style/TextAppearance.Headline6</item>
-        <item name="textAppearanceBody1">@style/TextAppearance.Body1</item>
         <item name="textAppearanceSubtitle2">@style/TextAppearance.Subtitle2</item>
         <item name="textAppearanceCaption">@style/TextAppearance.Caption</item>
         <item name="textAppearanceButton">@style/TextAppearance.Button</item>

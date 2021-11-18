@@ -83,7 +83,7 @@
                 android:paddingStart="4dp"
                 android:paddingEnd="4dp"
                 android:text="@{item.title}"
-                android:textAppearance="?textAppearanceBody1"
+                android:textAppearance="?textAppearance.B1"
                 android:textColor="?android:textColorSecondary"
                 tools:text="И даже если я разочарую тебя, я хочу, чтобы ты запомнил меня" />
 

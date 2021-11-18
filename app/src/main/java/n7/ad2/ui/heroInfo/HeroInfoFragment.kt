@@ -18,7 +18,6 @@ import n7.ad2.ui.heroInfo.adapter.HeroInfoItemDecorator
 import n7.ad2.ui.heroInfo.domain.vo.VOHeroInfoHeaderSound
 import n7.ad2.ui.heroPage.HeroPageFragment
 import n7.ad2.utils.ImageLoader
-import n7.ad2.utils.StickyHeaderDecorator
 import n7.ad2.utils.lazyUnsafe
 import n7.ad2.utils.viewModel2
 import javax.inject.Inject
@@ -70,7 +69,7 @@ class HeroInfoFragment : Fragment(R.layout.fragment_hero_info) {
         binding.rv.apply {
             adapter = heroInfoAdapter
             layoutManager = linearLayoutManager
-            addItemDecoration(StickyHeaderDecorator(heroInfoAdapter, this))
+//            addItemDecoration(StickyHeaderDecorator(heroInfoAdapter, this))
             addItemDecoration(HeroInfoItemDecorator())
         }
 
