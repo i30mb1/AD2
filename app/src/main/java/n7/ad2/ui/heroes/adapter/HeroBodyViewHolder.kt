@@ -3,7 +3,6 @@ package n7.ad2.ui.heroes.adapter
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import androidx.core.view.isVisible
 import androidx.recyclerview.widget.RecyclerView
 import n7.ad2.R
 import n7.ad2.databinding.ItemHeroBodyBinding
@@ -18,7 +17,7 @@ class HeroBodyViewHolder private constructor(
     fun bind(hero: VOHeroBody) = binding.apply {
         imageLoader.load(ivImage, hero.imageUrl, R.drawable.hero_placeholder)
         tvTitle.text = hero.name
-        vRedLine.isVisible = hero.viewedByUser
+        binding.ivImage.isSelected = hero.viewedByUser
         root.setTag(R.id.ViewHolderBinding, binding)
         root.setTag(R.id.ViewHolderModel, hero)
     }

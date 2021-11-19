@@ -35,6 +35,11 @@
         <item name="textAppearance.B1">@style/TextAppearance.B1</item>
         <item name="textAppearance.H6.White">@style/TextAppearance.H6.White</item>
         <item name="TextAppearance.H6.White.Bold">@style/TextAppearance.H6.White.Bold</item>
+        <item name="TextAppearance.Signature">@style/TextAppearance.Signature</item>
+        <item name="TextAppearance.Signature.White">@style/TextAppearance.Signature.White</item>
+        <item name="TextAppearance.Signature.White.Bold">
+            @style/TextAppearance.Signature.White.Bold
+        </item>
 
         <item name="textAppearanceHeadline6">@style/TextAppearance.Headline6</item>
         <item name="textAppearanceSubtitle2">@style/TextAppearance.Subtitle2</item>
@@ -46,7 +51,6 @@
 
         <item name="textStyleHeroAdvantage">@style/Widget.TextView.HeroAdvantage</item>
         <item name="textStyleHeroDisadvantage">@style/Widget.TextView.HeroDisadvantage</item>
-        <item name="textStyleHeroSignature">@style/Widget.TextView.HeroSignature</item>
         <item name="textStyleHeroGuideItemSignature">@style/Widget.TextView.HeroGuideItemSignature
         </item>
         <item name="textStyleItemSignature">@style/Widget.TextView.ItemSignature</item>

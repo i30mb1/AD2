@@ -7,7 +7,7 @@
     tools:layout_height="112dp"
     tools:layout_width="200dp">
 
-    <ImageView
+    <n7.ad2.utils.SelectableImageView
         android:id="@+id/iv_image"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
@@ -17,13 +17,7 @@
 
     <TextView
         android:id="@+id/tv_title"
-        style="?textStyleHeroSignature"
+        style="?TextAppearance.Signature.White.Bold"
         tools:text="@sample/heroes.json/data/nameEng" />
-
-    <View
-        android:id="@+id/v_red_line"
-        android:layout_width="@dimen/line_width"
-        android:layout_height="match_parent"
-        android:background="?colorPrimary" />
 
 </com.google.android.material.card.MaterialCardView>

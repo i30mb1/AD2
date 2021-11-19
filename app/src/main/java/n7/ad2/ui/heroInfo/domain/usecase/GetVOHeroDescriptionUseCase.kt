@@ -6,7 +6,6 @@ import com.squareup.moshi.Moshi
 import kotlinx.coroutines.flow.Flow
 import kotlinx.coroutines.flow.flow
 import kotlinx.coroutines.flow.flowOn
-import kotlinx.coroutines.flow.onStart
 import n7.ad2.AD2Logger
 import n7.ad2.R
 import n7.ad2.base.DispatchersProvider
@@ -31,7 +30,7 @@ class GetVOHeroDescriptionUseCase @Inject constructor(
 
     sealed class HeroInfo {
         object Main : HeroInfo()
-        data class Spell(val spellName: String) : HeroInfo()
+        data class Spell(val name: String) : HeroInfo()
     }
 
     @OptIn(ExperimentalStdlibApi::class)
@@ -54,7 +53,7 @@ class GetVOHeroDescriptionUseCase @Inject constructor(
                 info.abilities.map { ability ->
                     val name = ability.spellName
                     val urlSpellImage = HeroRepository.getFullUrlHeroSpell(ability.spellName)
-                    val isSelected = (heroInfo as? HeroInfo.Spell)?.spellName == ability.spellName
+                    val isSelected = (heroInfo as? HeroInfo.Spell)?.name == ability.spellName
                     VOSpell(name, urlSpellImage, isSelected)
                 }
             ))
@@ -73,9 +72,7 @@ class GetVOHeroDescriptionUseCase @Inject constructor(
 
                 }
             }
-
         })
-    }.onStart { logger.log("load $heroName description") }
-        .flowOn(dispatchers.IO)
+    }.flowOn(dispatchers.IO)
 
 }
