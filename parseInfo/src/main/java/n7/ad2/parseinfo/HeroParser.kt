@@ -2,12 +2,7 @@
 
 package n7.ad2.parseinfo
 
-import kotlinx.coroutines.CoroutineScope
-import kotlinx.coroutines.Dispatchers
-import kotlinx.coroutines.async
-import kotlinx.coroutines.launch
 import kotlinx.coroutines.runBlocking
-import n7.ad2.parseinfo.ParseHeroes.Companion.parser
 import org.json.simple.JSONArray
 import org.json.simple.JSONObject
 import org.jsoup.Jsoup
@@ -19,60 +14,42 @@ import java.io.File
 import java.net.URL
 import javax.imageio.ImageIO
 
-// Builder Pattern https://medium.com/mindorks/builder-pattern-vs-kotlin-dsl-c3ebaca6bc3b
-class ParseHeroes private constructor(
-    private val loadRusDescription: Boolean,
-    private val loadEngDescription: Boolean,
-    private val loadRusResponses: Boolean,
-    private val loadEngResponses: Boolean,
-    private val loadHeroFullImage: Boolean,
-    private val loadHeroSpellImage: Boolean,
-) : CoroutineScope by (CoroutineScope(Dispatchers.IO)) {
+data class HeroAndUrl(val name: String, val url: String)
 
-    private constructor(builder: Builder) : this(
-        builder.loadRusDescription,
-        builder.loadEngDescription,
-        builder.loadRusResponses,
-        builder.loadEngResponses,
-        builder.loadHeroFullImage,
-        builder.loadHeroSpellImage
-    )
+class HeroParser {
 
-    enum class LOCALE(val urlAllHeroes: String, val baseUrl: String, val directory: String, val response: String) {
+    companion object {
+        private const val SPELL_FOLDER = "heroesSpell"
+        private const val HEROES_FOLDER = "heroes"
+        private const val FILE_NAME = "heroes.json"
+        private const val MAIN_URL_RU = "https://dota2.fandom.com/ru/wiki"
+        private const val MAIN_URL_EN = "https://dota2.fandom.com/wiki"
+        private const val HEROES_URL_RU = "$MAIN_URL_RU/Heroes"
+        private const val HEROES_URL_EN = "$MAIN_URL_EN/Heroes"
+    }
+
+    enum class LOCALE(val heroesUrl: String, val baseUrl: String, val directory: String, val response: String) {
         RU("https://dota2.fandom.com/ru/wiki/%D0%93%D0%B5%D1%80%D0%BE%D0%B8", "https://dota2.fandom.com/ru/wiki/", "ru", "Реплики"),
         EN("https://dota2.fandom.com/wiki/Heroes", "https://dota2.fandom.com/wiki/", "en", "Responses")
     }
 
-
-    companion object {
-        const val HERO_FULL_PHOTO_NAME = "full"
-        const val HERO_FULL_PHOTO_TYPE = "png"
-        const val HEROES_SPELL_FOLDER = "heroesSpell"
-        const val ASSETS_FOLDER_HEROES = "heroes"
-
-        inline fun parser(block: Builder.() -> Unit) = Builder().apply(block).build()
-
-        class Builder {
-            var loadEngDescription: Boolean = false
-            var loadRusDescription: Boolean = false
-            var loadEngResponses: Boolean = false
-            var loadRusResponses: Boolean = false
-            var loadHeroFullImage: Boolean = false
-            var loadHeroSpellImage: Boolean = false
-
-            fun build() = ParseHeroes(this)
-        }
+    fun loadHeroesOnEnglish() {
+        getHeroesList(HEROES_URL_EN, MAIN_URL_EN).forEach(::loadHero)
     }
 
-    suspend fun start() {
-        val list = loadHeroesFile().await()
-        if (loadEngDescription) loadHeroes(LOCALE.EN).join()
-        if (loadRusDescription) loadHeroes(LOCALE.RU).join()
-        if (loadEngResponses) loadResponses(LOCALE.EN, list).join()
-        if (loadRusResponses) loadResponses(LOCALE.RU, list).join()
+    fun loadHeroesOnRussian() {
+//        val list = getHeroesList(HEROES_URL_RU)
     }
 
-    private fun loadResponses(locale: LOCALE, heroList: ArrayList<String>) = launch {
+    fun loadResponsesOnEnglish() {
+//        loadResponses(LOCALE.EN, list)
+    }
+
+    fun loadResponsesOnRussian() {
+//        loadResponses(LOCALE.RU, list)
+    }
+
+    private fun loadResponses(locale: LOCALE, heroList: ArrayList<String>) {
         heroList
 //            .filter { it == "Dawnbreaker" }
             .forEach { hero ->
@@ -152,12 +129,12 @@ class ParseHeroes private constructor(
                 }
 
                 println("response in ${locale.directory} for hero $hero saved (${allResponsesWithCategories.toString().length} bytes)")
-                File(assets + File.separator + ASSETS_FOLDER_HEROES + File.separator + hero + File.separator + locale.directory + File.separator + "responses.json").writeText(
+                File(assets + File.separator + HEROES_FOLDER + File.separator + hero + File.separator + locale.directory + File.separator + "responses.json").writeText(
                     allResponsesWithCategories.toString())
             }
     }
 
-    private fun getHeroes(document: Document): Elements {
+    private fun getHeroesElements(document: Document): Elements {
         val heroesTable = document.getElementsByAttributeValue("style", "text-align:center")[0]
         return heroesTable.getElementsByAttributeValue("style", "width:150px; height:84px; display:inline-block; overflow:hidden; margin:1px")
     }
@@ -174,82 +151,50 @@ class ParseHeroes private constructor(
         return Jsoup.connect(url).get()
     }
 
-    private fun loadHeroes(locale: LOCALE) = launch {
-        val rootUrl = connectTo(locale.urlAllHeroes)
-        val heroes = getHeroes(rootUrl)
-
-        heroes
-            .forEachIndexed { index, _ ->
-                val heroName = getHeroName(heroes[index])
-                val heroDescriptionUrl = getHeroHref(heroes[index])
-
-//            if(heroName == "Dawnbreaker")
-                loadHero(locale, heroName, "$ASSETS_FOLDER_HEROES/$heroName/${locale.directory}", "$ASSETS_FOLDER_HEROES/$heroName")
-            }
-    }
-
-    private fun loadHeroesFile() = async {
-        val heroList = ArrayList<String>()
-        var heroMainAttr = "Strength"
-//        val heroesZhUrl = "https://dota2-zh.gamepedia.com/Heroes"
-        val fileName = "heroes.json"
-
-        val rootEng = connectTo(LOCALE.EN.urlAllHeroes)
-//        val rootZh = connectTo(heroesZhUrl)
+    fun createFileWithHeroesAndFolders() {
+        val path = assets + FILE_NAME
+        val root = connectTo(HEROES_URL_EN)
+        var mainAttribute = "Strength"
 
         JSONObject().apply {
             JSONArray().apply {
-
-                val heroesEng = getHeroes(rootEng)
-//                val heroesZh = getHeroes(rootZh)
-
+                val heroesEng = getHeroesElements(root)
                 heroesEng.forEachIndexed { index, _ ->
                     val heroObject = JSONObject().apply {
                         val heroName = getHeroName(heroesEng[index])
-//                        val heroHrefEng = getHeroHref(heroesEng[index])
-
-                        put("nameEng", heroName)
-                        if (heroName == "Anti-Mage") heroMainAttr = "Agility"
-                        if (heroName == "Ancient Apparition") heroMainAttr = "Intelligence"
-                        put("mainAttr", heroMainAttr)
-//                        put("hrefEng", heroHrefEng)
-//                        if (withZh) put("nameZh", getHeroName(heroesZh[index]))
-//                        if (withZh) put("hrefZh", getHeroHref(heroesZh[index]))
-                        val directory = "heroes/$heroName"
-                        if (loadEngDescription || loadEngResponses) createHeroFolderInAssets("$directory/en")
-                        if (loadRusDescription || loadRusResponses) createHeroFolderInAssets("$directory/ru")
-
-                        heroList.add(heroName)
+                        put("name", heroName)
+                        if (heroName == "Anti-Mage") mainAttribute = "Agility"
+                        if (heroName == "Ancient Apparition") mainAttribute = "Intelligence"
+                        put("mainAttribute", mainAttribute)
+                        val url = getHeroHref(heroesEng[index])
+                        put("url", url)
+                        val directory = "$HEROES_FOLDER/$heroName"
+                        File("$assets$directory/en").mkdirs()
+                        File("$assets$directory/ru").mkdirs()
                     }
                     add(heroObject)
                 }
                 put("heroes", this)
             }
-            File(assets + fileName).writeText(toJSONString())
+            File(path).writeText(toJSONString())
         }
-        println("file $fileName saved")
-        heroList
+        println("heroes loaded $path")
     }
 
-    private fun loadHero(locale: LOCALE, heroPath: String, heroLocalizedDirectory: String, heroDirectory: String) {
-        val heroUrlEng = "${locale.baseUrl}$heroPath"
-        if (!checkConnectToHero(heroUrlEng)) return
-
-        val root = connectTo(heroUrlEng)
-
-        if (loadHeroFullImage) loadHeroImageFull(root, heroDirectory)
-        if (loadHeroFullImage) loadHeroImageMinimap(root, heroDirectory)
-        loadHeroInformation(root, heroLocalizedDirectory)
+    private fun getHeroesList(heroesUrl: String, mainUrl: String): List<HeroAndUrl> {
+        val root = connectTo(heroesUrl)
+        return getHeroesElements(root).map { element ->
+            val name = getHeroName(element)
+            HeroAndUrl(name, "$mainUrl/$name")
+        }.toList()
     }
 
-    private fun loadHeroImageMinimap(root: Document, directory: String) {
-        try {
-            val imageUrl = root.getElementsByTag("img")[6].attr("data-src")
-            saveImageInDirectory(imageUrl, directory, "minimap.png")
-            println("image minimap saved")
-        } catch (e: Exception) {
-            println("image minimap not saved")
-        }
+    private fun loadHero(heroAndUrl: HeroAndUrl) {
+        val (name, heroUrl) = heroAndUrl
+        val root = connectTo(heroUrl)
+        loadHeroImageFull(root, name)
+        loadHeroImageMinimap(root, name)
+//        loadHeroInformation(root, heroLocalizedDirectory)
     }
 
     private fun loadHeroInformation(root: Document, directory: String) {
@@ -358,7 +303,7 @@ class ParseHeroes private constructor(
                     val spellName = it.getElementsByTag("div")[3].childNode(0).toString().trim()
                     put("spellName", spellName)
 
-                    if (loadHeroSpellImage) loadSpellImage(it, spellName)
+//                    if (loadHeroSpellImage) loadSpellImage(it, spellName)
 
                     var audioUrl = it.getElementsByTag("source").attr("src")
                     if (audioUrl.isNullOrEmpty()) audioUrl = null
@@ -449,7 +394,7 @@ class ParseHeroes private constructor(
     private fun loadSpellImage(it: Element, spellName: String) {
         try {
             val spellImage = it.getElementsByAttributeValue("class", "image")[0].attr("href")
-            saveImageInDirectory(spellImage, HEROES_SPELL_FOLDER + File.separator, "$spellName.png")
+            saveImageInDirectory(spellImage, SPELL_FOLDER + File.separator, "$spellName.png")
         } catch (e: Exception) {
             println("cannot download hero spell $spellName")
         }
@@ -473,47 +418,35 @@ class ParseHeroes private constructor(
         put("description", description)
     }
 
-    private fun loadHeroImageFull(root: Document, directory: String) {
+    private fun loadHeroImageFull(root: Document, name: String) {
+        val url = root.getElementsByTag("img")[2].attr("data-src")
+        saveImageInDirectory(url, "$HEROES_FOLDER/$name", "full.png")
+    }
+
+    private fun loadHeroImageMinimap(root: Document, name: String) {
+        val url = root.getElementsByTag("img")[21].attr("data-src")
+        saveImageInDirectory(url, "$HEROES_FOLDER/$name", "minimap.png")
+    }
+
+    private fun saveImageInDirectory(url: String, directory: String, name: String) {
+        val path = assets + directory + File.separator + name
         try {
-            val imageUrl = root.getElementsByTag("img")[0].attr("src")
-            saveImageInDirectory(imageUrl, directory, "$HERO_FULL_PHOTO_NAME.$HERO_FULL_PHOTO_TYPE")
-            println("image full saved")
+            val file = File(path)
+            if (file.exists()) return
+            file.mkdirs()
+            val bufferImageIO = ImageIO.read(URL(url))
+            ImageIO.write(bufferImageIO, "png", file)
+            println("image $path saved")
         } catch (e: Exception) {
-            println("image full not saved")
+            println("image $path not saved")
         }
     }
 
-    private fun saveImageInDirectory(imageUrl: String, directory: String, fileName: String) {
-        val bufferImageIO = ImageIO.read(URL(imageUrl))
-        val file = File(assets + directory + File.separator + fileName)
-        file.mkdirs()
-        ImageIO.write(bufferImageIO, "png", file)
-    }
-
-    private fun checkConnectToHero(url: String): Boolean {
-        return try {
-            connectTo(url)
-            println("connect to $url success")
-            true
-        } catch (e: Exception) {
-            println("connect to $url fail")
-            false
-        }
-    }
-
-    private fun createHeroFolderInAssets(path: String) {
-        File(assets + path).mkdirs()
-    }
 }
 
 fun main() = runBlocking {
-    parser {
-        loadRusDescription = true
-        loadEngDescription = true
-        loadRusResponses = true
-        loadEngResponses = true
-        loadHeroFullImage = true
-        loadHeroSpellImage = true
-    }.start()
+    val heroParser = HeroParser()
+//    heroParser.createFileWithHeroesAndFolders()
+    heroParser.loadHeroesOnEnglish()
 }
 
