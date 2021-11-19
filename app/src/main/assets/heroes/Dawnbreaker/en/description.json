@@ -36,14 +36,14 @@
         "Starbreaker cannot be cast while the hammer is out due to Celestial Hammer. Solar Guardian cannot be cast while Starbreaker is active.",
         "Solar Guardian cannot be cast while Starbreaker is active.",
         "↓↓ Double-tapping automatically casts it towards the current facing direction.",
-        "During Starbreaker, Dawnbreaker gets moved towards the targeted direction at a speed of 215. The movement is not interrupted by other sources of non-disabling forced movement. Starbreaker's movement resumes as soon as the other source finishes. Cannot move Dawnbreaker over cliffs, through Barriers, or through pathing blockers. Upon reaching any of these, the movement stops and the ability continues stationary. Can move Dawnbreaker a total distance of 236.5 over 1.1 duration. Trees in the way are destroyed.",
+        "During Starbreaker, Dawnbreaker gets moved towards the targeted direction at a speed of 215. The movement is not interrupted by other sources of non-disabling forced movement. Starbreaker's movement resumes as soon as the other source finishes. Cannot move Dawnbreaker over cliffs, through Barriers, or through pathing blockers. Upon reaching any of these, the movement stops and the ability continues stationary. Can move Dawnbreaker a total distance of 236.5 over 1.1 seconds. Trees in the way are destroyed.",
         "The movement is not interrupted by other sources of non-disabling forced movement. Starbreaker's movement resumes as soon as the other source finishes.",
         "Cannot move Dawnbreaker over cliffs, through Barriers, or through pathing blockers. Upon reaching any of these, the movement stops and the ability continues stationary.",
-        "Can move Dawnbreaker a total distance of 236.5 over 1.1 duration.",
+        "Can move Dawnbreaker a total distance of 236.5 over 1.1 seconds.",
         "Trees in the way are destroyed.",
-        "During the combo, Dawnbreaker is disarmed, and unable to cast Celestial Hammer and Solar Guardian. Items can be used normally. Other abilities can be cast normally as well (e.g. Rubick or in Ability Draft). Using mobility items does not cancel any aspect of Starbreaker.",
-        "Items can be used normally. Other abilities can be cast normally as well (e.g. Rubick or in Ability Draft).",
-        "Using mobility items does not cancel any aspect of Starbreaker.",
+        "During the combo, Dawnbreaker is disarmed, and unable to cast Celestial Hammer and Solar Guardian. Items can be used normally. Other abilities can be cast normally as well (acquired via Spell Steal or in Ability Draft). Using mobility items (or abilities) does not cancel any aspect of Starbreaker.",
+        "Items can be used normally. Other abilities can be cast normally as well (acquired via Spell Steal or in Ability Draft).",
+        "Using mobility items (or abilities) does not cancel any aspect of Starbreaker.",
         "Starbreaker is canceled if Dawnbreaker gets stunned, cycloned, hexed, taunted, feared, or hypnotized during it. However, getting silenced does not cancel it.",
         "However, getting silenced does not cancel it.",
         "Causes Dawnbreaker to perform instant attacks on enemies within the swipe radius, and on enemies within the smash radius upon end. These instant attacks can proc any attack modifiers and on-hit effects normally, except for cleave. They have True Strike, and completely ignore disarms. Luminosity only gains 1 charge per instance, regardless of how many enemies got hit by instant attacks on each instance. Performs instant attacks in 0.55-second intervals, starting immediately upon cast, resulting in 3 instances. The actual effects of the ability are independent from the whirling animation of Dawnbreaker. All enemies are hit by the instant attacks at the same time on each interval.",
@@ -55,12 +55,14 @@
         "These instances use the lesser attack damage bonus and apply a movement speed slow.",
         "The attacks first apply their damage, then the slow debuff.",
         "The swipe attack damage bonus increasing talent does not update the current cast of Starbreaker.",
-        "The last instance is applied within 250 radius 250 range in front of Dawnbreaker. This instance uses the greater attack damage bonus and applies the stun with a small 90-range knock-up. The attacks first apply their damage, then the stun debuff. The smash can hit units up to 500 range away from Dawnbreaker.",
+        "The last instance is applied within 250 radius and 250 range in front of Dawnbreaker. This instance uses the greater attack damage bonus and applies the stun with a small 90-range knock-up. The attacks first apply their damage, then the stun debuff. The smash can hit units up to 500 range away from Dawnbreaker.",
         "This instance uses the greater attack damage bonus and applies the stun with a small 90-range knock-up.",
         "The attacks first apply their damage, then the stun debuff.",
         "The smash can hit units up to 500 range away from Dawnbreaker.",
         "Dawnbreaker gets stunned for 0.2 seconds upon performing the last smash attack of the combo.",
-        "Acquiring Aghanim's Shard while Starbreaker is active immediately updates the current instance."
+        "With Aghanim's Shard, Starbreaker also applies a basic dispel on Dawnbreaker upon cast and grants her spell immunity while active. The spell immunity granted does not apply a spell immunity dispel on the target. Therefore certain debuffs (e.g. Pounce) only dispellable by spell immunity are not removed. Acquiring Aghanim's Shard while Starbreaker is active immediately updates adds the spell immunity.",
+        "The spell immunity granted does not apply a spell immunity dispel on the target. Therefore certain debuffs (e.g. Pounce) only dispellable by spell immunity are not removed.",
+        "Acquiring Aghanim's Shard while Starbreaker is active immediately updates adds the spell immunity."
       ],
       "mana": "80",
       "hotKey": "Q",
@@ -74,23 +76,23 @@
         "Number of Attacks: 3",
         "Combo Duration: 1.1",
         "Swipe Radius: 360",
-        "Swipe Attack Damage Bonus: 25\/35\/45\/55 (TagTalent 55\/65\/75\/85)",
+        "Swipe Attack Damage Bonus: 20\/30\/40\/50 (TagTalent 50\/60\/70\/80)",
         "Swipe Move Speed Slow: 100%",
         "Swipe Slow Duration: 0.12",
         "Smash Radius: 250",
         "Smash Distance: 250",
-        "Smash Attack Damage Bonus: 40\/65\/90\/115",
+        "Smash Attack Damage Bonus: 30\/60\/90\/120",
         "Smash Stun Duration: 0.8\/1\/1.2\/1.4",
         "Self Stun Duration: 0.2",
         "Number of Charges: 2",
         "Charge Replenish Time: 17\/15\/13\/11",
-        "Dawnbreaker gains magic immunity during Star Breaker.",
+        "Dawnbreaker gains magic immunity during Starbreaker.",
         "The instant attacks fully pierce spell immunity. The slow and stun do not pierce spell immunity.",
         "Only the movement is disabled by roots."
       ],
       "itemBehaviour": [],
       "legacyKey": "B",
-      "story": "Across the vast lineage of star progeny, there were multitudes unwilling to align with the aims of the Children of Light. To those who dared organize defiance, the Children would dispatch Valora and her hammer to show a measure of their power--to leave the rebels either shattered or set back to rights."
+      "story": null
     },
     {
       "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/c\/c5\/Dawnbreaker_Celestial_Hammer_1.mp3\/revision\/latest?cb=20210410152231",
@@ -135,13 +137,13 @@
         "Hammer Pause Duration: 2",
         "Fire Trail Radius: 150",
         "Fire Trail Damage per Second: 20\/30\/40\/50",
-        "Fire Trail Move Speed Slow: 35% (TagTalent 50%)",
+        "Fire Trail Move Speed Slow: 24%\/28%\/32%\/36% (TagTalent 39%\/43%\/47%\/51%)",
         "Fire Trail Duration: 2.5",
         "Fire Trail Debuff Linger Duration: 0.5"
       ],
       "itemBehaviour": [],
       "legacyKey": "C",
-      "story": "The Brightmaul is Valora's oldest companion and sole remaining connection to the glow of her creators."
+      "story": null
     },
     {
       "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/f\/f9\/Dawnbreaker_Converge.mp3\/revision\/latest?cb=20210410152219",
@@ -153,7 +155,7 @@
         "Replaces Celestial Hammer until the sub-ability is used, the hammer returns to Dawnbreaker, or until Dawnbreaker dies.",
         "Interrupts Dawnbreaker's channeling abilities upon cast.",
         "Goes on a 0.25-second cooldown right after Celestial Hammer is cast, this is to prevent accidental double-casts prematurely ending the ability.",
-        "Moves Dawnbreaker at a speed of 1500.",
+        "Moves Dawnbreaker towards her hammer at a speed of 1500.",
         "Cannot move Dawnbreaker for more than the max distance value of 1000\/1100\/1200\/1300 (TagTalent 2100\/2200\/2300\/2400). This means it can move Dawnbreaker for up to 0.67\/0.73\/0.8\/0.87 (TagTalent 1.4\/1.47\/1.53\/1.6) seconds.",
         "This means it can move Dawnbreaker for up to 0.67\/0.73\/0.8\/0.87 (TagTalent 1.4\/1.47\/1.53\/1.6) seconds.",
         "Converge gets canceled if Dawnbreaker gets stunned, cycloned, feared, or hypnotized during it. Other disables do not cancel it.",
@@ -165,7 +167,8 @@
       "description": "Dawnbreaker recalls her hammer, pulling them together so they meet in the middle.",
       "spellName": "Converge",
       "params": [
-        "Cast Animation: 0+0"
+        "Cast Animation: 0+0",
+        ""
       ],
       "itemBehaviour": [],
       "legacyKey": "C",
@@ -188,13 +191,13 @@
         "When the attack target is a non-hero unit, the lifesteal value is reduced to 15%\/20%\/25%\/30%.",
         "This means for allies, it is further reduced to 5.25%\/7%\/8.75%\/10.5%.",
         "Treats creep-heroes as heroes.",
-        "Neither the charges nor the attack buff have a duration and last indefinitely. However, the attack buff is dispelled upon death. Upon losing the attack buff, the charges get reset as well.",
-        "However, the attack buff is dispelled upon death.",
+        "Neither the charges nor the attack buff have a duration and last indefinitely. However, the attack buff is dispeled upon death. Upon losing the attack buff, the charges get reset as well.",
+        "However, the attack buff is dispeled upon death.",
         "Upon losing the attack buff, the charges get reset as well.",
-        "The powered up attack first heals Dawnbreaker, then nearby allies, then applies its critical damage. Luminosity has an ensured critical strike, crits with a lower value have no effect if they proc, since the higher crit value takes priority. Stacks additively with other sources of lifesteal. The heal value on Dawnbreaker and her allies counts as lifesteal, and is affected by lifesteal amplification, but only if the amplification is sourced to Dawnbreaker.",
+        "The powered up attack first heals Dawnbreaker, then nearby allies, then applies its critical damage. Luminosity has an ensured critical strike, crits with a lower value have no effect if they proc, since the higher crit value takes priority. Stacks additively with other sources of lifesteal. The healing value on Dawnbreaker and her allies counts as lifesteal, and is affected by lifesteal amplification, but only if the amplification is sourced to Dawnbreaker.",
         "Luminosity has an ensured critical strike, crits with a lower value have no effect if they proc, since the higher crit value takes priority.",
         "Stacks additively with other sources of lifesteal.",
-        "The heal value on Dawnbreaker and her allies counts as lifesteal, and is affected by lifesteal amplification, but only if the amplification is sourced to Dawnbreaker."
+        "The healing value on Dawnbreaker and her allies counts as lifesteal, and is affected by lifesteal amplification, but only if the amplification is sourced to Dawnbreaker."
       ],
       "mana": null,
       "hotKey": "E",
@@ -212,7 +215,7 @@
       ],
       "itemBehaviour": [],
       "legacyKey": "L",
-      "story": "Diminished in power without access to the Children's replenishing light, Valora can still recharge herself and her allies by creating order from the chaos which resides within each fight."
+      "story": null
     },
     {
       "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/6\/62\/Dawnbreaker_Solar_Guardian_1.mp3\/revision\/latest?cb=20210410152224",
@@ -279,7 +282,7 @@
       ],
       "itemBehaviour": [],
       "legacyKey": "R",
-      "story": "Only in defense of an ally will Valora relent to call upon the last reserves of her old powers that still allow cosmic flight."
+      "story": null
     },
     {
       "audioUrl": null,
@@ -300,7 +303,8 @@
       "description": "There is no description for this ability.",
       "spellName": "Solar Guardian Land",
       "params": [
-        "Cast Animation: 0+0"
+        "Cast Animation: 0+0",
+        ""
       ],
       "itemBehaviour": [],
       "legacyKey": "R",

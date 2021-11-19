@@ -1,31 +1,26 @@
 {
   "abilities": [
     {
-      "notes": [
-        "Талант на все атрибуты в общем даёт Drow Ranger: 100 здоровья, 0,5 усиления регенерации здоровья, 0,83 брони, 5 скорости атаки, 60 маны, 0,25 регенерации маны и 5 урона от атаки.",
-        "Талант на ловкость в общем даёт Drow Ranger: 1,67 брони, 10 скорости атаки и 10 урона от атаки.",
-        "Несколько источников процентного уменьшения перезарядки не складываются. Приоритет имеет высшее значение."
-      ],
       "spellName": "Talent",
       "talents": [
         {
           "talentLvl": "25",
-          "talentLeft": "−30% перезарядки заклинаний",
+          "talentLeft": "+2 к числу волн у Multishot",
           "talentRight": "+12% к шансу срабатывания Marksmanship"
         },
         {
           "talentLvl": "20",
-          "talentLeft": "+2.5 сек. безмолвия от Gust",
+          "talentLeft": "−4 сек. перезарядки Gust",
           "talentRight": "+28% к урону от Multishot"
         },
         {
           "talentLvl": "15",
-          "talentLeft": "-6 сек. перезарядки Multishot",
-          "talentRight": "+10 к ловкости"
+          "talentLeft": "−8 сек. перезарядки Multishot",
+          "talentRight": "+250 к ширине Gust"
         },
         {
           "talentLvl": "10",
-          "talentLeft": "+5 ко всем атрибутам",
+          "talentLeft": "+15 к урону от Frost Arrows",
           "talentRight": "+50% к ослеплению от Gust"
         }
       ]
@@ -56,7 +51,7 @@
       ],
       "itemBehaviour": [],
       "legacyKey": "R",
-      "story": "Покрытые льдом стрелы беззвучно пронзают воздух, насквозь примораживая врагов."
+      "story": null
     },
     {
       "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/7\/71\/Drow_Ranger_Gust.mp3\/revision\/latest?cb=20191215202225",
@@ -82,7 +77,7 @@
       ],
       "mana": "90",
       "hotKey": "W",
-      "cooldown": "16\/15\/14\/13 (TagTalent 11,2\/10,5\/9,8\/9,1)",
+      "cooldown": "16\/15\/14\/13 (TagTalent 15,68\/14,7\/13,72\/12,74)",
       "description": "Выпускает волну, которая отбрасывает вражеских существ и запрещает им колдовать. Чем ближе враг к вам, тем дальше его отбросит.",
       "spellName": "Gust",
       "params": [
@@ -93,12 +88,12 @@
         "Макс. дальность отбрасывания: 450",
         "Шанс промаха: 0% (TagTalent 50%)",
         "Длительность отбрасывания: 0,6\/0,7\/0,8\/0,9",
-        "Длительность дебаффа: 3\/4\/5\/6 (TagTalent 5,5\/6,5\/7,5\/8,5)",
+        "Длительность дебаффа: 3\/4\/5\/6 (TagTalent 7\/8\/9\/10)",
         "Отбрасывание и безмолвие остаются, если дебафф был применен до иммунитета к заклинаниям и не был развеян."
       ],
       "itemBehaviour": [],
       "legacyKey": "E",
-      "story": "Траксекс предпочитает физический бой магическому, и, взывая к корням своей приёмной расы, запрещает использовать на поле боя любую магию."
+      "story": null
     },
     {
       "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/e\/ec\/Drow_Ranger_Multishot.mp3\/revision\/latest?cb=20191215202228",
@@ -126,7 +121,7 @@
       ],
       "mana": "50\/70\/90\/110",
       "hotKey": "E",
-      "cooldown": "26\/24\/22\/20 (TagTalent 18,2\/16,8\/15,4\/14)",
+      "cooldown": "26\/24\/22\/20 (TagTalent 25,48\/23,52\/21,56\/19,6)",
       "description": "Герой выпускает один залп стрел за другим, нанося врагам больше урона и применяя на них усиленную способность Frost Arrows. Действует до 1,75 сек.",
       "spellName": "Multishot",
       "params": [
@@ -144,7 +139,7 @@
       ],
       "itemBehaviour": [],
       "legacyKey": "T",
-      "story": "Когда лучница была юна, её попытки выпускать сразу несколько стрел считали пустой тратой времени. В войне Древних это умение стало вынужденной необходимостью."
+      "story": null
     },
     {
       "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/6\/6c\/Drow_Ranger_Marksmanship.mp3\/revision\/latest?cb=20191215202226",
@@ -202,7 +197,7 @@
       ],
       "itemBehaviour": [],
       "legacyKey": "P",
-      "story": "Траксекс \u2014 воплощение мастерства стрельбы из лука."
+      "story": null
     }
   ],
   "mainAttributes": {
@@ -218,22 +213,22 @@
   "talents": [
     {
       "talentLvl": "25",
-      "talentLeft": "−30% перезарядки заклинаний",
+      "talentLeft": "+2 к числу волн у Multishot",
       "talentRight": "+12% к шансу срабатывания Marksmanship"
     },
     {
       "talentLvl": "20",
-      "talentLeft": "+2.5 сек. безмолвия от Gust",
+      "talentLeft": "−4 сек. перезарядки Gust",
       "talentRight": "+28% к урону от Multishot"
     },
     {
       "talentLvl": "15",
-      "talentLeft": "-6 сек. перезарядки Multishot",
-      "talentRight": "+10 к ловкости"
+      "talentLeft": "−8 сек. перезарядки Multishot",
+      "talentRight": "+250 к ширине Gust"
     },
     {
       "talentLvl": "10",
-      "talentLeft": "+5 ко всем атрибутам",
+      "talentLeft": "+15 к урону от Frost Arrows",
       "talentRight": "+50% к ослеплению от Gust"
     }
   ]

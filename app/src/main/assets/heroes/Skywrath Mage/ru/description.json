@@ -2,7 +2,7 @@
   "abilities": [
     {
       "notes": [
-        "Талант на интеллект в общем даёт Skywrath Mage: 120 маны, 0,5 регенерации маны и 10 урона от атаки.",
+        "Талант на интеллект в общем даёт Skywrath Mage: 120 маны, 0,5 восстановления маны и 10 урона от атаки.",
         "Талант на здоровье увеличивает максимальный запас здоровья, и сохраняет текущий процент здоровья."
       ],
       "spellName": "Talent",
@@ -14,13 +14,13 @@
         },
         {
           "talentLvl": "20",
-          "talentLeft": "+12% к доп. магическому урону от Ancient Seal",
+          "talentLeft": "−12% к сопротивлению магии Ancient Seal",
           "talentRight": "Неограниченная дальность применения Concussive Shot"
         },
         {
           "talentLvl": "15",
           "talentLeft": "+1 снаряд Arcane Bolt",
-          "talentRight": "-8 сек. к перезарядке Ancient Seal"
+          "talentRight": "−8 сек. к перезарядке Ancient Seal"
         },
         {
           "talentLvl": "10",
@@ -76,7 +76,7 @@
       ],
       "itemBehaviour": [],
       "legacyKey": "C",
-      "story": "Среди бесконечных интриг Жуткого гнезда лишь умный и спокойный имеет шанс на выживание."
+      "story": null
     },
     {
       "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/3\/34\/Skywrath_Mage_Concussive_Shot_1.mp3\/revision\/latest?cb=20191216023609",
@@ -120,7 +120,7 @@
       ],
       "itemBehaviour": [],
       "legacyKey": "T",
-      "story": "Те, кто служат при дворе Жуткого гнезда, вечно участвуют в скрытой борьбе. Важно всегда знать, где скрывается опасность."
+      "story": null
     },
     {
       "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/e\/e1\/Skywrath_Mage_Ancient_Seal.mp3\/revision\/latest?cb=20191216023604",
@@ -154,7 +154,7 @@
       ],
       "itemBehaviour": [],
       "legacyKey": "R",
-      "story": "Всякий, кого коснётся священная печать Авилливы, должен перенести тягостное молчание."
+      "story": null
     },
     {
       "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/3\/31\/Skywrath_Mage_Mystic_Flare_1.mp3\/revision\/latest?cb=20191216023602",
@@ -200,7 +200,7 @@
       ],
       "itemBehaviour": [],
       "legacyKey": "E",
-      "story": "Только самые опытные маги скайрасов могут разверзнуть в небесах такую бурю."
+      "story": null
     },
     {
       "audioUrl": null,
@@ -225,7 +225,8 @@
       "params": [
         "Бонусный интеллект за стак: 5",
         "Бонусная броня за стак: 1",
-        "Длительность: 35"
+        "Длительность: 35",
+        ""
       ],
       "itemBehaviour": [],
       "legacyKey": null,
@@ -250,13 +251,13 @@
     },
     {
       "talentLvl": "20",
-      "talentLeft": "+12% к доп. магическому урону от Ancient Seal",
+      "talentLeft": "−12% к сопротивлению магии Ancient Seal",
       "talentRight": "Неограниченная дальность применения Concussive Shot"
     },
     {
       "talentLvl": "15",
       "talentLeft": "+1 снаряд Arcane Bolt",
-      "talentRight": "-8 сек. к перезарядке Ancient Seal"
+      "talentRight": "−8 сек. к перезарядке Ancient Seal"
     },
     {
       "talentLvl": "10",

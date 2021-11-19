@@ -13,13 +13,13 @@
         },
         {
           "talentLvl": "20",
-          "talentLeft": "-20 сек. перезарядки Stampede",
+          "talentLeft": "−20 сек. перезарядки Stampede",
           "talentRight": "+50 к урону от Retaliate"
         },
         {
           "talentLvl": "15",
           "talentLeft": "+40% к урону от силы у Double Edge",
-          "talentRight": "+6 к броне"
+          "talentRight": "+5 к броне"
         },
         {
           "talentLvl": "10",
@@ -51,7 +51,7 @@
       ],
       "itemBehaviour": [],
       "legacyKey": "F",
-      "story": "Когда кентавр бьет своим могучим копытом по земле, за далекие километры с домов сыпется пыль."
+      "story": null
     },
     {
       "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/7\/79\/Double_Edge.mp3\/revision\/latest?cb=20141125181049",
@@ -95,7 +95,7 @@
       ],
       "itemBehaviour": [],
       "legacyKey": "D",
-      "story": "Иногда Брэдводен сражается так свирепо, что в пылу битвы может задеть даже самого себя."
+      "story": null
     },
     {
       "audioUrl": null,
@@ -130,7 +130,7 @@
       ],
       "itemBehaviour": [],
       "legacyKey": "R",
-      "story": "Брэдводену даже не нужно парировать атаки противника \u2014 его кожа, больше похожая на броню, сама отвечает на любое нападение."
+      "story": null
     },
     {
       "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/0\/06\/Stampede.mp3\/revision\/latest?cb=20141125181117",
@@ -170,7 +170,7 @@
       ],
       "itemBehaviour": [],
       "legacyKey": "T",
-      "story": "Великий пояс Омекса, означающий величайшего воина своего вида, побуждает товарищей Брэдводена следовать за ним в самые жестокие схватки."
+      "story": null
     }
   ],
   "mainAttributes": {
@@ -191,13 +191,13 @@
     },
     {
       "talentLvl": "20",
-      "talentLeft": "-20 сек. перезарядки Stampede",
+      "talentLeft": "−20 сек. перезарядки Stampede",
       "talentRight": "+50 к урону от Retaliate"
     },
     {
       "talentLvl": "15",
       "talentLeft": "+40% к урону от силы у Double Edge",
-      "talentRight": "+6 к броне"
+      "talentRight": "+5 к броне"
     },
     {
       "talentLvl": "10",

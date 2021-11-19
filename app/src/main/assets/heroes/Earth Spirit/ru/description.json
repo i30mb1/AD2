@@ -1,11 +1,6 @@
 {
   "abilities": [
     {
-      "notes": [
-        "Этот талант добавляет урон от атаки в прямой урон от атаки. Не даётся иллюзиям, и также не попадает под действие большинства эффектов увеличивающих или уменьшающих урон на процентное значение.",
-        "Не даётся иллюзиям, и также не попадает под действие большинства эффектов увеличивающих или уменьшающих урон на процентное значение.",
-        "Талант на броню не дается иллюзиям."
-      ],
       "spellName": "Talent",
       "talents": [
         {
@@ -21,11 +16,11 @@
         {
           "talentLvl": "15",
           "talentLeft": "+120 к урону от Rolling Boulder",
-          "talentRight": "+8 к броне"
+          "talentRight": "+300 к дальности полёта у Boulder Smash"
         },
         {
           "talentLvl": "10",
-          "talentLeft": "+60 к урону",
+          "talentLeft": "+2 сек. действия Magnetize",
           "talentRight": "+325 к дальности Rolling Boulder"
         }
       ]
@@ -80,7 +75,8 @@
         "Замедление скорости передвижения: 60%",
         "Длительность замедления камнем: 1,25\/2,5\/3,25\/4",
         "Нельзя выбрать целью существ с иммунитетом к заклинаниям. Не пытается нанести урон или замедлить врагов с иммунитетом. Можно толкать существ с иммунитетом под действием Enchant Remnant.",
-        "Полностью блокируется только основной целью."
+        "Полностью блокируется только основной целью.",
+        ""
       ],
       "itemBehaviour": [],
       "legacyKey": "D",
@@ -129,7 +125,7 @@
       ],
       "itemBehaviour": [],
       "legacyKey": "F",
-      "story": "Используя свою связь с землей, Каолин притягивает к себе камни, образуя защитный шар, в котором он может перекатываться на небольшие расстояния."
+      "story": null
     },
     {
       "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/1\/15\/Frozen_Sigil_cast.mp3\/revision\/latest?cb=20141126122459",
@@ -171,7 +167,7 @@
       ],
       "itemBehaviour": [],
       "legacyKey": "R",
-      "story": "Подобное притягивается подобным. Ничто не устоит перед зовом Каолина - даже минералы в крови и костях живых существ."
+      "story": null
     },
     {
       "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/0\/05\/Stone_Remnant.mp3\/revision\/latest?cb=20140525152232",
@@ -206,7 +202,7 @@
       ],
       "itemBehaviour": [],
       "legacyKey": "E",
-      "story": "Каолин взывает к остаткам каменной армии, погребенной вместе с ним в темных объятиях земли."
+      "story": null
     },
     {
       "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/8\/82\/Magnetize.mp3\/revision\/latest?cb=20141127011032",
@@ -243,7 +239,7 @@
       ],
       "itemBehaviour": [],
       "legacyKey": "T",
-      "story": "Откликаясь на зов Каолина, минералы в крови и костях его врагов восстают против тел, в которых они находятся."
+      "story": null
     },
     {
       "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/4\/4a\/Enchant_Remnant.mp3\/revision\/latest?cb=20141127011143",
@@ -281,7 +277,7 @@
       ],
       "itemBehaviour": [],
       "legacyKey": "W",
-      "story": "Каолин использует силу земли, на время покрывая живых существ камнем, чтобы призвать их в свою погребённую каменную армию."
+      "story": null
     }
   ],
   "mainAttributes": {
@@ -308,11 +304,11 @@
     {
       "talentLvl": "15",
       "talentLeft": "+120 к урону от Rolling Boulder",
-      "talentRight": "+8 к броне"
+      "talentRight": "+300 к дальности полёта у Boulder Smash"
     },
     {
       "talentLvl": "10",
-      "talentLeft": "+60 к урону",
+      "talentLeft": "+2 сек. действия Magnetize",
       "talentRight": "+325 к дальности Rolling Boulder"
     }
   ]

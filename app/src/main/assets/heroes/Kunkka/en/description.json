@@ -2,9 +2,9 @@
   "abilities": [
     {
       "notes": [
-        "This attack damage talent is added as raw attack damage. Does not benefit illusions and is not affected by most percentage-based damage increasing or reducing effects.",
+        "This attack damage talent is added as bonus attack damage. Does not benefit illusions and is not affected by most percentage-based damage increasing or reducing effects.",
         "Does not benefit illusions and is not affected by most percentage-based damage increasing or reducing effects.",
-        "The strength talent effectively grants Kunkka 320 health, 1.6 health regeneration, and 16 attack damage."
+        "The strength talent effectively grants Kunkka 320 health, 1.6 health regeneration, and 16 main attack damage."
       ],
       "spellName": "Talent",
       "talents": [
@@ -39,7 +39,7 @@
       ],
       "notes": [
         "With the cast time and effect delay, the total delay is 2 seconds at all levels.",
-        "Torrent can be cast without having to face towards the targeted area.",
+        "Torrent can be cast without having to face towards the targeted area, as long as the targeted area is in the cast range.",
         "Units tossed in the air are stunned and still able to be attacked.",
         "While in the air, other units may pass below hit airborne units.",
         "The stun and slow are applied at the same time, so overall, the slow lasts for 2.6\/3.6\/4.6\/5.6 (TagTalent 3\/4\/5\/6) seconds.",
@@ -70,7 +70,7 @@
       ],
       "itemBehaviour": [],
       "legacyKey": "E",
-      "story": "An ancestral rush of water explodes from the center of the world, called upon by the Admiral."
+      "story": null
     },
     {
       "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/9\/95\/Kunkka_Tidebringer_1.mp3\/revision\/latest?cb=20200509115806",
@@ -103,11 +103,11 @@
         "End Radius: 500\/550\/600\/650",
         "Cleave Damage: 150% (TagTalent 220%)",
         "Attack Damage Bonus: 30\/60\/90\/120",
-        "Illusions gain the visual effects and the attack sounds, but they neither gain the damage nor can cleave."
+        "Tidebringer is always toggled on for illusions. Illusions cannot make use of the attack damage bonus and cannot cleave."
       ],
       "itemBehaviour": [],
       "legacyKey": "D",
-      "story": "A lost Claddish soul inhabits Kunkka's trusty Tidebringer, empowering it to destroy demons of the Cataract."
+      "story": null
     },
     {
       "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/4\/44\/Kunkka_X_Marks_the_Spot.mp3\/revision\/latest?cb=20191216014831",
@@ -124,10 +124,10 @@
         "These lines stop drawing for the enemies if the unit is not visible. However, already drawn lines stay visible.",
         "Once the unit turns visible again, a straight line of red lines is drawn towards their last known location.",
         "These red lines ignore the actual path the unit took. They simply draw from its current to its previously last known location.",
-        "Multiple instances of X Marks the Spot on the same target do not stack. Only the duration gets visually refreshed. Although refreshed, the return timer is unaffected, so that the unit still returns based on the first cast. Every cast creates its own X below the target. If the modifier expires, it returns to the X of the first cast. If any of the casters use the Return sub-ability, the unit returns to the X that caster created. Once the unit returned to any of the X's, all other instances get completely canceled, although not visually.",
+        "Multiple instances of X Marks the Spot on the same target do not stack. Only the duration gets visually refreshed. Although refreshed, the return timer is unaffected, so that the unit still returns based on the first cast. Every cast creates its own X below the target. If the modifier expires, it returns to the X of the first cast. If any of the casters use the Return sub-ability, the unit returns to the X that the caster created. Once the unit returned to any of the X's, all other instances get completely canceled, although not visually.",
         "Although refreshed, the return timer is unaffected, so that the unit still returns based on the first cast.",
         "Every cast creates its own X below the target. If the modifier expires, it returns to the X of the first cast.",
-        "If any of the casters use the Return sub-ability, the unit returns to the X that caster created.",
+        "If any of the casters use the Return sub-ability, the unit returns to the X that the caster created.",
         "Once the unit returned to any of the X's, all other instances get completely canceled, although not visually.",
         "Despite the visual effects, the target does not return to the X after dying and respawning during it.",
         "When the target is invulnerable, it does not get returned to the X, causing the ability to get wasted.",
@@ -149,7 +149,7 @@
       ],
       "itemBehaviour": [],
       "legacyKey": "X",
-      "story": "The Admiral's set of arcane abilities includes some that can be used for battle as well as entertainment."
+      "story": null
     },
     {
       "audioUrl": null,
@@ -168,7 +168,8 @@
       "spellName": "Return",
       "params": [
         "Cast Animation: 0.4+0",
-        "Can return spell immune allies. Cannot return spell immune enemies, but the modifier still lasts."
+        "Can return spell immune allies. Cannot return spell immune enemies, but the modifier still lasts.",
+        ""
       ],
       "itemBehaviour": [],
       "legacyKey": "X",
@@ -182,15 +183,14 @@
         "Damage Magical"
       ],
       "notes": [
-        "Requires Aghanim's Scepter to be unlocked. This ability is not available in Ability Draft, due to its reliance on a non-ultimate ability, which are limited to one ability slot.",
-        "This ability is not available in Ability Draft, due to its reliance on a non-ultimate ability, which are limited to one ability slot.",
+        "Requires Aghanim's Scepter to be unlocked.",
         "Torrent Storm's radius is centered on and follows Kunkka.",
         "Creates a Torrent immediately upon cast, and then one every 0.25 seconds, for a total of 21 Torrents.",
         "The Torrents are based on the current level of Torrent on Kunkka. If it is not learned, no Torrents spawn.",
         "Each Torrent can spawn within a random distance of 300 to 1100 away from Kunkka.",
         "The Torrent spawn radius is divided into four 90° segments (0°\u201390°, 90°\u2013180°, 180°\u2013270°, 270°\u2013360°).",
         "The first Torrent occurs within the north-east segment of the circle, following Torrents proceed counterclockwise.",
-        "Unlike a manually cast Torrent, the particle effect and the sound during the torrents' delay are completely visible and audible to enemies.",
+        "Unlike a manually cast Torrent, the particle effect and the sound during the Torrents' delay are completely visible and audible to enemies.",
         "Multiple casts of Torrent Storm fully stack, with each cast creating its own independent instance.",
         "When Kunkka dies, the torrents still occur at his location."
       ],
@@ -209,7 +209,7 @@
       ],
       "itemBehaviour": [],
       "legacyKey": "R",
-      "story": "A hundred leagues of dry land couldn't keep these seas at bay."
+      "story": null
     },
     {
       "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/0\/06\/Kunkka_Tidal_Wave_1.mp3\/revision\/latest?cb=20201229231613",
@@ -250,7 +250,7 @@
       "effects": [
         "Ability Target Point",
         "Affects Enemies \/ Allied Heroes",
-        "Damage Magical"
+        "Damage Magical (TagAghanimHP Removal)"
       ],
       "notes": [
         "Ghostship travels at a speed of 650, reaching the crash site in 3.08 seconds.",
@@ -296,7 +296,7 @@
       ],
       "itemBehaviour": [],
       "legacyKey": "T",
-      "story": "The final ship of the Claddish Navy is nothing but a phantom, but it is all too real to the enemies of the Admiral."
+      "story": null
     }
   ],
   "mainAttributes": {

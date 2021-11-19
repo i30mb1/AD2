@@ -1,32 +1,27 @@
 {
   "abilities": [
     {
-      "notes": [
-        "Этот талант добавляет урон от атаки в прямой урон от атаки. Не даётся иллюзиям, и также не попадает под действие большинства эффектов увеличивающих или уменьшающих урон на процентное значение.",
-        "Не даётся иллюзиям, и также не попадает под действие большинства эффектов увеличивающих или уменьшающих урон на процентное значение.",
-        "Несколько источников процентного уменьшения перезарядки не складываются. Приоритет имеет высшее значение."
-      ],
       "spellName": "Talent",
       "talents": [
         {
           "talentLvl": "25",
-          "talentLeft": "+200 к урону",
-          "talentRight": "−20% перезарядки заклинаний"
+          "talentLeft": "Шанс в 50% применить Anchor Smash при атаке",
+          "talentRight": "+1 сек. оглушения от Ravage"
         },
         {
           "talentLvl": "20",
-          "talentLeft": "-4 к броне от Gush",
+          "talentLeft": "+4 к снижению брони от Gush",
           "talentRight": "+30 к блокируемому урону у Kraken Shell"
         },
         {
           "talentLvl": "15",
-          "talentLeft": "-20% к урону врагов от Anchor Smash",
+          "talentLeft": "−20% к урону врагов от Anchor Smash",
           "talentRight": "+120 к урону от Gush"
         },
         {
           "talentLvl": "10",
-          "talentLeft": "+1,75 маны в секунду",
-          "talentRight": "+20 к скорости передвижения"
+          "talentLeft": "−100 к границе урона у Kraken Shell",
+          "talentRight": "+10% к замедлению от Gush"
         }
       ]
     },
@@ -52,7 +47,7 @@
       ],
       "mana": "100\/105\/110\/115",
       "hotKey": "Q",
-      "cooldown": "12 (TagTalent 9,6) (TagTalent 7, 5,6)",
+      "cooldown": "12 (TagTalent 11,88) (TagTalent 7, 6,93)",
       "description": "Призывает водяной поток, наносящий противникам урон и уменьшающий их скорость передвижения и броню. Эффект длится секунды.",
       "spellName": "Gush",
       "params": [
@@ -70,7 +65,7 @@
       ],
       "itemBehaviour": [],
       "legacyKey": "G",
-      "story": "Во время битвы за Затонувшие острова Левиафан получил власть над самим морем."
+      "story": null
     },
     {
       "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/b\/bf\/Tidehunter_Kraken_Shell.mp3\/revision\/latest?cb=20191216025135",
@@ -102,7 +97,7 @@
       ],
       "itemBehaviour": [],
       "legacyKey": "R",
-      "story": "Истории кладдских моряков повествуют о могучем морском монстре, который топил суда, не обращая внимания на вонзающиеся в него копья и режущие его мечи."
+      "story": null
     },
     {
       "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/e\/ed\/Tidehunter_Anchor_Smash.mp3\/revision\/latest?cb=20191216025130",
@@ -122,7 +117,7 @@
       ],
       "mana": "30\/40\/50\/60",
       "hotKey": "E",
-      "cooldown": "7\/6\/5\/4 (TagTalent 5,6\/4,8\/4\/3,2) (TagTalent 6\/5\/4\/3, 4,8\/4\/3,2\/2,4)",
+      "cooldown": "7\/6\/5\/4 (TagTalent 6,93\/5,94\/4,95\/3,96) (TagTalent 6\/5\/4\/3, 5,94\/4,95\/3,96\/2,97)",
       "description": "Взмах могучего якоря наносит противникам вокруг урон, равный увеличенной атаке героя, и уменьшает урон от их атак.",
       "spellName": "Anchor Smash",
       "params": [
@@ -135,7 +130,7 @@
       ],
       "itemBehaviour": [],
       "legacyKey": "C",
-      "story": "Увесистый якорь, украденный c адмиральского флагмана, служит Левиафану великолепным оружием."
+      "story": null
     },
     {
       "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/f\/f3\/Tidehunter_Ravage_1.mp3\/revision\/latest?cb=20191216025128",
@@ -156,7 +151,7 @@
       ],
       "mana": "150\/225\/325",
       "hotKey": "R",
-      "cooldown": "150 (TagTalent 120)",
+      "cooldown": "150 (TagTalent 148,5)",
       "description": "Сотрясает землю и выпускает во все стороны щупальца, нанося всем врагам вокруг урон и оглушая их.",
       "spellName": "Ravage",
       "params": [
@@ -169,7 +164,7 @@
       ],
       "itemBehaviour": [],
       "legacyKey": "V",
-      "story": "Взывая к глубоководному богу Мэльрону, Левиафан способен в одиночку потопить целые эскадры кораблей."
+      "story": null
     }
   ],
   "mainAttributes": {
@@ -185,23 +180,23 @@
   "talents": [
     {
       "talentLvl": "25",
-      "talentLeft": "+200 к урону",
-      "talentRight": "−20% перезарядки заклинаний"
+      "talentLeft": "Шанс в 50% применить Anchor Smash при атаке",
+      "talentRight": "+1 сек. оглушения от Ravage"
     },
     {
       "talentLvl": "20",
-      "talentLeft": "-4 к броне от Gush",
+      "talentLeft": "+4 к снижению брони от Gush",
       "talentRight": "+30 к блокируемому урону у Kraken Shell"
     },
     {
       "talentLvl": "15",
-      "talentLeft": "-20% к урону врагов от Anchor Smash",
+      "talentLeft": "−20% к урону врагов от Anchor Smash",
       "talentRight": "+120 к урону от Gush"
     },
     {
       "talentLvl": "10",
-      "talentLeft": "+1,75 маны в секунду",
-      "talentRight": "+20 к скорости передвижения"
+      "talentLeft": "−100 к границе урона у Kraken Shell",
+      "talentRight": "+10% к замедлению от Gush"
     }
   ]
 }

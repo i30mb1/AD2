@@ -9,22 +9,22 @@
       "talents": [
         {
           "talentLvl": "25",
-          "talentLeft": "-60 сек. перезарядки Guardian Angel",
+          "talentLeft": "−60 сек. перезарядки Guardian Angel",
           "talentRight": "+160 к урону\/лечению от Purification"
         },
         {
           "talentLvl": "20",
-          "talentLeft": "-3 сек. перезарядки Heavenly Grace",
+          "talentLeft": "−2 сек. перезарядки Heavenly Grace",
           "talentRight": "+15% к замедлению от Degen Aura"
         },
         {
           "talentLvl": "15",
           "talentLeft": "+30 к скорости передвижения",
-          "talentRight": "-2 сек. перезарядки от Purification"
+          "talentRight": "−2 сек. перезарядки от Purification"
         },
         {
           "talentLvl": "10",
-          "talentLeft": "+50 к начальному урону",
+          "talentLeft": "+50 к базовому урону",
           "talentRight": "+10 здоровья в секунду от Heavenly Grace"
         }
       ]
@@ -55,7 +55,7 @@
       ],
       "itemBehaviour": [],
       "legacyKey": "R",
-      "story": "Жрецы Всезнания искусно избавляют братьев по оружию от скверны."
+      "story": null
     },
     {
       "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/8\/88\/Omniknight_Heavenly_Grace.mp3\/revision\/latest?cb=20191216021242",
@@ -72,7 +72,7 @@
       ],
       "mana": "80\/90\/100\/110",
       "hotKey": "W",
-      "cooldown": "26\/22\/18\/14 (TagTalent 23\/19\/15\/11)",
+      "cooldown": "26\/22\/18\/14 (TagTalent 24\/20\/16\/12)",
       "description": "Создаёт вокруг цели божественный щит, который увеличивает её сопротивление эффектам, силу и восстановление здоровья.",
       "spellName": "Heavenly Grace",
       "params": [
@@ -85,7 +85,7 @@
       ],
       "itemBehaviour": [],
       "legacyKey": "E",
-      "story": "Оказавшись у ямы жертвоприношений, Ревнитель показал свою стойкость к магии."
+      "story": null
     },
     {
       "audioUrl": null,
@@ -109,7 +109,7 @@
       ],
       "itemBehaviour": [],
       "legacyKey": "D",
-      "story": "Одного священного вида Громобоя достаточно, чтобы неверующие ослабли."
+      "story": null
     },
     {
       "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/d\/d3\/Omniknight_Hammer_of_Purity.mp3\/revision\/latest?cb=20210102003958",
@@ -137,7 +137,8 @@
         "Базовый урон: 60",
         "Урон от базового урона атаки: 115%",
         "Исцеление от урона: 100%",
-        "Не может быть нацелен на врагов с иммунитетом к заклинаниям. Может исцелить Omniknight с иммунитетом."
+        "Не может быть нацелен на врагов с иммунитетом к заклинаниям. Может исцелить Omniknight с иммунитетом.",
+        ""
       ],
       "itemBehaviour": [],
       "legacyKey": "T",
@@ -169,7 +170,7 @@
       ],
       "itemBehaviour": [],
       "legacyKey": "G",
-      "story": "Защита Всеведущего обуевает любого, кого Ревнитель называет другом."
+      "story": null
     }
   ],
   "mainAttributes": {
@@ -185,22 +186,22 @@
   "talents": [
     {
       "talentLvl": "25",
-      "talentLeft": "-60 сек. перезарядки Guardian Angel",
+      "talentLeft": "−60 сек. перезарядки Guardian Angel",
       "talentRight": "+160 к урону\/лечению от Purification"
     },
     {
       "talentLvl": "20",
-      "talentLeft": "-3 сек. перезарядки Heavenly Grace",
+      "talentLeft": "−2 сек. перезарядки Heavenly Grace",
       "talentRight": "+15% к замедлению от Degen Aura"
     },
     {
       "talentLvl": "15",
       "talentLeft": "+30 к скорости передвижения",
-      "talentRight": "-2 сек. перезарядки от Purification"
+      "talentRight": "−2 сек. перезарядки от Purification"
     },
     {
       "talentLvl": "10",
-      "talentLeft": "+50 к начальному урону",
+      "talentLeft": "+50 к базовому урону",
       "talentRight": "+10 здоровья в секунду от Heavenly Grace"
     }
   ]

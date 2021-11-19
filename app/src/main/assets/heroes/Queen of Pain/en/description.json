@@ -3,7 +3,7 @@
     {
       "notes": [
         "The strength talent effectively grants Queen of Pain 220 health and 1.1 health regeneration.",
-        "This attack damage talent is added as raw attack damage. Does not benefit illusions and is not affected by most percentage-based damage increasing or reducing effects.",
+        "This attack damage talent is added as bonus attack damage. Does not benefit illusions and is not affected by most percentage-based damage increasing or reducing effects.",
         "Does not benefit illusions and is not affected by most percentage-based damage increasing or reducing effects."
       ],
       "spellName": "Talent",
@@ -45,11 +45,14 @@
         "Level 3: 50.0% \/ 40.8% \/ 32.7% \/ 25.9% \/ 20.1% \/ 15.5% \/ 11.7% \/ 8.7% \/ 6.4% \/ 4.6% \/ 3.3% \/ 2.3% \/ 1.6% \/ 1.1% \/ 0.7%",
         "Level 4: 65.0% \/ 53.0% \/ 42.5% \/ 33.6% \/ 26.2% \/ 20.1% \/ 15.2% \/ 11.3% \/ 8.3% \/ 6.0% \/ 4.3% \/ 3.0% \/ 2.1% \/ 1.4% \/ 0.9%",
         "A unit with less than 25% of its maximum health can be denied when it has the Shadow Strike debuff on.",
-        "Deals the initial damage upon impact and the damage over time in 3 (2.1428571428571) second intervals, resulting in overall 6 (8) damage instances. Can deal up to 130\/260\/390\/520 (170\/340\/510\/680) damage to the target (before reductions).",
-        "Can deal up to 130\/260\/390\/520 (170\/340\/510\/680) damage to the target (before reductions).",
-        "Heals the caster for half-value on heroes and quarter-value on creeps on every tick Does not heal on the initial damage. For a single enemy hero, this results in up to 50\/100\/150\/200 (70\/140\/210\/280) health restored.",
-        "Does not heal on the initial damage.",
-        "For a single enemy hero, this results in up to 50\/100\/150\/200 (70\/140\/210\/280) health restored.",
+        "Deals the damage over time and heals Queen of Pain in 3 (TagTalent 2.14)-second intervals, starting 3 (TagTalent 2.14) seconds after cast. The initial damage is dealt upon projectile impact, resulting in 6 (TagTalent 8) total damage instances. Can deal up to 130\/260\/390\/520 (TagTalent 170\/340\/510\/680) damage to the target (before reductions). Does not heal initially on projectile impact, resulting in 5 (TagTalent 7) total heal instances. Heals for 5\/10\/15\/20 per instance from non-hero targets. Treats creep-heroes as creeps. Can heal Queen of Pain for up to 50\/100\/150\/200 (TagTalent 70\/140\/210\/280) health from hero targets. Can heal Queen of Pain for up to 25\/50\/75\/100 (TagTalent 35\/70\/105\/140) health from non-hero targets. Always heals for the full amount per instance, regardless of how much damage the target actually takes.",
+        "The initial damage is dealt upon projectile impact, resulting in 6 (TagTalent 8) total damage instances.",
+        "Can deal up to 130\/260\/390\/520 (TagTalent 170\/340\/510\/680) damage to the target (before reductions).",
+        "Does not heal initially on projectile impact, resulting in 5 (TagTalent 7) total heal instances.",
+        "Heals for 5\/10\/15\/20 per instance from non-hero targets. Treats creep-heroes as creeps.",
+        "Can heal Queen of Pain for up to 50\/100\/150\/200 (TagTalent 70\/140\/210\/280) health from hero targets.",
+        "Can heal Queen of Pain for up to 25\/50\/75\/100 (TagTalent 35\/70\/105\/140) health from non-hero targets.",
+        "Always heals for the full amount per instance, regardless of how much damage the target actually takes.",
         "Successive casts on the same target remove the debuff from the previous cast and place a new one. This means the initial damage is dealt again, and the slow value and tick interval are effectively reset.",
         "This means the initial damage is dealt again, and the slow value and tick interval are effectively reset.",
         "The level 20 talent adds a 525 radius to this ability. The ability must be centered over a unit still. Upon cast, Queen of Pain sends daggers towards every enemy within the radius. These behave just like a regular cast, and can be disjointed normally. Also targets units inside the Fog of War and invisible units. However, invisible targets instantly disjoint it.",
@@ -60,7 +63,7 @@
       "mana": "110\/120\/130\/140",
       "hotKey": "Q",
       "cooldown": "16\/12\/8\/4",
-      "description": "Hurls a poisoned dagger which deals large initial damage, and then deals damage over time. The poisoned unit has its movement speed slowed for 50% seconds. An instance of damage is dealt every 3 (2.1428571428571) seconds.",
+      "description": "Hurls a poisoned dagger which deals large initial damage, and then deals damage over time. The poisoned unit has its movement speed slowed for 15 seconds. An instance of damage is dealt every 3 seconds. Queen of Pain relishes in the pain inflicted, healing every time the enemy takes damage. Creeps heal for half the damage only.",
       "spellName": "Shadow Strike",
       "params": [
         "Cast Animation: 0.4+0.67",
@@ -68,8 +71,7 @@
         "Initial Damage: 30\/60\/90\/120",
         "Number of Instances: 5 (TagTalent 7)",
         "Damage per Instance: 20\/40\/60\/80",
-        "Hero damage as Heal per Instance: 10\/20\/30\/40",
-        "Non-Hero damage as Heal per Instance: 50%",
+        "Self Heal per Instance: 10\/20\/30\/40",
         "Move Speed Slow: 20%\/35%\/50%\/65%",
         "Duration: 15",
         "Radius: 525",
@@ -78,7 +80,7 @@
       ],
       "itemBehaviour": [],
       "legacyKey": "D",
-      "story": "Akasha's envenomed dagger allows her to delight in the drawn out suffering of her victims."
+      "story": null
     },
     {
       "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/2\/28\/Queen_of_Pain_Blink_1.mp3\/revision\/latest?cb=20191216022215",
@@ -91,8 +93,8 @@
         "Disjoints projectiles upon cast.",
         "Does not blink for the full distance when targeting closer than the max distance. When targeting beyond the max blink distance, Queen of Pain blinks for the max distance towards the targeted point.",
         "When targeting beyond the max blink distance, Queen of Pain blinks for the max distance towards the targeted point.",
-        "With Aghanim's Shard, Blink first applies the damage, then the silence debuff. The damage fully stack, so enemies within 300 radius of the starting and end location are hit twice, resulting in 350 damage. The silence however cannot be applied twice for double the duration.",
-        "The damage fully stack, so enemies within 300 radius of the starting and end location are hit twice, resulting in 350 damage.",
+        "With Aghanim's Shard, Blink first applies the damage, then the silence debuff. The damage fully stack, so enemies within 300 radius of the starting and end location are hit twice, taking 350 damage. The silence however cannot be applied twice for double the duration.",
+        "The damage fully stack, so enemies within 300 radius of the starting and end location are hit twice, taking 350 damage.",
         "The silence however cannot be applied twice for double the duration."
       ],
       "mana": "60",
@@ -111,7 +113,7 @@
       ],
       "itemBehaviour": [],
       "legacyKey": "B",
-      "story": "The Secret Queen lives up to her title, making her Pain impossible to escape."
+      "story": null
     },
     {
       "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/b\/be\/Queen_of_Pain_Scream_of_Pain.mp3\/revision\/latest?cb=20191216022209",
@@ -138,7 +140,7 @@
       ],
       "itemBehaviour": [],
       "legacyKey": "F",
-      "story": "The sultry voice of Akasha beckons her opponents while stealing their souls."
+      "story": null
     },
     {
       "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/f\/f6\/Queen_of_Pain_Sonic_Wave.mp3\/revision\/latest?cb=20191216022211",
@@ -151,11 +153,11 @@
         "Sonic Wave travels at a speed of 900, taking 1 second to travel the full distance.",
         "With the travel distance and end radius, it can hit units up to 1350.",
         "The complete area is shaped like a cone.",
-        "The knockback angle depends on the angle between the hit target and Queen of Pain's cast location. This means the knockback direction does not equal the cast direction. Very close enemies may get pushed to the sides. Knocks hit enemies 350 range back over 1.4 seconds, resulting in a speed of 250. Units are not disabled during the knockback. They can still turn, attack, cast abilities and use items. Channeling abilities are not interrupted.",
+        "The knockback angle depends on the angle between the hit target and Queen of Pain's cast location. This means the knockback direction does not equal the cast direction. Very close enemies may get pushed to the sides. Knocks hit enemies 350 range back over 1.4 seconds, resulting in a knockback speed of 250. Units are not disabled during the knockback. They can still turn, attack, cast abilities and use items. Channeling abilities are not interrupted.",
         "This means the knockback direction does not equal the cast direction. Very close enemies may get pushed to the sides.",
-        "Knocks hit enemies 350 range back over 1.4 seconds, resulting in a speed of 250.",
+        "Knocks hit enemies 350 range back over 1.4 seconds, resulting in a knockback speed of 250.",
         "Units are not disabled during the knockback. They can still turn, attack, cast abilities and use items. Channeling abilities are not interrupted.",
-        "The knockback destroys trees around the units while being moved.",
+        "Destroys trees enemies come in contact with during the knockback.",
         "Sonic Wave first applies its damage, then the knockback debuff.",
         "Fully affects Couriers."
       ],
@@ -177,7 +179,7 @@
       ],
       "itemBehaviour": [],
       "legacyKey": "W",
-      "story": "Her most exquisite of all of torments, Akasha's Sonic Wave puts her poor foes out of their misery."
+      "story": null
     },
     {
       "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/b\/b7\/Linken%27s_Sphere_Spellblock.mp3\/revision\/latest?cb=20191227195443",
@@ -186,13 +188,16 @@
         "Affects Self"
       ],
       "notes": [
+        "Requires the level 25 talent learned to be unlocked. This ability is shown as a permanent buff in the HUD.",
+        "This ability is shown as a permanent buff in the HUD.",
         "Does not block abilities cast by allies.",
-        "Does not block Ion Shell, Toss, and Snowball.",
-        "Does not block Bullwhip, Urn of Shadows, Spirit Vessel, Medallion of Courage, and Solar Crest.",
-        "For a list of blocked spells, see Spell Block.",
+        "Does not block the following abilities: Ion Shell, Toss and Snowball.",
+        "Does not block the following item abilities: Bullwhip, Urn of Shadows, Spirit Vessel, Medallion of Courage and Solar Crest.",
+        "For a list of blocked abilities, see Spell Block.",
         "Fully stacks with the Spell Block of Linken's Sphere, with the one acquired first also proccing first.",
-        "Cooldown reductions fully affect the cooldown, but cooldown resets do not.",
-        "Does not stack with the effects of Mirror Shield; if procced, Mirror Shield will reflect the ability back but both cooldowns will occur."
+        "Does not stack with the effects of Mirror Shield; when triggered, Mirror Shield reflects the ability back but both cooldowns trigger.",
+        "The buff icon shows a cooldown whenever Spell Block is used. The cooldown is affected by Cooldown Reduction sources (e.g. Octarine Core), but not cooldown resets.",
+        "The cooldown is affected by Cooldown Reduction sources (e.g. Octarine Core), but not cooldown resets."
       ],
       "mana": null,
       "hotKey": null,

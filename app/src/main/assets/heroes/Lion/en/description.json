@@ -3,7 +3,7 @@
     {
       "notes": [
         "The Finger of Death damage per kill and the max health per kill talents are retroactive, adding damage and health to all already existing stacks, not just the ones made after the talent was taken.",
-        "This attack damage talent is added as raw attack damage. Does not benefit illusions and is not affected by most percentage-based damage increasing or reducing effects.",
+        "This attack damage talent is added as bonus attack damage. Does not benefit illusions and is not affected by most percentage-based damage increasing or reducing effects.",
         "Does not benefit illusions and is not affected by most percentage-based damage increasing or reducing effects."
       ],
       "spellName": "Talent",
@@ -38,6 +38,8 @@
         "Damage Magical"
       ],
       "notes": [
+        "The spikes' max travel distance is based on the cast range, plus the range buffer. With the default cast range, it has a max travel distance of 850 (TagTalent 1650).",
+        "With the default cast range, it has a max travel distance of 850 (TagTalent 1650).",
         "The spikes travel at a speed of 1600, taking 0.53 (TagTalent 1.03) seconds to travel the full distance.",
         "With the travel distance and the spikes radius, it can hit units up to 975 (TagTalent 1775) range away.",
         "When targeting a unit, the spikes are released towards its current location upon cast. Spikes do not home and thus can be evaded.",
@@ -46,7 +48,7 @@
         "The damage is applied upon landing, not upon getting hit.",
         "When Earth Spike hits invisible units, the visual effects below the hit unit are still visible."
       ],
-      "mana": "70\/100\/130\/160",
+      "mana": "85\/110\/135\/160",
       "hotKey": "Q",
       "cooldown": "12 (TagTalent 10)",
       "description": "Rock spikes burst from the earth along a straight path. Enemy units are hurled into the air, then are stunned and take damage when they fall.",
@@ -54,7 +56,7 @@
       "params": [
         "Cast Animation: 0.3+0",
         "Cast Range: 575 (TagTalent 1375)",
-        "Spikes Travel Distance: 850 (TagTalent 1650)",
+        "Spikes Range Buffer: 275",
         "Spikes Radius: 125",
         "Damage: 80\/140\/200\/260",
         "Stun Duration: 1.4\/1.8\/2.2\/2.6",
@@ -63,7 +65,7 @@
       ],
       "itemBehaviour": [],
       "legacyKey": "E",
-      "story": "The Demon Witch exercises his demonic covenant, opening a fissure from hell."
+      "story": null
     },
     {
       "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/4\/43\/Lion_Hex_1.mp3\/revision\/latest?cb=20191216015630",
@@ -98,7 +100,7 @@
       ],
       "itemBehaviour": [],
       "legacyKey": "D",
-      "story": "Lion is compelled to share his transfiguration, twisting the essence of those who oppose him."
+      "story": null
     },
     {
       "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/9\/9b\/Lion_Mana_Drain.mp3\/revision\/latest?cb=20191216015631",
@@ -116,19 +118,19 @@
         "Can drain up to 100\/200\/300\/600 mana when fully channeled.",
         "The mana gained is based on how much the target actually lost on each interval. If they have no mana left, no mana is gained either. However, if Lion is at full mana, the target still continues to lose mana.",
         "However, if Lion is at full mana, the target still continues to lose mana.",
-        "With the level 20 talent, Mana Drain can be cast on allies with reversed effects, draining the caster's mana into the target. Instantly destroys targeted allied illusions on the first interval as well. Like on enemies, the mana the ally gains is based on how much Lion actually loses. Also like on enemies, if the ally has full mana, Lion continues to lose mana.",
+        "With the level 20 talent, Mana Drain can be cast on allies with reversed effects, draining the caster's mana into the target. Instantly destroys targeted allied illusions on the first interval as well. Like on enemies, the mana the ally gains is based on how much Lion actually loses. However, if the ally is at full mana, Lion continues to lose mana.",
         "Instantly destroys targeted allied illusions on the first interval as well.",
         "Like on enemies, the mana the ally gains is based on how much Lion actually loses.",
-        "Also like on enemies, if the ally has full mana, Lion continues to lose mana.",
-        "With Aghanim's Shard, Mana Drain automatically targets 2 additional enemies within range, using the same targeting rules. The search range is based on the cast range, plus the buffer, resulting in a search range of 1150. Since the additional links use the ability's cast range, cast range increasing effects increase their range as well. The secondary targets are chosen randomly within the area. There are no priorities. When cast on allies, it still can choose random enemies within range. Does not target allies as secondary targets. The secondary links do not break and continue to drain mana, even if their targets turn invulnerable, spell immune or run out of mana. They do break when exceeding the link break distance. The secondary links stop draining mana if their targets turn invisible or get out of vision, but continue to slow them. All links break as soon as the primary target cannot be affected anymore. The spell immunity while channeling does not come with any dispel.",
+        "However, if the ally is at full mana, Lion continues to lose mana.",
+        "With Aghanim's Shard, Mana Drain grants Lion spell immunity while channeling and automatically targets 2 additional enemies within range, using the same targeting rules. The spell immunity while channeling does not come with any dispel. The search range is based on the cast range, plus the buffer, resulting in a search range of 1150. Since the additional links use the ability's cast range, cast range increasing effects increase their range as well. The secondary targets are chosen randomly within the area. There are no priorities. When cast on allies, it still can choose random enemies within range. Does not target allies as secondary targets. The secondary links do not break and continue to drain mana, even if their targets turn invulnerable, spell immune or run out of mana. They do break when exceeding the link break distance. The secondary links stop draining mana if their targets turn invisible or get out of vision, but continue to slow them. All links break as soon as the primary target cannot be affected anymore.",
+        "The spell immunity while channeling does not come with any dispel.",
         "The search range is based on the cast range, plus the buffer, resulting in a search range of 1150.",
         "Since the additional links use the ability's cast range, cast range increasing effects increase their range as well.",
         "The secondary targets are chosen randomly within the area. There are no priorities.",
         "When cast on allies, it still can choose random enemies within range. Does not target allies as secondary targets.",
         "The secondary links do not break and continue to drain mana, even if their targets turn invulnerable, spell immune or run out of mana. They do break when exceeding the link break distance.",
         "The secondary links stop draining mana if their targets turn invisible or get out of vision, but continue to slow them.",
-        "All links break as soon as the primary target cannot be affected anymore.",
-        "The spell immunity while channeling does not come with any dispel."
+        "All links break as soon as the primary target cannot be affected anymore."
       ],
       "mana": "10",
       "hotKey": "E",
@@ -150,7 +152,7 @@
       ],
       "itemBehaviour": [],
       "legacyKey": "R",
-      "story": "Lesser magi are nothing more than a source of magical restoration for the Demon Witch."
+      "story": null
     },
     {
       "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/3\/32\/Lion_Finger_of_Death_1.mp3\/revision\/latest?cb=20191216015627",
@@ -162,12 +164,12 @@
       "notes": [
         "Places a debuff on the target upon cast, which applies the damage and the second debuff upon expiring. The debuff lasts 0.25 seconds. This means the damage can be avoided by being invulnerable, hidden or spell immune as the debuff expires.",
         "This means the damage can be avoided by being invulnerable, hidden or spell immune as the debuff expires.",
-        "If the target dies while having the second debuff, Finger Of Death gains a permanent damage bonus. The status buff on Lion keeps track of how many heroes died with the debuff. The bonus debuff stacks, meaning that if Finger Of Death is cast on the same target twice within the 3-second time frame and the target dies, the bonus damage is granted twice. Although only gaining damage from hero kills, the debuff is placed on every target. Gains damage from dying Meepo Clones as well, but not from Tempest Doubles, illusions or creep-heroes. With the level 15 talent, the debuff also grants Lion a permanent 70 max health bonus. The health gain keeps the current health percentage the same.",
+        "If the target dies while having the second debuff, Finger Of Death gains a permanent damage bonus. The status buff on Lion keeps track of how many heroes died with the debuff. The bonus debuff stacks, meaning that if Finger Of Death is cast on the same target twice within the 3-second time frame and the target dies, the bonus damage is granted twice. Although only gaining damage from hero kills, the debuff is placed on every target. Gains damage from dying Meepo Clones as well, but not from Tempest Doubles, illusions or creep-heroes. With the level 15 talent, the debuff also grants Lion a permanent 70 max health bonus per stack. The health gain keeps the current health percentage the same.",
         "The status buff on Lion keeps track of how many heroes died with the debuff.",
         "The bonus debuff stacks, meaning that if Finger Of Death is cast on the same target twice within the 3-second time frame and the target dies, the bonus damage is granted twice.",
         "Although only gaining damage from hero kills, the debuff is placed on every target.",
         "Gains damage from dying Meepo Clones as well, but not from Tempest Doubles, illusions or creep-heroes.",
-        "With the level 15 talent, the debuff also grants Lion a permanent 70 max health bonus. The health gain keeps the current health percentage the same.",
+        "With the level 15 talent, the debuff also grants Lion a permanent 70 max health bonus per stack. The health gain keeps the current health percentage the same.",
         "The health gain keeps the current health percentage the same.",
         "With Aghanim's Scepter, Finger of Death is cast on all enemy units within 325 radius of the primary target. Can hit invisible units and units inside the Fog of War.",
         "Can hit invisible units and units inside the Fog of War."
@@ -186,13 +188,13 @@
         "Kill Grace Duration: 3",
         "Max Health per Kill: 70",
         "Radius: 325",
-        "Increases base damage and reduces cooldown. Finger of Death hits all units in a small area.",
-        "Cannot be cast on spell immune enemies. Attempts to damage, and places the debuff if target turns spell immune during the delay.",
+        "Increases damage. Decreases cooldown. Finger of Death hits all units in a small area.",
+        "Cannot be cast on spell immune enemies, but pierces spell immunity when turning spell immune after cast. Fully pierces spell immunity when reflected.",
         "Blocked fully only when primary target. Blocked upon cast. Particles still visually appear."
       ],
       "itemBehaviour": [],
       "legacyKey": "F",
-      "story": "Lion's disfigured hand is also the source of his greatest power, capable of flooding victims with malefic force."
+      "story": null
     }
   ],
   "mainAttributes": {

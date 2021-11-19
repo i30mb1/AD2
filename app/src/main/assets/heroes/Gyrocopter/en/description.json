@@ -59,7 +59,7 @@
       ],
       "itemBehaviour": [],
       "legacyKey": "R",
-      "story": "Aurel's new craft has an increased payload for rockets, enhancing their rapid-fire capabilities."
+      "story": null
     },
     {
       "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/4\/43\/Gyrocopter_Homing_Missile_1.mp3\/revision\/latest?cb=20200917220359",
@@ -70,21 +70,22 @@
       ],
       "notes": [
         "When cast, a stationary missile is placed 150 range in front of Gyrocopter, which begins to move 2.5 seconds later.",
-        "Homing Missile's initial speed is 500 and increases by 20 per second, growing by 1 movement speed every 0.05 seconds. The speed acceleration is not capped, and continues to increase until it hits the target or is destroyed.",
+        "Homing Missile' initial speed is 500 and increases by 20 per second, growing by 1 movement speed every 0.05 seconds. The speed acceleration is not capped, and continues to increase until it hits the target or is destroyed.",
         "The speed acceleration is not capped, and continues to increase until it hits the target or is destroyed.",
         "If the missile's target dies, it automatically switches to the nearest valid target within 700 range of the previous target.",
-        "Only attacks from heroes, illusions (counting as heroes), towers, and the fountains (counting as towers) can damage the missile.",
+        "Only attacks from heroes, illusions (counting as heroes), and buildings can damage the missile.",
         "The rocket first applies the debuff, then the damage.",
         "The cross-hair over the target is visible to allies only.",
         "Although the ability grants no vision or True Sight over the target, the missile follows and hits invisible units.",
         "If the missile hits its target, its 400 range flying vision stays at the location for 3.5 seconds.",
-        "The missile can be targeted by Force Staff, Hurricane Pike and Psychic Headband, pushing the rocket forwards (or backwards). The missile cannot impact the target during the Forced Movement, and passes through, reorients, and continues to chase the target.",
+        "The missile can be targeted by Force Staff, Hurricane Pike and Psychic Headband, pushing the rocket forward or backward. The missile cannot impact the target during the Forced Movement, and passes through, reorients, and continues to chase the target.",
         "The missile cannot impact the target during the Forced Movement, and passes through, reorients, and continues to chase the target.",
         "The missile is instantly destroyed when affected by Chronosphere.",
-        "With Aghanim's Shard, the missile starts firing Rocket Barrage of the current level 1 second after being deployed. This Rocket Barrage has a radius of 700 and prioritizes its current target over other units. Rocket Barrage notes fully apply. If it is not leveled, the missile will still fire at the target, but dealing no damage. Although the missile launches the Rocket Barrage, the damage is sourced to the Gyrocopter, not the missile. Acquiring Aghanim's Shard immediately updates all currently existing Homing Missiles.",
-        "This Rocket Barrage has a radius of 700 and prioritizes its current target over other units.",
+        "With Aghanim's Shard, the missile starts firing Rocket Barrage of the current level 1 second after being deployed. This Rocket Barrage has a radius of 725 and prioritizes its current target over other units. Rocket Barrage notes fully apply. If it is not leveled, the missile will still fire at the target, but dealing no damage. Although the missile launches the Rocket Barrage, the damage is sourced to the Gyrocopter, not the missile. Therefore, the damage is affected by outgoing damage manipulation and spell lifesteal. Acquiring Aghanim's Shard immediately updates all currently existing Homing Missiles.",
+        "This Rocket Barrage has a radius of 725 and prioritizes its current target over other units.",
         "Rocket Barrage notes fully apply. If it is not leveled, the missile will still fire at the target, but dealing no damage.",
         "Although the missile launches the Rocket Barrage, the damage is sourced to the Gyrocopter, not the missile.",
+        "Therefore, the damage is affected by outgoing damage manipulation and spell lifesteal.",
         "Acquiring Aghanim's Shard immediately updates all currently existing Homing Missiles."
       ],
       "mana": "120\/130\/140\/150",
@@ -100,14 +101,14 @@
         "Tower Attacks to Destroy: 6",
         "Damage: 100\/175\/250\/325",
         "Stun Duration: 2.25\/2.5\/2.75\/3 (TagTalent 2.65\/2.9\/3.15\/3.4)",
-        "Rocket Barrage Radius: 700",
+        "Rocket Barrage Radius: 725",
         "Rocket Barrage Delay: 1",
-        "Homing Missiles now constantly fire a rocket barrage with a 700 AOE after 1 second of being cast. Barrage prioritizes the homing missile target.",
+        "Homing Missiles now constantly fire a rocket barrage with a 725 AOE after 1 second of being cast. Barrage prioritizes the homing missile target.",
         "Blocked upon impact."
       ],
       "itemBehaviour": [],
       "legacyKey": "E",
-      "story": "The biggest missile Aurel could possibly attach to his craft, The Bomb™ has carefully calculated aerodynamics and explosives for maximum impact."
+      "story": null
     },
     {
       "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/6\/63\/Gyrocopter_Flak_Cannon_1.mp3\/revision\/latest?cb=20191216014016",
@@ -125,17 +126,16 @@
         "The primary attack target is not affected by Flak Cannon. It is only hit by the primary attack.",
         "Does not target Couriers, wards, buildings, invisible units, or units inside the Fog of War.",
         "However, attacking couriers, wards, buildings, or allied units still causes flaks to hit all valid targets within the radius.",
-        "The visual effect above Gyrocopter and number of attacks left on the buff icon are visible to everyone.",
-        "With Aghanim's Scepter, Gyrocopter performs instant attacks on the furthest enemy within 700 range of him. These instant attacks can trigger any attack modifiers and on-hit effects normally, except for Flak Cannon itself. They do not have True Strike, but ignore disarms. Does not target wards, couriers, and attack immune enemies, but does target buildings. Only targets units Gyrocopter has vision over. The Side Gunner does not attack when Gyrocopter is hidden or invisible. However, the gunner ignores fade times and fade delays of abilities. It only does not attack when fully invisible. Flak Cannon does not need to be learned to unlock the Side Gunner. Side Gunner is only available to Gyrocopter. Other heroes such as Morphling and Rubick who get hold on Flak Cannon cannot unlock Side Gunner. In Ability Draft, the Side Gunner is available for anyone who drafts Flak Cannon, but the ability needs to be learned to work.",
+        "The visual effect above Gyrocopter and the number of attacks left on the buff icon are visible to everyone.",
+        "With Aghanim's Scepter, Gyrocopter performs instant attacks on the furthest enemy within 700 range of him. These instant attacks can trigger any attack modifiers and on-hit effects normally, except for Flak Cannon itself. They do not have True Strike, but ignore disarms. Does not target wards, couriers, and attack immune enemies, but does target buildings. Only targets units Gyrocopter has vision over. The Side Gunner does not attack when Gyrocopter is hidden or invisible. However, the Side Gunner ignores fade times and fade delays of abilities. It only does not attack when fully invisible. The Side Gunner is a passive component of Flak Cannon, but does not require it to be learned to work. Side Gunner only works for Gyrocopter. Acquiring Flak Cannon via Spell Steal or Morph does not unlock Side Gunner.",
         "These instant attacks can trigger any attack modifiers and on-hit effects normally, except for Flak Cannon itself. They do not have True Strike, but ignore disarms.",
         "Does not target wards, couriers, and attack immune enemies, but does target buildings. Only targets units Gyrocopter has vision over.",
         "The Side Gunner does not attack when Gyrocopter is hidden or invisible.",
-        "However, the gunner ignores fade times and fade delays of abilities. It only does not attack when fully invisible.",
-        "Flak Cannon does not need to be learned to unlock the Side Gunner.",
-        "Side Gunner is only available to Gyrocopter. Other heroes such as Morphling and Rubick who get hold on Flak Cannon cannot unlock Side Gunner.",
-        "In Ability Draft, the Side Gunner is available for anyone who drafts Flak Cannon, but the ability needs to be learned to work."
+        "However, the Side Gunner ignores fade times and fade delays of abilities. It only does not attack when fully invisible.",
+        "The Side Gunner is a passive component of Flak Cannon, but does not require it to be learned to work.",
+        "Side Gunner only works for Gyrocopter. Acquiring Flak Cannon via Spell Steal or Morph does not unlock Side Gunner."
       ],
-      "mana": "50",
+      "mana": "50\/60\/70\/80",
       "hotKey": "E",
       "cooldown": "24\/22\/20\/18 (TagTalent 18\/16\/14\/12)",
       "description": "Gyrocopter's attacks hit all enemy units in an area around it for a limited number of attacks. Only the main target of attacks will receive attack bonuses such as Critical Strike. Lasts seconds or until the attacks are used.",
@@ -152,7 +152,7 @@
       ],
       "itemBehaviour": [],
       "legacyKey": "F",
-      "story": "This newly revamped Gyrocopter has attached enough armaments to assault in a 360 degree radius."
+      "story": null
     },
     {
       "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/3\/31\/Gyrocopter_Call_Down_1.mp3\/revision\/latest?cb=20210823213938",
@@ -202,7 +202,7 @@
       ],
       "itemBehaviour": [],
       "legacyKey": "C",
-      "story": "'Bombs away!'"
+      "story": null
     }
   ],
   "mainAttributes": {

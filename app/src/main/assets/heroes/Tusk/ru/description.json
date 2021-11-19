@@ -8,13 +8,13 @@
       "talents": [
         {
           "talentLvl": "25",
-          "talentLeft": "-10 сек. перезарядки Snowball",
+          "talentLeft": "−8 сек. перезарядки Snowball",
           "talentRight": "Walrus PUNCH! сработает при атаке с шансом в 12%"
         },
         {
           "talentLvl": "20",
           "talentLeft": "+80% к критическому урону от Walrus PUNCH!",
-          "talentRight": "-6 сек. перезарядки Ice Shards"
+          "talentRight": "−6 сек. перезарядки Ice Shards"
         },
         {
           "talentLvl": "15",
@@ -24,7 +24,7 @@
         {
           "talentLvl": "10",
           "talentLeft": "+0,4 сек. оглушения от Walrus Punch",
-          "talentRight": "+8 здоровья в секунду"
+          "talentRight": "+25 к урону от Tag Team"
         }
       ]
     },
@@ -63,7 +63,7 @@
       ],
       "itemBehaviour": [],
       "legacyKey": "E",
-      "story": "Когда заходит последнее осеннее солнце, морозная тундра у Барьера леденеет с тревожной быстротой."
+      "story": null
     },
     {
       "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/3\/3b\/Tusk_Snowball_1.mp3\/revision\/latest?cb=20191216025616",
@@ -101,7 +101,7 @@
       ],
       "mana": "75",
       "hotKey": "W",
-      "cooldown": "21\/20\/19\/18 (TagTalent 11\/10\/9\/8)",
+      "cooldown": "21\/20\/19\/18 (TagTalent 13\/12\/11\/10)",
       "description": "Герой заворачивается в снежный ком. Союзников в радиусе 350 также можно поместить в ком, нажав на них правой кнопкой мыши, даже если ком уже движется. После запуска все враги на пути кома будут оглушены и получат урон. Чем больше в коме союзных героев, тем больше урон от него.",
       "spellName": "Snowball",
       "params": [
@@ -120,7 +120,7 @@
       ],
       "itemBehaviour": [],
       "legacyKey": "W",
-      "story": "О приёме, завершившем великую потасовку на Белоснежных полях, до сих пор ходят легенды."
+      "story": null
     },
     {
       "audioUrl": null,
@@ -141,7 +141,7 @@
       ],
       "itemBehaviour": [],
       "legacyKey": "W",
-      "story": "Вперед, в белые пустоши!"
+      "story": null
     },
     {
       "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/2\/23\/Tusk_Tag_Team_1.mp3\/revision\/latest?cb=20191216025619",
@@ -175,7 +175,7 @@
       ],
       "itemBehaviour": [],
       "legacyKey": "T",
-      "story": "Даже вдали от Кобальта кости Бивня полны прохлады Барьера."
+      "story": null
     },
     {
       "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/3\/3b\/Tusk_Walrus_Kick.mp3\/revision\/latest?cb=20191216025621",
@@ -218,7 +218,7 @@
       ],
       "itemBehaviour": [],
       "legacyKey": "D",
-      "story": "Может, Имир и прославился своими кулаками, но мудрый противник опасается любых его конечностей."
+      "story": null
     },
     {
       "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/7\/73\/Tusk_Frozen_Sigil.mp3\/revision\/latest?cb=20201007213717",
@@ -248,7 +248,7 @@
       ],
       "itemBehaviour": [],
       "legacyKey": "F",
-      "story": "Родимый мороз!"
+      "story": null
     },
     {
       "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/b\/b2\/Tusk_Walrus_PUNCH%21.mp3\/revision\/latest?cb=20191216025622",
@@ -293,7 +293,7 @@
       ],
       "itemBehaviour": [],
       "legacyKey": "R",
-      "story": "Неважно, кто ударил первым. Важно, кто ударил последним."
+      "story": null
     }
   ],
   "mainAttributes": {
@@ -309,13 +309,13 @@
   "talents": [
     {
       "talentLvl": "25",
-      "talentLeft": "-10 сек. перезарядки Snowball",
+      "talentLeft": "−8 сек. перезарядки Snowball",
       "talentRight": "Walrus PUNCH! сработает при атаке с шансом в 12%"
     },
     {
       "talentLvl": "20",
       "talentLeft": "+80% к критическому урону от Walrus PUNCH!",
-      "talentRight": "-6 сек. перезарядки Ice Shards"
+      "talentRight": "−6 сек. перезарядки Ice Shards"
     },
     {
       "talentLvl": "15",
@@ -325,7 +325,7 @@
     {
       "talentLvl": "10",
       "talentLeft": "+0,4 сек. оглушения от Walrus Punch",
-      "talentRight": "+8 здоровья в секунду"
+      "talentRight": "+25 к урону от Tag Team"
     }
   ]
 }

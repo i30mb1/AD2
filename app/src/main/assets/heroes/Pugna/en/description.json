@@ -23,8 +23,8 @@
         },
         {
           "talentLvl": "10",
-          "talentLeft": "+175 Health",
-          "talentRight": "+15 Movement Speed"
+          "talentLeft": "+200 Health",
+          "talentRight": "+20 Movement Speed"
         }
       ]
     },
@@ -46,7 +46,7 @@
       "spellName": "Nether Blast",
       "params": [
         "Cast Animation: 0.2+0",
-        "Cast Range: 400",
+        "Cast Range: 500",
         "Blast Radius: 400",
         "Effect Delay: 0.8",
         "Damage: 100\/175\/250\/325 (TagTalent 260\/335\/410\/485)",
@@ -54,7 +54,7 @@
       ],
       "itemBehaviour": [],
       "legacyKey": "B",
-      "story": "The Arts of Oblivion include a deafening blast of emerald flames from the Nether Reaches."
+      "story": null
     },
     {
       "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/9\/92\/Pugna_Decrepify.mp3\/revision\/latest?cb=20191216022123",
@@ -69,7 +69,7 @@
         "Reduces most allied heroes' total magic resistance to 6.25%.",
         "Reduces most enemy heroes' total magic resistance to 2%\/-5%\/-13%\/-20%.",
         "Decrepify's magic resistance reduction does not stack with other ethereal effects, the one with higher value takes priority.",
-        "Can be cast on Nether Wards and Tombstones. This includes allied Nether Wards and Tombstones, and enemy Nether Wards, but not enemy Tombstones, since it does not pierce spell immunity on enemies. Cannot be cast on any other ward.",
+        "Can be cast on Nether Ward and Tombstone. This includes allied Nether Wards and Tombstones, and enemy Nether Wards, but not enemy Tombstones, since it does not pierce spell immunity on enemies. Cannot be cast on any other ward.",
         "This includes allied Nether Wards and Tombstones, and enemy Nether Wards, but not enemy Tombstones, since it does not pierce spell immunity on enemies.",
         "Cannot be cast on any other ward."
       ],
@@ -89,7 +89,7 @@
       ],
       "itemBehaviour": [],
       "legacyKey": "C",
-      "story": "A now-mastered relic from his childhood, Pugna delights in banishing others into the Nether Realm, whether for good, evil, or simple enjoyment."
+      "story": null
     },
     {
       "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/4\/46\/Pugna_Nether_Ward_1.mp3\/revision\/latest?cb=20191216022128",
@@ -101,20 +101,24 @@
       "notes": [
         "↓↓ Double-tapping automatically places the Nether Ward right in front of Pugna, 150 range away from him.",
         "Illusions are treated as creeps when attacking the ward, so they take 16 (TagTalent 28) attacks to destroy it, instead of 4 (TagTalent 7) like heroes.",
-        "The damage triggers on every instance of mana usage from ability and items. If an ability or item costs no mana to use, it does not trigger on it. This means if an ability uses mana over time (e.g. Chakram), the flare triggers on every single instance of mana they use. However, it does not trigger on abilities that do not trigger on-cast effects, like active attack modifier and toggle abilities.",
+        "Although providing a negative aura, the debuff has no effect and serves soley as a informational purpose for the enemy. The damage is independent from the aura, so even though the debuff lingers, Nether Ward cannot damage units beyond its radius. Although the damage affects every enemy unit, the aura's debuff is only placed on heroes, including illusions, clones, and creep-heroes.",
+        "The damage is independent from the aura, so even though the debuff lingers, Nether Ward cannot damage units beyond its radius.",
+        "Although the damage affects every enemy unit, the aura's debuff is only placed on heroes, including illusions, clones, and creep-heroes.",
+        "The damage triggers on every instance of mana usage from ability. If an ability costs no mana to use, it does not trigger on it. This means if an ability uses mana over time (e.g. Chakram), the flare triggers on every single instance of mana they use.",
         "This means if an ability uses mana over time (e.g. Chakram), the flare triggers on every single instance of mana they use.",
-        "However, it does not trigger on abilities that do not trigger on-cast effects, like active attack modifier and toggle abilities.",
-        "The damage does not trigger on mana loss caused in other ways (all forms of mana burn, Mana Drain, Sanity's Eclipse, etc).",
-        "The damage is dealt before the actual ability is cast, so if the target dies to Nether Ward's damage, the ability stays unused. This means that abilities which provide protection (e.g. Rage, Refraction) do not save the caster if the damage is lethal. Dying with Reincarnation ready triggers the damage, but it does not prevent Reincarnation from going off.",
-        "This means that abilities which provide protection (e.g. Rage, Refraction) do not save the caster if the damage is lethal.",
+        "The damage does not trigger on mana loss caused by abilities that removes mana offensively (e.g. Mana Burn sources, Sanity's Eclipse, etc). Fully ignores abilities that do not trigger on-cast effects (i.e. active attack modifiers and toggle-abilities).",
+        "Fully ignores abilities that do not trigger on-cast effects (i.e. active attack modifiers and toggle-abilities).",
+        "The damage is dealt before the actual ability is cast, so if the target dies to Nether Ward's damage, the ability stays unused. This means that damage negating effects with mana cost (e.g. Refraction) or abilities granting spell immunity with mana cost (e.g. Rage), do not save the caster if the damage is lethal. Dying with Reincarnation ready triggers the damage, but it does not prevent Reincarnation from going off.",
+        "This means that damage negating effects with mana cost (e.g. Refraction) or abilities granting spell immunity with mana cost (e.g. Rage), do not save the caster if the damage is lethal.",
         "Dying with Reincarnation ready triggers the damage, but it does not prevent Reincarnation from going off.",
-        "The damage source is the ward itself, meaning certain on-damage effects react on the ward rather than on Pugna (e.g. Blade Mail).",
+        "When triggered, the ward heals itself for 8 health, which is 2 additional hero attacks, or 8 non-hero attacks.",
+        "The damage source is the ward itself, meaning certain on-damage effects (e.g. Damage Return) react on the ward rather than on Pugna.",
         "Fully affects invulnerable and invisible units and units in the Fog of War."
       ],
       "mana": "80",
       "hotKey": "E",
       "cooldown": "35",
-      "description": "Pugna places a Nether Ward at the target location. The ward will fire at any enemy hero who casts a spell. Nether Ward deals base damage plus the damage multiplier of the mana spent by the enemy hero. Nether Ward heals hits whenever it triggers.",
+      "description": "Pugna places a Nether Ward at the target location. The ward will fire at any enemy hero who casts a spell dealing base damage plus the damage multiplier of the mana spent by the enemy hero. Nether Ward heals 25% of its total health every time it triggers.",
       "spellName": "Nether Ward",
       "params": [
         "Cast Animation: 0.2+0.4",
@@ -125,11 +129,11 @@
         "Base Damage: 50",
         "Damage per Used Mana: 1\/1.25\/1.5\/1.75 (TagTalent 2.75\/3\/3.25\/3.5)",
         "Ward Duration: 18\/22\/26\/30",
-        "Ward Self Heal on proc: 2"
+        "Aura Linger Duration: 0.5"
       ],
       "itemBehaviour": [],
       "legacyKey": "W",
-      "story": "While at the lamasery for the Arts of Oblivion, Pugna learned to dominate his classmates with a simple ward charged with Nether magic."
+      "story": null
     },
     {
       "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/9\/98\/Pugna_Life_Drain.mp3\/revision\/latest?cb=20191216022124",
@@ -141,28 +145,28 @@
       "notes": [
         "The links break when the targets turn invulnerable or hidden, exceed the break distance, or run out of health.",
         "Provides True Sight over the targets and exposes their position.",
-        "The health restored equals the amount of damage dealt per tick after all reductions. This means if the damage instance gets increased or reduced, it heals for the same increased or reduced values. This also goes for targeting allies. The more damage it deals to Pugna, the more it heals and vice versa. As a result, Pugna cannot heal allies if he has 100% magic resistance (e.g. Fate's Edict) or is under the effects of a Magic Barrier. The level 20 talent amplifies the healing done by Life Drain by 20%. This stacks multiplicatively with other incoming heal manipulation effects on the target. However, it is not affected by general outgoing heal manipulation on Pugna (e.g. Holy Locket).",
+        "The health restored equals the amount of damage dealt per tick after all reductions. This means if the damage instance gets increased or reduced, it heals for the same increased or reduced values. This also goes for targeting allies. The more damage it deals to Pugna, the more it heals and vice versa. As a result, Pugna cannot heal allies if he has 100% magic resistance (e.g. Fate's Edict) or is under the effects of Magic Barrier sources. The level 20 talent amplifies the healing done by Life Drain by 20%. This stacks multiplicatively with other incoming heal manipulation effects on the target. However, it is not affected by any general outgoing heal manipulation (e.g. Holy Locket) on Pugna.",
         "This means if the damage instance gets increased or reduced, it heals for the same increased or reduced values.",
         "This also goes for targeting allies. The more damage it deals to Pugna, the more it heals and vice versa.",
-        "As a result, Pugna cannot heal allies if he has 100% magic resistance (e.g. Fate's Edict) or is under the effects of a Magic Barrier.",
-        "The level 20 talent amplifies the healing done by Life Drain by 20%. This stacks multiplicatively with other incoming heal manipulation effects on the target. However, it is not affected by general outgoing heal manipulation on Pugna (e.g. Holy Locket).",
-        "However, it is not affected by general outgoing heal manipulation on Pugna (e.g. Holy Locket).",
-        "If Pugna's or the allied hero's health is full and the damaged unit is a hero, it restores their mana instead. This means it also restores mana on allied non-hero units when they are at full health, since Pugna (a hero) is damaged. Just like the health restoring, the amount of mana restored equals the amount of damage dealt after all reductions and amplifications.",
+        "As a result, Pugna cannot heal allies if he has 100% magic resistance (e.g. Fate's Edict) or is under the effects of Magic Barrier sources.",
+        "The level 20 talent amplifies the healing done by Life Drain by 20%. This stacks multiplicatively with other incoming heal manipulation effects on the target. However, it is not affected by any general outgoing heal manipulation (e.g. Holy Locket) on Pugna.",
+        "However, it is not affected by any general outgoing heal manipulation (e.g. Holy Locket) on Pugna.",
+        "If Pugna's or the allied hero's health is full and the damaged unit is a hero, it restores their mana instead. This means it also restores mana on allied non-hero units when they are at full health, since Pugna (a hero) is damaged. Just like the health restoring, the amount of mana restored equals the amount of damage dealt after all reductions and amplifications (including the Life Drain Heal talent).",
         "This means it also restores mana on allied non-hero units when they are at full health, since Pugna (a hero) is damaged.",
-        "Just like the health restoring, the amount of mana restored equals the amount of damage dealt after all reductions and amplifications.",
+        "Just like the health restoring, the amount of mana restored equals the amount of damage dealt after all reductions and amplifications (including the Life Drain Heal talent).",
         "The self-damage when targeting allies is lethal, so it can be used to deny oneself.",
-        "Drains 37.5\/56.25\/75 (TagTalent 50\/75\/100) health in 0.25-second intervals, starting 0.25 seconds after cast, resulting in up to 40 instances. The level 20 talent amplifies the heal value to 45\/67.5\/90 (TagTalent 60\/90\/120) without changing the damage value.",
-        "The level 20 talent amplifies the heal value to 45\/67.5\/90 (TagTalent 60\/90\/120) without changing the damage value.",
-        "Can drain up to 1500\/2250\/3000 (TagTalent 2000\/3000\/4000) health (before reductions) when fully channeled. With the level 20 talent, it can heal up to 1800\/2700\/3600 (TagTalent 2400\/3600\/4800) health, while the damage dealt remains unchanged.",
-        "With the level 20 talent, it can heal up to 1800\/2700\/3600 (TagTalent 2400\/3600\/4800) health, while the damage dealt remains unchanged.",
+        "Drains 37.5\/56.25\/75 (TagTalent 62.5\/81.25\/100) health in 0.25-second intervals, starting 0.25 seconds after cast, resulting in up to 40 instances. With the level 20 talent, it amplifies the heal value to 45\/67.5\/90 (TagTalent 75\/97.5\/120) without changing the damage value.",
+        "With the level 20 talent, it amplifies the heal value to 45\/67.5\/90 (TagTalent 75\/97.5\/120) without changing the damage value.",
+        "Can drain up to 1500\/2250\/3000 (TagTalent 2500\/3250\/4000) health (before reductions) when fully channeled. With the level 20 talent, it can heal up to 1800\/2700\/3600 (TagTalent 3000\/3900\/4800) health, while the damage dealt remains unchanged.",
+        "With the level 20 talent, it can heal up to 1800\/2700\/3600 (TagTalent 3000\/3900\/4800) health, while the damage dealt remains unchanged.",
         "The color of Life Drain's link changes depending on the situation: When draining life from an enemy, the link is red ➜ green (pink ➜ blue if Pugna is at full health). When draining life into an ally, the link is green ➜ green (blue ➜ green if the ally is at full health).",
         "When draining life from an enemy, the link is red ➜ green (pink ➜ blue if Pugna is at full health).",
         "When draining life into an ally, the link is green ➜ green (blue ➜ green if the ally is at full health).",
         "Instantly destroys targeted enemy illusions on the first instance. Allied illusions are not destroyed.",
-        "With Aghanim's Shard, additional Life Drain links are created in 1.5-second intervals, starting 1.5 seconds after cast, resulting in up to 7 possible links. This only happens if the primary target is an enemy unit. Targeting allies does not create any links. Only targets enemy heroes, including illusions, clones, and creep-heroes. The targets are chosen randomly. The search range is based on the cast range, plus the buffer, resulting in a search range of 900. Since the additional links use the ability's cast range, cast range increasing effects increase the search range as well. If the primary target's link breaks while channeling Life Drain, the secondary links continue channeling normally.",
+        "With Aghanim's Shard, additional Life Drain links are created in 1.5-second intervals, starting 1.5 seconds after cast, resulting in up to 7 possible links. This only happens if the primary target is an enemy unit. Targeting allies does not create any links. Only targets enemy heroes, including illusions, clones, and creep-heroes. The targets are chosen randomly. With the cast range and the range buffer, the ability has a search range of 900. Since the additional links use the ability's cast range, cast range increasing effects increase the search range as well. If the primary target's link breaks while channeling Life Drain, the secondary links continue channeling normally.",
         "This only happens if the primary target is an enemy unit. Targeting allies does not create any links.",
         "Only targets enemy heroes, including illusions, clones, and creep-heroes. The targets are chosen randomly.",
-        "The search range is based on the cast range, plus the buffer, resulting in a search range of 900.",
+        "With the cast range and the range buffer, the ability has a search range of 900.",
         "Since the additional links use the ability's cast range, cast range increasing effects increase the search range as well.",
         "If the primary target's link breaks while channeling Life Drain, the secondary links continue channeling normally."
       ],
@@ -176,7 +180,7 @@
         "Cast Range: 700",
         "Max Channel Time: 10",
         "Link Break Distance: 900",
-        "Health Drain per Second: 150\/225\/300 (TagAghanim 200\/300\/400)",
+        "Health Drain per Second: 150\/225\/300 (TagAghanim 250\/325\/400)",
         "Life Drain Heal Amplification: 20%",
         "Secondary Target Range Buffer: 200",
         "Secondary Links Creation Interval: 1.5",
@@ -186,7 +190,7 @@
       ],
       "itemBehaviour": [],
       "legacyKey": "D",
-      "story": "Pugna has truly become more powerful than even the grandmaster of Oblivion."
+      "story": null
     }
   ],
   "mainAttributes": {
@@ -217,8 +221,8 @@
     },
     {
       "talentLvl": "10",
-      "talentLeft": "+175 Health",
-      "talentRight": "+15 Movement Speed"
+      "talentLeft": "+200 Health",
+      "talentRight": "+20 Movement Speed"
     }
   ]
 }

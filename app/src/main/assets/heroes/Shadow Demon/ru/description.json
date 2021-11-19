@@ -2,7 +2,7 @@
   "abilities": [
     {
       "notes": [
-        "Талант на силу в общем даёт Shadow Demon: 200 здоровья и 1 регенерации здоровья."
+        "Талант на силу в общем даёт Shadow Demon: 200 здоровья и 1 восстановления здоровья."
       ],
       "spellName": "Talent",
       "talents": [
@@ -67,7 +67,7 @@
       ],
       "itemBehaviour": [],
       "legacyKey": "D",
-      "story": "Боль от обмана приходит не когда он случается, а когда о нём узнают."
+      "story": null
     },
     {
       "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/2\/2d\/Shadow_Demon_Soul_Catcher_1.mp3\/revision\/latest?cb=20191216022841",
@@ -96,7 +96,7 @@
       ],
       "itemBehaviour": [],
       "legacyKey": "C",
-      "story": "Попытки сопротивляться порабощению обычно ни к чему не приводят."
+      "story": null
     },
     {
       "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/e\/e4\/Shadow_Demon_Shadow_Poison_1.mp3\/revision\/latest?cb=20191216022839",
@@ -146,7 +146,7 @@
       ],
       "itemBehaviour": [],
       "legacyKey": "W",
-      "story": "Процветающее влияние демона может погубить даже самых стойких и чистых душой героев."
+      "story": null
     },
     {
       "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/6\/64\/Shadow_Poison_Release.mp3\/revision\/latest?cb=20141213205911",
@@ -163,7 +163,8 @@
       "description": "Выпускает яд в заражённых врагах, нанося урон, даже если жертва спрятана способностью Disruption.",
       "spellName": "Shadow Poison Release",
       "params": [
-        "Анимация применения: 0,3+0"
+        "Анимация применения: 0,3+0",
+        ""
       ],
       "itemBehaviour": [],
       "legacyKey": "E",
@@ -214,7 +215,7 @@
       ],
       "itemBehaviour": [],
       "legacyKey": "G",
-      "story": "Когда последователь теряет всякую ценность, его лишают статуса... и жизни."
+      "story": null
     }
   ],
   "mainAttributes": {

@@ -2,7 +2,7 @@
   "abilities": [
     {
       "notes": [
-        "The strength talent effectively grants Chaos Knight 240 health, 1.2 health regeneration, and 12 attack damage."
+        "The strength talent effectively grants Chaos Knight 240 health, 1.2 health regeneration, and 12 main attack damage."
       ],
       "spellName": "Talent",
       "talents": [
@@ -37,14 +37,15 @@
       ],
       "notes": [
         "Chaos Bolt travels at a speed of 700.",
-        "Stun duration and raw damage values are shown above the target's head upon hit (visible to allies and enemies), with the duration being shown as a rounded integer. However, the actual stun duration is not by exact seconds -- it ranges between the given values (e.g. at level 1, it could stun for 1.74 seconds).",
-        "However, the actual stun duration is not by exact seconds -- it ranges between the given values (e.g. at level 1, it could stun for 1.74 seconds).",
-        "Damage and stun values are inversely related, meaning the longer the stun is, the less damage it deals and vice versa. This means the damage decreases by 9.47\/8.46\/7.88\/7.5 per each additional 0.1 seconds of stun. Level 1: 1.25s \u2013 180, 1.4875s \u2013 157.5, 1.725s \u2013 135, 1.9625s \u2013 112.5, 2.2s \u2013 90 (stun duration \u2013 damage) Level 2: 1.5s \u2013 220, 1.825s \u2013 192.5, 2.15s \u2013 165, 2.475s \u2013 137.5, 2.8s \u2013 110 (stun duration \u2013 damage) Level 3: 1.75s \u2013 260, 2.1625s \u2013 227.5, 2.575s \u2013 195, 2.9875s \u2013 162.5, 3.4s \u2013 130 (stun duration \u2013 damage) Level 4: 2s \u2013 300, 2.5s \u2013 262.5, 3s \u2013 225, 3.5s \u2013 187.5, 4s \u2013 150 (stun duration \u2013 damage) With the level 20 talent, since both minimum and maximum value of stun duration are increased evenly, the above damage values remain the same.",
-        "This means the damage decreases by 9.47\/8.46\/7.88\/7.5 per each additional 0.1 seconds of stun.",
-        "Level 1: 1.25s \u2013 180, 1.4875s \u2013 157.5, 1.725s \u2013 135, 1.9625s \u2013 112.5, 2.2s \u2013 90 (stun duration \u2013 damage)",
-        "Level 2: 1.5s \u2013 220, 1.825s \u2013 192.5, 2.15s \u2013 165, 2.475s \u2013 137.5, 2.8s \u2013 110 (stun duration \u2013 damage)",
-        "Level 3: 1.75s \u2013 260, 2.1625s \u2013 227.5, 2.575s \u2013 195, 2.9875s \u2013 162.5, 3.4s \u2013 130 (stun duration \u2013 damage)",
-        "Level 4: 2s \u2013 300, 2.5s \u2013 262.5, 3s \u2013 225, 3.5s \u2013 187.5, 4s \u2013 150 (stun duration \u2013 damage)",
+        "Stun duration and raw damage values are shown above the target's head upon hit, visible to allies and enemies, with the duration being shown as a rounded integer. However, the actual stun duration is not by exact seconds\u2014it ranges between the given values (e.g. at level 1, it could stun for 1.74 seconds).",
+        "However, the actual stun duration is not by exact seconds\u2014it ranges between the given values (e.g. at level 1, it could stun for 1.74 seconds).",
+        "Damage and stun values are inversely related, meaning the longer the stun is, the less damage it deals and vice versa. This means the damage decreases by 9.47\/8.46\/7.88\/7.5 per each additional 0.1 seconds of stun. Has the following values for the damage and stun duration on each level: Level 1: 1.25s \u2013 180, 1.4875s \u2013 157.5, 1.725s \u2013 135, 1.9625s \u2013 112.5, 2.2s \u2013 90 Level 2: 1.5s \u2013 220, 1.825s \u2013 192.5, 2.15s \u2013 165, 2.475s \u2013 137.5, 2.8s \u2013 110 Level 3: 1.75s \u2013 260, 2.1625s \u2013 227.5, 2.575s \u2013 195, 2.9875s \u2013 162.5, 3.4s \u2013 130 Level 4: 2s \u2013 300, 2.5s \u2013 262.5, 3s \u2013 225, 3.5s \u2013 187.5, 4s \u2013 150 With the level 20 talent, since both minimum and maximum value of stun duration are increased evenly, the above damage values remain the same.",
+        "This means the damage decreases by 9.47\/8.46\/7.88\/7.5 per each additional 0.1 seconds of stun. Has the following values for the damage and stun duration on each level: Level 1: 1.25s \u2013 180, 1.4875s \u2013 157.5, 1.725s \u2013 135, 1.9625s \u2013 112.5, 2.2s \u2013 90 Level 2: 1.5s \u2013 220, 1.825s \u2013 192.5, 2.15s \u2013 165, 2.475s \u2013 137.5, 2.8s \u2013 110 Level 3: 1.75s \u2013 260, 2.1625s \u2013 227.5, 2.575s \u2013 195, 2.9875s \u2013 162.5, 3.4s \u2013 130 Level 4: 2s \u2013 300, 2.5s \u2013 262.5, 3s \u2013 225, 3.5s \u2013 187.5, 4s \u2013 150",
+        "Level 1: 1.25s \u2013 180, 1.4875s \u2013 157.5, 1.725s \u2013 135, 1.9625s \u2013 112.5, 2.2s \u2013 90",
+        "Level 2: 1.5s \u2013 220, 1.825s \u2013 192.5, 2.15s \u2013 165, 2.475s \u2013 137.5, 2.8s \u2013 110",
+        "Level 3: 1.75s \u2013 260, 2.1625s \u2013 227.5, 2.575s \u2013 195, 2.9875s \u2013 162.5, 3.4s \u2013 130",
+        "Level 4: 2s \u2013 300, 2.5s \u2013 262.5, 3s \u2013 225, 3.5s \u2013 187.5, 4s \u2013 150",
+        "",
         "With the level 20 talent, since both minimum and maximum value of stun duration are increased evenly, the above damage values remain the same.",
         "The bolt first applies the debuff, then the damage.",
         "All illusions owned by Chaos Knight within 600 range of the target also cast a fake Chaos Bolt. They play the whole cast animation and release their fake bolt at the same time the real bolt is released. When illusions currently are not having any order and are standing still, they turn to face the target and cast the fake bolt. When illusions are moving or attacking, they continue to do so and do not turn to face the target. They still play the cast animation, overriding their move or attack animations. When canceling the cast, the illusions still play the full cast animation, but do not release the fake bolt. The fake bolts do not interact with anything and do not damage or stun the target.",
@@ -79,7 +80,7 @@
       ],
       "itemBehaviour": [],
       "legacyKey": "C",
-      "story": "Even Chaos Knight cannot predict this manifest of unholy energy."
+      "story": null
     },
     {
       "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/7\/7d\/Chaos_Knight_Reality_Rift.mp3\/revision\/latest?cb=20191216012022",
@@ -112,13 +113,13 @@
         "Cast Range: 550\/600\/650\/750",
         "Illusion Search Radius: 1375",
         "Target Pull Distance: 250\/300\/350\/400 (TagTalent 450\/500\/550\/600)",
-        "Armor Reduction: 3\/4\/5\/6",
+        "Armor Reduction: 4\/5\/6\/7",
         "Duration: 6",
         "Cannot target or apply its debuff to spell immune units. Can target and apply its debuff to spell immune units."
       ],
       "itemBehaviour": [],
       "legacyKey": "E",
-      "story": "Armageddon rides between the planes, bringing Chaos Knight to his victim wherever he may hide."
+      "story": null
     },
     {
       "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/8\/82\/Chaos_Knight_Chaos_Strike.mp3\/revision\/latest?cb=20191216012015",
@@ -127,12 +128,13 @@
         "Affects Enemies \/ Self"
       ],
       "notes": [
-        "Increases attack damage by an average of 9%\/14.25%\/19.5%\/24.75% (TagTalent 12%\/19%\/26%\/33%).",
+        "Increases attack damage by an average of 10%\/15.83%\/21.66%\/27.5% (TagTalent 13%\/20.58%\/28.16%\/35.75%).",
+        "A critical strike proc is decided upon attack begin, not upon landing an attack. When a critical strike procs, Chaos Knight uses a specific crit attack animation, and particle effects appear on his weapon.",
+        "When a critical strike procs, Chaos Knight uses a specific crit attack animation, and particle effects appear on his weapon.",
         "The proc chances of multiple crit sources stack. If two sources of critical strike proc at the same time, the higher multiplier has priority.",
         "If two sources of critical strike proc at the same time, the higher multiplier has priority.",
         "Stacks additively with other sources of lifesteal.",
         "Cannot proc against wards, buildings and allies.",
-        "The sound and particles play upon start of the attack, not when the attack lands.",
         "Chaos Strike uses pseudo-random distribution."
       ],
       "mana": null,
@@ -141,7 +143,7 @@
       "description": "Chaos Knight's attacks have a chance to deal a critical strike of varying strength, in addition to a lifesteal for percentage of the damage.",
       "spellName": "Chaos Strike",
       "params": [
-        "Proc Chance: 30% (TagTalent 40%)",
+        "Proc Chance: 33.33% (TagTalent 43.33%)",
         "Min Critical Damage: 120%",
         "Max Critical Damage: 140%\/175%\/210%\/245%",
         "Lifesteal: 24%\/36%\/48%\/60% (TagTalent 44%\/56%\/68%\/80%)",
@@ -149,7 +151,7 @@
       ],
       "itemBehaviour": [],
       "legacyKey": "R",
-      "story": "Chaos Knight's unwieldy power bludgeons those who stand before him, crushing the thickest of armors."
+      "story": null
     },
     {
       "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/d\/d7\/Chaos_Knight_Phantasm.mp3\/revision\/latest?cb=20191216012020",
@@ -161,16 +163,16 @@
         "Applies a basic dispel on Chaos Knight and disjoints projectiles upon cast.",
         "Chaos Knight is invulnerable, hidden and spell immune during the split time.",
         "Resets current attack and ability targeting priorities on Chaos Knight.",
-        "After the split time, Chaos Knight reappears with his illusions. The reappear locations are based on Chaos Knight's position upon cast, with one appearing at the cast location, and the others north, east, south or west from that point. This means when spawning 3 illusions, the formation is T-shaped. The distance in between each is 135 range. Though the formation is always the same, Chaos Knight and his illusions take a random position in the formation and have all the same facing angle.",
+        "After the 0.5 seconds split time, Chaos Knight reappears with his illusions. The reappear locations are based on Chaos Knight's position upon cast, with one appearing at the cast location, and the others north, east, south or west from that point. This means when spawning 3 illusions, the formation is T-shaped. The distance in between each is 135 range. Though the formation is always the same, Chaos Knight and his illusions take a random position in the formation and have all the same facing angle.",
         "The reappear locations are based on Chaos Knight's position upon cast, with one appearing at the cast location, and the others north, east, south or west from that point.",
         "This means when spawning 3 illusions, the formation is T-shaped.",
         "The distance in between each is 135 range.",
         "Though the formation is always the same, Chaos Knight and his illusions take a random position in the formation and have all the same facing angle.",
         "Orders the caster to stop after the split time, canceling all queued orders, and orders given during the split time.",
         "Recasting Phantasm replaces the illusions from the previous cast, no matter under whose control they are.",
-        "Phantasm illusions are strong illusions, meaning they cannot be instantly killed by abilities which normally kill illusions instantly.",
-        "With Aghanim's Scepter, Phantasm creates 1 illusion of every allied hero as well, which are under Chaos Knight's control. Applies a basic dispel on affected ally heroes as well, but it does not disjoint projectiles for them. Does not turn the ally invulnerable or hidden either, and it does not interrupt their current orders. The allies and the illusions use the same formation as Chaos Knight does, and get their positions shuffled with their illusions as well. Affects all allied heroes, including clones. Does not affect invulnerable or hidden allies.",
-        "Applies a basic dispel on affected ally heroes as well, but it does not disjoint projectiles for them.",
+        "Phantasm illusions are strong illusions, meaning they cannot be instantly killed by abilities that normally kill illusions instantly.",
+        "With Aghanim's Scepter, Phantasm creates 1 illusion of every allied hero as well, which are under Chaos Knight's control. Applies a basic dispel on affected allied heroes as well, but it does not disjoint projectiles. Does not turn the ally invulnerable or hidden either, and it does not interrupt their current orders. The allies and the illusions use the same formation as Chaos Knight does, and get their positions shuffled with their illusions as well. Affects all allied heroes, including clones. Does not affect invulnerable or hidden allies.",
+        "Applies a basic dispel on affected allied heroes as well, but it does not disjoint projectiles.",
         "Does not turn the ally invulnerable or hidden either, and it does not interrupt their current orders.",
         "The allies and the illusions use the same formation as Chaos Knight does, and get their positions shuffled with their illusions as well.",
         "Affects all allied heroes, including clones. Does not affect invulnerable or hidden allies."
@@ -192,7 +194,7 @@
       ],
       "itemBehaviour": [],
       "legacyKey": "T",
-      "story": "Drawing on his battles fought across many worlds and many times, phantasms of the Chaos Knight rise up to quell all who oppose him."
+      "story": null
     }
   ],
   "mainAttributes": {

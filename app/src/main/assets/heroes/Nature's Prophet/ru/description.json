@@ -4,7 +4,6 @@
       "notes": [
         "Этот талант добавляет урон от атаки в прямой урон от атаки. Не даётся иллюзиям, и также не попадает под действие большинства эффектов увеличивающих или уменьшающих урон на процентное значение.",
         "Не даётся иллюзиям, и также не попадает под действие большинства эффектов увеличивающих или уменьшающих урон на процентное значение.",
-        "Несколько источников процентного уменьшения перезарядки не складываются. Приоритет имеет высшее значение.",
         "Талант на броню не дается иллюзиям."
       ],
       "spellName": "Talent",
@@ -16,7 +15,7 @@
         },
         {
           "talentLvl": "20",
-          "talentLeft": "−20% перезарядки заклинаний",
+          "talentLeft": "Промахи атаками с шансом в 75% у жертв Sprout",
           "talentRight": "+8 к броне"
         },
         {
@@ -57,7 +56,7 @@
       ],
       "mana": "70\/90\/110\/130",
       "hotKey": "Q",
-      "cooldown": "11\/10\/9\/8 (TagTalent 8,8\/8\/7,2\/6,4)",
+      "cooldown": "11\/10\/9\/8 (TagTalent 2,75\/2,5\/2,25\/2)",
       "description": "Окружает существо кольцом деревьев, удерживая его на месте.",
       "spellName": "Sprout",
       "params": [
@@ -72,7 +71,7 @@
       ],
       "itemBehaviour": [],
       "legacyKey": "T",
-      "story": "Тех, кто пытается одолеть стража лесов, неизменно окружают густые заросли."
+      "story": null
     },
     {
       "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/d\/d4\/Nature%27s_Prophet_Teleportation_1.mp3\/revision\/latest?cb=20191216020913",
@@ -89,7 +88,7 @@
       ],
       "mana": "50",
       "hotKey": "W",
-      "cooldown": "65\/50\/35\/20 (TagTalent 52\/40\/28\/16)",
+      "cooldown": "65\/50\/35\/20 (TagTalent 16,25\/12,5\/8,75\/5)",
       "description": "Телепортирует в любую точку карты.",
       "spellName": "Teleportation",
       "params": [
@@ -98,7 +97,7 @@
       ],
       "itemBehaviour": [],
       "legacyKey": "R",
-      "story": "Вездесущий страж леса всегда готов прийти на помощь своим подчинённым."
+      "story": null
     },
     {
       "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/f\/f4\/Nature%27s_Prophet_Nature%27s_Call.mp3\/revision\/latest?cb=20191216020911",
@@ -119,7 +118,7 @@
       ],
       "mana": "130\/140\/150\/160",
       "hotKey": "E",
-      "cooldown": "37 (TagTalent 29,6)",
+      "cooldown": "37 (TagTalent 9,25)",
       "description": "Преобразует деревья в выбранной области в подконтрольных энтов.",
       "spellName": "Nature's Call",
       "params": [
@@ -131,7 +130,7 @@
       ],
       "itemBehaviour": [],
       "legacyKey": "F",
-      "story": "Веродиция наделила стража лесов способностью призывать энтов \u2014 мифических разумных воинов природы."
+      "story": null
     },
     {
       "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/7\/7a\/Nature%27s_Prophet_Wrath_of_Nature_1.mp3\/revision\/latest?cb=20191216020919",
@@ -163,7 +162,7 @@
       ],
       "mana": "175\/225\/275",
       "hotKey": "R",
-      "cooldown": "85 (TagTalent 68) (TagTalent 60, 48)",
+      "cooldown": "85 (TagTalent 21.25) (TagTalent 60, 15)",
       "description": "Вызывает сгусток энергии, скачущий по видимым врагам на всей карте. Он наносит жертвам урон, увеличивающийся с каждым задетым врагом. На 50 сек. увеличивает урон владельца способности за каждого убитого врага.",
       "spellName": "Wrath of Nature",
       "params": [
@@ -182,7 +181,7 @@
       ],
       "itemBehaviour": [],
       "legacyKey": "W",
-      "story": "Герой взывает к Веродиции, обращая её гнев против осмелившихся разорять природу."
+      "story": null
     }
   ],
   "mainAttributes": {
@@ -203,7 +202,7 @@
     },
     {
       "talentLvl": "20",
-      "talentLeft": "−20% перезарядки заклинаний",
+      "talentLeft": "Промахи атаками с шансом в 75% у жертв Sprout",
       "talentRight": "+8 к броне"
     },
     {

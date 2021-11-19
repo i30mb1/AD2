@@ -19,12 +19,12 @@
         {
           "talentLvl": "15",
           "talentLeft": "+25 к скорости атаки",
-          "talentRight": "+65 урона от Static Remnant"
+          "talentRight": "+250 к здоровью"
         },
         {
           "talentLvl": "10",
           "talentLeft": "+2,5 маны в секунду",
-          "talentRight": "+200 к здоровью"
+          "talentRight": "+40 к урону от Static Remnant"
         }
       ]
     },
@@ -53,13 +53,13 @@
         "Радиус срабатывания: 235",
         "Радиус урона: 260",
         "Задержка: 1",
-        "Урон: 120\/175\/230\/285 (TagTalent 185\/240\/295\/350)",
+        "Урон: 120\/175\/230\/285 (TagTalent 370\/425\/480\/535)",
         "Длительность копии: 12",
         "Cрабатывает, но не наносит урон существам с иммунитетом к заклинаниям."
       ],
       "itemBehaviour": [],
       "legacyKey": "R",
-      "story": "Самовлюблённость Райдзина Громокега поражает как его самого, так и всех окружающих."
+      "story": null
     },
     {
       "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/1\/1a\/Storm_Spirit_Electric_Vortex.mp3\/revision\/latest?cb=20191216024545",
@@ -94,7 +94,7 @@
       ],
       "itemBehaviour": [],
       "legacyKey": "E",
-      "story": "Неистовая громовая энергичность Райдзина часто втягивает других в напряженную ситуацию."
+      "story": null
     },
     {
       "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/c\/c7\/Storm_Spirit_Overload.mp3\/revision\/latest?cb=20191216024538",
@@ -162,7 +162,7 @@
       ],
       "itemBehaviour": [],
       "legacyKey": "V",
-      "story": "Пуф! Бах! Вжих!"
+      "story": null
     },
     {
       "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/2\/21\/Storm_Spirit_Ball_Lightning.mp3\/revision\/latest?cb=20191216024543",
@@ -213,7 +213,7 @@
       ],
       "itemBehaviour": [],
       "legacyKey": "G",
-      "story": "Приближается буря."
+      "story": null
     }
   ],
   "mainAttributes": {
@@ -240,12 +240,12 @@
     {
       "talentLvl": "15",
       "talentLeft": "+25 к скорости атаки",
-      "talentRight": "+65 урона от Static Remnant"
+      "talentRight": "+250 к здоровью"
     },
     {
       "talentLvl": "10",
       "talentLeft": "+2,5 маны в секунду",
-      "talentRight": "+200 к здоровью"
+      "talentRight": "+40 к урону от Static Remnant"
     }
   ]
 }

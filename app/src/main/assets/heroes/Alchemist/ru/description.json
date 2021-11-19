@@ -63,7 +63,7 @@
       ],
       "itemBehaviour": [],
       "legacyKey": "D",
-      "story": "Используя семейные рецепты рода Темноваров, Раззил получает едкую кислоту, которая разрушает даже самые прочные металлы."
+      "story": null
     },
     {
       "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/b\/b8\/Unstable_Concoction.mp3\/revision\/latest?cb=20141125094538",
@@ -105,7 +105,7 @@
       ],
       "itemBehaviour": [],
       "legacyKey": "E",
-      "story": "Хоть превращение горы в золото и потерпело провал, благодаря ему была получена летучая микстура с разрушительным потенциалом."
+      "story": null
     },
     {
       "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/5\/52\/Throw_Unstable_Concoction.mp3\/revision\/latest?cb=20141125094220",
@@ -132,7 +132,8 @@
         "Анимация применения: 0,2+0,5",
         "Дальность применения: 775",
         "Не может выбрать юнитов с иммунитетом к заклинаниям. Если снаряд соприкоснулся с юнитом с иммунитетом, то способность все равно будет действовать на юнитов в радиусе действия.",
-        "Полностью блокируется при попадании."
+        "Полностью блокируется при попадании.",
+        ""
       ],
       "itemBehaviour": [],
       "legacyKey": "E",
@@ -168,7 +169,7 @@
       ],
       "itemBehaviour": [],
       "legacyKey": "G",
-      "story": "Пускай эксперимент с горой и не удался, зато структуры поменьше Раззил легко обращает в звонкую монету."
+      "story": null
     },
     {
       "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/a\/ad\/Alchemist_Berserk_Potion_1.mp3\/revision\/latest?cb=20201220184644",
@@ -194,7 +195,8 @@
         "Доп. скорость атаки: 50",
         "Доп. скорость передвижения: 30",
         "Восстановление здоровья: 40",
-        "Длительность: 10"
+        "Длительность: 10",
+        ""
       ],
       "itemBehaviour": [],
       "legacyKey": "B",
@@ -229,7 +231,7 @@
       ],
       "itemBehaviour": [],
       "legacyKey": "R",
-      "story": "Варево, которым Раззил напоил огра для побега из тюрьмы, стало полезным в сражении зельем."
+      "story": null
     },
     {
       "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/6\/6c\/Alchemist_Aghanims_target.mp3\/revision\/latest?cb=20150430175817",
@@ -258,7 +260,8 @@
         "Дальность применения: 600",
         "Доп. урон от атак за скипетр: 0 (TagAghanim 20)",
         "Доп. урон способностей за скипетр: 0% (TagAghanim 5%)",
-        "Иллюзии копируют бафф Aghanim's Scepter. Иллюзии Alchemist не копируют бафф урона."
+        "Иллюзии копируют бафф Aghanim's Scepter. Иллюзии Alchemist не копируют бафф урона.",
+        ""
       ],
       "itemBehaviour": [],
       "legacyKey": null,
@@ -266,7 +269,7 @@
     }
   ],
   "mainAttributes": {
-    "attrStrengthInc": 2.7,
+    "attrStrengthInc": 2.9,
     "attrStrength": 25.0,
     "attrIntelligence": 25.0,
     "attrIntelligenceInc": 1.8,

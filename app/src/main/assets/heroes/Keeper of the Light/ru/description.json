@@ -66,7 +66,7 @@
       ],
       "itemBehaviour": [],
       "legacyKey": "T",
-      "story": "Сокрытый в Эзалоре свет проявляется в удивительной форме."
+      "story": null
     },
     {
       "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/c\/ce\/Release_Illuminate.mp3\/revision\/latest?cb=20140525144544",
@@ -83,7 +83,8 @@
       "description": "Высвободить энергию преждевременно.",
       "spellName": "Release Illuminate",
       "params": [
-        "Анимация применения: 0+0"
+        "Анимация применения: 0+0",
+        ""
       ],
       "itemBehaviour": [],
       "legacyKey": "T",
@@ -127,7 +128,7 @@
       ],
       "itemBehaviour": [],
       "legacyKey": "T",
-      "story": "Сокрытый в Эзалоре свет проявляется в удивительной форме."
+      "story": null
     },
     {
       "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/c\/ce\/Release_Illuminate.mp3\/revision\/latest?cb=20140525144544",
@@ -144,7 +145,8 @@
       "description": "Высвободить энергию преждевременно.",
       "spellName": "Release Illuminate (Spirit Form)",
       "params": [
-        "Анимация применения: 0+0,53"
+        "Анимация применения: 0+0,53",
+        ""
       ],
       "itemBehaviour": [],
       "legacyKey": "T",
@@ -188,7 +190,8 @@
         "Замедление за 100 единиц: 4%\/5,5%\/7%\/8,5%",
         "Длительность: 7",
         "Число зарядов: 2",
-        "Время восстановления заряда: 23\/20\/17\/14"
+        "Время восстановления заряда: 23\/20\/17\/14",
+        ""
       ],
       "itemBehaviour": [],
       "legacyKey": "D",
@@ -220,7 +223,7 @@
       ],
       "itemBehaviour": [],
       "legacyKey": "C",
-      "story": "Таким же образом Эзалор способен даровать другим гармонию."
+      "story": null
     },
     {
       "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/b\/b1\/Keeper_of_the_Light_Blinding_Light.mp3\/revision\/latest?cb=20191216014810",
@@ -252,7 +255,7 @@
       ],
       "itemBehaviour": [],
       "legacyKey": "B",
-      "story": "Первородный свет преломляет ход битвы в пользу Эзалора и его союзников."
+      "story": null
     },
     {
       "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/b\/b0\/Keeper_of_the_Light_Will-O-Wisp_1.mp3\/revision\/latest?cb=20191216014805",
@@ -287,7 +290,7 @@
       ],
       "itemBehaviour": [],
       "legacyKey": "R",
-      "story": "Эзалор имеет пугающее влияние на многих могущественных существ, которые всегда готовы ему помочь, хоть он и не признаёт, что они ему известны."
+      "story": null
     },
     {
       "audioUrl": null,
@@ -319,7 +322,7 @@
       ],
       "itemBehaviour": [],
       "legacyKey": "F",
-      "story": "Иди на свет."
+      "story": null
     },
     {
       "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/2\/27\/Keeper_of_the_Light_Spirit_Form.mp3\/revision\/latest?cb=20201008130625",
@@ -348,7 +351,7 @@
       ],
       "itemBehaviour": [],
       "legacyKey": "F",
-      "story": "Эзалор раскрывает свою истинную сущность со вспышкой света."
+      "story": null
     }
   ],
   "mainAttributes": {

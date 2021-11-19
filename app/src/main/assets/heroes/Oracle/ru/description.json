@@ -2,7 +2,7 @@
   "abilities": [
     {
       "notes": [
-        "Талант на интеллект в общем даёт Oracle: 144 маны, 0,6 регенерации маны и 12 урона от атаки."
+        "Талант на интеллект в общем даёт Oracle: 144 маны, 0,6 восстановления маны и 12 урона от атаки."
       ],
       "spellName": "Talent",
       "talents": [
@@ -14,11 +14,11 @@
         {
           "talentLvl": "20",
           "talentLeft": "+30% к урону врагам от Purifying Flames",
-          "talentRight": "-20 сек. к перезарядке False Promise"
+          "talentRight": "−20 сек. к перезарядке False Promise"
         },
         {
           "talentLvl": "15",
-          "talentLeft": "-1,25 сек. перезарядки Purifying Flames",
+          "talentLeft": "−1,25 сек. перезарядки Purifying Flames",
           "talentRight": "False Promise даёт 15 брони"
         },
         {
@@ -75,7 +75,7 @@
       ],
       "itemBehaviour": [],
       "legacyKey": "T",
-      "story": "Астральная сфера трещит от мощности, и из неё вырывается чистая энергия, временно разрывая связь врага с его собственным телом."
+      "story": null
     },
     {
       "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/3\/3a\/Oracle_Fate%27s_Edict.mp3\/revision\/latest?cb=20191216021405",
@@ -111,7 +111,7 @@
       ],
       "itemBehaviour": [],
       "legacyKey": "F",
-      "story": "Нерушимое пророчество гласит: не страдать от магии избранному бойцу. Что же касается других страданий..."
+      "story": null
     },
     {
       "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/0\/0c\/Oracle_Purifying_Flames.mp3\/revision\/latest?cb=20191216021409",
@@ -147,7 +147,7 @@
       ],
       "itemBehaviour": [],
       "legacyKey": "E",
-      "story": "Как зеркальные залы умножают свет одной свечи, так и разбитые стены вселенной превращают огонёк пророчества в жгучий факел."
+      "story": null
     },
     {
       "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/e\/e9\/Oracle_False_Promise_1.mp3\/revision\/latest?cb=20191216021412",
@@ -200,7 +200,7 @@
       ],
       "itemBehaviour": [],
       "legacyKey": "R",
-      "story": "Предсказания лжепророков и неприятелей обманчивы."
+      "story": null
     }
   ],
   "mainAttributes": {
@@ -222,11 +222,11 @@
     {
       "talentLvl": "20",
       "talentLeft": "+30% к урону врагам от Purifying Flames",
-      "talentRight": "-20 сек. к перезарядке False Promise"
+      "talentRight": "−20 сек. к перезарядке False Promise"
     },
     {
       "talentLvl": "15",
-      "talentLeft": "-1,25 сек. перезарядки Purifying Flames",
+      "talentLeft": "−1,25 сек. перезарядки Purifying Flames",
       "talentRight": "False Promise даёт 15 брони"
     },
     {

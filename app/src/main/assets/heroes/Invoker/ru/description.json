@@ -11,17 +11,17 @@
         {
           "talentLvl": "20",
           "talentLeft": "+35 к урону и скорости атаки от Alacrity",
-          "talentRight": "-10 сек. перезарядки Tornado"
+          "talentRight": "−10 сек. перезарядки Tornado"
         },
         {
           "talentLvl": "15",
-          "talentLeft": "-8 сек. перезарядки Cold Snap",
+          "talentLeft": "−8 сек. перезарядки Cold Snap",
           "talentRight": "+1 к снижению брони у духа от Forge Spirit"
         },
         {
           "talentLvl": "10",
           "talentLeft": "+40% к урону Chaos Meteor",
-          "talentRight": "-24 сек. перезарядки Ghost Walk"
+          "talentRight": "−24 сек. перезарядки Ghost Walk"
         }
       ]
     },
@@ -52,7 +52,8 @@
         "Анимация применения: 0+0",
         "Дает сфер Quas при использовании: 1",
         "Регенерация здоровья за сферу: 1\/2\/3\/4\/5\/6\/7",
-        "Иллюзии копируют текущие активные сферы и получают дополнительную регенерацию здоровья."
+        "Иллюзии копируют текущие активные сферы и получают дополнительную регенерацию здоровья.",
+        ""
       ],
       "itemBehaviour": [],
       "legacyKey": "Q",
@@ -84,7 +85,8 @@
         "Дает сфер Wex при использовании: 1",
         "Доп. скорости атаки за сферу: 1\/2\/3\/4\/5\/6\/7",
         "Доп. скорости передвижения за сферу: 1%\/2%\/3%\/4%\/5%\/6%\/7%",
-        "Иллюзии копируют текущие активные сферы и получают дополнительную скорость."
+        "Иллюзии копируют текущие активные сферы и получают дополнительную скорость.",
+        ""
       ],
       "itemBehaviour": [],
       "legacyKey": "W",
@@ -115,7 +117,8 @@
         "Анимация применения: 0+0",
         "Дает сфер Exort при использовании: 1",
         "Дополнительный урон за сферу: 2\/4\/6\/8\/10\/12\/14",
-        "Иллюзии копируют текущие активные сферы, но не получают дополнительный урон."
+        "Иллюзии копируют текущие активные сферы, но не получают дополнительный урон.",
+        ""
       ],
       "itemBehaviour": [],
       "legacyKey": "E",
@@ -156,7 +159,7 @@
       ],
       "itemBehaviour": [],
       "legacyKey": "R",
-      "story": "Так начинается новая эра знания."
+      "story": null
     },
     {
       "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/3\/31\/Cold_Snap.mp3\/revision\/latest?cb=20141213180558",
@@ -195,7 +198,7 @@
       ],
       "itemBehaviour": [],
       "legacyKey": "Y",
-      "story": "Длительная дрожь Садрона."
+      "story": null
     },
     {
       "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/7\/7a\/Ghost_Walk.mp3\/revision\/latest?cb=20141213180647",
@@ -232,7 +235,7 @@
       ],
       "itemBehaviour": [],
       "legacyKey": "V",
-      "story": "Призрак Мирота."
+      "story": null
     },
     {
       "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/e\/e2\/Ice_Wall.mp3\/revision\/latest?cb=20141213180729",
@@ -274,7 +277,7 @@
       ],
       "itemBehaviour": [],
       "legacyKey": "G",
-      "story": "Гибельная стена Корикса."
+      "story": null
     },
     {
       "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/1\/19\/EMP.mp3\/revision\/latest?cb=20141213180632",
@@ -314,7 +317,7 @@
       ],
       "itemBehaviour": [],
       "legacyKey": "C",
-      "story": "Недоброе коловращение Эндолеона."
+      "story": null
     },
     {
       "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/b\/ba\/Tornado.mp3\/revision\/latest?cb=20141213180852",
@@ -355,7 +358,7 @@
       ],
       "itemBehaviour": [],
       "legacyKey": "X",
-      "story": "Когти Торнаруса."
+      "story": null
     },
     {
       "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/c\/c8\/Alacrity.mp3\/revision\/latest?cb=20141213180901",
@@ -383,7 +386,7 @@
       ],
       "itemBehaviour": [],
       "legacyKey": "Z",
-      "story": "Заклятие стремительности Гастера."
+      "story": null
     },
     {
       "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/b\/b5\/Sun_Strike.mp3\/revision\/latest?cb=20141213180757",
@@ -395,11 +398,11 @@
       "notes": [
         "Способность появляется при прочтении Invoke с 3-мя сферами Exort.",
         "Урон распределяется между всеми задетыми существами (включая крипов) в выбранной области.",
-        "Здесь указано, сколько урона нанесет Sun Strike при поражении определенного количества существ (до учета сопротивления). 2 существа: 50\/81,25\/112,5\/143,75\/175\/206,25\/237,5 (TagTalent \/268,75) единиц урона 3 существа: 33,33\/54,17\/75\/95,83\/116,67\/137,5\/158,33 (TagTalent \/179,17) единиц урона 4 существа: 25\/40,625\/56,25\/71,875\/87,5\/103,125\/118,75 (TagTalent \/134,375) единиц урона 5 суещств: 20\/32,5\/45\/57,5\/70\/82,5\/95 (TagTalent \/107,5) единиц урона",
+        "Здесь указано, сколько урона нанесет Sun Strike при поражении определенного количества существ (до учета сопротивления). 2 существа: 50\/81,25\/112,5\/143,75\/175\/206,25\/237,5 (TagTalent \/268,75) единиц урона 3 существа: 33,33\/54,17\/75\/95,83\/116,67\/137,5\/158,33 (TagTalent \/179,17) единиц урона 4 существа: 25\/40,625\/56,25\/71,875\/87,5\/103,125\/118,75 (TagTalent \/134,375) единиц урона 5 существ: 20\/32,5\/45\/57,5\/70\/82,5\/95 (TagTalent \/107,5) единиц урона",
         "2 существа: 50\/81,25\/112,5\/143,75\/175\/206,25\/237,5 (TagTalent \/268,75) единиц урона",
         "3 существа: 33,33\/54,17\/75\/95,83\/116,67\/137,5\/158,33 (TagTalent \/179,17) единиц урона",
         "4 существа: 25\/40,625\/56,25\/71,875\/87,5\/103,125\/118,75 (TagTalent \/134,375) единиц урона",
-        "5 суещств: 20\/32,5\/45\/57,5\/70\/82,5\/95 (TagTalent \/107,5) единиц урона",
+        "5 существ: 20\/32,5\/45\/57,5\/70\/82,5\/95 (TagTalent \/107,5) единиц урона",
         "Урон делится только между существами, получившими урон от Sun Strike. Все остальные существа не впитывают никакой урон.",
         "Не поражает варды, постройки, неуязвимых или спрятанных существ.",
         "Дает летающий обзор в радиусе 300 единиц в выбранной точке на 5,5 секунды.",
@@ -427,7 +430,7 @@
       ],
       "itemBehaviour": [],
       "legacyKey": "T",
-      "story": "Заклятие испепеления Харлека."
+      "story": null
     },
     {
       "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/5\/50\/Forge_Spirit.mp3\/revision\/latest?cb=20141213180639",
@@ -466,7 +469,7 @@
       ],
       "itemBehaviour": [],
       "legacyKey": "F",
-      "story": "Хитроумные конструкции Кальвина."
+      "story": null
     },
     {
       "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/b\/b6\/Chaos_Meteor.mp3\/revision\/latest?cb=20141213180544",
@@ -521,7 +524,7 @@
       ],
       "itemBehaviour": [],
       "legacyKey": "D",
-      "story": "Огонь небес Тарака."
+      "story": null
     },
     {
       "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/8\/8a\/Deafening_Blast.mp3\/revision\/latest?cb=20141213180605",
@@ -574,7 +577,7 @@
       ],
       "itemBehaviour": [],
       "legacyKey": "B",
-      "story": "Звуковой обездвиживатель Булуфонта."
+      "story": null
     },
     {
       "audioUrl": null,
@@ -593,10 +596,11 @@
       "description": "Каждая атака духа снижает броню противника.",
       "spellName": "Melting Strike",
       "params": [
-        "Снижение брони за удар: 1",
-        "Макс. снижение брони: 10",
+        "Снижение брони за удар: 1 (TagTalent 2)",
+        "Макс. снижение брони: 10 (TagTalent 20)",
         "Длительность: 5",
-        "Снижение брони остается, если дебафф был применен до иммунитета к заклинаниям."
+        "Снижение брони остается, если дебафф был применен до иммунитета к заклинаниям.",
+        ""
       ],
       "itemBehaviour": [],
       "legacyKey": null,
@@ -622,17 +626,17 @@
     {
       "talentLvl": "20",
       "talentLeft": "+35 к урону и скорости атаки от Alacrity",
-      "talentRight": "-10 сек. перезарядки Tornado"
+      "talentRight": "−10 сек. перезарядки Tornado"
     },
     {
       "talentLvl": "15",
-      "talentLeft": "-8 сек. перезарядки Cold Snap",
+      "talentLeft": "−8 сек. перезарядки Cold Snap",
       "talentRight": "+1 к снижению брони у духа от Forge Spirit"
     },
     {
       "talentLvl": "10",
       "talentLeft": "+40% к урону Chaos Meteor",
-      "talentRight": "-24 сек. перезарядки Ghost Walk"
+      "talentRight": "−24 сек. перезарядки Ghost Walk"
     }
   ]
 }

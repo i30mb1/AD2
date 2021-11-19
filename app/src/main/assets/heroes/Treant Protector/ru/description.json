@@ -16,12 +16,12 @@
         {
           "talentLvl": "15",
           "talentLeft": "+30 к урону от Nature's Grasp",
-          "talentRight": "+48 к лечению от Living Armor"
+          "talentRight": "+15 к замедлению передвижения от Leech Seed"
         },
         {
           "talentLvl": "10",
           "talentLeft": "\u20135 сек. перезарядки Nature's Grasp",
-          "talentRight": "+1,75 маны в секунду"
+          "talentRight": "+36 к лечению от Living Armor"
         }
       ]
     },
@@ -70,7 +70,7 @@
       ],
       "itemBehaviour": [],
       "legacyKey": "T",
-      "story": "Стражи обычно не появляются в поле зрения. Чаще всего они скрываются среди своих кудрявых собратьев."
+      "story": null
     },
     {
       "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/8\/8c\/Treant_Protector_Leech_Seed.mp3\/revision\/latest?cb=20201009120946",
@@ -105,7 +105,7 @@
       ],
       "itemBehaviour": [],
       "legacyKey": "E",
-      "story": "Руфтреллен укрепляет союзных существ, черпая жизненные силы из нарушителей, ступивших на его священные земли."
+      "story": null
     },
     {
       "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/e\/eb\/Treant_Protector_Living_Armor_1.mp3\/revision\/latest?cb=20191215183426",
@@ -117,7 +117,7 @@
         "При выборе области на земле способность выбирает ближайшее к ней существо. ↓↓ Двойное нажатие автоматически выбирает себя (TagTalent область вокруг Treant Protector радиусом 450).",
         "↓↓ Двойное нажатие автоматически выбирает себя (TagTalent область вокруг Treant Protector радиусом 450).",
         "Можно применить на постройки, давая им все эффекты.",
-        "Излечивает 5\/8,33\/11,67\/15 (TagTalent 9\/12,33\/15,67\/19) здоровья с интервалом в 1 секунду спустя 1 секунду после применения баффа, срабатывая 12 раз.",
+        "Излечивает 5\/8,33\/11,67\/15 (TagTalent 6,25\/9,58\/12,92\/16,25) здоровья с интервалом в 1 секунду спустя 1 секунду после применения баффа, срабатывая 12 раз.",
         "Талант 25-го уровня превращает Living Armor в заклинание, направленное на область, после чего его нельзя применить на существо напрямую. Применение на себя всё так же выбирает Treant Protector, делая героя центром области. В этом случае способность действует накрипов, героев (включая иллюзии и клонов, но исключая крипов-героев) и строения (исключая постройки).",
         "Применение на себя всё так же выбирает Treant Protector, делая героя центром области.",
         "В этом случае способность действует накрипов, героев (включая иллюзии и клонов, но исключая крипов-героев) и строения (исключая постройки)."
@@ -130,14 +130,14 @@
       "params": [
         "Анимация применения: 0,3+0,5",
         "Дальность применения: Глобальная",
-        "Суммарное лечение: 60\/100\/140\/180 (TagTalent 108\/148\/188\/228)",
+        "Суммарное лечение: 60\/100\/140\/180 (TagTalent 75\/115\/155\/195)",
         "Доп. броня: 5\/6\/7\/8 (TagTalent 13\/14\/15\/16)",
         "Длительность: 12",
         "Радиус: 450"
       ],
       "itemBehaviour": [],
       "legacyKey": "V",
-      "story": "Корни и усики Руфтреллена расстилаются повсюду, стимулируя рост и омоложение всего живого."
+      "story": null
     },
     {
       "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/1\/1b\/Treant_Protector_Eyes_In_The_Forest.mp3\/revision\/latest?cb=20191215183440",
@@ -175,7 +175,7 @@
       ],
       "itemBehaviour": [],
       "legacyKey": "D",
-      "story": "Нельзя знать наверняка, кому или чему понадобится защита."
+      "story": null
     },
     {
       "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/b\/b5\/Treant_Protector_Nature%27s_Guise_2.mp3\/revision\/latest?cb=20191215183434",
@@ -224,7 +224,7 @@
       ],
       "itemBehaviour": [],
       "legacyKey": null,
-      "story": "Стражи обычно не появляются в поле зрения. Чаще всего они скрываются среди своих кудрявых собратьев."
+      "story": null
     },
     {
       "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/1\/16\/Treant_Protector_Overgrowth_1.mp3\/revision\/latest?cb=20191215183435",
@@ -256,7 +256,7 @@
       ],
       "itemBehaviour": [],
       "legacyKey": "R",
-      "story": "Руфтреллен взывает к древнему духу природы, выпуская его мощь через своих собратьев."
+      "story": null
     }
   ],
   "mainAttributes": {
@@ -283,12 +283,12 @@
     {
       "talentLvl": "15",
       "talentLeft": "+30 к урону от Nature's Grasp",
-      "talentRight": "+48 к лечению от Living Armor"
+      "talentRight": "+15 к замедлению передвижения от Leech Seed"
     },
     {
       "talentLvl": "10",
       "talentLeft": "\u20135 сек. перезарядки Nature's Grasp",
-      "talentRight": "+1,75 маны в секунду"
+      "talentRight": "+36 к лечению от Living Armor"
     }
   ]
 }

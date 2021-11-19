@@ -4,7 +4,7 @@
       "notes": [
         "The magic resistance talent stacks multiplicatively with other sources of magic resistance. Increases Techies's magic resistance to 40%.",
         "Increases Techies's magic resistance to 40%.",
-        "This attack damage talent is added as raw attack damage. Does not benefit illusions and is not affected by most percentage-based damage increasing or reducing effects.",
+        "This attack damage talent is added as bonus attack damage. Does not benefit illusions and is not affected by most percentage-based damage increasing or reducing effects.",
         "Does not benefit illusions and is not affected by most percentage-based damage increasing or reducing effects."
       ],
       "spellName": "Talent",
@@ -40,24 +40,23 @@
       ],
       "notes": [
         "Techies gets all 3 charges immediately upon learning Proximity Mines.",
-        "The mines cannot be triggered during the initial 1.75 seconds activation delay. During this delay, Proximity Mines are visible to the enemies. Once active, they turn invisible.",
+        "The mines cannot be triggered during the 1.75-second activation delay. During this delay, Proximity Mines are visible to the enemies. Once active, they turn invisible.",
         "During this delay, Proximity Mines are visible to the enemies. Once active, they turn invisible.",
-        "It takes 3.35 seconds for a Proximity Mine to detonate when placed right next to an enemy unit or structure. Proximity Mines are visible during the activation delay.",
-        "Proximity Mines are visible during the activation delay.",
-        "The mines only detonate when an enemy stands within its trigger radius for 1.6 seconds. This means quickly entering and leaving the area does not cause them to trigger. Upon entering its trigger radius, a sound is emitted from the mine, warning the enemy that they just got within the trigger radius. This sound is audible to everyone and audible through the fog of war. The mine's explosion is also audible through the fog of war. Can be triggered by invisible, but not by invulnerable or hidden units. Cannot be triggered by and cannot damage wards and flying units.",
+        "It takes a total of 3.35 seconds for a Proximity Mine to detonate when placed right next to an enemy unit or structure.",
+        "The mines only detonate when an enemy stands within its trigger radius for 1.6 seconds. This means quickly entering and leaving the area does not cause them to trigger. Upon entering its trigger radius, a sound is emitted from the mine, warning the enemy that they are within the trigger radius. Both the warning and mine explosion sound is audible to everyone and audible through the Fog of War. Can be triggered by invisible, but not by invulnerable or hidden units. Proximity Mines cannot be triggered by flying units and it does not damage wards.",
         "This means quickly entering and leaving the area does not cause them to trigger.",
-        "Upon entering its trigger radius, a sound is emitted from the mine, warning the enemy that they just got within the trigger radius.",
-        "This sound is audible to everyone and audible through the fog of war. The mine's explosion is also audible through the fog of war.",
+        "Upon entering its trigger radius, a sound is emitted from the mine, warning the enemy that they are within the trigger radius.",
+        "Both the warning and mine explosion sound is audible to everyone and audible through the Fog of War.",
         "Can be triggered by invisible, but not by invulnerable or hidden units.",
-        "Cannot be triggered by and cannot damage wards and flying units.",
-        "Proximity Mines only damage enemies when they get triggered, not when they are destroyed by attacks. The damage source is Proximity Mine itself, meaning certain on-damage effects react on the mine rather than on Techies (e.g. Blade Mail). The damage is based on the current Proximity Mines as it detonates, and not as it was placed. Proximity Mines deal 60\/114\/168\/222 damage to buildings. Provides 300 radius flying vision at its location for 1 second after detonating.",
-        "The damage source is Proximity Mine itself, meaning certain on-damage effects react on the mine rather than on Techies (e.g. Blade Mail).",
-        "The damage is based on the current Proximity Mines as it detonates, and not as it was placed.",
+        "Proximity Mines cannot be triggered by flying units and it does not damage wards.",
+        "Proximity Mines only damage enemies when they are triggered, not when they are destroyed by attacks. The damage source is the mine itself, meaning certain on-damage effects (e.g. Damage Return) react on the mine rather than on Techies. The damage is based on the current level as it detonates, and not as it was placed. Proximity Mines deal 60\/114\/168\/222 damage to buildings. Provides 300 radius flying vision at its location for 1 second after detonating.",
+        "The damage source is the mine itself, meaning certain on-damage effects (e.g. Damage Return) react on the mine rather than on Techies.",
+        "The damage is based on the current level as it detonates, and not as it was placed.",
         "Proximity Mines deal 60\/114\/168\/222 damage to buildings.",
         "Provides 300 radius flying vision at its location for 1 second after detonating.",
-        "Proximity Mines cannot be placed within the trigger radius of other allied Proximity Mines. When selecting the ability, all own Proximity Mines display a red circle, indicating their trigger radius. However, with the mines movement speed granting talent, the mines can be moved and overlap on each other after being placed.",
-        "When selecting the ability, all own Proximity Mines display a red circle, indicating their trigger radius.",
-        "However, with the mines movement speed granting talent, the mines can be moved and overlap on each other after being placed.",
+        "Proximity Mines cannot be placed within 400 radius of other allied Proximity Mines. When mouse-hovering on the ability, all own Proximity Mines display a red circle, indicating their trigger radius. With the mines movement speed granting talent, the mines can be moved and overlap on each other after being placed.",
+        "When mouse-hovering on the ability, all own Proximity Mines display a red circle, indicating their trigger radius.",
+        "With the mines movement speed granting talent, the mines can be moved and overlap on each other after being placed.",
         "Proximity Mines do not block neutral creep camps."
       ],
       "mana": "110\/130\/150\/170",
@@ -80,7 +79,7 @@
       ],
       "itemBehaviour": [],
       "legacyKey": "E",
-      "story": "The bane of Toterin!"
+      "story": null
     },
     {
       "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/4\/44\/Techies_Stasis_Trap_1.mp3\/revision\/latest?cb=20191216024811",
@@ -89,16 +88,16 @@
         "Affects Enemies"
       ],
       "notes": [
-        "The traps cannot be triggered during the initial 2 seconds activation delay. During this delay, the traps are visible to the enemies. Once active, they turn invisible.",
+        "The traps cannot be triggered during the 2-second activation delay. During this delay, the traps are visible to the enemies. Once active, they turn invisible.",
         "During this delay, the traps are visible to the enemies. Once active, they turn invisible.",
-        "Roots the targets, preventing them from moving and casting certain mobility spells. Provides True Sight over the targets. The traps only root enemies when they get triggered, not when they are destroyed by attacks. The root duration is based on the level of Stasis Trap as the trap was placed, and not as it detonates.",
-        "Provides True Sight over the targets.",
+        "Roots the targets, preventing them from moving and casting certain mobility abilities. While rooted, provides True Sight over the targets. The traps only root enemies when they get triggered, not when they are destroyed by attacks. The root duration is based on the level of Stasis Trap as the trap was placed, and not as it detonates.",
+        "While rooted, provides True Sight over the targets.",
         "The traps only root enemies when they get triggered, not when they are destroyed by attacks.",
         "The root duration is based on the level of Stasis Trap as the trap was placed, and not as it detonates.",
-        "When a Stasis Trap triggers, all other Stasis Traps owned by the player within 600 radius of the triggering trap are destroyed. Despite this, the traps can still be placed within 600 range of each other.",
-        "Despite this, the traps can still be placed within 600 range of each other.",
-        "Stasis Traps do not trigger on spell immune, invisible, invulnerable or hidden units. However, invisible units are rooted when within range as a trap is triggered.",
-        "However, invisible units are rooted when within range as a trap is triggered.",
+        "When a Stasis Trap triggers, all other Stasis Traps owned by the player within 600 radius of the triggering trap are destroyed. Stasis Traps have no placement restrictions, they can be placed within any range of each other.",
+        "Stasis Traps have no placement restrictions, they can be placed within any range of each other.",
+        "Stasis Traps do not trigger on spell immune, invisible, invulnerable or hidden units. However, invisible units are rooted when within 600 radius as a trap is triggered.",
+        "However, invisible units are rooted when within 600 radius as a trap is triggered.",
         "Provides 600 radius flying vision at its location for 1 second after detonating.",
         "The trap's explosion is audible through the Fog of War.",
         "Stasis Traps do not block neutral creep camps."
@@ -119,7 +118,7 @@
       ],
       "itemBehaviour": [],
       "legacyKey": "T",
-      "story": "The scourge of Trapper Town!"
+      "story": null
     },
     {
       "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/7\/74\/Techies_Blast_Off%21_1.mp3\/revision\/latest?cb=20191216024800",
@@ -129,15 +128,15 @@
         "Damage Magical (TagAghanimHP Removal)"
       ],
       "notes": [
-        "The leap always takes 0.75 seconds, so the horizontal speed varies between 0 and 1333.33.",
+        "The leap always takes 0.75 seconds, so the horizontal speed varies between 0 \u2012 1333.33.",
         "Leaps in an arc up to 281.108 range high, so that other units can pass below them.",
-        "The self damage is lethal, so that Techies can deny themselves with this ability.",
-        "The self damage is magic damage flagged as HP Removal and therefore ignores most sources of damage manipulation (except for magic resistance and magical damage barriers). Borrowed Time, Aphotic Shield, Ghostship, and False Promise are the only ones able to interact with the self damage. Shallow Grave prevents dying to the self damage.",
-        "Borrowed Time, Aphotic Shield, Ghostship, and False Promise are the only ones able to interact with the self damage.",
-        "Shallow Grave prevents dying to the self damage.",
-        "The explosion first applies the debuff, then the area damage, then the self damage and then the stun. Since enemies are damaged first, Techies still gets the experience when enemies die to Blast Off, even if the cast was lethal to Techies as well. However, this also means that Blast Off cannot deny Techies if the enemy has Blade Mail, Spiked Carapace, Dispersion, Last Will, or Static Charge active.",
-        "Since enemies are damaged first, Techies still gets the experience when enemies die to Blast Off, even if the cast was lethal to Techies as well.",
-        "However, this also means that Blast Off cannot deny Techies if the enemy has Blade Mail, Spiked Carapace, Dispersion, Last Will, or Static Charge active.",
+        "The self-inflicted damage is lethal, so it can be used to deny themselves. The 50% maximum health as self-inflicted damage is direct HP Removal, and ignores most sources of damage negation sources (except for magic resistance and magical damage barriers). However, the following abilities are able to interact with the self-inflicted damage: Aphotic Shield, Borrowed Time, Ghostship and False Promise. Shallow Grave is able to prevent Techies from dying to the self-inflicted damage.",
+        "The 50% maximum health as self-inflicted damage is direct HP Removal, and ignores most sources of damage negation sources (except for magic resistance and magical damage barriers).",
+        "However, the following abilities are able to interact with the self-inflicted damage: Aphotic Shield, Borrowed Time, Ghostship and False Promise.",
+        "Shallow Grave is able to prevent Techies from dying to the self-inflicted damage.",
+        "The explosion first applies the debuff, then the area damage, then the self damage and then the stun. Since enemies are damaged first, Techies still gets the experience when enemies die to Blast Off, even if the self-inflicted damage was lethal. However, this also means that Blast Off cannot deny Techies if the enemy has Blade Mail, Spiked Carapace, Dispersion, Static Charge or Last Will active.",
+        "Since enemies are damaged first, Techies still gets the experience when enemies die to Blast Off, even if the self-inflicted damage was lethal.",
+        "However, this also means that Blast Off cannot deny Techies if the enemy has Blade Mail, Spiked Carapace, Dispersion, Static Charge or Last Will active.",
         "Destroys trees within 150 radius around Techies upon landing.",
         "Can be interrupted by forced movement during the leap, but is not interrupted by any other sort of disable.",
         "Can be cast while rooted, and getting rooted during the leap does not interrupt it."
@@ -160,7 +159,33 @@
       ],
       "itemBehaviour": [],
       "legacyKey": "C",
-      "story": "Where we going?"
+      "story": null
+    },
+    {
+      "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/4\/48\/Techies_Focused_Detonate.mp3\/revision\/latest?cb=20191216024802",
+      "effects": [
+        "Ability Target Area",
+        "Affects Enemies"
+      ],
+      "notes": [
+        "Focused Detonate is unlocked when Remote Mines is learned.",
+        "Can be cast without having to face towards the targeted area.",
+        "This sub-ability can be used while Techies is dead and while prevented from acting, but not while Techies is disabled.",
+        "If there are no Remote Mines within the search radius, nothing happens, wasting the cooldown."
+      ],
+      "mana": null,
+      "hotKey": "D",
+      "cooldown": null,
+      "description": "Detonate all remote mines in the target area.",
+      "spellName": "Focused Detonate",
+      "params": [
+        "Cast Animation: 0+0.53",
+        "Cast Range: Global",
+        "Search Radius: 700"
+      ],
+      "itemBehaviour": [],
+      "legacyKey": "F",
+      "story": null
     },
     {
       "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/5\/53\/Techies_Minefield_Sign.mp3\/revision\/latest?cb=20191216024803",
@@ -169,17 +194,16 @@
         "Affects Allied Units"
       ],
       "notes": [
-        "This is an innate ability and cannot be learned or leveled. In Ability Draft, Minefield Sign is bound to Remote Mines, and is granted to the player that drafts it.",
-        "In Ability Draft, Minefield Sign is bound to Remote Mines, and is granted to the player that drafts it.",
+        "This is an innate ability and cannot be learned or leveled.",
         "Cannot be placed inside the fountain area.",
         "Only one sign can exist on the map at a time. Planting a second sign causes the previous one to immediately disappear The signs have no death animation, so they visually linger for a few seconds and then sink into the ground.",
         "Planting a second sign causes the previous one to immediately disappear",
         "The signs have no death animation, so they visually linger for a few seconds and then sink into the ground.",
-        "The sign is phased, so it cannot block unit pathing.",
+        "The sign is permanently phased, so it cannot block unit pathing.",
         "The sign does not block neutral creep camps.",
-        "With Aghanim's Scepter, the Minefield Sign provides a 125 radius aura, granting Techies' mines True Sight immunity and invisibility with a 0-second fade time. The aura only affects Proximity Mines, Stasis Traps and Remote Mines. Other kinds of wards are not affected. The aura affects the mines of all allied players, not just Techies' own mines, but not enemy mines. Mines within range of a sign do not have to go through their fade times to become invisible. The invisibility prevents enemies from seeing Proximity Mines even within its trigger range, or from seeing Remote Mines during their detonation delay. The aura's buff lingers for 0.5 seconds.",
-        "The aura only affects Proximity Mines, Stasis Traps and Remote Mines. Other kinds of wards are not affected.",
-        "The aura affects the mines of all allied players, not just Techies' own mines, but not enemy mines.",
+        "With Aghanim's Scepter, the Minefield Sign provides a 125 radius aura, granting Techies' mines True Sight immunity and invisibility with a 0-second fade time. The aura only affects Proximity Mines, Stasis Traps and Remote Mines. Other wards are not affected. The aura affects the mines of all allied players (e.g. when acquired via Morph), but not enemy mines. Mines within range of a sign do not have to go through their fade times to become invisible. The invisibility prevents enemies from seeing Proximity Mines even within its trigger range, or from seeing Remote Mines during their detonation delay. The aura's buff lingers for 0.5 seconds.",
+        "The aura only affects Proximity Mines, Stasis Traps and Remote Mines. Other wards are not affected.",
+        "The aura affects the mines of all allied players (e.g. when acquired via Morph), but not enemy mines.",
         "Mines within range of a sign do not have to go through their fade times to become invisible.",
         "The invisibility prevents enemies from seeing Proximity Mines even within its trigger range, or from seeing Remote Mines during their detonation delay.",
         "The aura's buff lingers for 0.5 seconds."
@@ -201,7 +225,7 @@
       ],
       "itemBehaviour": [],
       "legacyKey": "G",
-      "story": "Watch your step!"
+      "story": null
     },
     {
       "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/7\/7b\/Techies_Remote_Mines.mp3\/revision\/latest?cb=20210424160500",
@@ -211,15 +235,15 @@
         "Damage Magical"
       ],
       "notes": [
-        "Remote Mines only damage enemies when they get triggered with the sub-abilities, not when they are destroyed by attacks or when they expire.",
-        "Remote mines have no activation delay, and can be detonated immediately after being placed. However, once triggered, the detonation is delayed by 0.25 seconds.",
+        "Remote Mines only damage enemies when they are triggered with the Focused Detonate or Pinpoint Detonate sub-abilities, not when they are destroyed by attacks or expire.",
+        "Remote Mines have no activation delay, and can be detonated immediately after being placed. However, once triggered, the detonation is delayed by 0.25 seconds.",
         "However, once triggered, the detonation is delayed by 0.25 seconds.",
-        "The damage source is the mine itself, meaning certain on-damage effects react on the mine rather than on Techies (e.g. Blade Mail).",
+        "The damage source is Remote Mines itself, meaning certain on-damage effects react on the mine rather than on Techies (e.g. Damage Return).",
         "Remote Mines can be stacked on one spot without interfering with each other in any way.",
         "Can have up to 69 remote mines at a time with the default cast time, cooldown and duration.",
         "Provides 500 radius flying vision at its location for 3 seconds after detonating.",
-        "The damage is based on the level of Remote Mines as the mine was placed, and not as it detonates. However, the damage values updates instantly when picking up or dropping Aghanim's Scepter.",
-        "However, the damage values updates instantly when picking up or dropping Aghanim's Scepter.",
+        "The damage is based on the level of Remote Mines as the mine was placed, and not as it detonates. However, the damage values update instantly when picking up or dropping Aghanim's Scepter.",
+        "However, the damage values update instantly when picking up or dropping Aghanim's Scepter.",
         "Remote Mines have their model size increased by 10% per level.",
         "Remote Mines do not block neutral creep camps."
       ],
@@ -241,33 +265,7 @@
       ],
       "itemBehaviour": [],
       "legacyKey": "R",
-      "story": "The downfall of Dredger's Bight!"
-    },
-    {
-      "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/4\/48\/Techies_Focused_Detonate.mp3\/revision\/latest?cb=20191216024802",
-      "effects": [
-        "Ability Target Area",
-        "Affects Enemies"
-      ],
-      "notes": [
-        "Focused Detonate is unlocked when Remote Mines is learned.",
-        "Focused Detonate can be cast without having to face towards the targeted area.",
-        "This sub-ability can be used while Techies is dead and while prevented from acting, but not while Techies is disabled.",
-        "If there are no Remote Mines within the search radius, nothing happens, wasting the cooldown."
-      ],
-      "mana": null,
-      "hotKey": "D",
-      "cooldown": null,
-      "description": "Detonate all remote mines in the target area.",
-      "spellName": "Focused Detonate",
-      "params": [
-        "Cast Animation: 0+0.53",
-        "Cast Range: Global",
-        "Search Radius: 700"
-      ],
-      "itemBehaviour": [],
-      "legacyKey": "F",
-      "story": "Why light one fuse when you can light them all?"
+      "story": null
     },
     {
       "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/e\/ed\/Techies_Pinpoint_Detonate.mp3\/revision\/latest?cb=20191216024806",
@@ -289,7 +287,7 @@
       ],
       "itemBehaviour": [],
       "legacyKey": "D",
-      "story": "Kablooey!"
+      "story": null
     }
   ],
   "mainAttributes": {

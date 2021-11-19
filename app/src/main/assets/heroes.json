@@ -1,488 +1,614 @@
 {
   "heroes": [
     {
-      "nameEng": "Abaddon",
-      "mainAttr": "Strength"
+      "name": "Abaddon",
+      "mainAttribute": "Strength",
+      "url": "\/wiki\/Abaddon"
     },
     {
-      "nameEng": "Alchemist",
-      "mainAttr": "Strength"
+      "name": "Alchemist",
+      "mainAttribute": "Strength",
+      "url": "\/wiki\/Alchemist"
     },
     {
-      "nameEng": "Axe",
-      "mainAttr": "Strength"
+      "name": "Axe",
+      "mainAttribute": "Strength",
+      "url": "\/wiki\/Axe"
     },
     {
-      "nameEng": "Beastmaster",
-      "mainAttr": "Strength"
+      "name": "Beastmaster",
+      "mainAttribute": "Strength",
+      "url": "\/wiki\/Beastmaster"
     },
     {
-      "nameEng": "Brewmaster",
-      "mainAttr": "Strength"
+      "name": "Brewmaster",
+      "mainAttribute": "Strength",
+      "url": "\/wiki\/Brewmaster"
     },
     {
-      "nameEng": "Bristleback",
-      "mainAttr": "Strength"
+      "name": "Bristleback",
+      "mainAttribute": "Strength",
+      "url": "\/wiki\/Bristleback"
     },
     {
-      "nameEng": "Centaur Warrunner",
-      "mainAttr": "Strength"
+      "name": "Centaur Warrunner",
+      "mainAttribute": "Strength",
+      "url": "\/wiki\/Centaur_Warrunner"
     },
     {
-      "nameEng": "Chaos Knight",
-      "mainAttr": "Strength"
+      "name": "Chaos Knight",
+      "mainAttribute": "Strength",
+      "url": "\/wiki\/Chaos_Knight"
     },
     {
-      "nameEng": "Clockwerk",
-      "mainAttr": "Strength"
+      "name": "Clockwerk",
+      "mainAttribute": "Strength",
+      "url": "\/wiki\/Clockwerk"
     },
     {
-      "nameEng": "Dawnbreaker",
-      "mainAttr": "Strength"
+      "name": "Dawnbreaker",
+      "mainAttribute": "Strength",
+      "url": "\/wiki\/Dawnbreaker"
     },
     {
-      "nameEng": "Doom",
-      "mainAttr": "Strength"
+      "name": "Doom",
+      "mainAttribute": "Strength",
+      "url": "\/wiki\/Doom"
     },
     {
-      "nameEng": "Dragon Knight",
-      "mainAttr": "Strength"
+      "name": "Dragon Knight",
+      "mainAttribute": "Strength",
+      "url": "\/wiki\/Dragon_Knight"
     },
     {
-      "nameEng": "Earth Spirit",
-      "mainAttr": "Strength"
+      "name": "Earth Spirit",
+      "mainAttribute": "Strength",
+      "url": "\/wiki\/Earth_Spirit"
     },
     {
-      "nameEng": "Earthshaker",
-      "mainAttr": "Strength"
+      "name": "Earthshaker",
+      "mainAttribute": "Strength",
+      "url": "\/wiki\/Earthshaker"
     },
     {
-      "nameEng": "Elder Titan",
-      "mainAttr": "Strength"
+      "name": "Elder Titan",
+      "mainAttribute": "Strength",
+      "url": "\/wiki\/Elder_Titan"
     },
     {
-      "nameEng": "Huskar",
-      "mainAttr": "Strength"
+      "name": "Huskar",
+      "mainAttribute": "Strength",
+      "url": "\/wiki\/Huskar"
     },
     {
-      "nameEng": "Io",
-      "mainAttr": "Strength"
+      "name": "Io",
+      "mainAttribute": "Strength",
+      "url": "\/wiki\/Io"
     },
     {
-      "nameEng": "Kunkka",
-      "mainAttr": "Strength"
+      "name": "Kunkka",
+      "mainAttribute": "Strength",
+      "url": "\/wiki\/Kunkka"
     },
     {
-      "nameEng": "Legion Commander",
-      "mainAttr": "Strength"
+      "name": "Legion Commander",
+      "mainAttribute": "Strength",
+      "url": "\/wiki\/Legion_Commander"
     },
     {
-      "nameEng": "Lifestealer",
-      "mainAttr": "Strength"
+      "name": "Lifestealer",
+      "mainAttribute": "Strength",
+      "url": "\/wiki\/Lifestealer"
     },
     {
-      "nameEng": "Lycan",
-      "mainAttr": "Strength"
+      "name": "Lycan",
+      "mainAttribute": "Strength",
+      "url": "\/wiki\/Lycan"
     },
     {
-      "nameEng": "Magnus",
-      "mainAttr": "Strength"
+      "name": "Magnus",
+      "mainAttribute": "Strength",
+      "url": "\/wiki\/Magnus"
     },
     {
-      "nameEng": "Mars",
-      "mainAttr": "Strength"
+      "name": "Marci",
+      "mainAttribute": "Strength",
+      "url": "\/wiki\/Marci"
     },
     {
-      "nameEng": "Night Stalker",
-      "mainAttr": "Strength"
+      "name": "Mars",
+      "mainAttribute": "Strength",
+      "url": "\/wiki\/Mars"
     },
     {
-      "nameEng": "Omniknight",
-      "mainAttr": "Strength"
+      "name": "Night Stalker",
+      "mainAttribute": "Strength",
+      "url": "\/wiki\/Night_Stalker"
     },
     {
-      "nameEng": "Phoenix",
-      "mainAttr": "Strength"
+      "name": "Omniknight",
+      "mainAttribute": "Strength",
+      "url": "\/wiki\/Omniknight"
     },
     {
-      "nameEng": "Pudge",
-      "mainAttr": "Strength"
+      "name": "Phoenix",
+      "mainAttribute": "Strength",
+      "url": "\/wiki\/Phoenix"
     },
     {
-      "nameEng": "Sand King",
-      "mainAttr": "Strength"
+      "name": "Pudge",
+      "mainAttribute": "Strength",
+      "url": "\/wiki\/Pudge"
     },
     {
-      "nameEng": "Slardar",
-      "mainAttr": "Strength"
+      "name": "Sand King",
+      "mainAttribute": "Strength",
+      "url": "\/wiki\/Sand_King"
     },
     {
-      "nameEng": "Snapfire",
-      "mainAttr": "Strength"
+      "name": "Slardar",
+      "mainAttribute": "Strength",
+      "url": "\/wiki\/Slardar"
     },
     {
-      "nameEng": "Spirit Breaker",
-      "mainAttr": "Strength"
+      "name": "Snapfire",
+      "mainAttribute": "Strength",
+      "url": "\/wiki\/Snapfire"
     },
     {
-      "nameEng": "Sven",
-      "mainAttr": "Strength"
+      "name": "Spirit Breaker",
+      "mainAttribute": "Strength",
+      "url": "\/wiki\/Spirit_Breaker"
     },
     {
-      "nameEng": "Tidehunter",
-      "mainAttr": "Strength"
+      "name": "Sven",
+      "mainAttribute": "Strength",
+      "url": "\/wiki\/Sven"
     },
     {
-      "nameEng": "Timbersaw",
-      "mainAttr": "Strength"
+      "name": "Tidehunter",
+      "mainAttribute": "Strength",
+      "url": "\/wiki\/Tidehunter"
     },
     {
-      "nameEng": "Tiny",
-      "mainAttr": "Strength"
+      "name": "Timbersaw",
+      "mainAttribute": "Strength",
+      "url": "\/wiki\/Timbersaw"
     },
     {
-      "nameEng": "Treant Protector",
-      "mainAttr": "Strength"
+      "name": "Tiny",
+      "mainAttribute": "Strength",
+      "url": "\/wiki\/Tiny"
     },
     {
-      "nameEng": "Tusk",
-      "mainAttr": "Strength"
+      "name": "Treant Protector",
+      "mainAttribute": "Strength",
+      "url": "\/wiki\/Treant_Protector"
     },
     {
-      "nameEng": "Underlord",
-      "mainAttr": "Strength"
+      "name": "Tusk",
+      "mainAttribute": "Strength",
+      "url": "\/wiki\/Tusk"
     },
     {
-      "nameEng": "Undying",
-      "mainAttr": "Strength"
+      "name": "Underlord",
+      "mainAttribute": "Strength",
+      "url": "\/wiki\/Underlord"
     },
     {
-      "nameEng": "Wraith King",
-      "mainAttr": "Strength"
+      "name": "Undying",
+      "mainAttribute": "Strength",
+      "url": "\/wiki\/Undying"
     },
     {
-      "nameEng": "Anti-Mage",
-      "mainAttr": "Agility"
+      "name": "Wraith King",
+      "mainAttribute": "Strength",
+      "url": "\/wiki\/Wraith_King"
     },
     {
-      "nameEng": "Arc Warden",
-      "mainAttr": "Agility"
+      "name": "Anti-Mage",
+      "mainAttribute": "Agility",
+      "url": "\/wiki\/Anti-Mage"
     },
     {
-      "nameEng": "Bloodseeker",
-      "mainAttr": "Agility"
+      "name": "Arc Warden",
+      "mainAttribute": "Agility",
+      "url": "\/wiki\/Arc_Warden"
     },
     {
-      "nameEng": "Bounty Hunter",
-      "mainAttr": "Agility"
+      "name": "Bloodseeker",
+      "mainAttribute": "Agility",
+      "url": "\/wiki\/Bloodseeker"
     },
     {
-      "nameEng": "Broodmother",
-      "mainAttr": "Agility"
+      "name": "Bounty Hunter",
+      "mainAttribute": "Agility",
+      "url": "\/wiki\/Bounty_Hunter"
     },
     {
-      "nameEng": "Clinkz",
-      "mainAttr": "Agility"
+      "name": "Broodmother",
+      "mainAttribute": "Agility",
+      "url": "\/wiki\/Broodmother"
     },
     {
-      "nameEng": "Drow Ranger",
-      "mainAttr": "Agility"
+      "name": "Clinkz",
+      "mainAttribute": "Agility",
+      "url": "\/wiki\/Clinkz"
     },
     {
-      "nameEng": "Ember Spirit",
-      "mainAttr": "Agility"
+      "name": "Drow Ranger",
+      "mainAttribute": "Agility",
+      "url": "\/wiki\/Drow_Ranger"
     },
     {
-      "nameEng": "Faceless Void",
-      "mainAttr": "Agility"
+      "name": "Ember Spirit",
+      "mainAttribute": "Agility",
+      "url": "\/wiki\/Ember_Spirit"
     },
     {
-      "nameEng": "Gyrocopter",
-      "mainAttr": "Agility"
+      "name": "Faceless Void",
+      "mainAttribute": "Agility",
+      "url": "\/wiki\/Faceless_Void"
     },
     {
-      "nameEng": "Hoodwink",
-      "mainAttr": "Agility"
+      "name": "Gyrocopter",
+      "mainAttribute": "Agility",
+      "url": "\/wiki\/Gyrocopter"
     },
     {
-      "nameEng": "Juggernaut",
-      "mainAttr": "Agility"
+      "name": "Hoodwink",
+      "mainAttribute": "Agility",
+      "url": "\/wiki\/Hoodwink"
     },
     {
-      "nameEng": "Lone Druid",
-      "mainAttr": "Agility"
+      "name": "Juggernaut",
+      "mainAttribute": "Agility",
+      "url": "\/wiki\/Juggernaut"
     },
     {
-      "nameEng": "Luna",
-      "mainAttr": "Agility"
+      "name": "Lone Druid",
+      "mainAttribute": "Agility",
+      "url": "\/wiki\/Lone_Druid"
     },
     {
-      "nameEng": "Medusa",
-      "mainAttr": "Agility"
+      "name": "Luna",
+      "mainAttribute": "Agility",
+      "url": "\/wiki\/Luna"
     },
     {
-      "nameEng": "Meepo",
-      "mainAttr": "Agility"
+      "name": "Medusa",
+      "mainAttribute": "Agility",
+      "url": "\/wiki\/Medusa"
     },
     {
-      "nameEng": "Mirana",
-      "mainAttr": "Agility"
+      "name": "Meepo",
+      "mainAttribute": "Agility",
+      "url": "\/wiki\/Meepo"
     },
     {
-      "nameEng": "Monkey King",
-      "mainAttr": "Agility"
+      "name": "Mirana",
+      "mainAttribute": "Agility",
+      "url": "\/wiki\/Mirana"
     },
     {
-      "nameEng": "Morphling",
-      "mainAttr": "Agility"
+      "name": "Monkey King",
+      "mainAttribute": "Agility",
+      "url": "\/wiki\/Monkey_King"
     },
     {
-      "nameEng": "Naga Siren",
-      "mainAttr": "Agility"
+      "name": "Morphling",
+      "mainAttribute": "Agility",
+      "url": "\/wiki\/Morphling"
     },
     {
-      "nameEng": "Nyx Assassin",
-      "mainAttr": "Agility"
+      "name": "Naga Siren",
+      "mainAttribute": "Agility",
+      "url": "\/wiki\/Naga_Siren"
     },
     {
-      "nameEng": "Pangolier",
-      "mainAttr": "Agility"
+      "name": "Nyx Assassin",
+      "mainAttribute": "Agility",
+      "url": "\/wiki\/Nyx_Assassin"
     },
     {
-      "nameEng": "Phantom Assassin",
-      "mainAttr": "Agility"
+      "name": "Pangolier",
+      "mainAttribute": "Agility",
+      "url": "\/wiki\/Pangolier"
     },
     {
-      "nameEng": "Phantom Lancer",
-      "mainAttr": "Agility"
+      "name": "Phantom Assassin",
+      "mainAttribute": "Agility",
+      "url": "\/wiki\/Phantom_Assassin"
     },
     {
-      "nameEng": "Razor",
-      "mainAttr": "Agility"
+      "name": "Phantom Lancer",
+      "mainAttribute": "Agility",
+      "url": "\/wiki\/Phantom_Lancer"
     },
     {
-      "nameEng": "Riki",
-      "mainAttr": "Agility"
+      "name": "Razor",
+      "mainAttribute": "Agility",
+      "url": "\/wiki\/Razor"
     },
     {
-      "nameEng": "Shadow Fiend",
-      "mainAttr": "Agility"
+      "name": "Riki",
+      "mainAttribute": "Agility",
+      "url": "\/wiki\/Riki"
     },
     {
-      "nameEng": "Slark",
-      "mainAttr": "Agility"
+      "name": "Shadow Fiend",
+      "mainAttribute": "Agility",
+      "url": "\/wiki\/Shadow_Fiend"
     },
     {
-      "nameEng": "Sniper",
-      "mainAttr": "Agility"
+      "name": "Slark",
+      "mainAttribute": "Agility",
+      "url": "\/wiki\/Slark"
     },
     {
-      "nameEng": "Spectre",
-      "mainAttr": "Agility"
+      "name": "Sniper",
+      "mainAttribute": "Agility",
+      "url": "\/wiki\/Sniper"
     },
     {
-      "nameEng": "Templar Assassin",
-      "mainAttr": "Agility"
+      "name": "Spectre",
+      "mainAttribute": "Agility",
+      "url": "\/wiki\/Spectre"
     },
     {
-      "nameEng": "Terrorblade",
-      "mainAttr": "Agility"
+      "name": "Templar Assassin",
+      "mainAttribute": "Agility",
+      "url": "\/wiki\/Templar_Assassin"
     },
     {
-      "nameEng": "Troll Warlord",
-      "mainAttr": "Agility"
+      "name": "Terrorblade",
+      "mainAttribute": "Agility",
+      "url": "\/wiki\/Terrorblade"
     },
     {
-      "nameEng": "Ursa",
-      "mainAttr": "Agility"
+      "name": "Troll Warlord",
+      "mainAttribute": "Agility",
+      "url": "\/wiki\/Troll_Warlord"
     },
     {
-      "nameEng": "Vengeful Spirit",
-      "mainAttr": "Agility"
+      "name": "Ursa",
+      "mainAttribute": "Agility",
+      "url": "\/wiki\/Ursa"
     },
     {
-      "nameEng": "Venomancer",
-      "mainAttr": "Agility"
+      "name": "Vengeful Spirit",
+      "mainAttribute": "Agility",
+      "url": "\/wiki\/Vengeful_Spirit"
     },
     {
-      "nameEng": "Viper",
-      "mainAttr": "Agility"
+      "name": "Venomancer",
+      "mainAttribute": "Agility",
+      "url": "\/wiki\/Venomancer"
     },
     {
-      "nameEng": "Weaver",
-      "mainAttr": "Agility"
+      "name": "Viper",
+      "mainAttribute": "Agility",
+      "url": "\/wiki\/Viper"
     },
     {
-      "nameEng": "Ancient Apparition",
-      "mainAttr": "Intelligence"
+      "name": "Weaver",
+      "mainAttribute": "Agility",
+      "url": "\/wiki\/Weaver"
     },
     {
-      "nameEng": "Bane",
-      "mainAttr": "Intelligence"
+      "name": "Ancient Apparition",
+      "mainAttribute": "Intelligence",
+      "url": "\/wiki\/Ancient_Apparition"
     },
     {
-      "nameEng": "Batrider",
-      "mainAttr": "Intelligence"
+      "name": "Bane",
+      "mainAttribute": "Intelligence",
+      "url": "\/wiki\/Bane"
     },
     {
-      "nameEng": "Chen",
-      "mainAttr": "Intelligence"
+      "name": "Batrider",
+      "mainAttribute": "Intelligence",
+      "url": "\/wiki\/Batrider"
     },
     {
-      "nameEng": "Crystal Maiden",
-      "mainAttr": "Intelligence"
+      "name": "Chen",
+      "mainAttribute": "Intelligence",
+      "url": "\/wiki\/Chen"
     },
     {
-      "nameEng": "Dark Seer",
-      "mainAttr": "Intelligence"
+      "name": "Crystal Maiden",
+      "mainAttribute": "Intelligence",
+      "url": "\/wiki\/Crystal_Maiden"
     },
     {
-      "nameEng": "Dark Willow",
-      "mainAttr": "Intelligence"
+      "name": "Dark Seer",
+      "mainAttribute": "Intelligence",
+      "url": "\/wiki\/Dark_Seer"
     },
     {
-      "nameEng": "Dazzle",
-      "mainAttr": "Intelligence"
+      "name": "Dark Willow",
+      "mainAttribute": "Intelligence",
+      "url": "\/wiki\/Dark_Willow"
     },
     {
-      "nameEng": "Death Prophet",
-      "mainAttr": "Intelligence"
+      "name": "Dazzle",
+      "mainAttribute": "Intelligence",
+      "url": "\/wiki\/Dazzle"
     },
     {
-      "nameEng": "Disruptor",
-      "mainAttr": "Intelligence"
+      "name": "Death Prophet",
+      "mainAttribute": "Intelligence",
+      "url": "\/wiki\/Death_Prophet"
     },
     {
-      "nameEng": "Enchantress",
-      "mainAttr": "Intelligence"
+      "name": "Disruptor",
+      "mainAttribute": "Intelligence",
+      "url": "\/wiki\/Disruptor"
     },
     {
-      "nameEng": "Enigma",
-      "mainAttr": "Intelligence"
+      "name": "Enchantress",
+      "mainAttribute": "Intelligence",
+      "url": "\/wiki\/Enchantress"
     },
     {
-      "nameEng": "Grimstroke",
-      "mainAttr": "Intelligence"
+      "name": "Enigma",
+      "mainAttribute": "Intelligence",
+      "url": "\/wiki\/Enigma"
     },
     {
-      "nameEng": "Invoker",
-      "mainAttr": "Intelligence"
+      "name": "Grimstroke",
+      "mainAttribute": "Intelligence",
+      "url": "\/wiki\/Grimstroke"
     },
     {
-      "nameEng": "Jakiro",
-      "mainAttr": "Intelligence"
+      "name": "Invoker",
+      "mainAttribute": "Intelligence",
+      "url": "\/wiki\/Invoker"
     },
     {
-      "nameEng": "Keeper of the Light",
-      "mainAttr": "Intelligence"
+      "name": "Jakiro",
+      "mainAttribute": "Intelligence",
+      "url": "\/wiki\/Jakiro"
     },
     {
-      "nameEng": "Leshrac",
-      "mainAttr": "Intelligence"
+      "name": "Keeper of the Light",
+      "mainAttribute": "Intelligence",
+      "url": "\/wiki\/Keeper_of_the_Light"
     },
     {
-      "nameEng": "Lich",
-      "mainAttr": "Intelligence"
+      "name": "Leshrac",
+      "mainAttribute": "Intelligence",
+      "url": "\/wiki\/Leshrac"
     },
     {
-      "nameEng": "Lina",
-      "mainAttr": "Intelligence"
+      "name": "Lich",
+      "mainAttribute": "Intelligence",
+      "url": "\/wiki\/Lich"
     },
     {
-      "nameEng": "Lion",
-      "mainAttr": "Intelligence"
+      "name": "Lina",
+      "mainAttribute": "Intelligence",
+      "url": "\/wiki\/Lina"
     },
     {
-      "nameEng": "Nature's Prophet",
-      "mainAttr": "Intelligence"
+      "name": "Lion",
+      "mainAttribute": "Intelligence",
+      "url": "\/wiki\/Lion"
     },
     {
-      "nameEng": "Necrophos",
-      "mainAttr": "Intelligence"
+      "name": "Nature's Prophet",
+      "mainAttribute": "Intelligence",
+      "url": "\/wiki\/Nature%27s_Prophet"
     },
     {
-      "nameEng": "Ogre Magi",
-      "mainAttr": "Intelligence"
+      "name": "Necrophos",
+      "mainAttribute": "Intelligence",
+      "url": "\/wiki\/Necrophos"
     },
     {
-      "nameEng": "Oracle",
-      "mainAttr": "Intelligence"
+      "name": "Ogre Magi",
+      "mainAttribute": "Intelligence",
+      "url": "\/wiki\/Ogre_Magi"
     },
     {
-      "nameEng": "Outworld Destroyer",
-      "mainAttr": "Intelligence"
+      "name": "Oracle",
+      "mainAttribute": "Intelligence",
+      "url": "\/wiki\/Oracle"
     },
     {
-      "nameEng": "Puck",
-      "mainAttr": "Intelligence"
+      "name": "Outworld Destroyer",
+      "mainAttribute": "Intelligence",
+      "url": "\/wiki\/Outworld_Destroyer"
     },
     {
-      "nameEng": "Pugna",
-      "mainAttr": "Intelligence"
+      "name": "Puck",
+      "mainAttribute": "Intelligence",
+      "url": "\/wiki\/Puck"
     },
     {
-      "nameEng": "Queen of Pain",
-      "mainAttr": "Intelligence"
+      "name": "Pugna",
+      "mainAttribute": "Intelligence",
+      "url": "\/wiki\/Pugna"
     },
     {
-      "nameEng": "Rubick",
-      "mainAttr": "Intelligence"
+      "name": "Queen of Pain",
+      "mainAttribute": "Intelligence",
+      "url": "\/wiki\/Queen_of_Pain"
     },
     {
-      "nameEng": "Shadow Demon",
-      "mainAttr": "Intelligence"
+      "name": "Rubick",
+      "mainAttribute": "Intelligence",
+      "url": "\/wiki\/Rubick"
     },
     {
-      "nameEng": "Shadow Shaman",
-      "mainAttr": "Intelligence"
+      "name": "Shadow Demon",
+      "mainAttribute": "Intelligence",
+      "url": "\/wiki\/Shadow_Demon"
     },
     {
-      "nameEng": "Silencer",
-      "mainAttr": "Intelligence"
+      "name": "Shadow Shaman",
+      "mainAttribute": "Intelligence",
+      "url": "\/wiki\/Shadow_Shaman"
     },
     {
-      "nameEng": "Skywrath Mage",
-      "mainAttr": "Intelligence"
+      "name": "Silencer",
+      "mainAttribute": "Intelligence",
+      "url": "\/wiki\/Silencer"
     },
     {
-      "nameEng": "Storm Spirit",
-      "mainAttr": "Intelligence"
+      "name": "Skywrath Mage",
+      "mainAttribute": "Intelligence",
+      "url": "\/wiki\/Skywrath_Mage"
     },
     {
-      "nameEng": "Techies",
-      "mainAttr": "Intelligence"
+      "name": "Storm Spirit",
+      "mainAttribute": "Intelligence",
+      "url": "\/wiki\/Storm_Spirit"
     },
     {
-      "nameEng": "Tinker",
-      "mainAttr": "Intelligence"
+      "name": "Techies",
+      "mainAttribute": "Intelligence",
+      "url": "\/wiki\/Techies"
     },
     {
-      "nameEng": "Visage",
-      "mainAttr": "Intelligence"
+      "name": "Tinker",
+      "mainAttribute": "Intelligence",
+      "url": "\/wiki\/Tinker"
     },
     {
-      "nameEng": "Void Spirit",
-      "mainAttr": "Intelligence"
+      "name": "Visage",
+      "mainAttribute": "Intelligence",
+      "url": "\/wiki\/Visage"
     },
     {
-      "nameEng": "Warlock",
-      "mainAttr": "Intelligence"
+      "name": "Void Spirit",
+      "mainAttribute": "Intelligence",
+      "url": "\/wiki\/Void_Spirit"
     },
     {
-      "nameEng": "Windranger",
-      "mainAttr": "Intelligence"
+      "name": "Warlock",
+      "mainAttribute": "Intelligence",
+      "url": "\/wiki\/Warlock"
     },
     {
-      "nameEng": "Winter Wyvern",
-      "mainAttr": "Intelligence"
+      "name": "Windranger",
+      "mainAttribute": "Intelligence",
+      "url": "\/wiki\/Windranger"
     },
     {
-      "nameEng": "Witch Doctor",
-      "mainAttr": "Intelligence"
+      "name": "Winter Wyvern",
+      "mainAttribute": "Intelligence",
+      "url": "\/wiki\/Winter_Wyvern"
     },
     {
-      "nameEng": "Zeus",
-      "mainAttr": "Intelligence"
+      "name": "Witch Doctor",
+      "mainAttribute": "Intelligence",
+      "url": "\/wiki\/Witch_Doctor"
+    },
+    {
+      "name": "Zeus",
+      "mainAttribute": "Intelligence",
+      "url": "\/wiki\/Zeus"
     }
   ]
 }

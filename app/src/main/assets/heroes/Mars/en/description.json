@@ -11,7 +11,7 @@
         {
           "talentLvl": "20",
           "talentLeft": "+0.8s Spear of Mars Stun",
-          "talentRight": "+10%\/5% Bulwark Front\/Side Damage Reduction"
+          "talentRight": "+10%\/+5% Bulwark Front\/Side damage reduction"
         },
         {
           "talentLvl": "15",
@@ -20,7 +20,7 @@
         },
         {
           "talentLvl": "10",
-          "talentLeft": "-10% Bulwark Movement Penalty",
+          "talentLeft": "-10% Bulwark Movespeed Penalty",
           "talentRight": "+1.5s God's Rebuke Slow"
         }
       ]
@@ -37,32 +37,32 @@
         "The spear starts traveling exactly on Mars' location, and travels forward up to 900\/1000\/1100\/1200 range. Although within the spear's search radius, it does not hit enemies behind Mars upon cast. With the travel distance and search radius, it can hit units up to 1025\/1125\/1225\/1325 range away.",
         "Although within the spear's search radius, it does not hit enemies behind Mars upon cast.",
         "With the travel distance and search radius, it can hit units up to 1025\/1125\/1225\/1325 range away.",
-        "A spear may only damage and drag 1 (or 2) heroes along with it, and are stunned during the drag. If that hero dies or gets freed from the spear, it cannot impale a new hero. Dragged heroes are made to face towards the direction the spear came from. When hitting a building, tree, or cliff, the hero is moved closely to the pinned object and stunned. Buildings include every building, enemy and allied ones alike, but excludes the shops. Cliffs include all natural cliffs onto elevated areas, as well as pathing blockers (i.e. Ice Shards) and Arena Of Blood. Terrain decorations like the walls at the borders of both bases, the random statues on the map, and the arches at stairs cannot be used to pin enemies.",
+        "A spear may only damage and drag 1 (TagTalent 2) hero(es) along with it, and are stunned during the drag. If that hero dies or gets freed from the spear, it cannot impale a new hero. Dragged heroes are made to face towards the direction the spear came from. When hitting a building, tree, or cliff, the hero is moved closely to the pinned object and stunned. Buildings include every building, enemy and allied ones alike, but excludes the shops. Cliffs include all natural cliffs onto elevated areas, pathing blockers and Arena Of Blood. Terrain decorations like the walls at the borders of both bases, the random statues on the map, and the arches at stairs cannot be used to pin enemies.",
         "If that hero dies or gets freed from the spear, it cannot impale a new hero.",
         "Dragged heroes are made to face towards the direction the spear came from.",
         "When hitting a building, tree, or cliff, the hero is moved closely to the pinned object and stunned.",
         "Buildings include every building, enemy and allied ones alike, but excludes the shops.",
-        "Cliffs include all natural cliffs onto elevated areas, as well as pathing blockers (i.e. Ice Shards) and Arena Of Blood.",
+        "Cliffs include all natural cliffs onto elevated areas, pathing blockers and Arena Of Blood.",
         "Terrain decorations like the walls at the borders of both bases, the random statues on the map, and the arches at stairs cannot be used to pin enemies.",
-        "Provides true sight over the impaled enemy. No true sight is applied while dragging the enemy along with the spear.",
+        "Provides True Sight over the impaled enemy. No true sight is applied while dragging the enemy along with the spear.",
         "Upon losing the impale stun debuff, trees within a 100 radius around the hero get destroyed.",
-        "Hit non-hero units (including creep-heroes), as well as secondary heroes are damaged and knocked back instead. The knockback direction is based on the angle between the hit unit and the spear. The knockback does not disable units. They can still turn, attack and use items. Channeling abilities or items are not interrupted by it. The knockback destroys every tree the units collide with.",
+        "Hit non-hero units (including creep-heroes), as well as secondary heroes are damaged and knocked back instead. The knockback direction is based on the angle between the hit unit and the spear. The knockback does not disable units. They can still turn, attack and use items. Channeling abilities or items are not interrupted by it. Destroys trees enemies come in contact with during the knockback.",
         "The knockback direction is based on the angle between the hit unit and the spear.",
         "The knockback does not disable units. They can still turn, attack and use items. Channeling abilities or items are not interrupted by it.",
-        "The knockback destroys every tree the units collide with.",
+        "Destroys trees enemies come in contact with during the knockback.",
         "The spear cannot collide with invulnerable or hidden units, it simply flies through them.",
         "The spear provides 300 radius flying vision as it travels. When not impaling a hero to an object, the vision lingers at the final location for 1 second. When impaling a hero to an object, the vision lingers based on the default stun duration.",
         "When not impaling a hero to an object, the vision lingers at the final location for 1 second.",
         "When impaling a hero to an object, the vision lingers based on the default stun duration.",
         "Beginning casting Spear of Mars automatically toggles Bulwark Off.",
-        "With Aghanim's Shard, Spear of Mars leaves behind a fire trail as it travels. The fire lasts 10 seconds from the moment it is created. This means the fire created at the starting location disappears earlier than the fire created at the ending location. The fire places a debuff on enemies within the area in 0.5-second intervals, starting 0.5 seconds after the fire was created. The debuff deals 17.5 damage in 0.5-second intervals, starting 0.5 seconds after being placed, resulting in 4 damage instances. This results in a maximum of 24 damage instances when standing within the area the full duration. One instance of the debuff can deal up to 70 damage (before reductions). The entire fire trail can deal up to 420 damage to a single unit (before reductions). Multiple overlapping fire trails do not stack, instead they refresh the same debuff on enemies.",
+        "With Aghanim's Shard, Spear of Mars leaves behind a fire trail as it travels. The fire lasts 10 seconds from the moment it is created. This means the fire created at the starting location disappears earlier than the fire created at the ending location. The fire places a debuff on enemies within the area in 0.5-second intervals, starting 0.5 seconds after the fire was created. The debuff deals 17.5 damage in 0.5-second intervals, starting 0.5 seconds after being placed, resulting in 4 damage instances. This results in a maximum of 24 damage instances when standing within the area the full duration. One instance of the debuff can deal up to 70 damage (before reductions). The entire fire trail can deal up to 420 damage to a single unit. Multiple overlapping fire trails do not stack, instead they refresh the same debuff on enemies.",
         "The fire lasts 10 seconds from the moment it is created.",
         "This means the fire created at the starting location disappears earlier than the fire created at the ending location.",
         "The fire places a debuff on enemies within the area in 0.5-second intervals, starting 0.5 seconds after the fire was created.",
         "The debuff deals 17.5 damage in 0.5-second intervals, starting 0.5 seconds after being placed, resulting in 4 damage instances.",
         "This results in a maximum of 24 damage instances when standing within the area the full duration.",
         "One instance of the debuff can deal up to 70 damage (before reductions).",
-        "The entire fire trail can deal up to 420 damage to a single unit (before reductions).",
+        "The entire fire trail can deal up to 420 damage to a single unit.",
         "Multiple overlapping fire trails do not stack, instead they refresh the same debuff on enemies."
       ],
       "mana": "110\/120\/130\/140",
@@ -89,7 +89,7 @@
       ],
       "itemBehaviour": [],
       "legacyKey": "E",
-      "story": "The legendary Spear of Mars still glows with the heat of the forge god's fires."
+      "story": null
     },
     {
       "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/8\/8d\/Mars_God%27s_Rebuke_1.mp3\/revision\/latest?cb=20191216020052",
@@ -106,14 +106,14 @@
         "Causes Mars to perform an instant attack on all hit enemies. These instant attacks can proc any attack modifiers and on-hit effects normally, with cleave being an exception. They have True Strike, but ignore disarms. God's Rebuke has an ensured critical strike, crits with a lower value have no effect if they proc, since the higher crit value takes priority.",
         "These instant attacks can proc any attack modifiers and on-hit effects normally, with cleave being an exception. They have True Strike, but ignore disarms.",
         "God's Rebuke has an ensured critical strike, crits with a lower value have no effect if they proc, since the higher crit value takes priority.",
-        "If not killed, hit enemies are knocked back and slowed. The direction is based on the angle between the hit unit and the caster. Units are not disabled during the knockback. They can still turn, attack, cast abilities and use items. Channeling abilities are not interrupted. Does not push heroes affected by the impale stun of Spear of Mars. The knockback destroys every tree the units collide with.",
+        "If not killed, hit enemies are knocked back and slowed. The direction is based on the angle between the hit unit and the caster. Units are not disabled during the knockback. They can still turn, attack, cast abilities and use items. Channeling abilities are not interrupted. Does not push heroes affected by the impale stun of Spear of Mars. Destroys trees enemies come in contact with during the knockback.",
         "Units are not disabled during the knockback. They can still turn, attack, cast abilities and use items. Channeling abilities are not interrupted.",
         "Does not push heroes affected by the impale stun of Spear of Mars.",
-        "The knockback destroys every tree the units collide with.",
+        "Destroys trees enemies come in contact with during the knockback.",
         "God's Rebuke first applies knockback, then the slow, then the instant attack.",
-        "The slow and knockback are applied at the same time, so the slow effectively lasts for 1.7 seconds."
+        "The slow and knockback are applied at the same time, so the slow effectively lasts for 1.7 (TagTalent 3.2) seconds."
       ],
-      "mana": "80",
+      "mana": "90",
       "hotKey": "W",
       "cooldown": "16\/14\/12\/10 (TagTalent 12\/10\/8\/6)",
       "description": "Mars smashes enemies in front of him with his shield, knocking them back and damaging them with a critical hit based on his attack. Bonus damage is added when hitting heroes. Has True Strike.",
@@ -133,7 +133,7 @@
       ],
       "itemBehaviour": [],
       "legacyKey": "R",
-      "story": "There isn't a warrior alive who can stand unmoved by the sting of Mars' rebuke."
+      "story": null
     },
     {
       "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/f\/f2\/Mars_Bulwark_1.mp3\/revision\/latest?cb=20191216020049",
@@ -144,22 +144,22 @@
       ],
       "notes": [
         "Bulwark does not interrupt Mars' channeling abilities upon toggling On \/ Off.",
-        "Applies generic incoming damage reduction on Mars. Stacks additively with other sources of generic incoming damage manipulation. The reduction follows the same targeting rules as damage block does, reacting mainly on attack damage. However, this means it also reacts on abilities that react on damage block and is bypassed by some sources of instant attacks. Increases Mars' effective health by 67%\/100%\/150%\/233% when taking front damage. Increases Mars' effective health by 25%\/33%\/43%\/54% when taking side damage.",
+        "Applies generic incoming damage reduction on Mars. Stacks additively with other sources of generic incoming damage manipulation. The reduction follows the same targeting rules as damage block does, reacting mainly on attack damage. However, this means it also reacts on abilities that react on damage block and is bypassed by some sources of instant attacks. Increases Mars' effective health by 67%\/100%\/150%\/233% (TagTalent 100%\/150%\/233%\/400%) when taking front damage. Increases Mars' effective health by 25%\/33%\/43%\/54% (TagTalent 33%\/43%\/54%\/67%) when taking side damage.",
         "The reduction follows the same targeting rules as damage block does, reacting mainly on attack damage.",
         "However, this means it also reacts on abilities that react on damage block and is bypassed by some sources of instant attacks.",
-        "Increases Mars' effective health by 67%\/100%\/150%\/233% when taking front damage.",
-        "Increases Mars' effective health by 25%\/33%\/43%\/54% when taking side damage.",
+        "Increases Mars' effective health by 67%\/100%\/150%\/233% (TagTalent 100%\/150%\/233%\/400%) when taking front damage.",
+        "Increases Mars' effective health by 25%\/33%\/43%\/54% (TagTalent 33%\/43%\/54%\/67%) when taking side damage.",
         "Checks the damage source's current position and Mars' facing angle when the attack connects, not when the attack is released.",
         "Bulwark damage reduction occurs after Damage Block. Although both Bulwark and Damage Block use the same visuals when showing how much damage was blocked, they do not interfere with each other.",
         "Although both Bulwark and Damage Block use the same visuals when showing how much damage was blocked, they do not interfere with each other.",
-        "Plays a visual effect and a sound whenever damage is blocked. The default hit sound does not play. When blocking hero damage from the front, a bigger visual effect and the default sound are played. When blocking hero damage from the sides, or creep damage from the front, a smaller visual effect and the small sound are played. When blocking creep damage from the sides, no effect and sound are played.",
+        "Plays a visual effect and a sound whenever damage is blocked. The default hit sound does not play. When blocking hero damage from the front, a bigger visual effect and the default sound are played. When blocking hero damage from the sides, or creep damage from the front, a smaller visual effect and the small sound are played. When blocking creep damage from the sides, no effects or sounds are played.",
         "When blocking hero damage from the front, a bigger visual effect and the default sound are played.",
         "When blocking hero damage from the sides, or creep damage from the front, a smaller visual effect and the small sound are played.",
-        "When blocking creep damage from the sides, no effect and sound are played.",
-        "While toggled On, Mars is disarmed and slowed, and has his facing direction locked. He can still cast abilities and items, and move normally, but no longer requires facing the target to do so. Automatically toggles Off when Spear of Mars is cast. Any attack projectile within 800 range of Mars, and within the front and side angles of Bulwark have a chance to get redirected. The ally being attacked does not need to be anywhere near Mars, only the attacking enemy needs to be within range of Mars. The redirect happens immediately upon projectile launch. Instead of targeting the intended attack target, it targets Mars instead.",
+        "When blocking creep damage from the sides, no effects or sounds are played.",
+        "While toggled On, Mars is disarmed and slowed, and has his facing direction locked. He can still cast abilities and items, and move normally, but no longer requires facing the target to do so. Automatically toggles Off when Spear of Mars is cast. Any attack projectile within 800 range of Mars, and within the front and side angles of Bulwark have a chance to get redirected to him. The ally being attacked does not need to be anywhere near Mars, only the attacking enemy needs to be within range of Mars. The redirect happens immediately upon projectile launch. Instead of targeting the intended attack target, it targets Mars instead.",
         "He can still cast abilities and items, and move normally, but no longer requires facing the target to do so.",
         "Automatically toggles Off when Spear of Mars is cast.",
-        "Any attack projectile within 800 range of Mars, and within the front and side angles of Bulwark have a chance to get redirected.",
+        "Any attack projectile within 800 range of Mars, and within the front and side angles of Bulwark have a chance to get redirected to him.",
         "The ally being attacked does not need to be anywhere near Mars, only the attacking enemy needs to be within range of Mars.",
         "The redirect happens immediately upon projectile launch. Instead of targeting the intended attack target, it targets Mars instead.",
         "Goes on a 0.2-second cooldown upon toggling Off.",
@@ -196,11 +196,11 @@
         "Slow Duration: 1",
         "Creates invulnerable soldiers around Mars' front while Bulwark is toggled on. Soldiers move alongside Mars, dealing his full damage +75 and applying procs. Attacks slow enemies by 30% for 1 second. An enemy can only be attacked by one soldier at a time.",
         "The attacks of the soldiers pierces spell immunity.",
-        "Break does not disable the projectile redirect (TagTalent or the soldiers) when toggled on, but does disable the damage reduction."
+        "Break does not disable the projectile redirect or the soldiers when toggled on, but does disable the damage reduction."
       ],
       "itemBehaviour": [],
       "legacyKey": "W",
-      "story": "Only the very foolish dare to fight fair with the god of war."
+      "story": null
     },
     {
       "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/a\/a4\/Mars_Arena_of_Blood_1.mp3\/revision\/latest?cb=20191216020059",
@@ -211,11 +211,11 @@
       ],
       "notes": [
         "The effect delay is not included in the field's duration. The actual duration starts right after the delay.",
-        "Inside the arena, enemies without flying movement coming within 160 range of the wall get damaged. If not killed by the damage, the enemy is knocked back towards the arena center. Units are not disabled during the knockback. They can still turn, attack, cast abilities and use items. Channeling abilities are not interrupted. Does not push heroes affected by the impale stun of Spear of Mars. The knockback destroys every tree the units collide with.",
+        "Inside the arena, enemies without flying movement coming within 160 range of the wall get damaged. If not killed by the damage, the enemy is knocked back towards the arena center. Units are not disabled during the knockback. They can still turn, attack, cast abilities and use items. Channeling abilities are not interrupted. Does not push heroes affected by the impale stun of Spear of Mars. Destroys trees enemies come in contact with during the knockback.",
         "If not killed by the damage, the enemy is knocked back towards the arena center.",
         "Units are not disabled during the knockback. They can still turn, attack, cast abilities and use items. Channeling abilities are not interrupted.",
         "Does not push heroes affected by the impale stun of Spear of Mars.",
-        "The knockback destroys every tree the units collide with.",
+        "Destroys trees enemies come in contact with during the knockback.",
         "A unit may only be damaged and knocked back once every 1 second.",
         "Stops enemies without flying movement by slowing them with a slow aura. The aura has a radius of 750 and is centered on the field. The slow gets exponentially stronger towards the walls, which has a 550 radius. This effectively causes enemy units touching the walls to come to halt. The slow is only present when facing towards the walls. Units at the walls facing away from it are not slowed. The slow aura's effect lingers for 0.5 seconds, resulting in an effective duration of 5.5\/6.5\/7.5 seconds. Since the slow is fluctuating a lot, it is not displayed in the HUD.",
         "The slow gets exponentially stronger towards the walls, which has a 550 radius.",
@@ -223,7 +223,7 @@
         "The slow is only present when facing towards the walls. Units at the walls facing away from it are not slowed.",
         "The slow aura's effect lingers for 0.5 seconds, resulting in an effective duration of 5.5\/6.5\/7.5 seconds.",
         "Since the slow is fluctuating a lot, it is not displayed in the HUD.",
-        "Besides preventing enemies from walking in or out of the area, the following movement spells are unable to pass the walls either: Skewer, Sun Ray Movement, God's Rebuke, Force Staff and Hurricane Pike. All other sources of horizontal movement can move units through the walls freely. However, the knockback from inside the arena still triggers and can cancel forced movement.",
+        "Besides preventing enemies from walking in or out of the area, the following movement abilities are unable to pass the walls either: Skewer, Sun Ray Movement, God's Rebuke, Force Staff and Hurricane Pike. All other sources of horizontal movement can move units through the walls freely. However, the knockback from inside the arena still triggers and can cancel forced movement.",
         "Skewer, Sun Ray Movement, God's Rebuke, Force Staff and Hurricane Pike.",
         "All other sources of horizontal movement can move units through the walls freely.",
         "However, the knockback from inside the arena still triggers and can cancel forced movement.",
@@ -234,7 +234,7 @@
         "This means ranged enemies outside the arena cannot attack units inside of it and vice versa.",
         "Melee units can attack freely, if they have enough attack range. Projectiles from abilities are completely unaffected as well.",
         "Provides 550 range flying vision at the center of the area for 5\/6\/7 seconds upon cast.",
-        "After the effect delay, any tree within 550 range of the wall gets destroyed. This means it effectively destroys trees within a 825 radius.",
+        "After the effect delay, trees within 550 range of the wall gets destroyed. This means it effectively destroys trees within a 825 radius.",
         "This means it effectively destroys trees within a 825 radius.",
         "The level 25 talent adds health regeneration to the arena. The regeneration is provided by an aura, which lingers for 0.5 seconds. Can regenerate up to 990\/1170\/1350 health over its full duration with the aura linger duration.",
         "Can regenerate up to 990\/1170\/1350 health over its full duration with the aura linger duration."
@@ -262,7 +262,7 @@
       ],
       "itemBehaviour": [],
       "legacyKey": "B",
-      "story": "The long-dead members of the Ash Legion, assembled from the finest warriors to ever test the might of Mars, still revel in the thrill of combat, gladly beholden to the hand that fell them for as long as he so commands."
+      "story": null
     }
   ],
   "mainAttributes": {
@@ -284,7 +284,7 @@
     {
       "talentLvl": "20",
       "talentLeft": "+0.8s Spear of Mars Stun",
-      "talentRight": "+10%\/5% Bulwark Front\/Side Damage Reduction"
+      "talentRight": "+10%\/+5% Bulwark Front\/Side damage reduction"
     },
     {
       "talentLvl": "15",
@@ -293,7 +293,7 @@
     },
     {
       "talentLvl": "10",
-      "talentLeft": "-10% Bulwark Movement Penalty",
+      "talentLeft": "-10% Bulwark Movespeed Penalty",
       "talentRight": "+1.5s God's Rebuke Slow"
     }
   ]

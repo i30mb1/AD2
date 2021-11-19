@@ -2,19 +2,19 @@
   "abilities": [
     {
       "notes": [
-        "The agility talent effectively grants Slark 1.33 armor, 8 attack speed, and 8 attack damage."
+        "The agility talent effectively grants Slark 1.33 armor, 8 attack speed, and 8 main attack damage."
       ],
       "spellName": "Talent",
       "talents": [
         {
           "talentLvl": "25",
-          "talentLeft": "+65s Essence Shift Duration",
+          "talentLeft": "+55s Essence Shift Duration",
           "talentRight": "+1s Shadow Dance Duration"
         },
         {
           "talentLvl": "20",
           "talentLeft": "+0.8s Pounce Leash",
-          "talentRight": "+1 Agility Gained per Essence Shift Attack"
+          "talentRight": "+1 Agility gain\/stolen per Essence Shift Stack"
         },
         {
           "talentLvl": "15",
@@ -38,9 +38,9 @@
       "notes": [
         "Dark Pact interrupts Slark's channeling abilities upon cast.",
         "Deals 7.5\/15\/22.5\/30 (TagTalent 14.5\/22\/29.5\/37) damage within a 325 radius in 0.1-second intervals, starting 1.5 seconds after cast for a total of 10 instances.",
-        "Slark takes 2.25\/4.5\/6.75\/9 (TagTalent 4.35\/6.6\/8.85\/11.1) damage in the same intervals, resulting in 22.5\/45\/67.5\/90 (TagTalent 43.5\/66\/88.5\/111) total damage. Applies a strong dispel on Slark in the same intervals, before each of its damage instances. The self-inflicted damage can be reduced or amplified, but can never kill Slark.",
+        "Slark takes 2.25\/4.5\/6.75\/9 (TagTalent 4.35\/6.6\/8.85\/11.1) damage in the same intervals, resulting in 22.5\/45\/67.5\/90 (TagTalent 43.5\/66\/88.5\/111) total damage. Applies a strong dispel on Slark in the same intervals, before each of its damage instances. The self-inflicted damage is never lethal and it can be reduced or amplified.",
         "Applies a strong dispel on Slark in the same intervals, before each of its damage instances.",
-        "The self-inflicted damage can be reduced or amplified, but can never kill Slark.",
+        "The self-inflicted damage is never lethal and it can be reduced or amplified.",
         "The visual effects and sounds during the 1.5 seconds delay is only visible and audible to allies.",
         "The visual effects of the damaging pulses are visible even when Slark is invisible.",
         "Dark Pact ends 2.5 seconds after cast, but ends instantly when Slark dies.",
@@ -60,7 +60,7 @@
       ],
       "itemBehaviour": [],
       "legacyKey": "C",
-      "story": "Slithereen are capable of quickly regrowing appendages, in case of critical injury, to save their own lives."
+      "story": null
     },
     {
       "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/8\/8c\/Slark_Pounce_1.mp3\/revision\/latest?cb=20191216023921",
@@ -71,19 +71,19 @@
       "notes": [
         "Slark leaps forward at a speed of 933.33 (TagTalent 1599.99) for up to 0.75 seconds.",
         "Always jumps for the full distance, unless an enemy hero gets within 95 radius of Slark during the jump.",
-        "Leashes the hit enemy hero, preventing them from casting certain mobility spells.",
-        "With the max distance and latch radius, Pounce can latch on enemy heroes up to 795 range away.",
+        "Leashes the hit enemy hero, preventing them from casting certain mobility abilities.",
+        "With the maximum distance and latch radius, Pounce can latch on enemy heroes up to 795 range away.",
         "Slark can turn and cast abilities and items during Pounce, but cannot attack.",
         "Pounce can latch on invisible units, but not on invulnerable, hidden units, or on illusions.",
         "When latching on a unit, Slark is automatically ordered to attack the target.",
         "The more the leash gets stretched, the slower the affected unit can walk away from the center, eventually coming to a full stop. It directly affects the target's movement speed.",
-        "If cast before getting leashed, the following abilities are not able to break the leash: Skewer, Leap, Pounce, Tree Dance, Primal Spring, Toggle Movement, and Hurricane Pike when targeting an enemy.",
-        "Every other position changing effect, can break the leash when stretching it beyond the max radius. Force Staff and an allied-targeted Hurricane Pike instantly break the leash when cast, regardless of the max radius.",
-        "Force Staff and an allied-targeted Hurricane Pike instantly break the leash when cast, regardless of the max radius.",
-        "When the leash expires while a position changing effect is ongoing, it instantly cancels the position changing effect. This goes for the following abilities: Flamebreak, Primal Roar, Power Cogs, Hookshot, Vacuum, Gust, Boulder Smash, Rolling Boulder, Geomagnetic Grip, Deafening Blast, Tether, Blinding Light, Adaptive Strike (Strength), Blast Off!, Charge of Darkness, Greater Bash, Timber Chain, Walrus PUNCH!, Force Staff and Hurricane Pike.",
+        "If cast before getting leashed, the following abilities are not able to break the leash: Skewer, Leap, Pounce, Tree Dance, Primal Spring, Toggle Movement, and an enemy-targeted Hurricane Pike.",
+        "Every other position changing effect, can break the leash when stretching it beyond the maximum radius. Force Staff and an allied-targeted Hurricane Pike instantly break the leash when cast, regardless of the maximum radius.",
+        "Force Staff and an allied-targeted Hurricane Pike instantly break the leash when cast, regardless of the maximum radius.",
+        "When the leash expires while a position-changing effect (e.g. knockback) is ongoing, it instantly cancels the position-changing effect. This goes for the following abilities: Flamebreak, Primal Roar, Power Cogs, Hookshot, Vacuum, Gust, Boulder Smash, Rolling Boulder, Geomagnetic Grip, Deafening Blast, Tether, Blinding Light, Adaptive Strike (Strength), Blast Off!, Charge of Darkness, Greater Bash, Timber Chain, Walrus PUNCH!, Force Staff and Hurricane Pike.",
         "This goes for the following abilities: Flamebreak, Primal Roar, Power Cogs, Hookshot, Vacuum, Gust, Boulder Smash, Rolling Boulder, Geomagnetic Grip, Deafening Blast, Tether, Blinding Light, Adaptive Strike (Strength), Blast Off!, Charge of Darkness, Greater Bash, Timber Chain, Walrus PUNCH!, Force Staff and Hurricane Pike.",
-        "Pounce destroys trees within 100 radius around Slark upon landing.",
-        "Pounce cannot be cast during Pounce. During the leap, Pounce is on an unrefreshable cooldown which is bound to the leap buff."
+        "Destroys trees within 100 radius around Slark upon landing.",
+        "Pounce cannot be cast during Pounce. During the leap, Pounce is on a non-refreshable cooldown which is bound to the leap buff."
       ],
       "mana": "75",
       "hotKey": "W",
@@ -104,7 +104,7 @@
       ],
       "itemBehaviour": [],
       "legacyKey": "E",
-      "story": "Time in the Dark Reef made Slark a dangerous assassin; aggressive and fearless."
+      "story": null
     },
     {
       "audioUrl": null,
@@ -113,19 +113,20 @@
         "Affects Enemy Heroes \/ Self"
       ],
       "notes": [
-        "Essence Shift steals 1 of \/ \/ all attributes before the attack damage is applied. With the level 20 talent, Essence Shift steals an extra point in agility for a total of 2.",
-        "With the level 20 talent, Essence Shift steals an extra point in agility for a total of 2.",
-        "Effective stats loss per stack of Essence Shift: 1 attack damage, 20 health, 0.1 health regeneration, 0.17 armor, 1 attack speed, 12 mana, 0.05 mana regeneration. Effectively grants Slark 0.5 armor, 3 attack speed, and 3 attack damage per stack.",
-        "Effectively grants Slark 0.5 armor, 3 attack speed, and 3 attack damage per stack.",
+        "Essence Shift steals 1 of \/ \/ all attributes before the attack damage is applied. With the level 20 talent, Essence Shift steals 2 agility instead. Effective stats loss per stack of Essence Shift: 1 (TagTalent 2 for agility heroes) main attack damage, 20 health, 0.1 health regeneration, 0.17 armor, 1 attack speed, 12 mana and 0.05 mana regeneration. Effectively grants Slark 0.5 (TagTalent 0.67) armor, 3 (TagTalent 4) attack speed, and 3 (TagTalent 4) main attack damage per stack.",
+        "With the level 20 talent, Essence Shift steals 2 agility instead.",
+        "Effective stats loss per stack of Essence Shift: 1 (TagTalent 2 for agility heroes) main attack damage, 20 health, 0.1 health regeneration, 0.17 armor, 1 attack speed, 12 mana and 0.05 mana regeneration.",
+        "Effectively grants Slark 0.5 (TagTalent 0.67) armor, 3 (TagTalent 4) attack speed, and 3 (TagTalent 4) main attack damage per stack.",
         "Essence Shift cannot reduce any attribute below 0. However, Slark continues to gain agility, both temporarily and permanently, even when the attacked hero has no more attributes left to steal.",
         "Successive attacks do not refresh the duration of all stolen or lost attributes. Each stack has its own duration. The status buff and debuff icon show the number of current stacks and show the duration of the last stack.",
         "The status buff and debuff icon show the number of current stacks and show the duration of the last stack.",
         "When Slark dies, he loses all temporarily stolen attributes, but the affected enemies do not get theirs back, and vice versa.",
-        "Cannot steal attributes from illusions. Cannot steal permanent attributes from Tempest Double, but can steal from Meepo Clones. Can steal attributes from allies.",
-        "Cannot steal permanent attributes from Tempest Double, but can steal from Meepo Clones.",
-        "Can steal attributes from allies.",
-        "To permanently steal agility, an enemy hero has to die within 300 range of Slark while having the Essence Shift debuff. Alternatively, Slark also steals agility when he kills a debuffed enemy hero from any distance.",
-        "Alternatively, Slark also steals agility when he kills a debuffed enemy hero from any distance."
+        "Cannot steal attributes from illusions, but Slark can temporarily steal attributes from allies.",
+        "To permanently steal agility, an enemy hero has to die within 300 range of Slark while having the Essence Shift debuff. Does not permanently steal agility if the dying hero has Reincarnation, or from the Tempest Double. Slark also steals agility when he kills a debuffed enemy hero from any distance. Can permanently steal agility from Meepo Clones individually. The number of stolen agility can be seen on the status buff icon.",
+        "Does not permanently steal agility if the dying hero has Reincarnation, or from the Tempest Double.",
+        "Slark also steals agility when he kills a debuffed enemy hero from any distance.",
+        "Can permanently steal agility from Meepo Clones individually.",
+        "The number of stolen agility can be seen on the status buff icon."
       ],
       "mana": null,
       "hotKey": "E",
@@ -135,14 +136,15 @@
       "params": [
         "Permanent Steal Radius: 300",
         "Permanent Agility Steal: 1",
-        "All Attributes Lost per Attack: 1",
-        "Agility Gained per Attack: 3 (TagTalent 4)",
-        "Duration: 15\/30\/60\/100 (TagTalent 80\/95\/125\/165)",
+        "Enemy Strength\/Intelligence Lost per Attack: 1",
+        "Enemy Agility Lost per Attack: 1 (TagTalent 2)",
+        "Self Agility Gained per Attack: 3 (TagTalent 4)",
+        "Duration: 15\/30\/60\/100 (TagTalent 70\/85\/115\/155)",
         "Prevents gaining new stacks. Already existing stacks still provide bonus agility. Does not prevent permanently stealing agility."
       ],
       "itemBehaviour": [],
       "legacyKey": "N",
-      "story": "With each strike at his adversaries, Slark's knowledge of their weaknesses improves."
+      "story": null
     },
     {
       "audioUrl": null,
@@ -151,17 +153,16 @@
         "Affects Allies"
       ],
       "notes": [
-        "Requires Aghanim's Shard to be unlocked. In Ability Draft, Depth Shroud can be unlocked by the player that drafted Shadow Dance.",
-        "In Ability Draft, Depth Shroud can be unlocked by the player that drafted Shadow Dance.",
-        "Applies the Depth Shroud modifier based on Shadow Dance's current level on allies within the area. If Shadow Dance is not learned, nothing happens upon cast, wasting mana and cooldown.",
-        "If Shadow Dance is not learned, nothing happens upon cast, wasting mana and cooldown.",
-        "The modifier provides the same movement speed, health regeneration, and invisibility as Shadow Dance does. The modifier fully stacks with those of Shadow Dance. This means during Shadow Dance, Slark gains a total of 48%\/72%\/96% movement speed and 10%\/12%\/14% max health as health regeneration while inside the area.",
+        "Requires Aghanim's Shard to be unlocked.",
+        "Applies the Depth Shroud modifier based on the current level of Shadow Dance on allies within the area. Shadow Dance notes fully apply. If it is not learned, nothing happens upon cast, wasting mana and cooldown.",
+        "Shadow Dance notes fully apply. If it is not learned, nothing happens upon cast, wasting mana and cooldown.",
+        "The modifier provides the same movement speed, attack speed, health regeneration, and invisibility as Shadow Dance does. The modifier fully stacks with those of Shadow Dance. This means during Shadow Dance, Slark gains a total of 48%\/72%\/96% movement speed, 100 attack speed and 10%\/12%\/14% max health as health regeneration while inside the area.",
         "The modifier fully stacks with those of Shadow Dance.",
-        "This means during Shadow Dance, Slark gains a total of 48%\/72%\/96% movement speed and 10%\/12%\/14% max health as health regeneration while inside the area.",
+        "This means during Shadow Dance, Slark gains a total of 48%\/72%\/96% movement speed, 100 attack speed and 10%\/12%\/14% max health as health regeneration while inside the area.",
         "The buff is provided by an aura. Its buff lingers for 0.5 seconds.",
-        "Affects every allied unit that is not a building or ward. Does not affect invulnerable or hidden units.",
+        "Affects every allied unit, except buildings and wards. Does not affect invulnerable or hidden units.",
         "Does not affect invulnerable or hidden units.",
-        "Can regenerate up to 17.5%\/21%\/24.5% of the affect unit's max health over its full duration."
+        "Can regenerate up to 17.5%\/21%\/24.5% of affected units' max health over its full duration."
       ],
       "mana": "75",
       "hotKey": "D",
@@ -173,8 +174,7 @@
         "Cast Range: 800",
         "Radius: 300",
         "Duration: 3",
-        "Aura Linger Duration: 0.5",
-        "Attack Speed Bonus: 50"
+        "Aura Linger Duration: 0.5"
       ],
       "itemBehaviour": [],
       "legacyKey": "F",
@@ -194,8 +194,7 @@
         "The invisibility is granted by an aura, however, its buff does not linger. The aura does not affect invulnerable units, so if Slark turns invulnerable during it, he gets revealed.",
         "The aura does not affect invulnerable units, so if Slark turns invulnerable during it, he gets revealed.",
         "Shadow Dance does not grant phased movement.",
-        "Can regenerate up to 20%\/25.5%\/31.5% (TagTalent 25%\/31.5%\/38.5%) of Slark's max health over its active duration. Can regenerate up to 300%\/360%\/420% of Slark's max health in one minute. Can fully regenerate Slark's health within 20\/16.67\/14.29 seconds.",
-        "Can regenerate up to 300%\/360%\/420% of Slark's max health in one minute.",
+        "Can regenerate up to 20%\/25.5%\/31.5% (TagTalent 25%\/31.5%\/38.5%) of Slark's max health over its active duration. Can fully regenerate Slark's health within 20\/16.67\/14.29 seconds.",
         "Can fully regenerate Slark's health within 20\/16.67\/14.29 seconds."
       ],
       "mana": "120",
@@ -219,7 +218,7 @@
       ],
       "itemBehaviour": [],
       "legacyKey": "D",
-      "story": "The hidden Thirteenth is a slippery foe."
+      "story": null
     }
   ],
   "mainAttributes": {
@@ -235,13 +234,13 @@
   "talents": [
     {
       "talentLvl": "25",
-      "talentLeft": "+65s Essence Shift Duration",
+      "talentLeft": "+55s Essence Shift Duration",
       "talentRight": "+1s Shadow Dance Duration"
     },
     {
       "talentLvl": "20",
       "talentLeft": "+0.8s Pounce Leash",
-      "talentRight": "+1 Agility Gained per Essence Shift Attack"
+      "talentRight": "+1 Agility gain\/stolen per Essence Shift Stack"
     },
     {
       "talentLvl": "15",

@@ -2,7 +2,7 @@
   "abilities": [
     {
       "notes": [
-        "The strength talent effectively grants Magnus 240 health, 1.2 health regeneration, and 12 attack damage.",
+        "The strength talent effectively grants Magnus 240 health, 1.2 health regeneration, and 12 main attack damage.",
         "The health talent increases maximum health capacity, and keeps the current health percentage."
       ],
       "spellName": "Talent",
@@ -14,7 +14,7 @@
         },
         {
           "talentLvl": "20",
-          "talentLeft": "+425 Skewer Range",
+          "talentLeft": "+375 Skewer Range",
           "talentRight": "+350 Health"
         },
         {
@@ -46,8 +46,8 @@
         "Plays an initial sound and particles upon start casting.",
         "The slow of multiple casts does not stack, it only refreshes the duration.",
         "Slows and damages Roshan but does not pull him.",
-        "With Aghanim's Scepter, the extra Shockwaves are launched with a 30° angle to the left and right of the centered Shockwave. Although the areas of all three waves overlap heavily, an enemy may be hit by only one of them. Upon reaching max distance of 1200, the Shockwaves return to the original cast location. The returning Shockwaves act like separate casts, cast by invisible dummies. Therefore, enemies at the very tip may only be hit once. This is because Shockwave does not hit units behind the caster, so units hit by it 200 range beyond its max travel distance do not get hit upon returning. On the other side, units 200 range beyond the original cast point do get hit by the returning waves. The returning Shockwaves can hit previously already hit enemies a second time, and also pull enemies towards the cast location as well.",
-        "Although the areas of all three waves overlap heavily, an enemy may be hit by only one of them.",
+        "With Aghanim's Scepter, 2 extra Shockwaves are launched with a 30° angle to the left and right of the centered Shockwave. Although the areas of all 3 waves overlap heavily, an enemy may be hit by only one of them. Upon reaching max distance of 1200, the Shockwaves return to the original cast location. The returning Shockwaves act like separate casts, cast by invisible dummies. Therefore, enemies at the very tip may only be hit once. This is because Shockwave does not hit units behind the caster, so units hit by it 200 range beyond its max travel distance do not get hit upon returning. On the other side, units 200 range beyond the original cast point do get hit by the returning waves. The returning Shockwaves can hit previously already hit enemies a second time, and also pull enemies towards the cast location as well.",
+        "Although the areas of all 3 waves overlap heavily, an enemy may be hit by only one of them.",
         "Upon reaching max distance of 1200, the Shockwaves return to the original cast location.",
         "The returning Shockwaves act like separate casts, cast by invisible dummies. Therefore, enemies at the very tip may only be hit once.",
         "This is because Shockwave does not hit units behind the caster, so units hit by it 200 range beyond its max travel distance do not get hit upon returning.",
@@ -76,7 +76,7 @@
       ],
       "itemBehaviour": [],
       "legacyKey": "W",
-      "story": "Mt. Joerlak was a somewhat unstable mass, and Magnus has learned to channel its reverberations."
+      "story": null
     },
     {
       "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/9\/9b\/Magnus_Empower.mp3\/revision\/latest?cb=20191216015850",
@@ -86,11 +86,11 @@
         "Damage Physical"
       ],
       "notes": [
-        "When cast on self, grants 17.5%\/35%\/52.5%\/70% (TagTalent 35%\/52.5%\/70%\/87.5%) cleave damage and 21%\/35%\/49%\/63% (TagTalent 38.5%\/52.5%\/66.5%\/80.5%) attack damage. ↓↓ Double-tapping automatically targets self.",
+        "When cast on self, Empower grants 17.5%\/35%\/52.5%\/70% (TagTalent 35%\/52.5%\/70%\/87.5%) cleave damage and 21%\/35%\/49%\/63% (TagTalent 38.5%\/52.5%\/66.5%\/80.5%) attack damage. ↓↓ Double-tapping automatically targets self.",
         "↓↓ Double-tapping automatically targets self.",
-        "Only increases base damage and that given by the primary attribute of affected units. Raw bonus damage is not increased.",
-        "The unit's current main damage is periodically checked, and the bonuses adapted instantly. Both the damage and cleave increasing and duration increasing talent instantly upgrade the current instance as well.",
-        "Both the damage and cleave increasing and duration increasing talent instantly upgrade the current instance as well.",
+        "Grants flat bonus attack damage based on the affected unit's main attack damage. Does not further increase bonus attack damage. The unit's current main attack damage is periodically checked and the bonuses are adapted instantly. The damage and cleave increasing talent instantly upgrade the current instance as well",
+        "The unit's current main attack damage is periodically checked and the bonuses are adapted instantly.",
+        "The damage and cleave increasing talent instantly upgrade the current instance as well",
         "Grants melee targets cleave and attack damage, and ranged targets only attack damage.",
         "Cleave damage cannot be amplified with outgoing spell damage amplification and cannot spell lifesteal. Can be amplified by incoming spell damage amplification. Cleave damage is reduced by Damage Block. Cleave damage depends on the attack damage value of the cleaving unit, not on how much their primary attack target took. The complete cleave area is shaped like an isosceles trapezoid in front of the attacking unit. Fully stacks with other sources of cleave. Each source of cleave works completely independent. Does not cleave upon attacking wards, buildings or allied units. Wards and buildings are unaffected by cleave. Despite the visual effect, cleave damage is applied instantly in the whole area.",
         "Can be amplified by incoming spell damage amplification.",
@@ -119,7 +119,7 @@
       ],
       "itemBehaviour": [],
       "legacyKey": "E",
-      "story": "With a deep bellow, Magnus displays his true power."
+      "story": null
     },
     {
       "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/e\/e7\/Magnus_Skewer_1.mp3\/revision\/latest?cb=20191216015855",
@@ -130,8 +130,8 @@
       ],
       "notes": [
         "Magnus charges forward at a speed of 900.",
-        "Moves Magnus in 30 range instances. When targeting any distance which is not a multiplier of that number, it gets rounded down. This means the minimum possible distance is 30, and the actual maximum distance is 900\/990\/1080\/1200 (TagTalent 1320\/1410\/1500\/1620).",
-        "This means the minimum possible distance is 30, and the actual maximum distance is 900\/990\/1080\/1200 (TagTalent 1320\/1410\/1500\/1620).",
+        "Moves Magnus in 30 range instances. When targeting any distance which is not a multiplier of that number, it gets rounded down. This means the minimum possible distance is 30, and the actual maximum distance is 900\/960\/1050\/1110 (TagTalent 1260\/1350\/1410\/1500).",
+        "This means the minimum possible distance is 30, and the actual maximum distance is 900\/960\/1050\/1110 (TagTalent 1260\/1350\/1410\/1500).",
         "During the Skewer, Magnus is fully disabled.",
         "Enemy heroes within 145 radius around Magnus get moved in front of him and dragged along.",
         "Dragged heroes are stunned during the drag, and land 200 range away in front of Magnus at the end of the charge.",
@@ -148,7 +148,7 @@
       "params": [
         "Cast Animation: 0.3+0.33",
         "Cast Range: Global",
-        "Max Skewer Distance: 900\/1000\/1100\/1200 (TagTalent 1325\/1425\/1525\/1625)",
+        "Max Skewer Distance: 900\/975\/1050\/1125 (TagTalent 1275\/1350\/1425\/1500)",
         "Skewer Radius: 145",
         "Damage: 80\/170\/260\/350",
         "Move Speed Slow: 10%\/20%\/30%\/40%",
@@ -159,7 +159,7 @@
       ],
       "itemBehaviour": [],
       "legacyKey": "D",
-      "story": "Magnoceros horns are valuable in direct proportion to their danger to prospective merchants."
+      "story": null
     },
     {
       "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/5\/5c\/Magnus_Horn_Toss_1.mp3\/revision\/latest?cb=20201231014402",
@@ -177,23 +177,24 @@
         "Enemies are always tossed at a location between 180\u2012210 range behind Magnus, varying based on where they were in front of him.",
         "Enemies are moved over Magnus' head, in an arc with a height of 300, and varying lengths. The toss always takes 0.6 seconds. Enemies are fully disabled during the toss.",
         "Enemies are fully disabled during the toss.",
-        "The damage and stun are applied upon landing. This means enemies are effectively stunned for 1.35 seconds.",
-        "Horn Toss first applies the damage and then the stun upon landing.",
+        "The damage is applied upon cast, while the slow debuff is placed upon landing. However, the toss modifier itself applies the slow as well.",
         "Stuns and damages Roshan but does not toss him."
       ],
       "mana": "125",
       "hotKey": "D",
       "cooldown": "30",
-      "description": "Magnus tosses any enemies in front of him, launching them to his rear. Enemies spend seconds in the air, then take damage and are stunned for seconds upon landing.",
+      "description": "Magnus tosses any enemies in front of him, launching them to his rear. Enemies spend 0.6 seconds in the air, then take 200 damage and are heavily slowed for 1.25 seconds upon landing.",
       "spellName": "Horn Toss",
       "params": [
         "Cast Animation: 0.2+0.79",
         "Search Radius: 325",
         "Facing Angle: 115°",
         "Search Area Offset: 75",
-        "Landing Damage: 200",
+        "Damage: 200",
+        "Move Speed Slow: 100%",
+        "Attack Speed Slow: 100",
         "Toss Duration: 0.6",
-        "Landing Stun Duration: 0.75"
+        "Landing Slow Duration: 1.25"
       ],
       "itemBehaviour": [],
       "legacyKey": "T",
@@ -227,7 +228,7 @@
       ],
       "itemBehaviour": [],
       "legacyKey": "V",
-      "story": "Magnus fights with the fury of the erupting Mt. Joerlak."
+      "story": null
     }
   ],
   "mainAttributes": {
@@ -248,7 +249,7 @@
     },
     {
       "talentLvl": "20",
-      "talentLeft": "+425 Skewer Range",
+      "talentLeft": "+375 Skewer Range",
       "talentRight": "+350 Health"
     },
     {

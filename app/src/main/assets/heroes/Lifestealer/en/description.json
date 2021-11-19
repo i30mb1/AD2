@@ -3,7 +3,7 @@
     {
       "notes": [
         "The health talent increases maximum health capacity, and keeps the current health percentage.",
-        "This attack damage talent is added as raw attack damage. Does not benefit illusions and is not affected by most percentage-based damage increasing or reducing effects.",
+        "This attack damage talent is added as bonus attack damage. Does not benefit illusions and is not affected by most percentage-based damage increasing or reducing effects.",
         "Does not benefit illusions and is not affected by most percentage-based damage increasing or reducing effects.",
         "The evasion talent stacks multiplicatively with other sources of evasion."
       ],
@@ -26,7 +26,7 @@
         },
         {
           "talentLvl": "10",
-          "talentLeft": "+10% Rage Move Speed Bonus",
+          "talentLeft": "+10% Rage Move Speed",
           "talentRight": "+30 Attack Speed"
         }
       ]
@@ -40,7 +40,7 @@
       "notes": [
         "Interrupts Lifestealer's channeling abilities upon cast.",
         "Applies spell immunity for the duration and a basic dispel upon cast.",
-        "During Rage, Lifestealer cannot be affected by Ghost Scepter. The buff gets removed immediately."
+        "During Rage, Lifestealer cannot be affected by Ghost Form. The buff gets removed immediately."
       ],
       "mana": "75\/100\/125\/150",
       "hotKey": "Q",
@@ -54,7 +54,7 @@
       ],
       "itemBehaviour": [],
       "legacyKey": "R",
-      "story": "The madness and brutality of N'aix makes him a vicious and unrelenting foe in combat."
+      "story": null
     },
     {
       "audioUrl": null,
@@ -83,7 +83,7 @@
       ],
       "itemBehaviour": [],
       "legacyKey": "F",
-      "story": "After escaping from his cell in Devarque, N'aix subsisted on flesh and bones of those unfortunate to cross his path."
+      "story": null
     },
     {
       "audioUrl": null,
@@ -104,7 +104,8 @@
         "Move Speed Slow: 10%\/15%\/20%\/25% (TagTalent 20%\/25%\/30%\/35%)",
         "Slow Duration: 1.5",
         "Slow persists if debuff was placed before spell immunity and when not dispelled.",
-        "Slow on attack is disabled. Attack speed is not disabled."
+        "Slow on attack is disabled. Attack speed is not disabled.",
+        ""
       ],
       "itemBehaviour": [],
       "legacyKey": "G",
@@ -146,7 +147,7 @@
       ],
       "itemBehaviour": [],
       "legacyKey": "W",
-      "story": "Fresh wounds and the scent of blood often draw out the scavengers to finish the job."
+      "story": null
     },
     {
       "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/0\/0e\/Lifestealer_Infest.mp3\/revision\/latest?cb=20191216015431",
@@ -174,15 +175,15 @@
         "If the target is not a hero or creep-hero, its base movement speed also gets set equal to Lifestealer's current movement speed.",
         "If the target is not a hero or a creep-hero, Lifestealer automatically takes control over it, turning it into his unit. If the target was an enemy, it retains its health bar colors, making it harder for enemies to tell that it got taken over.",
         "If the target was an enemy, it retains its health bar colors, making it harder for enemies to tell that it got taken over.",
-        "Can be cast on, but cannot take control over allied heroes and allied creep-heroes. When on level 2 or higher, can be cast on and take control over ancient creeps. Cannot be cast on Roshan, Courier, Undying Zombie, wards, buildings, enemy heroes and enemy creep-heroes.",
+        "Can be cast on, but cannot take control over allied heroes and allied creep-heroes. When on level 2 or higher, can be cast on and take control over ancient creeps. Cannot be cast on Roshan, Couriers, Undying Zombies, wards, buildings, enemy heroes and enemy creep-heroes.",
         "When on level 2 or higher, can be cast on and take control over ancient creeps.",
-        "Cannot be cast on Roshan, Courier, Undying Zombie, wards, buildings, enemy heroes and enemy creep-heroes.",
+        "Cannot be cast on Roshan, Couriers, Undying Zombies, wards, buildings, enemy heroes and enemy creep-heroes.",
         "The infested unit receives a hidden modifier, which creates the visual effect above it, visible to allies only.",
         "Infest's cooldown starts upon leaving the infested unit, not upon cast.",
-        "With Aghanim's Scepter, Infest can be cast on enemy heroes and creep-heroes. Does not increase health or movement speed of such targets. Although having a limited duration on these targets, Lifestealer still may use Consume to leave the host earlier. Causes Lifestealer to perform instant attacks on an Infested enemy target in 1.25-second intervals, starting immediately after cast, resulting in up to 5 attacks. These instant attacks can proc any attack modifiers and on-hit effects normally. They do not have True Strike, but completely ignore disarms.",
-        "Does not increase health or movement speed of such targets.",
+        "With Aghanim's Scepter, Infest can be cast on enemy heroes and creep-heroes. Does not increase health or movement speed of such targets, but disarms them. Although having a limited duration on these targets, Lifestealer still may use Consume to leave the host earlier. Causes Lifestealer to perform instant attacks on an Infested enemy target in 1.25-second intervals, starting immediately upon cast, resulting in up to 5 attacks. These instant attacks can proc any attack modifiers and on-hit effects normally. They do not have True Strike, but completely ignore disarms.",
+        "Does not increase health or movement speed of such targets, but disarms them.",
         "Although having a limited duration on these targets, Lifestealer still may use Consume to leave the host earlier.",
-        "Causes Lifestealer to perform instant attacks on an Infested enemy target in 1.25-second intervals, starting immediately after cast, resulting in up to 5 attacks.",
+        "Causes Lifestealer to perform instant attacks on an Infested enemy target in 1.25-second intervals, starting immediately upon cast, resulting in up to 5 attacks.",
         "These instant attacks can proc any attack modifiers and on-hit effects normally. They do not have True Strike, but completely ignore disarms."
       ],
       "mana": "100\/125\/150",
@@ -198,13 +199,12 @@
         "Self Max Health as Health Regen Bonus: 3%\/4%\/5% (TagAghanim 6%\/8%\/10%)",
         "Enemy Hero Attack Interval: 1.25",
         "Enemy Hero Duration: 5",
-        "Disarm Duration: 5",
-        "Allows Infesting enemy heroes for 5 seconds, disarming them, attacking their inside once every 1.25 seconds and doubling Lifestealer's regen rate. Increases cast range to 500 and reduces cooldown to 20 seconds.",
+        "Allows Infesting enemy heroes for 5 seconds, disarming them and attacking their insides once every 1.25 seconds and doubling Lifestealer's regen rate. Increases cast range to 500 and reduces cooldown to 20 seconds.",
         "Grants a new ability: Open Wounds."
       ],
       "itemBehaviour": [],
       "legacyKey": "T",
-      "story": "With this infestation, N'aix consumes the life blood of the host, restoring him back to full unholy power."
+      "story": null
     },
     {
       "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/8\/8a\/Lifestealer_Consume.mp3\/revision\/latest?cb=20191216015429",
@@ -229,7 +229,8 @@
       "params": [
         "Cast Animation: 0+0",
         "Damage Radius: 700",
-        "Damage: 150\/275\/400"
+        "Damage: 150\/275\/400",
+        ""
       ],
       "itemBehaviour": [],
       "legacyKey": null,
@@ -241,8 +242,8 @@
     "attrStrength": 25.0,
     "attrIntelligence": 15.0,
     "attrIntelligenceInc": 1.8,
-    "attrAgilityInc": 2.4,
-    "attrAgility": 18.0
+    "attrAgilityInc": 2.6,
+    "attrAgility": 19.0
   },
   "description": "N'aix, the Lifestealer, is a vicious melee strength hero whose abilities give him the power to bring down durable heroes quickly, while sustaining his health by leeching the very life of his enemies.",
   "history": "In the dungeons of Devarque, a vengeful wizard lay in shackles, plotting his escape. He shared his cell with a gibbering creature known as N'aix, a thief cursed by the Vile Council with longevity, so that its life-sentence for theft and cozening might be as punishing as possible. Over the years, its chains had corroded, along with its sanity; N'aix retained no memory of its former life and no longer dreamt of escape. Seeing a perfect vessel for his plans, the wizard wove a spell of Infestation and cast his life-force into N'aix's body, intending to compel N'aix to sacrifice itself in a frenzy of violence while the mage returned to his body and crept away unnoticed. Instead, the wizard found his mind caught in a vortex of madness so powerful that it swept away his plans and shattered his will. Jarred to consciousness by the sudden infusion of fresh life, N'aix woke from its nightmare of madness and obeyed the disembodied voice that filled its skull, which had only the one thought: To escape. In that moment Lifestealer was born. The creature cast its mind into dungeon guards and soldiers, compelling them to open locks and cut down their companions, opening an unobstructed path to freedom while feeding on their lives. Lifestealer still wears the broken shackles as a warning that none may hold him, but on the inside remains a prisoner. Two minds inhabit the single form--a nameless creature of malevolent cunning, and the Master whose voice he pretends to obey.",
@@ -264,7 +265,7 @@
     },
     {
       "talentLvl": "10",
-      "talentLeft": "+10% Rage Move Speed Bonus",
+      "talentLeft": "+10% Rage Move Speed",
       "talentRight": "+30 Attack Speed"
     }
   ]

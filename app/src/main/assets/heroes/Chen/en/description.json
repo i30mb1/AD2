@@ -23,7 +23,7 @@
         },
         {
           "talentLvl": "10",
-          "talentLeft": "+175 Health",
+          "talentLeft": "+200 Health",
           "talentRight": "Penitence Deals 250 Damage"
         }
       ]
@@ -42,7 +42,7 @@
         "The buff is granted to any allied unit, including buildings and wards.",
         "With the level 10 talent, Penitence first applies the debuff, then the damage."
       ],
-      "mana": "70\/80\/90\/100",
+      "mana": "70\/75\/80\/85",
       "hotKey": "Q",
       "cooldown": "14\/13\/12\/11",
       "description": "Forces an enemy unit to move slower and for allies to attack it more quickly.",
@@ -60,7 +60,7 @@
       ],
       "itemBehaviour": [],
       "legacyKey": "E",
-      "story": "Although Chen's brand of animal enthrallment isn't quite strong enough to control the minds of enemy heroes, it still tests their resolve in combat."
+      "story": null
     },
     {
       "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/2\/21\/Chen_Holy_Persuasion.mp3\/revision\/latest?cb=20191216012102",
@@ -71,14 +71,14 @@
       ],
       "notes": [
         "Applies a basic dispel on the target which removes buffs and debuffs.",
-        "When persuading a new creep while already having the maximum amount, the oldest persuaded creep (including ancient creeps) dies. When persuading an ancient creep while already having the maximum amount of them, the oldest persuaded ancient creep dies. The death is not credited to anyone so that no one gets experience from it.",
-        "When persuading an ancient creep while already having the maximum amount of them, the oldest persuaded ancient creep dies.",
+        "When persuading a new creep while already having the maximum amount of 1\/2\/3\/4 (TagTalent 4\/5\/6\/7) creeps, the oldest persuaded creep dies. The death is not credited to anyone so that no one gets experience from it.",
         "The death is not credited to anyone so that no one gets experience from it.",
-        "Can persuade any creep below the given max level, including Neutral creeps, summons, but excluding Roshan, siege creeps and creep-heroes.",
-        "When the unit's maximum health is below the minimum health threshold, its maximum and current health are increased by the difference. This current health increase does not count as a heal. The unit has its health set to a value. The health of creeps that are currently persuaded does not increase further upon leveling up Holy Persuasion or upon choosing the minimum health upgrading talent.",
+        "Can persuade any creep below the given max level, including neutral creeps, summons, but excluding Roshan, Siege Creep and creep-heroes.",
+        "When the creep's maximum health is below the minimum health threshold, its maximum and current health are increased by the difference. This current health increase does not count as a heal. The unit has its health set to a value. The health of creeps that are currently persuaded does not increase further upon leveling up Holy Persuasion or upon choosing the minimum health increasing talent.",
         "This current health increase does not count as a heal. The unit has its health set to a value.",
-        "The health of creeps that are currently persuaded does not increase further upon leveling up Holy Persuasion or upon choosing the minimum health upgrading talent.",
+        "The health of creeps that are currently persuaded does not increase further upon leveling up Holy Persuasion or upon choosing the minimum health increasing talent.",
         "Fully restores the creep's mana upon persuading.",
+        "Grants regular flat bonus attack damage to persuaded creeps.",
         "Can only teleport units persuaded with Holy Persuasion. Cannot teleport any other unit under Chen's control. Disjoints projectiles upon teleporting. Cannot target invulnerable or hidden allies, but can teleport them if they turned invulnerable or hidden after cast. The teleport locations are based on Chen's position upon teleporting, with the persuaded unit appearing 120 range to his north, east, south, or west. The very first persuaded unit teleported to Chen teleports randomly north, south, east, or west, and following persuaded units continue counterclockwise. If Chen is dead as the buff expires, the teleport does not happen. Damage greater than 0 (before reductions) from any player (including allies, excluding self) or Roshan dispels the effect. Gives the target a stop command after teleporting it, canceling channeling abilities and stopping queued orders. ↓↓ Double-tapping automatically teleport all units under the caster's control (excluding wards, illusions, clones and non-ancient creep-heroes) get teleport to the caster. Unlike directly targeting a creep to teleport, ↓↓ Double-tapping or Portrait-casting does affect invulnerable and hidden units.",
         "Disjoints projectiles upon teleporting.",
         "Cannot target invulnerable or hidden allies, but can teleport them if they turned invulnerable or hidden after cast.",
@@ -89,9 +89,15 @@
         "Gives the target a stop command after teleporting it, canceling channeling abilities and stopping queued orders.",
         "↓↓ Double-tapping automatically teleport all units under the caster's control (excluding wards, illusions, clones and non-ancient creep-heroes) get teleport to the caster.",
         "Unlike directly targeting a creep to teleport, ↓↓ Double-tapping or Portrait-casting does affect invulnerable and hidden units.",
-        "With Aghanim's Shard, Holy Persuasion allows 1\/2\/3 ancient creeps to be persuaded per level of Hand of God. Ancient creeps are included in the maximum allowed units, so it does not allow Chen to have more creeps persuaded. Can be cast on ancient creeps without having Hand of God leveled for no result, wasting the mana and cooldown.",
+        "With Aghanim's Shard, Holy Persuasion allows 1\/2\/3 ancient creeps to be persuaded per level of Hand of God. Ancient creeps are included in the maximum allowed units, so it does not allow Chen to have more creeps persuaded. When persuading an ancient creep while already having the maximum amount of ancient creeps, the oldest persuaded ancient creep dies. Can be cast on ancient creeps without having Hand of God leveled for no result, wasting the mana and cooldown.",
         "Ancient creeps are included in the maximum allowed units, so it does not allow Chen to have more creeps persuaded.",
-        "Can be cast on ancient creeps without having Hand of God leveled for no result, wasting the mana and cooldown."
+        "When persuading an ancient creep while already having the maximum amount of ancient creeps, the oldest persuaded ancient creep dies.",
+        "Can be cast on ancient creeps without having Hand of God leveled for no result, wasting the mana and cooldown.",
+        "With level 4 Holy Persuasion, Chen can persuade the following number of creeps (and ancient creeps) on each level of Hand of God: Level 1: Max 3 (TagTalent 6) creeps with 1 ancient creep. Level 2: Max 2 (TagTalent 5) creeps with 2 ancient creeps. Level 3: Max 1 (TagTalent 4) creeps with 3 ancient creeps.",
+        "Level 1: Max 3 (TagTalent 6) creeps with 1 ancient creep.",
+        "Level 2: Max 2 (TagTalent 5) creeps with 2 ancient creeps.",
+        "Level 3: Max 1 (TagTalent 4) creeps with 3 ancient creeps.",
+        ""
       ],
       "mana": "90\/110\/130\/150",
       "hotKey": "W",
@@ -116,7 +122,7 @@
       ],
       "itemBehaviour": [],
       "legacyKey": "T",
-      "story": "Although they may not be knights, Chen incorporates beasts into the Fold in the same way he himself was converted."
+      "story": null
     },
     {
       "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/8\/8a\/Chen_Divine_Favor.mp3\/revision\/latest?cb=20191216012059",
@@ -126,7 +132,7 @@
       ],
       "notes": [
         "The aura affects all units under Chen's control except for non-ancient creep-heroes, as well as allied heroes, including illusions and clones, but excluding creep-heroes.",
-        "Can regenerate up to 75\/150\/225\/300 health in one minute.",
+        "Can regenerate up to 90\/180\/270\/360 health in one minute.",
         "The aura's buff lingers for 0.5 seconds.",
         "Does not affect invulnerable units."
       ],
@@ -137,14 +143,14 @@
       "spellName": "Divine Favor",
       "params": [
         "Radius: 1200",
-        "Health Regen Bonus: 1.25\/2.5\/3.75\/5",
-        "Armor Bonus: 2\/3\/4\/5",
+        "Health Regen Bonus: 1.5\/3\/4.5\/6",
+        "Armor Bonus: 1\/2\/3\/4",
         "Aura Linger Duration: 0.5",
         "Illusions provide the aura and benefit from the health regeneration, but not from the armor."
       ],
       "itemBehaviour": [],
       "legacyKey": "F",
-      "story": "Chen's zeal is infectious, blessing his allies with vitality and compelling them to his side."
+      "story": null
     },
     {
       "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/9\/9c\/Chen_Hand_of_God.mp3\/revision\/latest?cb=20191216012101",
@@ -160,7 +166,7 @@
         "With Aghanim's Scepter, Hand of God applies a strong dispel on units it heals, after healing them.",
         "With Aghanim's Shard, Holy Persuasion allows 1\/2\/3 ancient creeps to be persuaded per level of Hand of God."
       ],
-      "mana": "250\/350\/450",
+      "mana": "200\/300\/400",
       "hotKey": "R",
       "cooldown": "160\/140\/120 (TagTalent 120\/100\/80)",
       "description": "Heals all allied heroes on the map as well as all units under Chen's control.",
@@ -174,7 +180,7 @@
       ],
       "itemBehaviour": [],
       "legacyKey": "D",
-      "story": "Using the mental link with his thralls, Chen calls down restoration and well-being to those who share his fanaticism."
+      "story": null
     }
   ],
   "mainAttributes": {
@@ -205,7 +211,7 @@
     },
     {
       "talentLvl": "10",
-      "talentLeft": "+175 Health",
+      "talentLeft": "+200 Health",
       "talentRight": "Penitence Deals 250 Damage"
     }
   ]

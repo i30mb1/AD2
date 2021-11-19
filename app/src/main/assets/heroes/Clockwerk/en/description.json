@@ -62,7 +62,7 @@
       ],
       "itemBehaviour": [],
       "legacyKey": "E",
-      "story": "Some of Rattletrap's contraptions don't quite work correctly, so detonating them proves useful as an offensive maneuver."
+      "story": null
     },
     {
       "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/3\/34\/Clockwerk_Power_Cogs_1.mp3\/revision\/latest?cb=20191215184910",
@@ -78,7 +78,7 @@
         "All cogs are placed with a 164.5 range distance from each other. Together with their collision size, the gap between the cogs is 4.5.",
         "This means that any unit trapped within the center of the circle cannot move out unless it has unobstructed movement.",
         "A cog shocks the first enemy unit which comes within 185 range of it from the outside. A cog can only shock a unit once.",
-        "The cogs only shock units that have mana (e.g. ranged creeps). Units without a mana pool are not shocked (e.g. Roshan).",
+        "The cogs only shock units that have mana (e.g. Ranged Creep), units without mana are not shocked (e.g. Roshan).",
         "The shock requires no vision and can hit invisible enemies, or enemies in the Fog of War.",
         "The shock is a 300 distance knockback at a speed of 300, so it lasts exactly 1 second.",
         "Knocks units back into the direction they approach the cog from.",
@@ -88,9 +88,10 @@
         "Although the cogs deliver the shocks, the effects (damage, mana loss, knockback) are sourced to the caster, not the cog.",
         "Destroys trees enemies come in contact with during the knockback.",
         "Despite having 100 health, attacking the cogs deals 0 damage. The cogs' health bar does not visually decrease when attacking them either.",
-        "Units not controlled by any player do not try to path around the cogs, but simply walk against them as if they are not there. This effectively causes them to get stuck until they change directions (e.g. when aggro-ing them).",
-        "This effectively causes them to get stuck until they change directions (e.g. when aggro-ing them).",
-        "The cogs can also be attacked and destroyed\/denied by allies, however, taking the same amount of attacks as enemies.",
+        "Non-player-controlled units (i.e. lane creeps) do not try to path around the cogs, but simply walk against them as if they are not there. This effectively causes them to get stuck, until they change directions (e.g. when being aggro'd), or until the cogs dissipate.",
+        "This effectively causes them to get stuck, until they change directions (e.g. when being aggro'd), or until the cogs dissipate.",
+        "The cogs can also be attacked and destroyed or denied by allies, taking the same amount of attacks as enemies. Only Clockwerk can destroy them in one hit.",
+        "Only Clockwerk can destroy them in one hit.",
         "With the level 25 talent, a 225 radius aura is created at the center of the cogs. The aura provides spell immunity to the caster. Other units under their control are not affected. The aura always lasts the full duration, even if all cogs get destroyed. The aura's buff lingers for 0.5 seconds.",
         "The aura provides spell immunity to the caster. Other units under their control are not affected.",
         "The aura always lasts the full duration, even if all cogs get destroyed.",
@@ -118,7 +119,7 @@
       ],
       "itemBehaviour": [],
       "legacyKey": "C",
-      "story": "One of Clockwerk's inventions of which he is most proud is the power cog - though it is sometimes despised by his allies."
+      "story": null
     },
     {
       "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/d\/da\/Clockwerk_Rocket_Flare_1.mp3\/revision\/latest?cb=20191215184914",
@@ -153,7 +154,7 @@
       ],
       "itemBehaviour": [],
       "legacyKey": "R",
-      "story": "What started as a festive display has become a useful scouting and bombardment tool."
+      "story": null
     },
     {
       "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/0\/0f\/Clockwerk_Overclocking_1.mp3\/revision\/latest?cb=20191215184907",
@@ -162,8 +163,7 @@
         "Affects Self"
       ],
       "notes": [
-        "Requires Aghanim's Scepter to be unlocked. In Ability Draft, Overclocking can be unlocked by the player that drafted Hookshot.",
-        "In Ability Draft, Overclocking can be unlocked by the player that drafted Hookshot.",
+        "Requires Aghanim's Scepter to be unlocked.",
         "Interrupts Clockwerk's channeling abilities upon cast.",
         "Reset all of the caster's ability cooldowns. Item cooldowns are not reset.",
         "The stun at the end of the duration cannot be avoided. It is applied even when invulnerable or hidden. The stun duration is unaffected by status resistance.",
@@ -184,7 +184,7 @@
       ],
       "itemBehaviour": [],
       "legacyKey": "F",
-      "story": "Rattletrap understands the limitations of his armor. Just as he understands the risks of pushing past them in times of need."
+      "story": null
     },
     {
       "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/0\/09\/Clockwerk_Jetpack_1.mp3\/revision\/latest?cb=20201224171015",
@@ -193,13 +193,12 @@
         "Affects Self"
       ],
       "notes": [
-        "Requires Aghanim's Shard to be unlocked. In Ability Draft, Jetpack can be unlocked by the player that drafted Hookshot.",
-        "In Ability Draft, Jetpack can be unlocked by the player that drafted Hookshot.",
-        "While Jetpack is active, the caster does not need to turn to cast spells or items.",
+        "Requires Aghanim's Shard to be unlocked.",
+        "While Jetpack is active, the caster does not need to turn to cast abilities or items.",
         "For better readability, the turn rate during the flight is given as degrees per second, instead of radians per 0.03 seconds. 75° per second equal a turn rate of 0.039.",
         "75° per second equal a turn rate of 0.039.",
-        "Clockwerk turns for a maximum of 1 seconds per issued move order. This means a single move order does not cause him to fly in a circle around the targeted point. His final path and direction pre-move order depends on a vector from Clockwerk's position to targeted point, which is always parallel with the path.",
-        "His final path and direction pre-move order depends on a vector from Clockwerk's position to targeted point, which is always parallel with the path.",
+        "Clockwerk turns for a maximum of 1 second per issued move order. This means a single move order does not cause him to fly in a circle around the targeted point. Clockwerk's final path and direction pre-move order depends on a vector from his position to the targeted point, which is always parallel with the path.",
+        "Clockwerk's final path and direction pre-move order depends on a vector from his position to the targeted point, which is always parallel with the path.",
         "Clockwerk is not disabled while flying and can use any items and abilities normally. Casting Hookshot ends Jetpack if it latches on a target and starts pulling. Does not end it if it misses.",
         "Casting Hookshot ends Jetpack if it latches on a target and starts pulling. Does not end it if it misses.",
         "The flight speed equals Clockwerk's movement speed."
@@ -239,7 +238,7 @@
         "When latching on an enemy, it gets stunned for 1.5\/1.75\/2 seconds, or until Clockwerk reaches it. This means if Clockwerk does not reach it, it is stunned for the full duration. This can happen when either the pull gets canceled, or when the target gets moved too far away during the pull.",
         "This means if Clockwerk does not reach it, it is stunned for the full duration.",
         "This can happen when either the pull gets canceled, or when the target gets moved too far away during the pull.",
-        "The latched enemy is also hit by the area damage\/stun. This means the latched target is stunned up to 0.5 seconds longer than secondary targets, due to the initial latch stun.",
+        "The latched enemy is also hit by the stun and area damage. This means the latched target is stunned up to 0.5 seconds longer than secondary targets, due to the initial latch stun.",
         "This means the latched target is stunned up to 0.5 seconds longer than secondary targets, due to the initial latch stun.",
         "Hookshot first applies the debuff, then the damage.",
         "Fully ignores Couriers."
@@ -262,7 +261,7 @@
       ],
       "itemBehaviour": [],
       "legacyKey": "T",
-      "story": "A somewhat unwieldy device, the Hookshot sends the otherwise clunky Clockwerk armor flying through the air."
+      "story": null
     }
   ],
   "mainAttributes": {

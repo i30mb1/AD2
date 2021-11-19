@@ -60,7 +60,7 @@
       ],
       "itemBehaviour": [],
       "legacyKey": "R",
-      "story": "A modified technique of the Turstarkuri monks' peaceful ways is to turn magical energies on their owner."
+      "story": null
     },
     {
       "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/6\/61\/Anti-Mage_Blink_1.mp3\/revision\/latest?cb=20191216010740",
@@ -86,7 +86,7 @@
       ],
       "itemBehaviour": [],
       "legacyKey": "B",
-      "story": "In his encounter with the Dead Gods, Anti-Mage learned the value of being elusive."
+      "story": null
     },
     {
       "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/4\/4e\/Anti-Mage_Counterspell_1.mp3\/revision\/latest?cb=20191216010734",
@@ -120,13 +120,13 @@
         "Far Outgoing Spell Damage Reduction: 10%",
         "Close Additional Outgoing Spell Damage Reduction: 20%",
         "Aura Linger Duration: 0.5",
-        "Counterspell passively grants a 900 radius aura that reduces enemy magic damage by 10%. Reduces magic damage by an additional 20% to enemies within 300 range",
+        "Counterspell passively grants a 900 radius aura that reduces enemy spell damage by 10%. Reduces spell damage by an additional 20% to enemies within 300 range",
         "The passive magic resistance bonus and the Spell Weakness aura are disabled.",
         "Illusions do not get the passive magic resistance bonus. Illusions provide the Spell Weakness aura."
       ],
       "itemBehaviour": [],
       "legacyKey": "C",
-      "story": "With the proper focus, Anti-Mage turns innate resistance into calculated retaliation."
+      "story": null
     },
     {
       "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/a\/a3\/Anti-Mage_Blink_Fragment_1.mp3\/revision\/latest?cb=20201220204524",
@@ -135,14 +135,13 @@
         "Affects Enemies"
       ],
       "notes": [
-        "Requires Aghanim's Scepter to be unlocked. This ability is not available in Ability Draft, due to its reliance on a non-ultimate ability, which is limited to one ability slot.",
-        "This ability is not available in Ability Draft, due to its reliance on a non-ultimate ability, which is limited to one ability slot.",
+        "Requires Aghanim's Scepter to be unlocked.",
         "The illusion is created facing the same direction as the caster, along with Blink's particles and sounds.",
         "The illusion cannot act, so it is completely uncontrollable.",
         "The illusion is not invulnerable, and can be attacked and killed normally.",
         "When targeting an enemy, the illusion attacks that enemy.",
-        "When targeting the ground, the illusion relies on ◉ Standard auto-attack rules. The illusion ignores the player's auto attack settings and is always in auto-attack mode. When no enemies are nearby, the illusion just idles in place, only moving when getting aggroed.",
-        "The illusion ignores the player's auto attack settings and is always in auto-attack mode.",
+        "When targeting the ground, the illusion relies on ◉ Standard auto-attack rules. The illusion ignores the player's auto-attack settings and is always in auto-attack mode. When no enemies are nearby, the illusion just idles in place, only moving when getting aggroed.",
+        "The illusion ignores the player's auto-attack settings and is always in auto-attack mode.",
         "When no enemies are nearby, the illusion just idles in place, only moving when getting aggroed.",
         "The illusion is permanently phased.",
         "Counterspell is cast simultaneously by the illusion whenever Anti-Mage casts it."
@@ -150,7 +149,7 @@
       "mana": "50",
       "hotKey": "D",
       "cooldown": "0",
-      "description": "Blinks an illusion at the target enemy or location and attack them for 7 seconds. Counterspell is replicated on the Blink Fragment illusion.",
+      "description": "Blinks an illusion at the target enemy or location and attack them for 7 seconds. Counterspell is replicated on the Blink Fragment illusion. Has 3 Charges",
       "spellName": "Blink Fragment",
       "params": [
         "Cast Animation: 0.2+0.84",
@@ -196,7 +195,7 @@
       ],
       "itemBehaviour": [],
       "legacyKey": "V",
-      "story": "After bringing enemies to their knees, Anti-Mage punishes them for their use of the arcane arts."
+      "story": null
     }
   ],
   "mainAttributes": {

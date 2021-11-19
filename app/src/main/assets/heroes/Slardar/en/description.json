@@ -14,7 +14,7 @@
         {
           "talentLvl": "20",
           "talentLeft": "-4 Corrosive Haze Armor",
-          "talentRight": "+100 Slithereen Crush Damage"
+          "talentRight": "+125 Slithereen Crush Damage"
         },
         {
           "talentLvl": "15",
@@ -23,8 +23,8 @@
         },
         {
           "talentLvl": "10",
-          "talentLeft": "-3s Guardian Sprint Cooldown",
-          "talentRight": "-10% Slithereen Crush Attack and Move Speed Slow"
+          "talentLeft": "+10% Slithereen Crush Attack\/Move Slow",
+          "talentRight": "-3s Guardian Sprint Cooldown"
         }
       ]
     },
@@ -42,11 +42,11 @@
         "The bonuses of the river do not linger at all.",
         "Gains a total of 50%\/55%\/60%\/65% movement speed while active inside the river.",
         "Multiple instances of the river bonus do not stack.",
-        "The status resistance from Aghanim's Scepter stacks multiplicatively with other sources of status resistance."
+        "The status resistance stacks multiplicatively with other sources of status resistance."
       ],
       "mana": "25",
       "hotKey": "Q",
-      "cooldown": "32\/27\/22\/17 (TagTalent 29\/24\/19\/14)",
+      "cooldown": "29\/25\/21\/17 (TagTalent 26\/22\/18\/14)",
       "description": "Slardar slithers ahead, moving significantly faster and passing through units. Slardar gains movement speed bonus while in the river.",
       "spellName": "Guardian Sprint",
       "params": [
@@ -61,7 +61,7 @@
       ],
       "itemBehaviour": [],
       "legacyKey": "T",
-      "story": "As Slardar has made the transition from the Deeps, it has been necessary to use his powerful tail for sprinting instead of swimming."
+      "story": null
     },
     {
       "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/8\/86\/Slardar_Slithereen_Crush.mp3\/revision\/latest?cb=20191216023820",
@@ -72,15 +72,14 @@
       ],
       "notes": [
         "The stun and slow are applied at the same time, so overall, the slow lasts for 4\/5\/6\/7 seconds.",
-        "Slithereen Crush first applies the stun debuff, then the slow debuff, then the damage.",
+        "Slithereen Crush first applies the stun debuff, then the slow debuff, then the Corrosive Haze debuff, and then the damage.",
         "With Aghanim's Scepter, the created puddles provide an aura which grants the caster the river bonuses. Unlike the river, the puddles do not grant the bonuses to any other unit, not even the caster's illusions. Also unlike the river, the river bonus from a puddle lingers for 0.5 seconds. Multiple instances of the river bonus do not stack.",
         "Unlike the river, the puddles do not grant the bonuses to any other unit, not even the caster's illusions.",
         "Also unlike the river, the river bonus from a puddle lingers for 0.5 seconds.",
         "Multiple instances of the river bonus do not stack.",
-        "With Aghanim's Shard, Corrosive Haze based on its current level gets applied to all enemies hit by Slithereen Crush. If Corrosive Haze is not learned, no debuff is applied. Corrosive Haze is applied after Slithereen Crush's other debuffs, but before its damage. This means the damage benefits from the armor reduction.",
+        "With Aghanim's Shard, Corrosive Haze based on its current level gets applied to all enemies hit by Slithereen Crush. If Corrosive Haze is not learned, no debuff is applied. Since the Corrosive Haze debuff is applied before the damage, the ability's damage benefits from the armor reduction applied.",
         "If Corrosive Haze is not learned, no debuff is applied.",
-        "Corrosive Haze is applied after Slithereen Crush's other debuffs, but before its damage.",
-        "This means the damage benefits from the armor reduction."
+        "Since the Corrosive Haze debuff is applied before the damage, the ability's damage benefits from the armor reduction applied."
       ],
       "mana": "90\/100\/110\/120",
       "hotKey": "W",
@@ -90,7 +89,7 @@
       "params": [
         "Cast Animation: 0.35+0.6",
         "Effect Radius: 350 (TagTalent 425)",
-        "Damage: 70\/140\/210\/280 (TagTalent 170\/240\/310\/380)",
+        "Damage: 70\/140\/210\/280 (TagTalent 195\/265\/335\/405)",
         "Move Speed Slow: 20%\/25%\/30%\/35% (TagTalent 30%\/35%\/40%\/45%)",
         "Attack Speed Slow: 20\/25\/30\/35 (TagTalent 30\/35\/40\/45)",
         "Stun Duration: 1",
@@ -105,7 +104,7 @@
       ],
       "itemBehaviour": [],
       "legacyKey": "R",
-      "story": "A swift crush of might and water breaks even the toughest of defenses."
+      "story": null
     },
     {
       "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/5\/54\/Slardar_Bash_of_the_Deep.mp3\/revision\/latest?cb=20191216023822",
@@ -115,8 +114,7 @@
         "Damage Physical"
       ],
       "notes": [
-        "Does not stack with other bashes. The bash from Skull Basher and Abyssal Blade is completely disabled for Slardar. In Ability Draft, fully stacks with the bash from Skull Basher and Abyssal Blade.",
-        "In Ability Draft, fully stacks with the bash from Skull Basher and Abyssal Blade.",
+        "Does not stack with other bashes. The bash from Skull Basher and Abyssal Blade is completely disabled for Slardar.",
         "Each successful attack done on an enemy hero or creep adds one to the attack counting buff. The buff is always present, but turns invisible when at 0 charges.",
         "The buff is always present, but turns invisible when at 0 charges.",
         "Does not count attacks done against allies, wards or buildings, nor bashes them on the bashing attack.",
@@ -141,7 +139,7 @@
       ],
       "itemBehaviour": [],
       "legacyKey": "B",
-      "story": "Thieves of the wealth of the Deep Ones meet the brutality of the Slithereen Guard in melee combat."
+      "story": null
     },
     {
       "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/9\/93\/Slardar_Corrosive_Haze.mp3\/revision\/latest?cb=20191216023814",
@@ -165,7 +163,7 @@
       ],
       "itemBehaviour": [],
       "legacyKey": "G",
-      "story": "Even the strongest armor counts for little when left to the brine of the sea."
+      "story": null
     }
   ],
   "mainAttributes": {
@@ -187,7 +185,7 @@
     {
       "talentLvl": "20",
       "talentLeft": "-4 Corrosive Haze Armor",
-      "talentRight": "+100 Slithereen Crush Damage"
+      "talentRight": "+125 Slithereen Crush Damage"
     },
     {
       "talentLvl": "15",
@@ -196,8 +194,8 @@
     },
     {
       "talentLvl": "10",
-      "talentLeft": "-3s Guardian Sprint Cooldown",
-      "talentRight": "-10% Slithereen Crush Attack and Move Speed Slow"
+      "talentLeft": "+10% Slithereen Crush Attack\/Move Slow",
+      "talentRight": "-3s Guardian Sprint Cooldown"
     }
   ]
 }

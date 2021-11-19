@@ -13,7 +13,7 @@
         },
         {
           "talentLvl": "20",
-          "talentLeft": "-20s Stampede Cooldown",
+          "talentLeft": "-25s Stampede Cooldown",
           "talentRight": "+50 Retaliate Damage"
         },
         {
@@ -51,7 +51,7 @@
       ],
       "itemBehaviour": [],
       "legacyKey": "F",
-      "story": "When the mighty hoof of the Warrunner touches soil, the tremors are felt far and wide."
+      "story": null
     },
     {
       "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/6\/6d\/Centaur_Warrunner_Double_Edge.mp3\/revision\/latest?cb=20191216011916",
@@ -70,7 +70,12 @@
         "Increases the total amount of strength (base and bonus) by 15%\/30%\/45%\/60%\/75% with each amount of stacks.",
         "Double Edge first applies the slow debuff before applying its damage.",
         "The strength buff is applied after the first enemy got debuffed and damaged, and before the remaining enemies.",
-        "However, Double Edge's damage is set upon cast, before any of its effects are applied, so that the strength bonus does not affect the damage."
+        "However, Double Edge's damage is set upon cast, before any of its effects are applied, so that the strength bonus does not affect the damage.",
+        "Effectively increases Centaur Warrunner's current health by 20, health regeneration by 0.1 and 1 main attack damage per point of strength. Upon updating the strength values, Centaur Warrunner's current health stays the same. These increased stats are removed upon the buff expiring or upon death. He does not keep the current health percentage either. This health increase does not count as a heal, so it is unaffected by amplifications. Therefore, the health increase is not considered by Ice Blast's percentage health kill threshold and False Promise's delayed health amplification.",
+        "Upon updating the strength values, Centaur Warrunner's current health stays the same.",
+        "These increased stats are removed upon the buff expiring or upon death. He does not keep the current health percentage either.",
+        "This health increase does not count as a heal, so it is unaffected by amplifications. Therefore, the health increase is not considered by Ice Blast's percentage health kill threshold and False Promise's delayed health amplification.",
+        "Therefore, the health increase is not considered by Ice Blast's percentage health kill threshold and False Promise's delayed health amplification."
       ],
       "mana": null,
       "hotKey": "W",
@@ -80,7 +85,7 @@
       "params": [
         "Cast Animation: 0.3+0.5",
         "Cast Range: 150",
-        "Damage Radius: 190",
+        "Damage Radius: 220",
         "Base Damage: 120\/180\/240\/300",
         "Strength as Damage: 60%\/80%\/100%\/120% (TagTalent 100%\/120%\/140%\/160%)",
         "Max Stacks: 5",
@@ -93,7 +98,7 @@
       ],
       "itemBehaviour": [],
       "legacyKey": "D",
-      "story": "In the spurs of combat, Bradwarden's vicious strikes sometimes cause self-inflicted collateral damage."
+      "story": null
     },
     {
       "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/4\/45\/Centaur_Warrunner_Retaliate_1.mp3\/revision\/latest?cb=20191216011907",
@@ -129,7 +134,7 @@
       ],
       "itemBehaviour": [],
       "legacyKey": "R",
-      "story": "Bradwarden has no need to parry his opponent's attacks; his armor-like hide does it for him."
+      "story": null
     },
     {
       "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/f\/f3\/Centaur_Warrunner_Stampede_1.mp3\/revision\/latest?cb=20191216011910",
@@ -142,7 +147,7 @@
         "Interrupts Centaur Warrunner's channeling abilities upon cast.",
         "Affects every player-controlled allied unit, except for Couriers, wards, buildings, and Haunt-based illusions.",
         "Affected allies become phased and hasted, meaning they cannot be slowed below the hasted value.",
-        "Checks Centaur Warrunner's strength whenever trampling an enemy, so it adapts immediately. However, the strength as damage multiplier is set on cast and does not adapt when leveling the ability while its active.",
+        "Checks Centaur Warrunner's current strength whenever trampling an enemy, so it adapts immediately. However, the strength as damage multiplier is set on cast and does not adapt when leveling the ability while its active.",
         "However, the strength as damage multiplier is set on cast and does not adapt when leveling the ability while its active.",
         "Stampede first applies the damage, then the debuff.",
         "The damage is sourced to each buffed ally, meaning certain on-damage effects react to the buffed ally rather than to Centaur Warrunner (e.g. Blade Mail).",
@@ -154,7 +159,7 @@
       ],
       "mana": "150\/200\/250",
       "hotKey": "R",
-      "cooldown": "100 (TagTalent 80)",
+      "cooldown": "100 (TagTalent 75)",
       "description": "Centaur leads all allies into a vicious charge causing them to move through units at max speed and stop any enemy units they trample. Trampled enemies take damage based on Centaur Warrunner's strength. Each enemy can be trampled once.",
       "spellName": "Stampede",
       "params": [
@@ -171,7 +176,7 @@
       ],
       "itemBehaviour": [],
       "legacyKey": "T",
-      "story": "The great belt of Omexe, which labels Bradwarden as the greatest warrior of his kind, incites his fellow gladiators to follow him into barbarous combat."
+      "story": null
     }
   ],
   "mainAttributes": {
@@ -192,7 +197,7 @@
     },
     {
       "talentLvl": "20",
-      "talentLeft": "-20s Stampede Cooldown",
+      "talentLeft": "-25s Stampede Cooldown",
       "talentRight": "+50 Retaliate Damage"
     },
     {

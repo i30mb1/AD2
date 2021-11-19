@@ -8,22 +8,22 @@
       "talents": [
         {
           "talentLvl": "25",
-          "talentLeft": "40% урона от Atrophy Aura для союзных героев",
+          "talentLeft": "50% урона от Atrophy Aura для союзных героев",
           "talentRight": "+0,65 сек. оцепенения от Pit of Malice"
         },
         {
           "talentLvl": "20",
-          "talentLeft": "+20 здоровья в секунду",
-          "talentRight": "+60 к скорости атаки"
+          "talentLeft": "+15% к снижению урона от Atrophy Aura",
+          "talentRight": "+1% к периодическому урону от Firestorm"
         },
         {
           "talentLvl": "15",
-          "talentLeft": "-4 сек. перезарядки Firestorm",
+          "talentLeft": "−4 сек. перезарядки Firestorm",
           "talentRight": "+75 к радиусу Pit of Malice"
         },
         {
           "talentLvl": "10",
-          "talentLeft": "+125 к радиусу Firestorm",
+          "talentLeft": "+100 к радиусу Firestorm",
           "talentRight": "+5 к броне"
         }
       ]
@@ -67,7 +67,7 @@
       ],
       "itemBehaviour": [],
       "legacyKey": "F",
-      "story": "Из темнейших глубин бездны вспыхивает пламя завоевания."
+      "story": null
     },
     {
       "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/6\/65\/Underlord_Pit_of_Malice_1.mp3\/revision\/latest?cb=20191216025837",
@@ -105,7 +105,7 @@
       ],
       "itemBehaviour": [],
       "legacyKey": "T",
-      "story": "Открытая ненависть Врогроша выворачивает реальность наизнанку, сковывая тех, кто отказывается повиноваться ему."
+      "story": null
     },
     {
       "audioUrl": null,
@@ -146,7 +146,7 @@
       ],
       "itemBehaviour": [],
       "legacyKey": "R",
-      "story": "Одно лишь присутствие Врогроша подрывает уверенность врагов в исходе битвы."
+      "story": null
     },
     {
       "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/7\/73\/Underlord_Dark_Rift_1.mp3\/revision\/latest?cb=20191216025830",
@@ -183,7 +183,7 @@
       ],
       "itemBehaviour": [],
       "legacyKey": "D",
-      "story": "Они пришли без предупреждения, оставив на месте процветающих королевств лишь кровь и огонь."
+      "story": null
     },
     {
       "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/1\/1d\/Underlord_Cancel_Dark_Rift.mp3\/revision\/latest?cb=20191216025832",
@@ -200,7 +200,8 @@
       "description": "Отменяет телепортацию.",
       "spellName": "Cancel Dark Rift",
       "params": [
-        "Анимация применения: 0+1,07"
+        "Анимация применения: 0+1,07",
+        ""
       ],
       "itemBehaviour": [],
       "legacyKey": "D",
@@ -220,22 +221,22 @@
   "talents": [
     {
       "talentLvl": "25",
-      "talentLeft": "40% урона от Atrophy Aura для союзных героев",
+      "talentLeft": "50% урона от Atrophy Aura для союзных героев",
       "talentRight": "+0,65 сек. оцепенения от Pit of Malice"
     },
     {
       "talentLvl": "20",
-      "talentLeft": "+20 здоровья в секунду",
-      "talentRight": "+60 к скорости атаки"
+      "talentLeft": "+15% к снижению урона от Atrophy Aura",
+      "talentRight": "+1% к периодическому урону от Firestorm"
     },
     {
       "talentLvl": "15",
-      "talentLeft": "-4 сек. перезарядки Firestorm",
+      "talentLeft": "−4 сек. перезарядки Firestorm",
       "talentRight": "+75 к радиусу Pit of Malice"
     },
     {
       "talentLvl": "10",
-      "talentLeft": "+125 к радиусу Firestorm",
+      "talentLeft": "+100 к радиусу Firestorm",
       "talentRight": "+5 к броне"
     }
   ]

@@ -2,31 +2,28 @@
   "abilities": [
     {
       "notes": [
-        "Талант на вампиризм аддитивно складывается с другими источниками вампиризма.",
-        "Талант на силу в общем даёт Night Stalker: 240 здоровья, 1,2 регенерации здоровья и 12 урона от атаки.",
-        "Этот талант добавляет урон от атаки в прямой урон от атаки. Не даётся иллюзиям, и также не попадает под действие большинства эффектов увеличивающих или уменьшающих урон на процентное значение.",
-        "Не даётся иллюзиям, и также не попадает под действие большинства эффектов увеличивающих или уменьшающих урон на процентное значение."
+        "Талант на силу в общем даёт Night Stalker: 400 здоровья, 2 восстановления здоровья и 20 урона от атаки."
       ],
       "spellName": "Talent",
       "talents": [
         {
           "talentLvl": "25",
-          "talentLeft": "-60 сек. перезарядки Dark Ascension",
+          "talentLeft": "−50 сек. перезарядки Dark Ascension",
           "talentRight": "+80 к скорости атаки от Hunter in the Night"
         },
         {
           "talentLvl": "20",
-          "talentLeft": "+35 к урону",
-          "talentRight": "+30 к скорости передвижения"
+          "talentLeft": "+20 к силе",
+          "talentRight": "−4 сек. перезарядки Crippling Fear"
         },
         {
           "talentLvl": "15",
-          "talentLeft": "+20% к вампиризму",
-          "talentRight": "+12 к силе"
+          "talentLeft": "+10% к скорости передв. от Hunter in the Night",
+          "talentRight": "+40 к урону от Dark Ascension"
         },
         {
           "talentLvl": "10",
-          "talentLeft": "+7% к скорости передвижения от Hunter in the Night",
+          "talentLeft": "+10 сек. действия Dark Ascension",
           "talentRight": "+45 к урону от Void"
         }
       ]
@@ -67,7 +64,7 @@
       ],
       "itemBehaviour": [],
       "legacyKey": "V",
-      "story": "Баланар яростно погружает врагов в воронку когда-то вечной тьмы."
+      "story": null
     },
     {
       "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/e\/ee\/Night_Stalker_Crippling_Fear_1.mp3\/revision\/latest?cb=20191216021032",
@@ -96,7 +93,7 @@
       ],
       "itemBehaviour": [],
       "legacyKey": "F",
-      "story": "Искажённая пасть Баланара навсегда останется в памяти тех несчастных, кто попался ему на пути."
+      "story": null
     },
     {
       "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/2\/23\/Night_Stalker_Hunter_in_the_Night_move.mp3\/revision\/latest?cb=20191216021026",
@@ -113,12 +110,12 @@
       "description": "Ночью герой оказывается в своей стихии: он атакует и передвигается увеличенной скоростью.",
       "spellName": "Hunter in the Night",
       "params": [
-        "Доп. скорость передвижения: 22%\/28%\/34%\/40% (TagTalent 29%\/35%\/41%\/47%)",
+        "Доп. скорость передвижения: 22%\/28%\/34%\/40% (TagTalent 32%\/38%\/44%\/50%)",
         "Доп. скорость атаки: 20\/40\/60\/80 (TagTalent 100\/120\/140\/160)"
       ],
       "itemBehaviour": [],
       "legacyKey": "G",
-      "story": "Охотничье мастерство Баланара возрастает с наступлением ночи."
+      "story": null
     },
     {
       "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/8\/86\/Night_Stalker_Dark_Ascension.mp3\/revision\/latest?cb=20191216021025",
@@ -133,7 +130,7 @@
       ],
       "mana": "125\/175\/225",
       "hotKey": "R",
-      "cooldown": "140\/130\/120 (TagTalent 80\/70\/60)",
+      "cooldown": "140\/130\/120 (TagTalent 90\/80\/70)",
       "description": "Подавляет солнечный свет, создавая непроглядную тьму и раскрывая силы героя в полной мере. Он получает беспрепятственный обзор, свободное передвижение и дополнительный урон.",
       "spellName": "Dark Ascension",
       "params": [
@@ -143,7 +140,7 @@
       ],
       "itemBehaviour": [],
       "legacyKey": "R",
-      "story": "Жалкое зрелище: даже сильнейшие из воинов начинают бояться темноты."
+      "story": null
     }
   ],
   "mainAttributes": {
@@ -159,22 +156,22 @@
   "talents": [
     {
       "talentLvl": "25",
-      "talentLeft": "-60 сек. перезарядки Dark Ascension",
+      "talentLeft": "−50 сек. перезарядки Dark Ascension",
       "talentRight": "+80 к скорости атаки от Hunter in the Night"
     },
     {
       "talentLvl": "20",
-      "talentLeft": "+35 к урону",
-      "talentRight": "+30 к скорости передвижения"
+      "talentLeft": "+20 к силе",
+      "talentRight": "−4 сек. перезарядки Crippling Fear"
     },
     {
       "talentLvl": "15",
-      "talentLeft": "+20% к вампиризму",
-      "talentRight": "+12 к силе"
+      "talentLeft": "+10% к скорости передв. от Hunter in the Night",
+      "talentRight": "+40 к урону от Dark Ascension"
     },
     {
       "talentLvl": "10",
-      "talentLeft": "+7% к скорости передвижения от Hunter in the Night",
+      "talentLeft": "+10 сек. действия Dark Ascension",
       "talentRight": "+45 к урону от Void"
     }
   ]

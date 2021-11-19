@@ -36,18 +36,19 @@
         "Damage Magical"
       ],
       "notes": [
-        "The cask travels at a speed of 1000.",
-        "The projectile bounces in 0.3-second intervals.",
+        "The projectile travels at a speed of 1000 and bounces in 0.3-second intervals.",
         "Cannot bounce on invisible, invulnerable or hidden units, but can bounce on units in the Fog of War.",
-        "The initial target is not counted towards the bounces, resulting in a total of 3\/5\/7\/9 (TagTalent 5\/7\/9\/11) instances. All bounces together can deal up to 150\/350\/700\/1260 (TagTalent 300\/595\/1080\/1815) damage to heroes (before reductions). Can deal up to 255\/525\/945\/1575 (TagTalent 475\/840\/1395\/2200) damage to non-hero units (before reductions). Can bounce on the same unit multiple times, but only when another target was hit between the bounces. This means it may hit the same target a maximum of 2\/3\/4\/5 (TagTalent 3\/4\/5\/6) times. Can deal up to 100\/210\/400\/700 (TagTalent 180\/340\/600\/990) damage to a single hero (before reductions). Can deal up to 170\/315\/540\/875 (TagTalent 285\/480\/775\/1200) damage to a single non-hero unit (before reductions). The damage treats illusions, clones and creep-heroes as heroes as well.",
-        "All bounces together can deal up to 150\/350\/700\/1260 (TagTalent 300\/595\/1080\/1815) damage to heroes (before reductions).",
-        "Can deal up to 255\/525\/945\/1575 (TagTalent 475\/840\/1395\/2200) damage to non-hero units (before reductions).",
-        "Can bounce on the same unit multiple times, but only when another target was hit between the bounces.",
+        "The initial target is not counted towards the bounces, resulting in a total of 3\/5\/7\/9 (TagTalent 5\/7\/9\/11) instances. The following are Paralyzing Cask's total damage calculations (before reductions): All bounces together can deal up to 150\/350\/700\/1260 (TagTalent 300\/595\/1080\/1815) to heroes. All bounces together can deal up to 255\/525\/945\/1575 (TagTalent 475\/840\/1395\/2200) to non-hero units. For how much damage each bounce Paralyzing Cask deals on each level, and with the cask bounce increasing talent, please refer to the chart below.",
+        "The following are Paralyzing Cask's total damage calculations (before reductions):",
+        "All bounces together can deal up to 150\/350\/700\/1260 (TagTalent 300\/595\/1080\/1815) to heroes.",
+        "All bounces together can deal up to 255\/525\/945\/1575 (TagTalent 475\/840\/1395\/2200) to non-hero units.",
+        "For how much damage each bounce Paralyzing Cask deals on each level, and with the cask bounce increasing talent, please refer to the chart below.",
+        "The projectile can bounce on the same unit multiple times, but only when another target was hit between the bounces. This means it may hit the same target a maximum of 2\/3\/4\/5 (TagTalent 3\/4\/5\/6) times. Can deal up to 100\/210\/400\/700 (TagTalent 180\/340\/600\/990) damage to a single hero. Can deal up to 170\/315\/540\/875 (TagTalent 285\/480\/775\/1200) damage to a single non-hero unit.",
         "This means it may hit the same target a maximum of 2\/3\/4\/5 (TagTalent 3\/4\/5\/6) times.",
-        "Can deal up to 100\/210\/400\/700 (TagTalent 180\/340\/600\/990) damage to a single hero (before reductions).",
-        "Can deal up to 170\/315\/540\/875 (TagTalent 285\/480\/775\/1200) damage to a single non-hero unit (before reductions).",
-        "The damage treats illusions, clones and creep-heroes as heroes as well.",
-        "The stun treats clones, creep-heroes and Roshan has heroes, but treats illusions as creeps.",
+        "Can deal up to 100\/210\/400\/700 (TagTalent 180\/340\/600\/990) damage to a single hero.",
+        "Can deal up to 170\/315\/540\/875 (TagTalent 285\/480\/775\/1200) damage to a single non-hero unit.",
+        "The stun treats clones, creep-heroes and Roshan has heroes, but treats illusions as creeps. However, the damage treats illusions, clones and creep-heroes as heroes.",
+        "However, the damage treats illusions, clones and creep-heroes as heroes.",
         "The cask first applies the debuff, then the damage.",
         "If Paralyzing Cask is cast multiple times, the previous cast's bounce counter gets reset. All instances coming from the same hero use the same bounce counter, instead of each instance having an independent counter.",
         "All instances coming from the same hero use the same bounce counter, instead of each instance having an independent counter."
@@ -55,24 +56,24 @@
       "mana": "80\/100\/120\/140",
       "hotKey": "Q",
       "cooldown": "20\/18\/16\/14",
-      "description": "Launches a cask of paralyzing powder that ricochets between enemy units, stunning and damaging those it hits.",
+      "description": "Launches a cask of paralyzing powder that ricochets between enemy units, stunning and damaging those it hits. Each bounce deals more damage than the previous one.",
       "spellName": "Paralyzing Cask",
       "params": [
         "Cast Animation: 0.35+0.37",
         "Cast Range: 700",
         "Bounce Distance: 575",
         "Number of Bounces: 2\/4\/6\/8 (TagTalent 4\/6\/8\/10)",
-        "Hero Damage: 40",
-        "Creep Damage: 75",
+        "Hero Base Damage: 40",
+        "Creep Base Damage: 75",
+        "Damage Increase per Bounce: 10\/15\/20\/25",
         "Hero Stun Duration: 1",
         "Creep Stun Duration: 5",
-        "Bonus Damage Per Bounce: 10\/15\/20\/25",
         "Cannot directly target spell immune enemies. Can bounce to spell immune enemies. Does not stun or attempt to damage spell immune enemies.",
         "Blocked fully when primary or secondary target. Blocked upon impact. Does not stop bouncing when blocked."
       ],
       "itemBehaviour": [],
       "legacyKey": "C",
-      "story": "The Witch Doctor recycles the bones of fallen friends and foes, using the powder as part of his arsenal of charms and alchemy."
+      "story": null
     },
     {
       "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/e\/ea\/Witch_Doctor_Voodoo_Restoration_1.mp3\/revision\/latest?cb=20191216030758",
@@ -83,7 +84,7 @@
       "notes": [
         "Voodoo Restoration does not interrupt Witch Doctor's channeling abilities upon toggling On \/ Off.",
         "Disabling Witch Doctor does not toggle Off Voodoo Restoration. However, he cannot turn it off himself while disabled either.",
-        "Heals for 5.28\/7.92\/10.56\/13.2 health (TagTalent +0.495% of max health) and costs 2.64\/3.96\/5.28\/6.6 mana in 0.33-second intervals, starting 0.33 seconds after toggled on.",
+        "Heals for 5.28\/7.92\/10.56\/13.2 health (TagTalent +0.495% of max health) and costs 2.64\/3.96\/5.28\/6.6 (TagTalent 1.98\/2.97\/3.96\/4.95) mana in 0.33-second intervals, starting 0.33 seconds when toggled On.",
         "The heal is provided by an aura. The buff lingers for 0.5 seconds. The mana cost is also bound to the aura. This means when toggled Off, the ability still heals and drains mana for 0.5 seconds before stopping. The ability toggles Off if Witch Doctor does not have enough mana to support another heal instance. However, the lingering buff continues healing, despite the lack of mana, providing up to 2 possible heal instances for free. It does not affect invulnerable or hidden units.",
         "The mana cost is also bound to the aura.",
         "This means when toggled Off, the ability still heals and drains mana for 0.5 seconds before stopping.",
@@ -94,19 +95,19 @@
       "mana": "35\/40\/45\/50",
       "hotKey": "W",
       "cooldown": "0",
-      "description": "Witch Doctor focuses his magic to heal nearby allied units, costing Witch Doctor mana every second Voodoo restoration is active.",
+      "description": "Witch Doctor focuses his magic to heal nearby allied units, costing Witch Doctor mana every second Voodoo Restoration is active.",
       "spellName": "Voodoo Restoration",
       "params": [
         "Cast Animation: 0+0",
         "Heal Radius: 500",
         "Base Heal per Second: 16\/24\/32\/40",
-        "Mana Cost per Second: 8\/12\/16\/20",
+        "Mana Cost per Second: 8\/12\/16\/20 (TagTalent 6\/9\/12\/15)",
         "Aura Linger Duration: 0.5",
         "Max Health as Heal per Second: 1.5%"
       ],
       "itemBehaviour": [],
       "legacyKey": "V",
-      "story": "Zharvakko's hocus pocus is not limited only hexxing his opponents and is quite adept at curing ailments."
+      "story": null
     },
     {
       "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/a\/af\/Witch_Doctor_Maledict_1.mp3\/revision\/latest?cb=20191216030750",
@@ -117,11 +118,11 @@
       ],
       "notes": [
         "Checks the affected units' current health 4 times, once as the curse is applied, and then every 4 seconds for the duration.",
-        "The burst damage is entirely based on the difference between the hero's current health and its health as the curse got applied. This means the bigger the difference of current health and health upon receiving the debuff gets, the more damage the bursts do. Vice versa, the lower the difference gets, the lower is the damage of the bursts, so getting healed during it reduces its damage. It also means it does not matter how affected units lose health, as it directly compares its health values, not damage values. This is how much of the lost health is re-dealt as damage by Maledict, depending on when the health was lost during the curse on each level (before reductions): 0\u20133.9 Seconds: 48%\/72%\/97%\/121% (TagTalent 94%\/118%\/142%\/166%) 3.9\u20137.9 Seconds: 32%\/48%\/64%\/80% (TagTalent 62%\/78%\/94%\/111%) 7.9\u201311.9 Seconds: 16%\/24%\/32%\/40% (TagTalent 31%\/39%\/47%\/55%)",
+        "The burst damage is entirely based on the difference between the hero's current health and its health as the curse got applied. This means the bigger the difference of current health and health upon receiving the debuff gets, the more damage the bursts do. Vice versa, the lower the difference gets, the lower is the damage of the bursts, so getting healed during it reduces its damage. It also means it does not matter how affected units lose health, as it directly compares its health values, not damage values. This is how much of the lost health is re-dealt as damage by Maledict, depending on when the health was lost during the curse on each level (before reductions): 0 \u2013 3.9 Seconds: 48%\/72%\/97%\/121% (TagTalent 94%\/118%\/142%\/166%) 3.9 \u2013 7.9 Seconds: 32%\/48%\/64%\/80% (TagTalent 62%\/78%\/94%\/111%) 7.9 \u2013 11.9 Seconds: 16%\/24%\/32%\/40% (TagTalent 31%\/39%\/47%\/55%)",
         "This means the bigger the difference of current health and health upon receiving the debuff gets, the more damage the bursts do.",
         "Vice versa, the lower the difference gets, the lower is the damage of the bursts, so getting healed during it reduces its damage.",
         "It also means it does not matter how affected units lose health, as it directly compares its health values, not damage values.",
-        "This is how much of the lost health is re-dealt as damage by Maledict, depending on when the health was lost during the curse on each level (before reductions): 0\u20133.9 Seconds: 48%\/72%\/97%\/121% (TagTalent 94%\/118%\/142%\/166%) 3.9\u20137.9 Seconds: 32%\/48%\/64%\/80% (TagTalent 62%\/78%\/94%\/111%) 7.9\u201311.9 Seconds: 16%\/24%\/32%\/40% (TagTalent 31%\/39%\/47%\/55%)",
+        "This is how much of the lost health is re-dealt as damage by Maledict, depending on when the health was lost during the curse on each level (before reductions): 0 \u2013 3.9 Seconds: 48%\/72%\/97%\/121% (TagTalent 94%\/118%\/142%\/166%) 3.9 \u2013 7.9 Seconds: 32%\/48%\/64%\/80% (TagTalent 62%\/78%\/94%\/111%) 7.9 \u2013 11.9 Seconds: 16%\/24%\/32%\/40% (TagTalent 31%\/39%\/47%\/55%)",
         "Deals its own damage in 1-second intervals, starting 1 second after the debuff is applied, resulting in 12 damage instances. Together with the bursts, it deals a total of 15 damage instances. The bursts happen 0.1 seconds before each 4th damage tick, so the bursts happen after the 3rd, 7th, and 11th damage tick.",
         "Together with the bursts, it deals a total of 15 damage instances.",
         "The bursts happen 0.1 seconds before each 4th damage tick, so the bursts happen after the 3rd, 7th, and 11th damage tick.",
@@ -146,7 +147,7 @@
       ],
       "itemBehaviour": [],
       "legacyKey": "E",
-      "story": "Certain voodoo magics can make an enemy regret engaging the Witch Doctor."
+      "story": null
     },
     {
       "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/1\/19\/Witch_Doctor_Voodoo_Switcheroo.mp3\/revision\/latest?cb=20210103153444",
@@ -157,22 +158,21 @@
       "notes": [
         "Requires Aghanim's Shard to be unlocked.",
         "Turns Witch Doctor invulnerable, hidden, and unable to act for the duration.",
-        "The Death Ward is summoned at Witch Doctor's location. It is based on Death Ward's current level. If Death Ward is not learned, Voodoo Switcheroo does nothing on cast. Same notes as for Death Ward fully apply. The Aghanim's Scepter upgrade affects Voodoo Switcheroo as well.",
-        "If Death Ward is not learned, Voodoo Switcheroo does nothing on cast.",
-        "Same notes as for Death Ward fully apply.",
+        "Death Ward based on its current level is summoned at Witch Doctor's location. Death Ward notes fully apply. If it is not learned, Voodoo Switcheroo does nothing on cast. The Aghanim's Scepter upgrade affects Voodoo Switcheroo as well.",
+        "Death Ward notes fully apply. If it is not learned, Voodoo Switcheroo does nothing on cast.",
         "The Aghanim's Scepter upgrade affects Voodoo Switcheroo as well.",
-        "Voodoo Switcheroo cannot be canceled earlier, but it is dispellable. However, since Witch Doctor is invulnerable and hidden for the duration, most dispels cannot target him. Only continuous dispels such as Demonic Purge and Nullify can remove the spell if the debuff was applied before Voodoo Switcheroo was casted. In these cases, the spell ends immediately, wasting its mana and cooldown.",
+        "Voodoo Switcheroo cannot be canceled earlier, but it is dispellable. However, since Witch Doctor is invulnerable and hidden for the duration, most dispels cannot target him. Only continuous dispels such as Demonic Purge and Nullify can remove the ability if the debuff was applied before Voodoo Switcheroo was cast. In these cases, the ability ends immediately, wasting its mana and cooldown.",
         "However, since Witch Doctor is invulnerable and hidden for the duration, most dispels cannot target him.",
-        "Only continuous dispels such as Demonic Purge and Nullify can remove the spell if the debuff was applied before Voodoo Switcheroo was casted. In these cases, the spell ends immediately, wasting its mana and cooldown.",
-        "In these cases, the spell ends immediately, wasting its mana and cooldown.",
+        "Only continuous dispels such as Demonic Purge and Nullify can remove the ability if the debuff was applied before Voodoo Switcheroo was cast. In these cases, the ability ends immediately, wasting its mana and cooldown.",
+        "In these cases, the ability ends immediately, wasting its mana and cooldown.",
         "The Death Ward has its attack speed reduced by 30, attacking slower than a regular Death Ward cast.",
-        "With its 0.22 second attack rate and the 30 attack speed slow, it can attack up to 7 times.",
-        "Can deal up to 270.45\/429.55\/588.64 (TagTalent 461.36\/620.45\/779.55) damage per second to a single hero.",
-        "Can deal up to 595\/945\/1295 (TagTalent 1015\/1365\/1715) damage to a single hero (before reductions)."
+        "With its 0.22-second attack rate and the 30 attack speed slow, it can attack up to 7 times. Can deal up to 270.45\/445.45\/620.45 (TagTalent 461.36\/636.36\/811.36) damage per second to a single hero. Can deal up to 595\/980\/1365 (TagTalent 1015\/1400\/1785) damage to a single hero (before reductions).",
+        "Can deal up to 270.45\/445.45\/620.45 (TagTalent 461.36\/636.36\/811.36) damage per second to a single hero.",
+        "Can deal up to 595\/980\/1365 (TagTalent 1015\/1400\/1785) damage to a single hero (before reductions)."
       ],
-      "mana": "250",
+      "mana": "150",
       "hotKey": "D",
-      "cooldown": "70",
+      "cooldown": "40",
       "description": "Turns Witch Doctor into a Death Ward for 2 seconds. Death Ward has -30 Attack Speed. He is hidden during this time.",
       "spellName": "Voodoo Switcheroo",
       "params": [
@@ -197,23 +197,22 @@
         "It is also possible to stop the ward from attacking with S (only works when the auto-attack option is ◎ Never).",
         "Can only attack heroes, including clones and illusions, excluding creep-heroes.",
         "The damage source is the ward itself, meaning certain on-damage effects react on the ward rather than on Witch Doctor (e.g. Blade Mail).",
-        "With its 0.22 second attack rate, it can attack up to 37 times.",
-        "Can deal up to 386.36\/613.64\/840.91 (TagTalent 659.09\/886.36\/1113.64) damage per second to a single hero.",
-        "Can deal up to 3145\/4995\/6845 (TagTalent 5365\/7215\/9065) damage to a single hero (before reductions).",
-        "Death Ward's attack damage is not reduced by Damage Block.",
+        "With its 0.22-second attack rate, it can attack up to 37 times. Can deal up to 386.36\/636.36\/886.36 (TagTalent 659.09\/909.09\/1159.09) damage per second to a single hero. Can deal up to 3145\/5180\/7215 (TagTalent 5365\/7400\/9435) damage to a single hero (before reductions).",
+        "Can deal up to 386.36\/636.36\/886.36 (TagTalent 659.09\/909.09\/1159.09) damage per second to a single hero.",
+        "Can deal up to 3145\/5180\/7215 (TagTalent 5365\/7400\/9435) damage to a single hero (before reductions).",
+        "Death Ward's attack damage is not reduced by damage block.",
         "Provides 1200\/800 range ground vision for 5 seconds at its location after the channeling stops.",
-        "With Aghanim's Scepter, attacks from Death Ward have True Strike and bounce towards the closest enemy heroes within 650 range. Does not perform instant attacks. The bouncing projectiles are entirely spell-based. This means they do not trigger any attack modifier or on-hit effects, ignore evasion, and count as spell damage. However, damage block still affects them. The bouncing attacks deal damage based on the damage amount calculated for the leading attack upon attack begin. Does not bounce on invisible units or units in the Fog of War. One projectile can never hit the same unit twice.",
+        "With Aghanim's Scepter, attacks from Death Ward have True Strike and bounce towards the closest enemy heroes within 650 range. Does not perform instant attacks. The bouncing projectiles are entirely spell-based. This means they do not trigger any attack modifier or on-hit effects, ignore evasion, and count as spell damage. The damage can be further amplified by incoming damage amplification. However, damage block still affects them. The bouncing attacks deal damage based on the damage amount calculated for the leading attack upon attack begin. Does not bounce on invisible units or units in the Fog of War. One projectile can never hit the same unit twice.",
         "Does not perform instant attacks. The bouncing projectiles are entirely spell-based.",
         "This means they do not trigger any attack modifier or on-hit effects, ignore evasion, and count as spell damage.",
-        "However, damage block still affects them.",
+        "The damage can be further amplified by incoming damage amplification. However, damage block still affects them.",
         "The bouncing attacks deal damage based on the damage amount calculated for the leading attack upon attack begin.",
-        "Does not bounce on invisible units or units in the Fog of War. One projectile can never hit the same unit twice.",
-        "With Aghanim's Scepter, the Death Ward gains True Strike, so that it can no longer miss."
+        "Does not bounce on invisible units or units in the Fog of War. One projectile can never hit the same unit twice."
       ],
       "mana": "200",
       "hotKey": "R",
       "cooldown": "80",
-      "description": "Summons a deadly ward to attack enemy heroes within it's attack range. Lasts a maximum of 8 seconds.",
+      "description": "Summons a deadly ward to attack enemy heroes within its attack range. Lasts a maximum of 8 seconds.",
       "spellName": "Death Ward",
       "params": [
         "Cast Animation: 0.35+0",
@@ -226,7 +225,7 @@
       ],
       "itemBehaviour": [],
       "legacyKey": "D",
-      "story": "Witch Doctor performs a ritualistic dance, one that haunts the dreams of those who live to recount it."
+      "story": null
     }
   ],
   "mainAttributes": {

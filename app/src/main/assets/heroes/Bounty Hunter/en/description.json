@@ -21,7 +21,7 @@
         {
           "talentLvl": "10",
           "talentLeft": "+40 Jinada Damage",
-          "talentRight": "+2 Shadow Walk Slow Duration"
+          "talentRight": "+2s Shadow Walk Slow Duration"
         }
       ]
     },
@@ -34,19 +34,20 @@
       ],
       "notes": [
         "The shuriken travels at a speed of 1000.",
-        "The shuriken first applies the damage, the debuff and then the Jinada debuff.",
+        "The shuriken first applies the damage, then the debuff.",
         "The initial target does not have to be Tracked for the shuriken to bounce. Can only bounce to each tracked unit once. Cannot bounce to, but can bounce off of invulnerable or hidden units.",
         "Can only bounce to each tracked unit once.",
         "Cannot bounce to, but can bounce off of invulnerable or hidden units.",
-        "This is how much damage Shuriken Toss deals to Tracked targets on each level: Level 1: 112\/168\/224\/280 (TagTalent 182\/238\/294\/350) Level 2: 136\/204\/272\/340 (TagTalent 221\/289\/357\/425) Level 3: 160\/240\/320\/400 (TagTalent 260\/340\/420\/500)",
-        "Level 1: 112\/168\/224\/280 (TagTalent 182\/238\/294\/350)",
-        "Level 2: 136\/204\/272\/340 (TagTalent 221\/289\/357\/425)",
-        "Level 3: 160\/240\/320\/400 (TagTalent 260\/340\/420\/500)",
+        "This is how much damage Shuriken Toss deals to Tracked targets on each level: Level 1: 112\/168\/224\/280 (TagTalent 182\/238\/294\/350) damage. Level 2: 136\/204\/272\/340 (TagTalent 221\/289\/357\/425) damage. Level 3: 160\/240\/320\/400 (TagTalent 260\/340\/420\/500) damage.",
+        "Level 1: 112\/168\/224\/280 (TagTalent 182\/238\/294\/350) damage.",
+        "Level 2: 136\/204\/272\/340 (TagTalent 221\/289\/357\/425) damage.",
+        "Level 3: 160\/240\/320\/400 (TagTalent 260\/340\/420\/500) damage.",
         "",
         "The damage increasing talent immediately upgrades all of Bounty Hunter's currently flying shurikens.",
-        "With Aghanim's Scepter, Shuriken Toss applies the current level of Jinada on its target upon projectile impact. Shuriken Toss's Jinada is independent from the Jinada applied by attacks, ignoring its cooldown, and working even when dead. Does not use instant attacks to apply the Jinada. The effects are applied by Shuriken Toss itself. The Jinada damage is applied as spell damage in a separate damage instance, it is affected by spell damage amplification and works with spell lifesteal.",
-        "Shuriken Toss's Jinada is independent from the Jinada applied by attacks, ignoring its cooldown, and working even when dead.",
+        "With Aghanim's Scepter, Shuriken Toss applies the current level of Jinada on its target upon projectile impact. Jinada notes fully apply. If it is not leveled, it is not applied. Does not use instant attacks to apply the Jinada. The effects are applied by Shuriken Toss itself. Shuriken Toss' Jinada is independent from the Jinada applied by attacks, regardless of cooldown, and working even when dead. The Jinada damage is applied as spell damage in a separate damage instance, it is affected by spell damage amplification and works with spell lifesteal.",
+        "Jinada notes fully apply. If it is not leveled, it is not applied.",
         "Does not use instant attacks to apply the Jinada. The effects are applied by Shuriken Toss itself.",
+        "Shuriken Toss' Jinada is independent from the Jinada applied by attacks, regardless of cooldown, and working even when dead.",
         "The Jinada damage is applied as spell damage in a separate damage instance, it is affected by spell damage amplification and works with spell lifesteal."
       ],
       "mana": "50\/60\/70\/80",
@@ -69,7 +70,7 @@
       ],
       "itemBehaviour": [],
       "legacyKey": "T",
-      "story": "While the shuriken may be small, Gondar's precise aim can cause critical damage."
+      "story": null
     },
     {
       "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/d\/df\/Bounty_Hunter_Jinada.mp3\/revision\/latest?cb=20191216011329",
@@ -79,15 +80,16 @@
       ],
       "notes": [
         "Upon leveling Jinada the first time, it has Autocast on by default.",
+        "Despite being an active ability, Jinada can trigger while silenced, if set to Autocast.",
         "When off cooldown, Bounty Hunter's weapons emit particle effects.",
         "Checks its cooldown on attack begin, not on attack hit. This means Jinada does not apply when its cooldown finishes during the attack animation.",
         "This means Jinada does not apply when its cooldown finishes during the attack animation.",
-        "The bonus damage is granted as an attack damage bonus whenever the ability goes off cooldown, and is removed when going on cooldown.",
-        "Only steals unreliable gold, removing it from the target and adding it to his own unreliable gold. Steals gold only when attacking enemy heroes, including clones, excluding illusions. Bounty Hunter gains exactly how much the target loses.",
-        "Steals gold only when attacking enemy heroes, including clones, excluding illusions.",
+        "Grants regular flat bonus attack damage whenever the ability goes off cooldown, and the bonus is removed when going on cooldown.",
+        "Grants regular flat bonus attack damage whenever the ability goes off cooldown, and the bonus is removed when going on cooldown.",
+        "Only steals unreliable gold, removing it from the target and adding it to his own unreliable gold. Steals gold only when attacking enemy heroes (and clones), excluding illusions. Bounty Hunter gains exactly how much the target loses.",
+        "Steals gold only when attacking enemy heroes (and clones), excluding illusions.",
         "Bounty Hunter gains exactly how much the target loses.",
-        "When attacking any other unit (including buildings and wards), only the damage is applied, triggering the cooldown. Does not work against buildings when manually cast. Does not work against allies.",
-        "Does not work against buildings when manually cast.",
+        "When attacking any other unit (including buildings and wards), only the damage is applied, triggering the cooldown. Does not work against allies.",
         "Does not work against allies."
       ],
       "mana": null,
@@ -96,14 +98,14 @@
       "description": "Bounty Hunter plans his next hit, dealing bonus damage and stealing some unreliable gold.",
       "spellName": "Jinada",
       "params": [
-        "Attack Damage Bonus: 70\/100\/130\/160 (TagTalent 110\/140\/170\/200)",
+        "Attack Damage Bonus: 60\/100\/140\/180 (TagTalent 100\/140\/180\/220)",
         "Gold Stolen: 12\/20\/28\/36 (TagTalent 62\/70\/78\/86)",
-        "Prevents attacks from triggering Jinada. Does not stop Shuriken Toss from triggering Jinada.",
-        "Illusions permanently emit Jinada's weapon particles."
+        "Despite being an active ability, Jinada is disabled by Break. Does not stop Shuriken Toss from triggering Jinada",
+        "Jinada is always toggled on for illusions, but they cannot trigger it. Illusions permanently emit Jinada's weapon particles."
       ],
       "itemBehaviour": [],
       "legacyKey": "J",
-      "story": "Gondar's vast experience ensures he never walks away from a transaction empty-handed."
+      "story": null
     },
     {
       "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/6\/69\/Bounty_Hunter_Shadow_Walk.mp3\/revision\/latest?cb=20191216011331",
@@ -137,11 +139,11 @@
         "Slow Duration: 4 (TagTalent 6)",
         "Incoming Damage Reduction: 35%",
         "Stun Duration: 1",
-        "Shadow Walk now grants you 35% damage reduction while invisible. Attacking out of invisibility stuns the target for 1 second. Lowers cooldown by 5 seconds."
+        "Shadow Walk grants you 35% damage reduction while invisible. Attacking out of invisibility stuns the target for 1 second. Lowers cooldown by 5 seconds."
       ],
       "itemBehaviour": [],
       "legacyKey": "W",
-      "story": "The court jesters present during King Goff's assassination can recount no other image than a dancing shadow."
+      "story": null
     },
     {
       "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/2\/2a\/Bounty_Hunter_Track.mp3\/revision\/latest?cb=20191216011326",
@@ -181,12 +183,12 @@
         "Shuriken Toss Damage Multiplier: 1.4\/1.7\/2",
         "Aura Linger Duration: 0.5",
         "Duration: 30",
-        "Ally Move Speed Bonus: 70%\/85%\/100%",
+        "Ally Move Speed Bonus: 8%\/10%\/12%",
         "Vision Radius: 600"
       ],
       "itemBehaviour": [],
       "legacyKey": "R",
-      "story": "Using his elevated senses of sight and smell, Gondar's hits have quite a good chance of success."
+      "story": null
     }
   ],
   "mainAttributes": {
@@ -218,7 +220,7 @@
     {
       "talentLvl": "10",
       "talentLeft": "+40 Jinada Damage",
-      "talentRight": "+2 Shadow Walk Slow Duration"
+      "talentRight": "+2s Shadow Walk Slow Duration"
     }
   ]
 }

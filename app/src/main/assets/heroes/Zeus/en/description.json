@@ -9,7 +9,7 @@
         {
           "talentLvl": "25",
           "talentLeft": "+100 Arc Lightning Damage",
-          "talentRight": "325 AoE Lightning Bolt"
+          "talentRight": "325 AOE Lightning Bolt"
         },
         {
           "talentLvl": "20",
@@ -58,30 +58,27 @@
       ],
       "itemBehaviour": [],
       "legacyKey": "C",
-      "story": "Arc Lightning is Zeus' favorite spell to use against puny mortals."
+      "story": null
     },
     {
       "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/9\/91\/Zeus_Lightning_Bolt.mp3\/revision\/latest?cb=20191216030837",
       "effects": [
-        "Ability Target Point (TagAghanim Target Area)",
+        "Ability Target Point \/ Target Unit (TagAghanim Target Area)",
         "Affects Enemies",
         "Damage Magical"
       ],
       "notes": [
-        "When ground-targeted (or area-targeted) with no heroes within 325 radius, it still provides the 125\/200\/275\/350 range flying vision and True Sight.",
-        "The lightning first applies the damage, then the debuff.",
-        "When unit-targeted, vision and True Sight are provided at its position upon cast. The vision is stationary, it does not follow the unit.",
-        "When ground-targeted, Lightning Bolt does not require any vision or true sight to hit invisible or enemies in the Fog of War. With the cast range and search radius, a ground-targeted Lightning Bolt can hit an enemy hero up to 1025\/1075\/1125\/1175 range away. Only searches for enemy heroes, including illusions clones, and creep-heroes. Whichever is the closest to the center gets hit. When ground-targeted, the vision and True Sight is always centered on the targeted point, even if it found a target.",
-        "With the cast range and search radius, a ground-targeted Lightning Bolt can hit an enemy hero up to 1025\/1075\/1125\/1175 range away.",
-        "Only searches for enemy heroes, including illusions clones, and creep-heroes. Whichever is the closest to the center gets hit.",
-        "When ground-targeted, the vision and True Sight is always centered on the targeted point, even if it found a target.",
-        "The flying vision and True Sight last for 0.2 seconds. The True Sight is provided by an aura, and its debuff lingers for 0.5 seconds.",
-        "In order to hit a non-hero unit, it must be directly targeted.",
-        "The lightning particles and sound effect during the cast time are visible and audible to everyone.",
-        "The level 25 talent, adds a 325 radius to this ability, so that it cannot directly target units anymore. As long valid enemy targets are within radius, Lightning Bolt does not require any vision or true sight to hit invisible or enemies in the Fog of War. The visual effects on the ground which mark the effect radius are visible to everyone. Does not upgrade Nimbus's Lightning Bolt.",
-        "As long valid enemy targets are within radius, Lightning Bolt does not require any vision or true sight to hit invisible or enemies in the Fog of War.",
-        "The visual effects on the ground which mark the effect radius are visible to everyone.",
-        "Does not upgrade Nimbus's Lightning Bolt."
+        "Lightning Bolt first applies the damage, then the debuff.",
+        "When unit-targeted, the 750 range flying vision and True Sight are provided at the target's position upon cast. The vision is stationary and does not follow the target.",
+        "When ground-targeted, Lightning Bolt searches for any enemy unit within its area, prioritizing heroes (including illusions, clones, and creep-heroes). Chooses the closest target to the center. It does not require any vision or True Sight to hit invisible or enemies in the Fog of War. With the cast range and search radius, it can hit an enemy up to 1025\/1075\/1125\/1175 range away. When cast this way, the vision and True Sight is always centered on the targeted point, regardless of hitting a unit.",
+        "It does not require any vision or True Sight to hit invisible or enemies in the Fog of War.",
+        "With the cast range and search radius, it can hit an enemy up to 1025\/1075\/1125\/1175 range away.",
+        "When cast this way, the vision and True Sight is always centered on the targeted point, regardless of hitting a unit.",
+        "The flying vision and True Sight last for 5 seconds. The True Sight is provided by an aura, and its debuff lingers for 0.5 seconds.",
+        "The lightning particles and sound effects during the cast time are visible and audible to everyone.",
+        "With the level 25 talent, Lightning Bolt turns into an area-targeted ability, so that it cannot directly target units anymore. Lightning Bolt now hits every enemy units within the 325 search radius. Does not upgrade the Lightning Bolts of Nimbus.",
+        "Lightning Bolt now hits every enemy units within the 325 search radius.",
+        "Does not upgrade the Lightning Bolts of Nimbus."
       ],
       "mana": "120\/125\/130\/135",
       "hotKey": "W",
@@ -91,46 +88,43 @@
       "params": [
         "Cast Animation: 0.4+0.43",
         "Cast Range: 700\/750\/800\/850",
-        "Hero Search Radius: 325 (TagTalent 0)",
+        "Search Radius: 325",
         "Vision & True Sight Radius: 750",
         "Damage: 125\/200\/275\/350",
-        "Stun Duration: 0.2 (TagTalent 0.4)",
+        "Stun Duration: 0.3 (TagTalent 0.7)",
         "Vision & True Sight Duration: 5",
         "True Sight Linger Duration: 0.5",
-        "Effect Radius: 325",
         "Spell immune units are still revealed by the True Sight.",
-        "Mini-stun and damage are blocked when hit, no matter if directly targeted or not. Vision is only blocked when directly targeted."
+        "Mini-stun and damage are blocked when hit, no matter if directly targeted or not. Vision is only blocked when directly targeted. Despite removing unit-targeting, the talent does not affect the Spell Block interaction."
       ],
       "itemBehaviour": [],
       "legacyKey": "G",
-      "story": "A shocking punishment for rebellious heathen."
+      "story": null
     },
     {
       "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/7\/70\/Zeus_Static_Field_1.mp3\/revision\/latest?cb=20210103161946",
       "effects": [
         "Ability Passive (TagAghanim No Target)",
         "Affects Enemies (TagAghanim Self)",
-        "Damage Magical (TagAghanimHP Removal)"
+        "Damage Magical"
       ],
       "notes": [
-        "The damage from Static Field is flagged as HP Removal, so it does not trigger any on-damage effects.",
-        "Static Field only works with Zeus' abilities. It does not react on items, or on other units' abilities (e.g. in Ability Draft). Static Field always applies its damage before the triggering ability applies any of its effects. Arc Lightning applies Static Field's damage on each enemy it jumps on. Lightning Bolt (manually cast, and from Nimbus) applies Static Field's damage on whoever it hits, regardless of whether they were directly targeted or not. Thundergod's Wrath applies Static Field's damage on all hit enemies. If an enemy was not hit due to invisibility, they are not damaged.",
+        "Static Field only works with Zeus' abilities. It does not react on items or other abilities. Static Field always applies its damage before the triggering ability applies any of its effects. Arc Lightning applies Static Field's damage on each enemy units it bounces on. Manually casting Lightning Bolt (and from Nimbus) applies Static Field's damage on whoever it hits, regardless of whether they were unit-targeted or ground-targeted. Thundergod's Wrath applies Static Field's damage on all hit enemies, except invisible enemies. Neither works on Roshan, nor apply its damage if the ability is blocked by Spell Block sources.",
         "Static Field always applies its damage before the triggering ability applies any of its effects.",
-        "Arc Lightning applies Static Field's damage on each enemy it jumps on.",
-        "Lightning Bolt (manually cast, and from Nimbus) applies Static Field's damage on whoever it hits, regardless of whether they were directly targeted or not.",
-        "Thundergod's Wrath applies Static Field's damage on all hit enemies. If an enemy was not hit due to invisibility, they are not damaged.",
-        "If Arc Lightning or Lightning Bolt get blocked by Spell Block, Static Field damage is not applied.",
-        "Does not affect Roshan.",
-        "With Aghanim's Shard, Static Field turns into an active ability. The passive aura is still present. Interrupts Zeus' channeling abilites upon cast. When cast, it immediately applies Static Field's damage, as well as a movement speed slow on the closest enemy within 2000 radius. Also grants Zeus' 900 flying vision for 3 seconds. Can target any unit, but prioritizes heroes. Treats creep-heroes as heroes. Can target Roshan as well, but only applies the slow debuff on him. First applies the damage, then the slow debuff. When cast while stationary, Zeus jumps 250 range upwards. When cast while moving or while being moved, he leaps in an arc towards his facing direction with a length of 450 and height of 250. Zeus is not disabled during the jump and can still turn, attack, and cast abilities and items during it.",
-        "Interrupts Zeus' channeling abilites upon cast.",
-        "When cast, it immediately applies Static Field's damage, as well as a movement speed slow on the closest enemy within 2000 radius.",
-        "Also grants Zeus' 900 flying vision for 3 seconds.",
-        "Can target any unit, but prioritizes heroes. Treats creep-heroes as heroes.",
-        "Can target Roshan as well, but only applies the slow debuff on him.",
-        "First applies the damage, then the slow debuff.",
-        "When cast while stationary, Zeus jumps 250 range upwards.",
-        "When cast while moving or while being moved, he leaps in an arc towards his facing direction with a length of 450 and height of 250.",
-        "Zeus is not disabled during the jump and can still turn, attack, and cast abilities and items during it."
+        "Arc Lightning applies Static Field's damage on each enemy units it bounces on.",
+        "Manually casting Lightning Bolt (and from Nimbus) applies Static Field's damage on whoever it hits, regardless of whether they were unit-targeted or ground-targeted.",
+        "Thundergod's Wrath applies Static Field's damage on all hit enemies, except invisible enemies.",
+        "Neither works on Roshan, nor apply its damage if the ability is blocked by Spell Block sources.",
+        "With Aghanim's Shard, Static Field turns into an active ability. The passive component is still present. Interrupts Zeus' channeling abilities upon cast. Upon cast, provides 900 radius flying vision for 3 seconds. Static Field first applies the damage, then the slow debuff.",
+        "Interrupts Zeus' channeling abilities upon cast.",
+        "Upon cast, provides 900 radius flying vision for 3 seconds.",
+        "Static Field first applies the damage, then the slow debuff.",
+        "Upon cast, it immediately applies Static Field's damage, and the movement speed slow debuff on the closest enemy within 2000 radius. Can target any enemy units, but prioritizes heroes. Treats creep-heroes as heroes. Affects Roshan, but it only applies the movement speed slow on him. While not moving, Zeus jumps 250 range upwards upon cast. While moving or being moved, he leaps in an arc towards his facing direction with a length of 450 and height of 250 upon cast. Zeus is not disabled during the jump\/leap and can still turn, attack, and cast abilities and items during it. While in the air, other units can pass below him.",
+        "Can target any enemy units, but prioritizes heroes. Treats creep-heroes as heroes.",
+        "Affects Roshan, but it only applies the movement speed slow on him.",
+        "While not moving, Zeus jumps 250 range upwards upon cast.",
+        "While moving or being moved, he leaps in an arc towards his facing direction with a length of 450 and height of 250 upon cast.",
+        "Zeus is not disabled during the jump\/leap and can still turn, attack, and cast abilities and items during it. While in the air, other units can pass below him."
       ],
       "mana": "75",
       "hotKey": "E",
@@ -147,11 +141,11 @@
         "Leap Duration: 0.5",
         "Vision Radius: 900",
         "Vision Duration: 3",
-        "Static Field can be cast to perform a Heavenly Jump, shocking the closest visible enemy (TagTalentprioritizing heroes) within 2000 range, dealing Static Field damage to them and reducing their movement speed by 100% for 2.5 seconds. If Zeus is moving forward, he will jump towards that direction. Cooldown: 11. Manacost: 75."
+        "Static Field can be cast to perform a Heavenly Jump, shocking the closest visible enemy (TagTalentprioritizing heroes) within 2000 range, dealing Static Field damage to them and reducing their movement speed by 100% for 2.5 seconds. If Zeus was moving forward, he will jump towards that direction. Zeus gets 900 unobstructed vision around him for 3 seconds Cooldown: 11. Manacost: 75."
       ],
       "itemBehaviour": [],
       "legacyKey": "F",
-      "story": "The air crackles with static when the Thundergod walks the world."
+      "story": null
     },
     {
       "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/4\/4f\/Zeus_Nimbus_1.mp3\/revision\/latest?cb=20191216030841",
@@ -161,21 +155,20 @@
         "Damage Magical"
       ],
       "notes": [
-        "Requires Aghanim's Scepter to be unlocked. In Ability Draft, Nimbus can be unlocked by the player that drafted Thundergod's Wrath.",
-        "In Ability Draft, Nimbus can be unlocked by the player that drafted Thundergod's Wrath.",
-        "Casts regular Lightning Bolt based on its current level on the closest valid enemy target. This means it also applies the mini-stun and provides vision and True Sight around the target. It also means that the Nimbus does nothing if Lightning Bolt is not learned. The level 25 Lightning Bolt effect radius talent does not upgrade Nimbus' Lightning Bolt. In Ability Draft, Lightning Bolt must be drafted as well for the Nimbus to strike enemies with it.",
+        "Requires Aghanim's Scepter to be unlocked.",
+        "Casts regular Lightning Bolt based on its current level on the closest valid enemy target. This means it also applies the mini-stun and provides vision and True Sight around the target. Lightning Bolt notes fully apply. If it is not learned, nothing happens. The AoE Lightning Bolt talent does not affect Nimbus' Lightning Bolt.",
         "This means it also applies the mini-stun and provides vision and True Sight around the target.",
-        "It also means that the Nimbus does nothing if Lightning Bolt is not learned.",
-        "The level 25 Lightning Bolt effect radius talent does not upgrade Nimbus' Lightning Bolt.",
-        "In Ability Draft, Lightning Bolt must be drafted as well for the Nimbus to strike enemies with it.",
+        "Lightning Bolt notes fully apply. If it is not learned, nothing happens.",
+        "The AoE Lightning Bolt talent does not affect Nimbus' Lightning Bolt.",
         "The damage source is the Nimbus itself, meaning certain on-damage effects react on the Nimbus rather than on Zeus (e.g. Blade Mail). This also means that any outgoing damage amplification or damage reduction do not affect the Nimbus' bolt damage either. Despite this, the bolts still trigger Static Field on their targets, which is still sourced to Zeus, and thus affected by outgoing damage manipulation.",
         "This also means that any outgoing damage amplification or damage reduction do not affect the Nimbus' bolt damage either.",
         "Despite this, the bolts still trigger Static Field on their targets, which is still sourced to Zeus, and thus affected by outgoing damage manipulation.",
-        "Starts striking immediately upon cast if an enemy is within the area. Also strikes immediately when the last strike was longer than an interval ago and an enemy enters the area. Always strikes the closest valid target. There are no priorities. Cannot target wards or buildings. The Nimbus can strike invisible units and units inside the Fog of War. Can strike up to 12 times over its full duration, considering the default 2.5 strike interval.",
+        "Starts striking immediately upon cast if an enemy is within the radius. Also strikes immediately when the last strike was longer than an interval ago and an enemy enters the area. Always strikes the closest valid target. There are no priorities. Cannot target wards or buildings. The Nimbus can strike invisible units and units inside the Fog of War. Can strike up to 12 times over its full duration, considering the default 2.5 strike interval. The strike interval is not affected by any cooldown reduction and cooldown resets sources.",
         "Also strikes immediately when the last strike was longer than an interval ago and an enemy enters the area.",
         "Always strikes the closest valid target. There are no priorities. Cannot target wards or buildings.",
         "The Nimbus can strike invisible units and units inside the Fog of War.",
         "Can strike up to 12 times over its full duration, considering the default 2.5 strike interval.",
+        "The strike interval is not affected by any cooldown reduction and cooldown resets sources.",
         "The visual effects on the ground which mark the Nimbus' radius are visible to everyone."
       ],
       "mana": "325",
@@ -197,7 +190,7 @@
       ],
       "itemBehaviour": [],
       "legacyKey": "T",
-      "story": "Where the thunder god's ire grows, storm clouds quickly gather."
+      "story": null
     },
     {
       "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/b\/b9\/Zeus_Thundergod%27s_Wrath_1.mp3\/revision\/latest?cb=20191216030845",
@@ -209,15 +202,14 @@
       "notes": [
         "Only hits enemy heroes, including the Tempest Double, but excluding Meepo Clones, illusions and creep-heroes. Does not hit invulnerable or hidden enemies.",
         "Does not hit invulnerable or hidden enemies.",
-        "The damage cannot target invisible enemies, but the ability itself can. Thundergod's Wrath first applies its damage, then provides its vision and True Sight. This means if an invisible enemy is not revealed beforehand, it only applies the vision and True Sight around them, but not the damage.",
-        "Thundergod's Wrath first applies its damage, then provides its vision and True Sight.",
+        "Thundergod's Wrath first applies its damage, then provides its vision and True Sight. This means if an invisible enemy is not revealed beforehand, it only applies the vision and True Sight around them, but not the damage.",
         "This means if an invisible enemy is not revealed beforehand, it only applies the vision and True Sight around them, but not the damage.",
         "Thundergod's Wrath provides 500 radius flying vision and 900 radius True Sight around each struck hero. The vision and True Sight last for 3 seconds. The True Sight is provided by an aura, its debuff lingers for 0.5 seconds.",
         "The vision and True Sight last for 3 seconds.",
         "The True Sight is provided by an aura, its debuff lingers for 0.5 seconds.",
-        "Hitting all 5 enemy heroes collectively deals 1500\/2000\/2500 (TagTalent 2000\/2500\/3000) damage (before reductions).",
-        "The visuals and sound effects during the cast time are visible and audible to everyone. The sound upon cast is global. Enemies can hear it when they have vision over Zeus. Else they can only hear the local hit sound. Shifts the lighting of the whole map for a split second, which is also visible to everyone.",
-        "The sound upon cast is global. Enemies can hear it when they have vision over Zeus. Else they can only hear the local hit sound.",
+        "Hitting all 5 enemy heroes collectively deals 1500\/2125\/2750 (TagTalent 2000\/2625\/3250) damage (before reductions).",
+        "The visual and sound effects during the cast time are visible and audible to everyone. The sound effects upon cast is global. Enemies can hear it when they have vision over Zeus, else they can only hear the local hit sound. Shifts the lighting of the whole map for a split second, which is also visible to everyone.",
+        "The sound effects upon cast is global. Enemies can hear it when they have vision over Zeus, else they can only hear the local hit sound.",
         "Shifts the lighting of the whole map for a split second, which is also visible to everyone."
       ],
       "mana": "300\/400\/500",
@@ -230,7 +222,7 @@
         "Effect Radius: Global",
         "Vision Radius: 500",
         "True Sight Radius: 900",
-        "Damage: 300\/400\/500 (TagTalent 400\/500\/600)",
+        "Damage: 300\/425\/550 (TagTalent 400\/525\/650)",
         "Vision & True Sight Duration: 3",
         "True Sight Aura Linger Duration: 0.5",
         "Grants a new ability: Nimbus.",
@@ -238,7 +230,7 @@
       ],
       "itemBehaviour": [],
       "legacyKey": "W",
-      "story": "The Lord of Heaven smites all who oppose him, near or far."
+      "story": null
     }
   ],
   "mainAttributes": {
@@ -255,7 +247,7 @@
     {
       "talentLvl": "25",
       "talentLeft": "+100 Arc Lightning Damage",
-      "talentRight": "325 AoE Lightning Bolt"
+      "talentRight": "325 AOE Lightning Bolt"
     },
     {
       "talentLvl": "20",

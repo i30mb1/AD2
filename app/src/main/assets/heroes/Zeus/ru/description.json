@@ -58,7 +58,7 @@
       ],
       "itemBehaviour": [],
       "legacyKey": "C",
-      "story": "Любимый приём бога грома против жалких смертных."
+      "story": null
     },
     {
       "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/9\/91\/Zeus_Lightning_Bolt.mp3\/revision\/latest?cb=20191216030837",
@@ -99,7 +99,7 @@
       ],
       "itemBehaviour": [],
       "legacyKey": "G",
-      "story": "Ошеломляющее наказание для мятежных язычников."
+      "story": null
     },
     {
       "audioUrl": null,
@@ -144,7 +144,7 @@
       ],
       "itemBehaviour": [],
       "legacyKey": "F",
-      "story": "Когда владыка грома ступает по земле, даже воздух вокруг него искрится от напряжения."
+      "story": null
     },
     {
       "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/4\/4f\/Zeus_Nimbus_1.mp3\/revision\/latest?cb=20191216030841",
@@ -188,7 +188,7 @@
       ],
       "itemBehaviour": [],
       "legacyKey": "T",
-      "story": "Где гневается бог грома, вскоре собираются тучи."
+      "story": null
     },
     {
       "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/b\/b9\/Zeus_Thundergod%27s_Wrath_1.mp3\/revision\/latest?cb=20191216030845",
@@ -215,7 +215,7 @@
         "Радиус действия: Глобальный",
         "Радиус обзора: 500",
         "Радиус True Sight: 900",
-        "Урон: 300\/400\/500 (TagTalent 400\/500\/600)",
+        "Урон: 300\/425\/550 (TagTalent 400\/525\/650)",
         "Длительность обзора и True Sight: 3",
         "Длительность задержки ауры True Sight: 0,5",
         "Дарует новую способность: Nimbus.",
@@ -223,7 +223,7 @@
       ],
       "itemBehaviour": [],
       "legacyKey": "W",
-      "story": "Повелитель небес сокрушает всех, кто противостоит ему, независимо от того, близко или далеко они находятся."
+      "story": null
     }
   ],
   "mainAttributes": {

@@ -28,7 +28,7 @@
     {
       "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/f\/fe\/Earth_Spirit_Boulder_Smash_1.mp3\/revision\/latest?cb=20191216012735",
       "effects": [
-        "Ability Target Point \/ Target Unit",
+        "Ability Target Point \/ Target Unit (TagAghanim No Target)",
         "Affects Enemies \/ Allies",
         "Damage Magical"
       ],
@@ -50,10 +50,10 @@
         "He walks up until the target is within 150 range and smashes it towards the direction he approached the target from.",
         "If he meets a remnant while walking up to the target, he smashes the remnant towards the targeted unit instead.",
         "Cannot be cast on allies who have ☐ Disabled Help from Earth Spirit.",
-        "Boulder Smash first applies the damage, then the knockback debuff. Smashed remnants first applies the damage, then the slow debuff. The slow is applied to all enemy units within the radius of a smashed remnant. A smashed unit is not and does not slow.",
-        "The slow is applied to all enemy units within the radius of a smashed remnant. A smashed unit is not and does not slow.",
-        "Damage is applied to all enemy units within the radius of a smashed Stone Remnant or smashed unit. The smashed enemy is damaged instantly on cast. Smashed allies are not damaged.",
-        "The smashed enemy is damaged instantly on cast.",
+        "Boulder Smash first applies the damage, then the knockback debuff. Smashed remnants first apply the damage, then the slow debuff. The movement speed slow is applied to all enemy units within the radius of a smashed remnant. A smashed unit is not slowed and does not slow.",
+        "The movement speed slow is applied to all enemy units within the radius of a smashed remnant. A smashed unit is not slowed and does not slow.",
+        "Damage is applied to all enemy units within the radius of a smashed Stone Remnant or smashed unit. The smashed enemy is damaged instantly upon cast. Smashed allies are not damaged.",
+        "The smashed enemy is damaged instantly upon cast.",
         "Smashed allies are not damaged.",
         "Smashed units are not disabled during the knockback, and are able to act freely during it. Does not interrupt channeling abilities.",
         "Cannot be cast on ancient creeps.",
@@ -82,7 +82,7 @@
       ],
       "itemBehaviour": [],
       "legacyKey": "D",
-      "story": "It is with the power of a mountain that Earth Spirit strikes his enemies."
+      "story": null
     },
     {
       "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/2\/28\/Earth_Spirit_Rolling_Boulder_1.mp3\/revision\/latest?cb=20191216012726",
@@ -102,9 +102,9 @@
         "When colliding with an enemy hero, Earth Spirit is placed 80 range away from them, on the opposite side he collided into them from.",
         "Does not affect invulnerable units and heroes. Cannot collide with invulnerable heroes. Fully affects invisible units.",
         "Can move Earth Spirit over impassable terrain. Destroys trees Earth Spirit collides with while rolling.",
-        "Rolling Boulder is canceled when Earth Spirit gets stunned, cycloned, hexed, slept, hidden, feared, hypnotized or hit by Forced Movement at any time during it. It is not canceled by taunts. Instead, Earth Spirit starts attacking the taunting unit once the rolling stops. Non-disabling forced movement does not cancel it when applied while stationary, but does once the rolling begins.",
+        "Rolling Boulder is canceled when Earth Spirit gets stunned, cycloned, hexed, slept, hidden, feared, hypnotized or hit by Forced Movement at any time during it. It is not canceled by taunts. Instead, Earth Spirit starts attacking the taunting unit once the rolling stops. Non-disabling forced movement does not cancel Rolling Boulder when applied while he is stationary, but does once the rolling begins.",
         "It is not canceled by taunts. Instead, Earth Spirit starts attacking the taunting unit once the rolling stops.",
-        "Non-disabling forced movement does not cancel it when applied while stationary, but does once the rolling begins."
+        "Non-disabling forced movement does not cancel Rolling Boulder when applied while he is stationary, but does once the rolling begins."
       ],
       "mana": "50",
       "hotKey": "W",
@@ -126,7 +126,7 @@
       ],
       "itemBehaviour": [],
       "legacyKey": "F",
-      "story": "Calling upon his connection to the land, the Earth Spirit draws loose stone to him, which forms a protective ball that he can use to roll short distances."
+      "story": null
     },
     {
       "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/1\/1a\/Earth_Spirit_Geomagnetic_Grip_1.mp3\/revision\/latest?cb=20191216012714",
@@ -136,19 +136,19 @@
         "Damage Magical"
       ],
       "notes": [
-        "When targeting ground, a Stone Remnant within 180 radius of the targeted point is pulled. When no Stone Remnants are within the range, nothing happens. The ability is not cast.",
-        "When no Stone Remnants are within the range, nothing happens. The ability is not cast.",
-        "In order to pull a unit, it has to be targeted directly. Cannot target allied heroes, including creep-heroes. With the level 25 talent, Geomagnetic Grip can target allied heroes and creep-heroes.",
+        "When ground-targeted, a Stone Remnant within 180 radius of the targeted point is pulled. When no Stone Remnants are within the range, the ability is not cast, and nothing happens.",
+        "When no Stone Remnants are within the range, the ability is not cast, and nothing happens.",
+        "In order to pull a unit, it has to be unit-targeted. Cannot target allied heroes, including creep-heroes. With the level 25 talent, Geomagnetic Grip can target allied heroes and creep-heroes.",
         "With the level 25 talent, Geomagnetic Grip can target allied heroes and creep-heroes.",
         "Silence is applied to all enemy units within the radius of a pulled unit or remnant.",
         "Damage is applied to all enemy units within the radius of a pulled Stone Remnant. A pulled unit is not damaged and does no damage.",
-        "Targeted units are not disabled during the pull. They are able to turn, attack, cast abilities and use items. Geomagnetic Grip does not interrupt the target's channeling abilities. Destroys trees within 200 radius around the targeted unit during the pull.",
+        "Targeted units are not disabled during the pull. They are able to turn, attack, cast abilities, and use items. Geomagnetic Grip does not interrupt the target's channeling abilities. Destroys trees within 200 radius around the targeted unit during the pull.",
         "Geomagnetic Grip does not interrupt the target's channeling abilities.",
         "Destroys trees within 200 radius around the targeted unit during the pull.",
         "Geomagnetic Grip does not pull the target if it is affected by Black Hole, Chronosphere, Duel, or Flaming Lasso. In the last two cases, it does not even pull the target if it is affected by Enchant Remnant.",
         "In the last two cases, it does not even pull the target if it is affected by Enchant Remnant.",
         "The pulled remnant first applies the debuff, then the damage.",
-        "When cast on allies or Stone Remnants affected by Boulder Smash, the smash gets canceled out by the grip.",
+        "When cast on allies or Stone Remnants affected by Boulder Smash, the smash will be canceled out by the grip.",
         "Can move allies and Stone Remnants over impassable terrain."
       ],
       "mana": "100",
@@ -169,7 +169,7 @@
       ],
       "itemBehaviour": [],
       "legacyKey": "R",
-      "story": "Like calls to like. Even the minerals found in the blood and bones of living beings are not immune to the call of the Earth Spirit."
+      "story": null
     },
     {
       "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/b\/b8\/Earth_Spirit_Stone_Remnant_1.mp3\/revision\/latest?cb=20191216012730",
@@ -177,8 +177,7 @@
         "Ability Target Point"
       ],
       "notes": [
-        "This is an innate ability and does not need to be skilled. In Ability Draft, Stone Remnant is bound to Magnetize, and is granted to the player that drafts it.",
-        "In Ability Draft, Stone Remnant is bound to Magnetize, and is granted to the player that drafts it.",
+        "This is an innate ability and does not need to be learned.",
         "Earth Spirit begins the game with all 7 charges.",
         "↓↓ Double-tapping places a Stone Remnant 100 range in front of Earth Spirit.",
         "It is possible to have up to 7 (TagTalent 13) remnants when placing all 7 (TagTalent 11) remnants at once, and then every time after the 20 seconds recharge.",
@@ -187,9 +186,9 @@
         "Rolling Boulder destroys them instantly.",
         "An enemy Rubick can make use of the same remnants when stealing and using one of Earth Spirit's abilities.",
         "Stone Remnants can be seen through the Fog of War by all players.",
-        "Enemies can also see and hear the following effects through the Fog of War: Stone Remnants being smashed by Boulder Smash. Stone Remnants being consumed by Rolling Boulder to roll farther. Stone Remnants being pulled by Geomagnetic Grip.",
+        "Enemies can also see and hear the following effects through the Fog of War: Stone Remnants being smashed by Boulder Smash. Stone Remnants being collided by Rolling Boulder to roll farther. Stone Remnants being pulled by Geomagnetic Grip.",
         "Stone Remnants being smashed by Boulder Smash.",
-        "Stone Remnants being consumed by Rolling Boulder to roll farther.",
+        "Stone Remnants being collided by Rolling Boulder to roll farther.",
         "Stone Remnants being pulled by Geomagnetic Grip.",
         "With Aghanim's Shard, Stone Remnant provides ground vision. Instantly grants 4 charges upon acquiring Aghanim's Shard. Alt creates a range indicator around all Stone Remnants, showing their vision range.",
         "Instantly grants 4 charges upon acquiring Aghanim's Shard.",
@@ -212,7 +211,7 @@
       ],
       "itemBehaviour": [],
       "legacyKey": "E",
-      "story": "Earth Spirit calls forth a remnant of his stone army, long buried with him in the dark embrace of the Earth."
+      "story": null
     },
     {
       "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/b\/b1\/Earth_Spirit_Enchant_Remnant.mp3\/revision\/latest?cb=20191216012740",
@@ -222,20 +221,21 @@
         "Damage Magical"
       ],
       "notes": [
-        "Requires Aghanim's Scepter to be unlocked. In Ability Draft, Enchant Remnant can be unlocked by the player that drafted Magnetize.",
-        "In Ability Draft, Enchant Remnant can be unlocked by the player that drafted Magnetize.",
-        "Can be cast on any hero, allied and enemies. Can be cast on illusions and clones, but not on creep-heroes. ↓↓ Double-tapping automatically target self. When Earth Spirit is enchanted, Boulder Smash turns into a non-targeted ability and automatically casts on himself when used.",
+        "Requires Aghanim's Scepter to be unlocked.",
+        "Can be cast on any hero, illusions and clones, allied or enemies, except on creep-heroes. ↓↓ Double-tapping automatically target self.",
         "↓↓ Double-tapping automatically target self.",
-        "When Earth Spirit is enchanted, Boulder Smash turns into a non-targeted ability and automatically casts on himself when used.",
         "Provides True Sight over the target for the full duration.",
-        "An enchanted hero is fully disabled, invulnerable and reacts on Earth Spirit's abilities just like a regular Stone Remnant. Boulder Smash: Enchanted heroes are knocked back for 2000 (TagTalent 2300) distance and slow and damage enemies they collide with. Rolling Boulder: Enchanted heroes boost the rolling, ending the enchantment early. Earth Spirit does not collide with them. Geomagnetic Grip: Enchanted heroes are pulled at a speed of 900 and apply the damage. Can pull enchanted enemies. Magnetize: Enchanted heroes receive, refresh and spread Magnetize when within its stone search radius.",
-        "Boulder Smash: Enchanted heroes are knocked back for 2000 (TagTalent 2300) distance and slow and damage enemies they collide with.",
-        "Rolling Boulder: Enchanted heroes boost the rolling, ending the enchantment early. Earth Spirit does not collide with them.",
-        "Geomagnetic Grip: Enchanted heroes are pulled at a speed of 900 and apply the damage. Can pull enchanted enemies.",
-        "Magnetize: Enchanted heroes receive, refresh and spread Magnetize when within its stone search radius.",
-        "If the enchantment expires during Boulder Smash, the unit still moves the full distance, but stops applying the slow. If the enchantment expires while an enemy is being smashed back, they take the boulder smash damage, but are not slowed.",
-        "If the enchantment expires while an enemy is being smashed back, they take the boulder smash damage, but are not slowed.",
-        "If the enchantment expires during Geomagnetic Grip, it still is pulled at the higher speed, but stops applying the damage.",
+        "An enchanted hero is fully disabled, invulnerable and interacts with Earth Spirit's abilities just like a regular Stone Remnant would. Stone Remnant notes fully apply.",
+        "For Boulder Smash: Enchanted heroes are knocked back for 2000 (TagTalent 2300) distance, slowing and damaging enemies they collide with. If the enchantment expires during Boulder Smash, the unit still moves the full distance but stops applying the movement speed slow. If the enchantment expires while an enemy is being smashed back, they take the damage but are not slowed. When Earth Spirit is enchanted, Boulder Smash turns into a non-targeted ability and automatically casts on himself when used.",
+        "Enchanted heroes are knocked back for 2000 (TagTalent 2300) distance, slowing and damaging enemies they collide with.",
+        "If the enchantment expires during Boulder Smash, the unit still moves the full distance but stops applying the movement speed slow.",
+        "If the enchantment expires while an enemy is being smashed back, they take the damage but are not slowed.",
+        "When Earth Spirit is enchanted, Boulder Smash turns into a non-targeted ability and automatically casts on himself when used.",
+        "For Rolling Boulder: Enchanted heroes double the rolling distance, ending the enchantment early. Earth Spirit does not collide with them.",
+        "For Geomagnetic Grip: Enchanted heroes (allied and enemy) are pulled at a speed of 900 and apply the damage. If the enchantment expires during Geomagnetic Grip, it still is pulled at a speed of 900 but stops applying the damage.",
+        "Enchanted heroes (allied and enemy) are pulled at a speed of 900 and apply the damage.",
+        "If the enchantment expires during Geomagnetic Grip, it still is pulled at a speed of 900 but stops applying the damage.",
+        "For Magnetize: Enchanted heroes receive, refresh and spread Magnetize when within its stone search radius.",
         "Can be cast on Stone Remnants as well, using the lower cooldown when doing so. The Stone Remnant cannot expire while affected by Enchant Remnant. However, it gets destroyed once Enchant Remnant expires on it.",
         "The Stone Remnant cannot expire while affected by Enchant Remnant. However, it gets destroyed once Enchant Remnant expires on it.",
         "The area damage at the end hits all enemies, not just heroes."
@@ -243,7 +243,7 @@
       "mana": "150",
       "hotKey": "F",
       "cooldown": "45\/5",
-      "description": "Earth Spirit temporarily enchants a hero, granting them the properties of a Stone Remnant. After 3 seconds the remnant shatters, releasing the hero and damaging nearby enemies. Can be used on Earth Remnants. Has a 5 second cooldown when used that way.",
+      "description": "Earth Spirit temporarily enchants a hero, granting them the properties of a Stone Remnant. After 3 seconds the remnant shatters, releasing the hero and damaging nearby enemies. Can be used on Stone Remnants. Has a 5 second cooldown when used that way.",
       "spellName": "Enchant Remnant",
       "params": [
         "Cast Animation: 0.2+0.57",
@@ -255,7 +255,7 @@
       ],
       "itemBehaviour": [],
       "legacyKey": "W",
-      "story": "Kaolin uses the elemental power of the Earth to temporarily petrify living beings, so that they might be conscripted into his stone funerary army."
+      "story": null
     },
     {
       "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/4\/47\/Earth_Spirit_Magnetize_1.mp3\/revision\/latest?cb=20191216012717",
@@ -291,7 +291,7 @@
       ],
       "itemBehaviour": [],
       "legacyKey": "T",
-      "story": "At the Earth Spirit\u2019s call, the minerals in the blood and bones of his enemies rebel against the bodies they find themselves in."
+      "story": null
     }
   ],
   "mainAttributes": {

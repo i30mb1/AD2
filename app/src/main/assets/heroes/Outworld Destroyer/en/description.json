@@ -27,7 +27,7 @@
         },
         {
           "talentLvl": "10",
-          "talentLeft": "+15 Attack Speed",
+          "talentLeft": "+20 Attack Speed",
           "talentRight": "+200 Health"
         }
       ]
@@ -60,7 +60,7 @@
       ],
       "itemBehaviour": [],
       "legacyKey": "R",
-      "story": "Harbinger's outworldly knowledge allows it to tap into the ebb and flow of all spiritual energy, infusing it into his being."
+      "story": null
     },
     {
       "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/2\/20\/Outworld_Destroyer_Astral_Imprisonment.mp3\/revision\/latest?cb=20191216021424",
@@ -73,17 +73,18 @@
         "Astral Imprisonment fully disables the target and turns it invulnerable and hidden for its duration. Cannot be cast on allies who have ☐ Disabled Help from Outworld Destroyer. ↓↓ Double-tapping automatically targets self.",
         "Cannot be cast on allies who have ☐ Disabled Help from Outworld Destroyer.",
         "↓↓ Double-tapping automatically targets self.",
-        "Targeted allies are only put in the prison, without any of the other effects being applied on them.",
-        "If the target was an enemy, they get damaged at the end of the prison's duration.",
-        "If the target was an enemy hero (including illusions and clones, excluding creep-heroes), they also get a portion of their maximum mana stolen. Only reduces the target's maximum mana value. Their current mana value stays unchanged. This also goes for when the target gains their mana back. Only their max mana value is increased, the current mana value stays unchanged. This also goes for Outworld Destroyer. Only his max mana gets changed, with current mana staying the same. Outworld Destroyer gains a status buff that shows how much mana he currently acquired with Astral Imprisonment.",
+        "Targeted allies are imprisoned without any of the other effects being applied on them.",
+        "If the target is an enemy, they get damaged at the end of the imprisonment duration.",
+        "If the target is an enemy hero (including illusions and clones, excluding creep-heroes), they also get a portion of their maximum mana stolen. Only reduces the target's maximum mana value. Their current mana value stays unchanged. This also goes for when the target gains their mana back. Only their max mana value is increased, the current mana value stays unchanged. This also goes for Outworld Destroyer. Only his max mana gets changed, with current mana staying the same. Outworld Destroyer gains a status buff that shows how much mana he currently acquired with Astral Imprisonment. The target also gains a status debuff that shows how much mana they are currently missing.",
         "Only reduces the target's maximum mana value. Their current mana value stays unchanged.",
         "This also goes for when the target gains their mana back. Only their max mana value is increased, the current mana value stays unchanged.",
         "This also goes for Outworld Destroyer. Only his max mana gets changed, with current mana staying the same.",
         "Outworld Destroyer gains a status buff that shows how much mana he currently acquired with Astral Imprisonment.",
+        "The target also gains a status debuff that shows how much mana they are currently missing.",
         "The red ring expanding at the center of the visual effects indicates a fixed 4-second duration. The red ring is visible to allies only.",
-        "With Aghanim's Scepter, the area damage is applied regardless of the target's alliance.",
-        "With Aghanim's Shard, allows allied heroes to move during Astral Imprisonment. They are visible, but untargettable and can't perform any other actions",
-        "They are visible, but untargettable and can't perform any other actions"
+        "With Aghanim's Scepter, the area damage is applied at the end of the imprisonment duration regardless of the target's alliance.",
+        "With Aghanim's Shard, Astral Imprisonment no longer fully disables targeted allies and no longer hides their model. Instead, it slows their movement speed by 40%, turns them invulnerable and unselectable, and silences, mutes and disarms them.",
+        "Instead, it slows their movement speed by 40%, turns them invulnerable and unselectable, and silences, mutes and disarms them."
       ],
       "mana": "150",
       "hotKey": "W",
@@ -100,13 +101,13 @@
         "Damage Radius: 400",
         "Number of Charges: 2",
         "Charge Replenish Time: 12",
-        "Ally Move Speed: 40%",
+        "Ally Move Speed Slow: 40%",
         "Grants charges to Astral Imprisonment, increases damage by 140 and applies the damage in an area.",
-        "Grants an additional +5% mana capacity steal to Astral Imprisonment. Also allows allies to move at 60% movement speed during Astral Imprisonment."
+        "Grants an additional +5% Mana Capacity steal to Astral Imprisonment. Also allows allies to move at 60% movement speed during Astral Imprisonment (TagTalentthey are visible, but untargettable and can't perform any other actions)."
       ],
       "itemBehaviour": [],
       "legacyKey": "T",
-      "story": "Locked away in the pocket between this world and the Outworld, victims realize their infantile knowledge and mortality."
+      "story": null
     },
     {
       "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/2\/26\/Outworld_Destroyer_Essence_Flux_2.mp3\/revision\/latest?cb=20191216021427",
@@ -115,11 +116,10 @@
         "Affects Self"
       ],
       "notes": [
-        "Restores mana after the ability is cast.",
-        "Essence Flux does not proc on any item abilities.",
+        "Restores mana after other abilities are cast.",
+        "Does not proc on any item abilities.",
         "Essence Flux uses pseudo-random distribution.",
-        "On average, restores 6%\/9%\/12%\/15% of caster's maximum mana per cast. Keeps Outworld Devourer on average at 30%\/45%\/60%\/75% of max mana, assuming no other source of mana restoration.",
-        "Keeps Outworld Devourer on average at 30%\/45%\/60%\/75% of max mana, assuming no other source of mana restoration."
+        "On average, restores 9%\/12%\/15%\/18% of caster's maximum mana per cast."
       ],
       "mana": null,
       "hotKey": "E",
@@ -128,11 +128,11 @@
       "spellName": "Essence Flux",
       "params": [
         "Proc Chance: 30%",
-        "Passive Max Mana Restored: 20%\/30%\/40%\/50%"
+        "Max Mana Restored: 30%\/40%\/50%\/60%"
       ],
       "itemBehaviour": [],
       "legacyKey": "E",
-      "story": "The Outworld is awash in arcane energy, inclined to diffuse through any of Harbinger's rifts."
+      "story": null
     },
     {
       "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/0\/08\/Outworld_Destroyer_Sanity%27s_Eclipse.mp3\/revision\/latest?cb=20191216021429",
@@ -160,7 +160,7 @@
       ],
       "itemBehaviour": [],
       "legacyKey": "C",
-      "story": "When an Outworld crystal ruptures, cataclysmic energies are released, and the reverberations of this power are felt interdimensionally."
+      "story": null
     }
   ],
   "mainAttributes": {
@@ -191,7 +191,7 @@
     },
     {
       "talentLvl": "10",
-      "talentLeft": "+15 Attack Speed",
+      "talentLeft": "+20 Attack Speed",
       "talentRight": "+200 Health"
     }
   ]

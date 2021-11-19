@@ -2,7 +2,7 @@
   "abilities": [
     {
       "notes": [
-        "The intelligence talent effectively grants Oracle 144 mana, 0.6 mana regeneration, and 12 attack damage."
+        "The intelligence talent effectively grants Oracle 144 mana, 0.6 mana regeneration, and 12 main attack damage."
       ],
       "spellName": "Talent",
       "talents": [
@@ -37,23 +37,23 @@
       ],
       "notes": [
         "The projectile travels at a speed of 1000.",
-        "When targeting allies, the area effect is still applied to surrounding enemies. The ally only gets dispelled. Enemies in the area always get dispelled, while allies only get dispelled when targeted, so only one ally can be dispelled per cast. ↓↓ Double-tapping automatically targets self.",
-        "Enemies in the area always get dispelled, while allies only get dispelled when targeted, so only one ally can be dispelled per cast.",
+        "When targeting allies, the area effect is still applied to surrounding enemies. The ally only gets dispeled. Enemies in the area always get dispeled, while allies only get dispeled when targeted, so only one ally can be dispeled per cast. ↓↓ Double-tapping automatically targets self.",
+        "Enemies in the area always get dispeled, while allies only get dispeled when targeted, so only one ally can be dispeled per cast.",
         "↓↓ Double-tapping automatically targets self.",
         "Always dispels Fate's Edict on affected targets. With Aghanim's Scepter, Fate's Edict is only removed on enemies within the area.",
         "With Aghanim's Scepter, Fate's Edict is only removed on enemies within the area.",
         "Fortune's End first applies the dispel, then the debuff, then the damage.",
-        "Can directly be cast on invulnerable units, fully affecting them, though the damage gets negated by the invulnerability. Does not affect hidden targets. When the projectile connects with a spell immune, invulnerable, or hidden unit, it still affects other units within the radius, but not the main target. Can neither target, nor affect wards and buildings.",
-        "When the projectile connects with a spell immune, invulnerable, or hidden unit, it still affects other units within the radius, but not the main target.",
+        "Can directly be cast on invulnerable units, fully affecting them, though the damage gets negated by the invulnerability. Does not affect hidden targets. When the projectile connects with a spell immune, invulnerable, or hidden unit, it still affects other units within the radius, but the main target is not affected. Can neither target, nor affect wards and buildings.",
+        "When the projectile connects with a spell immune, invulnerable, or hidden unit, it still affects other units within the radius, but the main target is not affected.",
         "Can neither target, nor affect wards and buildings.",
         "Applies a visual effect on the targeted unit upon cast, indicating that it is directly targeted. This visual effect is visible to everyone. The sound during the channeling is audible to everyone as well.",
         "The sound during the channeling is audible to everyone as well.",
-        "The channeling is not canceled when the target turns spell immune, invisible, invulnerable, hidden, or dies. When the channeling is interrupted through disables, the projectile is released prematurely. The damage and dispel effect are static, only the root duration is based on the time spent channeling.",
+        "The channeling is not canceled when the target turns spell immune, invisible, invulnerable, hidden or dies. When the channeling is interrupted through disables, the projectile is released prematurely. The damage and dispel effect are static, only the root duration is based on the time spent channeling.",
         "When the channeling is interrupted through disables, the projectile is released prematurely.",
         "The damage and dispel effect are static, only the root duration is based on the time spent channeling.",
-        "The root duration starts at 0.5 (TagTalent 0.9) and increases by 0.08 for each 0.1 seconds channeled, reaching 2.5 (TagTalent 2.9) in 2.5 seconds. The instant Fortune's End talent removes the need for channeling and causes the projectile to be released instantly on maximum power. Selecting the talent while already channeling Fortune's End visually removes the channeling bar, but does not interefer with the cast in any way.",
+        "The root duration starts at 0.5 (TagTalent 0.9) and increases by 0.08 for each 0.1 seconds channeled, reaching 2.5 (TagTalent 2.9) in 2.5 seconds. The instant Fortune's End talent removes the need for channeling and causes the projectile to be released instantly on maximum power. Selecting the talent while already channeling Fortune's End visually removes the channeling bar, but does not interfere with the cast in any way.",
         "The instant Fortune's End talent removes the need for channeling and causes the projectile to be released instantly on maximum power.",
-        "Selecting the talent while already channeling Fortune's End visually removes the channeling bar, but does not interefer with the cast in any way.",
+        "Selecting the talent while already channeling Fortune's End visually removes the channeling bar, but does not interfere with the cast in any way.",
         "Fortune's End roots affected targets, preventing them from moving and casting certain mobility abilities. Provides True Sight over the targets, but only when the targets were not invisible or within a fade time upon hit.",
         "Provides True Sight over the targets, but only when the targets were not invisible or within a fade time upon hit."
       ],
@@ -75,7 +75,7 @@
       ],
       "itemBehaviour": [],
       "legacyKey": "T",
-      "story": "The astral orb crackles with power while raw energy lances out, temporarily disrupting an enemy's connection to their own body."
+      "story": null
     },
     {
       "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/3\/3a\/Oracle_Fate%27s_Edict.mp3\/revision\/latest?cb=20191216021405",
@@ -84,13 +84,14 @@
         "Affects Enemies \/ Allies"
       ],
       "notes": [
-        "Applies a disarm on the target and sets its magic resistance to 100%. ↓↓ Double-tapping automatically targets self.",
+        "Applies a disarm and sets the target's magic resistance to 100%. ↓↓ Double-tapping automatically targets self.",
         "↓↓ Double-tapping automatically targets self.",
         "Fate's Edict always places a debuff on the target, no matter it is an enemy or an ally. This means if cast on self or an ally, allies can dispel it, while enemies cannot. Vice versa, if cast on enemies, enemies can dispel it, while allies cannot.",
         "This means if cast on self or an ally, allies can dispel it, while enemies cannot.",
         "Vice versa, if cast on enemies, enemies can dispel it, while allies cannot.",
         "Fortune's End can always dispel the modifier, regardless of who the target is.",
-        "With Aghanim's Scepter, applies disarm to enemy targets only, and the magic resistance bonus to allied targets only. Immediately updates all existing modifiers on already affected units. Fate's Edict is now placed as a buff on allies. This means allies can no longer dispel it but enemies now can. Fortune\u2019s End does not dispel the positive modifier on allies\/self anymore.",
+        "With Aghanim's Scepter, Fate's Edict applies a disarm on enemy targets and sets its magic resistance to 0%. For allies, the magic resistance bonus is still applied, but the ability no longer disarms. Immediately updates all existing modifiers on already affected units. Fate's Edict is now placed as a buff on allies. This means allies can no longer dispel it but enemies now can. Fortune\u2019s End does not dispel the positive modifier on allies\/self anymore.",
+        "For allies, the magic resistance bonus is still applied, but the ability no longer disarms.",
         "Immediately updates all existing modifiers on already affected units.",
         "Fate's Edict is now placed as a buff on allies. This means allies can no longer dispel it but enemies now can.",
         "Fortune\u2019s End does not dispel the positive modifier on allies\/self anymore."
@@ -111,7 +112,7 @@
       ],
       "itemBehaviour": [],
       "legacyKey": "F",
-      "story": "An unbreakable prophecy resounds: a chosen ally shall briefly suffer no magics. Other kinds of suffering however..."
+      "story": null
     },
     {
       "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/0\/0c\/Oracle_Purifying_Flames.mp3\/revision\/latest?cb=20191216021409",
@@ -127,9 +128,9 @@
         "↓↓ Double-tapping automatically targets self.",
         "Multiple casts on the same target fully stack.",
         "Heals in 1-second intervals, starting 1 second after cast, resulting in 9 instances of heal.",
-        "Can heal up to 99\/198\/297\/396 health per cast Effectively heals up to 9\/18\/27\/36 health when considering the initial damage before reductions. With the enemy damage increasing talent, effectively deals up to 18\/36\/54\/72 damage when considering the initial damage before reductions.",
-        "Effectively heals up to 9\/18\/27\/36 health when considering the initial damage before reductions.",
-        "With the enemy damage increasing talent, effectively deals up to 18\/36\/54\/72 damage when considering the initial damage before reductions."
+        "Can heal up to 99\/198\/297\/396 health per cast Effectively heals up to 9\/18\/27\/36 health when considering the initial damage. With the enemy damage increasing talent, effectively deals up to 18\/36\/54\/72 damage when considering the initial damage (before reductions).",
+        "Effectively heals up to 9\/18\/27\/36 health when considering the initial damage.",
+        "With the enemy damage increasing talent, effectively deals up to 18\/36\/54\/72 damage when considering the initial damage (before reductions)."
       ],
       "mana": "80\/85\/90\/95",
       "hotKey": "E",
@@ -147,7 +148,7 @@
       ],
       "itemBehaviour": [],
       "legacyKey": "E",
-      "story": "Like a hall of mirrors might amplify the light of a single candle, the shattered walls of the universe can transform the light of prophecy into a burning torch."
+      "story": null
     },
     {
       "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/e\/e9\/Oracle_False_Promise_1.mp3\/revision\/latest?cb=20191216021412",
@@ -159,21 +160,21 @@
       "notes": [
         "Applies a strong dispel on the target upon cast. Can be cast on illusions and creep-heroes. ↓↓ Double-tapping automatically targets self.",
         "↓↓ Double-tapping automatically targets self.",
-        "False Promise fully negates damage after all reductions, causing several on-damage effects to not trigger.",
-        "False Promise has the second highest priority in the group of damage negating spells. It also negates healing effects. This means when combined with e.g. Aphotic Shield or Refraction, False Promise negates damage while the other sources do not. It has a lower priority than Borrowed Time, means Borrowed Time first turns damage into heal, and then it is blocked as heal by False Promise.",
-        "This means when combined with e.g. Aphotic Shield or Refraction, False Promise negates damage while the other sources do not.",
-        "It has a lower priority than Borrowed Time, means Borrowed Time first turns damage into heal, and then it is blocked as heal by False Promise.",
-        "As with all damage manipulating effects, False Promise only negates and delays the 3 damage types. It fully ignores HP Removal (except for Heartstopper Aura and Static Field).",
-        "Does not prevent instant killing effects like Culling Blade or Ice Blast.",
-        "Just like damage, False Promise also prevents the hero's health from increasing, with a few exceptions. Unlike negated damage, negates healing effects before any amplifications or reductions (e.g. Ghost Shroud and Ice Blast). Only actual heals are counted by False Promise. Other means of health increase are not counted, although may still be prevented (e.g. health gained from strength). Does not prevent the following spells from increasing the hero's health: Supernova, Soul Catcher, Sunder, Whirling Death, Decay, Time Lapse, Armlet of Mordiggian, and Essence Ring.",
-        "Unlike negated damage, negates healing effects before any amplifications or reductions (e.g. Ghost Shroud and Ice Blast).",
+        "False Promise fully negates damage (after all reductions), causing several on-damage effects to not trigger.",
+        "False Promise has the second highest priority in the group of damage negating abilities. It also negates healing effects. This means when combined with other damage negating effects (e.g. Aphotic Shield or False Promise), False Promise negates the damage while the others do not. It has a lower priority than Borrowed Time. If combined with Borrowed Time, it first turns damage into heal, and then it is blocked as heal by False Promise.",
+        "This means when combined with other damage negating effects (e.g. Aphotic Shield or False Promise), False Promise negates the damage while the others do not.",
+        "It has a lower priority than Borrowed Time. If combined with Borrowed Time, it first turns damage into heal, and then it is blocked as heal by False Promise.",
+        "As with all damage manipulating effects, False Promise only negates and delays all 3 damage types. It fully ignores HP Removal sources (except for Heartstopper Aura and Static Field).",
+        "Does not prevent instant killing effects (e.g. Culling Blade or Ice Blast).",
+        "Just like damage, False Promise also prevents the hero's health from increasing, with a few exceptions. Unlike negated damage, the ability negates healing effects before any amplifications or reductions (e.g. Ghost Shroud and Ice Blast). Only actual heals are counted by False Promise. Other means of health increase are not counted, although may still be prevented (e.g. health gained from strength). Does not prevent the following abilities from increasing the hero's health: Supernova, Soul Catcher, Sunder, Whirling Death, Decay, Time Lapse, Armlet of Mordiggian and Essence Ring.",
+        "Unlike negated damage, the ability negates healing effects before any amplifications or reductions (e.g. Ghost Shroud and Ice Blast).",
         "Only actual heals are counted by False Promise. Other means of health increase are not counted, although may still be prevented (e.g. health gained from strength).",
-        "Does not prevent the following spells from increasing the hero's health: Supernova, Soul Catcher, Sunder, Whirling Death, Decay, Time Lapse, Armlet of Mordiggian, and Essence Ring.",
-        "At the end of the duration, the target gets healed if the overall heal was higher, or damaged if the damage was higher. All healing received gets summed up into one instance and doubled. Then, the heal sum gets subtracted from each individual damage instance in order. This is repeated until either all damage instances are negated by the heal, or until the summed heal value depletes. If the heal sum depletes, then the remaining damage instances get applied in order. The damage is flagged as HP Removal. Therefore, if the target dies, the kill is credited to whoever's instance dealt the killing blow, which can be the first, last or any other instance in between. Non-lethal damage instances blocked during False Promise are still not lethal when re-applied at the end of the duration. If all damage instances get negated instead, the remaining heal sum gets applied as a single heal to the target. This heal is always credited to Oracle.",
+        "Does not prevent the following abilities from increasing the hero's health: Supernova, Soul Catcher, Sunder, Whirling Death, Decay, Time Lapse, Armlet of Mordiggian and Essence Ring.",
+        "At the end of the duration, the target gets healed if the overall heal was higher, or damaged if the damage was higher. All healing received gets summed up into one instance and doubled. Then, the heal sum gets subtracted from each individual damage instance in order. This is repeated until either all damage instances are negated by the heal, or until the summed heal value depletes. If the heal sum depletes, then the remaining damage instances get applied in order. The damage is flagged as HP Removal. Therefore, if the target dies, the kill is credited to whoever's instance that dealt the killing blow, which can be the first, last or any other instance in between. Non-lethal damage instances blocked during False Promise are still not lethal when re-applied at the end of the duration. If all damage instances get negated instead, the remaining heal sum gets applied as a single heal to the target. This heal is always credited to Oracle.",
         "All healing received gets summed up into one instance and doubled. Then, the heal sum gets subtracted from each individual damage instance in order.",
         "This is repeated until either all damage instances are negated by the heal, or until the summed heal value depletes.",
         "If the heal sum depletes, then the remaining damage instances get applied in order. The damage is flagged as HP Removal.",
-        "Therefore, if the target dies, the kill is credited to whoever's instance dealt the killing blow, which can be the first, last or any other instance in between.",
+        "Therefore, if the target dies, the kill is credited to whoever's instance that dealt the killing blow, which can be the first, last or any other instance in between.",
         "Non-lethal damage instances blocked during False Promise are still not lethal when re-applied at the end of the duration.",
         "If all damage instances get negated instead, the remaining heal sum gets applied as a single heal to the target. This heal is always credited to Oracle.",
         "Despite being HP Removal, Shallow Grave can still save the target from it and Borrowed Time still turns it into heals.",
@@ -181,8 +182,8 @@
         "Successive casts on the same target do not stack, but refresh the duration. The blocked heal and damage counters are not reset.",
         "If the accumulated damage exceeds the accumulated heal, the orb above the target glows red and emits fire, indicating it will receive damage.",
         "The False Promise armor talent Immediately updates all existing modifiers on already affected allies.",
-        "With Aghanim's Shard, grants the target invisibility with a 0.15-second fade delay. Attacking or casting spells or items breaks the invisibility and resets the fade delay.",
-        "Attacking or casting spells or items breaks the invisibility and resets the fade delay."
+        "With Aghanim's Shard, grants the target invisibility with a 0.15-second fade delay. Attacking, casting abilities or using items breaks the invisibility and resets the fade delay.",
+        "Attacking, casting abilities or using items breaks the invisibility and resets the fade delay."
       ],
       "mana": "100\/150\/200",
       "hotKey": "R",
@@ -200,7 +201,7 @@
       ],
       "itemBehaviour": [],
       "legacyKey": "R",
-      "story": "Foes and false prophets oft make lies of men's fates."
+      "story": null
     }
   ],
   "mainAttributes": {

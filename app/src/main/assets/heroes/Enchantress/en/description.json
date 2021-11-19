@@ -4,7 +4,7 @@
       "notes": [
         "The magic resistance talent stacks multiplicatively with other sources of magic resistance. Increases Enchantress's magic resistance to 32.5%.",
         "Increases Enchantress's magic resistance to 32.5%.",
-        "This attack damage talent is added as raw attack damage. Does not benefit illusions and is not affected by most percentage-based damage increasing or reducing effects.",
+        "This attack damage talent is added as bonus attack damage. Does not benefit illusions and is not affected by most percentage-based damage increasing or reducing effects.",
         "Does not benefit illusions and is not affected by most percentage-based damage increasing or reducing effects."
       ],
       "spellName": "Talent",
@@ -50,7 +50,7 @@
         "Impetus does not work against allied units, buildings or wards.",
         "The damage is capped at 1750 distance, which equates to 140\/210\/280\/350 (TagTalent 253.75\/323.75\/393.75\/463.75) damage."
       ],
-      "mana": "65",
+      "mana": "55",
       "hotKey": "Q",
       "cooldown": "6\/4\/2\/0",
       "description": "Places an enchantment on each attack while activated, causing it to deal additional damage based on how far away the target is. The farther the target, the greater the damage dealt.",
@@ -61,7 +61,7 @@
       ],
       "itemBehaviour": [],
       "legacyKey": "T",
-      "story": "While Aiushtha favors peaceful means, she is capable of a magical onslaught from a distance, her spears gaining energy from the natural life around her."
+      "story": null
     },
     {
       "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/8\/8f\/Enchantress_Enchant_1.mp3\/revision\/latest?cb=20191216013612",
@@ -73,19 +73,19 @@
         "Casting Enchant on heroes (including clones and the Vengeance Aura illusion) or creep-heroes slows them and applies a basic dispel on them (long sound is played).",
         "Enchant first applies the dispel, then the slow.",
         "Slowed units leave behind a trail of flowers as they move, which is only visible when the unit itself is visible.",
-        "Casting Enchant on any other enemy unit which is not a ward or building enchants it (short sound is played). This includes all other illusions. Enchant applies a basic dispel on the target which removes buffs and debuffs. The enchanted creep also gets fully healed. Its mana does not get restored.",
+        "Casting Enchant on any other enemy unit which is not a ward or building enchants it (short sound is played). This includes all other illusions. Enchant applies a basic dispel on the target which removes buffs and debuffs. The enchanted creep also gets fully healed and is granted regular flat bonus attack damage. However, its mana does not get restored.",
         "Enchant applies a basic dispel on the target which removes buffs and debuffs.",
-        "The enchanted creep also gets fully healed. Its mana does not get restored.",
+        "The enchanted creep also gets fully healed and is granted regular flat bonus attack damage. However, its mana does not get restored.",
         "Cannot be cast on ancient creeps, siege creeps, Necronomicon Warriors and Necronomicon Archers. With the level 20 talent, Enchant can target ancient creeps, but Roshan and creep-heroes tagged as ancient creeps are only slowed. Although Couriers can be targeted, it has no effect on them, wasting the mana and cooldown.",
         "With the level 20 talent, Enchant can target ancient creeps, but Roshan and creep-heroes tagged as ancient creeps are only slowed. Although Couriers can be targeted, it has no effect on them, wasting the mana and cooldown.",
         "Although Couriers can be targeted, it has no effect on them, wasting the mana and cooldown.",
-        "Enchanting a new creep kills the previous enchanted creep.",
+        "Enchanting a new creep instantly kills the previous enchanted creep.",
         "When an enchanted creep's duration ends, it dies instantly. The death is not credited to anyone so that no one gets experience from it."
       ],
       "mana": "40\/50\/60\/70",
       "hotKey": "W",
       "cooldown": "28\/24\/20\/16",
-      "description": "Enchantress charms an enemy. If the enemy is a hero, they are slowed. If the enemy is a creep, she brings it under her control.",
+      "description": "Enchantress charms an enemy. If the enemy is a hero, they are slowed. If the enemy is a creep, she brings it under her control, increasing its attack damage and max health.",
       "spellName": "Enchant",
       "params": [
         "Cast Animation: 0.3+0.67",
@@ -101,7 +101,7 @@
       ],
       "itemBehaviour": [],
       "legacyKey": "C",
-      "story": "A true steward of the forest, Aiushtha befriends all within it - from lowly trolls to powerful centaurs."
+      "story": null
     },
     {
       "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/9\/96\/Enchantress_Nature%27s_Attendants.mp3\/revision\/latest?cb=20191216013606",
@@ -142,7 +142,7 @@
       ],
       "itemBehaviour": [],
       "legacyKey": "R",
-      "story": "Whimsical spirits of the woods possess a healing power that is quite subtle, but gains strength in numbers."
+      "story": null
     },
     {
       "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/8\/85\/Enchantress_Sproink.mp3\/revision\/latest?cb=20191216013606",
@@ -152,17 +152,18 @@
         "Damage Instant Attack"
       ],
       "notes": [
-        "Requires Aghanim's Scepter to be unlocked. In Ability Draft, Sproink can be unlocked by the player that drafted Untouchable.",
-        "In Ability Draft, Sproink can be unlocked by the player that drafted Untouchable.",
+        "Requires Aghanim's Scepter to be unlocked.",
         "Sproink interrupts Enchantress' channeling abilities upon cast.",
         "Sproink disjoints projectiles upon cast.",
         "Leaps at a speed of 1250 for up to 0.4 seconds.",
         "Always leaps 180° away from the direction Enchantress is facing. Does not lock Enchantress' facing angle during the leap.",
         "Can leap over other units and over impassable terrain.",
-        "During Sproink, Enchantress can attack, cast abilities, and use items.",
-        "0.2 seconds in to the leap, Enchantress performs instant attacks on the furthest 3 enemies within the search radius. This means if the leap gets interrupted before that, the insant attacks do not happen. The search radius is based on Enchantress's attack range +200, resulting in a search radius of 775, considering her default attack range. Searches for enemies all around her, meaning it may target enemies behind Enchantress as well. These instant attacks can proc any attack modifiers and on-hit effects normally. They do not have True Strike, and are prevented by disarms. The instant attacks apply the current level of Impetus, regardless of whether it is currently castable or not. The Impetus applied by Sproink do not cost any mana.",
-        "This means if the leap gets interrupted before that, the insant attacks do not happen.",
-        "The search radius is based on Enchantress's attack range +200, resulting in a search radius of 775, considering her default attack range.",
+        "During Sproink, Enchantress can attack, cast abilities and use items.",
+        "0.2 seconds in to the leap, Enchantress performs instant attacks on the furthest 3 enemies within the search radius. This means if the leap gets interrupted before that, the instant attacks do not happen. The instant attacks are only performed if Impetus is learned. With Enchantress' base attack range and Sproink's attack range buffer, the ability has a search radius of 775. The search radius can be further increased by other attack range bonuses. Searches for enemies all around her, meaning it may target enemies behind Enchantress as well. These instant attacks can proc any attack modifiers and on-hit effects normally. They do not have True Strike, and are prevented by disarms. The instant attacks apply the current level of Impetus, regardless of whether it is currently castable or not. The Impetus applied by Sproink do not cost any mana.",
+        "This means if the leap gets interrupted before that, the instant attacks do not happen.",
+        "The instant attacks are only performed if Impetus is learned.",
+        "With Enchantress' base attack range and Sproink's attack range buffer, the ability has a search radius of 775.",
+        "The search radius can be further increased by other attack range bonuses.",
         "Searches for enemies all around her, meaning it may target enemies behind Enchantress as well.",
         "These instant attacks can proc any attack modifiers and on-hit effects normally. They do not have True Strike, and are prevented by disarms.",
         "The instant attacks apply the current level of Impetus, regardless of whether it is currently castable or not.",
@@ -182,7 +183,7 @@
       ],
       "itemBehaviour": [],
       "legacyKey": "F",
-      "story": "Sproink is as Sproink does."
+      "story": null
     },
     {
       "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/8\/8a\/Enchantress_Untouchable.mp3\/revision\/latest?cb=20191216013607",
@@ -213,7 +214,7 @@
       ],
       "itemBehaviour": [],
       "legacyKey": "N",
-      "story": "After attacking Aiushtha, most opponents are overwhelmed with guilt having attacked such a natural beauty."
+      "story": null
     }
   ],
   "mainAttributes": {

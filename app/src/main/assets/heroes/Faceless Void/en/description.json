@@ -20,7 +20,7 @@
         },
         {
           "talentLvl": "10",
-          "talentLeft": "+0.5 Time Walk Backtrack Duration",
+          "talentLeft": "+0.5s Time Walk Backtrack Duration",
           "talentRight": "+6 Time Dilation DPS per cooldown"
         }
       ]
@@ -36,14 +36,13 @@
         "Faceless Void is invulnerable during Time Walk.",
         "Does not disjoint projectiles upon cast.",
         "Does not travel the full distance, when targeting closer than the max distance.",
-        "Upon cast, any damage Faceless Void took in the last 2 2.5) seconds gets healed back up. This includes damage dealt by allies. Since it is a heal, it is fully affected by heal manipulation.",
+        "Upon cast, any damage Faceless Void took in the last 2 (TagTalent 2.5) seconds gets healed back up. This includes damage dealt by allies. Since it is a heal, it is fully affected by heal manipulation.",
         "Since it is a heal, it is fully affected by heal manipulation.",
-        "Backtracks the 3 damage types but not heals and HP Removal. This means it cannot backtrack abilities like Sunder, False Promise, Soul Ring and Armlet of Mordiggian.",
-        "This means it cannot backtrack abilities like Sunder, False Promise, Soul Ring and Armlet of Mordiggian.",
-        "Status buffs and debuffs, cooldowns and mana are completely unaffected.",
-        "With Aghanim's Scepter, Time Walk triggers Time Lock based on its current level on every enemy within 350 radius at the destination point. Does not perform instant attacks to trigger the Time Lock. Instead, the force proc modifier is placed on enemies, which makes Time Lock trigger on them. Dispelling this debuff does not remove the Time Lock stun, but it prevents the Time Lock instant attack from occuring.",
+        "Backtracks the 3 damage types, but not heals and HP Removal effects (e.g. Sunder, Soul Ring etc.).",
+        "Status buffs and debuffs, ability cooldowns and mana values are completely unaffected.",
+        "With Aghanim's Scepter, Time Walk triggers Time Lock based on its current level on every enemy within 350 radius at the destination point. Does not perform instant attacks to trigger the Time Lock. Instead, the force proc modifier is placed on enemies, which makes Time Lock trigger on them. Dispelling this debuff does not remove the Time Lock stun, but it prevents the Time Lock instant attack from occurring.",
         "Does not perform instant attacks to trigger the Time Lock. Instead, the force proc modifier is placed on enemies, which makes Time Lock trigger on them.",
-        "Dispelling this debuff does not remove the Time Lock stun, but it prevents the Time Lock instant attack from occuring."
+        "Dispelling this debuff does not remove the Time Lock stun, but it prevents the Time Lock instant attack from occurring."
       ],
       "mana": "40",
       "hotKey": "Q",
@@ -57,12 +56,12 @@
         "Backtracked Time: 2 (TagTalent 2.5)",
         "Time Lock Radius: 350",
         "Applies a Time Lock proc to all units at the landing destination.",
-        "Increases Time Walk cast range by 400. Grants a new ability: Reverse Time Walk.",
+        "Increases Time Walk cast range by 400. Grants a new sub-ability: Reverse Time Walk.",
         "Does not apply Time Lock on spell immune enemies."
       ],
       "itemBehaviour": [],
       "legacyKey": "W",
-      "story": "Darkterror tears a hole in time, passing through Claszureme, and appearing back in an instant."
+      "story": null
     },
     {
       "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/a\/a3\/Faceless_Void_Time_Dilation_1.mp3\/revision\/latest?cb=20191216013829",
@@ -85,9 +84,9 @@
         "6 Cooldowns: 420\/528\/648\/780 (TagTalent 672\/816\/972\/1140) damage and 60% (TagTalent 102%) movement speed slow.",
         "",
         "The damage per second and movement speed slow increasing talents do not update already existing debuffs on enemies.",
-        "The slow and damage per second have no stack limit. Each ability on cooldown adds a stack. Also counts the cooldown of hidden abilities, like Invoker's uninvoked abilities or Morph's copies. Rubick's stolen abilities which are on cooldown and already lost do not count, as they are not hidden, but removed.",
-        "Also counts the cooldown of hidden abilities, like Invoker's uninvoked abilities or Morph's copies.",
-        "Rubick's stolen abilities which are on cooldown and already lost do not count, as they are not hidden, but removed.",
+        "The slow and damage per second have no stack limit. Each ability on cooldown adds a stack. Also counts the cooldown of hidden abilities (e.g. acquired via Morph or previously Invoked abilities). Abilities acquired via Spell Steal which are on cooldown and already lost do not count, as they are not hidden, but removed.",
+        "Also counts the cooldown of hidden abilities (e.g. acquired via Morph or previously Invoked abilities).",
+        "Abilities acquired via Spell Steal which are on cooldown and already lost do not count, as they are not hidden, but removed.",
         "The debuff checks all cooldowns continuously, and adapts the slow and damage values and stack count immediately.",
         "Abilities affected by Time Dilation can still be reset (e.g. Refresher Orb).",
         "Multiple instances of Time Dilation do not stack, but refresh the duration."
@@ -108,7 +107,7 @@
       ],
       "itemBehaviour": [],
       "legacyKey": "R",
-      "story": "For those facing off against Darkterror, each moment seems to stretch into eternity."
+      "story": null
     },
     {
       "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/3\/36\/Faceless_Void_Time_Lock.mp3\/revision\/latest?cb=20191216013831",
@@ -118,8 +117,7 @@
         "Damage Magical \/ Instant Attack"
       ],
       "notes": [
-        "Does not stack with other bashes. The bash from Skull Basher and Abyssal Blade is completely disabled for Faceless Void. In Ability Draft, fully stacks with the bash from Skull Basher and Abyssal Blade.",
-        "In Ability Draft, fully stacks with the bash from Skull Basher and Abyssal Blade.",
+        "Does not stack with other bashes. The bash from Skull Basher and Abyssal Blade is completely disabled for Faceless Void.",
         "The proccing attack first applies the debuff, then its own damage.",
         "Time Lock works against allied units, but not against wards and buildings.",
         "Upon proccing, the stun debuff gets applied. 0.33 seconds later, the second attack, and the damage applies. The bash damage is dealt in a separate instance and is spell damage. It is not added as attack damage. This means the damage works with spell lifesteal and spell damage amplification, but not with lifesteal, crit, or cleave. The second attack is an instant attack, which can proc any attack modifiers except for cleave (including Time Lock itself) and on-hit effects normally. They do not have True Strike. Applies the instant attack first, then Time Lock's own damage.",
@@ -146,7 +144,7 @@
       ],
       "itemBehaviour": [],
       "legacyKey": "E",
-      "story": "The strike of the Faceless Void lands with dimension shifting force."
+      "story": null
     },
     {
       "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/1\/1d\/Faceless_Void_Time_Walk.mp3\/revision\/latest?cb=20191216013832",
@@ -155,10 +153,10 @@
         "Affects Self"
       ],
       "notes": [
-        "Requires Aghanim's Shard to be unlocked.",
-        "This ability stays inactive until Time Walk is cast and turns inactive again once 1.5 seconds pass. In Ability Draft, due to non-ultimate abilities being limited to one ability slot, Reverse Time Walk replaces Time Walk while castable, instead of being in a separate slot.",
-        "In Ability Draft, due to non-ultimate abilities being limited to one ability slot, Reverse Time Walk replaces Time Walk while castable, instead of being in a separate slot.",
-        "When cast, moves Faceless Void back to where he was as he cast Time Walk, using the same travel speed.",
+        "Requires Aghanim's Shard to be unlocked. Sub-abilities are automatically acquired (e.g. via Spell Steal or Morph) together with the main ability. If the caster does not have the required item, this sub-ability does nothing.",
+        "Sub-abilities are automatically acquired (e.g. via Spell Steal or Morph) together with the main ability. If the caster does not have the required item, this sub-ability does nothing.",
+        "This sub-ability stays inactive until Time Walk is cast and turns inactive again once 1.5 seconds pass.",
+        "Upon cast, moves Faceless Void back to where he was as he cast Time Walk, using the same travel speed.",
         "Does not reverse anything else. The health change are not reversed, and the Time Lock bash from the upgrade does not proc.",
         "If Time Walk was cast multiple times within 1.5 seconds, casting this moves Faceless Void back to where he was on the first cast."
       ],
@@ -190,9 +188,8 @@
         "While in the Chronosphere, Faceless Void and any units he controls are phased and hasted, meaning they cannot be slowed below the set value. With the level 20 talent, they all also gain 120 attack speed while inside. The attack speed increasing talent immediately upgrades all currently active Chronospheres, but not already placed buffs.",
         "With the level 20 talent, they all also gain 120 attack speed while inside.",
         "The attack speed increasing talent immediately upgrades all currently active Chronospheres, but not already placed buffs.",
-        "Faceless Void and illusions of him (be it his own, enemy or allied illusions) cannot be frozen by Chronospheres, regardless of source. This is innate to Faceless Void. However, the haste and phased movement is only provided to the caster and their units. In Ability Draft, Faceless Void keeps his innate immunity to Chronospheres, even when not drafting it.",
+        "Faceless Void and illusions of him (be it his own, enemy or allied illusions) cannot be frozen by Chronospheres, regardless of source. This is innate to Faceless Void. However, the haste and phased movement is only provided to the caster and their units.",
         "However, the haste and phased movement is only provided to the caster and their units.",
-        "In Ability Draft, Faceless Void keeps his innate immunity to Chronospheres, even when not drafting it.",
         "Provides flying vision and True Sight over the whole affected area for its duration.",
         "Cancels most sources of Forced Movement upon applying the disabling debuff on a unit.",
         "Units inside Chronosphere can be pulled out by various abilities. However, the following abilities or items cannot move units out of Chronosphere: Force Staff, Hurricane Pike, Psychic Headband, Telekinesis, Snowball and Geomagnetic Grip.",
@@ -215,7 +212,7 @@
       ],
       "itemBehaviour": [],
       "legacyKey": "C",
-      "story": "When a rift opens to Claszureme, all poor souls caught within will likely never return."
+      "story": null
     },
     {
       "audioUrl": null,
@@ -225,16 +222,15 @@
       ],
       "notes": [
         "Grants Faceless Void a chance to avoid damage completely.",
-        "Backtrack belongs to the group of damage negating effects. It is not evasion. This means it only negates damage, it does not evade any side effects of spells or attacks, like disables. When an attack has e.g. Mana Break and Backtrack triggers on the attack, the damage is avoided, but the mana burn still takes effect. This also means that True Strike or Accuracy does not stop Backtrack from avoiding attack damage. Evasion has priority over Backtrack. When evasion procs, Backtrack cannot proc on that attack.",
-        "This means it only negates damage, it does not evade any side effects of spells or attacks, like disables.",
-        "When an attack has e.g. Mana Break and Backtrack triggers on the attack, the damage is avoided, but the mana burn still takes effect.",
-        "This also means that True Strike or Accuracy does not stop Backtrack from avoiding attack damage.",
-        "Evasion has priority over Backtrack. When evasion procs, Backtrack cannot proc on that attack.",
-        "Backtrack has the third highest priority in the group of damage negating effects. This means when combined with e.g. Aphotic Shield or Refraction, Backtrack negates damage while the other sources do not.",
-        "This means when combined with e.g. Aphotic Shield or Refraction, Backtrack negates damage while the other sources do not.",
-        "As with all damage manipulating effects, Backtrack can negate all 3 damage types (Physical, Magical and Pure). Increases Faceless Void's effective health by an average of 25% against those damage types.",
+        "Backtrack fully negates damage (after all reductions), causing several on-damage effects to not trigger. It is not evasion. This means it only negates damage, it does not evade any side effects of abilities or attacks (e.g. stuns etc.). For example, an attack with attack modifiers hit Faceless Void, and Backtrack triggers on the attack, the damage is avoided while the attack modifier still takes effect. Therefore, True Strike or accuracy does not stop Backtrack from avoiding attack damage. However, evasion has priority over Backtrack. When evasion procs, Backtrack cannot proc on that attack.",
+        "This means it only negates damage, it does not evade any side effects of abilities or attacks (e.g. stuns etc.).",
+        "For example, an attack with attack modifiers hit Faceless Void, and Backtrack triggers on the attack, the damage is avoided while the attack modifier still takes effect.",
+        "Therefore, True Strike or accuracy does not stop Backtrack from avoiding attack damage.",
+        "However, evasion has priority over Backtrack. When evasion procs, Backtrack cannot proc on that attack.",
+        "Backtrack has the third highest priority in the group of damage negating effects. This means when combined with other damage negating effects (e.g. Aphotic Shield), Backtrack negates damage while the other sources do not.",
+        "This means when combined with other damage negating effects (e.g. Aphotic Shield), Backtrack negates damage while the other sources do not.",
+        "As with all damage manipulating effects, Backtrack can negate all 3 damage types, but not heals and HP Removal effects (e.g. Sunder, Soul Ring etc.). Increases Faceless Void's effective health by an average of 25% against those damage types.",
         "Increases Faceless Void's effective health by an average of 25% against those damage types.",
-        "Fully ignores damage which is flagged as HP Removal.",
         "Backtrack uses pseudo-random distribution."
       ],
       "mana": null,
@@ -278,7 +274,7 @@
     },
     {
       "talentLvl": "10",
-      "talentLeft": "+0.5 Time Walk Backtrack Duration",
+      "talentLeft": "+0.5s Time Walk Backtrack Duration",
       "talentRight": "+6 Time Dilation DPS per cooldown"
     }
   ]

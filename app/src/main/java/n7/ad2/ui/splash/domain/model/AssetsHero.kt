@@ -6,16 +6,14 @@ import com.squareup.moshi.JsonClass
 
 @JsonClass(generateAdapter = true)
 data class AssetsHeroList(
-        @Json(name = "heroes")
-        val heroes: List<AssetsHero> = listOf()
+    @Json(name = "heroes")
+    val heroes: List<AssetsHero> = listOf(),
 )
 
 @JsonClass(generateAdapter = true)
 data class AssetsHero(
-        @Json(name = "nameEng")
-        val name: String = "",
-        @Json(name = "assetsPath")
-        val assetsPath: String = "",
-        @Json(name = "mainAttr")
-        val mainAttr: String = ""
+    @Json(name = "name")
+    val name: String = "",
+    @Json(name = "mainAttribute")
+    val mainAttribute: String = "",
 )

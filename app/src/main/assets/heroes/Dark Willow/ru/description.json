@@ -10,7 +10,7 @@
         },
         {
           "talentLvl": "20",
-          "talentLeft": "-7 сек. перезарядки Bramble Maze",
+          "talentLeft": "−7 сек. перезарядки Bramble Maze",
           "talentRight": "+2 сек. действия Shadow Realm"
         },
         {
@@ -70,7 +70,7 @@
       ],
       "itemBehaviour": [],
       "legacyKey": "B",
-      "story": "Волшебный мир фей всегда рядом с вами - он лишь ждет, когда вы придёте..."
+      "story": null
     },
     {
       "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/5\/51\/Shadow_Realm.mp3\/revision\/latest?cb=20190530174715",
@@ -120,7 +120,7 @@
       ],
       "itemBehaviour": [],
       "legacyKey": "0",
-      "story": "То, что ты не видишь, наверняка тебе навредит."
+      "story": null
     },
     {
       "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/7\/70\/Cursed_Crown.mp3\/revision\/latest?cb=20171105022324",
@@ -154,7 +154,7 @@
       ],
       "itemBehaviour": [],
       "legacyKey": "C",
-      "story": "Тебя что, не предупреждали? Не заключай сделок с феями..."
+      "story": null
     },
     {
       "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/c\/cd\/Bedlam.mp3\/revision\/latest?cb=20171105022144",
@@ -199,7 +199,7 @@
       ],
       "itemBehaviour": [],
       "legacyKey": "D",
-      "story": "Прошу, не обижайся на Джекса. Просто ему очень нравится убивать."
+      "story": null
     },
     {
       "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/4\/40\/Terrorize.mp3\/revision\/latest?cb=20171105022430",
@@ -232,7 +232,7 @@
       ],
       "itemBehaviour": [],
       "legacyKey": "F",
-      "story": "Думаешь, ты знаешь, что такое настоящий страх? Ты не знаешь страха, если Джекс тебе незнаком..."
+      "story": null
     }
   ],
   "mainAttributes": {
@@ -253,7 +253,7 @@
     },
     {
       "talentLvl": "20",
-      "talentLeft": "-7 сек. перезарядки Bramble Maze",
+      "talentLeft": "−7 сек. перезарядки Bramble Maze",
       "talentRight": "+2 сек. действия Shadow Realm"
     },
     {

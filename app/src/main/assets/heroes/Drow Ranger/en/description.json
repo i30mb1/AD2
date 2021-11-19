@@ -79,7 +79,7 @@
       ],
       "itemBehaviour": [],
       "legacyKey": "R",
-      "story": "Ice-encased arrows pierce the silence, chilling their victims to the core."
+      "story": null
     },
     {
       "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/7\/71\/Drow_Ranger_Gust.mp3\/revision\/latest?cb=20191215202225",
@@ -98,7 +98,7 @@
         "When standing at the exact same location as Drow Ranger, no knockback occurs, since the formula then multiplies by 0, which results in 0 knockback.",
         "Since the knockback distances are the same on each level, and the knockback duration increases per level, the knockback speed gets lower on each level. Therefore, the maximum knockback speed is 750\/642.86\/562.5\/500, while the minimum speed is 1.67\/1.43\/1.25\/1.11.",
         "Therefore, the maximum knockback speed is 750\/642.86\/562.5\/500, while the minimum speed is 1.67\/1.43\/1.25\/1.11.",
-        "Can push units over impassable terrain. Any tree a knocked back unit collides with gets destroyed.",
+        "Can push units over impassable terrain. Destroys trees enemies come in contact with during the knockback.",
         "Units are not disabled during the knockback. They can still turn, attack and use items. Channeling items are not interrupted.",
         "Does not affect Roshan.",
         "With the level 10 talent, Gust also blinds enemies. Gust's blind uses pseudo-random distribution.",
@@ -122,7 +122,7 @@
       ],
       "itemBehaviour": [],
       "legacyKey": "E",
-      "story": "Traxex is rather fond of the tranquility of physical combat, calling on her Drow heritage to end the incantations of opposing magi."
+      "story": null
     },
     {
       "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/e\/ec\/Drow_Ranger_Multishot.mp3\/revision\/latest?cb=20191215202228",
@@ -143,13 +143,14 @@
         "Considering Drow Ranger's default attack range of 625, the cone has an end radius of 358.5.",
         "The arrows provide 100 radius flying vision around them as they travel.",
         "An enemy may only be hit one arrow per wave, so that up to 3 (TagTalent 5) arrows can hit the same enemy per cast.",
-        "Despite the appearance, Multishot does not use instant attacks. The arrows deal physical spell damage, with the damage based on Drow Ranger's average main attack damage (ignoring bonus damage). This means the arrows cannot proc any attack modifier or trigger any on-attack effects, but are affected by spell damage amplification and spell lifesteal. Despite not utilizing instant attacks, Multishot does not affect attack immune units at all, unlike other sources of spell damage.",
-        "The arrows deal physical spell damage, with the damage based on Drow Ranger's average main attack damage (ignoring bonus damage).",
+        "Despite the appearance, Multishot does not use instant attacks. The arrows deal physical spell damage, with the damage based on Drow Ranger's average main attack damage, plus Frost Arrows's damage. This means the arrows cannot proc any attack modifier or trigger any on-attack effects, but are affected by spell damage amplification and spell lifesteal. Despite not utilizing instant attacks, Multishot does not affect attack immune units at all, unlike other sources of spell damage.",
+        "The arrows deal physical spell damage, with the damage based on Drow Ranger's average main attack damage, plus Frost Arrows's damage.",
         "This means the arrows cannot proc any attack modifier or trigger any on-attack effects, but are affected by spell damage amplification and spell lifesteal.",
         "Despite not utilizing instant attacks, Multishot does not affect attack immune units at all, unlike other sources of spell damage.",
-        "The arrows first apply the Frost Arrows modifier based on its current level, and then the damage. If Frost Arrows is not leveled, the debuff is not applied. The bonus damage of Frost Arrows is not applied. The Frost Arrows applied by Multishot do not cost any mana. With Aghanim's Shard, the hypothermia debuff from fully works with Multishot.",
-        "If Frost Arrows is not leveled, the debuff is not applied. The bonus damage of Frost Arrows is not applied.",
+        "The arrows first apply the Frost Arrows modifier based on its current level, and then the damage. If Frost Arrows is not leveled, the debuff is not applied. The Frost Arrows applied by Multishot do not cost any mana. The Frost Arrows' damage is directly added to the main damage, and is affected by the damage percentage as well. It is not applied in a separate instance. With Aghanim's Shard, the hypothermia debuff from fully works with Multishot.",
+        "If Frost Arrows is not leveled, the debuff is not applied.",
         "The Frost Arrows applied by Multishot do not cost any mana.",
+        "The Frost Arrows' damage is directly added to the main damage, and is affected by the damage percentage as well. It is not applied in a separate instance.",
         "With Aghanim's Shard, the hypothermia debuff from fully works with Multishot."
       ],
       "mana": "50\/70\/90\/110",
@@ -172,7 +173,7 @@
       ],
       "itemBehaviour": [],
       "legacyKey": "T",
-      "story": "In the ranger's youth, learning to fire multiple arrows at once was considered a distracting frivolity. In the war of the Ancients, such technique has become strange necessity."
+      "story": null
     },
     {
       "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/6\/6c\/Drow_Ranger_Marksmanship.mp3\/revision\/latest?cb=20191215202226",
@@ -185,23 +186,22 @@
         "An icy particle effect is visible on Drow Ranger while Marksmanship is active.",
         "Checks for nearby enemy heroes (including invulnerable or hidden ones) in 0.1-second intervals and adapts the bonus accordingly.",
         "Does not react on the presence of illusions or creep-heroes.",
-        "The aura checks Drow Ranger's agility periodically and adapts the bonus agility instantly. The aura affects invulnerable, but not hidden allies. The aura's buff lingers for 0.5 seconds.",
+        "The aura checks Drow Ranger's agility periodically and adapts the bonus agility instantly. Its buff lingers for 0.5 seconds. The aura affects invulnerable, but not hidden allies.",
         "The aura affects invulnerable, but not hidden allies.",
-        "The aura's buff lingers for 0.5 seconds.",
         "When proccing, the attack deals damage ignoring their main armor. The attack also deals extra physical damage. The damage is dealt in one instance together with the attack damage, and counts as attack damage as well. It can lifesteal, but not crit. Proccing attacks have True Strike.",
         "The damage is dealt in one instance together with the attack damage, and counts as attack damage as well. It can lifesteal, but not crit.",
         "Proccing attacks have True Strike.",
         "Visually alters Drow Ranger's attack projectile when proccing. Has a lower priority than Desolator and Eye of Skadi's effects.",
-        "With Aghanim's Scepter, causes Drow Ranger to perform instant attacks on random enemies around the primary target. This means the splinters are regular attacks, using Drow Ranger's 1250 projectile speed and being disjointable. These instant attacks can proc any attack modifiers and on-hit effects normally (including Marksmanship). They do not have True Strike. However, the splinter attacks always use Drow Ranger's default attack projectile visual. The splinters are only released if the primary attack successfully hits a target. This means missed or disjointed attacks do not release any splinters. The splinters originate from the primary target's location, not Drow Ranger's location. Since the splinters are independent attacks, their damage does not depend on how much damage the primary target took. The damage penalty only applies to the attack damage and any bonuses. Damage dealt in separate instances is unaffected (e.g. Maelstrom). Attacks do not splinter to or from invisible, invulnerable, or hidden units. Attacks do not splinter to couriers, buildings, wards, allied units or units in the Fog of War, but can splinter off of them to nearby valid targets. Splinter attacks are not disabled by being within 400 range of an enemy hero.",
-        "This means the splinters are regular attacks, using Drow Ranger's 1250 projectile speed and being disjointable.",
+        "With Aghanim's Scepter, causes Drow Ranger to perform instant attacks on random enemies around the primary target. The splinters are regular attacks using Drow Ranger's 1250 projectile speed and being disjointable. These instant attacks can proc any attack modifiers and on-hit effects normally (including Marksmanship). They do not have True Strike. However, the splinter attacks always use Drow Ranger's default attack projectile visual.",
+        "The splinters are regular attacks using Drow Ranger's 1250 projectile speed and being disjointable.",
         "These instant attacks can proc any attack modifiers and on-hit effects normally (including Marksmanship). They do not have True Strike.",
         "However, the splinter attacks always use Drow Ranger's default attack projectile visual.",
-        "The splinters are only released if the primary attack successfully hits a target. This means missed or disjointed attacks do not release any splinters.",
+        "The splinters are only released if the primary attack successfully hits a target. This means missed or disjointed attacks do not release any splinters. The splinters originate from the primary target's location, not Drow Ranger's location. Since the splinters are independent attacks, their damage does not depend on how much damage the primary target took. The damage penalty only applies to the attack damage and any bonuses. Damage dealt in separate instances is unaffected (e.g. Maelstrom). Attacks do not splinter to\/from invisible, invulnerable, or hidden units. Attacks also do not splinter to couriers, buildings, wards, allied units or units in the Fog of War, but can splinter off of them to nearby valid targets. Splinter attacks are not disabled by being within 400 range of an enemy hero.",
         "The splinters originate from the primary target's location, not Drow Ranger's location.",
         "Since the splinters are independent attacks, their damage does not depend on how much damage the primary target took.",
         "The damage penalty only applies to the attack damage and any bonuses. Damage dealt in separate instances is unaffected (e.g. Maelstrom).",
-        "Attacks do not splinter to or from invisible, invulnerable, or hidden units.",
-        "Attacks do not splinter to couriers, buildings, wards, allied units or units in the Fog of War, but can splinter off of them to nearby valid targets.",
+        "Attacks do not splinter to\/from invisible, invulnerable, or hidden units.",
+        "Attacks also do not splinter to couriers, buildings, wards, allied units or units in the Fog of War, but can splinter off of them to nearby valid targets.",
         "Splinter attacks are not disabled by being within 400 range of an enemy hero.",
         "When Frost Arrows is set to Autocast, splintered attacks apply the current level of Frost Arrows hit enemies. The autocast check is performed when the splintered arrows successfully hit their targets. The Frost Arrows applied by the splintered attacks do not cost any mana. With Aghanim's Shard, the hypothermia debuff from fully works with the splintered attacks.",
         "The autocast check is performed when the splintered arrows successfully hit their targets.",
@@ -216,7 +216,7 @@
       "params": [
         "Enemy Hero Search Radius: 400",
         "Aura Radius: 1200",
-        "Agility as Ranged Agility Bonus: 25%\/35%\/45%",
+        "Agility as Ranged Agility Bonus: 30%\/40%\/50%",
         "Proc Chance: 20%\/30%\/40% (TagTalent 32%\/42%\/52%)",
         "Proc Damage: 40\/60\/80",
         "Aura Linger Duration: 0.5",
@@ -229,7 +229,7 @@
       ],
       "itemBehaviour": [],
       "legacyKey": "P",
-      "story": "The Drow Ranger is the epitome of archery prowess."
+      "story": null
     }
   ],
   "mainAttributes": {

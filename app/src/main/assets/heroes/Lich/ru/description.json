@@ -18,7 +18,7 @@
         },
         {
           "talentLvl": "15",
-          "talentLeft": "-3 сек. перезарядки Frost Blast",
+          "talentLeft": "−3 сек. перезарядки Frost Blast",
           "talentRight": "+0,5 сек действия Sinister Gaze"
         },
         {
@@ -60,7 +60,7 @@
       ],
       "itemBehaviour": [],
       "legacyKey": "V",
-      "story": "Маг льда Этриан не забыл даже простейших манипуляций со льдом."
+      "story": null
     },
     {
       "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/5\/59\/Lich_Frost_Shield_1.mp3\/revision\/latest?cb=20191216015320",
@@ -102,7 +102,7 @@
       ],
       "itemBehaviour": [],
       "legacyKey": "F",
-      "story": "Магия, которая защищала Этриана ещё в смертной жизни, с годами стала лишь морознее."
+      "story": null
     },
     {
       "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/3\/3e\/Lich_Sinister_Gaze.mp3\/revision\/latest?cb=20191216015322",
@@ -139,7 +139,7 @@
       ],
       "itemBehaviour": [],
       "legacyKey": "R",
-      "story": "Держи голову в холоде..."
+      "story": null
     },
     {
       "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/6\/6f\/Lich_Ice_Spire_1.mp3\/revision\/latest?cb=20201230173953",
@@ -170,7 +170,8 @@
         "Замедление передвижения: 30%",
         "Задержка перед эффектом: 0,5",
         "Длительность: 15",
-        "Замедление сохраняется, если было наложено до получения иммунитета к заклинаниям."
+        "Замедление сохраняется, если было наложено до получения иммунитета к заклинаниям.",
+        ""
       ],
       "itemBehaviour": [],
       "legacyKey": "E",
@@ -224,7 +225,7 @@
       ],
       "itemBehaviour": [],
       "legacyKey": "C",
-      "story": "Ледяной шар Этриана повсеместно считается вершиной мастерства в магии льда, вгоняя страх в любого, кто осмелится встать на пути колдуна."
+      "story": null
     }
   ],
   "mainAttributes": {
@@ -250,7 +251,7 @@
     },
     {
       "talentLvl": "15",
-      "talentLeft": "-3 сек. перезарядки Frost Blast",
+      "talentLeft": "−3 сек. перезарядки Frost Blast",
       "talentRight": "+0,5 сек действия Sinister Gaze"
     },
     {

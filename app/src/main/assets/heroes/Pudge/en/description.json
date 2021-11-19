@@ -15,7 +15,7 @@
         },
         {
           "talentLvl": "20",
-          "talentLeft": "-4 Meat Hook Cooldown",
+          "talentLeft": "-4s Meat Hook Cooldown",
           "talentRight": "+0.8s Dismember Duration"
         },
         {
@@ -39,10 +39,10 @@
       ],
       "notes": [
         "The Meat Hook travels at a speed of 1450, taking 0.9 seconds to reach maximum distance.",
-        "Pudge receives the hidden modifier upon cast, which disables Pudge. The duration of this modifier equals the time it takes for the hook to reach 66% of its max travel distance. This means with the default max distance of 1300, the self-disabling modifier lasts 0.59 seconds. The duration is based on the max distance (including range bonuses). It does not matter for how far the hook actually travels. This means when latching on a unit directly in front of Pudge, the self-disable still lasts its full duration.",
+        "Pudge receives the hidden modifier upon cast, which disables Pudge. The duration of this modifier equals the time it takes for the hook to reach 66% of its max travel distance. This means with the default max distance of 1300, the self-disabling modifier lasts 0.59 seconds. The duration is based on the max distance (including cast range bonuses). It does not matter for how far the hook actually travels. This means when latching on a unit directly in front of Pudge, the self-disable still lasts its full duration.",
         "The duration of this modifier equals the time it takes for the hook to reach 66% of its max travel distance.",
         "This means with the default max distance of 1300, the self-disabling modifier lasts 0.59 seconds.",
-        "The duration is based on the max distance (including range bonuses). It does not matter for how far the hook actually travels.",
+        "The duration is based on the max distance (including cast range bonuses). It does not matter for how far the hook actually travels.",
         "This means when latching on a unit directly in front of Pudge, the self-disable still lasts its full duration.",
         "With the max travel distance and search radius, Meat Hook can hit units up to 1400 range away. The search radius is centered around the hook's tip. Getting close to other parts of the hook has no effect.",
         "The search radius is centered around the hook's tip. Getting close to other parts of the hook has no effect.",
@@ -52,14 +52,14 @@
         "Hooked enemies are fully disabled for the entire pull duration. Allies are not disabled. They can act freely while being pulled by the hook.",
         "Allies are not disabled. They can act freely while being pulled by the hook.",
         "When the hook hits a unit, it provides 500 radius flying vision at the unit's location upon hit for 4 seconds.",
-        "If the hook collides with a unit which is not a hero, ancient creep, or creep-hero, it instantly kills it. The creep is killed by getting its health dealt as damage to it, in the form of HP Removal. Spell immune creeps are not killed.",
-        "The creep is killed by getting its health dealt as damage to it, in the form of HP Removal. Spell immune creeps are not killed.",
+        "If the hook collides with an enemy unit which is not a hero, ancient creep, or creep-hero, it instantly kills it. The creep is killed by getting its health dealt as damage to it, in the form of HP Removal.",
+        "The creep is killed by getting its health dealt as damage to it, in the form of HP Removal.",
         "Runes can be hooked as well. Doing so refunds the mana spent on the hook."
       ],
-      "mana": "135",
+      "mana": "110",
       "hotKey": "Q",
       "cooldown": "18\/16\/14\/12 (TagTalent 14\/12\/10\/8)",
-      "description": "Launches a bloody hook toward a unit or location. The hook will snag the first unit it encounters, dragging the unit back to Pudge and dealing damage if it is an enemy.",
+      "description": "Launches a bloody hook toward a unit or location. The hook will snag the first unit it encounters, dragging the unit back to Pudge, killing it if it's a non-ancient creep and dealing damage if it is an enemy otherwise.",
       "spellName": "Meat Hook",
       "params": [
         "Cast Animation: 0.3+0.59",
@@ -67,11 +67,11 @@
         "Max Travel Distance: 1300",
         "Hook Search Radius: 100",
         "Damage: 150\/220\/290\/360 (TagTalent 270\/340\/410\/480)",
-        "Can hit and drag spell immune allies. Can damage and drag spell immune enemies. Cannot disable spell immune enemies."
+        "Can hit and drag spell immune allies. Can damage and drag spell immune enemies and instantly kill creeps. Cannot disable spell immune enemies."
       ],
       "itemBehaviour": [],
       "legacyKey": "T",
-      "story": "The Butcher's hook is a symbolic nightmare, its curved blade a frightening reminder of his slaughterous intent."
+      "story": null
     },
     {
       "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/3\/34\/Pudge_Rot.mp3\/revision\/latest?cb=20191216022017",
@@ -93,8 +93,8 @@
         "Leveling up Rot while already toggled on immediately updates the damage. The slow on already debuffed enemies is not updated. However, new enemies entering its area get slowed based on its current level.",
         "The slow on already debuffed enemies is not updated.",
         "However, new enemies entering its area get slowed based on its current level.",
-        "With Aghanim's Scepter, the debuff also applies heal reduction, health regeneration reduction, lifesteal reduction, and spell lifesteal reduction. Acquiring Aghanim's Scepter while already toggled on immediately updates the damage, but not the radius.",
-        "Acquiring Aghanim's Scepter while already toggled on immediately updates the damage, but not the radius."
+        "With Aghanim's Scepter, the debuff also applies heal reduction, health regeneration reduction, lifesteal reduction, and spell lifesteal reduction. Immediately updates the damage when the item is acquired while toggled On, but not the radius.",
+        "Immediately updates the damage when the item is acquired while toggled On, but not the radius."
       ],
       "mana": "0",
       "hotKey": "W",
@@ -113,7 +113,7 @@
       ],
       "itemBehaviour": [],
       "legacyKey": "R",
-      "story": "A foul odor precedes a toxic, choking gas, emanating from the Butcher's putrid, ever-swelling mass."
+      "story": null
     },
     {
       "audioUrl": null,
@@ -124,15 +124,14 @@
       "notes": [
         "Stacks multiplicatively with other sources of magic resistance. Increases Pudge's total magic resistance to 34%\/35.5%\/37%\/38.5%.",
         "Increases Pudge's total magic resistance to 34%\/35.5%\/37%\/38.5%.",
-        "Does not gain a stack if the dying hero has Reincarnation, or is an illusion or Tempest Double, or if Pudge is dead as the kill happens. To a gain stack from outside the kill radius, Pudge has to make the killing blow himself. His summons or illusions do not count. Denied enemy heroes grant a stack as well, as long as it happens within 450 range of Pudge. Grants one stack for Meepo Clones, regardless of how many clones were nearby. Upon gaining a stack, a +1 appears above Pudge's head, indicating that he gained a stack. The number of stacks and amount of strength gained can be seen on the status buff icon.",
+        "Upon gaining a stack, a +1 appears above Pudge's head, indicating that he gained a stack. Does not gain a stack if the dying hero has Reincarnation, is an illusion, from the Tempest Double, or if Pudge is dead as the kill happens. To a gain stack from outside the kill radius, Pudge has to make the killing blow himself. His summons or illusions do not count. Denied enemy heroes grant a stack as well, as long as it happens within 450 range of Pudge. Grants one stack for Meepo Clones, regardless of how many clones were nearby. The number of stacks and amount of strength gained can be seen on the status buff icon.",
+        "Does not gain a stack if the dying hero has Reincarnation, is an illusion, from the Tempest Double, or if Pudge is dead as the kill happens.",
         "To a gain stack from outside the kill radius, Pudge has to make the killing blow himself. His summons or illusions do not count.",
         "Denied enemy heroes grant a stack as well, as long as it happens within 450 range of Pudge.",
         "Grants one stack for Meepo Clones, regardless of how many clones were nearby.",
-        "Upon gaining a stack, a +1 appears above Pudge's head, indicating that he gained a stack.",
         "The number of stacks and amount of strength gained can be seen on the status buff icon.",
-        "Each stack effectively grants 30\/40\/50\/60 health, 0.15\/0.2\/0.25\/0.3 health regeneration, and 1.5\/2\/2.5\/3 attack damage. The talent increases these bonuses to 60\/70\/80\/90 health, 0.3\/0.35\/0.4\/0.45 health regeneration, and 3\/3.5\/4\/4.5 attack damage.",
-        "The talent increases these bonuses to 60\/70\/80\/90 health, 0.3\/0.35\/0.4\/0.45 health regeneration, and 3\/3.5\/4\/4.5 attack damage.",
-        "Upon leveling Flesh Heap, all stacks adapt to its new level."
+        "Each stack effectively grants 30\/40\/50\/60 (TagTalent 60\/70\/80\/90) health, 0.15\/0.2\/0.25\/0.3 (TagTalent 0.3\/0.35\/0.4\/0.45) health regeneration and 1.5\/2\/2.5\/3 (TagTalent 3\/3.5\/4\/4.5) main attack damage.",
+        "Upon leveling Flesh Heap, all stacks adapt to its new values."
       ],
       "mana": null,
       "hotKey": "E",
@@ -147,7 +146,7 @@
       ],
       "itemBehaviour": [],
       "legacyKey": "F",
-      "story": "The Butcher gives new meaning to the words 'meat shield'."
+      "story": null
     },
     {
       "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/5\/5b\/Pudge_Eject.mp3\/revision\/latest?cb=20200827134123",
@@ -155,11 +154,10 @@
         "Ability No Target"
       ],
       "notes": [
-        "Requires Aghanim's Shard to be unlocked. In Ability Draft, Eject is bound to Dismember, and is granted to the player that drafts it.",
-        "In Ability Draft, Eject is bound to Dismember, and is granted to the player that drafts it.",
+        "Requires Aghanim's Shard to be unlocked.",
         "Appears in the 4th ability slot when Dismember is cast on an allied hero.",
         "Interrupts Pudge's channeling abilities upon cast.",
-        "If Pudge dies, the ally gets automatically ejected."
+        "If Pudge dies, the ally is automatically ejected."
       ],
       "mana": "0",
       "hotKey": "D",
@@ -171,7 +169,7 @@
       ],
       "itemBehaviour": [],
       "legacyKey": "E",
-      "story": "Allies emerge forever changed."
+      "story": null
     },
     {
       "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/5\/50\/Pudge_Dismember_1.mp3\/revision\/latest?cb=20200419184839",
@@ -191,7 +189,7 @@
         "Dismember deals a fixed amount of intervals spread evenly over its full duration, with the first tick happening immediately upon cast.",
         "The damage and heal work independently from each other, meaning it always heals for the full amount per interval, regardless of how much damage the target takes.",
         "Pudge's Dismember responses are global and audible to everyone, even through the Fog of War.",
-        "With Aghanim's Shard, Dismember can be cast on allied heroes, including clones and illusions, excluding creep-heroes. Disjoints projectiles and applies a strong dispel on the target upon cast. The allied hero is invulnerable, hidden and spell immune while swallowed. The hero can simply get out of Pudge themself, by issuing any order 3 seconds after being swallowed. Swallowing an ally grants Pudge the Eject sub-ability, allowing him to eject the ally at any time. This ignores the order lock duration. Only one hero may be swallowed at a time. Swallowing a second hero automatically ejects the previous ally. During Dismember, the allied hero is periodically moved to Pudge's current position. This means their auras are effectively bestowed around Pudge until ejected. The periodic movement gets interrupted by teleport effects, without the ally getting ejected. They stay swallowed at the location they got teleported to. Can fully regenerate the swallowed ally's health within 16.67 seconds. Pudge receives the hidden modifier upon cast, which creates the visual effect above him, visible to allies only.",
+        "With Aghanim's Shard, Dismember can be cast on allied heroes, including clones and illusions, excluding creep-heroes. Disjoints projectiles and applies a strong dispel on the target upon cast. The allied hero is invulnerable, hidden and spell immune while swallowed. The hero can simply get out of Pudge themself, by issuing any order 3 seconds after being swallowed. Swallowing an ally grants Pudge the Eject sub-ability, allowing him to eject the ally at any time. This ignores the order lock duration. Only one hero may be swallowed at a time. Swallowing a second hero automatically ejects the previous ally. During Dismember, the allied hero is periodically moved to Pudge's current position. This means their auras are effectively bestowed around Pudge until ejected. The periodic movement gets interrupted by teleport effects, without the ally getting ejected. They stay swallowed at the location they got teleported to. Can fully regenerate the swallowed ally's health within 20 seconds. Pudge receives the hidden modifier upon cast, which creates the visual effect above him, visible to allies only.",
         "Disjoints projectiles and applies a strong dispel on the target upon cast.",
         "The allied hero is invulnerable, hidden and spell immune while swallowed.",
         "The hero can simply get out of Pudge themself, by issuing any order 3 seconds after being swallowed.",
@@ -199,7 +197,7 @@
         "Only one hero may be swallowed at a time. Swallowing a second hero automatically ejects the previous ally.",
         "During Dismember, the allied hero is periodically moved to Pudge's current position. This means their auras are effectively bestowed around Pudge until ejected.",
         "The periodic movement gets interrupted by teleport effects, without the ally getting ejected. They stay swallowed at the location they got teleported to.",
-        "Can fully regenerate the swallowed ally's health within 16.67 seconds.",
+        "Can fully regenerate the swallowed ally's health within 20 seconds.",
         "Pudge receives the hidden modifier upon cast, which creates the visual effect above him, visible to allies only."
       ],
       "mana": "100\/130\/170",
@@ -218,13 +216,13 @@
         "Strength as Damage\/Heal per Second: 30%\/60%\/90% (TagTalent 54%\/108%\/162%)",
         "Pull Speed: 75",
         "Allied Cast Range: 300",
-        "Ally Max Health as Health Regen: 6%",
+        "Ally Max Health as Health Regen: 5%",
         "Ally Order Lock Duration: 3",
-        "Allows targeting an ally to swallow them and heal them for 6% of their max health per second. Reduces cooldown by 10 seconds."
+        "Allows targeting an ally to swallow them and heal them for 5% of their max health per second. Adds 300 Cast Range and reduces cooldown by 10 seconds."
       ],
       "itemBehaviour": [],
       "legacyKey": "D",
-      "story": "'When I'm through with these vermin, they'll be fit for a pie!'"
+      "story": null
     }
   ],
   "mainAttributes": {
@@ -245,7 +243,7 @@
     },
     {
       "talentLvl": "20",
-      "talentLeft": "-4 Meat Hook Cooldown",
+      "talentLeft": "-4s Meat Hook Cooldown",
       "talentRight": "+0.8s Dismember Duration"
     },
     {

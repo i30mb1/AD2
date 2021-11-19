@@ -4,7 +4,7 @@
       "notes": [
         "The evasion talent stacks multiplicatively with other sources of evasion.",
         "The health talent increases maximum health capacity, and keeps the current health percentage.",
-        "The all \/ \/ stats talent effectively grants Terrorblade 160 health, 0.8 health regeneration, 1.33 armor, 8 attack speed, 96 mana, 0.4 mana regeneration, and 8 attack damage."
+        "The \/ \/ all stats talent effectively grants Terrorblade 160 health, 0.8 health regeneration, 1.33 armor, 8 attack speed, 96 mana, 0.4 mana regeneration, and 8 main attack damage."
       ],
       "spellName": "Talent",
       "talents": [
@@ -38,15 +38,16 @@
       ],
       "notes": [
         "Reflection slows all visible enemy heroes and clones, excluding illusions and creep-heroes within 475 radius, and creates illusions of them.",
-        "Reflection illusions are spell immune, invulnerable, hidden untargetable, and uncontrollable, have 550 movement speed and unobstructed movement. They also provide vision equal to the vision range of their target.",
+        "Reflection illusions are spell immune, invulnerable, hidden, untargetable and uncontrollable. They have 550 movement speed and unobstructed movement. They also provide vision equal to the vision range of their target.",
+        "They have 550 movement speed and unobstructed movement.",
         "They also provide vision equal to the vision range of their target.",
         "The illusions spawn 108 range away from their targets if the hero has a collision size of 24, and 72 if the collision size is 8. They appear either north, east, south or west from their targets.",
         "The illusions attempt to attack their targets. If they cannot be attacked, they follow the targets close enough until they can be attacked again.",
-        "The illusions do not lose track when their targets turn invisible, hidden or move in the Fog of War. However, they do need vision to attack.",
+        "The illusions do not lose track when their targets turn invisible, hidden or move into the Fog of War. However, they do need vision to attack.",
         "Just like other illusions, Reflection illusions bestow auras and can make use of other passive abilities which work for illusions.",
-        "The slow debuffs and the illusions are bound to each other. Dispelling the slow removes all the Reflection illusions of that unit as well.",
-        "The slow of multiple casts does not stack, but each cast creates an illusion for each enemy hero within range. Although the slow duration gets refreshed, each created illusion has its separate duration, meaning new casts do not refresh the duration of previous illusions.",
-        "Although the slow duration gets refreshed, each created illusion has its separate duration, meaning new casts do not refresh the duration of previous illusions.",
+        "The movement speed slow debuff and the illusion are bound to each other. Dispelling the slow removes all the Reflection illusions of that unit as well.",
+        "The debuff of multiple casts does not stack, but each cast creates an illusion for each enemy hero within range. Although the movement speed slow duration gets refreshed, each created illusion has its separate duration, meaning new casts do not refresh the duration of previous illusions.",
+        "Although the movement speed slow duration gets refreshed, each created illusion has its separate duration, meaning new casts do not refresh the duration of previous illusions.",
         "Has a cast backswing of 1.66 during Metamorphosis."
       ],
       "mana": "35\/40\/45\/50",
@@ -65,7 +66,7 @@
       ],
       "itemBehaviour": [],
       "legacyKey": "C",
-      "story": "In the fractal prison of Foulfell, Terrorblade learned the truth of this old tale: you are your own worst enemy. Now it is a lesson he teaches others."
+      "story": null
     },
     {
       "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/3\/37\/Terrorblade_Conjure_Image.mp3\/revision\/latest?cb=20191216025101",
@@ -92,7 +93,7 @@
       ],
       "itemBehaviour": [],
       "legacyKey": "E",
-      "story": "There's only one thing more dangerous than facing Terrorblade. Facing MORE Terrorblades!"
+      "story": null
     },
     {
       "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/7\/7e\/Terrorblade_Metamorphosis.mp3\/revision\/latest?cb=20191216025103",
@@ -103,11 +104,13 @@
       "notes": [
         "During the transformation, Terrorblade cannot do anything. Cannot be interrupted. This applies to transforming illusions as well.",
         "This applies to transforming illusions as well.",
-        "The bonus damage is added to Terrorblade and his illusions' base attack damage.",
-        "Increases Terrorblade's base attack damage to 67\u201273\/82\u201288\/97\u2012103\/112\u2012118 and attack range to 490\/510\/530\/550",
-        "It also grants Terrorblade ranged unit properties, so all items with ranged and melee differences (e.g. Manta Style) use their ranged values.",
+        "Turns Terrorblade into a ranged unit with 490\/510\/530\/550 attack range for its duration. This causes items that use different values for melee and ranged heroes (e.g. Manta Style) to now treat the caster as a ranged hero. Attack range bonuses are not overridden and still work normally.",
+        "This causes items that use different values for melee and ranged heroes (e.g. Manta Style) to now treat the caster as a ranged hero.",
+        "Attack range bonuses are not overridden and still work normally.",
         "Terrorblade's attack projectiles travel at a speed of 900.",
-        "The aura affects illusions under Terrorblade's control including invulnerable and hidden illusions, except for the illusions from an enemy Reflection.",
+        "The attack damage bonus is added as base attack damage, and not bonus attack damage. It benefits illusions, and is affected by every percentage-based damage increasing or reducing effects.",
+        "It benefits illusions, and is affected by every percentage-based damage increasing or reducing effects.",
+        "The aura affects illusions under Terrorblade's control including invulnerable and hidden illusions, except for the illusions from an enemy Reflection (e.g. when acquired via Spell Steal or Morph).",
         "The transformation aura's buff lingers for 1 seconds.",
         "While transformed, Terrorblade does not leave footprints behind.",
         "Metamorphosis is fully canceled on death."
@@ -124,11 +127,12 @@
         "Attack Damage Bonus: 15\/30\/45\/60",
         "Attack Range Bonus: 340\/360\/380\/400",
         "Aura Linger Duration: 1",
-        "Metamorphosis Duration: 36\/40\/44\/48 (TagTalent 56\/60\/64\/68)"
+        "Metamorphosis Duration: 36\/40\/44\/48 (TagTalent 56\/60\/64\/68)",
+        "Grants a new ability: Terror Wave."
       ],
       "itemBehaviour": [],
       "legacyKey": "T",
-      "story": "Temper, temper. The rage rises up and takes control. Meet Terrorblade's own worst self."
+      "story": null
     },
     {
       "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/3\/31\/Terrorblade_Demon_Zeal.mp3\/revision\/latest?cb=20210103155910",
@@ -138,15 +142,15 @@
       ],
       "notes": [
         "Requires Aghanim's Shard to be unlocked.",
-        "Applies a basic dispel on Terrorblade upon cast.",
         "The 20% current health as cost is direct HP Removal.",
+        "Applies a basic dispel on Terrorblade upon cast.",
         "Grants 100 movement speed and 100 attack speed when not in Metamorphosis form.",
         "The buff constantly checks for the Metamorphosis buff and updates its values immediately."
       ],
       "mana": "0",
       "hotKey": "D",
       "cooldown": "14",
-      "description": "Costs 20% of Terrorblade's Current HP to cast, providing him +50 Movement and +50 Attack Speed for 7 seconds. Provides 100% more bonus while melee. Cooldown: 14.",
+      "description": "Costs 20% of Terrorblade's Current HP to cast, dispelling Terrorblade and providing him +50 Movement and +50 Attack Speed for 7 seconds. Provides 100% more bonus while melee. Cooldown: 14.",
       "spellName": "Demon Zeal",
       "params": [
         "Cast Animation: 0.2+0.5",
@@ -168,13 +172,13 @@
       ],
       "notes": [
         "Requires Aghanim's Scepter to be unlocked.",
-        "If cast while in regular form, transforms Terrorblade into his demon form for 10 seconds, based on Metamorphosis's current level. If cast while already in Metamorphosis, its duration gets extended by the same value instead. There is no limit to how often this can be done. Each cast increases the Metamorphosis duration. If Metamorphosis is not learnt, he does not transform.",
+        "If cast while in hero form, Terror Wave transforms Terrorblade into his demon form for 10 seconds, based on the current level of Metamorphosis. Metamorphosis notes fully apply. If it is not learned, he does not transform. If cast while already in Metamorphosis, its duration gets extended by the same value instead. Each successive cast increases the Metamorphosis duration. There is no limit to how often this can be done.",
+        "Metamorphosis notes fully apply. If it is not learned, he does not transform.",
         "If cast while already in Metamorphosis, its duration gets extended by the same value instead.",
-        "There is no limit to how often this can be done. Each cast increases the Metamorphosis duration.",
-        "If Metamorphosis is not learnt, he does not transform.",
-        "The wave is released 0.6 seconds after cast, starting at the original cast location. It does not follow Terrorblade.",
-        "It travels outwards at a speed of 1000, taking 1.6 seconds to reach max radius. The wave is a thin ring expanding outwards. This means it can be avoided by teleporting towards Terrorblade over the ring.",
-        "The wave is a thin ring expanding outwards. This means it can be avoided by teleporting towards Terrorblade over the ring.",
+        "Each successive cast increases the Metamorphosis duration. There is no limit to how often this can be done.",
+        "The wave is released 0.6 seconds after cast, starting at the original cast location. It does not follow Terrorblade. Terror Wave is a thin ring expanding outwards at a speed of 1000, taking 1.6 seconds to reach the maximum radius. It can be avoided by teleporting towards Terrorblade over the ring shortly after cast.",
+        "Terror Wave is a thin ring expanding outwards at a speed of 1000, taking 1.6 seconds to reach the maximum radius.",
+        "It can be avoided by teleporting towards Terrorblade over the ring shortly after cast.",
         "Terror Wave's fear makes affected enemies run away from the caster, rather than make them run towards their team's fountain.",
         "The cast sound is global and audible to the enemy through the Fog of War.",
         "Despite the tooltip, the fear affects any unit, not just heroes."
@@ -202,10 +206,10 @@
         "Affects Allied Heroes \/ Enemy Heroes"
       ],
       "notes": [
-        "Sunder can be cast on both enemy and allied heroes as well as illusions.",
-        "Terrorblade and his target always end up with at least 35%\/30%\/25% of their maximum health. For example, if both parties have 5% health before Sunder, then they both end up at 35%\/30%\/25% thereafter.",
-        "For example, if both parties have 5% health before Sunder, then they both end up at 35%\/30%\/25% thereafter.",
-        "Sunder directly manipulates Terrorblade's and his target's health, so it fully ignores on-damage effects (e.g. Ice Blast, Borrowed Time, and Blade Mail).",
+        "Sunder can be cast on both enemy and allied heroes, as well as illusions.",
+        "Terrorblade and his target always end up with at least 35%\/30%\/25% of their maximum health. For example, if both targets have 5% health before Sunder, then they both end up at 35%\/30%\/25% thereafter.",
+        "For example, if both targets have 5% health before Sunder, then they both end up at 35%\/30%\/25% thereafter.",
+        "Sunder directly manipulates Terrorblade's and the target's health, so it fully ignores on-damage effects (e.g. Ice Blast, Borrowed Time and Blade Mail).",
         "Has a cast backswing of 0.8 during Metamorphosis."
       ],
       "mana": "150\/100\/50",
@@ -217,17 +221,16 @@
         "Cast Animation: 0.35+0.83",
         "Cast Range: 475",
         "Min Health: 35%\/30%\/25%",
-        "Grants a new ability: Terror Wave.",
         "Grants a new ability: Demon Zeal.",
         "Can be cast on spell immune allies. Cannot be cast on spell immune enemies. When reflected, pierces spell immunity [?]."
       ],
       "itemBehaviour": [],
       "legacyKey": "R",
-      "story": "You didn't need that life, did you? The demon marauder steals that which you hold most dear."
+      "story": null
     }
   ],
   "mainAttributes": {
-    "attrStrengthInc": 1.7,
+    "attrStrengthInc": 2.0,
     "attrStrength": 16.0,
     "attrIntelligence": 19.0,
     "attrIntelligenceInc": 1.6,

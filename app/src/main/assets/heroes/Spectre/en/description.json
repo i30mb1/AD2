@@ -2,7 +2,7 @@
   "abilities": [
     {
       "notes": [
-        "The \/ \/ all stats talent effectively grants Spectre 100 health, 0.5 health regeneration, 0.83 armor, 5 attack speed, 60 mana, 0.25 mana regeneration, and 5 attack damage.",
+        "The \/ \/ all stats talent effectively grants Spectre 100 health, 0.5 health regeneration, 0.83 armor, 5 attack speed, 60 mana, 0.25 mana regeneration, and 5 main attack damage.",
         "The health talent increases maximum health capacity, and keeps the current health percentage."
       ],
       "spellName": "Talent",
@@ -25,7 +25,7 @@
         {
           "talentLvl": "10",
           "talentLeft": "+5 All Stats",
-          "talentRight": "-5s Spectral Dagger Cooldown"
+          "talentRight": "-4s Spectral Dagger Cooldown"
         }
       ]
     },
@@ -38,22 +38,27 @@
       ],
       "notes": [
         "The Spectral Dagger travels at a speed of 800.",
-        "Can directly target heroes and creep-heroes. When targeting a hero, the dagger homes in on the target until reaching it.",
-        "When targeting the ground or creep-heroes, the dagger travels 1800 range in a straight line. It does not home in on creep-heroes.",
-        "Every enemy unit which comes within 125 range of the traveling dagger gets damaged.",
-        "Hit enemy heroes and illusions also receive the Dagger Path Creator debuff, making them trail a shadow path like the dagger itself. This debuff also grants shared vision over the enemy heroes, revealing their silhouette when invisible.",
-        "This debuff also grants shared vision over the enemy heroes, revealing their silhouette when invisible.",
-        "Spectre and enemies gain the Spectral Dagger Path modifier while on the path, increasing her while decreasing the enemies' movement speed. This modifier lingers for 4 seconds after leaving the path. The modifier only refreshes from the same source. Meaning that Spectre will not be slowed by an enemy Spectral Dagger when she has the buff modifier.",
+        "Can directly target heroes and creep-heroes. When targeting a hero, the dagger homes in on the target until reaching it. When ground-targeted or targeting creep-heroes, the dagger travels 1800 range in a straight line. It does not home in on creep-heroes.",
+        "When targeting a hero, the dagger homes in on the target until reaching it.",
+        "When ground-targeted or targeting creep-heroes, the dagger travels 1800 range in a straight line. It does not home in on creep-heroes.",
+        "Every enemy unit which comes within 125 range of the travelling dagger gets damaged.",
+        "Hit enemy heroes and illusions also receive the Dagger Path Creator debuff, making them trail a shadow path like the dagger itself. This debuff also grants shared vision over the enemy heroes, revealing their silhouette when they become invisible.",
+        "This debuff also grants shared vision over the enemy heroes, revealing their silhouette when they become invisible.",
+        "Spectre and enemies gain the Spectral Dagger Path modifier while on the path, increasing hers while decreasing the enemies' movement speed. This modifier lingers for 4 seconds after leaving the path. The modifier only refreshes from the same source. Meaning that Spectre will not be slowed by an enemy Spectral Dagger when she has the buff modifier.",
         "This modifier lingers for 4 seconds after leaving the path.",
         "The modifier only refreshes from the same source. Meaning that Spectre will not be slowed by an enemy Spectral Dagger when she has the buff modifier.",
         "Spectre also gains a hidden buff, which grants her unobstructed movement. This buff lingers for 1 second after leaving the path.",
         "This buff lingers for 1 second after leaving the path.",
-        "The shadow path's segments last 12 seconds from the moment on they were created, not as the spell was cast.",
-        "The shadow path grants 200 radius flying vision around itself."
+        "The shadow path's segments last 12 seconds from the moment on they were created, not as the ability was cast.",
+        "The shadow path grants 200 radius flying vision around itself.",
+        "The movement speed changing modifier on Spectre and enemies on the path is dispellable. However, as long as Spectre stays on the path, it immediately gets re-applied on her again. For enemies, the slow debuff does not get re-applied immediately, but does get applied again if they leave the path and enter it again. Dispelling the path creating debuff on enemy heroes stops them from creating or extending the path, but does not remove already created paths.",
+        "However, as long as Spectre stays on the path, it immediately gets re-applied on her again.",
+        "For enemies, the slow debuff does not get re-applied immediately, but does get applied again if they leave the path and enter it again.",
+        "Dispelling the path creating debuff on enemy heroes stops them from creating or extending the path, but does not remove already created paths."
       ],
       "mana": "130\/140\/150\/160",
       "hotKey": "Q",
-      "cooldown": "22\/20\/18\/16 (TagTalent 17\/15\/13\/11)",
+      "cooldown": "22\/20\/18\/16 (TagTalent 18\/16\/14\/12)",
       "description": "Spectre flings a dagger to draw a Shadow Path, dealing damage and slowing the movement speed of any enemies along the trail. Units hit by the dagger also trail a Shadow Path. While treading the path, Spectre phases through otherwise impassable terrain.",
       "spellName": "Spectral Dagger",
       "params": [
@@ -71,7 +76,7 @@
       ],
       "itemBehaviour": [],
       "legacyKey": "D",
-      "story": "Mercurial's dagger eclipses the physical plane in shadow, a state in which mortals cower, but spectres thrive."
+      "story": null
     },
     {
       "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/3\/35\/Spectre_Desolate.mp3\/revision\/latest?cb=20210103161358",
@@ -81,9 +86,9 @@
         "Damage Pure"
       ],
       "notes": [
-        "Desolate's effects are applied upon finishing an attack, regardless of whether the attack actually hits the target or not. This means Desolate applies its effects even when the leading attack misses the target. When used by ranged heroes, this means the effect is applied on projectile launch, not hit.",
+        "Desolate's effects are applied upon finishing an attack, regardless of whether the attack actually hits the target or not. This means Desolate applies its effects even when the leading attack misses the target. When used by ranged heroes, Desolate is applied on projectile launch, not when the projectile hit.",
         "This means Desolate applies its effects even when the leading attack misses the target.",
-        "When used by ranged heroes, this means the effect is applied on projectile launch, not hit.",
+        "When used by ranged heroes, Desolate is applied on projectile launch, not when the projectile hit.",
         "The bonus damage is dealt in a separate damage instance, and counts as spell damage. This means it is not affected or considered by anything that works with attack damage. This also means that it fully works with spell damage amplification and spell lifesteal.",
         "This means it is not affected or considered by anything that works with attack damage.",
         "This also means that it fully works with spell damage amplification and spell lifesteal.",
@@ -103,35 +108,45 @@
       ],
       "itemBehaviour": [],
       "legacyKey": "L",
-      "story": "Often times, warriors find themselves alone with a vision of Mercurial - the fated question is if it is the true Spectre."
+      "story": null
     },
     {
-      "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/0\/0f\/Spectre_Dispersion.mp3\/revision\/latest?cb=20210103161400",
+      "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/6\/64\/Spectre_Spectral_Dagger_1.mp3\/revision\/latest?cb=20191216024330",
       "effects": [
         "Ability Passive",
         "Affects Self \/ Enemies",
-        "Damage HP Removal"
+        "Damage Source Type (TagAghanimNo-reflection) (TagAghanimHP Removal)"
       ],
       "notes": [
-        "Applies generic incoming damage reduction on Spectre. Stacks additively with other sources of generic incoming damage manipulation. The reduction affects all damage Spectre takes that is not flagged as HP removal. Increases Spectre's survivability against any damage by 9%\/14%\/19%\/25% (TagTalent 15%\/20%\/27%\/33%).",
-        "The reduction affects all damage Spectre takes that is not flagged as HP removal.",
+        "Applies generic incoming damage reduction on Spectre. Stacks additively with other sources of generic incoming damage manipulation. Reflects the 3 damage types, but not HP Removal effects (e.g. Sunder, Soul Ring etc.). Increases Spectre's survivability against any damage by 9%\/14%\/19%\/25% (TagTalent 15%\/20%\/27%\/33%).",
+        "Reflects the 3 damage types, but not HP Removal effects (e.g. Sunder, Soul Ring etc.).",
         "Increases Spectre's survivability against any damage by 9%\/14%\/19%\/25% (TagTalent 15%\/20%\/27%\/33%).",
-        "The reflected damage is applied to all targets within the radius, not only the original source.",
         "Dispersed damage is returned as the same damage type as it was received.",
-        "Returns incoming damage before all manipulations. However, damage manipulation on the enemy still affects the damage normally.",
         "Reflected physical damage is affected by damage block.",
         "The damage from Dispersion is flagged as HP Removal, so it does not trigger any on-damage effects.",
-        "Always reflects a percentage of the full damage value, no matter how much health Spectre had left when she received the damage. This means it reflects overkill damage dealt to Spectre, so if a damage source exceeded Spectre's current health and killed her, the reflected damage is based on the full damage value.",
-        "This means it reflects overkill damage dealt to Spectre, so if a damage source exceeded Spectre's current health and killed her, the reflected damage is based on the full damage value.",
-        "Dispersion reflects the damage right before it is actually done to Spectre, so if both Spectre and an enemy would die to the damage simultaneously, the enemy is always killed first.",
-        "Reflected damage is not divided between enemies. All of them take the full reflected damage.",
-        "Reflects the full 8%\/12%\/16%\/20% within a 300 radius from Spectre. Then the reflected damage decreases linearly up to a 700 radius from Spectre.",
+        "Reflects a percentage of the full damage value before Spectre actually takes the damage. This means that it reflects damage before all manipulations, so that it may only be affected by incoming damage manipulation the enemy has. This also means it reflects overkill damage dealt to Spectre. If a damage source exceeded Spectre's current health and killed her, the damage reflected will be the same damage value. If both Spectre and an enemy would die to the damage simultaneously, the enemy is always killed first.",
+        "This means that it reflects damage before all manipulations, so that it may only be affected by incoming damage manipulation the enemy has.",
+        "This also means it reflects overkill damage dealt to Spectre. If a damage source exceeded Spectre's current health and killed her, the damage reflected will be the same damage value.",
+        "If both Spectre and an enemy would die to the damage simultaneously, the enemy is always killed first.",
+        "Reflected damage is not shared between enemies within the radius, all of them take the full amount of damage based on their distance.",
+        "Reflects the full 8%\/12%\/16%\/20% (TagTalent 13%\/17%\/21%\/25%) within a 300 radius from Spectre. Then the reflected damage decreases linearly up to a 700 radius from Spectre. This is how much damage Dispersion reflects to enemies at certain distances: 300 Distance: 8%\/12%\/16%\/20% (TagTalent 13%\/17%\/21%\/25%) of dealt damage. 400 Distance: 6%\/9%\/12%\/15% (TagTalent 9.75%\/12.75%\/15.75%\/18.75%) of dealt damage. 500 Distance: 4%\/6%\/8%\/10% (TagTalent 6.5%\/8.5%\/10.5%\/12.5%) of dealt damage. 600 Distance: 2%\/3%\/4%\/5% (TagTalent 3.25%\/4.25%\/5.25%\/6.25%) of dealt damage.",
         "This is how much damage Dispersion reflects to enemies at certain distances: 300 Distance: 8%\/12%\/16%\/20% (TagTalent 13%\/17%\/21%\/25%) of dealt damage. 400 Distance: 6%\/9%\/12%\/15% (TagTalent 9.75%\/12.75%\/15.75%\/18.75%) of dealt damage. 500 Distance: 4%\/6%\/8%\/10% (TagTalent 6.5%\/8.5%\/10.5%\/12.5%) of dealt damage. 600 Distance: 2%\/3%\/4%\/5% (TagTalent 3.25%\/4.25%\/5.25%\/6.25%) of dealt damage.",
         "300 Distance: 8%\/12%\/16%\/20% (TagTalent 13%\/17%\/21%\/25%) of dealt damage.",
         "400 Distance: 6%\/9%\/12%\/15% (TagTalent 9.75%\/12.75%\/15.75%\/18.75%) of dealt damage.",
         "500 Distance: 4%\/6%\/8%\/10% (TagTalent 6.5%\/8.5%\/10.5%\/12.5%) of dealt damage.",
         "600 Distance: 2%\/3%\/4%\/5% (TagTalent 3.25%\/4.25%\/5.25%\/6.25%) of dealt damage.",
-        ""
+        "",
+        "With Aghanim's Shard, a passive Spectral Dagger triggers when Dispersion collectively reduces 300 damage. Spectral Dagger notes fully apply. If it is not leveled, no dagger is launched. Only counts player-based damage and damage dealt by Roshan. Does not count damage which has the HP removal or the no-reflection flag. Counts damage even while on cooldown, and may instantly release a dagger on the next damage instance once Dispersion is off cooldown again. Counts damage from any distance, but the Spectral Dagger is only released when a damage source is within 700 range of Spectre. The damage counter has no time limit. It only resets once a passive Spectral Dagger is launched. Any exceeding damage is completely ignored. For example, if an enemy deals an instance of 450 damage, it does not carry over to the damage counter for the next proc. The Spectral Dagger is launched towards the location of the last damage source that reached the damage threshold. Does not directly target the unit that procs the passive cast, the dagger always flies in a straight path. Uses a regular cooldown, so it is fully affected by cooldown reductions sources and it can be refreshed as well. Passive Spectral Dagger procs do not cost mana and are independent from the active ability's cooldown.",
+        "Spectral Dagger notes fully apply. If it is not leveled, no dagger is launched.",
+        "Only counts player-based damage and damage dealt by Roshan. Does not count damage which has the HP removal or the no-reflection flag.",
+        "Counts damage even while on cooldown, and may instantly release a dagger on the next damage instance once Dispersion is off cooldown again.",
+        "Counts damage from any distance, but the Spectral Dagger is only released when a damage source is within 700 range of Spectre.",
+        "The damage counter has no time limit. It only resets once a passive Spectral Dagger is launched.",
+        "Any exceeding damage is completely ignored. For example, if an enemy deals an instance of 450 damage, it does not carry over to the damage counter for the next proc.",
+        "The Spectral Dagger is launched towards the location of the last damage source that reached the damage threshold.",
+        "Does not directly target the unit that procs the passive cast, the dagger always flies in a straight path.",
+        "Uses a regular cooldown, so it is fully affected by cooldown reductions sources and it can be refreshed as well.",
+        "Passive Spectral Dagger procs do not cost mana and are independent from the active ability's cooldown."
       ],
       "mana": null,
       "hotKey": "E",
@@ -142,13 +157,15 @@
         "Min Radius: 300",
         "Max Radius: 700",
         "Damage Reflected: 8%\/12%\/16%\/20% (TagTalent 13%\/17%\/21%\/25%)",
-        "Damage Threshold: 300",
-        "Damage Search Radius: 700",
-        "Causes dispersion to fire a spectral dagger every 300 damage absorbed in the direction of the last source of damage. Can fire a maximum of one dagger every 7 seconds and only triggers off player based damage within 700 range."
+        "Spectral Dagger Max Trigger Distance: 700",
+        "Spectral Dagger Damage Threshold: 300",
+        "Causes dispersion to fire a spectral dagger every 300 damage absorbed in the direction of the last source of damage. Can fire a maximum of one dagger every 7 seconds and only triggers off player based damage within 700 range",
+        "All aspects ignore spell immunity, including the passive Spectral Dagger, which are launched on spell immune units as well.",
+        "All aspects are disabled, including the passive Spectral Daggers."
       ],
       "itemBehaviour": [],
       "legacyKey": "I",
-      "story": "A daunting task lies before enemies of Mercurial - killing a shadow with blade and magic."
+      "story": null
     },
     {
       "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/1\/11\/Spectre_Reality.mp3\/revision\/latest?cb=20191216024328",
@@ -174,7 +191,7 @@
       ],
       "itemBehaviour": [],
       "legacyKey": "R",
-      "story": "The scattered shadows unite into the one true Spectre."
+      "story": null
     },
     {
       "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/1\/1a\/Spectre_Shadow_Step_1.mp3\/revision\/latest?cb=20210103160705",
@@ -184,16 +201,16 @@
         "Damage Magical"
       ],
       "notes": [
-        "Requires Aghanim's Scepter to be unlocked. In Ability Draft, Shadow Step can be unlocked by the player that drafted Haunt.",
-        "In Ability Draft, Shadow Step can be unlocked by the player that drafted Haunt.",
-        "Shadow Step's level is always equal to Haunt's level.",
-        "Instantly applies the current level of Spectral Dagger on the target, without using a projectile.",
+        "Requires Aghanim's Scepter to be unlocked.",
+        "Shadow Step's level is always equal to Haunt's level. The illusion notes of Haunt apply to Shadow Step as well.",
         "The illusion notes of Haunt apply to Shadow Step as well.",
+        "Instantly applies the current level of Spectral Dagger on the target, without using a projectile. Spectral Dagger notes fully apply. If it is not leveled, no buffs or debuffs are applied.",
+        "Spectral Dagger notes fully apply. If it is not leveled, no buffs or debuffs are applied.",
         "Cannot be cast on creep-heroes."
       ],
       "mana": "180",
       "hotKey": "F",
-      "cooldown": "30",
+      "cooldown": "40",
       "description": "Allows Spectre to perform a single target unit Haunt. Casts Spectral Dagger on the target.",
       "spellName": "Shadow Step",
       "params": [
@@ -205,7 +222,7 @@
       ],
       "itemBehaviour": [],
       "legacyKey": "E",
-      "story": "With great focus of will, Mercurial can sometimes limit the extent of her division."
+      "story": null
     },
     {
       "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/a\/af\/Spectre_Haunt_1.mp3\/revision\/latest?cb=20191216024324",
@@ -236,7 +253,7 @@
       ],
       "itemBehaviour": [],
       "legacyKey": "T",
-      "story": "At the height of combat, Mercurial's physical manifestation shatters, and the shadowy pieces haunt those who still cling to life."
+      "story": null
     }
   ],
   "mainAttributes": {
@@ -268,7 +285,7 @@
     {
       "talentLvl": "10",
       "talentLeft": "+5 All Stats",
-      "talentRight": "-5s Spectral Dagger Cooldown"
+      "talentRight": "-4s Spectral Dagger Cooldown"
     }
   ]
 }

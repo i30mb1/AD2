@@ -2,7 +2,7 @@
   "abilities": [
     {
       "notes": [
-        "This attack damage talent is added as raw attack damage. Does not benefit illusions and is not affected by most percentage-based damage increasing or reducing effects.",
+        "This attack damage talent is added as bonus attack damage. Does not benefit illusions and is not affected by most percentage-based damage increasing or reducing effects.",
         "Does not benefit illusions and is not affected by most percentage-based damage increasing or reducing effects.",
         "The health talent increases maximum health capacity, and keeps the current health percentage.",
         "Cleave from talents is not disabled by Break."
@@ -64,7 +64,7 @@
       ],
       "itemBehaviour": [],
       "legacyKey": "D",
-      "story": "Using traditional Alchemy from the Darkbrew family, Razzil concocts an acid that dissolves even the toughest metals."
+      "story": null
     },
     {
       "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/0\/0b\/Alchemist_Unstable_Concoction_1.mp3\/revision\/latest?cb=20191216010548",
@@ -81,9 +81,9 @@
         "The sound can be heard by enemies only when the ability was cast within their vision range.",
         "The damage starts at 0 and increases by 3.2\/4.8\/6.4\/8 (TagTalent 11.2\/12.8\/14.4\/16) for each 0.1 seconds brewed, reaching the full damage in 5 seconds. The maximum damage increasing talent immediately upgrades Alchemist's currently brewing concoction and all of his currently flying concoction projectiles.",
         "The maximum damage increasing talent immediately upgrades Alchemist's currently brewing concoction and all of his currently flying concoction projectiles.",
-        "The stun starts at 0.3 seconds and increases by 0.029\/0.044\/0.059\/0.074 for each 0.1 seconds brewed, reaching 1.75\/2.5\/3.25\/4 in 5 seconds.",
+        "The stun starts at 0.25 seconds and increases by 0.03\/0.045\/0.06\/0.075 for each 0.1 seconds brewed, reaching 1.75\/2.5\/3.25\/4 in 5 seconds.",
         "The concoction first applies the damage, then the debuff.",
-        "Unstable Concoction always affects a 250 radius around where it explodes, including when it explodes on Alchemist. When Alchemist dies while brewing, it instantly blows up, hitting units around Alchemist based on how long it was brewed. The self-inflicted damage is lethal, it can be used to deny oneself. The stun and damage can hit creep-heroes within the radius as well.",
+        "Unstable Concoction always affects a 250 (TagTalent 375) radius around where it explodes, including when it explodes on Alchemist. When Alchemist dies while brewing, it instantly blows up, hitting units around Alchemist based on how long it was brewed. The self-inflicted damage is lethal, it can be used to deny oneself. The stun and damage can hit creep-heroes within the radius as well.",
         "When Alchemist dies while brewing, it instantly blows up, hitting units around Alchemist based on how long it was brewed.",
         "The self-inflicted damage is lethal, it can be used to deny oneself.",
         "The stun and damage can hit creep-heroes within the radius as well.",
@@ -101,13 +101,14 @@
         "Max Throw Time: 5.5",
         "Min Damage: 0",
         "Max Damage: 160\/240\/320\/400 (TagTalent 560\/640\/720\/800)",
+        "Min Stun Duration: 0.25",
         "Max Stun Duration: 1.75\/2.5\/3.25\/4",
         "Does not affect self when blowing up while spell immune, but still applies the area effect.",
         "Blocked by enemies but not blocked by self when blowing up on self."
       ],
       "itemBehaviour": [],
       "legacyKey": "E",
-      "story": "A silver lining to the failure of turning a mountain into gold, this volatile solution has destructive potential."
+      "story": null
     },
     {
       "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/b\/b8\/Alchemist_Unstable_Concoction_2.mp3\/revision\/latest?cb=20191216010549",
@@ -117,7 +118,7 @@
         "Damage Physical"
       ],
       "notes": [
-        "Replaces Unstable Concoction until the concoction is thrown or blows up.",
+        "Replaces Unstable Concoction until the sub-ability is used or the concoction blows up.",
         "The targeting reticule must be centered over an enemy unit.",
         "The concoction travels at a speed of 900.",
         "Once thrown, Unstable Concoction stops brewing. Can only be cast on at heroes or illusions. The area damage does not hit creeps. Cannot be cast on, but can stun and damage creep-heroes within the radius. When connecting with an invulnerable or hidden target, it still applies its area effect, hitting nearby units.",
@@ -133,8 +134,10 @@
       "params": [
         "Cast Animation: 0.2+0.5",
         "Cast Range: 775",
+        "Projectile Speed: 900",
         "Cannot target spell immune units. When the projectile connects with a spell immune unit, it still affects other units within the radius.",
-        "Blocked upon impact by everyone within the radius."
+        "Blocked upon impact by everyone within the radius.",
+        ""
       ],
       "itemBehaviour": [],
       "legacyKey": "E",
@@ -170,7 +173,7 @@
       ],
       "itemBehaviour": [],
       "legacyKey": "G",
-      "story": "While it is not a mountain, Razzil has mastered the conversion of smaller compounds to line his pockets."
+      "story": null
     },
     {
       "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/a\/ad\/Alchemist_Berserk_Potion_1.mp3\/revision\/latest?cb=20201220184644",
@@ -197,7 +200,8 @@
         "Move Speed Bonus: 30",
         "Attack Speed Bonus: 50",
         "Health Regen Bonus: 40",
-        "Buff Duration: 10"
+        "Buff Duration: 10",
+        "Projectile Speed: 900"
       ],
       "itemBehaviour": [],
       "legacyKey": "B",
@@ -216,7 +220,7 @@
         "Chemical Rage is fully canceled on death.",
         "Recasting Chemical Rage before the previous cast finishes refreshes the duration and updates all values to the current level."
       ],
-      "mana": "50\/100\/150",
+      "mana": "50\/75\/100",
       "hotKey": "R",
       "cooldown": "55",
       "description": "Alchemist causes his Ogre to enter a chemically induced rage, reducing base attack cooldown and increasing movement speed and health regeneration.",
@@ -234,7 +238,7 @@
       ],
       "itemBehaviour": [],
       "legacyKey": "R",
-      "story": "The brew Razzil gave to the Ogre during their prison bust has become a useful potion in the midst of combat."
+      "story": null
     },
     {
       "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/8\/8c\/Alchemist_Aghanim%27s_Scepter.mp3\/revision\/latest?cb=20200502130631",
@@ -243,6 +247,7 @@
         "Affects Allied Heroes"
       ],
       "notes": [
+        "This is an innate ability.",
         "Aghanim's Scepter has an active ability for Alchemist, allowing him to cast it on allied heroes (excluding hero clones and illusions). Once cast, the Scepter is consumed and the targeted ally passively receives all of Aghanim's Scepter's effects. ↓↓ Double-tapping Aghanim's Scepter in the inventory automatically targets self. This includes all Aghanim's Scepter upgrades, as well as the item's attributes, 10 strength, 10 agility, 10 intelligence, 175 health, and 175 mana. The net worth of the item transfers from Alchemist to the target hero. Self-casting does not change the net worth. Doing so does not change Alchemist's or the target's GPM. A hero can only be targeted once by Aghanim's Scepter Synth.",
         "Once cast, the Scepter is consumed and the targeted ally passively receives all of Aghanim's Scepter's effects.",
         "↓↓ Double-tapping Aghanim's Scepter in the inventory automatically targets self.",
@@ -254,8 +259,6 @@
         "If the targeted ally already has Aghanim's Blessing consumed, it gets refunded as well, granting them 5800 .",
         "It does not matter how the target acquired Aghanim's Blessing, the gold is always refunded to the player targeted by Alchemist.",
         "It also grants gold for the Aghanim's Blessing acquired from Roshan.",
-        "The ability to transfer Aghanim's Scepter is innate to the hero and not the ultimate ability. In Ability Draft, this ability is part of Greevil's Greed instead.",
-        "In Ability Draft, this ability is part of Greevil's Greed instead.",
         "Alchemist has to infuse himself with an Aghanim's Scepter for the bonuses to take into effect. Since up to 4 allies and Alchemist himself can be infused, Alchemist can gain up to 100 attack damage and 25% spell damage amplification.",
         "Since up to 4 allies and Alchemist himself can be infused, Alchemist can gain up to 100 attack damage and 25% spell damage amplification."
       ],
@@ -276,7 +279,7 @@
     }
   ],
   "mainAttributes": {
-    "attrStrengthInc": 2.7,
+    "attrStrengthInc": 2.9,
     "attrStrength": 25.0,
     "attrIntelligence": 25.0,
     "attrIntelligenceInc": 1.8,

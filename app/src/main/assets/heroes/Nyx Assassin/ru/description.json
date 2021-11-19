@@ -14,8 +14,8 @@
         },
         {
           "talentLvl": "20",
-          "talentLeft": "+140 к урону от Impale",
-          "talentRight": "+60% к урону от Spiked Carapace"
+          "talentLeft": "+130 к урону от Impale",
+          "talentRight": "+0,6 сек. оглушения от Spiked Carapace"
         },
         {
           "talentLvl": "15",
@@ -25,7 +25,7 @@
         {
           "talentLvl": "10",
           "talentLeft": "+0,25 сек. оглушения от Impale",
-          "talentRight": "+6% к урону от заклинаний"
+          "talentRight": "+8% к урону от заклинаний"
         }
       ]
     },
@@ -55,13 +55,13 @@
         "Дальность применения: 700",
         "Дальность прохождения: 700",
         "Радиус: 125",
-        "Урон: 80\/140\/200\/260 (TagTalent 220\/280\/340\/400)",
+        "Урон: 80\/140\/200\/260 (TagTalent 210\/270\/330\/390)",
         "Длительность оглушения: 1,4\/1,8\/2,2\/2,6 (TagTalent 1,65\/2,05\/2,45\/2,85)",
         "Пытается нанести урон, если уже пораженные враги получили иммунитет к заклинаниям до приземления."
       ],
       "itemBehaviour": [],
       "legacyKey": "E",
-      "story": "Все скарабеи-фанатики прекрасно знают подземные пути и умело используют их в бою."
+      "story": null
     },
     {
       "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/a\/a7\/Nyx_Assassin_Mana_Burn.mp3\/revision\/latest?cb=20191216021105",
@@ -91,7 +91,7 @@
       ],
       "itemBehaviour": [],
       "legacyKey": "R",
-      "story": "Книга Ультимира описывает скарабея, который мог разъедать разум низших существ."
+      "story": null
     },
     {
       "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/b\/bf\/Nyx_Assassin_Spiked_Carapace_1.mp3\/revision\/latest?cb=20191216021107",
@@ -130,13 +130,13 @@
       "params": [
         "Анимация применения: 0+0",
         "Радиус с Burrow: 300",
-        "Отражаемый урон: 100% (TagTalent 160%)",
+        "Отражаемый урон: 100% (TagTalent Ошибка выражения: неопознанный символ пунктуации «,»%)",
         "Длительность: 2",
         "Длительность оглушения: 0,6\/1,2\/1,8\/2,4"
       ],
       "itemBehaviour": [],
       "legacyKey": "D",
-      "story": "Несмотря на то что сам панцирь скарабея довольно тонкий, его надёжно защищают острые как бритва выдвижные шипы."
+      "story": null
     },
     {
       "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/6\/6e\/Nyx_Assassin_Burrow.mp3\/revision\/latest?cb=20191216021114",
@@ -171,7 +171,7 @@
       ],
       "itemBehaviour": [],
       "legacyKey": "F",
-      "story": "Некоторые скарабеи-фанатики залегают в землю и застают жертву врасплох."
+      "story": null
     },
     {
       "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/7\/7c\/Nyx_Assassin_Unburrow_1.mp3\/revision\/latest?cb=20191216021109",
@@ -194,7 +194,7 @@
       ],
       "itemBehaviour": [],
       "legacyKey": "F",
-      "story": "Некоторые скарабеи-фанатики залегают в землю и застают жертву врасплох."
+      "story": null
     },
     {
       "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/4\/4d\/Nyx_Assassin_Vendetta.mp3\/revision\/latest?cb=20191216021112",
@@ -233,7 +233,7 @@
       ],
       "itemBehaviour": [],
       "legacyKey": "V",
-      "story": "Скарабей убивает во славу своей королевы."
+      "story": null
     }
   ],
   "mainAttributes": {
@@ -254,8 +254,8 @@
     },
     {
       "talentLvl": "20",
-      "talentLeft": "+140 к урону от Impale",
-      "talentRight": "+60% к урону от Spiked Carapace"
+      "talentLeft": "+130 к урону от Impale",
+      "talentRight": "+0,6 сек. оглушения от Spiked Carapace"
     },
     {
       "talentLvl": "15",
@@ -265,7 +265,7 @@
     {
       "talentLvl": "10",
       "talentLeft": "+0,25 сек. оглушения от Impale",
-      "talentRight": "+6% к урону от заклинаний"
+      "talentRight": "+8% к урону от заклинаний"
     }
   ]
 }

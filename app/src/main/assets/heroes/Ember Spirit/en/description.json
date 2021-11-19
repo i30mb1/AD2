@@ -2,14 +2,14 @@
   "abilities": [
     {
       "notes": [
-        "This attack damage talent is added as raw attack damage. Does not benefit illusions and is not affected by most percentage-based damage increasing or reducing effects.",
+        "This attack damage talent is added as bonus attack damage. Does not benefit illusions and is not affected by most percentage-based damage increasing or reducing effects.",
         "Does not benefit illusions and is not affected by most percentage-based damage increasing or reducing effects."
       ],
       "spellName": "Talent",
       "talents": [
         {
           "talentLvl": "25",
-          "talentLeft": "-12 Remnant Charge Restore Time",
+          "talentLeft": "-12s Remnant Charge Restore Time",
           "talentRight": "2 Sleight of Fist Charges"
         },
         {
@@ -40,7 +40,7 @@
         "Searing Chains interrupts Ember Spirit's channeling abilities upon cast.",
         "Despite the visual effects, the Searing Chains' effects are applied instantly and cannot be disjointed.",
         "The units are selected randomly within its range. There are no priorities.",
-        "Roots the targets, preventing them from moving and casting certain mobility spells. Provides True Sight over the targets, but only when the targets were not invisible or within a fade time upon cast.",
+        "Roots the targets, preventing them from moving and casting certain mobility abilities. Provides True Sight over the targets, but only when the targets were not invisible or within a fade time upon cast.",
         "Provides True Sight over the targets, but only when the targets were not invisible or within a fade time upon cast.",
         "Does not target invisible units or units inside the Fog of War.",
         "Deals damage in 0.5-second intervals, starting 0.5 seconds after cast, resulting in 3\/4\/5\/6 (TagTalent 5\/6\/7\/8) damage instances. Can deal up to 75\/140\/225\/330 (TagTalent 125\/210\/315\/440) damage to each unit.",
@@ -61,7 +61,7 @@
       ],
       "itemBehaviour": [],
       "legacyKey": "C",
-      "story": "Xin's harshest lessons often employed the use of red-hot chains."
+      "story": null
     },
     {
       "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/7\/7b\/Ember_Spirit_Sleight_of_Fist.mp3\/revision\/latest?cb=20191216013536",
@@ -105,7 +105,7 @@
       ],
       "itemBehaviour": [],
       "legacyKey": "T",
-      "story": "The studied warrior must whip and weave through its enemies, burning each without pause."
+      "story": null
     },
     {
       "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/b\/bf\/Ember_Spirit_Flame_Guard.mp3\/revision\/latest?cb=20191216013533",
@@ -139,7 +139,7 @@
       ],
       "itemBehaviour": [],
       "legacyKey": "E",
-      "story": "An enemy should never be allowed to approach without difficulty."
+      "story": null
     },
     {
       "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/0\/09\/Ember_Spirit_Activate_Fire_Remnant.mp3\/revision\/latest?cb=20191216013542",
@@ -163,21 +163,20 @@
         "Destroys trees Ember Spirit collides with while traveling to a remnant. Though at high traveling speeds, some trees may be skipped and not destroyed.",
         "Though at high traveling speeds, some trees may be skipped and not destroyed."
       ],
-      "mana": "150 (TagTalent 75)",
+      "mana": "150",
       "hotKey": "D",
       "cooldown": "0",
       "description": "Select the Fire Remnant to arrive at.",
       "spellName": "Activate Fire Remnant",
       "params": [
-        "Cast Animation: 0+1.07",
+        "Cast Animation: 0.1+0.5",
         "Cast Range: Global",
         "Remnant Damage Radius: 450",
-        "Remnant Damage: 100\/200\/300",
-        "Activate Fire Remnant costs less mana."
+        "Remnant Damage: 100\/200\/300"
       ],
       "itemBehaviour": [],
       "legacyKey": "R",
-      "story": "With blazing speed does a spirit fly!"
+      "story": null
     },
     {
       "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/9\/9f\/Ember_Spirit_Fire_Remnant_1.mp3\/revision\/latest?cb=20191216013530",
@@ -195,11 +194,12 @@
         "Every time a Fire Remnant is placed, Ember Spirit gets a status buff, showing the duration of the remnant. The status buff disappears once the Remnant expires or is used.",
         "Fire Remnants are visible to everyone. They do not grant any vision and cannot be seen when sent into the Fog of War.",
         "Fire Remnants deal no damage when they expire.",
-        "With Aghanim's Shard, Fire Remnants deal 22.5 damage in 0.5-second intervals, starting 0.5 seconds after receiving the debuff. The fire remnants start dealing damage as soon as they are created, so they already deal damage while traveling towards their destination. The damage from multiple remnants with overlapping areas do not stack. The damage is sourced to Ember Spirit, and not to the remnants themselves. The damage is provided by an aura, it's debuff lingers for 0.5 seconds.",
+        "With Aghanim's Shard, Fire Remnants deal 22.5 damage in 0.5-second intervals, starting 0.5 seconds after receiving the debuff. The fire remnants start dealing damage as soon as they are created, so they already deal damage while traveling towards their destination. The damage from multiple remnants with overlapping areas do not stack. Can deal up to 2047.5 damage within 600 radius for the entire duration. The damage is sourced to Ember Spirit, and not to the remnants themselves. The damage is provided by an aura, its debuff lingers for 0.5 seconds.",
         "The fire remnants start dealing damage as soon as they are created, so they already deal damage while traveling towards their destination.",
         "The damage from multiple remnants with overlapping areas do not stack.",
+        "Can deal up to 2047.5 damage within 600 radius for the entire duration.",
         "The damage is sourced to Ember Spirit, and not to the remnants themselves.",
-        "The damage is provided by an aura, it's debuff lingers for 0.5 seconds.",
+        "The damage is provided by an aura, its debuff lingers for 0.5 seconds.",
         "With Aghanim's Shard, any enemy hero kill (including clones, excluding illusions and allies) done by Ember Spirit replenish a Fire Remnant charge. This also happens whenever an enemy hero dies within 400 range of him. Denies do not count. A charge is replenished even if the killed hero has Reincarnation. If Ember Spirit dies, he leaves behind a Fire Remnant at his death location.",
         "This also happens whenever an enemy hero dies within 400 range of him. Denies do not count.",
         "A charge is replenished even if the killed hero has Reincarnation.",
@@ -226,7 +226,7 @@
       ],
       "itemBehaviour": [],
       "legacyKey": "F",
-      "story": "By the spirit's power are Xin's teachings spread anew."
+      "story": null
     }
   ],
   "mainAttributes": {
@@ -234,7 +234,7 @@
     "attrStrength": 21.0,
     "attrIntelligence": 20.0,
     "attrIntelligenceInc": 2.2,
-    "attrAgilityInc": 2.6,
+    "attrAgilityInc": 2.9,
     "attrAgility": 22.0
   },
   "description": "Xin, the Ember Spirit, is a highly mobile and versatile melee agility hero whose abilities make him a slippery foe who can dance around his enemies at will. His skill set allows for aggressive assaults on other heroes, as he can engage on them from long range using Sleight of Fist and tie them down with Searing Chains. His Flame Guard ability deals damage in a small area around him while shielding him from magic nukes, making him a force to be reckoned with by enemy casters. Finally, his Fire Remnant spell enables him to engage, escape, or move instantaneously around the map, allowing him to appear where the enemy least expects and disappear just as quickly.",
@@ -242,7 +242,7 @@
   "talents": [
     {
       "talentLvl": "25",
-      "talentLeft": "-12 Remnant Charge Restore Time",
+      "talentLeft": "-12s Remnant Charge Restore Time",
       "talentRight": "2 Sleight of Fist Charges"
     },
     {

@@ -20,7 +20,7 @@
         },
         {
           "talentLvl": "10",
-          "talentLeft": "+0.75 Waning Rift Silence Duration",
+          "talentLeft": "+0.75s Waning Rift Silence Duration",
           "talentRight": "+300 Illusory Orb Distance"
         }
       ]
@@ -33,15 +33,15 @@
         "Damage Magical"
       ],
       "notes": [
-        "Illusory Orb travels at a speed of 651.",
-        "With the travel distance and damage radius, the orb takes 3 seconds to reach max distance and can hit units up to 2175 range away.",
+        "Leveling this ability automatically levels Ethereal Jaunt as well.",
+        "Illusory Orb travels at a speed of 651, taking 3 (TagTalent 3.46) seconds to reach max distance",
+        "With the travel distance and damage radius, the orb can hit units up to 2175 (TagTalent 2475) range away.",
         "The orb starts emitting red pulses after having traveled for 2.5 seconds, indicating that it is about to reach its maximum travel range.",
-        "The orb leaves behind a trail of flying vision, with a radius of 450. The vision lingers for 5 seconds.",
-        "Leveling this ability automatically levels Ethereal Jaunt as well."
+        "The orb leaves behind a trail of flying vision, with a radius of 450. The vision lingers for 5 seconds."
       ],
       "mana": "80\/100\/120\/140",
       "hotKey": "Q",
-      "cooldown": "13\/12\/11\/10 (TagTalent 9\/8\/7\/6)",
+      "cooldown": "12\/11\/10\/9 (TagTalent 8\/7\/6\/5)",
       "description": "Puck launches a magic orb that floats in a straight path, damaging enemy units along the way. At any point, Puck may teleport to the orb's location using Ethereal Jaunt.",
       "spellName": "Illusory Orb",
       "params": [
@@ -53,7 +53,7 @@
       ],
       "itemBehaviour": [],
       "legacyKey": "R",
-      "story": "The playful Faerie Dragon delights in confusing others, vanishing and reappearing where unexpected."
+      "story": null
     },
     {
       "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/0\/0c\/Puck_Waning_Rift.mp3\/revision\/latest?cb=20191216021936",
@@ -67,9 +67,9 @@
         "Waning Rift does not disjoint projectiles upon cast.",
         "Despite the visual effects, the silence and damage are applied instantly in the entire radius. It first applies the damage, then the silence debuff, then the knockback, then the True Sight debuff.",
         "It first applies the damage, then the silence debuff, then the knockback, then the True Sight debuff.",
-        "With Aghanim's Shard, knocks units back at a speed of 625. The knockback distance is always 250, no matter how far the unit is from the center. Units are not disabled during the knockback. They can still turn, attack, and use items. Channeling items are not interrupted. Can push units over impassable terrain. Any tree a knocked back unit collides with gets destroyed. Places the same debuff as Dust of Appearance on enemies to reveal them. However, it does not slow enemies. The debuff is placed on wards as well.",
+        "With Aghanim's Shard, knocks units back at a speed of 625. The knockback distance is always 250, no matter how far the unit is from the center. Units are not disabled during the knockback. They can still turn, attack, and use items. Channeling items are not interrupted. Can push units over impassable terrain. Destroys trees enemies come in contact with during the knockback. Places the same debuff as Dust of Appearance on enemies to reveal them. However, it does not slow enemies. The debuff is placed on wards as well.",
         "Units are not disabled during the knockback. They can still turn, attack, and use items. Channeling items are not interrupted.",
-        "Can push units over impassable terrain. Any tree a knocked back unit collides with gets destroyed.",
+        "Can push units over impassable terrain. Destroys trees enemies come in contact with during the knockback.",
         "Places the same debuff as Dust of Appearance on enemies to reveal them. However, it does not slow enemies.",
         "The debuff is placed on wards as well."
       ],
@@ -94,7 +94,7 @@
       ],
       "itemBehaviour": [],
       "legacyKey": "W",
-      "story": "With a mischievous grin, Puck spreads its enchanted powder which disrupts magical flow."
+      "story": null
     },
     {
       "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/a\/ac\/Puck_Phase_Shift.mp3\/revision\/latest?cb=20191216021935",
@@ -105,15 +105,15 @@
       ],
       "notes": [
         "Phase Shift disjoints projectiles upon cast.",
-        "Certain items which do not cancel channeling abilities (e.g. Shadow Blade or Shiva's Guard) do cancel Phase Shift.",
+        "Certain items abilities which do not cancel channeling (e.g. Shadow Blade or Shiva's Guard) do cancel Phase Shift.",
         "Turns the caster invulnerable and hidden for its duration. Does not provide phased movement, so the caster can still block other units during Phase Shift. The buff lingers for one server tick once the channeling ends or is interrupted, which allows using items while still invulnerable and hidden.",
         "Does not provide phased movement, so the caster can still block other units during Phase Shift.",
         "The buff lingers for one server tick once the channeling ends or is interrupted, which allows using items while still invulnerable and hidden.",
-        "The Phase Shift instant attack talent causes Puck to perform instant attacks on all enemies within attack range whenever Phase Shift is cast. These instant attacks can proc any attack modifiers and on-hit effects normally. They do not have True Strike, but completely ignore disarms. Every visible and attackable enemy nearby is attacked. This includes buildings, but not wards and Undying Zombies. The total instant attack radius for Puck is 750, since it is based on the attack range of the caster. The radius can be further increased by other attack range bonuses. Cast range bonuses do not increase it.",
+        "The Phase Shift instant attack talent causes Puck to perform instant attacks on all enemies within attack range whenever Phase Shift is cast. These instant attacks can proc any attack modifiers and on-hit effects normally. They do not have True Strike, but completely ignore disarms. Every visible and attackable enemy nearby is attacked. This includes buildings, but not wards and Undying Zombies. With Puck's base attack range, and the instant attack range bonus, it has a search radius of 750. The search radius can be further increased by other attack range bonuses.",
         "These instant attacks can proc any attack modifiers and on-hit effects normally. They do not have True Strike, but completely ignore disarms.",
         "Every visible and attackable enemy nearby is attacked. This includes buildings, but not wards and Undying Zombies.",
-        "The total instant attack radius for Puck is 750, since it is based on the attack range of the caster.",
-        "The radius can be further increased by other attack range bonuses. Cast range bonuses do not increase it."
+        "With Puck's base attack range, and the instant attack range bonus, it has a search radius of 750.",
+        "The search radius can be further increased by other attack range bonuses."
       ],
       "mana": null,
       "hotKey": "E",
@@ -127,7 +127,7 @@
       ],
       "itemBehaviour": [],
       "legacyKey": "F",
-      "story": "With a quip and flash, Puck returns to the alien dimension from whence it came."
+      "story": null
     },
     {
       "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/4\/43\/Puck_Ethereal_Jaunt.mp3\/revision\/latest?cb=20191216021932",
@@ -137,15 +137,14 @@
       ],
       "notes": [
         "This ability is automatically leveled whenever Illusory Orb is leveled up.",
-        "This ability stays inactive until Illusory Orb is cast and turns inactive again once the orb of that cast is gone. In Ability Draft, due to non-ultimate abilities being limited to one ability slot, Ethereal Jaunt replaces Illusory Orb while the orb flies, instead of being in a separate slot.",
-        "In Ability Draft, due to non-ultimate abilities being limited to one ability slot, Ethereal Jaunt replaces Illusory Orb while the orb flies, instead of being in a separate slot.",
+        "This ability stays inactive until Illusory Orb is cast and turns inactive again once the orb of that cast is gone.",
         "Ethereal Jaunt disjoints projectiles upon cast.",
         "When two orbs are cast in succession, this ability only stays active for the duration of the first cast orb. However, it always teleports the caster to their last created orb.",
         "However, it always teleports the caster to their last created orb."
       ],
-      "mana": null,
+      "mana": "0",
       "hotKey": "D",
-      "cooldown": null,
+      "cooldown": "0",
       "description": "Teleports Puck to a flying Illusory Orb.",
       "spellName": "Ethereal Jaunt",
       "params": [
@@ -163,24 +162,24 @@
         "Damage Magical (TagAghanim Instant Attack)"
       ],
       "notes": [
-        "Every enemy hero (including illusions, clones, and creep-heroes) within 375 range of the coil gets leashed upon cast, preventing them from casting certain mobility spells. Entering the area after cast has no effect. The coil does not leash enemies after cast.",
+        "Every enemy hero (including illusions, clones and creep-heroes) within 375 range of the coil gets leashed upon cast, preventing them from casting certain mobility abilities. Entering the area after cast has no effect. The coil does not leash enemies after cast.",
         "Entering the area after cast has no effect. The coil does not leash enemies after cast.",
         "If a leashed enemy moves 600 range away from the coil, the leash snaps, stunning and damaging the enemy. It does not matter how far or how fast the enemy moves away, the stun and damage always hit it if possible. The leash snap first applies the damage, then the debuff.",
         "It does not matter how far or how fast the enemy moves away, the stun and damage always hit it if possible.",
         "The leash snap first applies the damage, then the debuff.",
         "Dream Coil leashes invisible units and on units in the Fog of War as well, but it does not provide vision over them. The link visually draws to their last known location.",
         "Multiple instances of Dream Coil fully stack, with each cast placing its own separate leash.",
-        "The Dream Coil rapid fire talent causes Puck to perform instant attacks on all leashed enemies, as long as Puck stays within 775 radius of the targeted area. These instant attacks can proc any attack modifiers and on-hit effects normally. They do not have True Strike, but completely ignore disarms. The attacks are performed even while the caster is disabled, or hidden. This means the attacks happen even during Phase Shift. The attacks are performed in 0.75-second intervals, starting 0.75 seconds after cast, resulting in up to 8 (TagTalent 10) instances. Since the instant attacks are bound to the leash, snapping it, or dispelling it with spell immunity causes the attacks to stop. Multiple instances of Dream Coil on enemies causes the caster to instant-attack multiple times, for each instance, with the interval based on when the debuffs were received.",
+        "The Dream Coil rapid fire talent causes Puck to perform instant attacks on all leashed enemies, as long as Puck stays within 775 radius of the targeted area. These instant attacks can proc any attack modifiers and on-hit effects normally. They do not have True Strike, but completely ignore disarms. The attacks are performed even while the caster is disabled, or hidden. This means the attacks happen even during Phase Shift. The attacks are performed in 0.75-second intervals, starting 0.75 seconds after cast, resulting in up to 8 (TagTalent 10) instances. Since the instant attacks are bound to the leash, snapping it, or dispelling it with spell immunity causes the attacks to stop. Multiple instances of Dream Coil on enemies causes the caster to perform instant attacks multiple times, for each instance, with the interval based on when the debuffs were received.",
         "These instant attacks can proc any attack modifiers and on-hit effects normally. They do not have True Strike, but completely ignore disarms.",
         "The attacks are performed even while the caster is disabled, or hidden. This means the attacks happen even during Phase Shift.",
         "The attacks are performed in 0.75-second intervals, starting 0.75 seconds after cast, resulting in up to 8 (TagTalent 10) instances.",
         "Since the instant attacks are bound to the leash, snapping it, or dispelling it with spell immunity causes the attacks to stop.",
-        "Multiple instances of Dream Coil on enemies causes the caster to instant-attack multiple times, for each instance, with the interval based on when the debuffs were received."
+        "Multiple instances of Dream Coil on enemies causes the caster to perform instant attacks multiple times, for each instance, with the interval based on when the debuffs were received."
       ],
       "mana": "100\/150\/200",
       "hotKey": "R",
       "cooldown": "80",
-      "description": "Creates a coil of volatile magic that latches onto enemy Heroes, stunning them for 1.8\/2.4\/3 seconds, damaging and leashing them. If the enemy hero stretches the coil by moving too far away, it snaps, stunning and dealing additional damage.",
+      "description": "Creates a coil of volatile magic that latches onto enemy Heroes, damaging and leashing them. If the enemy hero stretches the coil by moving too far away, it snaps, stunning and dealing additional damage.",
       "spellName": "Dream Coil",
       "params": [
         "Cast Animation: 0.1+0.27",
@@ -198,7 +197,7 @@
       ],
       "itemBehaviour": [],
       "legacyKey": "C",
-      "story": "The Faerie Dragon sows confusion by forcing its enemies to vividly dream about their own mortality."
+      "story": null
     }
   ],
   "mainAttributes": {
@@ -229,7 +228,7 @@
     },
     {
       "talentLvl": "10",
-      "talentLeft": "+0.75 Waning Rift Silence Duration",
+      "talentLeft": "+0.75s Waning Rift Silence Duration",
       "talentRight": "+300 Illusory Orb Distance"
     }
   ]

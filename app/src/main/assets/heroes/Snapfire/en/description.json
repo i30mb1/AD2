@@ -23,7 +23,7 @@
         },
         {
           "talentLvl": "10",
-          "talentLeft": "+1s Scatterblast Slow",
+          "talentLeft": "+1s Scatterblast Slow Duration",
           "talentRight": "+200 Health"
         }
       ]
@@ -39,12 +39,12 @@
         "Scatterblast travels at a speed of 3000, taking 0.73 seconds to travel the full distance.",
         "With the travel distance and end radius, it can hit units up to 1200 range away. The complete area is shaped like a cone.",
         "The complete area is shaped like a cone.",
-        "Deals 120\/225\/330\/435 (TagTalent 232.5\/337.5\/442.5\/547.5) damage to units within point-blank distance.",
         "Scatterblast first applies the stun, then the knockback, then the damage, then the movement speed slow.",
-        "Leveling up Scatterblast, choosing the movement speed slow increasing or damage increasing talent does not upgrade the current instance launched.",
-        "With Aghanim's Shard, Scatterblast deals 245\/350\/455\/560 (TagTalent 357.5\/462.5\/567.5\/672.5) damage to units within point-blank distance. Also stuns for 0.3 seconds and knocks enemies 250 range back within the point-blank distance. Knocks back at a speed of 833.33. The knockback destroys trees the enemies collide with.",
+        "Leveling up Scatterblast, or choosing the damage increasing talent does not update the damage of an already launched instance.",
+        "Deals 120\/225\/330\/435 (TagTalent 232.5\/337.5\/442.5\/547.5) damage to units within point-blank distance.",
+        "With Aghanim's Shard, Scatterblast deals 245\/350\/455\/560 (TagTalent 357.5\/462.5\/567.5\/672.5) damage to units within point-blank distance. Also stuns for 0.3 seconds and knocks enemies 250 range back within the point-blank distance. Knocks back at a speed of 833.33. Destroys trees enemies come in contact with during the knockback.",
         "Also stuns for 0.3 seconds and knocks enemies 250 range back within the point-blank distance. Knocks back at a speed of 833.33.",
-        "The knockback destroys trees the enemies collide with."
+        "Destroys trees enemies come in contact with during the knockback."
       ],
       "mana": "80\/90\/100\/110",
       "hotKey": "Q",
@@ -66,13 +66,13 @@
         "Point-Blank Flat Damage Bonus: 125",
         "Point-Blank Knockback Distance: 250",
         "Point-Blank Knockback Duration: 0.3",
-        "Point-Blank Stun Duration: 2",
-        "Causes Scatterblast to knock units back in the point blank range for 250 units, dealing 125 extra damage and stunning for 2 seconds.",
+        "Point-Blank Stun Duration: 1.5",
+        "Causes Scatterblast to knock units back in the point blank range for 250 units, dealing 125 extra damage and stunning for 1.5 seconds.",
         "Debuff persists if placed before spell immunity and when not dispelled."
       ],
       "itemBehaviour": [],
       "legacyKey": "R",
-      "story": "A favorite from her collection, Beadie crafted Ol' Rackatee as her first line of defense when she ventured into the Outlands."
+      "story": null
     },
     {
       "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/d\/d3\/Snapfire_Firesnap_Cookie_1.mp3\/revision\/latest?cb=20191215162224",
@@ -88,13 +88,13 @@
         "Cannot be cast on allied units that are currently channeling. This includes self-casting. If the ally starts channeling after projectile launch, the projectile does nothing upon impact. Can target, but has no effect on units affected by Chronosphere and Black Hole, the projectile does nothing on impact.",
         "If the ally starts channeling after projectile launch, the projectile does nothing upon impact.",
         "Can target, but has no effect on units affected by Chronosphere and Black Hole, the projectile does nothing on impact.",
-        "The target jumps 425 range forwards upon projectile impact, 257 range high. While in the air, other units can pass below them.",
+        "Upon projectile impact, the target jumps 425 range forwards and 257 range high. While in the air, other units can pass below them.",
         "During the jump, the target is fully disabled, unable to move, turn, attack or cast abilities or items.",
         "Can jump over other units and over impassable terrain.",
-        "The area damage and stun are applied upon losing the hop buff. This means if the leap gets interrupted, the effects are applied earlier.",
+        "The area damage and stun are applied upon losing the hop buff. This means if the leap gets interrupted, the effects are applied earlier. Firesnap Cookie first applies the heal, then the damage, then the stun. The health restore talent immediately upgrades already launched cookies, making them heal on impact.",
         "Firesnap Cookie first applies the heal, then the damage, then the stun.",
-        "Destroys trees within a 150 radius upon landing.",
-        "The health restore talent immediately upgrades already launched cookies, making them heal on impact."
+        "The health restore talent immediately upgrades already launched cookies, making them heal on impact.",
+        "Destroys trees within 150 radius around the target upon landing."
       ],
       "mana": "100",
       "hotKey": "W",
@@ -115,7 +115,7 @@
       ],
       "itemBehaviour": [],
       "legacyKey": "C",
-      "story": "With the help of a secret mixture that pairs Beadie's baking skills with her passion for black powder, these battle biscuits pack a punch."
+      "story": null
     },
     {
       "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/2\/20\/Snapfire_Lil%27_Shredder_1.mp3\/revision\/latest?cb=20191215162230",
@@ -125,12 +125,12 @@
         "Damage Instant Attack"
       ],
       "notes": [
-        "Interrupts Snapfire's channeling spells on cast.",
+        "Interrupts Snapfire's channeling abilities on cast.",
         "Increases Snapfire's attack range to 575\/650\/725\/800, and sets her base attack time to 1.",
-        "Sets Snapfire's damage to the given values. This means attack damage bonuses and reductions are completely ignored. With the level 20 talent, Lil' Shredder uses her regular attack damage, so that all bonuses and reductions now work. Leveling up Lil' Shredder or choosing the level 20 talent do not update the damage of an already existing instance from a previous cast.",
-        "With the level 20 talent, Lil' Shredder uses her regular attack damage, so that all bonuses and reductions now work.",
-        "Leveling up Lil' Shredder or choosing the level 20 talent do not update the damage of an already existing instance from a previous cast.",
-        "An attack charge is lost whenever an attack is executed, regardless of outcome. This means missed attacks use up charges as well.",
+        "Sets Snapfire's damage to the given values. Attack damage bonuses and reductions are completely ignored, unless the level 20 talent Lil' Shredder uses attack damage is selected. Leveling up Lil' Shredder or selecting the level 20 talent do not update the damage of an already existing instance from a previous cast.",
+        "Attack damage bonuses and reductions are completely ignored, unless the level 20 talent Lil' Shredder uses attack damage is selected.",
+        "Leveling up Lil' Shredder or selecting the level 20 talent do not update the damage of an already existing instance from a previous cast.",
+        "An attack charge is lost whenever an attack is executed, regardless of the outcome. This means missed attacks use up charges as well.",
         "The number of charges left is visible on the buff icon.",
         "Lil' Shredder uses a single debuff on the target. Following attacks increase its stack count. A number on the icon reveals the amount of stacks. The number is visible to everyone. Since only one debuff is used, each attack resets the duration of the entire stack.",
         "A number on the icon reveals the amount of stacks. The number is visible to everyone.",
@@ -138,7 +138,8 @@
         "The armor reduction is applied on any attacked target, including buildings and allies.",
         "Can deal a total of 120\/270\/420\/570 damage with all 6 attacks (before reductions).",
         "Can reduce a total of 4.5 armor with all 6 attacks.",
-        "The attacks first place the debuff, then apply their own damage.",
+        "The attacks first place the debuff, then apply their own damage. Since the Lil' Shredder debuff is applied before the damage, the ability's damage benefits from the armor reduction applied.",
+        "Since the Lil' Shredder debuff is applied before the damage, the ability's damage benefits from the armor reduction applied.",
         "Successive casts do not stack, but refresh the buff instead, resetting the amount of attacks and updating the range bonus.",
         "With the multishot talent, Snapfire performs instant attacks on different random targets within attack range whenever attacking during Lil' Shredder. These instant attacks can proc any attack modifiers and on-hit effects normally. They do not have True Strike, and are affected by disarms. The secondary attacks have no target priorities. They simply choose random valid targets within range.",
         "These instant attacks can proc any attack modifiers and on-hit effects normally. They do not have True Strike, and are affected by disarms.",
@@ -164,7 +165,7 @@
       ],
       "itemBehaviour": [],
       "legacyKey": "E",
-      "story": "Beadie constantly tinkers with a design she first dreamed up plotting an exodus from her old gang."
+      "story": null
     },
     {
       "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/4\/4c\/Snapfire_Gobble_Up_1.mp3\/revision\/latest?cb=20200527011842",
@@ -174,8 +175,7 @@
         "Damage Instant Kill"
       ],
       "notes": [
-        "Requires Aghanim's Scepter to be unlocked. In Ability Draft, Gobble Up can be unlocked by the player that drafted Mortimer Kisses.",
-        "In Ability Draft, Gobble Up can be unlocked by the player that drafted Mortimer Kisses.",
+        "Requires Aghanim's Scepter to be unlocked.",
         "Can be cast on any unit, except for enemy heroes and creep-heroes. Cannot be cast on allies who have ☐ Disabled Help from Snapfire.",
         "Cannot be cast on allies who have ☐ Disabled Help from Snapfire.",
         "Disjoints projectiles for the target unit upon cast.",
@@ -212,20 +212,19 @@
       "notes": [
         "Requires Aghanim's Scepter to be unlocked.",
         "This ability stays inactive until Gobble Up is cast and turns inactive again once the targeted unit is spat out in any way.",
-        "The swallowed unit serves as projectile, and gets moved in an arc towards the targeted point. While flying, the unit is stunned, invulnerable and hidden.",
+        "The swallowed unit serves as a projectile, and gets moved in an arc towards the targeted point. While flying, the unit is stunned, invulnerable and hidden.",
         "While flying, the unit is stunned, invulnerable and hidden.",
         "The projectile has a minimum travel time of 0.6, and a maximum travel time of 2 seconds. While in the air, other units can pass below it.",
-        "If the swallowed unit was not a hero, illusion, clone, or creep-hero, it gets instantly killed upon landing.",
-        "Upon landing, the unit deals the impact damage and leaves a lava puddle behind. The puddle lasts 3 seconds. The impact damage equals the one of Mortimer Kisses, based on its current level. The puddle applies the debuff on enemies in 0.5 second intervals, starting immediately as it is created, resulting in 7 instances. The debuff lasts 1 second, and deals 50 damage in 0.5 second intervals, starting immediately upon being placed, resulting in 3 instances. Can deal a total of 610\/690\/770 damage, considering impact damage, and standing within the puddle for the full duration. Multiple instances of the debuff do not stack. Since Spit Out and Mortimer Kisses use the same modifer, they do not stack, with the damage from the first applied debuff taking priority.",
-        "The impact damage equals the one of Mortimer Kisses, based on its current level.",
-        "The puddle applies the debuff on enemies in 0.5 second intervals, starting immediately as it is created, resulting in 7 instances.",
-        "The debuff lasts 1 second, and deals 50 damage in 0.5 second intervals, starting immediately upon being placed, resulting in 3 instances.",
+        "If the swallowed unit is not a hero, illusion, clone, or creep-hero, it gets instantly killed upon landing.",
+        "Upon landing, the unit deals one instance of impact damage based on the current level of Mortimer Kisses, and leaves a lava puddle behind. The puddle lasts 3 seconds. The puddle applies the debuff on enemies in 0.5-second intervals, starting immediately as it is created, resulting in 7 instances. The debuff lasts 1 second, and deals 50 damage in 0.5-second intervals, starting immediately upon being placed, resulting in 3 instances. Can deal a total of 610\/690\/770 damage, considering impact damage, and standing within the puddle for the full duration. Multiple instances of the debuff do not stack. Since both Spit Out and Mortimer Kisses use the same modifer, they do not stack, with the damage from the first applied debuff taking priority.",
+        "The puddle applies the debuff on enemies in 0.5-second intervals, starting immediately as it is created, resulting in 7 instances.",
+        "The debuff lasts 1 second, and deals 50 damage in 0.5-second intervals, starting immediately upon being placed, resulting in 3 instances.",
         "Can deal a total of 610\/690\/770 damage, considering impact damage, and standing within the puddle for the full duration.",
         "Multiple instances of the debuff do not stack.",
-        "Since Spit Out and Mortimer Kisses use the same modifer, they do not stack, with the damage from the first applied debuff taking priority.",
+        "Since both Spit Out and Mortimer Kisses use the same modifer, they do not stack, with the damage from the first applied debuff taking priority.",
         "The impact first applies the damage, then the stun.",
         "The projectile provides 500 radius flying vision as it travels. This vision lingers for 3.5 seconds at the impact area.",
-        "Destroys trees within a 150 radius upon landing."
+        "Destroys trees within 150 radius around the projectile upon landing."
       ],
       "mana": "0",
       "hotKey": "F",
@@ -241,7 +240,8 @@
         "Puddle Duration: 3",
         "Debuff Duration: 1",
         "Stun Duration: 1.5",
-        "Debuff persists if placed before spell immunity and when not dispelled."
+        "Debuff persists if placed before spell immunity and when not dispelled.",
+        ""
       ],
       "itemBehaviour": [],
       "legacyKey": "G",
@@ -266,24 +266,24 @@
         "Although reducing turn rate a lot while active, the globs are launched where the order was targeted, they are not launched based on facing angle.",
         "Snapfire is disarmed during Mortimer Kisses. Attack orders behave like move orders during disarms, so right-clicking an enemy sets a new location as well.",
         "The destination for each glob is marked with a red circle indicator, which is visible to allies only.",
-        "Launches globs in 0.75-second (TagTalent 0.429-second) intervals, starting immediately upon cast, resulting in 8 (TagTalent 14) globs.",
-        "Each glob deals the impact damage and leaves a lava puddle behind. The puddles last 3 seconds. The puddles apply the debuff on enemies in 0.5 second intervals, starting immediately as they are created, resulting in 7 instances. The debuff lasts 1 second, and deals 30\/40\/50 damage in 0.5 second intervals, starting immediately upon being placed, resulting in 3 instances. Multiple instances of the debuff do not stack.",
-        "The puddles apply the debuff on enemies in 0.5 second intervals, starting immediately as they are created, resulting in 7 instances.",
-        "The debuff lasts 1 second, and deals 30\/40\/50 damage in 0.5 second intervals, starting immediately upon being placed, resulting in 3 instances.",
+        "Launches globs in 0.688 (TagTalent 0.393)-second intervals, starting immediately upon cast, resulting in 8 (TagTalent 14) globs.",
+        "Each glob deals the impact damage and leaves a lava puddle behind. The puddles last 3 seconds. The puddles apply the debuff on enemies in 0.5-second intervals, starting immediately as they are created, resulting in 7 instances. The debuff lasts 1 second, and deals 30\/40\/50 damage in 0.5-second intervals, starting immediately upon being placed, resulting in 3 instances. Multiple instances of the debuff do not stack. Since both Spit Out and Mortimer Kisses use the same modifer, they do not stack, with the damage from the first applied debuff taking priority.",
+        "The puddles apply the debuff on enemies in 0.5-second intervals, starting immediately as they are created, resulting in 7 instances.",
+        "The debuff lasts 1 second, and deals 30\/40\/50 damage in 0.5-second intervals, starting immediately upon being placed, resulting in 3 instances.",
         "Multiple instances of the debuff do not stack.",
+        "Since both Spit Out and Mortimer Kisses use the same modifer, they do not stack, with the damage from the first applied debuff taking priority.",
         "A single glob can deal a total of 430\/600\/770 damage, considering impact damage, and standing within the puddle for the full duration.",
         "Provides 275 radius flying vision at the current targeted location for the globs, lasting until Mortimer stops launching projectiles.",
         "The projectiles provide 500 radius flying vision as they travel. This vision lingers for 3.5 seconds at the impact area.",
-        "Leveling up Mortimer Kisses does not update the impact damage of already launched globs to the new level. However, the lava puddles are updated to apply the debuff with the new level's value. Already placed debuffs are not updated to the new level.",
-        "However, the lava puddles are updated to apply the debuff with the new level's value.",
-        "Already placed debuffs are not updated to the new level.",
-        "The movement speed slow increasing talent immediately upgrades all existing puddles to the new value. However, already placed debuffs are not updated.",
-        "However, already placed debuffs are not updated."
+        "Leveling up Mortimer Kisses does not update the impact damage of already launched globs. However, the lava puddles are updated to apply the debuff with the current value. The movement speed slow increasing talent immediately updates all existing puddles to the new value. Already placed debuffs are not updated to the current values.",
+        "However, the lava puddles are updated to apply the debuff with the current value.",
+        "The movement speed slow increasing talent immediately updates all existing puddles to the new value.",
+        "Already placed debuffs are not updated to the current values."
       ],
       "mana": "125\/150\/175",
       "hotKey": "R",
       "cooldown": "120\/110\/100",
-      "description": "Snapfire's friend launches a barrage of firespit globs over 6 seconds. Globs cause impact damage and create pools of firespit, which slow and apply damage over time. Snapfire has a reduced turn rate for the duration and a minimum launch range of 600. Each glob can be targeted with a right click.",
+      "description": "Snapfire's friend launches a barrage of firespit globs over 5.5 seconds. Globs cause impact damage and create pools of firespit, which slow and apply damage over time. Snapfire has a reduced turn rate for the duration and a minimum launch range of 600. Each glob can be targeted with a right click.",
       "spellName": "Mortimer Kisses",
       "params": [
         "Cast Animation: 0.5+0.73",
@@ -296,7 +296,7 @@
         "Impact Damage: 160\/240\/320",
         "Debuff Damage per Second: 60\/80\/100",
         "Move Speed Slow: 15%\/20%\/25% (TagTalent 35%\/40%\/45%)",
-        "Launch Duration: 6",
+        "Launch Duration: 5.5",
         "Puddle Duration: 3",
         "Debuff Duration: 1",
         "Grants a new ability: Gobble Up. Mortimer gobbles up a creep or an allied hero, which he can then spit towards enemies.",
@@ -304,7 +304,7 @@
       ],
       "itemBehaviour": [],
       "legacyKey": "D",
-      "story": "Little did Beadie know when she adopted Mortimer, dragon toads--which aren't even toads at all--share more than just a name with their distant draconic cousins."
+      "story": null
     }
   ],
   "mainAttributes": {
@@ -335,7 +335,7 @@
     },
     {
       "talentLvl": "10",
-      "talentLeft": "+1s Scatterblast Slow",
+      "talentLeft": "+1s Scatterblast Slow Duration",
       "talentRight": "+200 Health"
     }
   ]

@@ -1,0 +1,83 @@
+[
+  {
+    "responses": [
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/a\/aa\/Vo_marci_marci_move.mp3\/revision\/latest?cb=20211029123420",
+        "title": ""
+      }
+    ],
+    "category": "[]"
+  },
+  {
+    "responses": [
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/a\/aa\/Vo_marci_marci_move.mp3\/revision\/latest?cb=20211029123420",
+        "title": ""
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/a\/a7\/Vo_marci_marci_move_2.mp3\/revision\/latest?cb=20211029123421",
+        "isArcane": true,
+        "title": ""
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/d\/d8\/Vo_marci_marci_move_3.mp3\/revision\/latest?cb=20211029123422",
+        "isArcane": true,
+        "title": ""
+      }
+    ],
+    "category": "[]"
+  },
+  {
+    "responses": [
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/c\/c9\/Vo_marci_marci_deny.mp3\/revision\/latest?cb=20211029123417",
+        "title": ""
+      }
+    ],
+    "category": "[]"
+  },
+  {
+    "responses": [
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/5\/59\/Vo_marci_marci_immortality.mp3\/revision\/latest?cb=20211029123418",
+        "title": "",
+        "icons": [
+          "heroes\/Aegis of the Immortal\/minimap.png"
+        ]
+      }
+    ],
+    "category": "[]"
+  },
+  {
+    "responses": [
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/5\/53\/Vo_marci_marci_taking_damage.mp3\/revision\/latest?cb=20211029123426",
+        "title": ""
+      }
+    ],
+    "category": "[]"
+  },
+  {
+    "responses": [
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/f\/ff\/Vo_marci_marci_thanks.mp3\/revision\/latest?cb=20211029123427",
+        "title": ""
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/9\/92\/Vo_marci_marci_laugh.mp3\/revision\/latest?cb=20211029123419",
+        "isArcane": true,
+        "title": ""
+      }
+    ],
+    "category": "[]"
+  },
+  {
+    "responses": [
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/9\/9b\/Vo_marci_marci_sad.mp3\/revision\/latest?cb=20211029123423",
+        "title": ""
+      }
+    ],
+    "category": "[]"
+  }
+]

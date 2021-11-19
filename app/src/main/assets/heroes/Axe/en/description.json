@@ -36,11 +36,11 @@
         "Affects Enemies \/ Self"
       ],
       "notes": [
-        "Taunts affected enemies, forcing them to attack Axe. Does not silence, so active attack modifiers with autocast on are still applied. Affects invisible units and units in the Fog of War. Does not affect towers, wards, invulnerable or hidden units. Does not affect lane creeps from the very first creep wave that spawns, until they meet the opposing creeps in the lane.",
-        "Does not silence, so active attack modifiers with autocast on are still applied.",
+        "Taunts affected enemies, forcing them to attack Axe. Does not silence, so active attack modifiers with Autocast on are still applied. Affects invisible units and units in the Fog of War. Does not affect towers, wards, invulnerable or hidden units. Does not affect lane creeps from the very first creep wave that spawns, until they meet the opposing creeps in the lane.",
+        "Does not silence, so active attack modifiers with Autocast on are still applied.",
         "Affects invisible units and units in the Fog of War. Does not affect towers, wards, invulnerable or hidden units.",
         "Does not affect lane creeps from the very first creep wave that spawns, until they meet the opposing creeps in the lane.",
-        "Re-casting on a unit under the taunt effect of Berserker's Call refreshes the duration.",
+        "When cast on a unit under the taunt effect of Berserker's Call refreshes the duration.",
         "When Axe dies, the taunt ends immediately.",
         "With Aghanim's Scepter, Battle Hunger of its current level is applied to all enemies within 300 (TagTalent 400) radius."
       ],
@@ -58,7 +58,7 @@
       ],
       "itemBehaviour": [],
       "legacyKey": "E",
-      "story": "Mogul Khan's warcry taunts opponents into engaging in an unconquerable battle with the Axe."
+      "story": null
     },
     {
       "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/2\/21\/Axe_Battle_Hunger.mp3\/revision\/latest?cb=20191216010833",
@@ -68,12 +68,12 @@
         "Damage Magical"
       ],
       "notes": [
-        "Reduces non-hero units' movement speed by 6% and armor by 3.5. Battle Hunger treats creep-heroes as creeps.",
+        "Reduces non-hero units' movement speed by 6%\/6.5%\/7%\/7.5% and armor by 3.5. Battle Hunger treats creep-heroes as creeps.",
         "Battle Hunger treats creep-heroes as creeps.",
-        "Battle Hunger has a passive modifier that is present at all times, but hidden when the stack count is at 0. This modifier gains 1 stack for every affected creep, and 2 for every affected hero. Each stack grants Axe 6% movement speed and 3.5 armor. This means each affected hero effectively grants Axe 12% movement speed and 7 armor. This modifier has no stack limit.",
+        "Battle Hunger has a passive modifier that is present at all times, but hidden when the stack count is at 0. This modifier gains 1 stack for every affected creep, and 2 for every affected hero. Each stack grants Axe 6%\/6.5%\/7%\/7.5% movement speed and 3.5 armor. This means each affected hero effectively grants Axe 12%\/13%\/14%\/15% movement speed and 7 armor. This modifier has no stack limit.",
         "This modifier gains 1 stack for every affected creep, and 2 for every affected hero.",
-        "Each stack grants Axe 6% movement speed and 3.5 armor.",
-        "This means each affected hero effectively grants Axe 12% movement speed and 7 armor.",
+        "Each stack grants Axe 6%\/6.5%\/7%\/7.5% movement speed and 3.5 armor.",
+        "This means each affected hero effectively grants Axe 12%\/13%\/14%\/15% movement speed and 7 armor.",
         "This modifier has no stack limit.",
         "Casting Battle Hunger multiple times on the same target does not stack, but refreshes the duration instead.",
         "Deals damage in 1-second intervals, starting 1 second after the debuff is placed, resulting in 12 instances.",
@@ -92,9 +92,9 @@
         "Cast Animation: 0.3+0.5",
         "Cast Range: 700\/775\/850\/925",
         "Damage per Second: 16\/24\/32\/40 (TagTalent 116\/124\/132\/140)",
-        "Enemy Move Speed Slow: 12%",
-        "Self Move Speed Bonus per Affected Enemy: 12%",
-        "Non-Hero Multiplier: 0.5",
+        "Enemy Move Speed Slow: 12%\/13%\/14%\/15%",
+        "Self Move Speed Bonus per Affected Enemy: 12%\/13%\/14%\/15%",
+        "Non-Hero Speed Multiplier: 0.5",
         "Duration: 12",
         "Enemy Armor Reduction: 7",
         "Self Armor Bonus per Affected Enemy: 7",
@@ -103,7 +103,7 @@
       ],
       "itemBehaviour": [],
       "legacyKey": "R",
-      "story": "Ordinary heroes cannot withstand Mogul Khan's rage for battle, such that it injures them until it is satisfied."
+      "story": null
     },
     {
       "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/8\/8e\/Axe_Counter_Helix.mp3\/revision\/latest?cb=20191216010823",
@@ -144,7 +144,7 @@
       ],
       "itemBehaviour": [],
       "legacyKey": "X",
-      "story": "Axe is the only reinforcement this army needs."
+      "story": null
     },
     {
       "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/7\/71\/Axe_Culling_Blade_1.mp3\/revision\/latest?cb=20191216010823",
@@ -181,7 +181,7 @@
       ],
       "itemBehaviour": [],
       "legacyKey": "C",
-      "story": "Mogul Khan is the embodiment of battle and fury, launching into a gruesome fatality against those who dare engage the Axe in combat."
+      "story": null
     }
   ],
   "mainAttributes": {

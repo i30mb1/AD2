@@ -2,10 +2,10 @@
   "abilities": [
     {
       "notes": [
-        "This attack damage talent is added as raw attack damage. Does not benefit illusions and is not affected by most percentage-based damage increasing or reducing effects.",
+        "This attack damage talent is added as bonus attack damage. Does not benefit illusions and is not affected by most percentage-based damage increasing or reducing effects.",
         "Does not benefit illusions and is not affected by most percentage-based damage increasing or reducing effects.",
         "The health talent increases maximum health capacity, and keeps the current health percentage.",
-        "The strength talent effectively grants Dragon Knight 400 health, 2 health regeneration, and 20 attack damage."
+        "The strength talent effectively grants Dragon Knight 400 health, 2 health regeneration, and 20 main attack damage."
       ],
       "spellName": "Talent",
       "talents": [
@@ -42,7 +42,7 @@
         "Breathe Fire travels at a speed of 1050.",
         "With the travel distance and end radius, Breathe Fire can hit units up to 1000 range away. The complete area is shaped like a cone.",
         "The complete area is shaped like a cone.",
-        "Reduces hit targets' total attack damage, including raw damage bonuses.",
+        "Reduces hit targets' total attack damage, including attack damage bonuses.",
         "Breathe Fire first applies the damage, then the debuff.",
         "Has a cast backswing of 0.53 seconds while in Elder Dragon Form."
       ],
@@ -64,7 +64,7 @@
       ],
       "itemBehaviour": [],
       "legacyKey": "F",
-      "story": "Knight Davion's breath has become that of the mighty Eldwurm Slyrak, remembered for burning numerous other knights to a crisp."
+      "story": null
     },
     {
       "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/b\/bc\/Dragon_Knight_Dragon_Tail_1.mp3\/revision\/latest?cb=20191216012629",
@@ -96,7 +96,7 @@
       ],
       "itemBehaviour": [],
       "legacyKey": "T",
-      "story": "Davion's combination of dragon talents and knightly skills makes him a vicious opponent in melee combat."
+      "story": null
     },
     {
       "audioUrl": null,
@@ -119,7 +119,7 @@
       ],
       "itemBehaviour": [],
       "legacyKey": "D",
-      "story": "Slyrak's blood still courses through Davion's veins, giving him twice the vitality of an ordinary knight."
+      "story": null
     },
     {
       "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/1\/11\/Dragon_Knight_Fireball.mp3\/revision\/latest?cb=20201225162937",
@@ -129,24 +129,23 @@
         "Damage Magical"
       ],
       "notes": [
-        "Requires Aghanim's Shard to be unlocked. In Ability Draft, Fireball can be unlocked by the player that drafted Elder Dragon Form.",
-        "In Ability Draft, Fireball can be unlocked by the player that drafted Elder Dragon Form.",
+        "Requires Aghanim's Shard to be unlocked.",
         "The damage is provided by an aura, its debuff lingers for 2 seconds.",
-        "Deals 30 damage in 0.5-second intervals, immediately upon receiving the debuff, resulting in 25 damage instances. Can deal up to 750 damage to a single unit (before reductions).",
-        "Can deal up to 750 damage to a single unit (before reductions).",
+        "Deals 32.5 damage in 0.5-second intervals, immediately upon receiving the debuff, resulting in 25 damage instances. Can deal up to 812.5 damage to a single unit (before reductions).",
+        "Can deal up to 812.5 damage to a single unit (before reductions).",
         "Multiple instances of Fireball's debuff do not stack.",
         "While in Elder Dragon Form, Fireball has a cast range of 1400."
       ],
       "mana": "100",
       "hotKey": "D",
       "cooldown": "20",
-      "description": "Ignites a 450 AoE area for 10 seconds, dealing 60 damage per second to enemies in it. Has reduced cast range when melee.",
+      "description": "Ignites a 450 AoE area for 10 seconds, dealing 65 damage per second that lingers for 2 seconds to enemies in it. Has reduced cast range when melee.",
       "spellName": "Fireball",
       "params": [
         "Cast Animation: 0.2+0.53",
         "Cast Range: 600",
         "Radius: 450",
-        "Damage per Second: 60",
+        "Damage per Second: 65",
         "Duration: 10",
         "Aura Linger Duration: 2",
         "Continues to deal damage while lingering out if spell immunity was acquired after receiving the debuff."
@@ -163,7 +162,7 @@
         "Damage Magical \/ Physical"
       ],
       "notes": [
-        "Increases Dragon Knight's movement speed to 335 and attack range to 500 (TagTalent 650) (TagTalent and magic resistance to 40%). Also gives Dragon Knight ranged attack properties. His attack projectiles travel at a speed of 900.",
+        "Increases Dragon Knight's movement speed to 335 and attack range to 500 (TagTalent 650) (TagTalent and magic resistance to 43.75%). Also gives Dragon Knight ranged attack properties. His attack projectiles travel at a speed of 900.",
         "Also gives Dragon Knight ranged attack properties. His attack projectiles travel at a speed of 900.",
         "Level 1 transforms him into a Green Dragon, level 2 into a Red Dragon, and level 3 into a Blue Dragon (TagTalent and level 4 into a Black Dragon).",
         "Elder Dragon Form is fully canceled on death. The Dragon Form buff is hidden, only the 3 attack modifier buffs are displayed.",
@@ -178,8 +177,10 @@
         "Successive hits do not stack, but refresh the duration.",
         "The attacks first apply the debuff, then their own attack damage. However, on secondary targets, it first applies the splash damage, then the debuff.",
         "When an attack misses or is disjointed, the debuff is not applied within the radius.",
-        "Splash Attack: (Available for Level 2 and higher levels of Elder Dragon Form) When an attack misses or is disjointed, no splash damage is dealt. The splash damage is physical damage, and is affected by Damage Block. Does not work against wards or buildings.",
+        "Splash Attack: (Available for Level 2 and higher levels of Elder Dragon Form) When an attack misses or is disjointed, no splash damage is dealt. Splash damage cannot be amplified with outgoing spell damage amplification and cannot spell lifesteal. Can be amplified by incoming spell damage amplification. The splash damage is physical damage, and is affected by Damage Block. Does not work against wards or buildings.",
         "When an attack misses or is disjointed, no splash damage is dealt.",
+        "Splash damage cannot be amplified with outgoing spell damage amplification and cannot spell lifesteal. Can be amplified by incoming spell damage amplification.",
+        "Can be amplified by incoming spell damage amplification.",
         "The splash damage is physical damage, and is affected by Damage Block.",
         "Does not work against wards or buildings.",
         "Frost Breath: (Available for Level 3 and higher levels of Elder Dragon Form) Does not work against wards, buildings, or allied units. Successive hits do not stack, but refresh the duration. The attacks first apply the debuff, then their own attack damage. The splash damage is applied after the debuff as well. When an attack misses or is disjointed, the slow is not applied within the radius.",
@@ -187,21 +188,22 @@
         "Successive hits do not stack, but refresh the duration.",
         "The attacks first apply the debuff, then their own attack damage. The splash damage is applied after the debuff as well. When an attack misses or is disjointed, the slow is not applied within the radius.",
         "When an attack misses or is disjointed, the slow is not applied within the radius.",
-        "With Aghanim's Scepter, Elder Dragon Form automatically increases its level by 1, granting Black Dragon form. The ability can still only be leveled 3 times. Grants Black Dragon unobstructed movement, allowing him to path over impassable terrain, units, buildings, and trees. However, it does not grant him phased movement meaning other units cannot pass through him. The black dragon form is 30% larger than the other forms.",
-        "Grants Black Dragon unobstructed movement, allowing him to path over impassable terrain, units, buildings, and trees.",
-        "However, it does not grant him phased movement meaning other units cannot pass through him.",
+        "With Aghanim's Scepter, the level of Elder Dragon Form increases 1. Elder Dragon Form has 4 levels by default, but the 4th level can only be reached with Aghanim's Scepter. The Black Dragon form has unobstructed movement, allowing him to path over impassable terrain, units, buildings, and trees. However, it does not have phased movement meaning other units cannot pass through it. The black dragon form is 30% larger than the other forms.",
+        "Elder Dragon Form has 4 levels by default, but the 4th level can only be reached with Aghanim's Scepter.",
+        "The Black Dragon form has unobstructed movement, allowing him to path over impassable terrain, units, buildings, and trees.",
+        "However, it does not have phased movement meaning other units cannot pass through it.",
         "The black dragon form is 30% larger than the other forms."
       ],
       "mana": "50",
       "hotKey": "R",
-      "cooldown": "115",
+      "cooldown": "115\/110\/105 (TagTalent \/100)",
       "description": "Dragon Knight takes the form of one of three powerful elder dragons, increasing his speed, and Dragon Tail's range, while granting him new powers. LEVEL 1 Green Dragon - Corrosive Breath: attacks deal 20 poison damage per second for 5 seconds. Works on structures. LEVEL 2 Red Dragon - Splash Attack: attacks damage all enemy units in a 350 radius for 0%\/75%\/75%\/100%, with Corrosive Breath added to the targets. LEVEL 3 Blue Dragon - Frost Breath: slows movement speed by 40% and attack speed by 40 of enemy units in Splash Attack range for 3 seconds, with Corrosive Breath added to the targets.",
       "spellName": "Elder Dragon Form",
       "params": [
         "Cast Animation: 0+0.5",
         "Attack Range Bonus: 350 (TagTalent 500)",
         "Move Speed Bonus: 25",
-        "Magic Resistance Bonus: 0%\/0%\/0% (TagAghanim \/20%)",
+        "Magic Resistance Bonus: 0%\/0%\/0% (TagAghanim \/25%)",
         "Dragon Tail Cast Range Bonus: 250",
         "Dragon Form Duration: 60",
         "Corrosive Breath Damage per Second: 20\/20\/20 (TagAghanim \/30)",
@@ -214,14 +216,14 @@
         "Frost Breath Debuff Duration: 3",
         "Dragon Tail Radius: 375",
         "Fireball Cast Range Bonus: 800",
-        "Increases the level of your ultimate. Adds a 4th level, Black Dragon. Black Dragon has bonus Corrosive Damage, Splash Damage, and Slow amount, free pathing and grants additional Magic resistance.",
+        "Increases the level of Dragon Knight's ultimate. Adds a 4th level, Black Dragon. Black Dragon has bonus Corrosive Damage, Splash Damage and Slow amount, 25% increased Magic Resistance and free pathing.",
         "Grants a new ability: Fireball",
         "Poison and frost breath do not pierce spell immunity. Splash pierces spell immunity. Corrosive Breath attempts to damage spell immune enemies when placed before spell immunity and when not dispelled.",
         "Illusions get their own Elder Dragon Form buff lasting its regular duration."
       ],
       "itemBehaviour": [],
       "legacyKey": "R",
-      "story": "The dormant dragon power springs forth from within Davion, combining the powers of a legendary knight with a legendary Eldwurm."
+      "story": null
     }
   ],
   "mainAttributes": {

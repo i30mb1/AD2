@@ -5768,7 +5768,7 @@
       },
       {
         "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_ru_gamepedia\/images\/d\/d2\/Monkey_ally_27_ru.mp3\/revision\/latest?cb=20170409135926",
-        "title": "Закончим дело и разойдёмся своими делами, Арахния.",
+        "title": "Закончим дело и разойдёмся своими путями, Арахния.",
         "icons": [
           "heroes\/Broodmother\/minimap.png"
         ]
@@ -5779,7 +5779,7 @@
         "icons": [
           "heroes\/Broodmother\/minimap.png"
         ],
-        "title": "Закончим дело и разойдёмся своими делами, Арахния."
+        "title": "Закончим дело и разойдёмся своими путями, Арахния."
       },
       {
         "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_ru_gamepedia\/images\/6\/69\/Monkey_ally_28_ru.mp3\/revision\/latest?cb=20170409135931",
@@ -7966,6 +7966,728 @@
           "heroes\/Techies\/minimap.png"
         ],
         "title": "Techies я соберу врагов в кучу. Вы поймёте, когда надо жать на кнопку."
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_ru_gamepedia\/images\/8\/8a\/Monkey_ally_175_ru.mp3\/revision\/latest?cb=20170409141247",
+        "title": "Расскажешь, какая история связывает тебя и Юрнеро?",
+        "icons": [
+          "heroes\/Templar Assassin\/minimap.png"
+        ]
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_ru_gamepedia\/images\/2\/2d\/Monkey_crown_ally_175_ru.mp3\/revision\/latest?cb=20170409125724",
+        "isArcane": true,
+        "icons": [
+          "heroes\/Templar Assassin\/minimap.png"
+        ],
+        "title": "Расскажешь, какая история связывает тебя и Юрнеро?"
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_ru_gamepedia\/images\/f\/f9\/Monkey_ally_176_ru.mp3\/revision\/latest?cb=20170409141252",
+        "title": "Я думал, ты выше приземлённых разногласий, Ланайя.",
+        "icons": [
+          "heroes\/Templar Assassin\/minimap.png"
+        ]
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_ru_gamepedia\/images\/1\/15\/Monkey_crown_ally_176_ru.mp3\/revision\/latest?cb=20170409125730",
+        "isArcane": true,
+        "icons": [
+          "heroes\/Templar Assassin\/minimap.png"
+        ],
+        "title": "Я думал, ты выше приземлённых разногласий, Ланайя."
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_ru_gamepedia\/images\/f\/ff\/Monkey_ally_177_ru.mp3\/revision\/latest?cb=20170409141257",
+        "title": "Почему ты так часто прячешь свою истинную мощь, Terrorblade?",
+        "icons": [
+          "heroes\/Terrorblade\/minimap.png"
+        ]
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_ru_gamepedia\/images\/2\/20\/Monkey_crown_ally_177_ru.mp3\/revision\/latest?cb=20170409125735",
+        "isArcane": true,
+        "icons": [
+          "heroes\/Terrorblade\/minimap.png"
+        ],
+        "title": "Почему ты так часто прячешь свою истинную мощь, Terrorblade?"
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_ru_gamepedia\/images\/c\/c8\/Monkey_ally_178_ru.mp3\/revision\/latest?cb=20170409141303",
+        "title": "Я знал многих демонов, но лишь с тобой мне довелось биться бок о бок.",
+        "icons": [
+          "heroes\/Terrorblade\/minimap.png"
+        ]
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_ru_gamepedia\/images\/c\/c5\/Monkey_crown_ally_178_ru.mp3\/revision\/latest?cb=20170409125741",
+        "isArcane": true,
+        "icons": [
+          "heroes\/Terrorblade\/minimap.png"
+        ],
+        "title": "Я знал многих демонов, но лишь с тобой мне довелось биться бок о бок."
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_ru_gamepedia\/images\/9\/98\/Monkey_ally_179_ru.mp3\/revision\/latest?cb=20170409141308",
+        "title": "Ах, ты только не брызгайся, Tidehunter.",
+        "icons": [
+          "heroes\/Tidehunter\/minimap.png"
+        ]
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_ru_gamepedia\/images\/9\/9e\/Monkey_crown_ally_179_ru.mp3\/revision\/latest?cb=20170409125746",
+        "isArcane": true,
+        "icons": [
+          "heroes\/Tidehunter\/minimap.png"
+        ],
+        "title": "Ах, ты только не брызгайся, Tidehunter."
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_ru_gamepedia\/images\/5\/57\/Monkey_ally_180_ru.mp3\/revision\/latest?cb=20170409141313",
+        "title": "Tidehunter, ты начинай бой, а я подхвачу.",
+        "icons": [
+          "heroes\/Tidehunter\/minimap.png"
+        ]
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_ru_gamepedia\/images\/9\/9a\/Monkey_crown_ally_180_ru.mp3\/revision\/latest?cb=20170409125751",
+        "isArcane": true,
+        "icons": [
+          "heroes\/Tidehunter\/minimap.png"
+        ],
+        "title": "Tidehunter, ты начинай бой, а я подхвачу."
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_ru_gamepedia\/images\/1\/1d\/Monkey_ally_181_ru.mp3\/revision\/latest?cb=20170409141318",
+        "title": "Timbersaw, если нужно рубить деревья, прошу тебя: руби с умом!",
+        "icons": [
+          "heroes\/Timbersaw\/minimap.png"
+        ]
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_ru_gamepedia\/images\/7\/77\/Monkey_crown_ally_181_ru.mp3\/revision\/latest?cb=20170409125756",
+        "isArcane": true,
+        "icons": [
+          "heroes\/Timbersaw\/minimap.png"
+        ],
+        "title": "Timbersaw, если нужно рубить деревья, прошу тебя: руби с умом!"
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_ru_gamepedia\/images\/2\/23\/Monkey_ally_182_ru.mp3\/revision\/latest?cb=20170409141323",
+        "title": "Если нужное мне дерево вдруг пропадёт, то я знаю, кого винить, Timbersaw.",
+        "icons": [
+          "heroes\/Timbersaw\/minimap.png"
+        ]
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_ru_gamepedia\/images\/7\/7f\/Monkey_crown_ally_182_ru.mp3\/revision\/latest?cb=20170409125801",
+        "isArcane": true,
+        "icons": [
+          "heroes\/Timbersaw\/minimap.png"
+        ],
+        "title": "Если нужное мне дерево вдруг пропадёт, то я знаю, кого винить, Timbersaw."
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_ru_gamepedia\/images\/5\/5d\/Monkey_ally_183_ru.mp3\/revision\/latest?cb=20170409141328",
+        "title": "Скажи, Tinker, какие потрясения сделали тебя таким изобретательным?",
+        "icons": [
+          "heroes\/Tinker\/minimap.png"
+        ]
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_ru_gamepedia\/images\/3\/31\/Monkey_crown_ally_183_ru.mp3\/revision\/latest?cb=20170409141850",
+        "isArcane": true,
+        "icons": [
+          "heroes\/Tinker\/minimap.png"
+        ],
+        "title": "Скажи, Tinker, какие потрясения сделали тебя таким изобретательным?"
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_ru_gamepedia\/images\/7\/7b\/Monkey_ally_184_ru.mp3\/revision\/latest?cb=20170409141333",
+        "title": "Уважаю тех, кто без страха стремится к невозможному.",
+        "icons": [
+          "heroes\/Tinker\/minimap.png"
+        ]
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_ru_gamepedia\/images\/2\/28\/Monkey_crown_ally_184_ru.mp3\/revision\/latest?cb=20170409125807",
+        "isArcane": true,
+        "icons": [
+          "heroes\/Tinker\/minimap.png"
+        ],
+        "title": "Уважаю тех, кто без страха стремится к невозможному."
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_ru_gamepedia\/images\/7\/7a\/Monkey_ally_185_ru.mp3\/revision\/latest?cb=20170409141340",
+        "title": "Понимаю тебя, Tiny. Когда-то я тоже был в камне.",
+        "icons": [
+          "heroes\/Tiny\/minimap.png"
+        ]
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_ru_gamepedia\/images\/3\/3b\/Monkey_crown_ally_185_ru.mp3\/revision\/latest?cb=20170409125812",
+        "isArcane": true,
+        "icons": [
+          "heroes\/Tiny\/minimap.png"
+        ],
+        "title": "Понимаю тебя, Tiny. Когда-то я тоже был в камне."
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_ru_gamepedia\/images\/2\/23\/Monkey_ally_186_ru.mp3\/revision\/latest?cb=20170409141345",
+        "title": "Между нами есть кое-что общее, Tiny. Скажи, из какого ты камня?",
+        "icons": [
+          "heroes\/Tiny\/minimap.png"
+        ]
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_ru_gamepedia\/images\/6\/60\/Monkey_crown_ally_186_ru.mp3\/revision\/latest?cb=20170409125817",
+        "isArcane": true,
+        "icons": [
+          "heroes\/Tiny\/minimap.png"
+        ],
+        "title": "Между нами есть кое-что общее, Tiny. Скажи, из какого ты камня?"
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_ru_gamepedia\/images\/f\/f0\/Monkey_ally_187_ru.mp3\/revision\/latest?cb=20170409141350",
+        "title": "Деревья уважают тебя, энт, но меня они любят.",
+        "icons": [
+          "heroes\/Treant Protector\/minimap.png"
+        ]
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_ru_gamepedia\/images\/f\/f3\/Monkey_crown_ally_187_ru.mp3\/revision\/latest?cb=20170409125822",
+        "isArcane": true,
+        "icons": [
+          "heroes\/Treant Protector\/minimap.png"
+        ],
+        "title": "Деревья уважают тебя, энт, но меня они любят."
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_ru_gamepedia\/images\/7\/7e\/Monkey_ally_188_ru.mp3\/revision\/latest?cb=20170409141355",
+        "title": "Да, да, мой деревянный друг, я понял. Лазать по тебе не буду.",
+        "icons": [
+          "heroes\/Treant Protector\/minimap.png"
+        ]
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_ru_gamepedia\/images\/8\/85\/Monkey_crown_ally_188_ru.mp3\/revision\/latest?cb=20170409125827",
+        "isArcane": true,
+        "icons": [
+          "heroes\/Treant Protector\/minimap.png"
+        ],
+        "title": "Да, да, мой деревянный друг, я понял. Лазать по тебе не буду."
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_ru_gamepedia\/images\/0\/05\/Monkey_ally_189_ru.mp3\/revision\/latest?cb=20170409141400",
+        "title": "Главное - пойми, что мы на твоей стороне, Тролль.",
+        "icons": [
+          "heroes\/Troll Warlord\/minimap.png"
+        ]
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_ru_gamepedia\/images\/2\/28\/Monkey_crown_ally_189_ru.mp3\/revision\/latest?cb=20170409125832",
+        "isArcane": true,
+        "icons": [
+          "heroes\/Troll Warlord\/minimap.png"
+        ],
+        "title": "Главное - пойми, что мы на твоей стороне, Тролль."
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_ru_gamepedia\/images\/7\/75\/Monkey_ally_190_ru.mp3\/revision\/latest?cb=20170409141405",
+        "title": "Мой друг Бреклин - большой почитатель твоих деяний, Troll Warlord.",
+        "icons": [
+          "heroes\/Troll Warlord\/minimap.png"
+        ]
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_ru_gamepedia\/images\/1\/1c\/Monkey_crown_ally_190_ru.mp3\/revision\/latest?cb=20170409125838",
+        "isArcane": true,
+        "icons": [
+          "heroes\/Troll Warlord\/minimap.png"
+        ],
+        "title": "Мой друг Бреклин - большой почитатель твоих деяний, Troll Warlord."
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_ru_gamepedia\/images\/e\/e4\/Monkey_ally_191_ru.mp3\/revision\/latest?cb=20170409141410",
+        "title": "Tusk! Сразу видно бойца, чьё слово не слабее его кулаков.",
+        "icons": [
+          "heroes\/Tusk\/minimap.png"
+        ]
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_ru_gamepedia\/images\/b\/b2\/Monkey_crown_ally_191_ru.mp3\/revision\/latest?cb=20170409125843",
+        "isArcane": true,
+        "icons": [
+          "heroes\/Tusk\/minimap.png"
+        ],
+        "title": "Tusk! Сразу видно бойца, чьё слово не слабее его кулаков."
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_ru_gamepedia\/images\/d\/d3\/Monkey_ally_192_ru.mp3\/revision\/latest?cb=20170409141415",
+        "title": "Слушай, Tusk, расскажи-ка мне побольше про Рилай.",
+        "icons": [
+          "heroes\/Tusk\/minimap.png"
+        ]
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_ru_gamepedia\/images\/a\/af\/Monkey_crown_ally_192_ru.mp3\/revision\/latest?cb=20170409125848",
+        "isArcane": true,
+        "icons": [
+          "heroes\/Tusk\/minimap.png"
+        ],
+        "title": "Слушай, Tusk, расскажи-ка мне побольше про Рилай."
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_ru_gamepedia\/images\/a\/a2\/Monkey_ally_193_ru.mp3\/revision\/latest?cb=20170409141420",
+        "title": "Куда ты унесёшь нас сегодня, Underlord?",
+        "icons": [
+          "heroes\/Underlord\/minimap.png"
+        ]
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_ru_gamepedia\/images\/5\/52\/Monkey_crown_ally_193_ru.mp3\/revision\/latest?cb=20170409125853",
+        "isArcane": true,
+        "icons": [
+          "heroes\/Underlord\/minimap.png"
+        ],
+        "title": "Куда ты унесёшь нас сегодня, Underlord?"
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_ru_gamepedia\/images\/b\/bd\/Monkey_ally_194_ru.mp3\/revision\/latest?cb=20170409141425",
+        "title": "Слушай, а какой из миров тебе показался худшим?",
+        "icons": [
+          "heroes\/Underlord\/minimap.png"
+        ]
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_ru_gamepedia\/images\/e\/ea\/Monkey_crown_ally_194_ru.mp3\/revision\/latest?cb=20170409125858",
+        "isArcane": true,
+        "icons": [
+          "heroes\/Underlord\/minimap.png"
+        ],
+        "title": "Слушай, а какой из миров тебе показался худшим?"
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_ru_gamepedia\/images\/7\/7f\/Monkey_ally_195_ru.mp3\/revision\/latest?cb=20170409141430",
+        "title": "Бессмертие у каждого своё, Undying.",
+        "icons": [
+          "heroes\/Undying\/minimap.png"
+        ]
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_ru_gamepedia\/images\/4\/44\/Monkey_crown_ally_195_ru.mp3\/revision\/latest?cb=20170409125903",
+        "isArcane": true,
+        "icons": [
+          "heroes\/Undying\/minimap.png"
+        ],
+        "title": "Бессмертие у каждого своё, Undying."
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_ru_gamepedia\/images\/6\/6b\/Monkey_ally_196_ru.mp3\/revision\/latest?cb=20170409141435",
+        "title": "Undying? Ты тоже обманул смерть? Вот это совпадение.",
+        "icons": [
+          "heroes\/Undying\/minimap.png"
+        ]
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_ru_gamepedia\/images\/8\/80\/Monkey_crown_ally_196_ru.mp3\/revision\/latest?cb=20170409125908",
+        "isArcane": true,
+        "icons": [
+          "heroes\/Undying\/minimap.png"
+        ],
+        "title": "Undying? Ты тоже обманул смерть? Вот это совпадение."
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_ru_gamepedia\/images\/c\/c0\/Monkey_ally_197_ru.mp3\/revision\/latest?cb=20170409141440",
+        "title": "Ursa! Я рад быть на твоей стороне.",
+        "icons": [
+          "heroes\/Ursa\/minimap.png"
+        ]
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_ru_gamepedia\/images\/2\/24\/Monkey_crown_ally_197_ru.mp3\/revision\/latest?cb=20170409125914",
+        "isArcane": true,
+        "icons": [
+          "heroes\/Ursa\/minimap.png"
+        ],
+        "title": "Ursa! Я рад быть на твоей стороне."
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_ru_gamepedia\/images\/c\/cf\/Monkey_ally_198_ru.mp3\/revision\/latest?cb=20170409141445",
+        "title": "Миру нужны такие медведи, как ты, Ursa.",
+        "icons": [
+          "heroes\/Ursa\/minimap.png"
+        ]
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_ru_gamepedia\/images\/c\/c0\/Monkey_crown_ally_198_ru.mp3\/revision\/latest?cb=20170409125918",
+        "isArcane": true,
+        "icons": [
+          "heroes\/Ursa\/minimap.png"
+        ],
+        "title": "Миру нужны такие медведи, как ты, Ursa."
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_ru_gamepedia\/images\/c\/cd\/Monkey_ally_199_ru.mp3\/revision\/latest?cb=20170409141450",
+        "title": "А ведь мы с тобой похожи: я тоже люблю, когда обидчики платят по заслугам.",
+        "icons": [
+          "heroes\/Vengeful Spirit\/minimap.png"
+        ]
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_ru_gamepedia\/images\/3\/34\/Monkey_crown_ally_199_ru.mp3\/revision\/latest?cb=20170409125923",
+        "isArcane": true,
+        "icons": [
+          "heroes\/Vengeful Spirit\/minimap.png"
+        ],
+        "title": "А ведь мы с тобой похожи: я тоже люблю, когда обидчики платят по заслугам."
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_ru_gamepedia\/images\/8\/80\/Monkey_ally_200_ru.mp3\/revision\/latest?cb=20170409141455",
+        "title": "О, люблю дам, которые идут к своей цели.",
+        "icons": [
+          "heroes\/Vengeful Spirit\/minimap.png"
+        ]
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_ru_gamepedia\/images\/1\/10\/Monkey_crown_ally_200_ru.mp3\/revision\/latest?cb=20170409125929",
+        "isArcane": true,
+        "icons": [
+          "heroes\/Vengeful Spirit\/minimap.png"
+        ],
+        "title": "О, люблю дам, которые идут к своей цели."
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_ru_gamepedia\/images\/8\/83\/Monkey_ally_201_ru.mp3\/revision\/latest?cb=20170409141500",
+        "title": "Посети как-нибудь места, откуда я родом.",
+        "icons": [
+          "heroes\/Venomancer\/minimap.png"
+        ]
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_ru_gamepedia\/images\/b\/bc\/Monkey_crown_ally_201_ru.mp3\/revision\/latest?cb=20170409125934",
+        "isArcane": true,
+        "icons": [
+          "heroes\/Venomancer\/minimap.png"
+        ],
+        "title": "Посети как-нибудь места, откуда я родом."
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_ru_gamepedia\/images\/7\/76\/Monkey_ally_202_ru.mp3\/revision\/latest?cb=20170409141505",
+        "title": "Постарайся не забрызгать меня ядом, ладно?",
+        "icons": [
+          "heroes\/Venomancer\/minimap.png"
+        ]
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_ru_gamepedia\/images\/f\/fb\/Monkey_crown_ally_202_ru.mp3\/revision\/latest?cb=20170409125939",
+        "isArcane": true,
+        "icons": [
+          "heroes\/Venomancer\/minimap.png"
+        ],
+        "title": "Постарайся не забрызгать меня ядом, ладно?"
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_ru_gamepedia\/images\/0\/07\/Monkey_ally_203_ru.mp3\/revision\/latest?cb=20170409141510",
+        "title": "Мордой ты не вышел, Viper, но боец из тебя отличный.",
+        "icons": [
+          "heroes\/Viper\/minimap.png"
+        ]
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_ru_gamepedia\/images\/1\/1d\/Monkey_crown_ally_203_ru.mp3\/revision\/latest?cb=20170409125944",
+        "isArcane": true,
+        "icons": [
+          "heroes\/Viper\/minimap.png"
+        ],
+        "title": "Мордой ты не вышел, Viper, но боец из тебя отличный."
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_ru_gamepedia\/images\/a\/aa\/Monkey_ally_204_ru.mp3\/revision\/latest?cb=20170409141515",
+        "title": "Viper, от нас с тобой не спасётся никто.",
+        "icons": [
+          "heroes\/Viper\/minimap.png"
+        ]
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_ru_gamepedia\/images\/1\/1f\/Monkey_crown_ally_204_ru.mp3\/revision\/latest?cb=20170409125949",
+        "isArcane": true,
+        "icons": [
+          "heroes\/Viper\/minimap.png"
+        ],
+        "title": "Viper, от нас с тобой не спасётся никто."
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_ru_gamepedia\/images\/7\/72\/Monkey_ally_205_ru.mp3\/revision\/latest?cb=20170409141520",
+        "title": "Отправь своих слуг ввысь, Visage. Они найдут нам добычу.",
+        "icons": [
+          "heroes\/Visage\/minimap.png"
+        ]
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_ru_gamepedia\/images\/a\/a5\/Monkey_crown_ally_205_ru.mp3\/revision\/latest?cb=20170409125954",
+        "isArcane": true,
+        "icons": [
+          "heroes\/Visage\/minimap.png"
+        ],
+        "title": "Отправь своих слуг ввысь, Visage. Они найдут нам добычу."
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_ru_gamepedia\/images\/7\/76\/Monkey_ally_206_ru.mp3\/revision\/latest?cb=20170409141525",
+        "title": "Обещаю тебе, Visage: я не буду беспокоить Узкий лабиринт своим присутствием.",
+        "icons": [
+          "heroes\/Visage\/minimap.png",
+          "heroes\/Узкий лабиринт\/minimap.png"
+        ]
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_ru_gamepedia\/images\/b\/b0\/Monkey_crown_ally_206_ru.mp3\/revision\/latest?cb=20170409125959",
+        "isArcane": true,
+        "icons": [
+          "heroes\/Visage\/minimap.png",
+          "heroes\/Узкий лабиринт\/minimap.png"
+        ],
+        "title": "Обещаю тебе, Visage: я не буду беспокоить Узкий лабиринт своим присутствием."
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_ru_gamepedia\/images\/9\/9f\/Monkey_ally_207_ru.mp3\/revision\/latest?cb=20170409141530",
+        "title": "Ну, как закончишь свою книгу, дашь её прочитать, Warlock?",
+        "icons": [
+          "heroes\/Warlock\/minimap.png"
+        ]
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_ru_gamepedia\/images\/b\/b7\/Monkey_crown_ally_207_ru.mp3\/revision\/latest?cb=20170409130004",
+        "isArcane": true,
+        "icons": [
+          "heroes\/Warlock\/minimap.png"
+        ],
+        "title": "Ну, как закончишь свою книгу, дашь её прочитать, Warlock?"
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_ru_gamepedia\/images\/0\/0e\/Monkey_ally_208_ru.mp3\/revision\/latest?cb=20170409141535",
+        "title": "Демоны, любую историю сделают лучше, Warlock.",
+        "icons": [
+          "heroes\/Warlock\/minimap.png"
+        ]
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_ru_gamepedia\/images\/8\/88\/Monkey_crown_ally_208_ru.mp3\/revision\/latest?cb=20170409130009",
+        "isArcane": true,
+        "icons": [
+          "heroes\/Warlock\/minimap.png"
+        ],
+        "title": "Демоны, любую историю сделают лучше, Warlock."
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_ru_gamepedia\/images\/7\/7a\/Monkey_ally_209_ru.mp3\/revision\/latest?cb=20170409141540",
+        "title": "Ты уж не злись, что я сам плету свою судьбу, Weaver.",
+        "icons": [
+          "heroes\/Weaver\/minimap.png"
+        ]
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_ru_gamepedia\/images\/0\/01\/Monkey_crown_ally_209_ru.mp3\/revision\/latest?cb=20170409130014",
+        "isArcane": true,
+        "icons": [
+          "heroes\/Weaver\/minimap.png"
+        ],
+        "title": "Ты уж не злись, что я сам плету свою судьбу, Weaver."
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_ru_gamepedia\/images\/b\/b6\/Monkey_ally_210_ru.mp3\/revision\/latest?cb=20170409141545",
+        "title": "Weaver, не позволяй другим смотреть на тебя свысока.",
+        "icons": [
+          "heroes\/Weaver\/minimap.png"
+        ]
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_ru_gamepedia\/images\/9\/97\/Monkey_crown_ally_210_ru.mp3\/revision\/latest?cb=20170409130020",
+        "isArcane": true,
+        "icons": [
+          "heroes\/Weaver\/minimap.png"
+        ],
+        "title": "Weaver, не позволяй другим смотреть на тебя свысока."
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_ru_gamepedia\/images\/1\/10\/Monkey_ally_211_ru.mp3\/revision\/latest?cb=20170409141550",
+        "title": "Лиралей, улыбка не скроет твоей безжалостной души.",
+        "icons": [
+          "heroes\/Windranger\/minimap.png"
+        ]
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_ru_gamepedia\/images\/c\/c2\/Monkey_crown_ally_211_ru.mp3\/revision\/latest?cb=20170409130024",
+        "isArcane": true,
+        "icons": [
+          "heroes\/Windranger\/minimap.png"
+        ],
+        "title": "Лиралей, улыбка не скроет твоей безжалостной души."
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_ru_gamepedia\/images\/5\/52\/Monkey_ally_212_ru.mp3\/revision\/latest?cb=20170409141555",
+        "title": "Не знаю, почему Траксекс тебя невзлюбила, Windranger. Ты весьма искусный стрелок.",
+        "icons": [
+          "heroes\/Windranger\/minimap.png"
+        ]
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_ru_gamepedia\/images\/b\/b4\/Monkey_crown_ally_212_ru.mp3\/revision\/latest?cb=20170409130029",
+        "isArcane": true,
+        "icons": [
+          "heroes\/Windranger\/minimap.png"
+        ],
+        "title": "Не знаю, почему Траксекс тебя невзлюбила, Windranger. Ты весьма искусный стрелок."
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_ru_gamepedia\/images\/b\/b0\/Monkey_ally_213_ru.mp3\/revision\/latest?cb=20170409141600",
+        "title": "Скажи, Виверна, какую легенду обо мне ты больше всего любишь?",
+        "icons": [
+          "heroes\/Winter Wyvern\/minimap.png"
+        ]
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_ru_gamepedia\/images\/a\/aa\/Monkey_crown_ally_213_ru.mp3\/revision\/latest?cb=20170409130038",
+        "isArcane": true,
+        "icons": [
+          "heroes\/Winter Wyvern\/minimap.png"
+        ],
+        "title": "Скажи, Виверна, какую легенду обо мне ты больше всего любишь?"
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_ru_gamepedia\/images\/1\/17\/Monkey_ally_214_ru.mp3\/revision\/latest?cb=20170409141605",
+        "title": "Ох, Виверна, вся моя жизнь -поэзия.",
+        "icons": [
+          "heroes\/Winter Wyvern\/minimap.png"
+        ]
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_ru_gamepedia\/images\/d\/d9\/Monkey_crown_ally_214_ru.mp3\/revision\/latest?cb=20170409130043",
+        "isArcane": true,
+        "icons": [
+          "heroes\/Winter Wyvern\/minimap.png"
+        ],
+        "title": "Ох, Виверна, вся моя жизнь -поэзия."
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_ru_gamepedia\/images\/9\/98\/Monkey_ally_215_ru.mp3\/revision\/latest?cb=20170409141610",
+        "title": "Одобряю твой подход к жизни, Witch Doctor.",
+        "icons": [
+          "heroes\/Witch Doctor\/minimap.png"
+        ]
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_ru_gamepedia\/images\/c\/c8\/Monkey_crown_ally_215_ru.mp3\/revision\/latest?cb=20170409130048",
+        "isArcane": true,
+        "icons": [
+          "heroes\/Witch Doctor\/minimap.png"
+        ],
+        "title": "Одобряю твой подход к жизни, Witch Doctor."
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_ru_gamepedia\/images\/1\/14\/Monkey_ally_216_ru.mp3\/revision\/latest?cb=20170409141615",
+        "title": "А чем ты наполняешь свою оглушающую черепушку, Witch Doctor?",
+        "icons": [
+          "heroes\/Witch Doctor\/minimap.png"
+        ]
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_ru_gamepedia\/images\/a\/ae\/Monkey_crown_ally_216_ru.mp3\/revision\/latest?cb=20170409130053",
+        "isArcane": true,
+        "icons": [
+          "heroes\/Witch Doctor\/minimap.png"
+        ],
+        "title": "А чем ты наполняешь свою оглушающую черепушку, Witch Doctor?"
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_ru_gamepedia\/images\/3\/3a\/Monkey_ally_217_ru.mp3\/revision\/latest?cb=20170409141620",
+        "title": "Выдался второй шанс, так живи на полную, Остарион.",
+        "icons": [
+          "heroes\/Wraith King\/minimap.png"
+        ]
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_ru_gamepedia\/images\/a\/a5\/Monkey_crown_ally_217_ru.mp3\/revision\/latest?cb=20170409130058",
+        "isArcane": true,
+        "icons": [
+          "heroes\/Wraith King\/minimap.png"
+        ],
+        "title": "Выдался второй шанс, так живи на полную, Остарион."
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_ru_gamepedia\/images\/f\/f3\/Monkey_ally_218_ru.mp3\/revision\/latest?cb=20170409141625",
+        "title": "Знаешь, Призрак, я на твоей стороне, но ты мне не король.",
+        "icons": [
+          "heroes\/Wraith King\/minimap.png"
+        ]
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_ru_gamepedia\/images\/d\/d4\/Monkey_crown_ally_218_ru.mp3\/revision\/latest?cb=20170409130103",
+        "isArcane": true,
+        "icons": [
+          "heroes\/Wraith King\/minimap.png"
+        ],
+        "title": "Знаешь, Призрак, я на твоей стороне, но ты мне не король."
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_ru_gamepedia\/images\/1\/11\/Monkey_ally_219_ru.mp3\/revision\/latest?cb=20170409141630",
+        "title": "Все же знают, что ты мне не нравишься, так что\u2026или ты не знал? Уф, ох, неудобно вышло.",
+        "icons": [
+          "heroes\/Zeus\/minimap.png"
+        ]
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_ru_gamepedia\/images\/1\/1f\/Monkey_crown_ally_219_ru.mp3\/revision\/latest?cb=20170409130109",
+        "isArcane": true,
+        "icons": [
+          "heroes\/Zeus\/minimap.png"
+        ],
+        "title": "Все же знают, что ты мне не нравишься, так что\u2026или ты не знал? Уф, ох, неудобно вышло."
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_ru_gamepedia\/images\/6\/62\/Monkey_ally_220_ru.mp3\/revision\/latest?cb=20170409141635",
+        "title": "Ладно, Zeus, будем союзниками. Но лишь\u2026на сегодня.",
+        "icons": [
+          "heroes\/Zeus\/minimap.png"
+        ]
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_ru_gamepedia\/images\/d\/df\/Monkey_crown_ally_220_ru.mp3\/revision\/latest?cb=20170409130114",
+        "isArcane": true,
+        "icons": [
+          "heroes\/Zeus\/minimap.png"
+        ],
+        "title": "Ладно, Zeus, будем союзниками. Но лишь\u2026на сегодня."
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_ru_gamepedia\/images\/8\/89\/Monkey_ally_221_ru.mp3\/revision\/latest?cb=20170409141640",
+        "title": "Не любишь болтать, да, Io?",
+        "icons": [
+          "heroes\/Io\/minimap.png"
+        ]
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_ru_gamepedia\/images\/6\/6f\/Monkey_crown_ally_221_ru.mp3\/revision\/latest?cb=20170409130119",
+        "isArcane": true,
+        "icons": [
+          "heroes\/Io\/minimap.png"
+        ],
+        "title": "Не любишь болтать, да, Io?"
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_ru_gamepedia\/images\/8\/8a\/Monkey_ally_222_ru.mp3\/revision\/latest?cb=20170409141646",
+        "title": "Не пойми меня неправильно, Phoenix, но если кому-то из нас придётся умереть, пусть это будешь ты.",
+        "icons": [
+          "heroes\/phoenix\/minimap.png"
+        ]
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_ru_gamepedia\/images\/8\/85\/Monkey_crown_ally_222_ru.mp3\/revision\/latest?cb=20170409130125",
+        "isArcane": true,
+        "icons": [
+          "heroes\/phoenix\/minimap.png"
+        ],
+        "title": "Не пойми меня неправильно, Phoenix, но если кому-то из нас придётся умереть, пусть это будешь ты."
       }
     ],
     "category": "Встреча союзника"

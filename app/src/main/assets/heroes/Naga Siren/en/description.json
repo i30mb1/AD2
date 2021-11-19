@@ -2,20 +2,20 @@
   "abilities": [
     {
       "notes": [
-        "The agility talent effectively grants Naga Siren 1.33 armor, 8 attack speed, and 8 attack damage.",
+        "The agility talent effectively grants Naga Siren 1.33 armor, 8 attack speed, and 8 main attack damage.",
         "The strength talent effectively grants Naga Siren 300 health and 1.5 health regeneration."
       ],
       "spellName": "Talent",
       "talents": [
         {
           "talentLvl": "25",
-          "talentLeft": "-6 Rip Tide Armor",
+          "talentLeft": "-7 Rip Tide Armor",
           "talentRight": "-10s Mirror Image Cooldown"
         },
         {
           "talentLvl": "20",
           "talentLeft": "+1 Mirror Image Illusion",
-          "talentRight": "+10% Rip Tide Chance"
+          "talentRight": "+12% Rip Tide Chance"
         },
         {
           "talentLvl": "15",
@@ -49,7 +49,7 @@
       ],
       "mana": "70\/85\/100\/115",
       "hotKey": "Q",
-      "cooldown": "40\/36\/32\/28 (TagTalent 30\/26\/22\/18)",
+      "cooldown": "40\/35\/30\/25 (TagTalent 30\/25\/20\/15)",
       "description": "Creates multiple images of Naga Siren under her control.",
       "spellName": "Mirror Image",
       "params": [
@@ -62,7 +62,7 @@
       ],
       "itemBehaviour": [],
       "legacyKey": "R",
-      "story": "Slithice, while being strong in her own right, is notoriously hard to track down."
+      "story": null
     },
     {
       "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/b\/b4\/Naga_Siren_Ensnare_1.mp3\/revision\/latest?cb=20191216020847",
@@ -97,7 +97,7 @@
       ],
       "itemBehaviour": [],
       "legacyKey": "E",
-      "story": "The only way to escape the onslaught of a Slithereen is to never oppose one in the first place."
+      "story": null
     },
     {
       "audioUrl": null,
@@ -107,7 +107,9 @@
         "Damage Magical"
       ],
       "notes": [
-        "When proccing, Rip Tide first applies the armor reduction debuff, then the Rip Tide damage, and then the attack damage.",
+        "Upon proccing, Rip Tide first applies the armor reduction debuff, then the Rip Tide damage, and then the attack damage.",
+        "The armor reduction debuff does not stack, the duration gets refreshed instead.",
+        "Adds an average of 5.1\/7.65\/10.2\/12.75 (TagTalent 8.7\/13.05\/17.4\/21.75) damage to every attack.",
         "Rip Tide uses pseudo-random distribution."
       ],
       "mana": null,
@@ -116,16 +118,16 @@
       "description": "The Naga Siren and her images have a chance on attack to hit all nearby units with a damaging wave of water that lowers armor for seconds.",
       "spellName": "Rip Tide",
       "params": [
-        "Proc Chance: 17% (TagTalent 27%)",
+        "Proc Chance: 17% (TagTalent 29%)",
         "Radius: 300",
         "Damage: 30\/45\/60\/75",
-        "Armor Reduction: 2\/4\/6\/8 (TagTalent 8\/10\/12\/14)",
+        "Armor Reduction: 2\/4\/6\/8 (TagTalent 9\/11\/13\/15)",
         "Armor Reduction Duration: 4",
         "Debuffs persist if placed before spell immunity and when not dispelled."
       ],
       "itemBehaviour": [],
       "legacyKey": "D",
-      "story": "A torrent from the Deep Ones crushes the defenses of the Siren's enemies."
+      "story": null
     },
     {
       "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/a\/a4\/Naga_Siren_Song_of_the_Siren.mp3\/revision\/latest?cb=20191216020844",
@@ -141,7 +143,11 @@
         "Song of the Siren cannot be interrupted. Only Naga Siren's death or the Song of the Siren End sub-ability can stop it. However, silencing Naga Siren prevents her from manually stopping the song with the sub-ability.",
         "However, silencing Naga Siren prevents her from manually stopping the song with the sub-ability.",
         "Does not affect Roshan, wards or hidden units. Does affect buildings. Does not affect invulnerable units either, unless their invulnerability is provided by Song of the Siren.",
-        "Does not affect invulnerable units either, unless their invulnerability is provided by Song of the Siren."
+        "Does not affect invulnerable units either, unless their invulnerability is provided by Song of the Siren.",
+        "With Aghanim's Shard, a second aura is provided by Naga Siren, which increases the health regeneration of allies within range. The aura uses the same values radius and linger duration as the aura that affects enemies. Affects invulnerable, but not hidden allies. Does not affect buildings or wards. Can regenerate up to 37% of an ally's max health over its full duration.",
+        "The aura uses the same values radius and linger duration as the aura that affects enemies.",
+        "Affects invulnerable, but not hidden allies. Does not affect buildings or wards.",
+        "Can regenerate up to 37% of an ally's max health over its full duration."
       ],
       "mana": "150\/175\/200",
       "hotKey": "R",
@@ -151,15 +157,15 @@
       "params": [
         "Cast Animation: 1+0.3",
         "Radius: 1000\/1200\/1400",
-        "Aura Linger Duration: 0.4",
         "Duration: 7",
-        "Max Health as Heal per Second: 5%",
-        "Song of the Siren heal allies for 5% Max HP per second",
+        "Aura Linger Duration: 0.4",
+        "Max Health as Health Regen Bonus: 5%",
+        "Song of the Siren heals allies by 5% of their Max HP for its duration.",
         "The sleep does not affect spell immune enemies."
       ],
       "itemBehaviour": [],
       "legacyKey": "G",
-      "story": "Slithice's powerful voice enchants leagues of opponents, while calling her Slithereen kin in a time of need."
+      "story": null
     },
     {
       "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/2\/2a\/Naga_Siren_Song_of_the_Siren_End.mp3\/revision\/latest?cb=20191216020843",
@@ -170,7 +176,7 @@
         "Replaces Song of the Siren until the sub-ability is used or the song duration ends.",
         "Song of the Siren End interrupts Naga Siren's channeling abilities on cast.",
         "Goes into a 1-second cooldown right after Song of the Siren is cast, this is to prevent accidental double-casts prematurely ending the ability.",
-        "When used, enemies wake up after the aura's linger duration."
+        "When cast, enemies wake up after the aura's 0.4-second linger duration."
       ],
       "mana": null,
       "hotKey": "R",
@@ -178,7 +184,8 @@
       "description": "Release enemy units from your song so they can be targeted again.",
       "spellName": "Song of the Siren End",
       "params": [
-        "Cast Animation: 0+0.97"
+        "Cast Animation: 0+0.97",
+        ""
       ],
       "itemBehaviour": [],
       "legacyKey": "G",
@@ -187,7 +194,7 @@
   ],
   "mainAttributes": {
     "attrStrengthInc": 2.8,
-    "attrStrength": 22.0,
+    "attrStrength": 21.0,
     "attrIntelligence": 21.0,
     "attrIntelligenceInc": 2.0,
     "attrAgilityInc": 3.3,
@@ -198,13 +205,13 @@
   "talents": [
     {
       "talentLvl": "25",
-      "talentLeft": "-6 Rip Tide Armor",
+      "talentLeft": "-7 Rip Tide Armor",
       "talentRight": "-10s Mirror Image Cooldown"
     },
     {
       "talentLvl": "20",
       "talentLeft": "+1 Mirror Image Illusion",
-      "talentRight": "+10% Rip Tide Chance"
+      "talentRight": "+12% Rip Tide Chance"
     },
     {
       "talentLvl": "15",

@@ -2,7 +2,7 @@
   "abilities": [
     {
       "notes": [
-        "This attack damage talent is added as raw attack damage. Does not benefit illusions and is not affected by most percentage-based damage increasing or reducing effects.",
+        "This attack damage talent is added as bonus attack damage. Does not benefit illusions and is not affected by most percentage-based damage increasing or reducing effects.",
         "Does not benefit illusions and is not affected by most percentage-based damage increasing or reducing effects.",
         "The health talent increases maximum health capacity, and keeps the current health percentage.",
         "The spell lifesteal talent stacks additively with other sources of spell lifesteal. Heals for 2.6% from non-hero units. Treats creep-heroes as creeps and does not heal off of illusions.",
@@ -42,7 +42,7 @@
         "The goo travels at a speed of 1000.",
         "Places one debuff on the enemy. This debuff gets stronger when it gets refreshed with successive casts. A number on the icon shows how many times the debuff was refreshed, including the first cast.",
         "A number on the icon shows how many times the debuff was refreshed, including the first cast.",
-        "This is how much armor and movement speed Viscous Nasal Goo reduces with certain amount of stacks on each level: Level 1: 3.5\/5\/6.5\/8\/9.5\/11\/12.5 armor and 18%\/21%\/24%\/27%\/30%\/33%\/36% movement speed. Level 2: 4\/6\/8\/10\/12\/14\/16 armor and 21%\/27%\/33%\/39%\/45%\/51%\/57% movement speed. Level 3: 4.5\/7\/9.5\/12\/14.5\/17\/19.5 armor and 24%\/33%\/42%\/51%\/60%\/69%\/78% movement speed. Level 4: 5\/8\/11\/14\/17\/20\/23 armor and 27%\/39%\/51%\/63%\/75%\/87%\/99% movement speed.",
+        "This is how much armor and movement speed Viscous Nasal Goo reduces up to 4 (TagTalent 7) stacks on each level: Level 1: 3.5\/5\/6.5\/8\/9.5\/11\/12.5 armor and 18%\/21%\/24%\/27%\/30%\/33%\/36% movement speed. Level 2: 4\/6\/8\/10\/12\/14\/16 armor and 21%\/27%\/33%\/39%\/45%\/51%\/57% movement speed. Level 3: 4.5\/7\/9.5\/12\/14.5\/17\/19.5 armor and 24%\/33%\/42%\/51%\/60%\/69%\/78% movement speed. Level 4: 5\/8\/11\/14\/17\/20\/23 armor and 27%\/39%\/51%\/63%\/75%\/87%\/99% movement speed.",
         "Level 1: 3.5\/5\/6.5\/8\/9.5\/11\/12.5 armor and 18%\/21%\/24%\/27%\/30%\/33%\/36% movement speed.",
         "Level 2: 4\/6\/8\/10\/12\/14\/16 armor and 21%\/27%\/33%\/39%\/45%\/51%\/57% movement speed.",
         "Level 3: 4.5\/7\/9.5\/12\/14.5\/17\/19.5 armor and 24%\/33%\/42%\/51%\/60%\/69%\/78% movement speed.",
@@ -70,13 +70,12 @@
         "Non-Hero Duration: 10",
         "Radius: 800",
         "Viscous Nasal Goo becomes a no target area of effect ability, applying to all enemies within range. Increases stack limit to 7.",
-        "Grants a new ability: Hairball.",
         "Slow and armor reduction persist if debuff was placed before spell immunity and when not dispelled.",
         "Blocked upon impact, not blocked when upgraded."
       ],
       "itemBehaviour": [],
       "legacyKey": "G",
-      "story": "Having caught a cold while stuck in the snow, Bristleback turns it to his advantage."
+      "story": null
     },
     {
       "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/d\/d5\/Bristleback_Quill_Spray_1.mp3\/revision\/latest?cb=20191216011432",
@@ -114,7 +113,7 @@
       ],
       "itemBehaviour": [],
       "legacyKey": "R",
-      "story": "An enforcer's honor can be a prickly thing. So can his quills."
+      "story": null
     },
     {
       "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/1\/11\/Bristleback_Bristleback.mp3\/revision\/latest?cb=20191216011429",
@@ -129,16 +128,15 @@
         "The reduction affects all damage Bristleback takes that is not flagged as HP removal.",
         "When taking rear damage, his effective health increases by 19%\/32%\/47%\/67%.",
         "When taking side damage, his effective health increases by 9%\/14%\/19%\/25%.",
-        "Checks the damage source's current position and compares it to Bristleback's facing angle on each damage instance. This means on e.g. damage over time effects, damage of an instance is only reduced when within the right angle. Damage from e.g. Death Ward, Proximity Mines is reduced when facing away from them, since they are their own source.",
-        "This means on e.g. damage over time effects, damage of an instance is only reduced when within the right angle.",
-        "Damage from e.g. Death Ward, Proximity Mines is reduced when facing away from them, since they are their own source.",
-        "Passive Quill Sprays proc when Bristleback's back (not sides) collectively takes 210 damage (after all reductions). The damage counter has no time limit. It only resets once a passive spray occurs. Any exceeding damage is completely ignored, meaning that if an enemy deals an instance of e.g. 420 damage, the passive triggers only once. Does not count damage which has the HP removal or the no-reflection flag. Passive quills do not proc when Quill Spray is not learnt. Passive Quill Spray procs do not cost mana, have no cooldown, are independent from the active ability's cooldown, and do not trigger Warpath. In Ability Draft, Quill Spray must be drafted as well for them to passively proc.",
+        "Checks the damage source's current position and compares it to Bristleback's facing angle on each damage instance. This means on damage over time effects (i.e. Liquid Fire), damage of an instance is only reduced when within the right angle. Damage from Death Ward, Proximity Mines is reduced when facing away from them, since they are their own source.",
+        "This means on damage over time effects (i.e. Liquid Fire), damage of an instance is only reduced when within the right angle.",
+        "Damage from Death Ward, Proximity Mines is reduced when facing away from them, since they are their own source.",
+        "Passive Quill Sprays proc when Bristleback's back (not sides) collectively takes 210 damage (after all reductions). The damage counter has no time limit. It only resets once a passive spray occurs. Any exceeding damage is completely ignored, meaning that if an enemy deals an instance of 420 damage, the passive triggers only once. Does not count damage which has the HP removal or the no-reflection flag. Passive quills do not proc if Quill Spray is not learnt. Passive Quill Spray procs do not cost mana, have no cooldown, are independent from the active ability's cooldown, and do not trigger Warpath.",
         "The damage counter has no time limit. It only resets once a passive spray occurs.",
-        "Any exceeding damage is completely ignored, meaning that if an enemy deals an instance of e.g. 420 damage, the passive triggers only once.",
+        "Any exceeding damage is completely ignored, meaning that if an enemy deals an instance of 420 damage, the passive triggers only once.",
         "Does not count damage which has the HP removal or the no-reflection flag.",
-        "Passive quills do not proc when Quill Spray is not learnt.",
-        "Passive Quill Spray procs do not cost mana, have no cooldown, are independent from the active ability's cooldown, and do not trigger Warpath.",
-        "In Ability Draft, Quill Spray must be drafted as well for them to passively proc."
+        "Passive quills do not proc if Quill Spray is not learnt.",
+        "Passive Quill Spray procs do not cost mana, have no cooldown, are independent from the active ability's cooldown, and do not trigger Warpath."
       ],
       "mana": null,
       "hotKey": "E",
@@ -155,7 +153,7 @@
       ],
       "itemBehaviour": [],
       "legacyKey": "K",
-      "story": "Turning his back to a fight might be just the thing."
+      "story": null
     },
     {
       "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/0\/08\/Bristleback_Hairball.mp3\/revision\/latest?cb=20201224013124",
@@ -165,8 +163,7 @@
         "Damage Physical"
       ],
       "notes": [
-        "Requires Aghanim's Shard to be unlocked. This ability is not available in Ability Draft, due to its reliance on multiple non-ultimate abilities, which are limited to one ability slot.",
-        "This ability is not available in Ability Draft, due to its reliance on multiple non-ultimate abilities, which are limited to one ability slot.",
+        "Requires Aghanim's Shard to be unlocked.",
         "The hairball travels at a speed of 1200.",
         "The Viscous Nasal Goo and Quill Spray released are based on the current level respectively. If neither are leveled, the ball does nothing upon reaching the targeted area. Checks for their level upon projectile impact.",
         "If neither are leveled, the ball does nothing upon reaching the targeted area.",
@@ -204,12 +201,12 @@
         "Affects Self"
       ],
       "notes": [
-        "Using items does not trigger Warpath.",
-        "Bristleback's size increases and more particles fly around him the more stacks he has.",
-        "Stacks up to 5\/7\/9 times, meaning it can give at most 125\/210\/315 (TagTalent 245\/378\/531) attack damage and 15%\/28%\/45% movement speed.",
+        "Does not trigger on active item abilities, on abilities with 0 cooldown, or on abilities which do not trigger on-cast effects. The passive Quill Spray procs of Bristleback do not trigger Warpath either.",
+        "The passive Quill Spray procs of Bristleback do not trigger Warpath either.",
+        "Bristleback's model size increases and more particles fly around him the more stacks he has.",
+        "Stacks up to 5\/7\/9 times, meaning it can give at most 125\/210\/315 (TagTalent 245\/378\/531) bonus attack damage and 15%\/28%\/45% movement speed.",
         "Each stack has its own duration, successive spell casts do not refresh the duration of previous stacks. Only the first cast's buff is visible in the HUD. This buff has a number on it, showing the current amount of stacks.",
-        "Only the first cast's buff is visible in the HUD. This buff has a number on it, showing the current amount of stacks.",
-        "The passive Quill Spray procs from Bristleback do not trigger Warpath."
+        "Only the first cast's buff is visible in the HUD. This buff has a number on it, showing the current amount of stacks."
       ],
       "mana": null,
       "hotKey": "R",
@@ -220,13 +217,13 @@
         "Max Stacks: 5\/7\/9",
         "Attack Damage Bonus per Stack: 25\/30\/35 (TagTalent 49\/54\/59)",
         "Move Speed Bonus per Stack: 3%\/4%\/5%",
-        "Stack Duration: 16",
+        "Stack Duration: 16\/18\/20",
         "Prevents gaining new stacks. Already existing stacks still provide bonus movement speed and attack damage.",
         "Whenever Bristleback gains a stack, all his illusions gain one as well. Illusions do not benefit from the raw damage bonuses."
       ],
       "itemBehaviour": [],
       "legacyKey": "W",
-      "story": "'Temper, temper,' his mum always chided. But in a fight, a temper can come in handy."
+      "story": null
     }
   ],
   "mainAttributes": {

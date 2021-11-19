@@ -3,14 +3,14 @@
     {
       "notes": [
         "The health talent increases maximum health capacity, and keeps the current health percentage.",
-        "The agility talent effectively grants Ursa 1.67 armor, 10 attack speed, and 10 attack damage."
+        "The agility talent effectively grants Ursa 1.67 armor, 10 attack speed, and 10 main attack damage."
       ],
       "spellName": "Talent",
       "talents": [
         {
           "talentLvl": "25",
           "talentLeft": "+3 Overpower Attacks",
-          "talentRight": "+480 AoE Earthshock"
+          "talentRight": "+500 AoE Earthshock"
         },
         {
           "talentLvl": "20",
@@ -38,16 +38,19 @@
       ],
       "notes": [
         "Earthshock interrupts Ursa's channeling abilities upon cast.",
-        "Ursa leaps 250 range forwards when cast, 83 range high. While in the air, other units can pass below him. Leaps at a speed of 1000 for up to 0.25 seconds. Can leap over other units and over impassable terrain. During leap, Ursa can attack, turn, and cast abilities and items.",
-        "Leaps at a speed of 1000 for up to 0.25 seconds.",
+        "Upon cast, Ursa leaps 250 range forwards, 83 range high, at a speed of 1000 and for up to 0.25 seconds. While in the air, other units may pass below Ursa. Always leaps towards the direction he is facing. Can leap over other units and over impassable terrain. Can leap over other units and over impassable terrain. During leap, Ursa can attack, turn, and cast abilities.",
+        "While in the air, other units may pass below Ursa.",
+        "Always leaps towards the direction he is facing. Can leap over other units and over impassable terrain.",
         "Can leap over other units and over impassable terrain.",
-        "During leap, Ursa can attack, turn, and cast abilities and items.",
-        "Earthshock is applied upon losing the leap buff. This means if the leap gets interrupted in any way, Earthshock is applied at Ursa's current location.",
+        "During leap, Ursa can attack, turn, and cast abilities.",
+        "Earthshock and the Enrage buff is applied upon losing the leap buff. If the leap gets interrupted in any way, Earthshock is applied at Ursa's current location.",
+        "If the leap gets interrupted in any way, Earthshock is applied at Ursa's current location.",
         "Earthshock first applies the debuff, then the damage.",
-        "With Aghanim's Shard, Ursa gains the Enrage buff whenever he casts Earthshock. The buff is based on Enrage's current level. If it is not learned, no buff is placed. Only the buff is placed, other of Enrage's cast effects are not applied, which means Ursa is not applied a strong dispel upon casting this. If the buff is already present, its duration gets extended instead.",
-        "The buff is based on Enrage's current level. If it is not learned, no buff is placed.",
-        "Only the buff is placed, other of Enrage's cast effects are not applied, which means Ursa is not applied a strong dispel upon casting this.",
-        "If the buff is already present, its duration gets extended instead."
+        "With Aghanim's Shard, Earthshock applies the current level of Enrage upon cast. Enrage notes fully apply. If it is not learned, no buff is applied. Only the incoming damage reduction and status resistance bonus are applied. Other of Enrage's cast effects (i.e. strong dispel, Aghanim's Scepter upgrade) are not applied. If the buff is already present, its duration gets extended by instead. In Ability Draft, Enrage must be drafted as well for it to get applied.",
+        "Enrage notes fully apply. If it is not learned, no buff is applied.",
+        "Only the incoming damage reduction and status resistance bonus are applied. Other of Enrage's cast effects (i.e. strong dispel, Aghanim's Scepter upgrade) are not applied.",
+        "If the buff is already present, its duration gets extended by instead.",
+        "In Ability Draft, Enrage must be drafted as well for it to get applied."
       ],
       "mana": "85",
       "hotKey": "Q",
@@ -56,7 +59,7 @@
       "spellName": "Earthshock",
       "params": [
         "Cast Animation: 0+0",
-        "Radius: 385 (TagTalent 865)",
+        "Radius: 385 (TagTalent 885)",
         "Leap Distance: 250",
         "Damage: 75\/125\/175\/225",
         "Move Speed Slow: 16%\/24%\/32%\/40%",
@@ -69,7 +72,7 @@
       ],
       "itemBehaviour": [],
       "legacyKey": "E",
-      "story": "The very steps of a male ursine shake the ground as well as the resolve of opposing warriors."
+      "story": null
     },
     {
       "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/6\/69\/Ursa_Overpower.mp3\/revision\/latest?cb=20191216030123",
@@ -78,8 +81,8 @@
         "Affects Self"
       ],
       "notes": [
-        "An attack charge is consumed whenever an attack is executed, regardless of outcome. This means missed attacks use up charges as well.",
-        "The number of charges left is visible on the buff icon.",
+        "An attack charge is consumed whenever an attack is executed, missed attacks use up charges as well.",
+        "The number of remaining charges is visible on the buff icon. The buff and the visual effects of the ability are visible to everyone.",
         "Successive casts do not stack, but refresh the whole amount of charges instead."
       ],
       "mana": "30\/40\/50\/60",
@@ -95,7 +98,7 @@
       ],
       "itemBehaviour": [],
       "legacyKey": "V",
-      "story": "For a behemoth of his size, Ursa is deceptively nimble."
+      "story": null
     },
     {
       "audioUrl": null,
@@ -107,25 +110,14 @@
       "notes": [
         "On each attack Fury Swipes first adds 1 stack and then deals damage based on the stack count. This means that the bonus damage is applied even with the first attack.",
         "This means that the bonus damage is applied even with the first attack.",
-        "The bonus damage is dealt in one instance together with the attack damage, and counts as attack damage as well. It can be lifestealed off of and cleaved, but it is not considered by crit. It is also not affected by percentage-based attack damage bonuses or reductions, but can be reduced with flat reductions.",
-        "It can be lifestealed off of and cleaved, but it is not considered by crit.",
-        "It is also not affected by percentage-based attack damage bonuses or reductions, but can be reduced with flat reductions.",
-        "This is how much damage Fury Swipe deals on each attack with a certain amount attacks. Level 1: 9\/18\/27\/36\/45\/54\/63\/72\/81\/90 (TagTalent 21\/42\/63\/84\/105\/126\/147\/168\/189\/210) Level 2: 18\/36\/54\/72\/90\/108\/126\/144\/162\/180 (TagTalent 30\/60\/90\/120\/150\/180\/210\/240\/270\/300) Level 3: 27\/54\/81\/108\/135\/162\/189\/216\/243\/270 (TagTalent 39\/78\/117\/156\/195\/234\/273\/312\/351\/390) Level 4: 36\/72\/108\/144\/180\/216\/252\/288\/324\/360 (TagTalent 48\/96\/144\/192\/240\/288\/336\/384\/432\/480)",
-        "Level 1: 9\/18\/27\/36\/45\/54\/63\/72\/81\/90 (TagTalent 21\/42\/63\/84\/105\/126\/147\/168\/189\/210)",
-        "Level 2: 18\/36\/54\/72\/90\/108\/126\/144\/162\/180 (TagTalent 30\/60\/90\/120\/150\/180\/210\/240\/270\/300)",
-        "Level 3: 27\/54\/81\/108\/135\/162\/189\/216\/243\/270 (TagTalent 39\/78\/117\/156\/195\/234\/273\/312\/351\/390)",
-        "Level 4: 36\/72\/108\/144\/180\/216\/252\/288\/324\/360 (TagTalent 48\/96\/144\/192\/240\/288\/336\/384\/432\/480)",
-        "",
-        "This is how much total damage Fury Swipe accumulates over a certain amount of attacks. Level 1: 9\/27\/54\/90\/135\/189\/252\/324\/405\/495 (TagTalent 21\/63\/126\/210\/315\/441\/588\/756\/945\/1155) Level 2: 18\/54\/108\/180\/270\/378\/504\/648\/810\/990 (TagTalent 30\/90\/180\/300\/450\/630\/840\/1080\/1350\/1650) Level 3: 27\/81\/162\/270\/405\/567\/756\/972\/1215\/1485 (TagTalent 39\/117\/234\/390\/585\/819\/1092\/1404\/1755\/2145) Level 4: 36\/108\/216\/360\/540\/756\/1008\/1296\/1620\/1980 (TagTalent 48\/144\/288\/480\/720\/1008\/1344\/1728\/2160\/2640)",
-        "Level 1: 9\/27\/54\/90\/135\/189\/252\/324\/405\/495 (TagTalent 21\/63\/126\/210\/315\/441\/588\/756\/945\/1155)",
-        "Level 2: 18\/54\/108\/180\/270\/378\/504\/648\/810\/990 (TagTalent 30\/90\/180\/300\/450\/630\/840\/1080\/1350\/1650)",
-        "Level 3: 27\/81\/162\/270\/405\/567\/756\/972\/1215\/1485 (TagTalent 39\/117\/234\/390\/585\/819\/1092\/1404\/1755\/2145)",
-        "Level 4: 36\/108\/216\/360\/540\/756\/1008\/1296\/1620\/1980 (TagTalent 48\/144\/288\/480\/720\/1008\/1344\/1728\/2160\/2640)",
-        "",
-        "Each successful attack refreshes the whole stack. Missed attacks neither place the buff, nor add a stack or refresh it.",
-        "The number of stacks is visible on the debuff icon placed on attacked units.",
-        "Does not work against buildings, wards and allied units when attacking them.",
-        "The stack duration increasing talent does not increase the duration against Roshan."
+        "The bonus damage is dealt in one instance together with the attack damage, and counts as attack damage as well. This means it can be affected or considered by anything that works with attack damage (e.g. lifesteal, cleave etc.). However, Fury Swipes is not considered by crit sources. The bonus damage is also not affected by percentage-based attack damage bonuses or reductions, but can be reduced with flat reductions.",
+        "This means it can be affected or considered by anything that works with attack damage (e.g. lifesteal, cleave etc.). However, Fury Swipes is not considered by crit sources.",
+        "The bonus damage is also not affected by percentage-based attack damage bonuses or reductions, but can be reduced with flat reductions.",
+        "For how much damage Fury Swipe deals on each level, and the total damage it accumulates over a certain amount of attacks, please refer to the chart below.",
+        "Each successful attack refreshes the whole stack. Missed attacks neither place the buff, nor add a stack, nor refresh it.",
+        "The number of Fury Swipe stacks is visible on the debuff icon placed on affected units.",
+        "Does not work against buildings, wards and allied units.",
+        "The stack duration increasing talent does not increase the debuff duration against Roshan."
       ],
       "mana": null,
       "hotKey": "E",
@@ -133,14 +125,14 @@
       "description": "Ursa's claws dig deeper wounds in the enemy, causing consecutive attacks to the same enemy to deal more damage. If the same target is not attacked after 10 seconds, the bonus damage is lost.",
       "spellName": "Fury Swipes",
       "params": [
-        "Attack Damage Bonus per Stack: 9\/18\/27\/36 (TagTalent 21\/30\/39\/48)",
+        "Attack Damage Bonus per Stack: 10\/19\/28\/37 (TagTalent 22\/31\/40\/49)",
         "Debuff Duration: 8\/12\/16\/20 (TagTalent 28\/32\/36\/40)",
         "Debuff Duration on Roshan: 10",
         "Prevents gaining new stacks. Already existing stacks still provide bonus attack damage."
       ],
       "itemBehaviour": [],
       "legacyKey": "W",
-      "story": "In nature, the wounded rarely survive the attacks of hungry predators."
+      "story": null
     },
     {
       "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/5\/5a\/Ursa_Enrage.mp3\/revision\/latest?cb=20191216030122",
@@ -154,9 +146,9 @@
         "Applies generic incoming damage reduction on Ursa. Stacks additively with other sources of generic incoming damage manipulation. The reduction affects all damage Ursa takes that is not flagged as HP removal.",
         "The reduction affects all damage Ursa takes that is not flagged as HP removal.",
         "The status resistance stacks multiplicatively with other sources of status resistance.",
-        "With Aghanim's Scepter, Enrage can be cast while stunned, cycloned, slept, taunted, hidden or during forced movement. It still cannot be cast while silenced, hexed or prevented from acting. Ursa becomes unable to ⇧ Shift-queue this ability upon acquiring Aghanim's Scepter.",
-        "It still cannot be cast while silenced, hexed or prevented from acting.",
-        "Ursa becomes unable to ⇧ Shift-queue this ability upon acquiring Aghanim's Scepter.",
+        "With Aghanim's Scepter, Enrage can be cast while stunned, cycloned, slept, taunted, hidden or during forced movement. It cannot be cast while silenced, hexed or prevented from acting. Ursa is unable to ⇧ Shift-queue this ability upon acquiring Aghanim's Scepter.",
+        "It cannot be cast while silenced, hexed or prevented from acting.",
+        "Ursa is unable to ⇧ Shift-queue this ability upon acquiring Aghanim's Scepter.",
         "Causes Ursa's model to glow red and increases its size by 20%. This has no impact on his collision size.",
         "Multiple casts of Enrage do not stack, but refresh the duration. Does not extend the duration of an existing Enrage buff.",
         "Does not extend the duration of an existing Enrage buff."
@@ -175,7 +167,7 @@
       ],
       "itemBehaviour": [],
       "legacyKey": "R",
-      "story": "Ulfsaar succumbs to his ancient spirit, becoming the most ferocious creature on the battlefield."
+      "story": null
     }
   ],
   "mainAttributes": {
@@ -192,7 +184,7 @@
     {
       "talentLvl": "25",
       "talentLeft": "+3 Overpower Attacks",
-      "talentRight": "+480 AoE Earthshock"
+      "talentRight": "+500 AoE Earthshock"
     },
     {
       "talentLvl": "20",

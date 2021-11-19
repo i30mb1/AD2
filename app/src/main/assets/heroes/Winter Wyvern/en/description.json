@@ -2,7 +2,7 @@
   "abilities": [
     {
       "notes": [
-        "This attack damage talent is added as raw attack damage. Does not benefit illusions and is not affected by most percentage-based damage increasing or reducing effects.",
+        "This attack damage talent is added as bonus attack damage. Does not benefit illusions and is not affected by most percentage-based damage increasing or reducing effects.",
         "Does not benefit illusions and is not affected by most percentage-based damage increasing or reducing effects."
       ],
       "spellName": "Talent",
@@ -19,8 +19,8 @@
         },
         {
           "talentLvl": "15",
-          "talentLeft": "+400 Splinter Blast Radius",
-          "talentRight": "+2s Arctic Burn Debuff Duration"
+          "talentLeft": "+400 Splinter Blast Shatter Radius",
+          "talentRight": "+2s Arctic Burn Burn Debuff Duration"
         },
         {
           "talentLvl": "10",
@@ -37,26 +37,27 @@
         "Damage Magical"
       ],
       "notes": [
-        "Arctic Burn interrupts Winter Wyvern's channeling abilities upon cast.",
-        "Temporarily turns Winter Wyvern into a flying unit, allowing her to fly over impassable terrain, trees, units and buildings. However, it does not grant Winter Wyvern flying vision.",
-        "However, it does not grant Winter Wyvern flying vision.",
+        "Interrupts Winter Wyvern's channeling abilities upon cast.",
+        "Turns Winter Wyvern into a flying unit, allowing her to fly over impassable terrain, trees, units and buildings for its duration. However, it does not grant her flying vision.",
+        "However, it does not grant her flying vision.",
         "Increases Winter Wyvern's attack range to 775\/825\/875\/925, projectile speed to 1200, night vision range to 1200 and reduces attack point to 0.1.",
-        "Each enemy can only receive the debuff once per cast. Successive attacks on the same target neither stack, re-apply, nor refresh the duration.",
-        "The attacks first apply the debuff, then their own damage.",
-        "Deals damage in 1-second intervals, starting 1 second after the debuff is placed, resulting in 8 instances.",
-        "Can deal up to 27%\/30%\/34%\/38% of the target's current health as damage (before reductions), assuming nothing else affects the target's health.",
-        "Since the damage per second is based on a percentage of the target's current health, it can never kill an enemy by itself.",
-        "During Arctic Burn, Winter Wyvern can neither trigger nor take damage from Proximity Mines.",
-        "Destroys trees within a 175 radius at the end of the duration.",
+        "Each enemy can only receive the debuff once per cast. Successive attacks on the same target neither stack, nor reapply, nor refresh the duration. Does not affect wards, buildings, Roshan.",
         "Does not affect wards, buildings, Roshan.",
-        "With Aghanim's Scepter, Arctic Burn turns into a toggle ability. As such, it no longer interrupts Winter Wyvern's channeling abilities upon toggling On \/ Off. Aghanim's Scepter also removes the 1 attack per target limit, allowing her to refresh the debuff with consecutive attacks on the same target. Drains mana in 1-second intervals, starting 1 second after toggling. Still uses the initial mana cost upon toggling on.",
-        "As such, it no longer interrupts Winter Wyvern's channeling abilities upon toggling On \/ Off.",
-        "Aghanim's Scepter also removes the 1 attack per target limit, allowing her to refresh the debuff with consecutive attacks on the same target.",
-        "Drains mana in 1-second intervals, starting 1 second after toggling. Still uses the initial mana cost upon toggling on."
+        "The attacks first apply the debuff, then their own attack damage.",
+        "Deals damage in 1-second intervals, starting 1 second after the debuff is placed, resulting in 8 instances. Can deal up to 27%\/30%\/34%\/38% (TagTalent 35%\/40%\/44%\/48%) of the target's current health as damage (before reductions), assuming nothing else affects the target's health.",
+        "Can deal up to 27%\/30%\/34%\/38% (TagTalent 35%\/40%\/44%\/48%) of the target's current health as damage (before reductions), assuming nothing else affects the target's health.",
+        "Since the damage per second is based on a percentage of the target's current health, it can never kill an enemy by itself.",
+        "Destroys trees within a 175 radius at the end of the duration.",
+        "With Aghanim's Scepter, Arctic Burn turns into a toggle ability. No longer interrupts Winter Wyvern's channeling abilities upon toggling On \/ Off. Removes the 1 attack per target limit, allowing her to reapply, refresh the debuff with successive attacks on the same target. Activating the ability costs 100 mana. Drains Winter Wyvern's mana in 1-second intervals, starting 1 second after toggling. If toggled On, Arctic Burn continues working even when silenced, disabled, or hidden.",
+        "No longer interrupts Winter Wyvern's channeling abilities upon toggling On \/ Off.",
+        "Removes the 1 attack per target limit, allowing her to reapply, refresh the debuff with successive attacks on the same target.",
+        "Activating the ability costs 100 mana.",
+        "Drains Winter Wyvern's mana in 1-second intervals, starting 1 second after toggling.",
+        "If toggled On, Arctic Burn continues working even when silenced, disabled, or hidden."
       ],
       "mana": "100",
       "hotKey": "Q",
-      "cooldown": "42\/36\/28\/20 (TagTalent 0)",
+      "cooldown": "38\/32\/26\/20 (TagTalent 0)",
       "description": "Winter Wyvern soars upon an arctic wind, granting her unobstructed movement and allowing her to exhale a blistering chill into each attack. While soaring, her attacks travel further and faster, and slow enemies with a burning freeze that strips them of 6%\/7%\/8%\/9% of their current health each second. Her sight is also hardened against night's chill, granting her 400 additional vision range at night while soaring.",
       "spellName": "Arctic Burn",
       "params": [
@@ -76,7 +77,7 @@
       ],
       "itemBehaviour": [],
       "legacyKey": "R",
-      "story": "The same organ where some dragons stoke their inner flame is, in Auroth, a crucible of unimaginable cold. From deep within her frosty gullet, an exhalation sends enemies into burning agony."
+      "story": null
     },
     {
       "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/7\/77\/Winter_Wyvern_Splinter_Blast_1.mp3\/revision\/latest?cb=20191216030729",
@@ -86,14 +87,14 @@
         "Damage Magical"
       ],
       "notes": [
-        "The initial projectile travels at a speed between 650 and 4000. It adapts so that it reaches the target in 1 second. This means when the target gets more than 4000 range away on cast, it takes more than 1 second to reach it. Vice versa, if the target gets closer than 650 range on cast, it takes less than 1 second to reach it.",
+        "The initial projectile travels at a speed between 650 \u2013 4000. It adapts so that it reaches the target in 1 second. This means when the target gets more than 4000 range away on cast, it takes more than 1 second to reach it. Vice versa, if the target gets closer than 650 range on cast, it takes less than 1 second to reach it.",
         "This means when the target gets more than 4000 range away on cast, it takes more than 1 second to reach it.",
         "Vice versa, if the target gets closer than 650 range on cast, it takes less than 1 second to reach it.",
-        "The secondary projectiles travel at a static speed of 600.",
-        "Fully affects invisible units and units in the Fog of War.",
+        "However, the secondary projectiles travel at a speed of 600.",
+        "Fully affects invisible and units in the Fog of War.",
+        "The splinters first apply the damage, then the stun, then the debuff.",
         "The Splinter Blast stun talent only affects the secondary targets, like the damage and slow. The stun does not replace the slow. The slow is still applied, effectively slowing hit units for 2.5 seconds.",
-        "The stun does not replace the slow. The slow is still applied, effectively slowing hit units for 2.5 seconds.",
-        "The splinters first apply the damage, then the debuff."
+        "The stun does not replace the slow. The slow is still applied, effectively slowing hit units for 2.5 seconds."
       ],
       "mana": "105\/120\/135\/150",
       "hotKey": "W",
@@ -114,7 +115,7 @@
       ],
       "itemBehaviour": [],
       "legacyKey": "T",
-      "story": "Produced slowly by specialized vesicles in her frozen gullet, Winter Wyvern blast shards of ice at her enemies."
+      "story": null
     },
     {
       "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/4\/49\/Winter_Wyvern_Cold_Embrace.mp3\/revision\/latest?cb=20191216030726",
@@ -125,13 +126,13 @@
       "notes": [
         "Cannot be cast on allies who have ☐ Disabled Help from Winter Wyvern. ↓↓ Double-tapping automatically targets self.",
         "↓↓ Double-tapping automatically targets self.",
-        "Stuns the target and turns it immune to physical damage. The target can still be attacked and affected by magical and pure damage.",
-        "Heals 7.5\/8.75\/10\/11.25 (TagTalent 13.75\/15\/16.25\/17.5) + 0.44%\/0.63%\/0.81%\/1% health in 0.25-second intervals, starting 0.25 seconds after the buff is placed, resulting in 16 instances. Can heal up to 120\/140\/160\/180 (TagTalent 220\/240\/260\/280) + 7%\/10%\/13%\/16% of a unit's max health over its full duration.",
+        "Stuns the allied target and turns it immune to physical damage. The target can still be attacked and affected by other damage types.",
+        "Heals for 7.5\/8.75\/10\/11.25 (TagTalent 13.75\/15\/16.25\/17.5) + 0.44%\/0.63%\/0.81%\/1% health in 0.25-second intervals, starting 0.25 seconds after the buff is placed, resulting in 16 instances. Can heal up to 120\/140\/160\/180 (TagTalent 220\/240\/260\/280) + 7%\/10%\/13%\/16% of a unit's max health over its full duration.",
         "Can heal up to 120\/140\/160\/180 (TagTalent 220\/240\/260\/280) + 7%\/10%\/13%\/16% of a unit's max health over its full duration.",
-        "With Aghanim's Shard, losing the buff in any way causes Splinter Blast secondary projectiles to be released based. The splinters released this way does not require vision, and can target invisible units and units inside the Fog of War. However, unlike the projectiles of a regular cast, these projectiles are disjointed by invisibility. The projectiles are based on Splinter Blast's current level, if it is not learned, no projectiles are released.",
-        "The splinters released this way does not require vision, and can target invisible units and units inside the Fog of War.",
-        "However, unlike the projectiles of a regular cast, these projectiles are disjointed by invisibility.",
-        "The projectiles are based on Splinter Blast's current level, if it is not learned, no projectiles are released."
+        "With Aghanim's Shard, losing the buff in any way causes Splinter Blast secondary projectiles to be released based on its current level. Splinter Blast notes fully apply. If it is not learned, no projectiles are released. Splinters released this way do not require vision, and can target invisible units and units inside the Fog of War. However, unlike the projectiles of a regular cast, these projectiles are disjointed by invisibility.",
+        "Splinter Blast notes fully apply. If it is not learned, no projectiles are released.",
+        "Splinters released this way do not require vision, and can target invisible units and units inside the Fog of War.",
+        "However, unlike the projectiles of a regular cast, these projectiles are disjointed by invisibility."
       ],
       "mana": "50\/60\/70\/80",
       "hotKey": "E",
@@ -149,7 +150,7 @@
       ],
       "itemBehaviour": [],
       "legacyKey": "E",
-      "story": "From winter's heart comes a cold, healing embrace. The ice slows the blood and allows the spell to better work its curative magic."
+      "story": null
     },
     {
       "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/1\/1c\/Winter_Wyvern_Winter%27s_Curse.mp3\/revision\/latest?cb=20191216030732",
@@ -158,14 +159,14 @@
         "Affects Enemies"
       ],
       "notes": [
-        "The target gets stunned, while any of its allies within the radius get taunted, forcing them to attack the primary target. Enemies that enter the radius after cast also get taunted for its remaining duration. If no eligible enemies are within the area for a total of 2.5 seconds, the debuff gets removed. Does not affect or check for spell immune, invulnerable, or hidden enemies, wards or buildings within the area. Only affects units allied to the target. This means when cast on an enemy, neutral creeps are not taunted, and vice versa. Despite not getting taunted when targeting an enemy, neutral creeps still prevent the curse debuff from being removed prematurely.",
-        "Enemies that enter the radius after cast also get taunted for its remaining duration.",
-        "If no eligible enemies are within the area for a total of 2.5 seconds, the debuff gets removed.",
-        "Does not affect or check for spell immune, invulnerable, or hidden enemies, wards or buildings within the area.",
+        "Stuns the enemy target, while its allies within the radius get taunted, forcing them to attack the primary target. Enemies that enter the radius after cast is also taunted for its remaining duration. If no valid enemies are within 525 radius for a total of 2.5 seconds, the debuff gets removed. Does not affect or check for spell immune, invulnerable, or hidden enemies, wards or buildings within the radius. Only affects units allied to the target. This means when cast on an enemy, neutral creeps are not taunted, and vice versa. Despite not getting taunted when targeting an enemy, neutral creeps still prevent the curse debuff from being removed prematurely.",
+        "Enemies that enter the radius after cast is also taunted for its remaining duration.",
+        "If no valid enemies are within 525 radius for a total of 2.5 seconds, the debuff gets removed.",
+        "Does not affect or check for spell immune, invulnerable, or hidden enemies, wards or buildings within the radius.",
         "Only affects units allied to the target. This means when cast on an enemy, neutral creeps are not taunted, and vice versa.",
         "Despite not getting taunted when targeting an enemy, neutral creeps still prevent the curse debuff from being removed prematurely.",
-        "The taunt is based on an aura, with an infinite linger duration. The debuff gets cleared when the debuff on the primary target expires, or when the target dies. This means the taunt sticks on the affected units, and getting moved outside the area does not free the unit from the taunt. This also means the taunt sticks even if the debuff got removed on the primary target due to no enemies being within the area.",
-        "This means the taunt sticks on the affected units, and getting moved outside the area does not free the unit from the taunt.",
+        "The taunt is based on an aura, with an infinite linger duration. The debuff gets cleared when the debuff on the primary target expires, or when the target dies. This means the taunt sticks on the affected units, and getting moved outside the radius does not free the unit from the taunt. This also means the taunt sticks even if the debuff got removed on the primary target due to no enemies being within the area.",
+        "This means the taunt sticks on the affected units, and getting moved outside the radius does not free the unit from the taunt.",
         "This also means the taunt sticks even if the debuff got removed on the primary target due to no enemies being within the area.",
         "The taunt area is centered on the primary target and follows them if they get forcibly moved.",
         "Applies generic incoming damage reduction on the targets. Stacks additively with other sources of generic incoming damage manipulation. This means that sources of generic incoming damage amplification can be used to counter the effect. The reduction affects all damage that is not flagged as HP removal the targets take from any source except for Winter Wyvern.",
@@ -195,7 +196,7 @@
       ],
       "itemBehaviour": [],
       "legacyKey": "W",
-      "story": "The oldest of the bookwurm's spells, this curse lends truth to the old saw: sometimes the enemy of my enemy is my enemy still."
+      "story": null
     }
   ],
   "mainAttributes": {
@@ -221,8 +222,8 @@
     },
     {
       "talentLvl": "15",
-      "talentLeft": "+400 Splinter Blast Radius",
-      "talentRight": "+2s Arctic Burn Debuff Duration"
+      "talentLeft": "+400 Splinter Blast Shatter Radius",
+      "talentRight": "+2s Arctic Burn Burn Debuff Duration"
     },
     {
       "talentLvl": "10",

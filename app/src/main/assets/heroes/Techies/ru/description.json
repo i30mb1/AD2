@@ -26,7 +26,7 @@
         },
         {
           "talentLvl": "10",
-          "talentLeft": "-3 сек. к перезарядке Proximity Mines",
+          "talentLeft": "−3 сек. к перезарядке Proximity Mines",
           "talentRight": "+20% к сопротивлению магии"
         }
       ]
@@ -81,7 +81,7 @@
       ],
       "itemBehaviour": [],
       "legacyKey": "E",
-      "story": "Ночной кошмар Тотерина!"
+      "story": null
     },
     {
       "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/4\/44\/Techies_Stasis_Trap_1.mp3\/revision\/latest?cb=20191216024811",
@@ -120,7 +120,7 @@
       ],
       "itemBehaviour": [],
       "legacyKey": "T",
-      "story": "Бич Охотограда!"
+      "story": null
     },
     {
       "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/7\/74\/Techies_Blast_Off%21_1.mp3\/revision\/latest?cb=20191216024800",
@@ -163,7 +163,7 @@
       ],
       "itemBehaviour": [],
       "legacyKey": "C",
-      "story": "Куда это мы?"
+      "story": null
     },
     {
       "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/5\/53\/Techies_Minefield_Sign.mp3\/revision\/latest?cb=20191216024803",
@@ -203,7 +203,7 @@
       ],
       "itemBehaviour": [],
       "legacyKey": "G",
-      "story": "Смотри под ноги!"
+      "story": null
     },
     {
       "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/7\/7b\/Techies_Remote_Mines.mp3\/revision\/latest?cb=20210424160500",
@@ -245,7 +245,7 @@
       ],
       "itemBehaviour": [],
       "legacyKey": "R",
-      "story": "Ужас Устричной бухты!"
+      "story": null
     },
     {
       "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/4\/48\/Techies_Focused_Detonate.mp3\/revision\/latest?cb=20191216024802",
@@ -271,7 +271,7 @@
       ],
       "itemBehaviour": [],
       "legacyKey": "F",
-      "story": "Зачем поджигать один фитиль, когда можно поджечь сразу все?"
+      "story": null
     },
     {
       "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/e\/ed\/Techies_Pinpoint_Detonate.mp3\/revision\/latest?cb=20191216024806",
@@ -293,7 +293,7 @@
       ],
       "itemBehaviour": [],
       "legacyKey": "D",
-      "story": "Бабах!"
+      "story": null
     }
   ],
   "mainAttributes": {
@@ -324,7 +324,7 @@
     },
     {
       "talentLvl": "10",
-      "talentLeft": "-3 сек. к перезарядке Proximity Mines",
+      "talentLeft": "−3 сек. к перезарядке Proximity Mines",
       "talentRight": "+20% к сопротивлению магии"
     }
   ]

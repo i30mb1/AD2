@@ -10,7 +10,7 @@
         {
           "talentLvl": "25",
           "talentLeft": "+450 к урону для пробуждения от Echo Stomp",
-          "talentRight": "-60 сек. перезарядки Earth Splitter"
+          "talentRight": "−60 сек. перезарядки Earth Splitter"
         },
         {
           "talentLvl": "20",
@@ -81,7 +81,7 @@
       ],
       "itemBehaviour": [],
       "legacyKey": "T",
-      "story": "Мощь созидания до сих пор отражается эхом в топоте титана."
+      "story": null
     },
     {
       "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/2\/20\/Astral_Spirit.mp3\/revision\/latest?cb=20141126135128",
@@ -139,7 +139,7 @@
       ],
       "itemBehaviour": [],
       "legacyKey": "C",
-      "story": "Так же, как и четыре предвечных, титан существует во всех мирах одновременно, и может призывать другие свои сущности, когда ему это нужно."
+      "story": null
     },
     {
       "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/5\/50\/Return_Astral_Spirit.mp3\/revision\/latest?cb=20141126135256",
@@ -160,7 +160,8 @@
       "description": "Возвращает духа обратно к герою.",
       "spellName": "Return Astral Spirit",
       "params": [
-        "Анимация применения: 0+0"
+        "Анимация применения: 0+0",
+        ""
       ],
       "itemBehaviour": [],
       "legacyKey": "C",
@@ -197,7 +198,7 @@
       ],
       "itemBehaviour": [],
       "legacyKey": "N",
-      "story": "Титан приводит все к первородному состоянию."
+      "story": null
     },
     {
       "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/d\/dd\/Earth_Splitter.mp3\/revision\/latest?cb=20141126135205",
@@ -235,7 +236,7 @@
       ],
       "itemBehaviour": [],
       "legacyKey": "E",
-      "story": "Титан разрывает порознь всё, что когда-то создал."
+      "story": null
     }
   ],
   "mainAttributes": {
@@ -252,7 +253,7 @@
     {
       "talentLvl": "25",
       "talentLeft": "+450 к урону для пробуждения от Echo Stomp",
-      "talentRight": "-60 сек. перезарядки Earth Splitter"
+      "talentRight": "−60 сек. перезарядки Earth Splitter"
     },
     {
       "talentLvl": "20",

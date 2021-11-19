@@ -2,7 +2,7 @@
   "abilities": [
     {
       "notes": [
-        "This attack damage talent is added as raw attack damage. Does not benefit illusions and is not affected by most percentage-based damage increasing or reducing effects.",
+        "This attack damage talent is added as bonus attack damage. Does not benefit illusions and is not affected by most percentage-based damage increasing or reducing effects.",
         "Does not benefit illusions and is not affected by most percentage-based damage increasing or reducing effects.",
         "The health talent increases maximum health capacity, and keeps the current health percentage."
       ],
@@ -10,7 +10,7 @@
       "talents": [
         {
           "talentLvl": "25",
-          "talentLeft": "+150 Attack Range",
+          "talentLeft": "+125 Attack Range",
           "talentRight": "-25s Laguna Blade Cooldown"
         },
         {
@@ -25,8 +25,8 @@
         },
         {
           "talentLvl": "10",
-          "talentLeft": "-2.5s Dragon Slave Cooldown",
-          "talentRight": "+30 Damage"
+          "talentLeft": "-3.5s Dragon Slave Cooldown",
+          "talentRight": "+25 Damage"
         }
       ]
     },
@@ -44,7 +44,7 @@
       ],
       "mana": "100\/115\/130\/145",
       "hotKey": "Q",
-      "cooldown": "8 (TagTalent 5.5)",
+      "cooldown": "9 (TagTalent 5.5)",
       "description": "Lina channels the breath of a dragon, sending out a wave of fire that scorches every enemy in its path.",
       "spellName": "Dragon Slave",
       "params": [
@@ -57,7 +57,7 @@
       ],
       "itemBehaviour": [],
       "legacyKey": "D",
-      "story": "In the scorched barren of Misrule, Lina learned to manipulate the fiery breath of the Desert Wyrm as a form of entertainment."
+      "story": null
     },
     {
       "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/b\/ba\/Lina_Light_Strike_Array_1.mp3\/revision\/latest?cb=20191216015451",
@@ -74,7 +74,7 @@
       ],
       "mana": "100\/105\/110\/115",
       "hotKey": "W",
-      "cooldown": "10\/9\/8\/7",
+      "cooldown": "13\/11\/9\/7",
       "description": "Summons a column of flames that damages and stuns enemies.",
       "spellName": "Light Strike Array",
       "params": [
@@ -87,7 +87,7 @@
       ],
       "itemBehaviour": [],
       "legacyKey": "T",
-      "story": "Lina's essence allows her to focus the sun's energies, causing air to combust at will."
+      "story": null
     },
     {
       "audioUrl": null,
@@ -96,10 +96,10 @@
         "Affects Self"
       ],
       "notes": [
-        "Using items does not trigger Fiery Soul.",
-        "Each ability cast refreshes the duration of the whole stack, making it theoretically possible to permanently have max stacks on. At 2 stacks the buff grants 10%\/12%\/14%\/16% (TagTalent 14%\/16%\/18%\/20%) movement speed and 60\/100\/140\/180 (TagTalent 120\/160\/200\/240) attack speed. At 3 stacks the buff grants 15%\/18%\/21%\/24% (TagTalent 21%\/24%\/27%\/30%) movement speed and 90\/150\/210\/270 (TagTalent 180\/240\/300\/360) attack speed.",
-        "At 2 stacks the buff grants 10%\/12%\/14%\/16% (TagTalent 14%\/16%\/18%\/20%) movement speed and 60\/100\/140\/180 (TagTalent 120\/160\/200\/240) attack speed.",
-        "At 3 stacks the buff grants 15%\/18%\/21%\/24% (TagTalent 21%\/24%\/27%\/30%) movement speed and 90\/150\/210\/270 (TagTalent 180\/240\/300\/360) attack speed.",
+        "Does not trigger on active item abilities, on abilities with 0 cooldown, or on abilities which do not trigger on-cast effects.",
+        "Each ability cast refreshes the duration of the whole stack, making it theoretically possible to permanently have max stacks on. 2 Stacks: 8%\/10%\/12%\/14% (TagTalent 12%\/14%\/16%\/18%) movement speed and 60\/100\/140\/180 (TagTalent 120\/160\/200\/240) attack speed. 3 Stacks: 12%\/15%\/18%\/21% (TagTalent 18%\/21%\/24%\/27%) movement speed and 90\/150\/210\/270 (TagTalent 180\/240\/300\/360) attack speed.",
+        "2 Stacks: 8%\/10%\/12%\/14% (TagTalent 12%\/14%\/16%\/18%) movement speed and 60\/100\/140\/180 (TagTalent 120\/160\/200\/240) attack speed.",
+        "3 Stacks: 12%\/15%\/18%\/21% (TagTalent 18%\/21%\/24%\/27%) movement speed and 90\/150\/210\/270 (TagTalent 180\/240\/300\/360) attack speed.",
         ""
       ],
       "mana": null,
@@ -109,14 +109,14 @@
       "spellName": "Fiery Soul",
       "params": [
         "Max Stacks: 3",
-        "Move Speed Bonus per Stack: 5%\/6%\/7%\/8% (TagTalent 7%\/8%\/9%\/10%)",
+        "Move Speed Bonus per Stack: 4%\/5%\/6%\/7% (TagTalent 6%\/7%\/8%\/9%)",
         "Attack Speed Bonus per Stack: 30\/50\/70\/90 (TagTalent 60\/80\/100\/120)",
         "Stack Duration: 12",
         "Prevents gaining new stacks. Already existing stacks still provide bonus attack and movement speed."
       ],
       "itemBehaviour": [],
       "legacyKey": "F",
-      "story": "Dancing flames embody Lina's playful nature, bringing out her true blazing self."
+      "story": null
     },
     {
       "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/f\/f0\/Lina_Laguna_Blade_1.mp3\/revision\/latest?cb=20191216015450",
@@ -134,7 +134,7 @@
         "With the travel distance and damage width, it can hit units up to 975 range away.",
         "Places a hidden modifier on Lina upon cast, which applies the damage on all enemies within range of the lightning upon being placed."
       ],
-      "mana": "250\/400\/550",
+      "mana": "250\/400\/550 (TagTalent 150\/300\/450)",
       "hotKey": "R",
       "cooldown": "70\/60\/50 (TagTalent 45\/35\/25)",
       "description": "Fires off a bolt of lightning at a single enemy unit, dealing massive damage.",
@@ -147,13 +147,13 @@
         "Damage Length: 850",
         "Damage Width: 125",
         "Changes Laguna Blade's damage type to Pure, and allows it to slice through spell immunity.",
-        "Increases Laguna Blade's cast range by 250 and causes it to go the full cast length and hit all units along the way. Can be ground targeted.",
-        "Cannot be cast on spell immune enemies. Attempts to damage if target turns spell immune during the delay. Can be cast on spell immune enemies.",
+        "Increases Laguna Blade's cast range by 250 and causes it to go the full cast length and hit all units along the way. Can be ground targeted. Additionally reduces Laguna Blade Mana Cost by 100",
+        "Cannot be cast on spell immune enemies, but pierces spell immunity when turning spell immune after cast. Fully pierces spell immunity when reflected. Can be cast on spell immune enemies.",
         "Blocked upon cast. Particles still visually appear. Fully ignores Spell Block."
       ],
       "itemBehaviour": [],
       "legacyKey": "G",
-      "story": "The air around Lina becomes so intensely torrid that it scorches a foe that came too close with white-hot lightning."
+      "story": null
     }
   ],
   "mainAttributes": {
@@ -169,7 +169,7 @@
   "talents": [
     {
       "talentLvl": "25",
-      "talentLeft": "+150 Attack Range",
+      "talentLeft": "+125 Attack Range",
       "talentRight": "-25s Laguna Blade Cooldown"
     },
     {
@@ -184,8 +184,8 @@
     },
     {
       "talentLvl": "10",
-      "talentLeft": "-2.5s Dragon Slave Cooldown",
-      "talentRight": "+30 Damage"
+      "talentLeft": "-3.5s Dragon Slave Cooldown",
+      "talentRight": "+25 Damage"
     }
   ]
 }

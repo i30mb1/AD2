@@ -49,15 +49,15 @@
         "Fissure first applies the debuff, then the damage.",
         "Flying units and units with unobstructed movement (e.g. Spectral Dagger, Spin Web) are not blocked by Fissure. They still are fully affected by it otherwise when hit. They are pushed aside, stunned and damaged.",
         "They still are fully affected by it otherwise when hit. They are pushed aside, stunned and damaged.",
-        "Units not controlled by any player do not try to path around the Fissure, but simply walk against it as if it is not there. This effectively causes them to get stuck, until they change directions (e.g. when aggro-ing them), or until the Fissure dissipates.",
-        "This effectively causes them to get stuck, until they change directions (e.g. when aggro-ing them), or until the Fissure dissipates.",
+        "Non-player-controlled units (i.e. lane creeps) do not try to path around the Fissure, but simply walk against it as if it is not there. This effectively causes them to get stuck, until they change directions (e.g. when being aggro'd), or until the Fissure dissipates.",
+        "This effectively causes them to get stuck, until they change directions (e.g. when being aggro'd), or until the Fissure dissipates.",
         "With Aghanim's Shard, the Fissure segments provide the caster with unobstructed movement while within 150 range of them. The modifier lingers for 1 second. This means the caster can path through anything while standing on the Fissure and for a short time after leaving its area. Also, Aftershock based on the current level gets applied around each of Fissure's segments whenever it gets triggered. A unit can only be hit by one instance of Aftershock per cast, even when within the damage\/stun radius of multiple segments. The Aftershock uses a reduced stun duration of 0.3\/0.45\/0.6\/0.75 seconds.",
         "This means the caster can path through anything while standing on the Fissure and for a short time after leaving its area.",
         "Also, Aftershock based on the current level gets applied around each of Fissure's segments whenever it gets triggered.",
         "A unit can only be hit by one instance of Aftershock per cast, even when within the damage\/stun radius of multiple segments.",
         "The Aftershock uses a reduced stun duration of 0.3\/0.45\/0.6\/0.75 seconds."
       ],
-      "mana": "110\/130\/150\/170",
+      "mana": "125\/140\/155\/170",
       "hotKey": "Q",
       "cooldown": "21\/19\/17\/15 (TagTalent 19\/17\/15\/13)",
       "description": "Slams the ground with a mighty totem, creating an impassable ridge of stone while stunning and damaging enemy units along its line.",
@@ -79,7 +79,7 @@
       ],
       "itemBehaviour": [],
       "legacyKey": "F",
-      "story": "The Nishian totem splits the world to its core with tectonic force."
+      "story": null
     },
     {
       "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/f\/fc\/Earthshaker_Enchant_Totem_1.mp3\/revision\/latest?cb=20191216013148",
@@ -88,12 +88,13 @@
         "Affects Self"
       ],
       "notes": [
-        "Only increases base damage and that given by the primary attribute of the caster. Raw bonus damage is not increased.",
+        "Upon cast, Enchant Totem increases Earthshaker's attack range to 225. Grants flat bonus attack damage based on the caster's main attack damage. Does not further increase bonus attack damage. The Enchant Totem buff is only used up upon successfully hitting a target. Missed attacks do not waste it.",
+        "Grants flat bonus attack damage based on the caster's main attack damage. Does not further increase bonus attack damage.",
         "The Enchant Totem buff is only used up upon successfully hitting a target. Missed attacks do not waste it.",
-        "With Aghanim's Scepter, Enchant Totem turns into an area-targeted ability. It may only target the ground or self. ↓↓ Double-tapping automatically targets self. When self-targeted, Enchant Totem behaves like the non-upgraded version, using 1.07-second cast animation and not leaping. When ground-targeted, it uses a 0-second cast time upon cast and a 0.2-second cast backswing upon landing, during which Earthshaker is fully disabled. The leap duration is always the same, so the speed adapts based on the targeted distance. The leap height is always 950 range. During the leap, Earthshaker is fully disabled, unable to move, turn, attack or cast abilities or items. The ability counts as cast as soon as the leap starts, however, Aftershock and the totem buff are applied upon landing. Getting disabled during the leap does not prevent the Aftershock and the totem buff from being applied. Getting hit by other sources of Forced Movement causes the leap's trajectory to change, but it is not interrupted. However, getting hit by forced movement causes the ability to not apply Aftershock or the totem buff upon landing. The ability is fully and immediately canceled when getting moved upwards or teleported by other abilities. While in the air, other units may pass below Earthshaker. The targeting reticule shows the radius of Aftershock, even when it hasn't been learned yet. The Enchant Totem buff grants Earthshaker cleave while it is present. Cleave damage cannot be amplified with outgoing spell damage amplification and cannot spell lifesteal. Can be amplified by incoming spell damage amplification. Cleave damage is reduced by Damage Block. The complete area is shaped like an isosceles trapezoid in front of the attacking Earthshaker. Fully stacks with other sources of cleave. Each source of cleave works completely independent. Does not cleave upon attacking wards, buildings or allied units. Wards and buildings are unaffected by cleave. Despite the visual effect, cleave damage is applied instantly in the whole area.",
+        "With Aghanim's Scepter, Enchant Totem turns into an area-targeted ability. It may only target the ground or self. ↓↓ Double-tapping automatically targets self. When self-targeted, Enchant Totem behaves like the non-upgraded version, using 1.1-second cast animation and not leaping. When ground-targeted, it has no cast point or cast backswing. The leap duration is always the same, so the speed adapts based on the targeted distance. The leap height is always 950 range. During the leap, Earthshaker is fully disabled, unable to move, turn, attack or cast abilities or items. The ability counts as cast as soon as the leap starts, however, Aftershock and the totem buff are applied upon landing. Getting disabled during the leap does not prevent the Aftershock and the totem buff from being applied. Getting hit by other sources of Forced Movement causes the leap's trajectory to change, but it is not interrupted. However, getting hit by forced movement causes the ability to not apply Aftershock or the totem buff upon landing. The ability is fully and immediately canceled when getting moved upwards or teleported by other abilities. While in the air, other units may pass below Earthshaker. The targeting reticule shows the radius of Aftershock, even when it hasn't been learned yet. The Enchant Totem buff grants the caster cleave while it is present, if they are a melee hero. Cleave damage cannot be amplified with outgoing spell damage amplification and cannot spell lifesteal. Can be amplified by incoming spell damage amplification. Cleave damage is reduced by Damage Block. The complete area is shaped like an isosceles trapezoid in front of the attacking Earthshaker. Fully stacks with other sources of cleave. Each source of cleave works independently. Does not cleave upon attacking wards, buildings or allied units. Wards and buildings are unaffected by cleave. Despite the visual effect, cleave damage is applied instantly in the whole area.",
         "↓↓ Double-tapping automatically targets self.",
-        "When self-targeted, Enchant Totem behaves like the non-upgraded version, using 1.07-second cast animation and not leaping.",
-        "When ground-targeted, it uses a 0-second cast time upon cast and a 0.2-second cast backswing upon landing, during which Earthshaker is fully disabled.",
+        "When self-targeted, Enchant Totem behaves like the non-upgraded version, using 1.1-second cast animation and not leaping.",
+        "When ground-targeted, it has no cast point or cast backswing.",
         "The leap duration is always the same, so the speed adapts based on the targeted distance. The leap height is always 950 range.",
         "During the leap, Earthshaker is fully disabled, unable to move, turn, attack or cast abilities or items.",
         "The ability counts as cast as soon as the leap starts, however, Aftershock and the totem buff are applied upon landing.",
@@ -103,12 +104,12 @@
         "The ability is fully and immediately canceled when getting moved upwards or teleported by other abilities.",
         "While in the air, other units may pass below Earthshaker.",
         "The targeting reticule shows the radius of Aftershock, even when it hasn't been learned yet.",
-        "The Enchant Totem buff grants Earthshaker cleave while it is present. Cleave damage cannot be amplified with outgoing spell damage amplification and cannot spell lifesteal. Can be amplified by incoming spell damage amplification. Cleave damage is reduced by Damage Block. The complete area is shaped like an isosceles trapezoid in front of the attacking Earthshaker. Fully stacks with other sources of cleave. Each source of cleave works completely independent. Does not cleave upon attacking wards, buildings or allied units. Wards and buildings are unaffected by cleave. Despite the visual effect, cleave damage is applied instantly in the whole area.",
+        "The Enchant Totem buff grants the caster cleave while it is present, if they are a melee hero. Cleave damage cannot be amplified with outgoing spell damage amplification and cannot spell lifesteal. Can be amplified by incoming spell damage amplification. Cleave damage is reduced by Damage Block. The complete area is shaped like an isosceles trapezoid in front of the attacking Earthshaker. Fully stacks with other sources of cleave. Each source of cleave works independently. Does not cleave upon attacking wards, buildings or allied units. Wards and buildings are unaffected by cleave. Despite the visual effect, cleave damage is applied instantly in the whole area.",
         "Cleave damage cannot be amplified with outgoing spell damage amplification and cannot spell lifesteal.",
         "Can be amplified by incoming spell damage amplification.",
         "Cleave damage is reduced by Damage Block.",
         "The complete area is shaped like an isosceles trapezoid in front of the attacking Earthshaker.",
-        "Fully stacks with other sources of cleave. Each source of cleave works completely independent.",
+        "Fully stacks with other sources of cleave. Each source of cleave works independently.",
         "Does not cleave upon attacking wards, buildings or allied units. Wards and buildings are unaffected by cleave.",
         "Despite the visual effect, cleave damage is applied instantly in the whole area."
       ],
@@ -118,12 +119,12 @@
       "description": "Empowers Earthshaker's totem, causing it to deal extra damage and have 75 bonus attack range on the next attack.",
       "spellName": "Enchant Totem",
       "params": [
-        "Cast Animation: 0.69+0.38 (TagAghanim 0+0.2)",
+        "Cast Animation: 0.6+0.5 (TagAghanim 0+0)",
         "Attack Range Bonus: 75",
         "Attack Damage Bonus: 100%\/200%\/300%\/400%",
         "Damage Bonus Duration: 14",
         "Cast Range: 950",
-        "Leap Duration: 1",
+        "Leap Duration: 0.8",
         "Cleave Starting Radius: 150",
         "Cleave Distance: 650",
         "Cleave End Radius: 360",
@@ -133,7 +134,7 @@
       ],
       "itemBehaviour": [],
       "legacyKey": "E",
-      "story": "Raigor's gorilla strength can destroy mountains."
+      "story": null
     },
     {
       "audioUrl": null,
@@ -143,7 +144,7 @@
         "Damage Magical"
       ],
       "notes": [
-        "Aftershock does not trigger upon using items.",
+        "Does not trigger on active item abilities, on abilities with 0 cooldown, or on abilities which do not trigger on-cast effects.",
         "Aftershock first applies the stun debuff, then the damage.",
         "Applies its own effects before the effects of the triggering ability are applied.",
         "The stun does not stack with the stun of Fissure. It follows the regular rule of stuns\u2014the longer stun overrides the shorter one."
@@ -160,7 +161,7 @@
       ],
       "itemBehaviour": [],
       "legacyKey": "T",
-      "story": "The earth trembles beneath the mighty footsteps of Raigor."
+      "story": null
     },
     {
       "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/b\/b7\/Earthshaker_Echo_Slam_1.mp3\/revision\/latest?cb=20191216013146",
@@ -205,7 +206,7 @@
       ],
       "itemBehaviour": [],
       "legacyKey": "C",
-      "story": "Tectonic plates crack, mountains fold, and foes are crushed by the Echo Slam."
+      "story": null
     }
   ],
   "mainAttributes": {

@@ -1694,6 +1694,13 @@
         ]
       },
       {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/9\/97\/Vo_mars_mars_rival_170.mp3\/revision\/latest?cb=20201017102718",
+        "title": "I cannot see your wounds for the tears in my eyes...",
+        "icons": [
+          "heroes\/Dawnbreaker\/minimap.png"
+        ]
+      },
+      {
         "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/6\/6b\/Vo_mars_mars_rival_35.mp3\/revision\/latest?cb=20201017102328",
         "title": "Sharpest point wins!",
         "icons": [
@@ -2689,16 +2696,8 @@
         "title": "Auf! Auf auf auf!"
       },
       {
-        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/d\/d4\/Vo_mars_mars_rival_168.mp3\/revision\/latest?cb=20201017102714",
-        "title": "After all I've done for you!"
-      },
-      {
         "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/2\/2e\/Vo_mars_mars_rival_169.mp3\/revision\/latest?cb=20201017102716",
         "title": "When you charge at me, you'd best not miss!"
-      },
-      {
-        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/9\/97\/Vo_mars_mars_rival_170.mp3\/revision\/latest?cb=20201017102718",
-        "title": "I cannot see your wounds for the tears in my eyes..."
       },
       {
         "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/f\/f9\/Vo_mars_mars_rival_05.mp3\/revision\/latest?cb=20201017102238",
@@ -3111,6 +3110,20 @@
         "title": "I know a thing or two about sibling rivalry. The only outcome is war!",
         "icons": [
           "heroes\/Crystal Maiden\/minimap.png"
+        ]
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/8\/85\/Vo_mars_mars_ally_142.mp3\/revision\/latest?cb=20201017094028",
+        "title": "Where does the time go, my dear? You've been away too long...",
+        "icons": [
+          "heroes\/Dawnbreaker\/minimap.png"
+        ]
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/f\/f1\/Vo_mars_mars_ally_141.mp3\/revision\/latest?cb=20201017094025",
+        "title": "Together again. This time will be different, I promise!",
+        "icons": [
+          "heroes\/Dawnbreaker\/minimap.png"
         ]
       },
       {
@@ -3988,14 +4001,6 @@
       {
         "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/2\/27\/Vo_mars_mars_ally_140.mp3\/revision\/latest?cb=20201017094022",
         "title": "You can chew on whatever I leave in my wake!"
-      },
-      {
-        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/f\/f1\/Vo_mars_mars_ally_141.mp3\/revision\/latest?cb=20201017094025",
-        "title": "Together again. This time will be different, I promise!"
-      },
-      {
-        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/8\/85\/Vo_mars_mars_ally_142.mp3\/revision\/latest?cb=20201017094028",
-        "title": "Where does the time go, my dear? You've been away too long..."
       }
     ],
     "category": "Встреча союзника"
@@ -5097,6 +5102,13 @@
         "title": "What is this madness?!"
       },
       {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/d\/d4\/Vo_mars_mars_rival_168.mp3\/revision\/latest?cb=20201017102714",
+        "title": "After all I've done for you!",
+        "icons": [
+          "heroes\/Dawnbreaker\/minimap.png"
+        ]
+      },
+      {
         "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/1\/1c\/Vo_mars_mars_ability5_10.mp3\/revision\/latest?cb=20201017093411",
         "title": "Impossible!",
         "icons": [
@@ -5735,8 +5747,447 @@
       {
         "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/5\/5b\/Vo_mars_mars_village_02.mp3\/revision\/latest?cb=20201017102921",
         "title": "But the witch's magic claimed more and more of the simple folk, turning them against their kin - against even me!"
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/6\/6d\/Vo_mars_mars_village_03.mp3\/revision\/latest?cb=20201017102923",
+        "title": "I slew scores of them to reach the hag's stronghold."
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/0\/03\/Vo_mars_mars_village_04.mp3\/revision\/latest?cb=20201017102925",
+        "title": "But, once I took her head, every single possessed villager who was still alive returned mostly to normal."
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/7\/74\/Vo_mars_mars_village_05.mp3\/revision\/latest?cb=20201017102926",
+        "title": "Yes, I expect there was much rejoicing as the families collected their dead... And songs in my name. What a sight!"
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/9\/92\/Vo_mars_mars_special_01.mp3\/revision\/latest?cb=20201017102847",
+        "title": "The villagers sacrificed their last bull. Obviously, I felt compelled to help them. Damn the costs! But the witch's magic claimed more and more of the simple folk, turning them against their kin ? against even me! I slew scores of them to reach the hag's stronghold. But, once I took her head, every single possessed villager who was still alive returned mostly to normal. Yes, I expect there was much rejoicing as the families collected their dead... And songs in my name. What a sight!"
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/8\/80\/Vo_mars_mars_diplomacy_01.mp3\/revision\/latest?cb=20201017095750",
+        "title": "Diplomacy? Ha! Why it's no different than war!"
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/e\/e0\/Vo_mars_mars_diplomacy_02.mp3\/revision\/latest?cb=20201017095803",
+        "title": "Face off against your enemy and take measure of their weakness. Then, threaten that which they hold most dear."
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/0\/04\/Vo_mars_mars_diplomacy_03.mp3\/revision\/latest?cb=20201017095806",
+        "title": "If they resist? Beat 'em to death with an olive branch."
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/0\/0b\/Vo_mars_mars_diplomacy_04.mp3\/revision\/latest?cb=20201017095809",
+        "title": "It's just another battlefield. Don't trouble yourself!"
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/7\/71\/Vo_mars_mars_special_02.mp3\/revision\/latest?cb=20201017102849",
+        "title": "Diplomacy? Ha! Why it's no different than war! Face off against your enemy and take measure of their weakness. Then, threaten that which they hold most dear. If they resist? Beat 'em to death with an olive branch. It's just another battlefield. Don't trouble yourself!"
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/8\/80\/Vo_mars_mars_rare_01.mp3\/revision\/latest?cb=20201017102137",
+        "title": "Where have all the good wars gone?"
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/c\/ca\/Vo_mars_mars_rare_02.mp3\/revision\/latest?cb=20201017102139",
+        "title": "The , the ..."
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/2\/2a\/Vo_mars_mars_rare_03.mp3\/revision\/latest?cb=20201017102141",
+        "title": "The centuries-long campaigns against the the forces of the ..."
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/f\/fa\/Vo_mars_mars_rare_04.mp3\/revision\/latest?cb=20201017102143",
+        "title": "Battles that mattered, had consequence."
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/5\/57\/Vo_mars_mars_rare_05.mp3\/revision\/latest?cb=20201017102144",
+        "title": "In the final push against , I didn't halt the song of my spear for the full cycle of an moon."
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/d\/d9\/Vo_mars_mars_rare_06.mp3\/revision\/latest?cb=20201017102146",
+        "title": "The bodies in my wake, enough to fill mortal worlds! Ohh ho ho!"
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/5\/5a\/Vo_mars_mars_rare_07.mp3\/revision\/latest?cb=20201017102148",
+        "title": "Ahh... It's not like today."
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/8\/88\/Vo_mars_mars_rare_08.mp3\/revision\/latest?cb=20201017102149",
+        "title": "Today's war is...tedium. The same fight in a different trench. Each stake smaller than the last."
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/b\/b7\/Vo_mars_mars_rare_09.mp3\/revision\/latest?cb=20201017102151",
+        "title": "But there's a great war left out there somewhere... I'll do whatever it takes to find it."
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/6\/69\/Vo_mars_mars_rare_full_pickup.mp3\/revision\/latest?cb=20201017102157",
+        "isArcane": true,
+        "title": "But there's a great war left out there somewhere... I'll do whatever it takes to find it."
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/e\/ee\/Vo_mars_mars_rare_10.mp3\/revision\/latest?cb=20201017102153",
+        "title": "Tremble, all who might stand against Mars!"
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/a\/a7\/Vo_mars_mars_spawn_03.mp3\/revision\/latest?cb=20201017102811",
+        "title": "To those behind, rally! To those ahead... Kneel!"
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/0\/0c\/Vo_mars_mars_rare_full_02.mp3\/revision\/latest?cb=20201017102155",
+        "title": "Where have all the good wars gone? The Stygian Conquests, the Wightfall Invasion... the centuries-long campaigns against the the forces of the Continuum... Battles that mattered, had consequence. In the final push against Sheragndar, I didn't halt the song of my spear for the full cycle of an Ultorian moon. The bodies in my wake, enough to fill mortal worlds! Hmmmm. It's not like today. Today's war is...tedium. The same fight in a different trench. Each stake smaller than the last. But there's a great war left out there somewhere... I'll do whatever it takes to find it."
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/9\/9b\/Vo_mars_mars_special_03.mp3\/revision\/latest?cb=20201017102850",
+        "title": "What kind of plan is that?! If we wait for these idiots to finish chanting, the beast will be asleep and helpless before we even attack it. I've got a better idea... WE GO IN! AHAHAHAHA!"
       }
     ],
     "category": "Редкие фразы"
+  },
+  {
+    "responses": [
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/9\/93\/Vo_mars_mars_missing_lane_01.mp3\/revision\/latest?cb=20201017101254",
+        "title": "Top is missing!"
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/3\/34\/Vo_mars_mars_missing_lane_02.mp3\/revision\/latest?cb=20201017101257",
+        "title": "Middle is missing!"
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/5\/53\/Vo_mars_mars_missing_lane_03.mp3\/revision\/latest?cb=20201017101259",
+        "title": "Bottom is missing!"
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/b\/bd\/Vo_mars_mars_thanks_01.mp3\/revision\/latest?cb=20201017102905",
+        "title": "Thanks!"
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/5\/54\/Vo_mars_mars_thanks_02.mp3\/revision\/latest?cb=20201017102906",
+        "title": "Thank you!"
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/0\/03\/Vo_mars_mars_wheel_thanks_01.mp3\/revision\/latest?cb=20201017092430",
+        "title": "Worthy of a god's praise!"
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/9\/97\/Vo_mars_mars_wheel_thanks_02.mp3\/revision\/latest?cb=20201017092433",
+        "title": "I tip my spear!"
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/a\/aa\/Vo_mars_mars_thanks_03.mp3\/revision\/latest?cb=20201017102908",
+        "title": "My thanks will come later, when you least expect it."
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/e\/ef\/Vo_mars_mars_thanks_04.mp3\/revision\/latest?cb=20201017102910",
+        "title": "It's no small thing to be favored by the gods."
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/d\/d9\/Vo_mars_mars_laugh_01.mp3\/revision\/latest?cb=20201017101141",
+        "title": "Ah!"
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/2\/2f\/Vo_mars_mars_laugh_02.mp3\/revision\/latest?cb=20201017101143",
+        "title": "Ah ha!"
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/3\/36\/Vo_mars_mars_laugh_03.mp3\/revision\/latest?cb=20201017101144",
+        "title": "Ha ha ha!"
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/6\/62\/Vo_mars_mars_laugh_04.mp3\/revision\/latest?cb=20201017101146",
+        "title": "Ah ah ah ah ha!"
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/2\/2b\/Vo_mars_mars_laugh_05.mp3\/revision\/latest?cb=20201017101148",
+        "title": "Ah ha ha ha ha ha!"
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/a\/ad\/Vo_mars_mars_laugh_06.mp3\/revision\/latest?cb=20201017101150",
+        "title": "Oh ho ho ho ho ha ha haha!"
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/8\/82\/Vo_mars_mars_laugh_07.mp3\/revision\/latest?cb=20201017101151",
+        "title": "Ah ha ha ha ha ha haa!"
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/b\/be\/Vo_mars_mars_laugh_08.mp3\/revision\/latest?cb=20201017101153",
+        "title": "Huh huh. Aha ha hahah ah ahaha!"
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/5\/5b\/Vo_mars_mars_laugh_09.mp3\/revision\/latest?cb=20201017101155",
+        "title": "Huh Huh aha ha ha ah ha ha haa!"
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/1\/19\/Vo_mars_mars_laugh_10.mp3\/revision\/latest?cb=20201017101156",
+        "title": "Ha."
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/d\/da\/Vo_mars_mars_laugh_11.mp3\/revision\/latest?cb=20201017101158",
+        "title": "Ha!"
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/d\/d0\/Vo_mars_mars_laugh_12.mp3\/revision\/latest?cb=20201017101200",
+        "title": "Uh ha ha!"
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/e\/e5\/Vo_mars_mars_laugh_13.mp3\/revision\/latest?cb=20201017101201",
+        "title": "Ha ha!"
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/e\/e6\/Vo_mars_mars_laugh_14.mp3\/revision\/latest?cb=20201017101203",
+        "title": "Ha ha haa!"
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/4\/48\/Vo_mars_mars_laugh_15.mp3\/revision\/latest?cb=20201017101205",
+        "title": "Ha!"
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/6\/67\/Vo_mars_mars_laugh_16.mp3\/revision\/latest?cb=20201017101206",
+        "title": "Huh ha ha ha haa!"
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/3\/33\/Vo_mars_mars_laugh_17.mp3\/revision\/latest?cb=20201017101208",
+        "title": "Huh ha ha ha ha!"
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/9\/91\/Vo_mars_mars_laugh_18.mp3\/revision\/latest?cb=20201017101210",
+        "title": "Ha ha ha ha ha ha ha!"
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/2\/27\/Vo_mars_mars_laugh_19.mp3\/revision\/latest?cb=20201017101211",
+        "title": "Huh ha ha ha! Uh huh ha ha ha ha! Huh huh uh ha haa!"
+      }
+    ],
+    "category": "Реплики в чате"
+  },
+  {
+    "responses": [
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/f\/f5\/Vo_mars_mars_win_01.mp3\/revision\/latest?cb=20201017092444",
+        "title": "Wreath my spear with laurels!"
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/2\/29\/Vo_mars_mars_win_02.mp3\/revision\/latest?cb=20201017092447",
+        "title": "A fitting end to another glorious battle!"
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/1\/1b\/Vo_mars_mars_win_03.mp3\/revision\/latest?cb=20201017092457",
+        "title": "It doesn't get old!"
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/9\/98\/Vo_mars_mars_win_04.mp3\/revision\/latest?cb=20201017092506",
+        "title": "Add this one to the rolls!"
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/d\/dc\/Vo_mars_mars_win_06.mp3\/revision\/latest?cb=20201017092521",
+        "title": "Victory! Ahahaha!"
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/1\/11\/Vo_mars_mars_win_07.mp3\/revision\/latest?cb=20201017092524",
+        "title": "Ahahaha! Did they think they could win?!"
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/9\/9c\/Vo_mars_mars_yes_03_03.mp3\/revision\/latest?cb=20201017092600",
+        "title": "Yeeeesss! Ha ha ha ha haa!"
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/7\/78\/Vo_mars_mars_win_05.mp3\/revision\/latest?cb=20201017092519",
+        "title": "This arrangement works nicely!"
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/f\/f8\/Vo_mars_mars_wheel_all_08_02.mp3\/revision\/latest?cb=20201017102941",
+        "title": "These creatures are not entirely without merrit."
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/f\/f1\/Vo_mars_mars_lose_01.mp3\/revision\/latest?cb=20201017101236",
+        "title": "Noooooooo!"
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/a\/ac\/Vo_mars_mars_lose_01_02.mp3\/revision\/latest?cb=20201017101238",
+        "isArcane": true,
+        "title": "Noooooooo!"
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/c\/c2\/Vo_mars_mars_lose_02.mp3\/revision\/latest?cb=20201017101241",
+        "title": "I refuse to accept the terms!"
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/5\/5b\/Vo_mars_mars_lose_06.mp3\/revision\/latest?cb=20201017101252",
+        "title": "No no no! That's not how it goes!"
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/9\/90\/Vo_mars_mars_no_03_02.mp3\/revision\/latest?cb=20201017101604",
+        "title": "Noooooooo!"
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/e\/eb\/Vo_mars_mars_lose_03.mp3\/revision\/latest?cb=20201017101244",
+        "title": "I marched all day for this?!"
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/4\/4f\/Vo_mars_mars_lose_05.mp3\/revision\/latest?cb=20201017101249",
+        "title": "Ugh, that's no good."
+      }
+    ],
+    "category": "Окончание матча"
+  },
+  {
+    "responses": [
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/5\/52\/Vo_mars_mars_drop_common_01.mp3\/revision\/latest?cb=20201017095826",
+        "title": "I suppose..."
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/b\/bf\/Vo_mars_mars_drop_medium_01.mp3\/revision\/latest?cb=20201017095838",
+        "title": "I'll permit it."
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/2\/2a\/Vo_mars_mars_drop_rare_01.mp3\/revision\/latest?cb=20201017095840",
+        "title": "Yes, fitting!"
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/2\/2d\/Vo_mars_mars_drop_rare_02.mp3\/revision\/latest?cb=20201017095852",
+        "title": "A worthy tribute."
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/7\/76\/Vo_mars_mars_drop_rare_03.mp3\/revision\/latest?cb=20201017095854",
+        "title": "As is my due."
+      }
+    ],
+    "category": "Выпадение косметического предмета"
+  },
+  {
+    "responses": [
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/c\/cc\/Vo_mars_mars_wheel_all_03_02.mp3\/revision\/latest?cb=20201017102932",
+        "title": "You're all children, playing at war."
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/8\/8a\/Vo_mars_mars_wheel_all_10.mp3\/revision\/latest?cb=20201017102944",
+        "title": "You're all playing my game now."
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/a\/a8\/Vo_mars_mars_wheel_all_11.mp3\/revision\/latest?cb=20201017102947",
+        "title": "THIS IS DOOOOTAAAAA!"
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/3\/34\/Vo_mars_mars_wheel_laugh_01.mp3\/revision\/latest?cb=20201017092417",
+        "title": "Ha ha ha ha ha! Ah ha ha ha ha ha haa! Ah ha ha ha haaa!"
+      }
+    ],
+    "category": "Колесо чата"
+  },
+  {
+    "responses": [
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/7\/77\/Vo_mars_mars_crumwiz_01.mp3\/revision\/latest?cb=20201017095056",
+        "title": "Crummy wizard!"
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/7\/7e\/Vo_mars_mars_shitwiz_01.mp3\/revision\/latest?cb=20201017102758",
+        "title": "Shitty wizard!"
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/6\/6d\/Vo_mars_mars_whawiz_01.mp3\/revision\/latest?cb=20201017102928",
+        "title": "What's with this stupid wizard anyway?"
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/8\/89\/Vo_mars_mars_happy_01.mp3\/revision\/latest?cb=20201017095930",
+        "title": "Ho!"
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/0\/0c\/Vo_mars_mars_happy_02.mp3\/revision\/latest?cb=20201017095932",
+        "title": "Hm hm!"
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/e\/eb\/Vo_mars_mars_happy_03.mp3\/revision\/latest?cb=20201017095935",
+        "title": "Ah ha!"
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/2\/23\/Vo_mars_mars_happy_04.mp3\/revision\/latest?cb=20201017095939",
+        "title": "Oh."
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/e\/e7\/Vo_mars_mars_happy_05.mp3\/revision\/latest?cb=20201017095944",
+        "title": "Hm Hm hm!"
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/2\/21\/Vo_mars_mars_happy_06.mp3\/revision\/latest?cb=20201017095956",
+        "title": "Hm hm hm!"
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/3\/30\/Vo_mars_mars_happy_07.mp3\/revision\/latest?cb=20201017095957",
+        "title": "Ah..."
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/6\/63\/Vo_mars_mars_happy_08.mp3\/revision\/latest?cb=20201017100001",
+        "title": "Yes..."
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/5\/5d\/Vo_mars_mars_happy_09.mp3\/revision\/latest?cb=20201017100002",
+        "title": "Hm."
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/9\/9f\/Vo_mars_mars_happy_10.mp3\/revision\/latest?cb=20201017100004",
+        "title": "Hmmm."
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/9\/9a\/Vo_mars_mars_happy_11.mp3\/revision\/latest?cb=20201017100006",
+        "title": "Hm Hmm..."
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/d\/d4\/Vo_mars_mars_happy_12.mp3\/revision\/latest?cb=20201017100007",
+        "title": "Oh ho ho!"
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/5\/52\/Vo_mars_mars_happy_13.mp3\/revision\/latest?cb=20201017100019",
+        "title": "Ha!"
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/2\/22\/Vo_mars_mars_happy_14.mp3\/revision\/latest?cb=20201017100025",
+        "title": "Ha ha!"
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/d\/db\/Vo_mars_mars_happy_15.mp3\/revision\/latest?cb=20201017100032",
+        "title": "Hm!"
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/0\/0e\/Vo_mars_mars_yes_01.mp3\/revision\/latest?cb=20201017092527",
+        "title": "Yes."
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/0\/00\/Vo_mars_mars_yes_02.mp3\/revision\/latest?cb=20201017092538",
+        "title": "Yes!"
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/3\/34\/Vo_mars_mars_yes_03_02.mp3\/revision\/latest?cb=20201017092553",
+        "title": "Yeeeesss!"
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/e\/ea\/Vo_mars_mars_no_01.mp3\/revision\/latest?cb=20201017101547",
+        "title": "No."
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/5\/56\/Vo_mars_mars_no_02.mp3\/revision\/latest?cb=20201017101553",
+        "title": "Noo."
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/6\/6e\/Vo_mars_mars_taunt_01.mp3\/revision\/latest?cb=20201017102858",
+        "title": "There's nothing to it when you're a god."
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/2\/25\/Vo_mars_mars_taunt_02.mp3\/revision\/latest?cb=20201017102900",
+        "title": "What are you god of?"
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/3\/38\/Vo_mars_mars_taunt_03.mp3\/revision\/latest?cb=20201017102901",
+        "title": "I can do this and still crush your skull!"
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/c\/c0\/Vo_mars_mars_taunt_04.mp3\/revision\/latest?cb=20201017102903",
+        "title": "If you don't enjoy a battle, you're not taking it seriously!"
+      }
+    ],
+    "category": "Разное"
   }
 ]

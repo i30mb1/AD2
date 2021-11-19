@@ -5988,9 +5988,467 @@
       },
       {
         "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/3\/35\/Vo_snapfire_snapfire_item_96.mp3\/revision\/latest?cb=20191202223307",
-        "title": ""
+        "title": "Smoke of Deceit",
+        "icons": [
+          "items\/Smoke of Deceit\/full.webp"
+        ]
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/b\/b8\/Vo_snapfire_snapfire_item_97.mp3\/revision\/latest?cb=20191202223308",
+        "title": "I gave it up years ago.",
+        "icons": [
+          "items\/Smoke of Deceit\/full.webp"
+        ]
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/d\/d2\/Vo_snapfire_snapfire_item_98.mp3\/revision\/latest?cb=20191202223309",
+        "title": "Solar Crest",
+        "icons": [
+          "items\/Solar Crest\/full.webp"
+        ]
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/f\/f4\/Vo_snapfire_snapfire_item_99.mp3\/revision\/latest?cb=20191202223310",
+        "title": "Soul Ring",
+        "icons": [
+          "items\/Soul Ring\/full.webp"
+        ]
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/6\/69\/Vo_snapfire_snapfire_item_100.mp3\/revision\/latest?cb=20191202223311",
+        "title": "Linkin's Sphere",
+        "icons": [
+          "items\/Linken's Sphere\/full.webp"
+        ]
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/e\/eb\/Vo_snapfire_snapfire_item_101.mp3\/revision\/latest?cb=20191202223312",
+        "title": "Spirit Vessel",
+        "icons": [
+          "items\/Spirit Vessel\/full.webp"
+        ]
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/7\/7e\/Vo_snapfire_snapfire_item_102.mp3\/revision\/latest?cb=20191202223313",
+        "title": "Tangos for cash.",
+        "icons": [
+          "items\/Tango\/full.webp"
+        ]
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/b\/b5\/Vo_snapfire_snapfire_item_103.mp3\/revision\/latest?cb=20191202223314",
+        "title": "Tome of Knowledge",
+        "icons": [
+          "items\/Tome of Knowledge\/full.webp"
+        ]
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/c\/cc\/Vo_snapfire_snapfire_item_104.mp3\/revision\/latest?cb=20191202223315",
+        "title": "Can't forget this!",
+        "icons": [
+          "items\/Town Portal Scroll\/full.webp"
+        ]
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/d\/d0\/Vo_snapfire_snapfire_item_106.mp3\/revision\/latest?cb=20191202223317",
+        "title": "Urn of Shadows",
+        "icons": [
+          "items\/Urn of Shadows\/full.webp"
+        ]
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/9\/98\/Vo_snapfire_snapfire_item_107.mp3\/revision\/latest?cb=20191202223318",
+        "title": "Vanguard",
+        "icons": [
+          "items\/Vanguard\/full.webp"
+        ]
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/d\/d5\/Vo_snapfire_snapfire_item_108.mp3\/revision\/latest?cb=20191202223319",
+        "title": "I like the fit.",
+        "icons": [
+          "items\/Vanguard\/full.webp"
+        ]
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/f\/fc\/Vo_snapfire_snapfire_item_109.mp3\/revision\/latest?cb=20191202223320",
+        "title": "Come at me!",
+        "icons": [
+          "items\/Vanguard\/full.webp"
+        ]
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/e\/eb\/Vo_snapfire_snapfire_item_110.mp3\/revision\/latest?cb=20191202223321",
+        "title": "Veil of Discord",
+        "icons": [
+          "items\/Veil of Discord\/full.webp"
+        ]
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/5\/50\/Vo_snapfire_snapfire_item_111.mp3\/revision\/latest?cb=20191202223322",
+        "title": "Vladmir's Offering",
+        "icons": [
+          "items\/Vladmir's Offering\/full.webp"
+        ]
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/1\/1e\/Vo_snapfire_snapfire_item_112.mp3\/revision\/latest?cb=20191202223323",
+        "title": "Yasha",
+        "icons": [
+          "items\/Yasha\/full.webp"
+        ]
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/e\/e3\/Vo_snapfire_snapfire_item_113.mp3\/revision\/latest?cb=20191202223324",
+        "title": "Yasha and Kaya",
+        "icons": [
+          "items\/Yasha and Kaya\/full.webp"
+        ]
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/a\/a3\/Vo_snapfire_snapfire_immort_01.mp3\/revision\/latest?cb=20191202223104",
+        "title": "Immortality!",
+        "icons": [
+          "heroes\/Aegis of the Immortal\/minimap.png"
+        ]
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/5\/55\/Vo_snapfire_snapfire_immort_04.mp3\/revision\/latest?cb=20191202223109",
+        "title": "Twice as full of vinegar!",
+        "icons": [
+          "heroes\/Aegis of the Immortal\/minimap.png"
+        ]
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/b\/ba\/Vo_snapfire_snapfire_immort_02.mp3\/revision\/latest?cb=20191202223106",
+        "title": "I'm gonna live forever!",
+        "icons": [
+          "heroes\/Aegis of the Immortal\/minimap.png"
+        ]
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/d\/d6\/Vo_snapfire_snapfire_immort_03.mp3\/revision\/latest?cb=20191202223108",
+        "title": "I won't even need to outgun 'em.",
+        "icons": [
+          "heroes\/Aegis of the Immortal\/minimap.png"
+        ]
       }
     ],
     "category": "Acquiring an item"
+  },
+  {
+    "responses": [
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/1\/15\/Vo_snapfire_snapfire_death_01.mp3\/revision\/latest?cb=20191202222815",
+        "title": "Least we... weren't abed."
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/f\/f8\/Vo_snapfire_snapfire_death_02.mp3\/revision\/latest?cb=20191202222817",
+        "title": "I'm...sorry...Mortimer..."
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/c\/ce\/Vo_snapfire_snapfire_death_03.mp3\/revision\/latest?cb=20191202222819",
+        "title": "Whelp. They got us."
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/a\/aa\/Vo_snapfire_snapfire_death_04.mp3\/revision\/latest?cb=20191202222821",
+        "title": "I guess they took it personal..."
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/8\/88\/Vo_snapfire_snapfire_death_05.mp3\/revision\/latest?cb=20191202222823",
+        "title": "I'll...see you in hell..."
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/9\/92\/Vo_snapfire_snapfire_death_06.mp3\/revision\/latest?cb=20191202222824",
+        "title": "Addlepots... The lot of ya..."
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/8\/8e\/Vo_snapfire_snapfire_death_07.mp3\/revision\/latest?cb=20191202222825",
+        "title": "Time...to take the big jump."
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/a\/a7\/Vo_snapfire_snapfire_death_08.mp3\/revision\/latest?cb=20191202222826",
+        "title": "That's one way to cash in..."
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/7\/76\/Vo_snapfire_snapfire_death_09.mp3\/revision\/latest?cb=20191202222827",
+        "title": "Our cavortin' days is over Mortimer."
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/4\/4f\/Vo_snapfire_snapfire_death_10.mp3\/revision\/latest?cb=20191202222828",
+        "title": "Perhaps...a bit rash..."
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/e\/ef\/Vo_snapfire_snapfire_death_11.mp3\/revision\/latest?cb=20191202222829",
+        "title": "Lizard...spit."
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/e\/e6\/Vo_snapfire_snapfire_death_12.mp3\/revision\/latest?cb=20191202222830",
+        "title": "Did Mortimer...get away?"
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/4\/4e\/Vo_snapfire_snapfire_death_13.mp3\/revision\/latest?cb=20191202222831",
+        "title": "You'll...get yours..."
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/a\/a3\/Vo_snapfire_snapfire_death_14.mp3\/revision\/latest?cb=20191202222832",
+        "title": "I still...wouldn't trade...places with you."
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/c\/c0\/Vo_snapfire_snapfire_death_15.mp3\/revision\/latest?cb=20191202222833",
+        "title": "All...part of the plan."
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/b\/b8\/Vo_snapfire_snapfire_death_16.mp3\/revision\/latest?cb=20191202222835",
+        "title": "Run into...a hard case..."
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/c\/c0\/Vo_snapfire_snapfire_death_17.mp3\/revision\/latest?cb=20191202222837",
+        "title": "I'm all...sewn up."
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/d\/d3\/Vo_snapfire_snapfire_death_18.mp3\/revision\/latest?cb=20191202222839",
+        "title": "That's...just...poppycock..."
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/c\/c7\/Vo_snapfire_snapfire_death_19.mp3\/revision\/latest?cb=20191202222840",
+        "title": "We're all... stoved up."
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/9\/92\/Vo_snapfire_snapfire_death_20.mp3\/revision\/latest?cb=20191202222842",
+        "title": "Low-down, no good...ughhhh"
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/7\/72\/Vo_snapfire_snapfire_death_21.mp3\/revision\/latest?cb=20191202222843",
+        "title": "Nooooooo!"
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/2\/24\/Vo_snapfire_snapfire_death_21_02.mp3\/revision\/latest?cb=20191202222845",
+        "isArcane": true,
+        "title": "Nooooooo!"
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/1\/1b\/Vo_snapfire_snapfire_death_22.mp3\/revision\/latest?cb=20191202222847",
+        "title": "Gyaaaaaah!"
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/8\/83\/Vo_snapfire_snapfire_death_22_02.mp3\/revision\/latest?cb=20191202222848",
+        "isArcane": true,
+        "title": "Gyaaaaaah!"
+      }
+    ],
+    "category": "Dying"
+  },
+  {
+    "responses": [
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/0\/08\/Vo_snapfire_snapfire_spawn_04.mp3\/revision\/latest?cb=20191202224549",
+        "title": "Here we go again, Mortimer..."
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/a\/af\/Vo_snapfire_snapfire_hero_intro_01.mp3\/revision\/latest?cb=20191202223022",
+        "title": "Time to dance with them what brung me."
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/5\/55\/Vo_snapfire_snapfire_ability_stop_03.mp3\/revision\/latest?cb=20191202224723",
+        "title": "No time fer standin' still!"
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/8\/85\/Vo_snapfire_snapfire_respawn_01.mp3\/revision\/latest?cb=20191202223923",
+        "title": "Musta been a low-down bushwack!"
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/c\/c6\/Vo_snapfire_snapfire_respawn_02.mp3\/revision\/latest?cb=20191202223925",
+        "title": "Now they got my dander up."
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/9\/99\/Vo_snapfire_snapfire_respawn_03.mp3\/revision\/latest?cb=20191202223926",
+        "title": "That was mostly luck on their part. Mostly."
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/c\/c6\/Vo_snapfire_snapfire_respawn_04.mp3\/revision\/latest?cb=20191202223927",
+        "title": "Well look at that. Not a hair out of place."
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/f\/fa\/Vo_snapfire_snapfire_respawn_05.mp3\/revision\/latest?cb=20191202223929",
+        "title": "Back in the saddle again."
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/9\/96\/Vo_snapfire_snapfire_respawn_06.mp3\/revision\/latest?cb=20191202223930",
+        "title": "Leave 'em to me."
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/d\/d3\/Vo_snapfire_snapfire_respawn_07.mp3\/revision\/latest?cb=20191202223932",
+        "title": "Chalk it up to another close call."
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/b\/bc\/Vo_snapfire_snapfire_respawn_08.mp3\/revision\/latest?cb=20191202223933",
+        "title": "Oof. I'll feel that one tomorrow."
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/e\/e5\/Vo_snapfire_snapfire_respawn_09.mp3\/revision\/latest?cb=20191202223934",
+        "title": "Worms can't have me just yet."
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/3\/3e\/Vo_snapfire_snapfire_respawn_10.mp3\/revision\/latest?cb=20191202223936",
+        "title": "Free and easy till the end."
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/9\/97\/Vo_snapfire_snapfire_respawn_11.mp3\/revision\/latest?cb=20191202223937",
+        "title": "We'll put them notions behind us."
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/4\/4d\/Vo_snapfire_snapfire_respawn_12.mp3\/revision\/latest?cb=20191202223938",
+        "title": "Alright, let's settle this like civilized killers."
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/d\/de\/Vo_snapfire_snapfire_respawn_13.mp3\/revision\/latest?cb=20191202223939",
+        "title": "Time for a reckoning, I reckon."
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/a\/aa\/Vo_snapfire_snapfire_respawn_14.mp3\/revision\/latest?cb=20191202223941",
+        "title": "What in tarnation was that?"
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/1\/11\/Vo_snapfire_snapfire_respawn_15.mp3\/revision\/latest?cb=20191202223943",
+        "title": "Never fight on an empty stomach..."
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/1\/18\/Vo_snapfire_snapfire_respawn_16.mp3\/revision\/latest?cb=20191202223944",
+        "title": "Was that one on you or me, Mortimer?"
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/7\/71\/Vo_snapfire_snapfire_wheel_all_02.mp3\/revision\/latest?cb=20191202224634",
+        "title": "Better skin my thumb-buster a bit quicker next time."
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/2\/2a\/Vo_snapfire_snapfire_wheel_all_09.mp3\/revision\/latest?cb=20191202224643",
+        "title": "I ain't gettin' any younger."
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/f\/f9\/Vo_snapfire_snapfire_wheel_all_14.mp3\/revision\/latest?cb=20191202224651",
+        "title": "I'll refrain from profanity for Mortimer's sake."
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/1\/1d\/Vo_snapfire_snapfire_curse_01.mp3\/revision\/latest?cb=20191202222803",
+        "title": "Durana dung!"
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/0\/08\/Vo_snapfire_snapfire_curse_02.mp3\/revision\/latest?cb=20191202222805",
+        "title": "Hornswoggle!"
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/8\/85\/Vo_snapfire_snapfire_curse_03.mp3\/revision\/latest?cb=20191202222807",
+        "title": "Poppycock!"
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/f\/fd\/Vo_snapfire_snapfire_curse_04.mp3\/revision\/latest?cb=20191202222808",
+        "title": "Low-down no-account creep-stealin' fool!"
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/a\/a7\/Vo_snapfire_snapfire_curse_05.mp3\/revision\/latest?cb=20191202222809",
+        "title": "Damn you sons of bitches!"
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/a\/a7\/Vo_snapfire_snapfire_curse_06.mp3\/revision\/latest?cb=20191202222811",
+        "title": "Hellbear spawn!"
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/6\/68\/Vo_snapfire_snapfire_curse_07.mp3\/revision\/latest?cb=20191202222813",
+        "title": "Oh, stuff it."
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/5\/58\/Vo_snapfire_snapfire_wheel_all_15.mp3\/revision\/latest?cb=20191202224652",
+        "title": "Oh give me a home, where the wildwings roam..."
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/2\/2d\/Vo_snapfire_snapfire_fastres_01.mp3\/revision\/latest?cb=20191202223000",
+        "title": "I ain't dead yet."
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/6\/69\/Vo_snapfire_snapfire_fastres_02.mp3\/revision\/latest?cb=20191202223001",
+        "title": "And we're alive in 3, 2, 1..."
+      }
+    ],
+    "category": "Respawning"
+  },
+  {
+    "responses": [
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/6\/62\/Vo_snapfire_snapfire_bottle_01.mp3\/revision\/latest?cb=20191202222738",
+        "title": "Perfect fit."
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/a\/a8\/Vo_snapfire_snapfire_bottle_02.mp3\/revision\/latest?cb=20191202222739",
+        "title": "Guess I'll take it with me."
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/5\/53\/Vo_snapfire_snapfire_bottle_03.mp3\/revision\/latest?cb=20191202222741",
+        "title": "Waste not and ya won't get wasted."
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/5\/56\/Vo_snapfire_snapfire_bottle_04.mp3\/revision\/latest?cb=20191202222742",
+        "title": "Ooh. Almost looks alive, don't it?"
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/f\/f6\/Vo_snapfire_snapfire_bottle_05.mp3\/revision\/latest?cb=20191202222742",
+        "title": "It ain't lightning. But it'll do."
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/b\/bb\/Vo_snapfire_snapfire_bottle_06.mp3\/revision\/latest?cb=20191202222744",
+        "title": "Fill 'er up!"
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/5\/52\/Vo_snapfire_snapfire_bottle_07.mp3\/revision\/latest?cb=20191202222745",
+        "title": "Save a snort for later."
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/5\/5a\/Vo_snapfire_snapfire_bottle_08.mp3\/revision\/latest?cb=20191202222747",
+        "title": "This'll come in handy on the trail."
+      }
+    ],
+    "category": "Bottling Runes"
+  },
+  {
+    "responses": [
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/a\/a0\/Vo_snapfire_snapfire_arcane_01.mp3\/revision\/latest?cb=20191202222556",
+        "title": "Arcane Power!"
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/f\/f1\/Vo_snapfire_snapfire_arcane_02.mp3\/revision\/latest?cb=20191202222557",
+        "title": "Don't underestimate the power of pink!"
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/3\/36\/Vo_snapfire_snapfire_arcane_03.mp3\/revision\/latest?cb=20191202222558",
+        "title": "What a purty hue."
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/c\/c3\/Vo_snapfire_snapfire_bounty_01.mp3\/revision\/latest?cb=20191202222748",
+        "title": "Bounty!"
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/4\/4b\/Vo_snapfire_snapfire_bounty_01_02.mp3\/revision\/latest?cb=20191202222748",
+        "isArcane": true,
+        "title": "Bounty!"
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/f\/fa\/Vo_snapfire_snapfire_bounty_02.mp3\/revision\/latest?cb=20191202222750",
+        "title": "Huntin' bounties!"
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/2\/28\/Vo_snapfire_snapfire_bounty_03.mp3\/revision\/latest?cb=20191202222750",
+        "title": "Bounty killin."
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/0\/0f\/Vo_snapfire_snapfire_doubledam_01.mp3\/revision\/latest?cb=20191202222951",
+        "title": "Double Damage!"
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/9\/92\/Vo_snapfire_snapfire_doubledam_02.mp3\/revision\/latest?cb=20191202222952",
+        "title": "Oh you shouldn't have."
+      }
+    ],
+    "category": "Activating runes"
   }
 ]

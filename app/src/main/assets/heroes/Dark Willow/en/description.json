@@ -11,7 +11,7 @@
         {
           "talentLvl": "20",
           "talentLeft": "-7s Bramble Maze CD",
-          "talentRight": "+2 Shadow Realm Duration"
+          "talentRight": "+2s Shadow Realm Duration"
         },
         {
           "talentLvl": "15",
@@ -70,7 +70,7 @@
       ],
       "itemBehaviour": [],
       "legacyKey": "B",
-      "story": "The fae realm exists all around you, merely waiting to draw you in\u2026"
+      "story": null
     },
     {
       "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/0\/08\/Dark_Willow_Shadow_Realm_1.mp3\/revision\/latest?cb=20191216012334",
@@ -98,7 +98,7 @@
         "The buff responsible for the damage is lost on death, so when dying before projectile hit negates the damage.",
         "The buff only works for the attack that created it. Any other projectiles launched afterwards do not apply the bonus damage.",
         "With Aghanim's Scepter, attacking no longer ends Shadow Realm, and each attack launched applies the Shadow Realm damage.",
-        "The damage increases by 0.77\/1.54\/2.31\/3.09 on each server tick (0.03 seconds), reaching its maximum in 3.5 seconds.",
+        "The damage increases by 0.77\/1.54\/2.31\/3.09 on each server tick, reaching its maximum in 3.5 seconds.",
         "The damage stops growing as soon as the attack is launched. It does not continue to grow while flying towards the target.",
         "The damage is dealt in a separate instance and is not added to Dark Willow's attack damage.",
         "The bonus damage of Shadow Realm does not work against buildings and wards, but works on allies."
@@ -119,7 +119,7 @@
       ],
       "itemBehaviour": [],
       "legacyKey": "R",
-      "story": "What you can't see will most definitely hurt you."
+      "story": null
     },
     {
       "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/d\/db\/Dark_Willow_Cursed_Crown_1.mp3\/revision\/latest?cb=20191216012332",
@@ -153,7 +153,7 @@
       ],
       "itemBehaviour": [],
       "legacyKey": "C",
-      "story": "Didn't anyone ever tell you? Never strike a deal with a fairy\u2026"
+      "story": null
     },
     {
       "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/8\/87\/Dark_Willow_Bedlam_1.mp3\/revision\/latest?cb=20191216012342",
@@ -163,8 +163,7 @@
         "Damage Magical"
       ],
       "notes": [
-        "Leveling this ability automatically levels Terrorize as well. This applies to Ability Draft as well.",
-        "This applies to Ability Draft as well.",
+        "Leveling this ability automatically levels Terrorize as well.",
         "Interrupts Dark Willow's channeling abilities upon cast.",
         "While active, Terrorize is inactive and cannot be cast.",
         "Bedlam is inactive during Terrorize's cast time, and stays inactive until Jex fully returns to Dark Willow after terrorizing enemies.",
@@ -178,7 +177,7 @@
         "This means that both spell damage amplification and spell lifesteal does work with it. Dark Willow is the damage source.",
         "The attack projectiles traveling at a speed of 1400.",
         "With its 0.25-second attack rate, it can attack up to 20 times.",
-        "With the current attack rate and damage, it can deal up to 300\/500\/700 (TagTalent 428\/628\/828) damage per second to a single unit.",
+        "With the current attack rate and damage, it can deal up to 300\/500\/700 (TagTalent 428\/628\/828) damage per second to a single unit. Can deal up to 1500\/2500\/3500 (TagTalent 2140\/3140\/4140) damage to a single unit (before reductions).",
         "Can deal up to 1500\/2500\/3500 (TagTalent 2140\/3140\/4140) damage to a single unit (before reductions).",
         "Recasting Bedlam before the previous cast finishes refreshes the duration.",
         "The ability itself provides no vision, but Jex has 600 ground vision which he provides for the duration."
@@ -199,7 +198,7 @@
       ],
       "itemBehaviour": [],
       "legacyKey": "D",
-      "story": "You'll have to excuse my friend Jex. He's really into murder."
+      "story": null
     },
     {
       "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/2\/27\/Dark_Willow_Terrorize_1.mp3\/revision\/latest?cb=20191216012339",
@@ -208,8 +207,7 @@
         "Affects Enemies"
       ],
       "notes": [
-        "Leveling this ability automatically levels Bedlam as well. This applies to Ability Draft as well. In Ability Draft, Terrorize can be unlocked with Aghanim's Scepter by the player that drafted Bedlam.",
-        "In Ability Draft, Terrorize can be unlocked with Aghanim's Scepter by the player that drafted Bedlam.",
+        "Leveling this ability automatically levels Bedlam as well.",
         "Terrorize is inactive during Bedlam.",
         "Terrorize is also inactive during its cast time, and stays inactive until Jex fully returns to Dark Willow after terrorizing enemies. This means Terrorize cannot be cast again until Jex returned from a previous cast.",
         "This means Terrorize cannot be cast again until Jex returned from a previous cast.",
@@ -233,7 +231,7 @@
       ],
       "itemBehaviour": [],
       "legacyKey": "F",
-      "story": "You think you know the first thing about fear? Jex'll show you what that word truly means\u2026"
+      "story": null
     }
   ],
   "mainAttributes": {
@@ -255,7 +253,7 @@
     {
       "talentLvl": "20",
       "talentLeft": "-7s Bramble Maze CD",
-      "talentRight": "+2 Shadow Realm Duration"
+      "talentRight": "+2s Shadow Realm Duration"
     },
     {
       "talentLvl": "15",

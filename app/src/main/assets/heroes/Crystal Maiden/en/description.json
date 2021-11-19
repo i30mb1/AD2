@@ -57,7 +57,7 @@
       ],
       "itemBehaviour": [],
       "legacyKey": "V",
-      "story": "The air temperature around Rylai drops rapidly, chilling all around her to the core."
+      "story": null
     },
     {
       "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/f\/f3\/Crystal_Maiden_Frostbite.mp3\/revision\/latest?cb=20191216012227",
@@ -68,13 +68,13 @@
       ],
       "notes": [
         "Despite the visual effects, Frostbite applies its effects immediately and cannot be disjointed.",
-        "Roots and disarms the target, preventing it from moving, attacking and casting certain mobility spells. Provides True Sight over the target.",
+        "Roots and disarms the target, preventing it from moving, attacking, and casting certain mobility abilities. Provides True Sight over the target.",
         "Provides True Sight over the target.",
         "Deals 25 damage in 0.25-second intervals, starting 0.25 seconds after cast, resulting in 6\/8\/10\/12 (TagTalent 11\/13\/15\/17) damage instances to heroes and 40 (TagTalent 45) to creeps. Can deal up to 150\/200\/250\/300 (TagTalent 275\/325\/375\/425) damage to heroes and 1000 (TagTalent 1125) damage to creeps (before reductions).",
         "Can deal up to 150\/200\/250\/300 (TagTalent 275\/325\/375\/425) damage to heroes and 1000 (TagTalent 1125) damage to creeps (before reductions).",
         "Treats illusions, creep-heroes, ancient creeps and Roshan as heroes."
       ],
-      "mana": "140\/145\/150\/155",
+      "mana": "125\/135\/145\/155",
       "hotKey": "W",
       "cooldown": "9\/8\/7\/6",
       "description": "Encases an enemy unit in ice, prohibiting movement and attack, while dealing damage over time. Lasts 10 seconds on creeps level 6 or lower.",
@@ -90,7 +90,7 @@
       ],
       "itemBehaviour": [],
       "legacyKey": "E",
-      "story": "Rylai channels winds from the Blueheart Glacier, imprisoning attackers in thick blocks of ice."
+      "story": null
     },
     {
       "audioUrl": null,
@@ -103,10 +103,9 @@
         "Can regenerate up to 30\/60\/90\/120 mana in one minute for allies. Can regenerate up to 90\/180\/270\/360 mana in one minute for Crystal Maiden.",
         "Can regenerate up to 90\/180\/270\/360 mana in one minute for Crystal Maiden.",
         "Does not affect invulnerable units.",
-        "With the level 15 talent, Arcane Aura grants bonus magic resistance to her team. Stacks multiplicatively with other sources of magic resistance. The 6% magic resistance is affected by the self bonus factor for Crystal Maiden. Increases most heroes' total magic resistance to 29.5%. Increases Crystal Maiden's total magic resistance to 38.5%.",
+        "With the level 15 talent, Arcane Aura grants bonus magic resistance to her team. Stacks multiplicatively with other sources of magic resistance. The 6% magic resistance is affected by the self bonus factor for Crystal Maiden. Increases total magic resistance to 38.5% and 29.5% for Crystal Maiden and her allies respectively.",
         "The 6% magic resistance is affected by the self bonus factor for Crystal Maiden.",
-        "Increases most heroes' total magic resistance to 29.5%.",
-        "Increases Crystal Maiden's total magic resistance to 38.5%."
+        "Increases total magic resistance to 38.5% and 29.5% for Crystal Maiden and her allies respectively."
       ],
       "mana": null,
       "hotKey": "E",
@@ -122,7 +121,7 @@
       ],
       "itemBehaviour": [],
       "legacyKey": "R",
-      "story": "Cold temperatures promote the essence of magic, causing Rylai's presence to allow spell usage in abundance."
+      "story": null
     },
     {
       "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/e\/e2\/Crystal_Maiden_Freezing_Field.mp3\/revision\/latest?cb=20191216012226",
@@ -143,7 +142,7 @@
         "Deals about 2000\/3300\/4800 (TagTalent 2400\/3960\/5760) damage to enemies within 485 range over the full duration, ±1.9 (TagTalent ±2.28) explosions.",
         "The radius is always centered on Crystal Maiden and follows her even when she is moved.",
         "Despite the visual effects, the damage is dealt as the falling ice shards are spawned, not upon them reaching the ground.",
-        "With Aghanim's Scepter, Freezing Field provides an aura which tracks enemies within the area. The tracker lingers for 0.1 seconds. If an enemy unit is affected by the tracker for 1.75 seconds, Frostbite is applied to the enemy unit based on its current level. A unit can only be frostbitten once per cast of Freezing Field. Even if they re-enter the area, they are not affected a second time. If a unit is already frostbitten by a manual cast, it can still be frostbitten again by Freezing Field, refreshing the duration. The tracker resets whenever it is reapplied to a unit. This means a unit must be affected by it for 1.75 seconds continuously in order to be frostbitten. The tracker is placed on enemies even without having Aghanim's Scepter, tracking the duration enemies spend within the area normally. This means if Freezing Field is upgraded while channeling, enemies which have been in the area for more than 1.75 seconds instantly have Frostbite applied to them. The tracker does not affect invulnerable or hidden units. In Ability Draft, Frostbite must be drafted as well for this upgrade to work.",
+        "With Aghanim's Scepter, Freezing Field provides an aura which tracks enemies within the area. The tracker lingers for 0.1 seconds. If an enemy unit is affected by the tracker for 1.75 seconds, Frostbite is applied to the enemy unit based on its current level. A unit can only be frostbitten once per cast of Freezing Field. Even if they re-enter the area, they are not affected a second time. If a unit is already frostbitten by a manual cast, it can still be frostbitten again by Freezing Field, refreshing the duration. The tracker resets whenever it is reapplied to a unit. This means a unit must be affected by it for 1.75 seconds continuously in order to be frostbitten. The tracker is placed on enemies even without having Aghanim's Scepter, tracking the duration enemies spend within the area normally. This means if Freezing Field is upgraded while channeling, enemies which have been in the area for more than 1.75 seconds instantly have Frostbite applied to them. The tracker does not affect invulnerable or hidden units.",
         "If an enemy unit is affected by the tracker for 1.75 seconds, Frostbite is applied to the enemy unit based on its current level.",
         "A unit can only be frostbitten once per cast of Freezing Field. Even if they re-enter the area, they are not affected a second time.",
         "If a unit is already frostbitten by a manual cast, it can still be frostbitten again by Freezing Field, refreshing the duration.",
@@ -151,7 +150,6 @@
         "The tracker is placed on enemies even without having Aghanim's Scepter, tracking the duration enemies spend within the area normally.",
         "This means if Freezing Field is upgraded while channeling, enemies which have been in the area for more than 1.75 seconds instantly have Frostbite applied to them.",
         "The tracker does not affect invulnerable or hidden units.",
-        "In Ability Draft, Frostbite must be drafted as well for this upgrade to work.",
         "With Aghanim's Shard, Freezing Field no longer requires to be channeled, so that Crystal Maiden can act freely during it. However, her movement speed is heavily slowed. This is a regular slow and can be off-set by movement speed bonuses, including haste. Freezing Field is interrupted if Crystal Maiden gets stunned, silenced, cycloned, feared, hexed or slept during it. It also stops when Crystal Maiden dies, or when she uses the Stop Freezing Field sub-ability.",
         "However, her movement speed is heavily slowed. This is a regular slow and can be off-set by movement speed bonuses, including haste.",
         "Freezing Field is interrupted if Crystal Maiden gets stunned, silenced, cycloned, feared, hexed or slept during it.",
@@ -160,7 +158,7 @@
       "mana": "200\/400\/600",
       "hotKey": "R",
       "cooldown": "110\/100\/90",
-      "description": "Surrounds Crystal Maiden with random icy explosions that slow enemies and deal massive damage. Grants bonus armor while channeling. Lasts 10 seconds.",
+      "description": "Surrounds Crystal Maiden with 100 random icy explosions that slow enemies and deal massive damage. Grants bonus armor while channeling. Lasts 10 seconds.",
       "spellName": "Freezing Field",
       "params": [
         "Cast Animation: 0+0",
@@ -177,14 +175,13 @@
         "Slow Duration: 1",
         "Frostbite Timer: 1.75",
         "Self Move Speed Slow: 75%",
-        "Duration: 10",
         "Applies Frostbite to any unit that has been standing in the Freezing Field for over a set amount of time.",
         "Grants a new ability: Stop Freezing Field. Allows you to move, cast and attack during Freezing Field. Can still be interrupted by enemies. You move 75% slower during this. Increases total number of explosions by 20%.",
         "Slow persists if debuff was placed before spell immunity and when not dispelled."
       ],
       "itemBehaviour": [],
       "legacyKey": "F",
-      "story": "Once the place of her exile, Icewrack has become an anchor for Rylai's frigid onslaught."
+      "story": null
     },
     {
       "audioUrl": null,
@@ -203,7 +200,8 @@
       "description": "Immediately stops the Freezing Field",
       "spellName": "Stop Freezing Field",
       "params": [
-        "Cast Animation: 0+0"
+        "Cast Animation: 0+0",
+        ""
       ],
       "itemBehaviour": [],
       "legacyKey": "F",

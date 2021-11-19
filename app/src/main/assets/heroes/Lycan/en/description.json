@@ -2,7 +2,8 @@
   "abilities": [
     {
       "notes": [
-        "The bonus wolves attack damage talent is added as raw attack damage, and is not affected by most percentage-based damage increasing or reducing effects."
+        "The attack damage and health talents affect the regular Lycan Wolves and the Lane Wolves. The attack damage talent is added as raw attack damage and is not affected by most percentage-based damage increasing or reducing effects.",
+        "The attack damage talent is added as raw attack damage and is not affected by most percentage-based damage increasing or reducing effects."
       ],
       "spellName": "Talent",
       "talents": [
@@ -13,18 +14,18 @@
         },
         {
           "talentLvl": "20",
-          "talentLeft": "+30% Feral Impulse Damage",
+          "talentLeft": "+25% Feral Impulse Damage",
           "talentRight": "+6s Shapeshift Duration"
         },
         {
           "talentLvl": "15",
-          "talentLeft": "-20 Shapeshift Cooldown",
+          "talentLeft": "-15s Shapeshift Cooldown",
           "talentRight": "+200 Summon Wolves Health"
         },
         {
           "talentLvl": "10",
-          "talentLeft": "+20 Summon Wolves Damage",
-          "talentRight": "+8 Feral HP Regen"
+          "talentLeft": "+13 Summon Wolves Damage",
+          "talentRight": "+10 Feral HP Regen"
         }
       ]
     },
@@ -35,17 +36,19 @@
       ],
       "notes": [
         "Casting Summon Wolves replaces currently active wolves from a previous cast.",
-        "The wolves are summoned 200 range in front on Lycan, with 120 range distance between the wolves. Lycan is always at the center of the line.",
-        "The wolves gain Invisibility on level 3 and Cripple on level 4.",
-        "Already summoned wolves do not get new abilities when the spell is leveled. Only wolves summoned after leveling get them.",
+        "The wolves are summoned 200 range in front of Lycan, with 120 range distance between the wolves. Lycan is always at the center of the line.",
+        "The wolves gain Invisibility on level 3 and Cripple on level 4. Already summoned wolves do not get new abilities when the ability is leveled. Only wolves summoned after leveling get them. The attack damage increasing talent immediately upgrades all of Lycan's currently living wolves. The health increasing talent does not upgrade any of Lycan's currently living wolves.",
+        "Already summoned wolves do not get new abilities when the ability is leveled. Only wolves summoned after leveling get them.",
+        "The attack damage increasing talent immediately upgrades all of Lycan's currently living wolves.",
+        "The health increasing talent does not upgrade any of Lycan's currently living wolves.",
         "Has a cast backswing of 0.6 during Shapeshift.",
-        "With Aghanim's Shard, 1 Lane Wolf is spawned together with each creep wave in one random lane. The lane for the wolf is selected at complete random each time. If Summon Wolves is not learned, the Lane Wolf does not spawn. Although the Lane Wolf is uncontrollable, Lycan is considered their owner, meaning last hits they make grant bounty and experience to Lycan. This also means they are affected by Feral Impulse and can gain critical strike from Shapeshift, but not the haste speed. The Lane Wolf has Cripple, but not Invisibility. Lane Wolves can proc Cripple on buildings.",
+        "With Aghanim's Shard, 1 Lane Wolf is spawned together with each creep wave in one random lane. The lane for the wolf is selected at complete random each time. If Summon Wolves is not learned, the Lane Wolf does not spawn. Although the Lane Wolf is uncontrollable, Lycan is considered their owner, meaning last hits they make grant bounty and experience to Lycan. This also means they are affected by Feral Impulse and can gain critical strike from Shapeshift, but not the haste speed. The Lane Wolf has Cripple, but not Invisibility. The Lane Wolf's Cripple can proc on buildings. The Lane Wolf have the lowest target priority than any other unit, so they are targeted by auto-attacks as last.",
         "The lane for the wolf is selected at complete random each time.",
         "If Summon Wolves is not learned, the Lane Wolf does not spawn.",
         "Although the Lane Wolf is uncontrollable, Lycan is considered their owner, meaning last hits they make grant bounty and experience to Lycan.",
         "This also means they are affected by Feral Impulse and can gain critical strike from Shapeshift, but not the haste speed.",
-        "The Lane Wolf has Cripple, but not Invisibility. Lane Wolves can proc Cripple on buildings.",
-        "Lane Wolves can proc Cripple on buildings."
+        "The Lane Wolf has Cripple, but not Invisibility. The Lane Wolf's Cripple can proc on buildings.",
+        "The Lane Wolf have the lowest target priority than any other unit, so they are targeted by auto-attacks as last."
       ],
       "mana": "125\/130\/135\/140",
       "hotKey": "Q",
@@ -57,11 +60,11 @@
         "Number of Wolves: 2 (TagTalent 4)",
         "Duration: 50",
         "Number of Lane Wolves: 1",
-        "Causes one of your creep waves to include an uncontrollable wolf that moves with each wave."
+        "Causes one of your creep waves to include one uncontrollable wolf that moves with the wave. Additionally, wolves spawned this way may Cripple towers"
       ],
       "itemBehaviour": [],
       "legacyKey": "V",
-      "story": "The very enchantment that twisted his being also summons canine familiars."
+      "story": null
     },
     {
       "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/b\/b1\/Lycan_Howl_1.mp3\/revision\/latest?cb=20191216015832",
@@ -72,7 +75,7 @@
       "notes": [
         "The debuff does not stack, so if an enemy is within range of more than one source, it gets affected by the debuff once.",
         "Lycan and his wolves (both Lycan Wolf and Lane Wolf) apply the effects around them simultaneously, there is no delay.",
-        "The attack damage reduction only affects base damage and that given by the primary attribute of affected units. Raw bonus damage is not decreased."
+        "Reduces the main attack damage of affected units. Bonus attack damage is not reduced."
       ],
       "mana": "35\/40\/45\/50",
       "hotKey": "W",
@@ -88,7 +91,7 @@
       ],
       "itemBehaviour": [],
       "legacyKey": "W",
-      "story": "Blood-curdling wolf cries signal to opponents that Banehallow is among them."
+      "story": null
     },
     {
       "audioUrl": null,
@@ -97,12 +100,12 @@
         "Affects Self"
       ],
       "notes": [
-        "Only increases base damage and that given by the primary attribute of affected units. Raw bonus damage is not increased.",
-        "Affects all units under Lycan's control, not just himself and his wolves.",
+        "Grants flat bonus attack damage based on the affected units' main attack damage. Does not further increase bonus attack damage.",
+        "Feral Impulse affects all units under Lycan's control, not just himself and his wolves.",
         "Does not affect invulnerable units.",
-        "Can regenerate up to 120\/240\/360\/480 (TagTalent 600\/720\/840\/960) health in one minute.",
+        "Can regenerate up to 60\/180\/300\/420 (TagTalent 660\/780\/900\/1020) health in one minute.",
         "The aura's buff lingers for 0.5 seconds.",
-        "Lycan illusions created by abilities (e.g. Disruption, Wall of Replica, Reflection) do provide their owner and units the bonuses. However, illusions that are Enchanted do not grant Enchantress' units the bonuses, only the illusion itself keeps them.",
+        "Lycan illusions created by abilities (e.g. Disruption etc.) do provide their owner and units the bonuses. However, illusions that are Enchanted do not grant Enchantress' units the bonuses, only the illusion itself keeps them.",
         "However, illusions that are Enchanted do not grant Enchantress' units the bonuses, only the illusion itself keeps them."
       ],
       "mana": null,
@@ -112,13 +115,13 @@
       "spellName": "Feral Impulse",
       "params": [
         "Radius: Global",
-        "Attack Damage Bonus: 12%\/24%\/36%\/48% (TagTalent 42%\/54%\/66%\/78%)",
-        "Health Regen Bonus: 2\/4\/6\/8 (TagTalent 10\/12\/14\/16)",
+        "Attack Damage Bonus: 11%\/22%\/33%\/44% (TagTalent 36%\/47%\/58%\/69%)",
+        "Health Regen Bonus: 1\/3\/5\/7 (TagTalent 11\/13\/15\/17)",
         "Aura Linger Duration: 0.5"
       ],
       "itemBehaviour": [],
       "legacyKey": "I",
-      "story": "His animalistic symbiosis with canine kind gives Banehallow enhanced reflexes and hunting capabilities."
+      "story": null
     },
     {
       "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/6\/67\/Lycan_Shapeshift.mp3\/revision\/latest?cb=20191216015834",
@@ -127,8 +130,9 @@
         "Affects Allied Heroes"
       ],
       "notes": [
-        "Requires Aghanim's Scepter to be unlocked. In Ability Draft, Wolf Bite can be unlocked by the player that drafted Shapeshift.",
-        "In Ability Draft, Wolf Bite can be unlocked by the player that drafted Shapeshift.",
+        "Requires Aghanim's Scepter to be unlocked. If the item is acquired before Shapeshift was learned, Wolf Bite will be at level 1.",
+        "If the item is acquired before Shapeshift was learned, Wolf Bite will be at level 1.",
+        "Wolf Bite automatically levels up with Shapeshift, and cannot be leveled up separately.",
         "Applies all effects of Shapeshift on the ally, including the transformation time, the night vision, the critical strike and the haste speed. However, the aura only affects the targeted ally, meaning units owned by them do not gain the bonuses.",
         "However, the aura only affects the targeted ally, meaning units owned by them do not gain the bonuses.",
         "Grants regular lifesteal and shared lifesteal to both, the caster and the target. This means, no matter who of them attacks, both always get healed. Lifesteal amplification affects shared lifesteal as well, but only if the amplification source is the healed unit.",
@@ -136,14 +140,14 @@
         "Lifesteal amplification affects shared lifesteal as well, but only if the amplification source is the healed unit.",
         "The lifesteal is granted immediately upon cast. It does not rely on the transformation to finish.",
         "The shared lifesteal requires the caster and the target to be within 1200 of each other. The regular lifesteal works regardless of distance.",
-        "If Shapeshift is not learned, the targeted ally goes through the transformation time, but does not transform. This means, in such case, this ability effectively only stuns the ally, and grants the lifesteal to both for seconds. If the level 20 Shapeshift duration talent is chosen, the ally transforms for 6 seconds, gains the lifesteal, but does not get the speed, night vision, or the crit chance.",
+        "If Shapeshift is not learned, the targeted ally goes through the transformation time, but does not transform. This means, in such case, this ability effectively only stuns the ally, and grants the lifesteal to both for seconds. If the Shapeshift duration talent is chosen, the ally transforms for 6 seconds, gains the lifesteal, but does not get the speed, night vision, or the crit chance.",
         "This means, in such case, this ability effectively only stuns the ally, and grants the lifesteal to both for seconds.",
-        "If the level 20 Shapeshift duration talent is chosen, the ally transforms for 6 seconds, gains the lifesteal, but does not get the speed, night vision, or the crit chance."
+        "If the Shapeshift duration talent is chosen, the ally transforms for 6 seconds, gains the lifesteal, but does not get the speed, night vision, or the crit chance."
       ],
       "mana": "150",
       "hotKey": "D",
-      "cooldown": "80",
-      "description": "Lycan bites an ally, granting them Shapeshift properties. Lycan and the bitten target gain 30% Lifesteal and share Lifesteal with each other as long as they are within 1200 range of each other.",
+      "cooldown": "125\/110\/95 (TagTalent 110\/95\/80)",
+      "description": "Lycan bites an ally, granting them Shapeshift properties. Lycan and the bitten target gain 30% Lifesteal and share the healing effect of Lifesteal with each other as long as they are within 1200 range of each other.",
       "spellName": "Wolf Bite",
       "params": [
         "Cast Animation: 0.3+0.73",
@@ -154,7 +158,7 @@
       ],
       "itemBehaviour": [],
       "legacyKey": "T",
-      "story": "Does this bite look infected?"
+      "story": null
     },
     {
       "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/6\/67\/Lycan_Shapeshift.mp3\/revision\/latest?cb=20191216015834",
@@ -165,13 +169,13 @@
       "notes": [
         "During the transformation, Lycan cannot do anything. Cannot be interrupted.",
         "Increases Lycan's night vision to a total of 1800.",
-        "Turns the caster into a melee unit with 150 attack range for its duration (relevant for Wolf Bite, Rubick and Ability Draft). This means items treat the caster as a melee hero (e.g. Manta Style, Skull Basher, etc). Attack range bonuses are not overridden and still work normally.",
-        "This means items treat the caster as a melee hero (e.g. Manta Style, Skull Basher, etc).",
-        "Attack range bonuses are not overridden and still work normally.",
+        "Turns the caster into a melee unit with 150 attack range for its duration (relevant for Wolf Bite, and when cast by ranged heroes). This causes items that use different values for melee and ranged heroes (e.g. Manta Style) treat the caster as a melee hero. Attack range bonuses fully overridden, including passive item bonuses.",
+        "This causes items that use different values for melee and ranged heroes (e.g. Manta Style) treat the caster as a melee hero.",
+        "Attack range bonuses fully overridden, including passive item bonuses.",
         "The movement speed and critical strike are provided by a global aura which affects all units owned by Lycan. The aura's effects linger for 0.1 seconds.",
         "The aura's effects linger for 0.1 seconds.",
         "Does not affect invulnerable units.",
-        "The movement speed boost is a haste, meaning affected units cannot be slowed below the set value.",
+        "Hastes affected units, meaning they cannot be slowed below 550 movement speed.",
         "The critical strike increases the attack damage of Lycan and all his units by an average of 20%\/30%\/40% (TagTalent 36%\/54%\/72%). The proc chances of multiple crit sources stack. If two sources of critical strike proc at the same time, the higher multiplier has priority. The critical strike uses pseudo-random distribution.",
         "The proc chances of multiple crit sources stack.",
         "If two sources of critical strike proc at the same time, the higher multiplier has priority.",
@@ -182,7 +186,7 @@
       ],
       "mana": "100",
       "hotKey": "R",
-      "cooldown": "125\/110\/95 (TagTalent 105\/90\/75)",
+      "cooldown": "125\/110\/95 (TagTalent 110\/95\/80)",
       "description": "Lycan assumes his lupine form, granting him and his units critical strikes and added vision at night. During Shapeshift, Lycan and all units under his control move at increased speed, cannot be slowed and have a 40% chance to deal a critical strike doing 150%\/175%\/200% damage.",
       "spellName": "Shapeshift",
       "params": [
@@ -202,7 +206,7 @@
       ],
       "itemBehaviour": [],
       "legacyKey": "F",
-      "story": "Forever a slave to his lycanthropy, Banehallow has come to accept his curse, and embrace his own savagery."
+      "story": null
     },
     {
       "audioUrl": null,
@@ -211,7 +215,8 @@
         "Affects Self"
       ],
       "notes": [
-        "Available for level 3-4 wolves.",
+        "Requires level 3 Summon Wolves to be unlocked. Available for level 3 and level 4 wolves.",
+        "Available for level 3 and level 4 wolves.",
         "The invisibility is broken upon landing an attack. Missed attacks or attacking items do break it.",
         "Does not allow to pass through other units."
       ],
@@ -221,7 +226,8 @@
       "description": "Permanently invisible when not attacking.",
       "spellName": "Invisibility",
       "params": [
-        "Fade Delay: 1.7"
+        "Fade Delay: 1.7",
+        ""
       ],
       "itemBehaviour": [],
       "legacyKey": null,
@@ -234,12 +240,14 @@
         "Affects Enemies \/ Allies"
       ],
       "notes": [
+        "Requires level 4 Summon Wolves to be unlocked. Available for level 4 wolves.",
         "Available for level 4 wolves.",
         "Deals damage in 1-second intervals, starting 1 second after proccing, resulting in 4 instances.",
         "Can deal up to 32 damage to the target (before reductions).",
         "Multiple procs on the same target do not stack, but refresh the duration instead.",
         "The proccing attack first applies the debuff, then its own damage.",
-        "Can proc on allied units as well. Does not proc on buildings and wards."
+        "Can proc on allied units as well. Does not proc on wards. Does not proc on buildings for regular Lycan Wolves, but does for Lane Wolves.",
+        "Does not proc on buildings for regular Lycan Wolves, but does for Lane Wolves."
       ],
       "mana": null,
       "hotKey": null,
@@ -251,7 +259,8 @@
         "Damage per Second: 8",
         "Move Speed Slow: 15%",
         "Attack Speed Slow: 60",
-        "Duration: 4"
+        "Duration: 4",
+        ""
       ],
       "itemBehaviour": [],
       "legacyKey": null,
@@ -276,18 +285,18 @@
     },
     {
       "talentLvl": "20",
-      "talentLeft": "+30% Feral Impulse Damage",
+      "talentLeft": "+25% Feral Impulse Damage",
       "talentRight": "+6s Shapeshift Duration"
     },
     {
       "talentLvl": "15",
-      "talentLeft": "-20 Shapeshift Cooldown",
+      "talentLeft": "-15s Shapeshift Cooldown",
       "talentRight": "+200 Summon Wolves Health"
     },
     {
       "talentLvl": "10",
-      "talentLeft": "+20 Summon Wolves Damage",
-      "talentRight": "+8 Feral HP Regen"
+      "talentLeft": "+13 Summon Wolves Damage",
+      "talentRight": "+10 Feral HP Regen"
     }
   ]
 }

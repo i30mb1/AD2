@@ -2,24 +2,24 @@
   "abilities": [
     {
       "notes": [
-        "The strength talent effectively grants Night Stalker 500 health, 2.5 health regeneration, and 25 attack damage."
+        "The strength talent effectively grants Night Stalker 400 health, 2 health regeneration, and 20 main attack damage."
       ],
       "spellName": "Talent",
       "talents": [
         {
           "talentLvl": "25",
-          "talentLeft": "-60s Dark Ascension Cooldown",
+          "talentLeft": "-50s Dark Ascension Cooldown",
           "talentRight": "+80 Hunter In The Night Attack Speed"
         },
         {
           "talentLvl": "20",
-          "talentLeft": "+25 Strength",
+          "talentLeft": "+20 Strength",
           "talentRight": "-4s Crippling Fear Cooldown"
         },
         {
           "talentLvl": "15",
           "talentLeft": "+10% Hunter In The Night Movement Speed",
-          "talentRight": "+50s Dark Ascension damage"
+          "talentRight": "+40 Dark Ascension Damage"
         },
         {
           "talentLvl": "10",
@@ -60,11 +60,11 @@
         "Radius: 900",
         "Causes Void to be an AoE ability. Increases the ministun duration.",
         "Slow persists if debuff was placed before spell immunity and when not dispelled.",
-        "Not blocked when upgraded with Aghanim's Scepter."
+        "Not blocked when upgraded."
       ],
       "itemBehaviour": [],
       "legacyKey": "V",
-      "story": "Balanar creates a vortex of infinite night, tearing opponents violently into the eternal darkness that once was."
+      "story": null
     },
     {
       "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/e\/ee\/Night_Stalker_Crippling_Fear_1.mp3\/revision\/latest?cb=20191216021032",
@@ -93,7 +93,7 @@
       ],
       "itemBehaviour": [],
       "legacyKey": "F",
-      "story": "A vision of the twisted maw of Balanar etches itself into the minds of the poor souls unlucky enough to cross his path."
+      "story": null
     },
     {
       "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/2\/23\/Night_Stalker_Hunter_in_the_Night_move.mp3\/revision\/latest?cb=20191216021026",
@@ -104,10 +104,11 @@
       ],
       "notes": [
         "Also works during the night from Eclipse.",
-        "With Aghanim's Shard, can be cast on any unit except for heroes, illusions, clones, creep-heroes, and Roshan. Cannot be cast on ancient creeps during daytime, but can during nighttime. The targeted creep is instantly killed, granting its gold and experience bounties if it was an enemy, denying it if it was an ally. Despite the visual effect, the heal and mana restore are applied instantly on cast.",
+        "With Aghanim's Shard, Hunter in the Night turns into an active ability. The passive effects are still present. Can be cast on any unit except for heroes, illusions, clones, creep-heroes, and Roshan. Cannot be cast on ancient creeps during daytime, but can during nighttime. The targeted creep is instantly killed, granting its gold and experience bounties if it was an enemy, denying it if it was an ally. Despite the visual effect, the health and mana restore are applied instantly on cast.",
+        "Can be cast on any unit except for heroes, illusions, clones, creep-heroes, and Roshan.",
         "Cannot be cast on ancient creeps during daytime, but can during nighttime.",
         "The targeted creep is instantly killed, granting its gold and experience bounties if it was an enemy, denying it if it was an ally.",
-        "Despite the visual effect, the heal and mana restore are applied instantly on cast."
+        "Despite the visual effect, the health and mana restore are applied instantly on cast."
       ],
       "mana": "0",
       "hotKey": "E",
@@ -125,7 +126,7 @@
       ],
       "itemBehaviour": [],
       "legacyKey": "G",
-      "story": "The hunting prowess of Balanar improves as the night beckons."
+      "story": null
     },
     {
       "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/8\/86\/Night_Stalker_Dark_Ascension.mp3\/revision\/latest?cb=20191216021025",
@@ -136,21 +137,22 @@
       "notes": [
         "Dark Ascension has a lower priority than the daytime caused by Supernova. During it, Night Stalker still flies, has the damage bonus and unobstructed vision, but the vision is limited to his default daytime vision.",
         "During it, Night Stalker still flies, has the damage bonus and unobstructed vision, but the vision is limited to his default daytime vision.",
-        "Has a cast backswing of 0.5 seconds when cast during the night."
+        "Has a cast backswing of 0.5 seconds when cast during nighttime.",
+        "The damage increasing talent immediately updates the currently running instance."
       ],
       "mana": "125\/175\/225",
       "hotKey": "R",
-      "cooldown": "150\/140\/130 (TagTalent 90\/80\/70)",
-      "description": "Night Stalker smothers the sun and summons instant darkness, so that he might use his powers at their fullest. Nightstalker gains flight and bonus damage during this time. Has unobstructed vision.",
+      "cooldown": "150\/140\/130 (TagTalent 100\/90\/80)",
+      "description": "Night Stalker smothers the sun and summons instant darkness, so that he might use his powers at their fullest. Night Stalker gains flight and bonus damage during this time. Has unobstructed vision.",
       "spellName": "Dark Ascension",
       "params": [
         "Cast Animation: 0.3+0",
-        "Attack Damage Bonus: 50\/100\/150 (TagTalent 100\/150\/200)",
+        "Attack Damage Bonus: 50\/100\/150 (TagTalent 90\/140\/190)",
         "Duration: 30 (TagTalent 40)"
       ],
       "itemBehaviour": [],
       "legacyKey": "R",
-      "story": "It is a humbling sight to see when the mightiest of warriors become afraid of the dark."
+      "story": null
     }
   ],
   "mainAttributes": {
@@ -166,18 +168,18 @@
   "talents": [
     {
       "talentLvl": "25",
-      "talentLeft": "-60s Dark Ascension Cooldown",
+      "talentLeft": "-50s Dark Ascension Cooldown",
       "talentRight": "+80 Hunter In The Night Attack Speed"
     },
     {
       "talentLvl": "20",
-      "talentLeft": "+25 Strength",
+      "talentLeft": "+20 Strength",
       "talentRight": "-4s Crippling Fear Cooldown"
     },
     {
       "talentLvl": "15",
       "talentLeft": "+10% Hunter In The Night Movement Speed",
-      "talentRight": "+50s Dark Ascension damage"
+      "talentRight": "+40 Dark Ascension Damage"
     },
     {
       "talentLvl": "10",

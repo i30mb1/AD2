@@ -26,7 +26,7 @@
         {
           "talentLvl": "10",
           "talentLeft": "-2s Stifling Dagger Cooldown",
-          "talentRight": "+1 Phantom Strike Duration"
+          "talentRight": "+1s Phantom Strike Duration"
         }
       ]
     },
@@ -39,24 +39,23 @@
       ],
       "notes": [
         "The Stifling Dagger travels at a speed of 1200.",
-        "Upon hitting the target, the dagger causes Phantom Assassin to perform an instant attack on the target. These instant attacks can proc any attack modifiers and on-hit effects normally, except for Tidebringer. They have True Strike, but completely ignore disarms. Cleave effects are based on the target's position, damaging a trapezoid area the opposite direction where the dagger came from. Although the dagger may make it look like a ranged attack, the attack still counts as a melee attack when coming from Phantom Assassin. This means all abilities which differentiate between ranged and melee, use their melee effects and values, not ranged.",
-        "These instant attacks can proc any attack modifiers and on-hit effects normally, except for Tidebringer. They have True Strike, but completely ignore disarms.",
+        "Upon projectile hit, the dagger causes Phantom Assassin to perform an instant attack on the target. These instant attacks can proc any attack modifiers and on-hit effects normally (except Tidebringer). They have True Strike, but completely ignore disarms. Cleave effects are based on the target's position, damaging a trapezoid area the opposite direction where the dagger came from. Although the dagger may make it look like a ranged attack, the attack still counts as a melee attack when its coming from Phantom Assassin. This means all abilities (and items) that use different values for melee and ranged heroes, use their melee effects and values, not ranged.",
+        "These instant attacks can proc any attack modifiers and on-hit effects normally (except Tidebringer). They have True Strike, but completely ignore disarms.",
         "Cleave effects are based on the target's position, damaging a trapezoid area the opposite direction where the dagger came from.",
-        "Although the dagger may make it look like a ranged attack, the attack still counts as a melee attack when coming from Phantom Assassin.",
-        "This means all abilities which differentiate between ranged and melee, use their melee effects and values, not ranged.",
-        "Stifling Dagger first reduces Phantom Assassin's total attack damage by the percentage, and then adds its own bonus base damage on top of that. This can be defined as 65 + 25%\/40%\/55%\/70% × ΣAtk The total attack damage includes all already existing attack damage changes, including temporary ones (Bash) and conditional ones (Quell). The 65 damage is also an attack damage bonus, but is added after the main damage is calculated. Attack modifiers which are based on attack damage (critical strike, lifesteal, cleave) include the 65 extra damage as well. The damage is added to Phantom Assassin's attack damage through a status buff which lasts for 0.03 seconds. Since the damage comes from a regular attack, it does not count as spell damage, but counts as attack damage. This means it is affected by damage block, unaffected by spell damage amplification and cannot spell lifesteal.",
-        "This can be defined as 65 + 25%\/40%\/55%\/70% × ΣAtk",
-        "The total attack damage includes all already existing attack damage changes, including temporary ones (Bash) and conditional ones (Quell).",
-        "The 65 damage is also an attack damage bonus, but is added after the main damage is calculated.",
-        "Attack modifiers which are based on attack damage (critical strike, lifesteal, cleave) include the 65 extra damage as well.",
-        "The damage is added to Phantom Assassin's attack damage through a status buff which lasts for 0.03 seconds.",
-        "Since the damage comes from a regular attack, it does not count as spell damage, but counts as attack damage.",
+        "Although the dagger may make it look like a ranged attack, the attack still counts as a melee attack when its coming from Phantom Assassin.",
+        "This means all abilities (and items) that use different values for melee and ranged heroes, use their melee effects and values, not ranged.",
+        "Stifling Dagger's instant attack first reduces Phantom Assassin's total attack damage, and then the bonus damage is added as attack damage bonus on top of that after the total main damage is calculated. The total attack damage includes all already existing attack damage changes, including conditional bonus sources (e.g. Bash and Quell). This can be defined as ΣAtk × 25%\/40%\/55%\/70% + 65 Therefore, attack damage based attack modifiers (e.g. critical strike, lifesteal, cleave) include the 65 bonus base damage as well. The bonus base damage is added to Phantom Assassin's attack damage through a status buff which lasts for 0.03 seconds, so that only the ability can use it. Since the damage comes from a regular attack, it counts as attack damage and not as spell damage. This means it is affected by damage block, unaffected by spell damage amplification and cannot spell lifesteal.",
+        "The total attack damage includes all already existing attack damage changes, including conditional bonus sources (e.g. Bash and Quell).",
+        "This can be defined as ΣAtk × 25%\/40%\/55%\/70% + 65",
+        "Therefore, attack damage based attack modifiers (e.g. critical strike, lifesteal, cleave) include the 65 bonus base damage as well.",
+        "The bonus base damage is added to Phantom Assassin's attack damage through a status buff which lasts for 0.03 seconds, so that only the ability can use it.",
+        "Since the damage comes from a regular attack, it counts as attack damage and not as spell damage.",
         "This means it is affected by damage block, unaffected by spell damage amplification and cannot spell lifesteal.",
-        "The dagger first applies the attack, then its own debuff.",
+        "The projectile first applies the attack, then its own debuff.",
         "The projectile has 450 range flying vision. This vision lingers for 3.34 seconds at the target's location upon successfully hitting it.",
-        "Cannot be cast on Couriers.",
-        "With the triple strike talent, Stifling Dagger launches 2 additional projectiles towards random visible valid targets within the range. The search range is based on the cast range, plus the buffer, resulting in a search range of 850\/1050\/1250\/1450. Cannot target the primary target with the additional projectiles, so when no other targets are nearby, nothing happens. The secondary targets are chosen randomly within the area. There are no priorities. The projectiles cannot choose both the same target. Since the additional projectiles use the ability's cast range, cast range increasing effects increase their range as well.",
-        "The search range is based on the cast range, plus the buffer, resulting in a search range of 850\/1050\/1250\/1450.",
+        "Cannot be cast on Courier.",
+        "With the triple strike talent, Stifling Dagger launches 2 additional projectiles towards random visible valid targets within the range. The search range is based on the cast range and the buffer range, resulting in a search range of 850\/1050\/1250\/1450. Cannot target the primary target with the additional projectiles, so when no other targets are nearby, nothing happens. The secondary targets are chosen randomly within the area. There are no priorities. The projectiles cannot choose both the same target. Since the additional projectiles use the ability's cast range, cast range increasing effects increase their range as well.",
+        "The search range is based on the cast range and the buffer range, resulting in a search range of 850\/1050\/1250\/1450.",
         "Cannot target the primary target with the additional projectiles, so when no other targets are nearby, nothing happens.",
         "The secondary targets are chosen randomly within the area. There are no priorities. The projectiles cannot choose both the same target.",
         "Since the additional projectiles use the ability's cast range, cast range increasing effects increase their range as well."
@@ -70,8 +69,8 @@
         "Cast Animation: 0.3+0.47",
         "Cast Range: 550\/750\/950\/1150",
         "Number of Targets: 1 (TagTalent 3)",
-        "Base Damage: 65",
-        "Attack Damage: 25%\/40%\/55%\/70%",
+        "Instant Attack Damage Bonus: 65",
+        "Instant Attack Damage: 25%\/40%\/55%\/70%",
         "Move Speed Slow: 50%",
         "Slow Duration: 2.2\/2.8\/3.4\/4",
         "Secondary Target Range Buffer: 300",
@@ -80,7 +79,7 @@
       ],
       "itemBehaviour": [],
       "legacyKey": "D",
-      "story": "The first skill learned by the Sisters of the Veil often signals an incoming hit."
+      "story": null
     },
     {
       "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/3\/36\/Phantom_Assassin_Phantom_Strike.mp3\/revision\/latest?cb=20191216021614",
@@ -90,7 +89,7 @@
       ],
       "notes": [
         "Phantom Strike can be cast on allied units, without gaining the attack speed bonus.",
-        "Moves Phantom Assassin next to the target, towards the position she was upon spell cast.",
+        "Moves Phantom Assassin next to the target, towards the position she was upon cast.",
         "Does not disjoint projectiles upon teleporting.",
         "Phantom Assassin is ordered to attack the target if it is an enemy, automatically canceling the cast backswing.",
         "Cannot be cast on Couriers."
@@ -108,7 +107,7 @@
       ],
       "itemBehaviour": [],
       "legacyKey": "B",
-      "story": "Mortred's silken veil is the last thing her unfortunate target sees."
+      "story": null
     },
     {
       "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/d\/d8\/Phantom_Assassin_Blur_1.mp3\/revision\/latest?cb=20191216021620",
@@ -120,17 +119,16 @@
         "Interrupts Phantom Assassin's channeling abilities on cast.",
         "Turns Phantom Assassin invisible, with True Sight immunity. Only Chronosphere can reveal her.",
         "Attacking or casting abilities does not break the invisibility.",
-        "The effect is dispelled when getting within 600 range of an enemy hero (including clones, excluding illusions) or an enemy building. The effect is not dispelled instantly, but 0.5 (TagTalent 0.75) seconds after getting within range. Getting out of range during that delay does not prevent it from dispelling. The delay does not serve as a grace period. The effect is also dispelled when attacking Roshan, again, not instantly, but after the dispel delay.",
+        "The effect is dispelled when getting within 600 range of an enemy hero (including clones, excluding illusions) or an enemy building. The effect is not dispelled instantly, but 0.5 (TagTalent 0.75) seconds after getting within range. Getting out of range during that delay does not prevent it from dispelling. The delay does not serve as a grace period. The effect is also dispelled when attacking Roshan, not instantly, but after the dispel delay.",
         "The effect is not dispelled instantly, but 0.5 (TagTalent 0.75) seconds after getting within range.",
         "Getting out of range during that delay does not prevent it from dispelling. The delay does not serve as a grace period.",
-        "The effect is also dispelled when attacking Roshan, again, not instantly, but after the dispel delay.",
+        "The effect is also dispelled when attacking Roshan, not instantly, but after the dispel delay.",
         "The passive evasion and the active component are independent from each other. Blur's evasion stacks diminishingly with other sources of evasion and uses pseudo-random distribution.",
         "Blur's evasion stacks diminishingly with other sources of evasion and uses pseudo-random distribution.",
-        "On average, Blur increases Phantom Assassin's survivability against physical attacks by 18%\/33%\/54%\/82% (TagTalent 100%\/150%\/233%\/400%).",
-        "With Aghanim's Scepter, Blur has an instant cast time and applies a basic dispel on Phantom Assassin upon cast. Resets the cooldowns of all her basic abilities regardless how the kill was made. The cooldown resetting is bound to Blur as well. If not learnt, kills do not reset her cooldowns. In Ability Draft, the cooldown resetting affects every ability except for ultimates.",
-        "Resets the cooldowns of all her basic abilities regardless how the kill was made.",
-        "The cooldown resetting is bound to Blur as well. If not learnt, kills do not reset her cooldowns.",
-        "In Ability Draft, the cooldown resetting affects every ability except for ultimates."
+        "On average, Blur increases Phantom Assassin's survivability against physical attacks by 25%\/43%\/67%\/100% (TagTalent 122%\/186%\/300%\/567%).",
+        "With Aghanim's Scepter, Blur has an instant cast time and applies a basic dispel on Phantom Assassin upon cast. Resets the cooldowns of all her basic abilities regardless how the kill was made. Ultimate abilities are not reset. The cooldown resetting is bound to Blur as well. If not learnt, kills do not reset her cooldowns.",
+        "Resets the cooldowns of all her basic abilities regardless how the kill was made. Ultimate abilities are not reset.",
+        "The cooldown resetting is bound to Blur as well. If not learnt, kills do not reset her cooldowns."
       ],
       "mana": "50",
       "hotKey": "E",
@@ -139,7 +137,7 @@
       "spellName": "Blur",
       "params": [
         "Cast Animation: 0.4+0.57 (TagAghanim 0+0)",
-        "Passive Evasion: 15%\/25%\/35%\/45% (TagTalent 50%\/60%\/70%\/80%)",
+        "Passive Evasion: 20%\/30%\/40%\/50% (TagTalent 55%\/65%\/75%\/85%)",
         "Vanish Dispel Radius: 600",
         "Vanish Fade Time: 0",
         "Vanish Dispel Delay: 0.5 (TagAghanim 0.75)",
@@ -149,7 +147,7 @@
       ],
       "itemBehaviour": [],
       "legacyKey": "R",
-      "story": "Meditation allows a Veiled Sister to carefully anticipate her opponents in combat."
+      "story": null
     },
     {
       "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/e\/e4\/Phantom_Assassin_Fan_of_Knives_1.mp3\/revision\/latest?cb=20210102190424",
@@ -171,7 +169,7 @@
       ],
       "mana": "50",
       "hotKey": "D",
-      "cooldown": "20",
+      "cooldown": "15",
       "description": "Phantom Assassin releases sharp blades around her in a 550 AoE, dealing 16% of a victim's max health on impact and applying break for 3 seconds.",
       "spellName": "Fan of Knives",
       "params": [
@@ -192,10 +190,11 @@
       ],
       "notes": [
         "Increases attack damage by an average of 15%\/33.75%\/52.5% (TagTalent 22%\/49.5%\/77%).",
+        "A cricital strike proc is decided upon attack begin, not upon landing an attack. When a critical strike procs, Phantom Assassin uses a specific crit attack animation, and particle effects appear on her weapon.",
+        "When a critical strike procs, Phantom Assassin uses a specific crit attack animation, and particle effects appear on her weapon.",
         "The proc chances of multiple crit sources stack. If two sources of critical strike proc at the same time, the higher crit multiplier has priority.",
         "If two sources of critical strike proc at the same time, the higher crit multiplier has priority.",
         "Coup de Grace uses pseudo-random distribution.",
-        "A part of the visual effects (a white glow on her weapon) plays during the start of an attack, revealing that the attack is going to crit.",
         "Coup de Grace does not work against allied units, buildings or wards."
       ],
       "mana": null,
@@ -211,7 +210,7 @@
       ],
       "itemBehaviour": [],
       "legacyKey": "C",
-      "story": "A divine strike, Mortred honors her opponent by choosing them for death."
+      "story": null
     }
   ],
   "mainAttributes": {
@@ -243,7 +242,7 @@
     {
       "talentLvl": "10",
       "talentLeft": "-2s Stifling Dagger Cooldown",
-      "talentRight": "+1 Phantom Strike Duration"
+      "talentRight": "+1s Phantom Strike Duration"
     }
   ]
 }

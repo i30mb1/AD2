@@ -76,12 +76,12 @@
         "Wake Up Damage Threshold: 50\/100\/150\/200 (TagTalent 500\/550\/600\/650)",
         "Initial Stun Duration: 0.2",
         "Sleep Duration: 2\/3\/4\/5",
-        "Allows you switch Echo Stomp to autocast. When cast while on autocast, Elder Titan will take place of the Astral Spirit as it completes its stomp.",
+        "Allows you switch Echo Stomp to autocast. When cast while on autocast, Elder Titan will take the place of the Astral Spirit as it completes its stomp.",
         "Root does not prevent the teleport from happening."
       ],
       "itemBehaviour": [],
       "legacyKey": "T",
-      "story": "The force of creation still echoes in the stomp of the Titan."
+      "story": null
     },
     {
       "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/c\/c0\/Elder_Titan_Astral_Spirit_1.mp3\/revision\/latest?cb=20191216013444",
@@ -103,12 +103,12 @@
         "Does not count illusions and Couriers. Treats creep-heroes as creeps.",
         "If the buff is still present on a recast, it gets refreshed and updated based on the current level, and amount of enemies hit.",
         "If no enemies were hit, the buff is not placed, nor is an already existing buff getting refreshed.",
-        "This is how much attack damage and armor Astral Spirit grants after hitting a certain amount of heroes: 1 Hero: 20\/40\/60\/80 (TagTalent 45\/65\/85\/105) damage, 1.5\/3\/4.5\/6 armor, and 7% movement speed. 2 Heroes: 40\/80\/120\/160 (TagTalent 90\/130\/170\/210) damage, 3\/6\/9\/12 armor, and 14% movement speed. 3 Heroes: 60\/120\/180\/240 (TagTalent 135\/195\/255\/315) damage, 4.5\/9\/13.5\/18 armor, and 21% movement speed. 4 Heroes: 80\/160\/240\/320 (TagTalent 180\/260\/340\/420) damage, 6\/12\/18\/24 armor, and 28% movement speed. 5 Heroes: 100\/200\/300\/400 (TagTalent 225\/325\/425\/525) damage, 7.5\/15\/22.5\/30 armor, and 35% movement speed.",
-        "1 Hero: 20\/40\/60\/80 (TagTalent 45\/65\/85\/105) damage, 1.5\/3\/4.5\/6 armor, and 7% movement speed.",
-        "2 Heroes: 40\/80\/120\/160 (TagTalent 90\/130\/170\/210) damage, 3\/6\/9\/12 armor, and 14% movement speed.",
-        "3 Heroes: 60\/120\/180\/240 (TagTalent 135\/195\/255\/315) damage, 4.5\/9\/13.5\/18 armor, and 21% movement speed.",
-        "4 Heroes: 80\/160\/240\/320 (TagTalent 180\/260\/340\/420) damage, 6\/12\/18\/24 armor, and 28% movement speed.",
-        "5 Heroes: 100\/200\/300\/400 (TagTalent 225\/325\/425\/525) damage, 7.5\/15\/22.5\/30 armor, and 35% movement speed.",
+        "This is how much bonus attack damage and bonus armor Astral Spirit grants after hitting a certain amount of heroes: 1 Hero: 14\/36\/58\/80 (TagTalent 39\/61\/83\/105) damage, 1.5\/3\/4.5\/6 armor, and 5%\/6%\/7%\/8% movement speed. 2 Heroes: 28\/72\/116\/160 (TagTalent 78\/122\/166\/210) damage, 3\/6\/9\/12 armor, and 10%\/12%\/14%\/16% movement speed. 3 Heroes: 42\/108\/174\/240 (TagTalent 117\/183\/249\/315) damage, 4.5\/9\/13.5\/18 armor, and 15%\/18%\/21%\/24% movement speed. 4 Heroes: 56\/144\/232\/320 (TagTalent 156\/244\/332\/420) damage, 6\/12\/18\/24 armor, and 20%\/24%\/28%\/32% movement speed. 5 Heroes: 70\/180\/290\/400 (TagTalent 195\/305\/415\/525) damage, 7.5\/15\/22.5\/30 armor, and 25%\/30%\/35%\/40% movement speed.",
+        "1 Hero: 14\/36\/58\/80 (TagTalent 39\/61\/83\/105) damage, 1.5\/3\/4.5\/6 armor, and 5%\/6%\/7%\/8% movement speed.",
+        "2 Heroes: 28\/72\/116\/160 (TagTalent 78\/122\/166\/210) damage, 3\/6\/9\/12 armor, and 10%\/12%\/14%\/16% movement speed.",
+        "3 Heroes: 42\/108\/174\/240 (TagTalent 117\/183\/249\/315) damage, 4.5\/9\/13.5\/18 armor, and 15%\/18%\/21%\/24% movement speed.",
+        "4 Heroes: 56\/144\/232\/320 (TagTalent 156\/244\/332\/420) damage, 6\/12\/18\/24 armor, and 20%\/24%\/28%\/32% movement speed.",
+        "5 Heroes: 70\/180\/290\/400 (TagTalent 195\/305\/415\/525) damage, 7.5\/15\/22.5\/30 armor, and 25%\/30%\/35%\/40% movement speed.",
         "",
         "With Aghanim's Scepter, Elder Titan gains spell immunity and a basic dispel is applied as soon as the spirit fully returns. For each hit enemy hero (including clones, excluding illusions and creep-heroes), Elder Titan turns spell immune for 2 seconds. If he already has the spell immunity buff from a previous cast, the duration of it gets extended by 2 seconds for each hero hit by following casts.",
         "For each hit enemy hero (including clones, excluding illusions and creep-heroes), Elder Titan turns spell immune for 2 seconds.",
@@ -125,10 +125,10 @@
         "Damage Radius: 275",
         "Damage: 50",
         "Move Speed Bonus per Non-Hero Unit: 1%",
-        "Move Speed Bonus per Hero: 7%",
+        "Move Speed Bonus per Hero: 5%\/6%\/7%\/8%",
         "Move Speed Cap: 40%",
         "Attack Damage Bonus per Non-Hero Unit: 3\/7\/11\/15",
-        "Attack Damage Bonus per Hero: 20\/40\/60\/80 (TagTalent 45\/65\/85\/105)",
+        "Attack Damage Bonus per Hero: 14\/36\/58\/80 (TagTalent 39\/61\/83\/105)",
         "Armor Bonus per Non-Hero Unit: 0.5",
         "Armor Bonus per Hero: 1.5\/3\/4.5\/6",
         "Spirit Duration: 10",
@@ -139,7 +139,7 @@
       ],
       "itemBehaviour": [],
       "legacyKey": "C",
-      "story": "Like the four fundamentals, Elder Titan exists across all planes at once and can draw other aspects of himself to assist in times of need."
+      "story": null
     },
     {
       "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/0\/03\/Elder_Titan_Return_Astral_Spirit_1.mp3\/revision\/latest?cb=20191216013438",
@@ -160,7 +160,9 @@
       "description": "Returns the Astral Spirit to Elder Titan.",
       "spellName": "Return Astral Spirit",
       "params": [
-        "Cast Animation: 0+0"
+        "Cast Animation: 0+0",
+        "Return Speed: 900",
+        ""
       ],
       "itemBehaviour": [],
       "legacyKey": "C",
@@ -177,10 +179,9 @@
         "Adapts the armor reduction based on how the affected units' armor changes due to agility loss or gain in 0.5-second intervals.",
         "Magic resistance reduction is based on the affected units' base magic resistance. Magic resistance bonuses are ignored. This means, for heroes with 25% base magic resistance, it reduces magic resistance by 10%\/15%\/20%\/25%, down to 15%\/10%\/5%\/0%.",
         "This means, for heroes with 25% base magic resistance, it reduces magic resistance by 10%\/15%\/20%\/25%, down to 15%\/10%\/5%\/0%.",
-        "The magic resistance portion of the aura is always centered on the Astral Spirit, even if it is not summoned. While not summoned, the spirit is hidden and periodically moved along with Elder Titan, so that effectively, it is centered around him. Astral Spirit does not need to be leveled for the magic resistance portion to apply, the spirit is already created upon initial spawning of the hero, even at ability level 0. In Ability Draft, Astral Spirit must be drafted for Natural Order to apply the magic resistance portion of the aura.",
+        "The magic resistance portion of the aura is always centered on the Astral Spirit, even if it is not summoned. While not summoned, the spirit is hidden and periodically moved along with Elder Titan, so that effectively, it is centered around him. Astral Spirit does not need to be leveled for the magic resistance portion to apply, the spirit is already created upon initial spawning of the hero, even at ability level 0.",
         "While not summoned, the spirit is hidden and periodically moved along with Elder Titan, so that effectively, it is centered around him.",
         "Astral Spirit does not need to be leveled for the magic resistance portion to apply, the spirit is already created upon initial spawning of the hero, even at ability level 0.",
-        "In Ability Draft, Astral Spirit must be drafted for Natural Order to apply the magic resistance portion of the aura.",
         "The aura's debuff lingers for 1 second. However, if Astral Spirit gets cast, enemies around Elder Titan who are not within range of the spirit's aura immediately lose the magic resistance reducing debuff.",
         "However, if Astral Spirit gets cast, enemies around Elder Titan who are not within range of the spirit's aura immediately lose the magic resistance reducing debuff.",
         "Does not affect ancient creeps."
@@ -200,7 +201,7 @@
       ],
       "itemBehaviour": [],
       "legacyKey": "N",
-      "story": "As it was at the beginning, Elder Titan makes it so again."
+      "story": null
     },
     {
       "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/9\/9e\/Elder_Titan_Earth_Splitter.mp3\/revision\/latest?cb=20191216013435",
@@ -211,10 +212,14 @@
       ],
       "notes": [
         "Deals 15%\/20%\/25% of the affected units' max health as magical damage first, and then 15%\/20%\/25% as physical damage.",
-        "With the crack distance and crack radius, Earth Splitter can hit units up to 2415 range away. Also affects units up to 315 range behind Elder Titan's cast position. The crack extends at a speed of 1100.",
+        "With the crack distance and crack radius, Earth Splitter can hit units up to 2415 range away. Also affects units up to 315 range behind Elder Titan's cast position. The crack extends at a speed of 882.94.",
         "Also affects units up to 315 range behind Elder Titan's cast position.",
-        "The crack extends at a speed of 1100.",
-        "The crack visually extends up to 2600 distance, but the actual effects stop at 2100.",
+        "The crack extends at a speed of 882.94.",
+        "While the crack extends, vision fields get created in a line along with it. The vision fields provide 500 radius flying vision and last for 4 seconds each. The first vision field spawns 200 range in front of Elder Titan. The following ones spawn 200 range away from the previous vision fields. The vision fields are spawned in 0.22-second intervals, starting 0.22 seconds after cast, spawning a total of 12 fields. All vision fields together reach up to 2900 range away with their vision.",
+        "The vision fields provide 500 radius flying vision and last for 4 seconds each.",
+        "The first vision field spawns 200 range in front of Elder Titan. The following ones spawn 200 range away from the previous vision fields.",
+        "The vision fields are spawned in 0.22-second intervals, starting 0.22 seconds after cast, spawning a total of 12 fields.",
+        "All vision fields together reach up to 2900 range away with their vision.",
         "Earth Splitter first applies the debuff, then the damage.",
         "Affected units are instantly pulled towards the crack once it implodes.",
         "Forces a stop command onto the targets upon pulling, so that its current move, attack and ability cast orders and channeling abilities get canceled.",
@@ -237,7 +242,7 @@
       ],
       "itemBehaviour": [],
       "legacyKey": "E",
-      "story": "That which he created, the titan tears asunder."
+      "story": null
     }
   ],
   "mainAttributes": {

@@ -24,7 +24,7 @@
         {
           "talentLvl": "10",
           "talentLeft": "-15s Tombstone Cooldown",
-          "talentRight": "+50s Decay Damage"
+          "talentRight": "+55 Decay Damage"
         }
       ]
     },
@@ -36,25 +36,28 @@
         "Damage Magical"
       ],
       "notes": [
-        "Successive casts of Decay fully stack on the targets and on Undying.",
-        "Steals strength before applying its damage. Despite the visual effects, the stolen strength is gained instantly.",
+        "Successive casts of Decay fully stack on the targets and on Undying. There is no limit to how much this can be done.",
+        "Decay steals the strength first, then applies its damage. Despite the visual effects, the stolen strength is gained instantly.",
         "Despite the visual effects, the stolen strength is gained instantly.",
-        "Cannot reduce a hero's strength below 0, but Undying always gains the full amount of strength for each enemy hero. The strength loss on the target does not keep the current health percentage, but instead removes 20 health per strength from the current health pool. The strength gain on Undying does not keep the current health percentage either, and instead adds 20 health per strength to the current health pool. This health bonus does not count as a heal, so it is unaffected by amplifications, and also bypasses Ice Blast and False Promise.",
-        "The strength loss on the target does not keep the current health percentage, but instead removes 20 health per strength from the current health pool.",
-        "The strength gain on Undying does not keep the current health percentage either, and instead adds 20 health per strength to the current health pool.",
-        "This health bonus does not count as a heal, so it is unaffected by amplifications, and also bypasses Ice Blast and False Promise.",
-        "Heroes affected by Decay effectively lose 80 health and 0.4 health regeneration and 4 attack damage if they are a strength hero. Vice versa, effectively increases Undying's health, health regeneration, and attack damage by the same amount per stack. With Aghanim's Scepter, heroes affected by Decay effectively lose 200 health, 1 health regeneration and 10 attack damage they are a strength hero.",
-        "Vice versa, effectively increases Undying's health, health regeneration, and attack damage by the same amount per stack.",
-        "With Aghanim's Scepter, heroes affected by Decay effectively lose 200 health, 1 health regeneration and 10 attack damage they are a strength hero.",
-        "Can steal strength from clones, but not illusions. When multiple Meepo Clones are in the area, only one of them (randomly chosen on each cast) gets their strength stolen. The same applies to Arc Warden and his Tempest Double. The damage still hits all clones.",
-        "When multiple Meepo Clones are in the area, only one of them (randomly chosen on each cast) gets their strength stolen.",
-        "The same applies to Arc Warden and his Tempest Double.",
-        "The damage still hits all clones.",
-        "Each status buff of Decay increases Undying's model size by 2%. This has no impact on his collision size.",
+        "Strength steals cannot reduce a hero's strength below 0, but Undying always gains the full amount of strength, no matter how much the target has left. Cannot steal strength from illusions, but can temporarily steal from clones. When multiple Meepo clones are in the area, one of them (randomly chosen on each cast) gets their strength stolen. The same applies to Arc Warden and the Tempest Double. However, the damage still hit all affected targets. Reduces the target's current health by 80 (TagTalent 200), instead of keeping the current health percentage. This lost health is returned upon the debuff expiring. The target also effectively loses 0.4 (TagTalent 1) health regeneration (and 4 (TagTalent 10) main attack damage if it is a strength hero). Vice versa, it temporarily increases Undying's health, health regeneration, and main attack damage by the same amount per cast. Undying does not keep the current health percentage either. This health increase does not count as a heal, so it is unaffected by amplifications. Therefore, the health increase is not considered by Ice Blast's percentage health kill threshold and False Promise's delayed health amplification.",
+        "Cannot steal strength from illusions, but can temporarily steal from clones.",
+        "When multiple Meepo clones are in the area, one of them (randomly chosen on each cast) gets their strength stolen.",
+        "The same applies to Arc Warden and the Tempest Double.",
+        "However, the damage still hit all affected targets.",
+        "Reduces the target's current health by 80 (TagTalent 200), instead of keeping the current health percentage.",
+        "This lost health is returned upon the debuff expiring.",
+        "The target also effectively loses 0.4 (TagTalent 1) health regeneration (and 4 (TagTalent 10) main attack damage if it is a strength hero).",
+        "Vice versa, it temporarily increases Undying's health, health regeneration, and main attack damage by the same amount per cast. Undying does not keep the current health percentage either.",
+        "This health increase does not count as a heal, so it is unaffected by amplifications. Therefore, the health increase is not considered by Ice Blast's percentage health kill threshold and False Promise's delayed health amplification.",
+        "Therefore, the health increase is not considered by Ice Blast's percentage health kill threshold and False Promise's delayed health amplification.",
+        "Each stack places a new hidden modifier buff\/debuff on both Undying and the target. This means their durations are independent from each other. The counter modifiers on both Undying and his targets show how much strength they gained or lost. The number of stolen strength stacks can be seen on the status buff icon. Each status buff increases Undying's model size by 2%. This has no impact on his collision size. Upon death, the dying hero's strength is not restored, and Undying loses all the stolen strength.",
+        "The counter modifiers on both Undying and his targets show how much strength they gained or lost.",
+        "The number of stolen strength stacks can be seen on the status buff icon.",
+        "Each status buff increases Undying's model size by 2%. This has no impact on his collision size.",
+        "Upon death, the dying hero's strength is not restored, and Undying loses all the stolen strength.",
         "Upon acquiring or losing Aghanim's Scepter, all stacks of stolen strength instantly update to the current values. Upon updating the strength values, Undying's current health stays the same. However, debuffed enemies keep their current health percentage. Their health also only updates upon gaining or losing maximum health again.",
         "Upon updating the strength values, Undying's current health stays the same.",
-        "However, debuffed enemies keep their current health percentage. Their health also only updates upon gaining or losing maximum health again.",
-        "When Undying dies, he loses all the stolen strength, but the affected enemies do not get theirs back, and vice versa."
+        "However, debuffed enemies keep their current health percentage. Their health also only updates upon gaining or losing maximum health again."
       ],
       "mana": "85\/90\/95\/100",
       "hotKey": "Q",
@@ -65,7 +68,7 @@
         "Cast Animation: 0.45+0",
         "Cast Range: 650",
         "Radius: 325",
-        "Damage: 20\/50\/80\/110 (TagTalent 70\/100\/130\/160)",
+        "Damage: 20\/50\/80\/110 (TagTalent 75\/105\/135\/165)",
         "Creep Damage Multiplier: 2",
         "Strength Steal: 4 (TagAghanim 10)",
         "Decay Duration: 45",
@@ -75,27 +78,27 @@
       ],
       "itemBehaviour": [],
       "legacyKey": "D",
-      "story": "The strength of the living is simply borrowed from the strength of the dead."
+      "story": null
     },
     {
       "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/8\/89\/Undying_Soul_Rip.mp3\/revision\/latest?cb=20191216025942",
       "effects": [
         "Ability Target Unit",
         "Affects Enemies \/ Allies",
-        "Damage Magical"
+        "Damage Magical (TagAghanimHP Removal)"
       ],
       "notes": [
         "↓↓ Double-tapping automatically targets self.",
-        "Can be cast on Tombstone, but not on any other ward type unit. When cast on an allied Tombstone, it always heals it for the given amount, regardless of unit count. Can target enemy Tombstone, but does not damage or heal it.",
+        "Can cast on Tombstone, but not on any other ward type unit. When cast on an allied Tombstone, it always heals it for the given amount, regardless of unit count. Can target enemy Tombstone, but does not damage or heal it.",
         "When cast on an allied Tombstone, it always heals it for the given amount, regardless of unit count.",
         "Can target enemy Tombstone, but does not damage or heal it.",
-        "Cannot be cast on Undying Zombie.",
-        "The 1300 search radius is centered around Undying, not the target.",
-        "Units within the area are selected randomly and have 19\/26\/33\/40 (TagTalent 31\/38\/45\/52) health removed. This health removal is never lethal. Does not count Undying, the target, wards, buildings, invisible enemies and units in the Fog of War. Spell immune allies are counted, including the zombies from Tombstone. Units which require a certain amount of attacks to be killed do not lose health when counted in by Soul Rip. If there are no valid units within the search radius, the damage or healing equals zero.",
+        "Cannot cast on Undying Zombie.",
+        "Even when casting on the target, the 1300 search radius is centered around Undying, not the target.",
+        "Units within the radius are selected randomly and have 19\/26\/33\/40 (TagTalent 31\/38\/45\/52) health removed. This health removal is never lethal. Does not count Undying, the target, wards, buildings, invisible enemies and units in the Fog of War. Spell immune allies are counted, including the zombies from Tombstone. Units which require a certain amount of attacks to be killed do not lose health when counted in by Soul Rip. If there are no valid units within the search radius, no damage or healing is done.",
         "Does not count Undying, the target, wards, buildings, invisible enemies and units in the Fog of War.",
         "Spell immune allies are counted, including the zombies from Tombstone.",
         "Units which require a certain amount of attacks to be killed do not lose health when counted in by Soul Rip.",
-        "If there are no valid units within the search radius, the damage or healing equals zero.",
+        "If there are no valid units within the search radius, no damage or healing is done.",
         "The damage or heal are summed up and the target receives the total value in once instance.",
         "Soul Rip can damage or heal a unit for up to 152\/234\/330\/440 (TagTalent 248\/342\/450\/572) health (before reductions)."
       ],
@@ -116,7 +119,7 @@
       ],
       "itemBehaviour": [],
       "legacyKey": "R",
-      "story": "Even allies feel despair in Undying's presence."
+      "story": null
     },
     {
       "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/b\/be\/Undying_Tombstone_1.mp3\/revision\/latest?cb=20191216025944",
@@ -126,21 +129,20 @@
       ],
       "notes": [
         "Destroys trees within 300 radius around the Tombstone upon cast.",
-        "Undying Zombies do not spawn for invisible units or units in the Fog of War. Zombies do not spawn for wards, buildings, couriers, hidden units and zombies from an enemy Tombstone. The zombies are uncontrollable and do nothing but attack their set target. However, they can be boosted by allied abilities or auras.",
-        "Zombies do not spawn for wards, buildings, couriers, hidden units and zombies from an enemy Tombstone.",
-        "The zombies are uncontrollable and do nothing but attack their set target. However, they can be boosted by allied abilities or auras.",
-        "The Tombstone starts spawning zombies immediately upon cast, resulting in 8\/9\/10\/12 instances.",
+        "Undying Zombies do not spawn for invisible units or units in the Fog of War. Zombies do not spawn for wards, buildings, Courier, hidden units and zombies from an enemy Tombstone. They are uncontrollable and do nothing but attack their set target. However, they can be boosted by allied abilities or auras.",
+        "Zombies do not spawn for wards, buildings, Courier, hidden units and zombies from an enemy Tombstone.",
+        "They are uncontrollable and do nothing but attack their set target. However, they can be boosted by allied abilities or auras.",
+        "The Tombstone starts spawning zombies immediately upon cast, resulting in 8\/9\/10\/12 instances. A player may only have up to 64 zombies under their control, no matter how many Tombstones they summon.",
         "A player may only have up to 64 zombies under their control, no matter how many Tombstones they summon.",
-        "When a zombies' target turns invisible, the associated zombies die after 0.1 seconds.",
-        "When a zombies' set target dies, the associated zombies die instantly. In the case of Meepo Clones dying, the zombies just stand around until the Tombstone is gone.",
-        "In the case of Meepo Clones dying, the zombies just stand around until the Tombstone is gone.",
-        "When a zombies' set target runs into the Fog of War, the associated zombies still follow it.",
-        "When the Tombstone expires or is killed, all its zombies instantly die.",
-        "Illusions and creep-heroes are treated like creeps by the Tombstone and by the zombies, requiring more attacks to destroy them.",
-        "With the level 20 talent, a Tombstone of the current level spawns on Undying death location whenever he dies. This Tombstone is independent from the cooldown and does not require mana. The Tombstone spawns even when having Reincarnation. The Tombstone lasts its full duration, it is not bound to Undying's death timer and does not disappear when he respawns.",
-        "This Tombstone is independent from the cooldown and does not require mana.",
-        "The Tombstone spawns even when having Reincarnation.",
-        "The Tombstone lasts its full duration, it is not bound to Undying's death timer and does not disappear when he respawns."
+        "The zombies and their set target have the following interactions: When the set target turns invisible, the associated zombies die after 0.1 seconds. When the set target dies, the associated zombies die instantly. However, with Meepo clones dying, the zombies just stand around until the Tombstone expires. When the set target runs into the Fog of War, the associated zombies still follow it.",
+        "When the set target turns invisible, the associated zombies die after 0.1 seconds.",
+        "When the set target dies, the associated zombies die instantly. However, with Meepo clones dying, the zombies just stand around until the Tombstone expires.",
+        "When the set target runs into the Fog of War, the associated zombies still follow it.",
+        "When the Tombstone expires or is destroyed, all its zombies instantly die.",
+        "Illusions and creep-heroes are treated like creeps by the Tombstone and the zombies, requiring more attacks to destroy the Tombstone.",
+        "With the level 20 talent, Tombstone based on the current level is passively cast automatically and instantly, regardless of mana and cooldown, on Undying's death location whenever he dies. The Tombstone lasts its full duration, it is not bound to Undying's death timer and does not disappear when he respawns. It also triggers with Reincarnation sources.",
+        "The Tombstone lasts its full duration, it is not bound to Undying's death timer and does not disappear when he respawns.",
+        "It also triggers with Reincarnation sources."
       ],
       "mana": "120\/130\/140\/150",
       "hotKey": "E",
@@ -152,8 +154,8 @@
         "Cast Range: 600",
         "Zombie Spawn Radius: 1200",
         "Zombie Spawn Interval: 4\/3.5\/3\/2.5",
-        "Hero Attacks to Destroy Tombstone: 4\/5\/6\/7 (TagTalent 10\/11\/12\/13)",
-        "Non-Hero Attacks to Destroy Tombstone: 16\/20\/24\/28 (TagTalent 40\/44\/48\/52)",
+        "Hero Attacks to Destroy Tombstone: 5\/6\/7\/8 (TagTalent 11\/12\/13\/14)",
+        "Non-Hero Attacks to Destroy Tombstone: 20\/24\/28\/32 (TagTalent 44\/48\/52\/56)",
         "Hero\/Tower Attacks to Kill Zombie: 1",
         "Other Attacks to Kill Zombie: 2",
         "Tombstone Duration: 30",
@@ -161,7 +163,7 @@
       ],
       "itemBehaviour": [],
       "legacyKey": "T",
-      "story": "Dirge calls on his fallen brothers to fight for the Dead God."
+      "story": null
     },
     {
       "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/5\/54\/Undying_Flesh_Golem_1.mp3\/revision\/latest?cb=20191216025939",
@@ -171,15 +173,19 @@
       ],
       "notes": [
         "Flesh Golem interrupts Undying's channeling abilities upon cast.",
-        "Increases Undying's total strength, including strength bonuses. Checks Undying's strength periodically and adapts the bonus instantly.",
+        "Increases Undying's total amount of strength (base and bonus) by 40%\/50%\/60%. Checks Undying's strength periodically and adapts the bonus instantly.",
         "Checks Undying's strength periodically and adapts the bonus instantly.",
-        "Increases Undying's base movement speed to 300.015.",
+        "Increases Undying's base movement speed to 330\/340\/350 when active.",
         "Multiple attacks on the same target do not stack, but refresh the duration instead.",
         "Applies generic incoming damage amplification on the targets. Stacks additively with other sources of generic incoming damage manipulation. The amplification affects all damage the targets take that is not flagged as HP removal.",
         "The amplification affects all damage the targets take that is not flagged as HP removal.",
         "Flesh Golem is fully canceled on death.",
-        "With Aghanim's Shard, summons an Undying Zombie on each enemy that gets hit by Flesh Golem. The zombies are based on Tombstone's current level. If it is not learned, no zombies spawn.",
-        "The zombies are based on Tombstone's current level. If it is not learned, no zombies spawn."
+        "With Aghanim's Shard, whenever Undying lands an attack on the target, an Undying Zombie based on the current level of Tombstone is summoned on the attacked target when Flesh Golem is active. Missed attacks do not summon zombies. Zombies summoned this way last for 15 seconds. Works against any unit (including allied units), except for buildings or wards. For allies, Zombies created do not attack the ally, but instead stand where they are summoned and may attack any enemy that comes too close. Tombstone and Undying Zombie notes fully apply. If Tombstone is not learned, no zombies are spawn.",
+        "Missed attacks do not summon zombies.",
+        "Zombies summoned this way last for 15 seconds.",
+        "Works against any unit (including allied units), except for buildings or wards.",
+        "For allies, Zombies created do not attack the ally, but instead stand where they are summoned and may attack any enemy that comes too close.",
+        "Tombstone and Undying Zombie notes fully apply. If Tombstone is not learned, no zombies are spawn."
       ],
       "mana": "100\/125\/150",
       "hotKey": "R",
@@ -194,13 +200,13 @@
         "Enemy Incoming Damage Amplification: 25%\/30%\/35%",
         "Debuff Duration: 6",
         "Flesh Golem Duration: 40",
-        "Zombie spawned on attack: 1",
-        "Reduces Flesh Golem Cooldown by 30s and causes Undying to spawn one zombie on each attack.",
+        "Zombie Duration: 15",
+        "Reduces Flesh Golem Cooldown by -30s and causes Undying to spawn one zombie on each attack while transformed.",
         "Illusions get a new Flesh Golem buff, lasting for the full duration, regardless of how much is left on Undying himself. Illusions' attacks do not apply the debuff."
       ],
       "itemBehaviour": [],
       "legacyKey": "F",
-      "story": "The flesh of the recently dead add to the power of Dirge's plague."
+      "story": null
     },
     {
       "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/6\/63\/Undying_Reincarnation.mp3\/revision\/latest?cb=20200523111743",
@@ -209,13 +215,14 @@
         "Affects Self"
       ],
       "notes": [
-        "Granted by learning the level 25 talent. This ability is shown as a permanent buff in the HUD.",
+        "Requires the level 25 talent learned to be unlocked. This ability is shown as a permanent buff in the HUD.",
         "This ability is shown as a permanent buff in the HUD.",
-        "Reincarnation cannot be prevented in any way. If Undying dies with it, it is used.",
-        "If Undying has the Aegis of the Immortal, the talent triggers first, if it is off cooldown.",
-        "Revives with full health and mana. Abilities and items are not refreshed.",
+        "Reincarnation cannot be prevented in any way. If Undying dies while it is off-cooldown, it is used. Fully stacks with other Reincarnation sources, with the talent always triggering first when off-cooldown.",
+        "Fully stacks with other Reincarnation sources, with the talent always triggering first when off-cooldown.",
+        "Revives with full health and mana. Does not resets the cooldowns of items and abilities.",
         "Provides 1800\/800 ground vision at the death location during its delay.",
-        "The cooldown is not affected by any cooldown reductions and cooldown resets."
+        "The buff icon shows a cooldown whenever the Reincarnation is used. The cooldown is not affected by any cooldown reduction and cooldown resets sources.",
+        "The cooldown is not affected by any cooldown reduction and cooldown resets sources."
       ],
       "mana": "0",
       "hotKey": null,
@@ -236,11 +243,12 @@
         "Affects Enemies"
       ],
       "notes": [
-        "The slow from multiple attacks and multiple Undying Zombies fully stack.",
-        "Each stack lasts 2.5 seconds. They do not refresh each other's duration.",
+        "The movement speed slow from multiple attacks and Undying Zombies fully stack.",
+        "Each attack increases its stack count but does not refreshes the duration of the entire stack. The number of current stacks can be seen on the debuff icon. Each stack lasts for 2.5 seconds.",
         "The number of current stacks can be seen on the debuff icon.",
-        "The health of the target is checked in 0.5-second intervals. If their target is below the threshold, the Deathlust Frenzy buff is placed. The buff lasts for 2.5 seconds, but gets refreshed as long as the target stays below the threshold.",
-        "The buff lasts for 2.5 seconds, but gets refreshed as long as the target stays below the threshold.",
+        "Each stack lasts for 2.5 seconds.",
+        "The attacked target's health is checked in 0.5-second intervals. If their health is below the threshold, the Deathlust buff is placed. The buff lasts for 2.5 seconds, and it gets refreshed as long as the target stays below the health threshold.",
+        "The buff lasts for 2.5 seconds, and it gets refreshed as long as the target stays below the health threshold.",
         "Does not trigger against Familiars."
       ],
       "mana": null,
@@ -253,7 +261,8 @@
         "Threshold Move Speed Bonus: 35%\/40%\/45%\/50%",
         "Threshold Attack Speed Bonus: 50\/60\/70\/80",
         "Move Speed Slow: 7%",
-        "Slow Duration: 2.5"
+        "Slow Duration: 2.5",
+        ""
       ],
       "itemBehaviour": [],
       "legacyKey": null,
@@ -274,7 +283,9 @@
       "cooldown": null,
       "description": "This creature does not feel the effects of most magical spells.",
       "spellName": "Spell Immunity",
-      "params": [],
+      "params": [
+        ""
+      ],
       "itemBehaviour": [],
       "legacyKey": null,
       "story": null
@@ -309,7 +320,7 @@
     {
       "talentLvl": "10",
       "talentLeft": "-15s Tombstone Cooldown",
-      "talentRight": "+50s Decay Damage"
+      "talentRight": "+55 Decay Damage"
     }
   ]
 }

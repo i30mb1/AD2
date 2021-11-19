@@ -16,11 +16,11 @@
         {
           "talentLvl": "15",
           "talentLeft": "+0.6s Telekinesis Lift Duration",
-          "talentRight": "25% Cooldown Reduction for Stolen Spells"
+          "talentRight": "-25% Stolen Spells Cooldown"
         },
         {
           "talentLvl": "10",
-          "talentLeft": "+10% Fade Bolt Damage Reduction",
+          "talentLeft": "-10% Fade Bolt Damage Reduction",
           "talentRight": "+175 Telekinesis Landing Damage"
         }
       ]
@@ -41,14 +41,14 @@
         "When the lift ends prematurely, the lifted unit instantly lands and applies the area stun.",
         "Destroys trees within 150 radius of the lifted target upon landing.",
         "Cannot lift Roshan, he will be stunned for the lift duration instead.",
-        "Casting Telekinesis on units affected by Black Hole, Chronosphere, or Duel does nothing, wasting the mana and cooldown.",
+        "Casting Telekinesis on units affected by Black Hole, Chronosphere or Duel does nothing, wasting the mana and cooldown.",
         "With Aghanim's Shard, uses the reduced cooldown when targeting self or allies, and the regular cooldown when targeting enemies. ↓↓ Double-tapping automatically targets self.",
         "↓↓ Double-tapping automatically targets self.",
-        "Has the following cast ranges when combined with Arcane Supremacy: Level 1: 650\/700\/750\/800 Level 2: 675\/725\/775\/825 Level 3: 700\/750\/800\/850 Level 4: 725\/775\/825\/875",
-        "Level 1: 650\/700\/750\/800",
-        "Level 2: 675\/725\/775\/825",
-        "Level 3: 700\/750\/800\/850",
-        "Level 4: 725\/775\/825\/875",
+        "Has the following cast ranges with Arcane Supremacy on each level: Level 1: 650\/700\/750\/800 cast range. Level 2: 675\/725\/775\/825 cast range. Level 3: 700\/750\/800\/850 cast range. Level 4: 725\/775\/825\/875 cast range.",
+        "Level 1: 650\/700\/750\/800 cast range.",
+        "Level 2: 675\/725\/775\/825 cast range.",
+        "Level 3: 700\/750\/800\/850 cast range.",
+        "Level 4: 725\/775\/825\/875 cast range.",
         ""
       ],
       "mana": "125",
@@ -69,7 +69,7 @@
       ],
       "itemBehaviour": [],
       "legacyKey": "Z",
-      "story": "Even the Grandest Magus may use his powers for enjoyment."
+      "story": null
     },
     {
       "audioUrl": null,
@@ -80,9 +80,8 @@
       "notes": [
         "Replaces Telekinesis when it is cast on an enemy, and stays until the lifted unit lands.",
         "Allows Rubick to determine where the lifted enemy will land after the lift duration. Does not prematurely end the lift.",
-        "Targeting further than the maximum allowed throw distance throws the enemy 375 (TagTalent 615) distance towards the targeted point.",
-        "The enemy moves towards the targeted point during the last 0.3 seconds of the lift duration, so the speed varies between 0 and 1250 (TagTalent 2050), depending on the chosen distance.",
-        "The enemy moves towards the targeted point during the last 0.3 seconds of the lift duration, so the speed varies between 0 and 1250 (TagTalent 2050), depending on the chosen distance.",
+        "Targeting further than the maximum allowed throw distance throws the enemy 375 (TagTalent 615) distance towards the targeted point. The enemy moves towards the targeted point during the last 0.3 seconds of the lift duration, so the speed varies between 0 \u2012 1250 (TagTalent 2050), depending on the chosen distance.",
+        "The enemy moves towards the targeted point during the last 0.3 seconds of the lift duration, so the speed varies between 0 \u2012 1250 (TagTalent 2050), depending on the chosen distance.",
         "Can be cast multiple times during the lift. The enemy lands on the last chosen location. When cast while the target is already being moved to a previously targeted point, it continues moving to that point, but gets instantly moved to the last targeted point at the end.",
         "When cast while the target is already being moved to a previously targeted point, it continues moving to that point, but gets instantly moved to the last targeted point at the end.",
         "The center of the targeted area is marked with green particles, which are visible to allies only."
@@ -98,7 +97,8 @@
         "Max Throw Distance: 375 (TagTalent 615)",
         "Stun Radius: 325",
         "Stun Duration: 1.2\/1.4\/1.6\/1.8",
-        "Landing Damage: 175"
+        "Landing Damage: 175",
+        ""
       ],
       "itemBehaviour": [],
       "legacyKey": "Z",
@@ -111,11 +111,12 @@
         "Affects Enemies \/ Allies"
       ],
       "notes": [
-        "Requires Aghanim's Shard to be unlocked.",
+        "Requires Aghanim's Shard to be unlocked. In Ability Draft, Telekinesis Land can be unlocked by the player that drafted Telekinesis.",
+        "In Ability Draft, Telekinesis Land can be unlocked by the player that drafted Telekinesis.",
         "Replaces Telekinesis when it is cast on an ally or on self, and stays until the lifted unit lands.",
         "Allows Rubick to determine where the lifted ally or himself will land. Reduces the remaining lift duration to 0.5 when used.",
-        "Targeting further than the maximum allowed throw distance throws the ally 693.75 (TagTalent 1137.75) distance towards the targeted point. The ally moves towards the targeted point during the last 0.3 seconds of the lift duration, so the speed varies between 0 and 2312.5 (TagTalent 3792.5), depending on the chosen distance.",
-        "The ally moves towards the targeted point during the last 0.3 seconds of the lift duration, so the speed varies between 0 and 2312.5 (TagTalent 3792.5), depending on the chosen distance.",
+        "Targeting further than the maximum allowed throw distance throws the ally 693.75 (TagTalent 1137.75) distance towards the targeted point. The ally moves towards the targeted point during the last 0.3 seconds of the lift duration, so the speed varies between 0 \u2012 2312.5 (TagTalent 3792.5), depending on the chosen distance.",
+        "The ally moves towards the targeted point during the last 0.3 seconds of the lift duration, so the speed varies between 0 \u2012 2312.5 (TagTalent 3792.5), depending on the chosen distance.",
         "When cast, the ability turns inactive, so it can be only cast once.",
         "Can be used while stunned, cycloned, slept, taunted, hidden, or during Forced Movement.",
         "Cannot be used while silenced, hexed or prevented from acting. Rubick cannot ⇧ Shift-queue this ability.",
@@ -134,7 +135,8 @@
         "Stun Radius: 325",
         "Throw Delay: 0.5",
         "Stun Duration: 1.2\/1.4\/1.6\/1.8",
-        "Landing Damage: 175"
+        "Landing Damage: 175",
+        ""
       ],
       "itemBehaviour": [],
       "legacyKey": "Z",
@@ -148,20 +150,17 @@
         "Damage Magical"
       ],
       "notes": [
-        "Fade Bolt has no bounce limit. Bounces in 0.25-second intervals. Each bounce decreases the bolt's current damage by 8%. Does not bounce on invisible units or units in the Fog of War. Can never hit the same unit twice per cast.",
+        "Fade Bolt has no bounce limit. Bounces in 0.25-second intervals. Each bounce decreases the bolt's current damage by 7%. Does not bounce on invisible units or units in the Fog of War. Can never hit the same unit twice per cast.",
         "Does not bounce on invisible units or units in the Fog of War.",
         "Can never hit the same unit twice per cast.",
-        "Only reduced base damage and that given by the primary attribute of the targets. Raw bonus damage is not reduced. The level 10 talent causes Rubick to gain as much damage as the hero targets lost. Each hit enemy hero creates a new buff on Rubick. The buffs always use the default duration, no matter how long the debuffs on the enemies actually last. Only counts heroes, including clones, excluding illusions and creep-heroes.",
-        "The level 10 talent causes Rubick to gain as much damage as the hero targets lost.",
+        "Reduces the main attack damage of affected units. Bonus attack damage is not reduced. Each hit enemy hero creates a new buff on Rubick. The buffs always use the default duration, no matter how long the debuffs on the enemies actually last. Only counts heroes, including clones, excluding illusions and creep-heroes.",
         "Each hit enemy hero creates a new buff on Rubick. The buffs always use the default duration, no matter how long the debuffs on the enemies actually last.",
         "Only counts heroes, including clones, excluding illusions and creep-heroes.",
-        "This is how much damage the first 10 bounces on each level deal (before reductions): Level 1: 100 \/ 92 \/ 84.6 \/ 77.9 \/ 71.6 \/ 65.9 \/ 60.6 \/ 55.8 \/ 51.3 \/ 47.2 damage, 707 total damage, 57 bounces to reach 1 damage. Level 2: 175 \/ 161 \/ 148.1 \/ 136.3 \/ 125.4 \/ 115.3 \/ 106.1 \/ 97.6 \/ 89.8 \/ 82.6 damage, 1237.3 total damage, 63 bounces to reach 1 damage. Level 3: 250 \/ 230 \/ 211.6 \/ 194.7 \/ 179.1 \/ 164.8 \/ 151.6 \/ 139.5 \/ 128.3 \/ 118 damage, 1767.5 total damage, 68 bounces to reach 1 damage. Level 4: 325 \/ 299 \/ 275.1 \/ 253.1 \/ 232.8 \/ 214.2 \/ 197.1 \/ 181.3 \/ 166.8 \/ 153.5 damage, 2297.8 total damage, 71 bounces to reach 1 damage.",
-        "Level 1: 100 \/ 92 \/ 84.6 \/ 77.9 \/ 71.6 \/ 65.9 \/ 60.6 \/ 55.8 \/ 51.3 \/ 47.2 damage, 707 total damage, 57 bounces to reach 1 damage.",
-        "Level 2: 175 \/ 161 \/ 148.1 \/ 136.3 \/ 125.4 \/ 115.3 \/ 106.1 \/ 97.6 \/ 89.8 \/ 82.6 damage, 1237.3 total damage, 63 bounces to reach 1 damage.",
-        "Level 3: 250 \/ 230 \/ 211.6 \/ 194.7 \/ 179.1 \/ 164.8 \/ 151.6 \/ 139.5 \/ 128.3 \/ 118 damage, 1767.5 total damage, 68 bounces to reach 1 damage.",
-        "Level 4: 325 \/ 299 \/ 275.1 \/ 253.1 \/ 232.8 \/ 214.2 \/ 197.1 \/ 181.3 \/ 166.8 \/ 153.5 damage, 2297.8 total damage, 71 bounces to reach 1 damage.",
+        "For how much damage each bounce Fade Bolt deals, and for the total damage up to the first 10 bounces deal on each level, please refer to the chart below. The total damage for the first 10 bounces are 737.2\/1290\/1842.9\/2395.8. Fade Bolt will take 65\/73\/78\/81 bounces to reach 1 damage.",
+        "The total damage for the first 10 bounces are 737.2\/1290\/1842.9\/2395.8.",
+        "Fade Bolt will take 65\/73\/78\/81 bounces to reach 1 damage.",
         "The bolt first applies the damage, then the debuff.",
-        "Has a cast range of 900\/950\/1000\/1050 with each level of Arcane Supremacy."
+        "Has a cast range of 900\/950\/1000\/1050 with Arcane Supremacy on each level."
       ],
       "mana": "120\/130\/140\/150",
       "hotKey": "W",
@@ -174,15 +173,15 @@
         "Bounce Distance: 440",
         "Number of Bounces: Infinite",
         "Base Damage: 100\/175\/250\/325",
-        "Bounce Damage Reduction: 8%",
-        "Attack Damage Reduction: 10%\/18%\/26%\/34% (TagTalent 20%\/28%\/36%\/44%)",
+        "Bounce Damage Reduction: 7%",
+        "Attack Damage Reduction: 14%\/21%\/28%\/35% (TagTalent 24%\/31%\/38%\/45%)",
         "Duration: 10",
         "Attack damage reduction persists if debuff was placed before spell immunity and when not dispelled.",
         "Blocked fully only when primary target."
       ],
       "itemBehaviour": [],
       "legacyKey": "X",
-      "story": "Rubick's favorite spell for dispatching would-be assassins is a rather simple conjuration."
+      "story": null
     },
     {
       "audioUrl": null,
@@ -191,9 +190,9 @@
         "Affects Self"
       ],
       "notes": [
-        "Applies generic outgoing damage amplification on Rubick. Stacks additively with other sources of generic outgoing damage manipulation. The amplification affects only spell damage Rubick deals that is not flagged as HP removal. Attack damage is not amplified. With the level 25 talent, stolen abilities' damage gets amplified by a total of 54%\/58%\/62%\/66%.",
+        "Applies generic outgoing damage amplification on Rubick. Stacks additively with other sources of generic outgoing damage manipulation. The amplification affects only spell damage Rubick deals that is not flagged as HP removal. Attack damage is not amplified. With the level 25 talent, abilities stolen via Spell Steal gets its damage amplified by a total of 54%\/58%\/62%\/66%.",
         "The amplification affects only spell damage Rubick deals that is not flagged as HP removal. Attack damage is not amplified.",
-        "With the level 25 talent, stolen abilities' damage gets amplified by a total of 54%\/58%\/62%\/66%."
+        "With the level 25 talent, abilities stolen via Spell Steal gets its damage amplified by a total of 54%\/58%\/62%\/66%."
       ],
       "mana": null,
       "hotKey": "E",
@@ -206,7 +205,7 @@
       ],
       "itemBehaviour": [],
       "legacyKey": "N",
-      "story": "Not every magus can be a Grand Magus..."
+      "story": null
     },
     {
       "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/b\/b3\/Rubick_Spell_Steal_1.mp3\/revision\/latest?cb=20191216022733",
@@ -218,23 +217,23 @@
         "A full list of unique interactions with Spell Steal can be found here.",
         "This ability is not available in Ability Draft.",
         "The stolen ability travels as a projectile towards Rubick at a speed of 1200. Rubick gains the new ability and loses the previous stolen ability as the projectile reaches him.",
-        "Cannot steal passive abilities, item abilities, or active attack modifiers (except for Walrus PUNCH!). Can only steal from heroes (including clones, excluding illusions).",
-        "Cannot steal the following abilities: Stone Remnant, Quas, Wex, Exort, Invoke, Mischief, Morph, Minefield Sign and Stone Form. Cannot steal the following Aghanim's Shard upgraded abilities: Divine Favor, Hunter in the Night, Essence Flux, Dispersion and Gravekeeper's Cloak.",
-        "Cannot steal the following Aghanim's Shard upgraded abilities: Divine Favor, Hunter in the Night, Essence Flux, Dispersion and Gravekeeper's Cloak.",
-        "The stolen ability's level is based on its level on the enemy as it was stolen. The level only updates upon stealing it again. Talent bonuses to abilities are not copied. The target's Aghanim's Scepter and Aghanim's Shard are not considered, Rubick always steals the un-upgraded form. However, if Rubick has Aghanim's Scepter or Aghanim's Shard, the stolen ability does get upgraded for him.",
-        "The target's Aghanim's Scepter and Aghanim's Shard are not considered, Rubick always steals the un-upgraded form.",
+        "Cannot steal passive abilities, item abilities, or active attack modifiers (except Walrus PUNCH!). Can only steal from heroes (including clones, excluding illusions).",
+        "Cannot steal the following abilities: Stone Remnant, Quas, Wex, Exort, Invoke, Divided We Stand, Mischief, Morph, Hunter in the Night, Juxtapose, Necromastery, Minefield Sign, Gravekeeper's Cloak and Stone Form.",
+        "The stolen ability's level is based on its level on the enemy as it was stolen. The level only updates upon stealing it again. Talent bonuses to abilities are not copied. The target's Aghanim's Scepter and Aghanim's Shard are not considered, Rubick always steals the non-upgraded form. However, if Rubick has Aghanim's Scepter or Aghanim's Shard, the stolen ability does get upgraded for him.",
+        "The target's Aghanim's Scepter and Aghanim's Shard are not considered, Rubick always steals the non-upgraded form.",
         "However, if Rubick has Aghanim's Scepter or Aghanim's Shard, the stolen ability does get upgraded for him.",
         "The cooldown of all stolen abilities used by Rubick is saved. When re-acquiring a lost ability which was used recently, it may still be on cooldown from previously. Cooldown reseting effects have no effect on the cooldowns of abilities Rubick currently does not have.",
         "Cooldown reseting effects have no effect on the cooldowns of abilities Rubick currently does not have.",
         "Rubick has a fixed cast time of 0.15 for stolen abilities, except for the abilities listed in here. For these abilities, the original cast time is used.",
-        "Cannot have more than 1 stolen ability at a time. Sub-abilities from abilities are automatically acquired and cannot be manually stolen. Sub-abilities are abilities which do not do anything on their own. The 3 Shadowrazes or the two Whirling Axes are not sub-abilities. Abilities granted by Aghanim's Scepter and Aghanim's Shard are treated like other regular abilities and do not require Rubick to have Aghanim's Scepter or Aghanim's Shard to steal them.",
-        "Sub-abilities are abilities which do not do anything on their own. The 3 Shadowrazes or the two Whirling Axes are not sub-abilities.",
+        "Cannot have more than 1 stolen ability at a time. Sub-abilities from abilities are automatically acquired and cannot be manually stolen. Sub-abilities are abilities which do not do anything on their own. The 3 Shadowrazes or the 2 Whirling Axes are not sub-abilities. Abilities granted by Aghanim's Scepter and Aghanim's Shard are treated like other regular abilities and do not require Rubick to have Aghanim's Scepter or Aghanim's Shard to steal them.",
+        "Sub-abilities are abilities which do not do anything on their own. The 3 Shadowrazes or the 2 Whirling Axes are not sub-abilities.",
         "Abilities granted by Aghanim's Scepter and Aghanim's Shard are treated like other regular abilities and do not require Rubick to have Aghanim's Scepter or Aghanim's Shard to steal them.",
         "The debuff duration amplification only affects the duration of debuffs of stolen abilities placed on enemies. A debuff is identified by the red border on the status icon. Follows the same rules as status resistance.",
         "A debuff is identified by the red border on the status icon. Follows the same rules as status resistance.",
         "The spell damage amplification talent only amplify the outgoing spell damage of stolen abilities.",
+        "The cooldown reduction talent only cooldown of stolen abilities.",
         "The stolen ability is lost upon death.",
-        "Has a cast range of 1100\/1150\/1200\/1250 with each level of Arcane Supremacy."
+        "Has a cast range of 1100\/1150\/1200\/1250 with Arcane Supremacy on each level."
       ],
       "mana": "25",
       "hotKey": "R",
@@ -247,14 +246,14 @@
         "Stolen Spell Cast Time: 0.15",
         "Stolen Spell Debuff Duration Amplification: 10%\/20%\/30%",
         "Spell Duration: 180\/240\/300",
-        "Stolen Spell Damage Amplification: 40%",
         "Stolen Spell Cooldown Reduction: 25%",
+        "Stolen Spell Damage Amplification: 40%",
         "Decreases cooldown, increases cast range and upgrades the spell to the Scepter level.",
-        "The debuff duration amplification is not disabled by Break."
+        "The debuff duration amplification, spell damage amplification,and cooldown reduction are not disabled by Break."
       ],
       "itemBehaviour": [],
       "legacyKey": "Q",
-      "story": "...but even their lesser magics can be a source of much utility."
+      "story": null
     }
   ],
   "mainAttributes": {
@@ -281,11 +280,11 @@
     {
       "talentLvl": "15",
       "talentLeft": "+0.6s Telekinesis Lift Duration",
-      "talentRight": "25% Cooldown Reduction for Stolen Spells"
+      "talentRight": "-25% Stolen Spells Cooldown"
     },
     {
       "talentLvl": "10",
-      "talentLeft": "+10% Fade Bolt Damage Reduction",
+      "talentLeft": "-10% Fade Bolt Damage Reduction",
       "talentRight": "+175 Telekinesis Landing Damage"
     }
   ]

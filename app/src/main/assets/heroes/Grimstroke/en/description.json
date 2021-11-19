@@ -5,13 +5,13 @@
       "talents": [
         {
           "talentLvl": "25",
-          "talentLeft": "+40% Stroke of Fate Damage",
+          "talentLeft": "+50% Stroke of Fate Damage",
           "talentRight": "+150 Ink Swell Radius"
         },
         {
           "talentLvl": "20",
           "talentLeft": "+3 Hits to Kill Phantom",
-          "talentRight": "+800 Stroke of Fate Cast Range"
+          "talentRight": "+1000 Stroke of Fate Cast Range"
         },
         {
           "talentLvl": "15",
@@ -34,9 +34,10 @@
       ],
       "notes": [
         "The ink travels at a speed of 2400.",
-        "With the travel distance and end radius, the ink takes 0.58 (TagTalent 0.92) seconds to reach max distance and can hit units up to 1560 (TagTalent 2360) range away.",
-        "The ink trail starts 120 range towards Grimstroke's left side and travels towards the targeted point. This means the ink's travel direction is not based on the caster's facing direction, but instead on the angle between the aforementioned points.",
+        "With the travel distance and end radius, the ink takes 0.58 (TagTalent 1) seconds to reach max distance and can hit units up to 1560 (TagTalent 2560) range away.",
+        "The ink trail starts 120 range towards Grimstroke's left side and travels towards the targeted point. This means the ink's travel direction is not based on the caster's facing direction, but instead on the angle between the aforementioned points. Portrait-casting automatically launches Stroke of Fate to the right of Grimstroke's facing direction.",
         "This means the ink's travel direction is not based on the caster's facing direction, but instead on the angle between the aforementioned points.",
+        "Portrait-casting automatically launches Stroke of Fate to the right of Grimstroke's facing direction.",
         "Stroke of Fate first applies the damage, then the debuff.",
         "The increasing damage has no cap and counts any unit hit by the ink.",
         "Plays an initial sound and particles upon start casting, visible and audible to everyone.",
@@ -50,18 +51,18 @@
       "spellName": "Stroke of Fate",
       "params": [
         "Cast Animation: 0.8+0.53",
-        "Cast Range: 1400 (TagTalent 2200)",
-        "Wave Distance: 1400 (TagTalent 2200)",
+        "Cast Range: 1400 (TagTalent 2400)",
+        "Wave Distance: 1400 (TagTalent 2400)",
         "Start Radius: 120",
         "End Radius: 160",
-        "Base Damage: 120\/180\/240\/300 (TagTalent 168\/252\/336\/420)",
-        "Damage Increment per Hit: 18\/27\/36\/45 (TagTalent 25.2\/37.8\/50.4\/63)",
+        "Base Damage: 120\/180\/240\/300 (TagTalent 180\/270\/360\/450)",
+        "Damage Increment per Hit: 18\/27\/36\/45 (TagTalent 27\/40.5\/54\/67.5)",
         "Move Speed Slow: 50%\/60%\/70%\/80%",
         "Slow Duration: 1.5"
       ],
       "itemBehaviour": [],
       "legacyKey": "F",
-      "story": "The corruptive force of Grimstroke's ink, drawn from the reservoir of his fallen people, consumes any enemy caught in its path."
+      "story": null
     },
     {
       "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/b\/bf\/Grimstroke_Phantom%27s_Embrace_1.mp3\/revision\/latest?cb=20191216013948",
@@ -72,8 +73,8 @@
       ],
       "notes": [
         "The Phantom travels at a speed of 750.",
-        "The phantom is attackable (A or Left Click) as soon as it is launched, so it can be killed before it reaches its target. Phantoms have the highest priority for auto attack behaviors, together with The Swarm beetles.",
-        "Phantoms have the highest priority for auto attack behaviors, together with The Swarm beetles.",
+        "The phantom is attackable (A or Left Click) as soon as it is launched, so it can be killed before it reaches its target. Phantoms have the highest priority for auto-attack behaviors, together with Beetles.",
+        "Phantoms have the highest priority for auto-attack behaviors, together with Beetles.",
         "The phantom latches onto the target when it comes within 130 range of it. Once latched, it always stays 130 range in front of the target.",
         "The phantom instantly dies when its target turns invisible or spell immune, including while the phantom is still traveling towards it. A latched phantom also instantly dies when its target turns invulnerable or hidden, but not while traveling.",
         "A latched phantom also instantly dies when its target turns invulnerable or hidden, but not while traveling.",
@@ -112,7 +113,7 @@
       ],
       "itemBehaviour": [],
       "legacyKey": "E",
-      "story": "Grimstroke holds no sorrow for the downfall of his people. Only for Yaovhi, she who was most dear to him, does he feel even a semblance of longing."
+      "story": null
     },
     {
       "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/4\/44\/Grimstroke_Ink_Swell_1.mp3\/revision\/latest?cb=20191216014001",
@@ -125,9 +126,9 @@
         "Has a longer cast backswing of 0.86 when cast on self, due to a different animation. ↓↓ Double-tapping automatically targets self.",
         "↓↓ Double-tapping automatically targets self.",
         "Ink Swell first applies the damage, then the debuff.",
-        "The tendrils deal 5\/7\/9\/11 (TagTalent 7\/9.8\/12.6\/15.4) damage in 0.2-second intervals, starting immediately as the buff is placed, resulting in up to 20 instances. They can deal up to 100\/140\/180\/220 (TagTalent 140\/196\/252\/308) damage to a single unit (before reductions).",
-        "They can deal up to 100\/140\/180\/220 (TagTalent 140\/196\/252\/308) damage to a single unit (before reductions).",
-        "The damage and stun upon losing the buff is based on the amount of damage instances the tendrils applied to a single enemy hero. This means to reach the maximum damage and stun, at least one enemy hero must be damaged throughout the whole duration of Ink Swell. Only counts damage dealt to real heroes, which excludes illusions and creep-heroes, but includes clones. The actual amount of damage dealt does not matter, only the amount of damage instances applied. The stun duration increases by 0.09\/0.15\/0.22\/0.28 seconds, and the damage by 7.2\/14.4\/21.6\/28.8 (TagTalent 10.08\/20.16\/30.24\/40.32) for each instance applied, reaching the maximum after 13 instances.",
+        "The tendrils deal 5\/7\/9\/11 (TagTalent 7\/9.8\/12.6\/15.4) damage in 0.2-second intervals, starting immediately as the buff is placed, resulting in up to 15 instances. They can deal up to 75\/105\/135\/165 (TagTalent 105\/147\/189\/231) damage to a single unit (before reductions).",
+        "They can deal up to 75\/105\/135\/165 (TagTalent 105\/147\/189\/231) damage to a single unit (before reductions).",
+        "The damage and stun upon losing the buff is based on the number of damage instances the tendrils applied to a single enemy hero. This means to reach the maximum damage and stun, at least one enemy hero must be damaged throughout the whole duration of Ink Swell. Only counts damage dealt to real heroes, which excludes illusions and creep-heroes, but includes clones. The actual amount of damage dealt does not matter, only the amount of damage instances applied. The stun duration increases by 0.09\/0.15\/0.22\/0.28 seconds, and the damage by 7.2\/14.4\/21.6\/28.8 (TagTalent 10.08\/20.16\/30.24\/40.32) for each instance applied, reaching the maximum after 13 instances.",
         "This means to reach the maximum damage and stun, at least one enemy hero must be damaged throughout the whole duration of Ink Swell.",
         "Only counts damage dealt to real heroes, which excludes illusions and creep-heroes, but includes clones.",
         "The actual amount of damage dealt does not matter, only the amount of damage instances applied.",
@@ -136,17 +137,17 @@
         "However, if the ink swelled unit dies, the area expire damage and stun will not apply.",
         "The expire damage and stun only apply when there is at least one enemy hero within the area.",
         "Recasting Ink Swell on the same target refreshes the duration, without resetting the damage instance counter.",
-        "With Aghanim's Shard, the targeted ally also gets healed for each instance of damage as it is dealt. The heal is based on the damage values before any reductions or amplifications, so the amount of damage enemies actually take is irrelevant. The tendrils heal 2.8\/3.92\/5.04\/6.16 health for each instance of damage they deal. The tendrils can heal up to 56\/78.4\/100.8\/123.2 health for each damaged enemy over its full duration. The expire damage can heal the target for up to 50.4\/100.8\/151.2\/201.6 health for each enemy hit by it. The strong dispel at the end is applied no matter how the buff is removed.",
+        "With Aghanim's Shard, the targeted ally also gets healed for each instance of damage as it is dealt. The heal is based on the damage values before any reductions or amplifications, so the amount of damage enemies actually take is irrelevant. The tendrils heal 2.8\/3.92\/5.04\/6.16 health for each instance of damage they deal. The tendrils can heal up to 42\/58.8\/75.6\/92.4 health for each damaged enemy over its full duration. The expire damage can heal the target for up to 50.4\/100.8\/151.2\/201.6 health for each enemy hit by it. The strong dispel at the end is applied no matter how the buff is removed.",
         "The heal is based on the damage values before any reductions or amplifications, so the amount of damage enemies actually take is irrelevant.",
         "The tendrils heal 2.8\/3.92\/5.04\/6.16 health for each instance of damage they deal.",
-        "The tendrils can heal up to 56\/78.4\/100.8\/123.2 health for each damaged enemy over its full duration.",
+        "The tendrils can heal up to 42\/58.8\/75.6\/92.4 health for each damaged enemy over its full duration.",
         "The expire damage can heal the target for up to 50.4\/100.8\/151.2\/201.6 health for each enemy hit by it.",
         "The strong dispel at the end is applied no matter how the buff is removed."
       ],
       "mana": "120\/130\/140\/150",
       "hotKey": "E",
       "cooldown": "30\/25\/20\/15 (TagTalent 25\/20\/15\/10)",
-      "description": "Grimstroke shrouds an allied unit in ink, increasing its movement speed. Enemies in range of the allied unit are damaged with inky tendrils over time. After 4 seconds it triggers, applying damage and stun in an area around the unit in proportion to how long ink tendril was near any hero.",
+      "description": "Grimstroke shrouds an allied unit in ink, increasing its movement speed. Enemies in range of the allied unit are damaged with inky tendrils over time. After 3 seconds it triggers, applying damage and stun in an area around the unit in proportion to how long ink tendril was near any hero.",
       "spellName": "Ink Swell",
       "params": [
         "Cast Animation: 0.15+0.73\/0.86",
@@ -157,14 +158,14 @@
         "Expire Max Damage: 90\/180\/270\/360 (TagTalent 126\/252\/378\/504)",
         "Max Stun Duration: 1.1\/1.9\/2.7\/3.5",
         "Max Damage\/Stun Accumulation Time: 2.5",
-        "Buff Duration: 4",
+        "Buff Duration: 3",
         "Damage as Heal: 40%",
         "Causes Ink Swell to deal 40% more damage and heal the target for 40% of the damage Ink Swell deals. Upon expiration, the target will receive a strong dispell.",
         "Can be cast on spell immune allies. Does not affect spell immune enemies."
       ],
       "itemBehaviour": [],
       "legacyKey": "W",
-      "story": "Now that the rise of the ink tide no longer threatens to overwhelm Grimstroke, its tendrils of power are never far from his hand."
+      "story": null
     },
     {
       "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/c\/c2\/Grimstroke_Dark_Portrait.mp3\/revision\/latest?cb=20210120230733",
@@ -173,8 +174,7 @@
         "Affects Enemy Heroes"
       ],
       "notes": [
-        "Requires Aghanim's Scepter to be unlocked. In Ability Draft, Dark Portrait can be unlocked by the player that drafted Soulbind.",
-        "In Ability Draft, Dark Portrait can be unlocked by the player that drafted Soulbind.",
+        "Requires Aghanim's Scepter to be unlocked.",
         "The created illusions are visually distinguishable from the real hero for allies and enemies.",
         "The illusion spawns 108 range away from the target. It appears either north, east, south or west from them."
       ],
@@ -194,7 +194,7 @@
       ],
       "itemBehaviour": [],
       "legacyKey": "D",
-      "story": "No dark creation is beyond the skill of the master's hand."
+      "story": null
     },
     {
       "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/0\/09\/Grimstroke_Soulbind_1.mp3\/revision\/latest?cb=20191216013951",
@@ -206,20 +206,20 @@
         "The targeting reticule must be centered over an enemy unit.",
         "Only binds the primary target to heroes (excluding illusions, including clones) or creep-heroes. The primary target can be an illusion though.",
         "Does not bind to nearby invisible or invulnerable heroes.",
-        "The more the chain gets stretched, the slower the affected heroes can walk away from the each other, eventually coming to a full stop. It directly affects their movement speed. The chain is considered fully stretched at 600 range, but can be stretched up to 700 range before it breaks. In order to stretch it further than 600, forced movement or teleportation must be used. The following abilities are not able to break the chain: Skewer, Leap, Pounce, Tree Dance, Primal Spring, Toggle Movement, Force Staff and Hurricane Pike. However, Force Staff and Hurricane Pike (targeting an ally) can break the chain if the target hasn't moved after being bound. Every other source of forced movement, including abilities like Primal Roar and Blinding Light, can break the leash.",
+        "The more the chain gets stretched, the slower the affected heroes can walk away from each other, eventually coming to a full stop. It directly affects their movement speed. The chain is considered fully stretched at 600 range, but can be stretched up to 700 range before it breaks. In order to stretch it further than 600, Forced Movement or abilities with teleporting effects must be used. The following abilities are not able to break the chain: Skewer, Leap, Pounce, Tree Dance, Primal Spring, Toggle Movement, Force Staff and Hurricane Pike. However, Force Staff and Hurricane Pike (targeting an ally) can break the chain if the target hasn't moved after being bound. Every other source of forced movement (e.g. Primal Roar and Blinding Light) can break the leash.",
         "The chain is considered fully stretched at 600 range, but can be stretched up to 700 range before it breaks.",
-        "In order to stretch it further than 600, forced movement or teleportation must be used.",
+        "In order to stretch it further than 600, Forced Movement or abilities with teleporting effects must be used.",
         "The following abilities are not able to break the chain: Skewer, Leap, Pounce, Tree Dance, Primal Spring, Toggle Movement, Force Staff and Hurricane Pike.",
         "However, Force Staff and Hurricane Pike (targeting an ally) can break the chain if the target hasn't moved after being bound.",
-        "Every other source of forced movement, including abilities like Primal Roar and Blinding Light, can break the leash.",
-        "Leashes the target and the ally it is bound to, preventing them from casting certain mobility spells. Does not leash the target if it is not bound to an ally.",
+        "Every other source of forced movement (e.g. Primal Roar and Blinding Light) can break the leash.",
+        "Leashes the target and the ally it is bound to, preventing them from casting certain mobility abilities. Does not leash the target if it is not bound to an ally.",
         "Does not leash the target if it is not bound to an ally.",
         "If the enemies manage to break the link, the debuff stays active on the primary target still, and immediately links the next enemy hero within the latch radius to them.",
         "While linked, every single-target ability cast on one of the hero is also cast on the linked hero, following the same rules as Spell Reflection, with some exceptions. The following abilities do not work exactly so: Dive Bomb, Hurl Boulder, Cyclone, Omnislash, Infest, Mana Drain (requires a 3rd target to work), Static Link, Charge of Darkness, Nether Strike, Snowball, Soul Assumption and Focus Fire. The ability cast on the linked hero is sourced to the original caster, so that their stats and items are applied to the ability as well. If the primary target of the single-target ability has Spell Block, it still gets cast on the secondary target.",
         "The following abilities do not work exactly so: Dive Bomb, Hurl Boulder, Cyclone, Omnislash, Infest, Mana Drain (requires a 3rd target to work), Static Link, Charge of Darkness, Nether Strike, Snowball, Soul Assumption and Focus Fire.",
         "The ability cast on the linked hero is sourced to the original caster, so that their stats and items are applied to the ability as well.",
         "If the primary target of the single-target ability has Spell Block, it still gets cast on the secondary target.",
-        "The following abilities and items will pierce the spell immunity of a linked hero when cast via Soulbind, despite normally not being able to do so: Cold Feet, Brain Sap, Spirit Siphon, Lightning Storm, Frost Blast, Finger of Death, Laguna Blade, Wrath of Nature, Reaper's Scythe, Stifling Dagger, Decrepify, Sunder, Laser, Soul Rip, and Dagon.",
+        "The following abilities and items will pierce the spell immunity of a linked hero when cast via Soulbind, despite normally not being able to do so: Brain Sap, Spirit Siphon, Lightning Storm, Finger of Death (only AoE damage around the secondary target), Laguna Blade, Wrath of Nature, Reaper's Scythe, Stifling Dagger, Decrepify, Sunder, Soul Rip, and Dagon.",
         "Abilities that do not pierce spell immunity when cast this way will still be cast on the linked spell immune targets, but will have no effect on them. Relevant exceptions (abilities with potential to hit more than one target) are: Adaptive Strike (Agility), Adaptive Strike (Strength), Fade Bolt don't cast on the linked target if it is spell immune.",
         "Relevant exceptions (abilities with potential to hit more than one target) are: Adaptive Strike (Agility), Adaptive Strike (Strength), Fade Bolt don't cast on the linked target if it is spell immune.",
         "Adaptive Strike (Agility), Adaptive Strike (Strength), Fade Bolt don't cast on the linked target if it is spell immune.",
@@ -244,7 +244,7 @@
       ],
       "itemBehaviour": [],
       "legacyKey": "B",
-      "story": "The Ascended were chosen sons of Ashkavor, granted immense power by the bonds forged between their own souls and those they were charged with protecting. In the years that followed the ruination of his kin, Grimstroke discovered much more sinister applications for the binding rituals\u2026"
+      "story": null
     }
   ],
   "mainAttributes": {
@@ -260,13 +260,13 @@
   "talents": [
     {
       "talentLvl": "25",
-      "talentLeft": "+40% Stroke of Fate Damage",
+      "talentLeft": "+50% Stroke of Fate Damage",
       "talentRight": "+150 Ink Swell Radius"
     },
     {
       "talentLvl": "20",
       "talentLeft": "+3 Hits to Kill Phantom",
-      "talentRight": "+800 Stroke of Fate Cast Range"
+      "talentRight": "+1000 Stroke of Fate Cast Range"
     },
     {
       "talentLvl": "15",

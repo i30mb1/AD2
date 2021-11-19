@@ -44,9 +44,9 @@
         "3 Quas Instance: 3\/6\/9\/12\/15\/18\/21 (TagTalent 7.5\/15\/22.5\/30\/37.5\/45\/52.5) health regeneration.",
         ""
       ],
-      "mana": null,
+      "mana": "0",
       "hotKey": "Q",
-      "cooldown": null,
+      "cooldown": "0",
       "description": "Allows manipulation of ice elements. Each Quas instance provides increased health regeneration.",
       "spellName": "Quas",
       "params": [
@@ -72,15 +72,15 @@
         "Invoker can only have up to 3 instances up at any time. The orbs floating above Invoker are visible to everyone.",
         "If he already has 3 instances, the oldest instance is replaced. The order of instances can be seen in the HUD as status buff icons, the oldest one being on the left.",
         "The passive agility bonus effectively grants Invoker 0.33\/0.67\/1\/1.33\/1.67\/2\/2.33 armor and 2\/4\/6\/8\/10\/12\/14 attack speed.",
-        "This is how much movement and attack speed Invoker gains from 1, 2 and 3 Wex instances: 1 Wex Instance: 1%\/2%\/3%\/4%\/5%\/6%\/7% (TagTalent 0.025\/0.05\/0.075\/0.1\/0.125\/0.15\/0.175) movement speed and 1\/2\/3\/4\/5\/6\/7 (TagTalent 2.5\/5\/7.5\/10\/12.5\/15\/17.5) attack speed. 2 Wex Instance: 2%\/4%\/6%\/8%\/10%\/12%\/14% (TagTalent 0.05\/0.1\/0.15\/0.2\/0.25\/0.3\/0.35) movement speed and 2\/4\/6\/8\/10\/12\/14 (TagTalent 5\/10\/15\/20\/25\/30\/35) attack speed. 3 Wex Instance: 3%\/6%\/9%\/12%\/15%\/18%\/21% (TagTalent 0.075\/0.15\/0.225\/0.3\/0.375\/0.45\/0.525) movement speed and 3\/6\/9\/12\/15\/18\/21 (TagTalent 7.5\/15\/22.5\/30\/37.5\/45\/52.5) attack speed.",
-        "1 Wex Instance: 1%\/2%\/3%\/4%\/5%\/6%\/7% (TagTalent 0.025\/0.05\/0.075\/0.1\/0.125\/0.15\/0.175) movement speed and 1\/2\/3\/4\/5\/6\/7 (TagTalent 2.5\/5\/7.5\/10\/12.5\/15\/17.5) attack speed.",
-        "2 Wex Instance: 2%\/4%\/6%\/8%\/10%\/12%\/14% (TagTalent 0.05\/0.1\/0.15\/0.2\/0.25\/0.3\/0.35) movement speed and 2\/4\/6\/8\/10\/12\/14 (TagTalent 5\/10\/15\/20\/25\/30\/35) attack speed.",
-        "3 Wex Instance: 3%\/6%\/9%\/12%\/15%\/18%\/21% (TagTalent 0.075\/0.15\/0.225\/0.3\/0.375\/0.45\/0.525) movement speed and 3\/6\/9\/12\/15\/18\/21 (TagTalent 7.5\/15\/22.5\/30\/37.5\/45\/52.5) attack speed.",
+        "This is how much movement and attack speed Invoker gains from 1, 2 and 3 Wex instances: 1 Wex Instance: 1%\/2%\/3%\/4%\/5%\/6%\/7% (TagTalent 2.5%\/5%\/7.5%\/10%\/12.5%\/15%\/17.5%) movement speed and 1\/2\/3\/4\/5\/6\/7 (TagTalent 2.5\/5\/7.5\/10\/12.5\/15\/17.5) attack speed. 2 Wex Instance: 2%\/4%\/6%\/8%\/10%\/12%\/14% (TagTalent 5%\/10%\/15%\/20%\/25%\/30%\/35%) movement speed and 2\/4\/6\/8\/10\/12\/14 (TagTalent 5\/10\/15\/20\/25\/30\/35) attack speed. 3 Wex Instance: 3%\/6%\/9%\/12%\/15%\/18%\/21% (TagTalent 7.5%\/15%\/22.5%\/30%\/37.5%\/45%\/52.5%) movement speed and 3\/6\/9\/12\/15\/18\/21 (TagTalent 7.5\/15\/22.5\/30\/37.5\/45\/52.5) attack speed.",
+        "1 Wex Instance: 1%\/2%\/3%\/4%\/5%\/6%\/7% (TagTalent 2.5%\/5%\/7.5%\/10%\/12.5%\/15%\/17.5%) movement speed and 1\/2\/3\/4\/5\/6\/7 (TagTalent 2.5\/5\/7.5\/10\/12.5\/15\/17.5) attack speed.",
+        "2 Wex Instance: 2%\/4%\/6%\/8%\/10%\/12%\/14% (TagTalent 5%\/10%\/15%\/20%\/25%\/30%\/35%) movement speed and 2\/4\/6\/8\/10\/12\/14 (TagTalent 5\/10\/15\/20\/25\/30\/35) attack speed.",
+        "3 Wex Instance: 3%\/6%\/9%\/12%\/15%\/18%\/21% (TagTalent 7.5%\/15%\/22.5%\/30%\/37.5%\/45%\/52.5%) movement speed and 3\/6\/9\/12\/15\/18\/21 (TagTalent 7.5\/15\/22.5\/30\/37.5\/45\/52.5) attack speed.",
         ""
       ],
-      "mana": null,
+      "mana": "0",
       "hotKey": "W",
-      "cooldown": null,
+      "cooldown": "0",
       "description": "Allows manipulation of storm elements. Each Wex instance provides increased attack speed and movement speed.",
       "spellName": "Wex",
       "params": [
@@ -106,16 +106,16 @@
         "Exort can be leveled 7 times, from level 1\/3\/5\/7\/9\/11\/13 on, respectively.",
         "Invoker can only have up to 3 instances up at any time. The orbs floating above Invoker are visible to everyone.",
         "If he already has 3 instances, the oldest instance is replaced. The order of instances can be seen in the HUD as status buff icons, the oldest one being on the left.",
-        "The passive intelligence bonus effectively grants Invoker 24\/48\/72\/96\/120\/144\/168 mana, 0.1\/0.2\/0.3\/0.4\/0.5\/0.6\/0.7 mana regeneration, and 2\/4\/6\/8\/10\/12\/14 attack damage.",
-        "This is how much attack damage Invoker gains from 1, 2 and 3 Exort instances: 1 Exort Instance: 2\/4\/6\/8\/10\/12\/14 (TagTalent 5\/10\/15\/20\/25\/30\/35) attack damage. 2 Exort Instance: 4\/8\/12\/16\/20\/24\/28 (TagTalent 10\/20\/30\/40\/50\/60\/70) attack damage. 3 Exort Instance: 6\/12\/18\/24\/30\/36\/42 (TagTalent 15\/30\/45\/60\/75\/90\/105) attack damage.",
-        "1 Exort Instance: 2\/4\/6\/8\/10\/12\/14 (TagTalent 5\/10\/15\/20\/25\/30\/35) attack damage.",
-        "2 Exort Instance: 4\/8\/12\/16\/20\/24\/28 (TagTalent 10\/20\/30\/40\/50\/60\/70) attack damage.",
-        "3 Exort Instance: 6\/12\/18\/24\/30\/36\/42 (TagTalent 15\/30\/45\/60\/75\/90\/105) attack damage.",
+        "The passive intelligence bonus effectively grants Invoker 24\/48\/72\/96\/120\/144\/168 mana, 0.1\/0.2\/0.3\/0.4\/0.5\/0.6\/0.7 mana regeneration, and 2\/4\/6\/8\/10\/12\/14 main attack damage.",
+        "This is how much bonus attack damage Invoker gains from 1, 2 and 3 Exort instances: 1 Exort Instance: 2\/4\/6\/8\/10\/12\/14 (TagTalent 5\/10\/15\/20\/25\/30\/35) bonus attack damage. 2 Exort Instance: 4\/8\/12\/16\/20\/24\/28 (TagTalent 10\/20\/30\/40\/50\/60\/70) bonus attack damage. 3 Exort Instance: 6\/12\/18\/24\/30\/36\/42 (TagTalent 15\/30\/45\/60\/75\/90\/105) bonus attack damage.",
+        "1 Exort Instance: 2\/4\/6\/8\/10\/12\/14 (TagTalent 5\/10\/15\/20\/25\/30\/35) bonus attack damage.",
+        "2 Exort Instance: 4\/8\/12\/16\/20\/24\/28 (TagTalent 10\/20\/30\/40\/50\/60\/70) bonus attack damage.",
+        "3 Exort Instance: 6\/12\/18\/24\/30\/36\/42 (TagTalent 15\/30\/45\/60\/75\/90\/105) bonus attack damage.",
         ""
       ],
-      "mana": null,
+      "mana": "0",
       "hotKey": "E",
-      "cooldown": null,
+      "cooldown": "0",
       "description": "Allows manipulation of fire elements. Each Exort instance provides increased attack damage.",
       "spellName": "Exort",
       "params": [
@@ -137,20 +137,20 @@
       ],
       "notes": [
         "This is an innate ability and does not need to be learned.",
-        "A SPELLS button is located right above the ability icon. It opens a list which shows the required combination for every invoked ability.",
+        "A SPELLS button is located right above the ability icon. It opens a list that shows the required combination for every invoked ability.",
         "Invoke interrupts Invoker's channeling abilities upon cast.",
         "The arrangement of element instances does not matter.",
-        "When already having two abilities invoked, invoking a new spell replaces the older spell.",
-        "New invoked abilities are always placed in the 4th ability slot. The previously invoked ability is moved to the 5th slot in the process, while the previous spell in the 5th slot is lost.",
-        "The previously invoked ability is moved to the 5th slot in the process, while the previous spell in the 5th slot is lost.",
-        "When invoking an ability which is already invoked, Invoke does not go on cooldown. If the re-invoked ability was in the 5th ability slot, it moves into the 4th, swapping position with the other invoked ability.",
+        "When already having two abilities invoked, invoking a new ability replaces the older ability.",
+        "New invoked abilities are always placed in the 4th ability slot. The previously invoked ability is moved to the 5th slot in the process, while the previous ability in the 5th slot is lost.",
+        "The previously invoked ability is moved to the 5th slot in the process, while the previous ability in the 5th slot is lost.",
+        "When invoking an ability that is already invoked, Invoke does not go on cooldown. If the re-invoked ability was in the 5th ability slot, it moves into the 4th, swapping position with the other invoked ability.",
         "If the re-invoked ability was in the 5th ability slot, it moves into the 4th, swapping position with the other invoked ability.",
-        "When not using legacy or custom hotkeys, the hotkey for the spell in the 4th slot is always D and the spell in the 5th slot is always F.",
+        "When not using custom or Legacy Keys, the hotkey for the ability in the 4th slot and 5th slot is always D and F respectively.",
         "Each level of Quas, Wex, and Exort reduces the cooldown for Invoke by 0.3 seconds. Cooldown of Invoke with each level of orbs: 6.7 \/ 6.4 \/ 6.1 \/ 5.8 \/ 5.5 \/ 5.2 \/ 4.9 \/ 4.6 \/ 4.3 \/ 4 \/ 3.7 \/ 3.4 \/ 3.1 \/ 2.8 \/ 2.5 \/ 2.2 \/ 1.9 \/ 1.6 \/ 1.3 \/ 1 \/ 0.7",
         "Cooldown of Invoke with each level of orbs: 6.7 \/ 6.4 \/ 6.1 \/ 5.8 \/ 5.5 \/ 5.2 \/ 4.9 \/ 4.6 \/ 4.3 \/ 4 \/ 3.7 \/ 3.4 \/ 3.1 \/ 2.8 \/ 2.5 \/ 2.2 \/ 1.9 \/ 1.6 \/ 1.3 \/ 1 \/ 0.7",
-        "With Aghanim's Scepter, it increases the invoked abilities 1 level higher than what they are currently at. It does not improve the passive bonuses granted by Quas, Wex and Exort.",
-        "It does not improve the passive bonuses granted by Quas, Wex and Exort.",
-        "Invoker is available in Ability Draft. For details, see Invoker in Ability Draft."
+        "With Aghanim's Scepter, the level of all invoked abilities increases 1. All invoked abilities have 8 levels by default, but the 8th level can only be reached with Aghanim's Scepter. Does not improve the passive bonuses granted by Quas, Wex and Exort.",
+        "All invoked abilities have 8 levels by default, but the 8th level can only be reached with Aghanim's Scepter.",
+        "Does not improve the passive bonuses granted by Quas, Wex and Exort."
       ],
       "mana": null,
       "hotKey": "R",
@@ -161,11 +161,11 @@
         "Cast Animation: 0+0",
         "Max Spells: 2",
         "Invoke Cooldown Reduction per Orb Level: 0.3",
-        "Adds one level to the stats provided by Quas, Wex, and Exort on all Invoked spells."
+        "Additionally Increases the level of Quas, Wex and Exort by 1."
       ],
       "itemBehaviour": [],
       "legacyKey": "R",
-      "story": "So begins a new age of knowledge."
+      "story": null
     },
     {
       "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/0\/0c\/Invoker_Cold_Snap_1.mp3\/revision\/latest?cb=20191216014144",
@@ -183,9 +183,9 @@
         "Cold Snap does not trigger on self-inflicted damage, and on damage flagged as HP Removal.",
         "With its current trigger cooldown and debuff duration, it can trigger up to 4\/5\/6\/7\/8\/9\/10\/11 times (including the initial trigger upon cast).",
         "Can deal up to 32\/80\/144\/224\/320\/432\/560\/704 damage (before reductions) when triggering as often as possible.",
-        "Ability formulas: Damage per proc: 0 + (8 * Quas) Trigger cooldown: 0.83 - (0.03 * Quas) Debuff duration: 2.5 + (0.5 * Quas)",
+        "Ability formulas: Damage per proc: 0 + (8 * Quas) Trigger cooldown: 0.86 - (0.03 * Quas) Debuff duration: 2.5 + (0.5 * Quas)",
         "Damage per proc: 0 + (8 * Quas)",
-        "Trigger cooldown: 0.83 - (0.03 * Quas)",
+        "Trigger cooldown: 0.86 - (0.03 * Quas)",
         "Debuff duration: 2.5 + (0.5 * Quas)"
       ],
       "mana": "100",
@@ -204,7 +204,7 @@
       ],
       "itemBehaviour": [],
       "legacyKey": "Y",
-      "story": "Sadron's Protracted Frisson."
+      "story": null
     },
     {
       "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/2\/2f\/Invoker_Ghost_Walk.mp3\/revision\/latest?cb=20191216014150",
@@ -241,7 +241,7 @@
       ],
       "itemBehaviour": [],
       "legacyKey": "V",
-      "story": "Myrault's Hinder-Gast."
+      "story": null
     },
     {
       "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/1\/11\/Invoker_Ice_Wall_1.mp3\/revision\/latest?cb=20191216014152",
@@ -258,7 +258,7 @@
         "With the radius from both sides and the wall length, Ice Wall has an effective length of 1330.",
         "Each segment possesses a movement speed slowing aura. Its debuff lingers for 2 seconds.",
         "The damage is independent from the slow, so getting further than 105 radius away from a segment immediately stops the damage, while the slow still lingers.",
-        "Deals damage in 1-second intervals, starting 1 second after cast, resulting in up to 3\/4\/6\/7\/9\/10\/12\/48 possible instances. Can deal up to 18\/48\/108\/168\/270\/360\/504\/624 damage to a single unit (before reductions), when it stays in range for its full duration.",
+        "Deals damage in 1-second intervals, starting 1 second after cast, resulting in up to 3\/4\/6\/7\/9\/10\/12\/13 possible instances. Can deal up to 18\/48\/108\/168\/270\/360\/504\/624 damage to a single unit (before reductions), when it stays in range for its full duration.",
         "Can deal up to 18\/48\/108\/168\/270\/360\/504\/624 damage to a single unit (before reductions), when it stays in range for its full duration.",
         "Ice Wall is not a pathing blocker. Any unit can pass through it.",
         "Ability formulas: Damage per second: 0 + (6 * Exort) Movement speed slow: 0 + (20 * Quas)% Wall duration: 1.5 + (1.5 * Quas)",
@@ -284,7 +284,7 @@
       ],
       "itemBehaviour": [],
       "legacyKey": "G",
-      "story": "Killing Wall of Koryx."
+      "story": null
     },
     {
       "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/6\/6d\/Invoker_EMP.mp3\/revision\/latest?cb=20191216014148",
@@ -304,10 +304,10 @@
         "Can deal up to 60\/105\/150\/195\/240\/285\/330\/375 damage to each affected unit (before reductions).",
         "Can restore up to 50\/87.5\/125\/162.5\/200\/237.5\/275\/312.5 mana for Invoker from each affected hero.",
         "The visual effects and the sound during the 2.9 seconds effect delay are visible and audible to everyone.",
-        "Ability formulas: Mana burned: 25 + (75 * Wex) Damage per Burned Mana: (25 + (75 * Wex)) * 0.6 Self Mana Gain per Burned Mana: (25 + (75 * Wex)) * 0.5",
+        "Ability formulas: Mana burned: 25 + (75 * Wex) Damage per burned mana: (25 + (75 * Wex)) * 0.6 Self mana gain per burned mana: (25 + (75 * Wex)) * 0.5",
         "Mana burned: 25 + (75 * Wex)",
-        "Damage per Burned Mana: (25 + (75 * Wex)) * 0.6",
-        "Self Mana Gain per Burned Mana: (25 + (75 * Wex)) * 0.5"
+        "Damage per burned mana: (25 + (75 * Wex)) * 0.6",
+        "Self mana gain per burned mana: (25 + (75 * Wex)) * 0.5"
       ],
       "mana": "125",
       "hotKey": null,
@@ -325,7 +325,7 @@
       ],
       "itemBehaviour": [],
       "legacyKey": "C",
-      "story": "Endoleon's Malevolent Perturbation."
+      "story": null
     },
     {
       "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/a\/ab\/Invoker_Tornado_1.mp3\/revision\/latest?cb=20191216014158",
@@ -337,7 +337,7 @@
       "notes": [
         "Ability invokes when Invoker has 2 Wex and 1 Quas instances.",
         "The Tornado travels at a speed of 1000 and always travels the full distance, so it takes 0.8\/1.2\/1.6\/2\/2.4\/2.8\/3.2\/3.6 seconds to reach the max distance.",
-        "The Tornado can hit units up to 1000\/1400\/1800\/2200\/2600\/3000\/3400\/3800 range away (travel distance + effect radius).",
+        "With the travel distance and effect radius, Tornado can hit units up to 1000\/1400\/1800\/2200\/2600\/3000\/3400\/3800 range away.",
         "Tornado first applies the basic dispel, then the cyclone on the affected units, turns them invulnerable and fully disables them for its duration.",
         "The damage is applied upon losing the Tornado debuff. Can deal up to 115\/160\/205\/250\/295\/340\/385\/430 damage to each affected unit (before reductions).",
         "While in the air, other units may pass below the cycloned units.",
@@ -365,7 +365,7 @@
       ],
       "itemBehaviour": [],
       "legacyKey": "X",
-      "story": "Claws of Tornarus."
+      "story": null
     },
     {
       "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/d\/de\/Invoker_Alacrity.mp3\/revision\/latest?cb=20191216014204",
@@ -376,6 +376,7 @@
       "notes": [
         "Ability invokes when Invoker has 2 Wex and 1 Exort instances.",
         "↓↓ Double-tapping automatically targets self.",
+        "Grants regular flat bonus attack damage.",
         "Ability formulas: Attack speed bonus: -2 + (12 * Wex) (TagTalent -2 + 35 + (12 * Wex)) Attack damage bonus: -2 + (12 * Exort) (TagTalent -2 + 35 + (12 * Exort))",
         "Attack speed bonus: -2 + (12 * Wex) (TagTalent -2 + 35 + (12 * Wex))",
         "Attack damage bonus: -2 + (12 * Exort) (TagTalent -2 + 35 + (12 * Exort))"
@@ -394,7 +395,7 @@
       ],
       "itemBehaviour": [],
       "legacyKey": "Z",
-      "story": "Gaster's Mandate of Impetuous Strife."
+      "story": null
     },
     {
       "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/b\/b0\/Invoker_Sun_Strike_1.mp3\/revision\/latest?cb=20191216014156",
@@ -414,8 +415,8 @@
         "5 Units: 20\/32.5\/45\/57.5\/70\/82.5\/95\/107.5 damage.",
         "Provides 300 radius flying vision at the targeted point for 5.5 seconds upon cast.",
         "The visual effects and the sound during the seconds effect delay are visible and audible to allies only.",
-        "With Aghanim's Scepter, ↓↓ Double-tapping sends two Sun Strikes to every hero (including Tempest Double, but excluding other clones and illusions) on the map. Uses the extended cooldown when targeting self, and the regular cooldown when targeting area. These Sun Strikes are fully visible and audible to the enemy during their delays. The strikes are placed randomly around the target, using the given minimum and maximum distances.",
-        "Uses the extended cooldown when targeting self, and the regular cooldown when targeting area.",
+        "With Aghanim's Scepter, ↓↓ Double-tapping sends two Sun Strikes to every hero (including Tempest Double, but excluding other clones and illusions) on the map. Uses the extended cooldown when the ability is self-targeted, and the regular cooldown when area-targeted. These Sun Strikes are fully visible and audible to the enemy during their delays. The strikes are placed randomly around the target, using the given minimum and maximum distances.",
+        "Uses the extended cooldown when the ability is self-targeted, and the regular cooldown when area-targeted.",
         "These Sun Strikes are fully visible and audible to the enemy during their delays.",
         "The strikes are placed randomly around the target, using the given minimum and maximum distances.",
         "Ability formulas: Damage: 37.5 + (62.5 * Exort)",
@@ -438,7 +439,7 @@
       ],
       "itemBehaviour": [],
       "legacyKey": "T",
-      "story": "Harlek's Incantation of Incineration."
+      "story": null
     },
     {
       "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/1\/17\/Invoker_Forge_Spirit.mp3\/revision\/latest?cb=20191216014150",
@@ -450,7 +451,7 @@
         "Casting Forge Spirit replaces the spirits from the previous cast, no matter who they are owned by.",
         "The spirits are always summoned next to Invoker at a random position around him, but always facing east upon spawn.",
         "Forged Spirit possess the Melting Strike ability.",
-        "Already summoned spirits do not have their stats upgraded when Exort or Quas is leveled. Their stats are set upon spawn.",
+        "Forged Spirits' stats are set upon spawn. They do not have their stats upgraded when Exort or Quas is leveled.",
         "Ability formulas: Spirits attack damage: 12 + (10 * Exort) Spirits attack range: 235 + (65 * Quas) Spirits max health: 200 + (100 * Quas) Spirits max mana: 50 + (50 * Exort) Spirits armor: -1 + (1 * Exort) Spirits duration: 10 + (10 * Quas)",
         "Spirits attack damage: 12 + (10 * Exort)",
         "Spirits attack range: 235 + (65 * Quas)",
@@ -462,7 +463,7 @@
       "mana": "75",
       "hotKey": null,
       "cooldown": "30",
-      "description": "Invoker forges a spirit embodying the strength of fire and fortitude of ice. Damage, mana, and armor are based on the level of Exort while attack range, health, and duration are based on the level of Quas. The elemental's scorching attack is capable of melting the armor of enemy heroes.",
+      "description": "Invoker forges a spirit embodying the strength of fire and fortitude of ice. Damage and armor are based on the level of Exort while attack range, health, and duration are based on the level of Quas. The elemental's scorching attack is capable of melting the armor of enemy heroes. Spawns two spirits when Quas and Exort are at least level 4.",
       "spellName": "Forge Spirit",
       "params": [
         "Cast Animation: 0.05+0",
@@ -476,7 +477,7 @@
       ],
       "itemBehaviour": [],
       "legacyKey": "F",
-      "story": "Culween's Most Cunning Fabrications."
+      "story": null
     },
     {
       "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/3\/3a\/Invoker_Chaos_Meteor_1.mp3\/revision\/latest?cb=20191216014143",
@@ -487,8 +488,8 @@
       ],
       "notes": [
         "Ability invokes when Invoker has 2 Exort and 1 Wex instances.",
-        "Chaos Meteor needs 1.3 seconds to land. It lands at the targeted point within the cast range, not at Invoker's position. The visual effects and the sound during the 1.3 seconds effect delay (the meteor falling from the sky) are visible and audible to everyone.",
-        "The visual effects and the sound during the 1.3 seconds effect delay (the meteor falling from the sky) are visible and audible to everyone.",
+        "Chaos Meteor needs 1.3 seconds to land. It lands at the targeted point within the cast range, not at Invoker's position. The falling meteor visual effects and the sound during the 1.3 seconds effect delay are visible and audible to everyone.",
+        "The falling meteor visual effects and the sound during the 1.3 seconds effect delay are visible and audible to everyone.",
         "Chaos Meteor provides 400 radius flying vision while it is rolling. This vision does not last. Also provides the same vision for 3 seconds after reaching its final destination.",
         "Also provides the same vision for 3 seconds after reaching its final destination.",
         "With the cast range, travel distance and effect radius, it can hit units up to 1440\/1590\/1745\/1895\/2045\/2195\/2345\/2495 range away. The area between Invoker and the targeted point is unaffected.",
@@ -506,7 +507,7 @@
         "With the damage increasing talent, one instance of the burn debuff can deal up to 42\/58.8\/75.6\/92.4\/109.2\/126\/142.8\/159.6 damage.",
         "All possible instances of burn damage per unit together can deal up to 168\/294\/453.6\/646.8\/873.6\/1134\/1428\/1755.6 damage.",
         "The whole Chaos Meteor, main and burn damage, can deal up to 459.2\/791\/1209.6\/1715\/2307.2\/2986.2\/3752\/4604.6 damage when a unit is hit by all possible instances.",
-        "With Aghanim's Shard, the extra meteors are launched with a 30° angle to the left and right of Invoker. The angle is based on Invoker's position. No matter the cast distance, the meteors always land and travel along offset by 30° from the centered meteor. The extra meteors land so that they are at least 200 range away from the centered meteor. This means when the targeted point is within 346 range of Invoker, they land further ahead of the centered meteor to keep a minimum distance of 200. This means, unlike the centered meteor, the extra meteors cannot land within 400 range of Invoker.",
+        "With Aghanim's Shard, 2 extra meteors are launched with a 30° angle to the left and right of Invoker. The angle is based on Invoker's position. No matter the cast distance, the meteors always land and travel along offset by 30° from the centered meteor. The extra meteors land so that they are at least 200 range away from the centered meteor. This means when the targeted point is within 346 range of Invoker, they land further ahead of the centered meteor to keep a minimum distance of 200. This means, unlike the centered meteor, the extra meteors cannot land within 400 range of Invoker.",
         "The angle is based on Invoker's position. No matter the cast distance, the meteors always land and travel along offset by 30° from the centered meteor.",
         "The extra meteors land so that they are at least 200 range away from the centered meteor.",
         "This means when the targeted point is within 346 range of Invoker, they land further ahead of the centered meteor to keep a minimum distance of 200.",
@@ -539,7 +540,7 @@
       ],
       "itemBehaviour": [],
       "legacyKey": "D",
-      "story": "Tarak's Descent of Fire."
+      "story": null
     },
     {
       "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/0\/0e\/Invoker_Deafening_Blast.mp3\/revision\/latest?cb=20191216014146",
@@ -555,8 +556,8 @@
         "The complete area is shaped like a cone.",
         "Applies a non-disabling Forced Movement, so affected enemies can still use abilities and items during it and their channeling abilities are not interrupted.",
         "The knockback and disarm are applied at the same time.",
-        "This is how the knockback works: Affected units are moved in 0.03 second intervals. They are moved 6\/13\/20\/26\/33\/40\/46\/53 times, and is defined as (Quas * 25 \/ 3). The knockback calculation can be split up into two sections - the first intervals and the remaining intervals. The first intervals, units are moved linearly, by a distance of 6 per interval. Therefore, the total of the first intervals is moved 2\/4\/6\/8\/11\/13\/15\/17 times, which results in a knockback distance of 12\/24\/36\/48\/66\/78\/90\/102. For the remaining of the intervals - 4\/9\/14\/18\/22\/27\/31\/36, the units are moved exponentially with 0.98 times the speed of the previous interval. So the remaining intervals together (on each level) move the units by a distance of 22.82\/48.88\/72.43\/89.63\/105.5\/123.61\/136.84\/151.94. The remaining intervals can be defined as at level 1 Quas. Summed up, the total distance on each level is 34.82\/72.88\/108.43\/137.63\/171.5\/201.61\/226.84\/253.94. As conclusion, the knockback starts at a speed of 200 and decreases exponentially.",
-        "Affected units are moved in 0.03 second intervals.",
+        "This is how the knockback works: Affected units are moved in 0.03-second intervals. They are moved 6\/13\/20\/26\/33\/40\/46\/53 times, and is defined as (Quas * 25 \/ 3). The knockback calculation can be split up into two sections - the first intervals and the remaining intervals. The first intervals, units are moved linearly, by a distance of 6 per interval. Therefore, the total of the first intervals is moved 2\/4\/6\/8\/11\/13\/15\/17 times, which results in a knockback distance of 12\/24\/36\/48\/66\/78\/90\/102. For the remaining of the intervals - 4\/9\/14\/18\/22\/27\/31\/36, the units are moved exponentially with 0.98 times the speed of the previous interval. So the remaining intervals together (on each level) move the units by a distance of 22.82\/48.88\/72.43\/89.63\/105.5\/123.61\/136.84\/151.94. The remaining intervals can be defined as at level 1 Quas. Summed up, the total distance on each level is 34.82\/72.88\/108.43\/137.63\/171.5\/201.61\/226.84\/253.94. As conclusion, the knockback starts at a speed of 200 and decreases exponentially.",
+        "Affected units are moved in 0.03-second intervals.",
         "They are moved 6\/13\/20\/26\/33\/40\/46\/53 times, and is defined as (Quas * 25 \/ 3).",
         "The knockback calculation can be split up into two sections - the first intervals and the remaining intervals.",
         "The first intervals, units are moved linearly, by a distance of 6 per interval.",
@@ -598,7 +599,7 @@
       ],
       "itemBehaviour": [],
       "legacyKey": "B",
-      "story": "Buluphont's Aureal Incapacitator."
+      "story": null
     },
     {
       "audioUrl": null,
@@ -620,7 +621,8 @@
         "Armor Reduction per Attack: 1 (TagTalent 2)",
         "Armor Reduction Cap: 20 (TagTalent 40)",
         "Duration: 5",
-        "Armor reduction persists if debuff was placed before spell immunity."
+        "Armor reduction persists if debuff was placed before spell immunity.",
+        ""
       ],
       "itemBehaviour": [],
       "legacyKey": null,

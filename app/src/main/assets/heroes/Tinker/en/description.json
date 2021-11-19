@@ -10,7 +10,7 @@
         },
         {
           "talentLvl": "20",
-          "talentLeft": "+150 Defense Matrix Damage Absorved",
+          "talentLeft": "+150 Defense Matrix Damage Absorbed",
           "talentRight": "+10% Spell Amplification"
         },
         {
@@ -21,7 +21,7 @@
         {
           "talentLvl": "10",
           "talentLeft": "+8% Manacost\/Manaloss Reduction",
-          "talentRight": "+2 Laser Blind Duration"
+          "talentRight": "+2s Laser Blind Duration"
         }
       ]
     },
@@ -33,48 +33,48 @@
         "Damage Pure"
       ],
       "notes": [
-        "Plays a sound effect during the cast time, which is audible to everyone.",
+        "Plays a sound effect during the cast time, audible to everyone.",
+        "The area damage only hits visible enemies, and does not hit invisible and enemies inside the Fog of War.",
         "Uses the creep duration for creep-heroes.",
         "The laser first applies the blind debuff, then the health reduction debuff, then the damage.",
-        "Laser's blind uses pseudo-random distribution.",
         "Multiple instances of the debuff do not stack.",
-        "With Aghanim's Scepter, the Laser bounces to the furthest enemy within radius of its current target. Laser has no bounce delay, so all targets are hit at the same time. Can only bounce to heroes, including clones, illusions and creep-heroes. If the primary target is a non-hero unit, it still bounces to valid targets within the search radius. Does not bounce on invisible units or units in the Fog of War.",
+        "Laser's blind uses pseudo-random distribution.",
+        "With Aghanim's Scepter, the Laser bounces to the furthest enemy within 700 radius of its current target. Laser has no bounce delay, so all targets are hit at the same time. Can only bounce to heroes, including clones, illusions and creep-heroes. If the primary target is a non-hero unit, it still bounces to valid targets within the search radius. Does not bounce on invisible or enemies inside in the Fog of War. The bounced laser deals area damage as well.",
         "Laser has no bounce delay, so all targets are hit at the same time.",
         "Can only bounce to heroes, including clones, illusions and creep-heroes.",
         "If the primary target is a non-hero unit, it still bounces to valid targets within the search radius.",
-        "Does not bounce on invisible units or units in the Fog of War.",
-        "With Aghanim's Scepter, Laser reduces the targets' current and max health by 700. The maximum health reduction is based on the target's maximum health, while the current health reduction is based on the current health. This means the lower the target's current health is, the less health they lose through the reduction, while the max health reduction stays constant. Since the debuff is placed before the damage is applied, the health reduction takes place before the damage. Upon losing the debuff, the target's maximum health is reverted, while their current health is kept the same. The health and model size reduction are applied by the same modifier as the blind. When upgraded, this modifier starts stacking with each cast. The model size reduction of multiple instances stacks additively",
-        "The maximum health reduction is based on the target's maximum health, while the current health reduction is based on the current health.",
-        "This means the lower the target's current health is, the less health they lose through the reduction, while the max health reduction stays constant.",
+        "Does not bounce on invisible or enemies inside in the Fog of War.",
+        "The bounced laser deals area damage as well.",
+        "With Aghanim's Scepter, Laser reduces the targets' current and maximum health by 10%. The lower the target's current health is, the less current health they lose through the reduction, while the maximum health reduction stays constant. Since the debuff is placed before the damage is applied, the health reduction takes place before the damage. Upon losing the debuff, the target's maximum health is reverted, while their current health stays the same. Both the health and the model size reduction are applied by the same modifier as the blind debuff, and multiple instances of the debuff now stacks. The model size reduction of multiple instances stacks additively.",
+        "The lower the target's current health is, the less current health they lose through the reduction, while the maximum health reduction stays constant.",
         "Since the debuff is placed before the damage is applied, the health reduction takes place before the damage.",
-        "Upon losing the debuff, the target's maximum health is reverted, while their current health is kept the same.",
-        "The health and model size reduction are applied by the same modifier as the blind. When upgraded, this modifier starts stacking with each cast.",
-        "The model size reduction of multiple instances stacks additively"
+        "Upon losing the debuff, the target's maximum health is reverted, while their current health stays the same.",
+        "Both the health and the model size reduction are applied by the same modifier as the blind debuff, and multiple instances of the debuff now stacks.",
+        "The model size reduction of multiple instances stacks additively."
       ],
       "mana": "110\/130\/150\/170 (TagTalent 101.2\/119.6\/138\/156.4)",
       "hotKey": "Q",
       "cooldown": "20\/18\/16\/14",
-      "description": "Fires an intense energy beam, dealing damage and blinding the target, causing it to miss all physical attacks.",
+      "description": "Fires an intense energy beam, dealing damage to the target and all enemy units around it. The main target is blinded, causing them to miss all physical attacks.",
       "spellName": "Laser",
       "params": [
         "Cast Animation: 0.4+1",
-        "Cast Range: 650 (TagAghanim 950)",
+        "Cast Range: 650 (TagAghanim 850)",
+        "Damage Radius: 250",
         "Damage: 80\/160\/240\/320 (TagTalent 160\/240\/320\/400)",
         "Miss Chance: 100%",
-        "Hero Duration: 3\/3.5\/4\/4.5",
-        "Creep Duration: 6",
-        "Radius Secondary Damage: 250",
-        "Secondary Damage: 100%",
+        "Hero Duration: 3\/3.5\/4\/4.5 (TagTalent 5\/5.5\/6\/6.5)",
+        "Creep Duration: 6 (TagTalent 8)",
         "Bounce Search Radius: 700",
         "Number of Bounces: 1",
         "Max\/Current Health and Model Size Reduction: 10%",
-        "Upgrades Tinker's Laser into a Shrink Ray, granting +300 cast range and reducing enemy hero's size and current health by 10% (TagAghanimstacking). The laser bounces once on the farthest target up to range from the primary one, prioritizing heroes.",
+        "Upgrades Tinker's Laser into a Shrink Ray, granting +200 cast range and reducing the main target's size and current health by 10% (TagAghanimstacking) if it's a hero. The laser bounces once on the farthest target up to 700 range from the primary one, prioritizing heroes.",
         "Blind effect persists if debuff was placed before spell immunity and when not dispelled.",
         "Blocked fully only when primary target."
       ],
       "itemBehaviour": [],
       "legacyKey": "E",
-      "story": "Boush perfected this rock cutting laser in his subterranean laboratory, never considering its combat utility."
+      "story": null
     },
     {
       "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/4\/4e\/Tinker_Heat-Seeking_Missile_1.mp3\/revision\/latest?cb=20191216025258",
@@ -84,30 +84,30 @@
         "Damage Magical"
       ],
       "notes": [
-        "Heat-Seeking Missile interrupts Tinker's channeling spells upon cast.",
+        "Heat-Seeking Missile interrupts Tinker's channeling abilities upon cast.",
         "The missiles travel at a speed of 700.",
-        "When all missiles hit, they collectively can deal up to 250\/400\/550\/700 (TagTalent 375\/600\/825\/1050) damage (before reductions).",
-        "Does not target units which are out of vision (e.g. invisible), invulnerable or hidden.",
-        "Does target hero clones and illusions.",
-        "When no valid targets were in range, the rockets are released and fall on the ground, showing that the cast failed.",
+        "When all missiles hit, they collectively deal up to 230\/380\/530\/680 (TagTalent 345\/570\/795\/1020) damage (before reductions).",
+        "Does not target invisible, invulnerable, hidden or enemies inside in the Fog of War.",
+        "Does target clones and illusions.",
+        "When cast while no valid targets are in range, the missiles are released and fall on the ground, indicating the cast failed.",
         "The Heat-Seeking Missile ministun talent first apply the damage, then the debuff."
       ],
-      "mana": "80\/95\/110\/125 (TagTalent 73.6\/87.4\/101.2\/115)",
+      "mana": "95\/105\/115\/125 (TagTalent 87.4\/96.6\/105.8\/115)",
       "hotKey": "W",
       "cooldown": "18",
-      "description": "Launches rockets at the nearest visible enemy heroes within 2500 range.",
+      "description": "Launches rockets at the nearest visible heroes within 2500 range.",
       "spellName": "Heat-Seeking Missile",
       "params": [
         "Cast Animation: 0+1.2",
         "Search Radius: 2500",
         "Number of Targets: 2 (TagTalent 3)",
-        "Damage per Rocket: 125\/200\/275\/350",
+        "Damage per Rocket: 115\/190\/265\/340",
         "Stun Duration: 0.25",
         "Does not target spell immune units."
       ],
       "itemBehaviour": [],
       "legacyKey": "T",
-      "story": "The last contraption Boush was able to save was a retrofitted rocket launcher with a homing mechanism."
+      "story": null
     },
     {
       "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/2\/2e\/Tinker_Defense_Matrix.mp3\/revision\/latest?cb=20210103154706",
@@ -117,23 +117,24 @@
       ],
       "notes": [
         "↓↓ Double-tapping automatically targets self.",
-        "Defense Matrix fully negates damage (after all reductions), causing several on-damage effects to not trigger.",
-        "Negates damage after all reductions, except the following ones: Shield Crash, Aphotic Shield, Mischief, Ghostship.",
-        "Shield Crash, Aphotic Shield, Mischief, Ghostship.",
+        "Defense Matrix fully negates damage (after all reductions), causing several on-damage effects to not trigger. Except for the following abilities: When combined with the following damage negating effects (i.e. Aphotic Shield, Ghostship, Shield Crash and Mischief), Defense Matrix negates the damage while the abilities aforementioned do not. Shields the affected target from the 3 damage types, but not heals and HP Removal effects (e.g. Sunder, Soul Ring etc.).",
+        "When combined with the following damage negating effects (i.e. Aphotic Shield, Ghostship, Shield Crash and Mischief), Defense Matrix negates the damage while the abilities aforementioned do not.",
+        "Shields the affected target from the 3 damage types, but not heals and HP Removal effects (e.g. Sunder, Soul Ring etc.).",
         "Multiple instances of the shield do not stack. Re-casting it refreshes the duration and resets the shield capacity.",
         "The status resistance stacks multiplicatively with other sources of status resistance."
       ],
       "mana": "70\/80\/90\/100 (TagTalent 64.4\/73.6\/82.8\/92)",
       "hotKey": "E",
       "cooldown": "12",
-      "description": "Targets an allied unit, applying a barrier to them that blocks the next 100\/180\/240\/320 damage and provides 20\/30\/40\/50% Status Resistance. Barrier lasts up to 15 seconds.",
+      "description": "Targets an allied unit, applying a barrier to them that blocks some damage and provides Status Resistance.",
       "spellName": "Defense Matrix",
       "params": [
         "Cast Animation: 0.2+0.6",
         "Cast Range: 600",
-        "Shield Capacity: 100\/180\/240\/320",
-        "Status Resistance Bonus: 20\/30\/40\/50%",
-        "Duration: 15"
+        "Shield Capacity: 100\/180\/240\/320 (TagTalent 250\/330\/390\/470)",
+        "Status Resistance Bonus: 20%\/30%\/40%\/50%",
+        "Duration: 15",
+        ""
       ],
       "itemBehaviour": [],
       "legacyKey": "C",
@@ -150,15 +151,14 @@
         "Requires Aghanim's Shard to be unlocked.",
         "The robots move at a speed of 400 and move a distance up to 1800 forwards, taking 4.5 seconds to travel the full distance.",
         "The 900 spawn radius is centered and fixed around the cast point, not on Tinker's location.",
-        "The spawn area is a line with 1800 length, which is centered 900 range behind the targeted cast point. The overall affected area is rather square-shaped, with 1800 side lengths.",
-        "The overall affected area is rather square-shaped, with 1800 side lengths.",
+        "The spawn area is a line with 1800 length, which is centered 900 range behind the targeted cast point. The overall affected area is a square, with 1800 side lengths.",
+        "The overall affected area is a square, with 1800 side lengths.",
         "Robots spawn in 0.0417-second intervals at a random point of the line, which is 24 robots per second, for a total of 144 robots. Robots do not spawn at points of the spawning line which are outside of the map boundaries.",
         "Robots do not spawn at points of the spawning line which are outside of the map boundaries.",
         "When an enemy comes within 50 radius of a robot, or the robot reaches max distance, it deals damage in 150 radius around itself and then disappears.",
-        "If a lone enemy stands still within the area for the full duration, they would take an average of 355.2 damage (before reductions).",
-        "If each explosion could hit a single target, it would deal up to 4320 damage (before reductions).",
-        "The robots do not explode and deal area damage when colliding with Couriers.",
-        "The sound effect upon cast is not audible by enemies. The marching sounds are."
+        "If a single enemy unit stands still within the area for the full duration, they would take an average of 355.2 damage (before reductions).",
+        "The robots do not explode and deal area damage when colliding with Courier.",
+        "The sound effect upon cast is not audible by enemies. However, the robot marching sounds are."
       ],
       "mana": "190 (TagTalent 174.8)",
       "hotKey": "D",
@@ -177,49 +177,71 @@
       ],
       "itemBehaviour": [],
       "legacyKey": "D",
-      "story": "Even though the laboratory has since been sealed off, the ability to radio in robotic drones is still in working order."
+      "story": null
     },
     {
-      "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/7\/72\/Town_Portal_Scroll_Teleport_1.mp3\/revision\/latest?cb=20191227195542",
+      "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/1\/11\/Tinker_Keen_Conveyance_1.mp3\/revision\/latest?cb=20210829210017",
       "effects": [
-        "Ability N\/A \/ Channeled",
-        "Affects Allies"
+        "Ability Target Point \/ Target Unit \/ Channeled",
+        "Affects Self"
       ],
-      "notes": [],
-      "mana": "75",
+      "notes": [
+        "Leveling this ability automatically levels Rearm as well.",
+        "↓↓ Double-tapping the ability while being at least 1500 range away from the team's fountain, automatically targets the fountain.",
+        "When ground-targeted, it automatically searches for the closest valid target for Tinker teleport to. By default, Keen Conveyance can only target buildings. Level 2, can target non-hero units as well, and level 3, can target heroes as well. Cannot directly target buildings. Instead, it uses the minimum teleport distance.",
+        "By default, Keen Conveyance can only target buildings. Level 2, can target non-hero units as well, and level 3, can target heroes as well.",
+        "Cannot directly target buildings. Instead, it uses the minimum teleport distance.",
+        "Disjoints projectiles upon teleporting.",
+        "During the channeling, the teleport destination is marked with a visual effect in the same color as the player, and a sound is played. The sound and visual effects are visible and audible to everyone. The visual effect is also visible while teleporting to invisible allies.",
+        "The sound and visual effects are visible and audible to everyone.",
+        "The visual effect is also visible while teleporting to invisible allies.",
+        "Also marks the point on the minimap for allies. The mark is in the player's color and lasts as long as the channeling does.",
+        "Provides 200 range flying vision at the destination point for the whole channel duration, even if canceled. The vision lingers for 1 second.",
+        "The targeted unit's priority is lowered, meaning it is attacked as the last auto-attack target by other units.",
+        "When the targeted unit dies or changes ownership (e.g. Enchant) during the channeling, the teleport gets canceled, wasting the cooldown and mana cost. Since buildings are not directly targeted, the destruction of the building or loss of Outposts does not cancel the teleport.",
+        "Since buildings are not directly targeted, the destruction of the building or loss of Outposts does not cancel the teleport."
+      ],
+      "mana": "75 (TagTalent 69)",
       "hotKey": "F",
-      "cooldown": "",
-      "description": "After channeling for 4.5s teleport to a target friendly structure. Level 2 allows teleporting to friendly units and Level 3 to friendly heroes.",
+      "cooldown": "80",
+      "description": "After channeling for 4.5\/4\/3.5s teleport to a target friendly structure. Level 2 allows teleporting to friendly units and Level 3 to friendly heroes.",
       "spellName": "Keen Conveyance",
       "params": [
         "Cast Animation: 0+0",
-        "Channel Time: 4.5\/4\/3.5 (TagTalent 4\/3.5\/3)"
+        "Cast Range: Global",
+        "Min Targeting Distance to Building: 70",
+        "Max Targeting Distance to Building: 800",
+        "Max Targeting Distance to Outposts: 250",
+        "Channel Time: 4.5\/4\/3.5 (TagTalent 4\/3.5\/3)",
+        "Channel Time to Outpost: 5 (TagTalent 4.5)",
+        "Prevents casting, and cancels the teleport if already channeling."
       ],
       "itemBehaviour": [],
-      "legacyKey": "F",
-      "story": "As Boush likes to say, 'There is nothing the arcane can accomplish that the curious mind cannot reproduce given time. And proper funding, of course.'."
+      "legacyKey": "V",
+      "story": null
     },
     {
-      "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/b\/b9\/Tinker_Rearm_1.mp3\/revision\/latest?cb=20191216025250",
+      "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/b\/b9\/Tinker_Rearm_1.mp3\/revision\/latest?cb=20210829210011",
       "effects": [
         "Ability No Target \/ Channeled",
         "Affects Self"
       ],
       "notes": [
-        "In Ability Draft, Rearm grants charge-based abilities a single charge back when used, and does not reset Devour's cooldown.",
-        "The following items are not refreshed with Rearm: Aeon Disk, Arcane Boots, Black King Bar, Hand of Midas, Helm of the Dominator, Linken's Sphere, Meteor Hammer, Pipe of Insight, Refresher Orb, Refresher Shard and neutral items. Visually resets the cooldown of Tranquil Boots, but does not skip the broken state. Does not reset charges on charge-based items (TagTalent Bottle, Drum of Endurance). Only refreshes items in Tinker's inventory and backpack. Items in stash, in other units' (e.g. couriers) inventories or dropped items are unaffected. Only refreshes items owned by Tinker. Allied items in his inventory or backpack are not refreshed. When the channeling is interrupted, nothing is rearmed.",
+        "Leveling this ability automatically levels Keen Conveyance as well.",
+        "The following items are not refreshed with Rearm: Aeon Disk, Arcane Boots, Black King Bar, Hand of Midas, Helm of the Dominator, Linken's Sphere, Meteor Hammer, Pipe of Insight, Refresher Orb, Refresher Shard and neutral items. Visually resets the cooldown of Tranquil Boots, but does not skip the broken state. Does not reset charges on charge-based items (e.g. Drum of Endurance). Only refreshes items owned by Tinker, his inventory and backpack. Items in stash, in other units' inventories (e.g. Courier) or dropped items are unaffected. Allied items in his inventory or backpack are not refreshed. When the channeling is interrupted, nothing is rearmed.",
         "Aeon Disk, Arcane Boots, Black King Bar, Hand of Midas, Helm of the Dominator, Linken's Sphere, Meteor Hammer, Pipe of Insight, Refresher Orb, Refresher Shard and neutral items.",
         "Visually resets the cooldown of Tranquil Boots, but does not skip the broken state.",
-        "Does not reset charges on charge-based items (TagTalent Bottle, Drum of Endurance).",
-        "Only refreshes items in Tinker's inventory and backpack. Items in stash, in other units' (e.g. couriers) inventories or dropped items are unaffected.",
-        "Only refreshes items owned by Tinker. Allied items in his inventory or backpack are not refreshed.",
+        "Does not reset charges on charge-based items (e.g. Drum of Endurance).",
+        "Only refreshes items owned by Tinker, his inventory and backpack. Items in stash, in other units' inventories (e.g. Courier) or dropped items are unaffected. Allied items in his inventory or backpack are not refreshed.",
+        "Items in stash, in other units' inventories (e.g. Courier) or dropped items are unaffected.",
+        "Allied items in his inventory or backpack are not refreshed.",
         "When the channeling is interrupted, nothing is rearmed.",
         "Can rearm Crimson Guard and Mekansm, but does not reset their stack restriction timer. The same rule applies when rearming Guardian Greaves, but Mend still restores mana.",
         "The same rule applies when rearming Guardian Greaves, but Mend still restores mana.",
         "Rearm's sound gets shorter with each level to match the decreasing channel time.",
-        "The Rearm modifier has only informational purpose."
+        "The Rearm modifier is only for informational purposes."
       ],
-      "mana": "100\/210\/320 (TagTalent 92\/193.2\/294.4)",
+      "mana": "150\/225\/300 (TagTalent 138\/207\/276)",
       "hotKey": "R",
       "cooldown": "0",
       "description": "Resets the cooldown on most of Tinker's items and abilities.",
@@ -231,7 +253,7 @@
       ],
       "itemBehaviour": [],
       "legacyKey": "R",
-      "story": "A new battery here, another set of rockets there, Boush continually improves on existing technology."
+      "story": null
     }
   ],
   "mainAttributes": {
@@ -252,7 +274,7 @@
     },
     {
       "talentLvl": "20",
-      "talentLeft": "+150 Defense Matrix Damage Absorved",
+      "talentLeft": "+150 Defense Matrix Damage Absorbed",
       "talentRight": "+10% Spell Amplification"
     },
     {
@@ -263,7 +285,7 @@
     {
       "talentLvl": "10",
       "talentLeft": "+8% Manacost\/Manaloss Reduction",
-      "talentRight": "+2 Laser Blind Duration"
+      "talentRight": "+2s Laser Blind Duration"
     }
   ]
 }

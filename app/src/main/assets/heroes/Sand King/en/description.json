@@ -36,29 +36,30 @@
         "Damage Magical"
       ],
       "notes": [
-        "The spikes travel at a speed of 2000 (TagTalent 3000), reaching max range in 0.2\/0.25\/0.3\/0.35 (TagTalent 0.43) seconds. The spikes do not travel the full distance when targeting closer than the max range.",
+        "The spikes travel at a speed of 2000 (TagTalent 3000), reaching max range in 0.21\/0.25\/0.29\/0.33 (TagTalent 0.43) seconds. The spikes do not travel the full distance when targeting closer than the max range.",
         "The spikes do not travel the full distance when targeting closer than the max range.",
         "Sand King is teleported instantly towards the targeted point once the spikes reach it. Does not disjoint projectiles upon cast or upon teleporting. The burrowing and reappearing takes 0.53 seconds from the moment the ability is cast, during which Sand King is disabled and cannot do anything.",
         "Does not disjoint projectiles upon cast or upon teleporting.",
         "The burrowing and reappearing takes 0.53 seconds from the moment the ability is cast, during which Sand King is disabled and cannot do anything.",
-        "When targeting a unit, Sand King chases the target until it is within range and casts Burrowstrike towards its direction. The spikes still do not home in on the target, thus can be evaded. Targeting a unit only determines the direction upon cast.",
-        "The spikes still do not home in on the target, thus can be evaded. Targeting a unit only determines the direction upon cast.",
+        "When unit-targeted, Sand King chases the target until it is within range and casts Burrowstrike towards its direction. The spikes still do not home in on the target, thus can be evaded. Unit-targeting only determines the direction upon cast.",
+        "The spikes still do not home in on the target, thus can be evaded. Unit-targeting only determines the direction upon cast.",
         "Hit units are knocked up 350 range for the initial 0.52 seconds of the stun. While in the air, other units may pass below hit airborne units. The damage is applied upon landing, not upon getting hit.",
         "While in the air, other units may pass below hit airborne units.",
         "The damage is applied upon landing, not upon getting hit.",
-        "With the max cast range and radius, it can hit units up to 550\/650\/750\/850 (TagTalent 1450) range away.",
-        "With Aghanim's Scepter, Burrowstrike applies Caustic Finale debuff based on its current level on all hit heroes, excluding illusions. Treats creep-heroes as creeps. Other notes of Caustic Finale fully apply. If Caustic Finale is not learnt, no debuff is applied.",
+        "With the maximum cast range and radius, it can hit units up to 575\/650\/725\/800 (TagTalent 1450) range away.",
+        "With Aghanim's Scepter, Burrowstrike applies Caustic Finale debuff based on its current level on all hit heroes, including clones, excluding illusions and creep-heroes. Other notes of Caustic Finale fully apply. If Caustic Finale is not leveled, no debuff is applied. In Ability Draft, Caustic Finale must be drafted as well for it to get applied.",
         "Other notes of Caustic Finale fully apply.",
-        "If Caustic Finale is not learnt, no debuff is applied."
+        "If Caustic Finale is not leveled, no debuff is applied.",
+        "In Ability Draft, Caustic Finale must be drafted as well for it to get applied."
       ],
       "mana": "110\/120\/130\/140",
       "hotKey": "Q",
-      "cooldown": "14\/13\/12\/11 (TagTalent 12\/11\/10\/9)",
+      "cooldown": "15\/14\/13\/12 (TagTalent 13\/12\/11\/10)",
       "description": "Sand King burrows into the ground and tunnels forward, damaging and stunning enemy units above him as he resurfaces.",
       "spellName": "Burrowstrike",
       "params": [
         "Cast Animation: 0+0.53",
-        "Cast Range: 400\/500\/600\/700 (TagAghanim 1300)",
+        "Cast Range: 425\/500\/575\/650 (TagAghanim 1300)",
         "Spikes Radius: 150",
         "Damage: 100\/160\/220\/280",
         "Stun Duration: 1.6\/1.8\/2\/2.2",
@@ -68,7 +69,7 @@
       ],
       "itemBehaviour": [],
       "legacyKey": "E",
-      "story": "Crixalis often lies in wait, burrowing under the surface to ambush his adversaries."
+      "story": null
     },
     {
       "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/2\/27\/Sand_King_Sand_Storm.mp3\/revision\/latest?cb=20191216022822",
@@ -83,7 +84,7 @@
         "However, since casting Sand Storm applies the invisibility instantly, the fade delay does not take effect when re-casting it while inside the previous cast's area.",
         "Sand Storm deals 10\/22.5\/35\/47.5 (TagTalent 20\/32.5\/45\/57.5) damage in 0.5-second intervals, starting immediately upon cast, resulting in a total of 40\/50\/60\/70 instances. Can deal up to 400\/1125\/2100\/3325 (TagTalent 800\/1625\/2700\/4025) damage to a single unit (before reductions) if it stays in range for the whole duration.",
         "Can deal up to 400\/1125\/2100\/3325 (TagTalent 800\/1625\/2700\/4025) damage to a single unit (before reductions) if it stays in range for the whole duration.",
-        "With the level 25 talent, enemy units within the Sand Storm radius are blinded and have their movement speed slowed by 40%. The effects are provided by an aura, and its debuff lingers for 0.5 seconds. Sand Storm's blind uses pseudo-random distribution.",
+        "With the level 25 talent, enemy units within the radius are blinded and have their movement speed slowed by 40%. The effects are provided by an aura, and its debuff lingers for 0.5 seconds. Sand Storm's blind uses pseudo-random distribution.",
         "The effects are provided by an aura, and its debuff lingers for 0.5 seconds.",
         "Sand Storm's blind uses pseudo-random distribution."
       ],
@@ -105,7 +106,7 @@
       ],
       "itemBehaviour": [],
       "legacyKey": "R",
-      "story": "Some say Crixalis is a mirage; his carapace appearing then vanishing between the whirling sands of the Scintillant Waste."
+      "story": null
     },
     {
       "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/2\/20\/Sand_King_Caustic_Finale.mp3\/revision\/latest?cb=20191216022819",
@@ -117,8 +118,7 @@
       "notes": [
         "The area damage triggers only when the unit is killed by one of its enemies while having the debuff on. This means the unit does not explode when it gets denied, expires (e.g. summons and illusions), or killed without a credited source (e.g. multiple Meepo clones).",
         "This means the unit does not explode when it gets denied, expires (e.g. summons and illusions), or killed without a credited source (e.g. multiple Meepo clones).",
-        "When an illusion dies with the debuff, only the base damage is applied within the area, the health-based extra damage is not applied.",
-        "Does not deal any damage to illusions.",
+        "When an illusion dies with the debuff, only the base damage is applied within the radius, the max health as damage is not applied.",
         "Successive attacks on the same target do not stack, but refresh the duration instead. However, the debuff does not get updated. All its values are set upon initial placement.",
         "However, the debuff does not get updated. All its values are set upon initial placement.",
         "The debuff is not placed on allies, buildings and wards."
@@ -137,7 +137,7 @@
       ],
       "itemBehaviour": [],
       "legacyKey": "L",
-      "story": "An injection from Crixalis makes one brittle and as dry as the arid wastes, subject to implosive demise."
+      "story": null
     },
     {
       "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/3\/3f\/Sand_King_Epicenter_1.mp3\/revision\/latest?cb=20191216022820",
@@ -148,27 +148,26 @@
       ],
       "notes": [
         "Once cast, the damage pulses cannot be canceled in any way, not even by Sand King's death.",
-        "The pulse radii are all centered on and follow Sand King. The pulses happen in 0.5\/0.375\/0.3-second (TagTalent 0.27\/0.23\/0.2-second) intervals, starting 0.5\/0.375\/0.3 (TagTalent 0.27\/0.23\/0.2) seconds after cast. This means it takes 3 seconds for the ability to release all pulses after the initial delay.",
-        "The pulses happen in 0.5\/0.375\/0.3-second (TagTalent 0.27\/0.23\/0.2-second) intervals, starting 0.5\/0.375\/0.3 (TagTalent 0.27\/0.23\/0.2) seconds after cast.",
+        "The pulse radii are all centered on and follow Sand King. The pulses happen in 0.5\/0.375\/0.3 (TagTalent 0.27\/0.23\/0.2)-second intervals, starting 0.5\/0.375\/0.3 (TagTalent 0.27\/0.23\/0.2) seconds after cast. This means it takes 3 seconds for the ability to release all pulses after the initial delay.",
+        "The pulses happen in 0.5\/0.375\/0.3 (TagTalent 0.27\/0.23\/0.2)-second intervals, starting 0.5\/0.375\/0.3 (TagTalent 0.27\/0.23\/0.2) seconds after cast.",
         "This means it takes 3 seconds for the ability to release all pulses after the initial delay.",
-        "Can deal a total of 660\/960\/1300 (1210\/1560\/1950) damage (before reductions).",
+        "Can deal a total of 660\/960\/1300 (TagTalent 1210\/1560\/1950) (TagTalent 780\/1120\/1500, 1430\/1820\/2250) damage without any talents (before reductions).",
         "The slow is applied to enemies on each pulse. Multiple instances of the slow on a unit do not stack, but refresh the duration. Can slow a single unit for up to 6 seconds. Each pulse first applies the damage, then the debuff.",
         "Can slow a single unit for up to 6 seconds.",
         "Each pulse first applies the damage, then the debuff.",
         "Multiple casts of Epicenter fully stack, with each cast creating its own independent instance.",
-        "With Aghanim's Shard, Epicenter passively releases a single pulse when Sand King collectively moves a distance of 700. The pulses are based on Epicenter's current level. If it is not learned, the passive pulses are not released. However, the distance counter still counts even if Epicenter is not learned. Teleporting effects (which includes blinking) may only add up to 700 range to the distance counter, no matter how big the actual teleported distance was. This means long distance teleports may only release one pulse, and not multiple pulses based on the entire distance. The distance counter has no time limit. It only resets upon releasing a passive pulse. When no enemies are within the radius, the pulse waits until an enemy comes within range, and releases the pulse immediately once there is. With the extra damage provided by the shard, can deal a total of 780\/1120\/1500 (1430\/1820\/2250) damage (before reductions).",
+        "With Aghanim's Shard, Epicenter passively releases a single pulse when Sand King collectively moves a distance of 700. The pulses are based on Epicenter's current level. If it is not learned, the passive pulses are not released. However, the distance counter still counts even if Epicenter is not learned. Teleporting effects (including Blink-based abilities) may only add up to 700 range to the distance counter, no matter how far the actual teleported distance was. This means long-distance teleports may only release one pulse, and not multiple pulses based on the entire distance. The distance counter has no time limit. It only resets upon releasing a passive pulse. When no enemies are within 475 radius, the pulse waits until an enemy comes within range, and releases the pulse immediately once there is.",
         "The pulses are based on Epicenter's current level. If it is not learned, the passive pulses are not released.",
         "However, the distance counter still counts even if Epicenter is not learned.",
-        "Teleporting effects (which includes blinking) may only add up to 700 range to the distance counter, no matter how big the actual teleported distance was.",
-        "This means long distance teleports may only release one pulse, and not multiple pulses based on the entire distance.",
+        "Teleporting effects (including Blink-based abilities) may only add up to 700 range to the distance counter, no matter how far the actual teleported distance was.",
+        "This means long-distance teleports may only release one pulse, and not multiple pulses based on the entire distance.",
         "The distance counter has no time limit. It only resets upon releasing a passive pulse.",
-        "When no enemies are within the radius, the pulse waits until an enemy comes within range, and releases the pulse immediately once there is.",
-        "With the extra damage provided by the shard, can deal a total of 780\/1120\/1500 (1430\/1820\/2250) damage (before reductions)."
+        "When no enemies are within 475 radius, the pulse waits until an enemy comes within range, and releases the pulse immediately once there is."
       ],
       "mana": "150\/225\/300",
       "hotKey": "R",
       "cooldown": "120\/110\/100",
-      "description": "After channeling for seconds, Sand King sends a disturbance into the earth, causing it to shudder violently. All enemies caught within range will take damage and become slowed. Each subsequent pulse increases the radius of damage dealt.",
+      "description": "After a cast point of 2 seconds, Sand King sends a disturbance into the earth, causing it to shudder violently. All enemies caught within range will take damage and become slowed. Each subsequent pulse increases the radius of damage dealt.",
       "spellName": "Epicenter",
       "params": [
         "Cast Animation: 2+0",
@@ -181,12 +180,12 @@
         "Epicenter Duration: 3",
         "Passive Distance Required for Pulse: 700",
         "Passive Pulse Radius: 475",
-        "Every 700 units moved causes an Epicenter Pulse around Sand King in 475 AoE. Increases Pulse damage by 20.",
+        "Every 700 units moved causes an Epicenter Pulse around Sand King in 475 AoE. Increases Epicenter Pulse Damage by 20",
         "The passive pulses are not disabled by Break."
       ],
       "itemBehaviour": [],
       "legacyKey": "C",
-      "story": "Many an explorer was lost to the quicksands of the Scintillant Waste."
+      "story": null
     }
   ],
   "mainAttributes": {

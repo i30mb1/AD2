@@ -22,11 +22,11 @@
         {
           "talentLvl": "15",
           "talentLeft": "+70 к макс. здоровью за убийство Finger of Death",
-          "talentRight": "-2 сек. перезарядки Earth Spike"
+          "talentRight": "−2 сек. перезарядки Earth Spike"
         },
         {
           "talentLvl": "10",
-          "talentLeft": "+70 к урону",
+          "talentLeft": "+60 к урону",
           "talentRight": "+15 к скорости передвижения"
         }
       ]
@@ -69,7 +69,7 @@
       ],
       "itemBehaviour": [],
       "legacyKey": "E",
-      "story": "Демонолог осуществляет свой демонический завет, открывая трещину в ад."
+      "story": null
     },
     {
       "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/4\/43\/Lion_Hex_1.mp3\/revision\/latest?cb=20191216015630",
@@ -104,7 +104,7 @@
       ],
       "itemBehaviour": [],
       "legacyKey": "D",
-      "story": "Демонолог вынужден разделять своё преобразование с несогласными, закручивая и их сущность."
+      "story": null
     },
     {
       "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/9\/9b\/Lion_Mana_Drain.mp3\/revision\/latest?cb=20191216015631",
@@ -149,7 +149,7 @@
       ],
       "itemBehaviour": [],
       "legacyKey": "R",
-      "story": "Младшие маги \u2014 не более чем источник магической силы для демонолога."
+      "story": null
     },
     {
       "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/3\/32\/Lion_Finger_of_Death_1.mp3\/revision\/latest?cb=20191216015627",
@@ -189,7 +189,7 @@
       ],
       "itemBehaviour": [],
       "legacyKey": "F",
-      "story": "Изувеченная рука демонолога является источником его великой силы, способной утопить жертв колдовской мощью."
+      "story": null
     }
   ],
   "mainAttributes": {
@@ -216,11 +216,11 @@
     {
       "talentLvl": "15",
       "talentLeft": "+70 к макс. здоровью за убийство Finger of Death",
-      "talentRight": "-2 сек. перезарядки Earth Spike"
+      "talentRight": "−2 сек. перезарядки Earth Spike"
     },
     {
       "talentLvl": "10",
-      "talentLeft": "+70 к урону",
+      "talentLeft": "+60 к урону",
       "talentRight": "+15 к скорости передвижения"
     }
   ]

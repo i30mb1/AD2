@@ -24,7 +24,7 @@
         {
           "talentLvl": "10",
           "talentLeft": "+9 Strength",
-          "talentRight": "+60 Shukuchi Damage"
+          "talentRight": "+50 Shukuchi Damage"
         }
       ]
     },
@@ -36,33 +36,32 @@
         "Damage Physical"
       ],
       "notes": [
-        "The Swarm moves forward at a speed of 750, taking 5 seconds to reach max distance.",
-        "The beetles are not attackable when traveling as a swarm. They become attackable only after latching onto targets.",
-        "Beetles have the highest priority for auto-attack behaviors, together with Phantoms.",
-        "The beetles spawn within a 300 radius randomly around Weaver and move forward as a swarm.",
-        "When an enemy unit comes within 100 radius of a beetle, the beetle latches onto it, unless it already has a beetle latched onto it. This means that multiple casts cannot affect the same unit more than once simultaneously, and the duration cannot be refreshed. The beetles can latch on invulnerable units, but not on invisible or hidden units. If a beetle's target turns hidden after latching, it still stays on it and is not removed. If a beetle's target turns invisible after latching, the beetle dies instantly (credited to no one), if the unit is not under True Sight. With Aghanim's Shard, beetles can latch on invisible units (ignoring True Sight Immunity), and provide True Sight over them. When the beetles get affected by Chronosphere they instantly die, credited to no one.",
-        "This means that multiple casts cannot affect the same unit more than once simultaneously, and the duration cannot be refreshed.",
-        "The beetles can latch on invulnerable units, but not on invisible or hidden units.",
-        "If a beetle's target turns hidden after latching, it still stays on it and is not removed.",
-        "If a beetle's target turns invisible after latching, the beetle dies instantly (credited to no one), if the unit is not under True Sight.",
-        "With Aghanim's Shard, beetles can latch on invisible units (ignoring True Sight Immunity), and provide True Sight over them.",
-        "When the beetles get affected by Chronosphere they instantly die, credited to no one.",
-        "With the spawn radius, travel distance and latch radius, the beetles can latch on units 3400 range away. When attached, the beetle always stays 64 range in front of the unit.",
-        "When attached, the beetle always stays 64 range in front of the unit.",
-        "The Swarm deals damage in 1.15\/1.0\/0.85\/0.7-second intervals, starting immediately when latching on a unit, resulting in up to 14\/17\/19\/23 attacks. The beetles do not actually attack their targets, but rather the ability simply deals damage to them in the set intervals while the beetle is attached. This means the damage is sourced to Weaver, and is affected by outgoing damage manipulation and spell lifesteal. The Swarm's damage is not affected by Damage Block. Can deal up to 252\/340\/418\/552 damage to each latched enemy (before reductions).",
-        "The beetles do not actually attack their targets, but rather the ability simply deals damage to them in the set intervals while the beetle is attached.",
-        "This means the damage is sourced to Weaver, and is affected by outgoing damage manipulation and spell lifesteal.",
-        "The Swarm's damage is not affected by Damage Block.",
+        "The Swarm spawn within a 300 radius randomly around Weaver and moves forward at a speed of 750, taking 4 seconds to reach the maximum distance. The Beetles are not attackable when traveling as a swarm. They can be attackable only after latching onto targets. They provide flying vision while traveling forwards, and while latched onto their targets. They have the highest priority for auto-attack behaviors, together with Phantoms. With the maximum travel distance, spawn radius, and latch radius, the Beetles can latch on units 3400 range away.",
+        "The Beetles are not attackable when traveling as a swarm. They can be attackable only after latching onto targets.",
+        "They provide flying vision while traveling forwards, and while latched onto their targets.",
+        "They have the highest priority for auto-attack behaviors, together with Phantoms.",
+        "With the maximum travel distance, spawn radius, and latch radius, the Beetles can latch on units 3400 range away.",
+        "The Beetle latches 64 range in front of any enemy unit that comes within 100 radius, unless another Beetle has already latched onto it. This means that multiple casts do not affect the same unit more than once, and its duration cannot be refreshed. Can latch on invulnerable units, but not invisible or hidden units. The Beetle and its latched target have the following interactions: When the latched target turns invisible, while not under True Sight, the Beetle dies instantly. However, with Aghanim's Shard, Beetles can latch on invisible units (ignoring True Sight Immunity), and provide True Sight over them. When the latched target is hidden, the Beetle is still latched onto the target and not removed. The Beetle dies instantly while entering Chronosphere. Beetles that die instantly in the aforementioned situations above are not credited to anyone.",
+        "This means that multiple casts do not affect the same unit more than once, and its duration cannot be refreshed.",
+        "Can latch on invulnerable units, but not invisible or hidden units.",
+        "The Beetle and its latched target have the following interactions: When the latched target turns invisible, while not under True Sight, the Beetle dies instantly. However, with Aghanim's Shard, Beetles can latch on invisible units (ignoring True Sight Immunity), and provide True Sight over them. When the latched target is hidden, the Beetle is still latched onto the target and not removed.",
+        "When the latched target turns invisible, while not under True Sight, the Beetle dies instantly.",
+        "However, with Aghanim's Shard, Beetles can latch on invisible units (ignoring True Sight Immunity), and provide True Sight over them.",
+        "When the latched target is hidden, the Beetle is still latched onto the target and not removed.",
+        "The Beetle dies instantly while entering Chronosphere.",
+        "Beetles that die instantly in the aforementioned situations above are not credited to anyone.",
+        "The Swarm deals damage in 1.15\/1.0\/0.85\/0.7-second intervals, starting immediately when it is latched on a unit, this results in 14\/17\/19\/23 possible attacks. Although the Beetles are latched to their targets, the damage is sourced to Weaver, not the Beetles. Therefore, the damage is affected by outgoing damage manipulation and spell lifesteal. Can deal up to 252\/340\/418\/552 damage to each latched enemy (before reductions).",
+        "Although the Beetles are latched to their targets, the damage is sourced to Weaver, not the Beetles.",
+        "Therefore, the damage is affected by outgoing damage manipulation and spell lifesteal.",
         "Can deal up to 252\/340\/418\/552 damage to each latched enemy (before reductions).",
-        "The armor reduction is independent from the damage. It keeps reducing armor on ethereal targets, but not invulnerable targets. The armor reduction is directly bound to the beetle, so it disappears always together with it. On each interval, The Swarm first applies the armor reduction, then the damage. Can reduce up to 14\/17\/19\/23 (TagTalent 21\/25.5\/28.5\/34.5) armor per unit.",
-        "The armor reduction is directly bound to the beetle, so it disappears always together with it.",
-        "On each interval, The Swarm first applies the armor reduction, then the damage.",
+        "The armor reduction is bound to the Beetle and it is independent from the damage. The armor reduction fully affects ethereal units, but not invulnerable units. Can reduce up to 14\/17\/19\/23 (TagTalent 21\/25.5\/28.5\/34.5) armor per unit.",
+        "The armor reduction fully affects ethereal units, but not invulnerable units.",
         "Can reduce up to 14\/17\/19\/23 (TagTalent 21\/25.5\/28.5\/34.5) armor per unit.",
-        "The beetles provide flying vision while traveling forwards and while attached to a unit."
+        "On each interval, The Swarm first applies the armor reduction, then the damage."
       ],
       "mana": "110",
       "hotKey": "Q",
-      "cooldown": "44\/36\/28\/20 (TagTalent 40\/32\/24\/16)",
+      "cooldown": "44\/36\/28\/20 (TagTalent 42\/34\/26\/18)",
       "description": "Weaver launches a swarm of 12 young Weavers that latch on any enemy unit in their path, attacking and reducing armor until it is killed.",
       "spellName": "The Swarm",
       "params": [
@@ -78,12 +77,12 @@
         "Damage per Tick: 18\/20\/22\/24",
         "Armor Reduction per Tick: 1 (TagTalent 1.5)",
         "Beetle Duration: 16",
-        "Reduces cooldown by 4 seconds. Causes The Swarm to latch onto and reveal invisible units.",
+        "Reduces cooldown by 2 seconds. Causes The Swarm to latch onto and reveal invisible units.",
         "Turning spell immune does not remove already attached beetles."
       ],
       "itemBehaviour": [],
       "legacyKey": "R",
-      "story": "Skitskurr opens a gap in the space time fabric, allowing young Weavers to slip through and aid him in combat."
+      "story": null
     },
     {
       "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/2\/23\/Weaver_Shukuchi.mp3\/revision\/latest?cb=20191216030508",
@@ -94,16 +93,15 @@
       ],
       "notes": [
         "Shukuchi does not interrupt Weaver's channeling abilities upon cast.",
-        "Invisibility disjoints projectiles upon cast, if the enemy has no True Sight.",
-        "Can only damage the same unit once per cast.",
-        "Applies haste and grants phased movement to Weaver, meaning he cannot be slowed while affected. Unlike other phasing invisibility spells, Shukuchi turns Weaver phased instantly on cast, instead of after the fade time.",
-        "Unlike other phasing invisibility spells, Shukuchi turns Weaver phased instantly on cast, instead of after the fade time.",
-        "During the fade time, Weaver can attack and cast abilities and items without breaking the invisibility.",
-        "Invisibility is broken upon reaching the cast point of abilities or items, or upon launching an attack. Weaver can pick up or drop items without breaking the invisibility.",
-        "Weaver can pick up or drop items without breaking the invisibility.",
-        "When learning the level 25 talent, Weaver immediately gains 1 charge."
+        "Disjoints projectiles upon cast, if the enemy has no True Sight on Weaver.",
+        "Shukuchi can only damage the same unit once per cast.",
+        "During the fade time, Weaver can cast abilities, use items and perform attacks without breaking the invisibility.",
+        "The invisibility is broken upon reaching the cast point of abilities or items, or upon landing an attack. Missed attacks do not break it. Weaver can pick up, drop or attack items without breaking the invisibility.",
+        "Weaver can pick up, drop or attack items without breaking the invisibility.",
+        "Grants haste and phased movement while fully invisible, meaning he cannot be slowed while affected. Unlike other phased movement sources, Shukuchi turns Weaver phased instantly upon cast, instead of after the fade time.",
+        "Unlike other phased movement sources, Shukuchi turns Weaver phased instantly upon cast, instead of after the fade time."
       ],
-      "mana": "70",
+      "mana": "60",
       "hotKey": "W",
       "cooldown": "12\/10\/8\/6 (TagTalent 0)",
       "description": "Weaver shifts out of visibility, gaining max movement speed --doing harm to any enemies it passes through.",
@@ -112,7 +110,7 @@
         "Cast Animation: 0+0",
         "Fade Time: 0.25",
         "Damage Radius: 175",
-        "Damage: 100\/125\/150\/175 (TagTalent 160\/185\/210\/235)",
+        "Damage: 100\/125\/150\/175 (TagTalent 150\/175\/200\/225)",
         "Haste Speed: 550",
         "Duration: 4",
         "Number of Charges: 2",
@@ -120,7 +118,7 @@
       ],
       "itemBehaviour": [],
       "legacyKey": "C",
-      "story": "As the Weavers worked in the fabric of creation, small wormholes allowed them to slip through time to better work their craft."
+      "story": null
     },
     {
       "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/f\/fa\/Weaver_Geminate_Attack.mp3\/revision\/latest?cb=20191216030516",
@@ -130,20 +128,20 @@
         "Damage Instant Attack"
       ],
       "notes": [
-        "Upon leveling Geminate Attack the first time, it has Autocast on by default.",
-        "Causes Weaver to perform an instant attack on the attacked target 0.25 seconds after launching the leading attack. These instant attacks can proc any attack modifiers and on-hit effects normally. They do not have True Strike, but completely ignore disarms. The instant attacks of Geminate Attack do not break Smoke of Deceit's invisibility. The bonus damage is only applied to the extra attacks. The triggering attack does not deal more damage.",
+        "Upon leveling Geminate Attack the first time, it has Autocast on by default. Despite being an active ability, Geminate Attack can trigger while silenced, if set to Autocast.",
+        "Despite being an active ability, Geminate Attack can trigger while silenced, if set to Autocast.",
+        "Causes Weaver to perform 1 (TagTalent 2) instant attack(s) on the attacked target 0.25 seconds after releasing the leading attack. These instant attacks can proc any attack modifiers and on-hit effects normally. They do not have True Strike, but completely ignore disarms. They do not break Smoke of Deceit's invisibility as well.",
         "These instant attacks can proc any attack modifiers and on-hit effects normally. They do not have True Strike, but completely ignore disarms.",
-        "The instant attacks of Geminate Attack do not break Smoke of Deceit's invisibility.",
-        "The bonus damage is only applied to the extra attacks. The triggering attack does not deal more damage.",
-        "There is no range limit for the Geminate Attacks, they launch regardless of how far away the target got before they launched. Even if the initial attack kills the target, the Geminate Attacks are still released, hitting the dead target. Weaver has to be alive for the attack to happen.",
-        "Even if the initial attack kills the target, the Geminate Attacks are still released, hitting the dead target.",
-        "Weaver has to be alive for the attack to happen.",
-        "Works against enemy buildings, Courier and wards, except for Observer and Sentry Wards. Does not work against buildings when manually cast.",
-        "Does not work against buildings when manually cast.",
-        "With Aghanim's Shard, Geminate Attacks targets every enemy unit affected by The Swarm that is within 1200 range of the primary attack target. Unlike the Geminate Attacks on the primary target, these instant attacks do not trigger attack modifiers or on-hit effects. These Geminate Attacks are launched simultaneously with the Geminate Attacks on the primary attack target. The Beetles do not have to be Weaver's beetles. Works with beetles from allies as well.",
-        "Unlike the Geminate Attacks on the primary target, these instant attacks do not trigger attack modifiers or on-hit effects.",
-        "These Geminate Attacks are launched simultaneously with the Geminate Attacks on the primary attack target.",
-        "The Beetles do not have to be Weaver's beetles. Works with beetles from allies as well."
+        "They do not break Smoke of Deceit's invisibility as well.",
+        "The bonus damage is only applied to the extra attacks. The attack that triggers Geminate Attack does not deal more damage. Weaver has to be alive for these extra attacks to happen. There is no range limit for these extra attacks, they launch regardless of how far away the target is currently at. Even if the initial attack damage kills the target before Geminate Attack triggers, the extra attacks are still released, hitting the dead target.",
+        "Weaver has to be alive for these extra attacks to happen.",
+        "There is no range limit for these extra attacks, they launch regardless of how far away the target is currently at.",
+        "Even if the initial attack damage kills the target before Geminate Attack triggers, the extra attacks are still released, hitting the dead target.",
+        "Works against enemy buildings, Couriers and wards, except for Observer and Sentry Wards.",
+        "With Aghanim's Shard, Geminate Attacks targets every enemy unit affected that have Beetles latched within 1200 range of the primary attack target. Geminate Attack fully works for allied Beetles (e.g. when acquired via Morph) that latched on their targets as well. Unlike the instant attacks on the primary target, these instant attacks on secondary targets do not trigger attack modifiers or on-hit effects. They do not have True Strike, but completely ignore disarms as well. These Geminate Attacks on secondary targets are launched simultaneously with the extra attacks on the primary attack target.",
+        "Geminate Attack fully works for allied Beetles (e.g. when acquired via Morph) that latched on their targets as well.",
+        "Unlike the instant attacks on the primary target, these instant attacks on secondary targets do not trigger attack modifiers or on-hit effects. They do not have True Strike, but completely ignore disarms as well.",
+        "These Geminate Attacks on secondary targets are launched simultaneously with the extra attacks on the primary attack target."
       ],
       "mana": null,
       "hotKey": "E",
@@ -154,12 +152,14 @@
         "Effect Delay: 0.25",
         "Number of Extra Attacks: 1 (TagTalent 2)",
         "Attack Damage Bonus: 10\/25\/40\/55 (TagTalent 100\/115\/130\/145)",
-        "Beetle Targets Search Radius: 1200",
-        "Causes Geminate Attack to launch on other enemies within 1200 range of the target that have Beetles attached to them."
+        "The Swarm Targets Search Radius: 1200",
+        "Causes Geminate attack to launch on other enemies within 1200 range of the target that have Beetles attached to them.",
+        "Despite being an active ability, Geminate Attack is disabled by Break.",
+        "Geminate Attack is always toggled on for illusions, but they cannot trigger it."
       ],
       "itemBehaviour": [],
       "legacyKey": "K",
-      "story": "Skitskurr's relationship with time is somewhat variable, causing his actions to be witnessed \u2014 and felt \u2014 more than once."
+      "story": null
     },
     {
       "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/a\/a1\/Weaver_Time_Lapse.mp3\/revision\/latest?cb=20191216030512",
@@ -168,22 +168,21 @@
         "Affects Self (TagAghanim Allied Heroes)"
       ],
       "notes": [
-        "Time Lapse disjoints projectiles and applies a strong dispel upon cast.",
-        "Weaver is ordered to stop right after getting moved back. This automatically cancels the cast backswing of Time Lapse. ⇧ Shift-queue commands are not canceled.",
-        "This automatically cancels the cast backswing of Time Lapse.",
-        "⇧ Shift-queue commands are not canceled.",
-        "Only affects Weaver's position, health, mana and status debuffs. Buffs are not removed.",
-        "It does not matter how long Weaver is already affected by debuffs, they simply are completely removed, if they can be removed.",
-        "Time Lapse does not damage Weaver, it manipulates his health. So it does not interact with any on-damage effect.",
-        "When cast right after respawning, the health, mana and position are set to what they were before the death. This means that Time Lapse does not kill the caster when cast immediately after respawning.",
-        "This means that Time Lapse does not kill the caster when cast immediately after respawning.",
-        "With Aghanim's Scepter, Time Lapse turns into a unit-targeted spell, applying all the effects on the target. Can only target heroes, including clones and illusions, excluding creep-heroes. ↓↓ Double-tapping automatically targets self. Does not order the target to stop, so their channeling abilities are not canceled. The cast backswing is only used when cast on allies, since self-casts automatically cancel the backswing. When cast on allies who just respawned, their health, mana and position are not set back to what they were before the death. This means allies cannot be sent back to their death location after respawning, unlike how Weaver can when cast on self.",
-        "Can only target heroes, including clones and illusions, excluding creep-heroes.",
+        "Weaver is ordered to stop right after getting moved back, this automatically cancels the cast backswing of Time Lapse. However, ⇧ Shift-queue commands are not canceled.",
+        "However, ⇧ Shift-queue commands are not canceled.",
+        "Time Lapse disjoints projectiles and applies a strong dispel upon cast. Only affects Weaver's position, health, mana, and status debuffs. Buffs are not removed.",
+        "Only affects Weaver's position, health, mana, and status debuffs. Buffs are not removed.",
+        "Sets Weaver's or the target ally's health back to what it was 5 seconds ago. This ability neither deals damage nor heals. Therefore, it does not interact with any on-damage effects. When cast right after respawning, the caster's health, mana and position are set to what they were before the death. This means that it does not kill the caster when cast immediately after respawning.",
+        "This ability neither deals damage nor heals. Therefore, it does not interact with any on-damage effects.",
+        "When cast right after respawning, the caster's health, mana and position are set to what they were before the death.",
+        "This means that it does not kill the caster when cast immediately after respawning.",
+        "With Aghanim's Scepter, Time Lapse turns into a unit-targeted ability, applying all the effects on the target. ↓↓ Double-tapping automatically targets self. Can only target heroes, including clones and illusions, excluding creep-heroes. However, unit-targeting does not order the target to stop, so their channeling abilities are not canceled. The 0.53 cast backswing is only used when cast on allies, since self-casting automatically cancels the backswing. When cast on allies right after respawning, their health, mana and position are not set back to what they were before the death. This means allies cannot be sent back to their death location after respawning, unlike how Weaver can when self-casting.",
         "↓↓ Double-tapping automatically targets self.",
-        "Does not order the target to stop, so their channeling abilities are not canceled.",
-        "The cast backswing is only used when cast on allies, since self-casts automatically cancel the backswing.",
-        "When cast on allies who just respawned, their health, mana and position are not set back to what they were before the death.",
-        "This means allies cannot be sent back to their death location after respawning, unlike how Weaver can when cast on self."
+        "Can only target heroes, including clones and illusions, excluding creep-heroes.",
+        "However, unit-targeting does not order the target to stop, so their channeling abilities are not canceled.",
+        "The 0.53 cast backswing is only used when cast on allies, since self-casting automatically cancels the backswing.",
+        "When cast on allies right after respawning, their health, mana and position are not set back to what they were before the death.",
+        "This means allies cannot be sent back to their death location after respawning, unlike how Weaver can when self-casting."
       ],
       "mana": "150\/75\/0",
       "hotKey": "R",
@@ -193,12 +192,12 @@
       "params": [
         "Cast Animation: 0.3+0.53",
         "Lapsed Time: 5",
-        "Cast Range: 600",
+        "Cast Range: 500",
         "Reduces cooldown, and allows Weaver to cast Time Lapse on an ally."
       ],
       "itemBehaviour": [],
       "legacyKey": "T",
-      "story": "If Skitskurr does not deem the current reality of the world to fit his desires, he simply crawls back in time to right what was wronged."
+      "story": null
     },
     {
       "audioUrl": null,
@@ -263,7 +262,7 @@
     {
       "talentLvl": "10",
       "talentLeft": "+9 Strength",
-      "talentRight": "+60 Shukuchi Damage"
+      "talentRight": "+50 Shukuchi Damage"
     }
   ]
 }

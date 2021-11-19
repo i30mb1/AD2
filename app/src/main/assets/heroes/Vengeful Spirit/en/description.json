@@ -2,7 +2,7 @@
   "abilities": [
     {
       "notes": [
-        "The agility talent effectively grants Vengeful Spirit 1.67 armor, 10 attack speed, and 10 attack damage.",
+        "The agility talent effectively grants Vengeful Spirit 1.67 armor, 10 attack speed, and 10 main attack damage.",
         "The magic resistance talent stacks multiplicatively with other sources of magic resistance. Increases Vengeful Spirit's magic resistance to 34%.",
         "Increases Vengeful Spirit's magic resistance to 34%."
       ],
@@ -56,7 +56,7 @@
       ],
       "itemBehaviour": [],
       "legacyKey": "C",
-      "story": "A simple Skywrath technique, the magic missile is Shendel's primary tool for vengeance."
+      "story": null
     },
     {
       "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/6\/6c\/Vengeful_Spirit_Wave_of_Terror.mp3\/revision\/latest?cb=20191216030144",
@@ -73,22 +73,15 @@
         "The debuff from successive casts does not stack, only the duration gets refreshed.",
         "The wave first applies the debuff, then the damage.",
         "Does not affect Couriers.",
-        "With Aghanim's Shard, Vengeful Spirit gains a buff for each enemy hit by Wave of Terror. Multiple instances of this buff fully stack. Uses the regular debuff to steal attack damage and armor from the targets. The debuff does not stack. This means it reduces attack damage and armor of all enemies hit. However, Vengeful Spirit only gains the buff from affected heroes, including clones, excluding illusions and creep-heroes. Only reduces base attack damage and that given by the primary attribute of affected units. Raw bonus damage is not reduced. The attack damage reduction adapts to any changes to the hero's base attack damage immediately. However, the attack damage Vengeful Spirit receives is set upon gaining the buff and does not adapt. The attack damage reduction is applied as a raw attack damage reduction, it does not alter their main attack damage. However, the buff on Vengeful Spirit adds the damage directly to her main attack damage. The amount of damage gained equals the exact amount of attack damage the target lost upon gaining the debuff. Only reduces base armor and that given by agility of affected units. Raw armor is not reduced. Neither the armor reduction on the target nor the gain on Vengeful Spirit adapt to any changes to the target's main armor. The armor reduction is directly subtracted from the target's main armor, it is not applied as a raw reduction. However, the buff on Vengeful Spirit adds the armor as a raw bonus instead. The amount of armor gained equals the exact amount of armor the target lost upon gaining the debuff. Wave of Terror's default armor reduction is applied normally on the targets still. Vengeful Spirit does not gain this armor.",
-        "Uses the regular debuff to steal attack damage and armor from the targets. The debuff does not stack.",
+        "With Aghanim's Shard, Vengeful Spirit gains a buff for each enemy hit by Wave of Terror. Multiple instances of this buff fully stack. Uses the regular Wave of Terror debuff to steal attack damage and armor from the targets. The debuff does not stack. This means it reduces attack damage and armor of all enemies hit. However, Vengeful Spirit only gains the buff from affected heroes, including clones, excluding illusions and creep-heroes.",
+        "Uses the regular Wave of Terror debuff to steal attack damage and armor from the targets. The debuff does not stack.",
         "This means it reduces attack damage and armor of all enemies hit.",
         "However, Vengeful Spirit only gains the buff from affected heroes, including clones, excluding illusions and creep-heroes.",
-        "Only reduces base attack damage and that given by the primary attribute of affected units. Raw bonus damage is not reduced. The attack damage reduction adapts to any changes to the hero's base attack damage immediately. However, the attack damage Vengeful Spirit receives is set upon gaining the buff and does not adapt. The attack damage reduction is applied as a raw attack damage reduction, it does not alter their main attack damage. However, the buff on Vengeful Spirit adds the damage directly to her main attack damage. The amount of damage gained equals the exact amount of attack damage the target lost upon gaining the debuff.",
-        "The attack damage reduction adapts to any changes to the hero's base attack damage immediately.",
-        "However, the attack damage Vengeful Spirit receives is set upon gaining the buff and does not adapt.",
-        "The attack damage reduction is applied as a raw attack damage reduction, it does not alter their main attack damage.",
-        "However, the buff on Vengeful Spirit adds the damage directly to her main attack damage.",
-        "The amount of damage gained equals the exact amount of attack damage the target lost upon gaining the debuff.",
-        "Only reduces base armor and that given by agility of affected units. Raw armor is not reduced. Neither the armor reduction on the target nor the gain on Vengeful Spirit adapt to any changes to the target's main armor. The armor reduction is directly subtracted from the target's main armor, it is not applied as a raw reduction. However, the buff on Vengeful Spirit adds the armor as a raw bonus instead. The amount of armor gained equals the exact amount of armor the target lost upon gaining the debuff. Wave of Terror's default armor reduction is applied normally on the targets still. Vengeful Spirit does not gain this armor.",
-        "Neither the armor reduction on the target nor the gain on Vengeful Spirit adapt to any changes to the target's main armor.",
-        "The armor reduction is directly subtracted from the target's main armor, it is not applied as a raw reduction.",
-        "However, the buff on Vengeful Spirit adds the armor as a raw bonus instead.",
-        "The amount of armor gained equals the exact amount of armor the target lost upon gaining the debuff.",
-        "Wave of Terror's default armor reduction is applied normally on the targets still. Vengeful Spirit does not gain this armor."
+        "Both 20% attack damage and armor reduction is directly reduced from the target's main attack damage and main armor. Bonus attack damage and bonus bonuses are not reduced. The attack damage gained is added as main attack damage for Vengeful Spirit, however the armor gained is added as bonus armor. The stolen values are set upon gaining the buff and do not adapt to the target's main attack damage or main armor, and it equals the exact amount of values the target lost upon debuffed.",
+        "The attack damage gained is added as main attack damage for Vengeful Spirit, however the armor gained is added as bonus armor.",
+        "The stolen values are set upon gaining the buff and do not adapt to the target's main attack damage or main armor, and it equals the exact amount of values the target lost upon debuffed.",
+        "Wave of Terror's default armor reduction is applied normally on the targets still. Vengeful Spirit does not gain this armor. With Aghanim's Shard, Wave of Terror effectively removes 20% main armor + 3\/4\/5\/6 (TagTalent 5\/6\/7\/8) bonus armor in total.",
+        "With Aghanim's Shard, Wave of Terror effectively removes 20% main armor + 3\/4\/5\/6 (TagTalent 5\/6\/7\/8) bonus armor in total."
       ],
       "mana": "25\/30\/35\/40",
       "hotKey": "W",
@@ -109,7 +102,7 @@
       ],
       "itemBehaviour": [],
       "legacyKey": "E",
-      "story": "Shendel's haunting voice hints at her approaching vindication."
+      "story": null
     },
     {
       "audioUrl": null,
@@ -119,15 +112,18 @@
       ],
       "notes": [
         "The aura's buff lingers for 0.5 seconds.",
-        "Only increases base damage and that given by the primary attribute of affected units. Raw bonus damage is not increased.",
+        "Grants flat bonus attack damage based on the affected unit's main attack damage. Does not further increase bonus attack damage.",
         "The aura affects invulnerable, but not hidden allies.",
-        "With Aghanim's Scepter, The illusion spawns 108 range away either north, east, south or west from Vengeful Spirit's death location. The illusion is a strong illusion, meaning it cannot be instantly killed by abilities which normally kill illusions instantly. The illusion always spawns with full mana and health and all abilities off cooldown, regardless of their status on Vengeful Spirit. The illusion can cast abilities, but cannot cast item abilities. The illusion does not get a set duration upon spawning. It disappears once Vengeful Spirit respawns. The illusion spawns on every death, including on the short deaths with reincarnation. The created illusion is visually distinguishable from the real Vengeful Spirit for the enemies. Unlike other illusions, this illusion does not have a gold bounty. This illusion cannot be Enchanted. It gets slowed instead.",
+        "With Aghanim's Scepter, The illusion spawns 108 range away either north, east, south or west from Vengeful Spirit's death location. The illusion is a strong illusion, meaning it cannot be instantly killed by abilities which normally kill illusions instantly. It always spawns with full mana and health and all abilities off-cooldown, regardless of their cooldown status on Vengeful Spirit. It can cast abilities, but not item abilities. The illusion spawns on every death, including with Reincarnation sources. It does not have a set duration upon spawning and is equal of Vengeful Spirit's normal death duration. The next respawn time increase from buying back does not further increase the illusion's duration. The illusion disappear once Vengeful Spirit respawns, or when it reaches the normal death duration.",
         "The illusion is a strong illusion, meaning it cannot be instantly killed by abilities which normally kill illusions instantly.",
-        "The illusion always spawns with full mana and health and all abilities off cooldown, regardless of their status on Vengeful Spirit.",
-        "The illusion can cast abilities, but cannot cast item abilities.",
-        "The illusion does not get a set duration upon spawning. It disappears once Vengeful Spirit respawns.",
-        "The illusion spawns on every death, including on the short deaths with reincarnation.",
-        "The created illusion is visually distinguishable from the real Vengeful Spirit for the enemies.",
+        "It always spawns with full mana and health and all abilities off-cooldown, regardless of their cooldown status on Vengeful Spirit.",
+        "It can cast abilities, but not item abilities.",
+        "The illusion spawns on every death, including with Reincarnation sources.",
+        "It does not have a set duration upon spawning and is equal of Vengeful Spirit's normal death duration.",
+        "The next respawn time increase from buying back does not further increase the illusion's duration.",
+        "The illusion disappear once Vengeful Spirit respawns, or when it reaches the normal death duration.",
+        "The created illusion is visually distinguishable from the real Vengeful Spirit for the enemies. This illusion uses the hero health bar instead of the regular unit health bar like other illusions. Unlike other illusions, this illusion does not have a gold bounty. This illusion cannot be Enchanted. It gets slowed instead.",
+        "This illusion uses the hero health bar instead of the regular unit health bar like other illusions.",
         "Unlike other illusions, this illusion does not have a gold bounty.",
         "This illusion cannot be Enchanted. It gets slowed instead.",
         "With Aghanim's Scepter, Vengeful Spirit can gain experience even while dead. While dead, she is periodically moved along with the Vengeance Illusion, allowing her to gain experience around the illusion. This also allows her to respawn at the illusion's location, instead of at the fountain. However, these effects require the illusion to be alive. If it dies, she no longer gains experience, and stops moving along with it.",
@@ -147,43 +143,47 @@
         "Number of Illusions on Death: 1",
         "Illusion Damage Dealt: 100%",
         "Illusion Damage Taken: 100%",
-        "Illusion Move Speed Bonus: 25%",
-        "Upon death, creates a strong illusion of Vengeful Spirit that deals and takes 100% damage and can cast all of her spells. Illusion has 25% movement speed bonus. If the illusion is alive when Vengeful Spirit respawns, she will take its place. XP earned by her illusion is given to her.",
+        "Illusion Move Speed Bonus: 12%",
+        "Upon death, creates a strong illusion of Vengeful Spirit that deals and takes 100% damage and can cast all of her spells. Illusion has 12% movement speed bonus. If the illusion is alive when Vengeful Spirit respawns, she will take its place. XP earned by her illusion is given to her.",
         "Aura is disabled by break. Still spawns a Vengeance illusion on death.",
         "Illusions bestow the aura. Illusions do not spawn a Vengeance illusion on their death."
       ],
       "itemBehaviour": [],
       "legacyKey": "D",
-      "story": "Although they may not share her undying passion for revenge, allies do draw on her fanaticism in combat."
+      "story": null
     },
     {
       "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/a\/ab\/Vengeful_Spirit_Nether_Swap.mp3\/revision\/latest?cb=20191216030143",
       "effects": [
         "Ability Target Unit",
-        "Affects Heroes"
+        "Affects Heroes",
+        "Damage Magical"
       ],
       "notes": [
-        "The target is given a stop command as soon as it is teleported back, effectively canceling channeling abilities.",
-        "Does not disjoint projectiles upon teleporting, neither for the caster, nor for the target.",
-        "Destroys trees within 300 radius around Vengeful Spirit and the Nether Swap target.",
-        "Can be cast on illusions, Spirit Bear, and on invulnerable units.",
-        "The damage is only dealt to enemies, the damage reduction buff is only given to Vengeful Spirit and an allied target."
+        "The target is given a stop command as soon as it is swapped back, effectively canceling channeling abilities.",
+        "Does not disjoint projectiles upon swapped, neither for the caster, nor for the target.",
+        "Destroys trees within 300 radius around Vengeful Spirit and the target.",
+        "Can be cast on illusions, Spirit Bear and on invulnerable units.",
+        "The damage is only applied to enemy targets.",
+        "Vengeful Spirit always gains the buff, no matter if she targets an ally or an enemy. Applies generic incoming damage reduction on allies. Stacks additively with other sources of generic incoming damage manipulation. The reduction affects all damage the allies take that is not flagged as HP removal.",
+        "Applies generic incoming damage reduction on allies. Stacks additively with other sources of generic incoming damage manipulation.",
+        "The reduction affects all damage the allies take that is not flagged as HP removal."
       ],
       "mana": "100\/150\/200",
       "hotKey": "R",
       "cooldown": "50\/40\/30 (TagTalent 35\/25\/15)",
-      "description": "Instantaneously swaps positions with a target Hero, friend or enemy. Nether Swap interrupts channeling abilities on the target.",
+      "description": "Instantaneously swaps positions with a target Hero, friend or enemy. Nether Swap interrupts channeling abilities on the target. Enemy Swapped units take 50 damage Allied swapped units receive less damage for a short duration",
       "spellName": "Nether Swap",
       "params": [
         "Cast Animation: 0.4+0",
         "Cast Range: 800\/950\/1100",
-        "Damage: 50",
-        "Damage Reduction: 30%\/40%\/50%",
-        "Duration: 3"
+        "Enemy Damage: 50",
+        "Ally\/Self Incoming Damage Reduction: 30%\/40%\/50%",
+        "Damage Reduction Duration: 3"
       ],
       "itemBehaviour": [],
       "legacyKey": "W",
-      "story": "Martyrdom is a small price to pay for vengeance."
+      "story": null
     }
   ],
   "mainAttributes": {
@@ -191,7 +191,7 @@
     "attrStrength": 19.0,
     "attrIntelligence": 19.0,
     "attrIntelligenceInc": 1.5,
-    "attrAgilityInc": 3.8,
+    "attrAgilityInc": 3.2,
     "attrAgility": 20.0
   },
   "description": "Shendelzare, the Vengeful Spirit, is a ranged agility hero who excels at ganking, disabling, and kill hunts. She is one of the most well-rounded supports in the game, possessing a skill set that allows her to set up kills for her team during ganks and teamfights, strengthening her team and weakening the enemy in large-scale engagements, and saving allies from certain death if they are caught by the enemy.",

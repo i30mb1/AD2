@@ -1,9 +1,6 @@
 {
   "abilities": [
     {
-      "notes": [
-        "Талант на силу в общем даёт Legion Commander: 140 здоровья, 0,7 регенерации здоровья и 7 урона от атаки."
-      ],
       "spellName": "Talent",
       "talents": [
         {
@@ -18,13 +15,13 @@
         },
         {
           "talentLvl": "15",
-          "talentLeft": "-6 сек. от перезарядки Overwhelming Odds",
-          "talentRight": "+25 к скорости атаки"
+          "talentLeft": "+75 к урону за героя от Overwhelming Odds",
+          "talentRight": "+40 здоровья в секунду от Press the Attack"
         },
         {
           "talentLvl": "10",
-          "talentLeft": "+1,5 маны в секунду",
-          "talentRight": "+7 к силе"
+          "talentLeft": "+200 к дальности применения Duel",
+          "talentRight": "+100 к радиусу Overwhelming Odds"
         }
       ]
     },
@@ -52,7 +49,7 @@
       ],
       "mana": "100\/110\/120\/130",
       "hotKey": "Q",
-      "cooldown": "15 (TagTalent 9)",
+      "cooldown": "15 (TagTalent -60)",
       "description": "Оборачивает численное преимущество врага против него самого, нанося урон противникам в выбранной области. Каждое задетое существо увеличивает урон от способности и дарует её владельцу дополнительную скорость передвижения. Иллюзии и призванные существа получают дополнительный урон в виде доли от их текущего здоровья.",
       "spellName": "Overwhelming Odds",
       "params": [
@@ -70,7 +67,7 @@
       ],
       "itemBehaviour": [],
       "legacyKey": "W",
-      "story": "Лучники Стоунхолла всегда в распоряжении Тресдин."
+      "story": null
     },
     {
       "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/a\/a3\/Legion_Commander_Press_the_Attack.mp3\/revision\/latest?cb=20191216014950",
@@ -100,7 +97,7 @@
       ],
       "itemBehaviour": [],
       "legacyKey": "T",
-      "story": "Сплочающий горн Бронзового легиона способен водушевить любого."
+      "story": null
     },
     {
       "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/9\/9e\/Legion_Commander_Moment_of_Courage.mp3\/revision\/latest?cb=20191216014945",
@@ -135,7 +132,7 @@
       ],
       "itemBehaviour": [],
       "legacyKey": "E",
-      "story": "Тресдин знает, что враг наиболее уязвим после своего самого жестокого удара."
+      "story": null
     },
     {
       "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/c\/c1\/Legion_Commander_Duel_1.mp3\/revision\/latest?cb=20191216014943",
@@ -182,7 +179,7 @@
       ],
       "itemBehaviour": [],
       "legacyKey": "D",
-      "story": "Одиночный поединок с воином Стоунхолла считается большой честью."
+      "story": null
     }
   ],
   "mainAttributes": {
@@ -208,13 +205,13 @@
     },
     {
       "talentLvl": "15",
-      "talentLeft": "-6 сек. от перезарядки Overwhelming Odds",
-      "talentRight": "+25 к скорости атаки"
+      "talentLeft": "+75 к урону за героя от Overwhelming Odds",
+      "talentRight": "+40 здоровья в секунду от Press the Attack"
     },
     {
       "talentLvl": "10",
-      "talentLeft": "+1,5 маны в секунду",
-      "talentRight": "+7 к силе"
+      "talentLeft": "+200 к дальности применения Duel",
+      "talentRight": "+100 к радиусу Overwhelming Odds"
     }
   ]
 }

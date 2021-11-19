@@ -1,10 +1,6 @@
 {
   "abilities": [
     {
-      "notes": [
-        "Этот талант добавляет урон от атаки в прямой урон от атаки. Не даётся иллюзиям, и также не попадает под действие большинства эффектов увеличивающих или уменьшающих урон на процентное значение.",
-        "Не даётся иллюзиям, и также не попадает под действие большинства эффектов увеличивающих или уменьшающих урон на процентное значение."
-      ],
       "spellName": "Talent",
       "talents": [
         {
@@ -25,7 +21,7 @@
         {
           "talentLvl": "10",
           "talentLeft": "+0,75 сек. безмолвия от Waning Rift",
-          "talentRight": "+25 к урону"
+          "talentRight": "+300 к дальности Illusory Orb"
         }
       ]
     },
@@ -57,7 +53,7 @@
       ],
       "itemBehaviour": [],
       "legacyKey": "R",
-      "story": "Волшебный дракончик обожает вводить врагов в замешательство, внезапно исчезая и появляясь то тут, то там."
+      "story": null
     },
     {
       "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/0\/0c\/Puck_Waning_Rift.mp3\/revision\/latest?cb=20191216021936",
@@ -99,7 +95,7 @@
       ],
       "itemBehaviour": [],
       "legacyKey": "W",
-      "story": "Дракончик с шаловливой улыбкой распыляет зачарованный порошок, нарушающий магический поток."
+      "story": null
     },
     {
       "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/a\/ac\/Puck_Phase_Shift.mp3\/revision\/latest?cb=20191216021935",
@@ -132,7 +128,7 @@
       ],
       "itemBehaviour": [],
       "legacyKey": "F",
-      "story": "Ехидно усмехнувшись, волшебный дракончик со вспышкой возвращается в иное, родное для себя измерение."
+      "story": null
     },
     {
       "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/4\/43\/Puck_Ethereal_Jaunt.mp3\/revision\/latest?cb=20191216021932",
@@ -154,7 +150,8 @@
       "description": "Перемещает героя к шару от способности Illusory Orb.",
       "spellName": "Ethereal Jaunt",
       "params": [
-        "Анимация применения: 0+0,53"
+        "Анимация применения: 0+0,53",
+        ""
       ],
       "itemBehaviour": [],
       "legacyKey": "E",
@@ -204,7 +201,7 @@
       ],
       "itemBehaviour": [],
       "legacyKey": "C",
-      "story": "Волшебный дракончик сеет смятение в рядах врагов, заставляя их осознать свою смертность."
+      "story": null
     }
   ],
   "mainAttributes": {
@@ -236,7 +233,7 @@
     {
       "talentLvl": "10",
       "talentLeft": "+0,75 сек. безмолвия от Waning Rift",
-      "talentRight": "+25 к урону"
+      "talentRight": "+300 к дальности Illusory Orb"
     }
   ]
 }

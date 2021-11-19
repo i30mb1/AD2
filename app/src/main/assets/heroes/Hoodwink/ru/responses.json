@@ -5670,6 +5670,577 @@
     "category": "Способность на перезарядке"
   },
   {
+    "responses": [
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/2\/26\/Vo_hoodwink_hoodwink_nomana_01.mp3\/revision\/latest?cb=20201220010330",
+        "title": "Yeah, no mana."
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/5\/51\/Vo_hoodwink_hoodwink_nomana_04.mp3\/revision\/latest?cb=20201220010338",
+        "title": "Out of mana."
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/1\/16\/Vo_hoodwink_hoodwink_nomana_07.mp3\/revision\/latest?cb=20201220010346",
+        "title": "Fresh out mate."
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/e\/e8\/Vo_hoodwink_hoodwink_nomana_10.mp3\/revision\/latest?cb=20201220010353",
+        "title": "Sure, if you got some mana."
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/9\/9c\/Vo_hoodwink_hoodwink_nomana_13.mp3\/revision\/latest?cb=20201220010401",
+        "title": "Seen any mana?"
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/6\/69\/Vo_hoodwink_hoodwink_nomana_02.mp3\/revision\/latest?cb=20201220010333",
+        "title": "There's no mana."
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/7\/7d\/Vo_hoodwink_hoodwink_nomana_05.mp3\/revision\/latest?cb=20201220010340",
+        "title": "I'm out of mana."
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/f\/fb\/Vo_hoodwink_hoodwink_nomana_08.mp3\/revision\/latest?cb=20201220010348",
+        "title": "I'm all out."
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/9\/9b\/Vo_hoodwink_hoodwink_nomana_11.mp3\/revision\/latest?cb=20201220010356",
+        "title": "Give me mana."
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/9\/99\/Vo_hoodwink_hoodwink_nomana_14.mp3\/revision\/latest?cb=20201220010404",
+        "title": "No more mana?"
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/f\/f8\/Vo_hoodwink_hoodwink_nomana_03.mp3\/revision\/latest?cb=20201220010335",
+        "title": "There's no mana!"
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/7\/74\/Vo_hoodwink_hoodwink_nomana_06.mp3\/revision\/latest?cb=20201220010343",
+        "title": "I'm out of mana!"
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/6\/65\/Vo_hoodwink_hoodwink_nomana_09.mp3\/revision\/latest?cb=20201220010351",
+        "title": "There's no more of that right now!"
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/c\/cf\/Vo_hoodwink_hoodwink_nomana_12.mp3\/revision\/latest?cb=20201220010358",
+        "title": "I need mana!"
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/8\/8b\/Vo_hoodwink_hoodwink_nomana_15.mp3\/revision\/latest?cb=20201220010406",
+        "title": "There's no mana!"
+      }
+    ],
     "category": "Нехватка маны"
+  },
+  {
+    "responses": [
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/1\/11\/Vo_hoodwink_hoodwink_anger_01.mp3\/revision\/latest?cb=20201220003048",
+        "title": "Rah!"
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/5\/58\/Vo_hoodwink_hoodwink_anger_04.mp3\/revision\/latest?cb=20201220003052",
+        "title": "Hoh!"
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/6\/68\/Vo_hoodwink_hoodwink_anger_06.mp3\/revision\/latest?cb=20201220003056",
+        "title": "Hah!"
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/d\/d5\/Vo_hoodwink_hoodwink_anger_07.mp3\/revision\/latest?cb=20201220004205",
+        "title": "Huh!"
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/8\/89\/Vo_hoodwink_hoodwink_anger_08.mp3\/revision\/latest?cb=20201220004207",
+        "title": "Hurgh!"
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/d\/d4\/Vo_hoodwink_hoodwink_anger_09.mp3\/revision\/latest?cb=20201220004208",
+        "title": "Nyah!"
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/8\/89\/Vo_hoodwink_hoodwink_attack_small_03.mp3\/revision\/latest?cb=20201220004546",
+        "title": "Uah!"
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/6\/65\/Vo_hoodwink_hoodwink_pain_01.mp3\/revision\/latest?cb=20201220010517",
+        "title": "Ugh!"
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/e\/e3\/Vo_hoodwink_hoodwink_pain_02.mp3\/revision\/latest?cb=20201220010519",
+        "title": "Agh!"
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/7\/7c\/Vo_hoodwink_hoodwink_pain_03.mp3\/revision\/latest?cb=20201220010522",
+        "title": "Ugh!"
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/1\/18\/Vo_hoodwink_hoodwink_pain_04.mp3\/revision\/latest?cb=20201220010524",
+        "title": "Eek!"
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/8\/87\/Vo_hoodwink_hoodwink_pain_07.mp3\/revision\/latest?cb=20201220010526",
+        "title": "Ah!"
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/d\/dc\/Vo_hoodwink_hoodwink_pain_09.mp3\/revision\/latest?cb=20201220010529",
+        "title": "Ugh!"
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/4\/47\/Vo_hoodwink_hoodwink_pain_10.mp3\/revision\/latest?cb=20201220010531",
+        "title": "Wegh!"
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/1\/18\/Vo_hoodwink_hoodwink_underattack_01.mp3\/revision\/latest?cb=20201220011757",
+        "title": "I'm under attack!"
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/c\/ce\/Vo_hoodwink_hoodwink_underattack_03.mp3\/revision\/latest?cb=20201220011802",
+        "title": "Get'm off me!"
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/7\/73\/Vo_hoodwink_hoodwink_underattack_04.mp3\/revision\/latest?cb=20201220011805",
+        "title": "Hey, hey, hey, ow!"
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/f\/f7\/Vo_hoodwink_hoodwink_underattack_02.mp3\/revision\/latest?cb=20201220011800",
+        "title": "Don't let them hide me!"
+      }
+    ],
+    "category": "Получение урона"
+  },
+  {
+    "responses": [
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/2\/29\/Vo_hoodwink_hoodwink_bandits_01.mp3\/revision\/latest?cb=20201220004554",
+        "title": "Yeah, I guess sometimes people think they can push me around, but it's easy enough to educate 'em."
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/b\/b4\/Vo_hoodwink_hoodwink_bandits_02.mp3\/revision\/latest?cb=20201220004556",
+        "title": "Like the . Thought they could bully me into being some kind of gopher."
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/e\/e9\/Vo_hoodwink_hoodwink_bandits_03.mp3\/revision\/latest?cb=20201220004557",
+        "title": "The first two came to find me, I let go minus a few pints and pieces."
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/d\/d0\/Vo_hoodwink_hoodwink_bandits_04.mp3\/revision\/latest?cb=20201220004559",
+        "title": "The next four? Well, only one of them crawled away at all. And I kept more than my fair share."
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/e\/e1\/Vo_hoodwink_hoodwink_bandits_05.mp3\/revision\/latest?cb=20201220004601",
+        "title": "Of course you'd have to be an idiot to keep coming at me after a thing like that."
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/f\/fa\/Vo_hoodwink_hoodwink_bandits_06.mp3\/revision\/latest?cb=20201220004603",
+        "title": "So the next six I treated real special. Enough to make a demon cry."
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/a\/a3\/Vo_hoodwink_hoodwink_bandits_07.mp3\/revision\/latest?cb=20201220004604",
+        "title": "After that, I'd be the idiot if I'd just left things on course."
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/2\/2a\/Vo_hoodwink_hoodwink_bandits_08.mp3\/revision\/latest?cb=20201220012048",
+        "title": "So I crossed out the whole lot of 'em."
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/1\/1a\/Vo_hoodwink_hoodwink_bandits_09.mp3\/revision\/latest?cb=20201220004619",
+        "title": "The locals who found the bodies decided the place is cursed."
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/4\/4f\/Vo_hoodwink_hoodwink_bandits_10.mp3\/revision\/latest?cb=20201220004621",
+        "title": "So it makes a choice hideout if you're ever in need."
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/0\/01\/Vo_hoodwink_hoodwink_durana_01.mp3\/revision\/latest?cb=20201220004949",
+        "title": "Paws down, the most dangerous beastie in the deep wood is the Durana."
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/5\/5d\/Vo_hoodwink_hoodwink_durana_02.mp3\/revision\/latest?cb=20201220004951",
+        "title": "And the danger's not just the tentacles or the teeth or the paralytic secretions neither."
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/d\/d3\/Vo_hoodwink_hoodwink_durana_03.mp3\/revision\/latest?cb=20201220004952",
+        "title": "It's the temptation. The loss of control."
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/f\/f8\/Vo_hoodwink_hoodwink_durana_04.mp3\/revision\/latest?cb=20201220004954",
+        "title": "Because Durana pheromones aren't for breeding. They're for feeding."
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/b\/ba\/Vo_hoodwink_hoodwink_durana_05.mp3\/revision\/latest?cb=20201220004956",
+        "title": "And they affect different folk in different ways."
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/9\/9c\/Vo_hoodwink_hoodwink_durana_06.mp3\/revision\/latest?cb=20201220004958",
+        "title": "You haven't seen bonkers till you've seen a column of cavalry get swept up in the Durana daze."
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/a\/ae\/Vo_hoodwink_hoodwink_durana_07.mp3\/revision\/latest?cb=20201220004959",
+        "title": "Some going giggly, others going mad."
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/9\/98\/Vo_hoodwink_hoodwink_durana_08.mp3\/revision\/latest?cb=20201220005001",
+        "title": "Not a single one looking out for hungry beasties slinking up behind."
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/e\/ef\/Vo_hoodwink_hoodwink_durana_09.mp3\/revision\/latest?cb=20201220005003",
+        "title": "I don't have to worry though."
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/b\/b2\/Vo_hoodwink_hoodwink_durana_10_02.mp3\/revision\/latest?cb=20201220005004",
+        "title": "That stuff only works on bigger prey."
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/d\/d8\/Vo_hoodwink_hoodwink_durana_11.mp3\/revision\/latest?cb=20201220005006",
+        "title": "So even when one does does feel inclined to snatch at me... Well, tentacles and teeth only go so far."
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/2\/27\/Vo_hoodwink_hoodwink_durana_invasion_01.mp3\/revision\/latest?cb=20201220005008",
+        "title": "First thing you need to know about the Durana: they aren't natural."
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/2\/24\/Vo_hoodwink_hoodwink_durana_invasion_02.mp3\/revision\/latest?cb=20201220005009",
+        "title": "Sure, they breed faster'n swamp rabbits...."
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/e\/ec\/Vo_hoodwink_hoodwink_durana_invasion_03_02.mp3\/revision\/latest?cb=20201220005011",
+        "title": "But the first ones were conjured up outta thin air by some wizard."
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/5\/51\/Vo_hoodwink_hoodwink_durana_invasion_04.mp3\/revision\/latest?cb=20201220005013",
+        "title": "And wizards are morons. So of course the beasties got outta control and ran amok."
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/2\/2a\/Vo_hoodwink_hoodwink_durana_invasion_05.mp3\/revision\/latest?cb=20201220005015",
+        "title": "So now everybody's gotta deal with this horrific invasive species that likes to eat grown men for a snack."
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/8\/87\/Vo_hoodwink_hoodwink_durana_invasion_06.mp3\/revision\/latest?cb=20201220005016",
+        "title": "Heh...though there's some in the pacified lands who think I'm in an invasive species."
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/f\/f9\/Vo_hoodwink_hoodwink_durana_invasion_07.mp3\/revision\/latest?cb=20201220005018",
+        "title": "Maybe they're not wrong."
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/3\/38\/Vo_hoodwink_hoodwink_durana_invasion_08.mp3\/revision\/latest?cb=20201220005020",
+        "title": "When I can figure out how to bait the Durana into Krimwohl anyway, I guess we're gonna find out."
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/e\/e9\/Vo_hoodwink_hoodwink_home_01.mp3\/revision\/latest?cb=20201220005107",
+        "title": "My uncle used to say we'd never had to leave home if that little goblin lady never showed up selling her magic powder."
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/b\/b5\/Vo_hoodwink_hoodwink_home_02.mp3\/revision\/latest?cb=20201220005108",
+        "title": "Krimwohl was mostly harmless before they got the black powder."
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/9\/94\/Vo_hoodwink_hoodwink_home_03.mp3\/revision\/latest?cb=20201220005110",
+        "title": "And whether she meant for them to suss out how to make it for themselves or not, point is they'd never in a jillion years've done it without getting their mitts on it in the first place."
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/0\/05\/Vo_hoodwink_hoodwink_home_04.mp3\/revision\/latest?cb=20201220005112",
+        "title": "Once they got it though, their appetites grew. All their appetites."
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/1\/11\/Vo_hoodwink_hoodwink_home_05.mp3\/revision\/latest?cb=20201220005114",
+        "title": "And any of us living on the lands they wanted had no choice but to surrender, run, or die to make a stand."
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/6\/6a\/Vo_hoodwink_hoodwink_home_06.mp3\/revision\/latest?cb=20201220005115",
+        "title": "So we came to the Wood Tomo'kan. The dark wood -- where they say bad things await all warm bloods that enter."
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/8\/86\/Vo_hoodwink_hoodwink_home_07.mp3\/revision\/latest?cb=20201220005117",
+        "title": "Wasn't always that way, I guess. But it has been the stretch of my life."
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/f\/f0\/Vo_hoodwink_hoodwink_home_08.mp3\/revision\/latest?cb=20201220005119",
+        "title": "Used to just be some normal woods. But then the wizard trials came."
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/d\/dd\/Vo_hoodwink_hoodwink_home_09.mp3\/revision\/latest?cb=20201220005120",
+        "title": "Some big old wizard schools set 'em up. Big tests to show off and challenge their rising stars."
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/8\/84\/Vo_hoodwink_hoodwink_home_10.mp3\/revision\/latest?cb=20201220005122",
+        "title": "But nothing's worse in the world than a wizard out to prove something."
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/2\/2a\/Vo_hoodwink_hoodwink_home_11.mp3\/revision\/latest?cb=20201220005125",
+        "title": "And they go and gather them all up in one place?"
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/a\/a2\/Vo_hoodwink_hoodwink_home_12.mp3\/revision\/latest?cb=20201220005127",
+        "title": "Something bad was bound to happen. And it did."
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/4\/4e\/Vo_hoodwink_hoodwink_home_13.mp3\/revision\/latest?cb=20201220005129",
+        "title": "So all the normal folk had to leave the Tomo'kan."
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/3\/38\/Vo_hoodwink_hoodwink_home_14.mp3\/revision\/latest?cb=20201220005131",
+        "title": "All you got left living there now's the outlaw type and those who got no other choice."
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/0\/0f\/Vo_hoodwink_hoodwink_home_15.mp3\/revision\/latest?cb=20201220005132",
+        "title": "No sane folk would settle in the darkwood now."
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/b\/be\/Vo_hoodwink_hoodwink_home_16.mp3\/revision\/latest?cb=20201220005134",
+        "title": "And of course, while all their little traps and beasties and jimjams are everywhere, there's not a wizard to be found."
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/c\/cc\/Vo_hoodwink_hoodwink_home_17.mp3\/revision\/latest?cb=20201220005135",
+        "title": "Who needs them."
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/d\/d8\/Vo_hoodwink_hoodwink_seehome_01.mp3\/revision\/latest?cb=20201220011409",
+        "title": "Till recently, I never had much interest in seeing my old home."
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/d\/d5\/Vo_hoodwink_hoodwink_seehome_02.mp3\/revision\/latest?cb=20201220011412",
+        "title": "Who wants to see pacified lands when the stories of old are better?"
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/5\/5a\/Vo_hoodwink_hoodwink_seehome_03.mp3\/revision\/latest?cb=20201220011415",
+        "title": "In the end, it wasn't the idea of the place that took me scouting back...but memories of my kin."
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/e\/e6\/Vo_hoodwink_hoodwink_seehome_04.mp3\/revision\/latest?cb=20201220011417",
+        "title": "I wondered if some might still be out there -- proper citizens of Krimwohl now."
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/4\/4c\/Vo_hoodwink_hoodwink_seehome_05.mp3\/revision\/latest?cb=20201220011420",
+        "title": "It was enough to take me to the treeline, anyway."
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/5\/52\/Vo_hoodwink_hoodwink_seehome_06.mp3\/revision\/latest?cb=20201220011424",
+        "title": "Even if I didn't find anyone worth seeing, I was sure I could scare up a bit of good fun."
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/9\/96\/Vo_hoodwink_hoodwink_helping_01.mp3\/revision\/latest?cb=20201220005055",
+        "title": "The first time I saw one of the work camps, I knew I'd be back."
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/0\/07\/Vo_hoodwink_hoodwink_helping_02.mp3\/revision\/latest?cb=20201220005056",
+        "title": "There was so much to muck up, I could keep busy for days."
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/f\/f3\/Vo_hoodwink_hoodwink_helping_03.mp3\/revision\/latest?cb=20201220005058",
+        "title": "I never really thought about helping anyone escape."
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/9\/93\/Vo_hoodwink_hoodwink_helping_04.mp3\/revision\/latest?cb=20201220005100",
+        "title": "I thought they wanted to be there. Even now, I know heaps of 'em do."
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/0\/07\/Vo_hoodwink_hoodwink_helping_05.mp3\/revision\/latest?cb=20201220005102",
+        "title": "But there were some who saw the lure of freedom...even if the price seemed too steep."
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/d\/dd\/Vo_hoodwink_hoodwink_helping_06.mp3\/revision\/latest?cb=20201220005103",
+        "title": "Life in the darkwood's not easy. But the cunning can step free from the sight of would-be rulers."
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/a\/ad\/Vo_hoodwink_hoodwink_helping_07.mp3\/revision\/latest?cb=20201220005105",
+        "title": "And for some folk -- like me -- that's enough."
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/9\/97\/Vo_hoodwink_hoodwink_sister_01.mp3\/revision\/latest?cb=20201220011433",
+        "title": "Most of my life, I thought my little sis' carked it back on the Night of Fire."
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/a\/a5\/Vo_hoodwink_hoodwink_sister_02.mp3\/revision\/latest?cb=20201220011436",
+        "title": "But a few seasons back, I was tracking along the treeline near the pacified zone, and..."
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/b\/bc\/Vo_hoodwink_hoodwink_sister_03.mp3\/revision\/latest?cb=20201220011439",
+        "title": "Well I'd know that red tail anywhere."
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/4\/47\/Vo_hoodwink_hoodwink_sister_04.mp3\/revision\/latest?cb=20201220011441",
+        "title": "She was out with some sort of work crew."
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/2\/25\/Vo_hoodwink_hoodwink_sister_05.mp3\/revision\/latest?cb=20201220011444",
+        "title": "Farming or some nonsense. Like there weren't a world of food a few leaps away."
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/6\/62\/Vo_hoodwink_hoodwink_sister_06.mp3\/revision\/latest?cb=20201220011447",
+        "title": "I couldn't get two steps towards her 'less I wanted to light the place up."
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/f\/f0\/Vo_hoodwink_hoodwink_sister_07.mp3\/revision\/latest?cb=20201220011449",
+        "title": "And I didn't even know if she remembered me. She was hardly bigger than a biscuit back when."
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/d\/da\/Vo_hoodwink_hoodwink_sister_08.mp3\/revision\/latest?cb=20201220011452",
+        "title": "Not the right move to re-introduce myself with a massacre probably."
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/0\/06\/Vo_hoodwink_hoodwink_sister_09.mp3\/revision\/latest?cb=20201220011455",
+        "title": "I watched for a spot to catch her out, but the overseers kept a bloody harsh eye."
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/0\/0e\/Vo_hoodwink_hoodwink_sister_10.mp3\/revision\/latest?cb=20201220011457",
+        "title": "Then the whole bunch scampered off. And I burned the crops."
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/f\/fc\/Vo_hoodwink_hoodwink_sister_11.mp3\/revision\/latest?cb=20201220011500",
+        "title": "I've been back there now lotsa times. But she hasn't, far as I can see."
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/4\/4f\/Vo_hoodwink_hoodwink_sister_12.mp3\/revision\/latest?cb=20201220011502",
+        "title": "I have seen some familiar faces amongst the work crews."
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/0\/07\/Vo_hoodwink_hoodwink_sister_13.mp3\/revision\/latest?cb=20201220011505",
+        "title": "And I'm sure I woulda known heaps 'a the others if all our lives hadn't gone up like a keg of powder."
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/6\/6d\/Vo_hoodwink_hoodwink_sister_14_02.mp3\/revision\/latest?cb=20201220011507",
+        "title": "I always try not to hurt any of those types when I go in for a bit of fun with the guards."
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/1\/17\/Vo_hoodwink_hoodwink_sister_15.mp3\/revision\/latest?cb=20201220011510",
+        "title": "But anyone who tries to fight is fair game."
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/4\/45\/Vo_hoodwink_hoodwink_sister_16.mp3\/revision\/latest?cb=20201220011513",
+        "title": "I doubt we woulda been that close anyway."
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/b\/b9\/Vo_hoodwink_hoodwink_cityfolk_01_02.mp3\/revision\/latest?cb=20201220004732",
+        "title": "Every now and then some city-stinking crew will venture out into the brush trying to find whatever dumb thing's the latest fancy."
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/d\/d1\/Vo_hoodwink_hoodwink_cityfolk_02.mp3\/revision\/latest?cb=20201220004733",
+        "title": "Even without my help they'd end up dead one way or another."
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/7\/7f\/Vo_hoodwink_hoodwink_cityfolk_03.mp3\/revision\/latest?cb=20201220004735",
+        "title": "Sure as. No greenhorns last long in the deep wood."
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/a\/a3\/Vo_hoodwink_hoodwink_cityfolk_04.mp3\/revision\/latest?cb=20201220004737",
+        "title": "So I reckon what's the harm in taunting them a bit before they go."
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/1\/12\/Vo_hoodwink_hoodwink_cityfolk_05.mp3\/revision\/latest?cb=20201220004738",
+        "title": "There's always the classic Durana bait game."
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/a\/aa\/Vo_hoodwink_hoodwink_cityfolk_06.mp3\/revision\/latest?cb=20201220004740",
+        "title": "But you can also get creative with the dangerous terrain and other fun features of the forest."
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/2\/2b\/Vo_hoodwink_hoodwink_cityfolk_07.mp3\/revision\/latest?cb=20201220004742",
+        "title": "Have you ever seen a carnivorous plant could take down a man?"
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/6\/64\/Vo_hoodwink_hoodwink_cityfolk_08.mp3\/revision\/latest?cb=20201220004744",
+        "title": "Yeah, none of those blokes had either."
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/4\/40\/Vo_hoodwink_hoodwink_mono_end_01.mp3\/revision\/latest?cb=20201220010023",
+        "title": "I've been yapping long enough. Let's fight!"
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/e\/e5\/Vo_hoodwink_hoodwink_mono_end_02.mp3\/revision\/latest?cb=20201220010025",
+        "title": "Enough of story time. We gonna win this thing or what?"
+      }
+    ],
+    "category": "Редкие фразы"
+  },
+  {
+    "responses": [
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/1\/1e\/Vo_hoodwink_hoodwink_missing_lane_01_81.mp3\/revision\/latest?cb=20201220010018",
+        "title": "Top is missing!"
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/6\/6b\/Vo_hoodwink_hoodwink_missing_lane_02_81.mp3\/revision\/latest?cb=20201220010020",
+        "title": "Middle is missing!"
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/f\/f5\/Vo_hoodwink_hoodwink_missing_lane_03_81.mp3\/revision\/latest?cb=20201220010022",
+        "title": "Bottom is missing!"
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/2\/2a\/Vo_hoodwink_hoodwink_thanks_01.mp3\/revision\/latest?cb=20201220011734",
+        "title": "Thanks!"
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/d\/de\/Vo_hoodwink_hoodwink_thanks_02.mp3\/revision\/latest?cb=20201220011736",
+        "title": "Thank you."
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/f\/f8\/Vo_hoodwink_hoodwink_wheel_thanks_01.mp3\/revision\/latest?cb=20201220011944",
+        "title": "Sweet as, cuz."
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/3\/31\/Vo_hoodwink_hoodwink_wheel_thanks_02_02.mp3\/revision\/latest?cb=20201220011946",
+        "title": "Proper skux."
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/7\/7a\/Vo_hoodwink_hoodwink_thanks_03_02.mp3\/revision\/latest?cb=20201220011739",
+        "title": "Chur."
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/a\/ae\/Vo_hoodwink_hoodwink_thanks_03_04.mp3\/revision\/latest?cb=20201220011741",
+        "title": "Chur bro."
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/e\/e4\/Vo_hoodwink_hoodwink_thanks_03_05.mp3\/revision\/latest?cb=20201220011744",
+        "isArcane": true,
+        "title": "Chur bro."
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/0\/0a\/Vo_hoodwink_hoodwink_thanks_03_06.mp3\/revision\/latest?cb=20201220011747",
+        "isArcane": true,
+        "title": "Chur bro."
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/b\/b0\/Vo_hoodwink_hoodwink_thanks_04.mp3\/revision\/latest?cb=20201220011749",
+        "title": "Cheers bro!"
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/9\/9f\/Vo_hoodwink_hoodwink_thanks_05.mp3\/revision\/latest?cb=20201220011752",
+        "title": "I'll see you right."
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/3\/34\/Vo_hoodwink_hoodwink_thanks_06.mp3\/revision\/latest?cb=20201220011755",
+        "title": "Nice one, bro."
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/7\/7d\/Vo_hoodwink_hoodwink_laugh_01.mp3\/revision\/latest?cb=20201220005840",
+        "title": "Ha ha ha ha ha"
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/e\/e8\/Vo_hoodwink_hoodwink_laugh_01_02.mp3\/revision\/latest?cb=20201220005842",
+        "title": "He he he he"
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/f\/f4\/Vo_hoodwink_hoodwink_laugh_02.mp3\/revision\/latest?cb=20201220005844",
+        "title": "Ha ha ha ha ha"
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/9\/9f\/Vo_hoodwink_hoodwink_laugh_02_02.mp3\/revision\/latest?cb=20201220005846",
+        "title": "He he he he"
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/7\/76\/Vo_hoodwink_hoodwink_laugh_03.mp3\/revision\/latest?cb=20201220005847",
+        "title": "He he hee he he"
+      },
+      {
+        "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/e\/ed\/Vo_hoodwink_hoodwink_laugh_04.mp3\/revision\/latest?cb=20201220005849",
+        "title": "Ah ha ha ha ha"
+      }
+    ],
+    "category": "Реплики в чате"
   }
 ]

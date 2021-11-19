@@ -38,17 +38,17 @@
       "notes": [
         "Icarus Dive cannot be cast during Supernova. Casting Supernova during Icarus Dive immediately ends the dive.",
         "Casting Supernova during Icarus Dive immediately ends the dive.",
+        "Phoenix can attack, cast and channel abilities while diving. However, Sun Ray is inactive during the dive, and cannot be cast. During Icarus Dive, Phoenix does not need to turn to cast targeted abilities or items.",
+        "However, Sun Ray is inactive during the dive, and cannot be cast.",
+        "During Icarus Dive, Phoenix does not need to turn to cast targeted abilities or items.",
         "The 15% current health as cost is direct HP Removal.",
-        "Phoenix dives in an ellipse with a major axis length of 1100\/1200\/1300\/1400 (TagTalent 2100) and a minor axis length of 500. This results in a total path of 997.85 (TagTalent 997.85), which Phoenix covers in 2 (TagTalent 3) seconds. This means Phoenix dives at an average speed of 498.93 (TagTalent 498.93). The dive speed is not constant. Phoenix starts at 0, accelerates until halfway through max distance, then slows down towards max distance, then repeats the process on the way back.",
-        "This results in a total path of 997.85 (TagTalent 997.85), which Phoenix covers in 2 (TagTalent 3) seconds.",
-        "This means Phoenix dives at an average speed of 498.93 (TagTalent 498.93).",
+        "Phoenix dives in an ellipse with a major axis length of 1100\/1200\/1300\/1400 (TagTalent 2100\/2200\/2300\/2400) and a minor axis length of 500. This results in a total path of 2602.44\/2784.8\/2968.87\/3154.41 (TagTalent 4480.83\/4673.03\/4865.71\/5058.83), which Phoenix covers in 2 (TagTalent 3) seconds. This means Phoenix dives at an average speed of 1301.22\/1392.4\/1484.44\/1577.21 (TagTalent 2240.41\/2336.52\/2432.86\/2529.41). The dive speed is not constant. Phoenix starts at 0, accelerates until halfway through max distance, then slows down towards max distance, then repeats the process on the way back.",
+        "This results in a total path of 2602.44\/2784.8\/2968.87\/3154.41 (TagTalent 4480.83\/4673.03\/4865.71\/5058.83), which Phoenix covers in 2 (TagTalent 3) seconds.",
+        "This means Phoenix dives at an average speed of 1301.22\/1392.4\/1484.44\/1577.21 (TagTalent 2240.41\/2336.52\/2432.86\/2529.41).",
         "The dive speed is not constant. Phoenix starts at 0, accelerates until halfway through max distance, then slows down towards max distance, then repeats the process on the way back.",
         "Destroys trees within a 150 radius around Phoenix during the dive.",
         "Phoenix always dives clockwise, hitting units on the left side of the dive first. Units right in the middle of the arc might not be hit.",
         "The dive is canceled when Phoenix is stunned, cycloned, hexed, slept or affected by other sources of forced movement. Roots and taunts do not cancel it.",
-        "Phoenix can attack and cast and channel abilities and items while diving. However, Sun Ray is inactive during the dive, making it uncastable. During Icarus Dive, Phoenix does not need to turn to cast targeted abilities or items.",
-        "However, Sun Ray is inactive during the dive, making it uncastable.",
-        "During Icarus Dive, Phoenix does not need to turn to cast targeted abilities or items.",
         "Deals damage in 1-second intervals, starting 1 second after the debuff is applied, resulting in 4 instances. Can deal up to 40\/120\/200\/280 damage to a single unit (before reductions).",
         "Can deal up to 40\/120\/200\/280 damage to a single unit (before reductions)."
       ],
@@ -73,7 +73,7 @@
       ],
       "itemBehaviour": [],
       "legacyKey": "D",
-      "story": "Though no stranger to travelling the cosmic void, soaring within an atmosphere offers unique pleasures."
+      "story": null
     },
     {
       "audioUrl": null,
@@ -94,7 +94,7 @@
       ],
       "itemBehaviour": [],
       "legacyKey": "D",
-      "story": "SCREE!"
+      "story": null
     },
     {
       "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/2\/29\/Phoenix_Fire_Spirits.mp3\/revision\/latest?cb=20191216021825",
@@ -111,7 +111,7 @@
         "Grants Launch Fire Spirit 4 charges upon cast. The number of instances is visible on the status buff.",
         "The burn damage debuff does not stack. Hitting the same units multiple times just refreshes the debuff duration.",
         "Deals damage in 1-second intervals, starting 1 second after the debuff is applied, resulting in 4 instances.",
-        "Each spirit can deal up to 60\/140\/220\/300 (TagTalent 160\/240\/320\/400) damage to a single unit (before reductions). Can in total deal up to 240\/560\/880\/1200 (TagTalent 640\/960\/1280\/1600) damage to a single unit (before reductions).",
+        "Each spirit can deal up to 60\/140\/220\/300 (TagTalent 160\/240\/320\/400) damage to a single unit. Can in total deal up to 240\/560\/880\/1200 (TagTalent 640\/960\/1280\/1600) damage to a single unit (before reductions).",
         "Can in total deal up to 240\/560\/880\/1200 (TagTalent 640\/960\/1280\/1600) damage to a single unit (before reductions)."
       ],
       "mana": "120",
@@ -132,7 +132,7 @@
       ],
       "itemBehaviour": [],
       "legacyKey": "F",
-      "story": "The ever-collapsing core of Phoenix often emits short-lived bursts of conscious light."
+      "story": null
     },
     {
       "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/6\/68\/Phoenix_Launch_Fire_Spirit_1.mp3\/revision\/latest?cb=20191216021830",
@@ -144,7 +144,7 @@
         "The max amount of charges for Launch Fire Spirit always equals the value given on the status buff.",
         "The launched spirits travel at a speed of 900.",
         "During Icarus Dive and Sun Ray, the spirits can be fired in any direction without requiring Phoenix to face that direction.",
-        "Fire Spirits provide 175 radius ground vision for 1 second at the targeted area upon impact."
+        "Fire Spirits provide 200 radius ground vision for 1 second at the targeted area upon impact."
       ],
       "mana": "0",
       "hotKey": "W",
@@ -158,7 +158,7 @@
       ],
       "itemBehaviour": [],
       "legacyKey": "F",
-      "story": "PKAWW! BOOM"
+      "story": null
     },
     {
       "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/1\/18\/Phoenix_Sun_Ray.mp3\/revision\/latest?cb=20191216021815",
@@ -170,17 +170,17 @@
       "notes": [
         "Sun Ray cannot be cast during Icarus Dive and Supernova. Casting Supernova during Sun Ray immediately ends it. Casting Icarus Dive during it does not end it.",
         "Casting Supernova during Sun Ray immediately ends it. Casting Icarus Dive during it does not end it.",
-        "The 6% current health as cost is direct HP Removal. Drains 1.2% of current health in 0.2-second intervals, starting 0.2 seconds after cast, resulting in 30 drain instances in 6 seconds. This results in a total health cost of 30.38% of Phoenix's initial current health on cast to sustain the full 6 seconds.",
+        "The 6% current health as cost per second is direct HP Removal. Drains 1.2% of current health in 0.2-second intervals, starting 0.2 seconds after cast, resulting in 30 drain instances in 6 seconds. This results in a total health cost of 30.38% of Phoenix's initial current health on cast to sustain the full 6 seconds.",
         "Drains 1.2% of current health in 0.2-second intervals, starting 0.2 seconds after cast, resulting in 30 drain instances in 6 seconds.",
         "This results in a total health cost of 30.38% of Phoenix's initial current health on cast to sustain the full 6 seconds.",
-        "For better readability, the turn rate during Sun Ray is given as degrees per second, instead of radians per 0.03 seconds. 25° degrees per second equal a turn rate of 0.013.",
-        "25° degrees per second equal a turn rate of 0.013.",
+        "For better readability, the turn rate during Sun Ray is given as degrees per second, instead of radians per 0.03 seconds. 25° per second equal a turn rate of 0.013.",
+        "25° per second equal a turn rate of 0.013.",
         "Has 175 non-lingering ground vision around the ray for the duration.",
-        "Sun Ray is canceled if Phoenix gets stunned, silenced, cycloned, feared, hexed or slept. Roots, taunts and forced movement do not cancel it. Duel does cancel Sun Ray because it applies silence effect to duelists. While affected by the taunts, Phoenix can neither change directions, nor use Toggle Movement and Stop Sun Ray.",
-        "Duel does cancel Sun Ray because it applies silence effect to duelists.",
+        "Sun Ray is canceled if Phoenix gets stunned, silenced, cycloned, feared, hexed or slept. Roots, taunts and forced movement do not cancel it. Duel cancels Sun Ray because it applies silence effect to duelists. While affected by the taunts, Phoenix can neither change directions, nor use Toggle Movement and Stop Sun Ray.",
+        "Duel cancels Sun Ray because it applies silence effect to duelists.",
         "While affected by the taunts, Phoenix can neither change directions, nor use Toggle Movement and Stop Sun Ray.",
         "Sun Ray sets Phoenix's movement speed to 0 (has priority over hastes) and disarms Phoenix for its duration, so it cannot move or attack.",
-        "Phoenix can cast and channel abilities and items during Sun Ray. During Sun Ray, Phoenix does not need to turn to cast targeted abilities or items.",
+        "Phoenix can cast and channel abilities during Sun Ray. During Sun Ray, Phoenix does not need to turn to cast targeted abilities or items.",
         "During Sun Ray, Phoenix does not need to turn to cast targeted abilities or items.",
         "Deals damage and heals affected targets in 0.2-second intervals, starting 0.2 seconds after cast, resulting in up to 30 heal or damage instances per unit.",
         "Initially, the beam deals 14\/20\/26\/32 + 1%\/2.75%\/4.5%\/6.25% (TagTalent 2.5%\/4.25%\/6%\/7.75%) of the affected units' max health as damage per second. For each passing 0.2 seconds, the damage increases by 0.467\/0.667\/0.867\/1.067 + 0%\/0.1%\/0.2%\/0.2% (TagTalent 0.1%\/0.1%\/0.2%\/0.3%) of their max health. In 6 seconds, the damage reaches 28\/40\/52\/64 + 2%\/5.5%\/9%\/12.5% (TagTalent 5%\/8.5%\/12%\/15.5%) of their max health per second. At this point, the ray stops. Can deal up to 126\/180\/234\/288 + 9%\/24.75%\/40.5%\/56.25% (TagTalent 22.5%\/38.25%\/54%\/69.75%) of max health as damage (before reductions) when an enemy is hit for its full duration.",
@@ -192,9 +192,8 @@
         "In 6 seconds, the heal reaches 14\/20\/26\/32 + 1%\/2%\/3%\/4% of their max health per second. At this point, the ray stops.",
         "Can heal up to 63\/90\/117\/144 + 4.5%\/9%\/13.5%\/18% of max health when an ally is hit by the beam for the full duration.",
         "Does not affect Couriers or Roshan.",
-        "With Aghanim's Shard Sun Ray becomes castable during Supernova, and casting Supernova during it no longer ends it. The slow is applied to all enemies on each damage tick. Sun Ray first applies the damage, then the slow debuff.",
-        "The slow is applied to all enemies on each damage tick.",
-        "Sun Ray first applies the damage, then the slow debuff."
+        "With Aghanim's Shard, Sun Ray becomes castable during Supernova, and casting Supernova during Sun Ray no longer ends it. On the same intervals, Sun Ray first applies the damage, then the debuff.",
+        "On the same intervals, Sun Ray first applies the damage, then the debuff."
       ],
       "mana": "100\/110\/120\/130",
       "hotKey": "E",
@@ -215,40 +214,12 @@
         "Ray Duration: 6",
         "Move Speed Slow: 12%",
         "Slow Duration: 0.67",
-        "Allows Sun Ray to be cast during Supernova. Slows enemies by .",
+        "Allows Sun Ray to be cast during Supernova. Slows enemies by 12%.",
         "Heals spell immune allies. Does not damage spell immune enemies."
       ],
       "itemBehaviour": [],
       "legacyKey": "R",
-      "story": "The vent through which such stellar energy flows is mere atoms wide."
-    },
-    {
-      "audioUrl": null,
-      "effects": [
-        "Ability Toggle",
-        "Affects Self"
-      ],
-      "notes": [
-        "This ability is only active while having Sun Ray buff. This ability is not available in Ability Draft, due non-ultimate abilities being limited to one ability slot.",
-        "This ability is not available in Ability Draft, due non-ultimate abilities being limited to one ability slot.",
-        "Interrupts Phoenix's channeling abilities upon cast.",
-        "Moves Phoenix towards the direction of the ray with a fixed 250 speed. Is not based on Phoenix's movement, so movement speed slows and bonuses do not affect it. Moves Phoenix through cliffs and destroys trees in its path.",
-        "Is not based on Phoenix's movement, so movement speed slows and bonuses do not affect it.",
-        "Moves Phoenix through cliffs and destroys trees in its path."
-      ],
-      "mana": "0",
-      "hotKey": "D",
-      "cooldown": "0",
-      "description": "Toggles slow forward movement during Sun Ray firing.",
-      "spellName": "Toggle Movement",
-      "params": [
-        "Cast Animation: 0+0",
-        "Set Move Speed: 250",
-        "Getting rooted while already moving stops the movement. The movement continues as soon as the root expires."
-      ],
-      "itemBehaviour": [],
-      "legacyKey": "E",
-      "story": "SQAWRK!"
+      "story": null
     },
     {
       "audioUrl": null,
@@ -269,7 +240,34 @@
       ],
       "itemBehaviour": [],
       "legacyKey": "R",
-      "story": "CHIRP!"
+      "story": null
+    },
+    {
+      "audioUrl": null,
+      "effects": [
+        "Ability Toggle",
+        "Affects Self"
+      ],
+      "notes": [
+        "This ability is only active while having Sun Ray buff.",
+        "Interrupts Phoenix's channeling abilities upon cast.",
+        "Moves Phoenix towards the direction of the ray with a fixed 250 speed. Is not based on Phoenix's movement speed, so movement speed slows and bonuses do not affect it. Can move Phoenix through cliffs, and destroys trees in its path.",
+        "Is not based on Phoenix's movement speed, so movement speed slows and bonuses do not affect it.",
+        "Can move Phoenix through cliffs, and destroys trees in its path."
+      ],
+      "mana": "0",
+      "hotKey": "D",
+      "cooldown": "0",
+      "description": "Toggles slow forward movement during Sun Ray firing.",
+      "spellName": "Toggle Movement",
+      "params": [
+        "Cast Animation: 0+0",
+        "Set Move Speed: 250",
+        "Getting rooted while already moving stops the movement. The movement continues as soon as the root expires."
+      ],
+      "itemBehaviour": [],
+      "legacyKey": "E",
+      "story": null
     },
     {
       "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/8\/8f\/Phoenix_Supernova_1.mp3\/revision\/latest?cb=20191216021816",
@@ -280,9 +278,10 @@
       ],
       "notes": [
         "Supernova turns nighttime into daytime for its duration. This has a higher priority than the artificial nights of Dark Ascension and Eclipse.",
+        "This has a higher priority than the artificial nights of Dark Ascension and Eclipse.",
         "Disjoints projectiles and applies a strong dispel on Phoenix upon cast. Also dispels Fire Spirits.",
-        "Resets Phoenix' basic abilities, and replenishes its mana upon cast. Does not refresh the cooldowns of items and ultimates. If the sun survives, Phoenix's health gets replenished at the end of the duration, as well as its mana for a second time.",
-        "If the sun survives, Phoenix's health gets replenished at the end of the duration, as well as its mana for a second time.",
+        "Resets Phoenix' basic abilities, and replenishes its mana upon cast. Does not resets the cooldowns of items and ultimates. If the sun survives, Phoenix's health and mana gets replenished at the end of the duration.",
+        "If the sun survives, Phoenix's health and mana gets replenished at the end of the duration.",
         "During Supernova, Phoenix is hidden, invulnerable, rooted, muted, and disarmed. All of Phoenix' abilities are also turned inactive for during Supernova, so that they cannot be cast either.",
         "All of Phoenix' abilities are also turned inactive for during Supernova, so that they cannot be cast either.",
         "Only attacks from heroes (including clones, excluding illusions) can damage the Phoenix Sun.",
@@ -301,10 +300,9 @@
         "Destroying the Phoenix Sun credits both of the heroes' deaths to its destroyer. Same goes for denying.",
         "If the sun gets destroyed and Phoenix has Reincarnation, the ally is released with its health, mana and cooldowns unaffected.",
         "If the sun gets destroyed and the ally inside has Reincarnation, it reincarnates while Phoenix dies.",
-        "With Aghanim's Shard Sun Ray becomes castable during Supernova, and casting Supernova during it no longer ends it. However, since Phoenix is also rooted, it can neither move nor use the Toggle Movement sub-ability during it. Phoenix can still turn in place and change the Sun Ray's diretion. The Stop Sun Ray sub-ability still cannot be used. If Supernova is cast during Sun Ray, it can immediately be cast again once it ends, due to Supernova refreshing its cooldown on cast. If Supernova ends during Sun Ray, the ability continues normally, and its sub-abilities become usable again.",
+        "With Aghanim's Shard, Sun Ray becomes castable during Supernova, and casting Supernova during Sun Ray no longer ends it. However, since Phoenix is also rooted, it can neither move nor use the Toggle Movement sub-ability during it. Phoenix can still turn in place and change the Sun Ray's direction, but the Stop Sun Ray sub-ability cannot be used. If Supernova is cast during Sun Ray, it can immediately be cast again once it ends, due to Supernova refreshing its cooldown on cast. If Supernova ends during Sun Ray, the ability continues normally, and its sub-abilities become usable again.",
         "However, since Phoenix is also rooted, it can neither move nor use the Toggle Movement sub-ability during it.",
-        "Phoenix can still turn in place and change the Sun Ray's diretion.",
-        "The Stop Sun Ray sub-ability still cannot be used.",
+        "Phoenix can still turn in place and change the Sun Ray's direction, but the Stop Sun Ray sub-ability cannot be used.",
         "If Supernova is cast during Sun Ray, it can immediately be cast again once it ends, due to Supernova refreshing its cooldown on cast.",
         "If Supernova ends during Sun Ray, the ability continues normally, and its sub-abilities become usable again."
       ],
@@ -326,7 +324,7 @@
       ],
       "itemBehaviour": [],
       "legacyKey": "V",
-      "story": "The solar crucible of a Supernova may be fatal, yet from its flames arise new beacons to wander infinity."
+      "story": null
     }
   ],
   "mainAttributes": {

@@ -2,7 +2,7 @@
   "abilities": [
     {
       "notes": [
-        "The intelligence talent effectively grants Skywrath Mage 120 mana, 0.5 mana regeneration, and 10 attack damage.",
+        "The intelligence talent effectively grants Skywrath Mage 120 mana, 0.5 mana regeneration, and 10 main attack damage.",
         "The health talent increases maximum health capacity, and keeps the current health percentage."
       ],
       "spellName": "Talent",
@@ -76,7 +76,7 @@
       ],
       "itemBehaviour": [],
       "legacyKey": "C",
-      "story": "Within the Ghastly Eyrie's endless intrigue, only the clever and calm can hope to survive."
+      "story": null
     },
     {
       "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/3\/34\/Skywrath_Mage_Concussive_Shot_1.mp3\/revision\/latest?cb=20191216023609",
@@ -122,7 +122,7 @@
       ],
       "itemBehaviour": [],
       "legacyKey": "T",
-      "story": "Those who serve the court of the Ghastly Eyrie are ever locked in covert war. One must always know where danger lurks nearest."
+      "story": null
     },
     {
       "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/e\/e1\/Skywrath_Mage_Ancient_Seal.mp3\/revision\/latest?cb=20191216023604",
@@ -156,7 +156,7 @@
       ],
       "itemBehaviour": [],
       "legacyKey": "R",
-      "story": "A holy incantation, whosoever finds themselves touched by Avilliva's sigil must suffer in penitent silence."
+      "story": null
     },
     {
       "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/3\/31\/Skywrath_Mage_Mystic_Flare_1.mp3\/revision\/latest?cb=20191216023602",
@@ -197,11 +197,11 @@
         "Total Damage: 750\/1175\/1600 (TagTalent 1200\/1625\/2050)",
         "Flare Duration: 2.2",
         "Secondary Target Search Radius: 700",
-        "When Skywrath Mage casts Mystic Flare, another Mystic Flare will be created on the position of a different random target enemy within 700 range. Heroes will take priority"
+        "When Skywrath Mage casts Mystic Flare, another Mystic Flare will be created on the position of a different random target enemy within 700 range. Heroes will take priority."
       ],
       "itemBehaviour": [],
       "legacyKey": "E",
-      "story": "Only the most practiced of Skywrath sorcerers could hope to shape the skies into such a storm."
+      "story": null
     },
     {
       "audioUrl": null,
@@ -210,13 +210,12 @@
         "Affects Self"
       ],
       "notes": [
-        "Requires Aghanim's Shard to be unlocked. In Ability Draft, this upgrade is bound to Mystic Flare, and works for every ability the player drafted.",
-        "In Ability Draft, this upgrade is bound to Mystic Flare, and works for every ability the player drafted.",
+        "Requires Aghanim's Shard to be unlocked.",
         "Does not trigger on active item abilities, on abilities with 0 cooldown, or on abilities which do not trigger on-cast effects.",
         "Each stack has its own duration, successive spell casts do not refresh the duration of previous stacks. The stacking modifier is not visible in the HUD. Instead, a counting modifier is visible, showing the current amount of stacks on the icon. Although the counting modifier is dispelled on death, the stacks themselves are not, so dying only removes the information of current number of stacks.",
         "The stacking modifier is not visible in the HUD. Instead, a counting modifier is visible, showing the current amount of stacks on the icon.",
         "Although the counting modifier is dispelled on death, the stacks themselves are not, so dying only removes the information of current number of stacks.",
-        "Each stack effectively grants 60 mana, 0.25 mana regeneration, and 5 attack damage."
+        "Each stack effectively grants 60 mana, 0.25 mana regeneration, and 5 main attack damage."
       ],
       "mana": null,
       "hotKey": null,

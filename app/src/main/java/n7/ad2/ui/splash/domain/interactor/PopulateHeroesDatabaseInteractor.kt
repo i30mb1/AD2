@@ -26,7 +26,7 @@ class PopulateHeroesDatabaseInteractor @Inject constructor(
 
         val assetsHeroesList = moshi.adapter(AssetsHeroList::class.java).fromJson(json)?.heroes ?: throw PopulateHeroesDatabaseException("Could not parse assets heroes")
 
-        val localHeroesList = assetsHeroesList.map { LocalHero(name = it.name, mainAttr = it.mainAttr, viewedByUser = false) }
+        val localHeroesList = assetsHeroesList.map { LocalHero(name = it.name, mainAttr = it.mainAttribute, viewedByUser = false) }
 
         heroRepository.insertHeroes(localHeroesList)
         logger.log("Hero loaded in DB")

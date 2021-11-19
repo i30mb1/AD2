@@ -57,7 +57,7 @@
       ],
       "itemBehaviour": [],
       "legacyKey": "V",
-      "story": "Frost-mage Ethreain has not forgotten even the simplest of ice manipulation."
+      "story": null
     },
     {
       "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/5\/59\/Lich_Frost_Shield_1.mp3\/revision\/latest?cb=20191216015320",
@@ -70,16 +70,14 @@
         "↓↓ Double-tapping automatically targets self.",
         "Applies generic incoming damage reduction on the target. Stacks additively with other sources of generic incoming damage manipulation. The reduction affects attack damage the target takes that is not flagged as HP removal. Does not affect spell damage.",
         "The reduction affects attack damage the target takes that is not flagged as HP removal. Does not affect spell damage.",
-        "Despite the description, the damage pulses hit every enemy within the area, not only the closest enemy. However, Frost Shield does not hit invisible units or units in the Fog of War.",
-        "However, Frost Shield does not hit invisible units or units in the Fog of War.",
+        "Frost Shield does not hit invisible units or units in the Fog of War.",
         "Pulses in 1-second intervals, starting 1 second after cast, resulting in 6 (TagTalent 10) pulses. All pulses together deal up to 120\/180\/240\/300 (TagTalent 200\/300\/400\/500) per enemy (before reductions).",
         "All pulses together deal up to 120\/180\/240\/300 (TagTalent 200\/300\/400\/500) per enemy (before reductions).",
         "The pulses first apply their damage, then the slow debuff.",
         "Recasting Frost Shield on the same target does not stack, but refreshes the duration, and resets the pulse interval.",
-        "With the level 25 talent, Frost Shield grants health regeneration to the target. Fully works for buildings. Can regenerate up to 300 health over its full duration. The level 20 duration increasing talent further increases the health regeneration to 500 health with the over its full duration. Both duration increasing and Frost Shield health regeneration talents do not update currently active instance of Frost Shield.",
-        "Can regenerate up to 300 health over its full duration.",
-        "The level 20 duration increasing talent further increases the health regeneration to 500 health with the over its full duration.",
-        "Both duration increasing and Frost Shield health regeneration talents do not update currently active instance of Frost Shield."
+        "With the level 25 talent, Frost Shield grants health regeneration to the target. Fully works for buildings. Can regenerate up to 300 (TagTalent 500) health over its full duration. Does not update currently active instance of Frost Shield.",
+        "Can regenerate up to 300 (TagTalent 500) health over its full duration.",
+        "Does not update currently active instance of Frost Shield."
       ],
       "mana": "100\/110\/120\/130",
       "hotKey": "W",
@@ -101,7 +99,7 @@
       ],
       "itemBehaviour": [],
       "legacyKey": "F",
-      "story": "First conceived of to protect him in his mortal years, the frost magic that Ethreain weaves around himself has only grown colder with time."
+      "story": null
     },
     {
       "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/3\/3e\/Lich_Sinister_Gaze.mp3\/revision\/latest?cb=20191216015322",
@@ -111,16 +109,19 @@
       ],
       "notes": [
         "Hypnotizes the target, forcing it to move towards the Lich, and preventing it from acting.",
-        "Sets the target's movement speed to 32%\/38%\/44%\/50% of the distance between Lich and the target. The speed is set once upon cast. If the target gets moved or teleported, the speed does not adapt. When cast at max cast range, this results in a speed of 137.14 (TagTalent 101.05). Grants the affected target unobstructed pathing, so they can move through cliffs, trees, and other units while Sinister Gaze is channeling.",
+        "Sets the target's movement speed to 32%\/38%\/44%\/50% of the distance between Lich and the target. The speed is set once upon cast. If the target gets moved or teleported, the speed does not adapt. When cast at max cast range, this results in a speed of 137.14 (TagTalent 101.05). Grants the target unobstructed pathing, so they can move through cliffs, trees, and other units while Sinister Gaze is channeling.",
         "The speed is set once upon cast. If the target gets moved or teleported, the speed does not adapt.",
         "When cast at max cast range, this results in a speed of 137.14 (TagTalent 101.05).",
-        "Grants the affected target unobstructed pathing, so they can move through cliffs, trees, and other units while Sinister Gaze is channeling.",
+        "Grants the target unobstructed pathing, so they can move through cliffs, trees, and other units while Sinister Gaze is channeling.",
         "Drains 0.714%\/0.882%\/1%\/1.087% (TagTalent 0.526%\/0.682%\/0.8%\/0.893%) of current mana in 0.1-second intervals, starting immediately upon channel begin, resulting in 15\/18\/21\/24 (TagTalent 20\/23\/26\/29) instances. Can drain up to 10.19%\/14.75%\/19.03%\/23.07% (TagTalent 10.02%\/14.56%\/18.85%\/22.9%) of the target's current mana, assuming nothing else affects the target's mana.",
         "Can drain up to 10.19%\/14.75%\/19.03%\/23.07% (TagTalent 10.02%\/14.56%\/18.85%\/22.9%) of the target's current mana, assuming nothing else affects the target's mana.",
         "Does not provide any form of vision over the target. However, the target turning invisible or entering the Fog of War does not cancel Sinister Gaze.",
         "Destroys trees within a 200 radius around the target at the end of the channeling.",
-        "With Aghanim's Scepter, Sinister Gaze turns into an area-targeted ability, so that it cannot directly target units anymore. Does not target invisible units or units under Fog of War.",
-        "Does not target invisible units or units under Fog of War."
+        "With Aghanim's Scepter, Sinister Gaze turns into an area-targeted ability, so that it cannot directly target units anymore. Does not target invisible units or units under Fog of War. Aghanim's Scepter also allows Lich to cast his other abilities while channeling Sinister Gaze without interrupting it, as long as the target is within cast range. This means during Sinister Gaze, all of Lich's abilities have a cast point and backswing of 0 and do not require facing the target to cast. Only works with for Frost Blast, Frost Shield, Chain Frost, and Ice Spire. All other abilities are not affected by this (e.g. when acquired via Spell Steal, Morph).",
+        "Does not target invisible units or units under Fog of War.",
+        "Aghanim's Scepter also allows Lich to cast his other abilities while channeling Sinister Gaze without interrupting it, as long as the target is within cast range. This means during Sinister Gaze, all of Lich's abilities have a cast point and backswing of 0 and do not require facing the target to cast. Only works with for Frost Blast, Frost Shield, Chain Frost, and Ice Spire. All other abilities are not affected by this (e.g. when acquired via Spell Steal, Morph).",
+        "This means during Sinister Gaze, all of Lich's abilities have a cast point and backswing of 0 and do not require facing the target to cast.",
+        "Only works with for Frost Blast, Frost Shield, Chain Frost, and Ice Spire. All other abilities are not affected by this (e.g. when acquired via Spell Steal, Morph)."
       ],
       "mana": "80",
       "hotKey": "E",
@@ -134,12 +135,12 @@
         "Current Mana Drained: 10%\/15%\/20%\/25%",
         "Duration: 1.4\/1.7\/2.0\/2.3 (TagTalent 1.9\/2.2\/2.5\/2.8)",
         "Radius: 400",
-        "Casts Sinister Gaze in a target area. Allows Lich to cast his other spells while channeling Sinister Gaze.",
+        "Casts Sinister Gaze in a target area. Sinister Gaze lets you cast your other abilities while channeling it.",
         "Not blocked when upgraded."
       ],
       "itemBehaviour": [],
       "legacyKey": "R",
-      "story": "Mind the cold..."
+      "story": null
     },
     {
       "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/6\/6f\/Lich_Ice_Spire_1.mp3\/revision\/latest?cb=20201230173953",
@@ -184,7 +185,7 @@
         "Damage Magical"
       ],
       "notes": [
-        "Chain Frost travels at a speed of 1050.",
+        "Chain Frost initially travels at a speed of 1050, and continues traveling at a speed of 850 after the primary target.",
         "The projectile bounces with a 0.2 second delay.",
         "Can bounce on the same unit multiple times, but only when another target was hit between the bounces. Can bounce on, but cannot damage or slow Roshan. Only the initial hit can damage and slow him. Cannot bounce on Undying Zombies and units which are out of vision (e.g. invisible), invulnerable or hidden.",
         "Can bounce on, but cannot damage or slow Roshan. Only the initial hit can damage and slow him.",
@@ -222,7 +223,7 @@
       ],
       "itemBehaviour": [],
       "legacyKey": "C",
-      "story": "Almost universally considered the ultimate in frost magic, Ethreain's orb of frozen death strikes fear into those who dare stand against him."
+      "story": null
     }
   ],
   "mainAttributes": {

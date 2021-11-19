@@ -66,7 +66,7 @@
       ],
       "itemBehaviour": [],
       "legacyKey": "D",
-      "story": "Pyrexae dragons have tremendously dangerous breath for each branch of the species; combining them is unimaginable."
+      "story": null
     },
     {
       "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/9\/96\/Jakiro_Ice_Path.mp3\/revision\/latest?cb=20191216014425",
@@ -83,7 +83,7 @@
         "Enemy units which come within 150 radius of the path while it is up get stunned and damaged by it.",
         "The stun lasts as long as the remaining duration of the path itself. The path grants 150 range flying vision along the path for its duration.",
         "The path grants 150 range flying vision along the path for its duration.",
-        "Enemies may only be stunned once per cast, so if dispelled, they cannot get stunned by it again.",
+        "Enemies may only be stunned once per cast, so if dispeled, they cannot get stunned by it again.",
         "Ice Path first applies the debuff, then the damage."
       ],
       "mana": "100",
@@ -102,7 +102,7 @@
       ],
       "itemBehaviour": [],
       "legacyKey": "T",
-      "story": "Jakiro's cunning right head calls upon its frozen heritage, glazing the earth with blistering cold."
+      "story": null
     },
     {
       "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/3\/3e\/Jakiro_Liquid_Fire_1.mp3\/revision\/latest?cb=20191216014427",
@@ -114,13 +114,13 @@
       "notes": [
         "Uses Jakiro's 400 (TagTalent 725) attack range when using Autocast. Manually casting it uses the 600 (TagTalent 925) cast range. The cast range can be further increased by other attack range bonuses. However, it is not affected by cast range bonuses.",
         "The cast range can be further increased by other attack range bonuses. However, it is not affected by cast range bonuses.",
-        "Applies Liquid Fire around and on the target regardless if the attack misses or is disjointed. However, when the target turns spell immune or invulnerable before impact, Liquid Fire is not applied at all.",
+        "Applies Liquid Fire around and on the target regardless of whether the attack misses or is disjointed or not. However, when the target turns spell immune or invulnerable before impact, Liquid Fire is not applied at all.",
         "However, when the target turns spell immune or invulnerable before impact, Liquid Fire is not applied at all.",
         "Successive casts of Liquid Fire do not stack, but refresh the debuff instead.",
         "The attack first applies the debuff, then its own damage.",
         "Fully affects buildings. Does not affect allied units or wards.",
-        "Deals 7.5\/10\/12.5\/15 damage in 0.5-second intervals (before reductions), starting 0.5 seconds after the debuff is applied, resulting in 10 damage instances. Can deal up to 75\/100\/125\/150 damage to a single target (before reductions).",
-        "Can deal up to 75\/100\/125\/150 damage to a single target (before reductions).",
+        "Deals 7.5\/10\/12.5\/15 damage in 0.5-second intervals (before reductions), starting 0.5 seconds after the debuff is applied, resulting in 10 damage instances. Can deal up to 75\/100\/125\/150 damage to a single target.",
+        "Can deal up to 75\/100\/125\/150 damage to a single target.",
         "When off cooldown, the fire head's mouth drools fire, visible to everyone.",
         "If Liquid Fire is cast while Liquid Frost is on Autocast, only Liquid Frost will be used. If Liquid Fire and Liquid Frost are both on autocast attacks, only Liquid Frost will be used.",
         "If Liquid Fire and Liquid Frost are both on autocast attacks, only Liquid Frost will be used."
@@ -143,7 +143,7 @@
       ],
       "itemBehaviour": [],
       "legacyKey": "Q",
-      "story": "The left maw of Jakiro opens, laying waste to any in its path."
+      "story": null
     },
     {
       "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/9\/94\/Jakiro_Liquid_Frost_1.mp3\/revision\/latest?cb=20201228224140",
@@ -156,7 +156,7 @@
         "Requires Aghanim's Shard to be unlocked.",
         "Uses Jakiro's 400 (TagTalent 725) attack range when using Autocast. Manually casting it uses the 600 (TagTalent 925) cast range. The cast range can be further increased by other attack range bonuses. However, it is not affected by cast range bonuses.",
         "The cast range can be further increased by other attack range bonuses. However, it is not affected by cast range bonuses.",
-        "Applies Liquid Frost around and on the target regardless if the attack misses or is disjointed. However, when the target turns spell immune or invulnerable before impact, Liquid Frost is not applied at all.",
+        "Applies Liquid Frost around and on the target regardless of whether the attack misses or is disjointed or not. However, when the target turns spell immune or invulnerable before impact, Liquid Frost is not applied at all.",
         "However, when the target turns spell immune or invulnerable before impact, Liquid Frost is not applied at all.",
         "Successive casts of Liquid Frost do not stack, but refresh the debuff instead.",
         "The attack first applies the debuff, then the stun, then its own damage.",
@@ -202,13 +202,13 @@
         "With the starting distance, path length and path radius, Macropyre can hit units up to 1660 (TagTalent 2060) range away.",
         "It can also hit units 26 range behind Jakiro, due to its radius and starting position.",
         "Places a debuff on enemies within the area in 0.5-second intervals, starting 0.5 seconds after cast.",
-        "The debuff does not stack. When standing inside the fire, its duration gets refreshed. The debuff deals 50\/70\/90 (TagTalent 65\/85\/105) damage in 0.5-second intervals, starting 0.5 seconds after being placed, resulting in 4 damage instances. This results in a maximum of 23 (TagTalent 63) damage instances when standing within the area the full duration. One instance of the debuff can deal up to 200\/280\/360 (TagTalent 260\/340\/420) damage (before reductions).",
-        "The debuff deals 50\/70\/90 (TagTalent 65\/85\/105) damage in 0.5-second intervals, starting 0.5 seconds after being placed, resulting in 4 damage instances.",
+        "The debuff does not stack. When standing inside the fire, its duration gets refreshed. The debuff deals 55\/77.5\/100 (TagTalent 70\/92.5\/115) damage in 0.5-second intervals, starting 0.5 seconds after being placed, resulting in 4 damage instances. This results in a maximum of 23 (TagTalent 63) damage instances when standing within the area the full duration. One instance of the debuff can deal up to 220\/310\/400 (TagTalent 280\/370\/460) damage (before reductions).",
+        "The debuff deals 55\/77.5\/100 (TagTalent 70\/92.5\/115) damage in 0.5-second intervals, starting 0.5 seconds after being placed, resulting in 4 damage instances.",
         "This results in a maximum of 23 (TagTalent 63) damage instances when standing within the area the full duration.",
-        "One instance of the debuff can deal up to 200\/280\/360 (TagTalent 260\/340\/420) damage (before reductions).",
+        "One instance of the debuff can deal up to 220\/310\/400 (TagTalent 280\/370\/460) damage (before reductions).",
         "Multiple overlapping Macropyres do not stack. They refresh the same debuff on enemies.",
-        "Can deal up to 1150\/1610\/2070 (TagTalent 1495\/1955\/2415) damage to a single unit (before reductions). With Aghanim's Scepter, it can deal up to 3150\/4410\/5670 (TagTalent 4095\/5355\/6615) damage to a single unit (before reductions).",
-        "With Aghanim's Scepter, it can deal up to 3150\/4410\/5670 (TagTalent 4095\/5355\/6615) damage to a single unit (before reductions).",
+        "Can deal up to 1265\/1782.5\/2300 (TagTalent 1610\/2127.5\/2645) damage to a single unit (before reductions). With Aghanim's Scepter, it can deal up to 3465\/4882.5\/6300 (TagTalent 4410\/5827.5\/7245) damage to a single unit.",
+        "With Aghanim's Scepter, it can deal up to 3465\/4882.5\/6300 (TagTalent 4410\/5827.5\/7245) damage to a single unit.",
         "Aghanim's Scepter changes Macropyre's sound effect. This changed sound effect is audible through the Fog of War."
       ],
       "mana": "220\/330\/440",
@@ -221,7 +221,7 @@
         "Cast Range: 1400 (TagAghanim 1800)",
         "Path Distance: 1400 (TagAghanim 1800)",
         "Path Radius: 260",
-        "Damage per Second: 100\/140\/180 (TagTalent 130\/170\/210)",
+        "Damage per Second: 110\/155\/200 (TagTalent 140\/185\/230)",
         "Damage Linger Duration: 2",
         "Path Duration: 10 (TagAghanim 30)",
         "Increases Macropyre distance by +400 range, duration by +20 seconds and causes it to become Pure damage and pierce Spell Immunity.",
@@ -229,14 +229,14 @@
       ],
       "itemBehaviour": [],
       "legacyKey": "R",
-      "story": "Ice and fire combine to rip the battlefield to shreds with extreme temperatures."
+      "story": null
     }
   ],
   "mainAttributes": {
-    "attrStrengthInc": 3.0,
+    "attrStrengthInc": 2.8,
     "attrStrength": 27.0,
     "attrIntelligence": 26.0,
-    "attrIntelligenceInc": 2.8,
+    "attrIntelligenceInc": 3.0,
     "attrAgilityInc": 1.2,
     "attrAgility": 15.0
   },

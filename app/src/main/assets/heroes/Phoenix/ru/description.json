@@ -73,7 +73,7 @@
       ],
       "itemBehaviour": [],
       "legacyKey": "D",
-      "story": "Хоть путешествия в космосе этому существу не чужды, полёт под куполом атмосферы приносит ему несравнимое удовольствие."
+      "story": null
     },
     {
       "audioUrl": null,
@@ -94,7 +94,7 @@
       ],
       "itemBehaviour": [],
       "legacyKey": "D",
-      "story": "СКРИ!"
+      "story": null
     },
     {
       "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/2\/29\/Phoenix_Fire_Spirits.mp3\/revision\/latest?cb=20191216021825",
@@ -132,7 +132,7 @@
       ],
       "itemBehaviour": [],
       "legacyKey": "F",
-      "story": "Непрерывно сокращающееся звёздное ядро часто испускает скоротечные всплески разумного света."
+      "story": null
     },
     {
       "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/6\/68\/Phoenix_Launch_Fire_Spirit_1.mp3\/revision\/latest?cb=20191216021830",
@@ -158,7 +158,7 @@
       ],
       "itemBehaviour": [],
       "legacyKey": "F",
-      "story": "КУДАХ-БА-БАХ!"
+      "story": null
     },
     {
       "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/1\/18\/Phoenix_Sun_Ray.mp3\/revision\/latest?cb=20191216021815",
@@ -221,7 +221,7 @@
       ],
       "itemBehaviour": [],
       "legacyKey": "R",
-      "story": "Потоки, что несут энергию звезды, не шире нескольких атомов."
+      "story": null
     },
     {
       "audioUrl": null,
@@ -249,7 +249,7 @@
       ],
       "itemBehaviour": [],
       "legacyKey": "E",
-      "story": "КАР!"
+      "story": null
     },
     {
       "audioUrl": null,
@@ -270,7 +270,7 @@
       ],
       "itemBehaviour": [],
       "legacyKey": "R",
-      "story": "ЧИРИК!"
+      "story": null
     },
     {
       "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/8\/8f\/Phoenix_Supernova_1.mp3\/revision\/latest?cb=20191216021816",
@@ -331,7 +331,7 @@
       ],
       "itemBehaviour": [],
       "legacyKey": "V",
-      "story": "Солнечный жар сверхновой звезды может быть смертелен, но из его пламени в бесконечность устремляются всё новые лучи."
+      "story": null
     }
   ],
   "mainAttributes": {

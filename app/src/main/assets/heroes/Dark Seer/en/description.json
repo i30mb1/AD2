@@ -8,13 +8,13 @@
       "talents": [
         {
           "talentLvl": "25",
-          "talentLeft": "320 AoE Surge",
+          "talentLeft": "350 AoE Surge",
           "talentRight": "Parallel Wall"
         },
         {
           "talentLvl": "20",
           "talentLeft": "+50 Ion Shell Damage",
-          "talentRight": "-35s Wall of Replica Cooldown"
+          "talentRight": "-40s Wall of Replica Cooldown"
         },
         {
           "talentLvl": "15",
@@ -59,7 +59,7 @@
       ],
       "itemBehaviour": [],
       "legacyKey": "C",
-      "story": "Ish'Kafel modifies the center of gravity to a place of his choosing."
+      "story": null
     },
     {
       "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/8\/81\/Dark_Seer_Ion_Shell.mp3\/revision\/latest?cb=20191216012241",
@@ -80,7 +80,7 @@
         "Can deal up to 750\/1250\/1750\/2250 (TagTalent 2000\/2500\/3000\/3500) damage to a single unit (before reductions), if the enemy unit stays within range for the full duration. With Aghanim's Scepter, it can deal up to 1350\/2250\/3150\/4050 (TagTalent 3600\/4500\/5400\/6300) damage to a single unit (before reductions), if the enemy unit stays within range for the full duration. The damage upgrading talent immediately upgrades all of Dark Seer's currently active Ion Shell modifiers.",
         "With Aghanim's Scepter, it can deal up to 1350\/2250\/3150\/4050 (TagTalent 3600\/4500\/5400\/6300) damage to a single unit (before reductions), if the enemy unit stays within range for the full duration.",
         "The damage upgrading talent immediately upgrades all of Dark Seer's currently active Ion Shell modifiers.",
-        "With Aghanim's Scepter, Ion Shell also increases maximum health of targeted allies by 300, keeping the current health percentage the same."
+        "With Aghanim's Scepter, Ion Shell also increases maximum health of targeted allies by 275, keeping the current health percentage the same."
       ],
       "mana": "110\/120\/130\/140",
       "hotKey": "W",
@@ -93,15 +93,15 @@
         "Damage Radius: 275 (TagTalent 350)",
         "Damage per Second: 30\/50\/70\/90 (TagTalent 80\/100\/120\/140)",
         "Duration: 25 (TagAghanim 45)",
-        "Max Health Bonus: 300",
+        "Max Health Bonus: 275",
         "Number of Charges: 2",
         "Charge Replenish Time: 9",
-        "Causes Ion Shell to have 2 charges, increases duration by 20 and provides +300 Health.",
+        "Causes Ion Shell to have 2 charges, increases duration by 20 and provides +275 Health.",
         "Can be cast on spell immune allies. Cannot be cast on spell immune enemies. Shell persists if debuff was placed before spell immunity and when not dispelled."
       ],
       "itemBehaviour": [],
       "legacyKey": "E",
-      "story": "The Dark Seer slices holes into the 'Land Behind the Wall,' causing prismatic energy to seep forth."
+      "story": null
     },
     {
       "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/e\/e0\/Dark_Seer_Surge.mp3\/revision\/latest?cb=20191216012245",
@@ -125,11 +125,11 @@
         "Cast Range: 600",
         "Haste Speed: 550",
         "Duration: 3\/4\/5\/6",
-        "Radius: 320"
+        "Radius: 350"
       ],
       "itemBehaviour": [],
       "legacyKey": "R",
-      "story": "Ish'Kafel once used his speed of mind to navigate the maze between the walls."
+      "story": null
     },
     {
       "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/2\/27\/Dark_Seer_Normal_Punch_1.mp3\/revision\/latest?cb=20201224202126",
@@ -211,7 +211,7 @@
       ],
       "mana": "125\/250\/375",
       "hotKey": "R",
-      "cooldown": "100 (TagTalent 65)",
+      "cooldown": "100 (TagTalent 60)",
       "description": "Raises a wall of warping light that slows and creates replicas of any enemy hero who crosses it. Enemy replicas serve at the Dark Seer's will. Replicas last until they are destroyed, or until the wall's duration ends.",
       "spellName": "Wall of Replica",
       "params": [
@@ -231,7 +231,7 @@
       ],
       "itemBehaviour": [],
       "legacyKey": "W",
-      "story": "The Dark Seer, while unable to return to his natural realm, can channel part of the prismatic wall with powerful strength of mind, sowing confusion amongst enemy ranks."
+      "story": null
     }
   ],
   "mainAttributes": {
@@ -247,13 +247,13 @@
   "talents": [
     {
       "talentLvl": "25",
-      "talentLeft": "320 AoE Surge",
+      "talentLeft": "350 AoE Surge",
       "talentRight": "Parallel Wall"
     },
     {
       "talentLvl": "20",
       "talentLeft": "+50 Ion Shell Damage",
-      "talentRight": "-35s Wall of Replica Cooldown"
+      "talentRight": "-40s Wall of Replica Cooldown"
     },
     {
       "talentLvl": "15",

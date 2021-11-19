@@ -2,30 +2,30 @@
   "abilities": [
     {
       "notes": [
-        "Талант на все атрибуты в общем даёт Spectre: 100 здоровья, 0,5 усиления регенерации здоровья, 0,83 брони, 5 скорости атаки, 60 маны, 0,25 регенерации маны и 5 урона от атаки.",
+        "Талант на \/ \/ все атрибуты в общем даёт Spectre: 100 здоровья, 0,5 усиления восстановления здоровья, 0,83 брони, 5 скорости атаки, 60 маны, 0,25 восстановления маны и 5 урона от атаки.",
         "Талант на здоровье увеличивает максимальный запас здоровья, и сохраняет текущий процент здоровья."
       ],
       "spellName": "Talent",
       "talents": [
         {
           "talentLvl": "25",
-          "talentLeft": "+5% к Dispersion",
-          "talentRight": "Иллюзии Haunt наносят на 32% больше урона"
+          "talentLeft": "+5% к отражающему урону у Dispersion",
+          "talentRight": "+32% к урону иллюзий от Haunt"
         },
         {
           "talentLvl": "20",
-          "talentLeft": "+14% к замедлению\/ускорению врагов\/себя от Spectral Dagger",
+          "talentLeft": "+14% к замедлению и ускорению от Spectral Dagger",
           "talentRight": "+400 к здоровью"
         },
         {
           "talentLvl": "15",
-          "talentLeft": "−8 секунд перезарядки Spectral Dagger",
+          "talentLeft": "+100 урона от Spectral Dagger",
           "talentRight": "+12 к урону от Desolate"
         },
         {
           "talentLvl": "10",
           "talentLeft": "+5 ко всем атрибутам",
-          "talentRight": "+5 здоровья в секунду"
+          "talentRight": "−4 сек. перезарядки Spectral Dagger"
         }
       ]
     },
@@ -53,7 +53,7 @@
       ],
       "mana": "130\/140\/150\/160",
       "hotKey": "Q",
-      "cooldown": "22\/20\/18\/16 (TagTalent 14\/12\/10\/8)",
+      "cooldown": "22\/20\/18\/16 (TagTalent -78\/-80\/-82\/-84)",
       "description": "Герой бросает кинжал, наносящий урон и оставляющий теневой след, который замедляет всех врагов. Враги, поражённые кинжалом, также будут оставлять за собой след. Двигаясь по нему, владелец способности преодолевает любые препятствия.",
       "spellName": "Spectral Dagger",
       "params": [
@@ -71,7 +71,7 @@
       ],
       "itemBehaviour": [],
       "legacyKey": "D",
-      "story": "Кинжал Меркуриал затмевает физическую плоскость тенью \u2014 структурой, которая пугает смертных, но благоволит призракам."
+      "story": null
     },
     {
       "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/3\/35\/Spectre_Desolate.mp3\/revision\/latest?cb=20210103161358",
@@ -103,7 +103,7 @@
       ],
       "itemBehaviour": [],
       "legacyKey": "L",
-      "story": "Часто воины оказываются наедине с образом Меркуриал. Но настоящий ли он \u2014 вот вопрос, что предрешит их судьбу."
+      "story": null
     },
     {
       "audioUrl": null,
@@ -155,7 +155,7 @@
       ],
       "itemBehaviour": [],
       "legacyKey": "I",
-      "story": "Сложная задача стоит перед противниками Меркуриал \u2014 убить тень мечом и магией."
+      "story": null
     },
     {
       "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/1\/1a\/Spectre_Shadow_Step_1.mp3\/revision\/latest?cb=20210103160705",
@@ -185,7 +185,7 @@
       ],
       "itemBehaviour": [],
       "legacyKey": "E",
-      "story": "Иногда, сосредоточив всю свою волю, Меркуриал может контролировать своё расщепление."
+      "story": null
     },
     {
       "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/1\/11\/Spectre_Reality.mp3\/revision\/latest?cb=20191216024328",
@@ -211,7 +211,7 @@
       ],
       "itemBehaviour": [],
       "legacyKey": "R",
-      "story": "Разрозненные тени соединяются в одну настоящую Spectre."
+      "story": null
     },
     {
       "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/a\/af\/Spectre_Haunt_1.mp3\/revision\/latest?cb=20191216024324",
@@ -242,7 +242,7 @@
       ],
       "itemBehaviour": [],
       "legacyKey": "T",
-      "story": "В разгар сражения Меркуриал расщепляет свою физическую сущность, и отголоски ее теней преследуют тех, кто всё еще цепляется за жизнь."
+      "story": null
     }
   ],
   "mainAttributes": {
@@ -258,23 +258,23 @@
   "talents": [
     {
       "talentLvl": "25",
-      "talentLeft": "+5% к Dispersion",
-      "talentRight": "Иллюзии Haunt наносят на 32% больше урона"
+      "talentLeft": "+5% к отражающему урону у Dispersion",
+      "talentRight": "+32% к урону иллюзий от Haunt"
     },
     {
       "talentLvl": "20",
-      "talentLeft": "+14% к замедлению\/ускорению врагов\/себя от Spectral Dagger",
+      "talentLeft": "+14% к замедлению и ускорению от Spectral Dagger",
       "talentRight": "+400 к здоровью"
     },
     {
       "talentLvl": "15",
-      "talentLeft": "−8 секунд перезарядки Spectral Dagger",
+      "talentLeft": "+100 урона от Spectral Dagger",
       "talentRight": "+12 к урону от Desolate"
     },
     {
       "talentLvl": "10",
       "talentLeft": "+5 ко всем атрибутам",
-      "talentRight": "+5 здоровья в секунду"
+      "talentRight": "−4 сек. перезарядки Spectral Dagger"
     }
   ]
 }

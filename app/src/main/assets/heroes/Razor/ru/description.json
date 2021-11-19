@@ -3,9 +3,7 @@
     {
       "notes": [
         "Талант на ловкость в общем даёт Razor: 1,5 брони, 9 скорости атаки и 9 урона от атаки.",
-        "Талант на здоровье увеличивает максимальный запас здоровья, и сохраняет текущий процент здоровья.",
-        "Талант на силу в общем даёт Razor: 280 здоровья и 1,4 регенерации здоровья.",
-        "Талант на броню не дается иллюзиям."
+        "Талант на силу в общем даёт Razor: 280 здоровья и 1,4 восстановления здоровья."
       ],
       "spellName": "Talent",
       "talents": [
@@ -16,8 +14,8 @@
         },
         {
           "talentLvl": "20",
-          "talentLeft": "-0,1 сек. интервала разрядов Eye of the Storm",
-          "talentRight": "+8 к броне"
+          "talentLeft": "−0,1 сек. интервала разрядов Eye of the Storm",
+          "talentRight": "+6 сек. длительности эффекта Static Link"
         },
         {
           "talentLvl": "15",
@@ -27,7 +25,7 @@
         {
           "talentLvl": "10",
           "talentLeft": "+9 к ловкости",
-          "talentRight": "+175 к здоровью"
+          "talentRight": "+30 к урону от Plasma Field"
         }
       ]
     },
@@ -65,7 +63,7 @@
       ],
       "itemBehaviour": [],
       "legacyKey": "F",
-      "story": "Плазменная мощь держит загробный мир во власти призрака молний."
+      "story": null
     },
     {
       "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/f\/f2\/Razor_Static_Link.mp3\/revision\/latest?cb=20191216022229",
@@ -104,7 +102,7 @@
       ],
       "itemBehaviour": [],
       "legacyKey": "C",
-      "story": "Полярность призрака молний тянет к нему электричество, высасывая силы из противоположностей."
+      "story": null
     },
     {
       "audioUrl": null,
@@ -148,7 +146,7 @@
       ],
       "itemBehaviour": [],
       "legacyKey": "N",
-      "story": "Кто приблизится к призраку молний, в ответ получит шоковую терапию."
+      "story": null
     },
     {
       "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/0\/01\/Razor_Eye_of_the_Storm_1.mp3\/revision\/latest?cb=20191216022238",
@@ -193,7 +191,7 @@
       ],
       "itemBehaviour": [],
       "legacyKey": "E",
-      "story": "Как гром среди ясного неба."
+      "story": null
     }
   ],
   "mainAttributes": {
@@ -214,8 +212,8 @@
     },
     {
       "talentLvl": "20",
-      "talentLeft": "-0,1 сек. интервала разрядов Eye of the Storm",
-      "talentRight": "+8 к броне"
+      "talentLeft": "−0,1 сек. интервала разрядов Eye of the Storm",
+      "talentRight": "+6 сек. длительности эффекта Static Link"
     },
     {
       "talentLvl": "15",
@@ -225,7 +223,7 @@
     {
       "talentLvl": "10",
       "talentLeft": "+9 к ловкости",
-      "talentRight": "+175 к здоровью"
+      "talentRight": "+30 к урону от Plasma Field"
     }
   ]
 }

@@ -2,10 +2,7 @@
   "abilities": [
     {
       "notes": [
-        "Этот талант добавляет урон от атаки в прямой урон от атаки. Не даётся иллюзиям, и также не попадает под действие большинства эффектов увеличивающих или уменьшающих урон на процентное значение.",
-        "Не даётся иллюзиям, и также не попадает под действие большинства эффектов увеличивающих или уменьшающих урон на процентное значение.",
-        "Талант на здоровье увеличивает максимальный запас здоровья, и сохраняет текущий процент здоровья.",
-        "Талант на вампиризм аддитивно складывается с другими источниками вампиризма."
+        "Талант на здоровье увеличивает максимальный запас здоровья, и сохраняет текущий процент здоровья."
       ],
       "spellName": "Talent",
       "talents": [
@@ -17,7 +14,7 @@
         {
           "talentLvl": "20",
           "talentLeft": "+4 к снижению брони от Corrosive Haze",
-          "talentRight": "+25% к вампиризму"
+          "talentRight": "+125 к урону от Slithereen Crush"
         },
         {
           "talentLvl": "15",
@@ -26,8 +23,8 @@
         },
         {
           "talentLvl": "10",
-          "talentLeft": "+20 к урону",
-          "talentRight": "+7 здоровья в секунду"
+          "talentLeft": "+10% к замедлению атаки\/передв. от Slithereen Crush",
+          "talentRight": "−3 сек. перезарядки Guardian Sprint"
         }
       ]
     },
@@ -63,7 +60,7 @@
       ],
       "itemBehaviour": [],
       "legacyKey": "T",
-      "story": "Мощный хвост змееногого стража, привыкший к морским глубинам, носит его и на суше."
+      "story": null
     },
     {
       "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/8\/86\/Slardar_Slithereen_Crush.mp3\/revision\/latest?cb=20191216023820",
@@ -106,7 +103,7 @@
       ],
       "itemBehaviour": [],
       "legacyKey": "R",
-      "story": "Мощь воды вкупе с её быстротой пробьёт даже самую сильную защиту."
+      "story": null
     },
     {
       "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/5\/54\/Slardar_Bash_of_the_Deep.mp3\/revision\/latest?cb=20191216023822",
@@ -141,7 +138,7 @@
       ],
       "itemBehaviour": [],
       "legacyKey": "B",
-      "story": "Любой, кто посягнёт на сокровища глубин, встретится лицом к лицу с их беспощадным змееногим стражем."
+      "story": null
     },
     {
       "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/9\/93\/Slardar_Corrosive_Haze.mp3\/revision\/latest?cb=20191216023814",
@@ -165,7 +162,7 @@
       ],
       "itemBehaviour": [],
       "legacyKey": "G",
-      "story": "Даже самая крепкая броня тает под натиском солёных вод океана."
+      "story": null
     }
   ],
   "mainAttributes": {
@@ -187,7 +184,7 @@
     {
       "talentLvl": "20",
       "talentLeft": "+4 к снижению брони от Corrosive Haze",
-      "talentRight": "+25% к вампиризму"
+      "talentRight": "+125 к урону от Slithereen Crush"
     },
     {
       "talentLvl": "15",
@@ -196,8 +193,8 @@
     },
     {
       "talentLvl": "10",
-      "talentLeft": "+20 к урону",
-      "talentRight": "+7 здоровья в секунду"
+      "talentLeft": "+10% к замедлению атаки\/передв. от Slithereen Crush",
+      "talentRight": "−3 сек. перезарядки Guardian Sprint"
     }
   ]
 }

@@ -26,7 +26,7 @@
         {
           "talentLvl": "10",
           "talentLeft": "+8 Strength",
-          "talentRight": "+100 Reaper's Scythe Castt Range"
+          "talentRight": "+100 Reaper's Scythe Cast Range"
         }
       ]
     },
@@ -42,7 +42,13 @@
         "The pulses travel at a speed of 400.",
         "Affects invisible units and units in Fog of War. Does not affect invulnerable and hidden units. Fully affects allied Couriers.",
         "Does not affect invulnerable and hidden units.",
-        "Fully affects allied Couriers."
+        "Fully affects allied Couriers.",
+        "Heals Necrophos for the following values during Ghost Shroud on each level: Level 1: 87\/123.25\/159.5\/195.75 (TagTalent 133.4\/169.65\/205.9\/242.15) Level 2: 93\/131.75\/170.5\/209.25 (TagTalent 142.6\/181.35\/220.1\/258.85) Level 3: 99\/140.25\/181.5\/222.75 (TagTalent 151.8\/193.05\/234.3\/275.55) Level 4: 105\/148.75\/192.5\/236.25 (TagTalent 161\/204.75\/248.5\/292.25)",
+        "Level 1: 87\/123.25\/159.5\/195.75 (TagTalent 133.4\/169.65\/205.9\/242.15)",
+        "Level 2: 93\/131.75\/170.5\/209.25 (TagTalent 142.6\/181.35\/220.1\/258.85)",
+        "Level 3: 99\/140.25\/181.5\/222.75 (TagTalent 151.8\/193.05\/234.3\/275.55)",
+        "Level 4: 105\/148.75\/192.5\/236.25 (TagTalent 161\/204.75\/248.5\/292.25)",
+        ""
       ],
       "mana": "100\/130\/160\/190",
       "hotKey": "Q",
@@ -52,6 +58,7 @@
       "params": [
         "Cast Animation: 0+0.77",
         "Search Radius: 500",
+        "Projectile Speed: 400",
         "Damage: 100\/160\/220\/280",
         "Heal: 60\/85\/110\/135 (TagTalent 92\/117\/142\/167)",
         "Grants a new ability: Death Seeker.",
@@ -59,7 +66,7 @@
       ],
       "itemBehaviour": [],
       "legacyKey": "D",
-      "story": "Poor souls who succumb to Rotund'jere's plagues are recycled for future use."
+      "story": null
     },
     {
       "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/7\/7d\/Necrophos_Ghost_Shroud.mp3\/revision\/latest?cb=20191216020946",
@@ -70,11 +77,10 @@
       "notes": [
         "Ghost Shroud interrupts Necrophos' channeling abilities upon cast.",
         "Turns Necrophos ethereal, disarming him, rendering him attack immune, and granting 100% physical damage resistance.",
-        "Reduces Necrophos' total magic resistance to -5%.",
-        "The magic resistance reduction does not stack with other ethereal effects, the one with higher value takes priority.",
-        "Applies heal amplification, health regen amplification, mana restore amplification, and mana regen amplification, but not lifesteal amplification or spell lifesteal amplification. Effectively causes Death Pulse to heal Necrophos for 60.000000000101\/85.000000000143\/110.00000000018\/135.00000000023 (TagTalent 92.000000000154\/117.0000000002\/142.00000000024\/167.00000000028) health per cast. Effectively increases the health and mana regeneration bonus from Heartstopper Aura per stack to 4.0000000000067\/5.0000000000084\/6.0000000000101\/7.0000000000117.",
-        "Effectively causes Death Pulse to heal Necrophos for 60.000000000101\/85.000000000143\/110.00000000018\/135.00000000023 (TagTalent 92.000000000154\/117.0000000002\/142.00000000024\/167.00000000028) health per cast.",
-        "Effectively increases the health and mana regeneration bonus from Heartstopper Aura per stack to 4.0000000000067\/5.0000000000084\/6.0000000000101\/7.0000000000117.",
+        "Reduces Necrophos' total magic resistance to -5%. With the bonus magic resistance talent, it reduces total magic resistance to 10.75% assuming no other sources of magic resistance.",
+        "With the bonus magic resistance talent, it reduces total magic resistance to 10.75% assuming no other sources of magic resistance.",
+        "Ghost Shroud's magic resistance reduction does not stack with other ethereal effects, the one with higher value takes priority.",
+        "Applies heal amplification, health regen amplification, mana restore amplification, and mana regen amplification, but not lifesteal amplification or spell lifesteal amplification.",
         "The slow is provided by an aura. Its debuff lingers for 0.5 seconds."
       ],
       "mana": "50",
@@ -95,7 +101,7 @@
       ],
       "itemBehaviour": [],
       "legacyKey": "T",
-      "story": "Rotund'jere uses the souls of his victims as bridge from life to afterlife."
+      "story": null
     },
     {
       "audioUrl": null,
@@ -117,6 +123,12 @@
         "All stacks work fully independently from each other. They do not refresh each other, but share a status buff. The number of current stacks is visible on the buff.",
         "Each stack can regenerate up to 32\/40\/48\/56 health and mana over their full durations.",
         "Hero kills grant 6 stacks at once, which can regenerate up to 192\/240\/288\/336 health and mana over their full duration.",
+        "Regenerates Necrophos for the following values during Ghost Shroud's duration on each level: Level 1: 5.8\/7.25\/8.7\/10.15 per stack, 17\/22\/26\/30 health and mana restored. Level 2: 6.2\/7.75\/9.3\/10.85 per stack, 22\/27\/33\/38 health and mana restored. Level 3: 6.6\/8.25\/9.9\/11.55 per stack, 26\/33\/40\/46 health and mana restored. Level 4: 7\/8.75\/10.5\/12.25 per stack, 32\/39\/47\/55 health and mana restored.",
+        "Level 1: 5.8\/7.25\/8.7\/10.15 per stack, 17\/22\/26\/30 health and mana restored.",
+        "Level 2: 6.2\/7.75\/9.3\/10.85 per stack, 22\/27\/33\/38 health and mana restored.",
+        "Level 3: 6.6\/8.25\/9.9\/11.55 per stack, 26\/33\/40\/46 health and mana restored.",
+        "Level 4: 7\/8.75\/10.5\/12.25 per stack, 32\/39\/47\/55 health and mana restored.",
+        "",
         "The level 20 talent adds health regeneration reduction to Heartstopper Aura, but not heal reduction or lifesteal reduction.",
         "With Aghanim's Scepter, Heartstopper Aura deals 0.24%\/0.48%\/0.72%\/0.96% (TagTalent 0.44%\/0.68%\/0.92%\/1.16%) of the affected unit's max health as damage in 0.2-second intervals during Ghost Shroud. In total, it deals 1.2%\/2.4%\/3.6%\/4.8% (TagTalent 2.2%\/3.4%\/4.6%\/5.8%) of max health as damage per second, as long as Necrophos is affected by Ghost Shroud.",
         "In total, it deals 1.2%\/2.4%\/3.6%\/4.8% (TagTalent 2.2%\/3.4%\/4.6%\/5.8%) of max health as damage per second, as long as Necrophos is affected by Ghost Shroud."
@@ -143,7 +155,7 @@
       ],
       "itemBehaviour": [],
       "legacyKey": "I",
-      "story": "Those who come within a short distance of the Necrophos can feel pestilence and plague in the air."
+      "story": null
     },
     {
       "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/9\/9a\/Necrophos_Death_Seeker.mp3\/revision\/latest?cb=20210101213914",
@@ -152,18 +164,17 @@
         "Affects Allies \/ Enemies"
       ],
       "notes": [
-        "Requires Aghanim's Shard to be unlocked. This ability is not available in Ability Draft, due to its reliance on a non-ultimate ability, which are limited to one ability slot.",
-        "This ability is not available in Ability Draft, due to its reliance on a non-ultimate ability, which are limited to one ability slot.",
+        "Requires Aghanim's Shard to be unlocked.",
         "Cannot be cast on self.",
         "The projectile travels at a speed of 900.",
         "Death Seeker first applies its debuff, then releases the Death Pulse.",
-        "Turns the target ethereal, disarming them, rendering them attack immune, and granting 100% physical damage resistance. The magic resistance reduction does not stack with other ethereal effects, the one with higher value takes priority. Reduces most enemy heroes' total magic resistance to 6.25%. The Death Pulse effectively deals 125\/200\/275\/350 damage against the targeted enemy.",
+        "Turns the target ethereal, disarming them, rendering them attack immune, and granting 100% physical damage resistance. The magic resistance reduction does not stack with other ethereal effects, the one with higher value takes priority. Reduces most enemy heroes' total magic resistance to 6.25%.",
         "The magic resistance reduction does not stack with other ethereal effects, the one with higher value takes priority.",
         "Reduces most enemy heroes' total magic resistance to 6.25%.",
-        "The Death Pulse effectively deals 125\/200\/275\/350 damage against the targeted enemy.",
-        "The released Death Pulse is based on its current level. Death Pulse's notes fully apply. If Death Pulse is not learned, no projectile is released on cast, wasting the mana and cooldown. If the target is invulnerable or hidden on impact, the Death Pulse is not released.",
+        "The released Death Pulse is based on its current level. Death Pulse's notes fully apply. If Death Pulse is not learned, no projectile is released on cast, wasting the mana and cooldown. If the target is invulnerable or hidden on impact, the Death Pulse is not released. The Death Pulse effectively deals 125\/200\/275\/350 damage against the targeted enemy.",
         "If Death Pulse is not learned, no projectile is released on cast, wasting the mana and cooldown.",
-        "If the target is invulnerable or hidden on impact, the Death Pulse is not released."
+        "If the target is invulnerable or hidden on impact, the Death Pulse is not released.",
+        "The Death Pulse effectively deals 125\/200\/275\/350 damage against the targeted enemy."
       ],
       "mana": "100",
       "hotKey": "D",
@@ -191,13 +202,14 @@
       ],
       "notes": [
         "Damage is calculated and dealt at the end of the stun duration.",
-        "Deals enough damage to kill a hero (before reductions) when it is at maximum 41%\/44%\/47% of its health.",
+        "Deals enough damage (before reductions) to kill the enemy when it is at 41%\/44%\/47% of max health. With Death Seeker, Reaper's Scythe deals enough damage to kill the enemy when it is at 51%\/56%\/59% of max health.",
+        "With Death Seeker, Reaper's Scythe deals enough damage to kill the enemy when it is at 51%\/56%\/59% of max health.",
         "If the target gets killed by an ally of Necrophos during Reaper's Scythe, Necrophos gets credit for the kill. When the targeted unit is killed by one of its allies, it does not count as a deny and Necrophos is still credited for the kill. Has a lower priority than Ice Blast, so if affected by both, Ice Blast takes priority. Has a higher priority than Winter's Curse, so if affected by both, Reaper's Scythe takes priority.",
         "When the targeted unit is killed by one of its allies, it does not count as a deny and Necrophos is still credited for the kill.",
         "Has a lower priority than Ice Blast, so if affected by both, Ice Blast takes priority.",
         "Has a higher priority than Winter's Curse, so if affected by both, Reaper's Scythe takes priority.",
         "Can be cast on illusions and creep-heroes.",
-        "The stun duration is not reduced by status resistance."
+        "The stun duration is unaffected by status resistance."
       ],
       "mana": "200\/350\/500",
       "hotKey": "R",
@@ -214,7 +226,7 @@
       ],
       "itemBehaviour": [],
       "legacyKey": "R",
-      "story": "The amount of death and suffering in the air increases the power of the Necrophos's plague magic."
+      "story": null
     }
   ],
   "mainAttributes": {
@@ -246,7 +258,7 @@
     {
       "talentLvl": "10",
       "talentLeft": "+8 Strength",
-      "talentRight": "+100 Reaper's Scythe Castt Range"
+      "talentRight": "+100 Reaper's Scythe Cast Range"
     }
   ]
 }

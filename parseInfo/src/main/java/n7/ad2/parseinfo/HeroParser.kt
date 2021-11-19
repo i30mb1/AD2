@@ -14,124 +14,126 @@ import java.io.File
 import java.net.URL
 import javax.imageio.ImageIO
 
-data class HeroAndUrl(val name: String, val url: String)
 
 class HeroParser {
 
     companion object {
-        private const val SPELL_FOLDER = "heroesSpell"
+        private const val SPELL_FOLDER = "spell"
         private const val HEROES_FOLDER = "heroes"
         private const val FILE_NAME = "heroes.json"
-        private const val MAIN_URL_RU = "https://dota2.fandom.com/ru/wiki"
-        private const val MAIN_URL_EN = "https://dota2.fandom.com/wiki"
-        private const val HEROES_URL_RU = "$MAIN_URL_RU/Heroes"
-        private const val HEROES_URL_EN = "$MAIN_URL_EN/Heroes"
     }
 
-    enum class LOCALE(val heroesUrl: String, val baseUrl: String, val directory: String, val response: String) {
-        RU("https://dota2.fandom.com/ru/wiki/%D0%93%D0%B5%D1%80%D0%BE%D0%B8", "https://dota2.fandom.com/ru/wiki/", "ru", "Реплики"),
-        EN("https://dota2.fandom.com/wiki/Heroes", "https://dota2.fandom.com/wiki/", "en", "Responses")
+    data class NameAndLocale(val name: String, val locale: LocaleHeroes)
+    enum class LocaleHeroes(val mainUrl: String, val heroesUrl: String, val soundUrl: String, val folder: String) {
+        RU(
+            "https://dota2.fandom.com/ru/wiki/%s",
+            "https://dota2.fandom.com/ru/wiki/Heroes",
+            "https://dota2.fandom.com/ru/wiki/%s/Реплики",
+            "ru",
+        ),
+        EN(
+            "https://dota2.fandom.com/wiki/%s",
+            "https://dota2.fandom.com/wiki/Heroes",
+            "https://dota2.fandom.com/wiki/%s/Responses",
+            "en"
+        )
     }
 
     fun loadHeroesOnEnglish() {
-        getHeroesList(HEROES_URL_EN, MAIN_URL_EN).forEach(::loadHero)
+        getHeroesList(LocaleHeroes.EN).forEach(::loadHero)
     }
 
     fun loadHeroesOnRussian() {
-//        val list = getHeroesList(HEROES_URL_RU)
+        getHeroesList(LocaleHeroes.RU).forEach(::loadHero)
     }
 
     fun loadResponsesOnEnglish() {
-//        loadResponses(LOCALE.EN, list)
+        getHeroesList(LocaleHeroes.EN).forEach(::loadResponse)
     }
 
     fun loadResponsesOnRussian() {
-//        loadResponses(LOCALE.RU, list)
+        getHeroesList(LocaleHeroes.RU).forEach(::loadResponse)
     }
 
-    private fun loadResponses(locale: LOCALE, heroList: ArrayList<String>) {
-        heroList
-//            .filter { it == "Dawnbreaker" }
-            .forEach { hero ->
-                val root = connectTo("${locale.baseUrl}${hero}/${locale.response}")
-                val allResponsesWithCategories = JSONArray()
+    private fun loadResponse(nameAndLocale: NameAndLocale) {
+        val (name, locale) = nameAndLocale
+        val root = connectTo(locale.soundUrl.format(name))
+        val allResponsesWithCategories = JSONArray()
 
-                JSONArray().apply {
-                    var count = 0
-                    val children = root.getElementsByAttributeValue("class", "mw-parser-output")[0].children()
-                    var category = JSONObject()
-                    var responses = JSONArray()
-                    var response: JSONObject
+        JSONArray().apply {
+            var count = 0
+            val children = root.getElementsByAttributeValue("class", "mw-parser-output")[0].children()
+            var category = JSONObject()
+            var responses = JSONArray()
+            var response: JSONObject
 
-                    for (child in children) {
-                        if (child.tag().toString() == "h2") {
-                            if (category.size != 0) allResponsesWithCategories.add(category)
-                            category = JSONObject()
-                            responses = JSONArray()
+            for (child in children) {
+                if (child.tag().toString() == "h2") {
+                    if (category.size != 0) allResponsesWithCategories.add(category)
+                    category = JSONObject()
+                    responses = JSONArray()
 
-                            count++
-                            if (child.children().size > 1) {
-                                category["category"] = child.child(1).text().trim()
-                            } else {
-                                category["category"] = child.child(0).text().trim()
-                            }
-                        }
-                        if (child.tag().toString() == "ul") {
+                    count++
+                    if (child.children().size > 1) {
+                        category["category"] = child.child(1).text().trim()
+                    } else {
+                        category["category"] = child.child(0).text().trim()
+                    }
+                }
+                if (child.tag().toString() == "ul") {
 //                        if(child.child(0).children().size == 0) continue // реплики без URL
 //                        if(child.children().size >1) // cекция без реплик
 
-                            child.children().forEach node@{ node ->
-                                response = JSONObject()
-                                val audioUrl = node.getElementsByTag("a").getOrNull(0) ?: return@node
-                                val audioUrl2 = node.getElementsByTag("a").getOrNull(2)?.attr("href")?.toString()
-                                response["audioUrl"] = audioUrl.attr("href").toString()
-                                response["title"] = node.let { innerNode ->
+                    child.children().forEach node@{ node ->
+                        response = JSONObject()
+                        val audioUrl = node.getElementsByTag("a").getOrNull(0) ?: return@node
+                        val audioUrl2 = node.getElementsByTag("a").getOrNull(2)?.attr("href")?.toString()
+                        response["audioUrl"] = audioUrl.attr("href").toString()
+                        response["title"] = node.let { innerNode ->
+                            innerNode.getElementsByTag("span").forEach { span -> span.remove() }
+                            innerNode.text()
+                        }
+                        if (node.getElementsByTag("img").size > 0) {
+                            response["icons"] = JSONArray().apply {
+                                node.let { innerNode ->
                                     innerNode.getElementsByTag("span").forEach { span -> span.remove() }
-                                    innerNode.text()
-                                }
-                                if (node.getElementsByTag("img").size > 0) {
-                                    response["icons"] = JSONArray().apply {
-                                        node.let { innerNode ->
-                                            innerNode.getElementsByTag("span").forEach { span -> span.remove() }
-                                            innerNode.getElementsByTag("a").forEach { image ->
-                                                val regex = Regex(" \\(.+?\\)")
-                                                var title = image.attr("title")
-                                                val matches = regex.containsMatchIn(title)
-                                                if (matches) {
-                                                    title = "items/" + title.replace(regex, "") + "/full.webp"
-                                                    add(title)
-                                                } else {
-                                                    title = "heroes/$title/minimap.png"
-                                                    add(title)
-                                                }
-                                            }
+                                    innerNode.getElementsByTag("a").forEach { image ->
+                                        val regex = Regex(" \\(.+?\\)")
+                                        var title = image.attr("title")
+                                        val matches = regex.containsMatchIn(title)
+                                        if (matches) {
+                                            title = "items/" + title.replace(regex, "") + "/full.webp"
+                                            add(title)
+                                        } else {
+                                            title = "heroes/$title/minimap.png"
+                                            add(title)
                                         }
                                     }
                                 }
-                                val previousTitle = (responses.getOrNull(responses.size - 1) as? JSONObject)?.getOrDefault("title", "-")
-                                if (previousTitle == response["title"]) response["isArcane"] = true
-                                responses.add(response)
-
-                                if (audioUrl2 != null && !audioUrl2.startsWith("/")) {
-                                    val oldCopy = response
-                                    response = JSONObject()
-                                    if (oldCopy.containsKey("icons")) response["icons"] = oldCopy.get("icons")
-                                    response["audioUrl"] = audioUrl2
-                                    response["title"] = oldCopy["title"]
-                                    response["isArcane"] = true
-                                    responses.add(response)
-                                }
                             }
-                            category["responses"] = responses
+                        }
+                        val previousTitle = (responses.getOrNull(responses.size - 1) as? JSONObject)?.getOrDefault("title", "-")
+                        if (previousTitle == response["title"]) response["isArcane"] = true
+                        responses.add(response)
+
+                        if (audioUrl2 != null && !audioUrl2.startsWith("/")) {
+                            val oldCopy = response
+                            response = JSONObject()
+                            if (oldCopy.containsKey("icons")) response["icons"] = oldCopy["icons"]
+                            response["audioUrl"] = audioUrl2
+                            response["title"] = oldCopy["title"]
+                            response["isArcane"] = true
+                            responses.add(response)
                         }
                     }
-                    allResponsesWithCategories.add(category)
+                    category["responses"] = responses
                 }
-
-                println("response in ${locale.directory} for hero $hero saved (${allResponsesWithCategories.toString().length} bytes)")
-                File(assets + File.separator + HEROES_FOLDER + File.separator + hero + File.separator + locale.directory + File.separator + "responses.json").writeText(
-                    allResponsesWithCategories.toString())
             }
+            allResponsesWithCategories.add(category)
+        }
+
+        File("$assets/$HEROES_FOLDER/$name/${locale.folder}/responses.json").writeText(allResponsesWithCategories.toString())
+        println("response in ${locale.folder} for hero $name saved (${allResponsesWithCategories.toString().length} bytes)")
     }
 
     private fun getHeroesElements(document: Document): Elements {
@@ -148,12 +150,12 @@ class HeroParser {
     }
 
     private fun connectTo(url: String): Document {
-        return Jsoup.connect(url).get()
+        return Jsoup.connect(url).postDataCharset("UTF-8").get()
     }
 
     fun createFileWithHeroesAndFolders() {
         val path = assets + FILE_NAME
-        val root = connectTo(HEROES_URL_EN)
+        val root = connectTo(LocaleHeroes.EN.heroesUrl)
         var mainAttribute = "Strength"
 
         JSONObject().apply {
@@ -181,23 +183,23 @@ class HeroParser {
         println("heroes loaded $path")
     }
 
-    private fun getHeroesList(heroesUrl: String, mainUrl: String): List<HeroAndUrl> {
-        val root = connectTo(heroesUrl)
+    private fun getHeroesList(locale: LocaleHeroes): List<NameAndLocale> {
+        val root = connectTo(locale.heroesUrl)
         return getHeroesElements(root).map { element ->
             val name = getHeroName(element)
-            HeroAndUrl(name, "$mainUrl/$name")
+            NameAndLocale(name, locale)
         }.toList()
     }
 
-    private fun loadHero(heroAndUrl: HeroAndUrl) {
-        val (name, heroUrl) = heroAndUrl
-        val root = connectTo(heroUrl)
+    private fun loadHero(nameAndLocale: NameAndLocale) {
+        val (name, locale) = nameAndLocale
+        val root = connectTo(locale.mainUrl.format(name))
         loadHeroImageFull(root, name)
         loadHeroImageMinimap(root, name)
-//        loadHeroInformation(root, heroLocalizedDirectory)
+        loadHeroInformation(root, name, locale.folder)
     }
 
-    private fun loadHeroInformation(root: Document, directory: String) {
+    private fun loadHeroInformation(root: Document, name: String, folder: String) {
         JSONObject().apply {
             loadDescription(root)
             loadHistory(root)
@@ -206,12 +208,12 @@ class HeroParser {
             loadTalents(root)
             loadMainAttributes(root)
 
-            File(assets + directory + File.separator + "description.json").writeText(toJSONString())
+            File("$assets$HEROES_FOLDER/$name/$folder/description.json").writeText(toJSONString())
         }
     }
 
     private fun JSONObject.loadMainAttributes(root: Document) {
-        val mainAttributes = root.getElementsByAttributeValue("style", "width: 100%; padding: 4px 0; display: grid; grid-template-columns: auto auto auto; color: white; text-align: center;")[0]
+        val mainAttributes = root.getElementsByAttributeValue("style", "width:100%; padding:4px 0; display:grid; grid-template-columns: auto auto auto; color:white; text-align:center;")[0]
         val mainAttributesElements = mainAttributes.getElementsByTag("div")
 
         var index = 4
@@ -303,7 +305,7 @@ class HeroParser {
                     val spellName = it.getElementsByTag("div")[3].childNode(0).toString().trim()
                     put("spellName", spellName)
 
-//                    if (loadHeroSpellImage) loadSpellImage(it, spellName)
+                    loadSpellImage(it, spellName)
 
                     var audioUrl = it.getElementsByTag("source").attr("src")
                     if (audioUrl.isNullOrEmpty()) audioUrl = null
@@ -328,7 +330,7 @@ class HeroParser {
                     params.filter { it.attr("style").isEmpty() && !it.attr("class").equals("ability-lore") }.also {
                         JSONArray().apply {
                             it.forEach {
-                                if (it.getElementsByAttribute("href").getOrNull(0)?.attr("href")?.endsWith("/Aghanim%27s_Scepter") ?: false) {
+                                if (it.getElementsByAttribute("href").getOrNull(0)?.attr("href")?.endsWith("/Aghanim%27s_Scepter") == true) {
                                     add(it.text().replace("(", "(TagAghanim"))
                                 } else {
                                     add(it.text().replace("(", "(TagTalent"))
@@ -391,13 +393,9 @@ class HeroParser {
         }
     }
 
-    private fun loadSpellImage(it: Element, spellName: String) {
-        try {
-            val spellImage = it.getElementsByAttributeValue("class", "image")[0].attr("href")
-            saveImageInDirectory(spellImage, SPELL_FOLDER + File.separator, "$spellName.png")
-        } catch (e: Exception) {
-            println("cannot download hero spell $spellName")
-        }
+    private fun loadSpellImage(element: Element, spellName: String) {
+        val url = element.getElementsByAttributeValue("class", "image")[0].attr("href")
+        saveImageInDirectory(url, SPELL_FOLDER, "$spellName.png")
     }
 
     private fun JSONArray.ifContainAdd(alt: String, spellImmunityBlockPartial: String, it: Element) {
@@ -424,7 +422,7 @@ class HeroParser {
     }
 
     private fun loadHeroImageMinimap(root: Document, name: String) {
-        val url = root.getElementsByTag("img")[21].attr("data-src")
+        val url = root.getElementsByAttributeValue("alt", "$name minimap icon.png")[0].attr("data-src")
         saveImageInDirectory(url, "$HEROES_FOLDER/$name", "minimap.png")
     }
 
@@ -448,5 +446,8 @@ fun main() = runBlocking {
     val heroParser = HeroParser()
 //    heroParser.createFileWithHeroesAndFolders()
     heroParser.loadHeroesOnEnglish()
+//    heroParser.loadHeroesOnRussian()
+//    heroParser.loadResponsesOnEnglish()
+//    heroParser.loadResponsesOnRussian()
 }
 

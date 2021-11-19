@@ -13,7 +13,7 @@
         {
           "talentLvl": "25",
           "talentLeft": "Шанс в 24% нанести атакой 200% урона",
-          "talentRight": "-4 сек. перезарядки Doppelganger"
+          "talentRight": "−4 сек. перезарядки Doppelganger"
         },
         {
           "talentLvl": "20",
@@ -22,7 +22,7 @@
         },
         {
           "talentLvl": "15",
-          "talentLeft": "\u20133 сек. перезарядки Spirit Lance",
+          "talentLeft": "\u20132 сек. перезарядки Spirit Lance",
           "talentRight": "+16% к уклонению"
         },
         {
@@ -59,7 +59,7 @@
       ],
       "mana": "120",
       "hotKey": "Q",
-      "cooldown": "7 (TagTalent 4)",
+      "cooldown": "7 (TagTalent 5)",
       "description": "Метает в указанного врага магическое копьё, которое наносит цели урон и замедляет её, а также создает атакующую её союзную иллюзию.",
       "spellName": "Spirit Lance",
       "params": [
@@ -80,7 +80,7 @@
       ],
       "itemBehaviour": [],
       "legacyKey": "T",
-      "story": "Когда-то Азраф мастерски рыбачил копьями, чтобы накормить семью. Этот навык очень пригодился ему на поле боя."
+      "story": null
     },
     {
       "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/5\/57\/Phantom_Lancer_Doppelganger.mp3\/revision\/latest?cb=20191216021754",
@@ -125,7 +125,7 @@
       ],
       "itemBehaviour": [],
       "legacyKey": "D",
-      "story": "Смерть Ворна \u2014 мага страха \u2014 наделила Азрафа возможностью искривлять и дробить все спектры света."
+      "story": null
     },
     {
       "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/e\/ea\/Phantom_Lancer_Phantom_Rush.mp3\/revision\/latest?cb=20191216021800",
@@ -166,7 +166,7 @@
       ],
       "itemBehaviour": [],
       "legacyKey": "R",
-      "story": "Азраф знает, что на поле боя скорость может значить всё."
+      "story": null
     },
     {
       "audioUrl": null,
@@ -210,7 +210,7 @@
       ],
       "itemBehaviour": [],
       "legacyKey": "X",
-      "story": "Копьё Азрафа будто бы бьёт дважды\u2026 или трижды\u2026 или четырежды\u2026"
+      "story": null
     }
   ],
   "mainAttributes": {
@@ -227,7 +227,7 @@
     {
       "talentLvl": "25",
       "talentLeft": "Шанс в 24% нанести атакой 200% урона",
-      "talentRight": "-4 сек. перезарядки Doppelganger"
+      "talentRight": "−4 сек. перезарядки Doppelganger"
     },
     {
       "talentLvl": "20",
@@ -236,7 +236,7 @@
     },
     {
       "talentLvl": "15",
-      "talentLeft": "\u20133 сек. перезарядки Spirit Lance",
+      "talentLeft": "\u20132 сек. перезарядки Spirit Lance",
       "talentRight": "+16% к уклонению"
     },
     {

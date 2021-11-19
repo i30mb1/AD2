@@ -2,13 +2,13 @@
   "abilities": [
     {
       "notes": [
-        "Талант на силу в общем даёт Anti-Mage: 180 здоровья и 0,9 регенерации здоровья."
+        "Талант на силу в общем даёт Anti-Mage: 180 здоровья и 0,9 восстановления здоровья."
       ],
       "spellName": "Talent",
       "talents": [
         {
           "talentLvl": "25",
-          "talentLeft": "-50 сек. перезарядки Mana Void",
+          "talentLeft": "−50 сек. перезарядки Mana Void",
           "talentRight": "+20% к сопротивлению магии от Counterspell"
         },
         {
@@ -23,7 +23,7 @@
         },
         {
           "talentLvl": "10",
-          "talentLeft": "-1 перезарядки у Blink",
+          "talentLeft": "−1 перезарядки у Blink",
           "talentRight": "+9 к силе"
         }
       ]
@@ -60,7 +60,7 @@
       ],
       "itemBehaviour": [],
       "legacyKey": "R",
-      "story": "Измененный прием турстаркурийских монахов, обращающий волшебную энергию против самого чародея."
+      "story": null
     },
     {
       "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/9\/96\/Blink_%28AM%29.mp3\/revision\/latest?cb=20140921015525",
@@ -86,7 +86,7 @@
       ],
       "itemBehaviour": [],
       "legacyKey": "B",
-      "story": "В схватках с мертвыми богами юный послушник познал важность неуловимости."
+      "story": null
     },
     {
       "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/7\/7b\/Spell_Shield_block.mp3\/revision\/latest?cb=20161218122434",
@@ -122,7 +122,7 @@
       ],
       "itemBehaviour": [],
       "legacyKey": "E",
-      "story": "Сконцентрировавшись, Антимаг обращает врождённое сопротивление в точную контратаку."
+      "story": null
     },
     {
       "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/a\/a3\/Anti-Mage_Blink_Fragment_1.mp3\/revision\/latest?cb=20201220204524",
@@ -156,7 +156,8 @@
         "Длительность иллюзии: 7",
         "Число зарядов: 3",
         "Время восстановления заряда: 25",
-        "Нельзя применить на невосприимчивых к магии врагам."
+        "Нельзя применить на невосприимчивых к магии врагам.",
+        ""
       ],
       "itemBehaviour": [],
       "legacyKey": "F",
@@ -192,7 +193,7 @@
       ],
       "itemBehaviour": [],
       "legacyKey": "V",
-      "story": "Одолев врагов, борец с магией карает их за использование тайных искусств."
+      "story": null
     }
   ],
   "mainAttributes": {
@@ -208,7 +209,7 @@
   "talents": [
     {
       "talentLvl": "25",
-      "talentLeft": "-50 сек. перезарядки Mana Void",
+      "talentLeft": "−50 сек. перезарядки Mana Void",
       "talentRight": "+20% к сопротивлению магии от Counterspell"
     },
     {
@@ -223,7 +224,7 @@
     },
     {
       "talentLvl": "10",
-      "talentLeft": "-1 перезарядки у Blink",
+      "talentLeft": "−1 перезарядки у Blink",
       "talentRight": "+9 к силе"
     }
   ]

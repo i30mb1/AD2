@@ -22,7 +22,7 @@
         },
         {
           "talentLvl": "15",
-          "talentLeft": "-3s Spirit Lance CD",
+          "talentLeft": "-2s Spirit Lance CD",
           "talentRight": "16% Evasion"
         },
         {
@@ -59,7 +59,7 @@
       ],
       "mana": "120",
       "hotKey": "Q",
-      "cooldown": "7 (TagTalent 4)",
+      "cooldown": "7 (TagTalent 5)",
       "description": "Sends a magical spirit lance to a target enemy unit that damages and slows, while summoning an illusory phantom to attack the unit.",
       "spellName": "Spirit Lance",
       "params": [
@@ -80,7 +80,7 @@
       ],
       "itemBehaviour": [],
       "legacyKey": "T",
-      "story": "Azwraith's proficiency at spearing his family's meal of fish is proving quite useful in the battlefield."
+      "story": null
     },
     {
       "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/5\/57\/Phantom_Lancer_Doppelganger.mp3\/revision\/latest?cb=20191216021754",
@@ -92,17 +92,17 @@
         "Doppelganger disjoints projectiles and applies a basic dispel on Phantom Lancer upon cast.",
         "Phantom Lancer and his affected illusions are invulnerable and hidden during the reappear delay. They are unable to do anything during the reappear delay. Any order given during it is queued as next order.",
         "They are unable to do anything during the reappear delay. Any order given during it is queued as next order.",
-        "Phantom Lancer and the 2 created illusions face the direction Phantom Lancer was facing upon cast. Other illusions which got gathered keep their previous facing angle. Phantom Lancer and his illusions reappear in a formation shaped like a plus, with a bit of variaton. Illusions which were moving or attacking a target continue to move or attack their target after reappearing. Destroys trees within 150 radius of Phantom Lancer and every affected illusion upon reappearing.",
+        "Phantom Lancer and the 2 created illusions face the direction Phantom Lancer was facing upon cast. Other illusions which got gathered keep their previous facing angle. Phantom Lancer and his illusions reappear in a formation shaped like a plus, with a bit of variation. Illusions which were moving or attacking a target continue to move or attack their target after reappearing. Destroys trees within 150 radius of Phantom Lancer and every affected illusion upon reappearing.",
         "Other illusions which got gathered keep their previous facing angle.",
-        "Phantom Lancer and his illusions reappear in a formation shaped like a plus, with a bit of variaton.",
+        "Phantom Lancer and his illusions reappear in a formation shaped like a plus, with a bit of variation.",
         "Illusions which were moving or attacking a target continue to move or attack their target after reappearing.",
         "Destroys trees within 150 radius of Phantom Lancer and every affected illusion upon reappearing.",
-        "All illusions gathered with Doppelganger get their duration increased. The illusions created with this cast are not affected by this. The duration extension happens upon cast, so they effectively gain 1 second extra duration, since it takes 1 second for the illusions and Phantom Lancer to reappear.",
+        "All illusions gathered with Doppelganger get their duration increased. The 2 illusions created with this cast are not affected by this. The duration extension happens upon cast, so they effectively gain 1 second extra duration, since it takes 1 second for the illusions and Phantom Lancer to reappear.",
         "The duration extension happens upon cast, so they effectively gain 1 second extra duration, since it takes 1 second for the illusions and Phantom Lancer to reappear.",
         "The normal damage taking and no damage dealing illusion is brighter and can be distinguished by Phantom Lancer and his allies from other illusions.",
         "The 600% damage taking and 20% damage dealing illusion looks like any other illusion Phantom Lancer can create.",
         "Unlike illusions created by Phantom Lancer's other abilities, Doppelganger illusions use the default bounty values which scale with levels.",
-        "Doppelganger cannot be interrupted by anything except death. This means when getting teleported (with e.g. Glimpse), Phantom Lancer still appears at the targeted area."
+        "Doppelganger cannot be interrupted by anything except death. This means when getting teleported (e.g. with Glimpse), Phantom Lancer still appears at the targeted area."
       ],
       "mana": "50",
       "hotKey": "W",
@@ -125,7 +125,7 @@
       ],
       "itemBehaviour": [],
       "legacyKey": "D",
-      "story": "Dread Magus Vorn's death imbued the Phantom Lancer with the ability to blend with all spectrums of light."
+      "story": null
     },
     {
       "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/e\/ea\/Phantom_Lancer_Phantom_Rush.mp3\/revision\/latest?cb=20191216021800",
@@ -136,21 +136,20 @@
       "notes": [
         "Can be toggled On to not activate. Only Phantom Lancer can toggle it, it still remains toggled Off for his illusions.",
         "Only Phantom Lancer can toggle it, it still remains toggled Off for his illusions.",
-        "Requires a direct attack order (A or Right Click) to trigger. Auto attacks or ground-targeted orders do not trigger Phantom Rush.",
+        "Requires a direct attack order (A or Right Click) to trigger. Auto-attacks or ground-targeted orders do not trigger Phantom Rush.",
         "Phantom Rush can trigger on any target, including wards and buildings.",
-        "Disarm or ethereal effects do not prevent Phantom Lancer from rushing, however, attack immune units (e.g. invulnerable or ethereal) cannot be targeted.",
-        "Upon triggering, Phantom Lancer receives the rush buff, which grants haste and phased movement. This buff lasts for up to 5 seconds, until Phantom Lancer successfully hits the rush target, or until he receives another order. Non-targeted items do not cancel the rush. ↓↓ Double-tapping items to cast on self still count as targeted. The rush buff is also lost when Phantom Lancer gets stunned, cycloned, slept, hexed or hidden. Roots do not cause Phantom Lancer to lose the buff and he continues rushing once the ensnare expires. Taunts cause Phantom Lancer to rush towards the taunting unit instead without making him lose the buff. Forced attacks caused by taunts do not make him lose it either. Fear does not make him lose the buff either, so that he flees with the rush speed. When the target turns hidden, invisible or moves into the Fog of War, Phantom Lancer rushes towards the unit's last known location.",
+        "Disarm or ethereal effects on Phantom Lancer do not prevent him from rushing. However, attack immune units (e.g. invulnerable or ethereal) cannot be targeted.",
+        "Upon triggering, Phantom Lancer receives the rush buff, which grants haste and phased movement. This buff lasts for up to 5 seconds, until Phantom Lancer successfully hits the rush target, or until he receives another order. Non-targeted items do not cancel the rush. ↓↓ Double-tapping item abilities count as targeted and cancel the rush. The rush buff is also lost when Phantom Lancer gets stunned, cycloned, slept, hexed or hidden. Roots do not cause Phantom Lancer to lose the buff and he continues rushing once the effect expires. Taunts cause Phantom Lancer to rush towards the taunting unit instead without making him lose the buff. Forced attacks caused by taunts do not make him lose it either. Fear does not make him lose the buff either, so that he flees with the rush speed. When the target turns hidden, invisible or moves into the Fog of War, Phantom Lancer rushes towards the unit's last known location.",
         "This buff lasts for up to 5 seconds, until Phantom Lancer successfully hits the rush target, or until he receives another order.",
-        "Non-targeted items do not cancel the rush. ↓↓ Double-tapping items to cast on self still count as targeted.",
+        "Non-targeted items do not cancel the rush. ↓↓ Double-tapping item abilities count as targeted and cancel the rush.",
         "The rush buff is also lost when Phantom Lancer gets stunned, cycloned, slept, hexed or hidden.",
-        "Roots do not cause Phantom Lancer to lose the buff and he continues rushing once the ensnare expires.",
+        "Roots do not cause Phantom Lancer to lose the buff and he continues rushing once the effect expires.",
         "Taunts cause Phantom Lancer to rush towards the taunting unit instead without making him lose the buff. Forced attacks caused by taunts do not make him lose it either.",
         "Fear does not make him lose the buff either, so that he flees with the rush speed.",
         "When the target turns hidden, invisible or moves into the Fog of War, Phantom Lancer rushes towards the unit's last known location.",
-        "Phantom Lancer gains the agility buff as soon as he loses the rush buff. It does not matter how he loses the rush buff, the agility buff is always gained.",
+        "Phantom Lancer gains the agility buff as soon as he loses the rush buff. It does not matter how he loses the rush buff, the agility buff is always gained. Effectively grants Phantom Lancer 1.67\/3.33\/5\/6.67 armor, 10\/20\/30\/40 attack speed, and 10\/20\/30\/40 main attack damage.",
         "It does not matter how he loses the rush buff, the agility buff is always gained.",
-        "Effectively grants Phantom Lancer 1.67\/3.33\/5\/6.67 armor, 10\/20\/30\/40 attack speed, and 10\/20\/30\/40 attack damage.",
-        "Effectively grants Phantom Lancer 1.67\/3.33\/5\/6.67 armor, 10\/20\/30\/40 attack speed, and 10\/20\/30\/40 attack damage."
+        "Effectively grants Phantom Lancer 1.67\/3.33\/5\/6.67 armor, 10\/20\/30\/40 attack speed, and 10\/20\/30\/40 main attack damage."
       ],
       "mana": null,
       "hotKey": "E",
@@ -167,7 +166,7 @@
       ],
       "itemBehaviour": [],
       "legacyKey": "R",
-      "story": "Azwraith knows that on the field of battle, speed can mean everything."
+      "story": null
     },
     {
       "audioUrl": null,
@@ -186,9 +185,9 @@
         "Juxtapose works for all illusions of Phantom Lancer, not just the ones from his abilities. This includes illusions created with items (e.g. Manta Style) or with other abilities (e.g. Reflection). This means that even enemy illusions of Phantom Lancer have a chance to spawn new ones for the owner of the illusion.",
         "This includes illusions created with items (e.g. Manta Style) or with other abilities (e.g. Reflection).",
         "This means that even enemy illusions of Phantom Lancer have a chance to spawn new ones for the owner of the illusion.",
-        "With Aghanim's Scepter, Juxtapose turns into an active ability. The passive component is still present. When cast, all currently existing Juxtapose illusions get instantly destroyed. Spawns the illusions in 0.05-second intervals, starting immediately upon cast, resulting in a total spawn duration of 0.25\/0.35\/0.45 seconds. The illusions spawn in a random location within the spawn radius.",
+        "With Aghanim's Scepter, Juxtapose turns into an active ability. The passive component is still present. When cast, all currently existing Juxtapose illusions get instantly destroyed. Spawns the illusions in 0.05-second intervals, starting immediately upon cast, resulting in a total spawn duration of 0.35\/0.45\/0.55 seconds. The illusions spawn in a random location within the spawn radius.",
         "When cast, all currently existing Juxtapose illusions get instantly destroyed.",
-        "Spawns the illusions in 0.05-second intervals, starting immediately upon cast, resulting in a total spawn duration of 0.25\/0.35\/0.45 seconds.",
+        "Spawns the illusions in 0.05-second intervals, starting immediately upon cast, resulting in a total spawn duration of 0.35\/0.45\/0.55 seconds.",
         "The illusions spawn in a random location within the spawn radius."
       ],
       "mana": "75",
@@ -207,11 +206,11 @@
         "Illusion Duration (TagTalentfrom Illusion): 4",
         "Active Spawn Radius: 550",
         "Active Illusion Duration: 18",
-        "Adds Juxtapose active ability. Destroys Phantom Lancer's other Juxtapose illusions and quickly creates the max illusion it allows with a bonus 10 seconds of duration. Also increases max number of Juxtapose illusions by 2."
+        "Adds Juxtapose active ability. Destroys Phantom Lancer's other juxtapose illusions and quickly creates the max illusions it allows with a bonus 10 seconds of duration. Increases Max Illusions by 2."
       ],
       "itemBehaviour": [],
       "legacyKey": "X",
-      "story": "Each of Azwraith's lance attacks feels like two from a normal warrior; or three; or four..."
+      "story": null
     }
   ],
   "mainAttributes": {
@@ -237,7 +236,7 @@
     },
     {
       "talentLvl": "15",
-      "talentLeft": "-3s Spirit Lance CD",
+      "talentLeft": "-2s Spirit Lance CD",
       "talentRight": "16% Evasion"
     },
     {

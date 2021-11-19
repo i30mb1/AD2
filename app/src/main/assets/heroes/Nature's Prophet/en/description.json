@@ -2,7 +2,7 @@
   "abilities": [
     {
       "notes": [
-        "This attack damage talent is added as raw attack damage. Does not benefit illusions and is not affected by most percentage-based damage increasing or reducing effects.",
+        "This attack damage talent is added as bonus attack damage. Does not benefit illusions and is not affected by most percentage-based damage increasing or reducing effects.",
         "Does not benefit illusions and is not affected by most percentage-based damage increasing or reducing effects.",
         "The armor talent does not benefit illusions."
       ],
@@ -15,7 +15,7 @@
         },
         {
           "talentLvl": "20",
-          "talentLeft": "+75% Sprout Miss Chance",
+          "talentLeft": "75% Miss chance for Sprouted units",
           "talentRight": "+8 Armor"
         },
         {
@@ -47,24 +47,29 @@
         "Cannot be directly cast on ancient creeps and creep-heroes.",
         "Units not controlled by any player do not try to path around the Sprout trees, but simply walk against them as if they are not there. This effectively causes them to get stuck, until they change directions.",
         "This effectively causes them to get stuck, until they change directions.",
-        "With Aghanim's Shard, Sprout trees summon Greater Treants upon getting destroyed. If Nature's Call is not learned, no Greater Treants are spawned. In Ability Draft, Nature's Call must be drafted as well for the Greater Treants to spawn. Only the first trees of Sprout that get destroyed summon the Greater Treants. All remaining trees of that cast do not. It does not matter how the trees are destroyed, expiring Sprout trees summon them as well. If there are Greater Treants alive from a previous cast, they get instantly killed new ones are summoned.",
+        "With the level 20 talent, a 200 radius aura is added to the center of Sprout. The aura blinds enemies, causing them to miss 75% of their attacks. Sprout's blind uses uses pseudo-random distribution. The debuff aura lingers for 0.5 seconds.",
+        "The aura blinds enemies, causing them to miss 75% of their attacks.",
+        "Sprout's blind uses uses pseudo-random distribution.",
+        "The debuff aura lingers for 0.5 seconds.",
+        "With Aghanim's Shard, Sprout trees summon Greater Treants upon getting destroyed. If Nature's Call is not learned, no Greater Treants are spawned. Only the first 2 trees of Sprout that get destroyed summon the Greater Treants. All remaining trees of that cast do not. It does not matter how the trees are destroyed, expiring Sprout trees summon them as well. If there are Greater Treants alive from a previous cast, they get instantly killed when new ones are summoned.",
         "If Nature's Call is not learned, no Greater Treants are spawned.",
-        "In Ability Draft, Nature's Call must be drafted as well for the Greater Treants to spawn.",
-        "Only the first trees of Sprout that get destroyed summon the Greater Treants. All remaining trees of that cast do not.",
+        "Only the first 2 trees of Sprout that get destroyed summon the Greater Treants. All remaining trees of that cast do not.",
         "It does not matter how the trees are destroyed, expiring Sprout trees summon them as well.",
-        "If there are Greater Treants alive from a previous cast, they get instantly killed new ones are summoned."
+        "If there are Greater Treants alive from a previous cast, they get instantly killed when new ones are summoned."
       ],
       "mana": "70\/90\/110\/130",
       "hotKey": "Q",
       "cooldown": "11\/10\/9\/8",
-      "description": "Sprouts a ring of trees around a unit, trapping it in place, and providing vision in a 500 radius.",
+      "description": "Sprouts a ring of trees around a unit, trapping it in place, and providing vision in a 250 radius.",
       "spellName": "Sprout",
       "params": [
         "Cast Animation: 0.35+0.44",
         "Cast Range: 625\/700\/775\/850",
         "Trees Spawn Radius: 150",
         "Duration: 3\/4\/5\/6",
-        "Miss Chance: 75%",
+        "Enemy Blind Radius: 200",
+        "Enemy Blind Miss Chance: 75%",
+        "Blind Aura Linger Duration: 0.5",
         "Number of Greater Treants: 2",
         "Causes the first two trees destroyed with Sprout to summon Greater Treants. Can only have two Greater Treants alive.",
         "Cannot directly target spell immune enemies, targets ground instead. Can target spell immune allies.",
@@ -72,7 +77,7 @@
       ],
       "itemBehaviour": [],
       "legacyKey": "T",
-      "story": "Verdant overgrowth is a common ailment reported by Nature's Prophet's attackers."
+      "story": null
     },
     {
       "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/d\/d4\/Nature%27s_Prophet_Teleportation_1.mp3\/revision\/latest?cb=20191216020913",
@@ -99,7 +104,7 @@
       ],
       "itemBehaviour": [],
       "legacyKey": "R",
-      "story": "The Prophet keeps his sentinel over the forest, protecting it when in need."
+      "story": null
     },
     {
       "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/f\/f4\/Nature%27s_Prophet_Nature%27s_Call.mp3\/revision\/latest?cb=20191216020911",
@@ -108,8 +113,8 @@
         "Affects Trees"
       ],
       "notes": [
-        "Nature's Call can only create as many treants as there are trees in the targeted area.",
-        "Destroys all trees in the target area, regardless of how many treants are created.",
+        "Nature's Call can only create as many Treants as there are trees in the targeted area.",
+        "Destroys all trees in the target area, regardless of how many Treants are created.",
         "Treants always spawn at the center of the area.",
         "Must have at least 1 tree within its area to be castable. Targeting an area without trees gives an error message. However, if trees within the targeted area disappear during the cast time, the ability is not canceled, wasting mana and cooldown.",
         "However, if trees within the targeted area disappear during the cast time, the ability is not canceled, wasting mana and cooldown.",
@@ -132,7 +137,7 @@
       ],
       "itemBehaviour": [],
       "legacyKey": "F",
-      "story": "Verodicia bestowed the Prophet with the ability to summon the Treant Guard, a mythical sentient army of the wild."
+      "story": null
     },
     {
       "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/7\/7a\/Nature%27s_Prophet_Wrath_of_Nature_1.mp3\/revision\/latest?cb=20191216020919",
@@ -142,11 +147,11 @@
         "Damage Magical"
       ],
       "notes": [
-        "Wrath of Nature can be cast on the ground. It automatically jumps on the closest visible enemy.",
+        "Wrath of Nature can be ground-targeted. It automatically jumps on the closest visible enemy.",
         "Bounces in 0.25-second intervals, so hitting all targets takes 4.25 seconds. Each bounce increases the current damage by 10%.",
         "Does not bounce on Couriers, invisible units or units in the Fog of War.",
         "Can never hit the same unit twice per cast.",
-        "All bounces together can collectively deal up to 5243.9\/6839.9\/8435.8 (TagTalent 6611.9\/8207.9\/9803.8) damage (before reductions). For how much damage each bounce Wrath of Nature deals on each level, and with the base damage increasing talent (before reductions), please refer to the chart below.",
+        "All bounces together can collectively deal up to 5243.9\/6839.9\/8435.8 (TagTalent 6611.9\/8207.9\/9803.8) damage. For how much damage each bounce Wrath of Nature deals on each level, and with the base damage increasing talent (before reductions), please refer to the chart below.",
         "For how much damage each bounce Wrath of Nature deals on each level, and with the base damage increasing talent (before reductions), please refer to the chart below.",
         "The caster receives one stack of attack damage for each enemy killed by Wrath of Nature. To gain a stack, enemies have to die to the damage. Killing an enemy with the Wrath of Nature debuff does not grant a stack. Each instance has its own independent duration. The status buff shows the current amount of damage the stack provides. There is no stack limit. For how much attack damage bonus each bounce of Wrath of Nature grants, please refer to the chart below.",
         "To gain a stack, enemies have to die to the damage. Killing an enemy with the Wrath of Nature debuff does not grant a stack.",
@@ -178,7 +183,7 @@
       ],
       "itemBehaviour": [],
       "legacyKey": "W",
-      "story": "Nature's Prophet calls Verodicia's fury to strike down those who might ravage the wilderness."
+      "story": null
     }
   ],
   "mainAttributes": {
@@ -199,7 +204,7 @@
     },
     {
       "talentLvl": "20",
-      "talentLeft": "+75% Sprout Miss Chance",
+      "talentLeft": "75% Miss chance for Sprouted units",
       "talentRight": "+8 Armor"
     },
     {

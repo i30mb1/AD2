@@ -3,7 +3,7 @@
     {
       "notes": [
         "The health talent increases maximum health capacity, and keeps the current health percentage.",
-        "The agility talent effectively grants Nyx Assassin 13.33 armor, 80 attack speed, and 80 attack damage."
+        "The agility talent effectively grants Nyx Assassin 13.33 armor, 80 attack speed, and 80 main attack damage."
       ],
       "spellName": "Talent",
       "talents": [
@@ -43,9 +43,9 @@
         "While in the air, other units may pass below hit airborne units.",
         "When Impale hits invisible units, the visual effects below the hit unit are still visible.",
         "The damage is applied upon landing, not upon getting hit.",
-        "While burrowed, Impale's cast range and the spikes travel distance increase to 1225. Therefore, Impale now can hit units up to 1350 range away. The cooldown is reduced to 7 seconds.",
+        "While Burrowed, Impale's cast range and the spikes travel distance increase to 1225. Therefore, Impale now can hit units up to 1350 range away. The cooldown is also reduced to 7 seconds.",
         "Therefore, Impale now can hit units up to 1350 range away.",
-        "The cooldown is reduced to 7 seconds."
+        "The cooldown is also reduced to 7 seconds."
       ],
       "mana": "105\/120\/135\/150",
       "hotKey": "Q",
@@ -63,7 +63,7 @@
       ],
       "itemBehaviour": [],
       "legacyKey": "E",
-      "story": "All zealot scarabs possess intimate knowledge of underground pathways, using them to their advantage."
+      "story": null
     },
     {
       "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/a\/a7\/Nyx_Assassin_Mana_Burn.mp3\/revision\/latest?cb=20191216021105",
@@ -77,8 +77,8 @@
         "Effectively burns 29%\/33%\/38%\/42% of the target's maximum mana pool if it has no flat mana bonus.",
         "Despite dealing the damage first, the damage is based on how much mana the target actually lost from Mana Burn. This means, when cast on an enemy who has 5 mana left, it also deals only 5 damage (before reductions).",
         "This means, when cast on an enemy who has 5 mana left, it also deals only 5 damage (before reductions).",
-        "Can be cast on creep-heroes, but has no effect on them, since they have no intelligence, wasting mana and cooldown.",
-        "While burrowed, Mana Burn's cast range increases to 1050."
+        "Can be cast on creep-heroes, but has no effect on them, since they have no intelligence points, wasting mana and cooldown.",
+        "While Burrowed, Mana Burn's cast range increases to 1050."
       ],
       "mana": "100",
       "hotKey": "W",
@@ -93,13 +93,14 @@
       ],
       "itemBehaviour": [],
       "legacyKey": "R",
-      "story": "The tome in Ultimyr describes one scarab with the ability to eat away at the minds of lesser beings."
+      "story": null
     },
     {
       "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/b\/bf\/Nyx_Assassin_Spiked_Carapace_1.mp3\/revision\/latest?cb=20191216021107",
       "effects": [
         "Ability No Target",
-        "Affects Enemies"
+        "Affects Enemies",
+        "Damage Source Type (TagAghanimNo-reflection)"
       ],
       "notes": [
         "Spiked Carapace interrupts Nyx Assassin's channeling abilities upon cast.",
@@ -120,7 +121,7 @@
         "Although the damage dealt to enemies is equal to the amount of damage blocked, the effects work independently from each other. This means Spiked Carapace always blocks one damage instance, even when the source is spell immune or invulnerable.",
         "This means Spiked Carapace always blocks one damage instance, even when the source is spell immune or invulnerable.",
         "Does not work against wards, buildings and allied units.",
-        "While burrowed, casting Spiked Carapace immediately applies its stun to all enemies within 300 radius. Since Spiked Carapace has no base damage, hit units are not damaged upon cast. Nyx Assassin still receives the cast buff normally, which can still reflect damage and stun enemies. However, the buff does not affect enemy units which have been hit by the stun upon cast. They can normally damage Nyx.",
+        "While Burrowed, casting Spiked Carapace immediately applies its stun to all enemies within 300 radius. Since Spiked Carapace has no base damage, hit units are not damaged upon cast. Nyx Assassin still receives the cast buff normally, which can still reflect damage and stun enemies. However, the buff does not affect enemy units which have been hit by the stun upon cast. They can normally damage Nyx.",
         "Since Spiked Carapace has no base damage, hit units are not damaged upon cast.",
         "Nyx Assassin still receives the cast buff normally, which can still reflect damage and stun enemies.",
         "However, the buff does not affect enemy units which have been hit by the stun upon cast. They can normally damage Nyx."
@@ -139,7 +140,7 @@
       ],
       "itemBehaviour": [],
       "legacyKey": "D",
-      "story": "While their carapaces are relatively thin, they're guarded by a retractable field of razor-sharp spikes."
+      "story": null
     },
     {
       "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/6\/6e\/Nyx_Assassin_Burrow.mp3\/revision\/latest?cb=20191216021114",
@@ -148,22 +149,21 @@
         "Affects Self"
       ],
       "notes": [
-        "Requires Aghanim's Scepter to be unlocked. In Ability Draft, Burrow can be unlocked by the player that drafted Vendetta.",
-        "In Ability Draft, Burrow can be unlocked by the player that drafted Vendetta.",
+        "Requires Aghanim's Scepter to be unlocked.",
         "While burrowed, Nyx Assassin is invisible, disarmed, and rooted, so that he cannot attack, move, or use blink-based abilities.",
         "While burrowed, Impale and Mana Burn can be cast without having to face the targeted point or unit. Other targeted abilities and items still require facing.",
         "Other targeted abilities and items still require facing.",
         "Applies generic incoming damage reduction on Nyx Assassin while burrowed. Stacks additively with other sources of generic incoming damage manipulation. The reduction affects all damage Nyx Assassin takes that is not flagged as HP removal.",
         "The reduction affects all damage Nyx Assassin takes that is not flagged as HP removal.",
-        "Can regenerate up to 60% of Nyx Assassin's max health and max mana in one minute.",
-        "Burrow lasts until using Unburrow sub-ability is used or Vendetta, or until death.",
+        "Can regenerate up to 60% of Nyx Assassin's max health and mana in one minute.",
+        "Burrow lasts until the Unburrow sub-ability or Vendetta is used, or until death.",
         "Nyx Assassin can still be moved by abilities while burrowed, without getting unburrowed.",
         "Losing Aghanim's Scepter instantly unburrows Nyx."
       ],
       "mana": null,
       "hotKey": "D",
       "cooldown": null,
-      "description": "Nyx Assassin buries himself beneath the battlefield over a short duration. Once burrowed, Spiked Carapace instantly stuns nearby enemies when cast, the range of Mana Burn and Impale is increased, and Impale's cooldown is decreased. While burrowed, Nyx Assassin is stationary, unable to attack and invisible. His health and mana regeneration are also increased, and he gains damage reduction from all damage sources.",
+      "description": "Nyx Assassin buries himself beneath the battlefield over a short duration. Once burrowed, Spiked Carapace instantly stuns nearby enemies when cast, the range of Mana Burn and Impale is increased, and Impale's cooldown is decreased. While burrowed, Nyx Assassin is stationary, unable to attack, and invisible. Nyx gains damage reduction from all damage sources.",
       "spellName": "Burrow",
       "params": [
         "Cast Animation: 1.5+0.1",
@@ -177,7 +177,7 @@
       ],
       "itemBehaviour": [],
       "legacyKey": "F",
-      "story": "Some castes of Zealot scarab are known to create small burrows to lie in wait, ready to ambush their prey."
+      "story": null
     },
     {
       "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/7\/7c\/Nyx_Assassin_Unburrow_1.mp3\/revision\/latest?cb=20191216021109",
@@ -200,7 +200,7 @@
       ],
       "itemBehaviour": [],
       "legacyKey": "F",
-      "story": "Some castes of Zealot scarab are known to create small burrows to lie in wait, ready to ambush their prey."
+      "story": null
     },
     {
       "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/4\/4d\/Nyx_Assassin_Vendetta.mp3\/revision\/latest?cb=20191216021112",
@@ -220,8 +220,9 @@
         "The invisibility is broken upon reaching the cast point of abilities or items, or upon landing an attack. Nyx can pick up, drop or attack items and runes without breaking the invisibility.",
         "Nyx can pick up, drop or attack items and runes without breaking the invisibility.",
         "Vendetta allows Nyx to phase through other units, including wards, but not through buildings.",
-        "The level 25 talent grants fully unobstructed movement during Vendetta, allowing to path through cliffs and trees.",
-        "With Aghanim's Shard, reduces most heroes' total magic resistance to 10%."
+        "The Unobstructed Pathing talent does not upgrade the current instance of Vendetta. Fully grants unobstructed movement for its duration, allowing to path through cliffs and trees.",
+        "Fully grants unobstructed movement for its duration, allowing to path through cliffs and trees.",
+        "With Aghanim's Shard, the debuff reduces most heroes' total magic resistance to 10%."
       ],
       "mana": "180\/240\/300",
       "hotKey": "R",
@@ -242,7 +243,7 @@
       ],
       "itemBehaviour": [],
       "legacyKey": "V",
-      "story": "The scarab kills for the glory of his queen."
+      "story": null
     }
   ],
   "mainAttributes": {

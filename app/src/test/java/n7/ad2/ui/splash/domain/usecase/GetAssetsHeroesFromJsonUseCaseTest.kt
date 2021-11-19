@@ -5,8 +5,8 @@ import com.google.common.truth.Truth.assertThat
 import com.squareup.moshi.Moshi
 import kotlinx.coroutines.ExperimentalCoroutinesApi
 import n7.ad2.CoroutineTestRule
-import n7.ad2.ui.splash.domain.model.AssetsHero
 import n7.ad2.runBlockingTest
+import n7.ad2.ui.splash.domain.model.AssetsHero
 import org.junit.Rule
 import org.junit.Test
 import java.io.FileNotFoundException
@@ -38,7 +38,7 @@ class GetAssetsHeroesFromJsonUseCaseTest {
                     {
                       "nameEng": "${testObject.name}",
                       "assetsPath": "${testObject.assetsPath}",
-                      "mainAttr": "${testObject.mainAttr}"
+                      "mainAttr": "${testObject.mainAttribute}"
                     }
                           ] 
                 }

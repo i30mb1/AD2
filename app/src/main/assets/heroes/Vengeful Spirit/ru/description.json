@@ -20,8 +20,8 @@
         },
         {
           "talentLvl": "15",
-          "talentLeft": "-2,75 сек. перезарядки Magic Missile",
-          "talentRight": "-2 к броне врагов от Wave of Terror"
+          "talentLeft": "−2,75 сек. перезарядки Magic Missile",
+          "talentRight": "−2 к броне врагов от Wave of Terror"
         },
         {
           "talentLvl": "10",
@@ -56,7 +56,7 @@
       ],
       "itemBehaviour": [],
       "legacyKey": "C",
-      "story": "Простейший скайрасский приём \u2014 магический снаряд \u2014 основной инструмент мести Шендел."
+      "story": null
     },
     {
       "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/6\/6c\/Vengeful_Spirit_Wave_of_Terror.mp3\/revision\/latest?cb=20191216030144",
@@ -101,7 +101,7 @@
       ],
       "itemBehaviour": [],
       "legacyKey": "E",
-      "story": "Душераздирающий голос Шендел предупреждает о её приближении."
+      "story": null
     },
     {
       "audioUrl": null,
@@ -144,7 +144,7 @@
       ],
       "itemBehaviour": [],
       "legacyKey": "D",
-      "story": "Отнюдь не все разделяют всепоглощающую жажду мести, однако чрезмерный фанатизм воодушевляет на подвиги."
+      "story": null
     },
     {
       "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/a\/ab\/Vengeful_Spirit_Nether_Swap.mp3\/revision\/latest?cb=20191216030143",
@@ -170,7 +170,7 @@
       ],
       "itemBehaviour": [],
       "legacyKey": "W",
-      "story": "Мученичество \u2014 совсем не большое воздаяние за месть."
+      "story": null
     }
   ],
   "mainAttributes": {
@@ -178,7 +178,7 @@
     "attrStrength": 19.0,
     "attrIntelligence": 19.0,
     "attrIntelligenceInc": 1.5,
-    "attrAgilityInc": 3.8,
+    "attrAgilityInc": 3.2,
     "attrAgility": 20.0
   },
   "description": "Vengeful Spirit \u2014 это герой с дальним типом атаки, основным атрибутом которого является ловкость. Ее первая способность, Magic Missile, выпускает во врага магический снаряд, который оглушает и наносит урон. Второй способностью, Wave of Terror, Vengeful Spirit издает дьявольский клич, который ослабляет броню врагов и раскрывает туман войны. Пассивная способность, Vengeance Aura, увеличивает урон ближайших союзников. Так же при смерти героя на ее месте появится иллюзия Vengerful Spirit наносящая 100% урона героя и 150% получаемого,после возврождения героя \u2014 дух исчезнет. Ультимативная способность Nether Swap, позволяет меняеться местами с союзным или вражеским героем, так же способность сбивает анимации способностей вражеский персонажей. Улучшение с Aghanim's Scepter применяет страх на врагов вокруг места появления Vengerful Spirit после обмена местами с выбранным существом.",
@@ -196,8 +196,8 @@
     },
     {
       "talentLvl": "15",
-      "talentLeft": "-2,75 сек. перезарядки Magic Missile",
-      "talentRight": "-2 к броне врагов от Wave of Terror"
+      "talentLeft": "−2,75 сек. перезарядки Magic Missile",
+      "talentRight": "−2 к броне врагов от Wave of Terror"
     },
     {
       "talentLvl": "10",

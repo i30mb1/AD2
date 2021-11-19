@@ -6,22 +6,22 @@
         {
           "talentLvl": "25",
           "talentLeft": "+4% Ice Blast Kill Threshold",
-          "talentRight": "500 AoE Cold Feet"
+          "talentRight": "450 AoE Cold Feet"
         },
         {
           "talentLvl": "20",
-          "talentLeft": "+70 Chilling Touch Damage",
+          "talentLeft": "+80 Chilling Touch Damage",
           "talentRight": "+6% Ice Vortex Slow\/Resistance"
         },
         {
           "talentLvl": "15",
-          "talentLeft": "+150 Cold Feet Breaking distance",
+          "talentLeft": "+200 Cold Feet Breaking distance",
           "talentRight": "-2s Ice Vortex Cooldown"
         },
         {
           "talentLvl": "10",
           "talentLeft": "+8% Spell Amplification",
-          "talentRight": "175 Chilling Touch Attack Range"
+          "talentRight": "200 Chilling Touch Attack Range"
         }
       ]
     },
@@ -34,8 +34,8 @@
       ],
       "notes": [
         "Cold Feet places an initial debuff on the target and places an icy marker at its current position upon cast.",
-        "As long as the target stays within 715 (TagTalent 865) radius of the mark, it takes damage from the debuff and after 4 seconds it is stunned.",
-        "If the target moves 715 (TagTalent 865) range away from the mark at any point during the initial debuff, the ability completely stops, removing the debuff and the marker. This means even when the target moves back within range, it is not frozen or damaged further. Also considers the target's vertical position, so getting moved far up enough can stop Cold Feet as well.",
+        "As long as the target stays within 715 (TagTalent 915) radius of the mark, it takes damage from the debuff and after 4 seconds it is stunned.",
+        "If the target moves 715 (TagTalent 915) range away from the mark at any point during the initial debuff, the ability completely stops, removing the debuff and the marker. This means even when the target moves back within range, it is not frozen or damaged further. Also considers the target's vertical position, so getting moved far up enough can stop Cold Feet as well.",
         "This means even when the target moves back within range, it is not frozen or damaged further.",
         "Also considers the target's vertical position, so getting moved far up enough can stop Cold Feet as well.",
         "When cast on units which already have the Cold Feet modifier, nothing happens.",
@@ -43,7 +43,7 @@
         "The stun is applied 1 second after the last instance.",
         "Can deal up to 120\/200\/280\/360 damage to the target (before reductions).",
         "The break distance increasing talent does not update the break distance of already placed Cold Feet debuffs.",
-        "The level 25 talent turns Cold Feet into an area-targeted ability with 500 radius, so that it cannot directly target units anymore. The break distances are different for each hit enemy. They do not share it. Can target invisible enemies and enemies inside the Fog of War.",
+        "The level 25 talent turns Cold Feet into an area-targeted ability with 450 radius, so that it cannot directly target units anymore. The break distances are different for each hit enemy. They do not share it. Can target invisible enemies and enemies inside the Fog of War.",
         "The break distances are different for each hit enemy. They do not share it.",
         "Can target invisible enemies and enemies inside the Fog of War."
       ],
@@ -55,17 +55,17 @@
       "params": [
         "Cast Animation: 0.01+0",
         "Cast Range: 700\/800\/900\/1000",
-        "Break Distance: 715 (TagTalent 865)",
+        "Break Distance: 715 (TagTalent 915)",
         "Damage per Tick: 30\/50\/70\/90",
         "Damage Duration: 4",
         "Stun Duration: 2\/2.5\/3\/3.5",
-        "Radius: 500",
+        "Radius: 450",
         "Attempts to damage, but does not stun if debuff was placed before spell immunity and when not dispelled.",
         "Blocked as a single-target ability, not blocked when turned into an area-targeted ability."
       ],
       "itemBehaviour": [],
       "legacyKey": "C",
-      "story": "Kaldr's presence draws those around him into a frozen void, threatening to lock them in an icy prison for eternity."
+      "story": null
     },
     {
       "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/e\/e7\/Ancient_Apparition_Ice_Vortex.mp3\/revision\/latest?cb=20191216010618",
@@ -103,7 +103,7 @@
       ],
       "itemBehaviour": [],
       "legacyKey": "E",
-      "story": "Frozen, caustic winds are at the whim of Kaldr, chilling the field of battle."
+      "story": null
     },
     {
       "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/5\/53\/Ancient_Apparition_Chilling_Touch_1.mp3\/revision\/latest?cb=20191216010622",
@@ -113,15 +113,15 @@
         "Damage Magical"
       ],
       "notes": [
-        "The cast range equals the caster's attack range and the bonus attack range from the ability. For Ancient Apparition, the range is 735\/795\/855\/915. The cast range can be further increased by other attack range bonuses. However, it is not affected by cast range bonuses. The level 10 talent increases the total cast range to 910\/970\/1030\/1090.",
+        "The cast range equals the caster's attack range and the bonus attack range from the ability. For Ancient Apparition, the range is 735\/795\/855\/915. The cast range can be further increased by other attack range bonuses. However, it is not affected by cast range bonuses. The level 10 talent increases the total cast range to 935\/995\/1055\/1115.",
         "For Ancient Apparition, the range is 735\/795\/855\/915.",
         "The cast range can be further increased by other attack range bonuses. However, it is not affected by cast range bonuses.",
-        "The level 10 talent increases the total cast range to 910\/970\/1030\/1090.",
+        "The level 10 talent increases the total cast range to 935\/995\/1055\/1115.",
         "The bonus damage is dealt in a separate damage instance, and counts as spell damage. This means it is not affected or considered by anything that works with attack damage. This also means that it fully works with spell damage amplification and spell lifesteal.",
         "This means it is not affected or considered by anything that works with attack damage.",
         "This also means that it fully works with spell damage amplification and spell lifesteal.",
         "The debuffs from successive casts fully stack, with each instance creating its own debuff.",
-        "The attacks first apply the debuff, then their own damage.",
+        "The attacks first apply the debuff, then the spell damage, then the attack damage.",
         "Chilling Touch does not work against allied units, buildings or wards."
       ],
       "mana": "30\/45\/60\/75 (TagTalent 15\/22.5\/30\/37.5)",
@@ -130,8 +130,8 @@
       "description": "Enhances Ancient Apparition's attack with increased range, heavy magic damage, and movement slow.",
       "spellName": "Chilling Touch",
       "params": [
-        "Attack Range Bonus: 60\/120\/180\/240 (TagTalent 235\/295\/355\/415)",
-        "Damage: 50\/90\/130\/170 (TagTalent 120\/160\/200\/240)",
+        "Attack Range Bonus: 60\/120\/180\/240 (TagTalent 260\/320\/380\/440)",
+        "Damage: 50\/90\/130\/170 (TagTalent 130\/170\/210\/250)",
         "Move Speed Slow: 100%",
         "Slow Duration: 0.5",
         "Removes cooldown and reduces mana cost by 50%.",
@@ -139,7 +139,7 @@
       ],
       "itemBehaviour": [],
       "legacyKey": "G",
-      "story": "The Ancient Apparition's eternal knowledge brings a frigid enchantment to his attacks."
+      "story": null
     },
     {
       "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/b\/ba\/Ancient_Apparition_Ice_Blast_1.mp3\/revision\/latest?cb=20191216010624",
@@ -149,7 +149,7 @@
         "Damage Magical \/ Instant Kill"
       ],
       "notes": [
-        "Upon cast, Ice Blast is replaced by the sub-ability Release. The tracer projectile travels at a speed of 1500 until Release is cast, Ancient Apparition dies, or it reaches the map boundaries. The tracer projectile itself is harmless. It neither deals damage, nor places the debuff. The tracer is visible to allies only. The initial cast sound is also only audible to allies.",
+        "Upon cast, Ice Blast is replaced by the Release sub-ability. The tracer projectile travels at a speed of 1500 until Release is cast, Ancient Apparition dies, or it reaches the map boundaries. The tracer projectile itself is harmless. It neither deals damage, nor places the debuff. The tracer is visible to allies only. The initial cast sound is also only audible to allies.",
         "The tracer projectile travels at a speed of 1500 until Release is cast, Ancient Apparition dies, or it reaches the map boundaries.",
         "The tracer projectile itself is harmless. It neither deals damage, nor places the debuff.",
         "The tracer is visible to allies only. The initial cast sound is also only audible to allies.",
@@ -190,7 +190,7 @@
       ],
       "itemBehaviour": [],
       "legacyKey": "T",
-      "story": "Ice storms from ages past flow through Kaldr's frosty limbs, crashing into the world and turning its inhabitants into monuments to his eternal power."
+      "story": null
     },
     {
       "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/0\/00\/Ancient_Apparition_Ice_Blast_2.mp3\/revision\/latest?cb=20191216010625",
@@ -198,7 +198,7 @@
         "Ability No Target"
       ],
       "notes": [
-        "Replaces Ice Blast until the sub-ability is cast or the tracer disappears.",
+        "Replaces Ice Blast until the sub-ability is used or the tracer disappears.",
         "Upon cast, the tracer stops travelling and marks the total area hit by the explosion once the icy ball of hail reaches its position.",
         "It also provides 650 radius flying vision at that position for 4 seconds.",
         "The icy ball of hail travels at a speed of 750, or reaches the targeted point 1.75 seconds after launch, whichever is faster.",
@@ -217,7 +217,8 @@
       "params": [
         "Cast Animation: 0.01+1.1",
         "Min Projectile Speed: 750",
-        "Max Travel Time: 1.75"
+        "Max Travel Time: 1.75",
+        ""
       ],
       "itemBehaviour": [],
       "legacyKey": "T",
@@ -238,22 +239,22 @@
     {
       "talentLvl": "25",
       "talentLeft": "+4% Ice Blast Kill Threshold",
-      "talentRight": "500 AoE Cold Feet"
+      "talentRight": "450 AoE Cold Feet"
     },
     {
       "talentLvl": "20",
-      "talentLeft": "+70 Chilling Touch Damage",
+      "talentLeft": "+80 Chilling Touch Damage",
       "talentRight": "+6% Ice Vortex Slow\/Resistance"
     },
     {
       "talentLvl": "15",
-      "talentLeft": "+150 Cold Feet Breaking distance",
+      "talentLeft": "+200 Cold Feet Breaking distance",
       "talentRight": "-2s Ice Vortex Cooldown"
     },
     {
       "talentLvl": "10",
       "talentLeft": "+8% Spell Amplification",
-      "talentRight": "175 Chilling Touch Attack Range"
+      "talentRight": "200 Chilling Touch Attack Range"
     }
   ]
 }

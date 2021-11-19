@@ -2,7 +2,7 @@
   "abilities": [
     {
       "notes": [
-        "The all \/ \/ stats talent effectively grants Juggernaut 100 health, 0.5 health regeneration, 0.83 armor, 5 attack speed, 60 mana, 0.25 mana regeneration, and 5 attack damage.",
+        "The \/ \/ all stats talent effectively grants Juggernaut 100 health, 0.5 health regeneration, 0.83 armor, 5 attack speed, 60 mana, 0.25 mana regeneration, and 5 main attack damage.",
         "The armor talent does not benefit illusions.",
         "The health talent increases maximum health capacity, and keeps the current health percentage."
       ],
@@ -35,24 +35,25 @@
       "effects": [
         "Ability No Target",
         "Affects Enemies \/ Self",
-        "Damage Magical"
+        "Damage Magical (TagAghanim Instant Attack)"
       ],
       "notes": [
         "Blade Fury cannot be cast during Omnislash and Swiftslash.",
         "Does not interrupt Juggernaut's channeling abilities upon cast.",
-        "Applies spell immunity for the duration and a basic dispel upon cast.",
-        "Juggernaut can perform attacks, cast abilities, and use items during Blade Fury However, Omnislash and Swiftslash are inactive for the duration and cannot be cast.",
-        "However, Omnislash and Swiftslash are inactive for the duration and cannot be cast.",
-        "During Blade Fury, Juggernaut cannot be affected by Ghost Scepter. The buff gets removed immediately.",
-        "During Blade Fury, Juggernaut's attacks deal 0 damage, except against wards and buildings. Attack modifiers like Monkey King Bar, Diffusal Blade or Skull Basher still apply their effects and damage on procs. Despite the visual effect, critical strike, lifesteal and cleave have no effect, since they are based on the actual damage dealt.",
-        "Attack modifiers like Monkey King Bar, Diffusal Blade or Skull Basher still apply their effects and damage on procs.",
+        "Applies spell immunity for the duration and a basic dispel upon cast. Juggernaut cannot be affected by Ghost Form for its duration. The buff gets removed immediately.",
+        "Juggernaut cannot be affected by Ghost Form for its duration. The buff gets removed immediately.",
+        "Juggernaut can perform attacks, cast abilities, and use items during Blade Fury. However, both Omnislash and Swiftslash are inactive for the duration and cannot be cast.",
+        "However, both Omnislash and Swiftslash are inactive for the duration and cannot be cast.",
+        "During Blade Fury, Juggernaut's attacks deal 0 damage, except against wards and buildings. Attack modifiers (i.e. Monkey King Bar etc.) still apply their effects and damage on procs. Despite the visual effect, critical strike, lifesteal and cleave have no effect, since they are based on the actual damage dealt.",
+        "Attack modifiers (i.e. Monkey King Bar etc.) still apply their effects and damage on procs.",
         "Despite the visual effect, critical strike, lifesteal and cleave have no effect, since they are based on the actual damage dealt.",
         "Deals 18\/23\/28\/33 (TagTalent 50\/55\/60\/65) damage in 0.2-second intervals, starting 0.2 seconds after cast, resulting in 25 damage instances. Can deal up to 450\/575\/700\/825 (TagTalent 1250\/1375\/1500\/1625) damage to a single unit (before reductions).",
         "Can deal up to 450\/575\/700\/825 (TagTalent 1250\/1375\/1500\/1625) damage to a single unit (before reductions).",
-        "With Aghanim's Shard, Juggernaut performs instant attacks on random enemies within the area in 1-second intervals, starting 0.2 seconds after cast, resulting in up to 4 attacks. These instant attacks can proc any attack modifiers and on-hit effects normally. They do not have True Strike, but completely ignore disarms. The targets are chosen randomly, there are no priorities. Does not target buildings or wards. Unlike the regular attacks that can be performed during Blade Fury, these instant attacks deal 75% of Juggernaut's attack damage as damage, instead of 0.",
+        "With Aghanim's Shard, Juggernaut performs instant attacks on random enemies within the area in 1-second intervals, starting 0.2 seconds after cast, resulting in up to 4 attacks. These instant attacks can proc any attack modifiers and on-hit effects normally. They do not have True Strike, but completely ignore disarms. The instant attack targets are chosen randomly, there are no priorities. The instant attack does not target buildings or wards. Unlike the regular attacks that can be performed during Blade Fury, the instant attacks' damage can be defined as ΣAtk × 75%, instead of 0. Since the instant attack damage comes from a regular attack, it counts as attack damage and is affected by damage block.",
         "These instant attacks can proc any attack modifiers and on-hit effects normally. They do not have True Strike, but completely ignore disarms.",
-        "The targets are chosen randomly, there are no priorities. Does not target buildings or wards.",
-        "Unlike the regular attacks that can be performed during Blade Fury, these instant attacks deal 75% of Juggernaut's attack damage as damage, instead of 0."
+        "The instant attack targets are chosen randomly, there are no priorities. The instant attack does not target buildings or wards.",
+        "Unlike the regular attacks that can be performed during Blade Fury, the instant attacks' damage can be defined as ΣAtk × 75%, instead of 0.",
+        "Since the instant attack damage comes from a regular attack, it counts as attack damage and is affected by damage block."
       ],
       "mana": "120\/110\/100\/90",
       "hotKey": "Q",
@@ -71,7 +72,7 @@
       ],
       "itemBehaviour": [],
       "legacyKey": "F",
-      "story": "Yurnero's renowned katana techniques are feared by warriors and sorcerers alike."
+      "story": null
     },
     {
       "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/8\/84\/Juggernaut_Healing_Ward.mp3\/revision\/latest?cb=20191216014542",
@@ -102,7 +103,7 @@
       ],
       "itemBehaviour": [],
       "legacyKey": "G",
-      "story": "Of the rituals learned at the Isle of Masks, tending wounds with a bit of voodoo magic has proven to be quite useful."
+      "story": null
     },
     {
       "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/0\/09\/Juggernaut_Blade_Dance.mp3\/revision\/latest?cb=20191216014552",
@@ -112,10 +113,11 @@
       ],
       "notes": [
         "Increases attack damage by an average of 16%\/20%\/24%\/28%.",
+        "A critical strike proc is decided upon attack begin, not upon landing an attack. When a critical strike procs, Juggernaut uses a specific crit attack animation, and particle effects appear on his weapon.",
+        "When a critical strike procs, Juggernaut uses a specific crit attack animation, and particle effects appear on his weapon.",
         "The proc chances of multiple crit sources stack. If two sources of critical strike proc at the same time, the higher crit multiplier has priority.",
         "If two sources of critical strike proc at the same time, the higher crit multiplier has priority.",
-        "Blade Dance uses pseudo-random distribution.",
-        "The sound and particles play upon start of the attack, not when the attack lands."
+        "Blade Dance uses pseudo-random distribution."
       ],
       "mana": null,
       "hotKey": "E",
@@ -129,7 +131,7 @@
       ],
       "itemBehaviour": [],
       "legacyKey": "C",
-      "story": "The last remnant of his heritage's commitment to bladework, Yurnero ensures that the style is remembered."
+      "story": null
     },
     {
       "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/c\/c5\/Juggernaut_Swiftslash.mp3\/revision\/latest?cb=20200419153429",
@@ -139,8 +141,8 @@
         "Damage Instant Attack"
       ],
       "notes": [
-        "Requires Aghanim's Scepter to be unlocked. In Ability Draft, Swiftslash can be unlocked by the player that drafted Omnislash.",
-        "In Ability Draft, Swiftslash can be unlocked by the player that drafted Omnislash.",
+        "Requires Aghanim's Scepter to be unlocked.",
+        "Swiftslash cannot be cast during Blade Fury.",
         "Does not require Omnislash to be leveled to be unlocked, once Aghanim's Scepter is acquired. However, it relies on Omnislash to work, since it directly uses its values. This means when Omnislash is not learned, Swiftslash does nothing on cast.",
         "However, it relies on Omnislash to work, since it directly uses its values. This means when Omnislash is not learned, Swiftslash does nothing on cast.",
         "Omnislash notes fully apply.",
@@ -169,19 +171,19 @@
         "Damage Instant Attack"
       ],
       "notes": [
-        "Omnislash cannot be cast during Blade Fury.",
         "Turns Juggernaut spell immune, invulnerable, and rooted for the whole duration, and applies a basic dispel on cast.",
         "Juggernaut can cast abilities and use items during Omnislash. However, Blade Fury is inactive for the duration and cannot be cast. During Omnislash, Juggernaut does not need to turn in order to cast targeted abilities or items.",
         "However, Blade Fury is inactive for the duration and cannot be cast.",
         "During Omnislash, Juggernaut does not need to turn in order to cast targeted abilities or items.",
-        "The slash interval equals Juggernaut's current attack rate, divided by 1.5. This means the maximum possible interval for Omnislash is 4.67 and the minimum is 0.13, considering minimum and maximum possible attack speed values. The interval is not set on cast. On each slash, the interval updates based on his current attack rate.",
-        "This means the maximum possible interval for Omnislash is 4.67 and the minimum is 0.13, considering minimum and maximum possible attack speed values.",
+        "The slash interval equals Juggernaut's current attack rate divided by 1.5. This can be defined as With the attack speed cap, the minimum and maximum possible slash intervals are 0.087 and 3.03 respectively. The interval is not set on cast. On each slash, the interval updates based on his current attack rate.",
+        "This can be defined as",
+        "With the attack speed cap, the minimum and maximum possible slash intervals are 0.087 and 3.03 respectively.",
         "The interval is not set on cast. On each slash, the interval updates based on his current attack rate.",
         "Causes Juggernaut to perform instant attacks on enemies he slashes. These instant attacks can proc any attack modifiers and on-hit effects normally. They do not have True Strike, but completely ignore disarms.",
         "These instant attacks can proc any attack modifiers and on-hit effects normally. They do not have True Strike, but completely ignore disarms.",
-        "Can neither be cast on nor jump on wards, Couriers and buildings. Can jump on invulnerable and ethereal units, however, the instant attacks do not trigger. Cannot jump on units in the Fog of War, invisible or hidden units, Undying Zombie and on Astral Spirit.",
+        "Can neither be cast on nor jump on wards, Couriers and buildings. Can jump on invulnerable and ethereal units, however, the instant attacks do not trigger. Cannot jump on units in the Fog of War, invisible or hidden units, Undying Zombie and Astral Spirit.",
         "Can jump on invulnerable and ethereal units, however, the instant attacks do not trigger.",
-        "Cannot jump on units in the Fog of War, invisible or hidden units, Undying Zombie and on Astral Spirit.",
+        "Cannot jump on units in the Fog of War, invisible or hidden units, Undying Zombie and Astral Spirit.",
         "If no valid targets can be found within range and within 0.15 seconds after the previous jump, Omnislash ends prematurely.",
         "On each slash, Juggernaut is positioned at the opposite side of the target from Juggernaut's position, facing the target. The slash radius is centered around Juggernaut, not around the current target.",
         "The slash radius is centered around Juggernaut, not around the current target.",
@@ -208,7 +210,7 @@
       ],
       "itemBehaviour": [],
       "legacyKey": "E",
-      "story": "\u2018The fruits of discipline; with practice comes strength.\u2019"
+      "story": null
     }
   ],
   "mainAttributes": {

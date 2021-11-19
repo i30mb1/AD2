@@ -48,11 +48,12 @@
         "The targeted unit's position is not shuffled with the possible illusion's position. It always reappears between the 2 illusions. The illusions spawn 108 range away from the hero if the hero has a collision size of 24, and 72 if the collision size is 8. Each illusion appears either north, east, south or west from the hero and face the same direction as the hero does.",
         "The illusions spawn 108 range away from the hero if the hero has a collision size of 24, and 72 if the collision size is 8.",
         "Each illusion appears either north, east, south or west from the hero and face the same direction as the hero does.",
-        "The illusions carry the caster's name, not the targeted unit's player name, revealing that they are illusions when not cast on self."
+        "The illusions carry the caster's name, not the targeted unit's player name, revealing that they are illusions when not cast on self.",
+        "The Disruption Charges talent instantly grants 1 extra charge."
       ],
       "mana": "120",
       "hotKey": "Q",
-      "cooldown": "27\/24\/21\/18 (TagTalent 0)",
+      "cooldown": "29\/26\/23\/20 (TagTalent 0)",
       "description": "Banishes the targeted unit from the battlefield for a short duration. Upon returning, two illusions of the banished unit are created under Shadow Demon's control.",
       "spellName": "Disruption",
       "params": [
@@ -64,11 +65,11 @@
         "Illusion Duration: 11\/12\/13\/14",
         "Disruption Duration: 2.75",
         "Number of Charges: 2",
-        "Charge Replenish Time: 27\/24\/21\/18"
+        "Charge Replenish Time: 29\/26\/23\/20"
       ],
       "itemBehaviour": [],
       "legacyKey": "D",
-      "story": "The pain of deception comes not while it happens, but when it is revealed."
+      "story": null
     },
     {
       "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/2\/2d\/Shadow_Demon_Soul_Catcher_1.mp3\/revision\/latest?cb=20191216022841",
@@ -80,28 +81,41 @@
         "Directly manipulates enemies' health by taking away a percentage of health. This ability does not deal damage, and therefore it bypasses every damage manipulating effect.",
         "This ability does not deal damage, and therefore it bypasses every damage manipulating effect.",
         "The returned health at the end of the duration is based on how much health was removed initially. It is not based on the current health upon expiring.",
-        "Does not affect invulnerable enemies, and ancient creeps.",
-        "Multiple instances of the debuff fully stack. However, only one instance of the buff is applied to Shadow Demon. Applying a new debuff on an enemy hero refreshes the buff duration, also updating the spell amp value to the number of hit heroes. The buff and the debuff are independant. Dispeling one does not affect the other.",
-        "However, only one instance of the buff is applied to Shadow Demon. Applying a new debuff on an enemy hero refreshes the buff duration, also updating the spell amp value to the number of hit heroes.",
-        "The buff and the debuff are independant. Dispeling one does not affect the other."
+        "Does not affect invulnerable enemies, and ancient creeps. Fully affects the target under the effect of the most recent Disruption cast by Shadow Demon.",
+        "Fully affects the target under the effect of the most recent Disruption cast by Shadow Demon.",
+        "Multiple instances of the debuff fully stack.",
+        "If enemy heroes (including clones, excluding illusions and creep-heroes) are hit, Shadow Demon gains a buff that lasts for 10 seconds. The buff gains stacks based on the number of heroes that were hit by that cast. The number of stacks is visible on the buff icon. The buff is independent from the debuff placed on the enemies, dispelling the debuff does not take away a stack from the buff. Re-casting the ability so that it hits enemy heroes again refreshes the buff and updates the stack count based the number of heroes hit with the new cast. This means the number of stacks is limited to the amount of heroes in the enemy team.",
+        "The buff gains stacks based on the number of heroes that were hit by that cast. The number of stacks is visible on the buff icon.",
+        "The buff is independent from the debuff placed on the enemies, dispelling the debuff does not take away a stack from the buff.",
+        "Re-casting the ability so that it hits enemy heroes again refreshes the buff and updates the stack count based the number of heroes hit with the new cast.",
+        "This means the number of stacks is limited to the amount of heroes in the enemy team.",
+        "Applies generic outgoing damage amplification on Shadow Demon. Stacks additively with other sources of generic outgoing damage manipulation. The amplification affects only spell damage Shadow Demon deals that is not flagged as HP removal. Attack damage is not amplified.",
+        "The amplification affects only spell damage Shadow Demon deals that is not flagged as HP removal. Attack damage is not amplified.",
+        "This is how much spell damage amplification Shadow Demon gains after hitting a certain amount of heroes: 1 Hero: 5%\/7%\/9%\/11% spell damage amplification. 2 Heroes: 10%\/14%\/18%\/22% spell damage amplification. 3 Heroes: 15%\/21%\/27%\/33% spell damage amplification. 4 Heroes: 20%\/28%\/36%\/44% spell damage amplification. 5 Heroes: 25%\/35%\/45%\/55% spell damage amplification.",
+        "1 Hero: 5%\/7%\/9%\/11% spell damage amplification.",
+        "2 Heroes: 10%\/14%\/18%\/22% spell damage amplification.",
+        "3 Heroes: 15%\/21%\/27%\/33% spell damage amplification.",
+        "4 Heroes: 20%\/28%\/36%\/44% spell damage amplification.",
+        "5 Heroes: 25%\/35%\/45%\/55% spell damage amplification.",
+        ""
       ],
       "mana": "80\/100\/120\/140",
       "hotKey": "W",
       "cooldown": "26\/24\/22\/20 (TagTalent 20\/18\/16\/14)",
-      "description": "Captures the soul of enemy units in an area, causing them to lose a percentage of their current health. When the debuff is removed, the units gain half of the lost health back. Units under the effect of Disruption can still be affected by Soul Catcher.",
+      "description": "Captures the soul of enemy units in an area, causing them to lose a percentage of their current health. Shadow Demon temporarily gains Spell Amplification for each hero's soul captured. When the debuff is removed, the units gain half of the lost health back. Units under the effect of Disruption can still be affected by Soul Catcher.",
       "spellName": "Soul Catcher",
       "params": [
         "Cast Animation: 0.3+0",
         "Cast Range: 700",
         "Radius: 175\/200\/225\/250",
         "Current Health Removed: 20%\/25%\/30%\/35%",
-        "Self Spell Amplification per Debuffed Enemy Hero: 5%\/7%\/9%\/11%",
+        "Self Spell Damage Amplification per Hero: 5%\/7%\/9%\/11%",
         "Duration: 10",
         "Debuff persists if it was placed before spell immunity."
       ],
       "itemBehaviour": [],
       "legacyKey": "C",
-      "story": "Trying to resist the Shadow Demon's corruption is mostly a useless endeavor."
+      "story": null
     },
     {
       "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/e\/e4\/Shadow_Demon_Shadow_Poison_1.mp3\/revision\/latest?cb=20191216022839",
@@ -111,31 +125,26 @@
         "Damage Magical"
       ],
       "notes": [
-        "In Ability Draft, Shadow Poison does not come with the Shadow Poison Release sub-ability. Instead, the ability utilizes autocast. If enemies are debuffed, autocast is toggled on automatically. If the player then toggles it off, the poison gets released, triggering the damage.",
-        "Instead, the ability utilizes autocast. If enemies are debuffed, autocast is toggled on automatically.",
-        "If the player then toggles it off, the poison gets released, triggering the damage.",
         "Shadow Poison travels at a speed of 1000 and always travels the full distance, which takes 1.5 seconds.",
+        "The projectile provides 350 radius non-lingering flying vision around the poison cloud as it travels. Provides 300 radius flying vision around each enemy unit it hits, and also upon reaching the maximum travel distance. This vision lingers for 3.5 seconds.",
+        "Provides 300 radius flying vision around each enemy unit it hits, and also upon reaching the maximum travel distance. This vision lingers for 3.5 seconds.",
         "With the travel distance and effect radius, it can hit units up to 1700 range away.",
         "Fully affects invisible units and units under the effect of the most recent Disruption cast by Shadow Demon. Fully ignores other invulnerable or hidden units.",
         "Fully ignores other invulnerable or hidden units.",
         "Deals the initial damage instantly and adds 1 stack to all enemy units within 200 radius of it on each cast. The poison first applies the debuff or adds a stack to an existing debuff, then deals the initial damage. Successive hits on the same unit fully refresh the whole stack's duration.",
         "The poison first applies the debuff or adds a stack to an existing debuff, then deals the initial damage.",
         "Successive hits on the same unit fully refresh the whole stack's duration.",
-        "The first 5 stacks get their damage multiplied by 1\/2\/4\/8\/16 depending on the amount of stacks. Every following stack adds 50 (TagTalent 57.5) damage on top of that, so the damage starts growing linearly after the 5th stack.",
+        "The first 5 stacks get their damage multiplied by 1\/2\/4\/8\/16 depending on the amount of stacks. Every following stack adds 50 (TagTalent 57.5) damage on top of that, so the damage starts growing linearly after the 5th stack. Therefore, the poison's max potency is reached at the 5th stack. The damage difference between applying 2 separate stacks of five and 1 stack of ten (excluding the initial damage) is 134\/326\/518\/710 (TagTalent 154.1\/374.9\/595.7\/816.5). For how much damage each stack of Shadow Poison deals on each level up to the 10th stack, with the Shadow Poison damage increasing talent (before reductions), please refer to the chart below.",
         "Every following stack adds 50 (TagTalent 57.5) damage on top of that, so the damage starts growing linearly after the 5th stack.",
-        "This is how much damage 1\/2\/3\/4\/5\/6 stacks can deal on each level (without the initial damage): Level 1: 24\/48\/96\/192\/384\/434 (TagTalent 27.6\/55.2\/110.4\/220.8\/441.6\/499.1) Level 2: 36\/72\/144\/288\/576\/626 (TagTalent 41.4\/82.8\/165.6\/331.2\/662.4\/719.9) Level 3: 48\/96\/192\/384\/768\/818 (TagTalent 55.2\/110.4\/220.8\/441.6\/883.2\/940.7) Level 4: 60\/120\/240\/480\/960\/1010 (TagTalent 69\/138\/276\/552\/1104\/1161.5)",
-        "Level 1: 24\/48\/96\/192\/384\/434 (TagTalent 27.6\/55.2\/110.4\/220.8\/441.6\/499.1)",
-        "Level 2: 36\/72\/144\/288\/576\/626 (TagTalent 41.4\/82.8\/165.6\/331.2\/662.4\/719.9)",
-        "Level 3: 48\/96\/192\/384\/768\/818 (TagTalent 55.2\/110.4\/220.8\/441.6\/883.2\/940.7)",
-        "Level 4: 60\/120\/240\/480\/960\/1010 (TagTalent 69\/138\/276\/552\/1104\/1161.5)",
-        "",
+        "Therefore, the poison's max potency is reached at the 5th stack.",
+        "The damage difference between applying 2 separate stacks of five and 1 stack of ten (excluding the initial damage) is 134\/326\/518\/710 (TagTalent 154.1\/374.9\/595.7\/816.5).",
+        "For how much damage each stack of Shadow Poison deals on each level up to the 10th stack, with the Shadow Poison damage increasing talent (before reductions), please refer to the chart below.",
         "Casting Shadow Poison Release or losing the Shadow Poison debuff in any way causes the damage to be dealt.",
         "The current number of stacks is visible to Shadow Demon and his allies above the affected units. Enemies cannot see it. This number is visually capped at 19, however, the poison has no stack limit and can be stacked infinitely. The current number of stacks is also shown on the debuff icon, which is visible to everyone.",
         "This number is visually capped at 19, however, the poison has no stack limit and can be stacked infinitely.",
-        "The current number of stacks is also shown on the debuff icon, which is visible to everyone.",
-        "The projectile provides 200 radius flying vision as it travels. This vision does not last."
+        "The current number of stacks is also shown on the debuff icon, which is visible to everyone."
       ],
-      "mana": "35\/40\/45\/50",
+      "mana": "45",
       "hotKey": "E",
       "cooldown": "2.5 (TagTalent 1.25)",
       "description": "Deals damage in a line, and afflicts enemy units with a poison effect. The poison deals 1\/2\/4\/8\/16 times the stack damage based on the number of stacks on the target, up to 5 stacks. Additional stacks cause 50 damage each. This deferred damage is dealt when Shadow Poison's duration is expired, or the Release sub-ability is used.",
@@ -154,7 +163,7 @@
       ],
       "itemBehaviour": [],
       "legacyKey": "W",
-      "story": "The ever growing influence of the Shadow Demon can pollute the most valiant and pure of heroes."
+      "story": null
     },
     {
       "audioUrl": null,
@@ -188,13 +197,14 @@
         "Recasting onto the same target removes the modifier from a previous cast, triggering the damage\/heal, and then applies a new instance.",
         "Can be cast on invulnerable units, applying the initial dispel and the debuff if the invulnerability can be dispelled. However, if the target is an enemy and if the invulnerability cannot be dispelled, only the dispel is applied, and the debuff is not.",
         "However, if the target is an enemy and if the invulnerability cannot be dispelled, only the dispel is applied, and the debuff is not.",
-        "Demonic Purge fully affects the target under the effect of the most recent Disruption cast by Shadow Demon.",
+        "Fully affects the target under the effect of the most recent Disruption cast by Shadow Demon.",
         "The slow starts at 100% decreases over time to 20%. Hit units regain 0.381% of their movement speed on each server tick. This translates to 11.43% movement speed regained per second.",
         "This translates to 11.43% movement speed regained per second.",
-        "The damage\/heal is bound to the modifier, and applied whenever it is removed in any way. It starts at 0 and increases by 1.43\/1.9\/2.38 (TagTalent 2.38\/2.86\/3.33) for each 0.03 seconds affected, reaching the max values in 7 seconds.",
-        "It starts at 0 and increases by 1.43\/1.9\/2.38 (TagTalent 2.38\/2.86\/3.33) for each 0.03 seconds affected, reaching the max values in 7 seconds.",
-        "With Aghanim's Scepter, applies Break on the target as well. The break stops affecting the target before it deals its damage.",
+        "The damage\/heal is bound to the modifier, and applied whenever it is removed in any way. It starts at 0 and increases by 1.43\/1.9\/2.38 (TagTalent 2.38\/2.86\/3.33) for each server tick affected, reaching the max values in 7 seconds.",
+        "It starts at 0 and increases by 1.43\/1.9\/2.38 (TagTalent 2.38\/2.86\/3.33) for each server tick affected, reaching the max values in 7 seconds.",
+        "With Aghanim's Scepter, applies Break on the target as well. The break stops affecting the target before it deals its damage. Acquiring Aghanim's Scepter instantly grants 2 extra charges. This only happens once, so re-acquiring it does not grant another 2 charges.",
         "The break stops affecting the target before it deals its damage.",
+        "Acquiring Aghanim's Scepter instantly grants 2 extra charges. This only happens once, so re-acquiring it does not grant another 2 charges.",
         "With Aghanim's Shard, if the target is an ally, it can place the modifier on them even while invulnerable. Does not apply movement speed slow or Break to allied units. ↓↓ Double-tapping automatically targets self.",
         "Does not apply movement speed slow or Break to allied units.",
         "↓↓ Double-tapping automatically targets self."
@@ -221,7 +231,7 @@
       ],
       "itemBehaviour": [],
       "legacyKey": "G",
-      "story": "Once Shadow Demon no longer has any need for his collected cultist, he releases it from its subservience - and its life."
+      "story": null
     }
   ],
   "mainAttributes": {

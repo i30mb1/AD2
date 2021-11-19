@@ -19,12 +19,12 @@
         {
           "talentLvl": "15",
           "talentLeft": "+3 удара по Nether Ward",
-          "talentRight": "-0,8 сек. перезарядки Nether Blast"
+          "talentRight": "−1 сек. перезарядки Nether Blast"
         },
         {
           "talentLvl": "10",
-          "talentLeft": "+175 к здоровью",
-          "talentRight": "+15 к скорости передвижения"
+          "talentLeft": "+200 к здоровью",
+          "talentRight": "+20 к скорости передвижения"
         }
       ]
     },
@@ -41,7 +41,7 @@
       ],
       "mana": "85\/105\/125\/145",
       "hotKey": "Q",
-      "cooldown": "5 (TagTalent 4,2)",
+      "cooldown": "5 (TagTalent 4)",
       "description": "Взрыв астральной энергии, который наносит урон врагам и постройкам в области действия. Постройки получают только половину урона.",
       "spellName": "Nether Blast",
       "params": [
@@ -54,7 +54,7 @@
       ],
       "itemBehaviour": [],
       "legacyKey": "B",
-      "story": "Искусства Забвения включают в себя оглушающий взрыв изумрудного пламени из Нижних пределов."
+      "story": null
     },
     {
       "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/9\/92\/Pugna_Decrepify.mp3\/revision\/latest?cb=20191216022123",
@@ -88,7 +88,7 @@
       ],
       "itemBehaviour": [],
       "legacyKey": "C",
-      "story": "Изученное до совершенства умение из юности, позволяющее отправлять существ в Нижние пределы \u2014 во благо ли, во зло или просто забавы ради."
+      "story": null
     },
     {
       "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/4\/46\/Pugna_Nether_Ward_1.mp3\/revision\/latest?cb=20191216022128",
@@ -134,7 +134,7 @@
       ],
       "itemBehaviour": [],
       "legacyKey": "W",
-      "story": "Изучая искусства Забвения, колдун научился побеждать своих товарищей простым тотемом, заряженным магией Предела."
+      "story": null
     },
     {
       "audioUrl": "https:\/\/static.wikia.nocookie.net\/dota2_gamepedia\/images\/9\/98\/Pugna_Life_Drain.mp3\/revision\/latest?cb=20191216022124",
@@ -190,7 +190,7 @@
       ],
       "itemBehaviour": [],
       "legacyKey": "D",
-      "story": "Воистину, его мощь не постигнуть даже повелителю Забвения."
+      "story": null
     }
   ],
   "mainAttributes": {
@@ -217,12 +217,12 @@
     {
       "talentLvl": "15",
       "talentLeft": "+3 удара по Nether Ward",
-      "talentRight": "-0,8 сек. перезарядки Nether Blast"
+      "talentRight": "−1 сек. перезарядки Nether Blast"
     },
     {
       "talentLvl": "10",
-      "talentLeft": "+175 к здоровью",
-      "talentRight": "+15 к скорости передвижения"
+      "talentLeft": "+200 к здоровью",
+      "talentRight": "+20 к скорости передвижения"
     }
   ]
 }
