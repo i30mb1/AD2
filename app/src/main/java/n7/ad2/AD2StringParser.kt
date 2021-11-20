@@ -21,6 +21,13 @@ class AD2ClickableSpan(private val value: String) : ClickableSpan() {
     override fun onClick(widget: View) = listener?.invoke(value) ?: Unit
 }
 
+sealed interface Analyzer
+data class StartSpanTag(val text: String, val attributes: List<AttributeAndValue>) : Analyzer
+data class EndSpanTag(val text: String) : Analyzer
+data class RemainingText(val text: String) : Analyzer
+
+data class AttributeAndValue(val attribute: String, val value: String)
+
 class AD2StringParser {
 
     companion object {
@@ -31,13 +38,6 @@ class AD2StringParser {
         private const val ATTRIBUTE_AND_VALUE_DELIMITER = ' '
         private const val SKIP_ATTRS_SIGN = '"'
     }
-
-    sealed interface Analyzer
-    private data class StartSpanTag(val text: String, val attributes: List<AttributeAndValue>) : Analyzer
-    private data class EndSpanTag(val text: String) : Analyzer
-    private data class RemainingText(val text: String) : Analyzer
-
-    data class AttributeAndValue(val attribute: String, val value: String)
 
     fun toSpannable(
         string: String,

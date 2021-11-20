@@ -8,7 +8,6 @@ import androidx.test.filters.SmallTest
 import com.google.common.truth.Truth.assertWithMessage
 import com.squareup.moshi.Moshi
 import kotlinx.coroutines.ExperimentalCoroutinesApi
-import n7.ad2.ui.splash.domain.usecase.ConvertJsonHeroesToAssetsHeroesUseCase
 import org.junit.Rule
 import org.junit.Test
 import org.junit.runner.RunWith
@@ -28,8 +27,6 @@ class AttributesTest {
     private val application: Context = ApplicationProvider.getApplicationContext()
 
     private val moshi = Moshi.Builder().build()
-
-    val convertJsonHeroesToAssetsHeroesUseCase = ConvertJsonHeroesToAssetsHeroesUseCase(coroutineTestRule.testDispatcher, moshi)
 
     @Test
     fun `hero file exist and not empty`() {
@@ -56,16 +53,15 @@ class AttributesTest {
 
     private fun `all heroes have english description`(locale: String) = coroutineTestRule.runBlockingTest {
         val heroesJson = File("${System.getProperty("user.dir")}\\src\\main\\assets\\heroes.json").readText()
-        val heroes = convertJsonHeroesToAssetsHeroesUseCase(heroesJson)
 
         val path = "${System.getProperty("user.dir")}\\src\\main\\assets\\"
-        heroes.forEach {
-            val file = File("$path${it.assetsPath}\\$locale\\description.json")
-
-            assertWithMessage("description file not exist for ${it.name}").that(file.exists()).isTrue()
-
-            assertWithMessage("description file empty for ${it.name}").that(file.readText()).isNotEmpty()
-        }
+//        heroes.forEach {
+//            val file = File("$path${it.assetsPath}\\$locale\\description.json")
+//
+//            assertWithMessage("description file not exist for ${it.name}").that(file.exists()).isTrue()
+//
+//            assertWithMessage("description file empty for ${it.name}").that(file.readText()).isNotEmpty()
+//        }
 
     }
 
